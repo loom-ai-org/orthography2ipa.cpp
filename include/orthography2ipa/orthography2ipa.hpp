@@ -27,6 +27,13 @@ struct AllophoneRule {
     std::optional<bool> word_initial, word_final;
 };
 
+struct SandhiRule {
+    std::string id, name, left_context, right_context;
+    std::optional<std::string> transform, right_transform;
+    bool obligatory = true;
+    std::string notes;
+};
+
 struct LanguageSpec {
     std::string code, name, family, script, parent, quality;
     bool clade = false;
@@ -37,9 +44,15 @@ struct LanguageSpec {
     std::map<std::string, std::string> word_exceptions;
     std::map<std::string, std::string> grammatical_endings;
     std::vector<AllophoneRule> allophone_rules;
+    int allophone_passes = 1;
+    std::vector<SandhiRule> sandhi_rules;
     std::map<std::string, std::vector<std::string>> plugins;
     std::vector<std::string> marked_vowels, final_stress_endings, penult_stress_endings;
     std::vector<std::string> antepenult_stress_endings, diphthongs;
+    std::vector<std::string> vowel_letters, onset_clusters;
+    bool quantity_sensitive = false, superheavy_final_attracts = false;
+    int max_onset = 1;
+    std::string secondary_stress;
     int default_stress_position = -2;
     std::string stress_mark = "ˈ";
     std::optional<double> latitude, longitude;

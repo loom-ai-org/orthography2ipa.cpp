@@ -11,6 +11,7 @@
 #include <set>
 #include <sstream>
 #include <stdexcept>
+#include <regex>
 
 namespace orthography2ipa {
 namespace {
@@ -77,6 +78,37 @@ std::vector<AllophoneRule> parse_allophone_rules(const ptree& p) {
     return result;
 }
 
+std::vector<SandhiRule> parse_sandhi_rules(const ptree& p) {
+    std::vector<SandhiRule> result;
+    auto list = p.get_child_optional("sandhi_rules");
+    if (!list) return result;
+    for (const auto& item : *list) {
+        const auto& r = item.second;
+        SandhiRule rule;
+        rule.id = r.get<std::string>("id", "");
+        rule.name = r.get<std::string>("name", rule.id);
+        rule.left_context = r.get<std::string>("left_context", "");
+        rule.right_context = r.get<std::string>("right_context", "");
+        if (auto value = r.get_optional<std::string>("transform"); value && *value != "null") rule.transform = *value;
+        if (auto value = r.get_optional<std::string>("right_transform"); value && *value != "null") rule.right_transform = *value;
+        rule.obligatory = r.get<bool>("obligatory", true);
+        rule.notes = r.get<std::string>("notes", "");
+        result.push_back(std::move(rule));
+    }
+    return result;
+}
+
+std::vector<SandhiRule> overlay_sandhi(const std::vector<SandhiRule>& base,
+                                       const std::vector<SandhiRule>& own) {
+    auto result = base;
+    for (const auto& rule : own) {
+        auto it = std::find_if(result.begin(), result.end(), [&](const auto& inherited) { return inherited.id == rule.id; });
+        if (it == result.end()) result.push_back(rule);
+        else *it = rule;
+    }
+    return result;
+}
+
 std::map<std::string, std::vector<std::string>> ipa_map(const ptree& p, const std::string& key) {
     std::map<std::string, std::vector<std::string>> result;
     auto child = p.get_child_optional(key);
@@ -96,6 +128,16 @@ positional_map(const ptree& p) {
     for (const auto& g : *child) for (const auto& pos : g.second)
         result[g.first][pos.first] = strings(pos.second);
     return result;
+}
+
+void merge_positional(
+    std::map<std::string, std::map<std::string, std::vector<std::string>>>& target,
+    const std::map<std::string, std::map<std::string, std::vector<std::string>>>& base) {
+    for (const auto& [grapheme, positions] : base) {
+        auto& destination = target[grapheme];
+        for (const auto& [position, values] : positions)
+            if (!destination.count(position)) destination[position] = values;
+    }
 }
 
 LanguageSpec load_raw(const std::string& code, std::set<std::string>& loading) {
@@ -126,6 +168,12 @@ LanguageSpec load_raw(const std::string& code, std::set<std::string>& loading) {
         s.penult_stress_endings = optional_strings(*stress, "penult_stress_endings");
         s.antepenult_stress_endings = optional_strings(*stress, "antepenult_stress_endings");
         s.diphthongs = optional_strings(*stress, "diphthongs");
+        s.vowel_letters = optional_strings(*stress, "vowel_letters");
+        s.onset_clusters = optional_strings(*stress, "onset_clusters");
+        s.quantity_sensitive = stress->get<bool>("quantity_sensitive", false);
+        s.superheavy_final_attracts = stress->get<bool>("superheavy_final_attracts", false);
+        s.max_onset = stress->get<int>("max_onset", 1);
+        s.secondary_stress = stress->get<std::string>("secondary_stress", "");
         s.marked_vowels = optional_strings(*stress, "marked_vowels");
     }
     if (auto loc = raw.get_child_optional("location")) {
@@ -136,6 +184,8 @@ LanguageSpec load_raw(const std::string& code, std::set<std::string>& loading) {
     if (auto endings = raw.get_child_optional("grammatical_endings"))
         for (const auto& x : *endings) if (!x.second.empty()) s.grammatical_endings[x.first] = x.second.data();
     s.allophone_rules = parse_allophone_rules(raw);
+    s.allophone_passes = std::max(1, std::min(4, raw.get<int>("allophone_passes", 1)));
+    s.sandhi_rules = parse_sandhi_rules(raw);
     if (auto plugins = raw.get_child_optional("plugins"))
         for (const auto& x : *plugins) s.plugins[x.first] = string_or_list(x.second);
 
@@ -147,16 +197,26 @@ LanguageSpec load_raw(const std::string& code, std::set<std::string>& loading) {
         for (const auto& x : b.graphemes) if (!s.graphemes.count(x.first)) s.graphemes[x.first] = x.second;
         for (const auto& x : b.positional_graphemes)
             if (!s.positional_graphemes.count(x.first)) s.positional_graphemes[x.first] = x.second;
+        const std::string positional_base = raw.get<std::string>("positional_graphemes_base", "");
+        if (!positional_base.empty() && positional_base != code)
+            merge_positional(s.positional_graphemes, load_raw(positional_base, loading).positional_graphemes);
         if (s.allophone_rules.empty()) s.allophone_rules = b.allophone_rules;
+        s.sandhi_rules = overlay_sandhi(b.sandhi_rules, s.sandhi_rules);
         for (const auto& [stage, names] : b.plugins) if (!s.plugins.count(stage)) s.plugins[stage] = names;
         if (!raw.get_child_optional("stress") && s.default_stress_position == -2) {
             s.default_stress_position = b.default_stress_position; s.stress_mark = b.stress_mark;
             s.marked_vowels = b.marked_vowels; s.final_stress_endings = b.final_stress_endings;
             s.penult_stress_endings = b.penult_stress_endings; s.antepenult_stress_endings = b.antepenult_stress_endings;
-            s.diphthongs = b.diphthongs;
+            s.diphthongs = b.diphthongs; s.vowel_letters = b.vowel_letters;
+            s.onset_clusters = b.onset_clusters; s.quantity_sensitive = b.quantity_sensitive;
+            s.superheavy_final_attracts = b.superheavy_final_attracts; s.max_onset = b.max_onset;
+            s.secondary_stress = b.secondary_stress;
         }
         if (s.family.empty()) s.family = b.family;
     }
+    const std::string positional_base = raw.get<std::string>("positional_graphemes_base", "");
+    if (!positional_base.empty() && positional_base != code)
+        merge_positional(s.positional_graphemes, load_raw(positional_base, loading).positional_graphemes);
     if (!allo_base.empty() && allo_base != code) {
         LanguageSpec b = load_raw(allo_base, loading);
         for (const auto& x : b.allophones) if (!s.allophones.count(x.first)) s.allophones[x.first] = x.second;
@@ -169,54 +229,78 @@ LanguageSpec load_raw(const std::string& code, std::set<std::string>& loading) {
     return s;
 }
 
-std::vector<std::string> words(const std::string& text) {
-    std::vector<std::string> result; std::string current;
-    auto flush = [&] { if (!current.empty()) { result.push_back(current); current.clear(); } };
-    for (unsigned char c : text) {
-        if (c <= 32 || std::ispunct(c)) flush();
-        else current.push_back(static_cast<char>(c));
+std::size_t utf8_char_size(const std::string& text, std::size_t pos);
+
+std::pair<std::vector<std::string>, std::vector<bool>> sentence_words(const std::string& text) {
+    std::vector<std::string> result; std::vector<bool> pausal; std::string current;
+    bool pause = false;
+    auto flush = [&] { if (!current.empty()) { result.push_back(current); pausal.push_back(pause); current.clear(); pause = false; } };
+    for (std::size_t i = 0; i < text.size();) {
+        const unsigned char c = static_cast<unsigned char>(text[i]);
+        std::size_t n = c < 0x80 ? 1 : utf8_char_size(text, i);
+        const std::string character = text.substr(i, n);
+        const bool ascii_pause = n == 1 && std::string(",.;:!?...").find(character) != std::string::npos;
+        const bool unicode_pause = character == "\xD8\x8C" || character == "\xD8\x9F" || character == "\xE2\x80\xA6";
+        if (c <= 32 || std::ispunct(c) || ascii_pause || unicode_pause) {
+            if (ascii_pause || unicode_pause) pause = true;
+            flush();
+        } else current += character;
+        i += n;
     }
-    flush(); return result;
+    flush();
+    return {std::move(result), std::move(pausal)};
 }
 
+bool in(const std::string& value, const std::vector<std::string>& list);
+bool vowel_grapheme(const std::string& value);
 
 std::string add_stress(const LanguageSpec& spec, const std::string& word, const IPAPath& path, std::optional<std::size_t> forced = std::nullopt) {
     if (path.graphemes.empty() || spec.stress_mark.empty()) return path.ipa;
-    std::vector<std::size_t> nuclei;
-    for (std::size_t i = 0; i < path.graphemes.size(); ++i) {
-        const auto& g = path.graphemes[i];
-        if (g.find_first_of("aeiouAEIOUáéíóúâêôãõÁÉÍÓÚÂÊÔÃÕ") != std::string::npos) nuclei.push_back(i);
+    std::vector<std::vector<std::size_t>> nuclei;
+    auto ipa_vowel = [](const std::string& value) { return value.find_first_of("aeiouɑɐɒəɛɪɔʊɨʉɵøœy") != std::string::npos; };
+    auto is_vowel = [&](const std::string& g, std::size_t i) { return (!spec.vowel_letters.empty() && in(g, spec.vowel_letters)) || (spec.vowel_letters.empty() && vowel_grapheme(g)) || (i < path.segments.size() && ipa_vowel(path.segments[i])); };
+    for (std::size_t i = 0; i < path.graphemes.size();) {
+        if (!is_vowel(path.graphemes[i], i)) { ++i; continue; }
+        std::vector<std::size_t> group{ i }; std::size_t j = i + 1;
+        while (j < path.graphemes.size() && is_vowel(path.graphemes[j], j)) {
+            std::string joined; for (auto k : group) joined += lower_ascii(path.graphemes[k]); joined += lower_ascii(path.graphemes[j]);
+            bool allowed = spec.diphthongs.empty();
+            for (const auto& d : spec.diphthongs) if (lower_ascii(d).compare(0, joined.size(), joined) == 0) allowed = true;
+            if (!allowed) break;
+            group.push_back(j++);
+            if (!spec.diphthongs.empty() && !std::any_of(spec.diphthongs.begin(), spec.diphthongs.end(), [&](const auto& d) { return lower_ascii(d) == joined; })) break;
+        }
+        nuclei.push_back(std::move(group)); i = j;
     }
     if (nuclei.empty()) return path.ipa;
     std::size_t target = forced ? std::min(*forced, nuclei.size() - 1) : nuclei.size() - 1;
     bool marked = forced.has_value();
-    for (const auto& v : spec.marked_vowels) for (std::size_t i = 0; i < path.graphemes.size(); ++i)
-        if (path.graphemes[i].find(v) != std::string::npos) {
-            target = static_cast<std::size_t>(std::find(nuclei.begin(), nuclei.end(), i) - nuclei.begin());
-            marked = true;
-        }
-    auto ends_with = [&](const std::vector<std::string>& endings) {
-        return std::any_of(endings.begin(), endings.end(), [&](const auto& e) { return word.size() >= e.size() && word.compare(word.size() - e.size(), e.size(), e) == 0; });
-    };
+    for (const auto& v : spec.marked_vowels) for (std::size_t n = 0; n < nuclei.size(); ++n)
+        for (auto i : nuclei[n]) if (path.graphemes[i].find(v) != std::string::npos) { target = n; marked = true; }
+    auto ends_with = [&](const std::vector<std::string>& endings) { return std::any_of(endings.begin(), endings.end(), [&](const auto& e) { return word.size() >= e.size() && word.compare(word.size() - e.size(), e.size(), e) == 0; }); };
     if (forced) {
-        // The plugin supplied the syllable decision; do not let declarative
-        // endings override it.
+    } else if (spec.quantity_sensitive) {
+        auto heavy = [&](std::size_t n) { std::string nucleus; for (auto i : nuclei[n]) if (i < path.segments.size()) nucleus += path.segments[i]; const bool long_vowel = nucleus.find("ː") != std::string::npos || nucleus.find("ˑ") != std::string::npos; const bool coda = nuclei[n].back() + 1 < (n + 1 < nuclei.size() ? nuclei[n + 1].front() : path.graphemes.size()); return long_vowel || coda; };
+        if (spec.superheavy_final_attracts && heavy(nuclei.size() - 1) && nuclei.back().back() + 1 < path.graphemes.size()) target = nuclei.size() - 1;
+        else if (nuclei.size() > 1 && heavy(nuclei.size() - 2)) target = nuclei.size() - 2;
+        else { const int p = spec.default_stress_position; target = p > 0 ? static_cast<std::size_t>(std::min<int>(p - 1, nuclei.size() - 1)) : static_cast<std::size_t>(std::max<int>(0, static_cast<int>(nuclei.size()) + p)); }
     } else if (ends_with(spec.final_stress_endings)) target = nuclei.size() - 1;
     else if (ends_with(spec.penult_stress_endings)) target = nuclei.size() > 1 ? nuclei.size() - 2 : 0;
     else if (ends_with(spec.antepenult_stress_endings)) target = nuclei.size() > 2 ? nuclei.size() - 3 : 0;
-    else if (!marked) {
-        const int p = spec.default_stress_position;
-        target = p > 0 ? static_cast<std::size_t>(std::min<int>(p - 1, nuclei.size() - 1))
-                       : static_cast<std::size_t>(std::max<int>(0, static_cast<int>(nuclei.size()) + p));
-    }
-    // Stress precedes the syllable onset, not necessarily the vowel nucleus.
-    const std::size_t grapheme = target == 0 ? 0 : nuclei[target - 1] + 1;
-    std::size_t offset = 0;
-    for (std::size_t i = 0; i < grapheme; ++i) {
-        auto it = spec.graphemes.find(path.graphemes[i]);
-        if (it != spec.graphemes.end() && !it->second.empty()) offset += it->second.front().size();
-    }
-    return path.ipa.substr(0, offset) + spec.stress_mark + path.ipa.substr(offset);
+    else if (!marked) { const int p = spec.default_stress_position; target = p > 0 ? static_cast<std::size_t>(std::min<int>(p - 1, nuclei.size() - 1)) : static_cast<std::size_t>(std::max<int>(0, static_cast<int>(nuclei.size()) + p)); }
+    auto onset_for = [&](std::size_t n) {
+        if (n == 0) return std::size_t{0};
+        // The grapheme immediately after the preceding nucleus is the
+        // syllable boundary. IPA onset constraints affect boundary drawing,
+        // but never move the nucleus selected for stress.
+        return nuclei[n - 1].back() + 1;
+    };
+    auto offset_for = [&](std::size_t grapheme) { std::size_t offset = 0; for (std::size_t i = 0; i < grapheme; ++i) if (i < path.segments.size()) offset += path.segments[i].size(); return offset; };
+    std::vector<std::pair<std::size_t, std::string>> marks;
+    if (spec.secondary_stress == "alternating") for (std::size_t n = target; n >= 2; n -= 2) marks.push_back({offset_for(onset_for(n - 2)), "ˌ"});
+    marks.push_back({offset_for(onset_for(target)), spec.stress_mark});
+    std::sort(marks.rbegin(), marks.rend());
+    std::string result = path.ipa; for (const auto& [offset, mark] : marks) result.insert(std::min(offset, result.size()), mark); return result;
 }
 std::set<std::string> inventory(const LanguageSpec& s) {
     std::set<std::string> out(s.phonemes.begin(), s.phonemes.end());
@@ -253,6 +337,39 @@ std::map<std::string, std::string> load_lexicon(const std::string& code) {
 
 bool in(const std::string& value, const std::vector<std::string>& list) { return std::find(list.begin(), list.end(), value) != list.end(); }
 bool vowel_grapheme(const std::string& value) { return value.find_first_of("aeiouAEIOUáéíóúâêôãõÁÉÍÓÚÂÊÔÃÕ") != std::string::npos; }
+bool front_grapheme(const std::string& value);
+bool back_grapheme(const std::string& value);
+bool palatal_ipa(const std::string& value);
+
+std::string replacement_pattern(std::string replacement) {
+    // Python's re.sub uses \1; std::regex_replace uses $1.
+    for (std::size_t i = 0; i + 1 < replacement.size(); ++i)
+        if (replacement[i] == '\\' && replacement[i + 1] >= '1' && replacement[i + 1] <= '9') {
+            replacement[i] = '$'; replacement.erase(i + 1, 1);
+        }
+    return replacement;
+}
+
+std::vector<std::string> apply_sandhi(const LanguageSpec& spec, std::vector<std::string> ipa,
+                                      const std::vector<bool>& pausal) {
+    if (pausal.size() != ipa.size()) throw std::invalid_argument("pausal flag count must match word count");
+    if (ipa.size() < 2 || spec.sandhi_rules.empty()) return ipa;
+    for (std::size_t i = 0; i + 1 < ipa.size(); ++i) {
+        if (pausal[i]) continue;
+        const auto left = ipa[i], right = ipa[i + 1];
+        bool left_done = false, right_done = false;
+        for (const auto& rule : spec.sandhi_rules) {
+            if (left_done && right_done) break;
+            try {
+                const std::regex l(rule.left_context), r(rule.right_context);
+                if (!std::regex_search(left, l) || !std::regex_search(right, r)) continue;
+                if (rule.transform && !left_done) { ipa[i] = std::regex_replace(left, l, replacement_pattern(*rule.transform)); left_done = true; }
+                if (rule.right_transform && !right_done) { ipa[i + 1] = std::regex_replace(right, r, replacement_pattern(*rule.right_transform)); right_done = true; }
+            } catch (const std::regex_error& e) { throw std::runtime_error("invalid sandhi rule " + rule.id + ": " + e.what()); }
+        }
+    }
+    return ipa;
+}
 
 bool class_match(const std::string& cls, const std::vector<std::string>& gs,
                  const std::vector<std::string>& phones, std::size_t index, int distance) {
@@ -261,14 +378,16 @@ bool class_match(const std::string& cls, const std::vector<std::string>& gs,
     if (cls == "any") return pos >= 0 && pos < static_cast<long>(gs.size());
     if (pos < 0 || pos >= static_cast<long>(gs.size())) return false;
     const auto p = static_cast<std::size_t>(pos);
-    if (cls == "vowel" || cls == "front_vowel" || cls == "back_vowel") return vowel_grapheme(gs[p]);
+    if (cls == "vowel") return vowel_grapheme(gs[p]);
+    if (cls == "front_vowel") return vowel_grapheme(gs[p]) && front_grapheme(gs[p]);
+    if (cls == "back_vowel") return vowel_grapheme(gs[p]) && back_grapheme(gs[p]);
     if (cls == "consonant" || cls == "coda" || cls == "onset") return !vowel_grapheme(gs[p]);
     if (cls == "consonant_cluster") {
         const long next = pos + (distance < 0 ? -1 : 1);
         return !vowel_grapheme(gs[p]) && next >= 0 && next < static_cast<long>(gs.size()) && !vowel_grapheme(gs[static_cast<std::size_t>(next)]);
     }
     if (cls == "coda_nasal") return !vowel_grapheme(gs[p]) && !phones[p].empty() && std::string("mnɲŋɳɴ").find(phones[p][0]) != std::string::npos;
-    if (cls == "palatal") return phones[p].find_first_of("ʃʒɲʎjtɕdʑ") != std::string::npos;
+    if (cls == "palatal") return palatal_ipa(phones[p]);
     if (cls == "emphatic") return phones[p].find("ˤ") != std::string::npos;
     return false;
 }
@@ -289,6 +408,72 @@ std::optional<std::size_t> stress_nucleus(const LanguageSpec& spec, const std::v
     for (const auto& mark : spec.marked_vowels) for (std::size_t i = 0; i < gs.size(); ++i) if (gs[i].find(mark) != std::string::npos) { target = static_cast<std::size_t>(std::find(nuclei.begin(), nuclei.end(), i) - nuclei.begin()); marked = true; }
     if (!marked) { const int p = spec.default_stress_position; target = p > 0 ? std::min<std::size_t>(p - 1, nuclei.size() - 1) : static_cast<std::size_t>(std::max<int>(0, static_cast<int>(nuclei.size()) + p)); }
     return nuclei[target];
+}
+
+bool front_grapheme(const std::string& value) {
+    return value.find_first_of("eEiIyYéÉêÊíÍëËïÏ") != std::string::npos;
+}
+bool back_grapheme(const std::string& value) {
+    return value.find_first_of("aAoOuUáÁâÂãÃóÓôÔõÕ") != std::string::npos;
+}
+bool palatal_ipa(const std::string& value) {
+    return value.find_first_of("ʃʒɲʎjtɕdʑ") != std::string::npos || value.find("ʲ") != std::string::npos;
+}
+
+std::vector<std::string> positional_values(const LanguageSpec& spec,
+                                           const std::vector<std::string>& gs,
+                                           std::size_t index,
+                                           const std::vector<std::string>& base) {
+    auto entry = spec.positional_graphemes.find(gs[index]);
+    if (entry == spec.positional_graphemes.end()) return base;
+    const auto& positions = entry->second;
+    std::vector<std::string> candidates;
+    auto choose = [&](const std::string& position) {
+        auto it = positions.find(position);
+        if (it != positions.end()) { candidates = it->second; return true; }
+        return false;
+    };
+    const bool initial = index == 0;
+    const bool final = index + 1 == gs.size();
+    const bool vowel = vowel_grapheme(gs[index]);
+    const bool prev_vowel = index > 0 && vowel_grapheme(gs[index - 1]);
+    const bool next_vowel = index + 1 < gs.size() && vowel_grapheme(gs[index + 1]);
+    const auto next_ipa = index + 1 < gs.size() && !spec.graphemes.at(gs[index + 1]).empty()
+        ? spec.graphemes.at(gs[index + 1]).front() : std::string{};
+    const auto prev_ipa = index > 0 && !spec.graphemes.at(gs[index - 1]).empty()
+        ? spec.graphemes.at(gs[index - 1]).front() : std::string{};
+
+    // Most-specific contexts first, matching positional.py.
+    if (index + 1 < gs.size()) {
+        const std::string next = lower_ascii(gs[index + 1]);
+        const std::string exact = next.empty() ? "" : std::string(1, next[0]);
+        if (!exact.empty() && choose("before_" + exact)) return candidates;
+        if (front_grapheme(next) && choose("before_front_vowel")) return candidates;
+        if (back_grapheme(next) && choose("before_back_vowel")) return candidates;
+        if (palatal_ipa(next_ipa) && choose("before_palatal")) return candidates;
+    }
+    if (initial && choose("word_initial")) return candidates;
+    if (final && choose("word_final")) return candidates;
+    if (prev_vowel && next_vowel && choose("intervocalic")) return candidates;
+
+    if (vowel) {
+        const auto stressed = stress_nucleus(spec, gs);
+        if (stressed && *stressed == index && choose("nucleus_stressed")) return candidates;
+        if (stressed && *stressed != index) {
+            bool before_stress = index < *stressed;
+            if (before_stress && choose("first_pretonic")) return candidates;
+            if (before_stress && choose("pretonic")) return candidates;
+            if (!before_stress && choose("posttonic")) return candidates;
+            if (choose("nucleus_unstressed")) return candidates;
+        }
+        if (choose("nucleus")) return candidates;
+    }
+    if (prev_vowel && choose("after_vowel")) return candidates;
+    if (!prev_vowel && index > 0 && choose("after_consonant")) return candidates;
+    if (next_vowel && choose("before_vowel")) return candidates;
+    if (!next_vowel && index + 1 < gs.size() && choose("before_consonant")) return candidates;
+    if (choose("default")) return candidates;
+    return base;
 }
 
 std::size_t utf8_char_size(const std::string& text, std::size_t pos) {
@@ -316,7 +501,7 @@ std::vector<std::string> segment_ipa(const std::string& ipa, std::vector<std::st
     return result;
 }
 
-std::string apply_allophony(const LanguageSpec& spec, const IPAPath& path) {
+std::string apply_allophony(const LanguageSpec& spec, IPAPath& path) {
     if (spec.allophone_rules.empty() || path.graphemes.empty()) return path.ipa;
     std::vector<std::string> original = path.segments;
     original.resize(path.graphemes.size());
@@ -352,13 +537,27 @@ std::string apply_allophony(const LanguageSpec& spec, const IPAPath& path) {
         if (rule.word_initial && *rule.word_initial != (i == 0)) continue;
         if (rule.word_final && *rule.word_final != (i + 1 == flat.size())) continue;
         const auto owner = owners[i];
-        if (!rule.graphemes.empty() && !in(path.graphemes[owner], rule.graphemes)) continue;
-        if (!rule.word.empty() && !in(word, rule.word)) continue;
-        if (!rule.preceded_by_grapheme.empty() && (owner == 0 || !in(path.graphemes[owner - 1], rule.preceded_by_grapheme))) continue;
-        if (!rule.followed_by_grapheme.empty() && (owner + 1 == path.graphemes.size() || !in(path.graphemes[owner + 1], rule.followed_by_grapheme))) continue;
+         if (!rule.graphemes.empty() && !in(path.graphemes[owner], rule.graphemes)) continue;
+         if (!rule.word.empty() && !in(word, rule.word)) continue;
+         if (!rule.word_contains_grapheme.empty() && !std::any_of(rule.word_contains_grapheme.begin(), rule.word_contains_grapheme.end(), [&](const auto& x) { return word.find(lower_ascii(x)) != std::string::npos; })) continue;
+         if (std::any_of(rule.word_contains_grapheme_not.begin(), rule.word_contains_grapheme_not.end(), [&](const auto& x) { return word.find(lower_ascii(x)) != std::string::npos; })) continue;
+         if (!rule.preceded_by_grapheme.empty() && (owner == 0 || !in(path.graphemes[owner - 1], rule.preceded_by_grapheme))) continue;
+         if (!rule.followed_by_grapheme.empty() && (owner + 1 == path.graphemes.size() || !in(path.graphemes[owner + 1], rule.followed_by_grapheme))) continue;
         if (owner + 1 < path.graphemes.size() && in(path.graphemes[owner + 1], rule.followed_by_grapheme_not)) continue;
-        if (!rule.preceded_by_phoneme.empty() && (i == 0 || !in(flat[i - 1], rule.preceded_by_phoneme))) continue;
-        if (!rule.followed_by_phoneme.empty() && (i + 1 == flat.size() || !in(flat[i + 1], rule.followed_by_phoneme))) continue;
+         if (!rule.preceded_by_phoneme.empty() && (i == 0 || !in(flat[i - 1], rule.preceded_by_phoneme))) continue;
+         if (!rule.followed_by_phoneme.empty() && (i + 1 == flat.size() || !in(flat[i + 1], rule.followed_by_phoneme))) continue;
+         if (!rule.preceded_by.empty() && !class_match(rule.preceded_by, path.graphemes, original, owner, -1)) continue;
+         if (!rule.followed_by.empty() && !class_match(rule.followed_by, path.graphemes, original, owner, 1)) continue;
+         if (!rule.preceded_by_2.empty() && !class_match(rule.preceded_by_2, path.graphemes, original, owner, -2)) continue;
+         if (!rule.followed_by_2.empty() && !class_match(rule.followed_by_2, path.graphemes, original, owner, 2)) continue;
+         if (!rule.preceded_by_3.empty() && !class_match(rule.preceded_by_3, path.graphemes, original, owner, -3)) continue;
+         if (!rule.preceded_by_phoneme_2.empty() && (i < 2 || !in(flat[i - 2], rule.preceded_by_phoneme_2))) continue;
+         if (!rule.followed_by_phoneme_2.empty() && (i + 2 >= flat.size() || !in(flat[i + 2], rule.followed_by_phoneme_2))) continue;
+         bool other_nucleus = false;
+         for (std::size_t j = 0; j < path.graphemes.size(); ++j)
+             if (j != owner && vowel_grapheme(path.graphemes[j])) other_nucleus = true;
+         if (rule.requires_other_nucleus && *rule.requires_other_nucleus != other_nucleus) continue;
+         if (rule.followed_by_nucleus && *rule.followed_by_nucleus != std::any_of(path.graphemes.begin() + static_cast<std::ptrdiff_t>(owner + 1), path.graphemes.end(), vowel_grapheme)) continue;
         if (rule.stress == "stressed" && !stressed_grapheme(spec, path.graphemes, owner)) continue;
         if (rule.stress == "unstressed" && stressed_grapheme(spec, path.graphemes, owner)) continue;
         if (!rule.syllable_position.empty()) {
@@ -368,6 +567,12 @@ std::string apply_allophony(const LanguageSpec& spec, const IPAPath& path) {
             if (rule.syllable_position == "coda" && owner + 1 < path.graphemes.size() && vowel_grapheme(path.graphemes[owner + 1])) continue;
         }
         flat[i] = rule.append.empty() ? rule.surface : flat[i] + rule.append;
+        if (!rule.mutates_neighbor.empty()) {
+            if (rule.mutates_neighbor_side == "preceding" && i > 0)
+                flat[i - 1] += rule.mutates_neighbor;
+            if (rule.mutates_neighbor_side == "following" && i + 1 < flat.size())
+                flat[i + 1] += rule.mutates_neighbor;
+        }
     }
     segments.assign(original.size(), "");
     for (std::size_t i = 0; i < flat.size(); ++i) segments[owners[i]] += flat[i];
@@ -412,6 +617,7 @@ std::string apply_allophony(const LanguageSpec& spec, const IPAPath& path) {
         if (!rule.mutates_neighbor.empty() && rule.mutates_neighbor_side == "following" && i + 1 < segments.size()) segments[i + 1] = original[i + 1] + rule.mutates_neighbor;
         break;
     }
+    path.segments = segments;
     std::string result; for (const auto& segment : segments) result += segment; return result;
 }
 }
@@ -444,13 +650,7 @@ std::vector<IPAPath> Tokenizer::beam(const std::string& word, std::size_t width)
     std::vector<IPAPath> paths(1);
     for (std::size_t i = 0; i < gs.size(); ++i) {
         std::vector<IPAPath> next;
-        auto values = spec_.graphemes.at(gs[i]);
-        auto positional = spec_.positional_graphemes.find(gs[i]);
-        if (positional != spec_.positional_graphemes.end()) {
-            const std::string pos = i == 0 ? "word_initial" : (i + gs[i].size() >= word.size() ? "word_final" : "default");
-            auto it = positional->second.find(pos); if (it != positional->second.end()) values = it->second;
-            else if (auto d = positional->second.find("default"); d != positional->second.end()) values = d->second;
-        }
+        auto values = positional_values(spec_, gs, i, spec_.graphemes.at(gs[i]));
         for (auto path : paths) for (std::size_t j = 0; j < values.size(); ++j) {
             path.ipa += values[j]; path.score += static_cast<double>(j); path.graphemes.push_back(gs[i]); path.segments.push_back(values[j]); next.push_back(std::move(path));
         }
@@ -459,6 +659,13 @@ std::vector<IPAPath> Tokenizer::beam(const std::string& word, std::size_t width)
         paths = std::move(next);
     }
     if (paths.empty()) paths.push_back({"", 0.0, {}, {}});
+    if (!spec_.allophone_rules.empty()) {
+        for (auto& path : paths) {
+            for (int pass = 0; pass < spec_.allophone_passes; ++pass)
+                path.ipa = apply_allophony(spec_, path);
+        }
+        std::sort(paths.begin(), paths.end(), [](const auto& a, const auto& b) { return a.score < b.score; });
+    }
     return paths;
 }
 
@@ -525,13 +732,15 @@ TranscriptionResult G2P::transcribe_detailed(const std::string& text, const std:
     auto stage = [&](const std::string& name) -> const std::vector<std::string>& { auto it = plugin_overrides_.find(name); return it == plugin_overrides_.end() ? plugin_names(*spec_, name) : it->second; };
     for (const auto& name : stage("normalize")) { auto it = normalize_plugins.find(name); if (it == normalize_plugins.end()) throw std::runtime_error("missing normalize plugin: " + name); normalized = it->second->normalize(normalized, language_); }
     TranscriptionResult result; result.lang = language_; std::vector<std::string> surfaces, ipa_words; std::vector<bool> pausal;
-    for (const auto& word : words(normalized)) {
+    std::vector<IPAPath> stress_paths; std::vector<std::optional<std::size_t>> forced_stress;
+    const auto sentence = sentence_words(normalized);
+    for (const auto& word : sentence.first) {
         WordTranscription wt; wt.word = word; auto it = spec_->word_exceptions.find(lower_ascii(word));
         auto paths = it != spec_->word_exceptions.end() ? std::vector<IPAPath>{{it->second, 0.0, {}, {}}} : candidates(word, search == "greedy" ? 1 : width);
         auto lex = it == spec_->word_exceptions.end() ? load_lexicon(language_) : std::map<std::string, std::string>{};
         if (it == spec_->word_exceptions.end()) { auto li = lex.find(lower_ascii(word)); if (li != lex.end()) paths = {{li->second, 0.0, {}, {}}}; }
         for (const auto& name : stage("rescore")) { auto p = rescorer_plugins.find(name); if (p == rescorer_plugins.end()) throw std::runtime_error("missing rescore plugin: " + name); paths = p->second->rescore(word, language_, paths); }
-        wt.ipa = paths.front().graphemes.empty() ? paths.front().ipa : apply_allophony(*spec_, paths.front());
+        wt.ipa = paths.front().ipa;
         std::optional<std::size_t> plugin_stress;
         auto stress_names = stage("stress");
         if (!stress_names.empty()) {
@@ -540,12 +749,21 @@ TranscriptionResult G2P::transcribe_detailed(const std::string& text, const std:
             if (plugin == stress_plugins.end()) throw std::runtime_error("missing stress plugin: " + stress_names.front());
             plugin_stress = plugin->second->stressed_index(word, syllables, language_);
         }
-        if (!paths.front().graphemes.empty()) wt.ipa = add_stress(*spec_, word, IPAPath{wt.ipa, paths.front().score, paths.front().graphemes, paths.front().segments}, plugin_stress);
+        stress_paths.push_back({wt.ipa, paths.front().score, paths.front().graphemes, paths.front().segments});
+        forced_stress.push_back(plugin_stress);
         wt.candidates = paths; wt.confidence = word_confidence(word, width);
-        result.words.push_back(wt); surfaces.push_back(word); ipa_words.push_back(wt.ipa); pausal.push_back(false);
+        result.words.push_back(wt); surfaces.push_back(word); ipa_words.push_back(wt.ipa);
     }
+    pausal = sentence.second;
+    ipa_words = apply_sandhi(*spec_, std::move(ipa_words), pausal);
     for (const auto& name : stage("sandhi")) { auto p = sandhi_plugins.find(name); if (p == sandhi_plugins.end()) throw std::runtime_error("missing sandhi plugin: " + name); ipa_words = p->second->apply(ipa_words, surfaces, pausal, language_); }
-    for (std::size_t i = 0; i < ipa_words.size(); ++i) { if (i) result.ipa += " "; result.ipa += ipa_words[i]; result.words[i].ipa = ipa_words[i]; }
+    for (std::size_t i = 0; i < ipa_words.size(); ++i) {
+        if (!stress_paths[i].graphemes.empty())
+            ipa_words[i] = add_stress(*spec_, surfaces[i], IPAPath{ipa_words[i], stress_paths[i].score, stress_paths[i].graphemes, stress_paths[i].segments}, forced_stress[i]);
+        if (i) result.ipa += " ";
+        result.ipa += ipa_words[i];
+        result.words[i].ipa = ipa_words[i];
+    }
     return result;
 }
 std::string G2P::transcribe(const std::string& text, const std::string& search, std::size_t width) const { return transcribe_detailed(text, search, width).ipa; }
