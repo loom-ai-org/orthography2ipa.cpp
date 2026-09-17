@@ -42,7 +42,7 @@ struct LanguageSpec {
     std::map<std::string, std::map<std::string, std::vector<std::string>>> positional_graphemes;
     std::vector<std::string> phonemes;
     std::map<std::string, std::string> word_exceptions;
-    std::map<std::string, std::string> grammatical_endings;
+    std::map<std::string, std::vector<std::optional<std::string>>> grammatical_endings;
     std::vector<AllophoneRule> allophone_rules;
     int allophone_passes = 1;
     std::vector<SandhiRule> sandhi_rules;
@@ -55,6 +55,9 @@ struct LanguageSpec {
     std::string secondary_stress;
     int default_stress_position = -2;
     std::string stress_mark = "ˈ";
+    std::string script_type = "alphabet";
+    std::string inherent_vowel, inherent_vowel_final, virama_final_vowel;
+    bool coda_no_inherent_vowel = false;
     std::optional<double> latitude, longitude;
 
     std::vector<std::string> family_path() const;
@@ -100,7 +103,8 @@ private:
 
 class G2P {
 public:
-    explicit G2P(std::string language, std::map<std::string, std::vector<std::string>> plugin_overrides = {});
+    explicit G2P(std::string language, std::map<std::string, std::vector<std::string>> plugin_overrides = {},
+                 std::string dialect_profile = "");
     const LanguageSpec& spec() const;
     std::string transcribe(const std::string& text, const std::string& search = "greedy",
                            std::size_t beam_width = 8) const;
@@ -113,6 +117,7 @@ private:
     std::string language_;
     const LanguageSpec* spec_;
     std::map<std::string, std::vector<std::string>> plugin_overrides_;
+    std::string dialect_profile_;
 };
 
 class NormalizePlugin {
@@ -160,6 +165,7 @@ void register_syllabifier_plugin(const std::string& name, std::shared_ptr<Syllab
 void register_stress_plugin(const std::string& name, std::shared_ptr<StressPlugin> plugin);
 void register_rescorer_plugin(const std::string& name, std::shared_ptr<RescorerPlugin> plugin);
 void register_sandhi_plugin(const std::string& name, std::shared_ptr<SandhiPlugin> plugin);
+void discover_plugins(const std::string& directory = "");
 
 std::string resolve(const std::string& code);
 const LanguageSpec& get(const std::string& code);
@@ -172,9 +178,14 @@ void set_lexicon_directory(const std::string& path);
 void clear_lexicons();
 std::vector<std::string> available_lexicon_codes();
 std::map<std::string, std::string> get_lexicon(const std::string& code);
+std::optional<std::string> lexicon_source(const std::string& code);
+std::optional<std::string> lexicon_path(const std::string& code);
 std::vector<std::pair<std::size_t, std::string>> validate_lexicon(const std::string& text);
 
 std::string transcribe(const std::string& text, const std::string& language);
+std::string apply_dialect_transform(const std::string& ipa, const std::string& profile,
+                                    const std::string& orthography = "");
+std::vector<std::string> available_dialect_profiles();
 double segment_distance(const std::string& a, const std::string& b);
 InventoryDistance inventory_distance(const LanguageSpec& a, const LanguageSpec& b);
 GraphemeDivergence grapheme_divergence(const LanguageSpec& a, const LanguageSpec& b);

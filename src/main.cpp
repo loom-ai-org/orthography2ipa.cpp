@@ -37,13 +37,17 @@ int main(int argc, char** argv) {
         }
         if (command == "transcribe" && i + 1 < argc) {
             const std::string code = argv[i++];
+            std::string dialect;
             if (i + 1 < argc && std::string(argv[i]) == "--lexicon") {
                 register_lexicon(code, argv[i + 1]); i += 2;
+            }
+            if (i + 1 < argc && std::string(argv[i]) == "--dialect") {
+                dialect = argv[i + 1]; i += 2;
             }
             if (i >= argc) { usage(); return 2; }
             std::string text = argv[i++];
             while (i < argc) { text += " "; text += argv[i++]; }
-            std::cout << G2P(code).transcribe(text) << "\n";
+            std::cout << G2P(code, {}, dialect).transcribe(text) << "\n";
             return 0;
         }
         if (command == "distance" && i + 1 < argc) {

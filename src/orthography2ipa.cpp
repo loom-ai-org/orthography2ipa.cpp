@@ -12,6 +12,14 @@
 #include <sstream>
 #include <stdexcept>
 #include <regex>
+#include <mutex>
+#include <sys/types.h>
+#include <sys/wait.h>
+#include <unistd.h>
+#include <dlfcn.h>
+#include <unicode/normalizer2.h>
+#include <unicode/unistr.h>
+#include <unicode/uchar.h>
 
 namespace orthography2ipa {
 namespace {
@@ -27,10 +35,89 @@ std::map<std::string, std::shared_ptr<SyllabifierPlugin>> syllabifier_plugins;
 std::map<std::string, std::shared_ptr<StressPlugin>> stress_plugins;
 std::map<std::string, std::shared_ptr<RescorerPlugin>> rescorer_plugins;
 std::map<std::string, std::shared_ptr<SandhiPlugin>> sandhi_plugins;
+std::vector<void*> plugin_handles;
 
 std::string lower_ascii(std::string s) {
     for (char& c : s) if (c >= 'A' && c <= 'Z') c = static_cast<char>(c - 'A' + 'a');
     return s;
+}
+
+std::string unicode_nfc(const std::string& input, bool fold_case) {
+    UErrorCode status = U_ZERO_ERROR;
+    const auto* normalizer = icu::Normalizer2::getNFCInstance(status);
+    if (U_FAILURE(status)) throw std::runtime_error("unable to initialize Unicode NFC normalizer");
+    icu::UnicodeString value = icu::UnicodeString::fromUTF8(input);
+    if (fold_case) value.foldCase();
+    icu::UnicodeString normalized; normalizer->normalize(value, normalized, status);
+    if (U_FAILURE(status)) throw std::runtime_error("Unicode NFC normalization failed");
+    std::string output; normalized.toUTF8String(output); return output;
+}
+std::string unicode_fold_nfc(const std::string& input) { return unicode_nfc(input, true); }
+
+bool valid_ipa_string(const std::string& input) {
+    static const std::string modifiers = "ːˑˈˌʰʷʲˠˤʼⁿ‿͜͡.|‖˥˦˧˨˩";
+    if (input.empty() || unicode_nfc(input, false) != input) return false;
+    const icu::UnicodeString value = icu::UnicodeString::fromUTF8(input);
+    for (int32_t i = 0; i < value.length();) {
+        UChar32 cp; U16_NEXT(value.getBuffer(), i, value.length(), cp);
+        if (cp < 0) return false;
+        std::string utf8; icu::UnicodeString(cp).toUTF8String(utf8);
+        if (modifiers.find(utf8) != std::string::npos) continue;
+        const auto category = u_charType(cp);
+        if (category < U_UPPERCASE_LETTER || category > U_OTHER_LETTER) {
+            if (category < U_NON_SPACING_MARK || category > U_ENCLOSING_MARK) return false;
+        }
+    }
+    return true;
+}
+
+fs::path lexicon_cache_directory() {
+    const char* xdg = std::getenv("XDG_CACHE_HOME");
+    const char* home = std::getenv("HOME");
+    return fs::path(xdg ? xdg : (home ? fs::path(home) / ".cache" : fs::temp_directory_path())) /
+           "orthography2ipa" / "lexicons";
+}
+
+fs::path remote_cache_path(const std::string& source) {
+    const auto hash = std::hash<std::string>{}(source);
+    return lexicon_cache_directory() / (std::to_string(hash) + ".tsv");
+}
+
+std::string fetch_url(const std::string& url) {
+    int pipefd[2];
+    if (pipe(pipefd) != 0) throw std::runtime_error("unable to create lexicon download pipe");
+    const pid_t pid = fork();
+    if (pid == 0) {
+        dup2(pipefd[1], STDOUT_FILENO); close(pipefd[0]); close(pipefd[1]);
+        execlp("curl", "curl", "--fail", "--silent", "--show-error", "--location", url.c_str(), nullptr);
+        _exit(127);
+    }
+    if (pid < 0) { close(pipefd[0]); close(pipefd[1]); throw std::runtime_error("unable to start lexicon download"); }
+    close(pipefd[1]); std::string body; char buffer[8192]; ssize_t count;
+    while ((count = read(pipefd[0], buffer, sizeof(buffer))) > 0) body.append(buffer, static_cast<std::size_t>(count));
+    close(pipefd[0]); int status = 0; waitpid(pid, &status, 0);
+    if (!WIFEXITED(status) || WEXITSTATUS(status) != 0) throw std::runtime_error("failed to fetch lexicon: " + url);
+    return body;
+}
+
+fs::path resolve_remote_lexicon(const std::string& source) {
+    const auto cached = remote_cache_path(source);
+    if (fs::is_regular_file(cached)) return cached;
+    std::string url = source;
+    if (source.rfind("hf://", 0) == 0) {
+        const std::string spec = source.substr(5); const auto slash = spec.find('/');
+        const auto second = slash == std::string::npos ? std::string::npos : spec.find('/', slash + 1);
+        if (slash == std::string::npos || second == std::string::npos)
+            throw std::invalid_argument("hf lexicon must be hf://owner/repo/file[@revision]");
+        const std::string repo = spec.substr(0, second); const std::string rest = spec.substr(second + 1);
+        const auto at = rest.rfind('@'); const std::string file = at == std::string::npos ? rest : rest.substr(0, at);
+        const std::string revision = at == std::string::npos ? "main" : rest.substr(at + 1);
+        url = "https://huggingface.co/datasets/" + repo + "/resolve/" + revision + "/" + file;
+    }
+    fs::create_directories(cached.parent_path());
+    std::ofstream output(cached, std::ios::binary); if (!output) throw std::runtime_error("unable to create lexicon cache");
+    output << fetch_url(url); if (!output) throw std::runtime_error("unable to write lexicon cache");
+    return cached;
 }
 
 std::vector<std::string> strings(const ptree& p) {
@@ -152,6 +239,11 @@ LanguageSpec load_raw(const std::string& code, std::set<std::string>& loading) {
     s.code = raw.get<std::string>("code", code);
     s.name = raw.get<std::string>("name", s.code);
     s.script = raw.get<std::string>("script", "");
+    s.script_type = raw.get<std::string>("script_type", "alphabet");
+    s.inherent_vowel = raw.get<std::string>("inherent_vowel", "");
+    s.inherent_vowel_final = raw.get<std::string>("inherent_vowel_final", "");
+    s.virama_final_vowel = raw.get<std::string>("virama_final_vowel", "");
+    s.coda_no_inherent_vowel = raw.get<bool>("coda_no_inherent_vowel", false);
     s.parent = raw.get<std::string>("parent", "");
     s.family = raw.get<std::string>("family", "");
     s.quality = raw.get<std::string>("quality", "research");
@@ -181,8 +273,24 @@ LanguageSpec load_raw(const std::string& code, std::set<std::string>& loading) {
     }
     if (auto ex = raw.get_child_optional("word_exceptions"))
         for (const auto& x : *ex) s.word_exceptions[x.first] = x.second.data();
-    if (auto endings = raw.get_child_optional("grammatical_endings"))
-        for (const auto& x : *endings) if (!x.second.empty()) s.grammatical_endings[x.first] = x.second.data();
+    if (auto endings = raw.get_child_optional("grammatical_endings")) {
+        for (const auto& x : *endings) {
+            std::vector<std::optional<std::string>> values;
+            if (x.second.empty()) values.push_back(x.second.data());
+            else {
+                bool first = true;
+                for (const auto& value : x.second) {
+                    // property_tree represents JSON null and an empty string
+                    // identically. In the ending schema null is only legal at
+                    // rank one, so preserve that distinction by position.
+                    if (first && value.second.data().empty()) values.push_back(std::nullopt);
+                    else values.push_back(value.second.data());
+                    first = false;
+                }
+            }
+            if (!values.empty()) s.grammatical_endings[x.first] = std::move(values);
+        }
+    }
     s.allophone_rules = parse_allophone_rules(raw);
     s.allophone_passes = std::max(1, std::min(4, raw.get<int>("allophone_passes", 1)));
     s.sandhi_rules = parse_sandhi_rules(raw);
@@ -192,6 +300,7 @@ LanguageSpec load_raw(const std::string& code, std::set<std::string>& loading) {
     // Resolve the data inheritance used by the Python loader. Own entries override base entries.
     const std::string base = raw.get<std::string>("graphemes_base", "");
     const std::string allo_base = raw.get<std::string>("allophones_base", "");
+    const std::string endings_base = raw.get<std::string>("grammatical_endings_base", "");
     if (!base.empty() && base != code) {
         LanguageSpec b = load_raw(base, loading);
         for (const auto& x : b.graphemes) if (!s.graphemes.count(x.first)) s.graphemes[x.first] = x.second;
@@ -220,6 +329,11 @@ LanguageSpec load_raw(const std::string& code, std::set<std::string>& loading) {
     if (!allo_base.empty() && allo_base != code) {
         LanguageSpec b = load_raw(allo_base, loading);
         for (const auto& x : b.allophones) if (!s.allophones.count(x.first)) s.allophones[x.first] = x.second;
+    }
+    if (!endings_base.empty() && endings_base != code) {
+        LanguageSpec b = load_raw(endings_base, loading);
+        for (const auto& [ending, values] : b.grammatical_endings)
+            if (!s.grammatical_endings.count(ending)) s.grammatical_endings[ending] = values;
     }
     if (s.family.empty() && !s.parent.empty() && s.parent != code) {
         try { s.family = load_raw(s.parent, loading).family; } catch (...) {}
@@ -251,8 +365,89 @@ std::pair<std::vector<std::string>, std::vector<bool>> sentence_words(const std:
     return {std::move(result), std::move(pausal)};
 }
 
+struct InputWord { std::string surface, forced_ipa; bool forced = false, pausal = false; };
+
+std::vector<InputWord> parse_input(const std::string& text,
+                                   const std::function<std::string(const std::string&)>& normalize) {
+    std::vector<InputWord> words;
+    const std::regex tag(R"(<phoneme\b([^>]*)>([\s\S]*?)</phoneme\s*>)", std::regex::icase);
+    std::smatch match; std::string remaining = text; bool found_tag = false;
+    while (std::regex_search(remaining, match, tag)) {
+        found_tag = true;
+        auto plain = sentence_words(normalize(match.prefix().str()));
+        for (std::size_t i = 0; i < plain.first.size(); ++i) words.push_back({plain.first[i], "", false, plain.second[i]});
+        const std::string attrs = match[1].str();
+        std::smatch ph; const std::regex ph_attr(R"(\bph\s*=\s*["']([^"']+)["'])", std::regex::icase);
+        if (!std::regex_search(attrs, ph, ph_attr) || ph[1].str().empty())
+            throw std::invalid_argument("<phoneme> requires a non-empty ph attribute");
+        const std::string surface = match[2].str();
+        if (surface.find_first_not_of(" \t\r\n") == std::string::npos)
+            throw std::invalid_argument("<phoneme> must wrap text");
+        words.push_back({surface, ph[1].str(), true, false});
+        remaining = match.suffix().str();
+    }
+    auto plain = sentence_words(normalize(remaining));
+    for (std::size_t i = 0; i < plain.first.size(); ++i) words.push_back({plain.first[i], "", false, plain.second[i]});
+    if (!found_tag && text.find("<phoneme") != std::string::npos)
+        throw std::invalid_argument("unclosed <phoneme> tag");
+    return words;
+}
+
 bool in(const std::string& value, const std::vector<std::string>& list);
 bool vowel_grapheme(const std::string& value);
+
+unsigned int utf8_codepoint(const std::string& text, std::size_t pos) {
+    const unsigned char c = static_cast<unsigned char>(text[pos]);
+    if (c < 0x80) return c;
+    if ((c & 0xe0) == 0xc0) return ((c & 0x1f) << 6) | (text[pos + 1] & 0x3f);
+    if ((c & 0xf0) == 0xe0) return ((c & 0xf) << 12) | ((text[pos + 1] & 0x3f) << 6) | (text[pos + 2] & 0x3f);
+    return ((c & 7) << 18) | ((text[pos + 1] & 0x3f) << 12) | ((text[pos + 2] & 0x3f) << 6) | (text[pos + 3] & 0x3f);
+}
+
+bool combining_mark(unsigned int cp) {
+    return (cp >= 0x300 && cp <= 0x36f) || (cp >= 0x903 && cp <= 0x983) ||
+           (cp >= 0x9bc && cp <= 0x9cd) || (cp >= 0xa3c && cp <= 0xa4d) ||
+           (cp >= 0xabc && cp <= 0xacd) || (cp >= 0xb3c && cp <= 0xb4d) ||
+           (cp >= 0xbcd && cp <= 0xbcd) || (cp >= 0xc3e && cp <= 0xc56) ||
+           (cp >= 0xcc3 && cp <= 0xcdc) || (cp >= 0xd3b && cp <= 0xd4d) ||
+           (cp >= 0x102b && cp <= 0x103e) || (cp >= 0x17b4 && cp <= 0x17d6);
+}
+
+std::string normalize_script_text(const LanguageSpec& spec, const std::string& input) {
+    std::string text = input;
+    if (spec.script.find("Arabic") != std::string::npos || spec.script_type == "abjad") {
+        // Presentation forms are compatibility glyphs, not distinct letters.
+        std::string decomposed;
+        for (std::size_t i = 0; i < text.size();) {
+            const auto n = utf8_char_size(text, i); const auto cp = utf8_codepoint(text, i);
+            if ((cp >= 0xfb50 && cp <= 0xfdff) || (cp >= 0xfe70 && cp <= 0xfeff)) {
+                if (cp == 0xfefb || cp == 0xfefc) decomposed += "لا";
+                else decomposed += text.substr(i, n);
+            } else decomposed += text.substr(i, n);
+            i += n;
+        }
+        text = decomposed;
+        // Expand consonant + shadda, accepting either mark ordering.
+        std::string expanded;
+        for (std::size_t i = 0; i < text.size();) {
+            const auto n = utf8_char_size(text, i);
+            if (i + n < text.size()) {
+                const auto next = utf8_codepoint(text, i + n);
+                if (next == 0x651) {
+                    expanded += text.substr(i, n) + text.substr(i, n); i += n + utf8_char_size(text, i + n); continue;
+                }
+                const auto mark_n = utf8_char_size(text, i + n);
+                if (i + n + mark_n < text.size() && utf8_codepoint(text, i + n + mark_n) == 0x651) {
+                    expanded += text.substr(i, n) + text.substr(i, n) + text.substr(i + n, mark_n);
+                    i += n + mark_n + utf8_char_size(text, i + n + mark_n); continue;
+                }
+            }
+            expanded += text.substr(i, n); i += n;
+        }
+        text = expanded;
+    }
+    return text;
+}
 
 std::string add_stress(const LanguageSpec& spec, const std::string& word, const IPAPath& path, std::optional<std::size_t> forced = std::nullopt) {
     if (path.graphemes.empty() || spec.stress_mark.empty()) return path.ipa;
@@ -313,6 +508,40 @@ const std::vector<std::string>& plugin_names(const LanguageSpec& spec, const std
     auto it = spec.plugins.find(stage); return it == spec.plugins.end() ? empty : it->second;
 }
 
+template <typename Plugin>
+bool owns_language(const Plugin& plugin, const std::string& language) {
+    const auto codes = plugin.language_codes();
+    return std::find(codes.begin(), codes.end(), language) != codes.end() ||
+           std::find(codes.begin(), codes.end(), "*") != codes.end();
+}
+
+std::vector<std::string> fallback_syllables(const std::string& word) {
+    std::vector<std::string> result; std::string current; bool nucleus = false;
+    for (std::size_t i = 0; i < word.size();) {
+        const auto n = utf8_char_size(word, i); const auto g = word.substr(i, n); current += g;
+        if (vowel_grapheme(g)) nucleus = true;
+        if (nucleus && i + n < word.size() && vowel_grapheme(word.substr(i + n, utf8_char_size(word, i + n)))) {
+            result.push_back(current); current.clear(); nucleus = false;
+        }
+        i += n;
+    }
+    if (!current.empty()) result.push_back(current);
+    return result;
+}
+
+std::vector<std::string> syllables_for(const std::string& word, const std::string& language) {
+    const SyllabifierPlugin* selected = nullptr;
+    for (const auto& [_, plugin] : syllabifier_plugins)
+        if (owns_language(*plugin, language) && (!selected || plugin->priority() > selected->priority())) selected = plugin.get();
+    if (selected) {
+        auto result = selected->syllabify(word, language);
+        std::string joined; for (const auto& syllable : result) joined += syllable;
+        if (joined != word) throw std::runtime_error("syllabifier plugin returned a non-round-tripping result");
+        return result;
+    }
+    return fallback_syllables(word);
+}
+
 std::map<std::string, std::string> load_lexicon(const std::string& code) {
     auto cached = lexicon_cache.find(code); if (cached != lexicon_cache.end()) return cached->second;
     std::string source;
@@ -324,11 +553,15 @@ std::map<std::string, std::string> load_lexicon(const std::string& code) {
     }
     std::map<std::string, std::string> result;
     if (!source.empty()) {
-        std::ifstream input(source); if (!input) throw std::runtime_error("lexicon not found: " + source);
+        fs::path path = source;
+        if (source.rfind("http://", 0) == 0 || source.rfind("https://", 0) == 0 || source.rfind("hf://", 0) == 0)
+            path = resolve_remote_lexicon(source);
+        std::ifstream input(path); if (!input) throw std::runtime_error("lexicon not found: " + source);
         std::string line;
         while (std::getline(input, line)) {
             const auto tab = line.find('\t'); if (tab == std::string::npos || tab == 0 || tab + 1 >= line.size()) continue;
-            const std::string word = lower_ascii(line.substr(0, tab)), ipa = line.substr(tab + 1);
+            const std::string word = unicode_fold_nfc(line.substr(0, tab));
+            const std::string ipa = unicode_nfc(line.substr(tab + 1), false);
             if (!result.count(word)) result[word] = ipa;
         }
     }
@@ -620,6 +853,112 @@ std::string apply_allophony(const LanguageSpec& spec, IPAPath& path) {
     path.segments = segments;
     std::string result; for (const auto& segment : segments) result += segment; return result;
 }
+
+std::vector<IPAPath> apply_grammatical_endings(const LanguageSpec& spec,
+                                               std::vector<IPAPath> paths) {
+    if (paths.empty() || spec.grammatical_endings.empty()) return paths;
+    std::string surface;
+    for (const auto& g : paths.front().graphemes) surface += lower_ascii(g);
+    std::string ending;
+    const std::vector<std::optional<std::string>>* values = nullptr;
+    for (const auto& [candidate, declared] : spec.grammatical_endings) {
+        if (surface.size() > candidate.size() && surface.size() >= candidate.size() &&
+            surface.compare(surface.size() - candidate.size(), candidate.size(), lower_ascii(candidate)) == 0 &&
+            (values == nullptr || candidate.size() > ending.size())) {
+            ending = candidate; values = &declared;
+        }
+    }
+    if (!values || ending.empty()) return paths;
+    std::size_t bytes = 0, tokens = 0;
+    for (auto it = paths.front().graphemes.rbegin(); it != paths.front().graphemes.rend() && bytes < ending.size(); ++it) {
+        bytes += it->size(); ++tokens;
+    }
+    if (tokens >= paths.front().segments.size()) return paths;
+    const auto rank1 = values->empty() ? std::optional<std::string>{} : (*values)[0];
+    std::vector<IPAPath> rewritten;
+    auto rewrite = [&](const IPAPath& path, const std::optional<std::string>& value, double cost) {
+        if (!value || path.segments.size() <= tokens) return path;
+        IPAPath out = path;
+        out.segments.resize(path.segments.size() - tokens);
+        out.segments.push_back(*value); out.ipa.clear();
+        for (const auto& segment : out.segments) out.ipa += segment;
+        out.graphemes.resize(path.graphemes.size() - tokens);
+        out.graphemes.push_back(ending); out.score += cost;
+        return out;
+    };
+    for (const auto& path : paths) rewritten.push_back(rewrite(path, rank1, 0));
+    for (std::size_t i = 1; i < values->size(); ++i)
+        rewritten.push_back(rewrite(paths.front(), (*values)[i], static_cast<double>(i)));
+    std::sort(rewritten.begin(), rewritten.end(), [](const auto& a, const auto& b) { return a.score < b.score; });
+    return rewritten;
+}
+
+bool dialect_profile_known(const std::string& profile) {
+    static const std::set<std::string> profiles{
+        "estremenho", "lisbon", "ribatejano", "beira_baixa", "algarve_barlavento",
+        "northern", "transmontano", "baixo_minhoto", "porto", "beira_alta",
+        "galician", "galician_west", "leonese", "rionorese", "guadramilese"};
+    return profiles.count(profile) != 0;
+}
+
+bool transform_context(const std::string& ipa, std::size_t pos, std::size_t length,
+                       const std::string& context, const std::string& orthography) {
+    if (context.empty()) return true;
+    if (context == "word_final") return pos + length >= ipa.size() || ipa[pos + length] == ' ';
+    if (context == "ortho_has_ou") return lower_ascii(orthography).find("ou") != std::string::npos;
+    if (context == "ortho_source_is_ch") return lower_ascii(orthography).find("ch") != std::string::npos;
+    if (context == "ortho_source_is_z") return lower_ascii(orthography).find('z') != std::string::npos;
+    if (context == "stressed") {
+        return ipa.rfind("ˈ", pos) != std::string::npos;
+    }
+    if (context == "unstressed_pretonic") {
+        return ipa.find("ˈ", pos) != std::string::npos;
+    }
+    return false;
+}
+
+std::string replace_rule(std::string ipa, const std::string& from, const std::string& to,
+                         const std::string& context = "", const std::string& orthography = "") {
+    if (from.empty()) return ipa;
+    for (std::size_t pos = 0; (pos = ipa.find(from, pos)) != std::string::npos;) {
+        if (transform_context(ipa, pos, from.size(), context, orthography)) { ipa.replace(pos, from.size(), to); pos += to.size(); }
+        else pos += from.size();
+    }
+    return ipa;
+}
+
+std::string apply_dialect_impl(std::string ipa, const std::string& profile, const std::string& orthography) {
+    if (profile == "rionorese" || profile == "guadramilese") {
+        std::stringstream sounds(ipa), spellings(orthography); std::vector<std::string> iw, ow; std::string value;
+        while (sounds >> value) iw.push_back(value);
+        while (spellings >> value) ow.push_back(value);
+        if (iw.size() == ow.size()) for (std::size_t i = 0; i < iw.size(); ++i) {
+            if (profile == "rionorese" && ow[i] == "o") iw[i] = replace_rule(iw[i], "u", "al");
+            if (profile == "rionorese" && ow[i] == "eu") iw[i] = replace_rule(iw[i], "ew", "jew");
+            if (profile == "guadramilese" && ow[i] == "eu") iw[i] = replace_rule(iw[i], "ew", "jow");
+            if (profile == "guadramilese" && ow[i] == "ia") iw[i] = replace_rule(iw[i], "iɐ", "dibɐ");
+        }
+        ipa.clear(); for (const auto& word : iw) { if (!ipa.empty()) ipa += " "; ipa += word; }
+    }
+    if (profile == "lisbon") { ipa = replace_rule(ipa, "ej", "ɐj"); ipa = replace_rule(ipa, "ow", "o"); ipa = replace_rule(ipa, "e", "ɨ", "unstressed_pretonic", orthography); ipa = replace_rule(ipa, "l", "ɫ"); return ipa; }
+    const bool northern = profile == "northern" || profile == "transmontano" || profile == "baixo_minhoto" || profile == "porto" || profile == "beira_alta" || profile == "leonese" || profile == "rionorese" || profile == "guadramilese";
+    const bool galician = profile == "galician" || profile == "galician_west";
+    if (northern || galician) { ipa = replace_rule(ipa, "v", "b"); ipa = replace_rule(ipa, "o", "ow", "ortho_has_ou", orthography); }
+    if (galician) { ipa = replace_rule(ipa, "ʒ", "ʃ"); ipa = replace_rule(ipa, "z", "s"); if (profile == "galician_west") ipa = replace_rule(ipa, "ɡ", "x"); }
+    if (profile == "transmontano" || profile == "leonese" || profile == "rionorese" || profile == "guadramilese") { ipa = replace_rule(ipa, "ʃ", "tʃ", "ortho_source_is_ch", orthography); ipa = replace_rule(ipa, "s", "s̺"); }
+    if (profile == "baixo_minhoto" || profile == "beira_alta" || profile == "porto") { ipa = replace_rule(ipa, "s", "s̺"); ipa = replace_rule(ipa, "z", "z̺"); }
+    if (profile == "ribatejano" || profile == "beira_baixa" || profile == "algarve_barlavento") ipa = replace_rule(ipa, "ej", "e");
+    if (profile == "beira_baixa") ipa = replace_rule(ipa, "u", "y", "stressed");
+    if (profile == "algarve_barlavento") {
+        ipa = replace_rule(ipa, "a", "\x01"); ipa = replace_rule(ipa, "ɔ", "\x02");
+        ipa = replace_rule(ipa, "o", "\x03"); ipa = replace_rule(ipa, "u", "\x04");
+        ipa = replace_rule(ipa, "ɛ", "\x05"); ipa = replace_rule(ipa, "e", "\x06");
+        ipa = replace_rule(ipa, "\x01", "ɔ"); ipa = replace_rule(ipa, "\x02", "o");
+        ipa = replace_rule(ipa, "\x03", "u"); ipa = replace_rule(ipa, "\x04", "y");
+        ipa = replace_rule(ipa, "\x05", "æ"); ipa = replace_rule(ipa, "\x06", "ɛ");
+    }
+    return ipa;
+}
 }
 
 std::vector<std::string> LanguageSpec::family_path() const {
@@ -635,7 +974,8 @@ Tokenizer::Tokenizer(const LanguageSpec& spec) : spec_(spec) {
 }
 
 std::vector<std::string> Tokenizer::tokenize_word(const std::string& word, std::vector<std::string>* unmapped) const {
-    std::vector<std::string> result; std::string lower = lower_ascii(word);
+    std::vector<std::string> result; std::string lower = normalize_script_text(spec_, word);
+    lower = lower_ascii(lower);
     for (std::size_t i = 0; i < lower.size();) {
         std::string match;
         for (const auto& key : keys_) if (lower.compare(i, key.size(), lower_ascii(key)) == 0) { match = key; break; }
@@ -646,11 +986,23 @@ std::vector<std::string> Tokenizer::tokenize_word(const std::string& word, std::
 }
 
 std::vector<IPAPath> Tokenizer::beam(const std::string& word, std::size_t width) const {
-    std::vector<std::string> unmapped; auto gs = tokenize_word(word, &unmapped);
+    std::vector<std::string> unmapped; const std::string normalized = normalize_script_text(spec_, word); auto gs = tokenize_word(normalized, &unmapped);
     std::vector<IPAPath> paths(1);
     for (std::size_t i = 0; i < gs.size(); ++i) {
         std::vector<IPAPath> next;
         auto values = positional_values(spec_, gs, i, spec_.graphemes.at(gs[i]));
+        const bool abugida = spec_.script_type == "abugida" && !spec_.inherent_vowel.empty();
+        const bool current_consonant = !vowel_grapheme(gs[i]) && !values.empty();
+        const bool next_supplies_vowel = i + 1 < gs.size() && (vowel_grapheme(gs[i + 1]) ||
+            (!gs[i + 1].empty() && combining_mark(utf8_codepoint(gs[i + 1], 0))));
+        if (abugida && current_consonant && !next_supplies_vowel) {
+            const bool final = i + 1 == gs.size();
+            if (!final || spec_.inherent_vowel_final.empty()) {
+                for (auto& value : values) if (!value.empty()) value += spec_.inherent_vowel;
+            } else {
+                for (auto& value : values) if (!value.empty()) value += spec_.inherent_vowel_final;
+            }
+        }
         for (auto path : paths) for (std::size_t j = 0; j < values.size(); ++j) {
             path.ipa += values[j]; path.score += static_cast<double>(j); path.graphemes.push_back(gs[i]); path.segments.push_back(values[j]); next.push_back(std::move(path));
         }
@@ -689,9 +1041,34 @@ std::vector<std::string> available_lexicon_codes() {
     return {codes.begin(), codes.end()};
 }
 std::map<std::string, std::string> get_lexicon(const std::string& code) { return load_lexicon(resolve(code)); }
+std::optional<std::string> lexicon_source(const std::string& code) {
+    const auto canonical = resolve(code);
+    if (auto it = registered_lexicons.find(canonical); it != registered_lexicons.end()) return it->second;
+    const char* env = std::getenv("ORTHOGRAPHY2IPA_LEXICON_DIR");
+    const std::string dir = lexicon_directory ? *lexicon_directory : (env ? env : "");
+    if (!dir.empty() && fs::is_regular_file(fs::path(dir) / (canonical + ".tsv")))
+        return (fs::path(dir) / (canonical + ".tsv")).string();
+    return std::nullopt;
+}
+std::optional<std::string> lexicon_path(const std::string& code) {
+    const auto source = lexicon_source(code); if (!source) return std::nullopt;
+    fs::path path = *source;
+    if (source->rfind("http://", 0) == 0 || source->rfind("https://", 0) == 0 || source->rfind("hf://", 0) == 0)
+        path = resolve_remote_lexicon(*source);
+    return path.string();
+}
 std::vector<std::pair<std::size_t, std::string>> validate_lexicon(const std::string& text) {
     std::vector<std::pair<std::size_t, std::string>> errors; std::set<std::string> seen; std::stringstream stream(text); std::string line; std::size_t n = 0;
-    while (std::getline(stream, line)) { ++n; if (line.empty()) continue; auto tab = line.find('\t'); if (tab == std::string::npos || line.find('\t', tab + 1) != std::string::npos) { errors.emplace_back(n, "expected word<TAB>ipa"); continue; } auto word = line.substr(0, tab), ipa = line.substr(tab + 1); if (word.empty() || ipa.empty()) errors.emplace_back(n, "empty word or IPA"); if (word != lower_ascii(word)) errors.emplace_back(n, "word not lowercase"); if (!seen.insert(word).second) errors.emplace_back(n, "duplicate word"); }
+    while (std::getline(stream, line)) {
+        ++n; if (line.empty()) continue; const auto tab = line.find('\t');
+        if (tab == std::string::npos || line.find('\t', tab + 1) != std::string::npos) { errors.emplace_back(n, "expected word<TAB>ipa"); continue; }
+        const auto word = line.substr(0, tab); const auto ipa = line.substr(tab + 1);
+        if (word.empty() || ipa.empty()) { errors.emplace_back(n, "empty word or IPA"); continue; }
+        if (unicode_nfc(word, false) != word) errors.emplace_back(n, "word not NFC-normalized");
+        if (unicode_fold_nfc(word) != word) errors.emplace_back(n, "word not lowercase");
+        if (!valid_ipa_string(ipa)) errors.emplace_back(n, "IPA not NFC / not IPA-only");
+        if (!seen.insert(word).second) errors.emplace_back(n, "duplicate word");
+    }
     return errors;
 }
 void register_normalize_plugin(const std::string& name, std::shared_ptr<NormalizePlugin> plugin) { normalize_plugins[name] = std::move(plugin); }
@@ -699,6 +1076,20 @@ void register_syllabifier_plugin(const std::string& name, std::shared_ptr<Syllab
 void register_stress_plugin(const std::string& name, std::shared_ptr<StressPlugin> plugin) { stress_plugins[name] = std::move(plugin); }
 void register_rescorer_plugin(const std::string& name, std::shared_ptr<RescorerPlugin> plugin) { rescorer_plugins[name] = std::move(plugin); }
 void register_sandhi_plugin(const std::string& name, std::shared_ptr<SandhiPlugin> plugin) { sandhi_plugins[name] = std::move(plugin); }
+void discover_plugins(const std::string& directory) {
+    const char* env = std::getenv("ORTHOGRAPHY2IPA_PLUGIN_DIR");
+    const fs::path dir = directory.empty() ? fs::path(env ? env : "") : fs::path(directory);
+    if (dir.empty() || !fs::is_directory(dir)) return;
+    for (const auto& entry : fs::directory_iterator(dir)) {
+        if (entry.path().extension() != ".so") continue;
+        void* handle = dlopen(entry.path().c_str(), RTLD_NOW | RTLD_LOCAL);
+        if (!handle) throw std::runtime_error("unable to load plugin " + entry.path().string() + ": " + dlerror());
+        using Register = void (*)();
+        auto register_function = reinterpret_cast<Register>(dlsym(handle, "orthography2ipa_register_plugins"));
+        if (!register_function) { dlclose(handle); throw std::runtime_error("plugin lacks orthography2ipa_register_plugins: " + entry.path().string()); }
+        register_function(); plugin_handles.push_back(handle);
+    }
+}
 std::vector<std::string> available_codes(bool include_clades) {
     std::vector<std::string> out; if (!fs::exists(data_dir)) return out;
     for (const auto& e : fs::directory_iterator(data_dir)) if (e.path().extension() == ".json") {
@@ -717,52 +1108,94 @@ std::map<std::string, std::vector<std::string>> available_families() {
     return result;
 }
 std::string transcribe(const std::string& text, const std::string& language) { return G2P(language).transcribe(text); }
+std::string apply_dialect_transform(const std::string& ipa, const std::string& profile,
+                                    const std::string& orthography) {
+    if (!dialect_profile_known(profile)) throw std::invalid_argument("unknown dialect profile: " + profile);
+    return apply_dialect_impl(ipa, profile, orthography);
+}
+std::vector<std::string> available_dialect_profiles() {
+    return {"algarve_barlavento", "baixo_minhoto", "beira_alta", "beira_baixa", "estremenho",
+            "galician", "galician_west", "guadramilese", "leonese", "lisbon", "northern",
+            "porto", "ribatejano", "rionorese", "transmontano"};
+}
 
-G2P::G2P(std::string language, std::map<std::string, std::vector<std::string>> plugin_overrides)
-    : language_(resolve(language)), spec_(&get(language_)), plugin_overrides_(std::move(plugin_overrides)) {}
+G2P::G2P(std::string language, std::map<std::string, std::vector<std::string>> plugin_overrides,
+         std::string dialect_profile)
+    : language_(resolve(language)), spec_(&get(language_)), plugin_overrides_(std::move(plugin_overrides)),
+      dialect_profile_(std::move(dialect_profile)) {
+    static std::once_flag discovery_once;
+    std::call_once(discovery_once, [] { discover_plugins(); });
+    if (!dialect_profile_.empty() && !dialect_profile_known(dialect_profile_))
+        throw std::invalid_argument("unknown dialect profile: " + dialect_profile_);
+}
 const LanguageSpec& G2P::spec() const { return *spec_; }
 std::vector<IPAPath> G2P::candidates(const std::string& word, std::size_t width) const { return Tokenizer(*spec_).beam(word, width); }
 double G2P::word_confidence(const std::string& word, std::size_t width) const {
-    if (spec_->word_exceptions.count(lower_ascii(word)) || load_lexicon(language_).count(lower_ascii(word))) return 1.0;
+    if (spec_->word_exceptions.count(lower_ascii(word)) || load_lexicon(language_).count(unicode_fold_nfc(word))) return 1.0;
     auto paths = candidates(word, width); return paths.size() > 1 ? 1.0 / (1.0 + paths[1].score) : 1.0;
 }
 TranscriptionResult G2P::transcribe_detailed(const std::string& text, const std::string& search, std::size_t width) const {
     if (search != "greedy" && search != "beam") throw std::invalid_argument("search must be greedy or beam");
-    std::string normalized = text;
     auto stage = [&](const std::string& name) -> const std::vector<std::string>& { auto it = plugin_overrides_.find(name); return it == plugin_overrides_.end() ? plugin_names(*spec_, name) : it->second; };
-    for (const auto& name : stage("normalize")) { auto it = normalize_plugins.find(name); if (it == normalize_plugins.end()) throw std::runtime_error("missing normalize plugin: " + name); normalized = it->second->normalize(normalized, language_); }
     TranscriptionResult result; result.lang = language_; std::vector<std::string> surfaces, ipa_words; std::vector<bool> pausal;
     std::vector<IPAPath> stress_paths; std::vector<std::optional<std::size_t>> forced_stress;
-    const auto sentence = sentence_words(normalized);
-    for (const auto& word : sentence.first) {
+    auto normalize = [&](std::string value) {
+        for (const auto& name : stage("normalize")) { auto it = normalize_plugins.find(name); if (it == normalize_plugins.end()) throw std::runtime_error("missing normalize plugin: " + name); if (!owns_language(*it->second, language_)) throw std::runtime_error("normalize plugin does not own language " + language_ + ": " + name); value = it->second->normalize(value, language_); }
+        return value;
+    };
+    const auto input_words = parse_input(text, normalize);
+    for (const auto& input : input_words) {
+        const auto& word = input.surface;
         WordTranscription wt; wt.word = word; auto it = spec_->word_exceptions.find(lower_ascii(word));
-        auto paths = it != spec_->word_exceptions.end() ? std::vector<IPAPath>{{it->second, 0.0, {}, {}}} : candidates(word, search == "greedy" ? 1 : width);
+        if (input.forced) {
+            if (input.forced_ipa.empty()) throw std::invalid_argument("empty forced pronunciation");
+            auto atoms = inventory(*spec_); const std::vector<std::string> atom_list(atoms.begin(), atoms.end()); const auto segments = segment_ipa(input.forced_ipa, atom_list);
+            for (const auto& segment : segments) if (!atoms.count(segment) && segment != "ˈ" && segment != "ˌ") throw std::invalid_argument("forced pronunciation contains undeclared IPA: " + segment);
+        }
+        auto paths = input.forced ? std::vector<IPAPath>{{input.forced_ipa, 0.0, {}, {}}} :
+            (it != spec_->word_exceptions.end() ? std::vector<IPAPath>{{it->second, 0.0, {}, {}}} : candidates(word, search == "greedy" ? 1 : width));
         auto lex = it == spec_->word_exceptions.end() ? load_lexicon(language_) : std::map<std::string, std::string>{};
-        if (it == spec_->word_exceptions.end()) { auto li = lex.find(lower_ascii(word)); if (li != lex.end()) paths = {{li->second, 0.0, {}, {}}}; }
-        for (const auto& name : stage("rescore")) { auto p = rescorer_plugins.find(name); if (p == rescorer_plugins.end()) throw std::runtime_error("missing rescore plugin: " + name); paths = p->second->rescore(word, language_, paths); }
+        if (it == spec_->word_exceptions.end()) { auto li = lex.find(unicode_fold_nfc(word)); if (li != lex.end()) paths = {{li->second, 0.0, {}, {}}}; }
+        if (!input.forced && it == spec_->word_exceptions.end() && lex.find(unicode_fold_nfc(word)) == lex.end())
+            paths = apply_grammatical_endings(*spec_, std::move(paths));
+        auto rescorers = stage("rescore"); std::vector<std::string> ordered_rescorers(rescorers.begin(), rescorers.end());
+        std::sort(ordered_rescorers.begin(), ordered_rescorers.end(), [&](const auto& a, const auto& b) {
+            const auto x = rescorer_plugins.find(a), y = rescorer_plugins.find(b);
+            return x != rescorer_plugins.end() && y != rescorer_plugins.end() && x->second->priority() > y->second->priority();
+        });
+        for (const auto& name : ordered_rescorers) { auto p = rescorer_plugins.find(name); if (p == rescorer_plugins.end()) throw std::runtime_error("missing rescore plugin: " + name); if (!owns_language(*p->second, language_)) throw std::runtime_error("rescore plugin does not own language " + language_ + ": " + name); paths = p->second->rescore(word, language_, paths); }
         wt.ipa = paths.front().ipa;
         std::optional<std::size_t> plugin_stress;
-        auto stress_names = stage("stress");
-        if (!stress_names.empty()) {
-            auto syllables = std::vector<std::string>{}; for (const auto& g : paths.front().graphemes) if (vowel_grapheme(g)) syllables.push_back(g);
-            auto plugin = stress_plugins.find(stress_names.front());
-            if (plugin == stress_plugins.end()) throw std::runtime_error("missing stress plugin: " + stress_names.front());
+        auto stress_names = stage("stress"); std::vector<std::string> ordered_stress(stress_names.begin(), stress_names.end());
+        std::sort(ordered_stress.begin(), ordered_stress.end(), [&](const auto& a, const auto& b) {
+            const auto x = stress_plugins.find(a), y = stress_plugins.find(b);
+            return x != stress_plugins.end() && y != stress_plugins.end() && x->second->priority() > y->second->priority();
+        });
+        if (!ordered_stress.empty()) {
+            auto syllables = syllables_for(word, language_);
+            auto plugin = stress_plugins.find(ordered_stress.front());
+            if (plugin == stress_plugins.end()) throw std::runtime_error("missing stress plugin: " + ordered_stress.front());
+            if (!owns_language(*plugin->second, language_)) throw std::runtime_error("stress plugin does not own language " + language_ + ": " + ordered_stress.front());
             plugin_stress = plugin->second->stressed_index(word, syllables, language_);
         }
         stress_paths.push_back({wt.ipa, paths.front().score, paths.front().graphemes, paths.front().segments});
         forced_stress.push_back(plugin_stress);
         wt.candidates = paths; wt.confidence = word_confidence(word, width);
-        result.words.push_back(wt); surfaces.push_back(word); ipa_words.push_back(wt.ipa);
+        result.words.push_back(wt); surfaces.push_back(word); ipa_words.push_back(wt.ipa); pausal.push_back(input.pausal);
     }
-    pausal = sentence.second;
     ipa_words = apply_sandhi(*spec_, std::move(ipa_words), pausal);
-    for (const auto& name : stage("sandhi")) { auto p = sandhi_plugins.find(name); if (p == sandhi_plugins.end()) throw std::runtime_error("missing sandhi plugin: " + name); ipa_words = p->second->apply(ipa_words, surfaces, pausal, language_); }
+    for (const auto& name : stage("sandhi")) { auto p = sandhi_plugins.find(name); if (p == sandhi_plugins.end()) throw std::runtime_error("missing sandhi plugin: " + name); if (!owns_language(*p->second, language_)) throw std::runtime_error("sandhi plugin does not own language " + language_ + ": " + name); ipa_words = p->second->apply(ipa_words, surfaces, pausal, language_); }
     for (std::size_t i = 0; i < ipa_words.size(); ++i) {
         if (!stress_paths[i].graphemes.empty())
             ipa_words[i] = add_stress(*spec_, surfaces[i], IPAPath{ipa_words[i], stress_paths[i].score, stress_paths[i].graphemes, stress_paths[i].segments}, forced_stress[i]);
         if (i) result.ipa += " ";
         result.ipa += ipa_words[i];
         result.words[i].ipa = ipa_words[i];
+    }
+    if (!dialect_profile_.empty()) {
+        std::string orthography; for (std::size_t i = 0; i < surfaces.size(); ++i) { if (i) orthography += " "; orthography += surfaces[i]; }
+        result.ipa = apply_dialect_impl(result.ipa, dialect_profile_, orthography);
+        std::stringstream split(result.ipa); for (auto& word : result.words) split >> word.ipa;
     }
     return result;
 }
