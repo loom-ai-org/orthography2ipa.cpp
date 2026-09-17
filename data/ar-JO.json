@@ -1,0 +1,139 @@
+{
+  "code": "ar-JO",
+  "name": "Jordanian Arabic (Ammani)",
+  "script": "Arabic",
+  "graphemes_base": "ar-x-levantine",
+  "graphemes": {
+    "ق": [
+      "ɡ",
+      "ʔ",
+      "q"
+    ],
+    "ج": [
+      "dʒ",
+      "ʒ"
+    ]
+  },
+  "allophones_base": "ar-x-levantine",
+  "allophones": {
+    "q": [
+      "ɡ",
+      "ʔ",
+      "q"
+    ],
+    "dʒ": [
+      "dʒ",
+      "ʒ"
+    ]
+  },
+  "parent": "ar-x-levantine",
+  "ancestors": [
+    {
+      "code": "ar-x-levantine",
+      "role": "parent",
+      "weight": 0.88,
+      "notes": "Levantine (South Levantine) Arabic base"
+    }
+  ],
+  "notes": "Jordanian Arabic — Ammani koine, a new dialect formed from Jordanian + urban Palestinian contact (Al-Wer 2020). INPUT CONTRACT: fully-diacritized Arabic. ق qaf is a socially reallocated variable: [ɡ] (traditional Jordanian, much male speech) alongside [ʔ] (urban Palestinian / the emerging Ammani prestige — third-generation women use [ʔ] consistently, men use both: Al-Wer 2020:560). Both are listed, ɡ first as the distinctively Jordanian value. ج jim → [dʒ]~[ʒ] (men vary, women [ʒ]: Al-Wer 2020:560). Interdentals: the Ammani koine favours the merged stops [t d dˤ] (Al-Wer 2020:560; Fadda 2016:27-28 — the koine consonant system is 'identical to other Levantine cities'); the interdental variants persist in traditional Jordanian/Bedouin speech and remain in the inventory via the parent. Vowels /i u a/ + /iː uː eː oː aː/ and /aj aw/→[eː oː] (bajt→beːt, sˤawt→sˤoːtˤ: Fadda 2016:30) are inherited from the Levantine parent. MEASURED UNDECIDABLE-INPUT CEILING. Exactly one of the 3182 WikiPron ajp_arab_broad input words carries any ḥaraka at all (حمّيضة, and the mark is a shadda); not a single word in the file carries a short-vowel mark — while the gold transcriptions are fully vocalised: 30.6% of their phoneme segments are short vowels. Deleting every short vowel from the gold and rescoring with the harness's own scorer gives PER 0.2705, which is what a spec that emitted perfect consonants and long vowels and simply omitted the short vowels would score, and is therefore the hard floor for this row. The board row stands at 0.3718, so about 10.1 PER points separate the score from the floor. That gap is rule error and is tractable; the floor itself is undecidable input that no grapheme table can recover. A gap above the floor is a defect hypothesis, not an excuse: Hebrew sat above its own floor for what looked like the same structural reason and the excess turned out to be a real defect, an unmapped geresh. That vocalisation and not the grapheme tables dominates the Arabic error is measured on the MSA row rather than inferred: ar scores PER 0.3139 on raw WikiPron and 0.1721 on the SAME gold with the input auto-diacritized (the wikipron_ar_diacritized row, wired in scripts/benchmark.py) — below the raw row's own consonant-only floor of 0.2476. Vocalisation is worth about 14 PER points there, more than any grapheme-table change could be worth. No dialect row has such a companion: the diacritized loader is registered for ar alone, and wiring one for this row is the single highest-value follow-up available to it. It has to be labelled restored-MSA input rather than native vocalisation — the restorer targets MSA and Classical Arabic, so what it writes onto dialect orthography is an MSA reading, and a row scored against it measures the spec plus that assumption.",
+  "quality": "research",
+  "script_type": "abjad",
+  "sources": [
+    {
+      "id": "alwer2020",
+      "author": "Al-Wer, E.",
+      "year": 2020,
+      "title": "New-dialect formation: The Amman dialect",
+      "publisher": "In: Lucas & Manfredi (eds.), Arabic and contact-induced change, 551-566. Berlin: Language Science Press",
+      "url": "https://langsci-press.org/catalog/book/235",
+      "pages": "551-566",
+      "notes": "READ in full. Amman koine: (q) is a socially reallocated variable, [ɡ] (Jordanian) ~ [ʔ] (urban Palestinian); gen-III women use [ʔ] consistently, men both (p.560). (ǧ) jim: [dʒ]~[ʒ], women [ʒ] (p.560). Interdentals: both genders favour stop variants (p.560)."
+    },
+    {
+      "id": "fadda2016",
+      "author": "Fadda, H.",
+      "year": 2016,
+      "title": "Language Variation in Western Amman",
+      "publisher": "MA thesis, Canada Institute of Linguistics (CanIL)",
+      "url": "https://www.canil.ca/wordpress/wp-content/uploads/2019/11/Fadda-Language-Variation-in-Western-Amman.pdf",
+      "pages": "27-30",
+      "notes": "READ (phonology chapter). Ammani koine consonants = urban Palestinian [ʔ t d dˤ ʒ], 'identical to other Levantine cities' (pp.27-28). Qaf labels (Al-Wer & Herin 2011:60): [g] gilit, [q] qeltu, [ʔ] Jerusalem, [k] rural West Bank. Vowels: short /i u a/, long /iː uː eː oː aː/ (Al-Wer 2011:4). Diphthongs /aj aw/→[eː oː] except before glide: bajt→beːt, sˤawt→sˤoːtˤ (p.30)."
+    },
+    {
+      "id": "almbark2015",
+      "author": "Almbark, R. & Hellmuth, S.",
+      "year": 2015,
+      "title": "Acoustic analysis of the Syrian Arabic vowel system",
+      "publisher": "Proceedings of ICPhS 2015 (paper 0612), Glasgow",
+      "url": "https://www.internationalphoneticassociation.org/icphs-proceedings/ICPhS2015/Papers/ICPHS0612.pdf",
+      "pages": "1-4",
+      "notes": "READ in full. Damascus/Syrian vowel system: five long /iː eː aː oː uː/, three short contrastive /i a u/; mid short [e o] and schwa are allophones of /i u/ (§3-4). Mid-long /eː oː/ from /aj aw/ coalescence (§1.1). /aː/ higher/fronter in Coastal Syria than Damascus (p.2)."
+    },
+    {
+      "id": "cowell1964",
+      "author": "Cowell, M.W.",
+      "year": 1964,
+      "title": "A Reference Grammar of Syrian Arabic (Based on the Dialect of Damascus)",
+      "publisher": "Georgetown University Press",
+      "url": "https://archive.org/details/referencegrammar0000cowe",
+      "pages": null,
+      "notes": "Standard Damascus grammar. Primary text NOT obtained (Internet Archive borrow-only, no full text); its Damascene vowel classification (5 long / 5 short + schwa) is cited here only as reported and tested by Almbark & Hellmuth 2015 §1.3."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Levantine_Arabic",
+    "https://en.wikipedia.org/wiki/South_Levantine_Arabic",
+    "https://ar.wikipedia.org/wiki/%D9%84%D9%87%D8%AC%D8%A7%D8%AA_%D8%B4%D8%A7%D9%85%D9%8A%D8%A9",
+    "https://ar.wikipedia.org/wiki/%D9%84%D9%87%D8%AC%D8%A9_%D8%B4%D8%A7%D9%85%D9%8A%D8%A9_%D8%AC%D9%86%D9%88%D8%A8%D9%8A%D8%A9"
+  ],
+  "timespan": {
+    "start_year": 1400,
+    "end_year": null
+  },
+  "glottolog_code": "sout3123",
+  "iso639_3": "ajp",
+  "wikidata_qid": "Q3444016",
+  "location": {
+    "latitude": 31.95,
+    "longitude": 35.933333,
+    "source": "wikidata",
+    "notes": "Amman — the city the Ammani koine is named for. [Wikidata Q3805 P625]"
+  },
+  "optional_marks": [
+    "ً",
+    "ٌ",
+    "ٍ",
+    "َ",
+    "ُ",
+    "ِ",
+    "ّ",
+    "ْ",
+    "ٰ",
+    "ٓ"
+  ],
+  "stress": {
+    "default_position": -3,
+    "quantity_sensitive": true,
+    "superheavy_final_attracts": true,
+    "max_onset": 1,
+    "stress_mark": "ˈ",
+    "notes": "Arabic stress is QUANTITY-SENSITIVE: it falls on a syllable because that syllable is heavy, not because of any orthographic ending, so no ending table can express it. The cascade (Ryding, A Reference Grammar of MSA, CUP 2005, §2.3; Watson, The Phonology and Morphology of Arabic, OUP 2002, ch.3): a superheavy final syllable (CVːC/CVCC) takes the stress (kiˈtaːb); otherwise a heavy penult (CVː/CVC) does (muˈdarris); otherwise the antepenult (ˈmadrasa). max_onset=1 because Arabic onsets are obligatory and hold exactly one consonant — a medial cluster splits, closing the preceding syllable, and that boundary is what makes the penult of mudarris heavy. INPUT CONTRACT: weight is only recoverable from a complete transcription, so this requires diacritized input; an undiacritized skeleton has no vowels to weigh. The registered wikipron gold carries no stress marks, but the benchmark strips stress from both sides by default, so this costs no PER. Prosodic clitics: monosyllabic function words (negator maː, prepositions fiː/min/ʕan/ʕa/li/bi, vocative jaː, copula-negator muː/miʃ, conditional law/loː, wa-proclitic combinations) attach to a host and fall inside the host's stress domain, so they carry no word stress (Watson 2002, The Phonology and Morphology of Arabic, OUP, ch.3). Pan-Arabic class; the per-lect form list reflects the function words attested in this lect. Orthographic test — a clitic homograph (e.g. verb yā 'came') is destressed in every occurrence.",
+    "cliticless_words": [
+      "عَ",
+      "فِي",
+      "مَا",
+      "مِن",
+      "يَا"
+    ]
+  },
+  "word_exceptions": {
+    "إِذَا": "ʔizaː"
+  },
+  "audit": {
+    "wikipron": {
+      "conclusion": "input_limited",
+      "measured": "1 of 3182 wikipron input words (ajp_arab_broad.tsv) carries any harakat mark at all, and that one is a shadda gemination mark, not a short vowel (حمّيضة); 0 carry a short-vowel diacritic. Wiktionary files Arabic entries at the unvocalized page title (Wiktionary:About_Arabic / Wiktionary:Arabic_entry_guidelines, 'Entry name'), so the scraped input is a consonant-plus-long-vowel skeleton, exactly the pattern independently measured on the bare 'ar' wikipron row (0/17,563 words carry a haraka there; see ar.json audit.wikipron). No fold was run for this dialect row -- doing so needs the dialect's own vowel inventory, not MSA's -- so no valid_ceiling is recorded here; the wikipron_ar_diacritized loader (scripts/benchmark.py) that would supply it is wired for the 'ar' row only.",
+      "reference": "spec notes; see ar.json audit.wikipron for the measured MSA precedent"
+    }
+  }
+}

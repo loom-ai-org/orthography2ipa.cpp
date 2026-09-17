@@ -1,0 +1,714 @@
+{
+  "code": "zu",
+  "name": "Zulu",
+  "glottolog_code": "zulu1248",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "iso639_3": "zul",
+  "quality": "research",
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "b": [
+      "ɓ"
+    ],
+    "bh": [
+      "b"
+    ],
+    "c": [
+      "ǀ"
+    ],
+    "ch": [
+      "ǀʰ"
+    ],
+    "d": [
+      "d"
+    ],
+    "dl": [
+      "ɮ"
+    ],
+    "e": [
+      "e"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "gc": [
+      "ɡǀʱ"
+    ],
+    "gq": [
+      "ɡǃʱ"
+    ],
+    "gx": [
+      "ɡǁʱ"
+    ],
+    "h": [
+      "h"
+    ],
+    "hh": [
+      "ɦ"
+    ],
+    "hl": [
+      "ɬ"
+    ],
+    "i": [
+      "i"
+    ],
+    "j": [
+      "dʒ"
+    ],
+    "k": [
+      "ɠ",
+      "k"
+    ],
+    "kh": [
+      "kʰ"
+    ],
+    "kl": [
+      "kx"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "mb": [
+      "mb"
+    ],
+    "mbh": [
+      "mb"
+    ],
+    "mf": [
+      "mf"
+    ],
+    "mp": [
+      "mp"
+    ],
+    "mph": [
+      "mpʰ"
+    ],
+    "mv": [
+      "mv"
+    ],
+    "n": [
+      "n"
+    ],
+    "nc": [
+      "ŋǀ"
+    ],
+    "nd": [
+      "nd"
+    ],
+    "ndl": [
+      "nɮ"
+    ],
+    "ng": [
+      "ŋɡ"
+    ],
+    "ngc": [
+      "ŋǀʱ"
+    ],
+    "ngq": [
+      "ŋǃʱ"
+    ],
+    "ngx": [
+      "ŋǁʱ"
+    ],
+    "nhl": [
+      "nɬ"
+    ],
+    "nj": [
+      "ɲdʒ"
+    ],
+    "nk": [
+      "ŋk"
+    ],
+    "nq": [
+      "ŋǃ"
+    ],
+    "nt": [
+      "nt"
+    ],
+    "nts": [
+      "nts"
+    ],
+    "ntsh": [
+      "ɲtʃ"
+    ],
+    "nx": [
+      "ŋǁ"
+    ],
+    "ny": [
+      "ɲ"
+    ],
+    "nz": [
+      "nz"
+    ],
+    "o": [
+      "o"
+    ],
+    "p": [
+      "p"
+    ],
+    "ph": [
+      "pʰ"
+    ],
+    "q": [
+      "ǃ"
+    ],
+    "qh": [
+      "ǃʰ"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "sh": [
+      "ʃ"
+    ],
+    "t": [
+      "t"
+    ],
+    "th": [
+      "tʰ"
+    ],
+    "ts": [
+      "ts"
+    ],
+    "tsh": [
+      "tʃ"
+    ],
+    "u": [
+      "u"
+    ],
+    "v": [
+      "v"
+    ],
+    "w": [
+      "w"
+    ],
+    "x": [
+      "ǁ"
+    ],
+    "xh": [
+      "ǁʰ"
+    ],
+    "y": [
+      "j"
+    ],
+    "z": [
+      "z"
+    ]
+  },
+  "allophones": {
+    "a": [
+      "a"
+    ],
+    "aː": [
+      "aː"
+    ],
+    "b": [
+      "b"
+    ],
+    "d": [
+      "d"
+    ],
+    "dʒ": [
+      "dʒ"
+    ],
+    "e": [
+      "e"
+    ],
+    "eː": [
+      "eː"
+    ],
+    "f": [
+      "f"
+    ],
+    "h": [
+      "h"
+    ],
+    "i": [
+      "i"
+    ],
+    "iː": [
+      "iː"
+    ],
+    "j": [
+      "j"
+    ],
+    "k": [
+      "k"
+    ],
+    "kx": [
+      "kx"
+    ],
+    "kʰ": [
+      "kʰ"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "mb": [
+      "mb"
+    ],
+    "mf": [
+      "mf"
+    ],
+    "mp": [
+      "mp"
+    ],
+    "mpʰ": [
+      "mpʰ"
+    ],
+    "mv": [
+      "mv"
+    ],
+    "m̩": [
+      "m̩"
+    ],
+    "m̩b": [
+      "m̩b"
+    ],
+    "m̩f": [
+      "m̩f"
+    ],
+    "m̩p": [
+      "m̩p"
+    ],
+    "m̩pʰ": [
+      "m̩pʰ"
+    ],
+    "m̩v": [
+      "m̩v"
+    ],
+    "m̩ɓ": [
+      "m̩ɓ"
+    ],
+    "n": [
+      "n"
+    ],
+    "nd": [
+      "nd"
+    ],
+    "nt": [
+      "nt"
+    ],
+    "nts": [
+      "nts"
+    ],
+    "nz": [
+      "nz"
+    ],
+    "nɬ": [
+      "nɬ"
+    ],
+    "nɮ": [
+      "nɮ"
+    ],
+    "o": [
+      "o"
+    ],
+    "oː": [
+      "oː"
+    ],
+    "p": [
+      "p"
+    ],
+    "pʰ": [
+      "pʰ"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "ts": [
+      "ts"
+    ],
+    "tʃ": [
+      "tʃ"
+    ],
+    "tʰ": [
+      "tʰ"
+    ],
+    "u": [
+      "u"
+    ],
+    "uː": [
+      "uː"
+    ],
+    "v": [
+      "v"
+    ],
+    "w": [
+      "w"
+    ],
+    "z": [
+      "z"
+    ],
+    "ŋ": [
+      "ŋ"
+    ],
+    "ŋk": [
+      "ŋk"
+    ],
+    "ŋǀ": [
+      "ŋǀ"
+    ],
+    "ŋǀʱ": [
+      "ŋǀʱ"
+    ],
+    "ŋǁ": [
+      "ŋǁ"
+    ],
+    "ŋǁʱ": [
+      "ŋǁʱ"
+    ],
+    "ŋǃ": [
+      "ŋǃ"
+    ],
+    "ŋǃʱ": [
+      "ŋǃʱ"
+    ],
+    "ŋɡ": [
+      "ŋɡ"
+    ],
+    "ǀ": [
+      "ǀ"
+    ],
+    "ǀʰ": [
+      "ǀʰ"
+    ],
+    "ǁ": [
+      "ǁ"
+    ],
+    "ǁʰ": [
+      "ǁʰ"
+    ],
+    "ǃ": [
+      "ǃ"
+    ],
+    "ǃʰ": [
+      "ǃʰ"
+    ],
+    "ɓ": [
+      "ɓ"
+    ],
+    "ɠ": [
+      "ɠ"
+    ],
+    "ɡ": [
+      "ɡ"
+    ],
+    "ɡǀʱ": [
+      "ɡǀʱ"
+    ],
+    "ɡǁʱ": [
+      "ɡǁʱ"
+    ],
+    "ɡǃʱ": [
+      "ɡǃʱ"
+    ],
+    "ɦ": [
+      "ɦ"
+    ],
+    "ɬ": [
+      "ɬ"
+    ],
+    "ɮ": [
+      "ɮ"
+    ],
+    "ɲ": [
+      "ɲ"
+    ],
+    "ɲdʒ": [
+      "ɲdʒ"
+    ],
+    "ɲtʃ": [
+      "ɲtʃ"
+    ],
+    "ʃ": [
+      "ʃ"
+    ]
+  },
+  "notes": "Zulu (isiZulu), the largest Nguni language of South Africa. Sister of Xhosa; unlike Xhosa it has no native /r/ (⟨r⟩ occurs in loans only) and no palatal ⟨ty dy⟩ series.\n\nCLICKS. Three click types — dental ⟨c⟩ [ǀ], postalveolar ⟨q⟩ [ǃ], lateral ⟨x⟩ [ǁ] — each in five series: plain ⟨c⟩, aspirated ⟨ch⟩ [ǀʰ], slack-voiced ⟨gc⟩ [ɡǀʱ], nasal ⟨nc⟩ [ŋǀ] and breathy nasal ⟨ngc⟩ [ŋǀʱ], with the ⟨q⟩ and ⟨x⟩ rows parallel (zulu_phonology_wiki). Zulu writes no velar-closure symbol on the click, unlike the kǀ notation some Xhosa sources use for the same segment. The accompaniment is written with the full letters ɡ and ŋ here; the superscript ᶢ and ᵑ that the WikiPron gold uses are the same segments in a different notation, and the difference is scored as an error because the benchmark's fold covers ᵏ and ᵑ but not ᶢ. Widening that fold is unsafe: the Juǀ'hoan gold writes double accompaniments (ᶢᵏǀʰ) in which a bare ᶢ→ɡ rewrite would split a segment the spec keeps whole.\n\nSTOPS. ⟨b⟩ is the implosive /ɓ/ and ⟨bh⟩ the slack-voiced plosive /b/ — the pair is a spelling contrast, not an aspiration one, and it is the commonest single source of error for a reader who treats ⟨bh⟩ as aspirated. ⟨p t k ts tsh⟩ are ejective in phonetic realisation (\"the plain voiceless plosives, affricates and clicks are realised phonetically as ejectives\", zulu_phonology_wiki) and contrast with the aspirated ⟨ph th kh ch qh xh⟩; the grapheme table states the phonemic plain/aspirated contrast and leaves the ejection to a phonetic layer.\n\nTHE LETTER ⟨k⟩. Zulu spelling is ambiguous here: ⟨k⟩ writes both the ejective /kʼ/ and the implosive /ɠ/, and the two standard descriptions disagree on how to state it — the Zulu phonology table gives ⟨k⟩ = /kʼ/ against ⟨g⟩ = /ɠ/ (zulu_phonology_wiki), while the language article gives ⟨k⟩ = /ɠ/ medially and /k/ initially (zulu_wiki). Neither positional statement survives contact with a word list: the WikiPron gold reads ⟨k⟩ as [ɠ] in 200 of 216 medial tokens AND in 10 of 15 initial ones, and the [k] residue is lexical rather than positional — recent loans keep it (⟨isikole⟩, ⟨ikilogo⟩, ⟨ikamela⟩) and native stems do not. Both readings are therefore declared as unconditioned candidates, implosive first.\n\nDEPRESSORS. The depressor-consonant analysis originates with Doke (1926) and is restated in Poulos & Msimang (1998) (editions not consulted for this spec; read here via zulu_phonology_wiki, which reports it): \"the slack-voiced consonants in Zulu are depressor consonants ... [they] have a lowering effect on pitch, adding a non-phonemic low-tone onset to the normal tone\". The same source writes the slack voice as breathy release throughout: ⟨bh⟩ /bʱ/, ⟨d⟩ /dʱ/, ⟨v⟩ /vʱ/, ⟨gc⟩ /ᶢǀʱ/, ⟨ngc⟩ /ᵑǀʱ/. This spec keeps the mark only on the clicks, where it is the sole exponent of a contrast — ⟨nc⟩ [ŋǀ] against ⟨ngc⟩ [ŋǀʱ] would otherwise merge — and writes the broad voiced symbols for the pulmonic obstruents, whose contrasts (⟨b⟩/⟨bh⟩, ⟨t⟩/⟨d⟩, ⟨f⟩/⟨v⟩) survive without it. The voice-quality detail belongs to a phonetic layer, together with the ejectives.\n\nMULTIGRAPH KEYS ⟨ndl⟩ ⟨nhl⟩ ⟨ntsh⟩ ⟨nts⟩ exist to defeat maximal munch: without them ⟨nd⟩ and ⟨nt⟩ win and ⟨indlu⟩ comes out with a plain /l/ instead of the lateral fricative. ⟨ntsh⟩ also records the homorganic palatal nasal [ɲtʃ], which is why ⟨nj⟩ is [ɲdʒ] on the same footing. Zulu ⟨nz⟩ is a plain nasal-plus-fricative [nz], NOT the hardened [ndz] its Xhosa cognate spelling has.\n\nPROSODY. Tone is phonemic (high, low and falling) but is never written: \"Zulu is conventionally written without any indication of tone, but tone can be distinctive in Zulu\" (zulu_wiki). No rule can recover it from the orthography, and the WikiPron gold marks it throughout — that gold's tone diacritics and downstep are a fixed, unrecoverable cost, not a defect of this spec. Penultimate stress and its allophonic lengthening are described in Doke (1926) and Poulos & Msimang (1998) (editions not consulted for this spec; read here via zulu_phonology_wiki, which reports it) and are predictable, so this spec encodes them. The same gold additionally writes a long vowel on the ⟨i-⟩ augment of many nouns in isolation (⟨ihhashi⟩ [îːɦáːʃi]) — an utterance-level citation effect, not a rule: it appears on 327 of the 871 ⟨i-⟩ words in that gold — 46% of the three-syllable ones and 30% of the four-syllable ones — and nothing in the spelling separates the words that take it from the words that do not, so it is not modelled. The length mark the engine does emit in every one of those words is the penultimate lengthening, which is a different position; the augment itself is left short.\n\nThe homorganic nasal of ⟨ng⟩ [ŋɡ] and ⟨nk⟩ [ŋk] is velar (zulu_phonology_wiki). The WikiPron gold writes it as a plain ⟨n⟩ in most entries and as [ᵑ] in a few (⟨ingwenya⟩); that is the gold's phonemic spelling convention, and the velar value is kept here.\n\nNOT ENCODED: the mid-vowel height alternation — \"/ɛ/ and /ɔ/ are pronounced [e] and [o], respectively, if the following syllable contains the [+ATR] vowels /i/ or /u/\" (zulu_wiki); the spec writes the [e o] surface values the gold uses throughout. Consonant labialisation before ⟨w⟩ is left unwritten as well: the sources transcribe it inconsistently and the orthography gives no cue for which ⟨Cw⟩ runs take it.",
+  "sources": [
+    {
+      "id": "zulu_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Zulu language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Zulu_language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Zulu_language",
+      "pages": null,
+      "notes": "Phonology section: the orthography-to-IPA table, the [+ATR] mid-vowel rule, penultimate stress and the statement that tone is not written."
+    },
+    {
+      "id": "zulu_phonology_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Zulu phonology",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Zulu_phonology",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Zulu_phonology",
+      "pages": null,
+      "notes": "Consonant table with the full five-series click inventory, the ejective realisation of the plain series, the depressor/slack-voice statement, syllabic /m̩/, and penultimate lengthening."
+    },
+    {
+      "id": "doke1926",
+      "author": "Doke, C. M.",
+      "year": 1926,
+      "title": "The Phonetics of the Zulu Language",
+      "publisher": "University of the Witwatersrand Press (Bantu Studies vol. 2 special number)",
+      "url": null,
+      "wikipedia_url": null,
+      "pages": null,
+      "notes": "The standard descriptive phonetics of Zulu and the origin of the depressor-consonant analysis; cited as the classic reference, edition not consulted for this spec."
+    },
+    {
+      "id": "poulos_msimang1998",
+      "author": "Poulos, G. & Msimang, C.T.",
+      "year": 1998,
+      "title": "A Linguistic Analysis of Zulu",
+      "publisher": "Via Afrika",
+      "url": null,
+      "wikipedia_url": null,
+      "pages": null,
+      "notes": "Standard reference grammar; edition not consulted for this spec."
+    }
+  ],
+  "parent": "bnt",
+  "ancestors": [
+    {
+      "code": "bnt",
+      "role": "parent",
+      "weight": 0.8,
+      "notes": "Southern Bantu (Nguni) branch of Niger-Congo."
+    },
+    {
+      "code": "khi",
+      "role": "substrate",
+      "weight": 0.08,
+      "notes": "Khoisan substrate: the SOURCE of the Zulu click consonants (c, q, x series)."
+    },
+    {
+      "code": "en-GB",
+      "role": "adstrate",
+      "weight": 0.05,
+      "notes": "English adstrate: modern loanwords."
+    },
+    {
+      "code": "af",
+      "role": "adstrate",
+      "weight": 0.04,
+      "notes": "Afrikaans adstrate: South-African contact vocabulary."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Zulu_language",
+    "https://en.wikipedia.org/wiki/Zulu_phonology",
+    "https://zu.wikipedia.org/wiki/IsiZulu"
+  ],
+  "timespan": {
+    "start_year": 1800,
+    "end_year": null
+  },
+  "wikidata_qid": "Q10179",
+  "phoible_id": "zulu1248",
+  "wals_code": "zul",
+  "location": {
+    "latitude": -28.9,
+    "longitude": 30.2,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Zulu."
+  },
+  "positional_graphemes": {
+    "a": {
+      "nucleus_stressed": [
+        "aː"
+      ]
+    },
+    "e": {
+      "nucleus_stressed": [
+        "eː"
+      ]
+    },
+    "i": {
+      "nucleus_stressed": [
+        "iː"
+      ]
+    },
+    "o": {
+      "nucleus_stressed": [
+        "oː"
+      ]
+    },
+    "u": {
+      "nucleus_stressed": [
+        "uː"
+      ]
+    }
+  },
+  "allophone_rules": [
+    {
+      "id": "ZU_SYLLABIC_M",
+      "phonemes": [
+        "m"
+      ],
+      "surface": "m̩",
+      "followed_by": "consonant",
+      "notes": "⟨m⟩ before another consonant is the syllabic nasal /m̩/, the reduction of an older /mu/ prefix: \"syllabic /m̩/ occurs as a reduction of former /mu/, and acts like a true syllable: it can be syllabic even when not word-initial\" (zulu_phonology_wiki) — ⟨mhla⟩, ⟨umklomelo⟩, ⟨kamnandi⟩. The prenasalised ⟨mb mp mf mv⟩ are single graphemes and never reach this rule (see ZU_UM_PREFIX_SYLLABIC_MB), and ⟨m⟩ before a vowel stays a plain onset (⟨umuntu⟩). ⟨m⟩ immediately before another ⟨m⟩ is syllabic on the same terms: ⟨ummese⟩ is [um̩meːse], which is how the gold writes it."
+    },
+    {
+      "id": "ZU_UM_PREFIX_SYLLABIC_MB",
+      "phonemes": [
+        "mb"
+      ],
+      "surface": "m̩ɓ",
+      "grapheme": [
+        "mb"
+      ],
+      "preceded_by_phoneme": [
+        "u"
+      ],
+      "preceded_by_2": "word_boundary",
+      "notes": "The class 1/3 prefix ⟨um-⟩ is the reduction of an older /mu-/ and its nasal is the syllabic /m̩/ of a full syllable, while the class 9 prefix /iN-/ surfaces before a labial as a plain homorganic nasal: ⟨umbala⟩ [um̩ɓâːla] and ⟨umfana⟩ [um̩fáːna] against ⟨imbali⟩ [imbaːli] and ⟨imfene⟩ [imfeːne]. The two are spelled alike, so the rule keys on the one cue the orthography gives — a word-initial ⟨u⟩ immediately before the nasal. It fires only there, which is why ⟨ibumba⟩ and ⟨igumbi⟩ keep the prenasalised reading. The ⟨grapheme⟩ condition is required because ⟨mb⟩ and ⟨mbh⟩ share the phoneme string \"mb\" (see ZU_UM_PREFIX_SYLLABIC_MBH); without it the two rules shadow each other and only one class ever fires. The syllabic nasal itself is standard: \"syllabic /m̩/ occurs as a reduction of former /mu/, and acts like a true syllable\" (zulu_phonology_wiki)."
+    },
+    {
+      "id": "ZU_UM_PREFIX_SYLLABIC_MP",
+      "phonemes": [
+        "mp"
+      ],
+      "surface": "m̩p",
+      "preceded_by_phoneme": [
+        "u"
+      ],
+      "preceded_by_2": "word_boundary",
+      "notes": "The class 1/3 prefix ⟨um-⟩ is the reduction of an older /mu-/ and its nasal is the syllabic /m̩/ of a full syllable, while the class 9 prefix /iN-/ surfaces before a labial as a plain homorganic nasal: ⟨umbala⟩ [um̩ɓâːla] and ⟨umfana⟩ [um̩fáːna] against ⟨imbali⟩ [imbaːli] and ⟨imfene⟩ [imfeːne]. The two are spelled alike, so the rule keys on the one cue the orthography gives — a word-initial ⟨u⟩ immediately before the nasal. It fires only there, which is why ⟨ibumba⟩ and ⟨igumbi⟩ keep the prenasalised reading. The syllabic nasal itself is standard: \"syllabic /m̩/ occurs as a reduction of former /mu/, and acts like a true syllable\" (zulu_phonology_wiki)."
+    },
+    {
+      "id": "ZU_UM_PREFIX_SYLLABIC_MF",
+      "phonemes": [
+        "mf"
+      ],
+      "surface": "m̩f",
+      "preceded_by_phoneme": [
+        "u"
+      ],
+      "preceded_by_2": "word_boundary",
+      "notes": "The class 1/3 prefix ⟨um-⟩ is the reduction of an older /mu-/ and its nasal is the syllabic /m̩/ of a full syllable, while the class 9 prefix /iN-/ surfaces before a labial as a plain homorganic nasal: ⟨umbala⟩ [um̩ɓâːla] and ⟨umfana⟩ [um̩fáːna] against ⟨imbali⟩ [imbaːli] and ⟨imfene⟩ [imfeːne]. The two are spelled alike, so the rule keys on the one cue the orthography gives — a word-initial ⟨u⟩ immediately before the nasal. It fires only there, which is why ⟨ibumba⟩ and ⟨igumbi⟩ keep the prenasalised reading. The syllabic nasal itself is standard: \"syllabic /m̩/ occurs as a reduction of former /mu/, and acts like a true syllable\" (zulu_phonology_wiki)."
+    },
+    {
+      "id": "ZU_UM_PREFIX_SYLLABIC_MV",
+      "phonemes": [
+        "mv"
+      ],
+      "surface": "m̩v",
+      "preceded_by_phoneme": [
+        "u"
+      ],
+      "preceded_by_2": "word_boundary",
+      "notes": "The class 1/3 prefix ⟨um-⟩ is the reduction of an older /mu-/ and its nasal is the syllabic /m̩/ of a full syllable, while the class 9 prefix /iN-/ surfaces before a labial as a plain homorganic nasal: ⟨umbala⟩ [um̩ɓâːla] and ⟨umfana⟩ [um̩fáːna] against ⟨imbali⟩ [imbaːli] and ⟨imfene⟩ [imfeːne]. The two are spelled alike, so the rule keys on the one cue the orthography gives — a word-initial ⟨u⟩ immediately before the nasal. It fires only there, which is why ⟨ibumba⟩ and ⟨igumbi⟩ keep the prenasalised reading. The syllabic nasal itself is standard: \"syllabic /m̩/ occurs as a reduction of former /mu/, and acts like a true syllable\" (zulu_phonology_wiki)."
+    },
+    {
+      "id": "ZU_UM_PREFIX_SYLLABIC_MBH",
+      "phonemes": [
+        "mb"
+      ],
+      "surface": "m̩b",
+      "grapheme": [
+        "mbh"
+      ],
+      "preceded_by_phoneme": [
+        "u"
+      ],
+      "preceded_by_2": "word_boundary",
+      "notes": "⟨mbh⟩ is aspirated ⟨b⟩ prenasalised, a plain (non-implosive) [b] unlike the ⟨b⟩/⟨mb⟩ series: ⟨umbhede⟩ is [um̩beːde], not *[um̩ɓeːde]. It maps to the same phoneme string \"mb\" as the implosive ⟨mb⟩ series (see ZU_UM_PREFIX_SYLLABIC_MB), so this rule keys on the ⟨grapheme⟩ condition rather than ⟨phonemes⟩ alone to avoid the two rules shadowing each other. The syllabic nasal itself is standard: \"syllabic /m̩/ occurs as a reduction of former /mu/, and acts like a true syllable\" (zulu_phonology_wiki)."
+    },
+    {
+      "id": "ZU_UM_PREFIX_SYLLABIC_MPH",
+      "phonemes": [
+        "mpʰ"
+      ],
+      "surface": "m̩pʰ",
+      "preceded_by_phoneme": [
+        "u"
+      ],
+      "preceded_by_2": "word_boundary",
+      "notes": "The class 1/3 prefix ⟨um-⟩ is the reduction of an older /mu-/ and its nasal is the syllabic /m̩/ of a full syllable, while the class 9 prefix /iN-/ surfaces before a labial as a plain homorganic nasal: ⟨umbala⟩ [um̩ɓâːla] and ⟨umfana⟩ [um̩fáːna] against ⟨imbali⟩ [imbaːli] and ⟨imfene⟩ [imfeːne]. The two are spelled alike, so the rule keys on the one cue the orthography gives — a word-initial ⟨u⟩ immediately before the nasal. It fires only there, which is why ⟨ibumba⟩ and ⟨igumbi⟩ keep the prenasalised reading. The syllabic nasal itself is standard: \"syllabic /m̩/ occurs as a reduction of former /mu/, and acts like a true syllable\" (zulu_phonology_wiki)."
+    },
+    {
+      "id": "ZU_NO_FINAL_LENGTH_A",
+      "phonemes": [
+        "aː"
+      ],
+      "surface": "a",
+      "word_final": true,
+      "notes": "Penultimate lengthening targets the PENULT, so a word-final vowel is never long and a monosyllable has no penult to lengthen: ⟨indlu⟩ is [íːnɮu], not *[íːnɮuː]. Undoes the nucleus_stressed lengthening wherever the orthographic syllable count puts the last vowel of the word inside the stressed nucleus. Isolation forms in the WikiPron gold are additionally lengthened pre-pausally, an utterance-level effect this spec does not model."
+    },
+    {
+      "id": "ZU_NO_FINAL_LENGTH_E",
+      "phonemes": [
+        "eː"
+      ],
+      "surface": "e",
+      "word_final": true,
+      "notes": "Penultimate lengthening targets the PENULT, so a word-final vowel is never long and a monosyllable has no penult to lengthen: ⟨indlu⟩ is [íːnɮu], not *[íːnɮuː]. Undoes the nucleus_stressed lengthening wherever the orthographic syllable count puts the last vowel of the word inside the stressed nucleus. Isolation forms in the WikiPron gold are additionally lengthened pre-pausally, an utterance-level effect this spec does not model."
+    },
+    {
+      "id": "ZU_NO_FINAL_LENGTH_I",
+      "phonemes": [
+        "iː"
+      ],
+      "surface": "i",
+      "word_final": true,
+      "notes": "Penultimate lengthening targets the PENULT, so a word-final vowel is never long and a monosyllable has no penult to lengthen: ⟨indlu⟩ is [íːnɮu], not *[íːnɮuː]. Undoes the nucleus_stressed lengthening wherever the orthographic syllable count puts the last vowel of the word inside the stressed nucleus. Isolation forms in the WikiPron gold are additionally lengthened pre-pausally, an utterance-level effect this spec does not model."
+    },
+    {
+      "id": "ZU_NO_FINAL_LENGTH_O",
+      "phonemes": [
+        "oː"
+      ],
+      "surface": "o",
+      "word_final": true,
+      "notes": "Penultimate lengthening targets the PENULT, so a word-final vowel is never long and a monosyllable has no penult to lengthen: ⟨indlu⟩ is [íːnɮu], not *[íːnɮuː]. Undoes the nucleus_stressed lengthening wherever the orthographic syllable count puts the last vowel of the word inside the stressed nucleus. Isolation forms in the WikiPron gold are additionally lengthened pre-pausally, an utterance-level effect this spec does not model."
+    },
+    {
+      "id": "ZU_NO_FINAL_LENGTH_U",
+      "phonemes": [
+        "uː"
+      ],
+      "surface": "u",
+      "word_final": true,
+      "notes": "Penultimate lengthening targets the PENULT, so a word-final vowel is never long and a monosyllable has no penult to lengthen: ⟨indlu⟩ is [íːnɮu], not *[íːnɮuː]. Undoes the nucleus_stressed lengthening wherever the orthographic syllable count puts the last vowel of the word inside the stressed nucleus. Isolation forms in the WikiPron gold are additionally lengthened pre-pausally, an utterance-level effect this spec does not model."
+    }
+  ],
+  "stress": {
+    "default_position": -2,
+    "stress_mark": "",
+    "notes": "\"Stress in Zulu words is mostly predictable and normally falls on the penultimate syllable of a word. It is accompanied by an allophonic lengthening of the vowel\" (zulu_phonology_wiki). The prominence is realised as length, not as an accentual mark, so stress_mark is empty and the length is written by the nucleus_stressed entries in positional_graphemes. vowel_letters is declared because ⟨y⟩ and ⟨w⟩ are consonants here: without it the bundled syllabifier reads a ⟨Vy⟩ or ⟨Vw⟩ run as one nucleus and the length lands on the wrong vowel.",
+    "vowel_letters": [
+      "a",
+      "e",
+      "i",
+      "o",
+      "u"
+    ]
+  }
+}

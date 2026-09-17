@@ -1,0 +1,278 @@
+{
+  "code": "kw",
+  "name": "Cornish",
+  "script": "Latin",
+  "graphemes": {
+    "a": [
+      "a",
+      "æ"
+    ],
+    "e": [
+      "ɛ"
+    ],
+    "i": [
+      "ɪ"
+    ],
+    "o": [
+      "ɔ"
+    ],
+    "u": [
+      "ʊ"
+    ],
+    "y": [
+      "ɪ",
+      "ə"
+    ],
+    "b": [
+      "b"
+    ],
+    "d": [
+      "d"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "p": [
+      "p"
+    ],
+    "t": [
+      "t"
+    ],
+    "k": [
+      "k"
+    ],
+    "f": [
+      "f"
+    ],
+    "v": [
+      "v"
+    ],
+    "s": [
+      "s"
+    ],
+    "z": [
+      "z"
+    ],
+    "th": [
+      "θ"
+    ],
+    "dh": [
+      "ð"
+    ],
+    "ch": [
+      "tʃ"
+    ],
+    "j": [
+      "dʒ"
+    ],
+    "gh": [
+      "x",
+      "h"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "l": [
+      "l"
+    ],
+    "r": [
+      "r"
+    ],
+    "w": [
+      "w"
+    ],
+    "h": [
+      "h"
+    ],
+    "hw": [
+      "ʍ"
+    ],
+    "ou": [
+      "uː"
+    ],
+    "eu": [
+      "œː",
+      "øː"
+    ],
+    "oo": [
+      "oː"
+    ]
+  },
+  "allophones": {
+    "p": [
+      "p"
+    ],
+    "b": [
+      "b"
+    ],
+    "t": [
+      "t"
+    ],
+    "d": [
+      "d"
+    ],
+    "k": [
+      "k"
+    ],
+    "ɡ": [
+      "ɡ"
+    ],
+    "f": [
+      "f"
+    ],
+    "v": [
+      "v"
+    ],
+    "θ": [
+      "θ"
+    ],
+    "ð": [
+      "ð"
+    ],
+    "s": [
+      "s"
+    ],
+    "z": [
+      "z"
+    ],
+    "tʃ": [
+      "tʃ"
+    ],
+    "dʒ": [
+      "dʒ"
+    ],
+    "x": [
+      "x"
+    ],
+    "h": [
+      "h"
+    ],
+    "ʍ": [
+      "ʍ"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ŋ": [
+      "ŋ"
+    ],
+    "l": [
+      "l"
+    ],
+    "r": [
+      "r"
+    ],
+    "w": [
+      "w"
+    ],
+    "j": [
+      "j"
+    ],
+    "a": [
+      "a"
+    ],
+    "æ": [
+      "æ"
+    ],
+    "ɛ": [
+      "ɛ"
+    ],
+    "ɪ": [
+      "ɪ"
+    ],
+    "ɔ": [
+      "ɔ"
+    ],
+    "ʊ": [
+      "ʊ"
+    ],
+    "ə": [
+      "ə"
+    ],
+    "uː": [
+      "uː"
+    ],
+    "œː": [
+      "œː"
+    ],
+    "oː": [
+      "oː"
+    ]
+  },
+  "parent": "xbr",
+  "ancestors": [
+    {
+      "code": "xbr",
+      "role": "parent",
+      "weight": 0.88,
+      "notes": "Descent from Common Brythonic"
+    },
+    {
+      "code": "en-GB",
+      "role": "adstrate",
+      "weight": 0.07,
+      "notes": "English adstrate: heavy contact influence pre-extinction"
+    }
+  ],
+  "notes": "Cornish (Kernewek). Revived language; last native speaker died 1777. Revival since early 20th c.; ~3,000 speakers (est. 2020). Three main revival orthographies: Kernewek Standard, Kernewek Unys, Spellyans. This spec follows revived Kernewek Standard pronunciation. Refs: George (1993), Brown (2001).",
+  "quality": "research",
+  "script_type": "alphabet",
+  "sources": [
+    {
+      "id": "macaulay1992",
+      "author": "MacAulay, D. (ed.)",
+      "year": 1992,
+      "title": "The Celtic Languages",
+      "publisher": "Cambridge University Press",
+      "url": null,
+      "pages": null,
+      "notes": null,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Celtic_languages"
+    },
+    {
+      "id": "george1993",
+      "author": "George, K.",
+      "year": 1993,
+      "title": "The Cornish Language and its Literature",
+      "publisher": "Routledge & Kegan Paul",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "ladefoged_maddieson1996",
+      "author": "Ladefoged, P. & Maddieson, I.",
+      "year": 1996,
+      "title": "The Sounds of the World's Languages",
+      "publisher": "Blackwell",
+      "url": null,
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Cornish_language",
+    "https://kw.wikipedia.org/wiki/Kernowek",
+    "https://kw.wikipedia.org/wiki/Kernewek"
+  ],
+  "timespan": {
+    "start_year": 400,
+    "end_year": null
+  },
+  "glottolog_code": "corn1251",
+  "iso639_3": "cor",
+  "wikidata_qid": "Q25289",
+  "wals_code": "crn",
+  "location": {
+    "latitude": 50.5233,
+    "longitude": -4.18619,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Cornish."
+  }
+}

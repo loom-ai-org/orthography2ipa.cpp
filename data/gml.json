@@ -1,0 +1,185 @@
+{
+  "code": "gml",
+  "name": "Middle Low German",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "sch": [
+      "sk"
+    ],
+    "sc": [
+      "sk"
+    ],
+    "ch": [
+      "x"
+    ],
+    "ng": [
+      "ŋ"
+    ],
+    "ck": [
+      "k"
+    ],
+    "ee": [
+      "eː"
+    ],
+    "oo": [
+      "oː"
+    ],
+    "aa": [
+      "aː"
+    ],
+    "ae": [
+      "ɛː"
+    ],
+    "a": [
+      "a"
+    ],
+    "e": [
+      "e"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "o"
+    ],
+    "u": [
+      "u"
+    ],
+    "b": [
+      "b"
+    ],
+    "c": [
+      "k"
+    ],
+    "d": [
+      "d"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɣ",
+      "ɡ"
+    ],
+    "h": [
+      "h"
+    ],
+    "j": [
+      "j"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "v": [
+      "v",
+      "f"
+    ],
+    "w": [
+      "w"
+    ],
+    "z": [
+      "s"
+    ]
+  },
+  "positional_graphemes": {
+    "e": {
+      "nucleus_unstressed": [
+        "ə"
+      ],
+      "nucleus_stressed": [
+        "e"
+      ],
+      "default": [
+        "e"
+      ]
+    },
+    "v": {
+      "word_initial": [
+        "f"
+      ],
+      "default": [
+        "v"
+      ]
+    },
+    "g": {
+      "word_final": [
+        "x"
+      ],
+      "before_consonant": [
+        "x"
+      ],
+      "default": [
+        "ɣ"
+      ]
+    }
+  },
+  "parent": "gem-x-ingvaeonic",
+  "ancestors": [
+    {
+      "code": "gem-x-ingvaeonic",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Descent per Glottolog classification of Middle Low German (midd1318)."
+    }
+  ],
+  "notes": "Research. West Germanic (Ingvaeonic/Low Saxon) medieval stage written in the Latin alphabet. Grapheme map covers the basic vowels, doubled long vowels, the digraphs sch [ʃ], ch [x], ng and ck, and the plain consonants with v and w both mapped to [v]. Middle Low German spelling was not standardised across the Hanseatic writing tradition; vowel length and quality were marked inconsistently and are largely left unencoded, so a notable PER floor is expected. Grapheme table checked against Lasch (1914): no discrepancy found. `positional_graphemes.e` encodes the reduction of unstressed non-initial-syllable vowels (mostly historical short a/i/o/u of medial and final syllables) to a single schwa-like sound, normally spelled <e>, that Lasch (1914) describes for the medial/final-syllable vowel system (§§211-212: 'Die im as. noch vorhandene Mannigfaltigkeit der kurzen Vokale in den unbetonten Silben hat sich mnd. auf einen meist durch e wiedergegebenen Laut reduziert', p. 116-117); the gold cache confirms this is realised as [ə] in practice (e.g. all 58 -en-final polysyllables and the large majority of -e-final polysyllables in the wikipron sample). Word-final obstruent devoicing was checked against the gold and could not be evaluated: the 143-word sample contains no orthographically b- or d-final word and only one g-final word, too little evidence to source a rule either way. Four grapheme values carried modern High German or modern Low German readings that Lasch (1914) does not give for the medieval language, and that the cached wikipron gold contradicts without exception. `graphemes.sch` and the added `graphemes.sc` are [sk], not [ʃ]: Lasch §334 (pp. 173-175) treats <sch> as a spelling variant of <sc>/<sk> that begins before the Middle Low German period and never displaces <sc> within it ('noch zu ende der periode sc (sk) nicht verdrängt'), with the single [ʃ] a later and regionally limited development; all 11 <sch>/<sc> words in the gold read [sk]. `graphemes.w` is [w], not [v]: Lasch keeps <w> (§299, pp. 155-156) and the labiodental <v>/<u> (§290, p. 151) as separate sounds in separate sections, and the spec had merged them; the gold has [w] in all 27 <w> words, initial, medial and final (water, ewich, juw). `graphemes.v` and `positional_graphemes.v` give [f] word-initially and [v] medially, per Lasch §290 ('v, älter u, steht anlautend für den stimmlosen Spiranten ... v, u steht inlautend für den stimmhaften laut'); the gold agrees in every case (valsch, versch, vrisch, varwe with [f]; geven, iver, over with [v]). `graphemes.g` leads with the spirant [ɣ] and `positional_graphemes.g` devoices it word-finally and before a consonant, per Lasch §342 (p. 180: 'auch das mnd. anlautende g ist als Spirant aufzufassen') and §340 (p. 179, final g 'meist ch geschrieben': dag/dach, slöch); the gold has [ɣ] 18 times, [x] 10 and [ʝ] 2 -- §342's palatal variant -- against no plain [ɡ] at all. Vowel length remains unpredictable and is the largest remaining error class: the gold marks quantity the Hanseatic spelling does not, and stripping length from both sides drops PER from 0.277 to 0.182, so roughly nine and a half points of what remains is editorial quantity the spec cannot see.",
+  "iso639_3": "gml",
+  "glottolog_code": "midd1318",
+  "sources": [
+    {
+      "id": "gml_glottolog",
+      "author": "Hammarström, H. et al. (Glottolog 5.0)",
+      "year": 2024,
+      "title": "Glottolog: Middle Low German (midd1318)",
+      "publisher": "Max Planck Institute for Evolutionary Anthropology",
+      "url": "https://glottolog.org/resource/languoid/id/midd1318",
+      "pages": null,
+      "notes": "Classification reference for a skeleton-tier entry.",
+      "wikipedia_url": null
+    },
+    {
+      "id": "lasch1914",
+      "author": "Lasch, Agathe",
+      "year": 1914,
+      "title": "Mittelniederdeutsche Grammatik",
+      "publisher": "Niemeyer, Halle",
+      "url": "https://archive.org/details/mittelniederdeut00lasc",
+      "pages": "116-117 (§§211-212), 151 (§290), 155-156 (§299), 173-175 (§334), 179 (§340), 180 (§342)",
+      "notes": "Standard reference grammar of Middle Low German. §§211-212 the reduction of unstressed-syllable vowels to a schwa-like sound spelled <e>; §290 <v>/<u> voiceless word-initially and voiced medially; §299 <w> as a sound distinct from <v>; §334 <sch> as a spelling variant of <sc>/<sk>, the cluster surviving the whole period; §340 word-final <g> written <ch>; §342 initial <g> a spirant. Also the source for the root-initial stress rule in this spec's `stress` block.",
+      "wikipedia_url": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Middle_Low_German"
+  ],
+  "stress": {
+    "default_position": 1,
+    "quantity_sensitive": false,
+    "stress_mark": "ˈ",
+    "source": "rules",
+    "notes": "Middle Low German, like other West Germanic varieties of its period, keeps the inherited Common Germanic fixed root-initial stress (Lasch 1914). `default_position=1` (first syllable) models this; stress-neutral prefixes and loanwords are not separately handled for lack of a documented closed list in the sources consulted."
+  }
+}

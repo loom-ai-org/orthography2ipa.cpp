@@ -1,0 +1,332 @@
+{
+ "code": "sad",
+ "name": "Sandawe",
+ "script": "Latin",
+ "quality": "skeleton",
+ "graphemes": {
+  "a": [
+   "a"
+  ],
+  "aa": [
+   "aː"
+  ],
+  "b": [
+   "b"
+  ],
+  "bp": [
+   "p"
+  ],
+  "c": [
+   "kǀ"
+  ],
+  "ch": [
+   "kǀʰ"
+  ],
+  "c’": [
+   "ᵑǀˀ"
+  ],
+  "d": [
+   "d"
+  ],
+  "dl": [
+   "dʎ̝"
+  ],
+  "dt": [
+   "t"
+  ],
+  "dz": [
+   "dʒ"
+  ],
+  "e": [
+   "e"
+  ],
+  "ee": [
+   "eː"
+  ],
+  "f": [
+   "f"
+  ],
+  "g": [
+   "ɡ"
+  ],
+  "gc": [
+   "ɡǀ"
+  ],
+  "gk": [
+   "k"
+  ],
+  "gq": [
+   "ɡǃ"
+  ],
+  "gx": [
+   "ɡǁ"
+  ],
+  "h": [
+   "h"
+  ],
+  "i": [
+   "i"
+  ],
+  "ii": [
+   "iː"
+  ],
+  "k": [
+   "kʰ"
+  ],
+  "kh": [
+   "x"
+  ],
+  "k’": [
+   "k’"
+  ],
+  "l": [
+   "l"
+  ],
+  "lh": [
+   "ɬ"
+  ],
+  "m": [
+   "m"
+  ],
+  "n": [
+   "n"
+  ],
+  "nc": [
+   "ŋǀ"
+  ],
+  "nq": [
+   "ŋǃ"
+  ],
+  "nx": [
+   "ŋǁ"
+  ],
+  "o": [
+   "o"
+  ],
+  "oo": [
+   "oː"
+  ],
+  "p": [
+   "pʰ"
+  ],
+  "q": [
+   "kǃ"
+  ],
+  "qh": [
+   "kǃʰ"
+  ],
+  "q’": [
+   "ᵑǃˀ"
+  ],
+  "r": [
+   "ɾ"
+  ],
+  "s": [
+   "s"
+  ],
+  "t": [
+   "tʰ"
+  ],
+  "tc": [
+   "tʃ"
+  ],
+  "tch": [
+   "tʃʰ"
+  ],
+  "tl": [
+   "t͜ɬ"
+  ],
+  "tl’": [
+   "t͜ɬʼ"
+  ],
+  "ts’": [
+   "tsʼ"
+  ],
+  "u": [
+   "u"
+  ],
+  "uu": [
+   "uː"
+  ],
+  "w": [
+   "w"
+  ],
+  "x": [
+   "kǁ"
+  ],
+  "xh": [
+   "kǁʰ"
+  ],
+  "x’": [
+   "ᵑǁˀ"
+  ],
+  "y": [
+   "j"
+  ],
+  "ã": [
+   "ã"
+  ],
+  "ãã": [
+   "ãː"
+  ],
+  "õ": [
+   "õ"
+  ],
+  "õõ": [
+   "õː"
+  ],
+  "ĩ": [
+   "ĩ"
+  ],
+  "ĩĩ": [
+   "ĩː"
+  ],
+  "ũ": [
+   "ũ"
+  ],
+  "ũũ": [
+   "ũː"
+  ],
+  "ẽ": [
+   "ẽ"
+  ],
+  "ẽẽ": [
+   "ẽː"
+  ],
+  "’": [
+   "ʔ"
+  ]
+ },
+ "allophones": {
+  "m": [
+   "m",
+   "ŋ"
+  ],
+  "n": [
+   "n",
+   "ŋ"
+  ],
+  "tɬʼ": [
+   "tɬʼ",
+   "kɬʼ"
+  ],
+  "i": [
+   "i",
+   "i̥"
+  ],
+  "u": [
+   "u",
+   "u̥"
+  ]
+ },
+ "notes": "Placed so the ancestry graph covers every living ISO 639-3 language. No orthography is claimed; the phoneme inventory follows the cited PHOIBLE inventory (which itself cites a published description): script is Zyyy (undetermined) until a cited description is encoded. Classification and coordinates follow Glottolog. Orthography from an Omniglot chart (c) Simon Ager, https://www.omniglot.com/, extracted via the AfriSpeech/africa-g2p compilation (sad.json). africa-g2p is a compilation tool, not the linguistic authority; the citation above is the original source it names.",
+ "iso639_3": "sad",
+ "glottolog_code": "sand1273",
+ "sources": [
+  {
+   "id": "glottolog2024",
+   "author": "Hammarström, Harald; Forkel, Robert; Haspelmath, Martin; Bank, Sebastian",
+   "year": 2024,
+   "title": "Glottolog 5.0",
+   "publisher": "Max Planck Institute for Evolutionary Anthropology",
+   "url": "https://glottolog.org/"
+  },
+  {
+   "id": "phoible2019",
+   "author": "Moran, Steven; McCloy, Daniel (eds.)",
+   "year": 2019,
+   "title": "PHOIBLE 2.0 (doi:10.5281/zenodo.2562766)",
+   "publisher": "Max Planck Institute for the Science of Human History",
+   "url": "https://phoible.org/inventories/view/1652",
+   "notes": "Inventory 1652 (ph), 55 non-marginal segments, 4 marginal excluded, 5 tones."
+  },
+  {
+   "id": "omniglot-sandawe",
+   "author": "Ager, Simon",
+   "year": 2026,
+   "title": "Omniglot chart (sandawe.xls)",
+   "publisher": "Omniglot",
+   "url": "https://www.omniglot.com/",
+   "notes": "Undated web chart; year is retrieval year, not publication year."
+  }
+ ],
+ "urls": [
+  "https://glottolog.org/resource/languoid/id/sand1273"
+ ],
+ "location": {
+  "latitude": -5.2692,
+  "longitude": 35.4808,
+  "source": "glottolog",
+  "notes": "Glottolog's representative point."
+ },
+ "family": "Isolate",
+ "phonemes": [
+  "b",
+  "d",
+  "dɮ",
+  "d̠ʒ",
+  "f",
+  "h",
+  "k",
+  "kǀ",
+  "kǀʰ",
+  "kǀʼ",
+  "kǁ",
+  "kǁʰ",
+  "kǁʼ",
+  "kǃ",
+  "kǃʰ",
+  "kǃʼ",
+  "kʰ",
+  "kʼ",
+  "l",
+  "m",
+  "n",
+  "p",
+  "pʰ",
+  "s",
+  "t",
+  "tsʼ",
+  "tɬ",
+  "tɬʼ",
+  "tʰ",
+  "t̠ʃ",
+  "t̠ʃʰ",
+  "w",
+  "x",
+  "ŋǀ",
+  "ŋǁ",
+  "ŋǃ",
+  "ɡ",
+  "ɬ",
+  "ɾ",
+  "ʔ",
+  "a",
+  "aː",
+  "ãː",
+  "e",
+  "eː",
+  "ẽː",
+  "i",
+  "iː",
+  "ĩː",
+  "o",
+  "oː",
+  "õː",
+  "u",
+  "uː",
+  "ũː"
+ ],
+ "tone_inventory": {
+  "˥˩": "PHOIBLE tone segment",
+  "˦": "PHOIBLE tone segment",
+  "˧": "PHOIBLE tone segment",
+  "˨": "PHOIBLE tone segment",
+  "˩˥": "PHOIBLE tone segment"
+ },
+ "phoible_id": "1652",
+ "script_type": "alphabet",
+ "wikipedia": [
+  "https://en.wikipedia.org/wiki/Sandawe_language"
+ ]
+}

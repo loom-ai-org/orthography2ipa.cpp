@@ -1,0 +1,241 @@
+{
+  "code": "rsk",
+  "name": "Pannonian Rusyn",
+  "script": "Cyrillic",
+  "script_type": "alphabet",
+  "quality": "research",
+  "wikidata_qid": "Q35660",
+  "graphemes": {
+    "дз": [
+      "dz"
+    ],
+    "дж": [
+      "dʒ"
+    ],
+    "а": [
+      "a"
+    ],
+    "б": [
+      "b"
+    ],
+    "в": [
+      "v",
+      "w"
+    ],
+    "г": [
+      "ɦ"
+    ],
+    "ґ": [
+      "ɡ"
+    ],
+    "д": [
+      "d"
+    ],
+    "е": [
+      "ɛ"
+    ],
+    "є": [
+      "jɛ"
+    ],
+    "ж": [
+      "ʒ"
+    ],
+    "з": [
+      "z"
+    ],
+    "и": [
+      "i"
+    ],
+    "ї": [
+      "ji"
+    ],
+    "й": [
+      "j"
+    ],
+    "к": [
+      "k"
+    ],
+    "л": [
+      "l"
+    ],
+    "м": [
+      "m"
+    ],
+    "н": [
+      "n"
+    ],
+    "о": [
+      "ɔ"
+    ],
+    "п": [
+      "p"
+    ],
+    "р": [
+      "r"
+    ],
+    "с": [
+      "s"
+    ],
+    "т": [
+      "t"
+    ],
+    "у": [
+      "u"
+    ],
+    "ф": [
+      "f"
+    ],
+    "х": [
+      "x"
+    ],
+    "ц": [
+      "ts"
+    ],
+    "ч": [
+      "tʃ"
+    ],
+    "ш": [
+      "ʃ"
+    ],
+    "ю": [
+      "ju"
+    ],
+    "я": [
+      "ja"
+    ],
+    "ь": [
+      "ʲ"
+    ],
+    "дь": [
+      "ɟ"
+    ],
+    "дє": [
+      "ɟɛ"
+    ],
+    "дї": [
+      "ɟi"
+    ],
+    "дя": [
+      "ɟa"
+    ],
+    "дю": [
+      "ɟu"
+    ],
+    "ль": [
+      "ʎ"
+    ],
+    "лє": [
+      "ʎɛ"
+    ],
+    "лї": [
+      "ʎi"
+    ],
+    "ля": [
+      "ʎa"
+    ],
+    "лю": [
+      "ʎu"
+    ],
+    "нь": [
+      "ɲ"
+    ],
+    "нє": [
+      "ɲɛ"
+    ],
+    "нї": [
+      "ɲi"
+    ],
+    "ня": [
+      "ɲa"
+    ],
+    "ню": [
+      "ɲu"
+    ],
+    "ть": [
+      "c"
+    ],
+    "тє": [
+      "cɛ"
+    ],
+    "тї": [
+      "ci"
+    ],
+    "тя": [
+      "ca"
+    ],
+    "тю": [
+      "cu"
+    ]
+  },
+  "allophones": {
+    "v": [
+      "v",
+      "w",
+      "f"
+    ],
+    "ts": [
+      "ts",
+      "tsː"
+    ],
+    "dz": [
+      "dz",
+      "dzː"
+    ],
+    "tʃ": [
+      "tʃ",
+      "c"
+    ],
+    "dʒ": [
+      "dʒ",
+      "ɟ"
+    ]
+  },
+  "notes": "Pannonian Rusyn (руски язик) of Vojvodina (Serbia) and Slavonia (Croatia) — ISO 639-3 rsk since 2022, codified on the Ruski Krstur dialect and phonologically much closer to the Eastern Slovak dialects than to Carpathian Rusyn or Ukrainian. INPUT CONTRACT: Pannonian Rusyn Cyrillic text, Unicode NFC. Orthography: its own 32-letter alphabet — а б в г ґ д е є ж з и ї й к л м н о п р с т у ф х ц ч ш щ ю я ь — i.e. the Ukrainian alphabet WITHOUT ⟨і⟩ (and without ⟨ы ё ъ⟩), with ⟨ь⟩ sorted after ⟨я⟩. Vowels are a five-way system /i ɛ a ɔ u/ with no length contrast, so ⟨е⟩=/ɛ/, ⟨о⟩=/ɔ/, ⟨и⟩=/i/ (no /ɪ/ or /ɨ/ — *i and *y have merged, unlike Ukrainian and Carpathian Rusyn). ⟨г⟩ and ⟨ґ⟩ are fully independent letters: /ɦ/ vs /ɡ/. Palatalisation: ONLY ⟨д л н т⟩ may be followed by ⟨ь⟩, and they then become the true palatals /ɟ ʎ ɲ c/ (not /dʲ lʲ nʲ tʲ/); the same four consonants take these values before ⟨є ї я ю⟩. After any other consonant those letters simply add /j/ + vowel, which is what the single-letter entries encode. Both sets are entered as multigraph keys (дь, дє, дї, дя, дю, …) so maximal munch prefers them. ⟨дз⟩ /d͡z/ and ⟨дж⟩ /d͡ʒ/ are affricate digraphs and are frequent native reflexes (dj > dz, tj > ts). ⟨в⟩ is /v/ before a vowel but [w~u̯] word-finally and before a consonant (second candidate; also [f] word-initially before a voiceless consonant — captured as an allophone, not as a context rule, since the engine is context-free). Stress is regularly penultimate but is not emitted. DELIBERATELY OMITTED: ⟨щ⟩ — it is in the alphabet, but none of the sources read here gives it an IPA value for Pannonian Rusyn (the ʃt͡ʃ / ʃʃ discussion in the Rusyn-language literature concerns Carpathian varieties), so it is left unmapped rather than invented. Final devoicing, cluster voicing assimilation and gemination are documented but are sandhi rules, not grapheme values, and are not modelled. wikidata_qid left unset (see previous note).",
+  "sources": [
+    {
+      "id": "rsk_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Pannonian Rusyn Wikipedia",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Pannonian_Rusyn_Wikipedia",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Pannonian_Rusyn_Wikipedia",
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "pannonian_rusyn_wikipedia",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Pannonian Rusyn — Alphabet, Phonology (consonants, vowels), Prosody and Voicing",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Pannonian_Rusyn",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Pannonian_Rusyn",
+      "pages": null,
+      "notes": "32-letter alphabet table (Ukrainian alphabet minus і); consonant chart (m n ɲ p t c k b d ɟ ɡ t͡s t͡ʃ d͡z d͡ʒ f s ʃ x ɦ v z ʒ r l ʎ (w) j) and five-vowel chart (i ɛ a ɔ u, no length); explicit rule that only д л н т take ь and become ɟ ʎ ɲ c, likewise before є ї я ю, while other consonants merely add /j/; в → [v]/[w~u̯]/[f]; penultimate stress. Source of every value in this spec."
+    },
+    {
+      "id": "ramac_2004_rusynskyj_jazyk",
+      "author": "Юлиян Рамач",
+      "year": 2004,
+      "title": "Русиньскый язык — ІІ. Літературный язык. Войводина",
+      "publisher": "Uniwersytet Opolski — Instytut filologii Polskiej",
+      "url": "https://archive.org/details/rusynskyiiazyk0000unse/page/277",
+      "wikipedia_url": null,
+      "pages": "277-304",
+      "notes": "Reference description of the Vojvodina (Pannonian) Rusyn literary standard, cited by the Wikipedia article for the orthography and for the Kucura -лї/-ли dialect deviation."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Pannonian_Rusyn_Wikipedia"
+  ],
+  "parent": "x-clade-slav1255",
+  "ancestors": [
+    {
+      "code": "x-clade-slav1255",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Slavic — the classification node this language sits under."
+    }
+  ]
+}

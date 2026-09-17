@@ -1,0 +1,66 @@
+{
+  "code": "scx",
+  "name": "Sicel",
+  "script": "Greek",
+  "script_type": "alphabet",
+  "quality": "stub",
+  "graphemes": {},
+  "parent": "x-clade-ital1284",
+  "ancestors": [
+    {
+      "code": "x-clade-ital1284",
+      "role": "parent",
+      "weight": 0.5,
+      "notes": "The prevalent modern view treats Sicel as an Italic language, but the scarcity of sources makes a definitive conclusion impossible (Wikipedia: Sicel language; Weiss 2022). Low weight reflects that classification uncertainty."
+    },
+    {
+      "code": "grc",
+      "role": "adstrate",
+      "weight": 0.2,
+      "notes": "Attested only through a Greek (likely Euboic-Chalkidic) alphabet borrowed under contact with Greek colonists in eastern Sicily (Tribulato 2012)."
+    }
+  ],
+  "notes": "Stub: no citable grapheme-to-IPA inventory. Extinct, definitely Indo-European language of ancient eastern Sicily, attested in fewer than thirty inscriptions (only ~6 considered intelligibly Sicel) plus ~25 glosses in ancient authors, written in the Greek alphabet. No published phonological inventory (grapheme-by-grapheme sound values) is sourceable from the extremely limited corpus; the literature (Hartmann 2017, Weiss 2022, Tribulato 2012) discusses individual sound-law arguments (e.g. reflexes of PIE voiced aspirates) from isolated forms, not a systematic orthography-to-phoneme table, so graphemes is left empty rather than fabricated from Greek-alphabet defaults.",
+  "iso639_3": "scx",
+  "glottolog_code": "sicu1234",
+  "sources": [
+    {
+      "id": "hartmann2017",
+      "author": "Hartmann, Markus",
+      "year": 2017,
+      "title": "Siculian, in Handbook of Comparative and Historical Indo-European Linguistics, Vol. 3 (eds. Klein, Joseph, Fritz)",
+      "publisher": "Walter de Gruyter",
+      "url": null,
+      "pages": "1854-1857",
+      "notes": "Cited (pp. 1854-1857) in Wikipedia: Sicel language as the source for attestations and writing-system claims.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Sicel_language"
+    },
+    {
+      "id": "tribulato2012",
+      "author": "Tribulato, Olga",
+      "year": 2012,
+      "title": "Language and Linguistic Contact in Ancient Sicily",
+      "publisher": "Cambridge University Press",
+      "url": null,
+      "pages": "167",
+      "notes": "Language contact in ancient Sicily; Sicel/Sicanian evidence. Confirmed via WebFetch of Wikipedia: Sicel language (p. 167 cited there for classification)."
+    },
+    {
+      "id": "weiss2022",
+      "author": "Weiss, Michael",
+      "year": 2022,
+      "title": "Italic, in The Indo-European Language Family (ed. Olander, Thomas)",
+      "publisher": "Cambridge University Press",
+      "url": null,
+      "pages": "115-116",
+      "notes": "Cited (pp. 115-116) in Wikipedia: Sicel language for the Italic-affiliation argument."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Sicel_language"
+  ],
+  "timespan": {
+    "start_year": -900,
+    "end_year": -400
+  }
+}

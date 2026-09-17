@@ -1,0 +1,96 @@
+{
+  "code": "es-CO",
+  "name": "Colombian Spanish (Bogotá)",
+  "script": "Latin",
+  "graphemes_base": "es-ES",
+  "graphemes": {
+    "c": [
+      "k",
+      "s"
+    ],
+    "z": [
+      "s"
+    ],
+    "ll": [
+      "ʝ"
+    ]
+  },
+  "allophones_base": "es-ES",
+  "allophones": {
+    "ʝ": [
+      "ʝ",
+      "ɟʝ"
+    ],
+    "n": [
+      "n"
+    ],
+    "s": [
+      "s"
+    ]
+  },
+  "positional_graphemes_base": "es-ES",
+  "parent": "es-ES",
+  "notes": "Bogotá highland Spanish (rolo). Very conservative: full coda /s/, alveolar /n/, no aspiration. Strong [ɟʝ] affricate for /ʝ/. Often cited as one of the 'clearest' Latin American varieties. The standard reference for Colombian media.",
+  "quality": "skeleton",
+  "script_type": "alphabet",
+  "sources": [
+    {
+      "id": "hualde2005",
+      "author": "Hualde, J.I.",
+      "year": 2005,
+      "title": "The Sounds of Spanish",
+      "publisher": "Cambridge University Press",
+      "url": null,
+      "pages": null,
+      "notes": null,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Spanish_phonology"
+    },
+    {
+      "id": "fontanella_de_weinberg1992",
+      "author": "Fontanella de Weinberg, M.B.",
+      "year": 1992,
+      "title": "El español de América",
+      "publisher": "MAPFRE",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "penny2002",
+      "author": "Penny, R.",
+      "year": 2002,
+      "title": "A History of the Spanish Language",
+      "publisher": "Cambridge University Press",
+      "url": null,
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Colombian_Spanish",
+    "https://es.wikipedia.org/wiki/Espa%C3%B1ol_colombiano"
+  ],
+  "timespan": {
+    "start_year": 1700,
+    "end_year": null
+  },
+  "glottolog_code": null,
+  "iso639_3": "spa",
+  "positional_graphemes": {
+    "c": {
+      "before_e": [
+        "s"
+      ],
+      "before_i": [
+        "s"
+      ]
+    }
+  },
+  "wikidata_qid": "Q1115875",
+  "location": {
+    "latitude": 4.60971,
+    "longitude": -74.08175,
+    "source": "wikidata",
+    "notes": "Bogotá — the highland city whose rolo speech this spec models. [Wikidata Q2841 P625]"
+  }
+}

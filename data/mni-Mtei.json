@@ -1,0 +1,88 @@
+{
+  "code": "mni-Mtei",
+  "name": "Meitei/Manipuri (Meetei Mayek script)",
+  "script": "Meetei Mayek",
+  "script_type": "abugida",
+  "orthography_kind": "native",
+  "quality": "skeleton",
+  "parent": "mni",
+  "ancestors": [
+    {
+      "code": "mni",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Same language as `mni` (spelled there in Bengali/Latin); Meetei Mayek is Manipuri's own historical script, re-adopted as the sole official script of Manipur by state order in 2021. See `iu-Latn` for the script-suffixed sibling-spec precedent."
+    }
+  ],
+  "iso639_3": "mni",
+  "glottolog_code": "mani1292",
+  "wikidata_qid": "Q33871",
+  "graphemes": {
+    "ꯀ": ["k"],
+    "ꯈ": ["kʰ"],
+    "ꯉ": ["ŋ"],
+    "ꯆ": ["tʃ"],
+    "ꯇ": ["t"],
+    "ꯊ": ["tʰ"],
+    "ꯅ": ["n"],
+    "ꯄ": ["p"],
+    "ꯐ": ["pʰ"],
+    "ꯃ": ["m"],
+    "ꯌ": ["j"],
+    "ꯂ": ["l"],
+    "ꯋ": ["w"],
+    "ꯁ": ["s"],
+    "ꯍ": ["h"],
+    "ꯑ": ["ə"],
+    "ꯏ": ["iː"],
+    "ꯎ": ["u"],
+    "ꯥ": ["a"],
+    "ꯤ": ["i"],
+    "ꯨ": ["u"],
+    "ꯦ": ["e"],
+    "ꯣ": ["o"],
+    "ꯩ": ["əj"],
+    "ꯧ": ["əw"],
+    "ꯪ": ["ŋ"]
+  },
+  "allophones": {
+    "k": ["k"], "kʰ": ["kʰ"], "ŋ": ["ŋ"], "tʃ": ["tʃ"], "t": ["t"], "tʰ": ["tʰ"],
+    "n": ["n"], "p": ["p"], "pʰ": ["pʰ"], "m": ["m"], "j": ["j"], "l": ["l"],
+    "w": ["w"], "s": ["s"], "h": ["h"], "ə": ["ə"], "iː": ["iː"], "u": ["u"],
+    "a": ["a"], "i": ["i"], "e": ["e"], "o": ["o"], "əj": ["əj"], "əw": ["əw"]
+  },
+  "notes": "Meetei Mayek (ꯃꯤꯇꯩ ꯃꯌꯦꯛ), the pre-19th-century native abugida of Meitei/Manipuri, banned under Vaishnavite Bengali-script pressure from the 1700s and formally reinstated as Manipur's sole official script by a 2021 state cabinet order (replacing Bengali script). Spelled here as a SEPARATE spec from `mni` (which encodes the still-current Bengali/Latin renderings) following the `iu-Latn` script-suffix precedent, because the letter-to-sound mapping is specific to this script, not to the language. GRAPHEME KEYS: the 18 traditional consonant letters (`kok` /k/ through `un` /u/, Chelliah 1997; Meetei script Wikipedia table) plus the seven post-base vowel-diacritic signs (matras) and the independent vowel-carrier letters ꯑ/ꯏ/ꯎ. `ꯪ` (`nung`) is polysemous: as a post-vowel FINAL sign it spells syllable-final /ŋ/ (the same phoneme as the base letter ꯉ), included here undifferentiated by position pending a `positional_graphemes` split. KNOWN GAP, documented rather than guessed (AGENTS.md rule 4): the traditional Mayek writes only 18 native consonants; NINE additional consonant letters were added in the 20th century to spell voiced/loan consonants absent from native Meitei (b, d, dʒ, g, r, z, and geminate-marking letters per Chelliah 1997 and the Meetei-script Wikipedia article) but this source material did not give exact glyph-to-codepoint correspondences precise enough to cite safely, so those nine letters are left UNMAPPED here rather than filled with an unsourced guess -- a spec gap, not a silent omission. Same phoneme set, aspiration and stress facts as `mni`: no lexical stress is described for Meitei in Chelliah (1997), so stress is left unencoded (a documented exemption, not an oversight). TIER: no WikiPron (or other registrable) gold exists for `mni`/Meetei Mayek (checked against CUNY-CL/wikipron's scrape summary, 2026-08-03: zero rows), so this stays `skeleton`, not `research`.",
+  "sources": [
+    {
+      "id": "meetei_script_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Meitei script",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Meitei_script",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Meitei_script",
+      "pages": null,
+      "notes": "Primary-letter table (18 consonants) and vowel-diacritic table with IPA values."
+    },
+    {
+      "id": "chelliah1997",
+      "author": "Chelliah, Shobhana L.",
+      "year": 1997,
+      "title": "A Grammar of Meithei",
+      "publisher": "Mouton de Gruyter",
+      "url": null,
+      "pages": null,
+      "notes": "Reference grammar; phoneme inventory reused from `mni`."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Meitei_script",
+    "https://en.wikipedia.org/wiki/Meitei_language"
+  ],
+  "location": {
+    "latitude": 24.817,
+    "longitude": 93.937,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Meitei/Manipuri (Imphal valley)."
+  }
+}

@@ -1,0 +1,129 @@
+{
+  "code": "es-ES-x-murcia",
+  "name": "Murcian Spanish (Panocho)",
+  "script": "Latin",
+  "graphemes_base": "es-ES",
+  "graphemes": {
+    "c": [
+      "k",
+      "θ",
+      "s"
+    ],
+    "s": [
+      "s",
+      "h"
+    ],
+    "ll": [
+      "ʝ"
+    ]
+  },
+  "allophones_base": "es-ES",
+  "allophones": {
+    "d": [
+      "d",
+      "ð",
+      ""
+    ],
+    "s": [
+      "s",
+      "h",
+      ""
+    ],
+    "n": [
+      "n",
+      "ŋ"
+    ],
+    "l": [
+      "l",
+      "ɾ"
+    ],
+    "ɾ": [
+      "ɾ",
+      "l"
+    ]
+  },
+  "positional_graphemes_base": "es-ES",
+  "positional_graphemes": {
+    "d": {
+      "default": [
+        "d"
+      ],
+      "intervocalic": [
+        "ð",
+        ""
+      ],
+      "word_final": [
+        ""
+      ]
+    },
+    "s": {
+      "word_initial": [
+        "s"
+      ],
+      "intervocalic": [
+        "s"
+      ],
+      "before_consonant": [
+        "h",
+        "s"
+      ],
+      "word_final": [
+        "h"
+      ]
+    }
+  },
+  "parent": "es-ES",
+  "notes": "Murcian Spanish (Panocho/Murciano). Transitional between Castilian and Andalusian: shares coda aspiration, -d deletion, yeísmo, and liquid neutralisation with Andalusian. Some traces of Aragonese/Catalan substrate from medieval settlement (vowel harmony traces). Mixed distinción/seseo zones.",
+  "quality": "research",
+  "script_type": "alphabet",
+  "sources": [
+    {
+      "id": "hualde2005",
+      "author": "Hualde, J.I.",
+      "year": 2005,
+      "title": "The Sounds of Spanish",
+      "publisher": "Cambridge University Press",
+      "url": null,
+      "pages": null,
+      "notes": null,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Spanish_phonology"
+    },
+    {
+      "id": "penny2002",
+      "author": "Penny, R.",
+      "year": 2002,
+      "title": "A History of the Spanish Language",
+      "publisher": "Cambridge University Press",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "zamora_vicente1960",
+      "author": "Zamora Vicente, A.",
+      "year": 1960,
+      "title": "Dialectología española",
+      "publisher": "Gredos",
+      "url": null,
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Murcian_Spanish",
+    "https://es.wikipedia.org/wiki/Dialecto_murciano"
+  ],
+  "timespan": {
+    "start_year": 1500,
+    "end_year": null
+  },
+  "glottolog_code": "murc1238",
+  "iso639_3": "spa",
+  "wikidata_qid": "Q980944",
+  "location": {
+    "latitude": 38,
+    "longitude": -1.833333,
+    "source": "wikidata",
+    "notes": "the Region of Murcia — the community the Panocho variety is spoken in. [Wikidata Q5772 P625]"
+  }
+}

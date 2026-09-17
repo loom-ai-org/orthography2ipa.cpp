@@ -1,0 +1,95 @@
+{
+ "code": "ijs",
+ "name": "Southeast Ijo",
+ "script": "Zyyy",
+ "quality": "stub",
+ "graphemes": {},
+ "allophones": {
+  "ŋ": [
+   "ŋ",
+   "ɲ",
+   "ŋʷ"
+  ]
+ },
+ "notes": "REGISTRY STUB (not a modelled G2P target). Placed so the ancestry graph covers every living ISO 639-3 language. No orthography is claimed; the phoneme inventory follows the cited PHOIBLE inventory (which itself cites a published description): script is Zyyy (undetermined) until a cited description is encoded. Classification and coordinates follow Glottolog.",
+ "iso639_3": "ijs",
+ "glottolog_code": "sout2774",
+ "sources": [
+  {
+   "id": "glottolog2024",
+   "author": "Hammarström, Harald; Forkel, Robert; Haspelmath, Martin; Bank, Sebastian",
+   "year": 2024,
+   "title": "Glottolog 5.0",
+   "publisher": "Max Planck Institute for Evolutionary Anthropology",
+   "url": "https://glottolog.org/"
+  },
+  {
+   "id": "phoible2019",
+   "author": "Moran, Steven; McCloy, Daniel (eds.)",
+   "year": 2019,
+   "title": "PHOIBLE 2.0 (doi:10.5281/zenodo.2562766)",
+   "publisher": "Max Planck Institute for the Science of Human History",
+   "url": "https://phoible.org/inventories/view/734",
+   "notes": "Inventory 734 (aa), 42 non-marginal segments, 2 tones."
+  }
+ ],
+ "urls": [
+  "https://glottolog.org/resource/languoid/id/sout2774"
+ ],
+ "location": {
+  "latitude": 4.4424,
+  "longitude": 6.3219,
+  "source": "glottolog",
+  "notes": "Glottolog's representative point."
+ },
+ "parent": "x-clade-ijoi1239",
+ "phonemes": [
+  "b",
+  "d",
+  "d̠ʒ",
+  "f",
+  "h",
+  "j",
+  "k",
+  "kp",
+  "l",
+  "m",
+  "n",
+  "p",
+  "r",
+  "s",
+  "t",
+  "t̠ʃ",
+  "v",
+  "w",
+  "z",
+  "ŋ",
+  "ɓ",
+  "ɗ",
+  "ɡ",
+  "ɡb",
+  "a",
+  "ã",
+  "e",
+  "ẽ",
+  "i",
+  "ĩ",
+  "o",
+  "õ",
+  "u",
+  "ũ",
+  "ɔ",
+  "ɔ̃",
+  "ɛ",
+  "ɛ̃",
+  "ɪ",
+  "ɪ̃",
+  "ʊ",
+  "ʊ̃"
+ ],
+ "tone_inventory": {
+  "˦": "PHOIBLE tone segment",
+  "˨": "PHOIBLE tone segment"
+ },
+ "phoible_id": "734"
+}

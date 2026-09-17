@@ -1,0 +1,106 @@
+{
+  "code": "men",
+  "name": "Mende",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "a": ["a"],
+    "e": ["e"],
+    "ɛ": ["ɛ"],
+    "i": ["i"],
+    "o": ["o"],
+    "ɔ": ["ɔ"],
+    "u": ["u"],
+    "b": ["b"],
+    "d": ["d"],
+    "f": ["f"],
+    "g": ["ɡ"],
+    "gb": ["ɡb"],
+    "h": ["h"],
+    "j": ["dʒ"],
+    "k": ["k"],
+    "kp": ["kp"],
+    "l": ["l"],
+    "m": ["m"],
+    "n": ["n"],
+    "ny": ["ɲ"],
+    "p": ["p"],
+    "s": ["s"],
+    "t": ["t"],
+    "v": ["v"],
+    "w": ["w"],
+    "y": ["j"]
+  },
+  "allophones": {
+    "a": ["a"], "e": ["e"], "ɛ": ["ɛ"], "i": ["i"], "o": ["o"], "ɔ": ["ɔ"], "u": ["u"],
+    "b": ["b", "mb"],
+    "d": ["d", "nd"],
+    "f": ["f"],
+    "ɡ": ["ɡ", "ŋɡ"],
+    "ɡb": ["ɡb", "ŋɡb"],
+    "h": ["h"],
+    "dʒ": ["dʒ", "ɲdʒ"],
+    "k": ["k"],
+    "kp": ["kp"],
+    "l": ["l"],
+    "m": ["m"],
+    "n": ["n"],
+    "ɲ": ["ɲ"],
+    "p": ["p"],
+    "s": ["s"],
+    "t": ["t"],
+    "v": ["v"],
+    "w": ["w"],
+    "j": ["j"]
+  },
+  "notes": "Mende, Southwestern Mande, spoken by ~2.5 million people as a major lingua franca of southern Sierra Leone (also Liberia, Guinea). Standardly written with a 25-letter Latin alphabet plus the labiovelar digraphs ⟨gb⟩ /ɡb/ and ⟨kp⟩ /kp/, and ⟨ny⟩ /ɲ/; ⟨j⟩ = /dʒ/ and ⟨y⟩ = /j/, following the wider West African convention also seen in ff/bm/snk. Seven oral vowel qualities /i e ɛ a ɔ o u/ have no orthographic length distinction reported in the cited sources. Mende's voiced stops/affricates b, d, g, gb, j are prenasalized to [mb nd ŋɡ ŋɡb ɲdʒ] in a positionally-conditioned alternation (attested in Innes 1969) rather than being spelled with separate digraphs, so the prenasalized variants are recorded here as ALLOPHONES of the plain letters rather than as enumerated grapheme keys, per AGENTS.md §3 (context belongs in the rule layer, not in extra spellings); the precise triggering environment (nasal-vowel or nasal-consonant proximity) is not pinned down finely enough by the sources consulted to state as a positional/allophone_rule with confidence, so it is left as an unconditioned candidate pair pending a fuller phonological source. Mende is also historically written in the Kikakui syllabary (Kisimi Kamara, 1921), not covered by this spec. Mende is tonal (Innes reports five surface tones: high, low, rising, falling, rising-falling) but tone is not marked in the standard Latin orthography, so no tone marks are emitted here. Quality:research — the alphabet table is drawn from a secondary Wikipedia summary rather than a page-by-page check against Innes's grammar.",
+  "sources": [
+    {
+      "id": "innes1969",
+      "author": "Innes, Gordon",
+      "year": 1969,
+      "title": "A Mende Grammar",
+      "publisher": "School of Oriental and African Studies, University of London",
+      "url": null,
+      "pages": null,
+      "notes": "Reference grammar; phonology, tone and prenasalization."
+    },
+    {
+      "id": "mende_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Mende language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Mende_language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Mende_language",
+      "pages": null,
+      "notes": "Consonant/vowel phoneme tables, tone inventory, Latin alphabet."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Mende_language"
+  ],
+  "urls": [
+    "https://glottolog.org/resource/languoid/id/mend1266",
+    "https://www.wikidata.org/wiki/Q1478672"
+  ],
+  "iso639_3": "men",
+  "glottolog_code": "mend1266",
+  "wikidata_qid": "Q1478672",
+  "parent": "x-clade-mand1469",
+  "ancestors": [
+    {
+      "code": "x-clade-mand1469",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Mande — Mende belongs to the Southwestern branch of Mande."
+    }
+  ],
+  "location": {
+    "latitude": 7.9,
+    "longitude": -11.7,
+    "source": "glottolog",
+    "notes": "Approximate centroid of the Mende-speaking region of southern Sierra Leone."
+  }
+}

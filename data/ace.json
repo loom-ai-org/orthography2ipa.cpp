@@ -1,0 +1,236 @@
+{
+  "code": "ace",
+  "name": "Acehnese",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "é": [
+      "e"
+    ],
+    "è": [
+      "ɛ"
+    ],
+    "e": [
+      "ə"
+    ],
+    "ö": [
+      "ʌ"
+    ],
+    "o": [
+      "ɔ"
+    ],
+    "ô": [
+      "o"
+    ],
+    "i": [
+      "i"
+    ],
+    "u": [
+      "u"
+    ],
+    "eu": [
+      "ɯ"
+    ],
+    "b": [
+      "b"
+    ],
+    "c": [
+      "c"
+    ],
+    "d": [
+      "d"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "h": [
+      "h"
+    ],
+    "j": [
+      "ɟ"
+    ],
+    "k": [
+      "k",
+      "ʔ"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ng": [
+      "ŋ"
+    ],
+    "ny": [
+      "ɲ"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "sy": [
+      "ʃ"
+    ],
+    "t": [
+      "t"
+    ],
+    "w": [
+      "w"
+    ],
+    "y": [
+      "j"
+    ]
+  },
+  "allophones": {
+    "a": [
+      "a"
+    ],
+    "e": [
+      "e"
+    ],
+    "ɛ": [
+      "ɛ"
+    ],
+    "ə": [
+      "ə"
+    ],
+    "ʌ": [
+      "ʌ"
+    ],
+    "ɔ": [
+      "ɔ"
+    ],
+    "o": [
+      "o"
+    ],
+    "i": [
+      "i"
+    ],
+    "u": [
+      "u"
+    ],
+    "ɯ": [
+      "ɯ"
+    ],
+    "b": [
+      "b"
+    ],
+    "c": [
+      "c"
+    ],
+    "d": [
+      "d"
+    ],
+    "ɡ": [
+      "ɡ"
+    ],
+    "h": [
+      "h"
+    ],
+    "ɟ": [
+      "ɟ"
+    ],
+    "k": [
+      "k"
+    ],
+    "ʔ": [
+      "ʔ"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ŋ": [
+      "ŋ"
+    ],
+    "ɲ": [
+      "ɲ"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "t": [
+      "t"
+    ],
+    "w": [
+      "w"
+    ],
+    "j": [
+      "j"
+    ]
+  },
+  "notes": "Acehnese (Basa Acèh / Acèh), Malayo-Polynesian language of Aceh, Sumatra. Latin orthography (1980 standard, replacing the earlier Husaini/Dutch-based spelling); the Jawoë (Arabic-derived) script is also traditionally used and is NOT modelled here — input is assumed to be in the Latin orthography. Ten oral vowel qualities; nasal vowels are written with a preceding apostrophe and are not enumerated as separate graphemes here. Word-final ⟨k⟩ is realised as a glottal stop.",
+  "iso639_3": "ace",
+  "glottolog_code": "achi1257",
+  "wikidata_qid": "Q27683",
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Acehnese_language",
+    "https://ace.wikipedia.org/wiki/Basa_Ac%C3%A8h"
+  ],
+  "sources": [
+    {
+      "id": "acehnese_language_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Acehnese language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Acehnese_language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Acehnese_language",
+      "pages": null,
+      "notes": "Orthography / phonology reference."
+    },
+    {
+      "id": "durie1984",
+      "author": "Durie, Mark",
+      "year": 1984,
+      "title": "A grammar of Acehnese",
+      "publisher": "Australian National University (PhD thesis; published 1985 as VKI 112, Foris)",
+      "url": "https://openresearch-repository.anu.edu.au/handle/1885/138059",
+      "doi": "10.25911/5d6fa25bcc31c",
+      "pages": "34-35",
+      "notes": "Section 2.5 'Orthography' read in full: it lists the letter-to-phoneme correspondences used in the grammar (syllable-final k = /ʔ/, sy = /ʃ/, eu = /ɯ/, ô = /o/, o = /ɔ/, ö = /ʌ/, the funny nasals written mb/nd/nj/ngg). Durie writes /e/ as ⟨ê⟩ and /ɛ/ as ⟨e⟩, and reserves ⟨ë⟩ for the mid central vowel he transcribes /ɤ/, where the 1980 standard modelled here writes ⟨é⟩, ⟨è⟩ and ⟨e⟩."
+    }
+  ],
+  "parent": "x-clade-aust1307",
+  "ancestors": [
+    {
+      "code": "x-clade-aust1307",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Austronesian — the classification node this language sits under."
+    }
+  ],
+  "location": {
+    "latitude": 3.90757,
+    "longitude": 96.6032,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Acehnese."
+  }
+}

@@ -1,0 +1,663 @@
+{
+  "ancestors": [
+    {
+      "code": "pt-PT-x-medieval",
+      "role": "parent",
+      "weight": 0.85,
+      "notes": "Descent from Galician-Portuguese / medieval European Portuguese carried to Brazil from the 16th c."
+    },
+    {
+      "code": "tpw",
+      "role": "substrate",
+      "weight": 0.05,
+      "notes": "Old Tupi (lingua geral) substrate: toponyms and everyday lexicon (abacaxi, mandioca, capim, jacare, peteca)."
+    },
+    {
+      "code": "kmb",
+      "role": "adstrate",
+      "weight": 0.05,
+      "notes": "West-Central African (Kimbundu/Kikongo/Yoruba) adstrate from the enslaved population: samba, moleque, cacula, cafune, quilombo; often invoked for open pretonic vowels and syllable-timing tendencies."
+    }
+  ],
+  "code": "pt-BR",
+  "name": "Brazilian Portuguese",
+  "script": "Latin",
+  "parent": "pt-PT-x-medieval",
+  "graphemes_base": "pt-PT-x-medieval",
+  "allophones_base": "pt-PT-x-medieval",
+  "positional_graphemes_base": "pt-PT-x-medieval",
+  "graphemes": {
+    "c": [
+      "k",
+      "s"
+    ],
+    "ç": [
+      "s"
+    ],
+    "s": [
+      "s",
+      "z"
+    ],
+    "ss": [
+      "s"
+    ],
+    "w": [
+      "w",
+      "v"
+    ],
+    "z": [
+      "z"
+    ],
+    "ch": [
+      "ʃ"
+    ],
+    "r": [
+      "ɾ",
+      "ʁ"
+    ],
+    "rr": [
+      "ʁ"
+    ],
+    "x": [
+      "ʃ",
+      "s",
+      "z",
+      "ks",
+      "ɡz"
+    ],
+    "e": [
+      "e",
+      "ɛ"
+    ],
+    "o": [
+      "o",
+      "ɔ",
+      "u"
+    ],
+    "t": [
+      "t",
+      "t͡ʃ"
+    ],
+    "d": [
+      "d",
+      "d͡ʒ"
+    ],
+    "ph": null,
+    "th": null,
+    "rh": null,
+    "á": [
+      "a"
+    ],
+    "é": [
+      "ɛ"
+    ],
+    "í": [
+      "i"
+    ],
+    "ó": [
+      "ɔ"
+    ],
+    "ú": [
+      "u"
+    ],
+    "â": [
+      "ɐ"
+    ],
+    "ê": [
+      "e"
+    ],
+    "ô": [
+      "o"
+    ]
+  },
+  "allophones": {
+    "ɾ": [
+      "ɾ"
+    ],
+    "ʁ": [
+      "ʁ",
+      "χ",
+      "h",
+      "ɦ"
+    ],
+    "s": [
+      "s"
+    ],
+    "z": [
+      "z"
+    ],
+    "t͡ʃ": [
+      "t͡ʃ"
+    ],
+    "d͡ʒ": [
+      "d͡ʒ"
+    ],
+    "e": [
+      "e",
+      "i",
+      "ɛ"
+    ],
+    "o": [
+      "o",
+      "u",
+      "ɔ"
+    ],
+    "l": [
+      "l",
+      "w"
+    ]
+  },
+  "positional_graphemes": {
+    "c": {
+      "before_e": [
+        "s"
+      ],
+      "before_i": [
+        "s"
+      ]
+    },
+    "r": {
+      "word_initial": [
+        "ʁ"
+      ],
+      "intervocalic": [
+        "ɾ"
+      ],
+      "before_consonant": [
+        "ɾ"
+      ],
+      "word_final": [
+        "ɾ",
+        ""
+      ]
+    },
+    "s": {
+      "word_initial": [
+        "s"
+      ],
+      "intervocalic": [
+        "z"
+      ],
+      "before_consonant": [
+        "s"
+      ],
+      "word_final": [
+        "s"
+      ],
+      "intervocalic_cross_word": [
+        "z"
+      ]
+    },
+    "z": {
+      "before_consonant": [
+        "s"
+      ],
+      "word_final": [
+        "s"
+      ]
+    },
+    "l": {
+      "before_vowel": [
+        "l"
+      ],
+      "before_consonant": [
+        "w"
+      ],
+      "word_final": [
+        "w"
+      ],
+      "onset": [
+        "l"
+      ]
+    },
+    "t": {
+      "before_i": [
+        "t͡ʃ"
+      ]
+    },
+    "d": {
+      "before_i": [
+        "d͡ʒ"
+      ]
+    },
+    "e": {
+      "nucleus_unstressed": [
+        "e"
+      ],
+      "word_final": [
+        "ɪ"
+      ],
+      "posttonic": [
+        "ɪ"
+      ]
+    },
+    "o": {
+      "word_final": [
+        "ʊ"
+      ],
+      "nucleus_unstressed": [
+        "o"
+      ],
+      "posttonic": [
+        "ʊ"
+      ]
+    },
+    "a": {
+      "nucleus_stressed": [
+        "a"
+      ],
+      "nucleus_unstressed": [
+        "a"
+      ],
+      "word_final": [
+        "ɐ"
+      ],
+      "posttonic": [
+        "ɐ"
+      ]
+    },
+    "m": {
+      "before_consonant": [
+        "̃"
+      ],
+      "word_final": [
+        "̃"
+      ]
+    },
+    "n": {
+      "before_consonant": [
+        "̃"
+      ],
+      "word_final": [
+        "̃"
+      ]
+    }
+  },
+  "allophone_passes": 2,
+  "allophone_rules": [
+    {
+      "id": "BR_FINAL_EM_GLIDE",
+      "phonemes": [
+        "̃"
+      ],
+      "surface": "̃j̃",
+      "grapheme": [
+        "m"
+      ],
+      "word_final": true,
+      "preceded_by_phoneme": [
+        "e",
+        "ɛ"
+      ],
+      "notes": "Word-final ⟨-em / -ém / -êm⟩ is the nasal DIPHTHONG in Brazilian Portuguese too — bem [ˈbẽj̃], quem [ˈkẽj̃], também [tãˈbẽj̃], homem [ˈomẽj̃], ontem [ˈõtẽj̃] (Barbosa & Albano 2004: 228; Câmara Jr. 1970 §III; Mateus & d'Andrade 2000: ch.4). Unlike European Portuguese, BP does NOT centralise the nucleus to [ɐ̃]: it keeps the close-mid nasal [ẽ] and adds a nasal palatal offglide [j̃], so [̃]→[̃j̃] with the mid front nucleus left intact (hence no BR analogue of PT_FINAL_EM_NUCLEUS). Gated on the ORIGINAL preceding nucleus being a mid/high front vowel so ⟨-im -om -um⟩ (sim, bom, um) keep a plain nasal monophthong; word-final grapheme ⟨m⟩ only, so an ⟨em⟩ before a consonant (tempo, sempre) and word-final ⟨-en⟩ are excluded."
+    },
+    {
+      "id": "BR_FINAL_AM_GLIDE",
+      "phonemes": [
+        "̃"
+      ],
+      "surface": "̃w̃",
+      "grapheme": [
+        "m"
+      ],
+      "word_final": true,
+      "preceded_by_phoneme": [
+        "a",
+        "ɐ"
+      ],
+      "notes": "Word-final ⟨-am⟩ (3rd-person-plural verb ending) is the nasal diphthong [ɐ̃w̃] in Brazilian Portuguese — falam [ˈfalɐ̃w̃], custam [ˈkustɐ̃w̃], brilham [ˈbɾiʎɐ̃w̃] (Barbosa & Albano 2004: 228; Câmara Jr. 1970 §III). The nucleus [ɐ̃] is supplied by the ⟨a⟩→[ɐ] nasal raise (PT_NASAL_A_RAISE) and this rule adds the [w̃] offglide to the coda ⟨m⟩ tilde: [̃]→[̃w̃]. Gated on the ORIGINAL preceding nucleus being low [a ɐ], disjoint from the ⟨-em⟩ glide; word-final ⟨am⟩ only occurs as this verb ending, and an ⟨am⟩ before a consonant (campo, ambos) is not word-final and keeps the plain nasal [ɐ̃]."
+    },
+    {
+      "id": "BR_AFFRIC_T_RAISED",
+      "phonemes": [
+        "t"
+      ],
+      "surface": "t͡ʃ",
+      "followed_by_phoneme": [
+        "i",
+        "ɪ"
+      ],
+      "notes": "Affrication of /t/ before a RAISED final unstressed vowel (leite [ˈlejt͡ʃi], gente [ˈʒẽt͡ʃi], sete [ˈsɛt͡ʃi]; Barbosa & Albano 2004: 228; Câmara Jr. 1970 §III). The pre-lexical positional map affricates /t d/ only before a GRAPHEME ⟨i⟩ (before_i → tia [ˈt͡ʃiɐ]); it cannot reach the case where the trigger [i] is a word-final unstressed ⟨e⟩ that only becomes [i] post-lexically (positional selects the near-close [ɪ], raised to [i] by BR_RAISE_FINAL_E). This rule closes that feeding gap by conditioning on the FOLLOWING slot's underlying high front vowel — the near-close [ɪ] (the pre-raise realisation the rescorer reads on the neighbour) or a lexical [i] — so a ⟨t⟩ before it affricates regardless of whether the trigger was spelled ⟨i⟩ or a raised ⟨e⟩. It is a no-op where the positional map already produced [t͡ʃ] (the slot phoneme is no longer /t/). The non-palatalising nordeste (recife/norte/ce) and the conservative-dental caipira/sul/pt-UY varieties disable this rule by id."
+    },
+    {
+      "id": "BR_AFFRIC_D_RAISED",
+      "phonemes": [
+        "d"
+      ],
+      "surface": "d͡ʒ",
+      "followed_by_phoneme": [
+        "i",
+        "ɪ"
+      ],
+      "notes": "Voiced counterpart of BR_AFFRIC_T_RAISED: /d/ affricates to [d͡ʒ] before a raised final unstressed vowel (tarde [ˈtaɾd͡ʒi], onde [ˈõd͡ʒi], pode [ˈpɔd͡ʒi]; Barbosa & Albano 2004: 228). Closes the same feeding gap where the trigger [i] is a word-final ⟨e⟩ raised only post-lexically (positional [ɪ] → [i] via BR_RAISE_FINAL_O/E), which the grapheme-⟨i⟩ positional before_i rule cannot see. No-op where the positional map already produced [d͡ʒ]. Disabled by id in the non-palatalising nordeste and conservative-dental caipira/sul/pt-UY varieties."
+    },
+    {
+      "id": "PT_NASAL_A_RAISE",
+      "phonemes": [
+        "a"
+      ],
+      "surface": "ɐ",
+      "followed_by_phoneme": [
+        "̃"
+      ],
+      "notes": "Coda-conditioned vowel nasalisation, general Portuguese, retained in Brazilian Portuguese (Mateus & d'Andrade 2000: ch.2, 'Nasality'; Barbosa & Albano 2004; Câmara Jr. 1970 §III): a vowel followed by a tautosyllabic (coda) nasal ⟨m/n⟩ nasalises and the nasal consonant is absorbed (campo, canto, ambos). The nasalisation is modelled pre-lexically by the positional 'm'/'n' before_consonant/word_final → [̃] (U+0303 combining tilde) map. This rule supplies only the VOWEL-QUALITY shift for ⟨a⟩: BP nasal /a/ is the raised central [ɐ̃] (campo [ˈkɐ̃pu]), so the oral [a] selected by the positional map raises to the ORAL base [ɐ] before the tilde — [ɐ]+[̃] = [ɐ̃]. The tilde comes only from the m/n slot, so no vowel is double-tilded. Fires ONLY when the next slot is the tilde, so an INTERVOCALIC (onset) ⟨m/n⟩ leaves the vowel oral (cama [ˈkamɐ], ano [ˈanu])."
+    },
+    {
+      "id": "PT_NASAL_E_RAISE",
+      "phonemes": [
+        "ɛ"
+      ],
+      "surface": "e",
+      "followed_by_phoneme": [
+        "̃"
+      ],
+      "notes": "Vowel-quality companion of the coda-nasalisation (see PT_NASAL_A_RAISE; Mateus & d'Andrade 2000: ch.2). BP nasal /e/ is the close-mid [ẽ], so the open [ɛ] raises to the oral base [e] before the nasalisation tilde — [e]+[̃] = [ẽ] (tempo [ˈtẽpu], sempre). Surface is oral [e]; the tilde is supplied only by the coda m/n slot (no double tilde). Fires only before the tilde, so an oral ⟨e⟩ before an onset ⟨m/n⟩ (nome, pena) is unchanged."
+    },
+    {
+      "id": "PT_NASAL_O_RAISE",
+      "phonemes": [
+        "ɔ"
+      ],
+      "surface": "o",
+      "followed_by_phoneme": [
+        "̃"
+      ],
+      "notes": "Vowel-quality companion of the coda-nasalisation (see PT_NASAL_A_RAISE; Mateus & d'Andrade 2000: ch.2). BP nasal /o/ is the close-mid [õ], so the open [ɔ] raises to the oral base [o] before the nasalisation tilde — [o]+[̃] = [õ] (bom [ˈbõ], onde). Surface is oral [o]; the tilde is supplied only by the coda m/n slot (no double tilde). Fires only before the tilde, so an oral ⟨o⟩ before an onset ⟨m/n⟩ (fome, sono) is unchanged. High vowels ⟨i u⟩ need no companion rule — [ĩ ũ] share the oral base [i u] (sim [ˈsĩ], mundo [ˈmũdu])."
+    },
+    {
+      "id": "BR_RAISE_FINAL_ES",
+      "phonemes": [
+        "e",
+        "ɪ"
+      ],
+      "surface": "i",
+      "stress": "unstressed",
+      "followed_by_phoneme": [
+        "s"
+      ],
+      "followed_by_2": "word_boundary",
+      "notes": "Final unstressed vowel raising in the ⟨-es⟩ ending (Barbosa & Albano 2004: 229; Câmara Jr. 1970 §III): an unstressed word-final ⟨e⟩ raises to close [i] before the plural/2sg coda ⟨-s⟩ exactly as it does word-finally without the ⟨s⟩ (dente [ˈdẽt͡ʃi] : dentes [ˈdẽt͡ʃis]; pote : potes; estes [ˈest͡ʃis]; pires [ˈpiɾis]). The bare-final case is BR_RAISE_FINAL_E; here the ⟨s⟩ intervenes so the nucleus is not word-final and the pre-lexical map leaves it [e] (posttonic nucleus_unstressed), which this rule raises. Gated `unstressed` so a stressed ⟨-ês/-és⟩ monosyllable keeps its mid vowel (três [ˈtɾes], mês [ˈmes], dez [ˈdɛs] — the last is [ɛ] and untargeted anyway). `followed_by_2 = word_boundary` restricts it to the true ending, so a medial ⟨e⟩ before a tautosyllabic ⟨s⟩+C (vespa, festa) is untouched. Feeds the /t d/ affrication (BR_AFFRIC_*_RAISED) on the preceding slot, which is why the pt-BR spec runs the allophone pass twice (allophone_passes): the affrication reads this rule's raised [i] only on the second pass."
+    },
+    {
+      "id": "BR_RAISE_FINAL_OS",
+      "phonemes": [
+        "o",
+        "ʊ"
+      ],
+      "surface": "u",
+      "stress": "unstressed",
+      "followed_by_phoneme": [
+        "s"
+      ],
+      "followed_by_2": "word_boundary",
+      "notes": "Voiced-vowel counterpart of BR_RAISE_FINAL_ES: an unstressed word-final ⟨o⟩ raises to close [u] before the plural coda ⟨-s⟩ (gato [ˈɡatu] : gatos [ˈɡatus]; tios [ˈt͡ʃius]; montes/pontos). The bare-final case is BR_RAISE_FINAL_O; here the ⟨s⟩ intervenes so the pre-lexical map leaves the nucleus [o] (posttonic), which this rule raises. Gated `unstressed` so a stressed ⟨-ós/-ôs⟩ (nós [ˈnɔs], avós, pôs) keeps its mid vowel; `followed_by_2 = word_boundary` restricts it to the ending so a medial ⟨o⟩ before ⟨s⟩+C (mosca, gosto) is untouched."
+    },
+    {
+      "id": "BR_RAISE_FINAL_E",
+      "phonemes": [
+        "ɪ"
+      ],
+      "surface": "i",
+      "word_final": true,
+      "notes": "Final unstressed vowel raising (Barbosa & Albano 2004: 229; Câmara Jr. 1970 §III): word-final unstressed /e/ raises to close [i] (leite → [ˈlejt͡ʃi], dente → [ˈdẽt͡ʃi]). The pre-lexical map selects the near-close [ɪ] word-finally; this pass realises the standard BP close [i]. Targeting only the reduced [ɪ] (not underlying /e/) leaves conservative dialects that retain a final [e] untouched, so the delta stays inheritable."
+    },
+    {
+      "id": "BR_RAISE_FINAL_O",
+      "phonemes": [
+        "ʊ"
+      ],
+      "surface": "u",
+      "word_final": true,
+      "notes": "Final unstressed vowel raising (Barbosa & Albano 2004: 229; Câmara Jr. 1970 §III): word-final unstressed /o/ raises to close [u] (gato → [ˈɡatu]). Pretonic reduction is markedly weaker in BP than EP and is not modelled: BP keeps distinct pretonic /e o/, so only the final position raises. Targets the reduced [ʊ] only, leaving conservative dialects that retain a final [o] untouched."
+    },
+    {
+      "id": "PT_LEX_CLOSE_O",
+      "phonemes": [
+        "o",
+        "ɔ"
+      ],
+      "surface": "o",
+      "stress": "stressed",
+      "word": [
+        "sobre",
+        "sopa",
+        "boa",
+        "como",
+        "porto",
+        "calor",
+        "catorze",
+        "saboroso",
+        "gostoso",
+        "famoso"
+      ],
+      "notes": "Lexically CLOSE stressed ⟨o⟩ = [o] for this curated set of frequent lexemes, overriding the pre-lexical default (which is the open [ɔ] in the European standard and, by inheritance, ambiguous elsewhere). Portuguese stressed mid-vowel height is lexically/etymologically fixed and not predictable from spelling — ⟨sopa⟩ [ˈsopɐ] (close, < Gmc *suppa) vs ⟨sova⟩ [ˈsɔvɐ] (open) are spelled and stressed alike (Mateus & d'Andrade 2000: ch.3 'The vowels'; Vigário 2003). This rule pins ONLY the stressed-vowel height and lets reduction, rhotics, sandhi and affrication run normally, so it inherits cleanly to every pt-PT / pt-BR dialect child. Includes the ⟨-oso⟩ masculine adjectival suffix (saboroso, gostoso, famoso), which is regularly close [o] against its open [ɔ] feminine ⟨-osa⟩ (PT_LEX_OPEN_O). SEED LIST — the arbitration-confirmed frequent lexemes; the long tail of Portuguese mid-vowel lexemes is documented residual, to be extended from Mateus & d'Andrade / a pronouncing dictionary."
+    },
+    {
+      "id": "PT_LEX_CLOSE_E",
+      "phonemes": [
+        "e",
+        "ɛ",
+        "ɨ"
+      ],
+      "surface": "e",
+      "stress": "stressed",
+      "word": [
+        "fresco"
+      ],
+      "notes": "Lexically CLOSE stressed ⟨e⟩ = [e] for this curated set, overriding the pre-lexical default (open [ɛ] first in the European standard). Stressed mid-vowel height is a lexical fact in Portuguese (⟨fresco⟩ [ˈfɾe(ʃ)ku] close vs many open ⟨e⟩ lexemes spelled alike; Mateus & d'Andrade 2000: ch.3; Vigário 2003). Pins only the vowel height, inherits cleanly. SEED LIST — documented residual for the tail."
+    },
+    {
+      "id": "PT_LEX_OPEN_O",
+      "phonemes": [
+        "o",
+        "ɔ"
+      ],
+      "surface": "ɔ",
+      "stress": "stressed",
+      "word": [
+        "corre",
+        "mora",
+        "sol",
+        "forte",
+        "nove",
+        "famosa",
+        "gostosa"
+      ],
+      "notes": "Lexically OPEN stressed ⟨o⟩ = [ɔ] for this curated set, overriding the pre-lexical default (which is the close [o] first selected in Brazilian and non-reducing inheritors, giving the wrong height for these lexemes). Height is a lexical/morphological fact (Mateus & d'Andrade 2000: ch.3; Vigário 2003): the 3sg present of ⟨-ar/-er⟩ verbs opens the stressed root vowel (mora, corre, espera), and the ⟨-osa⟩ feminine adjectival suffix is open [ɔ] (famosa, gostosa) against its close [o] masculine ⟨-oso⟩ (PT_LEX_CLOSE_O). This rule pins ONLY the stressed-vowel height (reduction, rhotics, l-vocalisation, affrication run normally), so it inherits cleanly to every pt-PT / pt-BR dialect child. SEED LIST — arbitration-confirmed lexemes; the tail is documented residual."
+    },
+    {
+      "id": "PT_LEX_OPEN_E",
+      "phonemes": [
+        "e",
+        "ɛ",
+        "ɨ"
+      ],
+      "surface": "ɛ",
+      "stress": "stressed",
+      "word": [
+        "era",
+        "dez",
+        "espera",
+        "terra",
+        "serra"
+      ],
+      "notes": "Lexically OPEN stressed ⟨e⟩ = [ɛ] for this curated set, overriding the pre-lexical default where a close [e] is selected (Brazilian and non-reducing inheritors). Includes items whose open height is etymological (Latin short ĕ: terra, serra), morphological (3sg present espera; the copula era) or simply lexical (dez). Mateus & d'Andrade 2000: ch.3; Vigário 2003. Pins only the vowel height and inherits cleanly. SEED LIST — documented residual for the tail."
+    },
+    {
+      "id": "PT_LEX_X_S",
+      "phonemes": [
+        "ʃ"
+      ],
+      "surface": "s",
+      "grapheme": [
+        "x"
+      ],
+      "word": [
+        "trouxe",
+        "trouxeste",
+        "trouxemos",
+        "trouxeram",
+        "trouxera",
+        "trouxeras",
+        "trouxéramos",
+        "trouxesse",
+        "trouxéssemos",
+        "trouxessem",
+        "trouxer",
+        "trouxermos",
+        "trouxerem"
+      ],
+      "notes": "The ⟨x⟩ of the trazer preterite/subjunctive stem ⟨troux-⟩ is [s], not the default [ʃ] (trouxe [ˈtɾo(w)sɨ] / BP [ˈtɾosi]; Cunha & Cintra 1984, §on ⟨x⟩; the value of orthographic ⟨x⟩ is lexically unpredictable — [ʃ] peixe, [s] trouxe/próximo, [ks] fixo, [z] exame). Keyed on the lexeme because no phonological context separates the trouxe ⟨x⟩=[s] from the luxo ⟨x⟩=[ʃ]; gated on grapheme ⟨x⟩ so it never touches a ⟨ch⟩ or lexical [ʃ]. Pins only the consonant, so vowel reduction and the surrounding processes run normally and it inherits to every pt child. SEED — the broader ⟨x⟩=[s]/[ks]/[z] lexicon (próximo, máximo, fixo, exame) is documented residual."
+    }
+  ],
+  "quality": "production",
+  "script_type": "alphabet",
+  "notes": "Brazilian Portuguese. Based directly on late Old Portuguese diaspora phonology. Key innovations: (1) Loss of coda R (ɾ→∅; later urban ɦ/ʁ in some dialects). (2) Coda sibilants remain alveolar (s, z), no universal palato-alveolar outcome. (3) L-vocalisation (l→w) strong and categorical in coda. (4) Palatalisation of /t, d/ > [t͡ʃ, d͡ʒ] before /i/. (5) Much weaker vowel reduction; loss of ɨ. (6) Final /e/→/i/ and /o/→/u/. (7) /rr/ always uvular. (8) Nasal vowel system preserved but with characteristic BR realisation. POST-LEXICAL ALLOPHONY (allophone_rules, base for the BR dialect specs via OVERLAY_BY_ID): final unstressed vowel raising — the near-close [ɪ]/[ʊ] selected word-finally by the positional map is realised as the standard BP close [i]/[u] (gato→[ˈɡatu], leite→[ˈlejt͡ʃi]). Targeting the reduced [ɪ]/[ʊ] (not underlying /e o/) leaves conservative dialects that retain a final [e]/[o] untouched, so the rule inherits cleanly. Deliberately kept in the positional map, NOT duplicated as allophone_rules to avoid double-application: /t d/ affrication before front vowels (grapheme-⟨i⟩ handled by the before_i positional rule) and coda /l/ vocalisation (l→w). The phoneme-conditioned refinement of affrication before a raised final ⟨e⟩ (dente→[ˈdẽt͡ʃi]) is left to the dialect-delta wave, where the non-palatalising nordeste varieties (recife/norte/ce) can opt out by rule id — expressing it in the base would silently re-impose affrication on those inheritors. Deliberately NOT modelled in the base: strong EP-style pretonic reduction (BP keeps distinct pretonic /e o/); coda /s/→[ʃ] chiado (a carioca/RJ dialect delta, not general BP — base stays alveolar [s]/[z]); coda /r/→[h~x] weak fricative (highly variable and, since the broad wikipron pt-BR gold transcribes coda /r/ as [ʁ], adding [h~x] regresses the only pt-BR gold — held as a dialect delta rather than shipped in the base). SIBILANTS ARE PLAIN ALVEOLAR. BP has one sibilant pair /s z/ (Barbosa & Albano 2004: 228, consonant chart, Alveolar column: saca [ˈsakɐ] / zaca [ˈzakɐ]). The apico-alveolar [s̺ z̺] belongs to the Galician-Portuguese four-sibilant system that roa-x-galaicopt and pt-PT-x-medieval model, and to the northern EP dialects that retain it; it reached BP only by inheritance, because the base declared ⟨s c ç z⟩ but not the ⟨ss⟩ digraph and not positional ⟨c⟩ before ⟨e i⟩, so galaicopt ⟨ss⟩→[s̺] and medieval ⟨ce ci⟩→[s̺] fell through. Both are now declared here, matching the value all twelve pt-BR-x-* dialects already carry. ⟨ss⟩ and ⟨rr⟩ are DIGRAPHS, not geminates: Portuguese has no contrastive consonant length, ⟨ss⟩ spells /s/ where an intervocalic single ⟨s⟩ would be /z/ (isso [ˈisu]) and ⟨rr⟩ spells the strong rhotic (carro [ˈkaʁu] vs caro [ˈkaɾu], Barbosa & Albano 2004: 228), so there is no geminate for a collapse pass to remove and collapse_geminates stays unset. ⟨w⟩ occurs only in loans and names but is not silent — [w] in English loans, [v] in Germanic names — and without an entry the letter was deleted outright (web→[ˈeb], show→[ˈsu]).",
+  "sources": [
+    {
+      "id": "barbosa_albano2004",
+      "author": "Barbosa, P.A. & Albano, E.C.",
+      "year": 2004,
+      "title": "Brazilian Portuguese (Illustrations of the IPA)",
+      "publisher": "Journal of the International Phonetic Association 34(2)",
+      "url": "https://doi.org/10.1017/S0025100304001756",
+      "pages": "pp. 227-232",
+      "notes": "Canonical BP IPA illustration. Documents final unstressed vowel raising /e o/ → [i u] (source for the BR_RAISE_FINAL_E/O allophone rules) and /t d/ affrication before [i] (modelled pre-lexically in positional_graphemes)."
+    },
+    {
+      "id": "camara1970",
+      "author": "Câmara Jr., J. Mattoso",
+      "year": 1970,
+      "title": "Estrutura da Língua Portuguesa",
+      "publisher": "Vozes",
+      "url": null,
+      "pages": null,
+      "notes": "Classic structural description of BP phonology: neutralisation of final unstressed vowels to the raised [i]/[u]/[ɐ] and the palatalisation of dental stops before [i]."
+    },
+    {
+      "id": "mateus_dandrade2000",
+      "author": "Mateus, M.H.M. & d'Andrade, E.",
+      "year": 2000,
+      "title": "The Phonology of Portuguese",
+      "publisher": "Oxford University Press",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "callou_leite2001",
+      "author": "Callou, D. & Leite, Y.",
+      "year": 2001,
+      "title": "Iniciação à fonética e à fonologia (8th ed.)",
+      "publisher": "Zahar",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "cunha_cintra1984",
+      "author": "Cunha, C. & Cintra, L.F.L.",
+      "year": 1984,
+      "title": "Nova Gramática do Português Contemporâneo",
+      "publisher": "Sá da Costa",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "vigario2003",
+      "author": "Vigário, Marina",
+      "year": 2003,
+      "title": "The Prosodic Word in European Portuguese",
+      "publisher": "Mouton de Gruyter",
+      "url": null,
+      "pages": null,
+      "notes": "Prosodic-word structure and stress in European Portuguese; background for the stress-conditioned mid-vowel height and reduction facts."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Brazilian_Portuguese",
+    "https://pt.wikipedia.org/wiki/Portugu%C3%AAs_brasileiro"
+  ],
+  "urls": [
+    "https://en.wikipedia.org/wiki/Brazilian_Portuguese",
+    "https://en.wikipedia.org/wiki/Brazilian_Portuguese_phonology",
+    "https://pt.wikipedia.org/wiki/Portugu%C3%AAs_brasileiro"
+  ],
+  "timespan": {
+    "start_year": 1700,
+    "end_year": null
+  },
+  "glottolog_code": "braz1246",
+  "iso639_3": "por",
+  "word_exceptions": {"e": "i"},
+  "stress": {
+    "onset_clusters": ["bl", "br", "bɫ", "bɾ", "bʀ", "bʁ", "bʎ", "bχ", "dr", "dɾ", "dʀ", "dʁ", "dʎ", "dχ", "fl", "fr", "fɫ", "fɾ", "fʀ", "fʁ", "fʎ", "fχ", "kl", "kr", "kɫ", "kɾ", "kʀ", "kʁ", "kʎ", "kχ", "pl", "pr", "pɫ", "pɾ", "pʀ", "pʁ", "pʎ", "pχ", "tr", "tɾ", "tʀ", "tʁ", "tʎ", "tχ", "vl", "vr", "vɫ", "vɾ", "vʀ", "vʁ", "vʎ", "vχ", "ðr", "ðɾ", "ðʀ", "ðʁ", "ðʎ", "ðχ", "ɡl", "ɡr", "ɡɫ", "ɡɾ", "ɡʀ", "ɡʁ", "ɡʎ", "ɡχ", "ɣl", "ɣr", "ɣɫ", "ɣɾ", "ɣʀ", "ɣʁ", "ɣʎ", "ɣχ", "βl", "βr", "βɫ", "βɾ", "βʀ", "βʁ", "βʎ", "βχ"],
+    "cliticless_words": ["o", "a", "os", "as", "de", "do", "da", "dos", "das", "em", "no", "na", "nos", "nas", "por", "pelo", "pela", "pelos", "pelas", "ao", "aos", "à", "às", "com", "sem", "e", "que", "se", "me", "te", "lhe", "lhes", "vos", "lo", "la", "los", "las", "lho", "lha", "lhos", "lhas"],
+    "default_position": -2,
+    "final_stress_endings": [
+      "r",
+      "l",
+      "z",
+      "x",
+      "i",
+      "u",
+      "im",
+      "om",
+      "um",
+      "is",
+      "us",
+      "ns",
+      "ão",
+      "ãe",
+      "õe",
+      "au",
+      "éu",
+      "éi",
+      "ói"
+    ],
+    "penult_stress_endings": [],
+    "marked_vowels": [
+      "á",
+      "é",
+      "í",
+      "ó",
+      "ú",
+      "â",
+      "ê",
+      "ô",
+      "ã",
+      "õ"
+    ],
+    "stress_mark": "ˈ",
+    "notes": "Acordo Ortográfico 1990 conventions: paroxytone default; written accents override; final -i/-u/-r/-l/-z/-x/-im/-om/-um/-ns and nasal diphthongs attract final stress. Unmarked -em/-am stay paroxytone (homem, falam). DIPHTHONGS: declared so the bundled syllabifier counts nuclei correctly — without them every vowel run merges into one nucleus and co-e-lho is read as coe-lho, one syllable short, putting the stress and its vowel reduction on the wrong vowel. ⟨oe⟩ is hiatus, not a diphthong (Cunha & Cintra, §Ditongos).",
+    "diphthongs": [
+      "ãe",
+      "ão",
+      "õe",
+      "ai",
+      "ái",
+      "au",
+      "áu",
+      "ei",
+      "éi",
+      "êi",
+      "eu",
+      "éu",
+      "êu",
+      "iu",
+      "oi",
+      "ói",
+      "ôi",
+      "ou",
+      "ui"
+    ]
+  },
+  "wikidata_qid": "Q750553",
+  "location": {
+    "latitude": -14,
+    "longitude": -53,
+    "source": "wikidata",
+    "notes": "Brazil's representative point. A national variety spanning a continent: weak — but Glottolog placed Brazilian Portuguese in PORTUGAL, which is worse than weak. [Wikidata Q155 P625]"
+  }
+}

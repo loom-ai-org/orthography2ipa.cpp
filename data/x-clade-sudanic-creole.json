@@ -1,0 +1,53 @@
+{
+  "code": "x-clade-sudanic-creole",
+  "name": "Sudanic Creole Arabic",
+  "script": "Zyyy",
+  "quality": "stub",
+  "clade": true,
+  "graphemes": {},
+  "allophones": {},
+  "parent": "x-clade-semi1276",
+  "notes": "Classification-only clade node for the Arabic-based pidgin-creoles that descend from the 19th-century Common (Sudanese) Pidgin Arabic of the Turco-Egyptian military camps in southern Sudan — the group Owens and Manfredi treat as a single genetic unit: Juba Arabic (pga) of South Sudan and Ki-Nubi (kcn) of Uganda/Kenya. Both share a five-vowel system, wholesale loss of the Arabic pharyngeals and emphatics, and a distinctive stress/pitch accent, features inherited from their common pidgin ancestor rather than developed independently. Carries no phonology: it is only a step in the ancestry chain (the members' Arabic lexifier relationship is recorded on each member's ancestors[] as a lexifier link to ar-SD, not by inheritance, so the creoles do not pick up mainstream-Arabic allophony they have lost). Glottolog assigns NO single code to this pidgin-creole grouping — it files Juba Arabic as suda1237 and Ki-Nubi as nubi1253 separately — so this node has no glottolog_code and instead encodes the Owens (1997) / Manfredi (2017) genetic unit, hung under the Semitic clade.",
+  "sources": [
+    {
+      "id": "owens1997",
+      "author": "Owens, J.",
+      "year": 1997,
+      "title": "Arabic-based pidgins and creoles",
+      "publisher": "In: Thomason, S.G. (ed.), Contact Languages: A Wider Perspective, John Benjamins, pp. 125-172",
+      "url": null,
+      "notes": "Establishes Juba Arabic and Ki-Nubi as the two surviving Arabic-based creoles descending from a single 19th-century southern-Sudanese pidgin Arabic — the shared-ancestor claim this clade node encodes."
+    },
+    {
+      "id": "manfredi2017",
+      "author": "Manfredi, S.",
+      "year": 2017,
+      "title": "Árabi Júba: un pidgin-créole du Soudan du Sud",
+      "publisher": "Peeters (SELAF n° 468), Leuven",
+      "url": null,
+      "notes": "Reference grammar of Juba Arabic; situates Árabi Júba and Ki-Nubi as sister outcomes of the same Turco-Egyptian camp pidgin."
+    },
+    {
+      "id": "glottolog2024",
+      "author": "Hammarström, Harald; Forkel, Robert; Haspelmath, Martin; Bank, Sebastian",
+      "year": 2024,
+      "title": "Glottolog 5.0",
+      "publisher": "Max Planck Institute for Evolutionary Anthropology",
+      "url": "https://glottolog.org/"
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Juba_Arabic",
+    "https://en.wikipedia.org/wiki/Nubi_language"
+  ],
+  "urls": [
+    "https://glottolog.org/resource/languoid/id/suda1237",
+    "https://glottolog.org/resource/languoid/id/nubi1253"
+  ],
+  "location": {
+    "latitude": 4.85,
+    "longitude": 31.6,
+    "source": "author",
+    "notes": "Juba, South Sudan — the hearth of the pidgin ancestor; a summary point for the clade, not a place the whole group is spoken."
+  }
+}

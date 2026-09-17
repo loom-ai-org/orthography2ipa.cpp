@@ -1,0 +1,40 @@
+{
+  "code": "sxc",
+  "name": "Sicanian",
+  "script": "Greek",
+  "script_type": "alphabet",
+  "quality": "stub",
+  "family": "Isolate",
+  "graphemes": {},
+  "ancestors": [
+    {
+      "code": "grc",
+      "role": "adstrate",
+      "weight": 0.2,
+      "notes": "The handful of surviving short Sicanian inscriptions use the Greek alphabet under contact with Greek colonists; even the existence of Sicanian as a language distinct from Sicel or Elymian is open to question (Tribulato 2012, pp. 164-166)."
+    }
+  ],
+  "notes": "Stub: no citable grapheme-to-IPA inventory, and no established genetic classification. Extinct language (or dialect continuum) of pre-Greek western/central Sicily; Wikipedia states plainly that 'the language is unclassified due to lack of data'. Only a few short Greek-alphabet inscriptions survive and, apart from names, they remain untranslated. No `parent` is asserted because no genetic affiliation is established in the literature (an isolate/unclassified override via `family` is used instead, per SCHEMA.md); graphemes is left empty because no grapheme-to-sound correspondence has been proposed for the untranslated corpus.",
+  "iso639_3": "sxc",
+  "glottolog_code": "sica1234",
+  "sources": [
+    {
+      "id": "tribulato2012",
+      "author": "Tribulato, Olga",
+      "year": 2012,
+      "title": "Language and Linguistic Contact in Ancient Sicily",
+      "publisher": "Cambridge University Press",
+      "url": null,
+      "pages": "164-166",
+      "notes": "Sicanian evidence and classification uncertainty.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Sicanian_language"
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Sicanian_language"
+  ],
+  "timespan": {
+    "start_year": -1200,
+    "end_year": -400
+  }
+}

@@ -1,0 +1,258 @@
+{
+ "code": "azo",
+ "name": "Awing",
+ "script": "Latin",
+ "quality": "skeleton",
+ "graphemes": {
+  "a": [
+   "ɑ"
+  ],
+  "aa": [
+   "aː"
+  ],
+  "b": [
+   "b"
+  ],
+  "ch": [
+   "tʃ"
+  ],
+  "d": [
+   "d"
+  ],
+  "e": [
+   "e"
+  ],
+  "ee": [
+   "eː"
+  ],
+  "f": [
+   "f"
+  ],
+  "g": [
+   "ɡ"
+  ],
+  "gh": [
+   "ɣ"
+  ],
+  "h": [
+   "h"
+  ],
+  "i": [
+   "i"
+  ],
+  "iǝ": [
+   "iǝ"
+  ],
+  "j": [
+   "dʒ"
+  ],
+  "k": [
+   "k"
+  ],
+  "l": [
+   "l"
+  ],
+  "m": [
+   "m"
+  ],
+  "n": [
+   "n"
+  ],
+  "ny": [
+   "ɲ"
+  ],
+  "o": [
+   "o"
+  ],
+  "oo": [
+   "oː"
+  ],
+  "p": [
+   "p"
+  ],
+  "s": [
+   "s"
+  ],
+  "sh": [
+   "ʃ"
+  ],
+  "t": [
+   "t"
+  ],
+  "ts": [
+   "ts"
+  ],
+  "u": [
+   "u"
+  ],
+  "uu": [
+   "uː"
+  ],
+  "uǝ": [
+   "uǝ"
+  ],
+  "w": [
+   "w"
+  ],
+  "y": [
+   "j"
+  ],
+  "z": [
+   "dz"
+  ],
+  "ŋ": [
+   "ŋ"
+  ],
+  "ǝ": [
+   "e"
+  ],
+  "ǝǝ": [
+   "ǝː"
+  ],
+  "ɔ": [
+   "ɔ"
+  ],
+  "ɔɔ": [
+   "ɔː"
+  ],
+  "ɛ": [
+   "ɛ"
+  ],
+  "ɛɛ": [
+   "ɛː"
+  ],
+  "ɨ": [
+   "ɨ"
+  ],
+  "ɨǝ": [
+   "ɨǝ"
+  ],
+  "’": [
+   "ʔ"
+  ]
+ },
+ "allophones": {
+  "mb": [
+   "mb",
+   "p",
+   "pʲ",
+   "β"
+  ],
+  "nd": [
+   "nd",
+   "t",
+   "tʲ",
+   "d"
+  ],
+  "ŋɡ": [
+   "ŋɡ",
+   "k",
+   "x",
+   "ɣ"
+  ]
+ },
+ "notes": "Placed so the ancestry graph covers every living ISO 639-3 language. No orthography is claimed; the phoneme inventory follows the cited PHOIBLE inventory (which itself cites a published description): script is Zyyy (undetermined) until a cited description is encoded. Classification and coordinates follow Glottolog. Orthography from an Omniglot chart (c) Simon Ager, https://www.omniglot.com/, extracted via the AfriSpeech/africa-g2p compilation (azo.json). africa-g2p is a compilation tool, not the linguistic authority; the citation above is the original source it names.",
+ "iso639_3": "azo",
+ "glottolog_code": "awin1248",
+ "sources": [
+  {
+   "id": "glottolog2024",
+   "author": "Hammarström, Harald; Forkel, Robert; Haspelmath, Martin; Bank, Sebastian",
+   "year": 2024,
+   "title": "Glottolog 5.0",
+   "publisher": "Max Planck Institute for Evolutionary Anthropology",
+   "url": "https://glottolog.org/"
+  },
+  {
+   "id": "phoible2019",
+   "author": "Moran, Steven; McCloy, Daniel (eds.)",
+   "year": 2019,
+   "title": "PHOIBLE 2.0 (doi:10.5281/zenodo.2562766)",
+   "publisher": "Max Planck Institute for the Science of Human History",
+   "url": "https://phoible.org/inventories/view/1176",
+   "notes": "Inventory 1176 (ph), 56 non-marginal segments."
+  },
+  {
+   "id": "omniglot-awing",
+   "author": "Ager, Simon",
+   "year": 2026,
+   "title": "Omniglot chart (awing.xls)",
+   "publisher": "Omniglot",
+   "url": "https://www.omniglot.com/",
+   "notes": "Undated web chart; year is retrieval year, not publication year."
+  }
+ ],
+ "urls": [
+  "https://glottolog.org/resource/languoid/id/awin1248"
+ ],
+ "location": {
+  "latitude": 5.8836,
+  "longitude": 10.264,
+  "source": "glottolog",
+  "notes": "Glottolog's representative point."
+ },
+ "parent": "x-clade-atla1278",
+ "phonemes": [
+  "d",
+  "f",
+  "j",
+  "k",
+  "kʲ",
+  "kʷ",
+  "l",
+  "lʷ",
+  "m",
+  "mb",
+  "mbʷ",
+  "mʲ",
+  "n",
+  "nd",
+  "n̠d̠ʒ",
+  "p",
+  "pʲ",
+  "s",
+  "t",
+  "ts",
+  "tʲ",
+  "tʷ",
+  "t̠ʃ",
+  "w",
+  "x",
+  "z",
+  "ŋ",
+  "ŋɡ",
+  "ŋɡʲ",
+  "ŋɡʷ",
+  "ŋʷ",
+  "ɣ",
+  "ɲ",
+  "ʃ",
+  "ʃʷ",
+  "ʒ",
+  "ʒʷ",
+  "ʔ",
+  "β",
+  "a",
+  "aː",
+  "e",
+  "eː",
+  "i",
+  "iː",
+  "o",
+  "oː",
+  "u",
+  "ɔ",
+  "ɔː",
+  "ə",
+  "əː",
+  "ɛ",
+  "ɛː",
+  "ɨ",
+  "ɨː"
+ ],
+ "phoible_id": "1176",
+ "script_type": "alphabet",
+ "wikipedia": [
+  "https://en.wikipedia.org/wiki/Awing_language"
+ ]
+}

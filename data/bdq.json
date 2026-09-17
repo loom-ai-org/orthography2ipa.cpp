@@ -1,0 +1,119 @@
+{
+  "code": "bdq",
+  "name": "Bahnar",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "ngh": ["ŋ"],
+    "gh": ["ɡ"],
+    "nh": ["ɲ"],
+    "ng": ["ŋ"],
+    "ch": ["tɕ"],
+    "kh": ["kʰ"],
+    "ph": ["pʰ"],
+    "th": ["tʰ"],
+    "dj": ["dʑ"],
+    "b": ["ɓ"],
+    "p": ["p"],
+    "t": ["t"],
+    "d": ["ɗ"],
+    "đ": ["d"],
+    "c": ["k"],
+    "k": ["k"],
+    "g": ["ɡ"],
+    "q": ["k"],
+    "m": ["m"],
+    "n": ["n"],
+    "ñ": ["ɲ"],
+    "j": ["dʑ"],
+    "s": ["s"],
+    "h": ["h"],
+    "r": ["r"],
+    "l": ["l"],
+    "v": ["w"],
+    "w": ["w"],
+    "y": ["j"],
+    "x": ["s"],
+    "'": ["ʔ"],
+    "ʼ": ["ʔ"],
+    "’": ["ʔ"],
+    "a": ["a"],
+    "ă": ["a"],
+    "â": ["ə"],
+    "e": ["ɛ"],
+    "ê": ["e"],
+    "i": ["i"],
+    "o": ["ɔ"],
+    "ô": ["o"],
+    "ơ": ["ə"],
+    "u": ["u"],
+    "ư": ["ɨ"]
+  },
+  "parent": "x-clade-aust1305",
+  "ancestors": [
+    {
+      "code": "x-clade-aust1305",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Descent per Glottolog classification of Bahnar (bahn1262)."
+    }
+  ],
+  "notes": "Research. Austroasiatic (Bahnaric) language of the Vietnamese Central Highlands, written in a Vietnamese-modeled Latin missionary orthography. The map covers the Vietnamese-style consonant digraphs (nh, ng/ngh, ch, kh, ph, th) and quality-bearing vowel letters (a, ă, â, e, ê, o, ô, ơ, u, ư); b and d are read as the implosives characteristic of the inventory. Bahnar is atonal, so no tone is at stake, but phonemic vowel length is only inconsistently written and is left unencoded, and the orthography is not fully standardized across missionary traditions, so spelling variants and the exact reading of b/d (implosive vs plain) raise the expected error floor. Onset clusters (bl, kr, hm, hng, etc.) are read as concatenations of their members. Grapheme table checked against Banker & Banker (1979): no discrepancy found. Stress: Bahnar, like other Bahnaric/Mon-Khmer languages, is sesquisyllabic -- a native word is a minor (unstressed) presyllable plus a main syllable that carries stress and is (near-)always word-final in the native lexicon (Banker & Banker 1979); `default_position=-1` encodes the main-syllable-final pattern. Disyllabic loanwords from Vietnamese/French that do not follow this template are a documented gap.",
+  "iso639_3": "bdq",
+  "glottolog_code": null,
+  "sources": [
+    {
+      "id": "bdq_glottolog",
+      "author": "Hammarström, H. et al. (Glottolog 5.0)",
+      "year": 2024,
+      "title": "Glottolog: Bahnar (bahn1262)",
+      "publisher": "Max Planck Institute for Evolutionary Anthropology",
+      "url": "https://glottolog.org/resource/languoid/id/bahn1262",
+      "pages": null,
+      "notes": "Classification reference for a skeleton-tier entry.",
+      "wikipedia_url": null
+    },
+    {
+      "id": "bdq_wikipedia",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Bahnar language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Bahnar_language",
+      "pages": null,
+      "notes": "Phoneme inventory (implosives, nine vowel qualities with length) underlying the map.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Bahnar_language"
+    },
+    {
+      "id": "banker_banker1979",
+      "author": "Banker, John E.; Banker, Elizabeth M.",
+      "year": 1979,
+      "title": "Bahnar Dictionary (Bahnar-Vietnamese-English)",
+      "publisher": "Summer Institute of Linguistics, Vietnam Data Microfiche Series",
+      "url": null,
+      "pages": null,
+      "notes": "Reference dictionary/grammatical sketch used to verify the Vietnamese-modeled grapheme table (implosives, digraphs, vowel letters) and to source the sesquisyllabic stress rule.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Bahnar_language"
+    },
+    {
+      "id": "bdq_omniglot",
+      "author": "Ager, S.",
+      "year": 2024,
+      "title": "Bahnar language and alphabet",
+      "publisher": "Omniglot",
+      "url": "https://www.omniglot.com/writing/bahnar.htm",
+      "pages": null,
+      "notes": "Letter set and Vietnamese-style spelling conventions.",
+      "wikipedia_url": null
+    }
+  ],
+  "stress": {
+    "default_position": -1,
+    "stress_mark": "ˈ",
+    "notes": "Sesquisyllabic main-syllable-final stress per Banker & Banker (1979); non-native (Vietnamese/French loan) words that break the presyllable+main-syllable template are not covered."
+  },
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Bahnar_language"
+  ]
+}

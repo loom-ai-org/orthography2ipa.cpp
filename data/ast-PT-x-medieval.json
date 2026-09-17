@@ -1,0 +1,273 @@
+{
+  "code": "ast-PT-x-medieval",
+  "name": "Medieval Asturian-Leonese of Portugal",
+  "script": "Latin",
+  "parent": "ast-x-leon",
+  "graphemes_base": "ast-x-leon",
+  "allophones_base": "ast-x-leon",
+  "positional_graphemes_base": "ast-x-leon",
+  "graphemes": {
+    "ã": [
+      "ɐ̃"
+    ],
+    "ẽ": [
+      "ẽ"
+    ],
+    "ĩ": [
+      "ĩ"
+    ],
+    "õ": [
+      "õ"
+    ],
+    "ũ": [
+      "ũ"
+    ],
+    "lh": [
+      "ʎ"
+    ],
+    "nh": [
+      "ɲ"
+    ],
+    "ie": [
+      "je"
+    ],
+    "uo": [
+      "wo"
+    ],
+    "ão": [
+      "ɐ̃w̃"
+    ],
+    "õe": [
+      "õj̃"
+    ],
+    "x": [
+      "ʃ"
+    ],
+    "ch": [
+      "tʃ"
+    ],
+    "z": [
+      "d͡z"
+    ],
+    "v": [
+      "v",
+      "b"
+    ]
+  },
+  "allophones": {
+    "v": [
+      "v",
+      "β"
+    ],
+    "ɐ̃": [
+      "ɐ̃"
+    ],
+    "ẽ": [
+      "ẽ"
+    ],
+    "ĩ": [
+      "ĩ"
+    ],
+    "õ": [
+      "õ"
+    ],
+    "ũ": [
+      "ũ"
+    ]
+  },
+  "positional_graphemes": {
+    "f": {
+      "word_initial": [
+        "f"
+      ],
+      "intervocalic": [
+        "f"
+      ]
+    },
+    "v": {
+      "word_initial": [
+        "v"
+      ],
+      "intervocalic": [
+        "v",
+        "β"
+      ]
+    },
+    "l": {
+      "onset": [
+        "l"
+      ]
+    },
+    "n": {
+    },
+    "qu": {
+      "before_e": [
+        "k"
+      ],
+      "before_i": [
+        "k"
+      ],
+      "before_vowel": [
+        "kw"
+      ]
+    },
+    "z": {
+      "word_initial": [
+        "d͡z"
+      ],
+      "intervocalic": [
+        "d͡z"
+      ],
+      "word_final": [
+        "d͡z"
+      ]
+    }
+  },
+  "ancestors": [
+    {
+      "code": "ast-x-leon",
+      "role": "parent",
+      "weight": 0.65,
+      "notes": "Medieval Leonese: the direct genetic ancestor, brought to Portucale during the Reconquista resettlement of the Trás-os-Montes region (9th–11th c. CE). This variety is the trunk from which Mirandese, Rionorese, and Guadramilese descend."
+    },
+    {
+      "code": "roa-x-galaicopt",
+      "role": "adstrate",
+      "weight": 0.15,
+      "notes": "Galaico-Portuguese adstrate: the dominant Romance variety of the county and later kingdom of Portugal surrounding the Leonese-speaking enclaves of Trás-os-Montes. Contributed nasal vowels, lh/nh digraph convention, and diphthong contractions. The contact was asymmetric — Portuguese eventually became the prestige language."
+    },
+    {
+      "code": "pt-PT-x-medieval",
+      "role": "adstrate",
+      "weight": 0.1,
+      "notes": "Old Portuguese (Aviz-period) adstrate: as Portuguese consolidated as the state language, the Leonese-speaking communities of Miranda, Rionor, and Guadramil faced intensifying pressure. Portuguese orthographic conventions (lh, nh, ã) penetrated the writing tradition."
+    },
+    {
+      "code": "cel-x-gallaecia",
+      "role": "substrate",
+      "weight": 0.04,
+      "notes": "Gallaecian Celtic substrate of NW Iberia, shared through the Leonese parent. The Trás-os-Montes region has Celtic place-names (e.g. *Brigantia, castro toponyms)."
+    },
+    {
+      "code": "xlg",
+      "role": "substrate",
+      "weight": 0.03,
+      "notes": "Lusitanian substrate: the pre-Roman language of much of western Iberia, including the NE Portuguese highlands. Possible influence on /v/ ≠ /b/ preservation in this branch vs. the full betacism of central Asturian."
+    },
+    {
+      "code": "mxi",
+      "role": "adstrate",
+      "weight": 0.02,
+      "notes": "Mozarabic: Romance spoken by Christians under Moorish rule in the Leonese-reclaimed Douro corridor. Some Mozarabic-speaking settlers joined the Trás-os-Montes repopulation."
+    }
+  ],
+  "notes": "Medieval Asturian-Leonese of Portugal (ast-PT-x-medieval), the Asturleonese variety that took root in the Terra de Miranda (Miranda do Douro), Rionor (Rio de Onor), and Guadramil areas of Trás-os-Montes following the Leonese resettlement of the Douro corridor (~9th–12th c. CE). This variety is the common ancestor of: (1) Mirandese / lhéngua mirandesa (mwl — still spoken, ~10,000 speakers), (2) Rionorese / mirandês de Rionor (nearly extinct), (3) Guadramilese / guadramilês (nearly extinct), and a notable influence on the Transmontano dialect of Northern Portuguese. KEY PHONOLOGICAL PROFILE: (1) 4-WAY SIBILANT CONTRAST (like parent Leonese and contemporary Galaico-Portuguese): voiceless apical /s̺/ ⟨ss, s-⟩ vs. voiced apical /z̺/ ⟨-s-⟩ vs. voiceless predorsal /t͡s/ ⟨ç, c-⟩ vs. voiced predorsal /d͡z/ ⟨z⟩. (2) INTERVOCALIC -l- AND -n- PRESERVED throughout the Leonese tradition ('salir', 'lhana') — the defining retention distinguishing the Mirandese group from all varieties of Portuguese. (3) LEONESE DIPHTHONGS retained: Lat. Ĕ → /ie/ ⟨ie⟩ (later written ⟨iê⟩ in Mirandese), Lat. Ŏ → /uo/ ⟨uo⟩ (later ⟨uô⟩). (4) PORTUGUESE NASAL VOWELS developing through Galaico-Portuguese contact: ⟨ã⟩ /ɐ̃/, ⟨on⟩ /õ/, ⟨an⟩ /ɐ̃/, etc. (5) HYBRID ORTHOGRAPHY: both Leonese ⟨ll/ñ⟩ and Portuguese ⟨lh/nh⟩ for /ʎ, ɲ/. (6) ⟨ch⟩ = /tʃ/ (Asturian/Leonese tradition, vs. Portuguese /ʃ/). (7) ⟨x⟩ = /ʃ/ (shared across the regional writing tradition). (8) PARTIAL BETACISM: /v/ survives as a distinct phoneme (Lusitanian substrate influence), unlike the full merger of central Asturian — this persists in modern Mirandese. (9) Latin F- PRESERVED as /f/ (no aspiration, unlike western Asturian). (10) NO VOWEL REDUCTION: 5-vowel quality system, unstressed vowels full (a defining Asturleonese feature vs. Portuguese ɨ/ɐ reduction). Sources: Leite de Vasconcellos (1882, 1900), Menéndez Pidal (1906), Vasconcellos (1900) *Estudos de philologia mirandesa*, Ferreira (1999) *Convenção Ortográfica*, Moisés Pires (2004), Martins (2011) *Leonese-Portuguese contact*.",
+  "sources": [
+    {
+      "id": "maia1986",
+      "author": "Maia, C.A.",
+      "year": 1986,
+      "title": "História do galego-português",
+      "publisher": "INIC",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "penny2002",
+      "author": "Penny, R.",
+      "year": 2002,
+      "title": "A History of the Spanish Language",
+      "publisher": "Cambridge University Press",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "mateus_dandrade2000",
+      "author": "Mateus, M.H.M. & d'Andrade, E.",
+      "year": 2000,
+      "title": "The Phonology of Portuguese",
+      "publisher": "Oxford University Press",
+      "url": null,
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Old_Portuguese",
+    "https://ast.wikipedia.org/wiki/Galaicoportugu%C3%A9s",
+    "https://es.wikipedia.org/wiki/Idioma_galaicoportugu%C3%A9s"
+  ],
+  "timespan": {
+    "start_year": 1100,
+    "end_year": 1500
+  },
+  "glottolog_code": null,
+  "iso639_3": "ast",
+  "quality": "research",
+  "location": {
+    "latitude": 41.5,
+    "longitude": -6.266667,
+    "source": "wikidata",
+    "notes": "Miranda do Douro — the centre of the Terra de Miranda, where the medieval Asturleonese of Portugal took root. A historical variety: the point is the surviving core of its area, not a capital. [Wikidata Q373475 P625]"
+  },
+  "allophone_rules": [
+    {
+      "id": "AST_NASAL_a",
+      "phonemes": [
+        "a"
+      ],
+      "surface": "ɐ̃",
+      "followed_by": "coda_nasal",
+      "notes": "vowel nasalises before a CODA nasal; an onset nasal (⟨cana⟩) leaves it oral"
+    },
+    {
+      "id": "AST_NASAL_e",
+      "phonemes": [
+        "e"
+      ],
+      "surface": "ẽ",
+      "followed_by": "coda_nasal",
+      "notes": "vowel nasalises before a CODA nasal; an onset nasal (⟨cana⟩) leaves it oral"
+    },
+    {
+      "id": "AST_NASAL_i",
+      "phonemes": [
+        "i"
+      ],
+      "surface": "ĩ",
+      "followed_by": "coda_nasal",
+      "notes": "vowel nasalises before a CODA nasal; an onset nasal (⟨cana⟩) leaves it oral"
+    },
+    {
+      "id": "AST_NASAL_o",
+      "phonemes": [
+        "o"
+      ],
+      "surface": "õ",
+      "followed_by": "coda_nasal",
+      "notes": "vowel nasalises before a CODA nasal; an onset nasal (⟨cana⟩) leaves it oral"
+    },
+    {
+      "id": "AST_NASAL_u",
+      "phonemes": [
+        "u"
+      ],
+      "surface": "ũ",
+      "followed_by": "coda_nasal",
+      "notes": "vowel nasalises before a CODA nasal; an onset nasal (⟨cana⟩) leaves it oral"
+    },
+    {
+      "id": "AST_NASAL_ABSORB",
+      "phonemes": [
+        "n",
+        "m"
+      ],
+      "surface": "",
+      "syllable_position": "coda",
+      "notes": "the coda nasal is absorbed into the nasal vowel it created; keyed on the nasal vowel so it cannot bleed the rule that makes it",
+      "preceded_by": "vowel"
+    }
+  ]
+}

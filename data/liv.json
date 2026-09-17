@@ -1,0 +1,186 @@
+{
+  "code": "liv",
+  "name": "Livonian",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "ā": [
+      "ɑː"
+    ],
+    "ä": [
+      "æ"
+    ],
+    "ǟ": [
+      "æː"
+    ],
+    "ē": [
+      "eː"
+    ],
+    "ī": [
+      "iː"
+    ],
+    "ō": [
+      "oː"
+    ],
+    "ū": [
+      "uː"
+    ],
+    "õ": [
+      "ɨ",
+      "ə"
+    ],
+    "ȯ": [
+      "ʊ"
+    ],
+    "ȱ": [
+      "ʊː"
+    ],
+    "ǭ": [
+      "ɔː"
+    ],
+    "š": [
+      "ʃ"
+    ],
+    "ž": [
+      "ʒ"
+    ],
+    "č": [
+      "tʃ"
+    ],
+    "ļ": [
+      "ʎ"
+    ],
+    "ņ": [
+      "ɲ"
+    ],
+    "ŗ": [
+      "rʲ"
+    ],
+    "ț": [
+      "tʲ"
+    ],
+    "ḑ": [
+      "dʲ"
+    ],
+    "’": [
+      "ʔ"
+    ],
+    "'": [
+      "ʔ"
+    ],
+    "a": [
+      "ɑ"
+    ],
+    "e": [
+      "e"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "o"
+    ],
+    "u": [
+      "u"
+    ],
+    "b": [
+      "b"
+    ],
+    "d": [
+      "d"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "j": [
+      "j"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "v": [
+      "v"
+    ],
+    "f": [
+      "f"
+    ]
+  },
+  "positional_graphemes": {
+    "õ": {
+      "word_final": [
+        "ə"
+      ]
+    }
+  },
+  "stress": {
+    "default_position": 1,
+    "stress_mark": "ˈ"
+  },
+  "parent": "urj",
+  "ancestors": [
+    {
+      "code": "urj",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Descent from Proto-Finnic (Uralic); Viitso & Ernštreits (2012)"
+    },
+    {
+      "code": "lv",
+      "role": "adstrate",
+      "weight": 0.15,
+      "notes": "Latvian adstrate: broken tone, palatalisation patterns, loan phonology"
+    }
+  ],
+  "notes": "Research. Livonian (Finnic, Uralic; last L1 speaker died 2013, now revitalised). Latin orthography with macron length (ā ē ī ō ū), the central rounded/unrounded pair ȯ/ȱ [ʊ]/[ʊː], the mid-central õ (realised [ɨ] except word-finally, where it centralises to [ə]: Moseley 2002, Viitso & Ernštreits 2012), the front ä/ǟ [æ]/[æː], and palatal ļ ņ ŗ ț ḑ. Word stress is fixed on the first syllable (Moseley 2002:18). The broken tone (stød-like laryngealisation, historically from Livonian/Latvian contact) is written with an apostrophe (’) after the syllable nucleus; NorthEuraLex's Segments column transcribes it inconsistently as a full glottal stop [ʔ] or as creaky voicing [ˀ] on the preceding vowel depending on the source dictionary entry it draws from, so this spec models the dominant [ʔ] realisation and accepts residual disagreement on the [ˀ] variant as a known engine-limit/gold-transcription-inconsistency case rather than an orthography gap. Long Latvian contact adstrate.",
+  "iso639_3": "liv",
+  "glottolog_code": null,
+  "sources": [
+    {
+      "id": "viitso_ernstreits2012",
+      "author": "Viitso, Tiit-Rein & Ernštreits, Valts",
+      "year": 2012,
+      "title": "Līvõkīel-ēstikīel-lețkīel sõnārōntõz (Livonian-Estonian-Latvian Dictionary)",
+      "publisher": "University of Tartu / Latviešu valodas aģentūra",
+      "url": null,
+      "pages": null,
+      "notes": "Orthography and phonology reference for modern Livonian.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Livonian_language"
+    },
+    {
+      "id": "moseley2002",
+      "author": "Moseley, Christopher",
+      "year": 2002,
+      "title": "Livonian (Languages of the World/Materials 349)",
+      "publisher": "Lincom Europa",
+      "url": null,
+      "pages": null,
+      "notes": "Grammar of Livonian; describes the vowel inventory (incl. ȯ/ȱ, õ, ä/ǟ), fixed initial word stress, and the broken-tone (stød) apostrophe.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Livonian_language"
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Livonian_language"
+  ]
+}

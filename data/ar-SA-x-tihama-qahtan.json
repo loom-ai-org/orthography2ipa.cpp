@@ -1,0 +1,136 @@
+{
+  "code": "ar-SA-x-tihama-qahtan",
+  "name": "Tihāmi Qaḥtāni Arabic",
+  "script": "Arabic",
+  "graphemes_base": "ar-x-peninsular",
+  "graphemes": {
+    "ق": [
+      "ɡ",
+      "q"
+    ],
+    "ج": [
+      "ʒ",
+      "dʒ"
+    ],
+    "ض": [
+      "ɮˤ",
+      "ðˤ"
+    ],
+    "ظ": [
+      "ðˤ"
+    ]
+  },
+  "allophones_base": "ar-x-peninsular",
+  "allophones": {
+    "ɮˤ": [
+      "ɮˤ",
+      "ðˤ"
+    ]
+  },
+  "parent": "ar-x-peninsular",
+  "ancestors": [
+    {
+      "code": "ar-x-peninsular",
+      "role": "parent",
+      "weight": 0.9,
+      "notes": "Peninsular Arabic base — most conservative; Tihāmi Qaḥtāni is a lowland/Tihāmah southwestern variety of the same conservative highland-Tihāmah type as its neighbour ar-SA-x-rijal-alma, but with a Tihāmi-lowland consonant system (voiced qāf, ǧīm→[ʒ]) and a ḍād/ẓāʾ merger in progress."
+    }
+  ],
+  "notes": "Tihāmi Qaḥtāni Arabic (لهجة تهامة قحطان), the sedentary Arabic of the Qaḥṭān tribe in Tihāmat Qaḥṭān, the coastal-plain/escarpment zone of ʿAsīr in southwestern Saudi Arabia (villages al-Jawwa in the highlands, al-Farša in the lowlands). It is a NEIGHBOUR of — and NOT identical to — Rijāl Almaʿ (ar-SA-x-rijal-alma): both belong to the conservative ʿAsīr/Tihāmah type and both preserve a reflex of the ancient lateral ḍād, but they differ systematically. MODELED HERE, following K. Alqahtani (2015, Essex PhD, the primary monograph): (1) qāf ق → VOICED velar [ɡ] (Tihāmi lowland reflex; gamar 'moon', gaːm 'he stood', galam 'pen') — SHARED with its neighbour Rijāl Almaʿ, whose own primary data (Asiri 2008, quoted in Alfaifi 2024:177-178: gābalt, im=bagar, saragu) also has qāf→[ɡ], so qāf does NOT separate the two lects; the decisive split is the ẓāʾ reflex (see below). (2) ǧīm ج → voiced post-alveolar fricative [ʒ] (ʒabal 'mountain', ʒamal 'camel', ʒimʕa 'Friday'), NOT the affricate [dʒ] of the peninsular parent / Rijāl Almaʿ. (3) ḍād ض → the archaic voiced emphatic lateral fricative [ɮˤ] as the conservative reflex, DRIFTING to the emphatic interdental [ðˤ]: Alqahtani (2015) documents a MERGER IN PROGRESS in which [ɮˤ] and [ðˤ] alternate on both etymological *ḍ and *ẓ words, led by younger women toward [ðˤ] (merger formula /ɮˤ/+/ðˤ/→/ðˤ/, p.170). This is the crucial contrast with Rijāl Almaʿ, where Watson & Al-Azraqi (2011) report *ḍ (voiced lateral [ɮˤ]) and *ẓ (VOICELESS lateral [ɬˤ]) kept DISTINCT; Tihāmi Qaḥtāni has NO voiceless lateral [ɬˤ] — its ẓāʾ reflex is the voiced emphatic interdental [ðˤ] (ʕaðˤm 'bone', waðˤiːfa 'job'). (4) ẓāʾ ظ → [ðˤ] (emphatic interdental), no lateral. INHERITED and consistent with the southwestern conservative type: interdentals ث /θ/ ذ /ð/ retained; emphatic pharyngealization backing low vowels (AR_PEN_EMPH_*); long [uː] preserved. Additional Tihāmi features NOT modelled at grapheme level (they are lexical/morphological and belong downstream): the m-definite article (m-article ~ l-article variation, a salient ancient Tihāmi feature), imāla (aː→eː near /i/, aː→oː in a small lexical set), and pausal apocope. NO ar-SA umbrella node (Saudi dialects do not form a pan-Saudi phonological group); this leaf parents directly to ar-x-peninsular, as its sibling ar-SA-x-rijal-alma does. INPUT CONTRACT: transcribes orthography+harakat; short vowels surface only when the input is vocalised. STUB/RESEARCH scope: grapheme-level consonant reflexes are modelled and cited; the in-progress ḍād/ẓāʾ merger is represented as the [ɮˤ]~[ðˤ] candidate pair (conservative lateral first) rather than as a stable phonemic split, and the sociolinguistic variation is left to a downstream lexicon/rescorer.",
+  "quality": "research",
+  "script_type": "abjad",
+  "sources": [
+    {
+      "id": "alqahtani2015",
+      "author": "Alqahtani, Khairiah",
+      "year": 2015,
+      "title": "A sociolinguistic study of the Tihami Qahtani dialect in Asir, Southern Arabia (PhD thesis)",
+      "publisher": "University of Essex",
+      "url": "https://repository.essex.ac.uk/15298/",
+      "pages": "45-52, 149-173",
+      "notes": "The primary monograph on Tihāmi Qaḥtāni. Consonant inventory (Table 2.1, p.45): qāf → [ɡ] (p.46: gamar, gaːm, galam, galiːl); ǧīm → [ʒ] (p.46: ʒabal, ʒamal, ʒimʕa); interdentals θ/ð/ðˤ retained; plain /k/ (no affrication). ḍād: conservative voiced emphatic lateral fricative [ɮˤ] (p.45: ɮˤiyuːf 'guests', ɮˤaːn 'lamb', haɮˤʕart 'I attended') MERGING with emphatic interdental [ðˤ] on both etymological sets (pp.46, 149-151, 170-173; merger /ɮˤ/+/ðˤ/→/ðˤ/ p.170). ẓāʾ → [ðˤ] (p.46: ʕaðˤm 'bone', waðˤiːfa 'job', maðˤalla). Vowels: short /i e a u o/, long /iː eː aː oː uː/, [uː] preserved, diphthongs aj/aw preserved (p.51); imāla aː→eː (weːħid, ħeːdiθ) / aː→oː (ʃoːh, ħayoːh). m-article ~ l-article variation (Table 2.13, p.76). Explicitly treats Rijāl Almaʿ (Asiri 2009) as a separate neighbouring Tihāmat-ʿAsīr lect (p.30), and Tihāmi tribal lects (Tihāmi ʿAsīri, Tihāmi Qaḥtāni, Tihāmi Šahrāni) as 'different but mutually intelligible' (p.33)."
+    },
+    {
+      "id": "watson2011",
+      "author": "Watson, J.C.E. & Al-Azraqi, M.",
+      "year": 2011,
+      "title": "Lateral fricatives and lateral emphatics in southern Saudi Arabia and Mehri",
+      "publisher": "Proceedings of the Seminar for Arabian Studies 41, 425-432. Archaeopress, Oxford",
+      "url": "https://eprints.whiterose.ac.uk/id/eprint/75746/",
+      "pages": "425-432",
+      "notes": "Areal context for the lateral ḍād/ẓāʾ across the ʿAsīr and Tihāmah. Used here as the comparative anchor that distinguishes Tihāmi Qaḥtāni (ḍād [ɮˤ]~[ðˤ] merging; ẓāʾ [ðˤ]) from Rijāl Almaʿ (ḍād [ɮˤ] vs ẓāʾ VOICELESS lateral [ɬˤ], kept distinct)."
+    },
+    {
+      "id": "alazraqi2010",
+      "author": "Al-Azraqi, M.",
+      "year": 2010,
+      "title": "The ancient Ḍād in southwest Saudi Arabia",
+      "publisher": "Arabica 57(1), 57-67",
+      "url": "https://doi.org/10.1163/057053910X12634522203520",
+      "pages": "57-67",
+      "notes": "Documents the survival of the lateral(ized) ḍād across the ʿAsīr and Tihāmah, corroborating the conservative [ɮˤ] reflex of ḍād modelled here."
+    },
+    {
+      "id": "davisetal2024",
+      "author": "Davis, S., Alshammari, W., Alahmari, M. & Alhuwaykim, M.",
+      "year": 2024,
+      "title": "Aspects of the phonology and morphology of Saudi varieties of Arabic",
+      "publisher": "In: Gasparini, Russell & Watson (eds.), Diversity across the Arabian Peninsula: Language, Culture, Nature. Semitic Languages and Cultures 28. Open Book Publishers, Cambridge",
+      "url": "https://doi.org/10.11647/OBP.0411.04",
+      "pages": "137, 149",
+      "notes": "Open-access (CC BY-NC). AREAL corroboration. §3 describes a Northern-Tihāmah SSA variety (Alahmari 2018) with the same voiced qāf [ɡ] (galam 'pen' <qalam, p.149) modelled here, the retained long [uː] (abuuk 'your father', p.151) and the imāla-type monophthong [eː] < *ay (beet 'home', p.149) — the vocalic conservatism and imāla the spec notes for Tihāmi Qaḥtāni. §1 (p.137) also confirms the m-/nasal definite article as a salient SW-Tihāmah/Faifi feature (citing Prochazka 1988; Behnstedt 2016), the Tihāmi article variation the spec records at the lexical level."
+    },
+    {
+      "id": "alfaifi2024",
+      "author": "Alfaifi, Abdullah",
+      "year": 2024,
+      "title": "Distal and proximal relative pronouns in Central Faifi Arabic",
+      "publisher": "In: Gasparini, Russell & Watson (eds.), Diversity across the Arabian Peninsula: Language, Culture, Nature. Semitic Languages and Cultures 28. Open Book Publishers, Cambridge",
+      "url": "https://doi.org/10.11647/OBP.0411.05",
+      "pages": "177-178",
+      "notes": "Open-access (CC BY-NC). Comparative anchor for the qāf reflex: quotes Asiri (2008:72-73) showing neighbouring Rijāl Almaʿ also has qāf→[ɡ] (gābalt, im=bagar, saragu), so qāf does not distinguish Tihāmi Qaḥtāni from Rijāl Almaʿ — the ẓāʾ reflex ([ðˤ] merging here vs [ɬˤ] kept distinct in Rijāl Almaʿ) does. Also documents the m-definite article and Central Faifi qāf→[ɡ] (gāma, lagīt) in the same areal type."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Arabic_phonology",
+    "https://en.wikipedia.org/wiki/%E1%B8%8Ad%C4%81d"
+  ],
+  "timespan": {
+    "start_year": 1400,
+    "end_year": null
+  },
+  "iso639_3": "ars",
+  "allophone_rules": [],
+  "location": {
+    "latitude": 18.6,
+    "longitude": 42.05,
+    "source": "manual",
+    "notes": "Tihāmat Qaḥṭān, ʿAsīr Province, southwestern Saudi Arabia (the Tihāmah escarpment/coastal-plain zone of the Qaḥṭān tribe; approximate)."
+  },
+  "optional_marks": [
+    "ً",
+    "ٌ",
+    "ٍ",
+    "َ",
+    "ُ",
+    "ِ",
+    "ّ",
+    "ْ",
+    "ٰ",
+    "ٓ"
+  ],
+  "stress": {
+    "default_position": -3,
+    "quantity_sensitive": true,
+    "superheavy_final_attracts": true,
+    "max_onset": 1,
+    "stress_mark": "ˈ",
+    "notes": "Quantity-sensitive Arabic stress, inherited from the peninsular parent; see ar-SA-x-najd for the cascade and input contract. Prosodic clitics as for the peninsular class.",
+    "cliticless_words": [
+      "فِي",
+      "مَا",
+      "وَمَا",
+      "يَا"
+    ]
+  }
+}

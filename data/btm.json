@@ -1,0 +1,56 @@
+{
+  "code": "btm",
+  "name": "Mandailing Batak",
+  "script": "Batak",
+  "script_type": "abugida",
+  "quality": "stub",
+  "graphemes": {},
+  "allophones": {},
+  "notes": "Mandailing Batak (Saro Mandailing), a Northwest Sumatran (Batak) language of Indonesia. STUB: the grapheme inventory is NOT yet specified. The script recorded for this language is the Batak script (Surat Batak), a Brahmic ABUGIDA with an inherent /a/ and diacritic vowel signs; no abugida map is claimed here. In practice Mandailing is today most often written in the Latin script with Indonesian conventions — a Latin orthography or a romanisation would be required as input before this spec can produce anything.",
+  "iso639_3": "btm",
+  "glottolog_code": "bata1291",
+  "wikidata_qid": "Q2891049",
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Mandailing_Batak_language",
+    "https://btm.wikipedia.org/wiki/Saro_Mandailing"
+  ],
+  "sources": [
+    {
+      "id": "mandailing_batak_language_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Mandailing Batak language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Mandailing_Batak_language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Mandailing_Batak_language",
+      "pages": null,
+      "notes": "Orthography / phonology reference."
+    },
+    {
+      "id": "batak_script_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Batak script",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Batak_script",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Batak_script",
+      "pages": null,
+      "notes": "Orthography / phonology reference."
+    }
+  ],
+  "parent": "x-clade-aust1307",
+  "ancestors": [
+    {
+      "code": "x-clade-aust1307",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Austronesian — the classification node this language sits under."
+    }
+  ],
+  "location": {
+    "latitude": 0.85805,
+    "longitude": 99.898,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Batak Mandailing."
+  }
+}

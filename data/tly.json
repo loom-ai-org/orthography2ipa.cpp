@@ -1,0 +1,271 @@
+{
+  "code": "tly",
+  "name": "Talysh",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "a": [
+      "ɑ"
+    ],
+    "b": [
+      "b"
+    ],
+    "c": [
+      "d͡ʒ"
+    ],
+    "ç": [
+      "t͡ʃ"
+    ],
+    "d": [
+      "d"
+    ],
+    "e": [
+      "e"
+    ],
+    "ə": [
+      "a",
+      "æ"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "ğ": [
+      "ɣ"
+    ],
+    "h": [
+      "h"
+    ],
+    "x": [
+      "x"
+    ],
+    "ı": [
+      "ə",
+      "ɨ"
+    ],
+    "i": [
+      "i",
+      "ɪ"
+    ],
+    "j": [
+      "ʒ"
+    ],
+    "k": [
+      "k"
+    ],
+    "q": [
+      "ɡ"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "o": [
+      "o",
+      "ɔ"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "r",
+      "ɾ"
+    ],
+    "s": [
+      "s"
+    ],
+    "ş": [
+      "ʃ"
+    ],
+    "t": [
+      "t"
+    ],
+    "u": [
+      "u"
+    ],
+    "ü": [
+      "ʏ"
+    ],
+    "v": [
+      "v"
+    ],
+    "y": [
+      "j"
+    ],
+    "z": [
+      "z"
+    ]
+  },
+  "allophones": {
+    "p": [
+      "p"
+    ],
+    "b": [
+      "b"
+    ],
+    "t": [
+      "t"
+    ],
+    "d": [
+      "d"
+    ],
+    "k": [
+      "k"
+    ],
+    "ɡ": [
+      "ɡ"
+    ],
+    "q": [
+      "q"
+    ],
+    "t͡ʃ": [
+      "t͡ʃ"
+    ],
+    "d͡ʒ": [
+      "d͡ʒ"
+    ],
+    "f": [
+      "f"
+    ],
+    "v": [
+      "v"
+    ],
+    "s": [
+      "s"
+    ],
+    "z": [
+      "z"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "ʒ": [
+      "ʒ"
+    ],
+    "x": [
+      "x"
+    ],
+    "ɣ": [
+      "ɣ"
+    ],
+    "h": [
+      "h"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "l": [
+      "l"
+    ],
+    "r": [
+      "r"
+    ],
+    "ɾ": [
+      "ɾ"
+    ],
+    "j": [
+      "j"
+    ],
+    "ɑ": [
+      "ɑ",
+      "ɑː"
+    ],
+    "a": [
+      "a",
+      "æ"
+    ],
+    "æ": [
+      "æ"
+    ],
+    "e": [
+      "e",
+      "eː"
+    ],
+    "ə": [
+      "ə"
+    ],
+    "ɨ": [
+      "ɨ"
+    ],
+    "i": [
+      "i",
+      "iː"
+    ],
+    "ɪ": [
+      "ɪ"
+    ],
+    "o": [
+      "o",
+      "ɔ"
+    ],
+    "ɔ": [
+      "ɔ"
+    ],
+    "u": [
+      "u",
+      "ʏ"
+    ],
+    "ʏ": [
+      "ʏ",
+      "u"
+    ]
+  },
+  "notes": "Talysh (tolışi), a Northwestern Iranian language of the Caspian littoral in Azerbaijan and Iran. COMMITMENT: this map implements the AZERBAIJANI-BASED TALYSH LATIN ALPHABET (the 'Azerbaijan variant'), the script of the Talysh Wikipedia. Talysh is also written in Cyrillic and, in Iran, in a Perso-Arabic abjad; both are OUT OF SCOPE. A second, scholarly Latin romanisation (the háček variant: <c>=/t͡ʃ/, <j>=/j/, <g>=/ɡ/, <č ž š ǧ>) conflicts with this one on c/ç, j/y and q/g and is likewise not implemented. INPUT CONTRACT: lowercase Talysh text in the Azerbaijani-based Latin alphabet, diacritics intact (ç ə ğ ı ş ü) — note the Turkish-style dotted/dotless <i>/<ı> distinction is phonemic here. Azerbaijani letter values apply: <c> = /d͡ʒ/, <ç> = /t͡ʃ/, <j> = /ʒ/, <y> = /j/, <ş> = /ʃ/, <x> = /x/, <ğ> = /ɣ/, <ə> = the open vowel /a~æ/, <q> = /ɡ/. KNOWN GAP: Talysh HAS a phonemic uvular /q/, but the Azerbaijani-based alphabet provides no letter for it (<q> is /ɡ/, as in Azerbaijani), so /q/ is not recoverable from this orthography. [ʏ] (written <ü>) occurs in free variation with /u/, and /a/ is often palatalised to [æ]; both are handled in the allophone table.",
+  "iso639_3": "tly",
+  "glottolog_code": "taly1247",
+  "wikidata_qid": "Q34318",
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Talysh_language",
+    "https://tly.wikipedia.org/wiki/Toly%C5%A1%C9%99_zyvon"
+  ],
+  "sources": [
+    {
+      "id": "talysh_language_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Talysh language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Talysh_language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Talysh_language",
+      "pages": null,
+      "notes": "Talysh phoneme inventory and the IPA / Latin / Cyrillic transliteration table; notes the free variation of [ʏ] with /u/ and the palatalisation of /a/."
+    },
+    {
+      "id": "talysh_alphabet_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Talysh alphabet",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Talysh_alphabet",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Talysh_alphabet",
+      "pages": null,
+      "notes": "The letter->IPA table for the two Latin variants (Azerbaijan variant, followed here, vs. the scholarly háček variant) and the Cyrillic alphabet."
+    }
+  ],
+  "parent": "x-clade-iran1269",
+  "ancestors": [
+    {
+      "code": "x-clade-iran1269",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Iranian — the classification node this language sits under."
+    }
+  ],
+  "location": {
+    "latitude": 38.4552,
+    "longitude": 48.6349,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for North-Central Talysh."
+  }
+}

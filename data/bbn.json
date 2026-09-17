@@ -1,0 +1,70 @@
+{
+  "code": "bbn",
+  "name": "Uneapa",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "ng": ["ŋ"],
+    "a": ["a"],
+    "e": ["e"],
+    "i": ["i"],
+    "o": ["o"],
+    "u": ["u"],
+    "b": ["b"],
+    "d": ["d"],
+    "g": ["ɡ"],
+    "h": ["h"],
+    "k": ["k"],
+    "l": ["l"],
+    "m": ["m"],
+    "n": ["n"],
+    "p": ["p"],
+    "r": ["r"],
+    "s": ["s"],
+    "t": ["t"],
+    "v": ["β"],
+    "w": ["w"],
+    "y": ["j"],
+    "z": ["z"]
+  },
+  "parent": "x-clade-mala1545",
+  "ancestors": [
+    {
+      "code": "x-clade-mala1545",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Descent per Glottolog classification of Uneapa (unea1237)."
+    }
+  ],
+  "notes": "Skeleton. Uneapa (Bola) is an Oceanic (Meso-Melanesian, Willaumez) Austronesian language of West New Britain, Papua New Guinea, written in a practical Latin orthography. The grapheme map covers the five-vowel system and a basic consonant inventory including the digraph ng for the velar nasal, with v representing a bilabial fricative. Prenasalized stops, if present and written as plain stops, are not distinguished, and any conditioned voicing is not encoded. Stress and vowel length are left unencoded. This entry is a low-confidence skeleton assembled from general classificatory sources for a language with limited published orthographic description.",
+  "iso639_3": "bbn",
+  "glottolog_code": null,
+  "sources": [
+    {
+      "id": "bbn_glottolog",
+      "author": "Hammarström, H. et al. (Glottolog 5.0)",
+      "year": 2024,
+      "title": "Glottolog: Uneapa (unea1237)",
+      "publisher": "Max Planck Institute for Evolutionary Anthropology",
+      "url": "https://glottolog.org/resource/languoid/id/unea1237",
+      "pages": null,
+      "notes": "Classification reference for a skeleton-tier entry.",
+      "wikipedia_url": null
+    },
+    {
+      "id": "bbn_wikipedia",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Uneapa language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Uneapa_language",
+      "pages": null,
+      "notes": "Classificatory reference for the grapheme-to-IPA skeleton.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Uneapa_language"
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Uneapa_language"
+  ]
+}

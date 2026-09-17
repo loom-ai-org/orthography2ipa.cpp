@@ -1,0 +1,157 @@
+{
+  "code": "aot",
+  "name": "Atong (India)",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "ch": [
+      "tʃ"
+    ],
+    "sh": [
+      "ʃ"
+    ],
+    "ts": [
+      "ts"
+    ],
+    "ng": [
+      "ŋ"
+    ],
+    "ny": [
+      "ɲ"
+    ],
+    "kh": [
+      "kʰ"
+    ],
+    "ph": [
+      "pʰ"
+    ],
+    "th": [
+      "tʰ"
+    ],
+    "b": [
+      "b"
+    ],
+    "d": [
+      "d"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "h": [
+      "h"
+    ],
+    "j": [
+      "dʒ"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "w": [
+      "w"
+    ],
+    "y": [
+      "j"
+    ],
+    "z": [
+      "z"
+    ],
+    "f": [
+      "f"
+    ],
+    "v": [
+      "v"
+    ],
+    "a": [
+      "a"
+    ],
+    "e": [
+      "e"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "o"
+    ],
+    "u": [
+      "u"
+    ],
+    "’": [
+      "ʔ"
+    ],
+    "·": [
+      "ʔ"
+    ]
+  },
+  "parent": "x-clade-sino1245",
+  "ancestors": [
+    {
+      "code": "x-clade-sino1245",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Descent per Glottolog classification of Atong (India) (aton1241)."
+    }
+  ],
+  "notes": "Skeleton. Atong is a Bodo-Garo (Sino-Tibetan) language of Meghalaya, India, written in a Latin-based orthography. Base Latin consonants and vowels plus digraphs ch/sh/ng/ny and aspirates kh/ph/th are mapped. Atong is only marginally tonal; any tone, plus vowel-length distinctions, are left unencoded, raising the PER floor. Atong stress/prominence is not distinctively marked in the orthography and is left unencoded (documented exemption).",
+  "iso639_3": "aot",
+  "glottolog_code": null,
+  "sources": [
+    {
+      "id": "aot_glottolog",
+      "author": "Hammarström, H. et al. (Glottolog 5.0)",
+      "year": 2024,
+      "title": "Glottolog: Atong (India) (aton1241)",
+      "publisher": "Max Planck Institute for Evolutionary Anthropology",
+      "url": "https://glottolog.org/resource/languoid/id/aton1241",
+      "pages": null,
+      "notes": "Classification reference for a skeleton-tier entry.",
+      "wikipedia_url": null
+    },
+    {
+      "id": "aot_wikipedia",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Atong language (India)",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Atong_language_(India)",
+      "pages": null,
+      "notes": "Orthography/phonology reference for a skeleton-tier entry.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Atong_language_(India)"
+    },
+    {
+      "id": "aot_vanbreugel2014",
+      "author": "van Breugel, Seino",
+      "year": 2014,
+      "title": "A Grammar of Atong",
+      "publisher": "Brill",
+      "url": "https://www.academia.edu/508408/A_Grammar_of_Atong",
+      "pages": null,
+      "notes": "Reference grammar of Atong (Bodo-Garo, Meghalaya); the first comprehensive linguistic description, consulted to check the practical Latin orthography and consonant/vowel inventory used in this spec."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Atong_language_(India)"
+  ]
+}

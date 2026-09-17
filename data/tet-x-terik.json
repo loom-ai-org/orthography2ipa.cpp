@@ -1,0 +1,158 @@
+{
+  "code": "tet-x-terik",
+  "name": "Tetun Terik (conservative rural Tetun)",
+  "script": "Latin",
+  "graphemes_base": "tet",
+  "graphemes": {
+    "e": [
+      "e"
+    ],
+    "é": [
+      "e"
+    ],
+    "o": [
+      "ɔ"
+    ],
+    "ó": [
+      "ɔ"
+    ],
+    "r": [
+      "ɾ"
+    ],
+    "'": [
+      "ʔ"
+    ],
+    "’": [
+      "ʔ"
+    ]
+  },
+  "positional_graphemes": {
+    "i": {
+      "before_vowel": [
+        "i",
+        "j"
+      ]
+    }
+  },
+  "allophones_base": "tet",
+  "parent": "tet",
+  "quality": "skeleton",
+  "script_type": "alphabet",
+  "phonemes": [
+    "i",
+    "e",
+    "a",
+    "ɔ",
+    "u",
+    "b",
+    "t",
+    "d",
+    "k",
+    "ʔ",
+    "s",
+    "h",
+    "m",
+    "n",
+    "ɾ",
+    "l",
+    "w"
+  ],
+  "notes": "Tetun Terik — the conservative rural Tetun of the south coast and the Timor-Leste/West Timor border area, of which Tetun Dili is historically an offshoot. It is described here as a DELTA on tet: the divergence that the sources actually establish is the inventory, and everything the two varieties share is inherited rather than restated.\n\nTHE INVENTORY IS THE DELTA. Terik has five vowels /i e a ɔ u/ — the back mid vowel is low-mid /ɔ/, not /o/ — and twelve consonants /b t d k ʔ s h m n ɾ l w/ (Avram 2021 Tables 1-2, p. 78). The whole Portuguese stratum of Tetun Dili is absent: /p ɡ f v z ʃ ʒ ɲ ʎ/ and the trill /r/ are all imports into Dili (Williams-van Klinken, Hajek & Nordlinger 2002, printed p. 9; Avram 2021 §4, pp. 80-81), so the rhotic here is the tap alone, ⟨o⟩ is /ɔ/ and ⟨e⟩ is plain /e/ — the open variants and the unstressed raising that tet declares for both are Portuguese-contact effects (Avram 2021 §7.1, p. 87, and Table 5, p. 94), so the vowel readings and the allophone lists for /a e ɔ s z l/ are restated here rather than inherited. /e/ keeps [ɛ] beside [e]: opening next to /h/ is not a contact effect but something ALL speakers do — kakehe [kaˈkɛɦɛ] 'fan' (Williams-van Klinken, Hajek & Nordlinger 2002 §2.2.1, printed p. 11) — and it is absent from Avram's table of borrowed features. The letters that spell the missing phonemes are inherited from tet rather than deleted, because loans do reach Terik speech and a spelling with no reading is worse than a Dili-valued one; the phonemes list, not the grapheme table, is the authority on what belongs to the variety.\n\nTHE GLOTTAL STOP IS PHONEMIC HERE. This is the sharpest split from Dili: /ʔ/ is a phoneme of Tetun Terik and not of Tetun Dili (Williams-van Klinken, Hajek & Nordlinger 2002 §1.7, printed p. 6; Avram 2021 Table 2, p. 78), so the apostrophe has one reading here and two in tet.\n\n/w/ WHERE DILI HAS /b/. Terik wainhira 'when' corresponds to Dili bainhira, and /w/ is common in Terik while it reaches Dili only in a small set of loans (printed p. 11). This is lexical correspondence, not a grapheme rule, so it is recorded and not modelled.\n\nK-INITIAL CLUSTERS SURVIVE. The native onsets /kb kd kl km kn kr/ are the only word-initial clusters of Terik, and Dili either drops the /k/ or breaks the cluster with [a]: Terik ktodan > Dili todan 'heavy', Terik kmanek > Dili kamanek 'wonderful' (Avram 2021 §8.1, p. 90).\n\nWHAT THIS SPEC DOES NOT CLAIM. Terik is largely an unwritten variety with no orthographic standard of its own; text in it is written with the conventions of Official Tetun, which is why the grapheme table is inherited. The Portuguese-contact allophony declared in tet is a Dili phenomenon and is inert here, since the phonemes it conditions are not in this inventory. The stressed-final vowel lengthening IS inherited: Avram's survey does not list it among the contact-induced features, so it is read as a property of Tetun rather than of the Portuguese stratum — but no source consulted states it of Terik directly, and it needs a native check. The Fehan dialect of West Timor has a full grammar of its own (van Klinken 1999) that was not consulted; a spec for Fehan specifically needs that grammar's phonology chapter, not this one.",
+  "sources": [
+    {
+      "id": "avram2021",
+      "author": "Avram, A. A.",
+      "year": 2021,
+      "title": "Contact-induced variation in Tetun Dili phonology",
+      "publisher": "Acta Linguistica Asiatica 11(1):75-98",
+      "url": "https://doi.org/10.4312/ala.11.1.75-98",
+      "pages": "78-81, 90",
+      "notes": "Tables 1-2 on p. 78 give the Tetun Terik vowel and consonant inventories."
+    },
+    {
+      "id": "williams_van_klinken2002",
+      "author": "Williams-van Klinken, C., Hajek, J. & Nordlinger, R.",
+      "year": 2002,
+      "title": "Tetun Dili: A grammar of an East Timorese language",
+      "publisher": "Pacific Linguistics 528, The Australian National University",
+      "url": "https://doi.org/10.15144/PL-528",
+      "pages": "6, 9, 11",
+      "notes": "Open access. Names the phonemes Portuguese contributed to Dili, the Terik-only status of /ʔ/, and the Terik /w/ ~ Dili /b/ correspondence."
+    },
+    {
+      "id": "van_klinken1999",
+      "author": "van Klinken, C.",
+      "year": 1999,
+      "title": "A grammar of the Fehan dialect of Tetun: An Austronesian language of West Timor",
+      "publisher": "Pacific Linguistics, The Australian National University",
+      "url": null,
+      "pages": null,
+      "notes": "Full grammar of one Terik dialect; edition not consulted."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Tetum_language"
+  ],
+  "urls": [
+    "https://doi.org/10.4312/ala.11.1.75-98",
+    "https://doi.org/10.15144/PL-528",
+    "https://glottolog.org/resource/languoid/id/tetu1245"
+  ],
+  "timespan": {
+    "start_year": 1800,
+    "end_year": null
+  },
+  "glottolog_code": "tetu1245",
+  "iso639_3": "tet",
+  "wikidata_qid": null,
+  "stress": {
+    "default_position": -2,
+    "marked_vowels": [
+      "á",
+      "é",
+      "í",
+      "ó",
+      "ú"
+    ],
+    "stress_mark": "ˈ",
+    "diphthongs": [
+      "ei",
+      "ai",
+      "oi",
+      "ui",
+      "au",
+      "eu",
+      "ou",
+      "ɔi",
+      "ɔu"
+    ],
+    "notes": "Mostly penultimate, with word-final stress also attested; antepenultimate stress is a Portuguese-loan pattern and does not belong to this variety (Avram 2021 §9, p. 93). The diphthong list carries the Terik vowel values (ɔi, ɔu) beside the written sequences: the list divides the transcription as well as the spelling, and ⟨o⟩ is /ɔ/ here, so without them koi would be cut kɔ|i and take the mark on its offglide."
+  },
+  "location": {
+    "latitude": -9.11217,
+    "longitude": 125.528,
+    "source": "glottolog",
+    "notes": "Glottolog gives no separate languoid for Terik, so the point is the one it publishes for Tetum as a whole."
+  },
+  "allophones": {
+    "a": [
+      "a"
+    ],
+    "e": [
+      "e",
+      "ɛ"
+    ],
+    "ɔ": [
+      "ɔ"
+    ],
+    "s": [
+      "s"
+    ],
+    "z": [
+      "z"
+    ],
+    "l": [
+      "l"
+    ]
+  }
+}

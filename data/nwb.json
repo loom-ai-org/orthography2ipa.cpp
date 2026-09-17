@@ -1,0 +1,228 @@
+{
+ "code": "nwb",
+ "name": "Nyabwa",
+ "script": "Latin",
+ "quality": "skeleton",
+ "graphemes": {
+  "a": [
+   "a"
+  ],
+  "an": [
+   "ã"
+  ],
+  "b": [
+   "b"
+  ],
+  "bh": [
+   "ɓ"
+  ],
+  "c": [
+   "c"
+  ],
+  "d": [
+   "d"
+  ],
+  "e": [
+   "e"
+  ],
+  "f": [
+   "f"
+  ],
+  "g": [
+   "ɡ"
+  ],
+  "gb": [
+   "ɡ͡b"
+  ],
+  "gw": [
+   "ɡʷ"
+  ],
+  "i": [
+   "i"
+  ],
+  "in": [
+   "ĩ"
+  ],
+  "j": [
+   "ɟ"
+  ],
+  "k": [
+   "k"
+  ],
+  "kp": [
+   "k͡p"
+  ],
+  "kw": [
+   "kʷ"
+  ],
+  "l": [
+   "l"
+  ],
+  "m": [
+   "m"
+  ],
+  "n": [
+   "n"
+  ],
+  "ng": [
+   "ŋ"
+  ],
+  "ny": [
+   "ɲ"
+  ],
+  "o": [
+   "o"
+  ],
+  "p": [
+   "p"
+  ],
+  "r": [
+   "ɾ"
+  ],
+  "s": [
+   "s"
+  ],
+  "t": [
+   "t"
+  ],
+  "u": [
+   "u"
+  ],
+  "un": [
+   "ũ"
+  ],
+  "w": [
+   "w"
+  ],
+  "y": [
+   "j"
+  ],
+  "z": [
+   "z"
+  ],
+  "ɔ": [
+   "ɔ"
+  ],
+  "ɔn": [
+   "ɔ̃"
+  ],
+  "ɛ": [
+   "ɛ"
+  ],
+  "ɛn": [
+   "ɛ̃"
+  ],
+  "ɩ": [
+   "ɪ"
+  ],
+  "ɩn": [
+   "ɪ̃"
+  ],
+  "ʊ": [
+   "ʊ"
+  ],
+  "ʊn": [
+   "ʊ̃"
+  ]
+ },
+ "allophones": {
+  "l": [
+   "l",
+   "r"
+  ]
+ },
+ "notes": "Placed so the ancestry graph covers every living ISO 639-3 language. No orthography is claimed; the phoneme inventory follows the cited PHOIBLE inventory (which itself cites a published description): script is Zyyy (undetermined) until a cited description is encoded. Classification and coordinates follow Glottolog. Orthography from an Omniglot chart (c) Simon Ager, https://www.omniglot.com/, extracted via the AfriSpeech/africa-g2p compilation (nwb.json). africa-g2p is a compilation tool, not the linguistic authority; the citation above is the original source it names.",
+ "iso639_3": "nwb",
+ "glottolog_code": "nyab1255",
+ "sources": [
+  {
+   "id": "glottolog2024",
+   "author": "Hammarström, Harald; Forkel, Robert; Haspelmath, Martin; Bank, Sebastian",
+   "year": 2024,
+   "title": "Glottolog 5.0",
+   "publisher": "Max Planck Institute for Evolutionary Anthropology",
+   "url": "https://glottolog.org/"
+  },
+  {
+   "id": "phoible2019",
+   "author": "Moran, Steven; McCloy, Daniel (eds.)",
+   "year": 2019,
+   "title": "PHOIBLE 2.0 (doi:10.5281/zenodo.2562766)",
+   "publisher": "Max Planck Institute for the Science of Human History",
+   "url": "https://phoible.org/inventories/view/803",
+   "notes": "Inventory 803 (aa), 40 non-marginal segments, 4 tones."
+  },
+  {
+   "id": "omniglot-nyabwa",
+   "author": "Ager, Simon",
+   "year": 2026,
+   "title": "Omniglot chart (nyabwa.xls)",
+   "publisher": "Omniglot",
+   "url": "https://www.omniglot.com/",
+   "notes": "Undated web chart; year is retrieval year, not publication year."
+  }
+ ],
+ "urls": [
+  "https://glottolog.org/resource/languoid/id/nyab1255"
+ ],
+ "location": {
+  "latitude": 6.8761,
+  "longitude": -6.8443,
+  "source": "glottolog",
+  "notes": "Glottolog's representative point."
+ },
+ "parent": "x-clade-krua1234",
+ "phonemes": [
+  "b",
+  "c",
+  "d",
+  "f",
+  "j",
+  "k",
+  "kp",
+  "kʷ",
+  "l",
+  "m",
+  "n",
+  "p",
+  "s",
+  "t",
+  "v",
+  "w",
+  "z",
+  "ŋ",
+  "ɓ",
+  "ɟ",
+  "ɡ",
+  "ɡb",
+  "ɡʷ",
+  "ɲ",
+  "a",
+  "ã",
+  "e",
+  "i",
+  "ĩ",
+  "o",
+  "u",
+  "ũ",
+  "ɔ",
+  "ɔ̃",
+  "ɛ",
+  "ɛ̃",
+  "ɪ",
+  "ɪ̃",
+  "ʊ",
+  "ʊ̃"
+ ],
+ "tone_inventory": {
+  "˥": "PHOIBLE tone segment",
+  "˦": "PHOIBLE tone segment",
+  "˧": "PHOIBLE tone segment",
+  "˨": "PHOIBLE tone segment"
+ },
+ "phoible_id": "803",
+ "script_type": "alphabet",
+ "wikipedia": [
+  "https://en.wikipedia.org/wiki/Nyabwa_language"
+ ]
+}

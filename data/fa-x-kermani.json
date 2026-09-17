@@ -1,0 +1,105 @@
+{
+  "code": "fa-x-kermani",
+  "name": "Kermani Persian",
+  "script": "Arabic",
+  "graphemes_base": "fa-x-tehran",
+  "allophones_base": "fa-x-tehran",
+  "allophones": {
+    "ɒː": [
+      "ɒː",
+      "aː"
+    ],
+    "æ": [
+      "a",
+      "æ"
+    ],
+    "o": [
+      "o",
+      "u"
+    ],
+    "q": [
+      "q",
+      "ɣ"
+    ]
+  },
+  "parent": "fa-x-tehran",
+  "ancestors": [
+    {
+      "code": "fa-x-early",
+      "role": "parent",
+      "weight": 0.85,
+      "notes": "New Persian descent"
+    }
+  ],
+  "notes": "Kermani Persian (Kermānī). Southern Iranian; Kerman province. /æ/ → [a] (more open/back than Tehran; similar to Shirazi). /q/ somewhat more maintained than Tehran. Contact with Balochi (southeastern Iran): minor phonological effects. Zoroastrian community in Kerman shares some features with Yazdi. Already-encoded allophones confirmed against the cited sources: short-a prefers open/back [a] over Tehran's fronted [æ]; ق prefers the retained uvular stop [q] over the Tehran merger (Windfuhr 2009; Rezai & al.).",
+  "quality": "skeleton",
+  "script_type": "abjad",
+  "sources": [
+    {
+      "id": "mahootian1997",
+      "author": "Mahootian, S.",
+      "year": 1997,
+      "title": "Persian",
+      "publisher": "Routledge",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "windfuhr1979",
+      "author": "Windfuhr, G.",
+      "year": 1979,
+      "title": "Persian Grammar: History and State of Its Study",
+      "publisher": "Mouton",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "lazard1992",
+      "author": "Lazard, G.",
+      "year": 1992,
+      "title": "A Grammar of Contemporary Persian",
+      "publisher": "Mazda Publishers",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "windfuhr2009",
+      "author": "Windfuhr, G. (ed.)",
+      "year": 2009,
+      "title": "The Iranian Languages",
+      "publisher": "Routledge",
+      "url": null,
+      "pages": null,
+      "notes": "Regional-dialect chapter(s) on New Persian varieties (Tehran, Isfahan, Fars/Shiraz, Kerman, Khorasan/Mashhad, Yazd)."
+    },
+    {
+      "id": "rezai_dialectology",
+      "author": "Rezai, V. & al.",
+      "year": 2010,
+      "title": "Studies in Iranian regional Persian dialectology (Isfahan, Fars, Kerman, Khorasan)",
+      "publisher": "Iranian dialectology literature (regional descriptive studies)",
+      "url": null,
+      "pages": null,
+      "notes": "Secondary descriptive source for regional vowel-quality differences (majhul retention, ā/æ realisation) cross-checked against Windfuhr 2009 and Mahootian 1997."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Kerman",
+    "https://fa.wikipedia.org/wiki/%D9%84%D9%87%D8%AC%D9%87_%DA%A9%D8%B1%D9%85%D8%A7%D9%86%DB%8C"
+  ],
+  "timespan": {
+    "start_year": 1200,
+    "end_year": null
+  },
+  "glottolog_code": null,
+  "iso639_3": "fas",
+  "location": {
+    "latitude": 30.291111,
+    "longitude": 57.067778,
+    "source": "wikidata",
+    "notes": "Kerman — the city the variety is named for. [Wikidata Q171714 P625]"
+  }
+}

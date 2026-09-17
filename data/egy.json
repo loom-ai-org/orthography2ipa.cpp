@@ -1,0 +1,341 @@
+{
+  "code": "egy",
+  "name": "Ancient Egyptian",
+  "script": "Latin",
+  "graphemes": {
+    "b": [
+      "b"
+    ],
+    "p": [
+      "p"
+    ],
+    "f": [
+      "f"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "r": [
+      "r"
+    ],
+    "h": [
+      "h"
+    ],
+    "ḥ": [
+      "h"
+    ],
+    "ḫ": [
+      "x"
+    ],
+    "ẖ": [
+      "ç"
+    ],
+    "z": [
+      "z"
+    ],
+    "s": [
+      "s"
+    ],
+    "š": [
+      "ʃ"
+    ],
+    "q": [
+      "k"
+    ],
+    "k": [
+      "k"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "t": [
+      "t"
+    ],
+    "ṯ": [
+      "t͡ʃ"
+    ],
+    "d": [
+      "d"
+    ],
+    "ḏ": [
+      "d͡ʒ"
+    ],
+    "ꜣ": [
+      "ɑ"
+    ],
+    "ꜥ": [
+      "ɑː"
+    ],
+    "j": [
+      "i"
+    ],
+    "y": [
+      "iː"
+    ],
+    "w": [
+      "uː"
+    ]
+  },
+  "allophones": {},
+  "notes": "Ancient Egyptian, written here in the Egyptological TRANSLITERATION of the hieroglyphic script (ꜣ ꜥ j y w ḥ ḫ ẖ z š q ṯ ḏ …), which is what every Egyptological corpus and dictionary uses as its citation form. The mapping below is the EGYPTOLOGICAL PRONUNCIATION as published in Wiktionary's Appendix:Egyptian pronunciation — the conventional reading Egyptologists use to say the words aloud (Schenkel 1991; described by Peust 1999). It is a reading convention, not a reconstruction: the script writes no vowels, so the convention supplies a fixed ⟨e⟩ [ɛ] between consonants and reads the weak consonants ꜣ ꜥ j y w as vowels. The real phonology is a different question and is NOT claimed here — the reconstructions of Loprieno (1995) and Allen (2013) give ꜣ as a rhotic or glottal, ꜥ as a pharyngeal, ṯ ḏ as palatals, and vowels that the orthography cannot express at all, and they differ by stage (Old, Middle, Late Egyptian). A spec that maps orthography to IPA can reach the convention and cannot reach the reconstruction. Egyptian is the Afroasiatic language of pharaonic Egypt and the direct ancestor of Coptic; this node also serves the ancestry / phylogenetic-distance metrics of the varieties that reference it.",
+  "quality": "research",
+  "script_type": "alphabet",
+  "iso639_3": "egy",
+  "glottolog_code": "egyp1246",
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Egyptian_language"
+  ],
+  "urls": [
+    "https://en.wiktionary.org/wiki/Appendix:Egyptian_pronunciation",
+    "https://en.wiktionary.org/wiki/Wiktionary:About_Egyptian",
+    "https://glottolog.org/resource/languoid/id/egyp1246"
+  ],
+  "sources": [
+    {
+      "id": "loprieno1995",
+      "author": "Loprieno, A.",
+      "year": 1995,
+      "title": "Ancient Egyptian: A Linguistic Introduction",
+      "publisher": "Cambridge University Press",
+      "url": null,
+      "pages": null,
+      "notes": "Reconstructed Egyptian phonology by stage, and the descent to Coptic. Cited for what this spec does NOT encode; edition not consulted.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Egyptian_language"
+    },
+    {
+      "id": "schenkel1991",
+      "author": "Schenkel, W.",
+      "year": 1991,
+      "title": "Tübinger Einführung in die klassisch-ägyptische Sprache und Schrift",
+      "publisher": "Tübingen",
+      "url": null,
+      "pages": null,
+      "notes": "The book the English Wiktionary's Egyptian entry guidelines name as the source of the Egyptological reading convention this spec encodes. The text actually read here is those guidelines (Wiktionary:About Egyptian), not the book.",
+      "wikipedia_url": null
+    },
+    {
+      "id": "peust1999",
+      "author": "Peust, C.",
+      "year": 1999,
+      "title": "Egyptian Phonology: An Introduction to the Phonology of a Dead Language",
+      "publisher": "Peust & Gutschmidt",
+      "url": null,
+      "pages": null,
+      "notes": "Descriptive phonology of Egyptian, and the reference work behind the Egyptological reading convention. Not consulted directly.",
+      "wikipedia_url": null
+    },
+    {
+      "id": "allen2013",
+      "author": "Allen, J. P.",
+      "year": 2013,
+      "title": "The Ancient Egyptian Language: An Historical Study",
+      "publisher": "Cambridge University Press",
+      "url": null,
+      "pages": null,
+      "notes": "Reconstruction of Egyptian phonology and its history. Cited for the reconstruction this spec deliberately does not encode; not consulted directly.",
+      "wikipedia_url": null
+    },
+    {
+      "id": "wiktionary_egy_appendix",
+      "author": "Wiktionary contributors",
+      "year": 2026,
+      "title": "Appendix:Egyptian pronunciation",
+      "publisher": "Wiktionary",
+      "url": "https://en.wiktionary.org/wiki/Appendix:Egyptian_pronunciation",
+      "pages": null,
+      "notes": "The published statement of the Egyptological reading convention this spec encodes: the letter values, the epenthesis constraint, the one-consonant words, the ⟨w⟩ root-initial split, and the ꜥnḫ exception. Read directly.",
+      "wikipedia_url": null
+    }
+  ],
+  "parent": "x-clade-egyp1245",
+  "ancestors": [
+    {
+      "code": "afa",
+      "role": "parent",
+      "weight": 0.9,
+      "notes": "Egyptian branch of Afroasiatic."
+    }
+  ],
+  "wikidata_qid": "Q50868",
+  "location": {
+    "latitude": 28.381735,
+    "longitude": 30.834959,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Egyptian (Ancient)."
+  },
+  "positional_graphemes": {
+    "w": {
+      "word_initial": [
+        "w"
+      ],
+      "default": [
+        "uː"
+      ]
+    }
+  },
+  "vowel_graphemes": [
+    "ꜣ",
+    "ꜥ",
+    "j",
+    "y",
+    "w"
+  ],
+  "allophone_rules": [
+    {
+      "id": "EGY_EPEN_INITIAL",
+      "phonemes": [
+        "b",
+        "d",
+        "d͡ʒ",
+        "f",
+        "h",
+        "k",
+        "m",
+        "n",
+        "p",
+        "r",
+        "s",
+        "t",
+        "t͡ʃ",
+        "x",
+        "z",
+        "ç",
+        "ɡ",
+        "ʃ",
+        "w"
+      ],
+      "append": "ɛ",
+      "word_initial": true,
+      "followed_by": "consonant",
+      "notes": "The convention is published as Wiktionary's Appendix:Egyptian pronunciation, which states it as a CONSTRAINT: an epenthetic /ɛ/ is inserted as needed to break up consonant clusters, so that no more than one consonant in a row starts or ends each word, and no more than two consonants appear sequentially within a word. The constraint underdetermines where the vowel goes when more than one placement satisfies it, and the gold does not always choose the same one this spec does. This rule is the 'no more than one consonant starts the word' half: a word-initial consonant followed by another takes the vowel — nfr [nɛfɛr], bḥdt [bɛhdɛt]."
+    },
+    {
+      "id": "EGY_EPEN_RUN_THIRD",
+      "phonemes": [
+        "b",
+        "d",
+        "d͡ʒ",
+        "f",
+        "h",
+        "k",
+        "m",
+        "n",
+        "p",
+        "r",
+        "s",
+        "t",
+        "t͡ʃ",
+        "x",
+        "z",
+        "ç",
+        "ɡ",
+        "ʃ",
+        "w"
+      ],
+      "append": "ɛ",
+      "followed_by": "consonant",
+      "preceded_by": "consonant",
+      "preceded_by_2": "consonant",
+      "preceded_by_3": "word_boundary",
+      "notes": "The convention is published as Wiktionary's Appendix:Egyptian pronunciation, which states it as a CONSTRAINT: an epenthetic /ɛ/ is inserted as needed to break up consonant clusters, so that no more than one consonant in a row starts or ends each word, and no more than two consonants appear sequentially within a word. The constraint underdetermines where the vowel goes when more than one placement satisfies it, and the gold does not always choose the same one this spec does. This rule is the 'no more than two consonants sequentially within a word' half, reached as far as the rule layer's three-slot lookback allows: the third consonant of a word-initial run takes a vowel, which breaks a four-consonant run into two pairs — mnmnt [mɛnmɛnɛt], nḫbḫb [nɛxbɛxɛb]. About half the words it fires on are reduplications, whose two halves the Appendix says are pronounced identically with no /ɛ/ between them; the rule layer cannot see reduplication, and this rule is the reachable approximation of that clause while satisfying the cluster constraint on the rest. Runs longer than four, and runs that start after a vowel, are past the lookback and are not stated."
+    },
+    {
+      "id": "EGY_EPEN_BEFORE_FINAL",
+      "phonemes": [
+        "b",
+        "d",
+        "d͡ʒ",
+        "f",
+        "h",
+        "k",
+        "m",
+        "n",
+        "p",
+        "r",
+        "s",
+        "t",
+        "t͡ʃ",
+        "x",
+        "z",
+        "ç",
+        "ɡ",
+        "ʃ",
+        "w"
+      ],
+      "append": "ɛ",
+      "word_final": false,
+      "followed_by": "consonant",
+      "followed_by_2": "word_boundary",
+      "notes": "The convention is published as Wiktionary's Appendix:Egyptian pronunciation, which states it as a CONSTRAINT: an epenthetic /ɛ/ is inserted as needed to break up consonant clusters, so that no more than one consonant in a row starts or ends each word, and no more than two consonants appear sequentially within a word. The constraint underdetermines where the vowel goes when more than one placement satisfies it, and the gold does not always choose the same one this spec does. This rule is the 'no more than one consonant ends the word' half: the consonant before a word-final consonant takes the vowel — bbr [bɛbɛr], wbnt [wɛbnɛt]."
+    },
+    {
+      "id": "EGY_LONE_CONSONANT",
+      "phonemes": [
+        "b",
+        "d",
+        "d͡ʒ",
+        "f",
+        "h",
+        "k",
+        "p",
+        "s",
+        "t",
+        "t͡ʃ",
+        "x",
+        "z",
+        "ç",
+        "ɡ",
+        "ʃ",
+        "w"
+      ],
+      "append": "ɛ",
+      "word_initial": true,
+      "word_final": true,
+      "notes": "The Appendix states that a word consisting of a single consonant takes /ɛ/ after it, or BEFORE it if the consonant is a sonorant. The rule layer can append but not prepend, so m, n and r are excluded here and are known misses. Wiktionary, Appendix:Egyptian pronunciation."
+    },
+    {
+      "id": "EGY_HIATUS_A",
+      "phonemes": [
+        "ɑ",
+        "ɑː"
+      ],
+      "append": "ʔ",
+      "followed_by_phoneme": [
+        "ɑ",
+        "ɑː"
+      ],
+      "notes": "The Appendix records that some speakers add a glottal stop in various places, including between identical vowels; the pronunciation module the entries invoke applies it to the weak-consonant CLASSES rather than to identical letters only, so ꜣꜥ and ꜥꜣ get it as well as ꜣꜣ and ꜥꜥ. The class reading is what this gold shows and what is encoded. Wiktionary, Appendix:Egyptian pronunciation."
+    },
+    {
+      "id": "EGY_HIATUS_I",
+      "phonemes": [
+        "i",
+        "iː"
+      ],
+      "append": "ʔ",
+      "followed_by_phoneme": [
+        "i",
+        "iː"
+      ],
+      "notes": "Hiatus between two adjacent ⟨j⟩/⟨y⟩ radicals, as EGY_HIATUS_A."
+    },
+    {
+      "id": "EGY_HIATUS_U",
+      "phonemes": [
+        "uː"
+      ],
+      "append": "ʔ",
+      "followed_by_phoneme": [
+        "uː"
+      ],
+      "notes": "Hiatus between two adjacent ⟨w⟩ radicals, as EGY_HIATUS_A."
+    }
+  ],
+  "doubled_letters_geminate": false,
+  "word_exceptions": {
+    "ꜥnḫ": "ɑːnx"
+  }
+}

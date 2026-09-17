@@ -1,0 +1,187 @@
+{
+  "code": "nhn",
+  "name": "Central Nahuatl",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "iso639_3": "nhn",
+  "glottolog_code": "cent2132",
+  "wikidata_qid": "Q6947790",
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "e": [
+      "e"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "o"
+    ],
+    "u": [
+      "u"
+    ],
+    "cu": [
+      "kʷ"
+    ],
+    "qu": [
+      "k"
+    ],
+    "ch": [
+      "t͡ʃ"
+    ],
+    "tl": [
+      "t͡ɬ"
+    ],
+    "tz": [
+      "t͡s"
+    ],
+    "hu": [
+      "w"
+    ],
+    "ll": [
+      "lː"
+    ],
+    "c": [
+      "k"
+    ],
+    "z": [
+      "s"
+    ],
+    "x": [
+      "ʃ"
+    ],
+    "h": [
+      "ʔ"
+    ],
+    "k": [
+      "k"
+    ],
+    "p": [
+      "p"
+    ],
+    "t": [
+      "t"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "s": [
+      "s"
+    ],
+    "l": [
+      "l"
+    ],
+    "w": [
+      "w"
+    ],
+    "y": [
+      "j"
+    ],
+    "b": [
+      "b"
+    ],
+    "d": [
+      "d"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "r": [
+      "ɾ"
+    ],
+    "f": [
+      "f"
+    ]
+  },
+  "positional_graphemes": {
+    "c": {
+      "default": [
+        "k"
+      ],
+      "before_front_vowel": [
+        "s"
+      ]
+    }
+  },
+  "allophones": {
+    "k": [
+      "k"
+    ],
+    "s": [
+      "s"
+    ],
+    "t͡ɬ": [
+      "t͡ɬ"
+    ],
+    "t͡s": [
+      "t͡s"
+    ],
+    "t͡ʃ": [
+      "t͡ʃ"
+    ],
+    "kʷ": [
+      "kʷ"
+    ],
+    "l": [
+      "l",
+      "ɬ"
+    ],
+    "w": [
+      "w",
+      "ɸ"
+    ],
+    "ʔ": [
+      "ʔ",
+      "h"
+    ]
+  },
+  "notes": "Central Nahuatl (Nāhuatl), a Uto-Aztecan (Nahuan) language cluster of central Mexico, transcribed here in the traditional Hispanic-based ('Jesuit'/classical) orthography used by WikiPron. Grapheme rules: ⟨c⟩ = /k/ but /s/ before a front vowel (⟨e i⟩); ⟨qu⟩ = /k/, ⟨cu⟩ and word-final ⟨uc⟩ = the labialised /kʷ/; ⟨z⟩ = /s/; ⟨x⟩ = /ʃ/; ⟨ch⟩ = /t͡ʃ/; ⟨tz⟩ = /t͡s/; ⟨tl⟩ = the lateral affricate /t͡ɬ/; ⟨hu⟩ = /w/; ⟨ll⟩ = geminate /lː/; ⟨h⟩ = the glottal stop /ʔ/ (the saltillo). Vowels ⟨a e i o u⟩. Latin letters ⟨b d g r f⟩ occur only in Spanish loans. VOWEL LENGTH is phonemic in Nahuatl but is NOT written in this orthography, so the long vowels of the gold (⟨acatl⟩ [aːkat͡ɬ]) cannot be recovered from the spelling and are under-generated; coda ⟨l⟩ → [ɬ] and ⟨uh⟩ → [ɸ] are allophonic and likewise not resolved.",
+  "sources": [
+    {
+      "id": "nahuatl_wikipedia",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Nahuatl — Phonology and Orthography (classical/Hispanic spelling)",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Nahuatl",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Nahuatl",
+      "pages": null,
+      "notes": "Consonant inventory including /t͡ɬ/, /kʷ/, the saltillo /ʔ/, and the traditional orthography (c, qu, cu, z, x, ch, tz, tl, hu, ll)."
+    },
+    {
+      "id": "andrews2003",
+      "author": "Andrews, J. Richard",
+      "year": 2003,
+      "title": "Introduction to Classical Nahuatl (Revised Edition)",
+      "publisher": "University of Oklahoma Press",
+      "url": null,
+      "pages": null,
+      "notes": "Standard reference for classical Nahuatl phonology, vowel length and orthography."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Nahuatl",
+    "https://en.wikipedia.org/wiki/Classical_Nahuatl"
+  ],
+  "parent": "x-clade-utoa1244",
+  "ancestors": [
+    {
+      "code": "x-clade-utoa1244",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Uto-Aztecan — the classification node this language sits under."
+    }
+  ],
+  "location": {
+    "latitude": 19.0,
+    "longitude": -98.2,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Central Nahuatl (Puebla-Tlaxcala highlands)."
+  }
+}

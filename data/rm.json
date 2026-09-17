@@ -1,0 +1,282 @@
+{
+  "code": "rm",
+  "name": "Romansh",
+  "script": "Latin",
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "e": [
+      "e",
+      "ɛ"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "o",
+      "ɔ"
+    ],
+    "u": [
+      "u"
+    ],
+    "ü": [
+      "y"
+    ],
+    "b": [
+      "b"
+    ],
+    "c": [
+      "k",
+      "ts"
+    ],
+    "ch": [
+      "k",
+      "tɕ"
+    ],
+    "d": [
+      "d"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɡ",
+      "dʒ"
+    ],
+    "gl": [
+      "ʎ"
+    ],
+    "gn": [
+      "ɲ"
+    ],
+    "h": [
+      "h"
+    ],
+    "j": [
+      "j"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "p": [
+      "p"
+    ],
+    "qu": [
+      "kw"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s",
+      "z"
+    ],
+    "sch": [
+      "ʃ"
+    ],
+    "t": [
+      "t"
+    ],
+    "tg": [
+      "tɕ"
+    ],
+    "tsch": [
+      "tʃ"
+    ],
+    "v": [
+      "v"
+    ],
+    "z": [
+      "ts"
+    ],
+    "gh": [
+      "ɡ"
+    ]
+  },
+  "allophones": {
+    "p": [
+      "p"
+    ],
+    "b": [
+      "b"
+    ],
+    "t": [
+      "t"
+    ],
+    "d": [
+      "d"
+    ],
+    "k": [
+      "k"
+    ],
+    "ɡ": [
+      "ɡ"
+    ],
+    "ts": [
+      "ts"
+    ],
+    "dʒ": [
+      "dʒ"
+    ],
+    "tʃ": [
+      "tʃ"
+    ],
+    "tɕ": [
+      "tɕ"
+    ],
+    "f": [
+      "f"
+    ],
+    "v": [
+      "v"
+    ],
+    "s": [
+      "s"
+    ],
+    "z": [
+      "z"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "h": [
+      "h"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n",
+      "ŋ"
+    ],
+    "ɲ": [
+      "ɲ"
+    ],
+    "l": [
+      "l"
+    ],
+    "ʎ": [
+      "ʎ"
+    ],
+    "r": [
+      "r",
+      "ɾ"
+    ],
+    "j": [
+      "j"
+    ],
+    "w": [
+      "w"
+    ],
+    "a": [
+      "a"
+    ],
+    "e": [
+      "e"
+    ],
+    "ɛ": [
+      "ɛ"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "o"
+    ],
+    "ɔ": [
+      "ɔ"
+    ],
+    "u": [
+      "u"
+    ],
+    "y": [
+      "y"
+    ]
+  },
+  "parent": "x-clade-gallorom",
+  "ancestors": [
+    {
+      "code": "la-x-gallia",
+      "role": "parent",
+      "weight": 0.7,
+      "notes": "Gallo-Romance parent: Rhaeto-Romance branch."
+    },
+    {
+      "code": "cel",
+      "role": "substrate",
+      "weight": 0.08,
+      "notes": "Celtic (Raetian/Lepontic) substrate: Alpine Celtic may have influenced consonant clusters."
+    },
+    {
+      "code": "de-DE",
+      "role": "adstrate",
+      "weight": 0.15,
+      "notes": "German adstrate: centuries of bilingualism. Massive lexical influence, some phonological (aspiration of stops, /h/ restoration)."
+    }
+  ],
+  "notes": "Romansh (Rumantsch). Rhaeto-Romance language of Graubünden, Switzerland. ~60,000 speakers. National language since 1938. Written standard: Rumantsch Grischun (1982). Five spoken idioms: Sursilvan, Sutsilvan, Surmiran, Puter, Vallader. Key features: (1) CA- palatalisation. (2) Front rounded vowels /y/. (3) Heavy German contact influence (Liver 1999).",
+  "quality": "research",
+  "script_type": "alphabet",
+  "sources": [
+    {
+      "id": "liver1999",
+      "author": "Liver, R.",
+      "year": 1999,
+      "title": "Rätoromanisch: Eine Einführung in das Bündnerromanische",
+      "publisher": "Narr",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "maiden_parry1997",
+      "author": "Maiden, M. & Parry, M. (eds.)",
+      "year": 1997,
+      "title": "The Dialects of Italy",
+      "publisher": "Routledge",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "ladefoged_maddieson1996",
+      "author": "Ladefoged, P. & Maddieson, I.",
+      "year": 1996,
+      "title": "The Sounds of the World's Languages",
+      "publisher": "Blackwell",
+      "url": null,
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Romansh_language",
+    "https://rm.wikipedia.org/wiki/Rumantsch",
+    "https://rm.wikipedia.org/wiki/Rumantsch_dal_Grischun"
+  ],
+  "timespan": {
+    "start_year": 1400,
+    "end_year": null
+  },
+  "glottolog_code": "roma1326",
+  "iso639_3": "roh",
+  "wikidata_qid": "Q13199",
+  "phoible_id": "roma1326",
+  "wals_code": "rmc",
+  "location": {
+    "latitude": 46.5538,
+    "longitude": 9.92812,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Romansh."
+  }
+}

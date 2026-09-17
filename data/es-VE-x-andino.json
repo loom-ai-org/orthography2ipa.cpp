@@ -1,0 +1,89 @@
+{
+  "code": "es-VE-x-andino",
+  "name": "Andean Venezuelan Spanish",
+  "script": "Latin",
+  "graphemes_base": "es-ES",
+  "graphemes": {
+    "c": [
+      "k",
+      "s"
+    ],
+    "z": [
+      "s"
+    ],
+    "ll": [
+      "ʝ"
+    ]
+  },
+  "allophones_base": "es-ES",
+  "positional_graphemes_base": "es-ES",
+  "positional_graphemes": {
+    "c": {
+      "before_e": [
+        "s"
+      ],
+      "before_i": [
+        "s"
+      ]
+    }
+  },
+  "parent": "es-VE",
+  "ancestors": [
+    {
+      "code": "es-VE",
+      "role": "parent",
+      "weight": 0.85,
+      "notes": "Immediate national variety (parent dialect)."
+    },
+    {
+      "code": "es-419",
+      "role": "ancestor",
+      "weight": 0.55,
+      "notes": "General Latin American Spanish (koine) — seseo/yeismo baseline shared by all LatAm varieties (Lipski 1994)."
+    }
+  ],
+  "notes": "STRUCTURAL STUB. Andean Venezuelan Spanish of the Merida/Tachira highlands ('gocho') — Lipski's (1994) 'neighboring highland areas of Venezuela' adjoining the interior-Colombia zone. Only the pan-Latin-American baseline (seseo: c/z->/s/, yeismo: ll->/ʝ/; Lipski 1994) is modelled here; the dialect-specific phonology is deliberately not yet described (stub tier). Ancestry: es-ES-x-medieval -> es-ES -> es-419 -> es-VE -> es-VE-x-andino.",
+  "quality": "stub",
+  "script_type": "alphabet",
+  "iso639_3": "spa",
+  "glottolog_code": null,
+  "timespan": {
+    "start_year": 1600,
+    "end_year": null
+  },
+  "sources": [
+    {
+      "id": "lipski_overview",
+      "author": "Lipski, John M.",
+      "year": 2011,
+      "title": "Geographical and Social Varieties of Spanish: An Overview",
+      "publisher": "In J.I. Hualde, A. Olarrea & E. O'Rourke (eds.), The Handbook of Hispanic Linguistics, Wiley-Blackwell",
+      "url": "https://johnlipski.github.io/geo.pdf",
+      "pages": "pp. 1-26",
+      "notes": "READ (geo.pdf). Reproduces the Lipski (1994) geographical dialect-zone classification of Latin American Spanish (list (2)): Mexican/SW-US; Caribbean; Guatemala-Yucatan-Costa Rica; El Salvador-Honduras-Nicaragua; interior Colombia + highland Venezuela; Pacific coast Colombia/Ecuador/Peru; Andean (Ecuador/Peru/Bolivia/NW-Argentina/NE-Chile); Chile; Paraguay/NE-Argentina/E-Bolivia; Argentina/Uruguay. Used here to enumerate the regional zones; no phonology quoted."
+    },
+    {
+      "id": "lipski1994",
+      "author": "Lipski, John M.",
+      "year": 1994,
+      "title": "Latin American Spanish",
+      "publisher": "Longman Linguistics Library, Longman",
+      "url": null,
+      "pages": null,
+      "notes": "The comprehensive dialect survey underlying the zone classification (cited via the author's own overview, geo.pdf, which was read)."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Spanish_dialects_and_varieties",
+    "https://es.wikipedia.org/wiki/Espa%C3%B1ol_andino",
+    "https://en.wikipedia.org/wiki/Andean_Spanish",
+    "https://es.wikipedia.org/wiki/Espa%C3%B1ol_venezolano",
+    "https://en.wikipedia.org/wiki/Venezuelan_Spanish"
+  ],
+  "location": {
+    "latitude": 8.57018,
+    "longitude": -71.180189,
+    "source": "wikidata",
+    "notes": "Mérida (Venezuela) — the principal city of the Venezuelan Andes (Mérida/Táchira 'gocho' highlands). [Wikidata Q23551 P625]"
+  }
+}

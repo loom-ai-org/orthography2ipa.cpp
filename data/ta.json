@@ -1,0 +1,2297 @@
+{
+  "code": "ta",
+  "name": "Tamil",
+  "script": "Tamil",
+  "graphemes": {
+    "அ": [
+      "a"
+    ],
+    "ஆ": [
+      "aː"
+    ],
+    "இ": [
+      "i"
+    ],
+    "ஈ": [
+      "iː"
+    ],
+    "உ": [
+      "u"
+    ],
+    "ஊ": [
+      "uː"
+    ],
+    "எ": [
+      "e"
+    ],
+    "ஏ": [
+      "eː"
+    ],
+    "ஐ": [
+      "ai"
+    ],
+    "ஒ": [
+      "o"
+    ],
+    "ஓ": [
+      "oː"
+    ],
+    "ஔ": [
+      "au"
+    ],
+    "ா": [
+      "aː"
+    ],
+    "ி": [
+      "i"
+    ],
+    "ீ": [
+      "iː"
+    ],
+    "ு": [
+      "u"
+    ],
+    "ூ": [
+      "uː"
+    ],
+    "ெ": [
+      "e"
+    ],
+    "ே": [
+      "eː"
+    ],
+    "ை": [
+      "ai"
+    ],
+    "ொ": [
+      "o"
+    ],
+    "ோ": [
+      "oː"
+    ],
+    "ௌ": [
+      "au"
+    ],
+    "்": [
+      ""
+    ],
+    "க": [
+      "k",
+      "ɡ",
+      "x"
+    ],
+    "ங": [
+      "ŋ"
+    ],
+    "ச": [
+      "tɕ",
+      "s",
+      "dʑ"
+    ],
+    "ஞ": [
+      "ɲ"
+    ],
+    "ட": [
+      "ʈ",
+      "ɖ"
+    ],
+    "ண": [
+      "ɳ"
+    ],
+    "த": [
+      "t̪",
+      "d̪",
+      "ð"
+    ],
+    "ந": [
+      "n"
+    ],
+    "ன": [
+      "n"
+    ],
+    "ப": [
+      "p",
+      "b"
+    ],
+    "ம": [
+      "m"
+    ],
+    "ய": [
+      "j"
+    ],
+    "ர": [
+      "ɾ"
+    ],
+    "ல": [
+      "l"
+    ],
+    "வ": [
+      "ʋ",
+      "v"
+    ],
+    "ழ": [
+      "ɻ"
+    ],
+    "ள": [
+      "ɭ"
+    ],
+    "ற": [
+      "r",
+      "tɾ"
+    ],
+    "ஜ": [
+      "dʒ"
+    ],
+    "ஶ": [
+      "ʃ"
+    ],
+    "ஷ": [
+      "ʂ"
+    ],
+    "ஸ": [
+      "s"
+    ],
+    "ஹ": [
+      "h"
+    ],
+    "க்ஷ": [
+      "kʂ"
+    ],
+    "ஸ்ரீ": [
+      "ʃriː"
+    ],
+    "ஃ": [
+      "x",
+      "h",
+      ""
+    ]
+  },
+  "allophones": {
+    "k": [
+      "k",
+      "ɡ",
+      "x",
+      "h"
+    ],
+    "tɕ": [
+      "tɕ",
+      "s",
+      "dʑ",
+      "ɕ"
+    ],
+    "ʈ": [
+      "ʈ",
+      "ɖ",
+      "ɽ"
+    ],
+    "t̪": [
+      "t̪",
+      "d̪",
+      "ð"
+    ],
+    "p": [
+      "p",
+      "b",
+      "β"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n",
+      "n̪"
+    ],
+    "ɲ": [
+      "ɲ",
+      "j"
+    ],
+    "ɳ": [
+      "ɳ"
+    ],
+    "ŋ": [
+      "ŋ"
+    ],
+    "j": [
+      "j"
+    ],
+    "ʋ": [
+      "ʋ",
+      "v",
+      "w"
+    ],
+    "r": [
+      "r",
+      "ɾ"
+    ],
+    "ɾ": [
+      "ɾ"
+    ],
+    "l": [
+      "l"
+    ],
+    "ɻ": [
+      "ɻ"
+    ],
+    "ɭ": [
+      "ɭ"
+    ],
+    "dʒ": [
+      "dʒ"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "ʂ": [
+      "ʂ"
+    ],
+    "s": [
+      "s"
+    ],
+    "h": [
+      "h"
+    ],
+    "a": [
+      "a"
+    ],
+    "aː": [
+      "aː"
+    ],
+    "i": [
+      "i"
+    ],
+    "iː": [
+      "iː"
+    ],
+    "u": [
+      "u",
+      "ɯ"
+    ],
+    "uː": [
+      "uː"
+    ],
+    "e": [
+      "e"
+    ],
+    "eː": [
+      "eː"
+    ],
+    "o": [
+      "o"
+    ],
+    "oː": [
+      "oː"
+    ],
+    "ai": [
+      "ai"
+    ],
+    "au": [
+      "au"
+    ]
+  },
+  "parent": "ta-x-proto-dravidian",
+  "ancestors": [
+    {
+      "code": "ta-x-proto-dravidian",
+      "role": "parent",
+      "weight": 0.9,
+      "notes": "Direct descendant of Proto-Dravidian via Proto-South-Dravidian"
+    },
+    {
+      "code": "sa",
+      "role": "adstrate",
+      "weight": 0.08,
+      "notes": "Sanskrit adstrate: Grantha letters, Sanskrit loanwords in formal register"
+    }
+  ],
+  "notes": "Standard Tamil (Tamil Nadu, India + Sri Lanka). Dravidian language, not related to Indo-Aryan. Key features: no aspirated stop phonemes (aspiration is allophonic); voiced/voiceless distinction positional (not phonemic for native words); two distinct non-retroflex rhotic letters — ⟨ர⟩ is the alveolar tap [ɾ] and never geminates, ⟨ற⟩ the trill [r] whose orthographic geminate ⟨ற்ற⟩ is long (Keane 2004: 113; Schiffman 1999: 7); unique retroflex approximant ⟨ழ⟩ = [ɻ]; retroflex lateral ⟨ள⟩ = [ɭ]; alveolar ⟨ன⟩ vs dental ⟨ந⟩. Strong diglossia: literary (centamiḻ) vs spoken (kōccai tamiḻ). Oldest attested Dravidian language (inscriptions from 3rd c. BCE). Wave audit (2026): the wikipron/ta row (n=10093, PER 0.3757) was checked against the hypothesis that its residual error is unmodelled stop-voicing allophony; it is not. A full confusion-matrix decomposition (hypothesis vs best-matching gold reference, all 10093 words) shows the dominant edits are vowel-quality notation, not consonant voicing: a→ɐ 11999, i→ɪ 7164, u→ʊ 5551, a→ɑ 3356 (≈28,070 of ≈28,400 total edits), against stop-voicing confusions of p↔b 112, k↔ɡ 99 and t↔d 77 (≈288 edits, about 1%). The gold writes narrow allophonic vowel symbols even in non-reduced syllables, while Keane (2004) treats /i a u/ as the phonemic inventory; reproducing the gold's narrow transcription blanket would misdescribe the language rather than model a positional process, so this is a transcription-convention ceiling the spec cannot close. The 102 TA_GEM*/TA_NOVOICE_*/TA_VOICE_* rules already correctly model the voiceless-initial/geminate vs voiced-intervocalic/post-nasal alternation (Keane 2004; Krishnamurti 2003); this wave added no new voicing rule. The residual voicing confusions split into two classes that a grapheme-to-phoneme rule spec cannot reach: loanwords that keep source-language voicing against the native rule, e.g. கஜானா 'khazana' (hyp kadʒaːnaː, word-initial voiceless per rule, vs gold ɡɐdʑɑːnɑː) and ரம்சான் 'Ramzan' (hyp voices the post-nasal stop per rule, vs gold's unvoiced ɾɐmtɕɑːn) — fixable only with a loanword lexicon; and compound-boundary sandhi, where a second compound member's initial stop surfaces voiceless despite sitting in a surface-intervocalic position, e.g. கருதுகோள் (hyp ...duɡoːɭ rule-correct intervocalic voicing, vs gold ...dukoːɭ) — fixable only with a compound segmenter the spec does not have. Both are named as scope for a future wave, not defects in the current rules. Checked and clean: gold_composition.py's trivial/real split gives trivial_share 0.0257 (270/10492) with real-word PER 0.3767 against the 0.3757 headline — this row is not flattered by alphabet-chart entries, unusually tight agreement for a row this size; the shipped tokenizer emits only two UNKNOWN characters over the whole gold, the Tamil OM sign ௐ and the AU length mark ௗ, one word each; the Grantha consonants (ஶ ஜ ஷ ஸ ஹ க்ஷ) are already mapped in the grapheme table; and no ZWJ/ZWNJ leakage was found. 355 of 10095 distinct spellings (3.5%) carry two or more gold transcriptions, which is evidence the orthography underdetermines the pronunciation, not a score floor — the harness scores each word against the best of its references, so a homograph makes a word easier, not unreachable.",
+  "quality": "research",
+  "script_type": "abugida",
+  "inherent_vowel": "a",
+  "sources": [
+    {
+      "id": "krishnamurti2003",
+      "author": "Krishnamurti, B.",
+      "year": 2003,
+      "title": "The Dravidian Languages",
+      "publisher": "Cambridge University Press",
+      "url": null,
+      "pages": null,
+      "notes": null,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Dravidian_languages"
+    },
+    {
+      "id": "schiffman1999",
+      "author": "Schiffman, H.F.",
+      "year": 1999,
+      "title": "A Reference Grammar of Spoken Tamil",
+      "publisher": "Cambridge University Press",
+      "url": null,
+      "pages": "7",
+      "notes": "Section 1.2.1.6 'Rhotics, Final and Otherwise' (p. 7): ⟨ர⟩ is 'a phonetically flapped or tapped r, more or less alveolar' and 'does not undergo gemination (doubling)'; ⟨ற⟩ 'was originally an alveolar stop', is trilled intervocalically, and geminates. Section 1.2, item 4 (p. 14) describes medial single stops as 'laxed and fricativized', with the palatal and velar 'only laxed but not usually voiced'."
+    },
+    {
+      "id": "ladefoged_maddieson1996",
+      "author": "Ladefoged, P. & Maddieson, I.",
+      "year": 1996,
+      "title": "The Sounds of the World's Languages",
+      "publisher": "Blackwell",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "keane2004",
+      "author": "Keane, E.",
+      "year": 2004,
+      "title": "Tamil",
+      "publisher": "Illustrations of the IPA, Journal of the International Phonetic Association 34(1)",
+      "url": null,
+      "pages": "111-116",
+      "notes": "The stop series has no voicing contrast: plosives are voiceless word-initially and when geminated, voiced intervocalically and after a nasal. Source for TA_GEM*, TA_NOVOICE_* and TA_VOICE_*. Page 113 ('Liquids') is the source for the two rhotic letters: ⟨ர⟩ is listed under Tap in the consonant chart and glossed கரி [kaɾi] 'charcoal', and Balasubramanian (1982a) is cited there as arguing that ⟨ர⟩ 'always corresponds phonetically to a tap, whilst [ɾ] and [r] are both possible realizations of' ⟨ற⟩; the same page states that rhotic liquids 'are the only category of sounds in Tamil that do not undergo gemination'. Page 112 is the source for the intervocalic realization of ⟨ச⟩ as [s] ('The most common realization of a single intervocalic segment is the alveolar fricative [s]').",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Tamil_phonology"
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Tamil_language",
+    "https://ta.wikipedia.org/wiki/தமிழ்",
+    "https://en.wikipedia.org/wiki/Tamil_phonology",
+    "https://ta.wikipedia.org/wiki/%E0%AE%A4%E0%AE%AE%E0%AE%BF%E0%AE%B4%E0%AF%8D",
+    "https://ta.wikipedia.org/wiki/%E0%AE%A4%E0%AE%AE%E0%AE%BF%E0%AE%B4%E0%AF%8D_%E0%AE%92%E0%AE%B2%E0%AE%BF%E0%AE%AA%E0%AF%8D%E0%AE%AA%E0%AF%81%E0%AE%AE%E0%AF%81%E0%AE%B1%E0%AF%88"
+  ],
+  "timespan": {
+    "start_year": -300,
+    "end_year": null
+  },
+  "glottolog_code": "tami1289",
+  "iso639_3": "tam",
+  "wikidata_qid": "Q5885",
+  "phoible_id": "tami1289",
+  "wals_code": "tsp",
+  "location": {
+    "latitude": 10.520219,
+    "longitude": 78.825989,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Tamil."
+  },
+  "allophone_rules": [
+    {
+      "id": "TA_GEM1_dʒ",
+      "phonemes": [
+        "dʒ"
+      ],
+      "surface": "dʒː",
+      "followed_by_phoneme": [
+        "dʒa",
+        "dʒ"
+      ],
+      "notes": "Tamil gemination, first half. A doubled consonant letter (C + virama + C) is a phonetically LONG consonant, transcribed with the length mark (Keane 2004: 111-116, 'Tamil', Journal of the IPA 34(1); Krishnamurti 2003: ch. 4). The cluster's first member — the vowel-less consonant — carries the length: புத்தகம் [put̪ːaɡam], அக்கா [akːaː]. The second half is stripped to its bare vowel by TA_GEM2_*, so the pair rewrites C+C+V to Cː+V. A geminate is ALWAYS voiceless, which is why the geminate rules are ordered before the voicing rules: first match wins."
+    },
+    {
+      "id": "TA_GEM1_h",
+      "phonemes": [
+        "h"
+      ],
+      "surface": "hː",
+      "followed_by_phoneme": [
+        "ha",
+        "h"
+      ],
+      "notes": "Gemination, first half; see TA_GEM1_dʑ (Keane 2004: 111-116)."
+    },
+    {
+      "id": "TA_GEM1_j",
+      "phonemes": [
+        "j"
+      ],
+      "surface": "jː",
+      "followed_by_phoneme": [
+        "ja",
+        "j"
+      ],
+      "notes": "Gemination, first half; see TA_GEM1_dʑ (Keane 2004: 111-116)."
+    },
+    {
+      "id": "TA_GEM1_k",
+      "phonemes": [
+        "k"
+      ],
+      "surface": "kː",
+      "followed_by_phoneme": [
+        "ka",
+        "k"
+      ],
+      "notes": "Gemination, first half; see TA_GEM1_dʑ (Keane 2004: 111-116)."
+    },
+    {
+      "id": "TA_GEM1_kʂ",
+      "phonemes": [
+        "kʂ"
+      ],
+      "surface": "kʂː",
+      "followed_by_phoneme": [
+        "kʂa",
+        "kʂ"
+      ],
+      "notes": "Gemination, first half; see TA_GEM1_dʑ (Keane 2004: 111-116)."
+    },
+    {
+      "id": "TA_GEM1_l",
+      "phonemes": [
+        "l"
+      ],
+      "surface": "lː",
+      "followed_by_phoneme": [
+        "la",
+        "l"
+      ],
+      "notes": "Gemination, first half; see TA_GEM1_dʑ (Keane 2004: 111-116)."
+    },
+    {
+      "id": "TA_GEM1_m",
+      "phonemes": [
+        "m"
+      ],
+      "surface": "mː",
+      "followed_by_phoneme": [
+        "ma",
+        "m"
+      ],
+      "notes": "Gemination, first half; see TA_GEM1_dʑ (Keane 2004: 111-116)."
+    },
+    {
+      "id": "TA_GEM1_n",
+      "phonemes": [
+        "n"
+      ],
+      "surface": "nː",
+      "followed_by_phoneme": [
+        "na",
+        "n"
+      ],
+      "notes": "Gemination, first half; see TA_GEM1_dʑ (Keane 2004: 111-116)."
+    },
+    {
+      "id": "TA_GEM1_p",
+      "phonemes": [
+        "p"
+      ],
+      "surface": "pː",
+      "followed_by_phoneme": [
+        "pa",
+        "p"
+      ],
+      "notes": "Gemination, first half; see TA_GEM1_dʑ (Keane 2004: 111-116)."
+    },
+    {
+      "id": "TA_GEM1_r",
+      "phonemes": [
+        "r"
+      ],
+      "surface": "rː",
+      "followed_by_phoneme": [
+        "ra",
+        "r"
+      ],
+      "notes": "Gemination, first half; see TA_GEM1_dʑ (Keane 2004: 111-116)."
+    },
+    {
+      "id": "TA_GEM1_s",
+      "phonemes": [
+        "s"
+      ],
+      "surface": "sː",
+      "followed_by_phoneme": [
+        "sa",
+        "s"
+      ],
+      "notes": "Gemination, first half; see TA_GEM1_dʑ (Keane 2004: 111-116)."
+    },
+    {
+      "id": "TA_GEM1_tɕ",
+      "phonemes": [
+        "tɕ"
+      ],
+      "surface": "tɕː",
+      "followed_by_phoneme": [
+        "tɕa",
+        "tɕ"
+      ],
+      "notes": "Gemination, first half; see TA_GEM1_dʑ (Keane 2004: 111-116)."
+    },
+    {
+      "id": "TA_GEM1_t̪",
+      "phonemes": [
+        "t̪"
+      ],
+      "surface": "t̪ː",
+      "followed_by_phoneme": [
+        "t̪a",
+        "t̪"
+      ],
+      "notes": "Gemination, first half; see TA_GEM1_dʑ (Keane 2004: 111-116)."
+    },
+    {
+      "id": "TA_GEM1_x",
+      "phonemes": [
+        "x"
+      ],
+      "surface": "xː",
+      "followed_by_phoneme": [
+        "xa",
+        "x"
+      ],
+      "notes": "Gemination, first half; see TA_GEM1_dʑ (Keane 2004: 111-116)."
+    },
+    {
+      "id": "TA_GEM1_ŋ",
+      "phonemes": [
+        "ŋ"
+      ],
+      "surface": "ŋː",
+      "followed_by_phoneme": [
+        "ŋa",
+        "ŋ"
+      ],
+      "notes": "Gemination, first half; see TA_GEM1_dʑ (Keane 2004: 111-116)."
+    },
+    {
+      "id": "TA_GEM1_ɭ",
+      "phonemes": [
+        "ɭ"
+      ],
+      "surface": "ɭː",
+      "followed_by_phoneme": [
+        "ɭa",
+        "ɭ"
+      ],
+      "notes": "Gemination, first half; see TA_GEM1_dʑ (Keane 2004: 111-116)."
+    },
+    {
+      "id": "TA_GEM1_ɲ",
+      "phonemes": [
+        "ɲ"
+      ],
+      "surface": "ɲː",
+      "followed_by_phoneme": [
+        "ɲa",
+        "ɲ"
+      ],
+      "notes": "Gemination, first half; see TA_GEM1_dʑ (Keane 2004: 111-116)."
+    },
+    {
+      "id": "TA_GEM1_ɳ",
+      "phonemes": [
+        "ɳ"
+      ],
+      "surface": "ɳː",
+      "followed_by_phoneme": [
+        "ɳa",
+        "ɳ"
+      ],
+      "notes": "Gemination, first half; see TA_GEM1_dʑ (Keane 2004: 111-116)."
+    },
+    {
+      "id": "TA_GEM1_ɻ",
+      "phonemes": [
+        "ɻ"
+      ],
+      "surface": "ɻː",
+      "followed_by_phoneme": [
+        "ɻa",
+        "ɻ"
+      ],
+      "notes": "Gemination, first half; see TA_GEM1_dʑ (Keane 2004: 111-116)."
+    },
+    {
+      "id": "TA_GEM1_ʂ",
+      "phonemes": [
+        "ʂ"
+      ],
+      "surface": "ʂː",
+      "followed_by_phoneme": [
+        "ʂa",
+        "ʂ"
+      ],
+      "notes": "Gemination, first half; see TA_GEM1_dʑ (Keane 2004: 111-116)."
+    },
+    {
+      "id": "TA_GEM1_ʃ",
+      "phonemes": [
+        "ʃ"
+      ],
+      "surface": "ʃː",
+      "followed_by_phoneme": [
+        "ʃa",
+        "ʃ"
+      ],
+      "notes": "Gemination, first half; see TA_GEM1_dʑ (Keane 2004: 111-116)."
+    },
+    {
+      "id": "TA_GEM1_ʃriː",
+      "phonemes": [
+        "ʃriː"
+      ],
+      "surface": "ʃriːː",
+      "followed_by_phoneme": [
+        "ʃriːa",
+        "ʃriː"
+      ],
+      "notes": "Gemination, first half; see TA_GEM1_dʑ (Keane 2004: 111-116)."
+    },
+    {
+      "id": "TA_GEM1_ʈ",
+      "phonemes": [
+        "ʈ"
+      ],
+      "surface": "ʈː",
+      "followed_by_phoneme": [
+        "ʈa",
+        "ʈ"
+      ],
+      "notes": "Gemination, first half; see TA_GEM1_dʑ (Keane 2004: 111-116)."
+    },
+    {
+      "id": "TA_GEM1_ʋ",
+      "phonemes": [
+        "ʋ"
+      ],
+      "surface": "ʋː",
+      "followed_by_phoneme": [
+        "ʋa",
+        "ʋ"
+      ],
+      "notes": "Gemination, first half; see TA_GEM1_dʑ (Keane 2004: 111-116)."
+    },
+    {
+      "id": "TA_GEM2_dʒa",
+      "phonemes": [
+        "dʒa"
+      ],
+      "surface": "a",
+      "preceded_by_phoneme": [
+        "dʒ"
+      ],
+      "notes": "Tamil gemination, second half (see TA_GEM1_*): the second member of a geminate contributes only its vowel, the consonant itself having been absorbed into the length mark on the first member (Keane 2004: 111-116). Firing before the voicing rules is what keeps a geminate voiceless — பக்கம் [pakːam], never *[paɡam] (Keane 2004: 113: voicing is blocked in geminates)."
+    },
+    {
+      "id": "TA_GEM2_dʒ",
+      "phonemes": [
+        "dʒ"
+      ],
+      "surface": "",
+      "preceded_by_phoneme": [
+        "dʒ"
+      ],
+      "followed_by_phoneme": [
+        "a",
+        "aː",
+        "i",
+        "iː",
+        "u",
+        "uː",
+        "e",
+        "eː",
+        "ai",
+        "o",
+        "oː",
+        "au"
+      ],
+      "notes": "Gemination, second half; see TA_GEM2_dʑa (Keane 2004: 111-116)."
+    },
+    {
+      "id": "TA_GEM2_ha",
+      "phonemes": [
+        "ha"
+      ],
+      "surface": "a",
+      "preceded_by_phoneme": [
+        "h"
+      ],
+      "notes": "Gemination, second half; see TA_GEM2_dʑa (Keane 2004: 111-116)."
+    },
+    {
+      "id": "TA_GEM2_h",
+      "phonemes": [
+        "h"
+      ],
+      "surface": "",
+      "preceded_by_phoneme": [
+        "h"
+      ],
+      "followed_by_phoneme": [
+        "a",
+        "aː",
+        "i",
+        "iː",
+        "u",
+        "uː",
+        "e",
+        "eː",
+        "ai",
+        "o",
+        "oː",
+        "au"
+      ],
+      "notes": "Gemination, second half; see TA_GEM2_dʑa (Keane 2004: 111-116)."
+    },
+    {
+      "id": "TA_GEM2_ja",
+      "phonemes": [
+        "ja"
+      ],
+      "surface": "a",
+      "preceded_by_phoneme": [
+        "j"
+      ],
+      "notes": "Gemination, second half; see TA_GEM2_dʑa (Keane 2004: 111-116)."
+    },
+    {
+      "id": "TA_GEM2_j",
+      "phonemes": [
+        "j"
+      ],
+      "surface": "",
+      "preceded_by_phoneme": [
+        "j"
+      ],
+      "followed_by_phoneme": [
+        "a",
+        "aː",
+        "i",
+        "iː",
+        "u",
+        "uː",
+        "e",
+        "eː",
+        "ai",
+        "o",
+        "oː",
+        "au"
+      ],
+      "notes": "Gemination, second half; see TA_GEM2_dʑa (Keane 2004: 111-116)."
+    },
+    {
+      "id": "TA_GEM2_ka",
+      "phonemes": [
+        "ka"
+      ],
+      "surface": "a",
+      "preceded_by_phoneme": [
+        "k"
+      ],
+      "notes": "Gemination, second half; see TA_GEM2_dʑa (Keane 2004: 111-116)."
+    },
+    {
+      "id": "TA_GEM2_k",
+      "phonemes": [
+        "k"
+      ],
+      "surface": "",
+      "preceded_by_phoneme": [
+        "k"
+      ],
+      "followed_by_phoneme": [
+        "a",
+        "aː",
+        "i",
+        "iː",
+        "u",
+        "uː",
+        "e",
+        "eː",
+        "ai",
+        "o",
+        "oː",
+        "au"
+      ],
+      "notes": "Gemination, second half; see TA_GEM2_dʑa (Keane 2004: 111-116)."
+    },
+    {
+      "id": "TA_GEM2_kʂa",
+      "phonemes": [
+        "kʂa"
+      ],
+      "surface": "a",
+      "preceded_by_phoneme": [
+        "kʂ"
+      ],
+      "notes": "Gemination, second half; see TA_GEM2_dʑa (Keane 2004: 111-116)."
+    },
+    {
+      "id": "TA_GEM2_kʂ",
+      "phonemes": [
+        "kʂ"
+      ],
+      "surface": "",
+      "preceded_by_phoneme": [
+        "kʂ"
+      ],
+      "followed_by_phoneme": [
+        "a",
+        "aː",
+        "i",
+        "iː",
+        "u",
+        "uː",
+        "e",
+        "eː",
+        "ai",
+        "o",
+        "oː",
+        "au"
+      ],
+      "notes": "Gemination, second half; see TA_GEM2_dʑa (Keane 2004: 111-116)."
+    },
+    {
+      "id": "TA_GEM2_la",
+      "phonemes": [
+        "la"
+      ],
+      "surface": "a",
+      "preceded_by_phoneme": [
+        "l"
+      ],
+      "notes": "Gemination, second half; see TA_GEM2_dʑa (Keane 2004: 111-116)."
+    },
+    {
+      "id": "TA_GEM2_l",
+      "phonemes": [
+        "l"
+      ],
+      "surface": "",
+      "preceded_by_phoneme": [
+        "l"
+      ],
+      "followed_by_phoneme": [
+        "a",
+        "aː",
+        "i",
+        "iː",
+        "u",
+        "uː",
+        "e",
+        "eː",
+        "ai",
+        "o",
+        "oː",
+        "au"
+      ],
+      "notes": "Gemination, second half; see TA_GEM2_dʑa (Keane 2004: 111-116)."
+    },
+    {
+      "id": "TA_GEM2_ma",
+      "phonemes": [
+        "ma"
+      ],
+      "surface": "a",
+      "preceded_by_phoneme": [
+        "m"
+      ],
+      "notes": "Gemination, second half; see TA_GEM2_dʑa (Keane 2004: 111-116)."
+    },
+    {
+      "id": "TA_GEM2_m",
+      "phonemes": [
+        "m"
+      ],
+      "surface": "",
+      "preceded_by_phoneme": [
+        "m"
+      ],
+      "followed_by_phoneme": [
+        "a",
+        "aː",
+        "i",
+        "iː",
+        "u",
+        "uː",
+        "e",
+        "eː",
+        "ai",
+        "o",
+        "oː",
+        "au"
+      ],
+      "notes": "Gemination, second half; see TA_GEM2_dʑa (Keane 2004: 111-116)."
+    },
+    {
+      "id": "TA_GEM2_na",
+      "phonemes": [
+        "na"
+      ],
+      "surface": "a",
+      "preceded_by_phoneme": [
+        "n"
+      ],
+      "notes": "Gemination, second half; see TA_GEM2_dʑa (Keane 2004: 111-116)."
+    },
+    {
+      "id": "TA_GEM2_n",
+      "phonemes": [
+        "n"
+      ],
+      "surface": "",
+      "preceded_by_phoneme": [
+        "n"
+      ],
+      "followed_by_phoneme": [
+        "a",
+        "aː",
+        "i",
+        "iː",
+        "u",
+        "uː",
+        "e",
+        "eː",
+        "ai",
+        "o",
+        "oː",
+        "au"
+      ],
+      "notes": "Gemination, second half; see TA_GEM2_dʑa (Keane 2004: 111-116)."
+    },
+    {
+      "id": "TA_GEM2_pa",
+      "phonemes": [
+        "pa"
+      ],
+      "surface": "a",
+      "preceded_by_phoneme": [
+        "p"
+      ],
+      "notes": "Gemination, second half; see TA_GEM2_dʑa (Keane 2004: 111-116)."
+    },
+    {
+      "id": "TA_GEM2_p",
+      "phonemes": [
+        "p"
+      ],
+      "surface": "",
+      "preceded_by_phoneme": [
+        "p"
+      ],
+      "followed_by_phoneme": [
+        "a",
+        "aː",
+        "i",
+        "iː",
+        "u",
+        "uː",
+        "e",
+        "eː",
+        "ai",
+        "o",
+        "oː",
+        "au"
+      ],
+      "notes": "Gemination, second half; see TA_GEM2_dʑa (Keane 2004: 111-116)."
+    },
+    {
+      "id": "TA_GEM2_ra",
+      "phonemes": [
+        "ra"
+      ],
+      "surface": "a",
+      "preceded_by_phoneme": [
+        "r"
+      ],
+      "notes": "Gemination, second half; see TA_GEM2_dʑa (Keane 2004: 111-116)."
+    },
+    {
+      "id": "TA_GEM2_r",
+      "phonemes": [
+        "r"
+      ],
+      "surface": "",
+      "preceded_by_phoneme": [
+        "r"
+      ],
+      "followed_by_phoneme": [
+        "a",
+        "aː",
+        "i",
+        "iː",
+        "u",
+        "uː",
+        "e",
+        "eː",
+        "ai",
+        "o",
+        "oː",
+        "au"
+      ],
+      "notes": "Gemination, second half; see TA_GEM2_dʑa (Keane 2004: 111-116)."
+    },
+    {
+      "id": "TA_GEM2_sa",
+      "phonemes": [
+        "sa"
+      ],
+      "surface": "a",
+      "preceded_by_phoneme": [
+        "s"
+      ],
+      "notes": "Gemination, second half; see TA_GEM2_dʑa (Keane 2004: 111-116)."
+    },
+    {
+      "id": "TA_GEM2_s",
+      "phonemes": [
+        "s"
+      ],
+      "surface": "",
+      "preceded_by_phoneme": [
+        "s"
+      ],
+      "followed_by_phoneme": [
+        "a",
+        "aː",
+        "i",
+        "iː",
+        "u",
+        "uː",
+        "e",
+        "eː",
+        "ai",
+        "o",
+        "oː",
+        "au"
+      ],
+      "notes": "Gemination, second half; see TA_GEM2_dʑa (Keane 2004: 111-116)."
+    },
+    {
+      "id": "TA_GEM2_tɕa",
+      "phonemes": [
+        "tɕa"
+      ],
+      "surface": "a",
+      "preceded_by_phoneme": [
+        "tɕ"
+      ],
+      "notes": "Gemination, second half; see TA_GEM2_dʑa (Keane 2004: 111-116)."
+    },
+    {
+      "id": "TA_GEM2_tɕ",
+      "phonemes": [
+        "tɕ"
+      ],
+      "surface": "",
+      "preceded_by_phoneme": [
+        "tɕ"
+      ],
+      "followed_by_phoneme": [
+        "a",
+        "aː",
+        "i",
+        "iː",
+        "u",
+        "uː",
+        "e",
+        "eː",
+        "ai",
+        "o",
+        "oː",
+        "au"
+      ],
+      "notes": "Gemination, second half; see TA_GEM2_dʑa (Keane 2004: 111-116)."
+    },
+    {
+      "id": "TA_GEM2_t̪a",
+      "phonemes": [
+        "t̪a"
+      ],
+      "surface": "a",
+      "preceded_by_phoneme": [
+        "t̪"
+      ],
+      "notes": "Gemination, second half; see TA_GEM2_dʑa (Keane 2004: 111-116)."
+    },
+    {
+      "id": "TA_GEM2_t̪",
+      "phonemes": [
+        "t̪"
+      ],
+      "surface": "",
+      "preceded_by_phoneme": [
+        "t̪"
+      ],
+      "followed_by_phoneme": [
+        "a",
+        "aː",
+        "i",
+        "iː",
+        "u",
+        "uː",
+        "e",
+        "eː",
+        "ai",
+        "o",
+        "oː",
+        "au"
+      ],
+      "notes": "Gemination, second half; see TA_GEM2_dʑa (Keane 2004: 111-116)."
+    },
+    {
+      "id": "TA_GEM2_xa",
+      "phonemes": [
+        "xa"
+      ],
+      "surface": "a",
+      "preceded_by_phoneme": [
+        "x"
+      ],
+      "notes": "Gemination, second half; see TA_GEM2_dʑa (Keane 2004: 111-116)."
+    },
+    {
+      "id": "TA_GEM2_x",
+      "phonemes": [
+        "x"
+      ],
+      "surface": "",
+      "preceded_by_phoneme": [
+        "x"
+      ],
+      "followed_by_phoneme": [
+        "a",
+        "aː",
+        "i",
+        "iː",
+        "u",
+        "uː",
+        "e",
+        "eː",
+        "ai",
+        "o",
+        "oː",
+        "au"
+      ],
+      "notes": "Gemination, second half; see TA_GEM2_dʑa (Keane 2004: 111-116)."
+    },
+    {
+      "id": "TA_GEM2_ŋa",
+      "phonemes": [
+        "ŋa"
+      ],
+      "surface": "a",
+      "preceded_by_phoneme": [
+        "ŋ"
+      ],
+      "notes": "Gemination, second half; see TA_GEM2_dʑa (Keane 2004: 111-116)."
+    },
+    {
+      "id": "TA_GEM2_ŋ",
+      "phonemes": [
+        "ŋ"
+      ],
+      "surface": "",
+      "preceded_by_phoneme": [
+        "ŋ"
+      ],
+      "followed_by_phoneme": [
+        "a",
+        "aː",
+        "i",
+        "iː",
+        "u",
+        "uː",
+        "e",
+        "eː",
+        "ai",
+        "o",
+        "oː",
+        "au"
+      ],
+      "notes": "Gemination, second half; see TA_GEM2_dʑa (Keane 2004: 111-116)."
+    },
+    {
+      "id": "TA_GEM2_ɭa",
+      "phonemes": [
+        "ɭa"
+      ],
+      "surface": "a",
+      "preceded_by_phoneme": [
+        "ɭ"
+      ],
+      "notes": "Gemination, second half; see TA_GEM2_dʑa (Keane 2004: 111-116)."
+    },
+    {
+      "id": "TA_GEM2_ɭ",
+      "phonemes": [
+        "ɭ"
+      ],
+      "surface": "",
+      "preceded_by_phoneme": [
+        "ɭ"
+      ],
+      "followed_by_phoneme": [
+        "a",
+        "aː",
+        "i",
+        "iː",
+        "u",
+        "uː",
+        "e",
+        "eː",
+        "ai",
+        "o",
+        "oː",
+        "au"
+      ],
+      "notes": "Gemination, second half; see TA_GEM2_dʑa (Keane 2004: 111-116)."
+    },
+    {
+      "id": "TA_GEM2_ɲa",
+      "phonemes": [
+        "ɲa"
+      ],
+      "surface": "a",
+      "preceded_by_phoneme": [
+        "ɲ"
+      ],
+      "notes": "Gemination, second half; see TA_GEM2_dʑa (Keane 2004: 111-116)."
+    },
+    {
+      "id": "TA_GEM2_ɲ",
+      "phonemes": [
+        "ɲ"
+      ],
+      "surface": "",
+      "preceded_by_phoneme": [
+        "ɲ"
+      ],
+      "followed_by_phoneme": [
+        "a",
+        "aː",
+        "i",
+        "iː",
+        "u",
+        "uː",
+        "e",
+        "eː",
+        "ai",
+        "o",
+        "oː",
+        "au"
+      ],
+      "notes": "Gemination, second half; see TA_GEM2_dʑa (Keane 2004: 111-116)."
+    },
+    {
+      "id": "TA_GEM2_ɳa",
+      "phonemes": [
+        "ɳa"
+      ],
+      "surface": "a",
+      "preceded_by_phoneme": [
+        "ɳ"
+      ],
+      "notes": "Gemination, second half; see TA_GEM2_dʑa (Keane 2004: 111-116)."
+    },
+    {
+      "id": "TA_GEM2_ɳ",
+      "phonemes": [
+        "ɳ"
+      ],
+      "surface": "",
+      "preceded_by_phoneme": [
+        "ɳ"
+      ],
+      "followed_by_phoneme": [
+        "a",
+        "aː",
+        "i",
+        "iː",
+        "u",
+        "uː",
+        "e",
+        "eː",
+        "ai",
+        "o",
+        "oː",
+        "au"
+      ],
+      "notes": "Gemination, second half; see TA_GEM2_dʑa (Keane 2004: 111-116)."
+    },
+    {
+      "id": "TA_GEM2_ɻa",
+      "phonemes": [
+        "ɻa"
+      ],
+      "surface": "a",
+      "preceded_by_phoneme": [
+        "ɻ"
+      ],
+      "notes": "Gemination, second half; see TA_GEM2_dʑa (Keane 2004: 111-116)."
+    },
+    {
+      "id": "TA_GEM2_ɻ",
+      "phonemes": [
+        "ɻ"
+      ],
+      "surface": "",
+      "preceded_by_phoneme": [
+        "ɻ"
+      ],
+      "followed_by_phoneme": [
+        "a",
+        "aː",
+        "i",
+        "iː",
+        "u",
+        "uː",
+        "e",
+        "eː",
+        "ai",
+        "o",
+        "oː",
+        "au"
+      ],
+      "notes": "Gemination, second half; see TA_GEM2_dʑa (Keane 2004: 111-116)."
+    },
+    {
+      "id": "TA_GEM2_ʂa",
+      "phonemes": [
+        "ʂa"
+      ],
+      "surface": "a",
+      "preceded_by_phoneme": [
+        "ʂ"
+      ],
+      "notes": "Gemination, second half; see TA_GEM2_dʑa (Keane 2004: 111-116)."
+    },
+    {
+      "id": "TA_GEM2_ʂ",
+      "phonemes": [
+        "ʂ"
+      ],
+      "surface": "",
+      "preceded_by_phoneme": [
+        "ʂ"
+      ],
+      "followed_by_phoneme": [
+        "a",
+        "aː",
+        "i",
+        "iː",
+        "u",
+        "uː",
+        "e",
+        "eː",
+        "ai",
+        "o",
+        "oː",
+        "au"
+      ],
+      "notes": "Gemination, second half; see TA_GEM2_dʑa (Keane 2004: 111-116)."
+    },
+    {
+      "id": "TA_GEM2_ʃa",
+      "phonemes": [
+        "ʃa"
+      ],
+      "surface": "a",
+      "preceded_by_phoneme": [
+        "ʃ"
+      ],
+      "notes": "Gemination, second half; see TA_GEM2_dʑa (Keane 2004: 111-116)."
+    },
+    {
+      "id": "TA_GEM2_ʃ",
+      "phonemes": [
+        "ʃ"
+      ],
+      "surface": "",
+      "preceded_by_phoneme": [
+        "ʃ"
+      ],
+      "followed_by_phoneme": [
+        "a",
+        "aː",
+        "i",
+        "iː",
+        "u",
+        "uː",
+        "e",
+        "eː",
+        "ai",
+        "o",
+        "oː",
+        "au"
+      ],
+      "notes": "Gemination, second half; see TA_GEM2_dʑa (Keane 2004: 111-116)."
+    },
+    {
+      "id": "TA_GEM2_ʃriːa",
+      "phonemes": [
+        "ʃriːa"
+      ],
+      "surface": "a",
+      "preceded_by_phoneme": [
+        "ʃriː"
+      ],
+      "notes": "Gemination, second half; see TA_GEM2_dʑa (Keane 2004: 111-116)."
+    },
+    {
+      "id": "TA_GEM2_ʃriː",
+      "phonemes": [
+        "ʃriː"
+      ],
+      "surface": "",
+      "preceded_by_phoneme": [
+        "ʃriː"
+      ],
+      "followed_by_phoneme": [
+        "a",
+        "aː",
+        "i",
+        "iː",
+        "u",
+        "uː",
+        "e",
+        "eː",
+        "ai",
+        "o",
+        "oː",
+        "au"
+      ],
+      "notes": "Gemination, second half; see TA_GEM2_dʑa (Keane 2004: 111-116)."
+    },
+    {
+      "id": "TA_GEM2_ʈa",
+      "phonemes": [
+        "ʈa"
+      ],
+      "surface": "a",
+      "preceded_by_phoneme": [
+        "ʈ"
+      ],
+      "notes": "Gemination, second half; see TA_GEM2_dʑa (Keane 2004: 111-116)."
+    },
+    {
+      "id": "TA_GEM2_ʈ",
+      "phonemes": [
+        "ʈ"
+      ],
+      "surface": "",
+      "preceded_by_phoneme": [
+        "ʈ"
+      ],
+      "followed_by_phoneme": [
+        "a",
+        "aː",
+        "i",
+        "iː",
+        "u",
+        "uː",
+        "e",
+        "eː",
+        "ai",
+        "o",
+        "oː",
+        "au"
+      ],
+      "notes": "Gemination, second half; see TA_GEM2_dʑa (Keane 2004: 111-116)."
+    },
+    {
+      "id": "TA_GEM2_ʋa",
+      "phonemes": [
+        "ʋa"
+      ],
+      "surface": "a",
+      "preceded_by_phoneme": [
+        "ʋ"
+      ],
+      "notes": "Gemination, second half; see TA_GEM2_dʑa (Keane 2004: 111-116)."
+    },
+    {
+      "id": "TA_GEM2_ʋ",
+      "phonemes": [
+        "ʋ"
+      ],
+      "surface": "",
+      "preceded_by_phoneme": [
+        "ʋ"
+      ],
+      "followed_by_phoneme": [
+        "a",
+        "aː",
+        "i",
+        "iː",
+        "u",
+        "uː",
+        "e",
+        "eː",
+        "ai",
+        "o",
+        "oː",
+        "au"
+      ],
+      "notes": "Gemination, second half; see TA_GEM2_dʑa (Keane 2004: 111-116)."
+    },
+    {
+      "id": "TA_NOVOICE_ka",
+      "phonemes": [
+        "ka"
+      ],
+      "surface": "ka",
+      "preceded_by_phoneme": [
+        "b",
+        "dʑ",
+        "dʒ",
+        "d̪",
+        "h",
+        "j",
+        "k",
+        "kʂ",
+        "l",
+        "p",
+        "r",
+        "ɾ",
+        "s",
+        "tɕ",
+        "tɾ",
+        "t̪",
+        "v",
+        "x",
+        "ð",
+        "ɖ",
+        "ɡ",
+        "ɭ",
+        "ɻ",
+        "ʂ",
+        "ʃ",
+        "ʃriː",
+        "ʈ",
+        "ʋ"
+      ],
+      "notes": "Voicing guard. Tamil has NO phonemic voicing contrast in stops: voicing is positional (Keane 2004: 111-116; Keane 2004: 112, 'Obstruents': 'voicing is not contrastive in the native Dravidian vocabulary ... In word-initial position voiceless plosives are found ... Voiced obstruents occur word-internally after nasal segments'). A stop is VOICELESS word-initially and when it follows another vowel-less obstruent or liquid (i.e. inside a cluster that is not nasal+stop): பார்ப்பு, கற்க. This identity rewrite fires first in exactly that context and — first match wins — blocks TA_VOICE_*. Both rhotic letters are in the list — the tap ⟨ர⟩ [ɾ] and the trill ⟨ற⟩ [r] behave alike as the first member of a cluster: சார்பு [tɕaːɾpu], கற்க [karka]. Nasals are deliberately absent from the list: a stop AFTER a nasal is voiced (TA_VOICE_*), தங்கம் [t̪aŋɡam]."
+    },
+    {
+      "id": "TA_NOVOICE_k",
+      "phonemes": [
+        "k"
+      ],
+      "surface": "k",
+      "preceded_by_phoneme": [
+        "b",
+        "dʑ",
+        "dʒ",
+        "d̪",
+        "h",
+        "j",
+        "k",
+        "kʂ",
+        "l",
+        "p",
+        "r",
+        "ɾ",
+        "s",
+        "tɕ",
+        "tɾ",
+        "t̪",
+        "v",
+        "x",
+        "ð",
+        "ɖ",
+        "ɡ",
+        "ɭ",
+        "ɻ",
+        "ʂ",
+        "ʃ",
+        "ʃriː",
+        "ʈ",
+        "ʋ"
+      ],
+      "notes": "Voicing guard; see TA_NOVOICE_ka (Keane 2004: 111-116)."
+    },
+    {
+      "id": "TA_NOVOICE_pa",
+      "phonemes": [
+        "pa"
+      ],
+      "surface": "pa",
+      "preceded_by_phoneme": [
+        "b",
+        "dʑ",
+        "dʒ",
+        "d̪",
+        "h",
+        "j",
+        "k",
+        "kʂ",
+        "l",
+        "p",
+        "r",
+        "ɾ",
+        "s",
+        "tɕ",
+        "tɾ",
+        "t̪",
+        "v",
+        "x",
+        "ð",
+        "ɖ",
+        "ɡ",
+        "ɭ",
+        "ɻ",
+        "ʂ",
+        "ʃ",
+        "ʃriː",
+        "ʈ",
+        "ʋ"
+      ],
+      "notes": "Voicing guard; see TA_NOVOICE_ka (Keane 2004: 111-116)."
+    },
+    {
+      "id": "TA_NOVOICE_p",
+      "phonemes": [
+        "p"
+      ],
+      "surface": "p",
+      "preceded_by_phoneme": [
+        "b",
+        "dʑ",
+        "dʒ",
+        "d̪",
+        "h",
+        "j",
+        "k",
+        "kʂ",
+        "l",
+        "p",
+        "r",
+        "ɾ",
+        "s",
+        "tɕ",
+        "tɾ",
+        "t̪",
+        "v",
+        "x",
+        "ð",
+        "ɖ",
+        "ɡ",
+        "ɭ",
+        "ɻ",
+        "ʂ",
+        "ʃ",
+        "ʃriː",
+        "ʈ",
+        "ʋ"
+      ],
+      "notes": "Voicing guard; see TA_NOVOICE_ka (Keane 2004: 111-116)."
+    },
+    {
+      "id": "TA_NOVOICE_tɕa",
+      "phonemes": [
+        "tɕa"
+      ],
+      "surface": "tɕa",
+      "preceded_by_phoneme": [
+        "b",
+        "dʑ",
+        "dʒ",
+        "d̪",
+        "h",
+        "j",
+        "k",
+        "kʂ",
+        "l",
+        "p",
+        "r",
+        "ɾ",
+        "s",
+        "tɕ",
+        "tɾ",
+        "t̪",
+        "v",
+        "x",
+        "ð",
+        "ɖ",
+        "ɡ",
+        "ɭ",
+        "ɻ",
+        "ʂ",
+        "ʃ",
+        "ʃriː",
+        "ʈ",
+        "ʋ"
+      ],
+      "notes": "Voicing guard; see TA_NOVOICE_ka (Keane 2004: 111-116)."
+    },
+    {
+      "id": "TA_NOVOICE_tɕ",
+      "phonemes": [
+        "tɕ"
+      ],
+      "surface": "tɕ",
+      "preceded_by_phoneme": [
+        "b",
+        "dʑ",
+        "dʒ",
+        "d̪",
+        "h",
+        "j",
+        "k",
+        "kʂ",
+        "l",
+        "p",
+        "r",
+        "ɾ",
+        "s",
+        "tɕ",
+        "tɾ",
+        "t̪",
+        "v",
+        "x",
+        "ð",
+        "ɖ",
+        "ɡ",
+        "ɭ",
+        "ɻ",
+        "ʂ",
+        "ʃ",
+        "ʃriː",
+        "ʈ",
+        "ʋ"
+      ],
+      "notes": "Voicing guard; see TA_NOVOICE_ka (Keane 2004: 111-116)."
+    },
+    {
+      "id": "TA_NOVOICE_t̪a",
+      "phonemes": [
+        "t̪a"
+      ],
+      "surface": "t̪a",
+      "preceded_by_phoneme": [
+        "b",
+        "dʑ",
+        "dʒ",
+        "d̪",
+        "h",
+        "j",
+        "k",
+        "kʂ",
+        "l",
+        "p",
+        "r",
+        "ɾ",
+        "s",
+        "tɕ",
+        "tɾ",
+        "t̪",
+        "v",
+        "x",
+        "ð",
+        "ɖ",
+        "ɡ",
+        "ɭ",
+        "ɻ",
+        "ʂ",
+        "ʃ",
+        "ʃriː",
+        "ʈ",
+        "ʋ"
+      ],
+      "notes": "Voicing guard; see TA_NOVOICE_ka (Keane 2004: 111-116)."
+    },
+    {
+      "id": "TA_NOVOICE_t̪",
+      "phonemes": [
+        "t̪"
+      ],
+      "surface": "t̪",
+      "preceded_by_phoneme": [
+        "b",
+        "dʑ",
+        "dʒ",
+        "d̪",
+        "h",
+        "j",
+        "k",
+        "kʂ",
+        "l",
+        "p",
+        "r",
+        "ɾ",
+        "s",
+        "tɕ",
+        "tɾ",
+        "t̪",
+        "v",
+        "x",
+        "ð",
+        "ɖ",
+        "ɡ",
+        "ɭ",
+        "ɻ",
+        "ʂ",
+        "ʃ",
+        "ʃriː",
+        "ʈ",
+        "ʋ"
+      ],
+      "notes": "Voicing guard; see TA_NOVOICE_ka (Keane 2004: 111-116)."
+    },
+    {
+      "id": "TA_NOVOICE_ʈa",
+      "phonemes": [
+        "ʈa"
+      ],
+      "surface": "ʈa",
+      "preceded_by_phoneme": [
+        "b",
+        "dʑ",
+        "dʒ",
+        "d̪",
+        "h",
+        "j",
+        "k",
+        "kʂ",
+        "l",
+        "p",
+        "r",
+        "ɾ",
+        "s",
+        "tɕ",
+        "tɾ",
+        "t̪",
+        "v",
+        "x",
+        "ð",
+        "ɖ",
+        "ɡ",
+        "ɭ",
+        "ɻ",
+        "ʂ",
+        "ʃ",
+        "ʃriː",
+        "ʈ",
+        "ʋ"
+      ],
+      "notes": "Voicing guard; see TA_NOVOICE_ka (Keane 2004: 111-116)."
+    },
+    {
+      "id": "TA_NOVOICE_ʈ",
+      "phonemes": [
+        "ʈ"
+      ],
+      "surface": "ʈ",
+      "preceded_by_phoneme": [
+        "b",
+        "dʑ",
+        "dʒ",
+        "d̪",
+        "h",
+        "j",
+        "k",
+        "kʂ",
+        "l",
+        "p",
+        "r",
+        "ɾ",
+        "s",
+        "tɕ",
+        "tɾ",
+        "t̪",
+        "v",
+        "x",
+        "ð",
+        "ɖ",
+        "ɡ",
+        "ɭ",
+        "ɻ",
+        "ʂ",
+        "ʃ",
+        "ʃriː",
+        "ʈ",
+        "ʋ"
+      ],
+      "notes": "Voicing guard; see TA_NOVOICE_ka (Keane 2004: 111-116)."
+    },
+    {
+      "id": "TA_VOICE_N_ka",
+      "phonemes": [
+        "ka"
+      ],
+      "surface": "ɡa",
+      "preceded_by_phoneme": [
+        "ŋ",
+        "ɲ",
+        "ɳ",
+        "n",
+        "m"
+      ],
+      "notes": "Intervocalic and post-nasal voicing of the stop series — the central allophonic process of Tamil (Keane 2004: 111-116, Journal of the IPA 34(1); Krishnamurti 2003: 4.2; Schiffman 1999: ch. 1). A single plosive between vowels, or after a nasal, is voiced: புத்தகம் [put̪ːaɡam], எதிரி [ed̪iɾi], நன்கொடை [nanɡoɖai]. Every other medial context is ruled out before this rule is reached (TA_GEM*_ for geminates, TA_NOVOICE_* for obstruent/liquid clusters), and word_initial=false excludes the initial position, so what is left IS the intervocalic / post-nasal environment: the previous lattice slot is either a vowel, a consonant that carries its own vowel, or a vowel-less nasal. The palatal ⟨ச⟩ lenites to [s] between vowels but voices to [dʑ] after a nasal (Keane 2004: 113; Schiffman 1999), so it takes two rules rather than one."
+    },
+    {
+      "id": "TA_VOICE_N_k",
+      "phonemes": [
+        "k"
+      ],
+      "surface": "ɡ",
+      "preceded_by_phoneme": [
+        "ŋ",
+        "ɲ",
+        "ɳ",
+        "n",
+        "m"
+      ],
+      "followed_by_phoneme": [
+        "a",
+        "aː",
+        "i",
+        "iː",
+        "u",
+        "uː",
+        "e",
+        "eː",
+        "ai",
+        "o",
+        "oː",
+        "au"
+      ],
+      "notes": "Intervocalic / post-nasal voicing; see TA_VOICE_N_ka (Keane 2004: 111-116; Krishnamurti 2003: 4.2)."
+    },
+    {
+      "id": "TA_VOICE_N_pa",
+      "phonemes": [
+        "pa"
+      ],
+      "surface": "ba",
+      "preceded_by_phoneme": [
+        "ŋ",
+        "ɲ",
+        "ɳ",
+        "n",
+        "m"
+      ],
+      "notes": "Intervocalic / post-nasal voicing; see TA_VOICE_N_ka (Keane 2004: 111-116; Krishnamurti 2003: 4.2)."
+    },
+    {
+      "id": "TA_VOICE_N_p",
+      "phonemes": [
+        "p"
+      ],
+      "surface": "b",
+      "preceded_by_phoneme": [
+        "ŋ",
+        "ɲ",
+        "ɳ",
+        "n",
+        "m"
+      ],
+      "followed_by_phoneme": [
+        "a",
+        "aː",
+        "i",
+        "iː",
+        "u",
+        "uː",
+        "e",
+        "eː",
+        "ai",
+        "o",
+        "oː",
+        "au"
+      ],
+      "notes": "Intervocalic / post-nasal voicing; see TA_VOICE_N_ka (Keane 2004: 111-116; Krishnamurti 2003: 4.2)."
+    },
+    {
+      "id": "TA_VOICE_N_tɕa",
+      "phonemes": [
+        "tɕa"
+      ],
+      "surface": "dʑa",
+      "preceded_by_phoneme": [
+        "ŋ",
+        "ɲ",
+        "ɳ",
+        "n",
+        "m"
+      ],
+      "notes": "Intervocalic / post-nasal voicing; see TA_VOICE_N_ka (Keane 2004: 111-116; Krishnamurti 2003: 4.2)."
+    },
+    {
+      "id": "TA_VOICE_N_tɕ",
+      "phonemes": [
+        "tɕ"
+      ],
+      "surface": "dʑ",
+      "preceded_by_phoneme": [
+        "ŋ",
+        "ɲ",
+        "ɳ",
+        "n",
+        "m"
+      ],
+      "followed_by_phoneme": [
+        "a",
+        "aː",
+        "i",
+        "iː",
+        "u",
+        "uː",
+        "e",
+        "eː",
+        "ai",
+        "o",
+        "oː",
+        "au"
+      ],
+      "notes": "Intervocalic / post-nasal voicing; see TA_VOICE_N_ka (Keane 2004: 111-116; Krishnamurti 2003: 4.2)."
+    },
+    {
+      "id": "TA_VOICE_N_t̪a",
+      "phonemes": [
+        "t̪a"
+      ],
+      "surface": "d̪a",
+      "preceded_by_phoneme": [
+        "ŋ",
+        "ɲ",
+        "ɳ",
+        "n",
+        "m"
+      ],
+      "notes": "Intervocalic / post-nasal voicing; see TA_VOICE_N_ka (Keane 2004: 111-116; Krishnamurti 2003: 4.2)."
+    },
+    {
+      "id": "TA_VOICE_N_t̪",
+      "phonemes": [
+        "t̪"
+      ],
+      "surface": "d̪",
+      "preceded_by_phoneme": [
+        "ŋ",
+        "ɲ",
+        "ɳ",
+        "n",
+        "m"
+      ],
+      "followed_by_phoneme": [
+        "a",
+        "aː",
+        "i",
+        "iː",
+        "u",
+        "uː",
+        "e",
+        "eː",
+        "ai",
+        "o",
+        "oː",
+        "au"
+      ],
+      "notes": "Intervocalic / post-nasal voicing; see TA_VOICE_N_ka (Keane 2004: 111-116; Krishnamurti 2003: 4.2)."
+    },
+    {
+      "id": "TA_VOICE_N_ʈa",
+      "phonemes": [
+        "ʈa"
+      ],
+      "surface": "ɖa",
+      "preceded_by_phoneme": [
+        "ŋ",
+        "ɲ",
+        "ɳ",
+        "n",
+        "m"
+      ],
+      "notes": "Intervocalic / post-nasal voicing; see TA_VOICE_N_ka (Keane 2004: 111-116; Krishnamurti 2003: 4.2)."
+    },
+    {
+      "id": "TA_VOICE_N_ʈ",
+      "phonemes": [
+        "ʈ"
+      ],
+      "surface": "ɖ",
+      "preceded_by_phoneme": [
+        "ŋ",
+        "ɲ",
+        "ɳ",
+        "n",
+        "m"
+      ],
+      "followed_by_phoneme": [
+        "a",
+        "aː",
+        "i",
+        "iː",
+        "u",
+        "uː",
+        "e",
+        "eː",
+        "ai",
+        "o",
+        "oː",
+        "au"
+      ],
+      "notes": "Intervocalic / post-nasal voicing; see TA_VOICE_N_ka (Keane 2004: 111-116; Krishnamurti 2003: 4.2)."
+    },
+    {
+      "id": "TA_VOICE_ka",
+      "phonemes": [
+        "ka"
+      ],
+      "surface": "ɡa",
+      "word_initial": false,
+      "notes": "Intervocalic / post-nasal voicing; see TA_VOICE_N_ka (Keane 2004: 111-116; Krishnamurti 2003: 4.2)."
+    },
+    {
+      "id": "TA_VOICE_k",
+      "phonemes": [
+        "k"
+      ],
+      "surface": "ɡ",
+      "word_initial": false,
+      "followed_by_phoneme": [
+        "a",
+        "aː",
+        "i",
+        "iː",
+        "u",
+        "uː",
+        "e",
+        "eː",
+        "ai",
+        "o",
+        "oː",
+        "au"
+      ],
+      "notes": "Intervocalic / post-nasal voicing; see TA_VOICE_N_ka (Keane 2004: 111-116; Krishnamurti 2003: 4.2)."
+    },
+    {
+      "id": "TA_VOICE_pa",
+      "phonemes": [
+        "pa"
+      ],
+      "surface": "ba",
+      "word_initial": false,
+      "notes": "Intervocalic / post-nasal voicing; see TA_VOICE_N_ka (Keane 2004: 111-116; Krishnamurti 2003: 4.2)."
+    },
+    {
+      "id": "TA_VOICE_p",
+      "phonemes": [
+        "p"
+      ],
+      "surface": "b",
+      "word_initial": false,
+      "followed_by_phoneme": [
+        "a",
+        "aː",
+        "i",
+        "iː",
+        "u",
+        "uː",
+        "e",
+        "eː",
+        "ai",
+        "o",
+        "oː",
+        "au"
+      ],
+      "notes": "Intervocalic / post-nasal voicing; see TA_VOICE_N_ka (Keane 2004: 111-116; Krishnamurti 2003: 4.2)."
+    },
+    {
+      "id": "TA_VOICE_tɕa",
+      "phonemes": [
+        "tɕa"
+      ],
+      "surface": "sa",
+      "word_initial": false,
+      "notes": "Intervocalic / post-nasal voicing; see TA_VOICE_N_ka (Keane 2004: 111-116; Krishnamurti 2003: 4.2)."
+    },
+    {
+      "id": "TA_VOICE_tɕ",
+      "phonemes": [
+        "tɕ"
+      ],
+      "surface": "s",
+      "word_initial": false,
+      "followed_by_phoneme": [
+        "a",
+        "aː",
+        "i",
+        "iː",
+        "u",
+        "uː",
+        "e",
+        "eː",
+        "ai",
+        "o",
+        "oː",
+        "au"
+      ],
+      "notes": "Intervocalic / post-nasal voicing; see TA_VOICE_N_ka (Keane 2004: 111-116; Krishnamurti 2003: 4.2)."
+    },
+    {
+      "id": "TA_VOICE_t̪a",
+      "phonemes": [
+        "t̪a"
+      ],
+      "surface": "d̪a",
+      "word_initial": false,
+      "notes": "Intervocalic / post-nasal voicing; see TA_VOICE_N_ka (Keane 2004: 111-116; Krishnamurti 2003: 4.2)."
+    },
+    {
+      "id": "TA_VOICE_t̪",
+      "phonemes": [
+        "t̪"
+      ],
+      "surface": "d̪",
+      "word_initial": false,
+      "followed_by_phoneme": [
+        "a",
+        "aː",
+        "i",
+        "iː",
+        "u",
+        "uː",
+        "e",
+        "eː",
+        "ai",
+        "o",
+        "oː",
+        "au"
+      ],
+      "notes": "Intervocalic / post-nasal voicing; see TA_VOICE_N_ka (Keane 2004: 111-116; Krishnamurti 2003: 4.2)."
+    },
+    {
+      "id": "TA_VOICE_ʈa",
+      "phonemes": [
+        "ʈa"
+      ],
+      "surface": "ɖa",
+      "word_initial": false,
+      "notes": "Intervocalic / post-nasal voicing; see TA_VOICE_N_ka (Keane 2004: 111-116; Krishnamurti 2003: 4.2)."
+    },
+    {
+      "id": "TA_VOICE_ʈ",
+      "phonemes": [
+        "ʈ"
+      ],
+      "surface": "ɖ",
+      "word_initial": false,
+      "followed_by_phoneme": [
+        "a",
+        "aː",
+        "i",
+        "iː",
+        "u",
+        "uː",
+        "e",
+        "eː",
+        "ai",
+        "o",
+        "oː",
+        "au"
+      ],
+      "notes": "Intervocalic / post-nasal voicing; see TA_VOICE_N_ka (Keane 2004: 111-116; Krishnamurti 2003: 4.2)."
+    }
+  ],
+  "audit": {
+    "wikipron": {
+      "conclusion": "at_ceiling_documented",
+      "measured": "A 2026 wave audit tested whether the wikipron/ta row's residual PER (0.3757, n=10093) is unmodelled stop-voicing allophony; a full confusion-matrix decomposition shows the dominant edits are narrow allophonic vowel-quality notation (a->ɐ, i->ɪ, u->ʊ, a->ɑ; ~28,070 of ~28,400 total edits) against only ~288 stop-voicing edits (~1%). The gold writes narrow allophonic vowel symbols even in non-reduced syllables, while Keane (2004) treats /i a u/ as the phonemic inventory; reproducing the gold's narrow transcription would misdescribe the language rather than model a positional process, so the existing 102 TA_GEM*/TA_NOVOICE_*/TA_VOICE_* rules were kept unchanged.",
+      "reference": "spec notes"
+    }
+  }
+}

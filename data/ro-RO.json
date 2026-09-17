@@ -1,0 +1,485 @@
+{
+  "code": "ro-RO",
+  "name": "Romanian",
+  "script": "Latin",
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "ă": [
+      "ə"
+    ],
+    "â": [
+      "ɨ"
+    ],
+    "e": [
+      "e",
+      "ɛ"
+    ],
+    "i": [
+      "i"
+    ],
+    "î": [
+      "ɨ"
+    ],
+    "o": [
+      "o"
+    ],
+    "u": [
+      "u"
+    ],
+    "b": [
+      "b"
+    ],
+    "c": [
+      "k",
+      "tʃ"
+    ],
+    "d": [
+      "d"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɡ",
+      "dʒ"
+    ],
+    "h": [
+      "h"
+    ],
+    "j": [
+      "ʒ"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "p": [
+      "p"
+    ],
+    "q": [
+      "k"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "ș": [
+      "ʃ"
+    ],
+    "t": [
+      "t"
+    ],
+    "ț": [
+      "ts"
+    ],
+    "v": [
+      "v"
+    ],
+    "w": [
+      "v",
+      "w"
+    ],
+    "x": [
+      "ks",
+      "ɡz"
+    ],
+    "y": [
+      "i",
+      "j"
+    ],
+    "z": [
+      "z"
+    ],
+    "ch": [
+      "k"
+    ],
+    "gh": [
+      "ɡ"
+    ],
+    "ea": [
+      "e̯a"
+    ],
+    "oa": [
+      "o̯a"
+    ],
+    "au": [
+      "aw"
+    ],
+    "eu": [
+      "ew"
+    ],
+    "ou": [
+      "ow"
+    ],
+    "ua": [
+      "wa"
+    ],
+    "ue": [
+      "we"
+    ],
+    "eau": [
+      "e̯aw"
+    ]
+  },
+  "allophones": {
+    "b": [
+      "b"
+    ],
+    "d": [
+      "d"
+    ],
+    "ɡ": [
+      "ɡ"
+    ],
+    "p": [
+      "p"
+    ],
+    "t": [
+      "t"
+    ],
+    "k": [
+      "k"
+    ],
+    "f": [
+      "f"
+    ],
+    "v": [
+      "v"
+    ],
+    "s": [
+      "s"
+    ],
+    "z": [
+      "z"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "ʒ": [
+      "ʒ"
+    ],
+    "ts": [
+      "ts"
+    ],
+    "tʃ": [
+      "tʃ"
+    ],
+    "dʒ": [
+      "dʒ"
+    ],
+    "h": [
+      "h",
+      "x"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n",
+      "ŋ"
+    ],
+    "l": [
+      "l"
+    ],
+    "r": [
+      "r",
+      "ɾ"
+    ],
+    "j": [
+      "j"
+    ],
+    "w": [
+      "w"
+    ],
+    "a": [
+      "a"
+    ],
+    "ə": [
+      "ə"
+    ],
+    "ɨ": [
+      "ɨ"
+    ],
+    "e": [
+      "e"
+    ],
+    "ɛ": [
+      "ɛ"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "o"
+    ],
+    "u": [
+      "u"
+    ]
+  },
+  "parent": "x-clade-east2714",
+  "ancestors": [
+    {
+      "code": "la-x-balkans",
+      "role": "parent",
+      "weight": 0.65,
+      "notes": "Balkan Romance Vulgar Latin: Eastern Romance branch with no lenition, central vowels, postposed article."
+    },
+    {
+      "code": "sla",
+      "role": "superstrate",
+      "weight": 0.2,
+      "notes": "Slavic superstrate (7th c. onwards): massive lexical influence (~40% of vocabulary), some phonological impact (palatalisation patterns, possible influence on central vowels). Old Church Slavonic was the literary/liturgical language until 16th–17th c."
+    },
+    {
+      "code": "xda",
+      "role": "substrate",
+      "weight": 0.05,
+      "notes": "Dacian/Thracian substrate: ~100+ words shared with Albanian of unknown origin (copil, moș, viezure). Possible influence on central vowels /ə, ɨ/ and postposed article."
+    },
+    {
+      "code": "grc",
+      "role": "adstrate",
+      "weight": 0.03,
+      "notes": "Greek adstrate: Byzantine influence, shared Balkan sprachbund features."
+    },
+    {
+      "code": "tr",
+      "role": "adstrate",
+      "weight": 0.04,
+      "notes": "Turkish adstrate (14th–19th c.): lexical borrowings from Ottoman period."
+    },
+    {
+      "code": "hu",
+      "role": "adstrate",
+      "weight": 0.03,
+      "notes": "Hungarian adstrate: centuries of contact in Transylvania. Lexical exchange."
+    }
+  ],
+  "notes": "Standard Romanian. Eastern Romance, the ONLY Romance language east of the Adriatic. Key features: (1) Central vowels /ə/ (⟨ă⟩) and /ɨ/ (⟨â/î⟩) — unique in Romance. (2) NO intervocalic lenition (lup, foc — not *lub, *fogo). (3) Postposed definite article (lupul 'the wolf'). (4) Rich diphthong/triphthong system. (5) Rhotacism: intervocalic /l/ → /r/ in some words (soare < SOLEM). (6) Massive Slavic vocabulary layer (~40%). (7) Balkan sprachbund member (Chițoran 2001, Sala 2005). (8) Word-initial ⟨e⟩ is [je] in a closed, cited set: the personal pronouns ⟨eu el ea ei ele⟩ and the present/imperfect forms of ⟨a fi⟩ (⟨e este ești era erai eram erați erau⟩) — everywhere else word-initial ⟨e⟩ is [e] (⟨elev⟩, ⟨examen⟩); this is lexical, so it lives in word_exceptions (DOOM3; Chitoran 2002 ch. 2). (9) ⟨ă⟩ is declared in vowel_graphemes because the engine's closed Latin letter inventory does not carry it; without that declaration every vowel-conditioned rule fails next to it (⟨băieți⟩, ⟨păi⟩). STRESS EXEMPTION (research/production tier rule): Romanian lexical stress is phonemic but NOT predictable from standard orthography (cópii 'copies' vs copíi 'children' are spelled identically); the standard norm writes no stress marks, so the spec carries no stress block per docs/quality_tiers.md. CEILING: after ⟨c g⟩ a following ⟨i⟩ before a vowel is silent in inherited vocabulary (⟨cioban⟩ [tʃoˈban]) but syllabic in the neologistic layer (⟨Dacia⟩ [ˈdatʃi.a], ⟨sociologie⟩); the split is lexical, not orthographic, so the spec emits the majority syllabic reading and leaves the rest to a caller-supplied lexicon.",
+  "quality": "production",
+  "script_type": "alphabet",
+  "sources": [
+    {
+      "id": "mallinson1986",
+      "author": "Mallinson, G.",
+      "year": 1986,
+      "title": "Romanian",
+      "publisher": "Croom Helm",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "deletant_alexandrescu1983",
+      "author": "Deletant, D. & Alexandrescu, I.",
+      "year": 1983,
+      "title": "Teach Yourself Romanian",
+      "publisher": "Hodder & Stoughton",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "ladefoged_maddieson1996",
+      "author": "Ladefoged, P. & Maddieson, I.",
+      "year": 1996,
+      "title": "The Sounds of the World's Languages",
+      "publisher": "Blackwell",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "chitoran2002",
+      "author": "Chițoran, I.",
+      "year": 2002,
+      "title": "The Phonology of Romanian: A Constraint-based Approach",
+      "publisher": "Mouton de Gruyter",
+      "url": null,
+      "pages": null,
+      "notes": "Glide formation and the [j]/[i] distribution (ch. 3); asyllabic word-final /i/ and muta cum liquida (ch. 5)."
+    },
+    {
+      "id": "renwick2014",
+      "author": "Renwick, M. E. L.",
+      "year": 2014,
+      "title": "The Phonetics and Phonology of Contrast: The Case of the Romanian Vowel System",
+      "publisher": "De Gruyter Mouton",
+      "url": null,
+      "pages": null,
+      "notes": "Instrumental account of the Romanian vowel system, including final asyllabic /i/."
+    },
+    {
+      "id": "vasiliu1965",
+      "author": "Vasiliu, E.",
+      "year": 1965,
+      "title": "Fonologia limbii române",
+      "publisher": "Editura Științifică",
+      "url": null,
+      "pages": null,
+      "notes": "Phonemic description of Romanian; glide/vowel status of /i/ and /u/."
+    },
+    {
+      "id": "doom3",
+      "author": "Academia Română, Institutul de Lingvistică „Iorgu Iordan – Al. Rosetti”",
+      "year": 2021,
+      "title": "Dicționarul ortografic, ortoepic și morfologic al limbii române (DOOM3)",
+      "publisher": "Univers Enciclopedic",
+      "url": null,
+      "pages": null,
+      "notes": "Orthoepic norm: spelling-to-pronunciation conventions, the ⟨ci/ce/gi/ge⟩ palatal marker, and the asyllabic final ⟨i⟩."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Romanian_language",
+    "https://ro.wikipedia.org/wiki/Limba_română",
+    "https://ro.wikipedia.org/wiki/Limba_rom%C3%A2n%C4%83"
+  ],
+  "timespan": {
+    "start_year": 1600,
+    "end_year": null
+  },
+  "glottolog_code": "roma1327",
+  "iso639_3": "ron",
+  "wikidata_qid": "Q7913",
+  "phoible_id": "roma1327",
+  "wals_code": "rom",
+  "location": {
+    "latitude": 46.3913,
+    "longitude": 24.2256,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Romanian."
+  },
+  "allophone_rules": [
+    {
+      "id": "RO_SOFT_C",
+      "phonemes": [
+        "k"
+      ],
+      "surface": "tʃ",
+      "grapheme": [
+        "c"
+      ],
+      "followed_by": "front_vowel",
+      "notes": "⟨c⟩ is /tʃ/ before ⟨e i⟩; ⟨ch⟩ keeps /k/ (its own grapheme). Chitoran 2002 ch. 2; DOOM3."
+    },
+    {
+      "id": "RO_SOFT_G",
+      "phonemes": [
+        "ɡ"
+      ],
+      "surface": "dʒ",
+      "grapheme": [
+        "g"
+      ],
+      "followed_by": "front_vowel",
+      "notes": "⟨g⟩ is /dʒ/ before ⟨e i⟩; ⟨gh⟩ keeps /ɡ/ (its own grapheme). Chitoran 2002 ch. 2; DOOM3."
+    },
+    {
+      "id": "RO_I_GLIDE_INITIAL",
+      "phonemes": [
+        "i"
+      ],
+      "surface": "j",
+      "word_initial": true,
+      "followed_by": "vowel",
+      "notes": "Word-initial prevocalic /i/ has no onset available and surfaces as the glide [j] — ⟨iarnă⟩ [ˈjarnə], ⟨ied⟩ [jed], ⟨iute⟩ [ˈjute] (Chitoran 2002 ch. 3, glide formation; Vasiliu 1965). A glide needs a nucleus after it and the word needs one at all, so the rule is blocked before another ⟨i⟩ and on a word with no other nucleus: ⟨ii⟩ is [ij], never [jj] (Chitoran 2002 ch. 3; Hayes 2009 ch. 13).",
+      "requires_other_nucleus": true,
+      "followed_by_grapheme_not": [
+        "i"
+      ]
+    },
+    {
+      "id": "RO_I_GLIDE_POSTVOCALIC",
+      "phonemes": [
+        "i"
+      ],
+      "surface": "j",
+      "preceded_by": "vowel",
+      "notes": "Post-vocalic ⟨i⟩ is the glide [j], falling in a diphthong (⟨mai⟩ [maj], ⟨doi⟩ [doj], ⟨căi⟩ [kəj]) or in the onset of the next syllable (⟨baie⟩ [ˈbaje], ⟨ploaie⟩ [ˈplo̯aje]); the plural+article ⟨-ii⟩ is [ij] (⟨copii⟩ [koˈpij]). Post-consonantal ⟨i⟩ is NOT covered: there it is syllabic and stands in hiatus (⟨Românie⟩ [romɨˈni.e], ⟨abația⟩ [abaˈtsi.a]) — Chitoran 2002 ch. 3. A glide needs a nucleus after it and the word needs one at all, so the rule is blocked before another ⟨i⟩ and on a word with no other nucleus: ⟨ii⟩ is [ij], never [jj] (Chitoran 2002 ch. 3; Hayes 2009 ch. 13).",
+      "requires_other_nucleus": true,
+      "followed_by_grapheme_not": [
+        "i"
+      ]
+    },
+    {
+      "id": "RO_FINAL_I_ASYLLABIC",
+      "phonemes": [
+        "i"
+      ],
+      "surface": "",
+      "word_final": true,
+      "preceded_by_phoneme": [
+        "b",
+        "d",
+        "dʒ",
+        "f",
+        "ɡ",
+        "h",
+        "k",
+        "m",
+        "n",
+        "p",
+        "s",
+        "ʃ",
+        "t",
+        "ts",
+        "tʃ",
+        "v",
+        "z",
+        "ʒ"
+      ],
+      "requires_other_nucleus": true,
+      "mutates_neighbor": "ʲ",
+      "mutates_neighbor_side": "preceding",
+      "notes": "The word-final desinential ⟨i⟩ (plural, 2sg) is asyllabic: it deletes and palatalizes the preceding consonant — ⟨lupi⟩ [lupʲ], ⟨pomi⟩ [pomʲ], ⟨ochi⟩ [okʲ], ⟨vezi⟩ [vezʲ] (Chitoran 2002 ch. 5, 'final devoiced i'; Renwick 2014; DOOM3). `requires_other_nucleus` keeps the monosyllables that have no other vowel intact — ⟨și⟩ [ʃi], ⟨fi⟩ [fi], ⟨zi⟩ [zi]. Liquids are excluded here and handled by RO_FINAL_I_ASYLLABIC_LIQUID so that the muta cum liquida cluster keeps a syllabic [i]."
+    },
+    {
+      "id": "RO_FINAL_I_ASYLLABIC_LIQUID",
+      "phonemes": [
+        "i"
+      ],
+      "surface": "",
+      "word_final": true,
+      "preceded_by_phoneme": [
+        "l",
+        "r"
+      ],
+      "preceded_by_2": "vowel",
+      "requires_other_nucleus": true,
+      "mutates_neighbor": "ʲ",
+      "mutates_neighbor_side": "preceding",
+      "notes": "The same desinence after a liquid, but ONLY where the liquid is not the second member of a muta cum liquida onset: ⟨adevăruri⟩ [adeˈvərurʲ], ⟨fii⟩-type aside. After obstruent+liquid the /i/ must be syllabic because the glide cannot join a complex onset — ⟨noștri⟩ [ˈnoʃtri], ⟨codri⟩ [ˈkodri], ⟨acri⟩ [ˈakri] (Chitoran 2002 ch. 3 and ch. 5, on muta cum liquida; DOOM3)."
+    }
+  ],
+  "word_exceptions": {
+    "eu": "jew",
+    "el": "jel",
+    "ea": "ja",
+    "ei": "jej",
+    "ele": "jele",
+    "este": "jeste",
+    "e": "je",
+    "ești": "jeʃtʲ",
+    "eram": "jeram",
+    "erai": "jeraj",
+    "era": "jera",
+    "erați": "jeratsʲ",
+    "erau": "jeraw"
+  },
+  "vowel_graphemes": [
+    "ă"
+  ]
+}

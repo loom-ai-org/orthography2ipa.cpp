@@ -1,0 +1,91 @@
+{
+  "code": "bbc",
+  "name": "Toba Batak",
+  "script": "Batak",
+  "script_type": "abugida",
+  "quality": "stub",
+  "graphemes": {},
+  "allophones": {},
+  "parent": "poz",
+  "ancestors": [
+    {
+      "code": "poz",
+      "role": "parent",
+      "weight": 0.9,
+      "notes": "Northwest Sumatra–Barrier Islands / Batak branch of Malayo-Polynesian."
+    }
+  ],
+  "notes": "Toba Batak (Hata Batak Toba), North Sumatra, Indonesia. STUB: the grapheme inventory is NOT yet specified. Wikidata records the indigenous Batak script (Surat Batak), an abugida with an inherent vowel; in practice Toba Batak is today written in the Latin alphabet, and a Latin-orthography map (not attempted here) would be the practical input contract. No grapheme map is claimed for either script. PHONEME INVENTORY: attested inventory from PHOIBLE (glottocode bata1289), declared directly. `graphemes` stays empty because none of that depends on the writing system: the sounds of this language are known regardless of whether — or how — it is written.",
+  "iso639_3": "bbc",
+  "glottolog_code": "bata1289",
+  "wikidata_qid": "Q33017",
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Toba_Batak_language",
+    "https://bbc.wikipedia.org/wiki/Hata_Batak_Toba"
+  ],
+  "sources": [
+    {
+      "id": "tobabatak_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Toba Batak language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Toba_Batak_language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Toba_Batak_language",
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "phoible",
+      "author": "Moran, Steven & McCloy, Daniel (eds.)",
+      "year": 2019,
+      "title": "PHOIBLE 2.0",
+      "publisher": "Max Planck Institute for the Science of Human History",
+      "url": "https://phoible.org/",
+      "pages": null,
+      "notes": "Attested phoneme inventory for glottocode bata1289."
+    }
+  ],
+  "phonemes": [
+    "a",
+    "b",
+    "d",
+    "d̠ʒ",
+    "d̪|d",
+    "e",
+    "h",
+    "i",
+    "j",
+    "k",
+    "l",
+    "l̪|l",
+    "m",
+    "n",
+    "n̪|n",
+    "o",
+    "o̞",
+    "p",
+    "r",
+    "s",
+    "s̪|s",
+    "t",
+    "t̠ʃ",
+    "t̪|t",
+    "u",
+    "w",
+    "æ",
+    "ŋ",
+    "ɔ",
+    "ə",
+    "ɛ",
+    "ɡ",
+    "ʀ",
+    "ʔ"
+  ],
+  "location": {
+    "latitude": 2.35498,
+    "longitude": 99.1761,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Batak Toba."
+  }
+}

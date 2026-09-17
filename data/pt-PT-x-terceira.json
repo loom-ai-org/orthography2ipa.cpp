@@ -1,0 +1,237 @@
+{
+  "code": "pt-PT-x-terceira",
+  "name": "Terceirense Portuguese",
+  "script": "Latin",
+  "graphemes_base": "pt-PT",
+  "graphemes": {},
+  "allophones_base": "pt-PT",
+  "allophones": {},
+  "positional_graphemes_base": "pt-PT",
+  "parent": "pt-PT",
+  "allophone_rules": [
+    {
+      "id": "TER_A_METAPHONY",
+      "phonemes": [
+        "a"
+      ],
+      "surface": "ɔ",
+      "stress": "stressed",
+      "followed_by_phoneme_2": [
+        "u",
+        "o"
+      ],
+      "notes": "Vocalic harmonisation (a-metaphony): a stressed /a/ is opened/backed towards [ɔ] under the timbre of the final atonic [u] written -o of the following syllable — pato -> [ˈpɔtu], gato -> [ˈɡɔtu]. Cited: Mikołajczak (2014: 423), 'a vogal átona final [u] grafada como -o sobre a vogal [a] tónica da sílaba anterior ... aproxima de [ɔ]. Assim, o pato soa quase como [ˈpɔtu] ou gato como [ˈɡɔtu]', following Segura & Saramago (2001: 230). Gated to a STRESSED /a/ whose second-following segment is the high back [u]/[o] of the -o ending (followed_by_phoneme_2), so it never touches an /a/ before a final -a (casa -> [ˈkazɐ], the final [ɐ] is not a trigger) nor a word-final stressed /a/ (mar -> [ˈmaɾ]). Segura & Saramago (2001) treat exactly this tonic-vowel harmonisation as one of the two features (the other being the final-/s/ treatment) that let them group the Madeira and Azores dialects together; here it is the pan-insular feature realised on the Terceira central-group node. The process is variable and pan-insular (more regular in São Miguel, Graciosa, Corvo, Porto Santo — Mikołajczak 2014: 423); modelled categorically for -o words as the cited diagnostic realisation."
+    },
+    {
+      "id": "TER_CRESCENT_O",
+      "phonemes": [
+        "o"
+      ],
+      "surface": "wo",
+      "stress": "stressed",
+      "preceded_by_phoneme": [
+        "p",
+        "b",
+        "m",
+        "f",
+        "v"
+      ],
+      "notes": "Crescent (rising) diphthongisation / anti-hiatic on-glide — the trait Mikołajczak (2014: 421-422) calls the most individualising feature of terceirense ('release de vogais anti-hiáticas', 'vogal acentuada instável'), 'a caraterística mais destacada da fala açoriana, e em particular da fala da Ilha Terceira'. A stressed vowel takes a preceding [w] on-glide after a labial (p, b, m) or labiodental (f, v) onset: porco -> [ˈpwoɾku] (Mikołajczak 2014: 422 prints porco [pwˈorku], bicho [bwˈiʃu]). LIMIT (documented, not faked): only the labial-conditioned [w]-glide subset before a back stressed vowel is encoded. The fuller process — the harmonic on-glide whose quality copies a preceding high vowel/glide in the prior syllable (ceifar [sejˈfjaɾ], pintar [pĩˈtjaɾ]) and the [w] on an UNSTRESSED syllable (morrer [mwˈoreɾ]) — is context-dependent on material two syllables away and is left to notes rather than modelled with a glide-epenthesis the allophone-rule schema cannot express without over-generating. Nearly exclusive to Terceira in the central group (Mikołajczak 2014: 422)."
+    },
+    {
+      "id": "TER_CRESCENT_OPEN_O",
+      "phonemes": [
+        "ɔ"
+      ],
+      "surface": "wɔ",
+      "stress": "stressed",
+      "preceded_by_phoneme": [
+        "p",
+        "b",
+        "m",
+        "f",
+        "v"
+      ],
+      "notes": "Same terceirense crescent diphthongisation (see TER_CRESCENT_O) applied to a stressed open /ɔ/ after a labial/labiodental onset: European Portuguese porco is [ˈpɔɾku], so the on-glide surfaces as [ˈpwɔɾku]; moda -> [ˈmwɔdɐ]. Mikołajczak (2014: 422) transcribes the close vowel [pwˈorku]; the open-vs-close difference is the standard EP mid-vowel quality, not a Terceira delta. Source: Mikołajczak (2014: 421-422)."
+    },
+    {
+      "id": "TER_CRESCENT_I",
+      "phonemes": [
+        "i"
+      ],
+      "surface": "wi",
+      "stress": "stressed",
+      "preceded_by_phoneme": [
+        "p",
+        "b",
+        "m",
+        "f",
+        "v"
+      ],
+      "notes": "The terceirense crescent on-glide on a stressed /i/ after a labial onset, the exact example Mikołajczak (2014: 422) prints: bicho -> [bwˈiʃu] ('bw'iszu'). Restricted, like the other TER_CRESCENT_* rules, to a labial/labiodental onset (p, b, m, f, v); the harmonic [j]-type on-glide (ceifar, pintar) is left unmodelled (see TER_CRESCENT_O note). Source: Mikołajczak (2014: 422)."
+    },
+    {
+      "id": "PT_LEX_CLOSE_O",
+      "phonemes": [],
+      "surface": "o",
+      "notes": "DISABLED here: this variety has its own productive stressed mid-vowel process (metaphony / diphthongisation) that owns the open/close realisation of the stressed vowel, so the inherited standard-language lexical open/close pins (PT_LEX_*) must not pre-empt it. The standard lexical list is a Lisbon/BP-standard fact; the open/close of stressed mid vowels under this dialect's own vowel system is documented residual."
+    },
+    {
+      "id": "PT_LEX_CLOSE_E",
+      "phonemes": [],
+      "surface": "e",
+      "notes": "DISABLED here: this variety has its own productive stressed mid-vowel process (metaphony / diphthongisation) that owns the open/close realisation of the stressed vowel, so the inherited standard-language lexical open/close pins (PT_LEX_*) must not pre-empt it. The standard lexical list is a Lisbon/BP-standard fact; the open/close of stressed mid vowels under this dialect's own vowel system is documented residual."
+    },
+    {
+      "id": "PT_LEX_OPEN_O",
+      "phonemes": [],
+      "surface": "ɔ",
+      "notes": "DISABLED here: this variety has its own productive stressed mid-vowel process (metaphony / diphthongisation) that owns the open/close realisation of the stressed vowel, so the inherited standard-language lexical open/close pins (PT_LEX_*) must not pre-empt it. The standard lexical list is a Lisbon/BP-standard fact; the open/close of stressed mid vowels under this dialect's own vowel system is documented residual."
+    },
+    {
+      "id": "PT_LEX_OPEN_E",
+      "phonemes": [],
+      "surface": "ɛ",
+      "notes": "DISABLED here: this variety has its own productive stressed mid-vowel process (metaphony / diphthongisation) that owns the open/close realisation of the stressed vowel, so the inherited standard-language lexical open/close pins (PT_LEX_*) must not pre-empt it. The standard lexical list is a Lisbon/BP-standard fact; the open/close of stressed mid vowels under this dialect's own vowel system is documented residual."
+    }
+  ],
+  "notes": "Terceirense (Ilha Terceira, Angra do Heroísmo / Praia da Vitória) — the best-described member of the CENTRAL group of the Azores (Terceira, Graciosa, São Jorge, Pico, Faial). Modelled as a delta over the broad pt-PT base, NOT over pt-PT-x-acores, because the general Azorean node carries the São-Miguel-class /u/ -> [y] fronting that Terceira specifically LACKS. THE DEFINING NEGATIVE FEATURE: Terceira does NOT front the stressed /u/ — Mikołajczak (2014: 417-418, 424) states the labialisation of [u] 'muito comum nos grupos ocidental e oriental das ilhas, não se aplica ao dialeto da Terceira', attributing this to a dominant northern-Portuguese settlement stratum (vs the Baixa/Alentejo/Algarve stratum behind São Miguel's [y]); so muda -> [ˈmudɐ], tudo -> [ˈtudu], keeping the pt-PT back vowel. This is the exact conservative value the general pt-PT-x-acores node also encodes (Terceira is its ep_dialects gold reference). MODELLED POSITIVE FEATURES: (1) VOCALIC HARMONISATION (a-metaphony) — stressed /a/ -> [ɔ] before a final atonic -o (pato -> [ˈpɔtu], gato -> [ˈɡɔtu]); TER_A_METAPHONY. This is the pan-insular tonic-harmonisation feature by which Segura & Saramago (2001) group Madeira with the Azores. (2) CRESCENT / ANTI-HIATIC DIPHTHONGISATION — a [w] on-glide before a stressed vowel after a labial onset (porco -> [ˈpwɔɾku], bicho -> [bwˈiʃu]); TER_CRESCENT_*. Mikołajczak calls this the single most individualising trait of terceirense, 'quase exclusivamente' to Terceira in the central group. Only the labial-conditioned [w] subset is encoded (see the rule notes for the honest limit). NOT MODELLED (documented, not faked): (a) the harmonic [j]/[w] on-glide copying a high vowel two positions back (ceifar [sejˈfjaɾ], pintar [pĩˈtjaɾ], fumar [fuˈmwaɾ]) and the on-glide on an unstressed syllable (morrer [mwˈoreɾ]) — the conditioning reaches material the allophone-rule context window does not carry, and a blanket glide-epenthesis would over-generate. (b) Northern-type raising of stressed mid vowels to [u]/[i] (soa [ˈsua], flor [ˈflur] — Vasconcelos 1892: 293) is lexical/variable and left inherited. (c) The [ʒ] prevocalic external /s/-sandhi is NOT added here: it is described for São Miguel and the Algarve, not for the northern-influenced central group, so Terceira keeps the inherited pt-PT [z]. Dark coda /l/ [ɫ] and coda sibilants [ʃ]/[ʒ] are inherited from the pt-PT base. DECLINED (documented, not modelled) SIBLINGS: the other central islands (Graciosa, São Jorge, Pico, Faial), the eastern Santa Maria and the western Flores/Corvo, and Madeira's Porto Santo, have no individually-described, page-citable G2P deltas beyond these group-level features; they are noted here rather than given synthetic leaves (glue-node discipline).",
+  "quality": "research",
+  "ancestors": [
+    {
+      "code": "pt-PT",
+      "role": "parent",
+      "weight": 0.88,
+      "notes": "Standard European Portuguese; terceirense diverges by the vocalic harmonisation (stressed /a/ -> [ɔ] before final -o) and the crescent [w]-diphthongisation after labials, while — unlike São Miguel — KEEPING the standard back /u/ (no [y] fronting)."
+    },
+    {
+      "code": "pt-PT-x-acores",
+      "role": "adstrate",
+      "weight": 0.9,
+      "notes": "General Azorean node, whose ep_dialects gold reference is itself Terceira (hence muda -> [ˈmudɐ] there). Terceira is modelled as its own leaf, over pt-PT rather than over acores, so it does NOT inherit the São-Miguel-class /u/ -> [y] fronting the general node carries — the one feature Mikołajczak (2014) says Terceira lacks."
+    }
+  ],
+  "urls": [
+    "https://pt.wikipedia.org/wiki/Dialeto_a%C3%A7oriano"
+  ],
+  "script_type": "alphabet",
+  "sources": [
+    {
+      "id": "mikolajczak2014",
+      "author": "Mikołajczak, Sylwia",
+      "year": 2014,
+      "title": "Caraterísticas fonéticas do Português da Ilha Terceira",
+      "publisher": "Studia Iberystyczne 13, 417-424, Uniwersytet Jagielloński, Kraków",
+      "url": "https://filg.uj.edu.pl/documents/41616/135700213/SI_13_2014_Mikolajczak.pdf",
+      "pages": "417-424",
+      "notes": "The dedicated phonetic description of terceirense. States that the São-Miguel-class labialisation of stressed [u] does NOT apply to Terceira (417-418, 424), and documents the two positive Terceira features modelled here: the crescent/anti-hiatic [w]/[j] on-glide diphthongisation (421-422: porco [pwˈorku], bicho [bwˈiʃu], ceifar [sejˈfjaɾ]) and the a-metaphony before final -o (423: pato [ˈpɔtu], gato [ˈɡɔtu], after Segura & Saramago 2001: 230). Attributes Terceira's conservatism to a dominant northern-Portuguese settlement stratum."
+    },
+    {
+      "id": "segura_saramago2001",
+      "author": "Segura, Luísa & Saramago, João",
+      "year": 2001,
+      "title": "Variedades dialectais portuguesas",
+      "publisher": "In Caminhos do Português: Exposição Comemorativa do Ano Europeu das Línguas (Catálogo), 221-237, Biblioteca Nacional, Lisboa",
+      "url": null,
+      "pages": "221-237",
+      "notes": "Proposes grouping the Madeira and Azores dialects into a single insular dialect group on the strength of two shared, non-continental features: a tonic-vowel harmonisation (the a-metaphony modelled in TER_A_METAPHONY) and the treatment of the final /s/. Also (p. 230, apud Mikołajczak 2014: 423) the pato -> [ˈpɔtu] harmonisation, more regular in São Miguel, Graciosa, Corvo and Porto Santo."
+    },
+    {
+      "id": "vasconcelos1892",
+      "author": "Leite de Vasconcelos, J.",
+      "year": 1892,
+      "title": "Dialectos Açoreanos (Contribuição para o estudo da Dialectologia Portuguesa)",
+      "publisher": "Revista Lusitana 2, 289-307, Lisboa",
+      "url": null,
+      "pages": "289-307",
+      "notes": "The foundational description of Azorean dialects; source (via Mikołajczak 2014: 421-422) for the labialisation of stressed oral vowels and for the northern-type raising soa [ˈsua], vergonha [veɾˈɡuɲɐ], flor [ˈfluɾ] (293) that is documented but left unmodelled here."
+    },
+    {
+      "id": "mateus_dandrade2000",
+      "author": "Mateus, M.H.M. & d'Andrade, E.",
+      "year": 2000,
+      "title": "The Phonology of Portuguese",
+      "publisher": "Oxford University Press",
+      "url": null,
+      "pages": null,
+      "notes": "Reference phonology for the inherited European Portuguese unstressed-vowel reduction, dark coda /l/ [ɫ] and coda sibilants; the standard EP mid-vowel qualities against which the Terceira deltas are stated."
+    }
+  ],
+  "wikipedia": [
+    "https://pt.wikipedia.org/wiki/Dialeto_a%C3%A7oriano"
+  ],
+  "timespan": {
+    "start_year": 1500,
+    "end_year": null
+  },
+  "iso639_3": "por",
+  "stress": {
+    "onset_clusters": ["bl", "br", "bɫ", "bɾ", "bʀ", "bʁ", "bʎ", "bχ", "dr", "dɾ", "dʀ", "dʁ", "dʎ", "dχ", "fl", "fr", "fɫ", "fɾ", "fʀ", "fʁ", "fʎ", "fχ", "kl", "kr", "kɫ", "kɾ", "kʀ", "kʁ", "kʎ", "kχ", "pl", "pr", "pɫ", "pɾ", "pʀ", "pʁ", "pʎ", "pχ", "tr", "tɾ", "tʀ", "tʁ", "tʎ", "tχ", "vl", "vr", "vɫ", "vɾ", "vʀ", "vʁ", "vʎ", "vχ", "ðr", "ðɾ", "ðʀ", "ðʁ", "ðʎ", "ðχ", "ɡl", "ɡr", "ɡɫ", "ɡɾ", "ɡʀ", "ɡʁ", "ɡʎ", "ɡχ", "ɣl", "ɣr", "ɣɫ", "ɣɾ", "ɣʀ", "ɣʁ", "ɣʎ", "ɣχ", "βl", "βr", "βɫ", "βɾ", "βʀ", "βʁ", "βʎ", "βχ"],
+    "cliticless_words": ["o", "a", "os", "as", "de", "do", "da", "dos", "das", "em", "no", "na", "nos", "nas", "por", "pelo", "pela", "pelos", "pelas", "ao", "aos", "à", "às", "com", "sem", "e", "que", "se", "me", "te", "lhe", "lhes", "vos", "lo", "la", "los", "las", "lho", "lha", "lhos", "lhas"],
+    "default_position": -2,
+    "final_stress_endings": [
+      "r",
+      "l",
+      "z",
+      "x",
+      "i",
+      "u",
+      "im",
+      "om",
+      "um",
+      "is",
+      "us",
+      "ns",
+      "ão",
+      "ãe",
+      "õe",
+      "au",
+      "éu",
+      "éi",
+      "ói"
+    ],
+    "penult_stress_endings": [],
+    "marked_vowels": [
+      "á",
+      "é",
+      "í",
+      "ó",
+      "ú",
+      "â",
+      "ê",
+      "ô",
+      "ã",
+      "õ"
+    ],
+    "stress_mark": "ˈ",
+    "notes": "Acordo Ortográfico 1990 conventions: paroxytone default; written accents override; final -i/-u/-r/-l/-z/-x/-im/-om/-um/-ns and nasal diphthongs attract final stress. Unmarked -em/-am stay paroxytone (homem, falam). DIPHTHONGS: declared so the bundled syllabifier counts nuclei correctly. ⟨oe⟩ is hiatus, not a diphthong (Cunha & Cintra, §Ditongos).",
+    "diphthongs": [
+      "ãe",
+      "ão",
+      "õe",
+      "ai",
+      "ái",
+      "au",
+      "áu",
+      "ei",
+      "éi",
+      "êi",
+      "eu",
+      "éu",
+      "êu",
+      "iu",
+      "oi",
+      "ói",
+      "ôi",
+      "ou",
+      "ui"
+    ]
+  },
+  "location": {
+    "latitude": 38.72,
+    "longitude": -27.22,
+    "source": "wikidata",
+    "notes": "Ilha Terceira (Angra do Heroísmo) — the central-group island the variety is named for. [Wikidata Q207502 P625]"
+  },
+  "word_exceptions_base": "pt-PT"
+}

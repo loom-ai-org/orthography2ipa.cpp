@@ -1,0 +1,130 @@
+{
+  "code": "nhg",
+  "name": "Tetelcingo Nahuatl",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "ch": [
+      "tʃ"
+    ],
+    "tl": [
+      "tɬ"
+    ],
+    "tz": [
+      "ts"
+    ],
+    "cu": [
+      "kʷ"
+    ],
+    "hu": [
+      "w"
+    ],
+    "qu": [
+      "k"
+    ],
+    "ll": [
+      "l"
+    ],
+    "x": [
+      "ʃ"
+    ],
+    "a": [
+      "a"
+    ],
+    "e": [
+      "e"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "o"
+    ],
+    "u": [
+      "u"
+    ],
+    "p": [
+      "p"
+    ],
+    "t": [
+      "t"
+    ],
+    "c": [
+      "k"
+    ],
+    "s": [
+      "s"
+    ],
+    "z": [
+      "s"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "l": [
+      "l"
+    ],
+    "y": [
+      "j"
+    ],
+    "h": [
+      "h"
+    ],
+    "'": [
+      "ʔ"
+    ]
+  },
+  "parent": "nah",
+  "ancestors": [
+    {
+      "code": "nah",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Descent per Glottolog classification of Tetelcingo Nahuatl (tete1251)."
+    }
+  ],
+  "notes": "Skeleton. Uto-Aztecan (Nahuan) variety of central Mexico written in a Classical-style Spanish-based orthography. Digraphs tl=[tɬ], tz=[ts], ch=[tʃ], x=[ʃ], cu/hu for labiovelar/[w] and qu=[k] are mapped. The letter c is mapped as [k]; before front vowels it (and z) represents [s], a context this longest-match table does not resolve, so that ambiguity plus the saltillo and any vowel-length contrast are the main PER contributors. Tetelcingo Nahuatl stress falls predictably on the penultimate syllable and is not separately orthographically marked; left unencoded (documented exemption).",
+  "iso639_3": "nhg",
+  "glottolog_code": null,
+  "sources": [
+    {
+      "id": "nhg_glottolog",
+      "author": "Hammarström, H. et al. (Glottolog 5.0)",
+      "year": 2024,
+      "title": "Glottolog: Tetelcingo Nahuatl (tete1251)",
+      "publisher": "Max Planck Institute for Evolutionary Anthropology",
+      "url": "https://glottolog.org/resource/languoid/id/tete1251",
+      "pages": null,
+      "notes": "Classification reference for a skeleton-tier entry.",
+      "wikipedia_url": null
+    },
+    {
+      "id": "nhg_orthography",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Tetelcingo Nahuatl, Wikipedia",
+      "publisher": "Wikimedia Foundation",
+      "url": "https://en.wikipedia.org/wiki/Tetelcingo_Nahuatl",
+      "pages": null,
+      "notes": "Orthography/phonology reference for a skeleton-tier grapheme map.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Tetelcingo_Nahuatl"
+    },
+    {
+      "id": "nhg_tuggy1979",
+      "author": "Tuggy, David H.",
+      "year": 1979,
+      "title": "Tetelcingo Nahuatl",
+      "publisher": "in Modern Aztec Grammatical Sketches (Studies in Uto-Aztecan Grammar), SIL",
+      "url": "https://scholars.sil.org/sites/scholars/files/david_h_tuggy/publications/dissertation/dtuggy-dissertation-cg-nhg.pdf",
+      "pages": null,
+      "notes": "Descriptive grammatical sketch of Tetelcingo Nahuatl by its principal documenter (see also Tuggy 1981 dissertation); consulted to check the Spanish-based practical orthography's digraph mapping (tl, tz, ch, x, cu/hu, qu) modelled here."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Tetelcingo_Nahuatl"
+  ]
+}

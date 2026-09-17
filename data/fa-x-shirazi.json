@@ -1,0 +1,101 @@
+{
+  "code": "fa-x-shirazi",
+  "name": "Shirazi Persian",
+  "script": "Arabic",
+  "graphemes_base": "fa-x-tehran",
+  "allophones_base": "fa-x-tehran",
+  "allophones": {
+    "ɒː": [
+      "ɔː",
+      "ɒː"
+    ],
+    "æ": [
+      "a",
+      "æ"
+    ],
+    "a": [
+      "a",
+      "e"
+    ]
+  },
+  "parent": "fa-x-tehran",
+  "ancestors": [
+    {
+      "code": "fa-x-early",
+      "role": "parent",
+      "weight": 0.88,
+      "notes": "New Persian descent"
+    }
+  ],
+  "notes": "Shirazi Persian (Šīrāzī). Shiraz — Fars province; homeland of Hafez and Saadi. KEY ISOGLOSS: /æ/ → [a] (short a lower and less fronted than Tehran). ā → [ɔː] (slightly higher/rounder than Tehran's [ɒː]). Historically regarded as the 'purest' Persian dialect. Some imāla (vowel raising) in Classical vocabulary. Already-encoded allophones confirmed against the cited sources: long ā prefers [ɔː] (higher/rounder than Tehran's [ɒː]); short-a prefers [a] (not fronted to Tehran's [æ]) (Windfuhr 2009; Rezai & al.).",
+  "quality": "skeleton",
+  "script_type": "abjad",
+  "sources": [
+    {
+      "id": "mahootian1997",
+      "author": "Mahootian, S.",
+      "year": 1997,
+      "title": "Persian",
+      "publisher": "Routledge",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "windfuhr1979",
+      "author": "Windfuhr, G.",
+      "year": 1979,
+      "title": "Persian Grammar: History and State of Its Study",
+      "publisher": "Mouton",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "lazard1992",
+      "author": "Lazard, G.",
+      "year": 1992,
+      "title": "A Grammar of Contemporary Persian",
+      "publisher": "Mazda Publishers",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "windfuhr2009",
+      "author": "Windfuhr, G. (ed.)",
+      "year": 2009,
+      "title": "The Iranian Languages",
+      "publisher": "Routledge",
+      "url": null,
+      "pages": null,
+      "notes": "Regional-dialect chapter(s) on New Persian varieties (Tehran, Isfahan, Fars/Shiraz, Kerman, Khorasan/Mashhad, Yazd)."
+    },
+    {
+      "id": "rezai_dialectology",
+      "author": "Rezai, V. & al.",
+      "year": 2010,
+      "title": "Studies in Iranian regional Persian dialectology (Isfahan, Fars, Kerman, Khorasan)",
+      "publisher": "Iranian dialectology literature (regional descriptive studies)",
+      "url": null,
+      "pages": null,
+      "notes": "Secondary descriptive source for regional vowel-quality differences (majhul retention, ā/æ realisation) cross-checked against Windfuhr 2009 and Mahootian 1997."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Shiraz",
+    "https://fa.wikipedia.org/wiki/%D9%84%D9%87%D8%AC%D9%87_%D8%B4%DB%8C%D8%B1%D8%A7%D8%B2%DB%8C"
+  ],
+  "timespan": {
+    "start_year": 1200,
+    "end_year": null
+  },
+  "glottolog_code": null,
+  "iso639_3": "fas",
+  "location": {
+    "latitude": 29.61,
+    "longitude": 52.5425,
+    "source": "wikidata",
+    "notes": "Shiraz — the city the variety is named for. [Wikidata Q6397066 P625]"
+  }
+}

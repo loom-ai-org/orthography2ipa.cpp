@@ -1,0 +1,173 @@
+{
+  "code": "aja",
+  "name": "Aja (Adja)",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "b": [
+      "b"
+    ],
+    "d": [
+      "d"
+    ],
+    "ɖ": [
+      "ɖ"
+    ],
+    "e": [
+      "e"
+    ],
+    "ɛ": [
+      "ɛ"
+    ],
+    "f": [
+      "f"
+    ],
+    "ƒ": [
+      "ɸ"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "gb": [
+      "ɡ͡b"
+    ],
+    "ɣ": [
+      "ɣ"
+    ],
+    "h": [
+      "h"
+    ],
+    "i": [
+      "i"
+    ],
+    "k": [
+      "k"
+    ],
+    "kp": [
+      "k͡p"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ny": [
+      "ɲ"
+    ],
+    "ŋ": [
+      "ŋ"
+    ],
+    "o": [
+      "o"
+    ],
+    "ɔ": [
+      "ɔ"
+    ],
+    "p": [
+      "p"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "u": [
+      "u"
+    ],
+    "v": [
+      "v"
+    ],
+    "ʋ": [
+      "β"
+    ],
+    "w": [
+      "w"
+    ],
+    "x": [
+      "x"
+    ],
+    "y": [
+      "j"
+    ],
+    "z": [
+      "z"
+    ]
+  },
+  "allophones_base": "ee",
+  "allophones": {
+    "l": [
+      "l",
+      "r"
+    ]
+  },
+  "iso639_3": "ajg",
+  "glottolog_code": "ajab1235",
+  "wikidata_qid": "Q35035",
+  "notes": "Aja (Adja, Ajagbe), a Gbe (Kwa) language of the Togo-Benin border region around the Mono River, closely related to Ewe, Gen and Fon. Africa-Alphabet-derived Latin orthography (introduced 1960s, revised 1970s): ɖ ƒ ɣ ŋ ɔ ɛ ʋ plus digraphs gb kp ny. Seven vowel letters a e ɛ i o ɔ u spelling five underlying vowel qualities as in Ewe, each with oral and nasal realisations (nasal vowels written with a following ⟨n⟩, not modelled as separate graphemes here, matching the ee convention); open-mid vowels ɛ ɔ are attested only oral. /l/ becomes a trill/tap [r] after alveolar/retroflex consonants. TONE: Aja has a register tone system (high/low) marked with accents in some orthographic practice, but is not modelled here (matches ee/gen convention of leaving tone unmarked). Consonant/allophone inventory inherited from Ewe (`ee`) given the close genetic and orthographic relationship; graphemes stated independently here because Aja's own letter set is directly attested.",
+  "sources": [
+    {
+      "id": "aja_language_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Aja language (Benin)",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Aja_language_(Benin)",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Aja_language_(Benin)",
+      "notes": "Classification, phonology, vowel/consonant inventory and orthography overview."
+    },
+    {
+      "id": "adja_language_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Adja language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Adja_language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Adja_language",
+      "notes": "Alternate-name article confirming classification and codes."
+    },
+    {
+      "id": "morley2011",
+      "author": "Morley, Eric A.",
+      "year": 2011,
+      "title": "A Grammar of Ajagbe",
+      "publisher": "self-published, hosted on Wikimedia Commons",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Eric_A_Morley,_Ajagbe_grammar.pdf",
+      "pages": "viii-ix",
+      "notes": "Front-matter orthography note, read in full. Corroborates two mapping decisions already in this spec: nasal vowels written with a following ⟨n⟩ rather than a dedicated diacritic, and the digraphs ⟨kp⟩/⟨gb⟩ each spelling one coarticulated stop. The author states this book's orthography is his own pre-standardization variant, not the finalized Aja orthography, so it does not settle the standard spelling used elsewhere; its description of ⟨h⟩ and ⟨x⟩ could not be read with confidence from the extracted text (the IPA symbols came through as garbled Latin capitals), so no claim is made about those two graphemes from this source."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Aja_language_(Benin)",
+    "https://en.wikipedia.org/wiki/Adja_language"
+  ],
+  "parent": "x-clade-atla1278",
+  "ancestors": [
+    {
+      "code": "x-clade-atla1278",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Atlantic-Congo — the classification node this language sits under; Gbe (Kwa) has no dedicated clade node in this dataset yet, following the ee/fon/gen convention of pointing straight at the Atlantic-Congo node."
+    },
+    {
+      "code": "ee",
+      "role": "related",
+      "weight": 0.5,
+      "notes": "Aja is closely related to Ewe within the Gbe cluster; grapheme-to-allophone conventions closely track Ewe's."
+    }
+  ],
+  "location": {
+    "latitude": 6.9,
+    "longitude": 1.75,
+    "source": "glottolog",
+    "notes": "Togo-Benin border region around the Mono River — the Aja-speaking heartland around Tado."
+  }
+}

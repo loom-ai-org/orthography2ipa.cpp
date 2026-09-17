@@ -1,0 +1,158 @@
+{
+ "code": "bsk",
+ "name": "Burushaski",
+ "script": "Zyyy",
+ "quality": "stub",
+ "graphemes": {},
+ "allophones": {
+  "d̠ʒ": [
+   "d̠ʒ",
+   "ʒ"
+  ],
+  "f": [
+   "f",
+   "f"
+  ],
+  "h": [
+   "h",
+   "h"
+  ],
+  "n": [
+   "n",
+   "ɳ"
+  ],
+  "pʰ": [
+   "pf",
+   "pʰ",
+   "pʰ"
+  ],
+  "qʰ": [
+   "qʰ",
+   "qʰ"
+  ],
+  "ɖʐ": [
+   "ʐ",
+   "ɖʐ"
+  ],
+  "χ": [
+   "χ",
+   "χ",
+   "χ"
+  ],
+  "a": [
+   "æ",
+   "ʌ",
+   "a",
+   "ə"
+  ],
+  "e̞": [
+   "ɛ",
+   "e̞"
+  ],
+  "i": [
+   "ɪ",
+   "i",
+   "i"
+  ],
+  "o̞": [
+   "ɔ",
+   "o̞"
+  ],
+  "u": [
+   "u",
+   "y",
+   "ʊ",
+   "u"
+  ]
+ },
+ "notes": "REGISTRY STUB (not a modelled G2P target). Placed so the ancestry graph covers every living ISO 639-3 language. No orthography is claimed; the phoneme inventory follows the cited PHOIBLE inventory (which itself cites a published description): script is Zyyy (undetermined) until a cited description is encoded. Classification and coordinates follow Glottolog. Checked against lexibank/northeuralex forms.csv for a gold-registration candidate: its `bsk` Value column (e.g. \"-lcin\", \"-ltumal\", \"-mupus\", \"qhat\", leading hyphens marking bound/possessed noun stems) is written with retroflex-dot diacritics (s-dot, t-dot) and a leading hyphen convention that is Berger's (1998, Die Burushaski-Sprache von Hunza und Nager) scholarly transcription, not a community orthography: Burushaski has no standardized practical spelling (it is variably written in Urdu-based Perso-Arabic script by some literacy efforts, and in ad hoc Latin transliterations by others, neither of which NorthEuraLex's Value column reflects). Per this repo's orthography-vs-transcription distinction, a linguist's IPA-adjacent transcription convention is not \"the orthography\" a spec's `graphemes` table is supposed to describe, so no graphemes are added and no NorthEuraLex gold row is registered for bsk: registering it would misrepresent Berger's transcription as a citable Burushaski spelling convention. The spec remains a stub with the cited PHOIBLE phoneme inventory only.",
+ "iso639_3": "bsk",
+ "glottolog_code": "buru1296",
+ "sources": [
+  {
+   "id": "glottolog2024",
+   "author": "Hammarström, Harald; Forkel, Robert; Haspelmath, Martin; Bank, Sebastian",
+   "year": 2024,
+   "title": "Glottolog 5.0",
+   "publisher": "Max Planck Institute for Evolutionary Anthropology",
+   "url": "https://glottolog.org/"
+  },
+  {
+   "id": "phoible2019",
+   "author": "Moran, Steven; McCloy, Daniel (eds.)",
+   "year": 2019,
+   "title": "PHOIBLE 2.0 (doi:10.5281/zenodo.2562766)",
+   "publisher": "Max Planck Institute for the Science of Human History",
+   "url": "https://phoible.org/inventories/view/6",
+   "notes": "Inventory 6 (spa), 50 non-marginal segments, 3 tones."
+  }
+ ],
+ "urls": [
+  "https://glottolog.org/resource/languoid/id/buru1296"
+ ],
+ "location": {
+  "latitude": 36.2161,
+  "longitude": 74.8236,
+  "source": "glottolog",
+  "notes": "Glottolog's representative point."
+ },
+ "family": "Isolate",
+ "phonemes": [
+  "b",
+  "d",
+  "d̠ʒ",
+  "f",
+  "h",
+  "j",
+  "k",
+  "kʰ",
+  "l",
+  "m",
+  "n",
+  "p",
+  "pʰ",
+  "q",
+  "qʰ",
+  "r",
+  "s",
+  "t",
+  "ts",
+  "tsʰ",
+  "tʰ",
+  "t̠ʃ",
+  "t̠ʃʰ",
+  "w",
+  "z",
+  "ŋ",
+  "ɖ",
+  "ɖʐ",
+  "ɡ",
+  "ʁ",
+  "ʂ",
+  "ʃ",
+  "ʈ",
+  "ʈʂ",
+  "ʈʂʰ",
+  "ʈʰ",
+  "ʐ͇",
+  "χ",
+  "a",
+  "aː",
+  "ãː",
+  "e̞",
+  "e̞ː",
+  "i",
+  "iː",
+  "o̞",
+  "o̞ː",
+  "u",
+  "uː",
+  "ũː"
+ ],
+ "tone_inventory": {
+  "˥˦": "PHOIBLE tone segment",
+  "˧": "PHOIBLE tone segment",
+  "˩˨": "PHOIBLE tone segment"
+ },
+ "phoible_id": "6"
+}

@@ -1,0 +1,1945 @@
+{
+  "ancestors": [
+    {
+      "code": "sla",
+      "role": "parent",
+      "weight": 0.92,
+      "notes": "Descent from Proto-Slavic (East Slavic subgroup) via Old East Slavic."
+    },
+    {
+      "code": "cu",
+      "role": "adstrate",
+      "weight": 0.08,
+      "notes": "Church Slavonic adstrate: pervasive literary/lexical layer (South Slavic doublets, e.g. gorod/grad); a defining feature of literary Russian."
+    }
+  ],
+  "code": "ru",
+  "name": "Russian",
+  "script": "Cyrillic",
+  "graphemes": {
+    "а": [
+      "a"
+    ],
+    "е": [
+      "je",
+      "e"
+    ],
+    "ё": [
+      "jo"
+    ],
+    "и": [
+      "i"
+    ],
+    "о": [
+      "o"
+    ],
+    "у": [
+      "u"
+    ],
+    "э": [
+      "ɛ"
+    ],
+    "ю": [
+      "ju"
+    ],
+    "я": [
+      "ja"
+    ],
+    "ы": [
+      "ɨ"
+    ],
+    "ъ": [
+      ""
+    ],
+    "ь": [
+      "ʲ"
+    ],
+    "б": [
+      "b"
+    ],
+    "в": [
+      "v"
+    ],
+    "г": [
+      "ɡ"
+    ],
+    "д": [
+      "d"
+    ],
+    "ж": [
+      "ʐ"
+    ],
+    "з": [
+      "z"
+    ],
+    "й": [
+      "j"
+    ],
+    "к": [
+      "k"
+    ],
+    "л": [
+      "ɫ"
+    ],
+    "м": [
+      "m"
+    ],
+    "н": [
+      "n"
+    ],
+    "п": [
+      "p"
+    ],
+    "р": [
+      "r"
+    ],
+    "с": [
+      "s"
+    ],
+    "т": [
+      "t"
+    ],
+    "ф": [
+      "f"
+    ],
+    "х": [
+      "x"
+    ],
+    "ц": [
+      "ts"
+    ],
+    "ч": [
+      "tɕ"
+    ],
+    "ш": [
+      "ʂ"
+    ],
+    "щ": [
+      "ɕː"
+    ],
+    "ль": [
+      "lʲ"
+    ],
+    "щь": [
+      "ɕː"
+    ],
+    "́": [
+      ""
+    ]
+  },
+  "allophones": {
+    "b": [
+      "b",
+      "p"
+    ],
+    "bʲ": [
+      "bʲ",
+      "pʲ"
+    ],
+    "d": [
+      "d",
+      "t"
+    ],
+    "dʲ": [
+      "dʲ",
+      "tʲ"
+    ],
+    "ɡ": [
+      "ɡ",
+      "k"
+    ],
+    "p": [
+      "p"
+    ],
+    "pʲ": [
+      "pʲ"
+    ],
+    "t": [
+      "t"
+    ],
+    "tʲ": [
+      "tʲ"
+    ],
+    "k": [
+      "k"
+    ],
+    "f": [
+      "f"
+    ],
+    "fʲ": [
+      "fʲ"
+    ],
+    "v": [
+      "v",
+      "f"
+    ],
+    "vʲ": [
+      "vʲ",
+      "fʲ"
+    ],
+    "s": [
+      "s"
+    ],
+    "sʲ": [
+      "sʲ"
+    ],
+    "z": [
+      "z",
+      "s"
+    ],
+    "zʲ": [
+      "zʲ",
+      "sʲ"
+    ],
+    "ʂ": [
+      "ʂ"
+    ],
+    "ʐ": [
+      "ʐ",
+      "ʂ"
+    ],
+    "ɕː": [
+      "ɕː"
+    ],
+    "x": [
+      "x",
+      "xʲ"
+    ],
+    "ts": [
+      "ts"
+    ],
+    "tɕ": [
+      "tɕ"
+    ],
+    "m": [
+      "m"
+    ],
+    "mʲ": [
+      "mʲ"
+    ],
+    "n": [
+      "n",
+      "ŋ"
+    ],
+    "nʲ": [
+      "nʲ"
+    ],
+    "l": [
+      "ɫ"
+    ],
+    "lʲ": [
+      "lʲ"
+    ],
+    "r": [
+      "r"
+    ],
+    "rʲ": [
+      "rʲ"
+    ],
+    "j": [
+      "j"
+    ],
+    "ɡʲ": [
+      "ɡʲ",
+      "kʲ"
+    ],
+    "kʲ": [
+      "kʲ"
+    ],
+    "xʲ": [
+      "xʲ"
+    ],
+    "a": [
+      "a",
+      "ɐ",
+      "ə"
+    ],
+    "o": [
+      "o",
+      "ɐ",
+      "ə"
+    ],
+    "e": [
+      "e",
+      "ɪ"
+    ],
+    "ɛ": [
+      "ɛ"
+    ],
+    "i": [
+      "i",
+      "ɪ"
+    ],
+    "ɨ": [
+      "ɨ"
+    ],
+    "u": [
+      "u",
+      "ʊ"
+    ]
+  },
+  "parent": "x-clade-east1426",
+  "notes": "Codified standard literary Russian — the prescriptive norm described by Avanesov and Timberlake, historically based on Moscow usage but no longer identical to any regional variety. This spec is the STANDARD, not a dialect: the regional Moscow layer (старомосковское произношение and the Central-Russian features that the codification did not adopt) lives in `ru-x-moscow`, which pulls its tables from here and states only what it adds. Every ru-x-* dialect spec is a delta against this file. Key features: pervasive palatalisation contrast, Аканье (unstressed /o,a/ -> [ɐ] pretonic, [ə] elsewhere after hard consonants) and Иканье (unstressed /e,i/ (and /a/ after soft consonants) -> [ɪ]). г = [ɡ] plosive. FINAL DEVOICING: all obstruents (plain and palatalised) devoiced in coda/word-final position (б/бь->п/пь, в/вь->ф/фь, г->к, д/дь->т/тʲ, з/зь->с/сʲ, ж->ш); this positional devoicing only applies to the bare-consonant and soft-sign graphemes (б бь в вь г д дь з зь), never to the iotated-vowel CV digraphs (e.g. дя, зе), because those digraphs always resolve to a consonant immediately followed by a vowel and are therefore never actually in coda position, regardless of their position within the word string. Regressive voicing/palatalisation assimilation across consonant clusters (e.g. сделать [zʲdʲelətʲ]) is a known engine limitation, not modelled at the single-grapheme level used here. VOWEL REDUCTION: о/а reduce to [ɐ] in 1st pretonic syllable, [ə] elsewhere (unstressed); this positional rule only fires when the stressed syllable is known (see STRESS note below), otherwise the 'default' (unreduced) mapping is used. IOTATED VOWELS + и: е/я/ю/ё/и palatalise an immediately preceding consonant (soft-sign ь does the same); modelled as explicit two-grapheme tokens for the 15 consonants that contrast plain/palatalised (б в г д з к л м н п р с т ф х): 12 pre-existing soft-sign digraphs (бь вь дь зь ль мь нь пь рь сь ть фь) plus 75 new iotated-vowel digraphs (each of the 15 consonants x е/и/я/ё/ю, e.g. 'бе'->'bʲe', 'би'->'bʲi', 'дя'->'dʲa'); ц/ш/ж remain hard unconditionally and й/ч/щ remain soft unconditionally (their base grapheme entries already carry the sole realisation), so no digraphs are needed for those six letters. ⟨ж ш ц⟩ BEING HARD IS A STATEMENT ABOUT THE CONSONANT, NOT A LICENCE TO COLLAPSE THE VOWEL: a following ⟨е⟩ raises to [ɨ] only when UNSTRESSED (жена [ʐɨna], цена [tsɨna]) and stays mid under stress, written [ɛ] because this spec reserves [e] for the vowel after a palatalised consonant (жест [ʐɛst], шест [ʂɛst], центр [tsɛntr]); and a following ⟨ё⟩ keeps its back quality [o] (шёл [ʂoɫ], жёлтый [ʐoɫtɨj]) because the centralised [ɵ] is an allophone of /o/ beside PALATALISED articulations, which these three letters never supply. ⟨и⟩ is the one that backs unconditionally (жить [ʐɨtʲ], цирк [tsɨrk]). STRESS: Russian word stress is lexical and free (not derivable from spelling) and is not marked in standard orthography, so this spec intentionally carries no `stress` block (per the research-tier exemption for orthographically unpredictable stress) -- this also means the pretonic/posttonic/nucleus_unstressed positional rules below are only reachable when a caller supplies pre-stressed input (e.g. combining acute accent) through a future stress-marked variant; on ordinary unmarked spelling the engine cannot locate the stressed syllable and the 'default' (unstressed/unreduced) branch of each positional entry is used instead. This is the primary source of PER against unmarked gold sets and is why quality stays at 'research', not 'production'. Г IN GENITIVE: the adjectival/pronominal genitive-singular desinence -ого/-его is pronounced with [v], not [ɡ] (Timberlake (2004); Avanesov (1956); Jones & Ward (1969)): красного [krasnəvə], синего [sʲinʲɪvə], его [jɪvo]. This is now IMPLEMENTED (it was previously described here but absent from the tables): `grammatical_endings` carries -ого -> [əvə], the hard-sibilant set (жего/шего/цего -> ʐɨvə/ʂɨvə/tsɨvə, because ж ш ц are unconditionally hard and the desinential ⟨е⟩ after them is unstressed, where the reflex is [ɨ]), него, сего, чего/щего, and the -Cьего set (possessive adjectives: лисьего, паучьего, третьего, божьего). The per-consonant shape is required, not cosmetic: ⟨е⟩ palatalises the preceding consonant, so a bare 'его' ending would rewrite the tail and silently drop that palatalisation (синего -> *[sʲinɪvə]). A mirror-image -Cего set for the 15 paired consonants was tried and REMOVED: soft-stem adjectives are essentially the -ний type only, so entries like \"бего\" or \"хего\" would assert a morphology Russian does not have, and none of them matched a single one of the 403,873 wikipron gold types.\n  GOLD COVERAGE OF THE -Cьего SET (stated plainly, because it is thin): of these entries only чьего and тьего match anything in the gold at all — 2 types each (чьего/паучьего, третьего/полтретьего). жьего matches ZERO gold types and is a zero-coverage entry exactly like сьего, ньего and the rest; it is kept because the possessive-adjective declension is productive (божьего, медвежьего, вражьего are ordinary Russian), not because any measurement supports it. The 75-of-75 [ʐj] count that justifies its VALUE is about the ⟨жь⟩+vowel sequence generally (ружьё, Запорожье), not about the genitive desinence, which the gold does not attest. The base grapheme tables carry that glide generally: ⟨жь⟩/⟨шь⟩ before an iotated vowel are the SEPARATING soft sign and emit [ʐj]/[ʂj] (ружьё [rʊʐjɵ], мышью [mɨʂjʊ], Запорожье), while word-finally the same ⟨ь⟩ is a bare declension marker with no phonetic content and the sibilant devoices like any other obstruent (рожь [roʂ], мышь [mɨʂ], лишь [lʲiʂ]) — the split is in `positional_graphemes`.\n  COUNTER-CASES (why the ending is NOT applied blindly): word-final -ого is only a genitive desinence when it IS one. Adverbs and nouns that merely end in those letters keep [ɡ] — много [mnoɡə], немного, намного, дорого, недорого, строго, убого, лого, ого. These are a closed lexical class (adverbs in -о built on stems in -г, plus a few nouns/interjections), not derivable from spelling, and are listed in `word_exceptions`. On the WikiPron gold 656 of 669 word-final -ого/-его types take [v] and 13 keep [ɡ] (ничего counts as [v]: its primary reading is [nʲɪtɕɪvo], with one variant row also recording a colloquial [ɣ]). The `word_exceptions` list covers 9 of those 13 keepers — the productive adverb class. The other four are deliberately NOT listed: Того is a homograph of the pronoun того and a case-folded whole-word exception would break the far more frequent pronoun, while Хиого, болого and игого are a toponym pair and an interjection whose only motivation would be the gold rows themselves. They stay as known, disclosed misses rather than gold-fitted entries. A second `word_exceptions` group holds the closed pronoun set. Most of it (его, него, кого, того, всего, чего, ничего, ничьего, одного, никого, моего, твоего, своего, чьего) carries DESINENTIAL stress — [jɪˈvo], not [ˈjɪvə] — which the spec's statistical penultimate default cannot place. этого is the one member that is NOT desinentially stressed: it is a stem-stressed lexical patch ([ˈɛtəvə]), listed because word-initial ⟨э⟩ is [ɛ] and the default also mis-stresses it. It is NOT a general fix for the stem-stressed genitives: какого, большого, другого, никакого and the rest of the [ovə] class stay unpatched and are booked as stress-ceiling error, because patching them one word at a time would be fitting the spec to gold rows rather than to the grammar.\n  Sources: Jones & Ward (1969), Timberlake (2004), Padgett & Tabain (2005), Avanesov (1956).\n  PER-ENDING COVERAGE (the genitive desinence, one entry per orthographic shape because ⟨е⟩ palatalises the consonant to its left and a bare ending would delete that palatalisation): ENDING \"ого\" is the hard-stem adjectival/pronominal genitive singular, in which ⟨г⟩ is [v] and never the plosive, realised here as [əvə] — the unstressed reflex (красного [krasnəvə]) (Timberlake 2004; Avanesov 1956; Jones & Ward 1969). ENDING \"него\" is the soft-stem genitive singular after paired ⟨н⟩, realised [nʲɪvə] with the consonant palatalised by the desinential ⟨е⟩ and ⟨г⟩ = [v] (Timberlake 2004; Avanesov 1956). ENDING \"сего\" is the soft-stem genitive singular after paired ⟨с⟩, realised [sʲɪvə] with the consonant palatalised by the desinential ⟨е⟩ and ⟨г⟩ = [v] (Timberlake 2004; Avanesov 1956). ENDING \"жего\" is the genitive singular after the unpaired hard ⟨ж⟩, realised [ʐɨvə]: ⟨ж⟩ never softens, so the desinential ⟨е⟩ surfaces as [ɨ] rather than [ɪ], and ⟨г⟩ = [v] (Avanesov 1956; Timberlake 2004). ENDING \"жьего\" is the same desinence on a soft-stem possessive adjective (божий, медвежий, вражий), realised [ʐjɪvə] — the ⟨ь⟩ is the SEPARATING soft sign carrying a stem /j/, and ⟨ж⟩ being unpaired-hard governs only the consonant, which stays [ʐ] without deleting that glide (Avanesov 1956; Timberlake 2004). Contrast bare \"жего\", where there is no /j/ and the vowel is the hard-sibilant [ɨ]; after the glide it is [ɪ]. ENDING \"шего\" is the genitive singular after the unpaired hard ⟨ш⟩, realised [ʂɨvə]: ⟨ш⟩ never softens, so the desinential ⟨е⟩ surfaces as [ɨ] rather than [ɪ], and ⟨г⟩ = [v] (Avanesov 1956; Timberlake 2004). ENDING \"цего\" is the genitive singular after the unpaired hard ⟨ц⟩, realised [tsɨvə]: ⟨ц⟩ never softens, so the desinential ⟨е⟩ surfaces as [ɨ] rather than [ɪ], and ⟨г⟩ = [v] (Avanesov 1956; Timberlake 2004). ENDING \"чего\" is the genitive singular after the unpaired soft ⟨ч⟩, realised [tɕɪvə] with ⟨г⟩ = [v] (Timberlake 2004; Avanesov 1956). ENDING \"щего\" is the genitive singular after the unpaired soft ⟨щ⟩, realised [ɕːɪvə] with ⟨г⟩ = [v] (Timberlake 2004; Avanesov 1956). ENDING \"чьего\" is the possessive/soft-sign genitive singular after ⟨ч⟩, realised [tɕjɪvə]: the soft sign contributes the glide [j] before the desinence and ⟨г⟩ = [v] (Timberlake 2004; Jones & Ward 1969). ENDING \"тьего\" is the possessive/soft-sign genitive singular after ⟨т⟩, realised [tʲjɪvə]: the soft sign contributes the glide [j] before the desinence and ⟨г⟩ = [v] (Timberlake 2004; Jones & Ward 1969). ENDING \"сьего\" is the possessive/soft-sign genitive singular after ⟨с⟩, realised [sʲjɪvə]: the soft sign contributes the glide [j] before the desinence and ⟨г⟩ = [v] (Timberlake 2004; Jones & Ward 1969). ENDING \"зьего\" is the possessive/soft-sign genitive singular after ⟨з⟩, realised [zʲjɪvə]: the soft sign contributes the glide [j] before the desinence and ⟨г⟩ = [v] (Timberlake 2004; Jones & Ward 1969). ENDING \"льего\" is the possessive/soft-sign genitive singular after ⟨л⟩, realised [lʲjɪvə]: the soft sign contributes the glide [j] before the desinence and ⟨г⟩ = [v] (Timberlake 2004; Jones & Ward 1969). ENDING \"ньего\" is the possessive/soft-sign genitive singular after ⟨н⟩, realised [nʲjɪvə]: the soft sign contributes the glide [j] before the desinence and ⟨г⟩ = [v] (Timberlake 2004; Jones & Ward 1969). ENDING \"дьего\" is the possessive/soft-sign genitive singular after ⟨д⟩, realised [dʲjɪvə]: the soft sign contributes the glide [j] before the desinence and ⟨г⟩ = [v] (Timberlake 2004; Jones & Ward 1969). ENDING \"бьего\" is the possessive/soft-sign genitive singular after ⟨б⟩, realised [bʲjɪvə]: the soft sign contributes the glide [j] before the desinence and ⟨г⟩ = [v] (Timberlake 2004; Jones & Ward 1969). ENDING \"вьего\" is the possessive/soft-sign genitive singular after ⟨в⟩, realised [vʲjɪvə]: the soft sign contributes the glide [j] before the desinence and ⟨г⟩ = [v] (Timberlake 2004; Jones & Ward 1969). ENDING \"пьего\" is the possessive/soft-sign genitive singular after ⟨п⟩, realised [pʲjɪvə]: the soft sign contributes the glide [j] before the desinence and ⟨г⟩ = [v] (Timberlake 2004; Jones & Ward 1969). ENDING \"рьего\" is the possessive/soft-sign genitive singular after ⟨р⟩, realised [rʲjɪvə]: the soft sign contributes the glide [j] before the desinence and ⟨г⟩ = [v] (Timberlake 2004; Jones & Ward 1969). ENDING \"мьего\" is the possessive/soft-sign genitive singular after ⟨м⟩, realised [mʲjɪvə]: the soft sign contributes the glide [j] before the desinence and ⟨г⟩ = [v] (Timberlake 2004; Jones & Ward 1969). The \"ого\" entry is deliberately SINGLE-valued. The competing [ovə] realisation (большого [bɐlʲʂovə]) is real and attested — 76 of 527 WikiPron -ого types take it — but what selects it is STEM STRESS, not a lattice ambiguity: [əvə] and [ovə] are the unstressed and stressed reflexes of one desinence, and choosing between them requires the lexical stress this spec declares it cannot place (see the STRESS note above). Declaring it as a rank-2 alternative would dress a known stress limitation up as an ambiguous ending, so the spec takes the unstressed reflex unconditionally and books the [ovə] words as stress-ceiling error.",
+  "quality": "research",
+  "script_type": "alphabet",
+  "sources": [
+    {
+      "id": "jones_ward1969",
+      "author": "Jones, D. & Ward, D.",
+      "year": 1969,
+      "title": "The Phonetics of Russian",
+      "publisher": "Cambridge University Press",
+      "url": null,
+      "pages": null,
+      "notes": "Cited via Wikipedia's Russian phonology and Vowel reduction in Russian articles, which reference this work for: akanye/ikanye mergers, pretonic [ɐ]/[ʌ] vs. further-unstressed [ə], post-soft-consonant merger of unstressed vowels to [ɪ], and regressive voicing assimilation including v/vʲ transparency.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Russian_phonology"
+    },
+    {
+      "id": "timberlake2004",
+      "author": "Timberlake, A.",
+      "year": 2004,
+      "title": "A Reference Grammar of Russian",
+      "publisher": "Cambridge University Press",
+      "url": null,
+      "pages": null,
+      "notes": "Cited via Wikipedia's Russian phonology article, which references this work.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Russian_phonology"
+    },
+    {
+      "id": "padgett_tabain2005",
+      "author": "Padgett, J. & Tabain, M.",
+      "year": 2005,
+      "title": "Adaptive Dispersion Theory and Phonological Vowel Reduction in Russian",
+      "publisher": "Phonetica",
+      "url": null,
+      "pages": null,
+      "notes": "Cited via Wikipedia's Akanye article, which references this work for: pretonic akanye realised as [ɐ]/[ʌ], further reduction to [ə]; ikanye treated as a phonologically distinct (postlexical) process from akanye (lexical).",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Akanye"
+    },
+    {
+      "id": "comrie_corbett1993",
+      "author": "Comrie, B. & Corbett, G. (eds.)",
+      "year": 1993,
+      "title": "The Slavonic Languages",
+      "publisher": "Routledge",
+      "url": null,
+      "pages": null,
+      "notes": null,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Slavic_languages"
+    },
+    {
+      "id": "wikipron_lee2020",
+      "author": "Lee, J. L., Ashby, L. F. E., Garza, M. E., Lee-Sikka, Y., Miller, S., Wong, A., McCarthy, A. D. & Gorman, K.",
+      "year": 2020,
+      "title": "WikiPron: Mining Wiktionary for Massively Multilingual Pronunciation Data",
+      "publisher": "LREC",
+      "url": "https://github.com/CUNY-CL/wikipron",
+      "pages": null,
+      "notes": "Source of the ru gold benchmark row (rus_cyrl_narrow.tsv). Upstream README (fetched directly) confirms Russian was scraped only in narrow transcription, not broad: 'some languages only have broad or narrow transcriptions, e.g. Russian only has the latter.'"
+    },
+    {
+      "id": "avanesov1956",
+      "author": "Avanesov, R. I.",
+      "year": 1956,
+      "title": "Russkoe literaturnoe proiznoshenie",
+      "publisher": "Prosveshchenie",
+      "url": null,
+      "pages": null,
+      "notes": "The standard prescriptive description of Moscow literary pronunciation. Cited for the genitive desinence -ого/-его realised with [v], and for ж/ш/ц being unpaired hard consonants so that ⟨е⟩ after them is [ɨ]. Both are textbook claims of this work; no page locator is given because the edition was not consulted directly. The year follows the citation this spec already carried — several editions of this title exist and none was verified here. Cited independently of any gold set.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Russian_phonology"
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Russian_language",
+    "https://ru.wikipedia.org/wiki/Русский_язык",
+    "https://en.wikipedia.org/wiki/Russian_phonology",
+    "https://ru.wikipedia.org/wiki/%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B9_%D1%8F%D0%B7%D1%8B%D0%BA",
+    "https://ru.wikipedia.org/wiki/%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B0%D1%8F_%D1%84%D0%BE%D0%BD%D0%B5%D1%82%D0%B8%D0%BA%D0%B0"
+  ],
+  "positional_graphemes": {
+    "б": {
+      "word_final": [
+        "p"
+      ],
+      "default": [
+        "b"
+      ]
+    },
+    "в": {
+      "word_final": [
+        "f"
+      ],
+      "default": [
+        "v"
+      ]
+    },
+    "г": {
+      "word_final": [
+        "k"
+      ],
+      "default": [
+        "ɡ"
+      ]
+    },
+    "д": {
+      "word_final": [
+        "t"
+      ],
+      "default": [
+        "d"
+      ]
+    },
+    "з": {
+      "word_final": [
+        "s"
+      ],
+      "default": [
+        "z"
+      ]
+    },
+    "ж": {
+      "word_final": [
+        "ʂ"
+      ],
+      "default": [
+        "ʐ"
+      ]
+    },
+    "о": {
+      "first_pretonic": [
+        "ɐ"
+      ],
+      "pretonic": [
+        "ə"
+      ],
+      "posttonic": [
+        "ə"
+      ]
+    },
+    "а": {
+      "first_pretonic": [
+        "ɐ"
+      ],
+      "pretonic": [
+        "ə"
+      ],
+      "posttonic": [
+        "ə"
+      ]
+    },
+    "е": {
+      "pretonic": [
+        "jɪ",
+        "ɪ"
+      ],
+      "posttonic": [
+        "jɪ",
+        "ɪ"
+      ]
+    },
+    "я": {
+      "pretonic": [
+        "jɪ"
+      ],
+      "posttonic": [
+        "jə"
+      ]
+    },
+    "ё": {
+      "default": [
+        "jo"
+      ]
+    },
+    "и": {
+      "pretonic": [
+        "ɪ"
+      ],
+      "posttonic": [
+        "ɪ"
+      ]
+    },
+    "у": {
+      "pretonic": [
+        "ʊ"
+      ],
+      "posttonic": [
+        "ʊ"
+      ]
+    },
+    "ю": {
+      "pretonic": [
+        "jʊ"
+      ],
+      "posttonic": [
+        "jʊ"
+      ]
+    },
+    "э": {
+      "pretonic": [
+        "ɪ"
+      ],
+      "posttonic": [
+        "ɪ"
+      ]
+    },
+    "жь": {
+      "word_final": [
+        "ʂ"
+      ],
+      "before_vowel": [
+        "ʐj"
+      ],
+      "default": [
+        "ʐ"
+      ]
+    },
+    "шь": {
+      "word_final": [
+        "ʂ"
+      ],
+      "before_vowel": [
+        "ʂj"
+      ],
+      "default": [
+        "ʂ"
+      ]
+    },
+    "чь": {
+      "before_vowel": [
+        "tɕj"
+      ],
+      "default": [
+        "tɕ"
+      ]
+    }
+  },
+  "timespan": {
+    "start_year": 1300,
+    "end_year": null
+  },
+  "glottolog_code": "russ1263",
+  "iso639_3": "rus",
+  "wikidata_qid": "Q7737",
+  "phoible_id": "russ1263",
+  "wals_code": "rus",
+  "location": {
+    "latitude": 59.0,
+    "longitude": 50.0,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Russian."
+  },
+  "stress": {
+    "default_position": -2,
+    "marked_vowels": [
+      "ё",
+      "́"
+    ],
+    "cliticless_words": [
+      "в",
+      "во",
+      "на",
+      "за",
+      "под",
+      "над",
+      "из",
+      "изо",
+      "от",
+      "ото",
+      "до",
+      "у",
+      "к",
+      "ко",
+      "с",
+      "со",
+      "по",
+      "о",
+      "об",
+      "обо",
+      "не",
+      "ни",
+      "же",
+      "ль",
+      "ли",
+      "бы",
+      "б"
+    ],
+    "notes": "Russian stress is lexical and free (Timberlake 2004 §3.2); ё always carries stress (orthographic invariant). Dictionaries, textbooks and children's texts mark the free stress with a combining acute (U+0301) on the stressed vowel (Timberlake 2004; edition not consulted); when the input carries that mark it names the stressed syllable outright and the reduction contexts follow from it, so it transcribes to nothing and only places stress. The penultimate default is a statistical approximation chosen empirically on the WikiPron gold — it exists to gate the akanje/ikanje reduction contexts, which are only defined relative to a stress position; wrong guesses swap which single vowel surfaces unreduced. CLITICS: cliticless_words lists the closed class of Russian prosodic clitics — the simple (primary) prepositions в/во, на, за, под, над, из/изо, от/ото, до, у, к/ко, с/со, по, о/об/обо, the proclitic particles не and ни, and the enclitic particles же, ли/ль, бы/б. A simple preposition is proclitic and a particle of this class is enclitic: neither is an independent phonological word, both fall inside the host's stress domain and carry no word stress of their own (claim is standard, e.g. Timberlake 2004, A Reference Grammar of Russian, prosody; Comrie & Corbett 1993, The Slavonic Languages, Russian chapter; edition not consulted). The rule rests on those descriptions and not on the benchmark golds: the WikiPron Russian gold writes no stress mark on ANY word, so it cannot adjudicate stress either way, and for these forms it lists the full-vowel reading beside the reduced ones (во = [vo], [vɐ], [və]). LIMITATION: with no stress anywhere in the word the reduction cascade falls through to its weakest degree, so an isolated clitic surfaces with schwa — на = [nə] where pretonic [nɐ] is the better isolated guess, a proclitic being immediately pretonic to its host in the ordinary case. That is a property of the reduction cascade without a stress anchor, tracked separately. This is a purely orthographic class and cannot see syntax, so the stressed homographs are destressed too: the interjections о! and на!, the letter names у and с, the musical note до, and the phrase-level retraction of stress ONTO a preposition in fixed collocations (за́ городом, на́ пол) — that retraction is a property of the whole prepositional phrase, not of the isolated word this engine transcribes, and stays out of scope. Compound and derived prepositions (перед, через, около, между) are full prosodic words, bear their own stress, and are deliberately excluded. Vocalized ⟨надо⟩ is excluded as well, on evidence rather than omission: it is a homograph of the frequent stressed predicative на́до 'it is necessary', and the WikiPron gold carries both readings ([nadɐ] and [nədɐ]) while the Alphacep gold has only the stressed one."
+  },
+  "allophone_rules": [
+    {
+      "id": "RU_HARD_BACK_jɪ",
+      "phonemes": [
+        "jɪ"
+      ],
+      "surface": "ɨ",
+      "preceded_by_phoneme": [
+        "ʐ",
+        "ʂ",
+        "ts"
+      ],
+      "notes": "⟨ж ш ц⟩ are unpaired hard: a following ⟨е и⟩ backs to [ɨ]"
+    },
+    {
+      "id": "RU_HARD_BACK_je",
+      "phonemes": [
+        "je"
+      ],
+      "surface": "ɛ",
+      "preceded_by_phoneme": [
+        "ʐ",
+        "ʂ",
+        "ts"
+      ],
+      "notes": "⟨ж ш ц⟩ are unpaired hard, so a following ⟨е⟩ is never [je]: the glide is absorbed and the vowel is a back-shifted mid front vowel. UNDER STRESS it stays mid — жест [ʐɛst], шест [ʂɛst], центр [tsɛntr] — and is written [ɛ] here for the same reason ⟨э⟩ is: this spec reserves [e] for the vowel after a PALATALISED consonant (лес [lʲes]) and [ɛ] for the vowel after a hard one. The raising to [ɨ] is the UNSTRESSED reflex only (жена [ʐɨna], цена [tsɨna]) and is carried by the RU_HARD_BACK_jɪ/_ɪ/_i rules. KNOWN LIMITATION: this rule reads the following vowel only, not what stands after IT, so when ⟨же ше це⟩ itself stands directly before another vowel (hiatus) the reduction cascade that would otherwise catch a following unstressed vowel never fires, and [ɛ] surfaces even where the actual stress lies elsewhere (шея -> [ʂɛja], gold [ʂɨˈja]); this is an engine gap in hiatus handling, not modelled here. (Avanesov 1956; Jones & Ward 1969, The Phonetics of Russian; Timberlake 2004, A Reference Grammar of Russian; editions not consulted.)"
+    },
+    {
+      "id": "RU_HARD_BACK_ɪ",
+      "phonemes": [
+        "ɪ"
+      ],
+      "surface": "ɨ",
+      "preceded_by_phoneme": [
+        "ʐ",
+        "ʂ",
+        "ts"
+      ],
+      "notes": "⟨ж ш ц⟩ are unpaired hard: a following ⟨е и⟩ backs to [ɨ]"
+    },
+    {
+      "id": "RU_HARD_BACK_i",
+      "phonemes": [
+        "i"
+      ],
+      "surface": "ɨ",
+      "preceded_by_phoneme": [
+        "ʐ",
+        "ʂ",
+        "ts"
+      ],
+      "notes": "⟨ж ш ц⟩ are unpaired hard: a following ⟨е и⟩ backs to [ɨ]"
+    },
+    {
+      "id": "RU_HARD_BACK_e",
+      "phonemes": [
+        "e"
+      ],
+      "surface": "ɛ",
+      "preceded_by_phoneme": [
+        "ʐ",
+        "ʂ",
+        "ts"
+      ],
+      "notes": "⟨ж ш ц⟩ are unpaired hard, so a following ⟨е⟩ is never [je]: the glide is absorbed and the vowel is a back-shifted mid front vowel. UNDER STRESS it stays mid — жест [ʐɛst], шест [ʂɛst], центр [tsɛntr] — and is written [ɛ] here for the same reason ⟨э⟩ is: this spec reserves [e] for the vowel after a PALATALISED consonant (лес [lʲes]) and [ɛ] for the vowel after a hard one. The raising to [ɨ] is the UNSTRESSED reflex only (жена [ʐɨna], цена [tsɨna]) and is carried by the RU_HARD_BACK_jɪ/_ɪ/_i rules. KNOWN LIMITATION: this rule reads the following vowel only, not what stands after IT, so when ⟨же ше це⟩ itself stands directly before another vowel (hiatus) the reduction cascade that would otherwise catch a following unstressed vowel never fires, and [ɛ] surfaces even where the actual stress lies elsewhere (шея -> [ʂɛja], gold [ʂɨˈja]); this is an engine gap in hiatus handling, not modelled here. (Avanesov 1956; Jones & Ward 1969, The Phonetics of Russian; Timberlake 2004, A Reference Grammar of Russian; editions not consulted.)"
+    },
+    {
+      "id": "RU_DEVOICE_SOFT_FIN_b",
+      "phonemes": [
+        "b"
+      ],
+      "surface": "pʲ",
+      "followed_by_phoneme": [
+        "ʲ"
+      ],
+      "followed_by_2": "word_boundary",
+      "notes": "a voiced obstruent devoices (and palatalises) before a word-final/coda ⟨ь⟩, which is itself silent — the ⟨ь⟩ is looked past with followed_by_2"
+    },
+    {
+      "id": "RU_DEVOICE_SOFT_FIN_v",
+      "phonemes": [
+        "v"
+      ],
+      "surface": "fʲ",
+      "followed_by_phoneme": [
+        "ʲ"
+      ],
+      "followed_by_2": "word_boundary",
+      "notes": "a voiced obstruent devoices (and palatalises) before a word-final/coda ⟨ь⟩, which is itself silent — the ⟨ь⟩ is looked past with followed_by_2"
+    },
+    {
+      "id": "RU_DEVOICE_SOFT_FIN_d",
+      "phonemes": [
+        "d"
+      ],
+      "surface": "tʲ",
+      "followed_by_phoneme": [
+        "ʲ"
+      ],
+      "followed_by_2": "word_boundary",
+      "notes": "a voiced obstruent devoices (and palatalises) before a word-final/coda ⟨ь⟩, which is itself silent — the ⟨ь⟩ is looked past with followed_by_2"
+    },
+    {
+      "id": "RU_DEVOICE_SOFT_FIN_z",
+      "phonemes": [
+        "z"
+      ],
+      "surface": "sʲ",
+      "followed_by_phoneme": [
+        "ʲ"
+      ],
+      "followed_by_2": "word_boundary",
+      "notes": "a voiced obstruent devoices (and palatalises) before a word-final/coda ⟨ь⟩, which is itself silent — the ⟨ь⟩ is looked past with followed_by_2"
+    },
+    {
+      "id": "RU_DEVOICE_SOFT_FIN_ɡ",
+      "phonemes": [
+        "ɡ"
+      ],
+      "surface": "kʲ",
+      "followed_by_phoneme": [
+        "ʲ"
+      ],
+      "followed_by_2": "word_boundary",
+      "notes": "a voiced obstruent devoices (and palatalises) before a word-final/coda ⟨ь⟩, which is itself silent — the ⟨ь⟩ is looked past with followed_by_2"
+    },
+    {
+      "id": "RU_PALAT_b",
+      "phonemes": [
+        "b"
+      ],
+      "surface": "bʲ",
+      "followed_by_phoneme": [
+        "jɪ",
+        "jə",
+        "jʊ",
+        "je",
+        "ja",
+        "ju",
+        "jo",
+        "j",
+        "i",
+        "ɪ",
+        "ʲ"
+      ],
+      "notes": "palatalised before ⟨е ё ю я и⟩ or ⟨ь⟩ — a context, not a spelling per consonant×vowel pair"
+    },
+    {
+      "id": "RU_PALAT_v",
+      "phonemes": [
+        "v"
+      ],
+      "surface": "vʲ",
+      "followed_by_phoneme": [
+        "jɪ",
+        "jə",
+        "jʊ",
+        "je",
+        "ja",
+        "ju",
+        "jo",
+        "j",
+        "i",
+        "ɪ",
+        "ʲ"
+      ],
+      "notes": "palatalised before ⟨е ё ю я и⟩ or ⟨ь⟩ — a context, not a spelling per consonant×vowel pair"
+    },
+    {
+      "id": "RU_PALAT_ɡ",
+      "phonemes": [
+        "ɡ"
+      ],
+      "surface": "ɡʲ",
+      "followed_by_phoneme": [
+        "jɪ",
+        "jə",
+        "jʊ",
+        "je",
+        "ja",
+        "ju",
+        "jo",
+        "j",
+        "i",
+        "ɪ",
+        "ʲ"
+      ],
+      "notes": "palatalised before ⟨е ё ю я и⟩ or ⟨ь⟩ — a context, not a spelling per consonant×vowel pair"
+    },
+    {
+      "id": "RU_PALAT_d",
+      "phonemes": [
+        "d"
+      ],
+      "surface": "dʲ",
+      "followed_by_phoneme": [
+        "jɪ",
+        "jə",
+        "jʊ",
+        "je",
+        "ja",
+        "ju",
+        "jo",
+        "j",
+        "i",
+        "ɪ",
+        "ʲ"
+      ],
+      "notes": "palatalised before ⟨е ё ю я и⟩ or ⟨ь⟩ — a context, not a spelling per consonant×vowel pair"
+    },
+    {
+      "id": "RU_PALAT_z",
+      "phonemes": [
+        "z"
+      ],
+      "surface": "zʲ",
+      "followed_by_phoneme": [
+        "jɪ",
+        "jə",
+        "jʊ",
+        "je",
+        "ja",
+        "ju",
+        "jo",
+        "j",
+        "i",
+        "ɪ",
+        "ʲ"
+      ],
+      "notes": "palatalised before ⟨е ё ю я и⟩ or ⟨ь⟩ — a context, not a spelling per consonant×vowel pair"
+    },
+    {
+      "id": "RU_PALAT_k",
+      "phonemes": [
+        "k"
+      ],
+      "surface": "kʲ",
+      "followed_by_phoneme": [
+        "jɪ",
+        "jə",
+        "jʊ",
+        "je",
+        "ja",
+        "ju",
+        "jo",
+        "j",
+        "i",
+        "ɪ",
+        "ʲ"
+      ],
+      "notes": "palatalised before ⟨е ё ю я и⟩ or ⟨ь⟩ — a context, not a spelling per consonant×vowel pair"
+    },
+    {
+      "id": "RU_PALAT_ɫ",
+      "phonemes": [
+        "ɫ"
+      ],
+      "surface": "lʲ",
+      "followed_by_phoneme": [
+        "jɪ",
+        "jə",
+        "jʊ",
+        "je",
+        "ja",
+        "ju",
+        "jo",
+        "j",
+        "i",
+        "ɪ",
+        "ʲ"
+      ],
+      "notes": "palatalised before ⟨е ё ю я и⟩ or ⟨ь⟩ — a context, not a spelling per consonant×vowel pair"
+    },
+    {
+      "id": "RU_PALAT_m",
+      "phonemes": [
+        "m"
+      ],
+      "surface": "mʲ",
+      "followed_by_phoneme": [
+        "jɪ",
+        "jə",
+        "jʊ",
+        "je",
+        "ja",
+        "ju",
+        "jo",
+        "j",
+        "i",
+        "ɪ",
+        "ʲ"
+      ],
+      "notes": "palatalised before ⟨е ё ю я и⟩ or ⟨ь⟩ — a context, not a spelling per consonant×vowel pair"
+    },
+    {
+      "id": "RU_PALAT_n",
+      "phonemes": [
+        "n"
+      ],
+      "surface": "nʲ",
+      "followed_by_phoneme": [
+        "jɪ",
+        "jə",
+        "jʊ",
+        "je",
+        "ja",
+        "ju",
+        "jo",
+        "j",
+        "i",
+        "ɪ",
+        "ʲ"
+      ],
+      "notes": "palatalised before ⟨е ё ю я и⟩ or ⟨ь⟩ — a context, not a spelling per consonant×vowel pair"
+    },
+    {
+      "id": "RU_PALAT_p",
+      "phonemes": [
+        "p"
+      ],
+      "surface": "pʲ",
+      "followed_by_phoneme": [
+        "jɪ",
+        "jə",
+        "jʊ",
+        "je",
+        "ja",
+        "ju",
+        "jo",
+        "j",
+        "i",
+        "ɪ",
+        "ʲ"
+      ],
+      "notes": "palatalised before ⟨е ё ю я и⟩ or ⟨ь⟩ — a context, not a spelling per consonant×vowel pair"
+    },
+    {
+      "id": "RU_PALAT_r",
+      "phonemes": [
+        "r"
+      ],
+      "surface": "rʲ",
+      "followed_by_phoneme": [
+        "jɪ",
+        "jə",
+        "jʊ",
+        "je",
+        "ja",
+        "ju",
+        "jo",
+        "j",
+        "i",
+        "ɪ",
+        "ʲ"
+      ],
+      "notes": "palatalised before ⟨е ё ю я и⟩ or ⟨ь⟩ — a context, not a spelling per consonant×vowel pair"
+    },
+    {
+      "id": "RU_PALAT_s",
+      "phonemes": [
+        "s"
+      ],
+      "surface": "sʲ",
+      "followed_by_phoneme": [
+        "jɪ",
+        "jə",
+        "jʊ",
+        "je",
+        "ja",
+        "ju",
+        "jo",
+        "j",
+        "i",
+        "ɪ",
+        "ʲ"
+      ],
+      "notes": "palatalised before ⟨е ё ю я и⟩ or ⟨ь⟩ — a context, not a spelling per consonant×vowel pair"
+    },
+    {
+      "id": "RU_PALAT_t",
+      "phonemes": [
+        "t"
+      ],
+      "surface": "tʲ",
+      "followed_by_phoneme": [
+        "jɪ",
+        "jə",
+        "jʊ",
+        "je",
+        "ja",
+        "ju",
+        "jo",
+        "j",
+        "i",
+        "ɪ",
+        "ʲ"
+      ],
+      "notes": "palatalised before ⟨е ё ю я и⟩ or ⟨ь⟩ — a context, not a spelling per consonant×vowel pair"
+    },
+    {
+      "id": "RU_PALAT_f",
+      "phonemes": [
+        "f"
+      ],
+      "surface": "fʲ",
+      "followed_by_phoneme": [
+        "jɪ",
+        "jə",
+        "jʊ",
+        "je",
+        "ja",
+        "ju",
+        "jo",
+        "j",
+        "i",
+        "ɪ",
+        "ʲ"
+      ],
+      "notes": "palatalised before ⟨е ё ю я и⟩ or ⟨ь⟩ — a context, not a spelling per consonant×vowel pair"
+    },
+    {
+      "id": "RU_PALAT_x",
+      "phonemes": [
+        "x"
+      ],
+      "surface": "xʲ",
+      "followed_by_phoneme": [
+        "jɪ",
+        "jə",
+        "jʊ",
+        "je",
+        "ja",
+        "ju",
+        "jo",
+        "j",
+        "i",
+        "ɪ",
+        "ʲ"
+      ],
+      "notes": "palatalised before ⟨е ё ю я и⟩ or ⟨ь⟩ — a context, not a spelling per consonant×vowel pair"
+    },
+    {
+      "id": "RU_SOFT_SIGN_SILENT",
+      "phonemes": [
+        "ʲ"
+      ],
+      "surface": "",
+      "preceded_by_phoneme": [
+        "b",
+        "d",
+        "f",
+        "j",
+        "k",
+        "m",
+        "n",
+        "p",
+        "r",
+        "s",
+        "t",
+        "ts",
+        "tɕ",
+        "v",
+        "x",
+        "z",
+        "ɕː",
+        "ɡ",
+        "ɫ",
+        "ʂ",
+        "ʐ"
+      ],
+      "notes": "⟨ь⟩ marks palatalisation of the preceding consonant, which the palatalisation rule applies; the sign itself is silent"
+    },
+    {
+      "id": "RU_DEIOTA_jɪ",
+      "phonemes": [
+        "jɪ"
+      ],
+      "surface": "ɪ",
+      "preceded_by_phoneme": [
+        "b",
+        "d",
+        "f",
+        "j",
+        "k",
+        "m",
+        "n",
+        "p",
+        "r",
+        "s",
+        "t",
+        "ts",
+        "tɕ",
+        "v",
+        "x",
+        "z",
+        "ɕː",
+        "ɡ",
+        "ɫ",
+        "ʂ",
+        "ʐ",
+        "ʐj",
+        "ʂj"
+      ],
+      "notes": "after a plain consonant the glide is absorbed into palatalisation; it survives elsewhere"
+    },
+    {
+      "id": "RU_DEIOTA_jə",
+      "phonemes": [
+        "jə"
+      ],
+      "surface": "ə",
+      "preceded_by_phoneme": [
+        "b",
+        "d",
+        "f",
+        "j",
+        "k",
+        "m",
+        "n",
+        "p",
+        "r",
+        "s",
+        "t",
+        "ts",
+        "tɕ",
+        "v",
+        "x",
+        "z",
+        "ɕː",
+        "ɡ",
+        "ɫ",
+        "ʂ",
+        "ʐ",
+        "ʐj",
+        "ʂj"
+      ],
+      "notes": "after a plain consonant the glide is absorbed into palatalisation; it survives elsewhere"
+    },
+    {
+      "id": "RU_DEIOTA_jʊ",
+      "phonemes": [
+        "jʊ"
+      ],
+      "surface": "ʊ",
+      "preceded_by_phoneme": [
+        "b",
+        "d",
+        "f",
+        "j",
+        "k",
+        "m",
+        "n",
+        "p",
+        "r",
+        "s",
+        "t",
+        "ts",
+        "tɕ",
+        "v",
+        "x",
+        "z",
+        "ɕː",
+        "ɡ",
+        "ɫ",
+        "ʂ",
+        "ʐ",
+        "ʐj",
+        "ʂj"
+      ],
+      "notes": "after a plain consonant the glide is absorbed into palatalisation; it survives elsewhere"
+    },
+    {
+      "id": "RU_DEIOTA_je",
+      "phonemes": [
+        "je"
+      ],
+      "surface": "e",
+      "preceded_by_phoneme": [
+        "b",
+        "d",
+        "f",
+        "j",
+        "k",
+        "m",
+        "n",
+        "p",
+        "r",
+        "s",
+        "t",
+        "ts",
+        "tɕ",
+        "v",
+        "x",
+        "z",
+        "ɕː",
+        "ɡ",
+        "ɫ",
+        "ʂ",
+        "ʐ",
+        "ʐj",
+        "ʂj"
+      ],
+      "notes": "after a plain consonant the glide is absorbed into palatalisation; it survives elsewhere"
+    },
+    {
+      "id": "RU_DEIOTA_ja",
+      "phonemes": [
+        "ja"
+      ],
+      "surface": "a",
+      "preceded_by_phoneme": [
+        "b",
+        "d",
+        "f",
+        "j",
+        "k",
+        "m",
+        "n",
+        "p",
+        "r",
+        "s",
+        "t",
+        "ts",
+        "tɕ",
+        "v",
+        "x",
+        "z",
+        "ɕː",
+        "ɡ",
+        "ɫ",
+        "ʂ",
+        "ʐ",
+        "ʐj",
+        "ʂj"
+      ],
+      "notes": "after a plain consonant the glide is absorbed into palatalisation; it survives elsewhere"
+    },
+    {
+      "id": "RU_DEIOTA_ju",
+      "phonemes": [
+        "ju"
+      ],
+      "surface": "u",
+      "preceded_by_phoneme": [
+        "b",
+        "d",
+        "f",
+        "j",
+        "k",
+        "m",
+        "n",
+        "p",
+        "r",
+        "s",
+        "t",
+        "ts",
+        "tɕ",
+        "v",
+        "x",
+        "z",
+        "ɕː",
+        "ɡ",
+        "ɫ",
+        "ʂ",
+        "ʐ",
+        "ʐj",
+        "ʂj"
+      ],
+      "notes": "after a plain consonant the glide is absorbed into palatalisation; it survives elsewhere"
+    },
+    {
+      "id": "RU_HARD_BACK_jo",
+      "phonemes": [
+        "jo"
+      ],
+      "surface": "o",
+      "preceded_by_phoneme": [
+        "ʐ",
+        "ʂ",
+        "ts"
+      ],
+      "notes": "⟨ж ш ц⟩ are unpaired hard: they absorb the glide of a following ⟨ё⟩ exactly as a paired consonant does, but they are NOT palatalised, so the vowel has no soft flank to centralise it and stays back [o] — шёл [ʂoɫ], жёлтый [ʐoɫtɨj], шёпот [ʂopət]. The centralised [ɵ] of RU_DEIOTA_jo is an allophone of /o/ adjacent to PALATALISED consonants (Jones & Ward 1969, The Phonetics of Russian; Timberlake 2004, A Reference Grammar of Russian; editions not consulted), a condition ⟨ж ш ц⟩ never meet. The separative-⟨ь⟩ segments [ʐj]/[ʂj] are NOT excluded from centralisation: the segment immediately left of the vowel there is the stem glide /j/, a palatal, so ружьё [rʊʐjɵ] patterns with чёрный and not with шёл — see RU_DEIOTA_jo."
+    },
+    {
+      "id": "RU_DEIOTA_jo",
+      "phonemes": [
+        "jo"
+      ],
+      "surface": "ɵ",
+      "preceded_by_phoneme": [
+        "b",
+        "d",
+        "f",
+        "j",
+        "k",
+        "m",
+        "n",
+        "p",
+        "r",
+        "s",
+        "t",
+        "tɕ",
+        "v",
+        "x",
+        "z",
+        "ɕː",
+        "ɡ",
+        "ɫ",
+        "ʐj",
+        "ʂj"
+      ],
+      "notes": "after a plain consonant the glide is absorbed into palatalisation and the vowel is centralised between the flanking soft articulations; it survives elsewhere. ⟨ж ш ц⟩ are excluded because they are unpaired HARD — nothing palatalises there, so there is no centralising environment; see RU_HARD_BACK_jo."
+    },
+    {
+      "id": "RU_DEIOTA_jo_separative",
+      "phonemes": [
+        "jo"
+      ],
+      "surface": "jɵ",
+      "preceded_by_phoneme": [
+        "ʲ",
+        "lʲ"
+      ],
+      "notes": "⟨ьё⟩ spells a separative sign: the consonant is palatalised and the glide is NOT absorbed, so it stays on the surface — бельё [bʲɪlʲjɵ], бытьё [bɨtʲjɵ], жильё [ʐɨlʲjɵ]. The vowel is still centralised, for the same reason as in RU_DEIOTA_jo: the segment on each flank is palatal or palatalised. This is the paired-consonant counterpart of the [ʐj]/[ʂj] entries of RU_DEIOTA_jo, where ⟨жь шь⟩ carry the glide inside one slot. This rule covers ONLY the ⟨ьё⟩ boundary — the SOFT sign. The ⟨ъё⟩ boundary (the HARD sign: объём, подъём, съёмка — a 222-type class in the WikiPron gold, unanimous [j ɵ]) is a KNOWN, UNCOVERED gap: ⟨ъ⟩ maps to the empty phoneme, and the rescorer's ``preceded_by_phoneme`` check short-circuits on an empty-ipa neighbour slot before it ever reads the phoneme list, so no ``preceded_by_phoneme`` value (including \"\" itself) can make a rule fire immediately after ⟨ъ⟩ — the fix is an engine-level change to how the rescorer treats empty-ipa slot neighbours, not a spec-side rule."
+    },
+    {
+      "id": "RU_REGR_DEVOICE_b",
+      "phonemes": [
+        "b"
+      ],
+      "surface": "p",
+      "followed_by_phoneme": [
+        "p",
+        "t",
+        "k",
+        "f",
+        "s",
+        "ʂ",
+        "x",
+        "ts",
+        "tɕ",
+        "ɕː",
+        "pʲ",
+        "tʲ",
+        "kʲ",
+        "fʲ",
+        "sʲ",
+        "xʲ"
+      ],
+      "notes": "Regressive devoicing: an obstruent devoices before a voiceless obstruent (Timberlake (2004) A Reference Grammar of Russian (CUP) §2.3.2): водка [votkə], всё [fsʲɵ], абсолют [ɐpsɐlʲut]."
+    },
+    {
+      "id": "RU_REGR_DEVOICE_bʲ",
+      "phonemes": [
+        "bʲ"
+      ],
+      "surface": "pʲ",
+      "followed_by_phoneme": [
+        "p",
+        "t",
+        "k",
+        "f",
+        "s",
+        "ʂ",
+        "x",
+        "ts",
+        "tɕ",
+        "ɕː",
+        "pʲ",
+        "tʲ",
+        "kʲ",
+        "fʲ",
+        "sʲ",
+        "xʲ"
+      ],
+      "notes": "Regressive devoicing: an obstruent devoices before a voiceless obstruent (Timberlake (2004) A Reference Grammar of Russian (CUP) §2.3.2): водка [votkə], всё [fsʲɵ], абсолют [ɐpsɐlʲut]."
+    },
+    {
+      "id": "RU_REGR_DEVOICE_v",
+      "phonemes": [
+        "v"
+      ],
+      "surface": "f",
+      "followed_by_phoneme": [
+        "p",
+        "t",
+        "k",
+        "f",
+        "s",
+        "ʂ",
+        "x",
+        "ts",
+        "tɕ",
+        "ɕː",
+        "pʲ",
+        "tʲ",
+        "kʲ",
+        "fʲ",
+        "sʲ",
+        "xʲ"
+      ],
+      "notes": "Regressive devoicing: an obstruent devoices before a voiceless obstruent (Timberlake (2004) A Reference Grammar of Russian (CUP) §2.3.2): водка [votkə], всё [fsʲɵ], абсолют [ɐpsɐlʲut]."
+    },
+    {
+      "id": "RU_REGR_DEVOICE_vʲ",
+      "phonemes": [
+        "vʲ"
+      ],
+      "surface": "fʲ",
+      "followed_by_phoneme": [
+        "p",
+        "t",
+        "k",
+        "f",
+        "s",
+        "ʂ",
+        "x",
+        "ts",
+        "tɕ",
+        "ɕː",
+        "pʲ",
+        "tʲ",
+        "kʲ",
+        "fʲ",
+        "sʲ",
+        "xʲ"
+      ],
+      "notes": "Regressive devoicing: an obstruent devoices before a voiceless obstruent (Timberlake (2004) A Reference Grammar of Russian (CUP) §2.3.2): водка [votkə], всё [fsʲɵ], абсолют [ɐpsɐlʲut]."
+    },
+    {
+      "id": "RU_REGR_DEVOICE_d",
+      "phonemes": [
+        "d"
+      ],
+      "surface": "t",
+      "followed_by_phoneme": [
+        "p",
+        "t",
+        "k",
+        "f",
+        "s",
+        "ʂ",
+        "x",
+        "ts",
+        "tɕ",
+        "ɕː",
+        "pʲ",
+        "tʲ",
+        "kʲ",
+        "fʲ",
+        "sʲ",
+        "xʲ"
+      ],
+      "notes": "Regressive devoicing: an obstruent devoices before a voiceless obstruent (Timberlake (2004) A Reference Grammar of Russian (CUP) §2.3.2): водка [votkə], всё [fsʲɵ], абсолют [ɐpsɐlʲut]."
+    },
+    {
+      "id": "RU_REGR_DEVOICE_dʲ",
+      "phonemes": [
+        "dʲ"
+      ],
+      "surface": "tʲ",
+      "followed_by_phoneme": [
+        "p",
+        "t",
+        "k",
+        "f",
+        "s",
+        "ʂ",
+        "x",
+        "ts",
+        "tɕ",
+        "ɕː",
+        "pʲ",
+        "tʲ",
+        "kʲ",
+        "fʲ",
+        "sʲ",
+        "xʲ"
+      ],
+      "notes": "Regressive devoicing: an obstruent devoices before a voiceless obstruent (Timberlake (2004) A Reference Grammar of Russian (CUP) §2.3.2): водка [votkə], всё [fsʲɵ], абсолют [ɐpsɐlʲut]."
+    },
+    {
+      "id": "RU_REGR_DEVOICE_ɡ",
+      "phonemes": [
+        "ɡ"
+      ],
+      "surface": "k",
+      "followed_by_phoneme": [
+        "p",
+        "t",
+        "k",
+        "f",
+        "s",
+        "ʂ",
+        "x",
+        "ts",
+        "tɕ",
+        "ɕː",
+        "pʲ",
+        "tʲ",
+        "kʲ",
+        "fʲ",
+        "sʲ",
+        "xʲ"
+      ],
+      "notes": "Regressive devoicing: an obstruent devoices before a voiceless obstruent (Timberlake (2004) A Reference Grammar of Russian (CUP) §2.3.2): водка [votkə], всё [fsʲɵ], абсолют [ɐpsɐlʲut]."
+    },
+    {
+      "id": "RU_REGR_DEVOICE_ɡʲ",
+      "phonemes": [
+        "ɡʲ"
+      ],
+      "surface": "kʲ",
+      "followed_by_phoneme": [
+        "p",
+        "t",
+        "k",
+        "f",
+        "s",
+        "ʂ",
+        "x",
+        "ts",
+        "tɕ",
+        "ɕː",
+        "pʲ",
+        "tʲ",
+        "kʲ",
+        "fʲ",
+        "sʲ",
+        "xʲ"
+      ],
+      "notes": "Regressive devoicing: an obstruent devoices before a voiceless obstruent (Timberlake (2004) A Reference Grammar of Russian (CUP) §2.3.2): водка [votkə], всё [fsʲɵ], абсолют [ɐpsɐlʲut]."
+    },
+    {
+      "id": "RU_REGR_DEVOICE_z",
+      "phonemes": [
+        "z"
+      ],
+      "surface": "s",
+      "followed_by_phoneme": [
+        "p",
+        "t",
+        "k",
+        "f",
+        "s",
+        "ʂ",
+        "x",
+        "ts",
+        "tɕ",
+        "ɕː",
+        "pʲ",
+        "tʲ",
+        "kʲ",
+        "fʲ",
+        "sʲ",
+        "xʲ"
+      ],
+      "notes": "Regressive devoicing: an obstruent devoices before a voiceless obstruent (Timberlake (2004) A Reference Grammar of Russian (CUP) §2.3.2): водка [votkə], всё [fsʲɵ], абсолют [ɐpsɐlʲut]."
+    },
+    {
+      "id": "RU_REGR_DEVOICE_zʲ",
+      "phonemes": [
+        "zʲ"
+      ],
+      "surface": "sʲ",
+      "followed_by_phoneme": [
+        "p",
+        "t",
+        "k",
+        "f",
+        "s",
+        "ʂ",
+        "x",
+        "ts",
+        "tɕ",
+        "ɕː",
+        "pʲ",
+        "tʲ",
+        "kʲ",
+        "fʲ",
+        "sʲ",
+        "xʲ"
+      ],
+      "notes": "Regressive devoicing: an obstruent devoices before a voiceless obstruent (Timberlake (2004) A Reference Grammar of Russian (CUP) §2.3.2): водка [votkə], всё [fsʲɵ], абсолют [ɐpsɐlʲut]."
+    },
+    {
+      "id": "RU_REGR_DEVOICE_ʐ",
+      "phonemes": [
+        "ʐ"
+      ],
+      "surface": "ʂ",
+      "followed_by_phoneme": [
+        "p",
+        "t",
+        "k",
+        "f",
+        "s",
+        "ʂ",
+        "x",
+        "ts",
+        "tɕ",
+        "ɕː",
+        "pʲ",
+        "tʲ",
+        "kʲ",
+        "fʲ",
+        "sʲ",
+        "xʲ"
+      ],
+      "notes": "Regressive devoicing: an obstruent devoices before a voiceless obstruent (Timberlake (2004) A Reference Grammar of Russian (CUP) §2.3.2): водка [votkə], всё [fsʲɵ], абсолют [ɐpsɐlʲut]."
+    },
+    {
+      "id": "RU_REGR_VOICE_p",
+      "phonemes": [
+        "p"
+      ],
+      "surface": "b",
+      "followed_by_phoneme": [
+        "b",
+        "d",
+        "ɡ",
+        "z",
+        "ʐ",
+        "bʲ",
+        "dʲ",
+        "ɡʲ",
+        "zʲ"
+      ],
+      "notes": "Regressive voicing: an obstruent voices before a voiced obstruent, /v/ excluded as a trigger (Timberlake (2004) A Reference Grammar of Russian (CUP) §2.3.2): сделать [zʲdʲelətʲ], вокзал [vɐɡzaɫ]."
+    },
+    {
+      "id": "RU_REGR_VOICE_pʲ",
+      "phonemes": [
+        "pʲ"
+      ],
+      "surface": "bʲ",
+      "followed_by_phoneme": [
+        "b",
+        "d",
+        "ɡ",
+        "z",
+        "ʐ",
+        "bʲ",
+        "dʲ",
+        "ɡʲ",
+        "zʲ"
+      ],
+      "notes": "Regressive voicing: an obstruent voices before a voiced obstruent, /v/ excluded as a trigger (Timberlake (2004) A Reference Grammar of Russian (CUP) §2.3.2): сделать [zʲdʲelətʲ], вокзал [vɐɡzaɫ]."
+    },
+    {
+      "id": "RU_REGR_VOICE_t",
+      "phonemes": [
+        "t"
+      ],
+      "surface": "d",
+      "followed_by_phoneme": [
+        "b",
+        "d",
+        "ɡ",
+        "z",
+        "ʐ",
+        "bʲ",
+        "dʲ",
+        "ɡʲ",
+        "zʲ"
+      ],
+      "notes": "Regressive voicing: an obstruent voices before a voiced obstruent, /v/ excluded as a trigger (Timberlake (2004) A Reference Grammar of Russian (CUP) §2.3.2): сделать [zʲdʲelətʲ], вокзал [vɐɡzaɫ]."
+    },
+    {
+      "id": "RU_REGR_VOICE_tʲ",
+      "phonemes": [
+        "tʲ"
+      ],
+      "surface": "dʲ",
+      "followed_by_phoneme": [
+        "b",
+        "d",
+        "ɡ",
+        "z",
+        "ʐ",
+        "bʲ",
+        "dʲ",
+        "ɡʲ",
+        "zʲ"
+      ],
+      "notes": "Regressive voicing: an obstruent voices before a voiced obstruent, /v/ excluded as a trigger (Timberlake (2004) A Reference Grammar of Russian (CUP) §2.3.2): сделать [zʲdʲelətʲ], вокзал [vɐɡzaɫ]."
+    },
+    {
+      "id": "RU_REGR_VOICE_k",
+      "phonemes": [
+        "k"
+      ],
+      "surface": "ɡ",
+      "followed_by_phoneme": [
+        "b",
+        "d",
+        "ɡ",
+        "z",
+        "ʐ",
+        "bʲ",
+        "dʲ",
+        "ɡʲ",
+        "zʲ"
+      ],
+      "notes": "Regressive voicing: an obstruent voices before a voiced obstruent, /v/ excluded as a trigger (Timberlake (2004) A Reference Grammar of Russian (CUP) §2.3.2): сделать [zʲdʲelətʲ], вокзал [vɐɡzaɫ]."
+    },
+    {
+      "id": "RU_REGR_VOICE_kʲ",
+      "phonemes": [
+        "kʲ"
+      ],
+      "surface": "ɡʲ",
+      "followed_by_phoneme": [
+        "b",
+        "d",
+        "ɡ",
+        "z",
+        "ʐ",
+        "bʲ",
+        "dʲ",
+        "ɡʲ",
+        "zʲ"
+      ],
+      "notes": "Regressive voicing: an obstruent voices before a voiced obstruent, /v/ excluded as a trigger (Timberlake (2004) A Reference Grammar of Russian (CUP) §2.3.2): сделать [zʲdʲelətʲ], вокзал [vɐɡzaɫ]."
+    },
+    {
+      "id": "RU_REGR_VOICE_s",
+      "phonemes": [
+        "s"
+      ],
+      "surface": "z",
+      "followed_by_phoneme": [
+        "b",
+        "d",
+        "ɡ",
+        "z",
+        "ʐ",
+        "bʲ",
+        "dʲ",
+        "ɡʲ",
+        "zʲ"
+      ],
+      "notes": "Regressive voicing: an obstruent voices before a voiced obstruent, /v/ excluded as a trigger (Timberlake (2004) A Reference Grammar of Russian (CUP) §2.3.2): сделать [zʲdʲelətʲ], вокзал [vɐɡzaɫ]."
+    },
+    {
+      "id": "RU_REGR_VOICE_sʲ",
+      "phonemes": [
+        "sʲ"
+      ],
+      "surface": "zʲ",
+      "followed_by_phoneme": [
+        "b",
+        "d",
+        "ɡ",
+        "z",
+        "ʐ",
+        "bʲ",
+        "dʲ",
+        "ɡʲ",
+        "zʲ"
+      ],
+      "notes": "Regressive voicing: an obstruent voices before a voiced obstruent, /v/ excluded as a trigger (Timberlake (2004) A Reference Grammar of Russian (CUP) §2.3.2): сделать [zʲdʲelətʲ], вокзал [vɐɡzaɫ]."
+    },
+    {
+      "id": "RU_REGR_VOICE_f",
+      "phonemes": [
+        "f"
+      ],
+      "surface": "v",
+      "followed_by_phoneme": [
+        "b",
+        "d",
+        "ɡ",
+        "z",
+        "ʐ",
+        "bʲ",
+        "dʲ",
+        "ɡʲ",
+        "zʲ"
+      ],
+      "notes": "Regressive voicing: an obstruent voices before a voiced obstruent, /v/ excluded as a trigger (Timberlake (2004) A Reference Grammar of Russian (CUP) §2.3.2): сделать [zʲdʲelətʲ], вокзал [vɐɡzaɫ]."
+    },
+    {
+      "id": "RU_REGR_VOICE_fʲ",
+      "phonemes": [
+        "fʲ"
+      ],
+      "surface": "vʲ",
+      "followed_by_phoneme": [
+        "b",
+        "d",
+        "ɡ",
+        "z",
+        "ʐ",
+        "bʲ",
+        "dʲ",
+        "ɡʲ",
+        "zʲ"
+      ],
+      "notes": "Regressive voicing: an obstruent voices before a voiced obstruent, /v/ excluded as a trigger (Timberlake (2004) A Reference Grammar of Russian (CUP) §2.3.2): сделать [zʲdʲelətʲ], вокзал [vɐɡzaɫ]."
+    },
+    {
+      "id": "RU_REGR_VOICE_ʂ",
+      "phonemes": [
+        "ʂ"
+      ],
+      "surface": "ʐ",
+      "followed_by_phoneme": [
+        "b",
+        "d",
+        "ɡ",
+        "z",
+        "ʐ",
+        "bʲ",
+        "dʲ",
+        "ɡʲ",
+        "zʲ"
+      ],
+      "notes": "Regressive voicing: an obstruent voices before a voiced obstruent, /v/ excluded as a trigger (Timberlake (2004) A Reference Grammar of Russian (CUP) §2.3.2): сделать [zʲdʲelətʲ], вокзал [vɐɡzaɫ]."
+    },
+    {
+      "id": "RU_REGR_PALAT_s",
+      "phonemes": [
+        "s"
+      ],
+      "surface": "sʲ",
+      "followed_by_phoneme": [
+        "t",
+        "d",
+        "n"
+      ],
+      "notes": "Regressive palatalization assimilation: a dental consonant softens before a soft dental (Timberlake (2004) A Reference Grammar of Russian (CUP) §2.3.3, Moscow norm): гости [ɡosʲtʲɪ], снег [sʲnʲek].",
+      "followed_by_phoneme_2": [
+        "jɪ",
+        "jə",
+        "jʊ",
+        "je",
+        "ja",
+        "ju",
+        "jo",
+        "j",
+        "i",
+        "ɪ",
+        "ʲ"
+      ]
+    },
+    {
+      "id": "RU_REGR_PALAT_z",
+      "phonemes": [
+        "z"
+      ],
+      "surface": "zʲ",
+      "followed_by_phoneme": [
+        "t",
+        "d",
+        "n"
+      ],
+      "notes": "Regressive palatalization assimilation: a dental consonant softens before a soft dental (Timberlake (2004) A Reference Grammar of Russian (CUP) §2.3.3, Moscow norm): гости [ɡosʲtʲɪ], снег [sʲnʲek].",
+      "followed_by_phoneme_2": [
+        "jɪ",
+        "jə",
+        "jʊ",
+        "je",
+        "ja",
+        "ju",
+        "jo",
+        "j",
+        "i",
+        "ɪ",
+        "ʲ"
+      ]
+    },
+    {
+      "id": "RU_REGR_PALAT_n",
+      "phonemes": [
+        "n"
+      ],
+      "surface": "nʲ",
+      "followed_by_phoneme": [
+        "tʲ",
+        "dʲ",
+        "nʲ",
+        "sʲ",
+        "zʲ",
+        "lʲ",
+        "tɕ",
+        "ɕː"
+      ],
+      "notes": "Regressive palatalization assimilation: a dental consonant softens before a soft dental (Timberlake (2004) A Reference Grammar of Russian (CUP) §2.3.3, Moscow norm): гости [ɡosʲtʲɪ], снег [sʲnʲek]."
+    },
+    {
+      "id": "RU_REGR_PALAT_t",
+      "phonemes": [
+        "t"
+      ],
+      "surface": "tʲ",
+      "followed_by_phoneme": [
+        "tʲ",
+        "dʲ",
+        "nʲ",
+        "sʲ",
+        "zʲ",
+        "lʲ",
+        "tɕ",
+        "ɕː"
+      ],
+      "notes": "Regressive palatalization assimilation: a dental consonant softens before a soft dental (Timberlake (2004) A Reference Grammar of Russian (CUP) §2.3.3, Moscow norm): гости [ɡosʲtʲɪ], снег [sʲnʲek]."
+    },
+    {
+      "id": "RU_REGR_PALAT_d",
+      "phonemes": [
+        "d"
+      ],
+      "surface": "dʲ",
+      "followed_by_phoneme": [
+        "tʲ",
+        "dʲ",
+        "nʲ",
+        "sʲ",
+        "zʲ",
+        "lʲ",
+        "tɕ",
+        "ɕː"
+      ],
+      "notes": "Regressive palatalization assimilation: a dental consonant softens before a soft dental (Timberlake (2004) A Reference Grammar of Russian (CUP) §2.3.3, Moscow norm): гости [ɡosʲtʲɪ], снег [sʲnʲek]."
+    }
+  ],
+  "grammatical_endings": {
+    "ого": "əvə",
+    "него": "nʲɪvə",
+    "сего": "sʲɪvə",
+    "жего": "ʐɨvə",
+    "жьего": "ʐjɪvə",
+    "шего": "ʂɨvə",
+    "цего": "tsɨvə",
+    "чего": "tɕɪvə",
+    "щего": "ɕːɪvə",
+    "чьего": "tɕjɪvə",
+    "тьего": "tʲjɪvə",
+    "сьего": "sʲjɪvə",
+    "зьего": "zʲjɪvə",
+    "льего": "lʲjɪvə",
+    "ньего": "nʲjɪvə",
+    "дьего": "dʲjɪvə",
+    "бьего": "bʲjɪvə",
+    "вьего": "vʲjɪvə",
+    "пьего": "pʲjɪvə",
+    "рьего": "rʲjɪvə",
+    "мьего": "mʲjɪvə"
+  },
+  "word_exceptions": {
+    "много": "ˈmnoɡə",
+    "немного": "nʲɪˈmnoɡə",
+    "намного": "nɐˈmnoɡə",
+    "дорого": "ˈdorəɡə",
+    "недорого": "nʲɪˈdorəɡə",
+    "строго": "ˈstroɡə",
+    "убого": "ʊˈboɡə",
+    "лого": "ˈɫoɡə",
+    "ого": "ˈoɡo",
+    "его": "jɪˈvo",
+    "него": "nʲɪˈvo",
+    "кого": "kɐˈvo",
+    "того": "tɐˈvo",
+    "всего": "fsʲɪˈvo",
+    "сего": "sʲɪˈvo",
+    "чего": "tɕɪˈvo",
+    "ничего": "nʲɪtɕɪˈvo",
+    "одного": "ɐdnɐˈvo",
+    "никого": "nʲɪkɐˈvo",
+    "моего": "məjɪˈvo",
+    "твоего": "tvəjɪˈvo",
+    "своего": "svəjɪˈvo",
+    "чьего": "tɕjɪˈvo",
+    "этого": "ˈɛtəvə",
+    "ничьего": "nʲɪtɕjɪˈvo"
+  }
+}

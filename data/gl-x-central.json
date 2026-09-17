@@ -1,0 +1,80 @@
+{
+  "code": "gl-x-central",
+  "name": "Central Galician",
+  "script": "Latin",
+  "graphemes_base": "gl",
+  "allophones_base": "gl",
+  "allophones": {
+    "ʎ": [
+      "ʎ"
+    ],
+    "ɡ": [
+      "ɡ",
+      "ɣ"
+    ]
+  },
+  "positional_graphemes_base": "gl",
+  "parent": "gl",
+  "ancestors": [
+    {
+      "code": "gl",
+      "role": "parent",
+      "weight": 0.95
+    }
+  ],
+  "notes": "Central Galician (Lugo, eastern A Coruña, Ourense). Closest to RAG standard norms. No gheada (no /ɣ/ for /g/), no seseo, no yeísmo. 7-vowel system with /ɛ, ɔ/ as phonemes. Palatal lateral /ʎ/ fully preserved. Standard lenition: /ɡ/ → [ɣ] in intervocalic position. This is the prestige norm base used for the RAG standard.",
+  "quality": "research",
+  "script_type": "alphabet",
+  "sources": [
+    {
+      "id": "freixeiro_mato1998",
+      "author": "Freixeiro Mato, X.R.",
+      "year": 1998,
+      "title": "Gramática da Lingua Galega",
+      "publisher": "A Nosa Terra",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "mateus_dandrade2000",
+      "author": "Mateus, M.H.M. & d'Andrade, E.",
+      "year": 2000,
+      "title": "The Phonology of Portuguese",
+      "publisher": "Oxford University Press",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "fernandez_rei1990",
+      "author": "Fernández Rei, F.",
+      "year": 1990,
+      "title": "Dialectoloxía da lingua galega",
+      "publisher": "Xerais",
+      "url": null,
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Galician_language",
+    "https://gl.wikipedia.org/wiki/Lingua_galega",
+    "https://es.wikipedia.org/wiki/Idioma_gallego"
+  ],
+  "urls": [
+    "https://en.wikipedia.org/wiki/Galician_language"
+  ],
+  "timespan": {
+    "start_year": 1300,
+    "end_year": null
+  },
+  "glottolog_code": null,
+  "iso639_3": "glg",
+  "location": {
+    "latitude": 43.011667,
+    "longitude": -7.557222,
+    "source": "wikidata",
+    "notes": "Lugo — a representative locality of the central Galician block (Lugo, eastern A Coruña, Ourense). [Wikidata Q11125 P625]"
+  }
+}

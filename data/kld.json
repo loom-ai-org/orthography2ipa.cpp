@@ -1,0 +1,85 @@
+{
+  "code": "kld",
+  "name": "Gamilaraay",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "dh": ["d̪"],
+    "dj": ["ɟ"],
+    "nh": ["n̪"],
+    "ny": ["ɲ"],
+    "ng": ["ŋ"],
+    "rr": ["r"],
+    "aa": ["aː"],
+    "ii": ["iː"],
+    "uu": ["uː"],
+    "b": ["b"],
+    "d": ["d"],
+    "g": ["ɡ"],
+    "m": ["m"],
+    "n": ["n"],
+    "l": ["l"],
+    "r": ["ɻ"],
+    "w": ["w"],
+    "y": ["j"],
+    "a": ["a"],
+    "i": ["i"],
+    "u": ["u"]
+  },
+  "parent": "x-clade-pama1250",
+  "ancestors": [
+    {
+      "code": "x-clade-pama1250",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Descent per Glottolog classification of Yuwaalaraay-Gamilaraay (gami1243)."
+    }
+  ],
+  "notes": "Research. Pama-Nyungan (Yuwaalaraay-Gamilaraay) language of New South Wales, Australia. The single stop series is spelled with voiced letters (b d g, dental dh, palatal dj); rr is the alveolar trill and single r the retroflex approximant. Long vowels are written by doubling (aa ii uu). Any predictable stop-voicing allophony is not encoded. The dh/dj values follow standard Australianist digraph conventions and some Gamilaraay materials instead spell the stops p/t/k; the language has no separate retroflex stop/nasal/lateral series. Grapheme table checked against Austin (1993): no discrepancy found. Stress: Austin (1993) documents Gamilaraay stress as falling on the initial syllable of the word (typical of Pama-Nyungan languages generally), with no lexical contrast; `default_position=1` encodes this directly.",
+  "iso639_3": "kld",
+  "glottolog_code": null,
+  "sources": [
+    {
+      "id": "kld_glottolog",
+      "author": "Hammarström, H. et al. (Glottolog 5.0)",
+      "year": 2024,
+      "title": "Glottolog: Yuwaalaraay-Gamilaraay (gami1243)",
+      "publisher": "Max Planck Institute for Evolutionary Anthropology",
+      "url": "https://glottolog.org/resource/languoid/id/gami1243",
+      "pages": null,
+      "notes": "Classification reference for a skeleton-tier entry.",
+      "wikipedia_url": null
+    },
+    {
+      "id": "austin1993",
+      "author": "Austin, Peter",
+      "year": 1993,
+      "title": "A Reference Grammar of Gamilaraay, Northern New South Wales",
+      "publisher": "La Trobe University",
+      "url": "http://www.peterkaustin.com/docs/Austin_1993_Gamilaraay.pdf",
+      "pages": null,
+      "notes": "Reference grammar used to verify the grapheme table (stop series, retroflex r, digraph values) and to source the stress rule.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Gamilaraay_language"
+    },
+    {
+      "id": "kld_wikipedia",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Gamilaraay language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Gamilaraay_language",
+      "pages": null,
+      "notes": "Phonology and orthography reference for the skeleton grapheme map.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Gamilaraay_language"
+    }
+  ],
+  "stress": {
+    "default_position": 1,
+    "stress_mark": "ˈ",
+    "notes": "Word-initial primary stress per Austin (1993), the typologically regular Pama-Nyungan pattern."
+  },
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Gamilaraay_language"
+  ]
+}

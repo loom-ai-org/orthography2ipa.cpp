@@ -1,0 +1,275 @@
+{
+  "code": "mni",
+  "name": "Meitei",
+  "script": "Latin",
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "aː": [
+      "aː"
+    ],
+    "i": [
+      "i"
+    ],
+    "iː": [
+      "iː"
+    ],
+    "u": [
+      "u"
+    ],
+    "uː": [
+      "uː"
+    ],
+    "e": [
+      "e"
+    ],
+    "eː": [
+      "eː"
+    ],
+    "o": [
+      "o"
+    ],
+    "oː": [
+      "oː"
+    ],
+    "ə": [
+      "ə"
+    ],
+    "p": [
+      "p"
+    ],
+    "ph": [
+      "pʰ"
+    ],
+    "b": [
+      "b"
+    ],
+    "t": [
+      "t"
+    ],
+    "th": [
+      "tʰ"
+    ],
+    "d": [
+      "d"
+    ],
+    "k": [
+      "k"
+    ],
+    "kh": [
+      "kʰ"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "ʔ": [
+      "ʔ"
+    ],
+    "c": [
+      "tʃ"
+    ],
+    "ch": [
+      "tʃʰ"
+    ],
+    "j": [
+      "dʒ"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ŋ": [
+      "ŋ"
+    ],
+    "s": [
+      "s"
+    ],
+    "z": [
+      "z"
+    ],
+    "h": [
+      "h"
+    ],
+    "l": [
+      "l"
+    ],
+    "r": [
+      "r"
+    ],
+    "y": [
+      "j"
+    ],
+    "w": [
+      "w"
+    ]
+  },
+  "allophones": {
+    "p": [
+      "p",
+      "pʰ"
+    ],
+    "t": [
+      "t",
+      "tʰ"
+    ],
+    "k": [
+      "k",
+      "kʰ",
+      "ʔ"
+    ],
+    "b": [
+      "b"
+    ],
+    "d": [
+      "d"
+    ],
+    "ɡ": [
+      "ɡ"
+    ],
+    "tʃ": [
+      "tʃ",
+      "tʃʰ"
+    ],
+    "dʒ": [
+      "dʒ"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ŋ": [
+      "ŋ"
+    ],
+    "s": [
+      "s"
+    ],
+    "z": [
+      "z"
+    ],
+    "h": [
+      "h"
+    ],
+    "l": [
+      "l"
+    ],
+    "r": [
+      "r"
+    ],
+    "j": [
+      "j"
+    ],
+    "w": [
+      "w"
+    ],
+    "a": [
+      "a"
+    ],
+    "aː": [
+      "aː"
+    ],
+    "i": [
+      "i"
+    ],
+    "iː": [
+      "iː"
+    ],
+    "u": [
+      "u"
+    ],
+    "uː": [
+      "uː"
+    ],
+    "e": [
+      "e"
+    ],
+    "eː": [
+      "eː"
+    ],
+    "o": [
+      "o"
+    ],
+    "oː": [
+      "oː"
+    ],
+    "ə": [
+      "ə"
+    ]
+  },
+  "ancestors": [
+    {
+      "code": "mni-x-proto-kuki-chin",
+      "role": "parent",
+      "weight": 0.6,
+      "notes": "Tibeto-Burman; Meiteic is a sister branch of Kuki-Chin proper, not a daughter (VanBik 2009)"
+    },
+    {
+      "code": "bn",
+      "role": "adstrate",
+      "weight": 0.08,
+      "notes": "Bengali adstrate through administrative contact"
+    }
+  ],
+  "notes": "Meitei/Manipuri (Manipur, India). Tibeto-Burman, Kuki-Chin–Naga area; Meiteic is a sister branch of Kuki-Chin proper, not a daughter (VanBik 2009, Glottolog). Phonemic tone (falling vs. non-falling in stressed syllable). Meitei Mayek script (traditional, restored 2013 as official). Also written in Bengali script officially.",
+  "quality": "research",
+  "script_type": "alphabet",
+  "iso639_3": "mni",
+  "sources": [
+    {
+      "id": "chelliah1997",
+      "author": "Chelliah, S.L.",
+      "year": 1997,
+      "title": "A Grammar of Meithei",
+      "publisher": "Mouton de Gruyter",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "ladefoged_maddieson1996",
+      "author": "Ladefoged, P. & Maddieson, I.",
+      "year": 1996,
+      "title": "The Sounds of the World's Languages",
+      "publisher": "Blackwell",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "gordon2005",
+      "author": "Gordon, R.G. (ed.)",
+      "year": 2005,
+      "title": "Ethnologue: Languages of the World (15th ed.)",
+      "publisher": "SIL International",
+      "url": null,
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Meitei_language",
+    "https://mni.wikipedia.org/wiki/%EA%AF%83%EA%AF%A4%EA%AF%87%EA%AF%A9%EA%AF%82%EA%AF%A3%EA%AF%9F"
+  ],
+  "timespan": {
+    "start_year": 1500,
+    "end_year": null
+  },
+  "glottolog_code": "mani1292",
+  "tone_inventory": {
+    "falling": "falling tone",
+    "level": "level tone"
+  },
+  "wikidata_qid": "Q33868",
+  "phoible_id": "mani1292",
+  "wals_code": "mei",
+  "location": {
+    "latitude": 24.4409,
+    "longitude": 93.3426,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Manipuri."
+  }
+}

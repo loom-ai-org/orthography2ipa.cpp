@@ -1,0 +1,207 @@
+{
+  "code": "szl",
+  "name": "Silesian",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "iso639_3": "szl",
+  "glottolog_code": "sile1253",
+  "timespan": {
+    "start_year": 1400,
+    "end_year": null
+  },
+  "graphemes": {
+    "sz": [
+      "ʃ"
+    ],
+    "cz": [
+      "tʃ"
+    ],
+    "rz": [
+      "ʒ"
+    ],
+    "dż": [
+      "dʒ"
+    ],
+    "dź": [
+      "dʑ"
+    ],
+    "dz": [
+      "dz"
+    ],
+    "ch": [
+      "x"
+    ],
+    "ś": [
+      "ɕ"
+    ],
+    "ź": [
+      "ʑ"
+    ],
+    "ć": [
+      "tɕ"
+    ],
+    "ń": [
+      "ɲ"
+    ],
+    "ł": [
+      "w"
+    ],
+    "ô": [
+      "o"
+    ],
+    "ō": [
+      "oː"
+    ],
+    "ŏ": [
+      "ɔ"
+    ],
+    "a": [
+      "a"
+    ],
+    "b": [
+      "b"
+    ],
+    "c": [
+      "ts"
+    ],
+    "d": [
+      "d"
+    ],
+    "e": [
+      "ɛ"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "h": [
+      "x"
+    ],
+    "i": [
+      "i"
+    ],
+    "j": [
+      "j"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "o": [
+      "ɔ"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "u": [
+      "u"
+    ],
+    "w": [
+      "v"
+    ],
+    "y": [
+      "ɨ"
+    ],
+    "z": [
+      "z"
+    ],
+    "ż": [
+      "ʒ"
+    ],
+    "ã": [
+      "ã"
+    ],
+    "õ": [
+      "õ"
+    ]
+  },
+  "allophones": {},
+  "positional_graphemes": {},
+  "ancestors": [
+    {
+      "code": "sla",
+      "role": "parent",
+      "weight": 0.88,
+      "notes": "Descent from Proto-Slavic (West Slavic, Lechitic / Silesian subgroup)."
+    },
+    {
+      "code": "pl",
+      "role": "related",
+      "weight": 0.55,
+      "notes": "Closely related Lechitic neighbour; language-vs-dialect classification disputed."
+    },
+    {
+      "code": "de-DE",
+      "role": "adstrate",
+      "weight": 0.14,
+      "notes": "German adstrate: Silesia long under Bohemian/Prussian rule; very heavy lexical layer."
+    },
+    {
+      "code": "cs",
+      "role": "adstrate",
+      "weight": 0.05,
+      "notes": "Czech adstrate along the Moravian-Silesian border."
+    }
+  ],
+  "parent": "x-clade-west2792",
+  "notes": "Silesian (Ślůnski), West Slavic variety spoken in Silesia (Poland/Czech Republic). Classification as language vs. Polish dialect debated. Distinctive vowels ô /o/ and the palatal sibilants ś, ź. German loanword influence significant. No single standard orthography.",
+  "sources": [
+    {
+      "id": "wiki-szl",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Silesian language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Silesian_language"
+    },
+    {
+      "id": "jaroszewicz2023",
+      "author": "Jaroszewicz, Henryk",
+      "year": 2023,
+      "title": "Standardization of the Silesian Language: The Current Status and Prospects for Development",
+      "publisher": "Poznańskie Studia Polonistyczne. Seria Językoznawcza 30(1), 57-72 (open access)",
+      "url": "https://doi.org/10.14746/pspsj.2023.30.1.4",
+      "wikipedia_url": null,
+      "pages": "61, 65",
+      "notes": "Read in full. p. 61 describes the orthography adopted in Cieszyn in 2009 and elaborated in the 2010 Gōrnoślōnski ślabikŏrz: Polish-style ⟨ch h ó u rz ż dź ł⟩ and ⟨ś si ć ci ź zi dź dzi⟩ for the soft series, plus ⟨ō⟩ for the closed [ȯ] absent from Polish and the two homographs ⟨ŏ⟩ and ⟨ô⟩ that unify dialectally different realisations. p. 65 tabulates the model versus optional spellings of the 2022-2023 Principles of Silesian Language Spelling (o:ŏ, o:õ, a:ã, ym:am, and the rest). This source contradicts two things this spec says: its notes call the orthography unstandardised, while a standard has existed since 2009 with a revision under way, and the map's single ⟨ô⟩ = /o/ leaves ⟨ō⟩, ⟨ŏ⟩, ⟨õ⟩ and ⟨ã⟩ unread. Recorded here; the grapheme data is not changed in this citation."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Silesian_language",
+    "https://szl.wikipedia.org/wiki/%C5%9Al%C5%8Dnsko_godka"
+  ],
+  "stress": {
+    "default_position": -2,
+    "final_stress_endings": [],
+    "penult_stress_endings": [],
+    "marked_vowels": [],
+    "stress_mark": "ˈ",
+    "notes": "Silesian (szl) follows the Polish penultimate stress pattern. Diacritics ô ō ŏ mark vowel quality, not stress. Source: Pattern consistent with Polish (pl); note that Silesian is a dialect continuum and individual varieties may vary. Wikipedia: https://en.wikipedia.org/wiki/Silesian_language"
+  },
+  "wikidata_qid": "Q30319",
+  "location": {
+    "latitude": 50.9656,
+    "longitude": 16.9491,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Silesian."
+  }
+}

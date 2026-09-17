@@ -1,0 +1,232 @@
+{
+  "code": "vep",
+  "name": "Veps",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "a": [
+      "ɑ"
+    ],
+    "b": [
+      "b"
+    ],
+    "c": [
+      "t͡s"
+    ],
+    "č": [
+      "t͡ʃ"
+    ],
+    "d": [
+      "d"
+    ],
+    "e": [
+      "e"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "h": [
+      "h"
+    ],
+    "i": [
+      "i"
+    ],
+    "j": [
+      "j"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "o": [
+      "o"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "š": [
+      "ʃ"
+    ],
+    "z": [
+      "z"
+    ],
+    "ž": [
+      "ʒ"
+    ],
+    "t": [
+      "t"
+    ],
+    "u": [
+      "u"
+    ],
+    "v": [
+      "v"
+    ],
+    "ü": [
+      "y"
+    ],
+    "ä": [
+      "æ"
+    ],
+    "ö": [
+      "ø"
+    ]
+  },
+  "allophones": {
+    "ɑ": [
+      "ɑ"
+    ],
+    "b": [
+      "b"
+    ],
+    "t͡s": [
+      "t͡s"
+    ],
+    "t͡ʃ": [
+      "t͡ʃ"
+    ],
+    "d": [
+      "d"
+    ],
+    "e": [
+      "e"
+    ],
+    "f": [
+      "f"
+    ],
+    "ɡ": [
+      "ɡ"
+    ],
+    "h": [
+      "h"
+    ],
+    "i": [
+      "i",
+      "ɨ"
+    ],
+    "j": [
+      "j"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "o": [
+      "o"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "r",
+      "ɾ"
+    ],
+    "s": [
+      "s"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "z": [
+      "z"
+    ],
+    "ʒ": [
+      "ʒ"
+    ],
+    "t": [
+      "t"
+    ],
+    "u": [
+      "u"
+    ],
+    "v": [
+      "v"
+    ],
+    "y": [
+      "y"
+    ],
+    "æ": [
+      "æ"
+    ],
+    "ø": [
+      "ø"
+    ]
+  },
+  "iso639_3": "vep",
+  "glottolog_code": "veps1250",
+  "wikidata_qid": "Q32747",
+  "notes": "Veps (vepsän kel'), Finnic (Uralic), Karelia / Leningrad Oblast. The modern (post-1989) orthography uses a 29-character Latin alphabet: 22 basic Latin letters, six with diacritics (č š ž ü ä ö) and the prime ⟨ʹ⟩. ⟨c⟩ = /t͡s/, ⟨č⟩ = /t͡ʃ/, ⟨š⟩ = /ʃ/, ⟨ž⟩ = /ʒ/, ⟨ü⟩ = /y/, ⟨ä⟩ = /æ/, ⟨ö⟩ = /ø/. PALATALISATION: the prime ⟨ʹ⟩ palatalises the PRECEDING consonant (kʹ tʹ mʹ …), giving the /pʲ tʲ …/ series. It is a modifier, not a segment of its own, and is therefore not listed as a grapheme — a spec-level modifier for it is not yet expressed, so the palatalised series is currently under-generated. Long vowels/geminates are written by doubling and fall out of the single-letter graphemes. /ɨ/ is a marginal allophone of /i/.",
+  "sources": [
+    {
+      "id": "zaitseva1981",
+      "author": "Zaitseva, Maria I.",
+      "year": 1981,
+      "title": "Грамматика вепсского языка (Grammar of the Veps Language)",
+      "publisher": "Nauka",
+      "url": null,
+      "pages": null,
+      "notes": "Reference grammar: phonology and morphology.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Veps_language"
+    },
+    {
+      "id": "veps_language_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Veps language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Veps_language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Veps_language",
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Veps_language",
+    "https://vep.wikipedia.org/wiki/Veps%C3%A4n_kel%27"
+  ],
+  "timespan": {
+    "start_year": 1989,
+    "end_year": null
+  },
+  "parent": "x-clade-ural1272",
+  "ancestors": [
+    {
+      "code": "x-clade-ural1272",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Uralic — the classification node this language sits under."
+    }
+  ],
+  "location": {
+    "latitude": 60.3353,
+    "longitude": 34.7865,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Veps."
+  }
+}

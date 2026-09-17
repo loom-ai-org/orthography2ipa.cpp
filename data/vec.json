@@ -1,0 +1,333 @@
+{
+  "code": "vec",
+  "name": "Venetian",
+  "script": "Latin",
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "e": [
+      "e",
+      "ɛ"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "o",
+      "ɔ"
+    ],
+    "u": [
+      "u"
+    ],
+    "b": [
+      "b"
+    ],
+    "c": [
+      "k",
+      "tʃ"
+    ],
+    "ch": [
+      "k"
+    ],
+    "d": [
+      "d"
+    ],
+    "dh": [
+      "ð"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɡ",
+      "dʒ"
+    ],
+    "gh": [
+      "ɡ"
+    ],
+    "gn": [
+      "ɲ"
+    ],
+    "h": [
+      ""
+    ],
+    "j": [
+      "j"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "p": [
+      "p"
+    ],
+    "qu": [
+      "kw"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s",
+      "z"
+    ],
+    "sc": [
+      "ʃ"
+    ],
+    "t": [
+      "t"
+    ],
+    "th": [
+      "θ"
+    ],
+    "v": [
+      "v"
+    ],
+    "x": [
+      "z"
+    ],
+    "z": [
+      "ts",
+      "dz"
+    ],
+    "ss": [
+      "sː"
+    ],
+    "ll": [
+      "lː"
+    ],
+    "nn": [
+      "nː"
+    ],
+    "rr": [
+      "rː"
+    ],
+    "ł": [
+      "ɰ",
+      "l",
+      ""
+    ],
+    "à": [
+      "a"
+    ],
+    "è": [
+      "ɛ"
+    ],
+    "é": [
+      "e"
+    ],
+    "ì": [
+      "i"
+    ],
+    "ò": [
+      "ɔ"
+    ],
+    "ó": [
+      "o"
+    ],
+    "ù": [
+      "u"
+    ]
+  },
+  "allophones": {
+    "p": [
+      "p"
+    ],
+    "b": [
+      "b"
+    ],
+    "t": [
+      "t"
+    ],
+    "d": [
+      "d"
+    ],
+    "k": [
+      "k"
+    ],
+    "ɡ": [
+      "ɡ"
+    ],
+    "θ": [
+      "θ"
+    ],
+    "ð": [
+      "ð"
+    ],
+    "tʃ": [
+      "tʃ"
+    ],
+    "dʒ": [
+      "dʒ"
+    ],
+    "ts": [
+      "ts"
+    ],
+    "dz": [
+      "dz"
+    ],
+    "f": [
+      "f"
+    ],
+    "v": [
+      "v"
+    ],
+    "s": [
+      "s"
+    ],
+    "z": [
+      "z"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n",
+      "ŋ",
+      "ɱ"
+    ],
+    "ɲ": [
+      "ɲ"
+    ],
+    "l": [
+      "l",
+      "ɰ"
+    ],
+    "r": [
+      "r",
+      "ɾ"
+    ],
+    "rː": [
+      "rː"
+    ],
+    "j": [
+      "j"
+    ],
+    "w": [
+      "w"
+    ],
+    "a": [
+      "a"
+    ],
+    "e": [
+      "e"
+    ],
+    "ɛ": [
+      "ɛ"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "o"
+    ],
+    "ɔ": [
+      "ɔ"
+    ],
+    "u": [
+      "u"
+    ],
+    "sː": [
+      "sː"
+    ],
+    "lː": [
+      "lː"
+    ],
+    "nː": [
+      "nː"
+    ],
+    "ɰ": [
+      "ɰ"
+    ]
+  },
+  "parent": "x-clade-italorom",
+  "ancestors": [
+    {
+      "code": "la-x-italia",
+      "role": "parent",
+      "weight": 0.8,
+      "notes": "Italo-Romance parent: retains 7-vowel system, no /y/ fronting. NE Italian classification."
+    },
+    {
+      "code": "cel",
+      "role": "substrate",
+      "weight": 0.04,
+      "notes": "Celtic (Cenomani/Veneti) substrate: pre-Roman Veneti were possibly IE but not Celtic; limited substrate effect."
+    },
+    {
+      "code": "gem",
+      "role": "superstrate",
+      "weight": 0.04,
+      "notes": "Lombardic superstrate (limited in Veneto)."
+    },
+    {
+      "code": "grc",
+      "role": "adstrate",
+      "weight": 0.03,
+      "notes": "Byzantine Greek adstrate: Venice was nominally Byzantine until 9th century."
+    }
+  ],
+  "notes": "Venetian. NE Italo-Romance language of Veneto, Trentino, Friuli, and Istria. ~3.8 million speakers. Reference: Veneziano. Straddles Gallo-Italic / Italo-Romance boundary. Key features: (1) 7-vowel system (Italo-Romance). (2) Interdental fricatives /θ, ð/ in some varieties. (3) Intervocalic lenition (Gallo-Italic-like). (4) Partial degemination. (5) No /y/ fronting. Former lingua franca of the eastern Mediterranean (Ferguson 2007, Zamboni 1974).",
+  "quality": "research",
+  "script_type": "alphabet",
+  "iso639_3": "vec",
+  "sources": [
+    {
+      "id": "maiden_parry1997",
+      "author": "Maiden, M. & Parry, M. (eds.)",
+      "year": 1997,
+      "title": "The Dialects of Italy",
+      "publisher": "Routledge",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "loporcaro2009",
+      "author": "Loporcaro, M.",
+      "year": 2009,
+      "title": "Profilo linguistico dei dialetti italiani",
+      "publisher": "Laterza",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "lepschy_lepschy1988",
+      "author": "Lepschy, A.L. & Lepschy, G.",
+      "year": 1988,
+      "title": "The Italian Language Today",
+      "publisher": "Hutchinson",
+      "url": null,
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Venetian_language",
+    "https://vec.wikipedia.org/wiki/Łéngoa_vèneta",
+    "https://vec.wikipedia.org/wiki/%C5%81%C3%A9ngua_v%C3%A8neta",
+    "https://it.wikipedia.org/wiki/Lingua_veneta"
+  ],
+  "timespan": {
+    "start_year": 1300,
+    "end_year": null
+  },
+  "glottolog_code": "vene1258",
+  "wikidata_qid": "Q32724",
+  "location": {
+    "latitude": 45.503581,
+    "longitude": 12.214167,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Venetian."
+  }
+}

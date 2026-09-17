@@ -1,0 +1,101 @@
+{
+  "code": "glk",
+  "name": "Gilaki",
+  "script": "Arabic",
+  "script_type": "abjad",
+  "quality": "skeleton",
+  "graphemes": {
+    "ا": ["ʔ", "a"],
+    "آ": ["ʔɒː"],
+    "ب": ["b"],
+    "پ": ["p"],
+    "ت": ["t"],
+    "ث": ["s"],
+    "ج": ["dʒ"],
+    "چ": ["tʃ"],
+    "ح": ["h"],
+    "خ": ["x"],
+    "د": ["d"],
+    "ذ": ["z"],
+    "ر": ["r"],
+    "ز": ["z"],
+    "ژ": ["ʒ"],
+    "س": ["s"],
+    "ش": ["ʃ"],
+    "ص": ["s"],
+    "ض": ["z"],
+    "ط": ["t"],
+    "ظ": ["z"],
+    "ع": ["ʔ"],
+    "غ": ["ɢ"],
+    "ف": ["f"],
+    "ق": ["ɢ"],
+    "ک": ["k"],
+    "گ": ["ɡ"],
+    "ل": ["l"],
+    "م": ["m"],
+    "ن": ["n"],
+    "و": ["v", "uː"],
+    "ه": ["h", "e"],
+    "ی": ["j", "iː"],
+    "ء": ["ʔ"]
+  },
+  "allophones": {
+    "ʔ": ["ʔ"], "a": ["a"], "ʔɒː": ["ʔɒː"], "b": ["b"], "p": ["p"], "t": ["t"],
+    "s": ["s"], "dʒ": ["dʒ"], "tʃ": ["tʃ"], "h": ["h"], "x": ["x"], "d": ["d"],
+    "z": ["z"], "r": ["r"], "ʒ": ["ʒ"], "ʃ": ["ʃ"], "ɢ": ["ɢ"], "f": ["f"],
+    "k": ["k"], "ɡ": ["ɡ"], "l": ["l"], "m": ["m"], "n": ["n"], "v": ["v"],
+    "uː": ["uː"], "e": ["e"], "j": ["j"], "iː": ["iː"]
+  },
+  "notes": "Gilaki (گیلکی) — Northwestern Iranian language of Gilan Province, Iran, written in the Perso-Arabic script (a Persian-alphabet-based abjad). SKELETON: consonant/vowel-letter table now specified. The consonant letter set is the shared Perso-Arabic inventory Gilaki uses with Persian (`fa`) — the same 32 letters, adapted rather than copied wholesale: unlike Persian, ⟨ق⟩ and ⟨غ⟩ are kept as a distinct plain uvular stop /ɢ/ from the fricative pair merged in Tehrani Persian (Rastorgueva et al. 2012, 'The Gilan Language'; Wikipedia), since Caspian (Gilaki/Mazanderani/Talysh) dialects generally preserve the historical /q/-/ɣ/ contrast that colloquial Persian has lost. As an ABJAD, short vowels are normally unwritten (the harakat diacritics exist but are rarely used outside pedagogical text), so this grapheme table is necessarily incomplete for full vocalisation without a lexicon or vowel-restoration model — the same INPUT CONTRACT limitation already documented for `fa`/`ar`. STRESS EXEMPTION: no `stress` block is declared; Gilaki word-stress is not reconstructible from unvocalised Perso-Arabic spelling.",
+  "iso639_3": "glk",
+  "glottolog_code": "gila1241",
+  "wikidata_qid": "Q33657",
+  "sources": [
+    {
+      "id": "gilaki_language_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Gilaki language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Gilaki_language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Gilaki_language",
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "windfuhr2009",
+      "author": "Windfuhr, Gernot (ed.)",
+      "year": 2009,
+      "title": "The Iranian Languages",
+      "publisher": "Routledge",
+      "url": null,
+      "notes": "Comparative Caspian (Gilaki/Mazanderani) phonology chapter."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Gilaki_language",
+    "https://glk.wikipedia.org/wiki/%DA%AF%D9%8A%D9%84%DA%A9%D9%8A_%D8%B2%D9%88%D8%A4%D9%86"
+  ],
+  "parent": "x-clade-iran1269",
+  "ancestors": [
+    {
+      "code": "x-clade-iran1269",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Iranian — the classification node this language sits under."
+    },
+    {
+      "code": "fa",
+      "role": "adstrate",
+      "weight": 0.15,
+      "notes": "Persian adstrate: shared Perso-Arabic script and heavy lexical influence from the national standard language."
+    }
+  ],
+  "location": {
+    "latitude": 37.1344,
+    "longitude": 49.8359,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Gilaki."
+  }
+}

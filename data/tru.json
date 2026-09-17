@@ -1,0 +1,209 @@
+{
+  "code": "tru",
+  "name": "Turoyo",
+  "script": "Syriac",
+  "script_type": "abjad",
+  "quality": "research",
+  "graphemes": {
+    "ܐ": [
+      "ʔ"
+    ],
+    "ܒ": [
+      "b"
+    ],
+    "ܓ": [
+      "ɡ"
+    ],
+    "ܕ": [
+      "d"
+    ],
+    "ܔ": [
+      "d͡ʒ"
+    ],
+    "ܗ": [
+      "h"
+    ],
+    "ܘ": [
+      "u",
+      "w",
+      "o"
+    ],
+    "ܙ": [
+      "z"
+    ],
+    "ܚ": [
+      "ħ"
+    ],
+    "ܛ": [
+      "tˤ"
+    ],
+    "ܝ": [
+      "i",
+      "j",
+      "e"
+    ],
+    "ܟ": [
+      "k"
+    ],
+    "ܠ": [
+      "l"
+    ],
+    "ܡ": [
+      "m"
+    ],
+    "ܢ": [
+      "n"
+    ],
+    "ܣ": [
+      "s"
+    ],
+    "ܥ": [
+      "ʕ"
+    ],
+    "ܦ": [
+      "p"
+    ],
+    "ܨ": [
+      "sˤ"
+    ],
+    "ܩ": [
+      "q"
+    ],
+    "ܪ": [
+      "r"
+    ],
+    "ܫ": [
+      "ʃ"
+    ],
+    "ܬ": [
+      "t"
+    ],
+    "ـ": [
+      ""
+    ]
+  },
+  "positional_graphemes": {
+    "ܐ": {
+      "word_final": [
+        "o",
+        "e",
+        "ʔ"
+      ]
+    },
+    "ܘ": {
+      "word_initial": [
+        "w"
+      ]
+    },
+    "ܝ": {
+      "word_initial": [
+        "j"
+      ]
+    }
+  },
+  "parent": "x-clade-cent2236",
+  "ancestors": [
+    {
+      "code": "x-clade-cent2236",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Descent per Glottolog classification of Turoyo (turo1239)."
+    }
+  ],
+  "notes": "Skeleton. Turoyo (Ṣurayt), a modern Semitic (Afroasiatic, Central Neo-Aramaic) language written in the Syriac abjad. Consonant letters are mapped to their base IPA values. Vowels are written with optional pointing and with the matres lectionis ⟨ܐ ܘ ܝ⟩, and the three mater letters are read as vowels here. The Surayt Orthography document published by the Aramaic-Online Project, the body that standardised the writing of the language, states the rule directly under \"Vowel marking\" (§2a, p. 7): \"There is no need to write the vowels cṣoṣo and ḥboṣo when there is waw and yuḏ in a word. We write each /u/ with /waw/ and each /i/ with /yuḏ/ without exceptions\"; its alphabet table (p. 23) marks ⟨ܐ ܘ ܝ⟩ as \"the vowels or matres lectionis\". ⟨ܘ⟩ therefore reads u, and ⟨ܝ⟩ reads i, with the consonantal /w/ and /j/ kept as alternates because a root consonant can genuinely stand there. The trailing alternates o and e are not from that source: they are measured in this gold, 4 waw sites reading o and 1 yodh site reading e, and are ranked last accordingly. Word-initially the two letters stay consonantal. The same document spells word-initial /u/ ⟨ܐܘ⟩ (učli) and word-initial /i/ ⟨ܐܝ⟩ (iḏo), both with a leading olaf, and says an olaf is only dispensable word-medially (§2d, p. 7), so a bare word-initial ⟨ܘ⟩ or ⟨ܝ⟩ is not a mater. The gold agrees where it can: all 4 headwords beginning with ⟨ܝ⟩ have gold readings beginning /j/ (ܝܘܡܐ jawme, ܝܡܐ jɑme, ܝܪܚܐ jarħe, ܝܫܘܥ jəʃuʕ), and no headword begins with ⟨ܘ⟩ at all, so the word-initial waw entry is unmeasurable on this row and rests on the orthography document plus the sibling syc treatment. GOLD DISTRIBUTION OF THE TWO MATRES. Of the 25 headwords with a non-initial ⟨ܘ⟩, 13 have no /w/ in any gold reading (ܐܚܘܢܐ aħuno, ܚܒܘܫܐ ħabuʃo, ܙܥܘܪܐ zʕuro), so the flat consonantal reading was wrong at over half its sites; counted by token over those headwords the split is 12 /w/ against 13 u and 4 o. Of the 41 headwords with a non-initial ⟨ܝ⟩, 21 have no glide in any gold reading; by token, 48 non-initial occurrences stand against 19 glide tokens and 31 i/e tokens. The two letters behave alike here, which is why both are encoded — unlike the sibling syc spec, which encodes the waw mater and deliberately leaves yodh unencoded because there the yodh split was a near coin flip (19 glide against 24 vowel tokens) and morphological rather than positional. In this gold the yodh mater is the clearer of the two and is also the one that pays: alone it moves PER 0.3789 to 0.3608. The waw mater alone moves PER 0.3789 to 0.3788, essentially nothing, because it is right on the 13 headwords that write /u/ and wrong on the 12 that write the /aw/ diphthong (ܓܘܪܐ ɡawro, ܗܘܟܐ hawxa). It is kept anyway: it is what the orthography prescribes, it doubles the exactly-correct words on the row from 3 to 5, and it lowers oracle@3 from 0.3475 to 0.3380 in the waw-only condition, so the right reading enters the lattice even where it does not lead. Choosing the diphthong instead would need the preceding vowel, which is unwritten. Together the two matres move the row from PER 0.3789 to 0.3607, oracle@3 from 0.3522 to 0.3104 and exact match from 0.0179 to 0.0298. One notation mismatch is left standing: 5 gold tokens write the palatal glide as ASCII \"y\" rather than /j/ (ܟܝܐ kye, ܡܝܐ mɑye), and the benchmark normalizer does not fold the two, so those sites cannot be matched whatever the spec emits.  Spirantized reflexes of the begadkepat letters (attested in Jastrow 1987, and directly present in the tru_syrc_broad gold as θ/ð/x/ɣ/f) are conditioned by position and cannot be recovered from unpointed consonantal text, so they are left unencoded rather than guessed. The letter ⟨ܔ⟩ (Gamal Garshuni, U+0714) is mapped to /d͡ʒ/: the Unicode Syriac block reserves it for representing sounds outside the native Syriac inventory in Garshuni text, and every one of its 3 occurrences in the tru_syrc_broad gold realizes as [d͡ʒ] with no counterexample, so this rests on a distributional argument from the gold plus the Unicode character identity, not on a fetched Turoyo-specific phonology source. Other diacritic-dot-marked extra phonemes (t͡ʃ, ʒ) never occur written with their marking diacritics in the wikipron gold (no combining marks in the 0x730-0x74A range appear at all), so the base letters they would otherwise sit on stay ambiguous and are left unencoded, same as the begadkefat alternation. Gemination and stress are also left unencoded. A manual audit of the 168-entry tru_syrc_broad gold found 3 bound/affix forms beginning with U+0640 TATWEEL (suffix paradigm entries such as ـܢܐ/ـܢܝ/ـܬܐ scraped from Wiktionary inflection tables) and 3 more carrying a MEDIAL tatweel (ܐܝـܝܪ, ܨܢܝـܝܐ, ܨܢܝـܝܬ), which is a scrape artifact of the same kind. The row is overwhelmingly free-standing words, not a bound-morpheme paradigm dump: PER on the 165 words without an initial tatweel is 0.3572 against the row's headline 0.3607, so the bound forms are not a material inflator. U+0640 is now given an explicit empty grapheme entry rather than being left to fall off the end of the grapheme table: the Unicode Standard 17.0 lists it among the Arabic-block characters Syriac borrows (§9.3.1, \"Use of Characters of the Arabic Block\") and describes it as a join-causing justification stretch that does not change any letter's shape (§9.2.3), so it carries no phonemic value. Declaring the silence changes no output (PER is identical with and without the entry, 0.3607 both ways) but removes a silent grapheme deletion, which is the failure mode this project treats as most dangerous. MEASURED VOWEL-FOLDING FLOOR: stripping every IPA vowel symbol and every length mark out of both the hypothesis and the gold and rescoring gives PER 0.2103 against the unfolded 0.3607, and 82 of the 168 headwords then match exactly. About 15 PER points of this row is therefore vowel error rather than consonant error, which is what an abjad with optional pointing predicts. Folding does not take the row to zero: what survives it is the begadkefat reflex, unrecoverable from the consonantal skeleton (see the homograph count below), and the ordinary consonant errors. The vowels the spec does recover are the three matres; the pointing it never sees carries the rest. WORD-INITIAL ALAPH: of the 23 alaph-initial headwords, 16 have NO gold reading with an initial /ʔ/ at all, so the gold does largely treat ⟨ܐ⟩ as a bare vowel carrier word-initially, unlike the sibling syc gold. The descriptive half of that observation holds; its implied remedy does not. Suppressing the word-initial /ʔ/ RAISES PER, 0.3607 to 0.3631: the engine emits no vowel there, so the spurious /ʔ/ aligns against the gold's initial vowel as a substitution, and deleting it turns one substitution into a deletion while leaving the vowel still missing. The word-initial alaph is not a net error source on this gold and is not the gap. WORD-FINAL ALAPH IS A MATER, NOT A GLOTTAL STOP: 112 of the 168 headwords end in ⟨ܐ⟩ and not one of their gold readings ends in /ʔ/; counted over gold rows, 88 of those readings end in -o and 55 in -e. Word-finally the alaph spells the nominal ending. The Šlomo Surayt course writes the masculine singular ⟨ܥܰܡܡܐ⟩ cammo and the feminine ⟨ܥܰܡܬ݂ܐ⟩ camṯo with a final alaph, and writes the plural with the same final alaph under a rbaṣa point — ⟨ܟܰܠܒܶܐ⟩ kalbe beside singular ⟨ܟܰܠܒܐ⟩ kalbo, ⟨ܗܷܪܓܶܐ⟩ hërge beside hërgo. Kalin (2020), drawing her data from Jastrow (1993:37), gives the same plural -e (malke \"kings\", ʿeze \"goats\", ḥwoṯe \"sisters\"). ⟨ܐ⟩ therefore takes a word_final reading of o, e, ʔ instead of the flat /ʔ/. This is a positionally conditioned reading of a letter that IS written, not a guess at an unwritten vowel. The choice between -o and -e is MORPHOLOGICAL — emphatic singular against plural — and the gold is unpointed, so nothing in the string distinguishes them and the spec does not try to. -o is emitted as the 1-best and -e as a declared alternate; that ranking is a distribution MEASURED in this gold (88 rows -o against 55 -e; over headwords, 51 exclusively -o, 15 exclusively -e, 29 attested with both) and is not a sourced rule, since no source claims singular readings outnumber plural ones. The consonantal /ʔ/ is kept as the last alternate, as the sibling syc spec does, because a root-final alaph can genuinely be consonantal. Measured effect on this row: PER 0.4625 -> 0.3607, oracle@3 0.4340 -> 0.3104, so the -e alternate is live in the lattice. A residue is left unmodelled: 10 gold rows ending in ⟨ܐ⟩ read -a and 8 read -t (for instance ܓܘܗܪܐ, gold \"ɡ u h ɑ r a t\", and ܫܢܛܐ, gold \"ʃ a n tˤ a\"), and the rule emits neither reading for them, so they stay errors. The word-INITIAL alaph is deliberately untouched by this change, for the reason recorded above: suppressing it raises PER. HOMOGRAPH COUNT: of the 168 unique word spellings, 56 (33%) occur in the gold with more than one distinct full transcription (expected under an unwritten-vowel account, since two paradigm forms can share a spelling and differ only in the missing vowel); of those, 19 (11%) remain distinct even after vowel-folding — the SAME consonant skeleton maps to two or more DIFFERENT consonant sequences in gold (e.g. ܟܬܦܐ -> katfo/katfoθe/kaθpo/kaθpoθe, mixing /t/~/θ/ and /f/~/p/ reflexes on the identical spelling). That is direct evidence that the begadkefat reflex is positionally conditioned and not recoverable from the consonantal skeleton alone; it does not by itself floor a score, since the harness scores each spelling against the best-matching of its gold transcriptions, so a homograph is scored leniently rather than penalized. The reflex stays unencoded rather than guessed, for the reasons given above.",
+  "iso639_3": "tru",
+  "glottolog_code": null,
+  "sources": [
+    {
+      "id": "tru_glottolog",
+      "author": "Hammarström, H. et al. (Glottolog 5.0)",
+      "year": 2024,
+      "title": "Glottolog: Turoyo (turo1239)",
+      "publisher": "Max Planck Institute for Evolutionary Anthropology",
+      "url": "https://glottolog.org/resource/languoid/id/turo1239",
+      "pages": null,
+      "notes": "Classification reference for a skeleton-tier entry.",
+      "wikipedia_url": null
+    },
+    {
+      "id": "tru_wikipedia",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Turoyo language",
+      "publisher": "Wikipedia",
+      "url": null,
+      "pages": null,
+      "notes": "Alphabet/phonology reference for a skeleton-tier consonant map.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Turoyo_language"
+    },
+    {
+      "id": "tru_jastrow_1987",
+      "author": "Jastrow, Otto",
+      "year": 1987,
+      "title": "The Turoyo Language Today",
+      "publisher": "Journal of Assyrian Academic Studies, vol. 1",
+      "url": "https://web.archive.org/web/20200715114314/http://www.jaas.org/edocs/v1/jastrow.pdf",
+      "pages": "10",
+      "notes": "Documents retention of the begadkefat fricative reflexes /f/, /w/, /θ/, /ð/, /x/, /ɣ/ in Turoyo (section II.a.2), confirming the spirantized phonemes seen in the tru_syrc_broad gold. These reflexes are positionally conditioned and unrecoverable from unpointed Serto text, so the spec does not encode them.",
+      "wikipedia_url": null
+    },
+    {
+      "id": "tru_unicode_syriac_block",
+      "author": "Unicode Consortium",
+      "year": 2025,
+      "title": "The Unicode Standard, Version 17.0: Syriac (Range 0700-074F)",
+      "publisher": "Unicode, Inc.",
+      "url": "https://www.unicode.org/charts/PDF/U0700.pdf",
+      "pages": "64",
+      "notes": "Names U+0714 SYRIAC LETTER GAMAL GARSHUNI as a Garshuni-specific letter used to write sounds outside the native Syriac inventory, and U+0745/U+0746 THREE DOTS ABOVE/BELOW as \"diacritic used in Turoyo for letters not found in Syriac\" — the marking that would normally disambiguate the affricate/sibilant series but never appears in this gold. The /d͡ʒ/ value assigned to Gamal Garshuni here is a distributional finding from the tru_syrc_broad gold (3/3 occurrences), not an assertion from a Turoyo-specific grammar.",
+      "wikipedia_url": null
+    },
+    {
+      "id": "tru_talay_slomo_surayt",
+      "author": "Talay, Shabo (ed.)",
+      "year": 2017,
+      "title": "Šlomo Surayt: An Introductory Course to Surayt-Aramaic (Turoyo)",
+      "publisher": "Bar Hebraeus Verlag / Aramaic Online Project (Erasmus+)",
+      "url": "https://textbook.surayt.com/en/Level%20A/4.3",
+      "pages": "Level A, Lesson 4.3 (nouns); Online Course 5.1 (glossary)",
+      "notes": "The course published by the body that maintains the Surayt orthography. Lesson 4.3 gives the masculine singular ending -o and the feminine -to/-ṯo with their Syriac spellings (cammo ⟨ܥܰܡܡܐ⟩, camṯo ⟨ܥܰܡܬ݂ܐ⟩), all written with a final alaph. The glossary pairs singulars in -o with plurals in -e written with the same final alaph plus a rbaṣa point (kalbo ⟨ܟܰܠܒܐ⟩ / kalbe ⟨ܟܰܠܒܶܐ⟩). Basis for reading word-final ⟨ܐ⟩ as a vowel mater rather than /ʔ/.",
+      "wikipedia_url": null
+    },
+    {
+      "id": "tru_kalin_2020",
+      "author": "Kalin, Laura",
+      "year": 2020,
+      "title": "Morphology before phonology: A case study of Turoyo (Neo-Aramaic)",
+      "publisher": "Morphology (Springer), doi:10.1007/s11525-020-09365-3",
+      "url": "https://ling.auf.net/lingbuzz/004258",
+      "pages": "example (7)",
+      "notes": "Peer-reviewed source for the Turoyo nominal plural in -e: malk-e 'kings', ʿez-e 'goats', ḥwoṯ-e 'sisters', all attributed to Jastrow 1993:37. Jastrow's grammar itself (Laut- und Formenlehre des neuar. Dialekts von Mīdin im Ṭūr ʿAbdīn, Semitica Viva 9, Harrassowitz 1993) is the standard reference but is not available online; it is cited here THROUGH Kalin, who worked from it, and was not fetched directly.",
+      "wikipedia_url": null
+    },
+    {
+      "id": "tru_unicode_core_syriac",
+      "author": "Unicode Consortium",
+      "year": 2025,
+      "title": "The Unicode Standard, Version 17.0, Chapter 9: Middle East-I (Modern and Liturgical Scripts)",
+      "publisher": "Unicode, Inc.",
+      "url": "https://www.unicode.org/versions/Unicode17.0.0/core-spec/chapter-9/",
+      "pages": "§9.2.3, §9.3.1",
+      "notes": "§9.3.1: \"Syriac makes use of several characters from the Arabic block, including U+0640 ARABIC TATWEEL.\" §9.2.3 lists U+0640 as Join_Causing and notes such characters \"do not change shape themselves\", used to stretch words in justification. Basis for mapping U+0640 to explicit silence.",
+      "wikipedia_url": null
+    },
+    {
+      "id": "tru_surayt_orthography",
+      "author": "Aramaic-Online Project (Erasmus+)",
+      "year": 2017,
+      "title": "Surayt Orthography",
+      "publisher": "Erasmus+ Aramaic-Online Project (2014-2017), Freie Universität Berlin",
+      "url": "https://userblogs.fu-berlin.de/saop/files/2017/08/Surayt-Orthography.pdf",
+      "pages": "7, 23",
+      "notes": "The standardised orthography agreed by the project that also publishes the Šlomo Surayt course. \"Vowel marking\" §2a (p. 7): \"There is no need to write the vowels cṣoṣo and ḥboṣo when there is waw and yuḏ in a word. We write each /u/ with /waw/ and each /i/ with /yuḏ/ without exceptions. In addition, each final /o/ is expressed by /olaf/.\" §2d (p. 7): \"There is no need to write an olaf in the middle of the word, except in loan words.\" The alphabet notes (p. 23) state that \"the letters written in red color are the vowels or matres lectionis (ܐ ܘ ܝ)\" and spell word-initial /u/ and /i/ as ⟨ܐܘ⟩ (učli) and ⟨ܐܝ⟩ (iḏo). Basis for reading non-initial ⟨ܘ⟩ as u and non-initial ⟨ܝ⟩ as i, and for keeping both consonantal word-initially.",
+      "wikipedia_url": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Turoyo_language"
+  ]
+}

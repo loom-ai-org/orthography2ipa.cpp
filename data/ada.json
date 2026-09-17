@@ -1,0 +1,236 @@
+{
+  "code": "ada",
+  "name": "Dangme (Adangme)",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "e": [
+      "e"
+    ],
+    "ɛ": [
+      "ɛ"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "o"
+    ],
+    "ɔ": [
+      "ɔ"
+    ],
+    "u": [
+      "u"
+    ],
+    "b": [
+      "b"
+    ],
+    "d": [
+      "d"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "h": [
+      "h"
+    ],
+    "j": [
+      "dʒ"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ŋ": [
+      "ŋ"
+    ],
+    "p": [
+      "p"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "ts": [
+      "tʃ"
+    ],
+    "v": [
+      "v"
+    ],
+    "w": [
+      "w"
+    ],
+    "y": [
+      "j"
+    ],
+    "z": [
+      "z"
+    ],
+    "ny": [
+      "ɲ"
+    ],
+    "gb": [
+      "ɡ͡b"
+    ],
+    "kp": [
+      "k͡p"
+    ],
+    "ŋm": [
+      "ŋ͡m"
+    ]
+  },
+  "allophones": {
+    "a": [
+      "a"
+    ],
+    "e": [
+      "e"
+    ],
+    "ɛ": [
+      "ɛ"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "o"
+    ],
+    "ɔ": [
+      "ɔ"
+    ],
+    "u": [
+      "u"
+    ],
+    "b": [
+      "b"
+    ],
+    "d": [
+      "d"
+    ],
+    "f": [
+      "f"
+    ],
+    "ɡ": [
+      "ɡ"
+    ],
+    "h": [
+      "h"
+    ],
+    "dʒ": [
+      "dʒ"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l",
+      "r"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ŋ": [
+      "ŋ"
+    ],
+    "p": [
+      "p"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "tʃ": [
+      "tʃ"
+    ],
+    "v": [
+      "v"
+    ],
+    "w": [
+      "w"
+    ],
+    "j": [
+      "j",
+      "ʒ"
+    ],
+    "z": [
+      "z"
+    ],
+    "ɲ": [
+      "ɲ"
+    ],
+    "ɡ͡b": [
+      "ɡ͡b"
+    ],
+    "k͡p": [
+      "k͡p"
+    ],
+    "ŋ͡m": [
+      "ŋ͡m"
+    ]
+  },
+  "iso639_3": "ada",
+  "glottolog_code": "adan1247",
+  "wikidata_qid": "Q35141",
+  "notes": "Dangme (Adangme, Adaŋgbi), a Ga-Dangme (Kwa) language of the Eastern Region and Greater Accra Region, Ghana, closely related to Ga. Latin script plus ɛ, ɔ, ŋ; tones are not normally written (Dangme has three tones: high, mid, low, with terracing). Seven oral vowels a e ɛ i o ɔ u, five nasal vowels written with a following ⟨n⟩ (not modelled as separate graphemes here). 23 consonant phonemes including the doubly-articulated labial-velars ⟨gb⟩ /ɡ͡b/, ⟨kp⟩ /k͡p/ and the labial-velar nasal ⟨ŋm⟩ /ŋ͡m/. ⟨j⟩ = /dʒ/ with fricative allophone [ʒ] for /j/ in some contexts, ⟨ts⟩ = /tʃ/, ⟨ny⟩ = /ɲ/, ⟨y⟩ = /j/. /l/ varies between a lateral approximant and a central trill/tap [r]. Syllable structure is (C)(C)V(C), where a second onset consonant is restricted to /l/.",
+  "sources": [
+    {
+      "id": "dangme_language_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Dangme language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Dangme_language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Dangme_language",
+      "notes": "Phonology, orthography and vowel/consonant inventory overview."
+    },
+    {
+      "id": "apronti1967",
+      "author": "Apronti, E. Ofori",
+      "year": 1967,
+      "title": "A Generative Phonology of Dangme",
+      "publisher": "University of Michigan (dissertation)",
+      "url": null,
+      "notes": "Early generative-phonology description of Dangme sound system."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Dangme_language"
+  ],
+  "parent": "x-clade-atla1278",
+  "ancestors": [
+    {
+      "code": "x-clade-atla1278",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Atlantic-Congo — the classification node this language sits under; Ga-Dangme (Kwa) has no dedicated clade node in this dataset yet, following the ee/ak/fon convention of pointing straight at the Atlantic-Congo node."
+    }
+  ],
+  "location": {
+    "latitude": 5.883,
+    "longitude": 0.1,
+    "source": "glottolog",
+    "notes": "Eastern Region / Greater Accra Region, Ghana — the Dangme-speaking heartland around Ada and Krobo."
+  }
+}

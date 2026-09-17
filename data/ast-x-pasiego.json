@@ -1,0 +1,101 @@
+{
+  "code": "ast-x-pasiego",
+  "name": "Pasiegu (Pasiego, Montes de Pas)",
+  "script": "Latin",
+  "parent": "ast-x-cantabrian",
+  "graphemes_base": "ast-x-cantabrian",
+  "allophones_base": "ast-x-cantabrian",
+  "positional_graphemes_base": "ast-x-cantabrian",
+  "graphemes": {
+    "ll": [
+      "ʎ"
+    ],
+    "ḥ": [
+      "x",
+      "h"
+    ]
+  },
+  "allophones": {
+    "ʎ": [
+      "ʎ"
+    ]
+  },
+  "ancestors": [
+    {
+      "code": "ast-x-cantabrian",
+      "role": "parent",
+      "weight": 0.55,
+      "notes": "Cantabrian (Montañés) base: Pasiegu is the speech of the Montes de Pas (Vega de Pas, San Pedro del Romeral, San Roque de Riomiera, upper Pas/Pisueña/Miera valleys, southern Cantabria). It shares the conservative northern-Castilian/Cantabrian consonant frame (distinción /θ/, apico-alveolar /s̺/, coda-/s/ aspiration) supplied by the parent, and adds the Asturleonese-type features below."
+    },
+    {
+      "code": "ast",
+      "role": "adstrate",
+      "weight": 0.3,
+      "notes": "Asturleonese: the detailed modern description (UPF thesis) classes Pasiegu as an Asturleonese dialect on the strength of four core traits — the neuter of matter, vowel-height metaphony, aspiration of Latin F-, and palatalisation of Latin initial L- (llumiacu < LIMACIS). Its metaphony is Penny's Cantabrian 'set 2a' subtype, distinct from the Central Asturian 2b/2c sets."
+    },
+    {
+      "code": "es-ES",
+      "role": "adstrate",
+      "weight": 0.12,
+      "notes": "Standard Castilian roof: the prestige norm under which Pasiegu features (metaphony, neuter of matter) are receding to relic rural registers."
+    },
+    {
+      "code": "xaq",
+      "role": "substrate",
+      "weight": 0.03,
+      "notes": "Basque/Aquitanian substrate of the eastern Cantabrian mountains, inherited via the Cantabrian base."
+    }
+  ],
+  "notes": "Pasiegu (pasiego) — the strongly conservative Asturleonese-type mountain speech of the Montes de Pas in southern Cantabria (Spain). CLASSIFICATION: placed under the Asturian (ast) clade as ast-x-pasiego, following the most detailed modern source (the UPF MA thesis, which repeatedly classes Pasiegu as Asturleonese) and Penny's analysis, which locates its vowel system in the Cantabrian 'set 2a' metaphony type; the code keeps ast-x-cantabrian as parent to inherit the Cantabrian consonant frame while recording the Asturleonese affiliation in the ancestry. MODELLED DELTAS over ast-x-cantabrian: (1) ⟨ll⟩ = [ʎ] — palatalisation of Latin initial L- and -LL- retained (llumiacu 'slug', toponym Lloreda), the Asturleonese trait, so no yeísmo. (2) ASPIRATED LATIN F-, written ⟨ḥ⟩ (the ⟨h.⟩ of Pasiego texts) = [x]~[h]: conservative Pas speakers articulate it [x] and even keep an x/h contrast (ḥuegu [ˈxweɣu] 'fire' < F- vs juegu 'I play'); general Cantabria merges both to [h]. THE DEFINING FEATURE — DOCUMENTED, NOT PHONEME-MAPPED, because it is morphophonological (conditioned by morphology, not spelling), and o2i's grapheme→IPA tables cannot express it without a metaphony rule engine: VOWEL-HEIGHT METAPHONY + CENTRALISATION. A word-final high vowel /-u/ (masc./neuter sg.) or /-i/ raises and centralises the stressed vowel of the whole phonological word; final [ʊ] (from /-o/) does NOT trigger. Penny's Cantabrian set-2a inventory: non-centralised /i e a o u/ vs centralised /ɨ (e) ɐ (ø) ʉ/. Minimal pairs turn on this: ˈpɪlʊ vs ˈpelʊ 'hair', rᴀˈbjʊsʊ 'bitter (count)' vs rᴀˈbjosʊ '(mass)'. The NEUTER OF MATTER (a third, uncountable agreement whose final /u/ is high and hence metaphonic) means the SAME spelled word maps to different stressed-vowel qualities by count/mass agreement — the trait Penny called hardest to erase from Pasiego. Two further harmonies (centralisation harmony from final [ʊ]; pretonic unstressed-vowel raising before a stressed high vowel/glide) are likewise documented but out of grapheme→IPA scope. Provenance honesty: quality set to SKELETON — the modelled consonant deltas are page-pinned, but the phonology that actually defines Pasiegu (metaphony, centralisation, neuter of matter) is morphophonological and cannot be represented in the current table-based engine; the notes record it in full so a future metaphony rule pass can implement it. The classic primary field sources (Penny 1969 Orbis 18; Penny 1970 Archivum Linguisticum 1; García Lomas 1960) are print-only and were reached via the OA reanalyses.",
+  "sources": [
+    {
+      "id": "penny2009_metaphony_iberia",
+      "author": "Penny, R.",
+      "year": 2009,
+      "title": "Vowel Harmony and Metaphony in Iberia: A Revised Analysis",
+      "publisher": "Estudos de Lingüística Galega 1",
+      "url": "https://revistas.usc.gal/index.php/elg/article/download/1480/1315",
+      "pages": "114-117",
+      "notes": "Read directly (papers/iberian/penny_vowel-harmony-metaphony-iberia_elg.pdf). §3.1.5-3.1.6 p.115: Cantabrian set-2a inventory /ɨ (e) ɐ (ø) ʉ/, trigger = word-final /ɨ/ or /ʉ/, target = every other vowel in the phonological word incl. proclitics; §4.1-4.3 p.117 metaphony survives only in relic pockets incl. Montes de Pas; §5.1 gender via metaphony (bueno /ɡʉɨ́nʉ/ vs buena /ɡuéna/)."
+    },
+    {
+      "id": "walker_pasiego_abc",
+      "author": "Walker, R.",
+      "year": 2014,
+      "title": "Overlapping harmonies in Pasiego / Surface Correspondence and Discrete Harmony Triggers",
+      "publisher": "UCSC handout & LSA AMP proceedings",
+      "url": "https://journals.linguisticsociety.org/proceedings/index.php/amphonology/",
+      "pages": "§15-21",
+      "notes": "Read (papers/iberian/pasiego_overlapping-harmonies_ucsc-handout.pdf, surface-correspondence-discrete-harmony-triggers.pdf). Final-vowel realisations /-i/→[ə],/-u/→[ʊ],/-o/→[ʊ],/-a/→[a]; metaphony triggered by /u/ and /-i/ but not [ʊ] from /-o/ (§18, fn.4 esti→[ˈistə]); count vs mass via metaphonic stem vowel (rᴀˈbjʊsʊ vs rᴀˈbjosʊ); centralisation harmony and unstressed-vowel raising as separate systems."
+    },
+    {
+      "id": "pasiegu_upf_thesis",
+      "author": "(MA thesis, Universitat Pompeu Fabra)",
+      "year": 2019,
+      "title": "Diachronic change of harmony/metaphony in Pasiegu",
+      "publisher": "Universitat Pompeu Fabra (repositori.upf.edu)",
+      "url": "https://repositori.upf.edu/",
+      "pages": "1-5, 27",
+      "notes": "Read (papers/iberian/upf_master-thesis_harmony.pdf). Year approximate. Classes Pasiegu as an Asturleonese dialect (p.i, 3, 5); three final patterns [-u(s),-i(s),-ɘ(s)]; neuter of matter fn.2 p.3; Latin F- aspirated ⟨h.⟩ = [x]/[h] with ḥuegu/juegu contrast (fn.5 p.5, §p.27); L->palatalisation llumiacu, Lloreda (p.27)."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Cantabrian_dialect",
+    "https://es.wikipedia.org/wiki/Pasiego",
+    "https://es.wikipedia.org/wiki/C%C3%A1ntabro_(ling%C3%BC%C3%ADstica)"
+  ],
+  "timespan": {
+    "start_year": 1000,
+    "end_year": null
+  },
+  "glottolog_code": "cant1245",
+  "iso639_3": "ast",
+  "quality": "skeleton",
+  "script_type": "alphabet",
+  "location": {
+    "latitude": 43.15,
+    "longitude": -3.77,
+    "source": "manual",
+    "notes": "Montes de Pas (Vega de Pas), upper Pas/Pisueña/Miera valleys, southern Cantabria."
+  }
+}

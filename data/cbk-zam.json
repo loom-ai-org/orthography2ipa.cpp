@@ -1,0 +1,315 @@
+{
+  "code": "cbk-zam",
+  "name": "Chavacano (Zamboangueño)",
+  "family": "Spanish Creole",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "parent": "es-ES",
+  "ancestors": [
+    {
+      "code": "es-ES",
+      "role": "lexifier",
+      "weight": 0.8,
+      "notes": "Spanish is the lexifier; the orthography is the Spanish one."
+    },
+    {
+      "code": "tl",
+      "role": "substrate",
+      "weight": 0.15,
+      "notes": "Philippine (Tagalog/Cebuano/Hiligaynon) substrate: phonology and grammar."
+    }
+  ],
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "á": [
+      "a"
+    ],
+    "é": [
+      "e"
+    ],
+    "í": [
+      "i"
+    ],
+    "ó": [
+      "o"
+    ],
+    "ú": [
+      "u"
+    ],
+    "b": [
+      "b"
+    ],
+    "c": [
+      "k",
+      "s"
+    ],
+    "ch": [
+      "tʃ"
+    ],
+    "d": [
+      "d"
+    ],
+    "e": [
+      "e"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɡ",
+      "x"
+    ],
+    "gu": [
+      "ɡ"
+    ],
+    "h": [
+      "h"
+    ],
+    "i": [
+      "i"
+    ],
+    "j": [
+      "h"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "ll": [
+      "j",
+      "ʎ"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ñ": [
+      "ɲ"
+    ],
+    "o": [
+      "o"
+    ],
+    "p": [
+      "p"
+    ],
+    "q": [
+      "k"
+    ],
+    "qu": [
+      "k"
+    ],
+    "r": [
+      "ɾ"
+    ],
+    "rr": [
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "u": [
+      "u"
+    ],
+    "v": [
+      "b"
+    ],
+    "w": [
+      "w"
+    ],
+    "x": [
+      "ks"
+    ],
+    "y": [
+      "j"
+    ],
+    "z": [
+      "s"
+    ]
+  },
+  "allophones": {
+    "a": [
+      "a"
+    ],
+    "b": [
+      "b"
+    ],
+    "k": [
+      "k"
+    ],
+    "s": [
+      "s"
+    ],
+    "tʃ": [
+      "tʃ"
+    ],
+    "d": [
+      "d"
+    ],
+    "e": [
+      "e"
+    ],
+    "f": [
+      "f"
+    ],
+    "ɡ": [
+      "ɡ"
+    ],
+    "x": [
+      "x"
+    ],
+    "h": [
+      "h"
+    ],
+    "i": [
+      "i"
+    ],
+    "l": [
+      "l"
+    ],
+    "j": [
+      "j"
+    ],
+    "ʎ": [
+      "ʎ"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ɲ": [
+      "ɲ"
+    ],
+    "o": [
+      "o"
+    ],
+    "p": [
+      "p"
+    ],
+    "ɾ": [
+      "ɾ"
+    ],
+    "r": [
+      "r"
+    ],
+    "t": [
+      "t"
+    ],
+    "u": [
+      "u"
+    ],
+    "w": [
+      "w"
+    ],
+    "ks": [
+      "ks"
+    ]
+  },
+  "positional_graphemes": {
+    "c": {
+      "before_front_vowel": [
+        "s"
+      ],
+      "default": [
+        "k"
+      ]
+    },
+    "g": {
+      "before_front_vowel": [
+        "x",
+        "h"
+      ],
+      "default": [
+        "ɡ"
+      ]
+    }
+  },
+  "iso639_3": "cbk",
+  "glottolog_code": "chav1241",
+  "wikidata_qid": "Q33281",
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Chavacano"
+  ],
+  "sources": [
+    {
+      "id": "chavacano_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Chavacano",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Chavacano",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Chavacano",
+      "pages": "Alphabet, seseo, non-lenition of intervocalic /b d ɡ/, yeísmo.",
+      "notes": null
+    },
+    {
+      "id": "lipski1987",
+      "author": "Lipski, John M.",
+      "year": 1987,
+      "title": "Modern Spanish once-removed in Philippine creole Spanish: the case of Zamboangueño",
+      "publisher": "Language in Society 16(1), pp. 91-108",
+      "url": "https://www.jstor.org/stable/4167859",
+      "wikipedia_url": null,
+      "pages": "pp. 93-99: seseo throughout, no /θ/; ⟨j⟩ and ⟨g⟩ before front vowels realised [h]; yeísmo (⟨ll⟩ = [j]); ⟨v⟩ = [b]; non-lenition of intervocalic /b d ɡ/ (retained stops, unlike peninsular Spanish).",
+      "notes": "Zamboangueño phonology and its divergence from Spanish; documents the retention of stop /b d ɡ/ that motivates the non-lenited allophone map."
+    },
+    {
+      "id": "forman1972",
+      "author": "Forman, Michael L.",
+      "year": 1972,
+      "title": "Zamboangueño texts with grammatical analysis: a study of Philippine Creole Spanish",
+      "publisher": "PhD dissertation, Cornell University",
+      "url": null,
+      "wikipedia_url": null,
+      "pages": "Ch. 2 (phonology): five-vowel system /a e i o u/; preverbal TMA particles ya (perfective), ta (imperfective/progressive), ay~hay (future/irrealis); negation with no.",
+      "notes": "Foundational descriptive grammar and text corpus; source for the TMA-particle syntax and the practical Spanish-based orthography used in the gold register."
+    },
+    {
+      "id": "lipski2001",
+      "author": "Lipski, John M.",
+      "year": 2001,
+      "title": "The place of Chabacano in the Philippine linguistic identity",
+      "publisher": "Estudios de Sociolingüística 2(2)",
+      "url": "https://www.personal.psu.edu/jml34/chabacan.pdf",
+      "wikipedia_url": null,
+      "pages": "Zamboangueño as the largest and most vital Chabacano variety; lexicon predominantly Spanish with Philippine (Cebuano/Hiligaynon/Tagalog) substrate morphosyntax.",
+      "notes": "Situates Zamboangueño among the Chabacano varieties (Caviteño, Ternateño, Ermitaño); support for the substrate ancestry weighting."
+    }
+  ],
+  "timespan": {
+    "start_year": 1700,
+    "end_year": null
+  },
+  "notes": "Zamboangueño Chavacano, a Spanish-lexifier creole of the Philippines, written with the Spanish alphabet. Seseo throughout (⟨c⟩ before e/i, ⟨z⟩ = /s/; no /θ/); ⟨j⟩ and ⟨g⟩ before e/i = /h/~/x/; yeísmo (⟨ll⟩ = /j/, ʎ conservative); ⟨v⟩ = /b/. Unlike most Spanish varieties, /b d ɡ/ keep their stop realisation between vowels (no approximant lenition), so the allophone map is deliberately non-lenited. Acute-accented vowels ⟨á é í ó ú⟩ mark orthographic stress on final-stressed verb roots (ya comprá, ta llamá) and are mapped to their base vowel qualities; the engine carries no lexical-stress model for this creole, so stress placement is not phonemically rendered.",
+  "location": {
+    "latitude": 7.435034,
+    "longitude": 122.18849,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Chavacano."
+  },
+  "allophone_rules": [
+    {
+      "id": "ES_TRILL_AFTER_CORONAL",
+      "phonemes": [],
+      "surface": "r",
+      "notes": "NOT ASSERTED for this creole. The rule is inherited from the es-ES lexifier, where it is the Castilian vibrante multiple after a heterosyllabic coronal (Navarro Tomas 1977; Hualde 2005 ch. 9). No source in this spec's bibliography states that the Castilian rhotic distribution survives in the creole, and an uncited Peninsular process must not ride in on a lexifier link, so the id is re-declared with an empty 'phonemes' to disable it (the documented opt-out - see InheritanceMode.OVERLAY_BY_ID). Re-enable it with a citation."
+    },
+    {
+      "id": "ES_NASAL_LABIAL",
+      "phonemes": [],
+      "surface": "m",
+      "notes": "NOT ASSERTED for this creole, for the same reason as ES_TRILL_AFTER_CORONAL above: nasal place assimilation before a labial is cited for Castilian (Navarro Tomas 1977; Hualde 2005 ch. 3), not for this creole's phonology. Disabled by empty 'phonemes'; re-enable with a citation."
+    }
+  ]
+}

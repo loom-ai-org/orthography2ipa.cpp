@@ -1,0 +1,117 @@
+{
+  "code": "an-x-chistabin",
+  "name": "Chistabín Aragonese (Gistaín/Chistau valley)",
+  "script": "Latin",
+  "graphemes_base": "an",
+  "allophones_base": "an",
+  "positional_graphemes_base": "an",
+  "graphemes": {
+    "l·l": [
+      "lː"
+    ],
+    "n·n": [
+      "nː"
+    ]
+  },
+  "allophones": {
+    "lː": [
+      "lː"
+    ],
+    "nː": [
+      "nː"
+    ]
+  },
+  "positional_graphemes": {
+    "r": {
+      "word_initial": [
+        "r"
+      ],
+      "intervocalic": [
+        "ɾ"
+      ],
+      "before_consonant": [
+        "ɾ"
+      ],
+      "word_final": [
+        ""
+      ]
+    }
+  },
+  "parent": "an",
+  "ancestors": [
+    {
+      "code": "an",
+      "role": "parent",
+      "weight": 0.88,
+      "notes": "Chistabín is a Central/Eastern High-Aragonese valley variety inheriting the Aragonese grapheme→IPA system; it declares the geminate and final-r deltas and documents lexical/morphological distinctiveness in notes."
+    },
+    {
+      "code": "la-x-hispania",
+      "role": "ancestor",
+      "weight": 0.72,
+      "notes": "Hispanic Vulgar Latin, inherited via Aragonese (an)."
+    },
+    {
+      "code": "oc",
+      "role": "adstrate",
+      "weight": 0.06,
+      "notes": "Gascon adstrate on the eastern Sobrarbe fringe, inherited via Aragonese; first-person plural verb ending -m parallels Ribagorçan."
+    }
+  ],
+  "quality": "research",
+  "script_type": "alphabet",
+  "notes": "Chistabín — the Aragonese of the Gistaín/Chistau valley (Valle de Chistau, Sobrarbe, Huesca), a Central/Eastern High-Aragonese variety, comparatively well preserved (references: Blas Gabarda & Romanos Hernando 2008 'Diccionario aragonés chistabín'; Mott 1989). PHONOLOGICALLY-EXPRESSED DELTAS modelled here: (1) PRESERVED GEMINATES -LL-/-NN- as long consonants in inherited words, written ⟨l·l⟩/⟨n·n⟩: bel·lota [beˈlːota], pen·na [ˈpenːa], cabán·na [kaˈbanːa] (read at retazosgistain.wordpress.com 'Habla del Valle de Gistau', a secondary summary of Blas Gabarda & Romanos / Mott). Modelled with ⟨l·l⟩→[lː], ⟨n·n⟩→[nː]. (2) word-final ⟨r⟩ DELETED (the infinitive comère surfaces as comé), modelled as ⟨r⟩ word_final → [∅], base [r]/[ɾ] elsewhere preserved. The prepalatal fricative ⟨x⟩/⟨ix⟩ = [ʃ] with an i-glide/prosthesis (ixufrina [iʃuˈfɾina], buixo [ˈbwiʃo]) is already yielded by the base an ⟨ix⟩ = [ʃ ...] and the prosthetic ⟨i⟩ that the spelling carries, so no delta is needed. Chistabín keeps the Western/Central profile from an (F- preserved, /θ/ distinción, ⟨ch⟩=[tʃ]). FEATURES NOT PHONEME-MAPPABLE (documented, not modelled — phonemic spelling, lexical/morphological): -CT- → -t- (feto); voicing of intervocalic Latin voiceless stops (caixigo, cadiera, radigón); article el/la/es/las plus contracted a/as; first-person-plural verb ending -m (vs general -mos); participles -au/-iu; past-participle agreement (las vacas las han comidas). Diphthongisation Ĕ/Ŏ → ie/ue inherited (Várvaro, AFA XLVI-XLVII, p. 251: Gistaín shows ué). PROVENANCE HONESTY: valley phonetics read from a secondary online summary of Blas Gabarda & Romanos (2008) and Mott (1989); the primary monographs were not directly obtainable. Várvaro (AFA) read directly.",
+  "sources": [
+    {
+      "id": "blas_romanos2008",
+      "author": "Blas Gabarda, F. & Romanos Hernando, F.",
+      "year": 2008,
+      "title": "Diccionario aragonés chistabín (Bal de Chistau)",
+      "publisher": "Gara d'Edizions / Institución Fernando el Católico",
+      "url": null,
+      "pages": null,
+      "notes": "Reference grammar/dictionary of Chistabín. Cited via a secondary online summary (retazosgistain.wordpress.com); primary not directly obtainable in this work."
+    },
+    {
+      "id": "mott1989",
+      "author": "Mott, B.",
+      "year": 1989,
+      "title": "El habla de Gistaín",
+      "publisher": "Instituto de Estudios Altoaragoneses",
+      "url": null,
+      "pages": null,
+      "notes": "Source of the intervocalic-voicing and geminate observations. Cited via secondary summary; primary not directly obtainable."
+    },
+    {
+      "id": "varvaro_afa",
+      "author": "Várvaro, A.",
+      "year": 1991,
+      "title": "De la escritura al habla: la diptongación de O breve tónica en el Alto Aragón",
+      "publisher": "Archivo de Filología Aragonesa XLVI-XLVII",
+      "url": "https://ifc.dpz.es/recursos/publicaciones/15/72/12varvaro.pdf",
+      "pages": "245-268",
+      "notes": "Read directly. Gistaín shows the ué diphthong (p. 251)."
+    }
+  ],
+  "wikipedia": [
+    "https://es.wikipedia.org/wiki/Aragon%C3%A9s_chistabino",
+    "https://an.wikipedia.org/wiki/Aragon%C3%A9s_chistab%C3%ADn"
+  ],
+  "urls": [
+    "https://es.wikipedia.org/wiki/Aragon%C3%A9s_chistabino",
+    "https://retazosgistain.wordpress.com/habla-del-valle-gistau/"
+  ],
+  "timespan": {
+    "start_year": 1100,
+    "end_year": null
+  },
+  "glottolog_code": null,
+  "iso639_3": "arg",
+  "wikidata_qid": "Q11023714",
+  "location": {
+    "latitude": 42.65,
+    "longitude": 0.35,
+    "source": "wikidata",
+    "notes": "the Gistaín/Chistau valley (Sobrarbe, Huesca) — the valley the variety is named for and confined to. [Wikidata Q3102588 P625]"
+  }
+}

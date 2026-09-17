@@ -1,0 +1,275 @@
+{
+  "code": "bxr",
+  "name": "Buryat (Russia)",
+  "script": "Cyrillic",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "аа": [
+      "aː"
+    ],
+    "ээ": [
+      "eː"
+    ],
+    "ии": [
+      "iː"
+    ],
+    "оо": [
+      "ɔː"
+    ],
+    "өө": [
+      "oː"
+    ],
+    "уу": [
+      "uː"
+    ],
+    "үү": [
+      "ʉː"
+    ],
+    "ай": [
+      "ɛː"
+    ],
+    "ой": [
+      "œː"
+    ],
+    "үй": [
+      "yː"
+    ],
+    "а": [
+      "a"
+    ],
+    "э": [
+      "ɤ"
+    ],
+    "и": [
+      "i"
+    ],
+    "о": [
+      "ɔ"
+    ],
+    "ө": [
+      "o"
+    ],
+    "у": [
+      "u"
+    ],
+    "ү": [
+      "ʉ"
+    ],
+    "б": [
+      "b"
+    ],
+    "в": [
+      "v"
+    ],
+    "г": [
+      "ɡ"
+    ],
+    "д": [
+      "d"
+    ],
+    "ж": [
+      "ʒ"
+    ],
+    "з": [
+      "z"
+    ],
+    "й": [
+      "j"
+    ],
+    "л": [
+      "l"
+    ],
+    "м": [
+      "m"
+    ],
+    "н": [
+      "n"
+    ],
+    "р": [
+      "r"
+    ],
+    "с": [
+      "s"
+    ],
+    "т": [
+      "tʰ"
+    ],
+    "х": [
+      "x"
+    ],
+    "һ": [
+      "h"
+    ],
+    "ц": [
+      "t͡s"
+    ],
+    "ч": [
+      "t͡ʃ"
+    ],
+    "ш": [
+      "ʃ"
+    ],
+    "е": [
+      "jɛ",
+      "jœ"
+    ],
+    "ё": [
+      "jo"
+    ],
+    "ю": [
+      "ju"
+    ],
+    "я": [
+      "ja"
+    ],
+    "ы": [
+      "iː",
+      "ei"
+    ]
+  },
+  "allophones": {
+    "a": [
+      "a",
+      "ɐ"
+    ],
+    "ɔ": [
+      "ɔ",
+      "ɐ"
+    ],
+    "ɤ": [
+      "ɤ",
+      "ə"
+    ]
+  },
+  "notes": "Buryat (буряад хэлэн), a Mongolic language of the Republic of Buryatia, Russia, written since 1939 in the Russian Cyrillic alphabet plus Өө, Үү and Һһ /h/. Vowel harmony and a phonemic length contrast: long vowels are written by DOUBLING the vowel letter (аа ээ ии оо өө уу үү) and the sequences ⟨ай ой үй⟩ are realised as the long vowels [ɛː œː yː]; all of these are given as multigraph keys and win under maximal-munch matching. Unstressed /a/ and /ɔ/ reduce to [ɐ] and unstressed /ɤ/ to [ə] (recorded in `allophones`, not applied by the map). Only letters whose IPA value is stated by the cited sources are mapped: п, к, ф, щ, ы, ъ, ь and the iotated letters е ё ю я — all marginal or loanword-only in Buryat — are deliberately LEFT OUT because no source consulted gives them an explicit Buryat IPA value, and no value was invented for them. ⟨ь⟩/⟨ъ⟩ in any case mark palatalisation rather than a segment. The Mongolian script (Mongolia/China) and the 1931–1939 Latin orthography are out of scope. INPUT CONTRACT: Cyrillic Buryat text, Unicode NFC. The iotated letters е /jɛ~jœ/, ё /jo/, ю /ju/, я /ja/ and ы /iː~ei/ are mapped from the Buryat row of the Wikipedia 'Cyrillic alphabets' table and the Wiktionary entry буряад /bʊ.rʲaːd/. The letters в к п ф ц ч щ ъ are not used in native Buryat words and no source read here gives them a Buryat IPA value, so they are deliberately left unmapped.",
+  "iso639_3": "bua",
+  "glottolog_code": "russ1264",
+  "wikidata_qid": "Q33120",
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Buryat_language",
+    "https://bxr.wikipedia.org/wiki/%D0%91%D1%83%D1%80%D1%8F%D0%B0%D0%B4_%D1%85%D1%8D%D0%BB%D1%8D%D0%BD"
+  ],
+  "sources": [
+    {
+      "id": "buryat_language_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Buryat language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Buryat_language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Buryat_language",
+      "pages": null,
+      "notes": "Overview of the language, script and orthography."
+    },
+    {
+      "id": "buryat_phonology_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Buryat language — Phonology (vowel/consonant charts with Cyrillic correspondences)",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Buryat_language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Buryat_language",
+      "pages": null,
+      "notes": "Vowel table pairing Cyrillic and IPA (и/ии iː, ү/үү ʉː, у/уу uː, ээ eː, э ɤ, өө oː, о/оо ɔː, а/аа aː), the ай/ой/үй = [ɛː œː yː] statement, unstressed reduction, and the consonant inventory /b g d tʰ m n x l r s ʃ z ʒ h j/."
+    },
+    {
+      "id": "cyrillic_alphabets_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Cyrillic alphabets — Buryat section",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Cyrillic_alphabets",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Cyrillic_alphabets",
+      "pages": null,
+      "notes": "Cross-check for the extra Buryat letters Ө, Ү, Һ /h/."
+    },
+    {
+      "id": "omniglot_buryat",
+      "author": "Ager, Simon",
+      "year": 2024,
+      "title": "Buryat alphabet, pronunciation and language",
+      "publisher": "Omniglot",
+      "url": "https://www.omniglot.com/writing/buryat.htm",
+      "wikipedia_url": null,
+      "pages": null,
+      "notes": "Notes final devoicing (б=[p], г=[k], ж=[ʃ], з=[s] word-finally / before voiceless) and в=[v] in Russian loans."
+    },
+    {
+      "id": "wiktionary_buryaad",
+      "author": "Wiktionary contributors",
+      "year": 2026,
+      "title": "буряад",
+      "publisher": "Wiktionary",
+      "url": "https://en.wiktionary.org/wiki/%D0%B1%D1%83%D1%80%D1%8F%D0%B0%D0%B4",
+      "pages": null,
+      "notes": "Buryat буряад /bʊ.rʲaːd/ — evidence for the value of я in a native word."
+    }
+  ],
+  "timespan": {
+    "start_year": 1930,
+    "end_year": null
+  },
+  "phonemes": [
+    "b",
+    "bʲ",
+    "dʲ",
+    "d̺",
+    "i",
+    "iː",
+    "j",
+    "l",
+    "lʲ",
+    "m",
+    "mʲ",
+    "n",
+    "nʲ",
+    "pʰ",
+    "pʲʰ",
+    "r̺",
+    "r̺ʲ",
+    "s̺",
+    "tʲʰ",
+    "t̺ʰ",
+    "u",
+    "ui",
+    "uː",
+    "xʲ",
+    "z̺",
+    "ħ",
+    "œ̞ɛ̞",
+    "ɑ",
+    "ɑː",
+    "ɔ",
+    "ɔː",
+    "ɛː",
+    "ɡʲ",
+    "ɢ",
+    "ɤː",
+    "ɤ̟",
+    "ɨː",
+    "ɴ",
+    "ɵː",
+    "ʃ",
+    "ʊ",
+    "ʊi",
+    "ʊː",
+    "ʒ",
+    "χ"
+  ],
+  "parent": "x-clade-mong1349",
+  "ancestors": [
+    {
+      "code": "x-clade-mong1349",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Mongolic-Khitan — the classification node this language sits under."
+    }
+  ],
+  "location": {
+    "latitude": 50.85331,
+    "longitude": 105.5637,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Russia Buriat."
+  }
+}

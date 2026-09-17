@@ -1,0 +1,208 @@
+{
+  "code": "fro",
+  "name": "Old French",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "ch": [
+      "tʃ"
+    ],
+    "gn": [
+      "ɲ"
+    ],
+    "qu": [
+      "k"
+    ],
+    "gu": [
+      "ɡ"
+    ],
+    "th": [
+      "θ"
+    ],
+    "ai": [
+      "ai"
+    ],
+    "ei": [
+      "ei"
+    ],
+    "au": [
+      "au"
+    ],
+    "eu": [
+      "eu"
+    ],
+    "ou": [
+      "ou"
+    ],
+    "oi": [
+      "oi"
+    ],
+    "é": [
+      "e"
+    ],
+    "è": [
+      "ɛ"
+    ],
+    "a": [
+      "a"
+    ],
+    "e": [
+      "ə"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "o"
+    ],
+    "u": [
+      "y"
+    ],
+    "ü": [
+      "y"
+    ],
+    "b": [
+      "b"
+    ],
+    "c": [
+      "k"
+    ],
+    "ç": [
+      "ts"
+    ],
+    "d": [
+      "d"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "h": [
+      "h"
+    ],
+    "j": [
+      "dʒ"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "ɾ"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "v": [
+      "v"
+    ],
+    "w": [
+      "w"
+    ],
+    "x": [
+      "ks"
+    ],
+    "y": [
+      "i"
+    ],
+    "z": [
+      "ts"
+    ]
+  },
+  "positional_graphemes": {
+    "c": {
+      "before_e": [
+        "ts"
+      ],
+      "before_i": [
+        "ts"
+      ]
+    },
+    "g": {
+      "before_e": [
+        "dʒ"
+      ],
+      "before_i": [
+        "dʒ"
+      ]
+    },
+    "s": {
+      "intervocalic": [
+        "z"
+      ]
+    }
+  },
+  "parent": "la-x-gallia",
+  "ancestors": [
+    {
+      "code": "la-x-gallia",
+      "role": "parent",
+      "weight": 0.9,
+      "notes": "Descent from Gallo-Romance (Gaulish Vulgar Latin)"
+    },
+    {
+      "code": "cel",
+      "role": "substrate",
+      "weight": 0.05,
+      "notes": "Gaulish (Celtic) substrate"
+    },
+    {
+      "code": "gem",
+      "role": "superstrate",
+      "weight": 0.1,
+      "notes": "Frankish (West Germanic) superstrate: /h/, /w/, some lexis"
+    }
+  ],
+  "notes": "Skeleton. Old French (c. 842-1400). Retains the affricate values ⟨ch⟩=/tʃ/, ⟨j/g⟩=/dʒ/, ⟨c/ç⟩=/ts/, ⟨z⟩=/ts/ that later simplified; final dental spirants (⟨t⟩=/θ/) occur early. Diphthongs and nasal vowels are only partially recoverable from spelling. POSITIONAL READINGS: ⟨c⟩ and ⟨g⟩ before ⟨e i⟩ are /ts/ and /dʒ/, which is why ⟨qu⟩ and ⟨gu⟩ had to be kept for /k/ and /ɡ/ in that same position (Schwan & Behrens §13); word-internal intervocalic ⟨s⟩ is voiced /z/ while the spelling stays ⟨s⟩ (§126.1). Geminate ⟨ss⟩ stays voiceless (§127) and is not intervocalic by the engine's test, so the ⟨s⟩ entry leaves it alone. ⟨ü⟩ is ⟨u⟩ = /y/ carrying the editors' hiatus diaeresis (armeüre [aɾməyɾə]); without the key the letter has no reading at any length and the tokenizer drops it silently. NO graphemes_base: the parent la-x-gallia is Gallo-Romance Vulgar Latin, and its positional table describes lenition in progress, not Old French spelling. Intervocalic ⟨v⟩ is /v/ in Old French, not [β] or [w] (§105); intervocalic /d/ survived as [ð] only until about the end of the 11th century and then fell (§116.1), so ⟨d⟩ between vowels in Old French text is not a dental fricative; and Latin CA- is spelled ⟨ch⟩ once it palatalises, leaving ⟨c⟩ before ⟨a⟩ as /k/. Those entries are declared here as this spec's own only where Old French supports them. Stress exemption: Old French word stress was inherited from Latin etymology (largely penultimate/antepenultimate by Latin rule) and is not recoverable from Old French spelling itself; no stress block is declared. Source: Pope, M. K. (1934), From Latin to Modern French, secs. on accentuation.",
+  "iso639_3": "fro",
+  "glottolog_code": null,
+  "sources": [
+    {
+      "id": "pope1934",
+      "author": "Pope, Mildred K.",
+      "year": 1934,
+      "title": "From Latin to Modern French with Especial Consideration of Anglo-Norman",
+      "publisher": "Manchester University Press",
+      "url": null,
+      "pages": null,
+      "notes": "Historical phonology from Latin through Old French.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Old_French"
+    },
+    {
+      "id": "schwanbehrens1913",
+      "author": "Schwan, Eduard & Behrens, Dietrich (trans. Oscar Bloch)",
+      "year": 1913,
+      "title": "Grammaire de l'ancien français",
+      "publisher": "Otto Schulze, Leipzig (French translation of the 4th German edition)",
+      "url": "https://archive.org/details/grammairedelanci00schw",
+      "pages": "§13 (orthographe et prononciation): \"c et g dans la même position servaient à rendre les sons ts, dž\", which is why ⟨qu⟩ and ⟨gu⟩ were retained for /k ɡ/ before ⟨e i⟩; §126.1: \"A l'intérieur d'un mot, s intervocalique devient sonore (z). Dans l'écriture, il reste s\"; §127: geminate ⟨ss⟩ stays voiceless; §105: intervocalic Latin /p/ gives Old French /v/; §116.1: intervocalic /d/ persists as [ð] only to about the end of the 11th century, then falls.",
+      "wikipedia_url": null,
+      "notes": "Reference grammar of Old French; the source for the positional readings declared here and for refusing the Gallo-Romance lenition entries."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Old_French",
+    "https://en.wikipedia.org/wiki/Old_French#Phonology"
+  ],
+  "timespan": {
+    "start_year": 842,
+    "end_year": 1400
+  }
+}

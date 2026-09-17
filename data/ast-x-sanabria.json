@@ -1,0 +1,184 @@
+{
+  "code": "ast-x-sanabria",
+  "name": "Sanabrese",
+  "script": "Latin",
+  "parent": "ast-x-leon",
+  "graphemes_base": "ast-x-leon",
+  "allophones_base": "ast-x-leon",
+  "positional_graphemes_base": "ast-x-leon",
+  "ancestors": [
+    {
+      "code": "ast-x-leon",
+      "role": "parent",
+      "weight": 0.65,
+      "notes": "Medieval Leonese: the direct genetic ancestor, brought to the Portucale region during the Reconquista resettlement. This variety is the trunk from which Mirandese, Rionorese, and Guadramilese descend."
+    },
+    {
+      "code": "ast-PT-x-medieval",
+      "role": "adstrate",
+      "weight": 0.1,
+      "notes": ""
+    },
+    {
+      "code": "roa-x-galaicopt",
+      "role": "adstrate",
+      "weight": 0.05,
+      "notes": "Galaico-Portuguese adstrate: contributed nasal vowels, lh/nh digraph convention, and diphthong contractions."
+    },
+    {
+      "code": "pt-PT-x-medieval",
+      "role": "adstrate",
+      "weight": 0.05,
+      "notes": "Old Portuguese adstrate: Portuguese orthographic conventions (lh, nh, ã) penetrated the writing tradition."
+    },
+    {
+      "code": "cel-x-gallaecia",
+      "role": "substrate",
+      "weight": 0.02,
+      "notes": "Gallaecian Celtic substrate of NW Iberia, shared through the Leonese parent."
+    },
+    {
+      "code": "mxi",
+      "role": "adstrate",
+      "weight": 0.01,
+      "notes": "Mozarabic: Romance spoken by Christians under Moorish rule in the Leonese-reclaimed Douro corridor."
+    }
+  ],
+  "notes": "Sanabrese (Sanabrés), Asturleonese occidental spoken in the Sanabria comarca (Zamora, Spain) and Portuguese-side sub-zones (Guadramil, Rio de Onor). Classified as hablas de Sanabria within Asturleonese occidental (Frías-Conde, El Habla de Sanabria, p. 2). All claims below are stated-explicitly in Frías-Conde unless noted. KEY PHONOLOGICAL FEATURES grounded in the Krüger-era Sanabrese description as analysed by Frías-Conde: (1) F- RETENTION: Latin initial /f-/ fully retained — *fillo, figo, forno, feleito, fuogo, facer, falar* (p. 4). Contrast with Castilian /h-/∅; Sanabrese pattern matches Galician-Portuguese. CONFIDENCE: HIGH. (2) INITIAL L- > /ʎ/ (⟨ll-⟩): *llama, llameiro, llariego, lleitón, lluogo, llobo, lluz* (p. 4). ALL initial Latin L- palatalized. CONFIDENCE: HIGH. (3) INITIAL N- > /ɲ/ (⟨ñ-⟩): *ñabo, ñiebla, ñiego, ñube, ñegro, ñuoite* (p. 4). Initial nasal palatalization is productive. CONFIDENCE: HIGH. (4) PL-/KL-/FL- > /tʃ/ (⟨ch-⟩): *chamar, chave, chover, chuvia, cheirar, chorar, cheno* (p. 4). CONFIDENCE: HIGH. (5) FOUR-WAY SIBILANT SYSTEM: /s/, /ʃ/, /θ/, /tʃ/ — all four present and distinct (inferred from consonant inventory, p. 3). Sanabrese has /s/~/ʃ/ distinction (unlike Castilian which lacks /ʃ/) AND /θ/ (unlike Galician-Portuguese which lacks /θ/). CONFIDENCE: inferred-from-inventory. (6) TONIC DIPHTHONGS: Latin Ĕ → /je/: *piedra, tierra* (p. 3). Latin Ŏ → /wo/ (NOT /we/): *cuorpo, ruoda, puode, lluogo* — the /wo/ form is MORE ARCHAIC than Castilian /we/ (p. 3). CONFIDENCE: HIGH. (7) FINAL VOWEL SYSTEM — THREE-WAY: final vowels reduced to /e/, /a/, /U/ (reduced /u/) — not the five-way system of stressed syllables (p. 2–3). Atonic /u/ → /U/ (centralised/reduced). CONFIDENCE: HIGH. (8) /kt/ > /it/ GENERALLY: *feito, peito, lleite* (p. 4). EXCEPTION/SUB-ZONE: Vigo de Sanabria has /kt/ > /oit/: *moito, escoita, troita, coida* (p. 4) — a conservative sub-zone feature. CONFIDENCE: HIGH for both. (9) K'L-/G'L-/LJ-/-LL- > /ʎ/: *muller, coller, abella, traballo, palla* — Sanabrese has /ʎ/ for ALL three positions (L-, -LL-, K'L-), unlike asturiano occidental which has /ts/ for L- and -LL- (comparative table, p. 4). CONFIDENCE: HIGH. NOTE: -IELLO suffix preserved (not reduced to -illo as in Castilian): *castiello, palombiella* (p. 3). -AVI-/-AI-/-ARJ- > -eiro: *diñeiro, moliñeiro* (p. 3). -n- > -ñ- in -INU suffix: *camiñeiro, moliñeiro, fariñudo* (p. 4). SUB-ZONE VARIATION: Guadramil (PT side) shows more extreme /wo/ diphthong: *cuorpo, cuarda, muarto* (p. 3). Vigo de Sanabria: /kt/ > /oit/ (moito). Rionor (-ía > -í): *sabí, falarí* vs. general *teníe, veníe* (p. 3).",
+  "graphemes": {
+    "x": [
+      "ʃ"
+    ],
+    "ll": [
+      "ʎ"
+    ],
+    "ch": [
+      "tʃ"
+    ],
+    "y": [
+      "ʝ"
+    ],
+    "ñ": [
+      "ɲ"
+    ],
+    "c": [
+      "k",
+      "θ"
+    ],
+    "ç": [
+      "θ"
+    ],
+    "z": [
+      "θ"
+    ],
+    "s": [
+      "s"
+    ],
+    "ss": [
+      "s"
+    ],
+    "lh": [
+      "ʎ"
+    ],
+    "nh": [
+      "ɲ"
+    ],
+    "ie": [
+      "je"
+    ],
+    "uo": [
+      "wo"
+    ],
+    "ei": [
+      "ej"
+    ],
+    "ou": [
+      "ow"
+    ]
+  },
+  "positional_graphemes": {
+    "c": {
+      "before_e": [
+        "θ"
+      ],
+      "before_i": [
+        "θ"
+      ]
+    },
+    "s": null,
+    "z": null,
+    "f": {
+      "word_initial": [
+        "f"
+      ]
+    },
+    "ll": {
+      "word_initial": [
+        "ʎ"
+      ]
+    },
+    "ñ": {
+      "word_initial": [
+        "ɲ"
+      ]
+    }
+  },
+  "allophones": {
+    "θ": [
+      "θ"
+    ],
+    "ʎ": [
+      "ʎ"
+    ],
+    "ɲ": [
+      "ɲ"
+    ],
+    "tʃ": [
+      "tʃ"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "ʝ": [
+      "ʝ"
+    ]
+  },
+  "sources": [
+    {
+      "id": "frias_conde_sanabria",
+      "author": "Frías-Conde, Xavier",
+      "year": 2005,
+      "title": "El Habla de Sanabria",
+      "publisher": "CES Don Bosco (UCM); ISR Romania Minor (conference/seminar handout, 7 pp.)",
+      "pages": "1-7",
+      "notes": "Primary source for all Sanabrese phonological claims. Carries the Krüger-era Sanabrese phonological description as systematised by Frías-Conde. All feature attributions in notes above are page-referenced. Year is approximate (undated document)."
+    },
+    {
+      "id": "garcia_arias2003",
+      "author": "García Arias, X.Ll.",
+      "year": 2003,
+      "title": "Gramática histórica de la lengua asturiana",
+      "publisher": "Academia de la Llingua Asturiana",
+      "url": null,
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Asturian_language",
+    "https://ast.wikipedia.org/wiki/Asturianu",
+    "https://es.wikipedia.org/wiki/Asturiano_(asturleon%C3%A9s_de_Asturias)"
+  ],
+  "timespan": {
+    "start_year": 1000,
+    "end_year": null
+  },
+  "iso639_3": "ast",
+  "quality": "research",
+  "location": {
+    "latitude": 42.0797,
+    "longitude": -6.68972,
+    "source": "wikidata",
+    "notes": "the Sanabria comarca (Zamora) — the centre of the Sanabrese area, which continues across the border into Guadramil and Rio de Onor. [Wikidata Q2605814 P625]"
+  }
+}

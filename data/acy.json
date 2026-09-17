@@ -1,0 +1,354 @@
+{
+  "code": "acy",
+  "name": "Cypriot Maronite Arabic",
+  "script": "Latin",
+  "graphemes": {
+    "b": [
+      "b"
+    ],
+    "t": [
+      "t"
+    ],
+    "d": [
+      "d"
+    ],
+    "k": [
+      "k"
+    ],
+    "ɡ": [
+      "ɡ"
+    ],
+    "f": [
+      "f"
+    ],
+    "s": [
+      "s"
+    ],
+    "z": [
+      "z"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "x": [
+      "x"
+    ],
+    "h": [
+      "h"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "l": [
+      "l"
+    ],
+    "r": [
+      "r"
+    ],
+    "w": [
+      "w"
+    ],
+    "j": [
+      "j"
+    ],
+    "θ": [
+      "θ"
+    ],
+    "ð": [
+      "ð"
+    ],
+    "ɣ": [
+      "ɣ"
+    ],
+    "dʒ": [
+      "dʒ",
+      "tʃ"
+    ],
+    "sˤ": [
+      "sˤ",
+      "s"
+    ],
+    "tˤ": [
+      "tˤ",
+      "t"
+    ],
+    "dˤ": [
+      "dˤ",
+      "d"
+    ],
+    "p": [
+      "p"
+    ],
+    "v": [
+      "v"
+    ],
+    "a": [
+      "a"
+    ],
+    "e": [
+      "e"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "o"
+    ],
+    "u": [
+      "u"
+    ],
+    "aː": [
+      "aː"
+    ],
+    "iː": [
+      "iː"
+    ],
+    "uː": [
+      "uː"
+    ],
+    "ɛː": [
+      "ɛː"
+    ],
+    "oː": [
+      "oː"
+    ]
+  },
+  "allophones": {
+    "b": [
+      "b"
+    ],
+    "p": [
+      "p"
+    ],
+    "t": [
+      "t"
+    ],
+    "d": [
+      "d"
+    ],
+    "k": [
+      "k"
+    ],
+    "ɡ": [
+      "ɡ"
+    ],
+    "ʔ": [
+      "h",
+      ""
+    ],
+    "θ": [
+      "θ"
+    ],
+    "ð": [
+      "ð"
+    ],
+    "f": [
+      "f"
+    ],
+    "v": [
+      "v"
+    ],
+    "s": [
+      "s"
+    ],
+    "z": [
+      "z"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "x": [
+      "x"
+    ],
+    "ɣ": [
+      "ɣ"
+    ],
+    "h": [
+      "h",
+      ""
+    ],
+    "ħ": [
+      "h",
+      ""
+    ],
+    "ʕ": [
+      "",
+      "h"
+    ],
+    "q": [
+      "k"
+    ],
+    "dʒ": [
+      "dʒ",
+      "tʃ"
+    ],
+    "sˤ": [
+      "sˤ",
+      "s"
+    ],
+    "tˤ": [
+      "tˤ",
+      "t"
+    ],
+    "dˤ": [
+      "dˤ",
+      "d"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n",
+      "m",
+      "ŋ"
+    ],
+    "l": [
+      "l"
+    ],
+    "r": [
+      "r",
+      "ɾ"
+    ],
+    "w": [
+      "w"
+    ],
+    "j": [
+      "j"
+    ],
+    "a": [
+      "a"
+    ],
+    "aː": [
+      "aː"
+    ],
+    "e": [
+      "e"
+    ],
+    "eː": [
+      "eː"
+    ],
+    "i": [
+      "i"
+    ],
+    "iː": [
+      "iː"
+    ],
+    "o": [
+      "o"
+    ],
+    "oː": [
+      "oː"
+    ],
+    "u": [
+      "u"
+    ],
+    "uː": [
+      "uː"
+    ],
+    "ɛː": [
+      "ɛː"
+    ]
+  },
+  "parent": "arb",
+  "ancestors": [
+    {
+      "code": "arb",
+      "role": "parent",
+      "weight": 0.55,
+      "notes": "Classical Arabic as the deep genealogical anchor of the Cypriot Maronite koine (medieval, ~8th–12th c. CE)."
+    },
+    {
+      "code": "ar-IQ-x-qeltu",
+      "role": "ancestor",
+      "weight": 0.15,
+      "notes": "Borg (1985, 2004) derives Cypriot Maronite Arabic not from Levantine sedentary Arabic but from the qeltu / North-Mesopotamian dialect type: it shares a large bundle of features with the qeltu dialects of northern Syria and Anatolia, and Borg posits a 'Syrian-Anatolian koine' as its direct pre-Cypriot antecedent. ar-IQ-x-qeltu (Glottolog North Mesopotamian Arabic, nort3142) is o2i's representative of that qeltu type; this is an ancestry link, not a data-inheritance base (CMA writes in Latin and has its own restructured inventory)."
+    },
+    {
+      "code": "el",
+      "role": "adstrate",
+      "weight": 0.3,
+      "notes": "Cypriot Greek adstrate — 800+ years of intense contact: loss of pharyngeals ħ/ʕ; uvular q → k; vowel system restructured toward Greek 5-vowel system; /p/ and /v/ from Greek; gemination patterns; massive Greek lexical borrowing"
+    }
+  ],
+  "notes": "Cypriot Maronite Arabic (CMA) — ISO 639-3: acy. Locally called 'Sanna' (our language) or 'Arabiya'. Critically endangered (UNESCO): ~1,000–2,000 speakers (2020), mostly elderly. Maronite Christians migrated to Cyprus ~8th–12th c. CE. CLASSIFICATION: Borg (1985, 2004) shows CMA is not simply Levantine but descends from a qeltu / North-Mesopotamian ('Syrian-Anatolian') koine — it shares a large feature bundle with the qeltu dialects of northern Syria and Anatolia, with some Palestinian similarities (hence the ar-IQ-x-qeltu ancestry link). Isolated from mainstream Arabic for ~800 years; profound Cypriot Greek influence. KEY CHANGES: (1) Pharyngeals ħ and ʕ LOST (→ h and ∅); (2) Uvular q → /k/ (Greek phonological space); (3) Emphatics WEAKENED (deemphasisation); (4) Vowel system restructured: 5-quality system (a e i o u) replacing Classical 3-quality + length; (5) /p/ and /v/ from Greek (Arabic normally lacks these); (6) θ and ð MAINTAINED (Greek θ/δ reinforce Arabic originals). Revitalisation efforts ongoing by the Cypriot government (the community 'Hki Fi Sanna' revitalisation project promotes a Latin-based practical alphabet). Script: Latin — Borg's scholarly transcription and the revitalisation alphabet agree on a Latin base; no historical native orthography.",
+  "quality": "research",
+  "script_type": "alphabet",
+  "iso639_3": "acy",
+  "sources": [
+    {
+      "id": "borg1985",
+      "author": "Borg, A.",
+      "year": 1985,
+      "title": "Cypriot Arabic: A Historical and Comparative Investigation into the Phonology and Morphology of the Arabic Vernacular Spoken by the Maronites of Kormakiti Village in the Kyrenia District of North-Western Cyprus",
+      "publisher": "Deutsche Morgenländische Gesellschaft / Franz Steiner, Stuttgart",
+      "url": null,
+      "notes": "The reference grammar of Cypriot Maronite Arabic. Documents the loss of the pharyngeals and emphatics, q → k, the restructured five-quality vowel system, and derives CMA from a qeltu / North-Mesopotamian (Syrian-Anatolian) antecedent."
+    },
+    {
+      "id": "borg2004",
+      "author": "Borg, A.",
+      "year": 2004,
+      "title": "A Comparative Glossary of Cypriot Maronite Arabic (Arabic-English)",
+      "publisher": "Brill (Handbook of Oriental Studies), Leiden",
+      "url": null,
+      "notes": "Handbook-length comparative treatment; reinforces the qeltu/Anatolian classification and the Greek-contact phonology."
+    },
+    {
+      "id": "watson2002",
+      "author": "Watson, J.C.E.",
+      "year": 2002,
+      "title": "The Phonology and Morphology of Arabic",
+      "publisher": "Oxford University Press",
+      "url": null,
+      "pages": null,
+      "notes": null,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Arabic_phonology"
+    },
+    {
+      "id": "holes2004",
+      "author": "Holes, C.",
+      "year": 2004,
+      "title": "Modern Arabic: Structures, Functions, and Varieties",
+      "publisher": "Georgetown University Press",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "newton1964",
+      "author": "Newton, B.E.",
+      "year": 1964,
+      "title": "Cypriot Greek: Its Phonology and Inflections",
+      "publisher": "Linguistics",
+      "url": null,
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Cypriot_Arabic"
+  ],
+  "orthography_standard": {
+    "name": "Latin practical alphabet (Hki Fi Sanna revitalisation project) / Borg (1985) transcription",
+    "authority": "Cypriot Maronite community revitalisation programme",
+    "year": 2017,
+    "url": "https://en.wikipedia.org/wiki/Cypriot_Arabic",
+    "notes": "CMA has no historical native orthography. This spec's graphemes follow the Latin base shared by Borg's (1985) scholarly transcription and the recent community 'Hki Fi Sanna' revitalisation alphabet promoted under Cyprus's commitments to the European Charter for Regional or Minority Languages. Digraph/letter values reflect the restructured inventory (q → k, pharyngeals lost, θ/ð retained, p/v from Greek)."
+  },
+  "timespan": {
+    "start_year": 1200,
+    "end_year": null
+  },
+  "glottolog_code": "cypr1248",
+  "wikidata_qid": "Q56416",
+  "wals_code": "ako",
+  "location": {
+    "latitude": 35.1674,
+    "longitude": 33.0943,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Cypriot Arabic."
+  }
+}

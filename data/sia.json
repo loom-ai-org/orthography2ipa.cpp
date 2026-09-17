@@ -1,0 +1,652 @@
+{
+  "code": "sia",
+  "name": "Akkala Sami",
+  "script": "Cyrillic",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "а̄": [
+      "ɑː"
+    ],
+    "а̊": [
+      "ɔ"
+    ],
+    "е̄": [
+      "jɛː"
+    ],
+    "к̌": [
+      "c"
+    ],
+    "ль": [
+      "ʎ"
+    ],
+    "нь": [
+      "ɲ"
+    ],
+    "о̄": [
+      "oː"
+    ],
+    "ы̄": [
+      "ɨː"
+    ],
+    "э̄": [
+      "ɛː"
+    ],
+    "ю̄": [
+      "juː"
+    ],
+    "я̄": [
+      "jɑː"
+    ],
+    "а": [
+      "ɑ"
+    ],
+    "б": [
+      "b"
+    ],
+    "в": [
+      "v"
+    ],
+    "г": [
+      "ɡ"
+    ],
+    "д": [
+      "d"
+    ],
+    "е": [
+      "jɛ"
+    ],
+    "ж": [
+      "ʒ"
+    ],
+    "з": [
+      "z"
+    ],
+    "и": [
+      "i"
+    ],
+    "й": [
+      "j"
+    ],
+    "к": [
+      "k"
+    ],
+    "л": [
+      "ɫ"
+    ],
+    "м": [
+      "m"
+    ],
+    "н": [
+      "n"
+    ],
+    "о": [
+      "o"
+    ],
+    "п": [
+      "p"
+    ],
+    "р": [
+      "r"
+    ],
+    "с": [
+      "s"
+    ],
+    "т": [
+      "t"
+    ],
+    "у": [
+      "u"
+    ],
+    "ф": [
+      "f"
+    ],
+    "х": [
+      "x"
+    ],
+    "ц": [
+      "ts"
+    ],
+    "ч": [
+      "tʃ"
+    ],
+    "ш": [
+      "ʃ"
+    ],
+    "щ": [
+      "ɕ"
+    ],
+    "ъ": [
+      ""
+    ],
+    "ы": [
+      "ɨ"
+    ],
+    "ь": [
+      "ʲ"
+    ],
+    "э": [
+      "ɛ"
+    ],
+    "ю": [
+      "ju"
+    ],
+    "я": [
+      "jɑ"
+    ],
+    "ё": [
+      "jo"
+    ],
+    "ҍ": [
+      "ʲ"
+    ],
+    "һ": [
+      "h"
+    ],
+    "ӆ": [
+      "l̥"
+    ],
+    "ӈ": [
+      "ŋ"
+    ],
+    "ӓ": [
+      "a"
+    ],
+    "ӣ": [
+      "iː"
+    ],
+    "ӭ": [
+      "ɛ"
+    ],
+    "ӯ": [
+      "uː"
+    ],
+    "ӹ": [
+      "ɪ"
+    ]
+  },
+  "parent": "x-clade-saam1281",
+  "ancestors": [
+    {
+      "code": "x-clade-saam1281",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Descent per Glottolog classification of Akkala Saami (akka1237)."
+    }
+  ],
+  "notes": "Research. Akkala Sami is a Kola (Eastern) Saami language of the Uralic family, spoken in the Babino (Akkala) area of the Kola Peninsula; the last fluent speaker died in 2003, so every record of it is elicited fieldwork rather than living speech. The principal description is Zajkov's 1987 monograph on the Babino dialect, which states an inventory of 46 consonants and nine first-syllable vowels (pp. 28-45). The shipped gold is a Cyrillic orthography built on the Kildin conventions and extended with three letters that carry Zajkov's extra phonemes directly: к̌ for the palatal stop c, а̊ for the low back ɔ and ӹ for ɪ. Vowel letters take the values the gold writes for them: ⟨а⟩ ɑ and ⟨ӓ⟩ a, ⟨э ӭ⟩ ɛ, ⟨ы⟩ ɨ. Vowel length is written, not absent: a combining macron on the base vowel (а̄ э̄ ы̄ о̄ я̄ ю̄ е̄) or the dedicated letters Ӣ Ӯ. Palatalization is likewise written, and it is a grapheme-conditioned alternation rather than a lexical property. Zajkov describes almost every consonant as having a palatalized counterpart, so Ь and Ҍ map to ʲ and the engine composes that onto the consonant before them; no consonant-plus-sign key is needed for the compositional cases. Two keys earn a slot because their value is not the concatenation of their parts. ⟨нь⟩ is the soft nasal ɲ and ⟨нҍ⟩ the half-soft nʲ: Zajkov separates 'мягкий носовой сонант' /ń/ from 'полумягкий носовой сонант' /n·/ and gives the contrast inside Akkala itself, mańń 'daughter-in-law' against mɛn·n· 'egg' (p. 56), which is the same three-way split the Kildin triple манн / маннҍ / маннь draws. ⟨ль⟩ is ʎ, but on weaker ground: Zajkov gives the lateral only a two-way contrast, velarized /l/ against palatalized /ĺ/ (p. 56), and it is the Kola Saami Documentation Project that states an opposition of /l/ to both /lʲ/ and the lateral palatal /ʎ/. The gold decides it here — ⟨ль⟩ is written ʎ in 23 occurrences against lʲ in 7, and ⟨нь⟩ ɲ in 2 against nʲ in 0, and ⟨нҍ⟩ nʲ in 5 against ɲ in 0. ⟨сь⟩ is NOT one of those keys and takes the compositional sʲ. Zajkov's palatalized sibilant /ś/ is 'переднеязычный глухой палатализованный' and explicitly single-focus (однофокусный), opposed to the two-focus (двухфокусный) /š/ (p. 52) — a single-focus palatalized sibilant is sʲ, not the alveolo-palatal ɕ. The gold agrees, writing sʲ in 13 occurrences and ɕ in none. Plain ⟨л⟩ is the velarized ɫ, which Zajkov calls 'переднеязычный боковой велЯризованный звонкий сонант' and reports as characteristic of every Kola Saami dialect, occurring neither before /i/ nor next to a palatalized consonant (p. 56). The gold writes ɫ in 26 occurrences against plain l in 2. The second palatalization spelling is the iotated vowel: after a consonant ⟨е ё ю я⟩ and ⟨и ӓ⟩ mark the consonant palatal and contribute a plain vowel (⟨няппь⟩ ɲɑpʲː, ⟨Фелькь⟩ fʲɛlʲkʲ), while word-initially and after a vowel the glide reading stands (⟨ённ⟩ jonː). Among the gold's single-vowel words ⟨а⟩ reads ɑ in 12 and a in 3, ⟨я⟩ reads ɑ in 3 and ja in none, and ⟨е⟩ reads ɛ in 8 and je in none. A note on the transcription, because two of the shipped Kola Saami golds look like they disagree about phonology when they do not. This gold and the Kildin WikiPron gold both write secondary palatalization as Cʲ throughout — ⟨сь⟩ is sʲ in 22 of 22 Kildin WikiPron rows as well. The palatal segments ɕ and ʎ appear in Kildin's NorthEuraLex row, which is a different annotator pool with a different convention. Notation is a property of the pool, not a claim about either language, so the values here rest on Zajkov and on this gold's own counts. Preaspiration is written with Һ and is mapped; Zajkov treats it as a segmental phoneme with a palatalized counterpart /h̑/ (pp. 53-55), and the gold accordingly writes hʲ before a palatalized stop. That agreement is regressive and is left unencoded. Akkala Sami stress is word-initial and predictable, not separately orthographically marked; left unencoded (documented exemption).",
+  "iso639_3": "sia",
+  "glottolog_code": null,
+  "sources": [
+    {
+      "id": "sia_glottolog",
+      "author": "Hammarström, H. et al. (Glottolog 5.0)",
+      "year": 2024,
+      "title": "Glottolog: Akkala Saami (akka1237)",
+      "publisher": "Max Planck Institute for Evolutionary Anthropology",
+      "url": "https://glottolog.org/resource/languoid/id/akka1237",
+      "pages": null,
+      "notes": "Classification reference.",
+      "wikipedia_url": null
+    },
+    {
+      "id": "sia_zajkov1987",
+      "author": "Zajkov, Petr M.",
+      "year": 1987,
+      "title": "Babinskij dialekt saamskogo jazyka (fonologo-morfologicheskoe issledovanie)",
+      "publisher": "Karelian Branch of the USSR Academy of Sciences, Petrozavodsk",
+      "url": "https://theswissbay.ch/pdf/Books/Linguistics/Mega%20linguistics%20pack/Uralic/Saami%20(Akkala);%20%D0%91%D0%B0%D0%B1%D0%B8%D0%BD%D1%81%D0%BA%D0%B8%D0%B9%20%D0%B4%D0%B8%D0%B0%D0%BB%D0%B5%D0%BA%D1%82%20%D1%81%D0%B0%D0%B0%D0%BC%D1%81%D0%BA%D0%BE%D0%B3%D0%BE%20%D1%8F%D0%B7%D1%8B%D0%BA%D0%B0%20(Zajkov).pdf",
+      "pages": "28-56",
+      "notes": "The principal description of Akkala (Babino) Sami, from fieldwork with the last elderly speakers. Consulted for the first-syllable vowel table (p. 33), the 46-consonant inventory and the palatalization opposition (pp. 43-45), the single-focus palatalized sibilant /ś/ against the two-focus /š/ (p. 52), the laryngeal /h/ and its palatalized counterpart (pp. 53-55), and the sonorants — the velarized lateral, the palatalized /ĺ/, and the non-palatalized / half-soft / soft nasal series with the minimal pair mańń 'daughter-in-law' against mɛn·n· 'egg' (p. 56). Scanned, no text layer; read as page images."
+    },
+    {
+      "id": "sia_ksdp",
+      "author": "Rießler, M. et al. (Kola Saami Documentation Project)",
+      "year": 2010,
+      "title": "Kola Saami: the language",
+      "publisher": "DoBeS / MPI Nijmegen",
+      "url": "https://dobes.mpi.nl/projects/sami/language/",
+      "pages": null,
+      "notes": "Kola Saami phonology overview, cited here for the lateral palatal, which Zajkov does not separate from the palatalized lateral: 'As for the nasal and lateral dentals /n/ and /l/ there is an opposition not only to the respective palatalized phonemes /n'/ and /l'/, but also to the nasal and lateral palatals /ɲ/ and /ʎ/.'"
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Akkala_Sami_language"
+  ],
+  "allophone_rules": [
+    {
+      "id": "SIA_PALAT_pʲ",
+      "phonemes": [
+        "p"
+      ],
+      "surface": "pʲ",
+      "followed_by_phoneme": [
+        "jɛ",
+        "jɑ",
+        "ju",
+        "jo",
+        "jɛː",
+        "jɑː",
+        "juː",
+        "i",
+        "iː",
+        "a"
+      ],
+      "notes": "Ternary plain / palatalized / palatal consonant opposition: a front or iotated vowel letter spells the palatal(ized) member of the pair, it does not add a glide (Zajkov 1987, pp. 43-45)."
+    },
+    {
+      "id": "SIA_PALAT_bʲ",
+      "phonemes": [
+        "b"
+      ],
+      "surface": "bʲ",
+      "followed_by_phoneme": [
+        "jɛ",
+        "jɑ",
+        "ju",
+        "jo",
+        "jɛː",
+        "jɑː",
+        "juː",
+        "i",
+        "iː",
+        "a"
+      ],
+      "notes": "Ternary plain / palatalized / palatal consonant opposition: a front or iotated vowel letter spells the palatal(ized) member of the pair, it does not add a glide (Zajkov 1987, pp. 43-45)."
+    },
+    {
+      "id": "SIA_PALAT_tʲ",
+      "phonemes": [
+        "t"
+      ],
+      "surface": "tʲ",
+      "followed_by_phoneme": [
+        "jɛ",
+        "jɑ",
+        "ju",
+        "jo",
+        "jɛː",
+        "jɑː",
+        "juː",
+        "i",
+        "iː",
+        "a"
+      ],
+      "notes": "Ternary plain / palatalized / palatal consonant opposition: a front or iotated vowel letter spells the palatal(ized) member of the pair, it does not add a glide (Zajkov 1987, pp. 43-45)."
+    },
+    {
+      "id": "SIA_PALAT_dʲ",
+      "phonemes": [
+        "d"
+      ],
+      "surface": "dʲ",
+      "followed_by_phoneme": [
+        "jɛ",
+        "jɑ",
+        "ju",
+        "jo",
+        "jɛː",
+        "jɑː",
+        "juː",
+        "i",
+        "iː",
+        "a"
+      ],
+      "notes": "Ternary plain / palatalized / palatal consonant opposition: a front or iotated vowel letter spells the palatal(ized) member of the pair, it does not add a glide (Zajkov 1987, pp. 43-45)."
+    },
+    {
+      "id": "SIA_PALAT_kʲ",
+      "phonemes": [
+        "k"
+      ],
+      "surface": "kʲ",
+      "followed_by_phoneme": [
+        "jɛ",
+        "jɑ",
+        "ju",
+        "jo",
+        "jɛː",
+        "jɑː",
+        "juː",
+        "i",
+        "iː",
+        "a"
+      ],
+      "notes": "Ternary plain / palatalized / palatal consonant opposition: a front or iotated vowel letter spells the palatal(ized) member of the pair, it does not add a glide (Zajkov 1987, pp. 43-45)."
+    },
+    {
+      "id": "SIA_PALAT_ɡʲ",
+      "phonemes": [
+        "ɡ"
+      ],
+      "surface": "ɡʲ",
+      "followed_by_phoneme": [
+        "jɛ",
+        "jɑ",
+        "ju",
+        "jo",
+        "jɛː",
+        "jɑː",
+        "juː",
+        "i",
+        "iː",
+        "a"
+      ],
+      "notes": "Ternary plain / palatalized / palatal consonant opposition: a front or iotated vowel letter spells the palatal(ized) member of the pair, it does not add a glide (Zajkov 1987, pp. 43-45)."
+    },
+    {
+      "id": "SIA_PALAT_fʲ",
+      "phonemes": [
+        "f"
+      ],
+      "surface": "fʲ",
+      "followed_by_phoneme": [
+        "jɛ",
+        "jɑ",
+        "ju",
+        "jo",
+        "jɛː",
+        "jɑː",
+        "juː",
+        "i",
+        "iː",
+        "a"
+      ],
+      "notes": "Ternary plain / palatalized / palatal consonant opposition: a front or iotated vowel letter spells the palatal(ized) member of the pair, it does not add a glide (Zajkov 1987, pp. 43-45)."
+    },
+    {
+      "id": "SIA_PALAT_vʲ",
+      "phonemes": [
+        "v"
+      ],
+      "surface": "vʲ",
+      "followed_by_phoneme": [
+        "jɛ",
+        "jɑ",
+        "ju",
+        "jo",
+        "jɛː",
+        "jɑː",
+        "juː",
+        "i",
+        "iː",
+        "a"
+      ],
+      "notes": "Ternary plain / palatalized / palatal consonant opposition: a front or iotated vowel letter spells the palatal(ized) member of the pair, it does not add a glide (Zajkov 1987, pp. 43-45)."
+    },
+    {
+      "id": "SIA_PALAT_sʲ",
+      "phonemes": [
+        "s"
+      ],
+      "surface": "sʲ",
+      "followed_by_phoneme": [
+        "jɛ",
+        "jɑ",
+        "ju",
+        "jo",
+        "jɛː",
+        "jɑː",
+        "juː",
+        "i",
+        "iː",
+        "a"
+      ],
+      "notes": "Ternary plain / palatalized / palatal consonant opposition: a front or iotated vowel letter spells the palatal(ized) member of the pair, it does not add a glide (Zajkov 1987, pp. 43-45)."
+    },
+    {
+      "id": "SIA_PALAT_zʲ",
+      "phonemes": [
+        "z"
+      ],
+      "surface": "zʲ",
+      "followed_by_phoneme": [
+        "jɛ",
+        "jɑ",
+        "ju",
+        "jo",
+        "jɛː",
+        "jɑː",
+        "juː",
+        "i",
+        "iː",
+        "a"
+      ],
+      "notes": "Ternary plain / palatalized / palatal consonant opposition: a front or iotated vowel letter spells the palatal(ized) member of the pair, it does not add a glide (Zajkov 1987, pp. 43-45)."
+    },
+    {
+      "id": "SIA_PALAT_xʲ",
+      "phonemes": [
+        "x"
+      ],
+      "surface": "xʲ",
+      "followed_by_phoneme": [
+        "jɛ",
+        "jɑ",
+        "ju",
+        "jo",
+        "jɛː",
+        "jɑː",
+        "juː",
+        "i",
+        "iː",
+        "a"
+      ],
+      "notes": "Ternary plain / palatalized / palatal consonant opposition: a front or iotated vowel letter spells the palatal(ized) member of the pair, it does not add a glide (Zajkov 1987, pp. 43-45)."
+    },
+    {
+      "id": "SIA_PALAT_hʲ",
+      "phonemes": [
+        "h"
+      ],
+      "surface": "hʲ",
+      "followed_by_phoneme": [
+        "jɛ",
+        "jɑ",
+        "ju",
+        "jo",
+        "jɛː",
+        "jɑː",
+        "juː",
+        "i",
+        "iː",
+        "a"
+      ],
+      "notes": "Ternary plain / palatalized / palatal consonant opposition: a front or iotated vowel letter spells the palatal(ized) member of the pair, it does not add a glide (Zajkov 1987, pp. 43-45)."
+    },
+    {
+      "id": "SIA_PALAT_mʲ",
+      "phonemes": [
+        "m"
+      ],
+      "surface": "mʲ",
+      "followed_by_phoneme": [
+        "jɛ",
+        "jɑ",
+        "ju",
+        "jo",
+        "jɛː",
+        "jɑː",
+        "juː",
+        "i",
+        "iː",
+        "a"
+      ],
+      "notes": "Ternary plain / palatalized / palatal consonant opposition: a front or iotated vowel letter spells the palatal(ized) member of the pair, it does not add a glide (Zajkov 1987, pp. 43-45)."
+    },
+    {
+      "id": "SIA_PALAT_ɲ",
+      "phonemes": [
+        "n"
+      ],
+      "surface": "ɲ",
+      "followed_by_phoneme": [
+        "jɛ",
+        "jɑ",
+        "ju",
+        "jo",
+        "jɛː",
+        "jɑː",
+        "juː",
+        "i",
+        "iː",
+        "a"
+      ],
+      "notes": "Ternary plain / palatalized / palatal consonant opposition: a front or iotated vowel letter spells the palatal(ized) member of the pair, it does not add a glide (Zajkov 1987, pp. 43-45)."
+    },
+    {
+      "id": "SIA_PALAT_rʲ",
+      "phonemes": [
+        "r"
+      ],
+      "surface": "rʲ",
+      "followed_by_phoneme": [
+        "jɛ",
+        "jɑ",
+        "ju",
+        "jo",
+        "jɛː",
+        "jɑː",
+        "juː",
+        "i",
+        "iː",
+        "a"
+      ],
+      "notes": "Ternary plain / palatalized / palatal consonant opposition: a front or iotated vowel letter spells the palatal(ized) member of the pair, it does not add a glide (Zajkov 1987, pp. 43-45)."
+    },
+    {
+      "id": "SIA_PALAT_ʎ",
+      "phonemes": [
+        "ɫ"
+      ],
+      "surface": "ʎ",
+      "followed_by_phoneme": [
+        "jɛ",
+        "jɑ",
+        "ju",
+        "jo",
+        "jɛː",
+        "jɑː",
+        "juː",
+        "i",
+        "iː",
+        "a"
+      ],
+      "notes": "Ternary plain / palatalized / palatal consonant opposition: a front or iotated vowel letter spells the palatal(ized) member of the pair, it does not add a glide (Zajkov 1987, pp. 43-45)."
+    },
+    {
+      "id": "SIA_PALAT_tsʲ",
+      "phonemes": [
+        "ts"
+      ],
+      "surface": "tsʲ",
+      "followed_by_phoneme": [
+        "jɛ",
+        "jɑ",
+        "ju",
+        "jo",
+        "jɛː",
+        "jɑː",
+        "juː",
+        "i",
+        "iː",
+        "a"
+      ],
+      "notes": "Ternary plain / palatalized / palatal consonant opposition: a front or iotated vowel letter spells the palatal(ized) member of the pair, it does not add a glide (Zajkov 1987, pp. 43-45)."
+    },
+    {
+      "id": "SIA_PALAT_ŋʲ",
+      "phonemes": [
+        "ŋ"
+      ],
+      "surface": "ŋʲ",
+      "followed_by_phoneme": [
+        "jɛ",
+        "jɑ",
+        "ju",
+        "jo",
+        "jɛː",
+        "jɑː",
+        "juː",
+        "i",
+        "iː",
+        "a"
+      ],
+      "notes": "Ternary plain / palatalized / palatal consonant opposition: a front or iotated vowel letter spells the palatal(ized) member of the pair, it does not add a glide (Zajkov 1987, pp. 43-45)."
+    },
+    {
+      "id": "SIA_PALAT_GEM_LATERAL",
+      "phonemes": [
+        "ɫ"
+      ],
+      "surface": "ʎ",
+      "followed_by_phoneme": [
+        "ʎ"
+      ],
+      "notes": "A written geminate is one long consonant, so a doubled lateral is palatal throughout when its second half is."
+    },
+    {
+      "id": "SIA_IOT_ABSORB_ɛ",
+      "phonemes": [
+        "jɛ"
+      ],
+      "surface": "ɛ",
+      "preceded_by": "consonant",
+      "notes": "After a consonant the iotated letter marks that consonant's palatalization and contributes only its vowel; the glide reading survives word-initially and after a vowel."
+    },
+    {
+      "id": "SIA_IOT_ABSORB_ɑ",
+      "phonemes": [
+        "jɑ"
+      ],
+      "surface": "ɑ",
+      "preceded_by": "consonant",
+      "notes": "After a consonant the iotated letter marks that consonant's palatalization and contributes only its vowel; the glide reading survives word-initially and after a vowel."
+    },
+    {
+      "id": "SIA_IOT_ABSORB_u",
+      "phonemes": [
+        "ju"
+      ],
+      "surface": "u",
+      "preceded_by": "consonant",
+      "notes": "After a consonant the iotated letter marks that consonant's palatalization and contributes only its vowel; the glide reading survives word-initially and after a vowel."
+    },
+    {
+      "id": "SIA_IOT_ABSORB_o",
+      "phonemes": [
+        "jo"
+      ],
+      "surface": "o",
+      "preceded_by": "consonant",
+      "notes": "After a consonant the iotated letter marks that consonant's palatalization and contributes only its vowel; the glide reading survives word-initially and after a vowel."
+    },
+    {
+      "id": "SIA_IOT_ABSORB_ɛː",
+      "phonemes": [
+        "jɛː"
+      ],
+      "surface": "ɛː",
+      "preceded_by": "consonant",
+      "notes": "After a consonant the iotated letter marks that consonant's palatalization and contributes only its vowel; the glide reading survives word-initially and after a vowel."
+    },
+    {
+      "id": "SIA_IOT_ABSORB_ɑː",
+      "phonemes": [
+        "jɑː"
+      ],
+      "surface": "ɑː",
+      "preceded_by": "consonant",
+      "notes": "After a consonant the iotated letter marks that consonant's palatalization and contributes only its vowel; the glide reading survives word-initially and after a vowel."
+    },
+    {
+      "id": "SIA_IOT_ABSORB_uː",
+      "phonemes": [
+        "juː"
+      ],
+      "surface": "uː",
+      "preceded_by": "consonant",
+      "notes": "After a consonant the iotated letter marks that consonant's palatalization and contributes only its vowel; the glide reading survives word-initially and after a vowel."
+    }
+  ]
+}

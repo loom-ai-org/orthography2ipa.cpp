@@ -1,0 +1,66 @@
+{
+  "code": "gan",
+  "name": "Gan Chinese",
+  "script": "Han",
+  "script_type": "logographic",
+  "quality": "stub",
+  "graphemes": {},
+  "allophones": {},
+  "parent": "ltc",
+  "ancestors": [
+    {
+      "code": "ltc",
+      "role": "parent",
+      "weight": 0.88,
+      "notes": "Descent from Middle Chinese."
+    },
+    {
+      "code": "och",
+      "role": "ancestor",
+      "weight": 0.08,
+      "notes": "Old Chinese: deeper Sinitic ancestor."
+    }
+  ],
+  "notes": "Grapheme inventory NOT YET SPECIFIED (stub). Gan is written with Chinese characters (Han script). No logographic character-to-phoneme map is claimed here: Chinese characters do not encode pronunciation systematically, so a Han-script G2P for this variety would need either a full character-reading lexicon or a romanised input. INPUT CONTRACT: this spec expects a romanisation as input, not Han characters — for Gan the relevant convention is the Nanchang-based Gan romanisation (as used by the Gan Wikipedia), in the same way that the `zh` spec expects Hanyu Pinyin, `nan` expects Pe̍h-ōe-jī / Tâi-lô, Cantonese expects Jyutping, Hakka expects Pha̍k-fa-sṳ, Mindong expects Bàng-uâ-cê and Wu expects Wugniu. Gan is tonal; tone is carried by the romanisation's diacritics or digits, not by the characters.",
+  "iso639_3": "gan",
+  "glottolog_code": "ganc1239",
+  "wikidata_qid": "Q33475",
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Gan_Chinese",
+    "https://gan.wikipedia.org/wiki/%E8%B4%9B%E8%AA%9E"
+  ],
+  "sources": [
+    {
+      "id": "gan_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Gan Chinese",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Gan_Chinese",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Gan_Chinese",
+      "pages": null,
+      "notes": "Classification, Han-script writing practice, Nanchang phonology."
+    },
+    {
+      "id": "norman1988",
+      "author": "Norman, Jerry",
+      "year": 1988,
+      "title": "Chinese",
+      "publisher": "Cambridge University Press",
+      "url": null,
+      "wikipedia_url": null,
+      "pages": null,
+      "notes": "Standard survey of the Sinitic varieties and their historical phonology."
+    }
+  ],
+  "timespan": {
+    "start_year": 1000,
+    "end_year": null
+  },
+  "location": {
+    "latitude": 27.9896,
+    "longitude": 115.166,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Gan Chinese."
+  }
+}

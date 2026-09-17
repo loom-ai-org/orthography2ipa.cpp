@@ -1,0 +1,339 @@
+{
+  "code": "cnk",
+  "name": "Khumi Chin",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "aing": [
+      "ãĩ̯"
+    ],
+    "awng": [
+      "ɔ̃"
+    ],
+    "aeng": [
+      "ɛ̃"
+    ],
+    "ang": [
+      "ã"
+    ],
+    "eng": [
+      "ẽ"
+    ],
+    "ing": [
+      "ĩ"
+    ],
+    "ong": [
+      "õ"
+    ],
+    "ung": [
+      "ũ"
+    ],
+    "üng": [
+      "ɨ̃"
+    ],
+    "yng": [
+      "ɘ̃"
+    ],
+    "awi": [
+      "ɔi̯"
+    ],
+    "aw": [
+      "ɔ"
+    ],
+    "ae": [
+      "ɛ"
+    ],
+    "ai": [
+      "ai̯"
+    ],
+    "ei": [
+      "ei̯"
+    ],
+    "ui": [
+      "ui̯"
+    ],
+    "a": [
+      "a"
+    ],
+    "e": [
+      "e"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "o"
+    ],
+    "u": [
+      "u"
+    ],
+    "ä": [
+      "ə"
+    ],
+    "ö": [
+      "ɵ"
+    ],
+    "ü": [
+      "ɨ"
+    ],
+    "y": [
+      "ɘ"
+    ],
+    "ph": [
+      "pʰ"
+    ],
+    "th": [
+      "tʰ"
+    ],
+    "kh": [
+      "kʰ"
+    ],
+    "ng": [
+      "ŋ"
+    ],
+    "p": [
+      "p"
+    ],
+    "t": [
+      "t"
+    ],
+    "k": [
+      "k"
+    ],
+    "b": [
+      "b"
+    ],
+    "d": [
+      "d"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "l": [
+      "l"
+    ],
+    "r": [
+      "r"
+    ],
+    "h": [
+      "h"
+    ],
+    "j": [
+      "j"
+    ],
+    "v": [
+      "v"
+    ],
+    "f": [
+      "f"
+    ],
+    "c": [
+      "s"
+    ],
+    "s": [
+      "sʰ"
+    ],
+    "q": [
+      "q"
+    ],
+    "x": [
+      "qʰ"
+    ]
+  },
+  "parent": "mni-x-proto-kuki-chin",
+  "ancestors": [
+    {
+      "code": "mni-x-proto-kuki-chin",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Descent per Glottolog classification of Khumi Chin (khum1248)."
+    }
+  ],
+  "notes": "Khumi Chin (Khumi, Khimi) is a South-Central Tibeto-Burman (Kuki-Chin) language of southern Chin State, Myanmar and the Chittagong Hill Tracts, Bangladesh. The orthography modelled here is the diaeresis-based Latin spelling used by the cnk/wikipron gold, not David Peterson's linguistic transcription of Bangladesh Khumi: Peterson (2008:110 n.2) writes tone with vowel doubling and acute accents and writes the non-cardinal vowels as digraphs ie/ue/oe, whereas the gold spelling writes no tone at all and writes the same vowel qualities with umlauts, ü [ɨ] and ö [ɵ], alongside y [ɘ] and ä [ə]. The two systems agree on aw for the back rounded vowel and on Ch for the aspirates.\n\nSegmental structure. Khumi has no phonemic codas (Baleno 2025:25-26). What the spelling writes as a coda is a property of the rime: coda ⟨ng⟩ is nasalisation of the nucleus, not a segment, so ⟨ang eng ing ong ung üng yng aeng awng aing⟩ map to nasal nuclei and only prevocalic ⟨ng⟩ is [ŋ] — in the gold, 147 words contain ⟨ng⟩ and just 7 contain a [ŋ] segment, all 7 with ⟨ng⟩ before a vowel. Baleno (2025:26 n.3) records the same alternation for Kanise Khumi and reports Ikeda's analysis of a coda /ŋ/ that becomes vowel nasalisation utterance-finally. Word-final ⟨h⟩ is likewise not a consonant: a final glottal closure is the surface exponent of creaky phonation on the rime (Baleno 2025:21, 26), and all five word-final ⟨-h⟩ spellings in the gold end in [ʔ], which together with the word-initial onset are the only [ʔ] in the set. A syllable with no written onset takes an obligatory [ʔ] (Baleno 2025:19-20); the gold supplies it in 51 of 54 vowel-initial entries, and the three that lack it (aetaete, ete, äblung) are gold inconsistencies, not a rule.\n\nSesquisyllables. ⟨ä⟩ is the reduced vowel of the minor syllable, the 'short vowel associated with a sesquisyllabic structure' of Peterson (2008:110 n.2); Baleno (2025:26-27) describes the minor syllable as Cə with an extra-short, modal-only nucleus. In the gold it is categorical and toneless: all 178 ⟨ä⟩ map to [ə] and not one of the 178 is followed by a tone letter, while every major-syllable rime carries one.\n\nTone is the whole remaining error. Khumi is tonal — Peterson (2008:110 n.2) analyses five underlying distinctions for Bangladesh Khumi, and the gold uses a three-level system [˥ ˧ ˩] written after each major-syllable rime — but the orthography spells none of it, and no rule could recover it: seven spellings in the gold (cäkae, kälai, mätute, pangkae, sate, täri, tävaw) are each attested with two or three different tone melodies and identical segments, and stripping the tone letters from both sides leaves zero ambiguous spellings. Tone is therefore left unencoded by design. The measured ceiling: full PER on the cnk/wikipron slice is 0.2608, and folding the tone letters out of both gold and output (measured, not shipped as a rule) drops it to 0.0069 with 333 of 342 words segmentally exact. Nine words differ segmentally: four are ⟨s⟩ transcribed as plain [s] rather than [sʰ] (baesung, nawngmäsaw, sädangtui, äse), which is the free variation Peterson (2008:110 n.2) records for this letter; three are the missing word-initial [ʔ]; one is langaw, where ⟨ang⟩ is a coda rime everywhere else but an onset here; and mäkhawite has [m] in the gold where the spelling has ⟨kh⟩, which is a gold entry error and is left alone.\n\nValues that rest on measurement rather than on a citation: ⟨c⟩ [s] (25/25) against ⟨s⟩ [sʰ] (36/40), the vowel letters y [ɘ] and ae [ɛ], and the uvulars ⟨q⟩ [q] (4 tokens) and ⟨x⟩ [qʰ] (3 tokens), which are too rare in the gold to be more than a distribution. No orthography statement published by the Khumi community could be retrieved; the letter values above are read off the gold and matched to the phonological descriptions cited, and the closest full phonology of a Khumi lect is of Kanise (Eastern) Khumi [cek], a sister lect, not of cnk itself. Stress is iambic in sesquisyllables and not lexically contrastive (documented exemption).",
+  "iso639_3": "cnk",
+  "glottolog_code": "khum1248",
+  "sources": [
+    {
+      "id": "cnk_glottolog",
+      "author": "Hammarström, Harald; Forkel, Robert; Haspelmath, Martin; Bank, Sebastian",
+      "year": 2024,
+      "title": "Glottolog: Khumi Chin (khum1248)",
+      "publisher": "Max Planck Institute for Evolutionary Anthropology",
+      "url": "https://glottolog.org/resource/languoid/id/khum1248",
+      "pages": null,
+      "notes": "Classification and languoid identity for ISO 639-3 cnk."
+    },
+    {
+      "id": "cnk_peterson2008",
+      "author": "Peterson, David A.",
+      "year": 2008,
+      "title": "Bangladesh Khumi verbal classifiers and Kuki-Chin 'chiming'",
+      "publisher": "Linguistics of the Tibeto-Burman Area 31.1:109-138",
+      "url": "http://sealang.net/archives/ltba/pdf/LTBA-31.1.109.pdf",
+      "pages": "110 n.2",
+      "notes": "The orthography note in footnote 2 is the primary source for cnk used here: five underlying tone distinctions; Ch for the aspirates; ng for the velar nasal; s an alveopalatal fricative in free variation with [s] in individual items; digraphs ie/ue/oe and aw for the non-cardinal vowels; and the apostrophe standing for glottal stop or for the short vowel of a sesquisyllabic structure."
+    },
+    {
+      "id": "cnk_baleno2025",
+      "author": "Baleno, Grace",
+      "year": 2025,
+      "title": "Tone in Kanise Khumi Nouns",
+      "publisher": "MA thesis, Trinity Western University (CanIL)",
+      "url": "https://twu.arcabc.ca/_flysystem/repo-bin/2025-06/twu_285_2025.pdf",
+      "pages": "19-27",
+      "notes": "Phonology of Kanise (Eastern) Khumi [cek], a sister lect of cnk and the fullest published Khumi phonology retrievable. Source for the absence of phonemic codas, the obligatory word-initial glottal onset, the word-final glottal stop as the exponent of creaky phonation, the nasal-coda/vowel-nasalisation alternation, and the Cə minor syllable. Cited for structure, not for the letter values of the cnk spelling."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Khumi_language"
+  ],
+  "positional_graphemes": {
+    "a": {
+      "word_initial": [
+        "ʔa"
+      ]
+    },
+    "ae": {
+      "word_initial": [
+        "ʔɛ"
+      ]
+    },
+    "aeng": {
+      "word_initial": [
+        "ʔɛ̃"
+      ]
+    },
+    "ai": {
+      "word_initial": [
+        "ʔai̯"
+      ]
+    },
+    "aing": {
+      "word_initial": [
+        "ʔãĩ̯"
+      ]
+    },
+    "ang": {
+      "word_initial": [
+        "ʔã"
+      ]
+    },
+    "aw": {
+      "word_initial": [
+        "ʔɔ"
+      ]
+    },
+    "awi": {
+      "word_initial": [
+        "ʔɔi̯"
+      ]
+    },
+    "awng": {
+      "word_initial": [
+        "ʔɔ̃"
+      ]
+    },
+    "e": {
+      "word_initial": [
+        "ʔe"
+      ]
+    },
+    "ei": {
+      "word_initial": [
+        "ʔei̯"
+      ]
+    },
+    "eng": {
+      "word_initial": [
+        "ʔẽ"
+      ]
+    },
+    "i": {
+      "word_initial": [
+        "ʔi"
+      ]
+    },
+    "ing": {
+      "word_initial": [
+        "ʔĩ"
+      ]
+    },
+    "o": {
+      "word_initial": [
+        "ʔo"
+      ]
+    },
+    "ong": {
+      "word_initial": [
+        "ʔõ"
+      ]
+    },
+    "u": {
+      "word_initial": [
+        "ʔu"
+      ]
+    },
+    "ui": {
+      "word_initial": [
+        "ʔui̯"
+      ]
+    },
+    "ung": {
+      "word_initial": [
+        "ʔũ"
+      ]
+    },
+    "y": {
+      "word_initial": [
+        "ʔɘ"
+      ]
+    },
+    "yng": {
+      "word_initial": [
+        "ʔɘ̃"
+      ]
+    },
+    "ä": {
+      "word_initial": [
+        "ʔə"
+      ]
+    },
+    "ö": {
+      "word_initial": [
+        "ʔɵ"
+      ]
+    },
+    "ü": {
+      "word_initial": [
+        "ʔɨ"
+      ]
+    },
+    "üng": {
+      "word_initial": [
+        "ʔɨ̃"
+      ]
+    }
+  },
+  "allophone_rules": [
+    {
+      "id": "cnk-final-h-glottal",
+      "phonemes": [
+        "h"
+      ],
+      "surface": "ʔ",
+      "word_final": true,
+      "notes": "Word-final ⟨h⟩ is not [h]. Khumi has no phonemic codas; a word-final glottal closure is the surface manifestation of creaky phonation on the rime (Baleno 2025:19-20, 26). All five word-final ⟨-h⟩ spellings in the cnk/wikipron gold end in [ʔ], and those five are the only non-initial [ʔ] in the whole set."
+    }
+  ],
+  "audit": {
+    "wikipron": {
+      "conclusion": "input_limited",
+      "measured": "Khumi is tonal (Peterson 2008 analyses five underlying distinctions; the gold uses a three-level system) but the diaeresis-based Latin orthography this spec describes spells none of it, and no rule could recover it: seven gold spellings are each attested with two or three different tone melodies over identical segments. Full PER on the cnk/wikipron slice is 0.2608; folding the tone letters out of both gold and output drops it to 0.0069, with 333 of 342 words segmentally exact.",
+      "reference": "spec notes"
+    }
+  }
+}

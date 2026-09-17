@@ -1,0 +1,127 @@
+{
+  "code": "an-x-oriental",
+  "name": "Eastern Aragonese (Ribagorçan)",
+  "script": "Latin",
+  "graphemes_base": "an",
+  "allophones_base": "an",
+  "positional_graphemes_base": "an",
+  "graphemes": {
+    "e": [
+      "e",
+      "ɛ"
+    ],
+    "o": [
+      "o",
+      "ɔ"
+    ],
+    "j": [
+      "dʒ",
+      "x"
+    ],
+    "g": [
+      "ɡ",
+      "dʒ"
+    ],
+    "z": [
+      "s"
+    ],
+    "c": [
+      "k",
+      "s"
+    ],
+    "ll": [
+      "ʎ",
+      "j"
+    ]
+  },
+  "allophones": {
+    "dʒ": [
+      "dʒ"
+    ],
+    "ʎ": [
+      "ʎ",
+      "j"
+    ],
+    "ɛ": [
+      "ɛ"
+    ],
+    "ɔ": [
+      "ɔ"
+    ]
+  },
+  "parent": "an",
+  "notes": "Eastern Aragonese / Ribagorçan / Benasquese transition zone. Catalan influence: voiced affricate [dʒ] for Latin G/J before front vowels, possible partial yeísmo. 7-vowel system with /ɛ/ and /ɔ/. Seseo: /θ/ → /s/. Transitional phonology between Aragonese and Catalan, debated classification.",
+  "quality": "skeleton",
+  "script_type": "alphabet",
+  "sources": [
+    {
+      "id": "penny2002",
+      "author": "Penny, R.",
+      "year": 2002,
+      "title": "A History of the Spanish Language",
+      "publisher": "Cambridge University Press",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "nagore_lain2001",
+      "author": "Nagore Laín, F.",
+      "year": 2001,
+      "title": "Gramática de la Lengua Aragonesa",
+      "publisher": "Librería General",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "hualde2005",
+      "author": "Hualde, J.I.",
+      "year": 2005,
+      "title": "The Sounds of Spanish",
+      "publisher": "Cambridge University Press",
+      "url": null,
+      "pages": null,
+      "notes": null,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Spanish_phonology"
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Aragonese_language",
+    "https://an.wikipedia.org/wiki/Idioma_aragon%C3%A9s",
+    "https://es.wikipedia.org/wiki/Idioma_aragon%C3%A9s"
+  ],
+  "timespan": {
+    "start_year": 1100,
+    "end_year": null
+  },
+  "glottolog_code": "east2273",
+  "iso639_3": "arg",
+  "positional_graphemes": {
+    "g": {
+      "before_e": [
+        "dʒ"
+      ],
+      "before_i": [
+        "dʒ"
+      ],
+      "intervocalic": [
+        "ɣ"
+      ]
+    },
+    "c": {
+      "before_e": [
+        "s"
+      ],
+      "before_i": [
+        "s"
+      ]
+    }
+  },
+  "location": {
+    "latitude": 42.45,
+    "longitude": 0.533333,
+    "source": "wikidata",
+    "notes": "the Ribagorza comarca — the eastern (Ribagorçan) Aragonese area, transitional to Catalan. [Wikidata Q1425491 P625]"
+  }
+}

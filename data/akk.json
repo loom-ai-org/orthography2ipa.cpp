@@ -1,0 +1,146 @@
+{
+  "code": "akk",
+  "name": "Akkadian",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "š": [
+      "ʃ"
+    ],
+    "ṣ": [
+      "sˤ"
+    ],
+    "ṭ": [
+      "tˤ"
+    ],
+    "ḫ": [
+      "x"
+    ],
+    "ʾ": [
+      "ʔ"
+    ],
+    "ʼ": [
+      "ʔ"
+    ],
+    "'": [
+      "ʔ"
+    ],
+    "ā": [
+      "aː"
+    ],
+    "ē": [
+      "eː"
+    ],
+    "ī": [
+      "iː"
+    ],
+    "ū": [
+      "uː"
+    ],
+    "â": [
+      "aː"
+    ],
+    "ê": [
+      "eː"
+    ],
+    "î": [
+      "iː"
+    ],
+    "û": [
+      "uː"
+    ],
+    "a": [
+      "a"
+    ],
+    "e": [
+      "e"
+    ],
+    "i": [
+      "i"
+    ],
+    "u": [
+      "u"
+    ],
+    "b": [
+      "b"
+    ],
+    "d": [
+      "d"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "h": [
+      "h"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "p": [
+      "p"
+    ],
+    "q": [
+      "q"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "w": [
+      "w"
+    ],
+    "y": [
+      "j"
+    ],
+    "z": [
+      "z"
+    ]
+  },
+  "parent": "sem",
+  "ancestors": [
+    {
+      "code": "sem",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Descent from Proto-Semitic (East Semitic); Huehnergard (2011). Sumerian substrate/adstrate not separately registered"
+    }
+  ],
+  "notes": "Skeleton. Akkadian (East Semitic; Assyro-Babylonian), scored in the standard Assyriological Latin transliteration rather than cuneiform. Emphatics ⟨ṣ ṭ⟩ rendered pharyngealised, ⟨š⟩=/ʃ/, ⟨ḫ⟩=/x/, ⟨ʾ⟩=/ʔ/; macron/circumflex mark vowel length. Sumerian substrate/adstrate (unregistered). Stress exemption: Akkadian word stress follows the classic Semitic quantity-sensitive pattern (a superheavy final syllable attracts stress; otherwise a heavy penult; otherwise the antepenult -- Huehnergard 2011, A Grammar of Akkadian, 3rd ed., section on stress and syllable weight), but this engine's quantity_sensitive stress mode is scoped to the Arabic-lineage graphemes_base (see tests/test_stress_weight.py::test_the_arabic_specs_opt_in) and Akkadian does not inherit an Arabic graphemes_base, so no stress block is declared here rather than misusing an unrelated fixed-position rule.",
+  "iso639_3": "akk",
+  "glottolog_code": null,
+  "sources": [
+    {
+      "id": "huehnergard2011",
+      "author": "Huehnergard, John",
+      "year": 2011,
+      "title": "A Grammar of Akkadian (3rd ed.)",
+      "publisher": "Eisenbrauns",
+      "url": null,
+      "pages": null,
+      "notes": "Standard grammar; transliteration-to-phonology conventions.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Akkadian_language"
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Akkadian_language"
+  ],
+  "timespan": {
+    "start_year": -2500,
+    "end_year": 100
+  }
+}

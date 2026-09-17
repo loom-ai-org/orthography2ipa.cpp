@@ -1,0 +1,85 @@
+{
+ "code": "ktf",
+ "name": "Kwami",
+ "script": "Zyyy",
+ "quality": "stub",
+ "graphemes": {},
+ "allophones": {},
+ "notes": "REGISTRY STUB (not a modelled G2P target). Placed so the ancestry graph covers every living ISO 639-3 language. No orthography is claimed; the phoneme inventory follows the cited PHOIBLE inventory (which itself cites a published description): script is Zyyy (undetermined) until a cited description is encoded. Classification and coordinates follow Glottolog.",
+ "iso639_3": "ktf",
+ "glottolog_code": "kwam1250",
+ "sources": [
+  {
+   "id": "glottolog2024",
+   "author": "Hammarström, Harald; Forkel, Robert; Haspelmath, Martin; Bank, Sebastian",
+   "year": 2024,
+   "title": "Glottolog 5.0",
+   "publisher": "Max Planck Institute for Evolutionary Anthropology",
+   "url": "https://glottolog.org/"
+  },
+  {
+   "id": "phoible2019",
+   "author": "Moran, Steven; McCloy, Daniel (eds.)",
+   "year": 2019,
+   "title": "PHOIBLE 2.0 (doi:10.5281/zenodo.2562766)",
+   "publisher": "Max Planck Institute for the Science of Human History",
+   "url": "https://phoible.org/inventories/view/1604",
+   "notes": "Inventory 1604 (ph), 38 non-marginal segments, 2 tones."
+  }
+ ],
+ "urls": [
+  "https://glottolog.org/resource/languoid/id/kwam1250"
+ ],
+ "location": {
+  "latitude": -1.5371,
+  "longitude": 27.4633,
+  "source": "glottolog",
+  "notes": "Glottolog's representative point."
+ },
+ "parent": "x-clade-atla1278",
+ "phonemes": [
+  "b",
+  "d",
+  "d̠ʒ",
+  "f",
+  "h",
+  "j",
+  "k",
+  "kʷ",
+  "l",
+  "m",
+  "mb",
+  "n",
+  "nd",
+  "p",
+  "r",
+  "s",
+  "t",
+  "t̠ʃ",
+  "w",
+  "z",
+  "ŋɡ",
+  "ŋɡʷ",
+  "ɓ",
+  "ɗ",
+  "ɡ",
+  "ɡʷ",
+  "ʃ",
+  "ʔ",
+  "a",
+  "aː",
+  "e",
+  "eː",
+  "i",
+  "iː",
+  "u",
+  "uː",
+  "ɔ",
+  "ɔː"
+ ],
+ "tone_inventory": {
+  "˦": "PHOIBLE tone segment",
+  "˨": "PHOIBLE tone segment"
+ },
+ "phoible_id": "1604"
+}

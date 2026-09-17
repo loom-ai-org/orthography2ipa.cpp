@@ -1,0 +1,92 @@
+{
+  "code": "chb",
+  "name": "Chibcha",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "qu": ["k"],
+    "ch": ["tʂ"],
+    "a": ["a"],
+    "e": ["e"],
+    "i": ["i"],
+    "o": ["o"],
+    "u": ["u"],
+    "y": ["ɨ"],
+    "b": ["β"],
+    "c": ["k"],
+    "q": ["k"],
+    "g": ["ɣ"],
+    "p": ["p"],
+    "t": ["t"],
+    "m": ["m"],
+    "n": ["n"],
+    "s": ["s"],
+    "z": ["tʂ"],
+    "x": ["ʂ"],
+    "f": ["ɸ"],
+    "h": ["h"],
+    "j": ["j"]
+  },
+  "parent": "x-clade-chib1249",
+  "ancestors": [
+    {
+      "code": "x-clade-chib1249",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Descent per Glottolog classification of Chibcha (chib1270)."
+    }
+  ],
+  "notes": "Chibchan language (Muisca) of the Colombian highlands, extinct since the late 18th century. There is no living pronunciation; phonemic values are RECONSTRUCTED from the colonial Spanish-based orthography of de Lugo (1619) and later grammars, following Constenla (1984) and Gonzalez de Perez (2006). Every value is tentative: c and qu both spell /k/, and the sibilant/affricate series z/ch/x (here read as retroflex) is the chief point of dispute. The grapheme y (an inverse-ypsilon in the sources) denotes the high central vowel. Stress, vowel length and nasalization are not recovered from the spelling. STRESS EXEMPTION (documented): the language is extinct with no living pronunciation to derive word-stress placement from, and none of the read reconstructions (Constenla 1984; Gonzalez de Perez 2006) recovers it from the colonial spelling -- no `stress` block is added. RESEARCH: citation-verified 2026-08 (sources wave 4) -- Constenla (1984, 'Los fonemas del muisca', Estudios de Linguistica Chibcha 2:65-111) and Gonzalez de Perez (2006, 'Aproximacion al sistema fonetico-fonologico de la lengua muisca', Instituto Caro y Cuervo) are now formally listed in `sources` (previously named only in prose); both are real, independently-published comparative reconstructions, and the two disagreeing on some sibilant/affricate values is exactly why this spec keeps those values flagged tentative rather than picking one silently. Gold: wikipron (n=99, PER 0.13; see benchmarks/results.json).",
+  "iso639_3": "chb",
+  "glottolog_code": null,
+  "sources": [
+    {
+      "id": "chb_glottolog",
+      "author": "Hammarström, H. et al. (Glottolog 5.0)",
+      "year": 2024,
+      "title": "Glottolog: Chibcha (chib1270)",
+      "publisher": "Max Planck Institute for Evolutionary Anthropology",
+      "url": "https://glottolog.org/resource/languoid/id/chib1270",
+      "pages": null,
+      "notes": "Classification reference for a skeleton-tier entry.",
+      "wikipedia_url": null
+    },
+    {
+      "id": "chb_wikipedia",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Chibcha language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Chibcha_language",
+      "pages": null,
+      "notes": "Reconstructed phonology and colonial orthography reference; values tentative.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Chibcha_language"
+    },
+    {
+      "id": "constenla1984",
+      "author": "Constenla Umaña, Adolfo",
+      "year": 1984,
+      "title": "Los fonemas del muisca",
+      "publisher": "Estudios de Lingüística Chibcha 2, 65-111",
+      "url": null,
+      "pages": "65-111",
+      "notes": "Comparative-method phonemic reconstruction of Muisca; the primary reference behind the c/qu=/k/ and z/ch/x sibilant-affricate values in this spec's grapheme table.",
+      "wikipedia_url": null
+    },
+    {
+      "id": "gonzalezdeperez2006",
+      "author": "González de Pérez, María Stella",
+      "year": 2006,
+      "title": "Aproximación al sistema fonético-fonológico de la lengua muisca",
+      "publisher": "Instituto Caro y Cuervo, Bogotá",
+      "url": null,
+      "pages": null,
+      "notes": "Independent phonetic-phonological reconstruction; cited in this spec's notes for the disputed sibilant/affricate series and to flag that scholars disagree on some values, which is why they are marked tentative rather than resolved here.",
+      "wikipedia_url": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Chibcha_language"
+  ]
+}

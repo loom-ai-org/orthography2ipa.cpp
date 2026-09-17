@@ -1,0 +1,52 @@
+{
+  "code": "raj",
+  "name": "Rajasthani (macrolanguage)",
+  "script": "Devanagari",
+  "graphemes": {},
+  "allophones": {},
+  "parent": "sa",
+  "ancestors": [
+    {
+      "code": "sa",
+      "role": "parent",
+      "weight": 0.8,
+      "notes": "Descent from Old Indo-Aryan (Sanskrit) via Apabhraṃśa; Western Indo-Aryan zone."
+    }
+  ],
+  "notes": "ISO 639-3 'raj' is a MACROLANGUAGE code, not a single spoken variety: it is the umbrella ISO grouping for a Western Indo-Aryan dialect cluster of Rajasthan, India, comprising individually-coded member languages such as Marwari (mwr), Malvi (mup), Mewari (mtr), Dhundhari, Harauti, Nimadi (noe), Bagri (bgq), Wagdi (wbr) and others (Ethnologue/Glottolog 'raja1256'). These varieties differ in phonology and, to a lesser extent, orthographic convention; there is no single citable grapheme-to-IPA mapping that covers all of them. This spec exists ONLY as a graph node so ancestry references to 'raj' resolve, per AGENTS.md 'leave no holes in the graph'; it intentionally carries an empty grapheme/allophone inventory rather than fabricate one that would misrepresent one member variety as the whole cluster. Individual member varieties should get their own specs (parented to raj or directly to sa) grounded in variety-specific sources; e.g. Marwari has a distinct literature (Magier 1983) that should not be conflated with this stub.",
+  "quality": "stub",
+  "script_type": "abugida",
+  "iso639_3": "raj",
+  "sources": [
+    {
+      "id": "masica1991",
+      "author": "Masica, C.",
+      "year": 1991,
+      "title": "The Indo-Aryan Languages",
+      "publisher": "Cambridge University Press",
+      "url": null,
+      "pages": null,
+      "notes": "Describes the Rajasthani dialect cluster and its principal varieties.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Indo-Aryan_languages"
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Rajasthani_languages"
+  ],
+  "urls": [
+    "https://iso639-3.sil.org/code/raj",
+    "https://glottolog.org/resource/languoid/id/raja1256"
+  ],
+  "timespan": {
+    "start_year": 1500,
+    "end_year": null
+  },
+  "glottolog_code": "raja1256",
+  "wikidata_qid": "Q13196",
+  "location": {
+    "latitude": 26.9124,
+    "longitude": 75.7873,
+    "source": "glottolog",
+    "notes": "Glottolog's computed centroid for the Rajasthani cluster (Rajasthan, India) -- a summary of a whole dialect cluster's range, not a place a single variety is spoken."
+  }
+}

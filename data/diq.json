@@ -1,0 +1,341 @@
+{
+  "code": "diq",
+  "name": "Zazaki",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "a": [
+      "a",
+      "ɑ"
+    ],
+    "b": [
+      "b"
+    ],
+    "c": [
+      "d͡ʒ"
+    ],
+    "ç": [
+      "t͡ʃ"
+    ],
+    "d": [
+      "d"
+    ],
+    "e": [
+      "ɛ"
+    ],
+    "ê": [
+      "e"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "ğ": [
+      "ɣ"
+    ],
+    "ẍ": [
+      "ɣ"
+    ],
+    "h": [
+      "h"
+    ],
+    "i": [
+      "ɪ"
+    ],
+    "ı": [
+      "ɪ"
+    ],
+    "î": [
+      "i"
+    ],
+    "j": [
+      "ʒ"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "o": [
+      "o"
+    ],
+    "p": [
+      "p"
+    ],
+    "q": [
+      "q"
+    ],
+    "r": [
+      "ɾ",
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "ş": [
+      "ʃ"
+    ],
+    "t": [
+      "t"
+    ],
+    "u": [
+      "ʊ"
+    ],
+    "û": [
+      "u"
+    ],
+    "v": [
+      "v"
+    ],
+    "w": [
+      "w"
+    ],
+    "x": [
+      "x"
+    ],
+    "y": [
+      "j"
+    ],
+    "z": [
+      "z"
+    ]
+  },
+  "allophones": {
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n",
+      "ŋ"
+    ],
+    "p": [
+      "p"
+    ],
+    "t": [
+      "t"
+    ],
+    "t͡ʃ": [
+      "t͡ʃ"
+    ],
+    "k": [
+      "k"
+    ],
+    "q": [
+      "q"
+    ],
+    "b": [
+      "b"
+    ],
+    "d": [
+      "d"
+    ],
+    "d͡ʒ": [
+      "d͡ʒ"
+    ],
+    "ɡ": [
+      "ɡ"
+    ],
+    "f": [
+      "f"
+    ],
+    "s": [
+      "s"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "x": [
+      "x"
+    ],
+    "h": [
+      "h"
+    ],
+    "v": [
+      "v"
+    ],
+    "z": [
+      "z"
+    ],
+    "ʒ": [
+      "ʒ"
+    ],
+    "ɣ": [
+      "ɣ"
+    ],
+    "ɾ": [
+      "ɾ"
+    ],
+    "r": [
+      "r"
+    ],
+    "l": [
+      "l",
+      "ɫ"
+    ],
+    "w": [
+      "w"
+    ],
+    "j": [
+      "j"
+    ],
+    "i": [
+      "i"
+    ],
+    "ɪ": [
+      "ɪ"
+    ],
+    "ɨ": [
+      "ɨ",
+      "ɪ"
+    ],
+    "u": [
+      "u"
+    ],
+    "ʊ": [
+      "ʊ"
+    ],
+    "e": [
+      "e",
+      "ɛ"
+    ],
+    "ɛ": [
+      "ɛ"
+    ],
+    "ə": [
+      "ə"
+    ],
+    "o": [
+      "o"
+    ],
+    "ɑ": [
+      "ɑ",
+      "ɑ̃"
+    ],
+    "a": [
+      "a"
+    ]
+  },
+  "notes": "Zazaki (Dimli / Kirmanjki), a Northwestern Iranian language of eastern Anatolia. COMMITMENT: this map implements the 32-letter ZAZA LATIN ALPHABET derived from the Kurdish Hawar (Bedirxan) alphabet — the alphabet used by the Zazaki Wikipedia and by modern Zazaki publishing. INPUT CONTRACT: lowercase Latin-script Zazaki with its diacritics intact (ç ê î ş û, and ğ/ẍ, ı/i). The Perso-Arabic writing tradition (an abjad) is OUT OF SCOPE. Do NOT cross-apply Kurmanji Hawar values: in Zaza, <u> = /ʊ/ and <û> = /u/, <î> = /i/, <i>/<ı> = /ɪ/, <e> = /ɛ/ and <ê> = /e/ — there are no phonemic long vowels marked by the circumflex. <ğ> (also written <ẍ>) = /ɣ/. <c> = /d͡ʒ/, <ç> = /t͡ʃ/, <j> = /ʒ/, <ş> = /ʃ/, <x> = /x/, <q> = /q/, <y> = /j/, <w> = /w/. NOT WRITTEN: the pharyngeal and pharyngealised consonants of the phoneme inventory (/ħ ʕ tˁ sˤ/) and the velarised lateral /ɫ/ have no distinct letters, and vowel nasalisation before /n/ is allophonic; these are carried in the allophone table, not recoverable from the spelling.",
+  "iso639_3": "zza",
+  "glottolog_code": "diml1238",
+  "wikidata_qid": "Q10199",
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Zaza_language",
+    "https://diq.wikipedia.org/wiki/Zazaki"
+  ],
+  "sources": [
+    {
+      "id": "zaza_language_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Zaza language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Zaza_language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Zaza_language",
+      "pages": null,
+      "notes": "Carries the 32-letter Zaza Latin alphabet with its IPA row, and the phoneme inventory / allophony used here."
+    },
+    {
+      "id": "paul1998_zazaki",
+      "author": "Paul, Ludwig",
+      "year": 1998,
+      "title": "Zazaki: Grammatik und Versuch einer Dialektologie",
+      "publisher": "Reichert, Wiesbaden",
+      "url": null,
+      "pages": null,
+      "notes": "Reference grammar; the descriptive source behind the Zazaki phoneme inventory."
+    },
+    {
+      "id": "todd2008_dimili",
+      "author": "Todd, Terry Lynn",
+      "year": 2008,
+      "title": "A Grammar of Dimili (also known as Zaza)",
+      "publisher": "Iremet Förlag, Stockholm",
+      "url": null,
+      "pages": null,
+      "notes": "Grammar of Dimili/Zazaki; second descriptive source for the phoneme inventory."
+    },
+    {
+      "id": "kurdish_alphabets_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Kurdish alphabets",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Kurdish_alphabets",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Kurdish_alphabets",
+      "pages": null,
+      "notes": "The Hawar (Bedirxan) alphabet the Zaza Latin alphabet derives from; its DIFFERENT vowel values are noted in this spec so they are not cross-applied."
+    }
+  ],
+  "phonemes": [
+    "a",
+    "ai",
+    "au",
+    "b",
+    "d̠ʒ",
+    "d̪",
+    "e",
+    "f",
+    "h",
+    "i",
+    "j",
+    "k",
+    "l",
+    "m",
+    "n",
+    "o",
+    "oi",
+    "p",
+    "q",
+    "r",
+    "s̪",
+    "s̪ˤ",
+    "t̠ʃ",
+    "t̪",
+    "t̪ˤ",
+    "u",
+    "v",
+    "w",
+    "x",
+    "z̪",
+    "ħ",
+    "ə",
+    "əi",
+    "əu",
+    "ɡ",
+    "ɣ",
+    "ɨ",
+    "ɫ",
+    "ɾ",
+    "ʃ",
+    "ʉ",
+    "ʉi",
+    "ʒ",
+    "ʕ"
+  ],
+  "parent": "x-clade-iran1269",
+  "ancestors": [
+    {
+      "code": "x-clade-iran1269",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Iranian — the classification node this language sits under."
+    }
+  ],
+  "location": {
+    "latitude": 38.6147,
+    "longitude": 39.6388,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Dimli."
+  }
+}

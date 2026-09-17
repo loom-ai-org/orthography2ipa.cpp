@@ -1,0 +1,182 @@
+{
+  "code": "oji",
+  "name": "Ojibwe",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "orthography_kind": "native",
+  "quality": "research",
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "aa": [
+      "aː"
+    ],
+    "i": [
+      "i"
+    ],
+    "ii": [
+      "iː"
+    ],
+    "o": [
+      "o"
+    ],
+    "oo": [
+      "oː"
+    ],
+    "e": [
+      "eː"
+    ],
+    "b": [
+      "b"
+    ],
+    "p": [
+      "pʰ"
+    ],
+    "d": [
+      "d"
+    ],
+    "t": [
+      "tʰ"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "k": [
+      "kʰ"
+    ],
+    "j": [
+      "dʒ"
+    ],
+    "ch": [
+      "tʃʰ"
+    ],
+    "z": [
+      "z"
+    ],
+    "s": [
+      "sʰ"
+    ],
+    "zh": [
+      "ʒ"
+    ],
+    "sh": [
+      "ʃʰ"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ng": [
+      "ŋɡ"
+    ],
+    "w": [
+      "w"
+    ],
+    "y": [
+      "j"
+    ],
+    "'": [
+      "ʔ"
+    ],
+    "ʼ": [
+      "ʔ"
+    ],
+    "h": [
+      "h"
+    ]
+  },
+  "allophones": {
+    "b": [
+      "b",
+      "p"
+    ],
+    "d": [
+      "d",
+      "t"
+    ],
+    "ɡ": [
+      "ɡ",
+      "k"
+    ],
+    "dʒ": [
+      "dʒ",
+      "tʃ"
+    ],
+    "z": [
+      "z",
+      "s"
+    ],
+    "ʒ": [
+      "ʒ",
+      "ʃ"
+    ],
+    "i": [
+      "ɪ",
+      "i"
+    ],
+    "a": [
+      "ə",
+      "ʌ",
+      "a"
+    ],
+    "o": [
+      "o",
+      "ʊ"
+    ]
+  },
+  "iso639_3": "oji",
+  "glottolog_code": "ojib1241",
+  "wikidata_qid": "Q33875",
+  "notes": "Ojibwe (Anishinaabemowin), Algonquian. PRIMARY INPUT CONTRACT: the double-vowel (Fiero) Latin orthography, the standard teaching/reference system (Nichols & Nyholm 1995; Valentine 2001), NFC. Seven vowels: three short /i a o/ and four long /iː aː oː eː/ — note /eː/ has no short counterpart and is written with the single letter ⟨e⟩ (its length is a fact about the vowel, not spelled with a doubled letter). Obstruents form fortis/lenis pairs: the lenis series ⟨b d g j z zh⟩ is phonemically voiced-or-voiceless-unaspirated depending on context ([b~p], [d~t], [ɡ~k], [dʒ~tʃ], [z~s], [ʒ~ʃ]) while the fortis series ⟨p t k ch s sh⟩ is consistently voiceless and aspirated. ⟨'⟩ is the glottal stop /ʔ/; ⟨h⟩ for /h/ is dialectal (used where some varieties instead have /ʔ/). Nasal vowels are reported for some dialects but are not consistently written in the double-vowel system and are therefore not represented here. WRITING SYSTEMS NOT COVERED: many Ojibwe communities in northern Ontario and Manitoba write with a syllabary historically developed for Cree (devised by James Evans, c. 1840) and adapted for Ojibwe (Great Lakes Algonquian syllabics also exist with limited modern use); this file does not build a syllabics inventory because a per-community, per-dialect syllabics-to-IPA chart was not available with the same confidence as the double-vowel system used here. Short /i a o/ are stated PHONEMICALLY per the Wikipedia Ojibwe-phonology inventory (\"There are three short vowels, /i a o/\"); their usual phonetic realizations — [ɪ], [ə]~[ʌ] and [o]~[ʊ] — are listed in `allophones` rather than substituted for the phonemes, so a narrow transcription remains reachable without the spec claiming [ə] and [ɪ] are the underlying vowels. ⟨ng⟩ is not a digraph for a velar nasal phoneme: the consonant inventory this spec encodes has only /m n/ in the nasal row, and ⟨ng⟩ is one of the language's permitted consonant clusters (-sk-, -shp-, -sht-, -shk-, -mb-, -nd-, -ng-, -nj-, -nz-, -nzh-, -ns-), several of which including ⟨ng⟩ also occur word-finally. It spells /n/ plus lenis velar ⟨g⟩, and the /n/ assimilates to [ŋ] before the velar, so the value is [ŋɡ] and the ⟨g⟩ is a segment of its own. It still earns its key on AGENTS.md §2 test 3, for the assimilation rather than for a phoneme: without it the tokenizer matches ⟨n⟩+⟨g⟩ and ⟨bangii⟩ comes out [banɡiː] instead of [baŋɡiː]. ⟨l⟩ and ⟨r⟩ are deliberately absent — the double-vowel alphabet (a aa b ch d e g h ' i ii j k m n o oo p s t w y z) excludes them; they occur only in loans, so an unmapped ⟨l⟩ is the honest outcome rather than a guessed value. GOLD AUDIT (WikiPron oji_latn_broad, 136 pairs). The gold is hand-typed, not module output: en.wiktionary has no Module:oji-IPA, Module:oj-IPA or matching pronunciation template, and all 15 headwords of a random sample carry a literal {{IPA|oj|/…/}} line, several of them alongside a citation to the Ojibwe People's Dictionary, Baraga (1853) or Kelton (1889). It is, however, written in more than one transcription convention and cannot arbitrate a narrow-value question on its own. A majority cohort writes long ⟨aa⟩ as [ɑː] (42 of the 53 words containing ⟨aa⟩), short ⟨a i⟩ as [ʌ ɪ], the fortis stops aspirated and the fortis fricatives geminate; a minority cohort writes [aː], plain [a i], and devoices word-final lenis stops (⟨zhigaag⟩ as [ʒɪɡaːk], ⟨aninaatig⟩ as [anɪnaːtɪk]); a third pattern uses [ə] (⟨ajina⟩ as [ədʒɪnə]). Counting words by which short-vowel convention they use gives 77 lax-only, 16 plain-only, 29 mixed and 14 with no short vowel at all. Because oji is a macrolanguage code the entries are also not one variety, and ⟨boozhoo⟩ carries both [boːʒoː] and the eastern [buːʒuː]. REFUSED CHANGE: rewriting the short vowels to [ɪ ʌ] and long ⟨aa⟩ to [ɑː] would remove most of the residual error against that gold, and it is refused. The description this spec follows gives short /a/ a range of stressed values (ɑ a ɐ ɔ ʌ ɨ, with ə~ʌ unstressed) rather than one, so no single narrow symbol is licensed for it; the reference grammars that would settle the question (Valentine 2001; Nichols & Nyholm 1995, whose page xxvii is where the velar assimilation is cited) are not openly readable and were not opened here. The phonetic values stay in `allophones` until a source is read at the page.",
+  "sources": [
+    {
+      "id": "ojibwe_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Ojibwe language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Ojibwe_language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Ojibwe_language",
+      "pages": null,
+      "notes": "Phoneme inventory and double-vowel orthography correspondences."
+    },
+    {
+      "id": "nichols_nyholm1995",
+      "author": "Nichols, John D. & Nyholm, Earl",
+      "year": 1995,
+      "title": "A Concise Dictionary of Minnesota Ojibwe",
+      "publisher": "University of Minnesota Press",
+      "url": null,
+      "wikipedia_url": null,
+      "pages": null,
+      "notes": "Reference implementation of the double-vowel (Fiero) orthography."
+    },
+    {
+      "id": "valentine2001",
+      "author": "Valentine, J. Randolph",
+      "year": 2001,
+      "title": "Nishnaabemwin Reference Grammar",
+      "publisher": "University of Toronto Press",
+      "url": null,
+      "wikipedia_url": null,
+      "pages": null,
+      "notes": "Phonology and orthography of the Odawa/Eastern Ojibwe dialect continuum."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Ojibwe_language",
+    "https://en.wikipedia.org/wiki/Ojibwe_writing_systems"
+  ],
+  "parent": "x-clade-algi1248",
+  "ancestors": [
+    {
+      "code": "x-clade-algi1248",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Algic — the classification node this language sits under (Ojibwe is Algonquian)."
+    }
+  ]
+}

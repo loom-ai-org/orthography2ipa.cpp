@@ -1,0 +1,176 @@
+{
+  "code": "es-CL",
+  "name": "Chilean Spanish",
+  "script": "Latin",
+  "graphemes_base": "es-ES",
+  "graphemes": {
+    "c": [
+      "k",
+      "s"
+    ],
+    "z": [
+      "s"
+    ],
+    "ll": [
+      "ʝ"
+    ]
+  },
+  "allophones_base": "es-ES",
+  "allophones": {
+    "d": [
+      "d",
+      "ð",
+      ""
+    ],
+    "s": [
+      "s",
+      "h"
+    ],
+    "x": [
+      "x",
+      "ç"
+    ],
+    "ʝ": [
+      "ʝ",
+      "ɟʝ"
+    ],
+    "tʃ": [
+      "tʃ",
+      "ʃ"
+    ],
+    "n": [
+      "n"
+    ]
+  },
+  "positional_graphemes_base": "es-ES",
+  "positional_graphemes": {
+    "d": {
+      "default": [
+        "d"
+      ],
+      "intervocalic": [
+        "ð"
+      ],
+      "word_final": [
+        ""
+      ]
+    },
+    "s": {
+      "word_initial": [
+        "s"
+      ],
+      "intervocalic": [
+        "s"
+      ],
+      "before_consonant": [
+        "h",
+        "s"
+      ],
+      "word_final": [
+        "h"
+      ]
+    },
+    "c": {
+      "before_e": [
+        "s"
+      ],
+      "before_i": [
+        "s"
+      ]
+    }
+  },
+  "parent": "es-ES",
+  "notes": "Chilean Spanish. Moderate coda aspiration. /x/ → [x] with [ç] allophone before front vowels (gente [ˈçente]) — distinctive Chilean feature. Deaffrication [tʃ] → [ʃ] in casual speech (stigmatised). -d deletion common. Distinctive intonation.",
+  "quality": "research",
+  "script_type": "alphabet",
+  "sources": [
+    {
+      "id": "hualde2005",
+      "author": "Hualde, J.I.",
+      "year": 2005,
+      "title": "The Sounds of Spanish",
+      "publisher": "Cambridge University Press",
+      "url": null,
+      "pages": null,
+      "notes": null,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Spanish_phonology"
+    },
+    {
+      "id": "fontanella_de_weinberg1992",
+      "author": "Fontanella de Weinberg, M.B.",
+      "year": 1992,
+      "title": "El español de América",
+      "publisher": "MAPFRE",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "penny2002",
+      "author": "Penny, R.",
+      "year": 2002,
+      "title": "A History of the Spanish Language",
+      "publisher": "Cambridge University Press",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "lipski_overview",
+      "author": "Lipski, John M.",
+      "year": 2011,
+      "title": "Geographical and Social Varieties of Spanish: An Overview",
+      "publisher": "In J.I. Hualde, A. Olarrea & E. O'Rourke (eds.), The Handbook of Hispanic Linguistics, Wiley-Blackwell",
+      "url": "https://johnlipski.github.io/geo.pdf",
+      "pages": "pp. 1-26",
+      "notes": "READ (geo.pdf). Reproduces the Lipski (1994) geographical dialect-zone classification of Latin American Spanish (list (2)): Mexican/SW-US; Caribbean; Guatemala-Yucatan-Costa Rica; El Salvador-Honduras-Nicaragua; interior Colombia + highland Venezuela; Pacific coast Colombia/Ecuador/Peru; Andean (Ecuador/Peru/Bolivia/NW-Argentina/NE-Chile); Chile; Paraguay/NE-Argentina/E-Bolivia; Argentina/Uruguay. Used here to enumerate the regional zones; no phonology quoted."
+    },
+    {
+      "id": "lipski1994",
+      "author": "Lipski, John M.",
+      "year": 1994,
+      "title": "Latin American Spanish",
+      "publisher": "Longman Linguistics Library, Longman",
+      "url": null,
+      "pages": null,
+      "notes": "The comprehensive dialect survey underlying the zone classification (cited via the author's own overview, geo.pdf, which was read)."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Chilean_Spanish",
+    "https://es.wikipedia.org/wiki/Espa%C3%B1ol_chileno"
+  ],
+  "timespan": {
+    "start_year": 1700,
+    "end_year": null
+  },
+  "glottolog_code": "chil1286",
+  "iso639_3": "spa",
+  "ancestors": [
+    {
+      "code": "es-ES",
+      "role": "parent",
+      "weight": 0.9,
+      "notes": "Primary parent (Castilian Spanish); preserved from the existing parent field."
+    },
+    {
+      "code": "es-419",
+      "role": "ancestor",
+      "weight": 0.6,
+      "notes": "General Latin American Spanish (koine) baseline (Lipski 1994)."
+    },
+    {
+      "code": "arn",
+      "role": "adstrate",
+      "weight": 0.1,
+      "notes": "Mapudungun indigenous adstrate (see stub arn.json; Lipski 1994)."
+    }
+  ],
+  "wikidata_qid": "Q857295",
+  "location": {
+    "latitude": -33.4375,
+    "longitude": -70.65,
+    "source": "wikidata",
+    "notes": "Santiago — the central-valley capital, the Chilean reference norm. [Wikidata Q2887 P625]"
+  }
+}

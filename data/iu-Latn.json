@@ -1,0 +1,99 @@
+{
+  "code": "iu-Latn",
+  "name": "Inuktitut, Eastern Canadian (Latin script)",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "orthography_kind": "romanization",
+  "quality": "skeleton",
+  "graphemes": {
+    "p": ["p"],
+    "t": ["t"],
+    "k": ["k"],
+    "q": ["q"],
+    "g": ["ɡ"],
+    "v": ["v"],
+    "l": ["l"],
+    "j": ["j"],
+    "m": ["m"],
+    "n": ["n"],
+    "ng": ["ŋ"],
+    "nng": ["ŋː"],
+    "r": ["ʁ"],
+    "s": ["s"],
+    "ł": ["ɬ"],
+    "h": ["h"],
+    "a": ["a"],
+    "i": ["i"],
+    "u": ["u"],
+    "aa": ["aː"],
+    "ii": ["iː"],
+    "uu": ["uː"],
+    "'": ["ʔ"]
+  },
+  "allophones": {
+    "ɡ": ["ɡ", "ɣ"]
+  },
+  "iso639_3": "ike",
+  "glottolog_code": "east2534",
+  "wikidata_qid": "Q4126517",
+  "notes": "CODE NOTE: this file is keyed `iu-Latn` (BCP-47 macrolanguage tag + Latn script subtag) rather than the ISO 639-3 individual code `ike`, which is recorded in `iso639_3` below. `ike` is reserved for a future engine fix: the registry's langcodes-based resolver unconditionally canonicalizes individual codes that belong to a macrolanguage into the macrolanguage's own primary tag (`ike` -> `iu`) before checking whether a spec file for `ike` itself exists, the same class of collision documented for `bxr`/`diq` in registry.py's alias table — fixing it for `ike`/`ikt` needs an engine-side alias-table entry, which is out of scope for a data-only change. Eastern Canadian Inuktitut (ᐃᓄᒃᑎᑐᑦ), an Eskimo-Aleut language, a child variety of the Inuktitut macrolanguage (iu). Eastern Canadian Inuktitut is written both in Inuktitut syllabics (qaniujaaqpait — see the `iu` spec, which covers the syllabics tradition in full) and in a Latin romanization (qaliujaaqpait). This file uses the LATIN romanization as primary because a complete, cited letter-by-letter Latin inventory was available (ITK's Inuktut Qaliujaaqpait unified writing system and the Tusaalanga roman-orthography reference), whereas the syllabics side is already covered by the parent `iu` spec and this file does not duplicate it. Phonology mirrors iu: three vowels /i u a/ each with a long counterpart (doubled letter); consonants p t k q ɡ v l j(=/j/) m n ŋ(⟨ng⟩) ʁ(⟨r⟩, uvular) s h, with the geminate velar nasal written ⟨nng⟩ /ŋː/. ⟨ł⟩ /ɬ/ and ⟨h⟩ /h/ are dialect-restricted (present in some Nunavik/Nunavut communities, absent in others), matching the dialect-restricted rows already noted in the `iu` syllabics spec. ⟨g⟩ alternates [ɡ]~[ɣ] the same way the corresponding syllabic glyphs do in `iu`. Consonant gemination beyond ⟨nng⟩ (e.g. doubled ⟨pp⟩, ⟨tt⟩, ⟨kk⟩) is a productive orthographic doubling process, not enumerated here key-by-key; it is not currently representable without a general gemination rule in the engine.",
+  "sources": [
+    {
+      "id": "inuktitut_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Inuktitut",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Inuktitut",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Inuktitut",
+      "pages": null,
+      "notes": "Phoneme inventory shared across Inuktitut dialects, romanization letters."
+    },
+    {
+      "id": "itk_qaliujaaqpait",
+      "author": "Inuit Tapiriit Kanatami",
+      "year": 2019,
+      "title": "Inuktut Qaliujaaqpait: Unified Inuktut Writing System",
+      "publisher": "Inuit Tapiriit Kanatami",
+      "url": "https://itk.ca/projects/inuktut-qaliujaaqpait/",
+      "wikipedia_url": null,
+      "pages": null,
+      "notes": "The 2019 unified Latin romanization for Canadian Inuktut dialects, including Eastern Canadian Inuktitut."
+    },
+    {
+      "id": "tusaalanga_qaliujaaqpait",
+      "author": "Pirurvik Centre",
+      "year": 2024,
+      "title": "Inuktut Tusaalanga — Roman Orthography (Qaliujaaqpait)",
+      "publisher": "Pirurvik",
+      "url": "https://tusaalanga.ca/node/2507",
+      "wikipedia_url": null,
+      "pages": null,
+      "notes": "Letter-by-letter description of the Latin romanization: 3 vowels, ~18 consonants, doubled letters for length, q/r as uvular sounds, ł as voiceless lateral fricative."
+    },
+    {
+      "id": "dorais2010",
+      "author": "Dorais, Louis-Jacques",
+      "year": 2010,
+      "title": "The Language of the Inuit: Syntax, Semantics, and Society in the Arctic",
+      "publisher": "McGill-Queen's University Press",
+      "url": null,
+      "wikipedia_url": null,
+      "pages": null,
+      "notes": "Reference grammar covering pan-Inuit phonology and dialect variation, including Eastern Canadian Inuktitut."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Inuktitut",
+    "https://en.wikipedia.org/wiki/Inuktitut_syllabics"
+  ],
+  "parent": "iu",
+  "ancestors": [
+    {
+      "code": "iu",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Inuktitut macrolanguage — Eastern Canadian Inuktitut is one of its principal constituent varieties."
+    }
+  ]
+}

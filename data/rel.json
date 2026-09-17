@@ -1,0 +1,169 @@
+{
+ "code": "rel",
+ "name": "Rendille",
+ "script": "Latin",
+ "quality": "skeleton",
+ "graphemes": {
+  "a": [
+   "a"
+  ],
+  "b": [
+   "b"
+  ],
+  "ch": [
+   "tʃ"
+  ],
+  "d": [
+   "ɖ"
+  ],
+  "dh": [
+   "ɗ"
+  ],
+  "e": [
+   "e"
+  ],
+  "f": [
+   "f"
+  ],
+  "g": [
+   "ɡ"
+  ],
+  "h": [
+   "ħ"
+  ],
+  "h'": [
+   "h"
+  ],
+  "i": [
+   "i"
+  ],
+  "j": [
+   "dʒ"
+  ],
+  "k": [
+   "k"
+  ],
+  "kh": [
+   "x"
+  ],
+  "l": [
+   "l"
+  ],
+  "m": [
+   "m"
+  ],
+  "n": [
+   "n"
+  ],
+  "ng'": [
+   "ŋ"
+  ],
+  "ny": [
+   "ɲ"
+  ],
+  "o": [
+   "ɔ"
+  ],
+  "r": [
+   "r"
+  ],
+  "s": [
+   "s"
+  ],
+  "t": [
+   "t"
+  ],
+  "u": [
+   "u"
+  ],
+  "w": [
+   "w"
+  ],
+  "y": [
+   "j"
+  ]
+ },
+ "allophones": {},
+ "notes": "Placed so the ancestry graph covers every living ISO 639-3 language. No orthography is claimed; the phoneme inventory follows the cited PHOIBLE inventory (which itself cites a published description): script is Zyyy (undetermined) until a cited description is encoded. Classification and coordinates follow Glottolog. Orthography from Hartell 1993, Alphabets of Africa (UNESCO/SIL), extracted via the AfriSpeech/africa-g2p compilation (rel.json). africa-g2p is a compilation tool, not the linguistic authority; the citation above is the original source it names.",
+ "iso639_3": "rel",
+ "glottolog_code": "rend1243",
+ "sources": [
+  {
+   "id": "glottolog2024",
+   "author": "Hammarström, Harald; Forkel, Robert; Haspelmath, Martin; Bank, Sebastian",
+   "year": 2024,
+   "title": "Glottolog 5.0",
+   "publisher": "Max Planck Institute for Evolutionary Anthropology",
+   "url": "https://glottolog.org/"
+  },
+  {
+   "id": "phoible2019",
+   "author": "Moran, Steven; McCloy, Daniel (eds.)",
+   "year": 2019,
+   "title": "PHOIBLE 2.0 (doi:10.5281/zenodo.2562766)",
+   "publisher": "Max Planck Institute for the Science of Human History",
+   "url": "https://phoible.org/inventories/view/811",
+   "notes": "Inventory 811 (aa), 31 non-marginal segments, 2 tones."
+  },
+  {
+   "id": "hartell1993-p110",
+   "author": "Hartell, Rhonda L. (ed.)",
+   "year": 1993,
+   "title": "Alphabets of Africa, p. 110",
+   "publisher": "UNESCO/SIL, Dakar",
+   "url": null
+  }
+ ],
+ "urls": [
+  "https://glottolog.org/resource/languoid/id/rend1243"
+ ],
+ "location": {
+  "latitude": 2.2706,
+  "longitude": 37.3608,
+  "source": "glottolog",
+  "notes": "Glottolog's representative point."
+ },
+ "parent": "x-clade-afro1255",
+ "phonemes": [
+  "b",
+  "d̠ʒ",
+  "d̪",
+  "f",
+  "h",
+  "j",
+  "k",
+  "l",
+  "m",
+  "n",
+  "r",
+  "s",
+  "t",
+  "t̠ʃ",
+  "w",
+  "x",
+  "ħ",
+  "ŋ",
+  "ɖ",
+  "ɡ",
+  "ɲ",
+  "a",
+  "aː",
+  "e",
+  "eː",
+  "i",
+  "iː",
+  "u",
+  "uː",
+  "ɔ",
+  "ɔː"
+ ],
+ "tone_inventory": {
+  "˦": "PHOIBLE tone segment",
+  "˨": "PHOIBLE tone segment"
+ },
+ "phoible_id": "811",
+ "script_type": "alphabet",
+ "wikipedia": [
+  "https://en.wikipedia.org/wiki/Rendille_language"
+ ]
+}

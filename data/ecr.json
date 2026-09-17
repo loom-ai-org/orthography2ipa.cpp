@@ -1,0 +1,56 @@
+{
+  "code": "ecr",
+  "name": "Eteocretan",
+  "script": "Greek",
+  "script_type": "alphabet",
+  "quality": "stub",
+  "iso639_3": "ecr",
+  "glottolog_code": "eteo1236",
+  "family": "Isolate",
+  "graphemes": {},
+  "allophones": {},
+  "notes": "Stub, unclassified. Eteocretan is a pre-Greek language of eastern Crete (chiefly Praisos and Dreros), attested in roughly half a dozen clear inscriptions, two of them Eteocretan-Greek bilinguals, dated to the late 7th-3rd century BCE. It is written in the Greek alphabet (archaic Cretan letterforms in the earliest texts, the standard Ionic alphabet later) but the language itself remains untranslated, with no established genetic link to Indo-European, Semitic, or any other classified family; a speculative connection to Minoan is unproven. Because the language is undeciphered no grapheme-to-IPA mapping can be sourced or asserted -- the Greek letters used are known, but what they encoded phonologically in a language nobody can read is not. `graphemes` and `allophones` are intentionally left empty rather than reusing the Greek phonology of the alphabet that merely transcribes it. No `parent`/`ancestors` are set: the language is unclassified, so forcing it under Hellenic or any other clade would assert a genetic relationship the sources explicitly deny.",
+  "sources": [
+    {
+      "id": "wiki-ecr",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Eteocretan language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Eteocretan_language"
+    },
+    {
+      "id": "duhoux1982",
+      "author": "Duhoux, Yves",
+      "year": 1982,
+      "title": "L'Étéocrétois: les textes - la langue",
+      "publisher": "J.C. Gieben",
+      "url": null,
+      "notes": "Comprehensive philological study of the surviving Eteocretan inscriptions, cited in the Wikipedia article."
+    },
+    {
+      "id": "guarducci1942",
+      "author": "Guarducci, Margherita",
+      "year": 1942,
+      "title": "Inscriptiones Creticae",
+      "publisher": null,
+      "url": null,
+      "notes": "Publication of the Cretan inscriptions including Eteocretan texts, cited in the Wikipedia article."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Eteocretan_language"
+  ],
+  "urls": [
+    "https://glottolog.org/resource/languoid/id/eteo1236"
+  ],
+  "timespan": {
+    "start_year": -600,
+    "end_year": -200
+  },
+  "location": {
+    "latitude": 35.1667,
+    "longitude": 26.05,
+    "source": "wikipedia",
+    "notes": "Praisos, the principal Eteocretan-speaking site in eastern Crete."
+  }
+}

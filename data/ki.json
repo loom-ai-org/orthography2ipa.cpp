@@ -1,0 +1,259 @@
+{
+  "code": "ki",
+  "name": "Kikuyu",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "aa": [
+      "aː"
+    ],
+    "e": [
+      "ɛ"
+    ],
+    "ee": [
+      "ɛː"
+    ],
+    "i": [
+      "i"
+    ],
+    "ii": [
+      "iː"
+    ],
+    "ĩ": [
+      "e"
+    ],
+    "ĩĩ": [
+      "eː"
+    ],
+    "o": [
+      "ɔ"
+    ],
+    "oo": [
+      "ɔː"
+    ],
+    "u": [
+      "u"
+    ],
+    "uu": [
+      "uː"
+    ],
+    "ũ": [
+      "o"
+    ],
+    "ũũ": [
+      "oː"
+    ],
+    "b": [
+      "β"
+    ],
+    "c": [
+      "ʃ"
+    ],
+    "d": [
+      "ð"
+    ],
+    "g": [
+      "ɣ"
+    ],
+    "h": [
+      "h"
+    ],
+    "j": [
+      "j"
+    ],
+    "k": [
+      "k"
+    ],
+    "m": [
+      "m"
+    ],
+    "mb": [
+      "ᵐb"
+    ],
+    "n": [
+      "n"
+    ],
+    "nd": [
+      "ⁿd"
+    ],
+    "ng": [
+      "ᵑɡ"
+    ],
+    "ng'": [
+      "ŋ"
+    ],
+    "nj": [
+      "ⁿdʒ"
+    ],
+    "ny": [
+      "ɲ"
+    ],
+    "r": [
+      "ɾ"
+    ],
+    "t": [
+      "t"
+    ],
+    "th": [
+      "ð"
+    ],
+    "w": [
+      "w"
+    ],
+    "y": [
+      "j"
+    ]
+  },
+  "allophones": {
+    "a": [
+      "a"
+    ],
+    "ɛ": [
+      "ɛ"
+    ],
+    "i": [
+      "i"
+    ],
+    "e": [
+      "e"
+    ],
+    "ɔ": [
+      "ɔ"
+    ],
+    "u": [
+      "u"
+    ],
+    "o": [
+      "o"
+    ],
+    "β": [
+      "β"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "ð": [
+      "ð"
+    ],
+    "ɣ": [
+      "ɣ"
+    ],
+    "h": [
+      "h"
+    ],
+    "j": [
+      "j"
+    ],
+    "k": [
+      "k"
+    ],
+    "m": [
+      "m"
+    ],
+    "ᵐb": [
+      "ᵐb"
+    ],
+    "n": [
+      "n"
+    ],
+    "ⁿd": [
+      "ⁿd"
+    ],
+    "ᵑɡ": [
+      "ᵑɡ"
+    ],
+    "ŋ": [
+      "ŋ"
+    ],
+    "ⁿdʒ": [
+      "ⁿdʒ"
+    ],
+    "ɲ": [
+      "ɲ"
+    ],
+    "ɾ": [
+      "ɾ"
+    ],
+    "t": [
+      "t"
+    ],
+    "w": [
+      "w"
+    ]
+  },
+  "notes": "Kikuyu (Gĩkũyũ), Bantu language of central Kenya. Seven vowels written with five letters plus the tilde pair ⟨ĩ ũ⟩ for the close-mid /e o/, while plain ⟨e o⟩ are the open-mid /ɛ ɔ/ and ⟨a⟩ is the low CENTRAL /a/ (Englebretson 2015, Figures 2 and 4). ⟨b d g⟩ are the fricatives /β ð ɣ/, ⟨th⟩ is /ð/, ⟨c⟩ is /ʃ/, ⟨r⟩ is the tap /ɾ/, and the prenasalised stops are written ⟨mb nd ng nj⟩; ⟨ng'⟩ is plain /ŋ/. Orthographic ⟨w⟩ after a consonant is not an approximant but the first vowel of a diphthong, pronounced like ⟨ũ⟩ = /o/ — Gĩkũyũ has no consonant clusters, and ⟨w⟩ and ⟨ũ⟩ are pronounced alike in that slot (Englebretson 2015); word-initial and intervocalic ⟨w⟩ stays the approximant /w/. Englebretson (2015) itself qualifies the post-consonantal reading with one exception, before ⟨o⟩, where ⟨w⟩ instead equates with /u/; that conditioning is not implemented here, and the gold set's single ⟨Cwo⟩ token (remwo → ɾɛmoɔ) is consistent with the unconditioned /o/ reading used by this spec. ⟨c⟩ is transcribed /ʃ/ per Englebretson (2015) Figure 1, but the gold data disagrees: of the ⟨c⟩ rows, 120 use /ɕ/ against 1 use of /ʃ/, so most gold transcriptions follow a different (alveolo-palatal) convention than the source sketch; ⟨nj⟩ is transcribed /ⁿdʒ/ here while gold uses the affricate /ᶮdʑ/, the same alveolo-palatal mismatch. Dahl's law (dissimilatory voicing of a voiceless stop before a following voiceless obstruent, kĩ- → gĩ-) is already spelled out in the standard orthography, so it needs no rule here. VOWEL LENGTH: length is phonemic and, where it is written at all, it is written by doubling the vowel letter -- \"Vowel length is phonemic in Gĩkũyũ. It is often indicated orthographically by means of a sequence of two identical vowels. However, this is not consistent, especially across morpheme boundaries, and so the orthography cannot be taken as a reliable indicator of whether a vowel is long or short\" (Englebretson 2015, Orthography). The doubled spellings are therefore taken at face value here: ⟨aa ee ii oo uu ĩĩ ũũ⟩ map to the long vowels /aː ɛː iː ɔː uː eː oː/. The unreliability runs one way only, exactly as the source says: in the ki/wikipron gold 269 rows carry a length mark and 213 of them are spelled with a single vowel letter, so the orthography under-writes length and this spec cannot recover those; but of the 94 rows that DO double a vowel letter, 56 are transcribed with ː and the other 38 are transcribed as two separate vowel symbols carrying different tones (gĩĩko -> [ɣèèkɔ̀], nguruu -> [ᵑɡùɾúù]), which is the gold's notation for a long vowel whose two moras differ in tone rather than a segmental disagreement. TONE is phonemic and is not written at all (Englebretson 2015; Armstrong 1940; Clements 1984 on the tone system), so it is not modelled. Of the 1025 unique spellings in the ki/wikipron gold, 321 (31.3%) recur with two or more distinct gold transcriptions, and 251 of those 321 differ only in the tone/downstep diacritics the plain orthography never writes (e.g. aka -> [aka]/[àkǎ]); that is evidence that the plain spelling underdetermines tone and that the gold's own transcriptions are internally inconsistent for a tone-blind rule set, not a proof that any particular score is a floor. The harness scores each spelling against the best-matching of its gold transcriptions, so a homograph is scored leniently rather than penalized. The ceiling is measured directly instead: scoring the same hypothesis/gold pairs with every tone mark (acute, grave, caron, downstep) folded out on both sides drops PER from the shipped 0.3914 to 0.0523, so once the unwritten information is discounted this spec is close to segmentally exhausted; the residual gap is the remaining ⟨c⟩/⟨nj⟩ transcription-convention mismatch above plus ordinary rule noise, not a missing rule the orthography could support.",
+  "iso639_3": "kik",
+  "glottolog_code": "kiku1240",
+  "wikidata_qid": "Q33587",
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Kikuyu_language",
+    "https://ki.wikipedia.org/wiki/G%C4%A9g%C4%A9k%C5%A9y%C5%A9"
+  ],
+  "sources": [
+    {
+      "id": "englebretson_2015_gikuyu_sketch",
+      "author": "Englebretson, Robert (ed.)",
+      "year": 2015,
+      "title": "A Basic Sketch Grammar of Gĩkũyũ",
+      "publisher": "Rice University Field Methods Class",
+      "url": "https://www.ruf.rice.edu/~reng/kik/sketch.pdf",
+      "wikipedia_url": null,
+      "pages": null,
+      "notes": "Phoneme inventories and orthography tables (Figures 1-4); the vowel-vowel analysis of orthographic ⟨w⟩; vowel length and the absence of tone marking in the orthography."
+    },
+    {
+      "id": "armstrong1967",
+      "author": "Armstrong, Lilias E.",
+      "year": 1967,
+      "title": "The Phonetic and Tonal Structure of Kikuyu",
+      "publisher": "London: Published for the International African Institute by Dawsons of Pall Mall",
+      "url": null,
+      "wikipedia_url": null,
+      "pages": null,
+      "notes": "The standing phonetic and tonal description of Kikuyu. Not consulted; no copy could be retrieved. Listed so the bibliography names the primary literature rather than leaving the sketch grammar as the only description on record."
+    }
+  ],
+  "parent": "x-clade-atla1278",
+  "ancestors": [
+    {
+      "code": "x-clade-atla1278",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Atlantic-Congo — the classification node this language sits under."
+    }
+  ],
+  "location": {
+    "latitude": -0.29005,
+    "longitude": 36.719,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Kikuyu."
+  },
+  "positional_graphemes": {
+    "w": {
+      "after_consonant": [
+        "o"
+      ],
+      "default": [
+        "w"
+      ]
+    }
+  },
+  "audit": {
+    "wikipron": {
+      "conclusion": "input_limited",
+      "measured": "Gikuyu tone is phonemic and not written at all (Englebretson 2015; Armstrong 1940; Clements 1984). 321 of 1025 unique gold spellings (31.3%) recur with two or more distinct transcriptions, 251 of them differing only in tone/downstep diacritics the plain orthography never writes. Folding every tone mark out of both hypothesis and gold on the same word pairs drops PER from the shipped 0.3914 to 0.0523; folding vowel length as well (also unwritten, per the same source) drops it further to 0.0344.",
+      "reference": "spec notes"
+    }
+  },
+  "valid_ceiling": {
+    "wikipron": {
+      "per": 0.0344,
+      "folded": "tone+length",
+      "citation": "Standard Gikuyu orthography (first published 1947 by the United Kikuyu Language Committee) marks neither of the two contrasts the wikipron gold transcribes on every vowel. On tone and downstep: \"Gikuyu has two tones (high and low, represented here as H and L respectively) and downstep. Although we do not treat tone in depth, we do have evidence that it is contrastive since we have found many minimal pairs of words differing only in tone pattern\" -- e.g. mata (LH) 'saliva' against mata (HH) 'big stomachs' (Englebretson, R. (ed.), 2015, A Basic Sketch Grammar of Gikuyu, Rice University Field Methods Class, p. 9, section 1.4 'Tone'; downstep is attributed there to Clements, G. N. (1984), 'Principles of Tone Assignment in Kikuyu', in Clements & Goldsmith (eds.), Autosegmental Studies in Bantu Tone, Foris, which this spec has not independently obtained). The same source states plainly that the orthography does not write it: \"Tone in Gikuyu is also phonemic. It is lexically contrastive, and plays a crucial role in the verb tense system. However, the orthography does not represent tone at all\" (p. xi). On vowel length: \"Vowel length is phonemic in Gikuyu. It is often indicated orthographically by means of a sequence of two identical vowels. However, this is not consistent, especially across morpheme boundaries, and so the orthography cannot be taken as a reliable indicator of whether a vowel is long or short\" (p. xi). Measured with the harness's own normalize()/levenshtein() over the same 1025 scored words as the shipped board row: as-scored PER is 0.3914; folding tone alone (acute, grave, caron, circumflex and the U+A71C downstep marker) out of both sides gives 0.0523; folding length alone (the vowel-length mark U+02D0) gives 0.3843; folding both together gives 0.0344. See scripts/fold_ki_notation.py."
+    }
+  }
+}

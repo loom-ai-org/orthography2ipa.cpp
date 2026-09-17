@@ -1,0 +1,207 @@
+{
+  "code": "sce",
+  "name": "Dongxiang",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "iao": [
+      "jɑw"
+    ],
+    "uai": [
+      "wɑj"
+    ],
+    "ai": [
+      "ɑj"
+    ],
+    "ao": [
+      "ɑw"
+    ],
+    "ch": [
+      "tʂʰ"
+    ],
+    "ei": [
+      "əj"
+    ],
+    "gh": [
+      "q"
+    ],
+    "gv": [
+      "ʁ"
+    ],
+    "hh": [
+      "h"
+    ],
+    "ia": [
+      "jɑ"
+    ],
+    "ie": [
+      "jə"
+    ],
+    "io": [
+      "jo"
+    ],
+    "iu": [
+      "ju"
+    ],
+    "kh": [
+      "qʰ"
+    ],
+    "ng": [
+      "ŋ"
+    ],
+    "ou": [
+      "əw"
+    ],
+    "sh": [
+      "ʂ"
+    ],
+    "ua": [
+      "wɑ"
+    ],
+    "ui": [
+      "wəj"
+    ],
+    "zh": [
+      "tʂ"
+    ],
+    "a": [
+      "ɑ"
+    ],
+    "b": [
+      "p"
+    ],
+    "c": [
+      "tsʰ"
+    ],
+    "d": [
+      "t"
+    ],
+    "e": [
+      "ə"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "k"
+    ],
+    "h": [
+      "x"
+    ],
+    "i": [
+      "i"
+    ],
+    "j": [
+      "tɕ"
+    ],
+    "k": [
+      "kʰ"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "o": [
+      "o"
+    ],
+    "p": [
+      "pʰ"
+    ],
+    "q": [
+      "tɕʰ"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "tʰ"
+    ],
+    "u": [
+      "u"
+    ],
+    "w": [
+      "w"
+    ],
+    "x": [
+      "ɕ"
+    ],
+    "y": [
+      "j"
+    ],
+    "z": [
+      "ts"
+    ]
+  },
+  "parent": "xgn",
+  "ancestors": [
+    {
+      "code": "xgn",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Descent per Glottolog classification of Dongxiang (dong1285)."
+    }
+  ],
+  "notes": "Research. Dongxiang (autonym Santa) is a Mongolic language of Gansu, written here in the experimental Pinyin-based romanization of A Yibulaheimai and A Shelefu (2001), which is the orthography Kim's description transcribes and the one the shipped gold uses. Santa has twenty-seven consonants in six places: labials p b f m w, dental non-sibilants t d n l, dental sibilants c z s, retroflexes ch zh sh r, palatals q j x y, velars k g h ng, and post-velars kh gh hh (Kim 2003: 349-350). The post-velar series is the part a Pinyin reading gets wrong and is encoded here: ⟨kh⟩ is the aspirated uvular stop, ⟨gh⟩ its unaspirated partner, ⟨hh⟩ the laryngeal that continues Proto-Mongolic *x, and ⟨gv⟩ is the spirant realisation of gh — Kim names the spelling explicitly, 'one of which is a stop, while the other is a spirant (orthographically gv)'. Without those four keys ⟨v⟩ has no reading at all and is deleted in silence; it occurs 21 times in the gold and only ever inside ⟨gv⟩. ⟨ng⟩ is syllable-final only (Kim 2003: 350), so before a vowel the letters are a coda ⟨n⟩ plus the onset of the next syllable, which is what ⟨dangao⟩ tɑnkɑw and ⟨ongie⟩ oŋkjə show; the digraph therefore carries a before-vowel reading rather than a single ŋ everywhere. The vowel and glide combinations are the closed set Kim lists — ai ei ao ou ui ua uai iu ie ia io iao — and are mapped as such. ⟨i⟩ is backed to ɯ after the uvulars, in complementary distribution with i (Kim 2003: 348), which is what ⟨ghimusun⟩ qɯmusuŋ and ⟨chighin⟩ tʂʰiqɯn write. ⟨r⟩ is the retroflex liquid and the gold writes it r in 25 occurrences against ʐ in 3; ⟨a⟩ is ɑ in 113 segments against a in 1. Neither the Pinyin ⟨ê⟩ nor ⟨ü⟩ has a Santa phoneme behind it — the inventory is a e i o u with ɯ as an allophone — so both are dropped. Two things are deliberately left unencoded. ⟨er⟩ is a syllabic r realised ɚ, but only in a syllable with neither onset nor coda (Kim 2003: 348); the gold has two such words against three where the letters straddle a syllable boundary, too thin a base for a rule. And the syllable-final nasal is one phoneme whose place the gold does not transcribe consistently: word-final ⟨n⟩ is written ŋ 36 times and n 28 times, and the same suffix ⟨-sun⟩ splits 9 to 5. The skew is real after ⟨a⟩ (14 ŋ to 4 n) and after ⟨e⟩ (6 n to 1 ŋ) but is a coin flip after ⟨u⟩ (17 to 14), and Kim assigns the palatal quality of a nasalized low vowel to n, not to ng — so writing ⟨an⟩ as ɑŋ would fit the gold against the description. It is left alone, and it is most of the residual error. Santa has no distinctive vowel length and no tone; stress is not lexically contrastive in this romanization and is left unencoded (documented exemption).",
+  "iso639_3": "sce",
+  "glottolog_code": null,
+  "sources": [
+    {
+      "id": "sce_glottolog",
+      "author": "Hammarström, H. et al. (Glottolog 5.0)",
+      "year": 2024,
+      "title": "Glottolog: Dongxiang (dong1285)",
+      "publisher": "Max Planck Institute for Evolutionary Anthropology",
+      "url": "https://glottolog.org/resource/languoid/id/dong1285",
+      "pages": null,
+      "notes": "Classification reference.",
+      "wikipedia_url": null
+    },
+    {
+      "id": "sce_kim2003",
+      "author": "Kim, Stephen S.",
+      "year": 2003,
+      "title": "Santa",
+      "publisher": "in Janhunen, J. (ed.), The Mongolic Languages, Routledge",
+      "url": "https://theswissbay.ch/pdf/Books/Linguistics/Mega%20linguistics%20pack/Mongolic/Santa%20(Kim).pdf",
+      "pages": "346-363",
+      "notes": "The descriptive grammar sketch of Santa. Consulted for the vowel inventory and the [ɯ]/i complementary distribution after the uvulars (p. 348), the consonant chart and the post-velar series kh gh hh with gv as the spirant realisation of gh (pp. 349-350), the syllable-final-only status of ng and the syllable-final nasal (p. 350), and the closed list of vowel-plus-glide combinations (p. 351). Kim transcribes the experimental Pinyin-based orthography of A Yibulaheimai and A Shelefu (2001), which is the orthography of the shipped gold."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Dongxiang_language"
+  ],
+  "positional_graphemes": {
+    "ng": {
+      "default": [
+        "ŋ"
+      ],
+      "before_vowel": [
+        "nk"
+      ]
+    }
+  },
+  "allophone_rules": [
+    {
+      "id": "SCE_UVULAR_BACKING_I",
+      "phonemes": [
+        "i"
+      ],
+      "surface": "ɯ",
+      "preceded_by_phoneme": [
+        "q",
+        "qʰ",
+        "ʁ"
+      ],
+      "notes": "[ɯ] after the uvulars kh gh, in complementary distribution with i (Kim 2003: 348)."
+    }
+  ]
+}

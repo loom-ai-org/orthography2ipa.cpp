@@ -1,0 +1,204 @@
+{
+  "code": "ceb",
+  "name": "Cebuano",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "b": [
+      "b"
+    ],
+    "d": [
+      "d"
+    ],
+    "e": [
+      "ɛ"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "h": [
+      "h"
+    ],
+    "i": [
+      "i"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ng": [
+      "ŋ"
+    ],
+    "o": [
+      "o"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "ɾ"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "u": [
+      "u"
+    ],
+    "w": [
+      "w"
+    ],
+    "y": [
+      "j"
+    ],
+    "j": [
+      "dʒ"
+    ],
+    "'": [
+      "ʔ"
+    ],
+    "-": [
+      "ʔ"
+    ]
+  },
+  "allophones": {
+    "a": [
+      "a"
+    ],
+    "b": [
+      "b"
+    ],
+    "d": [
+      "d"
+    ],
+    "ɛ": [
+      "ɛ",
+      "e"
+    ],
+    "ɡ": [
+      "ɡ"
+    ],
+    "h": [
+      "h"
+    ],
+    "i": [
+      "i",
+      "ɪ",
+      "e"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ŋ": [
+      "ŋ"
+    ],
+    "o": [
+      "o",
+      "ɔ",
+      "u"
+    ],
+    "p": [
+      "p"
+    ],
+    "ɾ": [
+      "ɾ",
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "u": [
+      "u",
+      "ʊ",
+      "o"
+    ],
+    "w": [
+      "w"
+    ],
+    "j": [
+      "j"
+    ],
+    "dʒ": [
+      "dʒ"
+    ],
+    "ʔ": [
+      "ʔ"
+    ]
+  },
+  "iso639_3": "ceb",
+  "glottolog_code": "cebu1242",
+  "notes": "Cebuano (Sinugboanong Binisayâ), Philippine (Austronesian). Modern Cebuano uses 20 letters of the Latin alphabet; c f j q v x z are reserved for loanwords (⟨j⟩ = /dʒ/ is kept here because it is frequent in borrowings). The digraph ⟨ng⟩ is the velar nasal /ŋ/. Five vowels a e i o u; /e/~/i/ and /o/~/u/ overlap heavily and are given as ordered allophones. The glottal stop /ʔ/ is phonemic but inconsistently written — when written it appears as a hyphen or an apostrophe, both mapped here. Stress is phonemic but not written; diphthongs /aj uj aw iw/ fall out of the vowel+glide graphemes.",
+  "sources": [
+    {
+      "id": "wolff1972",
+      "author": "Wolff, John U.",
+      "year": 1972,
+      "title": "A Dictionary of Cebuano Visayan",
+      "publisher": "Cornell University Southeast Asia Program",
+      "url": null,
+      "pages": null,
+      "notes": "Standard lexicographic reference; phonology and orthography.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Cebuano_language"
+    },
+    {
+      "id": "cebuano_language_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Cebuano language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Cebuano_language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Cebuano_language",
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Cebuano_language",
+    "https://ceb.wikipedia.org/wiki/Sinugboanon"
+  ],
+  "timespan": {
+    "start_year": 1600,
+    "end_year": null
+  },
+  "parent": "x-clade-mala1545",
+  "ancestors": [
+    {
+      "code": "x-clade-mala1545",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Malayo-Polynesian, the Austronesian branch containing every Austronesian language outside Formosa."
+    }
+  ],
+  "location": {
+    "latitude": 8.38799,
+    "longitude": 124.367,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Cebuano."
+  }
+}

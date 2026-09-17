@@ -1,0 +1,102 @@
+{
+  "code": "pqm",
+  "name": "Malecite-Passamaquoddy",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "e": [
+      "ɛ"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "o"
+    ],
+    "u": [
+      "u"
+    ],
+    "c": [
+      "tʃ"
+    ],
+    "q": [
+      "kʷ"
+    ],
+    "p": [
+      "p"
+    ],
+    "t": [
+      "t"
+    ],
+    "k": [
+      "k"
+    ],
+    "s": [
+      "s"
+    ],
+    "h": [
+      "h"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "l": [
+      "l"
+    ],
+    "w": [
+      "w"
+    ],
+    "y": [
+      "j"
+    ],
+    "'": [
+      "ʔ"
+    ]
+  },
+  "parent": "x-clade-algi1248",
+  "ancestors": [
+    {
+      "code": "x-clade-algi1248",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Descent per Glottolog classification of Malecite-Passamaquoddy (male1292)."
+    }
+  ],
+  "notes": "Skeleton. Algic (Eastern Algonquian) language of Maine and New Brunswick in the standard Passamaquoddy-Maliseet orthography. The digraph-free letters c=[tʃ] and q=[kʷ] are mapped; stops and s are voiceless underlyingly but voice intervocalically, which is left unencoded. Vowel length and stress are not marked in this practical orthography and are left unencoded, raising the PER floor.",
+  "iso639_3": "pqm",
+  "glottolog_code": null,
+  "sources": [
+    {
+      "id": "pqm_glottolog",
+      "author": "Hammarström, H. et al. (Glottolog 5.0)",
+      "year": 2024,
+      "title": "Glottolog: Malecite-Passamaquoddy (male1292)",
+      "publisher": "Max Planck Institute for Evolutionary Anthropology",
+      "url": "https://glottolog.org/resource/languoid/id/male1292",
+      "pages": null,
+      "notes": "Classification reference for a skeleton-tier entry.",
+      "wikipedia_url": null
+    },
+    {
+      "id": "pqm_orthography",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Malecite-Passamaquoddy language, Wikipedia",
+      "publisher": "Wikimedia Foundation",
+      "url": "https://en.wikipedia.org/wiki/Malecite%E2%80%93Passamaquoddy_language",
+      "pages": null,
+      "notes": "Orthography/phonology reference for a skeleton-tier grapheme map.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Malecite%E2%80%93Passamaquoddy_language"
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Malecite%E2%80%93Passamaquoddy_language"
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "code": "fa-x-hazaragi",
+  "name": "Hazaragi (Afghan Dari, Hazara)",
+  "script": "Arabic",
+  "graphemes_base": "fa-AF",
+  "allophones_base": "fa-AF",
+  "allophones": {
+    "ɣ": [
+      "ɣ",
+      "ɢ"
+    ],
+    "n": [
+      "n",
+      "ŋ"
+    ],
+    "q": [
+      "q",
+      "ɢ"
+    ],
+    "ŋ": [
+      "ŋ"
+    ]
+  },
+  "parent": "fa-AF",
+  "ancestors": [
+    {
+      "code": "fa-AF",
+      "role": "parent",
+      "weight": 0.8,
+      "notes": "Dari base"
+    },
+    {
+      "code": "mn",
+      "role": "substrate",
+      "weight": 0.06,
+      "notes": "Mongolic substrate from the Mongol-Turkic settlement of Hazarajat (~13th c.): residual vocabulary and the prominence of uvular/velar-nasal segments described by Dulling 1973 and Efimov 1965."
+    }
+  ],
+  "notes": "Hazaragi (هزارگی). Dari dialect of Hazara people of central Afghanistan (Hazarajat). Hazara descend from Mongol-Turkic settlers (~13th c. CE) who adopted Dari but retain Mongolian substrate features. /q/ and /ɢ/ prominent; /ŋ/ phonemic in Mongolian loanwords. Some uvular vowel features. Spoken by ~2–3 million people; large diaspora in Iran, Pakistan, and internationally. Already-encoded allophones confirmed against the cited sources: ق prefers the uvular stop [q] with [ɢ] as a prominent variant (Dulling 1973); nasal /n/ carries [ŋ] as a salient variant, consistent with the Mongolic-derived lexical layer (Efimov 1965). ENGINE LIMIT: Efimov's claim of full /ŋ/ phonemicity in Mongolic loans cannot be expressed as a new independent phoneme without a dedicated grapheme in the Perso-Arabic base orthography (which has no letter for ŋ), so it stays a conditioned allophone of /n/, consistent with how fa-AF already encodes it.",
+  "quality": "skeleton",
+  "script_type": "abjad",
+  "sources": [
+    {
+      "id": "mahootian1997",
+      "author": "Mahootian, S.",
+      "year": 1997,
+      "title": "Persian",
+      "publisher": "Routledge",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "windfuhr1979",
+      "author": "Windfuhr, G.",
+      "year": 1979,
+      "title": "Persian Grammar: History and State of Its Study",
+      "publisher": "Mouton",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "bindemann1987",
+      "author": "Bindemann, R.",
+      "year": 1987,
+      "title": "The Hazara of Afghanistan",
+      "publisher": "Oxford University Press",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "dulling1973",
+      "author": "Dulling, G.K.",
+      "year": 1973,
+      "title": "The Hazaragi Dialect of Afghan Persian",
+      "publisher": "Central Asian Monographs / SOAS",
+      "url": null,
+      "pages": null,
+      "notes": "Descriptive grammar of Hazaragi: retroflex realisations in some sub-varieties, retained majhul vowels, Mongolic-derived vocabulary layer."
+    },
+    {
+      "id": "efimov1965",
+      "author": "Efimov, V.A.",
+      "year": 1965,
+      "title": "Hazara i mogol'skie dialekty Afganistana",
+      "publisher": "Nauka",
+      "url": null,
+      "pages": null,
+      "notes": "Soviet Iranianist description of Hazaragi phonology and its Mongolic substrate/adstrate features."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Hazaragi_dialect",
+    "https://fa.wikipedia.org/wiki/%DA%AF%D9%88%DB%8C%D8%B4_%D9%87%D8%B2%D8%A7%D8%B1%DA%AF%DB%8C"
+  ],
+  "timespan": {
+    "start_year": 1200,
+    "end_year": null
+  },
+  "glottolog_code": "haza1239",
+  "iso639_3": "haz",
+  "wikidata_qid": "Q33398",
+  "location": {
+    "latitude": 33.3708,
+    "longitude": 64.5105,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Hazaragi."
+  }
+}

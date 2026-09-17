@@ -1,0 +1,375 @@
+{
+  "code": "pdc",
+  "name": "Pennsylvania German (Pennsylvania Dutch)",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "sch": [
+      "ʃ"
+    ],
+    "chs": [
+      "ks"
+    ],
+    "ch": [
+      "ç",
+      "x"
+    ],
+    "tz": [
+      "ts"
+    ],
+    "ng": [
+      "ŋ"
+    ],
+    "nk": [
+      "ŋk"
+    ],
+    "aa": [
+      "ɔː"
+    ],
+    "ae": [
+      "eː"
+    ],
+    "ai": [
+      "aɪ"
+    ],
+    "au": [
+      "aʊ"
+    ],
+    "ee": [
+      "eː"
+    ],
+    "ei": [
+      "aɪ"
+    ],
+    "ie": [
+      "iː"
+    ],
+    "oi": [
+      "ɔɪ"
+    ],
+    "a": [
+      "a",
+      "aː"
+    ],
+    "e": [
+      "ɛ",
+      "eː",
+      "ə"
+    ],
+    "i": [
+      "ɪ",
+      "iː"
+    ],
+    "o": [
+      "ɔ",
+      "oː"
+    ],
+    "u": [
+      "ʊ",
+      "uː"
+    ],
+    "b": [
+      "b"
+    ],
+    "d": [
+      "d"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɡ",
+      "j",
+      "k"
+    ],
+    "h": [
+      "h",
+      ""
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "r",
+      "ɐ"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "v": [
+      "f"
+    ],
+    "w": [
+      "ʋ"
+    ],
+    "x": [
+      "ks"
+    ],
+    "y": [
+      "j",
+      "ɪ"
+    ],
+    "z": [
+      "ts"
+    ]
+  },
+  "allophones": {
+    "p": [
+      "p"
+    ],
+    "b": [
+      "b"
+    ],
+    "t": [
+      "t"
+    ],
+    "d": [
+      "d"
+    ],
+    "k": [
+      "k"
+    ],
+    "ɡ": [
+      "ɡ"
+    ],
+    "ts": [
+      "ts"
+    ],
+    "f": [
+      "f"
+    ],
+    "v": [
+      "v"
+    ],
+    "s": [
+      "s"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "ç": [
+      "ç"
+    ],
+    "x": [
+      "x"
+    ],
+    "h": [
+      "h"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ŋ": [
+      "ŋ"
+    ],
+    "l": [
+      "l"
+    ],
+    "r": [
+      "r"
+    ],
+    "ɐ": [
+      "ɐ"
+    ],
+    "j": [
+      "j"
+    ],
+    "ʋ": [
+      "ʋ"
+    ],
+    "iː": [
+      "iː"
+    ],
+    "ɪ": [
+      "ɪ"
+    ],
+    "eː": [
+      "eː"
+    ],
+    "ɛ": [
+      "ɛ"
+    ],
+    "æː": [
+      "æː"
+    ],
+    "a": [
+      "a"
+    ],
+    "aː": [
+      "aː"
+    ],
+    "ɔ": [
+      "ɔ"
+    ],
+    "ɔː": [
+      "ɔː"
+    ],
+    "oː": [
+      "oː"
+    ],
+    "ʊ": [
+      "ʊ"
+    ],
+    "uː": [
+      "uː"
+    ],
+    "ə": [
+      "ə"
+    ],
+    "aɪ": [
+      "aɪ"
+    ],
+    "aʊ": [
+      "aʊ"
+    ],
+    "ɔɪ": [
+      "ɔɪ"
+    ]
+  },
+  "notes": "Pennsylvania German / Pennsylvania Dutch (Pennsilfaanisch Deitsch), a Palatine (Rhine Franconian) West Germanic variety of North America. COMMITMENT: this map implements ONE of the two rival writing systems — the BUFFINGTON-BARBA (later Buffington-Barba-Beam, 'BBB') orthography, which spells by Standard German conventions. The competing English-based spelling (which writes the same words by American English conventions, with no difference in pronunciation) is OUT OF SCOPE and will mis-transcribe here. INPUT CONTRACT: lowercase BBB-spelled Pennsylvania German. BBB letter values that differ from Standard German: <v> = /f/, <w> = the unrounded labial approximant /ʋ/, <y> = /j/ initially but /ɪ/ medially, <o> short = /ɔ/, <aa> = /ɔː/, <ei> = /aɪ/ while <ai> is also /aɪ/, <g> = /ɡ/ initially, /k/ finally and a palatal glide [j] medially, <r> is vocalised to [ɐ] word-finally, unconditionally of the preceding vowel. The IPA values here render the BBB pronunciation key (which is stated in English/German keywords, not IPA) against the IPA vowel inventory documented for the variety. <tz> = /ts/ follows from BBB's Standard-German spelling conventions (as does <z>). Unstressed <e> may also be the reduced /ə/ documented for the variety. Graphemes for which no BBB row exists (e.g. <ä>, <oo>, <eu>, <tsch>) are deliberately OMITTED rather than guessed. Phonologically the variety continues Palatine German: SG /œ øː yː/ -> /ɛ eː iː/, intervocalic /b/ -> /v/, post-vocalic /ɡ/ -> /j/, and final /n/ deletion. FINAL DEVOICING (Auslautverhaertung): word-final /d/ devoices to [t] and /g/ to [k], the categorical West Germanic coda-obstruent process (cf. Standard German); /d/-devoicing is directly attested in the pdc/wikipron gold (4/4 word-final <d> tokens realise [t]: Freed, Kind, Kinnskind, mied), and /g/-finally-[k] mirrors what the BBB letter-value note above already claims for <g> but which the flat grapheme table left unencoded. Louden (2016) Pennsylvania Dutch: The Story of an American Language (Johns Hopkins) documents the general PG coda-devoicing pattern surfacing even in PG-substrate English (e.g. bed -> [bɛt]); claim is standard for the areal Germanic phenomenon, edition not consulted for a page locator. Final devoicing of <b> is NOT implemented: the current gold contains zero word-final <b> tokens to measure against, so extending the rule there would be an unmeasured analogical guess rather than a sourced or attested claim. UNSTRESSED FINAL <e> AND <-er> VOCALISATION: the flat grapheme table already listed /ə/ as a candidate for <e> and /ɐ/ as a candidate for <r>, but nothing selected them, so the engine always emitted the stressed values [ɛ] and [r] even in unstressed final position. Word-final positional overrides now pick the reduced values: <e> word-finally is /ə/ and <r> word-finally is /ɐ/. This is the ordinary Germanic reduction of unstressed final syllables (schwa) and coda-/r/ vocalisation (cf. Standard German unstressed final <e> = [ə] and final <-er> = [ɐ], Wiese (1996) The Phonology of German, OUP; claim is standard, edition not consulted for a page locator) and matches PG specifically: Louden (2016) Pennsylvania Dutch: The Story of an American Language documents PG's general unstressed-vowel reduction to schwa (claim is standard, edition not consulted for a page locator). Checked against the pdc/wikipron gold: 121/121 words whose only final <e> is the plain grapheme (not part of <ie>/<ee>) realise final [ə] there (one apocopated exception, 'neinzehte' -> [naɪntseːt], is a single-token stressed-ordinal apocope left unmodelled — not enough evidence for a rule); every word-final <r> in the gold (>90 tokens, e.g. Bruder, Vadder, Kinner, der, mir, wer) realises [ɐ], none stay [r]. NOTATION, NOT A DEFECT: the residual <w> = /ʋ/ vs the gold's /w/ (24 tokens, e.g. werdich, Schwaeger) is the same unrounded/weakly-rounded labial(-velar) approximant written with two different IPA symbols by different transcribers, not a PG sound the spec gets wrong (the spec's own notes already call <w> 'the unrounded labial approximant /ʋ/'); it is left as a documented gold convention (see 'audit') rather than folded, since a global /ʋ/=/w/ fold would need to be proven not to contrast with any other spec's registered /ʋ/ or /w/, which was not checked here.",
+  "iso639_3": "pdc",
+  "glottolog_code": "penn1240",
+  "wikidata_qid": "Q22711",
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Pennsylvania_Dutch_language",
+    "https://pdc.wikipedia.org/wiki/Pennsilfaanisch_Deitsch"
+  ],
+  "sources": [
+    {
+      "id": "pdc_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Pennsylvania Dutch language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Pennsylvania_Dutch_language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Pennsylvania_Dutch_language",
+      "pages": null,
+      "notes": "The two competing orthographies (Buffington-Barba vs English-based) and the phonological differences from Standard German."
+    },
+    {
+      "id": "buffington_barba1954",
+      "author": "Buffington, Albert F. & Barba, Preston A.",
+      "year": 1954,
+      "title": "A Pennsylvania German Grammar",
+      "publisher": "Schlechter's",
+      "url": null,
+      "wikipedia_url": null,
+      "pages": null,
+      "notes": "The German-conventional orthography and the grammar/phonology of Pennsylvania German."
+    },
+    {
+      "id": "padutchdictionary_bbb",
+      "author": "Pennsylvania Dutch Dictionary (padutchdictionary.com)",
+      "year": 2024,
+      "title": "About: the Buffington-Barba-Beam orthography and pronunciation key",
+      "publisher": "padutchdictionary.com",
+      "url": "https://www.padutchdictionary.com/about.html",
+      "pages": null,
+      "notes": "Letter-by-letter BBB pronunciation key (vowels and consonants), given in English/German keywords."
+    },
+    {
+      "id": "padutch_net_pronunciation",
+      "author": "padutch.net",
+      "year": 2024,
+      "title": "Pennsylvania Dutch pronunciation",
+      "publisher": "padutch.net",
+      "url": "https://padutch.net/pronunciation/",
+      "pages": null,
+      "notes": "IPA vowel inventory of Pennsylvania German (long i e æ a ɔ o u; short ɪ ɛ a ɔ ʊ; diphthongs aɪ ɔɪ; reduced ə ɐ)."
+    },
+    {
+      "id": "wiese1996",
+      "author": "Wiese, Richard",
+      "year": 1996,
+      "title": "The Phonology of German",
+      "publisher": "Oxford University Press",
+      "url": null,
+      "wikipedia_url": null,
+      "pages": null,
+      "notes": "Standard reference for German unstressed final <e> reducing to schwa and coda /r/ vocalising to [ɐ]; claim is standard for the areal West Germanic process, edition not consulted for a page locator."
+    }
+  ],
+  "timespan": {
+    "start_year": 1700,
+    "end_year": null
+  },
+  "parent": "x-clade-germ1287",
+  "ancestors": [
+    {
+      "code": "x-clade-germ1287",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Germanic — the classification node this language sits under."
+    }
+  ],
+  "location": {
+    "latitude": 40.030507,
+    "longitude": -76.3211,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Pennsylvania German."
+  },
+  "positional_graphemes": {
+    "d": {
+      "word_final": [
+        "t"
+      ],
+      "default": [
+        "d"
+      ]
+    },
+    "g": {
+      "word_final": [
+        "k"
+      ],
+      "default": [
+        "ɡ",
+        "j"
+      ]
+    },
+    "e": {
+      "word_final": [
+        "ə"
+      ],
+      "default": [
+        "ɛ",
+        "eː",
+        "ə"
+      ]
+    },
+    "r": {
+      "word_final": [
+        "ɐ"
+      ],
+      "default": [
+        "r",
+        "ɐ"
+      ]
+    }
+  },
+  "audit": {
+    "wikipron": {
+      "conclusion": "at_ceiling_documented",
+      "measured": "profiled 510 wikipron pdc pairs with benchmark.normalize + difflib opcodes; the ʋ/w substitution (24 tokens, e.g. werdich, Schwaeger) is the spec's own <w>=/ʋ/ analysis (an unrounded labial approximant) rendered against a gold that instead writes the same phoneme with the IPA symbol /w/. No other analysis is at stake, only the IPA letter choice for one approximant.",
+      "reference": "orthography2ipa/data/pdc.json notes; PR adding the word-final <e>->[ə] and <r>->[ɐ] positional rules"
+    }
+  }
+}

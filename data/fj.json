@@ -1,0 +1,188 @@
+{
+  "code": "fj",
+  "name": "Fijian",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "e": [
+      "e"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "o"
+    ],
+    "u": [
+      "u"
+    ],
+    "b": [
+      "ᵐb"
+    ],
+    "c": [
+      "ð"
+    ],
+    "d": [
+      "ⁿd"
+    ],
+    "g": [
+      "ŋ"
+    ],
+    "q": [
+      "ᵑɡ"
+    ],
+    "v": [
+      "β"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "w": [
+      "w"
+    ],
+    "y": [
+      "j"
+    ],
+    "f": [
+      "f"
+    ]
+  },
+  "allophones": {
+    "a": [
+      "a"
+    ],
+    "e": [
+      "e"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "o"
+    ],
+    "u": [
+      "u"
+    ],
+    "ᵐb": [
+      "ᵐb"
+    ],
+    "ð": [
+      "ð"
+    ],
+    "ⁿd": [
+      "ⁿd"
+    ],
+    "ŋ": [
+      "ŋ"
+    ],
+    "ᵑɡ": [
+      "ᵑɡ"
+    ],
+    "β": [
+      "β"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "w": [
+      "w"
+    ],
+    "j": [
+      "j"
+    ],
+    "f": [
+      "f"
+    ]
+  },
+  "notes": "Fijian (Na Vosa Vakaviti), Oceanic (Central Pacific) language of Fiji. The Latin orthography devised by David Cargill (1830s) is phonemic but assigns unusual values to several letters: ⟨b d q⟩ are the prenasalised stops /ᵐb ⁿd ᵑɡ/, ⟨g⟩ is /ŋ/, ⟨c⟩ is /ð/ and ⟨v⟩ is /β/. /p/ and /f/ occur only in loanwords. Vowel length is phonemic and written with a macron; the macronned vowels are not enumerated separately here. Fiji Hindi is written in Devanagari and is a different language.",
+  "iso639_3": "fij",
+  "glottolog_code": "fiji1243",
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Fijian_language",
+    "https://fj.wikipedia.org/wiki/Na_vosa_vaka-Viti"
+  ],
+  "sources": [
+    {
+      "id": "fijian_language_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Fijian language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Fijian_language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Fijian_language",
+      "pages": null,
+      "notes": "Orthography / phonology reference."
+    },
+    {
+      "id": "schutz1985",
+      "author": "Schütz, Albert J.",
+      "year": 1985,
+      "title": "The Fijian Language",
+      "publisher": "University of Hawai'i Press (open access edition)",
+      "url": "http://hdl.handle.net/10125/62912",
+      "pages": "31-32, 647",
+      "notes": "The account of the orthography (pp. 31-32) gives b = [mb], d = [nd], q = [ŋɡ], g = [ŋ] and c = [ð]; section 44.9 (p. 647) gives /v/ = [β]."
+    }
+  ],
+  "parent": "x-clade-mala1545",
+  "ancestors": [
+    {
+      "code": "x-clade-mala1545",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Malayo-Polynesian, the Austronesian branch containing every Austronesian language outside Formosa."
+    }
+  ],
+  "location": {
+    "latitude": -18.0,
+    "longitude": 178.33,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Fijian."
+  }
+}

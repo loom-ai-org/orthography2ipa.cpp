@@ -1,0 +1,118 @@
+{
+  "code": "ru-x-kursk-orel",
+  "name": "Kursk-Orel Russian",
+  "script": "Cyrillic",
+  "graphemes_base": "ru-x-southern",
+  "allophones_base": "ru-x-southern",
+  "positional_graphemes_base": "ru-x-southern",
+  "positional_graphemes": {
+    "о": {
+      "first_pretonic": [
+        "a",
+        "ə"
+      ],
+      "pretonic": [
+        "ə"
+      ],
+      "posttonic": [
+        "ə"
+      ]
+    },
+    "а": {
+      "first_pretonic": [
+        "a",
+        "ə"
+      ],
+      "pretonic": [
+        "ə"
+      ],
+      "posttonic": [
+        "ə"
+      ]
+    },
+    "я": {
+      "first_pretonic": [
+        "ja",
+        "jɪ"
+      ],
+      "pretonic": [
+        "jɪ"
+      ],
+      "posttonic": [
+        "jə"
+      ]
+    },
+    "е": {
+      "first_pretonic": [
+        "ja",
+        "a",
+        "jɪ",
+        "ɪ"
+      ],
+      "pretonic": [
+        "jɪ",
+        "ɪ"
+      ],
+      "posttonic": [
+        "jɪ",
+        "ɪ"
+      ]
+    }
+  },
+  "word_exceptions_base": "ru-x-southern",
+  "grammatical_endings_base": "ru-x-southern",
+  "parent": "ru-x-southern",
+  "notes": "Southern Russian, Kursk–Orel group. The group's diagnostic is DISSIMILATIVE аканье and яканье — the Zhizdra/Sudzha type — not the 'strong яканье' this spec previously claimed; strong jakanje is the Pskov–Tver system, and claiming it here put the file in the wrong half of the Southern zone. Dissimilative means the first pretonic vowel is RECIPROCALLY conditioned by the stressed one: 'аканье диссимилятивное (расподобление ударного и предударного гласных): травинкой — травой — тръва; вадичка — вадой — въда' and 'яканье диссимилятивное: пятóк — питáк, сяло́ — сила́, стя́ной — стина́'. The pretonic vowel is low [a] before a NON-low stressed vowel and reduced [ə] (or [i] after soft consonants) before stressed [a]. That conditioning looks RIGHTWARD at the stressed vowel's height, which a positional grapheme table cannot express, so the alternation is declared as ranked alternatives — [a] first, the dissimilated [ə]/[i] second — rather than collapsed to one value or silently inherited as the eastern non-dissimilative system from `ru-x-southern`. Ranking is a modelling ceiling, not a claim about frequency, and this is the honest shape for it. Г = [ɣ] with a live /ɣ/~/x/ voicing opposition ('наличие фрикативного /ɣ/ на месте севернорусского и литературного смычного /г/. Оппозиция по звонкости/глухости /ɣ/ — /х/'), and the [ɣ] genitive, both inherited from `ru-x-southern`.",
+  "quality": "stub",
+  "script_type": "alphabet",
+  "sources": [
+    {
+      "id": "comrie_corbett1993",
+      "author": "Comrie, B. & Corbett, G. (eds.)",
+      "year": 1993,
+      "title": "The Slavonic Languages",
+      "publisher": "Routledge",
+      "url": null,
+      "pages": null,
+      "notes": null,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Slavic_languages"
+    },
+    {
+      "id": "timberlake2004",
+      "author": "Timberlake, A.",
+      "year": 2004,
+      "title": "A Reference Grammar of Russian",
+      "publisher": "Cambridge University Press",
+      "url": null,
+      "pages": null,
+      "notes": null,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Russian_phonology"
+    },
+    {
+      "id": "zalizniak1985",
+      "author": "Zalizniak, A.A.",
+      "year": 1985,
+      "title": "Ot praslavyanskoy aktsentovki k russkoy",
+      "publisher": "Nauka",
+      "url": null,
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Kursk",
+    "https://ru.wikipedia.org/wiki/%D0%9A%D1%83%D1%80%D1%81%D0%BA%D0%BE-%D0%9E%D1%80%D0%BB%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%B3%D1%80%D1%83%D0%BF%D0%BF%D0%B0_%D0%B3%D0%BE%D0%B2%D0%BE%D1%80%D0%BE%D0%B2"
+  ],
+  "timespan": {
+    "start_year": 1600,
+    "end_year": null
+  },
+  "glottolog_code": null,
+  "iso639_3": "rus",
+  "location": {
+    "latitude": 51.737222,
+    "longitude": 36.187222,
+    "source": "wikidata",
+    "notes": "Kursk — the western half of the Kursk–Orel Southern zone. [Wikidata Q3159 P625]"
+  }
+}

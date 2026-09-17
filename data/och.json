@@ -1,0 +1,105 @@
+{
+  "code": "och",
+  "name": "Old Chinese",
+  "script": "Latin",
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "i": [
+      "i"
+    ],
+    "u": [
+      "u"
+    ],
+    "e": [
+      "e"
+    ],
+    "o": [
+      "o"
+    ],
+    "p": [
+      "p"
+    ],
+    "t": [
+      "t"
+    ],
+    "k": [
+      "k"
+    ],
+    "b": [
+      "b"
+    ],
+    "d": [
+      "d"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "s": [
+      "s"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "l": [
+      "l"
+    ],
+    "r": [
+      "r"
+    ],
+    "w": [
+      "w"
+    ],
+    "j": [
+      "j"
+    ],
+    "h": [
+      "h"
+    ]
+  },
+  "allophones": {},
+  "notes": "STRUCTURAL ANCESTRY NODE (not a modelled G2P target). Old Chinese (c. 1250 BCE-220 CE) is the oldest attested stage of Sinitic and the ancestor of Middle Chinese. It exists here only so the ancestry / phylogenetic-distance metrics of the modern varieties that reference it have a node to resolve to; NO phonology is claimed or reconstructed and the minimal grapheme set is a placeholder (afa.json / trk.json stub pattern).",
+  "quality": "stub",
+  "script_type": "alphabet",
+  "iso639_3": "och",
+  "glottolog_code": "oldc1244",
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Old_Chinese"
+  ],
+  "urls": [
+    "https://glottolog.org/resource/languoid/id/oldc1244"
+  ],
+  "sources": [
+    {
+      "id": "baxter_sagart2014",
+      "author": "Baxter, W. H. & Sagart, L.",
+      "year": 2014,
+      "title": "Old Chinese: A New Reconstruction",
+      "publisher": "Oxford University Press",
+      "url": null,
+      "pages": null,
+      "notes": "Reference for Old Chinese reconstruction (ancestry node only).",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Old_Chinese"
+    }
+  ],
+  "parent": "x-clade-sini1245",
+  "ancestors": [
+    {
+      "code": "sit",
+      "role": "parent",
+      "weight": 0.9,
+      "notes": "Sinitic branch of Sino-Tibetan."
+    }
+  ],
+  "wikidata_qid": "Q35137",
+  "location": {
+    "latitude": 36.12,
+    "longitude": 114.32,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Old Chinese."
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "code": "trk",
+  "name": "Proto-Turkic (family node)",
+  "parent": "x-clade-turk1311",
+  "script": "IPA-reconstruction",
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "e": [
+      "e"
+    ],
+    "ɯ": [
+      "ɯ"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "o"
+    ],
+    "ø": [
+      "ø"
+    ],
+    "u": [
+      "u"
+    ],
+    "y": [
+      "y"
+    ],
+    "p": [
+      "p"
+    ],
+    "b": [
+      "b"
+    ],
+    "t": [
+      "t"
+    ],
+    "d": [
+      "d"
+    ],
+    "k": [
+      "k"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "q": [
+      "q"
+    ],
+    "s": [
+      "s"
+    ],
+    "z": [
+      "z"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "l": [
+      "l"
+    ],
+    "r": [
+      "r"
+    ],
+    "j": [
+      "j"
+    ]
+  },
+  "allophones": {},
+  "notes": "STRUCTURAL ANCESTRY NODE (not a modelled G2P target). Proto-Turkic is the reconstructed common ancestor of the Turkic family (Oghuz, Kipchak, Karluk, Siberian and the divergent Oghur branch, e.g. Chuvash). It exists here only so that the ancestry / phylogenetic-distance metrics of the modern Turkic varieties have a top-level node to resolve their PARENT chain to; NO phonology is claimed or reconstructed and the minimal grapheme set is a placeholder (afa.json / gn.json stub pattern). Glottolog top node turk1311.",
+  "quality": "stub",
+  "script_type": "reconstruction",
+  "iso639_3": null,
+  "glottolog_code": "turk1311",
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Proto-Turkic_language"
+  ],
+  "urls": [
+    "https://glottolog.org/resource/languoid/id/turk1311"
+  ],
+  "sources": [
+    {
+      "id": "johanson_csato1998",
+      "author": "Johanson, L. & Csató, É. Á. (eds.)",
+      "year": 1998,
+      "title": "The Turkic Languages",
+      "publisher": "Routledge",
+      "url": null,
+      "pages": null,
+      "notes": "Reference for the Turkic family and its internal branching (structural ancestry node only).",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Proto-Turkic_language"
+    }
+  ],
+  "location": {
+    "latitude": 49.344956,
+    "longitude": 64.800728,
+    "source": "glottolog",
+    "notes": "Glottolog's computed centroid for the Turkic family — a summary of a whole clade's range, not a place anyone speaks."
+  }
+}

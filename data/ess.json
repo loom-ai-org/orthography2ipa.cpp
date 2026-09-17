@@ -1,0 +1,170 @@
+{
+ "code": "ess",
+ "name": "Central Siberian Yupik",
+ "script": "Cyrl",
+ "quality": "research",
+ "graphemes": {
+  "а": [
+   "a"
+  ],
+  "и": [
+   "i"
+  ],
+  "у": [
+   "u"
+  ],
+  "ы": [
+   "ɨ"
+  ],
+  "в": [
+   "v"
+  ],
+  "г": [
+   "ɣ"
+  ],
+  "гу": [
+   "ɣʷ"
+  ],
+  "ӷ": [
+   "ɣ"
+  ],
+  "й": [
+   "j"
+  ],
+  "к": [
+   "k"
+  ],
+  "ку": [
+   "kʷ"
+  ],
+  "ӄ": [
+   "q"
+  ],
+  "л": [
+   "l"
+  ],
+  "лъ": [
+   "tɬ"
+  ],
+  "я": [
+   "ja"
+  ],
+  "ю": [
+   "ju"
+  ],
+  "м": [
+   "m"
+  ],
+  "н": [
+   "n"
+  ],
+  "ӈ": [
+   "ŋ"
+  ],
+  "ӈу": [
+   "ŋʷ"
+  ],
+  "п": [
+   "p"
+  ],
+  "р": [
+   "ɹ"
+  ],
+  "с": [
+   "s"
+  ],
+  "т": [
+   "t"
+  ],
+  "ф": [
+   "f"
+  ],
+  "х": [
+   "x"
+  ],
+  "ху": [
+   "xʷ"
+  ],
+  "з": [
+   "z"
+  ],
+  "ъ": [
+   "ʔ"
+  ]
+ },
+ "allophones": {},
+ "notes": "Cyrillic literary orthography for Central Siberian (Chaplino/Naukan-area) Yupik, following de Reuse (1994), Siberian Yupik Eskimo: The Language and Its Contacts with Chukchi, and the Soviet-era practical alphabet used in Chaplino/Sireniki-area primers (extends Russian with eng /ŋ/ and gamma /ɣ/). Labialised dorsal consonants (k-w, g-w, ng-w) are written with a following у, each earning its key by test 2: the digraph spells one labialised segment (a single Yupik consonant with a co-articulated lip rounding), not a consonant-plus-vowel sequence -- the same logic the Kildin/Skolt Sami specs already apply to their own labialised series. The uvular fricative series (χ, and its labialised counterpart) is attested in the cited phoneme inventory but this spec's orthographic source does not give a confident single-letter/digraph citation for it here, so it is left as a documented, unencoded gap rather than guessed at. Voicing is not contrastive in native vocabulary for the dental/alveolar series (t/d, s/z, l/r pattern together, as in the other Eskimo-Aleut/Tungusic Siberian specs already registered here); ф is reserved for Russian loans. Stress in Yupik is weight-sensitive and rule-governed (de Reuse 1994) but not encoded here pending a verified syllable-weight model; documented exemption, not an oversight.",
+ "iso639_3": "ess",
+ "glottolog_code": "cent2128",
+ "sources": [
+  {
+   "id": "glottolog2024",
+   "author": "Hammarström, Harald; Forkel, Robert; Haspelmath, Martin; Bank, Sebastian",
+   "year": 2024,
+   "title": "Glottolog 5.0",
+   "publisher": "Max Planck Institute for Evolutionary Anthropology",
+   "url": "https://glottolog.org/"
+  },
+  {
+   "id": "phoible2019",
+   "author": "Moran, Steven; McCloy, Daniel (eds.)",
+   "year": 2019,
+   "title": "PHOIBLE 2.0 (doi:10.5281/zenodo.2562766)",
+   "publisher": "Max Planck Institute for the Science of Human History",
+   "url": "https://phoible.org/inventories/view/319",
+   "notes": "Inventory 319 (upsid), 29 non-marginal segments, 7 marginal excluded."
+  },
+  {
+   "id": "dereuse1994",
+   "author": "de Reuse, Willem J.",
+   "year": 1994,
+   "title": "Siberian Yupik Eskimo: The Language and Its Contacts with Chukchi",
+   "publisher": "University of Utah Press"
+  }
+ ],
+ "urls": [
+  "https://glottolog.org/resource/languoid/id/cent2128"
+ ],
+ "location": {
+  "latitude": 63.4308,
+  "longitude": -170.272,
+  "source": "glottolog",
+  "notes": "Glottolog's representative point."
+ },
+ "parent": "x-clade-eski1264",
+ "phonemes": [
+  "f",
+  "j",
+  "k",
+  "kʷ",
+  "l̪|l",
+  "m",
+  "n̪|n",
+  "p",
+  "q",
+  "qʷ",
+  "s̪|s",
+  "t̪|t",
+  "v",
+  "x",
+  "xʷ",
+  "z̪|z",
+  "ŋ",
+  "ŋʷ",
+  "ɣ",
+  "ɣʷ",
+  "ɹ̪|ɹ",
+  "ʁ",
+  "ʁʷ",
+  "χ",
+  "χʷ",
+  "a",
+  "i",
+  "u",
+  "ə"
+ ],
+ "phoible_id": "319",
+ "wikipedia": [
+  "https://en.wikipedia.org/wiki/Central_Siberian_Yupik_language"
+ ]
+}

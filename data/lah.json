@@ -1,0 +1,37 @@
+{
+  "code": "lah",
+  "name": "Lahnda (Western Punjabi macrolanguage)",
+  "script": "Arabic",
+  "script_type": "abjad",
+  "quality": "stub",
+  "graphemes": {},
+  "allophones": {},
+  "iso639_3": "lah",
+  "glottolog_code": null,
+  "wikidata_qid": "Q112670533",
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Lahnda"
+  ],
+  "sources": [
+    {
+      "id": "lahnda_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Lahnda",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Lahnda",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Lahnda",
+      "notes": "Macrolanguage article; no phonology is claimed here."
+    }
+  ],
+  "notes": "MACROLANGUAGE ENTRY POINT, not a modelled G2P target. `lah` is the ISO 639-3 macrolanguage that BCP-47 macro-normalisation folds `pnb` (Western Punjabi) into, so without this file `pnb` resolves to nothing. The grapheme inventory is deliberately NOT specified here: the modelled variety is `pa-PK` (Western Punjabi in the Shahmukhi Perso-Arabic script), which carries the real inventory — use that code. No Glottolog code is recorded because ISO `lah` has no Glottolog languoid (it is a non-inclusive macrolanguage grouping, not a genealogical node); recording a family node instead would be wrong. Input contract, when a variety is modelled: Shahmukhi text (an Arabic-derived abjad; short vowels are usually unwritten), as documented on `pa-PK`.",
+  "parent": "x-clade-indo1321",
+  "ancestors": [
+    {
+      "code": "x-clade-indo1321",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Indo-Aryan — the classification node this language sits under."
+    }
+  ]
+}

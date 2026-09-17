@@ -1,0 +1,57 @@
+{
+  "code": "sem-x-west",
+  "name": "Proto-West-Semitic",
+  "script": "IPA-reconstruction",
+  "script_type": "reconstruction",
+  "graphemes_base": "sem",
+  "allophones_base": "sem",
+  "parent": "sem",
+  "ancestors": [
+    {
+      "code": "sem",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Direct descent from Proto-Semitic"
+    }
+  ],
+  "notes": "Proto-West-Semitic (~3500–3000 BCE). Excludes Akkadian and Eblaite (East Semitic). Ancestor of all surviving Semitic languages. Consonant inventory nearly identical to Proto-Semitic; differences are primarily morphological and accentual. *ś /ɬ/ lateral fricative still distinct. Spirantisation of stops (bgdkpt pattern) is a LATER innovation (Canaanite/Hebrew) and NOT a Proto-West-Semitic feature.",
+  "sources": [
+    {
+      "id": "lipiński1997",
+      "author": "Lipiński, E.",
+      "year": 1997,
+      "title": "Semitic Languages: Outline of a Comparative Grammar",
+      "publisher": "Peeters",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "hetzron1997",
+      "author": "Hetzron, R. (ed.)",
+      "year": 1997,
+      "title": "The Semitic Languages",
+      "publisher": "Routledge",
+      "url": null,
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/West_Semitic_languages"
+  ],
+  "timespan": {
+    "start_year": -2500,
+    "end_year": -1500
+  },
+  "glottolog_code": "west2786",
+  "iso639_3": null,
+  "quality": "research",
+  "wikidata_qid": "Q124901",
+  "location": {
+    "latitude": 18.349486,
+    "longitude": 44.091774,
+    "source": "glottolog",
+    "notes": "Glottolog's computed centroid for the West Semitic family — a summary of a whole clade's range, not a place anyone speaks."
+  }
+}

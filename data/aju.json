@@ -1,0 +1,59 @@
+{
+  "code": "aju",
+  "name": "Judeo-Moroccan Arabic",
+  "script": "Hebrew",
+  "script_type": "abjad",
+  "quality": "stub",
+  "graphemes": {},
+  "allophones": {},
+  "parent": "ar-MA",
+  "ancestors": [
+    {
+      "code": "jrb",
+      "role": "related",
+      "weight": 0.3,
+      "notes": "Judeo-Arabic macrolanguage node (ISO 639 jrb): a sociolinguistic/orthographic collective, not genetic descent (see jrb.json notes) -- aju's single genetic PARENT is ar-MA, matching the engine constraint that every language has at most one PARENT ancestor."
+    },
+    {
+      "code": "ar-MA",
+      "role": "parent",
+      "weight": 0.8,
+      "notes": "Regional descent: Judeo-Moroccan Arabic is fundamentally a variety of Moroccan Darija, historically written in Hebrew script."
+    },
+    {
+      "code": "he",
+      "role": "adstrate",
+      "weight": 0.15,
+      "notes": "Hebrew liturgical/lexical adstrate, shared with the rest of the Judeo-Arabic continuum (jrb.json)."
+    }
+  ],
+  "notes": "STUB. Judeo-Moroccan Arabic (ISO 639-3 aju), the variety or varieties of Moroccan Darija spoken by Moroccan Jews, historically written in Hebrew script (also called Judeo-Darija / El Haketía in some regions, though Haketía proper is the more Spanish-influenced Judeo-Arabic of northern Morocco). Wikipedia (Judeo-Moroccan Arabic) notes distinctive features such as س /s/ pronounced as /ʃ/ and ز /z/ as /ʒ/, a layer of Hebrew lexical borrowings, and in some regions Hispanic features from Sephardi migration after 1492. These are real, citable phonological tendencies, but a complete letter-to-IPA grapheme table requires deciding the specific Hebrew-script orthographic conventions used for Judeo-Moroccan texts, which was not sourced with confidence this session (no JIPA illustration or dedicated phonology paper was fetched). graphemes intentionally empty pending that sourcing pass, per the 'never fabricate' rule.",
+  "iso639_3": "aju",
+  "glottolog_code": "jude1265",
+  "wikidata_qid": "Q56595",
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Judeo-Moroccan_Arabic"
+  ],
+  "urls": [
+    "https://glottolog.org/resource/languoid/id/jude1265"
+  ],
+  "sources": [
+    {
+      "id": "judeo_moroccan_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Judeo-Moroccan Arabic",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Judeo-Moroccan_Arabic",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Judeo-Moroccan_Arabic",
+      "pages": null,
+      "notes": "Consulted this session: source of the s>ʃ and z>ʒ tendencies, Hebrew lexical borrowings, and the Hispanic (Sephardi migration) layer in some regional varieties."
+    }
+  ],
+  "location": {
+    "latitude": 34.02,
+    "longitude": -6.83,
+    "source": "glottolog",
+    "notes": "Approximate centroid of historical Moroccan Jewish communities (Fez/Rabat area)."
+  }
+}

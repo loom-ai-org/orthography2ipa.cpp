@@ -1,0 +1,131 @@
+{
+  "code": "vai",
+  "name": "Vai",
+  "script": "Vai",
+  "script_type": "syllabary",
+  "quality": "stub",
+  "orthography_kind": "native",
+  "graphemes": {},
+  "allophones": {},
+  "phonemes": [
+    "p",
+    "b",
+    "t",
+    "d",
+    "k",
+    "ɡ",
+    "k͡p",
+    "ɡ͡b",
+    "ɓ",
+    "ɗ",
+    "t͡ʃ",
+    "d͡ʒ",
+    "ᵐɓ",
+    "ᵐɡ͡b",
+    "ⁿɗ",
+    "ᶮd͡ʒ",
+    "ᵑɡ",
+    "f",
+    "v",
+    "s",
+    "z",
+    "ʃ",
+    "ʒ",
+    "h",
+    "m",
+    "n",
+    "ɲ",
+    "ŋ",
+    "w",
+    "l",
+    "j",
+    "r",
+    "i",
+    "iː",
+    "u",
+    "uː",
+    "e",
+    "eː",
+    "o",
+    "oː",
+    "ɛ",
+    "ɛː",
+    "ɔ",
+    "ɔː",
+    "a",
+    "aː",
+    "ĩ",
+    "ũ",
+    "ɛ̃",
+    "ɔ̃",
+    "ã"
+  ],
+  "tone_inventory": {
+    "˦": "high",
+    "˨": "low",
+    "˦˨": "falling",
+    "˨˦": "rising"
+  },
+  "notes": "Vai, Mande language of Sierra Leone and Liberia, written with the Vai syllabary devised by Momolu Duwalu Bukele c. 1832-1839 (Everson 2005; Unicode 5.1, 2008, U+A500-U+A63F) — one of the few indigenous sub-Saharan African scripts still in everyday use. The script is a moraic (C)V(N) syllabary of roughly 270-300 non-cartesian, largely suppletive signs: each syllable is its own historically-assigned glyph, not a systematically composed consonant-plus-vowel pair, so the grapheme->IPA map cannot be safely derived from a CV grid without a primary syllabary chart giving each individual glyph's reading (the SIL 2004 chart and Welmers 1976 exist but were not machine-extractable here). Per AGENTS.md, fabricating a placeholder Latin-style inventory or a systematised CV table for a real syllabary would misrepresent the script, so `graphemes` is left empty and the phonology is instead declared directly via `phonemes` (Welmers 1976; Wikipedia): 11 vowel qualities (6 oral with length, 5 nasal), ~31 consonants including prenasalised stops, implosives ɓ/ɗ and the co-articulated labial-velars k͡p/ɡ͡b, and 4 tones (2 level, 2 contour) that are not marked in the orthography. A syllabary implementation for this spec is future work; contributions with a full glyph-by-glyph chart are welcome.",
+  "iso639_3": "vai",
+  "glottolog_code": "vaii1241",
+  "wikidata_qid": "Q36939",
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Vai_language",
+    "https://en.wikipedia.org/wiki/Vai_syllabary",
+    "https://en.wikipedia.org/wiki/Vai_(Unicode_block)"
+  ],
+  "urls": [
+    "https://glottolog.org/resource/languoid/id/vaii1241",
+    "https://r12a.github.io/scripts/vaii/vai.html",
+    "https://static-scripts.sil.org/cms/sites/nrsi/download/vaiunicode/Vai%20Syllabary2004-12-01.pdf"
+  ],
+  "sources": [
+    {
+      "id": "welmers1976",
+      "author": "Welmers, William E.",
+      "year": 1976,
+      "title": "A Grammar of Vai",
+      "publisher": "University of California Press",
+      "url": null,
+      "pages": null,
+      "notes": "Primary phonology reference: vowel/consonant inventory, tone."
+    },
+    {
+      "id": "everson2005",
+      "author": "Everson, Michael et al.",
+      "year": 2005,
+      "title": "Proposal to add the Vai script to the BMP of the UCS",
+      "publisher": "Unicode Technical Committee (L2/05-217)",
+      "url": null,
+      "pages": null,
+      "notes": "Script history and syllabary structure; basis of the Unicode 5.1 Vai block."
+    },
+    {
+      "id": "vai_language_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Vai language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Vai_language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Vai_language",
+      "pages": null,
+      "notes": "Phonology summary and reference codes."
+    }
+  ],
+  "location": {
+    "latitude": 7.0,
+    "longitude": -10.8,
+    "source": "glottolog",
+    "notes": "Grand Cape Mount County, Liberia / Sierra Leone border area — Glottolog's representative point for Vai."
+  },
+  "parent": "x-clade-mand1469",
+  "ancestors": [
+    {
+      "code": "x-clade-mand1469",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Mande family (Glottolog vaii1241 under mand1469)."
+    }
+  ]
+}

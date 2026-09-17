@@ -1,0 +1,328 @@
+{
+  "code": "lt",
+  "name": "Lithuanian",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "iso639_3": "lit",
+  "glottolog_code": "lith1251",
+  "timespan": {
+    "start_year": 1547,
+    "end_year": null
+  },
+  "graphemes": {
+    "dž": [
+      "dʒ"
+    ],
+    "dz": [
+      "dz"
+    ],
+    "a": [
+      "a"
+    ],
+    "ą": [
+      "aː"
+    ],
+    "b": [
+      "b"
+    ],
+    "c": [
+      "ts"
+    ],
+    "č": [
+      "tʃ"
+    ],
+    "d": [
+      "d"
+    ],
+    "e": [
+      "ɛ"
+    ],
+    "ė": [
+      "eː"
+    ],
+    "ę": [
+      "ɛː"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "h": [
+      "ɣ",
+      "x"
+    ],
+    "i": [
+      "ɪ"
+    ],
+    "ia": [
+      "a"
+    ],
+    "ią": [
+      "aː"
+    ],
+    "io": [
+      "oː"
+    ],
+    "iu": [
+      "ʊ"
+    ],
+    "iū": [
+      "uː"
+    ],
+    "ių": [
+      "uː"
+    ],
+    "į": [
+      "iː"
+    ],
+    "y": [
+      "iː"
+    ],
+    "j": [
+      "j"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "o": [
+      "oː"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "š": [
+      "ʃ"
+    ],
+    "t": [
+      "t"
+    ],
+    "u": [
+      "ʊ"
+    ],
+    "ų": [
+      "uː"
+    ],
+    "ū": [
+      "uː"
+    ],
+    "v": [
+      "v"
+    ],
+    "z": [
+      "z"
+    ],
+    "ž": [
+      "ʒ"
+    ],
+    "ch": [
+      "x"
+    ]
+  },
+  "allophones": {},
+  "positional_graphemes": {},
+  "allophone_rules": [
+    {
+      "id": "LT_PALATAL_B",
+      "phonemes": ["b"],
+      "surface": "bʲ",
+      "followed_by": "front_vowel",
+      "notes": "Lithuanian consonants contrast palatalized/non-palatalized before front vowels and before the silent-i digraphs (ia, ią, io, iu, ių, iū) that mark palatalization before a back vowel (Bakšienė et al. 2024: 414-444)."
+    },
+    {
+      "id": "LT_PALATAL_C",
+      "phonemes": ["ts"],
+      "surface": "tsʲ",
+      "followed_by": "front_vowel",
+      "notes": "See LT_PALATAL_B."
+    },
+    {
+      "id": "LT_PALATAL_CH",
+      "phonemes": ["tʃ"],
+      "surface": "tʃʲ",
+      "followed_by": "front_vowel",
+      "notes": "See LT_PALATAL_B."
+    },
+    {
+      "id": "LT_PALATAL_D",
+      "phonemes": ["d"],
+      "surface": "dʲ",
+      "followed_by": "front_vowel",
+      "notes": "See LT_PALATAL_B."
+    },
+    {
+      "id": "LT_PALATAL_DZ",
+      "phonemes": ["dʒ"],
+      "surface": "dʒʲ",
+      "followed_by": "front_vowel",
+      "notes": "See LT_PALATAL_B."
+    },
+    {
+      "id": "LT_PALATAL_DZ2",
+      "phonemes": ["dz"],
+      "surface": "dzʲ",
+      "followed_by": "front_vowel",
+      "notes": "See LT_PALATAL_B."
+    },
+    {
+      "id": "LT_PALATAL_F",
+      "phonemes": ["f"],
+      "surface": "fʲ",
+      "followed_by": "front_vowel",
+      "notes": "See LT_PALATAL_B."
+    },
+    {
+      "id": "LT_PALATAL_G",
+      "phonemes": ["ɡ"],
+      "surface": "ɡʲ",
+      "followed_by": "front_vowel",
+      "notes": "See LT_PALATAL_B."
+    },
+    {
+      "id": "LT_PALATAL_K",
+      "phonemes": ["k"],
+      "surface": "kʲ",
+      "followed_by": "front_vowel",
+      "notes": "See LT_PALATAL_B."
+    },
+    {
+      "id": "LT_PALATAL_L",
+      "phonemes": ["l"],
+      "surface": "lʲ",
+      "followed_by": "front_vowel",
+      "notes": "See LT_PALATAL_B."
+    },
+    {
+      "id": "LT_PALATAL_M",
+      "phonemes": ["m"],
+      "surface": "mʲ",
+      "followed_by": "front_vowel",
+      "notes": "See LT_PALATAL_B."
+    },
+    {
+      "id": "LT_PALATAL_N",
+      "phonemes": ["n"],
+      "surface": "nʲ",
+      "followed_by": "front_vowel",
+      "notes": "See LT_PALATAL_B."
+    },
+    {
+      "id": "LT_PALATAL_P",
+      "phonemes": ["p"],
+      "surface": "pʲ",
+      "followed_by": "front_vowel",
+      "notes": "See LT_PALATAL_B."
+    },
+    {
+      "id": "LT_PALATAL_R",
+      "phonemes": ["r"],
+      "surface": "rʲ",
+      "followed_by": "front_vowel",
+      "notes": "See LT_PALATAL_B."
+    },
+    {
+      "id": "LT_PALATAL_S",
+      "phonemes": ["s"],
+      "surface": "sʲ",
+      "followed_by": "front_vowel",
+      "notes": "See LT_PALATAL_B."
+    },
+    {
+      "id": "LT_PALATAL_SH",
+      "phonemes": ["ʃ"],
+      "surface": "ʃʲ",
+      "followed_by": "front_vowel",
+      "notes": "See LT_PALATAL_B."
+    },
+    {
+      "id": "LT_PALATAL_T",
+      "phonemes": ["t"],
+      "surface": "tʲ",
+      "followed_by": "front_vowel",
+      "notes": "See LT_PALATAL_B."
+    },
+    {
+      "id": "LT_PALATAL_V",
+      "phonemes": ["v"],
+      "surface": "vʲ",
+      "followed_by": "front_vowel",
+      "notes": "See LT_PALATAL_B."
+    },
+    {
+      "id": "LT_PALATAL_Z",
+      "phonemes": ["z"],
+      "surface": "zʲ",
+      "followed_by": "front_vowel",
+      "notes": "See LT_PALATAL_B."
+    },
+    {
+      "id": "LT_PALATAL_ZH",
+      "phonemes": ["ʒ"],
+      "surface": "ʒʲ",
+      "followed_by": "front_vowel",
+      "notes": "See LT_PALATAL_B."
+    }
+  ],
+  "ancestors": [
+    {
+      "code": "ine",
+      "role": "proto_language",
+      "weight": 1.0,
+      "notes": "Descended from Proto-Indo-European via Proto-Baltic"
+    }
+  ],
+  "parent": "x-clade-east2280",
+  "notes": "Lithuanian, the oldest attested Baltic language. Retains many archaic Indo-European features. Long vowels marked with macron/ogonek. Consonants are palatalized before front vowels (e ę ė i į y) and before the silent-i digraphs ia/ią/io/iu/ių/iū that mark palatalization before a back vowel (Bakšienė et al. 2024) -- e.g. čia is /tʃʲa/, not /tʃia/. ⟨ių⟩ is the long counterpart of ⟨iu⟩ exactly as ⟨ų⟩ is of ⟨u⟩, and it spells the genitive plural of the whole soft-stem declension, so it is the most frequent member of the set (WikiPron gold: saulių -> s a u lʲ uː, siųsti -> sʲ uː sʲ tʲ ɪ). Known limitation: the ⟨io⟩ digraph is read as palatalization + /oː/ unconditionally, so Greek and Latin loans that keep a genuine /io/ hiatus -- stadionas, biologija, idioma -- come out one vowel short. The hiatus is lexical, not predictable from the letters, so no orthographic condition separates the two readings; a lexicon entry is the only correct fix. No such loan occurs in the shipped WikiPron gold (3 ⟨io⟩ rows, all of them the digraph reading), so the limitation costs nothing measurable and is recorded here rather than papered over. ą ę į ų mark historical vowel length, not nasality, in the modern language (Bakšienė et al. 2024; Ambrazas 1997, ch. on phonology). The standard orthography does not mark the acute/circumflex pitch-accent contrast on long syllables (Bakšienė et al. 2024), so it is not modelled here -- word-level tone is lexical information the letters do not carry. Digraphs dž and dz precede single letters in processing order. Ambrazas 1997 was consulted only via its published review (Vajda, Language 76(1), 2000, pp. 203-204, DOI 10.2307/417422) and its own front-matter description, not the full 802pp. volume; its citation here backs the general grammar's existence and scope, not page-pinpointed claims.",
+  "sources": [
+    {
+      "id": "baksiene_et_al_2024",
+      "author": "Bakšienė, R., Čepaitienė, A., Jaroslavienė, J. & Urbanavičienė, J.",
+      "year": 2024,
+      "title": "Standard Lithuanian",
+      "publisher": "Journal of the International Phonetic Association 54(1), 414-444",
+      "doi": "10.1017/S0025100323000105",
+      "url": "https://doi.org/10.1017/S0025100323000105",
+      "notes": "Illustration of the IPA article. Its abstract states explicitly the palatalized/non-palatalized consonant opposition, the long/short vowel contrast and the pitch-accent system that motivate this spec's palatalization rules and its treatment of ą/ę/į/ų as length markers."
+    },
+    {
+      "id": "ambrazas1997",
+      "author": "Ambrazas, V. (ed.)",
+      "year": 1997,
+      "title": "Lithuanian Grammar",
+      "publisher": "Vilnius: Baltos Lankos",
+      "pages": null,
+      "notes": "802pp. reference grammar; existence, title, editor, year and publisher confirmed via its published review (Edward J. Vajda, Language 76(1), March 2000, pp. 203-204, DOI 10.2307/417422), full text not directly retrieved -- cited here for the grammar's general description of the palatalization, vowel-length and pitch-accent systems, not for page-pinpointed claims."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Lithuanian_language",
+    "https://en.wikipedia.org/wiki/Lithuanian_phonology",
+    "https://lt.wikipedia.org/wiki/Lietuvi%C5%B3_kalba"
+  ],
+  "wikidata_qid": "Q9083",
+  "phoible_id": "lith1251",
+  "wals_code": "lit",
+  "location": {
+    "latitude": 55.1429,
+    "longitude": 23.9601,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Lithuanian."
+  }
+}

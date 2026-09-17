@@ -1,0 +1,264 @@
+{
+ "code": "bqp",
+ "name": "Busa",
+ "script": "Latin",
+ "quality": "skeleton",
+ "graphemes": {
+  "a": [
+   "a"
+  ],
+  "aa": [
+   "aː"
+  ],
+  "b": [
+   "b"
+  ],
+  "d": [
+   "d"
+  ],
+  "e": [
+   "e"
+  ],
+  "ee": [
+   "eː"
+  ],
+  "f": [
+   "f"
+  ],
+  "g": [
+   "ɡ"
+  ],
+  "gb": [
+   "ɡb"
+  ],
+  "gw": [
+   "ɡw"
+  ],
+  "h": [
+   "h"
+  ],
+  "i": [
+   "i"
+  ],
+  "ii": [
+   "iː"
+  ],
+  "k": [
+   "k"
+  ],
+  "kp": [
+   "kp"
+  ],
+  "l": [
+   "l"
+  ],
+  "m": [
+   "m"
+  ],
+  "mb": [
+   "mb"
+  ],
+  "mp": [
+   "mp"
+  ],
+  "n": [
+   "n"
+  ],
+  "nd": [
+   "nd"
+  ],
+  "ng": [
+   "ŋɡ"
+  ],
+  "nk": [
+   "ŋk"
+  ],
+  "ns": [
+   "ns"
+  ],
+  "nt": [
+   "nt"
+  ],
+  "nz": [
+   "nz"
+  ],
+  "o": [
+   "o"
+  ],
+  "oo": [
+   "oː"
+  ],
+  "p": [
+   "p"
+  ],
+  "r": [
+   "ɾ"
+  ],
+  "s": [
+   "s"
+  ],
+  "t": [
+   "t"
+  ],
+  "u": [
+   "u"
+  ],
+  "uu": [
+   "uː"
+  ],
+  "v": [
+   "v"
+  ],
+  "w": [
+   "w"
+  ],
+  "y": [
+   "j"
+  ],
+  "z": [
+   "z"
+  ],
+  "ã": [
+   "ã"
+  ],
+  "ãa": [
+   "ãː"
+  ],
+  "õ": [
+   "õ"
+  ],
+  "õo": [
+   "õː"
+  ],
+  "ĩ": [
+   "ĩ"
+  ],
+  "ĩi": [
+   "ĩː"
+  ],
+  "ũ": [
+   "ũ"
+  ],
+  "ũu": [
+   "ũː"
+  ],
+  "ɔ": [
+   "ɔ"
+  ],
+  "ɔɔ": [
+   "ɔː"
+  ],
+  "ɔ̃": [
+   "ɔ̃"
+  ],
+  "ɔ̃ɔ": [
+   "ɔ̃ː"
+  ],
+  "ɛ": [
+   "ɛ"
+  ],
+  "ɛɛ": [
+   "ɛː"
+  ],
+  "ɛ̃": [
+   "ɛ̃"
+  ],
+  "ɛ̃ɛ": [
+   "ɛ̃ː"
+  ],
+  "ẽ": [
+   "ẽ"
+  ],
+  "ẽe": [
+   "ẽː"
+  ]
+ },
+ "allophones": {
+  "n": [
+   "n",
+   "l",
+   "r"
+  ]
+ },
+ "notes": "Placed so the ancestry graph covers every living ISO 639-3 language. No orthography is claimed; the phoneme inventory follows the cited PHOIBLE inventory (which itself cites a published description): script is Zyyy (undetermined) until a cited description is encoded. Classification and coordinates follow Glottolog. Orthography from an Omniglot chart (c) Simon Ager, https://www.omniglot.com/, extracted via the AfriSpeech/africa-g2p compilation (bqp.json). africa-g2p is a compilation tool, not the linguistic authority; the citation above is the original source it names.",
+ "iso639_3": "bqp",
+ "glottolog_code": "busa1253",
+ "sources": [
+  {
+   "id": "glottolog2024",
+   "author": "Hammarström, Harald; Forkel, Robert; Haspelmath, Martin; Bank, Sebastian",
+   "year": 2024,
+   "title": "Glottolog 5.0",
+   "publisher": "Max Planck Institute for Evolutionary Anthropology",
+   "url": "https://glottolog.org/"
+  },
+  {
+   "id": "phoible2019",
+   "author": "Moran, Steven; McCloy, Daniel (eds.)",
+   "year": 2019,
+   "title": "PHOIBLE 2.0 (doi:10.5281/zenodo.2562766)",
+   "publisher": "Max Planck Institute for the Science of Human History",
+   "url": "https://phoible.org/inventories/view/1252",
+   "notes": "Inventory 1252 (ph), 28 non-marginal segments, 3 tones."
+  },
+  {
+   "id": "omniglot-busa",
+   "author": "Ager, Simon",
+   "year": 2026,
+   "title": "Omniglot chart (busa.xls)",
+   "publisher": "Omniglot",
+   "url": "https://www.omniglot.com/",
+   "notes": "Undated web chart; year is retrieval year, not publication year."
+  }
+ ],
+ "urls": [
+  "https://glottolog.org/resource/languoid/id/busa1253"
+ ],
+ "location": {
+  "latitude": 9.9107,
+  "longitude": 4.3993,
+  "source": "glottolog",
+  "notes": "Glottolog's representative point."
+ },
+ "parent": "x-clade-mand1469",
+ "phonemes": [
+  "b",
+  "d",
+  "f",
+  "j",
+  "k",
+  "kp",
+  "m",
+  "n",
+  "p",
+  "s",
+  "t",
+  "v",
+  "w",
+  "z",
+  "ɡ",
+  "ɡb",
+  "a",
+  "ã",
+  "e",
+  "i",
+  "ĩ",
+  "o",
+  "u",
+  "ũ",
+  "ɔ",
+  "ɔ̃",
+  "ɛ",
+  "ɛ̃"
+ ],
+ "tone_inventory": {
+  "˦": "PHOIBLE tone segment",
+  "˧": "PHOIBLE tone segment",
+  "˨": "PHOIBLE tone segment"
+ },
+ "phoible_id": "1252",
+ "script_type": "alphabet",
+ "wikipedia": [
+  "https://en.wikipedia.org/wiki/Busa_language"
+ ]
+}

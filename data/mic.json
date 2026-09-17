@@ -1,0 +1,160 @@
+{
+  "code": "mic",
+  "name": "Mi'kmaq",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "á": [
+      "aː"
+    ],
+    "é": [
+      "eː"
+    ],
+    "í": [
+      "iː"
+    ],
+    "ó": [
+      "oː"
+    ],
+    "ú": [
+      "uː"
+    ],
+    "a'": [
+      "aː"
+    ],
+    "e'": [
+      "eː"
+    ],
+    "i'": [
+      "iː"
+    ],
+    "o'": [
+      "oː"
+    ],
+    "u'": [
+      "uː"
+    ],
+    "a": [
+      "a"
+    ],
+    "e": [
+      "ɛ"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "ɔ"
+    ],
+    "u": [
+      "u"
+    ],
+    "j": [
+      "tʃ"
+    ],
+    "q": [
+      "x"
+    ],
+    "p": [
+      "p"
+    ],
+    "t": [
+      "t"
+    ],
+    "k": [
+      "k"
+    ],
+    "s": [
+      "s"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "w": [
+      "w"
+    ],
+    "y": [
+      "j"
+    ],
+    "g": [
+      "k"
+    ],
+    "gw": [
+      "kʷ"
+    ],
+    "h": [
+      "h"
+    ],
+    "'": [
+      "ə"
+    ]
+  },
+  "parent": "x-clade-algi1248",
+  "ancestors": [
+    {
+      "code": "x-clade-algi1248",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Descent per Glottolog classification of Mi'kmaq (mikm1235)."
+    }
+  ],
+  "notes": "Algic (Algonquian) language of Atlantic Canada. The grapheme map reads the Listuguj orthography, which the shipped wikipron gold uses; the Francis-Smith letters k and á é í ó ú are carried as well, but Francis-Smith is not modelled in full here, since its schwa letter ɨ is absent. An apostrophe after a vowel marks vowel length and after a consonant marks schwa: mic_mikmaqonline gives a'pi as aa-bi, gta'n as ek-taan, p'tew as be-dew and put'p as bu-dep; the orthographic apostrophe does not represent a glottal stop. Obstruents p t k q j s are voiceless phonemes realized voiced between sonorants (mic_fidelholtz1968 p. 12), and Listuguj writes /k/ as g, so g and gw read as k and kʷ (mic_mikmaqonline gives alug as a-luk and agumegw as a-gu-mekw); that intervocalic allophony is left unencoded. Acute-marked vowels denote length. The letter q represents a velar/uvular fricative [x]. mic_fidelholtz1968 p. 12 glosses the short mid vowels directly, e as in French après and o as in French comme, i.e. open-mid [ɛ] and [ɔ]; this confirms the shipped open-mid values and is the reason the mid-vowel change to close-mid is refused. Schwa epenthesis in initial and medial clusters (agnutmaqan [akənutəmaxan]) is predictable but unencoded, and raises the PER floor along with predictable stress.",
+  "iso639_3": "mic",
+  "glottolog_code": null,
+  "sources": [
+    {
+      "id": "mic_glottolog",
+      "author": "Hammarström, H. et al. (Glottolog 5.0)",
+      "year": 2024,
+      "title": "Glottolog: Mi'kmaq (mikm1235)",
+      "publisher": "Max Planck Institute for Evolutionary Anthropology",
+      "url": "https://glottolog.org/resource/languoid/id/mikm1235",
+      "pages": null,
+      "notes": "Classification reference for a skeleton-tier entry.",
+      "wikipedia_url": null
+    },
+    {
+      "id": "mic_fidelholtz1968",
+      "author": "Fidelholtz, James Lawrence",
+      "year": 1968,
+      "title": "Micmac Morphophonemics",
+      "publisher": "PhD dissertation, Massachusetts Institute of Technology",
+      "url": "https://hdl.handle.net/1721.1/13001",
+      "pages": "12",
+      "notes": "Vowel and obstruent inventory of the Restigouche dialect, p. 12: obstruent voicing stated as predictable; the short mid vowels e and o glossed as the vowels of French après and comme respectively (open-mid); glides listed as w, y and rarely h and ʔ.",
+      "wikipedia_url": null
+    },
+    {
+      "id": "mic_mikmaqonline",
+      "author": "Mi'gmaq-Mi'kmaq Online (Listuguj Mi'gmaq Government)",
+      "year": 2024,
+      "title": "Mi'gmaq-Mi'kmaq Online Talking Dictionary",
+      "publisher": "Listuguj Mi'gmaq Government",
+      "url": "https://mikmaqonline.org/",
+      "pages": null,
+      "notes": "Per-entry pronunciation guides in the Listuguj orthography; the apostrophe and g readings are taken from the entries a'pi, gta'n, p'tew, put'p, alug and agumegw.",
+      "wikipedia_url": null
+    },
+    {
+      "id": "mic_orthography",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Mi'kmaq language (Francis-Smith orthography), Wikipedia",
+      "publisher": "Wikimedia Foundation",
+      "url": "https://en.wikipedia.org/wiki/Mi%27kmaq_language",
+      "pages": null,
+      "notes": "Orthography/phonology reference for a skeleton-tier grapheme map.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Mi%27kmaq_language"
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Mi%27kmaq_language"
+  ]
+}

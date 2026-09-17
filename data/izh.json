@@ -1,0 +1,88 @@
+{
+  "code": "izh",
+  "name": "Ingrian",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "iso639_3": "izh",
+  "glottolog_code": "ingr1248",
+  "wikidata_qid": "Q35553",
+  "graphemes_base": "fi",
+  "graphemes": {
+    "š": [
+      "ʃ"
+    ],
+    "ž": [
+      "ʒ"
+    ],
+    "c": [
+      "t͡s"
+    ],
+    "z": [
+      "z"
+    ],
+    "šš": [
+      "ʃː"
+    ],
+    "žž": [
+      "ʒː"
+    ]
+  },
+  "allophones_base": "fi",
+  "allophones": {
+    "ʃ": [
+      "ʃ"
+    ],
+    "ʒ": [
+      "ʒ"
+    ],
+    "t͡s": [
+      "t͡s"
+    ],
+    "z": [
+      "z"
+    ]
+  },
+  "notes": "Ingrian (ižoran keel), a Finnic (Uralic) language of Ingria, south of the Gulf of Finland. The modern Latin orthography is close to Finnish: the same vowel letters (a e i o u y ä ö, doubled for phonemic length) and consonants, plus ⟨š⟩ /ʃ/, ⟨ž⟩ /ʒ/ and ⟨z⟩ /z/ in the sibilant series and ⟨c⟩ /t͡s/. Consonant length is written by doubling (kk pp tt ss šš …). Ingrian has a phonemic palatalised consonant series (/tʲ dʲ nʲ lʲ sʲ rʲ/) triggered chiefly before ⟨i⟩ and by historical front vowels; it surfaces as the narrow ⟨ʲ⟩ diacritic and is not resolved from the plain orthography here, so palatalisation is under-generated. Diphthong offglides are written plain (⟨ai⟩ → /ɑi/) rather than with the non-syllabic mark. Vowel and consonant inventory and the doubled-length convention follow the Finnish base; the Finnic clade classification is shared.",
+  "sources": [
+    {
+      "id": "ingrian_language_wikipedia",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Ingrian language — Phonology and Orthography",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Ingrian_language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Ingrian_language",
+      "pages": null,
+      "notes": "Consonant and vowel inventory (palatalised /tʲ dʲ nʲ lʲ sʲ rʲ/ series, sibilants /ʃ ʒ ts/), phonemic quantity, and the Finnish-like Latin orthography."
+    },
+    {
+      "id": "abondolo1998",
+      "author": "Abondolo, D. (ed.)",
+      "year": 1998,
+      "title": "The Uralic Languages",
+      "publisher": "Routledge",
+      "url": null,
+      "pages": null,
+      "notes": "Finnic phonology reference."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Ingrian_language"
+  ],
+  "parent": "x-clade-finn1317",
+  "ancestors": [
+    {
+      "code": "x-clade-finn1317",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Finnic — the classification node this language sits under."
+    }
+  ],
+  "location": {
+    "latitude": 59.7,
+    "longitude": 28.8,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Ingrian (Soikkola/Lower Luga area)."
+  }
+}

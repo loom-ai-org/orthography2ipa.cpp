@@ -1,0 +1,161 @@
+{
+  "code": "orv",
+  "name": "Old East Slavic (Old Russian)",
+  "script": "Cyrillic",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "а": [
+      "a"
+    ],
+    "б": [
+      "b"
+    ],
+    "в": [
+      "v"
+    ],
+    "г": [
+      "ɡ"
+    ],
+    "д": [
+      "d"
+    ],
+    "е": [
+      "ɛ"
+    ],
+    "ж": [
+      "ʒ"
+    ],
+    "з": [
+      "z"
+    ],
+    "и": [
+      "i"
+    ],
+    "і": [
+      "i"
+    ],
+    "й": [
+      "j"
+    ],
+    "к": [
+      "k"
+    ],
+    "л": [
+      "l"
+    ],
+    "м": [
+      "m"
+    ],
+    "н": [
+      "n"
+    ],
+    "о": [
+      "ɔ"
+    ],
+    "п": [
+      "p"
+    ],
+    "р": [
+      "r"
+    ],
+    "с": [
+      "s"
+    ],
+    "т": [
+      "t"
+    ],
+    "у": [
+      "u"
+    ],
+    "ф": [
+      "f"
+    ],
+    "х": [
+      "x"
+    ],
+    "ц": [
+      "ts"
+    ],
+    "ч": [
+      "tʃ"
+    ],
+    "ш": [
+      "ʃ"
+    ],
+    "щ": [
+      "ʃtʃ"
+    ],
+    "ъ": [
+      "ʊ"
+    ],
+    "ы": [
+      "ɨ"
+    ],
+    "ь": [
+      "ʲ"
+    ],
+    "ѣ": [
+      "e"
+    ],
+    "ю": [
+      "ju"
+    ],
+    "я": [
+      "ja"
+    ],
+    "ѧ": [
+      "ẽ"
+    ],
+    "ѫ": [
+      "õ"
+    ],
+    "є": [
+      "ɛ"
+    ],
+    "ѡ": [
+      "ɔ"
+    ],
+    "ѕ": [
+      "dz"
+    ]
+  },
+  "parent": "sla",
+  "ancestors": [
+    {
+      "code": "sla",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Descent from Proto-Slavic (East Slavic branch)"
+    },
+    {
+      "code": "cu",
+      "role": "adstrate",
+      "weight": 0.15,
+      "notes": "Church Slavonic literary adstrate: orthographic and lexical influence"
+    }
+  ],
+  "notes": "Skeleton. Old East Slavic / Old Russian (c. 10th-14th c.), common ancestor of Russian, Ukrainian and Belarusian. Early Cyrillic including the yers ъ/ь and yat ѣ; the reduced yers are given their strong-position values and jer weakening/loss is unencoded. Church Slavonic adstrate. Stress exemption: Old East Slavic had a free, lexically contrastive pitch/stress accent (continuing Balto-Slavic mobile accentuation) that Cyrillic manuscript orthography did not mark; it is not recoverable from spelling and so no stress block is declared. Source: Matthews, W. K. (1960), Russian Historical Grammar, secs. on accentuation.",
+  "iso639_3": "orv",
+  "glottolog_code": null,
+  "sources": [
+    {
+      "id": "matthews1960",
+      "author": "Matthews, W.K.",
+      "year": 1960,
+      "title": "Russian Historical Grammar",
+      "publisher": "Athlone Press",
+      "url": null,
+      "pages": null,
+      "notes": "Historical phonology of Old East Slavic.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Old_East_Slavic"
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Old_East_Slavic"
+  ],
+  "timespan": {
+    "start_year": 900,
+    "end_year": 1400
+  }
+}

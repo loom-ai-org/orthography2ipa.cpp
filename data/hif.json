@@ -1,0 +1,46 @@
+{
+  "code": "hif",
+  "name": "Fiji Hindi",
+  "script": "Devanagari",
+  "script_type": "abugida",
+  "quality": "stub",
+  "inherent_vowel": "ə",
+  "graphemes": {},
+  "allophones": {},
+  "notes": "Fiji Hindi, an Awadhi/Bhojpuri-derived Indo-Aryan koine of Fiji. STUB: the grapheme inventory is NOT yet specified. Written both in Devanagari (abugida, inherent vowel /ə/, schwa deletion) and in a non-standardised Latin orthography; neither map is claimed here. A Devanagari map (as for Hindi) or an explicit Latin-romanisation contract would be required as input.",
+  "iso639_3": "hif",
+  "glottolog_code": "fiji1242",
+  "wikidata_qid": "Q46728",
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Fiji_Hindi",
+    "https://hif.wikipedia.org/wiki/Fiji_Hindi"
+  ],
+  "sources": [
+    {
+      "id": "fijihindi_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Fiji Hindi",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Fiji_Hindi",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Fiji_Hindi",
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "parent": "x-clade-indo1321",
+  "ancestors": [
+    {
+      "code": "x-clade-indo1321",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Indo-Aryan — the classification node this language sits under."
+    }
+  ],
+  "location": {
+    "latitude": -17.8148,
+    "longitude": 177.772,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Fiji Hindi."
+  }
+}

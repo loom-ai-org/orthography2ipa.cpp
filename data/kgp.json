@@ -1,0 +1,76 @@
+{
+  "code": "kgp",
+  "name": "Kaingang",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "nh": ["ɲ"],
+    "'": ["ʔ"],
+    "p": ["p"],
+    "t": ["t"],
+    "k": ["k"],
+    "f": ["ɸ"],
+    "s": ["ç"],
+    "h": ["h"],
+    "v": ["w"],
+    "j": ["j"],
+    "r": ["ɹ"],
+    "m": ["m"],
+    "n": ["n"],
+    "g": ["ŋ"],
+    "á": ["ʌ"],
+    "é": ["ɛ"],
+    "ó": ["ɔ"],
+    "ã": ["ã"],
+    "ẽ": ["ẽ"],
+    "ĩ": ["ĩ"],
+    "ũ": ["ũ"],
+    "ỹ": ["ɤ̃"],
+    "a": ["a"],
+    "e": ["e"],
+    "i": ["i"],
+    "o": ["o"],
+    "u": ["u"],
+    "y": ["ɤ"]
+  },
+  "parent": "x-clade-nucl1710",
+  "ancestors": [
+    {
+      "code": "x-clade-nucl1710",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Descent per Glottolog classification of Kaingang (kain1272)."
+    }
+  ],
+  "notes": "Macro-Je language of southern Brazil, Latin orthography. The letters m/n/nh/g denote the nasal-consonant series whose oral and prestopped allophones ([m~b], [n~d], [ɲ~ɟ], [ŋ~ɡ]) are conditioned by adjacent vowel nasality and are not written; the nasal phonemic value is mapped. Note that g is the velar nasal, not a plosive, and s is realized as a palatal fricative. Vowel nasality is written with a tilde. Stress (tending to the final syllable) and the oral/prestopped allophony are left unencoded, raising the PER floor.",
+  "iso639_3": "kgp",
+  "glottolog_code": null,
+  "sources": [
+    {
+      "id": "kgp_glottolog",
+      "author": "Hammarström, H. et al. (Glottolog 5.0)",
+      "year": 2024,
+      "title": "Glottolog: Kaingang (kain1272)",
+      "publisher": "Max Planck Institute for Evolutionary Anthropology",
+      "url": "https://glottolog.org/resource/languoid/id/kain1272",
+      "pages": null,
+      "notes": "Classification reference for a skeleton-tier entry.",
+      "wikipedia_url": null
+    },
+    {
+      "id": "kgp_wikipedia",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Kaingang language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Kaingang_language",
+      "pages": null,
+      "notes": "Phonology and orthography reference for the skeleton grapheme map.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Kaingang_language"
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Kaingang_language"
+  ]
+}

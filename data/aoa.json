@@ -1,0 +1,339 @@
+{
+  "code": "aoa",
+  "glottolog_code": "ango1258",
+  "name": "Angolar",
+  "script": "Latin",
+  "quality": "research",
+  "script_type": "alphabet",
+  "parent": "pt-PT",
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "â": [
+      "a"
+    ],
+    "e": [
+      "e",
+      "ɛ"
+    ],
+    "ê": [
+      "e"
+    ],
+    "i": [
+      "i"
+    ],
+    "î": [
+      "i"
+    ],
+    "o": [
+      "o",
+      "ɔ"
+    ],
+    "ô": [
+      "o"
+    ],
+    "u": [
+      "u"
+    ],
+    "û": [
+      "u"
+    ],
+    "b": [
+      "b"
+    ],
+    "d": [
+      "d"
+    ],
+    "dh": [
+      "ð",
+      "d"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "h": [
+      "h"
+    ],
+    "j": [
+      "dʒ"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "mb": [
+      "mb"
+    ],
+    "n": [
+      "n"
+    ],
+    "nd": [
+      "nd"
+    ],
+    "ng": [
+      "ŋɡ"
+    ],
+    "nh": [
+      "ɲ"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "th": [
+      "θ",
+      "t"
+    ],
+    "tx": [
+      "tʃ"
+    ],
+    "v": [
+      "v"
+    ],
+    "w": [
+      "w"
+    ],
+    "x": [
+      "ʃ"
+    ],
+    "y": [
+      "j"
+    ],
+    "z": [
+      "z"
+    ]
+  },
+  "positional_graphemes": {
+    "mb": {
+      "word_initial": [
+        "mb"
+      ]
+    },
+    "nd": {
+      "word_initial": [
+        "nd"
+      ]
+    },
+    "ng": {
+      "word_final": [
+        "ŋ"
+      ]
+    },
+    "n": {
+      "word_final": [
+        "n",
+        "ŋ"
+      ]
+    }
+  },
+  "allophones": {
+    "a": [
+      "a"
+    ],
+    "ã": [
+      "ã"
+    ],
+    "e": [
+      "e"
+    ],
+    "ɛ": [
+      "ɛ"
+    ],
+    "ẽ": [
+      "ẽ"
+    ],
+    "i": [
+      "i"
+    ],
+    "ĩ": [
+      "ĩ"
+    ],
+    "o": [
+      "o"
+    ],
+    "ɔ": [
+      "ɔ"
+    ],
+    "õ": [
+      "õ"
+    ],
+    "u": [
+      "u"
+    ],
+    "ũ": [
+      "ũ"
+    ],
+    "b": [
+      "b"
+    ],
+    "d": [
+      "d"
+    ],
+    "ð": [
+      "ð"
+    ],
+    "θ": [
+      "θ"
+    ],
+    "f": [
+      "f"
+    ],
+    "ɡ": [
+      "ɡ"
+    ],
+    "h": [
+      "h"
+    ],
+    "dʒ": [
+      "dʒ"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ŋ": [
+      "ŋ"
+    ],
+    "ɲ": [
+      "ɲ"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "tʃ": [
+      "tʃ"
+    ],
+    "v": [
+      "v"
+    ],
+    "w": [
+      "w"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "j": [
+      "j"
+    ],
+    "z": [
+      "z"
+    ]
+  },
+  "ancestors": [
+    {
+      "code": "pt-PT",
+      "role": "superstrate",
+      "weight": 0.35,
+      "notes": "Portuguese superstrate: thinner than other Gulf of Guinea creoles. Angolar descended from escaped enslaved Africans (primarily Kimbundu/Mbundu speakers) who fled into the interior of São Tomé in the 16th century; less contact with Portuguese colonizers."
+    },
+    {
+      "code": "pt-ST",
+      "role": "adstrate",
+      "weight": 0.2,
+      "notes": "São Tomé Portuguese adstrate via ongoing contact with the dominant variety of the island."
+    }
+  ],
+  "notes": "Angolar (Nga). Portuguese-based Gulf of Guinea creole; spoken in the southern coast of São Tomé island by the Angolares, descendants of escaped enslaved Africans. ~5,000 speakers. Unique within the Gulf of Guinea creole cluster: much stronger Bantu substrate, lexical tone system, and thinner Portuguese superstrate. KEY FEATURES: (1) LEXICAL TONE: Angolar is tonal (H/L), unusual among Atlantic creoles and unique in the GGC cluster; tone not conventionally marked in writing. (2) INTERDENTAL FRICATIVES: digraphs th=[θ], dh=[ð] (Maurer 1995; APiCS ch.36 gives the inventory /p b t d k g f v θ ð l m n ɲ j w/). /θ ð/ vs /s z/ are in near-complementary distribution — [s z] before /i/, [θ ð] before other vowels — so the orthographic ⟨th dh⟩ map faithfully to the interdentals. The primary/conservative reading is [θ]/[ð]; a Santomense-contact / younger-speaker variant reads plain stops [t]/[d] (Lorenzino 1998), recorded as the second grapheme value but not the default. (3) NO LABIAL-VELAR STOPS: earlier drafts listed gb=[ɡ͡b], kp=[k͡p], but APiCS ch.36 (Maurer) documents none in the inventory — the substrate is Bantu (Kimbundu) plus Edoid, not Kwa — so they are removed. (4) PRENASALIZED STOPS: mb/nd/ng are prenasalized in all positions (word-initial and intervocalic alike; APiCS ch.36), so ⟨ng⟩ defaults to [ŋɡ] except in a word-final coda where it is the plain velar nasal [ŋ]. (5) CIRCUMFLEX = VOWEL QUALITY, NOT NASALIZATION: ⟨â ê î ô û⟩ mark close-mid / peripheral oral vowels (ê=[e], ô=[o]) within the seven-vowel system a/e/ɛ/i/o/ɔ/u, NOT phonemic nasal vowels — an earlier draft nasalized them, which both blind judges and the sources contradict. Angolar does have a small, infrequent phonemic nasal-vowel set plus optional nasalization spread from an adjacent nasal, but these are not triggered by the circumflex. (6) HEAVY BANTU VOCABULARY: more Kimbundu-derived vocabulary than any other PT creole. Sources: Maurer (1995) is the primary linguistic description.",
+  "sources": [
+    {
+      "id": "maurer1995",
+      "author": "Maurer, P.",
+      "year": 1995,
+      "title": "L'Angolar: Un Créole Afro-Portugais parlé à São Tomé",
+      "publisher": "Helmut Buske Verlag",
+      "url": null,
+      "pages": null,
+      "notes": "Definitive grammar; includes full phonological description with tone"
+    },
+    {
+      "id": "hagemeijer2009",
+      "author": "Hagemeijer, T.",
+      "year": 2009,
+      "title": "The Gulf of Guinea creoles: genetic and typological relations",
+      "publisher": "Journal of Pidgin and Creole Languages 24(1)",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "maurer2013apics",
+      "author": "Maurer, P.",
+      "year": 2013,
+      "title": "Angolar structure dataset (survey chapter)",
+      "publisher": "Atlas of Pidgin and Creole Language Structures Online (APiCS), ch. 36",
+      "url": "https://apics-online.info/surveys/36",
+      "pages": null,
+      "notes": "Consonant inventory /p b t d k g f v θ ð l m n ɲ j w/ with no labial-velar stops; prenasalized stops in all positions; interdentals θ/ð vs s/z in near-complementary distribution."
+    },
+    {
+      "id": "lorenzino1998",
+      "author": "Lorenzino, G. A.",
+      "year": 1998,
+      "title": "The Angolar Creole Portuguese of São Tomé: Its Grammar and Sociolinguistic History",
+      "publisher": "LINCOM Europa (PhD, City University of New York)",
+      "url": null,
+      "pages": null,
+      "notes": "Documents the Santomense-contact / younger-speaker variant in which the interdentals are read as plain stops [t]/[d]."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Angolar_language"
+  ],
+  "urls": [
+    "https://en.wikipedia.org/wiki/Angolar_language",
+    "https://glottolog.org/resource/languoid/id/ango1254",
+    "https://www.ethnologue.com/language/aoa/"
+  ],
+  "timespan": {
+    "start_year": 1600,
+    "end_year": null
+  },
+  "iso639_3": "aoa",
+  "tone_inventory": {
+    "H": "high",
+    "L": "low"
+  },
+  "wikidata_qid": "Q34994",
+  "phoible_id": "ango1258",
+  "wals_code": "ago",
+  "location": {
+    "latitude": 0.11438,
+    "longitude": 6.59486,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Angolar."
+  }
+}

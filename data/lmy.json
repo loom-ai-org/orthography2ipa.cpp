@@ -1,0 +1,70 @@
+{
+  "code": "lmy",
+  "name": "Lamboya",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "ng": ["ŋ"],
+    "ny": ["ɲ"],
+    "a": ["a"],
+    "e": ["e"],
+    "i": ["i"],
+    "o": ["o"],
+    "u": ["u"],
+    "b": ["b"],
+    "d": ["d"],
+    "g": ["ɡ"],
+    "h": ["h"],
+    "j": ["dʒ"],
+    "k": ["k"],
+    "l": ["l"],
+    "m": ["m"],
+    "n": ["n"],
+    "p": ["p"],
+    "r": ["r"],
+    "s": ["s"],
+    "t": ["t"],
+    "w": ["w"],
+    "y": ["j"]
+  },
+  "parent": "x-clade-mala1545",
+  "ancestors": [
+    {
+      "code": "x-clade-mala1545",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Descent per Glottolog classification of Lamboya (lamb1273)."
+    }
+  ],
+  "notes": "Skeleton. Lamboya is a Central Malayo-Polynesian (Sumba-Hawu) Austronesian language of western Sumba, Indonesia, written in a Latin orthography of the Indonesian type. The grapheme map covers the five-vowel system and a basic consonant inventory including the digraphs ng and ny. Sumba languages typically contrast implosive stops (bilabial and alveolar) with plain stops; where the orthography does not mark implosion, that contrast is not encoded here. Prenasalization, stress, and vowel length are also left unencoded. This is a low-confidence skeleton drawn from classificatory sources; a dedicated phonological description would upgrade it.",
+  "iso639_3": "lmy",
+  "glottolog_code": null,
+  "sources": [
+    {
+      "id": "lmy_glottolog",
+      "author": "Hammarström, H. et al. (Glottolog 5.0)",
+      "year": 2024,
+      "title": "Glottolog: Lamboya (lamb1273)",
+      "publisher": "Max Planck Institute for Evolutionary Anthropology",
+      "url": "https://glottolog.org/resource/languoid/id/lamb1273",
+      "pages": null,
+      "notes": "Classification reference for a skeleton-tier entry.",
+      "wikipedia_url": null
+    },
+    {
+      "id": "lmy_wikipedia",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Lamboya language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Lamboya_language",
+      "pages": null,
+      "notes": "Classificatory reference for the grapheme-to-IPA skeleton.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Lamboya_language"
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Lamboya_language"
+  ]
+}

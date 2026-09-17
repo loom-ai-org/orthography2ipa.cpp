@@ -1,0 +1,80 @@
+{
+  "code": "xve",
+  "name": "Venetic",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "orthography_kind": "transliteration",
+  "quality": "skeleton",
+  "graphemes": {
+    "a": ["a"],
+    "e": ["e"],
+    "i": ["i"],
+    "o": ["o"],
+    "u": ["u"],
+    "p": ["p"],
+    "t": ["t"],
+    "k": ["k"],
+    "l": ["l"],
+    "m": ["m"],
+    "n": ["n"],
+    "r": ["r"],
+    "s": ["s"],
+    "v": ["w"],
+    "z": ["z"],
+    "h": ["h"],
+    "vh": ["f"],
+    "ś": ["ʃ"],
+    "θ": ["tʰ"],
+    "φ": ["pʰ"],
+    "χ": ["kʰ"]
+  },
+  "parent": "ine",
+  "ancestors": [
+    {
+      "code": "ine",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Indo-European; exact subgroup unresolved (Wikipedia: Venetic language; Pellegrini & Prosdocimi 1967)."
+    },
+    {
+      "code": "x-clade-ital1284",
+      "role": "adstrate",
+      "weight": 0.1,
+      "notes": "Proposed but disputed 'Italo-Celtic-Venetic' contact/affiliation (e.g. a 2016 proposal grouping Venetic with Italic); treated as unproven contact, not a genetic parent."
+    }
+  ],
+  "notes": "Skeleton. Extinct Indo-European language of ancient Veneto/Friuli and parts of Slovenia (6th-1st c. BCE), ~300 short inscriptions, transmitted in the Venetic alphabet (a Northern Italic script related to Etruscan, mostly written right-to-left) and, in the latest inscriptions (150-50 BCE), in the Latin alphabet as Latin loanwords flooded in. Scored here in the conventional epigraphic Latin transliteration used in the standard grammar (Pellegrini & Prosdocimi 1967): five vowels ⟨a e i o u⟩; the digraph ⟨vh⟩ (replacing the earlier Etruscan 8-shaped sign) for /f/, later replaced by ⟨h⟩ in some regions once [h] was lost — both are attested spellings and are kept distinct; ⟨ś⟩ a palatal fricative or dental affricate; the Greek-derived transliteration letters ⟨θ φ χ⟩ for aspirated stops, following the same convention used for Etruscan (ett.json). Exact IE subgrouping (independent branch vs. Italic vs. an Italo-Celtic-Venetic node) is unresolved in the literature; only the safe IE parent is asserted here.",
+  "iso639_3": "xve",
+  "glottolog_code": "vene1257",
+  "sources": [
+    {
+      "id": "pellegrini_prosdocimi1967",
+      "author": "Pellegrini, Giovan Battista; Prosdocimi, Aldo Luigi",
+      "year": 1967,
+      "title": "La lingua venetica",
+      "publisher": "Istituto di Glottologia dell'Università di Padova",
+      "url": null,
+      "pages": null,
+      "notes": "Standard grammar and alphabet/transliteration reference, cited via Mnamon.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Venetic_language"
+    },
+    {
+      "id": "mnamon_venetic",
+      "author": "Scuola Normale Superiore",
+      "year": 2024,
+      "title": "Mnamon: Venetic writing",
+      "publisher": "Mnamon",
+      "url": "https://mnamon.sns.it/index.php?page=Scrittura&id=31&lang=en",
+      "pages": null,
+      "notes": "Alphabet inventory and phonetic values (consonants v z h θ k l m n p ś r s t φ χ; vowels a i u e o; digraph vh)."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Venetic_language",
+    "https://en.wikipedia.org/wiki/Venetic_alphabet"
+  ],
+  "timespan": {
+    "start_year": -600,
+    "end_year": 100
+  }
+}

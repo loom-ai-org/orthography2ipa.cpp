@@ -1,0 +1,289 @@
+{
+  "parent": "trk",
+  "ancestors": [
+    {
+      "code": "trk",
+      "role": "parent",
+      "weight": 0.85,
+      "notes": "Descent from Proto-Turkic (Oghuz branch)."
+    },
+    {
+      "code": "fa",
+      "role": "adstrate",
+      "weight": 0.12,
+      "notes": "Persian adstrate: Central Asian literary/prestige influence."
+    },
+    {
+      "code": "ar",
+      "role": "adstrate",
+      "weight": 0.08,
+      "notes": "Arabic adstrate: religious/scholarly vocabulary, largely via Persian."
+    },
+    {
+      "code": "ru",
+      "role": "adstrate",
+      "weight": 0.05,
+      "notes": "Russian adstrate: Soviet-era lexicon."
+    }
+  ],
+  "code": "tk",
+  "name": "Turkmen",
+  "glottolog_code": "turk1304",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "iso639_3": "tuk",
+  "quality": "research",
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "b": [
+      "b"
+    ],
+    "ç": [
+      "tʃ"
+    ],
+    "d": [
+      "d"
+    ],
+    "e": [
+      "e"
+    ],
+    "ä": [
+      "æː"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "h": [
+      "h"
+    ],
+    "i": [
+      "i"
+    ],
+    "j": [
+      "dʒ"
+    ],
+    "ž": [
+      "ʒ"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ň": [
+      "ŋ"
+    ],
+    "o": [
+      "o"
+    ],
+    "ö": [
+      "ø"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "ɾ"
+    ],
+    "s": [
+      "θ"
+    ],
+    "ş": [
+      "ʃ"
+    ],
+    "t": [
+      "t"
+    ],
+    "u": [
+      "u"
+    ],
+    "ü": [
+      "y"
+    ],
+    "w": [
+      "w"
+    ],
+    "y": [
+      "ɯ"
+    ],
+    "ý": [
+      "j"
+    ],
+    "z": [
+      "ð"
+    ],
+    "rr": [
+      "r"
+    ]
+  },
+  "allophones": {
+    "a": [
+      "a"
+    ],
+    "b": [
+      "b",
+      "p"
+    ],
+    "tʃ": [
+      "tʃ"
+    ],
+    "d": [
+      "d",
+      "t"
+    ],
+    "e": [
+      "e"
+    ],
+    "f": [
+      "f"
+    ],
+    "ɡ": [
+      "ɡ",
+      "ɣ",
+      "k"
+    ],
+    "h": [
+      "h"
+    ],
+    "i": [
+      "i"
+    ],
+    "dʒ": [
+      "dʒ",
+      "tʃ"
+    ],
+    "ʒ": [
+      "ʒ"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ŋ": [
+      "ŋ"
+    ],
+    "o": [
+      "o"
+    ],
+    "ø": [
+      "ø"
+    ],
+    "p": [
+      "p"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "t": [
+      "t"
+    ],
+    "u": [
+      "u"
+    ],
+    "w": [
+      "w"
+    ],
+    "j": [
+      "j"
+    ],
+    "θ": [
+      "θ",
+      "s"
+    ],
+    "ɾ": [
+      "ɾ",
+      "r"
+    ],
+    "æː": [
+      "æ"
+    ],
+    "ð": [
+      "ð",
+      "z"
+    ],
+    "ɯ": [
+      "ɯ"
+    ],
+    "y": [
+      "y"
+    ]
+  },
+  "notes": "Turkmen in the Latin alphabet official since 1993. The letter values follow Gray's orthography-to-IPA table (§2.2): ⟨s⟩ and ⟨z⟩ are the interdental fricatives /θ ð/, the feature that separates Turkmen from every other Turkic standard (the alveolar [s z] readings are the Charjew dialect and are kept as allophones); ⟨y⟩ is the close back unrounded vowel /ɯ/ and ⟨ý⟩ is /j/, not the Turkish assignment of ⟨y⟩ to /j/; ⟨r⟩ is a flap /ɾ/ that becomes a trill when written double (garry); ⟨g⟩ is a stop word-initially and a fricative /ɣ/ elsewhere. ⟨ä⟩ is always long (§2.3), the one length contrast the orthography does encode: length is otherwise phonemic but unwritten, so this spec cannot and does not predict it. Ä = /æː/, Ň = /ŋ/, W is a labial-velar approximant, Ž = /ʒ/ in Russian loanwords. ⟨a⟩ is left as /a/: Gray's harmony chart classes it back while his pronunciation gloss describes a front vowel, and the two shipped golds disagree on the symbol, so the choice is not decidable from the source.",
+  "sources": [
+    {
+      "id": "gray2004",
+      "author": "Gray, David",
+      "year": 2004,
+      "title": "A Short Descriptive Grammar of the Turkmen Language",
+      "publisher": "SIL-NEG, Cheltenham",
+      "url": "https://archive.org/details/032-turkmen",
+      "pages": "5-7",
+      "notes": "§2.2 orthography-to-IPA table; §2.3 vowel harmony and vowel length; §2.4 stress."
+    },
+    {
+      "id": "johanson_csato1998",
+      "author": "Johanson, L. & Csátó, É. Á. (eds.)",
+      "year": 1998,
+      "title": "The Turkic Languages",
+      "publisher": "Routledge",
+      "url": null,
+      "pages": "261-272",
+      "notes": "Schönig's Turkmen chapter; consulted for classification, not fetched."
+    }
+  ],
+  "timespan": {
+    "start_year": 1993,
+    "end_year": null
+  },
+  "stress": {
+    "default_position": -1,
+    "final_stress_endings": [],
+    "penult_stress_endings": [],
+    "marked_vowels": [],
+    "stress_mark": "ˈ",
+    "notes": "Turkmen default stress is word-final (-1). Some grammatical suffixes (negation, question) attract stress to their own syllable; not modeled here. Source: Comrie (1997) in Johanson & Csató."
+  },
+  "wikidata_qid": "Q9267",
+  "phoible_id": "turk1304",
+  "wals_code": "tkm",
+  "location": {
+    "latitude": 37.08719,
+    "longitude": 59.17574,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Turkmen."
+  },
+  "positional_graphemes": {
+    "g": {
+      "word_initial": [
+        "ɡ"
+      ],
+      "default": [
+        "ɣ"
+      ]
+    }
+  },
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Turkmen_language",
+    "https://tk.wikipedia.org/wiki/T%C3%BCrkmen_dili"
+  ]
+}

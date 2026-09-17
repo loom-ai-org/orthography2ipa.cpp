@@ -1,0 +1,45 @@
+{
+  "code": "vls",
+  "name": "West Flemish",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "stub",
+  "graphemes": {},
+  "allophones": {},
+  "parent": "nl",
+  "ancestors": [
+    {
+      "code": "nl",
+      "role": "parent",
+      "weight": 0.85,
+      "notes": "Low Franconian; West Flemish is written with Dutch-based spelling conventions."
+    }
+  ],
+  "notes": "West Flemish (West-Vlams), a Low Franconian variety of Belgium, the Netherlands and French Flanders. STUB: the grapheme inventory is NOT yet specified. West Flemish has no official orthography: it is written with ad-hoc adaptations of Dutch spelling that do not consistently mark its distinctive vowels, the h-dropping, or the /ɣ/→[h] shift. A Dutch-based grapheme map would mis-transcribe it, so no map is claimed here.",
+  "iso639_3": "vls",
+  "glottolog_code": "vlaa1240",
+  "wikidata_qid": "Q100103",
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/West_Flemish",
+    "https://vls.wikipedia.org/wiki/West-Vlams"
+  ],
+  "sources": [
+    {
+      "id": "westflemish_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "West Flemish",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/West_Flemish",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/West_Flemish",
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "location": {
+    "latitude": 51.0754,
+    "longitude": 3.11345,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Western Flemish."
+  }
+}

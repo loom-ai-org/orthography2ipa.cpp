@@ -1,0 +1,336 @@
+{
+  "code": "sla",
+  "name": "Proto-Slavic",
+  "script": "Latin",
+  "graphemes": {
+    "ъ": [
+      "ŭ"
+    ],
+    "ь": [
+      "ĭ"
+    ],
+    "a": [
+      "a"
+    ],
+    "e": [
+      "e"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "o"
+    ],
+    "u": [
+      "u"
+    ],
+    "y": [
+      "ɨ"
+    ],
+    "ě": [
+      "æː"
+    ],
+    "ǫ": [
+      "õ"
+    ],
+    "ę": [
+      "ẽ"
+    ],
+    "ā": [
+      "aː"
+    ],
+    "ē": [
+      "eː"
+    ],
+    "ī": [
+      "iː"
+    ],
+    "ō": [
+      "oː"
+    ],
+    "ū": [
+      "uː"
+    ],
+    "p": [
+      "p"
+    ],
+    "b": [
+      "b"
+    ],
+    "t": [
+      "t"
+    ],
+    "d": [
+      "d"
+    ],
+    "k": [
+      "k"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "s": [
+      "s"
+    ],
+    "z": [
+      "z"
+    ],
+    "x": [
+      "x"
+    ],
+    "š": [
+      "ʃ"
+    ],
+    "ž": [
+      "ʒ"
+    ],
+    "c": [
+      "ts"
+    ],
+    "č": [
+      "tʃ"
+    ],
+    "dž": [
+      "dʒ"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ň": [
+      "ɲ"
+    ],
+    "l": [
+      "l"
+    ],
+    "ľ": [
+      "lʲ"
+    ],
+    "r": [
+      "r"
+    ],
+    "ŕ": [
+      "rʲ"
+    ],
+    "v": [
+      "ʋ"
+    ],
+    "j": [
+      "j"
+    ],
+    "tʲ": [
+      "tʲ"
+    ],
+    "dʲ": [
+      "dʲ"
+    ],
+    "kʲ": [
+      "kʲ"
+    ],
+    "gʲ": [
+      "ɡʲ"
+    ],
+    "sʲ": [
+      "sʲ"
+    ],
+    "zʲ": [
+      "zʲ"
+    ],
+    "nʲ": [
+      "nʲ"
+    ],
+    "lʲ": [
+      "lʲ"
+    ],
+    "rʲ": [
+      "rʲ"
+    ]
+  },
+  "allophones": {
+    "p": [
+      "p"
+    ],
+    "b": [
+      "b",
+      "p"
+    ],
+    "t": [
+      "t"
+    ],
+    "d": [
+      "d",
+      "t"
+    ],
+    "k": [
+      "k"
+    ],
+    "ɡ": [
+      "ɡ",
+      "k"
+    ],
+    "s": [
+      "s"
+    ],
+    "z": [
+      "z",
+      "s"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "ʒ": [
+      "ʒ",
+      "ʃ"
+    ],
+    "x": [
+      "x"
+    ],
+    "ts": [
+      "ts"
+    ],
+    "tʃ": [
+      "tʃ"
+    ],
+    "dʒ": [
+      "dʒ",
+      "tʃ"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n",
+      "ŋ"
+    ],
+    "ɲ": [
+      "ɲ"
+    ],
+    "l": [
+      "l"
+    ],
+    "lʲ": [
+      "lʲ"
+    ],
+    "r": [
+      "r"
+    ],
+    "rʲ": [
+      "rʲ"
+    ],
+    "ʋ": [
+      "ʋ",
+      "w"
+    ],
+    "j": [
+      "j"
+    ],
+    "a": [
+      "a"
+    ],
+    "aː": [
+      "aː"
+    ],
+    "e": [
+      "e"
+    ],
+    "eː": [
+      "eː"
+    ],
+    "i": [
+      "i"
+    ],
+    "iː": [
+      "iː"
+    ],
+    "o": [
+      "o"
+    ],
+    "oː": [
+      "oː"
+    ],
+    "u": [
+      "u"
+    ],
+    "uː": [
+      "uː"
+    ],
+    "ɨ": [
+      "ɨ"
+    ],
+    "æː": [
+      "æː",
+      "eː"
+    ],
+    "õ": [
+      "õ",
+      "ɔ̃"
+    ],
+    "ẽ": [
+      "ẽ",
+      "ɛ̃"
+    ],
+    "ŭ": [
+      "ŭ",
+      "ə"
+    ],
+    "ĭ": [
+      "ĭ",
+      "ɪ"
+    ]
+  },
+  "parent": "x-clade-slav1255",
+  "notes": "Reconstructed Late Proto-Slavic (c. 600–800 CE). Key features: open syllable law (no closed syllables), palatalisation alternations (three Slavic palatalisations), nasal vowels /ẽ õ/, yers /ĭ ŭ/, yat /æː/. Transcription follows standard Slavicist convention.",
+  "quality": "research",
+  "script_type": "alphabet",
+  "iso639_3": "sla",
+  "sources": [
+    {
+      "id": "comrie_corbett1993",
+      "author": "Comrie, B. & Corbett, G. (eds.)",
+      "year": 1993,
+      "title": "The Slavonic Languages",
+      "publisher": "Routledge",
+      "url": null,
+      "pages": null,
+      "notes": null,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Slavic_languages"
+    },
+    {
+      "id": "carlton1991",
+      "author": "Carlton, T.R.",
+      "year": 1991,
+      "title": "Introduction to the Phonological History of the Slavic Languages",
+      "publisher": "Slavica",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "fortson2010",
+      "author": "Fortson, B.W.",
+      "year": 2010,
+      "title": "Indo-European Language and Culture: An Introduction",
+      "publisher": "Blackwell",
+      "url": null,
+      "pages": null,
+      "notes": null,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Indo-European_languages"
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Proto-Slavic"
+  ],
+  "timespan": {
+    "start_year": 500,
+    "end_year": 1000
+  },
+  "glottolog_code": "slav1255",
+  "location": {
+    "latitude": 49.521986,
+    "longitude": 23.219229,
+    "source": "glottolog",
+    "notes": "Glottolog's computed centroid for the Slavic family — a summary of a whole clade's range, not a place anyone speaks."
+  }
+}

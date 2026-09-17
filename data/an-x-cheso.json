@@ -1,0 +1,95 @@
+{
+  "code": "an-x-cheso",
+  "name": "Cheso Aragonese (Hecho/Echo valley)",
+  "script": "Latin",
+  "graphemes_base": "an",
+  "allophones_base": "an",
+  "positional_graphemes_base": "an",
+  "graphemes": {
+    "x": [
+      "ʃ",
+      "ks"
+    ],
+    "ix": [
+      "ʃ"
+    ]
+  },
+  "parent": "an",
+  "ancestors": [
+    {
+      "code": "an",
+      "role": "parent",
+      "weight": 0.9,
+      "notes": "Cheso is a Western High-Aragonese valley variety inheriting the whole Aragonese grapheme→IPA system; it declares only the ⟨x⟩/⟨ix⟩ no-epenthesis delta and documents its lexical/morphological distinctiveness in notes."
+    },
+    {
+      "code": "la-x-hispania",
+      "role": "ancestor",
+      "weight": 0.72,
+      "notes": "Hispanic Vulgar Latin, inherited via Aragonese (an)."
+    },
+    {
+      "code": "oc",
+      "role": "adstrate",
+      "weight": 0.05,
+      "notes": "Gascon/Occitan Pyrenean adstrate, inherited via Aragonese."
+    }
+  ],
+  "quality": "research",
+  "script_type": "alphabet",
+  "notes": "Cheso — the Aragonese of the Echo/Hecho valley (Valle de Hecho, Aragón Subordán, Huesca), the most prestigious and productive literary variety of Aragonese (Veremundo Méndez Coarasa's poetry). A Western High-Aragonese variety. PHONOLOGICALLY-EXPRESSED DELTA modelled here: (1) the prepalatal fricative ⟨x⟩/⟨ix⟩ = [ʃ] is realised WITHOUT the epenthetic/palatal-glide vowel found in eastern High-Aragonese varieties, so ⟨ix⟩ is set to [ʃ] alone (the base an lists [ʃ, iʃ, jʃ]) — the Western realisation described for the valley (es.wikipedia 'Aragonés cheso', secondary; ultimately after Kuhn 1935 and the Cheso literary tradition). Cheso otherwise keeps the full Western Aragonese profile inherited from an: F- preserved ([f]-, feito, fillo), /θ/ distinción, palatal lateral /ʎ/ for ⟨ll⟩ (no yeísmo), ⟨ch⟩ = [tʃ]. FEATURES NOT PHONEME-MAPPABLE (documented, not modelled, because Aragonese orthography is phonemic and these are lexical/etymological, not grapheme→IPA rules): loss of the affricate [tʃ] in a closed set of etyma from Latin initial J-/G- (itar < IECTARE, hermano < GERMANU — words simply spelled without ⟨ch⟩, so the base map already reads them correctly); word-final /r/ of the infinitive is PRESERVED even before enclitics (contrast Ansotano, where it is deleted) — a lexical/positional retention already yielded by the base r → [ɾ]. MORPHOSYNTAX (out of phoneme scope): article o/a/os/as; auxiliary 'ser' for intransitive-movement/reflexive/naixer·morir; past-participle agreement with pronominal direct objects. Diphthongisation of Latin Ĕ/Ŏ → ie/ue is the Alto-Aragonés norm here (Várvaro, AFA XLVI-XLVII, p. 250: 'ué no tiene competidores' in the Hecho documents). PROVENANCE HONESTY: per-valley phonetics drawn from the Spanish-Wikipedia dialect article (secondary) which cites Kuhn (1935) and Méndez Coarasa; the Várvaro (AFA) diphthongisation study was read directly; Kuhn's primary text was not obtainable.",
+  "sources": [
+    {
+      "id": "kuhn1935",
+      "author": "Kuhn, A.",
+      "year": 1935,
+      "title": "Der hocharagonesische Dialekt",
+      "publisher": "Revue de Linguistique Romane XI, pp. 1-312",
+      "url": null,
+      "pages": null,
+      "notes": "The classic High-Aragonese dialect monograph, foundational for Ansó and Hecho. Cited via the secondary Spanish-Wikipedia dialect article; the primary text was not directly obtainable in this work."
+    },
+    {
+      "id": "varvaro_afa",
+      "author": "Várvaro, A.",
+      "year": 1991,
+      "title": "De la escritura al habla: la diptongación de O breve tónica en el Alto Aragón",
+      "publisher": "Archivo de Filología Aragonesa XLVI-XLVII",
+      "url": "https://ifc.dpz.es/recursos/publicaciones/15/72/12varvaro.pdf",
+      "pages": "245-268",
+      "notes": "Read directly. Documents the medieval geography of Ŏ-diphthongisation (ué/uá) across Hecho, Panticosa, Tena, Bielsa, Ansó and Gistaín (p. 250: Hecho shows only ué)."
+    },
+    {
+      "id": "nagore_lain2001",
+      "author": "Nagore Laín, F.",
+      "year": 2001,
+      "title": "Gramática de la Lengua Aragonesa",
+      "publisher": "Librería General",
+      "url": null,
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://es.wikipedia.org/wiki/Aragon%C3%A9s_cheso",
+    "https://en.wikipedia.org/wiki/Hecho_Aragonese",
+    "https://an.wikipedia.org/wiki/Aragon%C3%A9s_cheso"
+  ],
+  "urls": [
+    "https://es.wikipedia.org/wiki/Aragon%C3%A9s_cheso",
+    "https://en.wikipedia.org/wiki/Hecho_Aragonese"
+  ],
+  "timespan": {
+    "start_year": 1100,
+    "end_year": null
+  },
+  "glottolog_code": null,
+  "iso639_3": "arg",
+  "wikidata_qid": "Q3573993",
+  "location": {
+    "latitude": 42.738889,
+    "longitude": -0.750278,
+    "source": "wikidata",
+    "notes": "the Echo/Hecho valley (Huesca) — the valley the variety is named for and confined to. [Wikidata Q1766550 P625]"
+  }
+}

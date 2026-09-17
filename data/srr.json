@@ -1,0 +1,113 @@
+{
+  "code": "srr",
+  "name": "Serer (Seereer)",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "a": ["a"],
+    "aa": ["aː"],
+    "e": ["e"],
+    "ee": ["eː"],
+    "i": ["i"],
+    "ii": ["iː"],
+    "o": ["o"],
+    "oo": ["oː"],
+    "u": ["u"],
+    "uu": ["uː"],
+    "b": ["b"],
+    "c": ["c"],
+    "d": ["d"],
+    "f": ["f"],
+    "g": ["ɡ"],
+    "h": ["h"],
+    "j": ["ɟ"],
+    "k": ["k"],
+    "l": ["l"],
+    "m": ["m"],
+    "n": ["n"],
+    "ñ": ["ɲ"],
+    "ŋ": ["ŋ"],
+    "p": ["p"],
+    "q": ["q"],
+    "r": ["r"],
+    "s": ["s"],
+    "t": ["t"],
+    "w": ["w"],
+    "x": ["x"],
+    "y": ["j"],
+    "'": ["ʔ"],
+    "ɓ": ["ɓ"],
+    "ɗ": ["ɗ"],
+    "ƈ": ["ʄ"],
+    "ƭ": ["ɗ̥"],
+    "ƥ": ["ɓ̥"],
+    "mb": ["mb"],
+    "nd": ["nd"],
+    "nj": ["ɲɟ"],
+    "ng": ["ŋɡ"],
+    "nq": ["ɴq"]
+  },
+  "allophones": {
+    "a": ["a"], "aː": ["aː"], "e": ["e"], "eː": ["eː"], "i": ["i"], "iː": ["iː"],
+    "o": ["o"], "oː": ["oː"], "u": ["u"], "uː": ["uː"],
+    "b": ["b"], "c": ["c"], "d": ["d"], "f": ["f"], "ɡ": ["ɡ"], "h": ["h"],
+    "ɟ": ["ɟ"], "k": ["k"], "l": ["l"], "m": ["m"], "n": ["n"], "ɲ": ["ɲ"],
+    "ŋ": ["ŋ"], "p": ["p"], "q": ["q"], "r": ["r"], "s": ["s"], "t": ["t"],
+    "w": ["w"], "x": ["x"], "j": ["j"], "ʔ": ["ʔ"],
+    "ɓ": ["ɓ"], "ɗ": ["ɗ"], "ʄ": ["ʄ"], "ɗ̥": ["ɗ̥"], "ɓ̥": ["ɓ̥"],
+    "mb": ["mb"], "nd": ["nd"], "ɲɟ": ["ɲɟ"], "ŋɡ": ["ŋɡ"], "ɴq": ["ɴq"]
+  },
+  "notes": "Serer (Seereer-Siin), Northern Atlantic (Senegambian) branch of Atlantic-Congo, spoken mainly in the Sine-Saloum region of Senegal. The 2005-standardized Latin orthography is close to phonemic: ⟨c⟩ = palatal stop /c/, ⟨j⟩ = /ɟ/ (as in the closely related Wolof), ⟨ñ⟩ = /ɲ/, ⟨ŋ⟩ = /ŋ/, ⟨y⟩ = /j/. Five oral vowel qualities /i e a o u/ contrast length, written by doubling the vowel letter (a/aa, e/ee, i/ii, o/oo, u/uu), mirroring the vowel-length pattern of the related Fula (ff) and Wolof (wo) specs. Serer has a rare series of VOICELESS implosives (Ᵽ/ƥ /ɓ̥/, Ƭ/ƭ /ɗ̥/) alongside the more cross-linguistically common voiced implosives (Ɓ/ɓ /ɓ/, Ɗ/ɗ /ɗ/, Ƈ/ƈ /ʄ/) — a Niger-Congo substrate feature shared with other Senegambian languages. Word-initial prenasalized stops are written ⟨mb nd nj ng nq⟩; the uvular prenasalized ⟨nq⟩ is analysed here as [ɴq] by analogy with the other nasal+stop digraphs, pending direct phonetic confirmation. This spec is quality:research — grapheme values are drawn from the cited Wikipedia orthography table and cross-checked against the general Senegambian pattern shared by ff.json and wo.json, not against a full primary phonological description letter-by-letter.",
+  "sources": [
+    {
+      "id": "mclaughlin2000",
+      "author": "McLaughlin, Fiona",
+      "year": 2000,
+      "title": "Consonant Mutation and Reduplication in Seereer-Siin",
+      "publisher": "Studies in African Linguistics",
+      "url": null,
+      "pages": null,
+      "notes": "Phonological description of Seereer-Siin, including its implosive and prenasalized consonant series."
+    },
+    {
+      "id": "serer_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Serer language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Serer_language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Serer_language",
+      "pages": null,
+      "notes": "35-letter Latin alphabet table with IPA values; vowel and consonant inventory."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Serer_language"
+  ],
+  "urls": [
+    "https://glottolog.org/resource/languoid/id/sere1260",
+    "https://www.ethnologue.com/language/srr/"
+  ],
+  "iso639_3": "srr",
+  "glottolog_code": "sere1260",
+  "timespan": {
+    "start_year": 2005,
+    "end_year": null
+  },
+  "parent": "x-clade-atla1278",
+  "ancestors": [
+    {
+      "code": "x-clade-atla1278",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Atlantic-Congo — Serer belongs to the Northern Atlantic (Senegambian) branch, sibling to Wolof (wo) and Fula (ff)."
+    }
+  ],
+  "location": {
+    "latitude": 14.15,
+    "longitude": -16.45,
+    "source": "glottolog",
+    "notes": "Approximate centroid of the Sine-Saloum Serer-speaking region, Senegal."
+  }
+}

@@ -1,0 +1,674 @@
+{
+  "code": "oc",
+  "name": "Occitan",
+  "script": "Latin",
+  "parent": "x-clade-gallorom",
+  "ancestors": [
+    {
+      "code": "la-x-gallia",
+      "role": "parent",
+      "weight": 0.8,
+      "notes": "Gallo-Romance Vulgar Latin"
+    },
+    {
+      "code": "xtg",
+      "role": "substrate",
+      "weight": 0.06,
+      "notes": "Gaulish substrate: S. Gaul varieties, less Frankish overlay than N. French; cf. Lambert (2003)"
+    },
+    {
+      "code": "got",
+      "role": "superstrate",
+      "weight": 0.04,
+      "notes": "Visigothic superstrate: Toulouse kingdom (418-507 CE), strongest Germanic influence on Occitan"
+    },
+    {
+      "code": "xaq",
+      "role": "substrate",
+      "weight": 0.03,
+      "notes": "Basque substrate: primarily in Gascon dialect area; h- aspiration, loss of Latin f-, unique definite article eth/era; cf. Rohlfs (1970)"
+    },
+    {
+      "code": "xaa",
+      "role": "adstrate",
+      "weight": 0.03,
+      "notes": "Arabic adstrate: minor, via Iberian transmission"
+    }
+  ],
+  "notes": "Lengadocian (Languedocien) in the classical (Alibertine) norm — the reference variety of the norm and the one variety this spec describes. A single coherent dialect is the point: the letter values, the lenition and the stress rules below all belong to it, and mixing in a Provençal or Limousin value anywhere would make the output internally inconsistent.\n\nVowels: unmarked ⟨o⟩ and ⟨ó⟩ are [u], ⟨ò⟩ is [ɔ], ⟨u⟩ is [y], ⟨á⟩ is [ɔ], and unstressed word-final ⟨a⟩ is [ɔ] — including before a final -s, so ⟨peiretas⟩ is [peˈjɾetɔs] and ⟨casa⟩ is [ˈkazɔ]. Unstressed ⟨i⟩ before another vowel is the glide [j] (⟨nacion⟩ [naˈsju], ⟨Califòrnia⟩ [kaˈlifɔɾnjɔ]) while a STRESSED ⟨i⟩ in the same position stays a full vowel (⟨simpatia⟩ [simpaˈtiɔ]); ⟨uè⟩ and ⟨ue⟩ are [ɥɛ] (⟨uèch⟩ [ˈɥɛtʃ], ⟨puèg⟩ [ˈpɥɛtʃ]).\n\nConsonants: ⟨c⟩ and ⟨sc⟩ before ⟨e i⟩ are [s], ⟨cc⟩ before ⟨e i⟩ is [t͡s] — which is why ⟨occitan⟩ is [utsiˈta] — ⟨g⟩ before ⟨e i⟩ and ⟨j⟩, ⟨tg⟩, ⟨tj⟩ are [d͡ʒ], ⟨ch⟩ is [t͡ʃ], ⟨lh⟩ [ʎ], ⟨nh⟩ [ɲ] (depalatalised to [n] word-finally: ⟨codonh⟩ [kuˈðun]), ⟨sh⟩ [ʃ], ⟨x⟩ [t͡s] and [s] before a consonant, ⟨h⟩ silent. Betacism merges ⟨v⟩ into [b], and /b d ɡ/ lenite to [β ð ɣ] between vowels. Word-final ⟨-n⟩ and the infinitive ⟨-r⟩ are silent (⟨Japon⟩ [dʒaˈpu], ⟨cantar⟩ [kaˈnta]); word-final ⟨-b -d⟩ devoice to [p t] (⟨actitud⟩ [aktiˈtyt]), word-final ⟨-m⟩ is [n] (⟨pergam⟩ [peɾˈɡan]), and word-final ⟨-g⟩ after a vowel is [t͡ʃ] (⟨puèg⟩), the devoiced reflex of the /d͡ʒ/ that ⟨-g⟩ spells there. ⟨r⟩ is a tap [ɾ] by default and a trill [r] word-initially and as ⟨rr⟩. The elision apostrophe of ⟨l'ostal⟩, ⟨d'aiga⟩ and ⟨qu'es⟩ is a silent grapheme so the clitic stays inside its host word instead of being split off as a word of its own.\n\nStress is predictable and carries no diacritic when it is regular: a word ending in a vowel or in a vowel + ⟨-s⟩ is paroxytone, and a word ending in any other consonant or in a diphthong is oxytone. Infinitives therefore take FINAL stress (⟨cantar⟩ [kaˈnta], ⟨corrir⟩ [kuˈri]), even though their ⟨-r⟩ is not pronounced. A written accent (à á è é í ò ó ú) always wins and states the vowel's quality as well as its position; ⟨ï⟩ and ⟨ü⟩ are hiatus marks, not stress marks. Verb forms in ⟨-an -en -in -on -un⟩ are paroxytone and keep their [n], but that is a morphological fact this layer cannot see, so they are read as the oxytone nouns of the same shape (⟨pichon⟩ [piˈtʃu]); a downstream consumer with a lexicon is where that is fixed.\n\nNot encoded, and what a future child spec would need: Gascon (Latin F- > ⟨h⟩ and its deaspiration, loss of intervocalic -N-, -LL- > -th/-r, the interpunct digraphs) is described in oc-x-aranes; Provençal (final-consonant loss, ⟨-l⟩ vocalisation, the preserved /v/), Limousin, Auvergnat and Vivaro-Alpine (northern nasal vowels, ⟨ch⟩ [t͡s]) have none, and the wikipron gold below shows all of them mixed together. Each needs its own cited letter table before it can be added — a Provençal value dropped into this Lengadocian one would be a dialect mixture, not a description.\n\nGold note: the wikipron oci set is community Wiktionary transcription and is NOT one variety. It writes unstressed final ⟨-a⟩ as [o] (98), [ɔ] (36), [ɒ] (29) and [o̞] (26), carries uvular [ʁ] and French-style nasal vowels in a minority of rows, applies the intervocalic lenition in roughly half the eligible words, and gives several words twice in two dialects. It also records no stress marks at all, so no stress work can move its PER. The [ɔ] here is the cited Lengadocian value and the divergence from the gold's [o] is notation, not error.\n\nTwo limits of the stress MARK, both in the engine rather than in this description. The mark is drawn on a syllabification of the IPA that does not read this spec's phonotactics, so inside a medial cluster it lands one segment early: ⟨cantar⟩ surfaces as [kaˈnta] and ⟨peiretas⟩ as [peˈjɾetɔs] where the syllable division is kan-tar and pej-re-tas. The correct syllable is still the one detected, and no segment changes. Separately, glide formation gives the transcription FEWER syllables than the spelling has, and the mark is anchored from the end, so on a word whose written accent stands before a glide the mark slides onto an earlier vowel: ⟨Califòrnia⟩ surfaces as [kaˈlifɔɾnjɔ], marking the /i/ rather than the accented ⟨ò⟩. That one IS a wrong stressed vowel, not merely a misplaced boundary. ⟨país⟩ is [ˈpais] for a third reason — its ⟨aí⟩ hiatus reaches the IPA as the letters ⟨ai⟩, which the diphthong list then merges. All three are engine work; the first class is what the stress-mark splitter change addresses.",
+  "sources": [
+    {
+      "id": "alibert1976",
+      "author": "Alibert, L.",
+      "year": 1976,
+      "title": "Gramatica occitana",
+      "publisher": "Institut d'Estudis Occitans",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "bec1973",
+      "author": "Bec, P.",
+      "year": 1973,
+      "title": "Manuel pratique d'occitan moderne",
+      "publisher": "Picard",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "ladefoged_maddieson1996",
+      "author": "Ladefoged, P. & Maddieson, I.",
+      "year": 1996,
+      "title": "The Sounds of the World's Languages",
+      "publisher": "Blackwell",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "wheeler1988",
+      "author": "Wheeler, M. W.",
+      "year": 1988,
+      "title": "Occitan",
+      "publisher": "In Harris & Vincent (eds.), The Romance Languages, Routledge",
+      "url": null,
+      "pages": "246-278",
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Occitan_language",
+    "https://oc.wikipedia.org/wiki/Occitan",
+    "https://fr.wikipedia.org/wiki/Occitan"
+  ],
+  "timespan": {
+    "start_year": 1000,
+    "end_year": null
+  },
+  "glottolog_code": "occi1239",
+  "iso639_3": "oci",
+  "graphemes": {
+    "a": [
+      "a",
+      "ɔ"
+    ],
+    "à": [
+      "a"
+    ],
+    "á": [
+      "ɔ"
+    ],
+    "e": [
+      "e",
+      "ɛ"
+    ],
+    "é": [
+      "e"
+    ],
+    "è": [
+      "ɛ"
+    ],
+    "i": [
+      "i",
+      "j"
+    ],
+    "í": [
+      "i"
+    ],
+    "ï": [
+      "i"
+    ],
+    "o": [
+      "u"
+    ],
+    "ó": [
+      "u"
+    ],
+    "ò": [
+      "ɔ"
+    ],
+    "u": [
+      "y",
+      "w"
+    ],
+    "ú": [
+      "y"
+    ],
+    "ü": [
+      "y"
+    ],
+    "ai": [
+      "aj"
+    ],
+    "au": [
+      "aw"
+    ],
+    "ei": [
+      "ej"
+    ],
+    "èi": [
+      "ɛj"
+    ],
+    "eu": [
+      "ew"
+    ],
+    "èu": [
+      "ɛw"
+    ],
+    "iu": [
+      "iw"
+    ],
+    "oi": [
+      "uj"
+    ],
+    "òi": [
+      "ɔj"
+    ],
+    "òu": [
+      "ɔw"
+    ],
+    "b": [
+      "b",
+      "β"
+    ],
+    "c": [
+      "k",
+      "s"
+    ],
+    "ç": [
+      "s"
+    ],
+    "ch": [
+      "tʃ"
+    ],
+    "d": [
+      "d",
+      "ð"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɡ",
+      "dʒ",
+      "ɣ"
+    ],
+    "gu": [
+      "ɡ"
+    ],
+    "h": [
+      ""
+    ],
+    "j": [
+      "dʒ"
+    ],
+    "l": [
+      "l"
+    ],
+    "lh": [
+      "ʎ"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n",
+      ""
+    ],
+    "nh": [
+      "ɲ"
+    ],
+    "p": [
+      "p"
+    ],
+    "q": [
+      "k"
+    ],
+    "qu": [
+      "k"
+    ],
+    "r": [
+      "ɾ",
+      "r",
+      ""
+    ],
+    "rr": [
+      "r"
+    ],
+    "s": [
+      "s",
+      "z"
+    ],
+    "ss": [
+      "s"
+    ],
+    "sh": [
+      "ʃ"
+    ],
+    "t": [
+      "t"
+    ],
+    "tg": [
+      "dʒ"
+    ],
+    "tj": [
+      "dʒ"
+    ],
+    "tz": [
+      "ts",
+      "z"
+    ],
+    "v": [
+      "b",
+      "β"
+    ],
+    "x": [
+      "ts",
+      "s"
+    ],
+    "z": [
+      "z"
+    ],
+    "k": [
+      "k"
+    ],
+    "w": [
+      "w"
+    ],
+    "y": [
+      "i"
+    ],
+    "cc": [
+      "ts",
+      "k"
+    ],
+    "uè": [
+      "ɥɛ"
+    ],
+    "th": [
+      "t"
+    ],
+    "sc": [
+      "sk",
+      "s"
+    ],
+    "ói": [
+      "uj"
+    ],
+    "'": [
+      ""
+    ],
+    "’": [
+      ""
+    ],
+    "qu'": [
+      "k"
+    ],
+    "qu’": [
+      "k"
+    ],
+    "ue": [
+      "ɥɛ",
+      "we"
+    ]
+  },
+  "allophones": {
+    "b": [
+      "b",
+      "β"
+    ],
+    "d": [
+      "d",
+      "ð"
+    ],
+    "ɡ": [
+      "ɡ",
+      "ɣ"
+    ],
+    "p": [
+      "p"
+    ],
+    "t": [
+      "t"
+    ],
+    "k": [
+      "k"
+    ],
+    "f": [
+      "f"
+    ],
+    "s": [
+      "s",
+      "z"
+    ],
+    "z": [
+      "z"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "tʃ": [
+      "tʃ"
+    ],
+    "dʒ": [
+      "dʒ"
+    ],
+    "ts": [
+      "ts"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n",
+      "ŋ",
+      "m"
+    ],
+    "ɲ": [
+      "ɲ"
+    ],
+    "l": [
+      "l"
+    ],
+    "ʎ": [
+      "ʎ"
+    ],
+    "r": [
+      "r"
+    ],
+    "ɾ": [
+      "ɾ"
+    ],
+    "j": [
+      "j"
+    ],
+    "w": [
+      "w"
+    ],
+    "a": [
+      "a",
+      "ɔ"
+    ],
+    "e": [
+      "e"
+    ],
+    "ɛ": [
+      "ɛ"
+    ],
+    "i": [
+      "i"
+    ],
+    "u": [
+      "u"
+    ],
+    "y": [
+      "y"
+    ],
+    "ɔ": [
+      "ɔ"
+    ]
+  },
+  "positional_graphemes": {
+    "a": {
+      "default": [
+        "a"
+      ],
+      "word_final": [
+        "ɔ"
+      ],
+      "posttonic": [
+        "ɔ"
+      ]
+    },
+    "b": {
+      "default": [
+        "b"
+      ],
+      "intervocalic": [
+        "β"
+      ],
+      "word_final": [
+        "p"
+      ]
+    },
+    "d": {
+      "default": [
+        "d"
+      ],
+      "intervocalic": [
+        "ð"
+      ],
+      "word_final": [
+        "t"
+      ]
+    },
+    "g": {
+      "before_e": [
+        "dʒ"
+      ],
+      "before_i": [
+        "dʒ"
+      ],
+      "word_final": [
+        "tʃ",
+        "k"
+      ],
+      "intervocalic": [
+        "ɣ"
+      ],
+      "default": [
+        "ɡ"
+      ]
+    },
+    "v": {
+      "default": [
+        "b"
+      ],
+      "intervocalic": [
+        "β"
+      ]
+    },
+    "s": {
+      "default": [
+        "s"
+      ],
+      "intervocalic": [
+        "z"
+      ]
+    },
+    "r": {
+      "word_initial": [
+        "r"
+      ],
+      "default": [
+        "ɾ"
+      ],
+      "word_final": [
+        ""
+      ]
+    },
+    "n": {
+      "default": [
+        "n"
+      ],
+      "word_final": [
+        ""
+      ]
+    },
+    "gu": {
+      "before_a": [
+        "ɡw"
+      ],
+      "before_o": [
+        "ɡw"
+      ],
+      "before_e": [
+        "ɡ"
+      ],
+      "before_i": [
+        "ɡ"
+      ],
+      "default": [
+        "ɡ"
+      ]
+    },
+    "c": {
+      "before_e": [
+        "s"
+      ],
+      "before_i": [
+        "s"
+      ],
+      "default": [
+        "k"
+      ]
+    },
+    "cc": {
+      "before_e": [
+        "ts"
+      ],
+      "before_i": [
+        "ts"
+      ],
+      "default": [
+        "k"
+      ]
+    },
+    "i": {
+      "nucleus_stressed": [
+        "i"
+      ],
+      "before_vowel": [
+        "j"
+      ],
+      "default": [
+        "i"
+      ]
+    },
+    "m": {
+      "default": [
+        "m"
+      ],
+      "word_final": [
+        "n"
+      ]
+    },
+    "nh": {
+      "default": [
+        "ɲ"
+      ],
+      "word_final": [
+        "n"
+      ]
+    },
+    "x": {
+      "before_consonant": [
+        "s"
+      ],
+      "default": [
+        "ts"
+      ]
+    },
+    "sc": {
+      "before_e": [
+        "s"
+      ],
+      "before_i": [
+        "s"
+      ],
+      "default": [
+        "sk"
+      ]
+    }
+  },
+  "quality": "research",
+  "stress": {
+    "onset_clusters": ["bl", "br", "bɫ", "bɾ", "bʀ", "bʁ", "bʎ", "bχ", "dr", "dɾ", "dʀ", "dʁ", "dʎ", "dχ", "fl", "fr", "fɫ", "fɾ", "fʀ", "fʁ", "fʎ", "fχ", "kl", "kr", "kɫ", "kɾ", "kʀ", "kʁ", "kʎ", "kχ", "pl", "pr", "pɫ", "pɾ", "pʀ", "pʁ", "pʎ", "pχ", "tr", "tɾ", "tʀ", "tʁ", "tʎ", "tχ", "vl", "vr", "vɫ", "vɾ", "vʀ", "vʁ", "vʎ", "vχ", "ðr", "ðɾ", "ðʀ", "ðʁ", "ðʎ", "ðχ", "ɡl", "ɡr", "ɡɫ", "ɡɾ", "ɡʀ", "ɡʁ", "ɡʎ", "ɡχ", "ɣl", "ɣr", "ɣɫ", "ɣɾ", "ɣʀ", "ɣʁ", "ɣʎ", "ɣχ", "βl", "βr", "βɫ", "βɾ", "βʀ", "βʁ", "βʎ", "βχ"],
+    "default_position": -1,
+    "final_stress_endings": [
+      "ai",
+      "au",
+      "ei",
+      "èi",
+      "eu",
+      "èu",
+      "iu",
+      "oi",
+      "òi",
+      "ói",
+      "ou",
+      "òu",
+      "ui",
+      "uè"
+    ],
+    "penult_stress_endings": [
+      "a",
+      "e",
+      "i",
+      "o",
+      "u",
+      "as",
+      "es",
+      "is",
+      "os",
+      "us"
+    ],
+    "marked_vowels": [
+      "à",
+      "á",
+      "è",
+      "é",
+      "í",
+      "ò",
+      "ó",
+      "ú"
+    ],
+    "stress_mark": "ˈ",
+    "notes": "Occitan accentuation in the classical (Alibertine) norm. A word ending in a vowel, or in a vowel + ⟨-s⟩, is paroxytone; a word ending in any other consonant, or in a diphthong, is oxytone, which is why the default position is final. Infinitives are OXYTONE: ⟨cantar⟩ is [kanˈta] and ⟨corrir⟩ is [kuˈri]. Their ⟨-r⟩ is silent, but it is still the consonant that ends the word for the purposes of this rule, so ⟨-ar -er -ir⟩ are NOT paroxytone endings — listing them as such put the accent on the wrong syllable for every infinitive in the language. A written accent (à á è é í ò ó ú) always wins and states the vowel's quality as well as its position; ⟨ï⟩ and ⟨ü⟩ mark hiatus and are not stress marks. Proparoxytones are rare and always carry a written accent. Verb forms in ⟨-an -en -in -on -un⟩ are paroxytone and keep their [n], but telling them from the nouns of the same shape (⟨pichon⟩, ⟨nacion⟩, which are oxytone) needs morphology this layer does not have, so they are read as oxytone. ⟨o⟩-final words are rare in the orthography, since ⟨o⟩ reads [u]. Rules per Wikipédia, \"Prononciation de l'occitan\" (lengadocian accentuation) and fr.wiktionary, \"Annexe:Prononciation/occitan\"; Bec 1973 and Alibert 1976 remain the underlying normative sources for the norm itself.",
+    "diphthongs": [
+      "ai",
+      "au",
+      "ei",
+      "èi",
+      "eu",
+      "èu",
+      "iu",
+      "oi",
+      "òi",
+      "ói",
+      "ou",
+      "òu",
+      "ui",
+      "uè",
+      "ue"
+    ],
+    "max_onset": 2,
+    "coda_liquid_capture": true
+  },
+  "wikidata_qid": "Q14185",
+  "phoible_id": "occi1239",
+  "wals_code": "occ",
+  "location": {
+    "latitude": 44.1415,
+    "longitude": 6.82979,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Occitan."
+  },
+  "allophone_rules": [
+    {
+      "id": "n-velar-assimilation",
+      "phonemes": [
+        "n"
+      ],
+      "surface": "ŋ",
+      "followed_by_phoneme": [
+        "k",
+        "ɡ"
+      ],
+      "notes": "⟨n⟩ before a velar stop is [ŋ]: ⟨ancora⟩ [aŋˈkuɾɔ], ⟨anglés⟩ [aŋˈɡles], ⟨Lengadòc⟩ [leŋɡaˈðɔk]. Keyed on the PHONEME, so ⟨ancian⟩ — where ⟨c⟩ before ⟨i⟩ is [s] — keeps its [n] (Wikipédia, Prononciation de l'occitan, lengadocian column; Alibert 1976)."
+    }
+  ],
+  "constrain_onsets": true
+}

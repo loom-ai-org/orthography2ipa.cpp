@@ -1,0 +1,251 @@
+{
+  "code": "ira",
+  "name": "Proto-Iranian",
+  "script": "Latin",
+  "graphemes": {
+    "p": [
+      "p"
+    ],
+    "b": [
+      "b"
+    ],
+    "t": [
+      "t"
+    ],
+    "d": [
+      "d"
+    ],
+    "k": [
+      "k"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "h": [
+      "h"
+    ],
+    "s": [
+      "s"
+    ],
+    "f": [
+      "f"
+    ],
+    "θ": [
+      "θ"
+    ],
+    "x": [
+      "x"
+    ],
+    "z": [
+      "z"
+    ],
+    "š": [
+      "ʃ"
+    ],
+    "ž": [
+      "ʒ"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "r": [
+      "r"
+    ],
+    "y": [
+      "j"
+    ],
+    "v": [
+      "v"
+    ],
+    "l": [
+      "l"
+    ],
+    "a": [
+      "a"
+    ],
+    "ā": [
+      "aː"
+    ],
+    "i": [
+      "i"
+    ],
+    "ī": [
+      "iː"
+    ],
+    "u": [
+      "u"
+    ],
+    "ū": [
+      "uː"
+    ],
+    "ai": [
+      "aj"
+    ],
+    "au": [
+      "aw"
+    ],
+    "č": [
+      "tʃ"
+    ],
+    "ǰ": [
+      "dʒ"
+    ]
+  },
+  "allophones": {
+    "p": [
+      "p"
+    ],
+    "b": [
+      "b"
+    ],
+    "t": [
+      "t"
+    ],
+    "d": [
+      "d"
+    ],
+    "k": [
+      "k"
+    ],
+    "ɡ": [
+      "ɡ"
+    ],
+    "f": [
+      "f"
+    ],
+    "θ": [
+      "θ"
+    ],
+    "x": [
+      "x"
+    ],
+    "h": [
+      "h"
+    ],
+    "s": [
+      "s"
+    ],
+    "z": [
+      "z"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "ʒ": [
+      "ʒ"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n",
+      "ŋ"
+    ],
+    "r": [
+      "r"
+    ],
+    "l": [
+      "l"
+    ],
+    "j": [
+      "j"
+    ],
+    "v": [
+      "v",
+      "w"
+    ],
+    "a": [
+      "a"
+    ],
+    "aː": [
+      "aː"
+    ],
+    "i": [
+      "i"
+    ],
+    "iː": [
+      "iː"
+    ],
+    "u": [
+      "u"
+    ],
+    "uː": [
+      "uː"
+    ],
+    "aj": [
+      "aj"
+    ],
+    "aw": [
+      "aw"
+    ],
+    "tʃ": [
+      "tʃ"
+    ],
+    "dʒ": [
+      "dʒ"
+    ]
+  },
+  "parent": "x-clade-iran1269",
+  "ancestors": [
+    {
+      "code": "iir",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Descent from Proto-Indo-Iranian"
+    }
+  ],
+  "notes": "Proto-Iranian (~1500–1000 BCE). Ancestor of all Iranian languages: Persian, Avestan, Sogdian, Parthian, Bactrian, Pashto, Kurdish, Ossetic, Balochi, etc. KEY INNOVATIONS vs. Proto-Indo-Iranian: (1) *s → h: THE diagnostic Iranian change (PII *saptan → PIr. *haptan     'seven'; cf. Sanskrit saptá); (2) Voiced aspirates DEASPIRATED: *bʱ, *dʱ, *gʱ → b, d, g     (Iranian loses the breathy-voice series; Sanskrit preserves it); (3) *w → *v (labial fricative/approximant); (4) Labiovelars *kʷ → *k (labialisation lost); (5) Spirant allophones of stops developing:     *p → f, *t → θ, *k → x in fricative environments. Script: romanization (unattested proto-language).",
+  "quality": "research",
+  "script_type": "alphabet",
+  "iso639_3": "ira",
+  "sources": [
+    {
+      "id": "fortson2010",
+      "author": "Fortson, B.W.",
+      "year": 2010,
+      "title": "Indo-European Language and Culture: An Introduction",
+      "publisher": "Blackwell",
+      "url": null,
+      "pages": null,
+      "notes": null,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Indo-European_languages"
+    },
+    {
+      "id": "windfuhr1979",
+      "author": "Windfuhr, G.",
+      "year": 1979,
+      "title": "Persian Grammar: History and State of Its Study",
+      "publisher": "Mouton",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "hoffmann_forssman2004",
+      "author": "Hoffmann, K. & Forssman, B.",
+      "year": 2004,
+      "title": "Avestische Laut- und Flexionslehre (2nd ed.)",
+      "publisher": "Innsbruck",
+      "url": null,
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Iranian_languages"
+  ],
+  "timespan": {
+    "start_year": -1500,
+    "end_year": -500
+  },
+  "glottolog_code": "iran1269",
+  "location": {
+    "latitude": 35.235832,
+    "longitude": 63.728053,
+    "source": "glottolog",
+    "notes": "Glottolog's computed centroid for the Iranian family — a summary of a whole clade's range, not a place anyone speaks."
+  }
+}

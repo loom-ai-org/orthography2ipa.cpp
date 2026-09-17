@@ -1,0 +1,282 @@
+{
+  "code": "ar-NG",
+  "name": "Nigerian Arabic (Shuwa)",
+  "script": "Arabic",
+  "graphemes_base": "ar-TD",
+  "graphemes": {
+    "ث": [
+      "t"
+    ],
+    "ذ": [
+      "d"
+    ],
+    "ظ": [
+      "dˤ"
+    ],
+    "ق": [
+      "ɡ",
+      "q"
+    ],
+    "الثث": [
+      "att"
+    ],
+    "اَلثث": [
+      "att"
+    ],
+    "لِلثث": [
+      "litt"
+    ],
+    "وَالثث": [
+      "watt"
+    ],
+    "فَالثث": [
+      "fatt"
+    ],
+    "بِالثث": [
+      "bitt"
+    ],
+    "كَالثث": [
+      "katt"
+    ],
+    "الذذ": [
+      "add"
+    ],
+    "اَلذذ": [
+      "add"
+    ],
+    "لِلذذ": [
+      "lidd"
+    ],
+    "وَالذذ": [
+      "wadd"
+    ],
+    "فَالذذ": [
+      "fadd"
+    ],
+    "بِالذذ": [
+      "bidd"
+    ],
+    "كَالذذ": [
+      "kadd"
+    ],
+    "اِلثث": [
+      "itt"
+    ],
+    "اِلذذ": [
+      "idd"
+    ],
+    "وِالثث": [
+      "witt"
+    ],
+    "وِالذذ": [
+      "widd"
+    ],
+    "الظظ": [
+      "adˤdˤ"
+    ],
+    "اَلظظ": [
+      "adˤdˤ"
+    ],
+    "اِلظظ": [
+      "idˤdˤ"
+    ],
+    "لِلظظ": [
+      "lidˤdˤ"
+    ],
+    "وَالظظ": [
+      "wadˤdˤ"
+    ],
+    "فَالظظ": [
+      "fadˤdˤ"
+    ],
+    "بِالظظ": [
+      "bidˤdˤ"
+    ],
+    "كَالظظ": [
+      "kadˤdˤ"
+    ],
+    "وِالظظ": [
+      "widˤdˤ"
+    ],
+    "وَيْ": [
+      "waj"
+    ],
+    "يَوْ": [
+      "jaw"
+    ]
+  },
+  "allophones_base": "ar-TD",
+  "allophones": {
+    "q": [
+      "ɡ",
+      "q"
+    ],
+    "θ": [
+      "t"
+    ],
+    "ð": [
+      "d"
+    ],
+    "ðˤ": [
+      "dˤ"
+    ],
+    "aː": [
+      "aː"
+    ],
+    "iː": [
+      "iː"
+    ],
+    "uː": [
+      "uː"
+    ]
+  },
+  "parent": "ar-TD",
+  "ancestors": [
+    {
+      "code": "ar-TD",
+      "role": "parent",
+      "weight": 0.9,
+      "notes": "Nigerian (Shuwa) Arabic is the western end of the same West Sudanic / Lake Chad chain as Chadian Arabic and inherits its Bedouin base; it differs mainly in completing the interdental merger and in intenser contact with Hausa/Kanuri."
+    }
+  ],
+  "allophone_rules": [
+    {
+      "id": "TD_MONO_AW",
+      "phonemes": [],
+      "surface": "oː",
+      "notes": "DISABLED for Nigerian (Shuwa) Arabic — the diphthong-retaining Bedouin endpoint. ar-TD models the urban N'Djamena /aw/→[oː] monophthongization as its mainline, but Owens (1993) documents Nigerian Arabic as RETAINING /aj aw/ (jawm 'day', dawr; the ar-NG gold keeps them). The rule is inherited by id from ar-TD, so it is overridden here to an empty-phoneme no-op (the documented mechanism for a child dropping a parent's process). The word-initial ⟨وَيْ⟩/⟨يَوْ⟩ graphemes are likewise overridden in this spec's graphemes back to the diphthong readings [waj]/[jaw]."
+    }
+  ],
+  "notes": "Nigerian Arabic, locally Shuwa Arabic (Kanuri shuwa 'Arab nomad'; ISO shu). Spoken in Borno and Yobe states (NE Nigeria), with continua into Cameroon and Niger. It is the western tip of the West Sudanic / Lake Chad Arabic chain and the variety described by Owens (1993) A Grammar of Nigerian Arabic, the fullest grammar of the whole chain. DELTAS FROM CHADIAN ARABIC (ar-TD): (1) INTERDENTALS fully merge to stops -- ث -> /t/, ذ -> /d/, ظ -> /dˤ/ (Owens 2006 p.25: 'Nigerian Arabic has lost the interdentals'; they fall together with the plain stops rather than being variably retained as in the more conservative Chad varieties). (2) qaf ق -> /ɡ/ in the vernacular (gal 'he said'), with /q/ recovered in learned/Classical borrowings and more educated speech -- so ق is [ɡ, q]. INHERITED FROM ar-TD: jim ج -> /dʒ/ (~[ɟ]); the extended emphatic inventory /tˤ dˤ sˤ (ðˤ)/ plus phonemic /lˤ rˤ mˤ/ with minimal pairs gallab/galˤlˤab, karra/karˤrˤa, amm/amˤmˤ (Owens 2006 p.25 -- NOTE: emphasis is EXTENDED, not lost; the widely repeated 'weakened emphasis' claim is not what Owens documents); the gahawa low-vowel insertion after gutturals (the AR_TD_GAHAWA_* allophone_rules inherit from ar-TD via the OVERLAY_BY_ID mechanism keyed on graphemes_base; an ar-NG override would reuse the parent rule IDs); emphatic backing of /a aː/ -> [ɑ ɑː] from the Mashriqi base. VOWELS: a five-quality system /i e a o u/ with length (Abu-Absi & Sinaud 1968; Owens 2006), the mid /e o/ largely from DIACHRONICALLY monophthongised */aj aw/ — the historical origin of the /e o/ phonemes, NOT a synchronic categorical rule. SYNCHRONICALLY Nigerian (Shuwa) Arabic RETAINS the diphthongs /aj aw/ (kayf 'how', bajt 'house', wajn 'where'; Owens 1993, the diphthong-retaining Bedouin type), so no /aj aw/→[eː oː] monophthongization surfaces. Since the ar-TD parent now models the urban N'Djamena /aw/→[oː] merger (rule TD_MONO_AW) plus the word-initial ⟨وَيْ⟩/⟨يَوْ⟩ monophthong graphemes, ar-NG explicitly OVERRIDES them back to retention: TD_MONO_AW is redeclared with empty phonemes (a no-op) and ⟨وَيْ⟩/⟨يَوْ⟩ are remapped to [waj]/[jaw]. The ar-NG gold deliberately keeps these diphthongs. SUBSTRATE (phonology, not lexicon): implosive allophones [ɓ ɗ], velar nasal /ŋ/, and the *t > [ɗˤ] emphatic implosive attributed to Fulfulde contact (Owens 2006 p.19). Incipient lexical tone is debated in the literature and is NOT encoded here (Owens 1993).",
+  "quality": "research",
+  "script_type": "abjad",
+  "sources": [
+    {
+      "id": "owens1993",
+      "author": "Owens, Jonathan",
+      "year": 1993,
+      "title": "A Grammar of Nigerian Arabic",
+      "publisher": "Harrassowitz",
+      "url": null,
+      "pages": null,
+      "notes": "The primary descriptive grammar of Nigerian (Shuwa) Arabic and of the West Sudanic chain: qaf -> [ɡ] (gal), full loss of the interdentals, the gahawa low-vowel insertion, the extended emphatic inventory, and the (debated) question of incipient tone."
+    },
+    {
+      "id": "owens2006",
+      "author": "Owens, Jonathan",
+      "year": 2006,
+      "title": "A Linguistic History of Arabic",
+      "publisher": "Oxford University Press",
+      "url": "https://archive.org/stream/TheLinguisticHistoryOfArabic/Owens-Linguistic_History_of_Arabic_djvu.txt",
+      "pages": "13-14, 19, 25",
+      "notes": "Read in full text. p.25: Nigerian Arabic has lost the interdentals; six phonemic emphatics (the four Classical plus /lˤ rˤ mˤ/) with minimal pairs gallab/galˤlˤab, karra/karˤrˤa, amm/amˤmˤ; /a/-insertion after a guttural (ahamar < *ʔaḥmar). p.19: *t > [ɗˤ] emphatic implosive from Fulfulde contact. p.13-14: 1sg perfect -t loss with stress evidence."
+    },
+    {
+      "id": "abuabsi1968",
+      "author": "Abu-Absi, Samir & Sinaud, Andre",
+      "year": 1968,
+      "title": "Basic Chad Arabic: The Pre-Speech Phase; Comprehension Texts",
+      "publisher": "Indiana University",
+      "url": null,
+      "pages": null,
+      "notes": "Cited (via the Wikipedia Shuwa Arabic phonology table) for the five-vowel system /i e a o u/ with length in Nigerian/Chad Arabic."
+    },
+    {
+      "id": "kaye1976",
+      "author": "Kaye, Alan S.",
+      "year": 1976,
+      "title": "Chadian and Sudanese Arabic in the Light of Comparative Arabic Dialectology",
+      "publisher": "Mouton",
+      "url": null,
+      "pages": null,
+      "notes": "Comparative reference for the Chadian/Sudanese group: qaf -> /ɡ/, interdental loss, monophthongisation of */aj aw/ to /eː oː/."
+    },
+    {
+      "id": "prochazka2026",
+      "author": "Prochazka, Stephan",
+      "year": 2026,
+      "title": "The Low Vowel Insertion Rule After Gutturals (aka the Gahawa-Syndrome) in the Arabic Dialects",
+      "publisher": "Journal of Semitic Studies LXXI/1",
+      "url": "https://academic.oup.com/jss/advance-article-pdf/doi/10.1093/jss/fgaf037/66148694/fgaf037.pdf",
+      "doi": "10.1093/jss/fgaf037",
+      "pages": "310, 318, 325",
+      "notes": "Open-access gahawa survey. p.310: Owens 1993 is the source for Lake Chad/Nigerian gahawa. p.318: Nigerian type-2 example baxar 'back' (CaGC# > CaGaC#). p.325: 14th-c. Arabicisation from Upper Egypt."
+    },
+    {
+      "id": "watson2002",
+      "author": "Watson, J.C.E.",
+      "year": 2002,
+      "title": "The Phonology and Morphology of Arabic",
+      "publisher": "Oxford University Press",
+      "url": null,
+      "pages": null,
+      "notes": "General reference for emphasis (pharyngealisation) spreading.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Shuwa_Arabic"
+    },
+    {
+      "id": "holes2004",
+      "author": "Holes, C.",
+      "year": 2004,
+      "title": "Modern Arabic: Structures, Functions, and Varieties",
+      "publisher": "Georgetown University Press",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "versteegh2001",
+      "author": "Versteegh, K.",
+      "year": 2001,
+      "title": "The Arabic Language",
+      "publisher": "Edinburgh University Press",
+      "url": null,
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Shuwa_Arabic",
+    "https://en.wikipedia.org/wiki/Chadian_Arabic",
+    "https://ar.wikipedia.org/wiki/%D9%84%D9%87%D8%AC%D8%A9_%D8%AA%D8%B4%D8%A7%D8%AF%D9%8A%D8%A9"
+  ],
+  "timespan": {
+    "start_year": 1700,
+    "end_year": null
+  },
+  "glottolog_code": null,
+  "iso639_3": "shu",
+  "location": {
+    "latitude": 11.5,
+    "longitude": 13,
+    "source": "wikidata",
+    "notes": "Borno State -- the Nigerian heartland of Shuwa Arabic, which also reaches Yobe, Cameroon and Niger. [Wikidata Q130626 P625]"
+  },
+  "optional_marks": [
+    "ً",
+    "ٌ",
+    "ٍ",
+    "َ",
+    "ُ",
+    "ِ",
+    "ّ",
+    "ْ",
+    "ٰ",
+    "ٓ"
+  ],
+  "stress": {
+    "default_position": -3,
+    "quantity_sensitive": true,
+    "superheavy_final_attracts": true,
+    "max_onset": 1,
+    "stress_mark": "ˈ",
+    "notes": "Arabic stress is QUANTITY-SENSITIVE: it falls on a syllable because that syllable is heavy, not because of any orthographic ending, so no ending table can express it. The cascade (Ryding, A Reference Grammar of MSA, CUP 2005, §2.3; Watson, The Phonology and Morphology of Arabic, OUP 2002, ch.3): a superheavy final syllable (CVːC/CVCC) takes the stress (kiˈtaːb); otherwise a heavy penult (CVː/CVC) does (muˈdarris); otherwise the antepenult (ˈmadrasa). max_onset=1 because Arabic onsets are obligatory and hold exactly one consonant -- a medial cluster splits, closing the preceding syllable, and that boundary is what makes the penult of mudarris heavy. INPUT CONTRACT: weight is only recoverable from a complete transcription, so this requires diacritized input; an undiacritized skeleton has no vowels to weigh. The registered wikipron gold carries no stress marks, but the benchmark strips stress from both sides by default, so this costs no PER. Prosodic clitics: monosyllabic function words (negator maː, prepositions fiː/min/ʕan/ʕa/li/bi, vocative jaː, copula-negator muː/miʃ, conditional law/loː, wa-proclitic combinations) attach to a host and fall inside the host's stress domain, so they carry no word stress (Watson 2002, The Phonology and Morphology of Arabic, OUP, ch.3). Pan-Arabic class; the per-lect form list reflects the function words attested in this lect. Orthographic test — a clitic homograph (e.g. verb yā 'came') is destressed in every occurrence.",
+    "cliticless_words": [
+      "عَ",
+      "فِي",
+      "مَا",
+      "مِن",
+      "وَمَا",
+      "يَا"
+    ]
+  }
+}

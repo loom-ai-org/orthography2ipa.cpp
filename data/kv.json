@@ -1,0 +1,297 @@
+{
+  "code": "kv",
+  "name": "Komi",
+  "script": "Cyrillic",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "а": [
+      "a"
+    ],
+    "б": [
+      "b"
+    ],
+    "в": [
+      "v"
+    ],
+    "г": [
+      "ɡ"
+    ],
+    "дж": [
+      "dʒ"
+    ],
+    "дз": [
+      "dʑ"
+    ],
+    "тш": [
+      "tʃ"
+    ],
+    "д": [
+      "d"
+    ],
+    "е": [
+      "e",
+      "je"
+    ],
+    "ё": [
+      "o",
+      "jo"
+    ],
+    "ж": [
+      "ʒ"
+    ],
+    "з": [
+      "z"
+    ],
+    "и": [
+      "i"
+    ],
+    "і": [
+      "i"
+    ],
+    "й": [
+      "j"
+    ],
+    "к": [
+      "k"
+    ],
+    "л": [
+      "ɫ"
+    ],
+    "м": [
+      "m"
+    ],
+    "н": [
+      "n"
+    ],
+    "о": [
+      "o"
+    ],
+    "ӧ": [
+      "ɘ"
+    ],
+    "п": [
+      "p"
+    ],
+    "р": [
+      "r"
+    ],
+    "с": [
+      "s"
+    ],
+    "т": [
+      "t"
+    ],
+    "у": [
+      "u"
+    ],
+    "ф": [
+      "f"
+    ],
+    "х": [
+      "x"
+    ],
+    "ц": [
+      "ts"
+    ],
+    "ч": [
+      "tɕ"
+    ],
+    "ш": [
+      "ʃ"
+    ],
+    "щ": [
+      "ʃtʃ",
+      "ʃː"
+    ],
+    "ы": [
+      "ɨ"
+    ],
+    "э": [
+      "e"
+    ],
+    "ю": [
+      "u",
+      "ju"
+    ],
+    "я": [
+      "a",
+      "ja"
+    ],
+    "ь": [
+      "ʲ"
+    ],
+    "ъ": [
+      ""
+    ],
+    "дь": [
+      "ɟ"
+    ],
+    "де": [
+      "ɟe"
+    ],
+    "дё": [
+      "ɟo"
+    ],
+    "ди": [
+      "ɟi"
+    ],
+    "дю": [
+      "ɟu"
+    ],
+    "дя": [
+      "ɟa"
+    ],
+    "зь": [
+      "ʑ"
+    ],
+    "зе": [
+      "ʑe"
+    ],
+    "зё": [
+      "ʑo"
+    ],
+    "зи": [
+      "ʑi"
+    ],
+    "зю": [
+      "ʑu"
+    ],
+    "зя": [
+      "ʑa"
+    ],
+    "ль": [
+      "ʎ"
+    ],
+    "ле": [
+      "ʎe"
+    ],
+    "лё": [
+      "ʎo"
+    ],
+    "ли": [
+      "ʎi"
+    ],
+    "лю": [
+      "ʎu"
+    ],
+    "ля": [
+      "ʎa"
+    ],
+    "нь": [
+      "ɲ"
+    ],
+    "не": [
+      "ɲe"
+    ],
+    "нё": [
+      "ɲo"
+    ],
+    "ни": [
+      "ɲi"
+    ],
+    "ню": [
+      "ɲu"
+    ],
+    "ня": [
+      "ɲa"
+    ],
+    "сь": [
+      "ɕ"
+    ],
+    "се": [
+      "ɕe"
+    ],
+    "сё": [
+      "ɕo"
+    ],
+    "си": [
+      "ɕi"
+    ],
+    "сю": [
+      "ɕu"
+    ],
+    "ся": [
+      "ɕa"
+    ],
+    "ть": [
+      "c"
+    ],
+    "те": [
+      "ce"
+    ],
+    "тё": [
+      "co"
+    ],
+    "ти": [
+      "ci"
+    ],
+    "тю": [
+      "cu"
+    ],
+    "тя": [
+      "ca"
+    ]
+  },
+  "allophones": {
+    "ɫ": [
+      "ɫ",
+      "l"
+    ],
+    "ɘ": [
+      "ɘ",
+      "ə"
+    ]
+  },
+  "notes": "Komi (коми кыв), a Permic (Uralic) language of the Komi Republic, Russia; the Komi-Zyrian literary standard. INPUT CONTRACT: modern Komi Cyrillic text, Unicode NFC, lower-cased by the caller if case-folding is desired. Orthography: the Russian alphabet plus ⟨І і⟩ ('hard i') and ⟨Ӧ ӧ⟩ /ɘ/. Consonant palatalisation is not written with a separate series of letters: ⟨д з л н с т⟩ are realised as /ɟ ʑ ʎ ɲ ɕ c/ before ⟨е ё и ю я⟩ and before the soft sign ⟨ь⟩, so those sequences are entered here as multigraph keys (де, дё, ди, дю, дя, дь, …) which the maximal-munch matcher prefers over the bare letters. ⟨і⟩ is the 'hard i': it spells /i/ after т д с з н л without palatalising them, so it is deliberately NOT part of any digraph. The affricates /dʒ dʑ tʃ/ are written with the digraphs ⟨дж дз тш⟩, also entered as keys. Iotated letters ⟨е ё ю я⟩ list the plain vowel first and the [j]-initial reading second (the latter applies word-initially and after a vowel); the engine is context-free, so the alternative is offered as a second candidate rather than selected. ⟨ъ⟩ maps to the empty string. Historic Old Permic (Abur) and Molodtsov orthographies are out of scope: input is assumed to be the 1938-onward Cyrillic orthography.",
+  "iso639_3": "kom",
+  "glottolog_code": "komi1267",
+  "wikidata_qid": "Q36126",
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Komi_language",
+    "https://kv.wikipedia.org/wiki/%D0%9A%D0%BE%D0%BC%D0%B8_%D0%BA%D1%8B%D0%B2"
+  ],
+  "sources": [
+    {
+      "id": "komi_language_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Komi language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Komi_language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Komi_language",
+      "pages": null,
+      "notes": "Overview of the language, script and orthography."
+    },
+    {
+      "id": "komi_alphabet_wikipedia",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Komi language — Writing system (Cyrillic alphabet with IPA values) and Phonology",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Komi_language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Komi_language",
+      "pages": null,
+      "notes": "Letter-by-letter Cyrillic→IPA table (including і, ӧ and the digraphs дж /dʒ/, дз /dʑ/, тш /tʃ/) and the rule that д з л н с т are palatalised to ɟ ʑ ʎ ɲ ɕ c before е ё и ю я ь; consonant and vowel phoneme inventories. Source of every value in this spec."
+    }
+  ],
+  "timespan": {
+    "start_year": 1918,
+    "end_year": null
+  },
+  "parent": "x-clade-ural1272",
+  "ancestors": [
+    {
+      "code": "x-clade-ural1272",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Uralic — the classification node this language sits under."
+    }
+  ],
+  "location": {
+    "latitude": 61.476633,
+    "longitude": 55.165967,
+    "source": "glottolog",
+    "notes": "Glottolog's computed centroid for the Komi family — a summary of a whole clade's range, not a place anyone speaks."
+  }
+}

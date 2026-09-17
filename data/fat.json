@@ -1,0 +1,103 @@
+{
+  "code": "fat",
+  "name": "Fante",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes_base": "ak",
+  "graphemes": {
+    "ɪ": [
+      "ɪ"
+    ],
+    "ʊ": [
+      "ʊ"
+    ],
+    "tw": [
+      "tɕʷ"
+    ],
+    "dw": [
+      "dʑʷ"
+    ],
+    "hw": [
+      "ɕʷ"
+    ],
+    "ts": [
+      "t͡s"
+    ],
+    "dz": [
+      "d͡z"
+    ],
+    "z": [
+      "d͡z"
+    ]
+  },
+  "allophones_base": "ak",
+  "allophones": {
+    "ɪ": [
+      "ɪ"
+    ],
+    "ʊ": [
+      "ʊ"
+    ],
+    "tɕʷ": [
+      "tɕʷ"
+    ],
+    "dʑʷ": [
+      "dʑʷ"
+    ],
+    "ɕʷ": [
+      "ɕʷ"
+    ],
+    "t͡s": [
+      "t͡s"
+    ],
+    "d͡z": [
+      "d͡z"
+    ]
+  },
+  "positional_graphemes_base": "ak",
+  "iso639_3": "fat",
+  "glottolog_code": "fant1241",
+  "wikidata_qid": "Q35570",
+  "notes": "Fante (Fanti, Mfantse), the coastal Akan literary standard of the Central and Western Regions of Ghana. Inherits the shared Akan vowel/consonant/digraph inventory from `ak` (Asante Twi standard) via `graphemes_base`/`allophones_base`/`positional_graphemes_base`, overriding the points where Fante diverges: (1) NINE oral vowels, adding ɪ ʊ (the −RTR reflexes of e/o, distinctly written in Fante where Asante Twi leaves them as unwritten allophones of ⟨e⟩/⟨o⟩) alongside a e ɛ i o ɔ u; (2) Fante is the only Twi-Fante variety with an alveolar affricate contrast /ts/ vs /dz/ distinct from plain /t/ /d/, written ⟨ts⟩ and ⟨dz⟩ (also spelled with the single letter ⟨z⟩, which is why Fante is the only variety whose alphabet includes ⟨z⟩); (3) the labialised digraphs ⟨tw dw hw⟩, which in Asante Twi spell the labialised velars /kʷ ɡʷ hʷ/ (orthographic variants of ⟨kw gw hw⟩), instead spell the labial-palatalised affricates/fricative /tɕʷ dʑʷ ɕʷ/ in Fante — the palatalised counterparts of ⟨ky gy hy⟩ /tɕ dʑ ɕ/, which Fante shares unchanged with Asante Twi. TONE: as in Akan generally, tone (high/low with downstep) is not marked in the standard orthography and is not modelled here.",
+  "sources": [
+    {
+      "id": "fante_dialect_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Fante dialect",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Fante_dialect",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Fante_dialect",
+      "notes": "Vowel/consonant inventory, affricate contrast and digraph-to-phoneme correspondences."
+    },
+    {
+      "id": "dolphyne1988",
+      "author": "Dolphyne, Florence Abena",
+      "year": 1988,
+      "title": "The Akan (Twi-Fante) Language: Its Sound Systems and Tonal Structure",
+      "publisher": "Ghana Universities Press",
+      "url": null,
+      "notes": "Standard reference description of Akan/Fante phonology, vowel harmony and tone."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Fante_dialect",
+    "https://en.wikipedia.org/wiki/Akan_language"
+  ],
+  "parent": "ak",
+  "ancestors": [
+    {
+      "code": "ak",
+      "role": "parent",
+      "weight": 0.9,
+      "notes": "Fante is a variety of Akan; shares the bulk of the grapheme inventory with the Asante-based `ak` spec, diverging in the affricate series and two extra vowel letters."
+    }
+  ],
+  "location": {
+    "latitude": 5.1,
+    "longitude": -1.25,
+    "source": "glottolog",
+    "notes": "Central Region, Ghana — the Fante-speaking heartland around Cape Coast."
+  }
+}

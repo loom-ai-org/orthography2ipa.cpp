@@ -1,0 +1,99 @@
+{
+  "code": "sv-FI",
+  "name": "Swedish (Finland-Swedish)",
+  "script": "Latin",
+  "graphemes_base": "sv",
+  "graphemes": {
+    "rn": ["ɳ"],
+    "rd": ["ɖ"],
+    "rt": ["ʈ"],
+    "rl": ["ɭ"],
+    "rs": ["ʂ"]
+  },
+  "allophones_base": "sv",
+  "allophones": {
+    "ɧ": [
+      "ʃ",
+      "sk"
+    ],
+    "r": [
+      "r"
+    ],
+    "rn": [
+      "rn"
+    ],
+    "rd": [
+      "rd"
+    ],
+    "rs": [
+      "rs"
+    ]
+  },
+  "parent": "sv",
+  "ancestors": [
+    {
+      "code": "sv",
+      "role": "parent",
+      "weight": 0.9,
+      "notes": "Swedish base"
+    },
+    {
+      "code": "fi",
+      "role": "adstrate",
+      "weight": 0.08,
+      "notes": "Finnish adstrate: no tonal accent; long consonant quantity"
+    }
+  ],
+  "notes": "Finland-Swedish (finlandssvenska). Spoken by ~5% of Finns. NO TONAL ACCENT (Finnish influence — Finnish has no pitch accent). NO RETROFLEXION (alveolar r always; no ɳ ɖ ʈ ʂ clusters) is the documented linguistic claim, but the engine does not yet implement it (the 'allophones' override below pre-dates and is dead against this spec's own grapheme table; kept, with a 'graphemes' override reproducing the base sv spec's OLD unconditional retroflexion, as an explicit, still-open engine-limit gap -- see the strict xfail tests in test_cited_rules_germanic_celtic.py). sj-sound = [ʃ] or [sk] (not the mainland [ɧ]). Long consonant quantity very prominent (Finnish substrate). Source: Elert (1994).",
+  "quality": "skeleton",
+  "script_type": "alphabet",
+  "sources": [
+    {
+      "id": "groennum1998",
+      "author": "Grønnum, N.",
+      "year": 1998,
+      "title": "Fonetik og fonologi: Almen og dansk",
+      "publisher": "Akademisk Forlag",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "eliasson2002",
+      "author": "Eliasson, S. et al.",
+      "year": 2002,
+      "title": "Nordic Languages: An International Handbook of the History of the North Germanic Languages",
+      "publisher": "de Gruyter",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "reuter1982",
+      "author": "Reuter, O.R.",
+      "year": 1982,
+      "title": "The Pronunciation of Finnish Swedish",
+      "publisher": "Meddelanden från Stiftelsens för Åbo Akademi forskningsinstitut",
+      "url": null,
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Finland_Swedish",
+    "https://sv.wikipedia.org/wiki/Finlandssvenska"
+  ],
+  "timespan": {
+    "start_year": 1800,
+    "end_year": null
+  },
+  "glottolog_code": "east2303",
+  "iso639_3": "swe",
+  "wikidata_qid": "Q1461092",
+  "location": {
+    "latitude": 62.476944,
+    "longitude": 21.348611,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Archaic Finnish Swedish."
+  }
+}

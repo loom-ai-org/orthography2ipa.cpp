@@ -1,0 +1,319 @@
+{
+  "code": "yue-Latn-jyutping",
+  "name": "Cantonese — Jyutping",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "orthography_kind": "romanization",
+  "quality": "research",
+  "graphemes": {
+    "b": [
+      "p"
+    ],
+    "p": [
+      "pʰ"
+    ],
+    "m": [
+      "m"
+    ],
+    "f": [
+      "f"
+    ],
+    "d": [
+      "t"
+    ],
+    "t": [
+      "tʰ"
+    ],
+    "n": [
+      "n"
+    ],
+    "l": [
+      "l"
+    ],
+    "g": [
+      "k"
+    ],
+    "k": [
+      "kʰ"
+    ],
+    "ng": [
+      "ŋ"
+    ],
+    "h": [
+      "h"
+    ],
+    "gw": [
+      "kʷ"
+    ],
+    "kw": [
+      "kʷʰ"
+    ],
+    "w": [
+      "w"
+    ],
+    "z": [
+      "ts"
+    ],
+    "c": [
+      "tsʰ"
+    ],
+    "s": [
+      "s"
+    ],
+    "j": [
+      "j"
+    ],
+    "aa": [
+      "aː"
+    ],
+    "aai": [
+      "aːi̯"
+    ],
+    "aau": [
+      "aːu̯"
+    ],
+    "aam": [
+      "aːm"
+    ],
+    "aan": [
+      "aːn"
+    ],
+    "aang": [
+      "aːŋ"
+    ],
+    "aap": [
+      "aːp̚"
+    ],
+    "aat": [
+      "aːt̚"
+    ],
+    "aak": [
+      "aːk̚"
+    ],
+    "a": [
+      "ɐ"
+    ],
+    "ai": [
+      "ɐi̯"
+    ],
+    "au": [
+      "ɐu̯"
+    ],
+    "am": [
+      "ɐm"
+    ],
+    "an": [
+      "ɐn"
+    ],
+    "ang": [
+      "ɐŋ"
+    ],
+    "ap": [
+      "ɐp̚"
+    ],
+    "at": [
+      "ɐt̚"
+    ],
+    "ak": [
+      "ɐk̚"
+    ],
+    "e": [
+      "ɛː"
+    ],
+    "ei": [
+      "ei̯"
+    ],
+    "eu": [
+      "ɛːu̯"
+    ],
+    "em": [
+      "ɛːm"
+    ],
+    "eng": [
+      "ɛːŋ"
+    ],
+    "ep": [
+      "ɛːp̚"
+    ],
+    "et": [
+      "ɛːt̚"
+    ],
+    "ek": [
+      "ɛːk̚"
+    ],
+    "i": [
+      "iː"
+    ],
+    "iu": [
+      "iːu̯"
+    ],
+    "im": [
+      "iːm"
+    ],
+    "in": [
+      "iːn"
+    ],
+    "ing": [
+      "ɪŋ"
+    ],
+    "ip": [
+      "iːp̚"
+    ],
+    "it": [
+      "iːt̚"
+    ],
+    "ik": [
+      "ɪk̚"
+    ],
+    "o": [
+      "ɔː"
+    ],
+    "oi": [
+      "ɔːy̯"
+    ],
+    "ou": [
+      "ou̯"
+    ],
+    "on": [
+      "ɔːn"
+    ],
+    "ong": [
+      "ɔːŋ"
+    ],
+    "ot": [
+      "ɔːt̚"
+    ],
+    "ok": [
+      "ɔːk̚"
+    ],
+    "u": [
+      "uː"
+    ],
+    "ui": [
+      "uːy̯"
+    ],
+    "un": [
+      "uːn"
+    ],
+    "ung": [
+      "ʊŋ"
+    ],
+    "ut": [
+      "uːt̚"
+    ],
+    "uk": [
+      "ʊk̚"
+    ],
+    "eoi": [
+      "ɵy̯"
+    ],
+    "eon": [
+      "ɵn"
+    ],
+    "eot": [
+      "ɵt̚"
+    ],
+    "oe": [
+      "œː"
+    ],
+    "oeng": [
+      "œːŋ"
+    ],
+    "oet": [
+      "œːt̚"
+    ],
+    "oek": [
+      "œːk̚"
+    ],
+    "yu": [
+      "yː"
+    ],
+    "yun": [
+      "yːn"
+    ],
+    "yut": [
+      "yːt̚"
+    ],
+    "ng̍": [
+      "ŋ̍"
+    ]
+  },
+  "notes": "Jyutping (the Linguistic Society of Hong Kong Cantonese Romanization Scheme, LSHK 1993), the officially promoted romanization for Standard Cantonese. INITIALS: 19 onset letters/digraphs, each a single unit under AGENTS.md §2 test 2 (the labialized stops ⟨gw kw⟩ spell one segment /kʷ kʷʰ/, not a cluster: k+w already gives /kw/, so the aspiration and rounding riding on one onset earns the digraph its key) or test 3 (⟨ng⟩ /ŋ/ blocks a wrong n+g maximal-munch read; without the key ⟨ngo⟩ 'I/hungry' would tokenize n+g+o). FINALS: Jyutping's finals table is a designed syllabary of nucleus(+coda) units, exactly the precedent already accepted in this dataset for pinyin finals (⟨iang⟩, ⟨uai⟩) — every vowel-length distinction (⟨aa⟩ /aː/ vs ⟨a⟩ /ɐ/) and diphthong (⟨aai⟩, ⟨eoi⟩, ⟨oet⟩) is cited to its own IPA cell in the source table rather than derived by concatenating letters, since e.g. ⟨eoi⟩ /ɵy̯/ is not e+o+i by any compositional reading. CODAS: stop codas ⟨p t k⟩ are unreleased [p̚ t̚ k̚] in Cantonese finals (Matthews & Yip 1994), cited directly on the final rather than expressed as a `positional_graphemes` word-final rule, because in Jyutping — unlike POJ — the coda letter never doubles as a plain onset spelling: ⟨p⟩ the coda only ever appears as the second half of a final-table entry (⟨ap⟩, ⟨aap⟩ …), so there is no onset/coda ambiguity to resolve positionally; the coda is baked into which final-key was written. SYLLABIC NASALS: ⟨m⟩ and ⟨ng⟩ can stand alone as whole syllables (bare nasal nucleus, no vowel) — 唔 'm4' and 吳 'ng4' — written with the same letters as the ⟨m⟩ onset and ⟨ng⟩ onset+coda digraph; this spec keys the syllabic reading as a distinct grapheme ⟨ng̍⟩ (test 3: without a distinct key, the plain ⟨ng⟩ onset/coda entry would win the maximal-munch tokenization of a standalone syllable and misparse it as an onset with no vowel) but cannot likewise disambiguate bare ⟨m⟩ from the ⟨m⟩ onset without a genuine syllable-nucleus predicate this engine does not yet expose for consonant letters (AGENTS.md §1) — a documented gap, not something to enumerate around; bare ⟨m⟩ therefore currently reads through the plain onset mapping. TONE — SCHEMA LIMITATION, same honest treatment as `nan-Latn-poj`: Jyutping marks each syllable's citation tone with a trailing ASCII digit 1-6 (tones 1-6; the three historical entering-tone categories 7/8/9 are not separately numbered in Jyutping, distinguished only by their obstruent coda per LSHK's design). A digit is not a diacritic riding on a vowel grapheme (unlike POJ's combining accents) — it is a free-standing character with its own tokenizer slot — so this spec does not add digit-suffixed grapheme keys (⟨aa1⟩ … ⟨aa6⟩ for every final) because that is exactly the Cartesian-product pattern AGENTS.md §2 forbids: 6 tones × dozens of finals is a nested loop, not an orthographic unit, and the tone digit contributes no segmental information the final's own IPA is missing. `tone_inventory` records the digit-to-contour correspondence as metadata; appending the correct tone letter to a slot's chosen IPA from a digit that sits AFTER the whole syllable (not on any one grapheme) is the same missing engine capability already flagged on `nan-Latn-poj`, and Cantonese's own pervasive tone sandhi (Matthews & Yip 1994) is out of scope for the same reason tone sandhi is out of scope there.",
+  "iso639_3": null,
+  "glottolog_code": "cant1236",
+  "wikidata_qid": "Q649913",
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Jyutping",
+    "https://en.wikipedia.org/wiki/Cantonese"
+  ],
+  "urls": [
+    "https://glottolog.org/resource/languoid/id/cant1236",
+    "https://lshk.org/jyutping-scheme/"
+  ],
+  "tone_inventory": {
+    "1": "high level / high falling, 55/53",
+    "2": "mid rising, 35",
+    "3": "mid level, 33",
+    "4": "low falling, 21",
+    "5": "low rising, 13",
+    "6": "low level, 22",
+    "1(7)": "entering high level, 5 (obstruent coda only)",
+    "3(8)": "entering mid level, 3 (obstruent coda only)",
+    "6(9)": "entering low level, 2 (obstruent coda only)"
+  },
+  "sources": [
+    {
+      "id": "jyutping_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Jyutping",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Jyutping",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Jyutping",
+      "pages": null,
+      "notes": "Initial and final IPA tables, tone-numeral/contour table."
+    },
+    {
+      "id": "lshk1993",
+      "author": "Linguistic Society of Hong Kong",
+      "year": 1993,
+      "title": "The Jyutping Scheme (粵語拼音方案)",
+      "publisher": "Linguistic Society of Hong Kong",
+      "url": "https://lshk.org/jyutping-scheme/",
+      "pages": null,
+      "notes": "Original scheme definition; z/c initials and eo/oe finals distinguishing Jyutping from earlier Cantonese romanizations."
+    },
+    {
+      "id": "matthews_yip1994",
+      "author": "Matthews, Stephen & Yip, Virginia",
+      "year": 1994,
+      "title": "Cantonese: A Comprehensive Grammar",
+      "publisher": "Routledge",
+      "url": null,
+      "pages": null,
+      "notes": "Tone contour values; unreleased stop-coda phonetics; tone sandhi (out of scope here, same as nan-Latn-poj)."
+    }
+  ],
+  "orthography_standard": {
+    "name": "Jyutping (LSHK Cantonese Romanization Scheme)",
+    "authority": "Linguistic Society of Hong Kong (LSHK)",
+    "year": 1993,
+    "url": "https://lshk.org/jyutping-scheme/",
+    "notes": "Updated 2018 to add the -a and -oet finals; this spec follows the current (post-2018) scheme."
+  },
+  "parent": "yue",
+  "ancestors": [
+    {
+      "code": "yue",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Same ISO 639-3-less / Glottolog language (cant1236, Cantonese); this spec supplies the Jyutping Latin-romanization grapheme map that `yue.json`'s Han-script stub explicitly leaves for a romanization to fill, exactly as `nan-Latn-poj` fills the same gap for `nan`."
+    }
+  ],
+  "location": {
+    "latitude": 23.0118,
+    "longitude": 113.2021,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Cantonese (cant1236), inherited from the `yue` parent."
+  }
+}

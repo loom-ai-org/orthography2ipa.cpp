@@ -1,0 +1,410 @@
+{
+  "code": "mxi",
+  "name": "Mozarabic (Andalusi Romance)",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "parent": "x-clade-roma1334",
+  "ancestors": [
+    {
+      "code": "la-x-late",
+      "role": "parent",
+      "weight": 0.8,
+      "notes": "Descent from the Vulgar/Late Latin of Hispania Baetica and the Levante; the most archaic surviving Ibero-Romance branch (Barbato & Minervini 2024)."
+    },
+    {
+      "code": "xaa",
+      "role": "adstrate",
+      "weight": 0.12,
+      "notes": "Andalusi Arabic adstrate: the language of the dominant society under Islamic rule, source of the Arabic script the kharjas are written in, of loan lexicon (al-habib), and of the phonetic clues (apocope, non-diphthongization, retained voiceless stops) that the records preserve."
+    },
+    {
+      "code": "xib",
+      "role": "substrate",
+      "weight": 0.04,
+      "notes": "Pre-Roman Iberian substrate of the south and east."
+    }
+  ],
+  "graphemes": {
+    "ch": [
+      "tʃ"
+    ],
+    "č": [
+      "tʃ"
+    ],
+    "ly": [
+      "ʎ"
+    ],
+    "ll": [
+      "ʎ"
+    ],
+    "lh": [
+      "ʎ"
+    ],
+    "ny": [
+      "ɲ"
+    ],
+    "nn": [
+      "ɲ"
+    ],
+    "ñ": [
+      "ɲ"
+    ],
+    "nh": [
+      "ɲ"
+    ],
+    "qu": [
+      "k"
+    ],
+    "gu": [
+      "ɡ"
+    ],
+    "rr": [
+      "r"
+    ],
+    "ss": [
+      "s"
+    ],
+    "š": [
+      "ʃ"
+    ],
+    "x": [
+      "ʃ"
+    ],
+    "ḥ": [
+      "ħ"
+    ],
+    "ʿ": [
+      "ʕ"
+    ],
+    "a": [
+      "a"
+    ],
+    "á": [
+      "a"
+    ],
+    "à": [
+      "a"
+    ],
+    "e": [
+      "e"
+    ],
+    "é": [
+      "e"
+    ],
+    "è": [
+      "e"
+    ],
+    "i": [
+      "i",
+      "j"
+    ],
+    "í": [
+      "i"
+    ],
+    "o": [
+      "o"
+    ],
+    "ó": [
+      "o"
+    ],
+    "ò": [
+      "o"
+    ],
+    "u": [
+      "u",
+      "w"
+    ],
+    "ú": [
+      "u"
+    ],
+    "ü": [
+      "u"
+    ],
+    "b": [
+      "b",
+      "β"
+    ],
+    "v": [
+      "b",
+      "β"
+    ],
+    "c": [
+      "k"
+    ],
+    "ç": [
+      "ts"
+    ],
+    "d": [
+      "d",
+      "ð"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "h": [
+      ""
+    ],
+    "j": [
+      "ʒ"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "p": [
+      "p"
+    ],
+    "q": [
+      "k"
+    ],
+    "r": [
+      "ɾ",
+      "r"
+    ],
+    "s": [
+      "s",
+      "z"
+    ],
+    "t": [
+      "t"
+    ],
+    "w": [
+      "w"
+    ],
+    "y": [
+      "j"
+    ],
+    "z": [
+      "z"
+    ],
+    "-": [
+      ""
+    ],
+    "'": [
+      ""
+    ],
+    "ʔ": [
+      ""
+    ]
+  },
+  "positional_graphemes": {
+    "c": {
+      "before_front_vowel": [
+        "tʃ"
+      ],
+      "default": [
+        "k"
+      ]
+    },
+    "g": {
+      "before_front_vowel": [
+        "ʒ"
+      ],
+      "default": [
+        "ɡ"
+      ]
+    },
+    "i": {
+      "after_vowel": [
+        "j"
+      ],
+      "default": [
+        "i"
+      ]
+    },
+    "u": {
+      "after_vowel": [
+        "w"
+      ],
+      "default": [
+        "u"
+      ]
+    },
+    "r": {
+      "word_initial": [
+        "r"
+      ],
+      "default": [
+        "ɾ"
+      ]
+    },
+    "y": {
+      "before_vowel": [
+        "ɟ"
+      ],
+      "default": [
+        "j"
+      ]
+    },
+    "gu": {
+      "before_a": [
+        "ɡw"
+      ],
+      "before_o": [
+        "ɡw"
+      ],
+      "before_e": [
+        "ɡ"
+      ],
+      "before_i": [
+        "ɡ"
+      ],
+      "default": [
+        "ɡ"
+      ]
+    }
+  },
+  "word_exceptions": {
+    "ya": "ja",
+    "yed": "jed",
+    "yo": "jo",
+    "tuyo": "tujo",
+    "creçen": "ˈkɾetsen",
+    "rab": "rabb"
+  },
+  "stress": {
+    "default_position": -2,
+    "final_stress_endings": [
+      "r",
+      "d",
+      "n",
+      "l",
+      "z",
+      "t",
+      "č",
+      "b",
+      "c",
+      "k",
+      "g",
+      "p",
+      "f",
+      "m",
+      "x",
+      "š"
+    ],
+    "penult_stress_endings": [
+      "as",
+      "es",
+      "is",
+      "os",
+      "us",
+      "a",
+      "e",
+      "o"
+    ],
+    "marked_vowels": [
+      "á",
+      "é",
+      "í",
+      "ó",
+      "ú",
+      "à",
+      "è",
+      "ò"
+    ],
+    "stress_mark": "ˈ",
+    "cliticless_words": [
+      "me",
+      "el",
+      "la",
+      "en",
+      "e",
+      "ya"
+    ],
+    "diphthongs": [
+      "ai",
+      "au",
+      "ei",
+      "eu",
+      "iu",
+      "oi",
+      "ou",
+      "ay",
+      "aw",
+      "ey"
+    ],
+    "notes": "Mozarabic kept Latin stress placement; oxytones on a final consonant (corachón, doler, tornarad), paroxytones elsewhere. Falling diphthongs /aj aw/ are attested (yannayr, sollayr); rising diphthongization of tonic Ĕ/Ŏ is largely ABSENT (bene, bono, mele — Barbato & Minervini 2024:158-160)."
+  },
+  "notes": "Mozarabic / Andalusi Romance (8th-13th c. CE): the Ibero-Romance dialect bundle of al-Andalus, the L1 of much of the population in the early centuries before Arabization, and the oldest documented Ibero-Romance (Vicente 2020 §2.1). It has NO native orthography: it is written in Arabic and Hebrew consonantal scripts (the kharjas — 68 known, 42 in Arabic and 26 in Hebrew script), in botanical/medical glosses (Abulḫayr, Ibn Quzmān's zajal), in Toledo Mozarab charters, and in toponymy and Ibero-Romance loans. This spec therefore uses a ROMANIZED-Romance grapheme layer — the scholarly Latin transliteration convention of García Gómez, Galmés de Fuentes and Corriente for the kharjas — NOT the source Semitic scripts (an earlier stub carried an empty Arabic-script grapheme set and transcribed to nothing; this is the PR #574 design fix). RECONSTRUCTED features (Barbato & Minervini 2024; Galmés de Fuentes 1983): (1) conservative 5/7-vowel system, largely NO tonic diphthongization of Ĕ/Ŏ (bene, bono, not *biene/*bueno) — Arabic contact is argued to have arrested an incipient diphthongization; the metaphonic welyos 'eyes' is an exception. (2) Prevocalic F- RETAINED as [f] (filyo, farina — not Castilian h-). (3) Latin -LY-/-CL- → [ʎ] (filyo, welyos), not Castilian [x]. (4) ge,i and j → palatal [ʝ]/[ɟ] written ⟨y⟩ (yana < janua, yermanellas). (5) Intervocalic voiceless stops -t- -k- -p- largely CONSERVED unvoiced (matar, bokella, sabes) — the archaic Ibero-Romance trait shared only with High Aragon; final-vowel apocope (fač, kuand, mib). (6) Andalusi Arabic adstrate lexicon and the ⟨ḥ⟩=[ħ] of loanwords (habib 'beloved', al-habib). QUALITY: reconstructed — Andalusi Romance is known only from fragmentary, discontinuous, consonant-script records; vocalism and stress are editorial reconstructions, and dialect variation (diphthongizing Toledo/Zaragoza vs. non-diphthongizing West/Levante) is real. The gold is engine-pinned to this romanized layer; scholarly IPA and any spec/engine divergence are recorded as PR leads, not bent into the transcriptions.",
+  "sources": [
+    {
+      "id": "barbato_minervini2024",
+      "author": "Barbato, M. & Minervini, L.",
+      "year": 2024,
+      "title": "Reconstructing a Language from Fragmentary and Discontinuous Records: Andalusi Romance. In: A Companion to the Study of Al-Andalus (Brill)",
+      "publisher": "Brill",
+      "url": "https://doi.org/10.1163/9789004694637_009",
+      "pages": "vowels 157-160; consonants (F-, -LY-, voiceless stops, apocope) 160-163",
+      "notes": "Open-access. Kharja forms cited by García Gómez H/A numbering. Local copy: papers/iberian/barbato-minervini_andalusi-romance-reconstruction_brill-2024.pdf"
+    },
+    {
+      "id": "galmes1983",
+      "author": "Galmés de Fuentes, Á.",
+      "year": 1983,
+      "title": "Dialectología mozárabe",
+      "publisher": "Gredos",
+      "url": null,
+      "pages": "diphthongs 57-61; F- 80; -LY- 81-82; voiceless stops 92-97",
+      "notes": "The standard descriptive treatment of Mozarabic phonology from toponymy and glosses."
+    },
+    {
+      "id": "vicente2020",
+      "author": "Vicente, Á.",
+      "year": 2020,
+      "title": "Andalusi Arabic (ch. 11). In: Arabic and contact-induced change (eds. Lucas & Manfredi)",
+      "publisher": "Language Science Press",
+      "url": "https://langsci-press.org/catalog/book/235",
+      "pages": "Andalusi Romance §2.1 pp. 230-231; ḫaraǧāt count fn.13",
+      "notes": "Open-access. Andalusi Romance as contact language and adstrate to Andalusi Arabic. Local copy: papers/iberian/vicente_andalusi-arabic_langsci-arabic-contact-2020.pdf"
+    },
+    {
+      "id": "corriente1997",
+      "author": "Corriente, F.",
+      "year": 1997,
+      "title": "A Dictionary of Andalusi Arabic",
+      "publisher": "Brill",
+      "url": null,
+      "pages": null,
+      "notes": "Romance loans and kharja readings; adstrate lexicon."
+    },
+    {
+      "id": "penny2002",
+      "author": "Penny, R.",
+      "year": 2002,
+      "title": "A History of the Spanish Language (2nd ed.)",
+      "publisher": "Cambridge University Press",
+      "url": null,
+      "pages": null,
+      "notes": "Mozarabic within the history of Ibero-Romance."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Mozarabic_language",
+    "https://en.wikipedia.org/wiki/Andalusi_Romance"
+  ],
+  "timespan": {
+    "start_year": 711,
+    "end_year": 1300
+  },
+  "glottolog_code": "moza1249",
+  "iso639_3": "mxi",
+  "quality": "research",
+  "wikidata_qid": "Q317044",
+  "location": {
+    "latitude": 37.8763,
+    "longitude": -1.79724,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Mozarabic."
+  }
+}

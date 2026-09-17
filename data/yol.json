@@ -1,0 +1,259 @@
+{
+  "code": "yol",
+  "name": "Yola",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "ai": [
+      "aɪ"
+    ],
+    "ch": [
+      "tʃ"
+    ],
+    "ck": [
+      "k"
+    ],
+    "ea": [
+      "eː"
+    ],
+    "ee": [
+      "iː"
+    ],
+    "oa": [
+      "oː"
+    ],
+    "oo": [
+      "uː"
+    ],
+    "ou": [
+      "uː"
+    ],
+    "qu": [
+      "kw"
+    ],
+    "sh": [
+      "ʃ"
+    ],
+    "th": [
+      "θ"
+    ],
+    "wh": [
+      "ʍ"
+    ],
+    "'": [
+      ""
+    ],
+    "a": [
+      "a"
+    ],
+    "b": [
+      "b"
+    ],
+    "c": [
+      "k"
+    ],
+    "d": [
+      "d"
+    ],
+    "e": [
+      "ɛ"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "h": [
+      "h"
+    ],
+    "i": [
+      "ɪ"
+    ],
+    "j": [
+      "dʒ"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "o": [
+      "ɔ"
+    ],
+    "p": [
+      "p"
+    ],
+    "q": [
+      "k"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "u": [
+      "ʊ"
+    ],
+    "v": [
+      "v"
+    ],
+    "w": [
+      "w"
+    ],
+    "x": [
+      "ks"
+    ],
+    "y": [
+      "i"
+    ],
+    "z": [
+      "z"
+    ],
+    "á": [
+      "aː"
+    ],
+    "è": [
+      "",
+      "ɛ"
+    ],
+    "é": [
+      "ɛː"
+    ],
+    "ē": [
+      "ɛː"
+    ],
+    "gh": [
+      "x"
+    ],
+    "ng": [
+      "ŋɡ"
+    ]
+  },
+  "parent": "enm",
+  "ancestors": [
+    {
+      "code": "enm",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Descent from Middle English carried to Wexford after 1169. Classification only: no grapheme, allophone or stress data crosses this edge, and none should — see notes."
+    }
+  ],
+  "notes": "Yola, the extinct English variety of the baronies of Forth and Bargy, County Wexford, attested almost entirely in Jacob Poole's glossary as edited by William Barnes in 1867. Glottolog classifies it under East Mercian (yola1237), and the spec declares parent enm for that descent. The parent edge is CLASSIFICATION ONLY and no data crosses it. It should not: the spec is scored against Poole's nineteenth-century antiquarian spelling, not against Middle English spelling, and the enm table is keyed on the editorial macron vowels (ā ē ī ō ū) that Poole never writes. Declaring graphemes_base enm would import a table for a different orthography. Yola therefore carries its own grapheme table, read from Barnes's own account of the spelling.\n\nBarnes's Observations by the Editor (Poole & Barnes 1867: 12-18) is the description the table follows. Edmund Hore reports that a \"has invariably the same sound, like a in 'father'\" and that \"double ee sounds as e in 'me'\" (p.13). Barnes's English-to-Forth correspondence lists on pp.13-15 -- aake faace faade glaade laace maake for ache face fade glade lace make, neeghe threeve griende for nigh thrive grind -- show that the spelling keeps English's silent final e throughout, so word-final e is encoded as silent. Measured against the gold, that holds for 457 of the 462 headwords ending in a single e; the five exceptions (aye, ye, stre, pitheye, moone) are monosyllables or vowel-final stems.\n\nS reads /s/, not /z/. Barnes states that \"the Forth shows a softening of the f into v, and the s into z\" (p.15), but that change is RECORDED IN THE SPELLING, not left to the reader: Poole writes zeese, zix, zeven, zlaves, zense, vlaxen, voxe, veeve, voure. A grapheme rule turning written s into /z/ applies the softening a second time to words that already show it or never had it. In the gold, headwords spelled with s carry 444 /s/ against 189 /z/, while headwords spelled with z and no s carry 132 /z/ against 14 /s/.\n\nFour characters that the gold's headwords contain were silently dropped by the grapheme table and are now read. Q is read /k/ and the digraph qu /kw/, and X is read /ks/, both by the English spelling convention the glossary is written in; four headwords each, and the gold agrees in every one of the eight. The apostrophe is silent: Barnes describes it as the mark of the pronoun ich blending onto a verb, 'cham for ich aam, 'chas for ich waas, 'cha for ich ha (p.16), so it spells an elision rather than a segment. E-grave is the -es plural ending, which Barnes says carries \"its clipping s, as in English\", but which the measure of some of the verses shows can also be a full-breath syllable (p.16); it is encoded as an ordered candidate pair, the clipping first, since the gold takes the clipping reading in all 79 of its e-grave headwords. A-acute, e-acute and e-macron occur in one headword each and are read as the long counterparts of their plain letters, on Hore's report that \"in most words of two syllables the long accent is placed on the last\" (p.13). That is a principled reading, not a fitted one: for e-acute the single gold form gaudés wants /iː/ and this spec emits /ɛː/, and one headword is not evidence enough to override the letter's own value.\n\nStress is not assigned. Yola inherits English's lexical, non-orthography-predictable stress and Poole's spellings do not mark it, apart from Hore's remark about final-stressed disyllables, which is too coarse to encode. This is the spec's OWN decision, not something inherited: enm declares no stress block either, so no stress rules would arrive through a base edge even if one were declared.\n\nAll three defects the prior notes named as needing an undeclared mechanism are encoded. The allophone-rule schema (AllophoneRuleModel) already carries preceded_by_phoneme/followed_by_phoneme, word_initial/word_final and positional_graphemes; nothing needed adding to the schema. Inflectional /s/ voices to /z/ after a voiced segment via the YOL_INFL_S_VOICE allophone rule, which enumerates the voiced phonemes explicitly because the schema's preceded_by/followed_by natural-class enum has no 'voiced' member (see the rule's own notes for the citation and the measured counter-examples). ⟨gh⟩ is read /x/ except word-initially, where the h is silent and the letter reads plain /ɡ/ (ghou, ghemboles) -- a digraph plus a positional_graphemes override, the same shape ⟨ck⟩ already uses in this spec. Word-final ⟨ng⟩ reads /ŋ/ while medial ⟨ng⟩ before a vowel keeps the stop, /ŋɡ/ (finger-type words: hungherth, fungerlagh), again a digraph plus a word_final positional override. The gh and ng values are measured directly against the shipped gold, not page-sourced: Barnes's Observations (Poole & Barnes 1867: 12-18) describe the vowel values, the f/v and s/z softening and the -es plural, but say nothing about the pronunciation of gh or of final ng, and the glossary's own etymological notes on gh-words (aloghe, boagher) do not describe its sound either -- this was checked directly in the scanned text before writing this, not assumed. The values themselves are the unremarkable Irish-English convention (gh as a velar fricative, syllable-final ng as a velar nasal) also given in the Wikipedia phonology summary, but that summary is a reading path, not a citation, so the two rules are recorded here as measured against the gold, not sourced to Poole/Barnes.\n\nThe wikipron/yol gold is not attested speech: every entry's IPA is what Wiktionary editors supply under a 'Yola phonology' pronunciation key, applied to spellings taken from the same 1867 Poole & Barnes glossary this spec cites (verified 2026 by fetching https://en.wiktionary.org/wiki/cowm, whose References section cites Jacob Poole, ed. William Barnes, 'A Glossary...of the old Dialect of the English Colony in the Baronies of Forth and Bargy' (1867), https://books.google.com/books?id=KBEHAAAAQAAJ&pg=PA32, and whose Pronunciation line links '(key)' to the English Wikipedia 'Yola phonology' article). yol/wikipron is therefore an agreement row, the same category as the epitran- and espeak-derived golds in docs/benchmarks.md: a low PER measures conformance to Wiktionary editors' reconstruction rules, not accuracy against Yola as spoken, and no gold for an extinct language with no recordings can be otherwise. The gold also carries substantial inherent ambiguity from Poole's non-standardised 18th-19th c. spelling: 444 of the 1972 distinct spellings (22.5%, the highest homograph rate measured in this campaign) have two or more mutually incompatible gold transcriptions for the identical string -- consistent with a reconstruction applied by many hands to inconsistent nineteenth-century spelling -- so a meaningful share of the PER gap is not recoverable by any deterministic spec.",
+  "iso639_3": "yol",
+  "glottolog_code": "yola1237",
+  "sources": [
+    {
+      "id": "poole_barnes1867",
+      "author": "Poole, Jacob (ed. William Barnes)",
+      "year": 1867,
+      "title": "A Glossary, with some Pieces of Verse, of the Old Dialect of the English Colony in the Baronies of Forth and Bargy, County of Wexford, Ireland",
+      "publisher": "J. Russell Smith, London",
+      "url": "https://archive.org/details/aglossarywithso00poolgoog",
+      "pages": "12-18",
+      "notes": "Consulted directly. Barnes's 'Observations by the Editor' pp.12-18 describe the orthography: the a/ee vowel values and final-stressed disyllables reported by Hore p.13, the English-to-Forth spelling correspondences pp.13-15, the f>v and s>z softening p.15, the -es plural p.16, and the 'ch blending of the pronoun ich p.16. This is the corpus the gold's spellings come from."
+    },
+    {
+      "id": "dolan_omuirithe1996",
+      "author": "Dolan, T.P. & Ó Muirithe, Diarmaid",
+      "year": 1996,
+      "title": "The Dialect of Forth and Bargy, Co. Wexford, Ireland",
+      "publisher": "Four Courts Press",
+      "url": null,
+      "pages": null,
+      "notes": "Glossary and phonological description of Yola."
+    },
+    {
+      "id": "glottolog_yola1237",
+      "author": "Hammarström, H. et al.",
+      "year": 2024,
+      "title": "Glottolog entry yola1237 (Yola)",
+      "publisher": "Max Planck Institute for Evolutionary Anthropology",
+      "url": "https://glottolog.org/resource/languoid/id/yola1237",
+      "pages": null,
+      "notes": "Consulted directly for the glottocode and the East Mercian classification."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Yola_language"
+  ],
+  "timespan": {
+    "start_year": 1200,
+    "end_year": 1900
+  },
+  "positional_graphemes": {
+    "e": {
+      "word_final": [
+        ""
+      ]
+    },
+    "gh": {
+      "word_initial": [
+        "ɡ"
+      ]
+    },
+    "ng": {
+      "word_final": [
+        "ŋ"
+      ]
+    }
+  },
+  "wikidata_qid": "Q56395",
+  "allophone_rules": [
+    {
+      "id": "YOL_INFL_S_VOICE",
+      "phonemes": [
+        "s"
+      ],
+      "surface": "z",
+      "word_final": true,
+      "preceded_by_phoneme": [
+        "a",
+        "aɪ",
+        "aː",
+        "eː",
+        "i",
+        "iː",
+        "oː",
+        "uː",
+        "ɔ",
+        "ɛ",
+        "ɛː",
+        "ɪ",
+        "ʊ",
+        "b",
+        "d",
+        "dʒ",
+        "l",
+        "m",
+        "n",
+        "r",
+        "v",
+        "w",
+        "z",
+        "ɡ",
+        "ŋ"
+      ],
+      "notes": "Word-final /s/ voices to /z/ after a voiced segment -- the ordinary English inflectional-s allomorphy rule (cats /s/, dogs /z/) that Yola inherits along with the rest of its English-derived morphology; standard in English phonology (e.g. Chomsky & Halle 1968; Katamba 1989 'An Introduction to Phonology'), this session did not consult a specific edition or page. The schema's preceded_by/followed_by natural-class enum (vowel, consonant, consonant_cluster, coda, coda_nasal, front_vowel, back_vowel, palatal, emphatic, word_boundary, any) has no 'voiced' member, so the conditioning environment is enumerated explicitly here as the full list of voiced phonemes in this spec's inventory (every vowel plus b d dʒ l m n r v w z ɡ ŋ) rather than expressed as a natural class. Measured against the shipped wikipron gold (yol_latn_broad.tsv): headwords ending in a plain 's' preceded by one of these phonemes carry gold /z/ far more often than /s/ (e.g. traans->z, zins->z, chemis->z, waas->z), while a preceding voiceless segment keeps /s/ (butts->s, reights->s). The rule is purely positional and cannot see a morpheme boundary, so it also fires on the small number of non-inflectional words that happen to end in a voiced-segment+s spelling (the pronoun 'this' gold /s/ becomes a false positive); this is the same trade-off the prior spec notes already named."
+    }
+  ],
+  "audit": {
+    "wikipron": {
+      "conclusion": "mislabeled_gold",
+      "measured": "The wikipron/yol gold is not attested speech: every IPA is Wiktionary editors' own reconstruction under a 'Yola phonology' pronunciation key applied to Poole & Barnes's 1867 spellings, not a recording or a documented pronunciation. 444 of 1972 distinct spellings (22.5%) carry two or more mutually incompatible gold transcriptions.",
+      "reference": "spec notes"
+    }
+  }
+}

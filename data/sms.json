@@ -1,0 +1,289 @@
+{
+ "code": "sms",
+ "name": "Skolt Sami",
+ "script": "Latin",
+ "script_type": "alphabet",
+ "quality": "research",
+ "graphemes": {
+  "llj": [
+   "ʎʎ"
+  ],
+  "nnj": [
+   "ɲɲ"
+  ],
+  "aa": [
+   "ɑː"
+  ],
+  "cc": [
+   "tts"
+  ],
+  "ee": [
+   "eː",
+   "ɛː"
+  ],
+  "ii": [
+   "iː"
+  ],
+  "lj": [
+   "ʎ"
+  ],
+  "nj": [
+   "ɲ"
+  ],
+  "oo": [
+   "oː"
+  ],
+  "uu": [
+   "uː"
+  ],
+  "ââ": [
+   "ɐː"
+  ],
+  "ää": [
+   "aː"
+  ],
+  "åå": [
+   "ɔː"
+  ],
+  "õõ": [
+   "ɘː"
+  ],
+  "čč": [
+   "ttʃ"
+  ],
+  "ǧǧ": [
+   "ɟɟʝ"
+  ],
+  "ǩǩ": [
+   "ccç"
+  ],
+  "ǯǯ": [
+   "ddʒ"
+  ],
+  "ʒʒ": [
+   "ddz"
+  ],
+  "'": [
+   ""
+  ],
+  "a": [
+   "ɑ"
+  ],
+  "b": [
+   "b"
+  ],
+  "c": [
+   "ts"
+  ],
+  "d": [
+   "d"
+  ],
+  "e": [
+   "e",
+   "ɛ"
+  ],
+  "f": [
+   "f"
+  ],
+  "g": [
+   "ɡ"
+  ],
+  "h": [
+   "x"
+  ],
+  "i": [
+   "i"
+  ],
+  "j": [
+   "ʝ"
+  ],
+  "k": [
+   "k"
+  ],
+  "l": [
+   "l"
+  ],
+  "m": [
+   "m"
+  ],
+  "n": [
+   "n"
+  ],
+  "o": [
+   "o"
+  ],
+  "p": [
+   "p"
+  ],
+  "r": [
+   "r"
+  ],
+  "s": [
+   "s"
+  ],
+  "t": [
+   "t"
+  ],
+  "u": [
+   "u"
+  ],
+  "v": [
+   "v"
+  ],
+  "z": [
+   "z"
+  ],
+  "´": [
+   "ʲ"
+  ],
+  "â": [
+   "ɐ"
+  ],
+  "ä": [
+   "a"
+  ],
+  "å": [
+   "ɔ"
+  ],
+  "õ": [
+   "ɘ"
+  ],
+  "č": [
+   "tʃ"
+  ],
+  "đ": [
+   "ð"
+  ],
+  "ŋ": [
+   "ŋ"
+  ],
+  "š": [
+   "ʃ"
+  ],
+  "ž": [
+   "ʒ"
+  ],
+  "ǥ": [
+   "ɣ"
+  ],
+  "ǧ": [
+   "ɟʝ"
+  ],
+  "ǩ": [
+   "cç"
+  ],
+  "ǯ": [
+   "dʒ"
+  ],
+  "ʒ": [
+   "dz"
+  ],
+  "ʹ": [
+   "ʲ"
+  ],
+  "ˊ": [
+   "ʲ"
+  ],
+  "’": [
+   ""
+  ]
+ },
+ "parent": "x-clade-saam1281",
+ "ancestors": [
+  {
+   "code": "x-clade-saam1281",
+   "role": "parent",
+   "weight": 1.0,
+   "notes": "Descent per Glottolog classification of Skolt Saami (skol1241)."
+  }
+ ],
+ "stress": {
+  "default_position": 1,
+  "stress_mark": "ˈ"
+ },
+ "notes": "Skolt Sami is an Eastern Saami language of the Uralic family, written since 1973 in a Latin orthography rich in special letters. The letter values are the ones the Wikipedia writing-system table gives (⟨a⟩ /ɑ/, ⟨ä⟩ /a/, ⟨â⟩ /ɐ/, ⟨å⟩ /ɔ/, ⟨õ⟩ /ɘ/, ⟨e⟩ /e/ and /ɛ/, ⟨h⟩ /x/, ⟨j⟩ /ʝ/, ⟨ǩ⟩ /c͡ç/, ⟨ǧ⟩ /ɟ͡ʝ/, ⟨ǥ⟩ /ɣ/, ⟨đ⟩ /ð/, ⟨c⟩ /t͡s/, ⟨č⟩ /t͡ʃ/, ⟨ʒ⟩ /d͡z/, ⟨ǯ⟩ /d͡ʒ/, ⟨nj⟩ /ɲ/, ⟨lj⟩ /ʎ/), and every value is independently attested by both wired gold sets. A doubled vowel letter spells one long nucleus (⟨oo⟩ /oː/), and a doubled affricate or palatal letter spells its geminate with the first element written twice (⟨čč⟩ [ttʃ], ⟨ǩǩ⟩ [ccç], ⟨llj⟩ [ʎʎ]) — the convention the transcriptions themselves use. Word stress is fixed on the first syllable.\n\nSuprasegmental palatalisation is written with a mark after the syllable vowel. The 1973 standard uses U+02B9 MODIFIER LETTER PRIME (the giellalt lang-sms orthography lists spell the palatalised geminates ʹbb ʹcc ʹdd … ʹllj ʹnnj with that codepoint); U+00B4 ACUTE ACCENT is the visually similar substitute NorthEuraLex actually writes. U+02CA MODIFIER LETTER ACUTE ACCENT is mapped defensively for the same visual-lookalike reason but is not observed in either wired gold set. The mark is not a segment of its own: it deletes and palatalises the following consonant (SMS_PALATALISATION_MARK), and before a vowel letter, where it has no consonant to dock on, it contributes nothing. Its effect is genuinely suprasegmental — phonetic transcriptions mark every consonant of the following cluster as palatalised — and the rule layer can only reach the cluster's first consonant; the spreading remainder is an engine limit, not an orthography gap.\n\nThe apostrophe U+0027 (and its typographic form U+2019, mapped defensively but not observed in either wired gold set) is not part of the 1973 alphabet. It has two documented jobs: the dictionary quantity notation, where it separates the halves of a long geminate (⟨jiõg'g⟩ for ⟨jiõgg⟩), and — per the same Wikipedia source — separating ⟨lʼj⟩/⟨nʼj⟩ so they read as two consonants rather than the digraphs ⟨lj⟩/⟨nj⟩ (which this revision maps to the palatal sonorants /ʎ/ /ɲ/); engine behaviour already matches, e.g. l'j → ˈlʝ. It carries no segment of its own, and is declared explicitly rather than left unmapped, because an undeclared character is dropped without trace.\n\nKnown unencoded facts. Skolt Sami phonetically appends an echo vowel after a word-final consonant or cluster, matching the word's harmony; the orthography never spells it, and the two independent gold sets disagree about whether to transcribe it, so it is left out. The three-way consonant quantity system and consonant gradation are morphophonological alternations between related word forms, not readings of a fixed spelling, and belong to a downstream consumer.",
+ "iso639_3": "sms",
+ "glottolog_code": null,
+ "sources": [
+  {
+   "id": "sms_glottolog",
+   "author": "Hammarström, H. et al. (Glottolog 5.0)",
+   "year": 2024,
+   "title": "Glottolog: Skolt Saami (skol1241)",
+   "publisher": "Max Planck Institute for Evolutionary Anthropology",
+   "url": "https://glottolog.org/resource/languoid/id/skol1241",
+   "pages": null,
+   "notes": "Classification reference for a skeleton-tier entry.",
+   "wikipedia_url": null
+  },
+  {
+   "id": "sms_orthography",
+   "author": "Wikipedia contributors",
+   "year": 2024,
+   "title": "Skolt Sami language — writing system and phonology",
+   "publisher": null,
+   "url": "https://en.wikipedia.org/wiki/Skolt_Sami_language",
+   "pages": null,
+   "notes": "Orthography/phonology reference for the skeleton-tier grapheme map.",
+   "wikipedia_url": "https://en.wikipedia.org/wiki/Skolt_Sami_language"
+  },
+  {
+   "id": "feist2010",
+   "author": "Feist, Timothy",
+   "year": 2010,
+   "title": "A grammar of Skolt Saami",
+   "publisher": "University of Manchester (PhD thesis)",
+   "url": null,
+   "pages": null,
+   "notes": "General reference for the 1973 orthography, fixed initial word stress, suprasegmental palatalisation and its written mark, and the geminate affricates. Full text not consulted directly for this revision; the letter values shipped here are attributed instead to the Wikipedia writing-system table (`sms_orthography`), which was actually fetched, and each is independently attested by both wired gold sets.",
+   "wikipedia_url": "https://en.wikipedia.org/wiki/Skolt_Sami_language"
+  },
+  {
+   "id": "giellalt_lang_sms",
+   "author": "Divvun and Giellatekno (giellalt)",
+   "year": 2024,
+   "title": "lang-sms: Skolt Sami language model — orthography data (docs/data/1-2-syll_pal-CC.txt, docs/data/1-2-syll_no-pal-CC.txt)",
+   "publisher": "UiT The Arctic University of Norway",
+   "url": "https://github.com/giellalt/lang-sms",
+   "pages": null,
+   "notes": "Machine-readable inventories of the plain geminates (bb cc dd …) and the palatalised geminates (ʹbb ʹcc ʹdd … ʹllj ʹnnj). Consulted for the palatalisation mark's codepoint (U+02B9) and position, and for the ⟨llj⟩ / ⟨nnj⟩ spellings of the geminate palatal sonorants.",
+   "wikipedia_url": null
+  },
+  {
+   "id": "uralic_languages_2ed",
+   "author": "Bakró-Nagy, M., Laakso, J. & Skribnik, E. (eds.)",
+   "year": 2022,
+   "title": "The Uralic Languages, 2nd edition",
+   "publisher": "Routledge",
+   "pages": null,
+   "url": "https://api.pageplace.de/preview/DT0400.9781317230977_A42846364/preview-9781317230977_A42846364.pdf",
+   "notes": "Consulted in the publisher's open preview PDF, which prints the Skolt Saami gradation pair kååʹpp : kååʹv with U+02B9 and describes Saamic three-degree quantity.",
+   "wikipedia_url": null
+  }
+ ],
+ "wikipedia": [
+  "https://en.wikipedia.org/wiki/Skolt_Sami_language"
+ ],
+ "allophone_rules": [
+  {
+   "id": "SMS_PALATALISATION_MARK",
+   "phonemes": [
+    "ʲ"
+   ],
+   "surface": "",
+   "followed_by": "consonant",
+   "mutates_neighbor": "ʲ",
+   "mutates_neighbor_side": "following",
+   "notes": "Suprasegmental palatalisation. The mark written after the syllable vowel palatalises the following consonant; it is not itself a segment. Marker-grapheme pattern (docs/allophony.md): the slot deletes while palatalising its right neighbour."
+  },
+  {
+   "id": "SMS_PALATALISATION_MARK_NO_TARGET",
+   "phonemes": [
+    "ʲ"
+   ],
+   "surface": "",
+   "followed_by": "vowel",
+   "notes": "The same mark standing before a vowel letter has no consonant to dock on and contributes no segment of its own."
+  }
+ ]
+}

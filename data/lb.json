@@ -1,0 +1,262 @@
+{
+  "code": "lb",
+  "name": "Luxembourgish",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "iso639_3": "ltz",
+  "glottolog_code": "luxe1241",
+  "timespan": {
+    "start_year": 1340,
+    "end_year": null
+  },
+  "graphemes": {
+    "sch": [
+      "ʃ"
+    ],
+    "ch": [
+      "χ"
+    ],
+    "ng": [
+      "ŋ"
+    ],
+    "ei": [
+      "ɑɪ"
+    ],
+    "au": [
+      "ɑʊ"
+    ],
+    "eu": [
+      "œɪ"
+    ],
+    "é": [
+      "eː"
+    ],
+    "ä": [
+      "æ"
+    ],
+    "ë": [
+      "ə"
+    ],
+    "a": [
+      "a"
+    ],
+    "b": [
+      "b"
+    ],
+    "d": [
+      "d"
+    ],
+    "e": [
+      "e"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "h": [
+      "h"
+    ],
+    "i": [
+      "i"
+    ],
+    "j": [
+      "j"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "o": [
+      "o"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "ʀ"
+    ],
+    "s": [
+      "z"
+    ],
+    "t": [
+      "t"
+    ],
+    "u": [
+      "u"
+    ],
+    "v": [
+      "f"
+    ],
+    "w": [
+      "v"
+    ],
+    "z": [
+      "ts"
+    ],
+    "aa": [
+      "aː"
+    ],
+    "ee": [
+      "eː"
+    ],
+    "oo": [
+      "oː"
+    ],
+    "ii": [
+      "iː"
+    ],
+    "uu": [
+      "uː"
+    ],
+    "éi": [
+      "ɜɪ"
+    ],
+    "ou": [
+      "əʊ"
+    ],
+    "ue": [
+      "uə"
+    ],
+    "ie": [
+      "iə"
+    ],
+    "äi": [
+      "æːɪ"
+    ],
+    "ai": [
+      "ɑɪ"
+    ],
+    "ss": [
+      "s"
+    ],
+    "x": [
+      "ks"
+    ],
+    "c": [
+      "k"
+    ],
+    "qu": [
+      "kw"
+    ],
+    "q": [
+      "k"
+    ],
+    "ü": [
+      "y"
+    ],
+    "ö": [
+      "øː"
+    ],
+    "äu": [
+      "æːʊ"
+    ]
+  },
+  "allophones": {},
+  "positional_graphemes": {
+    "s": {
+      "word_initial": [
+        "z"
+      ],
+      "intervocalic": [
+        "z"
+      ],
+      "word_final": [
+        "s"
+      ],
+      "default": [
+        "s"
+      ]
+    },
+    "b": {
+      "word_final": [
+        "p"
+      ],
+      "default": [
+        "b"
+      ]
+    },
+    "d": {
+      "word_final": [
+        "t"
+      ],
+      "default": [
+        "d"
+      ]
+    },
+    "g": {
+      "word_initial": [
+        "ɡ"
+      ],
+      "word_final": [
+        "χ"
+      ],
+      "intervocalic": [
+        "ʁ"
+      ],
+      "default": [
+        "ɡ"
+      ]
+    },
+    "ch": {
+      "after_a": [
+        "χ"
+      ],
+      "after_o": [
+        "χ"
+      ],
+      "after_u": [
+        "χ"
+      ],
+      "default": [
+        "ɕ"
+      ]
+    }
+  },
+  "ancestors": [
+    {
+      "code": "gem",
+      "role": "proto_language",
+      "weight": 1.0,
+      "notes": "Moselle Franconian variety of West Germanic"
+    }
+  ],
+  "parent": "x-clade-west2793",
+  "notes": "Luxembourgish (Lëtzebuergesch), the Moselle Franconian national language of Luxembourg, described here from Gilles & Trouvain's Illustration of the IPA. Doubled consonant letters mark the shortness of the preceding vowel and are a single consonant (Mamm [mɑm], Kapp [kɑp], Hiwwel [ˈhivəl]), so geminates collapse; ⟨ss⟩ is the exception the collapse must not reach, because it spells /s/ where single ⟨s⟩ spells /z/ (Keess [keːs] beside Sak [zaːk]). Voiced obstruents cannot stand syllable-finally and devoice (Auslautverhärtung, §2). [ɡ] occurs only word-initially; elsewhere the successors of historical [ɡ] are the fricatives [ʁ] between vowels and [χ] word-finally (Vugel [ˈfuʁel], Dag [daːχ]). [χ] and [ɕ] are allophones of one phoneme selected by the preceding vowel — [χ] after back vowels, [ɕ] elsewhere. ⟨ë⟩ is schwa and ⟨ä⟩ is short [æ], not the German [ɛː]. The Eifel Rule deletes syllable-final -n, but §5 places it in EXTERNAL SANDHI only: it is conditioned by the first sound of the following word, so it cannot fire on an isolated word form and this spec does not model it. ⟨r⟩ is left as [ʀ] in every position: word-final r-vocalisation to [ɐ] is described as a younger-speaker variant beside elder speakers' [ʀ ʁ], which makes it variable rather than categorical.",
+  "sources": [
+    {
+      "id": "gilles_trouvain2013",
+      "author": "Gilles, Peter & Trouvain, Jürgen",
+      "year": 2013,
+      "title": "Luxembourgish (Illustrations of the IPA)",
+      "publisher": "Journal of the International Phonetic Association 43(1)",
+      "pages": "67-74",
+      "url": "https://doi.org/10.1017/S0025100312000278",
+      "notes": "§2 consonants and Auslautverhärtung; §3 vowels and diphthongs; §5 cross-word phenomena (Eifel Rule). Author preprint at https://orbilu.uni.lu/handle/10993/1143"
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Luxembourgish_language",
+    "https://lb.wikipedia.org/wiki/L%C3%ABtzebuergesch"
+  ],
+  "wikidata_qid": "Q9051",
+  "phoible_id": "luxe1241",
+  "wals_code": "lux",
+  "location": {
+    "latitude": 49.6839,
+    "longitude": 6.14931,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Moselle Franconian."
+  },
+  "collapse_geminates": true
+}

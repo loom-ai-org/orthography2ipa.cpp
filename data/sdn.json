@@ -1,0 +1,115 @@
+{
+  "code": "sdn",
+  "name": "Gallurese",
+  "script": "Latin",
+  "graphemes_base": "co",
+  "graphemes": {
+    "dd": [
+      "ɖː"
+    ],
+    "chj": [
+      "c"
+    ],
+    "ghj": [
+      "ɟ"
+    ],
+    "r": [
+      "r",
+      "l"
+    ]
+  },
+  "allophones_base": "co",
+  "parent": "co",
+  "ancestors": [
+    {
+      "code": "co",
+      "role": "parent",
+      "weight": 0.75,
+      "notes": "Gallurese is classified genetically as southern Corsican / Corso-Sardinian transitional: 'predominantly Corsican on a phono-morphological level' (Maxia), sharing co's Italo-Romance grapheme conventions (chj/ghj palatals, gemination) rather than sc's."
+    },
+    {
+      "code": "sc",
+      "role": "adstrate",
+      "weight": 0.2,
+      "notes": "Sardinian adstrate: centuries of contact with Logudorese Sardinian contributed roughly a third of Gallurese vocabulary and syntactic patterns (Maxia), even though the phono-morphology stays Corsican."
+    }
+  ],
+  "notes": "Gallurese (gadduresu), ISO 639-3 sdn, spoken in Gallura, northeastern Sardinia. Corsican-derived (southern Corsican dialect group / Corso-Sardinian transitional variety), not a Sardinian dialect — 'predominantly Corsican on a phono-morphological level' but 'predominantly Sardinian on a syntactic level' with heavy Logudorese/Catalan/Spanish lexical influence (Maxia). Cited surface shifts relative to Corsican: Latin -LL- > [ɖː] spelled <dd> (casteddu 'castle', coraddu 'coral'; same retroflex-geminate outcome as Sardinian sc's <dd>), non-final <r> before a consonant frequently realised as [l] (poltu 'port'), and the Corsican palatal digraphs <chj>/<ghj> ([c]/[ɟ]) as in ghjesgia 'church', occhji 'eyes'. Plurals mark with -i (Corsican/Italian pattern) rather than Sardinian -s. Wired with graphemes_base/allophones_base co (Corsican) so the shared Italo-Romance consonant and vowel inventory is inherited, overriding only the cited Gallurese-specific outcomes; the wider grapheme inventory (unstressed-vowel reduction, full gemination table, precise <r>/<l> conditioning) is not recoverable from the sources fetched this session and is left to inherit from Corsican rather than guessed.",
+  "quality": "skeleton",
+  "script_type": "alphabet",
+  "sources": [
+    {
+      "id": "wagner1941",
+      "author": "Wagner, Max Leopold",
+      "year": 1941,
+      "title": "Historische Lautlehre des Sardischen",
+      "publisher": "Max Niemeyer",
+      "url": null,
+      "pages": null,
+      "notes": "Classic reference on Sardinian/Corso-Sardinian historical phonology cited in the Gallurese literature."
+    },
+    {
+      "id": "maxia_gallurese",
+      "author": "Maxia, Mauro",
+      "year": 2010,
+      "title": "Studi sardo-corsi. Dialettologia e storia linguistica della Gallura",
+      "publisher": "Taphros",
+      "url": null,
+      "pages": null,
+      "notes": "Assessment that Gallurese is predominantly Corsican phono-morphologically and predominantly Sardinian syntactically, with ~1/3 Logudorese/Catalan/Spanish-influenced vocabulary; cited via the Wikipedia Gallurese article fetched this session."
+    },
+    {
+      "id": "sdn_wikipedia",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Gallurese (Wikipedia)",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Gallurese",
+      "pages": null,
+      "notes": "Orthography/phonology examples (dd, chj/ghj, r>l, plural -i) fetched and read this session."
+    },
+    {
+      "id": "sil_sdn",
+      "author": "SIL International",
+      "year": 2024,
+      "title": "ISO 639-3: sdn — Gallurese Sardinian",
+      "publisher": "SIL International",
+      "url": "https://iso639-3.sil.org/code/sdn",
+      "pages": null,
+      "notes": "Confirms ISO 639-3 identifier, fetched this session."
+    },
+    {
+      "id": "glottolog_gall1276",
+      "author": "Hammarström, H. et al. (Glottolog 5.2)",
+      "year": 2024,
+      "title": "Glottolog: Gallurese Sardinian (gall1276)",
+      "publisher": "Max Planck Institute for Evolutionary Anthropology",
+      "url": "https://glottolog.org/resource/languoid/id/gall1276",
+      "pages": null,
+      "notes": "Glottolog classification, fetched this session."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Gallurese",
+    "https://en.wikipedia.org/wiki/Gallura",
+    "https://it.wikipedia.org/wiki/Dialetto_gallurese"
+  ],
+  "urls": [
+    "https://www.wikidata.org/wiki/Q612220",
+    "https://glottolog.org/resource/languoid/id/gall1276",
+    "https://iso639-3.sil.org/code/sdn"
+  ],
+  "timespan": {
+    "start_year": 1300,
+    "end_year": null
+  },
+  "glottolog_code": "gall1276",
+  "iso639_3": "sdn",
+  "wikidata_qid": "Q612220",
+  "location": {
+    "latitude": 41.0,
+    "longitude": 9.3,
+    "source": "glottolog",
+    "notes": "Representative point for Gallura, northeastern Sardinia, where Gallurese is spoken."
+  }
+}

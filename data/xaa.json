@@ -1,0 +1,154 @@
+{
+  "code": "xaa",
+  "name": "Andalusi Arabic",
+  "script": "Arabic",
+  "graphemes_base": "arb",
+  "allophones_base": "arb",
+  "allophones": {
+    "aː": [
+      "aː",
+      "eː"
+    ],
+    "θ": [
+      "θ",
+      "t",
+      "s"
+    ],
+    "ɮˤ": [
+      "dˤ",
+      "ðˤ"
+    ],
+    "ðˤ": [
+      "ðˤ",
+      "dˤ"
+    ]
+  },
+  "allophone_rules": [
+    {
+      "id": "XAA_IMALA_BLOCK_ADJ",
+      "phonemes": ["aː"],
+      "surface": "a",
+      "preceded_by_phoneme": ["sˤ", "tˤ", "dˤ", "ðˤ", "ɮˤ", "q", "x", "ɣ", "ħ", "ʕ", "h", "ʔ", "r"],
+      "notes": "Imāla is blocked adjacent to an emphatic, a guttural (uvular/pharyngeal/glottal) or /r/, the classic Arabic imāla-blocking set (corriente2013 phonology ch.1; mirrors the Lebanese ar-LB imāla guard). Here the surface is plain short [a], not [eː]: the blocked /aː/ does NOT front, and Andalusi has no phonemic vowel length (vicente2020 §3.1.1), so the OA long low vowel collapses to short [a] (partial loss of contrastive velarisation, corriente2015:82, means the emphatic-adjacent vowel is left plain rather than backed to [ɑ]). Companion of XAA_IMALA_BLOCK_ADJ_R2; ordered before XAA_IMALA_RAISE so blocking environments are removed first."
+    },
+    {
+      "id": "XAA_IMALA_BLOCK_ADJ_R2",
+      "phonemes": ["aː"],
+      "surface": "a",
+      "followed_by_phoneme": ["sˤ", "tˤ", "dˤ", "ðˤ", "ɮˤ", "q", "x", "ɣ", "ħ", "ʕ", "h", "ʔ", "r"],
+      "notes": "Imāla blocked BEFORE an emphatic/guttural/r (companion of XAA_IMALA_BLOCK_ADJ, which blocks after). Surface plain short [a] — blocked-imāla plus length collapse. corriente2013; vicente2020 §3.1.1."
+    },
+    {
+      "id": "XAA_IMALA_RAISE",
+      "phonemes": ["aː"],
+      "surface": "e",
+      "notes": "IMĀLA (defining Andalusi feature 1): etymological /aː/ that is NOT adjacent to an emphatic/guttural/r fronts and raises. First-degree imāla [eː] is the general Andalusi value (qitāl→qitēl, bustān→bustēn, negator lā→lás/lís); the second-degree [iː] of strong Granadan imāla is a sub-dialectal maximum and is not applied engine-wide (vicente2020 fn.4; corriente2013). Surface is short [e], not [eː], because Andalusi has no phonemic vowel length (vicente2020 §3.1.1): the raised vowel is realised short but stays distinct from base short /a/. Ordered after the two blocking rules so only the unblocked /aː/ reaches it."
+    },
+    {
+      "id": "XAA_LENGTH_COLLAPSE_I",
+      "phonemes": ["iː"],
+      "surface": "i",
+      "notes": "Loss of phonemic vowel length (defining feature 2): the OA quantitative contrast was replaced by a Romance-type intense-stress system with no phonemic length (vicente2020 §3.1.1; corriente2015:75–78). /iː/→[i]. The historical long-vowel matres lectionis survive in the orthography column, where in Andalusi sources they often mark a STRESSED (not long) vowel."
+    },
+    {
+      "id": "XAA_LENGTH_COLLAPSE_U",
+      "phonemes": ["uː"],
+      "surface": "u",
+      "notes": "Loss of phonemic vowel length (defining feature 2): /uː/→[u]. Same grounding as XAA_LENGTH_COLLAPSE_I (vicente2020 §3.1.1; corriente2015:75–78). The Andalusi matres lectionis for /ū/ that mark stress — e.g. al-andalūs = /alandalús/ (vicente2020 §3.1.1) — are an orthographic, not a length, cue."
+    }
+  ],
+  "stress": {
+    "default_position": -2,
+    "quantity_sensitive": false,
+    "superheavy_final_attracts": true,
+    "diphthongs": ["aj", "aw"],
+    "max_onset": 1,
+    "stress_mark": "ˈ",
+    "cliticless_words": ["فِي", "مِنْ", "مَا", "يَا", "إِلَى"],
+    "source": "rules",
+    "notes": "Andalusi Arabic replaced the OA/Neo-Arabic QUANTITATIVE prosodic rhythm with a Romance-type 'intense' stress system and lost phonemic vowel length (vicente2020 §3.1.1; corriente2015:75–78). This own-block therefore OVERRIDES the inherited arb quantity-sensitive stress (which is OA rhythm and wrong for Andalusi): quantity_sensitive=false, penultimate default with a heavy consonant-final syllable attracting stress (superheavy_final_attracts=true). That is the Ibero-Romance 'penult unless the word ends in a heavy consonant-final syllable' default, and it reproduces the attested Andalusi stressed etyma, all consonant-final: /alandalús/, /azzahár/, /muqáṣṣ/, /usqúf/, /qunfúd/, and the 913 CE zaǧal /labán úmm-u fi fúmm-u/. HONEST LIMIT: Andalusi stress became lexically CONTRASTIVE (vicente2020 §3.1.1; Corriente et al. 2015:76 fn.213 even reads the erratic matres lectionis as incipient loss of the phonological value of stress). Contrastive stress is by definition not fully predictable from a positional rule, and the abjad skeleton carries no reliable stress cue — the sources encode it only through anomalous, unsystematic matres lectionis. This block models the Romance-type DEFAULT; lexical placements that deviate from it (a paroxytone despite a heavy consonant-final syllable, or an antepenult) are recoverable only from those unreliable historical spellings, which are preserved in the gold's orthography column, not from the input. Clitics: the pan-Arabic monosyllabic proclitics fī/min/mā/yā/ilā fall inside the host's stress domain (Watson 2002 ch.3)."
+  },
+  "parent": "arb",
+  "notes": "Andalusi Arabic (8th–17th c. CE). Western (Maghrebi-type) Arabic dialect bundle of al-Andalus; the best-documented medieval vernacular Arabic, attested in zaǧal (earliest 913 CE), ḫaraǧāt, Pedro de Alcalá (1505), the anonymous Vocabulista and the proverb collections. DEFINING FEATURES (Corriente et al. 2015; Vicente 2020): (1) IMĀLA — raising of etymological /aː/ to [eː] and, in strong (Granadan) imāla, [iː]: qitāl→qitēl/qitīl 'battle', wālid→wīld 'father'; the negator lā appears as lás/lís (corriente2013). (2) STRESS-based prosody replacing OA quantitative rhythm: no phonemic vowel length; stress is contrastive and marked in sources by anomalous matres lectionis — /muqáṣṣ/ 'scissors', /usqúf/ 'bishop', /qunfúd/ 'hedgehog', /alandalús/, /azzahár/ 'orange blossom' (Romance imposition; vicente2020 §3.1.1; corriente2015:75–78). (3) Three OA interdentals /θ ð ðˤ/ retained (Bedouin-type), occlusive realisation stigmatised (corriente2015:29); /q/ voiceless [q] (sedentary-type), not [g] (vicente2020). (4) Spirantisation of postvocalic /d/→[ð] under Romance contact: ǧaðwal 'creek', ḥafīð 'nephew', al-ḥaðð 'Sunday', sīði 'my lord' (corriente2015 via vicente2020); [β] allophone of /b/. (5) Partial loss of contrastive velarisation: /s/~/sˤ/ interchange (sūr~ṣūr). (6) Marginal Romance-origin phonemes /p/ /g/ /č/ from loans: čípp 'trap', čiqála 'cicada' (corriente1978). (7) Heavy Romance adstrate — hybrid suffixes (-ūn augmentative, -áyr agentive), Romance-model gender/agreement, min/li calques (naḫruǧ li wildī 'I look like my father'). ~2000+ Andalusi Arabic loanwords survive in Ibero-Romance (alcalde, algodón, azúcar, alfombra...). NOTE: features (1) and (2) are now MODELLED as data. Imāla is realised by the XAA_IMALA_* allophone rules (/aː/→[e] outside emphatic/guttural/r contexts, blocked to [a] adjacent to them); the loss of phonemic length by the XAA_LENGTH_COLLAPSE_* rules (/aː iː uː/→[a i u]); and the Romance-type intense stress by the own `stress` block (non-quantity-sensitive penult, heavy-C-final attracts) which overrides the inherited arb quantity-sensitive stress. The gold is regenerated from this engine output. HONEST SCOPE: length collapse and imāla conditioning are categorical and source-backed; Andalusi stress was lexically contrastive and only defectively attested via matres lectionis, so the stress block models the Romance DEFAULT only — see the stress-block notes for what a G2P over an abjad can and cannot claim for this dead language.",
+  "sources": [
+    {
+      "id": "watson2002",
+      "author": "Watson, J.C.E.",
+      "year": 2002,
+      "title": "The Phonology and Morphology of Arabic",
+      "publisher": "Oxford University Press",
+      "url": null,
+      "pages": null,
+      "notes": null,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Arabic_phonology"
+    },
+    {
+      "id": "corriente1997",
+      "author": "Corriente, F.",
+      "year": 1997,
+      "title": "A Dictionary of Andalusi Arabic",
+      "publisher": "Brill",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "corriente2013",
+      "author": "Corriente, F.",
+      "year": 2013,
+      "title": "A Descriptive and Comparative Grammar of Andalusi Arabic (Handbuch der Orientalistik I/102)",
+      "publisher": "Brill",
+      "url": "https://archive.org/details/229701106ADescriptiveAndComparativeGrammarOfAndalusiArabic",
+      "pages": "Phonology ch. 1: imāla, interdentals, stress",
+      "notes": "The standard reference grammar. Full text on Internet Archive."
+    },
+    {
+      "id": "vicente2020",
+      "author": "Vicente, Á.",
+      "year": 2020,
+      "title": "Andalusi Arabic (ch. 11). In: Arabic and contact-induced change (eds. Lucas & Manfredi)",
+      "publisher": "Language Science Press",
+      "url": "https://langsci-press.org/catalog/book/235",
+      "pages": "225–244 (phonology §3.1.1, pp. 232–234; interdentals/q p. 228)",
+      "notes": "Open-access. Cites Corriente et al. 2015 throughout with page pins. Local copy: papers/iberian/vicente_andalusi-arabic_langsci-arabic-contact-2020.pdf"
+    },
+    {
+      "id": "corriente2015",
+      "author": "Corriente, F., Pereira, C. & Vicente, Á.",
+      "year": 2015,
+      "title": "Aperçu grammatical du faisceau dialectal arabe andalou (Encyclopédie linguistique d'Al-Andalus, vol. 1)",
+      "publisher": "De Gruyter",
+      "url": null,
+      "pages": "29 (interdentals), 57 (marginal /p g č/), 64 (/q/), 75–78 (stress), 237 (913 CE zaǧal)",
+      "notes": "Phonology page pins quoted via vicente2020."
+    },
+    {
+      "id": "holes2004",
+      "author": "Holes, C.",
+      "year": 2004,
+      "title": "Modern Arabic: Structures, Functions, and Varieties",
+      "publisher": "Georgetown University Press",
+      "url": null,
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Andalusi_Arabic"
+  ],
+  "timespan": {
+    "start_year": 711,
+    "end_year": 1492
+  },
+  "glottolog_code": "anda1287",
+  "iso639_3": "xaa",
+  "quality": "research",
+  "script_type": "abjad",
+  "wikidata_qid": "Q1137945",
+  "location": {
+    "latitude": 36.54,
+    "longitude": -5.2,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Andalusian Arabic."
+  }
+}

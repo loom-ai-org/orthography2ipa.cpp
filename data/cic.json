@@ -1,0 +1,134 @@
+{
+  "code": "cic",
+  "name": "Chickasaw",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "aa": [
+      "aː"
+    ],
+    "ii": [
+      "iː"
+    ],
+    "oo": [
+      "oː"
+    ],
+    "ch": [
+      "tʃ"
+    ],
+    "sh": [
+      "ʃ"
+    ],
+    "lh": [
+      "ɬ"
+    ],
+    "a": [
+      "a"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "o"
+    ],
+    "b": [
+      "b"
+    ],
+    "f": [
+      "f"
+    ],
+    "h": [
+      "h"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "p": [
+      "p"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "w": [
+      "w"
+    ],
+    "y": [
+      "j"
+    ],
+    "'": [
+      "ʔ"
+    ]
+  },
+  "parent": "x-clade-musk1252",
+  "ancestors": [
+    {
+      "code": "x-clade-musk1252",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Descent per Glottolog classification of Chickasaw (chic1270)."
+    }
+  ],
+  "notes": "Research. Western Muskogean language of Oklahoma written in the Humes practical orthography. Long vowels are doubled (aa ii oo); ch=[tʃ], sh=[ʃ] and lh=[ɬ] are mapped, with the apostrophe for glottal stop. Contrastive vowel nasalization (often shown by an underline) and pitch accent are not encoded here, and rhythmic vowel lengthening is not recovered from spelling, raising the PER floor. Grapheme table checked against Munro & Willmond (1994): no discrepancy found.",
+  "iso639_3": "cic",
+  "glottolog_code": null,
+  "sources": [
+    {
+      "id": "cic_glottolog",
+      "author": "Hammarström, H. et al. (Glottolog 5.0)",
+      "year": 2024,
+      "title": "Glottolog: Chickasaw (chic1270)",
+      "publisher": "Max Planck Institute for Evolutionary Anthropology",
+      "url": "https://glottolog.org/resource/languoid/id/chic1270",
+      "pages": null,
+      "notes": "Classification reference for a skeleton-tier entry.",
+      "wikipedia_url": null
+    },
+    {
+      "id": "munro_willmond1994",
+      "author": "Munro, Pamela; Willmond, Catherine",
+      "year": 1994,
+      "title": "Chickasaw: An Analytical Dictionary",
+      "publisher": "University of Oklahoma Press",
+      "url": null,
+      "pages": null,
+      "notes": "Grammar/dictionary reference used to verify the Humes orthography grapheme table and to source the weight-sensitive stress rule (rightmost heavy syllable takes primary stress) encoded in this spec's `stress` block.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Chickasaw_language"
+    },
+    {
+      "id": "cic_orthography",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Chickasaw language, Wikipedia",
+      "publisher": "Wikimedia Foundation",
+      "url": "https://en.wikipedia.org/wiki/Chickasaw_language",
+      "pages": null,
+      "notes": "Orthography/phonology reference for a skeleton-tier grapheme map.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Chickasaw_language"
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Chickasaw_language"
+  ],
+  "stress": {
+    "default_position": -2,
+    "quantity_sensitive": true,
+    "superheavy_final_attracts": true,
+    "max_onset": 1,
+    "stress_mark": "ˈ",
+    "source": "rules",
+    "notes": "Chickasaw stress is weight-sensitive, not orthography-positional (Munro & Willmond 1994; Munro 1993, Stress and Word Structure in Muskogean Languages): primary accent falls on the rightmost heavy syllable (CVV/CVC, i.e. a syllable with a long vowel or closed by a coda), with a regular iambic rhythm assigned left-to-right and rhythmic lengthening of the second of two adjacent light open syllables. `default_position=-2` approximates the common case of a heavy penult (this project's schema has no direct 'rightmost heavy syllable' primitive); the true rightmost-heavy-syllable rule is not fully expressible and this approximation is documented rather than hidden."
+  }
+}

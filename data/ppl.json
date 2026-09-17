@@ -1,0 +1,191 @@
+{
+  "code": "ppl",
+  "name": "Nawat",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "e": [
+      "e"
+    ],
+    "i": [
+      "i"
+    ],
+    "u": [
+      "u"
+    ],
+    "p": [
+      "p"
+    ],
+    "t": [
+      "t"
+    ],
+    "k": [
+      "k"
+    ],
+    "kw": [
+      "kʷ"
+    ],
+    "tz": [
+      "ts"
+    ],
+    "ch": [
+      "tʃ"
+    ],
+    "s": [
+      "s"
+    ],
+    "sh": [
+      "ʃ"
+    ],
+    "j": [
+      "h"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "w": [
+      "w"
+    ],
+    "y": [
+      "j"
+    ]
+  },
+  "allophones": {
+    "a": [
+      "a"
+    ],
+    "e": [
+      "e"
+    ],
+    "i": [
+      "i"
+    ],
+    "u": [
+      "u"
+    ],
+    "p": [
+      "p"
+    ],
+    "t": [
+      "t"
+    ],
+    "k": [
+      "k"
+    ],
+    "kʷ": [
+      "kʷ"
+    ],
+    "ts": [
+      "ts"
+    ],
+    "tʃ": [
+      "tʃ"
+    ],
+    "s": [
+      "s"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "h": [
+      "h"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "w": [
+      "w"
+    ],
+    "j": [
+      "j"
+    ]
+  },
+  "iso639_3": "ppl",
+  "glottolog_code": "pipi1250",
+  "wikidata_qid": "Q1186896",
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Nawat_language",
+    "https://en.wikipedia.org/wiki/Nawat_grammar",
+    "https://ppl.wikipedia.org/wiki/Nawat"
+  ],
+  "sources": [
+    {
+      "id": "campbell1985",
+      "author": "Campbell, Lyle",
+      "year": 1985,
+      "title": "The Pipil Language of El Salvador",
+      "publisher": "Mouton de Gruyter",
+      "url": null,
+      "pages": null,
+      "notes": "The reference descriptive grammar; phoneme inventory."
+    },
+    {
+      "id": "king2004",
+      "author": "King, Alan R.",
+      "year": 2004,
+      "title": "Gramática elemental del náhuat",
+      "publisher": "IRIN, El Salvador",
+      "url": null,
+      "pages": null,
+      "notes": "Defines the IRIN practical orthography used by this spec."
+    },
+    {
+      "id": "nawat_grammar_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2025,
+      "title": "Nawat grammar",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Nawat_grammar",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Nawat_grammar",
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "nawat_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2025,
+      "title": "Nawat language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Nawat_language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Nawat_language",
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "notes": "Nawat (Pipil) — Uto-Aztecan (Nahuan) language of El Salvador. This spec uses the IRIN / Alan King orthography (Iniciativa de Recuperación del Idioma Nawat), the practical standard for revitalisation materials: ⟨kw⟩ = /kʷ/, ⟨tz⟩ = /ts/, ⟨ch⟩ = /tʃ/, ⟨sh⟩ = /ʃ/, ⟨j⟩ = /h/. Four vowels a e i u; the rounded vowel's predominant allophone is [u] (not [o] as in Classical Nahuatl). Nawat has no /tɬ/: Classical Nahuatl /t/, /tɬ/ and final saltillo all correspond to Nawat /t/. Vowel length is phonemic in some analyses but not written. Several older spelling systems (Campbell, Schultze Jena, Spanish-based) exist and are NOT covered here.",
+  "timespan": {
+    "start_year": 1500,
+    "end_year": null
+  },
+  "parent": "x-clade-utoa1244",
+  "ancestors": [
+    {
+      "code": "x-clade-utoa1244",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Uto-Aztecan — the classification node this language sits under."
+    }
+  ],
+  "location": {
+    "latitude": 13.8931,
+    "longitude": -89.443,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Pipil."
+  }
+}

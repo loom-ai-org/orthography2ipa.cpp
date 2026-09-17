@@ -1,0 +1,115 @@
+{
+  "code": "mch",
+  "name": "Maquiritari",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "ch": [
+      "tʃ"
+    ],
+    "ö": [
+      "ɤ"
+    ],
+    "ü": [
+      "ɨ"
+    ],
+    "ñ": [
+      "ɲ"
+    ],
+    "a": [
+      "a"
+    ],
+    "e": [
+      "e"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "o"
+    ],
+    "u": [
+      "u"
+    ],
+    "p": [
+      "p"
+    ],
+    "t": [
+      "t"
+    ],
+    "k": [
+      "k"
+    ],
+    "s": [
+      "s"
+    ],
+    "j": [
+      "h"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "d": [
+      "ɗ"
+    ],
+    "w": [
+      "w"
+    ],
+    "y": [
+      "j"
+    ],
+    "'": [
+      "ʔ"
+    ]
+  },
+  "parent": "x-clade-cari1283",
+  "ancestors": [
+    {
+      "code": "x-clade-cari1283",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Descent per Glottolog classification of Ye'kwana (maqu1238)."
+    }
+  ],
+  "notes": "Skeleton. Cariban language of the Venezuela-Brazil border region, self-named Ye'kwana (also Maquiritari), in its Spanish-influenced practical orthography. ch=[tʃ], j=[h], ñ=[ɲ], and the back/central unrounded vowels ö=[ɤ] and ü=[ɨ] are mapped; d denotes an implosive/flap [ɗ]. Contrastive vowel nasalization and predictable stress/length are not recovered from spelling and are left unencoded, raising the PER floor.",
+  "iso639_3": "mch",
+  "glottolog_code": null,
+  "sources": [
+    {
+      "id": "mch_glottolog",
+      "author": "Hammarström, H. et al. (Glottolog 5.0)",
+      "year": 2024,
+      "title": "Glottolog: Ye'kwana (maqu1238)",
+      "publisher": "Max Planck Institute for Evolutionary Anthropology",
+      "url": "https://glottolog.org/resource/languoid/id/maqu1238",
+      "pages": null,
+      "notes": "Classification reference for a skeleton-tier entry.",
+      "wikipedia_url": null
+    },
+    {
+      "id": "mch_orthography",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Ye'kuana (Maquiritari) language, Wikipedia",
+      "publisher": "Wikimedia Foundation",
+      "url": "https://en.wikipedia.org/wiki/Ye%27kuana_language",
+      "pages": null,
+      "notes": "Orthography/phonology reference for a skeleton-tier grapheme map.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Ye%27kuana_language"
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Ye%27kuana_language"
+  ],
+  "audit": {
+    "wikipron": {
+      "conclusion": "input_limited",
+      "measured": "Ye'kwana contrastive vowel nasalization and predictable stress/length are not recoverable from the practical Spanish-influenced orthography this spec describes and are left unencoded, which the spec notes state raises the PER floor.",
+      "reference": "spec notes"
+    }
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "code": "sem-x-central",
+  "name": "Proto-Central-Semitic",
+  "script": "IPA-reconstruction",
+  "script_type": "reconstruction",
+  "graphemes_base": "sem-x-west",
+  "allophones_base": "sem-x-west",
+  "parent": "x-clade-cent2236",
+  "ancestors": [
+    {
+      "code": "sem-x-west",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Descent from Proto-West-Semitic"
+    }
+  ],
+  "notes": "Proto-Central-Semitic (~2500–2000 BCE). Ancestor of: Arabic, Northwest Semitic (Canaanite + Aramaic). Excludes South Semitic (Ethiopic, South Arabian). KEY INNOVATIONS: (1) *ś /ɬ/ begins merging with /s/ (not /ʃ/ — that is the Canaanite reflex); (2) *ṣ́ /ɬˤ/ begins shifting toward /ðˤ/ in the Arabic branch; (3) short vowel reduction in unstressed syllables (morphophonological). Consonant inventory: 29 phonemes (same letters as PSem but with *ś and *ṣ́ in transitional states).",
+  "sources": [
+    {
+      "id": "lipiński1997",
+      "author": "Lipiński, E.",
+      "year": 1997,
+      "title": "Semitic Languages: Outline of a Comparative Grammar",
+      "publisher": "Peeters",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "hetzron1997",
+      "author": "Hetzron, R. (ed.)",
+      "year": 1997,
+      "title": "The Semitic Languages",
+      "publisher": "Routledge",
+      "url": null,
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Central_Semitic_languages"
+  ],
+  "timespan": {
+    "start_year": -2500,
+    "end_year": -1500
+  },
+  "glottolog_code": "cent2236",
+  "iso639_3": null,
+  "quality": "research",
+  "wikidata_qid": "Q3433228",
+  "location": {
+    "latitude": 26.148795,
+    "longitude": 39.671439,
+    "source": "glottolog",
+    "notes": "Glottolog's computed centroid for the Central Semitic family — a summary of a whole clade's range, not a place anyone speaks."
+  }
+}

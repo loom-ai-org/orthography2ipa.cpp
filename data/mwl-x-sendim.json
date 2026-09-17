@@ -1,0 +1,135 @@
+{
+  "code": "mwl-x-sendim",
+  "name": "Sendinês (Mirandese meridional)",
+  "script": "Latin",
+  "graphemes_base": "mwl",
+  "graphemes": {
+    "iê": [
+      "i"
+    ],
+    "uô": [
+      "u"
+    ],
+    "ie": [
+      "i"
+    ],
+    "uo": [
+      "u"
+    ],
+    "lh": [
+      "l"
+    ]
+  },
+  "allophones_base": "mwl",
+  "positional_graphemes_base": "mwl",
+  "positional_graphemes": {
+    "l": {
+      "word_initial": [
+        "l"
+      ],
+      "onset": [
+        "l"
+      ]
+    }
+  },
+  "parent": "mwl",
+  "notes": "Sendinês subdialect of Mirandese, spoken in Vila de Sendim (southern extreme of Terra de Miranda). It inherits the full Central Mirandese system (graphemes_base=mwl: apical ⟨s⟩ /s̺ z̺/ vs predorsal ⟨c,ç,z⟩ /s z/, ⟨x⟩ /ʃ/, ⟨j,g⟩ /ʒ/, ⟨ch⟩ /tʃ/, ⟨nh⟩ /ɲ/, nasal-vowel digraphs) and overrides only the two documented Sendinês deltas: (1) monophthongisation of the Leonese diphthongs ⟨iê/ie⟩ → /i/ and ⟨uô/uo⟩ → /u/ (tirra not tiêrra, curpo not cuôrpo) — the Central/Raiano [je]/[wo] is reduced to [i]/[u]; (2) DEPALATALISATION of /ʎ/ → /l/: words that other dialects say with ⟨lh⟩ /ʎ/ are said with /l/ (alá for alhá, lhado→lado, lhuç→[ˈlus], lhobo→[ˈlobu]), and word-initial ⟨l⟩ is likewise plain /l/ (no Leonese initial palatalisation). The Primeiro Aditamento à Convenção (February 2000) permits Sendinese writers to spell word-initial ⟨l-⟩ (not ⟨lh-⟩). Because ⟨lh⟩ → /l/ is overridden here, the Central word-initial ⟨l⟩ → /ʎ/ rule is also cancelled via the positional override (l stays /l/ in every position). The unstressed vowel qualities are inherited from Central Mirandese, where they are grounded in Leite de Vasconcelos's description of Duas-Igrejas (unstressed ⟨o u⟩ = [u], unstressed and final ⟨e⟩ = [ɨ]). Whether Sendinês realises those unstressed vowels differently is not settled by any description reached so far, and the Sendinês gold sample is too small to decide it; the inherited Central values stand until a published source says otherwise.",
+  "quality": "research",
+  "script_type": "alphabet",
+  "sources": [
+    {
+      "id": "convencao1999",
+      "author": "Ferreira, M.B. & Raposo, D. (coords.)",
+      "year": 1999,
+      "title": "Convenção Ortográfica da Língua Mirandesa",
+      "publisher": "Câmara Municipal de Miranda do Douro / Centro de Linguística da Universidade de Lisboa",
+      "url": "http://mirandadodouro.jfreguesia.com/images/stories/PDF/convencaomirandes.pdf",
+      "pages": "62",
+      "notes": "Official orthography, base document for all Mirandese variants."
+    },
+    {
+      "id": "aditamento2000",
+      "author": "Ferreira, M.B. & Raposo, D. (coords.)",
+      "year": 2000,
+      "title": "Primeiro Aditamento à Convenção Ortográfica da Língua Mirandesa",
+      "publisher": "Câmara Municipal de Miranda do Douro / Centro de Linguística da Universidade de Lisboa",
+      "url": null,
+      "pages": null,
+      "notes": "February 2000 addendum. Codifies Sendinese l- (not lh-) word-initially; Sendinese ie/uo (no accent) vs central iê/uô. Source: secondary (standalone PDF not located)."
+    },
+    {
+      "id": "ferreira1995",
+      "author": "Ferreira, M.B.",
+      "year": 1995,
+      "title": "Variação linguística: perspectiva dialectológica",
+      "publisher": "Universidade de Lisboa",
+      "url": null,
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Mirandese_language",
+    "https://mwl.wikipedia.org/wiki/Lh%C3%A9ngua_mirandesa",
+    "https://pt.wikipedia.org/wiki/L%C3%ADngua_mirandesa"
+  ],
+  "timespan": {
+    "start_year": 1600,
+    "end_year": null
+  },
+  "glottolog_code": null,
+  "iso639_3": "mwl",
+  "stress": {
+    "onset_clusters": ["bl", "br", "bɫ", "bɾ", "bʀ", "bʁ", "bʎ", "bχ", "dr", "dɾ", "dʀ", "dʁ", "dʎ", "dχ", "fl", "fr", "fɫ", "fɾ", "fʀ", "fʁ", "fʎ", "fχ", "kl", "kr", "kɫ", "kɾ", "kʀ", "kʁ", "kʎ", "kχ", "pl", "pr", "pɫ", "pɾ", "pʀ", "pʁ", "pʎ", "pχ", "tr", "tɾ", "tʀ", "tʁ", "tʎ", "tχ", "vl", "vr", "vɫ", "vɾ", "vʀ", "vʁ", "vʎ", "vχ", "ðr", "ðɾ", "ðʀ", "ðʁ", "ðʎ", "ðχ", "ɡl", "ɡr", "ɡɫ", "ɡɾ", "ɡʀ", "ɡʁ", "ɡʎ", "ɡχ", "ɣl", "ɣr", "ɣɫ", "ɣɾ", "ɣʀ", "ɣʁ", "ɣʎ", "ɣχ", "βl", "βr", "βɫ", "βɾ", "βʀ", "βʁ", "βʎ", "βχ"],
+    "default_position": -2,
+    "final_stress_endings": [
+      "r",
+      "l",
+      "z",
+      "ç",
+      "in",
+      "un",
+      "on",
+      "is",
+      "us",
+      "ns",
+      "ão"
+    ],
+    "penult_stress_endings": [],
+    "marked_vowels": [
+      "á",
+      "é",
+      "í",
+      "ó",
+      "ú",
+      "ã",
+      "ẽ",
+      "ĩ",
+      "õ",
+      "ũ"
+    ],
+    "stress_mark": "ˈ",
+    "coda_liquid_capture": true,
+    "cliticless_words": [
+      "l", "la", "ls", "las", "lo", "los",
+      "a", "an", "de", "por", "cun", "pul", "pula", "puls", "pulas",
+      "ne", "na", "no", "nas", "nos",
+      "i", "e", "que",
+      "me", "te", "se", "bos"
+    ],
+    "notes": "Convenção Ortográfica da Língua Mirandesa (1999) accentuation, Portuguese-based: paroxytone default; written accent (acute or tilde) overrides. Oxytone-attracting endings reflect Mirandese orthography: consonant-final r/l/z/ç (rapaç, Pertual, falar) and the final nasals written with -n in the Asturleonese manner — -in (camin, Sendin), -un, and the systematically oxytone -on class from Latin -ōnem (naçon, coraçon, Associaçon). Unmarked -an/-en verb endings stay paroxytone as in Portuguese -am/-em. Dialect mwl-x-sendim: no evidence of stress-pattern divergence from standard Mirandese; block copied from mwl (cliticless_words included, since stress is not inherited). Sendinês keeps the plain [l] for the article and depalatalises ⟨lh⟩/initial-⟨l⟩ to [l] by its own positional table, and monophthongises ⟨ie⟩→[i] so 'quien' → [ˈkĩ]; it therefore needs no word_exceptions overriding the mwl parent's."
+  },
+  "location": {
+    "latitude": 41.389444,
+    "longitude": -6.425833,
+    "source": "wikidata",
+    "notes": "Sendim — the southern Terra de Miranda village the sub-dialect is named for. [Wikidata Q2121828 P625]"
+  },
+  "audit": {
+    "mirandese_g2p": {
+      "conclusion": "sample_too_small",
+      "measured": "The mirandese_g2p row holds 11 gold pairs, per=0.3258, per_ci_low=0.1641, per_ci_high=0.4824 (benchmarks/results.json). The 95% interval includes 0.25, so the row cannot be read as a failure. The parent mwl spec's own mirandese_g2p row draws on the same underlying source with 205 pairs and measures per=0.1317, well under the threshold; the 11-pair Sendim subset is too small to show whether it genuinely differs from that larger measurement or is simply noise (audit is OWN_ONLY and is not inherited from mwl).",
+      "reference": "spec notes"
+    }
+  }
+}

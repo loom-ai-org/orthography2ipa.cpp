@@ -1,0 +1,250 @@
+{
+  "code": "wuu-Latn-wugniu",
+  "name": "Wu Chinese (Shanghainese) — Wugniu",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "orthography_kind": "romanization",
+  "quality": "research",
+  "graphemes": {
+    "p": [
+      "p"
+    ],
+    "ph": [
+      "pʰ"
+    ],
+    "b": [
+      "b"
+    ],
+    "m": [
+      "m"
+    ],
+    "f": [
+      "f"
+    ],
+    "v": [
+      "v"
+    ],
+    "t": [
+      "t"
+    ],
+    "th": [
+      "tʰ"
+    ],
+    "d": [
+      "d"
+    ],
+    "n": [
+      "n"
+    ],
+    "gn": [
+      "ȵ"
+    ],
+    "l": [
+      "l"
+    ],
+    "ts": [
+      "ts"
+    ],
+    "tsh": [
+      "tsʰ"
+    ],
+    "s": [
+      "s"
+    ],
+    "z": [
+      "z"
+    ],
+    "c": [
+      "tɕ"
+    ],
+    "ch": [
+      "tɕʰ"
+    ],
+    "j": [
+      "dʑ"
+    ],
+    "sh": [
+      "ɕ"
+    ],
+    "zh": [
+      "ʑ"
+    ],
+    "k": [
+      "k"
+    ],
+    "kh": [
+      "kʰ"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "ng": [
+      "ŋ"
+    ],
+    "h": [
+      "h"
+    ],
+    "gh": [
+      "ɦ"
+    ],
+    "a": [
+      "a"
+    ],
+    "ua": [
+      "ua"
+    ],
+    "ia": [
+      "ia"
+    ],
+    "o": [
+      "o"
+    ],
+    "io": [
+      "io"
+    ],
+    "y": [
+      "ɿ"
+    ],
+    "yu": [
+      "ʮ"
+    ],
+    "i": [
+      "i"
+    ],
+    "u": [
+      "u"
+    ],
+    "iu": [
+      "y"
+    ],
+    "ae": [
+      "ɛ"
+    ],
+    "e": [
+      "e"
+    ],
+    "uae": [
+      "uɛ"
+    ],
+    "ue": [
+      "ue"
+    ],
+    "au": [
+      "ɔ"
+    ],
+    "iau": [
+      "iɔ"
+    ],
+    "eu": [
+      "ɤ"
+    ],
+    "ieu": [
+      "iɤ"
+    ],
+    "ie": [
+      "ie"
+    ],
+    "oe": [
+      "ø"
+    ],
+    "uoe": [
+      "uø"
+    ],
+    "ioe": [
+      "yø"
+    ],
+    "an": [
+      "ã"
+    ],
+    "uan": [
+      "uã"
+    ],
+    "ian": [
+      "iã"
+    ],
+    "aon": [
+      "ɑ̃"
+    ],
+    "uaon": [
+      "uɑ̃"
+    ],
+    "iaon": [
+      "iɑ̃"
+    ],
+    "on": [
+      "oŋ"
+    ]
+  },
+  "notes": "Wugniu (吴语学堂拼音, 'Wu Chinese School pinyin'), the IPA-adherent community romanization for Wu Chinese developed around 2016 by the Wu Chinese School, refining the earlier Wu Chinese Society pinyin (~2005). This spec models the Shanghainese (Urban Shanghai) variety of Wugniu, the same dialect `wuu.json`'s Han-script stub already names as its expected romanized input, exactly as `nan-Latn-poj` fills the equivalent gap for `nan`. INITIALS: Wu is distinctive among the Sinitic romanizations already in this dataset for keeping a genuine three-way laryngeal contrast at every place of articulation — voiceless unaspirated ⟨p t k ts c⟩, voiceless aspirated ⟨ph th kh tsh ch⟩, and TRUE VOICED ⟨b d g z j⟩ (not merely a spelling convention the way pinyin's ⟨b d g⟩ stand for unaspirated voiceless stops) — because Wu is the one Sinitic branch that never lost the Middle Chinese voiced obstruent series (`wuu.json`'s own notes on the parent `ltc` ancestor edge). ⟨gh⟩ /ɦ/ (voiced glottal fricative) is Wu's voiced counterpart to plain ⟨h⟩ /h/, completing the pattern rather than being redundant with it. The alveolo-palatal series ⟨c ch j sh zh⟩ /tɕ tɕʰ dʑ ɕ ʑ/ is written with its own dedicated letters (not derived from the alveolar series by a following-vowel rule, unlike POJ/PFS/BUC) because Wugniu's own source table gives them as phonemically distinct rows with their own sample characters, not an allophonic split of ⟨ts⟩/⟨s⟩. Checked (glottalized/tense) sonorant onsets that Wu's register system distinguishes from their plain counterparts (documented in the source's IPA column with a preceding ˀ, e.g. /ˀm/ vs /m/, /ˀn/ vs /n/) are not separately keyed here: Wugniu spells both members of several such pairs with the same letter, differentiated only by which of Wu's two tonal registers (yin/yang) the syllable carries, so the distinction is tonal/registral rather than segmental-orthographic and belongs with the tone-marking gap below, not as an invented segmental grapheme. VOWELS: the oral/nasalized vowel pairs (⟨a⟩/⟨an⟩ [ã], ⟨ua⟩/⟨uan⟩ [uã] …) are cited as separate final units per the source's own final-inventory table, since Shanghainese nasalization here marks a whole rime category rather than compose from a vowel plus a nasal consonant letter; front-rounded and central vowels (⟨oe⟩ [ø], ⟨eu⟩ [ɤ], ⟨y⟩ [ɿ] apical vowel, ⟨yu⟩ [ʮ] apical rounded vowel) are cited exactly to the source's Shanghainese-IPA column. CODAS: the nasal-coda finals ⟨-on⟩ /oŋ/ are given directly from the source table's velar-nasal-coda row; the full coda inventory beyond the small set of finals reconciled here is not yet exhaustively covered (RESEARCH tier, not PRODUCTION) — extending final coverage to the remainder of the source's finals table is future work, flagged rather than papered over. TONE — SCHEMA LIMITATION, same honest treatment as the other three Sinitic romanizations in this dataset: Wugniu marks tone with a trailing ASCII digit (1-5 in the Shanghainese scheme cited), which — like Jyutping's digit — is a free-standing character in its own tokenizer slot, not a diacritic fused into a vowel grapheme; this spec therefore does not add digit-suffixed grapheme keys (the same Cartesian-product violation flagged on `yue-Latn-jyutping`). `tone_inventory` records the digit-to-contour correspondence as metadata only. Wu's PROSODIC-WORD-SPANNING tone sandhi (`wuu.json`'s own notes: 'tone sandhi spanning whole prosodic words') is markedly more extensive than the syllable-local sandhi flagged on the other three Sinitic specs and is equally out of scope for the same missing-engine-capability reason (AGENTS.md §1): a `sandhi_rules`-like mechanism keyed on tone category across a whole prosodic word, not individual segments, would be needed, and enumerating around it is not an option.",
+  "sources": [
+    {
+      "id": "wugniu_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Romanization of Wu Chinese",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Romanization_of_Wu_Chinese",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Romanization_of_Wu_Chinese",
+      "pages": null,
+      "notes": "Comparison-chart tables (initials, finals, tones) across the four Wu romanization schools, with Shanghainese and Suzhounese IPA columns; Wugniu column used here."
+    },
+    {
+      "id": "qian2007",
+      "author": "Qian Nairong (錢乃榮)",
+      "year": 2007,
+      "title": "上海話大詞典 (Comprehensive Dictionary of Shanghainese)",
+      "publisher": "Shanghai Lexicographical Publishing House",
+      "url": null,
+      "pages": null,
+      "notes": "Standard Shanghainese lexicon; cited already on `wuu.json` for the competing Qian's Pinyin scheme, retained here for cross-scheme comparison."
+    },
+    {
+      "id": "phoible",
+      "author": "Moran, Steven & McCloy, Daniel (eds.)",
+      "year": 2019,
+      "title": "PHOIBLE 2.0",
+      "publisher": "Max Planck Institute for the Science of Human History",
+      "url": "https://phoible.org/",
+      "pages": null,
+      "notes": "Attested phoneme inventory for glottocode wuch1236, reconciled against this spec's grapheme-derived phoneme set (see `wuu.json`)."
+    }
+  ],
+  "orthography_standard": {
+    "name": "Wugniu (吴语学堂拼音)",
+    "authority": "Wu Chinese School (吴语学堂), refining the earlier Wu Chinese Society pinyin",
+    "year": 2016,
+    "url": null,
+    "notes": "One of several competing Wu Chinese romanization schools (missionary, French-Wu/Fawu, Qian's Pinyin); Wugniu is the current default in most learning materials per the cited Wikipedia survey."
+  },
+  "iso639_3": "wuu",
+  "glottolog_code": "wuch1236",
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Romanization_of_Wu_Chinese",
+    "https://en.wikipedia.org/wiki/Wu_Chinese"
+  ],
+  "urls": [
+    "https://glottolog.org/resource/languoid/id/wuch1236"
+  ],
+  "tone_inventory": {
+    "1": "yin ping / high-register level, 53",
+    "2": "yin register rising/checked, 334",
+    "3": "yin qu / departing, 51",
+    "4": "yang ping / low-register level, 113",
+    "5": "yang qu-ru / low-register departing-checked, merges by register"
+  },
+  "parent": "wuu",
+  "ancestors": [
+    {
+      "code": "wuu",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Same ISO 639-3 / Glottolog language (wuch1236, Wu Chinese); this spec supplies the Wugniu Latin-romanization grapheme map that `wuu.json`'s Han-script stub explicitly names as its expected romanized input."
+    }
+  ],
+  "location": {
+    "latitude": 31.2304,
+    "longitude": 121.4737,
+    "source": "glottolog",
+    "notes": "Shanghai centroid, the variety this Wugniu table documents; the `wuu` parent's own point (wuch1236) is a broader Wu-area centroid."
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "code": "ojp",
+  "name": "Old Japanese",
+  "script": "Latin",
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "i": [
+      "i"
+    ],
+    "u": [
+      "u"
+    ],
+    "e": [
+      "e"
+    ],
+    "o": [
+      "o"
+    ],
+    "p": [
+      "p"
+    ],
+    "t": [
+      "t"
+    ],
+    "k": [
+      "k"
+    ],
+    "b": [
+      "b"
+    ],
+    "d": [
+      "d"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "s": [
+      "s"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "l": [
+      "l"
+    ],
+    "r": [
+      "r"
+    ],
+    "w": [
+      "w"
+    ],
+    "j": [
+      "j"
+    ],
+    "h": [
+      "h"
+    ]
+  },
+  "allophones": {},
+  "notes": "STRUCTURAL ANCESTRY NODE (not a modelled G2P target). Old Japanese (8th c., Nara period) is the earliest attested stage of Japanese and an intermediate node between Proto-Japonic and modern Japanese. It exists here only so the ancestry / phylogenetic-distance metrics of the modern varieties that reference it have a node to resolve to; NO phonology is claimed or reconstructed and the minimal grapheme set is a placeholder (afa.json / trk.json stub pattern).",
+  "quality": "stub",
+  "script_type": "alphabet",
+  "iso639_3": "ojp",
+  "glottolog_code": "oldj1239",
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Old_Japanese"
+  ],
+  "urls": [
+    "https://glottolog.org/resource/languoid/id/oldj1239"
+  ],
+  "sources": [
+    {
+      "id": "frellesvig2010b",
+      "author": "Frellesvig, B.",
+      "year": 2010,
+      "title": "A History of the Japanese Language",
+      "publisher": "Cambridge University Press",
+      "url": null,
+      "pages": null,
+      "notes": "Reference for Old Japanese (ancestry node only).",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Old_Japanese"
+    }
+  ],
+  "parent": "jpx",
+  "ancestors": [
+    {
+      "code": "jpx",
+      "role": "parent",
+      "weight": 0.9,
+      "notes": "Descent from Proto-Japonic."
+    }
+  ],
+  "wikidata_qid": "Q5736700",
+  "location": {
+    "latitude": 34.68333,
+    "longitude": 135.8,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Old Japanese."
+  }
+}

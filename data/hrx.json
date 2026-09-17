@@ -1,0 +1,575 @@
+{
+  "code": "hrx",
+  "name": "Hunsrik (Riograndenser Hunsrückisch)",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "bb": [
+      "p"
+    ],
+    "dd": [
+      "t"
+    ],
+    "ff": [
+      "f"
+    ],
+    "gg": [
+      "k"
+    ],
+    "ll": [
+      "l"
+    ],
+    "mm": [
+      "m"
+    ],
+    "nn": [
+      "n"
+    ],
+    "pp": [
+      "p"
+    ],
+    "rr": [
+      "r"
+    ],
+    "tt": [
+      "t"
+    ],
+    "ww": [
+      "v"
+    ],
+    "tsch": [
+      "t͡ʃ"
+    ],
+    "sch": [
+      "ʃ"
+    ],
+    "ch": [
+      "x"
+    ],
+    "gh": [
+      "x"
+    ],
+    "ck": [
+      "k"
+    ],
+    "tz": [
+      "t͡s"
+    ],
+    "ng": [
+      "ŋ",
+      "ŋk"
+    ],
+    "nk": [
+      "ŋk"
+    ],
+    "ss": [
+      "s"
+    ],
+    "qu": [
+      "kw",
+      "kv"
+    ],
+    "aa": [
+      "ɔː"
+    ],
+    "ää": [
+      "ɛː"
+    ],
+    "ee": [
+      "eː"
+    ],
+    "oo": [
+      "oː"
+    ],
+    "uu": [
+      "uː"
+    ],
+    "ie": [
+      "iː"
+    ],
+    "ei": [
+      "aɪ̯"
+    ],
+    "eu": [
+      "ɔɪ̯"
+    ],
+    "au": [
+      "aʊ̯"
+    ],
+    "ah": [
+      "aː"
+    ],
+    "eh": [
+      "eː"
+    ],
+    "ih": [
+      "iː"
+    ],
+    "oh": [
+      "oː"
+    ],
+    "uh": [
+      "uː"
+    ],
+    "ä": [
+      "ɛ"
+    ],
+    "ö": [
+      "e"
+    ],
+    "ü": [
+      "i"
+    ],
+    "ë": [
+      "e"
+    ],
+    "á": [
+      "aː"
+    ],
+    "â": [
+      "a"
+    ],
+    "ã": [
+      "ɐ̃"
+    ],
+    "é": [
+      "ɛ"
+    ],
+    "ê": [
+      "e"
+    ],
+    "í": [
+      "i"
+    ],
+    "ó": [
+      "ɔ"
+    ],
+    "õ": [
+      "õ"
+    ],
+    "ú": [
+      "u"
+    ],
+    "ç": [
+      "s"
+    ],
+    "a": [
+      "a"
+    ],
+    "e": [
+      "ə"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "o"
+    ],
+    "u": [
+      "u"
+    ],
+    "y": [
+      "j"
+    ],
+    "b": [
+      "p"
+    ],
+    "c": [
+      "k"
+    ],
+    "d": [
+      "t"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "k"
+    ],
+    "h": [
+      "h"
+    ],
+    "j": [
+      "j"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "p": [
+      "p"
+    ],
+    "q": [
+      "k"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "v": [
+      "v"
+    ],
+    "w": [
+      "v"
+    ],
+    "x": [
+      "ks"
+    ],
+    "z": [
+      "t͡s"
+    ]
+  },
+  "positional_graphemes": {
+    "ch": {
+      "word_initial": [
+        "ʃ"
+      ],
+      "after_front_vowel": [
+        "ç"
+      ],
+      "after_consonant": [
+        "ç"
+      ],
+      "default": [
+        "x"
+      ]
+    },
+    "gh": {
+      "after_front_vowel": [
+        "ç"
+      ],
+      "after_consonant": [
+        "ç"
+      ],
+      "default": [
+        "x"
+      ]
+    },
+    "c": {
+      "before_front_vowel": [
+        "s"
+      ],
+      "default": [
+        "k"
+      ]
+    },
+    "v": {
+      "word_final": [
+        "f"
+      ],
+      "default": [
+        "v"
+      ]
+    },
+    "e": {
+      "nucleus_stressed": [
+        "e",
+        "eː",
+        "ɛ"
+      ],
+      "nucleus_unstressed": [
+        "ə"
+      ],
+      "default": [
+        "ə",
+        "e"
+      ]
+    },
+    "r": {
+      "word_final": [
+        "ɐ",
+        ""
+      ],
+      "before_consonant": [
+        "",
+        "r"
+      ],
+      "default": [
+        "r"
+      ]
+    }
+  },
+  "grammatical_endings": {
+    "er": "a"
+  },
+  "allophone_rules": [
+    {
+      "id": "HRX_ASPIRATE_P",
+      "phonemes": [
+        "p"
+      ],
+      "grapheme": [
+        "p"
+      ],
+      "surface": "pʰ",
+      "word_initial": true,
+      "followed_by": "vowel",
+      "notes": "Fortis ⟨p⟩ is aspirated: 'Seus correlatos surdos <k>, <t> e <p> acrescentam muitas vezes um traço de aspiração' (Altenhofen et al. 2007:82, §4 item b). The contrast is force, not voice, so lenis ⟨b⟩ — also [p] — is excluded by the grapheme condition."
+    },
+    {
+      "id": "HRX_ASPIRATE_T",
+      "phonemes": [
+        "t"
+      ],
+      "grapheme": [
+        "t"
+      ],
+      "surface": "tʰ",
+      "word_initial": true,
+      "followed_by": "vowel",
+      "notes": "Fortis ⟨t⟩ is aspirated (Altenhofen et al. 2007:82, §4 item b); lenis ⟨d⟩ is not."
+    },
+    {
+      "id": "HRX_ASPIRATE_K",
+      "phonemes": [
+        "k"
+      ],
+      "grapheme": [
+        "k",
+        "ck"
+      ],
+      "surface": "kʰ",
+      "word_initial": true,
+      "followed_by": "vowel",
+      "notes": "Fortis ⟨k⟩ is aspirated (Altenhofen et al. 2007:82, §4 item b); lenis ⟨g⟩ is not. Aspiration is a release property, so it does not appear before a following consonant (⟨kl⟩, ⟨kr⟩, ⟨kn⟩)."
+    },
+    {
+      "id": "HRX_S_RETRACTION",
+      "phonemes": [
+        "s"
+      ],
+      "grapheme": [
+        "s"
+      ],
+      "surface": "ʃ",
+      "followed_by_grapheme": [
+        "p",
+        "t"
+      ],
+      "notes": "⟨sp⟩ and ⟨st⟩ spell /ʃp/ and /ʃt/: 'preferimos <sp> e <st> à escrita <schp> e <scht>, por resultar no mesmo efeito de pronúncia pelo leitor' (Altenhofen et al. 2007:82, §4 item d)."
+    },
+    {
+      "id": "HRX_LONG_A_OPEN_FINAL",
+      "phonemes": [
+        "a"
+      ],
+      "grapheme": [
+        "a"
+      ],
+      "surface": "aː",
+      "syllable_position": "nucleus",
+      "followed_by": "consonant",
+      "followed_by_2": "word_boundary",
+      "followed_by_grapheme_not": [
+        "ck",
+        "ss",
+        "ng",
+        "nk",
+        "tz",
+        "sch",
+        "tsch",
+        "bb",
+        "dd",
+        "ff",
+        "gg",
+        "ll",
+        "mm",
+        "nn",
+        "pp",
+        "rr",
+        "tt",
+        "ww",
+        "ch",
+        "x"
+      ],
+      "notes": "The length rule where the single consonant closes the word ('gros', 'Stros' in the 'Vogais longas' list, Altenhofen et al. 2007:83). ⟨ch⟩ is excluded: the same list itemises ⟨u⟩ and closed ⟨o⟩ before ⟨ch⟩ as their own bullets rather than as instances of the general rule, and the Wiktionary transcriptions are short throughout there (Dach, Loch, Buch, Krach) while lenis ⟨gh⟩ keeps the length (Aanzugh, Siegh). The word-medial counterpart (a stressed short-vowel nucleus before a single consonant then another vowel, e.g. Aadler, Banann) is NOT declared: the gold set's non-final open syllables are mostly unassimilated loans whose word-initial stress the spec's stress rule gets wrong (Abakatt, Banann, Kanal, Kravatt, Casal, Paranaa, Lagartisch) as well as native words the norm itself keeps short in that position (awer, iwich, Zwiwel, Kalenner, Nawel — Altenhofen et al. 2007:78) and frequent monosyllables the norm explicitly calls short even before a single final consonant ('uff, unn e honn', ibid.:78); declaring word-medial open-syllable length there costs 0.007 PER against the gold and is dropped, while the word-final case above stays because it measurably helps.",
+      "stress": "stressed"
+    },
+    {
+      "id": "HRX_LONG_I_OPEN_FINAL",
+      "phonemes": [
+        "i"
+      ],
+      "grapheme": [
+        "i"
+      ],
+      "surface": "iː",
+      "syllable_position": "nucleus",
+      "followed_by": "consonant",
+      "followed_by_2": "word_boundary",
+      "followed_by_grapheme_not": [
+        "ck",
+        "ss",
+        "ng",
+        "nk",
+        "tz",
+        "sch",
+        "tsch",
+        "bb",
+        "dd",
+        "ff",
+        "gg",
+        "ll",
+        "mm",
+        "nn",
+        "pp",
+        "rr",
+        "tt",
+        "ww",
+        "ch",
+        "x"
+      ],
+      "notes": "The length rule where the single consonant closes the word ('gros', 'Stros' in the 'Vogais longas' list, Altenhofen et al. 2007:83). ⟨ch⟩ is excluded: the same list itemises ⟨u⟩ and closed ⟨o⟩ before ⟨ch⟩ as their own bullets rather than as instances of the general rule, and the Wiktionary transcriptions are short throughout there (Dach, Loch, Buch, Krach) while lenis ⟨gh⟩ keeps the length (Aanzugh, Siegh). The word-medial counterpart (a stressed short-vowel nucleus before a single consonant then another vowel, e.g. Aadler, Banann) is NOT declared: the gold set's non-final open syllables are mostly unassimilated loans whose word-initial stress the spec's stress rule gets wrong (Abakatt, Banann, Kanal, Kravatt, Casal, Paranaa, Lagartisch) as well as native words the norm itself keeps short in that position (awer, iwich, Zwiwel, Kalenner, Nawel — Altenhofen et al. 2007:78) and frequent monosyllables the norm explicitly calls short even before a single final consonant ('uff, unn e honn', ibid.:78); declaring word-medial open-syllable length there costs 0.007 PER against the gold and is dropped, while the word-final case above stays because it measurably helps.",
+      "stress": "stressed"
+    },
+    {
+      "id": "HRX_LONG_O_OPEN_FINAL",
+      "phonemes": [
+        "o"
+      ],
+      "grapheme": [
+        "o"
+      ],
+      "surface": "oː",
+      "syllable_position": "nucleus",
+      "followed_by": "consonant",
+      "followed_by_2": "word_boundary",
+      "followed_by_grapheme_not": [
+        "ck",
+        "ss",
+        "ng",
+        "nk",
+        "tz",
+        "sch",
+        "tsch",
+        "bb",
+        "dd",
+        "ff",
+        "gg",
+        "ll",
+        "mm",
+        "nn",
+        "pp",
+        "rr",
+        "tt",
+        "ww",
+        "ch",
+        "x"
+      ],
+      "notes": "The length rule where the single consonant closes the word ('gros', 'Stros' in the 'Vogais longas' list, Altenhofen et al. 2007:83). ⟨ch⟩ is excluded: the same list itemises ⟨u⟩ and closed ⟨o⟩ before ⟨ch⟩ as their own bullets rather than as instances of the general rule, and the Wiktionary transcriptions are short throughout there (Dach, Loch, Buch, Krach) while lenis ⟨gh⟩ keeps the length (Aanzugh, Siegh). The word-medial counterpart (a stressed short-vowel nucleus before a single consonant then another vowel, e.g. Aadler, Banann) is NOT declared: the gold set's non-final open syllables are mostly unassimilated loans whose word-initial stress the spec's stress rule gets wrong (Abakatt, Banann, Kanal, Kravatt, Casal, Paranaa, Lagartisch) as well as native words the norm itself keeps short in that position (awer, iwich, Zwiwel, Kalenner, Nawel — Altenhofen et al. 2007:78) and frequent monosyllables the norm explicitly calls short even before a single final consonant ('uff, unn e honn', ibid.:78); declaring word-medial open-syllable length there costs 0.007 PER against the gold and is dropped, while the word-final case above stays because it measurably helps.",
+      "stress": "stressed"
+    },
+    {
+      "id": "HRX_LONG_U_OPEN_FINAL",
+      "phonemes": [
+        "u"
+      ],
+      "grapheme": [
+        "u"
+      ],
+      "surface": "uː",
+      "syllable_position": "nucleus",
+      "followed_by": "consonant",
+      "followed_by_2": "word_boundary",
+      "followed_by_grapheme_not": [
+        "ck",
+        "ss",
+        "ng",
+        "nk",
+        "tz",
+        "sch",
+        "tsch",
+        "bb",
+        "dd",
+        "ff",
+        "gg",
+        "ll",
+        "mm",
+        "nn",
+        "pp",
+        "rr",
+        "tt",
+        "ww",
+        "ch",
+        "x"
+      ],
+      "notes": "The length rule where the single consonant closes the word ('gros', 'Stros' in the 'Vogais longas' list, Altenhofen et al. 2007:83). ⟨ch⟩ is excluded: the same list itemises ⟨u⟩ and closed ⟨o⟩ before ⟨ch⟩ as their own bullets rather than as instances of the general rule, and the Wiktionary transcriptions are short throughout there (Dach, Loch, Buch, Krach) while lenis ⟨gh⟩ keeps the length (Aanzugh, Siegh). The word-medial counterpart (a stressed short-vowel nucleus before a single consonant then another vowel, e.g. Aadler, Banann) is NOT declared: the gold set's non-final open syllables are mostly unassimilated loans whose word-initial stress the spec's stress rule gets wrong (Abakatt, Banann, Kanal, Kravatt, Casal, Paranaa, Lagartisch) as well as native words the norm itself keeps short in that position (awer, iwich, Zwiwel, Kalenner, Nawel — Altenhofen et al. 2007:78) and frequent monosyllables the norm explicitly calls short even before a single final consonant ('uff, unn e honn', ibid.:78); declaring word-medial open-syllable length there costs 0.007 PER against the gold and is dropped, while the word-final case above stays because it measurably helps.",
+      "stress": "stressed"
+    }
+  ],
+  "parent": "gmh",
+  "ancestors": [
+    {
+      "code": "gmh",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Descent from Middle High German (Rhine-Franconian / Hunsrückisch dialect)"
+    },
+    {
+      "code": "pt-BR",
+      "role": "adstrate",
+      "weight": 0.1,
+      "notes": "Brazilian Portuguese adstrate: loan phonology and code-switching"
+    }
+  ],
+  "orthography_standard": {
+    "name": "Fundamentos para uma escrita do Hunsrückisch falado no Brasil",
+    "authority": "Grupo de Estudos da Escrita do Hunsrückisch (ESCRITHU), Universidade Federal do Rio Grande do Sul",
+    "year": 2007,
+    "url": "https://seer.ufrgs.br/index.php/contingentia/article/view/3867",
+    "notes": "The German-based norm, also called ALMA-H after the atlas project it serves. A competing norm, Wiesemann's Hunsrik Schreiwer, spells the same language with ⟨x⟩ for /ʃ/ and ⟨y⟩ for /j/; this spec describes the German-based norm, which is what Wiktionary and the Hunsrik Wikipedia write."
+  },
+  "notes": "Hunsrik, a West-Central German (Rhine-Franconian) language of southern Brazil, described here in the German-based ESCRITHU/ALMA-H written norm rather than in Wiesemann's Hunsrik Schreiwer orthography, which spells the same language with ⟨x⟩ for /ʃ/ and ⟨y⟩ for /j/. The consonants are where German spelling misleads. The plosive contrast is force, not voice: ⟨b d g⟩ are voiceless lenis [p t k] in every position and ⟨p t k⟩ their aspirated fortis partners — '<g>, <d> e <b> pronunciam-se, é verdade, com certo ensurdecimento. Seus correlatos surdos <k>, <t> e <p> acrescentam muitas vezes um traço de aspiração' (Altenhofen et al. 2007:82, section 4 item b). Aspiration is a release property, so it is declared before a vowel only, not before ⟨kl kr kn pl pr tr⟩. ⟨ch⟩ is palatal [ç] after a front vowel or a consonant and velar [x] after a back vowel (ibid.:82, item f); ⟨gh⟩, a digraph the printed norm does not list, spells the same fricative where the written tradition keeps a ⟨g⟩ letter. ⟨v⟩ is /f/ by convention, ⟨w⟩ is /v/, ⟨z⟩ and ⟨tz⟩ are /ts/ (ibid.:82, item g); ⟨ng⟩ is /ŋ/ with a /ŋk/ reading kept in the lattice for the exceptions the norm names (item c); ⟨sch⟩ is /ʃ/ (item e); ⟨qu⟩, which the norm does not discuss, keeps /kw/ first — the gold is 5/5 /kw/ (Quarz, Quelle, quatsche), not the /kv/ a German-template reading would predict — with /kv/ kept in the lattice for the German-shaped spelling; ⟨sp⟩ and ⟨st⟩ are written for /ʃp ʃt/ (item d). Doubled consonants and ⟨ck⟩ spell a single consonant and mark the preceding vowel short (item i), the general rule being long before one consonant, short before two (ibid.:82-83, section 5); ⟨h⟩ after a vowel is that same length mark and not a segment (ibid.:81). /r/ is an alveolar tap, never the uvular [ʁ] of standard German, and it vocalises in the coda: the norm writes ⟨-ohr, -or⟩ for /oa/ and ⟨-uhr, -ur⟩ for /ua/ and lists /ea, oa, ua/ as the falling diphthongs a vocalised /r/ leaves behind (ibid.:78, 81 and 83). The spec generalises that vocalisation to coda /r/ before any consonant, not only before ⟨t k p⟩-final syllables spelled ⟨ohr/or/uhr/ur⟩: the gold corpus backs the generalisation (deleting nets a 0.007 PER win over keeping the letter), but the corpus also shows the printed norm's diphthongs are not the whole story — the recent Portuguese-contact loans Kurve, Mërkaat, Portugal, Margarin, Skorpion, normal and Monarkie keep /r/ before a following ⟨k g p v m⟩, unlike the native vocalisation pattern before ⟨t d n l s⟩ that the norm documents; that loanword-conditioned split is real in the data but has no primary-source citation and is not encoded, so those loans transcribe with the /r/ deleted like everything else. ENDING \"er\" is the post-tonic nominal and comparative suffix, realised as a vowel because its /r/ is vocalised, which is exactly why the norm keeps the letter: Altenhofen and colleagues (2007:78) choose ⟨-er⟩ for the post-tonic position — unser, Fenster, awer — over the ⟨ea⟩ they write for the tonic one, on the grounds that the plural and the declension restore the /r/ (unsre Fenstre). The front rounded vowels of German are absent — 'não ocorrem no Hunsrückisch as vogais arredondadas /ö, ü, ä/, que são pronunciadas respectivamente como /e, i, e/' (ibid.:81, section 3.2) — so residual ⟨ö⟩ and ⟨ü⟩ read as /e/ and /i/, and ⟨ä⟩, which the norm calls a dispensable German import, is kept only for the older literature that still writes it. Convention note for benchmark readers: the Wiktionary transcriptions render ⟨aa⟩ as [ɔː], which the norm itself calls simply long /a/, and they write ⟨ë⟩ — a letter outside the printed norm — for an unreduced [e] in loans and Latinate stems. Unassimilated international/Portuguese-contact spellings keep their source-language reading rather than the native one, the same convention the norm names for Portuguese loanwords kept in their source spelling — 'escrita dos estrangeiros como na língua-fonte: die Calçada, de Milho, de Show, de Jorge, die Corrupção' (ibid.:82) — so word-initial ⟨ch⟩ is [ʃ] and ⟨c⟩ before a front vowel is [s] in China, Chinees, Chineese, chineesisch and Cinema, matching the already-accepted international ⟨x⟩ = /ks/ of Hex and Taxi. The same Portuguese-spelling convention motivates giving the Portuguese diacritics ⟨â ã é ê í ó õ ú ç⟩ their Portuguese IPA readings — [a ɐ̃ ɛ e i ɔ õ u s] — rather than silently dropping them, since the norm's own example words (Calçada, Corrupção, Jorge, Milho) use them; none of those letters occurs in the gold set, so this closes a silent-deletion gap without a measurable PER effect either way.",
+  "iso639_3": "hrx",
+  "glottolog_code": null,
+  "sources": [
+    {
+      "id": "altenhofen2007",
+      "author": "Altenhofen, Cléo V.; Frey, Jaqueline; Käfer, Maria Lidiani; Klassmann, Mário S.; Neumann, Gerson R.; Pupp Spinassé, Karen",
+      "year": 2007,
+      "title": "Fundamentos para uma escrita do Hunsrückisch falado no Brasil",
+      "publisher": "Revista Contingentia 2",
+      "url": "https://seer.ufrgs.br/index.php/contingentia/article/view/3867",
+      "pages": "73-87",
+      "notes": "The ESCRITHU orthographic proposal. Section 4 (Consonantismo, pp. 81-82) states the fortis/lenis plosive contrast, the palatal/velar split of ⟨ch⟩, ⟨sp⟩ ⟨st⟩ for /ʃp ʃt/, ⟨ck⟩ as ⟨kk⟩, and the ⟨v⟩ ⟨w⟩ ⟨z⟩ conventions; section 3.2 (p. 81) states the loss of the front rounded vowels; section 5 (pp. 82-83) lists the short and long vowel contexts and the diphthongs.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Riograndenser_Hunsr%C3%BCckisch"
+    },
+    {
+      "id": "altenhofen1996",
+      "author": "Altenhofen, Cléo Vilson",
+      "year": 1996,
+      "title": "Hunsrückisch in Rio Grande do Sul: Ein Beitrag zur Beschreibung einer deutschbrasilianischen Dialektvarietät",
+      "publisher": "Franz Steiner Verlag",
+      "url": null,
+      "pages": null,
+      "notes": "Descriptive study of the Hunsrik dialect of Rio Grande do Sul. Edition not consulted.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Riograndenser_Hunsr%C3%BCckisch"
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Riograndenser_Hunsr%C3%BCckisch",
+    "https://en.wikipedia.org/wiki/Hunsrik_language"
+  ],
+  "stress": {
+    "default_position": 1,
+    "marked_vowels": [
+      "á"
+    ],
+    "stress_mark": "ˈ",
+    "notes": "Root-initial stress, the West-Central German pattern Hunsrik inherits. Altenhofen et al. (2007) state no stress rule, but they sort forms by one: every word they cite as carrying ⟨-er⟩ 'em posição pós-tônica' — unser, Fenster, awer (p. 78), immer, Kinner, Menner, Lehrer, Wasser (p. 83) — is stressed on its first syllable. ⟨á⟩ occurs only in unassimilated Portuguese loans, where it marks the stress it marks in Portuguese. Unassimilated loans are the known cost: this rule stresses Abakaschi and Casal on the first syllable, which the loan phonology does not."
+  }
+}

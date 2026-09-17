@@ -1,0 +1,208 @@
+{
+ "code": "mzk",
+ "name": "Nigeria Mambila",
+ "script": "Latin",
+ "quality": "skeleton",
+ "graphemes": {
+  "a": [
+   "a"
+  ],
+  "b": [
+   "b"
+  ],
+  "c": [
+   "tʃ"
+  ],
+  "d": [
+   "d"
+  ],
+  "e": [
+   "ɛ"
+  ],
+  "eh": [
+   "e"
+  ],
+  "f": [
+   "f"
+  ],
+  "g": [
+   "ɡ"
+  ],
+  "gw": [
+   "ɡʷ"
+  ],
+  "h": [
+   "h"
+  ],
+  "i": [
+   "i"
+  ],
+  "j": [
+   "dʒ"
+  ],
+  "k": [
+   "k"
+  ],
+  "kw": [
+   "kʷ"
+  ],
+  "l": [
+   "l"
+  ],
+  "m": [
+   "m"
+  ],
+  "mb": [
+   "mb"
+  ],
+  "mv": [
+   "mv"
+  ],
+  "n": [
+   "n"
+  ],
+  "nd": [
+   "nd"
+  ],
+  "nj": [
+   "ndʒ"
+  ],
+  "ny": [
+   "ɲ"
+  ],
+  "o": [
+   "ɔ"
+  ],
+  "oh": [
+   "o"
+  ],
+  "oo": [
+   "ə"
+  ],
+  "p": [
+   "p"
+  ],
+  "r": [
+   "d"
+  ],
+  "s": [
+   "s"
+  ],
+  "t": [
+   "t"
+  ],
+  "u": [
+   "u"
+  ],
+  "v": [
+   "v"
+  ],
+  "w": [
+   "w"
+  ],
+  "y": [
+   "j"
+  ],
+  "ŋ": [
+   "ŋ"
+  ]
+ },
+ "allophones": {
+  "d": [
+   "d",
+   "r"
+  ]
+ },
+ "notes": "Placed so the ancestry graph covers every living ISO 639-3 language. No orthography is claimed; the phoneme inventory follows the cited PHOIBLE inventory (which itself cites a published description): script is Zyyy (undetermined) until a cited description is encoded. Classification and coordinates follow Glottolog. Orthography from Hartell 1993, Alphabets of Africa (UNESCO/SIL), extracted via the AfriSpeech/africa-g2p compilation (mzk.json). africa-g2p is a compilation tool, not the linguistic authority; the citation above is the original source it names.",
+ "iso639_3": "mzk",
+ "glottolog_code": "nige1255",
+ "sources": [
+  {
+   "id": "glottolog2024",
+   "author": "Hammarström, Harald; Forkel, Robert; Haspelmath, Martin; Bank, Sebastian",
+   "year": 2024,
+   "title": "Glottolog 5.0",
+   "publisher": "Max Planck Institute for Evolutionary Anthropology",
+   "url": "https://glottolog.org/"
+  },
+  {
+   "id": "phoible2019",
+   "author": "Moran, Steven; McCloy, Daniel (eds.)",
+   "year": 2019,
+   "title": "PHOIBLE 2.0 (doi:10.5281/zenodo.2562766)",
+   "publisher": "Max Planck Institute for the Science of Human History",
+   "url": "https://phoible.org/inventories/view/774",
+   "notes": "Inventory 774 (aa), 41 non-marginal segments, 2 tones."
+  },
+  {
+   "id": "hartell1993-p95",
+   "author": "Hartell, Rhonda L. (ed.)",
+   "year": 1993,
+   "title": "Alphabets of Africa, p. 95",
+   "publisher": "UNESCO/SIL, Dakar",
+   "url": null
+  }
+ ],
+ "urls": [
+  "https://glottolog.org/resource/languoid/id/nige1255"
+ ],
+ "location": {
+  "latitude": 6.6974,
+  "longitude": 11.3161,
+  "source": "glottolog",
+  "notes": "Glottolog's representative point."
+ },
+ "parent": "x-clade-atla1278",
+ "phonemes": [
+  "b",
+  "d",
+  "d̠ʒ",
+  "f",
+  "h",
+  "j",
+  "k",
+  "l",
+  "m",
+  "mb",
+  "n",
+  "nd",
+  "n̠d̠ʒ",
+  "p",
+  "r",
+  "s",
+  "t",
+  "t̠ʃ",
+  "v",
+  "w",
+  "ŋ",
+  "ŋɡ",
+  "ɡ",
+  "ɱv",
+  "ɲ",
+  "a",
+  "aː",
+  "e",
+  "eː",
+  "i",
+  "iː",
+  "o",
+  "oː",
+  "u",
+  "uː",
+  "ɐ",
+  "ɐː",
+  "ɔ",
+  "əː",
+  "ɛ",
+  "ɛː"
+ ],
+ "tone_inventory": {
+  "˦": "PHOIBLE tone segment",
+  "˨": "PHOIBLE tone segment"
+ },
+ "phoible_id": "774",
+ "script_type": "alphabet",
+ "wikipedia": [
+  "https://en.wikipedia.org/wiki/Nigeria_Mambila_language"
+ ]
+}

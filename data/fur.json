@@ -1,0 +1,311 @@
+{
+  "code": "fur",
+  "name": "Friulian",
+  "script": "Latin",
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "â": [
+      "aː"
+    ],
+    "e": [
+      "e",
+      "ɛ"
+    ],
+    "ê": [
+      "eː"
+    ],
+    "i": [
+      "i"
+    ],
+    "î": [
+      "iː"
+    ],
+    "o": [
+      "o",
+      "ɔ"
+    ],
+    "ô": [
+      "oː"
+    ],
+    "u": [
+      "u"
+    ],
+    "û": [
+      "uː"
+    ],
+    "b": [
+      "b"
+    ],
+    "c": [
+      "k",
+      "tʃ"
+    ],
+    "ch": [
+      "k"
+    ],
+    "cj": [
+      "tʃ"
+    ],
+    "d": [
+      "d"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɡ",
+      "dʒ"
+    ],
+    "gj": [
+      "dʒ"
+    ],
+    "gl": [
+      "ʎ"
+    ],
+    "gn": [
+      "ɲ"
+    ],
+    "h": [
+      ""
+    ],
+    "j": [
+      "j"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "p": [
+      "p"
+    ],
+    "qu": [
+      "kw"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s",
+      "z"
+    ],
+    "sc": [
+      "ʃ"
+    ],
+    "t": [
+      "t"
+    ],
+    "v": [
+      "v"
+    ],
+    "z": [
+      "ts",
+      "dz"
+    ],
+    "ç": [
+      "tʃ"
+    ],
+    "gh": [
+      "ɡ"
+    ],
+    "ss": [
+      "s"
+    ]
+  },
+  "allophones": {
+    "p": [
+      "p"
+    ],
+    "b": [
+      "b"
+    ],
+    "t": [
+      "t"
+    ],
+    "d": [
+      "d"
+    ],
+    "k": [
+      "k"
+    ],
+    "ɡ": [
+      "ɡ"
+    ],
+    "tʃ": [
+      "tʃ"
+    ],
+    "dʒ": [
+      "dʒ"
+    ],
+    "ts": [
+      "ts"
+    ],
+    "dz": [
+      "dz"
+    ],
+    "f": [
+      "f"
+    ],
+    "v": [
+      "v"
+    ],
+    "s": [
+      "s"
+    ],
+    "z": [
+      "z"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n",
+      "ŋ"
+    ],
+    "ɲ": [
+      "ɲ"
+    ],
+    "l": [
+      "l"
+    ],
+    "ʎ": [
+      "ʎ"
+    ],
+    "r": [
+      "r",
+      "ɾ"
+    ],
+    "j": [
+      "j"
+    ],
+    "w": [
+      "w"
+    ],
+    "a": [
+      "a"
+    ],
+    "aː": [
+      "aː"
+    ],
+    "e": [
+      "e"
+    ],
+    "eː": [
+      "eː"
+    ],
+    "ɛ": [
+      "ɛ"
+    ],
+    "i": [
+      "i"
+    ],
+    "iː": [
+      "iː"
+    ],
+    "o": [
+      "o"
+    ],
+    "oː": [
+      "oː"
+    ],
+    "ɔ": [
+      "ɔ"
+    ],
+    "u": [
+      "u"
+    ],
+    "uː": [
+      "uː"
+    ]
+  },
+  "parent": "x-clade-italorom",
+  "ancestors": [
+    {
+      "code": "la-x-italia",
+      "role": "parent",
+      "weight": 0.7,
+      "notes": "Italo-Romance parent: following Benincà (1997), Friulian is NE Italo-Romance with Rhaeto features."
+    },
+    {
+      "code": "la-x-gallia",
+      "role": "adstrate",
+      "weight": 0.12,
+      "notes": "Gallo-Romance adstrate: shares CA- palatalisation, some vowel features with Rhaeto-Romance."
+    },
+    {
+      "code": "cel",
+      "role": "substrate",
+      "weight": 0.05,
+      "notes": "Celtic (Carnic) substrate."
+    },
+    {
+      "code": "de-DE",
+      "role": "adstrate",
+      "weight": 0.05,
+      "notes": "German adstrate: Friuli-Carinthia contact."
+    }
+  ],
+  "notes": "Friulian (Furlan). Largest Rhaeto-Romance language, ~600,000 speakers in Friuli-Venezia Giulia. Classification debated: Rhaeto-Romance or NE Italo-Romance with Rhaeto features. Key features: (1) Phonemic vowel LENGTH (unique in modern Italo-Romance). (2) CA-/GA- palatalisation to [tʃ]/[dʒ]. (3) Final consonant clusters retained. (4) Official regional language since 1999 (Iliescu 2016).",
+  "quality": "research",
+  "script_type": "alphabet",
+  "iso639_3": "fur",
+  "sources": [
+    {
+      "id": "maiden_parry1997",
+      "author": "Maiden, M. & Parry, M. (eds.)",
+      "year": 1997,
+      "title": "The Dialects of Italy",
+      "publisher": "Routledge",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "vanelli1979",
+      "author": "Vanelli, L.",
+      "year": 1979,
+      "title": "L'allungamento delle vocali in friulano",
+      "publisher": "Ce fastu?",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "ladefoged_maddieson1996",
+      "author": "Ladefoged, P. & Maddieson, I.",
+      "year": 1996,
+      "title": "The Sounds of the World's Languages",
+      "publisher": "Blackwell",
+      "url": null,
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Friulian_language",
+    "https://fur.wikipedia.org/wiki/Lenghe_furlane",
+    "https://it.wikipedia.org/wiki/Lingua_friulana"
+  ],
+  "timespan": {
+    "start_year": 1400,
+    "end_year": null
+  },
+  "glottolog_code": "friu1240",
+  "wikidata_qid": "Q33441",
+  "phoible_id": "friu1240",
+  "location": {
+    "latitude": 46.1473,
+    "longitude": 13.0493,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Friulian."
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "code": "cus",
+  "name": "Proto-Cushitic (family node)",
+  "script": "IPA-reconstruction",
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "i": [
+      "i"
+    ],
+    "u": [
+      "u"
+    ],
+    "e": [
+      "e"
+    ],
+    "o": [
+      "o"
+    ],
+    "p": [
+      "p"
+    ],
+    "t": [
+      "t"
+    ],
+    "k": [
+      "k"
+    ],
+    "b": [
+      "b"
+    ],
+    "d": [
+      "d"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "s": [
+      "s"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "l": [
+      "l"
+    ],
+    "r": [
+      "r"
+    ],
+    "w": [
+      "w"
+    ],
+    "j": [
+      "j"
+    ],
+    "h": [
+      "h"
+    ]
+  },
+  "allophones": {},
+  "notes": "STRUCTURAL ANCESTRY NODE (not a modelled G2P target). Proto-Cushitic is the reconstructed ancestor of the Cushitic branch of Afroasiatic; its Agaw (Central Cushitic) members are the classic substrate of Ethiopian Semitic (Amharic, Tigrinya). It exists here only so the ancestry / phylogenetic-distance metrics of the modern varieties that reference it have a node to resolve to; NO phonology is claimed or reconstructed and the minimal grapheme set is a placeholder (afa.json / trk.json stub pattern).",
+  "quality": "stub",
+  "script_type": "reconstruction",
+  "iso639_3": null,
+  "glottolog_code": "cush1243",
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Cushitic_languages"
+  ],
+  "urls": [
+    "https://glottolog.org/resource/languoid/id/cush1243"
+  ],
+  "sources": [
+    {
+      "id": "appleyard2006",
+      "author": "Appleyard, D.",
+      "year": 2006,
+      "title": "A Comparative Dictionary of the Agaw Languages",
+      "publisher": "Rüdiger Köppe",
+      "url": null,
+      "pages": null,
+      "notes": "Reference for the Cushitic substrate of Ethiopian Semitic (structural node only).",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Cushitic_languages"
+    }
+  ],
+  "parent": "x-clade-cush1243",
+  "ancestors": [
+    {
+      "code": "afa",
+      "role": "parent",
+      "weight": 0.9,
+      "notes": "Cushitic branch of Afroasiatic."
+    }
+  ],
+  "wikidata_qid": "Q33248",
+  "location": {
+    "latitude": 5.285465,
+    "longitude": 37.767811,
+    "source": "glottolog",
+    "notes": "Glottolog's computed centroid for the Cushitic family — a summary of a whole clade's range, not a place anyone speaks."
+  }
+}

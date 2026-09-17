@@ -1,0 +1,418 @@
+{
+  "code": "ru-x-northern",
+  "name": "Northern Russian",
+  "script": "Cyrillic",
+  "graphemes_base": "ru",
+  "graphemes": {
+    "ч": [
+      "tsʲ"
+    ],
+    "ц": [
+      "tsʲ"
+    ]
+  },
+  "allophones_base": "ru",
+  "allophones": {
+    "tsʲ": [
+      "tsʲ"
+    ],
+    "tɕ": [
+      "tsʲ"
+    ],
+    "ts": [
+      "tsʲ"
+    ],
+    "a": [
+      "a"
+    ],
+    "o": [
+      "o"
+    ]
+  },
+  "allophone_rules": [
+    {
+      "id": "RU_DEIOTA_jɪ",
+      "phonemes": [
+        "jɪ"
+      ],
+      "surface": "ɪ",
+      "preceded_by_phoneme": [
+        "b",
+        "d",
+        "f",
+        "j",
+        "k",
+        "m",
+        "n",
+        "p",
+        "r",
+        "s",
+        "t",
+        "ts",
+        "tsʲ",
+        "tɕ",
+        "v",
+        "x",
+        "z",
+        "ɕː",
+        "ɡ",
+        "ɫ",
+        "ʂ",
+        "ʐ"
+      ],
+      "notes": "after a plain consonant the glide is absorbed into palatalisation; it survives elsewhere — цоканье overlay: the merged soft affricate [tsʲ] is a plain consonant for de-iotation, and listing it here is also what makes it one segment rather than [t]+[sʲ]"
+    },
+    {
+      "id": "RU_DEIOTA_jə",
+      "phonemes": [
+        "jə"
+      ],
+      "surface": "ə",
+      "preceded_by_phoneme": [
+        "b",
+        "d",
+        "f",
+        "j",
+        "k",
+        "m",
+        "n",
+        "p",
+        "r",
+        "s",
+        "t",
+        "ts",
+        "tsʲ",
+        "tɕ",
+        "v",
+        "x",
+        "z",
+        "ɕː",
+        "ɡ",
+        "ɫ",
+        "ʂ",
+        "ʐ"
+      ],
+      "notes": "after a plain consonant the glide is absorbed into palatalisation; it survives elsewhere — цоканье overlay: the merged soft affricate [tsʲ] is a plain consonant for de-iotation, and listing it here is also what makes it one segment rather than [t]+[sʲ]"
+    },
+    {
+      "id": "RU_DEIOTA_jʊ",
+      "phonemes": [
+        "jʊ"
+      ],
+      "surface": "ʊ",
+      "preceded_by_phoneme": [
+        "b",
+        "d",
+        "f",
+        "j",
+        "k",
+        "m",
+        "n",
+        "p",
+        "r",
+        "s",
+        "t",
+        "ts",
+        "tsʲ",
+        "tɕ",
+        "v",
+        "x",
+        "z",
+        "ɕː",
+        "ɡ",
+        "ɫ",
+        "ʂ",
+        "ʐ"
+      ],
+      "notes": "after a plain consonant the glide is absorbed into palatalisation; it survives elsewhere — цоканье overlay: the merged soft affricate [tsʲ] is a plain consonant for de-iotation, and listing it here is also what makes it one segment rather than [t]+[sʲ]"
+    },
+    {
+      "id": "RU_DEIOTA_je",
+      "phonemes": [
+        "je"
+      ],
+      "surface": "e",
+      "preceded_by_phoneme": [
+        "b",
+        "d",
+        "f",
+        "j",
+        "k",
+        "m",
+        "n",
+        "p",
+        "r",
+        "s",
+        "t",
+        "ts",
+        "tsʲ",
+        "tɕ",
+        "v",
+        "x",
+        "z",
+        "ɕː",
+        "ɡ",
+        "ɫ",
+        "ʂ",
+        "ʐ"
+      ],
+      "notes": "after a plain consonant the glide is absorbed into palatalisation; it survives elsewhere — цоканье overlay: the merged soft affricate [tsʲ] is a plain consonant for de-iotation, and listing it here is also what makes it one segment rather than [t]+[sʲ]"
+    },
+    {
+      "id": "RU_DEIOTA_ja",
+      "phonemes": [
+        "ja"
+      ],
+      "surface": "a",
+      "preceded_by_phoneme": [
+        "b",
+        "d",
+        "f",
+        "j",
+        "k",
+        "m",
+        "n",
+        "p",
+        "r",
+        "s",
+        "t",
+        "ts",
+        "tsʲ",
+        "tɕ",
+        "v",
+        "x",
+        "z",
+        "ɕː",
+        "ɡ",
+        "ɫ",
+        "ʂ",
+        "ʐ"
+      ],
+      "notes": "after a plain consonant the glide is absorbed into palatalisation; it survives elsewhere — цоканье overlay: the merged soft affricate [tsʲ] is a plain consonant for de-iotation, and listing it here is also what makes it one segment rather than [t]+[sʲ]"
+    },
+    {
+      "id": "RU_DEIOTA_ju",
+      "phonemes": [
+        "ju"
+      ],
+      "surface": "u",
+      "preceded_by_phoneme": [
+        "b",
+        "d",
+        "f",
+        "j",
+        "k",
+        "m",
+        "n",
+        "p",
+        "r",
+        "s",
+        "t",
+        "ts",
+        "tsʲ",
+        "tɕ",
+        "v",
+        "x",
+        "z",
+        "ɕː",
+        "ɡ",
+        "ɫ",
+        "ʂ",
+        "ʐ"
+      ],
+      "notes": "after a plain consonant the glide is absorbed into palatalisation; it survives elsewhere — цоканье overlay: the merged soft affricate [tsʲ] is a plain consonant for de-iotation, and listing it here is also what makes it one segment rather than [t]+[sʲ]"
+    },
+    {
+      "id": "RU_DEIOTA_jo",
+      "phonemes": [
+        "jo"
+      ],
+      "surface": "ɵ",
+      "preceded_by_phoneme": [
+        "b",
+        "d",
+        "f",
+        "j",
+        "k",
+        "m",
+        "n",
+        "p",
+        "r",
+        "s",
+        "t",
+        "ts",
+        "tsʲ",
+        "tɕ",
+        "v",
+        "x",
+        "z",
+        "ɕː",
+        "ɡ",
+        "ɫ",
+        "ʂ",
+        "ʐ"
+      ],
+      "notes": "after a plain consonant the glide is absorbed into palatalisation; it survives elsewhere — цоканье overlay: the merged soft affricate [tsʲ] is a plain consonant for de-iotation, and listing it here is also what makes it one segment rather than [t]+[sʲ]"
+    }
+  ],
+  "positional_graphemes_base": "ru",
+  "positional_graphemes": {
+    "о": {
+      "default": [
+        "o"
+      ],
+      "first_pretonic": [
+        "o"
+      ],
+      "pretonic": [
+        "o"
+      ],
+      "posttonic": [
+        "o"
+      ]
+    },
+    "а": {
+      "default": [
+        "a"
+      ],
+      "first_pretonic": [
+        "a"
+      ],
+      "pretonic": [
+        "a"
+      ],
+      "posttonic": [
+        "a"
+      ]
+    },
+    "е": {
+      "first_pretonic": [
+        "je",
+        "e"
+      ],
+      "pretonic": [
+        "je",
+        "e"
+      ],
+      "posttonic": [
+        "je",
+        "e"
+      ]
+    },
+    "я": {
+      "first_pretonic": [
+        "ja"
+      ],
+      "pretonic": [
+        "ja"
+      ],
+      "posttonic": [
+        "ja"
+      ]
+    }
+  },
+  "word_exceptions": {
+    "много": "ˈmnoɡo",
+    "немного": "nʲeˈmnoɡo",
+    "намного": "naˈmnoɡo",
+    "дорого": "ˈdoroɡo",
+    "недорого": "nʲeˈdoroɡo",
+    "строго": "ˈstroɡo",
+    "убого": "ʊˈboɡo",
+    "лого": "ˈɫoɡo",
+    "ого": "ˈoɡo",
+    "его": "jeˈvo",
+    "него": "nʲeˈvo",
+    "кого": "koˈvo",
+    "того": "toˈvo",
+    "всего": "fsʲeˈvo",
+    "сего": "sʲeˈvo",
+    "чего": "tsʲeˈvo",
+    "ничего": "nʲɪtsʲeˈvo",
+    "одного": "odnoˈvo",
+    "никого": "nʲɪkoˈvo",
+    "моего": "mojeˈvo",
+    "твоего": "tvojeˈvo",
+    "своего": "svojeˈvo",
+    "чьего": "tsʲjeˈvo",
+    "этого": "ˈɛtovo",
+    "ничьего": "nʲɪtsʲjeˈvo"
+  },
+  "grammatical_endings": {
+    "ого": "ovo",
+    "него": "nʲevo",
+    "сего": "sʲevo",
+    "жего": "ʐɨvo",
+    "жьего": "ʐjevo",
+    "шего": "ʂɨvo",
+    "цего": "tsɨvo",
+    "чего": "tsʲevo",
+    "щего": "ɕːevo",
+    "чьего": "tsʲjevo",
+    "тьего": "tʲjevo",
+    "сьего": "sʲjevo",
+    "зьего": "zʲjevo",
+    "льего": "lʲjevo",
+    "ньего": "nʲjevo",
+    "дьего": "dʲjevo",
+    "бьего": "bʲjevo",
+    "вьего": "vʲjevo",
+    "пьего": "pʲjevo",
+    "рьего": "rʲjevo",
+    "мьего": "mʲjevo"
+  },
+  "parent": "ru",
+  "notes": "Northern Russian dialects (Arkhangelsk, Vologda, Onega, Beloozero, eastern Kostroma). ОКАНЬЕ is the defining feature and the reason this file exists: unstressed non-high vowels stay distinct after hard consonants, so ⟨о⟩ = [o] and ⟨а⟩ = [a] in every unstressed syllable and the standard's [ɐ]/[ə] reduction never applies (полное оканье — 'различение гласных неверхнего подъёма после твёрдых согласных', the diagnostic wording of the Dialectological Atlas classification; claim is standard, e.g. Avanesov 1949, Zakharova & Orlova 1970 — editions not consulted). Until this spec declared `positional_graphemes` it silently inherited the standard's akanje table and transcribed голова as [ɡɐˈɫovə] while its own note claimed okanje. The counterpart after SOFT consonants is еканье: unstressed ⟨е⟩ = [(j)e] and ⟨я⟩ = [ja] rather than the standard's [ɪ]; ёканье ([o] beside [e] for /o/ after a soft consonant before a hard one in the first pretonic syllable) is a real Northern variant that is not encoded, because choosing between [e] and [o] needs the etymological vowel, not the spelling. High vowels are not affected by okanje and keep their base readings. ЦОКАНЬЕ: the merger of /ч/ and /ц/, and in the Northern zone it is the SOFT type — one affricate [tsʲ], not the hard [ts] this spec previously emitted (мягкое цоканье: поморские, вологодские, онежские, лачские, белозерские и восточные костромские говоры). It is a group-level generalisation: not every Northern dialect has it, and a variety that distinguishes the affricates should override ⟨ч⟩/⟨ц⟩ rather than inherit from here. Г = plosive [ɡ] with word-final [k], as in the standard — the [ɣ] isogloss is Southern and this spec is on the other side of it. GENITIVE ⟨-ого/-его⟩ = [v]: the [v] desinence is a morphological fact of Russian, independent of the окающий/акающий split, so it holds here exactly as in `ru` (Timberlake 2004) — but the desinence VOWELS are okanje vowels, so -ого is [-ovo] and not the standard's [-əvə], and его is [jeˈvo] and not [jɪˈvo]. This is why the endings and the 25 word-level genitives are restated here rather than opted into from `ru`. ENDING \"ого\" is the adjectival/pronominal genitive singular desinence ⟨-ого⟩ itself, realised [ovo]: ⟨г⟩ = [v], the ordinary Russian genitive desinence, which is morphological and so crosses the оканье/аканье isogloss unchanged, while the desinence VOWELS are okanje vowels — unstressed /o/ stays [o] and its counterpart after a soft consonant stays [e], so the ending is not the standard's reduced shape (Timberlake 2004; Comrie & Corbett 1993). ENDING \"него\" is the genitive singular desinence ⟨-его⟩ after ⟨н⟩, realised [nʲevo]: ⟨г⟩ = [v], the ordinary Russian genitive desinence, which is morphological and so crosses the оканье/аканье isogloss unchanged, while the desinence VOWELS are okanje vowels — unstressed /o/ stays [o] and its counterpart after a soft consonant stays [e], so the ending is not the standard's reduced shape (Timberlake 2004; Comrie & Corbett 1993). ENDING \"сего\" is the genitive singular desinence ⟨-его⟩ after ⟨с⟩, realised [sʲevo]: ⟨г⟩ = [v], the ordinary Russian genitive desinence, which is morphological and so crosses the оканье/аканье isogloss unchanged, while the desinence VOWELS are okanje vowels — unstressed /o/ stays [o] and its counterpart after a soft consonant stays [e], so the ending is not the standard's reduced shape (Timberlake 2004; Comrie & Corbett 1993). ENDING \"жего\" is the genitive singular desinence ⟨-его⟩ after ⟨ж⟩, realised [ʐɨvo]: ⟨г⟩ = [v], the ordinary Russian genitive desinence, which is morphological and so crosses the оканье/аканье isogloss unchanged, while the desinence VOWELS are okanje vowels — unstressed /o/ stays [o] and its counterpart after a soft consonant stays [e], so the ending is not the standard's reduced shape (Timberlake 2004; Comrie & Corbett 1993). ENDING \"жьего\" is the possessive/soft-sign genitive singular after ⟨ж⟩, where the soft sign contributes the glide [j] before the desinence, realised [ʐjevo]: ⟨г⟩ = [v], the ordinary Russian genitive desinence, which is morphological and so crosses the оканье/аканье isogloss unchanged, while the desinence VOWELS are okanje vowels — unstressed /o/ stays [o] and its counterpart after a soft consonant stays [e], so the ending is not the standard's reduced shape (Timberlake 2004; Comrie & Corbett 1993). ENDING \"шего\" is the genitive singular desinence ⟨-его⟩ after ⟨ш⟩, realised [ʂɨvo]: ⟨г⟩ = [v], the ordinary Russian genitive desinence, which is morphological and so crosses the оканье/аканье isogloss unchanged, while the desinence VOWELS are okanje vowels — unstressed /o/ stays [o] and its counterpart after a soft consonant stays [e], so the ending is not the standard's reduced shape (Timberlake 2004; Comrie & Corbett 1993). ENDING \"цего\" is the genitive singular desinence ⟨-его⟩ after ⟨ц⟩, realised [tsɨvo]: ⟨г⟩ = [v], the ordinary Russian genitive desinence, which is morphological and so crosses the оканье/аканье isogloss unchanged, while the desinence VOWELS are okanje vowels — unstressed /o/ stays [o] and its counterpart after a soft consonant stays [e], so the ending is not the standard's reduced shape (Timberlake 2004; Comrie & Corbett 1993). ENDING \"чего\" is the genitive singular desinence ⟨-его⟩ after ⟨ч⟩, realised [tsʲevo]: ⟨г⟩ = [v], the ordinary Russian genitive desinence, which is morphological and so crosses the оканье/аканье isogloss unchanged, while the desinence VOWELS are okanje vowels — unstressed /o/ stays [o] and its counterpart after a soft consonant stays [e], so the ending is not the standard's reduced shape (Timberlake 2004; Comrie & Corbett 1993). ENDING \"щего\" is the genitive singular desinence ⟨-его⟩ after ⟨щ⟩, realised [ɕːevo]: ⟨г⟩ = [v], the ordinary Russian genitive desinence, which is morphological and so crosses the оканье/аканье isogloss unchanged, while the desinence VOWELS are okanje vowels — unstressed /o/ stays [o] and its counterpart after a soft consonant stays [e], so the ending is not the standard's reduced shape (Timberlake 2004; Comrie & Corbett 1993). ENDING \"чьего\" is the possessive/soft-sign genitive singular after ⟨ч⟩, where the soft sign contributes the glide [j] before the desinence, realised [tsʲjevo]: ⟨г⟩ = [v], the ordinary Russian genitive desinence, which is morphological and so crosses the оканье/аканье isogloss unchanged, while the desinence VOWELS are okanje vowels — unstressed /o/ stays [o] and its counterpart after a soft consonant stays [e], so the ending is not the standard's reduced shape (Timberlake 2004; Comrie & Corbett 1993). ENDING \"тьего\" is the possessive/soft-sign genitive singular after ⟨т⟩, where the soft sign contributes the glide [j] before the desinence, realised [tʲjevo]: ⟨г⟩ = [v], the ordinary Russian genitive desinence, which is morphological and so crosses the оканье/аканье isogloss unchanged, while the desinence VOWELS are okanje vowels — unstressed /o/ stays [o] and its counterpart after a soft consonant stays [e], so the ending is not the standard's reduced shape (Timberlake 2004; Comrie & Corbett 1993). ENDING \"сьего\" is the possessive/soft-sign genitive singular after ⟨с⟩, where the soft sign contributes the glide [j] before the desinence, realised [sʲjevo]: ⟨г⟩ = [v], the ordinary Russian genitive desinence, which is morphological and so crosses the оканье/аканье isogloss unchanged, while the desinence VOWELS are okanje vowels — unstressed /o/ stays [o] and its counterpart after a soft consonant stays [e], so the ending is not the standard's reduced shape (Timberlake 2004; Comrie & Corbett 1993). ENDING \"зьего\" is the possessive/soft-sign genitive singular after ⟨з⟩, where the soft sign contributes the glide [j] before the desinence, realised [zʲjevo]: ⟨г⟩ = [v], the ordinary Russian genitive desinence, which is morphological and so crosses the оканье/аканье isogloss unchanged, while the desinence VOWELS are okanje vowels — unstressed /o/ stays [o] and its counterpart after a soft consonant stays [e], so the ending is not the standard's reduced shape (Timberlake 2004; Comrie & Corbett 1993). ENDING \"льего\" is the possessive/soft-sign genitive singular after ⟨л⟩, where the soft sign contributes the glide [j] before the desinence, realised [lʲjevo]: ⟨г⟩ = [v], the ordinary Russian genitive desinence, which is morphological and so crosses the оканье/аканье isogloss unchanged, while the desinence VOWELS are okanje vowels — unstressed /o/ stays [o] and its counterpart after a soft consonant stays [e], so the ending is not the standard's reduced shape (Timberlake 2004; Comrie & Corbett 1993). ENDING \"ньего\" is the possessive/soft-sign genitive singular after ⟨н⟩, where the soft sign contributes the glide [j] before the desinence, realised [nʲjevo]: ⟨г⟩ = [v], the ordinary Russian genitive desinence, which is morphological and so crosses the оканье/аканье isogloss unchanged, while the desinence VOWELS are okanje vowels — unstressed /o/ stays [o] and its counterpart after a soft consonant stays [e], so the ending is not the standard's reduced shape (Timberlake 2004; Comrie & Corbett 1993). ENDING \"дьего\" is the possessive/soft-sign genitive singular after ⟨д⟩, where the soft sign contributes the glide [j] before the desinence, realised [dʲjevo]: ⟨г⟩ = [v], the ordinary Russian genitive desinence, which is morphological and so crosses the оканье/аканье isogloss unchanged, while the desinence VOWELS are okanje vowels — unstressed /o/ stays [o] and its counterpart after a soft consonant stays [e], so the ending is not the standard's reduced shape (Timberlake 2004; Comrie & Corbett 1993). ENDING \"бьего\" is the possessive/soft-sign genitive singular after ⟨б⟩, where the soft sign contributes the glide [j] before the desinence, realised [bʲjevo]: ⟨г⟩ = [v], the ordinary Russian genitive desinence, which is morphological and so crosses the оканье/аканье isogloss unchanged, while the desinence VOWELS are okanje vowels — unstressed /o/ stays [o] and its counterpart after a soft consonant stays [e], so the ending is not the standard's reduced shape (Timberlake 2004; Comrie & Corbett 1993). ENDING \"вьего\" is the possessive/soft-sign genitive singular after ⟨в⟩, where the soft sign contributes the glide [j] before the desinence, realised [vʲjevo]: ⟨г⟩ = [v], the ordinary Russian genitive desinence, which is morphological and so crosses the оканье/аканье isogloss unchanged, while the desinence VOWELS are okanje vowels — unstressed /o/ stays [o] and its counterpart after a soft consonant stays [e], so the ending is not the standard's reduced shape (Timberlake 2004; Comrie & Corbett 1993). ENDING \"пьего\" is the possessive/soft-sign genitive singular after ⟨п⟩, where the soft sign contributes the glide [j] before the desinence, realised [pʲjevo]: ⟨г⟩ = [v], the ordinary Russian genitive desinence, which is morphological and so crosses the оканье/аканье isogloss unchanged, while the desinence VOWELS are okanje vowels — unstressed /o/ stays [o] and its counterpart after a soft consonant stays [e], so the ending is not the standard's reduced shape (Timberlake 2004; Comrie & Corbett 1993). ENDING \"рьего\" is the possessive/soft-sign genitive singular after ⟨р⟩, where the soft sign contributes the glide [j] before the desinence, realised [rʲjevo]: ⟨г⟩ = [v], the ordinary Russian genitive desinence, which is morphological and so crosses the оканье/аканье isogloss unchanged, while the desinence VOWELS are okanje vowels — unstressed /o/ stays [o] and its counterpart after a soft consonant stays [e], so the ending is not the standard's reduced shape (Timberlake 2004; Comrie & Corbett 1993). ENDING \"мьего\" is the possessive/soft-sign genitive singular after ⟨м⟩, where the soft sign contributes the glide [j] before the desinence, realised [mʲjevo]: ⟨г⟩ = [v], the ordinary Russian genitive desinence, which is morphological and so crosses the оканье/аканье isogloss unchanged, while the desinence VOWELS are okanje vowels — unstressed /o/ stays [o] and its counterpart after a soft consonant stays [e], so the ending is not the standard's reduced shape (Timberlake 2004; Comrie & Corbett 1993).",
+  "quality": "research",
+  "script_type": "alphabet",
+  "sources": [
+    {
+      "id": "comrie_corbett1993",
+      "author": "Comrie, B. & Corbett, G. (eds.)",
+      "year": 1993,
+      "title": "The Slavonic Languages",
+      "publisher": "Routledge",
+      "url": null,
+      "pages": null,
+      "notes": null,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Slavic_languages"
+    },
+    {
+      "id": "timberlake2004",
+      "author": "Timberlake, A.",
+      "year": 2004,
+      "title": "A Reference Grammar of Russian",
+      "publisher": "Cambridge University Press",
+      "url": null,
+      "pages": null,
+      "notes": null,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Russian_phonology"
+    },
+    {
+      "id": "zalizniak1985",
+      "author": "Zalizniak, A.A.",
+      "year": 1985,
+      "title": "Ot praslavyanskoy aktsentovki k russkoy",
+      "publisher": "Nauka",
+      "url": null,
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Northern_Russian_dialects",
+    "https://ru.wikipedia.org/wiki/%D0%A1%D0%B5%D0%B2%D0%B5%D1%80%D0%BD%D0%BE%D0%B5_%D0%BD%D0%B0%D1%80%D0%B5%D1%87%D0%B8%D0%B5_%D1%80%D1%83%D1%81%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_%D1%8F%D0%B7%D1%8B%D0%BA%D0%B0"
+  ],
+  "timespan": {
+    "start_year": 1600,
+    "end_year": null
+  },
+  "glottolog_code": null,
+  "iso639_3": "rus",
+  "location": {
+    "latitude": 60.083333,
+    "longitude": 40.45,
+    "source": "wikidata",
+    "notes": "Vologda Oblast — a representative point in the Northern Russian dialect zone (Arkhangelsk–Vologda–Kostroma). A dialect GROUP: the point is a stand-in for a very large area. [Wikidata Q2015 P625]"
+  }
+}

@@ -1,0 +1,78 @@
+{
+ "code": "sou",
+ "name": "Southern Thai",
+ "script": "Zyyy",
+ "quality": "stub",
+ "graphemes": {},
+ "allophones": {},
+ "notes": "REGISTRY STUB (not a modelled G2P target). Placed so the ancestry graph covers every living ISO 639-3 language. No orthography is claimed; the phoneme inventory follows the cited PHOIBLE inventory (which itself cites a published description): script is Zyyy (undetermined) until a cited description is encoded. Classification and coordinates follow Glottolog.",
+ "iso639_3": "sou",
+ "glottolog_code": "sout2746",
+ "sources": [
+  {
+   "id": "glottolog2024",
+   "author": "Hammarström, Harald; Forkel, Robert; Haspelmath, Martin; Bank, Sebastian",
+   "year": 2024,
+   "title": "Glottolog 5.0",
+   "publisher": "Max Planck Institute for Evolutionary Anthropology",
+   "url": "https://glottolog.org/"
+  },
+  {
+   "id": "phoible2019",
+   "author": "Moran, Steven; McCloy, Daniel (eds.)",
+   "year": 2019,
+   "title": "PHOIBLE 2.0 (doi:10.5281/zenodo.2562766)",
+   "publisher": "Max Planck Institute for the Science of Human History",
+   "url": "https://phoible.org/inventories/view/2333",
+   "notes": "Inventory 2333 (ea), 35 non-marginal segments."
+  }
+ ],
+ "urls": [
+  "https://glottolog.org/resource/languoid/id/sout2746"
+ ],
+ "location": {
+  "latitude": 6.8567,
+  "longitude": 99.7031,
+  "source": "glottolog",
+  "notes": "Glottolog's representative point."
+ },
+ "parent": "x-clade-taik1256",
+ "phonemes": [
+  "b",
+  "c",
+  "cʰ",
+  "d",
+  "f",
+  "h",
+  "j",
+  "k",
+  "kʰ",
+  "l",
+  "m",
+  "n",
+  "p",
+  "pʰ",
+  "r",
+  "s",
+  "t",
+  "tʰ",
+  "w",
+  "ŋ",
+  "ʔ",
+  "a",
+  "e",
+  "i",
+  "ia",
+  "o",
+  "u",
+  "ua",
+  "ɔ",
+  "ɛ",
+  "ɛˑ",
+  "ɤ",
+  "ɤˑ",
+  "ɯ",
+  "ɯa"
+ ],
+ "phoible_id": "2333"
+}

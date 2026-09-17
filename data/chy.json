@@ -1,0 +1,187 @@
+{
+  "code": "chy",
+  "name": "Cheyenne",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "e": [
+      "e"
+    ],
+    "o": [
+      "o"
+    ],
+    "á": [
+      "á"
+    ],
+    "é": [
+      "é"
+    ],
+    "ó": [
+      "ó"
+    ],
+    "ȧ": [
+      "ḁ"
+    ],
+    "ė": [
+      "e̥"
+    ],
+    "ȯ": [
+      "o̥"
+    ],
+    "h": [
+      "h"
+    ],
+    "k": [
+      "k"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "p": [
+      "p"
+    ],
+    "s": [
+      "s"
+    ],
+    "š": [
+      "ʃ"
+    ],
+    "t": [
+      "t"
+    ],
+    "v": [
+      "v"
+    ],
+    "x": [
+      "x"
+    ],
+    "'": [
+      "ʔ"
+    ],
+    "’": [
+      "ʔ"
+    ]
+  },
+  "allophones": {
+    "a": [
+      "a"
+    ],
+    "e": [
+      "e"
+    ],
+    "o": [
+      "o"
+    ],
+    "á": [
+      "á"
+    ],
+    "é": [
+      "é"
+    ],
+    "ó": [
+      "ó"
+    ],
+    "ḁ": [
+      "ḁ"
+    ],
+    "e̥": [
+      "e̥"
+    ],
+    "o̥": [
+      "o̥"
+    ],
+    "h": [
+      "h",
+      "s",
+      "ʃ"
+    ],
+    "k": [
+      "k"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "p": [
+      "p"
+    ],
+    "s": [
+      "s"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "t": [
+      "t"
+    ],
+    "v": [
+      "v"
+    ],
+    "x": [
+      "x"
+    ],
+    "ʔ": [
+      "ʔ"
+    ]
+  },
+  "tone_inventory": {
+    "á": "high",
+    "é": "high",
+    "ó": "high"
+  },
+  "notes": "Cheyenne (Tsėhésenėstsestȯtse) — Algonquian language of Montana and Oklahoma. Uses the standard practical orthography developed by Wayne Leman and the Cheyenne translation project: three vowel qualities a e o, each of which may carry high tone (á é ó, low tone unmarked) or be voiceless/whispered (ȧ ė ȯ). Long vowels are written double. ⟨š⟩ = /ʃ/, ⟨'⟩ = glottal stop /ʔ/. ⟨h⟩ is realised as [s]/[ʃ] before certain consonants in the practical spelling, which is designed to guide pronunciation rather than to be strictly phonemic.",
+  "iso639_3": "chy",
+  "glottolog_code": "chey1247",
+  "wikidata_qid": "Q33265",
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Cheyenne_language",
+    "https://chy.wikipedia.org/wiki/Ts%C4%97h%C3%A9sen%C4%97stsest%C8%AFtse"
+  ],
+  "sources": [
+    {
+      "id": "leman2011",
+      "author": "Leman, Wayne",
+      "year": 2011,
+      "title": "A Reference Grammar of the Cheyenne Language",
+      "publisher": "Lulu / Cheyenne Language Project",
+      "url": null,
+      "pages": null,
+      "notes": "Reference grammar and the standard Cheyenne practical orthography."
+    },
+    {
+      "id": "chy_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Cheyenne language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Cheyenne_language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Cheyenne_language",
+      "pages": null,
+      "notes": "Orthography and phonology tables."
+    }
+  ],
+  "parent": "x-clade-algi1248",
+  "ancestors": [
+    {
+      "code": "x-clade-algi1248",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Algic — the classification node this language sits under."
+    }
+  ],
+  "location": {
+    "latitude": 45.5321,
+    "longitude": -106.659,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Cheyenne."
+  }
+}

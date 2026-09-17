@@ -1,0 +1,194 @@
+{
+  "code": "es-ES-x-andalusia-w",
+  "name": "Western Andalusian Spanish",
+  "script": "Latin",
+  "graphemes_base": "es-ES",
+  "graphemes": {
+    "c": [
+      "k",
+      "s",
+      "θ"
+    ],
+    "s": [
+      "s",
+      "h"
+    ],
+    "z": [
+      "s",
+      "θ"
+    ],
+    "ll": [
+      "ʝ"
+    ]
+  },
+  "allophones_base": "es-ES",
+  "allophones": {
+    "b": [
+      "b",
+      "β",
+      ""
+    ],
+    "d": [
+      "d",
+      "ð",
+      ""
+    ],
+    "ɡ": [
+      "ɡ",
+      "ɣ",
+      ""
+    ],
+    "θ": [
+      "θ",
+      "s"
+    ],
+    "s": [
+      "s",
+      "h",
+      ""
+    ],
+    "x": [
+      "h"
+    ],
+    "ʝ": [
+      "ʝ",
+      "ɟʝ"
+    ],
+    "tʃ": [
+      "tʃ",
+      "ʃ"
+    ],
+    "n": [
+      "n",
+      "ŋ",
+      ""
+    ],
+    "l": [
+      "l",
+      "ɾ"
+    ],
+    "ʎ": [
+      "ʝ"
+    ],
+    "ɾ": [
+      "ɾ",
+      "l"
+    ],
+    "a": [
+      "a",
+      "æ"
+    ],
+    "e": [
+      "e",
+      "ɛ"
+    ],
+    "o": [
+      "o",
+      "ɔ"
+    ]
+  },
+  "positional_graphemes_base": "es-ES",
+  "positional_graphemes": {
+    "d": {
+      "default": [
+        "d"
+      ],
+      "intervocalic": [
+        "ð",
+        ""
+      ],
+      "word_final": [
+        ""
+      ]
+    },
+    "s": {
+      "word_initial": [
+        "s"
+      ],
+      "intervocalic": [
+        "s"
+      ],
+      "before_consonant": [
+        "h",
+        ""
+      ],
+      "word_final": [
+        "h",
+        ""
+      ]
+    },
+    "n": {
+      "default": [
+        "n"
+      ],
+      "word_final": [
+        "ŋ",
+        ""
+      ]
+    },
+    "c": {
+      "before_e": [
+        "s",
+        "θ"
+      ],
+      "before_i": [
+        "s",
+        "θ"
+      ]
+    }
+  },
+  "parent": "es-ES",
+  "notes": "Western Andalusian (Sevilla, Cádiz, Huelva, Córdoba, Málaga). Most phonologically innovative Castilian variety. Hallmarks: coda /s/ → [h] or ∅ (aspiration/deletion), /x/ → [h], universal yeísmo, seseo or ceceo (varies by locality), CH deaffrication [tʃ] → [ʃ] in Cádiz/Sevilla area, coda liquid neutralisation (/l/ ↔ /ɾ/), extreme lenition with consonant deletion, final -n velarisation. Basis for much of Latin American Spanish phonology.",
+  "quality": "research",
+  "script_type": "alphabet",
+  "sources": [
+    {
+      "id": "hualde2005",
+      "author": "Hualde, J.I.",
+      "year": 2005,
+      "title": "The Sounds of Spanish",
+      "publisher": "Cambridge University Press",
+      "url": null,
+      "pages": null,
+      "notes": null,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Spanish_phonology"
+    },
+    {
+      "id": "penny2002",
+      "author": "Penny, R.",
+      "year": 2002,
+      "title": "A History of the Spanish Language",
+      "publisher": "Cambridge University Press",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "zamora_vicente1960",
+      "author": "Zamora Vicente, A.",
+      "year": 1960,
+      "title": "Dialectología española",
+      "publisher": "Gredos",
+      "url": null,
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Andalusian_Spanish",
+    "https://es.wikipedia.org/wiki/Dialecto_andaluz"
+  ],
+  "timespan": {
+    "start_year": 1500,
+    "end_year": null
+  },
+  "glottolog_code": "anda1279",
+  "iso639_3": "spa",
+  "wikidata_qid": "Q489811",
+  "location": {
+    "latitude": 37.388611,
+    "longitude": -5.995556,
+    "source": "wikidata",
+    "notes": "Seville — the centre of the western Andalusian area. [Wikidata Q8717 P625]"
+  }
+}

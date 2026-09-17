@@ -1,0 +1,55 @@
+{
+  "code": "cbk-x-ternate",
+  "name": "Chavacano (Ternateño / Bahra)",
+  "family": "Spanish Creole",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "stub",
+  "parent": "cbk-zam",
+  "ancestors": [
+    {
+      "code": "es-ES",
+      "role": "lexifier",
+      "weight": 0.8,
+      "notes": "Spanish is the lexifier; written with the Spanish alphabet."
+    },
+    {
+      "code": "tl",
+      "role": "substrate",
+      "weight": 0.15,
+      "notes": "Tagalog substrate; the earliest layer also carries a Portuguese-Malay (Ternate, Moluccas) Mardijker component."
+    }
+  ],
+  "graphemes": {},
+  "allophones": {},
+  "notes": "Ternateño Chabacano (locally 'Bahra'), the Spanish-lexifier creole of Ternate, Cavite, Luzon, Philippines — the oldest and most conservative Manila-Bay Chabacano, brought by Mardijker settlers from Ternate (Moluccas) in 1663. STUB WITH NO GRAPHEME TABLE: this spec maps nothing and transcribes every input to the empty string. `parent` records genealogy only and never carries data, so nothing is inherited from cbk-zam, and no `graphemes_base` edge is declared because Zamboangueño's table would be wrong here. Sippola's APiCS description of Ternate Chabacano lists neither /f/ nor /v/ in the consonant inventory, so Zamboangueño's ⟨f⟩ = [f] has no phoneme to land on, and it records a vowel-length contrast (/uː/ beside /u/) that the five-vowel Zamboangueño table does not encode. There is also no settled spelling to map: Sippola reports that Ternate Chabacano is essentially spoken, hard to find in printed media, and that Chabacano is written in different ways by different age groups. Ternateño-specific traits (a Portuguese-Malay lexical layer, distinct pronoun and TMA systems) are likewise unencoded.",
+  "iso639_3": "tmg",
+  "glottolog_code": "tern1248",
+  "wikidata_qid": "Q33281",
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Ternate_Chavacano"
+  ],
+  "sources": [
+    {
+      "id": "sippola2013ternate",
+      "author": "Sippola, Eeva",
+      "year": 2013,
+      "title": "Ternate Chabacano (APiCS Online contribution 44)",
+      "publisher": "Atlas of Pidgin and Creole Language Structures Online (APiCS), eds. Michaelis, Maurer, Haspelmath & Huber",
+      "url": "https://apics-online.info/contributions/44",
+      "wikipedia_url": null,
+      "pages": "Consonant inventory without /f/ or /v/; vowels /i e a o u/ plus long /uː/; a spoken variety with no settled spelling, written differently by different age groups.",
+      "notes": "Primary descriptive source for the Ternate variety; grapheme map to be derived from it."
+    }
+  ],
+  "timespan": {
+    "start_year": 1663,
+    "end_year": null
+  },
+  "location": {
+    "latitude": 14.2911,
+    "longitude": 120.7169,
+    "source": "manual",
+    "notes": "Ternate, Cavite, Philippines."
+  }
+}

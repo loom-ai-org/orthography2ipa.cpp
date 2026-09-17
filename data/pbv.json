@@ -1,0 +1,180 @@
+{
+  "code": "pbv",
+  "name": "Pnar",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "ph": [
+      "pʰ"
+    ],
+    "bh": [
+      "bʱ"
+    ],
+    "th": [
+      "t̪ʰ"
+    ],
+    "dh": [
+      "dʱ"
+    ],
+    "kh": [
+      "kʰ"
+    ],
+    "jh": [
+      "dʒʱ"
+    ],
+    "ch": [
+      "tʃ"
+    ],
+    "sh": [
+      "ʃ"
+    ],
+    "ng": [
+      "ŋ"
+    ],
+    "ie": [
+      "e"
+    ],
+    "p": [
+      "p"
+    ],
+    "b": [
+      "b"
+    ],
+    "t": [
+      "t̪"
+    ],
+    "d": [
+      "d"
+    ],
+    "k": [
+      "k"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "j": [
+      "dʒ"
+    ],
+    "s": [
+      "s"
+    ],
+    "h": [
+      "h"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ñ": [
+      "ɲ"
+    ],
+    "r": [
+      "r"
+    ],
+    "l": [
+      "l"
+    ],
+    "w": [
+      "w"
+    ],
+    "y": [
+      "j"
+    ],
+    "ï": [
+      "ɨ"
+    ],
+    "a": [
+      "a"
+    ],
+    "e": [
+      "ɛ"
+    ],
+    "i": [
+      "ɪ"
+    ],
+    "o": [
+      "ɔ"
+    ],
+    "u": [
+      "ʊ"
+    ],
+    "á": [
+      "aː"
+    ],
+    "é": [
+      "eː"
+    ],
+    "í": [
+      "iː"
+    ],
+    "ó": [
+      "oː"
+    ],
+    "ú": [
+      "uː"
+    ]
+  },
+  "parent": "x-clade-aust1305",
+  "ancestors": [
+    {
+      "code": "x-clade-aust1305",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Descent per Glottolog classification of Pnar (pnar1238)."
+    }
+  ],
+  "notes": "Austroasiatic (Khasian) language of Meghalaya, India, written in the missionary-derived Roman orthography shared with Khasi. The map applies the Khasi letter values (aspirate and breathy digraphs ph/bh/th/dh/kh/jh, ng for the velar nasal, ñ for the palatal nasal, ï for the high central vowel, acute accent for vowel length), since Pnar spelling in practice follows the Khasi system; a proposed distinct Jaintia alphabet never gained traction and Pnar spelling remains unstandardized. Pnar is atonal. Left unencoded: vowel length where the acute is omitted (common in Pnar writing), the syllable-final reading of h as a glottal stop, and dialectal e/ɛ alternations, all of which raise the expected error floor. Pnar stress/prominence is not distinctively marked in the missionary-derived Roman orthography and is left unencoded (documented exemption).",
+  "iso639_3": "pbv",
+  "glottolog_code": null,
+  "sources": [
+    {
+      "id": "pbv_glottolog",
+      "author": "Hammarström, H. et al. (Glottolog 5.0)",
+      "year": 2024,
+      "title": "Glottolog: Pnar (pnar1238)",
+      "publisher": "Max Planck Institute for Evolutionary Anthropology",
+      "url": "https://glottolog.org/resource/languoid/id/pnar1238",
+      "pages": null,
+      "notes": "Classification reference for a skeleton-tier entry.",
+      "wikipedia_url": null
+    },
+    {
+      "id": "pbv_omniglot",
+      "author": "Ager, S.",
+      "year": 2024,
+      "title": "Pnar language and alphabet",
+      "publisher": "Omniglot",
+      "url": "https://www.omniglot.com/writing/pnar.htm",
+      "pages": null,
+      "notes": "Letter set and orthographic conventions for Pnar.",
+      "wikipedia_url": null
+    },
+    {
+      "id": "pbv_khasi_wikipedia",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Khasi language (writing system)",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Khasi_language",
+      "pages": null,
+      "notes": "Letter values of the Khasi Roman orthography that Pnar writing follows.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Pnar_language"
+    },
+    {
+      "id": "pbv_ring2015",
+      "author": "Ring, Hiram",
+      "year": 2015,
+      "title": "A Grammar of Pnar",
+      "publisher": "PhD dissertation, Nanyang Technological University",
+      "url": null,
+      "pages": null,
+      "notes": "First comprehensive modern linguistic description of Pnar (phonology, morphology, syntax); consulted to check the missionary-derived Roman orthography (aspirate/breathy digraphs, ng, ñ) shared with Khasi and modelled here."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Pnar_language"
+  ]
+}

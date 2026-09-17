@@ -1,0 +1,205 @@
+{
+ "code": "acz",
+ "name": "Acheron",
+ "script": "Latin",
+ "quality": "skeleton",
+ "graphemes": {
+  "a": [
+   "a"
+  ],
+  "b": [
+   "p"
+  ],
+  "d": [
+   "t̺"
+  ],
+  "e": [
+   "e"
+  ],
+  "g": [
+   "k"
+  ],
+  "gw": [
+   "kʷ"
+  ],
+  "i": [
+   "i"
+  ],
+  "j": [
+   "c"
+  ],
+  "l": [
+   "l"
+  ],
+  "m": [
+   "m"
+  ],
+  "n": [
+   "n"
+  ],
+  "ng": [
+   "ŋ"
+  ],
+  "ngw": [
+   "ŋʷ"
+  ],
+  "ny": [
+   "ɲ"
+  ],
+  "o": [
+   "o"
+  ],
+  "r": [
+   "r"
+  ],
+  "t": [
+   "t"
+  ],
+  "u": [
+   "u"
+  ],
+  "w": [
+   "w"
+  ],
+  "y": [
+   "j"
+  ],
+  "z": [
+   "s"
+  ],
+  "ä": [
+   "ə"
+  ],
+  "ë": [
+   "ɛ"
+  ],
+  "ï": [
+   "ɪ"
+  ],
+  "ö": [
+   "ɔ"
+  ],
+  "ü": [
+   "ʊ"
+  ],
+  "’r": [
+   "ɽ"
+  ]
+ },
+ "allophones": {
+  "c": [
+   "c",
+   "ɟ"
+  ],
+  "k": [
+   "k",
+   "ɡ"
+  ],
+  "kʷ": [
+   "kʷ",
+   "ɡʷ"
+  ],
+  "p": [
+   "p",
+   "b"
+  ],
+  "s": [
+   "s",
+   "z"
+  ],
+  "t": [
+   "t",
+   "ɽ"
+  ],
+  "t̪": [
+   "t̪",
+   "d̪ʉ"
+  ]
+ },
+ "notes": "Placed so the ancestry graph covers every living ISO 639-3 language. No orthography is claimed; the phoneme inventory follows the cited PHOIBLE inventory (which itself cites a published description): script is Zyyy (undetermined) until a cited description is encoded. Classification and coordinates follow Glottolog. Orthography from an Omniglot chart (c) Simon Ager, https://www.omniglot.com/, extracted via the AfriSpeech/africa-g2p compilation (acz.json). africa-g2p is a compilation tool, not the linguistic authority; the citation above is the original source it names.",
+ "iso639_3": "acz",
+ "glottolog_code": "ache1245",
+ "sources": [
+  {
+   "id": "glottolog2024",
+   "author": "Hammarström, Harald; Forkel, Robert; Haspelmath, Martin; Bank, Sebastian",
+   "year": 2024,
+   "title": "Glottolog 5.0",
+   "publisher": "Max Planck Institute for Evolutionary Anthropology",
+   "url": "https://glottolog.org/"
+  },
+  {
+   "id": "phoible2019",
+   "author": "Moran, Steven; McCloy, Daniel (eds.)",
+   "year": 2019,
+   "title": "PHOIBLE 2.0 (doi:10.5281/zenodo.2562766)",
+   "publisher": "Max Planck Institute for the Science of Human History",
+   "url": "https://phoible.org/inventories/view/1428",
+   "notes": "Inventory 1428 (ph), 38 non-marginal segments."
+  },
+  {
+   "id": "omniglot-acheron",
+   "author": "Ager, Simon",
+   "year": 2026,
+   "title": "Omniglot chart (acheron.xls)",
+   "publisher": "Omniglot",
+   "url": "https://www.omniglot.com/",
+   "notes": "Undated web chart; year is retrieval year, not publication year."
+  }
+ ],
+ "urls": [
+  "https://glottolog.org/resource/languoid/id/ache1245"
+ ],
+ "location": {
+  "latitude": 10.8827,
+  "longitude": 30.3187,
+  "source": "glottolog",
+  "notes": "Glottolog's representative point."
+ },
+ "parent": "x-clade-narr1279",
+ "phonemes": [
+  "c",
+  "j",
+  "k",
+  "kʷ",
+  "l",
+  "m",
+  "n",
+  "p",
+  "r",
+  "s",
+  "t",
+  "ts",
+  "t̪",
+  "w",
+  "ŋ",
+  "ŋʷ",
+  "ɲ",
+  "ɲː",
+  "a",
+  "aː",
+  "e",
+  "eː",
+  "i",
+  "iː",
+  "o",
+  "oː",
+  "u",
+  "uː",
+  "ɔ",
+  "ɔː",
+  "ə",
+  "əː",
+  "ɛ",
+  "ɛː",
+  "ɪ",
+  "ɪː",
+  "ʊ",
+  "ʊː"
+ ],
+ "phoible_id": "1428",
+ "script_type": "alphabet",
+ "wikipedia": [
+  "https://en.wikipedia.org/wiki/Acheron_language"
+ ]
+}

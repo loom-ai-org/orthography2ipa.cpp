@@ -1,0 +1,280 @@
+{
+  "code": "wo",
+  "name": "Wolof",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "a": [
+      "ɐ"
+    ],
+    "à": [
+      "a"
+    ],
+    "e": [
+      "ɛ"
+    ],
+    "é": [
+      "e"
+    ],
+    "ë": [
+      "ə"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "ɔ"
+    ],
+    "ó": [
+      "o"
+    ],
+    "u": [
+      "u"
+    ],
+    "b": [
+      "b"
+    ],
+    "c": [
+      "c"
+    ],
+    "d": [
+      "d"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "j": [
+      "ɟ"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ñ": [
+      "ɲ"
+    ],
+    "ŋ": [
+      "ŋ"
+    ],
+    "p": [
+      "p"
+    ],
+    "q": [
+      "q"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "w": [
+      "w"
+    ],
+    "x": [
+      "x"
+    ],
+    "y": [
+      "j"
+    ],
+    "mb": [
+      "mb"
+    ],
+    "nd": [
+      "nd"
+    ],
+    "nj": [
+      "ɲɟ"
+    ],
+    "ng": [
+      "ŋɡ"
+    ]
+  },
+  "allophones": {
+    "ɐ": [
+      "ɐ"
+    ],
+    "a": [
+      "a"
+    ],
+    "ɛ": [
+      "ɛ"
+    ],
+    "e": [
+      "e"
+    ],
+    "ə": [
+      "ə"
+    ],
+    "i": [
+      "i"
+    ],
+    "ɔ": [
+      "ɔ"
+    ],
+    "o": [
+      "o"
+    ],
+    "u": [
+      "u"
+    ],
+    "b": [
+      "b"
+    ],
+    "c": [
+      "c",
+      "tʃ"
+    ],
+    "d": [
+      "d"
+    ],
+    "f": [
+      "f"
+    ],
+    "ɡ": [
+      "ɡ"
+    ],
+    "ɟ": [
+      "ɟ",
+      "dʒ"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ɲ": [
+      "ɲ"
+    ],
+    "ŋ": [
+      "ŋ"
+    ],
+    "p": [
+      "p"
+    ],
+    "q": [
+      "q",
+      "qː"
+    ],
+    "r": [
+      "r",
+      "ɾ"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "w": [
+      "w"
+    ],
+    "x": [
+      "x",
+      "χ"
+    ],
+    "j": [
+      "j"
+    ],
+    "mb": [
+      "mb"
+    ],
+    "nd": [
+      "nd"
+    ],
+    "ɲɟ": [
+      "ɲɟ"
+    ],
+    "ŋɡ": [
+      "ŋɡ"
+    ]
+  },
+  "notes": "Wolof, the main language of Senegal (also Gambia, Mauritania). The official Latin orthography (Senegalese decree; latest revision 2005) is close to one-to-one with the phonemes: ⟨c⟩ = palatal /c/, ⟨j⟩ = /ɟ/, ⟨ñ⟩ = /ɲ/, ⟨ŋ⟩ = /ŋ/, ⟨x⟩ = /x/, ⟨q⟩ = uvular /q/ (always geminate-like), ⟨y⟩ = /j/. Vowel letters distinguish quality: ⟨a⟩ [ɐ] vs ⟨à⟩ [a] (the latter also marking a following geminate), ⟨e⟩ [ɛ] vs ⟨é⟩ [e], ⟨o⟩ [ɔ] vs ⟨ó⟩ [o], ⟨ë⟩ [ə]. Vowel length is written by doubling the vowel; consonant gemination by doubling the consonant. Word-initial prenasalised consonants are written ⟨mb nd nj ng⟩. Wolof is also written in the Arabic-based Wolofal script, which this spec does not cover; input is assumed to be in the official Latin orthography.",
+  "iso639_3": "wol",
+  "glottolog_code": "nucl1347",
+  "wikidata_qid": "Q34257",
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Wolof_language"
+  ],
+  "sources": [
+    {
+      "id": "senegal2005",
+      "author": "République du Sénégal",
+      "year": 2005,
+      "title": "Décret n° 2005-992 relatif à l'orthographe et la séparation des mots en wolof",
+      "publisher": "Journal Officiel de la République du Sénégal",
+      "url": null,
+      "pages": null,
+      "notes": "Official Wolof Latin orthography."
+    },
+    {
+      "id": "ka1994",
+      "author": "Ka, Omar",
+      "year": 1994,
+      "title": "Wolof Phonology and Morphology",
+      "publisher": "University Press of America",
+      "url": null,
+      "pages": null,
+      "notes": "Phoneme inventory, vowel harmony, gemination."
+    },
+    {
+      "id": "wolof_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Wolof language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Wolof_language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Wolof_language",
+      "pages": null,
+      "notes": "Alphabet-to-IPA table."
+    }
+  ],
+  "orthography_standard": {
+    "name": "Orthographe officielle du wolof",
+    "authority": "République du Sénégal (Décret 2005-992)",
+    "year": 2005,
+    "url": null,
+    "notes": "Latin orthography; the Arabic-script Wolofal tradition is not covered by it."
+  },
+  "timespan": {
+    "start_year": 1971,
+    "end_year": null
+  },
+  "parent": "x-clade-atla1278",
+  "ancestors": [
+    {
+      "code": "x-clade-atla1278",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Atlantic-Congo — the classification node this language sits under."
+    }
+  ],
+  "location": {
+    "latitude": 15.2534,
+    "longitude": -15.383,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Wolof."
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "code": "tem",
+  "name": "Temne",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "a": ["a"],
+    "ʌ": ["ʌ"],
+    "e": ["e"],
+    "ɛ": ["ɛ"],
+    "ə": ["ə"],
+    "i": ["i"],
+    "o": ["o"],
+    "ɔ": ["ɔ"],
+    "u": ["u"],
+    "b": ["b"],
+    "d": ["d"],
+    "f": ["f"],
+    "gb": ["ɡb"],
+    "h": ["h"],
+    "k": ["k"],
+    "kp": ["kp"],
+    "l": ["l"],
+    "m": ["m"],
+    "n": ["n"],
+    "ŋ": ["ŋ"],
+    "p": ["p"],
+    "r": ["r"],
+    "s": ["s"],
+    "sh": ["ʃ"],
+    "t": ["t"],
+    "th": ["t̪"],
+    "w": ["w"],
+    "y": ["j"]
+  },
+  "allophones": {
+    "a": ["a"], "ʌ": ["ʌ"], "e": ["e"], "ɛ": ["ɛ"], "ə": ["ə"], "i": ["i"],
+    "o": ["o"], "ɔ": ["ɔ"], "u": ["u"],
+    "b": ["b"], "d": ["d"], "f": ["f"], "ɡb": ["ɡb"], "h": ["h"], "k": ["k"],
+    "kp": ["kp"], "l": ["l"], "m": ["m"], "n": ["n"], "ŋ": ["ŋ"], "p": ["p"],
+    "r": ["r"], "s": ["s"], "ʃ": ["ʃ"], "t": ["t"], "t̪": ["t̪"], "w": ["w"], "j": ["j"]
+  },
+  "notes": "Temne, Mel branch of Atlantic-Congo (not close to Mande, despite sharing Sierra Leone with Mende), spoken by ~2 million people mainly in Northern Sierra Leone and the Western Area. Nine vowel qualities /i e ɛ ə a ʌ o ɔ u/ are attested; the back vowel ⟨ʌ⟩ has an ASCII-safe variant ⟨ȧ⟩ in texts without extended-Latin support, not modelled separately here. Temne unusually distinguishes DENTAL ⟨th⟩ /t̪/ from ALVEOLAR ⟨t⟩ /t/ (with articulatory roles reversed from the cross-linguistic norm: the dental is apical, the alveolar laminal — a fact about articulation, not spelling, and not otherwise relevant to the grapheme map). Labiovelar stops are written ⟨gb⟩ /ɡb/ and ⟨kp⟩ /kp/, as in the neighbouring but unrelated Mende (men) and Susu (sus). Temne is a two-tone (high/low) language; tone is not marked in the standard Latin orthography, so no tone is emitted here. The vowel inventory and the dental/alveolar ⟨th⟩=/t̪/ vs ⟨t⟩=/t/ contrast are now confirmed against Kanu & Tucker's (2010) JIPA 'Illustrations of the IPA' article, the primary reference for this spec. That article also states /tʃ/, /ʃ/ and /w/ surface as dialectal variants of /t/, /s/ and /j/ before front vowels /i e a/ rather than as independently spelled phonemes, which is why no separate ⟨ch⟩ grapheme is asserted here (a plausible West African convention, but unconfirmed for Temne specifically and, per this source, not phonemically distinct in all dialects — omitted rather than guessed, per AGENTS.md §4). Quality:research — the full 27-letter alphabet table itself is still reconstructed from a secondary Wikipedia summary that did not give every letter explicitly.",
+  "sources": [
+    {
+      "id": "wilson1961",
+      "author": "Wilson, William André Auquier",
+      "year": 1961,
+      "title": "An Outline of the Temne Language",
+      "publisher": "School of Oriental and African Studies, University of London",
+      "url": null,
+      "pages": null,
+      "notes": "Reference grammar; phonology and orthography."
+    },
+    {
+      "id": "temne_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Temne language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Temne_language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Temne_language",
+      "pages": null,
+      "notes": "Consonant/vowel inventory, tone, 27-letter Latin alphabet."
+    },
+    {
+      "id": "kanu_tucker_2010",
+      "author": "Kanu, Sullay M. and Tucker, Benjamin V.",
+      "year": 2010,
+      "title": "Temne",
+      "publisher": "Journal of the International Phonetic Association 40(2), Illustrations of the IPA",
+      "url": "https://www.cambridge.org/core/journals/journal-of-the-international-phonetic-association/article/temne/BD1773945818578E52AF92431AEE168C",
+      "pages": "247-253",
+      "notes": "JIPA Illustration of the IPA. Confirms the 9-vowel inventory /i e ɛ ə ʌ a u o ɔ/ with orthographic ⟨ʌ⟩=/ʌ/; confirms the dental/alveolar stop contrast with the digraph ⟨th⟩=/t̪/ (dental, unaspirated) vs. ⟨t⟩=/t/ (alveolar, aspirated/affricated); states /t/~/tʃ/, /s/~/ʃ/, and /j/~/w/ are dialectal variants before front vowels /i e a/."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Temne_language"
+  ],
+  "urls": [
+    "https://glottolog.org/resource/languoid/id/timn1235",
+    "https://www.wikidata.org/wiki/Q36613"
+  ],
+  "iso639_3": "tem",
+  "glottolog_code": "timn1235",
+  "wikidata_qid": "Q36613",
+  "parent": "x-clade-atla1278",
+  "ancestors": [
+    {
+      "code": "x-clade-atla1278",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Atlantic-Congo — Temne belongs to the Mel branch, distinct from the Senegambian (Northern Atlantic) branch of ff/wo/srr."
+    }
+  ],
+  "location": {
+    "latitude": 8.75,
+    "longitude": -12.3,
+    "source": "glottolog",
+    "notes": "Approximate centroid of the Temne-speaking region of Northern Sierra Leone."
+  }
+}

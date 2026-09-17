@@ -1,0 +1,234 @@
+{
+  "code": "ar-SY",
+  "name": "Syrian Arabic (Damascene)",
+  "script": "Arabic",
+  "graphemes_base": "ar-x-levantine",
+  "graphemes": {
+    "ق": [
+      "ʔ",
+      "q"
+    ],
+    "ج": [
+      "ʒ",
+      "dʒ"
+    ],
+    "وَيْ": [
+      "weː"
+    ],
+    "يَوْ": [
+      "joː"
+    ],
+    "يو": [
+      "juː",
+      "joː",
+      "iːw"
+    ],
+    "وي": [
+      "wiː",
+      "weː",
+      "uːj"
+    ],
+    "ية": [
+      "ja",
+      "jat"
+    ],
+    "وة": [
+      "wa",
+      "wat"
+    ],
+    "وية": [
+      "uːja",
+      "wja"
+    ],
+    "يوة": [
+      "iːwa",
+      "eːwa",
+      "jwa"
+    ],
+    "يا": [
+      "jaː",
+      "ja",
+      "iːaː"
+    ],
+    "وا": [
+      "waː",
+      "wa",
+      "uːaː"
+    ],
+    "يوا": [
+      "jwaː",
+      "juːaː"
+    ],
+    "ويا": [
+      "wjaː",
+      "uːjaː"
+    ]
+  },
+  "allophones_base": "ar-x-levantine",
+  "allophones": {
+    "q": [
+      "ʔ",
+      "q"
+    ],
+    "dʒ": [
+      "ʒ",
+      "dʒ"
+    ],
+    "aː": [
+      "aː",
+      "eː"
+    ]
+  },
+  "parent": "ar-x-levantine",
+  "ancestors": [
+    {
+      "code": "ar-x-levantine",
+      "role": "parent",
+      "weight": 0.92,
+      "notes": "Levantine Arabic base"
+    }
+  ],
+  "notes": "Syrian Arabic — Damascene (شامي) urban koine, the most influential prestige form of Levantine. INPUT CONTRACT: fully-diacritized Arabic (short vowels surface only when written). ق qaf → /ʔ/ in the Damascus koine (rural/Bedouin /ɡ/ retained via the Levantine parent's variant list). ج jim → /ʒ/. Interdentals merged to stops in urban speech (θ→/t/, ð→/d/, ظ/ض→/dˤ/), conserved by rural/Druze speakers. Diphthongs /aj aw/ → [eː oː] and emphasis backing /a aː/→[ɑ ɑː] are inherited from the Levantine parent's allophone_rules. Vowel system: five long /iː eː aː oː uː/ over three contrastive short /i a u/; [e o ə] are allophones of /i u/ (Almbark & Hellmuth 2015, an acoustic study of fifteen Damascene speakers, §3-4). Damascene /aː/ is LESS fronted than Coastal Syrian, so no strong imāla rule is declared here (contrast ar-LB). TOKENIZATION NOTE (word-initial diphthong digraphs): the inherited Levantine monophthongization AR_LEV_MONO_AY/AW rewrites the /aj//aw/ ATOMS that the ⟨َي⟩/⟨َو⟩ digraphs emit, but word-initially the onset digraphs يَ→/ja/ and وَ→/wa/ claim the fatha before an /aj//aw/ atom can form, so ⟨وَيْ⟩ came out *[waj] (وَين *wajn) and ⟨يَوْ⟩ *[jaw]. The two sequences are therefore spelled out in `graphemes` as وَيْ→[weː] (وَيْن → weːn 'where', Cowell 1964; the monophthong /eː/ from /aj/ per Almbark & Hellmuth 2015 §1.1) and يَوْ→[joː] (يَوْم → joːm 'day'), which is the same monophthongization reached from the spelling instead of from the atom — exactly the device the Hejazi/Qassimi specs use for their identical seam. The explicit sukun in both keys keeps حَيَوان /ħajawaːn/ and يَوَدّ /jawadd/ — where the glide carries its own vowel and there is no diphthong — out of the rule. MEASURED UNDECIDABLE-INPUT CEILING. Not one of the 618 WikiPron apc_arab_broad input words carries a single ḥaraka — no fatḥa, ḍamma, kasra, tanwīn, shadda or sukūn occurs anywhere on the orthographic side of this gold — while the gold transcriptions are fully vocalised: 25.5% of their phoneme segments are short vowels. Deleting every short vowel from the gold and rescoring with the harness's own scorer gives PER 0.2256, which is what a spec that emitted perfect consonants and long vowels and simply omitted the short vowels would score, and is therefore the hard floor for this row. The board row stands at 0.3889, so about 16.3 PER points separate the score from the floor. That gap is rule error and is tractable; the floor itself is undecidable input that no grapheme table can recover. A gap above the floor is a defect hypothesis, not an excuse: Hebrew sat above its own floor for what looked like the same structural reason and the excess turned out to be a real defect, an unmapped geresh. That vocalisation and not the grapheme tables dominates the Arabic error is measured on the MSA row rather than inferred: ar scores PER 0.3139 on raw WikiPron and 0.1721 on the SAME gold with the input auto-diacritized (the wikipron_ar_diacritized row, wired in scripts/benchmark.py) — below the raw row's own consonant-only floor of 0.2476. Vocalisation is worth about 14 PER points there, more than any grapheme-table change could be worth. No dialect row has such a companion: the diacritized loader is registered for ar alone, and wiring one for this row is the single highest-value follow-up available to it. It has to be labelled restored-MSA input rather than native vocalisation — the restorer targets MSA and Classical Arabic, so what it writes onto dialect orthography is an MSA reading, and a row scored against it measures the spec plus that assumption. MATRES LECTIONIS AFTER A CONSONANT. ⟨و⟩ and ⟨ي⟩ after a consonant letter are read first as the long vowels [uː] and [iː], then [oː] and [eː], then the glides [w] and [j]; word-initially and after a vowel they stay glides. Wikipedia 'Levantine Arabic', Orthography and writing systems, table Vowels (source levantine_arabic_wiki): ـُو ū [uː] 'as in food'; ـِي ī [iː] 'as in see'; ـَو ō [oː]; ـَي ē [eː]. The same table gives short [u] and [i] for ـُو and ـِي in rows the table marks as respelled or shorter, so the glide and short readings stay as later candidates. Gold count (WikiPron ar-SY, 618 lines; rows with the letter after a consonant): ⟨و⟩ 146 rows, which hold uː 47, oː 32, w 54 segments; ⟨ي⟩ 170 rows, which hold iː 59, eː 28, j 78 segments. The glide counts include diphthongs and glides elsewhere in the same rows (bejruːt), so they are not a per-letter alignment. ADJACENT LETTERS AND THE FINAL TA MARBUTA. Read one letter at a time, the after_consonant rule made both letters of يو and وي long vowels (بيوت biːuːt), and it made ⟨و⟩ and ⟨ي⟩ before a final ة long vowels (قهوة with uː). The grapheme keys يو [juː, joː, iːw], وي [wiː, weː, uːj], ية [ja, jat], وة [wa, wat], وية [uːja, wja] and يوة [iːwa, eːwa, jwa] read the first of two adjacent letters as the glide, and a letter before a final ة as the glide. Gold count (WikiPron ar-SY): 618 lines. After a consonant letter, the pair (row counts by the reading in the transcription): وي glide+long 7; وي other 3; يو glide+long 4; يو other 2. Word-final after a consonant letter: وة glide 2; ية glide 8; ية other 1. Wikipedia 'Levantine Arabic' (source levantine_arabic_wiki), read 2026-09-13 in the raw wikitext: under nouns and adjectives, nisba adjectives \"Their feminine form ends in ـية -iyye\", so ⟨ي⟩ before the final ة is the glide; under pronouns, \"جاب الجريدة لأبوي jāb il-jarīde la-ʔabūy\" shows word-final وي read as [uːj], long vowel then glide. That is the last candidate of the وي key, not the first, so this line is NOT support for the key's order: it is a counterexample, and it is kept here as one. The only gold word with word-final وي after a consonant letter, علوي ʕalawi, reads a glide and then a vowel, so the gold does not support a word-final [uːj] entry either, and none is added; أبوي stays ˈʔabwiː. GLIDE BEFORE ALIF. ⟨ي⟩ or ⟨و⟩ directly before ⟨ا⟩ is the glide in every gold word: ⟨يا⟩ 7 of 7 (6 after a consonant letter, 1 word-initial) and ⟨وا⟩ 10 of 10 (7 after a consonant letter, 2 word-initial, 1 after a vowel letter). Read one letter at a time, the after_consonant rule made that letter a long vowel (إختيار ʔixtiːaːr, gold ʔixtijaːr). The grapheme keys يا [jaː, ja, iːaː] and وا [waː, wa, uːaː] read it as the glide first. They change 14 gold words: 12 better (إختيار, جوامع, حواجب, ختيار, دنيا, صوبيا, طلياني, فواكي, قوام, كرواسون, موارنة, واوا), 2 unchanged (تيارة, غواد, whose remaining gap is gemination), 0 worse; WikiPron ar-SY PER 0.3277 -> 0.3199, exact match 0.0805 -> 0.0854. The three-letter keys يوا [jwaː, juːaː] and ويا [wjaː, uːjaː] exist because the longest match would otherwise take يو or وي first and skip the alif key: unvocalised حيوان, which the sukun note above keeps out of the diphthong rule, read ˈħjuːaːn and now reads ˈħjwaːn. Neither sequence occurs in the gold, so these two keys rest on that note, not on a gold count. ORDER OF THE LONG READINGS. The Levantine Arabic Vowels table gives ـِي ī [iː] and ـَي ē [eː], and ـُو ū [uː] and ـَو ō [oː], each with the environment \"any\": only the ḥaraka before the letter separates them, and no gold spelling has one. The table therefore does not rank [iː] over [eː] or [uː] over [oː] for unvocalised input, and the order is set by the gold, measured one letter at a time by flipping it: with ⟨ي⟩ after a consonant read [eː] first, 105 gold words change, 24 better and 62 worse, PER 0.3199 -> 0.3343; with ⟨و⟩ read [oː] first, 95 change, 31 better and 34 worse, PER 0.3199 -> 0.3214. [iː] and [uː] stay first. Words where the gold has [eː] or [oː] and the spec gives [iː] or [uː] (زيت ziːt, gold zeːt) are the cost of that order, not a defect in it.",
+  "quality": "research",
+  "script_type": "abjad",
+  "sources": [
+    {
+      "id": "almbark2015",
+      "author": "Almbark, R. & Hellmuth, S.",
+      "year": 2015,
+      "title": "Acoustic analysis of the Syrian Arabic vowel system",
+      "publisher": "Proceedings of ICPhS 2015 (paper 0612), Glasgow",
+      "url": "https://www.internationalphoneticassociation.org/icphs-proceedings/ICPhS2015/Papers/ICPHS0612.pdf",
+      "pages": "1-4",
+      "notes": "READ in full. Damascus/Syrian vowel system: five long /iː eː aː oː uː/, three short contrastive /i a u/; mid short [e o] and schwa are allophones of /i u/ (§3-4). Mid-long /eː oː/ from /aj aw/ coalescence (§1.1). /aː/ higher/fronter in Coastal Syria than Damascus (p.2)."
+    },
+    {
+      "id": "fadda2016",
+      "author": "Fadda, H.",
+      "year": 2016,
+      "title": "Language Variation in Western Amman",
+      "publisher": "MA thesis, Canada Institute of Linguistics (CanIL)",
+      "url": "https://www.canil.ca/wordpress/wp-content/uploads/2019/11/Fadda-Language-Variation-in-Western-Amman.pdf",
+      "pages": "27-30",
+      "notes": "READ (phonology chapter). Ammani koine consonants = urban Palestinian [ʔ t d dˤ ʒ], 'identical to other Levantine cities' (pp.27-28). Qaf labels (Al-Wer & Herin 2011:60): [g] gilit, [q] qeltu, [ʔ] Jerusalem, [k] rural West Bank. Vowels: short /i u a/, long /iː uː eː oː aː/ (Al-Wer 2011:4). Diphthongs /aj aw/→[eː oː] except before glide: bajt→beːt, sˤawt→sˤoːtˤ (p.30)."
+    },
+    {
+      "id": "cowell1964",
+      "author": "Cowell, M.W.",
+      "year": 1964,
+      "title": "A Reference Grammar of Syrian Arabic (Based on the Dialect of Damascus)",
+      "publisher": "Georgetown University Press",
+      "url": "https://archive.org/details/referencegrammar0000cowe",
+      "pages": null,
+      "notes": "Standard Damascus grammar. Primary text NOT obtained (Internet Archive borrow-only, no full text); its Damascene vowel classification (5 long / 5 short + schwa) is cited here only as reported and tested by Almbark & Hellmuth 2015 §1.3."
+    },
+    {
+      "id": "watson2002",
+      "author": "Watson, J.C.E.",
+      "year": 2002,
+      "title": "The Phonology and Morphology of Arabic",
+      "publisher": "Oxford University Press",
+      "url": null,
+      "pages": null,
+      "notes": "Emphasis (pharyngealization) spreading onto neighbouring low vowels. Not obtained in full; cited for the widely-described emphasis-spreading process."
+    },
+    {
+      "id": "levantine_arabic_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Levantine Arabic",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Levantine_Arabic",
+      "pages": null,
+      "notes": "Section Orthography and writing systems, table Vowels, read 2026-09-13 in the raw wikitext. The table cites Aldrich 2017, Elihay 2012 and Liddicoat, Lennane & Abdul Rahim 2018; those works were not consulted.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Levantine_Arabic"
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Levantine_Arabic",
+    "https://en.wikipedia.org/wiki/North_Levantine_Arabic",
+    "https://ar.wikipedia.org/wiki/%D9%84%D9%87%D8%AC%D8%A7%D8%AA_%D8%B4%D8%A7%D9%85%D9%8A%D8%A9",
+    "https://ar.wikipedia.org/wiki/%D9%84%D9%87%D8%AC%D8%A9_%D8%B4%D8%A7%D9%85%D9%8A%D8%A9_%D8%B4%D9%85%D8%A7%D9%84%D9%8A%D8%A9"
+  ],
+  "timespan": {
+    "start_year": 1400,
+    "end_year": null
+  },
+  "glottolog_code": "nort3139",
+  "iso639_3": "apc",
+  "location": {
+    "latitude": 33.513056,
+    "longitude": 36.291944,
+    "source": "wikidata",
+    "notes": "Damascus — the city the Damascene variety is named for. [Wikidata Q3766 P625]"
+  },
+  "optional_marks": [
+    "ً",
+    "ٌ",
+    "ٍ",
+    "َ",
+    "ُ",
+    "ِ",
+    "ّ",
+    "ْ",
+    "ٰ",
+    "ٓ"
+  ],
+  "stress": {
+    "default_position": -3,
+    "quantity_sensitive": true,
+    "superheavy_final_attracts": true,
+    "max_onset": 1,
+    "stress_mark": "ˈ",
+    "notes": "Arabic stress is QUANTITY-SENSITIVE: it falls on a syllable because that syllable is heavy, not because of any orthographic ending, so no ending table can express it. The cascade (Ryding, A Reference Grammar of MSA, CUP 2005, §2.3; Watson, The Phonology and Morphology of Arabic, OUP 2002, ch.3): a superheavy final syllable (CVːC/CVCC) takes the stress (kiˈtaːb); otherwise a heavy penult (CVː/CVC) does (muˈdarris); otherwise the antepenult (ˈmadrasa). max_onset=1 because Arabic onsets are obligatory and hold exactly one consonant — a medial cluster splits, closing the preceding syllable, and that boundary is what makes the penult of mudarris heavy. INPUT CONTRACT: weight is only recoverable from a complete transcription, so this requires diacritized input; an undiacritized skeleton has no vowels to weigh. The registered wikipron gold carries no stress marks, but the benchmark strips stress from both sides by default, so this costs no PER. Prosodic clitics: monosyllabic function words (negator maː, prepositions fiː/min/ʕan/ʕa/li/bi, vocative jaː, copula-negator muː/miʃ, conditional law/loː, wa-proclitic combinations) attach to a host and fall inside the host's stress domain, so they carry no word stress (Watson 2002, The Phonology and Morphology of Arabic, OUP, ch.3). Pan-Arabic class; the per-lect form list reflects the function words attested in this lect. Orthographic test — a clitic homograph (e.g. verb yā 'came') is destressed in every occurrence.",
+    "cliticless_words": [
+      "عَ",
+      "عَن",
+      "مَا",
+      "مُو"
+    ]
+  },
+  "audit": {
+    "wikipron": {
+      "conclusion": "input_limited",
+      "measured": "0 of 618 wikipron input words (apc_arab_broad.tsv) carry a haraka (short-vowel diacritic); Wiktionary files Arabic entries at the unvocalized page title (Wiktionary:About_Arabic / Wiktionary:Arabic_entry_guidelines, 'Entry name'), so the scraped input is a consonant-plus-long-vowel skeleton, exactly the pattern independently measured on the bare 'ar' wikipron row (0/17,563 words carry a haraka there; see ar.json audit.wikipron). No fold was run for this dialect row -- doing so needs the dialect's own vowel inventory, not MSA's -- so no valid_ceiling is recorded here; the wikipron_ar_diacritized loader (scripts/benchmark.py) that would supply it is wired for the 'ar' row only.",
+      "reference": "spec notes; see ar.json audit.wikipron for the measured MSA precedent"
+    }
+  },
+  "positional_graphemes": {
+    "و": {
+      "word_initial": [
+        "w"
+      ],
+      "after_vowel": [
+        "w"
+      ],
+      "after_consonant": [
+        "uː",
+        "oː",
+        "w"
+      ],
+      "default": [
+        "w",
+        "uː"
+      ]
+    },
+    "ي": {
+      "word_initial": [
+        "j"
+      ],
+      "after_vowel": [
+        "j"
+      ],
+      "after_consonant": [
+        "iː",
+        "eː",
+        "j"
+      ],
+      "default": [
+        "j",
+        "iː"
+      ]
+    }
+  }
+}

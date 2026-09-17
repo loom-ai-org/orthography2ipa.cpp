@@ -1,0 +1,348 @@
+{
+  "code": "no",
+  "name": "Norwegian",
+  "script": "Latin",
+  "graphemes": {
+    "a": [
+      "ɑ",
+      "ɑː"
+    ],
+    "e": [
+      "ɛ",
+      "eː",
+      "ə"
+    ],
+    "i": [
+      "ɪ",
+      "iː"
+    ],
+    "o": [
+      "ɔ",
+      "uː"
+    ],
+    "u": [
+      "ʉ",
+      "ʉː"
+    ],
+    "y": [
+      "ʏ",
+      "yː"
+    ],
+    "æ": [
+      "æ",
+      "æː"
+    ],
+    "ø": [
+      "ø",
+      "øː"
+    ],
+    "å": [
+      "ɔ",
+      "oː"
+    ],
+    "b": [
+      "b"
+    ],
+    "c": [
+      "k",
+      "s"
+    ],
+    "d": [
+      "d"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɡ",
+      "j"
+    ],
+    "h": [
+      "h"
+    ],
+    "j": [
+      "j"
+    ],
+    "k": [
+      "k",
+      "ç"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "p": [
+      "p"
+    ],
+    "q": [
+      "k"
+    ],
+    "r": [
+      "ɾ"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "v": [
+      "v"
+    ],
+    "w": [
+      "v"
+    ],
+    "x": [
+      "ks"
+    ],
+    "z": [
+      "s"
+    ],
+    "gj": [
+      "j"
+    ],
+    "hj": [
+      "j"
+    ],
+    "kj": [
+      "ç"
+    ],
+    "ng": [
+      "ŋ"
+    ],
+    "nk": [
+      "ŋk"
+    ],
+    "sj": [
+      "ʃ"
+    ],
+    "sk": [
+      "ʃ",
+      "sk"
+    ],
+    "tj": [
+      "ç"
+    ],
+    "skj": [
+      "ʃ"
+    ],
+    "rd": [
+      "ɖ"
+    ],
+    "rl": [
+      "ɭ"
+    ],
+    "rn": [
+      "ɳ"
+    ],
+    "rs": [
+      "ʂ"
+    ],
+    "rt": [
+      "ʈ"
+    ],
+    "ei": [
+      "æi"
+    ],
+    "øy": [
+      "øy"
+    ],
+    "au": [
+      "æʉ"
+    ],
+    "ai": [
+      "ɑi"
+    ]
+  },
+  "allophones": {
+    "p": [
+      "p",
+      "pʰ"
+    ],
+    "b": [
+      "b"
+    ],
+    "t": [
+      "t",
+      "tʰ"
+    ],
+    "d": [
+      "d"
+    ],
+    "k": [
+      "k",
+      "kʰ"
+    ],
+    "ɡ": [
+      "ɡ"
+    ],
+    "f": [
+      "f"
+    ],
+    "v": [
+      "v"
+    ],
+    "s": [
+      "s"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "ç": [
+      "ç"
+    ],
+    "h": [
+      "h"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ŋ": [
+      "ŋ"
+    ],
+    "l": [
+      "l"
+    ],
+    "ɾ": [
+      "ɾ",
+      "r"
+    ],
+    "ɖ": [
+      "ɖ"
+    ],
+    "ɭ": [
+      "ɭ"
+    ],
+    "ɳ": [
+      "ɳ"
+    ],
+    "ʂ": [
+      "ʂ"
+    ],
+    "ʈ": [
+      "ʈ"
+    ],
+    "j": [
+      "j"
+    ],
+    "ɑ": [
+      "ɑ"
+    ],
+    "ɑː": [
+      "ɑː"
+    ],
+    "ɛ": [
+      "ɛ"
+    ],
+    "eː": [
+      "eː"
+    ],
+    "ɪ": [
+      "ɪ"
+    ],
+    "iː": [
+      "iː"
+    ],
+    "ɔ": [
+      "ɔ"
+    ],
+    "oː": [
+      "oː"
+    ],
+    "uː": [
+      "uː"
+    ],
+    "ʉ": [
+      "ʉ"
+    ],
+    "ʉː": [
+      "ʉː"
+    ],
+    "ʏ": [
+      "ʏ"
+    ],
+    "yː": [
+      "yː"
+    ],
+    "æ": [
+      "æ"
+    ],
+    "æː": [
+      "æː"
+    ],
+    "ø": [
+      "ø"
+    ],
+    "øː": [
+      "øː"
+    ],
+    "ə": [
+      "ə"
+    ]
+  },
+  "parent": "x-clade-nort3160",
+  "ancestors": [
+    {
+      "code": "non",
+      "role": "parent",
+      "weight": 0.92,
+      "notes": "Descent from Old Norse (West Norse branch)"
+    },
+    {
+      "code": "da",
+      "role": "adstrate",
+      "weight": 0.06,
+      "notes": "Danish adstrate: 400+ years of Danish rule (1380-1814); Bokmål is essentially Norwegianised Danish"
+    }
+  ],
+  "notes": "Urban East Norwegian (standard Bokmål pronunciation). Retroflex assimilation shared with Swedish. Western/Northern dialects may use uvular [ʁ] for /r/.",
+  "quality": "research",
+  "script_type": "alphabet",
+  "sources": [
+    {
+      "id": "haugen1976",
+      "author": "Haugen, E.",
+      "year": 1976,
+      "title": "The Scandinavian Languages: An Introduction to their History",
+      "publisher": "Faber and Faber",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "kristoffersen2000",
+      "author": "Kristoffersen, G.",
+      "year": 2000,
+      "title": "The Phonology of Norwegian",
+      "publisher": "Oxford University Press",
+      "url": null,
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Norwegian_language"
+  ],
+  "timespan": {
+    "start_year": 1500,
+    "end_year": null
+  },
+  "glottolog_code": "norw1258",
+  "iso639_3": "nor",
+  "wikidata_qid": "Q9043",
+  "phoible_id": "norw1258",
+  "location": {
+    "latitude": 59.92,
+    "longitude": 10.71,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Norwegian."
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "code": "jrb",
+  "name": "Judeo-Arabic",
+  "script": "Hebrew",
+  "script_type": "abjad",
+  "quality": "stub",
+  "clade": false,
+  "graphemes": {},
+  "allophones": {},
+  "parent": "arb",
+  "ancestors": [
+    {
+      "code": "arb",
+      "role": "parent",
+      "weight": 0.8,
+      "notes": "Genetically the Judeo-Arabic varieties are regional Arabic dialects (spoken Judeo-Arabic tracks the local Arabic vernacular closely); Standard/Classical Arabic is kept as the macro-level genetic anchor, per the ar-x-maghrebi.json precedent."
+    },
+    {
+      "code": "he",
+      "role": "adstrate",
+      "weight": 0.15,
+      "notes": "Hebrew (and Aramaic) adstrate: shared liturgical/literary register, Hebrew-script orthography, and a Hebrew-Aramaic lexical stratum common across Judeo-Arabic varieties (Wikipedia: Judeo-Arabic)."
+    }
+  ],
+  "notes": "STUB / MACRO NODE. Judeo-Arabic (ISO 639-3 macrolanguage jrb) is the collective code for the range of Arabic varieties historically spoken and written by Jewish communities across the Arab world, traditionally in HEBREW SCRIPT (rather than Arabic script) and carrying a Hebrew/Aramaic lexical and liturgical adstrate. As a macrolanguage code it is a sociolinguistic/orthographic collective, not a single genetic node: each individual variety (aju Judeo-Moroccan, ajt Judeo-Tunisian, yhd Judeo-Iraqi, and others such as Judeo-Egyptian, Judeo-Yemeni, Judeo-Tripolitanian Arabic) is genetically just the local regional Arabic dialect with a Hebrew-script/Hebrew-adstrate literary tradition overlaid. This node exists so those varieties (aju.json, ajt.json, yhd.json) have a macro-level parent to resolve to, per the graph-connectivity rule; it carries no phonology of its own (graphemes/allophones empty) because there is no single Judeo-Arabic phonology to state — each individual language's own spec is the level at which sourced grapheme mappings belong.",
+  "iso639_3": "jrb",
+  "wikidata_qid": "Q37733",
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Judeo-Arabic"
+  ],
+  "urls": [
+    "https://iso639-3.sil.org/code/jrb",
+    "https://www.ethnologue.com/language/jrb/",
+    "https://www.jewishlanguages.org/judeo-arabic"
+  ],
+  "sources": [
+    {
+      "id": "judeo_arabic_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Judeo-Arabic",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Judeo-Arabic",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Judeo-Arabic",
+      "pages": null,
+      "notes": "Consulted this session: confirms jrb as the ISO 639 macrolanguage code covering Judeo-Moroccan (aju), Judeo-Tunisian (ajt), Judeo-Iraqi (yhd), Judeo-Yemeni, Judeo-Egyptian and Judeo-Tripolitanian Arabic, the Hebrew-script literary convention, and the Hebrew/Aramaic lexical adstrate."
+    },
+    {
+      "id": "jewishlanguages_jrb",
+      "author": "Jewish Language Project",
+      "year": 2026,
+      "title": "Judeo-Arabic",
+      "publisher": "jewishlanguages.org",
+      "url": "https://www.jewishlanguages.org/judeo-arabic",
+      "pages": null,
+      "notes": "General overview of the Judeo-Arabic dialect continuum and its Hebrew-script tradition, consulted this session."
+    }
+  ],
+  "location": {
+    "latitude": 30.0,
+    "longitude": 15.0,
+    "source": "glottolog",
+    "notes": "Approximate centroid across the historical Jewish Arabic-speaking world (North Africa to Iraq); jrb has no Glottolog languoid (it is an ISO macrolanguage without genealogical status), so no authoritative representative point exists."
+  }
+}

@@ -1,0 +1,610 @@
+{
+  "code": "ur",
+  "name": "Urdu",
+  "script": "Arabic",
+  "graphemes": {
+    "ا": [
+      "aː",
+      "ə"
+    ],
+    "آ": [
+      "aː"
+    ],
+    "و": [
+      "ʋ",
+      "oː",
+      "uː",
+      "ɔː"
+    ],
+    "ی": [
+      "j",
+      "iː",
+      "eː"
+    ],
+    "ے": [
+      "eː",
+      "ɛː"
+    ],
+    "ہ": [
+      "ɦ"
+    ],
+    "ع": [
+      "",
+      "ʔ"
+    ],
+    "َ": [
+      "ə"
+    ],
+    "ِ": [
+      "ɪ"
+    ],
+    "ُ": [
+      "ʊ"
+    ],
+    "ً": [
+      "ən"
+    ],
+    "ب": [
+      "b"
+    ],
+    "پ": [
+      "p"
+    ],
+    "ت": [
+      "t̪"
+    ],
+    "ٹ": [
+      "ʈ"
+    ],
+    "ث": [
+      "s"
+    ],
+    "ج": [
+      "dʒ"
+    ],
+    "چ": [
+      "tʃ"
+    ],
+    "ح": [
+      "ɦ"
+    ],
+    "خ": [
+      "x"
+    ],
+    "د": [
+      "d̪"
+    ],
+    "ڈ": [
+      "ɖ"
+    ],
+    "ذ": [
+      "z"
+    ],
+    "ر": [
+      "ɾ",
+      "r"
+    ],
+    "ڑ": [
+      "ɽ"
+    ],
+    "ز": [
+      "z"
+    ],
+    "ژ": [
+      "ʒ"
+    ],
+    "س": [
+      "s"
+    ],
+    "ش": [
+      "ʃ"
+    ],
+    "ص": [
+      "s"
+    ],
+    "ض": [
+      "z"
+    ],
+    "ط": [
+      "t̪"
+    ],
+    "ظ": [
+      "z"
+    ],
+    "غ": [
+      "ɣ"
+    ],
+    "ف": [
+      "f"
+    ],
+    "ق": [
+      "q"
+    ],
+    "ک": [
+      "k"
+    ],
+    "گ": [
+      "ɡ"
+    ],
+    "ل": [
+      "l"
+    ],
+    "م": [
+      "m"
+    ],
+    "ن": [
+      "n"
+    ],
+    "ں": [
+      "̃"
+    ],
+    "ھ": [
+      "ʰ"
+    ],
+    "بھ": [
+      "bʱ"
+    ],
+    "پھ": [
+      "pʰ"
+    ],
+    "تھ": [
+      "t̪ʰ"
+    ],
+    "ٹھ": [
+      "ʈʰ"
+    ],
+    "جھ": [
+      "dʒʱ"
+    ],
+    "چھ": [
+      "tʃʰ"
+    ],
+    "دھ": [
+      "d̪ʱ"
+    ],
+    "ڈھ": [
+      "ɖʱ"
+    ],
+    "گھ": [
+      "ɡʱ"
+    ],
+    "کھ": [
+      "kʰ"
+    ],
+    "لھ": [
+      "lʱ"
+    ],
+    "مھ": [
+      "mʱ"
+    ],
+    "نھ": [
+      "nʱ"
+    ],
+    "رھ": [
+      "ɾʱ"
+    ],
+    "ڑھ": [
+      "ɽʱ"
+    ],
+    "ء": [
+      "ʔ",
+      ""
+    ],
+    "ئ": [
+      "ʔ",
+      "j",
+      ""
+    ],
+    "ؤ": [
+      "ʔ",
+      "o",
+      ""
+    ],
+    "ۂ": [
+      "eː"
+    ]
+  },
+  "allophones": {
+    "p": [
+      "p"
+    ],
+    "pʰ": [
+      "pʰ"
+    ],
+    "b": [
+      "b"
+    ],
+    "bʱ": [
+      "bʱ"
+    ],
+    "t̪": [
+      "t̪"
+    ],
+    "t̪ʰ": [
+      "t̪ʰ"
+    ],
+    "d̪": [
+      "d̪"
+    ],
+    "d̪ʱ": [
+      "d̪ʱ"
+    ],
+    "ʈ": [
+      "ʈ"
+    ],
+    "ʈʰ": [
+      "ʈʰ"
+    ],
+    "ɖ": [
+      "ɖ"
+    ],
+    "ɖʱ": [
+      "ɖʱ"
+    ],
+    "k": [
+      "k"
+    ],
+    "kʰ": [
+      "kʰ"
+    ],
+    "ɡ": [
+      "ɡ"
+    ],
+    "ɡʱ": [
+      "ɡʱ"
+    ],
+    "q": [
+      "q",
+      "k"
+    ],
+    "tʃ": [
+      "tʃ"
+    ],
+    "tʃʰ": [
+      "tʃʰ"
+    ],
+    "dʒ": [
+      "dʒ"
+    ],
+    "dʒʱ": [
+      "dʒʱ"
+    ],
+    "f": [
+      "f",
+      "pʰ"
+    ],
+    "s": [
+      "s"
+    ],
+    "z": [
+      "z"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "ʒ": [
+      "ʒ",
+      "ʃ"
+    ],
+    "x": [
+      "x"
+    ],
+    "ɣ": [
+      "ɣ",
+      "ɡ"
+    ],
+    "ɦ": [
+      "ɦ",
+      "h"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ɽ": [
+      "ɽ"
+    ],
+    "l": [
+      "l"
+    ],
+    "ʋ": [
+      "ʋ",
+      "w",
+      "v"
+    ],
+    "j": [
+      "j"
+    ],
+    "ə": [
+      "ə"
+    ],
+    "aː": [
+      "aː"
+    ],
+    "ɪ": [
+      "ɪ"
+    ],
+    "iː": [
+      "iː"
+    ],
+    "ʊ": [
+      "ʊ"
+    ],
+    "uː": [
+      "uː"
+    ],
+    "eː": [
+      "eː"
+    ],
+    "oː": [
+      "oː"
+    ],
+    "ɛː": [
+      "ɛː"
+    ],
+    "ɔː": [
+      "ɔː"
+    ],
+    "ɾ": [
+      "ɾ",
+      "r"
+    ]
+  },
+  "parent": "hi",
+  "ancestors": [
+    {
+      "code": "hi",
+      "role": "parent",
+      "weight": 0.75,
+      "notes": "Hindustani base shared with Hindi (Khaṛī Bolī)"
+    },
+    {
+      "code": "fa",
+      "role": "adstrate",
+      "weight": 0.15,
+      "notes": "Persian adstrate: massive vocabulary, some phonological influence (/x ɣ q/)"
+    },
+    {
+      "code": "ar",
+      "role": "adstrate",
+      "weight": 0.1,
+      "notes": "Arabic adstrate: religious/scholarly vocabulary, pharyngeal consonants"
+    }
+  ],
+  "notes": "Standard Urdu (Pakistan national language, Indian Muslim register). Phonologically near-identical to Hindi but with additional phonemes from Persian/Arabic loans: /q x ɣ f z/. Written right-to-left in Nastaliq (a form of Perso-Arabic script). Four-way laryngeal contrast: plain/aspirated × voiced/voiceless. Retroflex series: /ʈ ɖ ɽ/ graphically distinct from dentals. RHOTIC: ⟨ر⟩ is the alveolar tap /ɾ/, the same phoneme as Hindi ⟨र⟩; the trill [r] is a positional allophone (word-initial, syllable-final) and stays in the candidate list. GLOTTAL: Urdu has one laryngeal phoneme, breathy-voiced /ɦ/. ⟨ح⟩ (Arabic ḥāʾ) is not pharyngeal in Urdu: it merges with ⟨ہ⟩ as /ɦ/. AYN: ⟨ع⟩ has no pharyngeal value in Urdu. At the head of a word it is a bare carrier for a short vowel exactly as ⟨ا⟩ is — 92 of the 121 gold words beginning in ⟨ع⟩ open on /ə ɪ ʊ/ — and elsewhere it is silent, the surrounding vowels carrying the syllable: 361 of the 388 gold words containing it have no glottal stop at all. MATRES LECTIONIS: the script is an abjad, so ⟨ا و ی⟩ are vowel letters everywhere except where a consonant reading is forced. ⟨ا⟩ word-initially is a bare carrier for any of the three short vowels /ə ɪ ʊ/ and is the long /aː/ everywhere else; ⟨و⟩ and ⟨ی⟩ are the consonants /ʋ/ and /j/ word-initially, after a vowel and before a vowel letter, and long vowels elsewhere: a mater lectionis cannot stand immediately before another one, which is why ‹کیا› is /kjaː/ and ‹سوال› /sʋaːl/; when a word-initial ⟨ا⟩ or ⟨ع⟩ carrier itself stands immediately before a mater lectionis it is dropped rather than read as a short vowel, which is why ‹عام› is /aːm/ and ‹ایک› /eːk/, not /əaːm/, /əjk/. ‹اور› is /ɔːɾ/, matched by this spec via UR_WAW_NUCLEUS_AFTER_DROPPED_CARRIER; ‹عورت› is gold /oːɾət̪/ but this rule is scoped to ⟨ا⟩ only, so ‹عورت› instead resolves through ⟨و⟩'s own default candidate list and this spec produces /uːɾt̪/. 455 of the 472 gold words spelling ⟨ی⟩ or ⟨و⟩ directly before ⟨ا⟩ or ⟨آ⟩ have the glide. FINAL ⟨ہ⟩ is two letters in one. After a consonant it is ha-e-mukhtafi and writes the final vowel /aː/ (or /eː/ in the iẓāfat spelling), which is why ‹آئینہ› ends in a vowel. After a long ā it is ha-e-malfūz and is pronounced /ɦ/: ‹راہ› is /ɾaːɦ/, ‹گناہ› /ɡnaːɦ/. 29 of the 30 gold words whose final ⟨ہ⟩ follows ⟨ا⟩ or ⟨آ⟩ end in /ɦ/, against 25 of the 554 that follow a non-⟨ا⟩ grapheme. The consonant stays in the final candidate list either way. GOLD-CONVENTION DIVERGENCE: the WikiPron 'ur' gold set writes the long ā vowel as ⟨ɑː⟩ (3618 of its 34091 segments, 10.6%) where this spec and its Hindi parent write ⟨aː⟩. Both transcriptions are attested for Hindustani ā, and this spec keeps ⟨aː⟩ because its parent ⟨hi⟩ writes ⟨aː⟩ for the same phoneme: Urdu and Hindi are one spoken language, and a phoneme they share cannot carry two symbols across two specs in one library. Chasing the gold here would break that: folding ɑ→a as a diagnostic drops the measured PER from 0.3097 to 0.2219 at the same n, which is the size of the notation gap. UNRECOVERABLE FLOOR: 0 of the 6296 gold words carry harakat, yet 5867 of 34091 gold segments (17.2%) are short vowels /ə ɪ ʊ/ in non-initial position, where the orthography writes nothing at all. No G2P over bare Urdu script can recover these without a pronunciation lexicon, which is out of scope here.",
+  "quality": "research",
+  "script_type": "abjad",
+  "sources": [
+    {
+      "id": "masica1991",
+      "author": "Masica, C.",
+      "year": 1991,
+      "title": "The Indo-Aryan Languages",
+      "publisher": "Cambridge University Press",
+      "url": null,
+      "pages": null,
+      "notes": null,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Indo-Aryan_languages"
+    },
+    {
+      "id": "cardona_jain2003",
+      "author": "Cardona, G. & Jain, D. (eds.)",
+      "year": 2003,
+      "title": "The Indo-Aryan Languages",
+      "publisher": "Routledge",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "platts1884",
+      "author": "Platts, J.T.",
+      "year": 1884,
+      "title": "A Grammar of the Hindustani or Urdu Language",
+      "publisher": "W.H. Allen",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "ohala1999",
+      "author": "Ohala, M.",
+      "year": 1999,
+      "title": "Hindi (Illustrations of the IPA)",
+      "publisher": "Handbook of the International Phonetic Association, Cambridge University Press",
+      "url": null,
+      "pages": null,
+      "notes": "Hindustani consonant and vowel inventory: rhotic as a tap, /ɦ/ breathy voiced, [ŋ] before velars.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Hindustani_phonology"
+    },
+    {
+      "id": "shapiro2003",
+      "author": "Shapiro, M.",
+      "year": 2003,
+      "title": "Hindi",
+      "publisher": "In Cardona & Jain (eds.), The Indo-Aryan Languages, Routledge",
+      "url": null,
+      "pages": null,
+      "notes": "Nasal allophony and the /n/+velar clusters.",
+      "wikipedia_url": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Urdu",
+    "https://ur.wikipedia.org/wiki/اردو",
+    "https://ur.wikipedia.org/wiki/%D8%A7%D8%B1%D8%AF%D9%88",
+    "https://en.wikipedia.org/wiki/Urdu_alphabet",
+    "https://en.wikipedia.org/wiki/Hindustani_phonology"
+  ],
+  "timespan": {
+    "start_year": 1800,
+    "end_year": null
+  },
+  "glottolog_code": "urdu1245",
+  "iso639_3": "urd",
+  "wikidata_qid": "Q1617",
+  "phoible_id": "urdu1245",
+  "wals_code": "urd",
+  "location": {
+    "latitude": 25.0,
+    "longitude": 67.0,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Urdu."
+  },
+  "positional_graphemes": {
+    "ا": {
+      "word_initial": [
+        "ə",
+        "ɪ",
+        "ʊ"
+      ],
+      "default": [
+        "aː"
+      ]
+    },
+    "ع": {
+      "word_initial": [
+        "ə",
+        "ɪ",
+        "ʊ"
+      ],
+      "default": [
+        "",
+        "ʔ"
+      ]
+    },
+    "ہ": {
+      "word_final": [
+        "aː",
+        "eː",
+        "ɦ"
+      ],
+      "default": [
+        "ɦ"
+      ]
+    },
+    "ی": {
+      "word_initial": [
+        "j"
+      ],
+      "after_vowel": [
+        "j"
+      ],
+      "before_vowel": [
+        "j"
+      ],
+      "default": [
+        "iː",
+        "eː",
+        "j"
+      ]
+    },
+    "و": {
+      "word_initial": [
+        "ʋ"
+      ],
+      "after_vowel": [
+        "ʋ"
+      ],
+      "before_vowel": [
+        "ʋ"
+      ],
+      "default": [
+        "uː",
+        "oː",
+        "ɔː",
+        "ʋ"
+      ]
+    }
+  },
+  "allophone_rules": [
+    {
+      "id": "UR_CARRIER_DROP_BEFORE_MATER",
+      "phonemes": [
+        "ə"
+      ],
+      "surface": "",
+      "grapheme": [
+        "ا",
+        "ع"
+      ],
+      "word_initial": true,
+      "followed_by_grapheme": [
+        "ا",
+        "آ",
+        "ی",
+        "و"
+      ],
+      "notes": "A word-initial ⟨ا⟩/⟨ع⟩ carrier immediately before a mater lectionis is dropped rather than read as a short vowel: a mater lectionis cannot stand immediately after one either, mirroring the ⟨یا⟩/⟨وا⟩ rule that already blocks two matres in a row. ‹عام› is /aːm/, ‹ایک› /eːk/ and ‹اور› /ɔːɾ/ (see UR_WAW_NUCLEUS_AFTER_DROPPED_CARRIER; matched exactly by this spec), not /əaːm/, /əjk/, /əʋɾ/; ‹عورت› is gold /oːɾət̪/ but this spec produces /uːɾt̪/, resolving through ⟨و⟩'s own default candidate list rather than through this rule (the rule is scoped to ⟨ا⟩, not ⟨ع⟩). The full ⟨اا⟩/⟨عا⟩+⟨ای⟩/⟨عی⟩+⟨او⟩/⟨عو⟩ class is 92 gold words, not the 74 previously claimed (⟨عا⟩ 12/12, ⟨ای⟩ 26/26, ⟨او⟩ 36/36 omitted the ⟨عی⟩ 13 and ⟨عو⟩ 5 subclasses entirely). Split on 'has at least one gold reading that surfaces the carrier as a short-vowel onset (/əC-/, /ɪj-/, etc.) rather than a long vowel': 75 of the 92 are clean long-vowel-onset words and 17 are counterexamples (‹ایالت› /ɪjɑːlət̪/, ‹عیادت› /ɪjɑːd̪ət̪/, ‹اودھی› /əʋəd̪ʱiː/, ‹عوام› /əʋɑːm/ among them) — a real minority pattern this rule does not capture. Spec-internal generalisation from the gold distribution; no external source consulted."
+    },
+    {
+      "id": "UR_MATER_NUCLEUS_AFTER_DROPPED_CARRIER",
+      "phonemes": [
+        "j"
+      ],
+      "surface": "eː",
+      "grapheme": [
+        "ی"
+      ],
+      "preceded_by_grapheme": [
+        "ا"
+      ],
+      "preceded_by_2": "word_boundary",
+      "notes": "Once UR_CARRIER_DROP_BEFORE_MATER silences the word-initial carrier, ⟨ی⟩ is no longer AFTER a vowel in speech — it IS the word's first sound, so it takes its long-vowel reading rather than the after-vowel glide: ‹ایک› is /eːk/, not /jk/. Scoped to ⟨ای⟩ (26/26 gold words), which is kept in the rule despite carrying the same risk that excludes ⟨عی⟩: both subclasses contain /ɪj-~əj-/ hiatus onsets where forcing /eː/ produces an impossible vowel-vowel sequence (‹ایالت› as /eːaːlt̪/, not the gold /ɪjɑːlət̪/), but the counterexample rate differs enough to make different calls the right trade — ⟨ای⟩ is 4 of 26 words (‹ایالت›, ‹ایت›, ‹ایتھوپیا›, ‹ایوب›) against 22 clean long-vowel-initial words, while ⟨عی⟩ is 5 of 13 (‹عیادت›, ‹عیادتوں›, ‹عیادتیں›, ‹عیاشی›, ‹عیاں›) against only 8 clean; at a 15% counterexample rate ⟨ای⟩ stays in the rule and pins the ‹ایالت›-type words as a known minority gap (like UR_WAW_NUCLEUS_AFTER_DROPPED_CARRIER's ‹اودھی›), while at 38% ⟨عی⟩ is excluded and its 8 clean words fall through to ⟨ی⟩'s own default candidate list instead. Spec-internal generalisation from the gold distribution below; no external source consulted for the eː/ɔː split."
+    },
+    {
+      "id": "UR_WAW_NUCLEUS_AFTER_DROPPED_CARRIER",
+      "phonemes": [
+        "ʋ"
+      ],
+      "surface": "ɔː",
+      "grapheme": [
+        "و"
+      ],
+      "preceded_by_grapheme": [
+        "ا"
+      ],
+      "preceded_by_2": "word_boundary",
+      "notes": "The same repair as UR_MATER_NUCLEUS_AFTER_DROPPED_CARRIER, for ⟨و⟩: once the carrier is silenced, a word-initial ⟨و⟩ is the syllable nucleus, not an onset glide, so ‹اور› surfaces with a vowel rather than a bare /ʋ/ onset. Scoped to ⟨او⟩ only (⟨عو⟩ is excluded: ‹عورت› resolves through ⟨و⟩'s own default candidate list, not through this rule). Over the 36 gold words this rule actually controls, the per-word onset is not uniform — /ɔː/ 14, /uː/ 13, /oː/ 7, with a handful of other readings besides — and /ɔː/ is both the largest group and what the highest-frequency member of the class, ‹اور›, takes, so it is the rule's single surface; an earlier edit-distance comparison that favoured /uː/ was inflated by nasal-diacritic mismatches and by crediting the rule with ⟨عو⟩ words it cannot actually move. A word-initial-carrier reading of /əʋ.../ persists as a real minority pattern (‹اودھی› /əʋəd̪ʱiː/, ‹اول› /əʋːəl/) that this rule does not capture; spec-internal generalisation from the gold distribution, no external source consulted."
+    },
+    {
+      "id": "UR_HA_E_MALFUZ",
+      "phonemes": [
+        "aː"
+      ],
+      "surface": "ɦ",
+      "grapheme": [
+        "ہ"
+      ],
+      "word_final": true,
+      "preceded_by_grapheme": [
+        "ا",
+        "آ"
+      ],
+      "notes": "Ha-e-malfuz: word-final ⟨ہ⟩ after a long ā is the consonant /ɦ/, not the vowel-writing ha-e-mukhtafi. The two are distinguished by what precedes: after a consonant the letter writes the final vowel, after a long vowel it is pronounced (Platts 1884; Ohala 1999). Of the 30 gold words whose final ⟨ہ⟩ follows ⟨ا⟩ or ⟨آ⟩, 29 end in /ɦ/."
+    },
+    {
+      "id": "UR_NASAL_VELAR",
+      "phonemes": [
+        "n"
+      ],
+      "surface": "ŋ",
+      "followed_by_phoneme": [
+        "k",
+        "ɡ",
+        "kʰ",
+        "ɡʱ"
+      ],
+      "notes": "Nasal place assimilation: /n/ is velar [ŋ] before a velar stop (Ohala 1999; Shapiro 2003). Urdu writes no separate velar-nasal letter, so the place is read off the following stop. The assimilation is the regular reading, not the only one — Hindustani also has morphologically derived /n/+velar clusters (ʊn+kaː), which is why the plain /n/ stays in the candidate list rather than being rewritten away."
+    }
+  ],
+  "audit": {
+    "wikipron": {
+      "conclusion": "input_limited",
+      "measured": "0 of the 6296 wikipron/ur gold words carry harakat, yet 5867 of 34091 gold segments (17.2%) are short vowels /e i u/ in non-initial position, where the Perso-Arabic abjad writes nothing at all. No G2P over bare Urdu script can recover these without a pronunciation lexicon, which is out of scope for this spec.",
+      "reference": "spec notes"
+    }
+  }
+}

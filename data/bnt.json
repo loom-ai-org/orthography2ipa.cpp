@@ -1,0 +1,104 @@
+{
+  "code": "bnt",
+  "name": "Proto-Bantu (family node)",
+  "script": "IPA-reconstruction",
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "i": [
+      "i"
+    ],
+    "u": [
+      "u"
+    ],
+    "e": [
+      "e"
+    ],
+    "o": [
+      "o"
+    ],
+    "p": [
+      "p"
+    ],
+    "t": [
+      "t"
+    ],
+    "k": [
+      "k"
+    ],
+    "b": [
+      "b"
+    ],
+    "d": [
+      "d"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "s": [
+      "s"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "l": [
+      "l"
+    ],
+    "r": [
+      "r"
+    ],
+    "w": [
+      "w"
+    ],
+    "j": [
+      "j"
+    ],
+    "h": [
+      "h"
+    ]
+  },
+  "allophones": {},
+  "notes": "STRUCTURAL ANCESTRY NODE (not a modelled G2P target). Proto-Bantu is the reconstructed ancestor of the Bantu branch of Niger-Congo (Swahili, Zulu and c. 500 other languages). It exists here only so the ancestry / phylogenetic-distance metrics of the modern varieties that reference it have a node to resolve to; NO phonology is claimed or reconstructed and the minimal grapheme set is a placeholder (afa.json / trk.json stub pattern).",
+  "quality": "stub",
+  "script_type": "reconstruction",
+  "iso639_3": null,
+  "glottolog_code": "narr1281",
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Proto-Bantu_language"
+  ],
+  "urls": [
+    "https://glottolog.org/resource/languoid/id/narr1281"
+  ],
+  "sources": [
+    {
+      "id": "nurse_philippson2003",
+      "author": "Nurse, D. & Philippson, G. (eds.)",
+      "year": 2003,
+      "title": "The Bantu Languages",
+      "publisher": "Routledge",
+      "url": null,
+      "pages": null,
+      "notes": "Reference for Bantu reconstruction (structural node only).",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Proto-Bantu_language"
+    }
+  ],
+  "parent": "x-clade-narr1281",
+  "ancestors": [
+    {
+      "code": "nic",
+      "role": "parent",
+      "weight": 0.9,
+      "notes": "Bantu branch of Niger-Congo (Atlantic-Congo)."
+    }
+  ],
+  "location": {
+    "latitude": -5.550099,
+    "longitude": 20.644617,
+    "source": "glottolog",
+    "notes": "Glottolog's computed centroid for the Narrow Bantu family — a summary of a whole clade's range, not a place anyone speaks."
+  }
+}

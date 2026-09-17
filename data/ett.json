@@ -1,0 +1,127 @@
+{
+  "code": "ett",
+  "name": "Etruscan",
+  "script": "Old Italic",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "𐌀": [
+      "a"
+    ],
+    "𐌁": [
+      "b"
+    ],
+    "𐌂": [
+      "k"
+    ],
+    "𐌃": [
+      "d"
+    ],
+    "𐌄": [
+      "e"
+    ],
+    "𐌅": [
+      "w"
+    ],
+    "𐌆": [
+      "ts"
+    ],
+    "𐌇": [
+      "h"
+    ],
+    "𐌈": [
+      "tʰ"
+    ],
+    "𐌉": [
+      "i"
+    ],
+    "𐌊": [
+      "k"
+    ],
+    "𐌋": [
+      "l"
+    ],
+    "𐌌": [
+      "m"
+    ],
+    "𐌍": [
+      "n"
+    ],
+    "𐌏": [
+      "o"
+    ],
+    "𐌐": [
+      "p"
+    ],
+    "𐌑": [
+      "ʃ"
+    ],
+    "𐌒": [
+      "k"
+    ],
+    "𐌓": [
+      "r"
+    ],
+    "𐌔": [
+      "s"
+    ],
+    "𐌕": [
+      "t"
+    ],
+    "𐌖": [
+      "u"
+    ],
+    "𐌗": [
+      "ks"
+    ],
+    "𐌘": [
+      "pʰ"
+    ],
+    "𐌙": [
+      "kʰ"
+    ],
+    "𐌚": [
+      "f"
+    ]
+  },
+  "parent": "x-clade-tyrsen",
+  "ancestors": [
+    {
+      "code": "x-clade-tyrsen",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Descent per Glottolog classification of Etruscan (etru1241)."
+    }
+  ],
+  "notes": "Skeleton. Extinct, non-Indo-European (Tyrsenian) language of ancient Italy written in the Old Italic (Etruscan) alphabet. Grapheme map assigns each letter its conventional reconstructed value: four vowels a e i u (o is written but was not distinct from u), the aspirated stops θ [tʰ], φ [pʰ], χ [kʰ], the three redundant velar letters c/k/q all [k], z [ts], two sibilants s and ś [ʃ], and f written with the 8-shaped letter. Etruscan had essentially no voiced stops, so b and d occur only in loans. Reconstructed values carry inherent uncertainty; vowel length, stress and syncope are not recoverable from the spelling and are left unencoded, so a substantial PER floor is expected.",
+  "iso639_3": "ett",
+  "glottolog_code": null,
+  "sources": [
+    {
+      "id": "ett_glottolog",
+      "author": "Hammarström, H. et al. (Glottolog 5.0)",
+      "year": 2024,
+      "title": "Glottolog: Etruscan (etru1241)",
+      "publisher": "Max Planck Institute for Evolutionary Anthropology",
+      "url": "https://glottolog.org/resource/languoid/id/etru1241",
+      "pages": null,
+      "notes": "Classification reference for a skeleton-tier entry.",
+      "wikipedia_url": null
+    },
+    {
+      "id": "ett_wikipedia",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Etruscan language (Wikipedia)",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Etruscan_language",
+      "pages": null,
+      "notes": "Orthography/phonology and Old Italic letter-value reference for a skeleton-tier entry.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Etruscan_language"
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Etruscan_language",
+    "https://en.wikipedia.org/wiki/Old_Italic_scripts"
+  ]
+}

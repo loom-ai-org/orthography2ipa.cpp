@@ -1,0 +1,580 @@
+{
+  "code": "guw",
+  "name": "Gun (Gungbe)",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "parent": "nic",
+  "ancestors": [
+    {
+      "code": "nic",
+      "role": "parent",
+      "weight": 0.9,
+      "notes": "Niger-Congo > Volta-Niger > Gbe (Fon cluster)."
+    }
+  ],
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "b": [
+      "b"
+    ],
+    "c": [
+      "tʃ"
+    ],
+    "d": [
+      "d",
+      "ɖ"
+    ],
+    "e": [
+      "e"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "gb": [
+      "ɡ͡b"
+    ],
+    "h": [
+      "h",
+      "x",
+      "ɣ"
+    ],
+    "hw": [
+      "ɣʷ",
+      "xʷ"
+    ],
+    "i": [
+      "i"
+    ],
+    "j": [
+      "dʒ"
+    ],
+    "k": [
+      "k"
+    ],
+    "kp": [
+      "k͡p"
+    ],
+    "kw": [
+      "kʷ"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ny": [
+      "ɲ"
+    ],
+    "nyw": [
+      "ɲʷ"
+    ],
+    "o": [
+      "o"
+    ],
+    "p": [
+      "k͡p",
+      "p"
+    ],
+    "r": [
+      "ɾ",
+      "l"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "u": [
+      "u"
+    ],
+    "v": [
+      "v"
+    ],
+    "w": [
+      "w"
+    ],
+    "wh": [
+      "ɣʷ",
+      "xʷ"
+    ],
+    "x": [
+      "x",
+      "χ"
+    ],
+    "xw": [
+      "xʷ",
+      "χʷ"
+    ],
+    "y": [
+      "j"
+    ],
+    "z": [
+      "z"
+    ],
+    "à": [
+      "a"
+    ],
+    "á": [
+      "a"
+    ],
+    "è": [
+      "e"
+    ],
+    "é": [
+      "e"
+    ],
+    "ì": [
+      "i"
+    ],
+    "í": [
+      "i"
+    ],
+    "ò": [
+      "o"
+    ],
+    "ó": [
+      "o"
+    ],
+    "ù": [
+      "u"
+    ],
+    "ú": [
+      "u"
+    ],
+    "ɔ": [
+      "ɔ"
+    ],
+    "ɔ̀": [
+      "ɔ"
+    ],
+    "ɔ́": [
+      "ɔ"
+    ],
+    "ɖ": [
+      "ɖ"
+    ],
+    "ɛ": [
+      "ɛ"
+    ],
+    "ɛ̀": [
+      "ɛ"
+    ],
+    "ɛ́": [
+      "ɛ"
+    ],
+    "ṣ": [
+      "ʃ",
+      "tʃ"
+    ],
+    "ẹ": [
+      "ɛ"
+    ],
+    "ẹ̀": [
+      "ɛ"
+    ],
+    "ẹ́": [
+      "ɛ"
+    ],
+    "ọ": [
+      "ɔ"
+    ],
+    "ọ̀": [
+      "ɔ"
+    ],
+    "ọ́": [
+      "ɔ"
+    ]
+  },
+  "allophones": {
+    "a": [
+      "a"
+    ],
+    "ã": [
+      "ã"
+    ],
+    "b": [
+      "b",
+      "m"
+    ],
+    "tʃ": [
+      "tʃ"
+    ],
+    "d": [
+      "d"
+    ],
+    "ɖ": [
+      "ɖ",
+      "n"
+    ],
+    "e": [
+      "e"
+    ],
+    "ɛ": [
+      "ɛ"
+    ],
+    "ɛ̃": [
+      "ɛ̃"
+    ],
+    "f": [
+      "f"
+    ],
+    "ɡ": [
+      "ɡ"
+    ],
+    "ɡ͡b": [
+      "ɡ͡b"
+    ],
+    "h": [
+      "h"
+    ],
+    "hʷ": [
+      "hʷ"
+    ],
+    "i": [
+      "i"
+    ],
+    "ĩ": [
+      "ĩ"
+    ],
+    "dʒ": [
+      "dʒ"
+    ],
+    "k": [
+      "k"
+    ],
+    "k͡p": [
+      "k͡p"
+    ],
+    "l": [
+      "l",
+      "n"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ɲ": [
+      "ɲ"
+    ],
+    "o": [
+      "o"
+    ],
+    "ɔ": [
+      "ɔ"
+    ],
+    "ɔ̃": [
+      "ɔ̃"
+    ],
+    "p": [
+      "p"
+    ],
+    "ɾ": [
+      "ɾ"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "u": [
+      "u"
+    ],
+    "ũ": [
+      "ũ"
+    ],
+    "v": [
+      "v"
+    ],
+    "w": [
+      "w"
+    ],
+    "x": [
+      "x",
+      "χ"
+    ],
+    "xʷ": [
+      "xʷ"
+    ],
+    "j": [
+      "j"
+    ],
+    "z": [
+      "z"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "ɣ": [
+      "ɣ",
+      "ʁ"
+    ],
+    "ɣʷ": [
+      "ɣʷ"
+    ],
+    "χ": [
+      "χ"
+    ],
+    "χʷ": [
+      "χʷ"
+    ]
+  },
+  "iso639_3": "guw",
+  "glottolog_code": "gunn1250",
+  "wikidata_qid": "Q3111668",
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Gun_language",
+    "https://guw.wikipedia.org/wiki/Gungbe"
+  ],
+  "sources": [
+    {
+      "id": "capo1990",
+      "author": "Capo, Hounkpati B. C.",
+      "year": 1990,
+      "title": "Towards a Viable Orthography for Egungbe",
+      "publisher": "African Languages and Cultures 3(2): 109-125. doi:10.1080/09544169008717715",
+      "url": "https://www.jstor.org/stable/1771717",
+      "wikipedia_url": null,
+      "pages": null,
+      "notes": "The descriptive article the free-variation statements about Gun consonants trace to: that ⟨y⟩ /j/ before a nasal vowel is heard as [ɲ] or [j̃], and that /l/ is realised as a trill after laminal alveolars, palato-alveolars and palatals, which is the only environment ⟨r⟩ is written in. Bibliographic record retrieved (AfricaBib, JSTOR, DOI); the full text is paywalled and was NOT consulted, so the statements are carried here as attributed rather than as read. The inventory and letter values encoded in this spec do not depend on it: they come from Capo 1991, from the Benin national alphabet, and from the WikiPron counts recorded under wikipron_guw."
+    },
+    {
+      "id": "capo1991",
+      "author": "Capo, Hounkpati B. C.",
+      "year": 1991,
+      "title": "A Comparative Phonology of Gbe",
+      "publisher": "Foris Publications / Labo Gbe (Int.)",
+      "url": null,
+      "wikipedia_url": null,
+      "pages": null,
+      "notes": "Nasality is a vowel feature in Gbe: a [+nasal] vowel nasalises a preceding [-paired] consonant, \"thereby creating the systematic phonetic nasal consonants [m n ɲ ...] from non-nasal [b ɖ l y w]\". The labialised consonants are units rather than clusters — a morpheme-internal cluster has a lateral or a palatal approximant as its second member, not /w/ — and Proto-Gbe is reconstructed with labialised consonants in its inventory."
+    },
+    {
+      "id": "aboh2004",
+      "author": "Aboh, Enoch O.",
+      "year": 2004,
+      "title": "The Morphosyntax of Complement-Head Sequences: Clause Structure and Word Order Patterns in Kwa",
+      "publisher": "Oxford University Press",
+      "url": null,
+      "wikipedia_url": null,
+      "pages": null,
+      "notes": "Reference work on Gungbe; includes its phonological description."
+    },
+    {
+      "id": "benin_alphabet",
+      "author": "Commission Nationale de Linguistique (Benin)",
+      "year": 1975,
+      "title": "Alphabet des langues nationales du Bénin",
+      "publisher": "République du Bénin",
+      "url": null,
+      "wikipedia_url": null,
+      "pages": null,
+      "notes": "The national orthography whose letter values (ɛ, ɔ, ɖ, gb, kp, ny, xw/hw) this spec follows."
+    },
+    {
+      "id": "wikipron_guw",
+      "author": "CUNY Computational Linguistics Lab",
+      "year": 2024,
+      "title": "WikiPron: Gun (guw) Latin broad transcriptions",
+      "publisher": "CUNY-CL",
+      "url": "https://github.com/CUNY-CL/wikipron/blob/master/data/scrape/tsv/guw_latn_broad.tsv",
+      "wikipedia_url": null,
+      "pages": null,
+      "notes": "Crowd-scraped Wiktionary gold, 681 rows (595 distinct spellings; some spellings repeat across dialectal or orthographic variants, and 72 of those 595 spellings carry two or more distinct gold transcriptions between them. Two thirds of that homography is tone: folding the tone diacritics out of the gold first leaves 24 of the 595 spellings with competing readings, and those 24 are the segmental disagreements the two competing Gun orthographies produce). Consulted only to settle which reading a letter takes where the orthographies overlap, to order the ambiguous candidate lists, and to establish that tone is not written: ⟨p⟩ is [k͡p] in 29 of 29 words (⟨pataki⟩ and ⟨kpataki⟩ are the same word), ⟨hw⟩ is [ɣʷ] in 9 of 9, ⟨h⟩ splits three ways — of the 88 distinct spellings that write an ⟨h⟩ outside ⟨hw⟩, 45 have an [h] in the gold, 26 an [x] and 10 a [ɣ] — and ⟨d⟩ splits two ways, 41 of the 58 distinct spellings with a ⟨d⟩ showing [d] and 17 showing [ɖ] (counts are over distinct spellings, by presence of the phone anywhere in the row), ⟨ṣ⟩ is [ʃ] with [t͡ʃ] in the ⟨Ajaṣẹ⟩/⟨Ajacɛ⟩ type, ⟨r⟩ is [ɾ] and [l] in equal numbers over 6 rows, a vowel written after ⟨m n ny⟩ is nasal in 130 of 155 cases, and tone is written in 3 of 681 entries. The gold marks tone on almost every syllable — 679 of its 681 entries carry an acute, grave or macron — while the spelling those entries transcribe writes tone in 3. The mismatch is the dominant term in the row's score: measured against the current spec and the harness's 595-distinct-spelling scoring convention, raw PER is 0.4311 and folding the tone diacritics out of both sides drops it to 0.045, so roughly nine tenths of the measured error is a notation the orthography does not carry and no grapheme rule can recover (this value moves slightly as the spec's segmental rules improve; it is a measured distributional statement, not a citation, and is re-measured rather than hand-adjusted)."
+    }
+  ],
+  "timespan": {
+    "start_year": 1923,
+    "end_year": null
+  },
+  "notes": "Gun / Gungbe (Gbe, Benin and south-western Nigeria). Two Latin orthographies are in use for the same language and this spec describes both. The Benin national alphabet (Africa-alphabet based, closely following Fon) writes ⟨ɛ⟩ /ɛ/, ⟨ɔ⟩ /ɔ/, ⟨ɖ⟩ /ɖ/, ⟨x⟩ /x/, ⟨xw⟩ /xʷ/, ⟨hw⟩ /ɣʷ/, ⟨gb⟩ /ɡ͡b/, ⟨kp⟩ /k͡p/, ⟨c⟩ /t͡ʃ/, ⟨ny⟩ /ɲ/. The Nigerian orthography is Yoruba-based and writes those same sounds ⟨ẹ ọ d h wh ṣ p⟩; ⟨p⟩ there is the labial-velar /k͡p/, not a plain stop, which Gbe has only in loans, and ⟨ṣ⟩ carries its Yoruba value /ʃ/ but also stands in for ⟨c⟩ /t͡ʃ/ (⟨Ajaṣẹ⟩ = ⟨Ajacɛ⟩). Because the two conventions overlap, ⟨d⟩ stands for /d/ or /ɖ/ and ⟨h⟩ for /x/, /ɣ/ or /h/, and the spec offers both readings to the lattice instead of guessing; /x/ and /ɣ/ themselves vary dialectally as [x~χ~h] and [ɣ~ʁ]. ⟨r⟩ is /ɾ/ or /l/: /l/ is realised as a trill after laminal alveolars, palato-alveolars and palatals, which is the only environment ⟨r⟩ is written in. A vowel followed by a CODA ⟨n⟩ is nasal and the ⟨n⟩ is not a segment (⟨xlan⟩ [xlã]); an ⟨n⟩ that opens the next syllable is an ordinary consonant (⟨ayɔnu⟩ [ajɔnũ]), and ⟨nn⟩ is the two together, not a geminate (⟨sunnu⟩ [sũnũ]). Only /i u ɛ ɔ a/ nasalise — /e o/ have no nasal counterparts, so a coda nasal after them survives as a consonant (⟨ogongo⟩ [oɡonɡo]; the place assimilation that gives [oɡoŋɡo] is not modelled). Every written nasal consonant entails a nasal nucleus after it, because none of them is an independent phoneme before a nasal vowel: [m] and [n] are what /b/ and /ɖ/ become there, and [ɲ] is /j/ there, in free variation with [j̃] (⟨mi⟩ [mĩ], ⟨nyɔ⟩ [ɲɔ̃]). Gungbe is tonal (H/M/L) and neither orthography writes tone as a matter of course, so tone is not recoverable from ordinary spelling. Because the gold transcriptions mark tone and the spelling does not, the benchmark row for this language is dominated by that convention gap rather than by segmental error; the segmental quality of the spec is only visible with tone folded out of both sides. TONE-MARKED VOWEL LETTERS: a handful of spellings do carry an acute or a grave over a vowel (3 of the 681 gold rows: ⟨adà⟩, ⟨hùwaji⟩, ⟨hinhọ́n⟩). Those letters are the ordinary vowel letters with a diacritic on them, so each one is listed as a grapheme with the vowel's own value. Before they were listed, a precomposed tone-marked vowel matched no grapheme and was dropped from the output altogether — ⟨adà⟩ came out [ad] and ⟨hùwaji⟩ came out [hwadʒi], losing a whole nucleus. The spec deliberately does NOT carry a tone VALUE across from these marks. Reading the acute as high and the grave as low would need a description of the Gun tone orthography, and no such work could be retrieved; the sister spec data/ee.json does emit tone from the spelling because Ansre 1961 describes the Ewe convention. An unsourced tone mapping would score better against this tone-marking gold, which is exactly why it is refused.",
+  "location": {
+    "latitude": 6.48529,
+    "longitude": 2.76767,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Gun."
+  },
+  "allophone_rules": [
+    {
+      "id": "GUW_NASAL_i",
+      "phonemes": [
+        "i"
+      ],
+      "surface": "ĩ",
+      "followed_by": "coda_nasal",
+      "notes": "vowel nasalises before a CODA nasal; an onset nasal (⟨canne⟩, ⟨cana⟩) leaves it oral"
+    },
+    {
+      "id": "GUW_NASAL_u",
+      "phonemes": [
+        "u"
+      ],
+      "surface": "ũ",
+      "followed_by": "coda_nasal",
+      "notes": "vowel nasalises before a CODA nasal; an onset nasal (⟨canne⟩, ⟨cana⟩) leaves it oral"
+    },
+    {
+      "id": "GUW_NASAL_a",
+      "phonemes": [
+        "a"
+      ],
+      "surface": "ã",
+      "followed_by": "coda_nasal",
+      "notes": "vowel nasalises before a CODA nasal; an onset nasal (⟨canne⟩, ⟨cana⟩) leaves it oral"
+    },
+    {
+      "id": "GUW_NASAL_ɛ",
+      "phonemes": [
+        "ɛ"
+      ],
+      "surface": "ɛ̃",
+      "followed_by": "coda_nasal",
+      "notes": "vowel nasalises before a CODA nasal; an onset nasal (⟨canne⟩, ⟨cana⟩) leaves it oral"
+    },
+    {
+      "id": "GUW_NASAL_ɔ",
+      "phonemes": [
+        "ɔ"
+      ],
+      "surface": "ɔ̃",
+      "followed_by": "coda_nasal",
+      "notes": "vowel nasalises before a CODA nasal; an onset nasal (⟨canne⟩, ⟨cana⟩) leaves it oral"
+    },
+    {
+      "id": "GUW_POSTNASAL_a",
+      "phonemes": [
+        "a"
+      ],
+      "surface": "ã",
+      "preceded_by_phoneme": [
+        "m",
+        "n",
+        "ɲ"
+      ],
+      "notes": "a vowel written after ⟨m n ny⟩ is nasal: none of those letters spells an independent consonant phoneme before a nasal vowel — [m] and [n] are what /b/ and /ɖ/ become there, and [ɲ] is /j/ there, in free variation with [j̃] — so a written nasal consonant entails a nasal nucleus after it; ⟨e⟩ and ⟨o⟩ are excluded because Gbe does not nasalise them"
+    },
+    {
+      "id": "GUW_POSTNASAL_ɛ",
+      "phonemes": [
+        "ɛ"
+      ],
+      "surface": "ɛ̃",
+      "preceded_by_phoneme": [
+        "m",
+        "n",
+        "ɲ"
+      ],
+      "notes": "a vowel written after ⟨m n ny⟩ is nasal: none of those letters spells an independent consonant phoneme before a nasal vowel — [m] and [n] are what /b/ and /ɖ/ become there, and [ɲ] is /j/ there, in free variation with [j̃] — so a written nasal consonant entails a nasal nucleus after it; ⟨e⟩ and ⟨o⟩ are excluded because Gbe does not nasalise them"
+    },
+    {
+      "id": "GUW_POSTNASAL_ɔ",
+      "phonemes": [
+        "ɔ"
+      ],
+      "surface": "ɔ̃",
+      "preceded_by_phoneme": [
+        "m",
+        "n",
+        "ɲ"
+      ],
+      "notes": "a vowel written after ⟨m n ny⟩ is nasal: none of those letters spells an independent consonant phoneme before a nasal vowel — [m] and [n] are what /b/ and /ɖ/ become there, and [ɲ] is /j/ there, in free variation with [j̃] — so a written nasal consonant entails a nasal nucleus after it; ⟨e⟩ and ⟨o⟩ are excluded because Gbe does not nasalise them"
+    },
+    {
+      "id": "GUW_POSTNASAL_i",
+      "phonemes": [
+        "i"
+      ],
+      "surface": "ĩ",
+      "preceded_by_phoneme": [
+        "m",
+        "n",
+        "ɲ"
+      ],
+      "notes": "a vowel written after ⟨m n ny⟩ is nasal: none of those letters spells an independent consonant phoneme before a nasal vowel — [m] and [n] are what /b/ and /ɖ/ become there, and [ɲ] is /j/ there, in free variation with [j̃] — so a written nasal consonant entails a nasal nucleus after it; ⟨e⟩ and ⟨o⟩ are excluded because Gbe does not nasalise them"
+    },
+    {
+      "id": "GUW_POSTNASAL_u",
+      "phonemes": [
+        "u"
+      ],
+      "surface": "ũ",
+      "preceded_by_phoneme": [
+        "m",
+        "n",
+        "ɲ"
+      ],
+      "notes": "a vowel written after ⟨m n ny⟩ is nasal: none of those letters spells an independent consonant phoneme before a nasal vowel — [m] and [n] are what /b/ and /ɖ/ become there, and [ɲ] is /j/ there, in free variation with [j̃] — so a written nasal consonant entails a nasal nucleus after it; ⟨e⟩ and ⟨o⟩ are excluded because Gbe does not nasalise them"
+    },
+    {
+      "id": "GUW_NASAL_j",
+      "phonemes": [
+        "j"
+      ],
+      "surface": "ɲ",
+      "followed_by_phoneme": [
+        "i",
+        "u",
+        "a",
+        "ɛ",
+        "ɔ"
+      ],
+      "followed_by_2": "coda_nasal",
+      "notes": "Capo (1991) states that a [+nasal] vowel nasalises a preceding [-paired] consonant, \"thereby creating the systematic phonetic nasal consonants [m n ɲ ...] from non-nasal [b ɖ l y w]\"; ⟨y⟩ spells /j/, so a ⟨y⟩ before a nasal vowel is [ɲ], in free variation with [j̃]. The condition is the one the nasal-vowel rules already use — a vowel followed by a CODA nasal — so the glide nasalises exactly where the nucleus does; an ⟨n⟩ that opens the next syllable leaves both alone (⟨Ayɔnu⟩ [ajɔnũ]). Restricted to /i u a ɛ ɔ/, the only vowels with nasal counterparts: /e o/ do not nasalise, so ⟨yen⟩/⟨yon⟩ keep a plain glide (Capo's own consonant table has no nasal partner for them)."
+    },
+    {
+      "id": "GUW_NASAL_ABSORB",
+      "phonemes": [
+        "n",
+        "m"
+      ],
+      "surface": "",
+      "syllable_position": "coda",
+      "notes": "the coda nasal is absorbed into the nasal vowel it created; keyed on the underlying vowels that HAVE a nasal counterpart (i u ɛ ɔ a) so it cannot bleed the rule that makes them, and so a coda nasal after ⟨e⟩ or ⟨o⟩ — vowels Gbe does not nasalise — survives as a consonant (⟨ogongo⟩ [oɡonɡo])",
+      "preceded_by_phoneme": [
+        "a",
+        "ɛ",
+        "ɔ",
+        "i",
+        "u"
+      ]
+    }
+  ],
+  "vowel_graphemes": [
+    "ɛ",
+    "ɔ",
+    "ẹ",
+    "ọ"
+  ],
+  "doubled_letters_geminate": false,
+  "positional_graphemes": {
+    "u": {
+      "before_vowel": [
+        "ʷ",
+        "u"
+      ],
+      "default": [
+        "u"
+      ]
+    }
+  },
+  "audit": {
+    "wikipron": {
+      "conclusion": "input_limited",
+      "measured": "Gungbe is tonal (H/M/L); neither the Benin nor the Nigerian Latin orthography writes tone as a matter of course, so tone is not recoverable from ordinary spelling and the benchmark row is dominated by that convention gap rather than by segmental error. A specific reading of the rare acute/grave tone-marked vowels as a tone value was measured and refused for lack of a citable Gun/Gungbe tone-orthography source.",
+      "reference": "spec notes"
+    }
+  }
+}

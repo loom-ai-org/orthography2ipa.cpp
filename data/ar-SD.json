@@ -1,0 +1,267 @@
+{
+  "code": "ar-SD",
+  "name": "Sudanese Arabic",
+  "script": "Arabic",
+  "word_exceptions": {
+    "كِيفَك": "keːfak",
+    "التتِلِفُون": "ttilifoːn"
+  },
+  "graphemes_base": "ar-x-mashriqi",
+  "graphemes": {
+    "ج": [
+      "ɟ",
+      "dʒ"
+    ],
+    "ق": [
+      "ɡ",
+      "q"
+    ],
+    "ث": [
+      "t",
+      "s"
+    ],
+    "ذ": [
+      "d",
+      "z"
+    ],
+    "ظ": [
+      "dˤ",
+      "zˤ"
+    ],
+    "ض": [
+      "dˤ"
+    ],
+    "الثث": [
+      "att",
+      "ass"
+    ],
+    "اَلثث": [
+      "att",
+      "ass"
+    ],
+    "لِلثث": [
+      "litt",
+      "liss"
+    ],
+    "وَالثث": [
+      "watt",
+      "wass"
+    ],
+    "فَالثث": [
+      "fatt",
+      "fass"
+    ],
+    "بِالثث": [
+      "bitt",
+      "biss"
+    ],
+    "كَالثث": [
+      "katt",
+      "kass"
+    ],
+    "الذذ": [
+      "add",
+      "azz"
+    ],
+    "اَلذذ": [
+      "add",
+      "azz"
+    ],
+    "لِلذذ": [
+      "lidd",
+      "lizz"
+    ],
+    "وَالذذ": [
+      "wadd",
+      "wazz"
+    ],
+    "فَالذذ": [
+      "fadd",
+      "fazz"
+    ],
+    "بِالذذ": [
+      "bidd",
+      "bizz"
+    ],
+    "كَالذذ": [
+      "kadd",
+      "kazz"
+    ],
+    "اِلثث": [
+      "itt",
+      "iss"
+    ],
+    "اِلذذ": [
+      "idd",
+      "izz"
+    ],
+    "وِالثث": [
+      "witt",
+      "wiss"
+    ],
+    "وِالذذ": [
+      "widd",
+      "wizz"
+    ],
+    "وَيْ": [
+      "weː"
+    ],
+    "يَوْ": [
+      "joː"
+    ]
+  },
+  "allophones_base": "ar-x-mashriqi",
+  "allophones": {
+    "dʒ": [
+      "ɟ",
+      "dʒ"
+    ],
+    "q": [
+      "ɡ",
+      "q"
+    ],
+    "θ": [
+      "t",
+      "s"
+    ],
+    "ð": [
+      "d",
+      "z"
+    ],
+    "ðˤ": [
+      "dˤ",
+      "zˤ"
+    ],
+    "ɮˤ": [
+      "dˤ"
+    ]
+  },
+  "allophone_rules": [
+    {
+      "id": "SD_MONO_AY",
+      "phonemes": [
+        "aj"
+      ],
+      "surface": "eː",
+      "notes": "Khartoum/central-Sudan monophthongization (Dickins 2007, Sudanese Arabic: Phonematics and Syllable Structure): the Classical diphthong /aj/ is realised [eː] in the sedentary Khartoum koine — بَيْت *bayt > beːt 'house', وَيْن *wayn > weːn 'where', شرَيْت > ʃreːt 'I bought'. This mirrors the sibling sedentary koines (Libyan Tripoli LY_MONO_AY, Gulf, Qassimi) and follows the #459 pattern exactly: the rule fires on the general /aj/ atom, while the word-initial ⟨وَيْ⟩/⟨يَوْ⟩ spellings are handled by explicit graphemes because the onset digraphs وَ/يَ claim the fatha before an /aj/ atom can form (وَيْن → weːn). It does not fire on geminate glides (شَوّية → ʃawwijja, kept, ⟨-ايّ-⟩ is a long vowel + glide, not an /aj/ atom). DELTA/VARIATION documented against the arbitrated gold: the grammatical dual/pronominal diphthongs -ayn (ألفَيْن alfajn 'two thousand'), -ayh (جنيه ɟinajh) and -aykum (علَيْكُم ʕalajkum) are retained as [aj] in the Khartoum arbitration; that morphologically-conditioned retention is not orthographically separable from the lexical /aj/ that monophthongizes (both are ⟨-َيْ-⟩), so those items surface as [eː] here — a known over-application, cited as the honest cost of the categorical rule."
+    },
+    {
+      "id": "SD_MONO_AW",
+      "phonemes": [
+        "aw"
+      ],
+      "surface": "oː",
+      "notes": "Khartoum/central-Sudan monophthongization (Dickins 2007): the Classical diphthong /aw/ is realised [oː] in the sedentary Khartoum koine — لَوْ *law > loː 'if', يَوْم *yawm > joːm 'day'. Sibling of LY_MONO_AW; fires on the general /aw/ atom, with the word-initial ⟨يَوْ⟩ spelling handled by an explicit grapheme. Does not fire on a geminate glide (جَوّ → ɟaww) or a long vowel + glide."
+    }
+  ],
+  "parent": "ar-x-mashriqi",
+  "ancestors": [
+    {
+      "code": "ar-x-mashriqi",
+      "role": "parent",
+      "weight": 0.88,
+      "notes": "Eastern (Mashriqi / Egypto-Sudanic) Arabic base"
+    }
+  ],
+  "notes": "Sudanese Arabic — Khartoum/central Sudan koine, part of the Egypto-Sudanic group. DEFINING FEATURE: ج jim → /ɟ/ (voiced PALATAL stop) — an archaic reflex distinguishing Sudanese from both Egyptian (/ɡ/) and Levantine (/ʒ/); /dʒ/ also occurs. Leddy-Cecere (2021) §3.1.1: 'the palatal articulation /ɟ/ dominates in the core Sudanic region represented by the dialects of Khartoum and the Šukriyya… perhaps of high salience, given its comparative rarity outside this region.' ق qaf → /ɡ/ (voiced velar stop, Bedouin-origin reflex): Leddy-Cecere §3.1 '/g/ of Old Arabic *q, robustly characteristic of all varieties in the sample outside of Cairo'; Youssef (2021) §3.1 lists Sudan among the /ɡ/-reflex areas. Interdentals MERGE to STOPS (not retained): ث θ → /t/, ذ ð → /d/, ظ/ض → /dˤ/ (~/s z zˤ/ in MSA loanwords) — Leddy-Cecere §3.1: 'merger of the Old Arabic interdental series *θ, ð, ð̣ with corresponding alveolar stops *t, d, ḍ', with a distinctive extra emphatic /ḍ/ reflex of *ð in the Sudanic area. Nubian/Beja/Nilotic substrate is documented for the LEXICON (Gasim 1965 via Wikipedia), not as a phonological cause. Dickins (2007) is the standard primary monograph (not obtained for this pass).",
+  "quality": "research",
+  "script_type": "abjad",
+  "sources": [
+    {
+      "id": "leddycecere2021",
+      "author": "Leddy-Cecere, T.A.",
+      "year": 2021,
+      "title": "Interrogating the Egypto-Sudanic Arabic Connection",
+      "publisher": "Languages 6(3): 123",
+      "url": "https://doi.org/10.3390/languages6030123",
+      "pages": null,
+      "notes": "Read (open-access, cited by section — printed PDF pages behind an Akamai JS challenge). §3.1.1: palatal /ɟ/ dominates in the core Sudanic region (Khartoum + Šukriyya), rare elsewhere. §3.1: /ɡ/ reflex of Old Arabic *q robustly characteristic of all sampled varieties outside Cairo; merger of interdental series *θ *ð *ð̣ with dental stops *t *d *ḍ, plus an additional emphatic /ḍ/ reflex of *ð in the Sudanic area."
+    },
+    {
+      "id": "youssef2021",
+      "author": "Youssef, I.",
+      "year": 2021,
+      "title": "Contrastive Feature Typologies of Arabic Consonant Reflexes",
+      "publisher": "Languages 6(3): 141",
+      "url": "https://doi.org/10.3390/languages6030141",
+      "pages": null,
+      "notes": "Read (open-access, cited by section). §3.1: the voiced velar stop /ɡ/ is by far the most common reflex of *q, covering Sudan among other areas."
+    },
+    {
+      "id": "dickins2007",
+      "author": "Dickins, J.",
+      "year": 2007,
+      "title": "Sudanese Arabic: Phonematics and Syllable Structure",
+      "publisher": "Harrassowitz",
+      "url": null,
+      "pages": null,
+      "notes": "Standard primary monograph (jim→ɟ, qaf→ɡ, interdental merger); not obtained to a readable page for this pass."
+    },
+    {
+      "id": "holes2004",
+      "author": "Holes, C.",
+      "year": 2004,
+      "title": "Modern Arabic: Structures, Functions, and Varieties",
+      "publisher": "Georgetown University Press",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "watson2002",
+      "author": "Watson, J.C.E.",
+      "year": 2002,
+      "title": "The Phonology and Morphology of Arabic",
+      "publisher": "Oxford University Press",
+      "url": null,
+      "pages": null,
+      "notes": null,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Arabic_phonology"
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Sudanese_Arabic",
+    "https://ar.wikipedia.org/wiki/%D9%84%D9%87%D8%AC%D8%A9_%D8%B3%D9%88%D8%AF%D8%A7%D9%86%D9%8A%D8%A9"
+  ],
+  "timespan": {
+    "start_year": 1400,
+    "end_year": null
+  },
+  "glottolog_code": "suda1236",
+  "iso639_3": "apd",
+  "wikidata_qid": "Q56573",
+  "phoible_id": "suda1236",
+  "location": {
+    "latitude": 17.8021,
+    "longitude": 33.3179,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Sudanese Arabic."
+  },
+  "optional_marks": [
+    "ً",
+    "ٌ",
+    "ٍ",
+    "َ",
+    "ُ",
+    "ِ",
+    "ّ",
+    "ْ",
+    "ٰ",
+    "ٓ"
+  ],
+  "stress": {
+    "default_position": -3,
+    "quantity_sensitive": true,
+    "superheavy_final_attracts": true,
+    "max_onset": 1,
+    "stress_mark": "ˈ",
+    "notes": "Arabic stress is QUANTITY-SENSITIVE: it falls on a syllable because that syllable is heavy, not because of any orthographic ending, so no ending table can express it. The cascade (Ryding, A Reference Grammar of MSA, CUP 2005, §2.3; Watson, The Phonology and Morphology of Arabic, OUP 2002, ch.3): a superheavy final syllable (CVːC/CVCC) takes the stress (kiˈtaːb); otherwise a heavy penult (CVː/CVC) does (muˈdarris); otherwise the antepenult (ˈmadrasa). max_onset=1 because Arabic onsets are obligatory and hold exactly one consonant — a medial cluster splits, closing the preceding syllable, and that boundary is what makes the penult of mudarris heavy. INPUT CONTRACT: weight is only recoverable from a complete transcription, so this requires diacritized input; an undiacritized skeleton has no vowels to weigh. The registered wikipron gold carries no stress marks, but the benchmark strips stress from both sides by default, so this costs no PER. Prosodic clitics: monosyllabic function words (negator maː, prepositions fiː/min/ʕan/ʕa/li/bi, vocative jaː, copula-negator muː/miʃ, conditional law/loː, wa-proclitic combinations) attach to a host and fall inside the host's stress domain, so they carry no word stress (Watson 2002, The Phonology and Morphology of Arabic, OUP, ch.3). Pan-Arabic class; the per-lect form list reflects the function words attested in this lect. Orthographic test — a clitic homograph (e.g. verb yā 'came') is destressed in every occurrence.",
+    "cliticless_words": [
+      "عَن",
+      "فِي",
+      "مَا",
+      "مِن",
+      "يَا"
+    ]
+  }
+}

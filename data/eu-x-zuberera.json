@@ -1,0 +1,127 @@
+{
+  "code": "eu-x-zuberera",
+  "name": "Souletin Basque (Zuberera)",
+  "script": "Latin",
+  "graphemes_base": "eu",
+  "graphemes": {
+    "ü": [
+      "y"
+    ],
+    "h": [
+      "h"
+    ],
+    "kh": [
+      "kʰ"
+    ]
+  },
+  "allophones_base": "eu",
+  "positional_graphemes_base": "eu",
+  "allophones": {
+    "p": [
+      "p",
+      "pʰ"
+    ],
+    "t": [
+      "t",
+      "tʰ"
+    ],
+    "k": [
+      "k",
+      "kʰ"
+    ],
+    "y": [
+      "y"
+    ],
+    "h": [
+      "h"
+    ]
+  },
+  "parent": "eu",
+  "glottolog_code": "basq1250",
+  "ancestors": [
+    {
+      "code": "eu",
+      "role": "parent",
+      "weight": 0.9,
+      "notes": "Souletin inherits the core Basque grapheme inventory from Batua but adds the unique grapheme ⟨ü⟩ for /y/ and has extensive phonological divergence due to French contact."
+    }
+  ],
+  "notes": "Souletin (Zuberera/Xiberotarra). Easternmost Basque dialect, spoken in Soule/Zuberoa (Pyrénées-Atlantiques, France); the most phonologically divergent variety, in close contact with Gascon Occitan. VALIDATED and EXTENDED against Hualde (2018) 'Aspiration in Basque' and Egurtzegi (2013) 'Phonetics and Phonology'. Distinctive features: (1) FRONT ROUNDED VOWEL /y/ (written ü), the only Basque dialect to have developed a sixth vowel; it arose from an older /u/ by near-context-free fronting and is realised between French /y/ and /ø/ (Egurtzegi 2013: 127-128, citing Michelena FHV:52 and Hualde 1993). (2) THREE-WAY PLOSIVE CONTRAST: unlike all western varieties, Souletin contrasts voiced /b d ɡ/, voiceless unaspirated /p t k/ and voiceless ASPIRATED /pʰ tʰ kʰ/ as full phonemes (Hualde 2018: 2, citing Lafon 1958/1999). Modelled here as conditioned variants of /p t k/ because standard orthography does not mark the aspiration distinction (engine limit). (3) TWO ASPIRATE PHONEMES: an oral laryngeal /h/ and a nasalised laryngeal /h̃/ (Hualde 2018: 2, citing Hualde 1993). (4) CONTRASTIVE NASALISED VOWELS: Souletin is the only living dialect that has kept the old Basque nasalised-vowel series, appearing around a nasal consonant (khatiña [khatĩã], gazna [gaznã], ama [ãmã]) and in stressed word-final position after apocope of an old /-n/ (ardu [arðũ] < *ardano 'wine'), where they contrast with plain final vowels (Egurtzegi 2013: 127); Souletin lacks nasal /õ/, which became /ũ/ after /y/ arose (Egurtzegi 2013: 127). NOTE (engine limit): vowel nasality and the aspirated/unaspirated stop split are NOT recoverable from standard Basque orthography, so they are documented here but not emitted at the grapheme→IPA level; only the ü→/y/ mapping and the aspirated-stop variants are modelled. Endangered, with a few thousand active speakers.",
+  "quality": "research",
+  "urls": [
+    "https://en.wikipedia.org/wiki/Souletin_dialect"
+  ],
+  "script_type": "alphabet",
+  "sources": [
+    {
+      "id": "hualde2018_aspiration",
+      "author": "Hualde, J.I.",
+      "year": 2018,
+      "title": "Aspiration in Basque",
+      "publisher": "Papers in Historical Phonology 3",
+      "url": "https://doi.org/10.2218/pihph.3.2018.2602",
+      "pages": "1-27",
+      "notes": "Primary read source: Souletin three-way plosive contrast and the oral /h/ + nasal /h̃/ aspirate phonemes (p.2)."
+    },
+    {
+      "id": "egurtzegi2013",
+      "author": "Egurtzegi, A.",
+      "year": 2013,
+      "title": "Phonetics and Phonology (ch. 4). In M. Martínez-Areta (ed.), Basque and Proto-Basque",
+      "publisher": "Peter Lang",
+      "url": "https://www.phonetik.uni-muenchen.de/personen/assoziierte_wissenschaftler/egurtzegi_ander/2013_protobasque_phonology.pdf",
+      "pages": "119-183 (esp. 126-130)",
+      "notes": "Primary read source: Souletin front rounded /y/ (pp.127-128) and the contrastive nasalised-vowel series shared with Roncalese (p.127)."
+    },
+    {
+      "id": "hualde_ortiz_de_urbina2003",
+      "author": "Hualde, J.I. & Ortiz de Urbina, J. (eds.)",
+      "year": 2003,
+      "title": "A Grammar of Basque",
+      "publisher": "Mouton de Gruyter",
+      "url": null,
+      "pages": "15-65 (Hualde, 'Segmental phonology')",
+      "notes": null
+    },
+    {
+      "id": "lafon1999",
+      "author": "Lafon, R.",
+      "year": 1999,
+      "title": "Études basques et caucasiques",
+      "publisher": "University of the Basque Country",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "ladefoged_maddieson1996",
+      "author": "Ladefoged, P. & Maddieson, I.",
+      "year": 1996,
+      "title": "The Sounds of the World's Languages",
+      "publisher": "Blackwell",
+      "url": null,
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Souletin_dialect",
+    "https://eu.wikipedia.org/wiki/Zuberera",
+    "https://es.wikipedia.org/wiki/Dialecto_suletino_del_euskera"
+  ],
+  "timespan": {
+    "start_year": 1600,
+    "end_year": null
+  },
+  "iso639_3": "eus",
+  "wikidata_qid": "Q2746856",
+  "phoible_id": "basq1250",
+  "wals_code": "bso",
+  "location": {
+    "latitude": 43.233333,
+    "longitude": -0.883333,
+    "source": "wikidata",
+    "notes": "Zuberoa (Soule) — the historical province the dialect is named for. [Wikidata Q673040 P625]"
+  },
+  "allophone_rules": []
+}

@@ -1,0 +1,98 @@
+{
+  "code": "sco",
+  "name": "Scots",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "stub",
+  "graphemes": {},
+  "allophones": {},
+  "parent": "ang",
+  "ancestors": [
+    {
+      "code": "ang",
+      "role": "ancestor",
+      "weight": 0.8,
+      "notes": "Descends from Northumbrian Old English via Early/Middle Scots."
+    }
+  ],
+  "notes": "Scots (Scots leid), a West Germanic language of Lowland Scotland and Ulster. STUB: the grapheme inventory is NOT yet specified. Scots has no single codified orthography — spelling varies by author, region and period, English-influenced spellings compete with traditional ones, and the same digraph (e.g. <ui>, <ou>, <ch>) takes different values across dialects. A dialect-and-orthography-specific map would be required; none is claimed here. PHONEME INVENTORY: attested inventory from PHOIBLE (glottocode scot1243), declared directly. `graphemes` stays empty because none of that depends on the writing system: the sounds of this language are known regardless of whether — or how — it is written.",
+  "iso639_3": "sco",
+  "glottolog_code": "scot1243",
+  "wikidata_qid": "Q14549",
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Scots_language",
+    "https://sco.wikipedia.org/wiki/Scots_leid"
+  ],
+  "sources": [
+    {
+      "id": "scots_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Scots language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Scots_language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Scots_language",
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "phoible",
+      "author": "Moran, Steven & McCloy, Daniel (eds.)",
+      "year": 2019,
+      "title": "PHOIBLE 2.0",
+      "publisher": "Max Planck Institute for the Science of Human History",
+      "url": "https://phoible.org/",
+      "pages": null,
+      "notes": "Attested phoneme inventory for glottocode scot1243."
+    }
+  ],
+  "timespan": {
+    "start_year": 1400,
+    "end_year": null
+  },
+  "phonemes": [
+    "a",
+    "ae",
+    "b",
+    "d",
+    "e",
+    "f",
+    "h",
+    "i",
+    "j",
+    "kʰ",
+    "m",
+    "n",
+    "o",
+    "pʰ",
+    "s",
+    "tʰ",
+    "t̠ʃ",
+    "u",
+    "v",
+    "w",
+    "x",
+    "z",
+    "ŋ",
+    "ɔ",
+    "ɔe",
+    "əi",
+    "əu",
+    "ɛ",
+    "ɡ",
+    "ɪ",
+    "ɫ",
+    "ɾ",
+    "ʃ",
+    "ʌ",
+    "ʍ",
+    "ʒ",
+    "θ"
+  ],
+  "location": {
+    "latitude": 55.886945,
+    "longitude": -3.710133,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Scots."
+  }
+}

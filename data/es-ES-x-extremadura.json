@@ -1,0 +1,134 @@
+{
+  "code": "es-ES-x-extremadura",
+  "name": "Extremaduran Spanish (Extremeño)",
+  "script": "Latin",
+  "quality": "research",
+  "script_type": "alphabet",
+  "graphemes_base": "es-ES",
+  "allophones_base": "es-ES",
+  "allophones": {
+    "s": [
+      "s",
+      "h",
+      ""
+    ],
+    "θ": [
+      "θ",
+      "s"
+    ],
+    "ʎ": [
+      "j"
+    ],
+    "x": [
+      "x",
+      "h"
+    ],
+    "b": [
+      "b",
+      "β"
+    ],
+    "d": [
+      "d",
+      "ð",
+      ""
+    ],
+    "ɡ": [
+      "ɡ",
+      "ɣ"
+    ]
+  },
+  "positional_graphemes_base": "es-ES",
+  "positional_graphemes": {
+    "s": {
+      "word_initial": [
+        "s"
+      ],
+      "intervocalic": [
+        "s"
+      ],
+      "before_consonant": [
+        "h",
+        "s"
+      ],
+      "word_final": [
+        "h"
+      ]
+    }
+  },
+  "allophone_rules": [
+    {
+      "id": "EXTREMADURA_X_TO_H",
+      "phonemes": [
+        "x"
+      ],
+      "surface": "h",
+      "notes": "Extremaduran /x/ (⟨j⟩ and ⟨g⟩ before front vowel) is the aspirate [h], not the Castilian velar [x] — a southern/western feature shared with Andalusian: coge [ˈkohe], bajo [ˈbaho], juegan [ˈhweɣan], pájaro [ˈpaharo] (González Salgado 2003, Cartografía lingüística de Extremadura; Penny 2002, A History of the Spanish Language §Southern features). Only the /x/ phoneme is rewritten; intervocalic /ɡ/→[ɣ] is a different phoneme and is untouched."
+    }
+  ],
+  "parent": "es-ES",
+  "ancestors": [
+    {
+      "code": "es-ES",
+      "role": "parent",
+      "weight": 0.8,
+      "notes": "Standard Castilian base"
+    },
+    {
+      "code": "es-ES-x-andalusia-w",
+      "role": "adstrate",
+      "weight": 0.15,
+      "notes": "Western Andalusian influence: aspiration of /s/, some seseo zones in southeastern Badajoz"
+    }
+  ],
+  "notes": "Extremaduran Spanish (Extremeño). Spoken in Extremadura (Cáceres and Badajoz provinces). Transitional between Castilian and Andalusian. Strong Leonese substrate influence in northern Cáceres (Jerte Valley, Sierra de Gata). KEY FEATURES: (1) S-ASPIRATION: word-final /s/ → [h] or deleted, especially in Badajoz (Andalusian influence): más [mah], estos [ehtoh]. More preserved in Cáceres. (2) YEÍSMO: /ʎ/ merged with /j/ (as in standard Castilian and most Spanish varieties). (3) SESEO ZONES: southeastern Badajoz (Zafra, Jerez de los Caballeros) shows seseo: cien=sien, zapato=[saˈpato]; rest of Extremadura maintains distinción. (4) X-WEAKENING: /x/ may aspirate to [h] before back vowels, especially in relaxed speech. (5) INTERVOCALIC D-DELETION: final -d and intervocalic -d- frequently deleted: comida → [koˈmiə], ciudad → [θjuˈða] or [θjuˈa]. (6) LEONESE SUBSTRATE (northern Cáceres): traces of diphthongization and consonantal features of Asturleonese; the Jerte/Ambroz valleys historically Leonese-speaking. (7) PORTUGUESE CONTACT: Badajoz border areas show Portuguese contact features (stronger open vowels, some nasal vowel awareness). (8) NOT EXTREMADURAN LANGUAGE: Distinct from the Extremaduran language (ext), an Asturleonese variety; this file models the Spanish spoken in Extremadura.",
+  "sources": [
+    {
+      "id": "penny2002",
+      "author": "Penny, R.",
+      "year": 2002,
+      "title": "A History of the Spanish Language",
+      "publisher": "Cambridge University Press",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "hualde2005",
+      "author": "Hualde, J.I.",
+      "year": 2005,
+      "title": "The Sounds of Spanish",
+      "publisher": "Cambridge University Press",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "zamora_vicente1960",
+      "author": "Zamora Vicente, A.",
+      "year": 1960,
+      "title": "Dialectología española",
+      "publisher": "Gredos",
+      "url": null,
+      "pages": "Chapter on Extremaduran",
+      "notes": "Definitive dialectological survey"
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Extremaduran_Spanish",
+    "https://es.wikipedia.org/wiki/Castellano_de_Extremadura",
+    "https://en.wikipedia.org/wiki/Cast%C3%BAo"
+  ],
+  "urls": [
+    "https://en.wikipedia.org/wiki/Extremaduran_Spanish",
+    "https://en.wikipedia.org/wiki/Dialects_of_Spanish",
+    "https://glottolog.org/resource/languoid/id/cast1244"
+  ],
+  "iso639_3": "spa",
+  "wikidata_qid": "Q2941553",
+  "location": {
+    "latitude": 39.2,
+    "longitude": -6.15,
+    "source": "wikidata",
+    "notes": "Extremadura (Cáceres and Badajoz) — the autonomous community the variety is spoken in. [Wikidata Q5777 P625]"
+  }
+}

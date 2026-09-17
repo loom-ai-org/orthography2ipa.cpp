@@ -1,0 +1,73 @@
+{
+  "code": "lud",
+  "name": "Ludic",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "skeleton",
+  "iso639_3": "lud",
+  "glottolog_code": "ludi1246",
+  "wikidata_qid": "Q33918",
+  "graphemes_base": "krl",
+  "graphemes": {},
+  "allophones_base": "krl",
+  "allophones": {},
+  "parent": "x-clade-finn1317",
+  "ancestors": [
+    {
+      "code": "x-clade-finn1317",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Finnic — the classification node this language sits under."
+    },
+    {
+      "code": "krl",
+      "role": "adstrate",
+      "weight": 0.2,
+      "notes": "Karelian adstrate: the 1989/2007 Ludic Latin orthography was devised as a direct adaptation of the Karelian alphabet (adding š ž č for sibilants, the apostrophe for palatalisation), so this spec inherits its grapheme table from krl rather than duplicating it."
+    }
+  ],
+  "notes": "Ludic (лӳдиканкель), a Finnic (Uralic) language of the Republic of Karelia, Russia, transitional between Karelian and Veps. The current Latin orthography, devised by Potašova and Pahomov in the 1990s and adjusted by the Republic of Karelia government in 2007/2014, is built directly on the Karelian alphabet (a e i o u y ä ö, plus š ž č dž z c for sibilants/affricates); this spec inherits its grapheme table from krl.json (graphemes_base) rather than re-asserting the same letter values under a new citation. The cited Ludic phoneme inventory (i y u e ø o æ ɑ vowels; labial/alveolar/palatal/velar/glottal stops, affricates, fricatives, nasals, approximants, rhotics) matches the inherited Karelian/Finnish letter values one-for-one, so no grapheme override was needed. c, f, q, w, x occur only in names and loanwords and are left unmapped, matching the Karelian convention. The apostrophe ⟨ʹ⟩ marks a phonemically significant palatalised consonant series, applicable to essentially any consonant letter; as with Karelian, this palatalisation is NOT resolved here (it would require enumerating a consonant+apostrophe key for every consonant, the same violation the campaign rules forbid for Cyrillic ⟨бь⟩-style keys), so apostrophe-marked palatalisation is under-generated pending a generic engine predicate for it. Vowel and consonant length are distinctive but not separately verified here; doubled-letter length follows the inherited Karelian/Finnish convention.",
+  "sources": [
+    {
+      "id": "ludic_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Ludic language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Ludic_language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Ludic_language",
+      "pages": null,
+      "notes": "Phoneme inventory (i y u e ø o æ ɑ vowels; consonant classes) and identifiers (glottolog ludi1246, ISO 639-3 lud, wikidata Q33918)."
+    },
+    {
+      "id": "omniglot_ludic",
+      "author": "Omniglot",
+      "year": 2026,
+      "title": "Ludic language and alphabet",
+      "publisher": "Omniglot",
+      "url": "https://www.omniglot.com/writing/ludic.htm",
+      "wikipedia_url": null,
+      "pages": null,
+      "notes": "Confirms the Latin alphabet letter inventory (č š ž, ä ö, apostrophe for palatalisation) and that c f q w x are loanword-only."
+    },
+    {
+      "id": "abondolo1998",
+      "author": "Abondolo, D. (ed.)",
+      "year": 1998,
+      "title": "The Uralic Languages",
+      "publisher": "Routledge",
+      "url": null,
+      "pages": null,
+      "notes": "Finnic phonology reference; Ludic's position transitional between Karelian and Veps."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Ludic_language"
+  ],
+  "location": {
+    "latitude": 61.5,
+    "longitude": 34.5,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Ludic (southern Lake Onega region, Republic of Karelia)."
+  }
+}

@@ -1,0 +1,223 @@
+{
+  "code": "wiy",
+  "name": "Wiyot",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "kwh": [
+      "kʷʰ"
+    ],
+    "kw": [
+      "kʷ"
+    ],
+    "gw": [
+      "ɡʷ"
+    ],
+    "čh": [
+      "tʃʰ"
+    ],
+    "ch": [
+      "tsʰ"
+    ],
+    "ts": [
+      "ts"
+    ],
+    "lh": [
+      "ɬ"
+    ],
+    "ph": [
+      "pʰ"
+    ],
+    "th": [
+      "tʰ"
+    ],
+    "kh": [
+      "kʰ"
+    ],
+    "č": [
+      "tʃ"
+    ],
+    "š": [
+      "ʃ"
+    ],
+    "ł": [
+      "ɬ"
+    ],
+    "c": [
+      "ts"
+    ],
+    "a": [
+      "a"
+    ],
+    "á": [
+      "á"
+    ],
+    "à": [
+      "à"
+    ],
+    "e": [
+      "e"
+    ],
+    "é": [
+      "é"
+    ],
+    "è": [
+      "è"
+    ],
+    "i": [
+      "i"
+    ],
+    "í": [
+      "í"
+    ],
+    "ì": [
+      "ì"
+    ],
+    "o": [
+      "ɑ"
+    ],
+    "ó": [
+      "ɑ́"
+    ],
+    "ò": [
+      "ɑ̀"
+    ],
+    "u": [
+      "u"
+    ],
+    "ú": [
+      "ú"
+    ],
+    "ù": [
+      "ù"
+    ],
+    "p": [
+      "p"
+    ],
+    "t": [
+      "t"
+    ],
+    "k": [
+      "k"
+    ],
+    "b": [
+      "β"
+    ],
+    "d": [
+      "ɾ"
+    ],
+    "g": [
+      "ɣ"
+    ],
+    "s": [
+      "s"
+    ],
+    "h": [
+      "h"
+    ],
+    "l": [
+      "l"
+    ],
+    "r": [
+      "ɹ"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "w": [
+      "w"
+    ],
+    "y": [
+      "j"
+    ],
+    "'": [
+      "ʔ"
+    ]
+  },
+  "positional_graphemes": {
+    "h": {
+      "word_initial": [
+        "h"
+      ],
+      "default": [
+        "ʔ"
+      ]
+    }
+  },
+  "parent": "x-clade-algi1248",
+  "ancestors": [
+    {
+      "code": "x-clade-algi1248",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Descent per Glottolog classification of Wiyot (wiyo1248)."
+    }
+  ],
+  "notes": "Skeleton. Algic language (a divergent isolate within Algic, alongside Yurok) of coastal northern California, written in Teeter's Americanist practical orthography (the WikiPron gold this spec is scored against is transcribed with Teeter's letters, not the Wiyot Tribe's alternate orthography). The practical-orthography chart is attributed to Teeter (1964), The Wiyot Language, but that edition's archive.org and HathiTrust copies are lending-restricted with no readable text, so the chart as used here is as reproduced in the Wikipedia phonology section, not independently read from the primary edition. Every remapped value is corroborated distributionally: checking each letter against all 151 words of the WikiPron wiy_latn_broad gold (a source independent of Wikipedia) confirms b=[β], d=[ɾ], g=[ɣ] and r=[ɹ] are approximants/flaps rather than the stops or trill a naive Latin-script reading would expect, the low back vowel o=[ɑ] rather than [o], e=[e] rather than [ɛ], and ch is aspirated [tsʰ] while č is [tʃ] (not the other way around) — all hold with 100% consistency in the gold. c=[ts] and the caron letters č=[tʃ]/š=[ʃ] are separate unaspirated/aspirated series from the ts/ch/lh digraphs already in the table; ł is an alternate single-letter spelling of the ɬ already covered by the lh digraph. The acute/grave accents on vowels are Wiyot's pitch-accent marks (Teeter's culminative-syllable tone), carried through verbatim into the IPA field of the gold transcriptions, so they are mapped as accented vowel symbols rather than stripped. Predictable stress placement is left unencoded and still raises the PER floor. Standalone ⟨h⟩ is positional: [h] word-initially, [ʔ] everywhere else. The digraphs ph/th/kh/kwh/čh/ch/lh are matched whole before the letter is reached, so the positional entry never touches them, and the apostrophe ⟨'⟩ keeps its own [ʔ] mapping. What this rests on: the distribution in the gold is exceptionless — of 151 words, 23 have a word-initial ⟨h⟩ and every one is [h], and those 23 are the ONLY words whose transcription contains [h] at all, while all 49 words with a standalone non-word-initial ⟨h⟩ have [ʔ] in that slot, so [h] and [ʔ] are in complementary distribution with zero counterexamples. That is measured, not cited. The nearest independent corroboration from a primary source is Reichard (1925), who writes the glottal stop with a separate apostrophe letter and gives ⟨wa'lawal⟩ 'knee' for the same word Teeter's orthography spells ⟨bahlawal⟩ (gold βáʔlawal) — the glottal stop stands exactly where Teeter writes ⟨h⟩. Teeter (1995) writes Wiyot in his own orthography and contrasts pákw 'my paternal aunt' with phákw 'your paternal aunt', which is the aspiration digraph as a separate device from standalone ⟨h⟩. Neither work states the h/[ʔ] spelling convention in so many words; the statement of it that exists is in Wikipedia's Wiyot phonology section, attributed there to Teeter (1964) p. 13, and that edition remains unreadable, so no page locator is claimed for it here.",
+  "iso639_3": "wiy",
+  "glottolog_code": null,
+  "sources": [
+    {
+      "id": "wiy_glottolog",
+      "author": "Hammarström, H. et al. (Glottolog 5.0)",
+      "year": 2024,
+      "title": "Glottolog: Wiyot (wiyo1248)",
+      "publisher": "Max Planck Institute for Evolutionary Anthropology",
+      "url": "https://glottolog.org/resource/languoid/id/wiyo1248",
+      "pages": null,
+      "notes": "Classification reference for a skeleton-tier entry.",
+      "wikipedia_url": null
+    },
+    {
+      "id": "wiy_orthography",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Wiyot language, Wikipedia",
+      "publisher": "Wikimedia Foundation",
+      "url": "https://en.wikipedia.org/wiki/Wiyot_language",
+      "pages": null,
+      "notes": "Orthography/phonology reference for a skeleton-tier grapheme map; reproduces Teeter's consonant and vowel charts (Phonology section) that this grapheme table follows.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Wiyot_language"
+    },
+    {
+      "id": "wiy_teeter_1964",
+      "author": "Teeter, Karl V.",
+      "year": 1964,
+      "title": "The Wiyot Language",
+      "publisher": "University of California Press",
+      "url": "https://archive.org/details/wiyotlanguage0037teet",
+      "pages": null,
+      "notes": "Work the practical-orthography chart is attributed to (b=[β], d=[ɾ], g=[ɣ], r=[ɹ], o=[ɑ], c=[ts], č=[tʃ], š=[ʃ], ł=[ɬ] and the aspirated ph/th/kh/kwh/ch/čh series). Both archive.org copies of this edition (wiyotlanguage0037teet, wiyotlanguage0000karl) are lending-restricted with no OCR text or displayable pages, and HathiTrust's copies are search-only; the primary edition could not be independently read, so no page locator is given. The chart is as reproduced in Wikipedia's Wiyot language phonology section, and every value it gives is independently corroborated: cross-checking each remapped letter against all 151 words of the WikiPron wiy_latn_broad gold (a source independent of Wikipedia) shows b, d, g, r, e, ch and č hold with 100% consistency.",
+      "wikipedia_url": null
+    },
+    {
+      "id": "wiy_reichard_1925",
+      "author": "Reichard, Gladys A.",
+      "year": 1925,
+      "title": "Wiyot Grammar and Texts",
+      "publisher": "University of California Publications in American Archaeology and Ethnology 22(1), University of California Press",
+      "url": "https://archive.org/details/WiyotGrammarAndTexts",
+      "pages": "9, 131-132",
+      "notes": "Read in full from the archive.org OCR text. Page 9 gives the consonant chart, which lists the glottal stop as its own letter, written with an apostrophe and distinct from h. Pages 131-132 give the body-part vocabulary, where 'knee' is wa'lawal — the same word Teeter's orthography spells bahlawal and the gold transcribes βáʔlawal. Reichard's independent apostrophe therefore falls exactly where Teeter's orthography writes a non-word-initial standalone h. Reichard also notes on page 8 that all vowels may be followed by a glottal stop, and (same page) that the bilabials b, w and v are frequently confused between speakers, which is why her w- form and Teeter's b- form are the same word.",
+      "wikipedia_url": null
+    },
+    {
+      "id": "wiy_teeter_1995",
+      "author": "Teeter, Karl V.",
+      "year": 1995,
+      "title": "Wiyot Obsolescence",
+      "publisher": "Papers of the Algonquian Conference 26, Carleton University",
+      "url": "https://ojs.library.carleton.ca/index.php/ALGQP/article/view/601",
+      "pages": "457-461",
+      "notes": "Freely downloadable, and written by the author of the 1964 grammar in the same practical orthography the gold uses; its word lists contain gold forms verbatim (bah, bahlawal, bakhas, bohn, bikwhal). It contrasts pakw 'my paternal aunt' with phakw 'your paternal aunt', establishing the aspiration digraph as a device separate from standalone h. It does not state the h/[ʔ] convention itself.",
+      "wikipedia_url": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Wiyot_language"
+  ]
+}

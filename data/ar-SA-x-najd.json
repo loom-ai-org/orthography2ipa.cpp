@@ -1,0 +1,422 @@
+{
+  "code": "ar-SA-x-najd",
+  "name": "Najdi Arabic",
+  "script": "Arabic",
+  "graphemes_base": "ar-x-peninsular",
+  "graphemes": {
+    "ث": [
+      "θ",
+      "t"
+    ],
+    "ج": [
+      "dʒ",
+      "ɡ"
+    ],
+    "ض": [
+      "ðˤ",
+      "dˤ"
+    ],
+    "ق": [
+      "ɡ",
+      "q"
+    ],
+    "الثث": [
+      "aθθ",
+      "att"
+    ],
+    "اَلثث": [
+      "aθθ",
+      "att"
+    ],
+    "لِلثث": [
+      "liθθ",
+      "litt"
+    ],
+    "وَالثث": [
+      "waθθ",
+      "watt"
+    ],
+    "فَالثث": [
+      "faθθ",
+      "fatt"
+    ],
+    "بِالثث": [
+      "biθθ",
+      "bitt"
+    ],
+    "كَالثث": [
+      "kaθθ",
+      "katt"
+    ],
+    "الضض": [
+      "aðˤðˤ",
+      "adˤdˤ"
+    ],
+    "اَلضض": [
+      "aðˤðˤ",
+      "adˤdˤ"
+    ],
+    "لِلضض": [
+      "liðˤðˤ",
+      "lidˤdˤ"
+    ],
+    "وَالضض": [
+      "waðˤðˤ",
+      "wadˤdˤ"
+    ],
+    "فَالضض": [
+      "faðˤðˤ",
+      "fadˤdˤ"
+    ],
+    "بِالضض": [
+      "biðˤðˤ",
+      "bidˤdˤ"
+    ],
+    "كَالضض": [
+      "kaðˤðˤ",
+      "kadˤdˤ"
+    ],
+    "اِلثث": [
+      "iθθ",
+      "itt"
+    ],
+    "اِلضض": [
+      "iðˤðˤ",
+      "idˤdˤ"
+    ],
+    "وِالثث": [
+      "wiθθ",
+      "witt"
+    ],
+    "وِالضض": [
+      "wiðˤðˤ",
+      "widˤdˤ"
+    ]
+  },
+  "allophones_base": "ar-x-peninsular",
+  "allophones": {
+    "k": [
+      "k",
+      "ts"
+    ],
+    "q": [
+      "ɡ",
+      "dz",
+      "q"
+    ],
+    "ɮˤ": [
+      "ðˤ",
+      "dˤ"
+    ],
+    "dʒ": [
+      "dʒ",
+      "ɡ"
+    ],
+    "a": [
+      "a",
+      "ɑ"
+    ],
+    "u": [
+      "u",
+      "o"
+    ],
+    "aː": [
+      "aː",
+      "ɑː",
+      "oː"
+    ]
+  },
+  "parent": "ar-x-peninsular",
+  "ancestors": [
+    {
+      "code": "ar-x-peninsular",
+      "role": "parent",
+      "weight": 0.92,
+      "notes": "Peninsular Arabic base — most conservative"
+    }
+  ],
+  "notes": "Najdi Arabic (نجدي), central Arabia incl. Riyadh; the prestige variety within Saudi Arabia. Primary reference Ingham (1994) Najdi Arabic: Central Arabian. DEFINING FEATURES modeled here: (1) qaf ق → /ɡ/ (Bedouin/traditional; /q/ retained in MSA loans/proper names, e.g. القرآن); (2) VELAR AFFRICATION — /k/ → [ts] and /ɡ/ → [dz] in the environment of front vowels, declared as allophone_rules NAJD_AFFRIC_* (Ingham 1994; Al Mahmoud 2020). It is FREE VARIATION, not obligatory, and it is triggered by a front vowel in the same syllable — so it is scoped here to the unambiguous front vowels only. /a/ is excluded on purpose: the fatha environment splits lexically (dog [tsɛlb] vs heart [ɡʌlb], Al Mahmoud 2020 §3.1) and the orthography cannot tell the two apart; (3) GAHAWA SYNDROME — epenthetic /a/ after a guttural /h x ɣ ħ ʕ/ in a low-vowel+guttural+consonant context (gahwa → gahawa), allophone_rules NAJD_GAHAWA_* (Ingham 1994); (4) interdentals PRESERVED — ث /θ/, ذ /ð/; the Old-Arabic ض/ظ contrast is neutralised to a single emphatic interdental [ðˤ] (Ingham 1994), so ض is transcribed [ðˤ] (with urban [dˤ] variant); (5) emphatic (pharyngealization) spreading backs low vowels to [ɑ]/[ɑː] — inherited from the ar-x-peninsular parent (AR_PEN_EMPH_*), not restated here. jim ج → /dʒ/ (urban) ~ /ɡ/ (Bedouin). No English-style stress block: Najdi stress is quantity-sensitive and not orthography-predictable. INPUT CONTRACT: like all dialect specs this transcribes what the orthography+harakat give; dialectal Arabic is usually written defectively, so short vowels surface only when the input is vocalised. AFFRICATION IS LEXICALIZED/RECEDING: the velar affrication modeled here is characteristic and diagnostic of traditional Najdi, but Johnstone (via Alshammari 2026) and Al-Rojaie (2013, on the Qaṣīm sub-variety) show it is lexically restricted and undergoing levelling toward plain [k]/[ɡ] among younger, urban and educated speakers — the transcriber emits the affricate as the dialect-diagnostic reflex, and this caveat is honest. DOCUMENTED BUT NOT ENGINE-EXPRESSIBLE: Najdi also has resyllabification by elision of an unstressed high vowel in an open syllable (Ingham 1994; the *katab → ktab / *kitaːb → ktaːb pattern, giving legal initial CC clusters), but o2i transcribes the vowels the orthography writes and does not resyllabify, so this is left as a note. NO ar-SA UMBRELLA NODE: Saudi Arabia's dialects do not form a single phonological group — they split across the Najdi (this node and its children ar-SA-x-qassim Qaṣīm), Hejazi (ar-SA-x-hejaz), Gulf (ar-SA-x-sharqiyya, Eastern Province) and Southwestern (ar-SA-x-rijal-alma, ʿAsīr/Tihāmah) types — so the bare country code ar-SA is deliberately left unassigned (lang-code accuracy: null beats wrong; Ingham 1994; Prochazka's 1988 country-wide survey treats Saudi Arabia as a dialect patchwork).",
+  "quality": "research",
+  "script_type": "abjad",
+  "sources": [
+    {
+      "id": "ingham1994",
+      "author": "Ingham, B.",
+      "year": 1994,
+      "title": "Najdi Arabic: Central Arabian",
+      "publisher": "John Benjamins (Library of Arabic Linguistics 1)",
+      "url": null,
+      "pages": "13-16",
+      "notes": "Primary reference: /k/→[ts], /ɡ/→[dz] affrication in front-vowel environments (كلب [tsalb]); gahawa-syndrome epenthetic /a/ after gutturals; ض/ظ merge to [ðˤ]; qaf→/ɡ/."
+    },
+    {
+      "id": "almahmoud2020",
+      "author": "Al Mahmoud, M.S.",
+      "year": 2020,
+      "title": "A Constraint-based Analysis of Velar Affrication in Najdi vs. Hijazi Arabic",
+      "publisher": "Education and Linguistics Research 6(2), 62-72. doi:10.5296/elr.v6i2.17551",
+      "url": "https://doi.org/10.5296/elr.v6i2.17551",
+      "doi": "10.5296/elr.v6i2.17551",
+      "pages": "62-72",
+      "notes": "Native-informant data. Affrication is free variation ([k]~[ts], [ɡ]~[dz]) triggered by a front vowel in the same syllable, blocked by central/back vowels: [tsis] 'bag', [dits] 'rooster', [ʕɪlts] 'gum', [tsef] 'how', [dzɛlb] 'opposite', [rɪzdz] 'provision' vs [kʊm] 'cuff', [ʃok] 'thorn', [ɡʌlb] 'heart', [ɡʌbəl] 'before'. §3.1 shows the fatha environment splits lexically (front [kɛlb] vs central [qʌlb]). Confirms Hijazi has NO velar affrication."
+    },
+    {
+      "id": "alshammari2026",
+      "author": "Alshammari, K.K.",
+      "year": 2026,
+      "title": "An Optimality-Theoretic Account of Velar Affrication in Northern Najdi Arabic",
+      "publisher": "Journal of Language Teaching and Research 17(4)",
+      "url": "https://jltr.academypublication.com/index.php/jltr/article/view/13179",
+      "pages": null,
+      "notes": "Northern Najdi (NNA, Ḥāʾil), 10 informants. The voiced velar /ɡ/ affricates in a STRICTER environment than /k/ — conditioned by high front /i iː/ only (p.1337: [dziliːb] 'well', [riːdz] 'saliva', [tˤiriːdz] 'road') — while /k/ tolerates a wider range: in NNA /k/→[ts] extends to the CENTRAL vowels /a aː/ too (p.1335-1336: [tsalb] 'dog', [simats] 'fish', [baːtsir] 'tomorrow'). Affrication is categorically blocked in back-vowel environments (p.1336: [ʃoːk] 'thorns', [kuːχ] 'cottage'; p.1337: [ɡumar] 'moon', [foːɡ] 'above'). NOTE ON SCOPE: this spec models the Riyadh/central variety, where the /k/ central-vowel affrication does NOT generalise (Al Mahmoud 2020 §3.1; AlAjroush 2020 p.42 keep [kalb]); the NNA extension to /a/ is a sub-lect boundary, so NAJD_AFFRIC_K stays scoped to the unambiguous front vowels. The voicing asymmetry (/ɡ/ strict /i iː/) is adopted."
+    },
+    {
+      "id": "watson2002",
+      "author": "Watson, J.C.E.",
+      "year": 2002,
+      "title": "The Phonology and Morphology of Arabic",
+      "publisher": "Oxford University Press",
+      "url": null,
+      "pages": null,
+      "notes": null,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Arabic_phonology"
+    },
+    {
+      "id": "holes2004",
+      "author": "Holes, C.",
+      "year": 2004,
+      "title": "Modern Arabic: Structures, Functions, and Varieties",
+      "publisher": "Georgetown University Press",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "versteegh2001",
+      "author": "Versteegh, K.",
+      "year": 2001,
+      "title": "The Arabic Language",
+      "publisher": "Edinburgh University Press",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "mahzari2023",
+      "author": "Mahzari, M.",
+      "year": 2023,
+      "title": "The Historical Changes of /k/ and /q/ in Najdi Arabic: A Phonological Analysis",
+      "publisher": "Theory and Practice in Language Studies 13(3), 796-807. doi:10.17507/tpls.1303.30",
+      "url": "https://doi.org/10.17507/tpls.1303.30",
+      "doi": "10.17507/tpls.1303.30",
+      "pages": "796-807",
+      "notes": "Two RIYADH-born native informants (the exact variety this spec models). Corroborates the voicing asymmetry: /k/→[ts] with front /i/ AND central /a/ (Table 2, p.800: [tsan] 'was', [mitsan] 'place', [britsah] 'blessing'), but /ɡ/(<q)→[dz] ONLY with high front /i/ (Table 4, p.803: [dzidir] 'pot', [dziblah], [rifiːdz]). /q/→[ɡ] generally (Table 5, p.804), and /q/ RETAINED as [q] before back /u/ in religious/borrowed terms (Table 6, p.804: /qurʔaːn/, /qublah/). Crucially the /a/-affrication cannot be read off the fatha, which is exactly why NAJD_AFFRIC_K excludes /a/ — Mahzari's [tsan] and Al Mahmoud's non-affricating [ɡʌlb] are both written with fatha."
+    },
+    {
+      "id": "algethami2023",
+      "author": "Algethami, G.",
+      "year": 2023,
+      "title": "Acoustic characterization of Najdi Arabic Vowel System",
+      "publisher": "Proc. 20th ICPhS (Prague), paper 868, 3384-3386",
+      "url": "https://www.internationalphoneticassociation.org/icphs-proceedings/ICPhS2023/full_papers/868.pdf",
+      "pages": "3384-3386",
+      "notes": "Acoustic study, 15 male Najdi speakers. Confirms the 8-vowel system /i iː u uː a aː eː oː/ (reproducing Ingham 1994 p.15); long vowels ~1.9× the duration of their short counterparts; short /i u/ significantly centralized ('schwa-like in neutral environments', Ingham p.15); /aː/ shows NO imāla/fronting (unlike Syrian/Egyptian). In his CVC tokens the OA diphthongs /aj aw/ surface as monophthongs [eː oː] ([beːt] 'home', p.3385) — a within-Najd variation set against the central-Najdi diphthong retention this spec keeps (cf. Ingham 1994; alhoody2019 for parallel Qassim monophthongization)."
+    },
+    {
+      "id": "alajroush2020",
+      "author": "AlAjroush, N.A.",
+      "year": 2020,
+      "title": "Phonological Development in Typically Developing Najdi Arabic-Speaking Children Aged 1-4 years",
+      "publisher": "PhD thesis, Newcastle University",
+      "url": "https://theses.ncl.ac.uk/jspui/handle/10443/5250",
+      "pages": "42",
+      "notes": "Adult Najdi target inventory (p.42): the OA emphatic /dˤ/ is 'almost always realised as [ðˤ]' (ض→[ðˤ] merger, corroborating Ingham); jīm = [dʒ]; [q] and [ɡ] are allophones of /q/ 'governed by sociolinguistic and lexical variation'; interdentals /θ ð ðˤ/ retained; /zˤ/ absent. Coda-cluster monosyllables /kalb/ 'dog', /xubz/ 'bread' cited with plain [k] (no central-vowel affrication in Riyadh child speech), supporting NAJD_AFFRIC_K's exclusion of /a/."
+    },
+    {
+      "id": "alruwaili2020",
+      "author": "Alruwaili, S.",
+      "year": 2020,
+      "title": "Negation in Turaif Arabic: A Lexical-Functional Grammar Approach",
+      "publisher": "PhD thesis (Northern Najdi, Turaif)",
+      "url": "https://ourarchive.otago.ac.nz/handle/10523/10456",
+      "pages": null,
+      "notes": "Northern Najdi (Turaif) negation system: sentential/predicate negation by mā and lā; the negative copula mū (with inflected mahu, and mub) marks constituent negation. Validates the gold's مو /muː/ (negative copula, rows 007/013) vs ما /maː/ (verbal/predicate negation, rows 003/020)."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Najdi_Arabic",
+    "https://ar.wikipedia.org/wiki/%D9%84%D9%87%D8%AC%D8%A9_%D9%86%D8%AC%D8%AF%D9%8A%D8%A9"
+  ],
+  "timespan": {
+    "start_year": 1400,
+    "end_year": null
+  },
+  "glottolog_code": "najd1235",
+  "iso639_3": "ars",
+  "allophone_rules": [
+    {
+      "id": "NAJD_AFFRIC_K_BEFORE",
+      "phonemes": [
+        "k"
+      ],
+      "surface": "ts",
+      "followed_by_phoneme": [
+        "i",
+        "iː",
+        "j",
+        "e",
+        "eː"
+      ],
+      "notes": "Najdi velar affrication (Ingham 1994, pp.13-14; Al Mahmoud 2020, Education and Linguistics Research 6(2):62-72, exx. 1-9): /k/ → [ts] before an adjacent FRONT vowel — /kis/ → [tsis] 'bag' (ex. 1). Affrication is FREE VARIATION ([k] ~ [ts]); a single-output transcriber must pick one and picks the affricate, the dialect-diagnostic reflex. SCOPE — /a/ is deliberately NOT a trigger. Al Mahmoud (2020) §3.1 shows the fatha environment splits LEXICALLY: /kɛlb/ 'dog' → [tsɛlb] has a front vowel, /qʌlb/ 'heart' → [ɡʌlb] (*[dzʌlb], rejected by the informant) a central one — and both are written with the same fatha, so no rule reading the orthography can separate them. Reading كلب as [tsalb] would force قلب to *[dzalb] too. Under-applying is the honest failure. NOT EXPRESSIBLE — /aj/ ought to be a trigger as well (/keɪf/ → [tsef] 'how', ex. 4), but adding the diphthong to this context list also makes `aj` an ATOM everywhere, so ⟨َيّ⟩ /ajj/ re-segments as aj+j and the inherited emphatic-backing rules (AR_PEN_EMPH_BACK_A_*) stop seeing an /a/: طَيِّب regresses [tˤɑjjib] → [tˤajjib]. Listing a context must not change segmentation; until it does not, كَيْف stays [kajf]."
+    },
+    {
+      "id": "NAJD_AFFRIC_K_AFTER",
+      "phonemes": [
+        "k"
+      ],
+      "surface": "ts",
+      "preceded_by_phoneme": [
+        "i",
+        "iː",
+        "j",
+        "e",
+        "eː"
+      ],
+      "notes": "Najdi velar affrication (Ingham 1994; Al Mahmoud 2020): /k/ → [ts] after an adjacent front vowel — /dik/ → [dits] 'rooster' (ex. 2). See NAJD_AFFRIC_K_BEFORE for why /a/ is not a trigger. KNOWN GAP: the real trigger is a TAUTOSYLLABIC front vowel, not an adjacent one — /ʕɪlk/ → [ʕɪlts] (ex. 3) and /rɪzq/ → [rɪzdz] (ex. 11) affricate a coda velar across an intervening consonant. The rule schema can condition on the IMMEDIATELY neighbouring phoneme and on syllable_position, but it cannot say 'the nucleus of my own syllable is front', so those forms are missed (they come out [ʕilk], [rizɡ]). Under-applying is the honest failure here."
+    },
+    {
+      "id": "NAJD_AFFRIC_G_BEFORE",
+      "phonemes": [
+        "ɡ"
+      ],
+      "surface": "dz",
+      "followed_by_phoneme": [
+        "i",
+        "iː"
+      ],
+      "notes": "Najdi velar affrication (Ingham 1994; Al Mahmoud 2020, ex. 10 /qɛlb/ → [dzɛlb] 'opposite'): /ɡ/ (chiefly the qaf reflex) → [dz] before an adjacent HIGH FRONT vowel /i iː/. The voiced velar demands a STRICTER environment than /k/: Alshammari (2026, JLTR 17(4), §V, p.1337) and Mahzari (2023, TPLS 13(3), Table 4, p.803) both restrict /ɡ/→[dz] to /i iː/ only, excluding the mid /e eː/ and central /a/ that /k/ tolerates. The trigger list is therefore /i iː/ (was previously widened to /j e eː/, which no source attests for the voiced velar). /aj/ is likewise not a trigger — Al Mahmoud's [tsef] 'how' (ex. 4) attests the voiceless case only."
+    },
+    {
+      "id": "NAJD_AFFRIC_G_AFTER",
+      "phonemes": [
+        "ɡ"
+      ],
+      "surface": "dz",
+      "preceded_by_phoneme": [
+        "i",
+        "iː"
+      ],
+      "notes": "Najdi velar affrication (Ingham 1994; Al Mahmoud 2020, ex. 13 /lasɪq/ → [lasɪdz]): /ɡ/ → [dz] after an adjacent HIGH FRONT vowel /i iː/. Restricted to /i iː/ per Alshammari (2026, p.1337: [riːdz] 'saliva', [tˤiriːdz] 'road') and Mahzari (2023, Table 4, p.803: [rifiːdz], [ʕatiːdz]) — the voicing-conditioned asymmetry (stricter than /k/). Same tautosyllabic gap as NAJD_AFFRIC_K_AFTER: /rɪzq/ → [rɪzdz] is missed because the front vowel is not adjacent to the velar."
+    },
+    {
+      "id": "NAJD_GAHAWA_h",
+      "phonemes": [
+        "h"
+      ],
+      "surface": "ha",
+      "syllable_position": "coda",
+      "followed_by": "consonant",
+      "preceded_by_phoneme": [
+        "a",
+        "ɑ"
+      ],
+      "notes": "Gahawa syndrome (Ingham 1994, pp.15-16): epenthetic /a/ is inserted after a guttural /h/ standing in a coda after a low vowel (…aXC…), e.g. gahwa → gahawa, laħm → laħam. Modeled as rewriting the coda guttural to guttural+[a]. The epenthesis needs a FOLLOWING tautosyllabic consonant (CaGC→CaGaC): followed_by=consonant guards it, so a word-final guttural with nothing after it does not epenthesise (أَفْرَح → [ʔafraħ], not *[ʔafraħa]), while medial …aGC… still does (لَحْم → [laħam])."
+    },
+    {
+      "id": "NAJD_GAHAWA_x",
+      "phonemes": [
+        "x"
+      ],
+      "surface": "xa",
+      "syllable_position": "coda",
+      "followed_by": "consonant",
+      "preceded_by_phoneme": [
+        "a",
+        "ɑ"
+      ],
+      "notes": "Gahawa syndrome (Ingham 1994, pp.15-16): epenthetic /a/ is inserted after a guttural /x/ standing in a coda after a low vowel (…aXC…), e.g. gahwa → gahawa, laħm → laħam. Modeled as rewriting the coda guttural to guttural+[a]. The epenthesis needs a FOLLOWING tautosyllabic consonant (CaGC→CaGaC): followed_by=consonant guards it, so a word-final guttural with nothing after it does not epenthesise (أَفْرَح → [ʔafraħ], not *[ʔafraħa]), while medial …aGC… still does (لَحْم → [laħam])."
+    },
+    {
+      "id": "NAJD_GAHAWA_0263",
+      "phonemes": [
+        "ɣ"
+      ],
+      "surface": "ɣa",
+      "syllable_position": "coda",
+      "followed_by": "consonant",
+      "preceded_by_phoneme": [
+        "a",
+        "ɑ"
+      ],
+      "notes": "Gahawa syndrome (Ingham 1994, pp.15-16): epenthetic /a/ is inserted after a guttural /ɣ/ standing in a coda after a low vowel (…aXC…), e.g. gahwa → gahawa, laħm → laħam. Modeled as rewriting the coda guttural to guttural+[a]. The epenthesis needs a FOLLOWING tautosyllabic consonant (CaGC→CaGaC): followed_by=consonant guards it, so a word-final guttural with nothing after it does not epenthesise (أَفْرَح → [ʔafraħ], not *[ʔafraħa]), while medial …aGC… still does (لَحْم → [laħam])."
+    },
+    {
+      "id": "NAJD_GAHAWA_0127",
+      "phonemes": [
+        "ħ"
+      ],
+      "surface": "ħa",
+      "syllable_position": "coda",
+      "followed_by": "consonant",
+      "preceded_by_phoneme": [
+        "a",
+        "ɑ"
+      ],
+      "notes": "Gahawa syndrome (Ingham 1994, pp.15-16): epenthetic /a/ is inserted after a guttural /ħ/ standing in a coda after a low vowel (…aXC…), e.g. gahwa → gahawa, laħm → laħam. Modeled as rewriting the coda guttural to guttural+[a]. The epenthesis needs a FOLLOWING tautosyllabic consonant (CaGC→CaGaC): followed_by=consonant guards it, so a word-final guttural with nothing after it does not epenthesise (أَفْرَح → [ʔafraħ], not *[ʔafraħa]), while medial …aGC… still does (لَحْم → [laħam])."
+    },
+    {
+      "id": "NAJD_GAHAWA_0295",
+      "phonemes": [
+        "ʕ"
+      ],
+      "surface": "ʕa",
+      "syllable_position": "coda",
+      "followed_by": "consonant",
+      "preceded_by_phoneme": [
+        "a",
+        "ɑ"
+      ],
+      "notes": "Gahawa syndrome (Ingham 1994, pp.15-16): epenthetic /a/ is inserted after a guttural /ʕ/ standing in a coda after a low vowel (…aXC…), e.g. gahwa → gahawa, laħm → laħam. Modeled as rewriting the coda guttural to guttural+[a]. The epenthesis needs a FOLLOWING tautosyllabic consonant (CaGC→CaGaC): followed_by=consonant guards it, so a word-final guttural with nothing after it does not epenthesise (أَفْرَح → [ʔafraħ], not *[ʔafraħa]), while medial …aGC… still does (لَحْم → [laħam])."
+    }
+  ],
+  "wikidata_qid": "Q56574",
+  "phoible_id": "najd1235",
+  "location": {
+    "latitude": 30.3371,
+    "longitude": 42.1773,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Najdi Arabic."
+  },
+  "optional_marks": [
+    "ً",
+    "ٌ",
+    "ٍ",
+    "َ",
+    "ُ",
+    "ِ",
+    "ّ",
+    "ْ",
+    "ٰ",
+    "ٓ"
+  ],
+  "stress": {
+    "default_position": -3,
+    "quantity_sensitive": true,
+    "superheavy_final_attracts": true,
+    "max_onset": 1,
+    "stress_mark": "ˈ",
+    "notes": "Arabic stress is QUANTITY-SENSITIVE: it falls on a syllable because that syllable is heavy, not because of any orthographic ending, so no ending table can express it. The cascade (Ryding, A Reference Grammar of MSA, CUP 2005, §2.3; Watson, The Phonology and Morphology of Arabic, OUP 2002, ch.3): a superheavy final syllable (CVːC/CVCC) takes the stress (kiˈtaːb); otherwise a heavy penult (CVː/CVC) does (muˈdarris); otherwise the antepenult (ˈmadrasa). max_onset=1 because Arabic onsets are obligatory and hold exactly one consonant — a medial cluster splits, closing the preceding syllable, and that boundary is what makes the penult of mudarris heavy. INPUT CONTRACT: weight is only recoverable from a complete transcription, so this requires diacritized input; an undiacritized skeleton has no vowels to weigh. The registered wikipron gold carries no stress marks, but the benchmark strips stress from both sides by default, so this costs no PER. Prosodic clitics: monosyllabic function words (negator maː, prepositions fiː/min/ʕan/ʕa/li/bi, vocative jaː, copula-negator muː/miʃ, conditional law/loː, wa-proclitic combinations) attach to a host and fall inside the host's stress domain, so they carry no word stress (Watson 2002, The Phonology and Morphology of Arabic, OUP, ch.3). Pan-Arabic class; the per-lect form list reflects the function words attested in this lect. Orthographic test — a clitic homograph (e.g. verb yā 'came') is destressed in every occurrence.",
+    "cliticless_words": [
+      "فِي",
+      "مَا",
+      "مُو",
+      "مِن",
+      "يَا"
+    ]
+  },
+  "word_exceptions": {
+    "تَذْكِرَة": "taðkira",
+    "مَكِينَة": "makiːna",
+    "مَاكِينَة": "maːkiːna"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "code": "na",
+  "name": "Nauruan",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "stub",
+  "graphemes": {},
+  "allophones": {},
+  "notes": "Nauruan (Dorerin Naoero), a Micronesian (Austronesian) language, national language of Nauru. STUB: the grapheme inventory is NOT yet specified. Script: Latin alphabet. Although a 1938 reform (Detudamo's committee) moved the spelling toward European conventions and gave it around 30 letters, the reform was only partially adopted: ⟨ã⟩ and ⟨ñ⟩ are now rarely used (replaced by e and ng), and conservative spellings persist in names (Baiti, Ijuw), so the orthography is not reliably phonemic. A correct spec would also need the velarised/palatalised consonant series, the large vowel inventory with reduction to schwa, and the /t d/ → [tʃ dʒ] palatalisation before high front vowels. Input is assumed to be the standard Latin Nauruan orthography.",
+  "iso639_3": "nau",
+  "glottolog_code": "naur1243",
+  "wikidata_qid": "Q13307",
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Nauruan_language"
+  ],
+  "sources": [
+    {
+      "id": "nauruan_language_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Nauruan language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Nauruan_language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Nauruan_language",
+      "pages": null,
+      "notes": "Overview of the language, script and orthography."
+    }
+  ],
+  "timespan": {
+    "start_year": 1900,
+    "end_year": null
+  },
+  "parent": "x-clade-aust1307",
+  "ancestors": [
+    {
+      "code": "x-clade-aust1307",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Austronesian — the classification node this language sits under."
+    }
+  ],
+  "location": {
+    "latitude": -0.52957,
+    "longitude": 166.922,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Nauru."
+  }
+}

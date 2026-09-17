@@ -1,0 +1,192 @@
+{
+  "code": "lfn",
+  "name": "Lingua Franca Nova",
+  "family": "Constructed",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "b": [
+      "b"
+    ],
+    "c": [
+      "k"
+    ],
+    "d": [
+      "d"
+    ],
+    "e": [
+      "e"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "h": [
+      "h"
+    ],
+    "i": [
+      "i"
+    ],
+    "j": [
+      "ʒ"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "o": [
+      "o"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "u": [
+      "u"
+    ],
+    "v": [
+      "v"
+    ],
+    "x": [
+      "ʃ"
+    ],
+    "z": [
+      "z"
+    ]
+  },
+  "allophones": {
+    "a": [
+      "a"
+    ],
+    "b": [
+      "b"
+    ],
+    "k": [
+      "k"
+    ],
+    "d": [
+      "d"
+    ],
+    "e": [
+      "e"
+    ],
+    "f": [
+      "f"
+    ],
+    "ɡ": [
+      "ɡ"
+    ],
+    "h": [
+      "h"
+    ],
+    "i": [
+      "i",
+      "j"
+    ],
+    "ʒ": [
+      "ʒ"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n",
+      "ŋ"
+    ],
+    "o": [
+      "o"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "r",
+      "ɾ"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "u": [
+      "u",
+      "w"
+    ],
+    "v": [
+      "v"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "z": [
+      "z"
+    ]
+  },
+  "iso639_3": "lfn",
+  "glottolog_code": "ling1267",
+  "wikidata_qid": "Q146803",
+  "notes": "Lingua Franca Nova (elefen), constructed auxiliary language created by C. George Boeree (1998), Romance lexicon with a creole-like grammar. Fully regular phonemic orthography: 22 Latin letters (k, q, w, y are used only in proper names). ⟨c⟩ is always [k], ⟨x⟩ is [ʃ], ⟨j⟩ is [ʒ]. ⟨i⟩ and ⟨u⟩ are [j]/[w] before another vowel; ⟨n⟩ is [ŋ] before a velar. Stress falls on the vowel or diphthong before the last consonant. A Cyrillic orthography also exists but is not modelled here; the input contract for this spec is the Latin-script standard.",
+  "sources": [
+    {
+      "id": "boeree1998",
+      "author": "Boeree, C. George",
+      "year": 1998,
+      "title": "Lingua Franca Nova",
+      "publisher": "Shippensburg University",
+      "url": "https://elefen.org/",
+      "pages": null,
+      "notes": "Language creator; official site with alphabet and pronunciation.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Lingua_Franca_Nova"
+    },
+    {
+      "id": "lingua_franca_nova_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Lingua Franca Nova",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Lingua_Franca_Nova",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Lingua_Franca_Nova",
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Lingua_Franca_Nova",
+    "https://lfn.wikipedia.org/wiki/Lingua_franca_nova"
+  ],
+  "timespan": {
+    "start_year": 1998,
+    "end_year": null
+  },
+  "stress": {
+    "default_position": -2,
+    "final_stress_endings": [],
+    "penult_stress_endings": [],
+    "marked_vowels": [],
+    "stress_mark": "ˈ",
+    "notes": "Stress on the vowel or diphthong before the last consonant. Source: https://en.wikipedia.org/wiki/Lingua_Franca_Nova"
+  }
+}

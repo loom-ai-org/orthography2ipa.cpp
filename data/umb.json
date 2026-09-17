@@ -1,0 +1,121 @@
+{
+  "code": "umb",
+  "name": "Umbundu",
+  "glottolog_code": "umbu1257",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "iso639_3": "umb",
+  "quality": "research",
+  "graphemes": {
+    "a": ["a"],
+    "b": ["b"],
+    "ch": ["tʃ"],
+    "e": ["e"],
+    "f": ["f"],
+    "h": ["h"],
+    "i": ["i"],
+    "j": ["dʒ"],
+    "k": ["k"],
+    "l": ["l"],
+    "m": ["m"],
+    "mb": ["ᵐb"],
+    "n": ["n"],
+    "nd": ["ⁿd"],
+    "ndj": ["ᶮdʒ"],
+    "ng": ["ᵑɡ"],
+    "ny": ["ɲ"],
+    "o": ["o"],
+    "p": ["p"],
+    "s": ["s"],
+    "t": ["t"],
+    "u": ["u"],
+    "v": ["v"],
+    "w": ["w"],
+    "y": ["j"]
+  },
+  "allophones": {
+    "a": ["a", "ã"],
+    "b": ["b"],
+    "tʃ": ["tʃ"],
+    "e": ["e", "ẽ"],
+    "f": ["f"],
+    "h": ["h"],
+    "i": ["i", "ĩ"],
+    "dʒ": ["dʒ"],
+    "k": ["k"],
+    "l": ["l"],
+    "m": ["m"],
+    "n": ["n"],
+    "ɲ": ["ɲ"],
+    "ŋ": ["ŋ"],
+    "o": ["o", "õ"],
+    "p": ["p"],
+    "s": ["s"],
+    "t": ["t"],
+    "u": ["u", "ũ"],
+    "v": ["v"],
+    "w": ["w"],
+    "j": ["j"]
+  },
+  "notes": "Umbundu, Guthrie R.11, Bantu language of the Ovimbundu of central-southern Angola. Five vowel qualities a/e/i/o/u each with a nasal counterpart (nasality on vowels is contextual, driven by adjacent nasal consonants, not written separately). Prenasalized stops (mb, nd, ndj, ng) are single phonemes. Umbundu has an underlying two-level tone system (High/Low; Schadeberg 1990) whose surface realization includes downstep, so the practical orthography marks a first high with an acute accent (á), subsequent downstepped highs with further acute accents, and low tone with a grave accent (à); unmarked syllables continue the tone of the preceding syllable (Omniglot; Schadeberg 1990). Diacritics are not modelled as separate graphemes here; base-letter mappings are given.",
+  "sources": [
+    {
+      "id": "schadeberg1990umbundu",
+      "author": "Schadeberg, Thilo C.",
+      "year": 1990,
+      "title": "A Sketch of Umbundu",
+      "publisher": "Rüdiger Köppe Verlag",
+      "url": "https://archive.org/details/rosettaproject_umb_morsyn-4",
+      "pages": null,
+      "notes": "Grammatical sketch of Umbundu; primary source for the augment/tone analysis (underlying High/Low tone with H-doubling, H-spreading, and final-lowering rules) and for the prenasalized-consonant and verb-stem facts."
+    },
+    {
+      "id": "umb_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2025,
+      "title": "Umbundu",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Umbundu",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Umbundu",
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "omniglot_umb",
+      "author": "Ager, Simon",
+      "year": 2025,
+      "title": "Umbundu language, alphabet and pronunciation",
+      "publisher": "Omniglot",
+      "url": "https://www.omniglot.com/writing/umbundu.htm",
+      "pages": null,
+      "notes": "Primary source for the three-tone (low/high/downstepped-high) orthographic accent system; corrects a prior two-tone claim."
+    }
+  ],
+  "parent": "x-clade-narr1281",
+  "ancestors": [
+    {
+      "code": "x-clade-narr1281",
+      "role": "parent",
+      "weight": 0.9,
+      "notes": "Umbundu-Ndombe branch of Bantu (Guthrie R.10), within Atlantic-Congo."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Umbundu",
+    "https://en.wikipedia.org/wiki/Proto-Bantu_language"
+  ],
+  "urls": [
+    "https://glottolog.org/resource/languoid/id/umbu1257"
+  ],
+  "timespan": {
+    "start_year": 1900,
+    "end_year": null
+  },
+  "wikidata_qid": "Q36983",
+  "location": {
+    "latitude": -12.6,
+    "longitude": 15.7,
+    "source": "glottolog",
+    "notes": "Approximate centre of the Ovimbundu highlands, central Angola."
+  }
+}

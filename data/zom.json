@@ -1,0 +1,212 @@
+{
+  "code": "zom",
+  "name": "Zou",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "ch": [
+      "t͡ʃ"
+    ],
+    "sh": [
+      "ʃ"
+    ],
+    "ts": [
+      "ts"
+    ],
+    "ng": [
+      "ŋ"
+    ],
+    "ny": [
+      "ɲ"
+    ],
+    "kh": [
+      "kʰ"
+    ],
+    "ph": [
+      "pʰ"
+    ],
+    "th": [
+      "tʰ"
+    ],
+    "b": [
+      "b"
+    ],
+    "d": [
+      "d"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "h": [
+      "h"
+    ],
+    "j": [
+      "dʒ"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "w": [
+      "w"
+    ],
+    "y": [
+      "j"
+    ],
+    "z": [
+      "z"
+    ],
+    "f": [
+      "f"
+    ],
+    "v": [
+      "v"
+    ],
+    "a": [
+      "a"
+    ],
+    "e": [
+      "e"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "o"
+    ],
+    "u": [
+      "u"
+    ],
+    "aw": [
+      "ɔ"
+    ]
+  },
+  "positional_graphemes": {
+    "a": {
+      "word_initial": [
+        "ʔa"
+      ]
+    },
+    "aw": {
+      "word_initial": [
+        "ʔɔ"
+      ]
+    },
+    "e": {
+      "word_initial": [
+        "ʔe"
+      ]
+    },
+    "i": {
+      "word_initial": [
+        "ʔi"
+      ]
+    },
+    "o": {
+      "word_initial": [
+        "ʔo"
+      ]
+    },
+    "u": {
+      "word_initial": [
+        "ʔu"
+      ]
+    },
+    "h": {
+      "word_final": [
+        "ʔ"
+      ],
+      "before_consonant": [
+        "ʔ"
+      ]
+    }
+  },
+  "parent": "mni-x-proto-kuki-chin",
+  "ancestors": [
+    {
+      "code": "mni-x-proto-kuki-chin",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Descent per Glottolog classification of Zou (zouu1235)."
+    }
+  ],
+  "notes": "Zou (Zomi) is a Kuki-Chin (Sino-Tibetan) language of Manipur and Chin State, written in a Latin script developed by J.H. Cope. Base Latin consonants and vowels are mapped, with ng/kh/ph/th the expected digraphs and aspirates. Three orthographic conventions of this romanization are modelled beyond the plain letter values. First, a word-initial vowel letter carries a glottal onset: Mortensen (2023, Himalayan Linguistics 22.1) section 2.1 states that Kuki-Chin syllables 'tend to have a simple, obligatory onset', with onsetless V syllables restricted to the minority of languages that allow them, and all 33 vowel-initial headwords in the wikipron/zom gold begin with [ʔ] with no counterexample. Second, a coda <h> spells the glottal stop, not [h]. Singh & Himmat (2013) state outright that only p, t, k, m, n, ng and l occur in final position, so a written coda <h> cannot be /h/; Mortensen (2023) section 4.2 describes final glottal stop as pervasive in Kuki-Chin, behaving as a 'glottal prosody' of the checked syllable. All 12 headwords with a word-final <h> and all further syllable-coda <h> before a consonant have gold [ʔ]. Note that Singh & Himmat's own coda list omits the glottal stop as well, and their consonant table records it only as an inventory slot; the gold contradicts them on that point, and the value shipped here follows the gold and the family description. Onset <h> before a vowel stays [h]. Third, <ch> is [t͡ʃ] in this narrow gold, unanimously across its 6 headwords. Singh & Himmat write the phoneme as /c/ but describe it phonetically as 'less advanced, leaning towards alveolar, sometimes interdentally and affricative in nature', which is the affricate realisation the gold transcribes. Zou is tonal: Singh & Himmat (2013), 'Zou Phonology', establish three contrastive tones (level, unmarked; low-rising, acute; falling, grave). The Cope-derived orthography spells none of them, and this is not a gap this engine could close by rule: the wikipron gold itself contains 24 identical Latin spellings (e.g. 'hai', 'chi', 'kal', 'za') each attested with two or more different gold tone diacritics, i.e. the same input string is genuinely ambiguous between distinct lexical tones with no orthographic cue -- confirming Singh & Himmat's own minimal-pair example (hai 'mango' level vs ha'i 'chew' low-rising vs ha`i 'cup/forget' falling, all spelled identically in running text). Tone is therefore left unencoded by design. Folding tone out of both gold and output (measured, not shipped as a rule) leaves PER at 0.156 on the zom/wikipron slice; folding vowel length out as well leaves 0.077, and folding the gold's central [ʌ] onto [a] leaves 0.020. The remaining residual is 12 words, mostly the <uo>/<iu> glide spellings the gold transcribes as [wo]/[ju]. Stress is not a separate contrastive category (documented exemption).",
+  "iso639_3": "zom",
+  "glottolog_code": null,
+  "sources": [
+    {
+      "id": "zom_glottolog",
+      "author": "Hammarström, H. et al. (Glottolog 5.0)",
+      "year": 2024,
+      "title": "Glottolog: Zou (zouu1235)",
+      "publisher": "Max Planck Institute for Evolutionary Anthropology",
+      "url": "https://glottolog.org/resource/languoid/id/zouu1235",
+      "pages": null,
+      "notes": "Classification reference for a skeleton-tier entry.",
+      "wikipedia_url": null
+    },
+    {
+      "id": "zom_tungdim2012",
+      "author": "Tungdim, Philip Thangliènmâng",
+      "year": 2012,
+      "title": "A Descriptive Grammar of the Zo Language",
+      "publisher": "PhD dissertation, Jawaharlal Nehru University",
+      "url": null,
+      "pages": null,
+      "notes": "Descriptive grammar of Zou/Zo (Kuki-Chin); consulted alongside the J.H. Cope (c. 1910) missionary romanization to check the Latin orthography's ch/ng/kh/ph/th conventions modelled here."
+    },
+    {
+      "id": "zom_singh_himmat2013",
+      "author": "Singh, Yashawanta and Himmat, Lukram",
+      "year": 2013,
+      "title": "Zou Phonology",
+      "publisher": "Language in India",
+      "url": "http://www.languageinindia.com/feb2013/zouphonologyfinal.pdf",
+      "pages": "683-701",
+      "notes": "Primary phonological description of Zou. Establishes three contrastive tones (level/unmarked, low-rising acute, falling grave) with the minimal triplet hai/ha'i/ha`i, identically spelled without diacritics in running Latin orthography; states that only p, t, k, m, n, ng, l occur in final position, which is the basis for reading a written coda <h> as something other than /h/; and describes the palatal stop /c/ as 'affricative in nature', which is the [t͡ʃ] the narrow gold transcribes for <ch>.",
+      "wikipedia_url": null
+    },
+    {
+      "id": "zom_mortensen2023",
+      "author": "Mortensen, David R.",
+      "year": 2023,
+      "title": "Kuki-Chin Phonology: An Overview",
+      "publisher": "Himalayan Linguistics 22(1): 5-35",
+      "url": "https://escholarship.org/uc/item/1d326124",
+      "pages": "5-35",
+      "notes": "Peer-reviewed family overview (DOI 10.5070/H922153229). Section 2.1 gives the obligatory Kuki-Chin syllable onset, which is the basis for the prosthetic glottal onset on vowel-initial words; sections 2.3.3 and 4.2 describe the checked syllable and the special status of final glottal stop across the family.",
+      "wikipedia_url": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Zou_language"
+  ],
+  "audit": {
+    "wikipron": {
+      "conclusion": "input_limited",
+      "measured": "Zou has three contrastive tones -- level, low-rising and falling (Singh & Himmat 2013, Zou Phonology, Language in India 13(2):683-701, 'Suprasegments'), and the acute and grave in that paper are the authors' own analytic marks, not letters of the Cope romanisation. The romanisation itself writes none of them: 0 of the 165 gold headwords in wikipron/zom_latn_narrow carry any tone diacritic, against 165 of 165 gold transcriptions that do, and 10 of the 24 spellings attested with more than one transcription differ in tone alone, so no rule over segments could recover the melody. Scored over the same 165 pairs the harness sees, PER is 0.4611; folding every tone diacritic out of both hypothesis and gold drops it to 0.1924. The remaining 0.19 is segmental and is NOT covered by this conclusion -- it is still open work.",
+      "reference": "spec notes"
+    }
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "code": "wau",
+  "name": "Waurá",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "ts": ["ts"],
+    "tx": ["tʃ"],
+    "ch": ["tʃ"],
+    "aa": ["aː"],
+    "ee": ["eː"],
+    "ii": ["iː"],
+    "uu": ["uː"],
+    "ü": ["ɨ"],
+    "a": ["a"],
+    "e": ["e"],
+    "i": ["i"],
+    "u": ["u"],
+    "p": ["p"],
+    "t": ["t"],
+    "k": ["k"],
+    "g": ["ɢ"],
+    "m": ["m"],
+    "n": ["n"],
+    "s": ["s"],
+    "r": ["ʐ"],
+    "h": ["h"],
+    "l": ["ɾ"],
+    "w": ["w"],
+    "y": ["j"]
+  },
+  "parent": "x-clade-araw1281",
+  "ancestors": [
+    {
+      "code": "x-clade-araw1281",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Descent per Glottolog classification of Waurá (waur1244)."
+    }
+  ],
+  "notes": "Arawakan language of the Upper Xingu, Brazil. Published sources give the phonology but not a fully settled official spelling, so the grapheme choices (ts, tx/ch, ü for the high central vowel) follow typical Xinguan Arawakan practice and are skeleton tier. Long vowels contrast and are written doubled. Nasal vowels are phonemic but no consistent orthographic marking convention is documented, so nasalization is left unencoded, as are stress and any pitch; the r/l letters map to a retroflex fricative and a tap respectively per the phonemic chart.",
+  "iso639_3": "wau",
+  "glottolog_code": null,
+  "sources": [
+    {
+      "id": "wau_glottolog",
+      "author": "Hammarström, H. et al. (Glottolog 5.0)",
+      "year": 2024,
+      "title": "Glottolog: Waurá (waur1244)",
+      "publisher": "Max Planck Institute for Evolutionary Anthropology",
+      "url": "https://glottolog.org/resource/languoid/id/waur1244",
+      "pages": null,
+      "notes": "Classification reference for a skeleton-tier entry.",
+      "wikipedia_url": null
+    },
+    {
+      "id": "wau_wikipedia",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Waurá language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Waur%C3%A1_language",
+      "pages": null,
+      "notes": "Phonology reference; orthography partly inferred.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Waur%C3%A1_language"
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Waur%C3%A1_language"
+  ]
+}

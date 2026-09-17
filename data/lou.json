@@ -1,0 +1,190 @@
+{
+  "code": "lou",
+  "name": "Louisiana Creole",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "ch": [
+      "ʃ"
+    ],
+    "ou": [
+      "u"
+    ],
+    "gn": [
+      "ɲ"
+    ],
+    "on": [
+      "ɔ̃"
+    ],
+    "an": [
+      "ã"
+    ],
+    "en": [
+      "ã"
+    ],
+    "in": [
+      "ɛ̃"
+    ],
+    "è": [
+      "ɛ"
+    ],
+    "é": [
+      "e"
+    ],
+    "â": [
+      "a"
+    ],
+    "ò": [
+      "ɔ"
+    ],
+    "a": [
+      "a"
+    ],
+    "e": [
+      "e"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "o"
+    ],
+    "u": [
+      "y"
+    ],
+    "b": [
+      "b"
+    ],
+    "c": [
+      "k"
+    ],
+    "d": [
+      "d"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "h": [
+      "h"
+    ],
+    "j": [
+      "ʒ"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "p": [
+      "p"
+    ],
+    "q": [
+      "k"
+    ],
+    "r": [
+      "ʁ"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "v": [
+      "v"
+    ],
+    "w": [
+      "w"
+    ],
+    "y": [
+      "j"
+    ],
+    "z": [
+      "z"
+    ]
+  },
+  "parent": "x-clade-roma1334",
+  "ancestors": [
+    {
+      "code": "x-clade-roma1334",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Descent per Glottolog classification of Louisiana Creole French (loui1240)."
+    },
+    {
+      "code": "fr-FR",
+      "role": "lexifier",
+      "weight": 0.65,
+      "notes": "French superstrate/lexifier: vocabulary is primarily of French origin, as French is the language's lexifier (en.wikipedia.org/wiki/Louisiana_Creole)."
+    },
+    {
+      "code": "bm",
+      "role": "substrate",
+      "weight": 0.1,
+      "notes": "Bambara (Mande) substrate: the largest single group among enslaved Senegambians brought to Louisiana spoke Bambara/Malinke dialects (en.wikipedia.org/wiki/Louisiana_Creole)."
+    },
+    {
+      "code": "wo",
+      "role": "substrate",
+      "weight": 0.06,
+      "notes": "Wolof substrate, among the Senegambian languages (with Malinke, Sereer, Pulaar) that two-thirds of enslaved people brought to Louisiana spoke (en.wikipedia.org/wiki/Louisiana_Creole)."
+    },
+    {
+      "code": "ff",
+      "role": "substrate",
+      "weight": 0.05,
+      "notes": "Pulaar (Fula) substrate, among the Senegambian source languages of Louisiana's enslaved population (en.wikipedia.org/wiki/Louisiana_Creole)."
+    }
+  ],
+  "notes": "Skeleton. French-lexifier creole of Louisiana written in a Latin, French-based spelling. Grapheme map follows French conventions adapted to the creole: ou [u], ch [ʃ], j [ʒ], gn [ɲ], the nasal-vowel digraphs an/en [ã], on [ɔ̃], in [ɛ̃], and accented è/é. Orthographic practice varies between writers and etymological French spellings; final silent letters, liaison and any prosody are not reliably recoverable and are left unencoded, so a PER floor is expected. Louisiana Creole stress is largely predictable from French-derived stress patterns and is not separately orthographically marked; left unencoded (documented exemption).",
+  "iso639_3": "lou",
+  "glottolog_code": null,
+  "sources": [
+    {
+      "id": "lou_glottolog",
+      "author": "Hammarström, H. et al. (Glottolog 5.0)",
+      "year": 2024,
+      "title": "Glottolog: Louisiana Creole French (loui1240)",
+      "publisher": "Max Planck Institute for Evolutionary Anthropology",
+      "url": "https://glottolog.org/resource/languoid/id/loui1240",
+      "pages": null,
+      "notes": "Classification reference for a skeleton-tier entry.",
+      "wikipedia_url": null
+    },
+    {
+      "id": "lou_wikipedia",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Louisiana Creole (Wikipedia)",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Louisiana_Creole",
+      "pages": null,
+      "notes": "Orthography/phonology reference for a skeleton-tier entry.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Louisiana_Creole"
+    },
+    {
+      "id": "lou_klingler2003",
+      "author": "Klingler, Thomas A.",
+      "year": 2003,
+      "title": "If I Could Turn My Tongue like That: The Creole Language of Pointe Coupee Parish, Louisiana",
+      "publisher": "Louisiana State University Press",
+      "url": null,
+      "pages": null,
+      "notes": "Detailed descriptive study of a Louisiana Creole variety (phonology, morphosyntax, texts, orthography); the reference grammar consulted to check the French-based spelling conventions modelled here."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Louisiana_Creole"
+  ]
+}

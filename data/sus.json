@@ -1,0 +1,109 @@
+{
+  "code": "sus",
+  "name": "Susu (Soso)",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "a": ["a"],
+    "aa": ["aː"],
+    "e": ["e"],
+    "ee": ["eː"],
+    "ɛ": ["ɛ"],
+    "ɛɛ": ["ɛː"],
+    "i": ["i"],
+    "ii": ["iː"],
+    "o": ["o"],
+    "oo": ["oː"],
+    "ɔ": ["ɔ"],
+    "ɔɔ": ["ɔː"],
+    "u": ["u"],
+    "uu": ["uː"],
+    "b": ["b"],
+    "d": ["d"],
+    "f": ["f"],
+    "g": ["ɡ"],
+    "gb": ["ɡb"],
+    "h": ["h"],
+    "k": ["k"],
+    "l": ["l"],
+    "m": ["m"],
+    "n": ["n"],
+    "ɲ": ["ɲ"],
+    "ŋ": ["ŋ"],
+    "p": ["p"],
+    "r": ["r"],
+    "s": ["s"],
+    "t": ["t"],
+    "w": ["w"],
+    "x": ["x"],
+    "y": ["j"],
+    "nd": ["nd"],
+    "ng": ["ŋɡ"],
+    "an": ["ã"],
+    "en": ["ẽ"],
+    "ɛn": ["ɛ̃"],
+    "in": ["ĩ"],
+    "on": ["õ"],
+    "ɔn": ["ɔ̃"],
+    "un": ["ũ"]
+  },
+  "allophones": {
+    "a": ["a"], "aː": ["aː"], "e": ["e"], "eː": ["eː"], "ɛ": ["ɛ"], "ɛː": ["ɛː"],
+    "i": ["i"], "iː": ["iː"], "o": ["o"], "oː": ["oː"], "ɔ": ["ɔ"], "ɔː": ["ɔː"],
+    "u": ["u"], "uː": ["uː"],
+    "b": ["b"], "d": ["d"], "f": ["f"], "ɡ": ["ɡ"], "ɡb": ["ɡb"], "h": ["h"],
+    "k": ["k"], "l": ["l"], "m": ["m"], "n": ["n"], "ɲ": ["ɲ"], "ŋ": ["ŋ"],
+    "p": ["p"], "r": ["r"], "s": ["s"], "t": ["t"], "w": ["w"], "x": ["x"], "j": ["j"],
+    "nd": ["nd"], "ŋɡ": ["ŋɡ"],
+    "ã": ["ã"], "ẽ": ["ẽ"], "ɛ̃": ["ɛ̃"], "ĩ": ["ĩ"], "õ": ["õ"], "ɔ̃": ["ɔ̃"], "ũ": ["ũ"]
+  },
+  "notes": "Susu (Soso), Central Mande (Susu-Yalunka branch), spoken by ~2.4 million people mainly in coastal Guinea, with communities in Sierra Leone and Guinea-Bissau. Written with the Guinean national-languages Latin alphabet (post-1988 reform), the same convention used for the Bambara (bm) spec in this repo: IPA-style letters ɛ, ɔ, ɲ, ŋ are used directly rather than digraphs, ⟨y⟩ = /j/, and the labial-velar stop is ⟨gb⟩ = /ɡb/. Fourteen oral vowel phonemes (7 qualities x length) are attested; length is written by doubling the vowel letter, following the same convention as ff/wo/bm. Susu also has a full set of nasalized vowel counterparts (ĩ ũ ẽ õ ɛ̃ ɔ̃ ã), attested phonemically by the cited Wikipedia phoneme table; the same table states these are written orthographically as vowel+⟨n⟩ digraphs (⟨in⟩, ⟨un⟩, ⟨en⟩, ⟨on⟩, ⟨ɛn⟩, ⟨ɔn⟩, ⟨an⟩), so those digraphs are recorded here as graphemes mapping to the corresponding nasalized vowel. Prenasalized ⟨nd⟩ and ⟨ng⟩ are attested directly as phonemes /nd/ and /ŋɡ/ in the same table. This spec is quality:research pending a primary-source, letter-by-letter cross-check of the orthography table.",
+  "sources": [
+    {
+      "id": "houis1963",
+      "author": "Houis, Maurice",
+      "year": 1963,
+      "title": "Étude descriptive de la langue susu",
+      "publisher": "IFAN (Institut Français d'Afrique Noire), Dakar",
+      "url": null,
+      "pages": null,
+      "notes": "Descriptive reference grammar of Susu."
+    },
+    {
+      "id": "susu_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Susu language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Susu_language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Susu_language",
+      "pages": null,
+      "notes": "Consonant and vowel (oral + nasal) phoneme inventory; states nasal vowels are written as vowel+n digraphs (in, un, en, on, ɛn, ɔn, an)."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Susu_language"
+  ],
+  "urls": [
+    "https://glottolog.org/resource/languoid/id/susu1250",
+    "https://www.ethnologue.com/language/sus/"
+  ],
+  "iso639_3": "sus",
+  "glottolog_code": "susu1250",
+  "parent": "x-clade-mand1469",
+  "ancestors": [
+    {
+      "code": "x-clade-mand1469",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Mande — Susu belongs to the Susu-Yalunka branch of Central Mande."
+    }
+  ],
+  "location": {
+    "latitude": 9.95,
+    "longitude": -13.5,
+    "source": "glottolog",
+    "notes": "Approximate centroid of the coastal Guinea Susu-speaking region."
+  }
+}

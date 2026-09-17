@@ -1,0 +1,153 @@
+{
+  "code": "fa-AF",
+  "name": "Dari (Afghan Persian)",
+  "script": "Arabic",
+  "graphemes_base": "fa",
+  "graphemes": {
+    "ا": [
+      "ʔ",
+      "aː"
+    ],
+    "آ": [
+      "ʔaː"
+    ],
+    "ح": [
+      "ħ",
+      "h"
+    ],
+    "ع": [
+      "ʕ",
+      "ʔ"
+    ],
+    "ق": [
+      "q"
+    ],
+    "و": [
+      "v",
+      "uː",
+      "oː"
+    ],
+    "ی": [
+      "j",
+      "iː",
+      "eː"
+    ]
+  },
+  "allophones_base": "fa",
+  "allophones": {
+    "n": [
+      "n",
+      "m",
+      "ŋ"
+    ],
+    "ɒː": [
+      "aː"
+    ],
+    "æ": [
+      "a"
+    ],
+    "q": [
+      "q"
+    ],
+    "ʕ": [
+      "ʕ",
+      "ʔ"
+    ],
+    "ħ": [
+      "ħ",
+      "h"
+    ],
+    "aː": [
+      "aː"
+    ],
+    "a": [
+      "a"
+    ],
+    "eː": [
+      "eː"
+    ],
+    "oː": [
+      "oː"
+    ]
+  },
+  "parent": "fa",
+  "ancestors": [
+    {
+      "code": "fa-x-early",
+      "role": "parent",
+      "weight": 0.92,
+      "notes": "Classical New Persian — Dari is the most conservative major variety"
+    },
+    {
+      "code": "ps",
+      "role": "adstrate",
+      "weight": 0.05,
+      "notes": "Pashto adstrate: some phonological and lexical influence"
+    }
+  ],
+  "notes": "Dari (دری) — Afghan Persian; official language of Afghanistan. CONSERVATIVE VOWEL SYSTEM: retains Classical values; NO Tehran vowel shift (ā = [aː] not [ɒː]; a = [a] not [æ]). /q/ → [q] maintained as uvular (not merged with ɣ). /ħ/ → [ħ] maintained in careful speech (Arabic ح). /ʕ/ → [ʕ] maintained in Arabic loanwords (more than Tehran). Pashto adstrate: some retroflex-influenced articulation in some speakers. Hazaragi variety (Hazara people): Mongolian substrate (see fa-x-hazaragi). Kabul Dari is the prestige/media standard. Primary reference: Farhadi 1955 (Kabuli Dari grammar) confirms the conservative vowel system and majhul eː/oː retention encoded above.",
+  "quality": "skeleton",
+  "script_type": "abjad",
+  "sources": [
+    {
+      "id": "mahootian1997",
+      "author": "Mahootian, S.",
+      "year": 1997,
+      "title": "Persian",
+      "publisher": "Routledge",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "windfuhr1979",
+      "author": "Windfuhr, G.",
+      "year": 1979,
+      "title": "Persian Grammar: History and State of Its Study",
+      "publisher": "Mouton",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "perry2011",
+      "author": "Perry, J.R.",
+      "year": 2011,
+      "title": "A Tajik Persian Reference Grammar",
+      "publisher": "Brill",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "farhadi1955",
+      "author": "Farhadi, A.G.R.",
+      "year": 1955,
+      "title": "Le persan parlé en Afghanistan (Grammaire du kaboli)",
+      "publisher": "Klincksieck",
+      "url": null,
+      "pages": null,
+      "notes": "Primary descriptive grammar of Kabuli Dari: conservative vowel system (no Tehran ā-backing/a-fronting), retention of majhul eː/oː, w~v realisation of و."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Dari_language",
+    "https://fa.wikipedia.org/wiki/دری",
+    "https://fa.wikipedia.org/wiki/%D9%81%D8%A7%D8%B1%D8%B3%DB%8C_%D8%AF%D8%B1%DB%8C",
+    "https://en.wikipedia.org/wiki/Dari"
+  ],
+  "timespan": {
+    "start_year": 1000,
+    "end_year": null
+  },
+  "glottolog_code": "dari1249",
+  "iso639_3": "prs",
+  "wikidata_qid": "Q178440",
+  "wals_code": "dri",
+  "location": {
+    "latitude": 34.39757,
+    "longitude": 66.14961,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Dari."
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "code": "blk",
+  "name": "Pa'O",
+  "script": "Myanmar",
+  "script_type": "abugida",
+  "quality": "stub",
+  "iso639_3": "blk",
+  "glottolog_code": "paok1235",
+  "wikidata_qid": "Q7121294",
+  "graphemes": {},
+  "allophones": {},
+  "notes": "Pa'O (Pa-O Karen) of Myanmar, written in the Mon–Burmese (Myanmar) script, an abugida. The grapheme inventory is NOT yet specified: no consonant/vowel-sign → IPA mapping is claimed here. A correct spec requires the full Myanmar-script akshara model (consonant letters with an inherent vowel, dependent vowel signs, medials, the virama/asat, and the Pa'O-specific tone letters) plus a documented Pa'O phoneme inventory; that research has not been done. Metadata only. PHONEME INVENTORY: attested inventory from PHOIBLE (glottocode paok1235), declared directly. `graphemes` stays empty because none of that depends on the writing system: the sounds of this language are known regardless of whether — or how — it is written.",
+  "sources": [
+    {
+      "id": "blk_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Pa'O language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Pa%27O_language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Pa%27O_language",
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "phoible",
+      "author": "Moran, Steven & McCloy, Daniel (eds.)",
+      "year": 2019,
+      "title": "PHOIBLE 2.0",
+      "publisher": "Max Planck Institute for the Science of Human History",
+      "url": "https://phoible.org/",
+      "pages": null,
+      "notes": "Attested phoneme inventory for glottocode paok1235."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Pa%27O_language",
+    "https://blk.wikipedia.org/wiki/%E1%80%95%E1%80%A1%E1%80%AD%E1%80%AF%E1%80%9D%E1%80%BA%E1%82%8F%E1%80%98%E1%80%AC%E1%82%8F%E1%80%9E%E1%80%AC%E1%82%8F"
+  ],
+  "phonemes": [
+    "a",
+    "ai",
+    "au",
+    "b",
+    "c",
+    "cʰ",
+    "d",
+    "e",
+    "h",
+    "i",
+    "j",
+    "k",
+    "kʰ",
+    "l",
+    "m",
+    "n",
+    "o",
+    "p",
+    "pʰ",
+    "r",
+    "s",
+    "t",
+    "tʰ",
+    "u",
+    "w",
+    "ŋ",
+    "ɔ",
+    "ə",
+    "ɛ",
+    "ʉ",
+    "ʔ",
+    "˥˩",
+    "˦˥",
+    "˧"
+  ],
+  "parent": "x-clade-sino1245",
+  "ancestors": [
+    {
+      "code": "x-clade-sino1245",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Sino-Tibetan — the classification node this language sits under."
+    }
+  ],
+  "location": {
+    "latitude": 20.211,
+    "longitude": 97.5969,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Pa'o Karen."
+  }
+}

@@ -1,0 +1,157 @@
+{
+  "code": "fa-x-enp",
+  "name": "Early New Persian (Perso-Arabic reading)",
+  "script": "Arabic",
+  "graphemes_base": "fa",
+  "graphemes": {
+    "ا": [
+      "ʔ",
+      "aː"
+    ],
+    "آ": [
+      "ʔaː"
+    ],
+    "ق": [
+      "q"
+    ],
+    "ر": [
+      "r"
+    ],
+    "و": [
+      "w",
+      "uː",
+      "aw"
+    ],
+    "خو": [
+      "xʷ"
+    ],
+    "خوا": [
+      "xʷaː"
+    ],
+    "خواه": [
+      "xʷaːh"
+    ],
+    "َ": [
+      "a"
+    ],
+    "ِ": [
+      "i"
+    ],
+    "ُ": [
+      "u"
+    ]
+  },
+  "positional_graphemes": {
+    "ا": {
+      "word_initial": [
+        "ʔ"
+      ],
+      "default": [
+        "aː"
+      ]
+    },
+    "و": {
+      "word_initial": [
+        "w"
+      ],
+      "default": [
+        "uː",
+        "aw",
+        "w"
+      ]
+    },
+    "ه": {
+      "word_final": [
+        "a",
+        "h"
+      ],
+      "default": [
+        "h"
+      ]
+    }
+  },
+  "allophones_base": "fa",
+  "allophones": {
+    "aː": [
+      "aː"
+    ],
+    "a": [
+      "a"
+    ],
+    "i": [
+      "i"
+    ],
+    "u": [
+      "u"
+    ],
+    "q": [
+      "q"
+    ],
+    "r": [
+      "r",
+      "ɾ"
+    ],
+    "w": [
+      "w"
+    ],
+    "xʷ": [
+      "xʷ"
+    ],
+    "aw": [
+      "aw"
+    ],
+    "aj": [
+      "aj"
+    ]
+  },
+  "parent": "fa",
+  "ancestors": [
+    {
+      "code": "fa",
+      "role": "parent",
+      "weight": 0.9,
+      "notes": "Same Perso-Arabic script and lexicon as Contemporary Iranian Persian; this spec reads that script under the Early New Persian phonology instead."
+    },
+    {
+      "code": "pal",
+      "role": "substrate",
+      "weight": 0.2,
+      "notes": "Descent from Middle Persian/Pahlavi, retained more conservatively here than in the Tehran standard."
+    }
+  ],
+  "notes": "Early New Persian (ENP, ~10th-16th c.) reading of the Perso-Arabic script, distinct from the Contemporary Iranian (Tehrani) reading in fa.json. Named for Early New Persian rather than 'Classical Persian': Paul (2002: 21), quoted in Miller (2012: 158), calls 'Classical Persian' 'not a well-defined linguistic term. It is a literary term only, but there is no agreement among Iranians or non-Iranians on what it actually denotes.' Miller and Windfuhr use ENP for the baseline system with the majhul vowels, /aː/, /q/ and aj/aw intact. RULES AND CITATIONS. (1) bare alef /ا/ and the alef-carrier /آ/ read aː, not the Tehran-backed ɒː: Paul, L., 'PERSIAN LANGUAGE i. Early New Persian', Encyclopaedia Iranica (2000, rev. 2013), https://www.iranicaonline.org/articles/persian-language-1-early-new-persian/ -- 'the NP system being ā (=[å]) i u / a e o' for modern NP, contrasted with the ENP figure Miller (2012: 157) gives as 'ā ē ī ō ū a (e) i (o) u', i.e. ENP ā is a plain long [aː], the [å]/[ɒː] backing being a modern-NP-only development. (2) ⟨ق⟩ qāf reads q, kept distinct from ⟨غ⟩ ġayn = ɣ: Paul (Iranica), 'The ENP distinct phonemes ġ and q turn into positional allophones with post-velar articulation in modern spoken NP, especially in ... Tehran ... In \\'learned\\' pronunciation and in many areas such as Yazd, Kerman, and Kabul, the two sounds may still be distinguished.' (3) ⟨ر⟩ rā reads the trill/flap r rather than the Tehran tap ɾ, matching the plain broad 'r' used throughout the ENP-reading gold this spec is scored against; no separate primary source pins the ENP rhotic's exact phonetic value, so r is kept as an allophone of the same rhotic as ɾ (see allophones) rather than asserted as an independent phoneme. (4) ⟨و⟩ wāw reads consonantal w, not the Tehran labiodental v: Paul (Iranica), 'The pronunciation of wāw shifted from a bilabial glide [w] to a labiodental fricative [v], possibly due to Turkic influence (Pisowicz, p. 120).' (5) ⟨خو⟩/⟨خوا⟩/⟨خواه⟩ khe-ye ma'dul: the labialised onset xʷ is kept rather than reduced: Paul (Iranica), 'ḵʷ, which should be considered a phoneme in MP and ENP, lost its labial component (e.g., ḵʷār \\'mean\\' → [ḵār], except for ḵʷa which turned into ḵu, later ḵo; e.g., ḵʷad \\'self\\' → [ḵod]).' The modern spec's silent-wāw reading of ⟨خوا⟩ (xɒː) is exactly this later reduction; ENP keeps the labial. (6) the short-vowel diacritics keep their ENP quality-neutral values a/i/u instead of the Tehran-fronted/lowered æ/e/o: Paul (Iranica), 'In modern NP, ENP i/u have been shifted to e/o ... the NP system being ā (=[å]) i u / a e o', i.e. the un-shifted ENP short vowels are a, i, u. The word-final ⟨ه⟩ reading is extended from the same short-a value by analogy (not independently cited): since the diacritic-less final short vowel this letter marks is the same short /a/ covered by rule (6), it is read a rather than the Tehran-only word-final e. NOT MAPPED. The majhul vowels ē/ō (Miller 2012: 157-158, citing Phillott 1919: 23 and the Nicholson 1926 shér/shír minimal pair) and the aj/au diphthongs are real ENP phonemes, but the undotted Perso-Arabic script spells majhul ē/ō with the same letters (ی and و) as maʿruf ī/ū, and the diphthong glides with the same letters used for the vocalic and consonantal readings already in the lattice; Miller (2012: 158) makes exactly this point -- 'the Persian writing system, based on Arabic, does not provide any insight into changes in the pronunciation of these vowels.' Disambiguating majhul from maʿruf, or an on-glide diphthong from a plain vowel, requires a pronunciation lexicon keyed by etymology, not a grapheme rule, so ⟨ی⟩ and the vocalic ⟨و⟩ default keep their maʿruf/monophthong readings (iː, uː) from the parent spec and are not further split here; 'aw' is offered only as a secondary candidate on ⟨و⟩ because it is orthographically recoverable in the same post-vocalic environment already used by fa.json's 'ow'. No page locator is claimed for the ENP rhotic's phonetic detail (point 3) or for the final-ه extension (point 6, sentence 2).",
+  "quality": "research",
+  "script_type": "abjad",
+  "sources": [
+    {
+      "id": "paul2000",
+      "author": "Paul, Ludwig",
+      "year": 2000,
+      "title": "PERSIAN LANGUAGE i. Early New Persian",
+      "publisher": "Encyclopaedia Iranica",
+      "url": "https://www.iranicaonline.org/articles/persian-language-1-early-new-persian/",
+      "pages": null,
+      "notes": "Published 2000-01-01, last updated 2013-11-21. Retrieved via curl with a browser user-agent (the site returns 403 to a plain fetch). Source for the ḵʷ, q/ġ, wāw w->v, and short-vowel-shift passages quoted in this spec's notes."
+    },
+    {
+      "id": "miller2012",
+      "author": "Miller, Corey",
+      "year": 2012,
+      "title": "Variation in Persian Vowel Systems",
+      "publisher": "Orientalia Suecana LXI, pp. 156-169, University of Maryland",
+      "url": "https://www.diva-portal.org/smash/get/diva2:657365/FULLTEXT01.pdf",
+      "pages": "156-169",
+      "notes": "Source for the ENP vowel figure, the majhul ē/ō vs maʿruf ī/ū contrast and its chronology, the Paul (2002: 21) 'Classical Persian is not a well-defined linguistic term' quotation, and the one-script-two-readings argument."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Early_New_Persian",
+    "https://en.wikipedia.org/wiki/Persian_language"
+  ],
+  "timespan": {
+    "start_year": 900,
+    "end_year": 1600
+  },
+  "glottolog_code": null,
+  "iso639_3": "fas"
+}

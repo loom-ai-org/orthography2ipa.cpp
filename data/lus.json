@@ -1,0 +1,352 @@
+{
+  "code": "lus",
+  "name": "Mizo",
+  "script": "Latin",
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "aw": [
+      "ɔ"
+    ],
+    "e": [
+      "e"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "o"
+    ],
+    "u": [
+      "u"
+    ],
+    "â": [
+      "aː"
+    ],
+    "ê": [
+      "eː"
+    ],
+    "î": [
+      "iː"
+    ],
+    "ô": [
+      "oː"
+    ],
+    "û": [
+      "uː"
+    ],
+    "ai": [
+      "ai"
+    ],
+    "au": [
+      "au"
+    ],
+    "ei": [
+      "ei"
+    ],
+    "eu": [
+      "eu"
+    ],
+    "ia": [
+      "ia"
+    ],
+    "iu": [
+      "iu"
+    ],
+    "ua": [
+      "ua"
+    ],
+    "ui": [
+      "ui"
+    ],
+    "p": [
+      "p"
+    ],
+    "ph": [
+      "pʰ"
+    ],
+    "b": [
+      "b"
+    ],
+    "t": [
+      "t"
+    ],
+    "th": [
+      "tʰ"
+    ],
+    "d": [
+      "d"
+    ],
+    "k": [
+      "k"
+    ],
+    "kh": [
+      "kʰ"
+    ],
+    "ch": [
+      "ts"
+    ],
+    "chh": [
+      "tsʰ"
+    ],
+    "f": [
+      "f"
+    ],
+    "v": [
+      "v"
+    ],
+    "s": [
+      "s"
+    ],
+    "z": [
+      "z"
+    ],
+    "h": [
+      "h"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ng": [
+      "ŋ"
+    ],
+    "l": [
+      "l"
+    ],
+    "r": [
+      "r"
+    ],
+    "y": [
+      "j"
+    ],
+    "hm": [
+      "m̥"
+    ],
+    "hn": [
+      "n̥"
+    ],
+    "hng": [
+      "ŋ̥"
+    ],
+    "hl": [
+      "l̥"
+    ],
+    "hr": [
+      "r̥"
+    ],
+    "ngh": [
+      "ŋ̊"
+    ],
+    "ṭ": [
+      "t͡ɾ"
+    ],
+    "ṭh": [
+      "t͡ɾʰ"
+    ]
+  },
+  "allophones": {
+    "p": [
+      "p"
+    ],
+    "pʰ": [
+      "pʰ"
+    ],
+    "b": [
+      "b"
+    ],
+    "t": [
+      "t"
+    ],
+    "tʰ": [
+      "tʰ"
+    ],
+    "d": [
+      "d"
+    ],
+    "k": [
+      "k"
+    ],
+    "kʰ": [
+      "kʰ"
+    ],
+    "tʃ": [
+      "tʃ"
+    ],
+    "tʃʰ": [
+      "tʃʰ"
+    ],
+    "f": [
+      "f"
+    ],
+    "v": [
+      "v"
+    ],
+    "s": [
+      "s"
+    ],
+    "z": [
+      "z"
+    ],
+    "h": [
+      "h"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ŋ": [
+      "ŋ"
+    ],
+    "l": [
+      "l"
+    ],
+    "r": [
+      "r"
+    ],
+    "j": [
+      "j"
+    ],
+    "m̥": [
+      "m̥"
+    ],
+    "n̥": [
+      "n̥"
+    ],
+    "ŋ̥": [
+      "ŋ̥"
+    ],
+    "l̥": [
+      "l̥"
+    ],
+    "r̥": [
+      "r̥"
+    ],
+    "ŋ̊": [
+      "ŋ̊"
+    ],
+    "a": [
+      "a"
+    ],
+    "aː": [
+      "aː"
+    ],
+    "e": [
+      "e"
+    ],
+    "eː": [
+      "eː"
+    ],
+    "i": [
+      "i"
+    ],
+    "iː": [
+      "iː"
+    ],
+    "o": [
+      "o"
+    ],
+    "oː": [
+      "oː"
+    ],
+    "u": [
+      "u"
+    ],
+    "uː": [
+      "uː"
+    ],
+    "ɔ": [
+      "ɔ"
+    ],
+    "ai": [
+      "ai"
+    ],
+    "au": [
+      "au"
+    ],
+    "ei": [
+      "ei"
+    ],
+    "eu": [
+      "eu"
+    ],
+    "ia": [
+      "ia"
+    ],
+    "iu": [
+      "iu"
+    ],
+    "ua": [
+      "ua"
+    ],
+    "ui": [
+      "ui"
+    ]
+  },
+  "parent": "mni-x-proto-kuki-chin",
+  "ancestors": [
+    {
+      "code": "mni-x-proto-kuki-chin",
+      "role": "parent",
+      "weight": 0.85,
+      "notes": "Mizo/Lushai is a Central Kuki-Chin (Kuki-Chin proper) language descended from Proto-Kuki-Chin (VanBik 2009)."
+    }
+  ],
+  "notes": "Mizo (Lushai), spoken in Mizoram, India. Central Kuki-Chin branch, Sino-Tibetan. Alphabet devised 1894 by J.H. Lorrain & F.W. Savidge on Hunterian transliteration principles and is highly regular/phonemic (Wikipedia; Lorrain 1940 grammar). Circumflex marks long vowels (aâ eê iî oô uû). ⟨ch chh⟩ spell the ALVEOLAR affricates /ts tsʰ/ and ⟨ṭ ṭh⟩ the flapped [t͡ɾ t͡ɾʰ] per the Wikipedia Mizo consonant table (corrected from an earlier postalveolar reading). ⟨aw⟩ ranges [o]~[ɔ] per the same table; /ɔ/ is used here. Digraph ⟨aw⟩ is the single spelling for the mid-back rounded vowel /ɔ/ -- earns its key because a+w does not compose to /ɔ/ under this spec's own a=/a/, w=/w/(not a standalone grapheme here) values, i.e. it is not a concatenation of independently-mapped parts. Digraphs ⟨ph th kh ch chh⟩ spell the aspirated stop/affricate series (single phonemes, AGENTS.md test 2). ⟨ng⟩ spells the velar nasal /ŋ/, a single segment not n+g. The pre-aspirated sonorants ⟨hm hn hng hl hr⟩ and post-aspirated ⟨ngh⟩ spell voiceless sonorants /m̥ n̥ ŋ̊ l̥ r̥/ -- single phonemes per Chhangte (1993) and Wikipedia's consonant table, not h+sonorant clusters, so each earns its key under AGENTS.md test 1/2. Mizo has 8 lexical tones/intonations realised on the vowel (Chhangte 1993; Weidert 1975) which the standard orthography largely leaves unmarked in ordinary text (only length is marked via circumflex); tone is therefore not represented in this grapheme map (would require diacritics absent from the citable orthographic norm) -- documented here rather than fabricated as extra vowel keys.",
+  "quality": "research",
+  "script_type": "alphabet",
+  "iso639_3": "lus",
+  "sources": [
+    {
+      "id": "chhangte1993",
+      "author": "Chhangte, L.",
+      "year": 1993,
+      "title": "Mizo Syntax",
+      "publisher": "University of Oregon PhD dissertation",
+      "url": null,
+      "pages": null,
+      "notes": "Phonology and tone description of Mizo.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Mizo_language"
+    },
+    {
+      "id": "lorrain1940",
+      "author": "Lorrain, J.H.",
+      "year": 1940,
+      "title": "Dictionary of the Lushai Language",
+      "publisher": "The Asiatic Society",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "vanbik2009",
+      "author": "VanBik, K.",
+      "year": 2009,
+      "title": "Proto-Kuki-Chin: A Reconstructed Ancestor of the Kuki-Chin Languages",
+      "publisher": "STEDT Monograph 8, UC Berkeley",
+      "url": null,
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Mizo_language"
+  ],
+  "timespan": {
+    "start_year": 1894,
+    "end_year": null
+  },
+  "glottolog_code": "lush1249",
+  "wikidata_qid": "Q36147",
+  "location": {
+    "latitude": 23.3441,
+    "longitude": 92.9376,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Mizo (Mizoram, India)."
+  }
+}

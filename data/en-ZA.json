@@ -1,0 +1,80 @@
+{
+  "code": "en-ZA",
+  "name": "South African English",
+  "script": "Latin",
+  "graphemes_base": "en-GB",
+  "allophones_base": "en-GB",
+  "allophones": {
+    "t": [
+      "t",
+      "tʰ",
+      "ɾ",
+      "ʔ",
+      "t̚"
+    ],
+    "æ": [
+      "æ",
+      "ɛ",
+      "eː"
+    ],
+    "ɑː": [
+      "aː",
+      "ɑː"
+    ],
+    "oʊ": [
+      "oʊ",
+      "əʊ"
+    ]
+  },
+  "parent": "en-GB",
+  "ancestors": [
+    {
+      "code": "enm",
+      "role": "parent",
+      "weight": 0.82,
+      "notes": "Middle English descent via British colonial English"
+    },
+    {
+      "code": "af",
+      "role": "adstrate",
+      "weight": 0.08,
+      "notes": "Afrikaans adstrate: vowel qualities, some phonological calques"
+    }
+  ],
+  "notes": "South African English. Non-rhotic. Three main varieties: White SAfrE, Cape Coloured English, Black SAfrE. TRAP raising common in White SAfrE. Afrikaans adstrate: some vowel quality differences. Source: Wells (1982) vol. 3.",
+  "quality": "skeleton",
+  "script_type": "alphabet",
+  "sources": [
+    {
+      "id": "wells1982_vol3",
+      "author": "Wells, J.C.",
+      "year": 1982,
+      "title": "Accents of English, Vol. 3: Beyond the British Isles",
+      "publisher": "Cambridge University Press",
+      "url": null,
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/South_African_English"
+  ],
+  "timespan": {
+    "start_year": 1800,
+    "end_year": null
+  },
+  "glottolog_code": "sout3331",
+  "iso639_3": "eng",
+  "wikidata_qid": "Q1156228",
+  "location": {
+    "latitude": -29,
+    "longitude": 24,
+    "source": "wikidata",
+    "notes": "South Africa's representative point. A national variety: weak. [Wikidata Q258 P625]"
+  },
+  "collapse_geminates": true,
+  "vowel_graphemes": [
+    "y"
+  ],
+  "word_exceptions_base": "en-GB"
+}

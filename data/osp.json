@@ -1,0 +1,171 @@
+{
+  "code": "osp",
+  "name": "Old Spanish",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "ch": [
+      "tʃ"
+    ],
+    "ll": [
+      "ʎ"
+    ],
+    "ñ": [
+      "ɲ"
+    ],
+    "nn": [
+      "ɲ"
+    ],
+    "qu": [
+      "k"
+    ],
+    "gu": [
+      "ɡ"
+    ],
+    "ss": [
+      "s"
+    ],
+    "a": [
+      "a"
+    ],
+    "e": [
+      "e"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "o"
+    ],
+    "u": [
+      "u"
+    ],
+    "b": [
+      "b"
+    ],
+    "c": [
+      "k"
+    ],
+    "ç": [
+      "ts"
+    ],
+    "d": [
+      "d"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "h": [
+      "h"
+    ],
+    "j": [
+      "dʒ"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "v": [
+      "β"
+    ],
+    "x": [
+      "ʃ"
+    ],
+    "y": [
+      "j"
+    ],
+    "z": [
+      "dz"
+    ]
+  },
+  "parent": "la-x-hispania",
+  "ancestors": [
+    {
+      "code": "la-x-hispania",
+      "role": "parent",
+      "weight": 0.9,
+      "notes": "Descent from Hispanic Vulgar Latin"
+    },
+    {
+      "code": "xaa",
+      "role": "adstrate",
+      "weight": 0.05,
+      "notes": "Andalusi Arabic adstrate: lexical layer, some phonological influence"
+    }
+  ],
+  "notes": "Skeleton. Old (Medieval) Spanish, before the 16th-17th c. sibilant readjustment. Keeps the voiced/voiceless sibilant contrasts: ⟨ç⟩=/ts/, ⟨z⟩=/dz/, ⟨x⟩=/ʃ/, ⟨j/g(e,i)⟩=/dʒ/, ⟨ss⟩=/s/. Intervocalic ⟨v/b⟩=/β/. Positional ⟨c/g⟩ before front vowels encoded.",
+  "iso639_3": "osp",
+  "glottolog_code": null,
+  "sources": [
+    {
+      "id": "penny2002osp",
+      "author": "Penny, Ralph",
+      "year": 2002,
+      "title": "A History of the Spanish Language (2nd ed.)",
+      "publisher": "Cambridge University Press",
+      "url": null,
+      "pages": null,
+      "notes": "Historical phonology of Old Spanish, including the medieval sibilant system.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Old_Spanish"
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Old_Spanish",
+    "https://en.wikipedia.org/wiki/History_of_Spanish"
+  ],
+  "timespan": {
+    "start_year": 1100,
+    "end_year": 1500
+  },
+  "positional_graphemes": {
+    "c": {
+      "before_e": [
+        "ts"
+      ],
+      "before_i": [
+        "ts"
+      ]
+    },
+    "g": {
+      "before_e": [
+        "dʒ"
+      ],
+      "before_i": [
+        "dʒ"
+      ]
+    }
+  },
+  "stress": {
+    "cliticless_words": ["el", "la", "lo", "los", "las", "un", "una", "unos", "unas", "al", "del", "a", "de", "en", "con", "por", "sin", "tras", "para", "y", "e", "o", "u", "ni", "que", "si", "me", "te", "se", "le", "les", "nos", "os", "mi", "tu", "su", "mis", "tus", "sus"],
+    "default_position": -2,
+    "final_stress_endings": ["r", "l", "d", "z", "j", "x", "k", "f"],
+    "penult_stress_endings": ["n", "s", "ns"],
+    "marked_vowels": [],
+    "stress_mark": "ˈ",
+    "notes": "Old Spanish accentuation is continuous with the modern system already modeled for es-ES/es-AR: default paroxytone, oxytone before consonant codas other than n/s. Medieval orthography did not consistently write the accent mark, so marked_vowels is left empty here (unlike the modern spellings). Source: Penny, A History of the Spanish Language (2002), ch. on stress/accent."
+  }
+}

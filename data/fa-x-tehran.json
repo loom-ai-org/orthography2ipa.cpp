@@ -1,0 +1,120 @@
+{
+  "code": "fa-x-tehran",
+  "name": "Tehran Persian (Standard Iranian)",
+  "script": "Arabic",
+  "graphemes_base": "fa",
+  "allophones_base": "fa",
+  "allophones": {
+    "ʔ": [
+      "ʔ",
+      ""
+    ],
+    "ɣ": [
+      "ɣ",
+      "ɢ"
+    ],
+    "q": [
+      "ɣ",
+      "ɢ"
+    ],
+    "i": [
+      "i",
+      "e"
+    ],
+    "u": [
+      "u",
+      "o"
+    ],
+    "ɒː": [
+      "ɒː",
+      "uː"
+    ]
+  },
+  "parent": "fa",
+  "ancestors": [
+    {
+      "code": "fa-x-early",
+      "role": "parent",
+      "weight": 0.9,
+      "notes": "New Persian descent; Tehran dialect became standard ~19th c."
+    },
+    {
+      "code": "ar",
+      "role": "adstrate",
+      "weight": 0.08,
+      "notes": "Arabic adstrate: 40–50% of formal vocabulary; consonants θ/ð/ħ/ʕ/q assimilated phonologically"
+    }
+  ],
+  "notes": "Tehran Standard Persian — the national standard of Iran. DEFINING VOWEL SHIFT (vs. Classical/Dari/Tajik): Classical ā [aː] → Tehran [ɒː] (backed); Classical a → [æ] (fronted). 6-VOWEL SYSTEM: ɒː, æ, e, o, iː, uː (no contrastive length). Voiceless stops aspirated [pʰ tʰ kʰ] in onset. q/ɣ merger: Arabic ق and غ both → [ɣ] or [ɢ]. ħ → h (pharyngeal lost); ʕ → ʔ (often deleted). r → [ɾ] tap in most positions. COLLOQUIAL LAYER (vs. the fa formal standard this spec bases on): word-final -ān is commonly raised to [-uːn] in casual/colloquial speech (nān 'bread' -> [nuːn], jān 'dear/soul' -> [dʒuːn]; Jahangiri 2000; Windfuhr 2009). ENGINE LIMIT: the raising is conditioned on word-final position of the -ān sequence specifically (not all ɒː), which this phoneme-level allophone map cannot express positionally since ا and ن are separate graphemes; [uː] is listed as an available conditioned variant of ɒː rather than a positionally-triggered rule. A second colloquial reduction (frequent function/adverb words in -ar losing the rhotic and lowering, e.g. digar 'other' -> dige, agar 'if' -> age) is lexically restricted to a closed set of high-frequency words rather than a general phonological rule, so it is documented here but intentionally NOT encoded as a grapheme/allophone override (would overgeneralize to unrelated -ar words, e.g. bāzār 'market').",
+  "quality": "skeleton",
+  "script_type": "abjad",
+  "sources": [
+    {
+      "id": "mahootian1997",
+      "author": "Mahootian, S.",
+      "year": 1997,
+      "title": "Persian",
+      "publisher": "Routledge",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "windfuhr1979",
+      "author": "Windfuhr, G.",
+      "year": 1979,
+      "title": "Persian Grammar: History and State of Its Study",
+      "publisher": "Mouton",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "lazard1992",
+      "author": "Lazard, G.",
+      "year": 1992,
+      "title": "A Grammar of Contemporary Persian",
+      "publisher": "Mazda Publishers",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "majidi1991",
+      "author": "Majidi, M.-R. & Ternes, E.",
+      "year": 1991,
+      "title": "Persian (Farsi)",
+      "publisher": "Journal of the International Phonetic Association 21(2), Illustrations of the IPA",
+      "url": null,
+      "pages": "96-97",
+      "notes": "JIPA illustration confirming the six-vowel Tehrani inventory /i, e, æ, ɒ, o, u/ with phonetic backing/length on ɒː, iː, uː."
+    },
+    {
+      "id": "jahangiri2000",
+      "author": "Jahangiri, N.",
+      "year": 2000,
+      "title": "A Sociolinguistic Study of Persian in Tehran",
+      "publisher": "PhD thesis, SOAS, University of London",
+      "url": null,
+      "pages": null,
+      "notes": "Documents colloquial Tehrani raising of word-final -ān to [-uːn] (e.g. nān -> nun, jān -> joon) and other informal-register reductions, alongside the formal Tehran standard."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Tehran",
+    "https://fa.wikipedia.org/wiki/%D9%84%D9%87%D8%AC%D9%87_%D8%AA%D9%87%D8%B1%D8%A7%D9%86%DB%8C"
+  ],
+  "timespan": {
+    "start_year": 1800,
+    "end_year": null
+  },
+  "glottolog_code": null,
+  "iso639_3": "fas",
+  "wikidata_qid": "Q7694905",
+  "location": {
+    "latitude": 35.688889,
+    "longitude": 51.389722,
+    "source": "wikidata",
+    "notes": "Tehran — the city whose speech IS the Iranian standard. [Wikidata Q3616 P625]"
+  }
+}

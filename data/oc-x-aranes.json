@@ -1,0 +1,492 @@
+{
+  "code": "oc-x-aranes",
+  "name": "Aranese (Gascon Occitan)",
+  "script": "Latin",
+  "graphemes": {
+    "a": [
+      "a",
+      "ɔ"
+    ],
+    "e": [
+      "e",
+      "ɛ"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "u"
+    ],
+    "u": [
+      "y"
+    ],
+    "à": [
+      "a"
+    ],
+    "è": [
+      "ɛ"
+    ],
+    "é": [
+      "e"
+    ],
+    "í": [
+      "i"
+    ],
+    "ò": [
+      "ɔ"
+    ],
+    "ó": [
+      "u"
+    ],
+    "ú": [
+      "y"
+    ],
+    "b": [
+      "b"
+    ],
+    "c": [
+      "k",
+      "s"
+    ],
+    "ç": [
+      "s"
+    ],
+    "d": [
+      "d"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɡ",
+      "dʒ"
+    ],
+    "h": [
+      "h",
+      ""
+    ],
+    "j": [
+      "dʒ"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "p": [
+      "p"
+    ],
+    "q": [
+      "k"
+    ],
+    "r": [
+      "r",
+      "ɾ"
+    ],
+    "s": [
+      "s",
+      "z"
+    ],
+    "t": [
+      "t"
+    ],
+    "v": [
+      "b",
+      "β"
+    ],
+    "x": [
+      "ks"
+    ],
+    "z": [
+      "z"
+    ],
+    "ch": [
+      "tʃ"
+    ],
+    "lh": [
+      "ʎ"
+    ],
+    "nh": [
+      "ɲ"
+    ],
+    "rr": [
+      "r"
+    ],
+    "ss": [
+      "s"
+    ],
+    "qu": [
+      "k",
+      "kw"
+    ],
+    "gu": [
+      "ɡ",
+      "ɡw"
+    ],
+    "sh": [
+      "ʃ"
+    ],
+    "th": [
+      "t",
+      "tʃ"
+    ],
+    "ai": [
+      "aj"
+    ],
+    "au": [
+      "aw"
+    ],
+    "ei": [
+      "ej"
+    ],
+    "eu": [
+      "ew"
+    ],
+    "oi": [
+      "uj"
+    ],
+    "ou": [
+      "ow"
+    ],
+    "iu": [
+      "iw"
+    ],
+    "ui": [
+      "yj"
+    ],
+    "tg": [
+      "dʒ"
+    ],
+    "ll": [
+      "l"
+    ],
+    "ts": [
+      "ts"
+    ],
+    "tz": [
+      "dz",
+      "ts"
+    ],
+    "tj": [
+      "dʒ"
+    ],
+    "ish": [
+      "ʃ"
+    ],
+    "n·h": [
+      "nh"
+    ],
+    "s·h": [
+      "sh"
+    ],
+    "'": [
+      ""
+    ],
+    "’": [
+      ""
+    ],
+    "w": [
+      "w"
+    ],
+    "y": [
+      "i"
+    ],
+    "èu": [
+      "ɛw"
+    ],
+    "òu": [
+      "ɔw"
+    ],
+    "èi": [
+      "ɛj"
+    ],
+    "òi": [
+      "ɔj"
+    ],
+    "ói": [
+      "uj"
+    ],
+    "ue": [
+      "we"
+    ],
+    "uè": [
+      "wɛ"
+    ]
+  },
+  "allophones": {
+    "b": [
+      "b",
+      "β"
+    ],
+    "d": [
+      "d",
+      "ð"
+    ],
+    "ɡ": [
+      "ɡ",
+      "ɣ"
+    ],
+    "p": [
+      "p"
+    ],
+    "t": [
+      "t"
+    ],
+    "k": [
+      "k"
+    ],
+    "f": [
+      "f"
+    ],
+    "h": [
+      "h",
+      ""
+    ],
+    "s": [
+      "s"
+    ],
+    "z": [
+      "z"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "ʒ": [
+      "ʒ"
+    ],
+    "tʃ": [
+      "tʃ"
+    ],
+    "dʒ": [
+      "dʒ"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n",
+      "ŋ"
+    ],
+    "ɲ": [
+      "ɲ"
+    ],
+    "l": [
+      "l"
+    ],
+    "ʎ": [
+      "ʎ"
+    ],
+    "ɾ": [
+      "ɾ"
+    ],
+    "r": [
+      "r"
+    ],
+    "j": [
+      "j"
+    ],
+    "w": [
+      "w"
+    ],
+    "a": [
+      "a"
+    ],
+    "ɔ": [
+      "ɔ"
+    ],
+    "e": [
+      "e"
+    ],
+    "ɛ": [
+      "ɛ"
+    ],
+    "i": [
+      "i"
+    ],
+    "u": [
+      "u"
+    ],
+    "y": [
+      "y"
+    ]
+  },
+  "positional_graphemes": {
+    "b": {
+      "default": [
+        "b"
+      ],
+      "intervocalic": [
+        "β"
+      ]
+    },
+    "d": {
+      "default": [
+        "d"
+      ],
+      "intervocalic": [
+        "ð"
+      ]
+    },
+    "g": {
+      "before_e": [
+        "dʒ",
+        "ʒ"
+      ],
+      "before_i": [
+        "dʒ",
+        "ʒ"
+      ],
+      "intervocalic": [
+        "ɣ"
+      ],
+      "default": [
+        "ɡ"
+      ]
+    },
+    "r": {
+      "word_initial": [
+        "r"
+      ],
+      "intervocalic": [
+        "ɾ"
+      ],
+      "onset": [
+        "ɾ"
+      ]
+    },
+    "gu": {
+      "before_a": [
+        "ɡw"
+      ],
+      "before_o": [
+        "ɡw"
+      ],
+      "before_e": [
+        "ɡ"
+      ],
+      "before_i": [
+        "ɡ"
+      ],
+      "default": [
+        "ɡ"
+      ]
+    },
+    "tz": {
+      "intervocalic": [
+        "dz"
+      ],
+      "word_final": [
+        "ts"
+      ],
+      "default": [
+        "ts"
+      ]
+    }
+  },
+  "parent": "oc",
+  "notes": "Aranese (Aranès), the Gascon variety of Occitan spoken in the Val d'Aran and co-official in Catalonia, regulated by the Conselh Generau d'Aran. Written in the classical Occitan orthography with Gascon conventions. Gascon hallmarks are already in the SPELLING, not in the letter values: Latin F- became ⟨h⟩ (focus > huec, ferrum > hèr) and intervocalic -N- was lost (luna > lua, farina > haria), so ⟨f⟩ here is simply [f] — reading it as [h] would apply the sound change twice. Aranese then DEASPIRATED that /h/, so ⟨h⟩ is silent except in Bausen and Canejan, where it is [h]; the [h] candidate is kept for those two. The interpunct digraphs ⟨n·h⟩ and ⟨s·h⟩ spell the SEQUENCES [n]+[h] and [s]+[h] that ⟨nh⟩ /ɲ/ and ⟨sh⟩ /ʃ/ would otherwise swallow, which is the whole reason the norm writes the interpunct; they carry keys so that maximal munch neither reads them as the palatal digraphs nor breaks the word in two at the interpunct. ⟨th⟩ is [t] (vedèth), [tʃ] in Bausen and Canejan; ⟨ll⟩ is a plain [l], not a geminate. Like the rest of Gascon and Lengadocian, Aranese has betacism, so ⟨v⟩ is [b] and /v/ is not a phoneme of the inventory.\n\nThree points are left as the shipped Spain-Romance TTS gold has them, because the gold's rows were authored and checked against Alibert and Bec while the contrary reading comes from a single tertiary description, and a native check should settle them before either is encoded. Unstressed and phrase-final ⟨a⟩ is [a] here, where descriptions of Aranese give a backed [ɑ~ɔ] and Lengadocian has a clear [ɔ]. Intervocalic ⟨s⟩ stays [s] here, where the rest of Occitan voices it to [z]. And ⟨h⟩ keeps [h] as its first reading with silence as the second, because Aranese is described as having deaspirated the Gascon /h/ everywhere except Bausen and Canejan, yet the gold pronounces it.",
+  "quality": "research",
+  "script_type": "alphabet",
+  "sources": [
+    {
+      "id": "alibert1976",
+      "author": "Alibert, L.",
+      "year": 1976,
+      "title": "Gramatica occitana",
+      "publisher": "Institut d'Estudis Occitans",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "bec1973",
+      "author": "Bec, P.",
+      "year": 1973,
+      "title": "Manuel pratique d'occitan moderne",
+      "publisher": "Picard",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "ladefoged_maddieson1996",
+      "author": "Ladefoged, P. & Maddieson, I.",
+      "year": 1996,
+      "title": "The Sounds of the World's Languages",
+      "publisher": "Blackwell",
+      "url": null,
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Aranese_dialect",
+    "https://oc.wikipedia.org/wiki/Aranés",
+    "https://oc.wikipedia.org/wiki/Aran%C3%A9s",
+    "https://fr.wikipedia.org/wiki/Aranais"
+  ],
+  "timespan": {
+    "start_year": 1200,
+    "end_year": null
+  },
+  "glottolog_code": "aran1260",
+  "iso639_3": "oci",
+  "stress": {
+    "onset_clusters": ["bl", "br", "bɫ", "bɾ", "bʀ", "bʁ", "bʎ", "bχ", "dr", "dɾ", "dʀ", "dʁ", "dʎ", "dχ", "fl", "fr", "fɫ", "fɾ", "fʀ", "fʁ", "fʎ", "fχ", "kl", "kr", "kɫ", "kɾ", "kʀ", "kʁ", "kʎ", "kχ", "pl", "pr", "pɫ", "pɾ", "pʀ", "pʁ", "pʎ", "pχ", "tr", "tɾ", "tʀ", "tʁ", "tʎ", "tχ", "vl", "vr", "vɫ", "vɾ", "vʀ", "vʁ", "vʎ", "vχ", "ðr", "ðɾ", "ðʀ", "ðʁ", "ðʎ", "ðχ", "ɡl", "ɡr", "ɡɫ", "ɡɾ", "ɡʀ", "ɡʁ", "ɡʎ", "ɡχ", "ɣl", "ɣr", "ɣɫ", "ɣɾ", "ɣʀ", "ɣʁ", "ɣʎ", "ɣχ", "βl", "βr", "βɫ", "βɾ", "βʀ", "βʁ", "βʎ", "βχ"],
+    "default_position": -1,
+    "final_stress_endings": [
+      "ai",
+      "au",
+      "ei",
+      "èi",
+      "eu",
+      "èu",
+      "iu",
+      "oi",
+      "òi",
+      "ou",
+      "òu",
+      "ui"
+    ],
+    "penult_stress_endings": [
+      "a",
+      "e",
+      "i",
+      "o",
+      "u",
+      "as",
+      "es",
+      "is",
+      "os",
+      "us"
+    ],
+    "marked_vowels": [
+      "à",
+      "è",
+      "é",
+      "í",
+      "ò",
+      "ó",
+      "ú"
+    ],
+    "stress_mark": "ˈ",
+    "notes": "Aranese accentuation follows the Conselh Generau d'Aran norm, which is the classical-norm system: a word ending in a vowel or in a vowel + -s is paroxytone, anything else is oxytone, and a written accent always wins. Infinitives are OXYTONE (-ar -er -ir), so those endings are NOT paroxytone triggers; the final -r is itself silent. Unstressed ⟨a⟩ is [ɑ~ɔ] and phrase-final ⟨a⟩ is [ɔ], while STRESSED ⟨a⟩ stays [a] (Wikipedia, Aranese dialect, vowel table).",
+    "max_onset": 2,
+    "coda_liquid_capture": true
+  },
+  "wikidata_qid": "Q10196",
+  "location": {
+    "latitude": 42.7225,
+    "longitude": 0.837222,
+    "source": "wikidata",
+    "notes": "the Val d'Aran — the single valley Aranese is spoken in. Glottolog's point for it is the generic Occitan point in Provence. [Wikidata Q12602 P625]"
+  },
+  "constrain_onsets": true
+}

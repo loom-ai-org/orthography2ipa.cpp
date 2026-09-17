@@ -1,0 +1,244 @@
+{
+  "code": "dv",
+  "name": "Maldivian (Dhivehi)",
+  "script": "Thaana",
+  "script_type": "abugida",
+  "quality": "research",
+  "graphemes": {
+    "އް": [
+      "ʔ"
+    ],
+    "ހ": [
+      "h"
+    ],
+    "ށ": [
+      "ʂ"
+    ],
+    "ނ": [
+      "n"
+    ],
+    "ރ": [
+      "ɾ"
+    ],
+    "ބ": [
+      "b"
+    ],
+    "ޅ": [
+      "ɭ"
+    ],
+    "ކ": [
+      "k"
+    ],
+    "އ": [
+      "",
+      "ʔ"
+    ],
+    "ވ": [
+      "ʋ"
+    ],
+    "މ": [
+      "m"
+    ],
+    "ފ": [
+      "f"
+    ],
+    "ދ": [
+      "d̪"
+    ],
+    "ތ": [
+      "t̪"
+    ],
+    "ލ": [
+      "l"
+    ],
+    "ގ": [
+      "ɡ"
+    ],
+    "ޱ": [
+      "ɳ"
+    ],
+    "ސ": [
+      "s"
+    ],
+    "ޑ": [
+      "ɖ"
+    ],
+    "ޒ": [
+      "z"
+    ],
+    "ޓ": [
+      "ʈ"
+    ],
+    "ޔ": [
+      "j"
+    ],
+    "ޕ": [
+      "p"
+    ],
+    "ޖ": [
+      "dʒ"
+    ],
+    "ޗ": [
+      "tʃ"
+    ],
+    "ޏ": [
+      "ɲ"
+    ],
+    "ޘ": [
+      "θ"
+    ],
+    "ޙ": [
+      "ħ"
+    ],
+    "ޚ": [
+      "x"
+    ],
+    "ޛ": [
+      "ð"
+    ],
+    "ޜ": [
+      "ʒ"
+    ],
+    "ޝ": [
+      "ʃ"
+    ],
+    "ޞ": [
+      "sˤ"
+    ],
+    "ޟ": [
+      "dˤ"
+    ],
+    "ޠ": [
+      "tˤ"
+    ],
+    "ޡ": [
+      "ðˤ"
+    ],
+    "ޢ": [
+      "ʕ"
+    ],
+    "ޣ": [
+      "ɣ"
+    ],
+    "ޤ": [
+      "q"
+    ],
+    "ޥ": [
+      "w"
+    ],
+    "ަ": [
+      "a"
+    ],
+    "ާ": [
+      "aː"
+    ],
+    "ި": [
+      "i"
+    ],
+    "ީ": [
+      "iː"
+    ],
+    "ު": [
+      "u"
+    ],
+    "ޫ": [
+      "uː"
+    ],
+    "ެ": [
+      "e"
+    ],
+    "ޭ": [
+      "eː"
+    ],
+    "ޮ": [
+      "o"
+    ],
+    "ޯ": [
+      "oː"
+    ],
+    "ް": [
+      ""
+    ]
+  },
+  "allophones": {},
+  "notes": "Maldivian (Dhivehi, ދިވެހި), Indo-Aryan, written in the Thaana script. INPUT CONTRACT: native Thaana text (Unicode block U+0780..U+07B1, NFC), written RIGHT-TO-LEFT; the older Dhives Akuru script and the Malé Latin transliteration are out of scope. Thaana is an alphabet/abugida hybrid: its consonant letters carry NO inherent vowel, and each consonant is obligatorily followed by a fili — one of the ten vowel diacritics — or by the sukun ް, which marks the absence of a vowel and maps to the empty string. Because vowels are always written, the letter and the following fili can simply be transcribed in sequence: no combining consonant+fili keys are needed and no inherent vowel is declared. އ ALIFU is a null carrier: it is silent when it merely bears a fili (word-initial vowels), and the sequence އް (alifu + sukun) marks a glottal stop / the gemination of the following consonant, so it is keyed as a multigraph. ޱ NAAVIYANI /ɳ/ was abolished from official orthography in 1953 (replaced by ޏ GNAVIYANI /ɲ/) but survives in Addu and Fuvahmulah writing, so both are mapped. The thikijehi thaana ޘ..ޥ appear only in Arabic loanwords and are given their Arabic values; their use is receding as loans are respelt.",
+  "iso639_3": "div",
+  "glottolog_code": "dhiv1236",
+  "wikidata_qid": "Q32656",
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Maldivian_language",
+    "https://dv.wikipedia.org/wiki/%DE%8B%DE%A8%DE%88%DE%AC%DE%80%DE%A8"
+  ],
+  "sources": [
+    {
+      "id": "cain2000",
+      "author": "Cain, Bruce D.",
+      "year": 2000,
+      "title": "Dhivehi (Maldivian): A Synchronic and Diachronic Study",
+      "publisher": "Cornell University (PhD thesis)",
+      "url": null,
+      "pages": null,
+      "notes": "Reference description of Dhivehi phonology and orthography. This dissertation (Cornell PhD, ProQuest) could not be independently re-fetched in this pass; it was carried over from an existing citation and no DOI or stable public URL was located for it, so the citation rests on the existing bibliographic record rather than a page-verified read."
+    }
+  ],
+  "timespan": {
+    "start_year": 1200,
+    "end_year": null
+  },
+  "phonemes": [
+    "ä",
+    "äu̯",
+    "äː",
+    "b",
+    "cʰ",
+    "d̪",
+    "e",
+    "eː",
+    "f",
+    "h",
+    "i",
+    "iː",
+    "j",
+    "kʰ",
+    "l",
+    "m",
+    "mb",
+    "n",
+    "n̪d̪",
+    "o",
+    "oː",
+    "pʰ",
+    "s",
+    "t̪ʰ",
+    "u",
+    "uː",
+    "v",
+    "z̪",
+    "æː",
+    "ŋɡ",
+    "ɖ",
+    "ɟ",
+    "ɡ",
+    "ɭ",
+    "ɲ",
+    "ɳɖ",
+    "ɾ",
+    "ʂ",
+    "ʈʰ"
+  ],
+  "parent": "x-clade-indo1321",
+  "ancestors": [
+    {
+      "code": "x-clade-indo1321",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Indo-Aryan — the classification node this language sits under."
+    }
+  ],
+  "location": {
+    "latitude": 1.928498,
+    "longitude": 73.54433,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Dhivehi."
+  }
+}

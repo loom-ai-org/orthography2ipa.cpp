@@ -1,0 +1,374 @@
+{
+  "code": "ng",
+  "name": "Ndonga",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "aa": [
+      "aː"
+    ],
+    "e": [
+      "e"
+    ],
+    "ee": [
+      "eː"
+    ],
+    "i": [
+      "i"
+    ],
+    "ii": [
+      "iː"
+    ],
+    "o": [
+      "o"
+    ],
+    "oo": [
+      "oː"
+    ],
+    "u": [
+      "u"
+    ],
+    "uu": [
+      "uː"
+    ],
+    "b": [
+      "b"
+    ],
+    "c": [
+      "ts"
+    ],
+    "d": [
+      "d"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɣ"
+    ],
+    "h": [
+      "h"
+    ],
+    "j": [
+      "dʒ"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "p": [
+      "p"
+    ],
+    "q": [
+      "kw"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "v": [
+      "v"
+    ],
+    "w": [
+      "w"
+    ],
+    "x": [
+      "x"
+    ],
+    "y": [
+      "j"
+    ],
+    "z": [
+      "z"
+    ],
+    "dh": [
+      "ð"
+    ],
+    "th": [
+      "θ"
+    ],
+    "sh": [
+      "ʃ"
+    ],
+    "ts": [
+      "ts"
+    ],
+    "ng": [
+      "ŋ",
+      "ŋɡ"
+    ],
+    "ny": [
+      "ɲ"
+    ],
+    "mb": [
+      "mb"
+    ],
+    "nd": [
+      "nd"
+    ],
+    "ndj": [
+      "ndʒ"
+    ]
+  },
+  "allophones": {
+    "a": [
+      "a"
+    ],
+    "aː": [
+      "aː"
+    ],
+    "e": [
+      "e"
+    ],
+    "eː": [
+      "eː"
+    ],
+    "i": [
+      "i"
+    ],
+    "iː": [
+      "iː"
+    ],
+    "o": [
+      "o"
+    ],
+    "oː": [
+      "oː"
+    ],
+    "u": [
+      "u"
+    ],
+    "uː": [
+      "uː"
+    ],
+    "b": [
+      "b"
+    ],
+    "ts": [
+      "ts"
+    ],
+    "d": [
+      "d"
+    ],
+    "f": [
+      "f"
+    ],
+    "ɣ": [
+      "ɣ"
+    ],
+    "h": [
+      "h"
+    ],
+    "dʒ": [
+      "dʒ"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "p": [
+      "p"
+    ],
+    "kw": [
+      "kw"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "v": [
+      "v"
+    ],
+    "w": [
+      "w"
+    ],
+    "x": [
+      "x"
+    ],
+    "j": [
+      "j"
+    ],
+    "z": [
+      "z"
+    ],
+    "ð": [
+      "ð"
+    ],
+    "θ": [
+      "θ"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "ŋ": [
+      "ŋ"
+    ],
+    "ŋɡ": [
+      "ŋɡ"
+    ],
+    "ɲ": [
+      "ɲ"
+    ],
+    "mb": [
+      "mb"
+    ],
+    "nd": [
+      "nd"
+    ],
+    "ndʒ": [
+      "ndʒ"
+    ]
+  },
+  "iso639_3": "ndo",
+  "glottolog_code": "ndon1254",
+  "wikidata_qid": "Q33900",
+  "notes": "Ndonga (Oshindonga), the main Ovambo (Bantu) language of northern Namibia and southern Angola. INPUT CONTRACT: the current standard Namibian orthography (Oshindonga omunyolelo / 'Oshindonga Orthography 3', 2004, implemented by NIED) is assumed; text is expected to be already normalised. KEY FEATURES: (1) DIGRAPHS: <dh> = /ð/, <th> = /θ/, <sh> = /ʃ/, <ng> = /ŋ/ (also read /ŋɡ/ in the prenasalised cluster), <ny> = /ɲ/, <mb> = /mb/, <nd> = /nd/, <ndj> = /ndʒ/, <ts> = /ts/. (2) SINGLE LETTERS with non-obvious values: <c> = /ts/, <g> = /ɣ/ (voiced velar fricative, not a stop), <j> = /dʒ/, <q> = /kw/, <x> = /x/, <y> = /j/. (3) VOWEL LENGTH is written by doubling: <aa ee ii oo uu>; the language has a plain five-vowel system /a e i o u/. (4) The full phonetic inventory also contains voiceless nasals and aspirated/ejective prenasalised compounds ([m̥p], [n̥tʰ], [n̥kʰ], [tsʼ], ...) which are allophonic/cluster realisations and are not separately spelled; they are therefore not emitted. (5) TONE: Oshindonga has two tones (high and low), but TONE IS NOT WRITTEN in the standard orthography and is therefore NOT recoverable from the text; no tone marks are emitted.",
+  "sources": [
+    {
+      "id": "ndonga_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Ndonga",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Ndonga",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Ndonga",
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "omniglot_ndonga",
+      "author": "Ager, S.",
+      "year": 2024,
+      "title": "Ndonga language, alphabet and pronunciation",
+      "publisher": "Omniglot",
+      "url": "https://www.omniglot.com/writing/ndonga.htm",
+      "notes": "Letter-to-IPA chart of the Ndonga alphabet: c=[ts], g=[ɣ], j=[dʒ], q=[kw], x=[x], y=[j], plus dh=[ð], th=[θ], sh=[ʃ], ng=[ŋ] and doubled long vowels."
+    },
+    {
+      "id": "fivaz2003",
+      "author": "Fivaz, D.",
+      "year": 2003,
+      "title": "A Reference Grammar of Oshindonga",
+      "publisher": "Out of Africa Publishers, Windhoek",
+      "notes": "Reference grammar (2nd ed.); source cited by Wikipedia for the Oshindonga phoneme inventory and the two-tone system."
+    },
+    {
+      "id": "ndonga_phonology_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2025,
+      "title": "Ndonga — Phonology",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Ndonga",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Ndonga",
+      "notes": "Five-vowel system; consonant table incl. /ɲ ŋ θ ð ʃ ʒ x ɣ ts/; prenasalised [mb nd ŋɡ ndʒ] and compounds; 'Oshindonga has two tones: high and low.'"
+    },
+    {
+      "id": "oshindonga_orthography3",
+      "author": "Namibia. Ministry of Education, National Institute for Educational Development (NIED)",
+      "year": 2004,
+      "title": "Oshindonga: omunyolelo 3 / Oshindonga: Orthography 3",
+      "publisher": "Gamsberg Macmillan, Windhoek",
+      "url": "https://search.worldcat.org/title/61883307",
+      "notes": "Current official standard orthography of Oshindonga (3rd edition) — the orthography assumed by this spec."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Ndonga",
+    "https://ng.wikipedia.org/wiki/Ndonga"
+  ],
+  "phonemes": [
+    "a",
+    "b",
+    "d",
+    "dʲ",
+    "e",
+    "f",
+    "h",
+    "i",
+    "j",
+    "k",
+    "l",
+    "lʲ",
+    "m",
+    "mb",
+    "m̥",
+    "m̥ʰ",
+    "n",
+    "nd",
+    "ndʲ",
+    "n̠d̠ʒ",
+    "n̥",
+    "o",
+    "p",
+    "s",
+    "t",
+    "ts",
+    "t̠ʃ",
+    "u",
+    "v",
+    "w",
+    "x",
+    "z",
+    "ð",
+    "ŋ",
+    "ŋɡ",
+    "ɔ",
+    "ɛ",
+    "ɡ",
+    "ɣ",
+    "ɲ",
+    "ɲʒ",
+    "ɲ̥",
+    "ʃ",
+    "ʒ",
+    "ʔ",
+    "˦",
+    "˨",
+    "θ"
+  ],
+  "parent": "x-clade-atla1278",
+  "ancestors": [
+    {
+      "code": "x-clade-atla1278",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Atlantic-Congo — the classification node this language sits under."
+    }
+  ],
+  "location": {
+    "latitude": -17.22,
+    "longitude": 17.35,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Ndonga."
+  }
+}

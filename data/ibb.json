@@ -1,0 +1,163 @@
+{
+ "code": "ibb",
+ "name": "Ibibio",
+ "script": "Latin",
+ "script_type": "alphabet",
+ "quality": "skeleton",
+ "graphemes": {
+  "a": ["a"],
+  "e": ["e"],
+  "i": ["i"],
+  "o": ["o"],
+  "ọ": ["ɔ"],
+  "u": ["u"],
+  "ʌ": ["ʌ"],
+  "b": ["b"],
+  "d": ["d"],
+  "f": ["f"],
+  "gh": ["ɣ"],
+  "h": ["h"],
+  "k": ["k"],
+  "kp": ["kp"],
+  "m": ["m"],
+  "n": ["n"],
+  "n̄": ["ŋ"],
+  "n̄w": ["ŋw"],
+  "ny": ["ɲ"],
+  "p": ["p"],
+  "s": ["s"],
+  "t": ["t̪"],
+  "w": ["w"],
+  "y": ["j"]
+ },
+ "allophones": {
+  "a": ["a"],
+  "e": ["e"],
+  "i": ["i"],
+  "o": ["o"],
+  "ɔ": ["ɔ"],
+  "u": ["u"],
+  "ʌ": ["ʌ"],
+  "b": [
+   "b",
+   "p",
+   "β"
+  ],
+  "d": [
+   "d",
+   "ɾ"
+  ],
+  "f": ["f"],
+  "ɣ": ["ɣ"],
+  "h": ["h"],
+  "k": [
+   "k",
+   "ʀ",
+   "ɰ"
+  ],
+  "kp": ["kp"],
+  "m": ["m"],
+  "n": ["n"],
+  "ŋ": [
+   "ŋ",
+   "ŋw"
+  ],
+  "ɲ": ["ɲ"],
+  "p": ["p"],
+  "s": ["s"],
+  "t̪": [
+   "t̪",
+   "ɾ"
+  ],
+  "w": ["w"],
+  "j": ["j"]
+ },
+ "notes": "Standard Ibibio Latin orthography as codified by the Ibibio Language Panel and described in Essien (1990), A Grammar of the Ibibio Language, and Essien's The Orthography of the Ibibio Language (Ibibio Language Panel, Calabar). Seven-vowel system /i e a o ɔ u ʌ/ matching the cited PHOIBLE inventory; ⟨ọ⟩ marks the open-mid back vowel /ɔ/ distinct from ⟨o⟩ /o/ (underdotted-vowel convention shared with the closely related Efik orthography, cf. efi.json), and the vowel letter ⟨ʌ⟩ is a direct IPA-symbol borrowing rather than a diacritic variant. ⟨gh⟩ is the single velar fricative /ɣ/ (test 1: g+h would give a stop-plus-glottal-fricative sequence Ibibio does not have) and ⟨kp⟩ the single labial-velar stop /kp/. ⟨n̄⟩ (macron n) is the velar nasal /ŋ/, distinguished from plain ⟨n⟩ /n/; ⟨n̄w⟩ is its labialized allophone-bearing counterpart /ŋʷ/-context digraph, and ⟨ny⟩ the palatal nasal /ɲ/. /h/ and /p/ are marginal (largely loanword) phonemes in Ibibio and are not part of the cited PHOIBLE non-marginal 30-segment count, but are attested letters of the standard alphabet and are mapped here for orthographic completeness. Smoke-tested against the cited Ibibio numerals: ⟨Kèèd⟩ [kèèd] 'one', ⟨Íbà⟩ [íbà] 'two', ⟨Ítá⟩ [ítá] 'three' — each resolves through the mapped consonant/vowel graphemes above (long vowels spelled by doubling the vowel letter, e.g. ⟨èè⟩ = /eː/, matching the cited PHOIBLE length contrast). The underdotted front-vowel letter ⟨ị⟩ and back-vowel letter ⟨ụ⟩ reported in some dialect descriptions (e.g. Ibiono) are left unmapped: the cited 30-segment PHOIBLE inventory for standard Ibibio recognizes no additional vowel qualities beyond the seven above, so encoding them here would assert an uncited contrast. Ibibio is a five-tone (high, mid, rising, falling, low) language with no lexical word stress; tone is not consistently marked in ordinary orthography and is left unencoded here, a documented exemption distinct from stress (docs/quality_tiers.md).",
+ "iso639_3": "ibb",
+ "glottolog_code": "ibib1240",
+ "sources": [
+  {
+   "id": "glottolog2024",
+   "author": "Hammarström, Harald; Forkel, Robert; Haspelmath, Martin; Bank, Sebastian",
+   "year": 2024,
+   "title": "Glottolog 5.0",
+   "publisher": "Max Planck Institute for Evolutionary Anthropology",
+   "url": "https://glottolog.org/"
+  },
+  {
+   "id": "phoible2019",
+   "author": "Moran, Steven; McCloy, Daniel (eds.)",
+   "year": 2019,
+   "title": "PHOIBLE 2.0 (doi:10.5281/zenodo.2562766)",
+   "publisher": "Max Planck Institute for the Science of Human History",
+   "url": "https://phoible.org/inventories/view/1057",
+   "notes": "Inventory 1057 (ph), 30 non-marginal segments, 2 tones."
+  },
+  {
+   "id": "essien1990",
+   "author": "Essien, Okon E.",
+   "year": 1990,
+   "title": "A Grammar of the Ibibio Language",
+   "publisher": "University Press, Ibadan"
+  },
+  {
+   "id": "essien_ortho",
+   "author": "Essien, Okon E.",
+   "year": 1990,
+   "title": "The Orthography of the Ibibio Language",
+   "publisher": "Ibibio Language Panel, Paico Press & Books, Calabar",
+   "url": "https://archive.org/details/rosettaproject_ibb_ortho-1"
+  }
+ ],
+ "urls": [
+  "https://glottolog.org/resource/languoid/id/ibib1240",
+  "https://archive.org/details/rosettaproject_ibb_ortho-1"
+ ],
+ "wikipedia": [
+  "https://en.wikipedia.org/wiki/Ibibio_language"
+ ],
+ "location": {
+  "latitude": 5.1528,
+  "longitude": 7.8669,
+  "source": "glottolog",
+  "notes": "Glottolog's representative point."
+ },
+ "parent": "x-clade-atla1278",
+ "phonemes": [
+  "b",
+  "d",
+  "f",
+  "j",
+  "k",
+  "kp",
+  "m",
+  "mː",
+  "n",
+  "nː",
+  "s",
+  "t̪",
+  "w",
+  "ŋ",
+  "ŋː",
+  "ɲ",
+  "ɲː",
+  "a",
+  "aː",
+  "e",
+  "eː",
+  "i",
+  "iː",
+  "o",
+  "oː",
+  "u",
+  "uː",
+  "ɔ",
+  "ɔː",
+  "ʌ"
+ ],
+ "tone_inventory": {
+  "˦": "PHOIBLE tone segment",
+  "˨": "PHOIBLE tone segment"
+ },
+ "phoible_id": "1057"
+}

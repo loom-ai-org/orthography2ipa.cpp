@@ -1,0 +1,106 @@
+{
+ "code": "tic",
+ "name": "Tira",
+ "script": "Zyyy",
+ "quality": "stub",
+ "graphemes": {},
+ "allophones": {
+  "k": [
+   "k",
+   "ɡ"
+  ],
+  "p": [
+   "p",
+   "b"
+  ],
+  "t": [
+   "t",
+   "d"
+  ],
+  "t̪": [
+   "t̪",
+   "d̪"
+  ],
+  "o": [
+   "o",
+   "o̤"
+  ]
+ },
+ "notes": "REGISTRY STUB (not a modelled G2P target). Placed so the ancestry graph covers every living ISO 639-3 language. No orthography is claimed; the phoneme inventory follows the cited PHOIBLE inventory (which itself cites a published description): script is Zyyy (undetermined) until a cited description is encoded. Classification and coordinates follow Glottolog.",
+ "iso639_3": "tic",
+ "glottolog_code": "tira1254",
+ "sources": [
+  {
+   "id": "glottolog2024",
+   "author": "Hammarström, Harald; Forkel, Robert; Haspelmath, Martin; Bank, Sebastian",
+   "year": 2024,
+   "title": "Glottolog 5.0",
+   "publisher": "Max Planck Institute for Evolutionary Anthropology",
+   "url": "https://glottolog.org/"
+  },
+  {
+   "id": "phoible2019",
+   "author": "Moran, Steven; McCloy, Daniel (eds.)",
+   "year": 2019,
+   "title": "PHOIBLE 2.0 (doi:10.5281/zenodo.2562766)",
+   "publisher": "Max Planck Institute for the Science of Human History",
+   "url": "https://phoible.org/inventories/view/1375",
+   "notes": "Inventory 1375 (ph), 42 non-marginal segments."
+  }
+ ],
+ "urls": [
+  "https://glottolog.org/resource/languoid/id/tira1254"
+ ],
+ "location": {
+  "latitude": 11.0963,
+  "longitude": 30.8092,
+  "source": "glottolog",
+  "notes": "Glottolog's representative point."
+ },
+ "parent": "x-clade-heib1242",
+ "phonemes": [
+  "b",
+  "c",
+  "d",
+  "dr",
+  "d̪",
+  "j",
+  "k",
+  "l",
+  "m",
+  "n",
+  "p",
+  "r",
+  "t",
+  "tr",
+  "t̪",
+  "v",
+  "w",
+  "ð",
+  "ŋ",
+  "ɟ",
+  "ɡ",
+  "ɲ",
+  "ɽ",
+  "ʂ",
+  "ʈ",
+  "θ",
+  "a",
+  "ai",
+  "au",
+  "e",
+  "ei",
+  "e̝",
+  "i",
+  "o",
+  "oi",
+  "ou",
+  "u",
+  "ɔ",
+  "ɔi",
+  "ə",
+  "ɛ",
+  "ɜ"
+ ],
+ "phoible_id": "1375"
+}

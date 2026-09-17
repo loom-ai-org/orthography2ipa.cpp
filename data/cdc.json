@@ -1,0 +1,105 @@
+{
+  "code": "cdc",
+  "name": "Proto-Chadic (family node)",
+  "script": "IPA-reconstruction",
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "i": [
+      "i"
+    ],
+    "u": [
+      "u"
+    ],
+    "e": [
+      "e"
+    ],
+    "o": [
+      "o"
+    ],
+    "p": [
+      "p"
+    ],
+    "t": [
+      "t"
+    ],
+    "k": [
+      "k"
+    ],
+    "b": [
+      "b"
+    ],
+    "d": [
+      "d"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "s": [
+      "s"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "l": [
+      "l"
+    ],
+    "r": [
+      "r"
+    ],
+    "w": [
+      "w"
+    ],
+    "j": [
+      "j"
+    ],
+    "h": [
+      "h"
+    ]
+  },
+  "allophones": {},
+  "notes": "STRUCTURAL ANCESTRY NODE (not a modelled G2P target). Proto-Chadic is the reconstructed ancestor of the Chadic branch of Afroasiatic, the largest member of which is Hausa. It exists here only so the ancestry / phylogenetic-distance metrics of the modern varieties that reference it have a node to resolve to; NO phonology is claimed or reconstructed and the minimal grapheme set is a placeholder (afa.json / trk.json stub pattern).",
+  "quality": "stub",
+  "script_type": "reconstruction",
+  "iso639_3": null,
+  "glottolog_code": "chad1250",
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Chadic_languages"
+  ],
+  "urls": [
+    "https://glottolog.org/resource/languoid/id/chad1250"
+  ],
+  "sources": [
+    {
+      "id": "newman1977",
+      "author": "Newman, P.",
+      "year": 1977,
+      "title": "Chadic classification and reconstructions",
+      "publisher": "Undena",
+      "url": null,
+      "pages": null,
+      "notes": "Reference for Chadic classification (structural node only).",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Chadic_languages"
+    }
+  ],
+  "parent": "x-clade-chad1250",
+  "ancestors": [
+    {
+      "code": "afa",
+      "role": "parent",
+      "weight": 0.9,
+      "notes": "Chadic branch of Afroasiatic."
+    }
+  ],
+  "wikidata_qid": "Q33184",
+  "location": {
+    "latitude": 10.434045,
+    "longitude": 13.960241,
+    "source": "glottolog",
+    "notes": "Glottolog's computed centroid for the Chadic family — a summary of a whole clade's range, not a place anyone speaks."
+  }
+}

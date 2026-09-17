@@ -1,0 +1,584 @@
+{
+  "code": "hts",
+  "name": "Hadza",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "mcw": [
+      "ᵑʘʷ"
+    ],
+    "mc": [
+      "ᵑʘ"
+    ],
+    "nqh": [
+      "nk͡ǃʰ"
+    ],
+    "nch": [
+      "nk͡ǀʰ"
+    ],
+    "ngc": [
+      "nk͡ǀ"
+    ],
+    "ch": [
+      "k͡ǀʰ"
+    ],
+    "qh": [
+      "k͡ǃʰ"
+    ],
+    "xh": [
+      "k͡ǁʰ"
+    ],
+    "cc": [
+      "ŋ͡ǀˀ"
+    ],
+    "qq": [
+      "ŋ͡ǃˀ"
+    ],
+    "xx": [
+      "ŋ͡ǁˀ"
+    ],
+    "nc": [
+      "ŋ͡ǀ"
+    ],
+    "nq": [
+      "ŋ͡ǃ"
+    ],
+    "nx": [
+      "ŋ͡ǁ"
+    ],
+    "c": [
+      "k͡ǀ"
+    ],
+    "q": [
+      "k͡ǃ"
+    ],
+    "x": [
+      "k͡ǁ"
+    ],
+    "tlh": [
+      "c͡ʎ̥˔ʰ"
+    ],
+    "tl": [
+      "c͡ʎ̥˔"
+    ],
+    "dl": [
+      "c͡ʎ̥˔ʼ"
+    ],
+    "sl": [
+      "ɬ"
+    ],
+    "tch": [
+      "t͡ʃʰ"
+    ],
+    "tsh": [
+      "t͡sʰ"
+    ],
+    "tc": [
+      "t͡ʃ"
+    ],
+    "ts": [
+      "t͡s"
+    ],
+    "khw": [
+      "kʷʰ"
+    ],
+    "kw": [
+      "kʷ"
+    ],
+    "ph": [
+      "pʰ"
+    ],
+    "th": [
+      "tʰ"
+    ],
+    "kh": [
+      "kʰ"
+    ],
+    "sh": [
+      "ʃ"
+    ],
+    "hh": [
+      "x"
+    ],
+    "bb": [
+      "pʼ"
+    ],
+    "ggw": [
+      "k͡xʷʼ"
+    ],
+    "gg": [
+      "k͡xʼ"
+    ],
+    "jj": [
+      "t͡ʃʼ"
+    ],
+    "zz": [
+      "t͡sʼ"
+    ],
+    "p": [
+      "p"
+    ],
+    "t": [
+      "t"
+    ],
+    "k": [
+      "k"
+    ],
+    "b": [
+      "b"
+    ],
+    "d": [
+      "d"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "j": [
+      "d͡ʒ"
+    ],
+    "z": [
+      "d͡z"
+    ],
+    "s": [
+      "s"
+    ],
+    "f": [
+      "f"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "l": [
+      "l"
+    ],
+    "r": [
+      "ɺ"
+    ],
+    "h": [
+      "ɦ"
+    ],
+    "w": [
+      "w"
+    ],
+    "y": [
+      "j"
+    ],
+    "a": [
+      "a"
+    ],
+    "e": [
+      "e"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "o"
+    ],
+    "u": [
+      "u"
+    ],
+    "â": [
+      "aː"
+    ],
+    "ê": [
+      "eː"
+    ],
+    "î": [
+      "iː"
+    ],
+    "ô": [
+      "oː"
+    ],
+    "û": [
+      "uː"
+    ]
+  },
+  "parent": "x-clade-hadz1240",
+  "ancestors": [
+    {
+      "code": "x-clade-hadz1240",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Hadza is a language isolate (Glottolog hadz1240); the clade node represents its own one-member family."
+    }
+  ],
+  "notes": "Language isolate of Tanzania (Glottolog hadz1240) with a three-place click series. This map follows the practical orthography of the Miller/Anyawire Hadza lexicon (Miller 2008; Miller & Anyawire et al. 2013), which is the convention the available Hadza word lists are written in. Its defining choices: the dental, alveolar and lateral clicks are written ⟨c q x⟩ rather than with the click letters, so ⟨c⟩=[k͡ǀ], ⟨q⟩=[k͡ǃ], ⟨x⟩=[k͡ǁ]; ⟨h⟩ after a click letter marks aspiration (⟨ch qh xh⟩); a preceding ⟨n⟩ marks the nasal click (⟨nc nq nx⟩); and DOUBLING the letter marks the glottalised nasal click (⟨cc qq xx⟩). The same doubling convention carries the ejective/affricate series outside the clicks: ⟨bb⟩=[pʼ], ⟨jj⟩=[t͡ʃʼ], ⟨zz⟩=[t͡sʼ], ⟨gg⟩=[k͡xʼ] and labialised ⟨ggw⟩=[k͡xʷʼ] (Sands, Maddieson & Ladefoged 1996 for the inventory these letters spell). The doubled letters are built on the VOICED letter of each pair, and that voiced letter keeps its own value: single ⟨z⟩ is [d͡z] and single ⟨j⟩ is [d͡ʒ] (the [t͡ʃ] it shows in the attested words is the general post-nasal devoicing, not the phoneme). No ⟨dd⟩ is mapped: /tʼ/ is not in the described inventory, and the letter appears only in the alphabet table, never in a word. ⟨hh⟩ is the velar fricative [x] and single ⟨h⟩ the breathy glottal [ɦ]; ⟨r⟩ is the lateral flap [ɺ] (Sands 2013). The sources are not fully agreed here: Sands 2013 names a lateral flap, while the phonetic descriptions of the same segment elsewhere in the literature treat it as a plain alveolar tap [ɾ] whose laterality is a transition off the flanking vowels rather than a contrastive feature. [ɺ] is used because it is the value the handbook chapter states outright; a spec that wanted [ɾ] would not be contradicting a settled fact. ⟨tl tlh dl⟩ are the palatal lateral affricate series [c͡ʎ̥˔], [c͡ʎ̥˔ʰ], [c͡ʎ̥˔ʼ] — the ejective member is voiceless like the other two; ⟨sl⟩ is the lateral fricative [ɬ]. A marginal bilabial click survives in a handful of items and is written ⟨mc⟩ / labialised ⟨mcw⟩ = [ᵑʘ], [ᵑʘʷ] (Sands 2013). Vowel length is written with a circumflex (⟨â ê î ô û⟩ = [aː eː iː oː uː]). Every vowel-initial word takes a predictable glottal onset [ʔ], and a hiatus between two written vowels is broken by [ʔ] as well — Hadza has no vowel-initial syllable and no true vowel sequence (Sands 2013, §syllable structure; Sands, Maddieson & Ladefoged 1996). Word-initial ⟨y⟩ spells that same glottal-onset plus high front vowel [ʔi]. Between vowels, ⟨y⟩ and ⟨w⟩ are the written separator of a TRUE vowel sequence rather than consonants of their own — Sands 2013 (fn. 7) calls the [j] and [w] so written mere transitions between the flanking vowels — so they do not take the hiatus [ʔ], and the transition itself is absent whenever a flanking vowel already shares the glide's place: ⟨y⟩ deletes next to a front vowel, ⟨w⟩ next to a round vowel. With neither neighbour matching, the transition is audible and is written. Nasal vowels are NOT part of this orthography: a written ⟨n⟩ after a vowel is a nasal consonant, not a nasalisation mark. Pitch and stress are not encoded and are not modelled here.",
+  "iso639_3": "hts",
+  "glottolog_code": null,
+  "sources": [
+    {
+      "id": "hts_glottolog",
+      "author": "Hammarström, H. et al. (Glottolog 5.0)",
+      "year": 2024,
+      "title": "Glottolog: Hadza (hadz1240)",
+      "publisher": "Max Planck Institute for Evolutionary Anthropology",
+      "url": "https://glottolog.org/resource/languoid/id/hadz1240",
+      "pages": null,
+      "notes": "Classification reference for a skeleton-tier entry.",
+      "wikipedia_url": null
+    },
+    {
+      "id": "hts_wikipedia",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Hadza language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Hadza_language",
+      "pages": null,
+      "notes": "Phonology and practical-orthography reference for the skeleton grapheme map.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Hadza_language"
+    },
+    {
+      "id": "hts_miller2008",
+      "author": "Miller, Kirk",
+      "year": 2008,
+      "title": "Hadza Grammar Notes",
+      "publisher": "3rd International Symposium on Khoisan Languages and Linguistics, Riezlern",
+      "url": null,
+      "pages": null,
+      "notes": "Descriptive grammar notes on Hadza phonology and the click inventory; the practical orthography modelled here follows the Miller/Anyawire et al. (2013) conventions this work documents."
+    },
+    {
+      "id": "hts_sands_maddieson_ladefoged1996",
+      "author": "Sands, Bonny; Maddieson, Ian; Ladefoged, Peter",
+      "year": 1996,
+      "title": "The phonetic structures of Hadza",
+      "publisher": "Studies in African Linguistics 25(2), 171-204 (also UCLA Working Papers in Phonetics 84)",
+      "url": null,
+      "pages": "171-204",
+      "notes": "Instrumental description of the Hadza consonant inventory: the click series and its nasal/glottalised members, the ejective series built on the voiced letters of the orthography (pʼ t͡sʼ t͡ʃʼ k͡xʼ and the lateral c͡ʎ̥˔ʼ), the lateral obstruents, and the absence of voiced obstruents after a nasal. Source for the phoneme values behind the doubled-letter and post-nasal rules. NOTE: no /tʼ/ is described for Hadza — the alphabet-row spelling ⟨dd⟩ is not mapped here for want of a source."
+    },
+    {
+      "id": "hts_sands2013",
+      "author": "Sands, Bonny",
+      "year": 2013,
+      "title": "Hadza",
+      "publisher": "In Rainer Vossen (ed.), The Khoesan Languages, Routledge (Routledge Language Family Series)",
+      "url": null,
+      "pages": null,
+      "notes": "Handbook chapter on Hadza phonology, syllable structure and orthographic practice: obligatory glottal onset, absence of vowel hiatus, the lateral flap, the marginal bilabial click, and the aspiration contrast the ⟨nd⟩/⟨nt⟩ spellings encode."
+    },
+    {
+      "id": "hts_hartell1993",
+      "author": "Hartell, Rhonda L. (ed.)",
+      "year": 1993,
+      "title": "Alphabets of Africa / Alphabets de langues africaines",
+      "publisher": "UNESCO / Summer Institute of Linguistics, Dakar",
+      "url": null,
+      "pages": null,
+      "notes": "Reference survey of African practical orthographies, consulted for the Latin-letter conventions used for click and ejective series."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Hadza_language"
+  ],
+  "positional_graphemes": {
+    "a": {
+      "word_initial": [
+        "ʔa"
+      ],
+      "after_vowel": [
+        "ʔa"
+      ],
+      "default": [
+        "a"
+      ]
+    },
+    "e": {
+      "word_initial": [
+        "ʔe"
+      ],
+      "after_vowel": [
+        "ʔe"
+      ],
+      "default": [
+        "e"
+      ]
+    },
+    "i": {
+      "word_initial": [
+        "ʔi"
+      ],
+      "after_vowel": [
+        "ʔi"
+      ],
+      "default": [
+        "i"
+      ]
+    },
+    "o": {
+      "word_initial": [
+        "ʔo"
+      ],
+      "after_vowel": [
+        "ʔo"
+      ],
+      "default": [
+        "o"
+      ]
+    },
+    "u": {
+      "word_initial": [
+        "ʔu"
+      ],
+      "after_vowel": [
+        "ʔu"
+      ],
+      "default": [
+        "u"
+      ]
+    },
+    "â": {
+      "word_initial": [
+        "ʔaː"
+      ],
+      "after_vowel": [
+        "ʔaː"
+      ],
+      "default": [
+        "aː"
+      ]
+    },
+    "ê": {
+      "word_initial": [
+        "ʔeː"
+      ],
+      "after_vowel": [
+        "ʔeː"
+      ],
+      "default": [
+        "eː"
+      ]
+    },
+    "î": {
+      "word_initial": [
+        "ʔiː"
+      ],
+      "after_vowel": [
+        "ʔiː"
+      ],
+      "default": [
+        "iː"
+      ]
+    },
+    "ô": {
+      "word_initial": [
+        "ʔoː"
+      ],
+      "after_vowel": [
+        "ʔoː"
+      ],
+      "default": [
+        "oː"
+      ]
+    },
+    "û": {
+      "word_initial": [
+        "ʔuː"
+      ],
+      "after_vowel": [
+        "ʔuː"
+      ],
+      "default": [
+        "uː"
+      ]
+    },
+    "y": {
+      "word_initial": [
+        "ʔi"
+      ],
+      "default": [
+        "j"
+      ]
+    }
+  },
+  "allophone_rules": [
+    {
+      "id": "HTS_POSTNASAL_B",
+      "phonemes": [
+        "b"
+      ],
+      "surface": "p",
+      "preceded_by_phoneme": [
+        "n",
+        "m",
+        "ŋ",
+        "n̩"
+      ],
+      "notes": "Post-nasal stop devoicing: the orthographic voiced stop of ⟨mb⟩ ⟨nd⟩ ⟨ng⟩ is phonetically voiceless. Sands, Maddieson & Ladefoged 1996 (The phonetic structures of Hadza, UCLA WPP 91 / Studies in African Linguistics 25) report that Hadza has no voiced stop after a nasal; the nasal+stop sequence is realised with a plain voiceless stop."
+    },
+    {
+      "id": "HTS_POSTNASAL_D",
+      "phonemes": [
+        "d"
+      ],
+      "surface": "t",
+      "preceded_by_phoneme": [
+        "n",
+        "m",
+        "ŋ",
+        "n̩"
+      ],
+      "notes": "Post-nasal stop devoicing, coronal member of the same series (Sands, Maddieson & Ladefoged 1996)."
+    },
+    {
+      "id": "HTS_POSTNASAL_G",
+      "phonemes": [
+        "ɡ"
+      ],
+      "surface": "k",
+      "preceded_by_phoneme": [
+        "n",
+        "m",
+        "ŋ",
+        "n̩"
+      ],
+      "notes": "Post-nasal stop devoicing, velar member of the same series (Sands, Maddieson & Ladefoged 1996)."
+    },
+    {
+      "id": "HTS_POSTNASAL_J",
+      "phonemes": [
+        "d͡ʒ"
+      ],
+      "surface": "t͡ʃ",
+      "preceded_by_phoneme": [
+        "n",
+        "m",
+        "ŋ",
+        "n̩"
+      ],
+      "notes": "Post-nasal stop devoicing, the palato-alveolar affricate member of the same series: ⟨nj⟩ is [nt͡ʃ]. Sands, Maddieson & Ladefoged 1996 (The phonetic structures of Hadza, Studies in African Linguistics 25(2), 171-204): Hadza has no voiced obstruent after a nasal."
+    },
+    {
+      "id": "HTS_POSTNASAL_T",
+      "phonemes": [
+        "t"
+      ],
+      "surface": "tʰ",
+      "preceded_by_phoneme": [
+        "n",
+        "m",
+        "ŋ",
+        "n̩"
+      ],
+      "notes": "Post-nasal aspiration: where the orthography writes the plain voiceless letter after a nasal (⟨nt⟩), the stop is aspirated — the contrast ⟨nd⟩ [nt] vs ⟨nt⟩ [ntʰ] is what the two spellings encode (Sands 2013, 'Hadza', in Vossen ed., The Khoesan Languages, Routledge, §phonology; Sands, Maddieson & Ladefoged 1996)."
+    },
+    {
+      "id": "HTS_POSTNASAL_K",
+      "phonemes": [
+        "k"
+      ],
+      "surface": "kʰ",
+      "preceded_by_phoneme": [
+        "n",
+        "m",
+        "ŋ",
+        "n̩"
+      ],
+      "notes": "Post-nasal aspiration, velar member: ⟨nk⟩ [nkʰ] against ⟨ng⟩ [nk] (Sands 2013; Sands, Maddieson & Ladefoged 1996)."
+    },
+    {
+      "id": "HTS_POSTNASAL_P",
+      "phonemes": [
+        "p"
+      ],
+      "surface": "pʰ",
+      "preceded_by_phoneme": [
+        "n",
+        "m",
+        "ŋ",
+        "n̩"
+      ],
+      "notes": "Post-nasal aspiration, labial member: ⟨mp⟩ is [mpʰ], the labial counterpart of the ⟨nt⟩/⟨nk⟩ contrast against ⟨nd⟩/⟨ng⟩ (Sands 2013, 'Hadza', in Vossen ed., The Khoesan Languages, Routledge). The documented series is complete at all three places; this member happens not to be exercised by any word in the current hts gold, which is a fact about the gold, not about Hadza."
+    },
+    {
+      "id": "HTS_POSTNASAL_TS",
+      "phonemes": [
+        "t͡s"
+      ],
+      "surface": "t͡sʰ",
+      "preceded_by_phoneme": [
+        "n",
+        "m",
+        "ŋ",
+        "n̩"
+      ],
+      "notes": "Post-nasal aspiration extends to the coronal affricate: ⟨nts⟩ [ntʰs]~[nt͡sʰ] (Sands, Maddieson & Ladefoged 1996, affricate series)."
+    },
+    {
+      "id": "HTS_GLIDE_Y_BEFORE_FRONT",
+      "phonemes": [
+        "j"
+      ],
+      "surface": "",
+      "preceded_by": "vowel",
+      "followed_by_phoneme": [
+        "i",
+        "e",
+        "iː",
+        "eː"
+      ],
+      "notes": "Hiatus-breaking glide, not a phoneme. Sands 2013 ('Hadza', in Vossen ed., The Khoesan Languages, Routledge) describes ⟨y⟩ and ⟨w⟩ between vowels as the written separator of a true vowel sequence, and states (fn. 7) that the [j] and [w] so written are mere transitions between the flanking vowels rather than segments. The transition is therefore absent — the two vowels are simply adjacent — exactly when one of the flanking vowels already shares the glide's own place: a front vowel for ⟨y⟩, a round vowel for ⟨w⟩. With neither neighbour matching, the transition is audible and is transcribed."
+    },
+    {
+      "id": "HTS_GLIDE_Y_AFTER_FRONT",
+      "phonemes": [
+        "j"
+      ],
+      "surface": "",
+      "preceded_by_phoneme": [
+        "i",
+        "e",
+        "iː",
+        "eː"
+      ],
+      "followed_by": "vowel",
+      "notes": "Hiatus-breaking glide, not a phoneme. Sands 2013 ('Hadza', in Vossen ed., The Khoesan Languages, Routledge) describes ⟨y⟩ and ⟨w⟩ between vowels as the written separator of a true vowel sequence, and states (fn. 7) that the [j] and [w] so written are mere transitions between the flanking vowels rather than segments. The transition is therefore absent — the two vowels are simply adjacent — exactly when one of the flanking vowels already shares the glide's own place: a front vowel for ⟨y⟩, a round vowel for ⟨w⟩. With neither neighbour matching, the transition is audible and is transcribed."
+    },
+    {
+      "id": "HTS_GLIDE_W_BEFORE_ROUND",
+      "phonemes": [
+        "w"
+      ],
+      "surface": "",
+      "preceded_by": "vowel",
+      "followed_by_phoneme": [
+        "o",
+        "u",
+        "oː",
+        "uː"
+      ],
+      "notes": "Hiatus-breaking glide, not a phoneme. Sands 2013 ('Hadza', in Vossen ed., The Khoesan Languages, Routledge) describes ⟨y⟩ and ⟨w⟩ between vowels as the written separator of a true vowel sequence, and states (fn. 7) that the [j] and [w] so written are mere transitions between the flanking vowels rather than segments. The transition is therefore absent — the two vowels are simply adjacent — exactly when one of the flanking vowels already shares the glide's own place: a front vowel for ⟨y⟩, a round vowel for ⟨w⟩. With neither neighbour matching, the transition is audible and is transcribed."
+    },
+    {
+      "id": "HTS_GLIDE_W_AFTER_ROUND",
+      "phonemes": [
+        "w"
+      ],
+      "surface": "",
+      "preceded_by_phoneme": [
+        "o",
+        "u",
+        "oː",
+        "uː"
+      ],
+      "followed_by": "vowel",
+      "notes": "Hiatus-breaking glide, not a phoneme. Sands 2013 ('Hadza', in Vossen ed., The Khoesan Languages, Routledge) describes ⟨y⟩ and ⟨w⟩ between vowels as the written separator of a true vowel sequence, and states (fn. 7) that the [j] and [w] so written are mere transitions between the flanking vowels rather than segments. The transition is therefore absent — the two vowels are simply adjacent — exactly when one of the flanking vowels already shares the glide's own place: a front vowel for ⟨y⟩, a round vowel for ⟨w⟩. With neither neighbour matching, the transition is audible and is transcribed."
+    },
+    {
+      "id": "HTS_SYLLABIC_N",
+      "phonemes": [
+        "n"
+      ],
+      "surface": "n̩",
+      "word_initial": true,
+      "followed_by": "consonant",
+      "notes": "Syllabic nasal: a word-initial ⟨n⟩ before a consonant is its own syllable nucleus [n̩] (Sands 2013, §syllable structure)."
+    }
+  ]
+}

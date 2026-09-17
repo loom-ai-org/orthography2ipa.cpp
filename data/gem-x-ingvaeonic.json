@@ -1,0 +1,199 @@
+{
+  "code": "gem-x-ingvaeonic",
+  "name": "Proto-Ingvaeonic (North Sea Germanic)",
+  "script": "Latin",
+  "graphemes_base": "gem-x-northwest",
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "e": [
+      "e"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "o"
+    ],
+    "u": [
+      "u"
+    ],
+    "p": [
+      "p"
+    ],
+    "t": [
+      "t"
+    ],
+    "k": [
+      "k"
+    ],
+    "b": [
+      "b"
+    ],
+    "d": [
+      "d"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "f": [
+      "f"
+    ],
+    "s": [
+      "s"
+    ],
+    "h": [
+      "h"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "l": [
+      "l"
+    ],
+    "r": [
+      "r"
+    ],
+    "w": [
+      "w"
+    ],
+    "j": [
+      "j"
+    ],
+    "þ": [
+      "θ"
+    ],
+    "ð": [
+      "ð"
+    ]
+  },
+  "allophones_base": "gem-x-northwest",
+  "allophones": {
+    "a": [
+      "a"
+    ],
+    "e": [
+      "e"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "o"
+    ],
+    "u": [
+      "u"
+    ],
+    "p": [
+      "p"
+    ],
+    "t": [
+      "t"
+    ],
+    "k": [
+      "k"
+    ],
+    "b": [
+      "b"
+    ],
+    "d": [
+      "d"
+    ],
+    "ɡ": [
+      "ɡ"
+    ],
+    "f": [
+      "f"
+    ],
+    "s": [
+      "s"
+    ],
+    "h": [
+      "h"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "l": [
+      "l"
+    ],
+    "r": [
+      "r"
+    ],
+    "w": [
+      "w"
+    ],
+    "j": [
+      "j"
+    ],
+    "θ": [
+      "θ"
+    ],
+    "ð": [
+      "ð"
+    ]
+  },
+  "parent": "x-clade-west2793",
+  "ancestors": [
+    {
+      "code": "gem-x-northwest",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Descent from Proto-Northwest Germanic"
+    }
+  ],
+  "notes": "Proto-Ingvaeonic / North Sea Germanic (~3rd–5th c. CE). Ancestor of Old English, Old Frisian, and Old Saxon. Named after the Ingaevones (Tacitus) — North Sea coastal tribes. DEFINING INNOVATION: Ingvaeonic Nasal Spirant Law — PGmc nasal before fricative deleted with compensatory lengthening: *-nθ → -Vː: *munþaz → OE mūþ 'mouth' (cf. OHG munt — nasal kept); *-nf → -Vː: *fimf → OE fīf 'five' (cf. OHG fimf — nasal kept); *-ns → -Vː: *uns → OE ūs 'us'. NO High German Consonant Shift. Source: Fulk (2018), Robinson (1992).",
+  "quality": "research",
+  "script_type": "alphabet",
+  "sources": [
+    {
+      "id": "fortson2010",
+      "author": "Fortson IV, B.W.",
+      "year": 2010,
+      "title": "Indo-European Language and Culture: An Introduction (2nd ed.)",
+      "publisher": "Wiley-Blackwell",
+      "url": null,
+      "pages": null,
+      "notes": null,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Indo-European_languages"
+    },
+    {
+      "id": "ringe2006",
+      "author": "Ringe, D.",
+      "year": 2006,
+      "title": "From Proto-Indo-European to Proto-Germanic",
+      "publisher": "Oxford University Press",
+      "url": null,
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Ingvaeonic_languages",
+    "https://de.wikipedia.org/wiki/Ingw%C3%A4onisch"
+  ],
+  "urls": [
+    "https://en.wikipedia.org/wiki/Ingvaeonic_languages",
+    "https://en.wikipedia.org/wiki/Anglo-Frisian_languages",
+    "https://en.wikipedia.org/wiki/North_Sea_Germanic"
+  ],
+  "timespan": {
+    "start_year": 300,
+    "end_year": 700
+  },
+  "glottolog_code": "nort3175",
+  "wikidata_qid": "Q30134",
+  "location": {
+    "latitude": 52.684904,
+    "longitude": 5.783267,
+    "source": "glottolog",
+    "notes": "Glottolog's computed centroid for the North Sea Germanic family — a summary of a whole clade's range, not a place anyone speaks."
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "code": "bew",
+  "name": "Betawi",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "stub",
+  "parent": "poz",
+  "ancestors": [
+    {
+      "code": "ms",
+      "role": "lexifier",
+      "weight": 0.6,
+      "notes": "Malay lexifier: Betawi is a Malay-derived creoloid that formed among the mixed population of colonial-era Batavia; the bulk of its vocabulary and grammar continues Low Malay (Grijns 1991, Jakarta Malay: Its History and Its Kinship with Malay Dialects)."
+    },
+    {
+      "code": "jv",
+      "role": "substrate",
+      "weight": 0.12,
+      "notes": "Javanese substrate: migrants from Central/East Java were a major component of Batavia's mixed founder population and contributed vocabulary and phonological features to Betawi (Ikranagara 1980, Muysken & Grijns literature on Jakarta Malay/Betawi genesis)."
+    },
+    {
+      "code": "su",
+      "role": "substrate",
+      "weight": 0.08,
+      "notes": "Sundanese substrate: West Javanese (Sundanese-speaking) population contact around Batavia, cited alongside Javanese in the standard Betawi-formation accounts (Grijns 1991)."
+    },
+    {
+      "code": "nl",
+      "role": "adstrate",
+      "weight": 0.04,
+      "notes": "Dutch adstrate: three centuries of Batavia/Jakarta colonial administration (VOC then Dutch East Indies) left loanwords in Betawi vocabulary."
+    },
+    {
+      "code": "nan",
+      "role": "adstrate",
+      "weight": 0.05,
+      "notes": "Hokkien (Min Nan) adstrate: the Chinese-Indonesian (peranakan) community of colonial Batavia was predominantly Hokkien-speaking, and its long trade/urban contact contributed a lexical loan layer to Betawi (kongsi, cukong, toke-type peranakan borrowings); the influence is lexical rather than structural, so adstrate rather than substrate (Grijns 1991, Jakarta Malay; Ikranagara 1980)."
+    }
+  ],
+  "graphemes": {},
+  "allophones": {},
+  "notes": "Betawi (Betawi Malay / basa Betawi) — Malayic (Austronesian) creole-influenced language of Jakarta, Indonesia. Written in the Latin script following Indonesian orthographic conventions. GRAPHEME INVENTORY NOT YET SPECIFIED: Betawi has no codified standard orthography of its own and its phonology is not documented to a level that supports a reliable letter→phoneme table here. INPUT CONTRACT: input is expected in the Latin script, spelled per Indonesian conventions. wikidata_qid left unset: the code's Wikidata row resolves to the Wikimedia project item, not the language item; not recorded rather than record a wrong id. ANCESTRY: Malay (ms) lexifier with Javanese (jv)/Sundanese (su) substrate influence, a Dutch (nl) adstrate loanword layer, and a Hokkien/Min Nan (nan) adstrate from the peranakan Chinese-Indonesian community of colonial Batavia, per Grijns (1991) and Ikranagara (1980).",
+  "iso639_3": null,
+  "glottolog_code": null,
+  "wikidata_qid": null,
+  "wikipedia": [
+    "https://bew.wikipedia.org/wiki/Wikip%C3%A9di_basa_Betawi"
+  ]
+}

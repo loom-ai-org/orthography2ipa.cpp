@@ -1,0 +1,537 @@
+{
+  "code": "lo",
+  "name": "Lao",
+  "glottolog_code": "laoo1244",
+  "script": "Lao",
+  "script_type": "abugida",
+  "inherent_vowel": "o",
+  "iso639_3": "lao",
+  "quality": "research",
+  "tone_inventory": {
+    "low_class_no_mark": "mid",
+    "low_class_mai_ek": "falling",
+    "low_class_mai_tho": "high",
+    "mid_class_no_mark": "low",
+    "mid_class_mai_ek": "low",
+    "mid_class_mai_tho": "mid",
+    "high_class_no_mark": "rising",
+    "high_class_mai_ek": "mid",
+    "high_class_mai_tho": "high"
+  },
+  "graphemes": {
+    "ກ": [
+      "k"
+    ],
+    "ຂ": [
+      "kʰ"
+    ],
+    "ຄ": [
+      "kʰ"
+    ],
+    "ງ": [
+      "ŋ"
+    ],
+    "ຈ": [
+      "tɕ"
+    ],
+    "ສ": [
+      "s"
+    ],
+    "ຊ": [
+      "s"
+    ],
+    "ຍ": [
+      "ɲ"
+    ],
+    "ດ": [
+      "d"
+    ],
+    "ຕ": [
+      "t"
+    ],
+    "ຖ": [
+      "tʰ"
+    ],
+    "ທ": [
+      "tʰ"
+    ],
+    "ນ": [
+      "n"
+    ],
+    "ບ": [
+      "b"
+    ],
+    "ປ": [
+      "p"
+    ],
+    "ຜ": [
+      "pʰ"
+    ],
+    "ຝ": [
+      "f"
+    ],
+    "ພ": [
+      "pʰ"
+    ],
+    "ຟ": [
+      "f"
+    ],
+    "ມ": [
+      "m"
+    ],
+    "ຢ": [
+      "j"
+    ],
+    "ຣ": [
+      "l"
+    ],
+    "ລ": [
+      "l"
+    ],
+    "ວ": [
+      "ʋ"
+    ],
+    "ຫ": [
+      "h"
+    ],
+    "ອ": [
+      "ɔː"
+    ],
+    "ຮ": [
+      "h"
+    ],
+    "າ": [
+      "aː"
+    ],
+    "ິ": [
+      "i"
+    ],
+    "ີ": [
+      "iː"
+    ],
+    "ຶ": [
+      "ɯ"
+    ],
+    "ື": [
+      "ɯː"
+    ],
+    "ຸ": [
+      "u"
+    ],
+    "ູ": [
+      "uː"
+    ],
+    "ເ": [
+      "eː"
+    ],
+    "ແ": [
+      "ɛː"
+    ],
+    "ໂ": [
+      "oː"
+    ],
+    "ໃ": [
+      "aj"
+    ],
+    "ໄ": [
+      "aj"
+    ],
+    "ືອ": [
+      "ɯːə"
+    ],
+    "ະ": [
+      "aʔ"
+    ],
+    "ັ": [
+      "a"
+    ],
+    "ົ": [
+      "o"
+    ],
+    "ຳ": [
+      "am"
+    ],
+    "ຽ": [
+      "iːə"
+    ],
+    "ໍ": [
+      "ɔː"
+    ],
+    "ຼ": [
+      "l"
+    ],
+    "ໝ": [
+      "m"
+    ],
+    "ໜ": [
+      "n"
+    ],
+    "່": [
+      ""
+    ],
+    "້": [
+      ""
+    ],
+    "໊": [
+      ""
+    ],
+    "໋": [
+      ""
+    ],
+    "໌": [
+      ""
+    ],
+    "ຫມ": [
+      "m"
+    ],
+    "ຫນ": [
+      "n"
+    ],
+    "ຫລ": [
+      "l"
+    ],
+    "ຫຼ": [
+      "l"
+    ],
+    "ຫງ": [
+      "ŋ"
+    ],
+    "ຫຍ": [
+      "ɲ"
+    ],
+    "ຫວ": [
+      "ʋ"
+    ],
+    "ຫຣ": [
+      "l"
+    ],
+    "ົວ": [
+      "uːə"
+    ],
+    "ົາ": [
+      "aw"
+    ],
+    "ຶອ": [
+      "ɯːə"
+    ],
+    "າະ": [
+      "ɔʔ"
+    ]
+  },
+  "dependent_vowels": [
+    "າ",
+    "ະ",
+    "ຳ",
+    "ຽ",
+    "ໍ",
+    "ິ",
+    "ີ",
+    "ຶ",
+    "ື",
+    "ຸ",
+    "ູ",
+    "ັ",
+    "ົ",
+    "ອ",
+    "ົວ",
+    "ົາ",
+    "ືອ",
+    "ຶອ",
+    "າະ"
+  ],
+  "preposed_vowels": [
+    "ເ",
+    "ແ",
+    "ໂ",
+    "ໃ",
+    "ໄ"
+  ],
+  "coda_no_inherent_vowel": true,
+  "allophone_rules": [
+    {
+      "id": "LO_CODA_STOP_T",
+      "phonemes": [
+        "d",
+        "t",
+        "tʰ",
+        "s"
+      ],
+      "surface": "t̚",
+      "syllable_position": "coda",
+      "notes": "Lao permits only /p t k m n ŋ w j/ in the coda, and every coronal obstruent letter neutralises there to an unreleased [t̚]: ⟨ລົດ⟩ is /lot̚/ and ⟨ວັດ⟩ /ʋat̚/, not *[lod]/*[ʋad]. Enfield (2007), A Grammar of Lao. Gated on syllable_position=coda so onset /d/ is untouched (⟨ດີ⟩ stays /diː/)."
+    },
+    {
+      "id": "LO_CODA_STOP_P",
+      "phonemes": [
+        "b",
+        "p",
+        "pʰ",
+        "f"
+      ],
+      "surface": "p̚",
+      "syllable_position": "coda",
+      "notes": "Labial coda neutralisation, the labial half of the same rule: ⟨ຮັບ⟩ is /hap̚/. Enfield (2007), A Grammar of Lao. Coda-gated, so onset /b/ is untouched."
+    },
+    {
+      "id": "LO_CODA_STOP_K",
+      "phonemes": [
+        "k",
+        "kʰ"
+      ],
+      "surface": "k̚",
+      "syllable_position": "coda",
+      "notes": "Velar coda neutralisation, the velar half of the same rule: ⟨ດອກ⟩ is /dɔːk̚/. Enfield (2007), A Grammar of Lao."
+    },
+    {
+      "id": "LO_CODA_NY_GLIDE",
+      "phonemes": [
+        "ɲ"
+      ],
+      "surface": "j",
+      "syllable_position": "coda",
+      "notes": "⟨ຍ⟩ is the palatal nasal /ɲ/ in the onset but the glide /j/ in the coda, the only position a Lao syllable admits it: ⟨ຂ້ອຍ⟩ is /kʰɔːj/. Enfield (2007), A Grammar of Lao."
+    },
+    {
+      "id": "LO_V_CODA_W",
+      "phonemes": [
+        "ʋ"
+      ],
+      "surface": "w",
+      "syllable_position": "coda",
+      "notes": "Lao /ʋ/ is a labiodental approximant in the onset and the glide [w] in the coda, where the labiodental articulation is not available: ⟨ລາວ⟩ is /laːw/ against onset ⟨ວັດ⟩ /ʋat̚/. Enfield (2007), A Grammar of Lao."
+    },
+    {
+      "id": "LO_O_CARRIER",
+      "phonemes": [
+        "ɔː"
+      ],
+      "surface": "ʔ",
+      "grapheme": [
+        "ອ"
+      ],
+      "followed_by": "vowel",
+      "notes": "⟨ອ⟩ has two jobs. After an onset consonant it is the vowel letter /ɔː/ (⟨ດອກ⟩ /dɔːk̚/); when it opens a syllable of its own it is the zero-consonant carrier that a vowel sign needs to attach to, and is read as the glottal onset (⟨ອິດ⟩ /ʔit̚/). The following vowel is what distinguishes the two, so the rule is gated on the grapheme AND on a following vowel. Enfield (2007), A Grammar of Lao."
+    }
+  ],
+  "allophones": {
+    "k": [
+      "k",
+      "k̚"
+    ],
+    "kʰ": [
+      "kʰ",
+      "k̚"
+    ],
+    "ŋ": [
+      "ŋ"
+    ],
+    "tɕ": [
+      "tɕ"
+    ],
+    "s": [
+      "s",
+      "t̚"
+    ],
+    "ɲ": [
+      "ɲ",
+      "j"
+    ],
+    "d": [
+      "d",
+      "t̚"
+    ],
+    "t": [
+      "t",
+      "t̚"
+    ],
+    "tʰ": [
+      "tʰ",
+      "t̚"
+    ],
+    "n": [
+      "n"
+    ],
+    "b": [
+      "b",
+      "p̚"
+    ],
+    "p": [
+      "p",
+      "p̚"
+    ],
+    "pʰ": [
+      "pʰ",
+      "p̚"
+    ],
+    "f": [
+      "f",
+      "p̚"
+    ],
+    "m": [
+      "m"
+    ],
+    "j": [
+      "j"
+    ],
+    "r": [
+      "r"
+    ],
+    "l": [
+      "l"
+    ],
+    "h": [
+      "h"
+    ],
+    "ʔ": [
+      "ʔ"
+    ],
+    "aː": [
+      "aː"
+    ],
+    "i": [
+      "i"
+    ],
+    "iː": [
+      "iː"
+    ],
+    "ɯ": [
+      "ɯ"
+    ],
+    "ɯː": [
+      "ɯː"
+    ],
+    "u": [
+      "u"
+    ],
+    "uː": [
+      "uː"
+    ],
+    "eː": [
+      "eː"
+    ],
+    "ɛː": [
+      "ɛː"
+    ],
+    "oː": [
+      "oː"
+    ],
+    "ɔː": [
+      "ɔː",
+      "ʔ"
+    ],
+    "ʋ": [
+      "ʋ",
+      "w"
+    ],
+    "aʔ": [
+      "aʔ"
+    ],
+    "a": [
+      "a"
+    ],
+    "o": [
+      "o"
+    ],
+    "am": [
+      "am"
+    ],
+    "iːə": [
+      "iːə"
+    ],
+    "uːə": [
+      "uːə"
+    ],
+    "aw": [
+      "aw"
+    ],
+    "ɯːə": [
+      "ɯːə"
+    ],
+    "ɔʔ": [
+      "ɔʔ"
+    ]
+  },
+  "notes": "Lao, the Southwestern Tai language of Laos, written in its own Indic-derived abugida. The spec describes the Vientiane standard.\n\nVowels are written with signs that stand before, above, below or after their consonant, and several are circumfixes. The preposed signs are ⟨ເ ແ ໂ ໃ ໄ⟩: they precede the consonant on the page and follow it in speech, so ⟨ເກ⟩ is /keː/. A circumfix pairs one of them with a post-consonantal part, which is what the multi-character vowel keys ⟨ືອ ຶອ ົາ ົວ າະ⟩ encode: ⟨ເສືອ⟩ 'tiger' is /sɯːə/, ⟨ເຮົາ⟩ 'we' is /haw/, ⟨ເກາະ⟩ 'island' is /kɔʔ/. ⟨ະ⟩ writes short /a/ in an open syllable and carries the glottal check Lao gives such syllables; ⟨ັ⟩ and ⟨ົ⟩ write short /a/ and /o/ in a closed one.\n\nA Lao syllable may close only on /p t k m n ŋ w j/. Every other consonant letter neutralises in the coda, which the LO_CODA_* rules encode: coronal obstruents to unreleased [t̚], labials to [p̚], velars to [k̚], and ⟨ຍ⟩ from onset /ɲ/ to the glide /j/. The rules are gated on the coda, so the onset readings are untouched — ⟨ດີ⟩ is /diː/ while ⟨ລົດ⟩ is /lot̚/. Lao likewise admits no liquid coda, but the fact is left unencoded, and a measurement of the 2308-word kaikki gold says why. Nine words end in ⟨ລ⟩ or ⟨ຣ⟩. Six of the nine have the letter as the ONSET of a final syllable whose vowel is a preposed sign (⟨ກິໂລ⟩ /kiʔ.loː/, ⟨ທະເລ⟩ /tʰa.leː/, ⟨ກຳໄລ⟩ /kam.laj/) or is the subscript of a word-final ho-nam ⟨ຫຼ⟩ (⟨ໄຫລ⟩ /laj/), so a positional rule that fires word-finally reads an onset as a coda in two productive spelling classes and breaks ⟨ໄຫລ⟩, which is currently correct. The remaining three are not one phenomenon and none of them is a liquid the engine could simply neutralise. ⟨ນຄຣ⟩ and ⟨ທຫາຣ⟩ are abbreviated etymological Indic spellings of ⟨ນະຄອນ⟩ /naʔ.kʰɔːn/ and ⟨ທະຫານ⟩ /tʰaʔ.haːn/ — both fully spelled forms are in the same gold and this spec already reads both correctly — so reading them needs the unwritten ⟨ະ⟩ and ⟨ອ⟩ supplied, which no rule about the final letter provides. ⟨ອີແມລ⟩ is the English loan 'email' whose final /l/ is nativised to /n/, a loan-adaptation fact about one word. Three words spread over two unrelated causes do not establish a coda rule, and the rule they would motivate costs more spellings than it fixes.\n\n⟨ຫ⟩ before a sonorant is not an /h/ but the ho nam tone-class marker: the sonorant is the onset and the ⟨ຫ⟩ only shifts the syllable into the high class, so ⟨ຫລອດ⟩ is /lɔːt̚/ and ⟨ຫມາ⟩ /maː/. ⟨ໝ⟩ and ⟨ໜ⟩ are single-codepoint ligatures of the same device, and ⟨ຫຼ⟩ writes it with the subscript lo ⟨ຼ⟩. Before a vowel ⟨ຫ⟩ is a real /h/ (⟨ຫໍ⟩ /hɔː/), which is why the marker is encoded as digraphs rather than as a silencing of ⟨ຫ⟩.\n\n⟨ວ⟩ is the labiodental approximant /ʋ/ in the onset and the glide /w/ in the coda. ⟨ຣ⟩ is read /l/, the ho-nam digraph ⟨ຫຣ⟩ with it: the historical /r/ has merged with /l/ in the modern language. ⟨ອ⟩ is the vowel /ɔː/ after an onset and the zero-consonant carrier /ʔ/ when it opens a syllable itself.\n\nA consonant letter with no vowel sign on it carries the inherent vowel /o/, the value it takes in the closed syllables such a spelling writes (⟨ຄນ⟩ /kʰon/).\n\nLao has no lexical word stress — prominence is carried by the tone system — so no `stress` block is encoded (research-tier exemption). Tone itself is not written into the IPA: it is a property of the syllable computed from the consonant class and the tone marks ⟨່ ້ ໊ ໋⟩, which are recorded in `tone_inventory` and mapped to nothing segmentally. The circumfixes whose post-consonantal part is ambiguous on its own — ⟨ເ◌ັ⟩ /e/, ⟨ແ◌ັ⟩ /ɛ/, ⟨ເ◌ີ⟩ /ɤː/ — are NOT encoded, because the vowel key cannot see which preposed sign it belongs to; encoding them by position would be fitting the benchmark rather than describing the orthography. Neither is the cancellation mark ⟨໌⟩, which silences the letter it stands on (⟨ວຽງຈັນທນ໌⟩ /ʋiːəŋtɕan/): it is mapped to nothing itself, but the letter it kills is still read.\n\nThree known gaps. The ho-nam digraph ⟨ຫຼ⟩ (ho + subscript lo) does not form word-finally with no following vowel to attach a preposed sign to: ⟨ອາໂຫຼ⟩ reads as ʔaːhoːl (bare ⟨ຫ⟩ /h/ + the preposed ⟨ໂ⟩ + a stray coda /l/ off the subscript) rather than the ho-nam reading ʔaːloː the digraph gives it elsewhere (⟨ໂຫຼດ⟩ /loːt̚/ is correct). The tokenizer attaches a word-final preposed vowel to the single grapheme before it rather than to the longest digraph match, and this spec has not found a clean per-grapheme fix; tracked as a known gap rather than encoded around. Separately, ⟨ເ...ອ⟩ is a preposed-sign/⟨ອ⟩ circumfix like ⟨ເ◌ີ⟩ above and is likewise NOT encoded for the same reason: ⟨ເສອ⟩ reads sɔː, dropping the preposed /eː/ that the circumfix as a whole gives (⟨ໂອເຊອານີ⟩ 'Oceania' loses its second syllable's nucleus). A third gap: bare ⟨◌ວ◌⟩ — ⟨ວ⟩ between two other consonant letters with no vowel sign anywhere in the word — is itself the nucleus /uːə/, not the onset /ʋ/ this spec gives it elsewhere (⟨ພວກ⟩ is /pʰuːə̯k̚/, ⟨ຫຼວງ⟩ /luːə̯ŋ/, 12/12 kaikki gold words with no vowel sign at all agree; dropping that condition and only requiring the C-⟨ວ⟩-C letters widens the set to 36/40, the 4 exceptions all carrying a preposed vowel sign elsewhere in the word that makes ⟨ວ⟩ that vowel's own onset or coda instead, e.g. ⟨ແຫວນ⟩ /ʋɛːn/). Encoding it needs a positional condition joint on both neighbours being consonants, which the grapheme table's single-position lookup cannot express; tracked here rather than encoded around.",
+  "sources": [
+    {
+      "id": "enfield2007",
+      "author": "Enfield, N.J.",
+      "year": 2007,
+      "title": "A Grammar of Lao",
+      "publisher": "Mouton de Gruyter",
+      "url": null,
+      "pages": null,
+      "notes": "Source for the preposed/circumfix dependent-vowel analysis (⟨ເ⟩, ⟨ເ...ືອ⟩)."
+    },
+    {
+      "id": "lao_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Lao language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Lao_language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Lao_language",
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "parent": "tai",
+  "ancestors": [
+    {
+      "code": "tai",
+      "role": "parent",
+      "weight": 0.78,
+      "notes": "Southwestern Tai branch of Tai-Kadai (Kra-Dai)."
+    },
+    {
+      "code": "pi",
+      "role": "adstrate",
+      "weight": 0.1,
+      "notes": "Pali adstrate: Theravada Buddhist religious vocabulary."
+    },
+    {
+      "code": "sa",
+      "role": "adstrate",
+      "weight": 0.08,
+      "notes": "Sanskrit adstrate: learned vocabulary."
+    },
+    {
+      "code": "km",
+      "role": "adstrate",
+      "weight": 0.05,
+      "notes": "Khmer adstrate: shared areal/royal vocabulary."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Lao_language",
+    "https://en.wikipedia.org/wiki/Kra%E2%80%93Dai_languages",
+    "https://lo.wikipedia.org/wiki/%E0%BA%9E%E0%BA%B2%E0%BA%AA%E0%BA%B2%E0%BA%A5%E0%BA%B2%E0%BA%A7"
+  ],
+  "timespan": {
+    "start_year": 1300,
+    "end_year": null
+  },
+  "wikidata_qid": "Q9211",
+  "phoible_id": "laoo1244",
+  "wals_code": "lao",
+  "location": {
+    "latitude": 19.0,
+    "longitude": 102.46,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Lao."
+  },
+  "positional_graphemes": {
+    "ອ": {
+      "word_initial": [
+        "ʔ"
+      ]
+    }
+  },
+  "audit": {
+    "kaikki": {
+      "conclusion": "input_limited",
+      "measured": "Lao tone is a property of the syllable computed from consonant class and the tone marks, which this spec records in tone_inventory but maps to nothing segmentally because Lao tone is suprasegmental and not itself an IPA segment the orthography commits to a single reading of. The three named remaining gaps (word-final ho-nam digraph attachment, the e-...-o circumfix, bare intervocalic w as nucleus) are each independently documented as structural tokenizer/lookup limitations rather than unsourced rules, and are not encoded around.",
+      "reference": "spec notes"
+    }
+  }
+}

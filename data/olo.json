@@ -1,0 +1,236 @@
+{
+  "code": "olo",
+  "name": "Livvi-Karelian",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "a": [
+      "ɑ"
+    ],
+    "ä": [
+      "æ"
+    ],
+    "e": [
+      "e"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "o"
+    ],
+    "ö": [
+      "ø"
+    ],
+    "u": [
+      "u"
+    ],
+    "y": [
+      "y"
+    ],
+    "b": [
+      "b"
+    ],
+    "c": [
+      "ts"
+    ],
+    "č": [
+      "tʃ"
+    ],
+    "d": [
+      "d"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "h": [
+      "h"
+    ],
+    "j": [
+      "j"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "š": [
+      "ʃ"
+    ],
+    "t": [
+      "t"
+    ],
+    "v": [
+      "ʋ"
+    ],
+    "z": [
+      "z"
+    ],
+    "ž": [
+      "ʒ"
+    ]
+  },
+  "allophones": {
+    "ɑ": [
+      "ɑ"
+    ],
+    "æ": [
+      "æ"
+    ],
+    "e": [
+      "e"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "o"
+    ],
+    "ø": [
+      "ø"
+    ],
+    "u": [
+      "u"
+    ],
+    "y": [
+      "y"
+    ],
+    "b": [
+      "b"
+    ],
+    "ts": [
+      "ts"
+    ],
+    "tʃ": [
+      "tʃ"
+    ],
+    "d": [
+      "d",
+      "dʲ"
+    ],
+    "f": [
+      "f"
+    ],
+    "ɡ": [
+      "ɡ"
+    ],
+    "h": [
+      "h",
+      "x",
+      "χ"
+    ],
+    "j": [
+      "j"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n",
+      "ŋ"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "t": [
+      "t",
+      "tʲ"
+    ],
+    "ʋ": [
+      "ʋ"
+    ],
+    "z": [
+      "z"
+    ],
+    "ʒ": [
+      "ʒ"
+    ]
+  },
+  "parent": "urj",
+  "ancestors": [
+    {
+      "code": "urj",
+      "role": "parent",
+      "weight": 0.9,
+      "notes": "Finnic branch of Uralic; Livvi is a Karelian variety of Olonets, Republic of Karelia."
+    },
+    {
+      "code": "fi",
+      "role": "related",
+      "weight": 0.05,
+      "notes": "Closely related Finnic neighbour and orthographic model."
+    }
+  ],
+  "notes": "Livvi-Karelian (livvinkarjala / Olonets Karelian), Republic of Karelia (Russia). Written in the Latin-based Karelian alphabet (2007 unified norm; <ü> was replaced by <y>). Values follow the Finnic convention: <a>=/ɑ/, <ä>=/æ/, <ö>=/ø/, <y>=/y/, <c>=/ts/, <č>=/tʃ/, <š>=/ʃ/, <ž>=/ʒ/, <v>=/ʋ/. Vowel and consonant length are written with doubled letters (compositional, not listed as separate graphemes). Palatalisation of dentals before front vowels is allophonic and not written.",
+  "iso639_3": "olo",
+  "glottolog_code": "livv1243",
+  "wikidata_qid": "Q36584",
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Livvi-Karelian_language",
+    "https://olo.wikipedia.org/wiki/Livvin_kieli"
+  ],
+  "sources": [
+    {
+      "id": "markianova2002",
+      "author": "Markianova, Ljudmila",
+      "year": 2002,
+      "title": "Livvin karjalan kielioppi (Karelian grammar)",
+      "publisher": "Periodika, Petrozavodsk",
+      "url": null,
+      "pages": null,
+      "notes": "Reference grammar of Livvi-Karelian."
+    },
+    {
+      "id": "livvi_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Livvi-Karelian language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Livvi-Karelian_language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Livvi-Karelian_language",
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "location": {
+    "latitude": 61.6565,
+    "longitude": 29.0726,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Livvi."
+  }
+}

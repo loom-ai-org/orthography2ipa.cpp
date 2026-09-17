@@ -1,0 +1,55 @@
+{
+  "code": "zea",
+  "name": "Zeelandic",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "stub",
+  "graphemes": {},
+  "allophones": {},
+  "notes": "STUB (deliberate): the grapheme inventory of Zeelandic is NOT specified. Zeêuws is a West Germanic (Low Franconian) variety of Zeeland and Goeree-Overflakkee. A written norm DOES exist — the Zeêuwse Schriefwiezer (Stichting Zuudwest 7, 1999) — but it defines its signs relationally against Standard Dutch and contains NO IPA whatsoever: <ae> is 'a sound closest to AN [aa] but more closed', <ao> 'closest to AN [aa] but more open', <eê/ê>, <oô/ô>, <aè>, <ò>, <è> likewise. It is explicitly PAN-DIALECTAL by design — a spelling in which all Zeelandic (and West/French Flemish) dialects can be written 'without compromising their own character' — so a grapheme such as <ae> deliberately does not denote one IPA value. No source consulted (en/nl Wikipedia, Encyclopedie van Zeeland, uusvantzeeuws.nl, Omniglot — whose chart is an image) gives a letter->IPA table. Documented features (monophthongal [i] and [y] retained for <ij> and <ui>, umlauted [aː] -> [ɛː], h-dropping, r = [r~ɾ~ʁ]) are not enough for an honest map. A defensible spec must first pick ONE variety (e.g. Walcheren) and cite a dialectological source for its vowel values. INPUT CONTRACT (for any future spec): Zeelandic text in the Zeêuwse Schriefwiezer spelling.",
+  "iso639_3": "zea",
+  "glottolog_code": "zeeu1238",
+  "wikidata_qid": "Q237409",
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Zeelandic",
+    "https://zea.wikipedia.org/wiki/Ze%C3%AAuws"
+  ],
+  "sources": [
+    {
+      "id": "zeelandic_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Zeelandic",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Zeelandic",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Zeelandic",
+      "pages": null,
+      "notes": "Orthography / phonology reference."
+    },
+    {
+      "id": "zeeuwse_schriefwiezer",
+      "author": "Stichting Zuudwest 7",
+      "year": 1999,
+      "title": "Zeêuwse Schriefwiezer",
+      "publisher": "Stichting Zuudwest 7, Oost-Souburg",
+      "url": "https://uusvantzeeuws.nl/index.php/ozeeuws/zeeuwse-schriefwiezer/",
+      "pages": null,
+      "notes": "The Zeelandic spelling norm. Defines its signs by comparison with Standard Dutch and gives no IPA; deliberately pan-dialectal, so its graphemes do not map to single IPA values."
+    }
+  ],
+  "parent": "x-clade-germ1287",
+  "ancestors": [
+    {
+      "code": "x-clade-germ1287",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Germanic — the classification node this language sits under."
+    }
+  ],
+  "location": {
+    "latitude": 51.4981,
+    "longitude": 3.85428,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Zeeuws."
+  }
+}

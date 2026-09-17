@@ -1,0 +1,92 @@
+{
+  "code": "ar-BH",
+  "name": "Bahraini Arabic",
+  "script": "Arabic",
+  "graphemes_base": "ar-x-gulf",
+  "allophones_base": "ar-x-gulf",
+  "parent": "ar-x-gulf",
+  "ancestors": [
+    {
+      "code": "ar-x-gulf",
+      "role": "parent",
+      "weight": 0.9,
+      "notes": "Gulf Arabic base — inherits *q→[ɡ], velar affrication, interdental retention and emphatic spreading."
+    },
+    {
+      "code": "fa",
+      "role": "adstrate",
+      "weight": 0.05,
+      "notes": "Persian adstrate: Baḥārna (Shia) community historical ties; /p/ in some older loanwords predating English contact."
+    }
+  ],
+  "notes": "Bahraini Arabic. Bahrain has a well-known DIALECT SPLIT along communal lines (Holes' long-term work on Eastern Arabia): the sedentary Shia Baḥārna vs the Bedouin-descended Sunni ʕArab. This single spec models the GENERAL Gulf pattern (inherited from ar-x-gulf): *q → [ɡ]; velar affrication /k/→[tʃ], /ɡ/→[dʒ] before high front /i, iː/; interdentals retained. NOTE ON THE SPLIT (not separately modelled here, as one spec = one lect): the Sunni ʕArab variety is Bedouin-type and patterns like mainstream Gulf (*q→[ɡ], affrication). The sedentary Baḥārna (Shia) variety is more conservative — historically it can retain /q/ as [q] in some items, shows a distinct jiim reflex, and carries the older Persian adstrate — so applying the *q→[ɡ] and affrication defaults over-generalises for Baḥārna speech. Persian /p/ in some vocabulary predates English contact. Input contract: fully diacritised (tashkeel) Arabic.",
+  "quality": "research",
+  "script_type": "abjad",
+  "sources": [
+    {
+      "id": "alshammari2026",
+      "author": "Alshammari, K. K.",
+      "year": 2026,
+      "title": "An Optimality-Theoretic Account of Velar Affrication in Northern Najdi Arabic",
+      "publisher": "Journal of Language Teaching and Research 17(4)",
+      "url": "https://doi.org/10.17507/jltr.1704.19",
+      "pages": "1333-1341",
+      "notes": "Read in full (open-access PDF). Literature review (p.1335) of Gulf/Eastern-Arabian velar affrication and *q reflexes supporting the inherited GULF_K/G_AFFRICATION rules and *q→[ɡ]."
+    },
+    {
+      "id": "albalushi2016",
+      "author": "Al-Balushi, R.",
+      "year": 2016,
+      "title": "Omani Arabic: More than a Dialect",
+      "publisher": "Macrolinguistics 4(1)",
+      "url": "https://macrolinguistics.nju.edu.cn/23/17/c27354a467735/page.htm",
+      "pages": "80-125",
+      "notes": "Read the phonology sections. Documents the Eastern-Arabian sedentary-vs-Bedouin dialect typology (after Holes) that underlies the Bahraini Baḥārna/ʕArab split, and the range of *q reflexes across those types (p.87)."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Bahrani_Arabic",
+    "https://ar.wikipedia.org/wiki/%D9%84%D9%87%D8%AC%D8%A9_%D8%A8%D8%AD%D8%B1%D8%A7%D9%86%D9%8A%D8%A9"
+  ],
+  "timespan": {
+    "start_year": 1900,
+    "end_year": null
+  },
+  "glottolog_code": "gulf1241",
+  "iso639_3": "ara",
+  "wikidata_qid": "Q56576",
+  "wals_code": "abh",
+  "location": {
+    "latitude": 26.216667,
+    "longitude": 50.583333,
+    "source": "wikidata",
+    "notes": "Manama. A national variety within the Gulf continuum. [Wikidata Q3882 P625]"
+  },
+  "optional_marks": [
+    "ً",
+    "ٌ",
+    "ٍ",
+    "َ",
+    "ُ",
+    "ِ",
+    "ّ",
+    "ْ",
+    "ٰ",
+    "ٓ"
+  ],
+  "stress": {
+    "default_position": -3,
+    "quantity_sensitive": true,
+    "superheavy_final_attracts": true,
+    "max_onset": 1,
+    "stress_mark": "ˈ",
+    "notes": "Arabic stress is QUANTITY-SENSITIVE: it falls on a syllable because that syllable is heavy, not because of any orthographic ending, so no ending table can express it. The cascade (Ryding, A Reference Grammar of MSA, CUP 2005, §2.3; Watson, The Phonology and Morphology of Arabic, OUP 2002, ch.3): a superheavy final syllable (CVːC/CVCC) takes the stress (kiˈtaːb); otherwise a heavy penult (CVː/CVC) does (muˈdarris); otherwise the antepenult (ˈmadrasa). max_onset=1 because Arabic onsets are obligatory and hold exactly one consonant — a medial cluster splits, closing the preceding syllable, and that boundary is what makes the penult of mudarris heavy. INPUT CONTRACT: weight is only recoverable from a complete transcription, so this requires diacritized input; an undiacritized skeleton has no vowels to weigh. The registered wikipron gold carries no stress marks, but the benchmark strips stress from both sides by default, so this costs no PER. Prosodic clitics: monosyllabic function words (negator maː, prepositions fiː/min/ʕan/ʕa/li/bi, vocative jaː, copula-negator muː/miʃ, conditional law/loː, wa-proclitic combinations) attach to a host and fall inside the host's stress domain, so they carry no word stress (Watson 2002, The Phonology and Morphology of Arabic, OUP, ch.3). Pan-Arabic class; the per-lect form list reflects the function words attested in this lect. Orthographic test — a clitic homograph (e.g. verb yā 'came') is destressed in every occurrence.",
+    "cliticless_words": [
+      "فِي",
+      "مَا",
+      "مُو",
+      "مِن",
+      "وَمَا"
+    ]
+  }
+}

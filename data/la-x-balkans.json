@@ -1,0 +1,287 @@
+{
+  "code": "la-x-balkans",
+  "name": "Balkan Romance Vulgar Latin",
+  "script": "Latin",
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "e": [
+      "e"
+    ],
+    "ɛ": [
+      "ɛ"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "o"
+    ],
+    "ɔ": [
+      "ɔ"
+    ],
+    "u": [
+      "u"
+    ],
+    "ə": [
+      "ə"
+    ],
+    "ɨ": [
+      "ɨ"
+    ],
+    "p": [
+      "p"
+    ],
+    "b": [
+      "b"
+    ],
+    "t": [
+      "t"
+    ],
+    "d": [
+      "d"
+    ],
+    "c": [
+      "k",
+      "tʃ"
+    ],
+    "g": [
+      "ɡ",
+      "dʒ"
+    ],
+    "f": [
+      "f"
+    ],
+    "v": [
+      "v"
+    ],
+    "s": [
+      "s"
+    ],
+    "z": [
+      "z"
+    ],
+    "h": [
+      "h"
+    ],
+    "gn": [
+      "ɲ"
+    ],
+    "ts": [
+      "ts"
+    ],
+    "dz": [
+      "dz"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "l": [
+      "l"
+    ],
+    "r": [
+      "r",
+      "ɾ"
+    ],
+    "ea": [
+      "e̯a"
+    ],
+    "oa": [
+      "o̯a"
+    ],
+    "ai": [
+      "aj"
+    ],
+    "au": [
+      "aw"
+    ],
+    "ei": [
+      "ej"
+    ],
+    "oi": [
+      "oj"
+    ]
+  },
+  "allophones": {
+    "p": [
+      "p"
+    ],
+    "b": [
+      "b"
+    ],
+    "t": [
+      "t"
+    ],
+    "d": [
+      "d"
+    ],
+    "k": [
+      "k"
+    ],
+    "ɡ": [
+      "ɡ"
+    ],
+    "tʃ": [
+      "tʃ"
+    ],
+    "dʒ": [
+      "dʒ"
+    ],
+    "ts": [
+      "ts"
+    ],
+    "dz": [
+      "dz"
+    ],
+    "f": [
+      "f"
+    ],
+    "v": [
+      "v"
+    ],
+    "s": [
+      "s"
+    ],
+    "z": [
+      "z"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "ʒ": [
+      "ʒ"
+    ],
+    "h": [
+      "h",
+      "x"
+    ],
+    "ɲ": [
+      "ɲ"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n",
+      "ŋ"
+    ],
+    "l": [
+      "l"
+    ],
+    "r": [
+      "r",
+      "ɾ"
+    ],
+    "j": [
+      "j"
+    ],
+    "w": [
+      "w"
+    ],
+    "a": [
+      "a"
+    ],
+    "e": [
+      "e"
+    ],
+    "ɛ": [
+      "ɛ"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "o"
+    ],
+    "ɔ": [
+      "ɔ"
+    ],
+    "u": [
+      "u"
+    ],
+    "ə": [
+      "ə"
+    ],
+    "ɨ": [
+      "ɨ"
+    ]
+  },
+  "parent": "x-clade-roma1334",
+  "ancestors": [
+    {
+      "code": "la",
+      "role": "parent",
+      "weight": 0.75,
+      "notes": "Primary descent from Classical Latin"
+    },
+    {
+      "code": "grc",
+      "role": "substrate",
+      "weight": 0.06,
+      "notes": "Greek substrate/adstrate: Balkans were heavily Hellenised; Greek coexisted with Latin for centuries. Some shared morphological features."
+    },
+    {
+      "code": "xda",
+      "role": "substrate",
+      "weight": 0.1,
+      "notes": "Dacian/Thracian substrate: pre-Roman Balkan IE languages. Possibly explains central vowels /ə, ɨ/, postposed article, and ~100 Romanian-Albanian shared words of unknown origin (e.g. copil, moș, viezure). Exact Dacian phonology unrecoverable."
+    }
+  ],
+  "notes": "Balkan Romance Vulgar Latin (~3rd–7th c. CE). Spoken Latin of Roman Dacia, Moesia, Dalmatia. KEY features vs Western Romance: (1) NO intervocalic lenition (lup, foc, not *lub, *fogo). (2) Central vowels /ə, ɨ/ develop. (3) Labial palatalisation before front vowels. (4) Rhotacism: intervocalic /l/ → /r/. (5) Postposed definite article (Balkan sprachbund). (6) Rich diphthong system: /ɔ/ → [o̯a]. Dacian/Thracian substrate and later massive Slavic superstrate are defining contact influences (Rosetti 1986, Sala 2005).",
+  "quality": "research",
+  "script_type": "alphabet",
+  "sources": [
+    {
+      "id": "sala1999",
+      "author": "Sala, M.",
+      "year": 1999,
+      "title": "Le latin du Danube",
+      "publisher": "Annuario dell'Istituto Romeno di Cultura e Ricerca Umanistica",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "weiss2009",
+      "author": "Weiss, M.",
+      "year": 2009,
+      "title": "Outline of the Historical and Comparative Grammar of Latin",
+      "publisher": "Beech Stave Press",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "allen1978",
+      "author": "Allen, W.S.",
+      "year": 1978,
+      "title": "Vox Latina: A Guide to the Pronunciation of Classical Latin",
+      "publisher": "Cambridge University Press",
+      "url": null,
+      "pages": null,
+      "notes": null,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Latin_phonology"
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Eastern_Romance_languages",
+    "https://la.wikipedia.org/wiki/Linguae_Romanicae_orientales"
+  ],
+  "timespan": {
+    "start_year": 200,
+    "end_year": 900
+  },
+  "glottolog_code": "east2714",
+  "iso639_3": "lat",
+  "wikidata_qid": "Q147576",
+  "location": {
+    "latitude": 42.604838,
+    "longitude": 19.975475,
+    "source": "glottolog",
+    "notes": "Glottolog's computed centroid for the Eastern Romance family — a summary of a whole clade's range, not a place anyone speaks."
+  }
+}

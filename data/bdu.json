@@ -1,0 +1,243 @@
+{
+ "code": "bdu",
+ "name": "Oroko",
+ "script": "Latin",
+ "quality": "skeleton",
+ "graphemes": {
+  "a": [
+   "a"
+  ],
+  "b": [
+   "b"
+  ],
+  "ch": [
+   "t͡ʃ"
+  ],
+  "e": [
+   "e"
+  ],
+  "f": [
+   "f"
+  ],
+  "i": [
+   "i"
+  ],
+  "j": [
+   "d͡ʒ"
+  ],
+  "k": [
+   "k"
+  ],
+  "kp": [
+   "k͡p"
+  ],
+  "m": [
+   "m"
+  ],
+  "mb": [
+   "m͡b"
+  ],
+  "n": [
+   "n"
+  ],
+  "nd": [
+   "ⁿd"
+  ],
+  "ng": [
+   "ᵑɡ"
+  ],
+  "ngb": [
+   "ᵑb"
+  ],
+  "nj": [
+   "ᶮd͡ʒ"
+  ],
+  "ny": [
+   "ɲ"
+  ],
+  "o": [
+   "o"
+  ],
+  "s": [
+   "s"
+  ],
+  "t": [
+   "t"
+  ],
+  "u": [
+   "u"
+  ],
+  "w": [
+   "w"
+  ],
+  "y": [
+   "j"
+  ],
+  "ŋ": [
+   "ŋ"
+  ],
+  "ɔ": [
+   "ɔ"
+  ],
+  "ɗ": [
+   "ɗ"
+  ],
+  "ɛ": [
+   "ɛ"
+  ]
+ },
+ "allophones": {
+  "b": [
+   "b",
+   "β",
+   "bʷ",
+   "bʲ"
+  ],
+  "d": [
+   "dʷ",
+   "d"
+  ],
+  "k": [
+   "kʷ",
+   "k",
+   "kʲ"
+  ],
+  "m": [
+   "mʷ",
+   "m",
+   "mʲ"
+  ],
+  "mb": [
+   "mb",
+   "b̃ʷ",
+   "b̃"
+  ],
+  "n̠d̠ʒ": [
+   "n̠d̠ʒ",
+   "n̠d̠ʒʲ"
+  ],
+  "p": [
+   "p",
+   "pʰ"
+  ],
+  "s": [
+   "sʷ",
+   "s",
+   "sʲ"
+  ],
+  "t": [
+   "tʲ",
+   "t"
+  ],
+  "t̠ʃ": [
+   "t̠ʃʷ",
+   "t̠ʃ"
+  ],
+  "ŋ": [
+   "ŋ",
+   "ŋʷ"
+  ],
+  "ŋɡ": [
+   "ŋɡʷ",
+   "ŋɡ"
+  ],
+  "ɽ": [
+   "ɽʷ",
+   "ɽ",
+   "ɽʲ"
+  ],
+  "a": [
+   "a",
+   "aː"
+  ],
+  "e": [
+   "e",
+   "ə"
+  ],
+  "o": [
+   "o",
+   "oː"
+  ],
+  "u": [
+   "u",
+   "uː"
+  ]
+ },
+ "notes": "Placed so the ancestry graph covers every living ISO 639-3 language. No orthography is claimed; the phoneme inventory follows the cited PHOIBLE inventory (which itself cites a published description): script is Zyyy (undetermined) until a cited description is encoded. Classification and coordinates follow Glottolog. Orthography from an Omniglot chart (c) Simon Ager, https://www.omniglot.com/, extracted via the AfriSpeech/africa-g2p compilation (bdu.json). africa-g2p is a compilation tool, not the linguistic authority; the citation above is the original source it names.",
+ "iso639_3": "bdu",
+ "glottolog_code": "orok1266",
+ "sources": [
+  {
+   "id": "glottolog2024",
+   "author": "Hammarström, Harald; Forkel, Robert; Haspelmath, Martin; Bank, Sebastian",
+   "year": 2024,
+   "title": "Glottolog 5.0",
+   "publisher": "Max Planck Institute for Evolutionary Anthropology",
+   "url": "https://glottolog.org/"
+  },
+  {
+   "id": "phoible2019",
+   "author": "Moran, Steven; McCloy, Daniel (eds.)",
+   "year": 2019,
+   "title": "PHOIBLE 2.0 (doi:10.5281/zenodo.2562766)",
+   "publisher": "Max Planck Institute for the Science of Human History",
+   "url": "https://phoible.org/inventories/view/929",
+   "notes": "Inventory 929 (ph), 29 non-marginal segments."
+  },
+  {
+   "id": "omniglot-oroko",
+   "author": "Ager, Simon",
+   "year": 2026,
+   "title": "Omniglot chart (oroko.xls)",
+   "publisher": "Omniglot",
+   "url": "https://www.omniglot.com/",
+   "notes": "Undated web chart; year is retrieval year, not publication year."
+  }
+ ],
+ "urls": [
+  "https://glottolog.org/resource/languoid/id/orok1266"
+ ],
+ "location": {
+  "latitude": 4.895,
+  "longitude": 9.1521,
+  "source": "glottolog",
+  "notes": "Glottolog's representative point."
+ },
+ "parent": "x-clade-atla1278",
+ "phonemes": [
+  "b",
+  "d",
+  "d̠ʒ",
+  "j",
+  "k",
+  "kp",
+  "l",
+  "m",
+  "mb",
+  "n",
+  "nd",
+  "n̠d̠ʒ",
+  "p",
+  "s",
+  "t",
+  "t̠ʃ",
+  "w",
+  "ŋ",
+  "ŋmɡb",
+  "ŋɡ",
+  "ɲ",
+  "ɽ",
+  "a",
+  "e",
+  "i",
+  "o",
+  "u",
+  "ɔ",
+  "ɛ"
+ ],
+ "phoible_id": "929",
+ "script_type": "alphabet",
+ "wikipedia": [
+  "https://en.wikipedia.org/wiki/Oroko_language"
+ ]
+}

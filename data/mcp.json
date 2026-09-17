@@ -1,0 +1,264 @@
+{
+ "code": "mcp",
+ "name": "Makaa",
+ "script": "Latin",
+ "quality": "skeleton",
+ "graphemes": {
+  "a": [
+   "a"
+  ],
+  "a̧": [
+   "ã"
+  ],
+  "b": [
+   "b"
+  ],
+  "c": [
+   "c"
+  ],
+  "d": [
+   "d"
+  ],
+  "e": [
+   "e"
+  ],
+  "f": [
+   "f"
+  ],
+  "g": [
+   "ɡ"
+  ],
+  "h": [
+   "h"
+  ],
+  "i": [
+   "i"
+  ],
+  "i̧": [
+   "ĩ"
+  ],
+  "j": [
+   "ɟ"
+  ],
+  "k": [
+   "k"
+  ],
+  "kp": [
+   "k͡p"
+  ],
+  "l": [
+   "l"
+  ],
+  "m": [
+   "m"
+  ],
+  "mb": [
+   "ᵐb"
+  ],
+  "mp": [
+   "ᵐp"
+  ],
+  "n": [
+   "n"
+  ],
+  "nd": [
+   "ⁿd"
+  ],
+  "nt": [
+   "ⁿt"
+  ],
+  "ny": [
+   "ɲ"
+  ],
+  "nyc": [
+   "ᶮc"
+  ],
+  "nyj": [
+   "ᶮɟ"
+  ],
+  "o": [
+   "o"
+  ],
+  "o̧": [
+   "õ"
+  ],
+  "p": [
+   "p"
+  ],
+  "s": [
+   "s"
+  ],
+  "sh": [
+   "ʃ"
+  ],
+  "t": [
+   "t"
+  ],
+  "u": [
+   "u"
+  ],
+  "u̧": [
+   "ũ"
+  ],
+  "v": [
+   "v"
+  ],
+  "w": [
+   "w"
+  ],
+  "y": [
+   "j"
+  ],
+  "z": [
+   "z"
+  ],
+  "zh": [
+   "ʒ"
+  ],
+  "ŋ": [
+   "ŋ"
+  ],
+  "ŋg": [
+   "ᵑɡ"
+  ],
+  "ŋk": [
+   "ᵑk"
+  ],
+  "ȩ": [
+   "ẽ"
+  ],
+  "ɔ̧": [
+   "ə̃"
+  ],
+  "ə": [
+   "ə"
+  ],
+  "ə̧": [
+   "ə̃"
+  ],
+  "ɛ": [
+   "ɛ"
+  ],
+  "ɛ̧": [
+   "ɛ̃"
+  ],
+  "ɨ": [
+   "ɘ"
+  ],
+  "ɨ̧": [
+   "ɨ̃"
+  ],
+  "ʉ": [
+   "ʉ"
+  ],
+  "ʉ̧": [
+   "ʉ̃"
+  ]
+ },
+ "allophones": {},
+ "notes": "Placed so the ancestry graph covers every living ISO 639-3 language. No orthography is claimed; the phoneme inventory follows the cited PHOIBLE inventory (which itself cites a published description): script is Zyyy (undetermined) until a cited description is encoded. Classification and coordinates follow Glottolog. Orthography from an Omniglot chart (c) Simon Ager, https://www.omniglot.com/, extracted via the AfriSpeech/africa-g2p compilation (mcp.json). africa-g2p is a compilation tool, not the linguistic authority; the citation above is the original source it names.",
+ "iso639_3": "mcp",
+ "glottolog_code": "maka1304",
+ "sources": [
+  {
+   "id": "glottolog2024",
+   "author": "Hammarström, Harald; Forkel, Robert; Haspelmath, Martin; Bank, Sebastian",
+   "year": 2024,
+   "title": "Glottolog 5.0",
+   "publisher": "Max Planck Institute for Evolutionary Anthropology",
+   "url": "https://glottolog.org/"
+  },
+  {
+   "id": "phoible2019",
+   "author": "Moran, Steven; McCloy, Daniel (eds.)",
+   "year": 2019,
+   "title": "PHOIBLE 2.0 (doi:10.5281/zenodo.2562766)",
+   "publisher": "Max Planck Institute for the Science of Human History",
+   "url": "https://phoible.org/inventories/view/783",
+   "notes": "Inventory 783 (aa), 51 non-marginal segments, 4 tones."
+  },
+  {
+   "id": "omniglot-makaa",
+   "author": "Ager, Simon",
+   "year": 2026,
+   "title": "Omniglot chart (makaa.xls)",
+   "publisher": "Omniglot",
+   "url": "https://www.omniglot.com/",
+   "notes": "Undated web chart; year is retrieval year, not publication year."
+  }
+ ],
+ "urls": [
+  "https://glottolog.org/resource/languoid/id/maka1304"
+ ],
+ "location": {
+  "latitude": 4.1547,
+  "longitude": 13.0789,
+  "source": "glottolog",
+  "notes": "Glottolog's representative point."
+ },
+ "parent": "x-clade-atla1278",
+ "phonemes": [
+  "b",
+  "d",
+  "d̠ʒ",
+  "f",
+  "h",
+  "j",
+  "k",
+  "kp",
+  "l",
+  "m",
+  "mb",
+  "mp",
+  "n",
+  "nd",
+  "nt",
+  "n̠d̠ʒ",
+  "n̠t̠ʃ",
+  "s",
+  "t",
+  "t̠ʃ",
+  "v",
+  "w",
+  "z",
+  "ŋ",
+  "ŋk",
+  "ŋɡ",
+  "ɡ",
+  "ɲ",
+  "ʃ",
+  "ʒ",
+  "a",
+  "aː",
+  "e",
+  "eː",
+  "i",
+  "iː",
+  "o",
+  "oː",
+  "õ",
+  "u",
+  "uː",
+  "ɔː",
+  "ə",
+  "əː",
+  "ɛ",
+  "ɛː",
+  "ɛ̃",
+  "ɨ",
+  "ɨː",
+  "ɪ",
+  "ɪː"
+ ],
+ "tone_inventory": {
+  "˦": "PHOIBLE tone segment",
+  "˦˨": "PHOIBLE tone segment",
+  "˨": "PHOIBLE tone segment",
+  "˨˦": "PHOIBLE tone segment"
+ },
+ "phoible_id": "783",
+ "script_type": "alphabet",
+ "wikipedia": [
+  "https://en.wikipedia.org/wiki/Makaa_language"
+ ]
+}

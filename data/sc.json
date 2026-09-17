@@ -1,0 +1,311 @@
+{
+  "code": "sc",
+  "name": "Sardinian",
+  "script": "Latin",
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "e": [
+      "e"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "o"
+    ],
+    "u": [
+      "u"
+    ],
+    "b": [
+      "b",
+      "β"
+    ],
+    "c": [
+      "k"
+    ],
+    "ch": [
+      "k"
+    ],
+    "d": [
+      "d"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "gh": [
+      "ɡ"
+    ],
+    "h": [
+      ""
+    ],
+    "j": [
+      "j",
+      "dʒ"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "p": [
+      "p"
+    ],
+    "qu": [
+      "kw"
+    ],
+    "r": [
+      "r"
+    ],
+    "rr": [
+      "rː"
+    ],
+    "s": [
+      "s",
+      "z"
+    ],
+    "t": [
+      "t"
+    ],
+    "v": [
+      "v",
+      "β"
+    ],
+    "x": [
+      "ʒ"
+    ],
+    "z": [
+      "ts",
+      "dz"
+    ],
+    "sc": [
+      "sk",
+      "ʃ"
+    ],
+    "tz": [
+      "ts"
+    ],
+    "dd": [
+      "ɖː"
+    ],
+    "ng": [
+      "ŋɡ"
+    ],
+    "gn": [
+      "ɲ"
+    ],
+    "gl": [
+      "ʎ"
+    ],
+    "ll": [
+      "lː",
+      "ɖː"
+    ],
+    "ai": [
+      "aj"
+    ],
+    "au": [
+      "aw"
+    ],
+    "ei": [
+      "ej"
+    ],
+    "oi": [
+      "oj"
+    ],
+    "à": [
+      "a"
+    ],
+    "è": [
+      "e",
+      "ɛ"
+    ],
+    "ì": [
+      "i"
+    ],
+    "ò": [
+      "o",
+      "ɔ"
+    ],
+    "ù": [
+      "u"
+    ]
+  },
+  "allophones": {
+    "p": [
+      "p"
+    ],
+    "b": [
+      "b",
+      "β"
+    ],
+    "t": [
+      "t"
+    ],
+    "d": [
+      "d",
+      "ð"
+    ],
+    "k": [
+      "k"
+    ],
+    "ɡ": [
+      "ɡ",
+      "ɣ"
+    ],
+    "f": [
+      "f"
+    ],
+    "v": [
+      "v",
+      "β"
+    ],
+    "s": [
+      "s",
+      "z"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "ts": [
+      "ts"
+    ],
+    "dz": [
+      "dz"
+    ],
+    "dʒ": [
+      "dʒ"
+    ],
+    "ɖː": [
+      "ɖː"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n",
+      "ŋ",
+      "ɱ"
+    ],
+    "ɲ": [
+      "ɲ"
+    ],
+    "l": [
+      "l"
+    ],
+    "ʎ": [
+      "ʎ"
+    ],
+    "r": [
+      "r",
+      "ɾ"
+    ],
+    "rː": [
+      "rː"
+    ],
+    "j": [
+      "j"
+    ],
+    "w": [
+      "w"
+    ],
+    "a": [
+      "a"
+    ],
+    "e": [
+      "e"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "o"
+    ],
+    "u": [
+      "u"
+    ],
+    "ʒ": [
+      "ʒ"
+    ]
+  },
+  "parent": "x-clade-sard1257",
+  "ancestors": [
+    {
+      "code": "la",
+      "role": "parent",
+      "weight": 0.88,
+      "notes": "Direct from Classical Latin — Sardinian diverged BEFORE the Western/Eastern Romance split. Most archaic Romance variety."
+    },
+    {
+      "code": "grc",
+      "role": "substrate",
+      "weight": 0.04,
+      "notes": "Greek (Punic-era contacts, Byzantine rule): limited phonological impact."
+    }
+  ],
+  "notes": "Sardinian. THE most conservative Romance language. Primary archaic features: (1) Velars /k, ɡ/ preserved before front vowels (kentu 'hundred', not *centu). (2) 5-vowel system (no ɛ/e or ɔ/o split). (3) No diphthongisation of Latin ĕ, ŏ. (4) Retroflex consonants [ɖː] from Latin -LL-. (5) Article from IPSE (su/sa) not ILLE. Sardinian forms its OWN primary branch of Romance, diverging before Italo-, Gallo-, Ibero-, and Eastern Romance innovations (Lausberg 1971, Blasco Ferrer 1984).",
+  "quality": "research",
+  "script_type": "alphabet",
+  "sources": [
+    {
+      "id": "blasco_ferrer1986",
+      "author": "Blasco Ferrer, E.",
+      "year": 1986,
+      "title": "La lingua sarda contemporanea",
+      "publisher": "Della Torre",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "maiden_parry1997",
+      "author": "Maiden, M. & Parry, M. (eds.)",
+      "year": 1997,
+      "title": "The Dialects of Italy",
+      "publisher": "Routledge",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "ladefoged_maddieson1996",
+      "author": "Ladefoged, P. & Maddieson, I.",
+      "year": 1996,
+      "title": "The Sounds of the World's Languages",
+      "publisher": "Blackwell",
+      "url": null,
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Sardinian_language",
+    "https://sc.wikipedia.org/wiki/Limba_sarda",
+    "https://it.wikipedia.org/wiki/Lingua_sarda"
+  ],
+  "timespan": {
+    "start_year": 1000,
+    "end_year": null
+  },
+  "glottolog_code": "sard1257",
+  "iso639_3": "srd",
+  "wikidata_qid": "Q33976",
+  "wals_code": "srd",
+  "location": {
+    "latitude": 39.7733,
+    "longitude": 9.06946,
+    "source": "glottolog",
+    "notes": "Glottolog's computed centroid for the Southern Romance family — a summary of a whole clade's range, not a place anyone speaks."
+  }
+}

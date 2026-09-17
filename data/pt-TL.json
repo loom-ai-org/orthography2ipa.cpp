@@ -1,0 +1,337 @@
+{
+  "code": "pt-TL",
+  "glottolog_code": null,
+  "name": "East Timorese Portuguese",
+  "script": "Latin",
+  "quality": "research",
+  "script_type": "alphabet",
+  "parent": "pt-PT",
+  "graphemes_base": "pt-PT",
+  "allophones_base": "pt-PT",
+  "positional_graphemes_base": "pt-PT",
+  "graphemes": {
+    "r": [
+      "r",
+      "ɾ"
+    ],
+    "rr": [
+      "r"
+    ],
+    "e": [
+      "e",
+      "ɛ"
+    ],
+    "o": [
+      "o",
+      "ɔ"
+    ],
+    "lh": [
+      "l",
+      "ʎ"
+    ],
+    "nh": [
+      "n",
+      "ɲ"
+    ]
+  },
+  "allophones": {
+    "r": [
+      "r",
+      "ɾ"
+    ],
+    "ʁ": [
+      "r",
+      "ɾ"
+    ]
+  },
+  "ancestors": [
+    {
+      "code": "pt-PT",
+      "role": "parent",
+      "weight": 0.65,
+      "notes": "European Portuguese colonial base. East Timor (then Portuguese Timor) was a Portuguese colony from 1702 until the Indonesian invasion in 1975; Portuguese was restored as a co-official language after independence in 2002."
+    },
+    {
+      "code": "tet",
+      "role": "adstrate",
+      "weight": 0.25,
+      "notes": "Tetum (Tetun) adstrate/substrate: the national lingua franca, co-official with Portuguese, spoken by >80% of the population (Albuquerque 2010:272). Tetum is Austronesian and, like the other native Timoric languages (Mambae, Galolen, Tokodede), does NOT reduce (lenite) unstressed vowels (Albuquerque 2010:275, fn.7); this substrate trait is the single most consistent phonological feature transferred into East Timorese Portuguese."
+    },
+    {
+      "code": "id",
+      "role": "adstrate",
+      "weight": 0.1,
+      "notes": "Indonesian (bahasa indonesia) adstrate: 24 years of occupation (1975–1999), during which Portuguese was banned, left influence especially on speakers schooled under the occupation (Albuquerque 2010:271, 274)."
+    }
+  ],
+  "notes": "East Timorese Portuguese / Português de Timor Leste (PTL). Co-official with Tetum; Portuguese is an L2 for nearly all speakers (the 2001 Human Development Report cited by Albuquerque 2010:272 records only ~5% fluent). This spec models the OFFICIAL/ACROLECTAL variety used in formal domains (law, university, church), the norm-oriented end of the continuum Albuquerque (2010:273, fig.1) draws between 'norma europeia' (urban Dili/Baucau, highly schooled speakers) and 'português acrioulado' (rural, L1-transfer-heavy). It is NOT a creole: the Portuguese-based creoles of the region — the now-moribund Bidau Creole Portuguese of Dili (Baxter 1990) and the neighbouring Macau/Malacca creoles — are separate contact languages modelled elsewhere. MODELLED FEATURES (all Albuquerque 2010): (1) NO UNSTRESSED VOWEL REDUCTION — the Tetum substrate keeps full vowels, so EP's schwa/[ɨ] reduction does not apply: bate [ˈba.te], roda [ˈɾɔ.da], enredo [enˈe.dɔ] (p.275, fn.7). This spec therefore OVERRIDES the inherited pt-PT positional vowel reduction, mapping unstressed a→[a], e→[e], o→[o]. (2) ALVEOLAR RHOTIC [r]/[ɾ]; the EP uvular [ʁ] is absent (p.278, e.g. perguntar [peˈgun.ta]). (3) DIGRAPH SIMPLIFICATION: ⟨lh⟩→[l] and ⟨nh⟩→[n] are frequent (olho [ˈo.liu], vinho [ˈbi.niu], p.276); the palatal [ʎ]/[ɲ] realisations survive only near the European norm, so both are listed with the simplified variant first. (4) ALVEOLAR CODA /s/ (no obligatory Lisbon chiado): escola [isˈkɔ.la] ~ [iʃˈkɔ.la] varies (p.277); the alveolar variant is taken as the norm and the inherited PT_CODA_S/Z_HUSH rules are overridden by id. (5) PAROXYTONE STRESS TENDENCY: primary stress falls predominantly on the penult, even where EP differs, with near-absence of proparoxytones — an Austronesian typological transfer (p.279–280; Zanten & Goedemans on fixed penultimate stress in ~2/3 of Austronesian languages). VARIABLE / BASILECTAL, NOT MODELLED (documented in Albuquerque but confined to the acrioulado end and too variable to encode as the acrolectal norm): consonant substitutions ʃ→s, ʒ→z, v→b, f→p and vowel raising e→i / o→u (p.276–277); denasalisation of nasal diphthongs, e.g. educação [e.du.kaˈsa.u] (p.278); final-consonant apocope, esp. in infinitives, e.g. abraçar [aˈba.sa], cair [kai] (p.278–279) — a deletion the engine's allophone layer does not express, left as a documented engine limit; metathesis/epenthesis (advogado [a.di.boˈga.do], p.278); and the H–L% phrasal intonation from the Timoric sprachbund (p.281), which is prosodic and out of base scope. TIER: research — grounded in one fully-read primary phonological/prosodic source (Albuquerque 2010) plus the EP inventory baseline. A 53,147-word gold IS scored against this spec (portuguese_unified's pt-TL-x-dili region), but it is classified `machine-generated`, not `lexicon-derived`: diffed against pt-PT-x-lisboa it is a near-total 1:1 character substitution of the Lisbon entries (ɐ→ə, u→ʊ, ʀ→r, ɫ→w, d→ð, g→ɣ — measured 2026-08), and it still carries Lisbon-style unstressed-vowel reduction (60% of rows keep a reduced [ə], 31% a reduced final [ʊ]) and coda /s/→[ʃ] — the opposite of what Albuquerque (2010:275 fn.7, 277) documents for this variety. This row therefore measures agreement with a re-symbolized European Portuguese, not the acrolectal East Timorese Portuguese modelled here, and its PER cannot gate this spec in either direction.",
+  "sources": [
+    {
+      "id": "albuquerque2010",
+      "author": "Albuquerque, Davi Borges de",
+      "year": 2010,
+      "title": "Peculiaridades prosódicas do português falado em Timor Leste",
+      "publisher": "ReVEL, v. 8, n. 15, pp. 270–285 (ISSN 1678-8931)",
+      "url": "http://www.revel.inf.br/files/artigos/revel_15_peculiaridades_prosodicas_do_portugues_falado_em_timor_leste.pdf",
+      "pages": "270-285",
+      "notes": "PRIMARY, read in full. Section 2.1 (pp.276–277) phoneme realisations; 2.2 (pp.277–279) phonological processes; 2.3 (pp.279–281) prosody; fn.7 p.275 documents the no-vowel-reduction Tetum substrate trait that this spec models."
+    },
+    {
+      "id": "mateus_dandrade2000",
+      "author": "Mateus, M. H. & d'Andrade, E.",
+      "year": 2000,
+      "title": "The Phonology of Portuguese",
+      "publisher": "Oxford University Press",
+      "url": null,
+      "pages": "10, 18",
+      "notes": "European Portuguese phoneme inventory used as the baseline against which PTL is described; quoted via Albuquerque (2010:276), not read directly here."
+    },
+    {
+      "id": "hull2001",
+      "author": "Hull, Geoffrey",
+      "year": 2001,
+      "title": "A Morphological Overview of the Timoric Sprachbund",
+      "publisher": "Studies in Language and Culture of East Timor, v. 4, pp. 98–205",
+      "url": null,
+      "pages": "98-205",
+      "notes": "Establishes Timor as a linguistic area (sprachbund); source for the Austronesian substrate context, cited via Albuquerque (2010:281)."
+    },
+    {
+      "id": "baxter1990",
+      "author": "Baxter, Alan N.",
+      "year": 1990,
+      "title": "Notes on the Creole Portuguese of Bidau, Timor",
+      "publisher": "Journal of Pidgin and Creole Languages, v. 5, n. 1, pp. 1–38",
+      "url": null,
+      "pages": "1-38",
+      "notes": "Describes the Bidau Creole Portuguese of Dili — a SEPARATE Portuguese-based contact language, not the L2 Portuguese modelled here; included to mark the creole-vs-Portuguese distinction."
+    },
+    {
+      "id": "thomaz2002",
+      "author": "Thomaz, Luís Filipe F. R.",
+      "year": 2002,
+      "title": "Babel Loro Sa'e: o problema linguístico de Timor Leste",
+      "publisher": "Instituto Camões, Lisboa",
+      "url": null,
+      "pages": null,
+      "notes": "Socio-historical background on the Timorese language situation; cited via Albuquerque (2010)."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/East_Timorese_Portuguese",
+    "https://en.wikipedia.org/wiki/Languages_of_East_Timor",
+    "https://pt.wikipedia.org/wiki/Portugu%C3%AAs_timorense",
+    "https://pt.wikipedia.org/wiki/L%C3%ADnguas_de_Timor-Leste"
+  ],
+  "urls": [
+    "https://en.wikipedia.org/wiki/East_Timorese_Portuguese",
+    "https://en.wikipedia.org/wiki/Languages_of_East_Timor",
+    "https://en.wikipedia.org/wiki/Tetum_language",
+    "https://pt.wikipedia.org/wiki/Portugu%C3%AAs_timorense",
+    "https://en.wikipedia.org/wiki/Portuguese_Timor"
+  ],
+  "timespan": {
+    "start_year": 1900,
+    "end_year": null
+  },
+  "iso639_3": "por",
+  "stress": {
+    "onset_clusters": ["bl", "br", "bɫ", "bɾ", "bʀ", "bʁ", "bʎ", "bχ", "dr", "dɾ", "dʀ", "dʁ", "dʎ", "dχ", "fl", "fr", "fɫ", "fɾ", "fʀ", "fʁ", "fʎ", "fχ", "kl", "kr", "kɫ", "kɾ", "kʀ", "kʁ", "kʎ", "kχ", "pl", "pr", "pɫ", "pɾ", "pʀ", "pʁ", "pʎ", "pχ", "tr", "tɾ", "tʀ", "tʁ", "tʎ", "tχ", "vl", "vr", "vɫ", "vɾ", "vʀ", "vʁ", "vʎ", "vχ", "ðr", "ðɾ", "ðʀ", "ðʁ", "ðʎ", "ðχ", "ɡl", "ɡr", "ɡɫ", "ɡɾ", "ɡʀ", "ɡʁ", "ɡʎ", "ɡχ", "ɣl", "ɣr", "ɣɫ", "ɣɾ", "ɣʀ", "ɣʁ", "ɣʎ", "ɣχ", "βl", "βr", "βɫ", "βɾ", "βʀ", "βʁ", "βʎ", "βχ"],
+    "cliticless_words": ["o", "a", "os", "as", "de", "do", "da", "dos", "das", "em", "no", "na", "nos", "nas", "por", "pelo", "pela", "pelos", "pelas", "ao", "aos", "à", "às", "com", "sem", "e", "que", "se", "me", "te", "lhe", "lhes", "vos", "lo", "la", "los", "las", "lho", "lha", "lhos", "lhas"],
+    "default_position": -2,
+    "final_stress_endings": [
+      "r",
+      "l",
+      "z",
+      "x",
+      "i",
+      "u",
+      "im",
+      "om",
+      "um",
+      "is",
+      "us",
+      "ns",
+      "ão",
+      "ãe",
+      "õe",
+      "au",
+      "éu",
+      "éi",
+      "ói"
+    ],
+    "penult_stress_endings": [],
+    "marked_vowels": [
+      "á",
+      "é",
+      "í",
+      "ó",
+      "ú",
+      "â",
+      "ê",
+      "ô",
+      "ã",
+      "õ"
+    ],
+    "stress_mark": "ˈ",
+    "notes": "Acordo Ortográfico 1990 conventions inherited from pt-PT: paroxytone default; written accents override; final -i/-u/-r/-l/-z/-x/-im/-om/-um/-ns and nasal diphthongs attract final stress. Albuquerque (2010:279–280) documents that PTL reinforces the paroxytone default — speakers regularise even EP-irregular stress toward the penult and almost never produce proparoxytones — under Austronesian influence; this is a tendency the orthography-predictable rules already approximate, not an extra rule set. DIPHTHONGS: declared so the bundled syllabifier counts nuclei correctly — without them every vowel run merges into one nucleus and co-e-lho is read as coe-lho, one syllable short, putting the stress and its vowel reduction on the wrong vowel. ⟨oe⟩ is hiatus, not a diphthong (Cunha & Cintra, §Ditongos).",
+    "diphthongs": [
+      "ãe",
+      "ão",
+      "õe",
+      "ai",
+      "ái",
+      "au",
+      "áu",
+      "ei",
+      "éi",
+      "êi",
+      "eu",
+      "éu",
+      "êu",
+      "iu",
+      "oi",
+      "ói",
+      "ôi",
+      "ou",
+      "ui"
+    ]
+  },
+  "positional_graphemes": {
+    "a": {
+      "nucleus_stressed": [
+        "a"
+      ],
+      "nucleus_unstressed": [
+        "a"
+      ],
+      "pretonic": [
+        "a"
+      ],
+      "posttonic": [
+        "a"
+      ],
+      "word_initial": [
+        "a"
+      ],
+      "word_final": [
+        "a"
+      ]
+    },
+    "e": {
+      "nucleus_stressed": [
+        "ɛ",
+        "e"
+      ],
+      "nucleus_unstressed": [
+        "e"
+      ],
+      "pretonic": [
+        "e"
+      ],
+      "posttonic": [
+        "e"
+      ],
+      "word_final": [
+        "e"
+      ],
+      "word_initial": [
+        "e"
+      ]
+    },
+    "o": {
+      "nucleus_stressed": [
+        "ɔ",
+        "o"
+      ],
+      "nucleus_unstressed": [
+        "o"
+      ],
+      "pretonic": [
+        "o"
+      ],
+      "posttonic": [
+        "o"
+      ],
+      "word_final": [
+        "o"
+      ]
+    },
+    "r": {
+      "word_initial": [
+        "r"
+      ],
+      "intervocalic": [
+        "ɾ"
+      ],
+
+      "word_final": [
+        "ɾ"
+      ]
+    },
+    "s": {
+      "word_initial": [
+        "s"
+      ],
+      "intervocalic": [
+        "z"
+      ],
+
+      "word_final": [
+        "s"
+      ]
+    },
+    "z": {
+
+      "word_final": [
+        "z"
+      ]
+    },
+    "l": {
+      "onset": [
+        "l"
+      ]
+    }
+  },
+  "allophone_rules": [
+    {
+      "id": "PT_CODA_S_HUSH",
+      "phonemes": [
+        "s"
+      ],
+      "surface": "s",
+      "syllable_position": "coda",
+      "notes": "East Timorese Portuguese keeps an alveolar coda /s/ as the acrolectal norm (no obligatory Lisbon 'chiado'); the palatal [ʃ] surfaces only variably near the European norm (Albuquerque 2010:277, escola [isˈkɔla] ~ [iʃˈkɔla]). This overrides the inherited pt-PT PT_CODA_S_HUSH rule by id, matching the alveolar coda in this spec's positional_graphemes."
+    },
+    {
+      "id": "PT_CODA_Z_HUSH",
+      "phonemes": [
+        "z"
+      ],
+      "surface": "z",
+      "syllable_position": "coda",
+      "notes": "Voiced counterpart of PT_CODA_S_HUSH: alveolar coda /z/ retained; overrides the inherited pt-PT PT_CODA_Z_HUSH rule by id."
+    },
+    {
+      "id": "PT_FINAL_EM_NUCLEUS",
+      "phonemes": [],
+      "surface": "ɐ",
+      "notes": "DISABLED for this variety. The EP Lisbon-standard centralisation of the word-final ⟨-em⟩ nucleus to [ɐ̃] (inherited from pt-PT) does not apply here: this variety keeps the close-mid nasal nucleus [ẽ], so ⟨-em⟩ is [ẽj̃] (glide via PT_FINAL_EM_GLIDE), not [ɐ̃j̃]. Peripheral/non-Iberian Portuguese does not follow the Lisbon centralisation."
+    }
+  ],
+  "wikidata_qid": "Q4373396",
+  "location": {
+    "latitude": -8.553611,
+    "longitude": 125.578333,
+    "source": "wikidata",
+    "notes": "Dili. Portuguese is an L2 for nearly all speakers: the capital stands in for the country. [Wikidata Q9310 P625]"
+  },
+  "word_exceptions_base": "pt-PT",
+  "audit": {
+    "portuguese_unified": {
+      "conclusion": "mislabeled_gold",
+      "measured": "The 53,147-word portuguese_unified gold for pt-TL-x-dili, diffed against pt-PT-x-lisboa, is a near-total 1:1 character substitution of the Lisbon entries (measured 2026-08): it still carries Lisbon-style unstressed-vowel reduction (60% of rows keep a reduced [ə], 31% a reduced final [ʊ]) and coda /s/->[ʃ], the opposite of what Albuquerque (2010:275 fn.7, 277) documents for East Timorese Portuguese.",
+      "reference": "spec notes"
+    }
+  }
+}

@@ -1,0 +1,393 @@
+{
+  "parent": "trk",
+  "ancestors": [
+    {
+      "code": "trk",
+      "role": "parent",
+      "weight": 0.86,
+      "notes": "Descent from Proto-Turkic (Kipchak branch)."
+    },
+    {
+      "code": "ru",
+      "role": "adstrate",
+      "weight": 0.09,
+      "notes": "Russian adstrate: long Volga-Ural contact and Soviet-era lexicon."
+    },
+    {
+      "code": "tt",
+      "role": "adstrate",
+      "weight": 0.06,
+      "notes": "Tatar adstrate: closely related neighbouring Kipchak literary language."
+    },
+    {
+      "code": "ar",
+      "role": "adstrate",
+      "weight": 0.05,
+      "notes": "Arabic adstrate: religious vocabulary via the Islamic literary tradition."
+    }
+  ],
+  "code": "ba",
+  "name": "Bashkir",
+  "glottolog_code": "bash1264",
+  "script": "Cyrillic",
+  "script_type": "alphabet",
+  "iso639_3": "bak",
+  "quality": "research",
+  "graphemes": {
+    "а": [
+      "a"
+    ],
+    "ае": [
+      "aje"
+    ],
+    "б": [
+      "b"
+    ],
+    "в": [
+      "v"
+    ],
+    "г": [
+      "ɡ"
+    ],
+    "ғ": [
+      "ʁ"
+    ],
+    "д": [
+      "d"
+    ],
+    "ҙ": [
+      "ð"
+    ],
+    "е": [
+      "je"
+    ],
+    "ее": [
+      "eje"
+    ],
+    "ё": [
+      "jo"
+    ],
+    "ж": [
+      "ʒ"
+    ],
+    "з": [
+      "z"
+    ],
+    "и": [
+      "i"
+    ],
+    "ие": [
+      "ije"
+    ],
+    "й": [
+      "j"
+    ],
+    "к": [
+      "k"
+    ],
+    "ҡ": [
+      "q"
+    ],
+    "л": [
+      "l"
+    ],
+    "м": [
+      "m"
+    ],
+    "н": [
+      "n"
+    ],
+    "ң": [
+      "ŋ"
+    ],
+    "о": [
+      "o"
+    ],
+    "ое": [
+      "oje"
+    ],
+    "ө": [
+      "ø"
+    ],
+    "өе": [
+      "øje"
+    ],
+    "п": [
+      "p"
+    ],
+    "р": [
+      "r"
+    ],
+    "с": [
+      "s"
+    ],
+    "ҫ": [
+      "θ"
+    ],
+    "т": [
+      "t"
+    ],
+    "у": [
+      "u"
+    ],
+    "ү": [
+      "y"
+    ],
+    "ф": [
+      "f"
+    ],
+    "х": [
+      "x"
+    ],
+    "һ": [
+      "h"
+    ],
+    "ц": [
+      "ts"
+    ],
+    "ч": [
+      "tʃ"
+    ],
+    "ш": [
+      "ʃ"
+    ],
+    "щ": [
+      "ʃtʃ"
+    ],
+    "ъ": [
+      ""
+    ],
+    "ъе": [
+      "je"
+    ],
+    "ы": [
+      "ɯ"
+    ],
+    "ые": [
+      "ɯje"
+    ],
+    "ь": [
+      ""
+    ],
+    "ье": [
+      "je"
+    ],
+    "э": [
+      "e"
+    ],
+    "ә": [
+      "æ"
+    ],
+    "әе": [
+      "æje"
+    ],
+    "ю": [
+      "ju"
+    ],
+    "я": [
+      "ja"
+    ],
+    "ау": [
+      "aw"
+    ],
+    "оу": [
+      "ow"
+    ],
+    "ыу": [
+      "ɯw"
+    ],
+    "уу": [
+      "uw"
+    ],
+    "әү": [
+      "æw"
+    ],
+    "өү": [
+      "øw"
+    ],
+    "үү": [
+      "yw"
+    ],
+    "еү": [
+      "ew"
+    ],
+    "иү": [
+      "iw"
+    ]
+  },
+  "allophones": {
+    "a": [
+      "a"
+    ],
+    "æ": [
+      "æ"
+    ],
+    "b": [
+      "b"
+    ],
+    "v": [
+      "v"
+    ],
+    "ɡ": [
+      "ɡ"
+    ],
+    "ʁ": [
+      "ʁ"
+    ],
+    "d": [
+      "d"
+    ],
+    "ð": [
+      "ð"
+    ],
+    "e": [
+      "e"
+    ],
+    "ʒ": [
+      "ʒ"
+    ],
+    "z": [
+      "z"
+    ],
+    "i": [
+      "i"
+    ],
+    "j": [
+      "j"
+    ],
+    "k": [
+      "k"
+    ],
+    "q": [
+      "q"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ŋ": [
+      "ŋ"
+    ],
+    "o": [
+      "o"
+    ],
+    "ø": [
+      "ø"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "θ": [
+      "θ"
+    ],
+    "t": [
+      "t"
+    ],
+    "u": [
+      "u"
+    ],
+    "y": [
+      "y"
+    ],
+    "f": [
+      "f"
+    ],
+    "x": [
+      "x"
+    ],
+    "h": [
+      "h"
+    ],
+    "ts": [
+      "ts"
+    ],
+    "tʃ": [
+      "tʃ"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "ɯ": [
+      "ɯ"
+    ]
+  },
+  "notes": "Bashkir in Cyrillic script (Russia). Distinctive interdentals: Ҙ = /ð/, Ҫ = /θ/ — unusual among Turkic and a defining contrast against Tatar. Ҡ = /q/ (uvular stop); Ғ = /ʁ/; Ң = /ŋ/; Һ = /h/. Nine vowels with front/back harmony: а /a/, ә /æ/, о /o/, ө /ø/, у /u/, ү /y/, ы /ɯ/, и /i/, е /e/.\n\n⟨е⟩ is iotated /je/ word-initially, after another vowel, and after a soft or hard sign (Wikipedia, \"Bashkir language\", alphabet table); it is the plain vowel /e/ after a consonant. Word-initial iotation is keyed on position (⟨е⟩ → /je/ word-initially, /e/ by default). After-vowel iotation is written as the harmonic digraphs ае, ое, ые, ие, ее, әе and өе, because the shared orthographic-vowel table does not classify the Turkic Cyrillic letters ә and ө, so an after-vowel position could not see them; ⟨ье⟩ and ⟨ъе⟩ are keyed directly as digraphs for the same reason.\n\n⟨у⟩ and ⟨ү⟩ spell the glide /w/ when they follow a back and a front vowel respectively; as vowels they occur only in the first syllable (Wikipedia, \"Bashkir language\", alphabet table). The harmonic sequences are written as digraphs — ау оу ыу уу and әү өү үү еү иү — for the same reason: the shared orthographic-vowel table does not classify ә ө ү at all.\n\n⟨ъ⟩ and ⟨ь⟩ represent a glottal stop or syllable break rather than a full consonant (Wikipedia, \"Bashkir language\"); this spec maps them to the empty string on their own, since the engine has no glottal-stop segment to assign them, while still keying the ⟨ъе⟩/⟨ье⟩ sequences to /je/ so the following vowel is not silently dropped. ⟨ё⟩ /jo/, ⟨ц⟩ /ts/, ⟨щ⟩ /ʃtʃ/ and ⟨в⟩ /v/ carry Russian loanwords.\n\nKnown residual: ⟨и⟩ is /i/ in the first syllable and an underlying /ij/ elsewhere, especially in open syllables (Wikipedia, \"Bashkir language\"). The second reading is not declared because the positional vocabulary has no first-syllable position, and approximating it with word-initial would mis-fire on every polysyllable.",
+  "sources": [
+    {
+      "id": "bashkir_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Bashkir language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Bashkir_language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Bashkir_language",
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "poppe_1964",
+      "author": "Poppe, Nicholas",
+      "year": 1964,
+      "title": "Bashkir Manual",
+      "publisher": "Indiana University, Uralic and Altaic Series",
+      "url": null,
+      "wikipedia_url": null,
+      "pages": null,
+      "notes": "Edition not consulted; claim is the standard Turkological description of Bashkir vowel values and the у/ү glide rule."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Bashkir_language",
+    "https://ba.wikipedia.org/wiki/%D0%91%D0%B0%D1%88%D2%A1%D0%BE%D1%80%D1%82_%D1%82%D0%B5%D0%BB%D0%B5"
+  ],
+  "timespan": {
+    "start_year": 1939,
+    "end_year": null
+  },
+  "stress": {
+    "default_position": -1,
+    "final_stress_endings": [],
+    "penult_stress_endings": [],
+    "marked_vowels": [],
+    "stress_mark": "ˈ",
+    "notes": "Bashkir default stress is word-final (-1). Certain grammatical endings (negation, question) are unstressed; not modeled here. Source: Poppe (1964), Johanson & Csató (1998)."
+  },
+  "wikidata_qid": "Q13389",
+  "phoible_id": "bash1264",
+  "wals_code": "bsk",
+  "location": {
+    "latitude": 53.59671,
+    "longitude": 56.55937,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Bashkir."
+  },
+  "positional_graphemes": {
+    "е": {
+      "word_initial": [
+        "je"
+      ],
+      "default": [
+        "e"
+      ]
+    },
+    "еү": {
+      "word_initial": [
+        "jew"
+      ],
+      "default": [
+        "ew"
+      ]
+    }
+  }
+}

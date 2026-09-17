@@ -1,0 +1,94 @@
+{
+ "code": "loz",
+ "name": "Lozi",
+ "script": "Latin",
+ "script_type": "alphabet",
+ "quality": "skeleton",
+ "graphemes": {
+  "a": ["a"],
+  "e": ["e"],
+  "i": ["i"],
+  "o": ["o"],
+  "u": ["u"],
+  "b": ["b"],
+  "ch": ["c"],
+  "d": ["d"],
+  "f": ["f"],
+  "g": ["ɡ"],
+  "h": ["h"],
+  "j": ["ɟ"],
+  "k": ["k"],
+  "l": ["l"],
+  "m": ["m"],
+  "n": ["n"],
+  "ng'": ["ŋ"],
+  "ny": ["ɲ"],
+  "p": ["p"],
+  "s": ["s"],
+  "sh": ["ʃ"],
+  "t": ["t"],
+  "w": ["w"],
+  "y": ["j"],
+  "z": ["z"]
+ },
+ "allophones": {
+  "a": ["a"],
+  "e": ["e"],
+  "i": ["i"],
+  "o": ["o"],
+  "u": ["u"],
+  "b": ["b"],
+  "c": ["c"],
+  "d": ["d"],
+  "f": ["f"],
+  "ɡ": ["ɡ"],
+  "h": ["h"],
+  "ɟ": ["ɟ"],
+  "k": ["k"],
+  "l": ["l"],
+  "m": ["m"],
+  "n": ["n"],
+  "ŋ": ["ŋ"],
+  "ɲ": ["ɲ"],
+  "p": ["p"],
+  "s": ["s"],
+  "ʃ": ["ʃ"],
+  "t": ["t"],
+  "w": ["w"],
+  "j": ["j"],
+  "z": ["z"]
+ },
+ "notes": "Standard Silozi (Lozi) Latin orthography, standardized by Zambia's Ministry of Education in 1977 alongside Bemba, Nyanja, Tonga, Kaonde, Luvale and Lunda (the seven official Zambian regional languages; Lozi is also the officially promoted regional language of Zambia's Western Province, the former Barotseland). Five-vowel system /a e i o u/. ⟨ch⟩ and ⟨j⟩ spell the single palatal stops /c/ and /ɟ/ (not affricates and not c+h, which would give a stop-plus-glottal-fricative sequence Lozi does not have: AGENTS.md test 1). ⟨sh⟩ is /ʃ/, ⟨ny⟩ the palatal nasal /ɲ/. ⟨ng'⟩ (with a following apostrophe) spells the plain velar nasal /ŋ/, following the same disambiguating convention documented for Zambian Tonga (toi.json) under the shared 1977 harmonized orthography, blocking the wrong maximal-munch read as an ⟨n⟩+⟨g⟩ sequence (AGENTS.md test 3). Smoke-tested against the shared Bantu Zambian-cluster infinitive prefix ku- (e.g. Luvale ⟨kutonga⟩ 'to sew', Tonga íbúsi/ibusu minimal pair) confirming the k-u onset-vowel segments and the s/t/n/m consonant set resolve consistently across the harmonized-orthography sibling languages. Lozi is tonal (high/low, per the harmonized orthography's tone-marking convention) with no lexical word stress; tone is not consistently marked in ordinary orthography and is left unencoded here, a documented exemption distinct from stress (docs/quality_tiers.md).",
+ "iso639_3": "loz",
+ "glottolog_code": "lozi1239",
+ "sources": [
+  {
+   "id": "glottolog2024",
+   "author": "Hammarström, Harald; Forkel, Robert; Haspelmath, Martin; Bank, Sebastian",
+   "year": 2024,
+   "title": "Glottolog 5.0",
+   "publisher": "Max Planck Institute for Evolutionary Anthropology",
+   "url": "https://glottolog.org/"
+  },
+  {
+   "id": "zambia_moe_1977",
+   "author": "Zambia Ministry of Education",
+   "year": 1977,
+   "title": "Harmonized orthography of Zambia's seven official regional languages (Bemba, Nyanja, Tonga, Lozi, Kaonde, Luvale, Lunda)",
+   "publisher": "Government of Zambia"
+  }
+ ],
+ "urls": [
+  "https://glottolog.org/resource/languoid/id/lozi1239"
+ ],
+ "wikipedia": [
+  "https://en.wikipedia.org/wiki/Lozi_language"
+ ],
+ "location": {
+  "latitude": -17.7052,
+  "longitude": 24.7398,
+  "source": "glottolog",
+  "notes": "Glottolog's representative point."
+ },
+ "parent": "x-clade-atla1278"
+}

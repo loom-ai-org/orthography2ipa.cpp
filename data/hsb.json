@@ -1,0 +1,173 @@
+{
+  "code": "hsb",
+  "name": "Upper Sorbian",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "iso639_3": "hsb",
+  "glottolog_code": "uppe1395",
+  "timespan": {
+    "start_year": 1574,
+    "end_year": null
+  },
+  "graphemes": {
+    "ch": [
+      "x"
+    ],
+    "dź": [
+      "dʑ"
+    ],
+    "dž": [
+      "dʒ"
+    ],
+    "ě": [
+      "e"
+    ],
+    "š": [
+      "ʃ"
+    ],
+    "ž": [
+      "ʒ"
+    ],
+    "č": [
+      "tʃ"
+    ],
+    "ć": [
+      "tɕ"
+    ],
+    "ń": [
+      "ɲ"
+    ],
+    "ł": [
+      "w"
+    ],
+    "a": [
+      "a"
+    ],
+    "b": [
+      "b"
+    ],
+    "c": [
+      "ts"
+    ],
+    "d": [
+      "d"
+    ],
+    "e": [
+      "ɛ"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "h": [
+      "h"
+    ],
+    "i": [
+      "i"
+    ],
+    "j": [
+      "j"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "o": [
+      "ɔ"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "u": [
+      "u"
+    ],
+    "v": [
+      "v"
+    ],
+    "w": [
+      "v"
+    ],
+    "y": [
+      "ɨ"
+    ],
+    "z": [
+      "z"
+    ],
+    "ó": [
+      "o",
+      "ʊ"
+    ],
+    "ř": [
+      "ʃ"
+    ]
+  },
+  "allophones": {},
+  "positional_graphemes": {},
+  "ancestors": [
+    {
+      "code": "sla",
+      "role": "parent",
+      "weight": 0.86,
+      "notes": "Descent from Proto-Slavic (West Slavic, Sorbian/Lusatian subgroup)."
+    },
+    {
+      "code": "de-DE",
+      "role": "adstrate",
+      "weight": 0.16,
+      "notes": "German adstrate: a Slavic island entirely surrounded by German for a millennium; pervasive lexical and structural influence."
+    }
+  ],
+  "parent": "x-clade-west2792",
+  "notes": "Upper Sorbian (Hornjoserbsce), West Slavic minority language of the Sorbian people in Lusatia, Germany. Palatal affricates ć /tɕ/ and dź /dʑ/ are distinctive. Ě = /jɛ/, ł = /w/. Dual grammatical number preserved.",
+  "sources": [
+    {
+      "id": "wiki-hsb",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Upper Sorbian language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Upper_Sorbian_language"
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Upper_Sorbian_language",
+    "https://hsb.wikipedia.org/wiki/Hornjoserbš%C4%87ina",
+    "https://hsb.wikipedia.org/wiki/Hornjoserb%C5%A1%C4%87ina"
+  ],
+  "stress": {
+    "default_position": 1,
+    "final_stress_endings": [],
+    "penult_stress_endings": [],
+    "marked_vowels": [],
+    "stress_mark": "ˈ",
+    "notes": "Upper Sorbian (hsb) has categorical initial stress, following the West Slavic pattern shared with Czech. Source: Stone (1993), in The Slavonic Languages; Wikipedia: https://en.wikipedia.org/wiki/Upper_Sorbian_phonology"
+  },
+  "wikidata_qid": "Q13248",
+  "phoible_id": "uppe1395",
+  "wals_code": "sou",
+  "location": {
+    "latitude": 51.2403,
+    "longitude": 14.4098,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Upper Sorbian."
+  }
+}

@@ -1,0 +1,140 @@
+{
+  "code": "aae",
+  "name": "Arbëresh Albanian",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "skeleton",
+  "iso639_3": "aae",
+  "glottolog_code": "arbe1236",
+  "timespan": {
+    "start_year": 1592,
+    "end_year": null
+  },
+  "graphemes_base": "sq",
+  "graphemes": {
+    "y": [
+      "i"
+    ],
+    "ll": [
+      "ɣ"
+    ]
+  },
+  "allophones": {},
+  "allophone_rules": [
+    {
+      "id": "AAE_G_INTERVOCALIC_FRICATIVE",
+      "phonemes": [
+        "ɡ"
+      ],
+      "surface": "ɣ",
+      "preceded_by": "vowel",
+      "followed_by": "vowel",
+      "notes": "Intervocalic ⟨g⟩ /ɡ/ lenites to the voiced velar fricative [ɣ] (Wikipedia: Arbëresh language). Expressed as a context rule rather than a blanket grapheme override so the plain plosive /ɡ/ survives word-finally, where AAE_DEVOICE_G still applies."
+    },
+    {
+      "id": "AAE_DEVOICE_B",
+      "phonemes": [
+        "b"
+      ],
+      "surface": "p",
+      "word_final": true,
+      "notes": "Archaic final-obstruent devoicing preserved from medieval Tosk, lost in the modern standard. Wikipedia (Arbëresh language): lig ('bad') is pronounced [lɪk]."
+    },
+    {
+      "id": "AAE_DEVOICE_D",
+      "phonemes": [
+        "d"
+      ],
+      "surface": "t",
+      "word_final": true,
+      "notes": "Word-final devoicing of /d/, same archaic pattern as other voiced obstruents."
+    },
+    {
+      "id": "AAE_DEVOICE_G",
+      "phonemes": [
+        "ɡ"
+      ],
+      "surface": "k",
+      "word_final": true,
+      "notes": "Word-final devoicing of /ɡ/; example cited on Wikipedia: lig ('bad') → [lɪk]."
+    },
+    {
+      "id": "AAE_DEVOICE_DH",
+      "phonemes": [
+        "ð"
+      ],
+      "surface": "θ",
+      "word_final": true,
+      "notes": "Word-final devoicing of the dental fricative dh /ð/ → [θ]."
+    },
+    {
+      "id": "AAE_DEVOICE_ZH",
+      "phonemes": [
+        "ʒ"
+      ],
+      "surface": "ʃ",
+      "word_final": true,
+      "notes": "Word-final devoicing of zh /ʒ/ → [ʃ]."
+    },
+    {
+      "id": "AAE_DEVOICE_V",
+      "phonemes": [
+        "v"
+      ],
+      "surface": "f",
+      "word_final": true,
+      "notes": "Word-final devoicing of v /v/ → [f]."
+    },
+    {
+      "id": "AAE_DEVOICE_Z",
+      "phonemes": [
+        "z"
+      ],
+      "surface": "s",
+      "word_final": true,
+      "notes": "Word-final devoicing of z /z/ → [s]."
+    }
+  ],
+  "positional_graphemes": {},
+  "ancestors": [
+    {
+      "code": "ine",
+      "role": "proto_language",
+      "weight": 1.0,
+      "notes": "Isolated Indo-European branch."
+    },
+    {
+      "code": "als",
+      "role": "parent",
+      "weight": 0.9,
+      "notes": "Arbëresh descends from medieval (Old) Tosk Albanian, carried to Italy by Albanian settlers from the 15th century onward; grapheme_base sq (Tosk-derived standard) approximates the shared Latin orthography, with local overrides."
+    },
+    {
+      "code": "it-IT",
+      "role": "adstrate",
+      "weight": 0.15,
+      "notes": "Centuries of contact with Sicilian and (southern) Italian produced substantial lexical borrowing, e.g. qaca ('square') < Sicilian chiazza, pincar ('think') < Sicilian pinzari (Wikipedia: Arbëresh language)."
+    }
+  ],
+  "parent": "x-clade-alba1267",
+  "notes": "Arbëresh (Arbërisht), spoken by the Italo-Albanian (Arbëreshë) communities of Sicily and Calabria since the 15th-century diaspora. Preserves medieval Tosk features lost in the modern standard: no front rounded vowel /y/, so ⟨y⟩ merges with /i/; ⟨ll⟩ and intervocalic ⟨g⟩ are realized as the voiced velar fricative [ɣ] (a feature carried into local speakers' Italian, per Wikipedia); archaic word-final devoicing of voiced obstruents. First-person singular present indicative ends in ⟨-nj⟩ rather than standard ⟨-j⟩ (morphological, not encoded here). Earliest text: E Mbësuame e Krështerë (1592) by Lekë Matrënga.",
+  "sources": [
+    {
+      "id": "wiki-aae",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Arbëresh language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Arb%C3%ABresh_language"
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Arb%C3%ABresh_language"
+  ],
+  "wikidata_qid": "Q35852",
+  "location": {
+    "latitude": 39.3,
+    "longitude": 16.4,
+    "source": "glottolog",
+    "notes": "Approximate Arbëresh-speaking area, Calabria/Sicily, southern Italy."
+  }
+}

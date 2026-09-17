@@ -1,0 +1,536 @@
+{
+  "code": "stq",
+  "glottolog_code": "sate1242",
+  "name": "Saterland Frisian",
+  "script": "Latin",
+  "quality": "research",
+  "script_type": "alphabet",
+  "parent": "ofs",
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "ä": [
+      "ɛ"
+    ],
+    "e": [
+      "ɛ",
+      "ə"
+    ],
+    "i": [
+      "ɪ"
+    ],
+    "o": [
+      "ɔ"
+    ],
+    "ö": [
+      "œ"
+    ],
+    "u": [
+      "ʊ"
+    ],
+    "ü": [
+      "ʏ"
+    ],
+    "í": [
+      "iː"
+    ],
+    "ú": [
+      "uː"
+    ],
+    "ë": [
+      "ə"
+    ],
+    "úu": [
+      "uː"
+    ],
+    "aa": [
+      "aː"
+    ],
+    "ää": [
+      "ɛː"
+    ],
+    "ee": [
+      "eː"
+    ],
+    "ie": [
+      "iː"
+    ],
+    "oo": [
+      "oː"
+    ],
+    "öö": [
+      "øː"
+    ],
+    "uu": [
+      "uː"
+    ],
+    "üü": [
+      "yː"
+    ],
+    "oa": [
+      "ɔː"
+    ],
+    "ai": [
+      "ai"
+    ],
+    "au": [
+      "au"
+    ],
+    "äi": [
+      "ɛi"
+    ],
+    "ei": [
+      "ɛi"
+    ],
+    "oi": [
+      "ɔi"
+    ],
+    "ou": [
+      "ɔu"
+    ],
+    "öi": [
+      "œi"
+    ],
+    "b": [
+      "b"
+    ],
+    "c": [
+      "k"
+    ],
+    "ch": [
+      "x"
+    ],
+    "d": [
+      "d"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɡ",
+      "ɣ"
+    ],
+    "h": [
+      "h"
+    ],
+    "j": [
+      "j"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ng": [
+      "ŋ"
+    ],
+    "nk": [
+      "ŋk"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s",
+      "z"
+    ],
+    "sch": [
+      "ʃ"
+    ],
+    "sp": [
+      "sp",
+      "ʃp"
+    ],
+    "st": [
+      "st",
+      "ʃt"
+    ],
+    "t": [
+      "t"
+    ],
+    "ts": [
+      "ts"
+    ],
+    "v": [
+      "v"
+    ],
+    "w": [
+      "v",
+      "w"
+    ],
+    "x": [
+      "ks"
+    ],
+    "z": [
+      "ts"
+    ]
+  },
+  "allophones": {
+    "p": [
+      "p"
+    ],
+    "b": [
+      "b",
+      "p"
+    ],
+    "t": [
+      "t"
+    ],
+    "d": [
+      "d",
+      "t"
+    ],
+    "k": [
+      "k"
+    ],
+    "ɡ": [
+      "ɡ",
+      "k"
+    ],
+    "ɣ": [
+      "ɣ",
+      "x"
+    ],
+    "f": [
+      "f"
+    ],
+    "v": [
+      "v",
+      "f"
+    ],
+    "s": [
+      "s",
+      "z"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "x": [
+      "x"
+    ],
+    "h": [
+      "h"
+    ],
+    "ts": [
+      "ts"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n",
+      "ŋ"
+    ],
+    "ŋ": [
+      "ŋ"
+    ],
+    "l": [
+      "l"
+    ],
+    "r": [
+      "r",
+      "ɾ"
+    ],
+    "j": [
+      "j"
+    ],
+    "w": [
+      "w"
+    ],
+    "a": [
+      "a"
+    ],
+    "aː": [
+      "aː"
+    ],
+    "ɛ": [
+      "ɛ"
+    ],
+    "ɛː": [
+      "ɛː"
+    ],
+    "eː": [
+      "eː"
+    ],
+    "ɪ": [
+      "ɪ"
+    ],
+    "iː": [
+      "iː"
+    ],
+    "ɔ": [
+      "ɔ"
+    ],
+    "oː": [
+      "oː"
+    ],
+    "ʊ": [
+      "ʊ"
+    ],
+    "uː": [
+      "uː"
+    ],
+    "œ": [
+      "œ"
+    ],
+    "øː": [
+      "øː"
+    ],
+    "ʏ": [
+      "ʏ"
+    ],
+    "yː": [
+      "yː"
+    ],
+    "ə": [
+      "ə"
+    ],
+    "iə": [
+      "iə"
+    ],
+    "oə": [
+      "oə"
+    ],
+    "uə": [
+      "uə"
+    ],
+    "ai": [
+      "ai"
+    ],
+    "au": [
+      "au"
+    ],
+    "ɛi": [
+      "ɛi"
+    ],
+    "ɔi": [
+      "ɔi"
+    ],
+    "ɔu": [
+      "ɔu"
+    ],
+    "œi": [
+      "œi"
+    ]
+  },
+  "positional_graphemes": {
+    "b": {
+      "word_final": [
+        "b",
+        "p"
+      ],
+      "default": [
+        "b"
+      ]
+    },
+    "d": {
+      "word_final": [
+        "d",
+        "t"
+      ],
+      "default": [
+        "d"
+      ]
+    },
+    "g": {
+      "word_final": [
+        "ɡ",
+        "ɣ",
+        "k"
+      ],
+      "default": [
+        "ɡ",
+        "ɣ"
+      ]
+    },
+    "v": {
+      "word_final": [
+        "v",
+        "f"
+      ],
+      "default": [
+        "v"
+      ]
+    },
+    "s": {
+      "word_initial": [
+        "z"
+      ],
+      "intervocalic": [
+        "z"
+      ],
+      "default": [
+        "s"
+      ]
+    },
+    "e": {
+      "nucleus_unstressed": [
+        "ə"
+      ],
+      "nucleus_stressed": [
+        "ɛ"
+      ],
+      "default": [
+        "ɛ",
+        "ə"
+      ]
+    },
+    "a": {
+      "open_syllable": [
+        "aː"
+      ],
+      "default": [
+        "a"
+      ]
+    },
+    "i": {
+      "open_syllable": [
+        "iː"
+      ],
+      "default": [
+        "ɪ"
+      ]
+    },
+    "o": {
+      "open_syllable": [
+        "oː"
+      ],
+      "default": [
+        "ɔ"
+      ]
+    },
+    "u": {
+      "open_syllable": [
+        "uː"
+      ],
+      "default": [
+        "ʊ"
+      ]
+    }
+  },
+  "ancestors": [
+    {
+      "code": "ofs",
+      "role": "parent",
+      "weight": 0.8,
+      "notes": "Descent from Old Frisian (East Frisian branch). Saterland Frisian is the last surviving dialect of East Frisian, spoken in the Saterland (Seelterland) municipalities since medieval Frisian colonisation of the bogs."
+    },
+    {
+      "code": "nds",
+      "role": "adstrate",
+      "weight": 0.1,
+      "notes": "Low German adstrate: Saterland is surrounded by Low German speakers. Heavy Low German influence on lexicon and some phonological convergence, especially in younger speakers."
+    },
+    {
+      "code": "de-DE",
+      "role": "adstrate",
+      "weight": 0.07,
+      "notes": "Standard German adstrate: dominant language of education and administration. All Saterland Frisians are trilingual (Saterland Frisian, Low German, Standard German)."
+    },
+    {
+      "code": "nl",
+      "role": "adstrate",
+      "weight": 0.03,
+      "notes": "Dutch adstrate: historical trade contacts with the Netherlands; some Dutch-influenced lexical items, particularly in older vocabulary."
+    }
+  ],
+  "notes": "Saterland Frisian (Seeltersk) — the last surviving variety of East Frisian, spoken by ~1,000–2,500 people in the four Saterland municipalities (Ramsloh, Strücklingen, Scharrel, Sedelsberg) in the Cloppenburg district of Lower Saxony, Germany. Severely endangered; recognised as a minority language under the European Charter. KEY FEATURES, per Peters (2017), the JIPA illustration: (1) MOST CONSERVATIVE FRISIAN: preserves features lost in West and North Frisian. (2) NO CENTRING DIPHTHONGS. Peters (2017) lists exactly seven phonemic diphthongs, /oi̯ ɛi̯ œi̯ ɔi̯ ai̯ ɔu̯ au̯/, all falling and closing; there is no /iə oə uə/ series. An earlier revision of this spec carried centring diphthongs for the ⟨oa/ia/ua⟩ digraphs, apparently copied from West Frisian's ⟨ea/oa⟩ pattern (`fy.json`) — that is contradicted both by Peters and by the wikipron gold, where every one of 73 ⟨oa⟩ tokens transcribes as the long monophthong /ɔː/ and ⟨ia/ua⟩ are effectively unattested. (3) FINAL DEVOICING of lenis obstruents is a TENDENCY, not a categorical rule: 'Younger speakers tend to devoice voiced (lenis) obstruents in syllable-final position and before voiceless obstruents' (Peters 2017: 224). The wikipron gold agrees with the voiced reading, not the devoiced one — of the 53 gold words ending orthographic ⟨d⟩ or ⟨b⟩, 51 keep the voiced stop (⟨Aastfräislound⟩ /...lɔu̯nd/, ⟨Bloud⟩ /bloːu̯d/, ⟨Grääb⟩ /ɣrɛːb/) and only 3 devoice; ⟨g⟩/⟨v⟩ have no word-final tokens in the gold to check against. `positional_graphemes` therefore ranks the voiced stop/fricative FIRST at `word_final` for b/d/g/v, with the devoiced variant kept as a lower-ranked candidate for the minority pattern the source itself calls generational rather than the norm. (4) /ɡ/ IS PHONEMICALLY A VOICED VELAR STOP for Peters's consultants, but 'some older speakers realize /ɡ/ as a velar fricative [ɣ], which is voiced in all positions except before voiceless consonants and in word-final position' (Peters 2017: 224); the wikipron gold's spelling pronunciations use the fricative variant essentially throughout (80/80 realised /ɡ/ tokens are [ɣ]), so both values are kept as candidates. (5) /s/ tends to PALATALIZE before /p, m, n, l, t, v/ in younger speakers, giving [sʲ] or [ʃ] — e.g. 'ˈʃteːtə' 'to push', 'ˈsʲpitə' 'spades' (Peters 2017: 224) — but this too is a younger-speaker tendency over the plain alveolar, not a categorical German-style word-initial rule, and the wikipron gold's medial ⟨st⟩/⟨sp⟩ tokens (⟨Aaste⟩, ⟨Akster⟩, ⟨Aastfräislound⟩) are all unpalatalized. `sp`/`st` therefore rank the plain cluster first with the palatalized reading as a secondary candidate; an earlier revision of this spec had /sp, st/ → [ʃp, ʃt] unconditionally, which is not what Peters describes (he discusses /sk/ word-initial variation and /sj/ reduction separately, neither of which licenses a categorical /st/, /sp/ rule) and does not match the gold. (6) /s/ becomes voiced word-medially before /j/, after /l, r/, and intervocalically after a long vowel (Peters 2017: 224). (7) RICH FRONT ROUNDED VOWELS: ö/öö, ü/üü from i-umlaut; /yː/ is largely restricted to Low German loans. (8) Long ää /ɛː/ preserved as distinct from ee /eː/, matching Peters's long lax vs. long tense mid-vowel contrast. (9) OPEN-SYLLABLE VOWEL LENGTH: the gold spells a long vowel with a doubled letter only in a closed syllable; in an open syllable a single letter already spells it long. This is Fort's dictionary convention, which Peters adopts wholesale — 'The orthographic conventions used throughout the text are adopted from Fort (2015)' (Peters 2017: 223) — and which Bergqvist (2020: 80) sets out against Kramer's rival one: 'Kramer uses double letters for long vowels, in open syllables as well as closed syllables ... However, Fort uses a different system. In his dictionary, double letters are also used to mark long vowels, but only in closed syllables. In open syllables — where, according to Fort, no short vowels are possible — long vowels are simply written as a single letter.' Bergqvist's own contrast set is attested in the stq gold: ⟨rood⟩ 'red' /roːd/ is the closed-syllable long vowel spelled double, ⟨bale⟩ 'speak' /baːlə/ is the same length spelled single in an open syllable, and ⟨laf⟩ 'weak' /laf/ is the short closed-syllable case, which the gold does not contain. That is why the spec keys plain a/i/o/u to `open_syllable` rather than folding length onto the letters. Peters says only that he takes his spellings from Fort and nowhere describes the convention himself; Fort's dictionary has not been consulted directly for this spec, so the description above rests on Bergqvist. (10) UNSTRESSED ⟨e⟩ REDUCES TO SCHWA: 'the vowel system of Saterland Frisian includes [ə], which is restricted to unstressed syllables' (Peters 2017: 224). This spec follows the sibling West Frisian spec's (`fy.json`) Germanic root-initial default stress (Tiersma 1999 ch. 1; Peters's own worked stress examples, e.g. /ˈtumə/ 'thumb') to condition the existing `e` -> `ɛ`/`ə` candidates on stress via `nucleus_stressed`/`nucleus_unstressed`, so ⟨Apel⟩ 'apple' now gives /aːpəl/ and ⟨Aaden⟩ /aːdən/, matching the gold. (11) REMAINING GAP: the gold pair ⟨Apel⟩ /aːpəl/ vs ⟨Adder⟩ 'snake' /adər/ still does not distinguish gemination — the spec gets the vowel length and now the schwa right in both, but ⟨Adder⟩'s doubled ⟨dd⟩ still emits a doubled /dd/ rather than Fort's single short-vowel marker: 'Fort uses double consonants when the pattern is short stem vowel + consonant + vowel, in order to indicate that the vowel is short, even if it stands in a phonologically open syllable' (Bergqvist 2020: 82). Peters does not address written double consonants at all, so this is left untouched pending direct consultation of Fort (2001, in Munske's Handbuch des Friesischen) or Fort's Saterfriesisches Wörterbuch. (12) THREE-LANGUAGE ecology: all speakers also speak Low German and Standard German.",
+  "sources": [
+    {
+      "id": "peters2017",
+      "author": "Peters, Jörg",
+      "year": 2019,
+      "title": "Saterland Frisian",
+      "publisher": "Journal of the International Phonetic Association 49(2), 223-230",
+      "url": "https://doi.org/10.1017/S0025100317000226",
+      "pages": "223-230",
+      "notes": "Illustrations of the IPA. DOI first published online 15 June 2017 (hence the kept id `peters2017`), but the article carries the print date of the journal issue it appears in, Journal of the International Phonetic Association (2019) 49/2, pp. 223-230 — the year field is corrected to 2019 to match the citable issue. Primary source for the consonant/vowel/diphthong inventories, the /ɡ/~[ɣ] allophony, the statement that its orthography follows Fort (2015), the unstressed-schwa restriction, the /s/-palatalization and final-devoicing TENDENCIES (not categorical rules), and Germanic root-initial word stress."
+    },
+    {
+      "id": "fort1980",
+      "author": "Fort, M.C.",
+      "year": 1980,
+      "title": "Saterfriesisches Wörterbuch",
+      "publisher": "Helmut Buske Verlag",
+      "url": null,
+      "pages": null,
+      "notes": "Comprehensive dictionary of Saterland Frisian"
+    },
+    {
+      "id": "kramer1982",
+      "author": "Kramer, P.",
+      "year": 1982,
+      "title": "Ksjansen: The Sounds of Saterland Frisian",
+      "publisher": "Fryske Akademy",
+      "url": null,
+      "pages": null,
+      "notes": "Phonological description of Saterland Frisian"
+    },
+    {
+      "id": "markey1981",
+      "author": "Markey, T.L.",
+      "year": 1981,
+      "title": "Frisian",
+      "publisher": "Mouton",
+      "url": null,
+      "pages": null,
+      "notes": "Trends in Linguistics series; covers all Frisian branches"
+    },
+    {
+      "id": "bergqvist2020",
+      "author": "Bergqvist, Sean",
+      "year": 2020,
+      "title": "“Wie schrieuwe Seeltersk” – a study of the orthography of Saterland Frisian literary texts",
+      "publisher": "Us Wurk LXIX, 73–91",
+      "url": "https://ugp.rug.nl/uswurk/article/download/36959/34463/46308",
+      "pages": "80, 82",
+      "notes": "p. 80, on vowel quantity: Kramer doubles a long vowel in open and closed syllables alike, while Fort doubles only in closed syllables and writes an open-syllable long vowel with a single letter; the article’s own example set laf / rood / bale / so is the source for the length examples in this spec’s notes. Also p. 80 for Fort’s acute accent, placed over a letter to mark a long vowel as against a half-long one (Fort 1980: 64), which is the convention behind the ⟨í⟩/⟨ú⟩ graphemes. p. 82 for Fort’s doubled consonant as an indicator of a preceding short vowel rather than a geminate.",
+      "wikipedia_url": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Saterland_Frisian",
+    "https://de.wikipedia.org/wiki/Saterfriesische_Sprache",
+    "https://en.wikipedia.org/wiki/Saterland_Frisian_language",
+    "https://stq.wikipedia.org/wiki/Seeltersk"
+  ],
+  "urls": [
+    "https://en.wikipedia.org/wiki/Saterland_Frisian",
+    "https://de.wikipedia.org/wiki/Saterfriesische_Sprache",
+    "https://en.wikipedia.org/wiki/Frisian_languages",
+    "https://en.wikipedia.org/wiki/Saterland",
+    "https://en.wikipedia.org/wiki/East_Frisian_language",
+    "https://fy.wikipedia.org/wiki/Sealterfrysk",
+    "https://nl.wikipedia.org/wiki/Saterfries",
+    "https://nds.wikipedia.org/wiki/Seeltersk"
+  ],
+  "timespan": {
+    "start_year": 1700,
+    "end_year": null
+  },
+  "iso639_3": "stq",
+  "wikidata_qid": "Q27154",
+  "location": {
+    "latitude": 53.117,
+    "longitude": 7.721,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Ems-Weser Frisian."
+  },
+  "constrain_onsets": true,
+  "stress": {
+    "default_position": 1,
+    "stress_mark": "ˈ",
+    "notes": "Germanic root-initial stress, matching the sibling West Frisian spec (fy.json) and Peters (2019: 228): 'In morphological words comprising a single phonological word the primary word stress falls on the last stressed syllable' — for the simple, non-prefixed lexical stems the wikipron gold consists of, that syllable is the root's first (Peters's own worked examples, e.g. /ˈtumə/ 'thumb', /ˈdaŋɡə/-type disyllables, all stress-initial). This activates the existing e -> ə unstressed-nucleus override below, which the flat table alone never reached."
+  }
+}

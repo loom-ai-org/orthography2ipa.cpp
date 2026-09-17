@@ -1,0 +1,947 @@
+{
+  "code": "de-DE",
+  "name": "German",
+  "script": "Latin",
+  "graphemes": {
+    "a": [
+      "a",
+      "aː"
+    ],
+    "e": [
+      "ɛ",
+      "eː",
+      "ə"
+    ],
+    "i": [
+      "ɪ",
+      "iː"
+    ],
+    "o": [
+      "ɔ",
+      "oː"
+    ],
+    "u": [
+      "ʊ",
+      "uː"
+    ],
+    "ä": [
+      "ɛ",
+      "ɛː"
+    ],
+    "ö": [
+      "œ",
+      "øː"
+    ],
+    "ü": [
+      "ʏ",
+      "yː"
+    ],
+    "y": [
+      "ʏ",
+      "yː"
+    ],
+    "b": [
+      "b"
+    ],
+    "c": [
+      "k",
+      "ts"
+    ],
+    "d": [
+      "d"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "h": [
+      "h"
+    ],
+    "j": [
+      "j"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "p": [
+      "p"
+    ],
+    "q": [
+      "k"
+    ],
+    "r": [
+      "ʁ"
+    ],
+    "s": [
+      "z",
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "v": [
+      "f",
+      "v"
+    ],
+    "w": [
+      "v"
+    ],
+    "x": [
+      "ks"
+    ],
+    "z": [
+      "ts"
+    ],
+    "ß": [
+      "s"
+    ],
+    "ch": [
+      "ç",
+      "x"
+    ],
+    "ck": [
+      "k"
+    ],
+    "pf": [
+      "pf"
+    ],
+    "ph": [
+      "f"
+    ],
+    "qu": [
+      "kv"
+    ],
+    "sch": [
+      "ʃ"
+    ],
+    "th": [
+      "t"
+    ],
+    "tz": [
+      "ts"
+    ],
+    "ng": [
+      "ŋ"
+    ],
+    "nk": [
+      "ŋk"
+    ],
+    "ss": [
+      "s"
+    ],
+    "er": [
+      "ɛʁ",
+      "ɐ"
+    ],
+    "tsch": [
+      "tʃ"
+    ],
+    "aa": [
+      "aː"
+    ],
+    "ee": [
+      "eː"
+    ],
+    "oo": [
+      "oː"
+    ],
+    "ie": [
+      "iː"
+    ],
+    "ei": [
+      "aɪ"
+    ],
+    "ai": [
+      "aɪ"
+    ],
+    "au": [
+      "aʊ"
+    ],
+    "eu": [
+      "ɔʏ"
+    ],
+    "äu": [
+      "ɔʏ"
+    ],
+    "ah": [
+      "aː"
+    ],
+    "eh": [
+      "eː"
+    ],
+    "oh": [
+      "oː"
+    ],
+    "uh": [
+      "uː"
+    ],
+    "ih": [
+      "iː"
+    ],
+    "äh": [
+      "ɛː"
+    ],
+    "öh": [
+      "øː"
+    ],
+    "üh": [
+      "yː"
+    ],
+    "tion": [
+      "tsi̯oːn"
+    ]
+  },
+  "allophones": {
+    "p": [
+      "p",
+      "pʰ"
+    ],
+    "b": [
+      "b",
+      "p"
+    ],
+    "t": [
+      "t",
+      "tʰ"
+    ],
+    "d": [
+      "d",
+      "t"
+    ],
+    "k": [
+      "k",
+      "kʰ"
+    ],
+    "ɡ": [
+      "ɡ",
+      "k"
+    ],
+    "f": [
+      "f"
+    ],
+    "v": [
+      "v"
+    ],
+    "s": [
+      "s"
+    ],
+    "z": [
+      "z"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "ç": [
+      "ç"
+    ],
+    "x": [
+      "x"
+    ],
+    "h": [
+      "h"
+    ],
+    "ʁ": [
+      "ʁ",
+      "ʀ",
+      "r",
+      "ɐ̯"
+    ],
+    "pf": [
+      "pf"
+    ],
+    "ts": [
+      "ts"
+    ],
+    "tʃ": [
+      "tʃ"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n",
+      "ŋ"
+    ],
+    "ŋ": [
+      "ŋ"
+    ],
+    "l": [
+      "l"
+    ],
+    "j": [
+      "j"
+    ],
+    "a": [
+      "a"
+    ],
+    "ɛ": [
+      "ɛ"
+    ],
+    "ɪ": [
+      "ɪ"
+    ],
+    "ɔ": [
+      "ɔ"
+    ],
+    "ʊ": [
+      "ʊ"
+    ],
+    "œ": [
+      "œ"
+    ],
+    "ʏ": [
+      "ʏ"
+    ],
+    "ə": [
+      "ə"
+    ],
+    "aː": [
+      "aː"
+    ],
+    "eː": [
+      "eː"
+    ],
+    "iː": [
+      "iː"
+    ],
+    "oː": [
+      "oː"
+    ],
+    "uː": [
+      "uː"
+    ],
+    "ɛː": [
+      "ɛː"
+    ],
+    "øː": [
+      "øː"
+    ],
+    "yː": [
+      "yː"
+    ],
+    "aɪ": [
+      "aɪ"
+    ],
+    "aʊ": [
+      "aʊ"
+    ],
+    "ɔʏ": [
+      "ɔʏ"
+    ]
+  },
+  "collapse_geminates": true,
+  "parent": "x-clade-west2793",
+  "ancestors": [
+    {
+      "code": "goh",
+      "role": "parent",
+      "weight": 0.92,
+      "notes": "Descent from Old High German via Middle High German"
+    },
+    {
+      "code": "la",
+      "role": "adstrate",
+      "weight": 0.05,
+      "notes": "Latin adstrate: ecclesiastical & scholarly vocabulary (Fenster, Mauer, Kloster); cf. Wolff (1999)"
+    },
+    {
+      "code": "fr-FR",
+      "role": "adstrate",
+      "weight": 0.03,
+      "notes": "French adstrate: courtly vocabulary (Abenteuer, Turnier); 17th-18th c. prestige influence"
+    }
+  ],
+  "notes": "Standard German (Hochdeutsch / Bühnendeutsch). AUSLAUTVERHÄRTUNG: obstruents devoiced word-finally (b→p, d→t, g→k, v→f); the engine only computes WORD_FINAL position (no medial-coda syllabification), so devoicing before a following consonant inside a word, e.g. 'Abschied', is a known engine-limit exception, not a spec gap. SP/ST: [ʃp]/[ʃt] word-initially, [sp]/[st] elsewhere. CH (ich-Laut/ach-Laut): [x] after back vowels a/o/u (and the au/eu-initial diphthong graphemes, whose first letter is a/e), [ç] after front vowels e/i, after consonants, and word-initially before front vowels. The GraphemePosition enum only encodes AFTER_A/E/I/O/U for single-letter vowel graphemes, so ⟨ch⟩ after the umlauts ä/ö/ü or the diphthongs eu/äu falls back to the generic after_vowel bucket, which defaults to the more frequent ich-Laut [ç] — a known engine-limit exception. Glottal stop insertion before vowel-initial syllables (Kohler 1990; Wikipedia German phonology) is attested but not phonemic and frequently absent even in careful speech outside northern varieties, and is not encoded in wikipron-style gold transcriptions used for benchmarking, so it is deliberately not inserted to avoid a spurious PER regression. Vowel length follows the orthographic single/double-consonant and Dehnungs-h/doubled-vowel/⟨ie⟩ conventions described in Wikipedia's German orthography article, consistent with Wiese (1996) and Hall (2003). Sources: Wiese (1996), Hall (2003), Mangold (2005), Wikipedia German phonology, Wikipedia German orthography. Dehnungs-h: a silent ⟨h⟩ after a vowel marks it long (Wiese 1996, ch. 3; the standard orthographic length device): Bahn [baːn], Sohn [zoːn], Uhr [uːɐ̯], ihn [iːn], fährt [fɛːɐ̯t]. Declared as positional vowel+h multigraphs: silent-lengthening before a consonant or word-finally (Bahn, Sohn, Uhr, fährt), but the h is a REAL onset consonant when a vowel follows — loanwords (Ahorn, Uhu, Alkohol) and her-/hin- morpheme boundaries (daher, woher, dahin) — so the before_vowel branch keeps [Vːh]. Syllable-initial ⟨h⟩ (Haus, hinter) is untouched. word_exceptions carry the two closed initial-stress sets the suffix rules would wrongly catch (Wiese 1996 ch. 8; Duden): the native -sal nominalizer (Schicksal, Trübsal...) and the grammatical -tiv terms (Genitiv, Dativ...); genuine -iv/-al loanwords (Motiv, Kanal) keep suffix-final stress.",
+  "quality": "research",
+  "script_type": "alphabet",
+  "sources": [
+    {
+      "id": "wiese1996",
+      "author": "Wiese, R.",
+      "year": 1996,
+      "title": "The Phonology of German",
+      "publisher": "Oxford University Press",
+      "url": null,
+      "pages": null,
+      "notes": null,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/German_phonology"
+    },
+    {
+      "id": "hall2003",
+      "author": "Hall, T.A.",
+      "year": 2003,
+      "title": "Phonologie des Deutschen: eine Einführung",
+      "publisher": "de Gruyter",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "mangold2005",
+      "author": "Mangold, M.",
+      "year": 2005,
+      "title": "Duden Aussprachewörterbuch (6th ed.)",
+      "publisher": "Dudenverlag",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "kohler1990",
+      "author": "Kohler, K. J.",
+      "year": 1990,
+      "title": "Illustrations of the IPA: German",
+      "publisher": "Journal of the International Phonetic Association 20(1)",
+      "url": null,
+      "pages": null,
+      "notes": "Reprinted in Handbook of the International Phonetic Association (Cambridge University Press, 1999). Source for the ich-Laut/ach-Laut conditioning environment (front vowels + consonants -> [ç], back vowels a/o/u -> [x]) and for word-initial/word-internal glottal-stop insertion before stressed vowels."
+    },
+    {
+      "id": "wikipedia_german_phonology",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "German phonology",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/German_phonology",
+      "pages": null,
+      "notes": "Secondary summary of Wiese (1996); cited for fortis/lenis coda devoicing scope, ich-Laut/ach-Laut distribution, and glottal-stop non-phonemic status."
+    },
+    {
+      "id": "wikipedia_german_orthography",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "German orthography",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/German_orthography",
+      "pages": null,
+      "notes": "Cited for the orthographic vowel-length cues: single vs. doubled consonant after a vowel letter, Dehnungs-h, doubled vowel letters (aa/ee/oo), and the <ie> digraph for long /iː/."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/German_language",
+    "https://de.wikipedia.org/wiki/Deutsche_Sprache",
+    "https://en.wikipedia.org/wiki/German_phonology",
+    "https://de.wikipedia.org/wiki/Aussprache_der_deutschen_Sprache"
+  ],
+  "positional_graphemes": {
+    "b": {
+      "word_final": [
+        "p"
+      ],
+      "default": [
+        "b"
+      ]
+    },
+    "d": {
+      "word_final": [
+        "t"
+      ],
+      "default": [
+        "d"
+      ]
+    },
+    "g": {
+      "word_final": [
+        "k"
+      ],
+      "default": [
+        "ɡ"
+      ]
+    },
+    "v": {
+      "word_final": [
+        "f"
+      ],
+      "default": [
+        "v"
+      ]
+    },
+    "s": {
+      "word_initial": [
+        "z"
+      ],
+      "intervocalic": [
+        "z"
+      ],
+      "word_final": [
+        "s"
+      ],
+      "default": [
+        "s"
+      ]
+    },
+    "ch": {
+      "after_a": [
+        "x",
+        "ç"
+      ],
+      "after_o": [
+        "x",
+        "ç"
+      ],
+      "after_u": [
+        "x",
+        "ç"
+      ],
+      "after_e": [
+        "ç",
+        "x"
+      ],
+      "after_i": [
+        "ç",
+        "x"
+      ],
+      "after_vowel": [
+        "ç",
+        "x"
+      ],
+      "word_initial": [
+        "k",
+        "ç"
+      ],
+      "default": [
+        "ç"
+      ]
+    },
+    "sp": {
+      "word_initial": [
+        "ʃp"
+      ],
+      "default": [
+        "sp"
+      ]
+    },
+    "st": {
+      "word_initial": [
+        "ʃt"
+      ],
+      "default": [
+        "st"
+      ]
+    },
+    "e": {
+      "nucleus_unstressed": [
+        "ə"
+      ],
+      "nucleus_stressed": [
+        "ɛ"
+      ],
+      "default": [
+        "ɛ",
+        "eː",
+        "ə"
+      ]
+    },
+    "er": {
+      "word_final": [
+        "ɐ"
+      ],
+      "default": [
+        "ɛʁ"
+      ]
+    },
+    "ah": {
+      "default": [
+        "aː"
+      ],
+      "before_vowel": [
+        "aːh"
+      ]
+    },
+    "eh": {
+      "default": [
+        "eː"
+      ],
+      "before_vowel": [
+        "eːh"
+      ]
+    },
+    "oh": {
+      "default": [
+        "oː"
+      ],
+      "before_vowel": [
+        "oːh"
+      ]
+    },
+    "uh": {
+      "default": [
+        "uː"
+      ],
+      "before_vowel": [
+        "uːh"
+      ]
+    },
+    "ih": {
+      "default": [
+        "iː"
+      ],
+      "before_vowel": [
+        "iːh"
+      ]
+    },
+    "äh": {
+      "default": [
+        "ɛː"
+      ],
+      "before_vowel": [
+        "ɛːh"
+      ]
+    },
+    "öh": {
+      "default": [
+        "øː"
+      ],
+      "before_vowel": [
+        "øːh"
+      ]
+    },
+    "üh": {
+      "default": [
+        "yː"
+      ],
+      "before_vowel": [
+        "yːh"
+      ]
+    }
+  },
+  "timespan": {
+    "start_year": 1700,
+    "end_year": null
+  },
+  "glottolog_code": "stan1295",
+  "iso639_3": "deu",
+  "wikidata_qid": "Q188",
+  "phoible_id": "stan1295",
+  "wals_code": "ger",
+  "location": {
+    "latitude": 48.649,
+    "longitude": 12.4676,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for German."
+  },
+  "stress": {
+    "default_position": 1,
+    "final_stress_endings": [
+      "ion",
+      "tät",
+      "ei",
+      "eur",
+      "ent",
+      "ant",
+      "enz",
+      "anz",
+      "ös",
+      "iv",
+      "ur",
+      "al"
+    ],
+    "penult_stress_endings": [
+      "ieren",
+      "ismus"
+    ],
+    "marked_vowels": [],
+    "stress_mark": "ˈ",
+    "notes": "Germanic initial stress (Wiese 1996, ch. 8). Stress-attracting suffixes (same chapter, closed cited set): final stress on -ion (Nation), -tät (Universität), -ei (Partei), -eur, -ent, -ant, -enz, -anz, -ös, -iv, -ur, -al; penult on -ieren (studieren), -ismus. Unstressed prefixes (be-, ge-, ver-, ent-, er-, zer-, emp-) still shift stress in ways no suffix rule captures — that residual stays documented, not faked."
+  },
+  "allophone_rules": [
+    {
+      "id": "DE_FINAL_IG_SPIRANT",
+      "phonemes": [
+        "k"
+      ],
+      "surface": "ç",
+      "word_final": true,
+      "preceded_by_phoneme": [
+        "ɪ"
+      ],
+      "grapheme": [
+        "g"
+      ],
+      "notes": "word-final ⟨-ig⟩ is [ɪç] (König, ewig). Keyed on the ⟨g⟩ grapheme after final devoicing, so ⟨-ik⟩ (Musik) is untouched"
+    },
+    {
+      "id": "DE_OPEN_SYLLABLE_A",
+      "phonemes": [
+        "a"
+      ],
+      "surface": "aː",
+      "syllable_position": "nucleus",
+      "followed_by": "consonant",
+      "followed_by_2": "vowel",
+      "grapheme": [
+        "a"
+      ],
+      "notes": "Open-syllable lengthening (Wiese 1996, ch. 3 -- the orthographic single/doubled-consonant vowel-length convention already documented above): Na-me, sa-gen. followed_by_2=vowel excludes a doubled consonant letter, tokenized as two consonant graphemes. Vetoed before the shortness-marking letter groups ⟨ss⟩ ⟨ck⟩ ⟨tz⟩ ⟨ng⟩ (followed_by_grapheme_not): German orthography writes a short vowel before them (Wiese 1996, ch. 3), but their phonemes are single consonants indistinguishable from the plain letters at the phoneme layer.",
+      "stress": "stressed",
+      "followed_by_grapheme_not": [
+        "ss",
+        "ck",
+        "tz",
+        "ng"
+      ]
+    },
+    {
+      "id": "DE_OPEN_SYLLABLE_E",
+      "phonemes": [
+        "ɛ"
+      ],
+      "surface": "eː",
+      "syllable_position": "nucleus",
+      "followed_by": "consonant",
+      "followed_by_2": "vowel",
+      "grapheme": [
+        "e"
+      ],
+      "notes": "Open-syllable lengthening for stressed e (Wiese 1996); the unstressed nucleus_unstressed candidate is schwa and never surfaces as the plain 'e' -> 'ɛ' candidate this rule targets, so word-final -e/-en schwas are untouched. Vetoed before the shortness-marking letter groups ⟨ss⟩ ⟨ck⟩ ⟨tz⟩ ⟨ng⟩ (followed_by_grapheme_not): German orthography writes a short vowel before them (Wiese 1996, ch. 3), but their phonemes are single consonants indistinguishable from the plain letters at the phoneme layer.",
+      "stress": "stressed",
+      "followed_by_grapheme_not": [
+        "ss",
+        "ck",
+        "tz",
+        "ng"
+      ]
+    },
+    {
+      "id": "DE_OPEN_SYLLABLE_I",
+      "phonemes": [
+        "ɪ"
+      ],
+      "surface": "iː",
+      "syllable_position": "nucleus",
+      "followed_by": "consonant",
+      "followed_by_2": "vowel",
+      "grapheme": [
+        "i"
+      ],
+      "notes": "Open-syllable lengthening (Wiese 1996): Bi-ber. Vetoed before the shortness-marking letter groups ⟨ss⟩ ⟨ck⟩ ⟨tz⟩ ⟨ng⟩ (followed_by_grapheme_not): German orthography writes a short vowel before them (Wiese 1996, ch. 3), but their phonemes are single consonants indistinguishable from the plain letters at the phoneme layer.",
+      "stress": "stressed",
+      "followed_by_grapheme_not": [
+        "ss",
+        "ck",
+        "tz",
+        "ng"
+      ]
+    },
+    {
+      "id": "DE_OPEN_SYLLABLE_O",
+      "phonemes": [
+        "ɔ"
+      ],
+      "surface": "oː",
+      "syllable_position": "nucleus",
+      "followed_by": "consonant",
+      "followed_by_2": "vowel",
+      "grapheme": [
+        "o"
+      ],
+      "notes": "Open-syllable lengthening (Wiese 1996): o-ben, Bo-den. Vetoed before the shortness-marking letter groups ⟨ss⟩ ⟨ck⟩ ⟨tz⟩ ⟨ng⟩ (followed_by_grapheme_not): German orthography writes a short vowel before them (Wiese 1996, ch. 3), but their phonemes are single consonants indistinguishable from the plain letters at the phoneme layer.",
+      "stress": "stressed",
+      "followed_by_grapheme_not": [
+        "ss",
+        "ck",
+        "tz",
+        "ng"
+      ]
+    },
+    {
+      "id": "DE_OPEN_SYLLABLE_U",
+      "phonemes": [
+        "ʊ"
+      ],
+      "surface": "uː",
+      "syllable_position": "nucleus",
+      "followed_by": "consonant",
+      "followed_by_2": "vowel",
+      "grapheme": [
+        "u"
+      ],
+      "notes": "Open-syllable lengthening (Wiese 1996): Blu-me. Vetoed before the shortness-marking letter groups ⟨ss⟩ ⟨ck⟩ ⟨tz⟩ ⟨ng⟩ (followed_by_grapheme_not): German orthography writes a short vowel before them (Wiese 1996, ch. 3), but their phonemes are single consonants indistinguishable from the plain letters at the phoneme layer.",
+      "stress": "stressed",
+      "followed_by_grapheme_not": [
+        "ss",
+        "ck",
+        "tz",
+        "ng"
+      ]
+    },
+    {
+      "id": "DE_OPEN_SYLLABLE_OE",
+      "phonemes": [
+        "œ"
+      ],
+      "surface": "øː",
+      "syllable_position": "nucleus",
+      "followed_by": "consonant",
+      "followed_by_2": "vowel",
+      "grapheme": [
+        "ö"
+      ],
+      "notes": "Open-syllable lengthening for umlaut o (Wiese 1996): Vo-gel-like -oe- stems, e.g. Oe-fen-analogue hoe-ren. Vetoed before the shortness-marking letter groups ⟨ss⟩ ⟨ck⟩ ⟨tz⟩ ⟨ng⟩ (followed_by_grapheme_not): German orthography writes a short vowel before them (Wiese 1996, ch. 3), but their phonemes are single consonants indistinguishable from the plain letters at the phoneme layer.",
+      "stress": "stressed",
+      "followed_by_grapheme_not": [
+        "ss",
+        "ck",
+        "tz",
+        "ng"
+      ]
+    },
+    {
+      "id": "DE_OPEN_SYLLABLE_UE",
+      "phonemes": [
+        "ʏ"
+      ],
+      "surface": "yː",
+      "syllable_position": "nucleus",
+      "followed_by": "consonant",
+      "followed_by_2": "vowel",
+      "grapheme": [
+        "ü"
+      ],
+      "notes": "Open-syllable lengthening for umlaut u (Wiese 1996). Vetoed before the shortness-marking letter groups ⟨ss⟩ ⟨ck⟩ ⟨tz⟩ ⟨ng⟩ (followed_by_grapheme_not): German orthography writes a short vowel before them (Wiese 1996, ch. 3), but their phonemes are single consonants indistinguishable from the plain letters at the phoneme layer.",
+      "stress": "stressed",
+      "followed_by_grapheme_not": [
+        "ss",
+        "ck",
+        "tz",
+        "ng"
+      ]
+    },
+    {
+      "id": "DE_UNSTRESSED_TENSE_I_FINAL",
+      "phonemes": [
+        "ɪ"
+      ],
+      "surface": "i",
+      "stress": "unstressed",
+      "word_final": true,
+      "grapheme": [
+        "i"
+      ],
+      "notes": "Unstressed tense vowel (Wiese 1996, ch. 2): PRETONIC open-syllable high/mid vowels surface tense-but-short (Politik [poli-], Idee); post-tonic syllables stay lax (Königin [-nɪɡɪn]) — hence the pretonic gate. Word-final unstressed vowels are tense regardless (Auto [aʊto], Kino)."
+    },
+    {
+      "id": "DE_UNSTRESSED_TENSE_O_FINAL",
+      "phonemes": [
+        "ɔ"
+      ],
+      "surface": "o",
+      "stress": "unstressed",
+      "word_final": true,
+      "grapheme": [
+        "o"
+      ],
+      "notes": "Unstressed tense vowel (Wiese 1996, ch. 2): PRETONIC open-syllable high/mid vowels surface tense-but-short (Politik [poli-], Idee); post-tonic syllables stay lax (Königin [-nɪɡɪn]) — hence the pretonic gate. Word-final unstressed vowels are tense regardless (Auto [aʊto], Kino)."
+    },
+    {
+      "id": "DE_UNSTRESSED_TENSE_U_FINAL",
+      "phonemes": [
+        "ʊ"
+      ],
+      "surface": "u",
+      "stress": "unstressed",
+      "word_final": true,
+      "grapheme": [
+        "u"
+      ],
+      "notes": "Unstressed tense vowel (Wiese 1996, ch. 2): PRETONIC open-syllable high/mid vowels surface tense-but-short (Politik [poli-], Idee); post-tonic syllables stay lax (Königin [-nɪɡɪn]) — hence the pretonic gate. Word-final unstressed vowels are tense regardless (Auto [aʊto], Kino)."
+    },
+    {
+      "id": "DE_UNSTRESSED_TENSE_Y_FINAL",
+      "phonemes": [
+        "ʏ"
+      ],
+      "surface": "y",
+      "stress": "unstressed",
+      "word_final": true,
+      "grapheme": [
+        "y"
+      ],
+      "notes": "Unstressed tense vowel (Wiese 1996, ch. 2): PRETONIC open-syllable high/mid vowels surface tense-but-short (Politik [poli-], Idee); post-tonic syllables stay lax (Königin [-nɪɡɪn]) — hence the pretonic gate. Word-final unstressed vowels are tense regardless (Auto [aʊto], Kino)."
+    },
+    {
+      "id": "DE_UNSTRESSED_TENSE_I_PRETONIC",
+      "phonemes": [
+        "ɪ"
+      ],
+      "surface": "i",
+      "stress": "pretonic",
+      "followed_by": "consonant",
+      "followed_by_2": "vowel",
+      "grapheme": [
+        "i"
+      ],
+      "notes": "Unstressed tense vowel (Wiese 1996, ch. 2): PRETONIC open-syllable high/mid vowels surface tense-but-short (Politik [poli-], Idee); post-tonic syllables stay lax (Königin [-nɪɡɪn]) — hence the pretonic gate. Word-final unstressed vowels are tense regardless (Auto [aʊto], Kino)."
+    },
+    {
+      "id": "DE_UNSTRESSED_TENSE_O_PRETONIC",
+      "phonemes": [
+        "ɔ"
+      ],
+      "surface": "o",
+      "stress": "pretonic",
+      "followed_by": "consonant",
+      "followed_by_2": "vowel",
+      "grapheme": [
+        "o"
+      ],
+      "notes": "Unstressed tense vowel (Wiese 1996, ch. 2): PRETONIC open-syllable high/mid vowels surface tense-but-short (Politik [poli-], Idee); post-tonic syllables stay lax (Königin [-nɪɡɪn]) — hence the pretonic gate. Word-final unstressed vowels are tense regardless (Auto [aʊto], Kino)."
+    },
+    {
+      "id": "DE_UNSTRESSED_TENSE_U_PRETONIC",
+      "phonemes": [
+        "ʊ"
+      ],
+      "surface": "u",
+      "stress": "pretonic",
+      "followed_by": "consonant",
+      "followed_by_2": "vowel",
+      "grapheme": [
+        "u"
+      ],
+      "notes": "Unstressed tense vowel (Wiese 1996, ch. 2): PRETONIC open-syllable high/mid vowels surface tense-but-short (Politik [poli-], Idee); post-tonic syllables stay lax (Königin [-nɪɡɪn]) — hence the pretonic gate. Word-final unstressed vowels are tense regardless (Auto [aʊto], Kino)."
+    },
+    {
+      "id": "DE_UNSTRESSED_TENSE_Y_PRETONIC",
+      "phonemes": [
+        "ʏ"
+      ],
+      "surface": "y",
+      "stress": "pretonic",
+      "followed_by": "consonant",
+      "followed_by_2": "vowel",
+      "grapheme": [
+        "y"
+      ],
+      "notes": "Unstressed tense vowel (Wiese 1996, ch. 2): PRETONIC open-syllable high/mid vowels surface tense-but-short (Politik [poli-], Idee); post-tonic syllables stay lax (Königin [-nɪɡɪn]) — hence the pretonic gate. Word-final unstressed vowels are tense regardless (Auto [aʊto], Kino)."
+    }
+  ],
+  "word_exceptions": {
+    "schicksal": "ˈʃɪkzaːl",
+    "drangsal": "ˈdʁaŋzaːl",
+    "trübsal": "ˈtʁyːpzaːl",
+    "mühsal": "ˈmyːzaːl",
+    "labsal": "ˈlaːpzaːl",
+    "scheusal": "ˈʃɔʏzaːl",
+    "genitiv": "ˈɡeːnitiːf",
+    "dativ": "ˈdaːtiːf",
+    "akkusativ": "ˈakuzatiːf",
+    "nominativ": "ˈnoːminatiːf",
+    "infinitiv": "ˈɪnfinitiːf",
+    "imperativ": "ˈɪmperatiːf",
+    "komparativ": "ˈkɔmparatiːf",
+    "superlativ": "ˈzuːpɐlatiːf"
+  },
+  "constrain_onsets": true
+}

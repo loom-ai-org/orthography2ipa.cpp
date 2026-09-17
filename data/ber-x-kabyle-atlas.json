@@ -1,0 +1,237 @@
+{
+  "code": "ber-x-kabyle-atlas",
+  "name": "Kabyle-Atlas Berber",
+  "script": "Latin",
+  "parent": "ber",
+  "ancestors": [
+    {
+      "code": "ber",
+      "role": "parent",
+      "weight": 0.9,
+      "notes": "Proto-Berber / Common Berber parent (Glottolog berb1260)."
+    }
+  ],
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "i": [
+      "i"
+    ],
+    "u": [
+      "u"
+    ],
+    "e": [
+      "ə"
+    ],
+    "b": [
+      "b"
+    ],
+    "t": [
+      "t"
+    ],
+    "d": [
+      "d"
+    ],
+    "ḍ": [
+      "dˤ"
+    ],
+    "k": [
+      "k"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "q": [
+      "q"
+    ],
+    "f": [
+      "f"
+    ],
+    "s": [
+      "s"
+    ],
+    "ṣ": [
+      "sˤ"
+    ],
+    "z": [
+      "z"
+    ],
+    "ẓ": [
+      "zˤ"
+    ],
+    "c": [
+      "ʃ"
+    ],
+    "j": [
+      "ʒ"
+    ],
+    "ɣ": [
+      "ɣ"
+    ],
+    "x": [
+      "χ"
+    ],
+    "ḥ": [
+      "ħ"
+    ],
+    "ɛ": [
+      "ʕ"
+    ],
+    "h": [
+      "h"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "l": [
+      "l"
+    ],
+    "r": [
+      "r"
+    ],
+    "ṛ": [
+      "rˤ"
+    ],
+    "w": [
+      "w"
+    ],
+    "y": [
+      "j"
+    ]
+  },
+  "allophones": {
+    "a": [
+      "a"
+    ],
+    "i": [
+      "i"
+    ],
+    "u": [
+      "u"
+    ],
+    "ə": [
+      "ə"
+    ],
+    "b": [
+      "b",
+      "β"
+    ],
+    "t": [
+      "t",
+      "θ"
+    ],
+    "d": [
+      "d",
+      "ð"
+    ],
+    "dˤ": [
+      "dˤ"
+    ],
+    "k": [
+      "k",
+      "ç"
+    ],
+    "ɡ": [
+      "ɡ",
+      "ʝ"
+    ],
+    "q": [
+      "q"
+    ],
+    "f": [
+      "f"
+    ],
+    "s": [
+      "s"
+    ],
+    "sˤ": [
+      "sˤ"
+    ],
+    "z": [
+      "z"
+    ],
+    "zˤ": [
+      "zˤ"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "ʒ": [
+      "ʒ"
+    ],
+    "ɣ": [
+      "ɣ"
+    ],
+    "χ": [
+      "χ"
+    ],
+    "ħ": [
+      "ħ"
+    ],
+    "ʕ": [
+      "ʕ"
+    ],
+    "h": [
+      "h"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "l": [
+      "l"
+    ],
+    "r": [
+      "r"
+    ],
+    "rˤ": [
+      "rˤ"
+    ],
+    "w": [
+      "w"
+    ],
+    "j": [
+      "j"
+    ]
+  },
+  "notes": "STRUCTURAL ANCESTRY NODE. Kabyle-Atlas Berber is the immediate Glottolog subgroup above Kabyle (Glottolog kaby1244: Afro-Asiatic afro1255 > Berber berb1260 > Kabyle-Atlas Berber kaby1244 > Kabyle kaby1243). In the traditional dialectological classification this grouping falls within Northern Berber (a Zenati/Kabyle areal grouping); Glottolog — the authority used here — places Kabyle directly under this node, so it is modelled as such. Included so Kabyle's ancestry chain resolves without inventing phonology; the grapheme set is a minimal Berber-Latin placeholder inherited in spirit from ber. Spirantization is the shared Northern-Berber innovation.",
+  "quality": "stub",
+  "script_type": "alphabet",
+  "iso639_3": null,
+  "glottolog_code": "kaby1244",
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Kabyle_language",
+    "https://en.wikipedia.org/wiki/Berber_languages",
+    "https://ar.wikipedia.org/wiki/%D8%A7%D9%84%D9%84%D9%87%D8%AC%D8%A9_%D8%A7%D9%84%D9%82%D8%A8%D8%A7%D8%A6%D9%84%D9%8A%D8%A9",
+    "https://fr.wikipedia.org/wiki/Kabyle",
+    "https://ar.wikipedia.org/wiki/%D9%84%D8%BA%D8%A7%D8%AA_%D8%A3%D9%85%D8%A7%D8%B2%D9%8A%D8%BA%D9%8A%D8%A9",
+    "https://fr.wikipedia.org/wiki/Langues_berb%C3%A8res"
+  ],
+  "urls": [
+    "https://glottolog.org/resource/languoid/id/kaby1244"
+  ],
+  "sources": [
+    {
+      "id": "kossmann2020_classification",
+      "author": "Kossmann, Maarten G.",
+      "year": 2020,
+      "title": "Berber subclassification (Glottolog)",
+      "publisher": "Glottolog / MPI-EVA",
+      "url": "https://glottolog.org/resource/languoid/id/kaby1244",
+      "pages": null,
+      "notes": "Glottolog's Berber internal classification places Kabyle under Kabyle-Atlas Berber, directly under Berber."
+    }
+  ],
+  "location": {
+    "latitude": 34.442725,
+    "longitude": -0.082444,
+    "source": "glottolog",
+    "notes": "Glottolog's computed centroid for the Kabyle-Atlas Berber family — a summary of a whole clade's range, not a place anyone speaks."
+  }
+}

@@ -1,0 +1,163 @@
+{
+  "code": "yux",
+  "name": "Southern Yukaghir",
+  "script": "Cyrillic",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "нь": [
+      "ɲ"
+    ],
+    "дь": [
+      "d͡ʑ"
+    ],
+    "ль": [
+      "ʎ"
+    ],
+    "ъ": [
+      ""
+    ],
+    "ь": [
+      "ʲ"
+    ],
+    "а": [
+      "a"
+    ],
+    "б": [
+      "b"
+    ],
+    "в": [
+      "w"
+    ],
+    "г": [
+      "ɡ"
+    ],
+    "д": [
+      "d"
+    ],
+    "е": [
+      "je"
+    ],
+    "ё": [
+      "jo"
+    ],
+    "ж": [
+      "ʒ"
+    ],
+    "з": [
+      "z"
+    ],
+    "и": [
+      "i"
+    ],
+    "й": [
+      "j"
+    ],
+    "к": [
+      "k"
+    ],
+    "л": [
+      "l"
+    ],
+    "м": [
+      "m"
+    ],
+    "н": [
+      "n"
+    ],
+    "ӈ": [
+      "ŋ"
+    ],
+    "о": [
+      "o"
+    ],
+    "ө": [
+      "ø"
+    ],
+    "п": [
+      "p"
+    ],
+    "р": [
+      "r"
+    ],
+    "с": [
+      "s"
+    ],
+    "т": [
+      "t"
+    ],
+    "у": [
+      "u"
+    ],
+    "х": [
+      "x"
+    ],
+    "ч": [
+      "tʃ"
+    ],
+    "ш": [
+      "ʃ"
+    ],
+    "ы": [
+      "ɨ"
+    ],
+    "э": [
+      "e"
+    ],
+    "ю": [
+      "ju"
+    ],
+    "я": [
+      "ja"
+    ]
+  },
+  "parent": "x-clade-yuka1259",
+  "ancestors": [
+    {
+      "code": "x-clade-yuka1259",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Descent per Glottolog classification of Southern Yukaghir (sout2750)."
+    }
+  ],
+  "notes": "Skeleton. Southern (Kolyma) Yukaghir is a Yukaghir language of northeastern Siberia written in a Cyrillic alphabet extended for its palatal and back vowels. The map covers the base Cyrillic letters plus Ӈ (velar nasal), Ө (front rounded vowel) and the palatal digraphs нь (ɲ), дь (d͡ʑ) and ль (ʎ); в is rendered as the approximant w. The soft sign ⟨ь⟩ elsewhere marks palatalisation and is mapped to ʲ, following the gold transcriptions of the reference corpus. Yukaghir has phonemic vowel length and vowel harmony that the orthography does not consistently mark, and the reference gold is a narrow transcription, so length, harmony and finer allophony are left unencoded and a substantial PER floor is expected. Southern Yukaghir stress falls on heavy syllables or else the final syllable (Maslova 2003) and is predictable, not separately orthographically marked; left unencoded (documented exemption).",
+  "iso639_3": "yux",
+  "glottolog_code": null,
+  "sources": [
+    {
+      "id": "yux_glottolog",
+      "author": "Hammarström, H. et al. (Glottolog 5.0)",
+      "year": 2024,
+      "title": "Glottolog: Southern Yukaghir (sout2750)",
+      "publisher": "Max Planck Institute for Evolutionary Anthropology",
+      "url": "https://glottolog.org/resource/languoid/id/sout2750",
+      "pages": null,
+      "notes": "Classification reference for a skeleton-tier entry.",
+      "wikipedia_url": null
+    },
+    {
+      "id": "yux_orthography",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Southern Yukaghir language — writing system and phonology",
+      "publisher": null,
+      "url": "https://en.wikipedia.org/wiki/Southern_Yukaghir_language",
+      "pages": null,
+      "notes": "Orthography/phonology reference for the skeleton-tier grapheme map.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Southern_Yukaghir_language"
+    },
+    {
+      "id": "yux_maslova2003",
+      "author": "Maslova, Elena",
+      "year": 2003,
+      "title": "A Grammar of Kolyma Yukaghir",
+      "publisher": "Mouton de Gruyter (Mouton Grammar Library 27)",
+      "url": null,
+      "pages": null,
+      "notes": "The definitive descriptive grammar of Southern (Kolyma) Yukaghir, covering phonology, allophony, phonotactics and stress; consulted to check the Cyrillic-based orthographic conventions (Ӈ, Ө and back-vowel letters) modelled here."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Southern_Yukaghir_language"
+  ]
+}

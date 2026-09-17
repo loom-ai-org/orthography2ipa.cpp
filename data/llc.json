@@ -1,0 +1,80 @@
+{
+ "code": "llc",
+ "name": "Lele (Guinea)",
+ "script": "Zyyy",
+ "quality": "stub",
+ "graphemes": {},
+ "allophones": {
+  "k": [
+   "t̠ʃ",
+   "k"
+  ],
+  "r": [
+   "r",
+   "ɗ"
+  ]
+ },
+ "notes": "REGISTRY STUB (not a modelled G2P target). Placed so the ancestry graph covers every living ISO 639-3 language. No orthography is claimed; the phoneme inventory follows the cited PHOIBLE inventory (which itself cites a published description): script is Zyyy (undetermined) until a cited description is encoded. Classification and coordinates follow Glottolog.",
+ "iso639_3": "llc",
+ "glottolog_code": "lele1266",
+ "sources": [
+  {
+   "id": "glottolog2024",
+   "author": "Hammarström, Harald; Forkel, Robert; Haspelmath, Martin; Bank, Sebastian",
+   "year": 2024,
+   "title": "Glottolog 5.0",
+   "publisher": "Max Planck Institute for Evolutionary Anthropology",
+   "url": "https://glottolog.org/"
+  },
+  {
+   "id": "phoible2019",
+   "author": "Moran, Steven; McCloy, Daniel (eds.)",
+   "year": 2019,
+   "title": "PHOIBLE 2.0 (doi:10.5281/zenodo.2562766)",
+   "publisher": "Max Planck Institute for the Science of Human History",
+   "url": "https://phoible.org/inventories/view/1516",
+   "notes": "Inventory 1516 (ph), 24 non-marginal segments, 2 marginal excluded, 2 tones."
+  }
+ ],
+ "urls": [
+  "https://glottolog.org/resource/languoid/id/lele1266"
+ ],
+ "location": {
+  "latitude": 8.9804,
+  "longitude": -10.371,
+  "source": "glottolog",
+  "notes": "Glottolog's representative point."
+ },
+ "parent": "x-clade-mand1469",
+ "phonemes": [
+  "d̠ʒ",
+  "f",
+  "h",
+  "j",
+  "k",
+  "kp",
+  "l",
+  "m",
+  "n",
+  "p",
+  "r",
+  "s",
+  "t",
+  "w",
+  "ɓ",
+  "ɗ",
+  "ɲ",
+  "a",
+  "e",
+  "i",
+  "o",
+  "u",
+  "ɔ",
+  "ɛ"
+ ],
+ "tone_inventory": {
+  "˦": "PHOIBLE tone segment",
+  "˨": "PHOIBLE tone segment"
+ },
+ "phoible_id": "1516"
+}

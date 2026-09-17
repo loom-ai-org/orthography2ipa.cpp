@@ -1,0 +1,347 @@
+{
+ "code": "ket",
+ "name": "Ket",
+ "script": "Cyrl",
+ "quality": "research",
+ "graphemes": {
+  "а": [
+   "a"
+  ],
+  "аа": [
+   "aː"
+  ],
+  "и": [
+   "i"
+  ],
+  "ии": [
+   "iː"
+  ],
+  "у": [
+   "ʊ"
+  ],
+  "уу": [
+   "uː"
+  ],
+  "э": [
+   "ɛ"
+  ],
+  "ээ": [
+   "ɛː"
+  ],
+  "о": [
+   "ɔ"
+  ],
+  "оо": [
+   "ɔː"
+  ],
+  "ы": [
+   "ɨ"
+  ],
+  "ыы": [
+   "ɨː"
+  ],
+  "ө": [
+   "ɵ̞"
+  ],
+  "өө": [
+   "ɵ̞ː"
+  ],
+  "б": [
+   "b"
+  ],
+  "д": [
+   "d"
+  ],
+  "дь": [
+   "ɟ"
+  ],
+  "г": [
+   "ɡ"
+  ],
+  "л": [
+   "l"
+  ],
+  "ль": [
+   "ʎ"
+  ],
+  "в": [
+   "v"
+  ],
+  "х": [
+   "x"
+  ],
+  "е": [
+   "je"
+  ],
+  "м": [
+   "m"
+  ],
+  "н": [
+   "n"
+  ],
+  "нь": [
+   "ɲ"
+  ],
+  "ӄ": [
+   "q"
+  ],
+  "к": [
+   "k"
+  ],
+  "с": [
+   "s"
+  ],
+  "сь": [
+   "ɕ"
+  ],
+  "т": [
+   "t"
+  ],
+  "ть": [
+   "c"
+  ],
+  "ӈ": [
+   "ŋ"
+  ],
+  "һ": [
+   "h"
+  ],
+  "й": [
+   "ʝ"
+  ],
+  "ь": [
+   "ʲ"
+  ],
+  "ъ": [
+   ""
+  ],
+  "ч": [
+   "tʃ"
+  ],
+  "ё": [
+   "jo"
+  ],
+  "ю": [
+   "ju"
+  ],
+  "я": [
+   "ja"
+  ],
+  "ә": [
+   "ə"
+  ],
+  "ӷ": [
+   "ɣ"
+  ],
+  "’": [
+   "ʔ"
+  ],
+  "ʼ": [
+   "ʔ"
+  ]
+ },
+ "allophones": {
+  "b": [
+   "pʲ",
+   "β",
+   "p",
+   "b"
+  ],
+  "d": [
+   "d",
+   "d",
+   "r"
+  ],
+  "k̟": [
+   "ɡ",
+   "k",
+   "ɡ̟",
+   "k̟"
+  ],
+  "lʲ": [
+   "lʲ",
+   "l̥ʲ"
+  ],
+  "lˠ": [
+   "lˠ",
+   "l̥ˠ"
+  ],
+  "m": [
+   "m",
+   "m̥"
+  ],
+  "n": [
+   "n",
+   "n̥"
+  ],
+  "nʲ": [
+   "n̥ʲ",
+   "nʲ"
+  ],
+  "q": [
+   "ɣ",
+   "qχ",
+   "ɢ",
+   "ʁ",
+   "q",
+   "ʀ",
+   "χ"
+  ],
+  "sʲ": [
+   "sʲ",
+   "sʲ",
+   "ʃʲ"
+  ],
+  "t": [
+   "t",
+   "t"
+  ],
+  "tʲ": [
+   "tʲ",
+   "t̠ʃʲ",
+   "tʲ"
+  ],
+  "ŋ": [
+   "ŋ",
+   "ŋ̥"
+  ],
+  "a": [
+   "a̟",
+   "a"
+  ],
+  "aː": [
+   "aː",
+   "a̟ː",
+   "aː",
+   "a̟ː"
+  ],
+  "i": [
+   "i",
+   "ɪ",
+   "i"
+  ],
+  "iː": [
+   "iː",
+   "iː"
+  ],
+  "uː": [
+   "uː",
+   "uː"
+  ],
+  "æ": [
+   "ɛ",
+   "æ",
+   "æ",
+   "e"
+  ],
+  "æː": [
+   "æː",
+   "ɛː",
+   "æː",
+   "ɛː"
+  ],
+  "ɔ": [
+   "o",
+   "ɔ",
+   "ø"
+  ],
+  "ɔː": [
+   "ɔː",
+   "ɔː"
+  ],
+  "ɨː": [
+   "ɨː",
+   "ɨː"
+  ],
+  "ɵ̞ː": [
+   "ɵ̞ː",
+   "ɵ̞ː"
+  ]
+ },
+ "notes": "Cyrillic-based practical orthography for Ket following Vajda (2004), Ket, and Vajda & Zinn's teaching materials. The northeuralex gold's apostrophe marking laryngealized tone (Vajda, E. J. (2010), 'Metathesis and Reanalysis in Ket', BLS 36, pp. 457-471, section 1.1: qɔ'j 'wish', laryngealized, vs. qōˑj 'aunt, uncle', high tone) is written with U+02BC MODIFIER LETTER APOSTROPHE (ʼ) rather than the U+2019 RIGHT SINGLE QUOTATION MARK (’) already mapped here, so both are kept as keys onto the same ʔ candidate. Ket has phonemic vowel length (doubled-vowel digraphs aa/ii/ee/oo/yy/oeoe mark long vowels, each earning its key by NOT being the concatenation of two short-vowel candidates) and lexical tone. The orthography does not mark the pitch component of Ket's four tonal prosodemes at all (Vajda 2004) -- the `stress` field is left unset and this is a documented exemption, not an oversight: Ket 'stress' is realised through the (unwritten) pitch contours rather than a predictable stress rule. It does write the laryngealized prosodeme's glottal constriction, via the apostrophe mapped above (Vajda 2010). Ket also has a productive palatalised consonant series, spelled with a following Cyrillic soft sign the same way Russian marks softness. The bare soft sign composes /ʲ/ (ru ⟨бь⟩ precedent, AGENTS.md: р+ь → rʲ, м+ь → mʲ are plain concatenation and get no key of their own), but the northeuralex gold shows that four of these palatalised consonants are not merely C+ʲ: с+ь, т+ь, д+ь and н+ь surface as the distinct single segments ɕ, c, ɟ and ɲ respectively (150/150, 1/1, 1/1 and 44/44 gold words checked), the same way л+ь already earns its own key for ʎ. Those four therefore earn Cyrillic+ь multigraph keys under the AGENTS.md test that a key's IPA is not merely the concatenation of its parts. No source consulted (Vajda 2004, Vajda 2010, PHOIBLE 2.0) states this set of realisations explicitly; the mapping rests on the gold evidence alone. g is used for the velar stop /k̟/ (Ket has no phonemic voiced velar stop, per Vajda 2004); the plain non-palatalised lateral is velarised /lˠ/; short /u/ is realised [ʊ] (Vajda 2004), contrasting with long /uː/ spelled уу.",
+ "iso639_3": "ket",
+ "glottolog_code": "kett1243",
+ "sources": [
+  {
+   "id": "glottolog2024",
+   "author": "Hammarström, Harald; Forkel, Robert; Haspelmath, Martin; Bank, Sebastian",
+   "year": 2024,
+   "title": "Glottolog 5.0",
+   "publisher": "Max Planck Institute for Evolutionary Anthropology",
+   "url": "https://glottolog.org/"
+  },
+  {
+   "id": "phoible2019",
+   "author": "Moran, Steven; McCloy, Daniel (eds.)",
+   "year": 2019,
+   "title": "PHOIBLE 2.0 (doi:10.5281/zenodo.2562766)",
+   "publisher": "Max Planck Institute for the Science of Human History",
+   "url": "https://phoible.org/inventories/view/2",
+   "notes": "Inventory 2 (spa), 32 non-marginal segments."
+  },
+  {
+   "id": "vajda2004",
+   "author": "Vajda, Edward J.",
+   "year": 2004,
+   "title": "Ket",
+   "publisher": "Lincom Europa (Languages of the World/Materials 204)"
+  },
+  {
+   "id": "vajda2010",
+   "author": "Vajda, Edward J.",
+   "year": 2010,
+   "title": "Metathesis and Reanalysis in Ket",
+   "publisher": "Proceedings of the 36th Annual Meeting of the Berkeley Linguistics Society (BLS 36), pp. 457-471",
+   "url": "https://doi.org/10.3765/bls.v36i1.3930",
+   "notes": "Section 1.1: the four phonemic prosodemes, incl. laryngealized tone (qɔ'j 'wish') vs. high tone (qōˑj 'aunt, uncle')."
+  }
+ ],
+ "urls": [
+  "https://glottolog.org/resource/languoid/id/kett1243"
+ ],
+ "location": {
+  "latitude": 63.7551,
+  "longitude": 87.5466,
+  "source": "glottolog",
+  "notes": "Glottolog's representative point."
+ },
+ "parent": "x-clade-yeni1252",
+ "phonemes": [
+  "b",
+  "d",
+  "dʲ",
+  "h",
+  "k̟",
+  "lʲ",
+  "lˠ",
+  "m",
+  "n",
+  "nʲ",
+  "q",
+  "s",
+  "sʲ",
+  "t",
+  "tʲ",
+  "ŋ",
+  "ʔ",
+  "ʝ",
+  "a",
+  "aː",
+  "i",
+  "iː",
+  "uː",
+  "æ",
+  "æː",
+  "ɔ",
+  "ɔː",
+  "ɨ",
+  "ɨː",
+  "ɵ̞",
+  "ɵ̞ː",
+  "ʊ"
+ ],
+ "phoible_id": "2",
+ "wikipedia": [
+  "https://en.wikipedia.org/wiki/Ket_language"
+ ]
+}

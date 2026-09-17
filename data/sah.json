@@ -1,0 +1,306 @@
+{
+  "code": "sah",
+  "name": "Yakut",
+  "script": "Cyrillic",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "аа": [
+      "aː"
+    ],
+    "оо": [
+      "ɔː"
+    ],
+    "уу": [
+      "uː"
+    ],
+    "ыы": [
+      "ɯː"
+    ],
+    "ии": [
+      "iː"
+    ],
+    "ээ": [
+      "eː"
+    ],
+    "өө": [
+      "øː"
+    ],
+    "үү": [
+      "yː"
+    ],
+    "ыа": [
+      "ɯa"
+    ],
+    "иэ": [
+      "ie"
+    ],
+    "уо": [
+      "uɔ"
+    ],
+    "үө": [
+      "yø"
+    ],
+    "дь": [
+      "d͡ʒ"
+    ],
+    "нь": [
+      "ɲ"
+    ],
+    "а": [
+      "a"
+    ],
+    "б": [
+      "b"
+    ],
+    "в": [
+      "v"
+    ],
+    "г": [
+      "ɡ"
+    ],
+    "ҕ": [
+      "ɣ",
+      "ʁ"
+    ],
+    "д": [
+      "d"
+    ],
+    "е": [
+      "e",
+      "je"
+    ],
+    "ё": [
+      "jo"
+    ],
+    "ж": [
+      "ʒ"
+    ],
+    "з": [
+      "z"
+    ],
+    "и": [
+      "i"
+    ],
+    "й": [
+      "j"
+    ],
+    "к": [
+      "k"
+    ],
+    "л": [
+      "l"
+    ],
+    "м": [
+      "m"
+    ],
+    "н": [
+      "n"
+    ],
+    "ҥ": [
+      "ŋ"
+    ],
+    "о": [
+      "ɔ"
+    ],
+    "ө": [
+      "ø"
+    ],
+    "п": [
+      "p"
+    ],
+    "р": [
+      "ɾ"
+    ],
+    "с": [
+      "s"
+    ],
+    "һ": [
+      "h"
+    ],
+    "т": [
+      "t"
+    ],
+    "у": [
+      "u"
+    ],
+    "ү": [
+      "y"
+    ],
+    "ф": [
+      "f"
+    ],
+    "х": [
+      "χ"
+    ],
+    "ц": [
+      "t͡s"
+    ],
+    "ч": [
+      "t͡ʃ"
+    ],
+    "ш": [
+      "ʃ"
+    ],
+    "щ": [
+      "ɕː"
+    ],
+    "ы": [
+      "ɯ"
+    ],
+    "э": [
+      "e"
+    ],
+    "ю": [
+      "ju"
+    ],
+    "я": [
+      "ja"
+    ]
+  },
+  "allophones": {},
+  "iso639_3": "sah",
+  "glottolog_code": "yaku1245",
+  "wikidata_qid": "Q34299",
+  "notes": "Yakut (Sakha, саха тыла), a Siberian Turkic language of the Sakha Republic, Russia, written since 1939 in an extended Cyrillic alphabet: the Russian letters plus Ҕҕ, Ҥҥ, Өө, Һһ, Үү and the digraphs ⟨дь⟩ /d͡ʒ/ and ⟨нь⟩ /ɲ/. Yakut has eight vowel qualities with a phonemic length contrast; long vowels are written by DOUBLING the vowel letter (аа оо уу ыы ии ээ өө үү) and the four diphthongs are written ⟨ыа иэ уо үө⟩ — all of these are listed as multigraph keys so that maximal-munch matching prefers them over the single letters. Ф, ц, щ and the iotated letters occur essentially only in Russian loanwords; their values follow the alphabet table of the cited source. The soft sign ⟨ь⟩ and hard sign ⟨ъ⟩ are NOT mapped: they carry no independent segment (⟨ь⟩ only forms the digraphs дь/нь or marks palatalisation in loans), so they are deliberately omitted rather than given an invented value. INPUT CONTRACT: Cyrillic Sakha text, Unicode NFC, lowercase-normalised by the engine; the earlier Novgorodov and Latin (Jaꞑalif) orthographies are out of scope.",
+  "sources": [
+    {
+      "id": "yakut_language_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Yakut language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Yakut_language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Yakut_language",
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "yakut_scripts_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Yakut scripts",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Yakut_scripts",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Yakut_scripts",
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "yakut_alphabet_ipa_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Yakut language — Alphabet, Vowels and Consonants (letter-to-IPA table)",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Yakut_language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Yakut_language",
+      "pages": null,
+      "notes": "Source of the letter->IPA values used here, incl. the doubled long-vowel and diphthong digraphs (аа /aː/ … ыа /ɯa/, иэ /ie/, уо /uɔ/, үө /yø/)."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Yakut_language",
+    "https://sah.wikipedia.org/wiki/%D0%A1%D0%B0%D1%85%D0%B0_%D1%82%D1%8B%D0%BB%D0%B0"
+  ],
+  "timespan": {
+    "start_year": 1939,
+    "end_year": null
+  },
+  "phonemes": [
+    "a",
+    "aː",
+    "b",
+    "cç",
+    "d",
+    "d̠ʒ",
+    "d̠ʒː",
+    "d̪|d",
+    "d̺",
+    "f",
+    "i",
+    "ie",
+    "ie̞",
+    "iː",
+    "j",
+    "j̃",
+    "k",
+    "kː",
+    "l",
+    "lː",
+    "l̪ˠ|lˠ",
+    "m",
+    "mː",
+    "n",
+    "nː",
+    "n̪",
+    "n̺",
+    "p",
+    "pː",
+    "q",
+    "r",
+    "r̪|r",
+    "s",
+    "sː",
+    "s̪",
+    "s̻",
+    "t",
+    "tː",
+    "t̠ʃ",
+    "t̠ʃː",
+    "t̪|t",
+    "t̺",
+    "u",
+    "uo",
+    "uɔ",
+    "uː",
+    "v",
+    "y",
+    "yø",
+    "yø̞",
+    "yː",
+    "z",
+    "z̪",
+    "ħ",
+    "ŋ",
+    "ŋː",
+    "œ",
+    "œː",
+    "ɑː",
+    "ɔ",
+    "ɔː",
+    "ɛ",
+    "ɛː",
+    "ɟʝ",
+    "ɡ",
+    "ɨɛ",
+    "ɨː",
+    "ɪ",
+    "ɪ̈",
+    "ɫ̺",
+    "ɯ",
+    "ɯa",
+    "ɯː",
+    "ɲ",
+    "ɲː",
+    "ʁ",
+    "ʃ",
+    "ʊ",
+    "ʏ",
+    "ʒ"
+  ],
+  "parent": "x-clade-turk1311",
+  "ancestors": [
+    {
+      "code": "x-clade-turk1311",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Turkic — the classification node this language sits under."
+    }
+  ],
+  "location": {
+    "latitude": 61.69744,
+    "longitude": 133.98031,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Sakha."
+  }
+}

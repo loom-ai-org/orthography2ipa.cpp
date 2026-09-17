@@ -1,0 +1,183 @@
+{
+  "code": "ru-x-southern",
+  "name": "Southern Russian",
+  "script": "Cyrillic",
+  "graphemes_base": "ru",
+  "graphemes": {
+    "г": [
+      "ɣ"
+    ]
+  },
+  "allophones_base": "ru",
+  "allophones": {
+    "ɣ": [
+      "ɣ",
+      "x"
+    ]
+  },
+  "positional_graphemes_base": "ru",
+  "positional_graphemes": {
+    "г": {
+      "word_final": [
+        "x"
+      ],
+      "default": [
+        "ɣ"
+      ]
+    },
+    "о": {
+      "first_pretonic": [
+        "a"
+      ],
+      "pretonic": [
+        "ə"
+      ],
+      "posttonic": [
+        "ə"
+      ]
+    },
+    "а": {
+      "first_pretonic": [
+        "a"
+      ],
+      "pretonic": [
+        "ə"
+      ],
+      "posttonic": [
+        "ə"
+      ]
+    },
+    "я": {
+      "first_pretonic": [
+        "ja",
+        "jɪ"
+      ],
+      "pretonic": [
+        "jɪ"
+      ],
+      "posttonic": [
+        "jə"
+      ]
+    },
+    "е": {
+      "first_pretonic": [
+        "ja",
+        "a",
+        "jɪ",
+        "ɪ"
+      ],
+      "pretonic": [
+        "jɪ",
+        "ɪ"
+      ],
+      "posttonic": [
+        "jɪ",
+        "ɪ"
+      ]
+    }
+  },
+  "word_exceptions": {
+    "много": "ˈmnoɣə",
+    "немного": "nʲaˈmnoɣə",
+    "намного": "naˈmnoɣə",
+    "дорого": "ˈdorəɣə",
+    "недорого": "nʲaˈdorəɣə",
+    "строго": "ˈstroɣə",
+    "убого": "ʊˈboɣə",
+    "лого": "ˈɫoɣə",
+    "ого": "ˈoɣo",
+    "его": "jaˈɣo",
+    "него": "nʲaˈɣo",
+    "кого": "kaˈɣo",
+    "того": "taˈɣo",
+    "всего": "fsʲaˈɣo",
+    "сего": "sʲaˈɣo",
+    "чего": "tɕaˈɣo",
+    "ничего": "nʲɪtɕaˈɣo",
+    "одного": "ədnaˈɣo",
+    "никого": "nʲɪkaˈɣo",
+    "моего": "məjaˈɣo",
+    "твоего": "tvəjaˈɣo",
+    "своего": "svəjaˈɣo",
+    "чьего": "tɕjaˈɣo",
+    "этого": "ˈɛtəɣə",
+    "ничьего": "nʲɪtɕjaˈɣo"
+  },
+  "grammatical_endings": {
+    "ого": "əɣə",
+    "него": "nʲɪɣə",
+    "сего": "sʲɪɣə",
+    "жего": "ʐɨɣə",
+    "жьего": "ʐjɪɣə",
+    "шего": "ʂɨɣə",
+    "цего": "tsɨɣə",
+    "чего": "tɕɪɣə",
+    "щего": "ɕːɪɣə",
+    "чьего": "tɕjɪɣə",
+    "тьего": "tʲjɪɣə",
+    "сьего": "sʲjɪɣə",
+    "зьего": "zʲjɪɣə",
+    "льего": "lʲjɪɣə",
+    "ньего": "nʲjɪɣə",
+    "дьего": "dʲjɪɣə",
+    "бьего": "bʲjɪɣə",
+    "вьего": "vʲjɪɣə",
+    "пьего": "pʲjɪɣə",
+    "рьего": "rʲjɪɣə",
+    "мьего": "mʲjɪɣə"
+  },
+  "parent": "ru",
+  "notes": "Southern Russian dialects (Ryazan, Kursk, Voronezh, Tula). Г = FRICATIVE [ɣ] — 'фрикативное произношение фонемы /г/, то есть [ɣ]' — the single isogloss that defines the Southern zone, and it devoices to [x] rather than [k] word-finally, because the Southern obstruent pair is /ɣ/~/x/ and not /ɡ/~/k/. ГЕНИТИВ: unlike every other Russian zone, the Southern dialects do NOT have the [v] desinence: 'произношение окончаний род. падежа -его, -ого через фрикативное /ɣ/, а не через /в/' — the ending is listed among the MORPHOLOGICAL diagnostics of the Southern зона, i.e. it is a different desinence and not the [ɣ] realisation of the standard's [v]. So ⟨-ого⟩ is [-əɣə] and его is [jaˈɣo] here, where `ru` has [-əvə] and [jɪˈvo]. This spec therefore restates the endings with [ɣ] instead of opting into `ru`'s [v] table; a child of this spec that wants the standard genitive must set `grammatical_endings_base` to `ru` explicitly. АКАНЬЕ: unstressed /o/ and /a/ merge in the first pretonic syllable, and in the eastern (Ryazan-anchored) part of the zone the merger is NON-dissimilative, with a full [a]: вада, трава — not the standard's [ɐ]. The western and central Southern groups have DISSIMILATIVE akanje instead, where the pretonic vowel's quality depends on the stressed one; that is encoded in `ru-x-kursk-orel`, not here. ЯКАНЬЕ: /e o a/ after a soft consonant also go to [a] in the first pretonic syllable. The eastern subtype is УМЕРЕННОЕ яканье — [a] before a hard consonant, [i] before a soft one — and that conditioning is on the FOLLOWING consonant, which a positional grapheme table cannot see, so the two outcomes are declared as ranked alternatives with [a] first (the majority context) rather than mis-encoded as a single value. Before this revision the spec carried a standalone 33-grapheme table with no `graphemes_base`, and so inherited neither stress placement nor any positional reading: it emitted вода as [voda] and город as [ɣorod] — no reduction, no final devoicing and no stress mark at all — while its own note claimed 'strong аканье and яканье'. It now overlays `ru` and states only its four real divergences (⟨г⟩, the /ɣ/~/x/ alternation, the akanje/jakanje vowels, and the [ɣ] genitive). STRESS CEILING: the illustrated forms above are what the akanje/jakanje tables specify for a given syllable, not always what the engine emits. Russian stress is lexical and `ru` guesses it (see its STRESS note), so голова and вода are still mis-stressed here and their pretonic slots are computed off the wrong syllable. That is the inherited stress defect, tracked separately; it does not touch which reading each slot declares. The Southern ⟨в⟩ = [w]/[ў] variant is real and is NOT encoded: the sources describe it as frequent rather than regular, and it interacts with the final-devoicing rule in ways no source consulted here spells out. NEEDS SOURCING. ENDING \"ого\" is the adjectival/pronominal genitive singular desinence ⟨-ого⟩ itself, realised [əɣə]: ⟨г⟩ = [ɣ], because the Southern zone has a genitive desinence in the fricative and not in [v] — the ending ⟨-его/-ого⟩ is pronounced через фрикативное /ɣ/, а не через /в/, and the Dialectological Atlas tradition lists this among the MORPHOLOGICAL diagnostics of южное наречие rather than among its phonetic ones, with the standard's akanje reduction vowels, which the Southern zone shares in the non-first-pretonic positions this unstressed suffix occupies (Timberlake 2004; Comrie & Corbett 1993). ENDING \"него\" is the genitive singular desinence ⟨-его⟩ after ⟨н⟩, realised [nʲɪɣə]: ⟨г⟩ = [ɣ], because the Southern zone has a genitive desinence in the fricative and not in [v] — the ending ⟨-его/-ого⟩ is pronounced через фрикативное /ɣ/, а не через /в/, and the Dialectological Atlas tradition lists this among the MORPHOLOGICAL diagnostics of южное наречие rather than among its phonetic ones, with the standard's akanje reduction vowels, which the Southern zone shares in the non-first-pretonic positions this unstressed suffix occupies (Timberlake 2004; Comrie & Corbett 1993). ENDING \"сего\" is the genitive singular desinence ⟨-его⟩ after ⟨с⟩, realised [sʲɪɣə]: ⟨г⟩ = [ɣ], because the Southern zone has a genitive desinence in the fricative and not in [v] — the ending ⟨-его/-ого⟩ is pronounced через фрикативное /ɣ/, а не через /в/, and the Dialectological Atlas tradition lists this among the MORPHOLOGICAL diagnostics of южное наречие rather than among its phonetic ones, with the standard's akanje reduction vowels, which the Southern zone shares in the non-first-pretonic positions this unstressed suffix occupies (Timberlake 2004; Comrie & Corbett 1993). ENDING \"жего\" is the genitive singular desinence ⟨-его⟩ after ⟨ж⟩, realised [ʐɨɣə]: ⟨г⟩ = [ɣ], because the Southern zone has a genitive desinence in the fricative and not in [v] — the ending ⟨-его/-ого⟩ is pronounced через фрикативное /ɣ/, а не через /в/, and the Dialectological Atlas tradition lists this among the MORPHOLOGICAL diagnostics of южное наречие rather than among its phonetic ones, with the standard's akanje reduction vowels, which the Southern zone shares in the non-first-pretonic positions this unstressed suffix occupies (Timberlake 2004; Comrie & Corbett 1993). ENDING \"жьего\" is the possessive/soft-sign genitive singular after ⟨ж⟩, where the soft sign contributes the glide [j] before the desinence, realised [ʐjɪɣə]: ⟨г⟩ = [ɣ], because the Southern zone has a genitive desinence in the fricative and not in [v] — the ending ⟨-его/-ого⟩ is pronounced через фрикативное /ɣ/, а не через /в/, and the Dialectological Atlas tradition lists this among the MORPHOLOGICAL diagnostics of южное наречие rather than among its phonetic ones, with the standard's akanje reduction vowels, which the Southern zone shares in the non-first-pretonic positions this unstressed suffix occupies (Timberlake 2004; Comrie & Corbett 1993). ENDING \"шего\" is the genitive singular desinence ⟨-его⟩ after ⟨ш⟩, realised [ʂɨɣə]: ⟨г⟩ = [ɣ], because the Southern zone has a genitive desinence in the fricative and not in [v] — the ending ⟨-его/-ого⟩ is pronounced через фрикативное /ɣ/, а не через /в/, and the Dialectological Atlas tradition lists this among the MORPHOLOGICAL diagnostics of южное наречие rather than among its phonetic ones, with the standard's akanje reduction vowels, which the Southern zone shares in the non-first-pretonic positions this unstressed suffix occupies (Timberlake 2004; Comrie & Corbett 1993). ENDING \"цего\" is the genitive singular desinence ⟨-его⟩ after ⟨ц⟩, realised [tsɨɣə]: ⟨г⟩ = [ɣ], because the Southern zone has a genitive desinence in the fricative and not in [v] — the ending ⟨-его/-ого⟩ is pronounced через фрикативное /ɣ/, а не через /в/, and the Dialectological Atlas tradition lists this among the MORPHOLOGICAL diagnostics of южное наречие rather than among its phonetic ones, with the standard's akanje reduction vowels, which the Southern zone shares in the non-first-pretonic positions this unstressed suffix occupies (Timberlake 2004; Comrie & Corbett 1993). ENDING \"чего\" is the genitive singular desinence ⟨-его⟩ after ⟨ч⟩, realised [tɕɪɣə]: ⟨г⟩ = [ɣ], because the Southern zone has a genitive desinence in the fricative and not in [v] — the ending ⟨-его/-ого⟩ is pronounced через фрикативное /ɣ/, а не через /в/, and the Dialectological Atlas tradition lists this among the MORPHOLOGICAL diagnostics of южное наречие rather than among its phonetic ones, with the standard's akanje reduction vowels, which the Southern zone shares in the non-first-pretonic positions this unstressed suffix occupies (Timberlake 2004; Comrie & Corbett 1993). ENDING \"щего\" is the genitive singular desinence ⟨-его⟩ after ⟨щ⟩, realised [ɕːɪɣə]: ⟨г⟩ = [ɣ], because the Southern zone has a genitive desinence in the fricative and not in [v] — the ending ⟨-его/-ого⟩ is pronounced через фрикативное /ɣ/, а не через /в/, and the Dialectological Atlas tradition lists this among the MORPHOLOGICAL diagnostics of южное наречие rather than among its phonetic ones, with the standard's akanje reduction vowels, which the Southern zone shares in the non-first-pretonic positions this unstressed suffix occupies (Timberlake 2004; Comrie & Corbett 1993). ENDING \"чьего\" is the possessive/soft-sign genitive singular after ⟨ч⟩, where the soft sign contributes the glide [j] before the desinence, realised [tɕjɪɣə]: ⟨г⟩ = [ɣ], because the Southern zone has a genitive desinence in the fricative and not in [v] — the ending ⟨-его/-ого⟩ is pronounced через фрикативное /ɣ/, а не через /в/, and the Dialectological Atlas tradition lists this among the MORPHOLOGICAL diagnostics of южное наречие rather than among its phonetic ones, with the standard's akanje reduction vowels, which the Southern zone shares in the non-first-pretonic positions this unstressed suffix occupies (Timberlake 2004; Comrie & Corbett 1993). ENDING \"тьего\" is the possessive/soft-sign genitive singular after ⟨т⟩, where the soft sign contributes the glide [j] before the desinence, realised [tʲjɪɣə]: ⟨г⟩ = [ɣ], because the Southern zone has a genitive desinence in the fricative and not in [v] — the ending ⟨-его/-ого⟩ is pronounced через фрикативное /ɣ/, а не через /в/, and the Dialectological Atlas tradition lists this among the MORPHOLOGICAL diagnostics of южное наречие rather than among its phonetic ones, with the standard's akanje reduction vowels, which the Southern zone shares in the non-first-pretonic positions this unstressed suffix occupies (Timberlake 2004; Comrie & Corbett 1993). ENDING \"сьего\" is the possessive/soft-sign genitive singular after ⟨с⟩, where the soft sign contributes the glide [j] before the desinence, realised [sʲjɪɣə]: ⟨г⟩ = [ɣ], because the Southern zone has a genitive desinence in the fricative and not in [v] — the ending ⟨-его/-ого⟩ is pronounced через фрикативное /ɣ/, а не через /в/, and the Dialectological Atlas tradition lists this among the MORPHOLOGICAL diagnostics of южное наречие rather than among its phonetic ones, with the standard's akanje reduction vowels, which the Southern zone shares in the non-first-pretonic positions this unstressed suffix occupies (Timberlake 2004; Comrie & Corbett 1993). ENDING \"зьего\" is the possessive/soft-sign genitive singular after ⟨з⟩, where the soft sign contributes the glide [j] before the desinence, realised [zʲjɪɣə]: ⟨г⟩ = [ɣ], because the Southern zone has a genitive desinence in the fricative and not in [v] — the ending ⟨-его/-ого⟩ is pronounced через фрикативное /ɣ/, а не через /в/, and the Dialectological Atlas tradition lists this among the MORPHOLOGICAL diagnostics of южное наречие rather than among its phonetic ones, with the standard's akanje reduction vowels, which the Southern zone shares in the non-first-pretonic positions this unstressed suffix occupies (Timberlake 2004; Comrie & Corbett 1993). ENDING \"льего\" is the possessive/soft-sign genitive singular after ⟨л⟩, where the soft sign contributes the glide [j] before the desinence, realised [lʲjɪɣə]: ⟨г⟩ = [ɣ], because the Southern zone has a genitive desinence in the fricative and not in [v] — the ending ⟨-его/-ого⟩ is pronounced через фрикативное /ɣ/, а не через /в/, and the Dialectological Atlas tradition lists this among the MORPHOLOGICAL diagnostics of южное наречие rather than among its phonetic ones, with the standard's akanje reduction vowels, which the Southern zone shares in the non-first-pretonic positions this unstressed suffix occupies (Timberlake 2004; Comrie & Corbett 1993). ENDING \"ньего\" is the possessive/soft-sign genitive singular after ⟨н⟩, where the soft sign contributes the glide [j] before the desinence, realised [nʲjɪɣə]: ⟨г⟩ = [ɣ], because the Southern zone has a genitive desinence in the fricative and not in [v] — the ending ⟨-его/-ого⟩ is pronounced через фрикативное /ɣ/, а не через /в/, and the Dialectological Atlas tradition lists this among the MORPHOLOGICAL diagnostics of южное наречие rather than among its phonetic ones, with the standard's akanje reduction vowels, which the Southern zone shares in the non-first-pretonic positions this unstressed suffix occupies (Timberlake 2004; Comrie & Corbett 1993). ENDING \"дьего\" is the possessive/soft-sign genitive singular after ⟨д⟩, where the soft sign contributes the glide [j] before the desinence, realised [dʲjɪɣə]: ⟨г⟩ = [ɣ], because the Southern zone has a genitive desinence in the fricative and not in [v] — the ending ⟨-его/-ого⟩ is pronounced через фрикативное /ɣ/, а не через /в/, and the Dialectological Atlas tradition lists this among the MORPHOLOGICAL diagnostics of южное наречие rather than among its phonetic ones, with the standard's akanje reduction vowels, which the Southern zone shares in the non-first-pretonic positions this unstressed suffix occupies (Timberlake 2004; Comrie & Corbett 1993). ENDING \"бьего\" is the possessive/soft-sign genitive singular after ⟨б⟩, where the soft sign contributes the glide [j] before the desinence, realised [bʲjɪɣə]: ⟨г⟩ = [ɣ], because the Southern zone has a genitive desinence in the fricative and not in [v] — the ending ⟨-его/-ого⟩ is pronounced через фрикативное /ɣ/, а не через /в/, and the Dialectological Atlas tradition lists this among the MORPHOLOGICAL diagnostics of южное наречие rather than among its phonetic ones, with the standard's akanje reduction vowels, which the Southern zone shares in the non-first-pretonic positions this unstressed suffix occupies (Timberlake 2004; Comrie & Corbett 1993). ENDING \"вьего\" is the possessive/soft-sign genitive singular after ⟨в⟩, where the soft sign contributes the glide [j] before the desinence, realised [vʲjɪɣə]: ⟨г⟩ = [ɣ], because the Southern zone has a genitive desinence in the fricative and not in [v] — the ending ⟨-его/-ого⟩ is pronounced через фрикативное /ɣ/, а не через /в/, and the Dialectological Atlas tradition lists this among the MORPHOLOGICAL diagnostics of южное наречие rather than among its phonetic ones, with the standard's akanje reduction vowels, which the Southern zone shares in the non-first-pretonic positions this unstressed suffix occupies (Timberlake 2004; Comrie & Corbett 1993). ENDING \"пьего\" is the possessive/soft-sign genitive singular after ⟨п⟩, where the soft sign contributes the glide [j] before the desinence, realised [pʲjɪɣə]: ⟨г⟩ = [ɣ], because the Southern zone has a genitive desinence in the fricative and not in [v] — the ending ⟨-его/-ого⟩ is pronounced через фрикативное /ɣ/, а не через /в/, and the Dialectological Atlas tradition lists this among the MORPHOLOGICAL diagnostics of южное наречие rather than among its phonetic ones, with the standard's akanje reduction vowels, which the Southern zone shares in the non-first-pretonic positions this unstressed suffix occupies (Timberlake 2004; Comrie & Corbett 1993). ENDING \"рьего\" is the possessive/soft-sign genitive singular after ⟨р⟩, where the soft sign contributes the glide [j] before the desinence, realised [rʲjɪɣə]: ⟨г⟩ = [ɣ], because the Southern zone has a genitive desinence in the fricative and not in [v] — the ending ⟨-его/-ого⟩ is pronounced через фрикативное /ɣ/, а не через /в/, and the Dialectological Atlas tradition lists this among the MORPHOLOGICAL diagnostics of южное наречие rather than among its phonetic ones, with the standard's akanje reduction vowels, which the Southern zone shares in the non-first-pretonic positions this unstressed suffix occupies (Timberlake 2004; Comrie & Corbett 1993). ENDING \"мьего\" is the possessive/soft-sign genitive singular after ⟨м⟩, where the soft sign contributes the glide [j] before the desinence, realised [mʲjɪɣə]: ⟨г⟩ = [ɣ], because the Southern zone has a genitive desinence in the fricative and not in [v] — the ending ⟨-его/-ого⟩ is pronounced через фрикативное /ɣ/, а не через /в/, and the Dialectological Atlas tradition lists this among the MORPHOLOGICAL diagnostics of южное наречие rather than among its phonetic ones, with the standard's akanje reduction vowels, which the Southern zone shares in the non-first-pretonic positions this unstressed suffix occupies (Timberlake 2004; Comrie & Corbett 1993).",
+  "quality": "research",
+  "script_type": "alphabet",
+  "sources": [
+    {
+      "id": "comrie_corbett1993",
+      "author": "Comrie, B. & Corbett, G. (eds.)",
+      "year": 1993,
+      "title": "The Slavonic Languages",
+      "publisher": "Routledge",
+      "url": null,
+      "pages": null,
+      "notes": null,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Slavic_languages"
+    },
+    {
+      "id": "timberlake2004",
+      "author": "Timberlake, A.",
+      "year": 2004,
+      "title": "A Reference Grammar of Russian",
+      "publisher": "Cambridge University Press",
+      "url": null,
+      "pages": null,
+      "notes": null,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Russian_phonology"
+    },
+    {
+      "id": "zalizniak1985",
+      "author": "Zalizniak, A.A.",
+      "year": 1985,
+      "title": "Ot praslavyanskoy aktsentovki k russkoy",
+      "publisher": "Nauka",
+      "url": null,
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Southern_Russian_dialects",
+    "https://ru.wikipedia.org/wiki/%D0%AE%D0%B6%D0%BD%D0%BE%D0%B5_%D0%BD%D0%B0%D1%80%D0%B5%D1%87%D0%B8%D0%B5_%D1%80%D1%83%D1%81%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_%D1%8F%D0%B7%D1%8B%D0%BA%D0%B0"
+  ],
+  "timespan": {
+    "start_year": 1600,
+    "end_year": null
+  },
+  "glottolog_code": null,
+  "iso639_3": "rus",
+  "location": {
+    "latitude": 54.63,
+    "longitude": 39.7425,
+    "source": "wikidata",
+    "notes": "Ryazan — a representative point in the Southern Russian dialect zone (Ryazan, Kursk, Voronezh, Tula). A dialect GROUP: a weak point. [Wikidata Q2746 P625]"
+  }
+}

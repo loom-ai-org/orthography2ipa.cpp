@@ -1,0 +1,113 @@
+{
+  "code": "es-SV",
+  "name": "Salvadoran Spanish",
+  "script": "Latin",
+  "graphemes_base": "es-ES",
+  "graphemes": {
+    "c": [
+      "k",
+      "s"
+    ],
+    "z": [
+      "s"
+    ],
+    "ll": [
+      "ʝ"
+    ]
+  },
+  "allophones_base": "es-ES",
+  "positional_graphemes_base": "es-ES",
+  "positional_graphemes": {
+    "c": {
+      "before_e": [
+        "s"
+      ],
+      "before_i": [
+        "s"
+      ]
+    }
+  },
+  "parent": "es-ES",
+  "ancestors": [
+    {
+      "code": "es-ES",
+      "role": "parent",
+      "weight": 0.9,
+      "notes": "Castilian Spanish parent."
+    },
+    {
+      "code": "es-419",
+      "role": "ancestor",
+      "weight": 0.6,
+      "notes": "General Latin American Spanish (koine) baseline (Lipski 1994)."
+    },
+    {
+      "code": "nah",
+      "role": "adstrate",
+      "weight": 0.08,
+      "notes": "Nahuatl indigenous adstrate (see stub nah.json)."
+    }
+  ],
+  "notes": "STRUCTURAL STUB. Salvadoran Spanish — Lipski's (1994) 'El Salvador, Honduras, and Nicaragua' Central American zone; voseo, with a Nawat/Pipil (Nahuan) adstrate. Only the pan-Latin-American baseline (seseo, yeismo; Lipski 1994) is modelled; national-specific phonology not yet described (stub tier).",
+  "quality": "stub",
+  "script_type": "alphabet",
+  "iso639_3": "spa",
+  "glottolog_code": null,
+  "timespan": {
+    "start_year": 1600,
+    "end_year": null
+  },
+  "sources": [
+    {
+      "id": "lipski_overview",
+      "author": "Lipski, John M.",
+      "year": 2011,
+      "title": "Geographical and Social Varieties of Spanish: An Overview",
+      "publisher": "In J.I. Hualde, A. Olarrea & E. O'Rourke (eds.), The Handbook of Hispanic Linguistics, Wiley-Blackwell",
+      "url": "https://johnlipski.github.io/geo.pdf",
+      "pages": "pp. 1-26",
+      "notes": "READ (geo.pdf). Reproduces the Lipski (1994) geographical dialect-zone classification of Latin American Spanish (list (2)): Mexican/SW-US; Caribbean; Guatemala-Yucatan-Costa Rica; El Salvador-Honduras-Nicaragua; interior Colombia + highland Venezuela; Pacific coast Colombia/Ecuador/Peru; Andean (Ecuador/Peru/Bolivia/NW-Argentina/NE-Chile); Chile; Paraguay/NE-Argentina/E-Bolivia; Argentina/Uruguay. Used here to enumerate the regional zones; no phonology quoted."
+    },
+    {
+      "id": "lipski1994",
+      "author": "Lipski, John M.",
+      "year": 1994,
+      "title": "Latin American Spanish",
+      "publisher": "Longman Linguistics Library, Longman",
+      "url": null,
+      "pages": null,
+      "notes": "The comprehensive dialect survey underlying the zone classification (cited via the author's own overview, geo.pdf, which was read)."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Spanish_dialects_and_varieties",
+    "https://es.wikipedia.org/wiki/Espa%C3%B1ol_salvadore%C3%B1o",
+    "https://en.wikipedia.org/wiki/Salvadoran_Spanish"
+  ],
+  "wikidata_qid": "Q7406481",
+  "location": {
+    "latitude": 13.697597,
+    "longitude": -89.191156,
+    "source": "wikidata",
+    "notes": "San Salvador. A national variety: the capital stands in for the country. [Wikidata Q3110 P625]"
+  },
+  "allophone_rules": [
+    {
+      "id": "GLOTTAL_JOTA",
+      "phonemes": [
+        "x"
+      ],
+      "surface": "h",
+      "notes": "Lowland glottalisation: /x/ (⟨j⟩, ⟨g⟩ before front vowel) is the glottal aspirate [h], not the Castilian velar [x] (Lipski 1994)."
+    },
+    {
+      "id": "CODA_S_ASPIRATION",
+      "phonemes": [
+        "s"
+      ],
+      "surface": "h",
+      "syllable_position": "coda",
+      "notes": "Lowland coda /s/ lenition (aspiration tier of Lipski's 1994 cline): syllable-final /s/ (from ⟨s⟩ and seseante ⟨z⟩) weakens to the glottal aspirate [h] (esta=[ˈehta], los=[loh], diez=[djeh])."
+    }
+  ]
+}

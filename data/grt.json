@@ -1,0 +1,226 @@
+{
+  "code": "grt",
+  "name": "Garo (A'chik)",
+  "script": "Latin",
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "e": [
+      "e"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "o"
+    ],
+    "u": [
+      "u"
+    ],
+    "p": [
+      "p"
+    ],
+    "ph": [
+      "pʰ"
+    ],
+    "b": [
+      "b"
+    ],
+    "t": [
+      "t"
+    ],
+    "th": [
+      "tʰ"
+    ],
+    "d": [
+      "d"
+    ],
+    "k": [
+      "k"
+    ],
+    "kh": [
+      "kʰ"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "c": [
+      "tɕ"
+    ],
+    "ch": [
+      "tɕʰ"
+    ],
+    "j": [
+      "dʒ"
+    ],
+    "s": [
+      "s"
+    ],
+    "h": [
+      "h"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ng": [
+      "ŋ"
+    ],
+    "l": [
+      "l"
+    ],
+    "r": [
+      "r"
+    ],
+    "w": [
+      "w"
+    ],
+    "y": [
+      "j"
+    ],
+    "'": [
+      "ʔ"
+    ]
+  },
+  "allophones": {
+    "p": [
+      "p"
+    ],
+    "pʰ": [
+      "pʰ"
+    ],
+    "b": [
+      "b"
+    ],
+    "t": [
+      "t"
+    ],
+    "tʰ": [
+      "tʰ"
+    ],
+    "d": [
+      "d"
+    ],
+    "k": [
+      "k"
+    ],
+    "kʰ": [
+      "kʰ"
+    ],
+    "ɡ": [
+      "ɡ"
+    ],
+    "tʃ": [
+      "tʃ"
+    ],
+    "tʃʰ": [
+      "tʃʰ"
+    ],
+    "dʒ": [
+      "dʒ"
+    ],
+    "s": [
+      "s"
+    ],
+    "h": [
+      "h"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ŋ": [
+      "ŋ"
+    ],
+    "l": [
+      "l"
+    ],
+    "r": [
+      "r"
+    ],
+    "w": [
+      "w"
+    ],
+    "j": [
+      "j"
+    ],
+    "ʔ": [
+      "ʔ"
+    ],
+    "a": [
+      "a"
+    ],
+    "e": [
+      "e"
+    ],
+    "i": [
+      "i",
+      "ɨ"
+    ],
+    "o": [
+      "o"
+    ],
+    "u": [
+      "u"
+    ]
+  },
+  "parent": "brx-x-proto-boro-garo",
+  "ancestors": [
+    {
+      "code": "brx-x-proto-boro-garo",
+      "role": "parent",
+      "weight": 0.85,
+      "notes": "Garo is a Boro-Garo (Bodo-Garo) language, Brahmaputran/Sal branch, Sino-Tibetan."
+    }
+  ],
+  "notes": "Garo (A'chik), spoken mainly in Meghalaya, India (and Bangladesh). Boro-Garo branch, Sino-Tibetan. Latin script is the PRIMARY modern orthography (20 letters plus an apostrophe 'raka' for the glottal stop /ʔ/), developed from 1902 by American Baptist missionaries and replacing an earlier Bengali-script orthography used from the 1840s-1924 (Wikipedia; Burling 2004). Bengali script is noted here as the historical/administrative alternative but not modelled, per the task brief (Latin primary). Voiceless stops are aspirated word-initially, spelled with postposed ⟨h⟩ digraphs (⟨ph th kh ch⟩), a single-phoneme reading (AGENTS.md test 2). ⟨ng⟩ spells the velar nasal /ŋ/. The vowel letter ⟨i⟩ represents both /i/ and /ɨ/ depending on syllable position (Burling 2004) -- encoded as allophone candidates on the same grapheme rather than as two competing keys, since the choice is positional/predictable, not a separate spelling. Garo has no phonemic tone; instead it contrasts syllables closed by glottal stop vs. open syllables (Burling 2004; Wikipedia), which is why the glottal-stop grapheme ⟨'⟩ is retained as a real, distinctive letter rather than dropped as 'just punctuation'. ⟨c ch⟩ spell the alveolo-palatal affricates /tɕ tɕʰ/ per Wikipedia's Garo consonant chart (corrected from an earlier postalveolar reading); the same source states voiceless stops /p t k/ are always aspirated word-initially [pʰ tʰ kʰ].",
+  "quality": "research",
+  "script_type": "alphabet",
+  "iso639_3": "grt",
+  "sources": [
+    {
+      "id": "burling2004",
+      "author": "Burling, R.",
+      "year": 2004,
+      "title": "The Language of the Modhupur Mandi (Garo)",
+      "publisher": "Bibliophile South Asia",
+      "url": null,
+      "pages": null,
+      "notes": "Reference grammar and phonology of Garo.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Garo_language"
+    },
+    {
+      "id": "burling1961",
+      "author": "Burling, R.",
+      "year": 1961,
+      "title": "A Garo Grammar",
+      "publisher": "Deccan College",
+      "url": null,
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Garo_language"
+  ],
+  "urls": [
+    "https://en.wikipedia.org/wiki/Bengali_alphabet"
+  ],
+  "timespan": {
+    "start_year": 1902,
+    "end_year": null
+  },
+  "glottolog_code": "garo1247",
+  "wikidata_qid": "Q36137",
+  "location": {
+    "latitude": 25.5138,
+    "longitude": 90.2225,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Garo (Meghalaya, India)."
+  }
+}

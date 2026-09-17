@@ -1,0 +1,64 @@
+{
+ "code": "wnc",
+ "name": "Wantoat",
+ "script": "Zyyy",
+ "quality": "stub",
+ "graphemes": {},
+ "allophones": {},
+ "notes": "REGISTRY STUB (not a modelled G2P target). Placed so the ancestry graph covers every living ISO 639-3 language. No orthography is claimed; the phoneme inventory follows the cited PHOIBLE inventory (which itself cites a published description): script is Zyyy (undetermined) until a cited description is encoded. Classification and coordinates follow Glottolog.",
+ "iso639_3": "wnc",
+ "glottolog_code": "want1252",
+ "sources": [
+  {
+   "id": "glottolog2024",
+   "author": "Hammarström, Harald; Forkel, Robert; Haspelmath, Martin; Bank, Sebastian",
+   "year": 2024,
+   "title": "Glottolog 5.0",
+   "publisher": "Max Planck Institute for Evolutionary Anthropology",
+   "url": "https://glottolog.org/"
+  },
+  {
+   "id": "phoible2019",
+   "author": "Moran, Steven; McCloy, Daniel (eds.)",
+   "year": 2019,
+   "title": "PHOIBLE 2.0 (doi:10.5281/zenodo.2562766)",
+   "publisher": "Max Planck Institute for the Science of Human History",
+   "url": "https://phoible.org/inventories/view/615",
+   "notes": "Inventory 615 (upsid), 21 non-marginal segments."
+  }
+ ],
+ "urls": [
+  "https://glottolog.org/resource/languoid/id/want1252"
+ ],
+ "location": {
+  "latitude": -6.1522,
+  "longitude": 146.513,
+  "source": "glottolog",
+  "notes": "Glottolog's representative point."
+ },
+ "parent": "x-clade-nucl1709",
+ "phonemes": [
+  "k",
+  "kʷ",
+  "m",
+  "mb",
+  "n̪d̪|nd",
+  "n̪z̪|nz",
+  "n̪|n",
+  "p",
+  "s̪|s",
+  "t̪|t",
+  "ŋ",
+  "ŋɡ",
+  "ŋɡʷ",
+  "ŋʷ",
+  "a",
+  "e̞",
+  "i",
+  "o̞",
+  "u",
+  "æ",
+  "ə"
+ ],
+ "phoible_id": "615"
+}

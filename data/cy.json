@@ -1,0 +1,332 @@
+{
+  "code": "cy",
+  "name": "Welsh",
+  "script": "Latin",
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "e": [
+      "ɛ"
+    ],
+    "i": [
+      "ɪ"
+    ],
+    "o": [
+      "ɔ"
+    ],
+    "u": [
+      "ɨ",
+      "i"
+    ],
+    "w": [
+      "ʊ",
+      "w"
+    ],
+    "y": [
+      "ə",
+      "ɨ"
+    ],
+    "â": [
+      "aː"
+    ],
+    "ê": [
+      "eː"
+    ],
+    "î": [
+      "iː"
+    ],
+    "ô": [
+      "oː"
+    ],
+    "û": [
+      "ɨː"
+    ],
+    "ŵ": [
+      "uː"
+    ],
+    "ŷ": [
+      "ɨː",
+      "iː"
+    ],
+    "b": [
+      "b"
+    ],
+    "c": [
+      "k"
+    ],
+    "d": [
+      "d"
+    ],
+    "f": [
+      "v"
+    ],
+    "ff": [
+      "f"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "ng": [
+      "ŋ"
+    ],
+    "h": [
+      "h"
+    ],
+    "l": [
+      "l"
+    ],
+    "ll": [
+      "ɬ"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "p": [
+      "p"
+    ],
+    "ph": [
+      "f"
+    ],
+    "r": [
+      "r"
+    ],
+    "rh": [
+      "r̥"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "th": [
+      "θ"
+    ],
+    "ch": [
+      "x"
+    ],
+    "dd": [
+      "ð"
+    ],
+    "j": [
+      "dʒ"
+    ],
+    "si": [
+      "ʃ"
+    ],
+    "mh": [
+      "m̥"
+    ],
+    "nh": [
+      "n̥"
+    ],
+    "ngh": [
+      "ŋ̊"
+    ]
+  },
+  "allophones": {
+    "p": [
+      "p",
+      "pʰ"
+    ],
+    "b": [
+      "b"
+    ],
+    "t": [
+      "t",
+      "tʰ"
+    ],
+    "d": [
+      "d"
+    ],
+    "k": [
+      "k",
+      "kʰ"
+    ],
+    "ɡ": [
+      "ɡ"
+    ],
+    "f": [
+      "f"
+    ],
+    "v": [
+      "v"
+    ],
+    "θ": [
+      "θ"
+    ],
+    "ð": [
+      "ð"
+    ],
+    "s": [
+      "s"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "x": [
+      "x"
+    ],
+    "h": [
+      "h"
+    ],
+    "ɬ": [
+      "ɬ"
+    ],
+    "m": [
+      "m"
+    ],
+    "m̥": [
+      "m̥"
+    ],
+    "n": [
+      "n"
+    ],
+    "n̥": [
+      "n̥"
+    ],
+    "ŋ": [
+      "ŋ"
+    ],
+    "l": [
+      "l"
+    ],
+    "r": [
+      "r"
+    ],
+    "r̥": [
+      "r̥"
+    ],
+    "w": [
+      "w"
+    ],
+    "j": [
+      "j"
+    ],
+    "dʒ": [
+      "dʒ"
+    ],
+    "a": [
+      "a"
+    ],
+    "aː": [
+      "aː"
+    ],
+    "ɛ": [
+      "ɛ"
+    ],
+    "eː": [
+      "eː"
+    ],
+    "ɪ": [
+      "ɪ"
+    ],
+    "iː": [
+      "iː"
+    ],
+    "ɔ": [
+      "ɔ"
+    ],
+    "oː": [
+      "oː"
+    ],
+    "ɨ": [
+      "ɨ"
+    ],
+    "ɨː": [
+      "ɨː"
+    ],
+    "ʊ": [
+      "ʊ"
+    ],
+    "uː": [
+      "uː"
+    ],
+    "ə": [
+      "ə"
+    ],
+    "ŋ̊": [
+      "ŋ̊"
+    ]
+  },
+  "parent": "xbr",
+  "ancestors": [
+    {
+      "code": "xbr",
+      "role": "parent",
+      "weight": 0.9,
+      "notes": "Descent from Common Brythonic"
+    },
+    {
+      "code": "la",
+      "role": "adstrate",
+      "weight": 0.05,
+      "notes": "Latin adstrate: heavy lexical borrowing from Roman period"
+    },
+    {
+      "code": "en-GB",
+      "role": "adstrate",
+      "weight": 0.03,
+      "notes": "English adstrate: loanwords, contact influence"
+    }
+  ],
+  "notes": "Welsh (Cymraeg). ~880,000 speakers (2021 census). Voiceless lateral /ɬ/ (⟨ll⟩), voiceless nasal /m̥ n̥/ (⟨mh nh⟩), voiceless rhotic /r̥/ (⟨rh⟩), velar fricative /x/ (⟨ch⟩). Initial consonant mutation: soft, nasal, aspirate. Stress on penultimate syllable. Refs: Thomas (1996), Ball & Müller (2009).",
+  "quality": "research",
+  "script_type": "alphabet",
+  "sources": [
+    {
+      "id": "king2003",
+      "author": "King, G.",
+      "year": 2003,
+      "title": "Modern Welsh: A Comprehensive Grammar",
+      "publisher": "Routledge",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "macaulay1992",
+      "author": "MacAulay, D. (ed.)",
+      "year": 1992,
+      "title": "The Celtic Languages",
+      "publisher": "Cambridge University Press",
+      "url": null,
+      "pages": null,
+      "notes": null,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Celtic_languages"
+    },
+    {
+      "id": "jones_thomas1977",
+      "author": "Jones, G.E. & Thomas, A.R.",
+      "year": 1977,
+      "title": "Welsh Phonology",
+      "publisher": "University of Wales Press",
+      "url": null,
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Welsh_language",
+    "https://cy.wikipedia.org/wiki/Cymraeg"
+  ],
+  "timespan": {
+    "start_year": 1500,
+    "end_year": null
+  },
+  "glottolog_code": "wels1247",
+  "iso639_3": "cym",
+  "wikidata_qid": "Q9309",
+  "phoible_id": "wels1247",
+  "wals_code": "wel",
+  "location": {
+    "latitude": 52.0,
+    "longitude": -4.0,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Welsh."
+  }
+}

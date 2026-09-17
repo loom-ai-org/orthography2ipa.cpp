@@ -1,0 +1,48 @@
+{
+  "code": "xkz",
+  "name": "Kurtokha",
+  "script": "Tibetan",
+  "script_type": "abugida",
+  "quality": "stub",
+  "graphemes": {},
+  "parent": "x-clade-sino1245",
+  "ancestors": [
+    {
+      "code": "x-clade-sino1245",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Descent per Glottolog classification of Kurtokha (kurt1248)."
+    }
+  ],
+  "notes": "Skeleton. Kurtokha (Kurtop) is an East Bodish (Sino-Tibetan) language of Lhuntse District in Bhutan, written in the Tibetan (Uchen) script. Tibetan orthography is a historical abugida whose spelling reflects Classical Tibetan rather than the modern spoken form: silent prefix/superscript/subscript letters, unwritten tone, and large sound changes between spelling and pronunciation mean a letter-by-letter reading does not yield the spoken IPA. Correct grapheme-to-IPA needs a per-word pronunciation stratum (a spelling-to-reading lexicon for this variety) that the engine does not bundle, so graphemes are left empty and coverage is effectively lexicon-dependent. Tone and the silent-letter/stack structure are not recoverable from the script alone.",
+  "iso639_3": "xkz",
+  "glottolog_code": null,
+  "sources": [
+    {
+      "id": "xkz_glottolog",
+      "author": "Hammarström, H. et al. (Glottolog 5.0)",
+      "year": 2024,
+      "title": "Glottolog: Kurtokha (kurt1248)",
+      "publisher": "Max Planck Institute for Evolutionary Anthropology",
+      "url": "https://glottolog.org/resource/languoid/id/kurt1248",
+      "pages": null,
+      "notes": "Classification reference for a skeleton-tier entry.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Kurt%C3%B6p_language"
+    },
+    {
+      "id": "xkz_wikipedia",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Kurtop language; Tibetan script",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Tibetan_script",
+      "pages": null,
+      "notes": "Describes the East Bodish language and the Tibetan abugida used to write it, including its conservative etymological spelling.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Kurt%C3%B6p_language"
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Kurt%C3%B6p_language",
+    "https://en.wikipedia.org/wiki/Tibetan_script"
+  ]
+}

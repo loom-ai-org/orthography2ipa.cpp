@@ -1,0 +1,284 @@
+{
+  "code": "pcm",
+  "name": "Nigerian Pidgin (Naijá)",
+  "family": "Creole",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "b": [
+      "b"
+    ],
+    "ch": [
+      "tʃ"
+    ],
+    "d": [
+      "d"
+    ],
+    "e": [
+      "ɛ",
+      "e"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "gb": [
+      "ɡ͡b"
+    ],
+    "h": [
+      "h"
+    ],
+    "i": [
+      "i"
+    ],
+    "j": [
+      "dʒ"
+    ],
+    "k": [
+      "k"
+    ],
+    "kp": [
+      "k͡p"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "o": [
+      "ɔ",
+      "o"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "ɹ",
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "sh": [
+      "ʃ"
+    ],
+    "t": [
+      "t"
+    ],
+    "u": [
+      "u"
+    ],
+    "v": [
+      "v"
+    ],
+    "w": [
+      "w"
+    ],
+    "y": [
+      "j"
+    ],
+    "z": [
+      "z"
+    ],
+    "zh": [
+      "ʒ"
+    ]
+  },
+  "allophones": {
+    "a": [
+      "a"
+    ],
+    "e": [
+      "e"
+    ],
+    "ɛ": [
+      "ɛ"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "o"
+    ],
+    "ɔ": [
+      "ɔ"
+    ],
+    "u": [
+      "u"
+    ],
+    "b": [
+      "b"
+    ],
+    "d": [
+      "d"
+    ],
+    "f": [
+      "f"
+    ],
+    "ɡ": [
+      "ɡ"
+    ],
+    "ɡ͡b": [
+      "ɡ͡b"
+    ],
+    "h": [
+      "h"
+    ],
+    "dʒ": [
+      "dʒ"
+    ],
+    "k": [
+      "k"
+    ],
+    "k͡p": [
+      "k͡p"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "p": [
+      "p"
+    ],
+    "ɹ": [
+      "ɹ",
+      "r"
+    ],
+    "r": [
+      "r",
+      "ɹ"
+    ],
+    "s": [
+      "s"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "t": [
+      "t"
+    ],
+    "tʃ": [
+      "tʃ"
+    ],
+    "v": [
+      "v"
+    ],
+    "w": [
+      "w"
+    ],
+    "j": [
+      "j"
+    ],
+    "z": [
+      "z"
+    ],
+    "ʒ": [
+      "ʒ"
+    ]
+  },
+  "notes": "Nigerian Pidgin / Naijá, an English-lexifier creole of Nigeria. The grapheme table implements the Standard Naijá Orthography (SNO), the harmonised writing system published by the Naijá Langwej Akedemi (NLA) and promoted by Ofulue, Esizimetor and Egbokhare ('Guide to Standard Naijá Orthography: An NLA Harmonized Writing System for Common Naijá Publications', IFRA-Nigeria). SNO is broadly phonemic: 28 graphemes, 23 single letters plus the digraphs ch, gb, kp, sh, zh, each carrying an explicit IPA value in the NLA table. INPUT CONTRACT: input MUST already be written in Standard Naijá Orthography (e.g. 'pikin', 'waka', 'chukuchuku', 'kpangolo', 'lait'). Ad-hoc English-etymological spelling ('people', 'walk', 'light') is NOT supported and will be mispronounced, since SNO respells such words phonemically. Two systematic ambiguities are unavoidable in the harmonised (dotless) SNO: the letter <e> writes both /e/ and /ɛ/, and <o> writes both /o/ and /ɔ/ within the 7-vowel system i e ɛ a ɔ o u; the sub-dot variants used in some NLA materials are not part of the harmonised common-publication system, so mid-vowel height is NOT recoverable from the text and both candidates are listed. TONE AND STRESS ARE NOT MARKED and are NOT recoverable: Naijá has two lexical tones, but the acute/grave accents are optional and essentially absent from written texts, so no tone or stress is emitted. <r> is realised as an approximant or a trill depending on the speaker's L1 substrate. wikidata_qid/iso639_3/glottolog_code left unset: the code's Wikidata row resolves to the Wikimedia project item, not the language item; not recorded rather than record a wrong id (the language's own ISO code is pcm).",
+  "iso639_3": null,
+  "glottolog_code": null,
+  "wikidata_qid": "Q33655",
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Nigerian_Pidgin"
+  ],
+  "sources": [
+    {
+      "id": "nla_standard_naija_orthography",
+      "author": "Ofulue, Christine I. and Esizimetor, David O. (Naijá Langwej Akedemi)",
+      "year": 2010,
+      "title": "Guide to Standard Naijá Orthography: An NLA Harmonized Writing System for Common Naijá Publications",
+      "publisher": "IFRA-Nigeria / Naijá Langwej Akedemi",
+      "url": "https://ifra-nigeria.org/index.php?option=com_content&view=article&id=89:guide-to-standard-naija-orthography-an-nla-harmonized-writing-system-for-common-naija-publications&catid=67:naija-languej-akedemi",
+      "wikipedia_url": null,
+      "pages": null,
+      "notes": "Primary source for the grapheme map: gives the 28-grapheme SNO alphabet with an explicit IPA value per letter/digraph (a b ch d e f g gb h i j k kp l m n o p r s sh t u v w y z zh), with example words."
+    },
+    {
+      "id": "esizimetor_what_orthography_2010",
+      "author": "Esizimetor, David O.",
+      "year": 2010,
+      "title": "What Orthography for Naijá?",
+      "publisher": "Conference on Naijá, University of Ibadan",
+      "url": null,
+      "wikipedia_url": null,
+      "pages": null,
+      "notes": "Review of the competing Naijá writing systems, arguing for one unified phonemic orthography; background to the NLA harmonised system adopted here."
+    },
+    {
+      "id": "nigerian_pidgin_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Nigerian Pidgin",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Nigerian_Pidgin",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Nigerian_Pidgin",
+      "pages": null,
+      "notes": "Overview: 23 consonants, seven vowels, two tones; tone may be written with acute/grave accents but 'most written texts in Nigerian Pidgin do not show any tonal markings'."
+    },
+    {
+      "id": "holm1989",
+      "author": "Holm, John",
+      "year": 1989,
+      "title": "Pidgins and Creoles, Volume II: Reference Survey",
+      "publisher": "Cambridge University Press",
+      "url": null,
+      "pages": null,
+      "notes": "Reference survey of Atlantic and Pacific pidgins/creoles; lexifier and substrate attributions."
+    },
+    {
+      "id": "apics2013",
+      "author": "Michaelis, S.M., Maurer, P., Haspelmath, M. & Huber, M. (eds.)",
+      "year": 2013,
+      "title": "The Atlas of Pidgin and Creole Language Structures (APiCS)",
+      "publisher": "Oxford University Press",
+      "url": "https://apics-online.info/",
+      "pages": null,
+      "notes": "Structural atlas of 76 pidgins/creoles; per-language survey chapters cited in ancestry notes."
+    },
+    {
+      "id": "faraclas1996",
+      "author": "Faraclas, Nicholas G.",
+      "year": 1996,
+      "title": "Nigerian Pidgin",
+      "publisher": "Routledge",
+      "url": null,
+      "pages": null,
+      "notes": "Descriptive grammar; Benue-Congo (Yoruba/Igbo/Edo) substrate features."
+    }
+  ],
+  "timespan": {
+    "start_year": 1800,
+    "end_year": null
+  },
+  "ancestors": [
+    {
+      "code": "en-GB",
+      "role": "lexifier",
+      "weight": 0.65,
+      "notes": "English lexifier; Nigerian Pidgin (Naijá). Faraclas (1996); APiCS ch. 16 (Faraclas)."
+    },
+    {
+      "code": "yo",
+      "role": "substrate",
+      "weight": 0.15,
+      "notes": "Yoruba (Benue-Congo) substrate: 7-vowel system, contrastive nasal vowels, tone influence, prenasalized stops. Igbo and Edo (also substrates) are unregistered. Faraclas (1996)."
+    }
+  ]
+}

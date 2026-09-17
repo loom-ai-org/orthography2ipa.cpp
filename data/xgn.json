@@ -1,0 +1,97 @@
+{
+  "code": "xgn",
+  "name": "Proto-Mongolic (family node)",
+  "parent": "x-clade-mong1349",
+  "script": "IPA-reconstruction",
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "i": [
+      "i"
+    ],
+    "u": [
+      "u"
+    ],
+    "e": [
+      "e"
+    ],
+    "o": [
+      "o"
+    ],
+    "p": [
+      "p"
+    ],
+    "t": [
+      "t"
+    ],
+    "k": [
+      "k"
+    ],
+    "b": [
+      "b"
+    ],
+    "d": [
+      "d"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "s": [
+      "s"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "l": [
+      "l"
+    ],
+    "r": [
+      "r"
+    ],
+    "w": [
+      "w"
+    ],
+    "j": [
+      "j"
+    ],
+    "h": [
+      "h"
+    ]
+  },
+  "allophones": {},
+  "notes": "STRUCTURAL ANCESTRY NODE (not a modelled G2P target). Proto-Mongolic is the reconstructed common ancestor of the Mongolic family; Middle Mongol is its earliest attested stage. It exists here only so the ancestry / phylogenetic-distance metrics of the modern varieties that reference it have a node to resolve to; NO phonology is claimed or reconstructed and the minimal grapheme set is a placeholder (afa.json / trk.json stub pattern).",
+  "quality": "stub",
+  "script_type": "reconstruction",
+  "iso639_3": null,
+  "glottolog_code": "mong1329",
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Mongolic_languages"
+  ],
+  "urls": [
+    "https://glottolog.org/resource/languoid/id/mong1329"
+  ],
+  "sources": [
+    {
+      "id": "janhunen2003",
+      "author": "Janhunen, J. (ed.)",
+      "year": 2003,
+      "title": "The Mongolic Languages",
+      "publisher": "Routledge",
+      "url": null,
+      "pages": null,
+      "notes": "Reference for Mongolic branching (structural node only).",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Mongolic_languages"
+    }
+  ],
+  "wikidata_qid": "Q33750",
+  "location": {
+    "latitude": 41.516709,
+    "longitude": 96.85676,
+    "source": "glottolog",
+    "notes": "Glottolog's computed centroid for the Mongolic family — a summary of a whole clade's range, not a place anyone speaks."
+  }
+}

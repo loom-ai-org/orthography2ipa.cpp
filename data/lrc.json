@@ -1,0 +1,89 @@
+{
+  "code": "lrc",
+  "name": "Northern Luri",
+  "script": "Arabic",
+  "script_type": "abjad",
+  "quality": "skeleton",
+  "graphemes": {
+    "ا": ["ʔ", "a"],
+    "آ": ["ʔɒː"],
+    "ب": ["b"],
+    "پ": ["p"],
+    "ت": ["t"],
+    "ث": ["s"],
+    "ج": ["dʒ"],
+    "چ": ["tʃ"],
+    "ح": ["h"],
+    "خ": ["x"],
+    "د": ["d"],
+    "ذ": ["z"],
+    "ر": ["ɾ"],
+    "ڕ": ["r"],
+    "ز": ["z"],
+    "ژ": ["ʒ"],
+    "س": ["s"],
+    "ش": ["ʃ"],
+    "ص": ["s"],
+    "ض": ["z"],
+    "ط": ["t"],
+    "ظ": ["z"],
+    "ع": ["ʔ"],
+    "غ": ["ɣ"],
+    "ف": ["f"],
+    "ق": ["q"],
+    "ک": ["k"],
+    "گ": ["ɡ"],
+    "ل": ["l"],
+    "ڵ": ["ɫ"],
+    "م": ["m"],
+    "ن": ["n"],
+    "و": ["v", "uː"],
+    "ه": ["h", "e"],
+    "ی": ["j", "iː"],
+    "ء": ["ʔ"]
+  },
+  "allophones": {
+    "ʔ": ["ʔ"], "a": ["a"], "ʔɒː": ["ʔɒː"], "b": ["b"], "p": ["p"], "t": ["t"],
+    "s": ["s"], "dʒ": ["dʒ"], "tʃ": ["tʃ"], "h": ["h"], "x": ["x"], "d": ["d"],
+    "z": ["z"], "ɾ": ["ɾ"], "r": ["r"], "ʒ": ["ʒ"], "ʃ": ["ʃ"], "ɣ": ["ɣ"],
+    "f": ["f"], "q": ["q"], "k": ["k"], "ɡ": ["ɡ"], "l": ["l"], "ɫ": ["ɫ"],
+    "m": ["m"], "n": ["n"], "v": ["v"], "uː": ["uː"], "e": ["e"], "j": ["j"],
+    "iː": ["iː"]
+  },
+  "notes": "Northern Luri (لۊری شومالی) — Southwestern Iranian language of Iran (Lorestan and neighbouring provinces), written in a Perso-Arabic (Arabic-script) alphabet with additional letters for Luri consonants and vowels. SKELETON: consonant/vowel-letter table now specified, based on the shared Persian-alphabet consonant inventory (as `fa` already documents) plus the two extra letters attested in Luri and Kurdish Perso-Arabic orthographic practice for the rhotic and lateral contrasts also found in neighbouring Kurdish varieties: ⟨ڕ⟩ for the strong/trilled rhotic /r/ (vs. the plain tap ⟨ر⟩ /ɾ/) and ⟨ڵ⟩ for the velarised/dark lateral /ɫ/ (vs. plain ⟨ل⟩ /l/), matching the same rhotic and lateral contrast the `ku` (Kurmanji) spec documents for a closely related Iranian variety of the same dialect-contact area (Anonby 2003, 'Update on Luri: How Many Languages?'). As an ABJAD, short vowels are normally unwritten, so this table cannot by itself vocalise unvowelled text — the same INPUT CONTRACT limitation documented for `fa`/`ar`. STRESS EXEMPTION: no `stress` block is declared; Northern Luri word-stress is not reconstructible from unvocalised Perso-Arabic spelling.",
+  "iso639_3": "lrc",
+  "glottolog_code": "nort2645",
+  "wikidata_qid": "Q19933293",
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Northern_Luri_language"
+  ],
+  "sources": [
+    {
+      "id": "lrc_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Northern Luri language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Northern_Luri_language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Northern_Luri_language",
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "anonby2003",
+      "author": "Anonby, Erik John",
+      "year": 2003,
+      "title": "Update on Luri: How Many Languages?",
+      "publisher": "Journal of the Royal Asiatic Society",
+      "url": null,
+      "notes": "Dialectology and phoneme inventory of the Luri cluster, including Northern Luri."
+    }
+  ],
+  "parent": "ira",
+  "location": {
+    "latitude": 32.5438,
+    "longitude": 47.916,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Northern Luri."
+  }
+}

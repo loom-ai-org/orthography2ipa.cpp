@@ -1,0 +1,166 @@
+{
+  "code": "et",
+  "name": "Estonian",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "iso639_3": "est",
+  "glottolog_code": "esto1258",
+  "timespan": {
+    "start_year": 1525,
+    "end_year": null
+  },
+  "graphemes": {
+    "a": [
+      "ɑ"
+    ],
+    "ä": [
+      "æ"
+    ],
+    "b": [
+      "p",
+      "b"
+    ],
+    "d": [
+      "t",
+      "d"
+    ],
+    "e": [
+      "e"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "k",
+      "ɡ"
+    ],
+    "h": [
+      "h"
+    ],
+    "i": [
+      "i"
+    ],
+    "j": [
+      "j"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "o": [
+      "o"
+    ],
+    "õ": [
+      "ɤ"
+    ],
+    "ö": [
+      "ø"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "š": [
+      "ʃ"
+    ],
+    "z": [
+      "z"
+    ],
+    "ž": [
+      "ʒ"
+    ],
+    "t": [
+      "t"
+    ],
+    "u": [
+      "u"
+    ],
+    "ü": [
+      "y"
+    ],
+    "v": [
+      "v"
+    ]
+  },
+  "allophones": {},
+  "positional_graphemes": {},
+  "ancestors": [
+    {
+      "code": "urj",
+      "role": "parent",
+      "weight": 0.85,
+      "notes": "Finnic branch of Uralic."
+    },
+    {
+      "code": "fi",
+      "role": "related",
+      "weight": 0.4,
+      "notes": "Finnish is the closest sister language (mutual Finnic features)."
+    },
+    {
+      "code": "nds",
+      "role": "adstrate",
+      "weight": 0.12,
+      "notes": "Middle Low German adstrate: the dominant contact layer under the Baltic-German nobility."
+    },
+    {
+      "code": "ru",
+      "role": "adstrate",
+      "weight": 0.04,
+      "notes": "Russian adstrate."
+    }
+  ],
+  "parent": "x-clade-finn1317",
+  "notes": "Estonian, Finnic language with three phonemic quantity degrees (short, long, overlong). Loanword consonants b, d, g are phonemically lenis (partially voiced). Vowel õ /ɤ/ is typologically unusual. No grammatical gender.",
+  "sources": [
+    {
+      "id": "asu_teras2009",
+      "author": "Asu, Eva Liina & Teras, Pire",
+      "year": 2009,
+      "title": "Estonian",
+      "publisher": "Journal of the International Phonetic Association 39(3), 367-372",
+      "url": "https://doi.org/10.1017/S002510030999017X",
+      "pages": "367-372",
+      "notes": "JIPA Illustration of the IPA. Confirmed via Crossref metadata (DOI 10.1017/S002510030999017X) as the peer-reviewed source for the three phonemic quantity degrees, the lenis (partially voiced) status of loanword b/d/g and the vowel inventory including /ɤ/ (written õ) that this spec's notes describe; the article text itself was not retrieved, so page-level claims here are not independently verified beyond the abstract."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Estonian_language",
+    "https://en.wikipedia.org/wiki/Estonian_phonology",
+    "https://et.wikipedia.org/wiki/Eesti_keel",
+    "https://en.wikipedia.org/wiki/Proto-Uralic_language",
+    "https://et.wikipedia.org/wiki/Eesti_keele_foneetika",
+    "https://et.wikipedia.org/wiki/Uurali_algkeel"
+  ],
+  "stress": {
+    "default_position": 1,
+    "final_stress_endings": [],
+    "penult_stress_endings": [],
+    "marked_vowels": [],
+    "stress_mark": "ˈ",
+    "notes": "Estonian has categorical initial stress in most words. Vowel and consonant length (degrees Q1/Q2/Q3) are orthographically indicated by geminates. Source: Viitso (1998), Estonian; Wikipedia: https://en.wikipedia.org/wiki/Estonian_phonology"
+  },
+  "wikidata_qid": "Q9072",
+  "phoible_id": "esto1258",
+  "wals_code": "est",
+  "location": {
+    "latitude": 58.55,
+    "longitude": 25.82,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Estonian."
+  }
+}

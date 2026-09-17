@@ -1,0 +1,112 @@
+{
+  "code": "mnk",
+  "name": "Mandinka",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "a": ["a"],
+    "e": ["e"],
+    "i": ["i"],
+    "o": ["o"],
+    "u": ["u"],
+    "aa": ["aː"],
+    "ee": ["eː"],
+    "ii": ["iː"],
+    "oo": ["oː"],
+    "uu": ["uː"],
+    "b": ["b"],
+    "d": ["d"],
+    "f": ["f"],
+    "g": ["ɡ"],
+    "h": ["h"],
+    "k": ["k"],
+    "l": ["l"],
+    "m": ["m"],
+    "n": ["n"],
+    "ñ": ["ɲ"],
+    "ŋ": ["ŋ"],
+    "p": ["p"],
+    "r": ["r"],
+    "s": ["s"],
+    "t": ["t"],
+    "w": ["w"],
+    "y": ["j"],
+    "c": ["tʃ"],
+    "j": ["dʒ"]
+  },
+  "allophones": {
+    "a": ["a"], "e": ["e"], "i": ["i"], "o": ["o"], "u": ["u"],
+    "aː": ["aː"], "eː": ["eː"], "iː": ["iː"], "oː": ["oː"], "uː": ["uː"],
+    "b": ["b"], "d": ["d"], "f": ["f"], "ɡ": ["ɡ"], "h": ["h"], "k": ["k"],
+    "l": ["l"], "m": ["m"], "n": ["n"], "ɲ": ["ɲ"], "ŋ": ["ŋ"], "p": ["p"],
+    "r": ["r"], "s": ["s"], "t": ["t"], "w": ["w"], "j": ["j"],
+    "tʃ": ["tʃ"], "dʒ": ["dʒ"]
+  },
+  "notes": "Mandinka (Mandingo), the Manding branch of Mande, spoken in Casamance (Senegal), the Gambia (where it is co-official) and Guinea-Bissau. This spec covers the official Latin orthography (Senegal/Gambia literacy conventions, following Creissels & Sambou 2013 'Le mandinka (Sénégal, Gambie, Guinée-Bissau)'); Mandinka is also written in an older and more widely used Ajami (Arabic-script) tradition and, in Guinea-Bissau and neighbouring areas, in N'Ko — neither is modelled here (a spec is one script at a time; AGENTS.md §7 does not require a spec to cover every script a language has ever used). CONSONANTS: 19 phonemes /p b t d tʃ dʒ k ɡ m n ɲ ŋ f s h w r l j/, written ⟨p b t d c j k g m n ñ ŋ f s h w r l y⟩; the letters v, x, z, q are not used (Wikipedia, 'Mandinka language', Orthography section). /p/ and /ɡ/ are attested mainly in French loanwords per Creissels & Sambou; the digraph analysis follows the Manding convention (shared with Wolof/Bambara-adjacent literacy) of writing the palatal affricates as single letters ⟨c⟩ /tʃ/ and ⟨j⟩ /dʒ/ rather than digraphs. VOWELS: five qualities /i e a o u/ (Mandinka lost the ATR-based 7-vowel system some sister Manding languages like Maninka retain), each with a phonemic length contrast written by doubling the vowel letter (⟨aa ee ii oo uu⟩); doubled-vowel keys earn their place under AGENTS.md §2 test 2 (one long vowel nucleus, not two short vowels in sequence) and are cited directly rather than derived, since a bare concatenation rule would also mis-fire on true VV hiatus sequences the language does not orthographically distinguish from length in this simplified treatment. There are no nasal vowels; nasality surfaces instead as a coda /ŋ/ that assimilates to a following consonant's place (Wikipedia; not modelled as separate allophone keys since the assimilation is phonetic detail below the broad-IPA grain this spec targets, consistent with how coda nasal assimilation is handled elsewhere in this repo, e.g. Bantu prenasalised-stop specs). TONE: Mandinka has a two-tone (high/low) system with a well-documented set of morphologically-conditioned tone changes on the definite suffix -o (Wikipedia; Creissels & Sambou). The standard Latin orthography does not mark tone at all, so — matching the convention this repo already applies to other unmarked-tone Latin orthographies (e.g. Temne `tem`) — no tone is emitted here; there is no orthographic tone mark to key on, so this is a genuine engine/orthography gap rather than a spelling omission. GEMINATION: word-medial geminate consonants are attested (e.g. /pp tʃtʃ dʒdʒ kk ll mm nn ɲɲ/, Wikipedia) but are not distinguished from single consonants in the standard orthography (no doubled-consonant convention parallel to the vowels), so no separate geminate keys are asserted.",
+  "iso639_3": "mnk",
+  "glottolog_code": "mand1436",
+  "wikidata_qid": "Q34845",
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Mandinka_language"
+  ],
+  "urls": [
+    "https://glottolog.org/resource/languoid/id/mand1436",
+    "https://www.wikidata.org/wiki/Q34845"
+  ],
+  "sources": [
+    {
+      "id": "mnk_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Mandinka language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Mandinka_language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Mandinka_language",
+      "pages": null,
+      "notes": "Consonant/vowel inventory table, tone system, orthography section (Latin letter inventory, Ajami correspondence)."
+    },
+    {
+      "id": "creissels_sambou_2013",
+      "author": "Creissels, Denis and Sambou, Pierre",
+      "year": 2013,
+      "title": "Le mandinka (Sénégal, Gambie, Guinée-Bissau): phonologie, grammaire, textes",
+      "publisher": "Karthala",
+      "url": null,
+      "pages": null,
+      "notes": "Primary reference grammar; consonant/vowel inventory, tone, gemination, distribution of /p/ and /ɡ/ in loanwords."
+    },
+    {
+      "id": "wals_tone",
+      "author": "Maddieson, Ian",
+      "year": 2013,
+      "title": "Tone (WALS chapter 13)",
+      "publisher": "World Atlas of Language Structures Online",
+      "url": "https://wals.info/chapter/13",
+      "pages": null,
+      "notes": "Cross-linguistic tone typology context for Manding languages."
+    }
+  ],
+  "orthography_standard": {
+    "name": "Official Mandinka Latin orthography (Senegal/Gambia)",
+    "authority": "Government literacy programmes, Senegal and the Gambia",
+    "year": null,
+    "url": null,
+    "notes": "The Latin alphabet is official in the Gambia; the Ajami (Arabic-script) tradition is older and more widely used but is not covered by this spec."
+  },
+  "parent": "x-clade-mand1469",
+  "ancestors": [
+    {
+      "code": "x-clade-mand1469",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Mande (Glottolog mand1469) — Mandinka belongs to the Manding branch of West Mande. No Manding-branch or Mande-internal clade node exists yet in this dataset for Central Mande/Manding, so the language attaches directly to the top Mande node rather than inventing an intermediate node for a single descendant; a Manding-branch node is warranted once a second Manding language (e.g. Bambara `bam`, Maninka, Dyula) is added."
+    }
+  ],
+  "location": {
+    "latitude": 13.05,
+    "longitude": -15.9,
+    "source": "glottolog",
+    "notes": "Approximate centroid of the Mandinka-speaking area of the Gambia/Casamance/Guinea-Bissau."
+  }
+}

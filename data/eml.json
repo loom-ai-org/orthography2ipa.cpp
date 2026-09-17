@@ -1,0 +1,307 @@
+{
+  "code": "eml",
+  "name": "Emilian–Romagnol",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "gli": [
+      "ʎ"
+    ],
+    "gn": [
+      "ɲ"
+    ],
+    "â": [
+      "aː"
+    ],
+    "å": [
+      "ʌ"
+    ],
+    "ä": [
+      "æ"
+    ],
+    "à": [
+      "a"
+    ],
+    "a": [
+      "a"
+    ],
+    "ê": [
+      "eː"
+    ],
+    "è": [
+      "ɛː"
+    ],
+    "é": [
+      "e"
+    ],
+    "e": [
+      "e"
+    ],
+    "î": [
+      "iː"
+    ],
+    "í": [
+      "i"
+    ],
+    "i": [
+      "i"
+    ],
+    "ô": [
+      "oː"
+    ],
+    "ò": [
+      "ɔː"
+    ],
+    "ó": [
+      "o"
+    ],
+    "o": [
+      "o"
+    ],
+    "û": [
+      "uː"
+    ],
+    "ú": [
+      "u"
+    ],
+    "u": [
+      "u"
+    ],
+    "b": [
+      "b"
+    ],
+    "c": [
+      "k",
+      "ts"
+    ],
+    "d": [
+      "d"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɡ",
+      "dz"
+    ],
+    "j": [
+      "j"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n",
+      "ŋ"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "ṡ": [
+      "z"
+    ],
+    "t": [
+      "t"
+    ],
+    "v": [
+      "v"
+    ],
+    "z": [
+      "θ"
+    ],
+    "ż": [
+      "ð"
+    ]
+  },
+  "allophones": {
+    "p": [
+      "p"
+    ],
+    "b": [
+      "b"
+    ],
+    "t": [
+      "t"
+    ],
+    "d": [
+      "d"
+    ],
+    "k": [
+      "k"
+    ],
+    "ɡ": [
+      "ɡ"
+    ],
+    "ts": [
+      "ts"
+    ],
+    "dz": [
+      "dz"
+    ],
+    "f": [
+      "f"
+    ],
+    "v": [
+      "v"
+    ],
+    "θ": [
+      "θ"
+    ],
+    "ð": [
+      "ð"
+    ],
+    "s": [
+      "s"
+    ],
+    "z": [
+      "z"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ɲ": [
+      "ɲ"
+    ],
+    "ŋ": [
+      "ŋ"
+    ],
+    "l": [
+      "l"
+    ],
+    "ʎ": [
+      "ʎ"
+    ],
+    "r": [
+      "r"
+    ],
+    "j": [
+      "j"
+    ],
+    "w": [
+      "w"
+    ],
+    "a": [
+      "a"
+    ],
+    "aː": [
+      "aː"
+    ],
+    "ʌ": [
+      "ʌ"
+    ],
+    "æ": [
+      "æ"
+    ],
+    "e": [
+      "e"
+    ],
+    "eː": [
+      "eː"
+    ],
+    "ɛː": [
+      "ɛː"
+    ],
+    "i": [
+      "i"
+    ],
+    "iː": [
+      "iː"
+    ],
+    "o": [
+      "o"
+    ],
+    "oː": [
+      "oː"
+    ],
+    "ɔː": [
+      "ɔː"
+    ],
+    "u": [
+      "u"
+    ],
+    "uː": [
+      "uː"
+    ]
+  },
+  "notes": "Emilian-Romagnol (emiliàn e rumagnòl), a Gallo-Italic group of northern Italy. COMMITMENT: this map implements ONE variety and ONE norm — BOLOGNESE (Emilian side) written in the Ortografia Lessicografica Moderna (OLM) of Vitali & Lepri. Emilian-Romagnol is a dialect continuum with several competing city norms; Romagnol proper (and other Emilian cities) use different letter values and are NOT covered — a Romagnol-specific spec is the honest unit of future work. INPUT CONTRACT: lowercase Bolognese text in OLM spelling, with its diacritics intact (â å ä è ê î ò ô û, and the dotted sibilants ṡ / ż). Vowel length and quality are carried entirely by the diacritics, so stripping them destroys the mapping. Key OLM values: <z> = /θ/ and <ż> = /ð/ (NOT Italian /ts dz/); <s> = /s/ vs <ṡ> = /z/; <n> before a velar = [ŋ]; <c> and <g> are /k ɡ/ hard and /ts dz/ soft (before front vowels); <gn> = /ɲ/, <gli> = /ʎ/. Note the English Wikipedia 'Emilian language' article gives an incompatible Bolognese consonant chart (/tʃ dʒ/ and front rounded vowels); the OLM-anchored 'Bolognese dialect' table is followed here.",
+  "iso639_3": null,
+  "glottolog_code": "emil1243",
+  "wikidata_qid": "Q242648",
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Emilian%E2%80%93Romagnol",
+    "https://eml.wikipedia.org/wiki/L%C3%A4ngua_emigli%C3%A8na-rumagn%C3%B4la"
+  ],
+  "sources": [
+    {
+      "id": "eml_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Emilian–Romagnol",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Emilian%E2%80%93Romagnol",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Emilian%E2%80%93Romagnol",
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "bolognese_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Bolognese dialect",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Bolognese_dialect",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Bolognese_dialect",
+      "pages": null,
+      "notes": "Carries the OLM letter->IPA table (with the Bolognese letter names) and the phoneme inventory used here."
+    },
+    {
+      "id": "vitali_lepri_olm",
+      "author": "Vitali, Daniele & Lepri, Luigi",
+      "year": 2007,
+      "title": "Dizionario Bolognese-Italiano / Italiano-Bolognese",
+      "publisher": "Pendragon, Bologna",
+      "url": null,
+      "pages": null,
+      "notes": "The Ortografia Lessicografica Moderna (OLM), the unified Bolognese orthography followed by this spec."
+    },
+    {
+      "id": "romagnol_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Romagnol language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Romagnol_language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Romagnol_language",
+      "pages": null,
+      "notes": "Romagnol orthography->IPA table; documents the different (Romagnol) letter values NOT covered by this Bolognese/OLM spec."
+    }
+  ],
+  "parent": "x-clade-roma1334",
+  "ancestors": [
+    {
+      "code": "x-clade-roma1334",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Romance — the classification node this language sits under."
+    }
+  ],
+  "location": {
+    "latitude": 44.29425,
+    "longitude": 11.64915,
+    "source": "glottolog",
+    "notes": "Glottolog's computed centroid for the Emiliano-Romagnolo family — a summary of a whole clade's range, not a place anyone speaks."
+  }
+}

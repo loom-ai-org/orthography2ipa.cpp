@@ -1,0 +1,309 @@
+{
+  "code": "cu",
+  "name": "Old Church Slavonic",
+  "script": "Cyrillic",
+  "graphemes": {
+    "а": [
+      "a"
+    ],
+    "е": [
+      "e"
+    ],
+    "и": [
+      "i"
+    ],
+    "о": [
+      "o"
+    ],
+    "оу": [
+      "u"
+    ],
+    "ъ": [
+      "ŭ"
+    ],
+    "ь": [
+      "ĭ"
+    ],
+    "ꙑ": [
+      "ɨ"
+    ],
+    "ѣ": [
+      "æː"
+    ],
+    "ѫ": [
+      "õ"
+    ],
+    "ѧ": [
+      "ẽ"
+    ],
+    "ѭ": [
+      "jõ"
+    ],
+    "ѩ": [
+      "jẽ"
+    ],
+    "ꙗ": [
+      "ja"
+    ],
+    "є": [
+      "e"
+    ],
+    "ю": [
+      "ju"
+    ],
+    "б": [
+      "b"
+    ],
+    "в": [
+      "ʋ"
+    ],
+    "г": [
+      "ɡ"
+    ],
+    "д": [
+      "d"
+    ],
+    "ж": [
+      "ʒ"
+    ],
+    "з": [
+      "z"
+    ],
+    "к": [
+      "k"
+    ],
+    "л": [
+      "l"
+    ],
+    "м": [
+      "m"
+    ],
+    "н": [
+      "n"
+    ],
+    "п": [
+      "p"
+    ],
+    "р": [
+      "r"
+    ],
+    "с": [
+      "s"
+    ],
+    "т": [
+      "t"
+    ],
+    "х": [
+      "x"
+    ],
+    "ц": [
+      "ts"
+    ],
+    "ч": [
+      "tʃ"
+    ],
+    "ш": [
+      "ʃ"
+    ],
+    "щ": [
+      "ʃt"
+    ],
+    "ѕ": [
+      "dz"
+    ],
+    "нь": [
+      "nʲ"
+    ],
+    "ть": [
+      "tʲ"
+    ],
+    "дь": [
+      "dʲ"
+    ],
+    "ль": [
+      "lʲ"
+    ],
+    "рь": [
+      "rʲ"
+    ],
+    "ѥ": [
+      "je"
+    ]
+  },
+  "allophones": {
+    "p": [
+      "p"
+    ],
+    "b": [
+      "b",
+      "p"
+    ],
+    "t": [
+      "t"
+    ],
+    "d": [
+      "d",
+      "t"
+    ],
+    "k": [
+      "k"
+    ],
+    "ɡ": [
+      "ɡ",
+      "k"
+    ],
+    "s": [
+      "s"
+    ],
+    "z": [
+      "z",
+      "s"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "ʒ": [
+      "ʒ",
+      "ʃ"
+    ],
+    "x": [
+      "x"
+    ],
+    "ts": [
+      "ts"
+    ],
+    "dz": [
+      "dz",
+      "ts"
+    ],
+    "tʃ": [
+      "tʃ"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n",
+      "ŋ"
+    ],
+    "nʲ": [
+      "nʲ"
+    ],
+    "l": [
+      "l"
+    ],
+    "lʲ": [
+      "lʲ"
+    ],
+    "r": [
+      "r"
+    ],
+    "rʲ": [
+      "rʲ"
+    ],
+    "ʋ": [
+      "ʋ",
+      "w"
+    ],
+    "j": [
+      "j"
+    ],
+    "a": [
+      "a"
+    ],
+    "e": [
+      "e"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "o"
+    ],
+    "u": [
+      "u"
+    ],
+    "ɨ": [
+      "ɨ"
+    ],
+    "æː": [
+      "æː",
+      "ja",
+      "e"
+    ],
+    "õ": [
+      "õ",
+      "u"
+    ],
+    "ẽ": [
+      "ẽ",
+      "e"
+    ],
+    "ŭ": [
+      "ŭ",
+      "ə",
+      ""
+    ],
+    "ĭ": [
+      "ĭ",
+      "ə",
+      ""
+    ]
+  },
+  "parent": "x-clade-sout3147",
+  "notes": "Old Church Slavonic (also called Old Bulgarian), the first literary Slavic language, codified by Sts Cyril & Methodius (9th c.). South Slavic base with nasal vowels /ẽ õ/, yers /ĭ ŭ/, yat /æː/. ⟨щ⟩ has South Slavic value [ʃt] (vs East Slavic [ɕː]). Graphemes follow early Cyrillic; Glagolitic equivalents omitted.",
+  "quality": "research",
+  "script_type": "alphabet",
+  "sources": [
+    {
+      "id": "comrie_corbett1993",
+      "author": "Comrie, B. & Corbett, G. (eds.)",
+      "year": 1993,
+      "title": "The Slavonic Languages",
+      "publisher": "Routledge",
+      "url": null,
+      "pages": null,
+      "notes": null,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Slavic_languages"
+    },
+    {
+      "id": "lunt2001",
+      "author": "Lunt, H.G.",
+      "year": 2001,
+      "title": "Old Church Slavonic Grammar (7th ed.)",
+      "publisher": "Mouton de Gruyter",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "fortson2010",
+      "author": "Fortson, B.W.",
+      "year": 2010,
+      "title": "Indo-European Language and Culture: An Introduction",
+      "publisher": "Blackwell",
+      "url": null,
+      "pages": null,
+      "notes": null,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Indo-European_languages"
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Old_Church_Slavonic",
+    "https://cu.wikipedia.org/wiki/Ѩзыкъ_словѣньскъ",
+    "https://cu.wikipedia.org/wiki/%D0%A1%D0%BB%D0%BE%D0%B2%D1%A3%D0%BD%D1%8C%D1%81%D0%BA%D1%8A_%D1%A9%EA%99%81%EA%99%91%D0%BA%D1%8A"
+  ],
+  "timespan": {
+    "start_year": 900,
+    "end_year": 1200
+  },
+  "glottolog_code": "chur1257",
+  "iso639_3": "chu",
+  "wikidata_qid": "Q35499",
+  "location": {
+    "latitude": 43.7171,
+    "longitude": 22.8442,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Church Slavic."
+  }
+}

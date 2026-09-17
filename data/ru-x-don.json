@@ -1,0 +1,91 @@
+{
+  "code": "ru-x-don",
+  "name": "Don Cossack Russian",
+  "script": "Cyrillic",
+  "graphemes_base": "ru-x-southern",
+  "allophones_base": "ru-x-southern",
+  "positional_graphemes_base": "ru-x-southern",
+  "positional_graphemes": {
+    "я": {
+      "first_pretonic": [
+        "jɪ",
+        "ja"
+      ],
+      "pretonic": [
+        "jɪ"
+      ],
+      "posttonic": [
+        "jə"
+      ]
+    },
+    "е": {
+      "first_pretonic": [
+        "jɪ",
+        "ɪ",
+        "ja",
+        "a"
+      ],
+      "pretonic": [
+        "jɪ",
+        "ɪ"
+      ],
+      "posttonic": [
+        "jɪ",
+        "ɪ"
+      ]
+    }
+  },
+  "word_exceptions_base": "ru-x-southern",
+  "grammatical_endings_base": "ru-x-southern",
+  "parent": "ru-x-southern",
+  "notes": "Don Cossack Russian (Rostov region) — 'донская группа говоров — южнорусские говоры', a late-formation group inside the Southern zone. Its named diagnostic is the ДОНСКОЙ ТИП диссимилятивного яканья: [a] appears in the first pretonic syllable only before a HIGH stressed vowel, and [i] before every other one — the mirror image of the Kursk–Orel distribution, which is why the two files rank the same pair of outcomes in opposite orders. As with Kursk–Orel the conditioning is on the stressed vowel and cannot be read off the spelling, so the alternants are ranked rather than chosen; here [i] is rank 1 because the high-stressed-vowel context is the minority one. Г = fricative, alternating with [x] ('фрикативное образование звонкой задненёбной фонемы', with [ɣ]~[x]), and the [ɣ] genitive — both inherited from `ru-x-southern` rather than restated. Ukrainian contact is real (the group borders South-Eastern Ukrainian in the west) but the sources consulted describe it as lexical and structural, not as a separate grapheme-level system, so nothing is encoded for it. In particular the Ukrainian genitive in [ɦ] is NOT the same fact as the Southern Russian genitive in [ɣ] and is not claimed here. NEEDS SOURCING.",
+  "quality": "stub",
+  "script_type": "alphabet",
+  "sources": [
+    {
+      "id": "comrie_corbett1993",
+      "author": "Comrie, B. & Corbett, G. (eds.)",
+      "year": 1993,
+      "title": "The Slavonic Languages",
+      "publisher": "Routledge",
+      "url": null,
+      "pages": null,
+      "notes": null,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Slavic_languages"
+    },
+    {
+      "id": "timberlake2004",
+      "author": "Timberlake, A.",
+      "year": 2004,
+      "title": "A Reference Grammar of Russian",
+      "publisher": "Cambridge University Press",
+      "url": null,
+      "pages": null,
+      "notes": null,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Russian_phonology"
+    },
+    {
+      "id": "zalizniak1985",
+      "author": "Zalizniak, A.A.",
+      "year": 1985,
+      "title": "Ot praslavyanskoy aktsentovki k russkoy",
+      "publisher": "Nauka",
+      "url": null,
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "wikipedia": [],
+  "timespan": {
+    "start_year": 1700,
+    "end_year": null
+  },
+  "glottolog_code": null,
+  "iso639_3": "rus",
+  "location": {
+    "latitude": 47.2225,
+    "longitude": 39.71,
+    "source": "wikidata",
+    "notes": "Rostov-on-Don — the principal city of the Don Cossack region. [Wikidata Q908 P625]"
+  }
+}

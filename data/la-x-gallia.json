@@ -1,0 +1,189 @@
+{
+  "code": "la-x-gallia",
+  "name": "Gallo-Romance Vulgar Latin",
+  "script": "Latin",
+  "parent": "x-clade-roma1334",
+  "graphemes_base": "la-x-late",
+  "graphemes": {
+    "u": [
+      "y",
+      "u"
+    ],
+    "v": [
+      "v",
+      "β",
+      "w"
+    ],
+    "b": [
+      "b",
+      "β"
+    ],
+    "p": [
+      "p"
+    ],
+    "d": [
+      "d",
+      "ð"
+    ],
+    "t": [
+      "t"
+    ],
+    "g": [
+      "ɡ",
+      "ɣ"
+    ],
+    "c": [
+      "k"
+    ],
+    "s": [
+      "s",
+      "z"
+    ],
+    "i": [
+      "i",
+      "j"
+    ],
+    "j": [
+      "j",
+      "ʝ"
+    ],
+    "ca": [
+      "t͡ʃa"
+    ]
+  },
+  "positional_graphemes": {
+    "v": {
+      "intervocalic": [
+        "β"
+      ],
+      "before_vowel": [
+        "w"
+      ]
+    },
+    "b": {
+      "intervocalic": [
+        "β"
+      ]
+    },
+    "d": {
+      "intervocalic": [
+        "ð"
+      ]
+    },
+    "g": {
+      "intervocalic": [
+        "ɣ"
+      ],
+      "before_e": [
+        "d͡ʒ"
+      ],
+      "before_i": [
+        "d͡ʒ"
+      ]
+    },
+    "c": {
+      "before_e": [
+        "ts"
+      ],
+      "before_i": [
+        "ts"
+      ],
+      "before_a": [
+        "t͡ʃ"
+      ]
+    },
+    "s": {
+      "intervocalic": [
+        "z"
+      ]
+    },
+    "a": {
+      "word_final": [
+        "ə",
+        ""
+      ]
+    },
+    "e": {
+      "word_final": [
+        "ə",
+        ""
+      ]
+    },
+    "o": {
+      "word_final": [
+        "u",
+        ""
+      ]
+    }
+  },
+  "ancestors": [
+    {
+      "code": "la",
+      "role": "parent",
+      "weight": 0.8,
+      "notes": "Primary descent from Classical Latin"
+    },
+    {
+      "code": "xcg",
+      "role": "substrate",
+      "weight": 0.12,
+      "notes": "Gaulish substrate: vigesimal counting, u-fronting [u]>[y], lexicon (briser, chemin, char). Heaviest Celtic substrate in any Romance language."
+    },
+    {
+      "code": "gem",
+      "role": "superstrate",
+      "weight": 0.08,
+      "notes": "Early Germanic superstrate (Visigoths, Burgundians in S. Gaul; Franks in N. Gaul). Lexicon: blanc, guerre, jardin."
+    }
+  ],
+  "notes": "Gallo-Romance Vulgar Latin (~3rd–7th c. CE). Spoken Latin of Gaul and NE Hispania. Ancestral to French, Occitan, Catalan, Franco-Provençal. Key innovations vs Ibero-Romance: (1) /u/ → /y/ fronting (mūrum → [myːr]). (2) More aggressive lenition (intervocalic stops → ∅). (3) CA- → [tʃ] palatalisation. (4) F- PRESERVED (not → [h]). (5) Nasal vowels develop. (6) Final vowel loss more extreme. (7) Voiced /v/ preserved (not merged with /b/). Gaulish substrate is the strongest Celtic substrate in any Romance language (Price 1971, Bec 1970).",
+  "sources": [
+    {
+      "id": "lloyd1987",
+      "author": "Lloyd, P.M.",
+      "year": 1987,
+      "title": "From Latin to Spanish, vol. I",
+      "publisher": "American Philosophical Society",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "weiss2009",
+      "author": "Weiss, M.",
+      "year": 2009,
+      "title": "Outline of the Historical and Comparative Grammar of Latin",
+      "publisher": "Beech Stave Press",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "allen1978",
+      "author": "Allen, W.S.",
+      "year": 1978,
+      "title": "Vox Latina: A Guide to the Pronunciation of Classical Latin",
+      "publisher": "Cambridge University Press",
+      "url": null,
+      "pages": null,
+      "notes": null,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Latin_phonology"
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Gallo-Romance_languages"
+  ],
+  "timespan": {
+    "start_year": 200,
+    "end_year": 900
+  },
+  "glottolog_code": null,
+  "iso639_3": "lat",
+  "quality": "research",
+  "location": {
+    "latitude": 46.5,
+    "longitude": 2.9,
+    "source": "wikidata",
+    "notes": "Gaul — the territory whose spoken Latin this stage describes. A point for a whole Roman diocese: a centroid, and weak. [Wikidata Q38060 P625]"
+  }
+}

@@ -1,0 +1,263 @@
+{
+ "code": "mgc",
+ "name": "Morokodo",
+ "script": "Latin",
+ "quality": "skeleton",
+ "graphemes": {
+  "a": [
+   "a"
+  ],
+  "b": [
+   "b"
+  ],
+  "br": [
+   "ɡbr"
+  ],
+  "c": [
+   "c"
+  ],
+  "d": [
+   "d"
+  ],
+  "e": [
+   "ɛ"
+  ],
+  "f": [
+   "f"
+  ],
+  "g": [
+   "ɡ"
+  ],
+  "gb": [
+   "ɡb"
+  ],
+  "h": [
+   "h"
+  ],
+  "hw": [
+   "hʷ"
+  ],
+  "i": [
+   "ɪ"
+  ],
+  "j": [
+   "ɟ"
+  ],
+  "k": [
+   "k"
+  ],
+  "kp": [
+   "kp"
+  ],
+  "l": [
+   "l"
+  ],
+  "m": [
+   "m"
+  ],
+  "mb": [
+   "ᵐb"
+  ],
+  "mv": [
+   "ᶬv"
+  ],
+  "n": [
+   "n"
+  ],
+  "nd": [
+   "ⁿd"
+  ],
+  "ndr": [
+   "ⁿdr"
+  ],
+  "nj": [
+   "ᶮɟ"
+  ],
+  "ny": [
+   "ɲ"
+  ],
+  "nz": [
+   "ⁿz"
+  ],
+  "o": [
+   "ʊ"
+  ],
+  "p": [
+   "p"
+  ],
+  "pr": [
+   "kpr"
+  ],
+  "r": [
+   "r"
+  ],
+  "s": [
+   "s"
+  ],
+  "t": [
+   "t"
+  ],
+  "tw": [
+   "tʷ"
+  ],
+  "u": [
+   "u"
+  ],
+  "v": [
+   "v"
+  ],
+  "w": [
+   "w"
+  ],
+  "y": [
+   "j"
+  ],
+  "z": [
+   "z"
+  ],
+  "ä": [
+   "ə"
+  ],
+  "ë": [
+   "e"
+  ],
+  "ï": [
+   "i"
+  ],
+  "ö": [
+   "ɵ"
+  ],
+  "ŋ": [
+   "ŋ"
+  ],
+  "ŋb": [
+   "ᵑᵐɡb"
+  ],
+  "ŋg": [
+   "ᵑɡ"
+  ],
+  "ɔ": [
+   "ɔ"
+  ],
+  "ṛ": [
+   "ɾ"
+  ],
+  "’": [
+   "ʔ"
+  ],
+  "’b": [
+   "ɓ"
+  ],
+  "’d": [
+   "ɗ"
+  ],
+  "’j": [
+   "ʄ"
+  ]
+ },
+ "allophones": {},
+ "notes": "Placed so the ancestry graph covers every living ISO 639-3 language. No orthography is claimed; the phoneme inventory follows the cited PHOIBLE inventory (which itself cites a published description): script is Zyyy (undetermined) until a cited description is encoded. Classification and coordinates follow Glottolog. Orthography from an Omniglot chart (c) Simon Ager, https://www.omniglot.com/, extracted via the AfriSpeech/africa-g2p compilation (mgc.json). africa-g2p is a compilation tool, not the linguistic authority; the citation above is the original source it names.",
+ "iso639_3": "mgc",
+ "glottolog_code": "moro1284",
+ "sources": [
+  {
+   "id": "glottolog2024",
+   "author": "Hammarström, Harald; Forkel, Robert; Haspelmath, Martin; Bank, Sebastian",
+   "year": 2024,
+   "title": "Glottolog 5.0",
+   "publisher": "Max Planck Institute for Evolutionary Anthropology",
+   "url": "https://glottolog.org/"
+  },
+  {
+   "id": "phoible2019",
+   "author": "Moran, Steven; McCloy, Daniel (eds.)",
+   "year": 2019,
+   "title": "PHOIBLE 2.0 (doi:10.5281/zenodo.2562766)",
+   "publisher": "Max Planck Institute for the Science of Human History",
+   "url": "https://phoible.org/inventories/view/1424",
+   "notes": "Inventory 1424 (ph), 52 non-marginal segments, 2 tones."
+  },
+  {
+   "id": "omniglot-morokodo",
+   "author": "Ager, Simon",
+   "year": 2026,
+   "title": "Omniglot chart (morokodo.xls)",
+   "publisher": "Omniglot",
+   "url": "https://www.omniglot.com/",
+   "notes": "Undated web chart; year is retrieval year, not publication year."
+  }
+ ],
+ "urls": [
+  "https://glottolog.org/resource/languoid/id/moro1284"
+ ],
+ "location": {
+  "latitude": 5.5103,
+  "longitude": 30.0229,
+  "source": "glottolog",
+  "notes": "Glottolog's representative point."
+ },
+ "parent": "x-clade-cent2225",
+ "phonemes": [
+  "b",
+  "c",
+  "d",
+  "dr",
+  "f",
+  "h",
+  "hʷ",
+  "j",
+  "k",
+  "kp",
+  "kpr",
+  "l",
+  "m",
+  "mb",
+  "n",
+  "nd",
+  "ndr",
+  "nz",
+  "p",
+  "r",
+  "s",
+  "t",
+  "tr",
+  "tʷ",
+  "v",
+  "w",
+  "z",
+  "ŋ",
+  "ŋmɡb",
+  "ŋɡ",
+  "ɓ",
+  "ɗ",
+  "ɟ",
+  "ɡ",
+  "ɡb",
+  "ɡbr",
+  "ɱv",
+  "ɲ",
+  "ɲɟ",
+  "ɾ",
+  "ʄ",
+  "ʔ",
+  "e",
+  "i",
+  "u",
+  "ɑ",
+  "ɔ",
+  "ə",
+  "ɛ",
+  "ɪ",
+  "ɵ",
+  "ʊ"
+ ],
+ "tone_inventory": {
+  "˦": "PHOIBLE tone segment",
+  "˨": "PHOIBLE tone segment"
+ },
+ "phoible_id": "1424",
+ "script_type": "alphabet",
+ "wikipedia": [
+  "https://en.wikipedia.org/wiki/Morokodo_language"
+ ]
+}

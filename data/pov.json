@@ -1,0 +1,364 @@
+{
+  "code": "pov",
+  "glottolog_code": "uppe1455",
+  "name": "Guinea-Bissau Creole (Kriol)",
+  "script": "Latin",
+  "quality": "research",
+  "script_type": "alphabet",
+  "parent": "pt-PT",
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "ã": [
+      "ã"
+    ],
+    "e": [
+      "e",
+      "ɛ"
+    ],
+    "ẽ": [
+      "ẽ"
+    ],
+    "i": [
+      "i"
+    ],
+    "ĩ": [
+      "ĩ"
+    ],
+    "o": [
+      "o",
+      "ɔ"
+    ],
+    "õ": [
+      "õ"
+    ],
+    "u": [
+      "u"
+    ],
+    "ũ": [
+      "ũ"
+    ],
+    "b": [
+      "b"
+    ],
+    "d": [
+      "d"
+    ],
+    "dj": [
+      "dʒ"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "j": [
+      "dʒ"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "mb": [
+      "mb"
+    ],
+    "n": [
+      "n"
+    ],
+    "nd": [
+      "nd"
+    ],
+    "ng": [
+      "ŋ"
+    ],
+    "nh": [
+      "ɲ"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "tx": [
+      "tʃ"
+    ],
+    "v": [
+      "v"
+    ],
+    "w": [
+      "w"
+    ],
+    "x": [
+      "ʃ"
+    ],
+    "y": [
+      "j"
+    ],
+    "z": [
+      "z"
+    ],
+    "gu": [
+      "ɡ",
+      "ɡw"
+    ]
+  },
+  "positional_graphemes": {
+    "s": {
+      "word_final": [
+        "s"
+      ]
+    },
+    "n": {
+      "word_final": [
+        "n",
+        ""
+      ]
+    },
+    "r": {
+      "word_final": [
+        "r",
+        ""
+      ]
+    },
+    "b": {
+      "word_final": [
+        "b",
+        ""
+      ]
+    },
+    "d": {
+      "word_final": [
+        "d",
+        ""
+      ]
+    },
+    "mb": {
+      "word_initial": [
+        "mb"
+      ]
+    },
+    "nd": {
+      "word_initial": [
+        "nd"
+      ]
+    },
+    "ng": {
+      "word_initial": [
+        "ŋɡ"
+      ]
+    },
+    "gu": {
+      "before_e": [
+        "ɡ"
+      ],
+      "before_i": [
+        "ɡ"
+      ],
+      "before_a": [
+        "ɡw"
+      ],
+      "before_o": [
+        "ɡw"
+      ],
+      "default": [
+        "ɡ"
+      ]
+    }
+  },
+  "allophones": {
+    "a": [
+      "a"
+    ],
+    "ã": [
+      "ã"
+    ],
+    "e": [
+      "e"
+    ],
+    "ɛ": [
+      "ɛ"
+    ],
+    "ẽ": [
+      "ẽ"
+    ],
+    "i": [
+      "i"
+    ],
+    "ĩ": [
+      "ĩ"
+    ],
+    "o": [
+      "o"
+    ],
+    "ɔ": [
+      "ɔ"
+    ],
+    "õ": [
+      "õ"
+    ],
+    "u": [
+      "u"
+    ],
+    "ũ": [
+      "ũ"
+    ],
+    "b": [
+      "b"
+    ],
+    "d": [
+      "d"
+    ],
+    "dʒ": [
+      "dʒ"
+    ],
+    "f": [
+      "f"
+    ],
+    "ɡ": [
+      "ɡ"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ŋ": [
+      "ŋ"
+    ],
+    "ɲ": [
+      "ɲ"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "tʃ": [
+      "tʃ"
+    ],
+    "v": [
+      "v"
+    ],
+    "w": [
+      "w"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "j": [
+      "j"
+    ],
+    "z": [
+      "z"
+    ]
+  },
+  "ancestors": [
+    {
+      "code": "pt-PT",
+      "role": "superstrate",
+      "weight": 0.7,
+      "notes": "European Portuguese superstrate from 15th–18th century colonial contact. Primary lexifier. Phonological system largely derived from archaic PT (no /ɨ/, preservation of nasal vowels)."
+    },
+    {
+      "code": "ff",
+      "role": "substrate",
+      "weight": 0.15,
+      "notes": "Fula/Fulah substrate: major language group of Guinea-Bissau interior. Contributes nasal vowels and some prenasalized consonants."
+    }
+  ],
+  "notes": "Guinea-Bissau Creole (Kriol / GBC / Guinean Creole). Portuguese-based Atlantic creole; true national lingua franca of Guinea-Bissau (~600,000 L1 speakers, ~2 million total). KEY FEATURES: (1) NASAL VOWELS: ã/ẽ/ĩ/õ/ũ phonemic, influenced by Mandinka and Fula substrates. (2) FIVE-VOWEL SYSTEM: no /ɨ/. (3) PRENASALIZED STOPS: mb/nd from Bantu and Mande substrate. (4) AFFRICATES: dj=[dʒ], tx=[tʃ]; j may also render [dʒ] (competing conventions). (5) WORD-FINAL SIMPLIFICATION: final consonants may be reduced or deleted. (6) RHOTIC: alveolar [r]. Closely related to Cape Verdean Creole (kea); both belong to the Upper Guinea Creole cluster. Not to be confused with Guinean French-based Créole (Guinée-Conakry).",
+  "sources": [
+    {
+      "id": "kihm1994",
+      "author": "Kihm, A.",
+      "year": 1994,
+      "title": "Kriyol Syntax: The Portuguese-based Creole Language of Guinea-Bissau",
+      "publisher": "John Benjamins",
+      "url": null,
+      "pages": null,
+      "notes": "Main syntactic and phonological reference"
+    },
+    {
+      "id": "intumbo2007",
+      "author": "Intumbo, I., Inverno, L. & Holm, J.",
+      "year": 2007,
+      "title": "Guinea-Bissau Creole",
+      "publisher": "In: Comparative Creole Syntax, Westminster Creolistics Series",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "scantamburlo1999",
+      "author": "Scantamburlo, L.",
+      "year": 1999,
+      "title": "Dicionário do Guineense / Disionariu di Guinensi",
+      "publisher": "FASPEBI / Coimbra",
+      "url": null,
+      "pages": null,
+      "notes": "Bilingual dictionary; orthographic conventions for Kriol"
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Guinea-Bissau_Creole"
+  ],
+  "urls": [
+    "https://en.wikipedia.org/wiki/Guinea-Bissau_Creole",
+    "https://en.wikipedia.org/wiki/Languages_of_Guinea-Bissau",
+    "https://glottolog.org/resource/languoid/id/guin1259",
+    "https://www.ethnologue.com/language/pov/"
+  ],
+  "timespan": {
+    "start_year": 1600,
+    "end_year": null
+  },
+  "iso639_3": "pov",
+  "wikidata_qid": "Q33339",
+  "phoible_id": "uppe1455",
+  "wals_code": "gbc",
+  "location": {
+    "latitude": 13.233507,
+    "longitude": -15.33254,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Upper Guinea Crioulo."
+  },
+  "allophone_rules": [
+    {
+      "id": "PT_CODA_L_DARK",
+      "phonemes": [
+        "l"
+      ],
+      "surface": "l",
+      "syllable_position": "coda",
+      "notes": "DISABLES the inherited EP dark coda [ɫ]: Guinea-Bissau Kriol has plain coda [l] (Kihm 1994). Identity rewrite cancels the inherited rule by id."
+    }
+  ]
+}

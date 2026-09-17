@@ -1,0 +1,151 @@
+{
+  "code": "ain",
+  "name": "Ainu",
+  "parent": "x-clade-ainu1252",
+  "script": "Latin",
+  "graphemes": {
+    "sh": [
+      "s"
+    ],
+    "ch": [
+      "ts"
+    ],
+    "tt": [
+      "tː"
+    ],
+    "nn": [
+      "nː"
+    ],
+    "kk": [
+      "kː"
+    ],
+    "ss": [
+      "sː"
+    ],
+    "pp": [
+      "pː"
+    ],
+    "mm": [
+      "mː"
+    ],
+    "a": [
+      "a"
+    ],
+    "i": [
+      "i"
+    ],
+    "u": [
+      "u"
+    ],
+    "e": [
+      "e"
+    ],
+    "o": [
+      "o"
+    ],
+    "p": [
+      "p"
+    ],
+    "t": [
+      "t"
+    ],
+    "k": [
+      "k"
+    ],
+    "b": [
+      "b"
+    ],
+    "d": [
+      "d"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "s": [
+      "s"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "l": [
+      "l"
+    ],
+    "r": [
+      "ɾ"
+    ],
+    "w": [
+      "w"
+    ],
+    "y": [
+      "j"
+    ],
+    "j": [
+      "j"
+    ],
+    "h": [
+      "h"
+    ]
+  },
+  "allophones": {},
+  "stress": {
+    "default_position": 2,
+    "stress_mark": "ˈ"
+  },
+  "notes": "Research. Ainu (Hokkaido Ainu) is a language isolate, romanized in the Latin orthography standard in modern Ainu-language dictionaries and pedagogy (Tamura 1988, 2000; Refsing 1986). Beyond the plain Latin letters, ⟨sh⟩ spells /s/ (not s+h), ⟨ch⟩ spells the affricate /ts/ (not c+h), ⟨r⟩ is a tap [ɾ], and a doubled consonant letter (tt, nn, kk, ss, pp, mm) spells a geminate. Stress is predictable from syllable weight: falls on the second syllable if the first is open (light), otherwise on the first (closed/heavy) syllable (Tamura 1988); modelled here with a second-syllable default since the majority pattern in the sampled gold is disyllabic with an open first syllable. This entry was previously a structural-contact placeholder claiming no phonology; NorthEuraLex's `ain` gold sample confirmed the Latin romanization (rather than katakana, Ainu's other common script) matches this practical orthography, so the placeholder has been replaced with a real, cited grapheme map.",
+  "quality": "research",
+  "script_type": "alphabet",
+  "iso639_3": "ain",
+  "glottolog_code": "ainu1240",
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Ainu_language"
+  ],
+  "urls": [
+    "https://glottolog.org/resource/languoid/id/ainu1240"
+  ],
+  "sources": [
+    {
+      "id": "shibatani1990",
+      "author": "Shibatani, M.",
+      "year": 1990,
+      "title": "The Languages of Japan",
+      "publisher": "Cambridge University Press",
+      "url": null,
+      "pages": null,
+      "notes": "Reference for Ainu and its contact status (contact node only).",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Ainu_language"
+    },
+    {
+      "id": "tamura2000",
+      "author": "Tamura, Suzuko",
+      "year": 2000,
+      "title": "The Ainu Language",
+      "publisher": "Sanseido",
+      "url": null,
+      "pages": null,
+      "notes": "Reference grammar/dictionary establishing the modern Latin practical orthography (⟨sh⟩=/s/, ⟨ch⟩=/ts/, geminate doubling) and the syllable-weight stress rule.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Ainu_language"
+    },
+    {
+      "id": "refsing1986",
+      "author": "Refsing, Kirsten",
+      "year": 1986,
+      "title": "The Ainu Language: The Morphology and Syntax of the Shizunai Dialect",
+      "publisher": "Aarhus University Press",
+      "url": null,
+      "pages": null,
+      "notes": "Descriptive grammar of a Hokkaido Ainu dialect corroborating the phoneme inventory and orthographic conventions.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Ainu_language"
+    }
+  ],
+  "wikidata_qid": "Q27969",
+  "phoible_id": "ainu1240",
+  "location": {
+    "latitude": 43.633654,
+    "longitude": 142.46167,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Hokkaido Ainu."
+  }
+}

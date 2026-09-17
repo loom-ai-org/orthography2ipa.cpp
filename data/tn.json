@@ -1,0 +1,308 @@
+{
+    "code": "tn",
+    "name": "Tswana",
+    "script": "Latin",
+    "script_type": "alphabet",
+    "quality": "research",
+    "graphemes": {
+        "a": [
+            "a"
+        ],
+        "e": [
+            "e̝",
+            "ɛ"
+        ],
+        "i": [
+            "i"
+        ],
+        "o": [
+            "o̝",
+            "ɔ"
+        ],
+        "u": [
+            "u"
+        ],
+        "b": [
+            "ɓ"
+        ],
+        "d": [
+            "d"
+        ],
+        "f": [
+            "f"
+        ],
+        "fj": [
+            "fʃ"
+        ],
+        "g": [
+            "ɣ"
+        ],
+        "h": [
+            "h"
+        ],
+        "j": [
+            "dʒ"
+        ],
+        "k": [
+            "kʼ"
+        ],
+        "kg": [
+            "χ"
+        ],
+        "kh": [
+            "kʰ"
+        ],
+        "l": [
+            "l"
+        ],
+        "m": [
+            "m"
+        ],
+        "n": [
+            "n"
+        ],
+        "ng": [
+            "ŋ"
+        ],
+        "ny": [
+            "ɲ"
+        ],
+        "p": [
+            "pʼ"
+        ],
+        "ph": [
+            "pʰ"
+        ],
+        "pj": [
+            "pʃʼ"
+        ],
+        "q": [
+            "ǃ"
+        ],
+        "qh": [
+            "ǃʰ"
+        ],
+        "r": [
+            "r"
+        ],
+        "s": [
+            "s"
+        ],
+        "sh": [
+            "ʃ"
+        ],
+        "t": [
+            "tʼ"
+        ],
+        "th": [
+            "tʰ"
+        ],
+        "tl": [
+            "tɬʼ"
+        ],
+        "tlh": [
+            "t͡ɬʰ"
+        ],
+        "ts": [
+            "tsʼ"
+        ],
+        "tsh": [
+            "tsʰ"
+        ],
+        "tsw": [
+            "tsʼʷ"
+        ],
+        "tshw": [
+            "tsʰʷ"
+        ],
+        "w": [
+            "w"
+        ],
+        "y": [
+            "j"
+        ],
+        "ê": [
+            "ɛ"
+        ],
+        "ô": [
+            "ɔ"
+        ]
+    },
+    "allophones": {
+        "a": [
+            "a"
+        ],
+        "ɛ": [
+            "ɛ"
+        ],
+        "i": [
+            "i"
+        ],
+        "ɔ": [
+            "ɔ"
+        ],
+        "u": [
+            "u"
+        ],
+        "ɓ": [
+            "ɓ"
+        ],
+        "d": [
+            "d"
+        ],
+        "f": [
+            "f"
+        ],
+        "fʃ": [
+            "fʃ"
+        ],
+        "ɣ": [
+            "ɣ"
+        ],
+        "h": [
+            "h"
+        ],
+        "dʒ": [
+            "dʒ"
+        ],
+        "kʼ": [
+            "kʼ"
+        ],
+        "kʰ": [
+            "kʰ"
+        ],
+        "l": [
+            "l"
+        ],
+        "m": [
+            "m"
+        ],
+        "n": [
+            "n"
+        ],
+        "ŋ": [
+            "ŋ"
+        ],
+        "ɲ": [
+            "ɲ"
+        ],
+        "pʼ": [
+            "pʼ"
+        ],
+        "pʰ": [
+            "pʰ"
+        ],
+        "pʃʼ": [
+            "pʃʼ"
+        ],
+        "ǃ": [
+            "ǃ"
+        ],
+        "ǃʰ": [
+            "ǃʰ"
+        ],
+        "r": [
+            "r"
+        ],
+        "s": [
+            "s"
+        ],
+        "ʃ": [
+            "ʃ"
+        ],
+        "tʼ": [
+            "tʼ"
+        ],
+        "tʰ": [
+            "tʰ"
+        ],
+        "tɬʼ": [
+            "tɬʼ"
+        ],
+        "t͡ɬʰ": [
+            "t͡ɬʰ"
+        ],
+        "tsʼ": [
+            "tsʼ"
+        ],
+        "tsʰ": [
+            "tsʰ"
+        ],
+        "tsʼʷ": [
+            "tsʼʷ"
+        ],
+        "tsʰʷ": [
+            "tsʰʷ"
+        ],
+        "w": [
+            "w"
+        ],
+        "j": [
+            "j"
+        ],
+        "e̝": [
+            "e̝"
+        ],
+        "o̝": [
+            "o̝"
+        ],
+        "χ": [
+            "x"
+        ]
+    },
+    "notes": "Tswana (Setswana) — Sotho-Tswana (Bantu) language, official in Botswana and South Africa, written disjunctively in the Latin script. SKELETON: consonant/vowel-letter table now specified, targeting the South African standard orthography (as the sibling Sotho-Tswana spec `st`/Southern Sotho targets its own SA-standard convention: see AGENTS.md, 'a shared alphabet is not a shared phonology' — the two languages' plain-stop series differ and are NOT copied from one another here). KEY FEATURES (Cole 1955, 'An Introduction to Tswana Grammar'; Bennett, Diemer, Kerford, Probert & Wesi 2016, JIPA 46(2), 'Setswana (South African)'): (1) plain ⟨k p t ts tl pj⟩ are EJECTIVE, contrasting with the aspirated ⟨kh ph th tsh tlh⟩ series — the same ejective/aspirate two-way laryngeal contrast Sotho-Tswana languages share, unlike the plain-voiceless system of most other Bantu languages; Bennett et al. 2016 measured this contrast as speaker-variable (one of three consultants produced consistent ejectives, the other two mostly did not), so the ejective value here is the phonemic norm Cole documents, not a claim that every speaker glottalizes every token; (2) ⟨b⟩ is transcribed as the IMPLOSIVE /ɓ/ per Cole's classic account and the wider Sotho-Tswana typological pattern; Bennett et al. 2016 instead describe a lenited [β] realization with no implosion, so this value rests on Cole plus the Sotho-Tswana typological pattern, not on unanimous modern phonetic consensus — flagged here rather than silently resolved; (3) ⟨kg⟩ is a UVULAR fricative /χ/ (corrected from an earlier velar /x/ analysis): Bennett et al. 2016 state 'most previous descriptions (generally based on other varieties of Setswana) describe the phoneme /χ/ as a velar fricative /x/ rather than uvular', and that it 'normally varies in articulation between a uvular fricative [χ] and a voiceless uvular trill [ʀ̥]', adding the hedge 'while occasional tokens of /χ/ do sound close to velar [x], the normal realization sounds distinctly post-velar in our data' (some connected-speech tokens are even 'closer to [x] or ... reduced to [h]') — this spec's earlier 'never velar' wording overstated that hedge and is corrected here to match the source; this also matches the vox_communis gold's uvular symbol for every ⟨kg⟩ token measured (94 tokens, see fold_tn_notation.py). Bennett et al. 2016 separately document a POST-NASAL hardened allophone /qχ/ of this same fricative phoneme (conditioned by nasal noun-class prefixes, not by the ⟨kg⟩ letter sequence itself, and historically characterized by other authors as an aspirated uvular plosive /qʰ/ or aspirated velar affricate /kxʰ/ — this is the analysis history of the postnasal ALLOPHONE, not of a separate 'kg' phoneme); this spec does not model postnasal consonant hardening (it would require noun-class prefix analysis this engine does not do) and the bare ⟨kg⟩ value stays the plain fricative /χ/ — documented here as a known unmodeled allophonic environment, not chased further. A prior draft of this fix additionally proposed reinterpreting ⟨kg⟩ itself as the affricate and reassigning plain ⟨g⟩ from /ɣ/ to /χ/; neither claim is supported in the fetched primary text (it never discusses the orthographic letter 'g' at all, and its /qχ/ discussion is specifically about the postnasal allophone above), so both changes are refused and ⟨g⟩ stays /ɣ/ on Cole's original basis; Southern Sotho's parallel ⟨kg⟩ is not assumed to share the same place of articulation on this basis — it is out of scope here; (4) ⟨g⟩ (rare, mostly in loans and some dialects) is the voiced velar fricative /ɣ/, per Cole 1955; Bennett et al. 2016 does not discuss this grapheme, so it is not evidence either way; (5) the click letter ⟨q⟩/⟨qh⟩ occurs only in a small set of ideophones and Khoisan loanwords, not in the native lexicon, and is unattested in the vox_communis sample (0 of 2271 words) so it cannot be checked against that gold; (6) the vowel letters ⟨e⟩ and ⟨o⟩ are phonemically the RAISED CLOSE-MID /e̝/ /o̝/ — Bennett et al. 2016: 'we therefore transcribe them as raised close-mid [e̝] and [o̝]', explicitly moving away from the older notation '/ɪ/ and /ʊ/' the same paper attributes to Cole (1955) and to other prior descriptions and calls too high for their data ('the majority of tokens seem to be lower than this notation suggests'). Bennett et al. 2016 also document that this is genuinely ambiguous in the modern orthography: 'In the linguistics literature and some older materials, the orthographic convention is to use e and o for the close-mid vowels [e̝] and [o̝], while ê and ô are used to represent open-mid [ɛ] and [ɔ]. In the modern standard orthography, however, the diacritic is normally left out, and both sets of vowels are represented as e and o' (see Chebanne et al. 2003 for the orthographic convention, cited here via Bennett et al. 2016 rather than independently, since Chebanne et al. 2003 was not itself fetched this session). The plain ⟨e⟩/⟨o⟩ graphemes therefore keep BOTH members as an ordered candidate pair (e̝ first, ɛ second; o̝ first, ɔ second) — this is a documented INPUT-LIMITED ambiguity the letter alone cannot resolve, not a claim about which member is more frequent, since Bennett et al. 2016 gives no distributional evidence on this specific split (their 'majority of tokens' remark concerns height relative to the old /ɪ/ʊ/ notation, not the close-mid/open-mid split). The diacritic-bearing ⟨ê⟩/⟨ô⟩ graphemes are added as distinct, unambiguous open-mid /ɛ/ /ɔ/ for the older/diacritic-marked spelling convention; they are unattested in the vox_communis sample (that gold's lexicon uses the modern, diacritic-free convention). A prior draft of this fix instead defaulted ⟨e⟩/⟨o⟩ to /ɪ/ /ʊ/ and cited Bennett et al. 2016 as the authority for it — backwards, since that is precisely the older notation the paper argues against; that error is corrected here; (7) the Botswana orthography differs from the South African one documented here (e.g. Botswana merges some digraphs); mixing the two spelling conventions is OUT OF CONTRACT, matching the same convention-mixing caveat already documented for `st`. Tone is lexically and grammatically contrastive in Tswana but is not marked in the standard orthography and is not asserted here; the vox_communis gold likewise carries no tone marking on either side, so the row's PER cannot be measuring orthography-vs-tone silence — there is no tone signal to fold out. STRESS EXEMPTION (documented, matching the sibling `st`/Southern Sotho precedent): Tswana word stress is non-contrastive and predictable (fixed, phonetically weak, falling on or near the penultimate mora), not marked in the orthography and not the language's distinctive prosodic feature -- tone carries that role instead (Cole 1955). No `stress` block is added; this is a documented exemption, not an omission. RESEARCH: citation-verified 2026-08 (sources wave 4; re-verified and corrected against a fetched primary phonetic source, 2026-08; a second re-verification the same wave independently re-fetched Bennett et al. 2016's full text section-by-section and corrected the vowel default, which a prior draft of this fix had backwards, and refused two consonant reinterpretations — ⟨kg⟩-as-affricate and ⟨g⟩-as-χ — that the fetched text does not support) -- Cole 1955 is a read primary reference grammar and Bennett et al. 2016 is a read peer-reviewed IPA-illustration article, both fetched and read this session; both Wikipedia entries previously carried in `sources` have been replaced by Bennett et al. 2016, the real work the Wikipedia phonology article draws on for this inventory; the top-level `wikipedia` field keeps the reading-path URLs. GOLD: vox_communis (Common Voice force-aligned, epitran-derived tier — a scored competitor's lexicon, directional signal only, cannot gate a regression or tier promotion per benchmark.py's PROVENANCE note — n=2271). With the corrected /e̝/ /o̝/ vowel values (using the harness's own broad-normalized score, the same one the board reports) the as-scored PER is 0.3953, a small, honest improvement over the dev baseline of 0.4003 -- not the large drop a prior draft of this fix claimed, because that draft's large drop came from defaulting to /ɪ/ /ʊ/, which is not phonemically correct but happens to be exactly this gold's own symbol set. Folding the gold's own conventions out of both sides cumulatively (see fold_tn_notation.py, broad-normalized) shows where the residual comes from: the ɪ/ʊ-vs-e̝/o̝ notation gap (this gold's epitran pipeline writes /ɪ/ /ʊ/ literally; broad normalization strips the raising diacritic but not the base-letter difference) takes 0.3953 down to 0.3105; the letter-level close-mid/open-mid ambiguity fold is a no-op on this particular gold (it never writes the open-mid member for any ⟨e⟩/⟨o⟩ token in this sample: 0 of 1861 e-position tokens as ɛ, 0 of 1588 o-position tokens as ɔ -- a gold convention, not evidence against the spec's candidate pair); the implosive ⟨b⟩ convention takes it to 0.2846; the (near-zero, tripwire-only) kg fold confirms 0.2846; dropping the aspiration marker moves it slightly the other way, to 0.2871 (a genuine negative result -- this fold is not uniformly helpful, unlike in earlier waves); and dropping the ejective marker — a symbol this gold's phone tier has no way to encode at all — takes it to 0.2066. That folded ceiling of 0.2066 is under the 0.25 input-limited threshold this repo uses (with less margin than a cleaner row would show), so the row is classified INPUT-LIMITED: the residual as-scored PER is substantially a gold-notation artifact, measured and documented here, not a defect to chase further. This measurement is NOT written to the spec's `valid_ceiling` field: that field is language-scoped while this measurement is dataset-scoped (vox_communis only), and issue #1350 records that mismatch as unresolved -- the ceiling stays in these notes, pending #1350. The click letters ⟨q⟩/⟨qh⟩ are unattested in this 2271-word sample (0 tokens), so that claim could not be checked against this gold either way — a negative result, not an assertion.",
+    "iso639_3": "tsn",
+    "glottolog_code": "tswa1253",
+    "wikipedia": [
+        "https://en.wikipedia.org/wiki/Tswana_language",
+        "https://tn.wikipedia.org/wiki/Setswana"
+    ],
+    "sources": [
+        {
+            "id": "cole1955",
+            "author": "Cole, Desmond T.",
+            "year": 1955,
+            "title": "An Introduction to Tswana Grammar",
+            "publisher": "Longmans, Green & Co.",
+            "url": null,
+            "notes": "Standard reference grammar; South African orthography and phonetics."
+        },
+        {
+            "id": "bennett2016",
+            "author": "Bennett, William G.; Diemer, Maxine; Kerford, Justine; Probert, Tracy; Wesi, Tsholofelo",
+            "year": 2016,
+            "title": "Setswana (South African)",
+            "publisher": "Journal of the International Phonetic Association 46(2), 235-246",
+            "url": "https://doi.org/10.1017/S0025100316000050",
+            "notes": "Illustration of the IPA; fetched and read (full text) 2026-08. Documents the seven-vowel system /i e̝ ɛ a ɔ o̝ u/ with the mid vowels raised to close-mid [e̝]/[o̝] (moving explicitly away from the older /ɪ/ /ʊ/ notation), the modern orthography's ⟨e⟩/⟨o⟩ letters as ambiguous between that value and open-mid /ɛ/ /ɔ/ (disambiguated by the ⟨ê⟩/⟨ô⟩ diacritic in older/linguistic materials, citing Chebanne et al. 2003 for the convention), the kg fricative as UVULAR (varying [χ] ~ voiceless uvular trill, occasionally near-velar, never confirmed as plain velar), a post-nasal hardened allophone /qχ/ of that same fricative (unrelated to the ⟨kg⟩ letter sequence), variable (speaker-dependent) ejective realization of the plain stop series, and /b/ with a lenited [β] realization alongside the classic implosive account."
+        }
+    ],
+    "ancestors": [
+        {
+            "code": "x-clade-narr1281",
+            "role": "parent",
+            "weight": 1.0,
+            "notes": "Bantu, within Atlantic-Congo."
+        },
+        {
+            "code": "st",
+            "role": "adstrate",
+            "weight": 0.15,
+            "notes": "Southern Sotho adstrate: Sotho-Tswana subgroup mate sharing the ejective/aspirate laryngeal system and disjunctive orthographic style, but not the same plain-stop mapping."
+        }
+    ],
+    "parent": "x-clade-narr1281",
+    "location": {
+        "latitude": -24.368,
+        "longitude": 24.7587,
+        "source": "glottolog",
+        "notes": "Glottolog's representative point for Tswana."
+    },
+    "valid_ceiling": {
+        "vox_communis": {
+            "per": 0.2066,
+            "folded": "vowel_notation+implosive_b+ejective_marker",
+            "citation": "vox_communis is a Common Voice force-aligned, Epitran-derived gold (a scored competitor's lexicon, directional signal only -- cannot gate a regression or tier promotion). As-scored PER with the corrected /e̝/ /o̝/ vowel values is 0.3953 (n=2271). Folding the gold's own conventions out of both sides cumulatively (see fold_tn_notation.py, broad-normalized): the gold's literal /ɪ/ /ʊ/ vowel-notation convention takes it to 0.3105; the implosive-b convention to 0.2846; the kg fold is a no-op, confirming 0.2846; and dropping the ejective marker -- a symbol this gold's phone tier has no way to encode at all -- takes it to 0.2066. Dropping the aspiration marker was also tried and made the score worse (0.2871), a negative result not included in this fold. Measured, not sourced; see the notes field for the full chain."
+        }
+    }
+}

@@ -1,0 +1,453 @@
+{
+  "code": "gl-ES",
+  "name": "Galician",
+  "script": "Latin",
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "e": [
+      "e",
+      "ɛ"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "o",
+      "ɔ"
+    ],
+    "u": [
+      "u"
+    ],
+    "á": [
+      "a"
+    ],
+    "é": [
+      "ɛ"
+    ],
+    "í": [
+      "i"
+    ],
+    "ó": [
+      "ɔ"
+    ],
+    "ú": [
+      "u"
+    ],
+    "b": [
+      "b"
+    ],
+    "c": [
+      "k",
+      "θ"
+    ],
+    "ç": null,
+    "d": [
+      "d"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "h": [
+      ""
+    ],
+    "j": [
+      "ʃ"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ñ": [
+      "ɲ"
+    ],
+    "p": [
+      "p"
+    ],
+    "q": [
+      "k"
+    ],
+    "r": [
+      "ɾ"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "v": [
+      "b"
+    ],
+    "x": [
+      "ʃ"
+    ],
+    "z": [
+      "θ"
+    ],
+    "ch": [
+      "tʃ"
+    ],
+    "ll": [
+      "ʎ"
+    ],
+    "nh": [
+      "ŋ"
+    ],
+    "rr": [
+      "r"
+    ],
+    "qu": [
+      "k"
+    ],
+    "gu": [
+      "ɡ"
+    ],
+    "ss": [
+      "s"
+    ],
+    "ai": [
+      "aj"
+    ],
+    "au": [
+      "aw"
+    ],
+    "ei": [
+      "ej"
+    ],
+    "eu": [
+      "ew"
+    ],
+    "oi": [
+      "oj"
+    ],
+    "ou": [
+      "ow"
+    ],
+    "ui": [
+      "uj"
+    ],
+    "iu": [
+      "iw"
+    ],
+    "ia": [
+      "ja"
+    ],
+    "ie": [
+      "je"
+    ],
+    "io": [
+      "jo"
+    ],
+    "ua": [
+      "wa"
+    ],
+    "ue": [
+      "we"
+    ],
+    "uo": [
+      "wo"
+    ]
+  },
+  "allophones": {
+    "b": [
+      "b",
+      "β"
+    ],
+    "d": [
+      "d",
+      "ð"
+    ],
+    "ɡ": [
+      "ɡ",
+      "ɣ"
+    ],
+    "p": [
+      "p"
+    ],
+    "t": [
+      "t"
+    ],
+    "k": [
+      "k"
+    ],
+    "f": [
+      "f"
+    ],
+    "v": [
+      "β"
+    ],
+    "s": [
+      "s"
+    ],
+    "θ": [
+      "θ"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "tʃ": [
+      "tʃ"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n",
+      "ŋ"
+    ],
+    "ɲ": [
+      "ɲ"
+    ],
+    "l": [
+      "l"
+    ],
+    "ʎ": [
+      "ʎ"
+    ],
+    "ɾ": [
+      "ɾ"
+    ],
+    "r": [
+      "r"
+    ],
+    "j": [
+      "j"
+    ],
+    "w": [
+      "w"
+    ],
+    "a": [
+      "a"
+    ],
+    "e": [
+      "e"
+    ],
+    "ɛ": [
+      "ɛ"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "o"
+    ],
+    "ɔ": [
+      "ɔ"
+    ],
+    "u": [
+      "u"
+    ],
+    "ŋ": [
+      "ŋ"
+    ]
+  },
+  "positional_graphemes": {
+    "b": {
+      "default": [
+        "b"
+      ],
+      "intervocalic": [
+        "β"
+      ]
+    },
+    "d": {
+      "default": [
+        "d"
+      ],
+      "intervocalic": [
+        "ð"
+      ]
+    },
+    "g": {
+      "default": [
+        "ɡ"
+      ],
+      "intervocalic": [
+        "ɣ"
+      ]
+    },
+    "v": {
+      "default": [
+        "b"
+      ],
+      "intervocalic": [
+        "β"
+      ]
+    },
+    "s": {
+      "default": [
+        "s"
+      ],
+      "intervocalic": [
+        "s"
+      ],
+      "before_consonant": [
+        "s"
+      ],
+      "word_final": [
+        "s"
+      ]
+    },
+    "r": {
+      "word_initial": [
+        "r"
+      ],
+      "intervocalic": [
+        "ɾ"
+      ],
+      "onset": [
+        "ɾ"
+      ],
+      "before_consonant": [
+        "ɾ"
+      ],
+      "word_final": [
+        "ɾ"
+      ]
+    },
+    "n": {
+      "default": [
+        "n"
+      ],
+      "before_consonant": [
+        "n",
+        "ŋ"
+      ],
+      "word_final": [
+        "n",
+        "ŋ"
+      ]
+    },
+    "gu": {
+      "before_a": [
+        "ɡw"
+      ],
+      "before_o": [
+        "ɡw"
+      ],
+      "before_e": [
+        "ɡ"
+      ],
+      "before_i": [
+        "ɡ"
+      ],
+      "default": [
+        "ɡ"
+      ]
+    }
+  },
+  "parent": "roa-x-galaicopt",
+  "ancestors": [
+    {
+      "code": "roa-x-galaicopt",
+      "role": "parent",
+      "weight": 0.78,
+      "notes": "Primary descent from Hispanic Vulgar Latin"
+    },
+    {
+      "code": "cel",
+      "role": "substrate",
+      "weight": 0.06,
+      "notes": "Gallaecian Celtic substrate: strongest in NW Iberia; castros, toponyms; cf. Moralejo Lasso (1977)"
+    },
+    {
+      "code": "xlg",
+      "role": "substrate",
+      "weight": 0.04,
+      "notes": "Lusitanian substrate: southern Gallaecia overlap"
+    },
+    {
+      "code": "gem-x-suebi",
+      "role": "superstrate",
+      "weight": 0.06,
+      "notes": "Suebi superstrate: STRONGEST in Galicia — capital at Braga; Suevic kingdom 411-585 CE; cf. Piel (1937)"
+    },
+    {
+      "code": "got",
+      "role": "superstrate",
+      "weight": 0.03,
+      "notes": "Visigothic superstrate (post-585 CE conquest of Suebi)"
+    },
+    {
+      "code": "xaa",
+      "role": "adstrate",
+      "weight": 0.03,
+      "notes": "Arabic adstrate: minimal in NW (reconquered by ~11th c.)"
+    }
+  ],
+  "notes": "Standard Galician per RAG norms. Gheada not reflected in standard. Standard Galician has interdental /θ/ (distinción); seseo is western-dialectal (see gl-x-occidental), not standard. Standard-Galician traits distinguishing it from Portuguese: ⟨g⟩ is /ɡ/ only (no [ʃ] alternant); no unstressed vowel reduction, /a/ stays [a] (Regueira 1996:119); RAG orthography uses only acute accents (no ⟨ç⟩, ⟨ê⟩, ⟨ô⟩, ⟨ão⟩ — those are Portuguese spellings); no voiced sibilants (no intervocalic /s/→[z] voicing); ⟨nh⟩ is the velar nasal /ŋ/ (e.g. unha), not palatal /ɲ/.",
+  "quality": "research",
+  "script_type": "alphabet",
+  "sources": [
+    {
+      "id": "freixeiro_mato1998",
+      "author": "Freixeiro Mato, X.R.",
+      "year": 1998,
+      "title": "Gramática da Lingua Galega",
+      "publisher": "A Nosa Terra",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "mateus_dandrade2000",
+      "author": "Mateus, M.H.M. & d'Andrade, E.",
+      "year": 2000,
+      "title": "The Phonology of Portuguese",
+      "publisher": "Oxford University Press",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "carballo_calero1979",
+      "author": "Carballo Calero, R.",
+      "year": 1979,
+      "title": "Gramática elemental del gallego común (7th ed.)",
+      "publisher": "Galaxia",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "regueira1996",
+      "author": "Regueira, X.L.",
+      "year": 1996,
+      "title": "Galician (Illustrations of the IPA)",
+      "publisher": "Journal of the International Phonetic Association 26(2)",
+      "url": "https://www.cambridge.org/core/journals/journal-of-the-international-phonetic-association/article/galician/12F7CB857C4D8CD3B8634FBD250580CF",
+      "pages": "119-122",
+      "notes": "p.119: standard Galician vowel system /i e ɛ a ɔ o u/ with no unstressed reduction; consonant /θ/ present; standard shows neither seseo nor gheada."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Galician_language",
+    "https://gl.wikipedia.org/wiki/Lingua_galega",
+    "https://es.wikipedia.org/wiki/Idioma_gallego"
+  ],
+  "timespan": {
+    "start_year": 1300,
+    "end_year": null
+  },
+  "glottolog_code": "gali1258",
+  "iso639_3": "glg",
+  "location": {
+    "latitude": 42.2446,
+    "longitude": -7.5343,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Galician."
+  }
+}

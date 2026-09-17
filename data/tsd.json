@@ -1,0 +1,84 @@
+{
+  "code": "tsd",
+  "name": "Tsakonian",
+  "script": "Greek",
+  "script_type": "alphabet",
+  "quality": "skeleton",
+  "iso639_3": "tsd",
+  "glottolog_code": "tsak1248",
+  "wikidata_qid": "Q220607",
+  "graphemes_base": "el",
+  "graphemes": {
+    "σχ": [
+      "ʃ"
+    ],
+    "τσχ": [
+      "tʃ"
+    ],
+    "τθ": [
+      "tʰ"
+    ],
+    "κχ": [
+      "kʰ"
+    ],
+    "πφ": [
+      "pʰ"
+    ],
+    "ρζ": [
+      "ʒ"
+    ]
+  },
+  "allophones_base": "el",
+  "allophones": {
+    "ʃ": [
+      "ʃ"
+    ],
+    "tʃ": [
+      "tʃ"
+    ],
+    "tʰ": [
+      "tʰ"
+    ],
+    "kʰ": [
+      "kʰ"
+    ],
+    "pʰ": [
+      "pʰ"
+    ],
+    "ʒ": [
+      "ʒ"
+    ]
+  },
+  "parent": "x-clade-doric-greek",
+  "ancestors": [
+    {
+      "code": "x-clade-doric-greek",
+      "role": "parent_dialect",
+      "weight": 1.0,
+      "notes": "Only living descendant of Doric Greek (likely of Laconic Doric), not of Attic-Ionic/Koine like every other modern Greek variety (Wikipedia: Tsakonian language; Wikipedia: Doric Greek)."
+    }
+  ],
+  "notes": "Tsakonian (Τσακωνικά), spoken around Mount Parnon in the eastern Peloponnese (Leonidio, Tyros, Prastos, Kastanitsa). Uses the standard Greek alphabet plus digraphs for sounds absent from, or uncommon in, Demotic Greek: ⟨σχ⟩=[ʃ] (like German ‘sch’), ⟨τσχ⟩=[tʃ], ⟨τθ κχ πφ⟩=aspirated stops [tʰ kʰ pʰ], ⟨ρζ⟩=[ʒ] (corrected from an earlier draft's [rʒ] after checking the Wikipedia transcription table, which gives ρζ as the voiced postalveolar fricative alone, not a cluster). Most of these digraphs are not the concatenation of their parts under the standard Greek reading (σ+χ would give [sx], not [ʃ]) so they earn grapheme keys of their own under AGENTS.md §2 test 1. ⟨τσχ⟩ is the one exception where the surface IPA happens to equal the concatenation of ⟨τ⟩=[t] and the already-registered ⟨σχ⟩=[ʃ]; its key is still legitimate under §2 test 2 because [tʃ] is a single affricate segment, not a consonant cluster — the same rationale AGENTS.md gives for ⟨dž⟩/⟨ts⟩. Costakis also devised a diacritic-based alternative orthography, not modelled here. Base Greek-letter inventory inherited from Modern Greek (`el`) since Tsakonian orthography otherwise follows the standard Greek alphabet; this is a spelling-convenience inheritance only — Tsakonian's genetic ancestry is Doric, not the Attic-Ionic/Koine line `el` descends from, so `parent`/`ancestors` route through the Doric Greek clade instead of `el` or `grc`. Not independently verified against a phonology monograph (e.g. Costakis 1951) beyond the cited Wikipedia summary; quality kept at `skeleton` pending a primary-source pass.",
+  "sources": [
+    {
+      "id": "wiki-tsd",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Tsakonian language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Tsakonian_language"
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Tsakonian_language"
+  ],
+  "timespan": {
+    "start_year": 1500,
+    "end_year": null
+  },
+  "location": {
+    "latitude": 37.1667,
+    "longitude": 22.85,
+    "source": "wikipedia",
+    "notes": "Tsakonia region, eastern Peloponnese, around Mount Parnon (Leonidio/Tyros area)."
+  }
+}

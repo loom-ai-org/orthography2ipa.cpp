@@ -1,0 +1,151 @@
+{
+  "code": "tzm",
+  "name": "Central Atlas Tamazight",
+  "script": "Tifinagh",
+  "script_type": "abjad",
+  "quality": "research",
+  "graphemes": {
+    "ⴳⵯ": [
+      "ɡʷ"
+    ],
+    "ⴽⵯ": [
+      "kʷ"
+    ],
+    "ⴰ": [
+      "a"
+    ],
+    "ⴱ": [
+      "b"
+    ],
+    "ⴳ": [
+      "ɡ"
+    ],
+    "ⴷ": [
+      "d"
+    ],
+    "ⴹ": [
+      "dˤ"
+    ],
+    "ⴻ": [
+      "ə"
+    ],
+    "ⴼ": [
+      "f"
+    ],
+    "ⴽ": [
+      "k"
+    ],
+    "ⵀ": [
+      "h"
+    ],
+    "ⵃ": [
+      "ħ"
+    ],
+    "ⵄ": [
+      "ʕ"
+    ],
+    "ⵅ": [
+      "χ"
+    ],
+    "ⵇ": [
+      "q"
+    ],
+    "ⵉ": [
+      "i"
+    ],
+    "ⵊ": [
+      "ʒ"
+    ],
+    "ⵍ": [
+      "l"
+    ],
+    "ⵎ": [
+      "m"
+    ],
+    "ⵏ": [
+      "n"
+    ],
+    "ⵓ": [
+      "u"
+    ],
+    "ⵔ": [
+      "r"
+    ],
+    "ⵕ": [
+      "rˤ"
+    ],
+    "ⵖ": [
+      "ɣ"
+    ],
+    "ⵙ": [
+      "s"
+    ],
+    "ⵚ": [
+      "sˤ"
+    ],
+    "ⵛ": [
+      "ʃ"
+    ],
+    "ⵜ": [
+      "t"
+    ],
+    "ⵟ": [
+      "tˤ"
+    ],
+    "ⵡ": [
+      "w"
+    ],
+    "ⵢ": [
+      "j"
+    ],
+    "ⵣ": [
+      "z"
+    ],
+    "ⵥ": [
+      "zˤ"
+    ],
+    "ⵯ": [
+      "ʷ"
+    ]
+  },
+  "parent": "ber-x-kabyle-atlas",
+  "ancestors": [
+    {
+      "code": "ber-x-kabyle-atlas",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Descent per Glottolog classification of Central Moroccan Berber (cent2194)."
+    }
+  ],
+  "notes": "Skeleton. Central Atlas Tamazight, a Berber (Afroasiatic) language of Morocco written in IRCAM Neo-Tifinagh. Letters are mapped per the IRCAM standard, including the pharyngealized series ⴹ ⵟ ⵚ ⵕ ⵥ, the pharyngeals ⵃ ⵄ, uvulars ⵅ ⵇ, and the labiovelar digraphs ⴳⵯ ⴽⵯ (the ⵯ modifier is mapped to the labialization diacritic). Unlike an abjad, vowels a/i/u and schwa ⴻ are written, though schwa is often omitted in practice. Consonant gemination IS written, as a doubled letter, and the doubling carries straight through the grapheme map: 156 of the 690 wikipron gold entries have a doubled consonant in their transcription (⟨ⴰⴱⴰⴱⴱⵓⵥ⟩ ababbuzˤ, ⟨ⴰⴳⵍⵍⵉⴷ⟩ aɡllid) and the engine reproduces the doubling in 155 of them. No length diacritic appears anywhere in that gold, so gemination is scored as a repeated segment rather than as a length mark, which is the same convention the spec emits. Stress exemption: Central Atlas Tamazight, like Berber languages generally, has no phonemically contrastive lexical word stress predictable from the Tifinagh orthography modeled here; no stress block is declared. Source: Central Atlas Tamazight / Tifinagh, Wikipedia.",
+  "iso639_3": "tzm",
+  "glottolog_code": null,
+  "sources": [
+    {
+      "id": "tzm_glottolog",
+      "author": "Hammarström, H. et al. (Glottolog 5.0)",
+      "year": 2024,
+      "title": "Glottolog: Central Moroccan Berber (cent2194)",
+      "publisher": "Max Planck Institute for Evolutionary Anthropology",
+      "url": "https://glottolog.org/resource/languoid/id/cent2194",
+      "pages": null,
+      "notes": "Classification reference for a skeleton-tier entry.",
+      "wikipedia_url": null
+    },
+    {
+      "id": "tzm_wikipedia",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Central Atlas Tamazight / Tifinagh",
+      "publisher": "Wikipedia",
+      "url": null,
+      "pages": null,
+      "notes": "Orthography/phonology reference for a skeleton-tier entry.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Tifinagh"
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Central_Atlas_Tamazight",
+    "https://en.wikipedia.org/wiki/Tifinagh"
+  ]
+}

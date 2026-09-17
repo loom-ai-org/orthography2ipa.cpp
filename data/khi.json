@@ -1,0 +1,96 @@
+{
+  "code": "khi",
+  "name": "Khoisan (contact node)",
+  "family": "Khoe-Kwadi",
+  "script": "Latin",
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "i": [
+      "i"
+    ],
+    "u": [
+      "u"
+    ],
+    "e": [
+      "e"
+    ],
+    "o": [
+      "o"
+    ],
+    "p": [
+      "p"
+    ],
+    "t": [
+      "t"
+    ],
+    "k": [
+      "k"
+    ],
+    "b": [
+      "b"
+    ],
+    "d": [
+      "d"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "s": [
+      "s"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "l": [
+      "l"
+    ],
+    "r": [
+      "r"
+    ],
+    "w": [
+      "w"
+    ],
+    "j": [
+      "j"
+    ],
+    "h": [
+      "h"
+    ]
+  },
+  "allophones": {},
+  "notes": "STRUCTURAL CONTACT STUB (not a modelled G2P target). 'Khoisan' is a cover term for the click-using languages of southern Africa (Khoe, Tuu, Kxa). It is the classic substrate source of the click consonants borrowed into southern Bantu languages such as Zulu and Xhosa. It exists here only so those specs have a substrate node to resolve to; the grapheme set is a placeholder and no phonology is claimed (gn.json stub pattern).",
+  "quality": "stub",
+  "script_type": "alphabet",
+  "iso639_3": null,
+  "glottolog_code": "khoe1240",
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Khoisan_languages"
+  ],
+  "urls": [
+    "https://glottolog.org/resource/languoid/id/khoi1244"
+  ],
+  "sources": [
+    {
+      "id": "gueldemann2014",
+      "author": "Güldemann, T.",
+      "year": 2014,
+      "title": "'Khoisan' linguistic classification today",
+      "publisher": "John Benjamins",
+      "url": null,
+      "pages": null,
+      "notes": "Reference for the click substrate in southern Bantu (contact node only).",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Khoisan_languages"
+    }
+  ],
+  "location": {
+    "latitude": -19.716057,
+    "longitude": 16.673579,
+    "source": "glottolog",
+    "notes": "Glottolog's computed centroid for the Khoe-Kwadi family — a summary of a whole clade's range, not a place anyone speaks."
+  }
+}

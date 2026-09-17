@@ -1,0 +1,34 @@
+{
+  "code": "x-clade-cent2236",
+  "name": "Central Semitic",
+  "script": "Zyyy",
+  "quality": "stub",
+  "clade": true,
+  "graphemes": {},
+  "allophones": {},
+  "notes": "Classification-only clade node for the Central Semitic branch. Carries no phonology: it is never a data-inheritance source, only a step in the ancestry chain from which `family` is derived.",
+  "sources": [
+    {
+      "id": "glottolog2024",
+      "author": "Hammarström, Harald; Forkel, Robert; Haspelmath, Martin; Bank, Sebastian",
+      "year": 2024,
+      "title": "Glottolog 5.0",
+      "publisher": "Max Planck Institute for Evolutionary Anthropology",
+      "url": "https://glottolog.org/"
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Central_Semitic_languages"
+  ],
+  "parent": "sem-x-west",
+  "glottolog_code": "cent2236",
+  "urls": [
+    "https://glottolog.org/resource/languoid/id/cent2236"
+  ],
+  "location": {
+    "latitude": 26.148795,
+    "longitude": 39.671439,
+    "source": "glottolog",
+    "notes": "Glottolog's computed centroid for the Central Semitic family — a summary of a whole clade's range, not a place anyone speaks."
+  }
+}

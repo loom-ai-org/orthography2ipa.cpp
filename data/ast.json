@@ -1,0 +1,529 @@
+{
+  "code": "ast",
+  "glottolog_code": "astu1245",
+  "name": "Asturian",
+  "script": "Latin",
+  "quality": "research",
+  "script_type": "alphabet",
+  "parent": "x-clade-astu1244",
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "á": [
+      "a"
+    ],
+    "e": [
+      "e",
+      "ɛ"
+    ],
+    "é": [
+      "ɛ"
+    ],
+    "i": [
+      "i"
+    ],
+    "í": [
+      "i"
+    ],
+    "o": [
+      "o",
+      "ɔ"
+    ],
+    "ó": [
+      "ɔ"
+    ],
+    "u": [
+      "u"
+    ],
+    "ú": [
+      "u"
+    ],
+    "b": [
+      "b"
+    ],
+    "c": [
+      "k",
+      "θ"
+    ],
+    "ch": [
+      "tʃ"
+    ],
+    "d": [
+      "d"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "gu": [
+      "ɡ"
+    ],
+    "h": [
+      ""
+    ],
+    "ḥ": [
+      "h"
+    ],
+    "h.": [
+      "h"
+    ],
+    "j": [
+      "ʝ"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "ll": [
+      "ʎ"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ñ": [
+      "ɲ"
+    ],
+    "p": [
+      "p"
+    ],
+    "q": [
+      "k"
+    ],
+    "qu": [
+      "k"
+    ],
+    "r": [
+      "ɾ"
+    ],
+    "rr": [
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "ts": [
+      "ts"
+    ],
+    "v": [
+      "b"
+    ],
+    "w": [
+      "w"
+    ],
+    "x": [
+      "ʃ"
+    ],
+    "y": [
+      "ʝ",
+      "i"
+    ],
+    "yy": [
+      "kʲ"
+    ],
+    "z": [
+      "θ"
+    ],
+    "güe": [
+      "ɡwe"
+    ],
+    "güi": [
+      "ɡwi"
+    ],
+    "ia": [
+      "ja"
+    ],
+    "ie": [
+      "je"
+    ],
+    "io": [
+      "jo"
+    ],
+    "ua": [
+      "wa"
+    ],
+    "ue": [
+      "we"
+    ],
+    "uo": [
+      "wo"
+    ],
+    "ai": [
+      "aj"
+    ],
+    "ei": [
+      "ej"
+    ],
+    "oi": [
+      "oj"
+    ],
+    "au": [
+      "aw"
+    ],
+    "eu": [
+      "ew"
+    ],
+    "ou": [
+      "ow"
+    ],
+    "iu": [
+      "ju"
+    ],
+    "ui": [
+      "wi"
+    ]
+  },
+  "allophones": {
+    "p": [
+      "p"
+    ],
+    "b": [
+      "b",
+      "β"
+    ],
+    "t": [
+      "t"
+    ],
+    "d": [
+      "d",
+      "ð"
+    ],
+    "k": [
+      "k"
+    ],
+    "ɡ": [
+      "ɡ",
+      "ɣ"
+    ],
+    "tʃ": [
+      "tʃ"
+    ],
+    "ts": [
+      "ts"
+    ],
+    "f": [
+      "f"
+    ],
+    "θ": [
+      "θ"
+    ],
+    "s": [
+      "s̺"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "ʝ": [
+      "ʝ",
+      "ɟʝ"
+    ],
+    "h": [
+      "h"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n",
+      "ŋ"
+    ],
+    "ɲ": [
+      "ɲ"
+    ],
+    "l": [
+      "l"
+    ],
+    "ʎ": [
+      "ʎ"
+    ],
+    "ɾ": [
+      "ɾ"
+    ],
+    "r": [
+      "r"
+    ],
+    "j": [
+      "j"
+    ],
+    "w": [
+      "w"
+    ],
+    "a": [
+      "a"
+    ],
+    "e": [
+      "e"
+    ],
+    "ɛ": [
+      "ɛ"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "o"
+    ],
+    "ɔ": [
+      "ɔ"
+    ],
+    "u": [
+      "u"
+    ],
+    "kʲ": [
+      "kʲ"
+    ]
+  },
+  "positional_graphemes": {
+    "b": {
+      "intervocalic": [
+        "β"
+      ]
+    },
+    "d": {
+      "intervocalic": [
+        "ð"
+      ]
+    },
+    "g": {
+      "intervocalic": [
+        "ɣ"
+      ]
+    },
+    "c": {
+      "before_e": [
+        "θ"
+      ],
+      "before_i": [
+        "θ"
+      ]
+    },
+    "r": {
+      "word_initial": [
+        "r"
+      ],
+      "intervocalic": [
+        "ɾ"
+      ],
+      "before_consonant": [
+        "ɾ"
+      ],
+      "word_final": [
+        "ɾ"
+      ]
+    },
+    "n": {
+      "before_consonant": [
+        "n",
+        "ŋ"
+      ],
+      "word_final": [
+        "n",
+        "ŋ"
+      ]
+    },
+    "gu": {
+      "before_a": [
+        "ɡw"
+      ],
+      "before_o": [
+        "ɡw"
+      ],
+      "before_e": [
+        "ɡ"
+      ],
+      "before_i": [
+        "ɡ"
+      ],
+      "default": [
+        "ɡ"
+      ]
+    }
+  },
+  "ancestors": [
+    {
+      "code": "la-x-hispania",
+      "role": "parent",
+      "weight": 0.8,
+      "notes": "Primary descent from Hispanic Vulgar Latin, NW Iberian branch. Asturleonese diverged from Galaico-Portuguese roughly 9th–10th c. CE."
+    },
+    {
+      "code": "cel-x-gallaecia",
+      "role": "substrate",
+      "weight": 0.06,
+      "notes": "Gallaecian Celtic substrate: the Astures and neighbouring tribes of the Cantabrian coast shared cultural/linguistic affinities with the Gallaecian Celts. Castro culture influence; possible contribution to F-initial retention and prosodic patterns."
+    },
+    {
+      "code": "gem-x-suebi",
+      "role": "superstrate",
+      "weight": 0.05,
+      "notes": "Suebi (Germanic) superstrate: the Kingdom of the Suebi (411–585 CE) controlled Gallaecia and extended into the Asturian-Cantabrian zone. ~200 lexical items and place-names."
+    },
+    {
+      "code": "got",
+      "role": "superstrate",
+      "weight": 0.04,
+      "notes": "Visigothic superstrate: pan-Iberian Germanic overlay after 585 CE. Less intense in the far north; Asturias was never fully under Visigothic control."
+    },
+    {
+      "code": "xaa",
+      "role": "adstrate",
+      "weight": 0.03,
+      "notes": "Andalusi Arabic: minimal direct contact given the north's brief or absent Moorish occupation. Some lexical borrowings through the Reconquista and repopulation movements."
+    },
+    {
+      "code": "mxi",
+      "role": "adstrate",
+      "weight": 0.02,
+      "notes": "Mozarabic adstrate: Romance of the Christian communities under Moorish rule in central and southern Iberia. Indirect contact through repopulation of the meseta."
+    }
+  ],
+  "notes": "Modern Standard Asturian per the ALLA *Normes Ortográfiques* (8th ed., 2021). Spoken by ~100,000 speakers in the Principality of Asturias (Spain). KEY FEATURES distinguishing Asturian from Castilian: (1) ⟨x⟩ = /ʃ/ (voiceless postalveolar), not /x/ — 'xema' [ʃema] vs. Spanish 'jema' [xema]. (2) ⟨ll⟩ = /ʎ/ preserved (no yeísmo in standard). (3) Leonese diphthongs: Latin Ĕ → /ie/, Latin Ŏ → /ue/. (4) Latin F- preserved: 'falar', 'filu'. (5) Betacism: ⟨b⟩ = ⟨v⟩ = /b/. (6) No vowel reduction: 5-vowel system, unstressed vowels full. (7) Apico-alveolar /s/ [s̺] like Castilian. (8) Interdental /θ/ for ⟨z⟩ and ⟨c⟩ before e/i. (9) ⟨ch⟩ = /tʃ/ affricate. The family 'Asturleonese' also includes Leonese (nearly extinct in León), Mirandese (Miranda do Douro, Portugal), Rionorese and Guadramilese (Trás-os-Montes, Portugal). Sources: ALLA (2021), Cano González (2009), Penny (2002).",
+  "urls": [
+    "https://ast.wikipedia.org/wiki/Asturianu",
+    "https://mwl.wikipedia.org/wiki/Lh%C3%A9ngua_sturiana",
+    "https://en.wikipedia.org/wiki/Asturian_language",
+    "https://es.wikipedia.org/wiki/Asturiano_(asturleon%C3%A9s_de_Asturias)",
+    "https://pt.wikipedia.org/wiki/L%C3%ADngua_asturiana",
+    "https://an.wikipedia.org/wiki/Idioma_asturiano",
+    "https://gl.wikipedia.org/wiki/Lingua_asturiana",
+    "https://ast.wikipedia.org/wiki/Lleon%C3%A9s_(lling%C3%BC%C3%ADstica)",
+    "https://ast.wikipedia.org/wiki/Monta%C3%B1%C3%A9s",
+    "https://ast.wikipedia.org/wiki/Asturianu_oriental",
+    "https://ast.wikipedia.org/wiki/Asturianu_central",
+    "https://ast.wikipedia.org/wiki/Asturianu_occidental",
+    "https://ast.wikipedia.org/wiki/Lleon%C3%A9s_occidental",
+    "https://ast.wikipedia.org/wiki/Senabr%C3%A9s"
+  ],
+  "sources": [
+    {
+      "id": "garcia_arias2003",
+      "author": "García Arias, X.Ll.",
+      "year": 2003,
+      "title": "Gramática histórica de la lengua asturiana",
+      "publisher": "Academia de la Llingua Asturiana",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "alarcos_llorach1994",
+      "author": "Alarcos Llorach, E.",
+      "year": 1994,
+      "title": "Gramática de la Lengua Española",
+      "publisher": "Espasa",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "penny2002",
+      "author": "Penny, R.",
+      "year": 2002,
+      "title": "A History of the Spanish Language",
+      "publisher": "Cambridge University Press",
+      "url": null,
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Asturian_language",
+    "https://ast.wikipedia.org/wiki/Asturianu",
+    "https://es.wikipedia.org/wiki/Asturiano_(asturleon%C3%A9s_de_Asturias)"
+  ],
+  "timespan": {
+    "start_year": 900,
+    "end_year": null
+  },
+  "iso639_3": "ast",
+  "stress": {
+    "onset_clusters": ["bl", "br", "bɫ", "bɾ", "bʀ", "bʁ", "bʎ", "bχ", "dr", "dɾ", "dʀ", "dʁ", "dʎ", "dχ", "fl", "fr", "fɫ", "fɾ", "fʀ", "fʁ", "fʎ", "fχ", "kl", "kr", "kɫ", "kɾ", "kʀ", "kʁ", "kʎ", "kχ", "pl", "pr", "pɫ", "pɾ", "pʀ", "pʁ", "pʎ", "pχ", "tr", "tɾ", "tʀ", "tʁ", "tʎ", "tχ", "vl", "vr", "vɫ", "vɾ", "vʀ", "vʁ", "vʎ", "vχ", "ðr", "ðɾ", "ðʀ", "ðʁ", "ðʎ", "ðχ", "ɡl", "ɡr", "ɡɫ", "ɡɾ", "ɡʀ", "ɡʁ", "ɡʎ", "ɡχ", "ɣl", "ɣr", "ɣɫ", "ɣɾ", "ɣʀ", "ɣʁ", "ɣʎ", "ɣχ", "βl", "βr", "βɫ", "βɾ", "βʀ", "βʁ", "βʎ", "βχ"],
+    "cliticless_words": [
+      "el",
+      "la",
+      "lo",
+      "los",
+      "les",
+      "un",
+      "una",
+      "unos",
+      "unes",
+      "al",
+      "del",
+      "na",
+      "nel",
+      "nes",
+      "nos",
+      "pel",
+      "pela",
+      "ples",
+      "polos",
+      "a",
+      "de",
+      "en",
+      "con",
+      "por",
+      "sin",
+      "pa",
+      "ente",
+      "so",
+      "y",
+      "o",
+      "nin",
+      "que",
+      "si",
+      "me",
+      "te",
+      "se",
+      "yos",
+      "vos",
+      "lu",
+      "-y",
+      "-yos"
+    ],
+    "default_position": -2,
+    "final_stress_endings": [
+      "r",
+      "l",
+      "d",
+      "z",
+      "x",
+      "t",
+      "n",
+      "m",
+      "f"
+    ],
+    "penult_stress_endings": [
+      "s",
+      "ns"
+    ],
+    "marked_vowels": [
+      "á",
+      "é",
+      "í",
+      "ó",
+      "ú"
+    ],
+    "stress_mark": "ˈ",
+    "notes": "Asturian accentuation per the Gramática Asturiana (ALLA 2001): written accent wins. Default paroxytone. Words ending in a vowel or -s are paroxytone; words ending in any other consonant (r, l, d, z, x, t, n, m, f) are oxytone. Proparoxytones always carry a written accent. CLITICS: cliticless_words lists the Asturian pallabres atones (Academia de la Llingua Asturiana, Gramatica de la llingua asturiana, prosodia and l'articulu) — articles el/la/lo/los/les, indefinite un/una/unos/unes, the preposition+article contractions al/del/na/nel/pel/polos etc., the atonic prepositions a/de/en/con/por/sin/pa/ente/so, the conjunctions y/o/nin/que/si, and the weak object pronouns me/te/se/y(=lle)/yos/nos/vos/lu/la/los/les. Asturian is enclitic in affirmative finite clauses, but the clitic still bears no word stress."
+  },
+  "wikidata_qid": "Q29507",
+  "phoible_id": "astu1245",
+  "wals_code": "ast",
+  "location": {
+    "latitude": 42.4181,
+    "longitude": -6.02227,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Asturian-Leonese-Cantabrian."
+  }
+}

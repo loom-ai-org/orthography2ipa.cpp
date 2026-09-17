@@ -1,0 +1,203 @@
+{
+  "code": "ilo",
+  "name": "Ilocano",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "parent": "x-clade-mala1545",
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "b": [
+      "b"
+    ],
+    "d": [
+      "d"
+    ],
+    "e": [
+      "ɛ",
+      "ɯ"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "h": [
+      "h"
+    ],
+    "i": [
+      "i"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ng": [
+      "ŋ"
+    ],
+    "o": [
+      "o",
+      "u"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "ɾ"
+    ],
+    "rr": [
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "u": [
+      "u"
+    ],
+    "w": [
+      "w"
+    ],
+    "y": [
+      "j"
+    ],
+    "ts": [
+      "tʃ"
+    ],
+    "'": [
+      "ʔ"
+    ]
+  },
+  "allophones": {
+    "a": [
+      "a",
+      "ɐ"
+    ],
+    "b": [
+      "b"
+    ],
+    "d": [
+      "d"
+    ],
+    "ɛ": [
+      "ɛ",
+      "e"
+    ],
+    "ɯ": [
+      "ɯ"
+    ],
+    "ɡ": [
+      "ɡ"
+    ],
+    "h": [
+      "h"
+    ],
+    "i": [
+      "i",
+      "j"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ŋ": [
+      "ŋ"
+    ],
+    "o": [
+      "o"
+    ],
+    "u": [
+      "u",
+      "w"
+    ],
+    "p": [
+      "p"
+    ],
+    "ɾ": [
+      "ɾ"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "w": [
+      "w"
+    ],
+    "j": [
+      "j"
+    ],
+    "tʃ": [
+      "tʃ"
+    ],
+    "ʔ": [
+      "ʔ"
+    ]
+  },
+  "notes": "Ilocano (Iloko / Pagsasao nga Ilokano) — Northern Philippine (Austronesian) language of Luzon. Latin orthography; the digraph ⟨ng⟩ is a single letter /ŋ/. Native morphemes write /u/ as ⟨o⟩ in the ultima and ⟨u⟩ elsewhere, so ⟨o⟩ is ambiguous between /o/ and /u/. ⟨e⟩ is /ɛ~e/ in the nuclear dialects and loanwords but /ɯ/ in native words in non-nuclear dialects. ⟨r⟩ is a tap /ɾ/, ⟨rr⟩ a trill /r/. Unstressed /a/ is [ɐ] outside final syllables; /i/ and /u/ glide to [j]/[w] before another vowel. Glottal stop is phonemic but generally unwritten (⟨'⟩ / hyphen where marked).",
+  "iso639_3": "ilo",
+  "glottolog_code": "ilok1237",
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Ilocano_language",
+    "https://ilo.wikipedia.org/wiki/Pagsasao_nga_Ilokano"
+  ],
+  "sources": [
+    {
+      "id": "rubino2000",
+      "author": "Rubino, Carl R. Galvez",
+      "year": 2000,
+      "title": "Ilocano Dictionary and Grammar: Ilocano-English, English-Ilocano",
+      "publisher": "University of Hawai'i Press",
+      "url": null,
+      "pages": null,
+      "notes": "Reference grammar; orthography and phonology."
+    },
+    {
+      "id": "ilo_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Ilocano language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Ilocano_language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Ilocano_language",
+      "pages": null,
+      "notes": "Phonology and orthography tables."
+    }
+  ],
+  "ancestors": [
+    {
+      "code": "x-clade-mala1545",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Malayo-Polynesian, the Austronesian branch containing every Austronesian language outside Formosa."
+    }
+  ],
+  "location": {
+    "latitude": 15.9361,
+    "longitude": 120.993,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Iloko."
+  }
+}

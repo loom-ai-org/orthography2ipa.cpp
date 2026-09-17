@@ -1,0 +1,294 @@
+{
+  "code": "kpe",
+  "name": "Kpelle",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "e": [
+      "e"
+    ],
+    "ɛ": [
+      "ɛ"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "o"
+    ],
+    "ɔ": [
+      "ɔ"
+    ],
+    "u": [
+      "u"
+    ],
+    "á": [
+      "a"
+    ],
+    "à": [
+      "a"
+    ],
+    "â": [
+      "a"
+    ],
+    "é": [
+      "e"
+    ],
+    "è": [
+      "e"
+    ],
+    "ê": [
+      "e"
+    ],
+    "ɛ́": [
+      "ɛ"
+    ],
+    "ɛ̀": [
+      "ɛ"
+    ],
+    "ɛ̂": [
+      "ɛ"
+    ],
+    "í": [
+      "i"
+    ],
+    "ì": [
+      "i"
+    ],
+    "î": [
+      "i"
+    ],
+    "ó": [
+      "o"
+    ],
+    "ò": [
+      "o"
+    ],
+    "ô": [
+      "o"
+    ],
+    "ɔ́": [
+      "ɔ"
+    ],
+    "ɔ̀": [
+      "ɔ"
+    ],
+    "ɔ̂": [
+      "ɔ"
+    ],
+    "ú": [
+      "u"
+    ],
+    "ù": [
+      "u"
+    ],
+    "û": [
+      "u"
+    ],
+    "b": [
+      "ɓ"
+    ],
+    "d": [
+      "d"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "gb": [
+      "ɡ͡b"
+    ],
+    "j": [
+      "j"
+    ],
+    "k": [
+      "k"
+    ],
+    "kp": [
+      "k͡p"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ŋ": [
+      "ŋ"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "v": [
+      "v"
+    ],
+    "w": [
+      "w"
+    ],
+    "y": [
+      "j"
+    ],
+    "z": [
+      "z"
+    ],
+    "gh": [
+      "ɣ"
+    ]
+  },
+  "allophones": {
+    "a": [
+      "a"
+    ],
+    "e": [
+      "e"
+    ],
+    "ɛ": [
+      "ɛ"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "o"
+    ],
+    "ɔ": [
+      "ɔ"
+    ],
+    "u": [
+      "u"
+    ],
+    "ɓ": [
+      "ɓ"
+    ],
+    "d": [
+      "d"
+    ],
+    "f": [
+      "f"
+    ],
+    "ɡ": [
+      "ɡ"
+    ],
+    "ɡ͡b": [
+      "ɡ͡b"
+    ],
+    "j": [
+      "j"
+    ],
+    "k": [
+      "k"
+    ],
+    "k͡p": [
+      "k͡p"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ŋ": [
+      "ŋ"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "v": [
+      "v"
+    ],
+    "w": [
+      "w"
+    ],
+    "z": [
+      "z"
+    ],
+    "ɣ": [
+      "ɣ"
+    ]
+  },
+  "tone_inventory": {
+    "◌́": "high",
+    "◌̀": "low",
+    "◌̂": "falling (high-low)",
+    "unmarked": "mid"
+  },
+  "notes": "Kpelle (Kpɛlɛwoo), South Mande language of Liberia and Guinea, half a million speakers in Liberia alone. Written today with a Latin-based orthography (African Reference Alphabet letters ɓ ɛ ɔ ŋ); a separate indigenous Kpelle syllabary (Chief Gbili of Sanoyie, c. 1935) exists but is not the literacy standard and is not modelled here. Three-way level tone (high/mid/low) plus falling contour; mid is the unmarked default, high is acute, low is grave, falling (high-low) is the circumflex — each toned vowel letter is one written unit, not a vowel-plus-floating-diacritic sequence, so each combination gets its own key (Thach & Dwyer 1981, following the yo.json / ig.json tone-diacritic pattern already used in this dataset). ⟨b⟩ is the implosive /ɓ/, the only bilabial stop the language has outside the labial-velars ⟨kp⟩ /k͡p/ and ⟨gb⟩ /ɡ͡b/, which are single co-articulated segments, not clusters. ⟨gh⟩ is the voiced velar fricative /ɣ/, distinct from the plain stop ⟨g⟩ /ɡ/.",
+  "iso639_3": "kpe",
+  "glottolog_code": "kpel1252",
+  "wikidata_qid": "Q35673",
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Kpelle_language"
+  ],
+  "urls": [
+    "https://glottolog.org/resource/languoid/id/kpel1252",
+    "https://www.omniglot.com/writing/kpelle.htm"
+  ],
+  "sources": [
+    {
+      "id": "thach_dwyer1981",
+      "author": "Thach, Sara & Dwyer, David",
+      "year": 1981,
+      "title": "Kpelle phonology and grammar sketch",
+      "publisher": "Michigan State University African Studies Center",
+      "url": null,
+      "pages": "pp. 46-52, 49",
+      "notes": "Consonant/vowel inventory and tone-marking conventions."
+    },
+    {
+      "id": "kpelle_language_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Kpelle language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Kpelle_language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Kpelle_language",
+      "pages": null,
+      "notes": "Phonology, orthography and tone-marking sections."
+    }
+  ],
+  "location": {
+    "latitude": 7.35,
+    "longitude": -9.75,
+    "source": "glottolog",
+    "notes": "Central Liberia (Bong/Nimba region) — Glottolog's representative point for Kpelle."
+  },
+  "parent": "x-clade-mand1469",
+  "ancestors": [
+    {
+      "code": "x-clade-mand1469",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "South Mande branch of the Mande family (Glottolog kpel1252 under mand1469)."
+    }
+  ]
+}

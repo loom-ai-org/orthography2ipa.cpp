@@ -1,0 +1,426 @@
+{
+  "code": "sa-x-vedic",
+  "name": "Vedic Sanskrit",
+  "script": "Devanagari",
+  "graphemes": {
+    "अ": [
+      "ə"
+    ],
+    "आ": [
+      "aː"
+    ],
+    "इ": [
+      "i"
+    ],
+    "ई": [
+      "iː"
+    ],
+    "उ": [
+      "u"
+    ],
+    "ऊ": [
+      "uː"
+    ],
+    "ऋ": [
+      "r̩"
+    ],
+    "ॠ": [
+      "r̩ː"
+    ],
+    "ऌ": [
+      "l̩"
+    ],
+    "ए": [
+      "eː"
+    ],
+    "ऐ": [
+      "əi"
+    ],
+    "ओ": [
+      "oː"
+    ],
+    "औ": [
+      "əu"
+    ],
+    "ा": [
+      "aː"
+    ],
+    "ि": [
+      "i"
+    ],
+    "ी": [
+      "iː"
+    ],
+    "ु": [
+      "u"
+    ],
+    "ू": [
+      "uː"
+    ],
+    "ृ": [
+      "r̩"
+    ],
+    "ॄ": [
+      "r̩ː"
+    ],
+    "ॢ": [
+      "l̩"
+    ],
+    "े": [
+      "eː"
+    ],
+    "ै": [
+      "əi"
+    ],
+    "ो": [
+      "oː"
+    ],
+    "ौ": [
+      "əu"
+    ],
+    "ं": [
+      "̃ŋ"
+    ],
+    "ः": [
+      "h"
+    ],
+    "ँ": [
+      "̃"
+    ],
+    "्": [
+      ""
+    ],
+    "क": [
+      "k"
+    ],
+    "ख": [
+      "kʰ"
+    ],
+    "ग": [
+      "ɡ"
+    ],
+    "घ": [
+      "ɡʱ"
+    ],
+    "ङ": [
+      "ŋ"
+    ],
+    "च": [
+      "tɕ"
+    ],
+    "छ": [
+      "tɕʰ"
+    ],
+    "ज": [
+      "dʑ"
+    ],
+    "झ": [
+      "dʑʱ"
+    ],
+    "ञ": [
+      "ɲ"
+    ],
+    "ट": [
+      "ʈ"
+    ],
+    "ठ": [
+      "ʈʰ"
+    ],
+    "ड": [
+      "ɖ"
+    ],
+    "ढ": [
+      "ɖʱ"
+    ],
+    "ण": [
+      "ɳ"
+    ],
+    "त": [
+      "t̪"
+    ],
+    "थ": [
+      "t̪ʰ"
+    ],
+    "द": [
+      "d̪"
+    ],
+    "ध": [
+      "d̪ʱ"
+    ],
+    "न": [
+      "n̪"
+    ],
+    "प": [
+      "p"
+    ],
+    "फ": [
+      "pʰ"
+    ],
+    "ब": [
+      "b"
+    ],
+    "भ": [
+      "bʱ"
+    ],
+    "म": [
+      "m"
+    ],
+    "य": [
+      "j"
+    ],
+    "र": [
+      "r"
+    ],
+    "ल": [
+      "l"
+    ],
+    "व": [
+      "ʋ"
+    ],
+    "श": [
+      "ɕ"
+    ],
+    "ष": [
+      "ʂ"
+    ],
+    "स": [
+      "s"
+    ],
+    "ह": [
+      "ɦ"
+    ],
+    "क्ष": [
+      "kʂ"
+    ],
+    "ज्ञ": [
+      "dʑɲ"
+    ],
+    "त्र": [
+      "t̪r"
+    ],
+    "ळ": [
+      "ɭ"
+    ],
+    "॑": [
+      ""
+    ],
+    "॒": [
+      ""
+    ]
+  },
+  "allophones": {
+    "k": [
+      "k"
+    ],
+    "kʰ": [
+      "kʰ"
+    ],
+    "ɡ": [
+      "ɡ"
+    ],
+    "ɡʱ": [
+      "ɡʱ"
+    ],
+    "tɕ": [
+      "tɕ"
+    ],
+    "tɕʰ": [
+      "tɕʰ"
+    ],
+    "dʑ": [
+      "dʑ"
+    ],
+    "dʑʱ": [
+      "dʑʱ"
+    ],
+    "ʈ": [
+      "ʈ"
+    ],
+    "ʈʰ": [
+      "ʈʰ"
+    ],
+    "ɖ": [
+      "ɖ"
+    ],
+    "ɖʱ": [
+      "ɖʱ"
+    ],
+    "t̪": [
+      "t̪"
+    ],
+    "t̪ʰ": [
+      "t̪ʰ"
+    ],
+    "d̪": [
+      "d̪"
+    ],
+    "d̪ʱ": [
+      "d̪ʱ"
+    ],
+    "p": [
+      "p"
+    ],
+    "pʰ": [
+      "pʰ"
+    ],
+    "b": [
+      "b"
+    ],
+    "bʱ": [
+      "bʱ"
+    ],
+    "m": [
+      "m"
+    ],
+    "n̪": [
+      "n̪",
+      "n",
+      "ŋ",
+      "ɲ",
+      "ɳ"
+    ],
+    "ɳ": [
+      "ɳ"
+    ],
+    "ɲ": [
+      "ɲ"
+    ],
+    "ŋ": [
+      "ŋ"
+    ],
+    "ɕ": [
+      "ɕ"
+    ],
+    "ʂ": [
+      "ʂ"
+    ],
+    "s": [
+      "s"
+    ],
+    "ɦ": [
+      "ɦ"
+    ],
+    "h": [
+      "h"
+    ],
+    "r": [
+      "r"
+    ],
+    "l": [
+      "l"
+    ],
+    "ʋ": [
+      "ʋ",
+      "w"
+    ],
+    "j": [
+      "j"
+    ],
+    "r̩": [
+      "r̩"
+    ],
+    "l̩": [
+      "l̩"
+    ],
+    "ə": [
+      "ə"
+    ],
+    "aː": [
+      "aː"
+    ],
+    "i": [
+      "i"
+    ],
+    "iː": [
+      "iː"
+    ],
+    "u": [
+      "u"
+    ],
+    "uː": [
+      "uː"
+    ],
+    "r̩ː": [
+      "r̩ː"
+    ],
+    "eː": [
+      "eː"
+    ],
+    "oː": [
+      "oː"
+    ],
+    "əi": [
+      "əi"
+    ],
+    "əu": [
+      "əu"
+    ],
+    "ɭ": [
+      "ɭ"
+    ]
+  },
+  "parent": "x-clade-indo1321",
+  "ancestors": [
+    {
+      "code": "ine",
+      "role": "parent",
+      "weight": 0.97,
+      "notes": "Archaic direct descendant of PIE"
+    }
+  ],
+  "notes": "Vedic Sanskrit (c. 1500–600 BCE), earlier than Classical Sanskrit. Retains pitch accent system (udātta/anudātta/svarita). Includes retroflex lateral ⟨ळ⟩ /ɭ/ lost in Classical Sanskrit. Source: Macdonell (1910), *Vedic Grammar*.",
+  "quality": "research",
+  "script_type": "abugida",
+  "inherent_vowel": "ə",
+  "sources": [
+    {
+      "id": "macdonell1910",
+      "author": "Macdonell, A.A.",
+      "year": 1910,
+      "title": "Vedic Grammar",
+      "publisher": "Trübner",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "masica1991",
+      "author": "Masica, C.",
+      "year": 1991,
+      "title": "The Indo-Aryan Languages",
+      "publisher": "Cambridge University Press",
+      "url": null,
+      "pages": null,
+      "notes": null,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Indo-Aryan_languages"
+    },
+    {
+      "id": "fortson2010",
+      "author": "Fortson, B.W.",
+      "year": 2010,
+      "title": "Indo-European Language and Culture: An Introduction",
+      "publisher": "Blackwell",
+      "url": null,
+      "pages": null,
+      "notes": null,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Indo-European_languages"
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Vedic_Sanskrit",
+    "https://sa.wikipedia.org/wiki/%E0%A4%B5%E0%A5%88%E0%A4%A6%E0%A4%BF%E0%A4%95%E0%A4%B8%E0%A4%82%E0%A4%B8%E0%A5%8D%E0%A4%95%E0%A5%83%E0%A4%A4%E0%A4%AE%E0%A5%8D"
+  ],
+  "timespan": {
+    "start_year": -1500,
+    "end_year": -600
+  },
+  "glottolog_code": "vedi1234",
+  "iso639_3": "san",
+  "wikidata_qid": "Q36858",
+  "location": {
+    "latitude": 20.0,
+    "longitude": 77.0,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Vedic Sanskrit."
+  }
+}

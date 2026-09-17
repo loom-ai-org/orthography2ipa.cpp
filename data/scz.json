@@ -1,0 +1,38 @@
+{
+ "code": "scz",
+ "name": "Shaetlan",
+ "parent": "sco",
+ "notes": "REGISTRY STUB (not a modelled G2P target). No orthography or phonology is claimed. No glottolog_code: this ISO 639-3 code post-dates the Glottolog 5.0 export and has no languoid there yet. Shaetlan (Shetland dialect), a Scots variety with a Norn substrate spoken in Shetland; parented to Scots.",
+ "iso639_3": "scz",
+ "wikipedia": [
+  "https://en.wikipedia.org/wiki/Shetland_dialect"
+ ],
+ "ancestors": [
+  {
+   "code": "sco",
+   "role": "parent",
+   "weight": 0.85,
+   "notes": "Scots base."
+  },
+  {
+   "code": "non",
+   "role": "substrate",
+   "weight": 0.1,
+   "notes": "Norn (Old Norse) substrate in Shetland."
+  }
+ ],
+ "script": "Zyyy",
+ "quality": "stub",
+ "graphemes": {},
+ "allophones": {},
+ "sources": [
+  {
+   "id": "iso639-3-2024",
+   "author": "SIL International",
+   "year": 2024,
+   "title": "ISO 639-3 code tables",
+   "publisher": "SIL International",
+   "url": "https://iso639-3.sil.org/"
+  }
+ ]
+}

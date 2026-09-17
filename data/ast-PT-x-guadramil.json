@@ -1,0 +1,102 @@
+{
+  "code": "ast-PT-x-guadramil",
+  "name": "Guadramilese",
+  "script": "Latin",
+  "parent": "ast-PT-x-medieval",
+  "graphemes_base": "ast-PT-x-rionor",
+  "allophones_base": "ast-PT-x-rionor",
+  "positional_graphemes_base": "ast-PT-x-rionor",
+  "ancestors": [
+    {
+      "code": "ast-PT-x-medieval",
+      "role": "parent",
+      "weight": 0.65,
+      "notes": "Medieval Asturian-Leonese of Portugal: the common ancestor of Guadramilese, Rionorese, and Mirandese."
+    },
+    {
+      "code": "ast-PT-x-rionor",
+      "role": "adstrate",
+      "weight": 0.2,
+      "notes": "Rionorese sister dialect. Guadramil and Rio de Onor are 5 km apart; the two varieties share ~85% of their phonological rules and diverge principally in morphological paradigms (article system, imperfect 3pl suffix, imperfect of ir) and in a handful of sibilant and vowel realizations."
+    },
+    {
+      "code": "ast-x-sanabria",
+      "role": "adstrate",
+      "weight": 0.08,
+      "notes": "Sanabrian Leonese (Zamora province), geographically adjacent across the border. Shared features include betacism and θ-merger."
+    },
+    {
+      "code": "pt-PT-x-medieval",
+      "role": "adstrate",
+      "weight": 0.07,
+      "notes": "Old Portuguese adstrate: intensifying contact pressure from the 15th century onward drove Portuguesification of the article system and lexical replacement."
+    }
+  ],
+  "notes": "Guadramilese (guadramilés). SUB-ZONE DIPHTHONG NOTE (from Frías-Conde, El Habla de Sanabria, p. 3): The Guadramil sub-zone (Portuguese side) shows more extreme /wo/ diphthongization than the Spanish-side Sanabrian varieties: *cuorpo* (corpo), *cuarda* (corda), *muarto* (morto). This is the most extreme realization of Ŏ > /wo/ in the zone. Encoded via the graphemes_base inheritance from ast-PT-x-rionor (⟨uô⟩=/wɔ/, ⟨uâ⟩=/wɐ/). No dedicated Guadramil monograph exists; the sub-zone data is from the comparative table in the Sanabrese source.\n  ORIGINAL NOTES: Guadramilese (guadramilés), the nearly-extinct Asturleonese variety spoken in Guadramil, municipality of Vinhais, Bragança district, Portugal — approximately 5 km south of Rio de Onor along the Portuguese-Spanish border. Fewer than 50 speakers as of the early 2000s. No dedicated linguistic monograph exists. Primary data source: Miro (2026) Paper III ('One Recording, Zero Grammar'), which analyses a ~400-word transcript of two elderly speakers describing traditional wedding customs. Supporting sources: Carvalho (1984) comparative notes; Santos (1967) 'falares fronteiriços de Trás-os-Montes'. PHONOLOGICAL PROFILE: Guadramilese is phonologically near-identical to Rionorese — all grapheme-to-IPA rules are inherited via graphemes_base from ast-PT-x-rionor. The shared Astur-Leonese phonological core includes: full betacism (v→b), Leonese e-diphthongization (e→ie), o-diphthongization (o→uo), e-syncope before s+C, imperfect -aba/-ában, ch→ʃ, tch→tʃ, x→ʃ, ç/z→s and c+e/i→s (SESEO — merged with Galician [s], not the Castilian interdental [θ]; Vasconcelos EPM II p.54 documents this galego-merger specifically for guadramilês, and it is the positive evidence for the [s] reflex now inherited from ast-PT-x-rionor), g+e/i→x, positional rhotics (trill word-initial/post-C, flap elsewhere). DIVERGENCES FROM RIONORESE (morphological/lexical — not encodable in grapheme→IPA system, documented here for reference): (1) MASCULINE SINGULAR ARTICLE: Guadramilese uses Portuguese 'o' (not Rionorese/Leonese 'al'). Feminine 'la', masculine plural 'los', feminine plural 'las' remain Leonese — a frequency-driven partial paradigm replacement audio-confirmed in Paper III §5.1. Code-switching analysis rules out transcription artefact: INF2, the most dialectal speaker, consistently produces 'o noibo', 'o cura', 'o almuorço' (Portuguese article + maximally dialectal noun). This is the highest-confidence Guadramilese isogloss. (2) 3PL IMPERFECT 3RD CONJUGATION: '-ien' (dezien, fazien, salíen) vs. Rionorese '-ian'. 3 consistent attestations, no counter-examples. Aligns with central Asturian; Rionorese aligns with the western pattern. (3) IMPERFECT OF 'ir': 'diba/diban' (from Leonese infinitive stem 'dir-', regularized: dir→diba as tener→tenia). 6+ attestations, no counter-examples. Not documented in Rionorese; represents a morphological innovation (paradigm leveling of the suppletive ir/iba pair). (4) 1SG PRONOUN: 'you' [jow] vs. Rionorese 'ieu/iou' [jew]. Both Leonese forms (cf. Asturian 'yo', Mirandese 'you'). (5) PRODUCTIVE e-SYNCOPE: es+C→s+C extends productively beyond 'estar→star' to general position (smola < esmola). Rionorese treats only 'estar' as a lexical exception. (6) con-→cum- PREFIX RAISING: /o/→/u/ in unstressed prefix before voiced C (cumbidaba < convidava, cumbersar < conversar). 2 attestations; not confirmed in Rionorese. (7) SIBILANT REALIZATION (low-confidence, tentative): transcript 'diç' may indicate Guadramilese retains dental /θ/ or /s/ where Rionorese shifted to palatal /ʃ/ in the 'dizer' paradigm — but this may be a transcription artefact. Requires audio confirmation. Not encoded in this spec.",
+  "sources": [
+    {
+      "id": "frias_conde_sanabria",
+      "author": "Frías-Conde, Xavier",
+      "year": 2005,
+      "title": "El Habla de Sanabria",
+      "publisher": "CES Don Bosco (UCM); ISR Romania Minor",
+      "pages": "p. 3",
+      "notes": "Sub-zone data for Guadramil: extreme /wo/ diphthong variants cuorpo, cuarda, muarto (p. 3 comparative table). Year is approximate (undated document)."
+    },
+    {
+      "id": "ferreira1995",
+      "author": "Ferreira, M.B.",
+      "year": 1995,
+      "title": "Variação linguística: perspectiva dialectológica",
+      "publisher": "Universidade de Lisboa",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "mateus_dandrade2000",
+      "author": "Mateus, M.H.M. & d'Andrade, E.",
+      "year": 2000,
+      "title": "The Phonology of Portuguese",
+      "publisher": "Oxford University Press",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "penny2002",
+      "author": "Penny, R.",
+      "year": 2002,
+      "title": "A History of the Spanish Language",
+      "publisher": "Cambridge University Press",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "vasconcelos1900",
+      "author": "Vasconcelos, J. Leite de",
+      "year": 1900,
+      "title": "Estudos de Philologia Mirandesa (Vol. II)",
+      "publisher": "Imprensa Nacional, Lisboa",
+      "url": "https://archive.org/details/estudosdephilolo02leit",
+      "pages": "54",
+      "notes": "EPM II p. 54 documents guadramilês merging its ⟨ç⟩/⟨c⟩+e,i (and ⟨z⟩) predorsal sibilant with the Galician [s] (seseo), not the Castilian interdental [θ] — the positive evidence for the seseante [s] reflex inherited here from ast-PT-x-rionor."
+    }
+  ],
+  "wikipedia": [
+    "https://pt.wikipedia.org/wiki/Guadramil"
+  ],
+  "timespan": {
+    "start_year": 1200,
+    "end_year": null
+  },
+  "iso639_3": "ast",
+  "quality": "research",
+  "location": {
+    "latitude": 41.9153,
+    "longitude": -6.5697,
+    "source": "wikidata",
+    "notes": "Guadramil (Bragança) — the single border village the variety is spoken in. [Wikidata Q8965253 P625]"
+  }
+}

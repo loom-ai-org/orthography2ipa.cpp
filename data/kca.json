@@ -1,0 +1,322 @@
+{
+ "code": "kca",
+ "name": "Khanty",
+ "script": "Cyrillic",
+ "script_type": "alphabet",
+ "quality": "research",
+ "graphemes": {
+  "а": [
+   "a"
+  ],
+  "ӓ": [
+   "æ"
+  ],
+  "б": [
+   "b"
+  ],
+  "в": [
+   "w"
+  ],
+  "г": [
+   "ɣ"
+  ],
+  "д": [
+   "d"
+  ],
+  "е": [
+   "je",
+   "e̞"
+  ],
+  "ё": [
+   "jo",
+   "o̞"
+  ],
+  "ж": [
+   "ʒ"
+  ],
+  "з": [
+   "z"
+  ],
+  "и": [
+   "i"
+  ],
+  "й": [
+   "j"
+  ],
+  "к": [
+   "k"
+  ],
+  "л": [
+   "l"
+  ],
+  "ле": [
+   "ʎe"
+  ],
+  "лё": [
+   "ʎo"
+  ],
+  "ли": [
+   "ʎi"
+  ],
+  "лю": [
+   "ʎu"
+  ],
+  "ля": [
+   "ʎa"
+  ],
+  "ль": [
+   "ʎ"
+  ],
+  "ӆ": [
+   "ɬ"
+  ],
+  "м": [
+   "m"
+  ],
+  "н": [
+   "n"
+  ],
+  "не": [
+   "ɲe"
+  ],
+  "нё": [
+   "ɲo"
+  ],
+  "ни": [
+   "ɲi"
+  ],
+  "ню": [
+   "ɲu"
+  ],
+  "ня": [
+   "ɲa"
+  ],
+  "нь": [
+   "ɲ"
+  ],
+  "ӈ": [
+   "ŋ"
+  ],
+  "о": [
+   "o̞"
+  ],
+  "ӧ": [
+   "ɵ̞"
+  ],
+  "п": [
+   "p"
+  ],
+  "р": [
+   "r"
+  ],
+  "с": [
+   "s"
+  ],
+  "т": [
+   "t"
+  ],
+  "у": [
+   "u"
+  ],
+  "ӱ": [
+   "ʉ"
+  ],
+  "ф": [
+   "f"
+  ],
+  "х": [
+   "χ"
+  ],
+  "ц": [
+   "ts"
+  ],
+  "ч": [
+   "c"
+  ],
+  "ш": [
+   "ʃ"
+  ],
+  "щ": [
+   "ɕ"
+  ],
+  "ъ": [
+   ""
+  ],
+  "ы": [
+   "ɪ"
+  ],
+  "ь": [
+   "ʲ"
+  ],
+  "э": [
+   "ə"
+  ],
+  "ю": [
+   "ju",
+   "u"
+  ],
+  "я": [
+   "ja",
+   "a"
+  ]
+ },
+ "allophones": {
+  "c": [
+   "c",
+   "t̠ʃ"
+  ],
+  "j": [
+   "j",
+   "j̥"
+  ],
+  "kʰ": [
+   "k̟ʰ",
+   "kʰ"
+  ],
+  "l": [
+   "l̥",
+   "l"
+  ],
+  "m": [
+   "m̥",
+   "m"
+  ],
+  "n": [
+   "n",
+   "n̥"
+  ],
+  "r": [
+   "r̥",
+   "r"
+  ],
+  "tʰ": [
+   "t",
+   "tʰ"
+  ],
+  "w": [
+   "w",
+   "ʍ"
+  ],
+  "ŋ": [
+   "ŋ",
+   "ŋ̟",
+   "ŋ̥"
+  ],
+  "ɣ": [
+   "ɣ",
+   "x",
+   "ɣ̟"
+  ],
+  "ɭ": [
+   "ɭ̥",
+   "ɭ"
+  ],
+  "ɲ": [
+   "ɲ",
+   "ɲ̥"
+  ],
+  "ɳ": [
+   "ɳ̥",
+   "ɳ"
+  ],
+  "ʈʂ": [
+   "ʈʂ",
+   "ʈ"
+  ],
+  "ʎ": [
+   "l̥ʲ",
+   "ʎ"
+  ],
+  "e̞": [
+   "e̞",
+   "e̞"
+  ],
+  "ɒ̆": [
+   "ɒ̆",
+   "ə̆"
+  ],
+  "ɵ̞": [
+   "ɵ̞",
+   "ɵ̞"
+  ]
+ },
+ "notes": "Northern Khanty, Kazym dialect (standard literary Khanty), Ob-Ugric branch, Khanty-Mansi Autonomous Okrug, Russia. INPUT CONTRACT: modern Kazym Khanty Cyrillic orthography, NFC (⟨Ӓӓ Ӧӧ Ӱӱ Ӈӈ⟩ are precomposed characters; ⟨ӆ⟩ is the lateral fricative letter, distinct from plain ⟨л⟩). Orthography and phoneme values follow Nikolaeva (1999): ⟨в⟩ is the labio-velar approximant /w/, not Russian /v/; ⟨г⟩ is the fricative /ɣ/; ⟨х⟩ is the uvular fricative /χ/; ⟨ч⟩ is the palatal stop /c/ (not an affricate); ⟨ы⟩ is /ɪ/; ⟨э⟩ is /ə/. The coronals ⟨л⟩ and ⟨н⟩ palatalise to /ʎ/ and /ɲ/ before the iotated vowels ⟨е ё и ю я⟩ and the soft sign ⟨ь⟩ (Nikolaeva 1999, Sec. 2; directly evidenced by NorthEuraLex нёӆ -> ɲ o ɬ, i.e. ⟨нё⟩ realises the single palatal nasal + vowel, not н+jo), so those sequences are entered as multigraph keys the maximal-munch matcher prefers over the bare consonant. Word stress in Khanty is not phonemically distinctive and its placement is disputed among descriptions (Nikolaeva 1999, Sec. 1.3); documented here as an ENGINE-LIMIT stress exemption and not modelled. ITERATION FIX (error-analysis pass against NorthEuraLex): corrected ⟨ӆ⟩ from a retroflex-lateral reading to the lateral FRICATIVE /ɬ/ (NorthEuraLex паӆ -> p a ɬ, ӆыӆ -> ɬɪɬ), ⟨х⟩ from /x/ to the uvular /χ/ (NorthEuraLex тахты -> taχtɪ), ⟨ы⟩ from /ɯ/ to /ɪ/, ⟨э⟩ from /e̞/ to /ə/ (эӆ -> əɬ), and ⟨т⟩ from aspirated /tʰ/ to plain /t/ (NorthEuraLex тут -> tut shows no aspiration marked). Classification and coordinates follow Glottolog. BENCHMARK CAVEAT: the iteration fixes above were diagnosed against NorthEuraLex examples and the spec is scored on that same corpus, so the recorded PER partly reflects same-corpus tuning; each fix is independently cited to Nikolaeva 1999, but treat the number as favorable until a second gold source exists.",
+ "iso639_3": "kca",
+ "glottolog_code": "khan1273",
+ "sources": [
+  {
+   "id": "nikolaeva1999",
+   "author": "Nikolaeva, Irina",
+   "year": 1999,
+   "title": "Ostyak",
+   "publisher": "Languages of the World/Materials 305, LINCOM Europa",
+   "url": "https://www.lincom-shop.eu/",
+   "notes": "Reference grammar of (Kazym) Khanty: Cyrillic orthography, phoneme inventory (⟨в⟩ /w/, ⟨г⟩ /ɣ/, ⟨т⟩ /tʰ/, ⟨ч⟩ /c/, ⟨ы⟩ /ɯ/), coronal palatalisation before iotated vowels, and the non-distinctive status of word stress."
+  },
+  {
+   "id": "glottolog2024",
+   "author": "Hammarström, Harald; Forkel, Robert; Haspelmath, Martin; Bank, Sebastian",
+   "year": 2024,
+   "title": "Glottolog 5.0",
+   "publisher": "Max Planck Institute for Evolutionary Anthropology",
+   "url": "https://glottolog.org/"
+  },
+  {
+   "id": "phoible2019",
+   "author": "Moran, Steven; McCloy, Daniel (eds.)",
+   "year": 2019,
+   "title": "PHOIBLE 2.0 (doi:10.5281/zenodo.2562766)",
+   "publisher": "Max Planck Institute for the Science of Human History",
+   "url": "https://phoible.org/inventories/view/184",
+   "notes": "Inventory 184 (spa), 32 non-marginal segments."
+  }
+ ],
+ "urls": [
+  "https://glottolog.org/resource/languoid/id/khan1273"
+ ],
+ "wikipedia": [
+  "https://en.wikipedia.org/wiki/Khanty_language"
+ ],
+ "location": {
+  "latitude": 62.4308,
+  "longitude": 66.1218,
+  "source": "glottolog",
+  "notes": "Glottolog's representative point."
+ },
+ "parent": "x-clade-ural1272",
+ "phonemes": [
+  "c",
+  "j",
+  "kʰ",
+  "l",
+  "m",
+  "n",
+  "p",
+  "r",
+  "s",
+  "tʰ",
+  "w",
+  "ŋ",
+  "ɣ",
+  "ɭ",
+  "ɲ",
+  "ɳ",
+  "ʃ",
+  "ʈʂ",
+  "ʎ",
+  "a",
+  "e̞",
+  "ĕ̞",
+  "i",
+  "o̞",
+  "ŏ̞",
+  "u",
+  "æ",
+  "ɒ̆",
+  "ɯ",
+  "ɵ̞",
+  "ɵ̞̆",
+  "ʉ"
+ ],
+ "phoible_id": "184"
+}

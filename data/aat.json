@@ -1,0 +1,65 @@
+{
+  "code": "aat",
+  "name": "Arvanitika",
+  "script": "Greek",
+  "script_type": "alphabet",
+  "quality": "stub",
+  "iso639_3": "aat",
+  "glottolog_code": "arva1236",
+  "timespan": {
+    "start_year": 1200,
+    "end_year": null
+  },
+  "graphemes": {},
+  "allophones": {},
+  "positional_graphemes": {},
+  "ancestors": [
+    {
+      "code": "ine",
+      "role": "proto_language",
+      "weight": 1.0,
+      "notes": "Isolated Indo-European branch."
+    },
+    {
+      "code": "als",
+      "role": "parent",
+      "weight": 0.9,
+      "notes": "Arvanitika descends from medieval Tosk Albanian, brought to southern Greece by Albanian settlers from the 13th-14th centuries; it preserves consonant clusters simplified in the modern standard, e.g. gljuhë /ˈɡʎuxə/ ('language') vs standard gjuhë /ˈɟuhə/ (Wikipedia: Arvanitika)."
+    },
+    {
+      "code": "el",
+      "role": "adstrate",
+      "weight": 0.3,
+      "notes": "Centuries of bilingualism with Greek in Attica/Boeotia/Peloponnese produced lexical and phonological influence on Arvanitika (Wikipedia: Arvanitika, on the sociolinguistic contact situation). NOTE: the previously-cited example pair (haristis/dhrom) was mis-sourced on re-verification: the Arvanitika Wikipedia article attributes those specific loans to Italian Arbëresh speakers descended from Arvanite settlers, not to Arvanitika itself, so they have been removed rather than kept unsupported."
+    }
+  ],
+  "parent": "x-clade-alba1267",
+  "notes": "STUB: no reliable, sourced grapheme-to-IPA table found this session. Arvanitika has no standardized orthography: it has historically been written in the Greek alphabet (often with added letters b, d, e, j or diacritics — e.g. Γ̇/γ̇ for /ɟ/, Λ̇/λ̇ for /ʎ/, Σ̈/σ̈ for /ʃ/, per Wikipedia) and, less often and inconsistently, in a Latin alphabet; Sasse (1991) documents eleven dialect groups with no convergence toward a common written standard, and Arvanites are generally not literate in the Latin-based standard Albanian orthography either. Per AGENTS.md, an inventory must not be fabricated and a non-Latin-script language must not be given an invented Latin placeholder; graphemes is left empty pending a sourced per-dialect table (e.g. from Sasse 1991 or a Greek-script primer). script is set to Greek as the historically primary system; this is a design decision, not an assertion that Arvanitika has a single fixed alphabet.",
+  "sources": [
+    {
+      "id": "wiki-aat",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Arvanitika",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Arvanitika"
+    },
+    {
+      "id": "sasse1991",
+      "author": "Sasse, Hans-Jürgen",
+      "year": 1991,
+      "title": "Arvanitika: Die albanischen Sprachreste in Griechenland",
+      "publisher": "Otto Harrassowitz, Wiesbaden",
+      "url": "https://asjp.clld.org/sources/242"
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Arvanitika"
+  ],
+  "wikidata_qid": "Q35870",
+  "location": {
+    "latitude": 38.0,
+    "longitude": 23.5,
+    "source": "glottolog",
+    "notes": "Approximate Arvanitika-speaking area, southern Greece (Attica, Boeotia, Peloponnese)."
+  }
+}

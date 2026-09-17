@@ -1,0 +1,182 @@
+{
+  "code": "ar-SA-x-qassim",
+  "name": "Qassimi Arabic",
+  "script": "Arabic",
+  "graphemes_base": "ar-SA-x-najd",
+  "graphemes": {
+    "يَوْ": [
+      "joː"
+    ],
+    "وَيْ": [
+      "weː"
+    ],
+    "پ": [
+      "b"
+    ],
+    "ڤ": [
+      "f",
+      "b"
+    ],
+    "چ": [
+      "ʃ"
+    ]
+  },
+  "allophones_base": "ar-SA-x-najd",
+  "allophones": {},
+  "parent": "ar-SA-x-najd",
+  "ancestors": [
+    {
+      "code": "ar-SA-x-najd",
+      "role": "parent",
+      "weight": 0.95,
+      "notes": "Central Najdi base — Qassimi is a Najdi sub-variety of the Qaṣīm region (Buraydah, ʿUnayzah)."
+    }
+  ],
+  "notes": "Qassimi Arabic (قصيمي), the Najdi variety of the Qaṣīm region of central Saudi Arabia (Buraydah, ʿUnayzah, ar-Rass). A sub-dialect of Najdi; it inherits from ar-SA-x-najd the qaf ق → /ɡ/ reflex, the ض/ظ → [ðˤ] merger with retained interdentals ث /θ/ ذ /ð/, the gahawa-syndrome epenthesis, and the VELAR AFFRICATION /k/ → [ts], /ɡ/ → [dz] in front-vowel environments. Qassimi is in fact THE variety for which the dental-affricate reflex [t͡s]/[d͡z] is the salient regional shibboleth (Al-Rojaie 2013; Alhoody 2019, quoting Al-Rojaie 2013:43: /k/→[t͡s], /ɡ/→[d͡z] before front vowels, [at͡sil] 'food', [briːd͡z] 'teapot') — inherited unchanged from the Najdi parent, which already emits the dental affricates. Al-Rojaie (2013) documents this affrication as RECEDING under dialect levelling toward the [k]/[ɡ] of the pan-Najdi/urban standard, most advanced among younger and more-educated speakers; the transcriber models the traditional affricated reflex (the diagnostic form), and  this caveat is honest not silent. VOICING ASYMMETRY of the affrication (Alshammari 2026:1335-1337; Mahzari 2023:800-804): the voiceless /k/→[ts] is the broader process — triggered by high front /i iː/ and, in Northern Najdi, also by central /a aː/ ([tsalb] 'dog', [simats] 'fish') — whereas the voiced /ɡ/→[dz] is restricted to HIGH FRONT /i iː/ only and is blocked by central and back vowels ([ɡumar] 'moon', not *[dzumar]). Both o2i NAJD_AFFRIC rules fire only in the /i iː j e eː/ environment, so the engine is deliberately conservative for /k/ (it does not affricate before /a/), which happens to align with the Qaṣīm leveling profile Al-Rojaie describes; the /ɡ/ trigger set including /e eː/ is slightly over-generous vs the literature's high-front-only /ɡ/ restriction (flagged for the ar-SA-x-najd parent, no Qassim gold row exercises it). DEFINING DELTA modeled here vs central Najdi: MONOPHTHONGIZATION — the Classical diphthongs /aj aw/ are realised [eː oː] (Alhoody 2019:42, exx. /bajt/→[beːt] 'house', /lawn/→[loːn] 'colour'; the diphthong prohibition is attributed there to Ingham 1994 and Watson 2002), giving Qassimi the 8-vowel system /a u i; aː uː iː eː oː/ — the acoustic and auditory literature (Algethami 2023; Ingham 1994:15, whose Najdi vowel chart already lists /eː oː/) finds this monophthongization is in fact PAN-Najdi — central Najd included — so /eː oː/ are not strictly a Qassim-only delta. The QAS_MONO_AY/AW rules are nonetheless declared on this leaf because the current ar-SA-x-najd spec still models diphthong retention (بَيْت → [bajt]); that mismatch is flagged as a gap for the parent spec rather than a genuine Qassim-vs-Najd contrast. Declared as allophone_rules QAS_MONO_AY/AW plus the يَوْ→[joː]/وَيْ→[weː] spelled-out keys, exactly as in the Hejazi spec: the inherited يَ→/ja/ and وَ→/wa/ onset digraphs eat the fatha before an /aj//aw/ atom can form, so ⟨يَوْ⟩ and ⟨وَيْ⟩ are spelled out to reach the same monophthong from the spelling. Also documented but NOT engine-expressible: Qassimi (like Najdi generally) permits initial CC clusters via elision of a short high vowel in an open syllable (Alhoody 2019:43, /ktabat/ 'she wrote', /ktaːb/ 'book', /ɡtˤaʕ/ 'pieces') — o2i transcribes the orthography+harakat as written and does not resyllabify, so *katab→ktab elision is not applied; and medial glottal-stop loss with compensatory lengthening (/raʔs/→[raːs], /ðiʔb/→[ðiːb], Alhoody 2019:41), which is a lexical-stratum fact left to a downstream lexicon. VOWELS: Algethami 2023 (15 Najdi speakers) acoustically confirms Ingham's 8-vowel system — long /iː uː aː/ ~double the duration of short /i u a/, short vowels centralised, and crucially /aː/ shows NO imāla/fronting (contra Syrian/Egyptian), which is why the gold keeps [aː] low and unraised. INTONATION (Aljamaan & Aljutaily 2026, 20 Qaṣīm speakers, AM/ToBI): Qassimi declaratives end in a low boundary tone (L-L%, L%) and yes/no questions in a rising one (L-H%, H-H%), with question F0 significantly higher than declarative — supra-segmental only, carried by the statement/question shape tags in the gold, not by any segmental rule. NO ar-SA umbrella node exists: Saudi dialects split across the Najdi, Hejazi, Gulf and Southwestern groups and the literature recognises no pan-Saudi phonological grouping (Ingham 1994; Prochazka 1988), so ar-SA stays unassigned and this leaf hangs off ar-SA-x-najd. INPUT CONTRACT: transcribes orthography+harakat; short vowels surface only when the input is vocalised. LOAN GRAPHEMES پ ڤ چ. The letters Arabic writes for the foreign consonants /p/, /v/ and /tʃ/ read as their Qassimi adaptations rather than as the donor phones: پ→[b], ڤ→[f] with [b] second, چ→[ʃ]. Alhoody 2019 measures English loanword adaptation into Qassimi and supplies both the readings and their frequencies, which is what orders the candidates: */p/→[b] 89 of 89 (100%, Table 4 p.63); */v/→[f] 30 of 31 (96.8%) against [b] 1 (3.2%, Table 5 p.63); */tʃ/→[ʃ] 8 of 13 (61.5%) against [tʃ] 5 (38.5%, Table 9 p.66). None of /p/, /v/ or /tʃ/ is in the 27-consonant QA inventory (§3.1.2 Table 1 p.41), so no reading here adds a phone to this spec. The retained [tʃ] is deliberately NOT carried as a second candidate for چ: Alhoody attributes it to 'the orthography effect', the English digraph <t> leading speakers to treat the affricate as two segments [t] and [ʃ] across a syllable boundary, which is a property of the English spelling and not of the single letter چ. The second reading on ڤ carries a condition the table cannot: the single [b] is one occurrence in one word, 'valve', where Alhoody reads it as a dissimilation — the word holds /v/ twice and the first is adapted as [b] to avoid two [f] in one word (p.64). A grapheme key has no way to see the rest of the word, so [b] is offered at every ڤ while the environment that produced it holds at one in thirty-one. Rank 1 is unaffected; a consumer reading only the first candidate never sees it, and a consumer reading the whole list should know the second is environmental rather than free variation. SCOPE: the thesis measures loanword adaptation into Qassimi. It licenses these three readings in this spec and says nothing about the same letters in MSA or in a Maghrebi spec, where ڨ ݣ ڢ are native letters needing their own source.",
+  "quality": "research",
+  "script_type": "abjad",
+  "sources": [
+    {
+      "id": "alhoody2019",
+      "author": "Alhoody, M.M.A.",
+      "year": 2019,
+      "title": "Phonological adaptation of English loanwords into Qassimi Arabic: an optimality-theoretic account (PhD thesis)",
+      "publisher": "Newcastle University",
+      "url": "https://theses.ncl.ac.uk/jspui/bitstream/10443/4662/1/Alhoody%20MMA%202019.pdf",
+      "pages": "41-43, 62-66",
+      "notes": "§3.1.2-3.1.4 the Qassimi consonant and vowel inventories. p.41: qaf /q/→[ɡ] (/qaːl/→[ɡaːl] 'he said'), /q/ retained in CA/MSA borrowings (/qurʔaːn/, /qaːrrah/); CA /dˤ/ lost, ض/ظ a single phoneme /ðˤ/ (/dˤarab/ and /ðˤalaːl/ both begin [ðˤ], citing Ingham 1994:13); medial /ʔ/→compensatory lengthening (/raʔs/→[raːs], /ðiʔb/→[ðiːb]). p.42: velar affrication /k/→[t͡s], /ɡ/→[d͡z] before front vowels ([at͡sil] 'food', [briːd͡z] 'teapot', quoting Al-Rojaie 2013:43); 8-vowel system with /eː oː/ from monophthongized /aj aw/ (/bajt/→[beːt], /lawn/→[loːn]); /a/→[ɑ] adjacent to emphatics ([ðˤɑːʕ] 'he got lost' vs [ðaːʕ] 'he spread'). p.43: initial CC clusters via short-vowel elision (/ktabat/, /ktaːb/, /ɡtˤaʕ/). §5.1 p.62 states the prediction and the result: 'English consonants /p/ and /v/ which are foreign in QA are adapted as [b] and [f] with the disappearance of voicing contrast... the English /tʃ/ and /ʒ/ will be replaced by [ʃ] and [dʒ] in QA'. §5.1.1 Table 4 p.63: */p/→[b] 89 of 89 (100%), beside native /b/→[b] 55 (100%). §5.1.2 Table 5 p.63: */v/→[f] 30 of 31 (96.8%) and [b] 1 (3.2%), the [b] a dissimilation in 'valve' where two /v/ would otherwise give two /f/ in one word. §5.1.6 Table 9 p.66: */tʃ/→[ʃ] 8 of 13 (61.5%) and [tʃ] 5 (38.5%), the retained affricate attributed to 'the orthography effect', the English spelling <t> leading speakers to treat it as two segments [t] and [ʃ] across a syllable boundary. The asterisk is the thesis's own mark for a consonant foreign to QA."
+    },
+    {
+      "id": "alrojaie2013",
+      "author": "Al-Rojaie, Y.",
+      "year": 2013,
+      "title": "Regional dialect levelling in Najdi Arabic: The case of the deaffrication of [ts] in the Qaṣīmī dialect",
+      "publisher": "Language Variation and Change 25(1), 43-63",
+      "url": "https://doi.org/10.1017/S0954394512000245",
+      "pages": "43-63",
+      "notes": "The definitive sociolinguistic study of the Qassimi dental affricate [t͡s] (< /k/) and its levelling toward pan-Najdi [k]. p.43: /k/→[t͡s], /ɡ/→[d͡z] before front vowels. Documents deaffrication as an ongoing change led by younger, educated and female speakers — the affricated reflex is the traditional/diagnostic Qassimi form and is receding, not obsolete."
+    },
+    {
+      "id": "ingham1994",
+      "author": "Ingham, B.",
+      "year": 1994,
+      "title": "Najdi Arabic: Central Arabian",
+      "publisher": "John Benjamins (Library of Arabic Linguistics 1)",
+      "url": null,
+      "pages": "13-16",
+      "notes": "The Najdi parent's primary reference: /k/→[ts], /ɡ/→[dz] affrication; gahawa syndrome; ض/ظ merge to [ðˤ]; qaf→/ɡ/. p.13 the consonant inventory Alhoody 2019 builds on for Qassim."
+    },
+    {
+      "id": "watson2002",
+      "author": "Watson, J.C.E.",
+      "year": 2002,
+      "title": "The Phonology and Morphology of Arabic",
+      "publisher": "Oxford University Press",
+      "url": null,
+      "pages": null,
+      "notes": "Cited by Alhoody 2019:42 for the Arabic-general diphthong prohibition underlying the Qassimi /aj aw/→[eː oː] monophthongization.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Arabic_phonology"
+    },
+    {
+      "id": "alshammari2026",
+      "author": "Alshammari, K. K.",
+      "year": 2026,
+      "title": "An optimality-theoretic account of velar affrication in Northern Najdi Arabic",
+      "publisher": "Journal of Language Teaching and Research 17(4), 1333-1341",
+      "url": "https://doi.org/10.17507/jltr.1704.19",
+      "pages": "1333-1341",
+      "notes": "Northern Najdi (Ḥāʾil/Shammar). Documents the voicing asymmetry: /k/→[ts] before front AND central vowels /i iː a aː/ (word-initial/medial/final; [tsibiːr], [tsalb], [simats]), but /ɡ/→[dz] only before high front /i iː/ ([dzidir]), blocked by central/back vowels ([ɡumar] 'moon'). Affrication blocked in MSA/loan borrowings and by back vowels ([kuːx])."
+    },
+    {
+      "id": "mahzari2023",
+      "author": "Mahzari, M.",
+      "year": 2023,
+      "title": "The historical changes of /k/ and /q/ in Najdi Arabic: a phonological analysis",
+      "publisher": "Theory and Practice in Language Studies 13(3), 796-807",
+      "url": "https://doi.org/10.17507/tpls.1303.30",
+      "pages": "796-807",
+      "notes": "Riyadh Najdi. /k/→[ts] before /i/ (and via raising, /a/→/i/); /q/→[ɡ]→[dz], the [dz] step gated by high front /i/. Table 3 records lexical exceptions where /k/ stays [k] despite a surface front vowel (kursi→[kirsi], not *[tsirsi]) — a lexical-stratum limit the grapheme rules cannot see. p.798: places Qaṣīm in the Northern-Central Najdi zone."
+    },
+    {
+      "id": "algethami2023",
+      "author": "Algethami, G.",
+      "year": 2023,
+      "title": "Acoustic characterization of Najdi Arabic vowel system",
+      "publisher": "Proceedings of ICPhS 2023, paper 868, Prague",
+      "url": "https://guctprod.blob.core.windows.net/icphs-proceedings/ICPhS2023/full_papers/3384.pdf",
+      "pages": "3384-3386",
+      "notes": "Acoustic (15 speakers) corroboration of Ingham's 8-vowel Najdi system; long ≈2× short duration; short vowels centralised; /aː/ shows no imāla; CA /aj aw/ realised as monophthongs [eː oː] in central Najdi too (bears on whether monophthongization is a Qassim-only delta)."
+    },
+    {
+      "id": "aljamaan2026",
+      "author": "Aljamaan, L. & Aljutaily, M.",
+      "year": 2026,
+      "title": "Towards a phonological model of intonation in Qassimi Arabic: an acoustic study",
+      "publisher": "Journal of Language Teaching and Research 17(1), 98-111",
+      "url": "https://doi.org/10.17507/jltr.1701.10",
+      "pages": "98-111",
+      "notes": "AM/ToBI study of Qaṣīm (Buraydah) prosody, 20 speakers. Declaratives take low boundary tones (L-L%, L%); yes/no questions take rising contours (L-H%, H-H%); interrogative F0 significantly higher (161 vs 143 Hz), across both genders. The only Qassimi-specific intonation reference; grounds the statement/question shape tags in the TTS gold."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Najdi_Arabic"
+  ],
+  "timespan": {
+    "start_year": 1400,
+    "end_year": null
+  },
+  "glottolog_code": "najd1235",
+  "iso639_3": "ars",
+  "allophone_rules": [
+    {
+      "id": "QAS_MONO_AY",
+      "phonemes": [
+        "aj"
+      ],
+      "surface": "eː",
+      "notes": "Qassimi monophthongization (Alhoody 2019:42, ex. /bajt/→[beːt] 'house'): the Classical diphthong /aj/ is realised [eː]. This is the defining vocalic delta from central Najdi (ar-SA-x-najd), which retains [aj]. Same tokenization caveat as the Hejazi HEJ_MONO_AY rule: the ⟨يَوْ⟩/⟨وَيْ⟩ spellings are handled by explicit graphemes because the onset digraphs يَ/وَ claim the fatha before an atom forms."
+    },
+    {
+      "id": "QAS_MONO_AW",
+      "phonemes": [
+        "aw"
+      ],
+      "surface": "oː",
+      "notes": "Qassimi monophthongization (Alhoody 2019:42, ex. /lawn/→[loːn] 'colour'): the Classical diphthong /aw/ is realised [oː]. Defining vocalic delta from central Najdi, which retains [aw]."
+    }
+  ],
+  "wikidata_qid": "Q56574",
+  "location": {
+    "latitude": 26.3592,
+    "longitude": 43.9818,
+    "source": "manual",
+    "notes": "Buraydah, capital of the Qaṣīm region — representative point for Qassimi Arabic."
+  },
+  "optional_marks": [
+    "ً",
+    "ٌ",
+    "ٍ",
+    "َ",
+    "ُ",
+    "ِ",
+    "ّ",
+    "ْ",
+    "ٰ",
+    "ٓ"
+  ],
+  "stress": {
+    "default_position": -3,
+    "quantity_sensitive": true,
+    "superheavy_final_attracts": true,
+    "max_onset": 1,
+    "stress_mark": "ˈ",
+    "notes": "Quantity-sensitive Arabic stress, inherited from the Najdi parent; see ar-SA-x-najd for the full cascade and input contract. Prosodic clitics: monosyllabic function words (negator maː, prepositions fiː/min/ʕan/ʕa/li/bi, vocative jaː, copula-negator muː/miʃ, conditional law/loː, wa-proclitic combinations) attach to a host and fall inside the host's stress domain, so they carry no word stress (Watson 2002, The Phonology and Morphology of Arabic, OUP, ch.3). Pan-Arabic class; the per-lect form list reflects the function words attested in this lect. Orthographic test — a clitic homograph (e.g. verb yā 'came') is destressed in every occurrence.",
+    "cliticless_words": [
+      "فِي",
+      "لِي",
+      "مَا",
+      "مِن",
+      "يَا"
+    ]
+  }
+}

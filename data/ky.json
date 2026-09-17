@@ -1,0 +1,272 @@
+{
+  "parent": "trk",
+  "ancestors": [
+    {
+      "code": "trk",
+      "role": "parent",
+      "weight": 0.86,
+      "notes": "Descent from Proto-Turkic (Kipchak branch)."
+    },
+    {
+      "code": "ru",
+      "role": "adstrate",
+      "weight": 0.09,
+      "notes": "Russian adstrate: extensive Soviet-era lexical influence."
+    },
+    {
+      "code": "ar",
+      "role": "adstrate",
+      "weight": 0.04,
+      "notes": "Arabic adstrate: religious vocabulary via Chagatai/Persian."
+    },
+    {
+      "code": "fa",
+      "role": "adstrate",
+      "weight": 0.04,
+      "notes": "Persian adstrate via Central Asian literary tradition."
+    }
+  ],
+  "code": "ky",
+  "name": "Kyrgyz",
+  "glottolog_code": "kirg1245",
+  "script": "Cyrillic",
+  "script_type": "alphabet",
+  "iso639_3": "kir",
+  "quality": "research",
+  "graphemes": {
+    "а": [
+      "a"
+    ],
+    "б": [
+      "b"
+    ],
+    "в": [
+      "v"
+    ],
+    "г": [
+      "ɡ"
+    ],
+    "д": [
+      "d"
+    ],
+    "е": [
+      "e",
+      "je"
+    ],
+    "ё": [
+      "jo"
+    ],
+    "ж": [
+      "dʒ"
+    ],
+    "з": [
+      "z"
+    ],
+    "и": [
+      "i"
+    ],
+    "й": [
+      "j"
+    ],
+    "к": [
+      "k"
+    ],
+    "л": [
+      "l"
+    ],
+    "м": [
+      "m"
+    ],
+    "н": [
+      "n"
+    ],
+    "ң": [
+      "ŋ"
+    ],
+    "о": [
+      "o"
+    ],
+    "ö": [
+      "ø"
+    ],
+    "п": [
+      "p"
+    ],
+    "р": [
+      "r"
+    ],
+    "с": [
+      "s"
+    ],
+    "т": [
+      "t"
+    ],
+    "у": [
+      "u"
+    ],
+    "ү": [
+      "y"
+    ],
+    "ф": [
+      "f"
+    ],
+    "х": [
+      "x"
+    ],
+    "ц": [
+      "ts"
+    ],
+    "ч": [
+      "tʃ"
+    ],
+    "ш": [
+      "ʃ"
+    ],
+    "щ": [
+      "ʃtʃ"
+    ],
+    "ы": [
+      "ɯ"
+    ],
+    "э": [
+      "e"
+    ],
+    "ю": [
+      "ju"
+    ],
+    "я": [
+      "ja"
+    ]
+  },
+  "allophones": {
+    "a": [
+      "a"
+    ],
+    "b": [
+      "b",
+      "p"
+    ],
+    "v": [
+      "v"
+    ],
+    "ɡ": [
+      "ɡ"
+    ],
+    "d": [
+      "d",
+      "t"
+    ],
+    "e": [
+      "e"
+    ],
+    "dʒ": [
+      "dʒ",
+      "tʃ"
+    ],
+    "z": [
+      "z"
+    ],
+    "i": [
+      "i"
+    ],
+    "j": [
+      "j"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ŋ": [
+      "ŋ"
+    ],
+    "o": [
+      "o"
+    ],
+    "ø": [
+      "ø"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "u": [
+      "u"
+    ],
+    "y": [
+      "y"
+    ],
+    "f": [
+      "f"
+    ],
+    "x": [
+      "x"
+    ],
+    "ts": [
+      "ts"
+    ],
+    "tʃ": [
+      "tʃ"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "ɯ": [
+      "ɯ"
+    ]
+  },
+  "notes": "Kyrgyz in Cyrillic script. 8-vowel system. Ң = /ŋ/; Ү = /y/; Ö = /ø/. Vowel harmony (front/back). Ж = /dʒ/.",
+  "sources": [
+    {
+      "id": "kyrgyz_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Kyrgyz language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Kyrgyz_language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Kyrgyz_language",
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Kyrgyz_language",
+    "https://ky.wikipedia.org/wiki/%D0%9A%D1%8B%D1%80%D0%B3%D1%8B%D0%B7_%D1%82%D0%B8%D0%BB%D0%B8"
+  ],
+  "timespan": {
+    "start_year": 1940,
+    "end_year": null
+  },
+  "stress": {
+    "default_position": -1,
+    "final_stress_endings": [],
+    "penult_stress_endings": [],
+    "marked_vowels": [],
+    "stress_mark": "ˈ",
+    "notes": "Kyrgyz default stress is word-final (-1). Exception classes (negation -ba/-be, question particle -by/-bi, some place names) are lexically stressed and not modeled. Source: Comrie (1997), Washington et al. (2018)."
+  },
+  "wikidata_qid": "Q9255",
+  "phoible_id": "kirg1245",
+  "wals_code": "kgz",
+  "location": {
+    "latitude": 42.0,
+    "longitude": 74.0,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Kirghiz."
+  }
+}

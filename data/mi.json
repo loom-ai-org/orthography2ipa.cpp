@@ -1,0 +1,199 @@
+{
+  "code": "mi",
+  "name": "Māori",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "ā": [
+      "aː"
+    ],
+    "e": [
+      "e"
+    ],
+    "ē": [
+      "eː"
+    ],
+    "i": [
+      "i"
+    ],
+    "ī": [
+      "iː"
+    ],
+    "o": [
+      "o"
+    ],
+    "ō": [
+      "oː"
+    ],
+    "u": [
+      "u"
+    ],
+    "ū": [
+      "uː"
+    ],
+    "h": [
+      "h"
+    ],
+    "k": [
+      "k"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ng": [
+      "ŋ"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "ɾ"
+    ],
+    "t": [
+      "t"
+    ],
+    "w": [
+      "w"
+    ],
+    "wh": [
+      "ɸ",
+      "f"
+    ]
+  },
+  "allophones": {
+    "a": [
+      "a"
+    ],
+    "aː": [
+      "aː"
+    ],
+    "e": [
+      "e"
+    ],
+    "eː": [
+      "eː"
+    ],
+    "i": [
+      "i"
+    ],
+    "iː": [
+      "iː"
+    ],
+    "o": [
+      "o"
+    ],
+    "oː": [
+      "oː"
+    ],
+    "u": [
+      "u"
+    ],
+    "uː": [
+      "uː"
+    ],
+    "h": [
+      "h"
+    ],
+    "k": [
+      "k"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ŋ": [
+      "ŋ"
+    ],
+    "p": [
+      "p"
+    ],
+    "ɾ": [
+      "ɾ",
+      "r",
+      "l"
+    ],
+    "t": [
+      "t",
+      "tʃ"
+    ],
+    "w": [
+      "w"
+    ],
+    "ɸ": [
+      "ɸ",
+      "f"
+    ],
+    "f": [
+      "f"
+    ]
+  },
+  "notes": "Māori (te reo Māori), Eastern Polynesian, New Zealand. Highly regular phonemic orthography: 5 vowel qualities with a phonemic length contrast written with a macron (tohutō: ā ē ī ō ū), 10 consonants, plus the digraphs ⟨ng⟩ /ŋ/ and ⟨wh⟩ (most commonly [ɸ], [f] for many speakers; [ʔw]/[w] in some dialects). Every syllable is open (CV or V). ⟨r⟩ is an alveolar tap [ɾ]. ⟨t⟩ is affricated before /i/ and /u/ for some speakers. Macron spelling is the standard used by Te Taura Whiri i te Reo Māori (Māori Language Commission); older texts double the vowel or leave length unmarked.",
+  "iso639_3": "mri",
+  "glottolog_code": "maor1246",
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/M%C4%81ori_language",
+    "https://en.wikipedia.org/wiki/M%C4%81ori_phonology",
+    "https://mi.wikipedia.org/wiki/Reo_M%C4%81ori"
+  ],
+  "sources": [
+    {
+      "id": "bauer1993",
+      "author": "Bauer, Winifred",
+      "year": 1993,
+      "title": "Maori (Descriptive Grammars series)",
+      "publisher": "Routledge",
+      "url": null,
+      "pages": null,
+      "notes": "Reference grammar; phonology and orthography."
+    },
+    {
+      "id": "harlow2007",
+      "author": "Harlow, Ray",
+      "year": 2007,
+      "title": "Māori: A Linguistic Introduction",
+      "publisher": "Cambridge University Press",
+      "url": null,
+      "pages": null,
+      "notes": "Phoneme inventory and the value of ⟨wh⟩."
+    },
+    {
+      "id": "maori_phonology_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Māori phonology",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/M%C4%81ori_phonology",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/M%C4%81ori_phonology",
+      "pages": null,
+      "notes": "Letter-to-IPA correspondences."
+    }
+  ],
+  "timespan": {
+    "start_year": 1200,
+    "end_year": null
+  },
+  "parent": "x-clade-mala1545",
+  "ancestors": [
+    {
+      "code": "x-clade-mala1545",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Malayo-Polynesian, the Austronesian branch containing every Austronesian language outside Formosa."
+    }
+  ],
+  "location": {
+    "latitude": -38.2881,
+    "longitude": 176.541,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Maori."
+  }
+}

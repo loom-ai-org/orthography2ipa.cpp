@@ -1,0 +1,159 @@
+{
+  "code": "es-419",
+  "name": "Latin American Spanish",
+  "script": "Latin",
+  "graphemes_base": "es-ES",
+  "graphemes": {
+    "c": [
+      "k",
+      "s"
+    ],
+    "z": [
+      "s"
+    ],
+    "ll": [
+      "ʝ"
+    ]
+  },
+  "allophones_base": "es-ES",
+  "allophones": {
+    "s": [
+      "s",
+      "z",
+      "h"
+    ]
+  },
+  "positional_graphemes_base": "es-ES",
+  "parent": "es-ES",
+  "notes": "Seseo, yeísmo. Coda /s/ aspiration noted in allophone map.",
+  "quality": "skeleton",
+  "script_type": "alphabet",
+  "sources": [
+    {
+      "id": "hualde2005",
+      "author": "Hualde, J.I.",
+      "year": 2005,
+      "title": "The Sounds of Spanish",
+      "publisher": "Cambridge University Press",
+      "url": null,
+      "pages": null,
+      "notes": null,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Spanish_phonology"
+    },
+    {
+      "id": "penny2002",
+      "author": "Penny, R.",
+      "year": 2002,
+      "title": "A History of the Spanish Language",
+      "publisher": "Cambridge University Press",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "harris1969",
+      "author": "Harris, J.W.",
+      "year": 1969,
+      "title": "Spanish Phonology",
+      "publisher": "MIT Press",
+      "url": null,
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Latin_American_Spanish",
+    "https://es.wikipedia.org/wiki/Espa%C3%B1ol_de_Am%C3%A9rica"
+  ],
+  "timespan": {
+    "start_year": 1500,
+    "end_year": null
+  },
+  "glottolog_code": "amer1254",
+  "iso639_3": "spa",
+  "positional_graphemes": {
+    "c": {
+      "before_e": [
+        "s"
+      ],
+      "before_i": [
+        "s"
+      ]
+    }
+  },
+  "stress": {
+    "onset_clusters": ["bl", "br", "bɫ", "bɾ", "bʀ", "bʁ", "bʎ", "bχ", "dr", "dɾ", "dʀ", "dʁ", "dʎ", "dχ", "fl", "fr", "fɫ", "fɾ", "fʀ", "fʁ", "fʎ", "fχ", "kl", "kr", "kɫ", "kɾ", "kʀ", "kʁ", "kʎ", "kχ", "pl", "pr", "pɫ", "pɾ", "pʀ", "pʁ", "pʎ", "pχ", "tr", "tɾ", "tʀ", "tʁ", "tʎ", "tχ", "vl", "vr", "vɫ", "vɾ", "vʀ", "vʁ", "vʎ", "vχ", "ðr", "ðɾ", "ðʀ", "ðʁ", "ðʎ", "ðχ", "ɡl", "ɡr", "ɡɫ", "ɡɾ", "ɡʀ", "ɡʁ", "ɡʎ", "ɡχ", "ɣl", "ɣr", "ɣɫ", "ɣɾ", "ɣʀ", "ɣʁ", "ɣʎ", "ɣχ", "βl", "βr", "βɫ", "βɾ", "βʀ", "βʁ", "βʎ", "βχ"],
+    "cliticless_words": [
+      "el",
+      "la",
+      "lo",
+      "los",
+      "las",
+      "un",
+      "una",
+      "unos",
+      "unas",
+      "al",
+      "del",
+      "a",
+      "de",
+      "en",
+      "con",
+      "por",
+      "sin",
+      "tras",
+      "para",
+      "y",
+      "e",
+      "o",
+      "u",
+      "ni",
+      "que",
+      "si",
+      "me",
+      "te",
+      "se",
+      "le",
+      "les",
+      "nos",
+      "os",
+      "mi",
+      "tu",
+      "su",
+      "mis",
+      "tus",
+      "sus"
+    ],
+    "default_position": -2,
+    "final_stress_endings": [
+      "r",
+      "l",
+      "d",
+      "z",
+      "j",
+      "x",
+      "k",
+      "f"
+    ],
+    "penult_stress_endings": [
+      "n",
+      "s",
+      "ns"
+    ],
+    "marked_vowels": [
+      "á",
+      "é",
+      "í",
+      "ó",
+      "ú"
+    ],
+    "stress_mark": "ˈ",
+    "notes": "Standard Spanish accentuation (inherited from es-ES): default paroxytone; written accent wins; oxytone before consonant codas other than n/s; proparoxytones always written-accented."
+  },
+  "location": {
+    "latitude": -1.106889,
+    "longitude": -68.097391,
+    "source": "wikidata",
+    "notes": "the centroid of Latin America. A continent-wide cover variety: the weakest possible point, and only meaningful as 'not Spain' — which is where Glottolog put it. [Wikidata Q12585 P625]"
+  }
+}

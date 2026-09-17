@@ -1,0 +1,244 @@
+{
+  "code": "pis",
+  "name": "Pijin",
+  "family": "English Creole",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "e": [
+      "e"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "o"
+    ],
+    "u": [
+      "u"
+    ],
+    "ai": [
+      "ai"
+    ],
+    "au": [
+      "au"
+    ],
+    "oi": [
+      "oi"
+    ],
+    "b": [
+      "b"
+    ],
+    "d": [
+      "d"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "h": [
+      "h"
+    ],
+    "j": [
+      "dʒ"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ng": [
+      "ŋ"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "v": [
+      "v"
+    ],
+    "w": [
+      "w"
+    ]
+  },
+  "allophones": {
+    "a": [
+      "a"
+    ],
+    "e": [
+      "e"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "o"
+    ],
+    "u": [
+      "u"
+    ],
+    "ai": [
+      "ai"
+    ],
+    "au": [
+      "au"
+    ],
+    "oi": [
+      "oi"
+    ],
+    "b": [
+      "b"
+    ],
+    "d": [
+      "d"
+    ],
+    "f": [
+      "f"
+    ],
+    "ɡ": [
+      "ɡ"
+    ],
+    "h": [
+      "h"
+    ],
+    "dʒ": [
+      "dʒ"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ŋ": [
+      "ŋ"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "r",
+      "ɾ"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "v": [
+      "v"
+    ],
+    "w": [
+      "w"
+    ]
+  },
+  "notes": "Pijin (Solomon Islands Pijin), the lingua franca of the Solomon Islands, an English-lexifier Pacific creole closely related to Tok Pisin (Papua New Guinea) and Bislama (Vanuatu). The orthography is largely phonemic: five cardinal vowels /i e a o u/, diphthongs ⟨ai au oi⟩, and a consonant inventory that simplifies the English source system. Fetched Wikipedia examples (quoted directly) show English /tʃ/ AND /ʃ/ both merging with /s/ (tisa 'teacher', sea 'chair', mas 'much'; sot 'short', bus 'bush', masin 'machine'), voiceless English /θ/ merging with /s/, NOT /t/ (maos 'mouth'), voiced English /ð/ merging with /t/ (brata/barata 'brother'), and /z/ merging with /s/ (resa 'razor') — so the English etymon's spelling is not retained for ⟨ch⟩/⟨sh⟩/⟨th⟩/⟨z⟩, none of which are modelled as graphemes here. The standard Pijin Latin alphabet excludes Q, X, Y, and Z (Wikipedia, fetched); the ⟨y⟩ grapheme for /j/ previously in this spec is REMOVED for lack of a confidently sourced attestation — search evidence instead points to ⟨i⟩ being used where English orthography would use y (e.g. 'iu' for 'you'), which is out of scope to model as a positional-i rule without a dedicated phonology source. Consonant clusters and consonant-final syllables are avoided: loanwords from English are adapted with epenthetic vowels chosen by vowel harmony (e.g. 'business' > bisinis/bisinisi), a lexical/morphophonemic process handled by a downstream lexicon, not by this grapheme spec (AGENTS.md §6/§7). No government body standardises Pijin spelling; practical orthography (as used in Bible translations, newspapers such as the Solomon Star, and SIL materials) is the basis here.",
+  "sources": [
+    {
+      "id": "pis_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Pijin",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Pijin",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Pijin",
+      "pages": null,
+      "notes": "Alphabet, consonant simplification patterns (ch>s, th>t), epenthesis and vowel harmony, lack of standardised orthography."
+    },
+    {
+      "id": "jourdan2007",
+      "author": "Jourdan, Christine",
+      "year": 2007,
+      "title": "Solomon Islands Pijin: phonetics and phonology",
+      "publisher": "De Gruyter Mouton, in Varieties of English",
+      "url": "https://www.degruyterbrill.com/document/doi/10.1515/9783110208412.1.164/html",
+      "doi": "10.1515/9783110208412.1.164",
+      "pages": null,
+      "notes": "Reference description of Pijin phonetics and phonology."
+    },
+    {
+      "id": "simons_young2007",
+      "author": "Simons, Linda & Young, Hugh",
+      "year": 2007,
+      "title": "Pijin: A Grammar of Solomon Islands Pidgin",
+      "publisher": "SIL-PNG / Pacific Linguistics",
+      "url": null,
+      "pages": null,
+      "notes": "Grammar reference including orthography and phoneme inventory."
+    },
+    {
+      "id": "holm1989",
+      "author": "Holm, John",
+      "year": 1989,
+      "title": "Pidgins and Creoles, Volume II: Reference Survey",
+      "publisher": "Cambridge University Press",
+      "url": null,
+      "pages": null,
+      "notes": "Comparative Melanesian Pidgin survey, lexifier/substrate attributions."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Pijin",
+    "https://en.wikipedia.org/wiki/Pijin_language"
+  ],
+  "urls": [
+    "https://glottolog.org/resource/languoid/id/piji1239",
+    "https://www.ethnologue.com/language/pis/",
+    "https://www.omniglot.com/writing/pijin.htm"
+  ],
+  "timespan": {
+    "start_year": 1870,
+    "end_year": null
+  },
+  "iso639_3": "pis",
+  "glottolog_code": "piji1239",
+  "wikidata_qid": "Q36699",
+  "location": {
+    "latitude": -9.4456,
+    "longitude": 159.9729,
+    "source": "glottolog",
+    "notes": "Honiara, Guadalcanal — the Solomon Islands capital, the centre of Pijin's spread as a lingua franca."
+  },
+  "ancestors": [
+    {
+      "code": "en-GB",
+      "role": "lexifier",
+      "weight": 0.65,
+      "notes": "English lexifier via 19th-century labour trade (blackbirding) and colonial administration/missions. Holm (1989)."
+    },
+    {
+      "code": "poz",
+      "role": "substrate",
+      "weight": 0.2,
+      "notes": "Oceanic (Malayo-Polynesian) substrate of Solomon Islands languages: 5-vowel system, open-syllable phonotactics, serial-verb and predicate-marking calques. Individual substrate languages (e.g. Solomons Pijin's Are'are, Kwara'ae inputs) are unregistered; nearest registered node is Malayo-Polynesian."
+    }
+  ]
+}

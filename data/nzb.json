@@ -1,0 +1,107 @@
+{
+ "code": "nzb",
+ "name": "Njebi",
+ "script": "Zyyy",
+ "quality": "stub",
+ "graphemes": {},
+ "allophones": {
+  "b": [
+   "b",
+   "ɓ"
+  ],
+  "d": [
+   "d",
+   "ɗ"
+  ],
+  "n": [
+   "n",
+   "ɲ"
+  ],
+  "nd": [
+   "nd",
+   "ndɾ"
+  ],
+  "nz": [
+   "nz",
+   "n̠d̠ʒ"
+  ],
+  "s": [
+   "s",
+   "ʃ"
+  ],
+  "ts": [
+   "ts",
+   "t̠ʃ"
+  ]
+ },
+ "notes": "REGISTRY STUB (not a modelled G2P target). Placed so the ancestry graph covers every living ISO 639-3 language. No orthography is claimed; the phoneme inventory follows the cited PHOIBLE inventory (which itself cites a published description): script is Zyyy (undetermined) until a cited description is encoded. Classification and coordinates follow Glottolog.",
+ "iso639_3": "nzb",
+ "glottolog_code": "njeb1242",
+ "sources": [
+  {
+   "id": "glottolog2024",
+   "author": "Hammarström, Harald; Forkel, Robert; Haspelmath, Martin; Bank, Sebastian",
+   "year": 2024,
+   "title": "Glottolog 5.0",
+   "publisher": "Max Planck Institute for Evolutionary Anthropology",
+   "url": "https://glottolog.org/"
+  },
+  {
+   "id": "phoible2019",
+   "author": "Moran, Steven; McCloy, Daniel (eds.)",
+   "year": 2019,
+   "title": "PHOIBLE 2.0 (doi:10.5281/zenodo.2562766)",
+   "publisher": "Max Planck Institute for the Science of Human History",
+   "url": "https://phoible.org/inventories/view/1371",
+   "notes": "Inventory 1371 (ph), 31 non-marginal segments, 1 marginal excluded, 2 tones."
+  }
+ ],
+ "urls": [
+  "https://glottolog.org/resource/languoid/id/njeb1242"
+ ],
+ "location": {
+  "latitude": -2.1812,
+  "longitude": 12.7063,
+  "source": "glottolog",
+  "notes": "Glottolog's representative point."
+ },
+ "parent": "x-clade-atla1278",
+ "phonemes": [
+  "b",
+  "d",
+  "f",
+  "j",
+  "k",
+  "l",
+  "m",
+  "mb",
+  "n",
+  "nd",
+  "nz",
+  "p",
+  "pf",
+  "s",
+  "t",
+  "ts",
+  "x",
+  "ŋɡ",
+  "ɱv",
+  "ɲ",
+  "ɾ",
+  "ʃ",
+  "β",
+  "a",
+  "e",
+  "i",
+  "o",
+  "u",
+  "ɔ",
+  "ə",
+  "ɛ"
+ ],
+ "tone_inventory": {
+  "˦": "PHOIBLE tone segment",
+  "˨": "PHOIBLE tone segment"
+ },
+ "phoible_id": "1371"
+}

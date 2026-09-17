@@ -1,0 +1,80 @@
+{
+ "code": "rgr",
+ "name": "Resígaro",
+ "script": "Zyyy",
+ "quality": "stub",
+ "graphemes": {},
+ "allophones": {},
+ "notes": "REGISTRY STUB (not a modelled G2P target). Placed so the ancestry graph covers every living ISO 639-3 language. No orthography is claimed; the phoneme inventory follows the cited PHOIBLE inventory (which itself cites a published description): script is Zyyy (undetermined) until a cited description is encoded. Classification and coordinates follow Glottolog.",
+ "iso639_3": "rgr",
+ "glottolog_code": "resi1247",
+ "sources": [
+  {
+   "id": "glottolog2024",
+   "author": "Hammarström, Harald; Forkel, Robert; Haspelmath, Martin; Bank, Sebastian",
+   "year": 2024,
+   "title": "Glottolog 5.0",
+   "publisher": "Max Planck Institute for Evolutionary Anthropology",
+   "url": "https://glottolog.org/"
+  },
+  {
+   "id": "phoible2019",
+   "author": "Moran, Steven; McCloy, Daniel (eds.)",
+   "year": 2019,
+   "title": "PHOIBLE 2.0 (doi:10.5281/zenodo.2562766)",
+   "publisher": "Max Planck Institute for the Science of Human History",
+   "url": "https://phoible.org/inventories/view/1830",
+   "notes": "Inventory 1830 (saphon), 37 non-marginal segments."
+  }
+ ],
+ "urls": [
+  "https://glottolog.org/resource/languoid/id/resi1247"
+ ],
+ "location": {
+  "latitude": -1.1695,
+  "longitude": -71.6052,
+  "source": "glottolog",
+  "notes": "Glottolog's representative point."
+ },
+ "parent": "x-clade-araw1281",
+ "phonemes": [
+  "b",
+  "d",
+  "dz",
+  "dʲ",
+  "d̠ʒ",
+  "h",
+  "k",
+  "kʰ",
+  "m",
+  "m̥",
+  "n",
+  "n̥",
+  "p",
+  "pʰ",
+  "s",
+  "t",
+  "ts",
+  "tsʰ",
+  "tʰ",
+  "tʲ",
+  "t̠ʃ",
+  "t̠ʃʰ",
+  "x",
+  "ɡ",
+  "ɲ",
+  "ɲ̥",
+  "ɸ",
+  "ɾ",
+  "ʃ",
+  "ʒ",
+  "ʔ",
+  "β",
+  "a",
+  "e",
+  "i",
+  "o",
+  "u"
+ ],
+ "phoible_id": "1830"
+}

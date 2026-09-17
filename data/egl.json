@@ -1,0 +1,193 @@
+{
+  "code": "egl",
+  "name": "Emilian-Romagnol",
+  "script": "Latin",
+  "graphemes_base": "la-x-galloitalic",
+  "graphemes": {
+    "ö": [
+      "ø"
+    ],
+    "u": [
+      "y",
+      "u"
+    ],
+    "ù": [
+      "u"
+    ],
+    "aa": [
+      "aː"
+    ],
+    "ee": [
+      "eː"
+    ],
+    "ii": [
+      "iː"
+    ],
+    "oo": [
+      "oː"
+    ],
+    "ã": [
+      "ã"
+    ],
+    "ẽ": [
+      "ẽ"
+    ],
+    "õ": [
+      "õ"
+    ],
+    "ch": [
+      "k"
+    ],
+    "gh": [
+      "ɡ"
+    ],
+    "gn": [
+      "ɲ"
+    ],
+    "j": [
+      "j"
+    ],
+    "qu": [
+      "kw"
+    ],
+    "sc": [
+      "ʃ"
+    ],
+    "z": [
+      "ts",
+      "dz"
+    ]
+  },
+  "allophones_base": "la-x-galloitalic",
+  "allophones": {
+    "p": [
+      "p"
+    ],
+    "t": [
+      "t"
+    ],
+    "k": [
+      "k"
+    ],
+    "ts": [
+      "ts"
+    ],
+    "dz": [
+      "dz"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "n": [
+      "n",
+      "ŋ",
+      "ɱ"
+    ],
+    "ɲ": [
+      "ɲ"
+    ],
+    "j": [
+      "j"
+    ],
+    "w": [
+      "w"
+    ],
+    "aː": [
+      "aː"
+    ],
+    "ã": [
+      "ã"
+    ],
+    "eː": [
+      "eː"
+    ],
+    "ẽ": [
+      "ẽ"
+    ],
+    "iː": [
+      "iː"
+    ],
+    "oː": [
+      "oː"
+    ],
+    "õ": [
+      "õ"
+    ],
+    "ø": [
+      "ø"
+    ]
+  },
+  "parent": "la-x-galloitalic",
+  "ancestors": [
+    {
+      "code": "la-x-galloitalic",
+      "role": "parent",
+      "weight": 0.8,
+      "notes": "Gallo-Italic parent."
+    },
+    {
+      "code": "cel",
+      "role": "substrate",
+      "weight": 0.05,
+      "notes": "Celtic (Boii/Senones) substrate: Gallia Cispadana was heavily Celtic."
+    },
+    {
+      "code": "gem",
+      "role": "superstrate",
+      "weight": 0.04,
+      "notes": "Lombardic superstrate."
+    }
+  ],
+  "notes": "Emilian-Romagnol. Gallo-Italic language of Emilia-Romagna. ~2 million speakers. Reference variety: Bolognese. Key features: (1) Front rounded vowels /y, ø/. (2) Phonemic vowel length. (3) Strong nasal vowels. (4) Degemination. (5) Intervocalic lenition (Hajek 1997, Loporcaro 2009).",
+  "quality": "skeleton",
+  "script_type": "alphabet",
+  "iso639_3": "egl",
+  "sources": [
+    {
+      "id": "maiden_parry1997",
+      "author": "Maiden, M. & Parry, M. (eds.)",
+      "year": 1997,
+      "title": "The Dialects of Italy",
+      "publisher": "Routledge",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "loporcaro2009",
+      "author": "Loporcaro, M.",
+      "year": 2009,
+      "title": "Profilo linguistico dei dialetti italiani",
+      "publisher": "Laterza",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "ladefoged_maddieson1996",
+      "author": "Ladefoged, P. & Maddieson, I.",
+      "year": 1996,
+      "title": "The Sounds of the World's Languages",
+      "publisher": "Blackwell",
+      "url": null,
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Emilian_dialect"
+  ],
+  "timespan": {
+    "start_year": 1400,
+    "end_year": null
+  },
+  "glottolog_code": "emil1241",
+  "wikidata_qid": "Q1057898",
+  "wals_code": "itb",
+  "location": {
+    "latitude": 44.3536,
+    "longitude": 11.5794,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Emiliano."
+  }
+}

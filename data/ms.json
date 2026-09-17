@@ -1,0 +1,126 @@
+{
+  "code": "ms",
+  "name": "Malay",
+  "script": "Latin",
+  "graphemes": {},
+  "allophones": {
+    "a": [
+      "a"
+    ],
+    "e": [
+      "e"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "o"
+    ],
+    "u": [
+      "u"
+    ]
+  },
+  "quality": "research",
+  "script_type": "alphabet",
+  "iso639_3": "msa",
+  "sources": [
+    {
+      "id": "adelaar_himmelmann2005",
+      "author": "Adelaar, A. & Himmelmann, N. (eds.)",
+      "year": 2005,
+      "title": "The Austronesian Languages of Asia and Madagascar",
+      "publisher": "Routledge",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "clynes_deterding2011",
+      "author": "Clynes, A. & Deterding, D.",
+      "year": 2011,
+      "title": "Standard Malay (Brunei)",
+      "publisher": "Journal of the International Phonetic Association",
+      "url": null,
+      "pages": "259-268",
+      "notes": null
+    },
+    {
+      "id": "ladefoged_maddieson1996",
+      "author": "Ladefoged, P. & Maddieson, I.",
+      "year": 1996,
+      "title": "The Sounds of the World's Languages",
+      "publisher": "Blackwell",
+      "url": null,
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Malay_language",
+    "https://ms.wikipedia.org/wiki/Bahasa_Melayu",
+    "https://en.wikipedia.org/wiki/Proto-Malayo-Polynesian_language",
+    "https://ms.wikipedia.org/wiki/Bahasa_Melayu-Polinesia_Purba"
+  ],
+  "timespan": {
+    "start_year": 1400,
+    "end_year": null
+  },
+  "glottolog_code": "stan1306",
+  "stress": {
+    "default_position": -2,
+    "final_stress_endings": [],
+    "penult_stress_endings": [],
+    "marked_vowels": [],
+    "stress_mark": "ˈ",
+    "notes": "Malay default stress is penultimate (-2). Penult schwa in native Malay roots may shift stress to antepenult; this variation is lexical and not modeled. Source: Clynes & Deterding (2011), Adelaar & Himmelmann (2005)."
+  },
+  "parent": "poz",
+  "ancestors": [
+    {
+      "code": "poz",
+      "role": "parent",
+      "weight": 0.8,
+      "notes": "Malayo-Polynesian branch of Austronesian."
+    },
+    {
+      "code": "sa",
+      "role": "adstrate",
+      "weight": 0.1,
+      "notes": "Sanskrit adstrate: Old-Malay Hindu-Buddhist stratum."
+    },
+    {
+      "code": "ar",
+      "role": "adstrate",
+      "weight": 0.1,
+      "notes": "Arabic adstrate: religious vocabulary and the Jawi script."
+    },
+    {
+      "code": "fa",
+      "role": "adstrate",
+      "weight": 0.04,
+      "notes": "Persian adstrate: courtly loanwords via Islamic trade."
+    },
+    {
+      "code": "en-GB",
+      "role": "adstrate",
+      "weight": 0.05,
+      "notes": "English adstrate: colonial and modern loanwords."
+    },
+    {
+      "code": "pt-PT",
+      "role": "adstrate",
+      "weight": 0.03,
+      "notes": "Portuguese adstrate: early trade loanwords."
+    }
+  ],
+  "wikidata_qid": "Q9237",
+  "phoible_id": "stan1306",
+  "location": {
+    "latitude": 3.08896,
+    "longitude": 101.699,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Standard Malay."
+  },
+  "graphemes_base": "id",
+  "notes": "Standard Malay (Bahasa Melayu) in the Rumi (Latin) script. Malay and Indonesian share the orthography unified by the 1972 spelling reform (the Malaysian Ejaan Rumi Baharu and the Indonesian EYD were harmonised to a single Latin system), so the grapheme->phoneme correspondences are inherited from `id`: ⟨c⟩=/tʃ/, ⟨j⟩=/dʒ/, ⟨ng⟩=/ŋ/, ⟨ny⟩=/ɲ/, ⟨sy⟩=/ʃ/, ⟨kh⟩=/x/, digraph vowels ⟨ai au oi⟩. Source: Asmah Haji Omar, *The Phonological Diversity of the Malay Dialects* (1977); the shared reformed orthography is documented at the Wikipedia 'Malay orthography' and 'Indonesian language' articles."
+}

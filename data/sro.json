@@ -1,0 +1,85 @@
+{
+  "code": "sro",
+  "name": "Campidanese Sardinian",
+  "script": "Latin",
+  "graphemes_base": "sc",
+  "allophones_base": "sc",
+  "allophones": {
+    "p": [
+      "p",
+      "β"
+    ],
+    "t": [
+      "t",
+      "ð"
+    ],
+    "k": [
+      "k",
+      "ɣ"
+    ]
+  },
+  "parent": "sc",
+  "ancestors": [
+    {
+      "code": "sc",
+      "role": "parent_dialect",
+      "weight": 0.9,
+      "notes": "Campidanese is a primary dialect group of Sardinian (macrolanguage srd), sharing sc's grapheme inventory."
+    }
+  ],
+  "notes": "Campidanese Sardinian (ISO 639-3 sro). Southern Sardinian dialect group, more phonologically innovative than Logudorese: heavier intervocalic lenition of voiceless stops (p, t, k -> β, ð, ɣ), more retroflex consonants, and centuries of Aragonese-Catalan/Spanish contact influence on the lexicon. Wired as a graphemes_base dialect of sc (Sardinian), mirroring the sc-x-campidanese extended-tag entry, but filed under its own ISO 639-3 code.",
+  "quality": "research",
+  "script_type": "alphabet",
+  "sources": [
+    {
+      "id": "mereu2019_cagliari",
+      "author": "Mereu, Daniela",
+      "year": 2019,
+      "title": "Illustrations of the IPA: Cagliari Sardinian",
+      "publisher": "Journal of the International Phonetic Association (Cambridge University Press)",
+      "url": "https://www.cambridge.org/core/journals/journal-of-the-international-phonetic-association/article/cagliari-sardinian/5B30AFE68BBB1CB462067B3C9A9CED45",
+      "pages": null,
+      "notes": "JIPA Illustration confirming intervocalic (across word-boundary) lenition of /p t k/ to [β ð ɣ] in Cagliari Campidanese, e.g. su tempus [su ðempuzu]; fetched this session, preferred as the primary phonetic source per house convention."
+    },
+    {
+      "id": "phoible",
+      "author": "Moran, Steven & McCloy, Daniel (eds.)",
+      "year": 2019,
+      "title": "PHOIBLE 2.0",
+      "publisher": "Max Planck Institute for the Science of Human History",
+      "url": "https://phoible.org/",
+      "pages": null,
+      "notes": "Attested phoneme inventory for glottocode camp1261."
+    },
+    {
+      "id": "sil_sro",
+      "author": "SIL International",
+      "year": 2024,
+      "title": "ISO 639-3: sro — Campidanese Sardinian",
+      "publisher": "SIL International",
+      "url": "https://iso639-3.sil.org/code/sro",
+      "pages": null,
+      "notes": "Confirms ISO 639-3 identifier for Campidanese Sardinian, fetched this session."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Campidanese_dialect",
+    "https://en.wikipedia.org/wiki/Campidanese_Sardinian",
+    "https://sc.wikipedia.org/wiki/Sardu_campidanesu",
+    "https://it.wikipedia.org/wiki/Lingua_sarda_campidanese"
+  ],
+  "timespan": {
+    "start_year": 1000,
+    "end_year": null
+  },
+  "glottolog_code": "camp1261",
+  "iso639_3": "sro",
+  "wikidata_qid": "Q35348",
+  "phoible_id": "camp1261",
+  "location": {
+    "latitude": 39.0566,
+    "longitude": 9.03935,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Campidanese Sardinian."
+  }
+}

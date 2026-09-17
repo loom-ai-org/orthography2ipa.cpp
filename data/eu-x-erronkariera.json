@@ -1,0 +1,107 @@
+{
+  "code": "eu-x-erronkariera",
+  "name": "Roncalese Basque (Erronkariera)",
+  "script": "Latin",
+  "graphemes_base": "eu",
+  "allophones_base": "eu",
+  "positional_graphemes_base": "eu",
+  "allophones": {
+    "p": [
+      "p",
+      "pʰ"
+    ],
+    "t": [
+      "t",
+      "tʰ"
+    ],
+    "k": [
+      "k",
+      "kʰ"
+    ],
+    "h": [
+      "h",
+      ""
+    ]
+  },
+  "parent": "eu",
+  "glottolog_code": "ronc1236",
+  "ancestors": [
+    {
+      "code": "eu",
+      "role": "parent",
+      "weight": 0.9,
+      "notes": "Roncalese inherits the standard Basque grapheme base; it is an eastern (Eastern Navarrese) variety, most of whose distinctive traits are historical sound changes and prosody not recoverable from orthography."
+    }
+  ],
+  "notes": "Roncalese (Erronkariera / Erronkaribarko euskara). The Basque of the Roncal valley (Erronkari) in easternmost Navarre. In Koldo Zuazo's classification it belongs, together with neighbouring Salazarese (Zaraitzera), to the EASTERN NAVARRESE dialect. It is EXTINCT: it died out in the 20th century, its last fluent speakers gone by around 1991 (Egurtzegi 2013: 127). Well documented by Bonaparte, and by Michelena's Fonética Histórica Vasca and his edition of a Roncalese doctrine. RESEARCH-GROUNDED against Egurtzegi (2013) 'Phonetics and Phonology' and Hualde (2018) 'Aspiration in Basque'. Distinctive features: (1) CONTRASTIVE NASALISED VOWELS: Roncalese kept the old Basque nasalised-vowel series 'exactly as they were found in the modern Souletin dialect' (Egurtzegi 2013: 127), arising from the loss of an intervocalic *n via a nasalised aspiration; secondary sources report the nasalisation could appear in any syllable in Roncalese, versus only the final syllable in Souletin (Egurtzegi, in Loquens 2015 — abstract only, not fully read; flagged). (2) EASTERN ASPIRATION, RECEDING: as an eastern variety Roncalese had the laryngeal /h/ and stress-conditioned aspirated stops [pʰ tʰ kʰ], but aspiration was already receding toward extinction (Hualde 2018: 2-3; a Roncalese-specific k-/g- reflex is noted at p.13). Modelled as variable h -> [h] ~ [∅] and aspirated-stop variants. (3) HIGH-VOWEL METAPHONY: /i/ regularly assimilated to /u/ before a following /u/ (tipula > tupla 'onion', ilun > ulun 'dark'; Egurtzegi 2013: 131, citing Michelena FHV:79). (4) INTENSE SYNCOPE: Roncalese (with Salazarese) had unusually intense vowel syncope, including tautosyllabic sibilant+tap clusters found in no other dialect (denbora > tenpra 'time', zira > zra 'you are', baratze > bartze 'garden'; Egurtzegi 2013: 135-136, citing Michelena FHV:160). NOTE (engine limit): features (1), (3) and (4) are historical/morphophonological processes and vowel nasality is not marked in standard Basque orthography, so they are documented here but NOT emitted at the grapheme->IPA level; only the eastern aspiration (variable /h/ and aspirated-stop variants) is modelled. The base three-way sibilant contrast /s̻ s̺ ʃ/ is retained.",
+  "quality": "research",
+  "urls": [
+    "https://glottolog.org/resource/languoid/id/ronc1236",
+    "https://en.wikipedia.org/wiki/Roncalese_dialect"
+  ],
+  "script_type": "alphabet",
+  "sources": [
+    {
+      "id": "egurtzegi2013",
+      "author": "Egurtzegi, A.",
+      "year": 2013,
+      "title": "Phonetics and Phonology (ch. 4). In M. Martínez-Areta (ed.), Basque and Proto-Basque",
+      "publisher": "Peter Lang",
+      "url": "https://www.phonetik.uni-muenchen.de/personen/assoziierte_wissenschaftler/egurtzegi_ander/2013_protobasque_phonology.pdf",
+      "pages": "119-183 (127, 133, 135-136)",
+      "notes": "Primary read source: Roncalese extinction and shared nasalised-vowel series (p.127), /i/>/u/ metaphony (p.133), intense syncope incl. sibilant+tap clusters unique to Roncal/Salazar (pp.135-136)."
+    },
+    {
+      "id": "hualde2018_aspiration",
+      "author": "Hualde, J.I.",
+      "year": 2018,
+      "title": "Aspiration in Basque",
+      "publisher": "Papers in Historical Phonology 3",
+      "url": "https://doi.org/10.2218/pihph.3.2018.2602",
+      "pages": "1-27",
+      "notes": "Read for eastern-dialect aspiration and a Roncalese k-/g- reflex (pp.2-3, 19)."
+    },
+    {
+      "id": "michelena1977_fhv",
+      "author": "Michelena (Mitxelena), L.",
+      "year": 1977,
+      "title": "Fonética Histórica Vasca (2nd edn.)",
+      "publisher": "Diputación de Guipúzcoa (Supplements of ASJU)",
+      "url": null,
+      "pages": "48-50, 79, 160",
+      "notes": "The foundational description of Roncalese nasalisation, metaphony and syncope; consulted here as reported and page-cited in Egurtzegi (2013), not read in the original."
+    },
+    {
+      "id": "hualde_ortiz_de_urbina2003",
+      "author": "Hualde, J.I. & Ortiz de Urbina, J. (eds.)",
+      "year": 2003,
+      "title": "A Grammar of Basque",
+      "publisher": "Mouton de Gruyter",
+      "url": null,
+      "pages": "15-65 (Hualde, 'Segmental phonology')",
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Roncalese_dialect",
+    "https://eu.wikipedia.org/wiki/Erronkariera",
+    "https://es.wikipedia.org/wiki/Euskera_roncal%C3%A9s"
+  ],
+  "timespan": {
+    "start_year": 1600,
+    "end_year": 1991
+  },
+  "iso639_3": "eus",
+  "wikidata_qid": "Q47494",
+  "location": {
+    "latitude": 42.832739,
+    "longitude": -0.887691,
+    "source": "wikidata",
+    "notes": "the Roncal/Erronkari valley (Navarre) — the valley the extinct dialect was spoken in. [Wikidata Q2165565 P625]"
+  },
+  "graphemes": {
+    "h": [
+      "h"
+    ]
+  }
+}

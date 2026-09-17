@@ -1,0 +1,184 @@
+{
+  "code": "ka",
+  "name": "Georgian",
+  "script": "Georgian",
+  "script_type": "alphabet",
+  "quality": "research",
+  "iso639_3": "kat",
+  "glottolog_code": "nucl1302",
+  "timespan": {
+    "start_year": 430,
+    "end_year": null
+  },
+  "graphemes": {
+    "ა": [
+      "a"
+    ],
+    "ბ": [
+      "b"
+    ],
+    "გ": [
+      "ɡ"
+    ],
+    "დ": [
+      "d"
+    ],
+    "ე": [
+      "ɛ"
+    ],
+    "ვ": [
+      "v"
+    ],
+    "ზ": [
+      "z"
+    ],
+    "თ": [
+      "tʰ"
+    ],
+    "ი": [
+      "i"
+    ],
+    "კ": [
+      "kʼ"
+    ],
+    "ლ": [
+      "l"
+    ],
+    "მ": [
+      "m"
+    ],
+    "ნ": [
+      "n"
+    ],
+    "ო": [
+      "o"
+    ],
+    "პ": [
+      "pʼ"
+    ],
+    "ჟ": [
+      "ʒ"
+    ],
+    "რ": [
+      "r"
+    ],
+    "ს": [
+      "s"
+    ],
+    "ტ": [
+      "tʼ"
+    ],
+    "უ": [
+      "u"
+    ],
+    "ფ": [
+      "pʰ"
+    ],
+    "ქ": [
+      "kʰ"
+    ],
+    "ღ": [
+      "ɣ"
+    ],
+    "ყ": [
+      "qʼ"
+    ],
+    "შ": [
+      "ʃ"
+    ],
+    "ჩ": [
+      "tʃʰ"
+    ],
+    "ც": [
+      "tsʰ"
+    ],
+    "ძ": [
+      "dz"
+    ],
+    "წ": [
+      "tsʼ"
+    ],
+    "ჭ": [
+      "tʃʼ"
+    ],
+    "ხ": [
+      "x"
+    ],
+    "ჯ": [
+      "dʒ"
+    ],
+    "ჰ": [
+      "h"
+    ]
+  },
+  "allophones": {},
+  "positional_graphemes": {},
+  "ancestors": [
+    {
+      "code": "ccs",
+      "role": "parent",
+      "weight": 0.85,
+      "notes": "Descent from Proto-Kartvelian."
+    },
+    {
+      "code": "fa",
+      "role": "adstrate",
+      "weight": 0.1,
+      "notes": "Persian adstrate: long Iranian cultural/political contact."
+    },
+    {
+      "code": "ar",
+      "role": "adstrate",
+      "weight": 0.05,
+      "notes": "Arabic adstrate: mostly via Persian."
+    },
+    {
+      "code": "grc",
+      "role": "adstrate",
+      "weight": 0.05,
+      "notes": "Greek adstrate: Byzantine ecclesiastical vocabulary."
+    },
+    {
+      "code": "ru",
+      "role": "adstrate",
+      "weight": 0.06,
+      "notes": "Russian adstrate: imperial/Soviet-era lexicon."
+    },
+    {
+      "code": "tr",
+      "role": "adstrate",
+      "weight": 0.04,
+      "notes": "Turkic adstrate: Ottoman-era loanwords."
+    }
+  ],
+  "parent": "ccs",
+  "notes": "Georgian (Kartuli), official language of Georgia. Written in Mkhedruli script. Three-way consonant distinction: voiced (ბ,გ,დ,ვ,ზ,ჟ,ჯ,ძ), aspirated (თ,ფ,ქ,ჩ,ც,ხ,ჰ), ejective (კ,პ,ტ,ყ,წ,ჭ). Complex consonant clusters. Kartvelian language family unrelated to Indo-European.",
+  "sources": [
+    {
+      "id": "shosted_chikovani2006",
+      "author": "Shosted, Ryan K. & Chikovani, Vakhtang",
+      "year": 2006,
+      "title": "Standard Georgian",
+      "publisher": "Journal of the International Phonetic Association 36(2), 255-264",
+      "url": "https://doi.org/10.1017/S0025100306002659",
+      "pages": "255-264",
+      "notes": "JIPA Illustration of the IPA. Confirmed via Crossref metadata (DOI 10.1017/S0025100306002659) as the peer-reviewed source of the three-way ejective/aspirated/voiced stop and affricate contrast and the phoneme inventory this spec's grapheme table encodes; the article text itself was not retrieved, so page-level claims here are not independently verified beyond the abstract."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Georgian_language",
+    "https://en.wikipedia.org/wiki/Georgian_phonology",
+    "https://ka.wikipedia.org/wiki/%E1%83%A5%E1%83%90%E1%83%A0%E1%83%97%E1%83%A3%E1%83%9A%E1%83%98_%E1%83%94%E1%83%9C%E1%83%90",
+    "https://en.wikipedia.org/wiki/Proto-Kartvelian_language",
+    "https://ka.wikipedia.org/wiki/%E1%83%9E%E1%83%A0%E1%83%9D%E1%83%A2%E1%83%9D-%E1%83%A5%E1%83%90%E1%83%A0%E1%83%97%E1%83%95%E1%83%94%E1%83%9A%E1%83%A3%E1%83%A0%E1%83%98_%E1%83%94%E1%83%9C%E1%83%90"
+  ],
+  "wikidata_qid": "Q8108",
+  "phoible_id": "nucl1302",
+  "wals_code": "geo",
+  "location": {
+    "latitude": 41.850397,
+    "longitude": 43.78613,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Georgian."
+  }
+}

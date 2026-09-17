@@ -1,0 +1,72 @@
+{
+  "code": "tft",
+  "name": "Ternate",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "ng": ["ŋ"],
+    "a": ["a"],
+    "e": ["e"],
+    "i": ["i"],
+    "o": ["o"],
+    "u": ["u"],
+    "b": ["b"],
+    "c": ["tʃ"],
+    "d": ["d"],
+    "f": ["f"],
+    "g": ["ɡ"],
+    "h": ["h"],
+    "j": ["dʒ"],
+    "k": ["k"],
+    "l": ["l"],
+    "m": ["m"],
+    "n": ["n"],
+    "o": ["o"],
+    "p": ["p"],
+    "r": ["r"],
+    "s": ["s"],
+    "t": ["t"],
+    "w": ["w"],
+    "y": ["j"]
+  },
+  "parent": "x-clade-nort2923",
+  "ancestors": [
+    {
+      "code": "x-clade-nort2923",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Descent per Glottolog classification of Ternate (tern1247)."
+    }
+  ],
+  "notes": "Skeleton. Ternate is a West Papuan (North Halmahera) non-Austronesian language of the Maluku Islands, Indonesia, written in a Latin orthography of the Indonesian type. The grapheme map covers the five-vowel system and a consonant inventory including the digraph ng for the velar nasal and c/j for the palatal affricates. A phonemic glottal stop and conditioned allophony are not consistently written and are left unencoded, as are stress and vowel length. Malay-loan letters are mapped to their nearest Indonesian orthographic values.",
+  "iso639_3": "tft",
+  "glottolog_code": null,
+  "sources": [
+    {
+      "id": "tft_glottolog",
+      "author": "Hammarström, H. et al. (Glottolog 5.0)",
+      "year": 2024,
+      "title": "Glottolog: Ternate (tern1247)",
+      "publisher": "Max Planck Institute for Evolutionary Anthropology",
+      "url": "https://glottolog.org/resource/languoid/id/tern1247",
+      "pages": null,
+      "notes": "Classification reference for a skeleton-tier entry.",
+      "wikipedia_url": null
+    },
+    {
+      "id": "tft_wikipedia",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Ternate language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Ternate_language",
+      "pages": null,
+      "notes": "Phonology and orthography reference for the grapheme-to-IPA skeleton.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Ternate_language"
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Ternate_language"
+  ]
+}

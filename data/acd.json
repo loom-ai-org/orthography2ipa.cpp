@@ -1,0 +1,201 @@
+{
+ "code": "acd",
+ "name": "Gikyode",
+ "script": "Latin",
+ "quality": "skeleton",
+ "graphemes": {
+  "a": [
+   "a"
+  ],
+  "b": [
+   "b"
+  ],
+  "d": [
+   "d"
+  ],
+  "e": [
+   "e"
+  ],
+  "f": [
+   "f"
+  ],
+  "g": [
+   "ɡ"
+  ],
+  "gb": [
+   "ɡ͡b"
+  ],
+  "gy": [
+   "d͡ʒ"
+  ],
+  "h": [
+   "h"
+  ],
+  "i": [
+   "i"
+  ],
+  "k": [
+   "k"
+  ],
+  "kp": [
+   "k͡p"
+  ],
+  "ky": [
+   "t͡ʃ"
+  ],
+  "l": [
+   "l"
+  ],
+  "m": [
+   "m"
+  ],
+  "n": [
+   "n"
+  ],
+  "ng": [
+   "ᵑɡ"
+  ],
+  "ny": [
+   "ɲ"
+  ],
+  "o": [
+   "o"
+  ],
+  "p": [
+   "p"
+  ],
+  "r": [
+   "r"
+  ],
+  "s": [
+   "s"
+  ],
+  "t": [
+   "t"
+  ],
+  "u": [
+   "u"
+  ],
+  "v": [
+   "v"
+  ],
+  "w": [
+   "w"
+  ],
+  "y": [
+   "j"
+  ],
+  "z": [
+   "z"
+  ],
+  "ŋ": [
+   "ŋ"
+  ],
+  "ɔ": [
+   "ɔ"
+  ],
+  "ɛ": [
+   "ɛ"
+  ]
+ },
+ "allophones": {},
+ "notes": "Placed so the ancestry graph covers every living ISO 639-3 language. No orthography is claimed; the phoneme inventory follows the cited PHOIBLE inventory (which itself cites a published description): script is Zyyy (undetermined) until a cited description is encoded. Classification and coordinates follow Glottolog. Orthography from an Omniglot chart (c) Simon Ager, https://www.omniglot.com/, extracted via the AfriSpeech/africa-g2p compilation (acd.json). africa-g2p is a compilation tool, not the linguistic authority; the citation above is the original source it names.",
+ "iso639_3": "acd",
+ "glottolog_code": "giky1238",
+ "sources": [
+  {
+   "id": "glottolog2024",
+   "author": "Hammarström, Harald; Forkel, Robert; Haspelmath, Martin; Bank, Sebastian",
+   "year": 2024,
+   "title": "Glottolog 5.0",
+   "publisher": "Max Planck Institute for Evolutionary Anthropology",
+   "url": "https://glottolog.org/"
+  },
+  {
+   "id": "phoible2019",
+   "author": "Moran, Steven; McCloy, Daniel (eds.)",
+   "year": 2019,
+   "title": "PHOIBLE 2.0 (doi:10.5281/zenodo.2562766)",
+   "publisher": "Max Planck Institute for the Science of Human History",
+   "url": "https://phoible.org/inventories/view/1302",
+   "notes": "Inventory 1302 (ph), 51 non-marginal segments."
+  },
+  {
+   "id": "omniglot-kyode",
+   "author": "Ager, Simon",
+   "year": 2026,
+   "title": "Omniglot chart (kyode.xls)",
+   "publisher": "Omniglot",
+   "url": "https://www.omniglot.com/",
+   "notes": "Undated web chart; year is retrieval year, not publication year."
+  }
+ ],
+ "urls": [
+  "https://glottolog.org/resource/languoid/id/giky1238"
+ ],
+ "location": {
+  "latitude": 8.3948,
+  "longitude": 0.5697,
+  "source": "glottolog",
+  "notes": "Glottolog's representative point."
+ },
+ "parent": "x-clade-atla1278",
+ "phonemes": [
+  "b",
+  "bʷ",
+  "c",
+  "d",
+  "f",
+  "fʷ",
+  "h",
+  "hʷ",
+  "j",
+  "k",
+  "kp",
+  "kʷ",
+  "l",
+  "m",
+  "n",
+  "p",
+  "pʷ",
+  "r",
+  "s",
+  "sʷ",
+  "sᶣ",
+  "t",
+  "w",
+  "ŋ",
+  "ŋm",
+  "ɟ",
+  "ɡ",
+  "ɡb",
+  "ɲ",
+  "a",
+  "ã",
+  "e",
+  "ẽ",
+  "i",
+  "ĩ",
+  "o",
+  "õ",
+  "u",
+  "ũ",
+  "ɔ",
+  "ɔ̃",
+  "ə",
+  "ə̃",
+  "ɛ",
+  "ɛ̃",
+  "ɪ",
+  "ɪ̃",
+  "ʊ",
+  "ʊ̃",
+  "ʌ",
+  "ʌ̃"
+ ],
+ "phoible_id": "1302",
+ "script_type": "alphabet",
+ "wikipedia": [
+  "https://en.wikipedia.org/wiki/Gikyode_language"
+ ]
+}

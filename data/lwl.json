@@ -1,0 +1,47 @@
+{
+  "code": "lwl",
+  "name": "Eastern Lawa",
+  "script": "Thai",
+  "script_type": "abugida",
+  "quality": "stub",
+  "graphemes": {},
+  "parent": "x-clade-aust1305",
+  "ancestors": [
+    {
+      "code": "x-clade-aust1305",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Descent per Glottolog classification of Eastern Lawa (east2330)."
+    }
+  ],
+  "notes": "Austroasiatic (Palaungic, Waic) language of northern Thailand, written with the Thai script. The Thai abugida encodes syllables through consonant symbols carrying an inherent vowel, separate pre-, post-, above- and below-base vowel signs, consonant-class distinctions and tone marks whose phonetic value depends on the consonant class and syllable structure. Recovering a segmental IPA reading for Lawa spellings therefore requires a per-word pronunciation lexicon that the engine does not bundle, so grapheme->IPA coverage is lexicon-dependent and effectively zero without that stratum; no alphabetic letter->IPA table is asserted. Lawa is tonal/registral, and tone and register are left unencoded.",
+  "iso639_3": "lwl",
+  "glottolog_code": null,
+  "sources": [
+    {
+      "id": "lwl_glottolog",
+      "author": "Hammarström, H. et al. (Glottolog 5.0)",
+      "year": 2024,
+      "title": "Glottolog: Eastern Lawa (east2330)",
+      "publisher": "Max Planck Institute for Evolutionary Anthropology",
+      "url": "https://glottolog.org/resource/languoid/id/east2330",
+      "pages": null,
+      "notes": "Classification reference for a skeleton-tier entry.",
+      "wikipedia_url": null
+    },
+    {
+      "id": "lwl_wikipedia",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Lawa language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Lawa_language",
+      "pages": null,
+      "notes": "Overview of the Lawa varieties and their use of the Thai script.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Lawa_language"
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Lawa_language"
+  ]
+}

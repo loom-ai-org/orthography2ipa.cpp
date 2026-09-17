@@ -1,0 +1,118 @@
+{
+  "code": "lua",
+  "name": "Luba-Kasai (Tshiluba)",
+  "glottolog_code": "luba1249",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "iso639_3": "lua",
+  "quality": "research",
+  "graphemes": {
+    "a": ["a"],
+    "b": ["b"],
+    "d": ["d"],
+    "e": ["e"],
+    "f": ["f"],
+    "g": ["ɡ"],
+    "h": ["h"],
+    "i": ["i"],
+    "j": ["dʒ"],
+    "k": ["k"],
+    "l": ["l"],
+    "m": ["m"],
+    "mb": ["mb"],
+    "mp": ["ᵐp"],
+    "n": ["n"],
+    "nd": ["nd"],
+    "nt": ["ⁿt"],
+    "ng": ["ŋɡ"],
+    "nk": ["ŋk"],
+    "ny": ["ɲ"],
+    "ntsh": ["ⁿtʃ"],
+    "o": ["o"],
+    "p": ["p"],
+    "s": ["s"],
+    "sh": ["ʃ"],
+    "t": ["t"],
+    "tsh": ["tʃ"],
+    "u": ["u"],
+    "v": ["v"],
+    "w": ["w"],
+    "y": ["j"],
+    "z": ["z"]
+  },
+  "allophones": {
+    "a": ["a"],
+    "b": ["b"],
+    "d": ["d"],
+    "e": ["e"],
+    "f": ["f"],
+    "ɡ": ["ɡ"],
+    "h": ["h"],
+    "i": ["i"],
+    "dʒ": ["dʒ"],
+    "k": ["k"],
+    "l": ["l"],
+    "m": ["m"],
+    "n": ["n"],
+    "ɲ": ["ɲ"],
+    "ŋ": ["ŋ"],
+    "o": ["o"],
+    "p": ["p"],
+    "s": ["s"],
+    "ʃ": ["ʃ"],
+    "t": ["t"],
+    "tʃ": ["tʃ"],
+    "u": ["u"],
+    "v": ["v"],
+    "w": ["w"],
+    "j": ["j"],
+    "z": ["z"]
+  },
+  "notes": "Luba-Kasai (Tshiluba/Ciluba), Guthrie L.31, Bantu language of Kasai region, DR Congo; one of the country's four national languages. Five-vowel system a/e/i/o/u with a length distinction. Standard orthography uses the digraphs ng, ny and sh but no q, r, x. Prenasalized stops (mb, nd, ng, nk, mp, nt) and the affricate tsh /tʃ/ (with its prenasalized counterpart ntsh) are single phonemes. Dialects differ in tone; the standard orthography does not mark tone.",
+  "sources": [
+    {
+      "id": "lua_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2025,
+      "title": "Luba-Kasai language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Tshiluba_language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Tshiluba_language",
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "parent": "x-clade-narr1281",
+  "ancestors": [
+    {
+      "code": "x-clade-narr1281",
+      "role": "parent",
+      "weight": 0.9,
+      "notes": "Luba branch of Bantu (Guthrie L.30), within Atlantic-Congo."
+    },
+    {
+      "code": "lu",
+      "role": "related",
+      "weight": 0.4,
+      "notes": "Closely related Luba sister language (Luba-Katanga / Kiluba)."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Tshiluba_language",
+    "https://en.wikipedia.org/wiki/Proto-Bantu_language"
+  ],
+  "urls": [
+    "https://glottolog.org/resource/languoid/id/luba1249"
+  ],
+  "timespan": {
+    "start_year": 1900,
+    "end_year": null
+  },
+  "wikidata_qid": "Q34173",
+  "location": {
+    "latitude": -6.0,
+    "longitude": 23.0,
+    "source": "glottolog",
+    "notes": "Approximate centre of the Kasai speaking area, DR Congo."
+  }
+}

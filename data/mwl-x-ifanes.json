@@ -1,0 +1,135 @@
+{
+  "code": "mwl-x-ifanes",
+  "name": "Ifanês (Mirandese septentrional)",
+  "script": "Latin",
+  "graphemes_base": "mwl",
+  "graphemes": {},
+  "allophones_base": "mwl",
+  "positional_graphemes_base": "mwl",
+  "word_exceptions_base": "mwl",
+  "parent": "mwl",
+  "notes": "Ifanês is the local speech of Ifanes (Infainç) in the northern part of Terra de Miranda; it belongs to the Northern / Raiano (border) subdialect of Mirandese, the raia-sêcca villages of Paradela, Ifanes, Constantim, Cicouro and S. Martinho de Angueira. Phonologically it is identical to Central Mirandese in the modeled grapheme→IPA register: the primary description states outright that raiano offers no phonetic differences from the centre. Vasconcelos, working through the Raiano villages one by one (EPM Vol. II, §'II. Mirandês raiano'), records for S. Martinho de Angueira that the speech keeps the Leonese diphthongs ⟨ie/iê⟩ (tierra, cielo) and the mid outcomes (nobe, bono, posto, osso) exactly as Central, keeps ⟨ye⟩ (ye, yerba) and the palatal series, and — transcribing a Padre Nosso specimen — that it 'não offerece differenças phoneticas em relação á do centro'; the differences from Central are 'morphologicas (em pequeno número) e lexicologicas'. Constantim likewise 'não differe, senão no vocabulário'. Both Central and Raiano keep ⟨iê/ie⟩ = [je] and ⟨uô/uo⟩ = [wo] where Sendinês alone monophthongises to [i]/[u], and both keep the palatal lateral /ʎ/ (initial ⟨l⟩ and ⟨lh⟩) where Sendinês has /l/. The Raiano gold sample corroborates this: raiano 'fuogo' → [ˈfwo.ʊ] retains the diphthong (Sendinês would give [u]). The attested Raiano/Northern distinctives are morphosyntactic and lexical, not segmental rules: local adverb/pronoun forms at Ifanes (pa-lhina, aquina, quina for Central alhi/eiqui; calhe 'street'), the demonstratives esto/aquesto and lexemes tolho, lureiro, frol and verb forms j'era, caier at S. Martinho, and the raia connective antonces — none of which change any grapheme→phoneme mapping. This spec therefore inherits the full Central Mirandese system unchanged (graphemes_base = allophones_base = positional_graphemes_base = word_exceptions_base = mwl, no local overrides), so the human-gold calibration of Central Mirandese carries over: the close diphthongs ⟨ie/iê⟩→[je] and ⟨uo/uô⟩→[wo], the pre-consonantal nasalisation of a nasal digraph before a stop (vowel nasalised, nasal absorbed, stop retained), and the apical ⟨s⟩ series [s̺]/[z̺]. Ifanês ≡ Central Mirandese phonologically; the varieties diverge only in lexical register and morphology. The unstressed vowel qualities are inherited from Central Mirandese, where they are grounded in Leite de Vasconcelos's description of Duas-Igrejas (unstressed ⟨o u⟩ = [u], unstressed and final ⟨e⟩ = [ɨ]). Whether Raiano realises those unstressed vowels differently is not settled by any description reached so far, and the Raiano gold sample is too small to decide it; the inherited Central values stand until a published source says otherwise.",
+  "quality": "research",
+  "script_type": "alphabet",
+  "sources": [
+    {
+      "id": "vasconcelos1900",
+      "author": "Vasconcelos, J. Leite de",
+      "year": 1900,
+      "title": "Estudos de Philologia Mirandesa (Vol. I)",
+      "publisher": "Imprensa Nacional, Lisboa",
+      "url": "https://archive.org/details/estudosdephilolo01leit",
+      "pages": "172-173, 219-220",
+      "notes": "Foundational description that first delimits the Mirandese subdialects (central; northern/raiano, S. Martinho etc.; Sendinês — p.172 note, p.173) and their phonology. For the diphthong from Latin short Ĕ it states that raiano agrees with the central norm (p.219-220: 'sei que se diz em S. Martinho, por ex.: tierra, o que concorda com o mirandês normal'), reserving the monophthong /i/ outcome for Sendinês alone."
+    },
+    {
+      "id": "vasconcelos1900v2",
+      "author": "Vasconcelos, J. Leite de",
+      "year": 1901,
+      "title": "Estudos de Philologia Mirandesa (Vol. II)",
+      "publisher": "Imprensa Nacional, Lisboa",
+      "url": "https://archive.org/details/estudosdephilolo02leit",
+      "pages": "28-31",
+      "notes": "Section 'II. Mirandês raiano' surveys the raia-sêcca villages (Paradela, Ifanes, Constantim, Cicouro, S. Martinho de Angueira). It records that S. Martinho keeps the diphthongs (tierra, cielo) and mid outcomes (nobe, bono, posto, osso) as Central, and — via a transcribed Padre Nosso — that the raiano speech 'não offerece differenças phoneticas em relação á do centro', its differences from Central being 'morphologicas (em pequeno número) e lexicologicas'. Constantim 'também não differe, senão no vocabulário'. Primary-source ground for the phonological identity of Ifanês with Central Mirandese."
+    },
+    {
+      "id": "convencao1999",
+      "author": "Ferreira, M.B. & Raposo, D. (coords.)",
+      "year": 1999,
+      "title": "Convenção Ortográfica da Língua Mirandesa",
+      "publisher": "Câmara Municipal de Miranda do Douro / Centro de Linguística da Universidade de Lisboa",
+      "url": "http://mirandadodouro.jfreguesia.com/images/stories/PDF/convencaomirandes.pdf",
+      "pages": "62",
+      "notes": "Official orthography, built on the Central/Raiano norm; records that the ⟨iê/uô⟩ spelling reflected the [je]/[wo] pronunciation of the Central and Raiano dialects (reduced to [i]/[u] only in Sendinês)."
+    },
+    {
+      "id": "mateus_dandrade2000",
+      "author": "Mateus, M.H.M. & d'Andrade, E.",
+      "year": 2000,
+      "title": "The Phonology of Portuguese",
+      "publisher": "Oxford University Press",
+      "url": null,
+      "pages": null,
+      "notes": "Reference for the shared Ibero-Romance processes (nasal place assimilation, spirantisation) inherited from the Central spec."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Mirandese_language",
+    "https://mwl.wikipedia.org/wiki/Lh%C3%A9ngua_mirandesa",
+    "https://pt.wikipedia.org/wiki/L%C3%ADngua_mirandesa"
+  ],
+  "timespan": {
+    "start_year": 1600,
+    "end_year": null
+  },
+  "glottolog_code": null,
+  "iso639_3": "mwl",
+  "stress": {
+    "onset_clusters": ["bl", "br", "bɫ", "bɾ", "bʀ", "bʁ", "bʎ", "bχ", "dr", "dɾ", "dʀ", "dʁ", "dʎ", "dχ", "fl", "fr", "fɫ", "fɾ", "fʀ", "fʁ", "fʎ", "fχ", "kl", "kr", "kɫ", "kɾ", "kʀ", "kʁ", "kʎ", "kχ", "pl", "pr", "pɫ", "pɾ", "pʀ", "pʁ", "pʎ", "pχ", "tr", "tɾ", "tʀ", "tʁ", "tʎ", "tχ", "vl", "vr", "vɫ", "vɾ", "vʀ", "vʁ", "vʎ", "vχ", "ðr", "ðɾ", "ðʀ", "ðʁ", "ðʎ", "ðχ", "ɡl", "ɡr", "ɡɫ", "ɡɾ", "ɡʀ", "ɡʁ", "ɡʎ", "ɡχ", "ɣl", "ɣr", "ɣɫ", "ɣɾ", "ɣʀ", "ɣʁ", "ɣʎ", "ɣχ", "βl", "βr", "βɫ", "βɾ", "βʀ", "βʁ", "βʎ", "βχ"],
+    "default_position": -2,
+    "final_stress_endings": [
+      "r",
+      "l",
+      "z",
+      "ç",
+      "in",
+      "un",
+      "on",
+      "is",
+      "us",
+      "ns",
+      "ão"
+    ],
+    "penult_stress_endings": [],
+    "marked_vowels": [
+      "á",
+      "é",
+      "í",
+      "ó",
+      "ú",
+      "ã",
+      "ẽ",
+      "ĩ",
+      "õ",
+      "ũ"
+    ],
+    "stress_mark": "ˈ",
+    "coda_liquid_capture": true,
+    "cliticless_words": [
+      "l",
+      "la",
+      "ls",
+      "las",
+      "lo",
+      "los",
+      "a",
+      "an",
+      "de",
+      "por",
+      "cun",
+      "pul",
+      "pula",
+      "puls",
+      "pulas",
+      "ne",
+      "na",
+      "no",
+      "nas",
+      "nos",
+      "i",
+      "e",
+      "que",
+      "me",
+      "te",
+      "se",
+      "bos"
+    ],
+    "notes": "Convenção Ortográfica da Língua Mirandesa (1999) accentuation, Portuguese-based: paroxytone default; written accent (acute or tilde) overrides. Oxytone-attracting endings reflect Mirandese orthography: consonant-final r/l/z/ç (rapaç, Pertual, falar) and the final nasals written with -n in the Asturleonese manner — -in (camin, Sendin), -un, and the systematically oxytone -on class from Latin -ōnem (naçon, coraçon, Associaçon). Unmarked -an/-en verb endings stay paroxytone as in Portuguese -am/-em. Dialect mwl-x-ifanes: no evidence of stress-pattern divergence from standard Mirandese; block copied from mwl (cliticless_words included, since stress is not inherited)."
+  },
+  "location": {
+    "latitude": 41.581667,
+    "longitude": -6.265,
+    "source": "wikidata",
+    "notes": "Ifanes (Infainç) — the northern Terra de Miranda village the sub-dialect is named for. [Wikidata Q1657046 P625]"
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "code": "de-x-bavarian",
+  "name": "Bavarian German",
+  "script": "Latin",
+  "graphemes_base": "de-AT",
+  "allophones_base": "de-AT",
+  "allophones": {
+    "ɛː": [
+      "ɛː"
+    ],
+    "aɪ": [
+      "aɪ",
+      "ɔɪ"
+    ],
+    "ʁ": [
+      "r",
+      "ɐ"
+    ]
+  },
+  "parent": "de-AT",
+  "notes": "Bavarian (Bairisch) — covers Bavaria and most of Austria. Fortis/lenis consonant distinction (not voiced/voiceless). pf- cluster fully preserved. r-vocalisation [ɐ] before consonants common. Source: König & van der Auwera (1994).",
+  "quality": "skeleton",
+  "script_type": "alphabet",
+  "sources": [
+    {
+      "id": "wiese1996",
+      "author": "Wiese, R.",
+      "year": 1996,
+      "title": "The Phonology of German",
+      "publisher": "Oxford University Press",
+      "url": null,
+      "pages": null,
+      "notes": null,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/German_phonology"
+    },
+    {
+      "id": "russ1994",
+      "author": "Russ, C.",
+      "year": 1994,
+      "title": "The Dialects of Modern German",
+      "publisher": "Routledge",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "zehetner1985",
+      "author": "Zehetner, L.",
+      "year": 1985,
+      "title": "Das bairische Dialektbuch",
+      "publisher": "Beck",
+      "url": null,
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Bavarian_language",
+    "https://de.wikipedia.org/wiki/Bairische_Dialekte",
+    "https://bar.wikipedia.org/wiki/Boarisch",
+    "https://de.wikipedia.org/wiki/Bairisch"
+  ],
+  "timespan": {
+    "start_year": 1000,
+    "end_year": null
+  },
+  "glottolog_code": "bava1246",
+  "iso639_3": "bar",
+  "wikidata_qid": "Q29540",
+  "wals_code": "gau",
+  "location": {
+    "latitude": 47.9232,
+    "longitude": 13.246,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Bavarian."
+  }
+}

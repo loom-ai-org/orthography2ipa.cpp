@@ -1,0 +1,458 @@
+{
+  "code": "frr",
+  "glottolog_code": "nort2626",
+  "name": "North Frisian",
+  "script": "Latin",
+  "quality": "research",
+  "script_type": "alphabet",
+  "parent": "ofs",
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "ä": [
+      "ɛ"
+    ],
+    "e": [
+      "ɛ",
+      "ə"
+    ],
+    "i": [
+      "ɪ"
+    ],
+    "o": [
+      "ɔ"
+    ],
+    "ö": [
+      "œ"
+    ],
+    "u": [
+      "ʊ"
+    ],
+    "ü": [
+      "ʏ"
+    ],
+    "aa": [
+      "aː"
+    ],
+    "äi": [
+      "ɛi"
+    ],
+    "ee": [
+      "eː"
+    ],
+    "ii": [
+      "iː"
+    ],
+    "oo": [
+      "oː"
+    ],
+    "öö": [
+      "øː"
+    ],
+    "uu": [
+      "uː"
+    ],
+    "üü": [
+      "yː"
+    ],
+    "ia": [
+      "iə"
+    ],
+    "ua": [
+      "uə"
+    ],
+    "üa": [
+      "yə"
+    ],
+    "ai": [
+      "ai"
+    ],
+    "au": [
+      "au"
+    ],
+    "ei": [
+      "ɛi"
+    ],
+    "oi": [
+      "ɔi"
+    ],
+    "ou": [
+      "ɔu"
+    ],
+    "öi": [
+      "œi"
+    ],
+    "b": [
+      "b"
+    ],
+    "c": [
+      "k"
+    ],
+    "ch": [
+      "x"
+    ],
+    "d": [
+      "d"
+    ],
+    "dj": [
+      "dʒ"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "h": [
+      "h"
+    ],
+    "j": [
+      "j"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ng": [
+      "ŋ"
+    ],
+    "nk": [
+      "ŋk"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "r",
+      "ʁ"
+    ],
+    "s": [
+      "s"
+    ],
+    "sch": [
+      "ʃ"
+    ],
+    "sj": [
+      "ʃ"
+    ],
+    "t": [
+      "t"
+    ],
+    "th": [
+      "t"
+    ],
+    "tj": [
+      "tʃ"
+    ],
+    "tsch": [
+      "tʃ"
+    ],
+    "v": [
+      "v",
+      "f"
+    ],
+    "w": [
+      "v",
+      "w"
+    ],
+    "x": [
+      "ks"
+    ],
+    "z": [
+      "ts"
+    ]
+  },
+  "allophones": {
+    "p": [
+      "p"
+    ],
+    "b": [
+      "b",
+      "p"
+    ],
+    "t": [
+      "t"
+    ],
+    "d": [
+      "d",
+      "t"
+    ],
+    "k": [
+      "k"
+    ],
+    "ɡ": [
+      "ɡ",
+      "k"
+    ],
+    "f": [
+      "f"
+    ],
+    "v": [
+      "v",
+      "f"
+    ],
+    "s": [
+      "s"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "x": [
+      "x"
+    ],
+    "h": [
+      "h"
+    ],
+    "tʃ": [
+      "tʃ"
+    ],
+    "dʒ": [
+      "dʒ"
+    ],
+    "ts": [
+      "ts"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n",
+      "ŋ"
+    ],
+    "ŋ": [
+      "ŋ"
+    ],
+    "l": [
+      "l"
+    ],
+    "r": [
+      "r",
+      "ʁ",
+      "ɾ"
+    ],
+    "j": [
+      "j"
+    ],
+    "w": [
+      "w"
+    ],
+    "a": [
+      "a"
+    ],
+    "aː": [
+      "aː"
+    ],
+    "ɛ": [
+      "ɛ"
+    ],
+    "eː": [
+      "eː"
+    ],
+    "ɪ": [
+      "ɪ"
+    ],
+    "iː": [
+      "iː"
+    ],
+    "ɔ": [
+      "ɔ"
+    ],
+    "oː": [
+      "oː"
+    ],
+    "ʊ": [
+      "ʊ"
+    ],
+    "uː": [
+      "uː"
+    ],
+    "œ": [
+      "œ"
+    ],
+    "øː": [
+      "øː"
+    ],
+    "ʏ": [
+      "ʏ"
+    ],
+    "yː": [
+      "yː"
+    ],
+    "ə": [
+      "ə"
+    ],
+    "iə": [
+      "iə"
+    ],
+    "uə": [
+      "uə"
+    ],
+    "yə": [
+      "yə"
+    ],
+    "ai": [
+      "ai"
+    ],
+    "au": [
+      "au"
+    ],
+    "ɛi": [
+      "ɛi"
+    ],
+    "ɔi": [
+      "ɔi"
+    ],
+    "ɔu": [
+      "ɔu"
+    ],
+    "œi": [
+      "œi"
+    ]
+  },
+  "positional_graphemes": {
+    "b": {
+      "word_final": [
+        "p"
+      ],
+      "default": [
+        "b"
+      ]
+    },
+    "d": {
+      "word_final": [
+        "t"
+      ],
+      "default": [
+        "d"
+      ]
+    },
+    "g": {
+      "word_final": [
+        "k"
+      ],
+      "default": [
+        "ɡ"
+      ]
+    },
+    "v": {
+      "word_final": [
+        "f"
+      ],
+      "default": [
+        "v"
+      ]
+    },
+    "e": {
+      "nucleus_unstressed": [
+        "ə"
+      ],
+      "nucleus_stressed": [
+        "ɛ"
+      ],
+      "default": [
+        "ɛ",
+        "ə"
+      ]
+    }
+  },
+  "ancestors": [
+    {
+      "code": "ofs",
+      "role": "parent",
+      "weight": 0.82,
+      "notes": "Descent from Old Frisian via the North Frisian branch. Diverged from Old Frisian after the 13th century when Frisian speakers settled on the North Frisian Islands and mainland Schleswig."
+    },
+    {
+      "code": "da",
+      "role": "adstrate",
+      "weight": 0.07,
+      "notes": "Danish adstrate: North Frisia was under Danish sovereignty until 1864 (Second Schleswig War). Danish administrative language and bilingualism strongly influenced North Frisian phonology and lexicon."
+    },
+    {
+      "code": "nds",
+      "role": "adstrate",
+      "weight": 0.06,
+      "notes": "Low German adstrate: North Frisia sits within the Low German dialect area. Heavy Low German lexical influence, especially after the Hanseatic period."
+    },
+    {
+      "code": "de-DE",
+      "role": "adstrate",
+      "weight": 0.05,
+      "notes": "Standard German adstrate: dominant language since 1864; all North Frisians are bilingual in German. Ongoing influence on vocabulary and syntax."
+    }
+  ],
+  "notes": "North Frisian (Nordfriisk / Frasch / Freesk) — spoken by ~8,000–10,000 speakers in Nordfriesland (Schleswig-Holstein, Germany). Severely endangered. Comprises ~10 distinct dialect groups divided into insular (Söl'ring, Fering, Öömrang, Halunder) and mainland (Mooring, Goesharde, Wiedingharde, Karrharde, etc.) varieties. Recognized as a regional minority language by Germany under the European Charter for Regional/Minority Languages. KEY FEATURES: (1) CENTRING DIPHTHONGS /iə, uə, yə/ — shared Frisian heritage with West Frisian. (2) FINAL DEVOICING as in West Frisian and Dutch. (3) VOICED STOP /ɡ/ — retained from Old Frisian (not the Dutch/LG fricative). (4) RICH VOWEL SYSTEM: up to 20 vowel phonemes in some dialects (front rounded ö, ü, öö, üü). (5) /tʃ, dʒ/ affricates — more productive than in West Frisian. (6) DANISH INFLUENCE: prosodic patterns and some lexicon from centuries of Danish rule. (7) Extreme dialect diversity — mainland and island varieties are often mutually unintelligible. The Mooring dialect (mainland) and Fering (Föhr island) are among the best documented. Sources: Walker & Wilts (2001), Århammar (2001), Fort & Munske (2001).",
+  "sources": [
+    {
+      "id": "walker_wilts2001",
+      "author": "Walker, A. & Wilts, O.",
+      "year": 2001,
+      "title": "The North Frisian Language",
+      "publisher": "Fryske Akademy / Nordfriesisches Institut",
+      "url": null,
+      "pages": null,
+      "notes": "In: Handbuch des Friesischen / Handbook of Frisian Studies (eds. Munske et al.)"
+    },
+    {
+      "id": "arhammar2001",
+      "author": "Århammar, N.",
+      "year": 2001,
+      "title": "The North Frisian Dialects",
+      "publisher": "Fryske Akademy / Nordfriesisches Institut",
+      "url": null,
+      "pages": null,
+      "notes": "In: Handbuch des Friesischen / Handbook of Frisian Studies"
+    },
+    {
+      "id": "fort_munske2001",
+      "author": "Fort, M.C. & Munske, H.H. (eds.)",
+      "year": 2001,
+      "title": "Handbuch des Friesischen / Handbook of Frisian Studies",
+      "publisher": "Max Niemeyer Verlag",
+      "url": null,
+      "pages": null,
+      "notes": "Comprehensive reference for all Frisian languages"
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/North_Frisian_language",
+    "https://de.wikipedia.org/wiki/Nordfriesische_Sprache",
+    "https://frr.wikipedia.org/wiki/Nordfriisk",
+    "https://frr.wikipedia.org/wiki/Nordfrasch"
+  ],
+  "urls": [
+    "https://en.wikipedia.org/wiki/North_Frisian_language",
+    "https://de.wikipedia.org/wiki/Nordfriesische_Sprache",
+    "https://en.wikipedia.org/wiki/Frisian_languages",
+    "https://en.wikipedia.org/wiki/North_Frisia",
+    "https://en.wikipedia.org/wiki/Fering_dialect",
+    "https://en.wikipedia.org/wiki/S%C3%B6l%27ring",
+    "https://en.wikipedia.org/wiki/%C3%96%C3%B6mrang",
+    "https://en.wikipedia.org/wiki/Halunder",
+    "https://fy.wikipedia.org/wiki/Noardfrysk",
+    "https://nl.wikipedia.org/wiki/Noord-Fries"
+  ],
+  "timespan": {
+    "start_year": 1300,
+    "end_year": null
+  },
+  "iso639_3": "frr",
+  "wikidata_qid": "Q28224",
+  "phoible_id": "nort2626",
+  "wals_code": "fno",
+  "location": {
+    "latitude": 54.6409,
+    "longitude": 8.58489,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Northern Frisian."
+  }
+}

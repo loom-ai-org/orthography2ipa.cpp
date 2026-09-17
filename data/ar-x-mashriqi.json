@@ -1,0 +1,290 @@
+{
+  "code": "ar-x-mashriqi",
+  "name": "Proto-Mashriqi Arabic",
+  "script": "Arabic",
+  "graphemes_base": "ar",
+  "allophones_base": "arb",
+  "positional_graphemes_base": "ar",
+  "graphemes": {
+    "ث": [
+      "t",
+      "θ"
+    ],
+    "ذ": [
+      "d",
+      "ð"
+    ],
+    "ظ": [
+      "dˤ",
+      "zˤ"
+    ],
+    "ض": [
+      "dˤ"
+    ],
+    "پ": [
+      "p"
+    ],
+    "ڤ": [
+      "v"
+    ],
+    "چ": [
+      "tʃ"
+    ],
+    "الثث": [
+      "att",
+      "aθθ"
+    ],
+    "اَلثث": [
+      "att",
+      "aθθ"
+    ],
+    "لِلثث": [
+      "litt",
+      "liθθ"
+    ],
+    "وَالثث": [
+      "watt",
+      "waθθ"
+    ],
+    "فَالثث": [
+      "fatt",
+      "faθθ"
+    ],
+    "بِالثث": [
+      "bitt",
+      "biθθ"
+    ],
+    "كَالثث": [
+      "katt",
+      "kaθθ"
+    ],
+    "الذذ": [
+      "add",
+      "aðð"
+    ],
+    "اَلذذ": [
+      "add",
+      "aðð"
+    ],
+    "لِلذذ": [
+      "lidd",
+      "liðð"
+    ],
+    "وَالذذ": [
+      "wadd",
+      "waðð"
+    ],
+    "فَالذذ": [
+      "fadd",
+      "faðð"
+    ],
+    "بِالذذ": [
+      "bidd",
+      "biðð"
+    ],
+    "كَالذذ": [
+      "kadd",
+      "kaðð"
+    ],
+    "الضض": [
+      "adˤdˤ"
+    ],
+    "اَلضض": [
+      "adˤdˤ"
+    ],
+    "لِلضض": [
+      "lidˤdˤ"
+    ],
+    "وَالضض": [
+      "wadˤdˤ"
+    ],
+    "فَالضض": [
+      "fadˤdˤ"
+    ],
+    "بِالضض": [
+      "bidˤdˤ"
+    ],
+    "كَالضض": [
+      "kadˤdˤ"
+    ],
+    "الظظ": [
+      "adˤdˤ",
+      "azˤzˤ"
+    ],
+    "اَلظظ": [
+      "adˤdˤ",
+      "azˤzˤ"
+    ],
+    "لِلظظ": [
+      "lidˤdˤ",
+      "lizˤzˤ"
+    ],
+    "وَالظظ": [
+      "wadˤdˤ",
+      "wazˤzˤ"
+    ],
+    "فَالظظ": [
+      "fadˤdˤ",
+      "fazˤzˤ"
+    ],
+    "بِالظظ": [
+      "bidˤdˤ",
+      "bizˤzˤ"
+    ],
+    "كَالظظ": [
+      "kadˤdˤ",
+      "kazˤzˤ"
+    ],
+    "اِلثث": [
+      "itt",
+      "iθθ"
+    ],
+    "اِلذذ": [
+      "idd",
+      "iðð"
+    ],
+    "اِلضض": [
+      "idˤdˤ"
+    ],
+    "اِلظظ": [
+      "idˤdˤ",
+      "izˤzˤ"
+    ],
+    "وِالثث": [
+      "witt",
+      "wiθθ"
+    ],
+    "وِالذذ": [
+      "widd",
+      "wiðð"
+    ],
+    "وِالضض": [
+      "widˤdˤ"
+    ],
+    "وِالظظ": [
+      "widˤdˤ",
+      "wizˤzˤ"
+    ]
+  },
+  "allophones": {
+    "ɮˤ": [
+      "dˤ"
+    ],
+    "ðˤ": [
+      "dˤ",
+      "zˤ"
+    ],
+    "θ": [
+      "θ",
+      "t",
+      "s"
+    ],
+    "ð": [
+      "ð",
+      "d",
+      "z"
+    ],
+    "q": [
+      "q",
+      "ʔ",
+      "ɡ"
+    ],
+    "p": [
+      "p"
+    ],
+    "v": [
+      "v"
+    ]
+  },
+  "parent": "arb",
+  "ancestors": [
+    {
+      "code": "arb",
+      "role": "parent",
+      "weight": 0.95,
+      "notes": "Descent from Classical Arabic"
+    }
+  ],
+  "notes": "Proto-Mashriqi (Eastern) Arabic — GROUPING NODE (glue node) for Egyptian (ar-EG), Sudanese (ar-SD), Chadian/Nigerian West-Sudanic (ar-TD → ar-NG) and the Levantine subtree (ar-x-levantine → ar-SY/ar-LB/ar-JO/ar-PS), plus Mesopotamian ar-IQ/ar-IQ-x-qeltu. It declares only what the dialectological literature treats as SHARED across the whole Eastern group, and serves as the data-inheritance root the leaves build on; every reflex that splits WITHIN the group (qāf, ǧīm, interdentals) is documented here as leaf territory and is NOT asserted group-wide. GENUINELY GROUP-WIDE, MODELLED HERE: (1) SHORT-VOWEL RETENTION — the defining Eastern trait relative to Maghrebi: the triangular short-vowel system /a i u/ is retained (Watson 2002:9: the western group shows 'the typical reduction of the triangular system of short vowels, a, i, u ... to a two-vowel system' while the East keeps it), and the Maghrebi combination of iambic stress plus deletion of unstressed vowels yielding word-initial clusters is 'not typically attested in eastern dialects' — Watson 2002:9 contrasts Moroccan smin with Cairene simīn 'fat' and Lmnabha bṛṛa with Cairene baṛṛa 'outside'. Modelled by NOT giving the short vowels deletion candidates (contrast ar-x-maghrebi, whose a/i/u each license Ø). (2) TROCHAIC WORD STRESS — Watson 2002:9: 'a contrast between an iambic word-stress system in the western group and a trochaic word-stress system in the eastern group', katab stressed 'katab in the East vs ka'tab in the West; the quantity-sensitive stress block below implements the Eastern (trochaic-type) cascade. Watson's own fn.9 caveat: a few eastern dialects (Negev Bedouin, Upper Egypt, Oman) attest iambic stress — a leaf may override. (3) LOSS OF THE CLASSICAL LATERAL ḌĀD: ض is the pharyngealized stop /dˤ/ everywhere in the group (the lateral fricative ɮˤ of Sibawayh's description survives only marginally, e.g. southern Yemen — Watson 2002:16 fn., Ghaylḥabbān; that is Peninsular, not Mashriqi, territory). (4) SUN-LETTER (ʔidġām aš-šamsiyya) assimilation of the article ل to a following coronal is unchanged from Classical/MSA and inherited via the positional al-+coronal digraphs. NOT GROUP-WIDE — LEFT TO LEAVES (only documented here): (a) QĀF ق: the reflex is the classic Arabic sociophonetic variable and splits three ways INSIDE this group — glottal stop /ʔ/ in the big Mediterranean cities (Cairo, Jerusalem, Damascus, Beirut — Watson 2002:17), voiced /ɡ/ in Bedouin-type and Sudanic dialects (ar-SD, ar-TD, gilit ar-IQ) and /q/ maintained in the North-Mesopotamian qeltu dialects (Watson 2002:17, after Fischer & Jastrow 1980:52); learned/religious words keep /q/ even in ʔ-dialects (Watson 2002:17 ex.2: Cairene il-qurʔān, qarn, qarya). Watson 2002:9 makes the deeper point that the voiced reflex is a BEDOUIN feature, an axis that crosscuts geography — so no single group value is statable and the bare /q/ kept in the inherited grapheme table is the inheritance-root default, not a claim about the group. (b) ǦĪM ج: splits four ways inside the group (Watson 2002:16) — /dʒ/ in most Bedouin, rural Levantine and Mesopotamian dialects; /ɡ/ in Cairene; /ɟ/ in Upper Egypt and parts of Sudan (ar-SD's hallmark); /ʒ/ (no initial occlusive element) in the major Levantine cities. This node therefore does not override ج at all: the leaves own it, and the /dʒ/ the node passes through from its base is the Classical/MSA reading, not a group claim. (c) INTERDENTALS ث ذ ظ: the merger to stops [t d dˤ] is a SEDENTARY isogloss — Watson 2002:9 lists 'preservation of the Classical Arabic interdentals' among typical Bedouin features, and gilit Iraqi (ar-IQ) keeps θ/ð/ðˤ while Cairo/urban Levant merge. The stop-first candidate lists in the tables are the sedentary-koine inheritance default the urban leaves rely on (with the fricatives kept as second candidates for the retaining leaves); they are not a group-wide merger claim. ORTHOGRAPHIC READING BASE: graphemes/positional_graphemes inherit from the modern MSA leaf `ar` (not Classical `arb`), because the modern spoken varieties are written in MSA orthography — the onset-glide digraphs يَ/وَ (/ja/,/wa/, not diphthongs), the hamza carriers أ/إ as bare /ʔ/ before an explicit harakah, word-final ي/و preferring the long-vowel reading, and pausal tāʾ marbūṭa. Genealogy is unchanged (parent/ancestors still point at Classical arb); only the data-inheritance base moves. INPUT CONTRACT: fully diacritised (tashkeel) Arabic.",
+  "quality": "research",
+  "script_type": "abjad",
+  "sources": [
+    {
+      "id": "watson2002",
+      "author": "Watson, J.C.E.",
+      "year": 2002,
+      "title": "The Phonology and Morphology of Arabic",
+      "publisher": "Oxford University Press",
+      "url": null,
+      "pages": "9, 12, 16-17",
+      "notes": "Read (full PDF, printed folios verified against the running heads). p.9: the East/West split at the Salum–(Sudan–Chad border) line; the West reduces the /a i u/ triad to a two-vowel system and combines iambic stress with unstressed-vowel deletion (Moroccan smin vs Cairene simīn; bṛṛa vs baṛṛa), while the East retains short vowels and trochaic stress ('katab vs ka'tab); same page: the bedouin–urban axis crosscuts geography — voiced qāf and interdental preservation are Bedouin features, which is why neither is statable group-wide. p.16 (§2.1.6): the ǧīm reflex geography — /dʒ/ Bedouin/rural Levant/Mesopotamia, /ɡ/ Cairene and Taʿizz, /ɟ/ Upper Egypt/parts of Sudan, /j/ Gulf/Syrian desert, /ʒ/ Beirut–Damascus–Jerusalem. p.17 (§2.1.9): the qāf reflex geography — /q/ maintained in qeltu; /ʔ/ in the big Mediterranean cities; /ɡ/ in Bedouin dialects; /q/ kept in learned words even in ʔ-dialects (ex.2: il-qāhira, il-qurʔān, qarn, qawmi, qarya).",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Arabic_phonology"
+    },
+    {
+      "id": "versteegh2014",
+      "author": "Versteegh, K.",
+      "year": 2014,
+      "title": "The Arabic Language (2nd edition)",
+      "publisher": "Edinburgh University Press",
+      "url": null,
+      "pages": null,
+      "notes": "Not obtained to a readable page on this pass (2nd edition is paywalled); cited as reported for the standard handbook presentation of the Eastern/Western primary split of the modern dialects and of the Bedouin/sedentary axis (ch. 'The Dialects of Arabic'; the same typology Watson 2002:9 credits to Versteegh 1997:144 for the Bedouin feature list). The load-bearing page-verified citations on this node are Watson 2002:9, 16-17."
+    },
+    {
+      "id": "holes2004",
+      "author": "Holes, C.",
+      "year": 2004,
+      "title": "Modern Arabic: Structures, Functions, and Varieties",
+      "publisher": "Georgetown University Press",
+      "url": null,
+      "pages": null,
+      "notes": "Not obtained to a readable page on this pass; cited as reported (via Watson 2002:16-17, which cites Holes 1995:59-61 for the urban-Levantine /ʒ/ and glottal-stop qāf areas) for the sedentary/Bedouin reflex distributions summarised in the notes."
+    },
+    {
+      "id": "brustad2000",
+      "author": "Brustad, K.",
+      "year": 2000,
+      "title": "The Syntax of Spoken Arabic: A Comparative Study of Moroccan, Egyptian, Syrian, and Kuwaiti Dialects",
+      "publisher": "Georgetown University Press",
+      "url": null,
+      "pages": null,
+      "notes": "Not obtained to a readable page on this pass; cited as reported for the comparative frame in which Moroccan patterns against the three Eastern dialects (Egyptian, Syrian, Kuwaiti) — a syntax study whose introductory typology matches the East/West split modelled here; no phonological rule on this node rests on it."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Mesopotamian_Arabic",
+    "https://ar.wikipedia.org/wiki/%D9%84%D9%87%D8%AC%D8%A9_%D8%B9%D8%B1%D8%A7%D9%82%D9%8A%D8%A9"
+  ],
+  "timespan": {
+    "start_year": 1000,
+    "end_year": null
+  },
+  "glottolog_code": null,
+  "iso639_3": "ara",
+  "optional_marks": [
+    "ً",
+    "ٌ",
+    "ٍ",
+    "َ",
+    "ُ",
+    "ِ",
+    "ّ",
+    "ْ",
+    "ٰ",
+    "ٓ"
+  ],
+  "stress": {
+    "default_position": -3,
+    "quantity_sensitive": true,
+    "superheavy_final_attracts": true,
+    "max_onset": 1,
+    "stress_mark": "ˈ",
+    "notes": "Arabic stress is QUANTITY-SENSITIVE: it falls on a syllable because that syllable is heavy, not because of any orthographic ending, so no ending table can express it. The cascade (Ryding, A Reference Grammar of MSA, CUP 2005, §2.3; Watson, The Phonology and Morphology of Arabic, OUP 2002, ch.3): a superheavy final syllable (CVːC/CVCC) takes the stress (kiˈtaːb); otherwise a heavy penult (CVː/CVC) does (muˈdarris); otherwise the antepenult (ˈmadrasa). max_onset=1 because Arabic onsets are obligatory and hold exactly one consonant — a medial cluster splits, closing the preceding syllable, and that boundary is what makes the penult of mudarris heavy. INPUT CONTRACT: weight is only recoverable from a complete transcription, so this requires diacritized input; an undiacritized skeleton has no vowels to weigh. The registered wikipron gold carries no stress marks, but the benchmark strips stress from both sides by default, so this costs no PER. Prosodic clitics: monosyllabic function words (negator maː, prepositions fiː/min/ʕan/ʕa/li/bi, vocative jaː, copula-negator muː/miʃ, conditional law/loː, wa-proclitic combinations) attach to a host and fall inside the host's stress domain, so they carry no word stress (Watson 2002, The Phonology and Morphology of Arabic, OUP, ch.3). Pan-Arabic class; the per-lect form list reflects the function words attested in this lect. Orthographic test — a clitic homograph (e.g. verb yā 'came') is destressed in every occurrence.",
+    "cliticless_words": [
+      "فِي",
+      "مَا",
+      "مُو",
+      "مِن"
+    ]
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "code": "an-x-belsetan",
+  "name": "Belsetán Aragonese (Bielsa valley)",
+  "script": "Latin",
+  "graphemes_base": "an",
+  "allophones_base": "an",
+  "positional_graphemes_base": "an",
+  "graphemes": {
+    "l·l": [
+      "lː"
+    ],
+    "n·n": [
+      "nː"
+    ]
+  },
+  "allophones": {
+    "lː": [
+      "lː"
+    ],
+    "nː": [
+      "nː"
+    ]
+  },
+  "parent": "an",
+  "ancestors": [
+    {
+      "code": "an",
+      "role": "parent",
+      "weight": 0.88,
+      "notes": "Belsetán is a Central/Eastern High-Aragonese valley variety inheriting the Aragonese grapheme→IPA system; it declares the geminate-lateral/nasal deltas and documents lexical/morphological distinctiveness in notes."
+    },
+    {
+      "code": "la-x-hispania",
+      "role": "ancestor",
+      "weight": 0.72,
+      "notes": "Hispanic Vulgar Latin, inherited via Aragonese (an)."
+    },
+    {
+      "code": "oc",
+      "role": "adstrate",
+      "weight": 0.06,
+      "notes": "Gascon adstrate: Bielsa borders the Gascon-speaking Pyrenees; the -LL- → -r- pronoun development (er, ers) is attributed to Gascon contact."
+    }
+  ],
+  "quality": "research",
+  "script_type": "alphabet",
+  "notes": "Belsetán — the Aragonese of the Bielsa valley (Valle de Bielsa, Sobrarbe, Huesca), a conservative Central/Eastern High-Aragonese variety (the classic monograph is Badía Margarit 1950, 'El habla del valle de Bielsa'). PHONOLOGICALLY-EXPRESSED DELTAS modelled here: PRESERVED GEMINATES. Bielsa is the one Ibero-Romance area that keeps Latin geminate -LL- and -NN- as long consonants in inherited (non-learned) words, written ⟨l·l⟩ and ⟨n·n⟩ in dialectal orthography: bel·la [ˈbelːa] 'alguna', payel·la [paˈjelːa], pen·na [ˈpenːa] 'peña', capan·na [kaˈpanːa] 'cabaña' (Badía Margarit 1950, via es.wikipedia 'Aragonés belsetano', secondary). Modelled by adding ⟨l·l⟩ → [lː] and ⟨n·n⟩ → [nː] graphemes (middot U+00B7); plain ⟨ll⟩ = [ʎ] and ⟨n⟩ = [n] are inherited unchanged. Belsetán keeps the Western/Central profile from an (F- preserved, /θ/ distinción, ⟨ch⟩=[tʃ]). FEATURES NOT PHONEME-MAPPABLE (documented, not modelled — Aragonese spelling is phonemic and these are lexical/etymological): Latin -CT- → -t- (FACTU > feto, not the general Aragonese feito) and -ULT- → -ut- (MULTU > muto), NOCTE > nuet — the words are simply spelled with ⟨t⟩ so the base map reads them; -LL- → -r- in the third-person pronouns er, ers (él, ellos); article el/la/es/las with allomorphs o/a/os/as; archaic pronouns nusaltros/vusaltros; atonic strong-perfect verb forms tenié, trayé, benié. Diphthongisation Ĕ/Ŏ → ie/ue inherited (Várvaro, AFA XLVI-XLVII, p. 250 places Bielsa inside the modern uá area). PROVENANCE HONESTY: the geminate feature is drawn from the Spanish-Wikipedia dialect article (secondary) which cites Badía Margarit (1950); the primary monograph was not directly obtainable. Várvaro (AFA) read directly.",
+  "sources": [
+    {
+      "id": "badia1950",
+      "author": "Badía Margarit, A. M.",
+      "year": 1950,
+      "title": "El habla del valle de Bielsa (Pirineo aragonés)",
+      "publisher": "Instituto de Estudios Pirenaicos, CSIC",
+      "url": null,
+      "pages": null,
+      "notes": "The classic Belsetán monograph; source of the preserved -LL-/-NN- geminates and the -CT-/-ULT- reductions. Cited via the secondary Spanish-Wikipedia dialect article; primary not directly obtainable in this work."
+    },
+    {
+      "id": "varvaro_afa",
+      "author": "Várvaro, A.",
+      "year": 1991,
+      "title": "De la escritura al habla: la diptongación de O breve tónica en el Alto Aragón",
+      "publisher": "Archivo de Filología Aragonesa XLVI-XLVII",
+      "url": "https://ifc.dpz.es/recursos/publicaciones/15/72/12varvaro.pdf",
+      "pages": "245-268",
+      "notes": "Read directly. Places Bielsa inside the modern uá diphthong area (p. 250)."
+    },
+    {
+      "id": "nagore_lain2001",
+      "author": "Nagore Laín, F.",
+      "year": 2001,
+      "title": "Gramática de la Lengua Aragonesa",
+      "publisher": "Librería General",
+      "url": null,
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://es.wikipedia.org/wiki/Aragon%C3%A9s_belsetano",
+    "https://an.wikipedia.org/wiki/Aragon%C3%A9s_belset%C3%A1n"
+  ],
+  "urls": [
+    "https://es.wikipedia.org/wiki/Aragon%C3%A9s_belsetano",
+    "https://www.bielsa.es/belset%C3%A1n"
+  ],
+  "timespan": {
+    "start_year": 1100,
+    "end_year": null
+  },
+  "glottolog_code": null,
+  "iso639_3": "arg",
+  "wikidata_qid": "Q3574052",
+  "location": {
+    "latitude": 42.659007,
+    "longitude": 0.210128,
+    "source": "wikidata",
+    "notes": "the Bielsa valley (Sobrarbe, Huesca) — the valley the variety is named for and confined to. [Wikidata Q21036658 P625]"
+  }
+}

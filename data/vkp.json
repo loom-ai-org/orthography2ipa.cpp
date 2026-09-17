@@ -1,0 +1,381 @@
+{
+  "code": "vkp",
+  "glottolog_code": "korl1238",
+  "name": "Korlai Indo-Portuguese (Korlai Creole Portuguese)",
+  "script": "Latin",
+  "quality": "research",
+  "script_type": "alphabet",
+  "orthography_kind": "transliteration",
+  "parent": "pt-PT",
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "ã": [
+      "ã"
+    ],
+    "b": [
+      "b"
+    ],
+    "bh": [
+      "bʱ"
+    ],
+    "ch": [
+      "tʃ"
+    ],
+    "d": [
+      "d"
+    ],
+    "dh": [
+      "dʱ"
+    ],
+    "e": [
+      "e"
+    ],
+    "ɛ": [
+      "ɛ"
+    ],
+    "ɛ̃": [
+      "ɛ̃"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "gh": [
+      "ɡʱ"
+    ],
+    "h": [
+      "h"
+    ],
+    "i": [
+      "i"
+    ],
+    "ĩ": [
+      "ĩ"
+    ],
+    "ï": [
+      "ə"
+    ],
+    "j": [
+      "j",
+      "dʒ"
+    ],
+    "k": [
+      "k"
+    ],
+    "kh": [
+      "kʰ"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ny": [
+      "ɲ"
+    ],
+    "o": [
+      "o"
+    ],
+    "ɔ": [
+      "ɔ"
+    ],
+    "ɔ̃": [
+      "ɔ̃"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "ɾ"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "th": [
+      "tʰ"
+    ],
+    "ts": [
+      "ts"
+    ],
+    "u": [
+      "u"
+    ],
+    "ũ": [
+      "ũ"
+    ],
+    "v": [
+      "ʋ"
+    ],
+    "w": [
+      "ʋ"
+    ],
+    "y": [
+      "j"
+    ],
+    "z": [
+      "z"
+    ],
+    "ʈ": [
+      "ʈ"
+    ],
+    "ʈh": [
+      "ʈʰ"
+    ],
+    "ɖ": [
+      "ɖ"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "dz": [
+      "dz"
+    ]
+  },
+  "allophones": {
+    "a": [
+      "a"
+    ],
+    "ã": [
+      "ã"
+    ],
+    "b": [
+      "b"
+    ],
+    "bʱ": [
+      "bʱ"
+    ],
+    "d": [
+      "d"
+    ],
+    "dʱ": [
+      "dʱ"
+    ],
+    "dz": [
+      "dz"
+    ],
+    "dʒ": [
+      "dʒ"
+    ],
+    "e": [
+      "e"
+    ],
+    "ɛ": [
+      "ɛ"
+    ],
+    "ɛ̃": [
+      "ɛ̃"
+    ],
+    "ə": [
+      "ə"
+    ],
+    "f": [
+      "f"
+    ],
+    "ɡ": [
+      "ɡ"
+    ],
+    "ɡʱ": [
+      "ɡʱ"
+    ],
+    "h": [
+      "h"
+    ],
+    "i": [
+      "i"
+    ],
+    "ĩ": [
+      "ĩ"
+    ],
+    "j": [
+      "j"
+    ],
+    "k": [
+      "k"
+    ],
+    "kʰ": [
+      "kʰ"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ɲ": [
+      "ɲ"
+    ],
+    "o": [
+      "o"
+    ],
+    "ɔ": [
+      "ɔ"
+    ],
+    "ɔ̃": [
+      "ɔ̃"
+    ],
+    "p": [
+      "p"
+    ],
+    "ɾ": [
+      "ɾ"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "tʰ": [
+      "tʰ"
+    ],
+    "ts": [
+      "ts"
+    ],
+    "tʃ": [
+      "tʃ"
+    ],
+    "u": [
+      "u"
+    ],
+    "ũ": [
+      "ũ"
+    ],
+    "ʋ": [
+      "ʋ"
+    ],
+    "z": [
+      "z"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "ʈ": [
+      "ʈ"
+    ],
+    "ʈʰ": [
+      "ʈʰ"
+    ],
+    "ɖ": [
+      "ɖ"
+    ]
+  },
+  "allophone_rules": [
+    {
+      "id": "PT_CODA_S_HUSH",
+      "phonemes": [
+        "s"
+      ],
+      "surface": "s",
+      "syllable_position": "coda",
+      "notes": "DISABLES the inherited EP Lisbon 'chiado' (coda /s/ → [ʃ]): Clements' Korlai transcriptions show plain coda [s] (sĩk 'five'; APiCS survey ch. 40, citing Clements 1996: 59-66). Identity rewrite cancels the inherited rule by id."
+    },
+    {
+      "id": "PT_CODA_Z_HUSH",
+      "phonemes": [
+        "z"
+      ],
+      "surface": "z",
+      "syllable_position": "coda",
+      "notes": "DISABLES the inherited coda /z/ → [ʒ]: no coda [ʒ] is documented for Korlai (Clements, APiCS survey ch. 40). Identity rewrite."
+    },
+    {
+      "id": "PT_CODA_L_DARK",
+      "phonemes": [
+        "l"
+      ],
+      "surface": "l",
+      "syllable_position": "coda",
+      "notes": "DISABLES the inherited EP dark coda [ɫ]: no velarized lateral is documented for Korlai (Clements, APiCS survey ch. 40); retroflex sonorants are likewise unattested and omitted. Identity rewrite."
+    }
+  ],
+  "ancestors": [
+    {
+      "code": "pt-PT",
+      "role": "superstrate",
+      "weight": 0.6,
+      "notes": "Portuguese superstrate: lexifier from the Portuguese presence at Chaul (1521-1740). Stress stays on the syllable stressed in the Portuguese cognate, with posttonic deletion (fáca > fak 'knife', água > ag 'water') — Clements 1996; Clements & Koontz-Garboden 2002."
+    },
+    {
+      "code": "mr",
+      "role": "substrate",
+      "weight": 0.35,
+      "notes": "Marathi substrate/adstrate: the surrounding and dominant language of the Korlai village community. Contributes the retroflex stops /ʈ ɖ/ and reinforces the aspirated series (which Clements 1996 derives partly language-internally, e.g. initial /f/ > [h]) and SOV syntax."
+    }
+  ],
+  "notes": "Korlai Indo-Portuguese (Korlai Creole Portuguese, 'Kristi'), spoken in Korlai village near Chaul, Maharashtra, India (~800 speakers). NO STANDARD COMMUNITY ORTHOGRAPHY: Clements (1996) states the language lacks a standard written form; speakers write ad hoc in Roman or Devanagari. This spec therefore models CLEMENTS' SCHOLARLY LATIN TRANSCRIPTION (the one used in Clements 1996 and his APiCS survey ch. 40), which mixes Roman letters with IPA-style symbols (ɛ, ɔ, ʈ, ɖ, tilde nasals, ï) — orthography_kind is 'transliteration' accordingly. KEY FEATURES (Clements, APiCS survey 40, citing Clements 1996: 59-66): (1) ASPIRATED/BREATHY SERIES /pʰ tʰ ʈʰ kʰ bʱ dʱ ɡʱ/ written as C+h digraphs (bharig 'belly', kharm 'meat', thɛr 'unripe'). (2) RETROFLEX STOPS /ʈ ʈʰ ɖ/ from Marathi contact; retroflex sonorants /ɳ ɭ/ are NOT attested in the accessible sources and are omitted (null beats wrong). (3) NASAL VOWELS /ĩ ũ ɛ̃ ɔ̃/ written with the tilde (sĩk 'five', lɔ̃j 'far', ɔ̃m 'man'); the phonemic status of /ã/ and of schwa /ə/ differs between Clements' own APiCS survey and structure dataset — CONTESTED, both are included as writable symbols (ã; ï for the central vowel, as in butïk 'shop'). (4) SEVEN ORAL VOWEL QUALITIES /i e ɛ a ɔ o u/ (+ contested /ə/). (5) AFFRICATES /ts dz tʃ dʒ/; ⟨ch⟩ in Clements' spellings; ⟨j⟩ is AMBIGUOUS in the transcription — the attested example lɔ̃j 'far' [lɔ̃j] uses it for the glide, so the glide reading is ranked first and /dʒ/ second. (6) /v/ IS THE APPROXIMANT [ʋ] (South Asian areal feature). (7) NO LEXICAL TONE: no pitch-accent system is substantiated in the accessible sources; none is encoded. (8) STRESS is a lexical inheritance from the Portuguese cognate (with posttonic deletion) and is NOT recoverable from the spelling; no stress block is declared and no stress is assigned. Sources for the phonology were read via Clements' own APiCS restatements plus Clements & Koontz-Garboden (2002); the 1996 monograph itself was not directly accessible — page ranges cited are Clements' own.",
+  "sources": [
+    {
+      "id": "clements1996",
+      "author": "Clements, J. C.",
+      "year": 1996,
+      "title": "The Genesis of a Language: The Formation and Development of Korlai Portuguese",
+      "publisher": "Creole Language Library 16, John Benjamins",
+      "url": "https://benjamins.com/catalog/cll.16",
+      "pages": "59-66",
+      "notes": "Primary grammar; phonology at pp. 59-66 (as cited by Clements' APiCS survey). Full text not directly accessed; content taken from Clements' own restatements."
+    },
+    {
+      "id": "clements_apics",
+      "author": "Clements, J. C.",
+      "year": 2013,
+      "title": "Korlai (APiCS Online, survey chapter 40)",
+      "publisher": "In: Michaelis et al. (eds.), Atlas of Pidgin and Creole Language Structures, OUP",
+      "url": "https://apics-online.info/surveys/40",
+      "pages": null,
+      "notes": "Author-restated inventory (retroflexes, aspirates, affricates, nasal vowels), stress-preservation-with-posttonic-deletion, and the example words (bharig, kharm, thɛr, sĩk, lɔ̃j, ɔ̃m, fak, ag, butïk, kata)."
+    },
+    {
+      "id": "clementskoontz2002",
+      "author": "Clements, J. C. & Koontz-Garboden, A.",
+      "year": 2002,
+      "title": "Two Indo-Portuguese Creoles in contrast",
+      "publisher": "Journal of Pidgin and Creole Languages 17(2)",
+      "url": "https://benjamins.com/catalog/jpcl.17.2.02cle",
+      "pages": null,
+      "notes": "Independent corroboration of the stress-preservation and posttonic-deletion pattern (fáca > fak)."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Korlai_Portuguese_Creole"
+  ],
+  "urls": [
+    "https://en.wikipedia.org/wiki/Korlai_Portuguese_Creole",
+    "https://apics-online.info/surveys/40",
+    "https://glottolog.org/resource/languoid/id/korl1238",
+    "https://www.ethnologue.com/language/vkp/"
+  ],
+  "timespan": {
+    "start_year": 1600,
+    "end_year": null
+  },
+  "iso639_3": "vkp",
+  "wikidata_qid": "Q3436603",
+  "phoible_id": "korl1238",
+  "location": {
+    "latitude": 18.5232,
+    "longitude": 72.9195,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Korlai (Korlai village, Raigad district, Maharashtra)."
+  },
+  "positional_graphemes": {
+    "j": {
+      "word_initial": [
+        "dʒ"
+      ]
+    }
+  }
+}

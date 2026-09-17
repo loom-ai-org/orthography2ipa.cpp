@@ -1,0 +1,538 @@
+{
+  "code": "ca-x-valencia",
+  "name": "Valencian",
+  "script": "Latin",
+  "parent": "ca-x-medieval",
+  "graphemes_base": "ca-x-medieval",
+  "graphemes": {},
+  "allophones_base": "ca-x-medieval",
+  "allophones": {
+    "v": [
+      "v"
+    ],
+    "s": [
+      "s̺"
+    ],
+    "z": [
+      "z̺"
+    ],
+    "ʒ": [
+      "dʒ",
+      "ʒ"
+    ],
+    "ə": [
+      "a",
+      "e"
+    ]
+  },
+  "positional_graphemes_base": "ca-x-medieval",
+  "positional_graphemes": {
+    "e": {
+      "default": [
+        "e",
+        "ɛ"
+      ],
+      "nucleus_unstressed": [
+        "e"
+      ]
+    },
+    "o": {
+      "default": [
+        "o",
+        "ɔ"
+      ],
+      "nucleus_unstressed": [
+        "o"
+      ]
+    },
+    "r": {
+      "word_initial": [
+        "r"
+      ],
+      "word_final": [
+        "ɾ"
+      ],
+      "intervocalic": [
+        "ɾ"
+      ],
+      "before_vowel": [
+        "ɾ"
+      ],
+      "default": [
+        "ɾ"
+      ]
+    },
+    "x": {
+      "word_initial": [
+        "tʃ"
+      ],
+      "after_consonant": [
+        "tʃ"
+      ],
+      "intervocalic": [
+        "ks"
+      ],
+      "before_consonant": [
+        "ks"
+      ],
+      "default": [
+        "ʃ"
+      ]
+    }
+  },
+  "allophone_rules": [
+    {
+      "id": "VAL_OPEN_E",
+      "phonemes": [
+        "e"
+      ],
+      "surface": "ɛ",
+      "stress": "stressed",
+      "word": [
+        "finestra",
+        "finestres"
+      ],
+      "notes": "Valencian carries open-mid [ɛ] in 'finestra' where the Western default gives close [e]; the contrast is unmarked in spelling and so is listed (AVL 2006; Recasens 1991; the ca-x-valencia-003 arbitration: finestres [fiˈnɛstɾes])."
+    },
+    {
+      "id": "VAL_OPEN_O",
+      "phonemes": [
+        "o"
+      ],
+      "surface": "ɔ",
+      "stress": "stressed",
+      "word": [
+        "gros",
+        "grossa",
+        "grossos",
+        "grosses"
+      ],
+      "notes": "Valencian carries open-mid [ɔ] in 'gros/grossa' where the default gives close [o] (AVL 2006; Recasens 1991; the ca-x-valencia-003 arbitration: grosses [ˈɡɾɔses])."
+    },
+    {
+      "id": "CA_NASAL_PALATAL",
+      "phonemes": [
+        "n"
+      ],
+      "surface": "ɲ",
+      "followed_by_phoneme": [
+        "ʃ",
+        "ʒ",
+        "ʎ"
+      ],
+      "notes": "WESTERN override of the inherited pan-Catalan CA_NASAL_PALATAL (same id, so it REPLACES the ca-x-medieval rule rather than adding to it): /n/ assimilates to a following palato-alveolar FRICATIVE or to the palatal lateral — enxampar-hi [aɲ ˈʃ...], any llunyà [ˈaɲ ʎuˈɲa] — but NOT to the AFFRICATES [tʃ dʒ]. Nasal place assimilation copies the place of the following consonant's CLOSURE (Recasens 1993 on Catalan nasal assimilation; Wheeler 2005 §10.3), and the closure phase of Catalan /tʃ dʒ/ is alveolar/dental, not palatal — so the nasal stays alveolar. This matters in Western Catalan specifically, because Western is the branch that realises ⟨j⟩/⟨g+e,i⟩ as the affricate [dʒ] where Eastern has the plain fricative [ʒ]: mengen [ˈmendʒen], enxampar [antʃamˈpa], un jutge [un ˈdʒudʒe]. The Eastern specs keep the inherited rule unchanged, where the same words have a fricative and DO palatalise the nasal (àngel [ˈaɲʒəl])."
+    }
+  ],
+  "stress": {
+    "onset_clusters": ["bl", "br", "bɫ", "bɾ", "bʀ", "bʁ", "bʎ", "bχ", "dr", "dɾ", "dʀ", "dʁ", "dʎ", "dχ", "fl", "fr", "fɫ", "fɾ", "fʀ", "fʁ", "fʎ", "fχ", "kl", "kr", "kɫ", "kɾ", "kʀ", "kʁ", "kʎ", "kχ", "pl", "pr", "pɫ", "pɾ", "pʀ", "pʁ", "pʎ", "pχ", "tr", "tɾ", "tʀ", "tʁ", "tʎ", "tχ", "vl", "vr", "vɫ", "vɾ", "vʀ", "vʁ", "vʎ", "vχ", "ðr", "ðɾ", "ðʀ", "ðʁ", "ðʎ", "ðχ", "ɡl", "ɡr", "ɡɫ", "ɡɾ", "ɡʀ", "ɡʁ", "ɡʎ", "ɡχ", "ɣl", "ɣr", "ɣɫ", "ɣɾ", "ɣʀ", "ɣʁ", "ɣʎ", "ɣχ", "βl", "βr", "βɫ", "βɾ", "βʀ", "βʁ", "βʎ", "βχ"],
+    "cliticless_words": [
+      "el",
+      "la",
+      "l",
+      "els",
+      "les",
+      "lo",
+      "los",
+      "un",
+      "una",
+      "uns",
+      "unes",
+      "al",
+      "als",
+      "del",
+      "dels",
+      "pel",
+      "pels",
+      "cal",
+      "can",
+      "a",
+      "de",
+      "en",
+      "amb",
+      "per",
+      "que",
+      "com",
+      "des",
+      "i",
+      "o",
+      "ni",
+      "em",
+      "et",
+      "es",
+      "ens",
+      "us",
+      "li",
+      "hi",
+      "ho",
+      "ne",
+      "me",
+      "te",
+      "se",
+      "m",
+      "t",
+      "s",
+      "n",
+      "d",
+      "vos"
+    ],
+    "default_position": -2,
+    "final_stress_endings": [
+      "r",
+      "l",
+      "t",
+      "d",
+      "p",
+      "b",
+      "c",
+      "k",
+      "g",
+      "m",
+      "f",
+      "x",
+      "j",
+      "ç",
+      "z",
+      "ig",
+      "ll",
+      "ns",
+      "rs",
+      "ls",
+      "ts",
+      "ps",
+      "cs",
+      "ms",
+      "ds",
+      "bs",
+      "gs",
+      "fs",
+      "nts",
+      "lts",
+      "rts",
+      "sts",
+      "ncs",
+      "igs",
+      "tzs",
+      "ig",
+      "rn",
+      "rm",
+      "ai",
+      "au",
+      "ei",
+      "eu",
+      "iu",
+      "oi",
+      "ou"
+    ],
+    "penult_stress_endings": [
+      "as",
+      "es",
+      "is",
+      "os",
+      "us",
+      "en",
+      "in"
+    ],
+    "marked_vowels": [
+      "à",
+      "è",
+      "é",
+      "í",
+      "ò",
+      "ó",
+      "ú"
+    ],
+    "stress_mark": "ˈ",
+    "diphthongs": [
+      "ai",
+      "au",
+      "ei",
+      "eu",
+      "iu",
+      "oi",
+      "ou",
+      "ui",
+      "ua",
+      "ue",
+      "uo",
+      "gü",
+      "qü"
+    ],
+    "notes": "Catalan accentuation per the Institut d'Estudis Catalans (IEC) norm (Gramàtica de la llengua catalana, ch. 3; Wheeler 2005 §3.1). A written accent (à è é í ò ó ú) always wins and marks the stressed vowel. Unmarked words are OXYTONE when they end in a consonant other than -s-preceded-by-a-vowel and other than -en/-in — including the consonant+s plurals (-ns, -rs, -ts, -nts, -ps …), which are oxytone because the plural preserves the stress of the singular (important → importants). A word ending in a falling DIPHTHONG (-ai -au -ei -eu -iu -oi -ou) is oxytone (remei [rəˈmɛj], correu [kuˈrɛw], avui [əˈβuj]) — the diphthong is one syllable, so the word does not end in a bare vowel. Unmarked words are PAROXYTONE when they end in a (single) vowel, in a vowel + -s (-as, -es, -is, -os, -us) or in -en/-in (semblen, parlin). The diaeresis ⟨ï ü⟩ marks hiatus/pronounced ⟨u⟩, NOT stress, so it is deliberately absent from marked_vowels (següent is [səˈɣwen], not [səˈɣwent] with stress on ⟨ü⟩). Proparoxytones always carry a written accent, so the unmarked default is paroxytone. The diphthongs list is the Catalan inventory of tautosyllabic vowel sequences (Wheeler 2005 §2.5; IEC grammar ch. 4): the falling diphthongs ⟨ai au ei eu iu oi ou ui⟩ and the rising ⟨ua ue uo ui⟩ after ⟨g/q⟩. Every other vowel sequence is HIATUS and counts as two syllables — te-ni-a, ve-ï-na, di-a — which is what puts the stress, and therefore the unstressed-vowel reduction, on the right vowel."
+  },
+  "notes": "VALENCIAN (valencià), the southern half of the WESTERN block; co-official in the Comunitat Valenciana and codified by the Acadèmia Valenciana de la Llengua. It descends from Old Catalan (ca-x-medieval), not from Central Catalan, and it is the most CONSERVATIVE of the modern varieties: on nearly every point where Central innovated, Valencian kept the medieval state, which is why this file declares so little. Kept from Old Catalan and therefore simply inherited: NO unstressed vowel reduction (les [les], que [ke], de [de]); /v/ distinct from /b/; the affricate [dʒ] for ⟨j⟩ and ⟨g⟩ before a front vowel (germà [dʒeɾˈma]); the glide of ⟨ix⟩ = [jʃ] (caixa [ˈkajʃa]); word-final ⟨-r⟩ PRONOUNCED (cantar [kanˈtaɾ]) — the clearest isogloss against Central; and the final ⟨-nt/-lt/-mp/-nc⟩ clusters INTACT (molt [ˈmolt], camp [ˈkamp], sang [ˈsaŋk]), which Central and North-Western simplify. Its own declarations are the apico-alveolar sibilants, the coda rhotic [ɾ], and ⟨x⟩ = [tʃ] word-initially and after a consonant (xiquet [tʃiˈket]) — the Western affricate (Wheeler 2005 §5.1; Veny 1982 ch. 3; AVL 2006; Recasens 1991). Cluster simplification before a CONSONANT (el vint de juny) is pan-Catalan and comes from the common core.",
+  "quality": "research",
+  "script_type": "alphabet",
+  "sources": [
+    {
+      "id": "wheeler2005",
+      "author": "Wheeler, M. W.",
+      "year": 2005,
+      "title": "The Phonology of Catalan",
+      "publisher": "Oxford University Press",
+      "url": "https://global.oup.com/academic/product/the-phonology-of-catalan-9780199258147",
+      "pages": null,
+      "notes": "The reference phonology of Catalan and the primary authority for this spec. Cited by SECTION, not page: §2.3 vowel systems and the unstressed reduction of the Eastern block (reduction is stress-conditioned; the Western block does not reduce); §2.5 the diphthong inventory; §3.1 stress and its orthographic marking; §5.1 the consonant inventory, ⟨c/g⟩ before a front vowel, ⟨x⟩ and word-final ⟨-ig⟩; §5.2 spirantization of /b d ɡ/ after a continuant and the pre-lateral gemination that blocks it; §5.3 final-obstruent devoicing and cross-word voicing assimilation; §10.2–§10.5 the post-lexical/phrase-level processes — final-rhotic loss, final-cluster simplification, nasal place assimilation and phrase-level lenition. Section numbers are given because the printed page numbers were not verified."
+    },
+    {
+      "id": "avl2006",
+      "author": "Acadèmia Valenciana de la Llengua",
+      "year": 2006,
+      "title": "Gramàtica normativa valenciana",
+      "publisher": "Publicacions de l'Acadèmia Valenciana de la Llengua",
+      "url": "https://www.avl.gva.es/",
+      "pages": null,
+      "notes": "The normative grammar of Valencian and the authority for the Valencian spec: no unstressed vowel reduction, /v/ distinct from /b/, word-final ⟨-r⟩ pronounced, ⟨j⟩ and ⟨g⟩+front vowel as the affricate [dʒ], ⟨x⟩ = [tʃ] initially. Cited by chapter; pages not verified."
+    },
+    {
+      "id": "recasens1991",
+      "author": "Recasens, D.",
+      "year": 1991,
+      "title": "Fonètica descriptiva del català",
+      "publisher": "Institut d'Estudis Catalans",
+      "url": null,
+      "pages": null,
+      "notes": "First edition of the descriptive phonetics of Catalan; the source for the Valencian consonant realisations used here (apico-alveolar sibilants, the affricate [dʒ] for ⟨j⟩/⟨g+e,i⟩, ⟨x⟩ = [tʃ]). Pages not verified."
+    },
+    {
+      "id": "recasens1996",
+      "author": "Recasens, D.",
+      "year": 1996,
+      "title": "Fonètica descriptiva del català: assaig de caracterització de la pronúncia del vocalisme i consonantisme del català al segle XX",
+      "publisher": "Institut d'Estudis Catalans",
+      "url": null,
+      "pages": null,
+      "notes": "The descriptive survey of Catalan vowels and consonants across the dialects: the Western block (Valencian, North-Western) does not reduce unstressed vowels; Balearic reduces ⟨a⟩/⟨e⟩ to [ə] but does NOT raise unstressed ⟨o⟩ to [u]; the North-Western word-final ⟨-a⟩ = [ɛ]. Pages not verified."
+    },
+    {
+      "id": "veny1982",
+      "author": "Veny, J.",
+      "year": 1982,
+      "title": "Els parlars catalans: síntesi de dialectologia",
+      "publisher": "Editorial Moll",
+      "url": null,
+      "pages": null,
+      "notes": "The standard dialectology of Catalan and the source for the isoglosses this spec encodes per dialect: final ⟨-r⟩ retained in Valencian and deleted in the rest; final-cluster simplification after a nasal everywhere but after a lateral only in the Eastern block; Western [tʃ] for initial ⟨x⟩ and [jʃ] for ⟨ix⟩; the lleidatà final ⟨-a⟩ = [ɛ]. Pages not verified."
+    },
+    {
+      "id": "iec2016",
+      "author": "Institut d'Estudis Catalans",
+      "year": 2016,
+      "title": "Gramàtica de la llengua catalana",
+      "publisher": "Institut d'Estudis Catalans",
+      "url": "https://giec.iec.cat/",
+      "pages": null,
+      "notes": "The normative grammar. Ch. 3 (l'accent) is the source for the stress block: the written accent marks the stressed vowel and always wins; unmarked words ending in a vowel, a vowel+⟨-s⟩ or ⟨-en/-in⟩ are paroxytone and all other endings — including the consonant+⟨s⟩ plurals — are oxytone; the diaeresis ⟨ï ü⟩ marks hiatus, not stress. §6.2 and the 'mots àtons' list are the source for the clitic function words (articles, contractions, atonic prepositions/conjunctions and weak pronouns) that carry no stress and therefore reduce. Cited by chapter; pages not verified."
+    },
+    {
+      "id": "dcvb",
+      "author": "Alcover, A. M. & Moll, F. de B.",
+      "year": 1962,
+      "title": "Diccionari català-valencià-balear",
+      "publisher": "Editorial Moll",
+      "url": "https://dcvb.iec.cat/",
+      "pages": null,
+      "notes": "The dialectal dictionary of Catalan; it records the pronunciation of each headword per dialect and is the authority for the lexical stressed-mid-vowel entries in word_exceptions (gos, tot, dos, molt are close-mid [o]; cos, pont, font, tres are open-mid). Catalan spelling does not mark the ⟨e⟩/⟨o⟩ close/open contrast in unaccented syllables, so this contrast is lexical and can only be listed, not derived. Cited by headword; the dictionary is not paginated online."
+    },
+    {
+      "id": "wiktionary_ca",
+      "author": "Wiktionary contributors",
+      "year": 2026,
+      "title": "Wiktionary, the free dictionary — Catalan entries",
+      "publisher": "Wikimedia Foundation",
+      "url": "https://en.wiktionary.org/wiki/Category:Catalan_lemmas",
+      "pages": null,
+      "notes": "Per-dialect IPA transcriptions (Central / Valencian / North-Western / Balearic / Northern) for the individual headwords listed in word_exceptions; each entry there cites GDLC, DNV or DCVB. Used as a convenience cross-check on the DCVB, never as a primary source."
+    },
+    {
+      "id": "ladefoged_maddieson1996",
+      "author": "Ladefoged, P. & Maddieson, I.",
+      "year": 1996,
+      "title": "The Sounds of the World's Languages",
+      "publisher": "Blackwell",
+      "url": null,
+      "pages": null,
+      "notes": "Cross-linguistic phonetic reference for the segment inventory symbols used here."
+    },
+    {
+      "id": "wikipedia_catalan_phonology",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Catalan phonology (Wikipedia)",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Catalan_phonology",
+      "pages": null,
+      "notes": "Accessible overview of the vowel and consonant inventories, the Eastern/Western reduction split, spirantization, final devoicing and final-cluster simplification; useful as a cross-check on the primary sources above."
+    },
+    {
+      "id": "wikipedia_catalan_dialects",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Catalan dialects (Wikipedia)",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Catalan_dialects",
+      "pages": null,
+      "notes": "Accessible overview of the Eastern/Western split, of the 13th-century repopulation that carried Eastern Catalan to the Balearic Islands and Western Catalan to most of the Valencian Country, and of the isoglosses encoded in the dialect specs."
+    },
+    {
+      "id": "bonet_lloret1998",
+      "author": "Bonet, E. & Lloret, M.-R.",
+      "year": 1998,
+      "title": "Fonologia catalana",
+      "publisher": "Ariel",
+      "url": null,
+      "pages": null,
+      "notes": "Generative phonology of Catalan. Cited here by CHAPTER, not page: ch. 5 on syllable structure and hiatus resolution across a word boundary — which vowel elides, when a high vowel glides instead, and the clitic vowels that resist both. Used as the cross-check on Wheeler 2005 §10.1 for the cross-word vowel contact rules. Pages not verified."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Valencian",
+    "https://ca.wikipedia.org/wiki/Valenci%C3%A0",
+    "https://en.wikipedia.org/wiki/Valencian_language",
+    "https://es.wikipedia.org/wiki/Idioma_valenciano",
+    "https://en.wikipedia.org/wiki/Catalan_phonology",
+    "https://en.wikipedia.org/wiki/Catalan_dialects"
+  ],
+  "timespan": {
+    "start_year": 1500,
+    "end_year": null
+  },
+  "glottolog_code": "vale1252",
+  "iso639_3": "cat",
+  "wikidata_qid": "Q32641",
+  "location": {
+    "latitude": 39.47,
+    "longitude": -0.376389,
+    "source": "wikidata",
+    "notes": "Valencia — the centre of the Valencian area. [Wikidata Q8818 P625]"
+  },
+  "word_exceptions": {
+    "a": "a",
+    "al": "al",
+    "als": "als",
+    "amb": "am",
+    "d": "d",
+    "de": "de",
+    "del": "del",
+    "dels": "dels",
+    "el": "el",
+    "els": "els",
+    "em": "em",
+    "en": "en",
+    "ens": "ens",
+    "es": "es",
+    "et": "et",
+    "hi": "i",
+    "ho": "o",
+    "i": "i",
+    "l": "l",
+    "la": "la",
+    "les": "les",
+    "li": "li",
+    "lo": "lo",
+    "m": "m",
+    "me": "me",
+    "n": "n",
+    "ne": "ne",
+    "ni": "ni",
+    "no": "no",
+    "on": "on",
+    "pel": "pel",
+    "pels": "pels",
+    "per": "peɾ",
+    "que": "ke",
+    "s": "s",
+    "se": "se",
+    "són": "son",
+    "t": "t",
+    "te": "te",
+    "us": "us",
+    "és": "es"
+  },
+  "sandhi_rules": [
+    {
+      "id": "CA_ELIDE_ELS",
+      "name": "atonic-article-vowel-elision-after-vowel-els",
+      "left_context": "[aeiouɛɔəɐ]$",
+      "right_context": "^els$",
+      "right_transform": "ls",
+      "obligatory": true,
+      "notes": "Plural counterpart of CA_ELIDE_EL; see that rule's note for the phenomenon and its sources."
+    },
+    {
+      "id": "CA_ELIDE_EL",
+      "name": "atonic-article-vowel-elision-after-vowel-el",
+      "left_context": "[aeiouɛɔəɐ]$",
+      "right_context": "^el$",
+      "right_transform": "l",
+      "obligatory": true,
+      "notes": "ELISION OF THE ATONIC VOWEL of the proclitic masculine article / accusative clitic ⟨el⟩ ⟨els⟩ after a vowel-final word (Wheeler 2005 §11.2 'elision' and ch. 4 on the article's allomorphs; Bonet & Lloret 1998 ch. 5 on clitic vowel deletion; IEC 2016 §6.2 lists ⟨el/els⟩ among the atonic monosyllables). The article has no vowel of its own to defend: written ⟨l'⟩ before a vowel-initial word is the same allomorph, and after a vowel the support vowel is equally unnecessary — que el tap [ke l ˈtab], ningú el veu [niŋˈɡu l ˈβɛw], i el rei [i l ˈrej], voleu que els hòmens [ke lz ˈɔmens]. CLOSED CLASS by construction: the right context is the WHOLE word anchored at both ends, so only the two-segment clitic itself matches and no lexical word beginning in the same segments is touched (el·la, elefant, elzevir keep their vowel). The left context is a vowel: after a consonant the vowel is the only thing making the clitic pronounceable and it stays (amb el tap, per els). The engine already blocks every sandhi rule across a pause, so the elision cannot reach over an intonational-phrase boundary.\nRELATION TO THE MINIMAL-WORD GUARD. The pan-Catalan hiatus rules (CA_ELIDE_INITIAL_VOWEL and the final-schwa rule) refuse to strip a word to nothing, and tests/test_catalan_phonology.py pins that. This rule is the ONE licensed exception and it is not a hiatus rule: it is closed-class, anchored on the whole word, and the licence is that Catalan ORTHOGRAPHY itself writes this article without a vowel — ⟨l'⟩ is the same article, not a different one (Wheeler 2005 ch. 4) — and the resulting proclitic attaches to the following word rather than standing alone. Every other monovocalic function word keeps its nucleus in these specs: estava en oració [asˈtaβa en oɾasiˈo]."
+    },
+    {
+      "id": "CA_DEGEM_S",
+      "name": "cross-word-sibilant-degemination-s",
+      "left_context": "s$",
+      "right_context": "^[ˈˌ]?s",
+      "transform": "",
+      "obligatory": true,
+      "notes": "External (cross-word) SIBILANT DEGEMINATION: where a word ends in the same sibilant that the next word begins with, the phonological phrase has a single sibilant, not a geminate — the coda one is deleted (Wheeler 2005, *The Phonology of Catalan*, §10.4 'consonant deletion in external sandhi'; Recasens 1993 §5). més són → [ˈme ˈson], dos savis → [ˈdo ˈsaβis], les sabates → [lə səˈβatəs], és seca → [ˈe ˈsɛkə].\nDeclared per DIALECT, not on the ca-x-medieval ancestor, because it is NOT pan-Catalan: Balearic assimilates and geminates instead of deleting, so ca-x-balear must not inherit this (see the note on ca-x-balear.json).\nScope, deliberately narrow on three axes, all measured. (1) IDENTICAL sibilants only: before a sibilant that DIFFERS in place or voicing the coda sibilant voices instead of deleting — petits juguen → [pəˈtidz ˈʒuɣən] (Wheeler 2005 §5.3), which CA_FINAL_TS_VOICING already handles. (2) SIBILANTS only: a cross-word stop or nasal geminate stays long in Catalan (tot tancat, constantment [kunstamˈmen]) and extending the deletion to stops or nasals measurably worsens every Catalan 4catac row. (3) VOICELESS sibilants only: word-final devoicing means no word surfaces with a final [z] or [ʒ] when these contexts are matched, so a z$ or ʒ$ rule could never fire. The consequence is that a /s # z/ boundary is currently left as a cross-word geminate (dos zeros → [ˈdoz ˈzɛɾus]) by CA_FINAL_S_VOICING: OUT OF SCOPE here, because collapsing it needs the deletion rules to see the post-voicing form, which the sandhi engine matches contexts against the ORIGINAL words to avoid. Pinned in tests/test_catalan_phonology.py::test_voiced_sibilant_boundary_is_a_known_gap."
+    },
+    {
+      "id": "CA_DEGEM_SH",
+      "name": "cross-word-sibilant-degemination-ʃ",
+      "left_context": "ʃ$",
+      "right_context": "^[ˈˌ]?ʃ",
+      "transform": "",
+      "obligatory": true,
+      "notes": "External (cross-word) SIBILANT DEGEMINATION: where a word ends in the same sibilant that the next word begins with, the phonological phrase has a single sibilant, not a geminate — the coda one is deleted (Wheeler 2005, *The Phonology of Catalan*, §10.4 'consonant deletion in external sandhi'; Recasens 1993 §5). més són → [ˈme ˈson], dos savis → [ˈdo ˈsaβis], les sabates → [lə səˈβatəs], és seca → [ˈe ˈsɛkə].\nDeclared per DIALECT, not on the ca-x-medieval ancestor, because it is NOT pan-Catalan: Balearic assimilates and geminates instead of deleting, so ca-x-balear must not inherit this (see the note on ca-x-balear.json).\nScope, deliberately narrow on three axes, all measured. (1) IDENTICAL sibilants only: before a sibilant that DIFFERS in place or voicing the coda sibilant voices instead of deleting — petits juguen → [pəˈtidz ˈʒuɣən] (Wheeler 2005 §5.3), which CA_FINAL_TS_VOICING already handles. (2) SIBILANTS only: a cross-word stop or nasal geminate stays long in Catalan (tot tancat, constantment [kunstamˈmen]) and extending the deletion to stops or nasals measurably worsens every Catalan 4catac row. (3) VOICELESS sibilants only: word-final devoicing means no word surfaces with a final [z] or [ʒ] when these contexts are matched, so a z$ or ʒ$ rule could never fire. The consequence is that a /s # z/ boundary is currently left as a cross-word geminate (dos zeros → [ˈdoz ˈzɛɾus]) by CA_FINAL_S_VOICING: OUT OF SCOPE here, because collapsing it needs the deletion rules to see the post-voicing form, which the sandhi engine matches contexts against the ORIGINAL words to avoid. Pinned in tests/test_catalan_phonology.py::test_voiced_sibilant_boundary_is_a_known_gap."
+    },
+    {
+      "id": "CA_ELIDE_INITIAL_VOWEL",
+      "name": "cross-word-elision-initial-unstressed-vowel",
+      "left_context": "[aeiouɛɔɐ]$",
+      "right_context": "^[aeoəɛɔɐ](?=.*[aeiouəɛɔɐ])",
+      "transform": null,
+      "right_transform": "",
+      "obligatory": true,
+      "notes": "VOWEL CONTACT across a word boundary, half two — ELISION of the next word's initial UNSTRESSED vowel. Where the left word does not end in the elidable [ə], the hiatus is resolved on the other side (Wheeler 2005, *The Phonology of Catalan*, §10.1 'vowel contact'; Bonet & Lloret 1998, *Fonologia catalana*, ch. 5 on hiatus resolution and clitic vowels.).\nEngine output, verified: va anar → [ˈba ˈna] (the 4catac gold writes the phrase as one word, [baˈna]; this library keeps the word boundary and the two forms are identical segment for segment), va experimentar → [ˈba kspəɾiməˈnta], he autoritzat → [ˈɛ wtuɾiˈdzat].\nThe two halves are mutually exclusive BY CONSTRUCTION, not by engine precedence: this rule's left context is the vowel set MINUS [ə], so a boundary whose left word ends in [ə] belongs to CA_ELIDE_FINAL_SCHWA and this rule cannot also fire on it. Exactly one vowel is lost per boundary.\nHigh vowels are excluded from the right context for the same reason they are excluded from CA_ELIDE_FINAL_SCHWA's: an unstressed initial [i]/[u] GLIDES rather than deleting (CA_HIATUS_GLIDE_I / _U). Deletion and gliding partition the vowel space instead of competing for the boundary.\nMINIMAL WORD. The context also guarantees the process cannot leave a word without a syllable: hiatus resolution in Catalan loses a vowel, never a word (Wheeler 2005, *The Phonology of Catalan*, §10.1 'vowel contact'; Bonet & Lloret 1998, *Fonologia catalana*, ch. 5 on hiatus resolution and clitic vowels. on clitic vowels and minimal-word behaviour). The lookahead requires ANOTHER vowel later in the same word, so a monovocalic word is never hollowed out: estava en oració keeps its preposition ([eˈstava en oɾasiˈo], not *[… n …]), que el keeps its article, and va a casa keeps its preposition [ˈba ə ˈkazə].\nSTRESS, and what the condition really does. An IPA stress mark precedes its vowel, so the unanchored right context ^[vowel] can only match a vowel with no mark on it. That is NOT the same as 'unstressed' in the prosodic sense: this engine writes no stress mark on an atonic monosyllable, so a clitic counts as unstressed here, which is right, while a stressed monosyllable that the engine leaves unmarked would also match. The condition is therefore 'carries no stress mark', and paga una is [ˈpaɣə wnə] rather than the gold's [ˈpaɣ ˈunə] precisely because the engine leaves una unmarked and the glide rule takes the boundary first."
+    },
+    {
+      "id": "CA_HIATUS_GLIDE_I",
+      "name": "cross-word-hiatus-glide-i",
+      "left_context": "[aeiouəɛɔɐ]$",
+      "right_context": "^i",
+      "transform": null,
+      "right_transform": "j",
+      "obligatory": true,
+      "notes": "VOWEL CONTACT across a word boundary, the OTHER resolution — GLIDE FORMATION. A high vowel in hiatus need not delete: it loses its syllabicity and resyllabifies as an onset (Wheeler 2005, *The Phonology of Catalan*, §10.1 'vowel contact'; Bonet & Lloret 1998, *Fonologia catalana*, ch. 5 on hiatus resolution and clitic vowels.). A word-initial unstressed [i] after a vowel-final word surfaces as [j] — engine output, verified: pollastre i → [puˈʎastɾə j], de dellà i tanca → [də ðəˈʎa j ˈtaŋkə]. Note the preceding [ə] is KEPT, which is why CA_ELIDE_FINAL_SCHWA excludes unstressed high vowels from its right context.\nNo minimal-word guard here, deliberately, and this is the ONE place the constraint is relaxed: the bare conjunction ⟨i⟩ is exactly the word this rule is for, and all four 4catac accents write it as [j] between vowels (pollastre i, i ara). Gliding does not delete a segment — it changes its syllabicity — so the word is still pronounced; requiring it to keep a nucleus would contradict the expert gold and measurably worsens the Valencian and North-Western rows."
+    },
+    {
+      "id": "CA_HIATUS_GLIDE_U",
+      "name": "cross-word-hiatus-glide-u",
+      "left_context": "[aeiouəɛɔɐ]$",
+      "right_context": "^u(?=.)",
+      "transform": null,
+      "right_transform": "w",
+      "obligatory": true,
+      "notes": "VOWEL CONTACT across a word boundary — GLIDE FORMATION, the [u] half of CA_HIATUS_GLIDE_I. A word-initial unstressed [u] after a vowel-final word surfaces as [w] — engine output, verified: beure un → [ˈbɛwɾə wn], sobte un → [ˈsoptə wn] (Wheeler 2005, *The Phonology of Catalan*, §10.1 'vowel contact'; Bonet & Lloret 1998, *Fonologia catalana*, ch. 5 on hiatus resolution and clitic vowels.).\nMINIMAL WORD. The context also guarantees the process cannot leave a word without a syllable: hiatus resolution in Catalan loses a vowel, never a word (Wheeler 2005, *The Phonology of Catalan*, §10.1 'vowel contact'; Bonet & Lloret 1998, *Fonologia catalana*, ch. 5 on hiatus resolution and clitic vowels. on clitic vowels and minimal-word behaviour). The lookahead requires a following segment, so a word that is nothing but [u] keeps its syllable: the conjunction ⟨o⟩, which the Eastern reduction realises as [u], stays syllabic in O Anna o Eva → [u ˈannə u ˈɛβə] instead of collapsing to a bare [w]. ⟨un⟩ has a consonant after the vowel and still glides, as the gold has it.\nThe MIRROR process on the LEFT side of the boundary — a word-final unstressed [i]/[u] gliding before a vowel-initial word (trobo adjectius [ˈtɾoβw ədʒəkˈtiws], deixo amor [ˈdeʃw əˈmor]) — is deliberately NOT declared: the Western accents write it with a non-syllabic diacritic on the original vowel quality ([ˈtɾoβo̯], [ˈðejʃo̯]) rather than as a plain glide, so one rule cannot state it for all four, and declaring the Eastern form measurably worsens the Valencian and North-Western rows."
+    },
+    {
+      "id": "CA_CLITIC_GLIDE_I_BEFORE_VOWEL",
+      "name": "monosyllabic-clitic-i-glides-before-vowel",
+      "left_context": "^i$",
+      "right_context": "^(?!(?:[ˈˌ]?els?)$)[ˈˌ]?[aeiouəɛɔɐ]",
+      "transform": "j",
+      "right_transform": null,
+      "obligatory": true,
+      "notes": "A monosyllabic clitic whose whole form is [i] — the conjunction ⟨i⟩ and the adverbial pronoun ⟨hi⟩ — is syllabified into the following word as the glide [j] when that word begins with a vowel: hi havia [j əˈβiə], hi ha [j ˈa], i arribo [j əˈriβu], i ara [j ˈaɾə]. Wheeler 2005 ch. 12 (the syllabification of pronominal clitics) and ch. 11 (phrasal vowel sandhi); Bonet & Lloret 1998 ch. 5. The trigger is the FOLLOWING vowel, not a preceding one — which is what distinguishes this rule from the inherited CA_HIATUS_GLIDE_I, whose left context requires a preceding vowel and which therefore misses on hi ha, príncep i el and utterance-initial I arribo. ⟨i⟩ and ⟨hi⟩ are members of the spec's ``cliticless_words`` closed class (IEC 2016 §6.2). Confirmed in ALL FOUR 4catac dialect transcriptions (Central, Balearic, North-Western, Valencian), so it is declared on every dialect spec rather than on Central alone.\nWESTERN NARROWING (this spec only): the right context excludes the clitic ⟨el⟩/⟨els⟩. There is nothing to glide into there — CA_ELIDE_EL removes that word's vowel at the very same boundary — and the sandhi engine resolves the two sides of a boundary INDEPENDENTLY, against the original words, so without the exclusion both rules fire and i el rei comes out as *[j l ˈrej]: two words, no syllable nucleus between them. With it the phrase is [i l ˈrej], which is how the 4catac North-Western gold writes it — the ⟨i⟩ keeps its nucleus and the article loses its own (Wheeler 2005 ch. 4 and §11.2; Bonet & Lloret 1998 ch. 5). Before any other vowel-initial word the clitic glides exactly as before: i ara [j ˈaɾa], i això."
+    },
+    {
+      "id": "CA_EXT_NASAL_PALATAL",
+      "name": "external-nasal-palatalisation-western",
+      "left_context": "n$",
+      "right_context": "^[ˈˌ]?(?:ʃ|ʒ|ʎ)",
+      "transform": "ɲ",
+      "obligatory": true,
+      "notes": "WESTERN override of the inherited CA_EXT_NASAL_PALATAL (same id, so it REPLACES it): the cross-word counterpart of this spec's CA_NASAL_PALATAL override — see that rule for the phenomenon and its sources. A word-final /n/ palatalises before a following palato-alveolar FRICATIVE or palatal lateral, but not before the affricates [tʃ dʒ], whose closure is alveolar: un jutge [un ˈdʒudʒe] in Western, against Eastern [uɲ ˈʒudʒə] where the same word begins with a fricative."
+    }
+  ]
+}

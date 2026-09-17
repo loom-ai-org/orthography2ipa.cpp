@@ -1,0 +1,99 @@
+{
+ "code": "cab",
+ "name": "Garifuna",
+ "script": "Latin",
+ "quality": "skeleton",
+ "graphemes": {
+  "a": ["a"],
+  "aa": ["aː"],
+  "e": ["e"],
+  "ee": ["eː"],
+  "i": ["i"],
+  "ii": ["iː"],
+  "o": ["o"],
+  "oo": ["oː"],
+  "u": ["u"],
+  "uu": ["uː"],
+  "ü": ["ɨ"],
+  "üü": ["ɨː"],
+  "b": ["b"],
+  "ch": ["tʃ"],
+  "d": ["d"],
+  "f": ["f"],
+  "g": ["ɡ"],
+  "h": ["h"],
+  "k": ["k"],
+  "l": ["l"],
+  "m": ["m"],
+  "n": ["n"],
+  "ñ": ["ɲ"],
+  "r": ["r"],
+  "s": ["s"],
+  "t": ["t"],
+  "w": ["w"],
+  "y": ["j"],
+  "'": ["ʔ"]
+ },
+ "allophones": {
+  "a": ["a"], "aː": ["aː"], "e": ["e"], "eː": ["eː"], "i": ["i"], "iː": ["iː"],
+  "o": ["o"], "oː": ["oː"], "u": ["u"], "uː": ["uː"], "ɨ": ["ɨ"], "ɨː": ["ɨː"],
+  "b": ["b"], "tʃ": ["tʃ"], "d": ["d"], "f": ["f"], "ɡ": ["ɡ"], "h": ["h"],
+  "k": ["k"], "l": ["l"], "m": ["m"], "n": ["n"], "ɲ": ["ɲ"], "r": ["r"],
+  "s": ["s"], "t": ["t"], "w": ["w"], "j": ["j"], "ʔ": ["ʔ"]
+ },
+ "notes": "Garifuna Latin orthography as codified by the Garifuna Language Academies of Belize/Honduras/Guatemala (Cayetano & Cayetano 2005; Suazo 1994) and described phonologically by Taylor (1977). Six-vowel system /a e i o u ɨ/, the last spelled ⟨ü⟩; vowel length is phonemic and written by doubling the vowel letter (⟨aa⟩, ⟨ee⟩, ⟨ii⟩, ⟨oo⟩, ⟨uu⟩, ⟨üü⟩) — a geminate-vowel spelling for one long nucleus, the same unit-earning pattern as the geminate consonants cited in AGENTS.md test 2, not two short vowels in hiatus. ⟨ch⟩ spells the single affricate /tʃ/ (not c+h, which the spec does not otherwise define), and ⟨ñ⟩ spells /ɲ/. The apostrophe marks a phonemic glottal stop. Garifuna has predictable, non-contrastive stress (regularly penultimate); it is not marked orthographically and is documented here as an exemption rather than encoded, since the orthography gives no signal to derive it from.",
+ "iso639_3": "cab",
+ "glottolog_code": "gari1256",
+ "wikidata_qid": "Q35876",
+ "wikipedia": [
+  "https://en.wikipedia.org/wiki/Garifuna_language"
+ ],
+ "sources": [
+  {
+   "id": "glottolog2024",
+   "author": "Hammarström, Harald; Forkel, Robert; Haspelmath, Martin; Bank, Sebastian",
+   "year": 2024,
+   "title": "Glottolog 5.0",
+   "publisher": "Max Planck Institute for Evolutionary Anthropology",
+   "url": "https://glottolog.org/"
+  },
+  {
+   "id": "taylor1977",
+   "author": "Taylor, Douglas MacRae",
+   "year": 1977,
+   "title": "Languages of the West Indies",
+   "publisher": "Johns Hopkins University Press",
+   "notes": "Phonological description of Garifuna (Island Carib)."
+  },
+  {
+   "id": "suazo1994",
+   "author": "Suazo, Salvador",
+   "year": 1994,
+   "title": "Gramática Garífuna",
+   "publisher": "Ediciones Garínagu",
+   "notes": "Reference grammar including the standard Latin orthography."
+  },
+  {
+   "id": "cayetano2005",
+   "author": "Cayetano, E. Roy; Cayetano, Fabian",
+   "year": 2005,
+   "title": "Garifuna Dictionary / Standardized Garifuna Alphabet",
+   "publisher": "National Garifuna Council of Belize",
+   "notes": "Codified alphabet used across Belize, Honduras, Guatemala and Nicaragua."
+  }
+ ],
+ "urls": [
+  "https://glottolog.org/resource/languoid/id/gari1256"
+ ],
+ "location": {
+  "latitude": 15.3529,
+  "longitude": -86.9091,
+  "source": "glottolog",
+  "notes": "Glottolog's representative point."
+ },
+ "parent": "x-clade-araw1281",
+ "phonemes": [
+  "b", "tʃ", "d", "f", "ɡ", "h", "k", "l", "m", "n", "ɲ", "r", "s", "t", "w", "j", "ʔ",
+  "a", "aː", "e", "eː", "i", "iː", "o", "oː", "u", "uː", "ɨ", "ɨː"
+ ]
+}

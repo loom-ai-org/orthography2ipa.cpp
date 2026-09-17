@@ -1,0 +1,1038 @@
+{
+  "ancestors": [
+    {
+      "code": "sla",
+      "role": "parent",
+      "weight": 0.9,
+      "notes": "Descent from Proto-Slavic (West Slavic, Lechitic subgroup)."
+    },
+    {
+      "code": "de-DE",
+      "role": "adstrate",
+      "weight": 0.08,
+      "notes": "German adstrate: extensive medieval Ostsiedlung, urban German lexicon (dach, handel)."
+    },
+    {
+      "code": "la",
+      "role": "adstrate",
+      "weight": 0.05,
+      "notes": "Latin adstrate: strong scholarly/ecclesiastical and Renaissance influence."
+    }
+  ],
+  "code": "pl",
+  "name": "Polish",
+  "script": "Latin",
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "ą": [
+      "ɔ̃",
+      "ɔw̃",
+      "ɔm",
+      "ɔn",
+      "ɔŋ"
+    ],
+    "e": [
+      "ɛ"
+    ],
+    "ę": [
+      "ɛ̃",
+      "ɛw̃",
+      "ɛm",
+      "ɛn",
+      "ɛŋ"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "ɔ"
+    ],
+    "ó": [
+      "u"
+    ],
+    "u": [
+      "u"
+    ],
+    "y": [
+      "ɨ"
+    ],
+    "b": [
+      "b"
+    ],
+    "c": [
+      "ts"
+    ],
+    "ć": [
+      "tɕ"
+    ],
+    "d": [
+      "d"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "h": [
+      "x"
+    ],
+    "j": [
+      "j"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "ł": [
+      "w"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ń": [
+      "ɲ"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "ś": [
+      "ɕ"
+    ],
+    "t": [
+      "t"
+    ],
+    "w": [
+      "v"
+    ],
+    "z": [
+      "z"
+    ],
+    "ź": [
+      "ʑ"
+    ],
+    "ż": [
+      "ʐ"
+    ],
+    "ch": [
+      "x"
+    ],
+    "cz": [
+      "tʂ"
+    ],
+    "dz": [
+      "dz"
+    ],
+    "dź": [
+      "dʑ"
+    ],
+    "dż": [
+      "dʐ"
+    ],
+    "rz": [
+      "ʐ"
+    ],
+    "sz": [
+      "ʂ"
+    ],
+    "ni": [
+      "ɲi"
+    ],
+    "ci": [
+      "tɕi"
+    ],
+    "si": [
+      "ɕi"
+    ],
+    "zi": [
+      "ʑi"
+    ],
+    "dzi": [
+      "dʑi"
+    ]
+  },
+  "allophones": {
+    "p": [
+      "p"
+    ],
+    "b": [
+      "b",
+      "p"
+    ],
+    "t": [
+      "t"
+    ],
+    "d": [
+      "d",
+      "t"
+    ],
+    "k": [
+      "k"
+    ],
+    "ɡ": [
+      "ɡ",
+      "k"
+    ],
+    "f": [
+      "f"
+    ],
+    "v": [
+      "v",
+      "f"
+    ],
+    "s": [
+      "s"
+    ],
+    "z": [
+      "z",
+      "s"
+    ],
+    "ʂ": [
+      "ʂ"
+    ],
+    "ʐ": [
+      "ʐ",
+      "ʂ"
+    ],
+    "ɕ": [
+      "ɕ"
+    ],
+    "ʑ": [
+      "ʑ",
+      "ɕ"
+    ],
+    "x": [
+      "x"
+    ],
+    "ts": [
+      "ts"
+    ],
+    "dz": [
+      "dz",
+      "ts"
+    ],
+    "tʂ": [
+      "tʂ"
+    ],
+    "dʐ": [
+      "dʐ",
+      "tʂ"
+    ],
+    "tɕ": [
+      "tɕ"
+    ],
+    "dʑ": [
+      "dʑ",
+      "tɕ"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n",
+      "ŋ"
+    ],
+    "ɲ": [
+      "ɲ"
+    ],
+    "l": [
+      "l"
+    ],
+    "w": [
+      "w"
+    ],
+    "r": [
+      "r",
+      "ɾ"
+    ],
+    "j": [
+      "j"
+    ],
+    "a": [
+      "a"
+    ],
+    "ɛ": [
+      "ɛ"
+    ],
+    "ɔ": [
+      "ɔ"
+    ],
+    "i": [
+      "i"
+    ],
+    "u": [
+      "u"
+    ],
+    "ɨ": [
+      "ɨ"
+    ]
+  },
+  "parent": "x-clade-west2792",
+  "notes": "Standard Polish. Three sibilant series: alveolar /s z ts dz/, retroflex /ʂ ʐ tʂ dʐ/, alveolo-palatal /ɕ ʑ tɕ dʑ/. Nasal vowels ⟨ą ę⟩ realise as VN sequences before stops. FINAL DEVOICING: Polish obstruents devoice in coda/word-finally. NASAL VOWELS: ą→[ɔ] and ę→[ɛ] word-finally in contemporary Polish (de-nasalization); nasal elsewhere before consonants. Sources: Rubach (1984), Bethin (1992), Gussmann (2007).",
+  "quality": "research",
+  "script_type": "alphabet",
+  "sources": [
+    {
+      "id": "comrie_corbett1993",
+      "author": "Comrie, B. & Corbett, G. (eds.)",
+      "year": 1993,
+      "title": "The Slavonic Languages",
+      "publisher": "Routledge",
+      "url": null,
+      "pages": null,
+      "notes": null,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Slavic_languages"
+    },
+    {
+      "id": "swan2002",
+      "author": "Swan, O.",
+      "year": 2002,
+      "title": "A Grammar of Contemporary Polish",
+      "publisher": "Slavica Publishers",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "szpyra_kozlowski2002",
+      "author": "Szpyra-Kozłowski, J.",
+      "year": 2002,
+      "title": "Wprowadzenie do współczesnej fonologii",
+      "publisher": "Wydawnictwo UMCS",
+      "url": null,
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Polish_language",
+    "https://pl.wikipedia.org/wiki/Język_polski",
+    "https://pl.wikipedia.org/wiki/J%C4%99zyk_polski"
+  ],
+  "positional_graphemes": {
+    "b": {
+      "word_final": [
+        "p"
+      ],
+      "default": [
+        "b"
+      ]
+    },
+    "d": {
+      "word_final": [
+        "t"
+      ],
+      "default": [
+        "d"
+      ]
+    },
+    "g": {
+      "word_final": [
+        "k"
+      ],
+      "default": [
+        "ɡ"
+      ]
+    },
+    "w": {
+      "word_final": [
+        "f"
+      ],
+      "default": [
+        "v"
+      ]
+    },
+    "z": {
+      "word_final": [
+        "s"
+      ],
+      "default": [
+        "z"
+      ]
+    },
+    "ź": {
+      "word_final": [
+        "ɕ"
+      ],
+      "default": [
+        "ʑ"
+      ]
+    },
+    "ż": {
+      "word_final": [
+        "ʂ"
+      ],
+      "default": [
+        "ʐ"
+      ]
+    },
+    "dz": {
+      "word_final": [
+        "ts"
+      ],
+      "default": [
+        "dz"
+      ]
+    },
+    "ą": {
+      "word_final": [
+        "ɔw̃"
+      ],
+      "before_consonant": [
+        "ɔ̃"
+      ],
+      "default": [
+        "ɔ̃"
+      ]
+    },
+    "ę": {
+      "word_final": [
+        "ɛ"
+      ],
+      "before_consonant": [
+        "ɛ̃"
+      ],
+      "default": [
+        "ɛ̃"
+      ]
+    },
+    "i": {
+      "before_vowel": [
+        "j"
+      ],
+      "default": [
+        "i"
+      ]
+    },
+    "zi": {
+      "before_vowel": [
+        "ʑ"
+      ],
+      "default": [
+        "ʑi"
+      ]
+    },
+    "ci": {
+      "before_vowel": [
+        "tɕ"
+      ],
+      "default": [
+        "tɕi"
+      ]
+    },
+    "si": {
+      "before_vowel": [
+        "ɕ"
+      ],
+      "default": [
+        "ɕi"
+      ]
+    },
+    "ni": {
+      "before_vowel": [
+        "ɲ"
+      ],
+      "default": [
+        "ɲi"
+      ]
+    },
+    "dzi": {
+      "before_vowel": [
+        "dʑ"
+      ],
+      "default": [
+        "dʑi"
+      ]
+    },
+    "dź": {
+      "word_final": [
+        "tɕ"
+      ],
+      "default": [
+        "dʑ"
+      ]
+    },
+    "dż": {
+      "word_final": [
+        "tʂ"
+      ],
+      "default": [
+        "dʐ"
+      ]
+    },
+    "rz": {
+      "word_final": [
+        "ʂ"
+      ],
+      "default": [
+        "ʐ"
+      ]
+    }
+  },
+  "timespan": {
+    "start_year": 1400,
+    "end_year": null
+  },
+  "glottolog_code": "poli1260",
+  "iso639_3": "pol",
+  "stress": {
+    "default_position": -2,
+    "final_stress_endings": [],
+    "penult_stress_endings": [],
+    "marked_vowels": [],
+    "stress_mark": "ˈ",
+    "notes": "Polish has regular penultimate stress. Vowel letters ó ą ę mark quality, not stress; ó is a vowel quality letter (historical /oː/ → /u/), NOT a stress marker. Exceptions (some first-person plural verbal forms, loanwords, conditional mood) exist but are rare and not orthographically distinguishable. Source: Rubach & Booij (1985), A Grid Theory of Stress in Polish; Wikipedia: https://en.wikipedia.org/wiki/Polish_phonology"
+  },
+  "wikidata_qid": "Q809",
+  "phoible_id": "poli1260",
+  "wals_code": "pol",
+  "location": {
+    "latitude": 51.8439,
+    "longitude": 18.6255,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Polish."
+  },
+  "allophone_rules": [
+    {
+      "id": "PL_NASAL_DECOMP_O_M",
+      "phonemes": [
+        "ɔ̃"
+      ],
+      "surface": "ɔm",
+      "followed_by_phoneme": [
+        "p",
+        "b"
+      ],
+      "notes": "Nasal vowel decomposes to oral vowel + homorganic nasal before stops/affricates (Gussmann (2007) The Phonology of Polish (OUP) §2.4): ząb [zɔmp], ręka [rɛŋka], kąt [kɔnt]."
+    },
+    {
+      "id": "PL_NASAL_DECOMP_O_N",
+      "phonemes": [
+        "ɔ̃"
+      ],
+      "surface": "ɔn",
+      "followed_by_phoneme": [
+        "t",
+        "d",
+        "ts",
+        "dz",
+        "tʂ",
+        "dʐ",
+        "tɕ",
+        "dʑ"
+      ],
+      "notes": "Nasal vowel decomposes to oral vowel + homorganic nasal before stops/affricates (Gussmann (2007) The Phonology of Polish (OUP) §2.4): ząb [zɔmp], ręka [rɛŋka], kąt [kɔnt]."
+    },
+    {
+      "id": "PL_NASAL_DECOMP_O_NG",
+      "phonemes": [
+        "ɔ̃"
+      ],
+      "surface": "ɔŋ",
+      "followed_by_phoneme": [
+        "k",
+        "ɡ"
+      ],
+      "notes": "Nasal vowel decomposes to oral vowel + homorganic nasal before stops/affricates (Gussmann (2007) The Phonology of Polish (OUP) §2.4): ząb [zɔmp], ręka [rɛŋka], kąt [kɔnt]."
+    },
+    {
+      "id": "PL_NASAL_DECOMP_E_M",
+      "phonemes": [
+        "ɛ̃"
+      ],
+      "surface": "ɛm",
+      "followed_by_phoneme": [
+        "p",
+        "b"
+      ],
+      "notes": "Nasal vowel decomposes to oral vowel + homorganic nasal before stops/affricates (Gussmann (2007) The Phonology of Polish (OUP) §2.4): ząb [zɔmp], ręka [rɛŋka], kąt [kɔnt]."
+    },
+    {
+      "id": "PL_NASAL_DECOMP_E_N",
+      "phonemes": [
+        "ɛ̃"
+      ],
+      "surface": "ɛn",
+      "followed_by_phoneme": [
+        "t",
+        "d",
+        "ts",
+        "dz",
+        "tʂ",
+        "dʐ",
+        "tɕ",
+        "dʑ"
+      ],
+      "notes": "Nasal vowel decomposes to oral vowel + homorganic nasal before stops/affricates (Gussmann (2007) The Phonology of Polish (OUP) §2.4): ząb [zɔmp], ręka [rɛŋka], kąt [kɔnt]."
+    },
+    {
+      "id": "PL_NASAL_DECOMP_E_NG",
+      "phonemes": [
+        "ɛ̃"
+      ],
+      "surface": "ɛŋ",
+      "followed_by_phoneme": [
+        "k",
+        "ɡ"
+      ],
+      "notes": "Nasal vowel decomposes to oral vowel + homorganic nasal before stops/affricates (Gussmann (2007) The Phonology of Polish (OUP) §2.4): ząb [zɔmp], ręka [rɛŋka], kąt [kɔnt]."
+    },
+    {
+      "id": "PL_REGR_DEVOICE_B",
+      "phonemes": [
+        "b"
+      ],
+      "surface": "p",
+      "followed_by_phoneme": [
+        "p",
+        "t",
+        "k",
+        "f",
+        "s",
+        "ʂ",
+        "ɕ",
+        "x",
+        "ts",
+        "tʂ",
+        "tɕ"
+      ],
+      "notes": "Regressive devoicing in obstruent clusters (Gussmann (2007) The Phonology of Polish (OUP) ch. 8): wódka [vutka], Abchaz- [apx-]."
+    },
+    {
+      "id": "PL_REGR_DEVOICE_D",
+      "phonemes": [
+        "d"
+      ],
+      "surface": "t",
+      "followed_by_phoneme": [
+        "p",
+        "t",
+        "k",
+        "f",
+        "s",
+        "ʂ",
+        "ɕ",
+        "x",
+        "ts",
+        "tʂ",
+        "tɕ"
+      ],
+      "notes": "Regressive devoicing in obstruent clusters (Gussmann (2007) The Phonology of Polish (OUP) ch. 8): wódka [vutka], Abchaz- [apx-]."
+    },
+    {
+      "id": "PL_REGR_DEVOICE_Ɡ",
+      "phonemes": [
+        "ɡ"
+      ],
+      "surface": "k",
+      "followed_by_phoneme": [
+        "p",
+        "t",
+        "k",
+        "f",
+        "s",
+        "ʂ",
+        "ɕ",
+        "x",
+        "ts",
+        "tʂ",
+        "tɕ"
+      ],
+      "notes": "Regressive devoicing in obstruent clusters (Gussmann (2007) The Phonology of Polish (OUP) ch. 8): wódka [vutka], Abchaz- [apx-]."
+    },
+    {
+      "id": "PL_REGR_DEVOICE_V",
+      "phonemes": [
+        "v"
+      ],
+      "surface": "f",
+      "followed_by_phoneme": [
+        "p",
+        "t",
+        "k",
+        "f",
+        "s",
+        "ʂ",
+        "ɕ",
+        "x",
+        "ts",
+        "tʂ",
+        "tɕ"
+      ],
+      "notes": "Regressive devoicing in obstruent clusters (Gussmann (2007) The Phonology of Polish (OUP) ch. 8): wódka [vutka], Abchaz- [apx-]."
+    },
+    {
+      "id": "PL_REGR_DEVOICE_Z",
+      "phonemes": [
+        "z"
+      ],
+      "surface": "s",
+      "followed_by_phoneme": [
+        "p",
+        "t",
+        "k",
+        "f",
+        "s",
+        "ʂ",
+        "ɕ",
+        "x",
+        "ts",
+        "tʂ",
+        "tɕ"
+      ],
+      "notes": "Regressive devoicing in obstruent clusters (Gussmann (2007) The Phonology of Polish (OUP) ch. 8): wódka [vutka], Abchaz- [apx-]."
+    },
+    {
+      "id": "PL_REGR_DEVOICE_ʐ",
+      "phonemes": [
+        "ʐ"
+      ],
+      "surface": "ʂ",
+      "followed_by_phoneme": [
+        "p",
+        "t",
+        "k",
+        "f",
+        "s",
+        "ʂ",
+        "ɕ",
+        "x",
+        "ts",
+        "tʂ",
+        "tɕ"
+      ],
+      "notes": "Regressive devoicing in obstruent clusters (Gussmann (2007) The Phonology of Polish (OUP) ch. 8): wódka [vutka], Abchaz- [apx-]."
+    },
+    {
+      "id": "PL_REGR_DEVOICE_ʑ",
+      "phonemes": [
+        "ʑ"
+      ],
+      "surface": "ɕ",
+      "followed_by_phoneme": [
+        "p",
+        "t",
+        "k",
+        "f",
+        "s",
+        "ʂ",
+        "ɕ",
+        "x",
+        "ts",
+        "tʂ",
+        "tɕ"
+      ],
+      "notes": "Regressive devoicing in obstruent clusters (Gussmann (2007) The Phonology of Polish (OUP) ch. 8): wódka [vutka], Abchaz- [apx-]."
+    },
+    {
+      "id": "PL_REGR_DEVOICE_DZ",
+      "phonemes": [
+        "dz"
+      ],
+      "surface": "ts",
+      "followed_by_phoneme": [
+        "p",
+        "t",
+        "k",
+        "f",
+        "s",
+        "ʂ",
+        "ɕ",
+        "x",
+        "ts",
+        "tʂ",
+        "tɕ"
+      ],
+      "notes": "Regressive devoicing in obstruent clusters (Gussmann (2007) The Phonology of Polish (OUP) ch. 8): wódka [vutka], Abchaz- [apx-]."
+    },
+    {
+      "id": "PL_REGR_DEVOICE_Dʐ",
+      "phonemes": [
+        "dʐ"
+      ],
+      "surface": "tʂ",
+      "followed_by_phoneme": [
+        "p",
+        "t",
+        "k",
+        "f",
+        "s",
+        "ʂ",
+        "ɕ",
+        "x",
+        "ts",
+        "tʂ",
+        "tɕ"
+      ],
+      "notes": "Regressive devoicing in obstruent clusters (Gussmann (2007) The Phonology of Polish (OUP) ch. 8): wódka [vutka], Abchaz- [apx-]."
+    },
+    {
+      "id": "PL_REGR_DEVOICE_Dʑ",
+      "phonemes": [
+        "dʑ"
+      ],
+      "surface": "tɕ",
+      "followed_by_phoneme": [
+        "p",
+        "t",
+        "k",
+        "f",
+        "s",
+        "ʂ",
+        "ɕ",
+        "x",
+        "ts",
+        "tʂ",
+        "tɕ"
+      ],
+      "notes": "Regressive devoicing in obstruent clusters (Gussmann (2007) The Phonology of Polish (OUP) ch. 8): wódka [vutka], Abchaz- [apx-]."
+    },
+    {
+      "id": "PL_REGR_VOICE_P",
+      "phonemes": [
+        "p"
+      ],
+      "surface": "b",
+      "followed_by_phoneme": [
+        "b",
+        "d",
+        "ɡ",
+        "z",
+        "ʑ",
+        "dz",
+        "dʐ",
+        "dʑ"
+      ],
+      "notes": "Regressive voicing before voiced obstruents (Gussmann (2007) The Phonology of Polish (OUP) ch. 8): prośba [prɔʑba], Afgan- [avɡ-]. v and ʐ do not trigger."
+    },
+    {
+      "id": "PL_REGR_VOICE_T",
+      "phonemes": [
+        "t"
+      ],
+      "surface": "d",
+      "followed_by_phoneme": [
+        "b",
+        "d",
+        "ɡ",
+        "z",
+        "ʑ",
+        "dz",
+        "dʐ",
+        "dʑ"
+      ],
+      "notes": "Regressive voicing before voiced obstruents (Gussmann (2007) The Phonology of Polish (OUP) ch. 8): prośba [prɔʑba], Afgan- [avɡ-]. v and ʐ do not trigger."
+    },
+    {
+      "id": "PL_REGR_VOICE_K",
+      "phonemes": [
+        "k"
+      ],
+      "surface": "ɡ",
+      "followed_by_phoneme": [
+        "b",
+        "d",
+        "ɡ",
+        "z",
+        "ʑ",
+        "dz",
+        "dʐ",
+        "dʑ"
+      ],
+      "notes": "Regressive voicing before voiced obstruents (Gussmann (2007) The Phonology of Polish (OUP) ch. 8): prośba [prɔʑba], Afgan- [avɡ-]. v and ʐ do not trigger."
+    },
+    {
+      "id": "PL_REGR_VOICE_F",
+      "phonemes": [
+        "f"
+      ],
+      "surface": "v",
+      "followed_by_phoneme": [
+        "b",
+        "d",
+        "ɡ",
+        "z",
+        "ʑ",
+        "dz",
+        "dʐ",
+        "dʑ"
+      ],
+      "notes": "Regressive voicing before voiced obstruents (Gussmann (2007) The Phonology of Polish (OUP) ch. 8): prośba [prɔʑba], Afgan- [avɡ-]. v and ʐ do not trigger."
+    },
+    {
+      "id": "PL_REGR_VOICE_S",
+      "phonemes": [
+        "s"
+      ],
+      "surface": "z",
+      "followed_by_phoneme": [
+        "b",
+        "d",
+        "ɡ",
+        "z",
+        "ʑ",
+        "dz",
+        "dʐ",
+        "dʑ"
+      ],
+      "notes": "Regressive voicing before voiced obstruents (Gussmann (2007) The Phonology of Polish (OUP) ch. 8): prośba [prɔʑba], Afgan- [avɡ-]. v and ʐ do not trigger."
+    },
+    {
+      "id": "PL_REGR_VOICE_Ʂ",
+      "phonemes": [
+        "ʂ"
+      ],
+      "surface": "ʐ",
+      "followed_by_phoneme": [
+        "b",
+        "d",
+        "ɡ",
+        "z",
+        "ʑ",
+        "dz",
+        "dʐ",
+        "dʑ"
+      ],
+      "notes": "Regressive voicing before voiced obstruents (Gussmann (2007) The Phonology of Polish (OUP) ch. 8): prośba [prɔʑba], Afgan- [avɡ-]. v and ʐ do not trigger."
+    },
+    {
+      "id": "PL_REGR_VOICE_ɕ",
+      "phonemes": [
+        "ɕ"
+      ],
+      "surface": "ʑ",
+      "followed_by_phoneme": [
+        "b",
+        "d",
+        "ɡ",
+        "z",
+        "ʑ",
+        "dz",
+        "dʐ",
+        "dʑ"
+      ],
+      "notes": "Regressive voicing before voiced obstruents (Gussmann (2007) The Phonology of Polish (OUP) ch. 8): prośba [prɔʑba], Afgan- [avɡ-]. v and ʐ do not trigger."
+    },
+    {
+      "id": "PL_REGR_VOICE_TS",
+      "phonemes": [
+        "ts"
+      ],
+      "surface": "dz",
+      "followed_by_phoneme": [
+        "b",
+        "d",
+        "ɡ",
+        "z",
+        "ʑ",
+        "dz",
+        "dʐ",
+        "dʑ"
+      ],
+      "notes": "Regressive voicing before voiced obstruents (Gussmann (2007) The Phonology of Polish (OUP) ch. 8): prośba [prɔʑba], Afgan- [avɡ-]. v and ʐ do not trigger."
+    },
+    {
+      "id": "PL_REGR_VOICE_TꟅ",
+      "phonemes": [
+        "tʂ"
+      ],
+      "surface": "dʐ",
+      "followed_by_phoneme": [
+        "b",
+        "d",
+        "ɡ",
+        "z",
+        "ʑ",
+        "dz",
+        "dʐ",
+        "dʑ"
+      ],
+      "notes": "Regressive voicing before voiced obstruents (Gussmann (2007) The Phonology of Polish (OUP) ch. 8): prośba [prɔʑba], Afgan- [avɡ-]. v and ʐ do not trigger."
+    },
+    {
+      "id": "PL_REGR_VOICE_Tɕ",
+      "phonemes": [
+        "tɕ"
+      ],
+      "surface": "dʑ",
+      "followed_by_phoneme": [
+        "b",
+        "d",
+        "ɡ",
+        "z",
+        "ʑ",
+        "dz",
+        "dʐ",
+        "dʑ"
+      ],
+      "notes": "Regressive voicing before voiced obstruents (Gussmann (2007) The Phonology of Polish (OUP) ch. 8): prośba [prɔʑba], Afgan- [avɡ-]. v and ʐ do not trigger."
+    },
+    {
+      "id": "PL_PROGR_DEVOICE_V",
+      "phonemes": [
+        "v"
+      ],
+      "surface": "f",
+      "preceded_by_phoneme": [
+        "p",
+        "t",
+        "k",
+        "f",
+        "s",
+        "ʂ",
+        "ɕ",
+        "x",
+        "ts",
+        "tʂ",
+        "tɕ"
+      ],
+      "notes": "Progressive devoicing of /v/ after a voiceless obstruent (Gussmann (2007) The Phonology of Polish (OUP) ch. 8): kwiat [kfjat], przy [pʂɨ] — the two Polish obstruents that assimilate rightward."
+    },
+    {
+      "id": "PL_PROGR_DEVOICE_ʐ",
+      "phonemes": [
+        "ʐ"
+      ],
+      "surface": "ʂ",
+      "preceded_by_phoneme": [
+        "p",
+        "t",
+        "k",
+        "f",
+        "s",
+        "ʂ",
+        "ɕ",
+        "x",
+        "ts",
+        "tʂ",
+        "tɕ"
+      ],
+      "notes": "Progressive devoicing of /ʐ/ after a voiceless obstruent (Gussmann (2007) The Phonology of Polish (OUP) ch. 8): kwiat [kfjat], przy [pʂɨ] — the two Polish obstruents that assimilate rightward."
+    },
+    {
+      "id": "PL_N_VELAR",
+      "phonemes": [
+        "n"
+      ],
+      "surface": "ŋ",
+      "followed_by_phoneme": [
+        "k",
+        "ɡ"
+      ],
+      "notes": "/n/ assimilates to [ŋ] before velar stops (Gussmann (2007) The Phonology of Polish (OUP) §2.3): bank [baŋk], Kongo [kɔŋɡɔ]."
+    }
+  ]
+}

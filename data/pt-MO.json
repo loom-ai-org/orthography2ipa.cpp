@@ -1,0 +1,184 @@
+{
+  "code": "pt-MO",
+  "glottolog_code": null,
+  "name": "Macau Portuguese",
+  "script": "Latin",
+  "quality": "skeleton",
+  "script_type": "alphabet",
+  "parent": "pt-PT",
+  "graphemes_base": "pt-PT",
+  "allophones_base": "pt-PT",
+  "positional_graphemes_base": "pt-PT",
+  "positional_graphemes": {
+    "r": {
+      "intervocalic": [
+        "ɾ"
+      ]
+    }
+  },
+  "graphemes": {
+    "r": [
+      "ʁ",
+      "r"
+    ],
+    "rr": [
+      "ʁ"
+    ]
+  },
+  "allophones": {
+    "ʁ": [
+      "ʁ",
+      "χ",
+      "r"
+    ]
+  },
+  "ancestors": [
+    {
+      "code": "pt-PT",
+      "role": "parent",
+      "weight": 0.85,
+      "notes": "European Portuguese standard. Macau was under Portuguese administration from 1557 to 1999; the Portuguese of Macau closely follows the European norm in pronunciation and vocabulary because of sustained institutional ties and immigration from Portugal (en.wikipedia.org/wiki/Macanese_Portuguese — flagged secondary, phonology section uncited). It is the most 'European' of the Asian Portuguese varieties."
+    },
+    {
+      "code": "zh",
+      "role": "adstrate",
+      "weight": 0.1,
+      "notes": "Cantonese (Yue) adstrate: the first language of the great majority of Macau's population. Portuguese speakers are typically bilingual, and Cantonese-influenced phonological traits appear among L2 speakers but NOT among speakers with higher education in Portuguese (flagged secondary, uncited Wikipedia)."
+    },
+    {
+      "code": "mzs",
+      "role": "adstrate",
+      "weight": 0.05,
+      "notes": "Macanese Creole (Patuá / maquista / 'dialecto macaense') adstrate: the traditional Portuguese-based creole of the Macanese community, now nearly extinct — a SEPARATE contact language, not the variety modelled here. Its morphosyntax was described by Pinharanda-Nunes (2011) and its earlier state by Batalha (1959)."
+    }
+  ],
+  "notes": "Macau Portuguese / Português de Macau. Co-official language of the Macau SAR (People's Republic of China) alongside Chinese; a small L1/heritage community plus an L2 official register used in legislation, the courts and public administration. Use has declined since the 1999 handover. CREOLE-VS-PORTUGUESE DISTINCTION (important): this spec models the modern Portuguese of Macau, which is NOT a creole. The Macanese creole — Patuá, also called maquista or the 'dialecto macaense' — is a distinct Portuguese-based contact language with Cantonese, Malay, Kristang (Malacca), Konkani and Sinhala elements, now nearly extinct; it is described in Batalha (1959) and, for tense-mood-aspect morphosyntax, in Pinharanda-Nunes (2011). Do not conflate the two. LITERATURE IS THIN: no peer-reviewed phonological description of Macau Portuguese proper (as opposed to the creole) could be obtained and read for this spec. The only phonological description read is the English Wikipedia 'Macanese Portuguese' article, whose Phonology section carries NO citations — used here only as a FLAGGED SECONDARY source. On that flagged basis, the reported distinctive traits are: (1) the variety 'nowadays closely follows the standard European dialect in pronunciation and vocabulary' — so the inherited pt-PT maps (uvular [ʁ], EP vowel reduction, coda chiado) are retained as the modelled norm; (2) [ʒ] is devoiced to [ʃ], said to be 'almost unique to Macau'; (3) L2 speakers drop the final infinitive /ɾ/ (comer, dormir) while keeping /ɾ/ elsewhere (mar), paralleling African and most Brazilian Portuguese; (4) some Cantonese-influenced (partly non-rhotic) patterns among L2 speakers, absent in highly-schooled speakers. Traits (2)–(4) are documented ONLY by the uncited secondary source, are L2/variable, and involve deletion (3) the engine's allophone layer does not express, so they are NOT encoded as rules — they are recorded here honestly instead of fabricating grounded rules. TIER: skeleton (kept deliberately) — the research bar (an actually-read published phonological reference) is not met for this small variety; promote only once a citable phonological description of Macau Portuguese is obtained.",
+  "sources": [
+    {
+      "id": "batalha1959",
+      "author": "Batalha, Graciete Nogueira",
+      "year": 1959,
+      "title": "Estado actual do dialecto macaense",
+      "publisher": "Revista de Filologia Portuguesa, v. 9, pp. 177–213",
+      "url": null,
+      "pages": "177-213",
+      "notes": "Foundational description of the 'dialecto macaense' = the Macanese CREOLE (Patuá), NOT the L2/standard Portuguese of Macau modelled here; reference verified via Albuquerque (2010:283, ref. list), which cites Batalha 1959:181 for creole prosody. Included to anchor the creole-vs-Portuguese distinction."
+    },
+    {
+      "id": "pinharanda_nunes2011",
+      "author": "Pinharanda-Nunes, Mário",
+      "year": 2011,
+      "title": "Estudo da Expressão Morfo-Sintáctica das Categorias de Tempo, Modo e Aspecto em Maquista",
+      "publisher": "PhD dissertation, University of Macau",
+      "url": null,
+      "pages": null,
+      "notes": "First doctoral thesis on Patuá (maquista) grammar — the CREOLE, not the Portuguese variety; cited only for the creole-vs-Portuguese distinction, not for Macau Portuguese phonology."
+    },
+    {
+      "id": "macanese_wikipedia2024",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Macanese Portuguese",
+      "publisher": "Wikipedia, The Free Encyclopedia",
+      "url": "https://en.wikipedia.org/wiki/Macanese_Portuguese",
+      "pages": null,
+      "notes": "FLAGGED SECONDARY source: the only accessible phonological description of Macau Portuguese proper (as opposed to the creole). Its Phonology section carries NO citations and its distinctive-trait claims ([ʒ]→[ʃ] devoicing, L2 infinitive-/ɾ/ dropping, partial Cantonese-contact non-rhoticity) are L2/variable and not encoded as engine rules. Used here to ground the modelled norm — that Macau Portuguese 'closely follows the standard European dialect' — as the honest basis for the gold, per the honesty rule."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Macanese_Portuguese",
+    "https://en.wikipedia.org/wiki/Macanese_Patois",
+    "https://pt.wikipedia.org/wiki/Portugu%C3%AAs_macaense",
+    "https://pt.wikipedia.org/wiki/Patu%C3%A1_macaense"
+  ],
+  "urls": [
+    "https://en.wikipedia.org/wiki/Macanese_Portuguese",
+    "https://en.wikipedia.org/wiki/Macanese_Patois",
+    "https://en.wikipedia.org/wiki/Languages_of_Macau",
+    "https://pt.wikipedia.org/wiki/Portugu%C3%AAs_de_Macau",
+    "https://en.wikipedia.org/wiki/Macau"
+  ],
+  "timespan": {
+    "start_year": 1700,
+    "end_year": null
+  },
+  "iso639_3": "por",
+  "stress": {
+    "onset_clusters": ["bl", "br", "bɫ", "bɾ", "bʀ", "bʁ", "bʎ", "bχ", "dr", "dɾ", "dʀ", "dʁ", "dʎ", "dχ", "fl", "fr", "fɫ", "fɾ", "fʀ", "fʁ", "fʎ", "fχ", "kl", "kr", "kɫ", "kɾ", "kʀ", "kʁ", "kʎ", "kχ", "pl", "pr", "pɫ", "pɾ", "pʀ", "pʁ", "pʎ", "pχ", "tr", "tɾ", "tʀ", "tʁ", "tʎ", "tχ", "vl", "vr", "vɫ", "vɾ", "vʀ", "vʁ", "vʎ", "vχ", "ðr", "ðɾ", "ðʀ", "ðʁ", "ðʎ", "ðχ", "ɡl", "ɡr", "ɡɫ", "ɡɾ", "ɡʀ", "ɡʁ", "ɡʎ", "ɡχ", "ɣl", "ɣr", "ɣɫ", "ɣɾ", "ɣʀ", "ɣʁ", "ɣʎ", "ɣχ", "βl", "βr", "βɫ", "βɾ", "βʀ", "βʁ", "βʎ", "βχ"],
+    "cliticless_words": ["o", "a", "os", "as", "de", "do", "da", "dos", "das", "em", "no", "na", "nos", "nas", "por", "pelo", "pela", "pelos", "pelas", "ao", "aos", "à", "às", "com", "sem", "e", "que", "se", "me", "te", "lhe", "lhes", "vos", "lo", "la", "los", "las", "lho", "lha", "lhos", "lhas"],
+    "default_position": -2,
+    "final_stress_endings": [
+      "r",
+      "l",
+      "z",
+      "x",
+      "i",
+      "u",
+      "im",
+      "om",
+      "um",
+      "is",
+      "us",
+      "ns",
+      "ão",
+      "ãe",
+      "õe",
+      "au",
+      "éu",
+      "éi",
+      "ói"
+    ],
+    "penult_stress_endings": [],
+    "marked_vowels": [
+      "á",
+      "é",
+      "í",
+      "ó",
+      "ú",
+      "â",
+      "ê",
+      "ô",
+      "ã",
+      "õ"
+    ],
+    "stress_mark": "ˈ",
+    "notes": "Acordo Ortográfico 1990 conventions inherited from pt-PT: paroxytone default; written accents override; final -i/-u/-r/-l/-z/-x/-im/-om/-um/-ns and nasal diphthongs attract final stress. Unmarked -em/-am stay paroxytone (homem, falam). DIPHTHONGS: declared so the bundled syllabifier counts nuclei correctly — without them every vowel run merges into one nucleus and co-e-lho is read as coe-lho, one syllable short, putting the stress and its vowel reduction on the wrong vowel. ⟨oe⟩ is hiatus, not a diphthong (Cunha & Cintra, §Ditongos).",
+    "diphthongs": [
+      "ãe",
+      "ão",
+      "õe",
+      "ai",
+      "ái",
+      "au",
+      "áu",
+      "ei",
+      "éi",
+      "êi",
+      "eu",
+      "éu",
+      "êu",
+      "iu",
+      "oi",
+      "ói",
+      "ôi",
+      "ou",
+      "ui"
+    ]
+  },
+  "wikidata_qid": "Q9290867",
+  "location": {
+    "latitude": 22.19,
+    "longitude": 113.538056,
+    "source": "wikidata",
+    "notes": "Macau — the territory this co-official variety is confined to. [Wikidata Q14773 P625]"
+  },
+  "word_exceptions_base": "pt-PT",
+  "allophone_rules": [
+    {
+      "id": "PT_FINAL_EM_NUCLEUS",
+      "phonemes": [],
+      "surface": "ɐ",
+      "notes": "DISABLED for this variety. The EP Lisbon-standard centralisation of the word-final ⟨-em⟩ nucleus to [ɐ̃] (inherited from pt-PT) does not apply here: this variety keeps the close-mid nasal nucleus [ẽ], so ⟨-em⟩ is [ẽj̃] (glide via PT_FINAL_EM_GLIDE), not [ɐ̃j̃]. Peripheral/non-Iberian Portuguese does not follow the Lisbon centralisation."
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "code": "krl",
+  "name": "Karelian",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "iso639_3": "krl",
+  "glottolog_code": "kare1335",
+  "wikidata_qid": "Q33557",
+  "graphemes_base": "fi",
+  "graphemes": {
+    "š": [
+      "ʃ"
+    ],
+    "ž": [
+      "ʒ"
+    ],
+    "č": [
+      "t͡ʃ"
+    ],
+    "dž": [
+      "d͡ʒ"
+    ],
+    "z": [
+      "z"
+    ],
+    "c": [
+      "t͡s"
+    ],
+    "šš": [
+      "ʃː"
+    ],
+    "žž": [
+      "ʒː"
+    ],
+    "čč": [
+      "t͡ʃː"
+    ]
+  },
+  "allophones_base": "fi",
+  "allophones": {
+    "ʃ": [
+      "ʃ"
+    ],
+    "ʒ": [
+      "ʒ"
+    ],
+    "t͡ʃ": [
+      "t͡ʃ"
+    ],
+    "d͡ʒ": [
+      "d͡ʒ"
+    ],
+    "t͡s": [
+      "t͡s"
+    ],
+    "z": [
+      "z"
+    ]
+  },
+  "notes": "Karelian (karjala), a Finnic (Uralic) language of the Republic of Karelia and Tver Oblast, Russia. Its unified Latin orthography extends the Finnish letter set with ⟨š⟩ /ʃ/, ⟨ž⟩ /ʒ/, ⟨č⟩ /t͡ʃ/, the digraph ⟨dž⟩ /d͡ʒ/ and ⟨z⟩ /z/, ⟨c⟩ /t͡s/; ⟨v⟩ is the labial approximant /ʋ/ (inherited from the Finnish base). Vowel letters a e i o u y ä ö, doubled for phonemic length; consonant length is written by doubling. Karelian has an extensive phonemic palatalised consonant series (/tʲ dʲ nʲ lʲ sʲ rʲ zʲ/) marked in narrow transcription with ⟨ʲ⟩ and, in the orthography, chiefly conditioned before front vowels and ⟨i⟩; it is not resolved from the plain spelling here, so palatalisation is under-generated. Diphthong offglides are written plain. Inventory and doubled-length convention follow the Finnish base; the Finnic clade classification is shared.",
+  "sources": [
+    {
+      "id": "karelian_language_wikipedia",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Karelian language — Phonology and Orthography",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Karelian_language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Karelian_language",
+      "pages": null,
+      "notes": "Unified Karelian Latin alphabet (adds š ž č dž z c), consonant/vowel quantity, and the phonemic palatalised consonant series."
+    },
+    {
+      "id": "abondolo1998",
+      "author": "Abondolo, D. (ed.)",
+      "year": 1998,
+      "title": "The Uralic Languages",
+      "publisher": "Routledge",
+      "url": null,
+      "pages": null,
+      "notes": "Finnic phonology reference."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Karelian_language"
+  ],
+  "parent": "x-clade-finn1317",
+  "ancestors": [
+    {
+      "code": "x-clade-finn1317",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Finnic — the classification node this language sits under."
+    }
+  ],
+  "location": {
+    "latitude": 63.0,
+    "longitude": 33.0,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Karelian."
+  }
+}

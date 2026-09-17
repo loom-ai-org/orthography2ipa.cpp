@@ -1,0 +1,119 @@
+{
+ "code": "mam",
+ "name": "Mam",
+ "script": "Latin",
+ "quality": "skeleton",
+ "graphemes": {
+  "a": ["a"],
+  "aa": ["aː"],
+  "e": ["e"],
+  "ee": ["eː"],
+  "i": ["i"],
+  "ii": ["iː"],
+  "o": ["o"],
+  "oo": ["oː"],
+  "u": ["u"],
+  "uu": ["uː"],
+  "b'": ["ɓ"],
+  "ch": ["t̠ʃ"],
+  "ch'": ["t̠ʃʼ"],
+  "j": ["χ"],
+  "k": ["k"],
+  "k'": ["kʼ"],
+  "l": ["l"],
+  "m": ["m"],
+  "n": ["n"],
+  "p": ["p"],
+  "q": ["q"],
+  "q'": ["qʼ"],
+  "s": ["s"],
+  "t": ["t"],
+  "t'": ["tʼ"],
+  "tz": ["ts"],
+  "tz'": ["tsʼ"],
+  "tx": ["ʈʂ"],
+  "tx'": ["ʈʂʼ"],
+  "w": ["w"],
+  "x": ["ʃ"],
+  "xh": ["ʂ"],
+  "y": ["j"],
+  "'": ["ʔ"]
+ },
+ "allophones": {
+  "n": ["n", "ŋ"],
+  "tʼ": ["tʼ", "ɗ"],
+  "ɓ": ["ɓ", "p̰"],
+  "a": ["a", "a̰"],
+  "aː": ["aː", "a̰ː"],
+  "e": ["e", "ḛ"],
+  "eː": ["eː", "ḛː"],
+  "i": ["i", "ḭ"],
+  "iː": ["iː", "ḭː"],
+  "o": ["o", "o̰"],
+  "oː": ["oː", "o̰ː"],
+  "u": ["u", "ṵ"],
+  "uː": ["uː", "ṵː"],
+  "t̠ʃ": ["t̠ʃ"], "t̠ʃʼ": ["t̠ʃʼ"], "χ": ["χ"], "k": ["k"], "kʼ": ["kʼ"],
+  "l": ["l"], "m": ["m"], "p": ["p"], "q": ["q"], "qʼ": ["qʼ"], "s": ["s"],
+  "t": ["t"], "ts": ["ts"], "tsʼ": ["tsʼ"], "ʈʂ": ["ʈʂ"], "ʈʂʼ": ["ʈʂʼ"],
+  "w": ["w"], "ʃ": ["ʃ"], "ʂ": ["ʂ"], "j": ["j"], "ʔ": ["ʔ"]
+ },
+ "notes": "Standard Mam orthography codified by the Academia de Lenguas Mayas de Guatemala (ALMG) and described by England (1983), A Grammar of Mam. Ejective consonants are written with a following apostrophe (⟨k'⟩ /kʼ/, ⟨q'⟩ /qʼ/, ⟨t'⟩ /tʼ/, ⟨ch'⟩ /t̠ʃʼ/, ⟨tz'⟩ /tsʼ/, ⟨tx'⟩ /ʈʂʼ/), each a single glottalized segment, not a plain stop followed by a glottal stop (AGENTS.md test 2, the aspirate/ejective-unit pattern). ⟨b'⟩ is the implosive /ɓ/. ⟨ch⟩, ⟨tz⟩ and ⟨tx⟩ spell the single affricates /t̠ʃ/, /ts/ and /ʈʂ/ (palato-alveolar, alveolar and retroflex respectively; Mam contrasts all three places). ⟨x⟩ and ⟨xh⟩ distinguish the palatal and retroflex fricatives /ʃ/ and /ʂ/. ⟨j⟩ is the uvular fricative /χ/ (not the palatal glide, which is ⟨y⟩ /j/). Vowel length is phonemic and written by doubling the vowel letter. Laryngealized (glottalized/breathy) vowel allophones from the cited PHOIBLE inventory are retained. Mam word stress is regular (typically final) and not marked orthographically; it is left unencoded here as a documented exemption rather than modelled from spelling.",
+ "iso639_3": "mam",
+ "glottolog_code": "mamm1241",
+ "wikidata_qid": "Q642928",
+ "wikipedia": [
+  "https://en.wikipedia.org/wiki/Mam_language"
+ ],
+ "sources": [
+  {
+   "id": "glottolog2024",
+   "author": "Hammarström, Harald; Forkel, Robert; Haspelmath, Martin; Bank, Sebastian",
+   "year": 2024,
+   "title": "Glottolog 5.0",
+   "publisher": "Max Planck Institute for Evolutionary Anthropology",
+   "url": "https://glottolog.org/"
+  },
+  {
+   "id": "phoible2019",
+   "author": "Moran, Steven; McCloy, Daniel (eds.)",
+   "year": 2019,
+   "title": "PHOIBLE 2.0 (doi:10.5281/zenodo.2562766)",
+   "publisher": "Max Planck Institute for the Science of Human History",
+   "url": "https://phoible.org/inventories/view/1128",
+   "notes": "Inventory 1128 (ph), 36 non-marginal segments, 7 marginal excluded."
+  },
+  {
+   "id": "england1983",
+   "author": "England, Nora C.",
+   "year": 1983,
+   "title": "A Grammar of Mam, a Mayan Language",
+   "publisher": "University of Texas Press",
+   "notes": "Reference grammar: phonology, orthography, stress."
+  },
+  {
+   "id": "almg",
+   "author": "Academia de Lenguas Mayas de Guatemala",
+   "year": 1988,
+   "title": "Documento de referencia para la pronunciación de los idiomas Mayas",
+   "publisher": "ALMG",
+   "notes": "Official Mayan-language alphabet standard, including Mam."
+  }
+ ],
+ "urls": [
+  "https://glottolog.org/resource/languoid/id/mamm1241"
+ ],
+ "location": {
+  "latitude": 14.8034,
+  "longitude": -91.7231,
+  "source": "glottolog",
+  "notes": "Glottolog's representative point."
+ },
+ "parent": "x-clade-maya1287",
+ "phonemes": [
+  "c", "cʼ", "j", "k", "kʼ", "l", "m", "n", "p", "q", "qʼ", "s", "t", "ts", "tsʼ", "tʼ",
+  "t̠ʃ", "t̠ʃʼ", "w", "ɓ", "ʂ", "ʃ", "ʈʂ", "ʈʂʼ", "ʔ", "χ",
+  "a", "aː", "e", "eː", "i", "iː", "o", "oː", "u", "uː"
+ ],
+ "phoible_id": "1128"
+}

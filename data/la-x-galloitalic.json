@@ -1,0 +1,230 @@
+{
+  "code": "la-x-galloitalic",
+  "name": "Gallo-Italic Vulgar Latin",
+  "script": "Latin",
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "e": [
+      "e",
+      "ɛ"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "o",
+      "ɔ"
+    ],
+    "u": [
+      "y",
+      "u"
+    ],
+    "b": [
+      "b"
+    ],
+    "c": [
+      "k",
+      "tʃ"
+    ],
+    "d": [
+      "d"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɡ",
+      "dʒ"
+    ],
+    "h": [
+      ""
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s",
+      "z"
+    ],
+    "t": [
+      "t"
+    ],
+    "v": [
+      "v"
+    ]
+  },
+  "allophones": {
+    "p": [
+      "p",
+      "β"
+    ],
+    "b": [
+      "b",
+      "β"
+    ],
+    "t": [
+      "t",
+      "ð"
+    ],
+    "d": [
+      "d",
+      "ð"
+    ],
+    "k": [
+      "k",
+      "ɣ"
+    ],
+    "ɡ": [
+      "ɡ",
+      "ɣ"
+    ],
+    "tʃ": [
+      "tʃ"
+    ],
+    "dʒ": [
+      "dʒ"
+    ],
+    "f": [
+      "f"
+    ],
+    "v": [
+      "v"
+    ],
+    "s": [
+      "s"
+    ],
+    "z": [
+      "z"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n",
+      "ŋ"
+    ],
+    "l": [
+      "l"
+    ],
+    "r": [
+      "r",
+      "ɾ"
+    ],
+    "a": [
+      "a"
+    ],
+    "e": [
+      "e"
+    ],
+    "ɛ": [
+      "ɛ"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "o"
+    ],
+    "ɔ": [
+      "ɔ"
+    ],
+    "u": [
+      "u"
+    ],
+    "y": [
+      "y"
+    ]
+  },
+  "parent": "x-clade-italorom",
+  "ancestors": [
+    {
+      "code": "la-x-italia",
+      "role": "parent",
+      "weight": 0.75,
+      "notes": "Italo-Romance parent: Gallo-Italic is a subgroup geographically, but shares Gallo-Romance innovations."
+    },
+    {
+      "code": "la-x-gallia",
+      "role": "adstrate",
+      "weight": 0.15,
+      "notes": "Gallo-Romance adstrate: shared innovations (/u/->y, degemination, lenition) may be contact-driven or parallel development."
+    },
+    {
+      "code": "cel",
+      "role": "substrate",
+      "weight": 0.08,
+      "notes": "Celtic (Lepontic/Insubric/Cenomani) substrate: Gallia Cisalpina was heavily Celtic."
+    },
+    {
+      "code": "gem",
+      "role": "superstrate",
+      "weight": 0.06,
+      "notes": "Lombardic superstrate (6th-8th c.)."
+    }
+  ],
+  "notes": "Gallo-Italic Vulgar Latin (~3rd-8th c. CE). Spoken Latin of the Po Valley and NW Italy (Gallia Cisalpina). Key innovations: (1) /u/ -> /y/ fronting. (2) Degemination. (3) Stronger lenition. (4) Final vowel loss/reduction. (5) Nasal vowels. The La Spezia-Rimini line marks the boundary. Ancestor of Piedmontese, Lombard, Ligurian, Emilian-Romagnol (Hull 1982, Pellegrini 1975).",
+  "quality": "skeleton",
+  "script_type": "alphabet",
+  "sources": [
+    {
+      "id": "maiden_parry1997",
+      "author": "Maiden, M. & Parry, M. (eds.)",
+      "year": 1997,
+      "title": "The Dialects of Italy",
+      "publisher": "Routledge",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "loporcaro2009",
+      "author": "Loporcaro, M.",
+      "year": 2009,
+      "title": "Profilo linguistico dei dialetti italiani",
+      "publisher": "Laterza",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "weiss2009",
+      "author": "Weiss, M.",
+      "year": 2009,
+      "title": "Outline of the Historical and Comparative Grammar of Latin",
+      "publisher": "Beech Stave Press",
+      "url": null,
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Gallo-Italic_languages"
+  ],
+  "timespan": {
+    "start_year": 500,
+    "end_year": 1100
+  },
+  "glottolog_code": "gall1279",
+  "iso639_3": "lat",
+  "wikidata_qid": "Q516074",
+  "location": {
+    "latitude": 44.318751,
+    "longitude": 9.845129,
+    "source": "glottolog",
+    "notes": "Glottolog's computed centroid for the Gallo-Italian family — a summary of a whole clade's range, not a place anyone speaks."
+  }
+}

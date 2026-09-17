@@ -1,0 +1,70 @@
+{
+  "code": "ajt",
+  "name": "Judeo-Tunisian Arabic",
+  "script": "Hebrew",
+  "script_type": "abjad",
+  "quality": "stub",
+  "graphemes": {},
+  "allophones": {},
+  "parent": "ar-TN",
+  "ancestors": [
+    {
+      "code": "jrb",
+      "role": "related",
+      "weight": 0.3,
+      "notes": "Judeo-Arabic macrolanguage node (ISO 639 jrb): a sociolinguistic/orthographic collective, not genetic descent (see jrb.json notes) -- ajt's single genetic PARENT is ar-TN, matching the engine constraint that every language has at most one PARENT ancestor."
+    },
+    {
+      "code": "ar-TN",
+      "role": "parent",
+      "weight": 0.8,
+      "notes": "Regional descent: Judeo-Tunisian Arabic is fundamentally a Tunisian Arabic dialect, historically written in Hebrew script."
+    },
+    {
+      "code": "he",
+      "role": "adstrate",
+      "weight": 0.15,
+      "notes": "Hebrew liturgical/lexical adstrate, shared with the rest of the Judeo-Arabic continuum (jrb.json)."
+    }
+  ],
+  "notes": "STUB. Judeo-Tunisian Arabic (ISO 639-3 ajt), the variety of Tunisian Arabic spoken and written (in Hebrew script) by Tunisian Jews. Per Wikipedia (Judeo-Tunisian Arabic) it differs phonologically from mainstream Tunisian Arabic in lacking the Banu Hilal/Banu Sulaym Bedouin dialect layer: it merges the glottal stop /ʔ/ and /h/, merges the interdental fricatives /θ ð/ with the dental stops /t d/, merges ḍ and ḍ̣ (ض/ظ) as /dˤ/, and retains the pre-Hilalian diphthongs /aw/ and /ay/ that mainstream (Hilalized) Tunisian Arabic monophthongised. These are real, citable phonological facts, but a complete letter-to-IPA grapheme table requires deciding the exact Hebrew-script orthographic conventions used for Judeo-Tunisian texts, which was not sourced with confidence this session (no JIPA illustration or dedicated phonology paper was fetched); rather than guess a Hebrew-script mapping, this spec is a metadata + notes-only stub. graphemes intentionally empty pending that sourcing pass. ISO STATUS NOTE (verified this session against iso639-3.sil.org): ajt is a RETIRED/deprecated ISO 639-3 code, merged into aeb (Tunisian Arabic) by change request 2021-020, effective 2022-01-20; Wikipedia's Judeo-Tunisian Arabic article confirms 'ajt subsumed in aeb Tunisian Arabic.' It is kept here as the requested language code per the batch spec (matching this repo's file-per-named-variety convention, parallel to how the jrb macrolanguage's member codes are modelled individually) but downstream consumers should be aware SIL/Ethnologue no longer list it as a live code; aeb.json (if present) is the standards-current target.",
+  "iso639_3": "ajt",
+  "glottolog_code": "jude1263",
+  "wikidata_qid": "Q56597",
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Judeo-Tunisian_Arabic"
+  ],
+  "urls": [
+    "https://glottolog.org/resource/languoid/id/jude1263",
+    "https://wikitongues.org/languages/ajt/"
+  ],
+  "sources": [
+    {
+      "id": "judeo_tunisian_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Judeo-Tunisian Arabic",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Judeo-Tunisian_Arabic",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Judeo-Tunisian_Arabic",
+      "pages": null,
+      "notes": "Consulted this session: source of the ʔ/h merger, θ/ð to t/d merger, ḍ/ḍ̣ merger to dˤ, and retention of pre-Hilalian aw/ay diphthongs relative to mainstream Tunisian Arabic; also states 'ajt subsumed in aeb Tunisian Arabic'."
+    },
+    {
+      "id": "iso639_3_ajt",
+      "author": "SIL International",
+      "year": 2026,
+      "title": "ISO 639-3: ajt",
+      "publisher": "iso639-3.sil.org",
+      "url": "https://iso639-3.sil.org/code/ajt",
+      "pages": null,
+      "notes": "Registry confirmation, fetched this session: ajt is deprecated, retired by change request 2021-020 (effective 2022-01-20), merged into aeb (Tunisian Arabic)."
+    }
+  ],
+  "location": {
+    "latitude": 36.8,
+    "longitude": 10.18,
+    "source": "glottolog",
+    "notes": "Tunis, historical centre of Tunisia's Jewish community."
+  }
+}

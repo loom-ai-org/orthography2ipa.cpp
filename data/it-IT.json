@@ -1,0 +1,734 @@
+{
+  "code": "it-IT",
+  "name": "Italian",
+  "script": "Latin",
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "e": [
+      "e",
+      "ɛ"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "o",
+      "ɔ"
+    ],
+    "u": [
+      "u"
+    ],
+    "b": [
+      "b"
+    ],
+    "c": [
+      "k",
+      "tʃ"
+    ],
+    "ch": [
+      "k"
+    ],
+    "d": [
+      "d"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɡ",
+      "dʒ"
+    ],
+    "gh": [
+      "ɡ"
+    ],
+    "h": [
+      ""
+    ],
+    "j": [
+      "j"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "p": [
+      "p"
+    ],
+    "qu": [
+      "kw"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s",
+      "z"
+    ],
+    "t": [
+      "t"
+    ],
+    "v": [
+      "v"
+    ],
+    "w": [
+      "v",
+      "w"
+    ],
+    "x": [
+      "ks"
+    ],
+    "y": [
+      "i",
+      "j"
+    ],
+    "z": [
+      "ts",
+      "dz"
+    ],
+    "ci": [
+      "tʃ",
+      "tʃi"
+    ],
+    "gi": [
+      "dʒ",
+      "dʒi"
+    ],
+    "sc": [
+      "ʃ",
+      "sk"
+    ],
+    "sci": [
+      "ʃ",
+      "ʃi"
+    ],
+    "gl": [
+      "ʎ",
+      "ɡl"
+    ],
+    "gli": [
+      "ʎ",
+      "ʎi"
+    ],
+    "gn": [
+      "ɲ"
+    ],
+    "bb": [
+      "bː"
+    ],
+    "cc": [
+      "kː",
+      "tːʃ"
+    ],
+    "cci": [
+      "tːʃ",
+      "tːʃi"
+    ],
+    "dd": [
+      "dː"
+    ],
+    "ff": [
+      "fː"
+    ],
+    "gg": [
+      "ɡː",
+      "dːʒ"
+    ],
+    "gu": [
+      "ɡw"
+    ],
+    "ggi": [
+      "dːʒ",
+      "dːʒi"
+    ],
+    "ll": [
+      "lː"
+    ],
+    "mm": [
+      "mː"
+    ],
+    "nn": [
+      "nː"
+    ],
+    "pp": [
+      "pː"
+    ],
+    "rr": [
+      "rː"
+    ],
+    "ss": [
+      "sː"
+    ],
+    "tt": [
+      "tː"
+    ],
+    "zz": [
+      "tːs",
+      "dːz"
+    ],
+    "ai": [
+      "aj"
+    ],
+    "ei": [
+      "ej"
+    ],
+    "oi": [
+      "oj"
+    ],
+    "ui": [
+      "uj"
+    ],
+    "au": [
+      "aw"
+    ],
+    "eu": [
+      "ew"
+    ],
+    "ia": [
+      "ja"
+    ],
+    "ie": [
+      "je"
+    ],
+    "io": [
+      "jo"
+    ],
+    "iu": [
+      "ju"
+    ],
+    "ua": [
+      "wa"
+    ],
+    "ue": [
+      "we"
+    ],
+    "uo": [
+      "wo"
+    ],
+    "à": [
+      "a"
+    ],
+    "è": [
+      "ɛ"
+    ],
+    "é": [
+      "e"
+    ],
+    "ì": [
+      "i"
+    ],
+    "ò": [
+      "ɔ"
+    ],
+    "ó": [
+      "o"
+    ],
+    "ù": [
+      "u"
+    ]
+  },
+  "allophones": {
+    "p": [
+      "p"
+    ],
+    "b": [
+      "b"
+    ],
+    "t": [
+      "t",
+      "t̪"
+    ],
+    "d": [
+      "d",
+      "d̪"
+    ],
+    "k": [
+      "k"
+    ],
+    "ɡ": [
+      "ɡ"
+    ],
+    "f": [
+      "f"
+    ],
+    "v": [
+      "v"
+    ],
+    "s": [
+      "s"
+    ],
+    "z": [
+      "z"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "ts": [
+      "ts"
+    ],
+    "dz": [
+      "dz"
+    ],
+    "tʃ": [
+      "tʃ"
+    ],
+    "dʒ": [
+      "dʒ"
+    ],
+    "m": [
+      "m",
+      "ɱ"
+    ],
+    "n": [
+      "n",
+      "m",
+      "ɱ",
+      "ŋ",
+      "ɲ"
+    ],
+    "ɲ": [
+      "ɲ"
+    ],
+    "ŋ": [
+      "ŋ"
+    ],
+    "l": [
+      "l"
+    ],
+    "ʎ": [
+      "ʎ"
+    ],
+    "r": [
+      "r",
+      "ɾ"
+    ],
+    "j": [
+      "j"
+    ],
+    "w": [
+      "w"
+    ],
+    "a": [
+      "a"
+    ],
+    "e": [
+      "e"
+    ],
+    "ɛ": [
+      "ɛ"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "o"
+    ],
+    "ɔ": [
+      "ɔ"
+    ],
+    "u": [
+      "u"
+    ],
+    "bː": [
+      "bː"
+    ],
+    "dː": [
+      "dː"
+    ],
+    "ɡː": [
+      "ɡː"
+    ],
+    "pː": [
+      "pː"
+    ],
+    "tː": [
+      "tː"
+    ],
+    "kː": [
+      "kː"
+    ],
+    "fː": [
+      "fː"
+    ],
+    "sː": [
+      "sː"
+    ],
+    "lː": [
+      "lː"
+    ],
+    "mː": [
+      "mː"
+    ],
+    "nː": [
+      "nː"
+    ],
+    "rː": [
+      "rː"
+    ],
+    "tːʃ": [
+      "tːʃ"
+    ],
+    "dːʒ": [
+      "dːʒ"
+    ],
+    "tːs": [
+      "tːs"
+    ],
+    "dːz": [
+      "dːz"
+    ]
+  },
+  "parent": "x-clade-italorom",
+  "ancestors": [
+    {
+      "code": "la-x-italia",
+      "role": "parent",
+      "weight": 0.85,
+      "notes": "Italo-Romance Vulgar Latin: gemination preserved, 7-vowel system, -s lost, standard based on Tuscan."
+    },
+    {
+      "code": "gem",
+      "role": "superstrate",
+      "weight": 0.05,
+      "notes": "Lombardic superstrate (6th–8th c.): vocabulary (guancia, stinco, schiena), some N. Italian phonological influence."
+    },
+    {
+      "code": "got",
+      "role": "superstrate",
+      "weight": 0.03,
+      "notes": "Ostrogothic superstrate (5th–6th c.): limited phonological impact, some vocabulary."
+    },
+    {
+      "code": "grc",
+      "role": "substrate",
+      "weight": 0.04,
+      "notes": "Greek substrate (Magna Graecia): mainly affects southern dialects; limited in Tuscan standard."
+    }
+  ],
+  "notes": "Standard Italian (based on Florentine/Tuscan). Open/close mid-vowel distinction (e/ɛ, o/ɔ) is lexically determined and varies by region. Gemination is phonemic (fato/fatto). Gorgia toscana (intervocalic stop aspiration) is a regional Tuscan feature, not standard. C/G SOFTENING: c→[tʃ] and g→[dʒ] before e/i (ci, ce, gi, ge); [k]/[ɡ] elsewhere. INTERVOCALIC s: [z] between vowels in standard Italian (N. Italy); [s] word-initially. Z: [dz] word-initially and post-consonantally, [ts] in other positions. SC: [ʃ] before e/i, [sk] elsewhere. GEMINATE SOFTENING: the doubled spellings ⟨cc⟩ and ⟨gg⟩ take whichever value the following vowel selects, so they are [ttʃ] and [ddʒ] before e/i and [kk]/[ɡɡ] elsewhere (leggo [leɡɡo] vs legge [leddʒe]); in the geminate affricate only the stop portion is long (Krämer 2009 §2.2, §7.1; Rogers & d'Arcangeli 2004). ⟨cci⟩/⟨ggi⟩ are the geminate counterparts of ⟨ci⟩/⟨gi⟩ and mute the ⟨i⟩ before a vowel (faccia [fattʃa], maggio [maddʒo]). PRECONSONANTAL s: no voicing contrast is available before a consonant — [z] before every voiced consonant (sbagliare, smettere, snello, slitta, sradicare, svelto, asma), [s] before every voiceless one (spero, stella, sfida) (Bertinetto & Loporcaro 2005; Krämer 2009 §5.3). GU: ⟨gu⟩ before a vowel spells /ɡw/, the voiced counterpart of ⟨qu⟩ (guerra, guida, seguire); before a consonant the ⟨u⟩ is an ordinary vowel (gustare) (Rogers & d'Arcangeli 2004; Krämer 2009 §2.2). CEILINGS (not expressible from the orthography, and left to a downstream lexicon), with the share of residual error each accounts for on the full it/wikipron gold: the open/close mid-vowel choice is lexical and etymological and unmarked in the spelling (58% of residual error); the [ts]/[dz] value of ⟨z⟩ and ⟨zz⟩ is lexical, azzurro [addzurro] against pizza [pittsa] (12%); glide-versus-hiatus for prevocalic ⟨i u⟩ turns on stress and syllabification, Adriana [adriana] against piano [pjano], and Italian stress is not orthographically recoverable beyond the accented subset (13%); the Tuscan/Northern split in intervocalic ⟨s⟩ is varietal, so one spec cannot satisfy both and this one states the Standard Northern [z] (9%). Preconsonantal ⟨s⟩ voicing, by contrast, is pan-Italian and holds in Florence and Rome as well, so the four parent:it-IT central varieties inherit it deliberately (Bertinetto & Loporcaro 2005; Canepari 2009). Raddoppiamento fonosintattico is cross-word and belongs to the sandhi layer. Sources: Lepschy & Lepschy (1988), Maiden (1995), Rogers & d'Arcangeli (2004), Bertinetto & Loporcaro (2005), Krämer (2009), Canepari (2009).",
+  "quality": "research",
+  "script_type": "alphabet",
+  "sources": [
+    {
+      "id": "lepschy_lepschy1988",
+      "author": "Lepschy, A.L. & Lepschy, G.",
+      "year": 1988,
+      "title": "The Italian Language Today",
+      "publisher": "Hutchinson",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "rogers_derosa2004",
+      "author": "Rogers, D. & d'Arcangeli, L.",
+      "year": 2004,
+      "title": "Italian",
+      "publisher": "Journal of the International Phonetic Association",
+      "url": null,
+      "pages": "117-121",
+      "notes": null
+    },
+    {
+      "id": "maiden_parry1997",
+      "author": "Maiden, M. & Parry, M. (eds.)",
+      "year": 1997,
+      "title": "The Dialects of Italy",
+      "publisher": "Routledge",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "kramer2009",
+      "author": "Krämer, M.",
+      "year": 2009,
+      "title": "The Phonology of Italian",
+      "publisher": "Oxford University Press",
+      "url": null,
+      "pages": null,
+      "notes": "Reference phonology of Standard Italian. §2.2 the ⟨c g⟩ softening alternation and ⟨qu gu⟩; §3.2 glides and diphthongs; §5.3 preconsonantal /s/ voicing; §7.1-7.2 gemination and the inherently long intervocalic consonants."
+    },
+    {
+      "id": "bertinetto_loporcaro2005",
+      "author": "Bertinetto, P.M. & Loporcaro, M.",
+      "year": 2005,
+      "title": "The sound pattern of Standard Italian, as compared with the varieties spoken in Florence, Milan and Rome",
+      "publisher": "Journal of the International Phonetic Association",
+      "url": null,
+      "pages": "131-151",
+      "notes": "JIPA 35(2). Illustration of Standard Italian; states the preconsonantal /s/ voicing agreement and documents the Tuscan/Northern split in intervocalic ⟨s⟩."
+    },
+    {
+      "id": "canepari2009",
+      "author": "Canepari, L.",
+      "year": 2009,
+      "title": "Dizionario di pronuncia italiana (DiPI)",
+      "publisher": "Zanichelli",
+      "url": null,
+      "pages": null,
+      "notes": "Pronouncing dictionary; the reference for the lexically determined mid-vowel aperture and the [ts]/[dz] value of ⟨z⟩."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Italian_language",
+    "https://it.wikipedia.org/wiki/Lingua_italiana",
+    "https://en.wikipedia.org/wiki/Italian_phonology",
+    "https://it.wikipedia.org/wiki/Fonologia_della_lingua_italiana"
+  ],
+  "positional_graphemes": {
+    "c": {
+      "before_e": [
+        "tʃ"
+      ],
+      "before_i": [
+        "tʃ"
+      ],
+      "default": [
+        "k"
+      ]
+    },
+    "cc": {
+      "before_e": [
+        "tːʃ"
+      ],
+      "before_i": [
+        "tːʃ"
+      ],
+      "default": [
+        "kː"
+      ]
+    },
+    "g": {
+      "before_e": [
+        "dʒ"
+      ],
+      "before_i": [
+        "dʒ"
+      ],
+      "default": [
+        "ɡ"
+      ]
+    },
+    "gu": {
+      "before_vowel": [
+        "ɡw"
+      ]
+    },
+    "gg": {
+      "before_e": [
+        "dːʒ"
+      ],
+      "before_i": [
+        "dːʒ"
+      ],
+      "default": [
+        "ɡː"
+      ]
+    },
+    "s": {
+      "word_initial": [
+        "s"
+      ],
+      "intervocalic": [
+        "z"
+      ],
+      "default": [
+        "s"
+      ]
+    },
+    "z": {
+      "word_initial": [
+        "dz"
+      ],
+      "after_consonant": [
+        "ts",
+        "dz"
+      ],
+      "default": [
+        "ts"
+      ]
+    },
+    "sc": {
+      "before_e": [
+        "ʃ"
+      ],
+      "before_i": [
+        "ʃ"
+      ],
+      "default": [
+        "sk"
+      ]
+    },
+    "gl": {
+      "before_i": [
+        "ʎ"
+      ],
+      "default": [
+        "ɡl"
+      ]
+    },
+    "ci": {
+      "before_vowel": [
+        "tʃ"
+      ],
+      "default": [
+        "tʃi"
+      ]
+    },
+    "cci": {
+      "before_vowel": [
+        "tːʃ"
+      ],
+      "default": [
+        "tːʃi"
+      ]
+    },
+    "ggi": {
+      "before_vowel": [
+        "dːʒ"
+      ],
+      "default": [
+        "dːʒi"
+      ]
+    },
+    "gi": {
+      "before_vowel": [
+        "dʒ"
+      ],
+      "default": [
+        "dʒi"
+      ]
+    },
+    "sci": {
+      "before_vowel": [
+        "ʃ"
+      ],
+      "default": [
+        "ʃi"
+      ]
+    },
+    "gli": {
+      "before_vowel": [
+        "ʎ"
+      ],
+      "default": [
+        "ʎi"
+      ]
+    }
+  },
+  "timespan": {
+    "start_year": 1300,
+    "end_year": null
+  },
+  "glottolog_code": "ital1282",
+  "iso639_3": "ita",
+  "stress": {
+    "default_position": -2,
+    "final_stress_endings": [],
+    "penult_stress_endings": [],
+    "marked_vowels": [
+      "à",
+      "è",
+      "é",
+      "ì",
+      "ò",
+      "ó",
+      "ù"
+    ],
+    "stress_mark": "ˈ",
+    "notes": "Italian stress: written accents (à è é ì ò ó ù) always mark the stressed syllable and override position rules. Without an accent mark the default is paroxytone (penultimate). Proparoxytones (tavola, àlbero, pàgina) are lexical and undetectable from orthography alone — a written accent is not compulsory on them in standard Italian; they cannot be reliably predicted by rule. This block therefore uses default -2 (paroxytone) and relies on marked_vowels to handle the accented subset. Unaccented antepenultimate stress is not predicted."
+  },
+  "wikidata_qid": "Q652",
+  "phoible_id": "ital1282",
+  "wals_code": "ifi",
+  "location": {
+    "latitude": 43.0464,
+    "longitude": 12.6489,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Italian."
+  },
+  "allophone_rules": [
+    {
+      "id": "IT_INHERENT_GEMINATE_GN",
+      "phonemes": [
+        "ɲ"
+      ],
+      "surface": "ɲɲ",
+      "preceded_by": "vowel",
+      "followed_by": "vowel",
+      "notes": "Intervocalic /ɲ/ is inherently long in Italian (Krämer (2009) The Phonology of Italian (OUP) §7.2; Canepari DiPI): bagno [baɲɲo], aglio [aʎʎo], pesce [peʃʃe], vizio [vittsjo]."
+    },
+    {
+      "id": "IT_INHERENT_GEMINATE_GLI",
+      "phonemes": [
+        "ʎ"
+      ],
+      "surface": "ʎʎ",
+      "preceded_by": "vowel",
+      "followed_by": "vowel",
+      "notes": "Intervocalic /ʎ/ is inherently long in Italian (Krämer (2009) The Phonology of Italian (OUP) §7.2; Canepari DiPI): bagno [baɲɲo], aglio [aʎʎo], pesce [peʃʃe], vizio [vittsjo]."
+    },
+    {
+      "id": "IT_INHERENT_GEMINATE_SC",
+      "phonemes": [
+        "ʃ"
+      ],
+      "surface": "ʃʃ",
+      "preceded_by": "vowel",
+      "followed_by": "vowel",
+      "notes": "Intervocalic /ʃ/ is inherently long in Italian (Krämer (2009) The Phonology of Italian (OUP) §7.2; Canepari DiPI): bagno [baɲɲo], aglio [aʎʎo], pesce [peʃʃe], vizio [vittsjo]."
+    },
+    {
+      "id": "IT_INHERENT_GEMINATE_TS",
+      "phonemes": [
+        "ts"
+      ],
+      "surface": "tts",
+      "preceded_by": "vowel",
+      "followed_by": "vowel",
+      "notes": "Intervocalic /ts/ is inherently long in Italian (Krämer (2009) The Phonology of Italian (OUP) §7.2; Canepari DiPI): bagno [baɲɲo], aglio [aʎʎo], pesce [peʃʃe], vizio [vittsjo]."
+    },
+    {
+      "id": "IT_INHERENT_GEMINATE_DZ",
+      "phonemes": [
+        "dz"
+      ],
+      "surface": "ddz",
+      "preceded_by": "vowel",
+      "followed_by": "vowel",
+      "notes": "Intervocalic /dz/ is inherently long in Italian (Krämer (2009) The Phonology of Italian (OUP) §7.2; Canepari DiPI): bagno [baɲɲo], aglio [aʎʎo], pesce [peʃʃe], vizio [vittsjo]."
+    },
+    {
+      "id": "IT_S_VOICING_BEFORE_VOICED_C",
+      "phonemes": [
+        "s"
+      ],
+      "surface": "z",
+      "followed_by_phoneme": [
+        "b",
+        "d",
+        "ɡ",
+        "v",
+        "m",
+        "n",
+        "ɲ",
+        "l",
+        "ʎ",
+        "r",
+        "dʒ",
+        "dz"
+      ],
+      "notes": "Preconsonantal /s/ agrees in voicing with the following consonant: [z] before any voiced consonant, [s] before any voiceless one, with no contrast available in that position (Bertinetto & Loporcaro (2005) JIPA 35(2) 131-151, 'Consonants'; Krämer (2009) The Phonology of Italian (OUP) §5.3). sbagliare [zbaʎʎare], smettere [zmettere], snello [znɛllo], slitta [zlitta], sradicare [zradikare], svelto [zvɛlto], asma [azma] — against spero [spɛro], stella [stella], sfida [sfida]."
+    }
+  ]
+}

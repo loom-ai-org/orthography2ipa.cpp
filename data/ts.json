@@ -1,0 +1,354 @@
+{
+  "code": "ts",
+  "glottolog_code": "tson1249",
+  "name": "Tsonga (Xitsonga)",
+  "parent": "x-clade-narr1281",
+  "script": "Latin",
+  "quality": "research",
+  "script_type": "alphabet",
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "e": [
+      "ɛ"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "ɔ"
+    ],
+    "u": [
+      "u"
+    ],
+    "b": [
+      "b"
+    ],
+    "bv": [
+      "bv"
+    ],
+    "d": [
+      "d"
+    ],
+    "dl": [
+      "dl"
+    ],
+    "dz": [
+      "dz"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "h": [
+      "h"
+    ],
+    "j": [
+      "dʒ"
+    ],
+    "k": [
+      "k"
+    ],
+    "kh": [
+      "kʰ"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "mb": [
+      "mb"
+    ],
+    "n": [
+      "n"
+    ],
+    "nd": [
+      "nd"
+    ],
+    "ng": [
+      "ŋ"
+    ],
+    "nk": [
+      "ŋk"
+    ],
+    "nts": [
+      "nts"
+    ],
+    "nw": [
+      "nʷ"
+    ],
+    "ny": [
+      "ɲ"
+    ],
+    "p": [
+      "p"
+    ],
+    "ph": [
+      "pʰ"
+    ],
+    "ps": [
+      "ps"
+    ],
+    "r": [
+      "r"
+    ],
+    "rh": [
+      "r̤"
+    ],
+    "s": [
+      "s"
+    ],
+    "sw": [
+      "sw"
+    ],
+    "t": [
+      "t"
+    ],
+    "th": [
+      "tʰ"
+    ],
+    "tl": [
+      "tɬ"
+    ],
+    "ts": [
+      "ts"
+    ],
+    "v": [
+      "v"
+    ],
+    "w": [
+      "w"
+    ],
+    "x": [
+      "ʃ"
+    ],
+    "y": [
+      "j"
+    ],
+    "hl": [
+      "ɬ"
+    ],
+    "ndz": [
+      "ndz"
+    ],
+    "n'w": [
+      "ŋw"
+    ]
+  },
+  "positional_graphemes": {
+    "mb": {
+      "word_initial": [
+        "mb"
+      ]
+    },
+    "nd": {
+      "word_initial": [
+        "nd"
+      ]
+    },
+    "ng": {
+      "word_initial": [
+        "ŋɡ"
+      ],
+      "word_final": [
+        "ŋ"
+      ]
+    },
+    "nk": {
+      "word_initial": [
+        "ŋk"
+      ]
+    },
+    "m": {
+      "word_initial": [
+        "m",
+        "m̩"
+      ]
+    },
+    "n": {
+      "word_initial": [
+        "n",
+        "n̩"
+      ]
+    },
+    "k": {
+      "word_final": [
+        "k"
+      ]
+    },
+    "t": {
+      "word_final": [
+        "t"
+      ]
+    },
+    "p": {
+      "word_final": [
+        "p"
+      ]
+    },
+    "a": {
+      "word_final": [
+        "a"
+      ]
+    },
+    "i": {
+      "word_final": [
+        "i"
+      ]
+    },
+    "u": {
+      "word_final": [
+        "u"
+      ]
+    }
+  },
+  "allophones": {
+    "a": [
+      "a"
+    ],
+    "ɛ": [
+      "ɛ"
+    ],
+    "i": [
+      "i"
+    ],
+    "ɔ": [
+      "ɔ"
+    ],
+    "u": [
+      "u"
+    ],
+    "b": [
+      "b"
+    ],
+    "d": [
+      "d"
+    ],
+    "f": [
+      "f"
+    ],
+    "ɡ": [
+      "ɡ"
+    ],
+    "h": [
+      "h"
+    ],
+    "dʒ": [
+      "dʒ"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ŋ": [
+      "ŋ"
+    ],
+    "ɲ": [
+      "ɲ"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "r"
+    ],
+    "r̤": [
+      "r̤"
+    ],
+    "s": [
+      "s"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "t": [
+      "t"
+    ],
+    "tɬ": [
+      "tɬ"
+    ],
+    "ts": [
+      "ts"
+    ],
+    "v": [
+      "v"
+    ],
+    "w": [
+      "w"
+    ],
+    "j": [
+      "j"
+    ],
+    "ɬ": [
+      "ɬ"
+    ]
+  },
+  "notes": "Tsonga (Xitsonga). Bantu language spoken in southern Mozambique, Limpopo and Mpumalanga (South Africa), Zimbabwe, and Eswatini. ~7 million speakers; official language of South Africa. KEY FEATURES: (1) FIVE-VOWEL SYSTEM: a/e/i/o/u; e=[ɛ], o=[ɔ]. (2) PRENASALIZED STOPS: mb/nd — phonemic word-initial sequences. (3) BREATHY RHOTIC: <rh> = [r̤] (breathy-voiced trill), contrastive with plain <r> = [r]. (4) LATERAL AFFRICATE: tl=[tɬ] (lateral affricate), phonemic. (5) LABIODENTAL AFFRICATE: bv=[bv], phonemic. (6) SIBILANT COMPLEX: x/xi=[ʃ], ts=[ts], dz=[dz]. (7) ASPIRATED STOPS: kh/ph/th = [kʰ/pʰ/tʰ], phonemic. (8) TONES: two-tone system (H/L), not marked in orthography. (9) SYLLABIC NASALS: m-/n- noun prefixes syllabic before consonants. Sources: Baumbach (1987) is the primary descriptive grammar.",
+  "sources": [
+    {
+      "id": "cuenod1967",
+      "author": "Cuenod, R.",
+      "year": 1967,
+      "title": "Tsonga-English Dictionary",
+      "publisher": "Swiss Mission",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "baumbach1987",
+      "author": "Baumbach, E.J.M.",
+      "year": 1987,
+      "title": "Analytical Tsonga Grammar",
+      "publisher": "University of South Africa",
+      "url": null,
+      "pages": null,
+      "notes": "Definitive descriptive grammar of Xitsonga"
+    },
+    {
+      "id": "louwrens1994",
+      "author": "Louwrens, L.J.",
+      "year": 1994,
+      "title": "Dictionary of Northern Sotho Grammatical Terms",
+      "publisher": "Via Afrika",
+      "url": null,
+      "pages": null,
+      "notes": "Comparative Sotho-Tsonga reference"
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Tsonga_language",
+    "https://ts.wikipedia.org/wiki/Xitsonga"
+  ],
+  "urls": [
+    "https://en.wikipedia.org/wiki/Tsonga_language",
+    "https://glottolog.org/resource/languoid/id/tson1249",
+    "https://www.ethnologue.com/language/tso/"
+  ],
+  "timespan": {
+    "start_year": 1800,
+    "end_year": null
+  },
+  "iso639_3": "tso",
+  "wikidata_qid": "Q34327",
+  "wals_code": "tsn",
+  "location": {
+    "latitude": -23.5754,
+    "longitude": 31.8105,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Tsonga."
+  }
+}

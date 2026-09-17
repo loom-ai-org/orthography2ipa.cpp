@@ -1,0 +1,94 @@
+{
+  "code": "es-GQ",
+  "name": "Equatoguinean Spanish",
+  "script": "Latin",
+  "graphemes_base": "es-ES",
+  "graphemes": {
+    "c": [
+      "k",
+      "s"
+    ],
+    "z": [
+      "s"
+    ],
+    "ll": [
+      "ʝ"
+    ]
+  },
+  "allophones_base": "es-ES",
+  "allophones": {
+    "x": [
+      "x"
+    ],
+    "ʝ": [
+      "ʝ",
+      "ɟʝ"
+    ],
+    "n": [
+      "n"
+    ],
+    "ɾ": [
+      "ɾ",
+      "r"
+    ],
+    "r": [
+      "r",
+      "ɾ"
+    ]
+  },
+  "positional_graphemes_base": "es-ES",
+  "parent": "es-ES",
+  "notes": "Equatoguinean Spanish. Only Spanish-speaking country in sub-Saharan Africa. Bantu substrate (Fang, Bubi): possible prenasalisation, weakened /ɾ/-/r/ distinction. Seseo, yeísmo. Conservative in many features. Tonal influence from substrate languages (suprasegmental, not captured here).",
+  "quality": "skeleton",
+  "script_type": "alphabet",
+  "sources": [
+    {
+      "id": "hualde2005",
+      "author": "Hualde, J.I.",
+      "year": 2005,
+      "title": "The Sounds of Spanish",
+      "publisher": "Cambridge University Press",
+      "url": null,
+      "pages": null,
+      "notes": null,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Spanish_phonology"
+    },
+    {
+      "id": "quilis1993",
+      "author": "Quilis, A.",
+      "year": 1993,
+      "title": "Tratado de fonología y fonética españolas",
+      "publisher": "Gredos",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "penny2002",
+      "author": "Penny, R.",
+      "year": 2002,
+      "title": "A History of the Spanish Language",
+      "publisher": "Cambridge University Press",
+      "url": null,
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Equatorial_Guinea",
+    "https://es.wikipedia.org/wiki/Espa%C3%B1ol_ecuatoguineano",
+    "https://en.wikipedia.org/wiki/Equatoguinean_Spanish"
+  ],
+  "timespan": {
+    "start_year": 1900,
+    "end_year": null
+  },
+  "glottolog_code": null,
+  "iso639_3": "spa",
+  "location": {
+    "latitude": 3.752064,
+    "longitude": 8.7737,
+    "source": "wikidata",
+    "notes": "Malabo. A national L2 variety: the capital stands in for the country, and the point ignores the mainland/island split. Weak. [Wikidata Q3818 P625]"
+  }
+}

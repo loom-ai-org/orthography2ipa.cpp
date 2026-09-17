@@ -1,0 +1,262 @@
+{
+  "code": "peo",
+  "name": "Old Persian",
+  "script": "Latin",
+  "graphemes": {
+    "p": [
+      "p"
+    ],
+    "b": [
+      "b"
+    ],
+    "t": [
+      "t"
+    ],
+    "d": [
+      "d"
+    ],
+    "k": [
+      "k"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "f": [
+      "f"
+    ],
+    "θ": [
+      "θ"
+    ],
+    "x": [
+      "x"
+    ],
+    "v": [
+      "v"
+    ],
+    "h": [
+      "h"
+    ],
+    "s": [
+      "s"
+    ],
+    "z": [
+      "z"
+    ],
+    "š": [
+      "ʃ"
+    ],
+    "č": [
+      "tʃ"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "r": [
+      "r"
+    ],
+    "l": [
+      "l"
+    ],
+    "y": [
+      "j"
+    ],
+    "a": [
+      "a"
+    ],
+    "ā": [
+      "aː"
+    ],
+    "i": [
+      "i"
+    ],
+    "ī": [
+      "iː"
+    ],
+    "u": [
+      "u"
+    ],
+    "ū": [
+      "uː"
+    ],
+    "ai": [
+      "aj",
+      "eː"
+    ],
+    "au": [
+      "aw",
+      "oː"
+    ],
+    "ç": [
+      "ç"
+    ],
+    "j": [
+      "dʒ"
+    ]
+  },
+  "allophones": {
+    "p": [
+      "p",
+      "f"
+    ],
+    "b": [
+      "b"
+    ],
+    "t": [
+      "t",
+      "θ"
+    ],
+    "d": [
+      "d"
+    ],
+    "k": [
+      "k",
+      "x"
+    ],
+    "ɡ": [
+      "ɡ"
+    ],
+    "f": [
+      "f"
+    ],
+    "θ": [
+      "θ"
+    ],
+    "x": [
+      "x"
+    ],
+    "v": [
+      "v",
+      "w"
+    ],
+    "h": [
+      "h"
+    ],
+    "s": [
+      "s"
+    ],
+    "z": [
+      "z"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "tʃ": [
+      "tʃ"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n",
+      "ŋ"
+    ],
+    "r": [
+      "r"
+    ],
+    "l": [
+      "l"
+    ],
+    "j": [
+      "j"
+    ],
+    "a": [
+      "a"
+    ],
+    "aː": [
+      "aː"
+    ],
+    "i": [
+      "i"
+    ],
+    "iː": [
+      "iː"
+    ],
+    "u": [
+      "u"
+    ],
+    "uː": [
+      "uː"
+    ],
+    "aj": [
+      "aj",
+      "eː"
+    ],
+    "aw": [
+      "aw",
+      "oː"
+    ],
+    "ç": [
+      "ç"
+    ],
+    "dʒ": [
+      "dʒ"
+    ],
+    "ʒ": [
+      "ʒ"
+    ]
+  },
+  "parent": "ira",
+  "ancestors": [
+    {
+      "code": "ira",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Descent from Proto-Iranian"
+    }
+  ],
+  "notes": "Old Persian (~600–400 BCE). Attested in ~500 cuneiform inscriptions of the Achaemenid Empire (Darius I, Xerxes I, Artaxerxes I). Directly ancestral to Middle Persian and all modern Persian dialects. THREE-STOP + SPIRANT SERIES: p/b/f, t/d/θ, k/g/x. Diphthongs *ai, *au still present (monophthongisation beginning). Script: Old Persian cuneiform (syllabic — imprecise for consonants). ISO 639-2: peo. Primary sources: DNa, DNb, XPh inscriptions. References: Schmitt (2014), Kent (1953).",
+  "quality": "research",
+  "script_type": "alphabet",
+  "iso639_3": "peo",
+  "sources": [
+    {
+      "id": "kent1953",
+      "author": "Kent, R.G.",
+      "year": 1953,
+      "title": "Old Persian: Grammar, Texts, Lexicon (2nd ed.)",
+      "publisher": "American Oriental Society",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "windfuhr1979",
+      "author": "Windfuhr, G.",
+      "year": 1979,
+      "title": "Persian Grammar: History and State of Its Study",
+      "publisher": "Mouton",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "fortson2010",
+      "author": "Fortson, B.W.",
+      "year": 2010,
+      "title": "Indo-European Language and Culture: An Introduction",
+      "publisher": "Blackwell",
+      "url": null,
+      "pages": null,
+      "notes": null,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Indo-European_languages"
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Old_Persian"
+  ],
+  "timespan": {
+    "start_year": -550,
+    "end_year": -330
+  },
+  "glottolog_code": "oldp1254",
+  "wikidata_qid": "Q35225",
+  "location": {
+    "latitude": 32.0,
+    "longitude": 54.0,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Old Persian (ca. 600-400 B.C.)."
+  }
+}

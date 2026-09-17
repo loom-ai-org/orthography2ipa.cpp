@@ -1,0 +1,422 @@
+{
+  "code": "ar-x-levantine",
+  "name": "Proto-Levantine Arabic",
+  "script": "Arabic",
+  "graphemes_base": "ar-x-mashriqi",
+  "allophones_base": "ar-x-mashriqi",
+  "positional_graphemes_base": "ar-x-mashriqi",
+  "graphemes": {
+    "وَيْ": [
+      "weː"
+    ],
+    "يَوْ": [
+      "joː"
+    ],
+    "ق": [
+      "ʔ",
+      "ɡ",
+      "k",
+      "q"
+    ],
+    "ج": [
+      "ʒ",
+      "dʒ"
+    ],
+    "ث": [
+      "t",
+      "s",
+      "θ"
+    ],
+    "ذ": [
+      "d",
+      "z",
+      "ð"
+    ],
+    "ظ": [
+      "dˤ",
+      "zˤ",
+      "ðˤ"
+    ],
+    "ض": [
+      "dˤ"
+    ],
+    "ك": [
+      "k",
+      "tʃ"
+    ],
+    "الثث": [
+      "att",
+      "ass",
+      "aθθ"
+    ],
+    "اَلثث": [
+      "att",
+      "ass",
+      "aθθ"
+    ],
+    "لِلثث": [
+      "litt",
+      "liss",
+      "liθθ"
+    ],
+    "وَالثث": [
+      "watt",
+      "wass",
+      "waθθ"
+    ],
+    "فَالثث": [
+      "fatt",
+      "fass",
+      "faθθ"
+    ],
+    "بِالثث": [
+      "bitt",
+      "biss",
+      "biθθ"
+    ],
+    "كَالثث": [
+      "katt",
+      "kass",
+      "kaθθ"
+    ],
+    "الذذ": [
+      "add",
+      "azz",
+      "aðð"
+    ],
+    "اَلذذ": [
+      "add",
+      "azz",
+      "aðð"
+    ],
+    "لِلذذ": [
+      "lidd",
+      "lizz",
+      "liðð"
+    ],
+    "وَالذذ": [
+      "wadd",
+      "wazz",
+      "waðð"
+    ],
+    "فَالذذ": [
+      "fadd",
+      "fazz",
+      "faðð"
+    ],
+    "بِالذذ": [
+      "bidd",
+      "bizz",
+      "biðð"
+    ],
+    "كَالذذ": [
+      "kadd",
+      "kazz",
+      "kaðð"
+    ],
+    "الظظ": [
+      "adˤdˤ",
+      "azˤzˤ",
+      "aðˤðˤ"
+    ],
+    "اَلظظ": [
+      "adˤdˤ",
+      "azˤzˤ",
+      "aðˤðˤ"
+    ],
+    "لِلظظ": [
+      "lidˤdˤ",
+      "lizˤzˤ",
+      "liðˤðˤ"
+    ],
+    "وَالظظ": [
+      "wadˤdˤ",
+      "wazˤzˤ",
+      "waðˤðˤ"
+    ],
+    "فَالظظ": [
+      "fadˤdˤ",
+      "fazˤzˤ",
+      "faðˤðˤ"
+    ],
+    "بِالظظ": [
+      "bidˤdˤ",
+      "bizˤzˤ",
+      "biðˤðˤ"
+    ],
+    "كَالظظ": [
+      "kadˤdˤ",
+      "kazˤzˤ",
+      "kaðˤðˤ"
+    ],
+    "ِة": [
+      "e"
+    ],
+    "يِة": [
+      "je"
+    ],
+    "اِلثث": [
+      "itt",
+      "iss",
+      "iθθ"
+    ],
+    "اِلذذ": [
+      "idd",
+      "izz",
+      "iðð"
+    ],
+    "اِلظظ": [
+      "idˤdˤ",
+      "izˤzˤ",
+      "iðˤðˤ"
+    ],
+    "وِالثث": [
+      "witt",
+      "wiss",
+      "wiθθ"
+    ],
+    "وِالذذ": [
+      "widd",
+      "wizz",
+      "wiðð"
+    ],
+    "وِالظظ": [
+      "widˤdˤ",
+      "wizˤzˤ",
+      "wiðˤðˤ"
+    ]
+  },
+  "allophones": {
+    "q": [
+      "ʔ",
+      "ɡ",
+      "k",
+      "q"
+    ],
+    "dʒ": [
+      "ʒ",
+      "dʒ"
+    ],
+    "θ": [
+      "t",
+      "s",
+      "θ"
+    ],
+    "ð": [
+      "d",
+      "z",
+      "ð"
+    ],
+    "ðˤ": [
+      "dˤ",
+      "zˤ",
+      "ðˤ"
+    ],
+    "ɮˤ": [
+      "dˤ"
+    ],
+    "k": [
+      "k",
+      "tʃ"
+    ],
+    "aː": [
+      "aː",
+      "eː"
+    ]
+  },
+  "parent": "ar-x-mashriqi",
+  "ancestors": [
+    {
+      "code": "ar-x-mashriqi",
+      "role": "parent",
+      "weight": 0.9,
+      "notes": "Eastern (Mashriqi) Arabic base"
+    }
+  ],
+  "notes": "Proto-Levantine Arabic (شامي) — abstract ancestor node for Syrian (Damascene), Lebanese (Beiruti), Jordanian (Ammani) and Palestinian Arabic. INPUT CONTRACT: like ar, assumes fully-diacritized (tashkeel-marked) Arabic; short vowels surface only when written. SHARED SEDENTARY URBAN FEATURES modelled here (inherited by all four cities): (1) ق qaf → /ʔ/ in the prestige urban koines (Damascus, Beirut, Jerusalem, urban Amman); /ɡ/ in Bedouin/Ḥōrāni and much rural speech, /k/ in central rural Palestinian — the four qaf reflexes are the classic Levantine variable (Fadda 2016:28, citing Al-Wer & Herin 2011:60: 'gilit' [g], 'qeltu' [q], [ʔ]-dialects e.g. Jerusalem, [k]-dialects e.g. rural West Bank). (2) ج jim → /ʒ/ (urban) ~ /dʒ/ (Bedouin/rural). (3) Interdentals /θ ð ðˤ/ merge to stops [t d dˤ] in the urban koines (Cotter 2016:150-154 for Gaza/Palestine, Bergsträßer 1915 & Palva 1984:361-62; Fadda 2016:27-28 for the Ammani koine), conserved by rural/Bedouin/Druze speakers (variants kept in the inventory). (4) Diphthong monophthongization /aj aw/ → [eː oː] (Almbark & Hellmuth 2015 §1.1; Fadda 2016:30). (5) Emphasis spreading backs /a aː/ → [ɑ ɑː] adjacent to emphatics (Watson 2002). The urban Levantine vowel system is five long /iː eː aː oː uː/ over three contrastive short /i a u/, with [e o ə] analysed as allophones of /i u/ (Almbark & Hellmuth 2015, conclusions §4). Per-city deltas (Lebanese strong imāla, Ammani qaf reallocation, Palestinian kaf-shift) live on the individual specs. TOKENIZATION NOTE (word-initial diphthong digraphs): the monophthongization allophone_rules AR_LEV_MONO_AY/AW rewrite the /aj//aw/ ATOMS that the ⟨َي⟩/⟨َو⟩ digraphs emit, but word-initially the onset digraphs يَ→/ja/ and وَ→/wa/ claim the fatha before an /aj//aw/ atom can form, so ⟨وَيْ⟩ came out *[waj] (وَيْن *wajn) and ⟨يَوْ⟩ *[jaw]. The two sequences are therefore spelled out in `graphemes` as وَيْ→[weː] (وَيْن → weːn 'where', Cowell 1964; the monophthong /eː/ from /aj/ per Almbark & Hellmuth 2015 §1.1) and يَوْ→[joː] (يَوْم → joːm 'day') — the same monophthongization reached from the spelling instead of from the atom, the device already used on ar-SY and on the Hejazi/Qassimi specs for their identical seam. The explicit sukūn in both keys keeps حَيَوان /ħajawaːn/ and يَوَدّ /jawadd/ — where the glide carries its own vowel and there is no diphthong — out of the rule; the leaf specs (ar-LB, ar-JO, ar-PS) inherit these keys via graphemes_base.",
+  "quality": "research",
+  "script_type": "abjad",
+  "sources": [
+    {
+      "id": "almbark2015",
+      "author": "Almbark, R. & Hellmuth, S.",
+      "year": 2015,
+      "title": "Acoustic analysis of the Syrian Arabic vowel system",
+      "publisher": "Proceedings of ICPhS 2015 (paper 0612), Glasgow",
+      "url": "https://www.internationalphoneticassociation.org/icphs-proceedings/ICPhS2015/Papers/ICPHS0612.pdf",
+      "pages": "1-4",
+      "notes": "READ in full. Damascus/Syrian vowel system: five long /iː eː aː oː uː/, three short contrastive /i a u/; mid short [e o] and schwa are allophones of /i u/ (§3-4). Mid-long /eː oː/ from /aj aw/ coalescence (§1.1). /aː/ higher/fronter in Coastal Syria than Damascus (p.2)."
+    },
+    {
+      "id": "cotter2016",
+      "author": "Cotter, W.M.",
+      "year": 2016,
+      "title": "One Piece of the Puzzle: Notes on the Historic Interdental Fricatives /θ, ð, ðˤ/ in the Arabic Dialect of Gaza City",
+      "publisher": "Journal of Arabic and Islamic Studies 16",
+      "url": "https://www.lancaster.ac.uk/jais/volume/docs/vol16/v16_05_cotter_149-162.pdf",
+      "pages": "149-162",
+      "notes": "READ in full. Urban Palestinian interdentals → stops [t d dˤ] (Bergsträßer 1915 Map 1; Palva 1984:361-62). Gaza City indigenous qaf → [ɡ] (Bedouin, Cotter 2016); historically [ʔ] (Bergsträßer). Amman qaf variable [ɡ]~[ʔ] (Al-Wer 2007:66-68, cited p.152)."
+    },
+    {
+      "id": "fadda2016",
+      "author": "Fadda, H.",
+      "year": 2016,
+      "title": "Language Variation in Western Amman",
+      "publisher": "MA thesis, Canada Institute of Linguistics (CanIL)",
+      "url": "https://www.canil.ca/wordpress/wp-content/uploads/2019/11/Fadda-Language-Variation-in-Western-Amman.pdf",
+      "pages": "27-30",
+      "notes": "READ (phonology chapter). Ammani koine consonants = urban Palestinian [ʔ t d dˤ ʒ], 'identical to other Levantine cities' (pp.27-28). Qaf labels (Al-Wer & Herin 2011:60): [g] gilit, [q] qeltu, [ʔ] Jerusalem, [k] rural West Bank. Vowels: short /i u a/, long /iː uː eː oː aː/ (Al-Wer 2011:4). Diphthongs /aj aw/→[eː oː] except before glide: bajt→beːt, sˤawt→sˤoːtˤ (p.30)."
+    },
+    {
+      "id": "alwer2020",
+      "author": "Al-Wer, E.",
+      "year": 2020,
+      "title": "New-dialect formation: The Amman dialect",
+      "publisher": "In: Lucas & Manfredi (eds.), Arabic and contact-induced change, 551-566. Berlin: Language Science Press",
+      "url": "https://langsci-press.org/catalog/book/235",
+      "pages": "551-566",
+      "notes": "READ in full. Amman koine: (q) is a socially reallocated variable, [ɡ] (Jordanian) ~ [ʔ] (urban Palestinian); gen-III women use [ʔ] consistently, men both (p.560). (ǧ) jim: [dʒ]~[ʒ], women [ʒ] (p.560). Interdentals: both genders favour stop variants (p.560)."
+    },
+    {
+      "id": "cowell1964",
+      "author": "Cowell, M.W.",
+      "year": 1964,
+      "title": "A Reference Grammar of Syrian Arabic (Based on the Dialect of Damascus)",
+      "publisher": "Georgetown University Press",
+      "url": "https://archive.org/details/referencegrammar0000cowe",
+      "pages": null,
+      "notes": "Standard Damascus grammar. Primary text NOT obtained (Internet Archive borrow-only, no full text); its Damascene vowel classification (5 long / 5 short + schwa) is cited here only as reported and tested by Almbark & Hellmuth 2015 §1.3."
+    },
+    {
+      "id": "watson2002",
+      "author": "Watson, J.C.E.",
+      "year": 2002,
+      "title": "The Phonology and Morphology of Arabic",
+      "publisher": "Oxford University Press",
+      "url": null,
+      "pages": null,
+      "notes": "Emphasis (pharyngealization) spreading onto neighbouring low vowels. Not obtained in full; cited for the widely-described emphasis-spreading process."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Levantine_Arabic",
+    "https://en.wikipedia.org/wiki/Levantine_Arabic_phonology",
+    "https://ar.wikipedia.org/wiki/%D9%84%D9%87%D8%AC%D8%A7%D8%AA_%D8%B4%D8%A7%D9%85%D9%8A%D8%A9"
+  ],
+  "timespan": {
+    "start_year": 1400,
+    "end_year": null
+  },
+  "glottolog_code": "nort3139",
+  "iso639_3": "apc",
+  "allophone_rules": [
+    {
+      "id": "AR_LEV_MONO_AY",
+      "phonemes": [
+        "aj"
+      ],
+      "surface": "eː",
+      "notes": "Urban Levantine monophthongization of the Classical diphthong /aj/ → [eː]. Almbark & Hellmuth 2015 (ICPhS 0612) §1.1: SA mid-long /eː/ arises 'as a result of coalescence of vowel-glide sequences ... such as bajt~beːt \"home\"'; Fadda 2016:30 (Ammani) bajt → beːt 'house'."
+    },
+    {
+      "id": "AR_LEV_MONO_AW",
+      "phonemes": [
+        "aw"
+      ],
+      "surface": "oː",
+      "notes": "Urban Levantine monophthongization of the Classical diphthong /aw/ → [oː]. Almbark & Hellmuth 2015 §1.1 (nawm~noːm 'sleeping'); Fadda 2016:30 (Ammani) sˤawt → sˤoːtˤ 'sound'. Diphthongs are retained only before a glide (Fadda 2016:30)."
+    },
+    {
+      "id": "AR_LEV_EMPH_BACK_A_AFTER",
+      "phonemes": [
+        "a"
+      ],
+      "surface": "ɑ",
+      "preceded_by_phoneme": [
+        "tˤ",
+        "dˤ",
+        "sˤ",
+        "ðˤ",
+        "zˤ"
+      ],
+      "notes": "Emphasis (pharyngealization) spreading: short /a/ backs to [ɑ] after an adjacent emphatic /tˤ dˤ sˤ ðˤ (zˤ)/. Watson 2002 (emphasis chapter); Almbark & Hellmuth 2015 §1 note the strong effect of pharyngealised consonants on neighbouring vowels."
+    },
+    {
+      "id": "AR_LEV_EMPH_BACK_A_BEFORE",
+      "phonemes": [
+        "a"
+      ],
+      "surface": "ɑ",
+      "followed_by_phoneme": [
+        "tˤ",
+        "dˤ",
+        "sˤ",
+        "ðˤ",
+        "zˤ"
+      ],
+      "notes": "Emphasis spreading (leftward): short /a/ backs to [ɑ] before an adjacent emphatic. Watson 2002."
+    },
+    {
+      "id": "AR_LEV_EMPH_BACK_AA_AFTER",
+      "phonemes": [
+        "aː"
+      ],
+      "surface": "ɑː",
+      "preceded_by_phoneme": [
+        "tˤ",
+        "dˤ",
+        "sˤ",
+        "ðˤ",
+        "zˤ"
+      ],
+      "notes": "Emphasis spreading: long /aː/ backs to [ɑː] after an adjacent emphatic. Watson 2002. Ordered before the Lebanese imāla rule so an emphatic /aː/ correctly stays back rather than raising."
+    },
+    {
+      "id": "AR_LEV_EMPH_BACK_AA_BEFORE",
+      "phonemes": [
+        "aː"
+      ],
+      "surface": "ɑː",
+      "followed_by_phoneme": [
+        "tˤ",
+        "dˤ",
+        "sˤ",
+        "ðˤ",
+        "zˤ"
+      ],
+      "notes": "Emphasis spreading (leftward): long /aː/ backs to [ɑː] before an adjacent emphatic. Watson 2002."
+    }
+  ],
+  "wikidata_qid": "Q56593",
+  "location": {
+    "latitude": 34.1709,
+    "longitude": 36.0468,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Levantine Arabic."
+  },
+  "optional_marks": [
+    "ً",
+    "ٌ",
+    "ٍ",
+    "َ",
+    "ُ",
+    "ِ",
+    "ّ",
+    "ْ",
+    "ٰ",
+    "ٓ"
+  ],
+  "stress": {
+    "default_position": -3,
+    "quantity_sensitive": true,
+    "superheavy_final_attracts": true,
+    "max_onset": 1,
+    "stress_mark": "ˈ",
+    "notes": "Arabic stress is QUANTITY-SENSITIVE: it falls on a syllable because that syllable is heavy, not because of any orthographic ending, so no ending table can express it. The cascade (Ryding, A Reference Grammar of MSA, CUP 2005, §2.3; Watson, The Phonology and Morphology of Arabic, OUP 2002, ch.3): a superheavy final syllable (CVːC/CVCC) takes the stress (kiˈtaːb); otherwise a heavy penult (CVː/CVC) does (muˈdarris); otherwise the antepenult (ˈmadrasa). max_onset=1 because Arabic onsets are obligatory and hold exactly one consonant — a medial cluster splits, closing the preceding syllable, and that boundary is what makes the penult of mudarris heavy. INPUT CONTRACT: weight is only recoverable from a complete transcription, so this requires diacritized input; an undiacritized skeleton has no vowels to weigh. The registered wikipron gold carries no stress marks, but the benchmark strips stress from both sides by default, so this costs no PER. Prosodic clitics: monosyllabic function words (negator maː, prepositions fiː/min/ʕan/ʕa/li/bi, vocative jaː, copula-negator muː/miʃ, conditional law/loː, wa-proclitic combinations) attach to a host and fall inside the host's stress domain, so they carry no word stress (Watson 2002, The Phonology and Morphology of Arabic, OUP, ch.3). Pan-Arabic class; the per-lect form list reflects the function words attested in this lect. Orthographic test — a clitic homograph (e.g. verb yā 'came') is destressed in every occurrence.",
+    "cliticless_words": [
+      "عَ",
+      "مَا",
+      "مُو"
+    ]
+  }
+}

@@ -1,0 +1,82 @@
+{
+ "code": "trg",
+ "name": "Lishán Didán",
+ "script": "Zyyy",
+ "quality": "stub",
+ "graphemes": {},
+ "allophones": {},
+ "notes": "REGISTRY STUB (not a modelled G2P target). Placed so the ancestry graph covers every living ISO 639-3 language. No orthography is claimed; the phoneme inventory follows the cited PHOIBLE inventory (which itself cites a published description): script is Zyyy (undetermined) until a cited description is encoded. Classification and coordinates follow Glottolog.",
+ "iso639_3": "trg",
+ "glottolog_code": "lish1246",
+ "sources": [
+  {
+   "id": "glottolog2024",
+   "author": "Hammarström, Harald; Forkel, Robert; Haspelmath, Martin; Bank, Sebastian",
+   "year": 2024,
+   "title": "Glottolog 5.0",
+   "publisher": "Max Planck Institute for Evolutionary Anthropology",
+   "url": "https://glottolog.org/"
+  },
+  {
+   "id": "phoible2019",
+   "author": "Moran, Steven; McCloy, Daniel (eds.)",
+   "year": 2019,
+   "title": "PHOIBLE 2.0 (doi:10.5281/zenodo.2562766)",
+   "publisher": "Max Planck Institute for the Science of Human History",
+   "url": "https://phoible.org/inventories/view/591",
+   "notes": "Inventory 591 (upsid), 39 non-marginal segments, 1 marginal excluded."
+  }
+ ],
+ "urls": [
+  "https://glottolog.org/resource/languoid/id/lish1246"
+ ],
+ "location": {
+  "latitude": 36.23,
+  "longitude": 44.37,
+  "source": "glottolog",
+  "notes": "Glottolog's representative point."
+ },
+ "parent": "x-clade-afro1255",
+ "phonemes": [
+  "b",
+  "d̠ʒ",
+  "d̪",
+  "f",
+  "h",
+  "j",
+  "k",
+  "l",
+  "m",
+  "n̪",
+  "p",
+  "q",
+  "s",
+  "t̠ʃ",
+  "t̪",
+  "z",
+  "ɡ",
+  "ɾ",
+  "ʁ",
+  "ʃ",
+  "ʒ",
+  "β",
+  "χ",
+  "a",
+  "aː",
+  "aˤ",
+  "aˤː",
+  "e̞",
+  "e̞ˤ",
+  "i",
+  "iː",
+  "iˤ",
+  "iˤː",
+  "o̞",
+  "o̞ˤ",
+  "u",
+  "uː",
+  "uˤ",
+  "uˤː"
+ ],
+ "phoible_id": "591"
+}

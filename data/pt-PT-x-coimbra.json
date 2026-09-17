@@ -1,0 +1,146 @@
+{
+  "code": "pt-PT-x-coimbra",
+  "name": "Conimbricense Portuguese",
+  "script": "Latin",
+  "graphemes_base": "pt-PT",
+  "graphemes": {},
+  "allophones_base": "pt-PT",
+  "allophones": {},
+  "positional_graphemes_base": "pt-PT",
+  "parent": "pt-PT",
+  "sandhi_rules": [
+    {
+      "id": "PT_FINAL_S_PREVOCALIC_VOICE",
+      "name": "final-s-prevocalic-voicing",
+      "left_context": "[ʃ]$",
+      "right_context": "^[ˈˌ]?[aeiouɛɔɐɨəãõẽĩũ]",
+      "transform": "ʒ",
+      "obligatory": true,
+      "notes": "Coimbra realisation of the external prevocalic /s/-sandhi. A word-final coda /s/ (surfacing [ʃ] in isolation and pre-consonantally via the inherited coda 'chiado') is realised as the POST-ALVEOLAR [ʒ] before a vowel-initial following word: os olhos -> [ˈuʒ ˈoʎuʃ], vamos para as aulas -> [... ɐʒ ˈawlɐʃ]. Re-declared here by id (OVERLAY_BY_ID) to override the inherited base [z]; it fires ONLY before a vowel. SOURCING: this palatal prevocalic realisation is demonstrated NATIVELY by the Coimbra speaker Lúcio (conimbricense de gema, professor de português) in Portuguese With Leo, 'Coimbra tem sotaque?' (native-speaker / popular-linguistics, NOT academic; https://www.youtube.com/watch?v=R4yUi68VHFg): asked how he links 'os olhos', he answers 'Nós faríamos a junção com o som de J e então seria os olhos', while the Lisbon host uses [z] ('os olhos' with the /z/ of casa). VARIABLE: the feature is explicitly variable in the centre — Lúcio himself says 'esta é uma coisa que varia muito' and Leo notes the [z] realisation 'está muito mais próxima do que explica a gramática' (i.e. [z] is the standard pole); the neutral Coimbra centre alternates [z]~[ʒ] and this spec models the marked local [ʒ] pole. The [ʒ] extension into the centre-north is corroborated by the Trás-os-Montes speaker (Portuguese With Leo, 'Trás-os-Montes', https://www.youtube.com/watch?v=70a_vNEa_aw), who says of Coimbra 'às vezes sai-lhe, outras vezes não, é assim meio misturado'. The standard/Lisbon literature gives [z] here (Mateus & d'Andrade 2000: ch.2); a page-pinned academic source for the Coimbra prevocalic [ʒ] specifically was not located. The Algarve is the strongest/categorical [ʒ] variety and São Miguel shares it (see pt-PT-x-algarve, pt-PT-x-sao-miguel); Lisbon and the (western) North keep [z]."
+    }
+  ],
+  "notes": "Conimbricense (Coimbra) European Portuguese — the central variety widely considered 'o sotaque mais neutro de Portugal' (Portuguese With Leo, 'Coimbra tem sotaque?', native-speaker source, https://www.youtube.com/watch?v=R4yUi68VHFg; the Coimbra guest Lúcio: 'aquele que em teoria segue as regras da fonética'). A DELTA spec over the broad pt-PT base: Coimbra is modelled as the CONSERVATIVE central norm that keeps the base values and deliberately does NOT take the Lisbon/Estremenho innovations, with one marked local delta (the [ʒ] prevocalic sandhi). DELIBERATELY-INHERITED (kept as the neutral base value, NOT re-declared, so Coimbra diverges from Lisbon precisely by NOT innovating): (1) NO pre-palatal centralisation of stressed <e> — Coimbra keeps the mid front vowel before a palatal (coelho -> [ˈkɔɛʎu], espelho, vermelho, Fonte da Telha) where Lisbon centralises to [ɐ] ('coâlho', 'vermalho'); Lúcio contrasts exactly these 'palavras acabadas em E-L-H-O / E-L-H-A' as 'das coisas que mais distinguem o sotaque de Coimbra do sotaque de Lisboa', saying Coimbra 'fala da forma que teoricamente é o correto'. Because Coimbra inherits pt-PT (which lacks the Lisbon LX_STRESSED_E_PREPALATAL rule), the mid vowel is kept automatically — no rule is added. This same conservative [e] is corroborated for the neighbouring North by the Trás-os-Montes speaker ('vermelho eu digo vermelho, Lisboa vermalho'; https://www.youtube.com/watch?v=70a_vNEa_aw). (2) <ei> -> [ej] kept — Coimbra keeps the [ej] diphthong (the base default), described by Lúcio as intermediate between the Lisbon [ɐj] ('menos A') and the very strong Porto [ej] ('não tanto E'): fevereiro -> [fɨvɨˈɾejɾu], NOT the Lisbon [ɐj]. (3) <ou> -> [o] monophthong — like Lisbon and the whole Centre-South and UNLIKE the North: Lúcio 'a palavra pouco nós falamos pouco, a palavra roupa nós falamos roupa, igual a Lisboa'. This is the base default, kept. (4) Unstressed /i/ RETAINED — Coimbra pronounces the unstressed [i] that Lisbon cuts (Filipa -> [fiˈlipɐ] not the Lisbon 'Flipa'; piscina, disciplina): Lúcio 'nós não pronunciamos o I [Lisbon], vocês [Coimbra] pronunciam o I; no Norte também se pronuncia mais este I'. This is the base value (the Lisbon deletion is not modelled), kept. MODELLED DELTA: the [ʒ] prevocalic external /s/-sandhi (variable [z]~[ʒ]; see the PT_FINAL_S_PREVOCALIC_VOICE override), the one feature by which Coimbra departs from the base [z]. NOT MODELLED (documented, not faked): the OI~OU lexical variation (Coimbra prefers the <oi> spelling/pronunciation toiro/loiça/loiro where Lisbon prefers <ou> touro/louça — Lúcio 'Nós falamos com o ditongo OI: toiro, loiça, loiro') is an orthographic-lexical doublet choice, not a regular grapheme rule, and is left to the lexicon. All other EP processes (unstressed vowel reduction, dark coda /l/ [ɫ], coda-sibilant chiado, stress) are inherited unchanged from pt-PT.",
+  "quality": "research",
+  "ancestors": [
+    {
+      "code": "pt-PT",
+      "role": "parent",
+      "weight": 0.95,
+      "notes": "Broad descriptive European Portuguese standard. Coimbra is the conservative central norm: it keeps the base values (no pre-palatal [ɐ], [ej] kept, [o] for <ou>, unstressed /i/ retained) where Lisbon innovates, and adds only the marked local [ʒ] prevocalic sandhi as a delta."
+    }
+  ],
+  "script_type": "alphabet",
+  "sources": [
+    {
+      "id": "pwl_coimbra",
+      "author": "Portuguese With Leo (with Lúcio, conimbricense)",
+      "year": 2023,
+      "title": "Coimbra tem sotaque?",
+      "publisher": "YouTube (native-speaker / popular-linguistics)",
+      "url": "https://www.youtube.com/watch?v=R4yUi68VHFg",
+      "pages": null,
+      "notes": "Native-speaker EP accent deep-dive (NOT academic). Coimbra called 'o sotaque mais neutro de Portugal' / 'aquele que em teoria segue as regras da fonética'. Attests, with example words: the conservative mid vowel before a palatal (coelho/espelho/vermelho/Telha, 'das coisas que mais distinguem o sotaque de Coimbra do sotaque de Lisboa'); <ei> as [ej] intermediate between Lisbon [ɐj] and Porto [ej] (fevereiro); <ou> monophthong [o] like Lisbon (pouco, roupa); retention of unstressed /i/ (Filipa, piscina, disciplina, where Lisbon cuts it); and the [ʒ] prevocalic external /s/-sandhi ('os olhos' with the J-sound), explicitly variable ('varia muito')."
+    },
+    {
+      "id": "mateus_dandrade2000",
+      "author": "Mateus, M.H.M. & d'Andrade, E.",
+      "year": 2000,
+      "title": "The Phonology of Portuguese",
+      "publisher": "Oxford University Press",
+      "url": null,
+      "pages": null,
+      "notes": "Reference EP phonology for the inherited base processes (unstressed vowel reduction, dark coda /l/, coda sibilants) that Coimbra inherits unchanged from pt-PT. Standard EP gives the prevocalic external final /s/ as [z]; the Coimbra [ʒ] is a marked variable delta over this base."
+    },
+    {
+      "id": "cintra1971",
+      "author": "Cintra, Luís F. Lindley",
+      "year": 1971,
+      "title": "Nova proposta de classificação dos dialectos galego-portugueses",
+      "publisher": "Boletim de Filologia (Centro de Estudos Filológicos, Lisboa), vol. 22, pp. 81-116",
+      "url": "https://cvc.instituto-camoes.pt/hlp/biblioteca/novaproposta.pdf",
+      "pages": "81-116",
+      "notes": "Foundational classification of the Galician-Portuguese dialect space. Coimbra sits in the conservative central zone; the pedagogical/reference norm of European Portuguese is often anchored to educated central (Coimbra) speech, which lacks several Lisbon/Estremenho innovations (the [ɐj] value of <ei>, the pre-palatal centralisation) — the basis for modelling Coimbra as the base-conservative variety here."
+    }
+  ],
+  "wikipedia": [
+    "https://pt.wikipedia.org/wiki/Dialetos_da_Beira"
+  ],
+  "urls": [
+    "https://pt.wikipedia.org/wiki/Dialetos_da_Beira",
+    "https://en.wikipedia.org/wiki/Portuguese_dialects"
+  ],
+  "timespan": {
+    "start_year": 1300,
+    "end_year": null
+  },
+  "iso639_3": "por",
+  "stress": {
+    "onset_clusters": ["bl", "br", "bɫ", "bɾ", "bʀ", "bʁ", "bʎ", "bχ", "dr", "dɾ", "dʀ", "dʁ", "dʎ", "dχ", "fl", "fr", "fɫ", "fɾ", "fʀ", "fʁ", "fʎ", "fχ", "kl", "kr", "kɫ", "kɾ", "kʀ", "kʁ", "kʎ", "kχ", "pl", "pr", "pɫ", "pɾ", "pʀ", "pʁ", "pʎ", "pχ", "tr", "tɾ", "tʀ", "tʁ", "tʎ", "tχ", "vl", "vr", "vɫ", "vɾ", "vʀ", "vʁ", "vʎ", "vχ", "ðr", "ðɾ", "ðʀ", "ðʁ", "ðʎ", "ðχ", "ɡl", "ɡr", "ɡɫ", "ɡɾ", "ɡʀ", "ɡʁ", "ɡʎ", "ɡχ", "ɣl", "ɣr", "ɣɫ", "ɣɾ", "ɣʀ", "ɣʁ", "ɣʎ", "ɣχ", "βl", "βr", "βɫ", "βɾ", "βʀ", "βʁ", "βʎ", "βχ"],
+    "cliticless_words": ["o", "a", "os", "as", "de", "do", "da", "dos", "das", "em", "no", "na", "nos", "nas", "por", "pelo", "pela", "pelos", "pelas", "ao", "aos", "à", "às", "com", "sem", "e", "que", "se", "me", "te", "lhe", "lhes", "vos", "lo", "la", "los", "las", "lho", "lha", "lhos", "lhas"],
+    "default_position": -2,
+    "final_stress_endings": [
+      "r",
+      "l",
+      "z",
+      "x",
+      "i",
+      "u",
+      "im",
+      "om",
+      "um",
+      "is",
+      "us",
+      "ns",
+      "ão",
+      "ãe",
+      "õe",
+      "au",
+      "éu",
+      "éi",
+      "ói"
+    ],
+    "penult_stress_endings": [],
+    "marked_vowels": [
+      "á",
+      "é",
+      "í",
+      "ó",
+      "ú",
+      "â",
+      "ê",
+      "ô",
+      "ã",
+      "õ"
+    ],
+    "stress_mark": "ˈ",
+    "notes": "Acordo Ortográfico 1990 conventions: paroxytone default; written accents override; final -i/-u/-r/-l/-z/-x/-im/-om/-um/-ns and nasal diphthongs attract final stress. Unmarked -em/-am stay paroxytone (homem, falam). DIPHTHONGS: declared so the bundled syllabifier counts nuclei correctly — without them every vowel run merges into one nucleus and co-e-lho is read as coe-lho, one syllable short, putting the stress and its vowel reduction on the wrong vowel. ⟨oe⟩ is hiatus, not a diphthong (Cunha & Cintra, §Ditongos).",
+    "diphthongs": [
+      "ãe",
+      "ão",
+      "õe",
+      "ai",
+      "ái",
+      "au",
+      "áu",
+      "ei",
+      "éi",
+      "êi",
+      "eu",
+      "éu",
+      "êu",
+      "iu",
+      "oi",
+      "ói",
+      "ôi",
+      "ou",
+      "ui"
+    ]
+  },
+  "location": {
+    "latitude": 40.211111,
+    "longitude": -8.428889,
+    "source": "wikidata",
+    "notes": "Coimbra — the city the Conimbricense variety is named for. [Wikidata Q45412 P625]"
+  },
+  "word_exceptions_base": "pt-PT"
+}

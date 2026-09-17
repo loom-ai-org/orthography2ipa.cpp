@@ -1,0 +1,204 @@
+{
+  "code": "ch",
+  "name": "Chamorro",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "ch": [
+      "ts"
+    ],
+    "ng": [
+      "ŋ"
+    ],
+    "'": [
+      "ʔ"
+    ],
+    "ʼ": [
+      "ʔ"
+    ],
+    "a": [
+      "æ"
+    ],
+    "å": [
+      "ɑ"
+    ],
+    "b": [
+      "b"
+    ],
+    "d": [
+      "d"
+    ],
+    "e": [
+      "e"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "h": [
+      "h"
+    ],
+    "i": [
+      "i"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ñ": [
+      "ɲ"
+    ],
+    "o": [
+      "o"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "ɾ"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "u": [
+      "u"
+    ],
+    "y": [
+      "dz"
+    ]
+  },
+  "allophones": {
+    "ts": [
+      "ts"
+    ],
+    "ŋ": [
+      "ŋ"
+    ],
+    "ʔ": [
+      "ʔ"
+    ],
+    "æ": [
+      "æ"
+    ],
+    "ɑ": [
+      "ɑ"
+    ],
+    "b": [
+      "b"
+    ],
+    "d": [
+      "d"
+    ],
+    "e": [
+      "e"
+    ],
+    "f": [
+      "f"
+    ],
+    "ɡ": [
+      "ɡ"
+    ],
+    "h": [
+      "h"
+    ],
+    "i": [
+      "i"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ɲ": [
+      "ɲ"
+    ],
+    "o": [
+      "o"
+    ],
+    "p": [
+      "p"
+    ],
+    "ɾ": [
+      "ɾ"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "u": [
+      "u"
+    ],
+    "dz": [
+      "dz"
+    ]
+  },
+  "parent": "poz",
+  "ancestors": [
+    {
+      "code": "poz",
+      "role": "parent",
+      "weight": 0.9,
+      "notes": "Malayo-Polynesian (Austronesian); Chamorro is a primary branch spoken in the Marianas."
+    }
+  ],
+  "notes": "Chamorro (Chamoru), Mariana Islands. Official orthography (Guam/CNMI orthography commissions): <å> = /ɑ/ vs <a> = /æ/, <ch> = /ts/, <y> = /dz/, <ñ> = /ɲ/, <ng> = /ŋ/, glottal stop written with an apostrophe. Vowel height alternates by syllable (open/closed) and vowel harmony operates across word boundaries; that alternation is not modelled here.",
+  "iso639_3": "cha",
+  "glottolog_code": "cham1312",
+  "wikidata_qid": "Q33262",
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Chamorro_language",
+    "https://ch.wikipedia.org/wiki/Fino%27_Chamoru"
+  ],
+  "sources": [
+    {
+      "id": "topping1973",
+      "author": "Topping, Donald M.",
+      "year": 1973,
+      "title": "Chamorro Reference Grammar",
+      "publisher": "University of Hawaii Press",
+      "url": null,
+      "pages": null,
+      "notes": "Standard reference grammar; source of the letter-to-phoneme correspondences."
+    },
+    {
+      "id": "chamorro_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Chamorro language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Chamorro_language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Chamorro_language",
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "location": {
+    "latitude": 13.438011,
+    "longitude": 144.74474,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Chamorro."
+  }
+}

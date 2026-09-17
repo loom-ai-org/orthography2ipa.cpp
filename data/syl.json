@@ -1,0 +1,71 @@
+{
+  "code": "syl",
+  "name": "Sylheti",
+  "script": "Sylheti Nagri",
+  "script_type": "abugida",
+  "quality": "stub",
+  "graphemes": {},
+  "allophones": {},
+  "notes": "Grapheme inventory NOT YET SPECIFIED (stub). Sylheti is written historically in Sylheti Nagri (ꠍꠤꠟꠐꠤ ꠘꠣꠉꠞꠤ), a Brahmic ABUGIDA whose consonant letters carry an inherent vowel unless a vowel sign or hasanta is applied; in modern practice it is far more often written in the Bengali-Assamese (Eastern Nagari) script, likewise an abugida, and occasionally in Latin transliteration. No Brahmic letter-to-IPA map is claimed here. A Tier-A spec would have to declare WHICH script the input is in and resolve the inherent vowel and its deletion (schwa deletion); the modern Bengali-script route is the more useful one for a G2P consumer. Sylheti has also developed lexical tone from lost aspiration, which is not written.",
+  "iso639_3": "syl",
+  "glottolog_code": "sylh1242",
+  "wikidata_qid": "Q2044560",
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Sylheti_language",
+    "https://syl.wikipedia.org/wiki/%EA%A0%8D%EA%A0%A4%EA%A0%9F%EA%A0%90%EA%A0%A4_%EA%A0%9D%EA%A0%A3%EA%A0%94"
+  ],
+  "sources": [
+    {
+      "id": "sylheti_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Sylheti language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Sylheti_language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Sylheti_language",
+      "pages": null,
+      "notes": "Phonology (deaspiration, /h/ and /x/ reflexes, tone) and the use of Sylheti Nagri vs the Bengali-Assamese script."
+    },
+    {
+      "id": "sylheti_nagri_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Sylheti Nagri",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Sylheti_Nagri",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Sylheti_Nagri",
+      "pages": null,
+      "notes": "The Sylheti Nagri abugida: letters, vowel signs, inherent vowel."
+    },
+    {
+      "id": "gope_mahanta2014",
+      "author": "Gope, Amalesh & Mahanta, Shakuntala",
+      "year": 2014,
+      "title": "Lexical tone in Sylheti",
+      "publisher": "Proceedings of the 4th International Symposium on Tonal Aspects of Languages (TAL)",
+      "url": null,
+      "wikipedia_url": null,
+      "pages": null,
+      "notes": "Documents Sylheti's development of lexical tone from lost aspiration."
+    }
+  ],
+  "timespan": {
+    "start_year": 1500,
+    "end_year": null
+  },
+  "parent": "x-clade-indo1321",
+  "ancestors": [
+    {
+      "code": "x-clade-indo1321",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Indo-Aryan — the classification node this language sits under."
+    }
+  ],
+  "location": {
+    "latitude": 24.83724,
+    "longitude": 92.25347,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Sylheti."
+  }
+}

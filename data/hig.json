@@ -1,0 +1,223 @@
+{
+ "code": "hig",
+ "name": "Kamwe",
+ "script": "Zyyy",
+ "quality": "stub",
+ "graphemes": {},
+ "allophones": {
+  "b": [
+   "b",
+   "bʷ",
+   "bʲ"
+  ],
+  "d": [
+   "d",
+   "ʷd",
+   "dʲ",
+   "dʷʲ"
+  ],
+  "dz": [
+   "dz",
+   "ʷdz",
+   "dzʲ",
+   "dzʷʲ"
+  ],
+  "f": [
+   "f",
+   "fʷ",
+   "fʲ"
+  ],
+  "j": [
+   "j",
+   "jʷ"
+  ],
+  "k": [
+   "k",
+   "ʷk",
+   "kʲ",
+   "kʷʲ"
+  ],
+  "l": [
+   "l",
+   "lʲ"
+  ],
+  "m": [
+   "m",
+   "mʷ",
+   "mʲ"
+  ],
+  "n": [
+   "n",
+   "nʷ",
+   "nʲ",
+   "nʷʲ"
+  ],
+  "p": [
+   "p",
+   "pʷ",
+   "pʲ"
+  ],
+  "r": [
+   "r",
+   "rʷ"
+  ],
+  "s": [
+   "s",
+   "ʷs",
+   "sʲ",
+   "sʷʲ"
+  ],
+  "t": [
+   "t",
+   "ʷt",
+   "tʲ",
+   "tʷʲ"
+  ],
+  "ts": [
+   "ts",
+   "ʷts",
+   "tsʲ",
+   "tsʷʲ"
+  ],
+  "v": [
+   "v",
+   "vʷ",
+   "vʲ"
+  ],
+  "w": [
+   "w",
+   "wʲ"
+  ],
+  "x": [
+   "x",
+   "ʷx",
+   "xʲ",
+   "xʷʲ"
+  ],
+  "z": [
+   "z",
+   "ʷz",
+   "zʲ",
+   "zʷʲ"
+  ],
+  "ŋ": [
+   "ŋ",
+   "ʷŋ",
+   "ŋʲ",
+   "ŋʷʲ"
+  ],
+  "ɓ": [
+   "ɓ",
+   "ɓʷ",
+   "ɓʲ"
+  ],
+  "ɗ": [
+   "ɗ",
+   "ʷɗ",
+   "ɗʲ",
+   "ɗʷʲ"
+  ],
+  "ɡ": [
+   "ɡ",
+   "ʷɡ",
+   "ɡʲ",
+   "ɡʷʲ"
+  ],
+  "ɣ": [
+   "ɣ",
+   "ʷɣ",
+   "ɣʲ",
+   "ɣʷʲ"
+  ],
+  "ɬ": [
+   "ɬ",
+   "ʷɬ",
+   "ɬʲ",
+   "ɬʷʲ"
+  ],
+  "ɮ": [
+   "ɮ",
+   "ʷɮ",
+   "ɮʲ",
+   "ɮʷʲ"
+  ],
+  "ʔ": [
+   "ʔ",
+   "ʷʔ",
+   "ʔʲ",
+   "ʔʷʲ"
+  ]
+ },
+ "notes": "REGISTRY STUB (not a modelled G2P target). Placed so the ancestry graph covers every living ISO 639-3 language. No orthography is claimed; the phoneme inventory follows the cited PHOIBLE inventory (which itself cites a published description): script is Zyyy (undetermined) until a cited description is encoded. Classification and coordinates follow Glottolog.",
+ "iso639_3": "hig",
+ "glottolog_code": "kamw1239",
+ "sources": [
+  {
+   "id": "glottolog2024",
+   "author": "Hammarström, Harald; Forkel, Robert; Haspelmath, Martin; Bank, Sebastian",
+   "year": 2024,
+   "title": "Glottolog 5.0",
+   "publisher": "Max Planck Institute for Evolutionary Anthropology",
+   "url": "https://glottolog.org/"
+  },
+  {
+   "id": "phoible2019",
+   "author": "Moran, Steven; McCloy, Daniel (eds.)",
+   "year": 2019,
+   "title": "PHOIBLE 2.0 (doi:10.5281/zenodo.2562766)",
+   "publisher": "Max Planck Institute for the Science of Human History",
+   "url": "https://phoible.org/inventories/view/1368",
+   "notes": "Inventory 1368 (ph), 33 non-marginal segments, 2 tones."
+  }
+ ],
+ "urls": [
+  "https://glottolog.org/resource/languoid/id/kamw1239"
+ ],
+ "location": {
+  "latitude": 10.646,
+  "longitude": 13.5136,
+  "source": "glottolog",
+  "notes": "Glottolog's representative point."
+ },
+ "parent": "x-clade-afro1255",
+ "phonemes": [
+  "b",
+  "d",
+  "dz",
+  "f",
+  "j",
+  "k",
+  "l",
+  "m",
+  "n",
+  "p",
+  "r",
+  "s",
+  "t",
+  "ts",
+  "v",
+  "w",
+  "x",
+  "z",
+  "ŋ",
+  "ɓ",
+  "ɗ",
+  "ɡ",
+  "ɣ",
+  "ɬ",
+  "ɮ",
+  "ʔ",
+  "a",
+  "e",
+  "i",
+  "o",
+  "u",
+  "ɘ",
+  "ɛ"
+ ],
+ "tone_inventory": {
+  "˦": "PHOIBLE tone segment",
+  "˨": "PHOIBLE tone segment"
+ },
+ "phoible_id": "1368"
+}

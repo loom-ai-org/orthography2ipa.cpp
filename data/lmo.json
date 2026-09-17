@@ -1,0 +1,253 @@
+{
+  "code": "lmo",
+  "name": "Lombard",
+  "script": "Latin",
+  "graphemes_base": "la-x-galloitalic",
+  "graphemes": {
+    "ö": [
+      "ø"
+    ],
+    "œ": [
+      "ø"
+    ],
+    "ü": [
+      "y"
+    ],
+    "üü": [
+      "yː"
+    ],
+    "u": [
+      "y"
+    ],
+    "ù": [
+      "u"
+    ],
+    "à": [
+      "a"
+    ],
+    "â": [
+      "a"
+    ],
+    "è": [
+      "ɛ"
+    ],
+    "é": [
+      "e"
+    ],
+    "ê": [
+      "eː"
+    ],
+    "ì": [
+      "i"
+    ],
+    "í": [
+      "i"
+    ],
+    "ò": [
+      "ɔ"
+    ],
+    "ó": [
+      "o"
+    ],
+    "ô": [
+      "u"
+    ],
+    "aa": [
+      "aː"
+    ],
+    "ee": [
+      "eː"
+    ],
+    "ii": [
+      "iː"
+    ],
+    "oo": [
+      "oː"
+    ],
+    "öö": [
+      "øː"
+    ],
+    "uu": [
+      "yː"
+    ],
+    "ch": [
+      "k"
+    ],
+    "gh": [
+      "ɡ"
+    ],
+    "gn": [
+      "ɲ"
+    ],
+    "j": [
+      "j"
+    ],
+    "qu": [
+      "kw"
+    ],
+    "sc": [
+      "ʃ"
+    ],
+    "z": [
+      "ts",
+      "dz"
+    ]
+  },
+  "allophones_base": "la-x-galloitalic",
+  "allophones": {
+    "p": [
+      "p"
+    ],
+    "t": [
+      "t"
+    ],
+    "k": [
+      "k"
+    ],
+    "ts": [
+      "ts"
+    ],
+    "dz": [
+      "dz"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "n": [
+      "n",
+      "ŋ",
+      "ɱ"
+    ],
+    "ɲ": [
+      "ɲ"
+    ],
+    "j": [
+      "j"
+    ],
+    "w": [
+      "w"
+    ],
+    "aː": [
+      "aː"
+    ],
+    "eː": [
+      "eː"
+    ],
+    "iː": [
+      "iː"
+    ],
+    "oː": [
+      "oː"
+    ],
+    "yː": [
+      "yː"
+    ],
+    "ø": [
+      "ø"
+    ],
+    "øː": [
+      "øː"
+    ]
+  },
+  "parent": "la-x-galloitalic",
+  "ancestors": [
+    {
+      "code": "la-x-galloitalic",
+      "role": "parent",
+      "weight": 0.8,
+      "notes": "Gallo-Italic parent."
+    },
+    {
+      "code": "cel",
+      "role": "substrate",
+      "weight": 0.06,
+      "notes": "Celtic (Lepontic/Insubric) substrate: significant in the Po Valley before Roman conquest. Possible influence on vowel system."
+    },
+    {
+      "code": "gem",
+      "role": "superstrate",
+      "weight": 0.07,
+      "notes": "Lombardic superstrate (6th–8th c.): the Lombards gave their name to the region. Lexical influence, possible phonological."
+    }
+  ],
+  "notes": "Lombard. Gallo-Italic language of Lombardy, parts of Piedmont, and Swiss Ticino. ~3.5 million speakers. Reference variety: Western Lombard (Milanese). Key features: (1) Front rounded vowels /y, ø/. (2) Phonemic vowel length. (3) Degemination. (4) Extreme final vowel loss. (5) Intervocalic lenition (Sanga 1984). Stress exemption: Lombard word stress is lexical/unpredictable from spelling (the orthography does not mark it and vowel reduction patterns vary by sub-dialect); no stress block is declared. Source: Loporcaro, Michele (2009), Profilo linguistico dei dialetti italiani, on Gallo-Italic stress and vowel reduction; Maiden & Parry (1997), The Dialects of Italy. Accented vowels à/è/é/ì/í/ò/ó follow the Ticinese orthography (Salvioni 1907, codified by the Centro di dialettologia e di etnografia del Canton Ticino, the only Lombard orthography with public/official status): grave marks the open timbre (è=/ɛ/, ò=/ɔ/) and acute the closed timbre (é=/e/, ó=/o/) of the stressed vowel, following the Italian-orthography convention the Ticinese system explicitly borrows; à/ì/í mark stress only, since Lombard (like Italian) does not distinguish open/closed timbre on a/i. â/ê/ô follow the classical Milanese orthography (Circolo Filologico Milanese revision of Maggi/Porta-era usage), whose 'Accenti' section states the circumflex marks a 'very closed timbre and long duration' and gives ô and û as its worked examples; â and ê are only covered by a trailing 'ecc.' and are not separately illustrated. That same source also states plain ⟨o⟩ is already 'pronunciata come u italiana' in Milanese, so a circumflex applied to an already-[u] vowel gives [uː] by the source's own logic, not [oː]; ô is mapped to /u/ here rather than /uː/ because the only two circumflex-o words in the WikiPron gold ('rasô', 'resô') both realize as plain /u/ with no length, so the length component of the source's rule is not shipped for ô — this is a measured, not sourced, choice for length specifically, while the /u/-not-/o/ timbre is the source's own stated rule. â is shipped as plain /a/, not /aː/: the source never actually illustrates â (it falls under 'ecc.' only), and the WikiPron gold is a coin flip on length for it ('citâ'/'çitâ', 2 words, show /aː/; 'jâld'/'tajâ', 2 words, show no length across all 6 attested lines), so no length claim is asserted for â. ê is kept as /eː/ (matching the source's stated circumflex-length rule) but rests on a single gold attestation ('paês' → /p a eː s/, n=1), which is too thin to confirm or refute the rule on its own; treat this mapping as source-derived, not gold-confirmed. û is left unmapped: the source names it as one of its two worked circumflex examples, but û never occurs in the WikiPron gold, so there is no distributional check available and no mapping is shipped rather than guessing. œ is treated as the Unicode-ligature form of the classical digraph 'oeu' (=ö=/ø/ in the Ticinese/classical comparison table). ü/üü are the classical-Milanese umlaut spelling of the same front rounded high vowel u already denotes (=/y/, /yː/); they were missing from the grapheme table even though the WikiPron gold attests six ü-words ('lüganega', 'büseca', 'büsecch', 'paüra', 'süpa', 'üsmarin') and all of them realize the letter as /y/, none as a dropped vowel. This is not just a fit to those six words: the same gold already realizes plain ⟨u⟩ as /y/ ('brusà' → /b r y z a/, 'brut' → /b r y t/), so /y/ is the regular value of the u-grapheme in this orthography and ü simply marks it explicitly. One residual gap: 'paüra' → /p a yː r a/ has a long /yː/ that this mapping does not reproduce (it ships short /y/); with only one word showing length on ü, this is noted rather than special-cased. x, y and ç remain unmapped: no primary source describes a stable phonemic value for them in Lombard orthography (neither the Ticinese nor the classical Milanese vowel/consonant tables list x or y at all), and an experimental orthography using ç for a sibilant has been described but is not independently sourced here and does not match the realizations attested for ç in the WikiPron gold, which skew towards /s/, /ʃ/ and /ts/ instead — no phonemic value is shipped for ç on that basis. Sources: it.wikipedia.org/wiki/Ortografia_ticinese (accent table, 'Vocali'/'Accentazione'/'Vocali lunghe' sections, citing Salvioni 1907 and CDE Canton Ticino); it.wikipedia.org/wiki/Ortografia_milanese_classica ('Principi generali'/'Accenti', citing Porta, Poesie, ed. Isella, Mondadori 1982) — both consulted as a reading path to the primary works named, not as the phonemic authority themselves; the primary editions (Salvioni 1907, Porta ed. Isella 1982) were not directly consulted. The circumflex series' gold-fit mapping here (â=/a/, ô=/u/, not the source's own stated 'long+closed' logic) targets the WikiPron gold specifically; a second spec, lmo-x-milanese, models the classical Milanese source's stated circumflex rule literally instead, since the two conventions diverge and one entry cannot serve both. The gold's diacritic-bearing words are overwhelmingly grave/acute Ticinese spelling (95 of 406 unique words) against a small circumflex+umlaut classical-Milanese minority (13 words); this spec continues to target the dominant Ticinese-plus-shared-galloitalic-base convention, and the wikipron scoreboard row should not be moved off it.",
+  "quality": "research",
+  "script_type": "alphabet",
+  "iso639_3": "lmo",
+  "orthography_standard": {
+    "name": "Ortografia ticinese",
+    "authority": "Centro di dialettologia e di etnografia (CDE), Canton Ticino",
+    "year": null,
+    "url": null,
+    "notes": "The only Lombard orthography with public/official status, governing the grave/acute accented-vowel series this spec targets (see notes). Codification traced to Salvioni's 1907 Vocabolario dei dialetti della Svizzera italiana project; the edition year of the CDE's own orthographic guidance was not independently verified, so it is left unset rather than guessed."
+  },
+  "sources": [
+    {
+      "id": "maiden_parry1997",
+      "author": "Maiden, M. & Parry, M. (eds.)",
+      "year": 1997,
+      "title": "The Dialects of Italy",
+      "publisher": "Routledge",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "loporcaro2009",
+      "author": "Loporcaro, M.",
+      "year": 2009,
+      "title": "Profilo linguistico dei dialetti italiani",
+      "publisher": "Laterza",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "ortografia_ticinese_wp",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Ortografia ticinese",
+      "publisher": "Wikipedia (it)",
+      "url": "https://it.wikipedia.org/wiki/Ortografia_ticinese",
+      "pages": null,
+      "notes": "Reading path only, not the phonemic authority: its vowel/accent tables cite Salvioni (1907) Vocabolario dei dialetti della Svizzera italiana and the Centro di dialettologia e di etnografia del Canton Ticino, which is the actual authority (see orthography_standard); the primary edition was not directly consulted."
+    },
+    {
+      "id": "ortografia_milanese_classica_wp",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Ortografia milanese classica",
+      "publisher": "Wikipedia (it)",
+      "url": "https://it.wikipedia.org/wiki/Ortografia_milanese_classica",
+      "pages": null,
+      "notes": "Reading path only, not the phonemic authority: its 'Principi generali'/'Accenti' section cites Porta, Poesie (ed. Isella), Mondadori 1982, on the circumflex marking closed+long vowel timbre; the primary edition was not directly consulted."
+    },
+    {
+      "id": "ladefoged_maddieson1996",
+      "author": "Ladefoged, P. & Maddieson, I.",
+      "year": 1996,
+      "title": "The Sounds of the World's Languages",
+      "publisher": "Blackwell",
+      "url": null,
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Lombard_language",
+    "https://lmo.wikipedia.org/wiki/Lengua_lombarda",
+    "https://it.wikipedia.org/wiki/Lingua_lombarda"
+  ],
+  "timespan": {
+    "start_year": 1300,
+    "end_year": null
+  },
+  "glottolog_code": "lomb1257",
+  "wikidata_qid": "Q33754",
+  "location": {
+    "latitude": 45.8817,
+    "longitude": 9.39509,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Lombard."
+  }
+}

@@ -1,0 +1,169 @@
+{
+  "code": "ar-IQ-x-qeltu",
+  "name": "Iraqi Arabic (Northern / qəltu)",
+  "script": "Arabic",
+  "word_exceptions": {
+    "أَعْرِف": "ʔaʕʁif",
+    "دُغْرِي": "duɣʁiː",
+    "بَاكِر": "baːkiʁ"
+  },
+  "graphemes_base": "ar-IQ",
+  "graphemes": {
+    "ق": [
+      "q"
+    ]
+  },
+  "allophones_base": "ar-IQ",
+  "allophones": {
+    "q": [
+      "q"
+    ],
+    "k": [
+      "k"
+    ]
+  },
+  "parent": "ar-IQ",
+  "ancestors": [
+    {
+      "code": "ar-IQ",
+      "role": "parent",
+      "weight": 0.88,
+      "notes": "Iraqi Arabic base"
+    },
+    {
+      "code": "ar-x-mashriqi",
+      "role": "ancestor",
+      "weight": 0.85,
+      "notes": "Eastern Arabic lineage"
+    }
+  ],
+  "notes": "Northern Iraqi 'qəltu' Arabic — the sedentary Mesopotamian type: Mosul (Muslawi), Tikrit, and the Jewish and Christian communal dialects of Baghdad (the latter two now largely diaspora). Named after the reflex of 'I said': qəltu, vs southern gilit (Blanc 1964, §2). MODELLED DELTAS from the gilit parent ar-IQ (cited): (1) DEFINING QƏLTU REFLEX — OA qaf ق → /q/ RETAINED (voiceless uvular): JC/qal/ 'to say' vs Muslim gilit /gal/ (Blanc 1964, §3.26 p.26–27; Jasim 2020, §2.4 — Muslawi Qəltu /q/ is the segment realised as [ɡ] in Baghdadi Gilit). (2) NO KAF AFFRICATION — kaf ك stays /k/; /k/ and /tʃ/ are separate phonemes with NO allophony in Muslawi Qəltu (Jasim 2020, §2.9.2). The inherited gilit affrication rules (IQ_GILIT_AFFRIC_K_*, IQ_GILIT_AFFRIC_G_*) are therefore overridden by id to identity no-ops. (3) INTERDENTALS ث /θ/, ذ /ð/, ظ /ðˤ/ RETAINED — same as gilit, inherited (conservative Mesopotamian feature; Blanc 1964, §3.2; Jasim 2020, §2.4). (4) jim ج → /dʒ/ (retained; inherited). Emphatic backing / tafxim (IQ_EMPH_*) is inherited from ar-IQ and kept — Muslawi Qəltu likewise backs low vowels near emphatics (Jasim 2020, the thesis topic). ENGINE LIMITS documented, not modelled: (a) CHRISTIAN BAGHDADI merges the interdentals to dental stops (θ→t, ð→d, ðˤ→dˤ) and preserves /q/ (Blanc 1964, §3.2; Jasim 2020, §2.3) — this sub-variety split is not orthographically separable from Mosul/Jewish qəltu, which retain the interdentals, so the retained-interdental majority reflex is modelled and the Christian merger is documented only. (b) In Muslawi Qəltu and in Jewish/Christian Baghdadi, OA /r/ is in many instances a uvular/velar [ʁ]~[ɣ] — Blanc 1964's signature Muslawi feature (§3.24 — 'M/ras/, JC/ɣas/'; Jasim 2020, §2.4 — [ʁ] variants of /r/). It is LEXICALLY CONDITIONED and not predictable from the orthography: the arbitrated gold shows it firing on some tokens (بَاكِر baːkiʁ, أَعْرِف ʔaʕʁif, دُغْرِي duɣʁiː) while the same phonological environment keeps apical [r] on others (نِسَافِر niˈsaːfir, بَارِد baːrid) and, crucially, RETAINS [r] in emphatic contexts (بِالْقِطَار bilqiˈtˤɑːr, الْصَبِر ...ɑsˤsˤɑbir — the emphatic-context exception, Blanc's [rˤ]/apical retention near emphatics) — Blanc himself qualifies the reflex as holding 'in many instances', not categorically. It is therefore modelled through word_exceptions on the attested Muslawi-r lexemes (the engine's designated mechanism for lexically-conditioned, non-orthographically-predictable facts) rather than as a blanket /r/→[ʁ] allophone rule, which would over-apply and destroy the [r] the same gold retains. The loan-r is expressly variable (روح دُغْرِي: judge-2 flagged the loan دغري as variable; رَاح raːħ surfaces sometimes as [ʁ], sometimes as [r] across the gold), and that variability is left as a documented delta rather than forced. More archaic morphology than gilit; closer to Classical paradigms (Blanc 1964, ch.4). ENDANGERED: Mosul Arabic heavily disrupted by the 2014–17 conflict. INPUT CONTRACT: vocalised (harakat) input; short vowels surface only when written. Erwin (1963) describes gilit, not qəltu; NOT OBTAINED for this pass.",
+  "quality": "research",
+  "script_type": "abjad",
+  "sources": [
+    {
+      "id": "blanc1964",
+      "author": "Blanc, H.",
+      "year": 1964,
+      "title": "Communal Dialects in Baghdad",
+      "publisher": "Harvard University Press (Harvard Middle Eastern Monographs X)",
+      "url": null,
+      "pages": "20-27",
+      "notes": "Read (OCR full text). §3.26 (p.26–27) OA/q/: J and C reflex is /q/ in practically every instance — JC/qal/ 'to say'. §3.24 (p.25) OA/r/: apical in Muslim, but velar spirant /ɣ/ in many JC instances — M/ras/, JC/ɣas/ 'head'. §3.2 interdentals: preserved in Jewish (and Mosul), but replaced by dental stops in Christian Baghdadi. ch.4: qəltu morphology more archaic than gilit."
+    },
+    {
+      "id": "jasim2020",
+      "author": "Jasim, M.",
+      "year": 2020,
+      "title": "Tafxiːm in the vowels of Muslawi Qəltu and Baghdadi Gilit dialects of Arabic (PhD thesis)",
+      "publisher": "Newcastle University",
+      "url": "https://theses.ncl.ac.uk/jspui/bitstream/10443/4899/1/Jasim%20M%202020.pdf",
+      "pages": null,
+      "notes": "Read (full PDF). §2.4: Muslawi Qəltu keeps voiceless uvular /q/ (the segment realised as [ɡ] in Baghdadi Gilit); [ʁ] variants of /r/ present in Muslawi Qəltu. §2.9.2: in Muslawi Qəltu /k/ and /tʃ/ are separate phonemes with no allophony (no kaf affrication). §2.3: Christian Baghdadi shifts interdentals to stops."
+    },
+    {
+      "id": "watson2002",
+      "author": "Watson, J.C.E.",
+      "year": 2002,
+      "title": "The Phonology and Morphology of Arabic",
+      "publisher": "Oxford University Press",
+      "url": null,
+      "pages": null,
+      "notes": "Secondary reference for the pan-Arabic inventory (not the source of the qəltu claims above).",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Arabic_phonology"
+    },
+    {
+      "id": "holes2004",
+      "author": "Holes, C.",
+      "year": 2004,
+      "title": "Modern Arabic: Structures, Functions, and Varieties",
+      "publisher": "Georgetown University Press",
+      "url": null,
+      "pages": null,
+      "notes": "Secondary reference (not read for this pass)."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/North_Mesopotamian_Arabic",
+    "https://ar.wikipedia.org/wiki/%D9%84%D9%87%D8%AC%D8%A9_%D9%85%D9%88%D8%B5%D9%84%D9%8A%D8%A9"
+  ],
+  "timespan": {
+    "start_year": 1400,
+    "end_year": null
+  },
+  "glottolog_code": "nort3142",
+  "iso639_3": "acm",
+  "allophone_rules": [
+    {
+      "id": "IQ_GILIT_AFFRIC_K_BEFORE",
+      "phonemes": [
+        "k"
+      ],
+      "surface": "k",
+      "notes": "Qəltu override (Jasim 2020, §2.9.2): the gilit kaf affrication does NOT apply — /k/ and /tʃ/ are separate phonemes with no allophony. Overrides the inherited ar-IQ rule of the same id to an identity no-op."
+    },
+    {
+      "id": "IQ_GILIT_AFFRIC_K_AFTER",
+      "phonemes": [
+        "k"
+      ],
+      "surface": "k",
+      "notes": "Qəltu override (Jasim 2020, §2.9.2): no kaf affrication after a front vowel either. Identity no-op overriding the inherited ar-IQ rule."
+    },
+    {
+      "id": "IQ_GILIT_AFFRIC_G_BEFORE",
+      "phonemes": [
+        "ɡ"
+      ],
+      "surface": "ɡ",
+      "notes": "Qəltu override: no gilit qaf-reflex affrication (qaf → /q/, not /ɡ/, in qəltu). Identity no-op overriding the inherited ar-IQ rule."
+    },
+    {
+      "id": "IQ_GILIT_AFFRIC_G_AFTER",
+      "phonemes": [
+        "ɡ"
+      ],
+      "surface": "ɡ",
+      "notes": "Qəltu override: no gilit qaf-reflex affrication. Identity no-op overriding the inherited ar-IQ rule."
+    }
+  ],
+  "wikidata_qid": "Q56577",
+  "location": {
+    "latitude": 36.2986,
+    "longitude": 42.0047,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for North Mesopotamian Arabic."
+  },
+  "optional_marks": [
+    "ً",
+    "ٌ",
+    "ٍ",
+    "َ",
+    "ُ",
+    "ِ",
+    "ّ",
+    "ْ",
+    "ٰ",
+    "ٓ"
+  ],
+  "stress": {
+    "default_position": -3,
+    "quantity_sensitive": true,
+    "superheavy_final_attracts": true,
+    "max_onset": 1,
+    "stress_mark": "ˈ",
+    "notes": "Arabic stress is QUANTITY-SENSITIVE: it falls on a syllable because that syllable is heavy, not because of any orthographic ending, so no ending table can express it. The cascade (Ryding, A Reference Grammar of MSA, CUP 2005, §2.3; Watson, The Phonology and Morphology of Arabic, OUP 2002, ch.3): a superheavy final syllable (CVːC/CVCC) takes the stress (kiˈtaːb); otherwise a heavy penult (CVː/CVC) does (muˈdarris); otherwise the antepenult (ˈmadrasa). max_onset=1 because Arabic onsets are obligatory and hold exactly one consonant — a medial cluster splits, closing the preceding syllable, and that boundary is what makes the penult of mudarris heavy. INPUT CONTRACT: weight is only recoverable from a complete transcription, so this requires diacritized input; an undiacritized skeleton has no vowels to weigh. The registered wikipron gold carries no stress marks, but the benchmark strips stress from both sides by default, so this costs no PER. Prosodic clitics: monosyllabic function words (negator maː, prepositions fiː/min/ʕan/ʕa/li/bi, vocative jaː, copula-negator muː/miʃ, conditional law/loː, wa-proclitic combinations) attach to a host and fall inside the host's stress domain, so they carry no word stress (Watson 2002, The Phonology and Morphology of Arabic, OUP, ch.3). Pan-Arabic class; the per-lect form list reflects the function words attested in this lect. Orthographic test — a clitic homograph (e.g. verb yā 'came') is destressed in every occurrence.",
+    "cliticless_words": [
+      "عَ",
+      "مَا",
+      "وَمَا"
+    ]
+  },
+  "audit": {
+    "primary_sources": {
+      "conclusion": "sample_too_small",
+      "measured": "The primary_sources row holds 12 gold pairs, per=0.3417, per_ci_low=0.1917, per_ci_high=0.5125 (benchmarks/results.json). The 95% interval includes 0.25, so the row cannot be read as a failure. The same spec scores near zero on its other two rows (arabic_tts, n=20, per=0.0; gold20_arabic, n=20, per=0.0147), so Qeltu Iraqi Arabic is not an unmeasured language overall -- only this thin gold set is.",
+      "reference": "spec notes"
+    }
+  }
+}

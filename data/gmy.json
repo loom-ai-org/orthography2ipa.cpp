@@ -1,0 +1,46 @@
+{
+  "code": "gmy",
+  "name": "Mycenaean Greek",
+  "script": "Linear B",
+  "script_type": "syllabary",
+  "quality": "stub",
+  "iso639_3": "gmy",
+  "glottolog_code": "myce1242",
+  "graphemes": {},
+  "allophones": {},
+  "parent": "x-clade-gree1276",
+  "ancestors": [
+    {
+      "code": "x-clade-gree1276",
+      "role": "ancestor",
+      "weight": 1.0,
+      "notes": "Earliest attested form of the Hellenic branch (16th-12th c. BCE), predating and ancestral to every other Greek variety, including Attic (Wikipedia: Mycenaean Greek)."
+    }
+  ],
+  "notes": "Stub, following the akk.json precedent for a non-alphabetic ancient script: no fabricated sign inventory. Mycenaean Greek is recorded in Linear B, a syllabary of roughly 200 syllabic signs and ideograms adapted from the earlier (undeciphered) Linear A, used c. 1600-1100 BCE at Knossos, Pylos, Mycenae, Tiryns, Thebes and Chania. Linear B is a defective script for Greek: it does not distinguish voiced, voiceless and aspirated stops (except word-initial dental /d/), does not mark vowel length, cannot represent most consonant clusters or word-final consonants, and collapses /l/ and /r/ into one series — so a sign-by-sign IPA table would misrepresent the underlying phonology far more than it would clarify it. Scholarly transliteration instead renders each syllabic sign in Latin letters plus conventions such as ⟨q⟩ for labiovelars and ⟨z⟩ for the affricate/*/dj/*-reflex series (e.g. 𐀣 = qa-si-re-u for the ancestor of βασιλεύς). Encoding that transliteration scheme as `graphemes` would still be encoding sign-to-syllable correspondences rather than orthographic units with stable IPA, and was left out rather than guessed at. `graphemes` is intentionally empty; a future revision could add a `phonemes` inventory sourced from a reconstruction of Mycenaean Greek phonology (e.g. Bartonek) independent of the script.",
+  "sources": [
+    {
+      "id": "wiki-gmy",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Mycenaean Greek",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Mycenaean_Greek"
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Mycenaean_Greek"
+  ],
+  "urls": [
+    "https://glottolog.org/resource/languoid/id/myce1242"
+  ],
+  "timespan": {
+    "start_year": -1600,
+    "end_year": -1100
+  },
+  "location": {
+    "latitude": 37.7285,
+    "longitude": 22.7581,
+    "source": "wikipedia",
+    "notes": "Mycenae, one of the principal Linear B findspots on the Greek mainland."
+  }
+}

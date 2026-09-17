@@ -1,0 +1,90 @@
+{
+  "code": "es-ES-x-cantabria",
+  "name": "Cantabrian Spanish (Montañés)",
+  "script": "Latin",
+  "graphemes_base": "es-ES",
+  "allophones_base": "es-ES",
+  "allophones": {
+    "s": [
+      "s̺"
+    ],
+    "ʎ": [
+      "ʎ",
+      "j"
+    ]
+  },
+  "positional_graphemes_base": "es-ES",
+  "parent": "es-ES",
+  "ancestors": [
+    {
+      "code": "es-ES",
+      "role": "parent",
+      "weight": 0.85
+    },
+    {
+      "code": "ast",
+      "role": "substrate",
+      "weight": 0.1
+    }
+  ],
+  "notes": "Cantabrian Spanish (Montañés). Northern conservative dialect with Asturleonese substrate. Apico-alveolar [s̺] (northern type), distinción (lleísmo/yeísmo distinction) preserved. Partial yeísmo: /ʎ/ preserved in older speakers, merged with /j/ in younger speakers. Asturian substrate features include unstressed vowel raising (e→i, o→u) and neutralization of ser/estar. Transitional between Castilian and Asturian; some Leonese metaphony traces in western areas.",
+  "quality": "research",
+  "script_type": "alphabet",
+  "sources": [
+    {
+      "id": "hualde2005",
+      "author": "Hualde, J.I.",
+      "year": 2005,
+      "title": "The Sounds of Spanish",
+      "publisher": "Cambridge University Press",
+      "url": null,
+      "pages": null,
+      "notes": null,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Spanish_phonology"
+    },
+    {
+      "id": "penny2002",
+      "author": "Penny, R.",
+      "year": 2002,
+      "title": "A History of the Spanish Language",
+      "publisher": "Cambridge University Press",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "alarcos_llorach1994",
+      "author": "Alarcos Llorach, E.",
+      "year": 1994,
+      "title": "Gramática de la Lengua Española",
+      "publisher": "Espasa",
+      "url": null,
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Cantabria"
+  ],
+  "urls": [
+    "https://en.wikipedia.org/wiki/Cantabria"
+  ],
+  "timespan": {
+    "start_year": 1500,
+    "end_year": null
+  },
+  "glottolog_code": null,
+  "iso639_3": "spa",
+  "graphemes": {
+    "ll": [
+      "ʎ",
+      "ʝ"
+    ]
+  },
+  "location": {
+    "latitude": 43.333333,
+    "longitude": -4,
+    "source": "wikidata",
+    "notes": "Cantabria — the autonomous community the Montañés variety is spoken in. [Wikidata Q3946 P625]"
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "code": "es-CR",
+  "name": "Costa Rican Spanish",
+  "script": "Latin",
+  "graphemes_base": "es-ES",
+  "graphemes": {
+    "c": [
+      "k",
+      "s"
+    ],
+    "z": [
+      "s"
+    ],
+    "ll": [
+      "ʝ"
+    ]
+  },
+  "allophones_base": "es-ES",
+  "allophones": {
+    "ʝ": [
+      "ʝ",
+      "ɟʝ"
+    ],
+    "n": [
+      "n"
+    ],
+    "ɾ": [
+      "ɾ",
+      "ɹ"
+    ],
+    "r": [
+      "r",
+      "ɹ̝",
+      "ɹ"
+    ],
+    "s": [
+      "s"
+    ]
+  },
+  "positional_graphemes_base": "es-ES",
+  "parent": "es-ES",
+  "notes": "Costa Rican Spanish. Distinctive assibilated /rr/ → [ɹ̝] or [ɹ] (the 'erre tica') — strongest diagnostic feature. Central Valley: coda /s/ conserved. Rural: more aspiration. Assibilation also in clusters (tres → [tɹ̝es]).",
+  "quality": "skeleton",
+  "script_type": "alphabet",
+  "sources": [
+    {
+      "id": "hualde2005",
+      "author": "Hualde, J.I.",
+      "year": 2005,
+      "title": "The Sounds of Spanish",
+      "publisher": "Cambridge University Press",
+      "url": null,
+      "pages": null,
+      "notes": null,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Spanish_phonology"
+    },
+    {
+      "id": "fontanella_de_weinberg1992",
+      "author": "Fontanella de Weinberg, M.B.",
+      "year": 1992,
+      "title": "El español de América",
+      "publisher": "MAPFRE",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "penny2002",
+      "author": "Penny, R.",
+      "year": 2002,
+      "title": "A History of the Spanish Language",
+      "publisher": "Cambridge University Press",
+      "url": null,
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Costa_Rican_Spanish",
+    "https://es.wikipedia.org/wiki/Espa%C3%B1ol_costarricense"
+  ],
+  "timespan": {
+    "start_year": 1800,
+    "end_year": null
+  },
+  "glottolog_code": null,
+  "iso639_3": "spa",
+  "positional_graphemes": {
+    "c": {
+      "before_e": [
+        "s"
+      ],
+      "before_i": [
+        "s"
+      ]
+    }
+  },
+  "wikidata_qid": "Q5174904",
+  "location": {
+    "latitude": 9.932739,
+    "longitude": -84.079614,
+    "source": "wikidata",
+    "notes": "San José — the Central Valley capital, the reference for the conservative Costa Rican norm. [Wikidata Q3070 P625]"
+  }
+}

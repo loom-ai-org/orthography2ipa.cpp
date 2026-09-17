@@ -1,0 +1,250 @@
+{
+  "code": "smn",
+  "name": "Inari Sami",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "a": [
+      "ɑ"
+    ],
+    "á": [
+      "a"
+    ],
+    "ä": [
+      "æ"
+    ],
+    "â": [
+      "ə"
+    ],
+    "e": [
+      "e"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "o"
+    ],
+    "u": [
+      "u"
+    ],
+    "y": [
+      "y"
+    ],
+    "b": [
+      "b"
+    ],
+    "c": [
+      "ts"
+    ],
+    "č": [
+      "tʃ"
+    ],
+    "d": [
+      "d"
+    ],
+    "đ": [
+      "ð"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "h": [
+      "h"
+    ],
+    "j": [
+      "j"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ŋ": [
+      "ŋ"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "š": [
+      "ʃ"
+    ],
+    "t": [
+      "t"
+    ],
+    "v": [
+      "v"
+    ],
+    "z": [
+      "dz"
+    ],
+    "ž": [
+      "dʒ"
+    ]
+  },
+  "allophones": {
+    "ɑ": [
+      "ɑ"
+    ],
+    "a": [
+      "a"
+    ],
+    "æ": [
+      "æ"
+    ],
+    "ə": [
+      "ə"
+    ],
+    "e": [
+      "e"
+    ],
+    "i": [
+      "i",
+      "j"
+    ],
+    "o": [
+      "o"
+    ],
+    "u": [
+      "u"
+    ],
+    "y": [
+      "y"
+    ],
+    "b": [
+      "b"
+    ],
+    "ts": [
+      "ts"
+    ],
+    "tʃ": [
+      "tʃ"
+    ],
+    "d": [
+      "d"
+    ],
+    "ð": [
+      "ð"
+    ],
+    "f": [
+      "f"
+    ],
+    "ɡ": [
+      "ɡ"
+    ],
+    "h": [
+      "h"
+    ],
+    "j": [
+      "j"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n",
+      "ɲ",
+      "ŋ"
+    ],
+    "ŋ": [
+      "ŋ"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "t": [
+      "t"
+    ],
+    "v": [
+      "v"
+    ],
+    "dz": [
+      "dz"
+    ],
+    "dʒ": [
+      "dʒ"
+    ]
+  },
+  "parent": "urj",
+  "ancestors": [
+    {
+      "code": "urj",
+      "role": "parent",
+      "weight": 0.9,
+      "notes": "Samic branch of Uralic; Inari Sámi is spoken around Lake Inari, Finland."
+    }
+  ],
+  "notes": "Inari Sámi (anarâškielâ), Finland. Official orthography adopted 1996: <a> = /ɑ/ vs <á> = /a/, <â> = /ə/, <ä> = /æ/; <c> = /ts/, <č> = /tʃ/, <z> = /dz/, <ž> = /dʒ/, <đ> = /ð/, <š> = /ʃ/, <ŋ> = /ŋ/. Consonant gradation and the three-way quantity system (short / long / overlong, written with single vs doubled letters) are morphophonological and are NOT modelled here — this spec covers the segmental letter-to-phoneme mapping only.",
+  "iso639_3": "smn",
+  "glottolog_code": "inar1241",
+  "wikidata_qid": "Q33462",
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Inari_S%C3%A1mi_language",
+    "https://smn.wikipedia.org/wiki/Anar%C3%A2%C5%A1kiel%C3%A2"
+  ],
+  "sources": [
+    {
+      "id": "morottaja_sammallahti1993",
+      "author": "Sammallahti, Pekka & Morottaja, Matti",
+      "year": 1993,
+      "title": "Säämi–suoma sänikirje / Inarinsaamelais-suomalainen sanakirja",
+      "publisher": "Girjegiisá, Ohcejohka",
+      "url": null,
+      "pages": null,
+      "notes": "Reference dictionary using the 1996-standardised orthography."
+    },
+    {
+      "id": "inarisami_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Inari Sámi language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Inari_S%C3%A1mi_language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Inari_S%C3%A1mi_language",
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "timespan": {
+    "start_year": 1996,
+    "end_year": null
+  },
+  "location": {
+    "latitude": 69.4229,
+    "longitude": 27.8658,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Inari Saami."
+  }
+}

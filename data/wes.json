@@ -1,0 +1,89 @@
+{
+ "code": "wes",
+ "name": "Cameroon Pidgin",
+ "script": "Latin",
+ "quality": "skeleton",
+ "graphemes": {
+  "a": ["a"],
+  "e": ["e", "ɛ"],
+  "i": ["i"],
+  "o": ["o", "ɔ"],
+  "u": ["u"],
+  "b": ["b"],
+  "ch": ["tʃ"],
+  "d": ["d"],
+  "f": ["f"],
+  "g": ["ɡ"],
+  "h": ["h"],
+  "j": ["dʒ"],
+  "k": ["k"],
+  "l": ["l"],
+  "m": ["m"],
+  "n": ["n"],
+  "ng": ["ŋ"],
+  "p": ["p"],
+  "r": ["r"],
+  "s": ["s"],
+  "sh": ["ʃ"],
+  "t": ["t"],
+  "v": ["v"],
+  "w": ["w"],
+  "y": ["j"],
+  "z": ["z"]
+ },
+ "allophones": {
+  "a": ["a"], "e": ["e"], "ɛ": ["ɛ"], "i": ["i"], "o": ["o"], "ɔ": ["ɔ"], "u": ["u"],
+  "b": ["b"], "tʃ": ["tʃ"], "d": ["d"], "f": ["f"], "ɡ": ["ɡ"], "h": ["h"],
+  "dʒ": ["dʒ"], "k": ["k"], "l": ["l"], "m": ["m"], "n": ["n"], "ŋ": ["ŋ"],
+  "p": ["p"], "r": ["r"], "s": ["s"], "ʃ": ["ʃ"], "t": ["t"], "v": ["v"],
+  "w": ["w"], "j": ["j"], "z": ["z"]
+ },
+ "notes": "Cameroon Pidgin English / Kamtok has no single legislated orthography but literacy materials (CABTAL primers; Kouega 2008) converge on an English-based Latin spelling: 21 English-shaped letters plus the digraphs ⟨ch⟩ /tʃ/, ⟨sh⟩ /ʃ/ and ⟨ng⟩ /ŋ/, none of which is the concatenation of its parts under this spec's own single-letter values (AGENTS.md test 1 — there is no separate ⟨c⟩ key, so ⟨ch⟩ cannot be read as c+h). The seven-vowel inventory /i e ɛ a ɔ o u/ (Todd 1979; Kouega 2008) is not fully disambiguated by the five-vowel spelling: ⟨e⟩ and ⟨o⟩ each carry both the tense and lax reading as competing lattice candidates. Stress generally tracks the English etymon but is not marked in the orthography and is not reliably predictable from spelling alone, so it is left unencoded (documented exemption).",
+ "iso639_3": "wes",
+ "glottolog_code": "came1254",
+ "wikidata_qid": "Q3363260",
+ "wikipedia": [
+  "https://en.wikipedia.org/wiki/Cameroonian_Pidgin_English"
+ ],
+ "sources": [
+  {
+   "id": "glottolog2024",
+   "author": "Hammarström, Harald; Forkel, Robert; Haspelmath, Martin; Bank, Sebastian",
+   "year": 2024,
+   "title": "Glottolog 5.0",
+   "publisher": "Max Planck Institute for Evolutionary Anthropology",
+   "url": "https://glottolog.org/"
+  },
+  {
+   "id": "kouega2008",
+   "author": "Kouega, Jean-Paul",
+   "year": 2008,
+   "title": "A Dictionary of Cameroon Pidgin English Usage: Pronunciation, Grammar and Vocabulary",
+   "publisher": "Lincom Europa",
+   "notes": "Phonology, vowel inventory, and orthographic conventions."
+  },
+  {
+   "id": "todd1979",
+   "author": "Todd, Loreto",
+   "year": 1979,
+   "title": "Cameroon",
+   "publisher": "In Hancock (ed.), Readings in Creole Studies, Story-Scientia",
+   "notes": "Descriptive phonology of Cameroon Pidgin English."
+  }
+ ],
+ "urls": [
+  "https://glottolog.org/resource/languoid/id/came1254"
+ ],
+ "location": {
+  "latitude": 5.4393,
+  "longitude": 9.8017,
+  "source": "glottolog",
+  "notes": "Glottolog's representative point."
+ },
+ "parent": "x-clade-indo1319",
+ "phonemes": [
+  "p", "b", "t", "d", "k", "ɡ", "tʃ", "dʒ", "f", "v", "s", "z", "ʃ", "h",
+  "m", "n", "ŋ", "l", "r", "w", "j",
+  "i", "e", "ɛ", "a", "ɔ", "o", "u"
+ ]
+}

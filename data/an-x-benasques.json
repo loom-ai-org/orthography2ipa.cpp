@@ -1,0 +1,154 @@
+{
+  "code": "an-x-benasques",
+  "name": "Benasquese (patués, Benasque valley)",
+  "script": "Latin",
+  "parent": "an",
+  "graphemes_base": "an",
+  "allophones_base": "an",
+  "positional_graphemes_base": "an",
+  "graphemes": {
+    "ch": [
+      "tʃ"
+    ],
+    "ll": [
+      "ʎ"
+    ],
+    "x": [
+      "ʃ"
+    ],
+    "ix": [
+      "ʃ"
+    ],
+    "z": [
+      "s"
+    ],
+    "c": [
+      "k",
+      "s"
+    ],
+    "j": [
+      "tʃ"
+    ]
+  },
+  "allophones": {
+    "s": [
+      "s"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "ʎ": [
+      "ʎ"
+    ],
+    "tʃ": [
+      "tʃ"
+    ]
+  },
+  "positional_graphemes": {
+    "c": {
+      "before_e": [
+        "s"
+      ],
+      "before_i": [
+        "s"
+      ]
+    },
+    "g": {
+      "before_e": [
+        "tʃ"
+      ],
+      "before_i": [
+        "tʃ"
+      ]
+    }
+  },
+  "ancestors": [
+    {
+      "code": "an",
+      "role": "parent",
+      "weight": 0.55,
+      "notes": "Aragonese (Ribagorzano High-Aragonese) stock: benasqués (patués, the speech of the Benasque valley / Vall de Benás, Ribagorza, Huesca) inherits the core Aragonese grapheme→IPA system — five-vowel system with NO Catalan-style vowel reduction, unstressed final vowels PRESERVED (-o, -a, -e not apocopated as in Catalan), Latin F- kept [f], ⟨ch⟩ = [tʃ], palatal lateral ⟨ll⟩ = [ʎ] (no yeísmo), and the western-Romance spirantisation of voiced stops."
+    },
+    {
+      "code": "ca-x-nord",
+      "role": "adstrate",
+      "weight": 0.33,
+      "notes": "North-Western (Ribagorçan) Catalan adstrate — benasqués sits on the Aragonese↔Catalan isogloss bundle and is the classic Aragonese-Catalan transitional variety (Saura Rami 2003). Catalan-side traits: a four-degree-of-aperture tonic vowel system parallel to Catalan (closed é/ó vs open è/ò, low functional load); word-final -a → -e before s/n/t in the innermost Zone A (vaca→vaques); and the strongest Catalan alignment in the frontier Zone C (San Feliu de Veri), where diphthongisation recedes. The valley's morphology (article lo/el, els; feminine plural -es in Zone A vs -as elsewhere) is Catalan-leaning but out of grapheme→IPA scope."
+    },
+    {
+      "code": "oc",
+      "role": "adstrate",
+      "weight": 0.06,
+      "notes": "Gascon/Occitan Pyrenean adstrate across the Benasque-Luchon pass, inherited via Aragonese."
+    },
+    {
+      "code": "got",
+      "role": "superstrate",
+      "weight": 0.02,
+      "notes": "Visigothic superstrate: shared pan-Iberian overlay."
+    }
+  ],
+  "notes": "Benasquese (benasqués, patués, ribagorzano de Benasque) — the Aragonese-Catalan TRANSITIONAL variety of the upper Ésera valley (Vall de Benás/Benasque, Alta Ribagorza, Huesca). Classified by Saura Rami (2003) and most Aragonese/Catalan dialectology as a bridge speech carrying Aragonese structure with Catalan overlay, sitting exactly on the isogloss bundle separating the two languages — the reason the o2i graph needs it as an explicit node rather than folding it into an-x-oriental (Ribagorçan). MODELLED DELTAS over the Aragonese (an) base: (1) SESEO / NO INTERDENTAL: benasqués has NO /θ/ — ⟨z⟩ and ⟨c⟩ before e/i = [s], collapsing the Aragonese/Castilian distinción into a single sibilant. (2) NO VELAR FRICATIVE: benasqués has no /x/; word-initial Latin J-/Ge,i- palatalise to [tʃ] (⟨j⟩ and ⟨g⟩ before e/i = [tʃ]: chemecà, chirà). (3) ⟨x⟩/⟨ix⟩ = [ʃ] (the only prepalatal fricative; system has just /s/ and /ʃ/, NO voiced sibilants /z ʒ dʒ/). (4) ⟨ll⟩ = [ʎ] (also from initial L-: llagó), ⟨ch⟩ = [tʃ]. SEVEN-VOWEL, FOUR-APERTURE tonic system parallel to Catalan (closed é/ó vs open è/ò) — inherited from the an base's e/ɛ, o/ɔ. AGREEMENT WITH THE ARAGONESE KERNEL (inherited, not re-declared): diphthongisation of Latin short Ĕ → ie, Ŏ → ue/ua (the majority living-speech outcome, receding only in frontier Zone C); F- retained [f]; Latin -CT- → -it- (feito, güeit); unstressed final-vowel apocope of -e/-o (Aragonese, contra full Catalan vowel reduction). DOCUMENTED-NOT-MODELLED (out of grapheme→IPA scope or too lexically/positionally conditioned to map cleanly): Zone-A final -a → -e before s/n/t (vaca→vaques); vocalisation of final -B/-C/-D/-V → glide (nèu, perdiu); -RN → [rt] (fort); PL-/CL-/BL-/FL- palatalising clusters (pllanre, cllau); the article paradigm and Zone A/B/C micro-geography. Provenance honesty: base inherited from the Aragonese (an) research-tier spec; benasqués deltas follow Saura Rami (2003) as reported page-by-page in Giralt Latorre's AFA review, cross-checked against the OA Aragonese diachronic phonetics treatise.",
+  "sources": [
+    {
+      "id": "saura_rami2003",
+      "author": "Saura Rami, J.A.",
+      "year": 2003,
+      "title": "Elementos de fonética y morfosintaxis benasquesas",
+      "publisher": "Institución Fernando el Católico / Gara d'Edizions, Zaragoza",
+      "url": null,
+      "pages": "43-106 (fonética)",
+      "notes": "The reference monograph on Benasquese. Book itself not open; its phonology is reported page-by-page in Giralt Latorre's review (AFA LXI-LXII, pp. 419-424; papers/iberian/afa_LXI-LXII_ebook.pdf), the source used here: 7 vowels / 4 apertures (Saura pp.43-71); Ĕ→ie, Ŏ→ue/ua diphthongisation as the Aragonese kernel (pp.43-59); consonant system keeps /ʎ/, has /ʃ/, has NO /x/, NO /θ/ and NO voiced sibilants /z ʒ dʒ/ (pp.71-106); initial J-/Ge,i- → [tʃ], L- → [ʎ], F- retained; -CT- → [it]."
+    },
+    {
+      "id": "giralt_latorre_afa_review",
+      "author": "Giralt Latorre, J.",
+      "year": 2006,
+      "title": "Reseña de J.A. Saura Rami, Elementos de fonética y morfosintaxis benasquesas",
+      "publisher": "Archivo de Filología Aragonesa LXI-LXII, pp. 419-424",
+      "url": "https://ifc.dpz.es/recursos/publicaciones/25/19/_ebook.pdf",
+      "pages": "419-424",
+      "notes": "Read directly (papers/iberian/afa_LXI-LXII_ebook.pdf). Page-by-page summary of Saura's benasqués phonology, used as the OA proxy for the paywalled monograph."
+    },
+    {
+      "id": "aragones_fonetica_diacronica",
+      "author": "Academia Aragonesa de la Lengua (eds.)",
+      "year": 2022,
+      "title": "Para una fonética diacrónica del aragonés",
+      "publisher": "Revista de la Academia Aragonesa de la Lengua",
+      "url": "https://revistas.academiaaragonesadelalengua.org/raal/es/article/download/8/17/44",
+      "pages": null,
+      "notes": "Read (papers/iberian/aragones_fonetica_diacronica.pdf). Cross-check for the pan-Aragonese -CT- > -it-, F- retention, and initial L-/N- and G/J palatalisation shared by benasqués."
+    },
+    {
+      "id": "nagore_lain2001",
+      "author": "Nagore Laín, F.",
+      "year": 2001,
+      "title": "Gramática de la Lengua Aragonesa",
+      "publisher": "Librería General",
+      "url": null,
+      "pages": null,
+      "notes": "Aragonese reference grammar; benasqués placed among the eastern (Ribagorzan) High-Aragonese valley speeches."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Benasquese_dialect",
+    "https://an.wikipedia.org/wiki/Patu%C3%A9s",
+    "https://ca.wikipedia.org/wiki/Benasqu%C3%A8s",
+    "https://es.wikipedia.org/wiki/Benasqu%C3%A9s"
+  ],
+  "timespan": {
+    "start_year": 1100,
+    "end_year": null
+  },
+  "glottolog_code": "bena1260",
+  "iso639_3": "arg",
+  "quality": "research",
+  "script_type": "alphabet",
+  "location": {
+    "latitude": 42.605,
+    "longitude": 0.523,
+    "source": "manual",
+    "notes": "Benasque (Benás), upper Ésera valley, Alta Ribagorza, Huesca, Aragón."
+  }
+}

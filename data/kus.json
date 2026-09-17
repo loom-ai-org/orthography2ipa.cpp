@@ -1,0 +1,252 @@
+{
+  "code": "kus",
+  "name": "Kusaal",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "e": [
+      "ɪ"
+    ],
+    "ɛ": [
+      "ɛ"
+    ],
+    "i": [
+      "i",
+      "ɪ"
+    ],
+    "ɩ": [
+      "ɪ"
+    ],
+    "o": [
+      "ʊ"
+    ],
+    "ɔ": [
+      "ɔ"
+    ],
+    "u": [
+      "u"
+    ],
+    "ʋ": [
+      "ʊ"
+    ],
+    "b": [
+      "b"
+    ],
+    "d": [
+      "d"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "h": [
+      "h"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ŋ": [
+      "ŋ"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "ɾ"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "v": [
+      "v"
+    ],
+    "w": [
+      "w"
+    ],
+    "y": [
+      "j"
+    ],
+    "z": [
+      "z"
+    ],
+    "kp": [
+      "k͡p"
+    ],
+    "gb": [
+      "ɡ͡b"
+    ],
+    "ny": [
+      "j̃"
+    ],
+    "nw": [
+      "w̃"
+    ],
+    "'": [
+      "ʔ"
+    ]
+  },
+  "allophones": {
+    "a": [
+      "a"
+    ],
+    "ɪ": [
+      "ɪ"
+    ],
+    "ɛ": [
+      "ɛ"
+    ],
+    "i": [
+      "i"
+    ],
+    "ʊ": [
+      "ʊ"
+    ],
+    "ɔ": [
+      "ɔ"
+    ],
+    "u": [
+      "u"
+    ],
+    "b": [
+      "b"
+    ],
+    "d": [
+      "d",
+      "ɾ"
+    ],
+    "f": [
+      "f"
+    ],
+    "ɡ": [
+      "ɡ"
+    ],
+    "h": [
+      "h"
+    ],
+    "k": [
+      "k",
+      "kʰ"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ŋ": [
+      "ŋ"
+    ],
+    "p": [
+      "p",
+      "pʰ"
+    ],
+    "ɾ": [
+      "ɾ"
+    ],
+    "s": [
+      "s",
+      "h"
+    ],
+    "t": [
+      "t",
+      "tʰ"
+    ],
+    "v": [
+      "v"
+    ],
+    "w": [
+      "w"
+    ],
+    "j": [
+      "j"
+    ],
+    "z": [
+      "z"
+    ],
+    "k͡p": [
+      "k͡p"
+    ],
+    "ɡ͡b": [
+      "ɡ͡b"
+    ],
+    "j̃": [
+      "j̃",
+      "ɲ"
+    ],
+    "w̃": [
+      "w̃",
+      "ŋ͡m"
+    ],
+    "ʔ": [
+      "ʔ"
+    ]
+  },
+  "notes": "Kusaal (Kʋsaal), a Gur / Mabia (Atlantic-Congo) language of north-eastern Ghana. INPUT CONTRACT: text is assumed to be in the UNIFIED KUSAAL ORTHOGRAPHY in use since 2013 (the orthography of the 2015+ Bible revision, 'B3' in Eddyshaw's grammar), for the AGOLLE dialect — the literary standard. Toende Kusaal differs phonologically and is not covered. KEY FEATURES: (1) SEVEN SHORT MONOPHTHONGS /a ɛ i ɪ ɔ u ʊ/. The reformed orthography writes ⟨ʋ⟩ for /ʊ/ and ⟨ɛ ɔ⟩ for the open mid vowels, but it still uses ⟨i⟩ for BOTH /i/ and /ɪ/, so that contrast is not recoverable from spelling (⟨i⟩ maps to [i] first, [ɪ] as an alternative; older ⟨ɩ⟩ where it occurs is [ɪ]). ⟨e⟩ and ⟨o⟩ inside diphthongs are graphic variants of /ɪ/ and /ʊ/. Long vowels are written doubled; length is not always spelled. (2) LABIAL-VELARS ⟨kp gb⟩ = /k͡p ɡ͡b/. (3) NASALISED SEMIVOWELS: ⟨ny⟩ = nasalised [j̃] and ⟨nw⟩ = nasalised [w̃] (Toende speakers may retain [ɲ] and [ŋ͡m]). (4) The apostrophe ⟨'⟩ marks vowel GLOTTALISATION, not a consonant — it is realised as creaky voice or a glottal approximant after the first mora; it is mapped to [ʔ] as the closest segmental approximation. (5) ⟨h⟩ is phonemic only in loanwords, and is also a frequent allophone of non-initial /s/; ⟨r⟩ is a flap/approximant [ɾ] and never word-initial; /k t p/ are aspirated word-initially, and word-internal ⟨k t p ŋ⟩ are geminates. (6) TONE: Kusaal is a TONE LANGUAGE (terraced-level system with downstep). The standard orthography DOES NOT MARK TONE (nor nasalisation, nor vowel length consistently), so tone is NOT RECOVERABLE from orthographic input and is not modelled here.",
+  "iso639_3": null,
+  "glottolog_code": null,
+  "wikidata_qid": null,
+  "parent": "x-clade-atla1278",
+  "ancestors": [
+    {
+      "code": "x-clade-atla1278",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Atlantic-Congo — the classification node this language sits under."
+    }
+  ],
+  "sources": [
+    {
+      "id": "eddyshaw2025_grammar",
+      "author": "Eddyshaw, David",
+      "year": 2025,
+      "title": "A Grammar of Kusaal",
+      "publisher": "Zenodo (CC-BY-4.0)",
+      "url": "https://zenodo.org/records/16656892",
+      "pages": "18-24",
+      "notes": "§2.1 Consonants, §2.2 Vowels, §2.3 Tone, §2.4 Orthography — the letter-to-IPA source for this map; read 2026-07-11."
+    },
+    {
+      "id": "musah2018",
+      "author": "Musah, Anthony Agoswin",
+      "year": 2018,
+      "title": "A Grammar of Kusaal: A Mabia (Gur) Language of Northern Ghana",
+      "publisher": "Peter Lang",
+      "url": "https://www.peterlang.com/document/1056754",
+      "notes": "Independent reference grammar; consonant and vowel inventories and the unified 2013 orthography."
+    },
+    {
+      "id": "kusaal_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Kusaal language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Kusaal_language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Kusaal_language",
+      "notes": "Overview of dialects, orthography history and tone."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Kusaal_language"
+  ]
+}

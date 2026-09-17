@@ -1,0 +1,309 @@
+{
+  "parent": "trk",
+  "ancestors": [
+    {
+      "code": "trk",
+      "role": "parent",
+      "weight": 0.86,
+      "notes": "Descent from Proto-Turkic (Kipchak branch)."
+    },
+    {
+      "code": "ru",
+      "role": "adstrate",
+      "weight": 0.09,
+      "notes": "Russian adstrate: long, intense Volga contact and Soviet-era lexicon."
+    },
+    {
+      "code": "ar",
+      "role": "adstrate",
+      "weight": 0.06,
+      "notes": "Arabic adstrate: religious/scholarly vocabulary via the Islamic literary tradition."
+    },
+    {
+      "code": "fa",
+      "role": "adstrate",
+      "weight": 0.04,
+      "notes": "Persian adstrate via Chagatai literary tradition."
+    }
+  ],
+  "code": "tt",
+  "name": "Tatar",
+  "glottolog_code": "tata1255",
+  "script": "Cyrillic",
+  "script_type": "alphabet",
+  "iso639_3": "tat",
+  "quality": "research",
+  "graphemes": {
+    "а": [
+      "ɑ"
+    ],
+    "б": [
+      "b"
+    ],
+    "в": [
+      "v"
+    ],
+    "г": [
+      "ɡ"
+    ],
+    "д": [
+      "d"
+    ],
+    "е": [
+      "je",
+      "e"
+    ],
+    "ж": [
+      "ʒ"
+    ],
+    "з": [
+      "z"
+    ],
+    "и": [
+      "i"
+    ],
+    "й": [
+      "j"
+    ],
+    "к": [
+      "k"
+    ],
+    "л": [
+      "l"
+    ],
+    "м": [
+      "m"
+    ],
+    "н": [
+      "n"
+    ],
+    "о": [
+      "o"
+    ],
+    "п": [
+      "p"
+    ],
+    "р": [
+      "r"
+    ],
+    "с": [
+      "s"
+    ],
+    "т": [
+      "t"
+    ],
+    "у": [
+      "u"
+    ],
+    "ф": [
+      "f"
+    ],
+    "х": [
+      "x"
+    ],
+    "ц": [
+      "ts"
+    ],
+    "ч": [
+      "tʃ"
+    ],
+    "ш": [
+      "ʃ"
+    ],
+    "щ": [
+      "ʃtʃ"
+    ],
+    "ъ": [
+      "ʔ",
+      ""
+    ],
+    "ы": [
+      "ɯ"
+    ],
+    "ь": [
+      "ʔ",
+      ""
+    ],
+    "э": [
+      "e"
+    ],
+    "ю": [
+      "ju"
+    ],
+    "я": [
+      "jɑ"
+    ],
+    "ё": [
+      "jo"
+    ],
+    "җ": [
+      "ʑ"
+    ],
+    "ң": [
+      "ŋ"
+    ],
+    "ү": [
+      "y"
+    ],
+    "һ": [
+      "h"
+    ],
+    "ә": [
+      "æ"
+    ],
+    "ө": [
+      "ø"
+    ]
+  },
+  "allophones": {
+    "ɑ": [
+      "ɑ"
+    ],
+    "æ": [
+      "æ"
+    ],
+    "b": [
+      "b"
+    ],
+    "v": [
+      "v"
+    ],
+    "ɡ": [
+      "ɡ"
+    ],
+    "d": [
+      "d"
+    ],
+    "e": [
+      "e"
+    ],
+    "ʒ": [
+      "ʒ"
+    ],
+    "z": [
+      "z"
+    ],
+    "i": [
+      "i"
+    ],
+    "j": [
+      "j"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ŋ": [
+      "ŋ"
+    ],
+    "o": [
+      "o"
+    ],
+    "ø": [
+      "ø"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "u": [
+      "u"
+    ],
+    "y": [
+      "y"
+    ],
+    "f": [
+      "f"
+    ],
+    "x": [
+      "x"
+    ],
+    "h": [
+      "h"
+    ],
+    "ts": [
+      "ts"
+    ],
+    "tʃ": [
+      "tʃ"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "ɯ": [
+      "ɯ"
+    ],
+    "ʑ": [
+      "ʑ"
+    ],
+    "ʔ": [
+      "ʔ"
+    ]
+  },
+  "notes": "Tatar in Cyrillic script (Tatarstan). Nine vowels with front/back harmony: а /ɑ/, ә /æ/, о /o/, ө /ø/, у /u/, ү /y/, ы /ɯ/, и /i/, е /e/. The low pair а/ә and the high-back ы are given the values Comrie (1997) assigns them in his phonemic inventory of Kazan Tatar (open back unrounded /ɑ/, open front unrounded /æ/, close back unrounded /ɯ/); Comrie's own chapter was not obtained this session, so the inventory is verified against Table 3.2 of Henry (2018), a fetched paper that reproduces it in full and cites Comrie as its source. The remaining vowel/consonant values follow Berta (1998), \"Tatar and Bashkir\", in The Turkic Languages, Johanson & Csató eds. (edition not consulted this session; standard Turkological description). Я, being й+а, is /jɑ/ for the same reason. Ә, Ө, Ү are Cyrillic letters with descenders/hooks, not the Latin ə ö ü they resemble.\n\nTatar Cyrillic has no distinct letter for the uvular fricative/stop: г spells both /ɡ/ and /ʁ/, and к both /k/ and /q/, conditioned by front/back vowel harmony (Berta 1998). The convention that marks the back (uvular) reading is the digraphs ⟨гъ⟩ and ⟨къ⟩ (ъ after г/к signals /ʁ/, /q/ rather than its own glottal value); that digraph rule is left unmodeled here — г and к are given their plain (front-harmony) values only, and ъ/ь keep their independent glottal candidate below regardless of context. This is a documented residual pending a primary-source wave, not a silent deletion, since г/к still surface as segments.\n\nҖ is a Tatar-specific letter, the voiced alveolo-palatal fricative /ʑ/, distinct from Ж /ʒ/ (Berta 1998). Ң = /ŋ/, Һ = /h/.\n\nЪ and Ь mark [ʔ] (glottal stop/glottalization); no fetched primary source describes this convention explicitly, so it rests on a distributional argument rather than a citation: every ъ-word (106/106) and every ь-word (439/439) in the vox_communis benchmark's gold carries ʔ (see tests/test_tatar.py). A silent reading is kept as a secondary candidate for the minority of tokens where they are orthographic-only. Ё /jo/ and Ц /ts/, Щ /ʃtʃ/, В /v/ carry Russian loanwords; unassimilated Russian loans commonly break front/back vowel harmony within one word (measured at roughly 11% of word types in the vox_communis wordlist), which is orthographically harmless here since а/ә/о/ө/у/ү/ы are already distinct letters independent of harmony class.",
+  "sources": [
+    {
+      "id": "henry_2018_ot_tatar",
+      "author": "Henry, Cassidy",
+      "year": 2018,
+      "title": "An Optimality Theoretic analysis of vowel harmony in Kazan Tatar",
+      "publisher": "Proceedings of the Linguistic Society of America 3(1): 4:1-11",
+      "url": "https://doi.org/10.3765/plsa.v3i1.4278",
+      "wikipedia_url": null,
+      "pages": "3",
+      "notes": "Table 3.2 reproduces Comrie's (1997) ten-vowel phonemic inventory of Kazan Tatar with IPA values; used here to verify а /ɑ/, ә /æ/, ы /ɯ/ against Comrie's original transcription rather than Wikipedia's summary. Comrie 1997, \"Tatar Phonology\" in Phonologies of Asia and Africa Vol. 2, is the primary source for the inventory but was not independently obtained this session."
+    },
+    {
+      "id": "berta_1998_tatar_bashkir",
+      "author": "Berta, Árpád",
+      "year": 1998,
+      "title": "Tatar and Bashkir",
+      "publisher": "Routledge, in The Turkic Languages (Johanson, Lars & Csató, Éva Ágnes, eds.)",
+      "url": null,
+      "wikipedia_url": null,
+      "pages": null,
+      "notes": "Edition not consulted this session; standard Turkological description of Tatar phonology, cited for vowel/consonant values."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Tatar_language",
+    "https://tt.wikipedia.org/wiki/%D0%A2%D0%B0%D1%82%D0%B0%D1%80_%D1%82%D0%B5%D0%BB%D0%B5"
+  ],
+  "timespan": {
+    "start_year": 1939,
+    "end_year": null
+  },
+  "stress": {
+    "default_position": -1,
+    "final_stress_endings": [],
+    "penult_stress_endings": [],
+    "marked_vowels": [],
+    "stress_mark": "ˈ",
+    "notes": "Tatar default stress is word-final (-1). Certain suffixes (negation, question particle) and borrowed words carry non-final stress; lexical and not modeled here. Source: Comrie (1997), Johanson & Csató (1998)."
+  },
+  "wikidata_qid": "Q25285",
+  "phoible_id": "tata1255",
+  "wals_code": "tvo",
+  "location": {
+    "latitude": 55.79592,
+    "longitude": 49.11577,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Tatar."
+  }
+}

@@ -1,0 +1,373 @@
+{
+  "code": "ak",
+  "name": "Akan (Twi-Fante)",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "e": [
+      "e"
+    ],
+    "ɛ": [
+      "ɛ"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "o"
+    ],
+    "ɔ": [
+      "ɔ"
+    ],
+    "u": [
+      "u"
+    ],
+    "b": [
+      "b"
+    ],
+    "d": [
+      "d"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "h": [
+      "h"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "w": [
+      "w"
+    ],
+    "y": [
+      "j"
+    ],
+    "ky": [
+      "tɕ"
+    ],
+    "gy": [
+      "dʑ"
+    ],
+    "hy": [
+      "ɕ"
+    ],
+    "ny": [
+      "ɲ"
+    ],
+    "ng": [
+      "ŋ"
+    ],
+    "kw": [
+      "kʷ"
+    ],
+    "gw": [
+      "ɡʷ"
+    ],
+    "hw": [
+      "hʷ"
+    ],
+    "tw": [
+      "kʷ"
+    ],
+    "dw": [
+      "ɡʷ"
+    ],
+    "nw": [
+      "ŋʷ"
+    ]
+  },
+  "allophones": {
+    "a": [
+      "a",
+      "æ",
+      "ɐ",
+      "ə"
+    ],
+    "e": [
+      "e",
+      "ɪ"
+    ],
+    "ɛ": [
+      "ɛ"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "o",
+      "ʊ"
+    ],
+    "ɔ": [
+      "ɔ"
+    ],
+    "u": [
+      "u"
+    ],
+    "b": [
+      "b"
+    ],
+    "d": [
+      "d"
+    ],
+    "f": [
+      "f"
+    ],
+    "ɡ": [
+      "ɡ",
+      "dʑ"
+    ],
+    "h": [
+      "h",
+      "ɕ"
+    ],
+    "k": [
+      "k",
+      "tɕ"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "ɾ",
+      "r",
+      "ɽ"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "w": [
+      "w"
+    ],
+    "j": [
+      "j"
+    ],
+    "tɕ": [
+      "tɕ"
+    ],
+    "dʑ": [
+      "dʑ"
+    ],
+    "ɕ": [
+      "ɕ"
+    ],
+    "ɲ": [
+      "ɲ"
+    ],
+    "ŋ": [
+      "ŋ"
+    ],
+    "kʷ": [
+      "kʷ",
+      "tɕʷ"
+    ],
+    "ɡʷ": [
+      "ɡʷ",
+      "dʑʷ"
+    ],
+    "hʷ": [
+      "hʷ",
+      "ɕʷ"
+    ],
+    "ŋʷ": [
+      "ŋʷ",
+      "ɲʷ"
+    ]
+  },
+  "notes": "Akan, Asante Twi standard. INPUT CONTRACT: text is assumed to be in the unified Latin Akan orthography (Akan Orthography Committee / Bureau of Ghana Languages), i.e. the 22 Latin letters plus ⟨ɛ⟩ (U+025B) and ⟨ɔ⟩ (U+0254), with the digraphs ky, gy, hy, ny, ng, kw, gw, hw, tw, dw, nw. The mapping below is for ASANTE TWI (the Asante literary standard, the basis of the 1961/1978 unified Akan orthography); Akuapem Twi and Fante differ (notably Akuapem keeps /ɡu/ where Asante has /ɡʷ/, and Fante has affricates and a different treatment of the palatals), so this table is not correct for those dialects. KEY FEATURES: (1) SEVEN ORAL VOWELS a e ɛ i o ɔ u organised in two ATR (±RTR) harmony sets; ⟨e⟩ and ⟨o⟩ are ambiguous between the -RTR /e o/ and the +RTR reflexes [ɪ ʊ], and orthography does not disambiguate them, so both are listed as allophones. (2) PALATALS: ⟨ky gy hy⟩ are the palatal(ised) realisations of underlying /k ɡ h/ before front vowels, phonetically [tɕ dʑ ɕ]. (3) LABIALISED SERIES: ⟨kw gw hw nw⟩ and ⟨tw dw⟩ spell the labialised velars /kʷ ɡʷ hʷ ŋʷ/; ⟨tw dw⟩ are orthographic variants of the same labialised velars (not /t/ or /d/ + w), and are realised palatalised ([tɕʷ dʑʷ]) before front vowels. (4) NASAL VOWELS exist phonemically but the standard orthography does not consistently mark them; they are therefore not recoverable from ordinary text. (5) TONE: Akan is a TONE LANGUAGE (High/Low with downstep). The standard orthography DOES NOT MARK TONE, so tone is NOT RECOVERABLE from orthographic input and is not modelled here.",
+  "iso639_3": "aka",
+  "glottolog_code": "akan1250",
+  "wikidata_qid": "Q28026",
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Twi-Fante_language",
+    "https://en.wikipedia.org/wiki/Akan_language"
+  ],
+  "sources": [
+    {
+      "id": "twi_fante_language_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Twi-Fante language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Twi-Fante_language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Twi-Fante_language",
+      "pages": null,
+      "notes": "Overview of the language, script and orthography."
+    },
+    {
+      "id": "dolphyne1988",
+      "author": "Dolphyne, Florence Abena",
+      "year": 1988,
+      "title": "The Akan (Twi-Fante) Language: Its Sound Systems and Tonal Structure",
+      "publisher": "Ghana Universities Press",
+      "url": null,
+      "notes": "Standard reference description of Akan phonology, vowel harmony and tone."
+    },
+    {
+      "id": "akan_orthography_bgl",
+      "author": "Akan Orthography Committee / Bureau of Ghana Languages",
+      "year": 1978,
+      "title": "Akan Orthography (unified Twi-Fante spelling; first standardised 1961)",
+      "publisher": "Bureau of Ghana Languages, Accra",
+      "url": null,
+      "notes": "The orthographic standard assumed by this spec (Asante Twi variety)."
+    },
+    {
+      "id": "asante_dialect_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Asante dialect",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Asante_dialect",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Asante_dialect",
+      "notes": "Standardisation history of the Asante Twi orthography."
+    }
+  ],
+  "timespan": {
+    "start_year": 1850,
+    "end_year": null
+  },
+  "phonemes": [
+    "a",
+    "aː",
+    "ã",
+    "b",
+    "cç",
+    "cçʰ",
+    "cçʷ",
+    "cçʷʰ",
+    "d",
+    "dz",
+    "dʑ",
+    "dʑᶣ",
+    "e",
+    "eː",
+    "ẽ",
+    "f",
+    "h",
+    "i",
+    "iː",
+    "ĩ",
+    "j",
+    "k",
+    "kʰ",
+    "kʷ",
+    "kʷʰ",
+    "l",
+    "m",
+    "m̩",
+    "n",
+    "nʷ",
+    "n̩",
+    "o",
+    "oː",
+    "õ",
+    "p",
+    "pʰ",
+    "r",
+    "r̩",
+    "s",
+    "sᶣ",
+    "t",
+    "ts",
+    "tɕ",
+    "tɕᶣ",
+    "tʰ",
+    "u",
+    "uː",
+    "ũ",
+    "w",
+    "æ",
+    "æː",
+    "æ̃",
+    "ç",
+    "çʷ",
+    "øː",
+    "ŋ",
+    "ŋʷ",
+    "œː",
+    "ɔ",
+    "ɔː",
+    "ɔ̃",
+    "ɕ",
+    "ɕᶣ",
+    "ɛ",
+    "ɛː",
+    "ɛ̃",
+    "ɟʝ",
+    "ɟʝʷ",
+    "ɡ",
+    "ɡʷ",
+    "ɥ",
+    "ɪ",
+    "ɪː",
+    "ɪ̃",
+    "ɲ",
+    "ɲʷ",
+    "ɲᶣ",
+    "ʊ",
+    "ʊː",
+    "ʊ̃",
+    "˥",
+    "˦",
+    "˦˨",
+    "˧",
+    "˨",
+    "˩"
+  ],
+  "parent": "x-clade-atla1278",
+  "ancestors": [
+    {
+      "code": "x-clade-atla1278",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Atlantic-Congo — the classification node this language sits under."
+    }
+  ],
+  "location": {
+    "latitude": 6.34756,
+    "longitude": -1.33254,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Akan."
+  }
+}

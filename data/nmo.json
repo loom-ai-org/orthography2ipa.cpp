@@ -1,0 +1,85 @@
+{
+ "code": "nmo",
+ "name": "Moyon Naga",
+ "script": "Zyyy",
+ "quality": "stub",
+ "graphemes": {},
+ "allophones": {},
+ "notes": "REGISTRY STUB (not a modelled G2P target). Placed so the ancestry graph covers every living ISO 639-3 language. No orthography is claimed; the phoneme inventory follows the cited PHOIBLE inventory (which itself cites a published description): script is Zyyy (undetermined) until a cited description is encoded. Classification and coordinates follow Glottolog.",
+ "iso639_3": "nmo",
+ "glottolog_code": "moyo1238",
+ "sources": [
+  {
+   "id": "glottolog2024",
+   "author": "Hammarström, Harald; Forkel, Robert; Haspelmath, Martin; Bank, Sebastian",
+   "year": 2024,
+   "title": "Glottolog 5.0",
+   "publisher": "Max Planck Institute for Evolutionary Anthropology",
+   "url": "https://glottolog.org/"
+  },
+  {
+   "id": "phoible2019",
+   "author": "Moran, Steven; McCloy, Daniel (eds.)",
+   "year": 2019,
+   "title": "PHOIBLE 2.0 (doi:10.5281/zenodo.2562766)",
+   "publisher": "Max Planck Institute for the Science of Human History",
+   "url": "https://phoible.org/inventories/view/1769",
+   "notes": "Inventory 1769 (ra), 37 non-marginal segments, 3 tones."
+  }
+ ],
+ "urls": [
+  "https://glottolog.org/resource/languoid/id/moyo1238"
+ ],
+ "location": {
+  "latitude": 24.4793,
+  "longitude": 94.3421,
+  "source": "glottolog",
+  "notes": "Glottolog's representative point."
+ },
+ "parent": "x-clade-sino1245",
+ "phonemes": [
+  "b",
+  "b̤",
+  "cç",
+  "d̤",
+  "f",
+  "h",
+  "j",
+  "kʰ",
+  "l",
+  "m",
+  "m̩",
+  "n̩",
+  "p",
+  "pʰ",
+  "r",
+  "s",
+  "ts",
+  "tʰ",
+  "v",
+  "w",
+  "ç",
+  "ŋ̩",
+  "ɡʱ",
+  "ʔ",
+  "a",
+  "e",
+  "i",
+  "o",
+  "u",
+  "æ",
+  "ɔ",
+  "ɘ",
+  "ə",
+  "ɛ",
+  "ɨ",
+  "ʊ",
+  "ʌ"
+ ],
+ "tone_inventory": {
+  "˥˩": "PHOIBLE tone segment",
+  "˧": "PHOIBLE tone segment",
+  "˩˥": "PHOIBLE tone segment"
+ },
+ "phoible_id": "1769"
+}

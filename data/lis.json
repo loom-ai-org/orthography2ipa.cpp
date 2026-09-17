@@ -1,0 +1,163 @@
+{
+ "code": "lis",
+ "name": "Lisu",
+ "script": "Zyyy",
+ "quality": "stub",
+ "graphemes": {},
+ "allophones": {
+  "dz": [
+   "dz",
+   "d̠ʒ"
+  ],
+  "k": [
+   "k",
+   "t̠ʃ"
+  ],
+  "kʰ": [
+   "kʰ",
+   "t̠ʃʰ"
+  ],
+  "l": [
+   "l",
+   "l̩"
+  ],
+  "m": [
+   "m",
+   "m̩"
+  ],
+  "n": [
+   "n",
+   "ɲ",
+   "n̩"
+  ],
+  "s": [
+   "s",
+   "ʃ"
+  ],
+  "ts": [
+   "ts",
+   "t̠ʃ"
+  ],
+  "tsʰ": [
+   "tsʰ",
+   "t̠ʃʰ"
+  ],
+  "w": [
+   "w",
+   "f",
+   "v"
+  ],
+  "x": [
+   "x",
+   "h"
+  ],
+  "ŋ": [
+   "ŋ",
+   "ŋ̩"
+  ],
+  "ɡ": [
+   "ɡ",
+   "d̠ʒ"
+  ],
+  "a": [
+   "a",
+   "ə"
+  ],
+  "ø": [
+   "ø",
+   "y"
+  ],
+  "ɘ": [
+   "ɘ",
+   "ɯ"
+  ],
+  "ɨ": [
+   "ɨ",
+   "ʉ"
+  ],
+  "ɪ": [
+   "ɪ",
+   "i"
+  ],
+  "ʊ": [
+   "ʊ",
+   "u"
+  ]
+ },
+ "notes": "REGISTRY STUB (not a modelled G2P target). Placed so the ancestry graph covers every living ISO 639-3 language. No orthography is claimed; the phoneme inventory follows the cited PHOIBLE inventory (which itself cites a published description): script is Zyyy (undetermined) until a cited description is encoded. Classification and coordinates follow Glottolog.",
+ "iso639_3": "lis",
+ "glottolog_code": "lisu1250",
+ "sources": [
+  {
+   "id": "glottolog2024",
+   "author": "Hammarström, Harald; Forkel, Robert; Haspelmath, Martin; Bank, Sebastian",
+   "year": 2024,
+   "title": "Glottolog 5.0",
+   "publisher": "Max Planck Institute for Evolutionary Anthropology",
+   "url": "https://glottolog.org/"
+  },
+  {
+   "id": "phoible2019",
+   "author": "Moran, Steven; McCloy, Daniel (eds.)",
+   "year": 2019,
+   "title": "PHOIBLE 2.0 (doi:10.5281/zenodo.2562766)",
+   "publisher": "Max Planck Institute for the Science of Human History",
+   "url": "https://phoible.org/inventories/view/1121",
+   "notes": "Inventory 1121 (ph), 33 non-marginal segments, 6 tones."
+  }
+ ],
+ "urls": [
+  "https://glottolog.org/resource/languoid/id/lisu1250"
+ ],
+ "location": {
+  "latitude": 26.91,
+  "longitude": 98.94,
+  "source": "glottolog",
+  "notes": "Glottolog's representative point."
+ },
+ "parent": "x-clade-sino1245",
+ "phonemes": [
+  "b",
+  "d",
+  "dz",
+  "f",
+  "j",
+  "k",
+  "kʰ",
+  "l",
+  "m",
+  "n",
+  "p",
+  "pʰ",
+  "s",
+  "t",
+  "ts",
+  "tsʰ",
+  "tʰ",
+  "v",
+  "w",
+  "x",
+  "z",
+  "ŋ",
+  "ɡ",
+  "ɣ",
+  "ʔ",
+  "a",
+  "æ",
+  "ø",
+  "ɒ",
+  "ɘ",
+  "ɨ",
+  "ɪ",
+  "ʊ"
+ ],
+ "tone_inventory": {
+  "˦": "PHOIBLE tone segment",
+  "˦˧": "PHOIBLE tone segment",
+  "˧": "PHOIBLE tone segment",
+  "˧˦": "PHOIBLE tone segment",
+  "˨": "PHOIBLE tone segment",
+  "˨˧": "PHOIBLE tone segment"
+ },
+ "phoible_id": "1121"
+}

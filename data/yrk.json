@@ -1,0 +1,291 @@
+{
+  "code": "yrk",
+  "name": "Nenets",
+  "script": "Cyrillic",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "ӑ": [
+      "ə"
+    ],
+    "э̇": [
+      "eː"
+    ],
+    "ъ": [
+      ""
+    ],
+    "ь": [
+      "ʲ"
+    ],
+    "а": [
+      "ɑ"
+    ],
+    "б": [
+      "b"
+    ],
+    "в": [
+      "v"
+    ],
+    "г": [
+      "ɡ"
+    ],
+    "д": [
+      "d"
+    ],
+    "е": [
+      "je"
+    ],
+    "ё": [
+      "jo"
+    ],
+    "ж": [
+      "ʒ"
+    ],
+    "з": [
+      "z"
+    ],
+    "и": [
+      "i"
+    ],
+    "й": [
+      "j"
+    ],
+    "к": [
+      "k"
+    ],
+    "л": [
+      "l"
+    ],
+    "м": [
+      "m"
+    ],
+    "н": [
+      "n"
+    ],
+    "ӈ": [
+      "ŋ"
+    ],
+    "о": [
+      "o"
+    ],
+    "п": [
+      "p"
+    ],
+    "р": [
+      "r"
+    ],
+    "с": [
+      "s"
+    ],
+    "т": [
+      "t"
+    ],
+    "у": [
+      "u"
+    ],
+    "ф": [
+      "f"
+    ],
+    "х": [
+      "x"
+    ],
+    "ц": [
+      "ts"
+    ],
+    "ч": [
+      "tʃ"
+    ],
+    "ш": [
+      "ʃ"
+    ],
+    "щ": [
+      "ɕ"
+    ],
+    "ы": [
+      "ɨ"
+    ],
+    "э": [
+      "æ"
+    ],
+    "ю": [
+      "ju"
+    ],
+    "я": [
+      "ja"
+    ],
+    "ʼ": [
+      "ʔ"
+    ],
+    "ˮ": [
+      "ʔ"
+    ],
+    "”": [
+      "ʔ"
+    ],
+    "’": [
+      "ʔ"
+    ],
+    "'": [
+      "ʔ"
+    ],
+    "‘": [
+      "ʔ"
+    ],
+    "\"": [
+      "ʔ"
+    ],
+    "“": [
+      "ʔ"
+    ]
+  },
+  "positional_graphemes": {
+    "е": {
+      "after_consonant": [
+        "e"
+      ]
+    },
+    "ё": {
+      "after_consonant": [
+        "o"
+      ]
+    },
+    "ю": {
+      "after_consonant": [
+        "u"
+      ]
+    },
+    "я": {
+      "after_consonant": [
+        "ɑ"
+      ]
+    }
+  },
+  "allophone_rules": [
+    {
+      "id": "YRK_PAL_B",
+      "phonemes": ["b"],
+      "surface": "bʲ",
+      "followed_by": "palatal"
+    },
+    {
+      "id": "YRK_PAL_V",
+      "phonemes": ["v"],
+      "surface": "vʲ",
+      "followed_by": "palatal"
+    },
+    {
+      "id": "YRK_PAL_D",
+      "phonemes": ["d"],
+      "surface": "dʲ",
+      "followed_by": "palatal"
+    },
+    {
+      "id": "YRK_PAL_Z",
+      "phonemes": ["z"],
+      "surface": "zʲ",
+      "followed_by": "palatal"
+    },
+    {
+      "id": "YRK_PAL_K",
+      "phonemes": ["k"],
+      "surface": "kʲ",
+      "followed_by": "palatal"
+    },
+    {
+      "id": "YRK_PAL_L",
+      "phonemes": ["l"],
+      "surface": "lʲ",
+      "followed_by": "palatal"
+    },
+    {
+      "id": "YRK_PAL_M",
+      "phonemes": ["m"],
+      "surface": "mʲ",
+      "followed_by": "palatal"
+    },
+    {
+      "id": "YRK_PAL_N",
+      "phonemes": ["n"],
+      "surface": "nʲ",
+      "followed_by": "palatal"
+    },
+    {
+      "id": "YRK_PAL_P",
+      "phonemes": ["p"],
+      "surface": "pʲ",
+      "followed_by": "palatal"
+    },
+    {
+      "id": "YRK_PAL_R",
+      "phonemes": ["r"],
+      "surface": "rʲ",
+      "followed_by": "palatal"
+    },
+    {
+      "id": "YRK_PAL_S",
+      "phonemes": ["s"],
+      "surface": "sʲ",
+      "followed_by": "palatal"
+    },
+    {
+      "id": "YRK_PAL_T",
+      "phonemes": ["t"],
+      "surface": "tʲ",
+      "followed_by": "palatal"
+    }
+  ],
+  "parent": "x-clade-ural1272",
+  "ancestors": [
+    {
+      "code": "x-clade-ural1272",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Descent per Glottolog classification of Tundra Nenets (nene1249)."
+    }
+  ],
+  "stress": {
+    "default_position": -1,
+    "stress_mark": "ˈ"
+  },
+  "notes": "Research. Tundra Nenets is a Samoyedic language of the Uralic family, written in an extended Russian Cyrillic alphabet (Salminen 1993, 1997). Beyond the base letters the map covers Ӈ (velar nasal) and the two apostrophe letters that write the glottal-stop phonemes. The contrast between them is nasalizability, not voicing: the single ⟨’⟩ writes the nasalizable glottal stop (h in Salminen's notation, which nasalizes to m/n/ŋ before an obstruent and is lost before a sonorant) and the double ⟨”⟩ writes the non-nasalizable one (q, which is lost before an obstruent) — Salminen 2023: 23, 25-26. Both are rendered ʔ here, so the sandhi contrast is not separated; it is not recoverable from a word in isolation anyway, since it only shows up across a word boundary. The letters reach this spec under several codepoints and every one of them is mapped, because an unmapped character is dropped in silence rather than reported. Salminen 2023: 43 states that the letters are properly RIGHT SINGLE QUOTATION MARK (U+2019) and RIGHT DOUBLE QUOTATION MARK (U+201D), with no need for the modifier-letter forms, and names ASCII ' and \" as the shapes they get confused with; the gold sources in fact use all four of U+2019, U+201D, U+02BC and U+02EE. To those the map adds ASCII ' (U+0027) and \" (U+0022), which is what an ordinary keyboard produces, and ‘ (U+2018) and “ (U+201C), which is what a smart-quote substitution produces at the opening end of a pair. ⟨а⟩ is phonetically back [ɑ], ⟨э⟩ is [æ], and the reduced vowel ⟨ӑ⟩ is [ə] (Salminen 1997) — the pre-upgrade map used [a]/[e] and omitted ⟨ӑ⟩ entirely, its single largest source of error. As in Russian, the iotated letters е/ё/ю/я spell a glide+vowel word-initially or after a vowel, but after a consonant they instead spell that consonant's palatalization plus the plain vowel (тибя [tʲibʲɑ], нямю [ɲɑmʲu]); this is modelled with an `after_consonant` positional override on the vowels plus `followed_by: palatal` allophone rules palatalising the preceding consonant. Word stress falls on the last syllable of the (disyllabic-dominant) stem in the sampled forms (Salminen 1997); marked here as final by default. NorthEuraLex's Value field also wraps a lexically-conditioned but currently-unpronounced final consonant in parentheses for some citation forms (e.g. ⟨няʼ(н)⟩) — this is a dictionary citation convention, not part of Nenets orthography, and the bracketed letters are left unmapped rather than modelled as if they were spelling. The two golds also differ in how they NOTATE a glottal stop after a consonant, and the spec follows neither one's surface: the narrow WikiPron set writes it as glottalization on the preceding consonant (нумʼ [n u mˀ], ненэцьʼ [nʲ e n æ t͡sʲˀ]) in all 9 of its 9 post-consonantal sites, while writing a ʔ segment in all 14 of its 14 post-vocalic ones; NorthEuraLex writes a ʔ segment in all 239 of its sites in both positions. Since the phonemic gold does not make the split, it is a narrow-transcription convention rather than a phonological alternation, and the spec keeps ʔ everywhere rather than mimicking one gold's notation.",
+  "iso639_3": "yrk",
+  "glottolog_code": null,
+  "sources": [
+    {
+      "id": "yrk_glottolog",
+      "author": "Hammarström, H. et al. (Glottolog 5.0)",
+      "year": 2024,
+      "title": "Glottolog: Tundra Nenets (nene1249)",
+      "publisher": "Max Planck Institute for Evolutionary Anthropology",
+      "url": "https://glottolog.org/resource/languoid/id/nene1249",
+      "pages": null,
+      "notes": "Classification reference for a skeleton-tier entry.",
+      "wikipedia_url": null
+    },
+    {
+      "id": "salminen1997",
+      "author": "Salminen, Tapani",
+      "year": 1997,
+      "title": "Tundra Nenets Inflection (Mémoires de la Société Finno-Ougrienne 227)",
+      "publisher": "Suomalais-Ugrilainen Seura",
+      "url": null,
+      "pages": null,
+      "notes": "Grammar of Tundra Nenets: Cyrillic orthography, vowel qualities (а=[ɑ], э=[æ], ӑ=[ə]), iotated-vowel palatalization after consonants, and word stress.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Tundra_Nenets_language"
+    },
+    {
+      "id": "salminen2023",
+      "author": "Salminen, Tapani",
+      "year": 2023,
+      "title": "An introduction to the Nenets languages",
+      "publisher": "Kone Foundation & Department of Modern Languages, University of Helsinki (lecture course materials)",
+      "url": "https://www.mv.helsinki.fi/home/tasalmin/INL.pdf",
+      "pages": "23, 25-26, 43",
+      "notes": "Retrieved in full. Pages 23 and 25-26 set out the two glottal-stop phonemes and the sandhi that distinguishes them: the nasalizable h, written with the single apostrophe letter, nasalizes to m/n/ŋ before an obstruent and is lost before a sonorant; the non-nasalizable q, written with the double one, is lost before an obstruent. Page 43 states that the two letters are properly RIGHT SINGLE QUOTATION MARK and RIGHT DOUBLE QUOTATION MARK rather than the modifier-letter apostrophes, and names ASCII ' and \" among the characters they are confused with.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Tundra_Nenets_language"
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Tundra_Nenets_language"
+  ]
+}

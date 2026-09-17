@@ -1,0 +1,231 @@
+{
+ "code": "lmd",
+ "name": "Lumun",
+ "script": "Latin",
+ "quality": "skeleton",
+ "graphemes": {
+  "a": [
+   "a"
+  ],
+  "c": [
+   "c"
+  ],
+  "e": [
+   "ɛ"
+  ],
+  "i": [
+   "ɪ"
+  ],
+  "k": [
+   "k"
+  ],
+  "kw": [
+   "kʷ"
+  ],
+  "l": [
+   "l"
+  ],
+  "m": [
+   "m"
+  ],
+  "n": [
+   "n"
+  ],
+  "ng": [
+   "ŋ"
+  ],
+  "ngw": [
+   "ŋʷ"
+  ],
+  "ny": [
+   "ɲ"
+  ],
+  "o": [
+   "ɔ"
+  ],
+  "p": [
+   "p"
+  ],
+  "r": [
+   "ɾ"
+  ],
+  "rr": [
+   "r"
+  ],
+  "t": [
+   "t"
+  ],
+  "th": [
+   "t̺"
+  ],
+  "u": [
+   "ʊ"
+  ],
+  "w": [
+   "w"
+  ],
+  "y": [
+   "j"
+  ],
+  "ä": [
+   "ə"
+  ],
+  "ï": [
+   "i"
+  ],
+  "ü": [
+   "u"
+  ],
+  "’r": [
+   "ɽ"
+  ]
+ },
+ "allophones": {
+  "c": [
+   "c",
+   "ɟ",
+   "cː"
+  ],
+  "k": [
+   "k",
+   "ɡ",
+   "kː"
+  ],
+  "kʷ": [
+   "kʷ",
+   "ɡʷ",
+   "kʷː"
+  ],
+  "l": [
+   "l",
+   "lː"
+  ],
+  "m": [
+   "m",
+   "mː"
+  ],
+  "n": [
+   "n",
+   "nː"
+  ],
+  "p": [
+   "p",
+   "b",
+   "pː"
+  ],
+  "r": [
+   "r",
+   "rː"
+  ],
+  "t": [
+   "t",
+   "d",
+   "tː"
+  ],
+  "t̪": [
+   "t̪",
+   "t̪ː"
+  ],
+  "ŋ": [
+   "ŋ",
+   "ŋː"
+  ],
+  "ŋʷ": [
+   "ŋʷ",
+   "ŋʷː"
+  ],
+  "ɲ": [
+   "ɲ",
+   "ɲː"
+  ],
+  "ɾ": [
+   "ɾ",
+   "ɾː"
+  ]
+ },
+ "notes": "Placed so the ancestry graph covers every living ISO 639-3 language. No orthography is claimed; the phoneme inventory follows the cited PHOIBLE inventory (which itself cites a published description): script is Zyyy (undetermined) until a cited description is encoded. Classification and coordinates follow Glottolog. Orthography from an Omniglot chart (c) Simon Ager, https://www.omniglot.com/, extracted via the AfriSpeech/africa-g2p compilation (lmd.json). africa-g2p is a compilation tool, not the linguistic authority; the citation above is the original source it names.",
+ "iso639_3": "lmd",
+ "glottolog_code": "lumu1239",
+ "sources": [
+  {
+   "id": "glottolog2024",
+   "author": "Hammarström, Harald; Forkel, Robert; Haspelmath, Martin; Bank, Sebastian",
+   "year": 2024,
+   "title": "Glottolog 5.0",
+   "publisher": "Max Planck Institute for Evolutionary Anthropology",
+   "url": "https://glottolog.org/"
+  },
+  {
+   "id": "phoible2019",
+   "author": "Moran, Steven; McCloy, Daniel (eds.)",
+   "year": 2019,
+   "title": "PHOIBLE 2.0 (doi:10.5281/zenodo.2562766)",
+   "publisher": "Max Planck Institute for the Science of Human History",
+   "url": "https://phoible.org/inventories/view/1427",
+   "notes": "Inventory 1427 (ph), 33 non-marginal segments, 2 tones."
+  },
+  {
+   "id": "omniglot-lumun",
+   "author": "Ager, Simon",
+   "year": 2026,
+   "title": "Omniglot chart (lumun.xls)",
+   "publisher": "Omniglot",
+   "url": "https://www.omniglot.com/",
+   "notes": "Undated web chart; year is retrieval year, not publication year."
+  }
+ ],
+ "urls": [
+  "https://glottolog.org/resource/languoid/id/lumu1239"
+ ],
+ "location": {
+  "latitude": 10.8308,
+  "longitude": 30.253,
+  "source": "glottolog",
+  "notes": "Glottolog's representative point."
+ },
+ "parent": "x-clade-narr1279",
+ "phonemes": [
+  "c",
+  "j",
+  "k",
+  "kʷ",
+  "l",
+  "m",
+  "n",
+  "p",
+  "r",
+  "t",
+  "t̪",
+  "w",
+  "ŋ",
+  "ŋʷ",
+  "ɲ",
+  "ɽ",
+  "ɾ",
+  "a",
+  "aː",
+  "i",
+  "iː",
+  "u",
+  "uː",
+  "ɔ",
+  "ɔː",
+  "ə",
+  "əː",
+  "ɛ",
+  "ɛː",
+  "ɪ",
+  "ɪː",
+  "ʊ",
+  "ʊː"
+ ],
+ "tone_inventory": {
+  "˦": "PHOIBLE tone segment",
+  "˨": "PHOIBLE tone segment"
+ },
+ "phoible_id": "1427",
+ "script_type": "alphabet",
+ "wikipedia": [
+  "https://en.wikipedia.org/wiki/Lumun_language"
+ ]
+}

@@ -1,0 +1,130 @@
+{
+  "code": "bem",
+  "name": "Bemba",
+  "glottolog_code": "bemb1257",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "iso639_3": "bem",
+  "quality": "research",
+  "graphemes": {
+    "a": ["a"],
+    "b": ["b"],
+    "ch": ["tʃ"],
+    "d": ["d"],
+    "e": ["e"],
+    "f": ["f"],
+    "g": ["ɡ"],
+    "i": ["i"],
+    "k": ["k"],
+    "l": ["l"],
+    "m": ["m"],
+    "mf": ["ᶬf"],
+    "mp": ["ᵐp"],
+    "mb": ["ᵐb"],
+    "n": ["n"],
+    "ns": ["ⁿs"],
+    "nt": ["ⁿt"],
+    "nd": ["ⁿd"],
+    "nsh": ["ⁿʃ"],
+    "ntsh": ["ⁿtʃ"],
+    "ndj": ["ⁿdʒ"],
+    "ng": ["ᵑɡ"],
+    "nk": ["ᵑk"],
+    "ng'": ["ŋ"],
+    "ny": ["ɲ"],
+    "o": ["o"],
+    "p": ["p"],
+    "s": ["s"],
+    "sh": ["ʃ"],
+    "t": ["t"],
+    "u": ["u"],
+    "w": ["w"],
+    "y": ["j"]
+  },
+  "allophones": {
+    "a": ["a"],
+    "b": ["b", "β"],
+    "tʃ": ["tʃ"],
+    "d": ["d"],
+    "e": ["e"],
+    "f": ["f"],
+    "ɡ": ["ɡ"],
+    "i": ["i"],
+    "k": ["k"],
+    "l": ["l"],
+    "m": ["m"],
+    "n": ["n"],
+    "ɲ": ["ɲ"],
+    "ŋ": ["ŋ"],
+    "o": ["o"],
+    "p": ["p"],
+    "s": ["s"],
+    "ʃ": ["ʃ"],
+    "t": ["t"],
+    "u": ["u"],
+    "w": ["w"],
+    "j": ["j"]
+  },
+  "notes": "Bemba (Chibemba, Guthrie M.42), Bantu language of the Northern, Luapula and Copperbelt provinces of Zambia. Five vowel qualities a/e/i/o/u with a phonemic length distinction, not marked in the standard orthography. Prenasalized voiceless and voiced series (mp/mb, nt/nd, ntʃ/ndʒ, nk/ŋɡ, plus prenasalized fricatives mf, ns, nsh) are single (complex) segments; Bemba has a strict CV syllable structure. ⟨ng'⟩ /ŋ/ is the bare velar nasal, contrasting with prenasalized ⟨ng⟩ /ᵑɡ/, the same convention as Nyanja and Yao. /b/ is realized as the approximant/fricative [β] in most positions, including word-initially, alternating with [b] when derived from nasal-triggered hardening (n+β → mb); it is not a simple intervocalic-only allophone. Bemba is a tone language with two level tones (H/L, mora as tone-bearing unit) with extensive lexical and grammatical (melodic) tone, downstep and tonal spreading; tone is not marked in the standard orthography (Hamann & Kula 2015).",
+  "sources": [
+    {
+      "id": "hamann_kula2015",
+      "author": "Hamann, Silke & Kula, Nancy C.",
+      "year": 2015,
+      "title": "Bemba (Illustrations of the IPA)",
+      "publisher": "Journal of the International Phonetic Association 45(1), 61-69",
+      "url": "https://www.fon.hum.uva.nl/silke/articles/Hamann&Kula_2015.pdf",
+      "doi": "10.1017/S0025100314000371",
+      "pages": "61-69",
+      "notes": "JIPA Illustrations of the IPA article; primary source for consonant/vowel inventory, prenasalized-obstruent analysis, /b/~[β] realization, and tone system. DOI 10.1017/S0025100314000371."
+    },
+    {
+      "id": "givon1972",
+      "author": "Givón, T.",
+      "year": 1972,
+      "title": "Studies in ChiBemba and Bantu Grammar",
+      "publisher": "Studies in African Linguistics, Supplement 3",
+      "url": null,
+      "pages": null,
+      "notes": "Descriptive grammar of Bemba, cited as a reference in Hamann & Kula (2015)."
+    },
+    {
+      "id": "bem_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2025,
+      "title": "Bemba language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Bemba_language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Bemba_language",
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "parent": "x-clade-narr1281",
+  "ancestors": [
+    {
+      "code": "x-clade-narr1281",
+      "role": "parent",
+      "weight": 0.9,
+      "notes": "Bemba branch of Bantu (Guthrie M.40), within Atlantic-Congo."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Bemba_language",
+    "https://en.wikipedia.org/wiki/Proto-Bantu_language"
+  ],
+  "urls": [
+    "https://glottolog.org/resource/languoid/id/bemb1257"
+  ],
+  "timespan": {
+    "start_year": 1900,
+    "end_year": null
+  },
+  "wikidata_qid": "Q33052",
+  "location": {
+    "latitude": -10.3,
+    "longitude": 29.8,
+    "source": "glottolog",
+    "notes": "Approximate centre of the Bemba-speaking Northern/Copperbelt provinces of Zambia."
+  }
+}

@@ -1,0 +1,223 @@
+{
+  "code": "ban",
+  "name": "Balinese",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "iso639_3": "ban",
+  "glottolog_code": "bali1278",
+  "wikidata_qid": "Q33070",
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "b": [
+      "b"
+    ],
+    "c": [
+      "tʃ"
+    ],
+    "d": [
+      "d"
+    ],
+    "e": [
+      "e",
+      "ə"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "h": [
+      "h"
+    ],
+    "i": [
+      "i"
+    ],
+    "j": [
+      "dʒ"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ng": [
+      "ŋ"
+    ],
+    "ny": [
+      "ɲ"
+    ],
+    "o": [
+      "o"
+    ],
+    "p": [
+      "p"
+    ],
+    "q": [
+      "k"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "u": [
+      "u"
+    ],
+    "v": [
+      "f"
+    ],
+    "w": [
+      "w"
+    ],
+    "x": [
+      "ks"
+    ],
+    "y": [
+      "j"
+    ],
+    "z": [
+      "z"
+    ]
+  },
+  "allophones": {
+    "a": [
+      "a"
+    ],
+    "b": [
+      "b"
+    ],
+    "tʃ": [
+      "tʃ"
+    ],
+    "d": [
+      "d"
+    ],
+    "e": [
+      "e"
+    ],
+    "ə": [
+      "ə"
+    ],
+    "f": [
+      "f"
+    ],
+    "ɡ": [
+      "ɡ"
+    ],
+    "h": [
+      "h"
+    ],
+    "i": [
+      "i"
+    ],
+    "dʒ": [
+      "dʒ"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ŋ": [
+      "ŋ"
+    ],
+    "ɲ": [
+      "ɲ"
+    ],
+    "o": [
+      "o"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "u": [
+      "u"
+    ],
+    "w": [
+      "w"
+    ],
+    "ks": [
+      "ks"
+    ],
+    "j": [
+      "j"
+    ],
+    "z": [
+      "z"
+    ]
+  },
+  "notes": "Balinese (Basa Bali) in the Latin orthography (the Balinese script, Aksara Bali, is also in use and is not covered here). Indonesian-style spelling conventions: ⟨c⟩=/tʃ/, ⟨j⟩=/dʒ/, ⟨ny⟩=/ɲ/, ⟨ng⟩=/ŋ/. Six vowels /i e ə a o u/; ⟨e⟩ writes both /e/ and /ə/ and word-final orthographic ⟨-a⟩ is typically realised as [ə]. ⟨f v z q x⟩ occur only in loanwords. Open question: Clynes (1995: 30) reports that /a/ is realised [ə] phonological-word-finally in an open syllable, which the flat ⟨a⟩ = /a/ mapping here does not capture.",
+  "sources": [
+    {
+      "id": "ban_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Balinese language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Balinese_language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Balinese_language",
+      "pages": null,
+      "notes": "Latin alphabet letter→IPA correspondences and phoneme inventory."
+    },
+    {
+      "id": "clynes1995",
+      "author": "Clynes, Adrian",
+      "year": 1995,
+      "title": "Topics in the phonology and morphosyntax of Balinese, based on the dialect of Singaraja, North Bali",
+      "publisher": "Australian National University (PhD thesis)",
+      "url": "https://openresearch-repository.anu.edu.au/handle/1885/10744",
+      "pages": "xiv, 23, 30",
+      "notes": "Note on orthography (p. xiv) for ⟨e⟩ = /ə/ and ⟨é⟩ = /e/; the six-vowel system (p. 23); the allophony of the central vowels (p. 30)."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Balinese_language",
+    "https://ban.wikipedia.org/wiki/Basa_Bali"
+  ],
+  "parent": "x-clade-aust1307",
+  "ancestors": [
+    {
+      "code": "x-clade-aust1307",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Austronesian — the classification node this language sits under."
+    }
+  ],
+  "location": {
+    "latitude": -8.35714,
+    "longitude": 115.075,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Balinese."
+  }
+}

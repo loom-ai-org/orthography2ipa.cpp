@@ -1,0 +1,185 @@
+{
+  "code": "dsb",
+  "name": "Lower Sorbian",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "iso639_3": "dsb",
+  "glottolog_code": "lowe1385",
+  "timespan": {
+    "start_year": 1574,
+    "end_year": null
+  },
+  "graphemes": {
+    "ch": [
+      "x"
+    ],
+    "dž": [
+      "dʒ"
+    ],
+    "š": [
+      "ʃ"
+    ],
+    "ž": [
+      "ʒ"
+    ],
+    "č": [
+      "tʃ"
+    ],
+    "ś": [
+      "ɕ"
+    ],
+    "ź": [
+      "ʑ"
+    ],
+    "ć": [
+      "tɕ"
+    ],
+    "ń": [
+      "ɲ"
+    ],
+    "ł": [
+      "w"
+    ],
+    "a": [
+      "a"
+    ],
+    "b": [
+      "b"
+    ],
+    "c": [
+      "ts"
+    ],
+    "d": [
+      "d"
+    ],
+    "e": [
+      "ɛ"
+    ],
+    "ě": [
+      "e"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "h": [
+      "h"
+    ],
+    "i": [
+      "i"
+    ],
+    "j": [
+      "j"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "o": [
+      "ɔ"
+    ],
+    "ó": [
+      "o"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "u": [
+      "u"
+    ],
+    "v": [
+      "v"
+    ],
+    "w": [
+      "v"
+    ],
+    "y": [
+      "ɨ"
+    ],
+    "z": [
+      "z"
+    ],
+    "ŕ": [
+      "rʲ"
+    ]
+  },
+  "allophones": {},
+  "positional_graphemes": {},
+  "ancestors": [
+    {
+      "code": "sla",
+      "role": "parent",
+      "weight": 0.86,
+      "notes": "Descent from Proto-Slavic (West Slavic, Sorbian/Lusatian subgroup)."
+    },
+    {
+      "code": "de-DE",
+      "role": "adstrate",
+      "weight": 0.16,
+      "notes": "German adstrate: heavily German-influenced Slavic island in Lower Lusatia; closely related to Upper Sorbian."
+    }
+  ],
+  "parent": "x-clade-west2792",
+  "notes": "Lower Sorbian (Dolnoserbski), West Slavic minority language spoken in Lower Lusatia, Germany. Closely related to Upper Sorbian. Distinct palatal fricatives ś /ɕ/ and ź /ʑ/. More conservative vowel system than Upper Sorbian. Open question: Żygis (2003: 180-181) argues that the ⟨š ž⟩ series is retroflex /ʂ ʐ/ rather than postalveolar, and that the alveolo-palatal affricates have merged with /ɕ ʑ/, which would collapse the ⟨ć⟩ and ⟨ś⟩ distinction kept here.",
+  "sources": [
+    {
+      "id": "wiki-dsb",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Lower Sorbian language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Lower_Sorbian_language"
+    },
+    {
+      "id": "zygis2003",
+      "author": "Żygis, Marzena",
+      "year": 2003,
+      "title": "Phonetic and phonological aspects of Slavic sibilant fricatives",
+      "publisher": "ZAS Papers in Linguistics 3, 175-213",
+      "url": "https://zaspil.leibniz-zas.de/article/download/191/191",
+      "pages": "180-181",
+      "notes": "Section 2.2 on Lower Sorbian read in full: it argues the ⟨š ž⟩ series is retroflex rather than postalveolar, and reports that the alveolo-palatal affricates have merged with the alveolo-palatal fricatives."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Lower_Sorbian_language",
+    "https://dsb.wikipedia.org/wiki/Dolnoserbš%C4%87ina",
+    "https://dsb.wikipedia.org/wiki/Dolnoserb%C5%A1%C4%87ina"
+  ],
+  "stress": {
+    "default_position": 1,
+    "final_stress_endings": [],
+    "penult_stress_endings": [],
+    "marked_vowels": [],
+    "stress_mark": "ˈ",
+    "notes": "Lower Sorbian (dsb) has categorical initial stress, following the West Slavic pattern shared with Czech. Source: Stone (1993), in The Slavonic Languages; Wikipedia: https://en.wikipedia.org/wiki/Lower_Sorbian_language"
+  },
+  "wikidata_qid": "Q13286",
+  "phoible_id": "lowe1385",
+  "wals_code": "srl",
+  "location": {
+    "latitude": 51.6621,
+    "longitude": 13.9407,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Lower Sorbian."
+  }
+}

@@ -1,0 +1,1276 @@
+{
+  "ancestors": [
+    {
+      "code": "sla",
+      "role": "parent",
+      "weight": 0.9,
+      "notes": "Descent from Proto-Slavic (East Slavic subgroup) via Old East Slavic."
+    },
+    {
+      "code": "pl",
+      "role": "adstrate",
+      "weight": 0.08,
+      "notes": "Polish adstrate: strong influence during the Grand Duchy of Lithuania / Polish-Lithuanian Commonwealth."
+    },
+    {
+      "code": "ru",
+      "role": "adstrate",
+      "weight": 0.06,
+      "notes": "Russian adstrate: modern superposed contact influence."
+    }
+  ],
+  "code": "be",
+  "name": "Belarusian",
+  "script": "Cyrillic",
+  "graphemes": {
+    "а": [
+      "a"
+    ],
+    "е": [
+      "je",
+      "e"
+    ],
+    "ё": [
+      "jo"
+    ],
+    "і": [
+      "i"
+    ],
+    "й": [
+      "j"
+    ],
+    "о": [
+      "o"
+    ],
+    "у": [
+      "u"
+    ],
+    "ы": [
+      "ɨ"
+    ],
+    "э": [
+      "ɛ"
+    ],
+    "ю": [
+      "ju"
+    ],
+    "я": [
+      "ja"
+    ],
+    "б": [
+      "b"
+    ],
+    "в": [
+      "v"
+    ],
+    "г": [
+      "ɣ"
+    ],
+    "ґ": [
+      "ɡ"
+    ],
+    "д": [
+      "d"
+    ],
+    "дж": [
+      "dʐ"
+    ],
+    "дз": [
+      "dz"
+    ],
+    "ж": [
+      "ʐ"
+    ],
+    "з": [
+      "z"
+    ],
+    "к": [
+      "k"
+    ],
+    "л": [
+      "ɫ"
+    ],
+    "м": [
+      "m"
+    ],
+    "н": [
+      "n"
+    ],
+    "п": [
+      "p"
+    ],
+    "р": [
+      "r"
+    ],
+    "с": [
+      "s"
+    ],
+    "т": [
+      "t"
+    ],
+    "ў": [
+      "u̯"
+    ],
+    "ф": [
+      "f"
+    ],
+    "х": [
+      "x"
+    ],
+    "ц": [
+      "ts"
+    ],
+    "ч": [
+      "tʂ"
+    ],
+    "ш": [
+      "ʂ"
+    ],
+    "шч": [
+      "ʂtʂ"
+    ],
+    "'": [
+      ""
+    ],
+    "ь": [
+      "ʲ"
+    ],
+    "бе": [
+      "bʲe"
+    ],
+    "бё": [
+      "bʲo"
+    ],
+    "бю": [
+      "bʲu"
+    ],
+    "бя": [
+      "bʲa"
+    ],
+    "бі": [
+      "bʲi"
+    ],
+    "ве": [
+      "vʲe"
+    ],
+    "вё": [
+      "vʲo"
+    ],
+    "вю": [
+      "vʲu"
+    ],
+    "вя": [
+      "vʲa"
+    ],
+    "ві": [
+      "vʲi"
+    ],
+    "ге": [
+      "ɣʲe"
+    ],
+    "гё": [
+      "ɣʲo"
+    ],
+    "гю": [
+      "ɣʲu"
+    ],
+    "гя": [
+      "ɣʲa"
+    ],
+    "гі": [
+      "ɣʲi"
+    ],
+    "зе": [
+      "zʲe"
+    ],
+    "зё": [
+      "zʲo"
+    ],
+    "зю": [
+      "zʲu"
+    ],
+    "зя": [
+      "zʲa"
+    ],
+    "зі": [
+      "zʲi"
+    ],
+    "ке": [
+      "kʲe"
+    ],
+    "кё": [
+      "kʲo"
+    ],
+    "кю": [
+      "kʲu"
+    ],
+    "кя": [
+      "kʲa"
+    ],
+    "кі": [
+      "kʲi"
+    ],
+    "ле": [
+      "lʲe"
+    ],
+    "лё": [
+      "lʲo"
+    ],
+    "лю": [
+      "lʲu"
+    ],
+    "ля": [
+      "lʲa"
+    ],
+    "лі": [
+      "lʲi"
+    ],
+    "ме": [
+      "mʲe"
+    ],
+    "мё": [
+      "mʲo"
+    ],
+    "мю": [
+      "mʲu"
+    ],
+    "мя": [
+      "mʲa"
+    ],
+    "мі": [
+      "mʲi"
+    ],
+    "не": [
+      "nʲe"
+    ],
+    "нё": [
+      "nʲo"
+    ],
+    "ню": [
+      "nʲu"
+    ],
+    "ня": [
+      "nʲa"
+    ],
+    "ні": [
+      "nʲi"
+    ],
+    "пе": [
+      "pʲe"
+    ],
+    "пё": [
+      "pʲo"
+    ],
+    "пю": [
+      "pʲu"
+    ],
+    "пя": [
+      "pʲa"
+    ],
+    "пі": [
+      "pʲi"
+    ],
+    "се": [
+      "sʲe"
+    ],
+    "сё": [
+      "sʲo"
+    ],
+    "сю": [
+      "sʲu"
+    ],
+    "ся": [
+      "sʲa"
+    ],
+    "сі": [
+      "sʲi"
+    ],
+    "фе": [
+      "fʲe"
+    ],
+    "фё": [
+      "fʲo"
+    ],
+    "фю": [
+      "fʲu"
+    ],
+    "фя": [
+      "fʲa"
+    ],
+    "фі": [
+      "fʲi"
+    ],
+    "хе": [
+      "xʲe"
+    ],
+    "хё": [
+      "xʲo"
+    ],
+    "хю": [
+      "xʲu"
+    ],
+    "хя": [
+      "xʲa"
+    ],
+    "хі": [
+      "xʲi"
+    ],
+    "це": [
+      "tsʲe"
+    ],
+    "цё": [
+      "tsʲo"
+    ],
+    "цю": [
+      "tsʲu"
+    ],
+    "ця": [
+      "tsʲa"
+    ],
+    "ці": [
+      "tsʲi"
+    ],
+    "цц": [
+      "tsː"
+    ],
+    "іі": [
+      "iji"
+    ],
+    "нн": [
+      "nː"
+    ],
+    "лл": [
+      "lː"
+    ],
+    "сс": [
+      "sː"
+    ],
+    "зз": [
+      "zː"
+    ],
+    "дздз": [
+      "dzː"
+    ],
+    "ль": [
+      "lʲ"
+    ]
+  },
+  "allophones": {
+    "p": [
+      "p"
+    ],
+    "b": [
+      "b",
+      "p"
+    ],
+    "t": [
+      "t"
+    ],
+    "d": [
+      "d",
+      "t"
+    ],
+    "k": [
+      "k"
+    ],
+    "ɡ": [
+      "ɡ",
+      "k"
+    ],
+    "ɣ": [
+      "ɣ",
+      "x"
+    ],
+    "f": [
+      "f"
+    ],
+    "v": [
+      "v",
+      "f"
+    ],
+    "s": [
+      "s"
+    ],
+    "sʲ": [
+      "sʲ"
+    ],
+    "z": [
+      "z",
+      "s"
+    ],
+    "zʲ": [
+      "zʲ",
+      "sʲ"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "ʒ": [
+      "ʒ",
+      "ʃ"
+    ],
+    "x": [
+      "x"
+    ],
+    "ts": [
+      "ts"
+    ],
+    "tsʲ": [
+      "tsʲ"
+    ],
+    "dz": [
+      "dz",
+      "ts"
+    ],
+    "dzʲ": [
+      "dzʲ",
+      "tsʲ"
+    ],
+    "tʃ": [
+      "tʃ"
+    ],
+    "dʒ": [
+      "dʒ",
+      "tʃ"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n",
+      "ŋ"
+    ],
+    "nʲ": [
+      "nʲ"
+    ],
+    "l": [
+      "l"
+    ],
+    "lʲ": [
+      "lʲ"
+    ],
+    "r": [
+      "r"
+    ],
+    "w": [
+      "w"
+    ],
+    "j": [
+      "j"
+    ],
+    "a": [
+      "a",
+      "ɐ"
+    ],
+    "ɔ": [
+      "ɔ",
+      "a"
+    ],
+    "ɛ": [
+      "ɛ",
+      "ɪ"
+    ],
+    "i": [
+      "i"
+    ],
+    "ɨ": [
+      "ɨ"
+    ],
+    "u": [
+      "u",
+      "ʊ"
+    ]
+  },
+  "parent": "x-clade-east1426",
+  "notes": "Standard Belarusian (Tarashkevitsa/Narkamaŭka). Distinctive features: ⟨г⟩ = [ɣ] (voiced velar fricative, not plosive), ⟨ў⟩ = [w] (unique letter for non-syllabic /w/), pervasive аканне (unstressed /ɔ/ → [a]), яканне (unstressed /ɛ/ → [i] after soft consonants), full affricate writing: ⟨дз⟩ = [dz], ⟨дж⟩ = [dʒ].",
+  "quality": "research",
+  "script_type": "alphabet",
+  "sources": [
+    {
+      "id": "comrie_corbett1993",
+      "author": "Comrie, B. & Corbett, G. (eds.)",
+      "year": 1993,
+      "title": "The Slavonic Languages",
+      "publisher": "Routledge",
+      "url": null,
+      "pages": null,
+      "notes": null,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Slavic_languages"
+    },
+    {
+      "id": "mayo1993",
+      "author": "Mayo, P.",
+      "year": 1993,
+      "title": "Belorussian",
+      "publisher": "in B. Comrie & G. Corbett (eds.), The Slavonic Languages",
+      "url": null,
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Belarusian_language",
+    "https://be.wikipedia.org/wiki/Беларуская_мова",
+    "https://be.wikipedia.org/wiki/%D0%91%D0%B5%D0%BB%D0%B0%D1%80%D1%83%D1%81%D0%BA%D0%B0%D1%8F_%D0%BC%D0%BE%D0%B2%D0%B0"
+  ],
+  "timespan": {
+    "start_year": 1300,
+    "end_year": null
+  },
+  "glottolog_code": "bela1254",
+  "iso639_3": "bel",
+  "wikidata_qid": "Q9091",
+  "wals_code": "blr",
+  "location": {
+    "latitude": 53.2307,
+    "longitude": 25.6038,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Belarusian."
+  },
+  "positional_graphemes": {
+    "і": {
+      "word_initial": [
+        "ji"
+      ],
+      "default": [
+        "i"
+      ]
+    },
+    "ў": {
+      "word_initial": [
+        "w"
+      ],
+      "default": [
+        "u̯"
+      ]
+    },
+    "б": {
+      "word_final": [
+        "p"
+      ]
+    },
+    "д": {
+      "word_final": [
+        "t"
+      ]
+    },
+    "г": {
+      "word_final": [
+        "x"
+      ]
+    },
+    "з": {
+      "word_final": [
+        "s"
+      ]
+    },
+    "ж": {
+      "word_final": [
+        "ʂ"
+      ]
+    },
+    "в": {
+      "word_final": [
+        "f"
+      ]
+    }
+  },
+  "allophone_rules": [
+    {
+      "id": "BE_REGR_PALAT_s",
+      "phonemes": [
+        "s"
+      ],
+      "surface": "sʲ",
+      "followed_by_phoneme": [
+        "tsʲ",
+        "dzʲ",
+        "nʲ",
+        "sʲ",
+        "zʲ",
+        "lʲ",
+        "bʲ",
+        "vʲ",
+        "mʲ",
+        "pʲ",
+        "fʲ",
+        "ʋʲ"
+      ],
+      "notes": "Regressive palatalization before soft dentals (Mayo (1993) Belarusian, in Comrie & Corbett (eds.) The Slavonic Languages, Routledge, phonology section): адкласці [atkɫasʲtsʲi]. s/z also soften before soft labials: звер [zʲvʲer]."
+    },
+    {
+      "id": "BE_REGR_PALAT_z",
+      "phonemes": [
+        "z"
+      ],
+      "surface": "zʲ",
+      "followed_by_phoneme": [
+        "tsʲ",
+        "nʲ",
+        "sʲ",
+        "zʲ",
+        "lʲ",
+        "bʲ",
+        "vʲ",
+        "mʲ",
+        "pʲ",
+        "fʲ",
+        "ʋʲ"
+      ],
+      "notes": "Regressive palatalization before soft dentals (Mayo (1993) Belarusian, in Comrie & Corbett (eds.) The Slavonic Languages, Routledge, phonology section): адкласці [atkɫasʲtsʲi]. s/z also soften before soft labials: звер [zʲvʲer]."
+    },
+    {
+      "id": "BE_REGR_PALAT_n",
+      "phonemes": [
+        "n"
+      ],
+      "surface": "nʲ",
+      "followed_by_phoneme": [
+        "tsʲ",
+        "dzʲ",
+        "nʲ",
+        "sʲ",
+        "zʲ",
+        "lʲ"
+      ],
+      "notes": "Regressive palatalization before soft dentals (Mayo (1993) Belarusian, in Comrie & Corbett (eds.) The Slavonic Languages, Routledge, phonology section): адкласці [atkɫasʲtsʲi]."
+    },
+    {
+      "id": "BE_REGR_DEVOICE_b",
+      "phonemes": [
+        "b"
+      ],
+      "surface": "p",
+      "followed_by_phoneme": [
+        "p",
+        "t",
+        "k",
+        "f",
+        "s",
+        "ʂ",
+        "x",
+        "ts",
+        "tʂ",
+        "tsʲ",
+        "pʲ",
+        "kʲ",
+        "fʲ",
+        "sʲ",
+        "xʲ"
+      ],
+      "notes": "Regressive devoicing before voiceless obstruents (Mayo 1993): адкласці [atkɫasʲtsʲi]."
+    },
+    {
+      "id": "BE_REGR_DEVOICE_d",
+      "phonemes": [
+        "d"
+      ],
+      "surface": "t",
+      "followed_by_phoneme": [
+        "p",
+        "t",
+        "k",
+        "f",
+        "s",
+        "ʂ",
+        "x",
+        "ts",
+        "tʂ",
+        "tsʲ",
+        "pʲ",
+        "kʲ",
+        "fʲ",
+        "sʲ",
+        "xʲ"
+      ],
+      "notes": "Regressive devoicing before voiceless obstruents (Mayo 1993): адкласці [atkɫasʲtsʲi]."
+    },
+    {
+      "id": "BE_REGR_DEVOICE_ɡ",
+      "phonemes": [
+        "ɡ"
+      ],
+      "surface": "k",
+      "followed_by_phoneme": [
+        "p",
+        "t",
+        "k",
+        "f",
+        "s",
+        "ʂ",
+        "x",
+        "ts",
+        "tʂ",
+        "tsʲ",
+        "pʲ",
+        "kʲ",
+        "fʲ",
+        "sʲ",
+        "xʲ"
+      ],
+      "notes": "Regressive devoicing before voiceless obstruents (Mayo 1993): адкласці [atkɫasʲtsʲi]."
+    },
+    {
+      "id": "BE_REGR_DEVOICE_z",
+      "phonemes": [
+        "z"
+      ],
+      "surface": "s",
+      "followed_by_phoneme": [
+        "p",
+        "t",
+        "k",
+        "f",
+        "s",
+        "ʂ",
+        "x",
+        "ts",
+        "tʂ",
+        "tsʲ",
+        "pʲ",
+        "kʲ",
+        "fʲ",
+        "sʲ",
+        "xʲ"
+      ],
+      "notes": "Regressive devoicing before voiceless obstruents (Mayo 1993): адкласці [atkɫasʲtsʲi]."
+    },
+    {
+      "id": "BE_REGR_DEVOICE_ʐ",
+      "phonemes": [
+        "ʐ"
+      ],
+      "surface": "ʂ",
+      "followed_by_phoneme": [
+        "p",
+        "t",
+        "k",
+        "f",
+        "s",
+        "ʂ",
+        "x",
+        "ts",
+        "tʂ",
+        "tsʲ",
+        "pʲ",
+        "kʲ",
+        "fʲ",
+        "sʲ",
+        "xʲ"
+      ],
+      "notes": "Regressive devoicing before voiceless obstruents (Mayo 1993): адкласці [atkɫasʲtsʲi]."
+    },
+    {
+      "id": "BE_REGR_DEVOICE_v",
+      "phonemes": [
+        "v"
+      ],
+      "surface": "f",
+      "followed_by_phoneme": [
+        "p",
+        "t",
+        "k",
+        "f",
+        "s",
+        "ʂ",
+        "x",
+        "ts",
+        "tʂ",
+        "tsʲ",
+        "pʲ",
+        "kʲ",
+        "fʲ",
+        "sʲ",
+        "xʲ"
+      ],
+      "notes": "Regressive devoicing before voiceless obstruents (Mayo 1993): адкласці [atkɫasʲtsʲi]."
+    },
+    {
+      "id": "BE_REGR_DEVOICE_dz",
+      "phonemes": [
+        "dz"
+      ],
+      "surface": "ts",
+      "followed_by_phoneme": [
+        "p",
+        "t",
+        "k",
+        "f",
+        "s",
+        "ʂ",
+        "x",
+        "ts",
+        "tʂ",
+        "tsʲ",
+        "pʲ",
+        "kʲ",
+        "fʲ",
+        "sʲ",
+        "xʲ"
+      ],
+      "notes": "Regressive devoicing before voiceless obstruents (Mayo 1993): адкласці [atkɫasʲtsʲi]."
+    },
+    {
+      "id": "BE_REGR_DEVOICE_ɣ",
+      "phonemes": [
+        "ɣ"
+      ],
+      "surface": "x",
+      "followed_by_phoneme": [
+        "p",
+        "t",
+        "k",
+        "f",
+        "s",
+        "ʂ",
+        "x",
+        "ts",
+        "tʂ",
+        "tsʲ",
+        "pʲ",
+        "kʲ",
+        "fʲ",
+        "sʲ",
+        "xʲ"
+      ],
+      "notes": "Regressive devoicing before voiceless obstruents (Mayo 1993): адкласці [atkɫasʲtsʲi]."
+    },
+    {
+      "id": "BE_PALAT_dz",
+      "phonemes": [
+        "dz"
+      ],
+      "surface": "dzʲ",
+      "followed_by_phoneme": [
+        "je",
+        "jo",
+        "ju",
+        "ja",
+        "i"
+      ],
+      "notes": "palatalised before a soft vowel letter; д/т surface as дз/ц (дзеканне, цеканне)"
+    },
+    {
+      "id": "BE_PALAT_ts",
+      "phonemes": [
+        "ts"
+      ],
+      "surface": "tsʲ",
+      "followed_by_phoneme": [
+        "je",
+        "jo",
+        "ju",
+        "ja",
+        "i"
+      ],
+      "notes": "palatalised before a soft vowel letter; д/т surface as дз/ц (дзеканне, цеканне)"
+    },
+    {
+      "id": "BE_PALAT_d",
+      "phonemes": [
+        "d"
+      ],
+      "surface": "dzʲ",
+      "followed_by_phoneme": [
+        "je",
+        "jo",
+        "ju",
+        "ja",
+        "i"
+      ],
+      "notes": "palatalised before a soft vowel letter; д/т surface as дз/ц (дзеканне, цеканне)"
+    },
+    {
+      "id": "BE_PALAT_t",
+      "phonemes": [
+        "t"
+      ],
+      "surface": "tsʲ",
+      "followed_by_phoneme": [
+        "je",
+        "jo",
+        "ju",
+        "ja",
+        "i"
+      ],
+      "notes": "palatalised before a soft vowel letter; д/т surface as дз/ц (дзеканне, цеканне)"
+    },
+    {
+      "id": "BE_PALAT_n",
+      "phonemes": [
+        "n"
+      ],
+      "surface": "nʲ",
+      "followed_by_phoneme": [
+        "je",
+        "jo",
+        "ju",
+        "ja",
+        "i"
+      ],
+      "notes": "palatalised before a soft vowel letter; д/т surface as дз/ц (дзеканне, цеканне)"
+    },
+    {
+      "id": "BE_PALAT_ɫ",
+      "phonemes": [
+        "ɫ"
+      ],
+      "surface": "lʲ",
+      "followed_by_phoneme": [
+        "je",
+        "jo",
+        "ju",
+        "ja",
+        "i"
+      ],
+      "notes": "palatalised before a soft vowel letter; д/т surface as дз/ц (дзеканне, цеканне)"
+    },
+    {
+      "id": "BE_PALAT_s",
+      "phonemes": [
+        "s"
+      ],
+      "surface": "sʲ",
+      "followed_by_phoneme": [
+        "je",
+        "jo",
+        "ju",
+        "ja",
+        "i"
+      ],
+      "notes": "palatalised before a soft vowel letter; д/т surface as дз/ц (дзеканне, цеканне)"
+    },
+    {
+      "id": "BE_PALAT_z",
+      "phonemes": [
+        "z"
+      ],
+      "surface": "zʲ",
+      "followed_by_phoneme": [
+        "je",
+        "jo",
+        "ju",
+        "ja",
+        "i"
+      ],
+      "notes": "palatalised before a soft vowel letter; д/т surface as дз/ц (дзеканне, цеканне)"
+    },
+    {
+      "id": "BE_PALAT_b",
+      "phonemes": [
+        "b"
+      ],
+      "surface": "bʲ",
+      "followed_by_phoneme": [
+        "je",
+        "jo",
+        "ju",
+        "ja",
+        "i"
+      ],
+      "notes": "palatalised before a soft vowel letter; д/т surface as дз/ц (дзеканне, цеканне)"
+    },
+    {
+      "id": "BE_PALAT_v",
+      "phonemes": [
+        "v"
+      ],
+      "surface": "vʲ",
+      "followed_by_phoneme": [
+        "je",
+        "jo",
+        "ju",
+        "ja",
+        "i"
+      ],
+      "notes": "palatalised before a soft vowel letter; д/т surface as дз/ц (дзеканне, цеканне)"
+    },
+    {
+      "id": "BE_PALAT_m",
+      "phonemes": [
+        "m"
+      ],
+      "surface": "mʲ",
+      "followed_by_phoneme": [
+        "je",
+        "jo",
+        "ju",
+        "ja",
+        "i"
+      ],
+      "notes": "palatalised before a soft vowel letter; д/т surface as дз/ц (дзеканне, цеканне)"
+    },
+    {
+      "id": "BE_PALAT_p",
+      "phonemes": [
+        "p"
+      ],
+      "surface": "pʲ",
+      "followed_by_phoneme": [
+        "je",
+        "jo",
+        "ju",
+        "ja",
+        "i"
+      ],
+      "notes": "palatalised before a soft vowel letter; д/т surface as дз/ц (дзеканне, цеканне)"
+    },
+    {
+      "id": "BE_PALAT_f",
+      "phonemes": [
+        "f"
+      ],
+      "surface": "fʲ",
+      "followed_by_phoneme": [
+        "je",
+        "jo",
+        "ju",
+        "ja",
+        "i"
+      ],
+      "notes": "palatalised before a soft vowel letter; д/т surface as дз/ц (дзеканне, цеканне)"
+    },
+    {
+      "id": "BE_PALAT_nː",
+      "phonemes": [
+        "nː"
+      ],
+      "surface": "nʲː",
+      "followed_by_phoneme": [
+        "je",
+        "jo",
+        "ju",
+        "ja",
+        "i"
+      ],
+      "notes": "palatalised before a soft vowel letter; д/т surface as дз/ц (дзеканне, цеканне)"
+    },
+    {
+      "id": "BE_PALAT_lː",
+      "phonemes": [
+        "lː"
+      ],
+      "surface": "lʲː",
+      "followed_by_phoneme": [
+        "je",
+        "jo",
+        "ju",
+        "ja",
+        "i"
+      ],
+      "notes": "palatalised before a soft vowel letter; д/т surface as дз/ц (дзеканне, цеканне)"
+    },
+    {
+      "id": "BE_PALAT_sː",
+      "phonemes": [
+        "sː"
+      ],
+      "surface": "sʲː",
+      "followed_by_phoneme": [
+        "je",
+        "jo",
+        "ju",
+        "ja",
+        "i"
+      ],
+      "notes": "palatalised before a soft vowel letter; д/т surface as дз/ц (дзеканне, цеканне)"
+    },
+    {
+      "id": "BE_PALAT_zː",
+      "phonemes": [
+        "zː"
+      ],
+      "surface": "zʲː",
+      "followed_by_phoneme": [
+        "je",
+        "jo",
+        "ju",
+        "ja",
+        "i"
+      ],
+      "notes": "palatalised before a soft vowel letter; д/т surface as дз/ц (дзеканне, цеканне)"
+    },
+    {
+      "id": "BE_PALAT_tsː",
+      "phonemes": [
+        "tsː"
+      ],
+      "surface": "tsʲː",
+      "followed_by_phoneme": [
+        "je",
+        "jo",
+        "ju",
+        "ja",
+        "i"
+      ],
+      "notes": "palatalised before a soft vowel letter; д/т surface as дз/ц (дзеканне, цеканне)"
+    },
+    {
+      "id": "BE_PALAT_dzː",
+      "phonemes": [
+        "dzː"
+      ],
+      "surface": "dzʲː",
+      "followed_by_phoneme": [
+        "je",
+        "jo",
+        "ju",
+        "ja",
+        "i"
+      ],
+      "notes": "palatalised before a soft vowel letter; д/т surface as дз/ц (дзеканне, цеканне)"
+    },
+    {
+      "id": "BE_DEIOTA_je",
+      "phonemes": [
+        "je"
+      ],
+      "surface": "e",
+      "notes": "iotation survives word-initially, after a vowel, after the separating apostrophe (Дар'я [darja]) and after the soft sign (Ілья [jilʲja]); it is lost only after a plain consonant, which palatalises instead. Keyed on the preceding BOUNDARY phoneme, not the grapheme: ⟨лі⟩ is one grapheme that ends in a vowel",
+      "preceded_by_phoneme": [
+        "b",
+        "d",
+        "dz",
+        "dzː",
+        "f",
+        "j",
+        "k",
+        "lː",
+        "m",
+        "n",
+        "nː",
+        "p",
+        "r",
+        "s",
+        "sː",
+        "t",
+        "ts",
+        "tsː",
+        "tʂ",
+        "v",
+        "x",
+        "z",
+        "zː",
+        "ɡ",
+        "ɣ",
+        "ɫ",
+        "ʂ",
+        "ʐ"
+      ]
+    },
+    {
+      "id": "BE_DEIOTA_jo",
+      "phonemes": [
+        "jo"
+      ],
+      "surface": "o",
+      "notes": "iotation survives word-initially, after a vowel, after the separating apostrophe (Дар'я [darja]) and after the soft sign (Ілья [jilʲja]); it is lost only after a plain consonant, which palatalises instead. Keyed on the preceding BOUNDARY phoneme, not the grapheme: ⟨лі⟩ is one grapheme that ends in a vowel",
+      "preceded_by_phoneme": [
+        "b",
+        "d",
+        "dz",
+        "dzː",
+        "f",
+        "j",
+        "k",
+        "lː",
+        "m",
+        "n",
+        "nː",
+        "p",
+        "r",
+        "s",
+        "sː",
+        "t",
+        "ts",
+        "tsː",
+        "tʂ",
+        "v",
+        "x",
+        "z",
+        "zː",
+        "ɡ",
+        "ɣ",
+        "ɫ",
+        "ʂ",
+        "ʐ"
+      ]
+    },
+    {
+      "id": "BE_DEIOTA_ju",
+      "phonemes": [
+        "ju"
+      ],
+      "surface": "u",
+      "notes": "iotation survives word-initially, after a vowel, after the separating apostrophe (Дар'я [darja]) and after the soft sign (Ілья [jilʲja]); it is lost only after a plain consonant, which palatalises instead. Keyed on the preceding BOUNDARY phoneme, not the grapheme: ⟨лі⟩ is one grapheme that ends in a vowel",
+      "preceded_by_phoneme": [
+        "b",
+        "d",
+        "dz",
+        "dzː",
+        "f",
+        "j",
+        "k",
+        "lː",
+        "m",
+        "n",
+        "nː",
+        "p",
+        "r",
+        "s",
+        "sː",
+        "t",
+        "ts",
+        "tsː",
+        "tʂ",
+        "v",
+        "x",
+        "z",
+        "zː",
+        "ɡ",
+        "ɣ",
+        "ɫ",
+        "ʂ",
+        "ʐ"
+      ]
+    },
+    {
+      "id": "BE_DEIOTA_ja",
+      "phonemes": [
+        "ja"
+      ],
+      "surface": "a",
+      "notes": "iotation survives word-initially, after a vowel, after the separating apostrophe (Дар'я [darja]) and after the soft sign (Ілья [jilʲja]); it is lost only after a plain consonant, which palatalises instead. Keyed on the preceding BOUNDARY phoneme, not the grapheme: ⟨лі⟩ is one grapheme that ends in a vowel",
+      "preceded_by_phoneme": [
+        "b",
+        "d",
+        "dz",
+        "dzː",
+        "f",
+        "j",
+        "k",
+        "lː",
+        "m",
+        "n",
+        "nː",
+        "p",
+        "r",
+        "s",
+        "sː",
+        "t",
+        "ts",
+        "tsː",
+        "tʂ",
+        "v",
+        "x",
+        "z",
+        "zː",
+        "ɡ",
+        "ɣ",
+        "ɫ",
+        "ʂ",
+        "ʐ"
+      ]
+    }
+  ]
+}

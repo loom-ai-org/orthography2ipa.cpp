@@ -1,0 +1,318 @@
+{
+  "parent": "trk",
+  "ancestors": [
+    {
+      "code": "trk",
+      "role": "parent",
+      "weight": 0.85,
+      "notes": "Descent from Proto-Turkic (Oghuz branch)."
+    },
+    {
+      "code": "fa",
+      "role": "adstrate",
+      "weight": 0.16,
+      "notes": "Persian adstrate: very strong, sustained bilingual contact in Iranian Azerbaijan."
+    },
+    {
+      "code": "ar",
+      "role": "adstrate",
+      "weight": 0.1,
+      "notes": "Arabic adstrate: religious/scholarly vocabulary, largely via Persian."
+    },
+    {
+      "code": "ru",
+      "role": "adstrate",
+      "weight": 0.05,
+      "notes": "Russian adstrate: Soviet-era technical/administrative lexicon."
+    }
+  ],
+  "code": "az",
+  "name": "Azerbaijani",
+  "glottolog_code": "nort2697",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "iso639_3": "aze",
+  "quality": "research",
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "b": [
+      "b"
+    ],
+    "c": [
+      "dʒ"
+    ],
+    "ç": [
+      "tʃ"
+    ],
+    "d": [
+      "d"
+    ],
+    "e": [
+      "e"
+    ],
+    "ə": [
+      "æ"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "ğ": [
+      "ɣ"
+    ],
+    "h": [
+      "h"
+    ],
+    "x": [
+      "x"
+    ],
+    "i": [
+      "i"
+    ],
+    "ı": [
+      "ɯ"
+    ],
+    "j": [
+      "ʒ"
+    ],
+    "k": [
+      "k"
+    ],
+    "q": [
+      "ɡ"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "o": [
+      "o"
+    ],
+    "ö": [
+      "ø"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "ş": [
+      "ʃ"
+    ],
+    "t": [
+      "t"
+    ],
+    "u": [
+      "u"
+    ],
+    "ü": [
+      "y"
+    ],
+    "v": [
+      "v"
+    ],
+    "y": [
+      "j"
+    ],
+    "z": [
+      "z"
+    ]
+  },
+  "allophones": {
+    "a": [
+      "a"
+    ],
+    "b": [
+      "b",
+      "p"
+    ],
+    "dʒ": [
+      "dʒ",
+      "tʃ"
+    ],
+    "tʃ": [
+      "tʃ"
+    ],
+    "d": [
+      "d",
+      "t"
+    ],
+    "e": [
+      "e"
+    ],
+    "æ": [
+      "æ"
+    ],
+    "f": [
+      "f"
+    ],
+    "ɡ": [
+      "ɡ",
+      "k"
+    ],
+    "ɣ": [
+      "ɣ",
+      "j"
+    ],
+    "h": [
+      "h"
+    ],
+    "x": [
+      "x"
+    ],
+    "i": [
+      "i"
+    ],
+    "ɯ": [
+      "ɯ"
+    ],
+    "ʒ": [
+      "ʒ",
+      "ʃ"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l",
+      "ɫ"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n",
+      "ŋ"
+    ],
+    "o": [
+      "o"
+    ],
+    "ø": [
+      "ø"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "t": [
+      "t"
+    ],
+    "u": [
+      "u"
+    ],
+    "y": [
+      "y"
+    ],
+    "v": [
+      "v"
+    ],
+    "j": [
+      "j"
+    ]
+  },
+  "positional_graphemes": {
+    "b": {
+      "word_final": [
+        "p"
+      ],
+      "default": [
+        "b"
+      ]
+    },
+    "d": {
+      "word_final": [
+        "t"
+      ],
+      "default": [
+        "d"
+      ]
+    },
+    "c": {
+      "word_final": [
+        "tʃ"
+      ],
+      "default": [
+        "dʒ"
+      ]
+    },
+    "g": {
+      "word_final": [
+        "k"
+      ],
+      "default": [
+        "ɡ"
+      ]
+    }
+  },
+  "notes": "North Azerbaijani (Latin-script official orthography since 1991). 9-vowel system including front unrounded /æ/ (ə) and back unrounded /ɯ/ (ı). Vowel harmony similar to Turkish. Final devoicing: b→p, c→ç, d→t, g→k. Q represents a voiced uvular stop [ɢ] in loanwords/dialects. Ğ is a fricative [ɣ] unlike Turkish where it is silent.",
+  "sources": [
+    {
+      "id": "azerbaijani_phonology_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Azerbaijani phonology",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Azerbaijani_phonology",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Azerbaijani_phonology",
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "comrie1997",
+      "author": "Comrie, B.",
+      "year": 1997,
+      "title": "The World's Major Languages",
+      "publisher": "Oxford University Press",
+      "url": null,
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Azerbaijani_language",
+    "https://en.wikipedia.org/wiki/Azerbaijani_phonology",
+    "https://az.wikipedia.org/wiki/Az%C9%99rbaycan_dili"
+  ],
+  "timespan": {
+    "start_year": 1991,
+    "end_year": null
+  },
+  "stress": {
+    "default_position": -1,
+    "final_stress_endings": [],
+    "penult_stress_endings": [],
+    "marked_vowels": [],
+    "stress_mark": "ˈ",
+    "notes": "Azerbaijani default stress is word-final (-1). Exceptions (certain suffixes, question particles, place names) are lexically stressed and not modeled. Source: Šükürov (1982), Johanson & Csató (1998)."
+  },
+  "wikidata_qid": "Q9292",
+  "phoible_id": "nort2697",
+  "wals_code": "aze",
+  "location": {
+    "latitude": 40.97768,
+    "longitude": 46.4737,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for North Azerbaijani."
+  }
+}

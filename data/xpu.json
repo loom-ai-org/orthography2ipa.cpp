@@ -1,0 +1,69 @@
+{
+  "code": "xpu",
+  "name": "Punic",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "stub",
+  "orthography_kind": "transliteration",
+  "graphemes": {},
+  "allophones": {},
+  "parent": "phn",
+  "ancestors": [
+    {
+      "code": "phn",
+      "role": "parent",
+      "weight": 0.92,
+      "notes": "Punic is a Late/Western dialect continuation of Phoenician, spoken at Carthage and other western Mediterranean colonies from ~8th c. BCE to ~6th c. CE."
+    },
+    {
+      "code": "ber",
+      "role": "adstrate",
+      "weight": 0.1,
+      "notes": "Wikipedia (Punic language): from the 2nd century BCE, and especially after the fall of Carthage (146 BCE), Punic underwent phonological/morphological changes 'probably influenced by the language of the Berbers'; this Late/Neo-Punic layer survived among North African peasants into the 6th century CE."
+    }
+  ],
+  "notes": "STUB. Punic (Phoenicio-Punic), an extinct offshoot of Phoenician spoken on the Mediterranean coast of Northwest Africa (Carthage), the Iberian Peninsula and Mediterranean islands (Malta, Sicily, Sardinia), 8th c. BCE - 6th c. CE. Written in the Punic alphabet (monumental) and the cursive Neo-Punic alphabet, both descended from the Phoenician abjad; this repo does not model the native script (orthography_kind is left as a placeholder for scholarly Latin transliteration, not yet populated). Krahmalkov (2001) reconstructs 22 consonants from Latin/Greek transcriptions (e.g. the 'Poenulus' passages in Plautus); known sound changes from Phoenician include: b > v and p > f (fricativisation, attested from the 3rd c. BCE), loss of glottal stop and pharyngeal/laryngeal consonants in Late Punic and Neo-Punic, word-final g > ɣ and k > x (spirantisation), and merger of the four Phoenician sibilants s/š/ṣ/z toward /s/ in Late Punic. No grapheme table is populated here: unlike phn.json (whose vowel-augmented Latin transliteration convention and consonant values are well established via comparison with Hebrew/Greek transcriptions), a citable, complete letter-to-IPA table specific to Punic (as opposed to Phoenician proper) was not sourced this session with confidence sufficient to assert one; adding it is future work. This spec exists so xpu resolves as a leaf under phn per the design rule against dangling ancestry references. Never fabricate a Latin-placeholder inventory: graphemes is intentionally empty pending a sourced transliteration table.",
+  "iso639_3": "xpu",
+  "glottolog_code": "puni1241",
+  "wikidata_qid": "Q535958",
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Punic_language",
+    "https://en.wikipedia.org/wiki/Phoenician%E2%80%93Punic_literature"
+  ],
+  "urls": [
+    "https://glottolog.org/resource/languoid/id/puni1241",
+    "https://www.omniglot.com/writing/punic.htm"
+  ],
+  "sources": [
+    {
+      "id": "krahmalkov2001",
+      "author": "Krahmalkov, Charles R.",
+      "year": 2001,
+      "title": "A Phoenician-Punic Grammar",
+      "publisher": "Brill",
+      "url": null,
+      "pages": null,
+      "notes": "Cited by Wikipedia (Punic language) as the primary grammatical source for the reconstructed 22-consonant Punic inventory and the b>v / p>f fricativisation."
+    },
+    {
+      "id": "segert1976",
+      "author": "Segert, Stanislav",
+      "year": 1976,
+      "title": "A Grammar of Phoenician and Punic",
+      "publisher": "C.H. Beck",
+      "url": null,
+      "pages": null,
+      "notes": "Cited by Wikipedia (Punic language) alongside Krahmalkov as a primary grammatical source."
+    }
+  ],
+  "timespan": {
+    "start_year": -800,
+    "end_year": 600
+  },
+  "location": {
+    "latitude": 36.85,
+    "longitude": 10.32,
+    "source": "glottolog",
+    "notes": "Approximate site of Carthage, the principal centre of Punic."
+  }
+}

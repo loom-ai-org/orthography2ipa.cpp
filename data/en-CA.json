@@ -1,0 +1,220 @@
+{
+  "code": "en-CA",
+  "name": "Canadian English",
+  "script": "Latin",
+  "graphemes_base": "en-GB",
+  "allophones_base": "en-GB",
+  "allophones": {
+    "t": [
+      "t",
+      "tʰ",
+      "ɾ",
+      "ʔ",
+      "t̚"
+    ],
+    "ɹ": [
+      "ɹ"
+    ],
+    "l": [
+      "ɫ",
+      "l"
+    ],
+    "ɛ": [
+      "ɛ",
+      "ɪ"
+    ],
+    "æ": [
+      "æ",
+      "eə"
+    ],
+    "ɒ": [
+      "ɑː"
+    ],
+    "ɔː": [
+      "ɑː"
+    ],
+    "aɪ": [
+      "aɪ",
+      "ʌɪ"
+    ],
+    "oʊ": [
+      "oʊ",
+      "əʊ"
+    ],
+    "aʊ": [
+      "aʊ",
+      "ʌʊ"
+    ]
+  },
+  "parent": "en-GB",
+  "notes": "Canadian English. Rhotic; close to GA with: CANADIAN RAISING: /aɪ/ → [ʌɪ] before voiceless C (knife, ice); /aʊ/ → [ʌʊ] before voiceless C (out, about). CAUGHT-COT merger universal. Source: Wells (1982) vol. 3.",
+  "quality": "skeleton",
+  "script_type": "alphabet",
+  "sources": [
+    {
+      "id": "wells1982_vol3",
+      "author": "Wells, J.C.",
+      "year": 1982,
+      "title": "Accents of English, Vol. 3: Beyond the British Isles",
+      "publisher": "Cambridge University Press",
+      "url": null,
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Canadian_English"
+  ],
+  "timespan": {
+    "start_year": 1700,
+    "end_year": null
+  },
+  "glottolog_code": "cana1268",
+  "iso639_3": "eng",
+  "wikidata_qid": "Q44676",
+  "location": {
+    "latitude": 56,
+    "longitude": -109,
+    "source": "wikidata",
+    "notes": "Canada's representative point. A national variety: weak. [Wikidata Q16 P625]"
+  },
+  "collapse_geminates": true,
+  "allophone_rules": [
+    {
+      "id": "EN_GB_NONRHOTIC_AR_PRECONS",
+      "phonemes": [],
+      "surface": "ɑː",
+      "notes": "Rhotic: /r/ is preserved in every position, so the RP coda-/r/ deletion this spec inherits does not apply (Wells 1982 vol.1 §3.2.2). Declared with no target phonemes, the id-keyed way a dialect states it lacks a parent's process."
+    },
+    {
+      "id": "EN_GB_NONRHOTIC_AR_FINAL",
+      "phonemes": [],
+      "surface": "ɑː",
+      "notes": "Same statement as EN_GB_NONRHOTIC_AR_PRECONS: this lect is rhotic, so it does not have the parent's coda-/r/ deletion."
+    },
+    {
+      "id": "EN_GB_NONRHOTIC_NURSE_PRECONS",
+      "phonemes": [],
+      "surface": "ɜː",
+      "notes": "Same statement as EN_GB_NONRHOTIC_AR_PRECONS: this lect is rhotic, so it does not have the parent's coda-/r/ deletion."
+    },
+    {
+      "id": "EN_GB_NONRHOTIC_NURSE_FINAL",
+      "phonemes": [],
+      "surface": "ɜː",
+      "notes": "Same statement as EN_GB_NONRHOTIC_AR_PRECONS: this lect is rhotic, so it does not have the parent's coda-/r/ deletion."
+    },
+    {
+      "id": "EN_GB_NONRHOTIC_OR_PRECONS",
+      "phonemes": [],
+      "surface": "ɔː",
+      "notes": "Same statement as EN_GB_NONRHOTIC_AR_PRECONS: this lect is rhotic, so it does not have the parent's coda-/r/ deletion."
+    },
+    {
+      "id": "EN_GB_NONRHOTIC_OR_FINAL",
+      "phonemes": [],
+      "surface": "ɔː",
+      "notes": "Same statement as EN_GB_NONRHOTIC_AR_PRECONS: this lect is rhotic, so it does not have the parent's coda-/r/ deletion."
+    },
+    {
+      "id": "EN_GB_NONRHOTIC_LETTER_PRECONS",
+      "phonemes": [],
+      "surface": "ə",
+      "notes": "Same statement as EN_GB_NONRHOTIC_AR_PRECONS: this lect is rhotic, so it does not have the parent's coda-/r/ deletion."
+    },
+    {
+      "id": "EN_GB_NONRHOTIC_LETTER_FINAL",
+      "phonemes": [],
+      "surface": "ə",
+      "notes": "Same statement as EN_GB_NONRHOTIC_AR_PRECONS: this lect is rhotic, so it does not have the parent's coda-/r/ deletion."
+    },
+    {
+      "id": "EN_GB_NONRHOTIC_SQUARE_PRECONS",
+      "phonemes": [],
+      "surface": "ɛə",
+      "notes": "Same statement as EN_GB_NONRHOTIC_AR_PRECONS: this lect is rhotic, so it does not have the parent's coda-/r/ deletion."
+    },
+    {
+      "id": "EN_GB_NONRHOTIC_SQUARE_FINAL",
+      "phonemes": [],
+      "surface": "ɛə",
+      "notes": "Same statement as EN_GB_NONRHOTIC_AR_PRECONS: this lect is rhotic, so it does not have the parent's coda-/r/ deletion."
+    },
+    {
+      "id": "EN_GB_NONRHOTIC_NEAR_PRECONS",
+      "phonemes": [],
+      "surface": "ɪə",
+      "notes": "Same statement as EN_GB_NONRHOTIC_AR_PRECONS: this lect is rhotic, so it does not have the parent's coda-/r/ deletion."
+    },
+    {
+      "id": "EN_GB_NONRHOTIC_NEAR_FINAL",
+      "phonemes": [],
+      "surface": "ɪə",
+      "notes": "Same statement as EN_GB_NONRHOTIC_AR_PRECONS: this lect is rhotic, so it does not have the parent's coda-/r/ deletion."
+    },
+    {
+      "id": "EN_GB_NONRHOTIC_CURE_PRECONS",
+      "phonemes": [],
+      "surface": "ʊə",
+      "notes": "Same statement as EN_GB_NONRHOTIC_AR_PRECONS: this lect is rhotic, so it does not have the parent's coda-/r/ deletion."
+    },
+    {
+      "id": "EN_GB_NONRHOTIC_CURE_FINAL",
+      "phonemes": [],
+      "surface": "ʊə",
+      "notes": "Same statement as EN_GB_NONRHOTIC_AR_PRECONS: this lect is rhotic, so it does not have the parent's coda-/r/ deletion."
+    },
+    {
+      "id": "EN_GB_NONRHOTIC_CURE_J_PRECONS",
+      "phonemes": [],
+      "surface": "jʊə",
+      "notes": "Same statement as EN_GB_NONRHOTIC_AR_PRECONS: this lect is rhotic, so it does not have the parent's coda-/r/ deletion."
+    },
+    {
+      "id": "EN_GB_NONRHOTIC_CURE_J_FINAL",
+      "phonemes": [],
+      "surface": "jʊə",
+      "notes": "Same statement as EN_GB_NONRHOTIC_AR_PRECONS: this lect is rhotic, so it does not have the parent's coda-/r/ deletion."
+    },
+    {
+      "id": "EN_GB_NONRHOTIC_FIRE_PRECONS",
+      "phonemes": [],
+      "surface": "aɪə",
+      "notes": "Same statement as EN_GB_NONRHOTIC_AR_PRECONS: this lect is rhotic, so it does not have the parent's coda-/r/ deletion."
+    },
+    {
+      "id": "EN_GB_NONRHOTIC_FIRE_FINAL",
+      "phonemes": [],
+      "surface": "aɪə",
+      "notes": "Same statement as EN_GB_NONRHOTIC_AR_PRECONS: this lect is rhotic, so it does not have the parent's coda-/r/ deletion."
+    },
+    {
+      "id": "EN_GB_NONRHOTIC_HOUR_PRECONS",
+      "phonemes": [],
+      "surface": "aʊə",
+      "notes": "Same statement as EN_GB_NONRHOTIC_AR_PRECONS: this lect is rhotic, so it does not have the parent's coda-/r/ deletion."
+    },
+    {
+      "id": "EN_GB_NONRHOTIC_HOUR_FINAL",
+      "phonemes": [],
+      "surface": "aʊə",
+      "notes": "Same statement as EN_GB_NONRHOTIC_AR_PRECONS: this lect is rhotic, so it does not have the parent's coda-/r/ deletion."
+    },
+    {
+      "id": "EN_GB_NONRHOTIC_R_PRECONS",
+      "phonemes": [],
+      "surface": "",
+      "notes": "Same statement as EN_GB_NONRHOTIC_AR_PRECONS: this lect is rhotic, so it does not have the parent's coda-/r/ deletion."
+    },
+    {
+      "id": "EN_GB_NONRHOTIC_R_FINAL",
+      "phonemes": [],
+      "surface": "",
+      "notes": "Same statement as EN_GB_NONRHOTIC_AR_PRECONS: this lect is rhotic, so it does not have the parent's coda-/r/ deletion."
+    }
+  ],
+  "vowel_graphemes": [
+    "y"
+  ],
+  "word_exceptions_base": "en-GB"
+}

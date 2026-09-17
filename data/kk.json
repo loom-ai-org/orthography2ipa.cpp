@@ -1,0 +1,309 @@
+{
+  "parent": "trk",
+  "ancestors": [
+    {
+      "code": "trk",
+      "role": "parent",
+      "weight": 0.86,
+      "notes": "Descent from Proto-Turkic (Kipchak branch)."
+    },
+    {
+      "code": "ru",
+      "role": "adstrate",
+      "weight": 0.09,
+      "notes": "Russian adstrate: extensive Soviet/Imperial-era lexical and phonological influence."
+    },
+    {
+      "code": "ar",
+      "role": "adstrate",
+      "weight": 0.05,
+      "notes": "Arabic adstrate: religious/scholarly vocabulary via Chagatai/Persian."
+    },
+    {
+      "code": "fa",
+      "role": "adstrate",
+      "weight": 0.04,
+      "notes": "Persian adstrate via Central Asian literary tradition."
+    }
+  ],
+  "code": "kk",
+  "name": "Kazakh",
+  "glottolog_code": "kaza1248",
+  "script": "Cyrillic",
+  "script_type": "alphabet",
+  "iso639_3": "kaz",
+  "quality": "research",
+  "graphemes": {
+    "а": [
+      "ɑ"
+    ],
+    "ә": [
+      "æ"
+    ],
+    "б": [
+      "b"
+    ],
+    "в": [
+      "v"
+    ],
+    "г": [
+      "ɡ"
+    ],
+    "ғ": [
+      "ʁ"
+    ],
+    "д": [
+      "d"
+    ],
+    "е": [
+      "e",
+      "je"
+    ],
+    "ё": [
+      "jo"
+    ],
+    "ж": [
+      "ʒ"
+    ],
+    "з": [
+      "z"
+    ],
+    "и": [
+      "i",
+      "ɪj"
+    ],
+    "й": [
+      "j"
+    ],
+    "к": [
+      "k"
+    ],
+    "қ": [
+      "q"
+    ],
+    "л": [
+      "l"
+    ],
+    "м": [
+      "m"
+    ],
+    "н": [
+      "n"
+    ],
+    "ң": [
+      "ŋ"
+    ],
+    "о": [
+      "o"
+    ],
+    "ө": [
+      "ɵ"
+    ],
+    "п": [
+      "p"
+    ],
+    "р": [
+      "r"
+    ],
+    "с": [
+      "s"
+    ],
+    "т": [
+      "t"
+    ],
+    "у": [
+      "u",
+      "w"
+    ],
+    "ұ": [
+      "ʊ"
+    ],
+    "ү": [
+      "y"
+    ],
+    "ф": [
+      "f"
+    ],
+    "х": [
+      "x"
+    ],
+    "һ": [
+      "h"
+    ],
+    "ц": [
+      "ts"
+    ],
+    "ч": [
+      "tʃ"
+    ],
+    "ш": [
+      "ʃ"
+    ],
+    "щ": [
+      "ʃtʃ"
+    ],
+    "ы": [
+      "ə"
+    ],
+    "і": [
+      "ɪ"
+    ],
+    "э": [
+      "e"
+    ],
+    "ю": [
+      "ju"
+    ],
+    "я": [
+      "ja"
+    ]
+  },
+  "allophones": {
+    "ɑ": [
+      "ɑ"
+    ],
+    "æ": [
+      "æ"
+    ],
+    "b": [
+      "b",
+      "p"
+    ],
+    "v": [
+      "v"
+    ],
+    "ɡ": [
+      "ɡ"
+    ],
+    "ʁ": [
+      "ʁ"
+    ],
+    "d": [
+      "d",
+      "t"
+    ],
+    "e": [
+      "e"
+    ],
+    "ʒ": [
+      "ʒ"
+    ],
+    "z": [
+      "z"
+    ],
+    "i": [
+      "i"
+    ],
+    "j": [
+      "j"
+    ],
+    "k": [
+      "k"
+    ],
+    "q": [
+      "q"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ŋ": [
+      "ŋ"
+    ],
+    "o": [
+      "o"
+    ],
+    "ɵ": [
+      "ɵ"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "u": [
+      "u"
+    ],
+    "ʊ": [
+      "ʊ"
+    ],
+    "y": [
+      "y"
+    ],
+    "f": [
+      "f"
+    ],
+    "x": [
+      "x"
+    ],
+    "h": [
+      "h"
+    ],
+    "ts": [
+      "ts"
+    ],
+    "tʃ": [
+      "tʃ"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "ə": [
+      "ə"
+    ],
+    "ɪ": [
+      "ɪ"
+    ]
+  },
+  "notes": "Kazakh in Cyrillic script (Kazakhstan official orthography). Eleven-vowel system with front/back and labial harmony (McCollum & Chen 2020). А = central-back /ɑ/ (not front [a]); Ы = central schwa-like /ə/ (not [ɯ]); Ө = mid central rounded /ɵ/. Қ = uvular /q/; Ғ = /ʁ/; Ң = /ŋ/; Ұ = back unrounded /ʊ/; Ү = /y/; І = /ɪ/. Orthographic ⟨и⟩ and ⟨у⟩ represent the phonetically diphthongal /ije̯/ and /uw̯/ nuclei; this spec transcribes them as simple vowels (i, u) pending a positional glide rule. Transitioning to Latin script (phased 2017-2025, not yet complete); this spec covers the Cyrillic orthography, which is what the scored gold sets use.",
+  "sources": [
+    {
+      "id": "mccollum_chen_2020_kazakh",
+      "author": "McCollum, Adam G. and Chen, Si",
+      "year": 2020,
+      "title": "Kazakh",
+      "publisher": "Journal of the International Phonetic Association",
+      "url": "https://doi.org/10.1017/S0025100319000185",
+      "wikipedia_url": null,
+      "pages": "276-298",
+      "notes": "Illustrations of the IPA; volume 51, issue 2; open access (CC-BY 4.0)."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Kazakh_language",
+    "https://en.wikipedia.org/wiki/Kazakh_phonology",
+    "https://kk.wikipedia.org/wiki/%D2%9A%D0%B0%D0%B7%D0%B0%D2%9B_%D1%82%D1%96%D0%BB%D1%96"
+  ],
+  "timespan": {
+    "start_year": 1940,
+    "end_year": null
+  },
+  "stress": {
+    "default_position": -1,
+    "final_stress_endings": [],
+    "penult_stress_endings": [],
+    "marked_vowels": [],
+    "stress_mark": "ˈ",
+    "notes": "Kazakh default stress is word-final (-1). Certain derivational and inflectional suffixes (negation, question) are unstressed or attract stress irregularly; not modeled here. Source: Krippes (1994), Johanson & Csató (1998)."
+  },
+  "wikidata_qid": "Q9252",
+  "wals_code": "kaz",
+  "location": {
+    "latitude": 51.17,
+    "longitude": 71.454,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Kazakh."
+  }
+}

@@ -1,0 +1,360 @@
+{
+  "code": "mcm",
+  "glottolog_code": "mala1533",
+  "name": "Kristang (Papia Kristang, Malacca Creole Portuguese)",
+  "script": "Latin",
+  "quality": "research",
+  "script_type": "alphabet",
+  "parent": "pt-PT",
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "á": [
+      "a"
+    ],
+    "b": [
+      "b"
+    ],
+    "ch": [
+      "tʃ"
+    ],
+    "d": [
+      "d"
+    ],
+    "e": [
+      "e",
+      "ɛ",
+      "ə"
+    ],
+    "é": [
+      "e",
+      "ɛ"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "i": [
+      "i"
+    ],
+    "í": [
+      "i"
+    ],
+    "j": [
+      "dʒ"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ng": [
+      "ŋ"
+    ],
+    "ny": [
+      "ɲ"
+    ],
+    "o": [
+      "o",
+      "ɔ"
+    ],
+    "ó": [
+      "o",
+      "ɔ"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "u": [
+      "u"
+    ],
+    "ú": [
+      "u"
+    ],
+    "v": [
+      "v"
+    ],
+    "w": [
+      "w"
+    ],
+    "y": [
+      "j"
+    ],
+    "z": [
+      "z"
+    ]
+  },
+  "positional_graphemes": {
+    "ng": {
+      "word_initial": [
+        "ŋ"
+      ],
+      "word_final": [
+        "ŋ"
+      ]
+    },
+    "ny": {
+      "word_initial": [
+        "ɲ"
+      ]
+    }
+  },
+  "allophones": {
+    "a": [
+      "a"
+    ],
+    "b": [
+      "b"
+    ],
+    "d": [
+      "d"
+    ],
+    "dʒ": [
+      "dʒ"
+    ],
+    "e": [
+      "e"
+    ],
+    "ɛ": [
+      "ɛ"
+    ],
+    "ə": [
+      "ə"
+    ],
+    "f": [
+      "f"
+    ],
+    "ɡ": [
+      "ɡ"
+    ],
+    "i": [
+      "i"
+    ],
+    "j": [
+      "j"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ŋ": [
+      "ŋ"
+    ],
+    "ɲ": [
+      "ɲ"
+    ],
+    "o": [
+      "o"
+    ],
+    "ɔ": [
+      "ɔ"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "tʃ": [
+      "tʃ"
+    ],
+    "u": [
+      "u"
+    ],
+    "v": [
+      "v"
+    ],
+    "w": [
+      "w"
+    ],
+    "z": [
+      "z"
+    ]
+  },
+  "allophone_rules": [
+    {
+      "id": "PT_CODA_S_HUSH",
+      "phonemes": [
+        "s"
+      ],
+      "surface": "s",
+      "syllable_position": "coda",
+      "notes": "DISABLES the inherited European-Portuguese Lisbon 'chiado' (coda /s/ → [ʃ]): Kristang has no /ʃ/ at all — coda /s/ stays [s], mas [mas] 'more' (Baxter 1988, p. 21: /s/ is the only fricative attested word-finally). Identity rewrite cancels the inherited rule by id."
+    },
+    {
+      "id": "PT_CODA_Z_HUSH",
+      "phonemes": [
+        "z"
+      ],
+      "surface": "z",
+      "syllable_position": "coda",
+      "notes": "DISABLES the inherited coda /z/ → [ʒ]: Kristang has no /ʒ/ (Baxter 1988, Table 2.1, p. 20). Identity rewrite."
+    },
+    {
+      "id": "PT_CODA_L_DARK",
+      "phonemes": [
+        "l"
+      ],
+      "surface": "l",
+      "syllable_position": "coda",
+      "notes": "DISABLES the inherited EP dark coda [ɫ]: Baxter transcribes plain [l] in codas — mal [mal] 'bad', mel [mɛl] 'honey' (Baxter 1988, pp. 23, 25). Identity rewrite."
+    },
+    {
+      "id": "MCM_N_VELAR_BEFORE_G_K",
+      "phonemes": [
+        "n"
+      ],
+      "surface": "ŋ",
+      "followed_by_phoneme": [
+        "ɡ",
+        "k"
+      ],
+      "notes": "Nasal+consonant clusters are homorganic: the nasal assimilates in place to the following consonant — kanggrezu [kaŋgrezu] 'crab' (Baxter 1988, A Grammar of Kristang, p. 22)."
+    },
+    {
+      "id": "MCM_N_LABIAL_BEFORE_B_P",
+      "phonemes": [
+        "n"
+      ],
+      "surface": "m",
+      "followed_by_phoneme": [
+        "b",
+        "p"
+      ],
+      "notes": "Homorganic nasal assimilation before labials — kambrang [kambraŋ] 'prawn' (Baxter 1988, p. 22)."
+    }
+  ],
+  "ancestors": [
+    {
+      "code": "pt-PT",
+      "role": "superstrate",
+      "weight": 0.65,
+      "notes": "Portuguese superstrate: lexifier from the Portuguese occupation of Malacca (1511-1641). Kristang preserves the OLDER Portuguese affricates /tʃ dʒ/ where modern Portuguese has fricatives /ʃ ʒ/ (Baxter 1988, ch. 2)."
+    },
+    {
+      "code": "ms",
+      "role": "substrate",
+      "weight": 0.3,
+      "notes": "Malay substrate/adstrate: the consonant and vowel systems closely parallel Malay (Baxter 1988, pp. 20, 24, citing Onn 1980); Malay-based practical orthography (ny, ng, ch, j); syllabic nasals; homorganic NC clusters; [a] realizing both /a/ and /ə/ as in Malay."
+    }
+  ],
+  "notes": "Kristang / Papia Kristang (Malacca Creole Portuguese), spoken by the Portuguese-Eurasian community of Malacca (Malaysia) and Singapore; severely endangered (<1,000 fluent speakers). This spec targets Baxter's Malay-based practical orthography (Baxter 1988; Baxter & de Silva 2004 dictionary): 5 vowel letters + p b t d k g m n ny ng r f v s z ch j l. KEY FEATURES: (1) 18 CONSONANTS, 8 ORAL VOWELS (Baxter 1988, p. 219: 'seven vowel phonemes' core /i e ɛ a ɔ o u/ + central /ə/); NO NASAL VOWELS — Portuguese nasal vowels denasalized to oral vowel + nasal coda (mão→mang, bom→bong). (2) NO /ʃ ʒ ʎ h/: the medieval Portuguese affricates /tʃ/ ⟨ch⟩ and /dʒ/ ⟨j⟩ are retained instead of the modern fricatives; /ʎ/→/l/ or /lj/ (filha→fila). (3) VOWEL LETTERS UNDER-DIFFERENTIATE: ⟨e⟩ covers /e ɛ ə/ and ⟨o⟩ covers /o ɔ/ — genuinely ambiguous; the /e/-/ɛ/ and /o/-/ɔ/ contrasts are low-functional-load and neutralize initially and finally (Baxter 1988, pp. 24-27). (4) SINGLE RHOTIC /r/: tap and trill in free variation (trill under emphasis), not positional (p. 23); coda /r/ unstable, often lost or metathesized (pertu ~ petru ~ petu). (5) /v/ MARGINAL (novi 'nine' vs nomi 'name', p. 22); historical Pt /v/→/b/ (novo→nubu). (6) HOMORGANIC NC CLUSTERS (kanggrezu, kambrang, kanji) and syllabic nasals (ngua 'one', nsentu 'hundred') — Malay-type traits (pp. 22, 49, 219). (7) FINAL CONSONANTS limited to /s r l m n ŋ/; final /ŋ/ ⟨ng⟩ common from denasalization. (8) STRESS: penultimate by default, phonemic (kaza 'house' vs kazá 'marry', p. 29); the acute accent is written only when stress is NOT penultimate (Baxter, APiCS survey ch. 42). Gemination unverified in accessible sources; treated as absent.",
+  "sources": [
+    {
+      "id": "baxter1988",
+      "author": "Baxter, A. N.",
+      "year": 1988,
+      "title": "A Grammar of Kristang (Malacca Creole Portuguese)",
+      "publisher": "Pacific Linguistics Series B-95, Australian National University",
+      "url": "https://openresearch-repository.anu.edu.au/bitstream/1885/145643/1/PL-B95.pdf",
+      "pages": "19-32, 219",
+      "notes": "Open access (CC BY-SA). Ch. 2 phonology: Table 2.1 consonants (p. 20), Table 2.2 vowels (pp. 23-24), vowel reduction (§2.3, pp. 29-30), contrastive stress (p. 29), inventory summary (p. 219). NOTE: the ANU scan is missing printed pp. 33-48 (§2.5 phonotactics, §2.6 stress, §2.7 orthography); those topics are cited here from Baxter's own APiCS survey instead."
+    },
+    {
+      "id": "baxter_apics",
+      "author": "Baxter, A. N.",
+      "year": 2013,
+      "title": "Papiá Kristang (APiCS Online, survey chapter 42)",
+      "publisher": "In: Michaelis et al. (eds.), Atlas of Pidgin and Creole Language Structures, OUP",
+      "url": "https://apics-online.info/surveys/42",
+      "pages": null,
+      "notes": "Practical orthography inventory (5 vowel letters + 18 consonant characters incl. ny, ng, ch, j); stress rule: 'Tonic stress is indicated on vowels and syllabic nasals by a written accent when the tonic does not fall on a penultimate syllable'; eight oral vowels."
+    },
+    {
+      "id": "baxterdesilva2004",
+      "author": "Baxter, A. N. & de Silva, P.",
+      "year": 2004,
+      "title": "A Dictionary of Kristang (Malacca Creole Portuguese) - English",
+      "publisher": "Pacific Linguistics 564, Australian National University",
+      "url": null,
+      "pages": null,
+      "notes": "Dictionary using the same Malay-based practical orthography this spec targets."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Kristang_language"
+  ],
+  "urls": [
+    "https://en.wikipedia.org/wiki/Kristang_language",
+    "https://apics-online.info/surveys/42",
+    "https://glottolog.org/resource/languoid/id/mala1533",
+    "https://www.ethnologue.com/language/mcm/"
+  ],
+  "timespan": {
+    "start_year": 1550,
+    "end_year": null
+  },
+  "iso639_3": "mcm",
+  "wikidata_qid": "Q322809",
+  "phoible_id": "mala1533",
+  "location": {
+    "latitude": 2.194,
+    "longitude": 102.248,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Malacca-Batavia Portuguese Creole (Malacca)."
+  },
+  "stress": {
+    "default_position": -2,
+    "marked_vowels": [
+      "á",
+      "é",
+      "í",
+      "ó",
+      "ú"
+    ],
+    "stress_mark": "ˈ",
+    "diphthongs": [
+      "ai",
+      "au",
+      "oi",
+      "iu",
+      "ei",
+      "ua",
+      "ia",
+      "ue",
+      "we",
+      "wa"
+    ],
+    "notes": "Penultimate by default and unmarked (kaza [ˈkaza]); a written acute marks non-penultimate stress (kazá [kaˈza] 'marry', kumí 'eat') — Baxter, APiCS survey ch. 42; contrastive stress at Baxter 1988, p. 29. Diphthongs declared so pai [paj], pau [paw], noiba [ˈnɔjba], chua [ˈtʃua] count one nucleus each."
+  },
+  "orthography_standard": {
+    "name": "Baxter's Malay-based practical orthography",
+    "authority": "Baxter (1988); Baxter & de Silva (2004)",
+    "year": 2004,
+    "url": "https://apics-online.info/surveys/42",
+    "notes": "5 vowel letters and 18 consonant characters: a e i o u; p b t d k g m n ny ng r f v s z ch j l. Malay conventions: ny /ɲ/, ng /ŋ/, ch /tʃ/, j /dʒ/. No c, q, x, h, lh, nh. Acute accent only for non-penultimate stress. A rival Portuguese-based convention (⟨nh⟩ etc.) exists in community use; this spec follows Baxter's system, the one used by the reference dictionary."
+    }
+}

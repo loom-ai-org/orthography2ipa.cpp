@@ -1,0 +1,434 @@
+{
+  "code": "wa",
+  "name": "Walloon",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "iso639_3": "wln",
+  "glottolog_code": "wall1255",
+  "timespan": {
+    "start_year": 1300,
+    "end_year": null
+  },
+  "graphemes": {
+    "tch": [
+      "tʃ"
+    ],
+    "sch": [
+      "ʃ",
+      "h",
+      "sk",
+      "ç"
+    ],
+    "ch": [
+      "ʃ"
+    ],
+    "dj": [
+      "dʒ"
+    ],
+    "gn": [
+      "ɲ"
+    ],
+    "xh": [
+      "ʃ",
+      "h",
+      "x",
+      "ç"
+    ],
+    "jh": [
+      "ʒ",
+      "h",
+      "ç"
+    ],
+    "sh": [
+      "ʃ",
+      "s"
+    ],
+    "qu": [
+      "k"
+    ],
+    "ss": [
+      "s"
+    ],
+    "å": [
+      "ɔː",
+      "oː",
+      "ɑː"
+    ],
+    "â": [
+      "ɑ"
+    ],
+    "ai": [
+      "eː",
+      "ɛː"
+    ],
+    "ae": [
+      "a",
+      "ɛ"
+    ],
+    "ea": [
+      "ja",
+      "eː",
+      "ɛː"
+    ],
+    "ey": [
+      "ɛj",
+      "iː"
+    ],
+    "eu": [
+      "ø",
+      "œ",
+      "ə"
+    ],
+    "oe": [
+      "wɛ",
+      "ø"
+    ],
+    "oi": [
+      "wa",
+      "wɛ",
+      "oː"
+    ],
+    "oû": [
+      "uː"
+    ],
+    "ou": [
+      "u"
+    ],
+    "è": [
+      "ɛ"
+    ],
+    "é": [
+      "e"
+    ],
+    "ê": [
+      "ɛː"
+    ],
+    "î": [
+      "iː"
+    ],
+    "ô": [
+      "oː"
+    ],
+    "û": [
+      "yː"
+    ],
+    "a": [
+      "a"
+    ],
+    "b": [
+      "b"
+    ],
+    "c": [
+      "k"
+    ],
+    "ç": [
+      "s"
+    ],
+    "d": [
+      "d"
+    ],
+    "e": [
+      "ɛ",
+      "ə"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "h": [
+      "h"
+    ],
+    "i": [
+      "i"
+    ],
+    "j": [
+      "ʒ"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "o": [
+      "ɔ"
+    ],
+    "p": [
+      "p"
+    ],
+    "q": [
+      "k"
+    ],
+    "r": [
+      "ʀ",
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "u": [
+      "y"
+    ],
+    "v": [
+      "v"
+    ],
+    "w": [
+      "w"
+    ],
+    "x": [
+      "ks"
+    ],
+    "y": [
+      "j"
+    ],
+    "z": [
+      "z"
+    ]
+  },
+  "positional_graphemes": {
+    "c": {
+      "before_front_vowel": [
+        "s"
+      ],
+      "default": [
+        "k"
+      ]
+    },
+    "e": {
+      "word_final": [
+        ""
+      ],
+      "default": [
+        "ɛ",
+        "ə"
+      ]
+    }
+  },
+  "allophones": {
+    "p": ["p"],
+    "b": ["b"],
+    "t": ["t"],
+    "d": ["d"],
+    "k": ["k"],
+    "ɡ": ["ɡ"],
+    "f": ["f"],
+    "v": ["v"],
+    "s": ["s"],
+    "z": ["z"],
+    "ʃ": ["ʃ"],
+    "ʒ": ["ʒ"],
+    "ç": ["ç"],
+    "x": ["x"],
+    "h": ["h"],
+    "tʃ": ["tʃ"],
+    "dʒ": ["dʒ"],
+    "m": ["m"],
+    "n": ["n"],
+    "ɲ": ["ɲ", "nj"],
+    "l": ["l"],
+    "ʀ": ["ʀ", "r", "ʁ", "χ"],
+    "r": ["r", "ʀ"],
+    "j": ["j"],
+    "w": ["w"],
+    "a": ["a"],
+    "ɑ": ["ɑ"],
+    "ɛ": ["ɛ"],
+    "e": ["e"],
+    "ə": ["ə"],
+    "i": ["i"],
+    "ɔ": ["ɔ"],
+    "o": ["o"],
+    "u": ["u"],
+    "y": ["y"],
+    "ø": ["ø"],
+    "œ": ["œ"],
+    "ɛː": ["ɛː"],
+    "eː": ["eː"],
+    "iː": ["iː"],
+    "oː": ["oː"],
+    "uː": ["uː"],
+    "yː": ["yː"],
+    "ɔː": ["ɔː"],
+    "ɑː": ["ɑː"],
+    "ɑ̃": ["ɑ̃"],
+    "ɛ̃": ["ɛ̃"],
+    "ẽ": ["ẽ", "ɛ̃"],
+    "ɔ̃": ["ɔ̃"],
+    "œ̃": ["œ̃"]
+  },
+  "allophone_rules": [
+    {
+      "id": "WA_NASAL_a",
+      "phonemes": ["a"],
+      "surface": "ɑ̃",
+      "followed_by": "coda_nasal",
+      "notes": "⟨an⟩ nasalises to [ɑ̃]; an onset nasal (⟨cana⟩) leaves the vowel oral."
+    },
+    {
+      "id": "WA_NASAL_i",
+      "phonemes": ["i"],
+      "surface": "ɛ̃",
+      "followed_by": "coda_nasal",
+      "notes": "⟨in⟩ nasalises to [ɛ̃]."
+    },
+    {
+      "id": "WA_NASAL_e",
+      "phonemes": ["e"],
+      "surface": "ẽ",
+      "followed_by": "coda_nasal",
+      "notes": "⟨én⟩ nasalises to [ẽ], a nasal vowel that French lacks."
+    },
+    {
+      "id": "WA_NASAL_epsilon",
+      "phonemes": ["ɛ"],
+      "surface": "ẽ",
+      "followed_by": "coda_nasal",
+      "notes": "⟨en⟩ nasalises to [ẽ]."
+    },
+    {
+      "id": "WA_NASAL_o",
+      "phonemes": ["ɔ"],
+      "surface": "ɔ̃",
+      "followed_by": "coda_nasal",
+      "notes": "⟨on⟩ nasalises to [ɔ̃]."
+    },
+    {
+      "id": "WA_NASAL_u",
+      "phonemes": ["y"],
+      "surface": "œ̃",
+      "followed_by": "coda_nasal",
+      "notes": "⟨un⟩ nasalises to [œ̃]."
+    },
+    {
+      "id": "WA_NASAL_ABSORB",
+      "phonemes": ["n", "m"],
+      "surface": "",
+      "syllable_position": "coda",
+      "preceded_by": "vowel",
+      "notes": "The coda nasal is absorbed into the nasal vowel it created (⟨walon⟩ [walɔ̃]); keyed after the vowel so it cannot bleed the rule that makes the nasal vowel."
+    },
+    {
+      "id": "WA_DEVOICE_b",
+      "phonemes": ["b"],
+      "surface": "p",
+      "word_final": true,
+      "notes": "Word-final obstruent devoicing: /b/ → [p]."
+    },
+    {
+      "id": "WA_DEVOICE_d",
+      "phonemes": ["d"],
+      "surface": "t",
+      "word_final": true,
+      "notes": "Word-final obstruent devoicing: /d/ → [t]."
+    },
+    {
+      "id": "WA_DEVOICE_g",
+      "phonemes": ["ɡ"],
+      "surface": "k",
+      "word_final": true,
+      "notes": "Word-final obstruent devoicing: /ɡ/ → [k]."
+    },
+    {
+      "id": "WA_DEVOICE_v",
+      "phonemes": ["v"],
+      "surface": "f",
+      "word_final": true,
+      "notes": "Word-final obstruent devoicing: /v/ → [f]."
+    },
+    {
+      "id": "WA_DEVOICE_z",
+      "phonemes": ["z"],
+      "surface": "s",
+      "word_final": true,
+      "notes": "Word-final obstruent devoicing: /z/ → [s]."
+    },
+    {
+      "id": "WA_DEVOICE_zh",
+      "phonemes": ["ʒ"],
+      "surface": "ç",
+      "word_final": true,
+      "notes": "Word-final obstruent devoicing: /ʒ/ (⟨jh⟩) → [ç], a hallmark outcome of the language."
+    },
+    {
+      "id": "WA_DEVOICE_dzh",
+      "phonemes": ["dʒ"],
+      "surface": "tʃ",
+      "word_final": true,
+      "notes": "Word-final obstruent devoicing: /dʒ/ (⟨dj⟩) → [tʃ], so ⟨rodje⟩ [ʀɔtʃ] and ⟨rotche⟩ are homophones."
+    }
+  ],
+  "parent": "la-x-gallia",
+  "ancestors": [
+    {
+      "code": "la-x-gallia",
+      "role": "parent",
+      "weight": 0.70,
+      "notes": "Gallo-Romance Vulgar Latin of northern Gaul; a langue d'oïl, sister to French and Picard."
+    },
+    {
+      "code": "gem",
+      "role": "superstrate",
+      "weight": 0.22,
+      "notes": "Frankish (Germanic) superstrate, stronger than in French: preserved word-initial /h/ (⟨h⟩, ⟨xh⟩) and Latin initial /w/ (⟨walon⟩), and left the ⟨xh⟩/⟨jh⟩ dorsal-fricative outcomes."
+    }
+  ],
+  "notes": "Walloon (Walon), the Gallo-Romance langue d'oïl of Wallonia (southern Belgium) and the Ardennes of France, sister to French and Picard. This spec targets the unified COMMON WALLOON orthography, the rifondou walon standardised from the 1990s (used e.g. by the Walloon Wikipedia), NOT the earlier phonetic Feller (1900) transcription. Rifondou is DIASYSTEMIC: a single spelling is read with different sounds in different dialects, so its hallmark graphemes carry several candidate values here — ⟨å⟩ [ɔː] (also [oː], [ɑː]), ⟨xh⟩ [ʃ]/[h]/[x]/[ç] (⟨pexhon⟩ 'fish', Feller ⟨pèchon⟩/⟨pèhon⟩), ⟨jh⟩ [ʒ]/[h]/[ç], ⟨sch⟩, ⟨ea⟩ [ja]/[eː]/[ɛː] and ⟨oi⟩ [wa]/[wɛ]/[oː], graphemes Feller had abandoned in favour of French-looking spellings and rifondou revived. Distinctive from French: the affricates ⟨tch⟩ /tʃ/ (⟨vatche⟩ 'cow') and ⟨dj⟩ /dʒ/ (⟨djambe⟩ 'leg'); retained Germanic /h/ and initial /w/; long vowels are phonemic (⟨cu⟩ /ky/ 'arse' vs ⟨cû⟩ /kyː/ 'cooked'), written with the circumflex (⟨â ê î ô û⟩, ⟨oû⟩) or inherent to ⟨å⟩/⟨ai⟩. NASAL VOWELS arise before a coda nasal (allophone_rules, mirroring the French treatment): ⟨an⟩ [ɑ̃], ⟨in⟩ [ɛ̃], ⟨on⟩ [ɔ̃], ⟨un⟩ [œ̃], and the French-less ⟨én⟩ [ẽ]; ⟨an⟩ etc. before a vowel keep the nasal oral. WORD-FINAL OBSTRUENT DEVOICING is regular (allophone_rules): /b d ɡ v z/ → [p t k f s], /ʒ/ (⟨jh⟩) → [ç], /dʒ/ (⟨rodje⟩) → [tʃ], making ⟨rodje⟩ 'red' and ⟨rotche⟩ 'rock' homophones [ʀɔtʃ]. Word-final atonic ⟨e⟩ (a reflex of Latin final vowels) is mute (⟨vatche⟩ [vatʃ], ⟨rodje⟩ [ʀɔtʃ]). ⟨c⟩ softens to [s] before a front vowel; ⟨ç⟩ is [s]. The rhotic is uvular [ʀ] in much of the domain, apical [r] elsewhere. Sources: Espinosa Orjuela, Boula de Mareüil & Evrard (2025) rule-based rifondou G2P; the rifondou orthography convention.",
+  "sources": [
+    {
+      "id": "orjuela2025",
+      "author": "Espinosa Orjuela, J.F., Boula de Mareüil, P. & Evrard, M.",
+      "year": 2025,
+      "title": "Speech synthesis for Walloon, an under-resourced minority language",
+      "publisher": "Proc. 13th Speech Synthesis Workshop (SSW 2025), ISCA",
+      "url": "https://www.isca-archive.org/ssw_2025/orjuela25_ssw.pdf",
+      "pages": "189-193",
+      "notes": "Describes a 300-rule grapheme-to-phoneme converter for rifondou walon: long vowels (⟨å⟩ /ɔː/), the nasal series /ẽ/ ⟨én⟩ alongside /ɛ̃/ ⟨in⟩ and /œ̃/ ⟨un⟩, the Germanic consonants /h/ ⟨h⟩ and /x/ ⟨xh⟩, and word-final consonant devoicing (⟨jh⟩ /ʒ/ devoiced to [ç]). The orthography is rifondou; the phonetic detail is inspired by Feller."
+    },
+    {
+      "id": "wiki-wa-orthography",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Walloon orthography",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Walloon_orthography",
+      "notes": "Grapheme table for Common (rifondou) Walloon: ⟨å⟩ [ɔː/oː/ɑː], ⟨xh⟩ [h/ʃ/ç/x], ⟨jh⟩ [h/ʒ/ç], ⟨ea⟩ [ja/eː/ɛː], ⟨oi⟩ [wa/wɛ/oː], ⟨tch⟩ [tʃ], ⟨dj⟩ [dʒ], the diasystemic principle."
+    },
+    {
+      "id": "wiki-wa",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Walloon language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Walloon_language"
+    }
+  ],
+  "orthography_standard": {
+    "name": "Rifondou walon (Croejhete walone / Waldim)",
+    "year": 2003,
+    "url": "https://en.wikipedia.org/wiki/Walloon_orthography",
+    "notes": "Unified diasystemic spelling standardised from the 1990s, adopted by the Walloon Wikipedia in 2003. Supersedes, but coexists with, the accent-specific Feller (1900) transcription."
+  },
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Walloon_language",
+    "https://en.wikipedia.org/wiki/Walloon_orthography",
+    "https://wa.wikipedia.org/wiki/Walon",
+    "https://fr.wikipedia.org/wiki/Wallon"
+  ],
+  "wikidata_qid": "Q34219",
+  "location": {
+    "latitude": 50.2235,
+    "longitude": 5.14509,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Walloon."
+  }
+}

@@ -1,0 +1,177 @@
+{
+ "code": "tca",
+ "name": "Ticuna",
+ "script": "Zyyy",
+ "quality": "stub",
+ "graphemes": {},
+ "allophones": {
+  "b": [
+   "b",
+   "mb"
+  ],
+  "d": [
+   "d",
+   "nd"
+  ],
+  "d̠ʒ": [
+   "dʲ",
+   "n̠d̠ʒ",
+   "j",
+   "d̠ʒ"
+  ],
+  "k": [
+   "ŋk",
+   "k"
+  ],
+  "kʷ": [
+   "ŋkʷ",
+   "kʷ"
+  ],
+  "p": [
+   "p",
+   "mp"
+  ],
+  "s": [
+   "s",
+   "s"
+  ],
+  "t": [
+   "t",
+   "nt"
+  ],
+  "t̠ʃ": [
+   "t̠ʃ",
+   "n̠t̠ʃ",
+   "t̠ʃ"
+  ],
+  "ɡ": [
+   "ɡ",
+   "ŋɡ"
+  ],
+  "ɾ": [
+   "l",
+   "ɾ"
+  ],
+  "a": [
+   "a̰",
+   "a",
+   "ã",
+   "ḁ"
+  ],
+  "e̞": [
+   "ɛ",
+   "ẽ̞",
+   "e̞",
+   "ẽ̞̰",
+   "e̞̥",
+   "e̞̰"
+  ],
+  "i": [
+   "i̥",
+   "ḭ",
+   "i",
+   "ĩ"
+  ],
+  "ĩ": [
+   "ḭ̃",
+   "ĩ"
+  ],
+  "o̞": [
+   "o̞̥",
+   "õ̞",
+   "o̞̰",
+   "o̞"
+  ],
+  "õ̞": [
+   "õ̞̰",
+   "õ̞"
+  ],
+  "u": [
+   "ṵ",
+   "u̥",
+   "ũ",
+   "u"
+  ],
+  "ɨ": [
+   "ɨ̰",
+   "ɨ",
+   "ɨ̥",
+   "ɨ̃"
+  ]
+ },
+ "notes": "REGISTRY STUB (not a modelled G2P target). Placed so the ancestry graph covers every living ISO 639-3 language. No orthography is claimed; the phoneme inventory follows the cited PHOIBLE inventory (which itself cites a published description): script is Zyyy (undetermined) until a cited description is encoded. Classification and coordinates follow Glottolog.",
+ "iso639_3": "tca",
+ "glottolog_code": "ticu1245",
+ "sources": [
+  {
+   "id": "glottolog2024",
+   "author": "Hammarström, Harald; Forkel, Robert; Haspelmath, Martin; Bank, Sebastian",
+   "year": 2024,
+   "title": "Glottolog 5.0",
+   "publisher": "Max Planck Institute for Evolutionary Anthropology",
+   "url": "https://glottolog.org/"
+  },
+  {
+   "id": "phoible2019",
+   "author": "Moran, Steven; McCloy, Daniel (eds.)",
+   "year": 2019,
+   "title": "PHOIBLE 2.0 (doi:10.5281/zenodo.2562766)",
+   "publisher": "Max Planck Institute for the Science of Human History",
+   "url": "https://phoible.org/inventories/view/115",
+   "notes": "Inventory 115 (spa), 29 non-marginal segments, 9 tones."
+  }
+ ],
+ "urls": [
+  "https://glottolog.org/resource/languoid/id/ticu1245"
+ ],
+ "location": {
+  "latitude": -3.6629,
+  "longitude": -69.8723,
+  "source": "glottolog",
+  "notes": "Glottolog's representative point."
+ },
+ "parent": "x-clade-ticu1244",
+ "phonemes": [
+  "b",
+  "d",
+  "d̠ʒ",
+  "f",
+  "k",
+  "kʷ",
+  "m",
+  "n",
+  "p",
+  "s",
+  "t",
+  "t̠ʃ",
+  "w",
+  "ŋ",
+  "ɡ",
+  "ɲ",
+  "ɾ",
+  "ʔ",
+  "a",
+  "ã",
+  "e̞",
+  "i",
+  "ĩ",
+  "o̞",
+  "õ̞",
+  "u",
+  "ũ",
+  "ɨ",
+  "ɨ̃"
+ ],
+ "tone_inventory": {
+  "˥": "PHOIBLE tone segment",
+  "˥˦": "PHOIBLE tone segment",
+  "˦": "PHOIBLE tone segment",
+  "˦˧": "PHOIBLE tone segment",
+  "˦˩": "PHOIBLE tone segment",
+  "˧": "PHOIBLE tone segment",
+  "˧˩": "PHOIBLE tone segment",
+  "˨": "PHOIBLE tone segment",
+  "˩": "PHOIBLE tone segment"
+ },
+ "phoible_id": "115"
+}

@@ -1,0 +1,62 @@
+{
+  "code": "yej",
+  "name": "Yevanic",
+  "script": "Hebrew",
+  "script_type": "abjad",
+  "quality": "stub",
+  "iso639_3": "yej",
+  "glottolog_code": "yeva1238",
+  "graphemes": {},
+  "allophones": {},
+  "parent": "el",
+  "ancestors": [
+    {
+      "code": "el",
+      "role": "parent_dialect",
+      "weight": 0.9,
+      "notes": "Yevanic (Judeo-Greek) is a Greek dialect historically spoken by the Romaniote Jews, mutually intelligible with Greek and differing mainly in phonetic, intonational and lexical detail (Wikipedia: Yevanic)."
+    },
+    {
+      "code": "he",
+      "role": "adstrate",
+      "weight": 0.3,
+      "notes": "Romaniotes wrote Greek and Yevanic texts in the Hebrew alphabet (attested from a 10th-century Hebrew-Greek glossary per Krivoruchko), and the language carries large amounts of Hebrew/Aramaic loan vocabulary; the switch to the Greek alphabet only came in the 19th century (Wikipedia: Yevanic; Jewish Languages Project: Judeo-Greek)."
+    }
+  ],
+  "notes": "Stub. Yevanic (Judeo-Greek, Romaniyka), the historic language of the Romaniote Jews of Greece, Anatolia and the Balkans, critically endangered (a few elderly speakers in Ioannina, Greece as of 2019; small groups documented in Iran as of 2021, per Wikipedia). Historically written in Hebrew square script with vowel points (nikkud) adapted to Greek phonology — attested from a 10th-century Hebrew-Greek glossary — before a 19th-century shift to the Greek alphabet for most surviving texts. No sourced letter-by-letter Hebrew-script grapheme-to-IPA correspondence table could be located this session (Omniglot's Yevanic page presents the alphabet only as unreadable chart images, not machine-readable text; Krivoruchko's philological work was not accessible for character-level detail). Grapheme inventory intentionally left empty rather than fabricated or borrowed wholesale from Modern Greek `el` graphemes, since the actual attested orthography is the Hebrew abjad, not the Greek alphabet. Wired to `el` as the base spoken variety and to `he` as the adstrate supplying both the historical script and the loan vocabulary.",
+  "sources": [
+    {
+      "id": "wiki-yej",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Yevanic",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Yevanic"
+    },
+    {
+      "id": "jewishlanguages-judeogreek",
+      "author": "Jewish Language Project",
+      "year": 2024,
+      "title": "Judeo-Greek",
+      "url": "https://www.jewishlanguages.org/judeo-greek",
+      "notes": "Overview of Judeo-Greek/Yevanic sociolinguistic history and script use."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Yevanic"
+  ],
+  "urls": [
+    "https://www.jewishlanguages.org/judeo-greek",
+    "https://www.omniglot.com/writing/yevanic.htm",
+    "https://glottolog.org/resource/languoid/id/yeva1238"
+  ],
+  "timespan": {
+    "start_year": 900,
+    "end_year": null
+  },
+  "location": {
+    "latitude": 39.6675,
+    "longitude": 20.8508,
+    "source": "wikipedia",
+    "notes": "Ioannina, Greece — the last documented community of Yevanic speakers."
+  }
+}

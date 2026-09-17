@@ -1,0 +1,305 @@
+{
+  "code": "pt-PT-x-beira",
+  "name": "Beirão (Beira Portuguese)",
+  "script": "Latin",
+  "quality": "research",
+  "script_type": "alphabet",
+  "graphemes_base": "pt-PT",
+  "allophones_base": "pt-PT",
+  "allophones": {
+    "ʁ": [
+      "ʁ",
+      "r"
+    ],
+    "l": [
+      "l",
+      "ł"
+    ],
+    "ə": [
+      "ɨ",
+      "ə"
+    ]
+  },
+  "positional_graphemes_base": "pt-PT",
+  "parent": "pt-PT",
+  "ancestors": [
+    {
+      "code": "pt-PT",
+      "role": "parent",
+      "weight": 0.9,
+      "notes": "Standard European Portuguese base."
+    }
+  ],
+  "notes": "Beirão / Beira Portuguese (Beira Litoral: Coimbra, Aveiro; Beira Alta: Viseu, Guarda; Beira Baixa: Castelo Branco), a northern-central EP dialect. Cintra places the Beirões in the Baixo-Minhoto-Duriense-Beirão group. MODELLED FEATURES: (1) APICO-ALVEOLAR-ONLY SIBILANT SYSTEM — the 'famous' s beirão: ⟨s/ss⟩ AND ⟨c/ç/z⟩ all realise as apico-alveolar [s̺]/[z̺] (Cintra 1971 pp.88, 93 — the most palatalised apical variant is 'vulgarmente conhecida pelo nome de s beirão'; Álvarez Pérez 2014 pp.37-38, Beirões 'kept only the apico-alveolar branch'; Pérez notes the apical core is clearest in the districts of Viseu, Guarda and Castelo Branco). Coda ⟨s/z⟩ keep chiado [ʃ]/[ʒ]. (2) BETACISM — /v/–/b/ merged to /b/ ~ [β]; Pérez 2014 pp.35-37 documents an extensive bilabial-merger area in the eastern districts of Guarda and Castelo Branco that Cintra's original map omitted. A conservative alveolar rhotic (trill [r]) is enumerated as a variant of /ʁ/. (3) BEIRA-BAIXA STRESSED /u/ → [y] PALATALISATION — Cintra (1971, p.14 of the CVC reflow) delimits the Beira-Baixa / Alto-Alentejo zone — 'uma região que tem como principais núcleos urbanos Castelo-Branco e Portalegre' — by exactly the isogloss of stressed-/u/ palatalisation: 'Como isófona que possa marcar o limite da zona, parece-me preferível escolher, a da palatalização, em maior ou menor grau, da vogal tónica u', within 'uma profunda alteração de timbre de todo o sistema vocálico, principalmente do tónico'; he adds that at the zone's edges the u-timbre change is the trait that stays most perceptible ('o traço que permanece mais perceptível é a alteração do timbre do u'). The explicit front-rounded [y] IPA value is written in the adjacent Barlavento-Algarvio passage of the same 'reacção em cadeia' — 'a palatalização da lábio-velar [u] em [y]' — the two zones sharing the /u/-palatalisation isogloss. Encoded as the allophone rule BEI_U_FRONTING (stressed nucleus only), mirroring the sister mainland zone pt-PT-x-alentejo (ALE_U_FRONTING) and pt-PT-x-algarve: because this is a whole-tonic-system MAINLAND chain shift (not the insular São Miguel open-nucleus process), it fronts even before a tautosyllabic coda liquid (sul → [ˈs̺yɫ]) — deliberately WITHOUT the pt-PT-x-acores ACO_U_KEEP_BEFORE_CODA block, which is a Rogers-1948 São-Miguel-specific conditioning with no mainland source. A PROCLITIC GUARD (word_exceptions, same design as pt-PT-x-alentejo/pt-PT-x-algarve) pins the monosyllabic clitics o/os/no/nos/do/dos/ao/aos/pelo/pelos/um/uns to their inherited Beira nuclei so the word-level stress detector cannot mis-front do → [ˈdy] etc. SCOPE / INTRA-NODE LIMIT (documented, not faked): /u/-fronting is the Beira-BAIXA (Castelo-Branco) sub-zone realisation; Beira Litoral (Coimbra, Aveiro) and Beira Alta (Viseu, Guarda) sit in the Baixo-Minhoto-Duriense-Beirão group and do NOT palatalise tonic /u/ — this general Beira node models the strongest (Beira-Baixa) realisation, the same modelling stance as pt-PT-x-acores (Terceira gold vs the São Miguel /u/-fronting). The wider chain shift ([a] velarisation, [e]/[ɛ] labialisation, [ɔ]/[o] raising) is left to notes to avoid collapsing the vowel space; only the categorical /u/ → [y] is realised. Inherits pt-PT base. ACOUSTIC REFINEMENT (Brissos 2014b, 'A vogal u', AVOC): the /u/-fronting is context-conditioned — stressed /u/ is NOT fronted after a bilabial onset (/p,b,m/), where it retracts toward [u] (Centro-Interior/Alpalhão: 11% of the F2 space after bilabial, 'identificando-se assim com [u]'). Encoded as the guard rule BEI_U_NO_FRONT_AFTER_BILABIAL, ordered before BEI_U_FRONTING. Brissos 2014b also notes the CI /u/ is acoustically central ([ʉ]~[y]); the [y] value kept here follows Cintra and the narrow example transcriptions of Brissos (2014, JPL) ([lˈymɨ] lume) and is documented, not overturned. Brissos & Saramago (2014, pp.55-59, 65) corroborate the Beira-Baixa (CI-zone) stressed /u/-fronting from the perceptual-dialectology literature; note it is a Beira-BAIXA feature, not general to the Beirão area modelled here.",
+  "sources": [
+    {
+      "id": "mateus_dandrade2000",
+      "author": "Mateus, M.H.M. & d'Andrade, E.",
+      "year": 2000,
+      "title": "The Phonology of Portuguese",
+      "publisher": "Oxford University Press",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "cunha_cintra1984",
+      "author": "Cunha, C. & Cintra, L.F.L.",
+      "year": 1984,
+      "title": "Nova Gramática do Português Contemporâneo",
+      "publisher": "Sá da Costa",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "vasconcelos1901",
+      "author": "Vasconcelos, J.L. de",
+      "year": 1901,
+      "title": "Esquisse d'une dialectologie portugaise",
+      "publisher": "Imprimerie nationale",
+      "url": null,
+      "pages": null,
+      "notes": "Classical dialectological survey; Beira section foundational"
+    },
+    {
+      "id": "cintra1971",
+      "author": "Cintra, L. F. Lindley",
+      "year": 1971,
+      "title": "Nova proposta de classificação dos dialectos galego-portugueses",
+      "publisher": "Boletim de Filologia 22:81-116",
+      "url": "https://cvc.instituto-camoes.pt/hlp/biblioteca/novaproposta.pdf",
+      "pages": "14 (CVC reflow), 88, 92-93",
+      "notes": "Foundational EP dialect classification. p.93: the Baixo-Minhoto-Duriense-Beirao group reduces the archaic four-sibilant system to two apico-alveolar sibilants [s̺ z̺]; p.88: /v/-/b/ merger and apico-alveolar sibilants are diagnostic northern features. p.14 (CVC reflow): delimits the Beira-Baixa / Alto-Alentejo zone (núcleos Castelo-Branco e Portalegre) by the isogloss of stressed-/u/ palatalisation — 'Como isófona que possa marcar o limite da zona, parece-me preferível escolher, a da palatalização, em maior ou menor grau, da vogal tónica u' — within 'uma profunda alteração de timbre de todo o sistema vocálico, principalmente do tónico', noting the u-timbre change is the trait most perceptible at the zone's edges; the explicit [y] value ('a palatalização da lábio-velar [u] em [y]') is written in the adjacent Barlavento-Algarvio passage of the same 'reacção em cadeia'. Grounds BEI_U_FRONTING for the Beira-Baixa (Castelo Branco) sub-zone."
+    },
+    {
+      "id": "alvarezperez2014",
+      "author": "Álvarez Pérez, Xosé Afonso",
+      "year": 2014,
+      "title": "European Portuguese dialectal features: a comparison with Cintra's proposal",
+      "publisher": "Journal of Portuguese Linguistics 13(1):29-62",
+      "url": "https://doi.org/10.5334/jpl.62",
+      "pages": "35-39",
+      "notes": "ALEPG-corpus quantitative reassessment. pp.37-38: Baixo-Minhotos, Durienses and Beirões 'kept only the apico-alveolar branch' (both s/ss and c/ç/z merge to apical), vs the conservative four-sibilant Transmontano/Alto-Minhoto. pp.35-37: /b/-/v/ merger extends along the coast beyond Coimbra and through the eastern districts (Guarda, Castelo Branco)."
+    },
+    {
+      "id": "brissos2014",
+      "author": "Brissos, Fernando",
+      "year": 2014,
+      "title": "New insights into Portuguese central-southern dialects: understanding their present and past forms through acoustic data from stressed vowels",
+      "publisher": "Journal of Portuguese Linguistics 13(1): 63–115",
+      "url": "https://www.clul.ulisboa.pt/files/849/Brissos_2014_comprimido.pdf",
+      "pages": "63–115",
+      "notes": "Acoustic study of central-southern EP stressed vowels (the zone Cintra delimits by the stressed-/u/ isogloss, spanning Beira-Baixa to the Algarve). Documents stressed /u/ → [y] ([tˈyd] 'tudo', [lˈymɨ] 'lume') and cites Lüdtke (1957) and Maia (1975–78) that the palatalisation is stressed-only — corroborating acoustic source for the Beira-Baixa BEI_U_FRONTING modelled from Cintra's p.14 zone-defining isogloss."
+    },
+    {
+      "id": "brissos2014b",
+      "author": "Brissos, Fernando",
+      "year": 2014,
+      "title": "A vogal u, os dialectos do Centro-Sul português e a dialectologia acústica",
+      "publisher": "Textos Selecionados, XXIX Encontro Nacional da Associação Portuguesa de Linguística, Porto: APL, pp. 85-102",
+      "url": "https://apl.pt/wp-content/uploads/2017/09/12_BRISSOS.pdf",
+      "pages": "85-102",
+      "notes": "Acoustic-atlas (AVOC) study of stressed /u/ across 13 Centro-Sul survey points. Refinement over Brissos (2014, JPL): the /u/-fronting is CONTEXT-CONDITIONED — after a bilabial onset (/p,b,m/) the vowel loses most of its advancement and sits near [u] (Praia da Salema / Barlavento: after bilabial u = 25% of the F2 acoustic space, 'muito mais perto de [u] do que de [y]', vs 64% after alveo-dental/palatal/velar, pp.87-88; Alpalhão / Centro-Interior: after bilabial u = 11%, 'identificando-se assim com [u]', p.89). Grounds the bilabial guard (stressed /u/ kept [u] after /p,b,m/). Also documents that the fronting spans [ʉ]~[y] (acoustically central, most often written [ʉ] for the Centro-Interior, [y]/threshold-of-[y] for the Barlavento, p.87) and that across the Sul /u/ is frequently NOT the most-backed vowel (7 of 13 points, pp.91-93) — kept to notes, not modelled."
+    },
+    {
+      "id": "brissos_saramago2014",
+      "author": "Brissos, Fernando & Saramago, João",
+      "year": 2014,
+      "title": "O problema da diversidade dialectal do Centro-Sul português: informação perceptiva versus informação acústica",
+      "publisher": "Estudos de Lingüística Galega 6: 53–80",
+      "url": "https://doi.org/10.15304/elg.6.1781",
+      "pages": "53–80",
+      "notes": "Perceptual-vs-acoustic synthesis over Brissos (2014), mapping the Centro-Sul point by point. Corroborates the stressed /u/-palatalisation isogloss for the Beira-Baixa/Alto-Alentejo (CI) and Barlavento-Algarvio (SW) zones (§3, pp.55-59) and reports that across the Sul the stressed /u/ is realised fronted/central rather than as the most-backed vowel of the system (p.65); also records final unstressed <o> realised as a neutral schwa rather than [u] in parts of the Centro-Sul (p.57)."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Portuguese_dialects",
+    "https://pt.wikipedia.org/wiki/Dialetos_da_l%C3%ADngua_portuguesa"
+  ],
+  "urls": [
+    "https://en.wikipedia.org/wiki/Portuguese_dialects",
+    "https://en.wikipedia.org/wiki/Beiras",
+    "https://en.wikipedia.org/wiki/Dialects_of_Portuguese"
+  ],
+  "iso639_3": "por",
+  "stress": {
+    "onset_clusters": ["bl", "br", "bɫ", "bɾ", "bʀ", "bʁ", "bʎ", "bχ", "dr", "dɾ", "dʀ", "dʁ", "dʎ", "dχ", "fl", "fr", "fɫ", "fɾ", "fʀ", "fʁ", "fʎ", "fχ", "kl", "kr", "kɫ", "kɾ", "kʀ", "kʁ", "kʎ", "kχ", "pl", "pr", "pɫ", "pɾ", "pʀ", "pʁ", "pʎ", "pχ", "tr", "tɾ", "tʀ", "tʁ", "tʎ", "tχ", "vl", "vr", "vɫ", "vɾ", "vʀ", "vʁ", "vʎ", "vχ", "ðr", "ðɾ", "ðʀ", "ðʁ", "ðʎ", "ðχ", "ɡl", "ɡr", "ɡɫ", "ɡɾ", "ɡʀ", "ɡʁ", "ɡʎ", "ɡχ", "ɣl", "ɣr", "ɣɫ", "ɣɾ", "ɣʀ", "ɣʁ", "ɣʎ", "ɣχ", "βl", "βr", "βɫ", "βɾ", "βʀ", "βʁ", "βʎ", "βχ"],
+    "cliticless_words": ["o", "a", "os", "as", "de", "do", "da", "dos", "das", "em", "no", "na", "nos", "nas", "por", "pelo", "pela", "pelos", "pelas", "ao", "aos", "à", "às", "com", "sem", "e", "que", "se", "me", "te", "lhe", "lhes", "vos", "lo", "la", "los", "las", "lho", "lha", "lhos", "lhas"],
+    "default_position": -2,
+    "final_stress_endings": [
+      "r",
+      "l",
+      "z",
+      "x",
+      "i",
+      "u",
+      "im",
+      "om",
+      "um",
+      "is",
+      "us",
+      "ns",
+      "ão",
+      "ãe",
+      "õe",
+      "au",
+      "éu",
+      "éi",
+      "ói"
+    ],
+    "penult_stress_endings": [],
+    "marked_vowels": [
+      "á",
+      "é",
+      "í",
+      "ó",
+      "ú",
+      "â",
+      "ê",
+      "ô",
+      "ã",
+      "õ"
+    ],
+    "stress_mark": "ˈ",
+    "notes": "Acordo Ortográfico 1990 conventions: paroxytone default; written accents override; final -i/-u/-r/-l/-z/-x/-im/-om/-um/-ns and nasal diphthongs attract final stress. Unmarked -em/-am stay paroxytone (homem, falam). DIPHTHONGS: declared so the bundled syllabifier counts nuclei correctly — without them every vowel run merges into one nucleus and co-e-lho is read as coe-lho, one syllable short, putting the stress and its vowel reduction on the wrong vowel. ⟨oe⟩ is hiatus, not a diphthong (Cunha & Cintra, §Ditongos).",
+    "diphthongs": [
+      "ãe",
+      "ão",
+      "õe",
+      "ai",
+      "ái",
+      "au",
+      "áu",
+      "ei",
+      "éi",
+      "êi",
+      "eu",
+      "éu",
+      "êu",
+      "iu",
+      "oi",
+      "ói",
+      "ôi",
+      "ou",
+      "ui"
+    ]
+  },
+  "graphemes": {
+    "ç": [
+      "s̺"
+    ],
+    "z": [
+      "z̺"
+    ],
+    "v": [
+      "b",
+      "β"
+    ]
+  },
+  "positional_graphemes": {
+    "s": {
+      "word_initial": [
+        "s̺"
+      ],
+      "intervocalic": [
+        "z̺"
+      ],
+      "before_consonant": [
+        "ʃ",
+        "ʒ"
+      ],
+      "word_final": [
+        "ʃ"
+      ],
+      "intervocalic_cross_word": [
+        "z̺"
+      ]
+    },
+    "c": {
+      "before_e": [
+        "s̺"
+      ],
+      "before_i": [
+        "s̺"
+      ]
+    },
+    "z": {
+      "word_final": [
+        "ʃ",
+        "z̺"
+      ],
+      "before_consonant": [
+        "ʃ"
+      ]
+    },
+    "v": {
+      "intervocalic": [
+        "β"
+      ],
+      "intervocalic_cross_word": [
+        "β"
+      ]
+    }
+  },
+  "allophone_rules": [
+    {
+      "id": "BEI_U_NO_FRONT_AFTER_BILABIAL",
+      "phonemes": [
+        "u"
+      ],
+      "surface": "u",
+      "stress": "stressed",
+      "syllable_position": "nucleus",
+      "preceded_by_phoneme": [
+        "p",
+        "b",
+        "m"
+      ],
+      "notes": "Bilabial-context guard: the stressed labio-velar /u/ is NOT fronted after a bilabial onset (/p,b,m/). Brissos (2014b, 'A vogal u', AVOC acoustic atlas) shows the fronting is context-conditioned — after a bilabial the vowel loses most of its advancement and identifies with [u] (Praia da Salema/Barlavento: 25% of the F2 space after bilabial vs 64% elsewhere, pp.87-88; Alpalhão/Centro-Interior: 11%, 'identificando-se assim com [u]', p.89). Ordered BEFORE the fronting rule so it wins (first-matching rule fires): after /p,b,m/ the guard keeps [u]; in every other onset context the fronting rule downstream applies. Categorical simplification of a gradient effect (after a bilabial the vowel is 'much closer to [u]', not exactly [u]); the gradience is documented here, not encoded."
+    },
+    {
+      "id": "BEI_U_FRONTING",
+      "phonemes": [
+        "u"
+      ],
+      "surface": "y",
+      "stress": "stressed",
+      "syllable_position": "nucleus",
+      "notes": "Palatalisation/fronting of the stressed labio-velar /u/ to the front rounded [y] — the feature by which Cintra (1971, p.14 of the CVC reflow) delimits the Beira-Baixa / Alto-Alentejo zone (núcleos Castelo-Branco e Portalegre): 'a palatalização, em maior ou menor grau, da vogal tónica u', part of 'uma profunda alteração de timbre de todo o sistema vocálico, principalmente do tónico'. The explicit [y] value ('a palatalização da lábio-velar [u] em [y]') is written in the adjacent Barlavento-Algarvio passage of the same 'reacção em cadeia'; Brissos (2014) documents it acoustically for the central-southern zone ([tˈyd] tudo, [lˈymɨ] lume). Restricted to the STRESSED nucleus (stress='stressed'): unstressed /u/ is untouched, so it does not feed on the inherited pt-PT unstressed /o/→[u] reduction. Being a whole-tonic-system MAINLAND chain shift, it fronts even before a tautosyllabic coda liquid (sul → [ˈs̺yɫ]), mirroring pt-PT-x-alentejo/pt-PT-x-algarve and deliberately WITHOUT the insular pt-PT-x-acores ACO_U_KEEP_BEFORE_CODA block (a Rogers-1948 São-Miguel open-nucleus conditioning with no mainland source). NOTES-ONLY (not modelled): the wider chain shift ([a] velarisation, [e]/[ɛ] labialisation, [ɔ]/[o] raising) is left to notes to avoid collapsing the vowel space. SCOPE: the Beira-BAIXA (Castelo-Branco) sub-zone realisation — Beira Litoral/Alta do not palatalise tonic /u/; this general Beira node models the strongest realisation (same stance as pt-PT-x-acores). A proclitic guard (see word_exceptions) keeps monosyllabic clitics — o/os/no/nos/do/dos/ao/aos/pelo/pelos/um/uns — on their inherited [u] nucleus, since the word-level stress detector mis-marks them as stressed."
+    }
+  ],
+  "word_exceptions": {
+    "o": "o",
+    "os": "oʃ",
+    "no": "nu",
+    "nos": "nɔʃ",
+    "do": "du",
+    "dos": "dɔʃ",
+    "ao": "ɐu",
+    "aos": "ɐɔʃ",
+    "pelo": "pɛlu",
+    "pelos": "pɛluʃ",
+    "um": "um",
+    "uns": "unʃ"
+  },
+  "location": {
+    "latitude": 40.6575,
+    "longitude": -7.913889,
+    "source": "wikidata",
+    "notes": "Viseu — a representative locality of the Beiras (Beira Litoral, Alta and Baixa), an area far larger than any one town. [Wikidata Q117676 P625]"
+  },
+  "word_exceptions_base": "pt-PT",
+  "audit": {
+    "clup_dialect": {
+      "conclusion": "sample_too_small",
+      "measured": "The clup_dialect row holds 8 scored sentences (clup_dialect is sentence-level: each gold entry is one interview sentence, scored as a single unit against the engine's whole-sentence transcription, so the bootstrap resamples across only 8 sentence-level PER values, not across words), per=0.3248, per_ci_low=0.2932, per_ci_high=0.3645 (benchmarks/results.json). At n=8 sentences the bootstrap interval is already collapsing toward a point for the same reason (few distinct values to resample), so its narrow width reflects the small sample, not precision; see docs/scoreboard.md's `95% CI` note and the THIN_ROW_MARK cutoff (rows under 20 scored items). This row cannot gate a production promotion on its own strength.",
+      "reference": "spec notes"
+    },
+    "primary_sources": {
+      "conclusion": "sample_too_small",
+      "measured": "The primary_sources row holds 8 gold pairs, per=0.4327, per_ci_low=0.2494, per_ci_high=0.6202 (benchmarks/results.json). The 95% interval spans from below to well above the 0.25 gating threshold and includes it, so the row cannot be said to fail; it is not a measurement precise enough to certify or fail the variety. The other two dialect rows (clup_dialect, n=8, per=0.3248; portuguese_tts, n=20, per=0.0) are also small, so beira Portuguese has no row with enough pairs to speak for the spec's accuracy.",
+      "reference": "spec notes"
+    }
+  }
+}

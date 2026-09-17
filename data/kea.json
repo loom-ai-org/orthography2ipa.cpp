@@ -1,0 +1,476 @@
+{
+  "code": "kea",
+  "glottolog_code": "kabu1256",
+  "name": "Kabuverdianu (Cape Verdean Creole)",
+  "script": "Latin",
+  "quality": "research",
+  "script_type": "alphabet",
+  "parent": "pt-PT",
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "á": [
+      "a"
+    ],
+    "â": [
+      "a"
+    ],
+    "ã": [
+      "ã"
+    ],
+    "e": [
+      "e",
+      "ɛ"
+    ],
+    "é": [
+      "ɛ"
+    ],
+    "ê": [
+      "e"
+    ],
+    "ẽ": [
+      "ẽ"
+    ],
+    "i": [
+      "i"
+    ],
+    "í": [
+      "i"
+    ],
+    "ĩ": [
+      "ĩ"
+    ],
+    "o": [
+      "o",
+      "ɔ"
+    ],
+    "ó": [
+      "ɔ"
+    ],
+    "ô": [
+      "o"
+    ],
+    "õ": [
+      "õ"
+    ],
+    "u": [
+      "u"
+    ],
+    "ú": [
+      "u"
+    ],
+    "ũ": [
+      "ũ"
+    ],
+    "b": [
+      "b"
+    ],
+    "d": [
+      "d"
+    ],
+    "dj": [
+      "dʒ"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "h": [
+      ""
+    ],
+    "j": [
+      "ʒ"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "lh": [
+      "ʎ"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "nh": [
+      "ɲ"
+    ],
+    "ng": [
+      "ŋ"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "ɾ"
+    ],
+    "rr": [
+      "ʀ"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "tx": [
+      "tʃ"
+    ],
+    "v": [
+      "v"
+    ],
+    "w": [
+      "w"
+    ],
+    "x": [
+      "ʃ"
+    ],
+    "y": [
+      "j"
+    ],
+    "z": [
+      "z"
+    ],
+    "n̈": [
+      "ŋ"
+    ]
+  },
+  "positional_graphemes": {
+    "s": {
+      "word_final": [
+        "s",
+        "ʃ"
+      ]
+    },
+    "b": {
+      "word_final": [
+        "b",
+        ""
+      ]
+    },
+    "d": {
+      "word_final": [
+        "d",
+        ""
+      ]
+    },
+    "g": {
+      "word_final": [
+        "ɡ",
+        ""
+      ]
+    },
+    "r": {
+      "word_final": [
+        "ɾ",
+        ""
+      ],
+      "word_initial": [
+        "ʀ"
+      ]
+    },
+    "lh": {
+      "word_initial": [
+        "ʎ"
+      ]
+    },
+    "nh": {
+      "word_initial": [
+        "ɲ"
+      ]
+    }
+  },
+  "allophones": {
+    "a": [
+      "a"
+    ],
+    "ã": [
+      "ã"
+    ],
+    "e": [
+      "e"
+    ],
+    "ɛ": [
+      "ɛ"
+    ],
+    "ẽ": [
+      "ẽ"
+    ],
+    "i": [
+      "i"
+    ],
+    "ĩ": [
+      "ĩ"
+    ],
+    "o": [
+      "o"
+    ],
+    "ɔ": [
+      "ɔ"
+    ],
+    "õ": [
+      "õ"
+    ],
+    "u": [
+      "u"
+    ],
+    "ũ": [
+      "ũ"
+    ],
+    "b": [
+      "b"
+    ],
+    "d": [
+      "d"
+    ],
+    "dʒ": [
+      "dʒ"
+    ],
+    "f": [
+      "f"
+    ],
+    "ɡ": [
+      "ɡ"
+    ],
+    "ʒ": [
+      "ʒ"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "ʎ": [
+      "ʎ"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ɲ": [
+      "ɲ"
+    ],
+    "ŋ": [
+      "ŋ"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "tʃ": [
+      "tʃ"
+    ],
+    "v": [
+      "v"
+    ],
+    "w": [
+      "w"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "j": [
+      "j"
+    ],
+    "z": [
+      "z"
+    ],
+    "ɾ": [
+      "ɾ"
+    ],
+    "ʀ": [
+      "ʀ"
+    ]
+  },
+  "ancestors": [
+    {
+      "code": "pt-PT",
+      "role": "superstrate",
+      "weight": 0.75,
+      "notes": "European Portuguese superstrate: colonial contact from 1460s. The lexifier. Vocabulary, much of morphology and some phonology derive from 15th–17th century Portuguese."
+    },
+    {
+      "code": "wo",
+      "role": "substrate",
+      "weight": 0.06,
+      "notes": "Wolof substrate: Senegambian coast was a major embarkation point for the enslaved population brought to Cape Verde from the earliest (1460s-1500s) settlement period; Wolof is the standard-cited Upper Guinea Coast substrate in the Cape Verdean creolistics literature (Baptista, APiCS ch. 17; Lang 2006 dictionary introduction)."
+    },
+    {
+      "code": "tem",
+      "role": "substrate",
+      "weight": 0.03,
+      "notes": "Temne substrate: Upper Guinea Coast (Sierra Leone area) population contributing to the founder substrate pool alongside Wolof and Mandinka."
+    },
+    {
+      "code": "mnk",
+      "role": "substrate",
+      "weight": 0.03,
+      "notes": "Mandinka substrate: Upper Guinea Coast population brought to Cape Verde during the earliest (1460s-1500s) settlement, alongside Wolof and Temne; Mandinka is repeatedly cited as an Upper Guinea founder-population source for Kabuverdianu in the standard creolistics literature (Jacobs 2010, 'Upper Guinea origins of Papiamentu', which situates Kabuverdianu as the sister proto-creole formed from the same Upper Guinea Portuguese-contact pool feeding Mandinka speakers into both Cape Verde and Guinea-Bissau; Lang 2006 dictionary introduction; Quint 2000, 'Grammaire de la langue cap-verdienne')."
+    }
+  ],
+  "notes": "Kabuverdianu / Cape Verdean Creole (ALUPEC orthography). Portuguese-based creole; vernacular language of Cape Verde (~600,000 speakers). Two macro-dialects: Badiu (Santiago island, Sotavento group) and Sampadjudo (Barlavento islands). KEY FEATURES: (1) NASAL VOWELS: phonemic; in ALUPEC written vowel+n (bon /bõ/), the coda n marking nasality and left unpronounced — the tilde is reserved for the diphthongs ãi/ãu (mãi, nãu). Handled here by the KEA_NASAL_* allophone rules. (2) FIVE-VOWEL SYSTEM: no /ɨ/; unstressed vowels preserved. (3) SILENT H: <h> has no phonetic value. (4) AFFRICATES: tx=[tʃ], dj=[dʒ] — innovations relative to PT. (5) WORD-FINAL WEAKENING: final obstruents may be deleted, especially in Badiu variety. (6) SIBILANT: x=[ʃ], j=[ʒ], s=[s]. (7) RHOTIC: single intervocalic r is a tap /ɾ/; the strong rhotic /ʀ/ is written rr and word-initial r. Official orthography ALUPEC (Alfabeto Unificado para a Escrita do Cabo-Verdiano) adopted 1998, revised 2009.",
+  "sources": [
+    {
+      "id": "baptista2002",
+      "author": "Baptista, M.",
+      "year": 2002,
+      "title": "The Syntax of Cape Verdean Creole: The Sotavento Varieties",
+      "publisher": "John Benjamins",
+      "url": null,
+      "pages": null,
+      "notes": "Definitive syntactic description; phonological inventory in chapter 2"
+    },
+    {
+      "id": "veiga2002",
+      "author": "Veiga, M.",
+      "year": 2002,
+      "title": "O Cabo-verdiano em 45 Lições",
+      "publisher": "INIC, Praia",
+      "url": null,
+      "pages": null,
+      "notes": "Pedagogical description with phonological chapter; Barlavento variety focus"
+    },
+    {
+      "id": "lang2013",
+      "author": "Lang, J.",
+      "year": 2013,
+      "title": "Creole Genesis and the Acquisition of Grammar: The Case of Cape Verde Creole",
+      "publisher": "Cambridge University Press",
+      "url": null,
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Cape_Verdean_Creole"
+  ],
+  "urls": [
+    "https://en.wikipedia.org/wiki/Cape_Verdean_Creole",
+    "https://en.wikipedia.org/wiki/ALUPEC",
+    "https://en.wikipedia.org/wiki/Languages_of_Cape_Verde",
+    "https://glottolog.org/resource/languoid/id/kabu1256",
+    "https://www.ethnologue.com/language/kea/"
+  ],
+  "timespan": {
+    "start_year": 1500,
+    "end_year": null
+  },
+  "iso639_3": "kea",
+  "wikidata_qid": "Q35963",
+  "phoible_id": "kabu1256",
+  "location": {
+    "latitude": 15.0586,
+    "longitude": -23.6148,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Kabuverdianu."
+  },
+  "allophone_rules": [
+    {
+      "id": "KEA_NASAL_A",
+      "phonemes": [
+        "a"
+      ],
+      "surface": "ã",
+      "followed_by": "coda_nasal",
+      "notes": "ALUPEC writes nasal vowels as vowel+n: a vowel nasalises before a CODA nasal (bon /bõ/, kansa /ˈkãsa/); an onset nasal before a vowel (mininu, nha) stays oral. ALUPEC alphabet documentation; Baptista 2002, The Syntax of Cape Verdean Creole, ch. 2."
+    },
+    {
+      "id": "KEA_NASAL_E",
+      "phonemes": [
+        "e",
+        "ɛ"
+      ],
+      "surface": "ẽ",
+      "followed_by": "coda_nasal",
+      "notes": "See KEA_NASAL_A."
+    },
+    {
+      "id": "KEA_NASAL_I",
+      "phonemes": [
+        "i"
+      ],
+      "surface": "ĩ",
+      "followed_by": "coda_nasal",
+      "notes": "See KEA_NASAL_A."
+    },
+    {
+      "id": "KEA_NASAL_O",
+      "phonemes": [
+        "o",
+        "ɔ"
+      ],
+      "surface": "õ",
+      "followed_by": "coda_nasal",
+      "notes": "See KEA_NASAL_A."
+    },
+    {
+      "id": "KEA_NASAL_U",
+      "phonemes": [
+        "u"
+      ],
+      "surface": "ũ",
+      "followed_by": "coda_nasal",
+      "notes": "See KEA_NASAL_A."
+    },
+    {
+      "id": "KEA_NASAL_ABSORB",
+      "phonemes": [
+        "n",
+        "m"
+      ],
+      "surface": "",
+      "syllable_position": "coda",
+      "preceded_by": "vowel",
+      "notes": "The coda nasal is absorbed into the nasal vowel it created; in ALUPEC the coda n marks nasality of the preceding vowel and is not itself pronounced."
+    }
+  ],
+  "stress": {
+    "default_position": -2,
+    "marked_vowels": [
+      "á",
+      "é",
+      "í",
+      "ó",
+      "ú",
+      "â",
+      "ê",
+      "ô"
+    ],
+    "stress_mark": "ˈ",
+    "diphthongs": [
+      "ai",
+      "au",
+      "ei",
+      "oi",
+      "ou",
+      "iu",
+      "ui"
+    ],
+    "notes": "Stress is penultimate by default; a written acute/circumflex marks a non-penultimate stressed vowel — karapáti 'tick' vs karapati 'to cling' (Baptista 2002; ALUPEC). Oral diphthongs are declared so the syllabifier counts each as one nucleus."
+  },
+  "orthography_standard": {
+    "name": "ALUPEC — Alfabeto Unificado para a Escrita da Língua Cabo-verdiana",
+    "authority": "Governo de Cabo Verde",
+    "year": 2009,
+    "url": "https://en.wikipedia.org/wiki/ALUPEC",
+    "notes": "Approved on a five-year trial by Decreto-Lei 67/98 (1998) and instituted as the official alphabet by Decreto-Lei 8/2009. A phonemic, near-biunique grapheme–phoneme design, NOT the etymological Portuguese-based spelling. This spec targets ALUPEC: nasal vowels written vowel+n (the coda n unpronounced), tilde kept only for the diphthongs ãi/ãu; silent h; affricates tx /tʃ/ and dj /dʒ/; strong rhotic rr and word-initial r, single intervocalic r a tap."
+  }
+}

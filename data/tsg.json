@@ -1,0 +1,105 @@
+{
+ "code": "tsg",
+ "name": "Tausug",
+ "script": "Latin",
+ "quality": "skeleton",
+ "graphemes": {
+  "a": ["a"],
+  "i": ["i"],
+  "u": ["u"],
+  "b": ["b"],
+  "d": ["d"],
+  "g": ["ɡ"],
+  "h": ["h"],
+  "j": ["d̠ʒ"],
+  "k": ["k"],
+  "l": ["l"],
+  "m": ["m"],
+  "n": ["n"],
+  "ng": ["ŋ"],
+  "p": ["p"],
+  "s": ["s"],
+  "t": ["t̪"],
+  "w": ["w"],
+  "y": ["j"],
+  "'": ["ʔ"]
+ },
+ "allophones": {
+  "b": ["b", "b̚", "β"],
+  "d": ["d", "d̚", "r"],
+  "k": ["k", "k̚"],
+  "l": ["l", "r"],
+  "p": ["p", "p̚"],
+  "t̪": ["t̪", "t̪̚"],
+  "ɡ": ["ɡ", "ɡ̚", "ɣ"],
+  "d̠ʒ": ["d̠ʒ"],
+  "ŋ": ["ŋ"],
+  "ʔ": ["ʔ"],
+  "j": ["j"],
+  "w": ["w"],
+  "h": ["h"],
+  "m": ["m"],
+  "n": ["n"],
+  "s": ["s"],
+  "a": ["a"],
+  "i": ["i"],
+  "u": ["u"]
+ },
+ "notes": "Standard Tausug Latin orthography (Hassan, Ashley & Ashley 1994; Rubino 2005): 18 letters plus the apostrophe for glottal stop, unchanged from Roman-alphabet Philippine practice (no diacritics). Word-final stops are commonly unreleased and intervocalic /d/ and /l/ have flapped/rhotic allophones ([r]) in casual speech (Rubino 2005); ⟨g⟩ has a fricative allophone [ɣ] intervocalically. ⟨ng⟩ is a true digraph for the single velar nasal /ŋ/ (its IPA is not the concatenation of ⟨n⟩+⟨g⟩, which would give /nɡ/): it passes AGENTS.md test 1. Stress is phonemic (distinguishes minimal pairs) but is not marked in the standard orthography and is not predictable from spelling alone, so it is left unencoded (documented exemption, per docs/quality_tiers.md).",
+ "iso639_3": "tsg",
+ "glottolog_code": "taus1251",
+ "wikidata_qid": "Q34817",
+ "wikipedia": [
+  "https://en.wikipedia.org/wiki/Tausug_language"
+ ],
+ "sources": [
+  {
+   "id": "glottolog2024",
+   "author": "Hammarström, Harald; Forkel, Robert; Haspelmath, Martin; Bank, Sebastian",
+   "year": 2024,
+   "title": "Glottolog 5.0",
+   "publisher": "Max Planck Institute for Evolutionary Anthropology",
+   "url": "https://glottolog.org/"
+  },
+  {
+   "id": "phoible2019",
+   "author": "Moran, Steven; McCloy, Daniel (eds.)",
+   "year": 2019,
+   "title": "PHOIBLE 2.0 (doi:10.5281/zenodo.2562766)",
+   "publisher": "Max Planck Institute for the Science of Human History",
+   "url": "https://phoible.org/inventories/view/2212",
+   "notes": "Inventory 2212 (ph), 20 non-marginal segments, 3 marginal excluded."
+  },
+  {
+   "id": "hassan1994",
+   "author": "Hassan, Irene U.; Ashley, Seymour A.; Ashley, Mary Lou",
+   "year": 1994,
+   "title": "Tausug-English Dictionary: Kabtangan Iban Maana",
+   "publisher": "Summer Institute of Linguistics",
+   "notes": "Standard Tausug orthography and grapheme inventory."
+  },
+  {
+   "id": "rubino2005",
+   "author": "Rubino, Carl R.",
+   "year": 2005,
+   "title": "Tausug",
+   "publisher": "In Adelaar & Himmelmann (eds.), The Austronesian Languages of Asia and Madagascar, Routledge",
+   "notes": "Reference grammar sketch: phonology, orthography, stress."
+  }
+ ],
+ "urls": [
+  "https://glottolog.org/resource/languoid/id/taus1251"
+ ],
+ "location": {
+  "latitude": 5.1224,
+  "longitude": 118.88,
+  "source": "glottolog",
+  "notes": "Glottolog's representative point."
+ },
+ "parent": "x-clade-aust1307",
+ "phonemes": [
+  "b", "d", "d̠ʒ", "h", "j", "k", "l", "m", "n", "p", "s", "t̪", "w", "ŋ", "ɡ", "ɲ", "ʔ",
+  "a", "i", "u"
+ ],
+ "phoible_id": "2212"
+}

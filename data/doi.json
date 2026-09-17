@@ -1,0 +1,78 @@
+{
+  "code": "doi",
+  "name": "Dogri",
+  "script": "Devanagari",
+  "graphemes_base": "hi",
+  "graphemes": {},
+  "allophones_base": "hi",
+  "allophones": {},
+  "parent": "sa",
+  "ancestors": [
+    {
+      "code": "sa",
+      "role": "parent",
+      "weight": 0.78,
+      "notes": "Descent from Old Indo-Aryan (Sanskrit) via Apabhraṃśa; Northwestern (Punjabic) Indo-Aryan zone."
+    },
+    {
+      "code": "pa",
+      "role": "adstrate",
+      "weight": 0.15,
+      "notes": "Close contact/typological affinity with Punjabi, including the shared trait of lexical tone arising from lost breathy-voiced (murmured) obstruents."
+    },
+    {
+      "code": "hi",
+      "role": "adstrate",
+      "weight": 0.05,
+      "notes": "Devanagari letter-to-sound conventions follow the Standard Hindi reading (schwa inherent vowel)."
+    }
+  ],
+  "notes": "Dogri, spoken mainly in Jammu (Jammu & Kashmir) and Himachal Pradesh, India. Northwestern Indo-Aryan (Punjabic group), officially written in Devanagari since standardisation (also historically in Takri/Dogra Akkhar script). Unusually for an Indo-Aryan language, Dogri is tonal: Bahri (2001) and Ghai (1991) describe a high-falling tone on word-initial historically-breathy-voiced consonants (घ झ ढ ध भ ढ़) and a low-rising tone on the preceding vowel when the breathy consonant is medial/final -- the same diachronic source (loss of murmured/breathy voicing, redistributed as pitch) documented for Punjabi. This tonogenesis is not encoded as separate grapheme keys here: the Devanagari letters that trigger it are exactly the aspirated/breathy-voiced series already mapped (identical to Hindi's), so the tone is a rule-layer fact about those letters' position, not a distinct spelling; representing it correctly needs a tone/pitch rule keyed to obstruent-breathiness plus syllable position, which is a candidate for allophone_rules once a citable rule-by-rule tonal grammar is available. Left as basic tier pending that.",
+  "quality": "skeleton",
+  "script_type": "abugida",
+  "inherent_vowel": "ə",
+  "iso639_3": "dgo",
+  "tone_inventory": {
+    "˥˧": "high-falling (word-initial historical breathy obstruent)",
+    "˩˨": "low-rising (medial/final historical breathy obstruent)"
+  },
+  "sources": [
+    {
+      "id": "bahri2001",
+      "author": "Bahri, S.",
+      "year": 2001,
+      "title": "Studies in Dogri Phonology",
+      "publisher": "Bahri Publications",
+      "url": null,
+      "pages": null,
+      "notes": "Primary phonological description including gemination and tone facts.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Dogri_language"
+    },
+    {
+      "id": "ghai1991",
+      "author": "Ghai, R.K.",
+      "year": 1991,
+      "title": "Dogra Yodha: A Study of Dogri Tonality",
+      "publisher": "Ariana Publishing House",
+      "url": null,
+      "pages": null,
+      "notes": "Tonal studies in Dogri."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Dogri_language"
+  ],
+  "timespan": {
+    "start_year": 1500,
+    "end_year": null
+  },
+  "glottolog_code": "dogr1250",
+  "wikidata_qid": "Q32730",
+  "wals_code": null,
+  "location": {
+    "latitude": 32.7266,
+    "longitude": 74.857,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Dogri (Jammu region)."
+  }
+}

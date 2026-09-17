@@ -1,0 +1,96 @@
+{
+  "code": "uga",
+  "name": "Ugaritic",
+  "script": "Latin",
+  "script_type": "abjad",
+  "quality": "research",
+  "orthography_kind": "transliteration",
+  "graphemes": {
+    "ʾ": ["ʔ"],
+    "b": ["b"],
+    "g": ["ɡ"],
+    "ḫ": ["x"],
+    "d": ["d"],
+    "h": ["h"],
+    "w": ["w"],
+    "z": ["z"],
+    "ḥ": ["ħ"],
+    "ṭ": ["tˤ"],
+    "y": ["j"],
+    "k": ["k"],
+    "š": ["ʃ"],
+    "l": ["l"],
+    "m": ["m"],
+    "ḏ": ["ð"],
+    "n": ["n"],
+    "ẓ": ["θˤ"],
+    "s": ["s"],
+    "ʿ": ["ʕ"],
+    "p": ["p"],
+    "ṣ": ["sˤ"],
+    "q": ["q"],
+    "r": ["r"],
+    "ṯ": ["θ"],
+    "ġ": ["ɣ"],
+    "t": ["t"],
+    "i": ["ʔi"],
+    "u": ["ʔu"],
+    "s̀": ["su"]
+  },
+  "allophones": {},
+  "parent": "x-clade-semi1276",
+  "ancestors": [
+    {
+      "code": "x-clade-semi1276",
+      "role": "parent",
+      "weight": 0.85,
+      "notes": "Ugaritic is an extinct Northwest Semitic language; its exact position (a sister of the Canaanite/Aramaic split, or its own primary branch) is debated in the literature, so it is hung directly off the Semitic clade node rather than off a more specific (and contested) sub-node, matching the phn.json precedent."
+    }
+  ],
+  "notes": "Ugaritic, an extinct Northwest Semitic language attested c. 15th-12th c. BCE at Ugarit (Ras Shamra, Syria), written in a 30-sign cuneiform ABJAD (wedge-shaped, unrelated in form to Mesopotamian cuneiform despite the name) that is functionally augmented: it uniquely marks the glottal stop ʾ with three vowel-distinguishing signs (ʾa, ʾi, ʾu) while other consonants are written without their following vowel, as in other abjads. graphemes here map the STANDARD SCHOLARLY TRANSLITERATION (not the native cuneiform glyphs, which this repo does not model) to reconstructed IPA values, following the letter order and standard transliteration symbols given by Wikipedia (Ugaritic alphabet): ʾa b g ḫ d h w z ḥ ṭ y k š l m ḏ n ẓ s ʿ p ṣ q r ṯ ġ t ʾi ʾu s̀. Values for the 27 plain consonant letters follow straightforward Semitic-abjad correspondences (b/g/d/h/w/z/y/k/l/m/n/s/p/q/r/t at their expected places; ḫ=/x/, ḥ=/ħ/, ṭ=emphatic/pharyngealised tˤ, ẓ=emphatic ðˤ/θˤ, ṣ=emphatic sˤ, š=/ʃ/, ṯ=interdental /θ/, ḏ=interdental /ð/, ʿ=/ʕ/, ġ=/ɣ/ — the full set of Proto-Semitic consonants is preserved, which is why Ugaritic is central to Semitic comparative reconstruction). The three vowel-bearing aleph signs ʾa/ʾi/ʾu are modelled as glottal-stop-plus-vowel sequences. The 30th sign, conventionally transliterated s̀ (or ś), is a rare letter of disputed value, traditionally associated with /s/ or a marginal sibilant used mainly in foreign (Hurrian) words; it is given the su reading found in the sourced sign list pending a more specific citation. QUALITY: research, not production — this is a transliteration-layer mapping (comparable to phn.json's reconstructed vowel-augmented Latin rendering), not a native-script tokenizer; no positional/allophonic rules are asserted for a corpus this repo does not otherwise model.",
+  "iso639_3": "uga",
+  "glottolog_code": "ugar1238",
+  "wikidata_qid": "Q36928",
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Ugaritic",
+    "https://en.wikipedia.org/wiki/Ugaritic_alphabet"
+  ],
+  "urls": [
+    "https://glottolog.org/resource/languoid/id/ugar1238",
+    "https://iso639-3.sil.org/code/uga"
+  ],
+  "sources": [
+    {
+      "id": "ugaritic_alphabet_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Ugaritic alphabet",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Ugaritic_alphabet",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Ugaritic_alphabet",
+      "pages": null,
+      "notes": "Source of the fixed 30-sign transliteration order (ʾa b g ḫ d h w z ḥ ṭ y k š l m ḏ n ẓ s ʿ p ṣ q r ṯ ġ t ʾi ʾu s̀) and the reconstructed IPA value of each sign, consulted this session."
+    },
+    {
+      "id": "ugaritic_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Ugaritic",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Ugaritic",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Ugaritic",
+      "pages": null,
+      "notes": "General classification and Northwest Semitic affiliation, consulted this session."
+    }
+  ],
+  "timespan": {
+    "start_year": -1500,
+    "end_year": -1180
+  },
+  "location": {
+    "latitude": 35.6,
+    "longitude": 35.78,
+    "source": "glottolog",
+    "notes": "Ras Shamra (ancient Ugarit), Syria."
+  }
+}

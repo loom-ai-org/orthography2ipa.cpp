@@ -1,0 +1,76 @@
+{
+ "code": "sqt",
+ "name": "Soqotri",
+ "script": "Zyyy",
+ "quality": "stub",
+ "graphemes": {},
+ "allophones": {},
+ "notes": "REGISTRY STUB (not a modelled G2P target). Placed so the ancestry graph covers every living ISO 639-3 language. No orthography is claimed; the phoneme inventory follows the cited PHOIBLE inventory (which itself cites a published description): script is Zyyy (undetermined) until a cited description is encoded. Classification and coordinates follow Glottolog.",
+ "iso639_3": "sqt",
+ "glottolog_code": "soqo1240",
+ "sources": [
+  {
+   "id": "glottolog2024",
+   "author": "Hammarström, Harald; Forkel, Robert; Haspelmath, Martin; Bank, Sebastian",
+   "year": 2024,
+   "title": "Glottolog 5.0",
+   "publisher": "Max Planck Institute for Evolutionary Anthropology",
+   "url": "https://glottolog.org/"
+  },
+  {
+   "id": "phoible2019",
+   "author": "Moran, Steven; McCloy, Daniel (eds.)",
+   "year": 2019,
+   "title": "PHOIBLE 2.0 (doi:10.5281/zenodo.2562766)",
+   "publisher": "Max Planck Institute for the Science of Human History",
+   "url": "https://phoible.org/inventories/view/555",
+   "notes": "Inventory 555 (upsid), 33 non-marginal segments, 1 marginal excluded."
+  }
+ ],
+ "urls": [
+  "https://glottolog.org/resource/languoid/id/soqo1240"
+ ],
+ "location": {
+  "latitude": 12.4892,
+  "longitude": 53.9168,
+  "source": "glottolog",
+  "notes": "Glottolog's representative point."
+ },
+ "parent": "x-clade-afro1255",
+ "phonemes": [
+  "R̪|R",
+  "R̪̰|R̰",
+  "b",
+  "d̪|d",
+  "f",
+  "h",
+  "j",
+  "k",
+  "kʼ",
+  "l̪|l",
+  "l̪̰|l̰",
+  "m",
+  "n̪|n",
+  "s̪|s",
+  "s̪ʼ|sʼ",
+  "t̪|t",
+  "t̪ʼ|tʼ",
+  "w",
+  "z̪|z",
+  "ħ",
+  "ɡ",
+  "ɬ̪|ɬ",
+  "ɮ̪|ɮ",
+  "ʃ",
+  "ʒ",
+  "ʔ",
+  "ʕ",
+  "a",
+  "e̞",
+  "i",
+  "o̞",
+  "u",
+  "ə"
+ ],
+ "phoible_id": "555"
+}

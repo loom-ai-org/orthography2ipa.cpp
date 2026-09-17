@@ -1,0 +1,234 @@
+{
+ "code": "rmt",
+ "name": "Domari",
+ "script": "Latin",
+ "quality": "skeleton",
+ "graphemes": {
+  "a": [
+   "ɑ"
+  ],
+  "b": [
+   "b"
+  ],
+  "d": [
+   "d̪"
+  ],
+  "e": [
+   "ɛ"
+  ],
+  "f": [
+   "f"
+  ],
+  "g": [
+   "ɡ"
+  ],
+  "h": [
+   "h"
+  ],
+  "i": [
+   "ɪ"
+  ],
+  "k": [
+   "k"
+  ],
+  "l": [
+   "l̪"
+  ],
+  "m": [
+   "m"
+  ],
+  "n": [
+   "n̪"
+  ],
+  "o": [
+   "ɔ"
+  ],
+  "p": [
+   "p"
+  ],
+  "q": [
+   "q"
+  ],
+  "r": [
+   "r"
+  ],
+  "s": [
+   "s"
+  ],
+  "t": [
+   "t̪"
+  ],
+  "u": [
+   "ʊ"
+  ],
+  "v": [
+   "v"
+  ],
+  "w": [
+   "w"
+  ],
+  "x": [
+   "x"
+  ],
+  "y": [
+   "j"
+  ],
+  "z": [
+   "z"
+  ],
+  "â": [
+   "aː"
+  ],
+  "ê": [
+   "eː"
+  ],
+  "î": [
+   "iː"
+  ],
+  "ð": [
+   "ð"
+  ],
+  "ô": [
+   "oː"
+  ],
+  "û": [
+   "uː"
+  ],
+  "þ": [
+   "θ"
+  ],
+  "ĉ": [
+   "tʃ"
+  ],
+  "ĝ": [
+   "ɣ"
+  ],
+  "ĵ": [
+   "ʤ"
+  ],
+  "ŝ": [
+   "ʃ"
+  ],
+  "ǝ": [
+   "ə"
+  ],
+  "ʾ": [
+   "ʔ"
+  ],
+  "ʿ": [
+   "ʕ"
+  ],
+  "ḍ": [
+   "d̪ˤ"
+  ],
+  "ḥ": [
+   "ħ"
+  ],
+  "ṣ": [
+   "sˤ"
+  ],
+  "ṭ": [
+   "t̪ˤ"
+  ],
+  "ẑ": [
+   "ʒ"
+  ],
+  "ẓ": [
+   "zˤ"
+  ]
+ },
+ "allophones": {},
+ "notes": "Placed so the ancestry graph covers every living ISO 639-3 language. No orthography is claimed; the phoneme inventory follows the cited PHOIBLE inventory (which itself cites a published description): script is Zyyy (undetermined) until a cited description is encoded. Classification and coordinates follow Glottolog. Orthography from an Omniglot chart (c) Simon Ager, https://www.omniglot.com/, extracted via the AfriSpeech/africa-g2p compilation (rmt.json). africa-g2p is a compilation tool, not the linguistic authority; the citation above is the original source it names.",
+ "iso639_3": "rmt",
+ "glottolog_code": "doma1258",
+ "sources": [
+  {
+   "id": "glottolog2024",
+   "author": "Hammarström, Harald; Forkel, Robert; Haspelmath, Martin; Bank, Sebastian",
+   "year": 2024,
+   "title": "Glottolog 5.0",
+   "publisher": "Max Planck Institute for Evolutionary Anthropology",
+   "url": "https://glottolog.org/"
+  },
+  {
+   "id": "phoible2019",
+   "author": "Moran, Steven; McCloy, Daniel (eds.)",
+   "year": 2019,
+   "title": "PHOIBLE 2.0 (doi:10.5281/zenodo.2562766)",
+   "publisher": "Max Planck Institute for the Science of Human History",
+   "url": "https://phoible.org/inventories/view/2530",
+   "notes": "Inventory 2530 (ea), 45 non-marginal segments."
+  },
+  {
+   "id": "omniglot-domari",
+   "author": "Ager, Simon",
+   "year": 2026,
+   "title": "Omniglot chart (domari.xls)",
+   "publisher": "Omniglot",
+   "url": "https://www.omniglot.com/",
+   "notes": "Undated web chart; year is retrieval year, not publication year."
+  }
+ ],
+ "urls": [
+  "https://glottolog.org/resource/languoid/id/doma1258"
+ ],
+ "location": {
+  "latitude": 32.0,
+  "longitude": 35.0,
+  "source": "glottolog",
+  "notes": "Glottolog's representative point."
+ },
+ "parent": "x-clade-indo1319",
+ "phonemes": [
+  "b",
+  "d̠ʒ",
+  "d̪",
+  "d̪ˤ",
+  "f",
+  "h",
+  "j",
+  "k",
+  "l̪",
+  "m",
+  "n̪",
+  "p",
+  "q",
+  "r̪",
+  "s̪",
+  "s̪ˤ",
+  "t̠ʃ",
+  "t̪",
+  "t̪ˤ",
+  "v",
+  "w",
+  "x",
+  "z̪",
+  "z̪ˤ",
+  "ħ",
+  "ɡ",
+  "ɣ",
+  "ɫ",
+  "ʃ",
+  "ʒ",
+  "ʔ",
+  "ʕ",
+  "χ",
+  "a",
+  "aː",
+  "e",
+  "eː",
+  "i",
+  "iː",
+  "o",
+  "oː",
+  "u",
+  "uː",
+  "ɔ",
+  "ʌ"
+ ],
+ "phoible_id": "2530",
+ "script_type": "alphabet",
+ "wikipedia": [
+  "https://en.wikipedia.org/wiki/Domari_language"
+ ]
+}

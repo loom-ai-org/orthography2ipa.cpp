@@ -1,0 +1,942 @@
+{
+  "code": "ga",
+  "name": "Irish",
+  "script": "Latin",
+  "graphemes": {
+    "a": [
+      "a",
+      "ɑ"
+    ],
+    "á": [
+      "aː"
+    ],
+    "e": [
+      "ɛ",
+      "e"
+    ],
+    "é": [
+      "eː"
+    ],
+    "i": [
+      "ɪ",
+      "i"
+    ],
+    "í": [
+      "iː"
+    ],
+    "o": [
+      "ɔ",
+      "o"
+    ],
+    "ó": [
+      "oː"
+    ],
+    "u": [
+      "ʊ",
+      "u"
+    ],
+    "ú": [
+      "uː"
+    ],
+    "ao": [
+      "iː",
+      "eː"
+    ],
+    "ae": [
+      "eː"
+    ],
+    "b": [
+      "bˠ",
+      "bʲ"
+    ],
+    "bh": [
+      "w",
+      "vʲ"
+    ],
+    "c": [
+      "k",
+      "c"
+    ],
+    "ch": [
+      "x",
+      "ç"
+    ],
+    "d": [
+      "d̪ˠ",
+      "dʲ"
+    ],
+    "dh": [
+      "ɣ",
+      "j"
+    ],
+    "f": [
+      "fˠ",
+      "fʲ"
+    ],
+    "fh": [
+      ""
+    ],
+    "g": [
+      "ɡ",
+      "ɟ"
+    ],
+    "gh": [
+      "ɣ",
+      "j"
+    ],
+    "h": [
+      "h"
+    ],
+    "l": [
+      "l̪ˠ",
+      "lˠ",
+      "lʲ"
+    ],
+    "ll": [
+      "l̪ˠ",
+      "lʲ"
+    ],
+    "m": [
+      "mˠ",
+      "mʲ"
+    ],
+    "mh": [
+      "w",
+      "vʲ"
+    ],
+    "n": [
+      "n̪ˠ",
+      "nˠ",
+      "nʲ"
+    ],
+    "nn": [
+      "n̪ˠ",
+      "nʲ"
+    ],
+    "ng": [
+      "ŋ",
+      "ɲ"
+    ],
+    "p": [
+      "pˠ",
+      "pʲ"
+    ],
+    "ph": [
+      "fˠ",
+      "fʲ"
+    ],
+    "r": [
+      "ɾˠ",
+      "ɾʲ"
+    ],
+    "rr": [
+      "ɾˠ"
+    ],
+    "s": [
+      "sˠ",
+      "ʃ"
+    ],
+    "sh": [
+      "h"
+    ],
+    "t": [
+      "t̪ˠ",
+      "tʲ"
+    ],
+    "th": [
+      "h"
+    ],
+    "mb": [
+      "mˠ",
+      "mʲ"
+    ],
+    "gc": [
+      "ɡ",
+      "ɟ"
+    ],
+    "nd": [
+      "n̪ˠ",
+      "nʲ"
+    ],
+    "bp": [
+      "bˠ",
+      "bʲ"
+    ],
+    "dt": [
+      "d̪ˠ",
+      "dʲ"
+    ],
+    "bhf": [
+      "w",
+      "vʲ"
+    ],
+    "ts": [
+      "t̪ˠ",
+      "tʲ"
+    ]
+  },
+  "allophones": {
+    "a": [
+      "a"
+    ],
+    "ɑ": [
+      "ɑ"
+    ],
+    "aː": [
+      "aː"
+    ],
+    "ɛ": [
+      "ɛ"
+    ],
+    "e": [
+      "e"
+    ],
+    "eː": [
+      "eː"
+    ],
+    "ɪ": [
+      "ɪ"
+    ],
+    "i": [
+      "i"
+    ],
+    "iː": [
+      "iː"
+    ],
+    "ɔ": [
+      "ɔ"
+    ],
+    "o": [
+      "o"
+    ],
+    "oː": [
+      "oː"
+    ],
+    "ʊ": [
+      "ʊ"
+    ],
+    "u": [
+      "u"
+    ],
+    "uː": [
+      "uː"
+    ],
+    "bˠ": [
+      "bˠ"
+    ],
+    "bʲ": [
+      "bʲ"
+    ],
+    "w": [
+      "w"
+    ],
+    "vʲ": [
+      "vʲ"
+    ],
+    "k": [
+      "k"
+    ],
+    "c": [
+      "c"
+    ],
+    "x": [
+      "x"
+    ],
+    "ç": [
+      "ç"
+    ],
+    "d̪ˠ": [
+      "d̪ˠ"
+    ],
+    "dʲ": [
+      "dʲ"
+    ],
+    "ɣ": [
+      "ɣ"
+    ],
+    "j": [
+      "j"
+    ],
+    "fˠ": [
+      "fˠ"
+    ],
+    "fʲ": [
+      "fʲ"
+    ],
+    "ɡ": [
+      "ɡ"
+    ],
+    "ɟ": [
+      "ɟ"
+    ],
+    "h": [
+      "h"
+    ],
+    "l̪ˠ": [
+      "l̪ˠ"
+    ],
+    "lˠ": [
+      "lˠ"
+    ],
+    "lʲ": [
+      "lʲ"
+    ],
+    "mˠ": [
+      "mˠ"
+    ],
+    "mʲ": [
+      "mʲ"
+    ],
+    "n̪ˠ": [
+      "n̪ˠ"
+    ],
+    "nˠ": [
+      "nˠ"
+    ],
+    "nʲ": [
+      "nʲ"
+    ],
+    "ŋ": [
+      "ŋ"
+    ],
+    "ɲ": [
+      "ɲ"
+    ],
+    "pˠ": [
+      "pˠ"
+    ],
+    "pʲ": [
+      "pʲ"
+    ],
+    "ɾˠ": [
+      "ɾˠ"
+    ],
+    "ɾʲ": [
+      "ɾʲ"
+    ],
+    "sˠ": [
+      "sˠ"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "t̪ˠ": [
+      "t̪ˠ"
+    ],
+    "tʲ": [
+      "tʲ"
+    ],
+    "ə": [
+      "ə"
+    ]
+  },
+  "parent": "cel-x-goidelic",
+  "ancestors": [
+    {
+      "code": "cel-x-goidelic",
+      "role": "parent",
+      "weight": 0.9,
+      "notes": "Goidelic descent"
+    }
+  ],
+  "notes": "Irish (Gaeilge). ~1.7M speakers (2016 census; ~80K daily L1). PERVASIVE BROAD/SLENDER DISTINCTION: every consonant has two versions (velarised 'broad' vs palatalised 'slender'), and the flanking vowel LETTERS encode which — 'caol le caol agus leathan le leathan'. Many of those flanking vowels are pure quality markers and are not pronounced (⟨e⟩ before ⟨a o⟩; ⟨i⟩ next to a back vowel), which is why they map to the empty string in positional_graphemes. Initial mutation: lenition (séimhiú) and eclipsis (urú, encoded as the digraphs mb/gc/nd/bp/dt/bhf/ts). Svarabhakti epenthesis is modelled in allophone_rules. Three main dialects: Munster, Connacht, Ulster — the spec targets the Connacht/Ulster initial-stress type. An Caighdeán Oifigiúil = written standard. Refs: Ó Siadhail (1989), Ní Chiosáin (1999), Wikipedia 'Irish orthography'/'Irish phonology'. Inventory cross-checked against Ní Chasaide (1999), 'Irish', Handbook of the IPA.",
+  "quality": "research",
+  "script_type": "alphabet",
+  "sources": [
+    {
+      "id": "odochartaigh1992",
+      "author": "Ó Dochartaigh, C.",
+      "year": 1992,
+      "title": "The Irish Language",
+      "publisher": "Dublin Institute for Advanced Studies",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "macaulay1992",
+      "author": "MacAulay, D. (ed.)",
+      "year": 1992,
+      "title": "The Celtic Languages",
+      "publisher": "Cambridge University Press",
+      "url": null,
+      "pages": null,
+      "notes": null,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Celtic_languages"
+    },
+    {
+      "id": "o_siadhail1989",
+      "author": "Ó Siadhail, M.",
+      "year": 1989,
+      "title": "Modern Irish: Grammatical Structure and Dialectal Variation",
+      "publisher": "Cambridge University Press",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "ni_chiosain1999",
+      "author": "Ní Chiosáin, M.",
+      "year": 1999,
+      "title": "Syllables and Phonotactics in Irish",
+      "publisher": "Cambridge University Press",
+      "url": null,
+      "pages": null,
+      "notes": "Standard treatment of Irish syllable structure, the broad/slender (velarised/palatalised) contrast and svarabhakti epenthesis. Not fetched; no page verified."
+    },
+    {
+      "id": "wp_ga_orthography",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Irish orthography",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Irish_orthography",
+      "pages": null,
+      "notes": "Accessible overview; source of the statement that '⟨e⟩ before ⟨a⟩ or ⟨o⟩ and ⟨i⟩ bordering either side of ⟨u⟩ are silent, but mark a slender consonant', of the caol-le-caol rule, of the vowel digraph table (⟨ea⟩ /a/, ⟨ai⟩ /a/, ⟨ei⟩ /ɛ/, ⟨io⟩ /ɪ/, ⟨oi⟩ /ɛ ɔ/, ⟨ui⟩ /ɪ/, ⟨eo⟩ /oː/, ⟨iu⟩ /ʊ/, ⟨ao⟩ /iː eː/, ⟨ae⟩ /eː/, ⟨aí oí uí⟩ /iː/, ⟨ia⟩ /iə/, ⟨ua⟩ /uə/), and of the eclipsis digraphs mb gc nd bp dt bhf ts.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Irish_orthography"
+    },
+    {
+      "id": "wp_ga_phonology",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Irish phonology",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Irish_phonology",
+      "pages": null,
+      "notes": "Accessible overview; source of the consonant inventory (/bˠ bʲ pˠ pʲ mˠ mʲ fˠ fʲ d̪ˠ dʲ t̪ˠ tʲ sˠ ʃ k c ɡ ɟ x ç ɣ j l̪ˠ lˠ lʲ n̪ˠ nˠ nʲ ɾˠ ɾʲ/), of unstressed-vowel reduction to /ə/, and of the svarabhakti epenthesis rule.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Irish_phonology"
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Irish_language",
+    "https://ga.wikipedia.org/wiki/Gaeilge",
+    "https://ga.wikipedia.org/wiki/An_Ghaeilge"
+  ],
+  "timespan": {
+    "start_year": 1600,
+    "end_year": null
+  },
+  "glottolog_code": "iris1253",
+  "iso639_3": "gle",
+  "wikidata_qid": "Q9142",
+  "phoible_id": "iris1253",
+  "wals_code": "ird",
+  "location": {
+    "latitude": 53.2186,
+    "longitude": -7.61509,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Irish."
+  },
+  "positional_graphemes": {
+    "b": {
+      "before_front_vowel": [
+        "bʲ"
+      ],
+      "after_front_vowel": [
+        "bʲ"
+      ]
+    },
+    "p": {
+      "before_front_vowel": [
+        "pʲ"
+      ],
+      "after_front_vowel": [
+        "pʲ"
+      ]
+    },
+    "m": {
+      "before_front_vowel": [
+        "mʲ"
+      ],
+      "after_front_vowel": [
+        "mʲ"
+      ]
+    },
+    "f": {
+      "before_front_vowel": [
+        "fʲ"
+      ],
+      "after_front_vowel": [
+        "fʲ"
+      ]
+    },
+    "c": {
+      "before_front_vowel": [
+        "c"
+      ],
+      "after_front_vowel": [
+        "c"
+      ]
+    },
+    "g": {
+      "before_front_vowel": [
+        "ɟ"
+      ],
+      "after_front_vowel": [
+        "ɟ"
+      ]
+    },
+    "d": {
+      "before_front_vowel": [
+        "dʲ"
+      ],
+      "after_front_vowel": [
+        "dʲ"
+      ]
+    },
+    "t": {
+      "before_front_vowel": [
+        "tʲ"
+      ],
+      "after_front_vowel": [
+        "tʲ"
+      ]
+    },
+    "s": {
+      "before_front_vowel": [
+        "ʃ"
+      ],
+      "after_front_vowel": [
+        "ʃ"
+      ]
+    },
+    "ch": {
+      "before_front_vowel": [
+        "ç"
+      ],
+      "after_front_vowel": [
+        "ç"
+      ]
+    },
+    "ph": {
+      "before_front_vowel": [
+        "fʲ"
+      ],
+      "after_front_vowel": [
+        "fʲ"
+      ]
+    },
+    "bh": {
+      "before_front_vowel": [
+        "vʲ"
+      ],
+      "after_front_vowel": [
+        "vʲ"
+      ]
+    },
+    "mh": {
+      "before_front_vowel": [
+        "vʲ"
+      ],
+      "after_front_vowel": [
+        "vʲ"
+      ]
+    },
+    "bhf": {
+      "before_front_vowel": [
+        "vʲ"
+      ],
+      "after_front_vowel": [
+        "vʲ"
+      ]
+    },
+    "mb": {
+      "before_front_vowel": [
+        "mʲ"
+      ],
+      "after_front_vowel": [
+        "mʲ"
+      ]
+    },
+    "gc": {
+      "before_front_vowel": [
+        "ɟ"
+      ],
+      "after_front_vowel": [
+        "ɟ"
+      ]
+    },
+    "nd": {
+      "before_front_vowel": [
+        "nʲ"
+      ],
+      "after_front_vowel": [
+        "nʲ"
+      ]
+    },
+    "bp": {
+      "before_front_vowel": [
+        "bʲ"
+      ],
+      "after_front_vowel": [
+        "bʲ"
+      ]
+    },
+    "dt": {
+      "before_front_vowel": [
+        "dʲ"
+      ],
+      "after_front_vowel": [
+        "dʲ"
+      ]
+    },
+    "ts": {
+      "before_front_vowel": [
+        "tʲ"
+      ],
+      "after_front_vowel": [
+        "tʲ"
+      ]
+    },
+    "ng": {
+      "before_front_vowel": [
+        "ɲ"
+      ],
+      "after_front_vowel": [
+        "ɲ"
+      ]
+    },
+    "l": {
+      "before_front_vowel": [
+        "lʲ"
+      ],
+      "after_front_vowel": [
+        "lʲ"
+      ],
+      "word_initial": [
+        "l̪ˠ"
+      ],
+      "intervocalic": [
+        "lˠ",
+        "l̪ˠ"
+      ]
+    },
+    "ll": {
+      "before_front_vowel": [
+        "lʲ"
+      ],
+      "after_front_vowel": [
+        "lʲ"
+      ]
+    },
+    "n": {
+      "before_front_vowel": [
+        "nʲ"
+      ],
+      "after_front_vowel": [
+        "nʲ"
+      ],
+      "word_initial": [
+        "n̪ˠ"
+      ],
+      "intervocalic": [
+        "nˠ",
+        "n̪ˠ"
+      ]
+    },
+    "nn": {
+      "before_front_vowel": [
+        "nʲ"
+      ],
+      "after_front_vowel": [
+        "nʲ"
+      ]
+    },
+    "r": {
+      "before_front_vowel": [
+        "ɾʲ"
+      ],
+      "after_front_vowel": [
+        "ɾʲ"
+      ]
+    },
+    "dh": {
+      "before_front_vowel": [
+        "j"
+      ],
+      "after_front_vowel": [
+        "j"
+      ],
+      "word_final": [
+        ""
+      ]
+    },
+    "gh": {
+      "before_front_vowel": [
+        "j"
+      ],
+      "after_front_vowel": [
+        "j"
+      ],
+      "word_final": [
+        ""
+      ]
+    },
+    "i": {
+      "before_u": [
+        ""
+      ],
+      "before_a": [
+        "i"
+      ],
+      "after_vowel": [
+        ""
+      ]
+    },
+    "e": {
+      "before_back_vowel": [
+        ""
+      ],
+      "word_final": [
+        "ə"
+      ],
+      "nucleus_unstressed": [
+        "ə"
+      ]
+    },
+    "o": {
+      "after_e": [
+        "oː"
+      ],
+      "after_front_vowel": [
+        ""
+      ],
+      "nucleus_unstressed": [
+        "ə"
+      ]
+    },
+    "u": {
+      "before_i": [
+        "ɪ"
+      ],
+      "before_a": [
+        "u"
+      ],
+      "before_front_vowel": [
+        ""
+      ],
+      "nucleus_unstressed": [
+        "ə"
+      ]
+    },
+    "a": {
+      "before_i": [
+        "a"
+      ],
+      "before_front_vowel": [
+        ""
+      ],
+      "after_i": [
+        "ə"
+      ],
+      "after_u": [
+        "ə"
+      ],
+      "word_final": [
+        "ə"
+      ],
+      "nucleus_unstressed": [
+        "ə"
+      ]
+    }
+  },
+  "allophone_rules": [
+    {
+      "id": "GA_SVARABHAKTI_L_BROAD_DENTAL",
+      "phonemes": [
+        "l̪ˠ"
+      ],
+      "surface": "l̪ˠə",
+      "followed_by_phoneme": [
+        "bˠ",
+        "bʲ",
+        "w",
+        "vʲ",
+        "x",
+        "ç",
+        "fˠ",
+        "fʲ",
+        "ɡ",
+        "ɟ",
+        "mˠ",
+        "mʲ",
+        "ɣ",
+        "j"
+      ],
+      "notes": "Svarabhakti (epenthesis): in Irish an unwritten short /ə/ is inserted between a preceding ⟨l n r⟩ and a following ⟨b bh ch f g mh⟩ inside a single morpheme after a SHORT vowel — gorm /ˈɡɔɾˠəmˠ/, dearg /ˈdʲaɾˠəɡ/, leanbh /ˈl̠ʲanˠəw/, borb /ˈbˠɔɾˠəbˠ/, ainm /ˈanʲəmʲ/ (Wikipedia, 'Irish phonology' §Epenthesis; Ó Siadhail 1989). Modelled here as a phoneme→surface rewrite that appends the epenthetic vowel to the sonorant. LIMITATION: the engine's rule vocabulary cannot see vowel length in the preceding nucleus, so the blocking of epenthesis after a long vowel or diphthong (téarma /ˈtʲeːɾˠmˠə/) and across a morpheme boundary is NOT captured; those words are over-generated."
+    },
+    {
+      "id": "GA_SVARABHAKTI_L_BROAD",
+      "phonemes": [
+        "lˠ"
+      ],
+      "surface": "lˠə",
+      "followed_by_phoneme": [
+        "bˠ",
+        "bʲ",
+        "w",
+        "vʲ",
+        "x",
+        "ç",
+        "fˠ",
+        "fʲ",
+        "ɡ",
+        "ɟ",
+        "mˠ",
+        "mʲ",
+        "ɣ",
+        "j"
+      ],
+      "notes": "Svarabhakti (epenthesis): in Irish an unwritten short /ə/ is inserted between a preceding ⟨l n r⟩ and a following ⟨b bh ch f g mh⟩ inside a single morpheme after a SHORT vowel — gorm /ˈɡɔɾˠəmˠ/, dearg /ˈdʲaɾˠəɡ/, leanbh /ˈl̠ʲanˠəw/, borb /ˈbˠɔɾˠəbˠ/, ainm /ˈanʲəmʲ/ (Wikipedia, 'Irish phonology' §Epenthesis; Ó Siadhail 1989). Modelled here as a phoneme→surface rewrite that appends the epenthetic vowel to the sonorant. LIMITATION: the engine's rule vocabulary cannot see vowel length in the preceding nucleus, so the blocking of epenthesis after a long vowel or diphthong (téarma /ˈtʲeːɾˠmˠə/) and across a morpheme boundary is NOT captured; those words are over-generated."
+    },
+    {
+      "id": "GA_SVARABHAKTI_L_SLENDER",
+      "phonemes": [
+        "lʲ"
+      ],
+      "surface": "lʲə",
+      "followed_by_phoneme": [
+        "bˠ",
+        "bʲ",
+        "w",
+        "vʲ",
+        "x",
+        "ç",
+        "fˠ",
+        "fʲ",
+        "ɡ",
+        "ɟ",
+        "mˠ",
+        "mʲ",
+        "ɣ",
+        "j"
+      ],
+      "notes": "Svarabhakti (epenthesis): in Irish an unwritten short /ə/ is inserted between a preceding ⟨l n r⟩ and a following ⟨b bh ch f g mh⟩ inside a single morpheme after a SHORT vowel — gorm /ˈɡɔɾˠəmˠ/, dearg /ˈdʲaɾˠəɡ/, leanbh /ˈl̠ʲanˠəw/, borb /ˈbˠɔɾˠəbˠ/, ainm /ˈanʲəmʲ/ (Wikipedia, 'Irish phonology' §Epenthesis; Ó Siadhail 1989). Modelled here as a phoneme→surface rewrite that appends the epenthetic vowel to the sonorant. LIMITATION: the engine's rule vocabulary cannot see vowel length in the preceding nucleus, so the blocking of epenthesis after a long vowel or diphthong (téarma /ˈtʲeːɾˠmˠə/) and across a morpheme boundary is NOT captured; those words are over-generated."
+    },
+    {
+      "id": "GA_SVARABHAKTI_N_BROAD_DENTAL",
+      "phonemes": [
+        "n̪ˠ"
+      ],
+      "surface": "n̪ˠə",
+      "followed_by_phoneme": [
+        "bˠ",
+        "bʲ",
+        "w",
+        "vʲ",
+        "x",
+        "ç",
+        "fˠ",
+        "fʲ",
+        "ɡ",
+        "ɟ",
+        "mˠ",
+        "mʲ",
+        "ɣ",
+        "j"
+      ],
+      "notes": "Svarabhakti (epenthesis): in Irish an unwritten short /ə/ is inserted between a preceding ⟨l n r⟩ and a following ⟨b bh ch f g mh⟩ inside a single morpheme after a SHORT vowel — gorm /ˈɡɔɾˠəmˠ/, dearg /ˈdʲaɾˠəɡ/, leanbh /ˈl̠ʲanˠəw/, borb /ˈbˠɔɾˠəbˠ/, ainm /ˈanʲəmʲ/ (Wikipedia, 'Irish phonology' §Epenthesis; Ó Siadhail 1989). Modelled here as a phoneme→surface rewrite that appends the epenthetic vowel to the sonorant. LIMITATION: the engine's rule vocabulary cannot see vowel length in the preceding nucleus, so the blocking of epenthesis after a long vowel or diphthong (téarma /ˈtʲeːɾˠmˠə/) and across a morpheme boundary is NOT captured; those words are over-generated."
+    },
+    {
+      "id": "GA_SVARABHAKTI_N_BROAD",
+      "phonemes": [
+        "nˠ"
+      ],
+      "surface": "nˠə",
+      "followed_by_phoneme": [
+        "bˠ",
+        "bʲ",
+        "w",
+        "vʲ",
+        "x",
+        "ç",
+        "fˠ",
+        "fʲ",
+        "ɡ",
+        "ɟ",
+        "mˠ",
+        "mʲ",
+        "ɣ",
+        "j"
+      ],
+      "notes": "Svarabhakti (epenthesis): in Irish an unwritten short /ə/ is inserted between a preceding ⟨l n r⟩ and a following ⟨b bh ch f g mh⟩ inside a single morpheme after a SHORT vowel — gorm /ˈɡɔɾˠəmˠ/, dearg /ˈdʲaɾˠəɡ/, leanbh /ˈl̠ʲanˠəw/, borb /ˈbˠɔɾˠəbˠ/, ainm /ˈanʲəmʲ/ (Wikipedia, 'Irish phonology' §Epenthesis; Ó Siadhail 1989). Modelled here as a phoneme→surface rewrite that appends the epenthetic vowel to the sonorant. LIMITATION: the engine's rule vocabulary cannot see vowel length in the preceding nucleus, so the blocking of epenthesis after a long vowel or diphthong (téarma /ˈtʲeːɾˠmˠə/) and across a morpheme boundary is NOT captured; those words are over-generated."
+    },
+    {
+      "id": "GA_SVARABHAKTI_N_SLENDER",
+      "phonemes": [
+        "nʲ"
+      ],
+      "surface": "nʲə",
+      "followed_by_phoneme": [
+        "bˠ",
+        "bʲ",
+        "w",
+        "vʲ",
+        "x",
+        "ç",
+        "fˠ",
+        "fʲ",
+        "ɡ",
+        "ɟ",
+        "mˠ",
+        "mʲ",
+        "ɣ",
+        "j"
+      ],
+      "notes": "Svarabhakti (epenthesis): in Irish an unwritten short /ə/ is inserted between a preceding ⟨l n r⟩ and a following ⟨b bh ch f g mh⟩ inside a single morpheme after a SHORT vowel — gorm /ˈɡɔɾˠəmˠ/, dearg /ˈdʲaɾˠəɡ/, leanbh /ˈl̠ʲanˠəw/, borb /ˈbˠɔɾˠəbˠ/, ainm /ˈanʲəmʲ/ (Wikipedia, 'Irish phonology' §Epenthesis; Ó Siadhail 1989). Modelled here as a phoneme→surface rewrite that appends the epenthetic vowel to the sonorant. LIMITATION: the engine's rule vocabulary cannot see vowel length in the preceding nucleus, so the blocking of epenthesis after a long vowel or diphthong (téarma /ˈtʲeːɾˠmˠə/) and across a morpheme boundary is NOT captured; those words are over-generated."
+    },
+    {
+      "id": "GA_SVARABHAKTI_R_BROAD",
+      "phonemes": [
+        "ɾˠ"
+      ],
+      "surface": "ɾˠə",
+      "followed_by_phoneme": [
+        "bˠ",
+        "bʲ",
+        "w",
+        "vʲ",
+        "x",
+        "ç",
+        "fˠ",
+        "fʲ",
+        "ɡ",
+        "ɟ",
+        "mˠ",
+        "mʲ",
+        "ɣ",
+        "j"
+      ],
+      "notes": "Svarabhakti (epenthesis): in Irish an unwritten short /ə/ is inserted between a preceding ⟨l n r⟩ and a following ⟨b bh ch f g mh⟩ inside a single morpheme after a SHORT vowel — gorm /ˈɡɔɾˠəmˠ/, dearg /ˈdʲaɾˠəɡ/, leanbh /ˈl̠ʲanˠəw/, borb /ˈbˠɔɾˠəbˠ/, ainm /ˈanʲəmʲ/ (Wikipedia, 'Irish phonology' §Epenthesis; Ó Siadhail 1989). Modelled here as a phoneme→surface rewrite that appends the epenthetic vowel to the sonorant. LIMITATION: the engine's rule vocabulary cannot see vowel length in the preceding nucleus, so the blocking of epenthesis after a long vowel or diphthong (téarma /ˈtʲeːɾˠmˠə/) and across a morpheme boundary is NOT captured; those words are over-generated."
+    },
+    {
+      "id": "GA_SVARABHAKTI_R_SLENDER",
+      "phonemes": [
+        "ɾʲ"
+      ],
+      "surface": "ɾʲə",
+      "followed_by_phoneme": [
+        "bˠ",
+        "bʲ",
+        "w",
+        "vʲ",
+        "x",
+        "ç",
+        "fˠ",
+        "fʲ",
+        "ɡ",
+        "ɟ",
+        "mˠ",
+        "mʲ",
+        "ɣ",
+        "j"
+      ],
+      "notes": "Svarabhakti (epenthesis): in Irish an unwritten short /ə/ is inserted between a preceding ⟨l n r⟩ and a following ⟨b bh ch f g mh⟩ inside a single morpheme after a SHORT vowel — gorm /ˈɡɔɾˠəmˠ/, dearg /ˈdʲaɾˠəɡ/, leanbh /ˈl̠ʲanˠəw/, borb /ˈbˠɔɾˠəbˠ/, ainm /ˈanʲəmʲ/ (Wikipedia, 'Irish phonology' §Epenthesis; Ó Siadhail 1989). Modelled here as a phoneme→surface rewrite that appends the epenthetic vowel to the sonorant. LIMITATION: the engine's rule vocabulary cannot see vowel length in the preceding nucleus, so the blocking of epenthesis after a long vowel or diphthong (téarma /ˈtʲeːɾˠmˠə/) and across a morpheme boundary is NOT captured; those words are over-generated."
+    }
+  ],
+  "stress": {
+    "default_position": 1,
+    "stress_mark": "ˈ",
+    "notes": "Irish (Connacht/Ulster) stresses the FIRST syllable (Wikipedia, 'Irish phonology' §Prosody); unstressed short vowels reduce to /ə/. Munster instead attracts stress to a long vowel or diphthong in the 2nd/3rd syllable and is NOT modelled here."
+  }
+}

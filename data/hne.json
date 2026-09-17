@@ -1,0 +1,68 @@
+{
+  "code": "hne",
+  "name": "Chhattisgarhi",
+  "script": "Devanagari",
+  "graphemes_base": "hi",
+  "graphemes": {},
+  "allophones_base": "hi",
+  "allophones": {},
+  "parent": "sa",
+  "ancestors": [
+    {
+      "code": "sa",
+      "role": "parent",
+      "weight": 0.8,
+      "notes": "Descent from Old Indo-Aryan (Sanskrit); Eastern Hindi zone (Masica 1991)."
+    },
+    {
+      "code": "hi",
+      "role": "adstrate",
+      "weight": 0.1,
+      "notes": "Eastern Hindi group; shares Standard Hindi's Devanagari grapheme-to-sound conventions (schwa inherent vowel). Chhattisgarhi has no independent codified spelling norm distinct from Hindi's, hence graphemes_base=hi."
+    }
+  ],
+  "notes": "Chhattisgarhi, spoken in Chhattisgarh, India. Eastern Hindi group (Masica 1991), distinct from the Bihari (Bhojpuri/Magahi/Maithili) group. Also historically written in Odia script in border areas; Devanagari is the official script (Chhattisgarh Official Language Act). Wikipedia phonology lists nasalisation as phonemically distinctive and a vowel inventory (iː uː ɪ ʊ eː ə oː ɛ ɔ aː) consistent with the standard Devanagari schwa-inherent-vowel reading used by Hindi, so no grapheme overrides are asserted pending a citable source describing divergent letter values.",
+  "quality": "skeleton",
+  "script_type": "abugida",
+  "inherent_vowel": "ə",
+  "iso639_3": "hne",
+  "sources": [
+    {
+      "id": "masica1991",
+      "author": "Masica, C.",
+      "year": 1991,
+      "title": "The Indo-Aryan Languages",
+      "publisher": "Cambridge University Press",
+      "url": null,
+      "pages": null,
+      "notes": "Classifies Chhattisgarhi within Eastern Hindi.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Indo-Aryan_languages"
+    },
+    {
+      "id": "tiwari1973",
+      "author": "Tiwari, U.N.",
+      "year": 1973,
+      "title": "Hindi Bhasha aur Uski Boliyan (Chhattisgarhi chapter)",
+      "publisher": "Lokbharati",
+      "url": null,
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Chhattisgarhi_language"
+  ],
+  "timespan": {
+    "start_year": 1500,
+    "end_year": null
+  },
+  "glottolog_code": "chha1249",
+  "wikidata_qid": "Q33158",
+  "wals_code": null,
+  "location": {
+    "latitude": 21.2787,
+    "longitude": 81.8661,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Chhattisgarhi (Chhattisgarh, India)."
+  }
+}

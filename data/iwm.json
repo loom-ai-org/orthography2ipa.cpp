@@ -1,0 +1,60 @@
+{
+ "code": "iwm",
+ "name": "Iwam",
+ "script": "Zyyy",
+ "quality": "stub",
+ "graphemes": {},
+ "allophones": {},
+ "notes": "REGISTRY STUB (not a modelled G2P target). Placed so the ancestry graph covers every living ISO 639-3 language. No orthography is claimed; the phoneme inventory follows the cited PHOIBLE inventory (which itself cites a published description): script is Zyyy (undetermined) until a cited description is encoded. Classification and coordinates follow Glottolog.",
+ "iso639_3": "iwm",
+ "glottolog_code": "iwam1256",
+ "sources": [
+  {
+   "id": "glottolog2024",
+   "author": "Hammarström, Harald; Forkel, Robert; Haspelmath, Martin; Bank, Sebastian",
+   "year": 2024,
+   "title": "Glottolog 5.0",
+   "publisher": "Max Planck Institute for Evolutionary Anthropology",
+   "url": "https://glottolog.org/"
+  },
+  {
+   "id": "phoible2019",
+   "author": "Moran, Steven; McCloy, Daniel (eds.)",
+   "year": 2019,
+   "title": "PHOIBLE 2.0 (doi:10.5281/zenodo.2562766)",
+   "publisher": "Max Planck Institute for the Science of Human History",
+   "url": "https://phoible.org/inventories/view/377",
+   "notes": "Inventory 377 (upsid), 17 non-marginal segments."
+  }
+ ],
+ "urls": [
+  "https://glottolog.org/resource/languoid/id/iwam1256"
+ ],
+ "location": {
+  "latitude": -4.2735,
+  "longitude": 141.817,
+  "source": "glottolog",
+  "notes": "Glottolog's representative point."
+ },
+ "parent": "x-clade-sepi1257",
+ "phonemes": [
+  "R",
+  "h",
+  "j",
+  "k",
+  "m",
+  "n",
+  "p",
+  "s",
+  "t",
+  "w",
+  "ŋ",
+  "a",
+  "e̞",
+  "i",
+  "o̞",
+  "u",
+  "ə"
+ ],
+ "phoible_id": "377"
+}

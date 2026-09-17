@@ -1,0 +1,120 @@
+{
+  "code": "gl-x-occidental",
+  "name": "Western Galician",
+  "script": "Latin",
+  "parent": "gl",
+  "graphemes_base": "gl",
+  "allophones_base": "gl",
+  "positional_graphemes_base": "gl",
+  "graphemes": {
+    "g": [
+      "h",
+      "ɡ"
+    ]
+  },
+  "allophones": {
+    "h": [
+      "h",
+      "ħ"
+    ]
+  },
+  "positional_graphemes": {
+    "g": {
+      "word_initial": [
+        "h",
+        "ɡ"
+      ],
+      "intervocalic": [
+        "h",
+        "ɣ"
+      ],
+      "before_consonant": [
+        "h"
+      ],
+      "word_final": [
+        "h"
+      ]
+    }
+  },
+  "ancestors": [
+    {
+      "code": "gl",
+      "role": "parent",
+      "weight": 0.92,
+      "notes": "Standard/Central Galician, the immediate parent variety."
+    },
+    {
+      "code": "xlg",
+      "role": "substrate",
+      "weight": 0.05,
+      "notes": "Lusitanian or pre-Celtic Atlantic coastal substrate: the gheada has been linked to a possible substrate influence in the Atlantic coastal zone of Galicia-Portugal, where the pharyngeal/glottal fricative may have old roots."
+    },
+    {
+      "code": "cel-x-gallaecia",
+      "role": "substrate",
+      "weight": 0.03,
+      "notes": "Celtic substrate, somewhat stronger in the coastal western zone."
+    }
+  ],
+  "notes": "Western Galician (galego occidental), spoken in Pontevedra province and the coastal Atlantic zone of A Coruña. KEY FEATURE — GHEADA: the defining hallmark of western Galician, a substitution of /ɡ/ by a voiceless fricative [h] (often described as glottal [h], pharyngeal [ħ], or sometimes velar [x]): 'galego' → [haˈlɛho], 'gato' → [ˈhato]. The gheada affects: word-initial /ɡ/, intervocalic /ɡ/; the ⟨gu⟩ digraph before e/i typically retains /ɡ/. The origin of the gheada is debated: substrate hypothesis (Atlantic pre-Celtic or Lusitanian fricative), internal development from Galaico-Portuguese /ɡ/ spirantisation, or Portuguese influence. The standard RAG norm does NOT accept gheada in formal writing, but the RAG acknowledges it as a legitimate dialectal feature. NOTE: gheada speakers still write ⟨g⟩ in the standard orthography — the feature is purely phonological. Sources: Fernández Rei (1990) *Dialectoloxía da lingua galega*, Dubert García (2006), Álvarez & Xove (2002).",
+  "sources": [
+    {
+      "id": "freixeiro_mato1998",
+      "author": "Freixeiro Mato, X.R.",
+      "year": 1998,
+      "title": "Gramática da Lingua Galega",
+      "publisher": "A Nosa Terra",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "mateus_dandrade2000",
+      "author": "Mateus, M.H.M. & d'Andrade, E.",
+      "year": 2000,
+      "title": "The Phonology of Portuguese",
+      "publisher": "Oxford University Press",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "fernandez_rei1990",
+      "author": "Fernández Rei, F.",
+      "year": 1990,
+      "title": "Dialectoloxía da lingua galega",
+      "publisher": "Xerais",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "regueira2010",
+      "author": "Regueira, X.L.",
+      "year": 2010,
+      "title": "Dicionario de pronuncia da lingua galega",
+      "publisher": "Real Academia Galega / Instituto da Lingua Galega",
+      "url": "https://ilg.usc.gal/pronuncia/",
+      "pages": null,
+      "notes": "The reference pronouncing dictionary for standard Galician. Introduction describes: (a) the lenition of /b d ɡ/ to the approximants [β ð ɣ] in every position except after a pause and after a nasal — unlike Castilian, /d/ lenites after /l/ too; (b) nasal place assimilation, with the coda nasal taking the place of the following consonant and the word-final nasal realised velar [ŋ]; (c) the absence of the open mid vowel /ɔ/ before a tautosyllabic nasal, where only close [o] occurs."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Galician_language",
+    "https://gl.wikipedia.org/wiki/Lingua_galega",
+    "https://es.wikipedia.org/wiki/Idioma_gallego"
+  ],
+  "timespan": {
+    "start_year": 1300,
+    "end_year": null
+  },
+  "glottolog_code": null,
+  "iso639_3": "glg",
+  "quality": "research",
+  "location": {
+    "latitude": 42.433611,
+    "longitude": -8.6475,
+    "source": "wikidata",
+    "notes": "Pontevedra — a representative locality of the western Galician block (Pontevedra province and coastal A Coruña), the gheada heartland. [Wikidata Q12411 P625]"
+  }
+}

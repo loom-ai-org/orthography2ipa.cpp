@@ -1,0 +1,47 @@
+{
+  "code": "lif",
+  "name": "Limbu",
+  "script": "Limbu",
+  "script_type": "abugida",
+  "quality": "stub",
+  "graphemes": {},
+  "parent": "x-clade-sino1245",
+  "ancestors": [
+    {
+      "code": "x-clade-sino1245",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Descent per Glottolog classification of Limbu (limb1266)."
+    }
+  ],
+  "notes": "Skeleton (lexicon-dependent). Limbu is a Kiranti (Sino-Tibetan) language of eastern Nepal and Sikkim written in the Limbu (Sirijonga) script, an abugida with vowel signs and syllable-final consonant diacritics. Lexical tone, where present, is not orthographically recoverable. More fundamentally, grapheme-to-IPA for this script requires a per-word lexicon/pronunciation stratum that the engine does not bundle: syllable-final and stacked/sign-conditioned readings are not derivable letter-by-letter, so engine coverage is lexicon-dependent and effectively zero without that stratum. No grapheme map is asserted for this reason.",
+  "iso639_3": "lif",
+  "glottolog_code": null,
+  "sources": [
+    {
+      "id": "lif_glottolog",
+      "author": "Hammarström, H. et al. (Glottolog 5.0)",
+      "year": 2024,
+      "title": "Glottolog: Limbu (limb1266)",
+      "publisher": "Max Planck Institute for Evolutionary Anthropology",
+      "url": "https://glottolog.org/resource/languoid/id/limb1266",
+      "pages": null,
+      "notes": "Classification reference for a skeleton-tier entry.",
+      "wikipedia_url": null
+    },
+    {
+      "id": "lif_wikipedia",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Limbu language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Limbu_language",
+      "pages": null,
+      "notes": "Orthography/phonology reference for a skeleton-tier entry.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Limbu_language"
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Limbu_language"
+  ]
+}

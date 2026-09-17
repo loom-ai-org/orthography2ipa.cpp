@@ -1,0 +1,235 @@
+{
+ "code": "wob",
+ "name": "Wè Northern",
+ "script": "Latin",
+ "quality": "skeleton",
+ "graphemes": {
+  "a": [
+   "a"
+  ],
+  "an": [
+   "ã"
+  ],
+  "b": [
+   "b"
+  ],
+  "c": [
+   "t͡ʃ"
+  ],
+  "d": [
+   "d"
+  ],
+  "e": [
+   "e"
+  ],
+  "en": [
+   "ẽ"
+  ],
+  "f": [
+   "f"
+  ],
+  "g": [
+   "ɡ"
+  ],
+  "gb": [
+   "ɡ͡b"
+  ],
+  "i": [
+   "i"
+  ],
+  "in": [
+   "ĩ"
+  ],
+  "j": [
+   "d͡ʒ"
+  ],
+  "k": [
+   "k"
+  ],
+  "kp": [
+   "k͡p"
+  ],
+  "kw": [
+   "kʷ"
+  ],
+  "l": [
+   "l"
+  ],
+  "m": [
+   "m"
+  ],
+  "n": [
+   "n"
+  ],
+  "ny": [
+   "ɲ"
+  ],
+  "o": [
+   "o"
+  ],
+  "on": [
+   "õ"
+  ],
+  "p": [
+   "p"
+  ],
+  "r": [
+   "ɾ"
+  ],
+  "s": [
+   "s"
+  ],
+  "t": [
+   "t"
+  ],
+  "u": [
+   "u"
+  ],
+  "un": [
+   "ũ"
+  ],
+  "w": [
+   "w"
+  ],
+  "ɔ": [
+   "ɔ"
+  ],
+  "ɔn": [
+   "ɔ̃"
+  ],
+  "ɛ": [
+   "ɛ"
+  ],
+  "ɛn": [
+   "ɛ̃"
+  ],
+  "ɩ": [
+   "ɪ"
+  ],
+  "ɩn": [
+   "ɪ̃"
+  ],
+  "ʊ": [
+   "ʊ"
+  ],
+  "ʊn": [
+   "ʊ̃"
+  ]
+ },
+ "allophones": {
+  "b": [
+   "b",
+   "m"
+  ],
+  "d": [
+   "d",
+   "n"
+  ],
+  "l": [
+   "l",
+   "r"
+  ],
+  "ɟ": [
+   "ɟ",
+   "ɲ"
+  ]
+ },
+ "notes": "Placed so the ancestry graph covers every living ISO 639-3 language. No orthography is claimed; the phoneme inventory follows the cited PHOIBLE inventory (which itself cites a published description): script is Zyyy (undetermined) until a cited description is encoded. Classification and coordinates follow Glottolog. Orthography from an Omniglot chart (c) Simon Ager, https://www.omniglot.com/, extracted via the AfriSpeech/africa-g2p compilation (wob.json). africa-g2p is a compilation tool, not the linguistic authority; the citation above is the original source it names.",
+ "iso639_3": "wob",
+ "glottolog_code": "weno1238",
+ "sources": [
+  {
+   "id": "glottolog2024",
+   "author": "Hammarström, Harald; Forkel, Robert; Haspelmath, Martin; Bank, Sebastian",
+   "year": 2024,
+   "title": "Glottolog 5.0",
+   "publisher": "Max Planck Institute for Evolutionary Anthropology",
+   "url": "https://glottolog.org/"
+  },
+  {
+   "id": "phoible2019",
+   "author": "Moran, Steven; McCloy, Daniel (eds.)",
+   "year": 2019,
+   "title": "PHOIBLE 2.0 (doi:10.5281/zenodo.2562766)",
+   "publisher": "Max Planck Institute for the Science of Human History",
+   "url": "https://phoible.org/inventories/view/840",
+   "notes": "Inventory 840 (aa), 42 non-marginal segments, 6 tones."
+  },
+  {
+   "id": "omniglot-wobe",
+   "author": "Ager, Simon",
+   "year": 2026,
+   "title": "Omniglot chart (wobe.xls)",
+   "publisher": "Omniglot",
+   "url": "https://www.omniglot.com/",
+   "notes": "Undated web chart; year is retrieval year, not publication year."
+  }
+ ],
+ "urls": [
+  "https://glottolog.org/resource/languoid/id/weno1238"
+ ],
+ "location": {
+  "latitude": 7.4039,
+  "longitude": -7.2462,
+  "source": "glottolog",
+  "notes": "Glottolog's representative point."
+ },
+ "parent": "x-clade-krua1234",
+ "phonemes": [
+  "b",
+  "c",
+  "d",
+  "f",
+  "j",
+  "k",
+  "kp",
+  "kʷ",
+  "l",
+  "p",
+  "s",
+  "t",
+  "w",
+  "ɟ",
+  "ɡb",
+  "a",
+  "aː",
+  "ã",
+  "e",
+  "eː",
+  "ẽ",
+  "i",
+  "iː",
+  "ĩ",
+  "o",
+  "oː",
+  "õ",
+  "u",
+  "uː",
+  "ũ",
+  "ɔ",
+  "ɔː",
+  "ɔ̃",
+  "ɛ",
+  "ɛː",
+  "ɛ̃",
+  "ɪ",
+  "ɪː",
+  "ɪ̃",
+  "ʊ",
+  "ʊː",
+  "ʊ̃"
+ ],
+ "tone_inventory": {
+  "˥": "PHOIBLE tone segment",
+  "˦": "PHOIBLE tone segment",
+  "˧": "PHOIBLE tone segment",
+  "˧˨": "PHOIBLE tone segment",
+  "˨": "PHOIBLE tone segment",
+  "˨˧": "PHOIBLE tone segment"
+ },
+ "phoible_id": "840",
+ "script_type": "alphabet",
+ "wikipedia": [
+  "https://en.wikipedia.org/wiki/W%C3%A8_Northern_language"
+ ]
+}

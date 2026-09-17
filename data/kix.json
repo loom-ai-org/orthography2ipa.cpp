@@ -1,0 +1,325 @@
+{
+ "code": "kix",
+ "name": "Khiamniungan Naga",
+ "script": "Latin",
+ "script_type": "alphabet",
+ "quality": "research",
+ "graphemes": {
+  "tsh": [
+   "tsʰ"
+  ],
+  "ch": [
+   "tʃʰ"
+  ],
+  "ts": [
+   "ts"
+  ],
+  "sh": [
+   "ʃ"
+  ],
+  "th": [
+   "tʰ"
+  ],
+  "kh": [
+   "kʰ"
+  ],
+  "ph": [
+   "pʰ"
+  ],
+  "ny": [
+   "ɲ"
+  ],
+  "ng": [
+   "ŋ"
+  ],
+  "j": [
+   "tʃ"
+  ],
+  "y": [
+   "j"
+  ],
+  "h": [
+   "h"
+  ],
+  "k": [
+   "k"
+  ],
+  "l": [
+   "l"
+  ],
+  "m": [
+   "m"
+  ],
+  "n": [
+   "n"
+  ],
+  "p": [
+   "p"
+  ],
+  "r": [
+   "r"
+  ],
+  "s": [
+   "s"
+  ],
+  "t": [
+   "t"
+  ],
+  "v": [
+   "v"
+  ],
+  "w": [
+   "w"
+  ],
+  "ā": [
+   "a³³"
+  ],
+  "á": [
+   "a⁵⁵"
+  ],
+  "à": [
+   "a³¹"
+  ],
+  "â": [
+   "a⁵²"
+  ],
+  "ǎ": [
+   "a"
+  ],
+  "ē": [
+   "ɛ³³"
+  ],
+  "é": [
+   "ɛ⁵⁵"
+  ],
+  "è": [
+   "ɛ³¹"
+  ],
+  "ê": [
+   "ɛ⁵²"
+  ],
+  "ě": [
+   "ɛ"
+  ],
+  "ī": [
+   "i³³"
+  ],
+  "í": [
+   "i⁵⁵"
+  ],
+  "ì": [
+   "i³¹"
+  ],
+  "î": [
+   "i⁵²"
+  ],
+  "ǐ": [
+   "i"
+  ],
+  "ō": [
+   "o³³"
+  ],
+  "ó": [
+   "o⁵⁵"
+  ],
+  "ò": [
+   "o³¹"
+  ],
+  "ô": [
+   "o⁵²"
+  ],
+  "ǒ": [
+   "o"
+  ],
+  "ū": [
+   "u³³"
+  ],
+  "ú": [
+   "u⁵⁵"
+  ],
+  "ù": [
+   "u³¹"
+  ],
+  "û": [
+   "u⁵²"
+  ],
+  "ǔ": [
+   "u"
+  ],
+  "ǖ": [
+   "ə³³"
+  ],
+  "ǘ": [
+   "ə⁵⁵"
+  ],
+  "ǜ": [
+   "ə³¹"
+  ],
+  "a": [
+   "a"
+  ],
+  "e": [
+   "ɛ"
+  ],
+  "i": [
+   "ɪ"
+  ],
+  "o": [
+   "ɔ"
+  ],
+  "u": [
+   "ʊ"
+  ],
+  "ǚ": [
+   "ə"
+  ],
+  "ü": [
+   "ə"
+  ],
+  "b": [
+   "p"
+  ],
+  "d": [
+   "t"
+  ],
+  "g": [
+   "k"
+  ]
+ },
+ "parent": "sit",
+ "ancestors": [
+  {
+   "code": "sit",
+   "role": "parent",
+   "weight": 1.0,
+   "notes": "Descent from Sino-Tibetan (Tibeto-Burman, Ao/Konyak group)"
+  }
+ ],
+ "notes": "Patsho Khiamniungan in the Latin practical orthography. Tone is written. The Chao values used here are read off the Patsho reference transcriptions, pairing each tone-marked vowel letter with the corresponding pitch-numeral pair in the 3597 of 4240 entries whose counts agree: macron 33 (99.3%), acute 55 (97.8%), circumflex 52 (96.7%), grave 31 (90.6%, or 98.9% counting the 31~32 alternation the reference writes for the low tone). Thaam & Kevichüsa-Ezung (2023) independently describe a five-tone system for the Thang variety — high, mid and low level plus rising and falling — written with these same diacritics, where the grave is a low LEVEL tone rather than the falling contour the Patsho transcriptions give it. Their fifth tone, the caron rising tone, does not occur anywhere in the Patsho data, so no Chao value can be assigned to it honestly: caron vowels map to their vowel quality with no tone mark, a stated gap rather than a guess. IPA writes a tone mark after the rime, so the spec sets tone_marks_syllable_final and the engine docks each mark at its syllable end. Docking divides syllables by maximal onset, which misplaces a medial coda ⟨ng⟩ before a vowel — ⟨Lōngūlām⟩ comes out lo³³ŋu³³lam³³ where the reference has loŋ³³u³³lam³³ — in 152 of the 4240 entries. There are no voiced plosives, so ⟨j⟩ is the plain affricate /tʃ/, which Thaam & Kevichüsa-Ezung's own orthography confirms by writing ⟨jat⟩ for /ʧʌ̄t/; ⟨b⟩, ⟨d⟩ and ⟨g⟩ spell the voiceless stops on the same grounds, as their ⟨bem⟩ /pēm/ and ⟨tsad⟩ /ʦʌ̀t/ show, and none of the three occurs in the Patsho data at all. ⟨ch⟩ as the ASPIRATED affricate /tʃʰ/ and ⟨v⟩ as /v/ are read off the Patsho transcriptions instead (326 of 354 and 193 of 197 occurrences): the Thang description has a single postalveolar affricate and no /v/, and writes ⟨v⟩ for /w/, so the two varieties genuinely differ here. ⟨ts⟩ and ⟨tsh⟩ are the plain and aspirated alveolar pair. ⟨h⟩ is /h/ in the onset and the glottal stop in the coda, where /h/ never occurs and the glottal stop only occurs (⟨tsah⟩ /ʦʌ̌ʔ/ against ⟨tsak⟩ /ʦʌ̌k/). ⟨ü⟩ is /ə/. An unmarked vowel letter after the nucleus is an offglide and lax; the reference transcriptions lax the FIRST element of ⟨ua⟩ instead, which this spec does not encode. The reference transcriptions vary freely between o~ɔ, u~ʊ, i~ɪ, e~ɛ and between 31~32 for the low tone, so a few points of PER are notation rather than error.",
+ "iso639_3": "kix",
+ "glottolog_code": null,
+ "sources": [
+  {
+   "id": "thaam_kevichusa_ezung_2023",
+   "author": "Thaam, Keen; Kevichüsa-Ezung, Mimi",
+   "year": 2023,
+   "title": "Phonology of Khiamniungan",
+   "publisher": "वाक् मंथन (SEL India), Vol. 9, Issue II",
+   "url": "https://selindia.org/wp-content/uploads/2024/08/04_Phonology-of-Khiamniungan.pdf",
+   "pages": "39-47",
+   "notes": "Segmental phonology, tone and syllable structure of the Thang variety: 20 consonants with no voiced plosives, 8 monophthongs, 9 diphthongs, 3 level plus 2 contour tones, and V/CV/VC/CVC syllables. Source of the ⟨tsah⟩ /ʦʌ̌ʔ/ ~ ⟨tsak⟩ /ʦʌ̌k/ contrast for coda ⟨h⟩, of ⟨j⟩ = /ʧ/, and of ⟨ü⟩ = /ə/.",
+   "wikipedia_url": "https://en.wikipedia.org/wiki/Khiamniungan_Naga_language"
+  },
+  {
+   "id": "wiktionary_kix",
+   "author": "Wiktionary contributors",
+   "year": 2026,
+   "title": "Khiamniungan Naga entries and entry guidelines",
+   "publisher": "Wiktionary",
+   "url": "https://en.wikipedia.org/wiki/Khiamniungan_Naga_language",
+   "pages": null,
+   "notes": "The reference transcriptions this spec is measured against. The entries are hand-written for the Patsho variety, with Chao pitch numerals after the rime; the guidelines page names Patsho as the majority variety and cites the SOAS Patsho Khiamniungan dictionary project."
+  },
+  {
+   "id": "khiamniungan_glottolog",
+   "author": "Glottolog",
+   "year": 2023,
+   "title": "Khiamniungan Naga (khia1237)",
+   "publisher": "Max Planck Institute for Evolutionary Anthropology",
+   "url": null,
+   "pages": null,
+   "notes": "Classification reference.",
+   "wikipedia_url": "https://en.wikipedia.org/wiki/Khiamniungan_Naga_language"
+  }
+ ],
+ "wikipedia": [
+  "https://en.wikipedia.org/wiki/Khiamniungan_Naga_language"
+ ],
+ "vowel_graphemes": [
+  "a",
+  "e",
+  "i",
+  "o",
+  "u",
+  "à",
+  "á",
+  "â",
+  "è",
+  "é",
+  "ê",
+  "ì",
+  "í",
+  "î",
+  "ò",
+  "ó",
+  "ô",
+  "ù",
+  "ú",
+  "û",
+  "ü",
+  "ā",
+  "ē",
+  "ě",
+  "ī",
+  "ō",
+  "ū",
+  "ǎ",
+  "ǐ",
+  "ǒ",
+  "ǔ",
+  "ǖ",
+  "ǘ",
+  "ǜ"
+ ],
+ "tone_marks_syllable_final": true,
+ "phonemes": [
+  "p",
+  "pʰ",
+  "t",
+  "tʰ",
+  "k",
+  "kʰ",
+  "ʔ",
+  "m",
+  "n",
+  "ɲ",
+  "ŋ",
+  "s",
+  "ʃ",
+  "h",
+  "ts",
+  "tsʰ",
+  "tʃ",
+  "tʃʰ",
+  "w",
+  "j",
+  "l",
+  "v",
+  "i",
+  "ɪ",
+  "ɛ",
+  "ə",
+  "a",
+  "u",
+  "ʊ",
+  "o",
+  "ɔ"
+ ],
+ "tone_inventory": {
+  "⁵⁵": "high level",
+  "³³": "mid level",
+  "³¹": "low; written 31 in the Patsho transcriptions, described as low level for Thang",
+  "⁵²": "falling"
+ },
+ "allophone_rules": [
+  {
+   "id": "kix_coda_h_glottal",
+   "phonemes": [
+    "h"
+   ],
+   "surface": "ʔ",
+   "syllable_position": "coda",
+   "notes": "Syllable-final ⟨h⟩ spells the glottal stop, which is a coda-only phoneme: ⟨tsah⟩ /ʦʌ̌ʔ/ contrasts with ⟨tsak⟩ /ʦʌ̌k/, and /h/ itself occurs only word-initially (Thaam & Kevichüsa-Ezung 2023)."
+  }
+ ]
+}

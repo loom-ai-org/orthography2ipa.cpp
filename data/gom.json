@@ -1,0 +1,57 @@
+{
+  "code": "gom",
+  "name": "Goan Konkani",
+  "script": "Devanagari",
+  "script_type": "abugida",
+  "quality": "skeleton",
+  "inherent_vowel": "ə",
+  "graphemes_base": "hi",
+  "graphemes": {},
+  "allophones_base": "hi",
+  "allophones": {},
+  "notes": "Goan Konkani (गोंयची कोंकणी / Gõychi Konknni), the official language of Goa, India (Konkani Official Language Act, 1987) written in Devanagari (the constitutionally recognised script for the Eighth-Schedule language 'Konkani'); ~2.3 million speakers across the wider Konkani-speaking area. Konkani is exceptional in being officially written in several scripts (Devanagari, Latin 'Romi Konkani', Kannada, Malayalam); this spec covers the DEVANAGARI rendering only. GRAPHEMES: the Devanagari letter-to-sound conventions are read the SAME way Hindi's spec already encodes them (`graphemes_base: hi`), following the `doi`/`mag`/`new` precedent in this dataset -- a claim about the shared script's reading convention, not about Konkani's own phonology (which differs from Hindi's, e.g. Konkani's nasal vowels and the /d̪ʒ/-/tʃ/ contrasts described by Almeida 1989). KNOWN GAP: Konkani's phonemic vowel nasalisation and its distinct treatment of schwa-deletion environments (compared to Hindi's) are not yet split out as Konkani-specific overrides -- left undone rather than guessed, a documented gap. STRESS: Almeida (1989) does not describe a lexical stress contrast for Konkani; left unencoded, a documented exemption. TIER: no WikiPron (or other registrable) gold exists for `gom` (checked against CUNY-CL/wikipron's scrape summary, 2026-08-03: zero rows), so `skeleton`, not `research`.",
+  "iso639_3": "gom",
+  "glottolog_code": "goan1235",
+  "wikidata_qid": "Q5575236",
+  "sources": [
+    {
+      "id": "almeida1989",
+      "author": "Almeida, Matthew",
+      "year": 1989,
+      "title": "A Grammar of Konkani",
+      "publisher": "Thomas Stephens Konknni Kendr, Goa",
+      "url": null,
+      "pages": null,
+      "notes": "Reference grammar of Goan Konkani: phonology and Devanagari orthographic conventions."
+    },
+    {
+      "id": "wikidata_Q5575236",
+      "author": "Wikidata contributors",
+      "year": 2026,
+      "title": "Wikidata item Q5575236",
+      "publisher": "Wikimedia Foundation",
+      "url": "https://www.wikidata.org/wiki/Q5575236",
+      "pages": null,
+      "notes": "Language identity, script and code cross-references."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Goan_Konkani",
+    "https://en.wikipedia.org/wiki/Konkani_language"
+  ],
+  "parent": "x-clade-indo1321",
+  "ancestors": [
+    {
+      "code": "x-clade-indo1321",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Indo-Aryan — the classification node this language sits under."
+    }
+  ],
+  "location": {
+    "latitude": 15.2732,
+    "longitude": 74.2098,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Goan Konkani."
+  }
+}

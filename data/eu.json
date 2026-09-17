@@ -1,0 +1,503 @@
+{
+  "code": "eu",
+  "name": "Basque (Euskara)",
+  "script": "Latin",
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "e": [
+      "e"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "o"
+    ],
+    "u": [
+      "u"
+    ],
+    "b": [
+      "b"
+    ],
+    "d": [
+      "d"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "h": [
+      ""
+    ],
+    "j": [
+      "j",
+      "x"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ñ": [
+      "ɲ"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "ɾ"
+    ],
+    "s": [
+      "s̺"
+    ],
+    "t": [
+      "t"
+    ],
+    "x": [
+      "ʃ"
+    ],
+    "z": [
+      "s̻"
+    ],
+    "dd": [
+      "ɟ"
+    ],
+    "ll": [
+      "ʎ"
+    ],
+    "rr": [
+      "r"
+    ],
+    "ts": [
+      "ts̺"
+    ],
+    "tz": [
+      "ts̻"
+    ],
+    "tx": [
+      "tʃ"
+    ],
+    "tt": [
+      "c"
+    ],
+    "ai": [
+      "ai̯"
+    ],
+    "ei": [
+      "ei̯"
+    ],
+    "oi": [
+      "oi̯"
+    ],
+    "au": [
+      "au̯"
+    ],
+    "eu": [
+      "eu̯"
+    ],
+    "ui": [
+      "ui̯"
+    ]
+  },
+  "allophones": {
+    "b": [
+      "b",
+      "β"
+    ],
+    "d": [
+      "d",
+      "ð"
+    ],
+    "ɡ": [
+      "ɡ",
+      "ɣ"
+    ],
+    "p": [
+      "p"
+    ],
+    "t": [
+      "t"
+    ],
+    "k": [
+      "k"
+    ],
+    "c": [
+      "c"
+    ],
+    "ɟ": [
+      "ɟ"
+    ],
+    "f": [
+      "f"
+    ],
+    "s̺": [
+      "s̺"
+    ],
+    "s̻": [
+      "s̻"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "ts̻": [
+      "ts̻"
+    ],
+    "tʃ": [
+      "tʃ"
+    ],
+    "x": [
+      "x"
+    ],
+    "h": [
+      "h"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n",
+      "ŋ"
+    ],
+    "ɲ": [
+      "ɲ"
+    ],
+    "l": [
+      "l"
+    ],
+    "ʎ": [
+      "ʎ"
+    ],
+    "ɾ": [
+      "ɾ"
+    ],
+    "r": [
+      "r"
+    ],
+    "j": [
+      "j"
+    ],
+    "a": [
+      "a"
+    ],
+    "e": [
+      "e"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "o"
+    ],
+    "u": [
+      "u"
+    ],
+    "ts̺": [
+      "ts̺"
+    ]
+  },
+  "sandhi_rules": [
+    {
+      "id": "EU_EZ_D_DEVOICE",
+      "name": "ez+d→ezt (regressive devoicing)",
+      "left_context": "^es̻$",
+      "right_context": "^d",
+      "transform": null,
+      "right_transform": "t",
+      "obligatory": true,
+      "notes": "ez + d- → ezt-: the voiced /d/ of the following word devoices to [t] after the laminal sibilant of ez while the sibilant is retained — ez dut → eztut [es̻ tut], ez da → ezta [es̻ ta], ez dakit → eztakit [es̻ takit]. Categorical connected-speech sandhi of the negative particle ez /es̻/ before a following auxiliary/verb-initial consonant, obligatory for all speakers of Standard Basque and pan-Basque across the dialects (the DEGREE/spelling of the assimilation varies dialectally, but the contractions themselves are general): Hualde & Ortiz de Urbina 2003, Hualde 'Segmental phonology' §2 (consonant assimilation / sandhi of the negative particle), pp.15-65; Hualde 1991, Basque Phonology, §on the negative particle ez. Modelled on eu (Batua) and inherited by the historical-dialect specs via the id-keyed sandhi overlay; a dialect that does not realise ez as /es̻/ simply does not fire the rule (null beats a wrong contraction)."
+    },
+    {
+      "id": "EU_EZ_Z_AFFRICATE",
+      "name": "ez+z→etz (sibilant→affricate coalescence)",
+      "left_context": "^es̻$",
+      "right_context": "^s̻",
+      "transform": "e",
+      "right_transform": "ts̻",
+      "obligatory": true,
+      "notes": "ez + z- → etz-: the sibilant of ez coalesces with the following laminal sibilant into the laminal affricate [ts̻], leaving the vowel of ez bare — ez zen → etzen [e ts̻en], ez zara → etzara [e ts̻aɾa]. Categorical connected-speech sandhi of the negative particle ez /es̻/ before a following auxiliary/verb-initial consonant, obligatory for all speakers of Standard Basque and pan-Basque across the dialects (the DEGREE/spelling of the assimilation varies dialectally, but the contractions themselves are general): Hualde & Ortiz de Urbina 2003, Hualde 'Segmental phonology' §2 (consonant assimilation / sandhi of the negative particle), pp.15-65; Hualde 1991, Basque Phonology, §on the negative particle ez. Modelled on eu (Batua) and inherited by the historical-dialect specs via the id-keyed sandhi overlay; a dialect that does not realise ez as /es̻/ simply does not fire the rule (null beats a wrong contraction)."
+    },
+    {
+      "id": "EU_EZ_N_ASSIM",
+      "name": "ez+n→en (sibilant deletion before nasal)",
+      "left_context": "^es̻$",
+      "right_context": "^n",
+      "transform": "e",
+      "right_transform": null,
+      "obligatory": true,
+      "notes": "ez + n- → en-: the sibilant of ez is deleted before a following nasal — ez naiz → enaiz [e nais̻], ez nator → enator [e natoɾ]. Categorical connected-speech sandhi of the negative particle ez /es̻/ before a following auxiliary/verb-initial consonant, obligatory for all speakers of Standard Basque and pan-Basque across the dialects (the DEGREE/spelling of the assimilation varies dialectally, but the contractions themselves are general): Hualde & Ortiz de Urbina 2003, Hualde 'Segmental phonology' §2 (consonant assimilation / sandhi of the negative particle), pp.15-65; Hualde 1991, Basque Phonology, §on the negative particle ez. Modelled on eu (Batua) and inherited by the historical-dialect specs via the id-keyed sandhi overlay; a dialect that does not realise ez as /es̻/ simply does not fire the rule (null beats a wrong contraction)."
+    },
+    {
+      "id": "EU_EZ_L_ASSIM",
+      "name": "ez+l→el (sibilant deletion before lateral)",
+      "left_context": "^es̻$",
+      "right_context": "^l",
+      "transform": "e",
+      "right_transform": null,
+      "obligatory": true,
+      "notes": "ez + l- → el-: the sibilant of ez is deleted before a following lateral — ez luke → eluke [e luke], ez litzateke → elitzateke [e lits̻ateke]. Categorical connected-speech sandhi of the negative particle ez /es̻/ before a following auxiliary/verb-initial consonant, obligatory for all speakers of Standard Basque and pan-Basque across the dialects (the DEGREE/spelling of the assimilation varies dialectally, but the contractions themselves are general): Hualde & Ortiz de Urbina 2003, Hualde 'Segmental phonology' §2 (consonant assimilation / sandhi of the negative particle), pp.15-65; Hualde 1991, Basque Phonology, §on the negative particle ez. Modelled on eu (Batua) and inherited by the historical-dialect specs via the id-keyed sandhi overlay; a dialect that does not realise ez as /es̻/ simply does not fire the rule (null beats a wrong contraction)."
+    },
+    {
+      "id": "EU_EZ_B_DEVOICE",
+      "name": "ez+b→ezp (regressive devoicing)",
+      "left_context": "^es̻$",
+      "right_context": "^b",
+      "transform": null,
+      "right_transform": "p",
+      "obligatory": true,
+      "notes": "ez + b- → ezp-: the voiced /b/ of the following word devoices to [p] after the sibilant of ez, which is retained — ez balitz → ezpalitz [es̻ palits̻], ez bada → ezpada [es̻ paða]. Categorical connected-speech sandhi of the negative particle ez /es̻/ before a following auxiliary/verb-initial consonant, obligatory for all speakers of Standard Basque and pan-Basque across the dialects (the DEGREE/spelling of the assimilation varies dialectally, but the contractions themselves are general): Hualde & Ortiz de Urbina 2003, Hualde 'Segmental phonology' §2 (consonant assimilation / sandhi of the negative particle), pp.15-65; Hualde 1991, Basque Phonology, §on the negative particle ez. Modelled on eu (Batua) and inherited by the historical-dialect specs via the id-keyed sandhi overlay; a dialect that does not realise ez as /es̻/ simply does not fire the rule (null beats a wrong contraction)."
+    },
+    {
+      "id": "EU_EZ_G_DEVOICE",
+      "name": "ez+g→ezk (regressive devoicing)",
+      "left_context": "^es̻$",
+      "right_context": "^ɡ",
+      "transform": null,
+      "right_transform": "k",
+      "obligatory": true,
+      "notes": "ez + g- → ezk-: the voiced /ɡ/ of the following word devoices to [k] after the sibilant of ez, which is retained — ez gara → ezkara [es̻ kaɾa], ez gaitu → ezkaitu [es̻ kaitu]. Categorical connected-speech sandhi of the negative particle ez /es̻/ before a following auxiliary/verb-initial consonant, obligatory for all speakers of Standard Basque and pan-Basque across the dialects (the DEGREE/spelling of the assimilation varies dialectally, but the contractions themselves are general): Hualde & Ortiz de Urbina 2003, Hualde 'Segmental phonology' §2 (consonant assimilation / sandhi of the negative particle), pp.15-65; Hualde 1991, Basque Phonology, §on the negative particle ez. Modelled on eu (Batua) and inherited by the historical-dialect specs via the id-keyed sandhi overlay; a dialect that does not realise ez as /es̻/ simply does not fire the rule (null beats a wrong contraction)."
+    }
+  ],
+  "parent": "xaq",
+  "glottolog_code": "basq1248",
+  "notes": "Standard Basque (Euskara Batua), codified by the Royal Academy of the Basque Language (Euskaltzaindia) from 1968. Conservative Basque varieties have a three-way sibilant place contrast: lamino-alveolar /s̻/ (spelled z), apico-alveolar /s̺/ (spelled s) and postalveolar /ʃ/ (spelled x), with the matching affricates /ts̻/ (tz), /ts̺/ (ts) and /tʃ/ (tx); this three-way contrast is fully stable in eastern and Navarrese varieties such as Goizueta but is neutralised further west (Hualde, Lujanbio & Zubiri 2010: 119). Palatal stops /c/ (tt) and /ɟ/ (dd), palatal nasal /ɲ/ (ñ) and palatal lateral /ʎ/ (ll) arise historically by palatalisation of /t d n l/ after /i/. Voiced stops /b d ɡ/ are realised as approximants [β ð ɣ] intervocalically (Hualde et al. 2010: 116), and nasals assimilate in place to a following consonant (2010: 120). Five vowels /i e a o u/. Aspiration (/h/, aspirated stops) is preserved only in the eastern (continental) dialects and was lost in the west (Hualde 2018: 2). Dialectal variation across the historical dialects is extensive; Batua draws primarily from Gipuzkoan and Lapurdian sources. Basque is a language isolate with no demonstrated genetic relationship to any other language family. Single ⟨r⟩ is a tap [ɾ] in the onset — intervocalically and in obstruent+r clusters (⟨tr pr kr gr br dr fr⟩) — but the tap/trill contrast is neutralised in the syllable coda, where it surfaces as the trill [r]: word-finally (⟨eder⟩ [eder], ⟨gaur⟩ [ɡau̯r]) and before a consonant (⟨bernart⟩ [bernart], ⟨korpus⟩ [korpus̺]); ⟨rr⟩ is always the trill (Hualde & Ortiz de Urbina 2003). The falling diphthongs ⟨ai ei oi au eu⟩ are tautosyllabic with a non-syllabic offglide [i̯ u̯]. Coda /n/ before a labial /b p m/ assimilates in place to [m] (⟨anbulantzia⟩ [ambulants̻ia]; Hualde, Lujanbio & Zubiri 2010: 120). STRESS EXEMPTION (research/production tier rule): Basque accent is dialect-variable (pitch-accent in some western varieties, weak demarcative stress elsewhere; Hualde 1999) and never marked in Batua orthography, so the spec carries no stress block per docs/quality_tiers.md. Palatalization of n/l after i (mina [miɲa], mutila [mutiʎa]) is LEXICALLY CONDITIONED in Batua, not automatic phonology — Latinate loans (familia, filosofia, kilometro, kilo) keep plain n/l for educated speakers (Hualde & Ortiz de Urbina 2003, §2.3 notes the variability) — so it is deliberately NOT an allophone rule; downstream lexicons own it.",
+  "quality": "production",
+  "urls": [
+    "https://en.wikipedia.org/wiki/Basque_language",
+    "https://glottolog.org/resource/languoid/id/basq1248"
+  ],
+  "script_type": "alphabet",
+  "sources": [
+    {
+      "id": "hualde_ortiz_de_urbina2003",
+      "author": "Hualde, J.I. & Ortiz de Urbina, J. (eds.)",
+      "year": 2003,
+      "title": "A Grammar of Basque",
+      "publisher": "Mouton de Gruyter",
+      "url": null,
+      "pages": "15-65 (Hualde, 'Segmental phonology')",
+      "notes": null
+    },
+    {
+      "id": "hualde_lujanbio_zubiri2010",
+      "author": "Hualde, J.I., Lujanbio, O. & Zubiri, J.J.",
+      "year": 2010,
+      "title": "Goizueta Basque (Illustrations of the IPA)",
+      "publisher": "Journal of the International Phonetic Association 40(1)",
+      "url": "https://doi.org/10.1017/S0025100309990260",
+      "pages": "113-127",
+      "notes": "Read for the base sibilant/affricate system (p.119), voiced-stop spirantization (p.116), nasal assimilation and lateral delateralization (p.120), and the five-vowel system (p.122)."
+    },
+    {
+      "id": "bedialauneta_hualde2023",
+      "author": "Bedialauneta Txurruka, I. & Hualde, J.I.",
+      "year": 2023,
+      "title": "Markina Basque (Illustration of the IPA)",
+      "publisher": "Journal of the International Phonetic Association 53(3)",
+      "url": "https://doi.org/10.1017/S0025100322000032",
+      "pages": "1095-1122",
+      "notes": "Read for the Western/Biscayan sibilant and palatal-stop mergers (p.1098) and for the note that Zuberoan has a three-way plosive contrast (p.1099)."
+    },
+    {
+      "id": "hualde2018_aspiration",
+      "author": "Hualde, J.I.",
+      "year": 2018,
+      "title": "Aspiration in Basque",
+      "publisher": "Papers in Historical Phonology 3",
+      "url": "https://doi.org/10.2218/pihph.3.2018.2602",
+      "pages": "1-27",
+      "notes": "Read for the east/west distribution of /h/ and aspirated stops (pp.1-3, 84 fn.) and the Zuberoan three-way plosive contrast (p.2)."
+    },
+    {
+      "id": "ladefoged_maddieson1996",
+      "author": "Ladefoged, P. & Maddieson, I.",
+      "year": 1996,
+      "title": "The Sounds of the World's Languages",
+      "publisher": "Blackwell",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "hualde1991",
+      "author": "Hualde, J.I.",
+      "year": 1991,
+      "title": "Basque Phonology",
+      "publisher": "Routledge (Theoretical Linguistics series)",
+      "url": null,
+      "pages": "ch. 'The negative particle ez' / consonant assimilation sandhi",
+      "notes": "Read for the categorical connected-speech contractions of the negative particle ez (ez+d→ezt, ez+z→etz, ez+n→en, ez+l→el, ez+b→ezp, ez+g→ezk), the reference statement of pan-Basque ez-sandhi with dialectal variation in degree."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Basque_language",
+    "https://eu.wikipedia.org/wiki/Euskara",
+    "https://es.wikipedia.org/wiki/Euskera"
+  ],
+  "timespan": {
+    "start_year": 1500,
+    "end_year": null
+  },
+  "iso639_3": "eus",
+  "ancestors": [
+    {
+      "code": "xaq",
+      "role": "parent",
+      "weight": 0.85,
+      "notes": "Descent from Proto-Basque / Aquitanian (non-IE isolate)."
+    },
+    {
+      "code": "la",
+      "role": "adstrate",
+      "weight": 0.12,
+      "notes": "Latin/Romance adstrate: two millennia of contact left a very large lexical layer."
+    },
+    {
+      "code": "es-ES",
+      "role": "adstrate",
+      "weight": 0.06,
+      "notes": "Spanish adstrate: modern loanwords and phonological pressure."
+    },
+    {
+      "code": "fr-FR",
+      "role": "adstrate",
+      "weight": 0.04,
+      "notes": "French adstrate: on the northern (Iparralde) dialects."
+    }
+  ],
+  "wikidata_qid": "Q8752",
+  "phoible_id": "basq1248",
+  "wals_code": "bsq",
+  "location": {
+    "latitude": 43.2787,
+    "longitude": -1.31622,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Basque."
+  },
+  "positional_graphemes": {
+    "r": {
+      "word_initial": [
+        "r"
+      ],
+      "word_final": [
+        "r"
+      ],
+      "before_consonant": [
+        "r"
+      ],
+      "intervocalic": [
+        "ɾ"
+      ]
+    }
+  },
+  "allophone_rules": [
+    {
+      "id": "NASAL_LABIAL_ASSIM",
+      "phonemes": [
+        "n"
+      ],
+      "surface": "m",
+      "followed_by_phoneme": [
+        "b",
+        "p",
+        "m"
+      ],
+      "notes": "Nasal place assimilation (Hualde, Lujanbio & Zubiri 2010:120): coda /n/ before a labial /b p m/ surfaces as [m], e.g. anbulantzia [ambulants̩ia], denbora [dembora]."
+    },
+    {
+      "id": "EU_SPIRANT_B",
+      "phonemes": [
+        "b"
+      ],
+      "surface": "β",
+      "preceded_by": "vowel",
+      "notes": "Intervocalic spirantization (Hualde & Ortiz de Urbina 2003, §2.2.2: voiced stops surface as approximants/fricatives after a vowel, as in Spanish): egin [eɣin], abere [aβeɾe], adar [aðar]."
+    },
+    {
+      "id": "EU_SPIRANT_D",
+      "phonemes": [
+        "d"
+      ],
+      "surface": "ð",
+      "preceded_by": "vowel",
+      "notes": "Intervocalic spirantization (Hualde & Ortiz de Urbina 2003, §2.2.2: voiced stops surface as approximants/fricatives after a vowel, as in Spanish): egin [eɣin], abere [aβeɾe], adar [aðar]."
+    },
+    {
+      "id": "EU_SPIRANT_Ɡ",
+      "phonemes": [
+        "ɡ"
+      ],
+      "surface": "ɣ",
+      "preceded_by": "vowel",
+      "notes": "Intervocalic spirantization (Hualde & Ortiz de Urbina 2003, §2.2.2: voiced stops surface as approximants/fricatives after a vowel, as in Spanish): egin [eɣin], abere [aβeɾe], adar [aðar]."
+    },
+    {
+      "id": "EU_OFFGLIDE_I",
+      "phonemes": [
+        "i"
+      ],
+      "surface": "j",
+      "preceded_by": "vowel",
+      "followed_by": "consonant",
+      "notes": "Closing diphthongs (Hualde & Ortiz de Urbina 2003, §2.4): postvocalic high vowel not followed by a vowel is an offglide — ai [aj], au [aw], gau [ɡaw], sei [sej]."
+    },
+    {
+      "id": "EU_OFFGLIDE_I_FINAL",
+      "phonemes": [
+        "i"
+      ],
+      "surface": "j",
+      "preceded_by": "vowel",
+      "word_final": true,
+      "notes": "Closing diphthongs (Hualde & Ortiz de Urbina 2003, §2.4): postvocalic high vowel not followed by a vowel is an offglide — ai [aj], au [aw], gau [ɡaw], sei [sej]."
+    },
+    {
+      "id": "EU_OFFGLIDE_U",
+      "phonemes": [
+        "u"
+      ],
+      "surface": "w",
+      "preceded_by": "vowel",
+      "followed_by": "consonant",
+      "notes": "Closing diphthongs (Hualde & Ortiz de Urbina 2003, §2.4): postvocalic high vowel not followed by a vowel is an offglide — ai [aj], au [aw], gau [ɡaw], sei [sej]."
+    },
+    {
+      "id": "EU_OFFGLIDE_U_FINAL",
+      "phonemes": [
+        "u"
+      ],
+      "surface": "w",
+      "preceded_by": "vowel",
+      "word_final": true,
+      "notes": "Closing diphthongs (Hualde & Ortiz de Urbina 2003, §2.4): postvocalic high vowel not followed by a vowel is an offglide — ai [aj], au [aw], gau [ɡaw], sei [sej]."
+    },
+    {
+      "id": "EU_TRILL_CODA",
+      "phonemes": [
+        "ɾ"
+      ],
+      "surface": "r",
+      "followed_by": "consonant",
+      "notes": "Rhotic distribution (Hualde & Ortiz de Urbina 2003, §2.1: the tap/trill contrast neutralizes to the TRILL in coda position): adar [aðar], hartu [hartu]."
+    },
+    {
+      "id": "EU_TRILL_FINAL",
+      "phonemes": [
+        "ɾ"
+      ],
+      "surface": "r",
+      "word_final": true,
+      "notes": "Rhotic distribution (Hualde & Ortiz de Urbina 2003, §2.1: the tap/trill contrast neutralizes to the TRILL in coda position): adar [aðar], hartu [hartu]."
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "code": "cbk-x-cavite",
+  "name": "Chavacano (Caviteño / Chabacano de Cavite)",
+  "family": "Spanish Creole",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "stub",
+  "parent": "cbk-zam",
+  "ancestors": [
+    {
+      "code": "es-ES",
+      "role": "lexifier",
+      "weight": 0.8,
+      "notes": "Spanish is the lexifier; written with the Spanish alphabet."
+    },
+    {
+      "code": "tl",
+      "role": "substrate",
+      "weight": 0.15,
+      "notes": "Tagalog substrate (Manila Bay area): phonology and grammar."
+    }
+  ],
+  "graphemes": {},
+  "allophones": {},
+  "notes": "Caviteño Chabacano (Chabacano de Cavite), a Manila-Bay Spanish-lexifier creole of Cavite City, Luzon, Philippines — moribund, distinct from Zamboangueño (cbk-zam). STUB WITH NO GRAPHEME TABLE: this spec maps nothing and transcribes every input to the empty string. `parent` records genealogy only and never carries data, so nothing is inherited from cbk-zam, and no `graphemes_base` edge is declared because Zamboangueño's table would be wrong here. Sippola's APiCS description of Cavite Chabacano lists /v/, /ʃ/ and /d͡ʒ/ as phonemes, together with /ʔ/ and /ŋ/ from the Tagalog substrate; the Zamboangueño map has no reading for any of them and reads ⟨v⟩ as [b] (Lipski 1987). The written variety is also unsettled — APiCS describes the documented lect as almost entirely written Cavite Chabacano produced by language activists — so a grapheme map has to be derived from a Manila-Bay description rather than borrowed. Documented differences from Zamboangueño (TMA particles ta/ya/di, Tagalog rather than Visayan substrate) are likewise unencoded.",
+  "iso639_3": "cbk",
+  "glottolog_code": "cavi1254",
+  "wikidata_qid": "Q33281",
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Chavacano"
+  ],
+  "sources": [
+    {
+      "id": "sippola2013cavite",
+      "author": "Sippola, Eeva",
+      "year": 2013,
+      "title": "Cavite Chabacano (APiCS Online contribution 45)",
+      "publisher": "Atlas of Pidgin and Creole Language Structures Online (APiCS), eds. Michaelis, Maurer, Haspelmath & Huber",
+      "url": "https://apics-online.info/contributions/45",
+      "wikipedia_url": null,
+      "pages": "Consonant inventory including /v ʃ d͡ʒ ʔ ŋ/; five-vowel system /i e a o u/; the described lect is written Cavite Chabacano produced by language activists.",
+      "notes": "Primary descriptive source for the Cavite variety; grapheme map to be derived from it."
+    }
+  ],
+  "timespan": {
+    "start_year": 1700,
+    "end_year": null
+  },
+  "location": {
+    "latitude": 14.4791,
+    "longitude": 120.8969,
+    "source": "manual",
+    "notes": "Cavite City, Cavite, Philippines."
+  }
+}

@@ -1,0 +1,281 @@
+{
+  "code": "bal",
+  "name": "Balochi",
+  "script": "Arabic",
+  "script_type": "abjad",
+  "orthography_kind": "native",
+  "quality": "skeleton",
+  "parent": "x-clade-iran1269",
+  "ancestors": [
+    {
+      "code": "x-clade-iran1269",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Iranian (Northwestern Iranian) — the classification node this language sits under, per Jahani & Korn (2009)."
+    }
+  ],
+  "iso639_3": "bal",
+  "wikidata_qid": "Q34014",
+  "graphemes": {
+    "ا": [
+      "aː",
+      "ə"
+    ],
+    "آ": [
+      "aː"
+    ],
+    "ب": [
+      "b"
+    ],
+    "پ": [
+      "p"
+    ],
+    "ت": [
+      "t"
+    ],
+    "ٹ": [
+      "ʈ"
+    ],
+    "ث": [
+      "s"
+    ],
+    "ج": [
+      "dʒ"
+    ],
+    "چ": [
+      "tʃ"
+    ],
+    "ح": [
+      "h"
+    ],
+    "خ": [
+      "x"
+    ],
+    "د": [
+      "d"
+    ],
+    "ڈ": [
+      "ɖ"
+    ],
+    "ذ": [
+      "z"
+    ],
+    "ر": [
+      "r"
+    ],
+    "ڑ": [
+      "ɽ"
+    ],
+    "ز": [
+      "z"
+    ],
+    "ژ": [
+      "ʒ"
+    ],
+    "س": [
+      "s"
+    ],
+    "ش": [
+      "ʃ"
+    ],
+    "ص": [
+      "s"
+    ],
+    "ض": [
+      "z"
+    ],
+    "ط": [
+      "t"
+    ],
+    "ظ": [
+      "z"
+    ],
+    "ع": [
+      "ʔ",
+      ""
+    ],
+    "غ": [
+      "ɣ"
+    ],
+    "ف": [
+      "f"
+    ],
+    "ق": [
+      "q"
+    ],
+    "ک": [
+      "k"
+    ],
+    "گ": [
+      "ɡ"
+    ],
+    "ل": [
+      "l"
+    ],
+    "م": [
+      "m"
+    ],
+    "ن": [
+      "n"
+    ],
+    "ں": [
+      "̃"
+    ],
+    "و": [
+      "w",
+      "oː",
+      "uː"
+    ],
+    "ه": [
+      "h",
+      "aː"
+    ],
+    "ی": [
+      "j",
+      "iː",
+      "eː"
+    ],
+    "ے": [
+      "eː"
+    ],
+    "ء": [
+      "ʔ",
+      ""
+    ]
+  },
+  "allophones": {
+    "aː": [
+      "aː"
+    ],
+    "ə": [
+      "ə"
+    ],
+    "b": [
+      "b"
+    ],
+    "p": [
+      "p"
+    ],
+    "t": [
+      "t"
+    ],
+    "ʈ": [
+      "ʈ"
+    ],
+    "s": [
+      "s"
+    ],
+    "dʒ": [
+      "dʒ"
+    ],
+    "tʃ": [
+      "tʃ"
+    ],
+    "h": [
+      "h"
+    ],
+    "x": [
+      "x"
+    ],
+    "d": [
+      "d"
+    ],
+    "ɖ": [
+      "ɖ"
+    ],
+    "z": [
+      "z"
+    ],
+    "r": [
+      "r"
+    ],
+    "ɽ": [
+      "ɽ"
+    ],
+    "ʒ": [
+      "ʒ"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "ʔ": [
+      "ʔ",
+      ""
+    ],
+    "ɣ": [
+      "ɣ"
+    ],
+    "f": [
+      "f"
+    ],
+    "q": [
+      "q"
+    ],
+    "k": [
+      "k"
+    ],
+    "ɡ": [
+      "ɡ"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "w": [
+      "w"
+    ],
+    "oː": [
+      "oː"
+    ],
+    "uː": [
+      "uː"
+    ],
+    "j": [
+      "j"
+    ],
+    "iː": [
+      "iː"
+    ],
+    "eː": [
+      "eː"
+    ]
+  },
+  "notes": "Balochi (بلۏچی), Northwestern Iranian language of Balochistan (Pakistan, Iran, Afghanistan) and diaspora communities in the Gulf and East Africa; ~8 million speakers, a recognised regional/provincial language (Balochistan province, Pakistan) though without a single fully standardised orthography -- Eastern/Rakhshani, Coastal/Makrani and other varieties differ, and both Perso-Arabic (majority, Pakistan/Iran/Afghanistan) and Latin (diaspora, some Central Asian publications) scripts are in use. This spec covers the PERSO-ARABIC ('Balochi Standard Alphabet') rendering. GRAPHEME KEYS: the base is the Urdu/Persian Perso-Arabic letter inventory, EXTENDED with the same three retroflex letters Urdu borrows for its own retroflex series (ٹ /ʈ/, ڈ /ɖ/, ڑ /ɽ/ -- Balochi has a genuine retroflex series the way Urdu and Sindhi do, unlike Persian) plus ژ /ʒ/. Unlike `ur` (Urdu), this spec has NO aspirate/breathy digraph keys (ٹھ, بھ, ...): Balochi's phonemic aspiration contrast on voiceless stops (Jahani & Korn 2009) is NOT written in the standard orthography at all (the same base letter serves plain and aspirated /p t k tʃ/ and /pʰ tʰ kʰ tʃʰ/), so encoding it as a spelling distinction would be inventing graphemes the orthography does not have; this is a genuine, documented orthographic under-differentiation (AGENTS.md rule 4: describe the language honestly, do not chase accuracy with an unattested spelling split). Short vowel diacritics (fatha/kasra/damma) are frequently OMITTED in running Balochi text as in Persian/Urdu/Arabic more generally, so short /a i u/ are under-represented by this table; long vowels ا/آ, و, ی/ے are represented. Balochi ه(h) sometimes stands for word-final /aː/ as in Persian; both values kept. STRESS: no lexical stress distinguishing minimal pairs is described for Balochi in Jahani & Korn (2009) (stress is reported as largely predictable, final/on the last full syllable, and non-contrastive); left unencoded here -- a documented exemption. TIER: no WikiPron (or other registrable) gold exists for `bal` (checked against CUNY-CL/wikipron's scrape summary, 2026-08-03: zero rows), so `skeleton`, not `research`.",
+  "sources": [
+    {
+      "id": "jahani_korn2009",
+      "author": "Jahani, Carina & Korn, Agnes",
+      "year": 2009,
+      "title": "Balochi",
+      "publisher": "in Gernot Windfuhr (ed.), The Iranian Languages, Routledge",
+      "url": null,
+      "pages": null,
+      "notes": "Reference phonological/grammatical description; retroflex series, aspiration, stress."
+    },
+    {
+      "id": "balochi_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Balochi language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Balochi_language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Balochi_language",
+      "pages": null,
+      "notes": "Balochi Standard Alphabet retroflex letters and phoneme inventory."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Balochi_language"
+  ],
+  "location": {
+    "latitude": 28.0,
+    "longitude": 63.5,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Balochi (Balochistan)."
+  }
+}

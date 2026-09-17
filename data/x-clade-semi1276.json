@@ -1,0 +1,34 @@
+{
+  "code": "x-clade-semi1276",
+  "name": "Semitic",
+  "script": "Zyyy",
+  "quality": "stub",
+  "clade": true,
+  "graphemes": {},
+  "allophones": {},
+  "notes": "Classification-only clade node for the Semitic branch. Carries no phonology: it is never a data-inheritance source, only a step in the ancestry chain from which `family` is derived.  Hangs directly under the Afro-Asiatic clade rather than under the `afa` node: `afa` is a data-bearing stub, and Proto-Semitic has never inherited from it.",
+  "sources": [
+    {
+      "id": "glottolog2024",
+      "author": "Hammarström, Harald; Forkel, Robert; Haspelmath, Martin; Bank, Sebastian",
+      "year": 2024,
+      "title": "Glottolog 5.0",
+      "publisher": "Max Planck Institute for Evolutionary Anthropology",
+      "url": "https://glottolog.org/"
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Semitic_languages"
+  ],
+  "parent": "x-clade-afro1255",
+  "glottolog_code": "semi1276",
+  "urls": [
+    "https://glottolog.org/resource/languoid/id/semi1276"
+  ],
+  "location": {
+    "latitude": 29.169495,
+    "longitude": 41.753591,
+    "source": "glottolog",
+    "notes": "Glottolog's computed centroid for the Semitic family — a summary of a whole clade's range, not a place anyone speaks."
+  }
+}

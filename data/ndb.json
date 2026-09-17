@@ -1,0 +1,294 @@
+{
+ "code": "ndb",
+ "name": "Kenswei Nsei",
+ "script": "Latin",
+ "quality": "skeleton",
+ "graphemes": {
+  "a": [
+   "a"
+  ],
+  "b": [
+   "b"
+  ],
+  "bw": [
+   "bʷ"
+  ],
+  "ch": [
+   "t͡ʃ"
+  ],
+  "chw": [
+   "t͡ʃʷ"
+  ],
+  "d": [
+   "d"
+  ],
+  "dw": [
+   "dʷ"
+  ],
+  "e": [
+   "e"
+  ],
+  "f": [
+   "f"
+  ],
+  "g": [
+   "ɡ"
+  ],
+  "gh": [
+   "ɣ"
+  ],
+  "gw": [
+   "ɡʷ"
+  ],
+  "h": [
+   "h"
+  ],
+  "i": [
+   "i"
+  ],
+  "j": [
+   "d͡ʒ"
+  ],
+  "jw": [
+   "d͡ʒʷ"
+  ],
+  "k": [
+   "k"
+  ],
+  "kw": [
+   "kʷ"
+  ],
+  "l": [
+   "l"
+  ],
+  "lw": [
+   "lʷ"
+  ],
+  "m": [
+   "m"
+  ],
+  "mb": [
+   "ᵐb"
+  ],
+  "mf": [
+   "ᶬf"
+  ],
+  "n": [
+   "n"
+  ],
+  "nch": [
+   "ⁿt͡ʃ"
+  ],
+  "nd": [
+   "ⁿd"
+  ],
+  "nj": [
+   "ⁿd͡ʒ"
+  ],
+  "ns": [
+   "ⁿs"
+  ],
+  "nt": [
+   "ⁿt"
+  ],
+  "ny": [
+   "ɲ"
+  ],
+  "nyw": [
+   "ɲʷ"
+  ],
+  "o": [
+   "o"
+  ],
+  "s": [
+   "s"
+  ],
+  "sw": [
+   "sʷ"
+  ],
+  "t": [
+   "t"
+  ],
+  "tw": [
+   "tʷ"
+  ],
+  "u": [
+   "u"
+  ],
+  "v": [
+   "v"
+  ],
+  "w": [
+   "w"
+  ],
+  "y": [
+   "j"
+  ],
+  "yw": [
+   "jʷ"
+  ],
+  "z": [
+   "z"
+  ],
+  "zw": [
+   "zʷ"
+  ],
+  "æ": [
+   "æ"
+  ],
+  "ŋ": [
+   "ŋ"
+  ],
+  "ŋg": [
+   "ᵑɡ"
+  ],
+  "ŋk": [
+   "ᵑk"
+  ],
+  "ŋw": [
+   "ŋʷ"
+  ],
+  "ɔ": [
+   "ɔ"
+  ],
+  "ə": [
+   "ə"
+  ],
+  "ɛ": [
+   "ɛ"
+  ],
+  "ɨ": [
+   "ɨ"
+  ],
+  "ʼ": [
+   "ʔ"
+  ]
+ },
+ "allophones": {
+  "h": [
+   "h",
+   "ʔ"
+  ],
+  "ʒ": [
+   "ʒ",
+   "j"
+  ],
+  "ʒʷ": [
+   "ʒʷ",
+   "jʷ"
+  ]
+ },
+ "notes": "Placed so the ancestry graph covers every living ISO 639-3 language. No orthography is claimed; the phoneme inventory follows the cited PHOIBLE inventory (which itself cites a published description): script is Zyyy (undetermined) until a cited description is encoded. Classification and coordinates follow Glottolog. Orthography from an Omniglot chart (c) Simon Ager, https://www.omniglot.com/, extracted via the AfriSpeech/africa-g2p compilation (ndb.json). africa-g2p is a compilation tool, not the linguistic authority; the citation above is the original source it names.",
+ "iso639_3": "ndb",
+ "glottolog_code": "kens1251",
+ "sources": [
+  {
+   "id": "glottolog2024",
+   "author": "Hammarström, Harald; Forkel, Robert; Haspelmath, Martin; Bank, Sebastian",
+   "year": 2024,
+   "title": "Glottolog 5.0",
+   "publisher": "Max Planck Institute for Evolutionary Anthropology",
+   "url": "https://glottolog.org/"
+  },
+  {
+   "id": "phoible2019",
+   "author": "Moran, Steven; McCloy, Daniel (eds.)",
+   "year": 2019,
+   "title": "PHOIBLE 2.0 (doi:10.5281/zenodo.2562766)",
+   "publisher": "Max Planck Institute for the Science of Human History",
+   "url": "https://phoible.org/inventories/view/905",
+   "notes": "Inventory 905 (ph), 65 non-marginal segments."
+  },
+  {
+   "id": "omniglot-kensweinsei",
+   "author": "Ager, Simon",
+   "year": 2026,
+   "title": "Omniglot chart (kensweinsei.xls)",
+   "publisher": "Omniglot",
+   "url": "https://www.omniglot.com/",
+   "notes": "Undated web chart; year is retrieval year, not publication year."
+  }
+ ],
+ "urls": [
+  "https://glottolog.org/resource/languoid/id/kens1251"
+ ],
+ "location": {
+  "latitude": 6.0171,
+  "longitude": 10.412,
+  "source": "glottolog",
+  "notes": "Glottolog's representative point."
+ },
+ "parent": "x-clade-atla1278",
+ "phonemes": [
+  "b",
+  "bʲ",
+  "bʷ",
+  "c",
+  "cʲ",
+  "cʷ",
+  "d",
+  "f",
+  "fʲ",
+  "fʷ",
+  "h",
+  "j",
+  "jʷ",
+  "k",
+  "kʲ",
+  "kʷ",
+  "l",
+  "lʷ",
+  "m",
+  "mb",
+  "n",
+  "nd",
+  "ndʷ",
+  "ns",
+  "nsʷ",
+  "nt",
+  "ntʷ",
+  "s",
+  "sʲ",
+  "sʷ",
+  "t",
+  "tʲ",
+  "tʷ",
+  "w",
+  "z",
+  "ŋ",
+  "ŋk",
+  "ŋɡ",
+  "ŋɡʷ",
+  "ŋʷ",
+  "ɟ",
+  "ɟʲ",
+  "ɟʷ",
+  "ɡ",
+  "ɡʲ",
+  "ɡʷ",
+  "ɣ",
+  "ɱf",
+  "ɲ",
+  "ɲc",
+  "ɲcʲ",
+  "ɲɟ",
+  "ɲʷ",
+  "ʒ",
+  "ʒʷ",
+  "a",
+  "e",
+  "i",
+  "o",
+  "u",
+  "æ",
+  "ɔ",
+  "ə",
+  "ɛ",
+  "ʉ"
+ ],
+ "phoible_id": "905",
+ "script_type": "alphabet",
+ "wikipedia": [
+  "https://en.wikipedia.org/wiki/Kenswei_Nsei_language"
+ ]
+}

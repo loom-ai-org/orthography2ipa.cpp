@@ -1,0 +1,119 @@
+{
+  "code": "car",
+  "name": "Galibi Carib",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "ï": ["ɨ"],
+    "ɨ": ["ɨ"],
+    "ʼ": ["ʔ"],
+    "’": ["ʔ"],
+    "'": ["ʔ"],
+    "p": ["p"],
+    "t": ["t"],
+    "k": ["k"],
+    "b": ["b"],
+    "d": ["d"],
+    "g": ["ɡ"],
+    "m": ["m"],
+    "n": ["n"],
+    "s": ["s"],
+    "r": ["ɾ"],
+    "w": ["w"],
+    "j": ["j"],
+    "y": ["j"],
+    "a": ["a"],
+    "e": ["e"],
+    "i": ["i"],
+    "o": ["o"],
+    "u": ["u"],
+    "à": ["aʔ"],
+    "è": ["eʔ"],
+    "ì": ["iʔ"],
+    "ò": ["oʔ"],
+    "ù": ["uʔ"],
+    "ỳ": ["ɨʔ"],
+    "f": ["f"]
+  },
+  "parent": "x-clade-cari1283",
+  "ancestors": [
+    {
+      "code": "x-clade-cari1283",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Descent per Glottolog classification of Galibi Carib (gali1262)."
+    }
+  ],
+  "stress": {
+    "default_position": -1,
+    "stress_mark": "ˈ",
+    "iambic_length": true
+  },
+  "notes": "Research. Cariban language (Kariña/Kali'na, a.k.a. Galibi Carib) of Venezuela and the Guianas, Latin orthography (Hoff 1968). The grapheme ï (also seen written ɨ in some sources/dictionaries, mapped equivalently) denotes the high central vowel /ɨ/. The glottal stop is written with an apostrophe, whose exact codepoint varies by source text (modifier letter apostrophe ʼ, right single quotation mark ’, or plain ASCII '); all three are mapped to /ʔ/. The voiced stops b/d/g overlap with post-nasal allophones of the voiceless stops p/t/k and are treated by some descriptions as conditioned rather than independent; they are mapped here at face value. Word stress falls on the final syllable in the disyllabic-dominant WOLD gold sample (Hoff 1968); marked here as final by default. Palatalization allophones ([tʃ ʃ ɲ]) and fricative allophones ([β]) that the spelling does not distinguish are left unencoded; there is no tone. The WOLD gold sample also contains a minority of French-loanword entries spelled in French orthography (e.g. ⟨fromage⟩, ⟨mercredi⟩) rather than adapted Kali'na spelling; these are outside this spec's Kali'na grapheme map and are not modelled. GRAVE-ACCENT VOWELS (à è ì ò ù ỳ): the Suriname/French-Guiana practical orthography codified by Courtz (2008, 'A Carib Grammar and Dictionary', §1.1 p.1, §2.5.6-2.5.8 pp.43-45) writes a coda archiphoneme /Q/ -- 'all that is left of a lost syllable po or pu' -- with a grave accent on the preceding vowel; Courtz states directly that 'the accent grave... represents a glottal stop in the pronunciation' (p.1), so grave-vowel graphemes are mapped here as vowel+/ʔ/. This matches the car wikipron gold in every non-plosive environment (before nasals, glides, liquids, vowels in hiatus, and word-finally: e.g. nàna -> a ʔ n a, wòi -> o ʔ i, kò -> k o ʔ). Courtz also documents (§2.5.8 p.44-45) that this same /Q/ surfaces as preaspiration [h], not [ʔ], specifically before a following voiceless stop /p t k/ (e.g. wàto -> w a h t o, àka -> a h k a); the wikipron gold shows this split consistently. The engine's positional-grapheme context classes (before_vowel/before_consonant, before_a/e/i/o/u, before_front/back_vowel, before/after_palatal) have no 'before a following plosive' class, so the plosive-triggered [h] allophone is left undifferentiated from the general /ʔ/ mapping -- a known, documented residual PER cost on grave-vowel+plosive words rather than a spec error. The single grapheme f is attested once in the WOLD gold sample (kofu 'fist'); Courtz's dictionary marks this entry '[Sr kofu]' (p.24255 of the extracted dictionary text), i.e. a loanword from Sranan Tongo (Surinamese Creole) -- /f/ is not part of the native Carib consonant inventory /p t k s m n r w j/ (Courtz §2.2 p.22) but is mapped here at face value since it is attested in running gold text, matching this spec's existing practice for the voiced-stop and loanword layer. VOWEL LENGTH: the wikipron gold marks vowel length on 239 of 447 rows although this orthography writes none; Courtz (2008, §2.3.2 p.27-28) gives a stress-placement rule for Eastern Surinamese Carib that the author states explicitly differs from Hoff's (1968, 96-104) Western Surinamese Carib system this spec otherwise follows for its end-anchored accent mark: 'In words of more than two syllables, even syllables except the word final syllable are stressed, if the word initial syllable is light. If the word initial syllable is heavy, odd syllables except the word final syllable are stressed' (light/heavy defined in §2.3.1 p.24 as open vs. containing a diphthong or coda), and §2.4.1 (p.31) states 'All vowels may be pronounced a little longer... when stressed.' The `stress.iambic_length` flag realises this as vowel length independently of the accent mark's position (see `StressRules.iambic_length`). It does not model a known residual: Courtz notes (§2.3.1 p.26 fn.90) that most word-initial /i/'s are auxiliary vowels from a lost onset consonant, and that prefixes can shift a lexical unit's stress pattern outright (§2.3.2 p.28-29); an i- or o- initial syllable that is actually such a reduced prefix does not participate in the footing the way a lexical root's own initial syllable does, and this spec has no way to tell a prefix from a root syllable from spelling alone, so length on those words is not reliably placed. DIALECT: this spec's stress and vowel-length treatment describes Eastern Surinamese Carib, following Courtz (2008); it does not describe the same system as Hoff (1968), whose WOLD-derived final-stress default this spec also uses for the accent mark. Courtz's own footnote 92 (p.27) states this directly: 'The description of stress patterns in Carib differs considerably from Hoff (1968, 96-104). This may be explained by the difference in dialect: here, stress in Eastern Surinamese Carib is described, while Hoff describes stress in Western Surinamese Carib.' This spec makes no formal dialect split (no orthography_standard, no separate variety tag) and cites Hoff and Courtz side by side as though for one system; they are not the same system, and this note exists so that gap is visible rather than implied. A further complication, not resolved here: the car/wold gold is specifically Kali'na (French Guiana; scripts/benchmark.py's _WOLD_LANGS['car'] = 'Kalina'), a third variety this spec has no dedicated source for -- see audit.wold.",
+  "iso639_3": "car",
+  "glottolog_code": null,
+  "sources": [
+    {
+      "id": "car_glottolog",
+      "author": "Hammarström, H. et al. (Glottolog 5.0)",
+      "year": 2024,
+      "title": "Glottolog: Galibi Carib (gali1262)",
+      "publisher": "Max Planck Institute for Evolutionary Anthropology",
+      "url": "https://glottolog.org/resource/languoid/id/gali1262",
+      "pages": null,
+      "notes": "Classification reference for a skeleton-tier entry.",
+      "wikipedia_url": null
+    },
+    {
+      "id": "hoff1968",
+      "author": "Hoff, Berend J.",
+      "year": 1968,
+      "title": "The Carib Language",
+      "publisher": "Martinus Nijhoff",
+      "url": null,
+      "pages": null,
+      "notes": "Grammar of Carib/Kali'na: Latin orthography, the apostrophe glottal stop, ï=/ɨ/, and final word stress.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Carib_language"
+    },
+    {
+      "id": "courtz2008",
+      "author": "Courtz, Henk",
+      "year": 2008,
+      "title": "A Carib Grammar and Dictionary",
+      "publisher": "Magoria Books",
+      "url": "https://archive.org/download/caribdictionary/carib%20dictionary.pdf",
+      "pages": "pp. 1, 22, 43-45",
+      "notes": "PhD grammar (Leiden) of Suriname/French Guiana Carib (Kari'nja), fetched in full (524 pp.). p.1: the grave accent represents a glottal stop, the residue of a lost syllable po/pu. p.22 (§2.2): the native consonant inventory is p t k s m n r w j, with no /f/. pp.43-45 (§2.5.6-2.5.8): the grave-accent orthographic vowel spells the coda archiphoneme /Q/, realised [ʔ] except before a following voiceless stop p/t/k, where it surfaces as preaspiration [h]. The dictionary body (searched via pdftotext) marks the entry kofu 'fist' as [Sr kofu], i.e. a Sranan Tongo loanword, the source of this spec's only attested /f/.",
+      "wikipedia_url": null
+    },
+    {
+      "id": "car_wikipedia",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Carib language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Carib_language",
+      "pages": null,
+      "notes": "Phonology and orthography reference for the skeleton grapheme map.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Carib_language"
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Carib_language"
+  ],
+  "valid_ceiling": {
+    "wold": {
+      "per": 0.0845,
+      "folded": "vowel length",
+      "citation": "Courtz (2008, 'A Carib Grammar and Dictionary', https://archive.org/download/caribdictionary/carib%20dictionary.pdf, §2.3.2 pp.27-28) gives the footing rule this spec's stress.iambic_length flag implements ('In words of more than two syllables, even syllables except the word final syllable are stressed, if the word initial syllable is light. If the word initial syllable is heavy, odd syllables except the word final syllable are stressed.'), and §2.4.1 p.31 states 'All vowels may be pronounced a little longer and with higher pitch, when stressed.' The car/wold gold (Haspelmath & Tadmor 2009, World Loanword Database, lexibank) is a broad/phonemic lexicographic transcription that marks the IPA length mark on only 2 of its 1191 rows (checked directly against the loaded gold pairs), so it does not record the stress-conditioned lengthening Courtz describes. Measured with the harness's own normalize()/levenshtein() (scripts/fold_car_notation.py): as-scored PER 0.1431 (matching the committed board row within harness sampling noise), length-mark folded out of BOTH sides 0.0845 -- essentially the pre-iambic_length PER of 0.0846, confirming the row's movement is a notation mismatch between two legitimate golds rather than a phonological disagreement about Carib."
+    }
+  },
+  "audit": {
+    "wold": {
+      "conclusion": "at_ceiling_documented",
+      "measured": "car/wold as-scored PER rose from 0.0846 to 0.1400 when stress.iambic_length was added (measured via scripts/benchmark.py --scoreboard --lang car; re-measured with the harness's own normalize()/levenshtein() in scripts/fold_car_notation.py at 0.1431 as-scored, close to the committed board figure). Folding the IPA length mark out of both sides brings it back to 0.0845, matching the pre-change PER, so the movement is not a defect in the rule itself. TWO CONTRIBUTING FACTS, NEITHER SPLIT OUT: (1) notation -- the car/wold gold marks the IPA length mark on only 2 of 1191 entries, so a broad/phonemic lexicographic convention structurally cannot reward a narrow length rule, however correct; (2) variety -- scripts/benchmark.py's _WOLD_LANGS['car'] = 'Kalina' names the wold gold specifically Kali'na (French Guiana Carib), while the stress.iambic_length rule follows Courtz (2008), who describes Eastern Surinamese Carib, a variety Courtz's own footnote 92 (p.27) says differs considerably in its stress pattern from Hoff's (1968) Western Surinamese Carib -- and this spec has no source establishing where Kali'na's stress system sits relative to either. This audit does not measure how much of the PER rise each fact accounts for, and does not claim one dominates: both are true, and both bear on the row. The car/wikipron gold, by contrast, is a narrow transcription and marks length on 239 of 447 rows, rewarding the same rule directly (PER 0.3500 -> 0.3116). ENUM CHOICE: input_limited is the closer-sounding label but describes the opposite direction -- an orthography that cannot supply a contrast the gold demands -- while here the SPEC (via a phonological rule beyond the orthography, and one whose dialect match to wold is itself unverified) supplies a contrast this particular gold's convention does not record; at_ceiling_documented fits because the valid_ceiling measurement shows the row is at its floor once the notational difference alone is aligned, and the residual against wold is a documented gold-convention/variety gap, not an unaccounted-for defect. FOLLOW-UP, NOT DONE HERE: splitting a dedicated Kali'na entry (the way fa-x-enp was split from fa earlier in this campaign) is the right long-term fix, but needs a Kali'na phonology source; the WOLD Kali'na chapter (shs.hal.science) is behind bot protection and Hoff (1968) was not obtained, so neither of us could get one this session.",
+      "reference": "spec notes; valid_ceiling.wold; scripts/fold_car_notation.py"
+    }
+  }
+}

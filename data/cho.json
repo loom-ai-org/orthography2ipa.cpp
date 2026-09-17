@@ -1,0 +1,270 @@
+{
+  "code": "cho",
+  "name": "Choctaw",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "aa": [
+      "aː"
+    ],
+    "i": [
+      "ɪ",
+      "i"
+    ],
+    "ii": [
+      "iː"
+    ],
+    "o": [
+      "o",
+      "ʊ"
+    ],
+    "oo": [
+      "oː"
+    ],
+    "e": [
+      "ɪ"
+    ],
+    "u": [
+      "ʊ"
+    ],
+    "v": [
+      "ə"
+    ],
+    "ʋ": [
+      "ə"
+    ],
+    "a̱": [
+      "ãː"
+    ],
+    "i̱": [
+      "ĩː"
+    ],
+    "o̱": [
+      "õː"
+    ],
+    "b": [
+      "b"
+    ],
+    "ch": [
+      "tʃ"
+    ],
+    "f": [
+      "f"
+    ],
+    "h": [
+      "h"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "lh": [
+      "ɬ"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "p": [
+      "p"
+    ],
+    "s": [
+      "s"
+    ],
+    "sh": [
+      "ʃ"
+    ],
+    "t": [
+      "t"
+    ],
+    "w": [
+      "w"
+    ],
+    "y": [
+      "j"
+    ]
+  },
+  "allophones": {
+    "a": [
+      "a"
+    ],
+    "aː": [
+      "aː"
+    ],
+    "ɪ": [
+      "ɪ"
+    ],
+    "i": [
+      "i"
+    ],
+    "iː": [
+      "iː"
+    ],
+    "o": [
+      "o"
+    ],
+    "ʊ": [
+      "ʊ"
+    ],
+    "oː": [
+      "oː"
+    ],
+    "ə": [
+      "ə"
+    ],
+    "ãː": [
+      "ãː"
+    ],
+    "ĩː": [
+      "ĩː"
+    ],
+    "õː": [
+      "õː"
+    ],
+    "b": [
+      "b"
+    ],
+    "tʃ": [
+      "tʃ"
+    ],
+    "f": [
+      "f"
+    ],
+    "h": [
+      "h"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "ɬ": [
+      "ɬ"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "p": [
+      "p"
+    ],
+    "s": [
+      "s"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "t": [
+      "t"
+    ],
+    "w": [
+      "w"
+    ],
+    "j": [
+      "j"
+    ]
+  },
+  "allophone_rules": [
+    {
+      "id": "CHO_NASAL_a_PRECONSONANTAL",
+      "phonemes": ["a"],
+      "surface": "ãː",
+      "followed_by_grapheme": ["n", "m"],
+      "followed_by_phoneme_2": ["b", "tʃ", "f", "h", "k", "l", "ɬ", "p", "s", "ʃ", "t", "w", "j"],
+      "notes": "Historic Byington/traditional spelling of the nasal vowels writes them as vowel+n/m before a further (different) consonant, e.g. pakanli -> [pakãːlih] (Broadwell 2006, A Choctaw Reference Grammar; no specific page located for this spelling convention). Nasal vowels are treated here as intrinsically long, matching the pattern this spec's gold benchmark shows for the modern macron-below convention (a̱ i̱ o̱), hence surface aː -> ãː rather than plain ã; this length claim rests on that distributional pattern, not on a page cite. Excluded when the nasal is itself geminated (hannali, yannash) or word-final (hakchin), where it stays a plain coda consonant."
+    },
+    {
+      "id": "CHO_NASAL_i_PRECONSONANTAL",
+      "phonemes": ["i", "ɪ"],
+      "surface": "ĩː",
+      "followed_by_grapheme": ["n", "m"],
+      "followed_by_phoneme_2": ["b", "tʃ", "f", "h", "k", "l", "ɬ", "p", "s", "ʃ", "t", "w", "j"],
+      "notes": "See CHO_NASAL_a_PRECONSONANTAL; pinti -> [pĩːtih], imponna -> [ĩːponnah]."
+    },
+    {
+      "id": "CHO_NASAL_o_PRECONSONANTAL",
+      "phonemes": ["o", "ʊ"],
+      "surface": "õː",
+      "followed_by_grapheme": ["n", "m"],
+      "followed_by_phoneme_2": ["b", "tʃ", "f", "h", "k", "l", "ɬ", "p", "s", "ʃ", "t", "w", "j"],
+      "notes": "See CHO_NASAL_a_PRECONSONANTAL; o̱tochchina/otochchina -> [õːtot͡ʃt͡ʃina]."
+    },
+    {
+      "id": "CHO_NASAL_n_ABSORBED",
+      "phonemes": ["n"],
+      "surface": "",
+      "preceded_by": "vowel",
+      "followed_by_phoneme": ["b", "tʃ", "f", "h", "k", "l", "ɬ", "p", "s", "ʃ", "t", "w", "j"],
+      "notes": "The nasal that nasalises the preceding vowel (CHO_NASAL_*_PRECONSONANTAL) is itself absorbed and not pronounced, matching the traditional +C spelling convention (Broadwell 2006). Keyed on the following-consonant set so a geminate nn/nm (hannali) or a word-final n (hakchin) is left as a normal coda consonant."
+    },
+    {
+      "id": "CHO_NASAL_m_ABSORBED",
+      "phonemes": ["m"],
+      "surface": "",
+      "preceded_by": "vowel",
+      "followed_by_phoneme": ["b", "tʃ", "f", "h", "k", "l", "ɬ", "p", "s", "ʃ", "t", "w", "j"],
+      "notes": "See CHO_NASAL_n_ABSORBED; imponna -> [ĩːponnah]."
+    }
+  ],
+  "iso639_3": "cho",
+  "glottolog_code": "choc1276",
+  "wikidata_qid": "Q32979",
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Choctaw_language",
+    "https://cho.wikipedia.org/wiki/Chahta_Anumpa"
+  ],
+  "sources": [
+    {
+      "id": "broadwell2006",
+      "author": "Broadwell, George Aaron",
+      "year": 2006,
+      "title": "A Choctaw Reference Grammar",
+      "publisher": "University of Nebraska Press",
+      "url": null,
+      "pages": null,
+      "notes": "Reference grammar: phonology and orthography."
+    },
+    {
+      "id": "choctaw_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2025,
+      "title": "Choctaw language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Choctaw_language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Choctaw_language",
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "notes": "Choctaw (Chahta anumpa) — Muskogean language of Oklahoma and Mississippi, written in the Latin script, with three vowel qualities /i o a/, each contrasting short/long and oral/nasal (Broadwell 2006, A Choctaw Reference Grammar). Nasal vowels are treated as intrinsically long here; that is a distributional claim from this spec's gold benchmark, not something located at a specific page of Broadwell. This spec's gold benchmark mixes at least two written conventions rather than one: the modern Mississippi/Choctaw-Nation practice, which marks a nasal vowel directly with a combining macron below the vowel letter (a̱ i̱ o̱, mapped here to ãː ĩː õː), and the older Byington/traditional missionary spelling, which instead writes the historical vowel+n/m sequence before a further consonant (pakanli, pinti, imponna) and leaves the nasal vowel itself unmarked; CHO_NASAL_*_PRECONSONANTAL/_ABSORBED implement that second, more frequent convention as an allophone rule rather than a grapheme, since it is conditioned on what follows rather than being a fixed spelling. Long vowels are written doubled (aa ii oo) or, in the traditional convention, with an acute/macron. ⟨lh⟩ is the voiceless lateral fricative /ɬ/, ⟨ch⟩ = /tʃ/, ⟨sh⟩ = /ʃ/. ⟨e⟩ and ⟨u⟩ belong to the older Byington/missionary spelling still met in print; ⟨v⟩ and ⟨ʋ⟩ (the IPA-hook-v glyph used interchangeably with plain v in traditional-orthography sources) both write /ə/ (Broadwell 2006:16-18). Glottal stop is phonemic but not consistently written, and its presence is not predictable from the spelling of this gold set — many minimal orthographic doubles differ only in a word-final [ʔ] or [h] that is absent from the written form, which this spec cannot recover.",
+  "timespan": {
+    "start_year": 1800,
+    "end_year": null
+  },
+  "parent": "x-clade-musk1252",
+  "ancestors": [
+    {
+      "code": "x-clade-musk1252",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Muskogean — the classification node this language sits under."
+    }
+  ],
+  "location": {
+    "latitude": 32.25,
+    "longitude": -88.5,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Choctaw."
+  }
+}

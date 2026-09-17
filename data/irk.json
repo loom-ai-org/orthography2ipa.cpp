@@ -1,0 +1,269 @@
+{
+ "code": "irk",
+ "name": "Iraqw",
+ "script": "Latin",
+ "quality": "research",
+ "graphemes": {
+  "/": [
+   "ʕ"
+  ],
+  "a": [
+   "a"
+  ],
+  "aa": [
+   "aː"
+  ],
+  "b": [
+   "b"
+  ],
+  "ch": [
+   "c"
+  ],
+  "d": [
+   "d"
+  ],
+  "e": [
+   "e"
+  ],
+  "ee": [
+   "eː"
+  ],
+  "f": [
+   "f"
+  ],
+  "g": [
+   "ɡ"
+  ],
+  "gw": [
+   "ɡʷ"
+  ],
+  "h": [
+   "h"
+  ],
+  "hh": [
+   "ħ"
+  ],
+  "hl": [
+   "ɬ"
+  ],
+  "i": [
+   "i"
+  ],
+  "ii": [
+   "iː"
+  ],
+  "j": [
+   "ɟ"
+  ],
+  "k": [
+   "k"
+  ],
+  "kw": [
+   "kʷ"
+  ],
+  "l": [
+   "l"
+  ],
+  "m": [
+   "m"
+  ],
+  "n": [
+   "n"
+  ],
+  "ng": [
+   "ŋ"
+  ],
+  "ngw": [
+   "ŋʷ"
+  ],
+  "ny": [
+   "ɲ"
+  ],
+  "o": [
+   "o"
+  ],
+  "oo": [
+   "oː"
+  ],
+  "p": [
+   "p"
+  ],
+  "q": [
+   "q"
+  ],
+  "qw": [
+   "qʷʼ"
+  ],
+  "r": [
+   "r"
+  ],
+  "s": [
+   "s"
+  ],
+  "sh": [
+   "ʃ"
+  ],
+  "sl": [
+   "ɬ"
+  ],
+  "t": [
+   "t"
+  ],
+  "tl": [
+   "t͡ɫ’"
+  ],
+  "ts": [
+   "t͡s’"
+  ],
+  "u": [
+   "u"
+  ],
+  "uu": [
+   "uː"
+  ],
+  "w": [
+   "w"
+  ],
+  "x": [
+   "x"
+  ],
+  "xw": [
+   "xʷ"
+  ],
+  "y": [
+   "j"
+  ],
+  "ë": [
+   "ə"
+  ],
+  "ʾ": [
+   "ʔ"
+  ],
+  "ʿ": [
+   "ʕ"
+  ]
+ },
+ "allophones": {
+  "q": [
+   "q",
+   "qʰ"
+  ],
+  "t": [
+   "t̪",
+   "t",
+   "tʰ"
+  ],
+  "ɓ": [
+   "ɓ",
+   "ɓ̥"
+  ]
+ },
+ "notes": "Placed so the ancestry graph covers every living ISO 639-3 language. No orthography is claimed; the phoneme inventory follows the cited PHOIBLE inventory (which itself cites a published description): script is Zyyy (undetermined) until a cited description is encoded. Classification and coordinates follow Glottolog. Orthography from an Omniglot chart (c) Simon Ager, https://www.omniglot.com/, extracted via the AfriSpeech/africa-g2p compilation (irk.json). africa-g2p is a compilation tool, not the linguistic authority; the citation above is the original source it names. Iraqw carries lexical tone (PHOIBLE records 3 tone segments) rather than stress; tone is not orthographically marked and is left unencoded, and there is no separate stress system to model (documented exemption).",
+ "iso639_3": "irk",
+ "glottolog_code": "iraq1241",
+ "sources": [
+  {
+   "id": "glottolog2024",
+   "author": "Hammarström, Harald; Forkel, Robert; Haspelmath, Martin; Bank, Sebastian",
+   "year": 2024,
+   "title": "Glottolog 5.0",
+   "publisher": "Max Planck Institute for Evolutionary Anthropology",
+   "url": "https://glottolog.org/"
+  },
+  {
+   "id": "phoible2019",
+   "author": "Moran, Steven; McCloy, Daniel (eds.)",
+   "year": 2019,
+   "title": "PHOIBLE 2.0 (doi:10.5281/zenodo.2562766)",
+   "publisher": "Max Planck Institute for the Science of Human History",
+   "url": "https://phoible.org/inventories/view/129",
+   "notes": "Inventory 129 (spa), 45 non-marginal segments, 3 tones."
+  },
+  {
+   "id": "omniglot-iraqw",
+   "author": "Ager, Simon",
+   "year": 2026,
+   "title": "Omniglot chart (iraqw.xls)",
+   "publisher": "Omniglot",
+   "url": "https://www.omniglot.com/",
+   "notes": "Undated web chart; year is retrieval year, not publication year."
+  },
+  {
+   "id": "irk_mous1993",
+   "author": "Mous, Maarten",
+   "year": 1993,
+   "title": "A Grammar of Iraqw",
+   "publisher": "Helmut Buske Verlag",
+   "url": "https://archive.org/details/rosettaproject_irk_phon-1",
+   "pages": null,
+   "notes": "The definitive descriptive grammar of Iraqw. Verified against this spec's orthography: the Swahili-based popular orthography with q/x added, ʕ spelled ⟨/⟩, ɬ spelled ⟨sl⟩, ħ spelled ⟨hh⟩ and tɬʼ spelled ⟨tl⟩ all match the grapheme table exactly (glyphs '/','sl','hh','tl' -> ʕ/ɬ/ħ/t͡ɫ' respectively) — no discrepancy found."
+  }
+ ],
+ "urls": [
+  "https://glottolog.org/resource/languoid/id/iraq1241"
+ ],
+ "location": {
+  "latitude": -4.1995,
+  "longitude": 35.2939,
+  "source": "glottolog",
+  "notes": "Glottolog's representative point."
+ },
+ "parent": "x-clade-afro1255",
+ "phonemes": [
+  "b",
+  "d",
+  "f",
+  "h",
+  "j",
+  "k",
+  "kʷ",
+  "l",
+  "m",
+  "n",
+  "p",
+  "q",
+  "qʷ",
+  "r",
+  "s",
+  "sː",
+  "t",
+  "tsʼ",
+  "tɬʼ",
+  "w",
+  "x",
+  "xʷ",
+  "ħ",
+  "ŋ",
+  "ŋʷ",
+  "ɓ",
+  "ɗ",
+  "ɡ",
+  "ɡʷ",
+  "ɬ",
+  "ʃ",
+  "ʔ",
+  "ʕ",
+  "a",
+  "eː",
+  "iː",
+  "oː",
+  "uː",
+  "ɑː",
+  "ɔ",
+  "ə",
+  "ɛ",
+  "ɪ",
+  "ɵ",
+  "ʊ"
+ ],
+ "tone_inventory": {
+  "˥": "PHOIBLE tone segment",
+  "˥˩": "PHOIBLE tone segment",
+  "˩": "PHOIBLE tone segment"
+ },
+ "phoible_id": "129",
+ "script_type": "alphabet",
+ "wikipedia": [
+  "https://en.wikipedia.org/wiki/Iraqw_language"
+ ]
+}

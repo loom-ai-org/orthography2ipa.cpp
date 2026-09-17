@@ -1,0 +1,381 @@
+{
+  "code": "pap",
+  "glottolog_code": "papi1253",
+  "name": "Papiamentu (Papiamento)",
+  "script": "Latin",
+  "quality": "research",
+  "script_type": "alphabet",
+  "parent": "pt-PT",
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "á": [
+      "a"
+    ],
+    "é": [
+      "e"
+    ],
+    "í": [
+      "i"
+    ],
+    "ó": [
+      "o"
+    ],
+    "ú": [
+      "u"
+    ],
+    "e": [
+      "e",
+      "ɛ"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "o",
+      "ɔ"
+    ],
+    "u": [
+      "u"
+    ],
+    "ai": [
+      "aj"
+    ],
+    "ei": [
+      "ej"
+    ],
+    "oi": [
+      "oj"
+    ],
+    "au": [
+      "aw"
+    ],
+    "b": [
+      "b"
+    ],
+    "ch": [
+      "tʃ"
+    ],
+    "d": [
+      "d"
+    ],
+    "dj": [
+      "dʒ"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "h": [
+      "h"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "ll": [
+      "j"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ng": [
+      "ŋ"
+    ],
+    "ñ": [
+      "ɲ"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "sh": [
+      "ʃ"
+    ],
+    "t": [
+      "t"
+    ],
+    "v": [
+      "v"
+    ],
+    "w": [
+      "w"
+    ],
+    "y": [
+      "j"
+    ],
+    "z": [
+      "z"
+    ],
+    "zh": [
+      "ʒ"
+    ],
+    "è": [
+      "ɛ"
+    ],
+    "ò": [
+      "ɔ"
+    ],
+    "ù": [
+      "ʏ"
+    ],
+    "ü": [
+      "y"
+    ]
+  },
+  "positional_graphemes": {
+    "n": {
+      "word_final": [
+        "n"
+      ]
+    },
+    "r": {
+      "word_final": [
+        "r"
+      ],
+      "word_initial": [
+        "r"
+      ]
+    },
+    "s": {
+      "word_final": [
+        "s"
+      ]
+    },
+    "k": {
+      "word_final": [
+        "k"
+      ]
+    },
+    "ll": {
+      "word_initial": [
+        "j"
+      ]
+    }
+  },
+  "allophones": {
+    "a": [
+      "a"
+    ],
+    "e": [
+      "e"
+    ],
+    "ɛ": [
+      "ɛ"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "o"
+    ],
+    "ɔ": [
+      "ɔ"
+    ],
+    "u": [
+      "u"
+    ],
+    "b": [
+      "b"
+    ],
+    "tʃ": [
+      "tʃ"
+    ],
+    "d": [
+      "d"
+    ],
+    "dʒ": [
+      "dʒ"
+    ],
+    "f": [
+      "f"
+    ],
+    "ɡ": [
+      "ɡ"
+    ],
+    "h": [
+      "h"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ŋ": [
+      "ŋ"
+    ],
+    "ɲ": [
+      "ɲ"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "t": [
+      "t"
+    ],
+    "v": [
+      "v"
+    ],
+    "w": [
+      "w"
+    ],
+    "j": [
+      "j"
+    ],
+    "z": [
+      "z"
+    ],
+    "ʒ": [
+      "ʒ"
+    ],
+    "ʏ": [
+      "ʏ"
+    ],
+    "y": [
+      "y"
+    ]
+  },
+  "ancestors": [
+    {
+      "code": "pt-PT",
+      "role": "superstrate",
+      "weight": 0.45,
+      "notes": "Portuguese superstrate: earliest Iberian lexifier; the Portuguese origin hypothesis (Goodman, Maurer) holds that Papiamentu originated from a Portuguese-based creole spoken by Sephardic Jews and Portuguese traders from the early 17th century."
+    },
+    {
+      "code": "nl",
+      "role": "superstrate",
+      "weight": 0.35,
+      "notes": "Dutch superstrate: Netherlands ruled Curaçao from 1634; Dutch colonial administration contributed vocabulary, and Dutch is still a co-official language. Official Curaçao orthography (2009) reflects phonemic principles distinct from Dutch etymology."
+    },
+    {
+      "code": "fon",
+      "role": "substrate",
+      "weight": 0.12,
+      "notes": "Gbe (Fongbe) substrate: West African population brought via the Atlantic slave trade; argued to underlie TMA marking, serial-verb constructions, and prosodic (pitch-accent) patterning in Papiamentu. Andersen (1974), Fouse (2002); parallel to the Fongbe substrate documented for Haitian Creole (Lefebvre 1998)."
+    },
+    {
+      "code": "ee",
+      "role": "substrate",
+      "weight": 0.04,
+      "notes": "Ewe (Gbe) substrate, alongside Fongbe, from the same West African contact population."
+    },
+    {
+      "code": "mnk",
+      "role": "substrate",
+      "weight": 0.04,
+      "notes": "Mandinka substrate: Jacobs (2010, 'Upper Guinea origins of Papiamentu', Journal of Pidgin and Creole Languages 25:2) argues Papiamentu descends from a 17th-century Upper Guinea Portuguese-based proto-creole carried to Curaçao by enslaved people and Sephardic traders from the Cape Verde/Guinea-Bissau coast, where Mandinka was a principal substrate language (the same Upper Guinea contact pool documented for Kabuverdianu); this predates and sits alongside the later Gbe (Fon/Ewe) substrate influence from the Curaçao slave trade proper."
+    },
+    {
+      "code": "es-ES",
+      "role": "adstrate",
+      "weight": 0.2,
+      "notes": "Spanish adstrate/co-lexifier: heavy and ongoing contact via Venezuela/Latin America; Munteanu (1996) argues for a substantial Spanish contribution to the lexifier layer alongside Portuguese, and the Aruban etymological spelling convention leans on Spanish orthographic models."
+    }
+  ],
+  "notes": "Papiamentu (Curaçao/Bonaire) / Papiamento (Aruba). Iberian-based creole; official language of Curaçao, Aruba, and Bonaire. ~330,000 speakers. Two spelling conventions: Curaçao/Bonaire use phonemic orthography (papi-a-men-tu), Aruba uses etymological spelling closer to Spanish/Portuguese. KEY FEATURES: (1) FIVE-VOWEL SYSTEM: a/e/i/o/u; e and o vary [e]~[ɛ] and [o]~[ɔ]. (2) AFFRICATES: ch=[tʃ], dj=[dʒ]. (3) SIBILANTS: sh=[ʃ], zh=[ʒ], s=[s], z=[z]. (4) PALATAL NASAL: ñ=[ɲ] (from Spanish/Portuguese). (5) LL: renders [j] (from Spanish lateral, reanalysed as glide). (6) DIPHTHONGS: ai/ei/oi/au are phonemic. (7) STRESS: penultimate by default; stress-timed rhythm. One of the best-studied Atlantic creoles with the highest number of L1 speakers per capita in the Caribbean. This spec models the CURAÇAO/BONAIRE phonemic orthography (FPI 2009: ⟨k⟩ not ⟨c⟩, acute ⟨á é í ó ú⟩ for stress mapped to base vowels), not the Aruban etymological spelling.",
+  "sources": [
+    {
+      "id": "kouwenberg_murray1994",
+      "author": "Kouwenberg, S. & Murray, E.",
+      "year": 1994,
+      "title": "Papiamentu",
+      "publisher": "Languages of the World/Materials 83, LINCOM Europa",
+      "url": null,
+      "pages": "Phonology ch.: five-vowel system with [e]~[ɛ], [o]~[ɔ] alternations; affricates [tʃ dʒ]; sibilants [s z ʃ ʒ]; coda /s/ palatalisation to [ʃ] before consonants and word-finally; preverbal TMA markers ta (imperfective), a (perfective), lo (future).",
+      "notes": "Comprehensive phonological and morphological description; source for the vowel and sibilant inventory and the coda-/s/ rule."
+    },
+    {
+      "id": "romer1991",
+      "author": "Römer, Raúl G.",
+      "year": 1991,
+      "title": "Studies in Papiamentu tonology",
+      "publisher": "Caribbean Culture Studies 5, University of Amsterdam",
+      "url": null,
+      "pages": "Lexical tone/stress; interaction of the acute-accent orthography (muhé, kachó, akí) with stressed syllables.",
+      "notes": "Grounds the acute-accented-vowel graphemes as stress marks over the base five vowels."
+    },
+    {
+      "id": "fpi2009",
+      "author": "Fundashon pa Planifikashon di Idioma (FPI)",
+      "year": 2009,
+      "title": "Ortografia di papiamentu (revised Curaçao/Bonaire spelling)",
+      "publisher": "Fundashon pa Planifikashon di Idioma, Willemstad",
+      "url": null,
+      "pages": "Phonemic (fonétiko) convention: ⟨k⟩ not ⟨c⟩; digraphs ⟨ch dj sh zh⟩; diacritics ⟨è ò ù ü⟩ for [ɛ ɔ ʏ y]; acute ⟨á é í ó ú⟩ marks stress. Distinct from the Aruban etymological spelling (⟨c qu⟩, closer to Spanish/Portuguese).",
+      "notes": "Defines the Curaçao/Bonaire phonemic orthography this spec models; the gold register uses this convention, NOT the Aruban etymological one."
+    },
+    {
+      "id": "maurer1998",
+      "author": "Maurer, P.",
+      "year": 1998,
+      "title": "L'Angola dans la genèse du Papiamentu",
+      "publisher": "In: Estudos de Linguística Criola, Casa da Moeda, Lisbon",
+      "url": null,
+      "pages": null,
+      "notes": "Portuguese-origin hypothesis"
+    },
+    {
+      "id": "dijkhoff1993",
+      "author": "Dijkhoff, M.",
+      "year": 1993,
+      "title": "Papiamentu Word Formation",
+      "publisher": "University of Amsterdam dissertation",
+      "url": null,
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Papiamentu",
+    "https://pap.wikipedia.org/wiki/Papiamentu"
+  ],
+  "urls": [
+    "https://en.wikipedia.org/wiki/Papiamentu",
+    "https://en.wikipedia.org/wiki/Languages_of_Cura%C3%A7ao",
+    "https://glottolog.org/resource/languoid/id/papi1253",
+    "https://www.ethnologue.com/language/pap/"
+  ],
+  "timespan": {
+    "start_year": 1600,
+    "end_year": null
+  },
+  "iso639_3": "pap",
+  "wikidata_qid": "Q33856",
+  "wals_code": "pap",
+  "location": {
+    "latitude": 12.48485,
+    "longitude": -69.93988,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Papiamento."
+  }
+}

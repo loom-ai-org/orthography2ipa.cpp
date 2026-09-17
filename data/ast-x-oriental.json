@@ -1,0 +1,72 @@
+{
+  "code": "ast-x-oriental",
+  "name": "Eastern Asturian-Leonese",
+  "glottolog_code": "east2272",
+  "script": "Latin",
+  "parent": "ast",
+  "graphemes_base": "ast",
+  "allophones_base": "ast",
+  "positional_graphemes_base": "ast",
+  "allophones": {
+    "ʎ": [
+      "ʎ",
+      "ʝ"
+    ]
+  },
+  "ancestors": [
+    {
+      "code": "ast-x-leon",
+      "role": "parent",
+      "weight": 0.88,
+      "notes": "Leonese trunk; eastern varieties are more heavily Castilianised."
+    }
+  ],
+  "notes": "Eastern Asturian-Leonese. Grounded in Morala & Egido (2009) and the Propuesta de Norma Ortográfica. EASTERN-SPECIFIC FEATURES (diverging from western standard): (1) NO ei/ou decreasing diphthongs — eastern varieties have already monophthongised: *queso* (not *queisu*), *poco* (not *poucu*) (Source A p. 8 — explicit contrast with western; CONFIDENCE: HIGH). (2) FINAL -o (not -u): eastern varieties preserve Latin -O as -o rather than raising to -u (Source B §2.4; Source A p. 8; CONFIDENCE: HIGH). (3) -KT- > /tʃ/ more likely in eastern areas: *fechu, muchu, derechu* rather than western *teitu, muito* (Source B §3.3; CONFIDENCE: MEDIUM — less fully attested for a purely eastern norm). (4) INCIPIENT YEÍSMO: /ʎ/ shows variation with [ʝ], under Castilian pressure (Cano González 2009). SHARED WITH ALL LEONESE: ⟨x⟩=/ʃ/, ⟨ll⟩=/ʎ/ as default, ⟨ch⟩=/tʃ/ from PL-/CL-/FL-, ⟨y⟩=/ʝ/ from -LJ-, ⟨ñ⟩=/ɲ/ — inherited from parent spec.",
+  "sources": [
+    {
+      "id": "morala_egido2009",
+      "author": "Morala Rodríguez, J.R. & Egido Fernández, M.C.",
+      "year": 2009,
+      "title": "A vueltas con una norma para el leonés",
+      "publisher": "Instituto Castellano y Leonés de la Lengua, Colección Beltenebros 23",
+      "pages": "209-241",
+      "notes": "ISBN: 978-84-936383-8-2. Confirms eastern Leonese lacks ei/ou diphthongs and is more Castilianised (p. 8)."
+    },
+    {
+      "id": "propuesta_norma_ortografica",
+      "author": "Anonymous",
+      "year": 2010,
+      "title": "Propuesta de Norma Ortográfica para el Leonés",
+      "publisher": "Unpublished markdown document",
+      "pages": null,
+      "notes": "Notes -o preservation and -KT->ch as legitimate for non-western zones. Year is approximate (undated document)."
+    },
+    {
+      "id": "garcia_arias2003",
+      "author": "García Arias, X.Ll.",
+      "year": 2003,
+      "title": "Gramática histórica de la lengua asturiana",
+      "publisher": "Academia de la Llingua Asturiana",
+      "url": null,
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Asturian_language",
+    "https://ast.wikipedia.org/wiki/Asturianu",
+    "https://es.wikipedia.org/wiki/Asturiano_(asturleon%C3%A9s_de_Asturias)"
+  ],
+  "timespan": {
+    "start_year": 900,
+    "end_year": null
+  },
+  "iso639_3": "ast",
+  "quality": "research",
+  "location": {
+    "latitude": 43.421121,
+    "longitude": -4.753083,
+    "source": "wikidata",
+    "notes": "Llanes — a representative locality of eastern Asturias. [Wikidata Q503094 P625]"
+  }
+}

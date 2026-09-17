@@ -1,0 +1,151 @@
+{
+  "code": "sdc",
+  "name": "Sassarese Sardinian",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "ddh": [
+      "ɖ"
+    ],
+    "dd": [
+      "ɖ"
+    ],
+    "ch": [
+      "k"
+    ],
+    "gh": [
+      "ɡ"
+    ],
+    "gn": [
+      "ɲ"
+    ],
+    "ci": [
+      "tʃ"
+    ],
+    "ce": [
+      "tʃe"
+    ],
+    "gi": [
+      "dʒ"
+    ],
+    "sc": [
+      "ʃ"
+    ],
+    "a": [
+      "a"
+    ],
+    "e": [
+      "e"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "o"
+    ],
+    "u": [
+      "u"
+    ],
+    "b": [
+      "b"
+    ],
+    "c": [
+      "k"
+    ],
+    "d": [
+      "d"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "h": [
+      ""
+    ],
+    "j": [
+      "dʒ"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "p": [
+      "p"
+    ],
+    "q": [
+      "k"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "v": [
+      "v"
+    ],
+    "z": [
+      "ts"
+    ]
+  },
+  "parent": "la-x-italia",
+  "ancestors": [
+    {
+      "code": "la-x-italia",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Descent per Glottolog classification of Sassarese Sardinian (sass1235)."
+    }
+  ],
+  "notes": "Skeleton. Romance variety of northern Sardinia (transitional Sardo-Corsican) written in the Latin alphabet. Grapheme map follows Italian-based conventions with Sassarese specifics: the retroflex ddh/dd [ɖ], ch/gh for plain velars, gn [ɲ], sc [ʃ] and the affricate readings of c/g before front vowels. Gemination, the precise voiced/voiceless value of z and s, and context-conditioned lenition are not fully recoverable from the spelling and are left unencoded, so a PER floor is expected. Sassarese stress is lexically contrastive but only partially recoverable from the practical orthography's accent marks; unmarked cases are left unencoded (documented exemption).",
+  "iso639_3": "sdc",
+  "glottolog_code": null,
+  "sources": [
+    {
+      "id": "sdc_glottolog",
+      "author": "Hammarström, H. et al. (Glottolog 5.0)",
+      "year": 2024,
+      "title": "Glottolog: Sassarese Sardinian (sass1235)",
+      "publisher": "Max Planck Institute for Evolutionary Anthropology",
+      "url": "https://glottolog.org/resource/languoid/id/sass1235",
+      "pages": null,
+      "notes": "Classification reference for a skeleton-tier entry.",
+      "wikipedia_url": null
+    },
+    {
+      "id": "sdc_wikipedia",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Sassarese language (Wikipedia)",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Sassarese_language",
+      "pages": null,
+      "notes": "Orthography/phonology reference for a skeleton-tier entry.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Sassarese_language"
+    },
+    {
+      "id": "sdc_bazzoni1999",
+      "author": "Bazzoni, Gian Paolo",
+      "year": 1999,
+      "title": "Elementi di grammatica sassarese",
+      "publisher": "Self-published/regional imprint",
+      "url": null,
+      "pages": null,
+      "notes": "Modern descriptive grammar of Sassarese (transitional Sardo-Corsican), alongside Sanna's (1957) Il dialetto di Sassari e altri saggi; consulted to check the Italian-based grapheme map (retroflex ddh/dd, ch/gh, gn, sc) modelled here."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Sassarese_language"
+  ]
+}

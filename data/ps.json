@@ -1,0 +1,441 @@
+{
+  "code": "ps",
+  "name": "Pashto (Standard Afghan)",
+  "script": "Arabic",
+  "graphemes": {
+    "ا": [
+      "ɑ",
+      "a"
+    ],
+    "آ": [
+      "ɑ"
+    ],
+    "و": [
+      "w",
+      "u",
+      "o"
+    ],
+    "ی": [
+      "j",
+      "i",
+      "ai"
+    ],
+    "ې": [
+      "e"
+    ],
+    "ۍ": [
+      "əi"
+    ],
+    "ئ": [
+      "ai",
+      "əi"
+    ],
+    "ب": [
+      "b"
+    ],
+    "پ": [
+      "p"
+    ],
+    "ت": [
+      "t"
+    ],
+    "ټ": [
+      "ʈ"
+    ],
+    "د": [
+      "d"
+    ],
+    "ډ": [
+      "ɖ"
+    ],
+    "ک": [
+      "k"
+    ],
+    "ګ": [
+      "ɡ"
+    ],
+    "ق": [
+      "q"
+    ],
+    "څ": [
+      "ts"
+    ],
+    "ځ": [
+      "dz"
+    ],
+    "چ": [
+      "tʃ"
+    ],
+    "ج": [
+      "dʒ"
+    ],
+    "ف": [
+      "f"
+    ],
+    "ث": [
+      "s"
+    ],
+    "س": [
+      "s"
+    ],
+    "ز": [
+      "z"
+    ],
+    "ص": [
+      "s"
+    ],
+    "ض": [
+      "z"
+    ],
+    "ش": [
+      "ʃ"
+    ],
+    "ښ": [
+      "ʂ"
+    ],
+    "ژ": [
+      "ʒ"
+    ],
+    "ږ": [
+      "ʐ"
+    ],
+    "خ": [
+      "x"
+    ],
+    "غ": [
+      "ɣ"
+    ],
+    "ح": [
+      "h"
+    ],
+    "ه": [
+      "h",
+      "a",
+      "ə"
+    ],
+    "ع": [
+      "ʔ"
+    ],
+    "ذ": [
+      "z"
+    ],
+    "ظ": [
+      "z"
+    ],
+    "ط": [
+      "t"
+    ],
+    "م": [
+      "m"
+    ],
+    "ن": [
+      "n"
+    ],
+    "ڼ": [
+      "ɳ"
+    ],
+    "ل": [
+      "l"
+    ],
+    "ر": [
+      "r"
+    ],
+    "ړ": [
+      "ɻ"
+    ],
+    "َ": [
+      "a"
+    ],
+    "ِ": [
+      "i"
+    ],
+    "ُ": [
+      "u"
+    ],
+    "ي": [
+      "i",
+      "j"
+    ],
+    "ۀ": [
+      "ə"
+    ]
+  },
+  "allophones": {
+    "p": [
+      "p",
+      "pʰ"
+    ],
+    "b": [
+      "b"
+    ],
+    "t": [
+      "t",
+      "tʰ"
+    ],
+    "d": [
+      "d"
+    ],
+    "ʈ": [
+      "ʈ",
+      "ʈʰ"
+    ],
+    "ɖ": [
+      "ɖ"
+    ],
+    "k": [
+      "k",
+      "kʰ"
+    ],
+    "ɡ": [
+      "ɡ"
+    ],
+    "q": [
+      "q"
+    ],
+    "ts": [
+      "ts"
+    ],
+    "dz": [
+      "dz"
+    ],
+    "tʃ": [
+      "tʃ"
+    ],
+    "dʒ": [
+      "dʒ"
+    ],
+    "f": [
+      "f"
+    ],
+    "s": [
+      "s"
+    ],
+    "z": [
+      "z"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "ʒ": [
+      "ʒ"
+    ],
+    "ʂ": [
+      "ʂ",
+      "ʃ"
+    ],
+    "ʐ": [
+      "ʐ",
+      "ʒ"
+    ],
+    "x": [
+      "x"
+    ],
+    "ɣ": [
+      "ɣ"
+    ],
+    "h": [
+      "h"
+    ],
+    "ʔ": [
+      "ʔ"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n",
+      "ŋ"
+    ],
+    "ɳ": [
+      "ɳ"
+    ],
+    "l": [
+      "l"
+    ],
+    "j": [
+      "j"
+    ],
+    "w": [
+      "w"
+    ],
+    "a": [
+      "a",
+      "ɐ"
+    ],
+    "i": [
+      "i"
+    ],
+    "u": [
+      "u"
+    ],
+    "e": [
+      "e"
+    ],
+    "o": [
+      "o"
+    ],
+    "ə": [
+      "ə"
+    ],
+    "ɑ": [
+      "ɑ",
+      "ɑː"
+    ],
+    "r": [
+      "r",
+      "ɾ"
+    ],
+    "ɻ": [
+      "ɻ",
+      "ɽ"
+    ]
+  },
+  "parent": "x-clade-iran1269",
+  "ancestors": [
+    {
+      "code": "ine",
+      "role": "parent",
+      "weight": 0.95,
+      "notes": "Indo-European > Indo-Iranian > Iranian > Eastern Iranian"
+    }
+  ],
+  "notes": "Pashto (پښتو) — Standard Afghan Pashto on a Kandahari (Southwestern) base. Eastern Iranian, ~50–60 million speakers, one of the two official languages of Afghanistan. DEFINING FEATURES vs. Persian: (1) retroflex consonants ʈ ɖ ɳ ɻ ʂ ʐ; (2) the Pashto shift Proto-Iranian *č → ts, *ǰ → dz; (3) no pharyngeals; (4) a seven-vowel system /i e ə a ɑ o u/ that contrasts by QUALITY, not length — no length mark belongs on a Pashto phoneme (Tegey & Robson 1996; Penzl 1955; David 2014). DIALECT TARGET: the Southwestern (Kandahari) values ښ = ʂ and ږ = ʐ. The same two letters read x/ɡ in Northeastern (Yusufzai) and ç/ʝ or ɕ/ʑ in the Central (Karlani) group; a spec emits one dialect, so the other readings are a documented mismatch rather than an error. ORTHOGRAPHY: the abjad leaves short vowels unwritten, and three letters are positional. Word-initial alef is a vowel carrier defaulting to a short vowel (a, i, or u), with ɑ kept only as a low-priority fallback in that same slot; آ is the letter dedicated to spelling initial /ɑ/. ⟨او⟩ opens a word on the rounded vowel Waw supplies, not on /ɑw/; word-final ه spells the final vowel (the feminine -a, or ə), not /h/. Waw and the Ye letters are matres lectionis after a consonant and glides beside a vowel. ر is the alveolar trill /r/ with the tap [ɾ] as its positional variant; that choice follows the gold's notation convention (356 r vs 1 ɾ), not a positional claim. ړ has the retroflex flap [ɽ] as its general value, with a lateral flap syllable-initially and [ɻ] elsewhere; this spec keeps ɻ because the gold's notation splits near-evenly across variants (ɽ 38, ɻ 39, ɺ̢ 11, ɺ 9 tokens) and treats that as a documented refusal to pick a positional rule rather than a positional assertion. /n/ is velar [ŋ] before a velar stop. ADSTRATE EFFECT ON DARI: some retroflex-influenced articulation in Afghan Persian speakers with Pashto contact. The unwritten short vowels remain the dominant residual error: a spelling with no vowel letter cannot be given its /ə/ or /a/ from the orthography alone, and no positional rule in this spec places one.",
+  "quality": "research",
+  "script_type": "abjad",
+  "sources": [
+    {
+      "id": "windfuhr1979",
+      "author": "Windfuhr, G.",
+      "year": 1979,
+      "title": "Persian Grammar: History and State of Its Study",
+      "publisher": "Mouton",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "tegey_robson1996",
+      "author": "Tegey, H. & Robson, B.",
+      "year": 1996,
+      "title": "A Reference Grammar of Pashto",
+      "publisher": "Center for Applied Linguistics",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "mahootian1997",
+      "author": "Mahootian, S.",
+      "year": 1997,
+      "title": "Persian",
+      "publisher": "Routledge",
+      "url": null,
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Pashto",
+    "https://ps.wikipedia.org/wiki/پښتو",
+    "https://ps.wikipedia.org/wiki/%D9%BE%DA%9A%D8%AA%D9%88"
+  ],
+  "timespan": {
+    "start_year": 1000,
+    "end_year": null
+  },
+  "glottolog_code": "nucl1276",
+  "iso639_3": "pus",
+  "wikidata_qid": "Q58680",
+  "wals_code": "psh",
+  "location": {
+    "latitude": 32.471767,
+    "longitude": 68.827633,
+    "source": "glottolog",
+    "notes": "Glottolog's computed centroid for the Nuclear Pashto family — a summary of a whole clade's range, not a place anyone speaks."
+  },
+  "positional_graphemes": {
+    "ا": {
+      "word_initial": [
+        "a",
+        "i",
+        "u",
+        "ɑ"
+      ],
+      "default": [
+        "ɑ",
+        "a"
+      ]
+    },
+    "او": {
+      "word_initial": [
+        "o",
+        "u",
+        "aw"
+      ],
+      "default": [
+        "ɑw"
+      ]
+    },
+    "ه": {
+      "word_final": [
+        "a",
+        "ə"
+      ],
+      "default": [
+        "h"
+      ]
+    },
+    "ی": {
+      "word_initial": [
+        "j"
+      ],
+      "after_vowel": [
+        "j"
+      ],
+      "default": [
+        "i",
+        "ai"
+      ]
+    },
+    "ي": {
+      "word_initial": [
+        "j"
+      ],
+      "word_final": [
+        "i"
+      ],
+      "default": [
+        "i",
+        "j"
+      ]
+    },
+    "و": {
+      "word_initial": [
+        "w"
+      ],
+      "after_vowel": [
+        "w"
+      ],
+      "default": [
+        "o",
+        "u",
+        "w"
+      ]
+    }
+  },
+  "allophone_rules": [
+    {
+      "id": "PS_NASAL_VELAR",
+      "phonemes": [
+        "n"
+      ],
+      "surface": "ŋ",
+      "followed_by_phoneme": [
+        "k",
+        "ɡ",
+        "q"
+      ],
+      "notes": "Nasal place assimilation: /n/ is velar [ŋ] before a velar stop. Standard for Pashto (Tegey & Robson 1996; David 2014)."
+    }
+  ]
+}

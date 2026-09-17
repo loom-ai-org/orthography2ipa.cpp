@@ -1,0 +1,448 @@
+{
+  "code": "fax",
+  "name": "A Fala (Xalimego)",
+  "script": "Latin",
+  "graphemes": {
+    "a": [
+      "a",
+      "ɐ"
+    ],
+    "e": [
+      "e",
+      "ɛ"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "o",
+      "ɔ"
+    ],
+    "u": [
+      "u"
+    ],
+    "á": [
+      "a"
+    ],
+    "é": [
+      "ɛ"
+    ],
+    "ê": [
+      "e"
+    ],
+    "í": [
+      "i"
+    ],
+    "ó": [
+      "ɔ"
+    ],
+    "ô": [
+      "o"
+    ],
+    "ú": [
+      "u"
+    ],
+    "b": [
+      "b"
+    ],
+    "c": [
+      "k",
+      "θ"
+    ],
+    "ç": [
+      "s"
+    ],
+    "d": [
+      "d"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɡ",
+      "ʒ"
+    ],
+    "h": [
+      ""
+    ],
+    "j": [
+      "ʒ"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ñ": [
+      "ɲ"
+    ],
+    "p": [
+      "p"
+    ],
+    "q": [
+      "k"
+    ],
+    "r": [
+      "ɾ"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "v": [
+      "b"
+    ],
+    "x": [
+      "ʃ"
+    ],
+    "z": [
+      "θ"
+    ],
+    "ch": [
+      "tʃ"
+    ],
+    "ll": [
+      "ʎ"
+    ],
+    "lh": [
+      "ʎ"
+    ],
+    "nh": [
+      "ɲ"
+    ],
+    "rr": [
+      "r"
+    ],
+    "qu": [
+      "k"
+    ],
+    "gu": [
+      "ɡ"
+    ],
+    "ss": [
+      "s"
+    ],
+    "ai": [
+      "aj"
+    ],
+    "au": [
+      "aw"
+    ],
+    "ei": [
+      "ej"
+    ],
+    "eu": [
+      "ew"
+    ],
+    "oi": [
+      "oj"
+    ],
+    "ou": [
+      "ow"
+    ],
+    "ui": [
+      "uj"
+    ],
+    "iu": [
+      "iw"
+    ],
+    "ia": [
+      "ja"
+    ],
+    "ie": [
+      "je"
+    ],
+    "io": [
+      "jo"
+    ],
+    "ua": [
+      "wa"
+    ],
+    "ue": [
+      "we"
+    ],
+    "uo": [
+      "wo"
+    ],
+    "ão": [
+      "ɐ̃w̃"
+    ],
+    "ã": [
+      "ɐ̃"
+    ],
+    "õ": [
+      "õ"
+    ]
+  },
+  "allophones": {
+    "b": [
+      "b",
+      "β"
+    ],
+    "d": [
+      "d",
+      "ð"
+    ],
+    "ɡ": [
+      "ɡ",
+      "ɣ"
+    ],
+    "p": [
+      "p"
+    ],
+    "t": [
+      "t"
+    ],
+    "k": [
+      "k"
+    ],
+    "f": [
+      "f",
+      "h"
+    ],
+    "v": [
+      "β"
+    ],
+    "s": [
+      "s",
+      "z"
+    ],
+    "θ": [
+      "θ"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "ʒ": [
+      "ʒ"
+    ],
+    "tʃ": [
+      "tʃ"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n",
+      "ŋ"
+    ],
+    "ɲ": [
+      "ɲ"
+    ],
+    "l": [
+      "l"
+    ],
+    "ʎ": [
+      "ʎ"
+    ],
+    "ɾ": [
+      "ɾ"
+    ],
+    "r": [
+      "r"
+    ],
+    "j": [
+      "j"
+    ],
+    "w": [
+      "w"
+    ],
+    "a": [
+      "a"
+    ],
+    "ɐ": [
+      "ɐ"
+    ],
+    "e": [
+      "e"
+    ],
+    "ɛ": [
+      "ɛ"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "o"
+    ],
+    "ɔ": [
+      "ɔ"
+    ],
+    "u": [
+      "u"
+    ]
+  },
+  "positional_graphemes": {
+    "c": {
+      "before_e": [
+        "θ"
+      ],
+      "before_i": [
+        "θ"
+      ]
+    },
+    "b": {
+      "default": [
+        "b"
+      ],
+      "intervocalic": [
+        "β"
+      ]
+    },
+    "d": {
+      "default": [
+        "d"
+      ],
+      "intervocalic": [
+        "ð"
+      ]
+    },
+    "g": {
+      "default": [
+        "ɡ"
+      ],
+      "before_e": [
+        "ʒ"
+      ],
+      "before_i": [
+        "ʒ"
+      ],
+      "intervocalic": [
+        "ɣ"
+      ]
+    },
+    "f": {
+      "default": [
+        "f"
+      ],
+      "word_initial": [
+        "f",
+        "h"
+      ]
+    },
+    "s": {
+      "default": [
+        "s"
+      ],
+      "intervocalic": [
+        "s",
+        "z"
+      ]
+    },
+    "r": {
+      "word_initial": [
+        "r"
+      ],
+      "intervocalic": [
+        "ɾ"
+      ],
+      "onset": [
+        "ɾ"
+      ],
+      "before_consonant": [
+        "ɾ"
+      ],
+      "word_final": [
+        "ɾ"
+      ]
+    },
+    "gu": {
+      "before_a": [
+        "ɡw"
+      ],
+      "before_o": [
+        "ɡw"
+      ],
+      "before_e": [
+        "ɡ"
+      ],
+      "before_i": [
+        "ɡ"
+      ],
+      "default": [
+        "ɡ"
+      ]
+    }
+  },
+  "parent": "gl-ES",
+  "notes": "A Fala (Xalimego/Fala de Xálima). Galician-Portuguese linguistic island in Cáceres, Extremadura. Three local varieties: Valverdeiru (Valverde del Fresno), Lagarteiro (Eljas), Mañegu (San Martín de Trevejo). ~5,000–10,000 speakers. Preserves medieval Galician-Portuguese features with Leonese/Extremaduran influence (F- → [h] aspiration in some words). Betacism. Nasal vowels. Palatal [ʎ]. ISO 639-3: fax. SIGNAL FEATURE — FOUR-WAY MEDIEVAL SIBILANT SYSTEM (Grupo Xálima tesoro p.38, table p.53): A Fala preserves the full voiced/voiceless sibilant contrast otherwise kept only by Portuguese — intervocalic ⟨s⟩ = voiced [z] (casa) vs ⟨ss⟩ = [s] (nossa); ⟨x⟩ = voiceless [ʃ] (queixu) vs ⟨j⟩ / ⟨g⟩ before e,i = voiced [ʒ] (queiju, ovelha) — hence ⟨j⟩ and ⟨g⟩(e,i) are mapped to [ʒ], NOT the voiceless [ʃ] of Castilian jota; plus interdental /θ/ from ⟨c⟩(e,i)/⟨ç⟩ (cincu, caça, poçu). So NO seseo and NO ceceo, and voicing is phonemic. SUB-VARIETY SPLIT (documented, not phoneme-split): medieval z (⟨z⟩ here defaulted to [θ]) is realised as a voiced interdental [ð̞] in lagarteiru/mañegu but merges to plain [θ] in valverdeiru (tesoro pp.54-55) — this spec keeps the valverdeiru [θ] default. Other per-variety/overlay traits out of grapheme->IPA scope: final-vowel metaphony -e>-i/-o>-u, implosive -r/-l -> [l], intervocalic -d- loss, final -z drop, preterite cantaram (valverdeiru) vs cantórim (lagarteiru/mañegu).",
+  "quality": "research",
+  "script_type": "alphabet",
+  "iso639_3": "fax",
+  "sources": [
+    {
+      "id": "grupo_xalima_tesoro",
+      "author": "Grupo de Estudo d'A Fala (Grupo Xálima)",
+      "year": 2019,
+      "title": "A Fala de Xálima: valverdeiru, lagarteiru, manhegu. Un tesoro luso-extremeño",
+      "publisher": "Diputación de Cáceres",
+      "url": "https://archivo.dip-caceres.es/wp-content/uploads/2024/01/05-087-02.pdf",
+      "pages": "37-56",
+      "notes": "Read directly (papers/iberian/fala_xalima_valverdeiru_lagarteiru_manhegu_tesoro.pdf). p.37-39 Galician-Portuguese diagnostics (no Ĕ/Ŏ diphthongisation, F- preserved vs Sierra-de-Gata Astur-Leonese /x-/, -LL-/-NN- degemination, -N- loss, nasal vowels); p.38 & table p.53 the four-way sibilant system casa/z/ vs nossa/s/, queixu/ʃ/ vs queiju/ʒ/, interdental /θ/ — the basis for adding /ʒ/ and confirming the voiced intervocalic /z/; p.54-55 valverdeiru z→[θ] vs lagarteiru/mañegu [ð̞]. Year approximate."
+    },
+    {
+      "id": "carrasco_fala2023",
+      "author": "Carrasco González, J.M.",
+      "year": 2023,
+      "title": "A Fala (do Val de Xálima)",
+      "publisher": "eHumanista/IVITRA 24",
+      "url": "https://dehesa.unex.es/",
+      "pages": null,
+      "notes": "Read (papers/iberian/carrasco_fala_ehumanista_2023.pdf). Modern descriptive synthesis; corroborates the Galician-Portuguese classification and the three sub-varieties."
+    },
+    {
+      "id": "penny2002",
+      "author": "Penny, R.",
+      "year": 2002,
+      "title": "A History of the Spanish Language",
+      "publisher": "Cambridge University Press",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "mateus_dandrade2000",
+      "author": "Mateus, M.H.M. & d'Andrade, E.",
+      "year": 2000,
+      "title": "The Phonology of Portuguese",
+      "publisher": "Oxford University Press",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "alarcos_llorach1994",
+      "author": "Alarcos Llorach, E.",
+      "year": 1994,
+      "title": "Gramática de la Lengua Española",
+      "publisher": "Espasa",
+      "url": null,
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Fala_language"
+  ],
+  "timespan": {
+    "start_year": 1500,
+    "end_year": null
+  },
+  "glottolog_code": "fala1241",
+  "wikidata_qid": "Q300402",
+  "location": {
+    "latitude": 40.1651,
+    "longitude": -6.91452,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Fala."
+  }
+}

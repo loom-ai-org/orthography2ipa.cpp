@@ -1,0 +1,259 @@
+{
+  "code": "ie",
+  "name": "Interlingue (Occidental)",
+  "family": "Constructed",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "b": [
+      "b"
+    ],
+    "c": [
+      "k"
+    ],
+    "ch": [
+      "ʃ"
+    ],
+    "d": [
+      "d"
+    ],
+    "e": [
+      "e"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "h": [
+      "h"
+    ],
+    "i": [
+      "i"
+    ],
+    "j": [
+      "ʒ"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "o": [
+      "o"
+    ],
+    "p": [
+      "p"
+    ],
+    "qu": [
+      "kw"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "u": [
+      "u"
+    ],
+    "v": [
+      "v"
+    ],
+    "w": [
+      "v"
+    ],
+    "x": [
+      "ks"
+    ],
+    "y": [
+      "j"
+    ],
+    "z": [
+      "dz"
+    ],
+    "é": [
+      "e"
+    ],
+    "í": [
+      "i"
+    ],
+    "á": [
+      "a"
+    ],
+    "ó": [
+      "o"
+    ],
+    "ú": [
+      "u"
+    ]
+  },
+  "allophones": {
+    "a": [
+      "a"
+    ],
+    "b": [
+      "b"
+    ],
+    "k": [
+      "k"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "d": [
+      "d"
+    ],
+    "e": [
+      "e",
+      "ɛ"
+    ],
+    "f": [
+      "f"
+    ],
+    "ɡ": [
+      "ɡ"
+    ],
+    "h": [
+      "h"
+    ],
+    "i": [
+      "i"
+    ],
+    "ʒ": [
+      "ʒ"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "o": [
+      "o",
+      "ɒ"
+    ],
+    "p": [
+      "p"
+    ],
+    "kw": [
+      "kw"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s",
+      "z"
+    ],
+    "t": [
+      "t"
+    ],
+    "u": [
+      "u"
+    ],
+    "v": [
+      "v"
+    ],
+    "ks": [
+      "ks"
+    ],
+    "j": [
+      "j"
+    ],
+    "dz": [
+      "dz"
+    ],
+    "ts": [
+      "ts"
+    ],
+    "z": [
+      "z"
+    ]
+  },
+  "positional_graphemes": {
+    "c": {
+      "before_front_vowel": [
+        "ts"
+      ]
+    },
+    "g": {
+      "before_front_vowel": [
+        "ʒ"
+      ]
+    },
+    "s": {
+      "intervocalic": [
+        "z"
+      ]
+    }
+  },
+  "iso639_3": "ile",
+  "glottolog_code": "inte1260",
+  "wikidata_qid": "Q35850",
+  "notes": "Interlingue (originally Occidental), constructed international auxiliary language published by Edgar de Wahl in 1922; renamed Interlingue in 1949. Published, fully regular phonemic orthography over the 26-letter Latin alphabet. Softening rules: ⟨c⟩ = [ts] before e/i/y and [k] elsewhere; ⟨g⟩ = [ʒ] before e/i/y and [ɡ] elsewhere; intervocalic ⟨s⟩ = [z]. ⟨ch⟩ = [ʃ], ⟨j⟩ = [ʒ], ⟨z⟩ = [dz], ⟨y⟩ = [j] as a consonant and [i] as a vowel. Stress falls on the vowel before the final consonant; the endings -bil, -ic, -im, -ul, -um are ignored for stress; irregular stress is marked with an acute accent (café, ímpossibil), so the accented vowels map to the same qualities as their unaccented counterparts.",
+  "sources": [
+    {
+      "id": "dewahl1922",
+      "author": "de Wahl, Edgar",
+      "year": 1922,
+      "title": "Occidental: Die Weltsprache (Radicarium directiv del lingue international Occidental)",
+      "publisher": "Kosmoglott",
+      "url": null,
+      "pages": null,
+      "notes": "Original publication of the language, its alphabet and pronunciation.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Interlingue"
+    },
+    {
+      "id": "interlingue_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Interlingue",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Interlingue",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Interlingue",
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Interlingue",
+    "https://ie.wikipedia.org/wiki/Interlingue"
+  ],
+  "timespan": {
+    "start_year": 1922,
+    "end_year": null
+  },
+  "stress": {
+    "default_position": -2,
+    "final_stress_endings": [],
+    "penult_stress_endings": [],
+    "marked_vowels": [
+      "á",
+      "é",
+      "í",
+      "ó",
+      "ú"
+    ],
+    "stress_mark": "ˈ",
+    "notes": "Stress on the vowel before the final consonant; -bil, -ic, -im, -ul, -um do not attract stress; irregular stress written with an acute accent. Source: https://en.wikipedia.org/wiki/Interlingue"
+  }
+}

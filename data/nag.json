@@ -1,0 +1,103 @@
+{
+ "code": "nag",
+ "name": "Naga Pidgin",
+ "script": "Zyyy",
+ "quality": "stub",
+ "graphemes": {},
+ "allophones": {
+  "bʱ": [
+   "bʱ",
+   "β"
+  ],
+  "pʰ": [
+   "pʰ",
+   "ɸ"
+  ],
+  "ɾ": [
+   "ɾ",
+   "l"
+  ]
+ },
+ "notes": "REGISTRY STUB (not a modelled G2P target). Placed so the ancestry graph covers every living ISO 639-3 language. No orthography is claimed; the phoneme inventory follows the cited PHOIBLE inventory (which itself cites a published description): script is Zyyy (undetermined) until a cited description is encoded. Classification and coordinates follow Glottolog.",
+ "iso639_3": "nag",
+ "glottolog_code": "naga1394",
+ "sources": [
+  {
+   "id": "glottolog2024",
+   "author": "Hammarström, Harald; Forkel, Robert; Haspelmath, Martin; Bank, Sebastian",
+   "year": 2024,
+   "title": "Glottolog 5.0",
+   "publisher": "Max Planck Institute for Evolutionary Anthropology",
+   "url": "https://glottolog.org/"
+  },
+  {
+   "id": "phoible2019",
+   "author": "Moran, Steven; McCloy, Daniel (eds.)",
+   "year": 2019,
+   "title": "PHOIBLE 2.0 (doi:10.5281/zenodo.2562766)",
+   "publisher": "Max Planck Institute for the Science of Human History",
+   "url": "https://phoible.org/inventories/view/958",
+   "notes": "Inventory 958 (ph), 47 non-marginal segments."
+  }
+ ],
+ "urls": [
+  "https://glottolog.org/resource/languoid/id/naga1394"
+ ],
+ "location": {
+  "latitude": 25.2508,
+  "longitude": 93.4438,
+  "source": "glottolog",
+  "notes": "Glottolog's representative point."
+ },
+ "parent": "x-clade-indo1319",
+ "phonemes": [
+  "b",
+  "bʱ",
+  "d",
+  "dʱ",
+  "d̠ʒ",
+  "d̠ʒʱ",
+  "h",
+  "j",
+  "k",
+  "kʰ",
+  "l",
+  "m",
+  "n",
+  "p",
+  "pʰ",
+  "s",
+  "t",
+  "tʰ",
+  "t̠ʃ",
+  "t̠ʃʰ",
+  "w",
+  "z",
+  "ŋ",
+  "ɡ",
+  "ɡʱ",
+  "ɾ",
+  "a",
+  "ae̞",
+  "ai",
+  "ao",
+  "au",
+  "e",
+  "ei",
+  "eu",
+  "eə",
+  "i",
+  "i̯a",
+  "i̯u",
+  "i̯ɔ",
+  "o",
+  "oe̞",
+  "oi",
+  "ou",
+  "u",
+  "ui",
+  "u̯ə",
+  "ɔ"
+ ],
+ "phoible_id": "958"
+}

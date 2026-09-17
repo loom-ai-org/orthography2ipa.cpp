@@ -1,0 +1,203 @@
+{
+  "code": "sm",
+  "name": "Samoan",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "ʻ": [
+      "ʔ"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ŋ"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "p": [
+      "p"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "v": [
+      "v"
+    ],
+    "h": [
+      "h"
+    ],
+    "k": [
+      "k"
+    ],
+    "r": [
+      "ɾ"
+    ],
+    "a": [
+      "a"
+    ],
+    "e": [
+      "ɛ"
+    ],
+    "i": [
+      "ɪ"
+    ],
+    "o": [
+      "o"
+    ],
+    "u": [
+      "u"
+    ],
+    "ā": [
+      "aː"
+    ],
+    "ē": [
+      "eː"
+    ],
+    "ī": [
+      "iː"
+    ],
+    "ō": [
+      "ɔː"
+    ],
+    "ū": [
+      "uː"
+    ]
+  },
+  "allophones": {
+    "ʔ": [
+      "ʔ"
+    ],
+    "f": [
+      "f"
+    ],
+    "ŋ": [
+      "ŋ"
+    ],
+    "l": [
+      "l",
+      "ɾ"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n",
+      "ŋ"
+    ],
+    "p": [
+      "p"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t",
+      "k"
+    ],
+    "v": [
+      "v"
+    ],
+    "h": [
+      "h"
+    ],
+    "k": [
+      "k"
+    ],
+    "ɾ": [
+      "ɾ"
+    ],
+    "a": [
+      "a"
+    ],
+    "ɛ": [
+      "ɛ"
+    ],
+    "ɪ": [
+      "ɪ"
+    ],
+    "o": [
+      "o"
+    ],
+    "u": [
+      "u",
+      "w"
+    ],
+    "aː": [
+      "aː"
+    ],
+    "eː": [
+      "eː"
+    ],
+    "iː": [
+      "iː"
+    ],
+    "ɔː": [
+      "ɔː"
+    ],
+    "uː": [
+      "uː"
+    ]
+  },
+  "iso639_3": "smo",
+  "glottolog_code": "samo1305",
+  "notes": "Samoan (Gagana Sāmoa), Polynesian. Fourteen native letters: vowels a e i o u (long: ā ē ī ō ū, the macron faʻamamafa), consonants f g l m n p s t v plus the koma liliu ⟨ʻ⟩ = glottal stop /ʔ/. ⟨g⟩ is the velar nasal /ŋ/, never a stop. ⟨h k r⟩ occur only in loanwords. Colloquial register (tautala leaga) merges /t/ → [k] and /n/ → [ŋ]; those are recorded as allophones, not as separate graphemes.",
+  "sources": [
+    {
+      "id": "mosel_hovdhaugen1992",
+      "author": "Mosel, Ulrike & Hovdhaugen, Even",
+      "year": 1992,
+      "title": "Samoan Reference Grammar",
+      "publisher": "Scandinavian University Press",
+      "url": null,
+      "pages": null,
+      "notes": "Standard reference grammar; phonology and orthography.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Samoan_language"
+    },
+    {
+      "id": "samoan_language_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Samoan language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Samoan_language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Samoan_language",
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Samoan_language",
+    "https://sm.wikipedia.org/wiki/Gagana_fa%CA%BBa_S%C4%81moa"
+  ],
+  "timespan": {
+    "start_year": 1834,
+    "end_year": null
+  },
+  "parent": "x-clade-mala1545",
+  "ancestors": [
+    {
+      "code": "x-clade-mala1545",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Malayo-Polynesian, the Austronesian branch containing every Austronesian language outside Formosa."
+    }
+  ],
+  "location": {
+    "latitude": -13.92,
+    "longitude": -171.83,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Samoan."
+  }
+}

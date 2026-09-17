@@ -1,0 +1,45 @@
+{
+  "code": "mnw",
+  "name": "Mon",
+  "script": "Myanmar",
+  "script_type": "abugida",
+  "quality": "stub",
+  "iso639_3": "mnw",
+  "glottolog_code": "monn1252",
+  "wikidata_qid": "Q13349",
+  "graphemes": {},
+  "allophones": {},
+  "notes": "Mon (ဘာသာမန်) of Myanmar and Thailand, written in the Mon (Mon–Burmese) script, an abugida and the ancestor of the Burmese script. The grapheme inventory is NOT yet specified. Mon spelling encodes a two-register (clear vs breathy) phonation contrast through the choice of consonant letter series rather than through a diacritic, so a naive letter → IPA map is wrong; a correct spec requires the register-class model plus dependent vowel signs and the virama. Metadata only.",
+  "sources": [
+    {
+      "id": "mnw_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Mon language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Mon_language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Mon_language",
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Mon_language",
+    "https://mnw.wikipedia.org/wiki/%E1%80%99%E1%80%94%E1%80%BA"
+  ],
+  "parent": "x-clade-aust1305",
+  "ancestors": [
+    {
+      "code": "x-clade-aust1305",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Austroasiatic — the classification node this language sits under."
+    }
+  ],
+  "location": {
+    "latitude": 15.49394,
+    "longitude": 98.122465,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Mon."
+  }
+}

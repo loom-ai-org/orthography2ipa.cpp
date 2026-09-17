@@ -1,0 +1,140 @@
+{
+  "code": "tok",
+  "name": "Toki Pona",
+  "family": "Constructed",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "e": [
+      "e"
+    ],
+    "i": [
+      "i"
+    ],
+    "j": [
+      "j"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "o": [
+      "o"
+    ],
+    "p": [
+      "p"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "u": [
+      "u"
+    ],
+    "w": [
+      "w"
+    ]
+  },
+  "allophones": {
+    "a": [
+      "a"
+    ],
+    "e": [
+      "e"
+    ],
+    "i": [
+      "i"
+    ],
+    "j": [
+      "j"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "o": [
+      "o"
+    ],
+    "p": [
+      "p"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "u": [
+      "u"
+    ],
+    "w": [
+      "w"
+    ]
+  },
+  "iso639_3": "tok",
+  "glottolog_code": "toki1239",
+  "wikidata_qid": "Q36846",
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Toki_Pona",
+    "https://tok.wikipedia.org/wiki/toki_pona"
+  ],
+  "sources": [
+    {
+      "id": "lang2014",
+      "author": "Lang, Sonja",
+      "year": 2014,
+      "title": "Toki Pona: The Language of Good",
+      "publisher": "Sonja Lang",
+      "url": null,
+      "wikipedia_url": null,
+      "pages": null,
+      "notes": "The official book: 14-phoneme inventory (p t k s m n l j w; a e i o u), (C)V(n) syllable shape, initial stress."
+    },
+    {
+      "id": "tokipona_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Toki Pona",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Toki_Pona",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Toki_Pona",
+      "pages": "Phoneme inventory and stress.",
+      "notes": null
+    }
+  ],
+  "timespan": {
+    "start_year": 2001,
+    "end_year": null
+  },
+  "notes": "Toki Pona (Sonja Lang, 2001; book 2014). Minimal, fully phonemic orthography: 14 letters = 14 phonemes, 9 consonants /p t k s m n l j w/ and 5 vowels /a e i o u/. Syllables are (C)V(n); the sequences ji, ti, wu, wo, nn, nm are disallowed. Stress is always on the first syllable of a word. Written in lowercase Latin (the sitelen pona / sitelen sitelen logographies are not modelled here).",
+  "stress": {
+    "default_position": 1,
+    "final_stress_endings": [],
+    "penult_stress_endings": [],
+    "marked_vowels": [],
+    "stress_mark": "ˈ",
+    "notes": "Fixed word-initial stress (Lang 2014)."
+  }
+}

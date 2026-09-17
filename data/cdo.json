@@ -1,0 +1,102 @@
+{
+  "code": "cdo",
+  "name": "Eastern Min",
+  "script": "Han",
+  "script_type": "logographic",
+  "quality": "stub",
+  "iso639_3": "cdo",
+  "glottolog_code": "mind1253",
+  "wikidata_qid": "Q36455",
+  "graphemes": {},
+  "allophones": {},
+  "notes": "Eastern Min (Mìng-dĕ̤ng-ngṳ̄ / Mindong), including the Fuzhou dialect. The grapheme inventory is NOT yet specified and NO logographic map is claimed: Chinese characters do not encode pronunciation segmentally, so a character → IPA table is out of scope for this engine. INPUT CONTRACT: as `zh` requires pinyin, a future Eastern Min spec would require romanised input in Bàng-uâ-cê (Foochow Romanized, 平話字) — the syllable-initial / rime / tone-mark spelling — not Han characters. Until such a spec exists this entry carries metadata only. PHONEME INVENTORY: attested inventory from PHOIBLE (glottocode mind1253), declared directly. `graphemes` stays empty because none of that depends on the writing system: the sounds of this language are known regardless of whether — or how — it is written.",
+  "sources": [
+    {
+      "id": "cdo_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Eastern Min language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Eastern_Min",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Eastern_Min",
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "phoible",
+      "author": "Moran, Steven & McCloy, Daniel (eds.)",
+      "year": 2019,
+      "title": "PHOIBLE 2.0",
+      "publisher": "Max Planck Institute for the Science of Human History",
+      "url": "https://phoible.org/",
+      "pages": null,
+      "notes": "Attested phoneme inventory for glottocode mind1253."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Eastern_Min",
+    "https://cdo.wikipedia.org/wiki/M%C3%ACng-d%C4%95%CC%A4ng-ng%E1%B9%B3%CC%84"
+  ],
+  "phonemes": [
+    "a",
+    "ai",
+    "au",
+    "e",
+    "eu",
+    "h",
+    "i",
+    "ia",
+    "ie",
+    "iu",
+    "k",
+    "kʰ",
+    "l",
+    "l̪|l",
+    "m",
+    "n",
+    "n̪|n",
+    "o",
+    "p",
+    "pʰ",
+    "s",
+    "s̪|s",
+    "t",
+    "ts",
+    "tsʰ",
+    "tʰ",
+    "t̪s̪|ts",
+    "t̪s̪ʰ|tsʰ",
+    "t̪|t",
+    "t̪ʰ|tʰ",
+    "u",
+    "ua",
+    "uai",
+    "ui",
+    "uo",
+    "x",
+    "y",
+    "yo",
+    "ø",
+    "øy",
+    "ŋ",
+    "œ",
+    "ɔ",
+    "ɛ",
+    "ʔ"
+  ],
+  "parent": "x-clade-sini1245",
+  "ancestors": [
+    {
+      "code": "x-clade-sini1245",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Sinitic — the classification node this language sits under."
+    }
+  ],
+  "location": {
+    "latitude": 26.0,
+    "longitude": 119.5,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Min Dong Chinese."
+  }
+}

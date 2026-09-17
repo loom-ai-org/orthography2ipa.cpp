@@ -1,0 +1,242 @@
+{
+  "code": "sjd",
+  "name": "Kildin Sami",
+  "script": "Cyrillic",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "а̄": [
+      "aː"
+    ],
+    "э̄": [
+      "eː"
+    ],
+    "ы̄": [
+      "ɨː"
+    ],
+    "о̄": [
+      "oː"
+    ],
+    "я̄": [
+      "jaː"
+    ],
+    "ю̄": [
+      "juː"
+    ],
+    "е̄": [
+      "jeː"
+    ],
+    "ӣ": [
+      "iː"
+    ],
+    "ӯ": [
+      "uː"
+    ],
+    "ъ": [
+      ""
+    ],
+    "ь": [
+      "ʲ"
+    ],
+    "а": [
+      "a"
+    ],
+    "ӓ": [
+      "a"
+    ],
+    "б": [
+      "b"
+    ],
+    "в": [
+      "v"
+    ],
+    "г": [
+      "ɡ"
+    ],
+    "д": [
+      "d"
+    ],
+    "е": [
+      "je"
+    ],
+    "ё": [
+      "jo"
+    ],
+    "ж": [
+      "ʒ"
+    ],
+    "з": [
+      "z"
+    ],
+    "һ": [
+      "h"
+    ],
+    "и": [
+      "i"
+    ],
+    "й": [
+      "j"
+    ],
+    "ҋ": [
+      "j"
+    ],
+    "к": [
+      "k"
+    ],
+    "л": [
+      "l"
+    ],
+    "ӆ": [
+      "l̥"
+    ],
+    "м": [
+      "m"
+    ],
+    "ӎ": [
+      "m̥"
+    ],
+    "н": [
+      "n"
+    ],
+    "ӊ": [
+      "n̥"
+    ],
+    "ӈ": [
+      "ŋ"
+    ],
+    "о": [
+      "o"
+    ],
+    "п": [
+      "p"
+    ],
+    "р": [
+      "r"
+    ],
+    "ҏ": [
+      "r̥"
+    ],
+    "с": [
+      "s"
+    ],
+    "т": [
+      "t"
+    ],
+    "у": [
+      "u"
+    ],
+    "ф": [
+      "f"
+    ],
+    "х": [
+      "x"
+    ],
+    "ц": [
+      "ts"
+    ],
+    "ч": [
+      "tʃ"
+    ],
+    "ш": [
+      "ʃ"
+    ],
+    "щ": [
+      "ɕ"
+    ],
+    "ы": [
+      "ɨ"
+    ],
+    "ҍ": [
+      "ʲ"
+    ],
+    "э": [
+      "e"
+    ],
+    "ӭ": [
+      "e"
+    ],
+    "ю": [
+      "ju"
+    ],
+    "я": [
+      "ja"
+    ],
+    "ль": [
+      "ʎ"
+    ],
+    "сь": [
+      "ɕ"
+    ],
+    "хь": [
+      "ç"
+    ],
+    "нь": [
+      "ɲ"
+    ]
+  },
+  "parent": "x-clade-saam1281",
+  "ancestors": [
+    {
+      "code": "x-clade-saam1281",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Descent per Glottolog classification of Kildin Saami (kild1236)."
+    }
+  ],
+  "stress": {
+    "default_position": 1,
+    "stress_mark": "ˈ"
+  },
+  "notes": "Research. Kildin Sami is a Kola (Eastern) Saami language of the Uralic family, written in an extended Cyrillic alphabet (Kert 1971 orthography, revised 1980s). The map covers the base Cyrillic letters plus the language-specific graphemes: Ӈ (velar nasal), the voiceless-sonorant letters Ӆ Ӎ Ӊ Ҏ, the voiceless glide Ҋ, and Һ (marking preaspiration). Iotated Е Ё Ю Я are given their glide+vowel reading. Vowel length is written with a combining macron over the base vowel letter (а̄ э̄ ы̄ о̄ я̄ ю̄ е̄) or, for и/у, with the dedicated precomposed letters Ӣ/Ӯ; both are modelled as long vowels here (Kert 1971), which is the largest single source of the pre-upgrade PER gap. Word stress is fixed on the first syllable (Kert 1971). Palatalization written with Ь or Ҍ is encoded. Ь and ҍ both map to ʲ, which the engine composes onto the consonant before them, so no consonant-plus-sign key is needed for the compositional cases. Kildin Sami contrasts plain, half-palatalized and palatal consonants, so the sign is a segmental instruction rather than a lexical diacritic; the Kola Saami Documentation Project gives the minimal triple манн /manː/ 'moon', маннҍ /manːʲ/ 'egg', маннь /maɲː/ 'daughter-in-law', which is why ⟨нҍ⟩ composes to nʲ while ⟨нь⟩ is the palatal nasal ɲ. Four keys earn a slot because their value is not the concatenation of their parts: ⟨ль⟩ ʎ, ⟨сь⟩ ɕ, ⟨хь⟩ ç and ⟨нь⟩ ɲ, the palatal segments the majority of the shipped gold writes for those four letters (ʎ in 85 occurrences against lʲ in 43; ɕ in 75 against sʲ in 23; ç in 39 against xʲ in 6; ɲ in 11 against nʲ in 0). ҍ is not in that set: it is the half-palatalization sign and keeps the plain ʲ reading. Ъ is left unencoded as the empty string: it appears in only a handful of sign occurrences, the two gold sets do not agree on a reading, and in ⟨куллъе⟩ it separates rather than palatalizes. Palatalization does not spread rightward across a cluster: of 150 sign-plus-consonant contexts in the WikiPron gold only 75 write the following consonant as palatalized, and the NorthEuraLex gold writes 5 of 209. The two gold sets differ in how much of this they transcribe. NorthEuraLex writes the palatal segments but leaves secondary palatalization off labials, velars and liquids (0 of 17 ⟨вь⟩, 0 of 9 ⟨пь⟩, 2 of 47 ⟨рь⟩, 8 of 31 ⟨кь⟩), so encoding the sign raises its exact-match error even though it lowers its PER.",
+  "iso639_3": "sjd",
+  "glottolog_code": null,
+  "sources": [
+    {
+      "id": "sjd_glottolog",
+      "author": "Hammarström, H. et al. (Glottolog 5.0)",
+      "year": 2024,
+      "title": "Glottolog: Kildin Saami (kild1236)",
+      "publisher": "Max Planck Institute for Evolutionary Anthropology",
+      "url": "https://glottolog.org/resource/languoid/id/kild1236",
+      "pages": null,
+      "notes": "Classification reference for a skeleton-tier entry.",
+      "wikipedia_url": null
+    },
+    {
+      "id": "kert1971",
+      "author": "Kert, Georgij M.",
+      "year": 1971,
+      "title": "Саамский язык (Кильдинский диалект): Фонетика, морфология, синтаксис (The Sami Language, Kildin Dialect: Phonetics, Morphology, Syntax)",
+      "publisher": "Nauka",
+      "url": null,
+      "pages": null,
+      "notes": "Grammar and orthography reference for Kildin Sami: the extended Cyrillic alphabet, macron vowel length, and fixed initial word stress.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Kildin_Sami_language"
+    },
+    {
+      "id": "sjd_orthography",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Kildin Sami language — writing system and phonology",
+      "publisher": null,
+      "url": "https://en.wikipedia.org/wiki/Kildin_Sami_language",
+      "pages": null,
+      "notes": "Orthography/phonology reference for the skeleton-tier grapheme map.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Kildin_Sami_language"
+    },
+    {
+      "id": "sjd_dobes",
+      "author": "Kola Saami Documentation Project (DoBeS)",
+      "year": 2012,
+      "title": "Kola Sámi — Language: phonology",
+      "publisher": "Max Planck Institute for Psycholinguistics, Nijmegen",
+      "url": "https://dobes.mpi.nl/projects/sami/language/",
+      "pages": null,
+      "notes": "Source for the three-way plain / half-palatalized / palatal contrast and the minimal triple манн /manː/, маннҍ /manːʲ/, маннь /maɲː/, which the ⟨нь⟩ and ⟨нҍ⟩ readings rest on.",
+      "wikipedia_url": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Kildin_Sami_language"
+  ]
+}

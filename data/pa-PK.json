@@ -1,0 +1,260 @@
+{
+  "code": "pa-PK",
+  "name": "Western Punjabi (Shahmukhi)",
+  "script": "Arabic",
+  "parent": "pa",
+  "allophones_base": "pa",
+  "graphemes": {
+    "ا": [
+      "ə",
+      "aː"
+    ],
+    "آ": [
+      "aː"
+    ],
+    "و": [
+      "ʋ",
+      "oː",
+      "uː",
+      "ɔː"
+    ],
+    "ی": [
+      "j",
+      "iː",
+      "eː"
+    ],
+    "ے": [
+      "eː",
+      "ɛː"
+    ],
+    "َ": [
+      "ə"
+    ],
+    "ِ": [
+      "i"
+    ],
+    "ُ": [
+      "u"
+    ],
+    "ً": [
+      "ən"
+    ],
+    "ب": [
+      "b"
+    ],
+    "پ": [
+      "p"
+    ],
+    "ت": [
+      "t̪"
+    ],
+    "ٹ": [
+      "ʈ"
+    ],
+    "ث": [
+      "s"
+    ],
+    "ج": [
+      "dʒ"
+    ],
+    "چ": [
+      "tʃ"
+    ],
+    "ح": [
+      "h"
+    ],
+    "خ": [
+      "x"
+    ],
+    "د": [
+      "d̪"
+    ],
+    "ڈ": [
+      "ɖ"
+    ],
+    "ذ": [
+      "z"
+    ],
+    "ر": [
+      "r"
+    ],
+    "ڑ": [
+      "ɖ"
+    ],
+    "ز": [
+      "z"
+    ],
+    "ژ": [
+      "ʒ"
+    ],
+    "س": [
+      "s"
+    ],
+    "ش": [
+      "ʃ"
+    ],
+    "ص": [
+      "s"
+    ],
+    "ض": [
+      "z"
+    ],
+    "ط": [
+      "t̪"
+    ],
+    "ظ": [
+      "z"
+    ],
+    "ع": [
+      "ʔ",
+      ""
+    ],
+    "غ": [
+      "ɣ"
+    ],
+    "ف": [
+      "f"
+    ],
+    "ق": [
+      "q",
+      "k"
+    ],
+    "ک": [
+      "k"
+    ],
+    "گ": [
+      "ɡ"
+    ],
+    "ل": [
+      "l"
+    ],
+    "م": [
+      "m"
+    ],
+    "ن": [
+      "n"
+    ],
+    "ں": [
+      "̃"
+    ],
+    "ھ": [
+      "ɦ"
+    ],
+    "بھ": [
+      "b"
+    ],
+    "پھ": [
+      "pʰ"
+    ],
+    "تھ": [
+      "t̪ʰ"
+    ],
+    "ٹھ": [
+      "ʈʰ"
+    ],
+    "جھ": [
+      "dʒ"
+    ],
+    "چھ": [
+      "tʃʰ"
+    ],
+    "دھ": [
+      "d̪"
+    ],
+    "ڈھ": [
+      "ɖ"
+    ],
+    "گھ": [
+      "ɡ"
+    ],
+    "کھ": [
+      "kʰ"
+    ],
+    "لھ": [
+      "l"
+    ],
+    "مھ": [
+      "m"
+    ],
+    "نھ": [
+      "n"
+    ],
+    "رھ": [
+      "r"
+    ],
+    "ڑھ": [
+      "ɽ"
+    ]
+  },
+  "notes": "Western Punjabi written in Shahmukhi (Perso-Arabic/Nastaliq) script. Phonological system closely parallels Eastern Punjabi (Gurmukhi) but with stronger Persian/Arabic lexical stratum introducing /f q x ɣ z ʒ/. Do-chashmi-he (ھ) marks aspiration and breathy voice in native vocabulary, but historically voiced aspirates (e.g. بھ bh, جھ jh, ڈھ ɖh, دھ dh, گھ gh) have undergone tonal split in Punjabi: word-initial position yields a plain obstruent plus low or falling tone, not true murmured phonation. The orthography retains the aspiration digraph for etymological reasons. Tonal system: Punjabi has three contrastive tones — high/rising (historically from voiceless aspirated onsets), low/falling (historically from voiced aspirated onsets), and level/mid (default). Tone is not written in Shahmukhi. Retroflex stop ڑ (ɖ) is distinct from dental د (d̪) and is used for native Punjabi retroflexes. Nun-ghunna ں (̃) marks nasalisation of the preceding vowel.",
+  "tone_inventory": {
+    "H": "high-rising tone (historically from voiceless aspirate onset)",
+    "L": "low-falling tone (historically from voiced aspirate onset)",
+    "M": "level/mid tone (default; no special onset)"
+  },
+  "quality": "research",
+  "script_type": "abjad",
+  "sources": [
+    {
+      "id": "shackle2003",
+      "author": "Shackle, C.",
+      "year": 2003,
+      "title": "Panjabi",
+      "publisher": "Routledge (in Cardona & Jain, The Indo-Aryan Languages)",
+      "url": null,
+      "pages": "581–621",
+      "notes": "Standard reference for Punjabi phonology including tonal split from aspirate mergers"
+    },
+    {
+      "id": "bhatia1993",
+      "author": "Bhatia, T.K.",
+      "year": 1993,
+      "title": "Punjabi: A Cognitive-Descriptive Grammar",
+      "publisher": "Routledge",
+      "url": null,
+      "pages": null,
+      "notes": "Comprehensive grammar covering Punjabi phoneme inventory and tonal system"
+    },
+    {
+      "id": "masica1991",
+      "author": "Masica, C.",
+      "year": 1991,
+      "title": "The Indo-Aryan Languages",
+      "publisher": "Cambridge University Press",
+      "url": null,
+      "pages": null,
+      "notes": null,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Indo-Aryan_languages"
+    },
+    {
+      "id": "shackle1972",
+      "author": "Shackle, C.",
+      "year": 1972,
+      "title": "Punjabi",
+      "publisher": "University of London Press",
+      "url": null,
+      "pages": null,
+      "notes": "Earlier comprehensive Punjabi reference; Shahmukhi script coverage"
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Punjabi_language",
+    "https://en.wikipedia.org/wiki/Shahmukhi_alphabet",
+    "https://pa.wikipedia.org/wiki/%E0%A8%AA%E0%A9%B0%E0%A8%9C%E0%A8%BE%E0%A8%AC%E0%A9%80_%E0%A8%AD%E0%A8%BE%E0%A8%B8%E0%A8%BC%E0%A8%BE",
+    "https://pnb.wikipedia.org/wiki/%D9%BE%D9%86%D8%AC%D8%A7%D8%A8%DB%8C",
+    "https://pa.wikipedia.org/wiki/%E0%A8%B8%E0%A8%BC%E0%A8%BE%E0%A8%B9%E0%A8%AE%E0%A9%81%E0%A8%96%E0%A9%80",
+    "https://pnb.wikipedia.org/wiki/%D8%B4%D8%A7%DB%81_%D9%85%DA%A9%DA%BE%DB%8C_%D9%84%D9%BE%DB%8C"
+  ],
+  "timespan": {
+    "start_year": 1500,
+    "end_year": null
+  },
+  "glottolog_code": "west2386",
+  "iso639_3": "pnb",
+  "location": {
+    "latitude": 30.0948,
+    "longitude": 75.3474,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Western Panjabi."
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "code": "eu-x-gipuzkera",
+  "name": "Gipuzkoan Basque (Gipuzkera)",
+  "script": "Latin",
+  "graphemes_base": "eu",
+  "allophones_base": "eu",
+  "positional_graphemes_base": "eu",
+  "allophones": {
+    "h": [
+      ""
+    ]
+  },
+  "parent": "eu",
+  "glottolog_code": "guip1235",
+  "ancestors": [
+    {
+      "code": "eu",
+      "role": "parent",
+      "weight": 0.9,
+      "notes": "Gipuzkoan is the closest living dialect to Euskara Batua and served as the primary model for standardization; grapheme mappings are nearly identical to the standard."
+    }
+  ],
+  "notes": "Gipuzkoan (Gipuzkera). Central Basque, spoken in Gipuzkoa; the closest living dialect to Euskara Batua and its primary reference variety. VALIDATED against the surrounding Illustration-of-the-IPA literature. The three-way sibilant contrast (apical /s̺/ = s, laminal /s̻/ = z, postalveolar /ʃ/ = x) is retained in eastern Gipuzkoan but is variable and neutralised in western Gipuzkoan areas, where the merger characteristic of Western Basque intrudes (Bedialauneta & Hualde 2023: 1098) — hence the base three-way inventory is kept but is not uniform across the province. Aspiration (/h/) is absent: like the rest of western/central Basque, Gipuzkoan lost /h/ and has no aspirated stops (Hualde 2018: 2). The voiceless palatal stop /c/ is merging with the affricate /tʃ/ in westernmost Gipuzkoan towns (Eibar and neighbours; Hualde, Lujanbio & Zubiri 2010: 118). Voiced stops /b d ɡ/ are approximants [β ð ɣ] intervocalically. NOTE: lexically contrastive pitch-accent is a feature of specific northern-Biscayan and Navarrese varieties (e.g. Goizueta; Hualde et al. 2010: 113, 123-124), not of general Gipuzkoan, which has predominantly stress accent; no pitch-accent claim is made for this spec.",
+  "quality": "research",
+  "urls": [
+    "https://en.wikipedia.org/wiki/Gipuzkoan_dialect",
+    "https://glottolog.org/resource/languoid/id/guip1235"
+  ],
+  "script_type": "alphabet",
+  "sources": [
+    {
+      "id": "hualde_ortiz_de_urbina2003",
+      "author": "Hualde, J.I. & Ortiz de Urbina, J. (eds.)",
+      "year": 2003,
+      "title": "A Grammar of Basque",
+      "publisher": "Mouton de Gruyter",
+      "url": null,
+      "pages": "15-65 (Hualde, 'Segmental phonology')",
+      "notes": null
+    },
+    {
+      "id": "hualde_lujanbio_zubiri2010",
+      "author": "Hualde, J.I., Lujanbio, O. & Zubiri, J.J.",
+      "year": 2010,
+      "title": "Goizueta Basque (Illustrations of the IPA)",
+      "publisher": "Journal of the International Phonetic Association 40(1)",
+      "url": "https://doi.org/10.1017/S0025100309990260",
+      "pages": "113-127",
+      "notes": "Read for the /c/~/tʃ/ merger in western Gipuzkoan (p.118) and the pitch-accent scope note (pp.113, 123)."
+    },
+    {
+      "id": "bedialauneta_hualde2023",
+      "author": "Bedialauneta Txurruka, I. & Hualde, J.I.",
+      "year": 2023,
+      "title": "Markina Basque (Illustration of the IPA)",
+      "publisher": "Journal of the International Phonetic Association 53(3)",
+      "url": "https://doi.org/10.1017/S0025100322000032",
+      "pages": "1095-1122",
+      "notes": "Read for the westward spread of the sibilant merger into many Gipuzkoan varieties (p.1098)."
+    },
+    {
+      "id": "hualde2018_aspiration",
+      "author": "Hualde, J.I.",
+      "year": 2018,
+      "title": "Aspiration in Basque",
+      "publisher": "Papers in Historical Phonology 3",
+      "url": "https://doi.org/10.2218/pihph.3.2018.2602",
+      "pages": "1-27",
+      "notes": "Read for the loss of /h/ in central/western Basque (p.84 fn.)."
+    },
+    {
+      "id": "saltarelli1988",
+      "author": "Saltarelli, M.",
+      "year": 1988,
+      "title": "Basque",
+      "publisher": "Croom Helm",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "ladefoged_maddieson1996",
+      "author": "Ladefoged, P. & Maddieson, I.",
+      "year": 1996,
+      "title": "The Sounds of the World's Languages",
+      "publisher": "Blackwell",
+      "url": null,
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Gipuzkoan_dialect",
+    "https://eu.wikipedia.org/wiki/Gipuzkera",
+    "https://es.wikipedia.org/wiki/Dialecto_central_del_euskera"
+  ],
+  "timespan": {
+    "start_year": 1600,
+    "end_year": null
+  },
+  "iso639_3": "eus",
+  "wikidata_qid": "Q954141",
+  "location": {
+    "latitude": 43.166667,
+    "longitude": -2.166667,
+    "source": "wikidata",
+    "notes": "Gipuzkoa — the province the dialect is named for. [Wikidata Q95010 P625]"
+  }
+}

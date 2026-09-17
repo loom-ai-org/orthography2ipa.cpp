@@ -1,0 +1,238 @@
+{
+  "code": "ar-OM",
+  "name": "Omani Arabic",
+  "script": "Arabic",
+  "graphemes_base": "ar-x-peninsular",
+  "graphemes": {
+    "ث": [
+      "θ",
+      "t"
+    ],
+    "ذ": [
+      "ð",
+      "d"
+    ],
+    "ظ": [
+      "ðˤ"
+    ],
+    "ج": [
+      "dʒ"
+    ],
+    "ض": [
+      "dˤ"
+    ],
+    "ق": [
+      "q",
+      "ɡ"
+    ],
+    "ك": [
+      "k"
+    ],
+    "الثث": [
+      "aθθ",
+      "att"
+    ],
+    "اَلثث": [
+      "aθθ",
+      "att"
+    ],
+    "لِلثث": [
+      "liθθ",
+      "litt"
+    ],
+    "وَالثث": [
+      "waθθ",
+      "watt"
+    ],
+    "فَالثث": [
+      "faθθ",
+      "fatt"
+    ],
+    "بِالثث": [
+      "biθθ",
+      "bitt"
+    ],
+    "كَالثث": [
+      "kaθθ",
+      "katt"
+    ],
+    "الضض": [
+      "adˤdˤ"
+    ],
+    "اَلضض": [
+      "adˤdˤ"
+    ],
+    "لِلضض": [
+      "lidˤdˤ"
+    ],
+    "وَالضض": [
+      "wadˤdˤ"
+    ],
+    "فَالضض": [
+      "fadˤdˤ"
+    ],
+    "بِالضض": [
+      "bidˤdˤ"
+    ],
+    "كَالضض": [
+      "kadˤdˤ"
+    ],
+    "الظظ": [
+      "aðˤðˤ"
+    ],
+    "اَلظظ": [
+      "aðˤðˤ"
+    ],
+    "لِلظظ": [
+      "liðˤðˤ"
+    ],
+    "وَالظظ": [
+      "waðˤðˤ"
+    ],
+    "فَالظظ": [
+      "faðˤðˤ"
+    ],
+    "بِالظظ": [
+      "biðˤðˤ"
+    ],
+    "كَالظظ": [
+      "kaðˤðˤ"
+    ],
+    "اِلثث": [
+      "iθθ",
+      "itt"
+    ],
+    "اِلضض": [
+      "idˤdˤ"
+    ],
+    "اِلظظ": [
+      "iðˤðˤ"
+    ],
+    "وِالثث": [
+      "wiθθ",
+      "witt"
+    ],
+    "وِالضض": [
+      "widˤdˤ"
+    ],
+    "وِالظظ": [
+      "wiðˤðˤ"
+    ]
+  },
+  "allophones_base": "ar-x-peninsular",
+  "allophones": {
+    "ɮˤ": [
+      "dˤ"
+    ],
+    "dʒ": [
+      "dʒ",
+      "ɡ"
+    ],
+    "aː": [
+      "aː",
+      "eː"
+    ],
+    "dˤ": [
+      "dˤ"
+    ]
+  },
+  "allophone_rules": [
+    {
+      "id": "OM_K_AFFRICATION",
+      "phonemes": [
+        "k"
+      ],
+      "surface": "tʃ",
+      "followed_by_phoneme": [
+        "i",
+        "iː"
+      ],
+      "notes": "Velar affrication /k/ → [tʃ] adjacent to a high front vowel /i, iː/. Al-Balushi 2016 (Macrolinguistics 4(1):80-125), p.89: 'while this affrication (from /k/ to /č/) occurs in the Bedouin dialects in the vicinity of front vowels, it is unconditional in the sedentary dialects (Holes, 2013)' — with examples bāčir 'tomorrow' (bākir), simač 'fish' (samak), čiswah 'bride's clothes' (kiswah) from the Al-Buraimi, Ṣūr and Jaʕlān Bedouin dialects. Note that 'sedentary' is not uniform in Al-Balushi's account: the northern sedentary varieties of Wādi Saħtan and Al-Ħamrā DO affricate (yčūn, ʔačil, čēčah), and there the process is 'unconditional' (not restricted to the front-vowel environment), whereas the prestige sedentary koine of Muscat and Ṣalālah does NOT productively affricate /k/, and Dhofari does not. LIMITATIONS: this rule models the front-vowel-conditioned Bedouin/interior pattern only; it therefore over-generalises toward the affricating varieties and cannot capture either the non-affricating Muscat/Ṣalālah norm or the coda / unconditional-northern-sedentary distributions. UNAFFECTED by this rule: Old Arabic *q, which in Omani is retained as [q] (sedentary; grapheme ق lists [q] first), unlike the mainstream Gulf *q→[ɡ]."
+    }
+  ],
+  "parent": "ar-x-peninsular",
+  "ancestors": [
+    {
+      "code": "ar-x-peninsular",
+      "role": "parent",
+      "weight": 0.88,
+      "notes": "Peninsular Arabic base — conservative consonant system, interdental retention, emphatic spreading (AR_PEN_EMPH_*)."
+    },
+    {
+      "code": "fa",
+      "role": "adstrate",
+      "weight": 0.05,
+      "notes": "Persian adstrate from Hormuz Strait trade and Muscat contacts."
+    }
+  ],
+  "notes": "Omani Arabic — a conservative Peninsular variety of the southeastern coast, genetically Peninsular (inherits ar-x-peninsular DIRECTLY, not the Gulf node). DISTINCTIVE from the northern Gulf: Old Arabic *q is RETAINED as [q] in the sedentary varieties of Muscat, Ṣalālah and parts of the Bāṭina (Al-Balushi 2016 p.88: '...pronounce /q/ as /q/, as in ħaqqūti \"my/mine\"...'), while Bedouin varieties have *q → [ɡ] (y-ɡūl 'he says') and some northern-mountain sedentary varieties have *q → [k]; Sur/Ṣoħār/Ṣaħam show *q → [dʒ] (Holes 2014). The grapheme ق therefore lists [q] first (sedentary default), [ɡ] second. jiim /dʒ/ is realised as [dʒ] in the (mainly Bedouin/northern) dialects that keep it and as [ɡ] elsewhere (Glover 1988:38, cited Al-Balushi p.89: 'the voiced palatal affricate /ǰ/ is a free variant of /g/ in most words'). Interdentals /θ ð ðˤ/ and emphatics are retained (Al-Balushi p.87). /k/→[tʃ] affrication is present as a Bedouin/interior feature (allophone_rule OM_K_AFFRICATION; see its notes for the sedentary caveat). South Arabian (Mehri/Jibbali) adstrate in Dhofar; Swahili adstrate from the Omani-Zanzibar maritime empire; Persian adstrate from Hormuz trade. Input contract: fully diacritised (tashkeel) Arabic.",
+  "quality": "research",
+  "script_type": "abjad",
+  "sources": [
+    {
+      "id": "albalushi2016",
+      "author": "Al-Balushi, R.",
+      "year": 2016,
+      "title": "Omani Arabic: More than a Dialect",
+      "publisher": "Macrolinguistics 4(1)",
+      "url": "https://macrolinguistics.nju.edu.cn/23/17/c27354a467735/page.htm",
+      "pages": "80-125",
+      "notes": "Read the phonology sections (pp. 85-90, open-access PDF). Primary source for Omani /q/ reflexes (Bedouin [ɡ]; sedentary Muscat/Ṣalālah [q]; northern-mountain [k]; Sur/Ṣoħār [dʒ]) at p.88; jiim /dʒ/~[ɡ] free variation (Glover 1988:38) at p.89; /k/→[tʃ] Bedouin 'in the vicinity of front vowels' vs unconditional sedentary (Holes 2013) at p.89; interdental/emphatic retention at p.87; emphatic backing /a/→[ɑ] (marað̣ [mɑṛɑðˤ]) at p.90."
+    },
+    {
+      "id": "alshammari2026",
+      "author": "Alshammari, K. K.",
+      "year": 2026,
+      "title": "An Optimality-Theoretic Account of Velar Affrication in Northern Najdi Arabic",
+      "publisher": "Journal of Language Teaching and Research 17(4)",
+      "url": "https://doi.org/10.17507/jltr.1704.19",
+      "pages": "1333-1341",
+      "notes": "Read in full (open-access PDF). Cross-reference for the Peninsular velar-affrication typology (front-vowel conditioning; historical/lexicalised status per Johnstone 1967) underlying OM_K_AFFRICATION."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Omani_Arabic",
+    "https://ar.wikipedia.org/wiki/%D8%A7%D9%84%D9%84%D9%87%D8%AC%D8%A7%D8%AA_%D8%A7%D9%84%D8%B9%D9%85%D8%A7%D9%86%D9%8A%D8%A9"
+  ],
+  "timespan": {
+    "start_year": 1700,
+    "end_year": null
+  },
+  "glottolog_code": "oman1239",
+  "iso639_3": "acx",
+  "wikidata_qid": "Q56630",
+  "location": {
+    "latitude": 23.25,
+    "longitude": 58.5,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Omani Arabic."
+  },
+  "optional_marks": [
+    "ً",
+    "ٌ",
+    "ٍ",
+    "َ",
+    "ُ",
+    "ِ",
+    "ّ",
+    "ْ",
+    "ٰ",
+    "ٓ"
+  ],
+  "stress": {
+    "default_position": -3,
+    "quantity_sensitive": true,
+    "superheavy_final_attracts": true,
+    "max_onset": 1,
+    "stress_mark": "ˈ",
+    "notes": "Arabic stress is QUANTITY-SENSITIVE: it falls on a syllable because that syllable is heavy, not because of any orthographic ending, so no ending table can express it. The cascade (Ryding, A Reference Grammar of MSA, CUP 2005, §2.3; Watson, The Phonology and Morphology of Arabic, OUP 2002, ch.3): a superheavy final syllable (CVːC/CVCC) takes the stress (kiˈtaːb); otherwise a heavy penult (CVː/CVC) does (muˈdarris); otherwise the antepenult (ˈmadrasa). max_onset=1 because Arabic onsets are obligatory and hold exactly one consonant — a medial cluster splits, closing the preceding syllable, and that boundary is what makes the penult of mudarris heavy. INPUT CONTRACT: weight is only recoverable from a complete transcription, so this requires diacritized input; an undiacritized skeleton has no vowels to weigh. The registered wikipron gold carries no stress marks, but the benchmark strips stress from both sides by default, so this costs no PER. Prosodic clitics: monosyllabic function words (negator maː, prepositions fiː/min/ʕan/ʕa/li/bi, vocative jaː, copula-negator muː/miʃ, conditional law/loː, wa-proclitic combinations) attach to a host and fall inside the host's stress domain, so they carry no word stress (Watson 2002, The Phonology and Morphology of Arabic, OUP, ch.3). Pan-Arabic class; the per-lect form list reflects the function words attested in this lect. Orthographic test — a clitic homograph (e.g. verb yā 'came') is destressed in every occurrence.",
+    "cliticless_words": [
+      "فِي",
+      "لَو",
+      "لِي",
+      "مَا",
+      "مِن",
+      "وَمَا"
+    ]
+  }
+}

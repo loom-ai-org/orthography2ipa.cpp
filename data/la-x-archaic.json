@@ -1,0 +1,215 @@
+{
+  "code": "la-x-archaic",
+  "name": "Old Latin",
+  "script": "Latin",
+  "parent": "ine-x-italic",
+  "graphemes": {
+    "a": [
+      "a",
+      "aː"
+    ],
+    "e": [
+      "e",
+      "eː"
+    ],
+    "i": [
+      "i",
+      "iː"
+    ],
+    "o": [
+      "o",
+      "oː"
+    ],
+    "u": [
+      "u",
+      "uː"
+    ],
+    "y": [
+      "y",
+      "yː"
+    ],
+    "ai": [
+      "aj"
+    ],
+    "ei": [
+      "ej"
+    ],
+    "oi": [
+      "oj"
+    ],
+    "ou": [
+      "ow"
+    ],
+    "au": [
+      "aw"
+    ],
+    "c": [
+      "k"
+    ],
+    "k": [
+      "k"
+    ],
+    "q": [
+      "kʷ"
+    ],
+    "qu": [
+      "kʷ"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "gu": [
+      "ɡʷ"
+    ],
+    "p": [
+      "p"
+    ],
+    "t": [
+      "t"
+    ],
+    "d": [
+      "d"
+    ],
+    "b": [
+      "b"
+    ],
+    "ph": [
+      "pʰ"
+    ],
+    "th": [
+      "tʰ"
+    ],
+    "kh": [
+      "kʰ"
+    ],
+    "f": [
+      "f"
+    ],
+    "h": [
+      "h"
+    ],
+    "s": [
+      "s"
+    ],
+    "z": [
+      "z"
+    ],
+    "r": [
+      "r"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "gn": [
+      "ŋn"
+    ],
+    "x": [
+      "ks"
+    ],
+    "ll": [
+      "lː"
+    ],
+    "rr": [
+      "rː"
+    ],
+    "nn": [
+      "nː"
+    ],
+    "mm": [
+      "mː"
+    ],
+    "ss": [
+      "sː"
+    ],
+    "ff": [
+      "fː"
+    ],
+    "pp": [
+      "pː"
+    ],
+    "tt": [
+      "tː"
+    ],
+    "cc": [
+      "kː"
+    ],
+    "gg": [
+      "ɡː"
+    ]
+  },
+  "positional_graphemes": {
+    "s": {
+      "intervocalic": [
+        "s"
+      ]
+    },
+    "d": {
+      "word_final": [
+        "d"
+      ]
+    },
+    "h": {
+      "onset": [
+        "h"
+      ]
+    }
+  },
+  "notes": "Old Latin (~240–75 BC). The literary language of Plautus, Ennius, and Cato. Key differences from Classical: (1) Richer diphthong inventory: /ej/, /ow/, /oj/ still distinct (later monophthongised to ī, ū, ū). (2) Rhotacism ongoing: intervocalic /s/ → /r/ not yet complete in all forms. (3) Final -d on ablatives. (4) /h/ probably stronger. (5) Same 10-vowel quantity system as Classical. Epigraphy: Praenestine fibula (if genuine), Duenos inscription, Forum cippus, SC de Bacchanalibus (186 BC). Source: Weiss (2020), Sihler (1995).",
+  "sources": [
+    {
+      "id": "weiss2009",
+      "author": "Weiss, M.",
+      "year": 2009,
+      "title": "Outline of the Historical and Comparative Grammar of Latin",
+      "publisher": "Beech Stave Press",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "allen1978",
+      "author": "Allen, W.S.",
+      "year": 1978,
+      "title": "Vox Latina: A Guide to the Pronunciation of Classical Latin",
+      "publisher": "Cambridge University Press",
+      "url": null,
+      "pages": null,
+      "notes": null,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Latin_phonology"
+    },
+    {
+      "id": "clackson_horrocks2007",
+      "author": "Clackson, J. & Horrocks, G.",
+      "year": 2007,
+      "title": "The Blackwell History of the Latin Language",
+      "publisher": "Blackwell",
+      "url": null,
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Old_Latin",
+    "https://la.wikipedia.org/wiki/Lingua_Latina_archaica"
+  ],
+  "timespan": {
+    "start_year": -600,
+    "end_year": -100
+  },
+  "glottolog_code": "oldl1238",
+  "iso639_3": "lat",
+  "quality": "research",
+  "wikidata_qid": "Q12289",
+  "location": {
+    "latitude": 41.901111,
+    "longitude": 12.488333,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Old Latin."
+  }
+}

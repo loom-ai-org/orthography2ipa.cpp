@@ -1,0 +1,329 @@
+{
+  "code": "yi",
+  "name": "Yiddish",
+  "script": "Hebrew",
+  "script_type": "alphabet",
+  "quality": "research",
+  "iso639_3": "yid",
+  "glottolog_code": "east2295",
+  "timespan": {
+    "start_year": 1000,
+    "end_year": null
+  },
+  "graphemes": {
+    "וו": [
+      "v"
+    ],
+    "יי": [
+      "ɛɪ"
+    ],
+    "ױ": [
+      "ɔɪ"
+    ],
+    "אַ": [
+      "a"
+    ],
+    "אָ": [
+      "ɔ"
+    ],
+    "פּ": [
+      "p"
+    ],
+    "פֿ": [
+      "f"
+    ],
+    "כּ": [
+      "k"
+    ],
+    "בֿ": [
+      "v"
+    ],
+    "תּ": [
+      "t"
+    ],
+    "שׂ": [
+      "s"
+    ],
+    "שׁ": [
+      "ʃ"
+    ],
+    "א": [
+      "",
+      "a"
+    ],
+    "ב": [
+      "b"
+    ],
+    "ג": [
+      "ɡ"
+    ],
+    "ד": [
+      "d"
+    ],
+    "ה": [
+      "h"
+    ],
+    "ו": [
+      "ʊ"
+    ],
+    "ז": [
+      "z"
+    ],
+    "ח": [
+      "χ",
+      "x"
+    ],
+    "ט": [
+      "t"
+    ],
+    "י": [
+      "ɪ",
+      "j"
+    ],
+    "כ": [
+      "χ",
+      "x"
+    ],
+    "ך": [
+      "χ",
+      "x"
+    ],
+    "ל": [
+      "l",
+      "ʎ"
+    ],
+    "מ": [
+      "m"
+    ],
+    "ם": [
+      "m"
+    ],
+    "נ": [
+      "n"
+    ],
+    "ן": [
+      "n"
+    ],
+    "ס": [
+      "s"
+    ],
+    "ע": [
+      "ɛ",
+      "ə"
+    ],
+    "פ": [
+      "f"
+    ],
+    "ף": [
+      "f"
+    ],
+    "צ": [
+      "ts"
+    ],
+    "ץ": [
+      "ts"
+    ],
+    "ק": [
+      "k"
+    ],
+    "ר": [
+      "r",
+      "ʀ",
+      "ɾ"
+    ],
+    "ש": [
+      "ʃ"
+    ],
+    "ת": [
+      "s"
+    ],
+    "ייַ": [
+      "aɪ"
+    ],
+    "ײַ": [
+      "aɪ"
+    ],
+    "טש": [
+      "tʃ"
+    ],
+    "דזש": [
+      "dʒ"
+    ],
+    "זש": [
+      "ʒ"
+    ],
+    "יִ": [
+      "i"
+    ],
+    "ײ": [
+      "ɛɪ"
+    ],
+    "װ": [
+      "v"
+    ],
+    "וּ": [
+      "ʊ"
+    ],
+    "וי": [
+      "ɔɪ"
+    ],
+    "ייִ": [
+      "ji"
+    ]
+  },
+  "allophones": {},
+  "positional_graphemes": {
+    "י": {
+      "word_initial": [
+        "j",
+        "ɪ"
+      ]
+    },
+    "ע": {
+      "nucleus_unstressed": [
+        "ə",
+        "ɛ"
+      ]
+    }
+  },
+  "ancestors": [
+    {
+      "code": "gem",
+      "role": "proto_language",
+      "weight": 0.7,
+      "notes": "Core Germanic vocabulary from Middle High German; also Slavic and Hebrew/Aramaic components"
+    }
+  ],
+  "parent": "x-clade-west2793",
+  "notes": "Eastern Yiddish in YIVO orthography — pointed, with the historical unpointed spelling of the Hebrew-Aramaic component retained (⟨ח⟩ ⟨ת⟩ ⟨שׂ⟩ ⟨כּ⟩ ⟨תּ⟩) and the five final forms ⟨ך ם ן ף ץ⟩ in use; neither holds in Soviet orthography, which respells the Hebrew-Aramaic component phonetically. Unlike Hebrew, Yiddish writes its vowels with letters. Written right-to-left. The pointing is part of the spelling, not an optional aid: ⟨אַ⟩ /a/ and ⟨אָ⟩ /ɔ/ are distinct letters, dagesh distinguishes ⟨פּ⟩ /p/ from ⟨פ⟩ /f/ and rafe ⟨בֿ⟩ /v/ from ⟨ב⟩ /b/, and the sin dot ⟨שׂ⟩ /s/ from bare ⟨ש⟩ /ʃ/. Shtumer alef ⟨א⟩ before ⟨י⟩ or ⟨ו⟩ is silent and marks that the syllable opens with the vocalic reading of that letter. The vowels of the unpointed Hebrew-Aramaic component are not recoverable from the letters and are a ceiling on any letter-driven transcription of Yiddish, not a gap in this description. Khirik yud ⟨יִ⟩ is a separate letter whose job after another yud is to block the tsvey-yudn reading, so ⟨ייִ⟩ is /ji/ and is keyed to defeat the longer-but-wrong maximal-munch match on ⟨יי⟩ /ɛɪ/ — ⟨ייִד⟩ is [jid], not [ɛɪd]. Maqaf ⟨־⟩, geresh ⟨׳⟩ and gershayim ⟨״⟩ are punctuation, not letters, and are deliberately not keyed.",
+  "sources": [
+    {
+      "id": "wiki-yi",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Yiddish language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Yiddish_language"
+    },
+    {
+      "id": "wiki-yi-phon",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Yiddish phonology",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Yiddish_phonology"
+    },
+    {
+      "id": "wiki-yi-orth",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Yiddish orthography",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Yiddish_orthography"
+    },
+    {
+      "id": "jlp-yi",
+      "author": "Jewish Language Project",
+      "year": 2024,
+      "title": "Yiddish (Eastern)",
+      "url": "https://www.jewishlanguages.org/eastern-yiddish"
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Yiddish_language",
+    "https://en.wikipedia.org/wiki/Yiddish_phonology",
+    "https://en.wikipedia.org/wiki/Yiddish_orthography",
+    "https://yi.wikipedia.org/wiki/%D7%99%D7%99%D7%93%D7%99%D7%A9"
+  ],
+  "wikidata_qid": "Q8641",
+  "phoible_id": "east2295",
+  "wals_code": "ydd",
+  "location": {
+    "latitude": 51.75,
+    "longitude": 19.42,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Eastern Yiddish."
+  },
+  "allophone_rules": [
+    {
+      "id": "YI_N_VELAR",
+      "phonemes": [
+        "n"
+      ],
+      "surface": "ŋ",
+      "followed_by_phoneme": [
+        "k",
+        "ɡ"
+      ],
+      "notes": "Nasal place assimilation: /n/ is dorsal before a dorsal stop (⟨אָנקומען⟩, ⟨זינגען⟩). The following stop is retained, so ⟨נג⟩ is [ŋɡ], not [ŋ]."
+    },
+    {
+      "id": "YI_N_SYLL_BILABIAL",
+      "phonemes": [
+        "n"
+      ],
+      "surface": "m̩",
+      "word_final": true,
+      "preceded_by_phoneme": [
+        "m",
+        "b",
+        "p"
+      ],
+      "notes": "Yiddish phonology (Wikipedia): '[m] and [ŋ] appear as syllable nuclei as well, but only as allophones of /n/, after bilabial consonants and dorsal consonants, respectively.' This is the bilabial half — ⟨לעבן⟩ [ˈlɛbm̩]."
+    },
+    {
+      "id": "YI_N_SYLL_DORSAL",
+      "phonemes": [
+        "n"
+      ],
+      "surface": "ŋ̩",
+      "word_final": true,
+      "preceded_by_phoneme": [
+        "k",
+        "ɡ",
+        "ŋ",
+        "χ",
+        "x"
+      ],
+      "notes": "The dorsal half of the same statement in YI_N_SYLL_BILABIAL — ⟨יאָגן⟩ [ˈjɔɡŋ̩]."
+    },
+    {
+      "id": "YI_N_SYLLABIC",
+      "phonemes": [
+        "n"
+      ],
+      "surface": "n̩",
+      "word_final": true,
+      "preceded_by": "consonant",
+      "notes": "Yiddish phonology (Wikipedia): the sonorants /l/ and /n/ function as syllable nuclei, e.g. אָװנט /ˈɔvn̩t/. Word-final ⟨ן⟩ with no vowel letter before it spells that nucleus (⟨שרײַבן⟩, ⟨העלפֿן⟩); after a vowel letter the ⟨ע⟩ carries the nucleus and ⟨ן⟩ stays a plain coda."
+    },
+    {
+      "id": "YI_L_SYLLABIC",
+      "phonemes": [
+        "l"
+      ],
+      "surface": "l̩",
+      "word_final": true,
+      "preceded_by": "consonant",
+      "notes": "The /l/ half of the same syllabic-sonorant statement — אײזל /ˈɛɪzl̩/."
+    }
+  ],
+  "stress": {
+    "default_position": 1,
+    "stress_mark": "ˈ",
+    "vowel_letters": [
+      "א",
+      "אַ",
+      "אָ",
+      "ע",
+      "ו",
+      "וּ",
+      "וי",
+      "ױ",
+      "י",
+      "יִ",
+      "יי",
+      "ײ",
+      "ײַ",
+      "ייַ"
+    ],
+    "notes": "Jewish Language Project, Yiddish (Eastern): 'Stress in Germanic words usually falls on the first syllable of the word's root.' The same page states that unstressed vowels are typically reduced, which is what the ⟨ע⟩ nucleus_unstressed entry describes. Slavic and Semitic loanwords take penultimate stress and are not covered by this default; neither are separable prefixes, which are unstressed before the stem."
+  }
+}

@@ -1,0 +1,123 @@
+{
+  "code": "ar-SA-x-sharqiyya",
+  "name": "Eastern Saudi (Sharqiyya) Arabic",
+  "script": "Arabic",
+  "graphemes_base": "ar-x-gulf",
+  "graphemes": {
+    "ج": [
+      "dʒ",
+      "j"
+    ]
+  },
+  "allophones_base": "ar-x-gulf",
+  "allophones": {},
+  "parent": "ar-x-gulf",
+  "ancestors": [
+    {
+      "code": "ar-x-gulf",
+      "role": "parent",
+      "weight": 0.93,
+      "notes": "The Eastern Province (al-Sharqiyya) of Saudi Arabia — al-Hasa/al-Ahsāʾ and al-Qaṭīf — is dialectologically part of the Gulf (khalījī) area, not the Najdi or Hejazi ones."
+    }
+  ],
+  "notes": "Eastern Saudi / Sharqiyya Arabic (شرقاوي), the Arabic of the Eastern Province of Saudi Arabia: al-Hasa (al-Ahsāʾ, Hofuf) and al-Qaṭīf. It is a GULF (khalījī) dialect, patterning with Bahrain and the lower Gulf rather than with Najd or the Hejaz, so it parents to ar-x-gulf and inherits the Gulf reflexes: qaf ق → [ɡ] (with /q/ robustly retained in a large stratum of local and learned lexemes — the /q/~[ɡ] alternation is the central topic of Al-Taisan 2022 on Hasawi; Smeaton 1973; Prochazka 1988), kaf ك → [tʃ] affrication (allophone_rules GULF_K_AFFRICATION, inherited; Al-Taisan 2022; Aljumah 2008), interdentals ث /θ/ ذ /ð/ retained, and the Gulf /ɡ/ → [dʒ] affrication of the qaf reflex. DEFINING DELTA modeled here: jīm ج → [dʒ] (affricate) as the primary reflex. This is the sedentary Eastern reflex on the direct evidence of the leaf's own primary source: Al-Taisan 2022 documents Hasawi jīm as /ʤ/ throughout — in the consonant inventory (p.12) and in every Hasawi example — and cites the *ǧīm→[j] glide-lenition only as a feature of 'some Northern/Eastern Arabian dialects' (Johnstone 1967), never as an attested Hasawi reflex (pp.2, 155). The Baḥārna (sedentary Shiʿi) community that dominates al-Qaṭīf and is strong in al-Hasa likewise carries the affricate [dʒ], not [j]: in the Gulf sect isogloss [j] is the marked reflex of the SUNNI ʕArab dialect (prestige, royal-family/media Bahraini) while [dʒ] is the marked reflex of the ŠIʿi Baḥārna dialect (Holes 1980/2016, reported in Alaodini 2019 p.94). The earlier version of this leaf had this attribution INVERTED — it modeled [j] as a 'Baḥārna Shiʿi' reflex, which the sources contradict. The glide [j] is kept as the SECONDARY variant: it is the reflex of the Sunni ʕArab townsmen and of the Dawāsir tribe (Sunni, Najdi-origin) who acquired [j] under Bahraini prestige contact and are now receding back to [dʒ] (Alaodini 2019: [dʒ] 76%, [j] traditional/receding). For the Dawāsir-descended Dammam urban variety — Najdi-Bedouin core (retained interdentals, gahawa syndrome, *dˤ→ðˤ merger, Najdi short-vowel rules, [ɒː] rounding) with a Gulf overlay and the traditional [j] — see the sibling stub ar-SA-x-dawasir. The Eastern Province is genuinely split (sedentary Baḥārna/Hasawi Gulf type vs Dawāsir/ʕujmān Najdi-Bedouin type); this leaf models the sedentary Gulf majority. NO ar-SA umbrella node: this leaf demonstrates why — Eastern Saudi is Gulf, southwestern Saudi is peninsular-archaic, Najd is Najdi and the Hejaz is Hejazi; there is no pan-Saudi phonology, so ar-SA stays unassigned (Prochazka 1988 surveys the country precisely as a patchwork). INPUT CONTRACT: transcribes orthography+harakat; short vowels surface only when the input is vocalised.",
+  "quality": "research",
+  "script_type": "abjad",
+  "sources": [
+    {
+      "id": "altaisan2022",
+      "author": "Al-Taisan, H.",
+      "year": 2022,
+      "title": "Velar, uvular and pharyngeal alternations in Hasawi Arabic: a Harmonic Serialism OT account (PhD thesis)",
+      "publisher": "University of Essex",
+      "url": "https://repository.essex.ac.uk/32571/2/Thesis%20HudaAlTaisan.pdf",
+      "pages": "20-30",
+      "notes": "Open-access. On Hasawi Arabic (al-Hasa, Eastern Province). Consonant inventory (Table 2-1, p.12) has both /q/ and /ɡ/ phonemic and the affricates /tʃ, dʒ/; qaf → [ɡ] with /q/ retained in a large NON-religious lexical stratum (p.13, p.79; Smeaton 1973; Prochazka 1988; Mstafawi 2006). Jīm is /ʤ/ (affricate) throughout the inventory and every Hasawi example (e.g. [dʒa] 'he came' p.20; [firiːʤ] 'team' p.166); the /dʒ/→[j] glide-lenition is only CITED for 'some Northern/Eastern Arabian dialects' (Johnstone 1967, pp.2, 155), never attested in Hasawi — so this leaf's primary jīm reflex is [dʒ]. The /ɡ/ (qaf reflex) affricates to [dʒ]/[dz] before front /i/ (Example 4-3b, p.81; p.166), and /k/→[tʃ]/[ts] before front vowels (p.81, out of the thesis's scope but noted). Interdentals retained and /dˤ/→/ðˤ/ merger (p.13); /ʒ/ not attested (pp.13, 132). The thesis's core is the /q/~/ʁ/ uvular alternation, which is lexically conditioned and left unmodelled here."
+    },
+    {
+      "id": "holes2004",
+      "author": "Holes, C.",
+      "year": 2004,
+      "title": "Modern Arabic: Structures, Functions, and Varieties",
+      "publisher": "Georgetown University Press",
+      "url": null,
+      "pages": null,
+      "notes": "Bahrani (Baḥārna) Arabic — the sedentary Shiʿi Gulf type of al-Qaṭīf and Bahrain. On the *ǧīm reflex the sect isogloss runs OPPOSITE to what an earlier version of this leaf assumed: [j] is the marked reflex of the SUNNI ʕArab dialect (locally prestigious, used by the Bahraini royal family and in Gulf media), while [dʒ] is the marked reflex of the ŠIʿi Baḥārna dialect (Holes 1980, 1983, 2016; reported with page pins in Alaodini 2019 p.94). Both communities have [ɡ] for *qāf. Basis for modeling ج → [dʒ] as the sedentary Eastern Saudi majority reflex (Baḥārna + Hasawi) with [j] as the Sunni-ʕArab/Dawāsir secondary variant."
+    },
+    {
+      "id": "johnstone1967",
+      "author": "Johnstone, T.M.",
+      "year": 1967,
+      "title": "Eastern Arabian Dialect Studies",
+      "publisher": "Oxford University Press (London Oriental Series 17)",
+      "url": null,
+      "pages": null,
+      "notes": "The foundational survey of the Gulf/Eastern Arabian dialects, including the *ǧīm → [j] lenition and *k → [tʃ] / *q-reflex → [dʒ] affrication that define the area."
+    },
+    {
+      "id": "prochazka1988",
+      "author": "Prochazka, T.",
+      "year": 1988,
+      "title": "Saudi Arabian Dialects",
+      "publisher": "Kegan Paul International (Library of Arabic Linguistics, Monograph 8)",
+      "url": null,
+      "pages": null,
+      "notes": "The first country-wide survey of Saudi dialects, north to south. Documents the Eastern Province (Hofuf/al-Hasa) as a Gulf-type area with qaf → [ɡ], and the country as a dialect patchwork with no single 'Saudi' phonology — grounds the decision to leave ar-SA unassigned."
+    },
+    {
+      "id": "alaodini2019",
+      "author": "Alaodini, H.",
+      "year": 2019,
+      "title": "A Sociolinguistic Study of the Dawāsir Dialect in Dammam, Eastern Arabia: Variation and Change in a Tribal Community (PhD thesis)",
+      "publisher": "University of Essex",
+      "url": null,
+      "pages": "39-44, 82-94, 118-125, 170-174",
+      "notes": "Sociolinguistic study of the Dawāsir (Sunni, Najdi-origin tribe) in urban Dammam. Establishes the Eastern Province as previously-understudied outside al-Hasa and dialectally split. Key facts corroborating this leaf: the Gulf *ǧīm sect isogloss — [j] is the SUNNI ʕArab prestige reflex, [dʒ] the ŠIʿi Baḥārna reflex (p.94, citing Holes) — and the Dawāsir [j] is a Bahraini-contact acquisition now receding to [dʒ] (76% [dʒ], p.125). The Dawāsir carry a Najdi-Bedouin layer (retained interdentals + *dˤ→ðˤ merger p.42; gahawa syndrome p.46; *k→[tʃ] kaškaša and *ɡ→[dʒ] affrication p.43-45; no [ts]/[dz]; Najdi short-vowel rules, no labial i>u, unlike Bahrani p.54; word-medial /ɑː/→[ɒː] rounding p.52-83, a pan-Eastern feature shared with Hasa/Bahrain). Basis for the ar-SA-x-dawasir sibling stub."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Bahrani_Arabic",
+    "https://en.wikipedia.org/wiki/Gulf_Arabic"
+  ],
+  "timespan": {
+    "start_year": 1400,
+    "end_year": null
+  },
+  "iso639_3": "afb",
+  "allophone_rules": [],
+  "location": {
+    "latitude": 25.3833,
+    "longitude": 49.5833,
+    "source": "manual",
+    "notes": "Al-Hofuf, al-Hasa, Eastern Province, Saudi Arabia."
+  },
+  "optional_marks": [
+    "ً",
+    "ٌ",
+    "ٍ",
+    "َ",
+    "ُ",
+    "ِ",
+    "ّ",
+    "ْ",
+    "ٰ",
+    "ٓ"
+  ],
+  "stress": {
+    "default_position": -3,
+    "quantity_sensitive": true,
+    "superheavy_final_attracts": true,
+    "max_onset": 1,
+    "stress_mark": "ˈ",
+    "notes": "Quantity-sensitive Arabic stress, inherited from the Gulf parent; see ar-SA-x-najd for the cascade and input contract. Prosodic clitics: monosyllabic function words (negator maː, prepositions fiː/min/ʕan/ʕa/li/bi, vocative jaː, copula-negator muː/miʃ, conditional law/loː, wa-proclitic combinations) attach to a host and fall inside the host's stress domain, so they carry no word stress (Watson 2002, The Phonology and Morphology of Arabic, OUP, ch.3). Pan-Arabic class; the per-lect form list reflects the function words attested in this lect. Orthographic test — a clitic homograph (e.g. verb yā 'came') is destressed in every occurrence.",
+    "cliticless_words": [
+      "بِي",
+      "فِي",
+      "لَو",
+      "مَا",
+      "مِن",
+      "وَمَا",
+      "يَا"
+    ]
+  }
+}

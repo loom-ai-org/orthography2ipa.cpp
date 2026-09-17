@@ -1,0 +1,98 @@
+{
+  "code": "ksh",
+  "name": "Colognian (Kölsch)",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "stub",
+  "graphemes": {},
+  "allophones": {},
+  "iso639_3": "ksh",
+  "glottolog_code": "kols1241",
+  "wikidata_qid": "Q4624",
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Colognian_dialect",
+    "https://ksh.wikipedia.org/wiki/K%C3%B6lsch_%28Sprooch%29"
+  ],
+  "sources": [
+    {
+      "id": "colognian_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2025,
+      "title": "Colognian dialect",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Colognian_dialect",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Colognian_dialect",
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "ripuarian_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2025,
+      "title": "Ripuarian language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Ripuarian_language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Ripuarian_language",
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "wrede1958",
+      "author": "Wrede, Adam",
+      "year": 1958,
+      "title": "Neuer Kölnischer Sprachschatz",
+      "publisher": "Greven Verlag, Köln",
+      "url": null,
+      "pages": null,
+      "notes": "Standard Kölsch dictionary; a starting point for a future orthography map."
+    },
+    {
+      "id": "colognian_phonology_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Colognian phonology",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Colognian_phonology",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Colognian_phonology",
+      "pages": null,
+      "notes": "Full phoneme inventory (consonants, long/short vowels, diphthongs). States that spelling can follow several standards and gives no orthography table."
+    },
+    {
+      "id": "bhatt_schreibregeln",
+      "author": "Bhatt, Christa",
+      "year": 1998,
+      "title": "Kölsche Schreibregeln: Vorschläge für eine Rechtschreibung des Kölschen",
+      "publisher": "Akademie för uns kölsche Sproch / Greven Verlag, Köln",
+      "url": null,
+      "pages": null,
+      "notes": "The only candidate written norm (explicitly 'proposals'). Print-only; not consulted, so no grapheme map is derived from it."
+    },
+    {
+      "id": "rheinische_dokumenta_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Rheinische Dokumenta",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Rheinische_Dokumenta",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Rheinische_Dokumenta",
+      "pages": null,
+      "notes": "A phonetic transcription system for Rhinelandic dialects with a full sign->IPA table — NOT the orthography Kölsch is written in, hence not adopted here."
+    }
+  ],
+  "notes": "STUB (deliberate): the grapheme inventory of Kölsch is NOT specified. Kölsch (Ripoarisch) is the Ripuarian (Central Franconian) dialect of Cologne. There is no fetchable, citable letter->IPA norm: the Wikipedia article on Colognian phonology states that 'spelling of Colognian can follow several standards' and gives IPA only, with no orthography table. The Akademie för uns kölsche Sproch's rules exist only in print (Christa Bhatt, 'Kölsche Schreibregeln: Vorschläge für eine Rechtschreibung des Kölschen' — 'Vorschläge' = proposals, not a norm) and could not be consulted; the Rheinische Dokumenta is a phonetic notation system, not the orthography Kölsch is actually written in. Kölsch also carries a phonemic tone accent (Rhenish Accent 1 / Accent 2) that no spelling marks. The phoneme inventory IS documented (consonants incl. /ɕ ɧ ʝ ʁ/; a large long/short vowel system; diphthongs /aɪ aːʊ aʊ eɪ iɐ̯ oʊ ɔʏ øʏ/), but an inventory is not a grapheme map. INPUT CONTRACT (for any future spec): Latin-script, German-convention Kölsch text, after ONE written norm is obtained and cited.",
+  "parent": "x-clade-germ1287",
+  "ancestors": [
+    {
+      "code": "x-clade-germ1287",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Germanic — the classification node this language sits under."
+    }
+  ],
+  "location": {
+    "latitude": 50.947,
+    "longitude": 6.927,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Kölsch."
+  }
+}

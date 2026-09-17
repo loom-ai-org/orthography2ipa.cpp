@@ -1,0 +1,3515 @@
+{
+  "code": "km",
+  "name": "Khmer",
+  "glottolog_code": "cent1989",
+  "script": "Khmer",
+  "script_type": "abugida",
+  "inherent_vowel": "ɑː",
+  "coda_no_inherent_vowel": true,
+  "iso639_3": "khm",
+  "quality": "research",
+  "graphemes": {
+    "ក": [
+      "k"
+    ],
+    "ខ": [
+      "kʰ"
+    ],
+    "គ": [
+      "k"
+    ],
+    "ឃ": [
+      "kʰ"
+    ],
+    "ង": [
+      "ŋ"
+    ],
+    "ច": [
+      "c"
+    ],
+    "ឆ": [
+      "cʰ"
+    ],
+    "ជ": [
+      "c"
+    ],
+    "ឈ": [
+      "cʰ"
+    ],
+    "ញ": [
+      "ɲ"
+    ],
+    "ដ": [
+      "ɗ"
+    ],
+    "ឋ": [
+      "tʰ"
+    ],
+    "ឌ": [
+      "ɗ"
+    ],
+    "ឍ": [
+      "tʰ"
+    ],
+    "ណ": [
+      "n"
+    ],
+    "ត": [
+      "t"
+    ],
+    "ថ": [
+      "tʰ"
+    ],
+    "ទ": [
+      "t"
+    ],
+    "ធ": [
+      "tʰ"
+    ],
+    "ន": [
+      "n"
+    ],
+    "ប": [
+      "ɓ"
+    ],
+    "ផ": [
+      "pʰ"
+    ],
+    "ព": [
+      "p"
+    ],
+    "ភ": [
+      "pʰ"
+    ],
+    "ម": [
+      "m"
+    ],
+    "យ": [
+      "j"
+    ],
+    "រ": [
+      "r"
+    ],
+    "ល": [
+      "l"
+    ],
+    "វ": [
+      "ʋ"
+    ],
+    "ស": [
+      "s"
+    ],
+    "ហ": [
+      "h"
+    ],
+    "ឡ": [
+      "l"
+    ],
+    "អ": [
+      "ʔ"
+    ],
+    "ហ្គ": [
+      "ɡ"
+    ],
+    "ហ្គ៊": [
+      "ɡ"
+    ],
+    "ហ្ន": [
+      "hn"
+    ],
+    "ហ្ម": [
+      "hm"
+    ],
+    "ហ្ល": [
+      "hl"
+    ],
+    "ហ្វ": [
+      "hʋ"
+    ],
+    "ហ្វ៊": [
+      "f"
+    ],
+    "ហ្ស": [
+      "ʒ"
+    ],
+    "ហ្ស៊": [
+      "ʒ"
+    ],
+    "ង៉": [
+      "ŋ"
+    ],
+    "ញ៉": [
+      "ɲ"
+    ],
+    "ម៉": [
+      "m"
+    ],
+    "យ៉": [
+      "j"
+    ],
+    "រ៉": [
+      "r"
+    ],
+    "វ៉": [
+      "ʋ"
+    ],
+    "ល៉": [
+      "l"
+    ],
+    "ប៉": [
+      "p"
+    ],
+    "ន៉": [
+      "n"
+    ],
+    "ស៊": [
+      "s"
+    ],
+    "ហ៊": [
+      "h"
+    ],
+    "ប៊": [
+      "ɓ"
+    ],
+    "អ៊": [
+      "ʔ"
+    ],
+    "ក់": [
+      "k"
+    ],
+    "ខ់": [
+      "kʰ"
+    ],
+    "គ់": [
+      "k"
+    ],
+    "ឃ់": [
+      "kʰ"
+    ],
+    "ង់": [
+      "ŋ"
+    ],
+    "ច់": [
+      "c"
+    ],
+    "ឆ់": [
+      "cʰ"
+    ],
+    "ជ់": [
+      "c"
+    ],
+    "ឈ់": [
+      "cʰ"
+    ],
+    "ញ់": [
+      "ɲ"
+    ],
+    "ដ់": [
+      "ɗ"
+    ],
+    "ឋ់": [
+      "tʰ"
+    ],
+    "ឌ់": [
+      "ɗ"
+    ],
+    "ឍ់": [
+      "tʰ"
+    ],
+    "ណ់": [
+      "n"
+    ],
+    "ត់": [
+      "t"
+    ],
+    "ថ់": [
+      "tʰ"
+    ],
+    "ទ់": [
+      "t"
+    ],
+    "ធ់": [
+      "tʰ"
+    ],
+    "ន់": [
+      "n"
+    ],
+    "ប់": [
+      "ɓ"
+    ],
+    "ផ់": [
+      "pʰ"
+    ],
+    "ព់": [
+      "p"
+    ],
+    "ភ់": [
+      "pʰ"
+    ],
+    "ម់": [
+      "m"
+    ],
+    "យ់": [
+      "j"
+    ],
+    "រ់": [
+      "r"
+    ],
+    "ល់": [
+      "l"
+    ],
+    "វ់": [
+      "ʋ"
+    ],
+    "ស់": [
+      "s"
+    ],
+    "ហ់": [
+      "h"
+    ],
+    "ឡ់": [
+      "l"
+    ],
+    "អ់": [
+      "ʔ"
+    ],
+    "ង៉់": [
+      "ŋ"
+    ],
+    "ញ៉់": [
+      "ɲ"
+    ],
+    "ម៉់": [
+      "m"
+    ],
+    "យ៉់": [
+      "j"
+    ],
+    "រ៉់": [
+      "r"
+    ],
+    "វ៉់": [
+      "ʋ"
+    ],
+    "ល៉់": [
+      "l"
+    ],
+    "ប៉់": [
+      "p"
+    ],
+    "ន៉់": [
+      "n"
+    ],
+    "ស៊់": [
+      "s"
+    ],
+    "ហ៊់": [
+      "h"
+    ],
+    "ប៊់": [
+      "ɓ"
+    ],
+    "អ៊់": [
+      "ʔ"
+    ],
+    "ក្ង": [
+      "kŋ"
+    ],
+    "ក្ញ": [
+      "kɲ"
+    ],
+    "ក្ន": [
+      "kn"
+    ],
+    "ក្ម": [
+      "km"
+    ],
+    "ក្យ": [
+      "kj"
+    ],
+    "ក្រ": [
+      "kr"
+    ],
+    "ក្ល": [
+      "kl"
+    ],
+    "ក្វ": [
+      "kʋ"
+    ],
+    "ខ្ង": [
+      "kʰŋ"
+    ],
+    "ខ្ញ": [
+      "kʰɲ"
+    ],
+    "ខ្ន": [
+      "kʰn"
+    ],
+    "ខ្ម": [
+      "kʰm"
+    ],
+    "ខ្យ": [
+      "kʰj"
+    ],
+    "ខ្រ": [
+      "kʰr"
+    ],
+    "ខ្ល": [
+      "kʰl"
+    ],
+    "ខ្វ": [
+      "kʰʋ"
+    ],
+    "គ្ណ": [
+      "kn"
+    ],
+    "គ្ឡ": [
+      "kl"
+    ],
+    "ឃ្ណ": [
+      "kʰn"
+    ],
+    "ឃ្ឡ": [
+      "kʰl"
+    ],
+    "ច្ង": [
+      "cŋ"
+    ],
+    "ច្ញ": [
+      "cɲ"
+    ],
+    "ច្ន": [
+      "cn"
+    ],
+    "ច្ម": [
+      "cm"
+    ],
+    "ច្យ": [
+      "cj"
+    ],
+    "ច្រ": [
+      "cr"
+    ],
+    "ច្ល": [
+      "cl"
+    ],
+    "ច្វ": [
+      "cʋ"
+    ],
+    "ឆ្ង": [
+      "cʰŋ"
+    ],
+    "ឆ្ញ": [
+      "cʰɲ"
+    ],
+    "ឆ្ន": [
+      "cʰn"
+    ],
+    "ឆ្ម": [
+      "cʰm"
+    ],
+    "ឆ្យ": [
+      "cʰj"
+    ],
+    "ឆ្រ": [
+      "cʰr"
+    ],
+    "ឆ្ល": [
+      "cʰl"
+    ],
+    "ឆ្វ": [
+      "cʰʋ"
+    ],
+    "ជ្ណ": [
+      "cn"
+    ],
+    "ជ្ឡ": [
+      "cl"
+    ],
+    "ឈ្ណ": [
+      "cʰn"
+    ],
+    "ឈ្ឡ": [
+      "cʰl"
+    ],
+    "ដ្ង": [
+      "ɗŋ"
+    ],
+    "ដ្ញ": [
+      "ɗɲ"
+    ],
+    "ដ្ន": [
+      "ɗn"
+    ],
+    "ដ្ម": [
+      "ɗm"
+    ],
+    "ដ្យ": [
+      "ɗj"
+    ],
+    "ដ្រ": [
+      "ɗr"
+    ],
+    "ដ្ល": [
+      "ɗl"
+    ],
+    "ដ្វ": [
+      "ɗʋ"
+    ],
+    "ឋ្ង": [
+      "tʰŋ"
+    ],
+    "ឋ្ញ": [
+      "tʰɲ"
+    ],
+    "ឋ្ន": [
+      "tʰn"
+    ],
+    "ឋ្ម": [
+      "tʰm"
+    ],
+    "ឋ្យ": [
+      "tʰj"
+    ],
+    "ឋ្រ": [
+      "tʰr"
+    ],
+    "ឋ្ល": [
+      "tʰl"
+    ],
+    "ឋ្វ": [
+      "tʰʋ"
+    ],
+    "ឌ្ណ": [
+      "ɗn"
+    ],
+    "ឌ្ឡ": [
+      "ɗl"
+    ],
+    "ឍ្ណ": [
+      "tʰn"
+    ],
+    "ឍ្ឡ": [
+      "tʰl"
+    ],
+    "ត្ង": [
+      "tŋ"
+    ],
+    "ត្ញ": [
+      "tɲ"
+    ],
+    "ត្ន": [
+      "tn"
+    ],
+    "ត្ម": [
+      "tm"
+    ],
+    "ត្យ": [
+      "tj"
+    ],
+    "ត្រ": [
+      "tr"
+    ],
+    "ត្ល": [
+      "tl"
+    ],
+    "ត្វ": [
+      "tʋ"
+    ],
+    "ថ្ង": [
+      "tʰŋ"
+    ],
+    "ថ្ញ": [
+      "tʰɲ"
+    ],
+    "ថ្ន": [
+      "tʰn"
+    ],
+    "ថ្ម": [
+      "tʰm"
+    ],
+    "ថ្យ": [
+      "tʰj"
+    ],
+    "ថ្រ": [
+      "tʰr"
+    ],
+    "ថ្ល": [
+      "tʰl"
+    ],
+    "ថ្វ": [
+      "tʰʋ"
+    ],
+    "ទ្ណ": [
+      "tn"
+    ],
+    "ទ្ឡ": [
+      "tl"
+    ],
+    "ធ្ណ": [
+      "tʰn"
+    ],
+    "ធ្ឡ": [
+      "tʰl"
+    ],
+    "ប្ង": [
+      "pŋ"
+    ],
+    "ប្ញ": [
+      "pɲ"
+    ],
+    "ប្ន": [
+      "pn"
+    ],
+    "ប្ម": [
+      "pm"
+    ],
+    "ប្យ": [
+      "pj"
+    ],
+    "ប្រ": [
+      "pr"
+    ],
+    "ប្ល": [
+      "pl"
+    ],
+    "ប្វ": [
+      "pʋ"
+    ],
+    "ផ្ង": [
+      "pʰŋ"
+    ],
+    "ផ្ញ": [
+      "pʰɲ"
+    ],
+    "ផ្ន": [
+      "pʰn"
+    ],
+    "ផ្ម": [
+      "pʰm"
+    ],
+    "ផ្យ": [
+      "pʰj"
+    ],
+    "ផ្រ": [
+      "pʰr"
+    ],
+    "ផ្ល": [
+      "pʰl"
+    ],
+    "ផ្វ": [
+      "pʰʋ"
+    ],
+    "ព្ណ": [
+      "pn"
+    ],
+    "ព្ឡ": [
+      "pl"
+    ],
+    "ភ្ណ": [
+      "pʰn"
+    ],
+    "ភ្ឡ": [
+      "pʰl"
+    ],
+    "ស្ង": [
+      "sŋ"
+    ],
+    "ស្ញ": [
+      "sɲ"
+    ],
+    "ស្ន": [
+      "sn"
+    ],
+    "ស្ម": [
+      "sm"
+    ],
+    "ស្យ": [
+      "sj"
+    ],
+    "ស្រ": [
+      "sr"
+    ],
+    "ស្ល": [
+      "sl"
+    ],
+    "ស្វ": [
+      "sʋ"
+    ],
+    "ហ្ង": [
+      "hŋ"
+    ],
+    "ហ្ញ": [
+      "hɲ"
+    ],
+    "ហ្យ": [
+      "hj"
+    ],
+    "ហ្រ": [
+      "hr"
+    ],
+    "អ្ង": [
+      "ʔŋ"
+    ],
+    "អ្ញ": [
+      "ʔɲ"
+    ],
+    "អ្ន": [
+      "ʔn"
+    ],
+    "អ្ម": [
+      "ʔm"
+    ],
+    "អ្យ": [
+      "ʔj"
+    ],
+    "អ្រ": [
+      "ʔr"
+    ],
+    "អ្ល": [
+      "ʔl"
+    ],
+    "អ្វ": [
+      "ʔʋ"
+    ],
+    "ប្ក": [
+      "pk"
+    ],
+    "ប្ខ": [
+      "pkʰ"
+    ],
+    "ប្គ": [
+      "pk"
+    ],
+    "ប្ឃ": [
+      "pkʰ"
+    ],
+    "ប្ច": [
+      "pc"
+    ],
+    "ប្ឆ": [
+      "pcʰ"
+    ],
+    "ប្ជ": [
+      "pc"
+    ],
+    "ប្ឈ": [
+      "pcʰ"
+    ],
+    "ប្ដ": [
+      "pɗ"
+    ],
+    "ប្ឋ": [
+      "ptʰ"
+    ],
+    "ប្ឌ": [
+      "pɗ"
+    ],
+    "ប្ឍ": [
+      "ptʰ"
+    ],
+    "ប្ត": [
+      "pt"
+    ],
+    "ប្ថ": [
+      "ptʰ"
+    ],
+    "ប្ទ": [
+      "pt"
+    ],
+    "ប្ធ": [
+      "ptʰ"
+    ],
+    "ប្ប": [
+      "pɓ"
+    ],
+    "ប្ផ": [
+      "ppʰ"
+    ],
+    "ប្ព": [
+      "pp"
+    ],
+    "ប្ភ": [
+      "ppʰ"
+    ],
+    "ប្ស": [
+      "ps"
+    ],
+    "ប្ហ": [
+      "ph"
+    ],
+    "ប្អ": [
+      "pʔ"
+    ],
+    "ក៍": [
+      ""
+    ],
+    "ក៌": [
+      ""
+    ],
+    "ខ៍": [
+      ""
+    ],
+    "ខ៌": [
+      ""
+    ],
+    "គ៍": [
+      ""
+    ],
+    "គ៌": [
+      ""
+    ],
+    "ឃ៍": [
+      ""
+    ],
+    "ឃ៌": [
+      ""
+    ],
+    "ង៍": [
+      ""
+    ],
+    "ង៌": [
+      ""
+    ],
+    "ច៍": [
+      ""
+    ],
+    "ច៌": [
+      ""
+    ],
+    "ឆ៍": [
+      ""
+    ],
+    "ឆ៌": [
+      ""
+    ],
+    "ជ៍": [
+      ""
+    ],
+    "ជ៌": [
+      ""
+    ],
+    "ឈ៍": [
+      ""
+    ],
+    "ឈ៌": [
+      ""
+    ],
+    "ញ៍": [
+      ""
+    ],
+    "ញ៌": [
+      ""
+    ],
+    "ដ៍": [
+      ""
+    ],
+    "ដ៌": [
+      ""
+    ],
+    "ឋ៍": [
+      ""
+    ],
+    "ឋ៌": [
+      ""
+    ],
+    "ឌ៍": [
+      ""
+    ],
+    "ឌ៌": [
+      ""
+    ],
+    "ឍ៍": [
+      ""
+    ],
+    "ឍ៌": [
+      ""
+    ],
+    "ណ៍": [
+      ""
+    ],
+    "ណ៌": [
+      ""
+    ],
+    "ត៍": [
+      ""
+    ],
+    "ត៌": [
+      ""
+    ],
+    "ថ៍": [
+      ""
+    ],
+    "ថ៌": [
+      ""
+    ],
+    "ទ៍": [
+      ""
+    ],
+    "ទ៌": [
+      ""
+    ],
+    "ធ៍": [
+      ""
+    ],
+    "ធ៌": [
+      ""
+    ],
+    "ន៍": [
+      ""
+    ],
+    "ន៌": [
+      ""
+    ],
+    "ប៍": [
+      ""
+    ],
+    "ប៌": [
+      ""
+    ],
+    "ផ៍": [
+      ""
+    ],
+    "ផ៌": [
+      ""
+    ],
+    "ព៍": [
+      ""
+    ],
+    "ព៌": [
+      ""
+    ],
+    "ភ៍": [
+      ""
+    ],
+    "ភ៌": [
+      ""
+    ],
+    "ម៍": [
+      ""
+    ],
+    "ម៌": [
+      ""
+    ],
+    "យ៍": [
+      ""
+    ],
+    "យ៌": [
+      ""
+    ],
+    "រ៍": [
+      ""
+    ],
+    "រ៌": [
+      ""
+    ],
+    "ល៍": [
+      ""
+    ],
+    "ល៌": [
+      ""
+    ],
+    "វ៍": [
+      ""
+    ],
+    "វ៌": [
+      ""
+    ],
+    "ស៍": [
+      ""
+    ],
+    "ស៌": [
+      ""
+    ],
+    "ហ៍": [
+      ""
+    ],
+    "ហ៌": [
+      ""
+    ],
+    "ឡ៍": [
+      ""
+    ],
+    "ឡ៌": [
+      ""
+    ],
+    "អ៍": [
+      ""
+    ],
+    "អ៌": [
+      ""
+    ],
+    "ា": [
+      "aː"
+    ],
+    "ិ": [
+      "ə"
+    ],
+    "ី": [
+      "əj",
+      "ej"
+    ],
+    "ឹ": [
+      "ə"
+    ],
+    "ឺ": [
+      "əː"
+    ],
+    "ុ": [
+      "o"
+    ],
+    "ូ": [
+      "oː",
+      "ou"
+    ],
+    "ួ": [
+      "uə"
+    ],
+    "ើ": [
+      "aə"
+    ],
+    "ឿ": [
+      "ɨə"
+    ],
+    "ៀ": [
+      "iə"
+    ],
+    "េ": [
+      "eː"
+    ],
+    "ែ": [
+      "ae"
+    ],
+    "ៃ": [
+      "aj",
+      "ej"
+    ],
+    "ោ": [
+      "ao"
+    ],
+    "ៅ": [
+      "aɨ"
+    ],
+    "ុំ": [
+      "om"
+    ],
+    "ំ": [
+      "ɑm"
+    ],
+    "ាំ": [
+      "am"
+    ],
+    "ះ": [
+      "ah"
+    ],
+    "ិះ": [
+      "eh"
+    ],
+    "ុះ": [
+      "oh"
+    ],
+    "េះ": [
+      "eh"
+    ],
+    "ោះ": [
+      "ɑh"
+    ],
+    "ើះ": [
+      "əh"
+    ],
+    "ឹះ": [
+      "əh"
+    ],
+    "ែះ": [
+      "eh"
+    ],
+    "ៈ": [
+      "aʔ"
+    ],
+    "័": [
+      "a"
+    ],
+    "៏": [
+      "ɑː"
+    ],
+    "ឥ": [
+      "ʔe",
+      "ʔə",
+      "ʔəj"
+    ],
+    "ឦ": [
+      "ʔej"
+    ],
+    "ឧ": [
+      "ʔu",
+      "ʔo"
+    ],
+    "ឩ": [
+      "ʔuː"
+    ],
+    "ឪ": [
+      "ʔɨw",
+      "ʔəw"
+    ],
+    "ឫ": [
+      "rɨ"
+    ],
+    "ឬ": [
+      "rɨː"
+    ],
+    "ឭ": [
+      "lɨ"
+    ],
+    "ឮ": [
+      "lɨː"
+    ],
+    "ឯ": [
+      "ʔae",
+      "ʔɛː",
+      "ʔeː"
+    ],
+    "ឰ": [
+      "ʔaj"
+    ],
+    "ឱ": [
+      "ʔao"
+    ],
+    "ឲ": [
+      "ʔao"
+    ],
+    "ឳ": [
+      "ʔaw"
+    ],
+    "០": [
+      ""
+    ],
+    "១": [
+      ""
+    ],
+    "២": [
+      ""
+    ],
+    "៣": [
+      ""
+    ],
+    "៤": [
+      ""
+    ],
+    "៥": [
+      ""
+    ],
+    "៦": [
+      ""
+    ],
+    "៧": [
+      ""
+    ],
+    "៨": [
+      ""
+    ],
+    "៩": [
+      ""
+    ],
+    "។": [
+      ""
+    ],
+    "៕": [
+      ""
+    ],
+    "៖": [
+      ""
+    ],
+    "៙": [
+      ""
+    ],
+    "៚": [
+      ""
+    ],
+    "៘": [
+      ""
+    ],
+    "​": [
+      ""
+    ],
+    "៓": [
+      ""
+    ],
+    "៎": [
+      ""
+    ],
+    "ៗ": [
+      ""
+    ]
+  },
+  "dependent_vowels": [
+    "ា",
+    "ិ",
+    "ី",
+    "ឹ",
+    "ឺ",
+    "ុ",
+    "ូ",
+    "ួ",
+    "ើ",
+    "ឿ",
+    "ៀ",
+    "េ",
+    "ែ",
+    "ៃ",
+    "ោ",
+    "ៅ",
+    "ុំ",
+    "ំ",
+    "ាំ",
+    "ះ",
+    "ិះ",
+    "ុះ",
+    "េះ",
+    "ោះ",
+    "ើះ",
+    "ឹះ",
+    "ែះ",
+    "ៈ",
+    "័",
+    "៏"
+  ],
+  "allophone_rules": [
+    {
+      "id": "KM_INHERENT_O_SERIES",
+      "phonemes": [
+        "ɑː"
+      ],
+      "surface": "ɔː",
+      "preceded_by_phoneme": [
+        "c",
+        "cʰ",
+        "f",
+        "h",
+        "j",
+        "k",
+        "kʰ",
+        "l",
+        "m",
+        "n",
+        "p",
+        "pʰ",
+        "r",
+        "s",
+        "t",
+        "tʰ",
+        "ŋ",
+        "ɓ",
+        "ɗ",
+        "ɡ",
+        "ɲ",
+        "ʋ",
+        "ʒ",
+        "ʔ"
+      ],
+      "grapheme": [
+        "គ",
+        "ឃ",
+        "ង",
+        "ជ",
+        "ឈ",
+        "ញ",
+        "ឌ",
+        "ឍ",
+        "ទ",
+        "ធ",
+        "ន",
+        "ព",
+        "ភ",
+        "ម",
+        "យ",
+        "រ",
+        "ល",
+        "វ",
+        "ហ្គ៊",
+        "ហ្វ៊",
+        "ហ្ស៊",
+        "ស៊",
+        "ហ៊",
+        "ប៊",
+        "អ៊",
+        "គ្ណ",
+        "គ្ឡ",
+        "ឃ្ណ",
+        "ឃ្ឡ",
+        "ជ្ណ",
+        "ជ្ឡ",
+        "ឈ្ណ",
+        "ឈ្ឡ",
+        "ឌ្ណ",
+        "ឌ្ឡ",
+        "ឍ្ណ",
+        "ឍ្ឡ",
+        "ទ្ណ",
+        "ទ្ឡ",
+        "ធ្ណ",
+        "ធ្ឡ",
+        "ព្ណ",
+        "ព្ឡ",
+        "ភ្ណ",
+        "ភ្ឡ",
+        "ប្គ",
+        "ប្ឃ",
+        "ប្ជ",
+        "ប្ឈ",
+        "ប្ឌ",
+        "ប្ឍ",
+        "ប្ទ",
+        "ប្ធ",
+        "ប្ព",
+        "ប្ភ"
+      ],
+      "notes": "Khmer consonant letters fall into two registers, the a-series (inherent vowel â [ɑː]) and the o-series (inherent vowel ô [ɔː]). The series is a property of the LETTER, not of the sound it spells: ⟨ក⟩ and ⟨គ⟩ both spell [k] but ⟨កា⟩ is [kaː] and ⟨គា⟩ is [kiə]. Every dependent vowel sign therefore has two readings, chosen by the series of the consonant it is attached to, and the spec gives the a-series reading in the grapheme table and shifts it here. The registers descend from a Middle Khmer voicing contrast that was lost after it had already reshaped the following vowel. The o-series ⟨ា⟩ is the high centring diphthong [iə], the same nucleus ⟨ៀ⟩ spells; Jacob 1968 separates the two by length ([iːə] against [iə]), a distinction this broad transcription does not carry. Source: Huffman 1970, Cambodian System of Writing and Beginning Reader."
+    },
+    {
+      "id": "KM_VOWEL_O_17B6",
+      "phonemes": [
+        "aː"
+      ],
+      "surface": "iə",
+      "grapheme": [
+        "ា"
+      ],
+      "preceded_by_grapheme": [
+        "គ",
+        "ឃ",
+        "ង",
+        "ជ",
+        "ឈ",
+        "ញ",
+        "ឌ",
+        "ឍ",
+        "ទ",
+        "ធ",
+        "ន",
+        "ព",
+        "ភ",
+        "ម",
+        "យ",
+        "រ",
+        "ល",
+        "វ",
+        "ហ្គ៊",
+        "ហ្វ៊",
+        "ហ្ស៊",
+        "ស៊",
+        "ហ៊",
+        "ប៊",
+        "អ៊",
+        "គ្ណ",
+        "គ្ឡ",
+        "ឃ្ណ",
+        "ឃ្ឡ",
+        "ជ្ណ",
+        "ជ្ឡ",
+        "ឈ្ណ",
+        "ឈ្ឡ",
+        "ឌ្ណ",
+        "ឌ្ឡ",
+        "ឍ្ណ",
+        "ឍ្ឡ",
+        "ទ្ណ",
+        "ទ្ឡ",
+        "ធ្ណ",
+        "ធ្ឡ",
+        "ព្ណ",
+        "ព្ឡ",
+        "ភ្ណ",
+        "ភ្ឡ",
+        "ប្គ",
+        "ប្ឃ",
+        "ប្ជ",
+        "ប្ឈ",
+        "ប្ឌ",
+        "ប្ឍ",
+        "ប្ទ",
+        "ប្ធ",
+        "ប្ព",
+        "ប្ភ"
+      ],
+      "notes": "Khmer consonant letters fall into two registers, the a-series (inherent vowel â [ɑː]) and the o-series (inherent vowel ô [ɔː]). The series is a property of the LETTER, not of the sound it spells: ⟨ក⟩ and ⟨គ⟩ both spell [k] but ⟨កា⟩ is [kaː] and ⟨គា⟩ is [kiə]. Every dependent vowel sign therefore has two readings, chosen by the series of the consonant it is attached to, and the spec gives the a-series reading in the grapheme table and shifts it here. The registers descend from a Middle Khmer voicing contrast that was lost after it had already reshaped the following vowel. The o-series ⟨ា⟩ is the high centring diphthong [iə], the same nucleus ⟨ៀ⟩ spells; Jacob 1968 separates the two by length ([iːə] against [iə]), a distinction this broad transcription does not carry. Source: Huffman 1970, Cambodian System of Writing and Beginning Reader."
+    },
+    {
+      "id": "KM_VOWEL_O_17B7",
+      "phonemes": [
+        "ə"
+      ],
+      "surface": "ɨ",
+      "grapheme": [
+        "ិ"
+      ],
+      "preceded_by_grapheme": [
+        "គ",
+        "ឃ",
+        "ង",
+        "ជ",
+        "ឈ",
+        "ញ",
+        "ឌ",
+        "ឍ",
+        "ទ",
+        "ធ",
+        "ន",
+        "ព",
+        "ភ",
+        "ម",
+        "យ",
+        "រ",
+        "ល",
+        "វ",
+        "ហ្គ៊",
+        "ហ្វ៊",
+        "ហ្ស៊",
+        "ស៊",
+        "ហ៊",
+        "ប៊",
+        "អ៊",
+        "គ្ណ",
+        "គ្ឡ",
+        "ឃ្ណ",
+        "ឃ្ឡ",
+        "ជ្ណ",
+        "ជ្ឡ",
+        "ឈ្ណ",
+        "ឈ្ឡ",
+        "ឌ្ណ",
+        "ឌ្ឡ",
+        "ឍ្ណ",
+        "ឍ្ឡ",
+        "ទ្ណ",
+        "ទ្ឡ",
+        "ធ្ណ",
+        "ធ្ឡ",
+        "ព្ណ",
+        "ព្ឡ",
+        "ភ្ណ",
+        "ភ្ឡ",
+        "ប្គ",
+        "ប្ឃ",
+        "ប្ជ",
+        "ប្ឈ",
+        "ប្ឌ",
+        "ប្ឍ",
+        "ប្ទ",
+        "ប្ធ",
+        "ប្ព",
+        "ប្ភ"
+      ],
+      "notes": "Khmer consonant letters fall into two registers, the a-series (inherent vowel â [ɑː]) and the o-series (inherent vowel ô [ɔː]). The series is a property of the LETTER, not of the sound it spells: ⟨ក⟩ and ⟨គ⟩ both spell [k] but ⟨កា⟩ is [kaː] and ⟨គា⟩ is [kiə]. Every dependent vowel sign therefore has two readings, chosen by the series of the consonant it is attached to, and the spec gives the a-series reading in the grapheme table and shifts it here. The registers descend from a Middle Khmer voicing contrast that was lost after it had already reshaped the following vowel. The o-series ⟨ា⟩ is the high centring diphthong [iə], the same nucleus ⟨ៀ⟩ spells; Jacob 1968 separates the two by length ([iːə] against [iə]), a distinction this broad transcription does not carry. Source: Huffman 1970, Cambodian System of Writing and Beginning Reader."
+    },
+    {
+      "id": "KM_VOWEL_O_17B8",
+      "phonemes": [
+        "əj"
+      ],
+      "surface": "iː",
+      "grapheme": [
+        "ី"
+      ],
+      "preceded_by_grapheme": [
+        "គ",
+        "ឃ",
+        "ង",
+        "ជ",
+        "ឈ",
+        "ញ",
+        "ឌ",
+        "ឍ",
+        "ទ",
+        "ធ",
+        "ន",
+        "ព",
+        "ភ",
+        "ម",
+        "យ",
+        "រ",
+        "ល",
+        "វ",
+        "ហ្គ៊",
+        "ហ្វ៊",
+        "ហ្ស៊",
+        "ស៊",
+        "ហ៊",
+        "ប៊",
+        "អ៊",
+        "គ្ណ",
+        "គ្ឡ",
+        "ឃ្ណ",
+        "ឃ្ឡ",
+        "ជ្ណ",
+        "ជ្ឡ",
+        "ឈ្ណ",
+        "ឈ្ឡ",
+        "ឌ្ណ",
+        "ឌ្ឡ",
+        "ឍ្ណ",
+        "ឍ្ឡ",
+        "ទ្ណ",
+        "ទ្ឡ",
+        "ធ្ណ",
+        "ធ្ឡ",
+        "ព្ណ",
+        "ព្ឡ",
+        "ភ្ណ",
+        "ភ្ឡ",
+        "ប្គ",
+        "ប្ឃ",
+        "ប្ជ",
+        "ប្ឈ",
+        "ប្ឌ",
+        "ប្ឍ",
+        "ប្ទ",
+        "ប្ធ",
+        "ប្ព",
+        "ប្ភ"
+      ],
+      "notes": "Khmer consonant letters fall into two registers, the a-series (inherent vowel â [ɑː]) and the o-series (inherent vowel ô [ɔː]). The series is a property of the LETTER, not of the sound it spells: ⟨ក⟩ and ⟨គ⟩ both spell [k] but ⟨កា⟩ is [kaː] and ⟨គា⟩ is [kiə]. Every dependent vowel sign therefore has two readings, chosen by the series of the consonant it is attached to, and the spec gives the a-series reading in the grapheme table and shifts it here. The registers descend from a Middle Khmer voicing contrast that was lost after it had already reshaped the following vowel. The o-series ⟨ា⟩ is the high centring diphthong [iə], the same nucleus ⟨ៀ⟩ spells; Jacob 1968 separates the two by length ([iːə] against [iə]), a distinction this broad transcription does not carry. Source: Huffman 1970, Cambodian System of Writing and Beginning Reader."
+    },
+    {
+      "id": "KM_VOWEL_O_17B9",
+      "phonemes": [
+        "ə"
+      ],
+      "surface": "ɨ",
+      "grapheme": [
+        "ឹ"
+      ],
+      "preceded_by_grapheme": [
+        "គ",
+        "ឃ",
+        "ង",
+        "ជ",
+        "ឈ",
+        "ញ",
+        "ឌ",
+        "ឍ",
+        "ទ",
+        "ធ",
+        "ន",
+        "ព",
+        "ភ",
+        "ម",
+        "យ",
+        "រ",
+        "ល",
+        "វ",
+        "ហ្គ៊",
+        "ហ្វ៊",
+        "ហ្ស៊",
+        "ស៊",
+        "ហ៊",
+        "ប៊",
+        "អ៊",
+        "គ្ណ",
+        "គ្ឡ",
+        "ឃ្ណ",
+        "ឃ្ឡ",
+        "ជ្ណ",
+        "ជ្ឡ",
+        "ឈ្ណ",
+        "ឈ្ឡ",
+        "ឌ្ណ",
+        "ឌ្ឡ",
+        "ឍ្ណ",
+        "ឍ្ឡ",
+        "ទ្ណ",
+        "ទ្ឡ",
+        "ធ្ណ",
+        "ធ្ឡ",
+        "ព្ណ",
+        "ព្ឡ",
+        "ភ្ណ",
+        "ភ្ឡ",
+        "ប្គ",
+        "ប្ឃ",
+        "ប្ជ",
+        "ប្ឈ",
+        "ប្ឌ",
+        "ប្ឍ",
+        "ប្ទ",
+        "ប្ធ",
+        "ប្ព",
+        "ប្ភ"
+      ],
+      "notes": "Khmer consonant letters fall into two registers, the a-series (inherent vowel â [ɑː]) and the o-series (inherent vowel ô [ɔː]). The series is a property of the LETTER, not of the sound it spells: ⟨ក⟩ and ⟨គ⟩ both spell [k] but ⟨កា⟩ is [kaː] and ⟨គា⟩ is [kiə]. Every dependent vowel sign therefore has two readings, chosen by the series of the consonant it is attached to, and the spec gives the a-series reading in the grapheme table and shifts it here. The registers descend from a Middle Khmer voicing contrast that was lost after it had already reshaped the following vowel. The o-series ⟨ា⟩ is the high centring diphthong [iə], the same nucleus ⟨ៀ⟩ spells; Jacob 1968 separates the two by length ([iːə] against [iə]), a distinction this broad transcription does not carry. Source: Huffman 1970, Cambodian System of Writing and Beginning Reader."
+    },
+    {
+      "id": "KM_VOWEL_O_17BA",
+      "phonemes": [
+        "əː"
+      ],
+      "surface": "ɨː",
+      "grapheme": [
+        "ឺ"
+      ],
+      "preceded_by_grapheme": [
+        "គ",
+        "ឃ",
+        "ង",
+        "ជ",
+        "ឈ",
+        "ញ",
+        "ឌ",
+        "ឍ",
+        "ទ",
+        "ធ",
+        "ន",
+        "ព",
+        "ភ",
+        "ម",
+        "យ",
+        "រ",
+        "ល",
+        "វ",
+        "ហ្គ៊",
+        "ហ្វ៊",
+        "ហ្ស៊",
+        "ស៊",
+        "ហ៊",
+        "ប៊",
+        "អ៊",
+        "គ្ណ",
+        "គ្ឡ",
+        "ឃ្ណ",
+        "ឃ្ឡ",
+        "ជ្ណ",
+        "ជ្ឡ",
+        "ឈ្ណ",
+        "ឈ្ឡ",
+        "ឌ្ណ",
+        "ឌ្ឡ",
+        "ឍ្ណ",
+        "ឍ្ឡ",
+        "ទ្ណ",
+        "ទ្ឡ",
+        "ធ្ណ",
+        "ធ្ឡ",
+        "ព្ណ",
+        "ព្ឡ",
+        "ភ្ណ",
+        "ភ្ឡ",
+        "ប្គ",
+        "ប្ឃ",
+        "ប្ជ",
+        "ប្ឈ",
+        "ប្ឌ",
+        "ប្ឍ",
+        "ប្ទ",
+        "ប្ធ",
+        "ប្ព",
+        "ប្ភ"
+      ],
+      "notes": "Khmer consonant letters fall into two registers, the a-series (inherent vowel â [ɑː]) and the o-series (inherent vowel ô [ɔː]). The series is a property of the LETTER, not of the sound it spells: ⟨ក⟩ and ⟨គ⟩ both spell [k] but ⟨កា⟩ is [kaː] and ⟨គា⟩ is [kiə]. Every dependent vowel sign therefore has two readings, chosen by the series of the consonant it is attached to, and the spec gives the a-series reading in the grapheme table and shifts it here. The registers descend from a Middle Khmer voicing contrast that was lost after it had already reshaped the following vowel. The o-series ⟨ា⟩ is the high centring diphthong [iə], the same nucleus ⟨ៀ⟩ spells; Jacob 1968 separates the two by length ([iːə] against [iə]), a distinction this broad transcription does not carry. Source: Huffman 1970, Cambodian System of Writing and Beginning Reader."
+    },
+    {
+      "id": "KM_VOWEL_O_17BB",
+      "phonemes": [
+        "o"
+      ],
+      "surface": "u",
+      "grapheme": [
+        "ុ"
+      ],
+      "preceded_by_grapheme": [
+        "គ",
+        "ឃ",
+        "ង",
+        "ជ",
+        "ឈ",
+        "ញ",
+        "ឌ",
+        "ឍ",
+        "ទ",
+        "ធ",
+        "ន",
+        "ព",
+        "ភ",
+        "ម",
+        "យ",
+        "រ",
+        "ល",
+        "វ",
+        "ហ្គ៊",
+        "ហ្វ៊",
+        "ហ្ស៊",
+        "ស៊",
+        "ហ៊",
+        "ប៊",
+        "អ៊",
+        "គ្ណ",
+        "គ្ឡ",
+        "ឃ្ណ",
+        "ឃ្ឡ",
+        "ជ្ណ",
+        "ជ្ឡ",
+        "ឈ្ណ",
+        "ឈ្ឡ",
+        "ឌ្ណ",
+        "ឌ្ឡ",
+        "ឍ្ណ",
+        "ឍ្ឡ",
+        "ទ្ណ",
+        "ទ្ឡ",
+        "ធ្ណ",
+        "ធ្ឡ",
+        "ព្ណ",
+        "ព្ឡ",
+        "ភ្ណ",
+        "ភ្ឡ",
+        "ប្គ",
+        "ប្ឃ",
+        "ប្ជ",
+        "ប្ឈ",
+        "ប្ឌ",
+        "ប្ឍ",
+        "ប្ទ",
+        "ប្ធ",
+        "ប្ព",
+        "ប្ភ"
+      ],
+      "notes": "Khmer consonant letters fall into two registers, the a-series (inherent vowel â [ɑː]) and the o-series (inherent vowel ô [ɔː]). The series is a property of the LETTER, not of the sound it spells: ⟨ក⟩ and ⟨គ⟩ both spell [k] but ⟨កា⟩ is [kaː] and ⟨គា⟩ is [kiə]. Every dependent vowel sign therefore has two readings, chosen by the series of the consonant it is attached to, and the spec gives the a-series reading in the grapheme table and shifts it here. The registers descend from a Middle Khmer voicing contrast that was lost after it had already reshaped the following vowel. The o-series ⟨ា⟩ is the high centring diphthong [iə], the same nucleus ⟨ៀ⟩ spells; Jacob 1968 separates the two by length ([iːə] against [iə]), a distinction this broad transcription does not carry. Source: Huffman 1970, Cambodian System of Writing and Beginning Reader."
+    },
+    {
+      "id": "KM_VOWEL_O_17BC",
+      "phonemes": [
+        "oː"
+      ],
+      "surface": "uː",
+      "grapheme": [
+        "ូ"
+      ],
+      "preceded_by_grapheme": [
+        "គ",
+        "ឃ",
+        "ង",
+        "ជ",
+        "ឈ",
+        "ញ",
+        "ឌ",
+        "ឍ",
+        "ទ",
+        "ធ",
+        "ន",
+        "ព",
+        "ភ",
+        "ម",
+        "យ",
+        "រ",
+        "ល",
+        "វ",
+        "ហ្គ៊",
+        "ហ្វ៊",
+        "ហ្ស៊",
+        "ស៊",
+        "ហ៊",
+        "ប៊",
+        "អ៊",
+        "គ្ណ",
+        "គ្ឡ",
+        "ឃ្ណ",
+        "ឃ្ឡ",
+        "ជ្ណ",
+        "ជ្ឡ",
+        "ឈ្ណ",
+        "ឈ្ឡ",
+        "ឌ្ណ",
+        "ឌ្ឡ",
+        "ឍ្ណ",
+        "ឍ្ឡ",
+        "ទ្ណ",
+        "ទ្ឡ",
+        "ធ្ណ",
+        "ធ្ឡ",
+        "ព្ណ",
+        "ព្ឡ",
+        "ភ្ណ",
+        "ភ្ឡ",
+        "ប្គ",
+        "ប្ឃ",
+        "ប្ជ",
+        "ប្ឈ",
+        "ប្ឌ",
+        "ប្ឍ",
+        "ប្ទ",
+        "ប្ធ",
+        "ប្ព",
+        "ប្ភ"
+      ],
+      "notes": "Khmer consonant letters fall into two registers, the a-series (inherent vowel â [ɑː]) and the o-series (inherent vowel ô [ɔː]). The series is a property of the LETTER, not of the sound it spells: ⟨ក⟩ and ⟨គ⟩ both spell [k] but ⟨កា⟩ is [kaː] and ⟨គា⟩ is [kiə]. Every dependent vowel sign therefore has two readings, chosen by the series of the consonant it is attached to, and the spec gives the a-series reading in the grapheme table and shifts it here. The registers descend from a Middle Khmer voicing contrast that was lost after it had already reshaped the following vowel. The o-series ⟨ា⟩ is the high centring diphthong [iə], the same nucleus ⟨ៀ⟩ spells; Jacob 1968 separates the two by length ([iːə] against [iə]), a distinction this broad transcription does not carry. Source: Huffman 1970, Cambodian System of Writing and Beginning Reader."
+    },
+    {
+      "id": "KM_VOWEL_O_17BE",
+      "phonemes": [
+        "aə"
+      ],
+      "surface": "əː",
+      "grapheme": [
+        "ើ"
+      ],
+      "preceded_by_grapheme": [
+        "គ",
+        "ឃ",
+        "ង",
+        "ជ",
+        "ឈ",
+        "ញ",
+        "ឌ",
+        "ឍ",
+        "ទ",
+        "ធ",
+        "ន",
+        "ព",
+        "ភ",
+        "ម",
+        "យ",
+        "រ",
+        "ល",
+        "វ",
+        "ហ្គ៊",
+        "ហ្វ៊",
+        "ហ្ស៊",
+        "ស៊",
+        "ហ៊",
+        "ប៊",
+        "អ៊",
+        "គ្ណ",
+        "គ្ឡ",
+        "ឃ្ណ",
+        "ឃ្ឡ",
+        "ជ្ណ",
+        "ជ្ឡ",
+        "ឈ្ណ",
+        "ឈ្ឡ",
+        "ឌ្ណ",
+        "ឌ្ឡ",
+        "ឍ្ណ",
+        "ឍ្ឡ",
+        "ទ្ណ",
+        "ទ្ឡ",
+        "ធ្ណ",
+        "ធ្ឡ",
+        "ព្ណ",
+        "ព្ឡ",
+        "ភ្ណ",
+        "ភ្ឡ",
+        "ប្គ",
+        "ប្ឃ",
+        "ប្ជ",
+        "ប្ឈ",
+        "ប្ឌ",
+        "ប្ឍ",
+        "ប្ទ",
+        "ប្ធ",
+        "ប្ព",
+        "ប្ភ"
+      ],
+      "notes": "Khmer consonant letters fall into two registers, the a-series (inherent vowel â [ɑː]) and the o-series (inherent vowel ô [ɔː]). The series is a property of the LETTER, not of the sound it spells: ⟨ក⟩ and ⟨គ⟩ both spell [k] but ⟨កា⟩ is [kaː] and ⟨គា⟩ is [kiə]. Every dependent vowel sign therefore has two readings, chosen by the series of the consonant it is attached to, and the spec gives the a-series reading in the grapheme table and shifts it here. The registers descend from a Middle Khmer voicing contrast that was lost after it had already reshaped the following vowel. The o-series ⟨ា⟩ is the high centring diphthong [iə], the same nucleus ⟨ៀ⟩ spells; Jacob 1968 separates the two by length ([iːə] against [iə]), a distinction this broad transcription does not carry. Source: Huffman 1970, Cambodian System of Writing and Beginning Reader."
+    },
+    {
+      "id": "KM_VOWEL_O_17C2",
+      "phonemes": [
+        "ae"
+      ],
+      "surface": "ɛː",
+      "grapheme": [
+        "ែ"
+      ],
+      "preceded_by_grapheme": [
+        "គ",
+        "ឃ",
+        "ង",
+        "ជ",
+        "ឈ",
+        "ញ",
+        "ឌ",
+        "ឍ",
+        "ទ",
+        "ធ",
+        "ន",
+        "ព",
+        "ភ",
+        "ម",
+        "យ",
+        "រ",
+        "ល",
+        "វ",
+        "ហ្គ៊",
+        "ហ្វ៊",
+        "ហ្ស៊",
+        "ស៊",
+        "ហ៊",
+        "ប៊",
+        "អ៊",
+        "គ្ណ",
+        "គ្ឡ",
+        "ឃ្ណ",
+        "ឃ្ឡ",
+        "ជ្ណ",
+        "ជ្ឡ",
+        "ឈ្ណ",
+        "ឈ្ឡ",
+        "ឌ្ណ",
+        "ឌ្ឡ",
+        "ឍ្ណ",
+        "ឍ្ឡ",
+        "ទ្ណ",
+        "ទ្ឡ",
+        "ធ្ណ",
+        "ធ្ឡ",
+        "ព្ណ",
+        "ព្ឡ",
+        "ភ្ណ",
+        "ភ្ឡ",
+        "ប្គ",
+        "ប្ឃ",
+        "ប្ជ",
+        "ប្ឈ",
+        "ប្ឌ",
+        "ប្ឍ",
+        "ប្ទ",
+        "ប្ធ",
+        "ប្ព",
+        "ប្ភ"
+      ],
+      "notes": "Khmer consonant letters fall into two registers, the a-series (inherent vowel â [ɑː]) and the o-series (inherent vowel ô [ɔː]). The series is a property of the LETTER, not of the sound it spells: ⟨ក⟩ and ⟨គ⟩ both spell [k] but ⟨កា⟩ is [kaː] and ⟨គា⟩ is [kiə]. Every dependent vowel sign therefore has two readings, chosen by the series of the consonant it is attached to, and the spec gives the a-series reading in the grapheme table and shifts it here. The registers descend from a Middle Khmer voicing contrast that was lost after it had already reshaped the following vowel. The o-series ⟨ា⟩ is the high centring diphthong [iə], the same nucleus ⟨ៀ⟩ spells; Jacob 1968 separates the two by length ([iːə] against [iə]), a distinction this broad transcription does not carry. Source: Huffman 1970, Cambodian System of Writing and Beginning Reader."
+    },
+    {
+      "id": "KM_VOWEL_O_17C3",
+      "phonemes": [
+        "aj"
+      ],
+      "surface": "əj",
+      "grapheme": [
+        "ៃ"
+      ],
+      "preceded_by_grapheme": [
+        "គ",
+        "ឃ",
+        "ង",
+        "ជ",
+        "ឈ",
+        "ញ",
+        "ឌ",
+        "ឍ",
+        "ទ",
+        "ធ",
+        "ន",
+        "ព",
+        "ភ",
+        "ម",
+        "យ",
+        "រ",
+        "ល",
+        "វ",
+        "ហ្គ៊",
+        "ហ្វ៊",
+        "ហ្ស៊",
+        "ស៊",
+        "ហ៊",
+        "ប៊",
+        "អ៊",
+        "គ្ណ",
+        "គ្ឡ",
+        "ឃ្ណ",
+        "ឃ្ឡ",
+        "ជ្ណ",
+        "ជ្ឡ",
+        "ឈ្ណ",
+        "ឈ្ឡ",
+        "ឌ្ណ",
+        "ឌ្ឡ",
+        "ឍ្ណ",
+        "ឍ្ឡ",
+        "ទ្ណ",
+        "ទ្ឡ",
+        "ធ្ណ",
+        "ធ្ឡ",
+        "ព្ណ",
+        "ព្ឡ",
+        "ភ្ណ",
+        "ភ្ឡ",
+        "ប្គ",
+        "ប្ឃ",
+        "ប្ជ",
+        "ប្ឈ",
+        "ប្ឌ",
+        "ប្ឍ",
+        "ប្ទ",
+        "ប្ធ",
+        "ប្ព",
+        "ប្ភ"
+      ],
+      "notes": "Khmer consonant letters fall into two registers, the a-series (inherent vowel â [ɑː]) and the o-series (inherent vowel ô [ɔː]). The series is a property of the LETTER, not of the sound it spells: ⟨ក⟩ and ⟨គ⟩ both spell [k] but ⟨កា⟩ is [kaː] and ⟨គា⟩ is [kiə]. Every dependent vowel sign therefore has two readings, chosen by the series of the consonant it is attached to, and the spec gives the a-series reading in the grapheme table and shifts it here. The registers descend from a Middle Khmer voicing contrast that was lost after it had already reshaped the following vowel. The o-series ⟨ា⟩ is the high centring diphthong [iə], the same nucleus ⟨ៀ⟩ spells; Jacob 1968 separates the two by length ([iːə] against [iə]), a distinction this broad transcription does not carry. Source: Huffman 1970, Cambodian System of Writing and Beginning Reader."
+    },
+    {
+      "id": "KM_VOWEL_O_17C4",
+      "phonemes": [
+        "ao"
+      ],
+      "surface": "oː",
+      "grapheme": [
+        "ោ"
+      ],
+      "preceded_by_grapheme": [
+        "គ",
+        "ឃ",
+        "ង",
+        "ជ",
+        "ឈ",
+        "ញ",
+        "ឌ",
+        "ឍ",
+        "ទ",
+        "ធ",
+        "ន",
+        "ព",
+        "ភ",
+        "ម",
+        "យ",
+        "រ",
+        "ល",
+        "វ",
+        "ហ្គ៊",
+        "ហ្វ៊",
+        "ហ្ស៊",
+        "ស៊",
+        "ហ៊",
+        "ប៊",
+        "អ៊",
+        "គ្ណ",
+        "គ្ឡ",
+        "ឃ្ណ",
+        "ឃ្ឡ",
+        "ជ្ណ",
+        "ជ្ឡ",
+        "ឈ្ណ",
+        "ឈ្ឡ",
+        "ឌ្ណ",
+        "ឌ្ឡ",
+        "ឍ្ណ",
+        "ឍ្ឡ",
+        "ទ្ណ",
+        "ទ្ឡ",
+        "ធ្ណ",
+        "ធ្ឡ",
+        "ព្ណ",
+        "ព្ឡ",
+        "ភ្ណ",
+        "ភ្ឡ",
+        "ប្គ",
+        "ប្ឃ",
+        "ប្ជ",
+        "ប្ឈ",
+        "ប្ឌ",
+        "ប្ឍ",
+        "ប្ទ",
+        "ប្ធ",
+        "ប្ព",
+        "ប្ភ"
+      ],
+      "notes": "Khmer consonant letters fall into two registers, the a-series (inherent vowel â [ɑː]) and the o-series (inherent vowel ô [ɔː]). The series is a property of the LETTER, not of the sound it spells: ⟨ក⟩ and ⟨គ⟩ both spell [k] but ⟨កា⟩ is [kaː] and ⟨គា⟩ is [kiə]. Every dependent vowel sign therefore has two readings, chosen by the series of the consonant it is attached to, and the spec gives the a-series reading in the grapheme table and shifts it here. The registers descend from a Middle Khmer voicing contrast that was lost after it had already reshaped the following vowel. The o-series ⟨ា⟩ is the high centring diphthong [iə], the same nucleus ⟨ៀ⟩ spells; Jacob 1968 separates the two by length ([iːə] against [iə]), a distinction this broad transcription does not carry. Source: Huffman 1970, Cambodian System of Writing and Beginning Reader."
+    },
+    {
+      "id": "KM_VOWEL_O_17C5",
+      "phonemes": [
+        "aɨ"
+      ],
+      "surface": "əɨ",
+      "grapheme": [
+        "ៅ"
+      ],
+      "preceded_by_grapheme": [
+        "គ",
+        "ឃ",
+        "ង",
+        "ជ",
+        "ឈ",
+        "ញ",
+        "ឌ",
+        "ឍ",
+        "ទ",
+        "ធ",
+        "ន",
+        "ព",
+        "ភ",
+        "ម",
+        "យ",
+        "រ",
+        "ល",
+        "វ",
+        "ហ្គ៊",
+        "ហ្វ៊",
+        "ហ្ស៊",
+        "ស៊",
+        "ហ៊",
+        "ប៊",
+        "អ៊",
+        "គ្ណ",
+        "គ្ឡ",
+        "ឃ្ណ",
+        "ឃ្ឡ",
+        "ជ្ណ",
+        "ជ្ឡ",
+        "ឈ្ណ",
+        "ឈ្ឡ",
+        "ឌ្ណ",
+        "ឌ្ឡ",
+        "ឍ្ណ",
+        "ឍ្ឡ",
+        "ទ្ណ",
+        "ទ្ឡ",
+        "ធ្ណ",
+        "ធ្ឡ",
+        "ព្ណ",
+        "ព្ឡ",
+        "ភ្ណ",
+        "ភ្ឡ",
+        "ប្គ",
+        "ប្ឃ",
+        "ប្ជ",
+        "ប្ឈ",
+        "ប្ឌ",
+        "ប្ឍ",
+        "ប្ទ",
+        "ប្ធ",
+        "ប្ព",
+        "ប្ភ"
+      ],
+      "notes": "Khmer consonant letters fall into two registers, the a-series (inherent vowel â [ɑː]) and the o-series (inherent vowel ô [ɔː]). The series is a property of the LETTER, not of the sound it spells: ⟨ក⟩ and ⟨គ⟩ both spell [k] but ⟨កា⟩ is [kaː] and ⟨គា⟩ is [kiə]. Every dependent vowel sign therefore has two readings, chosen by the series of the consonant it is attached to, and the spec gives the a-series reading in the grapheme table and shifts it here. The registers descend from a Middle Khmer voicing contrast that was lost after it had already reshaped the following vowel. The o-series ⟨ា⟩ is the high centring diphthong [iə], the same nucleus ⟨ៀ⟩ spells; Jacob 1968 separates the two by length ([iːə] against [iə]), a distinction this broad transcription does not carry. Source: Huffman 1970, Cambodian System of Writing and Beginning Reader."
+    },
+    {
+      "id": "KM_VOWEL_O_17BB_17C6",
+      "phonemes": [
+        "om"
+      ],
+      "surface": "um",
+      "grapheme": [
+        "ុំ"
+      ],
+      "preceded_by_grapheme": [
+        "គ",
+        "ឃ",
+        "ង",
+        "ជ",
+        "ឈ",
+        "ញ",
+        "ឌ",
+        "ឍ",
+        "ទ",
+        "ធ",
+        "ន",
+        "ព",
+        "ភ",
+        "ម",
+        "យ",
+        "រ",
+        "ល",
+        "វ",
+        "ហ្គ៊",
+        "ហ្វ៊",
+        "ហ្ស៊",
+        "ស៊",
+        "ហ៊",
+        "ប៊",
+        "អ៊",
+        "គ្ណ",
+        "គ្ឡ",
+        "ឃ្ណ",
+        "ឃ្ឡ",
+        "ជ្ណ",
+        "ជ្ឡ",
+        "ឈ្ណ",
+        "ឈ្ឡ",
+        "ឌ្ណ",
+        "ឌ្ឡ",
+        "ឍ្ណ",
+        "ឍ្ឡ",
+        "ទ្ណ",
+        "ទ្ឡ",
+        "ធ្ណ",
+        "ធ្ឡ",
+        "ព្ណ",
+        "ព្ឡ",
+        "ភ្ណ",
+        "ភ្ឡ",
+        "ប្គ",
+        "ប្ឃ",
+        "ប្ជ",
+        "ប្ឈ",
+        "ប្ឌ",
+        "ប្ឍ",
+        "ប្ទ",
+        "ប្ធ",
+        "ប្ព",
+        "ប្ភ"
+      ],
+      "notes": "Khmer consonant letters fall into two registers, the a-series (inherent vowel â [ɑː]) and the o-series (inherent vowel ô [ɔː]). The series is a property of the LETTER, not of the sound it spells: ⟨ក⟩ and ⟨គ⟩ both spell [k] but ⟨កា⟩ is [kaː] and ⟨គា⟩ is [kiə]. Every dependent vowel sign therefore has two readings, chosen by the series of the consonant it is attached to, and the spec gives the a-series reading in the grapheme table and shifts it here. The registers descend from a Middle Khmer voicing contrast that was lost after it had already reshaped the following vowel. The o-series ⟨ា⟩ is the high centring diphthong [iə], the same nucleus ⟨ៀ⟩ spells; Jacob 1968 separates the two by length ([iːə] against [iə]), a distinction this broad transcription does not carry. Source: Huffman 1970, Cambodian System of Writing and Beginning Reader."
+    },
+    {
+      "id": "KM_VOWEL_O_17C6",
+      "phonemes": [
+        "ɑm"
+      ],
+      "surface": "um",
+      "grapheme": [
+        "ំ"
+      ],
+      "preceded_by_grapheme": [
+        "គ",
+        "ឃ",
+        "ង",
+        "ជ",
+        "ឈ",
+        "ញ",
+        "ឌ",
+        "ឍ",
+        "ទ",
+        "ធ",
+        "ន",
+        "ព",
+        "ភ",
+        "ម",
+        "យ",
+        "រ",
+        "ល",
+        "វ",
+        "ហ្គ៊",
+        "ហ្វ៊",
+        "ហ្ស៊",
+        "ស៊",
+        "ហ៊",
+        "ប៊",
+        "អ៊",
+        "គ្ណ",
+        "គ្ឡ",
+        "ឃ្ណ",
+        "ឃ្ឡ",
+        "ជ្ណ",
+        "ជ្ឡ",
+        "ឈ្ណ",
+        "ឈ្ឡ",
+        "ឌ្ណ",
+        "ឌ្ឡ",
+        "ឍ្ណ",
+        "ឍ្ឡ",
+        "ទ្ណ",
+        "ទ្ឡ",
+        "ធ្ណ",
+        "ធ្ឡ",
+        "ព្ណ",
+        "ព្ឡ",
+        "ភ្ណ",
+        "ភ្ឡ",
+        "ប្គ",
+        "ប្ឃ",
+        "ប្ជ",
+        "ប្ឈ",
+        "ប្ឌ",
+        "ប្ឍ",
+        "ប្ទ",
+        "ប្ធ",
+        "ប្ព",
+        "ប្ភ"
+      ],
+      "notes": "Khmer consonant letters fall into two registers, the a-series (inherent vowel â [ɑː]) and the o-series (inherent vowel ô [ɔː]). The series is a property of the LETTER, not of the sound it spells: ⟨ក⟩ and ⟨គ⟩ both spell [k] but ⟨កា⟩ is [kaː] and ⟨គា⟩ is [kiə]. Every dependent vowel sign therefore has two readings, chosen by the series of the consonant it is attached to, and the spec gives the a-series reading in the grapheme table and shifts it here. The registers descend from a Middle Khmer voicing contrast that was lost after it had already reshaped the following vowel. The o-series ⟨ា⟩ is the high centring diphthong [iə], the same nucleus ⟨ៀ⟩ spells; Jacob 1968 separates the two by length ([iːə] against [iə]), a distinction this broad transcription does not carry. Source: Huffman 1970, Cambodian System of Writing and Beginning Reader."
+    },
+    {
+      "id": "KM_VOWEL_O_17B6_17C6",
+      "phonemes": [
+        "am"
+      ],
+      "surface": "ŏəm",
+      "grapheme": [
+        "ាំ"
+      ],
+      "preceded_by_grapheme": [
+        "គ",
+        "ឃ",
+        "ង",
+        "ជ",
+        "ឈ",
+        "ញ",
+        "ឌ",
+        "ឍ",
+        "ទ",
+        "ធ",
+        "ន",
+        "ព",
+        "ភ",
+        "ម",
+        "យ",
+        "រ",
+        "ល",
+        "វ",
+        "ហ្គ៊",
+        "ហ្វ៊",
+        "ហ្ស៊",
+        "ស៊",
+        "ហ៊",
+        "ប៊",
+        "អ៊",
+        "គ្ណ",
+        "គ្ឡ",
+        "ឃ្ណ",
+        "ឃ្ឡ",
+        "ជ្ណ",
+        "ជ្ឡ",
+        "ឈ្ណ",
+        "ឈ្ឡ",
+        "ឌ្ណ",
+        "ឌ្ឡ",
+        "ឍ្ណ",
+        "ឍ្ឡ",
+        "ទ្ណ",
+        "ទ្ឡ",
+        "ធ្ណ",
+        "ធ្ឡ",
+        "ព្ណ",
+        "ព្ឡ",
+        "ភ្ណ",
+        "ភ្ឡ",
+        "ប្គ",
+        "ប្ឃ",
+        "ប្ជ",
+        "ប្ឈ",
+        "ប្ឌ",
+        "ប្ឍ",
+        "ប្ទ",
+        "ប្ធ",
+        "ប្ព",
+        "ប្ភ"
+      ],
+      "notes": "Khmer consonant letters fall into two registers, the a-series (inherent vowel â [ɑː]) and the o-series (inherent vowel ô [ɔː]). The series is a property of the LETTER, not of the sound it spells: ⟨ក⟩ and ⟨គ⟩ both spell [k] but ⟨កា⟩ is [kaː] and ⟨គា⟩ is [kiə]. Every dependent vowel sign therefore has two readings, chosen by the series of the consonant it is attached to, and the spec gives the a-series reading in the grapheme table and shifts it here. The registers descend from a Middle Khmer voicing contrast that was lost after it had already reshaped the following vowel. The o-series ⟨ា⟩ is the high centring diphthong [iə], the same nucleus ⟨ៀ⟩ spells; Jacob 1968 separates the two by length ([iːə] against [iə]), a distinction this broad transcription does not carry. Source: Huffman 1970, Cambodian System of Writing and Beginning Reader."
+    },
+    {
+      "id": "KM_VOWEL_O_17C7",
+      "phonemes": [
+        "ah"
+      ],
+      "surface": "ĕəh",
+      "grapheme": [
+        "ះ"
+      ],
+      "preceded_by_grapheme": [
+        "គ",
+        "ឃ",
+        "ង",
+        "ជ",
+        "ឈ",
+        "ញ",
+        "ឌ",
+        "ឍ",
+        "ទ",
+        "ធ",
+        "ន",
+        "ព",
+        "ភ",
+        "ម",
+        "យ",
+        "រ",
+        "ល",
+        "វ",
+        "ហ្គ៊",
+        "ហ្វ៊",
+        "ហ្ស៊",
+        "ស៊",
+        "ហ៊",
+        "ប៊",
+        "អ៊",
+        "គ្ណ",
+        "គ្ឡ",
+        "ឃ្ណ",
+        "ឃ្ឡ",
+        "ជ្ណ",
+        "ជ្ឡ",
+        "ឈ្ណ",
+        "ឈ្ឡ",
+        "ឌ្ណ",
+        "ឌ្ឡ",
+        "ឍ្ណ",
+        "ឍ្ឡ",
+        "ទ្ណ",
+        "ទ្ឡ",
+        "ធ្ណ",
+        "ធ្ឡ",
+        "ព្ណ",
+        "ព្ឡ",
+        "ភ្ណ",
+        "ភ្ឡ",
+        "ប្គ",
+        "ប្ឃ",
+        "ប្ជ",
+        "ប្ឈ",
+        "ប្ឌ",
+        "ប្ឍ",
+        "ប្ទ",
+        "ប្ធ",
+        "ប្ព",
+        "ប្ភ"
+      ],
+      "notes": "Khmer consonant letters fall into two registers, the a-series (inherent vowel â [ɑː]) and the o-series (inherent vowel ô [ɔː]). The series is a property of the LETTER, not of the sound it spells: ⟨ក⟩ and ⟨គ⟩ both spell [k] but ⟨កា⟩ is [kaː] and ⟨គា⟩ is [kiə]. Every dependent vowel sign therefore has two readings, chosen by the series of the consonant it is attached to, and the spec gives the a-series reading in the grapheme table and shifts it here. The registers descend from a Middle Khmer voicing contrast that was lost after it had already reshaped the following vowel. The o-series ⟨ា⟩ is the high centring diphthong [iə], the same nucleus ⟨ៀ⟩ spells; Jacob 1968 separates the two by length ([iːə] against [iə]), a distinction this broad transcription does not carry. Source: Huffman 1970, Cambodian System of Writing and Beginning Reader."
+    },
+    {
+      "id": "KM_VOWEL_O_17B7_17C7",
+      "phonemes": [
+        "eh"
+      ],
+      "surface": "ih",
+      "grapheme": [
+        "ិះ"
+      ],
+      "preceded_by_grapheme": [
+        "គ",
+        "ឃ",
+        "ង",
+        "ជ",
+        "ឈ",
+        "ញ",
+        "ឌ",
+        "ឍ",
+        "ទ",
+        "ធ",
+        "ន",
+        "ព",
+        "ភ",
+        "ម",
+        "យ",
+        "រ",
+        "ល",
+        "វ",
+        "ហ្គ៊",
+        "ហ្វ៊",
+        "ហ្ស៊",
+        "ស៊",
+        "ហ៊",
+        "ប៊",
+        "អ៊",
+        "គ្ណ",
+        "គ្ឡ",
+        "ឃ្ណ",
+        "ឃ្ឡ",
+        "ជ្ណ",
+        "ជ្ឡ",
+        "ឈ្ណ",
+        "ឈ្ឡ",
+        "ឌ្ណ",
+        "ឌ្ឡ",
+        "ឍ្ណ",
+        "ឍ្ឡ",
+        "ទ្ណ",
+        "ទ្ឡ",
+        "ធ្ណ",
+        "ធ្ឡ",
+        "ព្ណ",
+        "ព្ឡ",
+        "ភ្ណ",
+        "ភ្ឡ",
+        "ប្គ",
+        "ប្ឃ",
+        "ប្ជ",
+        "ប្ឈ",
+        "ប្ឌ",
+        "ប្ឍ",
+        "ប្ទ",
+        "ប្ធ",
+        "ប្ព",
+        "ប្ភ"
+      ],
+      "notes": "Khmer consonant letters fall into two registers, the a-series (inherent vowel â [ɑː]) and the o-series (inherent vowel ô [ɔː]). The series is a property of the LETTER, not of the sound it spells: ⟨ក⟩ and ⟨គ⟩ both spell [k] but ⟨កា⟩ is [kaː] and ⟨គា⟩ is [kiə]. Every dependent vowel sign therefore has two readings, chosen by the series of the consonant it is attached to, and the spec gives the a-series reading in the grapheme table and shifts it here. The registers descend from a Middle Khmer voicing contrast that was lost after it had already reshaped the following vowel. The o-series ⟨ា⟩ is the high centring diphthong [iə], the same nucleus ⟨ៀ⟩ spells; Jacob 1968 separates the two by length ([iːə] against [iə]), a distinction this broad transcription does not carry. Source: Huffman 1970, Cambodian System of Writing and Beginning Reader."
+    },
+    {
+      "id": "KM_VOWEL_O_17BB_17C7",
+      "phonemes": [
+        "oh"
+      ],
+      "surface": "uh",
+      "grapheme": [
+        "ុះ"
+      ],
+      "preceded_by_grapheme": [
+        "គ",
+        "ឃ",
+        "ង",
+        "ជ",
+        "ឈ",
+        "ញ",
+        "ឌ",
+        "ឍ",
+        "ទ",
+        "ធ",
+        "ន",
+        "ព",
+        "ភ",
+        "ម",
+        "យ",
+        "រ",
+        "ល",
+        "វ",
+        "ហ្គ៊",
+        "ហ្វ៊",
+        "ហ្ស៊",
+        "ស៊",
+        "ហ៊",
+        "ប៊",
+        "អ៊",
+        "គ្ណ",
+        "គ្ឡ",
+        "ឃ្ណ",
+        "ឃ្ឡ",
+        "ជ្ណ",
+        "ជ្ឡ",
+        "ឈ្ណ",
+        "ឈ្ឡ",
+        "ឌ្ណ",
+        "ឌ្ឡ",
+        "ឍ្ណ",
+        "ឍ្ឡ",
+        "ទ្ណ",
+        "ទ្ឡ",
+        "ធ្ណ",
+        "ធ្ឡ",
+        "ព្ណ",
+        "ព្ឡ",
+        "ភ្ណ",
+        "ភ្ឡ",
+        "ប្គ",
+        "ប្ឃ",
+        "ប្ជ",
+        "ប្ឈ",
+        "ប្ឌ",
+        "ប្ឍ",
+        "ប្ទ",
+        "ប្ធ",
+        "ប្ព",
+        "ប្ភ"
+      ],
+      "notes": "Khmer consonant letters fall into two registers, the a-series (inherent vowel â [ɑː]) and the o-series (inherent vowel ô [ɔː]). The series is a property of the LETTER, not of the sound it spells: ⟨ក⟩ and ⟨គ⟩ both spell [k] but ⟨កា⟩ is [kaː] and ⟨គា⟩ is [kiə]. Every dependent vowel sign therefore has two readings, chosen by the series of the consonant it is attached to, and the spec gives the a-series reading in the grapheme table and shifts it here. The registers descend from a Middle Khmer voicing contrast that was lost after it had already reshaped the following vowel. The o-series ⟨ា⟩ is the high centring diphthong [iə], the same nucleus ⟨ៀ⟩ spells; Jacob 1968 separates the two by length ([iːə] against [iə]), a distinction this broad transcription does not carry. Source: Huffman 1970, Cambodian System of Writing and Beginning Reader."
+    },
+    {
+      "id": "KM_VOWEL_O_17C1_17C7",
+      "phonemes": [
+        "eh"
+      ],
+      "surface": "ih",
+      "grapheme": [
+        "េះ"
+      ],
+      "preceded_by_grapheme": [
+        "គ",
+        "ឃ",
+        "ង",
+        "ជ",
+        "ឈ",
+        "ញ",
+        "ឌ",
+        "ឍ",
+        "ទ",
+        "ធ",
+        "ន",
+        "ព",
+        "ភ",
+        "ម",
+        "យ",
+        "រ",
+        "ល",
+        "វ",
+        "ហ្គ៊",
+        "ហ្វ៊",
+        "ហ្ស៊",
+        "ស៊",
+        "ហ៊",
+        "ប៊",
+        "អ៊",
+        "គ្ណ",
+        "គ្ឡ",
+        "ឃ្ណ",
+        "ឃ្ឡ",
+        "ជ្ណ",
+        "ជ្ឡ",
+        "ឈ្ណ",
+        "ឈ្ឡ",
+        "ឌ្ណ",
+        "ឌ្ឡ",
+        "ឍ្ណ",
+        "ឍ្ឡ",
+        "ទ្ណ",
+        "ទ្ឡ",
+        "ធ្ណ",
+        "ធ្ឡ",
+        "ព្ណ",
+        "ព្ឡ",
+        "ភ្ណ",
+        "ភ្ឡ",
+        "ប្គ",
+        "ប្ឃ",
+        "ប្ជ",
+        "ប្ឈ",
+        "ប្ឌ",
+        "ប្ឍ",
+        "ប្ទ",
+        "ប្ធ",
+        "ប្ព",
+        "ប្ភ"
+      ],
+      "notes": "Khmer consonant letters fall into two registers, the a-series (inherent vowel â [ɑː]) and the o-series (inherent vowel ô [ɔː]). The series is a property of the LETTER, not of the sound it spells: ⟨ក⟩ and ⟨គ⟩ both spell [k] but ⟨កា⟩ is [kaː] and ⟨គា⟩ is [kiə]. Every dependent vowel sign therefore has two readings, chosen by the series of the consonant it is attached to, and the spec gives the a-series reading in the grapheme table and shifts it here. The registers descend from a Middle Khmer voicing contrast that was lost after it had already reshaped the following vowel. The o-series ⟨ា⟩ is the high centring diphthong [iə], the same nucleus ⟨ៀ⟩ spells; Jacob 1968 separates the two by length ([iːə] against [iə]), a distinction this broad transcription does not carry. Source: Huffman 1970, Cambodian System of Writing and Beginning Reader."
+    },
+    {
+      "id": "KM_VOWEL_O_17C4_17C7",
+      "phonemes": [
+        "ɑh"
+      ],
+      "surface": "ŭəh",
+      "grapheme": [
+        "ោះ"
+      ],
+      "preceded_by_grapheme": [
+        "គ",
+        "ឃ",
+        "ង",
+        "ជ",
+        "ឈ",
+        "ញ",
+        "ឌ",
+        "ឍ",
+        "ទ",
+        "ធ",
+        "ន",
+        "ព",
+        "ភ",
+        "ម",
+        "យ",
+        "រ",
+        "ល",
+        "វ",
+        "ហ្គ៊",
+        "ហ្វ៊",
+        "ហ្ស៊",
+        "ស៊",
+        "ហ៊",
+        "ប៊",
+        "អ៊",
+        "គ្ណ",
+        "គ្ឡ",
+        "ឃ្ណ",
+        "ឃ្ឡ",
+        "ជ្ណ",
+        "ជ្ឡ",
+        "ឈ្ណ",
+        "ឈ្ឡ",
+        "ឌ្ណ",
+        "ឌ្ឡ",
+        "ឍ្ណ",
+        "ឍ្ឡ",
+        "ទ្ណ",
+        "ទ្ឡ",
+        "ធ្ណ",
+        "ធ្ឡ",
+        "ព្ណ",
+        "ព្ឡ",
+        "ភ្ណ",
+        "ភ្ឡ",
+        "ប្គ",
+        "ប្ឃ",
+        "ប្ជ",
+        "ប្ឈ",
+        "ប្ឌ",
+        "ប្ឍ",
+        "ប្ទ",
+        "ប្ធ",
+        "ប្ព",
+        "ប្ភ"
+      ],
+      "notes": "Khmer consonant letters fall into two registers, the a-series (inherent vowel â [ɑː]) and the o-series (inherent vowel ô [ɔː]). The series is a property of the LETTER, not of the sound it spells: ⟨ក⟩ and ⟨គ⟩ both spell [k] but ⟨កា⟩ is [kaː] and ⟨គា⟩ is [kiə]. Every dependent vowel sign therefore has two readings, chosen by the series of the consonant it is attached to, and the spec gives the a-series reading in the grapheme table and shifts it here. The registers descend from a Middle Khmer voicing contrast that was lost after it had already reshaped the following vowel. The o-series ⟨ា⟩ is the high centring diphthong [iə], the same nucleus ⟨ៀ⟩ spells; Jacob 1968 separates the two by length ([iːə] against [iə]), a distinction this broad transcription does not carry. Source: Huffman 1970, Cambodian System of Writing and Beginning Reader."
+    },
+    {
+      "id": "KM_VOWEL_O_17C8",
+      "phonemes": [
+        "aʔ"
+      ],
+      "surface": "ĕəʔ",
+      "grapheme": [
+        "ៈ"
+      ],
+      "preceded_by_grapheme": [
+        "គ",
+        "ឃ",
+        "ង",
+        "ជ",
+        "ឈ",
+        "ញ",
+        "ឌ",
+        "ឍ",
+        "ទ",
+        "ធ",
+        "ន",
+        "ព",
+        "ភ",
+        "ម",
+        "យ",
+        "រ",
+        "ល",
+        "វ",
+        "ហ្គ៊",
+        "ហ្វ៊",
+        "ហ្ស៊",
+        "ស៊",
+        "ហ៊",
+        "ប៊",
+        "អ៊",
+        "គ្ណ",
+        "គ្ឡ",
+        "ឃ្ណ",
+        "ឃ្ឡ",
+        "ជ្ណ",
+        "ជ្ឡ",
+        "ឈ្ណ",
+        "ឈ្ឡ",
+        "ឌ្ណ",
+        "ឌ្ឡ",
+        "ឍ្ណ",
+        "ឍ្ឡ",
+        "ទ្ណ",
+        "ទ្ឡ",
+        "ធ្ណ",
+        "ធ្ឡ",
+        "ព្ណ",
+        "ព្ឡ",
+        "ភ្ណ",
+        "ភ្ឡ",
+        "ប្គ",
+        "ប្ឃ",
+        "ប្ជ",
+        "ប្ឈ",
+        "ប្ឌ",
+        "ប្ឍ",
+        "ប្ទ",
+        "ប្ធ",
+        "ប្ព",
+        "ប្ភ"
+      ],
+      "notes": "Khmer consonant letters fall into two registers, the a-series (inherent vowel â [ɑː]) and the o-series (inherent vowel ô [ɔː]). The series is a property of the LETTER, not of the sound it spells: ⟨ក⟩ and ⟨គ⟩ both spell [k] but ⟨កា⟩ is [kaː] and ⟨គា⟩ is [kiə]. Every dependent vowel sign therefore has two readings, chosen by the series of the consonant it is attached to, and the spec gives the a-series reading in the grapheme table and shifts it here. The registers descend from a Middle Khmer voicing contrast that was lost after it had already reshaped the following vowel. The o-series ⟨ា⟩ is the high centring diphthong [iə], the same nucleus ⟨ៀ⟩ spells; Jacob 1968 separates the two by length ([iːə] against [iə]), a distinction this broad transcription does not carry. Source: Huffman 1970, Cambodian System of Writing and Beginning Reader."
+    },
+    {
+      "id": "KM_VOWEL_O_17D0",
+      "phonemes": [
+        "a"
+      ],
+      "surface": "ŏə",
+      "grapheme": [
+        "័"
+      ],
+      "preceded_by_grapheme": [
+        "គ",
+        "ឃ",
+        "ង",
+        "ជ",
+        "ឈ",
+        "ញ",
+        "ឌ",
+        "ឍ",
+        "ទ",
+        "ធ",
+        "ន",
+        "ព",
+        "ភ",
+        "ម",
+        "យ",
+        "រ",
+        "ល",
+        "វ",
+        "ហ្គ៊",
+        "ហ្វ៊",
+        "ហ្ស៊",
+        "ស៊",
+        "ហ៊",
+        "ប៊",
+        "អ៊",
+        "គ្ណ",
+        "គ្ឡ",
+        "ឃ្ណ",
+        "ឃ្ឡ",
+        "ជ្ណ",
+        "ជ្ឡ",
+        "ឈ្ណ",
+        "ឈ្ឡ",
+        "ឌ្ណ",
+        "ឌ្ឡ",
+        "ឍ្ណ",
+        "ឍ្ឡ",
+        "ទ្ណ",
+        "ទ្ឡ",
+        "ធ្ណ",
+        "ធ្ឡ",
+        "ព្ណ",
+        "ព្ឡ",
+        "ភ្ណ",
+        "ភ្ឡ",
+        "ប្គ",
+        "ប្ឃ",
+        "ប្ជ",
+        "ប្ឈ",
+        "ប្ឌ",
+        "ប្ឍ",
+        "ប្ទ",
+        "ប្ធ",
+        "ប្ព",
+        "ប្ភ"
+      ],
+      "notes": "Khmer consonant letters fall into two registers, the a-series (inherent vowel â [ɑː]) and the o-series (inherent vowel ô [ɔː]). The series is a property of the LETTER, not of the sound it spells: ⟨ក⟩ and ⟨គ⟩ both spell [k] but ⟨កា⟩ is [kaː] and ⟨គា⟩ is [kiə]. Every dependent vowel sign therefore has two readings, chosen by the series of the consonant it is attached to, and the spec gives the a-series reading in the grapheme table and shifts it here. The registers descend from a Middle Khmer voicing contrast that was lost after it had already reshaped the following vowel. The o-series ⟨ា⟩ is the high centring diphthong [iə], the same nucleus ⟨ៀ⟩ spells; Jacob 1968 separates the two by length ([iːə] against [iə]), a distinction this broad transcription does not carry. Source: Huffman 1970, Cambodian System of Writing and Beginning Reader."
+    },
+    {
+      "id": "KM_VOWEL_O_17CF",
+      "phonemes": [
+        "ɑː"
+      ],
+      "surface": "ɔː",
+      "grapheme": [
+        "៏"
+      ],
+      "preceded_by_grapheme": [
+        "គ",
+        "ឃ",
+        "ង",
+        "ជ",
+        "ឈ",
+        "ញ",
+        "ឌ",
+        "ឍ",
+        "ទ",
+        "ធ",
+        "ន",
+        "ព",
+        "ភ",
+        "ម",
+        "យ",
+        "រ",
+        "ល",
+        "វ",
+        "ហ្គ៊",
+        "ហ្វ៊",
+        "ហ្ស៊",
+        "ស៊",
+        "ហ៊",
+        "ប៊",
+        "អ៊",
+        "គ្ណ",
+        "គ្ឡ",
+        "ឃ្ណ",
+        "ឃ្ឡ",
+        "ជ្ណ",
+        "ជ្ឡ",
+        "ឈ្ណ",
+        "ឈ្ឡ",
+        "ឌ្ណ",
+        "ឌ្ឡ",
+        "ឍ្ណ",
+        "ឍ្ឡ",
+        "ទ្ណ",
+        "ទ្ឡ",
+        "ធ្ណ",
+        "ធ្ឡ",
+        "ព្ណ",
+        "ព្ឡ",
+        "ភ្ណ",
+        "ភ្ឡ",
+        "ប្គ",
+        "ប្ឃ",
+        "ប្ជ",
+        "ប្ឈ",
+        "ប្ឌ",
+        "ប្ឍ",
+        "ប្ទ",
+        "ប្ធ",
+        "ប្ព",
+        "ប្ភ"
+      ],
+      "notes": "Khmer consonant letters fall into two registers, the a-series (inherent vowel â [ɑː]) and the o-series (inherent vowel ô [ɔː]). The series is a property of the LETTER, not of the sound it spells: ⟨ក⟩ and ⟨គ⟩ both spell [k] but ⟨កា⟩ is [kaː] and ⟨គា⟩ is [kiə]. Every dependent vowel sign therefore has two readings, chosen by the series of the consonant it is attached to, and the spec gives the a-series reading in the grapheme table and shifts it here. The registers descend from a Middle Khmer voicing contrast that was lost after it had already reshaped the following vowel. The o-series ⟨ា⟩ is the high centring diphthong [iə], the same nucleus ⟨ៀ⟩ spells; Jacob 1968 separates the two by length ([iːə] against [iə]), a distinction this broad transcription does not carry. Source: Huffman 1970, Cambodian System of Writing and Beginning Reader."
+    },
+    {
+      "id": "KM_BANTOC_O_LABIAL",
+      "phonemes": [
+        "ɔː"
+      ],
+      "surface": "u",
+      "preceded_by_phoneme": [
+        "c",
+        "cʰ",
+        "f",
+        "h",
+        "j",
+        "k",
+        "kʰ",
+        "l",
+        "m",
+        "n",
+        "p",
+        "pʰ",
+        "r",
+        "s",
+        "t",
+        "tʰ",
+        "ŋ",
+        "ɓ",
+        "ɗ",
+        "ɡ",
+        "ɲ",
+        "ʋ",
+        "ʒ",
+        "ʔ"
+      ],
+      "followed_by_grapheme": [
+        "ប់",
+        "ព់",
+        "ភ់",
+        "ផ់",
+        "ម់"
+      ],
+      "notes": "Bânták ⟨់⟩, written over the last consonant of a syllable, shortens the nucleus and changes its quality: inherent â [ɑː] becomes [ɑ], inherent ô [ɔː] becomes [u] before a final labial and [ŏə] elsewhere, and the ⟨ា⟩ sign becomes [a] in the a-series and, in the o-series, [ĕə] before a final ⟨ក គ ង ហ⟩ and [ŏə] elsewhere. Source: Huffman 1970."
+    },
+    {
+      "id": "KM_BANTOC_A",
+      "phonemes": [
+        "ɑː"
+      ],
+      "surface": "ɑ",
+      "preceded_by_phoneme": [
+        "c",
+        "cʰ",
+        "f",
+        "h",
+        "j",
+        "k",
+        "kʰ",
+        "l",
+        "m",
+        "n",
+        "p",
+        "pʰ",
+        "r",
+        "s",
+        "t",
+        "tʰ",
+        "ŋ",
+        "ɓ",
+        "ɗ",
+        "ɡ",
+        "ɲ",
+        "ʋ",
+        "ʒ",
+        "ʔ"
+      ],
+      "followed_by_grapheme": [
+        "ក់",
+        "ខ់",
+        "គ់",
+        "ឃ់",
+        "ង់",
+        "ច់",
+        "ឆ់",
+        "ជ់",
+        "ឈ់",
+        "ញ់",
+        "ដ់",
+        "ឋ់",
+        "ឌ់",
+        "ឍ់",
+        "ណ់",
+        "ត់",
+        "ថ់",
+        "ទ់",
+        "ធ់",
+        "ន់",
+        "ប់",
+        "ផ់",
+        "ព់",
+        "ភ់",
+        "ម់",
+        "យ់",
+        "រ់",
+        "ល់",
+        "វ់",
+        "ស់",
+        "ហ់",
+        "ឡ់",
+        "អ់",
+        "ង៉់",
+        "ញ៉់",
+        "ម៉់",
+        "យ៉់",
+        "រ៉់",
+        "វ៉់",
+        "ល៉់",
+        "ប៉់",
+        "ន៉់",
+        "ស៊់",
+        "ហ៊់",
+        "ប៊់",
+        "អ៊់"
+      ],
+      "notes": "Bânták ⟨់⟩, written over the last consonant of a syllable, shortens the nucleus and changes its quality: inherent â [ɑː] becomes [ɑ], inherent ô [ɔː] becomes [u] before a final labial and [ŏə] elsewhere, and the ⟨ា⟩ sign becomes [a] in the a-series and, in the o-series, [ĕə] before a final ⟨ក គ ង ហ⟩ and [ŏə] elsewhere. Source: Huffman 1970."
+    },
+    {
+      "id": "KM_BANTOC_O",
+      "phonemes": [
+        "ɔː"
+      ],
+      "surface": "ŏə",
+      "preceded_by_phoneme": [
+        "c",
+        "cʰ",
+        "f",
+        "h",
+        "j",
+        "k",
+        "kʰ",
+        "l",
+        "m",
+        "n",
+        "p",
+        "pʰ",
+        "r",
+        "s",
+        "t",
+        "tʰ",
+        "ŋ",
+        "ɓ",
+        "ɗ",
+        "ɡ",
+        "ɲ",
+        "ʋ",
+        "ʒ",
+        "ʔ"
+      ],
+      "followed_by_grapheme": [
+        "ក់",
+        "ខ់",
+        "គ់",
+        "ឃ់",
+        "ង់",
+        "ច់",
+        "ឆ់",
+        "ជ់",
+        "ឈ់",
+        "ញ់",
+        "ដ់",
+        "ឋ់",
+        "ឌ់",
+        "ឍ់",
+        "ណ់",
+        "ត់",
+        "ថ់",
+        "ទ់",
+        "ធ់",
+        "ន់",
+        "ប់",
+        "ផ់",
+        "ព់",
+        "ភ់",
+        "ម់",
+        "យ់",
+        "រ់",
+        "ល់",
+        "វ់",
+        "ស់",
+        "ហ់",
+        "ឡ់",
+        "អ់",
+        "ង៉់",
+        "ញ៉់",
+        "ម៉់",
+        "យ៉់",
+        "រ៉់",
+        "វ៉់",
+        "ល៉់",
+        "ប៉់",
+        "ន៉់",
+        "ស៊់",
+        "ហ៊់",
+        "ប៊់",
+        "អ៊់"
+      ],
+      "notes": "Bânták ⟨់⟩, written over the last consonant of a syllable, shortens the nucleus and changes its quality: inherent â [ɑː] becomes [ɑ], inherent ô [ɔː] becomes [u] before a final labial and [ŏə] elsewhere, and the ⟨ា⟩ sign becomes [a] in the a-series and, in the o-series, [ĕə] before a final ⟨ក គ ង ហ⟩ and [ŏə] elsewhere. Source: Huffman 1970."
+    },
+    {
+      "id": "KM_BANTOC_AA",
+      "phonemes": [
+        "aː"
+      ],
+      "surface": "a",
+      "grapheme": [
+        "ា"
+      ],
+      "followed_by_grapheme": [
+        "ក់",
+        "ខ់",
+        "គ់",
+        "ឃ់",
+        "ង់",
+        "ច់",
+        "ឆ់",
+        "ជ់",
+        "ឈ់",
+        "ញ់",
+        "ដ់",
+        "ឋ់",
+        "ឌ់",
+        "ឍ់",
+        "ណ់",
+        "ត់",
+        "ថ់",
+        "ទ់",
+        "ធ់",
+        "ន់",
+        "ប់",
+        "ផ់",
+        "ព់",
+        "ភ់",
+        "ម់",
+        "យ់",
+        "រ់",
+        "ល់",
+        "វ់",
+        "ស់",
+        "ហ់",
+        "ឡ់",
+        "អ់",
+        "ង៉់",
+        "ញ៉់",
+        "ម៉់",
+        "យ៉់",
+        "រ៉់",
+        "វ៉់",
+        "ល៉់",
+        "ប៉់",
+        "ន៉់",
+        "ស៊់",
+        "ហ៊់",
+        "ប៊់",
+        "អ៊់"
+      ],
+      "notes": "Bânták ⟨់⟩, written over the last consonant of a syllable, shortens the nucleus and changes its quality: inherent â [ɑː] becomes [ɑ], inherent ô [ɔː] becomes [u] before a final labial and [ŏə] elsewhere, and the ⟨ា⟩ sign becomes [a] in the a-series and, in the o-series, [ĕə] before a final ⟨ក គ ង ហ⟩ and [ŏə] elsewhere. Source: Huffman 1970."
+    },
+    {
+      "id": "KM_BANTOC_AA_O_VELAR",
+      "phonemes": [
+        "iə"
+      ],
+      "surface": "eə",
+      "grapheme": [
+        "ា"
+      ],
+      "followed_by_grapheme": [
+        "ក់",
+        "គ់",
+        "ង់",
+        "ហ់"
+      ],
+      "notes": "Bânták ⟨់⟩, written over the last consonant of a syllable, shortens the nucleus and changes its quality: inherent â [ɑː] becomes [ɑ], inherent ô [ɔː] becomes [u] before a final labial and [ŏə] elsewhere, and the ⟨ា⟩ sign becomes [a] in the a-series and, in the o-series, [ĕə] before a final ⟨ក គ ង ហ⟩ and [ŏə] elsewhere. Source: Huffman 1970."
+    },
+    {
+      "id": "KM_BANTOC_AA_O",
+      "phonemes": [
+        "iə"
+      ],
+      "surface": "ŏə",
+      "grapheme": [
+        "ា"
+      ],
+      "followed_by_grapheme": [
+        "ក់",
+        "ខ់",
+        "គ់",
+        "ឃ់",
+        "ង់",
+        "ច់",
+        "ឆ់",
+        "ជ់",
+        "ឈ់",
+        "ញ់",
+        "ដ់",
+        "ឋ់",
+        "ឌ់",
+        "ឍ់",
+        "ណ់",
+        "ត់",
+        "ថ់",
+        "ទ់",
+        "ធ់",
+        "ន់",
+        "ប់",
+        "ផ់",
+        "ព់",
+        "ភ់",
+        "ម់",
+        "យ់",
+        "រ់",
+        "ល់",
+        "វ់",
+        "ស់",
+        "ហ់",
+        "ឡ់",
+        "អ់",
+        "ង៉់",
+        "ញ៉់",
+        "ម៉់",
+        "យ៉់",
+        "រ៉់",
+        "វ៉់",
+        "ល៉់",
+        "ប៉់",
+        "ន៉់",
+        "ស៊់",
+        "ហ៊់",
+        "ប៊់",
+        "អ៊់"
+      ],
+      "notes": "Bânták ⟨់⟩, written over the last consonant of a syllable, shortens the nucleus and changes its quality: inherent â [ɑː] becomes [ɑ], inherent ô [ɔː] becomes [u] before a final labial and [ŏə] elsewhere, and the ⟨ា⟩ sign becomes [a] in the a-series and, in the o-series, [ĕə] before a final ⟨ក គ ង ហ⟩ and [ŏə] elsewhere. Source: Huffman 1970."
+    },
+    {
+      "id": "KM_PRESYLLABLE_A",
+      "phonemes": [
+        "ɑː"
+      ],
+      "surface": "ɑ",
+      "preceded_by_phoneme": [
+        "c",
+        "cʰ",
+        "f",
+        "h",
+        "j",
+        "k",
+        "kʰ",
+        "l",
+        "m",
+        "n",
+        "p",
+        "pʰ",
+        "r",
+        "s",
+        "t",
+        "tʰ",
+        "ŋ",
+        "ɓ",
+        "ɗ",
+        "ɡ",
+        "ɲ",
+        "ʋ",
+        "ʒ",
+        "ʔ"
+      ],
+      "followed_by_nucleus": true,
+      "notes": "An initial consonant with no dependent vowel in a weak (unstressed) presyllable is pronounced with its inherent vowel shortened, as if the bânták diacritic were written: a-series â [ɑː] becomes [ɑ] and o-series ô [ɔː] becomes [ŏə]; in casual speech both reduce further to [ə]. Only the final syllable of a Khmer word is strong, so the condition here is that another nucleus follows in the same word. Source: Huffman 1970."
+    },
+    {
+      "id": "KM_PRESYLLABLE_O",
+      "phonemes": [
+        "ɔː"
+      ],
+      "surface": "ŏə",
+      "preceded_by_phoneme": [
+        "c",
+        "cʰ",
+        "f",
+        "h",
+        "j",
+        "k",
+        "kʰ",
+        "l",
+        "m",
+        "n",
+        "p",
+        "pʰ",
+        "r",
+        "s",
+        "t",
+        "tʰ",
+        "ŋ",
+        "ɓ",
+        "ɗ",
+        "ɡ",
+        "ɲ",
+        "ʋ",
+        "ʒ",
+        "ʔ"
+      ],
+      "followed_by_nucleus": true,
+      "notes": "An initial consonant with no dependent vowel in a weak (unstressed) presyllable is pronounced with its inherent vowel shortened, as if the bânták diacritic were written: a-series â [ɑː] becomes [ɑ] and o-series ô [ɔː] becomes [ŏə]; in casual speech both reduce further to [ə]. Only the final syllable of a Khmer word is strong, so the condition here is that another nucleus follows in the same word. Source: Huffman 1970."
+    },
+    {
+      "id": "KM_OPEN_17B7_ə",
+      "phonemes": [
+        "ə"
+      ],
+      "surface": "eʔ",
+      "grapheme": [
+        "ិ"
+      ],
+      "word_final": true,
+      "notes": "⟨ិ⟩ and ⟨ុ⟩ are [ə]/[ɨ] and [o]/[u] in a closed syllable but [e]/[i] and [o]/[u] closed by a glottal stop in a stressed syllable with no written final consonant. Source: Huffman 1970."
+    },
+    {
+      "id": "KM_OPEN_17B7_ɨ",
+      "phonemes": [
+        "ɨ"
+      ],
+      "surface": "iʔ",
+      "grapheme": [
+        "ិ"
+      ],
+      "word_final": true,
+      "notes": "⟨ិ⟩ and ⟨ុ⟩ are [ə]/[ɨ] and [o]/[u] in a closed syllable but [e]/[i] and [o]/[u] closed by a glottal stop in a stressed syllable with no written final consonant. Source: Huffman 1970."
+    },
+    {
+      "id": "KM_OPEN_17BB_o",
+      "phonemes": [
+        "o"
+      ],
+      "surface": "oʔ",
+      "grapheme": [
+        "ុ"
+      ],
+      "word_final": true,
+      "notes": "⟨ិ⟩ and ⟨ុ⟩ are [ə]/[ɨ] and [o]/[u] in a closed syllable but [e]/[i] and [o]/[u] closed by a glottal stop in a stressed syllable with no written final consonant. Source: Huffman 1970."
+    },
+    {
+      "id": "KM_OPEN_17BB_u",
+      "phonemes": [
+        "u"
+      ],
+      "surface": "uʔ",
+      "grapheme": [
+        "ុ"
+      ],
+      "word_final": true,
+      "notes": "⟨ិ⟩ and ⟨ុ⟩ are [ə]/[ɨ] and [o]/[u] in a closed syllable but [e]/[i] and [o]/[u] closed by a glottal stop in a stressed syllable with no written final consonant. Source: Huffman 1970."
+    },
+    {
+      "id": "KM_FINAL_R_SILENT",
+      "phonemes": [
+        "r"
+      ],
+      "surface": "",
+      "syllable_position": "coda",
+      "word_final": true,
+      "notes": "Word-final ⟨រ⟩ rô is silent in the standard (central plains) dialect; Northern Khmer keeps it. Source: Huffman 1970."
+    },
+    {
+      "id": "KM_FINAL_S_H",
+      "phonemes": [
+        "s"
+      ],
+      "surface": "h",
+      "syllable_position": "coda",
+      "word_final": true,
+      "notes": "Word-final ⟨ស⟩ sâ is [h] (phonetically close to [ç]); Khmer has no final sibilant. Source: Huffman 1970."
+    },
+    {
+      "id": "KM_FINAL_IMPLOSIVE_T",
+      "phonemes": [
+        "ɗ"
+      ],
+      "surface": "t",
+      "syllable_position": "coda",
+      "word_final": true,
+      "notes": "The implosives are onset-only: ⟨ដ⟩ dâ and ⟨ឌ⟩ dô are [t] in final position. Source: Huffman 1970."
+    },
+    {
+      "id": "KM_FINAL_B_P",
+      "phonemes": [
+        "ɓ"
+      ],
+      "surface": "p",
+      "syllable_position": "coda",
+      "word_final": true,
+      "notes": "⟨ប⟩ bâ spells [ɓ] only before a vowel; anywhere else — in a coda or as the head of a cluster — it is [p]. Source: Huffman 1970."
+    },
+    {
+      "id": "KM_FINAL_K_GLOTTAL",
+      "phonemes": [
+        "k"
+      ],
+      "surface": "ʔ",
+      "syllable_position": "coda",
+      "word_final": true,
+      "preceded_by_phoneme": [
+        "ɑː",
+        "aː",
+        "iə",
+        "ɨə",
+        "uə",
+        "ɑ",
+        "a",
+        "ĕə",
+        "ŭə"
+      ],
+      "notes": "A final ⟨ក⟩/⟨ខ⟩ is a glottal stop rather than [k] after the vowels [ɑː aː iə ɨə uə ɑ a ĕə ŭə] — the short and long low and centring nuclei. After the other vowels it stays [k]. Source: Huffman 1970."
+    },
+    {
+      "id": "KM_FINAL_K_GLOTTAL_ASP",
+      "phonemes": [
+        "kʰ"
+      ],
+      "surface": "ʔ",
+      "syllable_position": "coda",
+      "word_final": true,
+      "preceded_by_phoneme": [
+        "ɑː",
+        "aː",
+        "iə",
+        "ɨə",
+        "uə",
+        "ɑ",
+        "a",
+        "ĕə",
+        "ŭə"
+      ],
+      "notes": "A final ⟨ក⟩/⟨ខ⟩ is a glottal stop rather than [k] after the vowels [ɑː aː iə ɨə uə ɑ a ĕə ŭə] — the short and long low and centring nuclei. After the other vowels it stays [k]. Source: Huffman 1970."
+    },
+    {
+      "id": "KM_FINAL_DEASPIRATE_K",
+      "phonemes": [
+        "kʰ"
+      ],
+      "surface": "k",
+      "syllable_position": "coda",
+      "word_final": true,
+      "notes": "The aspirate letters are aspirated only before a vowel; in final position aspiration is not realised and the stop is unreleased. Source: Huffman 1970."
+    },
+    {
+      "id": "KM_FINAL_DEASPIRATE_C",
+      "phonemes": [
+        "cʰ"
+      ],
+      "surface": "c",
+      "syllable_position": "coda",
+      "word_final": true,
+      "notes": "The aspirate letters are aspirated only before a vowel; in final position aspiration is not realised and the stop is unreleased. Source: Huffman 1970."
+    },
+    {
+      "id": "KM_FINAL_DEASPIRATE_T",
+      "phonemes": [
+        "tʰ"
+      ],
+      "surface": "t",
+      "syllable_position": "coda",
+      "word_final": true,
+      "notes": "The aspirate letters are aspirated only before a vowel; in final position aspiration is not realised and the stop is unreleased. Source: Huffman 1970."
+    },
+    {
+      "id": "KM_FINAL_DEASPIRATE_P",
+      "phonemes": [
+        "pʰ"
+      ],
+      "surface": "p",
+      "syllable_position": "coda",
+      "word_final": true,
+      "notes": "The aspirate letters are aspirated only before a vowel; in final position aspiration is not realised and the stop is unreleased. Source: Huffman 1970."
+    }
+  ],
+  "allophone_passes": 2,
+  "notes": "Khmer (Cambodian), written in the Khmer abugida. The spec is organised around the two-series register system: every consonant letter carries an inherent vowel, â [ɑː] for the a-series and ô [ɔː] for the o-series, and that same series decides which of its two readings each dependent vowel sign takes. The grapheme table gives the a-series reading and the allophone rules shift it after an o-series letter. Khmer is not tonal. A word takes at most one final consonant, and finals are unreleased: final ⟨រ⟩ is silent, final ⟨ស⟩ is [h], final ⟨ដ ឌ⟩ are [t], final ⟨ប⟩ is [p], the aspirates lose their aspiration, and final ⟨ក ខ⟩ are a glottal stop after a low or centring nucleus. Three known gaps. A dominant consonant also governs a NON-DOMINANT one later in the same word, across an intervening vowel, and the rules here read only the letter immediately before the vowel sign: ⟨សេរីភាព⟩ is [seːrəjpʰiəp], with the a-series ⟨ី⟩ that the leading ⟨ស⟩ imposes on ⟨រ⟩, and comes out with the o-series [iː] instead. The [ăʔ]/[ĕəʔ] open syllable of Pali and Sanskrit loans is lexically conditioned and not modelled, so ⟨កថា⟩ is [kaʔtʰaː] and comes out [kɑtʰaː]. And the a-series ⟨ូ⟩ is written [oː] here, after Huffman's monophthong table, although both shipped golds transcribe it [ou] — 471 such tokens in the wikipron gold and 183 in ipadict; [ou] is carried as a second candidate rather than promoted, because the spec follows the source and not the gold.",
+  "sources": [
+    {
+      "id": "huffman1970",
+      "author": "Huffman, Franklin E.",
+      "year": 1970,
+      "title": "Cambodian System of Writing and Beginning Reader",
+      "publisher": "Yale University Press",
+      "url": null,
+      "wikipedia_url": null,
+      "pages": null,
+      "notes": "The reference description of the Khmer writing system: the consonant series, the two-reading dependent vowel table and the final-consonant realisations. Consulted through the IPA columns of the Wikipedia 'Khmer script' tables, which cite Huffman for them; the book itself was not opened, so no page locators are given."
+    },
+    {
+      "id": "jacob1968",
+      "author": "Jacob, Judith M.",
+      "year": 1968,
+      "title": "Introduction to Cambodian",
+      "publisher": "Oxford University Press",
+      "url": null,
+      "wikipedia_url": null,
+      "pages": null,
+      "notes": "Cited for the length distinction between the o-series ⟨ា⟩ [iːə] and ⟨ៀ⟩ [iə], which this spec does not carry. Reached through the Wikipedia 'Khmer script' article's citation of it; the book itself was not opened, so no page locators are given."
+    },
+    {
+      "id": "khmer_script_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Khmer script",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Khmer_script",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Khmer_script",
+      "pages": null,
+      "notes": "Consonant series table, dependent-vowel table with both series readings, the diacritic inventory and the final-consonant notes."
+    },
+    {
+      "id": "khmer_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Khmer language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Khmer_language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Khmer_language",
+      "pages": null,
+      "notes": "Phoneme inventory, coda restrictions and stress."
+    }
+  ],
+  "parent": "kha-x-proto-mon-khmer",
+  "ancestors": [
+    {
+      "code": "kha-x-proto-mon-khmer",
+      "role": "parent",
+      "weight": 0.8,
+      "notes": "Khmeric branch of Austroasiatic (Mon-Khmer)."
+    },
+    {
+      "code": "sa",
+      "role": "adstrate",
+      "weight": 0.14,
+      "notes": "Sanskrit adstrate: the Hindu-Buddhist learned/royal register."
+    },
+    {
+      "code": "pi",
+      "role": "adstrate",
+      "weight": 0.1,
+      "notes": "Pali adstrate: Theravada Buddhist religious vocabulary."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Khmer_language",
+    "https://km.wikipedia.org/wiki/%E1%9E%97%E1%9E%B6%E1%9E%9F%E1%9E%B6%E1%9E%81%E1%9F%92%E1%9E%98%E1%9F%82%E1%9E%9A"
+  ],
+  "timespan": {
+    "start_year": 611,
+    "end_year": null
+  },
+  "wikidata_qid": "Q9205",
+  "phoible_id": "cent1989",
+  "wals_code": "khm",
+  "location": {
+    "latitude": 12.0515,
+    "longitude": 105.015,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Central Khmer."
+  },
+  "stress": {
+    "constrain_mark_onsets": false,
+    "default_position": -1,
+    "final_stress_endings": [],
+    "penult_stress_endings": [],
+    "marked_vowels": [],
+    "stress_mark": "ˈ",
+    "notes": "Khmer word stress is predictable and falls on the final syllable of a word or compound; the minor (unstressed) presyllables that precede it are not separately modelled. Stress is not contrastive. Source: Huffman 1970."
+  },
+ "audit": {
+  "ipadict": {
+   "conclusion": "change_refused_uncited",
+   "measured": "km/ipadict (n=3261) scores as-scored PER 0.3335 with the harness's own normalize()/levenshtein(), matching the committed board row; the same spec scores 0.1922 against the larger km/wikipron gold (n=6628), and the spec's output for a word attested in both, កក, is kɑːʔ — an exact match to the wikipron gold. Both golds are legitimate: _IPADICT_PROVENANCE[\"km\"] is lexicon-derived, the Khmer-English Dictionary (aakanee.com, CC BY-NC-SA 4.0), a human lexicographic source rather than a scrape. Comparing the 1673 words attested in both golds shows the gap is dominated by notational convention, not by a disagreement about Khmer: ipadict doubles the vowel letter for length (kɑɑ) where wikipron and this spec write a length mark (kɑː); ipadict writes v where wikipron and this spec write ʋ; and wikipron and this spec glottalise some final stops (kɑːʔ) that ipadict keeps as a plain stop (kɑɑk). Folding each out of BOTH sides with scripts/fold_km_notation.py: length only 0.2645, glide only 0.3227, final glottal only 0.3353, length+glide 0.2527, all three 0.2510. NEGATIVE RESULT worth keeping: folding the final glottal out entirely makes the row slightly WORSE than as-scored (0.3353 against 0.3335), so that convention is not a removable symbol — the disagreement is about where the mark goes, not whether it is present. A fourth candidate for the residue was checked and not folded: restricted to the 1673 shared words, ipadict marks aspiration at a per-word rate of 0.100 and wikipron at 0.194, while this spec's own output marks it at 0.213, tracking wikipron rather than ipadict. That is consistent with a fourth notational convention, but no reference settles which tradition better reflects the phonetics, so it is reported rather than folded. The three folds above account for roughly a quarter of the raw PER and leave about 0.25 of the row unexplained. This is NOT a case like ki/wikipron or dng/wikipron where folding collapses the row to near zero, and this audit does not claim it is. ENUM CHOICE: none of the closed AuditConclusion values fits cleanly, and this label is chosen for want of a better one. mislabeled_gold is wrong — the gold IS Khmer, correctly labelled. input_limited is wrong — the orthography is not the constraint, since the same spec reaches 0.1922 from the same input against the other gold. at_ceiling_documented would be actively misleading, because it asserts the row cannot meaningfully improve while this audit has just shown a quarter of its error is unaccounted for. change_refused_uncited is recorded because that is literally what happened: the change measured and declined here is retuning the spec toward the ipadict conventions, refused both because no source establishes that transcription tradition as the correct target for Khmer and because it would move the spec away from the larger wikipron gold it currently matches exactly. THIS ROW IS NOT BELIEVED TO BE AT ITS FLOOR: the ~0.25 residue is open work, not a documented ceiling.",
+   "reference": "spec notes; scripts/fold_km_notation.py"
+  }
+ }
+}

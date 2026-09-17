@@ -1,0 +1,96 @@
+{
+  "code": "sit",
+  "name": "Proto-Sino-Tibetan (family node)",
+  "parent": "x-clade-sino1245",
+  "script": "IPA-reconstruction",
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "i": [
+      "i"
+    ],
+    "u": [
+      "u"
+    ],
+    "e": [
+      "e"
+    ],
+    "o": [
+      "o"
+    ],
+    "p": [
+      "p"
+    ],
+    "t": [
+      "t"
+    ],
+    "k": [
+      "k"
+    ],
+    "b": [
+      "b"
+    ],
+    "d": [
+      "d"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "s": [
+      "s"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "l": [
+      "l"
+    ],
+    "r": [
+      "r"
+    ],
+    "w": [
+      "w"
+    ],
+    "j": [
+      "j"
+    ],
+    "h": [
+      "h"
+    ]
+  },
+  "allophones": {},
+  "notes": "STRUCTURAL ANCESTRY NODE (not a modelled G2P target). Proto-Sino-Tibetan is the reconstructed common ancestor of the Sino-Tibetan (Trans-Himalayan) family, including Sinitic, Bodish (Tibetan) and Lolo-Burmese (Burmese). It exists here only so the ancestry / phylogenetic-distance metrics of the modern varieties that reference it have a node to resolve to; NO phonology is claimed or reconstructed and the minimal grapheme set is a placeholder (afa.json / trk.json stub pattern).",
+  "quality": "stub",
+  "script_type": "reconstruction",
+  "iso639_3": null,
+  "glottolog_code": "sino1245",
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Proto-Sino-Tibetan_language"
+  ],
+  "urls": [
+    "https://glottolog.org/resource/languoid/id/sino1245"
+  ],
+  "sources": [
+    {
+      "id": "matisoff2003",
+      "author": "Matisoff, J. A.",
+      "year": 2003,
+      "title": "Handbook of Proto-Tibeto-Burman",
+      "publisher": "University of California Press",
+      "url": null,
+      "pages": null,
+      "notes": "Reference for Sino-Tibetan reconstruction (structural node only).",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Proto-Sino-Tibetan_language"
+    }
+  ],
+  "location": {
+    "latitude": 28.19748,
+    "longitude": 97.679025,
+    "source": "glottolog",
+    "notes": "Glottolog's computed centroid for the Sino-Tibetan family — a summary of a whole clade's range, not a place anyone speaks."
+  }
+}

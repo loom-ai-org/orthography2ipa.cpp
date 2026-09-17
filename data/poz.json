@@ -1,0 +1,96 @@
+{
+  "code": "poz",
+  "name": "Proto-Malayo-Polynesian (family node)",
+  "parent": "x-clade-aust1307",
+  "script": "IPA-reconstruction",
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "i": [
+      "i"
+    ],
+    "u": [
+      "u"
+    ],
+    "e": [
+      "e"
+    ],
+    "o": [
+      "o"
+    ],
+    "p": [
+      "p"
+    ],
+    "t": [
+      "t"
+    ],
+    "k": [
+      "k"
+    ],
+    "b": [
+      "b"
+    ],
+    "d": [
+      "d"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "s": [
+      "s"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "l": [
+      "l"
+    ],
+    "r": [
+      "r"
+    ],
+    "w": [
+      "w"
+    ],
+    "j": [
+      "j"
+    ],
+    "h": [
+      "h"
+    ]
+  },
+  "allophones": {},
+  "notes": "STRUCTURAL ANCESTRY NODE (not a modelled G2P target). Proto-Malayo-Polynesian is the reconstructed ancestor of the Malayo-Polynesian branch of Austronesian, covering Malay/Indonesian, Javanese, Tagalog and the wider Pacific. It exists here only so the ancestry / phylogenetic-distance metrics of the modern varieties that reference it have a node to resolve to; NO phonology is claimed or reconstructed and the minimal grapheme set is a placeholder (afa.json / trk.json stub pattern).",
+  "quality": "stub",
+  "script_type": "reconstruction",
+  "iso639_3": null,
+  "glottolog_code": "mala1545",
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Proto-Malayo-Polynesian_language"
+  ],
+  "urls": [
+    "https://glottolog.org/resource/languoid/id/mala1545"
+  ],
+  "sources": [
+    {
+      "id": "blust2013",
+      "author": "Blust, R.",
+      "year": 2013,
+      "title": "The Austronesian Languages",
+      "publisher": "Asia-Pacific Linguistics",
+      "url": null,
+      "pages": null,
+      "notes": "Reference for Austronesian branching (structural node only).",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Proto-Malayo-Polynesian_language"
+    }
+  ],
+  "location": {
+    "latitude": 6.18651,
+    "longitude": 124.245779,
+    "source": "glottolog",
+    "notes": "Glottolog's computed centroid for the Malayo-Polynesian family — a summary of a whole clade's range, not a place anyone speaks."
+  }
+}

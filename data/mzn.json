@@ -1,0 +1,101 @@
+{
+  "code": "mzn",
+  "name": "Mazanderani",
+  "script": "Arabic",
+  "script_type": "abjad",
+  "quality": "skeleton",
+  "graphemes": {
+    "ا": ["ʔ", "ɑ"],
+    "آ": ["ʔɑː"],
+    "ب": ["b"],
+    "پ": ["p"],
+    "ت": ["t"],
+    "ث": ["s"],
+    "ج": ["d̠ʒ"],
+    "چ": ["t̠ʃ"],
+    "ح": ["h"],
+    "خ": ["x"],
+    "د": ["d"],
+    "ذ": ["z"],
+    "ر": ["r"],
+    "ز": ["z"],
+    "ژ": ["ʒ"],
+    "س": ["s"],
+    "ش": ["ʃ"],
+    "ص": ["s"],
+    "ض": ["z"],
+    "ط": ["t"],
+    "ظ": ["z"],
+    "ع": ["ʔ"],
+    "غ": ["ɡ"],
+    "ف": ["f"],
+    "ق": ["q"],
+    "ک": ["k"],
+    "گ": ["ɡ"],
+    "ل": ["l̪"],
+    "م": ["m"],
+    "ن": ["n̪"],
+    "و": ["v", "u"],
+    "ه": ["h", "e"],
+    "ی": ["j", "i"],
+    "ء": ["ʔ"]
+  },
+  "allophones": {
+    "ʔ": ["ʔ"], "ɑ": ["ɑ"], "ʔɑː": ["ʔɑː"], "b": ["b"], "p": ["p"], "t": ["t"],
+    "s": ["s"], "d̠ʒ": ["d̠ʒ"], "t̠ʃ": ["t̠ʃ"], "h": ["h"], "x": ["x"], "d": ["d"],
+    "z": ["z"], "r": ["r"], "ʒ": ["ʒ"], "ʃ": ["ʃ"], "ɡ": ["ɡ"], "f": ["f"],
+    "q": ["q"], "k": ["k"], "l̪": ["l̪"], "m": ["m"], "n̪": ["n̪"], "v": ["v"],
+    "u": ["u"], "e": ["e"], "j": ["j"], "i": ["i"]
+  },
+  "notes": "Mazanderani (مازِرونی) — Northwestern Iranian (Caspian) language of northern Iran, written in the Perso-Arabic (Arabic) script. SKELETON: consonant/vowel-letter table now specified, built from the shared Persian-alphabet consonant inventory and adjusted to the PHOIBLE-attested Mazanderani inventory (glottocode maza1291) already recorded in this spec's `phonemes` field: unlike Persian, laterals and nasals are DENTAL (/l̪/, /n̪/) and ⟨ق⟩/⟨غ⟩ are kept apart as /q/ vs /ɡ/ rather than merged, matching the Caspian-dialect pattern also documented for `glk` (Windfuhr 2009). As an ABJAD, short vowels are normally unwritten, so this table cannot by itself vocalise unvowelled text — the same INPUT CONTRACT limitation documented for `fa`/`ar`/`glk`. STRESS EXEMPTION: no `stress` block is declared; Mazanderani word-stress is not reconstructible from unvocalised Perso-Arabic spelling.",
+  "iso639_3": "mzn",
+  "glottolog_code": "maza1291",
+  "wikidata_qid": "Q13356",
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Mazanderani_language",
+    "https://mzn.wikipedia.org/wiki/%D9%85%D8%A7%D8%B2%D8%B1%D9%88%D9%86%DB%8C_%D8%B2%D9%88%D9%88%D9%86"
+  ],
+  "sources": [
+    {
+      "id": "mzn_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Mazanderani language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Mazanderani_language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Mazanderani_language",
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "phoible",
+      "author": "Moran, Steven & McCloy, Daniel (eds.)",
+      "year": 2019,
+      "title": "PHOIBLE 2.0",
+      "publisher": "Max Planck Institute for the Science of Human History",
+      "url": "https://phoible.org/",
+      "pages": null,
+      "notes": "Attested phoneme inventory for glottocode maza1291."
+    },
+    {
+      "id": "windfuhr2009",
+      "author": "Windfuhr, Gernot (ed.)",
+      "year": 2009,
+      "title": "The Iranian Languages",
+      "publisher": "Routledge",
+      "url": null,
+      "notes": "Comparative Caspian (Gilaki/Mazanderani) phonology chapter."
+    }
+  ],
+  "phonemes": [
+    "a", "b", "d", "d̠ʒ", "e", "f", "h", "i", "j", "k", "l̪", "m", "n̪", "o",
+    "p", "q", "r", "s", "t", "t̠ʃ", "u", "v", "x", "z", "ɑ", "ɛ", "ɡ", "ʃ", "ʒ"
+  ],
+  "parent": "ira",
+  "location": {
+    "latitude": 36.241,
+    "longitude": 52.3009,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Mazanderani."
+  }
+}

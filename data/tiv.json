@@ -1,0 +1,118 @@
+{
+ "code": "tiv",
+ "name": "Tiv",
+ "script": "Latin",
+ "quality": "skeleton",
+ "graphemes": {
+  "a": ["a"],
+  "e": ["e"],
+  "i": ["i"],
+  "o": ["o"],
+  "u": ["u"],
+  "ô": ["ɔ"],
+  "b": ["b"],
+  "c": ["t̠ʃ"],
+  "d": ["d"],
+  "dz": ["dz"],
+  "f": ["f"],
+  "g": ["ɡ"],
+  "gb": ["ɡb"],
+  "gh": ["ɣ"],
+  "h": ["h"],
+  "j": ["d̠ʒ"],
+  "k": ["k"],
+  "kp": ["kp"],
+  "l": ["l"],
+  "m": ["m"],
+  "mb": ["mb"],
+  "n": ["n"],
+  "nd": ["nd"],
+  "ndz": ["ndz"],
+  "ng": ["ŋ"],
+  "ngg": ["ŋɡ"],
+  "ngmgb": ["ŋmɡb"],
+  "nj": ["n̠d̠ʒ"],
+  "ny": ["ɲ"],
+  "p": ["p"],
+  "s": ["s"],
+  "sh": ["ʃ"],
+  "t": ["t"],
+  "ts": ["ts"],
+  "v": ["v"],
+  "w": ["w"],
+  "y": ["j"]
+ },
+ "allophones": {
+  "l": ["l", "r"],
+  "e": ["e", "ɛ"],
+  "a": ["a"], "i": ["i"], "o": ["o"], "u": ["u"], "ɔ": ["ɔ"],
+  "b": ["b"], "t̠ʃ": ["t̠ʃ"], "d": ["d"], "dz": ["dz"], "f": ["f"], "ɡ": ["ɡ"],
+  "ɡb": ["ɡb"], "ɣ": ["ɣ"], "h": ["h"], "d̠ʒ": ["d̠ʒ"], "k": ["k"], "kp": ["kp"],
+  "m": ["m"], "mb": ["mb"], "n": ["n"], "nd": ["nd"], "ndz": ["ndz"], "ŋ": ["ŋ"],
+  "ŋɡ": ["ŋɡ"], "ŋmɡb": ["ŋmɡb"], "n̠d̠ʒ": ["n̠d̠ʒ"], "ɲ": ["ɲ"], "p": ["p"],
+  "s": ["s"], "ʃ": ["ʃ"], "t": ["t"], "ts": ["ts"], "v": ["v"], "w": ["w"], "j": ["j"]
+ },
+ "notes": "Standard Tiv Latin orthography (East 1937; Abraham 1940; Tiv Bible Society conventions still used in current Tiv-language materials). Tiv is known for a rich series of prenasalized stops/affricates, each written as a digraph or trigraph that spells one single prenasalized segment, not a nasal followed by an oral obstruent (AGENTS.md test 2): ⟨mb⟩ /mb/, ⟨nd⟩ /nd/, ⟨ndz⟩ /ndz/, ⟨nj⟩ /n̠d̠ʒ/, ⟨ngg⟩ /ŋɡ/, ⟨ngmgb⟩ /ŋmɡb/ (the labial-velar prenasalized stop). ⟨c⟩ and ⟨j⟩ spell the affricates /t̠ʃ/ and /d̠ʒ/, ⟨gb⟩ and ⟨kp⟩ the labial-velar stops /ɡb/ and /kp/, ⟨gh⟩ the velar fricative /ɣ/, ⟨ny⟩ the palatal nasal /ɲ/, and ⟨ô⟩ the mid-back vowel /ɔ/ distinguished from ⟨o⟩ /o/. Tiv is tonal (PHOIBLE 1331: high/falling/low); tone is marked with diacritics in pedagogical texts but is frequently left unmarked in everyday orthography and is not encoded here — a documented exemption distinct from stress, which Tiv, like most Niger-Congo tone languages, does not contrast.",
+ "iso639_3": "tiv",
+ "glottolog_code": "tivv1240",
+ "wikidata_qid": "Q34235",
+ "wikipedia": [
+  "https://en.wikipedia.org/wiki/Tiv_language"
+ ],
+ "sources": [
+  {
+   "id": "glottolog2024",
+   "author": "Hammarström, Harald; Forkel, Robert; Haspelmath, Martin; Bank, Sebastian",
+   "year": 2024,
+   "title": "Glottolog 5.0",
+   "publisher": "Max Planck Institute for Evolutionary Anthropology",
+   "url": "https://glottolog.org/"
+  },
+  {
+   "id": "phoible2019",
+   "author": "Moran, Steven; McCloy, Daniel (eds.)",
+   "year": 2019,
+   "title": "PHOIBLE 2.0 (doi:10.5281/zenodo.2562766)",
+   "publisher": "Max Planck Institute for the Science of Human History",
+   "url": "https://phoible.org/inventories/view/1331",
+   "notes": "Inventory 1331 (ph), 37 non-marginal segments, 3 tones."
+  },
+  {
+   "id": "abraham1940",
+   "author": "Abraham, Roy Clive",
+   "year": 1940,
+   "title": "The Tiv People",
+   "publisher": "Government Printer, Lagos",
+   "notes": "Reference description including orthography and grammar."
+  },
+  {
+   "id": "east1937",
+   "author": "East, Rupert Moultrie",
+   "year": 1937,
+   "title": "Akiga's Story: The Tiv Tribe as Seen by One of Its Members",
+   "publisher": "Oxford University Press",
+   "notes": "Early codification of the Tiv Latin alphabet used in mission and literacy materials."
+  }
+ ],
+ "urls": [
+  "https://glottolog.org/resource/languoid/id/tivv1240"
+ ],
+ "location": {
+  "latitude": 6.8804,
+  "longitude": 9.2629,
+  "source": "glottolog",
+  "notes": "Glottolog's representative point."
+ },
+ "parent": "x-clade-atla1278",
+ "phonemes": [
+  "b", "d", "dz", "d̠ʒ", "f", "h", "j", "k", "kp", "l", "m", "mb", "n", "nd", "ndz",
+  "n̠d̠ʒ", "p", "s", "t", "ts", "t̠ʃ", "v", "w", "ŋ", "ŋmɡb", "ŋɡ", "ɡ", "ɡb", "ɣ", "ɲ", "ʃ",
+  "a", "e", "i", "o", "u", "ɔ"
+ ],
+ "tone_inventory": {
+  "˦": "PHOIBLE tone segment",
+  "˦˨": "PHOIBLE tone segment",
+  "˨": "PHOIBLE tone segment"
+ },
+ "phoible_id": "1331"
+}

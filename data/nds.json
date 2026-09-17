@@ -1,0 +1,862 @@
+{
+  "code": "nds",
+  "name": "Low German (Plattdeutsch)",
+  "script": "Latin",
+  "graphemes": {
+    "a": [
+      "a",
+      "ɔː",
+      "aː"
+    ],
+    "e": [
+      "ɛ",
+      "eː",
+      "ə"
+    ],
+    "i": [
+      "ɪ",
+      "iː"
+    ],
+    "o": [
+      "ɔ",
+      "oː"
+    ],
+    "u": [
+      "ʊ",
+      "uː"
+    ],
+    "ä": [
+      "ɛ",
+      "ɛː"
+    ],
+    "ö": [
+      "œ",
+      "øː"
+    ],
+    "ü": [
+      "ʏ",
+      "yː"
+    ],
+    "y": [
+      "ʏ",
+      "yː"
+    ],
+    "b": [
+      "b"
+    ],
+    "c": [
+      "k",
+      "ts"
+    ],
+    "d": [
+      "d"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɡ",
+      "ɣ",
+      "x"
+    ],
+    "h": [
+      "h"
+    ],
+    "j": [
+      "j"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "p": [
+      "p"
+    ],
+    "q": [
+      "k"
+    ],
+    "r": [
+      "r",
+      "ɾ",
+      "ʁ"
+    ],
+    "s": [
+      "z",
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "v": [
+      "v",
+      "f"
+    ],
+    "w": [
+      "v"
+    ],
+    "x": [
+      "ks"
+    ],
+    "z": [
+      "ts"
+    ],
+    "ß": [
+      "s"
+    ],
+    "ch": [
+      "x"
+    ],
+    "ck": [
+      "k"
+    ],
+    "ph": [
+      "f"
+    ],
+    "qu": [
+      "kv"
+    ],
+    "sch": [
+      "ʃ"
+    ],
+    "sp": [
+      "sp",
+      "ʃp"
+    ],
+    "st": [
+      "st",
+      "ʃt"
+    ],
+    "th": [
+      "t"
+    ],
+    "tz": [
+      "ts"
+    ],
+    "ng": [
+      "ŋ"
+    ],
+    "nk": [
+      "ŋk"
+    ],
+    "ss": [
+      "s"
+    ],
+    "tsch": [
+      "tʃ"
+    ],
+    "aa": [
+      "ɔː",
+      "oː",
+      "aː"
+    ],
+    "ee": [
+      "eː"
+    ],
+    "oo": [
+      "oː"
+    ],
+    "ie": [
+      "iː"
+    ],
+    "ei": [
+      "aɪ"
+    ],
+    "ai": [
+      "aɪ"
+    ],
+    "au": [
+      "aʊ"
+    ],
+    "eu": [
+      "ɔʏ"
+    ],
+    "äu": [
+      "ɔʏ"
+    ],
+    "ää": [
+      "ɛː"
+    ],
+    "öö": [
+      "øː"
+    ],
+    "uu": [
+      "uː"
+    ],
+    "üü": [
+      "yː"
+    ],
+    "yy": [
+      "yː"
+    ],
+    "ah": [
+      "ɔː",
+      "oː"
+    ],
+    "eh": [
+      "eː"
+    ],
+    "ih": [
+      "iː"
+    ],
+    "oh": [
+      "oː"
+    ],
+    "uh": [
+      "uː"
+    ],
+    "äh": [
+      "ɛː"
+    ],
+    "öh": [
+      "øː"
+    ],
+    "üh": [
+      "yː"
+    ],
+    "â": [
+      "a",
+      "ɔː",
+      "aː"
+    ],
+    "à": [
+      "a",
+      "ɔː",
+      "aː"
+    ],
+    "å": [
+      "a",
+      "ɔː",
+      "aː"
+    ],
+    "ë": [
+      "ɛ",
+      "eː",
+      "ə"
+    ],
+    "ę": [
+      "ɛ",
+      "eː",
+      "ə"
+    ],
+    "æ": [
+      "ɛ",
+      "ɛː"
+    ],
+    "œ": [
+      "œ",
+      "øː"
+    ]
+  },
+  "allophones": {
+    "p": [
+      "p"
+    ],
+    "b": [
+      "b",
+      "p"
+    ],
+    "t": [
+      "t"
+    ],
+    "d": [
+      "d",
+      "t"
+    ],
+    "k": [
+      "k"
+    ],
+    "ɡ": [
+      "ɡ",
+      "k",
+      "ɣ",
+      "x"
+    ],
+    "f": [
+      "f"
+    ],
+    "v": [
+      "v"
+    ],
+    "s": [
+      "s"
+    ],
+    "z": [
+      "z"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "ç": [
+      "ç"
+    ],
+    "x": [
+      "x"
+    ],
+    "h": [
+      "h"
+    ],
+    "ʁ": [
+      "ʁ",
+      "ʀ",
+      "r",
+      "ɐ̯"
+    ],
+    "ts": [
+      "ts"
+    ],
+    "tʃ": [
+      "tʃ"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n",
+      "ŋ"
+    ],
+    "ŋ": [
+      "ŋ"
+    ],
+    "l": [
+      "l"
+    ],
+    "j": [
+      "j"
+    ],
+    "a": [
+      "a"
+    ],
+    "ɛ": [
+      "ɛ"
+    ],
+    "ɪ": [
+      "ɪ"
+    ],
+    "ɔ": [
+      "ɔ"
+    ],
+    "ʊ": [
+      "ʊ"
+    ],
+    "œ": [
+      "œ"
+    ],
+    "ʏ": [
+      "ʏ"
+    ],
+    "ə": [
+      "ə"
+    ],
+    "aː": [
+      "aː"
+    ],
+    "eː": [
+      "eː"
+    ],
+    "iː": [
+      "iː"
+    ],
+    "oː": [
+      "oː"
+    ],
+    "uː": [
+      "uː"
+    ],
+    "ɛː": [
+      "ɛː"
+    ],
+    "øː": [
+      "øː"
+    ],
+    "yː": [
+      "yː"
+    ],
+    "aɪ": [
+      "aɪ"
+    ],
+    "aʊ": [
+      "aʊ"
+    ],
+    "ɔʏ": [
+      "ɔʏ"
+    ],
+    "r": [
+      "r",
+      "ɾ"
+    ],
+    "ɣ": [
+      "ɣ"
+    ]
+  },
+  "parent": "osx",
+  "ancestors": [
+    {
+      "code": "osx",
+      "role": "parent",
+      "weight": 0.95,
+      "notes": "Descent from Old Saxon"
+    }
+  ],
+  "notes": "Low German (Plattdeutsch / Nedderdütsch), encoded for the SASS orthography of Northern Low Saxon (Nordniedersächsisch), the most widely used Low German spelling. Descended from Old Saxon — NOT from Old High German — and it did not undergo the High German consonant shift: maken vs. German machen, water vs. German Wasser. There is no ⟨pf⟩ for that reason. VOWEL LENGTH is written three ways and no other (SASS §§3–5): a Dehnungs-h in words whose High German cognate has one (§3: gahn, mehr); doubled ⟨aa ää ee oo öö uu üü yy⟩ in a closed syllable (§5 I: Aal, Straat, Schüün, gröön); and ⟨ie⟩ for long i (§12: Ies, hier, frie). In an OPEN syllable length is simply not written (§4 I: sche-ten, grö-ne, Se-len, and the monosyllables bi, du, he, se, na, to, so, wo), which is what the NDS_OPEN_SYLLABLE_* and NDS_OPEN_FINAL_* rules restore. LONG A IS DARK: it ranges from [ɔː] to [oː] and is written ⟨a/aa/ah⟩ (SASS §9; SASS-Grammatik 1.1.4.1 \"Langes a\" gives kamen, Straat, Hahn). VOWEL SHORTNESS is written by doubling the FOLLOWING consonant (§6: Katt, Kopp, seggen, tappen) — the doubled letter marks the vowel, not a long consonant, hence collapse_geminates. UNSTRESSED SYLLABLES: ⟨-en⟩ loses its e and is spoken as a syllabic nasal, ⟨-el⟩ as a syllabic lateral, and ⟨-er⟩ as [ɐ] (SASS §§23/27; SASS-Grammatik 1.1.4.5: Gavel [ɡɔːvl̩], laten [lɔːtn̩], Schöler [ʃøːlɐ]). Stress is word-initial (Lindow et al. 1998:30, reported in Prehn 2012 §4.1). R: the onset rhotic is apical — a trill or tap — with uvular [ʁ] a German-contact variant, so all three stay in the lattice; post-vocalic ⟨r⟩ vocalises, \"the original /r/ vocalizes to a full-fledged [a] in post-vocalic, syllable- or word-final position\" (Prehn 2012 §5.1), and SASS §9 likewise speaks of a \"zu a vokalisierten r\". FORTIS/LENIS: a word-final lenis obstruent surfaces voiceless — Prehn 2012 argues Low German has a laryngeally unspecified lenis series whose lack of a laryngeal node allows \"voicelessness in voiceless and word-final context\", which subsumes the traditional final-devoicing process (Prehn 2012 ch. 3, ch. 6). G: word-initial ⟨g⟩ is [ɡ], and [ç] in Schleswig (SASS §16 I transcribes gele Georginen with [ç] throughout); word-final ⟨g⟩ is [ç/x] (§16 II: Dag, Tog, weg); intervocalic ⟨g⟩ is [ɡ] (§16 III: negen, stiegen, hoge). V/W: ⟨w⟩ is written word-initially and ⟨v⟩ elsewhere (§21: Water, Gloov, Gloven); the intervocalic v/b sound is [v] (§18). ⟨sl sm sn sp st sw⟩ are written with s whether [s] or [ʃ] is spoken (§20: slaan, snuven, spelen, stöten), so both readings stay in the lattice. Dialect diversity is real and this gold set reflects it: Westphalian and Dutch Low Saxon spellings (⟨uo iä äö ao⟩) and idiosyncratic letters (⟨â à å ë ę æ œ⟩) occur alongside SASS. Those letters are mapped to their base letter's values so that no character is silently dropped; their dialect-specific values are not asserted. ENDING \"en\" is [ən] at rank 1, with the syllabic nasal [n̩] carried as a lattice alternative (SASS-Grammatik 1.1.4.5; Thies 2011, gives Gavel [ɡɔːvl̩]); lattice-hole evidence for \"en\" (the admissibility bar in SCHEMA.md, 0-in-top-k on gold): before this entry [n̩] appeared in word_candidates 0 times in the top 5 for any of the 89 gold words ending in ⟨-en⟩, and after it 75 of those 89 carry [n̩] within the top 5 while rank 1 is unchanged; of the 161 pronunciation occurrences those 89 words carry in the gold, 95 already write [ə n] and 33 write [n̩] (5 more surface as [ŋ̩] after a velar), so the crowd-scraped convention keeps [ən] the majority reading. ordering basis for \"en\": rank 1 stays [ən] because that is the gold's own majority spelling-to-sound convention, not because SASS-Grammatik 1.1.4.5's \"das e fällt stets aus\" is wrong — it is added below rank 1 exactly as fr-FR's ⟨-ent⟩ entry defers to the base path. ENDING \"er\" is [ər] at rank 1, with the syllabic [ɐ] carried as a lattice alternative (SASS-Grammatik 1.1.4.5; Thies 2011, gives Schöler [ʃøːlɐ]); lattice-hole evidence for \"er\": before this entry [ɐ] appeared in word_candidates 0 times in the top 5 for any of the 19 gold words ending in ⟨-er⟩, and after it 15 of those 19 carry [ɐ] within the top 5 while rank 1 is unchanged. ordering basis for \"er\": rank 1 stays [ər] for the same reason as \"en\" — the crowd-scraped gold's own convention, not the prescriptive grammar, is what the base path already produces.",
+  "quality": "research",
+  "script_type": "alphabet",
+  "iso639_3": "nds",
+  "sources": [
+    {
+      "id": "sass2018",
+      "author": "Thies, Heinrich (Hrsg.)",
+      "year": 2018,
+      "title": "SASS Plattdeutsche Schreibregeln",
+      "publisher": "Wachholtz / Fehrs-Gilde",
+      "url": "https://sass-platt.de/plattdeutsche-rechtschreibung/",
+      "pages": "§§1, 3–6, 9, 12, 16, 18, 20–21, 23, 27",
+      "notes": "The 1956 Saß spelling rules for Northern Low Saxon, in Thies's fully documented edition. Cited here for every orthographic claim: what marks vowel length, what marks vowel shortness, and the g/v/w/s conventions."
+    },
+    {
+      "id": "sassgrammatik",
+      "author": "Thies, Heinrich",
+      "year": 2011,
+      "title": "SASS Plattdeutsche Grammatik",
+      "publisher": "Wachholtz",
+      "url": "https://sass-platt.de/plattdeutsche-grammatik/",
+      "pages": "1.1.4.1, 1.1.4.5, 1.1.4.6",
+      "notes": "Supplies the phonetic values behind the spelling rules: long a as [ɔː]~[oː], and the syllabic -el/-en and [ɐ] of -er."
+    },
+    {
+      "id": "prehn2012",
+      "author": "Prehn, Maike",
+      "year": 2012,
+      "title": "Vowel quantity and the fortis-lenis distinction in North Low Saxon",
+      "publisher": "LOT (LOT Dissertation Series 291), Utrecht",
+      "url": "https://www.lotpublications.nl/Documents/291_fulltext.pdf",
+      "pages": "ch. 3, ch. 5.1, ch. 6",
+      "notes": "Instrumental study of North Low Saxon quantity. Cited for post-vocalic r-vocalization and for the word-final voicelessness of lenis obstruents."
+    },
+    {
+      "id": "lindow1998",
+      "author": "Lindow, W. & Möhn, D. & Niebaum, H. & Stellmacher, D. & Taubken, H. & Wirrer, J.",
+      "year": 1998,
+      "title": "Niederdeutsche Grammatik",
+      "publisher": "Verlag Schuster, Leer",
+      "url": null,
+      "pages": "30",
+      "notes": "Word-initial stress. Cited as reported by Prehn 2012 §4.1; the grammar itself was not consulted."
+    },
+    {
+      "id": "stellmacher1990",
+      "author": "Stellmacher, D.",
+      "year": 1990,
+      "title": "Niederdeutsche Sprache: Eine Einführung",
+      "publisher": "Peter Lang",
+      "url": null,
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Low_German",
+    "https://nds.wikipedia.org/wiki/Nedderdüütsch",
+    "https://nds.wikipedia.org/wiki/Nedderd%C3%BC%C3%BCtsch",
+    "https://nds.wikipedia.org/wiki/Plattd%C3%BC%C3%BCtsch",
+    "https://de.wikipedia.org/wiki/Niederdeutsche_Sprache"
+  ],
+  "urls": [
+    "https://en.wikipedia.org/wiki/Low_German",
+    "https://en.wikipedia.org/wiki/Ingvaeonic_languages",
+    "https://en.wikipedia.org/wiki/Old_Saxon",
+    "https://de.wikipedia.org/wiki/Niederdeutsche_Sprache",
+    "https://nds.wikipedia.org/wiki/Nedderdüütsch"
+  ],
+  "timespan": {
+    "start_year": 1600,
+    "end_year": null
+  },
+  "glottolog_code": "nort2627",
+  "positional_graphemes": {
+    "g": {
+      "word_initial": [
+        "ɡ",
+        "ç"
+      ],
+      "intervocalic": [
+        "ɡ",
+        "ɣ"
+      ],
+      "word_final": [
+        "x",
+        "ç"
+      ],
+      "default": [
+        "ɡ"
+      ]
+    },
+    "r": {
+      "word_final": [
+        "r",
+        "ɐ̯"
+      ],
+      "before_consonant": [
+        "r",
+        "ɐ̯"
+      ],
+      "default": [
+        "r",
+        "ɾ"
+      ]
+    },
+    "e": {
+      "nucleus_unstressed": [
+        "ə"
+      ],
+      "nucleus_stressed": [
+        "ɛ",
+        "eː"
+      ],
+      "default": [
+        "ɛ",
+        "eː",
+        "ə"
+      ]
+    },
+    "b": {
+      "word_final": [
+        "p"
+      ],
+      "default": [
+        "b"
+      ]
+    },
+    "d": {
+      "word_final": [
+        "t"
+      ],
+      "default": [
+        "d"
+      ]
+    },
+    "v": {
+      "word_final": [
+        "f"
+      ],
+      "default": [
+        "v"
+      ]
+    },
+    "s": {
+      "word_initial": [
+        "z"
+      ],
+      "intervocalic": [
+        "z"
+      ],
+      "word_final": [
+        "s"
+      ],
+      "default": [
+        "s"
+      ]
+    }
+  },
+  "wikidata_qid": "Q25433",
+  "phoible_id": "nort2627",
+  "wals_code": "lge",
+  "location": {
+    "latitude": 53.115373,
+    "longitude": 12.391439,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Eastern Low German."
+  },
+  "collapse_geminates": true,
+  "stress": {
+    "default_position": 1,
+    "marked_vowels": [],
+    "stress_mark": "ˈ",
+    "notes": "Word-initial stress (Lindow et al. 1998:30, reported in Prehn 2012 §4.1)."
+  },
+  "allophone_rules": [
+    {
+      "id": "NDS_OPEN_SYLLABLE_A",
+      "phonemes": [
+        "a"
+      ],
+      "surface": "ɔː",
+      "syllable_position": "nucleus",
+      "stress": "stressed",
+      "followed_by": "consonant",
+      "followed_by_2": "vowel",
+      "grapheme": [
+        "a"
+      ],
+      "followed_by_grapheme_not": [
+        "ss",
+        "ck",
+        "ng",
+        "nk",
+        "tsch",
+        "sch"
+      ],
+      "notes": "SASS §4 I: length in an open syllable is not written (sche-ten, grö-ne, Se-len)."
+    },
+    {
+      "id": "NDS_OPEN_SYLLABLE_E",
+      "phonemes": [
+        "ɛ"
+      ],
+      "surface": "eː",
+      "syllable_position": "nucleus",
+      "stress": "stressed",
+      "followed_by": "consonant",
+      "followed_by_2": "vowel",
+      "grapheme": [
+        "e"
+      ],
+      "followed_by_grapheme_not": [
+        "ss",
+        "ck",
+        "ng",
+        "nk",
+        "tsch",
+        "sch"
+      ],
+      "notes": "SASS §4 I: length in an open syllable is not written (sche-ten, grö-ne, Se-len)."
+    },
+    {
+      "id": "NDS_OPEN_SYLLABLE_I",
+      "phonemes": [
+        "ɪ"
+      ],
+      "surface": "iː",
+      "syllable_position": "nucleus",
+      "stress": "stressed",
+      "followed_by": "consonant",
+      "followed_by_2": "vowel",
+      "grapheme": [
+        "i"
+      ],
+      "followed_by_grapheme_not": [
+        "ss",
+        "ck",
+        "ng",
+        "nk",
+        "tsch",
+        "sch"
+      ],
+      "notes": "SASS §4 I: length in an open syllable is not written (sche-ten, grö-ne, Se-len)."
+    },
+    {
+      "id": "NDS_OPEN_SYLLABLE_O",
+      "phonemes": [
+        "ɔ"
+      ],
+      "surface": "oː",
+      "syllable_position": "nucleus",
+      "stress": "stressed",
+      "followed_by": "consonant",
+      "followed_by_2": "vowel",
+      "grapheme": [
+        "o"
+      ],
+      "followed_by_grapheme_not": [
+        "ss",
+        "ck",
+        "ng",
+        "nk",
+        "tsch",
+        "sch"
+      ],
+      "notes": "SASS §4 I: length in an open syllable is not written (sche-ten, grö-ne, Se-len)."
+    },
+    {
+      "id": "NDS_OPEN_SYLLABLE_U",
+      "phonemes": [
+        "ʊ"
+      ],
+      "surface": "uː",
+      "syllable_position": "nucleus",
+      "stress": "stressed",
+      "followed_by": "consonant",
+      "followed_by_2": "vowel",
+      "grapheme": [
+        "u"
+      ],
+      "followed_by_grapheme_not": [
+        "ss",
+        "ck",
+        "ng",
+        "nk",
+        "tsch",
+        "sch"
+      ],
+      "notes": "SASS §4 I: length in an open syllable is not written (sche-ten, grö-ne, Se-len)."
+    },
+    {
+      "id": "NDS_OPEN_SYLLABLE_OE",
+      "phonemes": [
+        "œ"
+      ],
+      "surface": "øː",
+      "syllable_position": "nucleus",
+      "stress": "stressed",
+      "followed_by": "consonant",
+      "followed_by_2": "vowel",
+      "grapheme": [
+        "ö"
+      ],
+      "followed_by_grapheme_not": [
+        "ss",
+        "ck",
+        "ng",
+        "nk",
+        "tsch",
+        "sch"
+      ],
+      "notes": "SASS §4 I: length in an open syllable is not written (sche-ten, grö-ne, Se-len)."
+    },
+    {
+      "id": "NDS_OPEN_SYLLABLE_UE",
+      "phonemes": [
+        "ʏ"
+      ],
+      "surface": "yː",
+      "syllable_position": "nucleus",
+      "stress": "stressed",
+      "followed_by": "consonant",
+      "followed_by_2": "vowel",
+      "grapheme": [
+        "ü"
+      ],
+      "followed_by_grapheme_not": [
+        "ss",
+        "ck",
+        "ng",
+        "nk",
+        "tsch",
+        "sch"
+      ],
+      "notes": "SASS §4 I: length in an open syllable is not written (sche-ten, grö-ne, Se-len)."
+    },
+    {
+      "id": "NDS_OPEN_FINAL_A",
+      "phonemes": [
+        "a"
+      ],
+      "surface": "ɔː",
+      "syllable_position": "nucleus",
+      "stress": "stressed",
+      "word_final": true,
+      "grapheme": [
+        "a"
+      ],
+      "notes": "SASS §4 I: word-final open monosyllables carry an unwritten long vowel (bi, du, he, se, na, to, so, wo)."
+    },
+    {
+      "id": "NDS_OPEN_FINAL_E",
+      "phonemes": [
+        "ɛ"
+      ],
+      "surface": "eː",
+      "syllable_position": "nucleus",
+      "stress": "stressed",
+      "word_final": true,
+      "grapheme": [
+        "e"
+      ],
+      "notes": "SASS §4 I: word-final open monosyllables carry an unwritten long vowel (bi, du, he, se, na, to, so, wo)."
+    },
+    {
+      "id": "NDS_OPEN_FINAL_I",
+      "phonemes": [
+        "ɪ"
+      ],
+      "surface": "iː",
+      "syllable_position": "nucleus",
+      "stress": "stressed",
+      "word_final": true,
+      "grapheme": [
+        "i"
+      ],
+      "notes": "SASS §4 I: word-final open monosyllables carry an unwritten long vowel (bi, du, he, se, na, to, so, wo)."
+    },
+    {
+      "id": "NDS_OPEN_FINAL_O",
+      "phonemes": [
+        "ɔ"
+      ],
+      "surface": "oː",
+      "syllable_position": "nucleus",
+      "stress": "stressed",
+      "word_final": true,
+      "grapheme": [
+        "o"
+      ],
+      "notes": "SASS §4 I: word-final open monosyllables carry an unwritten long vowel (bi, du, he, se, na, to, so, wo)."
+    },
+    {
+      "id": "NDS_OPEN_FINAL_U",
+      "phonemes": [
+        "ʊ"
+      ],
+      "surface": "uː",
+      "syllable_position": "nucleus",
+      "stress": "stressed",
+      "word_final": true,
+      "grapheme": [
+        "u"
+      ],
+      "notes": "SASS §4 I: word-final open monosyllables carry an unwritten long vowel (bi, du, he, se, na, to, so, wo)."
+    },
+    {
+      "id": "NDS_OPEN_FINAL_OE",
+      "phonemes": [
+        "œ"
+      ],
+      "surface": "øː",
+      "syllable_position": "nucleus",
+      "stress": "stressed",
+      "word_final": true,
+      "grapheme": [
+        "ö"
+      ],
+      "notes": "SASS §4 I: word-final open monosyllables carry an unwritten long vowel (bi, du, he, se, na, to, so, wo)."
+    },
+    {
+      "id": "NDS_OPEN_FINAL_UE",
+      "phonemes": [
+        "ʏ"
+      ],
+      "surface": "yː",
+      "syllable_position": "nucleus",
+      "stress": "stressed",
+      "word_final": true,
+      "grapheme": [
+        "ü"
+      ],
+      "notes": "SASS §4 I: word-final open monosyllables carry an unwritten long vowel (bi, du, he, se, na, to, so, wo)."
+    }
+  ],
+  "grammatical_endings": {
+    "en": [
+      null,
+      "n̩"
+    ],
+    "er": [
+      null,
+      "ɐ"
+    ]
+  },
+  "orthography_standard": {
+    "name": "SASS Plattdüütsche Schrievregeln",
+    "authority": "Fehrs-Gild / Heinrich Thies",
+    "year": 2018,
+    "url": "https://sass-platt.de/plattdeutsche-rechtschreibung/",
+    "notes": "Agreed in 1956 for Northern Low Saxon and the most widely used Low German spelling, but not an official norm and not universal: Westphalian, Eastphalian and Dutch Low Saxon writing traditions spell the same language differently."
+  }
+}

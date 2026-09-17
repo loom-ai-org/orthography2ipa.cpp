@@ -1,0 +1,153 @@
+{
+  "code": "ca-x-alguer",
+  "name": "Alguerese (l'alguerès, Catalan of Alghero, Sardinia)",
+  "script": "Latin",
+  "parent": "ca",
+  "graphemes_base": "ca",
+  "allophones_base": "ca",
+  "positional_graphemes_base": "ca",
+  "graphemes": {
+    "v": [
+      "v"
+    ]
+  },
+  "allophones": {
+    "v": [
+      "v"
+    ],
+    "d": [
+      "d",
+      "ð",
+      "ɾ"
+    ],
+    "l": [
+      "l",
+      "ɾ"
+    ]
+  },
+  "positional_graphemes": {
+    "d": {
+      "intervocalic": [
+        "ɾ"
+      ]
+    },
+    "l": {
+      "intervocalic": [
+        "ɾ"
+      ],
+      "before_consonant": [
+        "ɾ"
+      ],
+      "word_final": [
+        "ɾ"
+      ]
+    },
+    "ll": {
+      "before_consonant": [
+        "l"
+      ],
+      "word_final": [
+        "l"
+      ]
+    },
+    "a": {
+      "nucleus_unstressed": [
+        "a"
+      ]
+    },
+    "e": {
+      "nucleus_unstressed": [
+        "e"
+      ]
+    }
+  },
+  "ancestors": [
+    {
+      "code": "ca",
+      "role": "parent",
+      "weight": 0.68,
+      "notes": "Catalan: Alguerese (l'alguerès) is the Catalan of Alghero (l'Alguer), a linguistic island on the north-west coast of Sardinia settled from the 14th c. under the Crown of Aragon. It belongs genetically to the Eastern Catalan bloc but, uniquely within it, has NO neutral vowel [ə]: unstressed /a/ and /e/ are not reduced to schwa but realised as an [a]-like vowel (pare → [ˈpaɾa]-type). Only the o/u → [u] reduction of Eastern Catalan applies."
+    },
+    {
+      "code": "sc",
+      "role": "adstrate",
+      "weight": 0.22,
+      "notes": "Sardinian (Logudorese/Sassarese) adstrate: the dominant contact language of the island. Held responsible for the hallmark alguerès rhotacism — intervocalic and coda /d/ and /l/ → alveolar tap [ɾ] (rodó [ruˈɾo], ungla → [ˈuŋɡɾa], moneda → munera) — and for the acoustically atypical, less-open mid vowels (Recasens 1996 on centralised /e/) and heavy lexical borrowing."
+    },
+    {
+      "code": "it-IT",
+      "role": "adstrate",
+      "weight": 0.08,
+      "notes": "Italian adstrate/roof language: the state language of Sardinia, source of recent borrowing and of pressure on the phonological system (metathesis, assimilation, epenthetic final -[i])."
+    },
+    {
+      "code": "la-x-hispania",
+      "role": "ancestor",
+      "weight": 0.02,
+      "notes": "Vulgar Latin, inherited via Catalan."
+    }
+  ],
+  "notes": "Alguerese (alguerès, català de l'Alguer) — the isolated Eastern-Catalan variety of Alghero (l'Alguer) on Sardinia, the only Catalan-speaking enclave in Italy, dating to the 14th-c. Catalano-Aragonese repopulation. MODELLED DELTAS over the Catalan (ca) base: (1) NO SCHWA REDUCTION: unlike the rest of Eastern Catalan, alguerès does NOT reduce unstressed /a/,/e/ to [ə] — the nucleus_unstressed positions of ⟨a⟩ and ⟨e⟩ are overridden back to [a]/[e]. The o/u → [u] reduction IS kept (inherited from ca). (2) /v/ RETAINED: ⟨v⟩ = [v] distinct from /b/ — alguerès keeps the B–V opposition (a conservative, Balearic/Valencian-like trait), so the ca-default betacism ⟨v⟩=[b] is overridden. (3) RHOTACISM — the signature alguerès feature: intervocalic and coda /d/ and /l/ surface as an alveolar tap [ɾ] (vila [ˈbiɾa]-type, escola, cada [ˈkaɾa]), attributed to Sardinian contact; encoded in positional_graphemes and folded into the /d/,/l/ allophone sets so the inventory stays closed. (4) DESPALATALISATION OF CODA ⟨ll⟩: word-final/coda ⟨ll⟩ → [l] (vermell [valˈmel], Pou Vell [pow ˈvel]) — the orthographic ⟨ll⟩ is retained but coda /ʎ/ depalatalises. INHERITED from ca and NOT re-declared: prepalatal ⟨x⟩/⟨ix⟩ = [ʃ], ⟨j⟩/⟨g⟩(e,i) = [ʒ], the o→[u] reduction, final-obstruent devoicing, and the seven-quality tonic vowel set (with the caveat that alguerès mid vowels è/ò are acoustically less open than Central Catalan — documented, not re-mapped, since the phoneme identities are unchanged). DOCUMENTED-NOT-MODELLED (out of grapheme→IPA scope or too lexically conditioned to map cleanly): epenthetic final -[i] (acud [aˈkuɾi]), metathesis/assimilation, and the strong Sardinian/Italian lexical layer. Provenance honesty: base inherited from the research-tier ca spec; the deltas are page-pinned to the deposited OA studies (Bosch; Zurita Saballs; the Cervantes-Virtual acoustic vowel study), with Kuen (1932) reached only via those sources.\nca-x-alguer (Alguerese) has NO gold set in this repo, so the cross-word vowel-contact rules that it inherits from ca are Wheeler's and Bonet & Lloret's pan-Catalan statement EXTENDED to it by descent, not a measured result. Nothing here scores them; treat them as a prediction. Alguerese does not reduce unstressed /a/,/e/ to [ə], so the final-schwa half is vacuous here and only the initial-vowel elision and the two glide rules can fire.\nINHERITED-BY-DESCENT, UNMEASURED (wave 2). ca-x-alguer declares no rule layer of its own, so it takes the whole of ca's — including the wave-2 additions: CA_E_CLOSE_BEFORE_CODA_NT, CA_O_CLOSE_SUFFIX_OR(_CLUSTER) and CA_O_CLOSE_SUFFIX_IONS (dent, color [kuˈɾo], senyor, accions), plus CA_QUE_ELISION and CA_CLITIC_GLIDE_I_BEFORE_VOWEL. This is deliberate and is the same footing as every Central rule this spec already inherits, CA_CENTRAL_CLOSE_O among them: alguerès keeps the SAME seven-quality tonic vowel set with the same phoneme identities as Central (the acoustic study finds its è/ò merely less open, an implementation difference this spec documents and does not re-map), so a rule that decides WHICH mid-vowel phoneme an unaccented stressed ⟨e⟩/⟨o⟩ is transfers with the vowel system. The endings themselves are -ŌRE and -IŌNE reflexes shared by the whole language, not a Central innovation. But there is NO Alguerese gold in this repo, so none of it is measured here: treat it, like the vowel-contact rules above, as a prediction. Anyone who finds Alguerese evidence against it should opt the spec out by re-declaring the offending ids with no phonemes, which is what that mechanism is for.",
+  "sources": [
+    {
+      "id": "bosch_codificacio_algueres",
+      "author": "Bosch i Rodoreda, A.",
+      "year": 2002,
+      "title": "Problemes de codificació de l'alguerès",
+      "publisher": "(Dialnet OA, art. 3623056)",
+      "url": "https://dialnet.unirioja.es/descarga/articulo/3623056.pdf",
+      "pages": null,
+      "notes": "Read directly (papers/iberian/bosch_problemes_codificacio_algueres.pdf). Rhotacism -/d/- > [ɾ] (rodó [ruˈɾo], rumpuda) and -/l/- > [ɾ] (ungla→ungra); despalatalisation of coda -ll → [l] (vermell [valˈmel]); epenthetic final -[i] (acud [aˈkuɾi])."
+    },
+    {
+      "id": "zurita_algueres",
+      "author": "Zurita Saballs, J.",
+      "year": 2022,
+      "title": "La llengua literària catalana a l'Alguer (TFG)",
+      "publisher": "Universitat de Girona (DUGiDocs)",
+      "url": "https://dugi-doc.udg.edu/bitstream/handle/10256/21374/ZuritaSaballsJoel_Treball.pdf",
+      "pages": "19, 26",
+      "notes": "Read (papers/iberian/algueres_llengua_literaria_zurita.pdf). p.19: 7-vowel tonic system, LACKS the neutral vowel despite Eastern-Catalan membership; unstressed a/e realised [a]-like (para for pare). p.~26: 'tot i ser considerat del bloc del català oriental, no té la vocal neutra'; alguerès keeps the B/V distinction phonetically."
+    },
+    {
+      "id": "algueres_vocals_acustic",
+      "author": "(Cervantes Virtual, acoustic study)",
+      "year": 2003,
+      "title": "Sobre la correcta interpretació dels fonemes vocàlics de l'alguerès: un estudi acústic",
+      "publisher": "Biblioteca Virtual Miguel de Cervantes",
+      "url": "https://www.cervantesvirtual.com/",
+      "pages": null,
+      "notes": "Read (papers/iberian/algueres_vocals_estudi_acustic.pdf). Publication year approximate. Mid vowels acoustically atypical vs Central Catalan: /e/ centralised/posterior (citing Recasens 1996 p.70); open-mid è/ò less open than Central Catalan, causing non-alguerès transcribers to mis-classify. Documents the vowel qualities but confirms the phoneme identities used here."
+    },
+    {
+      "id": "kuen_algueres1932",
+      "author": "Kuen, H.",
+      "year": 1932,
+      "title": "El dialecto de Alguer y su posición en la historia de la lengua catalana",
+      "publisher": "Anuari de l'Oficina Romànica de Lingüística i Literatura V-VII",
+      "url": null,
+      "pages": null,
+      "notes": "The classic monograph on Alguerese. Not open; its data are quoted extensively in the acoustic study and in Recasens, the OA sources used here."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Alguerese_dialect",
+    "https://ca.wikipedia.org/wiki/Alguer%C3%A8s",
+    "https://it.wikipedia.org/wiki/Dialetto_algherese"
+  ],
+  "timespan": {
+    "start_year": 1372,
+    "end_year": null
+  },
+  "glottolog_code": "algh1238",
+  "iso639_3": "cat",
+  "quality": "research",
+  "script_type": "alphabet",
+  "wikidata_qid": "Q2404830",
+  "location": {
+    "latitude": 40.5583,
+    "longitude": 8.3186,
+    "source": "manual",
+    "notes": "Alghero (l'Alguer), north-west Sardinia, Italy."
+  }
+}

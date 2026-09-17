@@ -1,0 +1,192 @@
+{
+  "code": "to",
+  "name": "Tongan",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "ā": [
+      "aː"
+    ],
+    "e": [
+      "e"
+    ],
+    "ē": [
+      "eː"
+    ],
+    "i": [
+      "i"
+    ],
+    "ī": [
+      "iː"
+    ],
+    "o": [
+      "o"
+    ],
+    "ō": [
+      "oː"
+    ],
+    "u": [
+      "u"
+    ],
+    "ū": [
+      "uː"
+    ],
+    "f": [
+      "f"
+    ],
+    "h": [
+      "h"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ng": [
+      "ŋ"
+    ],
+    "p": [
+      "p"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "v": [
+      "v"
+    ],
+    "ʻ": [
+      "ʔ"
+    ]
+  },
+  "allophones": {
+    "a": [
+      "a"
+    ],
+    "aː": [
+      "aː"
+    ],
+    "e": [
+      "e"
+    ],
+    "eː": [
+      "eː"
+    ],
+    "i": [
+      "i"
+    ],
+    "iː": [
+      "iː"
+    ],
+    "o": [
+      "o"
+    ],
+    "oː": [
+      "oː"
+    ],
+    "u": [
+      "u"
+    ],
+    "uː": [
+      "uː"
+    ],
+    "f": [
+      "f"
+    ],
+    "h": [
+      "h"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ŋ": [
+      "ŋ"
+    ],
+    "p": [
+      "p"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "v": [
+      "v"
+    ],
+    "ʔ": [
+      "ʔ"
+    ]
+  },
+  "notes": "Tongan (lea faka-Tonga), Polynesian, Kingdom of Tonga. Fully phonemic 17-letter orthography: 5 vowels with a phonemic length contrast written with the macron (toloi: ā ē ī ō ū), 12 consonants including the digraph ⟨ng⟩ /ŋ/ and the fakauʻa ⟨ʻ⟩ (U+02BB MODIFIER LETTER TURNED COMMA), a full consonant phoneme /ʔ/ that must stand between or before vowels. ⟨p⟩ /p/ and ⟨t⟩ /t/ are unaspirated. Syllables are open (CV/V). Input contract: the glottal stop must be written with U+02BB ⟨ʻ⟩; an ASCII apostrophe (') or a right single quote (’) is not recognised as a grapheme.",
+  "iso639_3": "ton",
+  "glottolog_code": "tong1325",
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Tongan_language",
+    "https://to.wikipedia.org/wiki/Lea_fakatonga"
+  ],
+  "sources": [
+    {
+      "id": "churchward1953",
+      "author": "Churchward, C. Maxwell",
+      "year": 1953,
+      "title": "Tongan Grammar",
+      "publisher": "Oxford University Press",
+      "url": null,
+      "pages": null,
+      "notes": "Standard reference grammar; alphabet, fakauʻa and toloi."
+    },
+    {
+      "id": "tongan_language_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Tongan language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Tongan_language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Tongan_language",
+      "pages": null,
+      "notes": "Alphabet-to-IPA table."
+    }
+  ],
+  "timespan": {
+    "start_year": 1800,
+    "end_year": null
+  },
+  "parent": "x-clade-mala1545",
+  "ancestors": [
+    {
+      "code": "x-clade-mala1545",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Malayo-Polynesian, the Austronesian branch containing every Austronesian language outside Formosa."
+    }
+  ],
+  "location": {
+    "latitude": -21.17,
+    "longitude": -175.25,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Tonga (Tonga Islands)."
+  }
+}

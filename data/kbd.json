@@ -1,0 +1,545 @@
+{
+  "code": "kbd",
+  "name": "Kabardian",
+  "script": "Cyrillic",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "а": [
+      "aː"
+    ],
+    "э": [
+      "a"
+    ],
+    "б": [
+      "b"
+    ],
+    "в": [
+      "v"
+    ],
+    "гъу": [
+      "ʁʷ"
+    ],
+    "гъ": [
+      "ʁ"
+    ],
+    "гу": [
+      "ɡʷ"
+    ],
+    "г": [
+      "ɣ"
+    ],
+    "дж": [
+      "d͡ʒ"
+    ],
+    "дз": [
+      "d͡z"
+    ],
+    "д": [
+      "d"
+    ],
+    "е": [
+      "ja"
+    ],
+    "ё": [
+      "jo"
+    ],
+    "жь": [
+      "ʑ"
+    ],
+    "ж": [
+      "ʒ"
+    ],
+    "з": [
+      "z"
+    ],
+    "и": [
+      "jə"
+    ],
+    "й": [
+      "j"
+    ],
+    "кхъу": [
+      "q͡χʷ"
+    ],
+    "кхъ": [
+      "q͡χ"
+    ],
+    "къу": [
+      "qʷ"
+    ],
+    "къ": [
+      "q"
+    ],
+    "кӏу": [
+      "kʷʼ"
+    ],
+    "кӏ": [
+      "t͡ʃʼ",
+      "kʲʼ"
+    ],
+    "ку": [
+      "kʷ"
+    ],
+    "к": [
+      "k"
+    ],
+    "лъ": [
+      "ɬ"
+    ],
+    "лӏ": [
+      "ɬʼ"
+    ],
+    "л": [
+      "ɮ",
+      "l"
+    ],
+    "м": [
+      "m"
+    ],
+    "н": [
+      "n"
+    ],
+    "о": [
+      "aw"
+    ],
+    "пӏ": [
+      "pʼ"
+    ],
+    "п": [
+      "p"
+    ],
+    "р": [
+      "r"
+    ],
+    "с": [
+      "s"
+    ],
+    "тӏ": [
+      "tʼ"
+    ],
+    "т": [
+      "t"
+    ],
+    "у": [
+      "w"
+    ],
+    "фӏ": [
+      "fʼ"
+    ],
+    "ф": [
+      "f"
+    ],
+    "хъу": [
+      "χʷ"
+    ],
+    "хъ": [
+      "χ"
+    ],
+    "хь": [
+      "ħ"
+    ],
+    "ху": [
+      "xʷ"
+    ],
+    "х": [
+      "x"
+    ],
+    "цӏ": [
+      "t͡sʼ"
+    ],
+    "ц": [
+      "t͡s"
+    ],
+    "ч": [
+      "t͡ʃ"
+    ],
+    "щӏ": [
+      "ɕʼ"
+    ],
+    "щ": [
+      "ɕ"
+    ],
+    "ш": [
+      "ʃ"
+    ],
+    "ы": [
+      "ə"
+    ],
+    "ю": [
+      "ju"
+    ],
+    "я": [
+      "jaː"
+    ],
+    "ӏу": [
+      "ʔʷ"
+    ],
+    "ӏ": [
+      "ʔ"
+    ]
+  },
+  "allophones": {
+    "aː": [
+      "aː"
+    ],
+    "a": [
+      "a"
+    ],
+    "b": [
+      "b"
+    ],
+    "v": [
+      "v"
+    ],
+    "ʁʷ": [
+      "ʁʷ"
+    ],
+    "ʁ": [
+      "ʁ"
+    ],
+    "ɡʷ": [
+      "ɡʷ"
+    ],
+    "ɣ": [
+      "ɣ"
+    ],
+    "d͡ʒ": [
+      "d͡ʒ"
+    ],
+    "d͡z": [
+      "d͡z"
+    ],
+    "d": [
+      "d"
+    ],
+    "ja": [
+      "ja"
+    ],
+    "jo": [
+      "jo"
+    ],
+    "ʑ": [
+      "ʑ"
+    ],
+    "ʒ": [
+      "ʒ"
+    ],
+    "z": [
+      "z"
+    ],
+    "jə": [
+      "jə"
+    ],
+    "j": [
+      "j"
+    ],
+    "q͡χʷ": [
+      "q͡χʷ"
+    ],
+    "q͡χ": [
+      "q͡χ"
+    ],
+    "qʷ": [
+      "qʷ"
+    ],
+    "q": [
+      "q"
+    ],
+    "kʷʼ": [
+      "kʷʼ"
+    ],
+    "t͡ʃʼ": [
+      "t͡ʃʼ"
+    ],
+    "kʷ": [
+      "kʷ"
+    ],
+    "k": [
+      "k"
+    ],
+    "ɬ": [
+      "ɬ"
+    ],
+    "ɬʼ": [
+      "ɬʼ"
+    ],
+    "ɮ": [
+      "ɮ"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "aw": [
+      "aw"
+    ],
+    "pʼ": [
+      "pʼ"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "tʼ": [
+      "tʼ"
+    ],
+    "t": [
+      "t"
+    ],
+    "w": [
+      "w"
+    ],
+    "fʼ": [
+      "fʼ"
+    ],
+    "f": [
+      "f"
+    ],
+    "χʷ": [
+      "χʷ"
+    ],
+    "χ": [
+      "χ"
+    ],
+    "ħ": [
+      "ħ"
+    ],
+    "xʷ": [
+      "xʷ"
+    ],
+    "x": [
+      "x"
+    ],
+    "t͡sʼ": [
+      "t͡sʼ"
+    ],
+    "t͡s": [
+      "t͡s"
+    ],
+    "t͡ʃ": [
+      "t͡ʃ"
+    ],
+    "ɕʼ": [
+      "ɕʼ"
+    ],
+    "ɕ": [
+      "ɕ"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "ə": [
+      "ə"
+    ],
+    "ju": [
+      "ju"
+    ],
+    "jaː": [
+      "jaː"
+    ],
+    "ʔʷ": [
+      "ʔʷ"
+    ],
+    "ʔ": [
+      "ʔ"
+    ]
+  },
+  "notes": "Kabardian (къэбэрдей адыгэбзэ, East Circassian) — Northwest Caucasian, written in a Cyrillic alphabet since 1936 (Latin and Arabic orthographies are historical/diaspora and are not modelled). INPUT CONTRACT: Cyrillic text in the standard Kabardian orthography, Unicode NFC; the palochka is expected as U+04CF ⟨ӏ⟩ (lowercase) / U+04C0 ⟨Ӏ⟩ (uppercase), not ASCII I/l/1. The orthography is overwhelmingly DIGRAPHIC and TRIGRAPHIC: ⟨ъ⟩ (uvular/back series), ⟨ӏ⟩ (ejective/glottal) and ⟨у⟩ (labialisation) combine with a base letter to spell single phonemes — гъ, гъу, къ, къу, кхъ, кхъу, кӏ, кӏу, лъ, лӏ, пӏ, тӏ, фӏ, хь, хъ, хъу, ху, цӏ, щӏ, ӏу — and each is a grapheme key of its own, matched by maximal munch (longest key wins, so кхъу beats кхъ beats къ). Phonemic vowels are ⟨э⟩ /a/, ⟨а⟩ /aː/, ⟨ы⟩ /ə/; ⟨е и о у ю я ё⟩ spell glide+vowel sequences and take their surface values from the alphabet table. ⟨дж⟩ and ⟨кӏ⟩ have dialectal double values, both listed (best first). The modifier letters ⟨ъ⟩ /ˠ/ and ⟨ь⟩ /ʲ/ occur only as parts of digraphs in native words and are given no standalone entry.",
+  "iso639_3": "kbd",
+  "glottolog_code": "kaba1278",
+  "wikidata_qid": "Q33522",
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Kabardian_language",
+    "https://kbd.wikipedia.org/wiki/%D0%9A%D1%8A%D1%8D%D0%B1%D1%8D%D1%80%D0%B4%D0%B5%D0%B9_%D0%90%D0%B4%D1%8B%D0%B3%D1%8D%D0%B1%D0%B7%D1%8D"
+  ],
+  "sources": [
+    {
+      "id": "kabardian_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Kabardian language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Kabardian_language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Kabardian_language",
+      "pages": null,
+      "notes": "Consonant and vowel inventory, and the Cyrillic alphabet with its digraphs and the palochka."
+    },
+    {
+      "id": "colarusso1992",
+      "author": "Colarusso, John",
+      "year": 1992,
+      "title": "A Grammar of the Kabardian Language",
+      "publisher": "University of Calgary Press",
+      "url": null,
+      "wikipedia_url": null,
+      "pages": null,
+      "notes": "Reference grammar and phonology."
+    },
+    {
+      "id": "kabardian_alphabet_wiki_table",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Kabardian language — Cyrillic alphabet table",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Kabardian_language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Kabardian_language",
+      "pages": null,
+      "notes": "Complete 59-row Cyrillic alphabet table with IPA values including all digraphs/trigraphs; source of the grapheme map."
+    }
+  ],
+  "timespan": {
+    "start_year": 1924,
+    "end_year": null
+  },
+  "phonemes": [
+    "ä",
+    "äː",
+    "a̟ː",
+    "b",
+    "d",
+    "dz",
+    "dʑ",
+    "d̠ʒ",
+    "d̪",
+    "d̪z̪",
+    "d̻",
+    "d̻z̻",
+    "eː",
+    "e̞ː",
+    "f",
+    "fʼ",
+    "h",
+    "iː",
+    "j",
+    "kʲʰ",
+    "kʲʼ",
+    "kʷ",
+    "kʷʰ",
+    "kʷʼ",
+    "kʼ",
+    "k̟ʲʰ",
+    "k̟ʲʼ",
+    "l",
+    "m",
+    "n",
+    "n̪",
+    "n̻",
+    "oː",
+    "o̞",
+    "o̞ː",
+    "p",
+    "pʰ",
+    "pʼ",
+    "q",
+    "qʰ",
+    "qʷ",
+    "qʷʰ",
+    "qʷʼ",
+    "qʼ",
+    "qχ",
+    "qχʷ",
+    "qχʷʼ",
+    "qχʼ",
+    "r",
+    "s",
+    "s̪",
+    "s̻",
+    "t",
+    "ts",
+    "tsʷʼ",
+    "tsʼ",
+    "tɕ",
+    "tɕʼ",
+    "tʰ",
+    "tʷʼ",
+    "tʼ",
+    "t̠ʃ",
+    "t̠ʃʼ",
+    "t̪s̪",
+    "t̪s̪ʼ",
+    "t̪ʰ",
+    "t̪ʼ",
+    "t̻s̻",
+    "t̻s̻ʼ",
+    "t̻ʰ",
+    "t̻ʼ",
+    "uː",
+    "v",
+    "w",
+    "x",
+    "xʲ",
+    "xʷ",
+    "x̟ʲ",
+    "z",
+    "zʷ",
+    "z̪",
+    "z̻",
+    "ç",
+    "ç̟",
+    "ħ",
+    "ɐ",
+    "ɑː",
+    "ɕ",
+    "ə",
+    "ɜ",
+    "ɡʲ",
+    "ɡʷ",
+    "ɡ̟ʲ",
+    "ɣ",
+    "ɣʲ",
+    "ɣ̟ʲ",
+    "ɦ",
+    "ɨ",
+    "ɬ",
+    "ɬʲ",
+    "ɬʲʼ",
+    "ɬʼ",
+    "ɬ̪ʲ",
+    "ɬ̪ʲʼ",
+    "ɮ",
+    "ɮʲ",
+    "ɮ̪ʲ",
+    "ɾ",
+    "ʁ",
+    "ʁʷ",
+    "ʃ",
+    "ʃʼ",
+    "ʃ͇",
+    "ʆ",
+    "ʆʼ",
+    "ʑ",
+    "ʒ",
+    "ʒ͇",
+    "ʓ",
+    "ʔ",
+    "ʔʷ",
+    "ʕ",
+    "ʝ",
+    "ʝ̟",
+    "χ",
+    "χʷ"
+  ],
+  "parent": "x-clade-abkh1242",
+  "ancestors": [
+    {
+      "code": "x-clade-abkh1242",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Abkhaz-Adyge — the classification node this language sits under."
+    }
+  ],
+  "location": {
+    "latitude": 43.5082,
+    "longitude": 43.3918,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Kabardian."
+  }
+}

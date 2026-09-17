@@ -1,0 +1,267 @@
+{
+  "code": "tl",
+  "name": "Tagalog",
+  "glottolog_code": "taga1270",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "iso639_3": "tgl",
+  "quality": "research",
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "b": [
+      "b"
+    ],
+    "k": [
+      "k"
+    ],
+    "d": [
+      "d"
+    ],
+    "e": [
+      "ɛ"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "h": [
+      "h"
+    ],
+    "i": [
+      "i"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ng": [
+      "ŋ"
+    ],
+    "o": [
+      "o"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "ɾ"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "u": [
+      "u"
+    ],
+    "w": [
+      "w"
+    ],
+    "y": [
+      "j"
+    ],
+    "f": [
+      "f"
+    ],
+    "j": [
+      "dʒ"
+    ],
+    "v": [
+      "v"
+    ],
+    "z": [
+      "s",
+      "z"
+    ],
+    "c": [
+      "k",
+      "s"
+    ],
+    "q": [
+      "k"
+    ],
+    "x": [
+      "ks"
+    ]
+  },
+  "allophones": {
+    "a": [
+      "a"
+    ],
+    "b": [
+      "b",
+      "β"
+    ],
+    "k": [
+      "k",
+      "ʔ"
+    ],
+    "d": [
+      "d",
+      "ɾ"
+    ],
+    "ɛ": [
+      "ɛ",
+      "e"
+    ],
+    "ɡ": [
+      "ɡ"
+    ],
+    "h": [
+      "h"
+    ],
+    "i": [
+      "i"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n",
+      "ŋ"
+    ],
+    "ŋ": [
+      "ŋ"
+    ],
+    "o": [
+      "o",
+      "ʊ"
+    ],
+    "p": [
+      "p"
+    ],
+    "ɾ": [
+      "ɾ",
+      "d"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "u": [
+      "u"
+    ],
+    "w": [
+      "w"
+    ],
+    "j": [
+      "j"
+    ],
+    "f": [
+      "f"
+    ],
+    "dʒ": [
+      "dʒ"
+    ],
+    "v": [
+      "b",
+      "v"
+    ]
+  },
+  "positional_graphemes": {
+    "k": {
+      "word_final": [
+        "ʔ"
+      ],
+      "default": [
+        "k"
+      ]
+    },
+    "d": {
+      "intervocalic": [
+        "ɾ"
+      ],
+      "default": [
+        "d"
+      ]
+    }
+  },
+  "notes": "Filipino/Tagalog standard orthography (Abakada + expanded 28-letter alphabet). Glottal stop /ʔ/ is phonemic but unwritten (word-initial vowels, mid-word, and some finals). Word-final K → [ʔ]. Intervocalic D → [ɾ]. NG = /ŋ/ (single phoneme, alphabetized as unit). Stress marked with tilde (˜) in formal texts. Vowel system: /a e i o u/ with /ɛ/ ~ /e/ and /o/ ~ /u/ merging in some varieties.",
+  "sources": [
+    {
+      "id": "schachter_otanes1972",
+      "author": "Schachter, P. & Otanes, F.T.",
+      "year": 1972,
+      "title": "Tagalog Reference Grammar",
+      "publisher": "University of California Press",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "tagalog_phonology_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Tagalog phonology",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Tagalog_phonology",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Tagalog_phonology",
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "parent": "poz",
+  "ancestors": [
+    {
+      "code": "poz",
+      "role": "parent",
+      "weight": 0.75,
+      "notes": "Malayo-Polynesian (Philippine) branch of Austronesian."
+    },
+    {
+      "code": "es-ES",
+      "role": "adstrate",
+      "weight": 0.18,
+      "notes": "Spanish adstrate: three centuries of colonial rule left a very large lexical/phonological layer."
+    },
+    {
+      "code": "en-GB",
+      "role": "adstrate",
+      "weight": 0.12,
+      "notes": "English adstrate: pervasive modern contact (code-switching, phonemes)."
+    },
+    {
+      "code": "zh",
+      "role": "adstrate",
+      "weight": 0.05,
+      "notes": "Hokkien Chinese adstrate: trade and kinship vocabulary."
+    },
+    {
+      "code": "sa",
+      "role": "adstrate",
+      "weight": 0.04,
+      "notes": "Sanskrit adstrate: older learned loanwords via Malay."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Tagalog_language",
+    "https://en.wikipedia.org/wiki/Tagalog_phonology",
+    "https://en.wikipedia.org/wiki/Proto-Malayo-Polynesian_language",
+    "https://tl.wikipedia.org/wiki/Wikang_Tagalog"
+  ],
+  "timespan": {
+    "start_year": 1593,
+    "end_year": null
+  },
+  "wikidata_qid": "Q34057",
+  "phoible_id": "taga1270",
+  "wals_code": "tag",
+  "location": {
+    "latitude": 14.06,
+    "longitude": 121.747,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Tagalog."
+  }
+}

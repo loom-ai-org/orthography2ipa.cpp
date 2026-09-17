@@ -1,0 +1,158 @@
+{
+  "code": "ug",
+  "name": "Uyghur",
+  "script": "Arabic",
+  "script_type": "abjad",
+  "quality": "research",
+  "graphemes": {
+    "ئا": ["ɑ"],
+    "ا": ["ɑ"],
+    "ئە": ["ɛ"],
+    "ه": ["ɛ"],
+    "ئو": ["o"],
+    "و": ["o"],
+    "ئۇ": ["u"],
+    "ۇ": ["u"],
+    "ئۆ": ["ø"],
+    "ۆ": ["ø"],
+    "ئۈ": ["y"],
+    "ۈ": ["y"],
+    "ئې": ["e"],
+    "ې": ["e"],
+    "ئى": ["i"],
+    "ى": ["i"],
+    "ي": ["j"],
+    "ئ": ["ʔ"],
+    "ب": ["b"],
+    "پ": ["p"],
+    "ت": ["t"],
+    "ج": ["dʒ"],
+    "چ": ["tʃ"],
+    "خ": ["χ"],
+    "د": ["d"],
+    "ر": ["r"],
+    "ز": ["z"],
+    "ژ": ["ʒ"],
+    "س": ["s"],
+    "ش": ["ʃ"],
+    "غ": ["ʁ"],
+    "ف": ["f"],
+    "ق": ["q"],
+    "ك": ["k"],
+    "ک": ["k"],
+    "گ": ["ɡ"],
+    "ڭ": ["ŋ"],
+    "ل": ["l"],
+    "م": ["m"],
+    "ن": ["n"],
+    "ھ": ["h"],
+    "ۋ": ["w", "v"]
+  },
+  "allophones": {
+    "ɑ": ["ɑ"], "ɛ": ["ɛ"], "o": ["o"], "u": ["u"], "ø": ["ø"], "y": ["y"],
+    "e": ["e"], "i": ["i"], "j": ["j"], "ʔ": ["ʔ"], "b": ["b"], "p": ["p"],
+    "t": ["t"], "dʒ": ["dʒ"], "tʃ": ["tʃ"], "χ": ["χ"], "d": ["d"], "r": ["r"],
+    "z": ["z"], "ʒ": ["ʒ"], "s": ["s"], "ʃ": ["ʃ"], "ʁ": ["ʁ"], "f": ["f"],
+    "q": ["q"], "k": ["k"], "ɡ": ["ɡ"], "ŋ": ["ŋ"], "l": ["l"], "m": ["m"],
+    "n": ["n"], "h": ["h"], "w": ["w"], "v": ["v"]
+  },
+  "notes": "Uyghur, written in the Uyghur Perso-Arabic alphabet (Uyghur Ereb Yéziqi, UEY), the official script in Xinjiang. RESEARCH: grapheme inventory now specified. Unlike Persian/Arabic proper, UEY writes EVERY vowel with a full letter (ئا/ا ئە/ه ئو/و ئۇ/ۇ ئۆ/ۆ ئۈ/ۈ ئې/ې ئى/ى), so despite being classified `abjad` by script family it behaves as a near-alphabetic system (Hahn 1991, 'Spoken Uyghur'; Wikipedia 'Uyghur alphabets'): word-initial vowels carry a hamza-bearing letter (ئا, ئە, …) while the same vowel word-medially/finally drops the hamza (ا, ه, …) — both spellings are given their own grapheme key here because the hamza-initial form is a genuinely distinct multigraph the orthography uses at a fixed position, earning its key under test 3 (AGENTS.md: it blocks the plain vowel-letter reading of an isolated hamza before a bare vowel letter). ⟨ه⟩ (no dots on top, used word-finally) writes short /ɛ/ and is distinct from ⟨ھ⟩ (dotted, aspirated) /h/ — a minimal pair the Arabic-script Uyghur orthography keeps apart that Persian's single ⟨ه⟩ does not. ⟨خ⟩ is realised as the uvular fricative /χ/ (not velar /x/) and ⟨غ⟩ as /ʁ/, matching Hahn's uvular analysis of the Uyghur dorsal fricative series (contrast the velar analysis used for `fa`/`glk`). ⟨ك⟩ and ⟨ک⟩ are both attested Kaf variants for /k/ in modern Uyghur typesetting and are mapped identically. ⟨ۋ⟩ covers both the labiodental approximant/fricative realisations reported in the literature (Hahn 1991). Latin (Uyghur Latin Yëziqi, ULY) and Cyrillic orthographies are also in use and are not modelled here. WikiPron gold (`uig_arab_broad.tsv`, ~2674 rows) is registered in scripts/benchmark.py's DATASETS; a PER is recorded in benchmarks/results.json. STRESS EXEMPTION: Uyghur word stress generally falls on the final syllable and is largely predictable rather than lexically contrastive; the position is not orthographically marked, so no `stress` block is declared here (exemption documented per docs/quality_tiers.md).",
+  "iso639_3": "uig",
+  "glottolog_code": "uigh1240",
+  "wikidata_qid": "Q13263",
+  "parent": "trk",
+  "ancestors": [
+    {
+      "code": "trk",
+      "role": "parent",
+      "weight": 0.85,
+      "notes": "Turkic (Karluk branch)."
+    },
+    {
+      "code": "fa",
+      "role": "adstrate",
+      "weight": 0.07,
+      "notes": "Persian adstrate: lexicon and the Perso-Arabic script."
+    },
+    {
+      "code": "ar",
+      "role": "adstrate",
+      "weight": 0.05,
+      "notes": "Arabic adstrate: religious and learned lexicon."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Uyghur_language",
+    "https://ug.wikipedia.org/wiki/%D8%A6%DB%87%D9%8A%D8%BA%DB%87%D8%B1_%D8%AA%D9%89%D9%84%D9%89"
+  ],
+  "sources": [
+    {
+      "id": "uyghur_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Uyghur language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Uyghur_language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Uyghur_language",
+      "pages": null,
+      "notes": "Phonology and the Arabic/Latin/Cyrillic alphabets."
+    },
+    {
+      "id": "uyghur_alphabets_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Uyghur alphabets",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Uyghur_alphabets",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Uyghur_alphabets",
+      "pages": null,
+      "notes": "Letter tables for Uyghur Ereb Yéziqi, ULY and Cyrillic."
+    },
+    {
+      "id": "hahn1991",
+      "author": "Hahn, Reinhard F.",
+      "year": 1991,
+      "title": "Spoken Uyghur",
+      "publisher": "University of Washington Press",
+      "url": null,
+      "wikipedia_url": null,
+      "pages": null,
+      "notes": "Reference description of Uyghur phonology: uvular fricative series, vowel inventory."
+    },
+    {
+      "id": "phoible",
+      "author": "Moran, Steven & McCloy, Daniel (eds.)",
+      "year": 2019,
+      "title": "PHOIBLE 2.0",
+      "publisher": "Max Planck Institute for the Science of Human History",
+      "url": "https://phoible.org/",
+      "pages": null,
+      "notes": "Attested phoneme inventory for glottocode uigh1240."
+    },
+    {
+      "id": "wikipron",
+      "author": "Lee, Jackson L. et al.",
+      "year": 2020,
+      "title": "WikiPron: A Tool for Extracting Pronunciation Data from Wiktionary",
+      "publisher": "LREC",
+      "url": "https://github.com/CUNY-CL/wikipron",
+      "notes": "Source of the uig_arab_broad.tsv gold registered in scripts/benchmark.py."
+    }
+  ],
+  "timespan": {
+    "start_year": 1900,
+    "end_year": null
+  },
+  "phonemes": [
+    "b", "d̠ʒ", "d̪", "e", "f", "h", "j", "k", "l", "m", "n̪", "o", "p", "q",
+    "r", "s", "ts", "t̠ʃ", "t̪", "v", "w", "x", "z", "æː", "ø", "ŋ", "œː",
+    "ɑ", "ɑː", "ɔː", "ɕː", "ɛ", "ɡ", "ɪ", "ɪː", "ʁ", "ʃ", "ʊ", "ʊː", "ʏ",
+    "ʏː", "ʒ", "ʔ"
+  ],
+  "location": {
+    "latitude": 43.88,
+    "longitude": 87.38,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Uighur."
+  }
+}

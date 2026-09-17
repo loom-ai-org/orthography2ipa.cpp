@@ -1,0 +1,111 @@
+{
+  "code": "yao",
+  "name": "Yao (Chiyao)",
+  "glottolog_code": "yaoo1241",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "iso639_3": "yao",
+  "quality": "research",
+  "graphemes": {
+    "a": ["a"],
+    "b": ["b"],
+    "ch": ["tʃ"],
+    "d": ["d"],
+    "dy": ["dʒ"],
+    "e": ["ɛ"],
+    "g": ["ɡ"],
+    "i": ["i"],
+    "j": ["dʒ"],
+    "k": ["k"],
+    "l": ["l"],
+    "ly": ["ʎ"],
+    "m": ["m"],
+    "n": ["n"],
+    "ng'": ["ŋ"],
+    "ny": ["ɲ"],
+    "o": ["ɔ"],
+    "p": ["p"],
+    "s": ["ʂ"],
+    "t": ["tʰ"],
+    "u": ["u"],
+    "w": ["w"],
+    "ŵ": ["ʋ"],
+    "y": ["j"]
+  },
+  "allophones": {
+    "a": ["a"],
+    "b": ["b"],
+    "tʃ": ["tʃ"],
+    "d": ["d"],
+    "dʒ": ["dʒ"],
+    "ɛ": ["ɛ", "e"],
+    "ɡ": ["ɡ"],
+    "i": ["i"],
+    "k": ["k"],
+    "l": ["l"],
+    "ʎ": ["ʎ"],
+    "m": ["m"],
+    "n": ["n"],
+    "ŋ": ["ŋ"],
+    "ɲ": ["ɲ"],
+    "ɔ": ["ɔ", "o"],
+    "p": ["p"],
+    "ʂ": ["ʂ"],
+    "tʰ": ["tʰ"],
+    "u": ["u"],
+    "w": ["w"],
+    "ʋ": ["ʋ"],
+    "j": ["j"]
+  },
+  "notes": "Yao (Chiyao/Ciyao, Guthrie P.21), Bantu language spoken across southern Malawi, northern Mozambique and southern Tanzania. Standard (Malawian) orthography: five vowel qualities a/ɛ/i/ɔ/u with a length contrast optionally marked with a macron since plain vowel letters do not distinguish length. Voiceless plosives are aspirated (t → [tʰ]) while voiced ones are not. ⟨s⟩ is realised as retroflex [ʂ]. ⟨ŵ⟩ (w with circumflex) is the labiodental approximant /ʋ/, distinct from plain ⟨w⟩ /w/ — the same letter convention Nyanja uses. ⟨ly⟩ /ʎ/ and ⟨ny⟩ /ɲ/ are palatal digraphs; ⟨dy⟩ and ⟨j⟩ both spell /dʒ/. ⟨ng'⟩ marks the bare velar nasal /ŋ/, contrasting with a prenasalized velar stop sequence. Tone is phonologically and morphologically significant, as in other Bantu languages, but is not marked in the standard orthography.",
+  "sources": [
+    {
+      "id": "ngunga2000yao",
+      "author": "Ngunga, Armindo",
+      "year": 2000,
+      "title": "Phonology and Morphology of the Ciyao Verb",
+      "publisher": "CSLI Publications",
+      "url": "https://escholarship.org/content/qt3xw7j0c2/qt3xw7j0c2.pdf",
+      "pages": null,
+      "notes": "Descriptive phonology and morphology of Ciyao (Yao). Published as CSLI monograph (2000); the 1997 UC Berkeley dissertation version ('Lexical Phonology and Morphology and the Ciyao Verb System') is freely available at the given URL."
+    },
+    {
+      "id": "yao_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2025,
+      "title": "Yao language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Yao_language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Yao_language",
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "parent": "x-clade-narr1281",
+  "ancestors": [
+    {
+      "code": "x-clade-narr1281",
+      "role": "parent",
+      "weight": 0.9,
+      "notes": "Yao branch of Bantu (Guthrie P.20), within Atlantic-Congo."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Yao_language",
+    "https://en.wikipedia.org/wiki/Proto-Bantu_language"
+  ],
+  "urls": [
+    "https://glottolog.org/resource/languoid/id/yaoo1241"
+  ],
+  "timespan": {
+    "start_year": 1900,
+    "end_year": null
+  },
+  "wikidata_qid": "Q36902",
+  "location": {
+    "latitude": -13.5,
+    "longitude": 35.3,
+    "source": "glottolog",
+    "notes": "Approximate centre of the Yao-speaking area, southern Malawi / Lake Malawi region."
+  }
+}

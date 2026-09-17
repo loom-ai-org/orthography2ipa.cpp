@@ -1,0 +1,198 @@
+{
+  "code": "pam",
+  "name": "Kapampangan",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "parent": "x-clade-mala1545",
+  "graphemes": {
+    "a": [
+      "a",
+      "ə"
+    ],
+    "b": [
+      "b"
+    ],
+    "d": [
+      "d"
+    ],
+    "e": [
+      "ɛ"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "h": [
+      "h"
+    ],
+    "i": [
+      "i"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ng": [
+      "ŋ"
+    ],
+    "o": [
+      "o"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "ɾ"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "u": [
+      "u"
+    ],
+    "w": [
+      "w"
+    ],
+    "y": [
+      "j"
+    ],
+    "'": [
+      "ʔ"
+    ]
+  },
+  "allophones": {
+    "a": [
+      "a",
+      "ə"
+    ],
+    "ə": [
+      "ə"
+    ],
+    "b": [
+      "b"
+    ],
+    "d": [
+      "d",
+      "dʒ"
+    ],
+    "ɛ": [
+      "ɛ"
+    ],
+    "ɡ": [
+      "ɡ"
+    ],
+    "h": [
+      "h"
+    ],
+    "i": [
+      "i"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ŋ": [
+      "ŋ"
+    ],
+    "o": [
+      "o"
+    ],
+    "p": [
+      "p"
+    ],
+    "ɾ": [
+      "ɾ",
+      "r"
+    ],
+    "s": [
+      "s",
+      "ʃ"
+    ],
+    "t": [
+      "t",
+      "tʃ"
+    ],
+    "u": [
+      "u"
+    ],
+    "w": [
+      "w"
+    ],
+    "j": [
+      "j"
+    ],
+    "ʔ": [
+      "ʔ"
+    ]
+  },
+  "notes": "Kapampangan (Kapampangan / Pampanga) — Central Luzon (Austronesian) language. Written in the Latin-based Sulat Wawa orthography, which uses ⟨k⟩ rather than ⟨c⟩/⟨q⟩ for /k/; ⟨ng⟩ is a single letter /ŋ/ and occurs word-initially. Five vowel phonemes: /a ~ ə/ (written ⟨a⟩; [ə] unstressed, [aː] stressed), /ɛ/, /i/, /o/, /u/. Fifteen consonants /m n ŋ p b t d tʃ dʒ k ɡ ʔ s ʃ ɾ~r l j w/; all stops are unaspirated. [tʃ dʒ ʃ] mostly arise from /t d s/ before /i/ + vowel and in loanwords. Glottal stop is phonemic but usually unwritten.",
+  "iso639_3": "pam",
+  "glottolog_code": "pamp1243",
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Kapampangan_language",
+    "https://pam.wikipedia.org/wiki/Kapampangan_%28amanu%29"
+  ],
+  "sources": [
+    {
+      "id": "forman1971",
+      "author": "Forman, Michael L.",
+      "year": 1971,
+      "title": "Kapampangan Grammar Notes",
+      "publisher": "University of Hawai'i Press",
+      "url": null,
+      "pages": null,
+      "notes": "Reference grammar; phonology and orthography."
+    },
+    {
+      "id": "pam_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Kapampangan language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Kapampangan_language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Kapampangan_language",
+      "pages": null,
+      "notes": "Phonology and orthography sections."
+    }
+  ],
+  "valid_ceiling": {
+    "wikipron": {
+      "per": 0.0843,
+      "folded": "glottal stop + unwritten-stress vowel quality (a/ə, i/ɪ, u/ʊ)",
+      "citation": "As-scored PER (n=860, broad+strip_stress, pam_latn_broad.tsv) is 0.2861, matching the committed board row. Two unwritten phenomena drive it. First, the word-final glottal stop: Sulat Wawa never marks it in this gold's 926 raw headwords (0 carry an apostrophe or any other mark), while 108 of the 860 scored gold pronunciations carry ʔ -- the spec's own notes already record the glottal stop as 'phonemic but usually unwritten'. Second, Kapampangan stress is phonemic and lexical, not marked in ordinary spelling (Forman 1971, Kapampangan Grammar Notes; summarised at https://en.wikipedia.org/wiki/Kapampangan_language, which cites Forman 1971 pp.28-29 for the stress facts): 48 headwords recur in this crowd-scraped gold with mutually incompatible readings for the identical spelling (e.g. Guagua -> ɡwaɡwə vs wawəʔ), direct evidence the orthography underdetermines which syllable is stressed. Under that lexical, unrecoverable stress assignment, /a/ centralizes to [ə] when unstressed (757 of 1253 scored a/ə tokens) against [a] when stressed, and the close vowels /i u/ lax to [ɪ ʊ] under the same unstressed condition (153 and 124 tokens respectively, against 0 orthographic marking of stress anywhere in the 926 headwords). A positional heuristic -- treating only the word-final vowel as stressed, the rest as reduced -- was tried and only narrows raw PER to 0.2351, a negative result: the gold's own conflicting readings for identical spellings show the alternation is lexical rather than positional, so no such rule was added. Folding the glottal stop and the a/ə, i/ɪ, u/ʊ alternation out of both hypothesis and gold together measures 0.0843 -- well under the 0.25 production threshold, so the row is input-limited rather than defective. The gold's plain ⟨e⟩ notation (0 of 926 entries write ɛ, 119 write e, for the mid front vowel this spec's Forman-sourced phonemic analysis assigns /ɛ/) is a separate, UNFOLDED notation-convention mismatch: the vowel letter IS written, only its exact IPA symbol choice differs by convention, so it is documented in docs/gold_defects.md rather than counted toward this ceiling."
+    }
+  },
+  "ancestors": [
+    {
+      "code": "x-clade-mala1545",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Malayo-Polynesian, the Austronesian branch containing every Austronesian language outside Formosa."
+    }
+  ],
+  "location": {
+    "latitude": 14.9603,
+    "longitude": 120.502,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Pampanga."
+  }
+}

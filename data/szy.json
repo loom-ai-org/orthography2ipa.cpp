@@ -1,0 +1,167 @@
+{
+  "code": "szy",
+  "name": "Sakizaya",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "iso639_3": "szy",
+  "glottolog_code": "saki1247",
+  "wikidata_qid": "Q718269",
+  "graphemes": {
+    "ng": [
+      "ŋ"
+    ],
+    "p": [
+      "p"
+    ],
+    "b": [
+      "b",
+      "f"
+    ],
+    "t": [
+      "t"
+    ],
+    "d": [
+      "d",
+      "ð",
+      "ɬ"
+    ],
+    "k": [
+      "k"
+    ],
+    "c": [
+      "ts"
+    ],
+    "s": [
+      "s"
+    ],
+    "z": [
+      "z"
+    ],
+    "h": [
+      "ħ",
+      "h"
+    ],
+    "x": [
+      "ħ",
+      "x"
+    ],
+    "f": [
+      "f",
+      "b"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "l": [
+      "ɾ"
+    ],
+    "w": [
+      "w"
+    ],
+    "y": [
+      "j"
+    ],
+    "'": [
+      "ʡ",
+      "ʔ"
+    ],
+    "’": [
+      "ʡ",
+      "ʔ"
+    ],
+    "ʼ": [
+      "ʡ",
+      "ʔ"
+    ],
+    "^": [
+      "ʔ"
+    ],
+    "i": [
+      "i"
+    ],
+    "e": [
+      "ə"
+    ],
+    "a": [
+      "a"
+    ],
+    "u": [
+      "u"
+    ],
+    "o": [
+      "o"
+    ]
+  },
+  "allophones": {
+    "ts": [
+      "ts",
+      "tɕ"
+    ],
+    "s": [
+      "s",
+      "ɕ"
+    ],
+    "z": [
+      "z",
+      "ʑ"
+    ]
+  },
+  "notes": "Sakizaya — Formosan (Austronesian) language of the Chihlai plain, eastern Taiwan, officially recognised in 2007. The map commits to the OFFICIAL ROMANISATION of the Council of Indigenous Peoples (原住民族語言書寫系統, the 2005 system as extended to Sakizaya, with the 2016-2018 revision decisions). Letters whose value departs from the IPA: ⟨c⟩ = /ts/, ⟨d⟩ = /d ~ ð ~ ɬ/ (as in the closely related Amis), ⟨l⟩ = the alveolar flap /ɾ/, ⟨ng⟩ = /ŋ/, ⟨y⟩ = /j/, ⟨h⟩ = the voiceless pharyngeal fricative /ħ/. The 2005 system wrote the EPIGLOTTAL stop /ʡ/ with the apostrophe ⟨'⟩ and the glottal stop /ʔ/ with ⟨^⟩ (as in Amis); the 2017 revision accepted deleting ⟨^⟩ and using a single ⟨'⟩ for both [ʔ] and [ʡ], so ⟨'⟩ is given both values (epiglottal first) and ⟨^⟩ is retained for older text. The same revision deleted ⟨x⟩ (merged into ⟨h⟩) and replaced ⟨f⟩ with ⟨b⟩ [b]; /b/ and [f] vary freely among speakers, so both letters are kept with both values for backward compatibility. Vowels: ⟨i a u o⟩ = /i a u o/ and ⟨e⟩ = the central /ə/. /ts s z/ palatalise to [tɕ ɕ ʑ] before /i/ and /j/ (allophones). The letter ⟨r⟩ appears in the alphabet but its value is unsettled (the revision records ⟨l⟩ and ⟨r⟩ as possible allophones), so no IPA value is claimed for it. INPUT CONTRACT: Latin-script Sakizaya in the official orthography.",
+  "sources": [
+    {
+      "id": "szy_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Sakizaya language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Sakizaya_language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Sakizaya_language",
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "cip2005_writing",
+      "author": "Council of Indigenous Peoples; Ministry of Education (Republic of China)",
+      "year": 2005,
+      "title": "原住民族語言書寫系統 (Writing Systems for the Indigenous Languages)",
+      "publisher": "Ministry of Education, Taipei",
+      "url": "https://ws.moe.tw/001/Upload/6/RelFile/6508/7828/aboriginal.pdf",
+      "pages": null,
+      "notes": "The official Latin writing system for the indigenous languages of Taiwan, promulgated 2005-12-15; the Sakizaya alphabet follows this system."
+    },
+    {
+      "id": "formosan_writing_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Writing systems of Formosan languages",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Writing_systems_of_Formosan_languages",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Writing_systems_of_Formosan_languages",
+      "pages": null,
+      "notes": "Letter→IPA table for Sakizaya (a, b, c, d, e, h, i, k, l, m, n, ng, o, p, s, t, u, w, y, z, ', ^) and the 2017 revision decisions (delete ⟨^⟩ and ⟨x⟩, ⟨f⟩→⟨b⟩)."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Sakizaya_language",
+    "https://szy.wikipedia.org/wiki/Sakizaya_a_kamu"
+  ],
+  "parent": "x-clade-aust1307",
+  "ancestors": [
+    {
+      "code": "x-clade-aust1307",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Austronesian — the classification node this language sits under."
+    }
+  ],
+  "location": {
+    "latitude": 24.026316,
+    "longitude": 121.531394,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Sakizaya."
+  }
+}

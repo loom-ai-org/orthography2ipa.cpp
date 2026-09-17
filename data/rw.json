@@ -1,0 +1,230 @@
+{
+  "code": "rw",
+  "name": "Kinyarwanda",
+  "parent": "x-clade-narr1281",
+  "glottolog_code": "kiny1244",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "iso639_3": "kin",
+  "quality": "research",
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "b": [
+      "b"
+    ],
+    "c": [
+      "tʃ"
+    ],
+    "cy": [
+      "tʃ"
+    ],
+    "d": [
+      "d"
+    ],
+    "e": [
+      "e"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "h": [
+      "h"
+    ],
+    "i": [
+      "i"
+    ],
+    "j": [
+      "dʒ"
+    ],
+    "jy": [
+      "dʒ"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "mb": [
+      "mb"
+    ],
+    "mp": [
+      "mp"
+    ],
+    "n": [
+      "n"
+    ],
+    "nd": [
+      "nd"
+    ],
+    "ng": [
+      "ŋɡ"
+    ],
+    "nj": [
+      "ndʒ"
+    ],
+    "nk": [
+      "ŋk"
+    ],
+    "nt": [
+      "nt"
+    ],
+    "ny": [
+      "ɲ"
+    ],
+    "o": [
+      "o"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "sh": [
+      "ʃ"
+    ],
+    "t": [
+      "t"
+    ],
+    "u": [
+      "u"
+    ],
+    "v": [
+      "v"
+    ],
+    "w": [
+      "w"
+    ],
+    "y": [
+      "j"
+    ],
+    "z": [
+      "z"
+    ]
+  },
+  "allophones": {
+    "a": [
+      "a"
+    ],
+    "b": [
+      "b"
+    ],
+    "tʃ": [
+      "tʃ"
+    ],
+    "d": [
+      "d"
+    ],
+    "e": [
+      "e"
+    ],
+    "f": [
+      "f"
+    ],
+    "ɡ": [
+      "ɡ"
+    ],
+    "h": [
+      "h"
+    ],
+    "i": [
+      "i"
+    ],
+    "dʒ": [
+      "dʒ"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ɲ": [
+      "ɲ"
+    ],
+    "ŋ": [
+      "ŋ"
+    ],
+    "o": [
+      "o"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "t": [
+      "t"
+    ],
+    "u": [
+      "u"
+    ],
+    "v": [
+      "v"
+    ],
+    "w": [
+      "w"
+    ],
+    "j": [
+      "j"
+    ],
+    "z": [
+      "z"
+    ]
+  },
+  "notes": "Kinyarwanda (Rwanda national language). Bantu language. Prenasalized consonants are single phonemes. High tone vs. low tone — not marked in standard orthography. C/CY = /tʃ/; SH = /ʃ/; NY = /ɲ/. Grapheme table checked against Kimenyi (1980): no discrepancy found. STRESS EXEMPTION: Kinyarwanda is a Bantu tone language (lexical/grammatical high vs. low tone, per Kimenyi 1980), not a stress language in the sense this project's `stress` schema targets; word-level prominence is predictable from mora count/penultimate-lengthening but tone itself is unmarked in the standard orthography (as already noted) and is out of scope for the `stress` block, so no `stress` block is added.",
+  "sources": [
+    {
+      "id": "kimenyi1980",
+      "author": "Kimenyi, Alexandre",
+      "year": 1980,
+      "title": "A Relational Grammar of Kinyarwanda",
+      "publisher": "University of California Publications in Linguistics, vol. 91. University of California Press",
+      "url": null,
+      "pages": null,
+      "notes": "Reference grammar used to verify the grapheme table (prenasalized consonants, c/cy, j/jy, sh, ny) and to document the tone-vs-stress distinction underlying this spec's stress exemption."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Kinyarwanda",
+    "https://rw.wikipedia.org/wiki/Ikinyarwanda"
+  ],
+  "timespan": {
+    "start_year": 1900,
+    "end_year": null
+  },
+  "wikidata_qid": "Q33573",
+  "phoible_id": "kiny1244",
+  "wals_code": "kin",
+  "location": {
+    "latitude": -1.56771,
+    "longitude": 29.6441,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Kinyarwanda."
+  }
+}

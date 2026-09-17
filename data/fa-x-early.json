@@ -1,0 +1,282 @@
+{
+  "code": "fa-x-early",
+  "name": "Early New Persian (Classical Persian)",
+  "script": "Latin",
+  "graphemes": {
+    "p": [
+      "p"
+    ],
+    "b": [
+      "b"
+    ],
+    "t": [
+      "t"
+    ],
+    "d": [
+      "d"
+    ],
+    "k": [
+      "k"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "f": [
+      "f"
+    ],
+    "v": [
+      "v"
+    ],
+    "x": [
+      "x"
+    ],
+    "ɣ": [
+      "ɣ"
+    ],
+    "h": [
+      "h"
+    ],
+    "s": [
+      "s"
+    ],
+    "z": [
+      "z"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "ʒ": [
+      "ʒ"
+    ],
+    "tʃ": [
+      "tʃ"
+    ],
+    "dʒ": [
+      "dʒ"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "r": [
+      "r"
+    ],
+    "l": [
+      "l"
+    ],
+    "j": [
+      "j"
+    ],
+    "θ": [
+      "s"
+    ],
+    "ð": [
+      "z"
+    ],
+    "ħ": [
+      "h"
+    ],
+    "ʕ": [
+      "ʔ"
+    ],
+    "q": [
+      "q",
+      "ɣ"
+    ],
+    "a": [
+      "a"
+    ],
+    "aː": [
+      "aː"
+    ],
+    "eː": [
+      "eː"
+    ],
+    "oː": [
+      "oː"
+    ],
+    "iː": [
+      "iː"
+    ],
+    "uː": [
+      "uː"
+    ],
+    "i": [
+      "i",
+      "e"
+    ],
+    "u": [
+      "u",
+      "o"
+    ]
+  },
+  "allophones": {
+    "p": [
+      "p"
+    ],
+    "b": [
+      "b"
+    ],
+    "t": [
+      "t"
+    ],
+    "d": [
+      "d"
+    ],
+    "k": [
+      "k"
+    ],
+    "ɡ": [
+      "ɡ"
+    ],
+    "f": [
+      "f"
+    ],
+    "v": [
+      "v"
+    ],
+    "x": [
+      "x"
+    ],
+    "ɣ": [
+      "ɣ"
+    ],
+    "h": [
+      "h"
+    ],
+    "s": [
+      "s"
+    ],
+    "z": [
+      "z"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "ʒ": [
+      "ʒ"
+    ],
+    "tʃ": [
+      "tʃ"
+    ],
+    "dʒ": [
+      "dʒ"
+    ],
+    "ʔ": [
+      "ʔ",
+      ""
+    ],
+    "q": [
+      "q",
+      "ɣ"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n",
+      "ŋ"
+    ],
+    "r": [
+      "r",
+      "ɾ"
+    ],
+    "l": [
+      "l"
+    ],
+    "j": [
+      "j"
+    ],
+    "a": [
+      "a"
+    ],
+    "aː": [
+      "aː"
+    ],
+    "eː": [
+      "eː",
+      "e"
+    ],
+    "oː": [
+      "oː",
+      "o"
+    ],
+    "iː": [
+      "iː"
+    ],
+    "uː": [
+      "uː"
+    ],
+    "i": [
+      "i",
+      "e"
+    ],
+    "u": [
+      "u",
+      "o"
+    ]
+  },
+  "parent": "pal",
+  "ancestors": [
+    {
+      "code": "pal",
+      "role": "parent",
+      "weight": 0.85,
+      "notes": "Descent from Middle Persian/Pahlavi"
+    },
+    {
+      "code": "ar",
+      "role": "adstrate",
+      "weight": 0.12,
+      "notes": "Arabic adstrate: massive loanword influx from 8th century; Arabic script adopted; Arabic consonants θ/ð/ħ/ʕ/q appear in writing but mostly assimilated phonologically: θ→s, ð→z, ħ→h, ʕ→ʔ, q→ɣ"
+    }
+  ],
+  "notes": "Early New Persian / Classical Persian (Dari) (~900–1200 CE). First attested ~900 CE in eastern Khorasan/Transoxiana. Literary corpus: Shahnameh (Ferdowsi ~1000), Divan of Hafez, Rumi. KEY INNOVATIONS vs. Middle Persian: (1) Arabic script adopted (with additional letters پ چ ژ گ for Persian); (2) Massive Arabic loanwords — Arabic consonants θ, ð, ħ, ʕ, q     appear in spelling but assimilated phonologically to s, z, h, ʔ, ɣ; (3) Classical 6-vowel system: ā, ē/eː, ī, ō/oː, ū, a; (4) /v/ stabilised; /r/ → [ɾ] (tap) in most positions. This Classical system is the reference for Dari (fa-AF) and Tajik (tg).",
+  "quality": "research",
+  "script_type": "alphabet",
+  "sources": [
+    {
+      "id": "lazard1963",
+      "author": "Lazard, G.",
+      "year": 1963,
+      "title": "La langue des plus anciens monuments de la prose persane",
+      "publisher": "Klincksieck",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "windfuhr1979",
+      "author": "Windfuhr, G.",
+      "year": 1979,
+      "title": "Persian Grammar: History and State of Its Study",
+      "publisher": "Mouton",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "mahootian1997",
+      "author": "Mahootian, S.",
+      "year": 1997,
+      "title": "Persian",
+      "publisher": "Routledge",
+      "url": null,
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Early_New_Persian",
+    "https://fa.wikipedia.org/wiki/%D8%B2%D8%A8%D8%A7%D9%86_%D9%81%D8%A7%D8%B1%D8%B3%DB%8C",
+    "https://en.wikipedia.org/wiki/Persian_language"
+  ],
+  "timespan": {
+    "start_year": 800,
+    "end_year": 1400
+  },
+  "glottolog_code": null,
+  "iso639_3": "fas"
+}

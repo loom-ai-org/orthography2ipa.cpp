@@ -1,0 +1,466 @@
+{
+ "code": "ext-PT-x-barrancos",
+ "name": "Barranquenho",
+ "script": "Latin",
+ "family": "Mixed Language",
+ "graphemes_base": "pt-PT",
+ "allophones_base": "pt-PT",
+ "positional_graphemes_base": "pt-PT",
+ "graphemes": {
+  "tch": [
+   "tʃ"
+  ],
+  "rr": [
+   "r"
+  ],
+  "v": [
+   "b"
+  ],
+  "b": [
+   "b"
+  ],
+  "h": [
+   "h"
+  ],
+  "lh": [
+   "ʎ"
+  ],
+  "nh": [
+   "ɲ"
+  ],
+  "ch": [
+   "ʃ"
+  ],
+  "â": [
+   "ɐ"
+  ],
+  "ô": [
+   "o"
+  ],
+  "ê": [
+   "e"
+  ],
+  "î": [
+   "i"
+  ],
+  "âu": [
+   "ɐ̃w̃"
+  ],
+  "âi": [
+   "ɐ̃j"
+  ],
+  "ôi": [
+   "õj"
+  ],
+  "ãu": [
+   "ɐ̃w̃"
+  ],
+  "ãi": [
+   "ɐ̃j"
+  ],
+  "õi": [
+   "õj"
+  ],
+  "ói": [
+   "ɔj"
+  ],
+  "éi": [
+   "ɛj"
+  ],
+  "áu": [
+   "aw"
+  ],
+  "éu": [
+   "ɛw"
+  ],
+  "óu": [
+   "ɔw"
+  ],
+  "íu": [
+   "iw"
+  ],
+  "ái": [
+   "aj"
+  ]
+ },
+ "allophones": {
+  "v": null,
+  "ʁ": null,
+  "b": [
+   "b",
+   "β"
+  ],
+  "r": [
+   "r"
+  ],
+  "h": [
+   "h",
+   "x"
+  ]
+ },
+ "positional_graphemes": {
+  "r": {
+   "word_initial": [
+    "r"
+   ],
+   "intervocalic": [
+    "ɾ"
+   ],
+   "before_consonant": [
+    "ɾ"
+   ],
+   "word_final": [
+    ""
+   ]
+  },
+  "l": {
+   "word_final": [
+    ""
+   ]
+  },
+  "s": {
+   "word_initial": [
+    "s"
+   ],
+   "intervocalic": [
+    "z"
+   ],
+
+   "word_final": [
+    ""
+   ]
+  },
+  "g": {
+   "before_e": [
+    "ʒ"
+   ],
+   "before_i": [
+    "ʒ"
+   ]
+  },
+  "c": {
+   "before_e": [
+    "s"
+   ],
+   "before_i": [
+    "s"
+   ]
+  },
+  "qu": {
+   "before_e": [
+    "k"
+   ],
+   "before_i": [
+    "k"
+   ],
+   "before_vowel": [
+    "kw"
+   ]
+  },
+  "x": {
+   "word_initial": [
+    "ʃ"
+   ],
+   "intervocalic": [
+    "z"
+   ]
+  },
+  "m": {
+   "before_consonant": [
+    "̃"
+   ],
+   "word_final": [
+    "̃"
+   ]
+  },
+  "n": {
+   "before_consonant": [
+    "̃"
+   ],
+   "word_final": [
+    "̃"
+   ]
+  }
+ },
+ "allophone_rules": [
+  {
+   "id": "PT_CODA_S_HUSH",
+   "phonemes": [
+    "s"
+   ],
+   "surface": "h",
+   "syllable_position": "coda",
+   "notes": "OVERRIDE of the inherited European Portuguese 'chiado': Barranquenho does NOT palatalise coda /s/ to [ʃ]. Following the Extremaduran/Andalusian adstrate, an internal (pre-consonantal) coda /s/ is aspirated to [h] — mehmu (mesmo), Lihboa (Lisboa), bihtu (visto). Absolute word-final /s/ is deleted entirely, handled pre-lexically by the positional 's' word_final → ∅ map (so no /s/ segment survives for this rule word-finally). Redeclaring the pt-PT rule id replaces it in place (OVERLAY_BY_ID), removing the EP hush. Sources: Navas Sánchez-Élez (2011); Clements, Amaral & Luís (2008); Convenção Ortográfica do Barranquenho (2025) pp. 28–29."
+  },
+  {
+   "id": "PT_CODA_Z_HUSH",
+   "phonemes": [
+    "z"
+   ],
+   "surface": "h",
+   "syllable_position": "coda",
+   "notes": "OVERRIDE of the inherited EP voiced hush ([ʒ]): coda sibilants neutralise to the aspirate [h] in Barranquenho, matching the southern-peninsular coda-/s/ aspiration that Barranquenho shares (Andalusian/Extremaduran). The EP chiado [ʒ] is not present. Navas Sánchez-Élez (2011); Clements, Amaral & Luís (2008)."
+  },
+  {
+   "id": "PT_CODA_L_DARK",
+   "phonemes": [
+    "l"
+   ],
+   "surface": "l",
+   "syllable_position": "coda",
+   "notes": "OVERRIDE (neutralising no-op) of the inherited EP dark/velarised coda /l/ → [ɫ]. Barranquenho, under the Spanish adstrate, keeps a clear alveolar [l] in the (internal, pre-consonantal) coda; the strongly velarised Lisbon [ɫ] is not a feature. Word-final tonic /l/ is deleted entirely (Brasí, Natá, Isabé), handled pre-lexically by the positional 'l' word_final → ∅ map. Rewriting l → l cancels the inherited darkening. Navas Sánchez-Élez (2011); Convenção Ortográfica do Barranquenho (2025) p. 31."
+  },
+  {
+   "id": "PT_NASAL_A_RAISE",
+   "phonemes": [
+    "a"
+   ],
+   "surface": "ɐ",
+   "followed_by_phoneme": [
+    "̃"
+   ],
+   "notes": "Coda-conditioned nasalisation, general Portuguese: a vowel followed by a syllable-final (coda) ⟨m/n⟩ nasalises while the nasal consonant is absorbed — modelled pre-lexically by the positional 'm'/'n' coda→[̃] (combining tilde) map, which deletes the coda nasal and nasalises the preceding vowel by concatenation. This rule supplies the accompanying vowel-quality shift for ⟨a⟩: nasal /a/ raises to [ɐ̃] (ãbu→[ɐ̃bu], campu→[ɐ̃] before consonant), matching European Portuguese nasal-vowel quality. It fires only when the next lattice slot is the nasalisation tilde, so an INTERVOCALIC (onset) ⟨m/n⟩ — which stays a consonant and leaves the vowel oral (lhano→[ʎanu], cama→[kamɐ]) — is untouched. Nasal vowels graphed with coda ⟨am/an⟩: Convenção Ortográfica do Barranquenho (2025) p. 26."
+  },
+  {
+   "id": "PT_NASAL_O_RAISE",
+   "phonemes": [
+    "ɔ"
+   ],
+   "surface": "o",
+   "followed_by_phoneme": [
+    "̃"
+   ],
+   "notes": "Vowel-quality companion of the coda-nasalisation (see PT_NASAL_A_RAISE): nasal /ɔ/ raises to [õ] before the nasalisation tilde (bom→[bõ], ôi→[õj]), so a stressed open [ɔ] does not surface as [ɔ̃]. Fires only when the following slot is the tilde, leaving oral ⟨o⟩ before an onset ⟨m/n⟩ unchanged. Coda ⟨om/on⟩ nasal vowels: Convenção Ortográfica do Barranquenho (2025) p. 26."
+  },
+  {
+   "id": "EXT_E_RAISE_BEFORE_NASAL",
+   "phonemes": [
+    "ɛ"
+   ],
+   "surface": "e",
+   "followed_by_phoneme": [
+    "n",
+    "m"
+   ],
+   "notes": "/e/ is raised to [e] before a nasal consonant, including an ONSET nasal that leaves the vowel oral (⟨pequenu⟩ [pɨˈkenu])"
+  },
+  {
+   "id": "PT_FINAL_EM_NUCLEUS",
+   "phonemes": [],
+   "surface": "ɐ",
+   "notes": "DISABLED for Barranquenho: word-final ⟨-em/-én⟩ is a nasal MONOPHTHONG [ẽ] (quen [ˈkẽ], bem [ˈbẽ]) per the Convenção Ortográfica do Barranquenho, not the EP nasal diphthong [ɐ̃j̃]. The Alentejo-Extremaduran substrate keeps the mid nasal without the palatal offglide or Lisbon centralisation."
+  },
+  {
+   "id": "PT_FINAL_EM_GLIDE",
+   "phonemes": [],
+   "surface": "̃j̃",
+   "notes": "DISABLED for Barranquenho: word-final ⟨-em/-én⟩ is a nasal MONOPHTHONG [ẽ] (quen [ˈkẽ], bem [ˈbẽ]) per the Convenção Ortográfica do Barranquenho, not the EP nasal diphthong [ɐ̃j̃]. The Alentejo-Extremaduran substrate keeps the mid nasal without the palatal offglide or Lisbon centralisation."
+  }
+ ],
+ "ancestors": [
+  {
+   "code": "pt-PT",
+   "role": "lexifier",
+   "weight": 0.6,
+   "notes": "European Portuguese: the dominant language surrounding Barrancos and the primary structural base of Barranquenho."
+  },
+  {
+   "code": "ext",
+   "role": "adstrate",
+   "weight": 0.35,
+   "notes": "Extremaduran, the contact language on the Spanish side. Verbix (https://docs.verbix.com/Languages/Barranquian) states: 'Barranquian is a dialect of Extremaduran, spoken in Portugal near the Spanish border.' Spanish-side influence is pervasive: betacism (v→b), aspirated h, tch/ch affricate, alveolar trill r (not uvular ʁ). Codified in the Convenção Ortográfica do Barranquenho (June 2025)."
+  },
+  {
+   "code": "roa-x-galaicopt",
+   "role": "substrate",
+   "weight": 0.05,
+   "notes": "Galaico-Portuguese: shared nasal vowels, lh/nh digraph conventions, and general Ibero-Romance vowel quality inherited through the Portuguese base."
+  }
+ ],
+ "notes": "Barranquenho, the contact vernacular of Barrancos (Baixo Alentejo, Portugal), spoken by ~1,600–2,000 people and listed by UNESCO as 'definitely endangered'. CODE: Barranquenho is a Portuguese-Spanish contact variety, described as a mixed language by Clements, Amaral & Luis (2008) — a mixed language is not a dialect of either parent. It is spoken in Portugal but it is not Portuguese, so the lect is keyed under the private-use tag ext-PT-x-barrancos, whose prefix marks it as a language in its own right rather than a lect of pt-PT, with -PT for the country it is spoken in. The prefix is a modelling decision, not a genealogical claim: the ancestors block weights the inherited Portuguese and Spanish material (pt-PT 0.6, es-ES 0.35) and does not assert descent. glottolog_code is null because Glottolog carries no languoid for the variety; iso639_3 is null because ISO 639-3 has no code for it — ext is Extremaduran, a different language described by the separate ext spec. pt-PT-x-barrancos is a retired spelling kept resolvable through the registry alias table. PRIMARY SOURCE: Convenção Ortográfica do Barranquenho (II Congresso Barranquenho, June 2025, Câmara Municipal de Barrancos); Gramática Básica de Barranquenho (Gonçalves, Navas & Correia, Universidade de Évora, 2025, ISBN 978-972-778-464-6). KEY PHONOLOGICAL FEATURES: (1) BETACISM: /v/ merged with /b/ — ⟨v⟩ only in proper names/toponyms (Gramática p. 17). (2) ASPIRATED ⟨h⟩ = /h/ (voiceless); also [x] in Spanish loans (e.g. *heringu*, *calheha*) — Gramática p. 18. [ɦ] is NOT documented. (3) CODA ⟨s⟩ → [h] aspiration: *mehmu* (mesmo), *Lihboa* (Lisboa), *bihtu* (visto) — Convenção pp. 28–29. Final absolute ⟨s⟩ is SILENT and NOT WRITTEN in canonical Barranquenho orthography (Convenção p. 31). (4) FINAL -r DELETION: tonic final ⟨r⟩ is silent and not written — *cantá* (cantar), *senhô* (senhor), *dotô* (doutor) — Convenção p. 32; Gramática p. 20. Kept in monosyllable *pur*. MONOSYLLABLE EXCEPTIONS: the Convenção §2.6 Nota keeps the lateral of the monosyllables *mal*, *tal*, *cual* (pronounced in most contexts) and *pur* keeps its -r; these are listed as word_exceptions because the positional layer cannot express monosyllable-vs-polysyllable conditioning (no syllable-count position). (5) FINAL -l DELETION: tonic final ⟨l⟩ is silent and not written — *Brasí* (Brasil), *Natá* (Natal), *Isabé* (Isabel) — Convenção p. 31; Gramática p. 19. Kept in monosyllables *mal, tal, cual*. (6) ALVEOLAR TRILL: word-initial ⟨r⟩ and ⟨rr⟩ = /r/ (not uvular /ʁ/ as in standard pt-PT). (7) CODA-CONDITIONED NASAL VOWELS (Convenção p. 26, §1.8.1 Vocalismo nasal tónico): a vowel before a syllable-final (coda) ⟨m/n⟩ nasalises and the nasal consonant is absorbed — [ã]←⟨am/an⟩ (campu [kɐ̃pu]), [ẽ]←⟨em/en⟩ (tempu [tẽpu], quen [kẽ], plain nasal vowel NOT diphthong [ẽj]), [ĩ]←⟨im/in⟩ (lindo [lĩdu]), [õ]←⟨om/on⟩ (bon [bõ]), [ũ]←⟨um/un⟩ (mundo [mũdu]). An INTERVOCALIC (onset) ⟨m/n⟩ is a syllable onset and leaves the vowel oral (lhano [ʎanu], cama [kamɐ], pequenu [pɨkenu]). Modelled on the nasal CONSONANT: positional_graphemes 'm'/'n' coda (word_final/before_consonant) → U+0303 combining tilde on the preceding vowel (deletes the nasal, nasalises by concatenation); ⟨em/en⟩ retain their own digraph→[ẽ] map. Because ⟨nh⟩/⟨lh⟩ tokenise as single graphemes before this fires, an onset ⟨n⟩ in ⟨nh⟩ never nasalises (banho [baɲu]). Vowel-quality raising ⟨a⟩→[ɐ̃] and ⟨o⟩→[õ] is supplied by allophone_rules PT_NASAL_A_RAISE / PT_NASAL_O_RAISE, which fire only when the next slot is the tilde. (8) DIPHTHONGS (offglide formation): a word-level falling diphthong surfaces as vowel + glide, the second element realised as [j] (front offglide ⟨i⟩) or [w] (back offglide ⟨u⟩), not as a second syllabic nucleus — ⟨ei⟩=[ej] (feira [ˈfejɾɐ]), ⟨oi⟩=[oj] (noite [ˈnojtɨ]), ⟨eu⟩=[ew] (euru [ˈewɾu]), ⟨au⟩=[aw], ⟨ou⟩=[o] (Barranquenho/southern-EP monophthong: poucu [ˈpoku]). NASAL DIPHTHONGS are tonic finals carrying stress (Convenção pp. 26–27): the Convenção circumflex spellings ⟨-âu⟩=[ɐ̃w̃], ⟨-âi⟩=[ɐ̃j], ⟨-ôi⟩=[õj] and their Portuguese-input tilde equivalents ⟨-ãu⟩=[ɐ̃w̃], ⟨-ãi⟩=[ɐ̃j], ⟨-õi⟩=[õj] (abegãu [ɐbɨˈgɐ̃w̃], abitaçõi [ɐbitɐˈsõj]); the nasal offglide ⟨u⟩ is itself nasalised [w̃] while the ⟨i⟩ offglide stays oral [j], and the ⟨ão ãe õe⟩ digraphs are inherited from pt-PT. The accented oral finals ⟨-ói⟩=[ɔj] (herói) and ⟨-éi⟩=[ɛj] (papéis) are added so a Portuguese-spelled accented offglide glides rather than standing as a bare [i]. Rising diphthongs (prevocalic ⟨i⟩ in -óriu-type words, [ju]/[jo]) are NOT yet modelled and remain a known limitation. (9) ⟨x⟩ THREE-WAY: initial → [ʃ]; intervocalic in learned words (crucifixu type) → [ks]; other intervocalic → [z]/[s] — Convenção pp. 28, 31; Gramática pp. 18–19. (10) FINAL VOWELS in orthography: unstressed -o → written ⟨u⟩ (*altu, pássaru*); unstressed -e → written ⟨i⟩ (*sociedadi, libri*) — Convenção pp. 20–21. PHONEMES NOT PRESENT: /v/ (betacism), /ʁ/ (replaced by alveolar /r/). CONTACT-VARIETY OVERRIDES (Portuguese base + Extremaduran/Andalusian Spanish adstrate): Barranquenho inherits pt-PT via graphemes_base/allophones_base/positional_graphemes_base, so the three European-Portuguese post-lexical allophone_rules (PT_CODA_S_HUSH, PT_CODA_Z_HUSH, PT_CODA_L_DARK) are inherited by OVERLAY_BY_ID and would otherwise impose the Lisbon 'chiado' [ʃ ʒ] and the dark coda [ɫ] — neither of which Barranquenho has. This spec REDECLARES those three ids to disable them: coda /s/ and /z/ → aspirated [h] (Andalusian-type, NOT [ʃ]/[ʒ]); coda /l/ → clear [l] (no-op, cancels velarisation). Absolute word-final /s/, /r/ and /l/ are DELETED pre-lexically (positional word_final → ∅), the salient southern-peninsular weakening described by Navas Sánchez-Élez (2011) and Clements, Amaral & Luís (2008). SESEO: Barranquenho has no Castilian /θ/ distinción; ⟨c⟩(before e/i), ⟨ç⟩, ⟨s⟩, ⟨z⟩ all map to alveolar sibilants (seseo-like), as in the inherited base — no /θ/ is introduced. VOWEL REDUCTION (decision, per source): the Alentejano base retains the inherited EP unstressed-vowel positional reduction (final -o → written ⟨u⟩ [u], final -e → written ⟨i⟩ [i]/[ɨ] — the raising is orthographically encoded in the Convenção), so the inherited pt-PT vowel positional maps are kept rather than overridden. LIMITATION: fine-grained differences in Barranquenho PRETONIC vocalism vs. Lisbon reduction are not separately quantified in the cited sources at phoneme-mapping resolution and are left as inherited rather than invented (hard rule 9). STRESS EXCEPTION 'aqui': the adverb ⟨aqui⟩ is OXYTONE — [ɐˈki] (Navas Sánchez-Élez 2011, p. 52: 'aqui [aˈki]'). It ends in an unaccented ⟨-i⟩, which Barranquenho orthography treats as the REGULAR ATONE ending (Portuguese -e written -i, so final unmarked ⟨-i⟩/⟨-u⟩ are paroxytone triggers, not oxytone — pássaru, pequenu, libri). The default paroxytone rule therefore mis-stresses ⟨aqui⟩ as *[ˈɐki]; the oxytony is a lexical fact of this specific closed-class adverb (in canonical Convenção orthography it carries the written accent, ⟨aquí⟩), not a rule the atone-⟨-i⟩ default can express, so it is pinned as a word_exception (rules-vs-lexicon boundary). FINAL UNSTRESSED ⟨-e⟩ ([ɨ] vs [i]) — VARIANT, left as inherited: Navas (2011, p. 52) reports that Barranquenho does NOT categorically raise unstressed vowels the way standard EP does ('las vocales átonas ... no son siempre elevadas ... puede haber variación'), and that word-final ⟨-e⟩ 'se articula A VECES como [i]' (catorze [kaˈtoɾzi]). Because the source marks this as variable ('a veces'), and because canonical Barranquenho orthography already respells the atone ending as ⟨-i⟩ (which the spec maps to [i]: libri [ˈlibɾi], sociedadi), the inherited pt-PT positional ⟨e⟩ word_final → [ɨ] is KEPT for Portuguese-spelled ⟨-e⟩ input rather than changed to a categorical [i]; the [i] realisation is documented here as an attested variant, not overridden (hard rule 9). The scoreboard rows for this lect are machine-generated and same-source gold, so they measure agreement rather than correctness; the phonology here rests on citation.",
+ "sources": [
+  {
+   "id": "convencao_barranquenho2025",
+   "author": "II Congresso Barranquenho / Câmara Municipal de Barrancos (working group)",
+   "year": 2025,
+   "title": "Convenção Ortográfica do Barranquenho",
+   "publisher": "Câmara Municipal de Barrancos",
+   "url": "https://cm-barrancos.pt/upload_files/1/3/Noticias/2025/II%20Congresso%20Barranquenho/Conven%C3%A7%C3%A3o%20Ortogr%C3%A1fica%20do%20Barranquenho%20junho%202025%20final.pdf",
+   "pages": null,
+   "notes": "Primary normative source for Barranquenho orthography and phonology. All grapheme rules in this spec are sourced here unless otherwise stated."
+  },
+  {
+   "id": "gramatica_barranquenho2025",
+   "author": "Gonçalves, Maria Filomena; Navas, María Victoria; Correia, Victor M. Diogo",
+   "year": 2025,
+   "title": "Gramática Básica de Barranquenho",
+   "publisher": "Universidade de Évora, 1ª edição",
+   "pages": null,
+   "notes": "ISBN: 978-972-778-464-6. Institutional grammar confirming phoneme inventory and stress rules. Affiliations: Universidade de Évora/CIDEHUS-UÉ/FCT/Cátedra UNESCO; Universidad Complutense de Madrid/CLUL."
+  },
+  {
+   "id": "navas2011",
+   "author": "Navas Sánchez-Élez, María Victoria",
+   "year": 2011,
+   "title": "El barranqueño: un modelo de lenguas en contacto",
+   "publisher": "Editorial Complutense / Centro de Linguística da Universidade de Lisboa, Madrid, 320 pp.",
+   "url": "https://eprints.ucm.es/id/eprint/48718/",
+   "pages": null,
+   "notes": "ISBN 978-84-9938-099-5. The reference monograph on Barranquenho as a Portuguese (Alentejo)–Spanish (Extremaduran/Andalusian) contact variety, based on interviews with 30 speakers. Source for the southern-peninsular coda-/s/ aspiration/deletion, /r/ and /l/ weakening, betacism (/v/–/b/ merger) and the non-EP alveolar sibilant/vowel system that this spec models as overrides of the inherited pt-PT allophony."
+  },
+  {
+   "id": "clements_amaral_luis2008",
+   "author": "Clements, J. Clancy; Amaral, Patrícia; Luís, Ana R.",
+   "year": 2008,
+   "title": "Cultural identity and the structure of a mixed language: The case of Barranquenho",
+   "publisher": "Proceedings of the Annual Meeting of the Berkeley Linguistics Society 34, 13–22 (Special session on Pidgins, Creoles and Mixed Languages)",
+   "url": "https://hdl.handle.net/2022/24680",
+   "pages": "13-22",
+   "notes": "Documents the diagnostic contact phonology: syllable-final /s/ reduced to [h] or deleted (absent from all Portuguese dialects, shared with Extremeño/Andalusian), and word-final /r/ and /l/ deletion. Grounds the coda-sibilant and final-consonant overrides in this spec."
+  },
+  {
+   "id": "dicionario_barranquenho2025",
+   "author": "Gonçalves, Maria Filomena; Navas, María Victoria; Ferreira, Vera",
+   "year": 2025,
+   "title": "Dicionário de Barranquenho",
+   "publisher": "Universidade de Évora, 1ª edição",
+   "pages": null,
+   "notes": "ISBN: 978-972-778-460-8. Coordinated with Convenção and Gramática under Programa de Preservação e Valorização da Língua e Cultura Barranquenhas."
+  }
+ ],
+ "wikipedia": [
+  "https://en.wikipedia.org/wiki/Barranquenho",
+  "https://es.wikipedia.org/wiki/Dialecto_barranque%C3%B1o",
+  "https://pt.wikipedia.org/wiki/Dialeto_barranquenho"
+ ],
+ "timespan": {
+  "start_year": 1600,
+  "end_year": null
+ },
+ "glottolog_code": null,
+ "iso639_3": null,
+ "quality": "research",
+ "stress": {
+  "onset_clusters": ["bl", "br", "bɫ", "bɾ", "bʀ", "bʁ", "bʎ", "bχ", "dr", "dɾ", "dʀ", "dʁ", "dʎ", "dχ", "fl", "fr", "fɫ", "fɾ", "fʀ", "fʁ", "fʎ", "fχ", "kl", "kr", "kɫ", "kɾ", "kʀ", "kʁ", "kʎ", "kχ", "pl", "pr", "pɫ", "pɾ", "pʀ", "pʁ", "pʎ", "pχ", "tr", "tɾ", "tʀ", "tʁ", "tʎ", "tχ", "vl", "vr", "vɫ", "vɾ", "vʀ", "vʁ", "vʎ", "vχ", "ðr", "ðɾ", "ðʀ", "ðʁ", "ðʎ", "ðχ", "ɡl", "ɡr", "ɡɫ", "ɡɾ", "ɡʀ", "ɡʁ", "ɡʎ", "ɡχ", "ɣl", "ɣr", "ɣɫ", "ɣɾ", "ɣʀ", "ɣʁ", "ɣʎ", "ɣχ", "βl", "βr", "βɫ", "βɾ", "βʀ", "βʁ", "βʎ", "βχ"],
+  "cliticless_words": [
+   "o",
+   "a",
+   "os",
+   "as",
+   "de",
+   "do",
+   "da",
+   "dos",
+   "das",
+   "em",
+   "no",
+   "na",
+   "nos",
+   "nas",
+   "por",
+   "pelo",
+   "pela",
+   "pelos",
+   "pelas",
+   "ao",
+   "aos",
+   "à",
+   "às",
+   "com",
+   "sem",
+   "e",
+   "que",
+   "se",
+   "me",
+   "te",
+   "lhe",
+   "lhes",
+   "vos",
+   "lo",
+   "la",
+   "los",
+   "las",
+   "lho",
+   "lha",
+   "lhos",
+   "lhas"
+  ],
+  "default_position": -2,
+  "final_stress_endings": [
+   "z",
+   "x",
+   "im",
+   "om",
+   "um",
+   "ns",
+   "âu",
+   "âi",
+   "ôi",
+   "á",
+   "é",
+   "í",
+   "ó",
+   "ú",
+   "ê",
+   "ô",
+   "â",
+   "ei",
+   "eu",
+   "oi",
+   "ou",
+   "au",
+   "ai",
+   "ui",
+   "iu",
+   "eis",
+   "eus",
+   "ois",
+   "ous",
+   "aus",
+   "ais",
+   "uis",
+   "ius"
+  ],
+  "penult_stress_endings": [],
+  "marked_vowels": [
+   "á",
+   "é",
+   "í",
+   "ó",
+   "ú",
+   "à",
+   "â",
+   "ã",
+   "ê",
+   "ô",
+   "õ",
+   "ẽ",
+   "ĩ",
+   "ũ"
+  ],
+  "stress_mark": "ˈ",
+  "notes": "Barranquenho stress per Convenção Ortográfica (2025) pp. 35–36 and Gramática Básica (2025) p. 12. DEFAULT: paroxytone (penult stress) for words ending in a vowel grapheme — INCLUDING final ⟨-i⟩ and ⟨-u⟩, which are the REGULAR ATONE ENDINGS in Barranquenho orthography (Portuguese -e/-o written as -i/-u). Final unmarked ⟨-i⟩/⟨-u⟩ are NOT oxytone triggers: *pássaru* (stress on first syllable), *pequenu* (paroxytone), *libru* (paroxytone). Only ACCENTED ⟨-í⟩/⟨-ú⟩ (or other diacritic-bearing vowels) trigger final stress: *aquí, azú, cantá*. Oxytone final endings: nasal diphthongs ⟨-âu⟩, ⟨-âi⟩, ⟨-ôi⟩ are inherently tonic finals (Convenção pp. 26–27). ORAL FALLING DIPHTHONGS as a word-final nucleus are likewise tonic finals — the regular Portuguese *aguda* rule (Cunha & Cintra, Nova Gramática do Português Contemporâneo, §Ditongos; Convenção pp. 35–36): *depois* [dɨˈpoj], *encontrou* [ẽkõˈtro], *falou*, *comeu*, *partiu*, *currais* [kuˈraj], *fugiu* [fuˈʒiw]. This is why the bare-vowel endings ⟨-i⟩/⟨-u⟩ (atone) are absent while the two-letter diphthong endings ⟨-ei -eu -oi -ou -au -ai -ui -iu⟩ ARE oxytone triggers: an atone final ⟨-i⟩/⟨-u⟩ is a nucleus (paroxytone), but the SAME letter as the second element of a diphthong is an offglide riding on the preceding stressed nucleus. Each diphthong ending is also listed with the weakened coda ⟨-s⟩ (⟨-ois -eis -ais …⟩), since absolute-final /s/ is deleted/aspirated in Barranquenho and would otherwise hide the diphthong from the ending match (*depois*, *currais*). A diphthong whose nucleus carries a written accent (⟨-éu -éi -ói -ãu -ãi -õi⟩) is already oxytone through marked_vowels and needs no ending. Final ⟨-r⟩ and ⟨-l⟩ (tonic) are deleted in Barranquenho canonical orthography and do NOT appear as stress triggers (Portuguese-spelled *brincar*-type forms, where the -r is retained in spelling, are therefore not covered here — a separate final-consonant-deletion concern, not a diphthong one). Portuguese-orthography forms with final -ão/-ãe/-ões do NOT occur in canonical Barranquenho text; the convention writes these as -âu/-âi/-ôi."
+ },
+ "word_exceptions": {
+  "mal": "mal",
+  "tal": "tal",
+  "cual": "kwal",
+  "pur": "puɾ",
+  "aqui": "ɐˈki"
+ },
+ "wikidata_qid": "Q2982964",
+ "location": {
+  "latitude": 38.130733,
+  "longitude": -6.976103,
+  "source": "wikidata",
+  "notes": "Barrancos (Baixo Alentejo) — the single border municipality Barranquenho is spoken in. [Wikidata Q368867 P625]"
+ },
+ "word_exceptions_base": "pt-PT",
+ "audit": {
+  "primary_sources": {
+   "conclusion": "sample_too_small",
+   "measured": "The primary_sources row holds 10 gold pairs, per=0.2801, per_ci_low=0.1363, per_ci_high=0.4286 (benchmarks/results.json). The 95% interval includes 0.25, so the row cannot be read as a failure. The same spec is otherwise well measured: barranquenho_dict carries 1508 pairs at per=0.0045 and portuguese_tts carries 20 at per=0.0, so Barranquenho is a well-certified variety and this 10-pair row adds no information the larger rows do not already give.",
+   "reference": "spec notes"
+  }
+ }
+}

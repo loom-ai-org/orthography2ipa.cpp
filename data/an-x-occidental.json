@@ -1,0 +1,87 @@
+{
+  "code": "an-x-occidental",
+  "name": "Western Aragonese",
+  "script": "Latin",
+  "graphemes_base": "an",
+  "allophones_base": "an",
+  "allophones": {
+    "ʎ": [
+      "ʝ",
+      "j"
+    ]
+  },
+  "positional_graphemes_base": "an",
+  "parent": "an",
+  "ancestors": [
+    {
+      "code": "an",
+      "role": "parent",
+      "weight": 0.85
+    },
+    {
+      "code": "es-ES",
+      "role": "adstrate",
+      "weight": 0.12
+    }
+  ],
+  "notes": "Western Aragonese (Jacetania, Cinco Villas). Transitional to Castilian: strongest Castilian phonological influence among Aragonese dialects. Palatal lateral /ʎ/ lost to /ʝ/ (yeísmo). Vowel system reduced to five vowels (Castilian pattern). Latin J- → [x] (Castilian pattern) rather than Aragonese [tʃ] or [dʒ]. Fewer distinctive Aragonese features than Eastern or Central varieties.",
+  "quality": "research",
+  "script_type": "alphabet",
+  "sources": [
+    {
+      "id": "penny2002",
+      "author": "Penny, R.",
+      "year": 2002,
+      "title": "A History of the Spanish Language",
+      "publisher": "Cambridge University Press",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "nagore_lain2001",
+      "author": "Nagore Laín, F.",
+      "year": 2001,
+      "title": "Gramática de la Lengua Aragonesa",
+      "publisher": "Librería General",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "hualde2005",
+      "author": "Hualde, J.I.",
+      "year": 2005,
+      "title": "The Sounds of Spanish",
+      "publisher": "Cambridge University Press",
+      "url": null,
+      "pages": null,
+      "notes": null,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Spanish_phonology"
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Aragonese_language",
+    "https://en.wikipedia.org/wiki/Aragonese_dialects",
+    "https://an.wikipedia.org/wiki/Idioma_aragon%C3%A9s",
+    "https://an.wikipedia.org/wiki/Dialectos_de_l%27aragon%C3%A9s",
+    "https://es.wikipedia.org/wiki/Idioma_aragon%C3%A9s",
+    "https://es.wikipedia.org/wiki/Dialectos_del_aragon%C3%A9s"
+  ],
+  "urls": [
+    "https://en.wikipedia.org/wiki/Aragonese_language",
+    "https://en.wikipedia.org/wiki/Aragonese_dialects"
+  ],
+  "timespan": {
+    "start_year": 1100,
+    "end_year": null
+  },
+  "glottolog_code": "west2340",
+  "iso639_3": "arg",
+  "location": {
+    "latitude": 42.55,
+    "longitude": -0.55,
+    "source": "wikidata",
+    "notes": "Jaca — a representative locality of the western Aragonese area. [Wikidata Q49581 P625]"
+  }
+}

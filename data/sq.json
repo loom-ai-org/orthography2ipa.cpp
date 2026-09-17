@@ -1,0 +1,175 @@
+{
+  "code": "sq",
+  "name": "Albanian",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "iso639_3": "sqi",
+  "glottolog_code": "alba1267",
+  "timespan": {
+    "start_year": 1462,
+    "end_year": null
+  },
+  "graphemes": {
+    "dh": [
+      "ð"
+    ],
+    "gj": [
+      "ɟ"
+    ],
+    "ll": [
+      "ɫ"
+    ],
+    "nj": [
+      "ɲ"
+    ],
+    "rr": [
+      "r"
+    ],
+    "sh": [
+      "ʃ"
+    ],
+    "th": [
+      "θ"
+    ],
+    "xh": [
+      "dʒ"
+    ],
+    "zh": [
+      "ʒ"
+    ],
+    "a": [
+      "a"
+    ],
+    "b": [
+      "b"
+    ],
+    "c": [
+      "ts"
+    ],
+    "ç": [
+      "tʃ"
+    ],
+    "d": [
+      "d"
+    ],
+    "e": [
+      "e"
+    ],
+    "ë": [
+      "ə"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "h": [
+      "h"
+    ],
+    "i": [
+      "i"
+    ],
+    "j": [
+      "j"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "o": [
+      "o"
+    ],
+    "p": [
+      "p"
+    ],
+    "q": [
+      "c"
+    ],
+    "r": [
+      "ɾ"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "u": [
+      "u"
+    ],
+    "v": [
+      "v"
+    ],
+    "x": [
+      "dz"
+    ],
+    "y": [
+      "y"
+    ],
+    "z": [
+      "z"
+    ]
+  },
+  "allophones": {},
+  "positional_graphemes": {},
+  "ancestors": [
+    {
+      "code": "ine",
+      "role": "proto_language",
+      "weight": 1.0,
+      "notes": "Isolated Indo-European branch; possibly descended from Illyrian or Thraco-Dacian"
+    }
+  ],
+  "parent": "x-clade-alba1267",
+  "notes": "Standard Albanian based on Tosk dialect. Unique Indo-European branch. Digraphs (dh, gj, ll, nj, rr, sh, th, xh, zh) listed before single letters. Ë = schwa /ə/. Q = palatal stop /c/. R = tap /ɾ/, rr = trill /r/.",
+  "sources": [
+    {
+      "id": "wiki-sq",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Albanian language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Albanian_language"
+    },
+    {
+      "id": "wiki-sq-phon",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Albanian phonology",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Albanian_phonology"
+    },
+    {
+      "id": "coretta2023",
+      "author": "Coretta, Stefano; Riverin-Coutlée, Josiane; Kapia, Enkeleida; Nichols, Stephen",
+      "year": 2023,
+      "title": "Northern Tosk Albanian. Illustrations of the IPA",
+      "publisher": "Journal of the International Phonetic Association 53(3), 1122-1144 (open access; Edinburgh Research Explorer copy)",
+      "url": "https://doi.org/10.1017/S0025100322000044",
+      "wikipedia_url": null,
+      "pages": "1124-1125, 1132",
+      "notes": "Consonant table with one orthographic word per phoneme (pp. 1124-1125) and the seven-vowel inventory (p. 1132), read in full; the variety is the Northern Tosk on which the standard is based. It corroborates ⟨th dh⟩ = θ ð, ⟨c x⟩ = ts dz, ⟨ç xh⟩ = tʃ dʒ, ⟨nj⟩ = ɲ, ⟨rr⟩ = r, ⟨ll⟩ = a velarised lateral and ⟨y⟩ = y. It disagrees with this map on four letters: ⟨q gj⟩ are laminal postalveolar affricates t̻ʃ̻ d̻ʒ̻ (qava, gjaku), not the palatal stops c ɟ; ⟨r⟩ is a retroflex flap ɽ (bari), not an alveolar tap; ⟨ë⟩ is /ɜ/ (për), which the authors use for typographic simplicity where the map writes ə; and ⟨o⟩ is /ɔ/ (por). Recorded here; the grapheme data is not changed in this citation."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Albanian_language",
+    "https://en.wikipedia.org/wiki/Albanian_phonology",
+    "https://sq.wikipedia.org/wiki/Gjuha_shqipe"
+  ],
+  "wikidata_qid": "Q8748",
+  "wals_code": "alb",
+  "location": {
+    "latitude": 40.99952,
+    "longitude": 20.791828,
+    "source": "glottolog",
+    "notes": "Glottolog's computed centroid for the Albanian family — a summary of a whole clade's range, not a place anyone speaks."
+  }
+}

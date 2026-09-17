@@ -1,0 +1,212 @@
+{
+  "code": "es-MX",
+  "name": "Mexican Spanish (Highland)",
+  "script": "Latin",
+  "graphemes_base": "es-ES",
+  "graphemes": {
+    "c": [
+      "k",
+      "s"
+    ],
+    "z": [
+      "s"
+    ],
+    "ll": [
+      "ʝ"
+    ]
+  },
+  "allophones_base": "es-ES",
+  "allophones": {
+    "x": [
+      "x"
+    ],
+    "ʝ": [
+      "ʝ",
+      "ɟʝ"
+    ],
+    "n": [
+      "n",
+      "m",
+      "ŋ"
+    ],
+    "e": [
+      "e",
+      "e̥"
+    ],
+    "o": [
+      "o",
+      "o̥"
+    ]
+  },
+  "positional_graphemes_base": "es-ES",
+  "parent": "es-ES",
+  "notes": "Highland Mexican (Mexico City / Central Plateau). Conservative: full coda /s/, velar [x], no aspiration. Distinctive unstressed vowel devoicing (especially sentence-finally). Very tense [tʃ]. Weak approximant [ʝ̞]. Largest Spanish-speaking country.",
+  "quality": "research",
+  "script_type": "alphabet",
+  "sources": [
+    {
+      "id": "hualde2005",
+      "author": "Hualde, J.I.",
+      "year": 2005,
+      "title": "The Sounds of Spanish",
+      "publisher": "Cambridge University Press",
+      "url": null,
+      "pages": null,
+      "notes": null,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Spanish_phonology"
+    },
+    {
+      "id": "lope_blanch1972",
+      "author": "Lope Blanch, J.M.",
+      "year": 1972,
+      "title": "El concepto del prestigio y la norma lingüística del español",
+      "publisher": "UNAM",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "penny2002",
+      "author": "Penny, R.",
+      "year": 2002,
+      "title": "A History of the Spanish Language",
+      "publisher": "Cambridge University Press",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "lipski_overview",
+      "author": "Lipski, John M.",
+      "year": 2011,
+      "title": "Geographical and Social Varieties of Spanish: An Overview",
+      "publisher": "In J.I. Hualde, A. Olarrea & E. O'Rourke (eds.), The Handbook of Hispanic Linguistics, Wiley-Blackwell",
+      "url": "https://johnlipski.github.io/geo.pdf",
+      "pages": "pp. 1-26",
+      "notes": "READ (geo.pdf). Reproduces the Lipski (1994) geographical dialect-zone classification of Latin American Spanish (list (2)): Mexican/SW-US; Caribbean; Guatemala-Yucatan-Costa Rica; El Salvador-Honduras-Nicaragua; interior Colombia + highland Venezuela; Pacific coast Colombia/Ecuador/Peru; Andean (Ecuador/Peru/Bolivia/NW-Argentina/NE-Chile); Chile; Paraguay/NE-Argentina/E-Bolivia; Argentina/Uruguay. Used here to enumerate the regional zones; no phonology quoted."
+    },
+    {
+      "id": "lipski1994",
+      "author": "Lipski, John M.",
+      "year": 1994,
+      "title": "Latin American Spanish",
+      "publisher": "Longman Linguistics Library, Longman",
+      "url": null,
+      "pages": null,
+      "notes": "The comprehensive dialect survey underlying the zone classification (cited via the author's own overview, geo.pdf, which was read)."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Mexican_Spanish",
+    "https://es.wikipedia.org/wiki/Español_de_México",
+    "https://es.wikipedia.org/wiki/Espa%C3%B1ol_mexicano"
+  ],
+  "timespan": {
+    "start_year": 1700,
+    "end_year": null
+  },
+  "glottolog_code": "mexi1248",
+  "iso639_3": "spa",
+  "stress": {
+    "onset_clusters": ["bl", "br", "bɫ", "bɾ", "bʀ", "bʁ", "bʎ", "bχ", "dr", "dɾ", "dʀ", "dʁ", "dʎ", "dχ", "fl", "fr", "fɫ", "fɾ", "fʀ", "fʁ", "fʎ", "fχ", "kl", "kr", "kɫ", "kɾ", "kʀ", "kʁ", "kʎ", "kχ", "pl", "pr", "pɫ", "pɾ", "pʀ", "pʁ", "pʎ", "pχ", "tr", "tɾ", "tʀ", "tʁ", "tʎ", "tχ", "vl", "vr", "vɫ", "vɾ", "vʀ", "vʁ", "vʎ", "vχ", "ðr", "ðɾ", "ðʀ", "ðʁ", "ðʎ", "ðχ", "ɡl", "ɡr", "ɡɫ", "ɡɾ", "ɡʀ", "ɡʁ", "ɡʎ", "ɡχ", "ɣl", "ɣr", "ɣɫ", "ɣɾ", "ɣʀ", "ɣʁ", "ɣʎ", "ɣχ", "βl", "βr", "βɫ", "βɾ", "βʀ", "βʁ", "βʎ", "βχ"],
+    "cliticless_words": [
+      "el",
+      "la",
+      "lo",
+      "los",
+      "las",
+      "un",
+      "una",
+      "unos",
+      "unas",
+      "al",
+      "del",
+      "a",
+      "de",
+      "en",
+      "con",
+      "por",
+      "sin",
+      "tras",
+      "para",
+      "y",
+      "e",
+      "o",
+      "u",
+      "ni",
+      "que",
+      "si",
+      "me",
+      "te",
+      "se",
+      "le",
+      "les",
+      "nos",
+      "os",
+      "mi",
+      "tu",
+      "su",
+      "mis",
+      "tus",
+      "sus"
+    ],
+    "default_position": -2,
+    "final_stress_endings": [
+      "r",
+      "l",
+      "d",
+      "z",
+      "j",
+      "x",
+      "k",
+      "f"
+    ],
+    "penult_stress_endings": [
+      "n",
+      "s",
+      "ns"
+    ],
+    "marked_vowels": [
+      "á",
+      "é",
+      "í",
+      "ó",
+      "ú"
+    ],
+    "stress_mark": "ˈ",
+    "notes": "Standard Spanish accentuation (inherited from es-ES): default paroxytone; written accent wins; oxytone before consonant codas other than n/s; proparoxytones always written-accented."
+  },
+  "ancestors": [
+    {
+      "code": "es-ES",
+      "role": "parent",
+      "weight": 0.9,
+      "notes": "Primary parent (Castilian Spanish); preserved from the existing parent field."
+    },
+    {
+      "code": "es-419",
+      "role": "ancestor",
+      "weight": 0.6,
+      "notes": "General Latin American Spanish (koine) baseline (Lipski 1994)."
+    },
+    {
+      "code": "nah",
+      "role": "adstrate",
+      "weight": 0.1,
+      "notes": "Nahuatl indigenous adstrate (see stub nah.json; Lipski 1994)."
+    },
+    {
+      "code": "yua",
+      "role": "adstrate",
+      "weight": 0.1,
+      "notes": "Yucatec Maya indigenous adstrate (see stub yua.json; Lipski 1994)."
+    }
+  ],
+  "wikidata_qid": "Q616620",
+  "location": {
+    "latitude": 19.353773,
+    "longitude": -99.13589,
+    "source": "wikidata",
+    "notes": "Mexico City — the highland centre this spec models. [Wikidata Q1489 P625]"
+  }
+}

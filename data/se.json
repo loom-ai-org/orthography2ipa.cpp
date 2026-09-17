@@ -1,0 +1,162 @@
+{
+  "code": "se",
+  "name": "Northern Sami",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "iso639_3": "sme",
+  "glottolog_code": "nort2671",
+  "timespan": {
+    "start_year": 1600,
+    "end_year": null
+  },
+  "graphemes": {
+    "č": [
+      "tʃ"
+    ],
+    "đ": [
+      "ð"
+    ],
+    "ŋ": [
+      "ŋ"
+    ],
+    "š": [
+      "ʃ"
+    ],
+    "ž": [
+      "ʒ"
+    ],
+    "ŧ": [
+      "θ"
+    ],
+    "á": [
+      "aː"
+    ],
+    "a": [
+      "a"
+    ],
+    "b": [
+      "b"
+    ],
+    "d": [
+      "d"
+    ],
+    "e": [
+      "e"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "h": [
+      "h"
+    ],
+    "i": [
+      "i"
+    ],
+    "j": [
+      "j"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "o": [
+      "o"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "u": [
+      "u"
+    ],
+    "v": [
+      "v"
+    ],
+    "c": [
+      "ts"
+    ],
+    "z": [
+      "dz"
+    ]
+  },
+  "allophones": {},
+  "positional_graphemes": {},
+  "ancestors": [
+    {
+      "code": "urj",
+      "role": "parent",
+      "weight": 0.82,
+      "notes": "Samic branch of Uralic."
+    },
+    {
+      "code": "fi",
+      "role": "related",
+      "weight": 0.1,
+      "notes": "Finnish/Finnic areal contact and shared inheritance."
+    },
+    {
+      "code": "nb",
+      "role": "adstrate",
+      "weight": 0.1,
+      "notes": "Norwegian adstrate: dominant Scandinavian contact language."
+    },
+    {
+      "code": "sv",
+      "role": "adstrate",
+      "weight": 0.05,
+      "notes": "Swedish adstrate."
+    }
+  ],
+  "parent": "x-clade-saam1281",
+  "notes": "Northern Sami, largest Sami language spoken in Norway, Sweden and Finland. Sami alphabets include several extended characters: č /tʃ/, đ /ð/, ŋ /ŋ/, š /ʃ/, ž /ʒ/, ŧ /θ/. Consonant gradation system similar to Finnish. Polysynthetic morphology.\n\nAudit of the wikipron row (n=4125, crowd-scraped). Orthography check: 2186/5506 gold headwords (39.7%) carry at least one of the extended letters á č đ ŋ š ŧ ž (á 1449, č 461, š 253, đ 149, ŋ 104, ž 67, ŧ 9), and zero carry any of the pre-1979 letters tested (ǩ ǧ ǯ ǳ). The gold is confirmed written in the current (1979) orthography this spec already targets; there is no orthography generation mismatch to fix here.\n\nConsonant quantity/gradation. Northern Sami has a three-way quantity (Q1/Q2/Q3) contrast that is only partly recoverable from the spelling: of the 2116 gold words containing a doubled consonant letter, 25.0% carry NO length mark at all in the gold IPA (the written strong grade collapses at the phone level), and separately 1834/5506 words (33.3%) show a consonant marked long in the gold with no doubled letter anywhere in the spelling (e.g. Afrihkká → afːriːhːkaː, single ⟨f⟩ realized long; Albánia → alːpaːnia; Antárktis → anːtaːrktis). Folding the length mark ː out of BOTH sides of the current spec's output moves wikipron PER from 0.2749 to 0.2416, a 3.3-point improvement, executed against the harness's own scorer this session. That is real but partial — nowhere near \"far below 0.25\" — so gradation is only one contributor to the residual error, and valid_ceiling is deliberately left UNSET rather than reported from this fold alone; an unmeasured ceiling is worse than an absent one, and a partial one presented as conclusive is worse still.\n\nDiphthong/vowel-quantity fold is a measured no-op, recorded here so it is not re-run: the harness's normalize() already strips the non-syllabic diacritic ̯ from both sides unconditionally (0/5506 gold entries retain it post-normalize), so folding it changes nothing — wikipron PER is bit-identical (0.27493090418707...) before and after. Do not report a diphthong fold as a ceiling for this row.\n\nTwo measured-but-uncited leads, deliberately left unencoded pending a fetched primary source: (1) orthographic 〈b〉, 〈d〉 and 〈g〉 overwhelmingly do NOT surface as voiced stops in this gold — of words containing 〈b〉 only 6.9% have /b/ in the gold IPA (e.g. boazu → poɑtsuː), 〈d〉 words have /d/ 12.1% of the time (duddjot → tuːɟɟɟoh), 〈g〉 words have /ɡ/ 6.9% of the time (gii → kij) — consistent with the documented North Sami pattern of a lenis/fortis stop contrast rather than a voicing contrast, but this is measured from the gold, NOT sourced, and is deliberately not encoded as a spec rule. The work to obtain for this is Bals Baal, Odden & Rice, \"An analysis of North Saami gradation\", Phonology 29(2): 165-212, doi:10.1017/s0952675712000115 — confirmed to exist via CrossRef, but the Cambridge Core PDF route returns only the paywalled HTML landing page, so it is named here as existing-but-not-obtained with no locator claimed. (2) The 〈nj〉, 〈lj〉 and 〈dj〉 digraphs (documented elsewhere as ɲ, ʎʎ and cç/ɟɟ respectively) are unhandled by this spec's grapheme table: njoazit → hypothesis njoadzit against gold ɲoɑtsiːh. Also real, also unencoded, awaiting a fetched source before it is written as a rule.\n\nCitation-quality defect: the only entry in sources below is Wikipedia, which is a reading path, not an authority, for a phonemic claim. It has not been replaced because no fully-read primary source was found this session. The works that would replace it, in order of what they would support, are Bals Baal, Odden & Rice 2012 (cited above, gradation and the b/d/g stop-series contrast; not consulted, paywalled) and Sammallahti, The Saami Languages: An Introduction (1998, general reference grammar; not found on archive.org — only a Pite Saami item appears there, a different language).",
+  "sources": [
+    {
+      "id": "wiki-se",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Northern Sami",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Northern_Sami"
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Northern_Sami",
+    "https://en.wikipedia.org/wiki/Proto-Uralic_language",
+    "https://se.wikipedia.org/wiki/Davvis%C3%A1megiella"
+  ],
+  "wikidata_qid": "Q33947",
+  "phoible_id": "nort2671",
+  "wals_code": "sno",
+  "location": {
+    "latitude": 68.725,
+    "longitude": 22.1113,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for North Saami."
+  },
+  "audit": {
+    "wikipron": {
+      "conclusion": "change_refused_uncited",
+      "measured": "Two leads measured from the gold and deliberately left unencoded: (1) orthographic b/d/g surface as voiced stops only 6.9%/12.1%/6.9% of the time, consistent with a lenis/fortis contrast rather than voicing, but the supporting source (Bals Baal, Odden & Rice 2012, Phonology 29(2)) is paywalled and was not obtained; (2) the nj/lj/dj digraphs are unhandled pending a fetched source. Both are measured-not-sourced and refused rather than shipped uncited.",
+      "reference": "spec notes"
+    }
+  }
+}

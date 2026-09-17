@@ -1,0 +1,472 @@
+{
+  "code": "gv",
+  "name": "Manx",
+  "script": "Latin",
+  "graphemes": {
+    "a": [
+      "a",
+      "æ"
+    ],
+    "aa": [
+      "ɛː",
+      "eː"
+    ],
+    "e": [
+      "e",
+      "ɛ"
+    ],
+    "ee": [
+      "iː"
+    ],
+    "i": [
+      "i",
+      "ɪ",
+      "ə"
+    ],
+    "oo": [
+      "uː"
+    ],
+    "o": [
+      "o",
+      "ɔ"
+    ],
+    "u": [
+      "u",
+      "ʊ",
+      "ɤ"
+    ],
+    "b": [
+      "b"
+    ],
+    "d": [
+      "d"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "p": [
+      "p"
+    ],
+    "t": [
+      "t"
+    ],
+    "k": [
+      "k"
+    ],
+    "c": [
+      "k"
+    ],
+    "ck": [
+      "k"
+    ],
+    "f": [
+      "f"
+    ],
+    "v": [
+      "v"
+    ],
+    "s": [
+      "s"
+    ],
+    "sh": [
+      "ʃ"
+    ],
+    "th": [
+      "t"
+    ],
+    "ch": [
+      "x"
+    ],
+    "gh": [
+      "x",
+      "ɣ"
+    ],
+    "ng": [
+      "ŋ"
+    ],
+    "mm": [
+      "m"
+    ],
+    "nn": [
+      "n",
+      "nʲ"
+    ],
+    "ey": [
+      "əː",
+      "ə"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "l": [
+      "l"
+    ],
+    "r": [
+      "r",
+      "ɾ"
+    ],
+    "w": [
+      "w"
+    ],
+    "y": [
+      "j"
+    ],
+    "h": [
+      "h"
+    ],
+    "j": [
+      "dʒ"
+    ],
+    "qu": [
+      "kw"
+    ],
+    "çh": [
+      "tʃ"
+    ],
+    "rr": [
+      "r",
+      "rʲ"
+    ],
+    "ie": [
+      "i",
+      "i̯"
+    ],
+    "lh": [
+      "lʲ"
+    ],
+    "oa": [
+      "oː"
+    ],
+    "ae": [
+      "ɛː"
+    ],
+    "ea": [
+      "eː",
+      "ɛː"
+    ],
+    "eea": [
+      "iə"
+    ],
+    "eay": [
+      "əː"
+    ],
+    "aue": [
+      "ɛːu"
+    ],
+    "aaie": [
+      "ɛːi"
+    ],
+    "aigh": [
+      "ɛːi"
+    ],
+    "aih": [
+      "ɛːi"
+    ],
+    "aie": [
+      "ɛːi"
+    ],
+    "aiy": [
+      "eː"
+    ],
+    "ay": [
+      "e",
+      "eː"
+    ],
+    "eigh": [
+      "əi"
+    ],
+    "eih": [
+      "əː",
+      "əi"
+    ],
+    "oie": [
+      "əi",
+      "iː"
+    ],
+    "uy": [
+      "əː"
+    ],
+    "'": [
+      ""
+    ],
+    "eu": [
+      "eu"
+    ]
+  },
+  "positional_graphemes": {
+    "ey": {
+      "word_final": [
+        "ə"
+      ]
+    },
+    "y": {
+      "word_initial": [
+        "j"
+      ],
+      "before_vowel": [
+        "j"
+      ],
+      "default": [
+        "ə",
+        "i"
+      ]
+    }
+  },
+  "allophones": {
+    "p": [
+      "p"
+    ],
+    "b": [
+      "b"
+    ],
+    "t": [
+      "t"
+    ],
+    "d": [
+      "d"
+    ],
+    "k": [
+      "k"
+    ],
+    "ɡ": [
+      "ɡ"
+    ],
+    "f": [
+      "f"
+    ],
+    "v": [
+      "v"
+    ],
+    "s": [
+      "s"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "x": [
+      "x"
+    ],
+    "ɣ": [
+      "ɣ"
+    ],
+    "h": [
+      "h"
+    ],
+    "dʒ": [
+      "dʒ"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "nʲ": [
+      "nʲ"
+    ],
+    "ŋ": [
+      "ŋ"
+    ],
+    "l": [
+      "l"
+    ],
+    "r": [
+      "r"
+    ],
+    "ɾ": [
+      "ɾ"
+    ],
+    "w": [
+      "w"
+    ],
+    "j": [
+      "j"
+    ],
+    "a": [
+      "a"
+    ],
+    "æ": [
+      "æ"
+    ],
+    "ɛ": [
+      "ɛ"
+    ],
+    "e": [
+      "e"
+    ],
+    "o": [
+      "o"
+    ],
+    "u": [
+      "u"
+    ],
+    "eː": [
+      "eː"
+    ],
+    "ɪ": [
+      "ɪ"
+    ],
+    "iː": [
+      "iː"
+    ],
+    "ɔ": [
+      "ɔ"
+    ],
+    "oː": [
+      "oː"
+    ],
+    "ʊ": [
+      "ʊ"
+    ],
+    "uː": [
+      "uː"
+    ],
+    "ə": [
+      "ə"
+    ],
+    "əː": [
+      "əː"
+    ],
+    "ɛː": [
+      "ɛː"
+    ],
+    "i": [
+      "i"
+    ],
+    "i̯": [
+      "i̯"
+    ],
+    "eu": [
+      "eu"
+    ],
+    "ɤ": [
+      "ɤ"
+    ],
+    "tʃ": [
+      "tʃ"
+    ]
+  },
+  "allophone_rules": [
+    {
+      "id": "GV_SLENDER_FINAL_N",
+      "phonemes": [
+        "i",
+        "e"
+      ],
+      "surface": "ə",
+      "followed_by_phoneme": [
+        "n"
+      ],
+      "followed_by_2": "word_boundary",
+      "mutates_neighbor": "ʲ",
+      "mutates_neighbor_side": "following",
+      "notes": "Goidelic slender/broad marking: a written vowel letter (i/e) before a word-final n marks the n as palatalised ('slender'). WikiPron/Wiktionary gold shows the marker surfacing as an epenthetic schwa before the palatalised n in the large majority of -in/-ein/-ain finals -- Mannin [manənʲ], aalin [ɛːlinʲ] (with i realised, not schwa, but still non-null), aynin [unənʲ], benrein [benreːnʲ], blein [bleːnʲ], cuishlin [kuʃlʲənʲ], dourin [daurənʲ], glashtin [ɡlaʃtʲənʲ], marin [mɛːrʲənʲ], orrin [orənʲ], shiaghtin [ʃaxtʲənʲ] (WikiPron glv_latn_broad). A minority of forms, notably dowin [daunʲ] and ain [ain] (no palatalisation at all), show no schwa (Broderick 1984-86, A Handbook of Late Spoken Manx, vol.3; Thomson 1992, 'The Manx Language', in MacAulay (ed.) The Celtic Languages, ch.3); this variation is documented, not encoded, since the schwa-bearing form dominates the cited transcriptions. Uses mutates_neighbor: the rule keeps its own slot as [ə] while palatalising the FOLLOWING slot (the final n) atomically -- see docs/allophony.md."
+    },
+    {
+      "id": "GV_SLENDER_ONSET_CONSONANT",
+      "phonemes": [
+        "i",
+        "e"
+      ],
+      "surface": "",
+      "preceded_by": "consonant",
+      "followed_by": "vowel",
+      "mutates_neighbor": "ʲ",
+      "mutates_neighbor_side": "preceding",
+      "notes": "Goidelic slender/broad marking, onset case: a written i/e between an onset consonant and a following vowel marks the consonant as palatalised ('slender') and does not itself surface -- Manx giare [ɡʲɛːr], giat [ɡʲat] (Broderick 1984-86; Thomson 1992, ch.3). mutates_neighbor palatalises the PRECEDING slot atomically as the vowel deletes."
+    }
+  ],
+  "parent": "cel-x-goidelic",
+  "ancestors": [
+    {
+      "code": "cel-x-goidelic",
+      "role": "parent",
+      "weight": 0.85,
+      "notes": "Goidelic descent"
+    },
+    {
+      "code": "en-GB",
+      "role": "adstrate",
+      "weight": 0.1,
+      "notes": "English adstrate: heavy influence, English-based orthography"
+    }
+  ],
+  "notes": "Manx (Gaelg). Isle of Man. Last native speaker (Ned Maddrell) died 1974. Revival since 1970s; ~1,800 speakers (est. 2020). English/Welsh-based orthography descending from Bishop John Phillips' Book of Common Prayer tradition (unlike Irish/Scots Gaelic script). Simplified mutation system vs. Irish/Scots Gaelic. Characteristic digraphs/trigraphs: <gh> word-final/preconsonantal realises [x] (Broderick 1984-86 vol.3; only rarely [ɣ] intervocalically); <çh> /tʃ/ contrasts with <ch> /x/; <sh> /ʃ/; <aa> is predominantly [ɛː] (Broderick), not the older [eː]; word-final <ey> reduces to unstressed [ə] (long [əː] when it is the stressed nucleus, e.g. monosyllables); <nn>/<mm>/<rr> are English-style doubled-consonant spellings marking a preceding short vowel, not gemination, and surface as a single (sometimes palatalised) consonant; <ng> is the velar nasal [ŋ]. Preocclusion of final nasals/liquids (<nn>→[dn], <mm>→[bm]) described for fuller Late Spoken Manx phonetic transcriptions (Broderick 1984-86; Jackson 1955) is NOT attested in the WikiPron/Wiktionary broad-transcription gold used here, which instead shows plain (non-preoccluded) [n]/[m] throughout — the gold reflects a lenited, revival-adjacent register rather than Broderick's narrow phonetic fieldwork transcriptions; preocclusion is therefore documented here rather than encoded, pending a gold source that attests it. Gaelic slender/broad (caol/leathan) consonant marking survives vestigially: an adjacent <i>/<e> can signal a palatalised neighbouring consonant without itself surfacing as a vowel (e.g. giare [ɡʲɛːr], dowin [daunʲ]) — modelled by the GV_SLENDER_FINAL_N / GV_SLENDER_ONSET_CONSONANT allophone_rules, using the generic mutates_neighbor mechanism (a rule deletes its own vowel slot while palatalising an adjacent consonant slot atomically; see docs/allophony.md, section 'Marker graphemes'). ⟨eu⟩ is kept as its own grapheme key despite its IPA reading as the concatenation of ⟨e⟩+⟨u⟩'s primary values: it spells a single diphthongal nucleus (WikiPron gold 'eu' [eu], 'feue' [feu]), the same unit-nucleus justification as ⟨ai⟩/⟨aaj⟩ elsewhere in the schema, not an enumerated pair. The English-derived orthography carries digraphs whose English values are false friends: ⟨th⟩ is /t/, not a dental fricative — Manx has no /θ ð/ at all (Lewin 2020: thalloo/thallooin /taˈluːnʲ/, thie /tai/) — and ⟨lh⟩ is the palatalised lateral /lʲ/ rather than /l/+/h/ (lhean /lʲeːn/, lhiabbee /lʲabi/, lhune /lʲuːn/, lhiaght /lʲaxt/). ⟨y⟩ is /j/ as an onset but a vowel letter elsewhere, reading [ə] or [i] (Jamys /dʒeːməs/, fys /fis/); it is split positionally. The vowel digraphs and trigraphs follow Lewin's orthography-to-phone tables (2020: 69-71): ⟨oa⟩ /oː/ (noa /noː/), ⟨ae⟩ /ɛː/ (aeg /ɛːɡ/), ⟨ea⟩ /eː/ with /ɛː/ beside it (rea /reː/, gearey /ɡɛːrʲə/), ⟨eea⟩ /iə/ (geearree, jeeaghyn), ⟨eay⟩ /əː/ (bleayst /bləːst/), ⟨aue⟩ /ɛːu/ (laue, raaue, snaue), ⟨aih aie aigh aaie⟩ /ɛːi/ (graih /ɡrɛːi/, traie /trɛːi/, aigh /ɛːi/, faaie /fɛːi/), ⟨aiy⟩ /eː/ (faiyr /feːr/), ⟨ay⟩ /e/ or /eː/ (aym /em/, kay /kʲeː/), ⟨oie⟩ /əi/ or /iː/ (roie), and ⟨uy⟩ /əː/ (Gaelic aoi gives Manx /əː/, Lewin 2020 §3.4.2; nuy < naoi). ⟨eih⟩ is given as /əː/ before /əi/: both are attested (seihll /səːl/, leih /ləi/, Lewin 2020: 69), and the ordering is a distributional choice made on the gold, not a ranking Lewin states. Doubled consonant letters are English-style vowel-length markers rather than geminates, so collapse_geminates is on; the ⟨i⟩ that flanks them is the palatalisation marker (ooilley /ulʲə/, bainney /banʲə/, cuirrey /kurʲə/, troiddey /trodʲə/, Lewin 2020: 72). The apostrophe marks elision and is silent. NOT a Goidelic template: the gv grapheme table was checked key-by-key against ga and gd, which share the same cel-x-goidelic parent. Of the 25 keys gv shares with ga, one carries the same value; of the 25 it shares with gd, six do, and those six are ⟨e f h m ng r⟩. The Manx table is its own. Refs: Lewin (2020), Thomson (1992), Broderick (1984-86), Jackson (1955).",
+  "quality": "research",
+  "script_type": "alphabet",
+  "sources": [
+    {
+      "id": "macaulay1992",
+      "author": "MacAulay, D. (ed.)",
+      "year": 1992,
+      "title": "The Celtic Languages",
+      "publisher": "Cambridge University Press",
+      "url": null,
+      "pages": null,
+      "notes": "Thomson, R.L., \"The Manx Language\", ch. 3.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Celtic_languages"
+    },
+    {
+      "id": "broderick1984",
+      "author": "Broderick, G.",
+      "year": 1984,
+      "title": "A Handbook of Late Spoken Manx",
+      "publisher": "Niemeyer",
+      "url": null,
+      "pages": null,
+      "notes": "3 vols; phonology in vol. 3. Source for <gh>/<çh>/<sh>/<aa> realisations and for final-nasal/liquid preocclusion (not attested in the WikiPron gold used here)."
+    },
+    {
+      "id": "jackson1955",
+      "author": "Jackson, K.H.",
+      "year": 1955,
+      "title": "Contributions to the Study of Manx Phonology",
+      "publisher": "Nelson",
+      "url": null,
+      "pages": null,
+      "notes": "Classical/pre-Late-Manx phonological description; corroborates preocclusion and slender/broad consonant reflexes."
+    },
+    {
+      "id": "ladefoged_maddieson1996",
+      "author": "Ladefoged, P. & Maddieson, I.",
+      "year": 1996,
+      "title": "The Sounds of the World's Languages",
+      "publisher": "Blackwell",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "lewin2020",
+      "author": "Lewin, Christopher",
+      "year": 2020,
+      "title": "Aspects of the historical phonology of Manx",
+      "publisher": "PhD thesis, University of Edinburgh",
+      "url": "https://era.ed.ac.uk/handle/1842/37271",
+      "pages": "68-72",
+      "notes": "Sections 1.6.4.3-1.6.4.7 tabulate the Classical Manx orthography against phonemic values; source for the digraph and trigraph readings added to this spec."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Manx_language",
+    "https://gv.wikipedia.org/wiki/Gaelg"
+  ],
+  "timespan": {
+    "start_year": 600,
+    "end_year": null
+  },
+  "glottolog_code": "manx1243",
+  "iso639_3": "glv",
+  "wikidata_qid": "Q12175",
+  "wals_code": "mnx",
+  "location": {
+    "latitude": 54.2604,
+    "longitude": -4.45437,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Manx."
+  },
+  "collapse_geminates": true
+}

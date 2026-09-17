@@ -1,0 +1,272 @@
+{
+  "parent": "trk",
+  "ancestors": [
+    {
+      "code": "trk",
+      "role": "parent",
+      "weight": 0.85,
+      "notes": "Descent from Proto-Turkic (Karluk branch)."
+    },
+    {
+      "code": "fa",
+      "role": "adstrate",
+      "weight": 0.18,
+      "notes": "Persian/Tajik adstrate: intense sedentary bilingualism; conditioned loss of vowel harmony in standard Uzbek."
+    },
+    {
+      "code": "ar",
+      "role": "adstrate",
+      "weight": 0.1,
+      "notes": "Arabic adstrate: religious/scholarly vocabulary, largely via Persian."
+    },
+    {
+      "code": "ru",
+      "role": "adstrate",
+      "weight": 0.05,
+      "notes": "Russian adstrate: Soviet-era lexicon."
+    }
+  ],
+  "code": "uz",
+  "name": "Uzbek",
+  "glottolog_code": "nort2690",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "iso639_3": "uzb",
+  "quality": "research",
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "b": [
+      "b"
+    ],
+    "d": [
+      "d"
+    ],
+    "e": [
+      "e"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "h": [
+      "h"
+    ],
+    "i": [
+      "i"
+    ],
+    "j": [
+      "dʒ"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "o": [
+      "o"
+    ],
+    "oʻ": [
+      "ø"
+    ],
+    "p": [
+      "p"
+    ],
+    "q": [
+      "q"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "u": [
+      "u"
+    ],
+    "v": [
+      "v"
+    ],
+    "x": [
+      "x"
+    ],
+    "y": [
+      "j"
+    ],
+    "z": [
+      "z"
+    ],
+    "ch": [
+      "tʃ"
+    ],
+    "sh": [
+      "ʃ"
+    ],
+    "ng": [
+      "ŋ"
+    ],
+    "gʻ": [
+      "ʁ"
+    ],
+    "ʼ": [
+      "ʔ"
+    ]
+  },
+  "allophones": {
+    "a": [
+      "a"
+    ],
+    "b": [
+      "b",
+      "p"
+    ],
+    "d": [
+      "d",
+      "t"
+    ],
+    "e": [
+      "e"
+    ],
+    "f": [
+      "f"
+    ],
+    "ɡ": [
+      "ɡ",
+      "k"
+    ],
+    "h": [
+      "h"
+    ],
+    "i": [
+      "i"
+    ],
+    "dʒ": [
+      "dʒ"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "o": [
+      "o"
+    ],
+    "ø": [
+      "ø"
+    ],
+    "p": [
+      "p"
+    ],
+    "q": [
+      "q",
+      "χ"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "u": [
+      "u"
+    ],
+    "v": [
+      "v",
+      "w"
+    ],
+    "x": [
+      "x"
+    ],
+    "j": [
+      "j"
+    ],
+    "z": [
+      "z"
+    ],
+    "tʃ": [
+      "tʃ"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "ŋ": [
+      "ŋ"
+    ],
+    "ʁ": [
+      "ʁ",
+      "ɣ"
+    ]
+  },
+  "notes": "Standard Uzbek in Latin script (official since 1993, Unicode apostrophe forms oʻ and gʻ). No vowel harmony (unlike most Turkic). 6-vowel system. Q is uvular /q/. Oʻ represents /ø/ (front rounded). Gʻ represents voiced uvular fricative /ʁ/.",
+  "sources": [
+    {
+      "id": "uzbek_phonology_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Uzbek phonology",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Uzbek_language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Uzbek_language",
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "johanson_csato1998",
+      "author": "Johanson, L. & Csató, É.",
+      "year": 1998,
+      "title": "The Turkic Languages",
+      "publisher": "Routledge",
+      "url": null,
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Uzbek_language",
+    "https://uz.wikipedia.org/wiki/O%CA%BBzbek_tili"
+  ],
+  "timespan": {
+    "start_year": 1993,
+    "end_year": null
+  },
+  "stress": {
+    "default_position": -1,
+    "final_stress_endings": [],
+    "penult_stress_endings": [],
+    "marked_vowels": [],
+    "stress_mark": "ˈ",
+    "notes": "Uzbek default stress is word-final (-1). Some endings (question, negation, certain postpositions) and place-name suffixes deviate; lexical and not modeled. Source: Sjoberg (1963), Johanson & Csató (1998)."
+  },
+  "wikidata_qid": "Q9264",
+  "phoible_id": "nort2690",
+  "wals_code": "uzb",
+  "location": {
+    "latitude": 40.886,
+    "longitude": 69.211,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Northern Uzbek."
+  }
+}

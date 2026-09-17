@@ -1,0 +1,250 @@
+{
+  "code": "pt-CV",
+  "glottolog_code": null,
+  "name": "Cape Verdean Portuguese",
+  "script": "Latin",
+  "quality": "skeleton",
+  "script_type": "alphabet",
+  "parent": "pt-PT",
+  "graphemes_base": "pt-PT",
+  "allophones_base": "pt-PT",
+  "positional_graphemes_base": "pt-PT",
+  "graphemes": {
+    "r": [
+      "r",
+      "ɾ"
+    ],
+    "rr": [
+      "r"
+    ],
+    "e": [
+      "e",
+      "ɛ"
+    ],
+    "o": [
+      "o",
+      "ɔ"
+    ]
+  },
+  "allophones": {
+    "r": [
+      "r",
+      "ɾ"
+    ],
+    "ʁ": [
+      "r"
+    ]
+  },
+  "ancestors": [
+    {
+      "code": "pt-PT",
+      "role": "parent",
+      "weight": 0.75,
+      "notes": "European Portuguese colonial base. Cape Verde was settled by Portuguese from 1462; its Portuguese variety is among the oldest extra-peninsular varieties."
+    },
+    {
+      "code": "kea",
+      "role": "adstrate",
+      "weight": 0.2,
+      "notes": "Cape Verdean Creole (Kriolu/Kabuverdianu) adstrate: the dominant vernacular of Cape Verde, spoken by virtually all Cape Verdeans as L1. Heavy bidirectional influence with Portuguese. Cape Verdean Creole is itself descended from Portuguese."
+    }
+  ],
+  "notes": "Cape Verdean Portuguese (Português de Cabo Verde): the formal/L2 variety of Portuguese, the co-official language of Cape Verde. THIS IS DISTINCT FROM Cape Verdean Creole (Kabuverdianu/Kriolu, ISO kea): the Creole is the L1 vernacular of virtually the whole population, itself a Portuguese-lexified creole formed from 16th-17th-century Portuguese and West African languages that 'se diferenciava sobretudo com relação às vogais átonas' (Freitas 2017:154). This spec models the Portuguese, not the creole. GROUNDED / FLAGGED FEATURES: like other Lusophone-African emerging norms, the Portuguese of Cape Verde is reported to show (1) reduced-to-absent EP unstressed-vowel reduction (spelling-closer vocalism), (2) coda /s/ kept alveolar [s] rather than palatalised [ʃ], (3) an alveolar rather than uvular rhotic, (4) intervocalic /b d g/ kept as plosives rather than the EP spirants [β ð ɣ], and (5) a dental, non-velarised /l/. HONESTY LIMIT (hard rule 9): no accessible instrumental phonology of Cape Verdean PORTUGUESE (as opposed to the Creole) could be obtained and read for this pass — the CV-Portuguese feature list above rests on the general Lusophone-African pattern (cf. Undolo 2014 for Angola, read) plus the secondary Wikipedia description (flagged), while the read primary (Freitas 2017) covers the Creole. Features 1-5 are therefore provisional; this variety is deliberately kept at SKELETON tier (no read Cape-Verdean-Portuguese phonology source exists — the only variety-specific primary read, Freitas 2017, is about the Creole) and must not be promoted without a read CV-Portuguese source. Contrast pt-AO and pt-MZ, which are research tier because each has a read primary for its own variety (Undolo 2014, Nhatuve 2019). Two Creole macro-varieties (Sotavento/Santiago, Barlavento/São Vicente) underlie sub-regional variation.",
+  "sources": [
+    {
+      "id": "lang2009",
+      "author": "Lang, J.",
+      "year": 2009,
+      "title": "Português de Cabo Verde",
+      "publisher": "Caminho",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "baptista2002",
+      "author": "Baptista, M.",
+      "year": 2002,
+      "title": "The Syntax of Cape Verdean Creole",
+      "publisher": "John Benjamins",
+      "url": null,
+      "pages": null,
+      "notes": "Key reference for Creole-Portuguese interaction"
+    },
+    {
+      "id": "veiga2004",
+      "author": "Veiga, M.",
+      "year": 2004,
+      "title": "A construção do bilinguismo",
+      "publisher": "Instituto da Biblioteca Nacional e do Livro",
+      "url": null,
+      "pages": null,
+      "notes": "Cape Verde bilingualism: Creole and Portuguese. Bibliographic reference (not read in full for this spec)."
+    },
+    {
+      "id": "freitas2017",
+      "author": "Freitas, Shirley",
+      "year": 2017,
+      "title": "Kabuverdianu moderno: alguns aspectos fonológicos",
+      "publisher": "Revista Internacional em Língua Portuguesa (RILP) 31, 153-172",
+      "url": "https://www.rilp-aulp.org/index.php/rilp/article/view/RILP2017.31.7",
+      "pages": "153-155",
+      "notes": "Read. Describes the phonology of modern Kabuverdianu (Cape Verdean CREOLE, Santiago variety), used here to establish the Creole vs Portuguese distinction: the Creole formed from 16th-17th-century Portuguese and African languages, differing from it 'sobretudo com relação às vogais átonas' (p.154). NOT a source for Cape Verdean Portuguese phonology proper."
+    },
+    {
+      "id": "undolo2014",
+      "author": "Undolo, Márcio",
+      "year": 2014,
+      "title": "Caracterização do sistema vocálico do português culto falado em Angola",
+      "publisher": "Revista de Filología Románica 31(2), 181-187",
+      "url": "https://revistas.ucm.es/index.php/RFRM/article/view/51071",
+      "pages": "181-187",
+      "notes": "Read. Cited as the (Angolan) evidence for the shared Lusophone-African pattern of reduced-to-absent unstressed vowel reduction (p.183-184) by which the Cape Verdean Portuguese vocalism is modelled by analogy, in the absence of a read CV-Portuguese primary."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Cape_Verdean_Portuguese",
+    "https://pt.wikipedia.org/wiki/Portugu%C3%AAs_cabo-verdiano"
+  ],
+  "urls": [
+    "https://en.wikipedia.org/wiki/Cape_Verdean_Portuguese",
+    "https://en.wikipedia.org/wiki/Cape_Verdean_Creole",
+    "https://en.wikipedia.org/wiki/Languages_of_Cape_Verde",
+    "https://pt.wikipedia.org/wiki/Portugu%C3%AAs_cabo-verdiano"
+  ],
+  "timespan": {
+    "start_year": 1800,
+    "end_year": null
+  },
+  "iso639_3": "por",
+  "positional_graphemes": {
+    "s": {
+      "word_final": [
+        "s"
+      ],
+      "word_initial": [
+        "s"
+      ],
+      "intervocalic": [
+        "z"
+      ],
+      "intervocalic_cross_word": [
+        "z"
+      ]
+    },
+    "z": {
+      "word_final": [
+        "s"
+      ]
+    },
+    "r": {
+      "word_initial": [
+        "r"
+      ]
+    },
+    "e": {
+      "nucleus_unstressed": [
+        "e"
+      ],
+      "word_final": [
+        "e"
+      ]
+    }
+  },
+  "allophone_rules": [
+    {
+      "id": "PT_CODA_S_HUSH",
+      "phonemes": [
+        "s"
+      ],
+      "surface": "s",
+      "syllable_position": "coda",
+      "notes": "Cape Verdean Portuguese keeps an alveolar coda /s/ (no Lisbon 'chiado'); this overrides the inherited pt-PT PT_CODA_S_HUSH rule by id, matching the alveolar coda already declared in this spec's positional_graphemes."
+    },
+    {
+      "id": "PT_CODA_Z_HUSH",
+      "phonemes": [
+        "z"
+      ],
+      "surface": "z",
+      "syllable_position": "coda",
+      "notes": "Cape Verdean Portuguese keeps an alveolar coda /z/; overrides the inherited pt-PT PT_CODA_Z_HUSH rule by id."
+    },
+    {
+      "id": "PT_FINAL_EM_NUCLEUS",
+      "phonemes": [],
+      "surface": "ɐ",
+      "notes": "DISABLED for Cape Verdean Portuguese. Word-final ⟨-em⟩ is [ẽj] here — the close-mid nasal nucleus [ẽ] with a palatal offglide, WITHOUT the EP Lisbon centralisation of the nucleus to [ɐ̃]. Cape Verdean Portuguese, under a Creole substrate, keeps a spelling-faithful mid nucleus."
+    }
+  ],
+  "stress": {
+    "onset_clusters": ["bl", "br", "bɫ", "bɾ", "bʀ", "bʁ", "bʎ", "bχ", "dr", "dɾ", "dʀ", "dʁ", "dʎ", "dχ", "fl", "fr", "fɫ", "fɾ", "fʀ", "fʁ", "fʎ", "fχ", "kl", "kr", "kɫ", "kɾ", "kʀ", "kʁ", "kʎ", "kχ", "pl", "pr", "pɫ", "pɾ", "pʀ", "pʁ", "pʎ", "pχ", "tr", "tɾ", "tʀ", "tʁ", "tʎ", "tχ", "vl", "vr", "vɫ", "vɾ", "vʀ", "vʁ", "vʎ", "vχ", "ðr", "ðɾ", "ðʀ", "ðʁ", "ðʎ", "ðχ", "ɡl", "ɡr", "ɡɫ", "ɡɾ", "ɡʀ", "ɡʁ", "ɡʎ", "ɡχ", "ɣl", "ɣr", "ɣɫ", "ɣɾ", "ɣʀ", "ɣʁ", "ɣʎ", "ɣχ", "βl", "βr", "βɫ", "βɾ", "βʀ", "βʁ", "βʎ", "βχ"],
+    "cliticless_words": ["o", "a", "os", "as", "de", "do", "da", "dos", "das", "em", "no", "na", "nos", "nas", "por", "pelo", "pela", "pelos", "pelas", "ao", "aos", "à", "às", "com", "sem", "e", "que", "se", "me", "te", "lhe", "lhes", "vos", "lo", "la", "los", "las", "lho", "lha", "lhos", "lhas"],
+    "default_position": -2,
+    "final_stress_endings": [
+      "r",
+      "l",
+      "z",
+      "x",
+      "i",
+      "u",
+      "im",
+      "om",
+      "um",
+      "is",
+      "us",
+      "ns",
+      "ão",
+      "ãe",
+      "õe",
+      "au",
+      "éu",
+      "éi",
+      "ói"
+    ],
+    "penult_stress_endings": [],
+    "marked_vowels": [
+      "á",
+      "é",
+      "í",
+      "ó",
+      "ú",
+      "â",
+      "ê",
+      "ô",
+      "ã",
+      "õ"
+    ],
+    "stress_mark": "ˈ",
+    "notes": "Acordo Ortográfico 1990 conventions: paroxytone default; written accents override; final -i/-u/-r/-l/-z/-x/-im/-om/-um/-ns and nasal diphthongs attract final stress. Unmarked -em/-am stay paroxytone (homem, falam). DIPHTHONGS: declared so the bundled syllabifier counts nuclei correctly — without them every vowel run merges into one nucleus and co-e-lho is read as coe-lho, one syllable short, putting the stress and its vowel reduction on the wrong vowel. ⟨oe⟩ is hiatus, not a diphthong (Cunha & Cintra, §Ditongos).",
+    "diphthongs": [
+      "ãe",
+      "ão",
+      "õe",
+      "ai",
+      "ái",
+      "au",
+      "áu",
+      "ei",
+      "éi",
+      "êi",
+      "eu",
+      "éu",
+      "êu",
+      "iu",
+      "oi",
+      "ói",
+      "ôi",
+      "ou",
+      "ui"
+    ]
+  },
+  "wikidata_qid": "Q5035141",
+  "location": {
+    "latitude": 14.917719,
+    "longitude": -23.509156,
+    "source": "wikidata",
+    "notes": "Praia. The formal L2 Portuguese of Cape Verde — the capital stands in for the archipelago. [Wikidata Q3751 P625]"
+  },
+  "word_exceptions_base": "pt-PT"
+}

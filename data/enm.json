@@ -1,0 +1,379 @@
+{
+  "code": "enm",
+  "name": "Middle English",
+  "script": "Latin",
+  "graphemes": {
+    "a": [
+      "a",
+      "æ"
+    ],
+    "e": [
+      "ɛ",
+      "e",
+      "ə"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "ɔ",
+      "o"
+    ],
+    "u": [
+      "u",
+      "ʊ"
+    ],
+    "ā": [
+      "aː"
+    ],
+    "ē": [
+      "eː"
+    ],
+    "ī": [
+      "iː"
+    ],
+    "ō": [
+      "oː"
+    ],
+    "ū": [
+      "uː"
+    ],
+    "ai": [
+      "aj"
+    ],
+    "au": [
+      "au"
+    ],
+    "ei": [
+      "ej"
+    ],
+    "oi": [
+      "oj"
+    ],
+    "ou": [
+      "ou"
+    ],
+    "ew": [
+      "ɛu",
+      "ju"
+    ],
+    "ow": [
+      "ou",
+      "au"
+    ],
+    "p": [
+      "p"
+    ],
+    "t": [
+      "t"
+    ],
+    "k": [
+      "k"
+    ],
+    "b": [
+      "b"
+    ],
+    "d": [
+      "d"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "f": [
+      "f"
+    ],
+    "v": [
+      "v"
+    ],
+    "s": [
+      "s"
+    ],
+    "z": [
+      "z"
+    ],
+    "h": [
+      "h"
+    ],
+    "r": [
+      "r"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "w": [
+      "w"
+    ],
+    "j": [
+      "j"
+    ],
+    "c": [
+      "k",
+      "s"
+    ],
+    "x": [
+      "ks"
+    ],
+    "ð": [
+      "ð",
+      "θ"
+    ],
+    "ch": [
+      "tʃ"
+    ],
+    "th": [
+      "θ",
+      "ð"
+    ],
+    "þ": [
+      "θ",
+      "ð"
+    ],
+    "ȝ": [
+      "j",
+      "x",
+      "ɣ"
+    ],
+    "gh": [
+      "x"
+    ],
+    "sch": [
+      "ʃ"
+    ],
+    "sh": [
+      "ʃ"
+    ],
+    "qu": [
+      "kw"
+    ],
+    "wh": [
+      "hw",
+      "w"
+    ]
+  },
+  "positional_graphemes": {
+    "y": {
+      "before_vowel": [
+        "j"
+      ],
+      "default": [
+        "i"
+      ]
+    }
+  },
+  "allophones": {
+    "p": [
+      "p"
+    ],
+    "t": [
+      "t"
+    ],
+    "k": [
+      "k"
+    ],
+    "b": [
+      "b"
+    ],
+    "d": [
+      "d"
+    ],
+    "ɡ": [
+      "ɡ"
+    ],
+    "tʃ": [
+      "tʃ"
+    ],
+    "dʒ": [
+      "dʒ"
+    ],
+    "f": [
+      "f"
+    ],
+    "v": [
+      "v"
+    ],
+    "θ": [
+      "θ"
+    ],
+    "ð": [
+      "ð"
+    ],
+    "s": [
+      "s"
+    ],
+    "z": [
+      "z"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "ʒ": [
+      "ʒ"
+    ],
+    "h": [
+      "h"
+    ],
+    "x": [
+      "x",
+      "h",
+      ""
+    ],
+    "r": [
+      "r",
+      "ɾ"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ŋ": [
+      "ŋ"
+    ],
+    "w": [
+      "w"
+    ],
+    "j": [
+      "j"
+    ],
+    "a": [
+      "a",
+      "æ"
+    ],
+    "ɛ": [
+      "ɛ"
+    ],
+    "e": [
+      "e",
+      "ə"
+    ],
+    "i": [
+      "i"
+    ],
+    "ɔ": [
+      "ɔ"
+    ],
+    "o": [
+      "o"
+    ],
+    "u": [
+      "u",
+      "ʊ"
+    ],
+    "aː": [
+      "aː"
+    ],
+    "eː": [
+      "eː"
+    ],
+    "iː": [
+      "iː"
+    ],
+    "oː": [
+      "oː"
+    ],
+    "uː": [
+      "uː"
+    ],
+    "aj": [
+      "aj"
+    ],
+    "au": [
+      "au"
+    ],
+    "ej": [
+      "ej"
+    ],
+    "oj": [
+      "oj"
+    ],
+    "ou": [
+      "ou"
+    ],
+    "ɛu": [
+      "ɛu"
+    ],
+    "ju": [
+      "ju"
+    ]
+  },
+  "parent": "ang",
+  "ancestors": [
+    {
+      "code": "ang",
+      "role": "parent",
+      "weight": 0.8,
+      "notes": "Descent from Old English"
+    },
+    {
+      "code": "fr-FR",
+      "role": "superstrate",
+      "weight": 0.15,
+      "notes": "Norman French superstrate (post-1066): /v/ becomes phonemic; /dʒ/ and /ʒ/ extended; massive vocabulary influx (~10,000 French words); loss of OE inflectional endings accelerated"
+    },
+    {
+      "code": "non",
+      "role": "adstrate",
+      "weight": 0.05,
+      "notes": "Old Norse Danelaw adstrate: they/their/them, sky, take, give, etc."
+    }
+  ],
+  "notes": "Middle English (~1100–1500 CE). Post-Norman Conquest (~1066); models Chaucerian Late ME (~1380–1400). NORMAN FRENCH SUPERSTRATE: /v/ phonemicised; /dʒ/ extended via French; /ʒ/ enters (vision, pleasure) in late ME. OE diphthongs simplified: ea→ɛ, eo→e. OE front rounded /y/ → /i/ (lost). GREAT VOWEL SHIFT beginning ~1400–1700: long vowels raised/diphthongised. Dialect continuum: Northern (Scots), Midland (Chaucer), Southern. Major texts: Canterbury Tales (Chaucer), Piers Plowman, Sir Gawain and the Green Knight. Source: Hogg (1992), Fischer (2000).\n\nGOLD FORENSICS (wikipron, this pass, see docs/gold_defects.md): the wikipron enm gold's vowel-length notation does not hold still even within one headword -- counted on the harness's own scored representation (each reading normalized via benchmark.normalize(broad=True, strip_stress=True), deduplicated per headword), 1,403 of 6,466 headwords (21.7%) retain two or more distinct normalized readings that differ ONLY by the presence of the length mark ː (the same predicate over raw un-normalized TSV strings gives 1,291/20.0% instead; 1,403 is reported because it matches what the PER computation actually scores). Spot-checked mismatches (Irish -> gold iːriʃ, Simon -> gold simɔːn, amen -> gold aːmɛn) assign length to plain vowel letters with no orthographic signal this spec's macron graphemes (ā ē ī ō ū) could use to predict it. Folding ː out of both sides moves PER from the as-scored 0.2981 to 0.2538 (valid_ceiling.wikipron) -- below the 0.25 production threshold, so this row stays OPEN, not proved input-limited. Word-final -e is similarly unstable: of 2,350 headwords with an orthographic final e, 1,922 (81.8%) have SOME readings realise it as [ə] and others drop it for the SAME headword; a naive fold (strip trailing [ə] on both sides when the headword ends in e) makes PER worse (0.3144), a negative result, so no ceiling is recorded for it. Headword spelling is also not standardised: 669 of 6,465 adjacent-sorted headword pairs are plausible dialectal/scribal variants of one lexeme, a property of unstandardised ME spelling rather than a spec defect. INHERITANCE: en-GB (parent=enm) carries zero *_base keys, so nothing crosses from enm into en-GB or any further English lect; en-US instead inherits from en-GB (not enm) via four *_base keys (graphemes_base, allophones_base, grammatical_endings_base, word_exceptions_base). enm is safe to edit freely; en-GB is the shared base and is not.\n\nGRAPHEME COVERAGE FIX: ⟨y⟩ had no grapheme entry at all -- inherited resolution through orthography2ipa.get('enm') found no key containing 'y', so the engine dropped it silently rather than erroring (ymage -> maɡɛ, yong -> ɔnɡ). Middle English ⟨y⟩ is positional: a consonantal glide /j/ before a vowel (yong, yeer, yarn -- confirmed against the gold, e.g. York -> j ɔ r k, yarn -> j a r n) and a vowel /i/ elsewhere, where it is a purely graphic variant of ⟨i⟩ next to minim strokes (ydel -> iː d ə l, matching idle; Mossé 1952 and Jordan 1974 both describe ⟨y⟩/⟨i⟩ as interchangeable outside the glide environment; exact locator not verified this pass). Encoded as positional_graphemes y: before_vowel -> j, default -> i. ⟨x⟩ (191 occurrences in the wikipron gold, all realised /ks/, e.g. Oxenford -> ɔ k s ə f oː r d, axe -> a k s ə) had no grapheme entry either; added as x -> ks, the standard Latinate-derived digraph value. ⟨ð⟩ (11 occurrences, e.g. arveð -> a r v ə ð, wrengðe -> w r ɛ n ɡ ð) is the eth variant spelling of thorn in ME manuscript orthography and was added mirroring þ's θ/ð alternation, ordered ð first because every sampled gold occurrence realises ð, not θ -- a distributional argument from the small sample, not a separate citation. Combined effect on the wikipron row: as-scored PER 0.2981 -> 0.2620 (ablation: y alone 0.2652, +x 0.2621, +ð 0.2620 -- ð's contribution is noise-level given its 11 occurrences). The vowel-length-mark fold (see valid_ceiling.wikipron) was re-measured against the fixed spec and now measures 0.2163, clearing the 0.25 production threshold; the prior 0.2538 figure was measured against the ⟨y⟩-dropping spec and is superseded.",
+  "quality": "research",
+  "script_type": "alphabet",
+  "iso639_3": "enm",
+  "sources": [
+    {
+      "id": "mosse1952",
+      "author": "Mossé, F.",
+      "year": 1952,
+      "title": "A Handbook of Middle English",
+      "publisher": "Johns Hopkins Press",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "jordan1974",
+      "author": "Jordan, R.",
+      "year": 1974,
+      "title": "Handbook of Middle English Grammar: Phonology",
+      "publisher": "Mouton",
+      "url": null,
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Middle_English"
+  ],
+  "timespan": {
+    "start_year": 1150,
+    "end_year": 1500
+  },
+  "glottolog_code": "midd1317",
+  "wikidata_qid": "Q36395",
+  "location": {
+    "latitude": 51.65,
+    "longitude": -1.11,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Middle English."
+  },
+  "collapse_geminates": true,
+  "valid_ceiling": {
+    "wikipron": {
+      "per": 0.2163,
+      "folded": "vowel length mark ː",
+      "citation": "Re-measured after fixing the enm ⟨y⟩/⟨x⟩/⟨ð⟩ grapheme gaps (see spec notes, y-grapheme fix). As-scored PER (n=6466, broad+strip_stress, enm_latn_broad.tsv) moved from the prior 0.2981 (measured against the defective spec that dropped ⟨y⟩ silently) to 0.2620 with the fixed spec. Folding the vowel-length mark ː out of both hypothesis and gold (same predicate as before: the gold disagrees with itself about vowel length within 1403 of 6466 headwords, e.g. Irish -> iriʃ / iːriʃ) now measures 0.2163 -- below the 0.25 production threshold. The prior 0.2538 folded figure was measured against the ⟨y⟩-dropping spec and undercounted correct segments the fixed spec now produces; it is superseded by this figure, not additive to it. This row is now input-limited by the gold's internal vowel-length disagreement rather than by a spec defect."
+    }
+  }
+}

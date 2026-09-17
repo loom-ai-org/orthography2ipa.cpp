@@ -1,0 +1,146 @@
+{
+  "code": "sc-x-campidanese",
+  "name": "Campidanese Sardinian",
+  "script": "Latin",
+  "graphemes_base": "sc",
+  "allophones_base": "sc",
+  "allophones": {
+    "p": [
+      "p",
+      "β"
+    ],
+    "t": [
+      "t",
+      "ð"
+    ],
+    "k": [
+      "k",
+      "ɣ"
+    ]
+  },
+  "parent": "sc",
+  "notes": "Campidanese Sardinian. Southern variety, more innovative than Logudorese. Greater intervocalic lenition, more retroflex consonants, some Catalan/Spanish influence from centuries of Aragonese-Catalan rule. PHONEME INVENTORY: attested inventory from PHOIBLE (glottocode camp1261), declared directly. `graphemes` stays empty because none of that depends on the writing system: the sounds of this language are known regardless of whether — or how — it is written.",
+  "quality": "skeleton",
+  "script_type": "alphabet",
+  "sources": [
+    {
+      "id": "blasco_ferrer1986",
+      "author": "Blasco Ferrer, E.",
+      "year": 1986,
+      "title": "La lingua sarda contemporanea",
+      "publisher": "Della Torre",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "maiden_parry1997",
+      "author": "Maiden, M. & Parry, M. (eds.)",
+      "year": 1997,
+      "title": "The Dialects of Italy",
+      "publisher": "Routledge",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "ladefoged_maddieson1996",
+      "author": "Ladefoged, P. & Maddieson, I.",
+      "year": 1996,
+      "title": "The Sounds of the World's Languages",
+      "publisher": "Blackwell",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "phoible",
+      "author": "Moran, Steven & McCloy, Daniel (eds.)",
+      "year": 2019,
+      "title": "PHOIBLE 2.0",
+      "publisher": "Max Planck Institute for the Science of Human History",
+      "url": "https://phoible.org/",
+      "pages": null,
+      "notes": "Attested phoneme inventory for glottocode camp1261."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Campidanese_dialect",
+    "https://sc.wikipedia.org/wiki/Sardu_campidanesu",
+    "https://it.wikipedia.org/wiki/Lingua_sarda_campidanese"
+  ],
+  "timespan": {
+    "start_year": 1000,
+    "end_year": null
+  },
+  "glottolog_code": "camp1261",
+  "iso639_3": "srd",
+  "wikidata_qid": "Q35348",
+  "phoible_id": "camp1261",
+  "location": {
+    "latitude": 39.0566,
+    "longitude": 9.03935,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Campidanese Sardinian."
+  },
+  "phonemes": [
+    "ã̈",
+    "ä",
+    "b",
+    "bː",
+    "d",
+    "dz",
+    "dzː",
+    "dː",
+    "d̠ʒ",
+    "d̠ʒː",
+    "e",
+    "ẽ",
+    "f",
+    "fː",
+    "i",
+    "ĩ",
+    "j",
+    "k",
+    "kː",
+    "l",
+    "lː",
+    "m",
+    "mː",
+    "n",
+    "nː",
+    "o",
+    "õ",
+    "p",
+    "pː",
+    "r",
+    "rː",
+    "s",
+    "sː",
+    "t",
+    "ts",
+    "tsː",
+    "tː",
+    "t̠ʃ",
+    "t̠ʃː",
+    "u",
+    "ũ",
+    "v",
+    "vː",
+    "z",
+    "ð",
+    "ɔ",
+    "ɔ̃",
+    "ɖː",
+    "ɛ",
+    "ɛ̃",
+    "ɡ",
+    "ɡː",
+    "ɣ",
+    "ʁ",
+    "ʃ",
+    "ʃː",
+    "ʒ",
+    "β"
+  ]
+}

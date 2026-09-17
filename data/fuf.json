@@ -1,0 +1,60 @@
+{
+  "code": "fuf",
+  "name": "Pular (Fula, Guinea)",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes_base": "ff",
+  "graphemes": {},
+  "allophones_base": "ff",
+  "allophones": {},
+  "notes": "Pular, the Fula (ff) variety of the Fouta Djallon region of Guinea, spoken by ~4.3 million people (~55% of Guinea's population); also used in Guinea-Bissau, Sierra Leone, Mali and Senegal. Inherits the shared Fula grapheme/allophone inventory from ff.json (graphemes_base/allophones_base) since no source consulted documents a Pular-specific letter-to-IPA divergence from the pan-Fula orthography (implosives ɓ/ɗ/ƴ, prenasalized mb/nd/ng/nj, contrastive vowel length). The one well-attested difference from other Fula varieties is MORPHOLOGICAL, not phonemic or orthographic: Pular lacks the initial-consonant grade mutation between singular and plural noun classes that characterizes e.g. Pulaar (Senegal) — out of scope for a grapheme/allophone spec, which describes spelling-to-sound, not morphology (AGENTS.md §4). Also written historically in Ajami (Arabic-based) and, since the late 1980s, in the indigenous Adlam script; this spec covers only the modern Latin orthography (official since 1989), the same scope as the parent ff spec. Quality:research reflects that the child spec's own orthographic claims (beyond straight ff inheritance) are not independently sourced.",
+  "sources": [
+    {
+      "id": "pular_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Pular language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Pular_language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Pular_language",
+      "pages": null,
+      "notes": "Classification, speaker population, script history, morphological distinction from Pulaar."
+    },
+    {
+      "id": "arnott1970",
+      "author": "Arnott, D.W.",
+      "year": 1970,
+      "title": "The Nominal and Verbal System of Fula",
+      "publisher": "Oxford University Press",
+      "url": null,
+      "pages": null,
+      "notes": "Comparative Fula reference grammar covering Pular/Fuuta Jaloo variety."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Pular_language",
+    "https://en.wikipedia.org/wiki/Fula_language"
+  ],
+  "urls": [
+    "https://glottolog.org/resource/languoid/id/pula1262",
+    "https://www.ethnologue.com/language/fuf/"
+  ],
+  "iso639_3": "fuf",
+  "glottolog_code": "pula1262",
+  "parent": "ff",
+  "ancestors": [
+    {
+      "code": "ff",
+      "role": "parent_dialect",
+      "weight": 1.0,
+      "notes": "Pular is the Fouta Djallon (Guinea) variety of the Fula macrolanguage."
+    }
+  ],
+  "location": {
+    "latitude": 11.3,
+    "longitude": -12.3,
+    "source": "glottolog",
+    "notes": "Approximate centroid of the Fouta Djallon, Guinea."
+  }
+}

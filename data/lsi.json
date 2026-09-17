@@ -1,0 +1,665 @@
+{
+  "code": "lsi",
+  "name": "Lashi",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "ngh": [
+      "ŋ"
+    ],
+    "nyh": [
+      "ɲ"
+    ],
+    "kyh": [
+      "kʰj"
+    ],
+    "ng": [
+      "ŋ"
+    ],
+    "ny": [
+      "ɲ"
+    ],
+    "mh": [
+      "m"
+    ],
+    "nh": [
+      "n"
+    ],
+    "lh": [
+      "l"
+    ],
+    "rh": [
+      "ɹ",
+      "r"
+    ],
+    "yh": [
+      "j"
+    ],
+    "ph": [
+      "pʰ"
+    ],
+    "th": [
+      "tʰ"
+    ],
+    "kh": [
+      "kʰ"
+    ],
+    "sh": [
+      "ɕ",
+      "ʃ"
+    ],
+    "zh": [
+      "t͡s"
+    ],
+    "jh": [
+      "t͡ɕ",
+      "t͡ʃ"
+    ],
+    "b": [
+      "b",
+      "p"
+    ],
+    "d": [
+      "d",
+      "t"
+    ],
+    "g": [
+      "ɡ",
+      "k"
+    ],
+    "p": [
+      "p"
+    ],
+    "t": [
+      "t"
+    ],
+    "k": [
+      "k"
+    ],
+    "z": [
+      "d͡z",
+      "t͡s"
+    ],
+    "j": [
+      "d͡ʑ",
+      "t͡ʃ"
+    ],
+    "c": [
+      "t͡ɕʰ",
+      "t͡ʃʰ"
+    ],
+    "x": [
+      "t͡sʰ"
+    ],
+    "s": [
+      "s"
+    ],
+    "h": [
+      "h"
+    ],
+    "q": [
+      "ɣ",
+      "ɰ"
+    ],
+    "f": [
+      "f"
+    ],
+    "v": [
+      "v"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "l": [
+      "l"
+    ],
+    "r": [
+      "ɹ",
+      "r"
+    ],
+    "y": [
+      "j"
+    ],
+    "w": [
+      "w"
+    ],
+    "ʼ": [
+      "ʔ"
+    ],
+    "oo": [
+      "o"
+    ],
+    "ei": [
+      "ɨ",
+      "ə"
+    ],
+    "eu": [
+      "ɨ",
+      "ə"
+    ],
+    "ai": [
+      "aj"
+    ],
+    "oi": [
+      "oj"
+    ],
+    "au": [
+      "aw"
+    ],
+    "ou": [
+      "ow"
+    ],
+    "oe": [
+      "ø",
+      "o"
+    ],
+    "ui": [
+      "wi"
+    ],
+    "ue": [
+      "we"
+    ],
+    "ua": [
+      "wa"
+    ],
+    "a": [
+      "a"
+    ],
+    "e": [
+      "e"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "ɔ",
+      "o"
+    ],
+    "u": [
+      "u"
+    ]
+  },
+  "positional_graphemes": {
+    "a": {
+      "word_initial": [
+        "ʔa"
+      ]
+    },
+    "e": {
+      "word_initial": [
+        "ʔe"
+      ]
+    },
+    "i": {
+      "word_initial": [
+        "ʔi"
+      ]
+    },
+    "o": {
+      "word_initial": [
+        "ʔɔ"
+      ]
+    },
+    "u": {
+      "word_initial": [
+        "ʔu"
+      ]
+    },
+    "oo": {
+      "word_initial": [
+        "ʔo"
+      ]
+    },
+    "ei": {
+      "word_initial": [
+        "ʔɨ"
+      ]
+    },
+    "eu": {
+      "word_initial": [
+        "ʔɨ"
+      ]
+    },
+    "ai": {
+      "word_initial": [
+        "ʔaj"
+      ]
+    },
+    "oi": {
+      "word_initial": [
+        "ʔoj"
+      ]
+    },
+    "au": {
+      "word_initial": [
+        "ʔaw"
+      ]
+    },
+    "ou": {
+      "word_initial": [
+        "ʔow"
+      ]
+    },
+    "oe": {
+      "word_initial": [
+        "ʔø"
+      ]
+    }
+  },
+  "allophone_rules": [
+    {
+      "id": "lsi-checked-coda-b",
+      "phonemes": [
+        "b"
+      ],
+      "surface": "p̚",
+      "followed_by": "consonant",
+      "followed_by_grapheme_not": [
+        "y",
+        "w"
+      ],
+      "notes": "Checked-syllable coda. The finals table writes the ⟨-b⟩ rimes voiceless — ⟨ab⟩ [ap], ⟨oeb⟩ [op] — so a ⟨b⟩ closing a syllable is [p], while ⟨by⟩ is the labial-plus-medial-glide onset [pj]/[bj] and keeps its onset value. The coda stop is unreleased: Hkaw Luk (2017:14): \"The unreleased voiceless plosive /p, t, k, ʔ/, and the nasals /m, n, ŋ/ are the only ones used in the coda of a syllable.\" The shipped gold agrees exceptionlessly on the 43 coda stop tokens it writes with a release diacritic; the single unmarked coda stop is ⟨Yokshan⟩ [jokɕan], a loan name."
+    },
+    {
+      "id": "lsi-checked-final-b",
+      "phonemes": [
+        "b"
+      ],
+      "surface": "p̚",
+      "word_final": true,
+      "notes": "Word-final ⟨-b⟩ is the checked rime ⟨ab⟩ [ap] / ⟨oeb⟩ [op] of the finals table. The coda stop is unreleased: Hkaw Luk (2017:14): \"The unreleased voiceless plosive /p, t, k, ʔ/, and the nasals /m, n, ŋ/ are the only ones used in the coda of a syllable.\" The shipped gold agrees exceptionlessly on the 43 coda stop tokens it writes with a release diacritic; the single unmarked coda stop is ⟨Yokshan⟩ [jokɕan], a loan name."
+    },
+    {
+      "id": "lsi-checked-coda-d",
+      "phonemes": [
+        "d"
+      ],
+      "surface": "t̚",
+      "followed_by": "consonant",
+      "followed_by_grapheme_not": [
+        "y",
+        "w"
+      ],
+      "notes": "Checked-syllable coda: the finals table writes ⟨id⟩ [it] and ⟨ed⟩ [et]. Its ⟨aid⟩ [at] and ⟨oid⟩ [ot] rows also monophthongise the nucleus, which this spec does NOT follow — ⟨oi⟩ and ⟨ai⟩ keep their glides here, so ⟨anghoid⟩ is [ʔaŋojt] and not [ʔaŋot], because the Waingmaw transcriptions of that word back the glide. Only the coda consonant of those rows is encoded. The coda stop is unreleased: Hkaw Luk (2017:14): \"The unreleased voiceless plosive /p, t, k, ʔ/, and the nasals /m, n, ŋ/ are the only ones used in the coda of a syllable.\" The shipped gold agrees exceptionlessly on the 43 coda stop tokens it writes with a release diacritic; the single unmarked coda stop is ⟨Yokshan⟩ [jokɕan], a loan name."
+    },
+    {
+      "id": "lsi-checked-final-d",
+      "phonemes": [
+        "d"
+      ],
+      "surface": "t̚",
+      "word_final": true,
+      "notes": "Word-final ⟨-d⟩ is the checked rime ⟨id⟩ [it] / ⟨ed⟩ [et] of the finals table. The coda stop is unreleased: Hkaw Luk (2017:14): \"The unreleased voiceless plosive /p, t, k, ʔ/, and the nasals /m, n, ŋ/ are the only ones used in the coda of a syllable.\" The shipped gold agrees exceptionlessly on the 43 coda stop tokens it writes with a release diacritic; the single unmarked coda stop is ⟨Yokshan⟩ [jokɕan], a loan name."
+    },
+    {
+      "id": "lsi-checked-coda-g",
+      "phonemes": [
+        "ɡ"
+      ],
+      "surface": "k̚",
+      "followed_by": "consonant",
+      "followed_by_grapheme_not": [
+        "y",
+        "w"
+      ],
+      "notes": "Checked-syllable coda: the finals table writes ⟨ag⟩ [ak], ⟨ug⟩ [uk], ⟨eig⟩ [ək]. Only the coda consonant of those rows is encoded — the chart's ⟨oug⟩ [ok] also monophthongises the nucleus, where this spec keeps ⟨ou⟩ as [ow]. ⟨gy⟩ is the velar-plus-medial-glide onset [kj]/[ɡj] and keeps its onset value. The coda stop is unreleased: Hkaw Luk (2017:14): \"The unreleased voiceless plosive /p, t, k, ʔ/, and the nasals /m, n, ŋ/ are the only ones used in the coda of a syllable.\" The shipped gold agrees exceptionlessly on the 43 coda stop tokens it writes with a release diacritic; the single unmarked coda stop is ⟨Yokshan⟩ [jokɕan], a loan name."
+    },
+    {
+      "id": "lsi-checked-final-g",
+      "phonemes": [
+        "ɡ"
+      ],
+      "surface": "k̚",
+      "word_final": true,
+      "notes": "Word-final ⟨-g⟩ is the checked rime ⟨ag⟩ [ak] / ⟨ug⟩ [uk] of the finals table. The coda stop is unreleased: Hkaw Luk (2017:14): \"The unreleased voiceless plosive /p, t, k, ʔ/, and the nasals /m, n, ŋ/ are the only ones used in the coda of a syllable.\" The shipped gold agrees exceptionlessly on the 43 coda stop tokens it writes with a release diacritic; the single unmarked coda stop is ⟨Yokshan⟩ [jokɕan], a loan name."
+    },
+    {
+      "id": "lsi-zero-initial-glottal",
+      "phonemes": [
+        "a",
+        "e",
+        "i",
+        "o",
+        "ɔ",
+        "u",
+        "ɨ",
+        "ø",
+        "ʔa",
+        "ʔe",
+        "ʔi",
+        "ʔo",
+        "ʔɔ",
+        "ʔu",
+        "ʔɨ",
+        "ʔø",
+        "ʔaj",
+        "ʔoj",
+        "ʔaw",
+        "ʔow"
+      ],
+      "append": "ʔ",
+      "followed_by": "vowel",
+      "notes": "A syllable written with no initial consonant letter begins with [ʔ] — the alphabet chart lists the zero initial as [ʔ]. Word-initially `positional_graphemes` supplies it; word-internally the onset falls between two vowel letters, so the rule hangs the glottal on the preceding nucleus: ⟨Noa⟩ [nɔʔa], ⟨Midian⟩ [midiʔan]. The glottal-initial nuclei are listed alongside the bare ones because a word-initial slot has already been rewritten by `positional_graphemes` when this rule sees it, and a second zero-initial syllable can follow the first: ⟨ia⟩ is [ʔiʔa]."
+    },
+    {
+      "id": "lsi-o-closed-syllable",
+      "phonemes": [
+        "ɔ"
+      ],
+      "surface": "o",
+      "followed_by": "coda",
+      "followed_by_grapheme_not": [
+        "ʼ"
+      ],
+      "notes": "⟨o⟩ is [o] in a closed rime — ⟨oin⟩, ⟨oid⟩, ⟨oug⟩, ⟨oem⟩ are all written with [o] in the finals table — and [ɔ] in an open one, where the shipped Waingmaw transcriptions contrast ⟨lo⟩ [lɔ] with ⟨loo⟩ [lo] and ⟨mo⟩ [mɔ] with ⟨moo⟩ [mo]. The open/closed split is a Waingmaw observation, not a claim of the Cangmokhung chart, which merges ⟨o⟩ and ⟨oo⟩ as [o]; [o] stays in the lattice as the second candidate for ⟨o⟩. The ⟨ʼ⟩ exclusion follows the Waingmaw transcriptions against the chart, which gives ⟨oʼ⟩ as [oʔ] explicitly: the glottal final closes the rime orthographically but does not lower the nucleus there, so ⟨khoʼ⟩ is [kʰɔʔ]."
+    },
+    {
+      "id": "lsi-o-closed-syllable-zero-initial",
+      "phonemes": [
+        "ʔɔ"
+      ],
+      "surface": "ʔo",
+      "followed_by": "coda",
+      "followed_by_grapheme_not": [
+        "ʼ"
+      ],
+      "notes": "The `lsi-o-closed-syllable` rule for a word-initial ⟨o⟩, whose slot `positional_graphemes` has already rewritten to the glottal-initial nucleus: ⟨og⟩ is [ʔok], not [ʔɔk]."
+    },
+    {
+      "id": "lsi-unreleased-coda-p",
+      "phonemes": [
+        "p"
+      ],
+      "surface": "p̚",
+      "followed_by": "consonant",
+      "followed_by_grapheme_not": [
+        "y",
+        "w"
+      ],
+      "notes": "Hkaw Luk (2017:14): \"The unreleased voiceless plosive /p, t, k, ʔ/, and the nasals /m, n, ŋ/ are the only ones used in the coda of a syllable.\" The shipped gold agrees exceptionlessly on the 43 coda stop tokens it writes with a release diacritic; the single unmarked coda stop is ⟨Yokshan⟩ [jokɕan], a loan name."
+    },
+    {
+      "id": "lsi-unreleased-final-p",
+      "phonemes": [
+        "p"
+      ],
+      "surface": "p̚",
+      "word_final": true,
+      "notes": "Hkaw Luk (2017:14): \"The unreleased voiceless plosive /p, t, k, ʔ/, and the nasals /m, n, ŋ/ are the only ones used in the coda of a syllable.\" The shipped gold agrees exceptionlessly on the 43 coda stop tokens it writes with a release diacritic; the single unmarked coda stop is ⟨Yokshan⟩ [jokɕan], a loan name."
+    },
+    {
+      "id": "lsi-unreleased-coda-t",
+      "phonemes": [
+        "t"
+      ],
+      "surface": "t̚",
+      "followed_by": "consonant",
+      "followed_by_grapheme_not": [
+        "y",
+        "w"
+      ],
+      "notes": "Hkaw Luk (2017:14): \"The unreleased voiceless plosive /p, t, k, ʔ/, and the nasals /m, n, ŋ/ are the only ones used in the coda of a syllable.\" The shipped gold agrees exceptionlessly on the 43 coda stop tokens it writes with a release diacritic; the single unmarked coda stop is ⟨Yokshan⟩ [jokɕan], a loan name."
+    },
+    {
+      "id": "lsi-unreleased-final-t",
+      "phonemes": [
+        "t"
+      ],
+      "surface": "t̚",
+      "word_final": true,
+      "notes": "Hkaw Luk (2017:14): \"The unreleased voiceless plosive /p, t, k, ʔ/, and the nasals /m, n, ŋ/ are the only ones used in the coda of a syllable.\" The shipped gold agrees exceptionlessly on the 43 coda stop tokens it writes with a release diacritic; the single unmarked coda stop is ⟨Yokshan⟩ [jokɕan], a loan name."
+    },
+    {
+      "id": "lsi-unreleased-coda-k",
+      "phonemes": [
+        "k"
+      ],
+      "surface": "k̚",
+      "followed_by": "consonant",
+      "followed_by_grapheme_not": [
+        "y",
+        "w"
+      ],
+      "notes": "Hkaw Luk (2017:14): \"The unreleased voiceless plosive /p, t, k, ʔ/, and the nasals /m, n, ŋ/ are the only ones used in the coda of a syllable.\" The shipped gold agrees exceptionlessly on the 43 coda stop tokens it writes with a release diacritic; the single unmarked coda stop is ⟨Yokshan⟩ [jokɕan], a loan name."
+    },
+    {
+      "id": "lsi-unreleased-final-k",
+      "phonemes": [
+        "k"
+      ],
+      "surface": "k̚",
+      "word_final": true,
+      "notes": "Hkaw Luk (2017:14): \"The unreleased voiceless plosive /p, t, k, ʔ/, and the nasals /m, n, ŋ/ are the only ones used in the coda of a syllable.\" The shipped gold agrees exceptionlessly on the 43 coda stop tokens it writes with a release diacritic; the single unmarked coda stop is ⟨Yokshan⟩ [jokɕan], a loan name."
+    },
+    {
+      "id": "lsi-creaky-after-glottalised-sonorant",
+      "phonemes": [
+        "a",
+        "e",
+        "i",
+        "o",
+        "ɔ",
+        "u",
+        "ø",
+        "ɨ",
+        "ə"
+      ],
+      "append": "̰",
+      "preceded_by_grapheme": [
+        "mh",
+        "nh",
+        "nyh",
+        "ngh",
+        "lh",
+        "rh",
+        "yh"
+      ],
+      "notes": "The postposed ⟨h⟩ of the glottalised sonorant series ⟨mh nh nyh ngh lh rh yh⟩ is not a segment of its own: it writes creaky phonation on the syllable nucleus. Hkaw Luk (2017:16) states that creaky vowels occur precisely with \"the nasal initials /m, n, ɲ, ŋ/, lateral initial /l/ and approximant initials /w, ɹ, j/\" — the same sonorant set that takes the postposed ⟨h⟩ — and gives the contrast as phonemic (jḭt 'liquor' vs jit 'drunk', Table 9). Every one of the 7 gold words spelled with one of these digraphs has a creaky nucleus (13 of its 14 transcriptions; the one exception is a variant from the tradition that writes no phonation at all). Creak also occurs after plain obstruents in the gold, which the orthography does not write; that residue is unwritten contrast and is deliberately not emitted."
+    },
+    {
+      "id": "lsi-creaky-after-glottalised-sonorant-aj",
+      "phonemes": [
+        "aj"
+      ],
+      "surface": "a̰j",
+      "preceded_by_grapheme": [
+        "mh",
+        "nh",
+        "nyh",
+        "ngh",
+        "lh",
+        "rh",
+        "yh"
+      ],
+      "notes": "Same rule as lsi-creaky-after-glottalised-sonorant; stated separately because phonation rides the nucleus vowel, not the last character of a diphthong or of a glide-plus-vowel rime."
+    },
+    {
+      "id": "lsi-creaky-after-glottalised-sonorant-oj",
+      "phonemes": [
+        "oj"
+      ],
+      "surface": "o̰j",
+      "preceded_by_grapheme": [
+        "mh",
+        "nh",
+        "nyh",
+        "ngh",
+        "lh",
+        "rh",
+        "yh"
+      ],
+      "notes": "Same rule as lsi-creaky-after-glottalised-sonorant; stated separately because phonation rides the nucleus vowel, not the last character of a diphthong or of a glide-plus-vowel rime."
+    },
+    {
+      "id": "lsi-creaky-after-glottalised-sonorant-aw",
+      "phonemes": [
+        "aw"
+      ],
+      "surface": "a̰w",
+      "preceded_by_grapheme": [
+        "mh",
+        "nh",
+        "nyh",
+        "ngh",
+        "lh",
+        "rh",
+        "yh"
+      ],
+      "notes": "Same rule as lsi-creaky-after-glottalised-sonorant; stated separately because phonation rides the nucleus vowel, not the last character of a diphthong or of a glide-plus-vowel rime."
+    },
+    {
+      "id": "lsi-creaky-after-glottalised-sonorant-ow",
+      "phonemes": [
+        "ow"
+      ],
+      "surface": "o̰w",
+      "preceded_by_grapheme": [
+        "mh",
+        "nh",
+        "nyh",
+        "ngh",
+        "lh",
+        "rh",
+        "yh"
+      ],
+      "notes": "Same rule as lsi-creaky-after-glottalised-sonorant; stated separately because phonation rides the nucleus vowel, not the last character of a diphthong or of a glide-plus-vowel rime."
+    },
+    {
+      "id": "lsi-creaky-after-glottalised-sonorant-wi",
+      "phonemes": [
+        "wi"
+      ],
+      "surface": "wḭ",
+      "preceded_by_grapheme": [
+        "mh",
+        "nh",
+        "nyh",
+        "ngh",
+        "lh",
+        "rh",
+        "yh"
+      ],
+      "notes": "Same rule as lsi-creaky-after-glottalised-sonorant; stated separately because phonation rides the nucleus vowel, not the last character of a diphthong or of a glide-plus-vowel rime."
+    },
+    {
+      "id": "lsi-creaky-after-glottalised-sonorant-we",
+      "phonemes": [
+        "we"
+      ],
+      "surface": "wḛ",
+      "preceded_by_grapheme": [
+        "mh",
+        "nh",
+        "nyh",
+        "ngh",
+        "lh",
+        "rh",
+        "yh"
+      ],
+      "notes": "Same rule as lsi-creaky-after-glottalised-sonorant; stated separately because phonation rides the nucleus vowel, not the last character of a diphthong or of a glide-plus-vowel rime."
+    },
+    {
+      "id": "lsi-creaky-after-glottalised-sonorant-wa",
+      "phonemes": [
+        "wa"
+      ],
+      "surface": "wa̰",
+      "preceded_by_grapheme": [
+        "mh",
+        "nh",
+        "nyh",
+        "ngh",
+        "lh",
+        "rh",
+        "yh"
+      ],
+      "notes": "Same rule as lsi-creaky-after-glottalised-sonorant; stated separately because phonation rides the nucleus vowel, not the last character of a diphthong or of a glide-plus-vowel rime."
+    }
+  ],
+  "parent": "x-clade-sino1245",
+  "ancestors": [
+    {
+      "code": "x-clade-sino1245",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Descent per Glottolog classification of Lashi (lash1243)."
+    }
+  ],
+  "notes": "Lashi (Lacid, Leqi) is a Burmish (Sino-Tibetan) language of Myanmar and Yunnan written in a Latin orthography devised in the 1970s. The letter values follow the published alphabet chart for the Cangmokhung standard: three obstruent series (plain ⟨b d g z j⟩, glottalised ⟨p t k zh jh⟩, aspirated ⟨ph th kh x c⟩), a postposed ⟨h⟩ marking the glottalised sonorants ⟨mh nh nyh ngh rh lh yh⟩, and a finals table giving the rimes. A syllable written without an initial consonant letter begins with [ʔ], which the chart states explicitly and which `positional_graphemes` supplies word-initially. The checked rimes ⟨-b -d -g⟩ are [p t k]: the allophone rules turn a syllable-closing voiced-stop letter into its voiceless counterpart, excluding ⟨by gy⟩ and friends where the following ⟨y⟩ makes the stop an onset with a medial glide. ⟨ʼ⟩ is the glottal final of ⟨aʼ⟩ [aʔ], ⟨oʼ⟩ [oʔ], ⟨uʼ⟩ [uʔ]. Where the descriptive traditions disagree the spec ranks the Waingmaw values first and keeps the Cangmokhung chart values as second candidates in the lattice: the obstruent letters ⟨b d g z j⟩ are read voiced ([b d ɡ d͡z d͡ʑ]) rather than voiceless, ⟨sh⟩ is [ɕ] rather than [ʃ], ⟨r⟩ is [ɹ] rather than [r], and ⟨ei⟩/⟨eu⟩ is [ɨ] rather than [ə]. ⟨oi ai ou au⟩ carry no such alternative and are single-valued [oj aj aw ow]: the chart monophthongises them only in its closed rimes ⟨oid⟩ [ot], ⟨aid⟩ [at], ⟨oug⟩ [ok], a coda-conditioned alternation this spec does not encode, because the Waingmaw transcriptions of ⟨anghoid⟩ and ⟨mougmyid⟩ back the glide in exactly that position. ⟨q⟩ appears in no alphabet chart, and in the shipped gold only in ⟨qei⟩ [ɣɨ]. It is read [ɣ]~[ɰ] because Hkaw Luk's consonant table carries a velar approximant /ɰ/ that no other letter of this orthography spells, leaving ⟨q⟩ as the only candidate; the fricative value is ranked first because both gold transcriptions of that word write it. One word is thin evidence and the assignment still wants a native check. Lexical tone is written only in part — ⟨:⟩ low, ⟨”⟩ high, ⟨ʼ⟩ high-falling, everything else unmarked — and the tone letters are not emitted, because the height of an unmarked syllable is a lexical fact no available description carries. Hkaw Luk (2017:4) records that the Lacid literature committee itself considers the written tone marking unfinished and plans to replace it. The narrow gold writes a tone letter on every one of its 197 transcriptions while the gold's own spellings are almost all tone-unmarked, so the row's PER floor is set by tone: folding the tone letters out of both sides drops PER from 0.4269 to 0.0630 and word error from 1.0000 to 0.2292. That gap is unwritten contrast, not model error, and is not chased. Creaky phonation is emitted where the orthography writes it, on the nucleus after a glottalised sonorant digraph; it is left unencoded after plain obstruents, where the gold has it and the spelling gives no cue. Also left unencoded is the fronting of ⟨a⟩ to [æ] before a labial coda that the Waingmaw transcriptions show. Stress is not separately contrastive (documented exemption). A coda plosive is written unreleased, following Hkaw Luk's coda inventory. Two residues stay measured but unencoded because no fetched source supports them: ⟨a⟩ is [æ] before a labial coda in all seven gold words that have one, and ⟨ʼ⟩ writes a segmental [ʔ] in some words and only the tone in others, with no distributional split separating the two. Neither is asserted here, since the only evidence for either is the same gold the spec is scored against.",
+  "iso639_3": "lsi",
+  "glottolog_code": null,
+  "sources": [
+    {
+      "id": "lsi_glottolog",
+      "author": "Hammarström, H. et al. (Glottolog 5.0)",
+      "year": 2024,
+      "title": "Glottolog: Lashi (lash1243)",
+      "publisher": "Max Planck Institute for Evolutionary Anthropology",
+      "url": "https://glottolog.org/resource/languoid/id/lash1243",
+      "pages": null,
+      "notes": "Classification reference.",
+      "wikipedia_url": null
+    },
+    {
+      "id": "lsi_omniglot_chart",
+      "author": "Ager, Simon (Omniglot)",
+      "year": 2024,
+      "title": "Lashi (Lacid) language and alphabet",
+      "publisher": "Omniglot",
+      "url": "https://www.omniglot.com/writing/lashi.htm",
+      "pages": null,
+      "notes": "Consulted. Tertiary alphabet chart for the 1970s Latin orthography, given for the Cangmokhung dialect: initials with their IPA (including the zero initial as [ʔ] and the glottalised sonorant digraphs), a finals table with the checked rimes ⟨ab⟩ [ap], ⟨id⟩ [it], ⟨ag⟩ [ak], ⟨ug⟩ [uk], ⟨oug⟩ [ok], ⟨eig⟩ [ək], ⟨aʼ⟩ [aʔ], ⟨oʼ⟩ [oʔ], ⟨uʼ⟩ [uʔ], and the tone marks ⟨:⟩ low, ⟨”⟩ high, ⟨ʼ⟩ high-falling with unmarked falling. The primary source of the letter values encoded here.",
+      "wikipedia_url": null
+    },
+    {
+      "id": "lsi_luk2017",
+      "author": "Hkaw Luk",
+      "year": 2017,
+      "title": "A grammatical sketch of Lacid",
+      "publisher": "MA thesis, Payap University, Chiang Mai",
+      "url": "https://drive.google.com/file/d/1ySgqYFe3Lwk2JNY5-EsV7ArywPXCrIG5/view",
+      "pages": "13-17",
+      "notes": "Retrieved in full (202 pp.) from the Payap University linguistics department thesis list. The dedicated description of Lacid, written by a native speaker, and the transcription tradition of the Waingmaw column in the WikiPron-derived gold. Its consonant table (p.14) gives the voiced obstruent series /b d ɡ dz dʑ/, the alveolo-palatal fricative /ɕ/, the alveolar approximant /ɹ/ and a velar approximant /ɰ/; the same page states that only the unreleased voiceless plosives /p t k ʔ/ and the nasals /m n ŋ/ occur in a coda. Page 16 gives three phonemic tones (high, mid, low) and restricts creaky vowels to the nasal, lateral and approximant initials, with the phonation contrast shown as phonemic in its Table 9.",
+      "wikipedia_url": null
+    },
+    {
+      "id": "lsi_wannemacher2011",
+      "author": "Wannemacher, Mark",
+      "year": 2011,
+      "title": "A phonological overview of the Lacid language",
+      "publisher": "Linguistics Institute, Payap University, Chiang Mai",
+      "url": null,
+      "pages": null,
+      "notes": "Standing phonological description of Lacid, cited by the Wikipedia article. Not consulted; listed so the bibliography names the primary literature rather than implying the chart is the only description.",
+      "wikipedia_url": null
+    },
+    {
+      "id": "lsi_noftz2017",
+      "author": "Noftz, Robert",
+      "year": 2017,
+      "title": "A literature review on segments in Lacid (Lashi)",
+      "publisher": "Payap University",
+      "url": null,
+      "pages": null,
+      "notes": "Consolidates the published segmental descriptions of Lacid, which disagree over the obstruent series and over the rhotic. Not consulted; it is the reason this spec carries the competing readings as lattice candidates instead of asserting one.",
+      "wikipedia_url": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Lashi_language"
+  ],
+  "urls": [
+    "https://www.omniglot.com/writing/lashi.htm"
+  ],
+  "audit": {
+    "wikipron": {
+      "conclusion": "input_limited",
+      "measured": "Lacid is tonal, with three phonemic tones (Hkaw Luk 2017, A grammatical sketch of Lacid, MA thesis, Payap University, p.16). The Roman orthography the Lacid community developed marks tone with English punctuation marks, a device the same thesis reports the Lacid literature and culture committee wants replaced and which the author sets aside in favour of IPA tone letters (pp.3-4). No gold headword uses it: 0 of the 141 rows of wikipron/lsi_latn_narrow carry a tone mark of any kind in the orthographic column, against 141 of 141 gold transcriptions carrying a Chao tone letter. 42 of the 96 unique spellings recur with more than one transcription. Scored over the same 141 pairs, PER is 0.4872; folding the Chao tone letters out of both sides drops it to 0.1843, with 85 of 141 words then exact. The residual is segmental and remains open.",
+      "reference": "spec notes"
+    }
+  }
+}

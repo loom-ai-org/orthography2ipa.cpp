@@ -1,0 +1,168 @@
+{
+ "code": "ykg",
+ "name": "Northern Yukaghir",
+ "script": "Cyrillic",
+ "script_type": "alphabet",
+ "quality": "research",
+ "graphemes": {
+  "а": ["a̟"],
+  "аа": ["a̟ː"],
+  "б": ["b"],
+  "в": ["w"],
+  "г": ["ɡ"],
+  "д": ["d"],
+  "дь": ["dʲ"],
+  "е": ["jɛ", "ɛ"],
+  "ё": ["jo̞", "o̞"],
+  "ж": ["ʒ"],
+  "з": ["z"],
+  "и": ["ɪ"],
+  "ии": ["ɪː"],
+  "й": ["j"],
+  "к": ["k"],
+  "л": ["l"],
+  "ль": ["lʲ"],
+  "м": ["m"],
+  "н": ["n"],
+  "нь": ["nʲ"],
+  "ӈ": ["ŋ"],
+  "о": ["o̞"],
+  "оо": ["o̞ː"],
+  "ө": ["ɵ̞"],
+  "ӄ": ["q"],
+  "ӷ": ["ʁ"],
+  "ӻ": ["ʁ"],
+  "п": ["p"],
+  "р": ["r"],
+  "с": ["s"],
+  "т": ["t"],
+  "у": ["u"],
+  "уу": ["uː"],
+  "ф": ["f"],
+  "х": ["x"],
+  "ц": ["ts"],
+  "ч": ["tʃ"],
+  "ш": ["ʃ"],
+  "щ": ["ɕ"],
+  "ъ": [""],
+  "ы": ["ɪ"],
+  "ь": ["ʲ"],
+  "э": ["ɛ"],
+  "ю": ["ju", "u"],
+  "я": ["ja", "a̟"]
+ },
+ "allophones": {
+  "q": [
+   "q",
+   "x"
+  ],
+  "ʁ": [
+   "ɢ",
+   "ʁ"
+  ],
+  "a̟": [
+   "a",
+   "a̟"
+  ],
+  "a̟ː": [
+   "aː",
+   "a̟ː"
+  ],
+  "ɛ": [
+   "ɛ",
+   "e"
+  ],
+  "ɪ": [
+   "ɪ",
+   "i"
+  ]
+ },
+ "notes": "Northern (Tundra) Yukaghir, Yukaghir family (an isolate-level branch outside Uralic), Sakha Republic/Chukotka, Russia. INPUT CONTRACT: Tundra Yukaghir Cyrillic orthography, NFC. ⟨ӷ⟩/⟨ӻ⟩ (two attested spellings across sources for the same uvular fricative letter) map to /ʁ/, and ⟨ӄ⟩ maps to the uvular stop /q/ (Maslova 2003 Tundra Yukaghir; NorthEuraLex йоӻул -> j o ʁ u l). ⟨л⟩ is the plain lateral /l/ and ⟨ль⟩ is its palatalised counterpart /lʲ/, the ordinary Cyrillic hard/soft-consonant convention: an earlier revision of this spec had the contrast reversed (⟨л⟩ velarised default /lˠ/, ⟨ль⟩ plain /l/) under the DOI/title pairing corrected in the maslova2003tundra source note; Schmalz's consonant table (2013, Table 2.1.2, printed p.30) lists only a plain-vs-palatalised /l/~/l'/ contrast with no velarised member, and NorthEuraLex's own Segments column agrees, transcribing л as plain [l] (хуруул -> xuruːl) and ль as palatalised [lʲ] (хайль -> xajlʲ) with no counterexample found in the wired gold. Vowel length is spelled by doubling the vowel letter (⟨аа⟩ /a̟ː/, ⟨оо⟩ /o̞ː/, ⟨уу⟩ /uː/, ⟨ии⟩ /ɪː/) — a real length contrast, not free repetition, so the doubled forms are separate keys (Maslova 2003 Tundra Yukaghir). ⟨и⟩ and ⟨е⟩/⟨э⟩ map to the lax /ɪ/ and /ɛ/ phonemes of this inventory (already declared in this spec's ``allophones``, which give [i] and [e] as their open surface variants) rather than to tense /i/ /e/, matching the cited PHOIBLE inventory. ITERATION FIX (error-analysis pass against NorthEuraLex): ⟨ч⟩ maps to the affricate /tʃ/ and the palatalised coronals ⟨нь⟩/⟨дь⟩ to /nʲ/ /dʲ/, Maslova's own transcription convention for Tundra Yukaghir, preferred over this spec's inherited PHOIBLE symbols /c/ /ɲ/ /ɟ/ (a different source's narrower phonetic notation for the same segments); NorthEuraLex evidence (чилгэ 'tʃilge', ньилла 'nʲilla', өдьил 'ødʲil') corroborates the affricate/palatalised-coronal reading. Word stress in Tundra Yukaghir is lexical but is not consistently orthographically marked in the practical Cyrillic script; documented here as an ENGINE-LIMIT stress exemption and not modelled. Classification and coordinates follow Glottolog. NorthEuraLex's Segments column is a broad/simplified IPA transcription that drops the narrow phonetic diacritics this spec's grapheme table carries (advanced [a̟] surfaces in gold as plain [a], lowered [o̞] as plain [o], lax [ɪ]/[ɛ] as tense [i]/[e]); this is the same dataset-wide NorthEuraLex convention already documented in this repo's ale/ain/bsk/enf/mhr/sel/sia/sms/yrk specs, not a defect specific to this row, and it accounts for most of the row's remaining PER after the lateral fix.",
+ "iso639_3": "ykg",
+ "glottolog_code": "nort2745",
+ "wikipedia": [
+  "https://en.wikipedia.org/wiki/Yukaghir_languages"
+ ],
+ "sources": [
+  {
+   "id": "maslova2003tundra",
+   "author": "Maslova, Elena",
+   "year": 2003,
+   "title": "Tundra Yukaghir",
+   "publisher": "Languages of the World/Materials 372, LINCOM Europa",
+   "url": "https://lincom-shop.eu/LWM-372-Tundra-Yukaghir/en",
+   "notes": "Grammar sketch of Tundra (Northern) Yukaghir: Cyrillic orthography, ⟨ӷ⟩/⟨ӻ⟩ /ʁ/, ⟨ӄ⟩ /q/, vowel-length spelling by letter doubling, and the lexical-but-unmarked status of stress. This spec previously cited this author/year under DOI 10.1515/9783110197174, which resolves (verified against De Gruyter's own listing) to Maslova's separate Mouton Grammar Library monograph 'A Grammar of Kolyma Yukaghir' — Southern Yukaghir, iso639_3 yux, a different book about a different language; that DOI/title pairing is removed, and no section/page locator is carried over from it because none was verified against this book's actual text."
+  },
+  {
+   "id": "schmalz2013",
+   "author": "Schmalz, Mark",
+   "year": 2013,
+   "title": "Aspects of the Grammar of Tundra Yukaghir",
+   "publisher": "PhD dissertation, University of Amsterdam",
+   "url": "https://pure.uva.nl/ws/files/1518096/130869_thesis.pdf",
+   "notes": "Table 2.1.2, consonant inventory (printed p.30): the lateral series is plain /l/ vs palatalised /l'/, with no velarised member; the following remarks (p.30-31) note /l/ can be hard to distinguish from /l'/ before /e/. NorthEuraLex's own Segments column agrees: л is transcribed plain [l] (e.g. хуруул -> xuruːl) and ль palatalised [lʲ] (e.g. хайль -> xajlʲ)."
+  },
+  {
+   "id": "glottolog2024",
+   "author": "Hammarström, Harald; Forkel, Robert; Haspelmath, Martin; Bank, Sebastian",
+   "year": 2024,
+   "title": "Glottolog 5.0",
+   "publisher": "Max Planck Institute for Evolutionary Anthropology",
+   "url": "https://glottolog.org/"
+  },
+  {
+   "id": "phoible2019",
+   "author": "Moran, Steven; McCloy, Daniel (eds.)",
+   "year": 2019,
+   "title": "PHOIBLE 2.0 (doi:10.5281/zenodo.2562766)",
+   "publisher": "Max Planck Institute for the Science of Human History",
+   "url": "https://phoible.org/inventories/view/193",
+   "notes": "Inventory 193 (spa), 32 non-marginal segments."
+  }
+ ],
+ "urls": [
+  "https://glottolog.org/resource/languoid/id/nort2745"
+ ],
+ "location": {
+  "latitude": 70.498,
+  "longitude": 157.853,
+  "source": "glottolog",
+  "notes": "Glottolog's representative point."
+ },
+ "parent": "x-clade-yuka1259",
+ "phonemes": [
+  "b",
+  "c",
+  "d",
+  "j",
+  "k",
+  "l",
+  "lˠ",
+  "m",
+  "n",
+  "p",
+  "q",
+  "r",
+  "s",
+  "t",
+  "w",
+  "ŋ",
+  "ɟ",
+  "ɡ",
+  "ɲ",
+  "ʁ",
+  "a̟",
+  "a̟ː",
+  "o̞",
+  "o̞ː",
+  "u",
+  "uː",
+  "ɛ",
+  "ɛː",
+  "ɪ",
+  "ɪː",
+  "ɵ̞",
+  "ɵ̞ː"
+ ],
+ "phoible_id": "193"
+}

@@ -1,0 +1,36 @@
+{
+  "code": "jje",
+  "name": "Jejueo",
+  "script": "Hangul",
+  "script_type": "alphabet",
+  "quality": "stub",
+  "graphemes": {},
+  "parent": "x-clade-kore1284",
+  "ancestors": [
+    {
+      "code": "x-clade-kore1284",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Descent per Glottolog classification of Jejueo (jeju1234)."
+    }
+  ],
+  "notes": "Koreanic language of Jeju Island, written in Hangul (including some conservative jamo such as the arae-a). Hangul is a featural alphabet, but its text is encoded as precomposed syllable blocks whose realization depends on syllable-final neutralization, resyllabification and morphophonemic sandhi across word boundaries. Recovering grapheme-to-IPA therefore requires a per-word pronunciation/lexicon stratum plus jamo decomposition that the engine does not bundle, so engine coverage here is lexicon-dependent and effectively zero without that stratum. Left empty deliberately rather than faking single-codepoint syllable rules; tone/pitch is not encoded.",
+  "iso639_3": "jje",
+  "glottolog_code": null,
+  "sources": [
+    {
+      "id": "jje_glottolog",
+      "author": "Hammarström, H. et al. (Glottolog 5.0)",
+      "year": 2024,
+      "title": "Glottolog: Jejueo (jeju1234)",
+      "publisher": "Max Planck Institute for Evolutionary Anthropology",
+      "url": "https://glottolog.org/resource/languoid/id/jeju1234",
+      "pages": null,
+      "notes": "Classification reference for a skeleton-tier entry.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Jeju_language"
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Jeju_language"
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "code": "khb",
+  "name": "Lü",
+  "script": "New Tai Lue",
+  "script_type": "abugida",
+  "quality": "stub",
+  "graphemes": {},
+  "parent": "x-clade-taik1256",
+  "ancestors": [
+    {
+      "code": "x-clade-taik1256",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Descent per Glottolog classification of Lü (luuu1242)."
+    }
+  ],
+  "notes": "Tai (Southwestern Tai) language of Sipsong Panna and neighbouring areas, written with the New Tai Lue script. New Tai Lue is an abugida with high- and low-class consonant series, an inherent vowel, separately placed vowel signs and explicit tone letters, so the phonetic value of a consonant symbol depends on its class and the accompanying tone marking rather than being fixed. Reading a spelling as IPA requires a per-word pronunciation lexicon that the engine does not bundle; grapheme->IPA coverage is lexicon-dependent and effectively zero without that stratum, and no letter->IPA table is asserted. Lü is tonal, and tone is left unencoded.",
+  "iso639_3": "khb",
+  "glottolog_code": null,
+  "sources": [
+    {
+      "id": "khb_glottolog",
+      "author": "Hammarström, H. et al. (Glottolog 5.0)",
+      "year": 2024,
+      "title": "Glottolog: Lü (luuu1242)",
+      "publisher": "Max Planck Institute for Evolutionary Anthropology",
+      "url": "https://glottolog.org/resource/languoid/id/luuu1242",
+      "pages": null,
+      "notes": "Classification reference for a skeleton-tier entry.",
+      "wikipedia_url": null
+    },
+    {
+      "id": "khb_script_wikipedia",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "New Tai Lue script",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/New_Tai_Lue_script",
+      "pages": null,
+      "notes": "Description of the New Tai Lue abugida, its consonant classes and tone letters.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Tai_Lue_language"
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Tai_Lue_language"
+  ]
+}

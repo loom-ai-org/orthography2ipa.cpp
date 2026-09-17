@@ -1,0 +1,198 @@
+{
+  "code": "ckb",
+  "name": "Central Kurdish (Sorani)",
+  "script": "Arabic",
+  "script_type": "abjad",
+  "quality": "research",
+  "graphemes": {
+    "وو": [
+      "uː"
+    ],
+    "ئ": [
+      "ʔ",
+      ""
+    ],
+    "ا": [
+      "aː"
+    ],
+    "ب": [
+      "b"
+    ],
+    "پ": [
+      "p"
+    ],
+    "ت": [
+      "t"
+    ],
+    "ج": [
+      "dʒ"
+    ],
+    "چ": [
+      "tʃ"
+    ],
+    "ح": [
+      "ħ"
+    ],
+    "خ": [
+      "x"
+    ],
+    "د": [
+      "d"
+    ],
+    "ر": [
+      "ɾ"
+    ],
+    "ڕ": [
+      "r"
+    ],
+    "ز": [
+      "z"
+    ],
+    "ژ": [
+      "ʒ"
+    ],
+    "س": [
+      "s"
+    ],
+    "ش": [
+      "ʃ"
+    ],
+    "ع": [
+      "ʕ"
+    ],
+    "غ": [
+      "ɣ"
+    ],
+    "ف": [
+      "f"
+    ],
+    "ڤ": [
+      "v"
+    ],
+    "ق": [
+      "q"
+    ],
+    "ک": [
+      "k"
+    ],
+    "گ": [
+      "ɡ"
+    ],
+    "ل": [
+      "l"
+    ],
+    "ڵ": [
+      "ɫ"
+    ],
+    "م": [
+      "m"
+    ],
+    "ن": [
+      "n"
+    ],
+    "ھ": [
+      "h"
+    ],
+    "ه": [
+      "h"
+    ],
+    "ە": [
+      "ɛ"
+    ],
+    "و": [
+      "ʊ",
+      "w"
+    ],
+    "ۆ": [
+      "oː"
+    ],
+    "ی": [
+      "iː",
+      "j"
+    ],
+    "ێ": [
+      "eː"
+    ]
+  },
+  "allophones": {},
+  "notes": "Central Kurdish / Sorani (کوردیی ناوەندی), the main Kurdish variety of Iraq and western Iran. INPUT CONTRACT: the Kurdish Arabic-script orthography (Unicode Arabic block, NFC), RIGHT-TO-LEFT, in its abstract (nominal) letter forms — contextual initial/medial/final presentation forms are expected to be normalised away by the caller, and the Sorani Latin alphabet is out of scope. Typologically the script descends from an ABJAD, but the Sorani orthography is near-alphabetic: the vowels are written with letters (ا /aː/, ە /ɛ/, ێ /eː/, ی /iː/, ۆ /oː/, و /ʊ/, وو /uː/), which is what makes a letter-to-IPA map tractable. وو is keyed as a multigraph so it beats a sequence of two و. ئ is the hamza-carrier: it is a glottal stop, and silent when it merely carries a word-initial vowel. Sorani writes two rhotic and two lateral letters: ر /ɾ/ vs ڕ /r/ and ل /l/ vs ڵ /ɫ/. LEFT UNSOLVED: the short vowel /ɨ/ is systematically NOT written and cannot be restored from the letters alone — it requires lexical knowledge, so no grapheme carries it. The ezafe is likewise a morphological, not orthographic, matter.",
+  "iso639_3": "ckb",
+  "glottolog_code": "cent1972",
+  "wikidata_qid": "Q36811",
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Central_Kurdish",
+    "https://ckb.wikipedia.org/wiki/%DA%A9%D9%88%D8%B1%D8%AF%DB%8C%DB%8C_%D9%86%D8%A7%D9%88%DB%95%D9%86%D8%AF%DB%8C"
+  ],
+  "sources": [
+    {
+      "id": "opengin2016",
+      "author": "Öpengin, Ergin",
+      "year": 2016,
+      "title": "The Mukri Variety of Central Kurdish: Grammar, Texts, and Lexicon",
+      "publisher": "Semitica et Semitohamitica Berolinensia 19, Reichert Verlag",
+      "url": "https://doi.org/10.29091/9783954906314",
+      "pages": null,
+      "notes": "Full descriptive grammar of a Central Kurdish (Sorani) variety. Confirmed via Crossref metadata (DOI 10.29091/9783954906314) as a real published grammar; not independently paged. Cited for the two-way rhotic (ر /ɾ/ vs ڕ /r/) and lateral (ل /l/ vs ڵ /ɫ/) contrast and the long-vowel-only vowel letter inventory (ا ە ێ ی ۆ و) that this spec's notes describe -- the un-restorable short vowel /ɨ/ is likewise a standard observation in descriptions of Central Kurdish, though the specific page ranges were not opened."
+    }
+  ],
+  "timespan": {
+    "start_year": 1920,
+    "end_year": null
+  },
+  "phonemes": [
+    "äː",
+    "b",
+    "d̠ʒ",
+    "d̪",
+    "eː",
+    "f",
+    "h",
+    "iː",
+    "j",
+    "k",
+    "l̪",
+    "m",
+    "n̪",
+    "oː",
+    "p",
+    "q",
+    "r̪",
+    "sˤ",
+    "s̪",
+    "t̠ʃ",
+    "t̪",
+    "uː",
+    "v",
+    "w",
+    "x",
+    "z̪",
+    "ħ",
+    "ŋ",
+    "ə",
+    "ɡ",
+    "ɣ",
+    "ɫ̪",
+    "ɯ̽",
+    "ɾ̪",
+    "ʃ",
+    "ʊ",
+    "ʒ",
+    "ʔ",
+    "ʕ"
+  ],
+  "parent": "x-clade-iran1269",
+  "ancestors": [
+    {
+      "code": "x-clade-iran1269",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Iranian — the classification node this language sits under."
+    }
+  ],
+  "location": {
+    "latitude": 35.6539,
+    "longitude": 45.8077,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Central Kurdish."
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "code": "gez",
+  "name": "Geʽez (Classical Ethiopic)",
+  "script": "Ethiopic",
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "i": [
+      "i"
+    ],
+    "u": [
+      "u"
+    ],
+    "e": [
+      "e"
+    ],
+    "o": [
+      "o"
+    ],
+    "p": [
+      "p"
+    ],
+    "t": [
+      "t"
+    ],
+    "k": [
+      "k"
+    ],
+    "b": [
+      "b"
+    ],
+    "d": [
+      "d"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "s": [
+      "s"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "l": [
+      "l"
+    ],
+    "r": [
+      "r"
+    ],
+    "w": [
+      "w"
+    ],
+    "j": [
+      "j"
+    ],
+    "h": [
+      "h"
+    ]
+  },
+  "allophones": {},
+  "notes": "STRUCTURAL ANCESTRY NODE (not a modelled G2P target). Geʽez is Classical Ethiopic, the liturgical South-Semitic language of Ethiopia and the literary ancestor / prestige source of the modern Ethiopian Semitic languages Amharic and Tigrinya. It exists here only so those specs have a node to resolve to; the grapheme set is a placeholder and no phonology is claimed (trk.json stub pattern).",
+  "quality": "stub",
+  "script_type": "abugida",
+  "iso639_3": "gez",
+  "glottolog_code": "geez1241",
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Ge%CA%BDez"
+  ],
+  "urls": [
+    "https://glottolog.org/resource/languoid/id/geez1241"
+  ],
+  "sources": [
+    {
+      "id": "gragg2008",
+      "author": "Gragg, G.",
+      "year": 2008,
+      "title": "Geʽez (in: The Ancient Languages of Mesopotamia, Egypt and Aksum)",
+      "publisher": "Cambridge University Press",
+      "url": null,
+      "pages": null,
+      "notes": "Reference for Classical Ethiopic (ancestry node only).",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Ge%CA%BDez"
+    }
+  ],
+  "parent": "sem-x-ethiopic",
+  "ancestors": [
+    {
+      "code": "sem-x-ethiopic",
+      "role": "parent",
+      "weight": 0.9,
+      "notes": "Ethiopian (South) Semitic."
+    }
+  ],
+  "wikidata_qid": "Q35667",
+  "location": {
+    "latitude": 10.1342,
+    "longitude": 40.6821,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Geez."
+  }
+}

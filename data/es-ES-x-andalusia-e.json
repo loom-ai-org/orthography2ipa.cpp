@@ -1,0 +1,184 @@
+{
+  "code": "es-ES-x-andalusia-e",
+  "name": "Eastern Andalusian Spanish",
+  "script": "Latin",
+  "graphemes_base": "es-ES",
+  "graphemes": {
+    "s": [
+      "s",
+      "h"
+    ],
+    "ll": [
+      "ʝ"
+    ]
+  },
+  "allophones_base": "es-ES",
+  "allophones": {
+    "d": [
+      "d",
+      "ð",
+      ""
+    ],
+    "s": [
+      "s",
+      "h",
+      ""
+    ],
+    "x": [
+      "h"
+    ],
+    "ʝ": [
+      "ʝ",
+      "ɟʝ"
+    ],
+    "ʎ": [
+      "ʝ"
+    ],
+    "a": [
+      "a",
+      "æ"
+    ],
+    "e": [
+      "e",
+      "ɛ"
+    ],
+    "i": [
+      "i",
+      "ɪ"
+    ],
+    "o": [
+      "o",
+      "ɔ"
+    ],
+    "u": [
+      "u",
+      "ʊ"
+    ]
+  },
+  "positional_graphemes_base": "es-ES",
+  "positional_graphemes": {
+    "d": {
+      "default": [
+        "d"
+      ],
+      "intervocalic": [
+        "ð",
+        ""
+      ],
+      "word_final": [
+        ""
+      ]
+    },
+    "s": {
+      "word_initial": [
+        "s"
+      ],
+      "intervocalic": [
+        "s"
+      ],
+      "before_consonant": [
+        "h"
+      ],
+      "word_final": [
+        "h"
+      ]
+    }
+  },
+  "parent": "es-ES",
+  "notes": "Eastern Andalusian (Granada, Almería, Jaén). Maintains distinción (/θ/ vs /s/) but shares aspiration with west. Distinctive vowel opening when final -s is deleted, creating near-phonemic open/closed vowel pairs (approaching 10-vowel system): perros [ˈpɛrɔ] vs perro [ˈpero]. Affricate [tʃ] preserved (no deaffrication).",
+  "quality": "research",
+  "script_type": "alphabet",
+  "sources": [
+    {
+      "id": "hualde2005",
+      "author": "Hualde, J.I.",
+      "year": 2005,
+      "title": "The Sounds of Spanish",
+      "publisher": "Cambridge University Press",
+      "url": null,
+      "pages": null,
+      "notes": null,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Spanish_phonology"
+    },
+    {
+      "id": "penny2002",
+      "author": "Penny, R.",
+      "year": 2002,
+      "title": "A History of the Spanish Language",
+      "publisher": "Cambridge University Press",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "zamora_vicente1960",
+      "author": "Zamora Vicente, A.",
+      "year": 1960,
+      "title": "Dialectología española",
+      "publisher": "Gredos",
+      "url": null,
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Andalusian_Spanish",
+    "https://es.wikipedia.org/wiki/Dialecto_andaluz"
+  ],
+  "timespan": {
+    "start_year": 1500,
+    "end_year": null
+  },
+  "glottolog_code": "anda1279",
+  "iso639_3": "spa",
+  "location": {
+    "latitude": 37.175,
+    "longitude": -3.6,
+    "source": "wikidata",
+    "notes": "Granada — a representative city of the eastern Andalusian area (with Almería and Jaén). [Wikidata Q8810 P625]"
+  },
+  "allophone_rules": [
+    {
+      "id": "EAND_OPEN_E_BEFORE_S",
+      "phonemes": [
+        "e"
+      ],
+      "surface": "ɛ",
+      "followed_by_phoneme": [
+        "h"
+      ],
+      "notes": "Eastern Andalusian vocalismo abierto: the mid/low vowel before an aspirated or lost /s/ opens, and the open vowel becomes the sole surviving cue to the plural / 2sg morpheme once the -s itself is gone (Navarro Tomas 1939, El acento andaluz / vocalismo; Cruz Ortiz, Sociofonetica andaluza). ⟨e⟩ before the [h] reflex of coda/final -s opens to [ɛ]: tres [ˈtɾɛ(h)], puestas [ˈpwɛhtæ]. Fires on the phoneme-level right-neighbour [h] (the only source of [h] in the eastern lect, since ⟨j⟩ keeps its velar [x] here)."
+    },
+    {
+      "id": "EAND_OPEN_O_BEFORE_S",
+      "phonemes": [
+        "o"
+      ],
+      "surface": "ɔ",
+      "followed_by_phoneme": [
+        "h"
+      ],
+      "notes": "⟨o⟩ before the [h] reflex of coda/final -s opens to [ɔ]: estos [ˈɛhtɔ], kilos [ˈkilɔ], euros [ˈɛwɾɔ] (Navarro Tomas 1939; Cruz Ortiz). See EAND_OPEN_E_BEFORE_S."
+    },
+    {
+      "id": "EAND_OPEN_A_BEFORE_S",
+      "phonemes": [
+        "a"
+      ],
+      "surface": "æ",
+      "followed_by_phoneme": [
+        "h"
+      ],
+      "notes": "⟨a⟩ before the [h] reflex of coda/final -s opens to [æ]: tazas [ˈtaθæ], las [ˈlæ], buenas [ˈbwenæ] (Navarro Tomas 1939; Cruz Ortiz). High vowels /i u/ resist opening and are deliberately not rewritten (buscas [ˈbuhkæ], not [ˈbʊhkæ])."
+    },
+    {
+      "id": "EAND_DELETE_FINAL_H",
+      "phonemes": [
+        "h"
+      ],
+      "surface": "",
+      "word_final": true,
+      "notes": "After the preceding vowel has opened, a WORD-FINAL aspirated -s is dropped, so the open vowel alone marks the plural: las tres [læ ˈtɾɛ], los libros [lɔ ˈliβɾɔ]. A word-INTERNAL coda [h] (before a consonant) is kept: estos [ˈɛhtɔ] retains the first [h]. Ordered after the opening rules so the [h] has already conditioned the vowel before it is removed. RESIDUAL / honest scoping: true leftward VOWEL HARMONY across an intervening consonant (the euros e-opening, [ˈɛwɾɔ], where the stressed vowel is not itself adjacent to an -s) is NOT modelled — the allophone layer's neighbour conditions are segment-adjacent (immediate, or one grapheme away by class), so an autosegmental vowel-tier that skips consonants is not expressible here. Only LOCAL opening (a mid/low vowel immediately before the [h] of -s) is applied; this matches the arbitrated gold everywhere except the single euros-type token, which stays half-open."
+    }
+  ]
+}

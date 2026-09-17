@@ -1,0 +1,142 @@
+{
+  "code": "lu",
+  "name": "Luba-Katanga (Kiluba)",
+  "glottolog_code": "luba1250",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "iso639_3": "lub",
+  "quality": "research",
+  "graphemes": {
+    "a": ["a"],
+    "b": ["b"],
+    "d": ["d"],
+    "e": ["e"],
+    "f": ["f"],
+    "g": ["ɡ"],
+    "h": ["h"],
+    "i": ["i"],
+    "j": ["dʒ"],
+    "k": ["k"],
+    "l": ["l"],
+    "m": ["m"],
+    "mb": ["mb"],
+    "mp": ["ᵐp"],
+    "mf": ["ᶬf"],
+    "mv": ["ᶬv"],
+    "n": ["n"],
+    "nd": ["nd"],
+    "nt": ["ⁿt"],
+    "ng": ["ŋɡ"],
+    "nk": ["ŋk"],
+    "ns": ["ⁿs"],
+    "nz": ["ⁿz"],
+    "nj": ["ⁿdʒ"],
+    "ny": ["ɲ"],
+    "o": ["o"],
+    "p": ["p"],
+    "s": ["s"],
+    "t": ["t"],
+    "u": ["u"],
+    "v": ["v"],
+    "w": ["w"],
+    "y": ["j"],
+    "z": ["z"]
+  },
+  "allophones": {
+    "a": ["a"],
+    "b": ["b", "β"],
+    "d": ["d"],
+    "e": ["e"],
+    "f": ["f"],
+    "ɡ": ["ɡ"],
+    "h": ["h"],
+    "i": ["i"],
+    "dʒ": ["dʒ"],
+    "k": ["k"],
+    "l": ["l"],
+    "m": ["m"],
+    "n": ["n"],
+    "ɲ": ["ɲ"],
+    "ŋ": ["ŋ"],
+    "o": ["o"],
+    "p": ["p", "ɸ"],
+    "s": ["s"],
+    "t": ["t"],
+    "u": ["u"],
+    "v": ["v"],
+    "w": ["w"],
+    "j": ["j"],
+    "z": ["z"]
+  },
+  "positional_graphemes": {
+    "b": {
+      "intervocalic": ["β"],
+      "default": ["b"]
+    },
+    "p": {
+      "intervocalic": ["ɸ"],
+      "default": ["p"]
+    }
+  },
+  "notes": "Luba-Katanga (Kiluba), Guthrie L.33, Bantu language of Haut-Katanga and Haut-Lomami provinces, DR Congo. 22-letter Latin alphabet: five vowels a/e/i/o/u (with a length contrast not marked in standard spelling) and 17 consonants. /p, b/ have the fricative allophones [ɸ, β] intervocalically or before a semivowel (Van Avermaet & Mbuya 1954). Prenasalized consonants (mb, nd, ng, nk, mp, nt, ns, nz, nj, mf, mv) are single phonemes, spelled as homorganic nasal+consonant digraphs. Tone is lexically and grammatically significant but unmarked in the standard orthography.",
+  "sources": [
+    {
+      "id": "vanavermaet_mbuya1954",
+      "author": "Van Avermaet, E. & Mbuya, B.",
+      "year": 1954,
+      "title": "Dictionnaire kiluba-français",
+      "publisher": "Institut Royal Colonial Belge",
+      "url": null,
+      "pages": null,
+      "notes": "Reference dictionary and grammatical sketch of Kiluba (Luba-Katanga)."
+    },
+    {
+      "id": "lub_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2025,
+      "title": "Luba-Katanga language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Luba-Katanga_language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Luba-Katanga_language",
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "omniglot_lub",
+      "author": "Ager, Simon",
+      "year": 2025,
+      "title": "Luba-Katanga language and alphabet",
+      "publisher": "Omniglot",
+      "url": "https://www.omniglot.com/writing/lubakatanga.htm",
+      "pages": null,
+      "notes": "Confirms intervocalic/pre-semivowel fricative allophony of b/p ([β]/[ɸ] between vowels, w, and y)."
+    }
+  ],
+  "parent": "x-clade-narr1281",
+  "ancestors": [
+    {
+      "code": "x-clade-narr1281",
+      "role": "parent",
+      "weight": 0.9,
+      "notes": "Luba branch of Bantu (Guthrie L.30), within Atlantic-Congo."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Luba-Katanga_language",
+    "https://en.wikipedia.org/wiki/Proto-Bantu_language"
+  ],
+  "urls": [
+    "https://glottolog.org/resource/languoid/id/luba1250"
+  ],
+  "timespan": {
+    "start_year": 1900,
+    "end_year": null
+  },
+  "wikidata_qid": "Q36157",
+  "location": {
+    "latitude": -8.5,
+    "longitude": 26.5,
+    "source": "glottolog",
+    "notes": "Approximate centre of the Katanga/Lomami speaking area, DR Congo."
+  }
+}

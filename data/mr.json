@@ -1,0 +1,2775 @@
+{
+  "code": "mr",
+  "name": "Marathi",
+  "script": "Devanagari",
+  "graphemes": {
+    "अ": [
+      "ə"
+    ],
+    "आ": [
+      "a"
+    ],
+    "इ": [
+      "i"
+    ],
+    "ई": [
+      "i"
+    ],
+    "उ": [
+      "u"
+    ],
+    "ऊ": [
+      "u"
+    ],
+    "ऋ": [
+      "ɾu"
+    ],
+    "ए": [
+      "e"
+    ],
+    "ऐ": [
+      "əi"
+    ],
+    "ओ": [
+      "o"
+    ],
+    "औ": [
+      "əu"
+    ],
+    "ऍ": [
+      "æ"
+    ],
+    "ऑ": [
+      "ɔ"
+    ],
+    "ा": [
+      "a"
+    ],
+    "ि": [
+      "i"
+    ],
+    "ी": [
+      "i"
+    ],
+    "ु": [
+      "u"
+    ],
+    "ू": [
+      "u"
+    ],
+    "ृ": [
+      "ɾu"
+    ],
+    "े": [
+      "e"
+    ],
+    "ै": [
+      "əi"
+    ],
+    "ो": [
+      "o"
+    ],
+    "ौ": [
+      "əu"
+    ],
+    "ॅ": [
+      "æ"
+    ],
+    "ॉ": [
+      "ɔ"
+    ],
+    "ं": [
+      "̃"
+    ],
+    "ः": [
+      "ʰ"
+    ],
+    "ँ": [
+      "̃"
+    ],
+    "्": [
+      ""
+    ],
+    "क": [
+      "k"
+    ],
+    "ख": [
+      "kʰ"
+    ],
+    "ग": [
+      "ɡ"
+    ],
+    "घ": [
+      "ɡʱ"
+    ],
+    "ङ": [
+      "ŋ"
+    ],
+    "च": [
+      "tɕ",
+      "ts"
+    ],
+    "छ": [
+      "tɕʰ"
+    ],
+    "ज": [
+      "dʑ",
+      "dz"
+    ],
+    "झ": [
+      "dzʱ",
+      "dʑʱ"
+    ],
+    "ञ": [
+      "ɲ"
+    ],
+    "ट": [
+      "ʈ"
+    ],
+    "ठ": [
+      "ʈʰ"
+    ],
+    "ड": [
+      "ɖ"
+    ],
+    "ढ": [
+      "ɖʱ"
+    ],
+    "ण": [
+      "ɳ"
+    ],
+    "त": [
+      "t̪"
+    ],
+    "थ": [
+      "t̪ʰ"
+    ],
+    "द": [
+      "d̪"
+    ],
+    "ध": [
+      "d̪ʱ"
+    ],
+    "न": [
+      "n"
+    ],
+    "प": [
+      "p"
+    ],
+    "फ": [
+      "pʰ"
+    ],
+    "ब": [
+      "b"
+    ],
+    "भ": [
+      "bʱ"
+    ],
+    "म": [
+      "m"
+    ],
+    "य": [
+      "j"
+    ],
+    "र": [
+      "ɾ"
+    ],
+    "ळ": [
+      "ɭ̆"
+    ],
+    "ल": [
+      "l"
+    ],
+    "व": [
+      "ʋ"
+    ],
+    "श": [
+      "ɕ"
+    ],
+    "ष": [
+      "ʂ"
+    ],
+    "स": [
+      "s"
+    ],
+    "ह": [
+      "ɦ"
+    ],
+    "ड़": [
+      "ɽ"
+    ],
+    "ढ़": [
+      "ɽʱ"
+    ],
+    "म्ह": [
+      "mʱ"
+    ],
+    "न्ह": [
+      "nʱ"
+    ],
+    "ण्ह": [
+      "ɳʱ"
+    ],
+    "ल्ह": [
+      "lʱ"
+    ],
+    "ळ्ह": [
+      "ɭ̆ʱ"
+    ],
+    "व्ह": [
+      "ʋʱ"
+    ],
+    "र्ह": [
+      "ɾʱ"
+    ],
+    "ज्ञ": [
+      "dʑn"
+    ]
+  },
+  "allophones": {
+    "p": [
+      "p"
+    ],
+    "pʰ": [
+      "pʰ"
+    ],
+    "b": [
+      "b"
+    ],
+    "bʱ": [
+      "bʱ"
+    ],
+    "t̪": [
+      "t̪"
+    ],
+    "t̪ʰ": [
+      "t̪ʰ"
+    ],
+    "d̪": [
+      "d̪"
+    ],
+    "d̪ʱ": [
+      "d̪ʱ"
+    ],
+    "ʈ": [
+      "ʈ"
+    ],
+    "ʈʰ": [
+      "ʈʰ"
+    ],
+    "ɖ": [
+      "ɖ"
+    ],
+    "ɖʱ": [
+      "ɖʱ"
+    ],
+    "k": [
+      "k"
+    ],
+    "kʰ": [
+      "kʰ"
+    ],
+    "ɡ": [
+      "ɡ"
+    ],
+    "ɡʱ": [
+      "ɡʱ"
+    ],
+    "tɕ": [
+      "tɕ"
+    ],
+    "tɕʰ": [
+      "tɕʰ"
+    ],
+    "dʑ": [
+      "dʑ"
+    ],
+    "dʑʱ": [
+      "dʑʱ"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n",
+      "ɳ",
+      "ŋ"
+    ],
+    "ɲ": [
+      "ɲ"
+    ],
+    "ɳ": [
+      "ɳ"
+    ],
+    "ʂ": [
+      "ʂ"
+    ],
+    "s": [
+      "s"
+    ],
+    "ɦ": [
+      "ɦ",
+      "h"
+    ],
+    "ɽ": [
+      "ɽ"
+    ],
+    "ɭ": [
+      "ɭ"
+    ],
+    "l": [
+      "l"
+    ],
+    "ʋ": [
+      "ʋ",
+      "w"
+    ],
+    "j": [
+      "j"
+    ],
+    "ə": [
+      "ə"
+    ],
+    "i": [
+      "i"
+    ],
+    "u": [
+      "u"
+    ],
+    "ɔ": [
+      "ɔ"
+    ],
+    "əi": [
+      "əi"
+    ],
+    "əu": [
+      "əu"
+    ],
+    "ts": [
+      "ts"
+    ],
+    "dz": [
+      "dz"
+    ],
+    "dzʱ": [
+      "dzʱ"
+    ],
+    "a": [
+      "a"
+    ],
+    "e": [
+      "e"
+    ],
+    "o": [
+      "o"
+    ],
+    "ɾ": [
+      "ɾ"
+    ],
+    "ɕ": [
+      "ɕ"
+    ],
+    "ɭ̆": [
+      "ɭ̆"
+    ],
+    "æ": [
+      "æ"
+    ],
+    "ʰ": [
+      "ʰ"
+    ],
+    "mʱ": [
+      "mʱ"
+    ],
+    "nʱ": [
+      "nʱ"
+    ],
+    "ɳʱ": [
+      "ɳʱ"
+    ],
+    "lʱ": [
+      "lʱ"
+    ],
+    "ɭ̆ʱ": [
+      "ɭ̆ʱ"
+    ],
+    "ʋʱ": [
+      "ʋʱ"
+    ],
+    "ɾʱ": [
+      "ɾʱ"
+    ],
+    "dʑn": [
+      "dʑn"
+    ]
+  },
+  "parent": "sa",
+  "ancestors": [
+    {
+      "code": "sa",
+      "role": "parent",
+      "weight": 0.8,
+      "notes": "Descent via Maharashtri Apabhraṃśa"
+    },
+    {
+      "code": "hi",
+      "role": "adstrate",
+      "weight": 0.05,
+      "notes": "Contact with Hindi"
+    }
+  ],
+  "notes": "Standard Marathi (Maharashtra). No phonemic vowel length -- the script writes the Sanskrit length distinction but the language has lost it, so ⟨आ ई ऊ ए ओ⟩ are transcribed without a length mark and ⟨अ⟩ vs ⟨आ⟩ is a quality contrast [ə] vs [a]. ⟨ळ⟩ is the retroflex lateral flap [ɭ̆], a Marathi hallmark. ⟨र⟩ is a tap. ⟨ऋ⟩ is read [ɾu], not the Sanskrit syllabic [r̩] nor the Hindi [ɾɪ]. ⟨च ज झ⟩ carry both an alveolar and a palato-alveolar affricate series. Final schwa deletion is near-categorical but is blocked after a consonant cluster. Anusvara before a stop is a homorganic nasal consonant. Medial schwa deletion is deliberately not encoded: Marathi retains the medial schwa far more freely than Hindi does (Wikipedia, 'Schwa deletion in Indo-Aryan languages': 'comprehension of Marathi is not impeded if all schwas are retained'; 'propensity to pronounce it far more regularly than Hindi'), and a fully-retained pronunciation is well formed -- Hindi's categorical VC_CV rule would fire on अंकगणित, where the gold keeps both vowels. The gold retains 81% of the medial schwas this spec emits; the remainder is the trade-off's cost, taken deliberately rather than by oversight.",
+  "quality": "research",
+  "script_type": "abugida",
+  "inherent_vowel": "ə",
+  "sources": [
+    {
+      "id": "masica1991",
+      "author": "Masica, C.",
+      "year": 1991,
+      "title": "The Indo-Aryan Languages",
+      "publisher": "Cambridge University Press",
+      "url": null,
+      "pages": null,
+      "notes": null,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Indo-Aryan_languages"
+    },
+    {
+      "id": "cardona_jain2003",
+      "author": "Cardona, G. & Jain, D. (eds.)",
+      "year": 2003,
+      "title": "The Indo-Aryan Languages",
+      "publisher": "Routledge",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "dhongde_wali2009",
+      "author": "Dhongde, R.V. & Wali, K.",
+      "year": 2009,
+      "title": "Marathi",
+      "publisher": "John Benjamins",
+      "url": null,
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Marathi_language",
+    "https://mr.wikipedia.org/wiki/मराठी_भाषा",
+    "https://mr.wikipedia.org/wiki/%E0%A4%AE%E0%A4%B0%E0%A4%BE%E0%A4%A0%E0%A5%80_%E0%A4%AD%E0%A4%BE%E0%A4%B7%E0%A4%BE",
+    "https://en.wikipedia.org/wiki/Marathi_phonology",
+    "https://en.wikipedia.org/wiki/Schwa_deletion_in_Indo-Aryan_languages"
+  ],
+  "timespan": {
+    "start_year": 1200,
+    "end_year": null
+  },
+  "glottolog_code": "mara1378",
+  "iso639_3": "mar",
+  "wikidata_qid": "Q1571",
+  "phoible_id": "mara1378",
+  "wals_code": "mhi",
+  "location": {
+    "latitude": 17.9344,
+    "longitude": 76.6665,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Marathi."
+  },
+  "allophone_rules": [
+    {
+      "id": "MR_SCHWA_FINAL_b",
+      "phonemes": [
+        "bə"
+      ],
+      "surface": "b",
+      "word_final": true,
+      "preceded_by_phoneme": [
+        "a",
+        "ə",
+        "i",
+        "u",
+        "e",
+        "o",
+        "æ",
+        "ɔ",
+        "bə",
+        "bʱə",
+        "dzə",
+        "dzʱə",
+        "dʑə",
+        "dʑʱə",
+        "d̪ə",
+        "d̪ʱə",
+        "jə",
+        "kə",
+        "kʰə",
+        "lə",
+        "mə",
+        "nə",
+        "pə",
+        "pʰə",
+        "sə",
+        "tsə",
+        "tɕə",
+        "tɕʰə",
+        "t̪ə",
+        "t̪ʰə",
+        "ɕə",
+        "ɖə",
+        "ɖʱə",
+        "ɡə",
+        "ɡʱə",
+        "ɦə",
+        "ɭə",
+        "ɭ̆ə",
+        "ɲə",
+        "ɳə",
+        "ɽə",
+        "ɾə",
+        "ʂə",
+        "ʈə",
+        "ʈʰə",
+        "ʋə"
+      ],
+      "notes": "Word-final schwa deletion; see MR_SCHWA_FINAL_k."
+    },
+    {
+      "id": "MR_SCHWA_FINAL_bʱ",
+      "phonemes": [
+        "bʱə"
+      ],
+      "surface": "bʱ",
+      "word_final": true,
+      "preceded_by_phoneme": [
+        "a",
+        "ə",
+        "i",
+        "u",
+        "e",
+        "o",
+        "æ",
+        "ɔ",
+        "bə",
+        "bʱə",
+        "dzə",
+        "dzʱə",
+        "dʑə",
+        "dʑʱə",
+        "d̪ə",
+        "d̪ʱə",
+        "jə",
+        "kə",
+        "kʰə",
+        "lə",
+        "mə",
+        "nə",
+        "pə",
+        "pʰə",
+        "sə",
+        "tsə",
+        "tɕə",
+        "tɕʰə",
+        "t̪ə",
+        "t̪ʰə",
+        "ɕə",
+        "ɖə",
+        "ɖʱə",
+        "ɡə",
+        "ɡʱə",
+        "ɦə",
+        "ɭə",
+        "ɭ̆ə",
+        "ɲə",
+        "ɳə",
+        "ɽə",
+        "ɾə",
+        "ʂə",
+        "ʈə",
+        "ʈʰə",
+        "ʋə"
+      ],
+      "notes": "Word-final schwa deletion; see MR_SCHWA_FINAL_k."
+    },
+    {
+      "id": "MR_SCHWA_FINAL_dz",
+      "phonemes": [
+        "dzə"
+      ],
+      "surface": "dz",
+      "word_final": true,
+      "preceded_by_phoneme": [
+        "a",
+        "ə",
+        "i",
+        "u",
+        "e",
+        "o",
+        "æ",
+        "ɔ",
+        "bə",
+        "bʱə",
+        "dzə",
+        "dzʱə",
+        "dʑə",
+        "dʑʱə",
+        "d̪ə",
+        "d̪ʱə",
+        "jə",
+        "kə",
+        "kʰə",
+        "lə",
+        "mə",
+        "nə",
+        "pə",
+        "pʰə",
+        "sə",
+        "tsə",
+        "tɕə",
+        "tɕʰə",
+        "t̪ə",
+        "t̪ʰə",
+        "ɕə",
+        "ɖə",
+        "ɖʱə",
+        "ɡə",
+        "ɡʱə",
+        "ɦə",
+        "ɭə",
+        "ɭ̆ə",
+        "ɲə",
+        "ɳə",
+        "ɽə",
+        "ɾə",
+        "ʂə",
+        "ʈə",
+        "ʈʰə",
+        "ʋə"
+      ],
+      "notes": "Word-final schwa deletion; see MR_SCHWA_FINAL_k."
+    },
+    {
+      "id": "MR_SCHWA_FINAL_dzʱ",
+      "phonemes": [
+        "dzʱə"
+      ],
+      "surface": "dzʱ",
+      "word_final": true,
+      "preceded_by_phoneme": [
+        "a",
+        "ə",
+        "i",
+        "u",
+        "e",
+        "o",
+        "æ",
+        "ɔ",
+        "bə",
+        "bʱə",
+        "dzə",
+        "dzʱə",
+        "dʑə",
+        "dʑʱə",
+        "d̪ə",
+        "d̪ʱə",
+        "jə",
+        "kə",
+        "kʰə",
+        "lə",
+        "mə",
+        "nə",
+        "pə",
+        "pʰə",
+        "sə",
+        "tsə",
+        "tɕə",
+        "tɕʰə",
+        "t̪ə",
+        "t̪ʰə",
+        "ɕə",
+        "ɖə",
+        "ɖʱə",
+        "ɡə",
+        "ɡʱə",
+        "ɦə",
+        "ɭə",
+        "ɭ̆ə",
+        "ɲə",
+        "ɳə",
+        "ɽə",
+        "ɾə",
+        "ʂə",
+        "ʈə",
+        "ʈʰə",
+        "ʋə"
+      ],
+      "notes": "Word-final schwa deletion; see MR_SCHWA_FINAL_k."
+    },
+    {
+      "id": "MR_SCHWA_FINAL_dʑ",
+      "phonemes": [
+        "dʑə"
+      ],
+      "surface": "dʑ",
+      "word_final": true,
+      "preceded_by_phoneme": [
+        "a",
+        "ə",
+        "i",
+        "u",
+        "e",
+        "o",
+        "æ",
+        "ɔ",
+        "bə",
+        "bʱə",
+        "dzə",
+        "dzʱə",
+        "dʑə",
+        "dʑʱə",
+        "d̪ə",
+        "d̪ʱə",
+        "jə",
+        "kə",
+        "kʰə",
+        "lə",
+        "mə",
+        "nə",
+        "pə",
+        "pʰə",
+        "sə",
+        "tsə",
+        "tɕə",
+        "tɕʰə",
+        "t̪ə",
+        "t̪ʰə",
+        "ɕə",
+        "ɖə",
+        "ɖʱə",
+        "ɡə",
+        "ɡʱə",
+        "ɦə",
+        "ɭə",
+        "ɭ̆ə",
+        "ɲə",
+        "ɳə",
+        "ɽə",
+        "ɾə",
+        "ʂə",
+        "ʈə",
+        "ʈʰə",
+        "ʋə"
+      ],
+      "notes": "Word-final schwa deletion; see MR_SCHWA_FINAL_k."
+    },
+    {
+      "id": "MR_SCHWA_FINAL_dʑʱ",
+      "phonemes": [
+        "dʑʱə"
+      ],
+      "surface": "dʑʱ",
+      "word_final": true,
+      "preceded_by_phoneme": [
+        "a",
+        "ə",
+        "i",
+        "u",
+        "e",
+        "o",
+        "æ",
+        "ɔ",
+        "bə",
+        "bʱə",
+        "dzə",
+        "dzʱə",
+        "dʑə",
+        "dʑʱə",
+        "d̪ə",
+        "d̪ʱə",
+        "jə",
+        "kə",
+        "kʰə",
+        "lə",
+        "mə",
+        "nə",
+        "pə",
+        "pʰə",
+        "sə",
+        "tsə",
+        "tɕə",
+        "tɕʰə",
+        "t̪ə",
+        "t̪ʰə",
+        "ɕə",
+        "ɖə",
+        "ɖʱə",
+        "ɡə",
+        "ɡʱə",
+        "ɦə",
+        "ɭə",
+        "ɭ̆ə",
+        "ɲə",
+        "ɳə",
+        "ɽə",
+        "ɾə",
+        "ʂə",
+        "ʈə",
+        "ʈʰə",
+        "ʋə"
+      ],
+      "notes": "Word-final schwa deletion; see MR_SCHWA_FINAL_k."
+    },
+    {
+      "id": "MR_SCHWA_FINAL_d̪",
+      "phonemes": [
+        "d̪ə"
+      ],
+      "surface": "d̪",
+      "word_final": true,
+      "preceded_by_phoneme": [
+        "a",
+        "ə",
+        "i",
+        "u",
+        "e",
+        "o",
+        "æ",
+        "ɔ",
+        "bə",
+        "bʱə",
+        "dzə",
+        "dzʱə",
+        "dʑə",
+        "dʑʱə",
+        "d̪ə",
+        "d̪ʱə",
+        "jə",
+        "kə",
+        "kʰə",
+        "lə",
+        "mə",
+        "nə",
+        "pə",
+        "pʰə",
+        "sə",
+        "tsə",
+        "tɕə",
+        "tɕʰə",
+        "t̪ə",
+        "t̪ʰə",
+        "ɕə",
+        "ɖə",
+        "ɖʱə",
+        "ɡə",
+        "ɡʱə",
+        "ɦə",
+        "ɭə",
+        "ɭ̆ə",
+        "ɲə",
+        "ɳə",
+        "ɽə",
+        "ɾə",
+        "ʂə",
+        "ʈə",
+        "ʈʰə",
+        "ʋə"
+      ],
+      "notes": "Word-final schwa deletion; see MR_SCHWA_FINAL_k."
+    },
+    {
+      "id": "MR_SCHWA_FINAL_d̪ʱ",
+      "phonemes": [
+        "d̪ʱə"
+      ],
+      "surface": "d̪ʱ",
+      "word_final": true,
+      "preceded_by_phoneme": [
+        "a",
+        "ə",
+        "i",
+        "u",
+        "e",
+        "o",
+        "æ",
+        "ɔ",
+        "bə",
+        "bʱə",
+        "dzə",
+        "dzʱə",
+        "dʑə",
+        "dʑʱə",
+        "d̪ə",
+        "d̪ʱə",
+        "jə",
+        "kə",
+        "kʰə",
+        "lə",
+        "mə",
+        "nə",
+        "pə",
+        "pʰə",
+        "sə",
+        "tsə",
+        "tɕə",
+        "tɕʰə",
+        "t̪ə",
+        "t̪ʰə",
+        "ɕə",
+        "ɖə",
+        "ɖʱə",
+        "ɡə",
+        "ɡʱə",
+        "ɦə",
+        "ɭə",
+        "ɭ̆ə",
+        "ɲə",
+        "ɳə",
+        "ɽə",
+        "ɾə",
+        "ʂə",
+        "ʈə",
+        "ʈʰə",
+        "ʋə"
+      ],
+      "notes": "Word-final schwa deletion; see MR_SCHWA_FINAL_k."
+    },
+    {
+      "id": "MR_SCHWA_FINAL_j",
+      "phonemes": [
+        "jə"
+      ],
+      "surface": "j",
+      "word_final": true,
+      "preceded_by_phoneme": [
+        "a",
+        "ə",
+        "i",
+        "u",
+        "e",
+        "o",
+        "æ",
+        "ɔ",
+        "bə",
+        "bʱə",
+        "dzə",
+        "dzʱə",
+        "dʑə",
+        "dʑʱə",
+        "d̪ə",
+        "d̪ʱə",
+        "jə",
+        "kə",
+        "kʰə",
+        "lə",
+        "mə",
+        "nə",
+        "pə",
+        "pʰə",
+        "sə",
+        "tsə",
+        "tɕə",
+        "tɕʰə",
+        "t̪ə",
+        "t̪ʰə",
+        "ɕə",
+        "ɖə",
+        "ɖʱə",
+        "ɡə",
+        "ɡʱə",
+        "ɦə",
+        "ɭə",
+        "ɭ̆ə",
+        "ɲə",
+        "ɳə",
+        "ɽə",
+        "ɾə",
+        "ʂə",
+        "ʈə",
+        "ʈʰə",
+        "ʋə"
+      ],
+      "notes": "Word-final schwa deletion; see MR_SCHWA_FINAL_k."
+    },
+    {
+      "id": "MR_SCHWA_FINAL_k",
+      "phonemes": [
+        "kə"
+      ],
+      "surface": "k",
+      "word_final": true,
+      "preceded_by_phoneme": [
+        "a",
+        "ə",
+        "i",
+        "u",
+        "e",
+        "o",
+        "æ",
+        "ɔ",
+        "bə",
+        "bʱə",
+        "dzə",
+        "dzʱə",
+        "dʑə",
+        "dʑʱə",
+        "d̪ə",
+        "d̪ʱə",
+        "jə",
+        "kə",
+        "kʰə",
+        "lə",
+        "mə",
+        "nə",
+        "pə",
+        "pʰə",
+        "sə",
+        "tsə",
+        "tɕə",
+        "tɕʰə",
+        "t̪ə",
+        "t̪ʰə",
+        "ɕə",
+        "ɖə",
+        "ɖʱə",
+        "ɡə",
+        "ɡʱə",
+        "ɦə",
+        "ɭə",
+        "ɭ̆ə",
+        "ɲə",
+        "ɳə",
+        "ɽə",
+        "ɾə",
+        "ʂə",
+        "ʈə",
+        "ʈʰə",
+        "ʋə"
+      ],
+      "notes": "Word-final schwa deletion, restricted to the post-vocalic case. Marathi deletes the inherent vowel of a word-final consonant letter -- अंगण [əŋɡəɳ], अंकुश [əŋkuɕ] -- but, unlike Hindi, it KEEPS that vowel when deleting it would leave a word-final consonant cluster: शब्द is [ɕəbdə], not *[ɕəbd]. The condition is stated as preceded_by_phoneme = the vowels, which is the same statement read off the slot to the left: the schwa survives exactly when the preceding slot ends in a consonant, whether that consonant is written with a virama (अंतरिक्ष [ənt̪əɾikʂə]) or is the homorganic nasal an anusvara writes (अंक [əŋkə], अंत [ənt̪ə]). Requiring a preceding slot at all also protects a one-letter word, whose inherent vowel is its only nucleus (न [nə]). Sanskrit keeps the inherent vowel unconditionally and declares no such rule, which is why this lives in the Marathi data and not in the engine. (Masica, The Indo-Aryan Languages, 1991, on schwa deletion in modern Indo-Aryan; Wikipedia, 'Marathi phonology', for the Marathi cluster exception: 'it has conserved the schwas after consonant clusters in words like शब्द'.) The nasalization mark is deliberately absent from the list, so an anusvara always blocks the deletion. Before a stop it is a homorganic nasal; before a continuant it is a nasalized approximant, which the gold writes as a segment of its own (गांव, नांव, मांस all keep their final schwa there). Either way the preceding slot is consonantal and the cluster condition holds. This also sidesteps a limit of the rule language: the anusvara slot still reads as the bare nasalization mark when the schwa rules are evaluated, so a guard on the preceding slot could not tell the homorganic nasal MR_ANUSVARA_* produces from plain vowel nasalization."
+    },
+    {
+      "id": "MR_SCHWA_FINAL_kʰ",
+      "phonemes": [
+        "kʰə"
+      ],
+      "surface": "kʰ",
+      "word_final": true,
+      "preceded_by_phoneme": [
+        "a",
+        "ə",
+        "i",
+        "u",
+        "e",
+        "o",
+        "æ",
+        "ɔ",
+        "bə",
+        "bʱə",
+        "dzə",
+        "dzʱə",
+        "dʑə",
+        "dʑʱə",
+        "d̪ə",
+        "d̪ʱə",
+        "jə",
+        "kə",
+        "kʰə",
+        "lə",
+        "mə",
+        "nə",
+        "pə",
+        "pʰə",
+        "sə",
+        "tsə",
+        "tɕə",
+        "tɕʰə",
+        "t̪ə",
+        "t̪ʰə",
+        "ɕə",
+        "ɖə",
+        "ɖʱə",
+        "ɡə",
+        "ɡʱə",
+        "ɦə",
+        "ɭə",
+        "ɭ̆ə",
+        "ɲə",
+        "ɳə",
+        "ɽə",
+        "ɾə",
+        "ʂə",
+        "ʈə",
+        "ʈʰə",
+        "ʋə"
+      ],
+      "notes": "Word-final schwa deletion; see MR_SCHWA_FINAL_k."
+    },
+    {
+      "id": "MR_SCHWA_FINAL_l",
+      "phonemes": [
+        "lə"
+      ],
+      "surface": "l",
+      "word_final": true,
+      "preceded_by_phoneme": [
+        "a",
+        "ə",
+        "i",
+        "u",
+        "e",
+        "o",
+        "æ",
+        "ɔ",
+        "bə",
+        "bʱə",
+        "dzə",
+        "dzʱə",
+        "dʑə",
+        "dʑʱə",
+        "d̪ə",
+        "d̪ʱə",
+        "jə",
+        "kə",
+        "kʰə",
+        "lə",
+        "mə",
+        "nə",
+        "pə",
+        "pʰə",
+        "sə",
+        "tsə",
+        "tɕə",
+        "tɕʰə",
+        "t̪ə",
+        "t̪ʰə",
+        "ɕə",
+        "ɖə",
+        "ɖʱə",
+        "ɡə",
+        "ɡʱə",
+        "ɦə",
+        "ɭə",
+        "ɭ̆ə",
+        "ɲə",
+        "ɳə",
+        "ɽə",
+        "ɾə",
+        "ʂə",
+        "ʈə",
+        "ʈʰə",
+        "ʋə"
+      ],
+      "notes": "Word-final schwa deletion; see MR_SCHWA_FINAL_k."
+    },
+    {
+      "id": "MR_SCHWA_FINAL_m",
+      "phonemes": [
+        "mə"
+      ],
+      "surface": "m",
+      "word_final": true,
+      "preceded_by_phoneme": [
+        "a",
+        "ə",
+        "i",
+        "u",
+        "e",
+        "o",
+        "æ",
+        "ɔ",
+        "bə",
+        "bʱə",
+        "dzə",
+        "dzʱə",
+        "dʑə",
+        "dʑʱə",
+        "d̪ə",
+        "d̪ʱə",
+        "jə",
+        "kə",
+        "kʰə",
+        "lə",
+        "mə",
+        "nə",
+        "pə",
+        "pʰə",
+        "sə",
+        "tsə",
+        "tɕə",
+        "tɕʰə",
+        "t̪ə",
+        "t̪ʰə",
+        "ɕə",
+        "ɖə",
+        "ɖʱə",
+        "ɡə",
+        "ɡʱə",
+        "ɦə",
+        "ɭə",
+        "ɭ̆ə",
+        "ɲə",
+        "ɳə",
+        "ɽə",
+        "ɾə",
+        "ʂə",
+        "ʈə",
+        "ʈʰə",
+        "ʋə"
+      ],
+      "notes": "Word-final schwa deletion; see MR_SCHWA_FINAL_k."
+    },
+    {
+      "id": "MR_SCHWA_FINAL_n",
+      "phonemes": [
+        "nə"
+      ],
+      "surface": "n",
+      "word_final": true,
+      "preceded_by_phoneme": [
+        "a",
+        "ə",
+        "i",
+        "u",
+        "e",
+        "o",
+        "æ",
+        "ɔ",
+        "bə",
+        "bʱə",
+        "dzə",
+        "dzʱə",
+        "dʑə",
+        "dʑʱə",
+        "d̪ə",
+        "d̪ʱə",
+        "jə",
+        "kə",
+        "kʰə",
+        "lə",
+        "mə",
+        "nə",
+        "pə",
+        "pʰə",
+        "sə",
+        "tsə",
+        "tɕə",
+        "tɕʰə",
+        "t̪ə",
+        "t̪ʰə",
+        "ɕə",
+        "ɖə",
+        "ɖʱə",
+        "ɡə",
+        "ɡʱə",
+        "ɦə",
+        "ɭə",
+        "ɭ̆ə",
+        "ɲə",
+        "ɳə",
+        "ɽə",
+        "ɾə",
+        "ʂə",
+        "ʈə",
+        "ʈʰə",
+        "ʋə"
+      ],
+      "notes": "Word-final schwa deletion; see MR_SCHWA_FINAL_k."
+    },
+    {
+      "id": "MR_SCHWA_FINAL_p",
+      "phonemes": [
+        "pə"
+      ],
+      "surface": "p",
+      "word_final": true,
+      "preceded_by_phoneme": [
+        "a",
+        "ə",
+        "i",
+        "u",
+        "e",
+        "o",
+        "æ",
+        "ɔ",
+        "bə",
+        "bʱə",
+        "dzə",
+        "dzʱə",
+        "dʑə",
+        "dʑʱə",
+        "d̪ə",
+        "d̪ʱə",
+        "jə",
+        "kə",
+        "kʰə",
+        "lə",
+        "mə",
+        "nə",
+        "pə",
+        "pʰə",
+        "sə",
+        "tsə",
+        "tɕə",
+        "tɕʰə",
+        "t̪ə",
+        "t̪ʰə",
+        "ɕə",
+        "ɖə",
+        "ɖʱə",
+        "ɡə",
+        "ɡʱə",
+        "ɦə",
+        "ɭə",
+        "ɭ̆ə",
+        "ɲə",
+        "ɳə",
+        "ɽə",
+        "ɾə",
+        "ʂə",
+        "ʈə",
+        "ʈʰə",
+        "ʋə"
+      ],
+      "notes": "Word-final schwa deletion; see MR_SCHWA_FINAL_k."
+    },
+    {
+      "id": "MR_SCHWA_FINAL_pʰ",
+      "phonemes": [
+        "pʰə"
+      ],
+      "surface": "pʰ",
+      "word_final": true,
+      "preceded_by_phoneme": [
+        "a",
+        "ə",
+        "i",
+        "u",
+        "e",
+        "o",
+        "æ",
+        "ɔ",
+        "bə",
+        "bʱə",
+        "dzə",
+        "dzʱə",
+        "dʑə",
+        "dʑʱə",
+        "d̪ə",
+        "d̪ʱə",
+        "jə",
+        "kə",
+        "kʰə",
+        "lə",
+        "mə",
+        "nə",
+        "pə",
+        "pʰə",
+        "sə",
+        "tsə",
+        "tɕə",
+        "tɕʰə",
+        "t̪ə",
+        "t̪ʰə",
+        "ɕə",
+        "ɖə",
+        "ɖʱə",
+        "ɡə",
+        "ɡʱə",
+        "ɦə",
+        "ɭə",
+        "ɭ̆ə",
+        "ɲə",
+        "ɳə",
+        "ɽə",
+        "ɾə",
+        "ʂə",
+        "ʈə",
+        "ʈʰə",
+        "ʋə"
+      ],
+      "notes": "Word-final schwa deletion; see MR_SCHWA_FINAL_k."
+    },
+    {
+      "id": "MR_SCHWA_FINAL_s",
+      "phonemes": [
+        "sə"
+      ],
+      "surface": "s",
+      "word_final": true,
+      "preceded_by_phoneme": [
+        "a",
+        "ə",
+        "i",
+        "u",
+        "e",
+        "o",
+        "æ",
+        "ɔ",
+        "bə",
+        "bʱə",
+        "dzə",
+        "dzʱə",
+        "dʑə",
+        "dʑʱə",
+        "d̪ə",
+        "d̪ʱə",
+        "jə",
+        "kə",
+        "kʰə",
+        "lə",
+        "mə",
+        "nə",
+        "pə",
+        "pʰə",
+        "sə",
+        "tsə",
+        "tɕə",
+        "tɕʰə",
+        "t̪ə",
+        "t̪ʰə",
+        "ɕə",
+        "ɖə",
+        "ɖʱə",
+        "ɡə",
+        "ɡʱə",
+        "ɦə",
+        "ɭə",
+        "ɭ̆ə",
+        "ɲə",
+        "ɳə",
+        "ɽə",
+        "ɾə",
+        "ʂə",
+        "ʈə",
+        "ʈʰə",
+        "ʋə"
+      ],
+      "notes": "Word-final schwa deletion; see MR_SCHWA_FINAL_k."
+    },
+    {
+      "id": "MR_SCHWA_FINAL_ts",
+      "phonemes": [
+        "tsə"
+      ],
+      "surface": "ts",
+      "word_final": true,
+      "preceded_by_phoneme": [
+        "a",
+        "ə",
+        "i",
+        "u",
+        "e",
+        "o",
+        "æ",
+        "ɔ",
+        "bə",
+        "bʱə",
+        "dzə",
+        "dzʱə",
+        "dʑə",
+        "dʑʱə",
+        "d̪ə",
+        "d̪ʱə",
+        "jə",
+        "kə",
+        "kʰə",
+        "lə",
+        "mə",
+        "nə",
+        "pə",
+        "pʰə",
+        "sə",
+        "tsə",
+        "tɕə",
+        "tɕʰə",
+        "t̪ə",
+        "t̪ʰə",
+        "ɕə",
+        "ɖə",
+        "ɖʱə",
+        "ɡə",
+        "ɡʱə",
+        "ɦə",
+        "ɭə",
+        "ɭ̆ə",
+        "ɲə",
+        "ɳə",
+        "ɽə",
+        "ɾə",
+        "ʂə",
+        "ʈə",
+        "ʈʰə",
+        "ʋə"
+      ],
+      "notes": "Word-final schwa deletion; see MR_SCHWA_FINAL_k."
+    },
+    {
+      "id": "MR_SCHWA_FINAL_tɕ",
+      "phonemes": [
+        "tɕə"
+      ],
+      "surface": "tɕ",
+      "word_final": true,
+      "preceded_by_phoneme": [
+        "a",
+        "ə",
+        "i",
+        "u",
+        "e",
+        "o",
+        "æ",
+        "ɔ",
+        "bə",
+        "bʱə",
+        "dzə",
+        "dzʱə",
+        "dʑə",
+        "dʑʱə",
+        "d̪ə",
+        "d̪ʱə",
+        "jə",
+        "kə",
+        "kʰə",
+        "lə",
+        "mə",
+        "nə",
+        "pə",
+        "pʰə",
+        "sə",
+        "tsə",
+        "tɕə",
+        "tɕʰə",
+        "t̪ə",
+        "t̪ʰə",
+        "ɕə",
+        "ɖə",
+        "ɖʱə",
+        "ɡə",
+        "ɡʱə",
+        "ɦə",
+        "ɭə",
+        "ɭ̆ə",
+        "ɲə",
+        "ɳə",
+        "ɽə",
+        "ɾə",
+        "ʂə",
+        "ʈə",
+        "ʈʰə",
+        "ʋə"
+      ],
+      "notes": "Word-final schwa deletion; see MR_SCHWA_FINAL_k."
+    },
+    {
+      "id": "MR_SCHWA_FINAL_tɕʰ",
+      "phonemes": [
+        "tɕʰə"
+      ],
+      "surface": "tɕʰ",
+      "word_final": true,
+      "preceded_by_phoneme": [
+        "a",
+        "ə",
+        "i",
+        "u",
+        "e",
+        "o",
+        "æ",
+        "ɔ",
+        "bə",
+        "bʱə",
+        "dzə",
+        "dzʱə",
+        "dʑə",
+        "dʑʱə",
+        "d̪ə",
+        "d̪ʱə",
+        "jə",
+        "kə",
+        "kʰə",
+        "lə",
+        "mə",
+        "nə",
+        "pə",
+        "pʰə",
+        "sə",
+        "tsə",
+        "tɕə",
+        "tɕʰə",
+        "t̪ə",
+        "t̪ʰə",
+        "ɕə",
+        "ɖə",
+        "ɖʱə",
+        "ɡə",
+        "ɡʱə",
+        "ɦə",
+        "ɭə",
+        "ɭ̆ə",
+        "ɲə",
+        "ɳə",
+        "ɽə",
+        "ɾə",
+        "ʂə",
+        "ʈə",
+        "ʈʰə",
+        "ʋə"
+      ],
+      "notes": "Word-final schwa deletion; see MR_SCHWA_FINAL_k."
+    },
+    {
+      "id": "MR_SCHWA_FINAL_t̪",
+      "phonemes": [
+        "t̪ə"
+      ],
+      "surface": "t̪",
+      "word_final": true,
+      "preceded_by_phoneme": [
+        "a",
+        "ə",
+        "i",
+        "u",
+        "e",
+        "o",
+        "æ",
+        "ɔ",
+        "bə",
+        "bʱə",
+        "dzə",
+        "dzʱə",
+        "dʑə",
+        "dʑʱə",
+        "d̪ə",
+        "d̪ʱə",
+        "jə",
+        "kə",
+        "kʰə",
+        "lə",
+        "mə",
+        "nə",
+        "pə",
+        "pʰə",
+        "sə",
+        "tsə",
+        "tɕə",
+        "tɕʰə",
+        "t̪ə",
+        "t̪ʰə",
+        "ɕə",
+        "ɖə",
+        "ɖʱə",
+        "ɡə",
+        "ɡʱə",
+        "ɦə",
+        "ɭə",
+        "ɭ̆ə",
+        "ɲə",
+        "ɳə",
+        "ɽə",
+        "ɾə",
+        "ʂə",
+        "ʈə",
+        "ʈʰə",
+        "ʋə"
+      ],
+      "notes": "Word-final schwa deletion; see MR_SCHWA_FINAL_k."
+    },
+    {
+      "id": "MR_SCHWA_FINAL_t̪ʰ",
+      "phonemes": [
+        "t̪ʰə"
+      ],
+      "surface": "t̪ʰ",
+      "word_final": true,
+      "preceded_by_phoneme": [
+        "a",
+        "ə",
+        "i",
+        "u",
+        "e",
+        "o",
+        "æ",
+        "ɔ",
+        "bə",
+        "bʱə",
+        "dzə",
+        "dzʱə",
+        "dʑə",
+        "dʑʱə",
+        "d̪ə",
+        "d̪ʱə",
+        "jə",
+        "kə",
+        "kʰə",
+        "lə",
+        "mə",
+        "nə",
+        "pə",
+        "pʰə",
+        "sə",
+        "tsə",
+        "tɕə",
+        "tɕʰə",
+        "t̪ə",
+        "t̪ʰə",
+        "ɕə",
+        "ɖə",
+        "ɖʱə",
+        "ɡə",
+        "ɡʱə",
+        "ɦə",
+        "ɭə",
+        "ɭ̆ə",
+        "ɲə",
+        "ɳə",
+        "ɽə",
+        "ɾə",
+        "ʂə",
+        "ʈə",
+        "ʈʰə",
+        "ʋə"
+      ],
+      "notes": "Word-final schwa deletion; see MR_SCHWA_FINAL_k."
+    },
+    {
+      "id": "MR_SCHWA_FINAL_ɕ",
+      "phonemes": [
+        "ɕə"
+      ],
+      "surface": "ɕ",
+      "word_final": true,
+      "preceded_by_phoneme": [
+        "a",
+        "ə",
+        "i",
+        "u",
+        "e",
+        "o",
+        "æ",
+        "ɔ",
+        "bə",
+        "bʱə",
+        "dzə",
+        "dzʱə",
+        "dʑə",
+        "dʑʱə",
+        "d̪ə",
+        "d̪ʱə",
+        "jə",
+        "kə",
+        "kʰə",
+        "lə",
+        "mə",
+        "nə",
+        "pə",
+        "pʰə",
+        "sə",
+        "tsə",
+        "tɕə",
+        "tɕʰə",
+        "t̪ə",
+        "t̪ʰə",
+        "ɕə",
+        "ɖə",
+        "ɖʱə",
+        "ɡə",
+        "ɡʱə",
+        "ɦə",
+        "ɭə",
+        "ɭ̆ə",
+        "ɲə",
+        "ɳə",
+        "ɽə",
+        "ɾə",
+        "ʂə",
+        "ʈə",
+        "ʈʰə",
+        "ʋə"
+      ],
+      "notes": "Word-final schwa deletion; see MR_SCHWA_FINAL_k."
+    },
+    {
+      "id": "MR_SCHWA_FINAL_ɖ",
+      "phonemes": [
+        "ɖə"
+      ],
+      "surface": "ɖ",
+      "word_final": true,
+      "preceded_by_phoneme": [
+        "a",
+        "ə",
+        "i",
+        "u",
+        "e",
+        "o",
+        "æ",
+        "ɔ",
+        "bə",
+        "bʱə",
+        "dzə",
+        "dzʱə",
+        "dʑə",
+        "dʑʱə",
+        "d̪ə",
+        "d̪ʱə",
+        "jə",
+        "kə",
+        "kʰə",
+        "lə",
+        "mə",
+        "nə",
+        "pə",
+        "pʰə",
+        "sə",
+        "tsə",
+        "tɕə",
+        "tɕʰə",
+        "t̪ə",
+        "t̪ʰə",
+        "ɕə",
+        "ɖə",
+        "ɖʱə",
+        "ɡə",
+        "ɡʱə",
+        "ɦə",
+        "ɭə",
+        "ɭ̆ə",
+        "ɲə",
+        "ɳə",
+        "ɽə",
+        "ɾə",
+        "ʂə",
+        "ʈə",
+        "ʈʰə",
+        "ʋə"
+      ],
+      "notes": "Word-final schwa deletion; see MR_SCHWA_FINAL_k."
+    },
+    {
+      "id": "MR_SCHWA_FINAL_ɖʱ",
+      "phonemes": [
+        "ɖʱə"
+      ],
+      "surface": "ɖʱ",
+      "word_final": true,
+      "preceded_by_phoneme": [
+        "a",
+        "ə",
+        "i",
+        "u",
+        "e",
+        "o",
+        "æ",
+        "ɔ",
+        "bə",
+        "bʱə",
+        "dzə",
+        "dzʱə",
+        "dʑə",
+        "dʑʱə",
+        "d̪ə",
+        "d̪ʱə",
+        "jə",
+        "kə",
+        "kʰə",
+        "lə",
+        "mə",
+        "nə",
+        "pə",
+        "pʰə",
+        "sə",
+        "tsə",
+        "tɕə",
+        "tɕʰə",
+        "t̪ə",
+        "t̪ʰə",
+        "ɕə",
+        "ɖə",
+        "ɖʱə",
+        "ɡə",
+        "ɡʱə",
+        "ɦə",
+        "ɭə",
+        "ɭ̆ə",
+        "ɲə",
+        "ɳə",
+        "ɽə",
+        "ɾə",
+        "ʂə",
+        "ʈə",
+        "ʈʰə",
+        "ʋə"
+      ],
+      "notes": "Word-final schwa deletion; see MR_SCHWA_FINAL_k."
+    },
+    {
+      "id": "MR_SCHWA_FINAL_ɡ",
+      "phonemes": [
+        "ɡə"
+      ],
+      "surface": "ɡ",
+      "word_final": true,
+      "preceded_by_phoneme": [
+        "a",
+        "ə",
+        "i",
+        "u",
+        "e",
+        "o",
+        "æ",
+        "ɔ",
+        "bə",
+        "bʱə",
+        "dzə",
+        "dzʱə",
+        "dʑə",
+        "dʑʱə",
+        "d̪ə",
+        "d̪ʱə",
+        "jə",
+        "kə",
+        "kʰə",
+        "lə",
+        "mə",
+        "nə",
+        "pə",
+        "pʰə",
+        "sə",
+        "tsə",
+        "tɕə",
+        "tɕʰə",
+        "t̪ə",
+        "t̪ʰə",
+        "ɕə",
+        "ɖə",
+        "ɖʱə",
+        "ɡə",
+        "ɡʱə",
+        "ɦə",
+        "ɭə",
+        "ɭ̆ə",
+        "ɲə",
+        "ɳə",
+        "ɽə",
+        "ɾə",
+        "ʂə",
+        "ʈə",
+        "ʈʰə",
+        "ʋə"
+      ],
+      "notes": "Word-final schwa deletion; see MR_SCHWA_FINAL_k."
+    },
+    {
+      "id": "MR_SCHWA_FINAL_ɡʱ",
+      "phonemes": [
+        "ɡʱə"
+      ],
+      "surface": "ɡʱ",
+      "word_final": true,
+      "preceded_by_phoneme": [
+        "a",
+        "ə",
+        "i",
+        "u",
+        "e",
+        "o",
+        "æ",
+        "ɔ",
+        "bə",
+        "bʱə",
+        "dzə",
+        "dzʱə",
+        "dʑə",
+        "dʑʱə",
+        "d̪ə",
+        "d̪ʱə",
+        "jə",
+        "kə",
+        "kʰə",
+        "lə",
+        "mə",
+        "nə",
+        "pə",
+        "pʰə",
+        "sə",
+        "tsə",
+        "tɕə",
+        "tɕʰə",
+        "t̪ə",
+        "t̪ʰə",
+        "ɕə",
+        "ɖə",
+        "ɖʱə",
+        "ɡə",
+        "ɡʱə",
+        "ɦə",
+        "ɭə",
+        "ɭ̆ə",
+        "ɲə",
+        "ɳə",
+        "ɽə",
+        "ɾə",
+        "ʂə",
+        "ʈə",
+        "ʈʰə",
+        "ʋə"
+      ],
+      "notes": "Word-final schwa deletion; see MR_SCHWA_FINAL_k."
+    },
+    {
+      "id": "MR_SCHWA_FINAL_ɦ",
+      "phonemes": [
+        "ɦə"
+      ],
+      "surface": "ɦ",
+      "word_final": true,
+      "preceded_by_phoneme": [
+        "a",
+        "ə",
+        "i",
+        "u",
+        "e",
+        "o",
+        "æ",
+        "ɔ",
+        "bə",
+        "bʱə",
+        "dzə",
+        "dzʱə",
+        "dʑə",
+        "dʑʱə",
+        "d̪ə",
+        "d̪ʱə",
+        "jə",
+        "kə",
+        "kʰə",
+        "lə",
+        "mə",
+        "nə",
+        "pə",
+        "pʰə",
+        "sə",
+        "tsə",
+        "tɕə",
+        "tɕʰə",
+        "t̪ə",
+        "t̪ʰə",
+        "ɕə",
+        "ɖə",
+        "ɖʱə",
+        "ɡə",
+        "ɡʱə",
+        "ɦə",
+        "ɭə",
+        "ɭ̆ə",
+        "ɲə",
+        "ɳə",
+        "ɽə",
+        "ɾə",
+        "ʂə",
+        "ʈə",
+        "ʈʰə",
+        "ʋə"
+      ],
+      "notes": "Word-final schwa deletion; see MR_SCHWA_FINAL_k."
+    },
+    {
+      "id": "MR_SCHWA_FINAL_ɭ",
+      "phonemes": [
+        "ɭə"
+      ],
+      "surface": "ɭ",
+      "word_final": true,
+      "preceded_by_phoneme": [
+        "a",
+        "ə",
+        "i",
+        "u",
+        "e",
+        "o",
+        "æ",
+        "ɔ",
+        "bə",
+        "bʱə",
+        "dzə",
+        "dzʱə",
+        "dʑə",
+        "dʑʱə",
+        "d̪ə",
+        "d̪ʱə",
+        "jə",
+        "kə",
+        "kʰə",
+        "lə",
+        "mə",
+        "nə",
+        "pə",
+        "pʰə",
+        "sə",
+        "tsə",
+        "tɕə",
+        "tɕʰə",
+        "t̪ə",
+        "t̪ʰə",
+        "ɕə",
+        "ɖə",
+        "ɖʱə",
+        "ɡə",
+        "ɡʱə",
+        "ɦə",
+        "ɭə",
+        "ɭ̆ə",
+        "ɲə",
+        "ɳə",
+        "ɽə",
+        "ɾə",
+        "ʂə",
+        "ʈə",
+        "ʈʰə",
+        "ʋə"
+      ],
+      "notes": "Word-final schwa deletion; see MR_SCHWA_FINAL_k."
+    },
+    {
+      "id": "MR_SCHWA_FINAL_ɭ̆",
+      "phonemes": [
+        "ɭ̆ə"
+      ],
+      "surface": "ɭ̆",
+      "word_final": true,
+      "preceded_by_phoneme": [
+        "a",
+        "ə",
+        "i",
+        "u",
+        "e",
+        "o",
+        "æ",
+        "ɔ",
+        "bə",
+        "bʱə",
+        "dzə",
+        "dzʱə",
+        "dʑə",
+        "dʑʱə",
+        "d̪ə",
+        "d̪ʱə",
+        "jə",
+        "kə",
+        "kʰə",
+        "lə",
+        "mə",
+        "nə",
+        "pə",
+        "pʰə",
+        "sə",
+        "tsə",
+        "tɕə",
+        "tɕʰə",
+        "t̪ə",
+        "t̪ʰə",
+        "ɕə",
+        "ɖə",
+        "ɖʱə",
+        "ɡə",
+        "ɡʱə",
+        "ɦə",
+        "ɭə",
+        "ɭ̆ə",
+        "ɲə",
+        "ɳə",
+        "ɽə",
+        "ɾə",
+        "ʂə",
+        "ʈə",
+        "ʈʰə",
+        "ʋə"
+      ],
+      "notes": "Word-final schwa deletion; see MR_SCHWA_FINAL_k."
+    },
+    {
+      "id": "MR_SCHWA_FINAL_ɲ",
+      "phonemes": [
+        "ɲə"
+      ],
+      "surface": "ɲ",
+      "word_final": true,
+      "preceded_by_phoneme": [
+        "a",
+        "ə",
+        "i",
+        "u",
+        "e",
+        "o",
+        "æ",
+        "ɔ",
+        "bə",
+        "bʱə",
+        "dzə",
+        "dzʱə",
+        "dʑə",
+        "dʑʱə",
+        "d̪ə",
+        "d̪ʱə",
+        "jə",
+        "kə",
+        "kʰə",
+        "lə",
+        "mə",
+        "nə",
+        "pə",
+        "pʰə",
+        "sə",
+        "tsə",
+        "tɕə",
+        "tɕʰə",
+        "t̪ə",
+        "t̪ʰə",
+        "ɕə",
+        "ɖə",
+        "ɖʱə",
+        "ɡə",
+        "ɡʱə",
+        "ɦə",
+        "ɭə",
+        "ɭ̆ə",
+        "ɲə",
+        "ɳə",
+        "ɽə",
+        "ɾə",
+        "ʂə",
+        "ʈə",
+        "ʈʰə",
+        "ʋə"
+      ],
+      "notes": "Word-final schwa deletion; see MR_SCHWA_FINAL_k."
+    },
+    {
+      "id": "MR_SCHWA_FINAL_ɳ",
+      "phonemes": [
+        "ɳə"
+      ],
+      "surface": "ɳ",
+      "word_final": true,
+      "preceded_by_phoneme": [
+        "a",
+        "ə",
+        "i",
+        "u",
+        "e",
+        "o",
+        "æ",
+        "ɔ",
+        "bə",
+        "bʱə",
+        "dzə",
+        "dzʱə",
+        "dʑə",
+        "dʑʱə",
+        "d̪ə",
+        "d̪ʱə",
+        "jə",
+        "kə",
+        "kʰə",
+        "lə",
+        "mə",
+        "nə",
+        "pə",
+        "pʰə",
+        "sə",
+        "tsə",
+        "tɕə",
+        "tɕʰə",
+        "t̪ə",
+        "t̪ʰə",
+        "ɕə",
+        "ɖə",
+        "ɖʱə",
+        "ɡə",
+        "ɡʱə",
+        "ɦə",
+        "ɭə",
+        "ɭ̆ə",
+        "ɲə",
+        "ɳə",
+        "ɽə",
+        "ɾə",
+        "ʂə",
+        "ʈə",
+        "ʈʰə",
+        "ʋə"
+      ],
+      "notes": "Word-final schwa deletion; see MR_SCHWA_FINAL_k."
+    },
+    {
+      "id": "MR_SCHWA_FINAL_ɽ",
+      "phonemes": [
+        "ɽə"
+      ],
+      "surface": "ɽ",
+      "word_final": true,
+      "preceded_by_phoneme": [
+        "a",
+        "ə",
+        "i",
+        "u",
+        "e",
+        "o",
+        "æ",
+        "ɔ",
+        "bə",
+        "bʱə",
+        "dzə",
+        "dzʱə",
+        "dʑə",
+        "dʑʱə",
+        "d̪ə",
+        "d̪ʱə",
+        "jə",
+        "kə",
+        "kʰə",
+        "lə",
+        "mə",
+        "nə",
+        "pə",
+        "pʰə",
+        "sə",
+        "tsə",
+        "tɕə",
+        "tɕʰə",
+        "t̪ə",
+        "t̪ʰə",
+        "ɕə",
+        "ɖə",
+        "ɖʱə",
+        "ɡə",
+        "ɡʱə",
+        "ɦə",
+        "ɭə",
+        "ɭ̆ə",
+        "ɲə",
+        "ɳə",
+        "ɽə",
+        "ɾə",
+        "ʂə",
+        "ʈə",
+        "ʈʰə",
+        "ʋə"
+      ],
+      "notes": "Word-final schwa deletion; see MR_SCHWA_FINAL_k."
+    },
+    {
+      "id": "MR_SCHWA_FINAL_ɾ",
+      "phonemes": [
+        "ɾə"
+      ],
+      "surface": "ɾ",
+      "word_final": true,
+      "preceded_by_phoneme": [
+        "a",
+        "ə",
+        "i",
+        "u",
+        "e",
+        "o",
+        "æ",
+        "ɔ",
+        "bə",
+        "bʱə",
+        "dzə",
+        "dzʱə",
+        "dʑə",
+        "dʑʱə",
+        "d̪ə",
+        "d̪ʱə",
+        "jə",
+        "kə",
+        "kʰə",
+        "lə",
+        "mə",
+        "nə",
+        "pə",
+        "pʰə",
+        "sə",
+        "tsə",
+        "tɕə",
+        "tɕʰə",
+        "t̪ə",
+        "t̪ʰə",
+        "ɕə",
+        "ɖə",
+        "ɖʱə",
+        "ɡə",
+        "ɡʱə",
+        "ɦə",
+        "ɭə",
+        "ɭ̆ə",
+        "ɲə",
+        "ɳə",
+        "ɽə",
+        "ɾə",
+        "ʂə",
+        "ʈə",
+        "ʈʰə",
+        "ʋə"
+      ],
+      "notes": "Word-final schwa deletion; see MR_SCHWA_FINAL_k."
+    },
+    {
+      "id": "MR_SCHWA_FINAL_ʂ",
+      "phonemes": [
+        "ʂə"
+      ],
+      "surface": "ʂ",
+      "word_final": true,
+      "preceded_by_phoneme": [
+        "a",
+        "ə",
+        "i",
+        "u",
+        "e",
+        "o",
+        "æ",
+        "ɔ",
+        "bə",
+        "bʱə",
+        "dzə",
+        "dzʱə",
+        "dʑə",
+        "dʑʱə",
+        "d̪ə",
+        "d̪ʱə",
+        "jə",
+        "kə",
+        "kʰə",
+        "lə",
+        "mə",
+        "nə",
+        "pə",
+        "pʰə",
+        "sə",
+        "tsə",
+        "tɕə",
+        "tɕʰə",
+        "t̪ə",
+        "t̪ʰə",
+        "ɕə",
+        "ɖə",
+        "ɖʱə",
+        "ɡə",
+        "ɡʱə",
+        "ɦə",
+        "ɭə",
+        "ɭ̆ə",
+        "ɲə",
+        "ɳə",
+        "ɽə",
+        "ɾə",
+        "ʂə",
+        "ʈə",
+        "ʈʰə",
+        "ʋə"
+      ],
+      "notes": "Word-final schwa deletion; see MR_SCHWA_FINAL_k."
+    },
+    {
+      "id": "MR_SCHWA_FINAL_ʈ",
+      "phonemes": [
+        "ʈə"
+      ],
+      "surface": "ʈ",
+      "word_final": true,
+      "preceded_by_phoneme": [
+        "a",
+        "ə",
+        "i",
+        "u",
+        "e",
+        "o",
+        "æ",
+        "ɔ",
+        "bə",
+        "bʱə",
+        "dzə",
+        "dzʱə",
+        "dʑə",
+        "dʑʱə",
+        "d̪ə",
+        "d̪ʱə",
+        "jə",
+        "kə",
+        "kʰə",
+        "lə",
+        "mə",
+        "nə",
+        "pə",
+        "pʰə",
+        "sə",
+        "tsə",
+        "tɕə",
+        "tɕʰə",
+        "t̪ə",
+        "t̪ʰə",
+        "ɕə",
+        "ɖə",
+        "ɖʱə",
+        "ɡə",
+        "ɡʱə",
+        "ɦə",
+        "ɭə",
+        "ɭ̆ə",
+        "ɲə",
+        "ɳə",
+        "ɽə",
+        "ɾə",
+        "ʂə",
+        "ʈə",
+        "ʈʰə",
+        "ʋə"
+      ],
+      "notes": "Word-final schwa deletion; see MR_SCHWA_FINAL_k."
+    },
+    {
+      "id": "MR_SCHWA_FINAL_ʈʰ",
+      "phonemes": [
+        "ʈʰə"
+      ],
+      "surface": "ʈʰ",
+      "word_final": true,
+      "preceded_by_phoneme": [
+        "a",
+        "ə",
+        "i",
+        "u",
+        "e",
+        "o",
+        "æ",
+        "ɔ",
+        "bə",
+        "bʱə",
+        "dzə",
+        "dzʱə",
+        "dʑə",
+        "dʑʱə",
+        "d̪ə",
+        "d̪ʱə",
+        "jə",
+        "kə",
+        "kʰə",
+        "lə",
+        "mə",
+        "nə",
+        "pə",
+        "pʰə",
+        "sə",
+        "tsə",
+        "tɕə",
+        "tɕʰə",
+        "t̪ə",
+        "t̪ʰə",
+        "ɕə",
+        "ɖə",
+        "ɖʱə",
+        "ɡə",
+        "ɡʱə",
+        "ɦə",
+        "ɭə",
+        "ɭ̆ə",
+        "ɲə",
+        "ɳə",
+        "ɽə",
+        "ɾə",
+        "ʂə",
+        "ʈə",
+        "ʈʰə",
+        "ʋə"
+      ],
+      "notes": "Word-final schwa deletion; see MR_SCHWA_FINAL_k."
+    },
+    {
+      "id": "MR_SCHWA_FINAL_ʋ",
+      "phonemes": [
+        "ʋə"
+      ],
+      "surface": "ʋ",
+      "word_final": true,
+      "preceded_by_phoneme": [
+        "a",
+        "ə",
+        "i",
+        "u",
+        "e",
+        "o",
+        "æ",
+        "ɔ",
+        "bə",
+        "bʱə",
+        "dzə",
+        "dzʱə",
+        "dʑə",
+        "dʑʱə",
+        "d̪ə",
+        "d̪ʱə",
+        "jə",
+        "kə",
+        "kʰə",
+        "lə",
+        "mə",
+        "nə",
+        "pə",
+        "pʰə",
+        "sə",
+        "tsə",
+        "tɕə",
+        "tɕʰə",
+        "t̪ə",
+        "t̪ʰə",
+        "ɕə",
+        "ɖə",
+        "ɖʱə",
+        "ɡə",
+        "ɡʱə",
+        "ɦə",
+        "ɭə",
+        "ɭ̆ə",
+        "ɲə",
+        "ɳə",
+        "ɽə",
+        "ɾə",
+        "ʂə",
+        "ʈə",
+        "ʈʰə",
+        "ʋə"
+      ],
+      "notes": "Word-final schwa deletion; see MR_SCHWA_FINAL_k."
+    },
+    {
+      "id": "MR_ANUSVARA_VELAR",
+      "phonemes": [
+        "̃"
+      ],
+      "surface": "ŋ",
+      "grapheme": [
+        "ं"
+      ],
+      "followed_by_grapheme": [
+        "क",
+        "ख",
+        "ग",
+        "घ"
+      ],
+      "notes": "An anusvara before a stop writes the nasal of a nasal+stop cluster, not nasalization of the preceding vowel, and that nasal takes the stop's place of articulation: अंक [əŋkə], अंत [əntə], अंड [əɳɖə], आंबा [amba]. Only before a non-stop, or at a word edge, does the sign surface as vowel nasalization. The Marathi gold bears this out: the homorganic consonants outnumber the nasalized vowels by more than an order of magnitude (ŋ 166, n 962, m 781, ɳ 1361 against ẽ 5, ĩ 2, ũ 1, ə̃ 1 in 4872 words). (Masica, The Indo-Aryan Languages, 1991, on the anusvara and homorganic nasals in modern Indo-Aryan Devanagari orthography.)"
+    },
+    {
+      "id": "MR_ANUSVARA_PALATAL",
+      "phonemes": [
+        "̃"
+      ],
+      "surface": "n",
+      "grapheme": [
+        "ं"
+      ],
+      "followed_by_grapheme": [
+        "च",
+        "छ",
+        "ज",
+        "झ"
+      ],
+      "notes": "Anusvara before a palatal surfaces as the coronal nasal [n] rather than assimilating to [ɲ]: the Marathi gold writes अंजीर [ənd͡ʑiɾ], and across 4872 words [ɲ] occurs once against 962 [n]. See MR_ANUSVARA_VELAR."
+    },
+    {
+      "id": "MR_ANUSVARA_RETROFLEX",
+      "phonemes": [
+        "̃"
+      ],
+      "surface": "ɳ",
+      "grapheme": [
+        "ं"
+      ],
+      "followed_by_grapheme": [
+        "ट",
+        "ठ",
+        "ड",
+        "ढ"
+      ],
+      "notes": "Anusvara -> homorganic retroflex nasal; see MR_ANUSVARA_VELAR."
+    },
+    {
+      "id": "MR_ANUSVARA_DENTAL",
+      "phonemes": [
+        "̃"
+      ],
+      "surface": "n",
+      "grapheme": [
+        "ं"
+      ],
+      "followed_by_grapheme": [
+        "त",
+        "थ",
+        "द",
+        "ध"
+      ],
+      "notes": "Anusvara -> homorganic dental nasal; see MR_ANUSVARA_VELAR."
+    },
+    {
+      "id": "MR_ANUSVARA_LABIAL",
+      "phonemes": [
+        "̃"
+      ],
+      "surface": "m",
+      "grapheme": [
+        "ं"
+      ],
+      "followed_by_grapheme": [
+        "प",
+        "फ",
+        "ब",
+        "भ"
+      ],
+      "notes": "Anusvara -> homorganic labial nasal; see MR_ANUSVARA_VELAR."
+    },
+    {
+      "id": "MR_AFFRICATE_PALATAL_ts",
+      "phonemes": [
+        "ts"
+      ],
+      "surface": "tɕ",
+      "followed_by_phoneme": [
+        "i",
+        "e",
+        "æ",
+        "j"
+      ],
+      "notes": "Marathi's defining split: ⟨च ज झ⟩ stand for an alveolar affricate series [t͡s d͡z d͡zʱ] as well as the palato-alveolar [t͡ɕ d͡ʑ d͡ʑʱ]. Before a front vowel or the glide [j] only the palato-alveolar member occurs; before a non-front vowel the choice is lexical (broadly, native vocabulary takes the alveolar series and Sanskrit or Perso-Arabic loans the palato-alveolar one), so it cannot be read off the spelling and both readings stay in the lattice there. The one-directional part is what this rule states, and the gold is categorical about it: before a front vowel [t͡ɕ] outnumbers [t͡s] 77 to 1 and [d͡ʑ] outnumbers [d͡z] 53 to 4. (Wikipedia, 'Marathi language', listing च as /t͡ɕə/ or /t͡sə/ and ज as /d͡ʑə/ or /d͡zə/; Dhongde & Wali, Marathi, John Benjamins, 2009 -- edition not consulted, the split is quoted at second hand.)"
+    },
+    {
+      "id": "MR_AFFRICATE_PALATAL_dz",
+      "phonemes": [
+        "dz"
+      ],
+      "surface": "dʑ",
+      "followed_by_phoneme": [
+        "i",
+        "e",
+        "æ",
+        "j"
+      ],
+      "notes": "See MR_AFFRICATE_PALATAL_ts."
+    },
+    {
+      "id": "MR_AFFRICATE_PALATAL_dzʱ",
+      "phonemes": [
+        "dzʱ"
+      ],
+      "surface": "dʑʱ",
+      "followed_by_phoneme": [
+        "i",
+        "e",
+        "æ",
+        "j"
+      ],
+      "notes": "See MR_AFFRICATE_PALATAL_ts."
+    }
+  ]
+}

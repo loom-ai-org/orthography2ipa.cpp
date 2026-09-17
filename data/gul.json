@@ -1,0 +1,196 @@
+{
+  "code": "gul",
+  "name": "Sea Island Creole English",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "ch": [
+      "tʃ"
+    ],
+    "sh": [
+      "ʃ"
+    ],
+    "th": [
+      "t"
+    ],
+    "ng": [
+      "ŋ"
+    ],
+    "oo": [
+      "u"
+    ],
+    "ee": [
+      "i"
+    ],
+    "ay": [
+      "eɪ"
+    ],
+    "aw": [
+      "ɔ"
+    ],
+    "ow": [
+      "aʊ"
+    ],
+    "a": [
+      "ɑ"
+    ],
+    "e": [
+      "e"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "o"
+    ],
+    "u": [
+      "u"
+    ],
+    "y": [
+      "j"
+    ],
+    "b": [
+      "b"
+    ],
+    "c": [
+      "k"
+    ],
+    "d": [
+      "d"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "h": [
+      "h"
+    ],
+    "j": [
+      "dʒ"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "ɹ"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "v": [
+      "v"
+    ],
+    "w": [
+      "w"
+    ],
+    "z": [
+      "z"
+    ]
+  },
+  "word_exceptions": {
+    "the": "də",
+    "this": "dɪs",
+    "that": "dat",
+    "these": "diz",
+    "those": "doz",
+    "they": "de",
+    "them": "dem",
+    "their": "de",
+    "then": "den",
+    "than": "dan",
+    "though": "do",
+    "thus": "dʌs"
+  },
+  "parent": "gem-x-ingvaeonic",
+  "ancestors": [
+    {
+      "code": "gem-x-ingvaeonic",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Descent per Glottolog classification of Sea Island Creole English (gull1241)."
+    },
+    {
+      "code": "en-GB",
+      "role": "lexifier",
+      "weight": 0.65,
+      "notes": "English superstrate/lexifier of Gullah, from the English of Sea Island coastal-Carolina/Georgia planters and traders (Turner 1949)."
+    },
+    {
+      "code": "kg",
+      "role": "substrate",
+      "weight": 0.08,
+      "notes": "Kikongo (Kongo) substrate, one of the West African source languages named by APiCS (survey ch. 13, apics-online.info/surveys/13: 'Fula, Kongo, Mende, Vai, Yoruba') as figuring prominently in the texts, personal names and words Turner (1949) collected; no source ranks it as the largest single contributor."
+    },
+    {
+      "code": "ff",
+      "role": "substrate",
+      "weight": 0.05,
+      "notes": "Fula (Fulani) substrate, named in APiCS survey ch. 13 (apics-online.info/surveys/13); Wikipedia additionally records Gullah speakers who could recite songs and do simple counting in Fulani alongside Mende and Vai (en.wikipedia.org/wiki/Gullah_language)."
+    },
+    {
+      "code": "yo",
+      "role": "substrate",
+      "weight": 0.05,
+      "notes": "Yoruba substrate, named in APiCS survey ch. 13 (apics-online.info/surveys/13) among the West African languages prominent in Turner's (1949) Gullah word/name corpus."
+    }
+  ],
+  "notes": "English-lexifier creole of the South Carolina and Georgia Sea Islands, written in a Latin, largely English-based spelling. Klein (2013, APiCS ch. 13, synthesising Turner 1949, Jones-Jackson 1978 and Weldon 2004) gives a 12-monophthong system with close/open pairs at each height (i/ɪ, u/ʊ, e/ə, ɛ/ʌ/ɔ, a/ɑ) and lists ɹ (not a trill) as the rhotic approximant; the single-letter vowel graphemes here (a, e, i, o, u) are mapped to the close/back member of each pair (ɑ, e, i, o, u) rather than the lax member an English-orthography reading would suggest, because that is the value the wikipron gold consistently aligns to for plain vowel letters (measured from the cached gold, not itself sourced choice-by-choice — the orthography cannot distinguish the contrastive pair from spelling alone, so this is the closest reachable approximation, not a claim that Gullah lacks the lax vowels). th is stopped categorically per Klein/Turner: voiceless [t] elsewhere, voiced [d] in the closed set of English function words (the, this, that, these, those, they, them, their, then, than, though, thus) where English has ð, listed as word_exceptions because the orthography does not otherwise mark the θ/ð contrast. Gullah has no fixed standard orthography and much text is eye-dialect respelling of English; unstressed-vowel reduction, vowel length, nasalisation and any prosodic detail are not recoverable from plain-letter spelling and are left unencoded, so a real PER floor is expected.",
+  "iso639_3": "gul",
+  "glottolog_code": null,
+  "sources": [
+    {
+      "id": "gul_glottolog",
+      "author": "Hammarström, H. et al. (Glottolog 5.0)",
+      "year": 2024,
+      "title": "Glottolog: Sea Island Creole English (gull1241)",
+      "publisher": "Max Planck Institute for Evolutionary Anthropology",
+      "url": "https://glottolog.org/resource/languoid/id/gull1241",
+      "pages": null,
+      "notes": "Classification reference for a skeleton-tier entry.",
+      "wikipedia_url": null
+    },
+    {
+      "id": "turner1949",
+      "author": "Turner, Lorenzo Dow",
+      "year": 1949,
+      "title": "Africanisms in the Gullah Dialect",
+      "publisher": "University of Chicago Press",
+      "url": null,
+      "pages": null,
+      "notes": "Foundational documentation of Gullah's West African substrate: nearly 4,000 items of African origin (loanwords, personal names, story/song fragments) traced to languages including Kongo, Fula, Mende, Vai and Yoruba.",
+      "wikipedia_url": null
+    },
+    {
+      "id": "gul_apics13",
+      "author": "Klein, Thomas B.",
+      "year": 2013,
+      "title": "Gullah (Survey chapter 13, structure and phonology)",
+      "publisher": "In: Michaelis, S.M., Maurer, P., Haspelmath, M. & Huber, M. (eds.), Atlas of Pidgin and Creole Language Structures Online, chapter 13, Max Planck Institute for Evolutionary Anthropology",
+      "url": "https://apics-online.info/surveys/13",
+      "pages": null,
+      "notes": "Names Fula, Kongo, Mende, Vai and Yoruba as the West African substrate languages figuring prominently in Turner's (1949) Gullah word/name corpus (does not rank them by lexical contribution). Table 1 (Vowels), citing Turner [1949] 2002, Jones-Jackson 1978 and Weldon 2004, gives the 12 core monophthongs i/u, ɪ/ʊ, e/ə/o, ɛ/ʌ/ɔ, a/ɑ. Table 2 (Consonants) lists the rhotic as an approximant ɹ (not a trill) and states 'English [θ] and [ð] appear categorically as [t] and [d], respectively.'",
+      "wikipedia_url": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Gullah_language"
+  ]
+}

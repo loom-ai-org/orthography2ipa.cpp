@@ -1,0 +1,248 @@
+{
+  "code": "ctd",
+  "name": "Tedim Chin",
+  "script": "Latin",
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "e": [
+      "ɛ"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "ɔ"
+    ],
+    "u": [
+      "u"
+    ],
+    "aa": [
+      "aː"
+    ],
+    "ee": [
+      "ɛː"
+    ],
+    "ii": [
+      "iː"
+    ],
+    "oo": [
+      "ɔː"
+    ],
+    "uu": [
+      "uː"
+    ],
+    "p": [
+      "p"
+    ],
+    "ph": [
+      "pʰ"
+    ],
+    "b": [
+      "b"
+    ],
+    "t": [
+      "t"
+    ],
+    "th": [
+      "tʰ"
+    ],
+    "d": [
+      "d"
+    ],
+    "k": [
+      "k"
+    ],
+    "kh": [
+      "kʰ"
+    ],
+    "ts": [
+      "tɕ"
+    ],
+    "tsh": [
+      "tɕʰ"
+    ],
+    "s": [
+      "s"
+    ],
+    "z": [
+      "z"
+    ],
+    "x": [
+      "x"
+    ],
+    "h": [
+      "h"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ng": [
+      "ŋ"
+    ],
+    "l": [
+      "l"
+    ],
+    "r": [
+      "r"
+    ],
+    "y": [
+      "j"
+    ],
+    "w": [
+      "w"
+    ]
+  },
+  "allophones": {
+    "p": [
+      "p"
+    ],
+    "pʰ": [
+      "pʰ"
+    ],
+    "b": [
+      "b"
+    ],
+    "t": [
+      "t"
+    ],
+    "tʰ": [
+      "tʰ"
+    ],
+    "d": [
+      "d"
+    ],
+    "k": [
+      "k"
+    ],
+    "kʰ": [
+      "kʰ"
+    ],
+    "tɕ": [
+      "tɕ"
+    ],
+    "tɕʰ": [
+      "tɕʰ"
+    ],
+    "s": [
+      "s"
+    ],
+    "z": [
+      "z"
+    ],
+    "x": [
+      "x"
+    ],
+    "h": [
+      "h"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ŋ": [
+      "ŋ"
+    ],
+    "l": [
+      "l"
+    ],
+    "r": [
+      "r"
+    ],
+    "j": [
+      "j"
+    ],
+    "w": [
+      "w"
+    ],
+    "a": [
+      "a"
+    ],
+    "aː": [
+      "aː"
+    ],
+    "ɛ": [
+      "ɛ",
+      "e"
+    ],
+    "ɛː": [
+      "ɛː"
+    ],
+    "i": [
+      "i"
+    ],
+    "iː": [
+      "iː"
+    ],
+    "ɔ": [
+      "ɔ",
+      "o"
+    ],
+    "ɔː": [
+      "ɔː"
+    ],
+    "u": [
+      "u"
+    ],
+    "uː": [
+      "uː"
+    ]
+  },
+  "parent": "mni-x-proto-kuki-chin",
+  "ancestors": [
+    {
+      "code": "mni-x-proto-kuki-chin",
+      "role": "parent",
+      "weight": 0.85,
+      "notes": "Tedim Chin is a Northern Kuki-Chin language descended from Proto-Kuki-Chin (VanBik 2009)."
+    }
+  ],
+  "notes": "Tedim Chin (Tedim, Tiddim), spoken in Chin State, Myanmar and diaspora. Northern Kuki-Chin branch, Sino-Tibetan. Written in a Latin-based orthography (an alternative Pau Cin Hau script also exists but is not primary). Doubled vowel letters mark phonemic length, matching the same device documented for the sister language Hakha Chin (cnh). ⟨ph th kh⟩ spell the aspirated stop series; /x/ (spelled ⟨x⟩) is reported by Wikipedia to be in free variation with an aspirated velar stop [kʰ], but no source describes a distinct ⟨gh⟩ letter for this, so no ⟨gh⟩ key is asserted here (an earlier draft's ⟨gh⟩ claim was removed as unsupported). ⟨ts tsh⟩ spell the alveolo-palatal affricate series /tɕ tɕʰ/ per Wikipedia's consonant table (corrected from an earlier plain-alveolar [ts]/[tsʰ] reading, which Wikipedia's cited inventory does not support); ⟨ng⟩ the velar nasal. Vowel quality /ɛ/ and /ɔ/ (rather than /e/ /o/) follow the mid-vowel values reported by Naw (2013); Wikipedia notes 'ɛ, ɔ may have closer allophones [e, o]', encoded here as allophone-list alternates rather than separate graphemes. Tedim has tonal contrasts (syllable template (C)V(V)(C)T) that Wikipedia itself flags as under-documented ('needs expansion'); tone is left unmarked in this spec pending a citable tone rule. ⟨ts⟩ spells the single affricate phoneme /tɕ/, listed in AGENTS.md itself as a canonical passing multigraph, not a stop+fricative cluster.",
+  "quality": "skeleton",
+  "script_type": "alphabet",
+  "iso639_3": "ctd",
+  "sources": [
+    {
+      "id": "naw2013",
+      "author": "Naw, S.",
+      "year": 2013,
+      "title": "A Phonological Reconstruction of Proto-Northern Chin",
+      "publisher": "Payap University MA thesis",
+      "url": null,
+      "pages": null,
+      "notes": "Includes Tedim phonology.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Tedim_Chin_language"
+    },
+    {
+      "id": "vanbik2009",
+      "author": "VanBik, K.",
+      "year": 2009,
+      "title": "Proto-Kuki-Chin: A Reconstructed Ancestor of the Kuki-Chin Languages",
+      "publisher": "STEDT Monograph 8, UC Berkeley",
+      "url": null,
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Tedim_Chin_language"
+  ],
+  "timespan": {
+    "start_year": 1900,
+    "end_year": null
+  },
+  "glottolog_code": "tedi1235",
+  "wikidata_qid": "Q56357",
+  "location": {
+    "latitude": 23.4333,
+    "longitude": 93.65,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Tedim Chin (Chin State, Myanmar)."
+  }
+}

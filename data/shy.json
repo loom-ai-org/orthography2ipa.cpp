@@ -1,0 +1,284 @@
+{
+  "code": "shy",
+  "name": "Shawiya (Tacawit)",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "parent": "ber",
+  "ancestors": [
+    {
+      "code": "ber",
+      "role": "parent",
+      "weight": 0.85,
+      "notes": "Berber (Zenati, Northern Berber)."
+    },
+    {
+      "code": "ar",
+      "role": "adstrate",
+      "weight": 0.12,
+      "notes": "Arabic adstrate: lexical borrowing and the pharyngeals/emphatics ḥ /ħ/, ɛ /ʕ/, ṣ /sˤ/, ṭ /tˤ/."
+    }
+  ],
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "e": [
+      "ə"
+    ],
+    "i": [
+      "i"
+    ],
+    "u": [
+      "u"
+    ],
+    "y": [
+      "j"
+    ],
+    "w": [
+      "w"
+    ],
+    "b": [
+      "b"
+    ],
+    "c": [
+      "ʃ"
+    ],
+    "č": [
+      "t͡ʃ"
+    ],
+    "d": [
+      "d"
+    ],
+    "ḍ": [
+      "dˤ"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "ǧ": [
+      "d͡ʒ"
+    ],
+    "ɣ": [
+      "ɣ"
+    ],
+    "h": [
+      "h"
+    ],
+    "ḥ": [
+      "ħ"
+    ],
+    "j": [
+      "ʒ"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "q": [
+      "q"
+    ],
+    "r": [
+      "r"
+    ],
+    "ṛ": [
+      "rˤ"
+    ],
+    "s": [
+      "s"
+    ],
+    "ṣ": [
+      "sˤ"
+    ],
+    "t": [
+      "t"
+    ],
+    "ṭ": [
+      "tˤ"
+    ],
+    "x": [
+      "χ"
+    ],
+    "z": [
+      "z"
+    ],
+    "ẓ": [
+      "zˤ"
+    ],
+    "ɛ": [
+      "ʕ"
+    ]
+  },
+  "allophones": {
+    "a": [
+      "a",
+      "æ"
+    ],
+    "ə": [
+      "ə"
+    ],
+    "i": [
+      "i",
+      "ɪ"
+    ],
+    "u": [
+      "u",
+      "ʊ"
+    ],
+    "j": [
+      "j"
+    ],
+    "w": [
+      "w"
+    ],
+    "b": [
+      "β",
+      "b"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "t͡ʃ": [
+      "t͡ʃ"
+    ],
+    "d": [
+      "ð",
+      "d"
+    ],
+    "dˤ": [
+      "dˤ"
+    ],
+    "f": [
+      "f"
+    ],
+    "ɡ": [
+      "ʝ",
+      "ɡ"
+    ],
+    "d͡ʒ": [
+      "d͡ʒ"
+    ],
+    "ɣ": [
+      "ɣ"
+    ],
+    "h": [
+      "h"
+    ],
+    "ħ": [
+      "ħ"
+    ],
+    "ʒ": [
+      "ʒ"
+    ],
+    "k": [
+      "ç",
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "q": [
+      "q"
+    ],
+    "r": [
+      "r"
+    ],
+    "rˤ": [
+      "rˤ"
+    ],
+    "s": [
+      "s"
+    ],
+    "sˤ": [
+      "sˤ"
+    ],
+    "t": [
+      "θ",
+      "t"
+    ],
+    "tˤ": [
+      "tˤ"
+    ],
+    "χ": [
+      "χ"
+    ],
+    "z": [
+      "z"
+    ],
+    "zˤ": [
+      "zˤ"
+    ],
+    "ʕ": [
+      "ʕ"
+    ]
+  },
+  "iso639_3": "shy",
+  "glottolog_code": "tach1249",
+  "wikidata_qid": "Q33274",
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Shawiya_language"
+  ],
+  "sources": [
+    {
+      "id": "shawiya_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Shawiya language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Shawiya_language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Shawiya_language",
+      "pages": "Three-vowel system /i a u/ plus /ə/, consonant inventory with emphatics, gemination-triggered spirant→plosive alternation; Latin (Berber Latin alphabet) and Tifinagh in use.",
+      "notes": null
+    },
+    {
+      "id": "berber_latin_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Berber Latin alphabet",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Berber_Latin_alphabet",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Berber_Latin_alphabet",
+      "pages": "The Northern-Berber Latin alphabet whose letter values this spec follows (shared with Kabyle).",
+      "notes": null
+    },
+    {
+      "id": "penchoen1973",
+      "author": "Penchoen, Thomas G.",
+      "year": 1973,
+      "title": "Étude syntaxique d'un parler berbère (Ait Frah de l'Aurès)",
+      "publisher": "Istituto Universitario Orientale",
+      "url": null,
+      "wikipedia_url": null,
+      "pages": null,
+      "notes": "Descriptive study of an Aurès (Shawiya) variety."
+    }
+  ],
+  "timespan": {
+    "start_year": 1900,
+    "end_year": null
+  },
+  "notes": "Shawiya (Tacawit), a Zenati Berber language of the Aurès. Written here in the Northern-Berber Latin alphabet (the same convention as Kabyle: ⟨c⟩ = /ʃ/, ⟨ɣ⟩, ⟨x⟩ = /χ/, ⟨ɛ⟩ = /ʕ/, dot-under letters = emphatics). Tifinagh and Arabic-script spellings also exist and are NOT modelled here. Spirantisation is pervasive: /t d b k ɡ/ surface as [θ ð β ç ʝ] outside tense/geminate positions, which is captured in the allophone map.",
+  "location": {
+    "latitude": 35.1867,
+    "longitude": 6.88901,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Chaouia of the Aures."
+  }
+}

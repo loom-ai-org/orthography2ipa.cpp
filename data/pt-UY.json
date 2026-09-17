@@ -1,0 +1,243 @@
+{
+  "code": "pt-UY",
+  "name": "Uruguayan Portuguese (Riverense / DPU)",
+  "script": "Latin",
+  "parent": "pt-BR",
+  "graphemes_base": "pt-BR",
+  "allophones_base": "pt-BR",
+  "positional_graphemes_base": "pt-BR",
+  "graphemes": {
+    "lh": [
+      "j",
+      "ʎ"
+    ],
+    "t": [
+      "t"
+    ],
+    "d": [
+      "d"
+    ],
+    "rr": [
+      "r"
+    ]
+  },
+  "allophones": {
+    "l": [
+      "l"
+    ],
+    "t͡ʃ": null,
+    "d͡ʒ": null
+  },
+  "positional_graphemes": {
+    "t": {
+      "before_i": [
+        "t"
+      ]
+    },
+    "d": {
+      "before_i": [
+        "d"
+      ]
+    },
+    "l": {
+      "before_vowel": [
+        "l"
+      ],
+      "before_consonant": [
+        "l"
+      ],
+      "word_final": [
+        "l"
+      ],
+      "onset": [
+        "l"
+      ]
+    },
+    "r": {
+      "word_initial": [
+        "r"
+      ],
+      "intervocalic": [
+        "ɾ"
+      ],
+      "before_consonant": [
+        "ɾ"
+      ],
+      "word_final": [
+        "ɾ",
+        ""
+      ]
+    }
+  },
+  "quality": "research",
+  "script_type": "alphabet",
+  "notes": "Uruguayan Portuguese — the Portuguese-based border-contact vernacular of northern Uruguay (Rivera region and the Brazilian frontier), known in the literature as Dialectos Portugueses del Uruguay (DPU, Elizaincín), 'fronterizo' (Rona), Riverense, and popularly 'portuñol'. Speakers' own term is 'portuñol'/'brasilero'. It is NOT Uruguay's national standard (that is Spanish); it is a rural-origin Portuguese vernacular in intense contact with border Spanish, historically monolingual in the border communities and now diglossic (Carvalho 1998: 642; Elizaincín 1992). PARENT / ANCESTRY DECISION (per the read source): this spec inherits pt-BR (graphemes_base/allophones_base/positional_graphemes_base), because the traditional variety is structurally a rural Portuguese continuous with southern Brazilian Portuguese and its reference/diffusion norm is urban Brazilian Portuguese — Carvalho models the community as a dialectal continuum whose two poles are Rural Uruguayan Portuguese (RUP) and Urban Brazilian Portuguese (UBP), differing 'mainly in three respects': retained rural features, Spanish interference, and hybrid forms (Carvalho 1998: 646, Figure 1). The vowel system is inherited unchanged from pt-BR (seven oral vowels /a ɛ e i ɔ o u/ and the nasal set), which matches the inventory reported for the variety (Wikipedia, secondary). MODELLED FEATURES: (1) VOCALISATION OF THE PALATAL LATERAL ⟨lh⟩ /ʎ/ → glide [j] — the single most salient rural/focused marker, categorical in Rivera Portuguese per Rona (1965: 23, as reported in Carvalho 1998: 646) who proposed the glide as the only phoneme; 'the pronunciation of the lateral phoneme as a front glide, as in /mujɛ/ instead of the standard /muʎɛr/' (Carvalho 1998: 646); local *coié* vs Brazilian *colher* (Carvalho 1998: 647). The palatal [ʎ] is the diffusing urban-BP form, kept as the second (less common in the focused variety) candidate. (2) RETENTION OF DENTAL STOPS /t d/ BEFORE /i/ — NO affrication: 'the maintenance of the dental stops /d/ and /t/ followed by /i/, a tendency kept probably due to Spanish interference' (Carvalho 1998: 646); the dental realisation was 'nearly categorical' in Rivera (Rona 1965: 40; Hensey 1972: 60, both reported in Carvalho 1998: 648); local *[ti]/[tira]* vs TV/urban-BP *[tʃi]/[tʃira]* (Carvalho 1998: 648, 650). Standard-BP palatalisation ([dʒia]/[tʃia]) is an ongoing diffusion led by young, higher-status, female speakers (Carvalho 1998: 649, Tables 4-6) and is documented in the notes rather than made the focused-variety default; the pt-BR before_i → [t͡ʃ d͡ʒ] positional rule is overridden back to the dental. (3) LATERAL RETENTION OF CODA /l/ → [l] (no L-vocalisation to [w] as in urban BP) — SECONDARY source: Wikipedia 'Uruguayan Portuguese', consistent with the Spanish adstrate; overrides the inherited pt-BR coda l → [w]. (4) WORD-INITIAL ⟨r⟩ and ⟨rr⟩ = ALVEOLAR TRILL [r] (not the guttural/uvular [ʁ] of urban BP) — SECONDARY source: Wikipedia 'Uruguayan Portuguese', consistent with the border Spanish adstrate; intervocalic and coda ⟨r⟩ remain the tap [ɾ]. NOT MODELLED / HONESTY (hard rule 9): coda /s/ realisation is left inherited from pt-BR (alveolar [s]); Carvalho's quantitative /s/-aspiration work concerns border *Spanish*, not clearly the Portuguese, so no [h] aspiration is imposed on the Portuguese without a primary source that documents it for the Portuguese variety. Fine pretonic vocalism and any DPU-specific nasal-vowel detail beyond the inherited pt-BR set are not quantified in the read sources and are left inherited rather than invented. NO GOLD BENCHMARK: correctness here is by citation, not PER (precedent: ext-PT-x-barrancos).",
+  "sources": [
+    {
+      "id": "carvalho1998_variation",
+      "author": "Carvalho, Ana Maria",
+      "year": 1998,
+      "title": "Variation and diffusion of Uruguayan Portuguese in a bilingual border town",
+      "publisher": "Actas do I Simposio Internacional sobre o Bilingüismo, Universidade de Vigo, pp. 642-651",
+      "url": "https://ssl.webs.uvigo.es/actas1997/05/Carvalho.pdf",
+      "pages": "642-651",
+      "notes": "PRIMARY read source for this spec. Sociophonetic study of Rivera (Uruguay) Portuguese analysing two diagnostic phonological variables: (a) vocalisation of the palatal lateral ⟨lh⟩ /ʎ/ → glide [j] (pp. 646-647, /mujɛ/ 'mulher', local *coié*), reported categorical by Rona 1965: 23; (b) retention of dental /t d/ before /i/ (no palatalisation), 'kept probably due to Spanish interference' (p. 646), nearly categorical per Rona 1965: 40 and Hensey 1972: 60 (p. 648), with urban-BP palatalisation diffusing among the young (pp. 648-650, Tables 4-6). Frames DPU as a Rural-Uruguayan-Portuguese ↔ Urban-Brazilian-Portuguese continuum (p. 646, Figure 1), grounding the pt-BR parent choice."
+    },
+    {
+      "id": "rona1965_fronterizo",
+      "author": "Rona, José Pedro",
+      "year": 1965,
+      "title": "El dialecto fronterizo del Norte del Uruguay",
+      "publisher": "Universidad de la República, Facultad de Humanidades y Ciencias, Montevideo",
+      "url": null,
+      "pages": "23, 40",
+      "notes": "Foundational description of the northern-Uruguay 'fronterizo'. Cited here as reported in Carvalho (1998: 646, 648): the ⟨lh⟩ → [j] glide as categorical (p. 23) and the dental (non-palatalised) /t d/ before /i/ as nearly categorical (p. 40). Primary text not directly consulted; grounded via Carvalho."
+    },
+    {
+      "id": "hensey1972_border",
+      "author": "Hensey, Fritz",
+      "year": 1972,
+      "title": "The Sociolinguistics of the Brazilian-Uruguayan Border",
+      "publisher": "Mouton, The Hague",
+      "url": null,
+      "pages": "60",
+      "notes": "Study of the Portuguese spoken by bilinguals in Rivera. Cited here as reported in Carvalho (1998: 648): Riverenses palatalised /t d/ before /i/ far less than border Brazilians, confirming the retained dental. Primary text not directly consulted; grounded via Carvalho."
+    },
+    {
+      "id": "elizaincin1992_contacto",
+      "author": "Elizaincín, Adolfo",
+      "year": 1992,
+      "title": "Dialectos en Contacto. Español y Portugués en España y América",
+      "publisher": "Arca, Montevideo",
+      "url": null,
+      "pages": null,
+      "notes": "The foundational DPU (Dialectos Portugueses del Uruguay) framework; defines DPU as 'formas mixtas, de base preponderantemente portuguesa ... que evidencian fuerte influencia del español' (Elizaincín, Barrios & Behares 1987: 14, as reported in Carvalho 1998: 642-643). Establishes the Portuguese base + strong Spanish influence that motivates the pt-BR parent and es-UY adstrate. Primary text not directly consulted; framework reported via Carvalho."
+    },
+    {
+      "id": "sturza2021_territorio",
+      "author": "Sturza, Eliana Rosa",
+      "year": 2021,
+      "title": "Português do Uruguai e Português de Missões: língua, território e fronteira",
+      "publisher": "Línguas e Instrumentos Linguísticos, Campinas, v. 24, n. 48, pp. 177-198",
+      "url": "https://doi.org/10.20396/lil.v24i48.8667912",
+      "pages": "177-198",
+      "notes": "Read source for the naming and sociohistorical framing (DPU / Português do Uruguai / portunhol) and the geopolitical-frontier account of the variety; not used for phoneme-level detail."
+    }
+  ],
+  "ancestors": [
+    {
+      "code": "pt-BR",
+      "role": "parent",
+      "weight": 0.65,
+      "notes": "Brazilian Portuguese: the structural base and the reference/diffusion norm of the variety. Carvalho (1998: 646) models the community as a continuum between Rural Uruguayan Portuguese and Urban Brazilian Portuguese; the vowel system and most of the grapheme/positional maps are inherited from pt-BR."
+    },
+    {
+      "code": "es-UY",
+      "role": "adstrate",
+      "weight": 0.3,
+      "notes": "Uruguayan (border) Spanish: the pervasive adstrate. Retention of dental /t d/ before /i/ is 'kept probably due to Spanish interference' (Carvalho 1998: 646); the alveolar trill /r/ and coda-/l/ retention align with Spanish phonology. Elizaincín (1992) defines DPU as Portuguese-based with 'fuerte influencia del español'."
+    },
+    {
+      "code": "pt-PT",
+      "role": "substrate",
+      "weight": 0.05,
+      "notes": "Historical rural European Portuguese of the original settlers, from which the border vernacular descends before its convergence toward Brazilian Portuguese (Carvalho 1998: 642)."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Uruguayan_Portuguese",
+    "https://en.wikipedia.org/wiki/Riverense_Portu%C3%B1ol",
+    "https://pt.wikipedia.org/wiki/Portugu%C3%AAs_uruguaio"
+  ],
+  "urls": [
+    "https://www.rivera.udelar.edu.uy/carvalho-a-m-2003-rumo-a-uma-definicao-do-portugues-uruguaio/"
+  ],
+  "iso639_3": "por",
+  "timespan": {
+    "start_year": 1800,
+    "end_year": null
+  },
+  "stress": {
+    "onset_clusters": ["bl", "br", "bɫ", "bɾ", "bʀ", "bʁ", "bʎ", "bχ", "dr", "dɾ", "dʀ", "dʁ", "dʎ", "dχ", "fl", "fr", "fɫ", "fɾ", "fʀ", "fʁ", "fʎ", "fχ", "kl", "kr", "kɫ", "kɾ", "kʀ", "kʁ", "kʎ", "kχ", "pl", "pr", "pɫ", "pɾ", "pʀ", "pʁ", "pʎ", "pχ", "tr", "tɾ", "tʀ", "tʁ", "tʎ", "tχ", "vl", "vr", "vɫ", "vɾ", "vʀ", "vʁ", "vʎ", "vχ", "ðr", "ðɾ", "ðʀ", "ðʁ", "ðʎ", "ðχ", "ɡl", "ɡr", "ɡɫ", "ɡɾ", "ɡʀ", "ɡʁ", "ɡʎ", "ɡχ", "ɣl", "ɣr", "ɣɫ", "ɣɾ", "ɣʀ", "ɣʁ", "ɣʎ", "ɣχ", "βl", "βr", "βɫ", "βɾ", "βʀ", "βʁ", "βʎ", "βχ"],
+    "cliticless_words": ["o", "a", "os", "as", "de", "do", "da", "dos", "das", "em", "no", "na", "nos", "nas", "por", "pelo", "pela", "pelos", "pelas", "ao", "aos", "à", "às", "com", "sem", "e", "que", "se", "me", "te", "lhe", "lhes", "vos", "lo", "la", "los", "las", "lho", "lha", "lhos", "lhas"],
+    "default_position": -2,
+    "final_stress_endings": [
+      "r",
+      "l",
+      "z",
+      "x",
+      "i",
+      "u",
+      "im",
+      "om",
+      "um",
+      "is",
+      "us",
+      "ns",
+      "ão",
+      "ãe",
+      "õe",
+      "au",
+      "éu",
+      "éi",
+      "ói"
+    ],
+    "penult_stress_endings": [],
+    "marked_vowels": [
+      "á",
+      "é",
+      "í",
+      "ó",
+      "ú",
+      "â",
+      "ê",
+      "ô",
+      "ã",
+      "õ"
+    ],
+    "stress_mark": "ˈ",
+    "notes": "Portuguese stress conventions as in the Brazilian base (paroxytone default; written accents override; final -i/-u/-r/-l/-z/-x and nasal diphthongs attract final stress). No DPU-specific stress divergence is documented in the read sources, so the pt-BR pattern is retained. DIPHTHONGS: declared so the bundled syllabifier counts nuclei correctly — without them every vowel run merges into one nucleus and co-e-lho is read as coe-lho, one syllable short, putting the stress and its vowel reduction on the wrong vowel. ⟨oe⟩ is hiatus, not a diphthong (Cunha & Cintra, §Ditongos).",
+    "diphthongs": [
+      "ãe",
+      "ão",
+      "õe",
+      "ai",
+      "ái",
+      "au",
+      "áu",
+      "ei",
+      "éi",
+      "êi",
+      "eu",
+      "éu",
+      "êu",
+      "iu",
+      "oi",
+      "ói",
+      "ôi",
+      "ou",
+      "ui"
+    ]
+  },
+  "wikidata_qid": "Q3265815",
+  "location": {
+    "latitude": -30.900086,
+    "longitude": -55.540817,
+    "source": "wikidata",
+    "notes": "Rivera — the border city at the heart of the DPU (Uruguayan Portuguese) area along the Brazilian frontier. [Wikidata Q646498 P625]"
+  },
+  "allophone_rules": [
+    {
+      "id": "BR_AFFRIC_T_RAISED",
+      "phonemes": [],
+      "surface": "t͡ʃ",
+      "notes": "DISABLED for Uruguayan Portuguese (fronteiriço): conservative dental /t d/; the positional before_i suppression keeps ⟨di/ti⟩ dental and this base rule must not re-affricate them."
+    },
+    {
+      "id": "BR_AFFRIC_D_RAISED",
+      "phonemes": [],
+      "surface": "d͡ʒ",
+      "notes": "DISABLED for Uruguayan Portuguese (fronteiriço): conservative dental /t d/; the positional before_i suppression keeps ⟨di/ti⟩ dental and this base rule must not re-affricate them."
+    }
+  ]
+}

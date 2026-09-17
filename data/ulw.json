@@ -1,0 +1,122 @@
+{
+ "code": "ulw",
+ "name": "Ulwa",
+ "script": "Latin",
+ "script_type": "alphabet",
+ "quality": "research",
+ "graphemes": {
+  "ng": [
+   "ŋ"
+  ],
+  "aa": [
+   "aː"
+  ],
+  "ii": [
+   "iː"
+  ],
+  "uu": [
+   "uː"
+  ],
+  "a": [
+   "a"
+  ],
+  "i": [
+   "i"
+  ],
+  "u": [
+   "u"
+  ],
+  "p": [
+   "p"
+  ],
+  "b": [
+   "b"
+  ],
+  "t": [
+   "t"
+  ],
+  "d": [
+   "d"
+  ],
+  "k": [
+   "k"
+  ],
+  "s": [
+   "s"
+  ],
+  "h": [
+   "h"
+  ],
+  "m": [
+   "m"
+  ],
+  "n": [
+   "n"
+  ],
+  "l": [
+   "l"
+  ],
+  "r": [
+   "r"
+  ],
+  "w": [
+   "w"
+  ],
+  "y": [
+   "j"
+  ]
+ },
+ "parent": "x-clade-misu1242",
+ "ancestors": [
+  {
+   "code": "x-clade-misu1242",
+   "role": "parent",
+   "weight": 1.0,
+   "notes": "Descent per Glottolog classification of Ulwa (ulwa1239)."
+  }
+ ],
+ "notes": "Misumalpan (Southern Sumu) language of Karawala, Nicaragua, in the practical orthography of the Ulwa dictionary. Three vowel qualities a/i/u each contrast for length (written doubled); ng is the velar nasal. Stress is predictable (first syllable if heavy, otherwise second) and so is not written. Phonemic voiceless sonorants (voiceless m n ŋ l r and voiceless glides) are not given distinct letters in the practical spelling, so voicelessness is not recovered, which is the main PER gap for this skeleton entry.",
+ "iso639_3": "ulw",
+ "glottolog_code": null,
+ "sources": [
+  {
+   "id": "ulw_glottolog",
+   "author": "Hammarström, H. et al. (Glottolog 5.0)",
+   "year": 2024,
+   "title": "Glottolog: Ulwa (ulwa1239)",
+   "publisher": "Max Planck Institute for Evolutionary Anthropology",
+   "url": "https://glottolog.org/resource/languoid/id/ulwa1239",
+   "pages": null,
+   "notes": "Classification reference for a skeleton-tier entry.",
+   "wikipedia_url": null
+  },
+  {
+   "id": "ulw_wikipedia",
+   "author": "Wikipedia contributors",
+   "year": 2024,
+   "title": "Ulwa language",
+   "publisher": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Ulwa_language",
+   "pages": null,
+   "notes": "Phonology and practical-orthography reference (Nicaraguan Misumalpan Ulwa).",
+   "wikipedia_url": "https://en.wikipedia.org/wiki/Ulwa_language"
+  },
+  {
+   "id": "ulw_green1999",
+   "author": "Green, Thomas Michael",
+   "year": 1999,
+   "title": "A Lexicographic Study of Ulwa",
+   "publisher": "PhD dissertation, MIT",
+   "url": "https://tmgreen.github.io/papers/thesis.pdf",
+   "pages": null,
+   "notes": "Dissertation produced under the Ulwa Language Project (Kenneth Hale et al.), documenting the Miskitu-derived practical orthography (circumflex long vowels, ng, h-digraphs for voiceless sonorants) modelled in this spec."
+  }
+ ],
+ "wikipedia": [
+  "https://en.wikipedia.org/wiki/Ulwa_language"
+ ],
+ "stress": {
+  "default_position": 1,
+  "notes": "First syllable if heavy, else second (Green 1999) — predictable; encoded per the review's note that predictable stress belongs in a block, approximated as initial-default with the weight condition documented here."
+ }
+}

@@ -1,0 +1,166 @@
+{
+  "code": "pt-PT-x-madeira",
+  "name": "Madeiran Portuguese",
+  "script": "Latin",
+  "graphemes_base": "pt-PT",
+  "graphemes": {
+    "ões": [
+      "õns"
+    ],
+    "ãos": [
+      "ɐ̃ns"
+    ],
+    "ães": [
+      "ɐ̃ns"
+    ]
+  },
+  "allophones_base": "pt-PT",
+  "allophones": {},
+  "positional_graphemes_base": "pt-PT",
+  "parent": "pt-PT",
+  "allophone_rules": [
+    {
+      "id": "MAD_L_PALATALISATION",
+      "phonemes": [
+        "l"
+      ],
+      "surface": "ʎ",
+      "preceded_by_phoneme": [
+        "i"
+      ],
+      "followed_by": "vowel",
+      "notes": "The diagnostic Madeiran palatalisation of an intervocalic /l/ to [ʎ] after /i/: quilo -> [ˈkiʎu], mochila -> [muˈʃiʎɐ], vila -> [ˈviʎɐ]. Conditioned on the preceding lattice slot's phoneme being /i/ and the following grapheme being a vowel (so the /l/ is an onset between /i/ and another vowel), which is exactly the environment reported for the feature and correctly leaves an /l/ after other front vowels untouched (teleférico -> [tɨlɨˈfɛɾiku], /l/ after reduced [ɨ]). Source: Segura (2013: §on the Madeiran dialect)."
+    }
+  ],
+  "notes": "Madeiran Portuguese (Funchal / Ribeira Brava reference). Modelled features: (1) NASAL DIPHTHONG -> NASAL+N — the salient productive Madeiran pattern in the plural/nasal endings -ões -> [õns], -ães -> [ɐ̃ns], -ãos -> [ɐ̃ns] (cães -> [kɐ̃ns]); encoded as multi-character grapheme overrides. (2) INTERVOCALIC /l/ PALATALISATION after /i/ -> [ʎ] — the MAD_L_PALATALISATION allophone rule (quilo -> [ˈkiʎu], mochila -> [muˈʃiʎɐ], vila -> [ˈviʎɐ]). (3) The /v/ ~ /b/ distinction is preserved — Madeiran, like standard European Portuguese and unlike the northern mainland, has NO betacism, so /v/ stays [v] (visitar, levada, novo); the single gold datum vinho -> [ˈbiɲu] is a lexicalised item, not a productive merger, and is deliberately not modelled. NOT MODELLED (documented limits, not faked): singular -ão -> [õns] appears sporadically in the gold (verão -> [vɨˈɾõns]) but the far more frequent monosyllable são keeps [sɐ̃w], so a blanket -ão override would regress the base and only the productive plural/-ães/-ões pattern is encoded; the reported stressed-/i/ diphthongisation ([i] -> [ɐj]) is left out because this gold keeps [i] (dia -> [ˈdiɐ], ilha -> [ˈiʎɐ]) and a blanket rule would regress it — it is a lexically-restricted process best left to a downstream engine; r-diphthongisation (correr -> [kuˈʁweɾ]) and Filipa -> [ˈfʎipɐ] are lexical items; stop aspiration and final devoicing are narrow sub-phonemic detail outside the base scope. Dark coda /l/ [ɫ] and Lisbon-type coda sibilants [ʃ]/[ʒ] are inherited from the pt-PT base allophone rules. NATIVE-SPEAKER VALIDATION (Portuguese With Leo, 'Sotaque e expressões da Madeira', with João Francisco Cunha, funchalense, https://www.youtube.com/watch?v=azx_3sbqwEA): strongly confirms the two modelled deltas — the '-il -> -ilh' /l/->[ʎ] after /i/ ('sempre que há um -i antes de um -l ... acrescentamos o som de lhe ao -l', quilómetro -> 'quilhómetro') and the nasal-diphthong -> nasal+N reduction ('vários ditongos, como -ões ... leões -> leôns', 'cães -> câns', '-e desaparece'). Also attests, LEFT UNMODELLED, the extreme final-vowel reduction/mutation (sentimento -> 'sentmente' / 'sentmentn', bilhardeiro -> 'blhardeire', -oi- syncope 'depois -> depôs') as a gradient/lexical process, and the heavier gerund preference (morphosyntactic). DEFERRED ENRICHMENT: the 8-accents overview (https://www.youtube.com/watch?v=pitj0XxYO7I) reports the Madeiran 'coâlho' (stressed <e> -> [ɐ] before a palatal, as in Lisbon) — the island-distinguishing contrast with the São Miguel 'coêlho' [e] (see pt-PT-x-sao-miguel) — but this Madeira deep-dive does not itself demonstrate it and adding the pre-palatal centralisation rule would move the scored ep_dialects/clup_dialect Madeira rows; it is left unmodelled pending a measured before/after pass rather than added blind.",
+  "quality": "research",
+  "ancestors": [
+    {
+      "code": "pt-PT",
+      "role": "parent",
+      "weight": 0.85,
+      "notes": "Standard European Portuguese; Madeiran diverges in the nasal-diphthong -> nasal+N reduction and the intervocalic /l/ -> [ʎ] palatalisation after /i/, and otherwise inherits the EP reduction and coda allophony."
+    }
+  ],
+  "urls": [
+    "https://pt.wikipedia.org/wiki/Dialeto_madeirense"
+  ],
+  "script_type": "alphabet",
+  "sources": [
+    {
+      "id": "segura2013",
+      "author": "Segura, Luísa",
+      "year": 2013,
+      "title": "Variedades dialetais do português europeu",
+      "publisher": "In E. B. P. Raposo et al. (eds.), Gramática do Português, vol. I, cap. 3, 85-142, Fundação Calouste Gulbenkian, Lisboa",
+      "url": null,
+      "pages": "85-142",
+      "notes": "Standard reference chapter on European Portuguese dialect variation; describes the Madeiran intervocalic /l/ -> [ʎ] palatalisation and the nasal-diphthong patterns of the Atlantic islands."
+    },
+    {
+      "id": "mateus_dandrade2000",
+      "author": "Mateus, M.H.M. & d'Andrade, E.",
+      "year": 2000,
+      "title": "The Phonology of Portuguese",
+      "publisher": "Oxford University Press",
+      "url": null,
+      "pages": null,
+      "notes": "Reference phonology for the inherited European Portuguese reduction, dark coda /l/ [ɫ] and coda sibilants, and the /v/ ~ /b/ contrast."
+    },
+    {
+      "id": "pwl_madeira",
+      "author": "Portuguese With Leo (with João Francisco Cunha, funchalense)",
+      "year": 2021,
+      "title": "Sotaque e expressões da Madeira",
+      "publisher": "YouTube (native-speaker / popular-linguistics)",
+      "url": "https://www.youtube.com/watch?v=azx_3sbqwEA",
+      "pages": null,
+      "notes": "Native-speaker Madeira (Funchal) deep-dive (NOT academic). Validates the modelled /l/->[ʎ] after /i/ ('-il -> -ilh', quilómetro->'quilhómetro') and the nasal-diphthong->nasal+N reduction (leões->'leôns', cães->'câns'); documents the unmodelled extreme final-vowel reduction (sentimento->'sentmente') and the deferred Madeiran 'coâlho' pre-palatal centralisation (see notes)."
+    }
+  ],
+  "wikipedia": [
+    "https://pt.wikipedia.org/wiki/Dialeto_madeirense"
+  ],
+  "timespan": {
+    "start_year": 1500,
+    "end_year": null
+  },
+  "iso639_3": "por",
+  "stress": {
+    "onset_clusters": ["bl", "br", "bɫ", "bɾ", "bʀ", "bʁ", "bʎ", "bχ", "dr", "dɾ", "dʀ", "dʁ", "dʎ", "dχ", "fl", "fr", "fɫ", "fɾ", "fʀ", "fʁ", "fʎ", "fχ", "kl", "kr", "kɫ", "kɾ", "kʀ", "kʁ", "kʎ", "kχ", "pl", "pr", "pɫ", "pɾ", "pʀ", "pʁ", "pʎ", "pχ", "tr", "tɾ", "tʀ", "tʁ", "tʎ", "tχ", "vl", "vr", "vɫ", "vɾ", "vʀ", "vʁ", "vʎ", "vχ", "ðr", "ðɾ", "ðʀ", "ðʁ", "ðʎ", "ðχ", "ɡl", "ɡr", "ɡɫ", "ɡɾ", "ɡʀ", "ɡʁ", "ɡʎ", "ɡχ", "ɣl", "ɣr", "ɣɫ", "ɣɾ", "ɣʀ", "ɣʁ", "ɣʎ", "ɣχ", "βl", "βr", "βɫ", "βɾ", "βʀ", "βʁ", "βʎ", "βχ"],
+    "cliticless_words": ["o", "a", "os", "as", "de", "do", "da", "dos", "das", "em", "no", "na", "nos", "nas", "por", "pelo", "pela", "pelos", "pelas", "ao", "aos", "à", "às", "com", "sem", "e", "que", "se", "me", "te", "lhe", "lhes", "vos", "lo", "la", "los", "las", "lho", "lha", "lhos", "lhas"],
+    "default_position": -2,
+    "final_stress_endings": [
+      "r",
+      "l",
+      "z",
+      "x",
+      "i",
+      "u",
+      "im",
+      "om",
+      "um",
+      "is",
+      "us",
+      "ns",
+      "ão",
+      "ãe",
+      "õe",
+      "au",
+      "éu",
+      "éi",
+      "ói"
+    ],
+    "penult_stress_endings": [],
+    "marked_vowels": [
+      "á",
+      "é",
+      "í",
+      "ó",
+      "ú",
+      "â",
+      "ê",
+      "ô",
+      "ã",
+      "õ"
+    ],
+    "stress_mark": "ˈ",
+    "notes": "Acordo Ortográfico 1990 conventions: paroxytone default; written accents override; final -i/-u/-r/-l/-z/-x/-im/-om/-um/-ns and nasal diphthongs attract final stress. Unmarked -em/-am stay paroxytone (homem, falam). DIPHTHONGS: declared so the bundled syllabifier counts nuclei correctly — without them every vowel run merges into one nucleus and co-e-lho is read as coe-lho, one syllable short, putting the stress and its vowel reduction on the wrong vowel. ⟨oe⟩ is hiatus, not a diphthong (Cunha & Cintra, §Ditongos).",
+    "diphthongs": [
+      "ãe",
+      "ão",
+      "õe",
+      "ai",
+      "ái",
+      "au",
+      "áu",
+      "ei",
+      "éi",
+      "êi",
+      "eu",
+      "éu",
+      "êu",
+      "iu",
+      "oi",
+      "ói",
+      "ôi",
+      "ou",
+      "ui"
+    ]
+  },
+  "wikidata_qid": "Q10266005",
+  "location": {
+    "latitude": 32.75,
+    "longitude": -17,
+    "source": "wikidata",
+    "notes": "Madeira (Funchal reference) — the autonomous region the variety is named for. [Wikidata Q26253 P625]"
+  },
+  "word_exceptions_base": "pt-PT",
+  "audit": {
+    "clup_dialect": {
+      "conclusion": "sample_too_small",
+      "measured": "The clup_dialect row holds 4 scored sentences (clup_dialect is sentence-level: each gold entry is one interview sentence, scored as a single unit against the engine's whole-sentence transcription, so the bootstrap resamples across only 4 sentence-level PER values, not across words), per=0.325, per_ci_low=0.2852, per_ci_high=0.3653 (benchmarks/results.json). At n=4 sentences the bootstrap interval is already collapsing toward a point for the same reason (few distinct values to resample), so its narrow width reflects the small sample, not precision; see docs/scoreboard.md's `95% CI` note and the THIN_ROW_MARK cutoff (rows under 20 scored items). This row cannot gate a production promotion on its own strength.",
+      "reference": "spec notes"
+    }
+  }
+}

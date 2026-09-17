@@ -1,0 +1,162 @@
+{
+ "code": "ach",
+ "name": "Acoli",
+ "script": "Latin",
+ "quality": "skeleton",
+ "graphemes": {
+  "a": [
+   "a"
+  ],
+  "b": [
+   "b"
+  ],
+  "bw": [
+   "bv"
+  ],
+  "c": [
+   "ʧ"
+  ],
+  "d": [
+   "d"
+  ],
+  "e": [
+   "e"
+  ],
+  "g": [
+   "ɡ"
+  ],
+  "i": [
+   "i"
+  ],
+  "j": [
+   "ʤ"
+  ],
+  "k": [
+   "k"
+  ],
+  "l": [
+   "l"
+  ],
+  "m": [
+   "m"
+  ],
+  "n": [
+   "n"
+  ],
+  "ny": [
+   "ɲ"
+  ],
+  "o": [
+   "o"
+  ],
+  "p": [
+   "p"
+  ],
+  "pw": [
+   "pf"
+  ],
+  "r": [
+   "r"
+  ],
+  "t": [
+   "t"
+  ],
+  "u": [
+   "u"
+  ],
+  "w": [
+   "w"
+  ],
+  "y": [
+   "j"
+  ],
+  "ŋ": [
+   "ŋ"
+  ]
+ },
+ "allophones": {
+  "ɛ": [
+   "ɛ",
+   "ɛ"
+  ]
+ },
+ "notes": "Placed so the ancestry graph covers every living ISO 639-3 language. No orthography is claimed; the phoneme inventory follows the cited PHOIBLE inventory (which itself cites a published description): script is Zyyy (undetermined) until a cited description is encoded. Classification and coordinates follow Glottolog. Orthography from an Omniglot chart (c) Simon Ager, https://www.omniglot.com/, extracted via the AfriSpeech/africa-g2p compilation (ach.json). africa-g2p is a compilation tool, not the linguistic authority; the citation above is the original source it names.",
+ "iso639_3": "ach",
+ "glottolog_code": "acol1236",
+ "sources": [
+  {
+   "id": "glottolog2024",
+   "author": "Hammarström, Harald; Forkel, Robert; Haspelmath, Martin; Bank, Sebastian",
+   "year": 2024,
+   "title": "Glottolog 5.0",
+   "publisher": "Max Planck Institute for Evolutionary Anthropology",
+   "url": "https://glottolog.org/"
+  },
+  {
+   "id": "phoible2019",
+   "author": "Moran, Steven; McCloy, Daniel (eds.)",
+   "year": 2019,
+   "title": "PHOIBLE 2.0 (doi:10.5281/zenodo.2562766)",
+   "publisher": "Max Planck Institute for the Science of Human History",
+   "url": "https://phoible.org/inventories/view/1433",
+   "notes": "Inventory 1433 (ph), 26 non-marginal segments, 3 tones."
+  },
+  {
+   "id": "omniglot-acholi",
+   "author": "Ager, Simon",
+   "year": 2026,
+   "title": "Omniglot chart (acholi.xls)",
+   "publisher": "Omniglot",
+   "url": "https://www.omniglot.com/",
+   "notes": "Undated web chart; year is retrieval year, not publication year."
+  }
+ ],
+ "urls": [
+  "https://glottolog.org/resource/languoid/id/acol1236"
+ ],
+ "location": {
+  "latitude": 3.5774,
+  "longitude": 32.5147,
+  "source": "glottolog",
+  "notes": "Glottolog's representative point."
+ },
+ "parent": "x-clade-nilo1247",
+ "phonemes": [
+  "b",
+  "c",
+  "d",
+  "d̪",
+  "j",
+  "k",
+  "l",
+  "m",
+  "n",
+  "p",
+  "t",
+  "w",
+  "ŋ",
+  "ɟ",
+  "ɡ",
+  "ɲ",
+  "ɾ",
+  "e",
+  "o",
+  "u",
+  "ɑ",
+  "ɔ",
+  "ə",
+  "ɛ",
+  "ɪ",
+  "ʊ"
+ ],
+ "tone_inventory": {
+  "˦": "PHOIBLE tone segment",
+  "˧": "PHOIBLE tone segment",
+  "˨": "PHOIBLE tone segment"
+ },
+ "phoible_id": "1433",
+ "script_type": "alphabet",
+ "wikipedia": [
+  "https://en.wikipedia.org/wiki/Acoli_language"
+ ]
+}

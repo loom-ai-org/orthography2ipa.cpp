@@ -1,0 +1,220 @@
+{
+  "code": "bua",
+  "name": "Buriat",
+  "script": "Cyrillic",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "ъ": [
+      ""
+    ],
+    "ь": [
+      "ʲ"
+    ],
+    "аа": [
+      "aː"
+    ],
+    "ээ": [
+      "ɛː"
+    ],
+    "оо": [
+      "ɔː"
+    ],
+    "өө": [
+      "oː"
+    ],
+    "уу": [
+      "uː"
+    ],
+    "үү": [
+      "yː"
+    ],
+    "ии": [
+      "iː"
+    ],
+    "ыы": [
+      "ɨː"
+    ],
+    "а": [
+      "a"
+    ],
+    "б": [
+      "b"
+    ],
+    "в": [
+      "v"
+    ],
+    "г": [
+      "ɡ"
+    ],
+    "д": [
+      "d"
+    ],
+    "е": [
+      "jɛ",
+      "je"
+    ],
+    "ё": [
+      "jɔ"
+    ],
+    "ж": [
+      "ʒ"
+    ],
+    "з": [
+      "z"
+    ],
+    "и": [
+      "i"
+    ],
+    "й": [
+      "j"
+    ],
+    "к": [
+      "k"
+    ],
+    "л": [
+      "l"
+    ],
+    "м": [
+      "m"
+    ],
+    "н": [
+      "n"
+    ],
+    "о": [
+      "ɔ"
+    ],
+    "ө": [
+      "o"
+    ],
+    "п": [
+      "p"
+    ],
+    "р": [
+      "r"
+    ],
+    "с": [
+      "s"
+    ],
+    "т": [
+      "t"
+    ],
+    "у": [
+      "u"
+    ],
+    "ү": [
+      "y"
+    ],
+    "ф": [
+      "f"
+    ],
+    "х": [
+      "x"
+    ],
+    "һ": [
+      "h"
+    ],
+    "ц": [
+      "ts"
+    ],
+    "ч": [
+      "tʃ"
+    ],
+    "ш": [
+      "ʃ"
+    ],
+    "щ": [
+      "ɕ"
+    ],
+    "ы": [
+      "ɨ"
+    ],
+    "э": [
+      "ɛ"
+    ],
+    "ю": [
+      "ju"
+    ],
+    "я": [
+      "ja"
+    ]
+  },
+  "positional_graphemes": {
+    "н": {
+      "word_final": [
+        "ŋ"
+      ]
+    }
+  },
+  "allophone_rules": [
+    {
+      "id": "BUA_DEVOICE_B",
+      "phonemes": [
+        "b"
+      ],
+      "surface": "p",
+      "followed_by_phoneme": [
+        "s",
+        "ʃ",
+        "t",
+        "k",
+        "x"
+      ],
+      "notes": "Obstruent devoicing: /b/ devoices to [p] before a voiceless consonant (e.g. үбсүүн [ypsyːŋ])."
+    }
+  ],
+  "parent": "xgn",
+  "ancestors": [
+    {
+      "code": "xgn",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Descent per Glottolog classification of Buriat (buri1258)."
+    }
+  ],
+  "stress": {
+    "default_position": -1,
+    "stress_mark": "ˈ"
+  },
+  "notes": "Buriat (Buryat) is a Mongolic language written in a Cyrillic alphabet that extends Russian with three letters: Ү (close front rounded /y/), Ө (rounded mid /o/) and Һ (/h/) — \"Since 1939, the Buryat literary language has employed a Cyrillic orthography with three extra letters (for h ö ü)\" (Skribnik 2003:105). The description follows the Khori-based standard language. Phonemic vowel length is written as a doubled vowel letter (аа ээ оо өө уу үү ии) and is handled by longest-match digraph entries; Skribnik (2003:105) gives ээ [ɛː], оо [ɔː] and өө [oː], and calls the status of өө problematic, which is why the value differs across descriptions and across the two gold sets scored here. Short ⟨ө⟩ occurs in neither gold set, consistent with Skribnik's statement that short *ö has merged with *ü in the standard language and survives as a short vowel only in the Western dialects. ⟨ь⟩ writes the palatalized member of a phonemic plain/palatalized consonant opposition (Skribnik 2003:106, table 5.2) and maps to [ʲ]; it is not a silent sign. ⟨ё⟩ is /j/ plus ⟨о⟩ and so is [jɔ], matching the value this spec gives ⟨о⟩. ⟨е⟩ is [jɛ] in native words and [je] in Russian loans, so both are declared. Word-final ⟨н⟩ realises as the velar nasal [ŋ] (Skribnik 2003:106: velar *ng \"merg[ed] with *n in most positions\" and the two are not distinguished in the orthography; NorthEuraLex spells this out in the transcription of 1174 forms), modelled as a `word_final` positional override. ⟨б⟩ devoices to [p] before a voiceless consonant, modelled as an allophone rule. Vowel harmony (palato-velar and labial) is conditioned rather than spelled and is left unencoded; Russian loanword letters (в ф ц щ) keep their Russian values, and ⟨ы⟩ is a Russian-orthography letter with no Buriat phoneme behind it. The wikipron row is a narrow Wiktionary transcription in a different notation from both this spec and NorthEuraLex: across its 140 entries it writes central [ä] for /a/ 35 times, uvular [ɢ] for ⟨г⟩ 24 times and [χ] for ⟨х⟩ 24 times, [ʊ] for ⟨у⟩ 24 times and [u] for ⟨ү⟩ 14 times, and it transcribes final ⟨н⟩ as [n] (30 times) rather than [ŋ]. None of that is supported by Skribnik, whose paradigm has ü as the high front rounded vowel and x as a velar fricative, so the difference is a notation ceiling on that row rather than a spec error. Word stress is non-contrastive; final by default.",
+  "iso639_3": "bua",
+  "glottolog_code": null,
+  "sources": [
+    {
+      "id": "bua_glottolog",
+      "author": "Hammarström, H. et al. (Glottolog 5.0)",
+      "year": 2024,
+      "title": "Glottolog: Buriat (buri1258)",
+      "publisher": "Max Planck Institute for Evolutionary Anthropology",
+      "url": "https://glottolog.org/resource/languoid/id/buri1258",
+      "pages": null,
+      "notes": "Classification reference. buri1258 is a family-level node, not a languoid: Glottolog splits Buriat into the three language-level entries chin1476, mong1330 and russ1264, so this spec carries no glottolog_code.",
+      "wikipedia_url": null
+    },
+    {
+      "id": "poppe1960",
+      "author": "Poppe, Nicholas",
+      "year": 1960,
+      "title": "Buriat Grammar (Uralic and Altaic Series 2)",
+      "publisher": "Indiana University Publications",
+      "url": null,
+      "pages": null,
+      "notes": "Reference grammar of Buriat: Cyrillic orthography, vowel inventory and qualities, word-final /n/→[ŋ], and consonant devoicing.",
+      "wikipedia_url": null
+    },
+    {
+      "id": "skribnik2003",
+      "author": "Skribnik, E.",
+      "year": 2003,
+      "title": "Buryat",
+      "publisher": "in J. Janhunen (ed.), The Mongolic Languages, Routledge Language Family Series, London",
+      "url": "https://theswissbay.ch/pdf/Books/Linguistics/Mega%20linguistics%20pack/Mongolic/Buryat%20(Skribnik).pdf",
+      "pages": "pp. 102-108",
+      "notes": "Sections 'Segmental phonemes' and 'Word structure'. Source of the vowel paradigm and the long-vowel values, of the phonemic palatalized consonant series, and of the statement that the Cyrillic orthography adds three letters for h ö ü.",
+      "wikipedia_url": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Buryat_language"
+  ]
+}

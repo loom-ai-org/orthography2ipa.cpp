@@ -1,0 +1,2328 @@
+{
+  "code": "ne",
+  "name": "Nepali",
+  "script": "Devanagari",
+  "graphemes": {
+    "अ": [
+      "ʌ"
+    ],
+    "आ": [
+      "ä"
+    ],
+    "इ": [
+      "i"
+    ],
+    "ई": [
+      "i"
+    ],
+    "उ": [
+      "u"
+    ],
+    "ऊ": [
+      "u"
+    ],
+    "ऋ": [
+      "ri"
+    ],
+    "ए": [
+      "e"
+    ],
+    "ऐ": [
+      "ʌi"
+    ],
+    "ओ": [
+      "o"
+    ],
+    "औ": [
+      "ʌu"
+    ],
+    "ा": [
+      "ä"
+    ],
+    "ि": [
+      "i"
+    ],
+    "ी": [
+      "i"
+    ],
+    "ु": [
+      "u"
+    ],
+    "ू": [
+      "u"
+    ],
+    "ृ": [
+      "ri"
+    ],
+    "े": [
+      "e"
+    ],
+    "ै": [
+      "ʌi"
+    ],
+    "ो": [
+      "o"
+    ],
+    "ौ": [
+      "ʌu"
+    ],
+    "ं": [
+      "̃"
+    ],
+    "ः": [
+      ""
+    ],
+    "ँ": [
+      "̃"
+    ],
+    "्": [
+      ""
+    ],
+    "क": [
+      "k"
+    ],
+    "ख": [
+      "kʰ"
+    ],
+    "ग": [
+      "ɡ"
+    ],
+    "घ": [
+      "ɡʱ"
+    ],
+    "ङ": [
+      "ŋ"
+    ],
+    "च": [
+      "ts"
+    ],
+    "छ": [
+      "tsʰ"
+    ],
+    "ज": [
+      "dz"
+    ],
+    "झ": [
+      "dzʱ"
+    ],
+    "ञ": [
+      "n"
+    ],
+    "ट": [
+      "ʈ"
+    ],
+    "ठ": [
+      "ʈʰ"
+    ],
+    "ड": [
+      "ɖ"
+    ],
+    "ढ": [
+      "ɖʱ"
+    ],
+    "ण": [
+      "ɳ"
+    ],
+    "त": [
+      "t̪"
+    ],
+    "थ": [
+      "t̪ʰ"
+    ],
+    "द": [
+      "d̪"
+    ],
+    "ध": [
+      "d̪ʱ"
+    ],
+    "न": [
+      "n"
+    ],
+    "प": [
+      "p"
+    ],
+    "फ": [
+      "pʰ"
+    ],
+    "ब": [
+      "b"
+    ],
+    "भ": [
+      "bʱ"
+    ],
+    "म": [
+      "m"
+    ],
+    "य": [
+      "j"
+    ],
+    "र": [
+      "r"
+    ],
+    "ल": [
+      "l"
+    ],
+    "व": [
+      "w"
+    ],
+    "ड़": [
+      "ɽ"
+    ],
+    "ढ़": [
+      "ɽʱ"
+    ],
+    "श": [
+      "s"
+    ],
+    "ष": [
+      "s"
+    ],
+    "स": [
+      "s"
+    ],
+    "ह": [
+      "ɦ"
+    ],
+    "ज्ञ": [
+      "ɡj"
+    ],
+    "क्ष": [
+      "ktsʰ"
+    ]
+  },
+  "allophones": {
+    "p": [
+      "p"
+    ],
+    "pʰ": [
+      "pʰ",
+      "ɸ"
+    ],
+    "b": [
+      "b"
+    ],
+    "bʱ": [
+      "bʱ",
+      "b",
+      "β"
+    ],
+    "t̪": [
+      "t̪"
+    ],
+    "t̪ʰ": [
+      "t̪ʰ"
+    ],
+    "d̪": [
+      "d̪"
+    ],
+    "d̪ʱ": [
+      "d̪ʱ",
+      "d̪"
+    ],
+    "ʈ": [
+      "ʈ"
+    ],
+    "ʈʰ": [
+      "ʈʰ"
+    ],
+    "ɖ": [
+      "ɖ",
+      "ɽ"
+    ],
+    "ɖʱ": [
+      "ɖʱ",
+      "ɽʱ"
+    ],
+    "k": [
+      "k"
+    ],
+    "kʰ": [
+      "kʰ",
+      "x"
+    ],
+    "ɡ": [
+      "ɡ"
+    ],
+    "ɡʱ": [
+      "ɡʱ",
+      "ɡ",
+      "ɣ"
+    ],
+    "ts": [
+      "ts"
+    ],
+    "tsʰ": [
+      "tsʰ"
+    ],
+    "dz": [
+      "dz"
+    ],
+    "dzʱ": [
+      "dzʱ",
+      "dz"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n",
+      "m",
+      "ŋ",
+      "ɳ"
+    ],
+    "ŋ": [
+      "ŋ"
+    ],
+    "ɳ": [
+      "ɳ",
+      "ɽ̃"
+    ],
+    "s": [
+      "s"
+    ],
+    "ɦ": [
+      "ɦ",
+      "h"
+    ],
+    "r": [
+      "r",
+      "ɾ"
+    ],
+    "ɽ": [
+      "ɽ"
+    ],
+    "ɽʱ": [
+      "ɽʱ"
+    ],
+    "l": [
+      "l"
+    ],
+    "w": [
+      "w",
+      "b"
+    ],
+    "j": [
+      "j"
+    ],
+    "ʌ": [
+      "ʌ"
+    ],
+    "ä": [
+      "ä"
+    ],
+    "i": [
+      "i"
+    ],
+    "u": [
+      "u"
+    ],
+    "e": [
+      "e"
+    ],
+    "o": [
+      "o"
+    ]
+  },
+  "parent": "sa",
+  "ancestors": [
+    {
+      "code": "sa",
+      "role": "parent",
+      "weight": 0.83,
+      "notes": "Descent via Shauraseni through Khas language"
+    }
+  ],
+  "notes": "Standard (eastern) Nepali, the variety of the national media. Consonants: a four-way laryngeal contrast on the stops, a dental versus retroflex contrast, and AFFRICATES THAT ARE ALVEOLAR /ts tsʰ dz dzʱ/, not palato-alveolar — palatography puts the contact in the alveolar region, though the sounds strike English and French ears as palato-alveolar (Khatiwada 2009: 375, reporting Pokharel 1989 and Clements & Khatiwada 2007). ONE SIBILANT: Nepali has exactly two contrastive fricatives, /s/ and /ɦ/ (Khatiwada 2009: 376), so written श, ष and स all read /s/ — आकाश [äkäs], भाषा [bʱäsä]. NASALS: only /m n ŋ/ are phonologically pertinent; /ŋ/ is otherwise word-final only, and written ण also has a retroflex nasal flap realisation [ɽ̃] (Khatiwada 2009: 377). VOWELS: six oral qualities /i e u o ʌ ä/ with distinctive nasalisation on all but /o/, and NO LENGTH CONTRAST — the script's long/short ⟨इ ई⟩ and ⟨उ ऊ⟩ pairs are an orthographic inheritance with no counterpart in the spoken language (Khatiwada 2009: 378). The inherent vowel is /ʌ/, not the schwa [ə] of the older descriptions: it is acoustically lower and more back than a schwa (Khatiwada 2009: 377, replacing the [ə] of Bandhu et al. 1971 and Dahal 1974). The low vowel is central, written here [ä] for the same reason the dental stops are written [t̪]. SCHWA DELETION is conjunct-blocked; see NE_SCHWA_KEEP_b and NE_SCHWA_FINAL_b. व reads /w/: Nepali has no /v/ or /ʋ/ phoneme, and [w] is the nonsyllabic variant of /u/ (Khatiwada 2009: 373); in combination with /e i o ʌi̯ r w j/ it is instead the bilabial stop [b] (Wikipedia, 'Va (Indic)'), which is why [b] is listed as its allophone. The aspirated labials and velars also have homorganic fricative realisations in spontaneous speech — /sʌpʰa/ [sʌɸa], /sʌbʱa/ [sʌβa], /sakʰa/ [saxa], /ʌɡʱaɖi/ [ʌɣaɽi] (Khatiwada 2009: 376) — which is why [ɸ β x ɣ] are listed as allophones. Stress and pitch are non-distinctive (Khatiwada 2009: 378). Not modelled: intervocalic /ɦ/ deletion with compensatory lengthening, a spontaneous-speech process (Khatiwada 2009: 378); the ⟨्य⟩ conjunct's gemination-plus-[e] outcome; and gemination, which is contrastive but not predictable from the spelling of a conjunct. Only the first of Wikipedia's four final-schwa retention rules is modelled. Rules 2 and 3 — every verb form retains the schwa unless a halanta cancels it, and adverbs, onomatopoeia and postpositions usually retain it — need a part of speech the engine does not have, and rule 4 is a short list of lexical exceptions (दुःख, सुख). Rule 1 itself over-retains on the nasal conjuncts ⟨ञ्च ञ्ज⟩, whose nasal-plus-affricate coda is legal word-finally: मञ्च comes out [mʌntsʌ] where the schwa should go. The visarga ⟨ः⟩ is read silently and its own outcome is unmodelled: it neither geminates a following consonant (दुःख [d̪ukʰ], not [d̪ukkʰʌ]) nor lengthens a preceding vowel, which in पुनः and अतः also costs the final schwa the gold writes ([pun] for [punʌː]) — 6 of the 15 visarga words in the gold end in a length mark, only 2 of them outside a nasalised rhyme, so no single reading fits and none is guessed. Word-initial ⟨क्ष⟩ is likewise left at its cluster reading [ktsʰ] rather than the simplified [tsʰ] heard initially.",
+  "quality": "research",
+  "script_type": "abugida",
+  "inherent_vowel": "ʌ",
+  "sources": [
+    {
+      "id": "khatiwada2009",
+      "author": "Khatiwada, R.",
+      "year": 2009,
+      "title": "Nepali (Illustrations of the IPA)",
+      "publisher": "Journal of the International Phonetic Association 39(3)",
+      "url": "https://doi.org/10.1017/S0025100309990181",
+      "pages": "373-380",
+      "notes": "The IPA Illustration of Nepali: consonant and vowel charts, the alveolar affricates, the two-fricative inventory, the absence of a length contrast, and the [ʌ] value of the inherent vowel."
+    },
+    {
+      "id": "bandhu1971",
+      "author": "Bandhu, C., Dahal, B. M., Holzhausen, A. & Hale, A.",
+      "year": 1971,
+      "title": "Nepali segmental phonology",
+      "publisher": "Summer Institute of Linguistics / Tribhuvan University",
+      "url": null,
+      "pages": null,
+      "notes": "The segmental description Khatiwada (2009) builds on; edition not consulted directly."
+    },
+    {
+      "id": "pokharel1989",
+      "author": "Pokharel, M. P.",
+      "year": 1989,
+      "title": "Experimental analysis of Nepali sound system",
+      "publisher": "Ph.D. dissertation, University of Pune",
+      "url": null,
+      "pages": null,
+      "notes": "Palatography of the affricates and the rhotic/nasal allophony, reported in Khatiwada (2009); edition not consulted directly."
+    },
+    {
+      "id": "masica1991",
+      "author": "Masica, C.",
+      "year": 1991,
+      "title": "The Indo-Aryan Languages",
+      "publisher": "Cambridge University Press",
+      "url": null,
+      "pages": null,
+      "notes": null,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Indo-Aryan_languages"
+    },
+    {
+      "id": "cardona_jain2003",
+      "author": "Cardona, G. & Jain, D. (eds.)",
+      "year": 2003,
+      "title": "The Indo-Aryan Languages",
+      "publisher": "Routledge",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "matthews1984",
+      "author": "Matthews, D.J.",
+      "year": 1984,
+      "title": "A Course in Nepali",
+      "publisher": "SOAS",
+      "url": null,
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Nepali_language",
+    "https://en.wikipedia.org/wiki/Va_(Indic)",
+    "https://ne.wikipedia.org/wiki/नेपाली_भाषा"
+  ],
+  "timespan": {
+    "start_year": 1700,
+    "end_year": null
+  },
+  "glottolog_code": "nepa1254",
+  "iso639_3": "nep",
+  "wikidata_qid": "Q33823",
+  "phoible_id": "nepa1254",
+  "wals_code": "nep",
+  "location": {
+    "latitude": 28.0,
+    "longitude": 85.0,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Nepali."
+  },
+  "allophone_rules": [
+    {
+      "id": "NE_ANUSVARA_VELAR",
+      "phonemes": [
+        "n"
+      ],
+      "surface": "ŋ",
+      "grapheme": [
+        "ं"
+      ],
+      "followed_by_phoneme": [
+        "k",
+        "kʰ",
+        "ɡ",
+        "ɡʱ",
+        "ŋ"
+      ],
+      "notes": "Anusvara is a homorganic nasal, not a free-standing /n/: it takes the place of articulation of the consonant it stands before — संगीत [sʌŋɡit̪], कांग्रेस [käŋɡres], संविधान [sʌmbid̪än], इंडिया [iɳɖijä]. Only /m n ŋ/ are contrastive in Nepali (Khatiwada 2009: 373, 377), so these are surface realisations of the one nasal slot the anusvara writes. Restricted by grapheme to the anusvara, because a written न does not assimilate the same way."
+    },
+    {
+      "id": "NE_ANUSVARA_LABIAL",
+      "phonemes": [
+        "n"
+      ],
+      "surface": "m",
+      "grapheme": [
+        "ं"
+      ],
+      "followed_by_phoneme": [
+        "p",
+        "pʰ",
+        "b",
+        "bʱ",
+        "m",
+        "w"
+      ],
+      "notes": "Homorganic anusvara before a labial; see NE_ANUSVARA_VELAR."
+    },
+    {
+      "id": "NE_ANUSVARA_RETROFLEX",
+      "phonemes": [
+        "n"
+      ],
+      "surface": "ɳ",
+      "grapheme": [
+        "ं"
+      ],
+      "followed_by_phoneme": [
+        "ʈ",
+        "ʈʰ",
+        "ɖ",
+        "ɖʱ",
+        "ɳ"
+      ],
+      "notes": "Homorganic anusvara before a retroflex; see NE_ANUSVARA_VELAR."
+    },
+    {
+      "id": "NE_SCHWA_KEEP_b",
+      "phonemes": [
+        "bʌ"
+      ],
+      "surface": "bʌ",
+      "preceded_by_phoneme": [
+        "b",
+        "bʱ",
+        "dz",
+        "dzʱ",
+        "d̪",
+        "d̪ʱ",
+        "j",
+        "k",
+        "ktsʰ",
+        "kʰ",
+        "l",
+        "m",
+        "n",
+        "p",
+        "pʰ",
+        "r",
+        "s",
+        "ts",
+        "tsʰ",
+        "t̪",
+        "t̪ʰ",
+        "w",
+        "ŋ",
+        "ɖ",
+        "ɖʱ",
+        "ɡ",
+        "ɡj",
+        "ɡʱ",
+        "ɦ",
+        "ɳ",
+        "ɽ",
+        "ɽʱ",
+        "ʈ",
+        "ʈʰ"
+      ],
+      "notes": "Guard ordered before NE_SCHWA_FINAL_*: the inherent schwa survives when the consonant carrying it is itself the second member of a conjunct, i.e. when the previous lattice slot is a bare (virama-bearing) consonant. This is the Nepali-versus-Hindi difference. Hindi deletes a word-final schwa after a cluster too (शब्द [ʃəbd̪]); Nepali does not tolerate the final cluster that would create, so समुद्र is [sʌmud̪rʌ], मित्र [mit̪rʌ], धर्म [d̪ʱʌrmʌ] and अर्थ [ʌrt̪ʰʌ] — 'Schwa is retained if the final syllable is a conjunct consonant' (Wikipedia, 'Nepali language', final-schwa retention rule 1). The identity rewrite fires first, and first-match-wins blocks the deletion rule behind it."
+    },
+    {
+      "id": "NE_SCHWA_KEEP_bʱ",
+      "phonemes": [
+        "bʱʌ"
+      ],
+      "surface": "bʱʌ",
+      "preceded_by_phoneme": [
+        "b",
+        "bʱ",
+        "dz",
+        "dzʱ",
+        "d̪",
+        "d̪ʱ",
+        "j",
+        "k",
+        "ktsʰ",
+        "kʰ",
+        "l",
+        "m",
+        "n",
+        "p",
+        "pʰ",
+        "r",
+        "s",
+        "ts",
+        "tsʰ",
+        "t̪",
+        "t̪ʰ",
+        "w",
+        "ŋ",
+        "ɖ",
+        "ɖʱ",
+        "ɡ",
+        "ɡj",
+        "ɡʱ",
+        "ɦ",
+        "ɳ",
+        "ɽ",
+        "ɽʱ",
+        "ʈ",
+        "ʈʰ"
+      ],
+      "notes": "Conjunct-final schwa retention; see NE_SCHWA_KEEP_b."
+    },
+    {
+      "id": "NE_SCHWA_KEEP_dz",
+      "phonemes": [
+        "dzʌ"
+      ],
+      "surface": "dzʌ",
+      "preceded_by_phoneme": [
+        "b",
+        "bʱ",
+        "dz",
+        "dzʱ",
+        "d̪",
+        "d̪ʱ",
+        "j",
+        "k",
+        "ktsʰ",
+        "kʰ",
+        "l",
+        "m",
+        "n",
+        "p",
+        "pʰ",
+        "r",
+        "s",
+        "ts",
+        "tsʰ",
+        "t̪",
+        "t̪ʰ",
+        "w",
+        "ŋ",
+        "ɖ",
+        "ɖʱ",
+        "ɡ",
+        "ɡj",
+        "ɡʱ",
+        "ɦ",
+        "ɳ",
+        "ɽ",
+        "ɽʱ",
+        "ʈ",
+        "ʈʰ"
+      ],
+      "notes": "Conjunct-final schwa retention; see NE_SCHWA_KEEP_b."
+    },
+    {
+      "id": "NE_SCHWA_KEEP_dzʱ",
+      "phonemes": [
+        "dzʱʌ"
+      ],
+      "surface": "dzʱʌ",
+      "preceded_by_phoneme": [
+        "b",
+        "bʱ",
+        "dz",
+        "dzʱ",
+        "d̪",
+        "d̪ʱ",
+        "j",
+        "k",
+        "ktsʰ",
+        "kʰ",
+        "l",
+        "m",
+        "n",
+        "p",
+        "pʰ",
+        "r",
+        "s",
+        "ts",
+        "tsʰ",
+        "t̪",
+        "t̪ʰ",
+        "w",
+        "ŋ",
+        "ɖ",
+        "ɖʱ",
+        "ɡ",
+        "ɡj",
+        "ɡʱ",
+        "ɦ",
+        "ɳ",
+        "ɽ",
+        "ɽʱ",
+        "ʈ",
+        "ʈʰ"
+      ],
+      "notes": "Conjunct-final schwa retention; see NE_SCHWA_KEEP_b."
+    },
+    {
+      "id": "NE_SCHWA_KEEP_d̪",
+      "phonemes": [
+        "d̪ʌ"
+      ],
+      "surface": "d̪ʌ",
+      "preceded_by_phoneme": [
+        "b",
+        "bʱ",
+        "dz",
+        "dzʱ",
+        "d̪",
+        "d̪ʱ",
+        "j",
+        "k",
+        "ktsʰ",
+        "kʰ",
+        "l",
+        "m",
+        "n",
+        "p",
+        "pʰ",
+        "r",
+        "s",
+        "ts",
+        "tsʰ",
+        "t̪",
+        "t̪ʰ",
+        "w",
+        "ŋ",
+        "ɖ",
+        "ɖʱ",
+        "ɡ",
+        "ɡj",
+        "ɡʱ",
+        "ɦ",
+        "ɳ",
+        "ɽ",
+        "ɽʱ",
+        "ʈ",
+        "ʈʰ"
+      ],
+      "notes": "Conjunct-final schwa retention; see NE_SCHWA_KEEP_b."
+    },
+    {
+      "id": "NE_SCHWA_KEEP_d̪ʱ",
+      "phonemes": [
+        "d̪ʱʌ"
+      ],
+      "surface": "d̪ʱʌ",
+      "preceded_by_phoneme": [
+        "b",
+        "bʱ",
+        "dz",
+        "dzʱ",
+        "d̪",
+        "d̪ʱ",
+        "j",
+        "k",
+        "ktsʰ",
+        "kʰ",
+        "l",
+        "m",
+        "n",
+        "p",
+        "pʰ",
+        "r",
+        "s",
+        "ts",
+        "tsʰ",
+        "t̪",
+        "t̪ʰ",
+        "w",
+        "ŋ",
+        "ɖ",
+        "ɖʱ",
+        "ɡ",
+        "ɡj",
+        "ɡʱ",
+        "ɦ",
+        "ɳ",
+        "ɽ",
+        "ɽʱ",
+        "ʈ",
+        "ʈʰ"
+      ],
+      "notes": "Conjunct-final schwa retention; see NE_SCHWA_KEEP_b."
+    },
+    {
+      "id": "NE_SCHWA_KEEP_j",
+      "phonemes": [
+        "jʌ"
+      ],
+      "surface": "jʌ",
+      "preceded_by_phoneme": [
+        "b",
+        "bʱ",
+        "dz",
+        "dzʱ",
+        "d̪",
+        "d̪ʱ",
+        "j",
+        "k",
+        "ktsʰ",
+        "kʰ",
+        "l",
+        "m",
+        "n",
+        "p",
+        "pʰ",
+        "r",
+        "s",
+        "ts",
+        "tsʰ",
+        "t̪",
+        "t̪ʰ",
+        "w",
+        "ŋ",
+        "ɖ",
+        "ɖʱ",
+        "ɡ",
+        "ɡj",
+        "ɡʱ",
+        "ɦ",
+        "ɳ",
+        "ɽ",
+        "ɽʱ",
+        "ʈ",
+        "ʈʰ"
+      ],
+      "notes": "Conjunct-final schwa retention; see NE_SCHWA_KEEP_b."
+    },
+    {
+      "id": "NE_SCHWA_KEEP_k",
+      "phonemes": [
+        "kʌ"
+      ],
+      "surface": "kʌ",
+      "preceded_by_phoneme": [
+        "b",
+        "bʱ",
+        "dz",
+        "dzʱ",
+        "d̪",
+        "d̪ʱ",
+        "j",
+        "k",
+        "ktsʰ",
+        "kʰ",
+        "l",
+        "m",
+        "n",
+        "p",
+        "pʰ",
+        "r",
+        "s",
+        "ts",
+        "tsʰ",
+        "t̪",
+        "t̪ʰ",
+        "w",
+        "ŋ",
+        "ɖ",
+        "ɖʱ",
+        "ɡ",
+        "ɡj",
+        "ɡʱ",
+        "ɦ",
+        "ɳ",
+        "ɽ",
+        "ɽʱ",
+        "ʈ",
+        "ʈʰ"
+      ],
+      "notes": "Conjunct-final schwa retention; see NE_SCHWA_KEEP_b."
+    },
+    {
+      "id": "NE_SCHWA_KEEP_ktsʰ",
+      "phonemes": [
+        "ktsʰʌ"
+      ],
+      "surface": "ktsʰʌ",
+      "preceded_by_phoneme": [
+        "b",
+        "bʱ",
+        "dz",
+        "dzʱ",
+        "d̪",
+        "d̪ʱ",
+        "j",
+        "k",
+        "ktsʰ",
+        "kʰ",
+        "l",
+        "m",
+        "n",
+        "p",
+        "pʰ",
+        "r",
+        "s",
+        "ts",
+        "tsʰ",
+        "t̪",
+        "t̪ʰ",
+        "w",
+        "ŋ",
+        "ɖ",
+        "ɖʱ",
+        "ɡ",
+        "ɡj",
+        "ɡʱ",
+        "ɦ",
+        "ɳ",
+        "ɽ",
+        "ɽʱ",
+        "ʈ",
+        "ʈʰ"
+      ],
+      "notes": "Conjunct-final schwa retention; see NE_SCHWA_KEEP_b."
+    },
+    {
+      "id": "NE_SCHWA_KEEP_kʰ",
+      "phonemes": [
+        "kʰʌ"
+      ],
+      "surface": "kʰʌ",
+      "preceded_by_phoneme": [
+        "b",
+        "bʱ",
+        "dz",
+        "dzʱ",
+        "d̪",
+        "d̪ʱ",
+        "j",
+        "k",
+        "ktsʰ",
+        "kʰ",
+        "l",
+        "m",
+        "n",
+        "p",
+        "pʰ",
+        "r",
+        "s",
+        "ts",
+        "tsʰ",
+        "t̪",
+        "t̪ʰ",
+        "w",
+        "ŋ",
+        "ɖ",
+        "ɖʱ",
+        "ɡ",
+        "ɡj",
+        "ɡʱ",
+        "ɦ",
+        "ɳ",
+        "ɽ",
+        "ɽʱ",
+        "ʈ",
+        "ʈʰ"
+      ],
+      "notes": "Conjunct-final schwa retention; see NE_SCHWA_KEEP_b."
+    },
+    {
+      "id": "NE_SCHWA_KEEP_l",
+      "phonemes": [
+        "lʌ"
+      ],
+      "surface": "lʌ",
+      "preceded_by_phoneme": [
+        "b",
+        "bʱ",
+        "dz",
+        "dzʱ",
+        "d̪",
+        "d̪ʱ",
+        "j",
+        "k",
+        "ktsʰ",
+        "kʰ",
+        "l",
+        "m",
+        "n",
+        "p",
+        "pʰ",
+        "r",
+        "s",
+        "ts",
+        "tsʰ",
+        "t̪",
+        "t̪ʰ",
+        "w",
+        "ŋ",
+        "ɖ",
+        "ɖʱ",
+        "ɡ",
+        "ɡj",
+        "ɡʱ",
+        "ɦ",
+        "ɳ",
+        "ɽ",
+        "ɽʱ",
+        "ʈ",
+        "ʈʰ"
+      ],
+      "notes": "Conjunct-final schwa retention; see NE_SCHWA_KEEP_b."
+    },
+    {
+      "id": "NE_SCHWA_KEEP_m",
+      "phonemes": [
+        "mʌ"
+      ],
+      "surface": "mʌ",
+      "preceded_by_phoneme": [
+        "b",
+        "bʱ",
+        "dz",
+        "dzʱ",
+        "d̪",
+        "d̪ʱ",
+        "j",
+        "k",
+        "ktsʰ",
+        "kʰ",
+        "l",
+        "m",
+        "n",
+        "p",
+        "pʰ",
+        "r",
+        "s",
+        "ts",
+        "tsʰ",
+        "t̪",
+        "t̪ʰ",
+        "w",
+        "ŋ",
+        "ɖ",
+        "ɖʱ",
+        "ɡ",
+        "ɡj",
+        "ɡʱ",
+        "ɦ",
+        "ɳ",
+        "ɽ",
+        "ɽʱ",
+        "ʈ",
+        "ʈʰ"
+      ],
+      "notes": "Conjunct-final schwa retention; see NE_SCHWA_KEEP_b."
+    },
+    {
+      "id": "NE_SCHWA_KEEP_n",
+      "phonemes": [
+        "nʌ"
+      ],
+      "surface": "nʌ",
+      "preceded_by_phoneme": [
+        "b",
+        "bʱ",
+        "dz",
+        "dzʱ",
+        "d̪",
+        "d̪ʱ",
+        "j",
+        "k",
+        "ktsʰ",
+        "kʰ",
+        "l",
+        "m",
+        "n",
+        "p",
+        "pʰ",
+        "r",
+        "s",
+        "ts",
+        "tsʰ",
+        "t̪",
+        "t̪ʰ",
+        "w",
+        "ŋ",
+        "ɖ",
+        "ɖʱ",
+        "ɡ",
+        "ɡj",
+        "ɡʱ",
+        "ɦ",
+        "ɳ",
+        "ɽ",
+        "ɽʱ",
+        "ʈ",
+        "ʈʰ"
+      ],
+      "notes": "Conjunct-final schwa retention; see NE_SCHWA_KEEP_b."
+    },
+    {
+      "id": "NE_SCHWA_KEEP_p",
+      "phonemes": [
+        "pʌ"
+      ],
+      "surface": "pʌ",
+      "preceded_by_phoneme": [
+        "b",
+        "bʱ",
+        "dz",
+        "dzʱ",
+        "d̪",
+        "d̪ʱ",
+        "j",
+        "k",
+        "ktsʰ",
+        "kʰ",
+        "l",
+        "m",
+        "n",
+        "p",
+        "pʰ",
+        "r",
+        "s",
+        "ts",
+        "tsʰ",
+        "t̪",
+        "t̪ʰ",
+        "w",
+        "ŋ",
+        "ɖ",
+        "ɖʱ",
+        "ɡ",
+        "ɡj",
+        "ɡʱ",
+        "ɦ",
+        "ɳ",
+        "ɽ",
+        "ɽʱ",
+        "ʈ",
+        "ʈʰ"
+      ],
+      "notes": "Conjunct-final schwa retention; see NE_SCHWA_KEEP_b."
+    },
+    {
+      "id": "NE_SCHWA_KEEP_pʰ",
+      "phonemes": [
+        "pʰʌ"
+      ],
+      "surface": "pʰʌ",
+      "preceded_by_phoneme": [
+        "b",
+        "bʱ",
+        "dz",
+        "dzʱ",
+        "d̪",
+        "d̪ʱ",
+        "j",
+        "k",
+        "ktsʰ",
+        "kʰ",
+        "l",
+        "m",
+        "n",
+        "p",
+        "pʰ",
+        "r",
+        "s",
+        "ts",
+        "tsʰ",
+        "t̪",
+        "t̪ʰ",
+        "w",
+        "ŋ",
+        "ɖ",
+        "ɖʱ",
+        "ɡ",
+        "ɡj",
+        "ɡʱ",
+        "ɦ",
+        "ɳ",
+        "ɽ",
+        "ɽʱ",
+        "ʈ",
+        "ʈʰ"
+      ],
+      "notes": "Conjunct-final schwa retention; see NE_SCHWA_KEEP_b."
+    },
+    {
+      "id": "NE_SCHWA_KEEP_r",
+      "phonemes": [
+        "rʌ"
+      ],
+      "surface": "rʌ",
+      "preceded_by_phoneme": [
+        "b",
+        "bʱ",
+        "dz",
+        "dzʱ",
+        "d̪",
+        "d̪ʱ",
+        "j",
+        "k",
+        "ktsʰ",
+        "kʰ",
+        "l",
+        "m",
+        "n",
+        "p",
+        "pʰ",
+        "r",
+        "s",
+        "ts",
+        "tsʰ",
+        "t̪",
+        "t̪ʰ",
+        "w",
+        "ŋ",
+        "ɖ",
+        "ɖʱ",
+        "ɡ",
+        "ɡj",
+        "ɡʱ",
+        "ɦ",
+        "ɳ",
+        "ɽ",
+        "ɽʱ",
+        "ʈ",
+        "ʈʰ"
+      ],
+      "notes": "Conjunct-final schwa retention; see NE_SCHWA_KEEP_b."
+    },
+    {
+      "id": "NE_SCHWA_KEEP_s",
+      "phonemes": [
+        "sʌ"
+      ],
+      "surface": "sʌ",
+      "preceded_by_phoneme": [
+        "b",
+        "bʱ",
+        "dz",
+        "dzʱ",
+        "d̪",
+        "d̪ʱ",
+        "j",
+        "k",
+        "ktsʰ",
+        "kʰ",
+        "l",
+        "m",
+        "n",
+        "p",
+        "pʰ",
+        "r",
+        "s",
+        "ts",
+        "tsʰ",
+        "t̪",
+        "t̪ʰ",
+        "w",
+        "ŋ",
+        "ɖ",
+        "ɖʱ",
+        "ɡ",
+        "ɡj",
+        "ɡʱ",
+        "ɦ",
+        "ɳ",
+        "ɽ",
+        "ɽʱ",
+        "ʈ",
+        "ʈʰ"
+      ],
+      "notes": "Conjunct-final schwa retention; see NE_SCHWA_KEEP_b."
+    },
+    {
+      "id": "NE_SCHWA_KEEP_ts",
+      "phonemes": [
+        "tsʌ"
+      ],
+      "surface": "tsʌ",
+      "preceded_by_phoneme": [
+        "b",
+        "bʱ",
+        "dz",
+        "dzʱ",
+        "d̪",
+        "d̪ʱ",
+        "j",
+        "k",
+        "ktsʰ",
+        "kʰ",
+        "l",
+        "m",
+        "n",
+        "p",
+        "pʰ",
+        "r",
+        "s",
+        "ts",
+        "tsʰ",
+        "t̪",
+        "t̪ʰ",
+        "w",
+        "ŋ",
+        "ɖ",
+        "ɖʱ",
+        "ɡ",
+        "ɡj",
+        "ɡʱ",
+        "ɦ",
+        "ɳ",
+        "ɽ",
+        "ɽʱ",
+        "ʈ",
+        "ʈʰ"
+      ],
+      "notes": "Conjunct-final schwa retention; see NE_SCHWA_KEEP_b."
+    },
+    {
+      "id": "NE_SCHWA_KEEP_tsʰ",
+      "phonemes": [
+        "tsʰʌ"
+      ],
+      "surface": "tsʰʌ",
+      "preceded_by_phoneme": [
+        "b",
+        "bʱ",
+        "dz",
+        "dzʱ",
+        "d̪",
+        "d̪ʱ",
+        "j",
+        "k",
+        "ktsʰ",
+        "kʰ",
+        "l",
+        "m",
+        "n",
+        "p",
+        "pʰ",
+        "r",
+        "s",
+        "ts",
+        "tsʰ",
+        "t̪",
+        "t̪ʰ",
+        "w",
+        "ŋ",
+        "ɖ",
+        "ɖʱ",
+        "ɡ",
+        "ɡj",
+        "ɡʱ",
+        "ɦ",
+        "ɳ",
+        "ɽ",
+        "ɽʱ",
+        "ʈ",
+        "ʈʰ"
+      ],
+      "notes": "Conjunct-final schwa retention; see NE_SCHWA_KEEP_b."
+    },
+    {
+      "id": "NE_SCHWA_KEEP_t̪",
+      "phonemes": [
+        "t̪ʌ"
+      ],
+      "surface": "t̪ʌ",
+      "preceded_by_phoneme": [
+        "b",
+        "bʱ",
+        "dz",
+        "dzʱ",
+        "d̪",
+        "d̪ʱ",
+        "j",
+        "k",
+        "ktsʰ",
+        "kʰ",
+        "l",
+        "m",
+        "n",
+        "p",
+        "pʰ",
+        "r",
+        "s",
+        "ts",
+        "tsʰ",
+        "t̪",
+        "t̪ʰ",
+        "w",
+        "ŋ",
+        "ɖ",
+        "ɖʱ",
+        "ɡ",
+        "ɡj",
+        "ɡʱ",
+        "ɦ",
+        "ɳ",
+        "ɽ",
+        "ɽʱ",
+        "ʈ",
+        "ʈʰ"
+      ],
+      "notes": "Conjunct-final schwa retention; see NE_SCHWA_KEEP_b."
+    },
+    {
+      "id": "NE_SCHWA_KEEP_t̪ʰ",
+      "phonemes": [
+        "t̪ʰʌ"
+      ],
+      "surface": "t̪ʰʌ",
+      "preceded_by_phoneme": [
+        "b",
+        "bʱ",
+        "dz",
+        "dzʱ",
+        "d̪",
+        "d̪ʱ",
+        "j",
+        "k",
+        "ktsʰ",
+        "kʰ",
+        "l",
+        "m",
+        "n",
+        "p",
+        "pʰ",
+        "r",
+        "s",
+        "ts",
+        "tsʰ",
+        "t̪",
+        "t̪ʰ",
+        "w",
+        "ŋ",
+        "ɖ",
+        "ɖʱ",
+        "ɡ",
+        "ɡj",
+        "ɡʱ",
+        "ɦ",
+        "ɳ",
+        "ɽ",
+        "ɽʱ",
+        "ʈ",
+        "ʈʰ"
+      ],
+      "notes": "Conjunct-final schwa retention; see NE_SCHWA_KEEP_b."
+    },
+    {
+      "id": "NE_SCHWA_KEEP_w",
+      "phonemes": [
+        "wʌ"
+      ],
+      "surface": "wʌ",
+      "preceded_by_phoneme": [
+        "b",
+        "bʱ",
+        "dz",
+        "dzʱ",
+        "d̪",
+        "d̪ʱ",
+        "j",
+        "k",
+        "ktsʰ",
+        "kʰ",
+        "l",
+        "m",
+        "n",
+        "p",
+        "pʰ",
+        "r",
+        "s",
+        "ts",
+        "tsʰ",
+        "t̪",
+        "t̪ʰ",
+        "w",
+        "ŋ",
+        "ɖ",
+        "ɖʱ",
+        "ɡ",
+        "ɡj",
+        "ɡʱ",
+        "ɦ",
+        "ɳ",
+        "ɽ",
+        "ɽʱ",
+        "ʈ",
+        "ʈʰ"
+      ],
+      "notes": "Conjunct-final schwa retention; see NE_SCHWA_KEEP_b."
+    },
+    {
+      "id": "NE_SCHWA_KEEP_ŋ",
+      "phonemes": [
+        "ŋʌ"
+      ],
+      "surface": "ŋʌ",
+      "preceded_by_phoneme": [
+        "b",
+        "bʱ",
+        "dz",
+        "dzʱ",
+        "d̪",
+        "d̪ʱ",
+        "j",
+        "k",
+        "ktsʰ",
+        "kʰ",
+        "l",
+        "m",
+        "n",
+        "p",
+        "pʰ",
+        "r",
+        "s",
+        "ts",
+        "tsʰ",
+        "t̪",
+        "t̪ʰ",
+        "w",
+        "ŋ",
+        "ɖ",
+        "ɖʱ",
+        "ɡ",
+        "ɡj",
+        "ɡʱ",
+        "ɦ",
+        "ɳ",
+        "ɽ",
+        "ɽʱ",
+        "ʈ",
+        "ʈʰ"
+      ],
+      "notes": "Conjunct-final schwa retention; see NE_SCHWA_KEEP_b."
+    },
+    {
+      "id": "NE_SCHWA_KEEP_ɖ",
+      "phonemes": [
+        "ɖʌ"
+      ],
+      "surface": "ɖʌ",
+      "preceded_by_phoneme": [
+        "b",
+        "bʱ",
+        "dz",
+        "dzʱ",
+        "d̪",
+        "d̪ʱ",
+        "j",
+        "k",
+        "ktsʰ",
+        "kʰ",
+        "l",
+        "m",
+        "n",
+        "p",
+        "pʰ",
+        "r",
+        "s",
+        "ts",
+        "tsʰ",
+        "t̪",
+        "t̪ʰ",
+        "w",
+        "ŋ",
+        "ɖ",
+        "ɖʱ",
+        "ɡ",
+        "ɡj",
+        "ɡʱ",
+        "ɦ",
+        "ɳ",
+        "ɽ",
+        "ɽʱ",
+        "ʈ",
+        "ʈʰ"
+      ],
+      "notes": "Conjunct-final schwa retention; see NE_SCHWA_KEEP_b."
+    },
+    {
+      "id": "NE_SCHWA_KEEP_ɖʱ",
+      "phonemes": [
+        "ɖʱʌ"
+      ],
+      "surface": "ɖʱʌ",
+      "preceded_by_phoneme": [
+        "b",
+        "bʱ",
+        "dz",
+        "dzʱ",
+        "d̪",
+        "d̪ʱ",
+        "j",
+        "k",
+        "ktsʰ",
+        "kʰ",
+        "l",
+        "m",
+        "n",
+        "p",
+        "pʰ",
+        "r",
+        "s",
+        "ts",
+        "tsʰ",
+        "t̪",
+        "t̪ʰ",
+        "w",
+        "ŋ",
+        "ɖ",
+        "ɖʱ",
+        "ɡ",
+        "ɡj",
+        "ɡʱ",
+        "ɦ",
+        "ɳ",
+        "ɽ",
+        "ɽʱ",
+        "ʈ",
+        "ʈʰ"
+      ],
+      "notes": "Conjunct-final schwa retention; see NE_SCHWA_KEEP_b."
+    },
+    {
+      "id": "NE_SCHWA_KEEP_ɡ",
+      "phonemes": [
+        "ɡʌ"
+      ],
+      "surface": "ɡʌ",
+      "preceded_by_phoneme": [
+        "b",
+        "bʱ",
+        "dz",
+        "dzʱ",
+        "d̪",
+        "d̪ʱ",
+        "j",
+        "k",
+        "ktsʰ",
+        "kʰ",
+        "l",
+        "m",
+        "n",
+        "p",
+        "pʰ",
+        "r",
+        "s",
+        "ts",
+        "tsʰ",
+        "t̪",
+        "t̪ʰ",
+        "w",
+        "ŋ",
+        "ɖ",
+        "ɖʱ",
+        "ɡ",
+        "ɡj",
+        "ɡʱ",
+        "ɦ",
+        "ɳ",
+        "ɽ",
+        "ɽʱ",
+        "ʈ",
+        "ʈʰ"
+      ],
+      "notes": "Conjunct-final schwa retention; see NE_SCHWA_KEEP_b."
+    },
+    {
+      "id": "NE_SCHWA_KEEP_ɡj",
+      "phonemes": [
+        "ɡjʌ"
+      ],
+      "surface": "ɡjʌ",
+      "preceded_by_phoneme": [
+        "b",
+        "bʱ",
+        "dz",
+        "dzʱ",
+        "d̪",
+        "d̪ʱ",
+        "j",
+        "k",
+        "ktsʰ",
+        "kʰ",
+        "l",
+        "m",
+        "n",
+        "p",
+        "pʰ",
+        "r",
+        "s",
+        "ts",
+        "tsʰ",
+        "t̪",
+        "t̪ʰ",
+        "w",
+        "ŋ",
+        "ɖ",
+        "ɖʱ",
+        "ɡ",
+        "ɡj",
+        "ɡʱ",
+        "ɦ",
+        "ɳ",
+        "ɽ",
+        "ɽʱ",
+        "ʈ",
+        "ʈʰ"
+      ],
+      "notes": "Conjunct-final schwa retention; see NE_SCHWA_KEEP_b."
+    },
+    {
+      "id": "NE_SCHWA_KEEP_ɡʱ",
+      "phonemes": [
+        "ɡʱʌ"
+      ],
+      "surface": "ɡʱʌ",
+      "preceded_by_phoneme": [
+        "b",
+        "bʱ",
+        "dz",
+        "dzʱ",
+        "d̪",
+        "d̪ʱ",
+        "j",
+        "k",
+        "ktsʰ",
+        "kʰ",
+        "l",
+        "m",
+        "n",
+        "p",
+        "pʰ",
+        "r",
+        "s",
+        "ts",
+        "tsʰ",
+        "t̪",
+        "t̪ʰ",
+        "w",
+        "ŋ",
+        "ɖ",
+        "ɖʱ",
+        "ɡ",
+        "ɡj",
+        "ɡʱ",
+        "ɦ",
+        "ɳ",
+        "ɽ",
+        "ɽʱ",
+        "ʈ",
+        "ʈʰ"
+      ],
+      "notes": "Conjunct-final schwa retention; see NE_SCHWA_KEEP_b."
+    },
+    {
+      "id": "NE_SCHWA_KEEP_ɦ",
+      "phonemes": [
+        "ɦʌ"
+      ],
+      "surface": "ɦʌ",
+      "preceded_by_phoneme": [
+        "b",
+        "bʱ",
+        "dz",
+        "dzʱ",
+        "d̪",
+        "d̪ʱ",
+        "j",
+        "k",
+        "ktsʰ",
+        "kʰ",
+        "l",
+        "m",
+        "n",
+        "p",
+        "pʰ",
+        "r",
+        "s",
+        "ts",
+        "tsʰ",
+        "t̪",
+        "t̪ʰ",
+        "w",
+        "ŋ",
+        "ɖ",
+        "ɖʱ",
+        "ɡ",
+        "ɡj",
+        "ɡʱ",
+        "ɦ",
+        "ɳ",
+        "ɽ",
+        "ɽʱ",
+        "ʈ",
+        "ʈʰ"
+      ],
+      "notes": "Conjunct-final schwa retention; see NE_SCHWA_KEEP_b."
+    },
+    {
+      "id": "NE_SCHWA_KEEP_ɳ",
+      "phonemes": [
+        "ɳʌ"
+      ],
+      "surface": "ɳʌ",
+      "preceded_by_phoneme": [
+        "b",
+        "bʱ",
+        "dz",
+        "dzʱ",
+        "d̪",
+        "d̪ʱ",
+        "j",
+        "k",
+        "ktsʰ",
+        "kʰ",
+        "l",
+        "m",
+        "n",
+        "p",
+        "pʰ",
+        "r",
+        "s",
+        "ts",
+        "tsʰ",
+        "t̪",
+        "t̪ʰ",
+        "w",
+        "ŋ",
+        "ɖ",
+        "ɖʱ",
+        "ɡ",
+        "ɡj",
+        "ɡʱ",
+        "ɦ",
+        "ɳ",
+        "ɽ",
+        "ɽʱ",
+        "ʈ",
+        "ʈʰ"
+      ],
+      "notes": "Conjunct-final schwa retention; see NE_SCHWA_KEEP_b."
+    },
+    {
+      "id": "NE_SCHWA_KEEP_ɽ",
+      "phonemes": [
+        "ɽʌ"
+      ],
+      "surface": "ɽʌ",
+      "preceded_by_phoneme": [
+        "b",
+        "bʱ",
+        "dz",
+        "dzʱ",
+        "d̪",
+        "d̪ʱ",
+        "j",
+        "k",
+        "ktsʰ",
+        "kʰ",
+        "l",
+        "m",
+        "n",
+        "p",
+        "pʰ",
+        "r",
+        "s",
+        "ts",
+        "tsʰ",
+        "t̪",
+        "t̪ʰ",
+        "w",
+        "ŋ",
+        "ɖ",
+        "ɖʱ",
+        "ɡ",
+        "ɡj",
+        "ɡʱ",
+        "ɦ",
+        "ɳ",
+        "ɽ",
+        "ɽʱ",
+        "ʈ",
+        "ʈʰ"
+      ],
+      "notes": "Conjunct-final schwa retention; see NE_SCHWA_KEEP_b."
+    },
+    {
+      "id": "NE_SCHWA_KEEP_ɽʱ",
+      "phonemes": [
+        "ɽʱʌ"
+      ],
+      "surface": "ɽʱʌ",
+      "preceded_by_phoneme": [
+        "b",
+        "bʱ",
+        "dz",
+        "dzʱ",
+        "d̪",
+        "d̪ʱ",
+        "j",
+        "k",
+        "ktsʰ",
+        "kʰ",
+        "l",
+        "m",
+        "n",
+        "p",
+        "pʰ",
+        "r",
+        "s",
+        "ts",
+        "tsʰ",
+        "t̪",
+        "t̪ʰ",
+        "w",
+        "ŋ",
+        "ɖ",
+        "ɖʱ",
+        "ɡ",
+        "ɡj",
+        "ɡʱ",
+        "ɦ",
+        "ɳ",
+        "ɽ",
+        "ɽʱ",
+        "ʈ",
+        "ʈʰ"
+      ],
+      "notes": "Conjunct-final schwa retention; see NE_SCHWA_KEEP_b."
+    },
+    {
+      "id": "NE_SCHWA_KEEP_ʈ",
+      "phonemes": [
+        "ʈʌ"
+      ],
+      "surface": "ʈʌ",
+      "preceded_by_phoneme": [
+        "b",
+        "bʱ",
+        "dz",
+        "dzʱ",
+        "d̪",
+        "d̪ʱ",
+        "j",
+        "k",
+        "ktsʰ",
+        "kʰ",
+        "l",
+        "m",
+        "n",
+        "p",
+        "pʰ",
+        "r",
+        "s",
+        "ts",
+        "tsʰ",
+        "t̪",
+        "t̪ʰ",
+        "w",
+        "ŋ",
+        "ɖ",
+        "ɖʱ",
+        "ɡ",
+        "ɡj",
+        "ɡʱ",
+        "ɦ",
+        "ɳ",
+        "ɽ",
+        "ɽʱ",
+        "ʈ",
+        "ʈʰ"
+      ],
+      "notes": "Conjunct-final schwa retention; see NE_SCHWA_KEEP_b."
+    },
+    {
+      "id": "NE_SCHWA_KEEP_ʈʰ",
+      "phonemes": [
+        "ʈʰʌ"
+      ],
+      "surface": "ʈʰʌ",
+      "preceded_by_phoneme": [
+        "b",
+        "bʱ",
+        "dz",
+        "dzʱ",
+        "d̪",
+        "d̪ʱ",
+        "j",
+        "k",
+        "ktsʰ",
+        "kʰ",
+        "l",
+        "m",
+        "n",
+        "p",
+        "pʰ",
+        "r",
+        "s",
+        "ts",
+        "tsʰ",
+        "t̪",
+        "t̪ʰ",
+        "w",
+        "ŋ",
+        "ɖ",
+        "ɖʱ",
+        "ɡ",
+        "ɡj",
+        "ɡʱ",
+        "ɦ",
+        "ɳ",
+        "ɽ",
+        "ɽʱ",
+        "ʈ",
+        "ʈʰ"
+      ],
+      "notes": "Conjunct-final schwa retention; see NE_SCHWA_KEEP_b."
+    },
+    {
+      "id": "NE_SCHWA_FINAL_b",
+      "phonemes": [
+        "bʌ"
+      ],
+      "surface": "b",
+      "word_initial": false,
+      "word_final": true,
+      "notes": "Word-final schwa deletion. Nepali drops the inherent vowel of a word-final consonant letter that is not the second member of a conjunct: नाम [näm], वन [wʌn], नेपाल [nepäl]. Khatiwada (2009: 379) transcribes the standard-variety passage with no final schwa on such words (bʌtas 'wind', ek 'one'). Deletion is narrower than in Hindi in two ways: it is blocked after a conjunct (see NE_SCHWA_KEEP_b), and Nepali declares no medial VC_CV rule — the Hindi medial rule measurably over-deletes here, so किनभने stays [kinʌbʱʌne]. word_initial=false protects a one-letter monosyllable (न [nʌ]), whose schwa is the word's only vowel."
+    },
+    {
+      "id": "NE_SCHWA_FINAL_bʱ",
+      "phonemes": [
+        "bʱʌ"
+      ],
+      "surface": "bʱ",
+      "word_initial": false,
+      "word_final": true,
+      "notes": "Word-final schwa deletion; see NE_SCHWA_FINAL_b."
+    },
+    {
+      "id": "NE_SCHWA_FINAL_dz",
+      "phonemes": [
+        "dzʌ"
+      ],
+      "surface": "dz",
+      "word_initial": false,
+      "word_final": true,
+      "notes": "Word-final schwa deletion; see NE_SCHWA_FINAL_b."
+    },
+    {
+      "id": "NE_SCHWA_FINAL_dzʱ",
+      "phonemes": [
+        "dzʱʌ"
+      ],
+      "surface": "dzʱ",
+      "word_initial": false,
+      "word_final": true,
+      "notes": "Word-final schwa deletion; see NE_SCHWA_FINAL_b."
+    },
+    {
+      "id": "NE_SCHWA_FINAL_d̪",
+      "phonemes": [
+        "d̪ʌ"
+      ],
+      "surface": "d̪",
+      "word_initial": false,
+      "word_final": true,
+      "notes": "Word-final schwa deletion; see NE_SCHWA_FINAL_b."
+    },
+    {
+      "id": "NE_SCHWA_FINAL_d̪ʱ",
+      "phonemes": [
+        "d̪ʱʌ"
+      ],
+      "surface": "d̪ʱ",
+      "word_initial": false,
+      "word_final": true,
+      "notes": "Word-final schwa deletion; see NE_SCHWA_FINAL_b."
+    },
+    {
+      "id": "NE_SCHWA_FINAL_j",
+      "phonemes": [
+        "jʌ"
+      ],
+      "surface": "j",
+      "word_initial": false,
+      "word_final": true,
+      "notes": "Word-final schwa deletion; see NE_SCHWA_FINAL_b."
+    },
+    {
+      "id": "NE_SCHWA_FINAL_k",
+      "phonemes": [
+        "kʌ"
+      ],
+      "surface": "k",
+      "word_initial": false,
+      "word_final": true,
+      "notes": "Word-final schwa deletion; see NE_SCHWA_FINAL_b."
+    },
+    {
+      "id": "NE_SCHWA_FINAL_ktsʰ",
+      "phonemes": [
+        "ktsʰʌ"
+      ],
+      "surface": "ktsʰ",
+      "word_initial": false,
+      "word_final": true,
+      "notes": "Word-final schwa deletion; see NE_SCHWA_FINAL_b."
+    },
+    {
+      "id": "NE_SCHWA_FINAL_kʰ",
+      "phonemes": [
+        "kʰʌ"
+      ],
+      "surface": "kʰ",
+      "word_initial": false,
+      "word_final": true,
+      "notes": "Word-final schwa deletion; see NE_SCHWA_FINAL_b."
+    },
+    {
+      "id": "NE_SCHWA_FINAL_l",
+      "phonemes": [
+        "lʌ"
+      ],
+      "surface": "l",
+      "word_initial": false,
+      "word_final": true,
+      "notes": "Word-final schwa deletion; see NE_SCHWA_FINAL_b."
+    },
+    {
+      "id": "NE_SCHWA_FINAL_m",
+      "phonemes": [
+        "mʌ"
+      ],
+      "surface": "m",
+      "word_initial": false,
+      "word_final": true,
+      "notes": "Word-final schwa deletion; see NE_SCHWA_FINAL_b."
+    },
+    {
+      "id": "NE_SCHWA_FINAL_n",
+      "phonemes": [
+        "nʌ"
+      ],
+      "surface": "n",
+      "word_initial": false,
+      "word_final": true,
+      "notes": "Word-final schwa deletion; see NE_SCHWA_FINAL_b."
+    },
+    {
+      "id": "NE_SCHWA_FINAL_p",
+      "phonemes": [
+        "pʌ"
+      ],
+      "surface": "p",
+      "word_initial": false,
+      "word_final": true,
+      "notes": "Word-final schwa deletion; see NE_SCHWA_FINAL_b."
+    },
+    {
+      "id": "NE_SCHWA_FINAL_pʰ",
+      "phonemes": [
+        "pʰʌ"
+      ],
+      "surface": "pʰ",
+      "word_initial": false,
+      "word_final": true,
+      "notes": "Word-final schwa deletion; see NE_SCHWA_FINAL_b."
+    },
+    {
+      "id": "NE_SCHWA_FINAL_r",
+      "phonemes": [
+        "rʌ"
+      ],
+      "surface": "r",
+      "word_initial": false,
+      "word_final": true,
+      "notes": "Word-final schwa deletion; see NE_SCHWA_FINAL_b."
+    },
+    {
+      "id": "NE_SCHWA_FINAL_s",
+      "phonemes": [
+        "sʌ"
+      ],
+      "surface": "s",
+      "word_initial": false,
+      "word_final": true,
+      "notes": "Word-final schwa deletion; see NE_SCHWA_FINAL_b."
+    },
+    {
+      "id": "NE_SCHWA_FINAL_ts",
+      "phonemes": [
+        "tsʌ"
+      ],
+      "surface": "ts",
+      "word_initial": false,
+      "word_final": true,
+      "notes": "Word-final schwa deletion; see NE_SCHWA_FINAL_b."
+    },
+    {
+      "id": "NE_SCHWA_FINAL_tsʰ",
+      "phonemes": [
+        "tsʰʌ"
+      ],
+      "surface": "tsʰ",
+      "word_initial": false,
+      "word_final": true,
+      "notes": "Word-final schwa deletion; see NE_SCHWA_FINAL_b."
+    },
+    {
+      "id": "NE_SCHWA_FINAL_t̪",
+      "phonemes": [
+        "t̪ʌ"
+      ],
+      "surface": "t̪",
+      "word_initial": false,
+      "word_final": true,
+      "notes": "Word-final schwa deletion; see NE_SCHWA_FINAL_b."
+    },
+    {
+      "id": "NE_SCHWA_FINAL_t̪ʰ",
+      "phonemes": [
+        "t̪ʰʌ"
+      ],
+      "surface": "t̪ʰ",
+      "word_initial": false,
+      "word_final": true,
+      "notes": "Word-final schwa deletion; see NE_SCHWA_FINAL_b."
+    },
+    {
+      "id": "NE_SCHWA_FINAL_w",
+      "phonemes": [
+        "wʌ"
+      ],
+      "surface": "w",
+      "word_initial": false,
+      "word_final": true,
+      "notes": "Word-final schwa deletion; see NE_SCHWA_FINAL_b."
+    },
+    {
+      "id": "NE_SCHWA_FINAL_ŋ",
+      "phonemes": [
+        "ŋʌ"
+      ],
+      "surface": "ŋ",
+      "word_initial": false,
+      "word_final": true,
+      "notes": "Word-final schwa deletion; see NE_SCHWA_FINAL_b."
+    },
+    {
+      "id": "NE_SCHWA_FINAL_ɖ",
+      "phonemes": [
+        "ɖʌ"
+      ],
+      "surface": "ɖ",
+      "word_initial": false,
+      "word_final": true,
+      "notes": "Word-final schwa deletion; see NE_SCHWA_FINAL_b."
+    },
+    {
+      "id": "NE_SCHWA_FINAL_ɖʱ",
+      "phonemes": [
+        "ɖʱʌ"
+      ],
+      "surface": "ɖʱ",
+      "word_initial": false,
+      "word_final": true,
+      "notes": "Word-final schwa deletion; see NE_SCHWA_FINAL_b."
+    },
+    {
+      "id": "NE_SCHWA_FINAL_ɡ",
+      "phonemes": [
+        "ɡʌ"
+      ],
+      "surface": "ɡ",
+      "word_initial": false,
+      "word_final": true,
+      "notes": "Word-final schwa deletion; see NE_SCHWA_FINAL_b."
+    },
+    {
+      "id": "NE_SCHWA_FINAL_ɡj",
+      "phonemes": [
+        "ɡjʌ"
+      ],
+      "surface": "ɡj",
+      "word_initial": false,
+      "word_final": true,
+      "notes": "Word-final schwa deletion; see NE_SCHWA_FINAL_b."
+    },
+    {
+      "id": "NE_SCHWA_FINAL_ɡʱ",
+      "phonemes": [
+        "ɡʱʌ"
+      ],
+      "surface": "ɡʱ",
+      "word_initial": false,
+      "word_final": true,
+      "notes": "Word-final schwa deletion; see NE_SCHWA_FINAL_b."
+    },
+    {
+      "id": "NE_SCHWA_FINAL_ɦ",
+      "phonemes": [
+        "ɦʌ"
+      ],
+      "surface": "ɦ",
+      "word_initial": false,
+      "word_final": true,
+      "notes": "Word-final schwa deletion; see NE_SCHWA_FINAL_b."
+    },
+    {
+      "id": "NE_SCHWA_FINAL_ɳ",
+      "phonemes": [
+        "ɳʌ"
+      ],
+      "surface": "ɳ",
+      "word_initial": false,
+      "word_final": true,
+      "notes": "Word-final schwa deletion; see NE_SCHWA_FINAL_b."
+    },
+    {
+      "id": "NE_SCHWA_FINAL_ɽ",
+      "phonemes": [
+        "ɽʌ"
+      ],
+      "surface": "ɽ",
+      "word_initial": false,
+      "word_final": true,
+      "notes": "Word-final schwa deletion; see NE_SCHWA_FINAL_b."
+    },
+    {
+      "id": "NE_SCHWA_FINAL_ɽʱ",
+      "phonemes": [
+        "ɽʱʌ"
+      ],
+      "surface": "ɽʱ",
+      "word_initial": false,
+      "word_final": true,
+      "notes": "Word-final schwa deletion; see NE_SCHWA_FINAL_b."
+    },
+    {
+      "id": "NE_SCHWA_FINAL_ʈ",
+      "phonemes": [
+        "ʈʌ"
+      ],
+      "surface": "ʈ",
+      "word_initial": false,
+      "word_final": true,
+      "notes": "Word-final schwa deletion; see NE_SCHWA_FINAL_b."
+    },
+    {
+      "id": "NE_SCHWA_FINAL_ʈʰ",
+      "phonemes": [
+        "ʈʰʌ"
+      ],
+      "surface": "ʈʰ",
+      "word_initial": false,
+      "word_final": true,
+      "notes": "Word-final schwa deletion; see NE_SCHWA_FINAL_b."
+    }
+  ],
+  "positional_graphemes": {
+    "ं": {
+      "before_consonant": [
+        "n"
+      ],
+      "word_final": [
+        "̃"
+      ],
+      "default": [
+        "̃"
+      ]
+    }
+  }
+}

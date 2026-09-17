@@ -1,0 +1,45 @@
+{
+  "code": "bar",
+  "name": "Bavarian",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "stub",
+  "graphemes": {},
+  "allophones": {},
+  "iso639_3": "bar",
+  "glottolog_code": "bava1246",
+  "wikidata_qid": "Q29540",
+  "notes": "STUB (deliberate): the grapheme inventory of Bavarian is NOT specified. Bavarian (Boarisch) is an Upper German variety of Bavaria, Austria and South Tyrol. The English Wikipedia article states plainly that 'there is no common orthographic standard': writers adapt German spelling ad hoc, and Northern, Central and Southern Bavarian differ substantially in their (large) vowel systems, so the same letter has different values per area. Wikipedia does print a pan-dialectal spelling->IPA convention (a=/ɐ/ vs à=/a/ vs å=/ɑ/, ä è é, diphthongs ea ia oa ua ei oi öi ui au ou), but it is an editorial convention of that article, not a published norm, and it commits to no variety; the bar.wikipedia spelling guideline page does not exist. Per the project rule that a spec must name ONE variety plus ONE cited spelling norm, none is adopted and no map is claimed. INPUT CONTRACT (for any future spec): Latin-script, German-convention Bavarian text. See also the de-x-bavarian spec for Bavarian-accented Standard German.",
+  "sources": [
+    {
+      "id": "bavarian_language_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Bavarian language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Bavarian_language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Bavarian_language",
+      "pages": null,
+      "notes": "States that Bavarian has no common orthographic standard; also prints a pan-dialectal spelling->IPA convention that is editorial, not a published norm."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Bavarian_language",
+    "https://bar.wikipedia.org/wiki/Boarisch"
+  ],
+  "parent": "x-clade-germ1287",
+  "ancestors": [
+    {
+      "code": "x-clade-germ1287",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Germanic — the classification node this language sits under."
+    }
+  ],
+  "location": {
+    "latitude": 47.9232,
+    "longitude": 13.246,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Bavarian."
+  }
+}

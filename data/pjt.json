@@ -1,0 +1,74 @@
+{
+  "code": "pjt",
+  "name": "Pitjantjatjara",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "tj": ["c"],
+    "ny": ["ɲ"],
+    "ng": ["ŋ"],
+    "ly": ["ʎ"],
+    "ṯ": ["ʈ"],
+    "ṉ": ["ɳ"],
+    "ḻ": ["ɭ"],
+    "ṟ": ["ɻ"],
+    "rt": ["ʈ"],
+    "rn": ["ɳ"],
+    "rl": ["ɭ"],
+    "aa": ["ɐː"],
+    "ii": ["ɪː"],
+    "uu": ["ʊː"],
+    "p": ["p"],
+    "t": ["t"],
+    "k": ["k"],
+    "m": ["m"],
+    "n": ["n"],
+    "l": ["l"],
+    "r": ["r"],
+    "w": ["w"],
+    "y": ["j"],
+    "a": ["ɐ"],
+    "i": ["ɪ"],
+    "u": ["ʊ"]
+  },
+  "parent": "x-clade-pama1250",
+  "ancestors": [
+    {
+      "code": "x-clade-pama1250",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Descent per Glottolog classification of Pitjantjatjara (pitj1243)."
+    }
+  ],
+  "notes": "Pama-Nyungan (Wati) language of Central Australia, with a well-established standard orthography. Retroflex consonants are written with an underline (ṯ ṉ ḻ ṟ); the common ASCII substitutions rt/rn/rl are also mapped to the same retroflex values. The palatal series is tj/ny/ly, ng is the velar nasal, single r is an alveolar trill/tap and ṟ the retroflex approximant. Long vowels are written by doubling (aa ii uu). Word-initial stress and the intervocalic voicing of stops (unmarked in spelling) are left unencoded. VOWELS: the three-vowel system a/i/u surfaces as the lowered/centralised allophones [ɐ]/[ɪ]/[ʊ] (long aa/ii/uu likewise [ɐː]/[ɪː]/[ʊː]), not the cardinal [a]/[i]/[u] the letters suggest -- attested throughout the WikiPron pjt_latn_narrow gold (e.g. alu [ɐlʊ], ini [ɪnɪ], kuka [kʊkɐ]) and consistent with Western Desert language descriptions of the Wati subgroup (e.g. Goddard, C. (1985), A Grammar of Yankunytjatjara, IAD Press, on the same three-vowel Wati system).",
+  "iso639_3": "pjt",
+  "glottolog_code": null,
+  "sources": [
+    {
+      "id": "pjt_glottolog",
+      "author": "Hammarström, H. et al. (Glottolog 5.0)",
+      "year": 2024,
+      "title": "Glottolog: Pitjantjatjara (pitj1243)",
+      "publisher": "Max Planck Institute for Evolutionary Anthropology",
+      "url": "https://glottolog.org/resource/languoid/id/pitj1243",
+      "pages": null,
+      "notes": "Classification reference.",
+      "wikipedia_url": null
+    },
+    {
+      "id": "pjt_wikipedia",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Pitjantjatjara dialect",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Pitjantjatjara_dialect",
+      "pages": null,
+      "notes": "Phonology and standard orthography reference for the grapheme map.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Pitjantjatjara_dialect"
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Pitjantjatjara_dialect"
+  ]
+}

@@ -1,0 +1,494 @@
+{
+  "code": "tet",
+  "glottolog_code": "tetu1245",
+  "name": "Tetum (Tetun Dili / Tetun Prasa)",
+  "parent": "x-clade-mala1545",
+  "script": "Latin",
+  "quality": "research",
+  "script_type": "alphabet",
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "á": [
+      "a"
+    ],
+    "e": [
+      "e",
+      "ɛ"
+    ],
+    "é": [
+      "e",
+      "ɛ"
+    ],
+    "i": [
+      "i"
+    ],
+    "í": [
+      "i"
+    ],
+    "o": [
+      "o",
+      "ɔ"
+    ],
+    "ó": [
+      "o",
+      "ɔ"
+    ],
+    "u": [
+      "u"
+    ],
+    "ú": [
+      "u"
+    ],
+    "b": [
+      "b"
+    ],
+    "c": [
+      "c"
+    ],
+    "d": [
+      "d"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "h": [
+      "h"
+    ],
+    "j": [
+      "ʒ"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "lh": [
+      "ʎ"
+    ],
+    "ll": [
+      "ʎ"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "nh": [
+      "ɲ"
+    ],
+    "ñ": [
+      "ɲ"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "v": [
+      "v"
+    ],
+    "w": [
+      "w"
+    ],
+    "x": [
+      "ʃ"
+    ],
+    "y": [
+      "j"
+    ],
+    "z": [
+      "z"
+    ],
+    "'": [
+      "",
+      "ʔ"
+    ],
+    "’": [
+      "",
+      "ʔ"
+    ]
+  },
+  "positional_graphemes": {
+    "n": {
+      "word_final": [
+        "n",
+        "ŋ"
+      ]
+    },
+    "s": {
+      "word_final": [
+        "s",
+        "ʃ"
+      ]
+    },
+    "r": {
+      "word_initial": [
+        "r"
+      ],
+      "word_final": [
+        "ɾ",
+        "r"
+      ]
+    },
+    "i": {
+      "before_vowel": [
+        "i",
+        "j"
+      ]
+    }
+  },
+  "allophones": {
+    "a": [
+      "a",
+      "ɐ"
+    ],
+    "e": [
+      "e",
+      "ɛ",
+      "i"
+    ],
+    "ɛ": [
+      "ɛ",
+      "e"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "o",
+      "ɔ",
+      "u"
+    ],
+    "ɔ": [
+      "ɔ",
+      "o"
+    ],
+    "u": [
+      "u",
+      "ʊ"
+    ],
+    "p": [
+      "p"
+    ],
+    "b": [
+      "b",
+      "β",
+      "v"
+    ],
+    "t": [
+      "t"
+    ],
+    "d": [
+      "d",
+      "ɾ"
+    ],
+    "k": [
+      "k",
+      "ʔ"
+    ],
+    "ɡ": [
+      "ɡ"
+    ],
+    "f": [
+      "f",
+      "p"
+    ],
+    "v": [
+      "v",
+      "b"
+    ],
+    "s": [
+      "s",
+      "ʃ",
+      "z"
+    ],
+    "z": [
+      "z",
+      "ʒ"
+    ],
+    "ʃ": [
+      "ʃ",
+      "s"
+    ],
+    "ʒ": [
+      "ʒ",
+      "z",
+      "dʒ"
+    ],
+    "h": [
+      "h",
+      "ɦ",
+      ""
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n",
+      "ŋ"
+    ],
+    "ɲ": [
+      "ɲ",
+      "n"
+    ],
+    "ŋ": [
+      "ŋ"
+    ],
+    "l": [
+      "l",
+      "ɫ"
+    ],
+    "ʎ": [
+      "ʎ",
+      "l"
+    ],
+    "r": [
+      "r",
+      "ɾ"
+    ],
+    "ɾ": [
+      "ɾ",
+      "r"
+    ],
+    "w": [
+      "w"
+    ],
+    "j": [
+      "j"
+    ],
+    "c": [
+      "c"
+    ],
+    "ʔ": [
+      "ʔ",
+      ""
+    ]
+  },
+  "ancestors": [
+    {
+      "code": "id",
+      "role": "adstrate",
+      "weight": 0.2,
+      "notes": "Indonesian adstrate: Indonesian was imposed as an administrative language during occupation (1975–1999); contributed loanwords especially in formal/technical registers."
+    }
+  ],
+  "notes": "Tetun Dili (Tetun Prasa), the Austronesian national and co-official language of Timor-Leste, written in the official orthography declared by Government Decree 1/2004 and curated by the Instituto Nacional de Linguística. Its phonology is STRATIFIED, and the strata are the organising fact of this spec: a small native Austronesian stock and a very large Portuguese loan stratum that brought its own phonemes, clusters and stress patterns with it.\n\nINVENTORY. The maximal consonant inventory is /p b t d k ɡ f v s z ʃ ʒ h m n ɲ r ɾ l ʎ w j/ over five vowels /i e a o u/ (Williams-van Klinken, Hajek & Nordlinger 2002 §2.1.1 Table 2.1, printed p. 8; §2.2.1, printed p. 11; the same table is reproduced as Avram 2021 Table 4, p. 79). Portuguese loans are responsible for /p ɡ v z ʃ ʒ ɲ ʎ r/ and partly /w/ (printed p. 9); speakers with less Portuguese merge /v/-/b/, /ʃ/-/s/, /ʒ/-/z/, /ɲ/-/n/ and /ʎ/-/l/ (printed p. 9), which is why each of those merger targets is declared as a second allophone rather than a separate reading.\n\nNO /ŋ/ AND NO /ʔ/ IN THE DILI INVENTORY. Neither Table 2.1 nor Avram's Table 4 has a velar nasal or a glottal stop. [ŋ] is a word-final variant of /n/ — jardín [ʒarˈdin] ~ [ʒarˈdiŋ] ~ [ʒarˈdĩ] (printed p. 10) — so it is declared positionally and not as a ⟨ng⟩ digraph; ⟨ng⟩ in a loan spells the sequence /nɡ/. The glottal stop is a phoneme of Tetun Terik but not of Dili (§1.7, printed p. 6), while the INL spelling still writes it with an apostrophe (ha'u, ne'ebé). The source names ha'u and hau as spellings of the same Dili word, so ⟨'⟩ reads as nothing FIRST and as [ʔ] second: the stop stays in the lattice for the conservative and Terik-influenced pronunciation the spelling records, but the Dili norm is the one the inventory declares and the one that wins.\n\nTHE PORTUGUESE-DERIVED LETTERS. ⟨x⟩ is /ʃ/ and ⟨j⟩ is /ʒ/ — NOT /dʒ/; a hypercorrect [dʒ] is heard from younger speakers under the influence of Indonesian spelling, and is declared as an allophone (§1.7, printed p. 6; §2.1.3, printed p. 10, janela /ʒaˈnela/, ajuda [aˈʒuda] ~ [aˈdʒuda]). The palatals are written ⟨nh⟩ /ɲ/ and ⟨lh⟩ /ʎ/ after Portuguese; Hull, whose work the INL standard is based on, recommends ⟨ñ⟩ and ⟨ll⟩ instead, as in medieval Portuguese (reported in footnote 3 on printed p. 6), so both pairs of spellings are mapped. ⟨c⟩ appears only in Indonesian loans, where it spells the voiceless palatal stop /c/ (printed p. 7).\n\nSTRESS AND THE ACUTE ACCENT. Stress is contrastive (/ˈkabas/ 'cotton' vs /kaˈbas/ 'shoulder') but falls on the penultimate syllable in most words; final stress occurs in both native and borrowed items, and antepenultimate stress only in a small set of Portuguese loans (§2.3, printed p. 12; Avram 2021 §9, p. 93, múzika, polísia, úmidu). The orthography marks every non-penultimate stress, and every stressed monosyllable, with an acute accent — Timór, hát, fó, ne'ebé, kintál (§1.7, printed p. 7) — so ⟨á é í ó ú⟩ are graphemes of the language and are declared as stress-marking vowels. The accent marks prominence only, not vowel quality, so an accented vowel keeps the readings of its plain counterpart.\n\nVOWEL LENGTH. All vowels lengthen in stressed monosyllables and in stressed word-final syllables, and stay short elsewhere (§2.3, printed p. 12). This is the one process here that needs stress context, so it is expressed as allophone rules over the last nucleus of the word rather than positionally.\n\nDIPHTHONGS. The rising sequences ⟨ei ai oi ui au eu⟩ count as a single nucleus for stress placement — kadeira and ideia are stressed on the ⟨ei⟩ (§1.7, printed p. 7) — and are declared under stress.diphthongs. They are transcribed as vowel sequences, not glides, following the sources' own notation (koi [ˈkoi], foun [ˈfouŋ], §2.2.1, printed p. 11). In ordinary speech many loan diphthongs monophthongise: padeiru [paˈdeɾu] ~ [paˈdɾu], tezoura (§2.2.2, printed p. 12; Avram 2021 §6.2, p. 83).\n\nNASAL VOWELS ARE NOT BORROWED. Portuguese nasal vowels are UNPACKED into an oral vowel plus a nasal consonant rather than imported as nasal vowels: jardim > jardín [ʒaɾdin] (Avram 2021 §6.1, p. 82); the grammar spells the reflex of comparação komparasaun for the same reason (§1.7, printed p. 6). No nasal vowel is declared. Vowels adjacent to nasals are phonetically nasalised, an allophonic detail below this spec's transcription level (§2.2.3, printed p. 12).\n\nRHOTICS. The trill /r/ and the tap /ɾ/ contrast for some speakers only, in intervocalic position in Portuguese loans, and the orthography does not distinguish them; the trill is preferred syllable-initially and the tap is usual word-finally, fiar [ˈfiaɾ] (§2.1.4, printed pp. 10-11).\n\nVARIETIES. Tetun Terik, the conservative rural variety of which Tetun Dili is historically an offshoot, has a markedly smaller inventory and phonemic /ʔ/; it is described separately in tet-x-terik. The Fehan dialect of West Timor is described by van Klinken (1999). Hull's 'minimal inventory' of Dili itself — the colloquial register of most speakers, 11 consonants, without /ʔ/ and with /w/ assimilated to /b/ (Avram 2021 Table 3, p. 79) — is not a separate spec: it is the low end of the inter-speaker variation the allophone lists already carry.\n\nTHE THREE ⟨nh⟩ WORDS THAT ARE NOT /ɲ/. Tetun Dili has exactly three bimorphemic lexemes in which ⟨nh⟩ is the sequence /n/ + /h/ rather than the palatal nasal — bainhira 'when', bainhát 'in four days', bainhitu 'in seven days', all built on bain 'day' — and the grammar hyphenates them for that reason (footnote 3 on printed p. 6). No sequence of /l/ + /h/ occurs at all, so ⟨lh⟩ needs no such list. The three are declared as word exceptions for the unhyphenated spellings.",
+  "sources": [
+    {
+      "id": "williams_van_klinken2002",
+      "author": "Williams-van Klinken, C., Hajek, J. & Nordlinger, R.",
+      "year": 2002,
+      "title": "Tetun Dili: A grammar of an East Timorese language",
+      "publisher": "Pacific Linguistics 528, The Australian National University",
+      "url": "https://doi.org/10.15144/PL-528",
+      "pages": "6-13",
+      "notes": "The reference grammar of Tetun Dili and the source of every phonological claim in this spec. Open access (online edition licensed CC BY-SA 4.0); printed pages 6-13 carry §1.7 (orthography) and chapter 2 (phonology). In the PDF the DOI resolves to, the printed folio runs 14 behind the PDF page index — PDF page 23 is printed page 9 — and the running head alternates between the chapter title and the page number."
+    },
+    {
+      "id": "avram2021",
+      "author": "Avram, A. A.",
+      "year": 2021,
+      "title": "Contact-induced variation in Tetun Dili phonology",
+      "publisher": "Acta Linguistica Asiatica 11(1):75-98",
+      "url": "https://doi.org/10.4312/ala.11.1.75-98",
+      "pages": "75-98",
+      "notes": "Open-access survey of the Portuguese stratum: imported phonemes, depalatalisation, nasal-vowel unpacking, new clusters and antepenultimate stress, with the Tetun Terik inventory in Tables 1-2 on p. 78. Printed folio coincides with the article's own pagination."
+    },
+    {
+      "id": "van_klinken1999",
+      "author": "van Klinken, C.",
+      "year": 1999,
+      "title": "A grammar of the Fehan dialect of Tetun: An Austronesian language of West Timor",
+      "publisher": "Pacific Linguistics, The Australian National University",
+      "url": null,
+      "pages": null,
+      "notes": "Descriptive grammar of a Tetun Terik dialect; edition not consulted."
+    },
+    {
+      "id": "hull2001",
+      "author": "Hull, G.",
+      "year": 2001,
+      "title": "Timor-Leste: Identity, Language and Education",
+      "publisher": "University of Western Australia",
+      "url": null,
+      "pages": null,
+      "notes": "Edition not consulted; cited for the language situation, not for a rule."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Tetum_language",
+    "https://tet.wikipedia.org/wiki/Lia-tetun"
+  ],
+  "urls": [
+    "https://en.wikipedia.org/wiki/Tetum_language",
+    "https://glottolog.org/resource/languoid/id/tetu1245",
+    "https://www.ethnologue.com/language/tet/",
+    "https://doi.org/10.15144/PL-528",
+    "https://doi.org/10.4312/ala.11.1.75-98"
+  ],
+  "timespan": {
+    "start_year": 1800,
+    "end_year": null
+  },
+  "iso639_3": "tet",
+  "wikidata_qid": "Q34125",
+  "phoible_id": "tetu1245",
+  "wals_code": "ttn",
+  "location": {
+    "latitude": -9.11217,
+    "longitude": 125.528,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Tetum."
+  },
+  "stress": {
+    "default_position": -2,
+    "marked_vowels": [
+      "á",
+      "é",
+      "í",
+      "ó",
+      "ú"
+    ],
+    "stress_mark": "ˈ",
+    "diphthongs": [
+      "ei",
+      "ai",
+      "oi",
+      "ui",
+      "au",
+      "eu",
+      "ou"
+    ],
+    "notes": "Penultimate in most words, with contrastive final stress and, in a small set of Portuguese loans, antepenultimate stress (Williams-van Klinken, Hajek & Nordlinger 2002 §2.3, printed p. 12). Every departure from penultimate stress, and every stressed monosyllable, carries an acute accent in the orthography (§1.7, printed p. 7: Timór, hát), which is what marked_vowels reads. The rising sequences are single nuclei for stress placement, so kadeira and ideia are stressed on the ⟨ei⟩ (§1.7, printed p. 7); a sequence that is genuinely disyllabic is written with its own accent instead (saúde). ⟨ou⟩ joins the five listed there on the strength of the grammar's own transcriptions, senoura [seˈnoura] (§2.2.2, printed p. 12) and foun [ˈfouŋ] (§2.2.1, printed p. 11). The syllable template is (C)(C)V(V)(C) (§2.4, printed p. 13): every word-initial cluster attested for either stratum is CC — the native /kb kd kl km kn kr/ and the Portuguese stop-or-/f/ plus liquid sets, /ps/ and /pn/ (Avram 2021 §8.1, pp. 90-92) — which is what constrain_onsets reads off the grapheme table."
+  },
+  "orthography_standard": {
+    "name": "Matadalan Ortográfiku ba Tetun Ofisiál",
+    "authority": "Instituto Nacional de Linguística, Universidade Nacional Timor Lorosa'e",
+    "year": 2004,
+    "url": null,
+    "notes": "Declared the official orthography of Tetun by Government Decree 1/2004; the standard is based on Hull's work and the INL is its custodian. It writes the glottal stop with an apostrophe, marks non-penultimate stress with an acute accent, and takes ⟨x j⟩ and the palatal digraphs over from Portuguese. Hull recommends ⟨ñ⟩ and ⟨ll⟩ where the Dili Institute of Technology convention writes ⟨nh⟩ and ⟨lh⟩ (Williams-van Klinken, Hajek & Nordlinger 2002, footnote 3 on printed p. 6); both are mapped, so text in either convention reads correctly."
+  },
+  "allophone_rules": [
+    {
+      "id": "TET_LENGTHEN_STRESSED_FINAL_A",
+      "phonemes": [
+        "a"
+      ],
+      "surface": "aː",
+      "stress": "stressed",
+      "followed_by_nucleus": false,
+      "notes": "All vowels are lengthened in stressed monosyllables and in stressed word-final syllables, while unstressed and non-final stressed vowels stay short: hát [ˈhaːt] 'four', kabás [kaˈbaːs] 'shoulder', haré [haˈreː] 'see' against [haˈkarak] 'want', [aˈmerika] 'America' (Williams-van Klinken, Hajek & Nordlinger 2002 §2.3, printed p. 12). One rule per vowel, because a rule rewrites to a single surface form."
+    },
+    {
+      "id": "TET_LENGTHEN_STRESSED_FINAL_E",
+      "phonemes": [
+        "e"
+      ],
+      "surface": "eː",
+      "stress": "stressed",
+      "followed_by_nucleus": false,
+      "notes": "Same process as TET_LENGTHEN_STRESSED_FINAL_A."
+    },
+    {
+      "id": "TET_LENGTHEN_STRESSED_FINAL_OPEN_E",
+      "phonemes": [
+        "ɛ"
+      ],
+      "surface": "ɛː",
+      "stress": "stressed",
+      "followed_by_nucleus": false,
+      "notes": "Same process as TET_LENGTHEN_STRESSED_FINAL_A."
+    },
+    {
+      "id": "TET_LENGTHEN_STRESSED_FINAL_I",
+      "phonemes": [
+        "i"
+      ],
+      "surface": "iː",
+      "stress": "stressed",
+      "followed_by_nucleus": false,
+      "preceded_by": "consonant",
+      "notes": "Same process as TET_LENGTHEN_STRESSED_FINAL_A. /i/ and /u/ additionally require a consonant on the left: they are the only vowels that occur as the second element of a declared diphthong, where they are an offglide and not the nucleus the process targets (hau [ˈhau], koi [ˈkoi], §2.2.1, printed p. 11)."
+    },
+    {
+      "id": "TET_LENGTHEN_STRESSED_FINAL_O",
+      "phonemes": [
+        "o"
+      ],
+      "surface": "oː",
+      "stress": "stressed",
+      "followed_by_nucleus": false,
+      "notes": "Same process as TET_LENGTHEN_STRESSED_FINAL_A."
+    },
+    {
+      "id": "TET_LENGTHEN_STRESSED_FINAL_OPEN_O",
+      "phonemes": [
+        "ɔ"
+      ],
+      "surface": "ɔː",
+      "stress": "stressed",
+      "followed_by_nucleus": false,
+      "notes": "Same process as TET_LENGTHEN_STRESSED_FINAL_A."
+    },
+    {
+      "id": "TET_LENGTHEN_STRESSED_FINAL_U",
+      "phonemes": [
+        "u"
+      ],
+      "surface": "uː",
+      "stress": "stressed",
+      "followed_by_nucleus": false,
+      "preceded_by": "consonant",
+      "notes": "Same process as TET_LENGTHEN_STRESSED_FINAL_A. /i/ and /u/ additionally require a consonant on the left: they are the only vowels that occur as the second element of a declared diphthong, where they are an offglide and not the nucleus the process targets (hau [ˈhau], koi [ˈkoi], §2.2.1, printed p. 11)."
+    }
+  ],
+  "phonemes": [
+    "i",
+    "e",
+    "a",
+    "o",
+    "u",
+    "p",
+    "b",
+    "t",
+    "d",
+    "k",
+    "ɡ",
+    "f",
+    "v",
+    "s",
+    "z",
+    "ʃ",
+    "ʒ",
+    "h",
+    "m",
+    "n",
+    "ɲ",
+    "r",
+    "ɾ",
+    "l",
+    "ʎ",
+    "w",
+    "j"
+  ],
+  "constrain_onsets": true,
+  "word_exceptions": {
+    "bainhira": "bainˈhira",
+    "bainhát": "bainˈhaːt",
+    "bainhitu": "bainˈhitu"
+  }
+}

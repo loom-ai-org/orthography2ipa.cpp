@@ -1,0 +1,105 @@
+{
+  "code": "eu-x-nafarra-beherea",
+  "name": "Lower Navarrese Basque",
+  "script": "Latin",
+  "graphemes_base": "eu",
+  "allophones_base": "eu",
+  "positional_graphemes_base": "eu",
+  "allophones": {
+    "p": [
+      "p",
+      "pʰ"
+    ],
+    "t": [
+      "t",
+      "tʰ"
+    ],
+    "k": [
+      "k",
+      "kʰ"
+    ],
+    "h": [
+      "h"
+    ]
+  },
+  "parent": "eu",
+  "glottolog_code": null,
+  "ancestors": [
+    {
+      "code": "eu",
+      "role": "parent",
+      "weight": 0.9,
+      "notes": "Lower Navarrese inherits the standard Basque grapheme base and is typologically intermediate, sharing aspiration features with Souletin while retaining core Batua consonantism."
+    }
+  ],
+  "notes": "Lower Navarrese (Behe-Nafar). Spoken in Basse-Navarre (Pyrénées-Atlantiques, France). In Zuazo's classification it forms, together with Lapurdian, the single Navarro-Lapurdian dialect; phonologically it is an eastern (continental) aspirating variety. VALIDATED against Hualde (2018), 'Aspiration in Basque'. Aspiration is preserved: the laryngeal fricative /h/ is a productive phoneme (Hualde 2018: 1-3), and voiceless stops have aspirated allophones/variants [pʰ tʰ kʰ] whose distribution is constrained to the onset of a stressed syllable within a two-syllable window near the start of the word, reflecting an older stress-conditioned aspiration (Michelena FHV, as reported in Hualde 2018: 5-6). These aspirated stops are less systematically phonemic than in Souletin, where they form a full three-way contrast (Hualde 2018: 2). The three-way sibilant contrast /s̻ s̺ ʃ/ of the base is retained. NOTE (engine limit): the exact stress-window restriction on aspirated stops is not expressed at the grapheme level; [pʰ tʰ kʰ] are listed as conditioned variants only.",
+  "quality": "research",
+  "urls": [
+    "https://en.wikipedia.org/wiki/Lower_Navarrese_dialect",
+    "https://glottolog.org/resource/languoid/id/lowe1402"
+  ],
+  "script_type": "alphabet",
+  "sources": [
+    {
+      "id": "hualde2018_aspiration",
+      "author": "Hualde, J.I.",
+      "year": 2018,
+      "title": "Aspiration in Basque",
+      "publisher": "Papers in Historical Phonology 3",
+      "url": "https://doi.org/10.2218/pihph.3.2018.2602",
+      "pages": "1-27",
+      "notes": "Primary read source: preservation of /h/ (pp.1-3), stress-window distribution of aspirated stops (pp.5-6), contrast with the Souletin three-way system (p.2)."
+    },
+    {
+      "id": "hualde_ortiz_de_urbina2003",
+      "author": "Hualde, J.I. & Ortiz de Urbina, J. (eds.)",
+      "year": 2003,
+      "title": "A Grammar of Basque",
+      "publisher": "Mouton de Gruyter",
+      "url": null,
+      "pages": "15-65 (Hualde, 'Segmental phonology')",
+      "notes": null
+    },
+    {
+      "id": "saltarelli1988",
+      "author": "Saltarelli, M.",
+      "year": 1988,
+      "title": "Basque",
+      "publisher": "Croom Helm",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "ladefoged_maddieson1996",
+      "author": "Ladefoged, P. & Maddieson, I.",
+      "year": 1996,
+      "title": "The Sounds of the World's Languages",
+      "publisher": "Blackwell",
+      "url": null,
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Lower_Navarrese_dialect",
+    "https://eu.wikipedia.org/wiki/Nafar-lapurtera",
+    "https://es.wikipedia.org/wiki/Dialecto_navarro-labortano_del_euskera"
+  ],
+  "timespan": {
+    "start_year": 1600,
+    "end_year": null
+  },
+  "iso639_3": "eus",
+  "location": {
+    "latitude": 43.166667,
+    "longitude": -1.233333,
+    "source": "wikidata",
+    "notes": "Lower Navarre (Basse-Navarre, Pyrénées-Atlantiques) — the historical province the dialect is named for. [Wikidata Q638503 P625]"
+  },
+  "graphemes": {
+    "h": [
+      "h"
+    ]
+  }
+}

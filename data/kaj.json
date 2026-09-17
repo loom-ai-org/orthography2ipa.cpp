@@ -1,0 +1,73 @@
+{
+  "code": "kaj",
+  "name": "Jju",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "stub",
+  "graphemes": {},
+  "allophones": {},
+  "notes": "STUB — DELIBERATELY LEFT UNFILLED. Jju (Du̱ryem Jju; Tyap: Jhyuo; Hausa: Kaje, Kache) is a Plateau (Tyapic, Atlantic-Congo) language of the Bajju people of Kaduna State, Nigeria (~600,000 speakers). WHY STILL A STUB: the phoneme inventory is documented (McKinney 1990, reproduced in the Wikipedia phonology tables — seven vowels /i e ɨ ə a o u/ plus long /aː oː/; a fortis-lenis (tense) contrast; a three-way plain / labialised [ʷ] / palatalised [ʲ] contrast on most consonants; allophonic palatalisation before front vowels and labialisation before rounded vowels), but NO normative letter-to-IPA table could be obtained. The one orthography statement referenced in the literature — Hyuwa, D. (1986), 'Kaje orthography', in Orthographies of Nigerian Languages, Manual 3/4, National Language Centre, Lagos — is not available online, and Omniglot's Jju alphabet chart is published only as an image with no machine-readable letter-to-sound values. What IS known about the writing system: Latin script; fortis consonants are written by DOUBLING the letter (hence the name ⟨Jju⟩); a consonant followed by ⟨w⟩ is labialised and one followed by ⟨y⟩ is palatalised; letters with a combining macron below occur (Ba̱jju, Ka̱jju, Du̱ryem). Filling the map would mean guessing the values of the doubled, macron-below and Cw/Cy sequences, so no graphemes are recorded: an honest stub beats a fabricated map. TO UNBLOCK: obtain Hyuwa (1986) or a current Bajju literacy / Bible-translation orthography guide. Jju is a Tyapic lect and the Tyap Literacy Committee chart (see spec kcg) is a plausible but UNVERIFIED starting point — it must not be copied over without a Jju-specific source. INPUT CONTRACT (when filled): Latin-script Jju orthography, already normalised. TONE: Jju is tonal and tone is not systematically written; unwritten tone would NOT be recoverable from the orthography. Wikidata supplies no ISO 639-3 or Glottolog code for this item (which is the Jju Wikipedia project), so those fields stay null rather than guessed; wikidata_qid likewise left unset.",
+  "iso639_3": null,
+  "glottolog_code": null,
+  "wikidata_qid": null,
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Jju_Wikipedia"
+  ],
+  "sources": [
+    {
+      "id": "jju_wikipedia_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Jju Wikipedia",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Jju_Wikipedia",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Jju_Wikipedia",
+      "pages": null,
+      "notes": "Overview of the language, script and orthography."
+    },
+    {
+      "id": "jju_lang_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Jju language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Jju_language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Jju_language",
+      "pages": null,
+      "notes": "Phonology section (vowel and consonant charts after McKinney 1990). Contains NO letter-to-IPA orthography table, which is why this spec remains a stub."
+    },
+    {
+      "id": "mckinney1990",
+      "author": "McKinney, Carol",
+      "year": 1990,
+      "title": "Rethinking the concept of tenseness: Kaje (Jju) phonology",
+      "publisher": "Journal of West African Languages",
+      "url": null,
+      "pages": "256-262",
+      "notes": "Source of the phoneme inventory: 7 vowels, fortis-lenis (tense) contrast, plain/labialised/palatalised three-way consonant contrast, allophonic aspiration. Phonemic, not orthographic."
+    },
+    {
+      "id": "hyuwa1986",
+      "author": "Hyuwa, D.",
+      "year": 1986,
+      "title": "Kaje orthography",
+      "publisher": "National Language Centre, Lagos (Orthographies of Nigerian Languages, Manual 3/4)",
+      "url": null,
+      "pages": "72-99",
+      "notes": "The normative Jju orthography statement. NOT OBTAINED — not available online; required before graphemes can be filled."
+    }
+  ],
+  "timespan": {
+    "start_year": 1930,
+    "end_year": null
+  },
+  "parent": "x-clade-atla1278",
+  "ancestors": [
+    {
+      "code": "x-clade-atla1278",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Atlantic-Congo — the classification node this language sits under."
+    }
+  ]
+}

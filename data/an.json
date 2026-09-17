@@ -1,0 +1,621 @@
+{
+  "code": "an",
+  "glottolog_code": "arag1245",
+  "name": "Aragonese",
+  "script": "Latin",
+  "quality": "research",
+  "script_type": "alphabet",
+  "parent": "x-clade-iberrom",
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "á": [
+      "a"
+    ],
+    "e": [
+      "e"
+    ],
+    "é": [
+      "e"
+    ],
+    "è": [
+      "ɛ"
+    ],
+    "i": [
+      "i"
+    ],
+    "í": [
+      "i"
+    ],
+    "o": [
+      "o"
+    ],
+    "ó": [
+      "o"
+    ],
+    "ò": [
+      "ɔ"
+    ],
+    "u": [
+      "u"
+    ],
+    "ú": [
+      "u"
+    ],
+    "ü": [
+      "u"
+    ],
+    "b": [
+      "b"
+    ],
+    "c": [
+      "k",
+      "θ",
+      "s"
+    ],
+    "ch": [
+      "tʃ"
+    ],
+    "d": [
+      "d"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɡ",
+      "tʃ",
+      "x"
+    ],
+    "gu": [
+      "ɡ"
+    ],
+    "h": [
+      ""
+    ],
+    "j": [
+      "x",
+      "tʃ"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l",
+      "ʎ"
+    ],
+    "ll": [
+      "ʎ"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ñ": [
+      "ɲ"
+    ],
+    "ny": [
+      "ɲ"
+    ],
+    "p": [
+      "p"
+    ],
+    "qu": [
+      "k"
+    ],
+    "r": [
+      "ɾ",
+      "r"
+    ],
+    "rr": [
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "ts": [
+      "ts"
+    ],
+    "tz": [
+      "θ",
+      "ts"
+    ],
+    "v": [
+      "b"
+    ],
+    "w": [
+      "w",
+      "b"
+    ],
+    "x": [
+      "ʃ",
+      "ks"
+    ],
+    "ix": [
+      "ʃ",
+      "iʃ",
+      "jʃ"
+    ],
+    "y": [
+      "ʝ",
+      "j",
+      "i"
+    ],
+    "z": [
+      "θ",
+      "s"
+    ],
+    "güe": [
+      "ɡwe"
+    ],
+    "güi": [
+      "ɡwi"
+    ],
+    "ie": [
+      "je"
+    ],
+    "ue": [
+      "we"
+    ],
+    "ia": [
+      "ja"
+    ],
+    "io": [
+      "jo"
+    ],
+    "ua": [
+      "wa"
+    ],
+    "uo": [
+      "wo"
+    ],
+    "ai": [
+      "aj"
+    ],
+    "ei": [
+      "ej"
+    ],
+    "oi": [
+      "oj"
+    ],
+    "au": [
+      "aw"
+    ],
+    "eu": [
+      "ew"
+    ],
+    "iu": [
+      "ju"
+    ],
+    "ui": [
+      "wi"
+    ]
+  },
+  "allophones": {
+    "p": [
+      "p"
+    ],
+    "b": [
+      "b",
+      "β"
+    ],
+    "θ": [
+      "θ"
+    ],
+    "t": [
+      "t"
+    ],
+    "d": [
+      "d",
+      "ð"
+    ],
+    "k": [
+      "k"
+    ],
+    "ɡ": [
+      "ɡ",
+      "ɣ"
+    ],
+    "tʃ": [
+      "tʃ"
+    ],
+    "ts": [
+      "ts"
+    ],
+    "f": [
+      "f"
+    ],
+    "s": [
+      "s"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "m": [
+      "m"
+    ],
+    "ɲ": [
+      "ɲ"
+    ],
+    "l": [
+      "l",
+      "ʎ"
+    ],
+    "ʎ": [
+      "ʎ"
+    ],
+    "ɾ": [
+      "ɾ"
+    ],
+    "r": [
+      "r"
+    ],
+    "j": [
+      "j"
+    ],
+    "w": [
+      "w"
+    ],
+    "a": [
+      "a"
+    ],
+    "e": [
+      "e",
+      "ɛ"
+    ],
+    "ɛ": [
+      "ɛ"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "o",
+      "ɔ"
+    ],
+    "ɔ": [
+      "ɔ"
+    ],
+    "u": [
+      "u"
+    ]
+  },
+  "positional_graphemes": {
+    "b": {
+      "intervocalic": [
+        "β"
+      ]
+    },
+    "d": {
+      "intervocalic": [
+        "ð"
+      ],
+      "word_final": [
+        "ð",
+        ""
+      ]
+    },
+    "g": {
+      "before_e": [
+        "x",
+        "tʃ"
+      ],
+      "before_i": [
+        "x",
+        "tʃ"
+      ],
+      "intervocalic": [
+        "ɣ"
+      ]
+    },
+    "c": {
+      "before_e": [
+        "θ",
+        "s"
+      ],
+      "before_i": [
+        "θ",
+        "s"
+      ]
+    },
+    "v": {
+      "intervocalic": [
+        "β"
+      ]
+    },
+    "r": {
+      "word_initial": [
+        "r"
+      ],
+      "intervocalic": [
+        "ɾ"
+      ],
+      "before_consonant": [
+        "ɾ"
+      ],
+      "word_final": [
+        "ɾ"
+      ]
+    },
+    "l": {
+      "onset": [
+        "l",
+        "ʎ"
+      ]
+    },
+    "gu": {
+      "before_a": [
+        "ɡw"
+      ],
+      "before_o": [
+        "ɡw"
+      ],
+      "before_e": [
+        "ɡ"
+      ],
+      "before_i": [
+        "ɡ"
+      ],
+      "default": [
+        "ɡ"
+      ]
+    }
+  },
+  "ancestors": [
+    {
+      "code": "la-x-hispania",
+      "role": "parent",
+      "weight": 0.72,
+      "notes": "Hispanic Vulgar Latin: primary ancestor. Aragonese emerged as a distinct variety from Navarrese-Aragonese (narbonensis zone) in the Kingdom of Aragon (founded 9th c. CE), descending from the Latin of the Ebro basin and Pyrenean valleys."
+    },
+    {
+      "code": "oc",
+      "role": "adstrate",
+      "weight": 0.08,
+      "notes": "Occitan (Gascon/Languedocian) adstrate: the strongest external influence on Aragonese. The Pyrenean border zone with Gascony meant sustained contact. Many Aragonese lexical items, loanwords, and phonological features (preservation of /v/ ≠ /b/, /ʃ/ for ⟨x⟩, affricate /ts/ /dz/ in some registers) reflect Occitan/Gascon influence. The medieval troubadour tradition brought Occitan literary prestige. Benasquese (patués) in the Benasque valley is an extreme contact variety."
+    },
+    {
+      "code": "xce",
+      "role": "substrate",
+      "weight": 0.06,
+      "notes": "Celtiberian substrate: the pre-Roman population of the Ebro basin included Celtiberians (Belos, Titos, Lusones) and Iberians. Some Aragonese words may derive from this substrate, and Celtiberian phonotactics may have influenced Latin adoption patterns."
+    },
+    {
+      "code": "xib",
+      "role": "substrate",
+      "weight": 0.04,
+      "notes": "Iberian substrate: the lower Ebro basin (Zaragoza, Huesca area) was heavily Iberian-speaking before Romanisation. Iberian may have contributed substrate features to the Aragonese vowel system and some lexical items."
+    },
+    {
+      "code": "xaq",
+      "role": "substrate",
+      "weight": 0.04,
+      "notes": "Basque/Aquitanian substrate: the Pyrenean zone of Aragon (Ansó, Hecho, Broto valleys) was Basque-speaking in the early medieval period. Basque substrate influence is proposed for some phonological features of Pyrenean Aragonese dialects."
+    },
+    {
+      "code": "got",
+      "role": "superstrate",
+      "weight": 0.03,
+      "notes": "Visigothic superstrate: shared pan-Iberian overlay; some Aragonese Germanic loanwords may enter through the Frankish/Carolingian frontier rather than Visigothic transmission."
+    },
+    {
+      "code": "xaa",
+      "role": "adstrate",
+      "weight": 0.03,
+      "notes": "Andalusi Arabic adstrate: the Ebro basin was under Moorish control (~714–1118 CE, Zaragoza reconquered 1118). Arabic loanwords in Aragonese include agricultural and irrigation terms (acequia, zafa); place names reflect this period (Zaragoza < Saraqusta, Huesca < Wašqa)."
+    }
+  ],
+  "notes": "Aragonese (aragonés, also called fabla aragonesa) — an Ibero-Romance language of the autonomous community of Aragon, Spain. Critically endangered: approximately 10,000–12,000 active speakers (2011 census), with perhaps 25,000–50,000 passive speakers, mainly in the Pyrenean valleys (Ansó, Hecho, Tena, Benasque, Bielsa) and Somontano area. Recognized as a minority language by Aragon's 2009 language law (Ley de Lenguas). KEY FEATURES distinguishing Aragonese from Castilian Spanish: (1) F- PRESERVED: Latin initial F- retained as /f/ (feito 'done' < FACTU, fiyo 'son' < FILIU, fablar 'to speak' < FABULARE) — contrast Castilian h- (hecho, hijo, hablar). This is the most salient isogloss separating Aragonese from Castilian. (2) Distinción: /θ/ preserved for c+e/i and z; seseo only in eastern dialects — ⟨c⟩ before e/i and ⟨z⟩ → /s/ (as in Galician, Southern Spanish, Catalan); distinción absent. (3) /ʎ/ PRESERVED: ⟨ll⟩ = /ʎ/ — no yeísmo; /ʎ/ robustly maintained in traditional varieties (influence of Catalan and Occitan reinforcing the lateral palatal). (4) /v/ ≠ /b/ (partial): traditional Aragonese preserves the distinction between ⟨b⟩ /b/ and ⟨v⟩ /v/ in some varieties — contrast Castilian betacism. Influence of Occitan (which preserves /v/) and possibly Catalan. (5) ⟨x⟩ = /ʃ/ and ⟨ix⟩ = /ʃ/: as in Catalan and Galician (Aragons. 'xa' [ʃa] 'already', 'baixo' [ˈbaʃo] 'low'). (6) AFFRICATE ⟨ts⟩ and ⟨tz⟩ /ts/, /dz/ in some registers and Pyrenean varieties — Occitan contact. (7) ⟨ny⟩ = /ɲ/ alongside ⟨ñ⟩ (Catalan orthographic convention). (8) DIPHTHONGISATION: Latin Ĕ/Ŏ → /je/, /we/ (ie/ue) systematically, as in Castilian and Asturleonese — 'piedra', 'bueno'. (9) PLURAL in -s (no Castilian -os/-as ending variation); Aragonese morphology more analytic in some Pyrenean dialects. DIALECTS: Ansotano (Ansó valley), Cheso (Hecho), Benasquese/Patués (Benasque — extreme Gascon contact variety, classified by some as a Gascon-Aragonese hybrid), Tensino (Tena valley), Belsetán (Bielsa), Sobrarbe, Somontanés. The unified written standard 'Grafía de Uesca' (1987) is used for literary production. Sources: Nagore Laín (2001) *El aragonés del siglo XIV*, Arnal Purroy & Enguita Utrilla (1993), Lázaro Carreter (1945), ELA (Estudio de la Lingüística Aragonesa).",
+  "urls": [
+    "https://en.wikipedia.org/wiki/Aragonese_language",
+    "https://an.wikipedia.org/wiki/Idioma_aragon%C3%A9s",
+    "https://es.wikipedia.org/wiki/Idioma_aragon%C3%A9s",
+    "https://pt.wikipedia.org/wiki/L%C3%ADngua_aragonesa",
+    "https://gl.wikipedia.org/wiki/Lingua_aragonesa",
+    "https://ca.wikipedia.org/wiki/Aragon%C3%A8s",
+    "https://ast.wikipedia.org/wiki/Idioma_aragon%C3%A9s",
+    "https://mwl.wikipedia.org/wiki/Aragon%C3%A9s",
+    "https://en.wikipedia.org/wiki/Aragonese_dialects",
+    "https://es.wikipedia.org/wiki/Dialectos_del_aragon%C3%A9s",
+    "https://an.wikipedia.org/wiki/Dialectos_de_l%27aragon%C3%A9s",
+    "https://ca.wikipedia.org/wiki/Dialectes_de_l%27aragon%C3%A8s",
+    "https://en.wikipedia.org/wiki/Eastern_Aragonese",
+    "https://en.wikipedia.org/wiki/Ans%C3%B3_Aragonese",
+    "https://en.wikipedia.org/wiki/Ribagor%C3%A7an",
+    "https://en.wikipedia.org/wiki/Benasquese_dialect",
+    "https://en.wikipedia.org/wiki/Navalese_dialect",
+    "https://en.wikipedia.org/wiki/Aisinian_Aragonese",
+    "https://en.wikipedia.org/wiki/Arag%C3%BC%C3%A9s_Aragonese",
+    "https://en.wikipedia.org/wiki/Hecho_Aragonese",
+    "https://es.wikipedia.org/wiki/Aragon%C3%A9s_occidental",
+    "https://es.wikipedia.org/wiki/Aragon%C3%A9s_central",
+    "https://es.wikipedia.org/wiki/Aragon%C3%A9s_oriental",
+    "https://es.wikipedia.org/wiki/Aragon%C3%A9s_ansotano",
+    "https://es.wikipedia.org/wiki/Aragon%C3%A9s_cheso",
+    "https://es.wikipedia.org/wiki/Aragon%C3%A9s_arag%C3%BCesino",
+    "https://es.wikipedia.org/wiki/Aragon%C3%A9s_aisino",
+    "https://es.wikipedia.org/wiki/Aragon%C3%A9s_jaqu%C3%A9s",
+    "https://es.wikipedia.org/wiki/Aragon%C3%A9s_centro-occidental",
+    "https://es.wikipedia.org/wiki/Aragon%C3%A9s_tensino",
+    "https://es.wikipedia.org/wiki/Aragon%C3%A9s_panticuto",
+    "https://es.wikipedia.org/wiki/Aragon%C3%A9s_de_la_tierra_de_Biescas",
+    "https://es.wikipedia.org/wiki/Aragon%C3%A9s_del_valle_de_Acumuer",
+    "https://es.wikipedia.org/wiki/Aragon%C3%A9s_serrabl%C3%A9s",
+    "https://es.wikipedia.org/wiki/Aragon%C3%A9s_de_Ballibasa",
+    "https://es.wikipedia.org/wiki/Aragon%C3%A9s_de_Sobrepuerto",
+    "https://es.wikipedia.org/wiki/Aragon%C3%A9s_centro-oriental",
+    "https://es.wikipedia.org/wiki/Aragon%C3%A9s_de_la_ribera_de_Fiscal",
+    "https://es.wikipedia.org/wiki/Aragon%C3%A9s_bergot%C3%A9s",
+    "https://es.wikipedia.org/wiki/Aragon%C3%A9s_del_valle_de_Vi%C3%B3",
+    "https://es.wikipedia.org/wiki/Aragon%C3%A9s_del_valle_de_Tella",
+    "https://es.wikipedia.org/wiki/Aragon%C3%A9s_belsetano",
+    "https://es.wikipedia.org/wiki/Aragon%C3%A9s_chistabino",
+    "https://es.wikipedia.org/wiki/Aragon%C3%A9s_fovano",
+    "https://es.wikipedia.org/wiki/Aragon%C3%A9s_ribagorzano",
+    "https://es.wikipedia.org/wiki/Patu%C3%A9s",
+    "https://es.wikipedia.org/wiki/Aragon%C3%A9s_mediorribagorzano",
+    "https://es.wikipedia.org/wiki/Aragon%C3%A9s_bajorribagorzano",
+    "https://es.wikipedia.org/wiki/Aragon%C3%A9s_grausino",
+    "https://es.wikipedia.org/wiki/Aragon%C3%A9s_estadillano",
+    "https://es.wikipedia.org/wiki/Aragon%C3%A9s_foncense",
+    "https://es.wikipedia.org/wiki/Aragon%C3%A9s_ayerbense",
+    "https://es.wikipedia.org/wiki/Aragon%C3%A9s_somontan%C3%A9s",
+    "https://es.wikipedia.org/wiki/Aragon%C3%A9s_naval%C3%A9s",
+    "https://es.wikipedia.org/wiki/Aragon%C3%A9s_de_Ballibi%C3%B3",
+    "https://es.wikipedia.org/wiki/Castellano_aragon%C3%A9s"
+  ],
+  "sources": [
+    {
+      "id": "hualde2005",
+      "author": "Hualde, J.I.",
+      "year": 2005,
+      "title": "The Sounds of Spanish",
+      "publisher": "Cambridge University Press",
+      "url": null,
+      "pages": null,
+      "notes": null,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Spanish_phonology"
+    },
+    {
+      "id": "nagore_lain2001",
+      "author": "Nagore Laín, F.",
+      "year": 2001,
+      "title": "Gramática de la Lengua Aragonesa",
+      "publisher": "Librería General",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "penny2002",
+      "author": "Penny, R.",
+      "year": 2002,
+      "title": "A History of the Spanish Language",
+      "publisher": "Cambridge University Press",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "GBA2021",
+      "author": "Estudio de Filología Aragonesa",
+      "year": 2021,
+      "title": "Gramatica basica de l'aragonés",
+      "publisher": "Prensas de la Universidad de Zaragoza",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "OA2023",
+      "author": "Academia Aragonesa de la Lengua",
+      "year": 2023,
+      "title": "Ortografía de l'aragonés",
+      "publisher": "Academia Aragonesa de la Lengua",
+      "url": "https://academiaaragonesadelalengua.org/sites/default/files/ficheros-pdf/ortografia-aragones.pdf",
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Aragonese_language",
+    "https://an.wikipedia.org/wiki/Aragonés",
+    "https://an.wikipedia.org/wiki/Aragon%C3%A9s",
+    "https://an.wikipedia.org/wiki/Idioma_aragon%C3%A9s",
+    "https://es.wikipedia.org/wiki/Idioma_aragon%C3%A9s"
+  ],
+  "timespan": {
+    "start_year": 1050,
+    "end_year": null
+  },
+  "iso639_3": "arg",
+  "stress": {
+    "onset_clusters": ["bl", "br", "bɫ", "bɾ", "bʀ", "bʁ", "bʎ", "bχ", "dr", "dɾ", "dʀ", "dʁ", "dʎ", "dχ", "fl", "fr", "fɫ", "fɾ", "fʀ", "fʁ", "fʎ", "fχ", "kl", "kr", "kɫ", "kɾ", "kʀ", "kʁ", "kʎ", "kχ", "pl", "pr", "pɫ", "pɾ", "pʀ", "pʁ", "pʎ", "pχ", "tr", "tɾ", "tʀ", "tʁ", "tʎ", "tχ", "vl", "vr", "vɫ", "vɾ", "vʀ", "vʁ", "vʎ", "vχ", "ðr", "ðɾ", "ðʀ", "ðʁ", "ðʎ", "ðχ", "ɡl", "ɡr", "ɡɫ", "ɡɾ", "ɡʀ", "ɡʁ", "ɡʎ", "ɡχ", "ɣl", "ɣr", "ɣɫ", "ɣɾ", "ɣʀ", "ɣʁ", "ɣʎ", "ɣχ", "βl", "βr", "βɫ", "βɾ", "βʀ", "βʁ", "βʎ", "βχ"],
+    "cliticless_words": [
+      "o",
+      "a",
+      "os",
+      "as",
+      "lo",
+      "la",
+      "los",
+      "las",
+      "el",
+      "els",
+      "un",
+      "una",
+      "uns",
+      "unas",
+      "d",
+      "de",
+      "en",
+      "con",
+      "por",
+      "sin",
+      "ta",
+      "enta",
+      "entre",
+      "sobre",
+      "dende",
+      "e",
+      "y",
+      "u",
+      "ni",
+      "que",
+      "si",
+      "como",
+      "me",
+      "te",
+      "se",
+      "li",
+      "lis",
+      "nos",
+      "tos",
+      "bi",
+      "ie"
+    ],
+    "default_position": -2,
+    "final_stress_endings": [
+      "r",
+      "l",
+      "d",
+      "z",
+      "x",
+      "t",
+      "c",
+      "k",
+      "f",
+      "n",
+      "m"
+    ],
+    "penult_stress_endings": [
+      "s",
+      "ns"
+    ],
+    "marked_vowels": [
+      "á",
+      "é",
+      "è",
+      "í",
+      "ó",
+      "ò",
+      "ú"
+    ],
+    "stress_mark": "ˈ",
+    "notes": "Aragonese accentuation based on the Normas Graficas de lAragonés (SLA 2010): written accent wins. Default paroxytone. Words ending in vowel or -s are paroxytone; words ending in any other consonant (r, l, d, z, x, t, c, k, f, n, m) are oxytone. Graves (è, ò) and acutes (é, ó) both mark stressed open vs. close mid vowels. Proparoxytones always written-accented. CLITICS: cliticless_words lists the Aragonese parolas atonas (Academia de l'Aragones, Ortografia; Nagore Lain, Gramatica de la lengua aragonesa, prosodia and l'articulo) — the articles o/a/os/as (and the lo/la/los/las and Benasque el/els variants), indefinite un/una/uns/unas, the atonic prepositions d'/de/en/con/por/sin/ta/enta/dende, the conjunctions e/y/o/u/ni/que/si, the weak pronouns me/te/se/li/lis/nos/tos, and the pronominal-adverbs en/ne and bi/ie. A clitic leans on its host and carries no word stress."
+  },
+  "wikidata_qid": "Q8765",
+  "phoible_id": "arag1245",
+  "location": {
+    "latitude": 42.4669,
+    "longitude": -0.00919,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Aragonese."
+  }
+}

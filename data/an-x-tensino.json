@@ -1,0 +1,94 @@
+{
+  "code": "an-x-tensino",
+  "name": "Tensino Aragonese (Valle de Tena / Panticosa)",
+  "script": "Latin",
+  "graphemes_base": "an",
+  "allophones_base": "an",
+  "positional_graphemes_base": "an",
+  "parent": "an",
+  "word_exceptions": {
+    "ro": "ɾo",
+    "ra": "ɾa",
+    "ros": "ɾos",
+    "ras": "ɾas"
+  },
+  "ancestors": [
+    {
+      "code": "an",
+      "role": "parent",
+      "weight": 0.9,
+      "notes": "Tensino is a Central/Western High-Aragonese valley variety inheriting the whole Aragonese grapheme→IPA system; its distinctiveness is largely morpholexical (the ro/ra article, verb morphology) and only the article's weak-tap realisation is modelled."
+    },
+    {
+      "code": "la-x-hispania",
+      "role": "ancestor",
+      "weight": 0.72,
+      "notes": "Hispanic Vulgar Latin, inherited via Aragonese (an)."
+    },
+    {
+      "code": "xaq",
+      "role": "substrate",
+      "weight": 0.05,
+      "notes": "Basque/Aquitanian Pyrenean substrate, inherited via Aragonese."
+    }
+  ],
+  "quality": "skeleton",
+  "script_type": "alphabet",
+  "notes": "Tensino — the Aragonese of the Valle de Tena (Panticosa, Sallent de Gállego, Sandiniés; the Panticosa sub-variety is 'panticuto'), a Central/Western High-Aragonese variety (the reference grammar is Nagore Laín 1986, 'El aragonés de Panticosa. Gramática'). Its diagnostic feature is the POST-VOCALIC DEFINITE ARTICLE ro, ra, ros, ras (vs general Aragonese o, a, os, as / lo, la, los, las), also found in Ballibió, Sobrepuerto and Sobremonte. Vázquez Obrador (2021, RFRM 38:121-132, read directly) argues these derive from Latin ILLU / geminate -LL- by AUTOCHTHONOUS evolution (not Gascon borrowing): the proclitic atonic article's geminate lateral weakened to an apical-palatal fricative /ɽ/ and thence to the alveolar TAP /ɾ/ — a 'fonema líquido vibrante flojo'. This is the only phoneme-level point modelled here: the four article forms are given as word_exceptions realising ⟨r⟩ as the weak tap [ɾ] (not the word-initial trill [r] the base would otherwise assign). Tensino keeps the Western/Central profile inherited from an (F- preserved, /θ/ distinción, /ʎ/ for ⟨ll⟩, ⟨ch⟩=[tʃ]). FEATURES NOT PHONEME-MAPPABLE (documented, not modelled — phonemic spelling, lexical/morphological): retention of the cacuminal ⟨-ch-⟩ [tʃ] where general Aragonese has -ll- in a few words (estach, gricha); conservation of intervocalic voiceless -p-/-t-/-k- and participial -t- (words simply spelled with them); preterite in -ós (puyós, cantós); the genuinely Aragonese conditional in -arba/-erba/-irba (Nagore); pronominal-adverbial 'bi'. Diphthongisation Ĕ/Ŏ → ie/ue inherited (Várvaro, AFA XLVI-XLVII, p. 250: uá surfaces in the Valle de Tena documents). TIER RATIONALE: skeleton — Tensino's distinctiveness is overwhelmingly morpholexical (article, verb endings) rather than grapheme→IPA, so the spec is deliberately minimal; the article's tap realisation is the one modelled phonetic delta. PROVENANCE HONESTY: Vázquez Obrador (2021) and Várvaro (AFA) read directly; Nagore's Panticosa monograph consulted via secondary summaries only.",
+  "sources": [
+    {
+      "id": "nagore_panticosa1986",
+      "author": "Nagore Laín, F.",
+      "year": 1986,
+      "title": "El aragonés de Panticosa. Gramática",
+      "publisher": "Instituto de Estudios Altoaragoneses",
+      "url": "https://bibliotecavirtual.aragon.es/iea_coleccion/es/consulta/registro.do?id=4345",
+      "pages": null,
+      "notes": "The reference grammar of the Tena-valley (Panticosa) Aragonese. Consulted via secondary summaries; primary text not directly read in this work."
+    },
+    {
+      "id": "vazquez_obrador2021",
+      "author": "Vázquez Obrador, J.",
+      "year": 2021,
+      "title": "En torno al origen de los alomorfos (e)ro, (e)ra, (e)ros, (e)ras del artículo determinado aragonés",
+      "publisher": "Revista de Filología Románica 38",
+      "url": "https://revistas.ucm.es/index.php/RFRM/article/view/79510",
+      "pages": "121-132",
+      "notes": "Read directly. Derives the ro/ra/ros/ras article from Latin ILLU/-LL- via retroflexion of the geminate liquid to a weak tap /ɾ/; localises it in the Tena valley."
+    },
+    {
+      "id": "varvaro_afa",
+      "author": "Várvaro, A.",
+      "year": 1991,
+      "title": "De la escritura al habla: la diptongación de O breve tónica en el Alto Aragón",
+      "publisher": "Archivo de Filología Aragonesa XLVI-XLVII",
+      "url": "https://ifc.dpz.es/recursos/publicaciones/15/72/12varvaro.pdf",
+      "pages": "245-268",
+      "notes": "Read directly. uá diphthong attested in the Valle de Tena documents (p. 250)."
+    }
+  ],
+  "wikipedia": [
+    "https://es.wikipedia.org/wiki/Aragon%C3%A9s_tensino",
+    "https://es.wikipedia.org/wiki/Aragon%C3%A9s_panticuto",
+    "https://an.wikipedia.org/wiki/Aragon%C3%A9s_tensino",
+    "https://an.wikipedia.org/wiki/Aragon%C3%A9s_panticuto"
+  ],
+  "urls": [
+    "https://es.wikipedia.org/wiki/Aragon%C3%A9s_tensino",
+    "https://es.wikipedia.org/wiki/Aragon%C3%A9s_panticuto",
+    "https://bibliotecavirtual.aragon.es/iea_coleccion/es/consulta/registro.do?id=4345"
+  ],
+  "timespan": {
+    "start_year": 1100,
+    "end_year": null
+  },
+  "glottolog_code": null,
+  "iso639_3": "arg",
+  "wikidata_qid": "Q11906349",
+  "location": {
+    "latitude": 42.666667,
+    "longitude": -0.316667,
+    "source": "wikidata",
+    "notes": "the Valle de Tena (Alto Gállego, Huesca) — the valley the variety is named for and confined to. [Wikidata Q3054031 P625]"
+  }
+}

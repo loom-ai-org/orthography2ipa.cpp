@@ -1,0 +1,328 @@
+{
+  "code": "ast-PT-x-rionor",
+  "name": "Rionorese",
+  "script": "Latin",
+  "parent": "ast-PT-x-medieval",
+  "graphemes_base": "ast-PT-x-medieval",
+  "allophones_base": "ast-PT-x-medieval",
+  "positional_graphemes_base": "ast-PT-x-medieval",
+  "graphemes": {
+    "tch": [
+      "tʃ"
+    ],
+    "iê": [
+      "je"
+    ],
+    "ie": [
+      "je"
+    ],
+    "uâ": [
+      "wɐ"
+    ],
+    "uô": [
+      "wɔ"
+    ],
+    "ll": [
+      "ʎ"
+    ],
+    "rr": [
+      "r"
+    ],
+    "ss": [
+      "s"
+    ],
+    "ai": [
+      "aj"
+    ],
+    "au": [
+      "aw"
+    ],
+    "ei": [
+      "ej"
+    ],
+    "ou": [
+      "ow"
+    ],
+    "oi": [
+      "oj"
+    ],
+    "ui": [
+      "uj"
+    ],
+    "iu": [
+      "ju"
+    ],
+    "á": [
+      "a"
+    ],
+    "à": [
+      "a"
+    ],
+    "â": [
+      "a"
+    ],
+    "é": [
+      "ɛ"
+    ],
+    "è": [
+      "ɛ"
+    ],
+    "ê": [
+      "e"
+    ],
+    "í": [
+      "i"
+    ],
+    "ó": [
+      "ɔ"
+    ],
+    "ò": [
+      "ɔ"
+    ],
+    "ô": [
+      "o"
+    ],
+    "ú": [
+      "u"
+    ],
+    "ch": [
+      "ʃ"
+    ],
+    "v": [
+      "b"
+    ],
+    "ç": [
+      "s"
+    ],
+    "z": [
+      "s"
+    ],
+    "c": [
+      "k",
+      "s"
+    ],
+    "g": [
+      "ɡ",
+      "x"
+    ],
+    "b": [
+      "b"
+    ],
+    "d": [
+      "d"
+    ],
+    "f": [
+      "f"
+    ],
+    "j": [
+      "ʒ"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "ɾ"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "w": [
+      "w"
+    ],
+    "x": [
+      "ʃ"
+    ],
+    "y": [
+      "j"
+    ],
+    "a": [
+      "a"
+    ],
+    "e": [
+      "e"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "o"
+    ],
+    "u": [
+      "u"
+    ]
+  },
+  "allophones": {
+    "v": null,
+    "t͡s": null,
+    "d͡z": null,
+    "s̺": null,
+    "z̺": null,
+    "s̻": null,
+    "z̻": null,
+    "b": [
+      "b",
+      "β"
+    ],
+    "x": [
+      "x"
+    ],
+    "ʒ": [
+      "ʒ"
+    ],
+    "r": [
+      "r"
+    ],
+    "ɾ": [
+      "ɾ"
+    ]
+  },
+  "positional_graphemes": {
+    "c": {
+      "before_e": [
+        "s"
+      ],
+      "before_i": [
+        "s"
+      ]
+    },
+    "g": {
+      "before_e": [
+        "x"
+      ],
+      "before_i": [
+        "x"
+      ]
+    },
+    "r": {
+      "word_initial": [
+        "r"
+      ],
+      "intervocalic": [
+        "ɾ"
+      ],
+      "onset": [
+        "ɾ"
+      ]
+    },
+    "v": {
+      "word_initial": [
+        "b"
+      ],
+      "intervocalic": [
+        "b"
+      ]
+    },
+    "qu": {
+      "before_e": [
+        "k"
+      ],
+      "before_i": [
+        "k"
+      ],
+      "before_vowel": [
+        "kw"
+      ]
+    },
+    "o": {
+      "word_final": [
+        "u"
+      ]
+    }
+  },
+  "ancestors": [
+    {
+      "code": "ast-PT-x-medieval",
+      "role": "parent",
+      "weight": 0.7,
+      "notes": ""
+    },
+    {
+      "code": "ast-x-leon",
+      "role": "adstrate",
+      "weight": 0.05,
+      "notes": ""
+    },
+    {
+      "code": "ast-x-sanabria",
+      "role": "adstrate",
+      "weight": 0.11,
+      "notes": "Sanabrian Leonese adstrate: the Sanabria comarca of Zamora province is geographically and linguistically adjacent to Rionor. Shared features include full betacism; the two differ on the predorsal sibilant, however — Sanabria keeps the interdental [θ] while Rio de Onor/Guadramil are seseante [s] (Vasconcelos EPM II p.54)."
+    },
+    {
+      "code": "pt-PT-x-medieval",
+      "role": "adstrate",
+      "weight": 0.1,
+      "notes": "Old Portuguese adstrate: as Portuguese consolidated as the state language, the Leonese-speaking communities of Miranda, Rionor, and Guadramil faced intensifying pressure. Portuguese orthographic conventions (lh, nh, ã) penetrated the writing tradition."
+    }
+  ],
+  "notes": "Rionorese (Rionorês), the nearly-extinct Asturleonese variety spoken in Rio de Onor (PT) / Rihonor de Castilla (ES), straddling the Portuguese-Spanish border in Trás-os-Montes. Fewer than 100 elderly speakers as of the early 2000s (Macias 2003). Grounded in Macias (2003) and Carvalho & Dias (1955). KEY PHONOLOGICAL FEATURES: (1) FULL BETACISM /v/ → /b/: No /v/ phoneme; ⟨v⟩ and ⟨b⟩ both surface as /b/ (with intervocalic fricative allophone [β]). Examples: *baliente* (valente), *ber* (ver), *habia* (havia), *bira* (vira), *bergonha* (vergonha), *benhir* (vir). Feature shared with the Transmontano falar (Macias 2003, p. 26, fn. 28; stated-explicitly). (2) AFFRICATE /tʃ/ WRITTEN ⟨tch⟩: *tchamar* (chamar), *escatchar* (partir), *matchada* (machada), *martchar-se* (ir-se embora) (Macias 2003, p. 26; stated-explicitly). ⟨ch⟩ (without t-) = /ʃ/ (Portuguese-type, not affricate). (3) DIPHTHONGS: Latin /e/ → ⟨ie⟩/⟨iê⟩ /je/: *piedra, pierna, prendie-lu, baliente, iera* (Macias 2003, p. 25; stated-explicitly). Latin /o/ → ⟨uô⟩ /wɔ/: *ruôdra* (roda) (Macias 2003, p. 26; stated-explicitly). Latin /o/ in other environments → ⟨uâ⟩ /wɐ/ (timbre semelhante ao -a fechado do português): *puârta, fuârte, muârtu* (Macias 2003, p. 26; stated-explicitly). (4) FINAL -o → /u/: systematic — *piquenu, muârtu, suxeitu* (Macias 2003, pp. 25–26). Encoded as positional rule. (5) SIBILANT VOICING MERGER ([z]/[s] neutralization): No voicing contrast; attributed to Leonese influence (Macias 2003, p. 27; stated-explicitly). The merged sibilant quality (apical vs. laminal) is NOT stated in the source — do NOT encode apical/laminal values without evidence, so the predorsal reflex is the UNMARKED [s]. (5b) SESEO — ⟨ç⟩/⟨c⟩+e,i AND ⟨z⟩ = [s], NOT the Castilian interdental [θ]: this NW-corner border falar merges the predorsal sibilant with the Galician [s] (Vasconcelos, EPM II, p. 54, on the neighbouring guadramilês), unlike the Sanabria continuum to the east (ast-x-sanabria) which keeps [θ]. An earlier draft encoded [θ] on the strength of the shared betacism with Sanabria, but that value was never positively attested for Rio de Onor/Guadramil; Vasconcelos's galego-merger is the positive evidence, and it is inherited by the Guadramil child. (6) [s] PALATALIZATION in certain words: *dixu* (disse), *dixes* (dizes) — ⟨x⟩ represents [ʃ] (Macias 2003, p. 27; stated-explicitly). LL-CONFLICT AND ADJUDICATION: The Sanabrese source (Frías-Conde, p. 4) claims initial L- → /ʎ/ for the entire Sanabrian zone including the sub-varieties at Rio de Onor. However, the Rionorese monograph (Macias 2003) is entirely SILENT on initial ll- palatalization — its l-examples show yod-outcomes (l yotizes and disappears: *al conseio* < o conselho, *un pouco mior* < um pouco melhor, p. 27) rather than retention of /ʎ/. RESOLUTION: ⟨ll⟩ = /ʎ/ is retained in this spec (inherited from the medieval parent via graphemes_base) because: (a) the Sanabrese source positively asserts it for the zone; (b) Macias's monograph does not deny it — the yod-outcomes she documents affect medial /l/ in specific clusters, not initial ⟨ll⟩. However, the conflict is recorded: initial /ʎ/ may have weakened or merged in Rionorese; the source is insufficient to confirm retention definitively. This should be treated as MEDIUM confidence only. A word lexicon is not bundled: register one with orthography2ipa.register_lexicon(\"ast-PT-x-rionor\", <path|url|hf://…>).",
+  "sources": [
+    {
+      "id": "macias2003",
+      "author": "Macias, Dina Rodrigues",
+      "year": 2003,
+      "title": "Dialecto rionorês: Contributo para o seu estudo",
+      "publisher": "Instituto Politécnico de Bragança, Série Estudos 64",
+      "pages": null,
+      "notes": "ISBN: 972-745-071-7. Primary source for Rionorese phonology. Published 2003 (accepted 1999). All Rionorese-specific claims are cited from this work."
+    },
+    {
+      "id": "carvalho_dias1955",
+      "author": "Carvalho, José Herculano de & Dias, Jorge",
+      "year": 1955,
+      "title": "O Falar de Rio de Onor",
+      "publisher": "I.E.E.D., Faculdade de Letras, Coimbra",
+      "pages": null,
+      "notes": "Foundational primary reference for Rionorese; primary reference throughout Macias (2003)."
+    },
+    {
+      "id": "frias_conde_sanabria",
+      "author": "Frías-Conde, Xavier",
+      "year": 2005,
+      "title": "El Habla de Sanabria",
+      "publisher": "CES Don Bosco (UCM); ISR Romania Minor",
+      "pages": "p. 4",
+      "notes": "Claims initial L- > /ʎ/ for the Sanabrian zone including Rio de Onor sub-zone. Conflicts with Macias's silence — see LL-CONFLICT notes above. Year is approximate (undated document)."
+    },
+    {
+      "id": "vasconcelos1900",
+      "author": "Vasconcelos, J. Leite de",
+      "year": 1900,
+      "title": "Estudos de Philologia Mirandesa (Vol. II)",
+      "publisher": "Imprensa Nacional, Lisboa",
+      "url": "https://archive.org/details/estudosdephilolo02leit",
+      "pages": "54",
+      "notes": "EPM II p. 54 describes the NW border falar of Guadramil (guadramilês), documenting that its ⟨ç⟩/⟨c⟩+e,i predorsal sibilant merges with the Galician [s] (seseo) rather than surfacing as the Castilian interdental [θ] kept by the Sanabria continuum to the east — the basis for the seseante [s] reflex in this spec and its Guadramil child."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Rio_de_Onor"
+  ],
+  "timespan": {
+    "start_year": 1200,
+    "end_year": null
+  },
+  "iso639_3": "ast",
+  "quality": "research",
+  "location": {
+    "latitude": 41.940278,
+    "longitude": -6.616389,
+    "source": "wikidata",
+    "notes": "Rio de Onor (Bragança) — the single border village, straddling the frontier with Rihonor de Castilla, that the variety is spoken in. [Wikidata Q2119682 P625]"
+  }
+}

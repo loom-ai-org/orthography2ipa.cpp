@@ -1,0 +1,287 @@
+{
+  "code": "ctg",
+  "name": "Chittagonian",
+  "script": "Bengali",
+  "quality": "skeleton",
+  "graphemes": {
+    "ক": [
+      "k"
+    ],
+    "খ": [
+      "kʰ",
+      "x"
+    ],
+    "গ": [
+      "ɡ"
+    ],
+    "ঘ": [
+      "ɡʱ"
+    ],
+    "ঙ": [
+      "ŋ"
+    ],
+    "চ": [
+      "s"
+    ],
+    "ছ": [
+      "sʰ"
+    ],
+    "জ": [
+      "dz"
+    ],
+    "ঝ": [
+      "dzʱ"
+    ],
+    "ঞ": [
+      "ɲ"
+    ],
+    "ট": [
+      "ʈ"
+    ],
+    "ঠ": [
+      "ʈʰ"
+    ],
+    "ড": [
+      "ɖ"
+    ],
+    "ঢ": [
+      "ɖʱ"
+    ],
+    "ণ": [
+      "n"
+    ],
+    "ত": [
+      "t"
+    ],
+    "থ": [
+      "tʰ"
+    ],
+    "দ": [
+      "d"
+    ],
+    "ধ": [
+      "dʱ"
+    ],
+    "ন": [
+      "n"
+    ],
+    "প": [
+      "p"
+    ],
+    "ফ": [
+      "pʰ",
+      "h"
+    ],
+    "ব": [
+      "b"
+    ],
+    "ভ": [
+      "bʱ"
+    ],
+    "ম": [
+      "m"
+    ],
+    "য": [
+      "dz"
+    ],
+    "র": [
+      "r"
+    ],
+    "ল": [
+      "l"
+    ],
+    "শ": [
+      "s"
+    ],
+    "ষ": [
+      "s"
+    ],
+    "স": [
+      "s"
+    ],
+    "হ": [
+      "h"
+    ],
+    "া": [
+      "a"
+    ],
+    "ি": [
+      "i"
+    ],
+    "ী": [
+      "iː"
+    ],
+    "ু": [
+      "u"
+    ],
+    "ূ": [
+      "uː"
+    ],
+    "ে": [
+      "e"
+    ],
+    "ো": [
+      "o"
+    ],
+    "অ": [
+      "ɔ"
+    ],
+    "আ": [
+      "a"
+    ]
+  },
+  "allophones": {
+    "k": [
+      "k"
+    ],
+    "kʰ": [
+      "kʰ"
+    ],
+    "x": [
+      "x"
+    ],
+    "ɡ": [
+      "ɡ"
+    ],
+    "ɡʱ": [
+      "ɡʱ"
+    ],
+    "ŋ": [
+      "ŋ"
+    ],
+    "s": [
+      "s"
+    ],
+    "sʰ": [
+      "sʰ"
+    ],
+    "dz": [
+      "dz"
+    ],
+    "dzʱ": [
+      "dzʱ"
+    ],
+    "ɲ": [
+      "ɲ"
+    ],
+    "ʈ": [
+      "ʈ"
+    ],
+    "ʈʰ": [
+      "ʈʰ"
+    ],
+    "ɖ": [
+      "ɖ"
+    ],
+    "ɖʱ": [
+      "ɖʱ"
+    ],
+    "n": [
+      "n"
+    ],
+    "t": [
+      "t"
+    ],
+    "tʰ": [
+      "tʰ"
+    ],
+    "d": [
+      "d"
+    ],
+    "dʱ": [
+      "dʱ"
+    ],
+    "p": [
+      "p"
+    ],
+    "pʰ": [
+      "pʰ"
+    ],
+    "h": [
+      "h"
+    ],
+    "b": [
+      "b"
+    ],
+    "bʱ": [
+      "bʱ"
+    ],
+    "m": [
+      "m"
+    ],
+    "r": [
+      "r"
+    ],
+    "l": [
+      "l"
+    ],
+    "a": [
+      "a"
+    ],
+    "i": [
+      "i"
+    ],
+    "iː": [
+      "iː"
+    ],
+    "u": [
+      "u"
+    ],
+    "uː": [
+      "uː"
+    ],
+    "e": [
+      "e"
+    ],
+    "o": [
+      "o"
+    ],
+    "ɔ": [
+      "ɔ"
+    ]
+  },
+  "notes": "Chittagonian (চাটগাঁইয়া) has no official orthography standard; it is written informally with the Bengali abugida, borrowing Bengali's letter inventory but NOT its phoneme values, since Chittagonian's own sound changes diverge sharply from standard Bengali (Rahman 2019): notably চ/ছ/জ/ঝ (Bengali affricates) are realised as fricatives /s/ /sʰ/ /dz/ /dzʱ/ in Chittagonian, and ফ has a documented /h/ allophone alongside /pʰ/. These divergent values are cited claims about Chittagonian phonology, not the Bengali reading of the same letters — reusing the Bengali script does not imply reusing bn.json's graphemes table. Vowel signs (kar) are matras applied to a preceding consonant per the abugida convention shared with `bn`/`as`. Word stress is not orthographically predictable and is exempt per quality_tiers.md. No WikiPron gold exists for ctg, so the tier stays at skeleton.",
+  "iso639_3": "ctg",
+  "glottolog_code": "chit1275",
+  "sources": [
+    {
+      "id": "glottolog2024",
+      "author": "Hammarström, Harald; Forkel, Robert; Haspelmath, Martin; Bank, Sebastian",
+      "year": 2024,
+      "title": "Glottolog 5.0",
+      "publisher": "Max Planck Institute for Evolutionary Anthropology",
+      "url": "https://glottolog.org/"
+    },
+    {
+      "id": "chittagonian_grammar",
+      "author": "Rahman, Sifat E.",
+      "year": 2019,
+      "title": "The Grammar of Chittagonian: A Descriptive Study",
+      "publisher": "University of Dhaka",
+      "url": null,
+      "wikipedia_url": null,
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "urls": [
+    "https://glottolog.org/resource/languoid/id/chit1275"
+  ],
+  "location": {
+    "latitude": 20.831,
+    "longitude": 93.1695,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point."
+  },
+  "parent": "x-clade-indo1319",
+  "script_type": "abugida",
+  "orthography_standard": {
+    "name": "Bengali script (informal, no official standard)",
+    "authority": null,
+    "year": null,
+    "url": null
+  },
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Chittagonian_language"
+  ]
+}

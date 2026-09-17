@@ -1,0 +1,461 @@
+{
+  "ancestors": [
+    {
+      "code": "sla",
+      "role": "parent",
+      "weight": 0.9,
+      "notes": "Descent from Proto-Slavic (West Slavic, Czech-Slovak subgroup)."
+    },
+    {
+      "code": "de-DE",
+      "role": "adstrate",
+      "weight": 0.12,
+      "notes": "German adstrate: centuries of Bohemian bilingualism within the Empire; heavy lexical influence, initial fixed stress reinforced."
+    },
+    {
+      "code": "la",
+      "role": "adstrate",
+      "weight": 0.04,
+      "notes": "Latin adstrate: ecclesiastical and scholarly vocabulary."
+    }
+  ],
+  "code": "cs",
+  "name": "Czech",
+  "script": "Latin",
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "á": [
+      "aː"
+    ],
+    "e": [
+      "ɛ"
+    ],
+    "é": [
+      "ɛː"
+    ],
+    "ě": [
+      "jɛ"
+    ],
+    "i": [
+      "ɪ"
+    ],
+    "í": [
+      "iː"
+    ],
+    "o": [
+      "o"
+    ],
+    "ó": [
+      "oː"
+    ],
+    "u": [
+      "u"
+    ],
+    "ú": [
+      "uː"
+    ],
+    "ů": [
+      "uː"
+    ],
+    "y": [
+      "ɪ"
+    ],
+    "ý": [
+      "iː"
+    ],
+    "b": [
+      "b"
+    ],
+    "c": [
+      "ts"
+    ],
+    "č": [
+      "tʃ"
+    ],
+    "d": [
+      "d"
+    ],
+    "ď": [
+      "ɟ"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "h": [
+      "ɦ"
+    ],
+    "j": [
+      "j"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ň": [
+      "ɲ"
+    ],
+    "p": [
+      "p"
+    ],
+    "q": [
+      "kv"
+    ],
+    "r": [
+      "r"
+    ],
+    "ř": [
+      "r̝"
+    ],
+    "s": [
+      "s"
+    ],
+    "š": [
+      "ʃ"
+    ],
+    "t": [
+      "t"
+    ],
+    "ť": [
+      "c"
+    ],
+    "v": [
+      "v"
+    ],
+    "w": [
+      "v"
+    ],
+    "x": [
+      "ks"
+    ],
+    "z": [
+      "z"
+    ],
+    "ž": [
+      "ʒ"
+    ],
+    "ch": [
+      "x"
+    ],
+    "dž": [
+      "dʒ"
+    ],
+    "ou": [
+      "ou"
+    ],
+    "au": [
+      "au"
+    ],
+    "eu": [
+      "eu"
+    ],
+    "dě": [
+      "ɟɛ"
+    ],
+    "tě": [
+      "cɛ"
+    ],
+    "ně": [
+      "ɲɛ"
+    ],
+    "mě": [
+      "mɲɛ"
+    ],
+    "di": [
+      "ɟɪ",
+      "dɪ"
+    ],
+    "ti": [
+      "cɪ",
+      "tɪ"
+    ],
+    "ni": [
+      "ɲɪ",
+      "nɪ"
+    ],
+    "dí": [
+      "ɟiː",
+      "diː"
+    ],
+    "tí": [
+      "ciː",
+      "tiː"
+    ],
+    "ní": [
+      "ɲiː",
+      "niː"
+    ]
+  },
+  "allophones": {
+    "p": [
+      "p"
+    ],
+    "b": [
+      "b",
+      "p"
+    ],
+    "t": [
+      "t"
+    ],
+    "d": [
+      "d",
+      "t"
+    ],
+    "c": [
+      "c"
+    ],
+    "ɟ": [
+      "ɟ",
+      "c"
+    ],
+    "k": [
+      "k"
+    ],
+    "ɡ": [
+      "ɡ",
+      "k"
+    ],
+    "f": [
+      "f"
+    ],
+    "v": [
+      "v",
+      "f"
+    ],
+    "s": [
+      "s"
+    ],
+    "z": [
+      "z",
+      "s"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "ʒ": [
+      "ʒ",
+      "ʃ"
+    ],
+    "x": [
+      "x"
+    ],
+    "ɦ": [
+      "ɦ",
+      "x"
+    ],
+    "ts": [
+      "ts"
+    ],
+    "tʃ": [
+      "tʃ"
+    ],
+    "dʒ": [
+      "dʒ",
+      "tʃ"
+    ],
+    "r": [
+      "r"
+    ],
+    "r̝": [
+      "r̝",
+      "r̝̊"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n",
+      "ŋ"
+    ],
+    "ɲ": [
+      "ɲ"
+    ],
+    "l": [
+      "l"
+    ],
+    "j": [
+      "j"
+    ],
+    "a": [
+      "a"
+    ],
+    "aː": [
+      "aː"
+    ],
+    "ɛ": [
+      "ɛ"
+    ],
+    "ɛː": [
+      "ɛː"
+    ],
+    "ɪ": [
+      "ɪ"
+    ],
+    "iː": [
+      "iː"
+    ],
+    "o": [
+      "o"
+    ],
+    "oː": [
+      "oː"
+    ],
+    "u": [
+      "u"
+    ],
+    "uː": [
+      "uː"
+    ]
+  },
+  "parent": "x-clade-west2792",
+  "notes": "Standard Czech. Notable for the unique phoneme /r̝/ (⟨ř⟩) and systematic vowel length contrast. ⟨ch⟩ is the only official digraph and sorts as a separate letter. FINAL DEVOICING: obstruents devoice in coda/word-finally (b→p, d→t, ď→ť, g→k, v→f, z→s, ž→š, h→ch). H: voiced [ɦ] in onset; devoices to [x] in coda. Ě: [jɛ] after most consonants; causes palatal softening of preceding d/t/n. Sources: Palková (1994), Šimáčková et al. (2012), Short (1993).",
+  "quality": "research",
+  "script_type": "alphabet",
+  "sources": [
+    {
+      "id": "comrie_corbett1993",
+      "author": "Comrie, B. & Corbett, G. (eds.)",
+      "year": 1993,
+      "title": "The Slavonic Languages",
+      "publisher": "Routledge",
+      "url": null,
+      "pages": null,
+      "notes": null,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Slavic_languages"
+    },
+    {
+      "id": "short1993",
+      "author": "Short, D.",
+      "year": 1993,
+      "title": "Czech",
+      "publisher": "in B. Comrie & G. Corbett (eds.), The Slavonic Languages",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "ladefoged_maddieson1996",
+      "author": "Ladefoged, P. & Maddieson, I.",
+      "year": 1996,
+      "title": "The Sounds of the World's Languages",
+      "publisher": "Blackwell",
+      "url": null,
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Czech_language",
+    "https://cs.wikipedia.org/wiki/Čeština",
+    "https://cs.wikipedia.org/wiki/%C4%8Ce%C5%A1tina"
+  ],
+  "positional_graphemes": {
+    "b": {
+      "word_final": [
+        "p"
+      ],
+      "default": [
+        "b"
+      ]
+    },
+    "d": {
+      "word_final": [
+        "t"
+      ],
+      "default": [
+        "d"
+      ]
+    },
+    "ď": {
+      "word_final": [
+        "c"
+      ],
+      "default": [
+        "ɟ"
+      ]
+    },
+    "g": {
+      "word_final": [
+        "k"
+      ],
+      "default": [
+        "ɡ"
+      ]
+    },
+    "v": {
+      "word_final": [
+        "f"
+      ],
+      "default": [
+        "v"
+      ]
+    },
+    "z": {
+      "word_final": [
+        "s"
+      ],
+      "default": [
+        "z"
+      ]
+    },
+    "ž": {
+      "word_final": [
+        "ʃ"
+      ],
+      "default": [
+        "ʒ"
+      ]
+    },
+    "h": {
+      "word_final": [
+        "x"
+      ],
+      "default": [
+        "ɦ"
+      ]
+    },
+    "ě": {
+      "after_consonant": [
+        "jɛ"
+      ],
+      "default": [
+        "jɛ"
+      ]
+    }
+  },
+  "timespan": {
+    "start_year": 1300,
+    "end_year": null
+  },
+  "glottolog_code": "czec1258",
+  "iso639_3": "ces",
+  "stress": {
+    "default_position": 1,
+    "final_stress_endings": [],
+    "penult_stress_endings": [],
+    "marked_vowels": [],
+    "stress_mark": "ˈ",
+    "notes": "Czech has categorical initial stress. Long vowels (á é í ó ú ý) mark vowel quantity, not stress accent; they are not stress markers and must not appear in marked_vowels. Source: Palková (1994), Fonetika a fonologie češtiny; Wikipedia: https://en.wikipedia.org/wiki/Czech_phonology"
+  },
+  "wikidata_qid": "Q9056",
+  "phoible_id": "czec1258",
+  "wals_code": "cze",
+  "location": {
+    "latitude": 49.873398,
+    "longitude": 15.10437,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Czech."
+  }
+}

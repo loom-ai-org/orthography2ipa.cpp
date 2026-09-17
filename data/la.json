@@ -1,0 +1,109 @@
+{
+  "code": "la",
+  "name": "Classical Latin",
+  "script": "Latin",
+  "parent": "la-x-archaic",
+  "graphemes_base": "la-x-archaic",
+  "graphemes": {
+    "ai": [
+      "aj"
+    ],
+    "au": [
+      "aw"
+    ],
+    "ei": [
+      "iː"
+    ],
+    "oi": [
+      "uː"
+    ],
+    "ou": [
+      "uː"
+    ],
+    "qu": [
+      "k",
+      "kw"
+    ],
+    "s": [
+      "s"
+    ],
+    "h": [
+      "h"
+    ],
+    "v": [
+      "w"
+    ],
+    "ae": [
+      "aj"
+    ],
+    "oe": [
+      "oj"
+    ]
+  },
+  "positional_graphemes": {
+    "h": {
+      "word_initial": [
+        "h"
+      ]
+    },
+    "m": {
+      "word_final": [
+        "̃"
+      ]
+    }
+  },
+  "notes": "Reconstructed Classical Latin pronunciation (1st c. BCE – 2nd c. CE) per Allen (1965/2003). Key features: (1) ⟨c⟩ always [k], ⟨g⟩ always [ɡ] — NO palatalisation. (2) ⟨v⟩ = [w], NOT [v]. (3) Vowel length phonemic (5 short + 5 long + 2 Greek). (4) Diphthongs [aj, oj, aw] preserved. (5) Geminate consonants phonemic. (6) Aspirated stops only in Greek loans. (7) Word-final -m weakened (probably nasalised vowel). (8) /h/ weak. (9) /s/ always voiceless. (10) /r/ always trilled.",
+  "sources": [
+    {
+      "id": "allen1978",
+      "author": "Allen, W.S.",
+      "year": 1978,
+      "title": "Vox Latina: A Guide to the Pronunciation of Classical Latin",
+      "publisher": "Cambridge University Press",
+      "url": null,
+      "pages": null,
+      "notes": null,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Latin_phonology"
+    },
+    {
+      "id": "weiss2009",
+      "author": "Weiss, M.",
+      "year": 2009,
+      "title": "Outline of the Historical and Comparative Grammar of Latin",
+      "publisher": "Beech Stave Press",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "clackson_horrocks2007",
+      "author": "Clackson, J. & Horrocks, G.",
+      "year": 2007,
+      "title": "The Blackwell History of the Latin Language",
+      "publisher": "Blackwell",
+      "url": null,
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Latin",
+    "https://la.wikipedia.org/wiki/Lingua_Latina",
+    "https://en.wikipedia.org/wiki/Latin_phonology_and_orthography",
+    "https://la.wikipedia.org/wiki/Pronuntiatus_Latinus"
+  ],
+  "timespan": {
+    "start_year": -100,
+    "end_year": 600
+  },
+  "glottolog_code": "lati1261",
+  "iso639_3": "lat",
+  "quality": "research",
+  "wikidata_qid": "Q397",
+  "location": {
+    "latitude": 41.9026,
+    "longitude": 12.4502,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Latin."
+  }
+}

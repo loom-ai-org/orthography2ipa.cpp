@@ -1,0 +1,61 @@
+{
+  "code": "xpr",
+  "name": "Parthian",
+  "script": "Prti",
+  "script_type": "abjad",
+  "quality": "stub",
+  "graphemes": {},
+  "allophones": {},
+  "notes": "STUB — no grapheme inventory modelled. Parthian (Arsacid Pahlavi, Pahlawānīg), a Northwestern Middle Iranian language, the language of state of the Parthian/Arsacid Empire (248 BCE-224 CE) and later of Manichaean scripture. Like Middle Persian it is written in a Pahlavi-derived Aramaeographic abjad (Inscriptional Parthian and Book/Manichaean Parthian varieties), where many words are spelled as frozen Aramaic logograms ('huzvarishn') read aloud in Parthian — the same orthographic complexity noted for pal.json (Middle Persian) — compounded by two divergent script traditions (Inscriptional Parthian vs. the clearer Manichaean-script Parthian corpus) whose letter inventories and value assignments are not identical. Because the two traditions do not share one clean letter-to-IPA table the way Hoffmann's transliteration does for Avestan, this spec is an honest stub rather than a guessed inventory. Added so it resolves as an ancestry/contact node for Northwestern Middle Iranian and as a sibling to Middle Persian (pal) and Old Persian (peo) in the Iranian ancestry chain.",
+  "sources": [
+    {
+      "id": "xpr_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Parthian language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Parthian_language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Parthian_language",
+      "pages": null,
+      "notes": "Historical/geographic context, script traditions (Inscriptional vs. Manichaean Parthian), influence on Armenian."
+    },
+    {
+      "id": "durkin_meisterernst2014",
+      "author": "Durkin-Meisterernst, D.",
+      "year": 2014,
+      "title": "Grammatik des Westmitteliranischen (Parthisch und Mittelpersisch)",
+      "publisher": "Verlag der Österreichischen Akademie der Wissenschaften",
+      "url": null,
+      "pages": null,
+      "notes": "Standard reference grammar covering both Parthian and Middle Persian; already cited in pal.json. The two Parthian script traditions it covers do not reduce to one transliteration table."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Parthian_language"
+  ],
+  "urls": [
+    "https://glottolog.org/resource/languoid/id/part1239"
+  ],
+  "timespan": {
+    "start_year": -250,
+    "end_year": 700
+  },
+  "iso639_3": "xpr",
+  "glottolog_code": "part1239",
+  "wikidata_qid": "Q25953",
+  "parent": "ira",
+  "ancestors": [
+    {
+      "code": "ira",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Descent from Proto-Iranian, Northwestern Iranian branch (Middle Iranian period); sister of Middle Persian (pal), not descended from it."
+    }
+  ],
+  "location": {
+    "latitude": 36.5,
+    "longitude": 54.5,
+    "source": "glottolog",
+    "notes": "Parthia, northeastern Iran/southern Turkmenistan — the historical heartland of Parthian speech."
+  }
+}

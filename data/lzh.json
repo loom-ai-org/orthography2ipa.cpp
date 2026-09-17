@@ -1,0 +1,76 @@
+{
+  "code": "lzh",
+  "name": "Literary Chinese (Classical Chinese)",
+  "script": "Han",
+  "script_type": "logographic",
+  "quality": "stub",
+  "graphemes": {},
+  "allophones": {},
+  "parent": "och",
+  "ancestors": [
+    {
+      "code": "och",
+      "role": "parent",
+      "weight": 0.9,
+      "notes": "The classical written language is modelled on the Old Chinese of the Warring States period."
+    },
+    {
+      "code": "ltc",
+      "role": "related",
+      "weight": 0.05,
+      "notes": "Middle Chinese supplies the rime-dictionary reading tradition through which Literary Chinese was later recited."
+    }
+  ],
+  "notes": "Grapheme inventory NOT YET SPECIFIED (stub). Literary/Classical Chinese (文言) is a written register, not a spoken vernacular: it is written in Chinese characters (Han script) and has no pronunciation of its own — it is read aloud in the reading pronunciation of whatever language the reader speaks (Mandarin, Cantonese, Sino-Japanese on'yomi, Sino-Korean, Sino-Vietnamese …). No logographic character-to-phoneme map is claimed here: Chinese characters do not encode pronunciation systematically, so a Han-script G2P for this variety would need either a full character-reading lexicon or a romanised input. INPUT CONTRACT: this spec expects a romanisation of a chosen reading tradition as input, not Han characters — e.g. Hanyu Pinyin for a Mandarin reading (the `zh` precedent), Jyutping for a Cantonese reading, or a Middle Chinese reconstruction (see `ltc`) for a historical one. Because the reading tradition must be chosen by the consumer, NO single grapheme map can be correct for this code.",
+  "iso639_3": "lzh",
+  "glottolog_code": "lite1248",
+  "wikidata_qid": "Q37041",
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Classical_Chinese"
+  ],
+  "sources": [
+    {
+      "id": "lzh_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Classical Chinese",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Classical_Chinese",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Classical_Chinese",
+      "pages": null,
+      "notes": "Literary Chinese as a written register and its reading traditions across Sinitic and the Sinoxenic languages."
+    },
+    {
+      "id": "pulleyblank1995",
+      "author": "Pulleyblank, Edwin G.",
+      "year": 1995,
+      "title": "Outline of Classical Chinese Grammar",
+      "publisher": "UBC Press",
+      "url": null,
+      "wikipedia_url": null,
+      "pages": null,
+      "notes": "Standard grammar of Classical Chinese."
+    },
+    {
+      "id": "norman1988_lzh",
+      "author": "Norman, Jerry",
+      "year": 1988,
+      "title": "Chinese",
+      "publisher": "Cambridge University Press",
+      "url": null,
+      "wikipedia_url": null,
+      "pages": null,
+      "notes": "On the literary language and its relation to the spoken varieties."
+    }
+  ],
+  "timespan": {
+    "start_year": -500,
+    "end_year": 1919
+  },
+  "location": {
+    "latitude": 34.09,
+    "longitude": 109.05,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Classical Chinese."
+  }
+}

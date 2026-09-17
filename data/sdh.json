@@ -1,0 +1,110 @@
+{
+  "code": "sdh",
+  "name": "Southern Kurdish",
+  "script": "Arabic",
+  "script_type": "abjad",
+  "quality": "skeleton",
+  "graphemes": {
+    "ئ": ["ʔ"],
+    "ا": ["a"],
+    "ب": ["b"],
+    "پ": ["p"],
+    "ت": ["t"],
+    "ج": ["dʒ"],
+    "چ": ["tʃ"],
+    "ح": ["h"],
+    "خ": ["x"],
+    "د": ["d"],
+    "ر": ["ɾ"],
+    "ڕ": ["r"],
+    "ز": ["z"],
+    "ژ": ["ʒ"],
+    "س": ["s"],
+    "ش": ["ʃ"],
+    "ع": ["ʔ"],
+    "غ": ["ɣ"],
+    "ف": ["f"],
+    "ڤ": ["v"],
+    "ق": ["q"],
+    "ک": ["k"],
+    "گ": ["ɡ"],
+    "ل": ["l"],
+    "ڵ": ["ɫ"],
+    "م": ["m"],
+    "ن": ["n"],
+    "ھ": ["h"],
+    "ه": ["ɛ"],
+    "ە": ["ɛ"],
+    "و": ["o"],
+    "ۆ": ["oː"],
+    "ی": ["j", "iː"],
+    "ێ": ["eː"]
+  },
+  "allophones": {
+    "ʔ": ["ʔ"], "a": ["a"], "b": ["b"], "p": ["p"], "t": ["t"], "dʒ": ["dʒ"],
+    "tʃ": ["tʃ"], "h": ["h"], "x": ["x"], "d": ["d"], "ɾ": ["ɾ"], "r": ["r"],
+    "z": ["z"], "ʒ": ["ʒ"], "s": ["s"], "ʃ": ["ʃ"], "ɣ": ["ɣ"], "f": ["f"],
+    "v": ["v"], "q": ["q"], "k": ["k"], "ɡ": ["ɡ"], "l": ["l"], "ɫ": ["ɫ"],
+    "m": ["m"], "n": ["n"], "ɛ": ["ɛ"], "o": ["o"], "oː": ["oː"], "j": ["j"],
+    "iː": ["iː"], "eː": ["eː"]
+  },
+  "notes": "Southern Kurdish (Kermanshahi/Feyli) — Southwestern Iranian language spoken across Kermanshah, Ilam and Khuzestan provinces of Iran and adjoining Iraq, generally written in a Kurdish adaptation of the Perso-Arabic script. SKELETON: consonant/vowel-letter table now specified, adapted from the already-encoded `ckb` (Central Kurdish/Sorani) spec's Kurdish-specific Arabic-script letter set — full vowel letters (unlike Persian/Arabic proper) for ⟨ه/ە⟩ /ɛ/, ⟨و⟩ /o/, ⟨ۆ⟩ /oː/, ⟨ی⟩ /iː/ and ⟨ێ⟩ /eː/, plus the rhotic ⟨ر⟩/⟨ڕ⟩ and lateral ⟨ل⟩/⟨ڵ⟩ pairs — because Southern Kurdish dialects share this Central-Kurdish-derived orthographic convention (Fattah 2000, 'Les Dialectes Kurdes Méridionaux') rather than Sorani's phonology outright: Southern Kurdish differs from Sorani in retaining historical clusters Sorani has simplified and in vowel quality in several lexical sets, so this letter table asserts the SHARED SCRIPT CONVENTION only, not shared phonology (see AGENTS.md, 'a shared alphabet is not a shared phonology'). As an ABJAD-derived script that DOES write full vowels, this table is closer to alphabetic than `fa`/`ar`, but is not yet validated against a Southern Kurdish-specific corpus. STRESS EXEMPTION: no `stress` block is declared.",
+  "iso639_3": "sdh",
+  "glottolog_code": "sout2640",
+  "sources": [
+    {
+      "id": "glottolog2024",
+      "author": "Hammarström, Harald; Forkel, Robert; Haspelmath, Martin; Bank, Sebastian",
+      "year": 2024,
+      "title": "Glottolog 5.0",
+      "publisher": "Max Planck Institute for Evolutionary Anthropology",
+      "url": "https://glottolog.org/"
+    },
+    {
+      "id": "sdh_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Southern Kurdish",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Southern_Kurdish",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Southern_Kurdish",
+      "notes": "Overview of dialects, distribution and script."
+    },
+    {
+      "id": "fattah2000",
+      "author": "Fattah, Ismaïl Kamandâr",
+      "year": 2000,
+      "title": "Les Dialectes Kurdes Méridionaux",
+      "publisher": "Peeters",
+      "url": null,
+      "notes": "Reference description of Southern Kurdish (Kermanshahi/Feyli/Kalhori) dialectology and phonology."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Southern_Kurdish"
+  ],
+  "urls": [
+    "https://glottolog.org/resource/languoid/id/sout2640"
+  ],
+  "location": {
+    "latitude": 32.8977,
+    "longitude": 46.5976,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point."
+  },
+  "parent": "x-clade-indo1319",
+  "ancestors": [
+    {
+      "code": "x-clade-indo1319",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Kurdish/Iranian classification node this language sits under."
+    },
+    {
+      "code": "ckb",
+      "role": "adstrate",
+      "weight": 0.1,
+      "notes": "Central Kurdish (Sorani) adstrate: shared Kurdish Perso-Arabic script convention (full-vowel letters, rhotic/lateral digraphs)."
+    }
+  ]
+}

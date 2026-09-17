@@ -1,0 +1,282 @@
+{
+  "code": "pt-PT-x-porto",
+  "name": "Portuense Portuguese",
+  "script": "Latin",
+  "graphemes_base": "pt-PT",
+  "graphemes": {
+    "ou": [
+      "ow"
+    ],
+    "ei": [
+      "ej"
+    ]
+  },
+  "allophones_base": "pt-PT",
+  "allophones": {
+    "ʃ": [
+      "ʃ",
+      "ʂ"
+    ],
+    "ʒ": [
+      "ʒ",
+      "ʐ"
+    ],
+    "ʁ": [
+      "ʁ",
+      "χ",
+      "ʀ",
+      "x"
+    ],
+    "ɫ": [
+      "ɫ"
+    ],
+    "ɐ": [
+      "ɐ",
+      "ɐ̥"
+    ],
+    "ə": [
+      "ə",
+      "ɨ",
+      ""
+    ],
+    "v": [
+      "b"
+    ]
+  },
+  "positional_graphemes_base": "pt-PT",
+  "parent": "pt-PT",
+  "allophone_rules": [
+    {
+      "id": "PT_PORTO_BETACISM",
+      "phonemes": [
+        "v"
+      ],
+      "surface": "b",
+      "notes": "Northern betacism: the /v/ ~ /b/ phonological opposition is lost and both merge into a single phoneme /b/, realised [b] in all positions (vinho -> [ˈbiɲu], vaca -> [ˈbakɐ], estava -> [ʃˈtabɐ]). This is the primary trait separating Northern from Central-Southern European Portuguese. Cintra (1971; Boletim de Filologia 22:81-116): 'o desaparecimento da oposição fonológica entre os fonemas /v/ e /b/ e a sua fusão num fonema único /b/'; corroborated by Segura (2013). Modelled as a post-lexical phoneme-side rewrite (the phoneme /v/, produced by the inherited pt-PT grapheme map, is realised [b]) rather than a grapheme substitution, so the merger applies uniformly however /v/ arises."
+    },
+    {
+      "id": "PT_PORTO_DIPHTHONGISE_E",
+      "phonemes": [
+        "e"
+      ],
+      "surface": "je",
+      "stress": "stressed",
+      "syllable_position": "nucleus",
+      "notes": "Diphthongisation of the tonic CLOSE-mid front vowel: stressed close [e] -> rising diphthong [je] (mês -> [ˈmjeʃ], ele -> [ˈjelɨ]). Cintra (1971) isolates this as the defining, 'tão caracterizadora' feature of the Baixo-Minho / Douro-Litoral (Porto) area: 'a ditongação, tão caracterizadora, das vogais tónicas fechadas [e] em [je], [o] em [wo] (por vezes [wɔ])'; corroborated by Segura (2013), who names diphthongisation of stressed vowels the characteristic trait of the north-western variety. Gated to the CLOSE [e] only: genuinely open tonic [ɛ] (pé, café) does NOT diphthongise. LIMIT: the inherited pt-PT grapheme map selects the OPEN allophone for spelling-unmarked stressed <e> (open/close is lexical, not predictable from orthography), so words whose standard value is close [e] but which the base engine transcribes [ɛ] (e.g. cedo, medo) are not reached by this rule; forcing them would wrongly diphthongise true open vowels. The rule fires wherever the engine does yield close [e] in a stressed nucleus (mês, ele, este, pêlo). Brissos (2018; Brissos & Rodrigues 2016) shows the OPEN mids diphthongize too — see the companion *_DIPHTHONGISE_E_OPEN/_O_OPEN rules; the earlier 'genuinely open [ɛ]/[ɔ] does NOT diphthongise' caution is superseded by that stronger acoustic source."
+    },
+    {
+      "id": "PT_PORTO_DIPHTHONGISE_O",
+      "phonemes": [
+        "o"
+      ],
+      "surface": "wo",
+      "stress": "stressed",
+      "syllable_position": "nucleus",
+      "notes": "Diphthongisation of the tonic CLOSE-mid back vowel: stressed close [o] -> rising diphthong [wo] (por vezes [wɔ]) (avô -> [ɐˈbwo], pôr -> [ˈpwoɾ], ovo -> [ˈwobu]; the emblematic Porto -> [ˈpwoɾtu]). Same Cintra (1971) passage as PT_PORTO_DIPHTHONGISE_E; Segura (2013). Gated to CLOSE [o]; genuinely open tonic [ɔ] (avó, só) does not diphthongise. Same open/close pre-lexical LIMIT as the /e/ rule: 'Porto' has an underlying close /o/ but the base engine mis-selects open [ɔ], so the emblematic [ˈpwoɾtu] is only produced once the pre-lexical vowel is close; the rule is deliberately not widened to [ɔ] because that would diphthongise true open vowels (café, avó, só). Brissos (2018; Brissos & Rodrigues 2016) shows the OPEN mids diphthongize too — see the companion *_DIPHTHONGISE_E_OPEN/_O_OPEN rules; the earlier 'genuinely open [ɛ]/[ɔ] does NOT diphthongise' caution is superseded by that stronger acoustic source."
+    },
+    {
+      "id": "PT_PORTO_DIPHTHONGISE_E_OPEN",
+      "phonemes": [
+        "ɛ"
+      ],
+      "surface": "jɛ",
+      "stress": "stressed",
+      "syllable_position": "nucleus",
+      "notes": "Diphthongisation of the tonic OPEN-mid front vowel: stressed open [ɛ] -> rising [jɛ] (pé -> [ˈpjɛ], café -> [kɐˈfjɛ]). Brissos (2018, pp.196-197, 200-201; reporting Brissos & Rodrigues 2016, AVOC + ALEPG/ALE) overturns the earlier close-mid-only view: NW diphthongization applies to the open mids too ('[ˈpi̯ɛ] pé'), so that only the cardinal vowels stay phonologically stable. This also RESOLVES the open/close pre-lexical mis-selection that the close-only DIPHTHONGISE_E documented as a limit — whichever mid the base engine selects for a spelling-unmarked stressed <e>, it now diphthongizes (to [je] or [jɛ]). Restricted to the stressed nucleus. NOTES-ONLY (not modelled): the co-existing toward-central subtype RD2 ([ɛɐ̯]) and the marginal /i/->[ei̯]."
+    },
+    {
+      "id": "PT_PORTO_DIPHTHONGISE_O_OPEN",
+      "phonemes": [
+        "ɔ"
+      ],
+      "surface": "wɔ",
+      "stress": "stressed",
+      "syllable_position": "nucleus",
+      "notes": "Diphthongisation of the tonic OPEN-mid back vowel: stressed open [ɔ] -> rising [wɔ] (toque -> [ˈtwɔkɨ], só -> [ˈswɔ]; and the emblematic Porto, whose base-engine open [ɔ] now diphthongizes to [ˈpwɔɾtu], approaching the attested close [ˈpu̯oɾtu]). Brissos (2018, pp.196-197, 200-201; Brissos & Rodrigues 2016) — open mids diphthongize in the NW. Restricted to the stressed nucleus. NOTES-ONLY (not modelled): the co-existing toward-central subtype RD2 ([ɔɐ̯]) and the marginal /i/->[ei̯]."
+    },
+    {
+      "id": "PT_LEX_CLOSE_O",
+      "phonemes": [],
+      "surface": "o",
+      "notes": "DISABLED here: this variety has its own productive stressed mid-vowel process (metaphony / diphthongisation) that owns the open/close realisation of the stressed vowel, so the inherited standard-language lexical open/close pins (PT_LEX_*) must not pre-empt it. The standard lexical list is a Lisbon/BP-standard fact; the open/close of stressed mid vowels under this dialect's own vowel system is documented residual."
+    },
+    {
+      "id": "PT_LEX_CLOSE_E",
+      "phonemes": [],
+      "surface": "e",
+      "notes": "DISABLED here: this variety has its own productive stressed mid-vowel process (metaphony / diphthongisation) that owns the open/close realisation of the stressed vowel, so the inherited standard-language lexical open/close pins (PT_LEX_*) must not pre-empt it. The standard lexical list is a Lisbon/BP-standard fact; the open/close of stressed mid vowels under this dialect's own vowel system is documented residual."
+    },
+    {
+      "id": "PT_LEX_OPEN_O",
+      "phonemes": [],
+      "surface": "ɔ",
+      "notes": "DISABLED here: this variety has its own productive stressed mid-vowel process (metaphony / diphthongisation) that owns the open/close realisation of the stressed vowel, so the inherited standard-language lexical open/close pins (PT_LEX_*) must not pre-empt it. The standard lexical list is a Lisbon/BP-standard fact; the open/close of stressed mid vowels under this dialect's own vowel system is documented residual."
+    },
+    {
+      "id": "PT_LEX_OPEN_E",
+      "phonemes": [],
+      "surface": "ɛ",
+      "notes": "DISABLED here: this variety has its own productive stressed mid-vowel process (metaphony / diphthongisation) that owns the open/close realisation of the stressed vowel, so the inherited standard-language lexical open/close pins (PT_LEX_*) must not pre-empt it. The standard lexical list is a Lisbon/BP-standard fact; the open/close of stressed mid vowels under this dialect's own vowel system is documented residual."
+    }
+  ],
+  "notes": "Portuense / Northern European Portuguese of Porto, Greater Porto and the Baixo-Minho / Douro-Litoral zone (Cintra's 'Baixo-Minho e Douro-Litoral'), one of the most idiosyncratic EP varieties (Cintra 1971; Segura 2013). Deltas over standard (Lisbon-type) pt-PT: (1) BETACISM — the /v/~/b/ opposition is lost, both merging in /b/ (allophone rule PT_PORTO_BETACISM; Cintra feature 1); (2) tonic-CLOSED-vowel DIPHTHONGISATION — stressed close [e]->[je], close [o]->[wo]/[wɔ] (allophone rules PT_PORTO_DIPHTHONGISE_E/_O), Cintra's single defining Porto marker; (3) DIPHTHONG PRESERVATION — <ou>->[ow] and <ei>->[ej] kept where Lisbon monophthongises/lowers ([o], [ɐj]) (inherited-map grapheme deltas; Cintra feature 4). All other EP processes (unstressed vowel reduction, dark coda /l/, coda-sibilant chiado, the coda-s sandhi) are inherited unchanged from pt-PT. KNOWN LIMITS (documented, not faked): (a) Cintra's primary North/South isogloss — the apico-alveolar sibilant [s̺ z̺] vs the standard predorsodental [s̪ z̪] — is an articulatory place distinction invisible to a phoneme-level, orthography-blind engine (Cintra 1971 feature 2; it is his most diagnostic feature yet the least simulable); it is left as a surface variant in `allophones` (ʃ->[ʃ,ʂ], ʒ->[ʒ,ʐ]) for documentation only and is NOT asserted as the default realisation. (b) The diphthongisation rules are gated to the CLOSE mid vowels [e]/[o]; because open/close for spelling-unmarked stressed <e>/<o> is lexical and the inherited pt-PT map defaults to the OPEN allophone, some words with an underlying close vowel (cedo, medo, Porto) are transcribed with open [ɛ]/[ɔ] pre-lexically and therefore escape diphthongisation — widening the rule to the open vowels would wrongly diphthongise genuinely open tonic vowels (café, avó, só) and is rejected. BENCHMARK HONESTY: the ep_dialects `pt-PT-x-north` expert gold was annotated for betacism and diphthong preservation but NOT for tonic-vowel diphthongisation, so PT_PORTO_DIPHTHONGISE_E/_O raise PER slightly against that (incomplete) expert gold while being the correctly-sourced defining Porto feature; they are kept per the honesty gate (B8 precedent: a source-correct rule that only regresses a gold lacking the annotation still ships, with the divergence documented). Sub-lexical/sporadic Porto features (l-palatalisation quilo->quilho, Filipa->[fʎipɐ]) are lexical and not modelled. NATIVE-SPEAKER VALIDATION (Portuguese With Leo, 'Sotaque e expressões do Porto', https://www.youtube.com/watch?v=kOxLQR8M3TQ): the Porto speaker Bárbara confirms the modelled betacism ('no Porto trocam-se sempre os Vs pelos Bs ... baca [vaca]', 'coisa que eu habitualmente troco') and the more open vowels ('o sotaque do Porto é mais aberto do que o de Lisboa', 'abéarta'); the prothetic glide 'ieu' for eu / '-i antes das vogais' / '-a final' ('ieua') is a lexical/prosodic trait left unmodelled. The Trás-os-Montes deep-dive (https://www.youtube.com/watch?v=70a_vNEa_aw) corroborates that <ou>->[ow] and open vowels are Porto/north-western ('eles abrem mais as vogais') traits. ACOUSTIC UPDATE (Brissos 2018; Brissos & Rodrigues 2016, AVOC + ALEPG/ALE): NW tonic-vowel diphthongization is NOT limited to the close mids — the OPEN mids diphthongize too ([ɛ]->[jɛ] pé, [ɔ]->[wɔ] toque). Modelled as the added rules PT_PORTO_DIPHTHONGISE_E_OPEN/_O_OPEN; only the cardinal vowels now stay stable. NOTES-ONLY: the co-existing toward-central subtype RD2 ([eɐ̯/ɛɐ̯], [oɐ̯/ɔɐ̯]) and the marginal, contextual /i/->[ei̯] (maquia; ~19%, pre-pause/vowel) are attested but left unmodelled.",
+  "quality": "research",
+  "ancestors": [
+    {
+      "code": "pt-PT",
+      "role": "parent",
+      "weight": 0.9,
+      "notes": "Standard (Lisbon-type) European Portuguese; Porto diverges by betacism (v->b), tonic-closed-vowel diphthongisation, and diphthong preservation (ei/ou)."
+    }
+  ],
+  "script_type": "alphabet",
+  "sources": [
+    {
+      "id": "cintra1971",
+      "author": "Cintra, Luís F. Lindley",
+      "year": 1971,
+      "title": "Nova proposta de classificação dos dialectos galego-portugueses",
+      "publisher": "Boletim de Filologia (Centro de Estudos Filológicos, Lisboa), vol. 22, pp. 81-116",
+      "url": "https://cvc.instituto-camoes.pt/hlp/biblioteca/novaproposta.pdf",
+      "pages": "81-116",
+      "notes": "Foundational classification of the Galician-Portuguese dialect space by maximally diagnostic phonetic features. Feature 1 (betacism): 'o desaparecimento da oposição fonológica entre os fonemas /v/ e /b/ e a sua fusão num fonema único /b/'. Defining Porto/Baixo-Minho/Douro-Litoral feature: 'a ditongação, tão caracterizadora, das vogais tónicas fechadas [e] em [je], [o] em [wo] (por vezes [wɔ])'. Feature 2 (the apico-alveolar sibilant), his primary North/South isogloss, is an articulatory distinction not simulable at the phoneme/orthography level — documented as a spec limit, not modelled. Republished in Cintra, Estudos de Dialectologia Portuguesa, Sá da Costa, 1983, pp. 117-163."
+    },
+    {
+      "id": "segura2013",
+      "author": "Segura, Luísa",
+      "year": 2013,
+      "title": "Variedades dialetais do português europeu",
+      "publisher": "In Raposo, E.B.P. et al. (eds.), Gramática do Português, vol. I, Fundação Calouste Gulbenkian, Lisboa, pp. 85-142",
+      "url": null,
+      "pages": "85-142",
+      "notes": "Modern EP dialectology synthesis. Names diphthongisation of stressed vowels as the characteristic trait of the north-western (Baixo-Minho / Douro-Litoral, Porto) variety and describes it as one of the most idiosyncratic EP varieties; documents Northern betacism. Corroborating second source for the Cintra features modelled here."
+    },
+    {
+      "id": "mateus_dandrade2000",
+      "author": "Mateus, M.H.M. & d'Andrade, E.",
+      "year": 2000,
+      "title": "The Phonology of Portuguese",
+      "publisher": "Oxford University Press",
+      "url": null,
+      "pages": null,
+      "notes": "Reference EP phonology for the inherited base processes (unstressed vowel reduction, dark coda /l/, coda sibilants) that Porto inherits unchanged from pt-PT."
+    },
+    {
+      "id": "pwl_porto",
+      "author": "Portuguese With Leo (with Bárbara, portuense)",
+      "year": 2021,
+      "title": "Sotaque e expressões do Porto",
+      "publisher": "YouTube (native-speaker / popular-linguistics)",
+      "url": "https://www.youtube.com/watch?v=kOxLQR8M3TQ",
+      "pages": null,
+      "notes": "Native-speaker Porto deep-dive (NOT academic). Validates the modelled betacism ('no Porto trocam-se sempre os Vs pelos Bs', 'baca' for vaca) and open vowels ('mais aberto do que Lisboa', 'abéarta'); notes the unmodelled prothetic 'ieu'/'ieua' (i-onglide + final -a) as a lexical/prosodic Porto shibboleth."
+    },
+    {
+      "id": "brissos2018",
+      "author": "Brissos, Fernando",
+      "year": 2018,
+      "title": "Proposta de reformulação da caracterização dialetal do noroeste português",
+      "publisher": "Estudos de Lingüística Galega, Volume especial I: 193-208",
+      "url": "https://revistas.usc.gal/index.php/elg/article/view/3560",
+      "pages": "193-208",
+      "notes": "Reformulates the diphthongizing 'variedade do noroeste' (Cintra's Baixo-Minho / Douro-Litoral), reporting AVOC + ALEPG/ALE data largely from Brissos & Rodrigues (2016). Central finding: tonic-vowel diphthongization is NOT limited to the CLOSE mids [e o] — it applies to the OPEN mids [ɛ ɔ] too ('[ˈpi̯ɛ] pé', '[ˈtu̯ɔkɨ] toque', pp.196-197, 200-201), so only the cardinal vowels stay phonologically stable; it also affects, marginally and contextually, the high front /i/ → [ei̯] ('[mɐˈkei̯ɐ] maquia', ~19% of tokens, pre-pause/vowel only, p.199). Two co-existing diphthong subtypes: within-axis (RD1: [i̯e i̯ɛ], [u̯o u̯ɔ]) and toward-central (RD2: [eɐ̯ ɛɐ̯], [oɐ̯ ɔɐ̯], pp.200-201). Grounds widening the diphthongization rules to the open mids; RD2 and the /i/-diphthong are documented but left unmodelled (co-existing variant / contextual)."
+    },
+    {
+      "id": "brissos_rodrigues2016",
+      "author": "Brissos, Fernando & Celeste Rodrigues",
+      "year": 2016,
+      "title": "Vocalismo acentuado do Noroeste português — descrição acústica, variação dialectal e representação fonológica",
+      "publisher": "Revue Romane 51(1):1-35",
+      "url": "https://doi.org/10.1075/rro.51.1.01bri",
+      "pages": "1-35",
+      "notes": "The primary acoustic study behind Brissos (2018): AVOC formant data plus the dense ALEPG/ALE NW network. Argues the NW vowel systems require revising the close-mid-only diphthongization picture and that seven distinct vowel systems are needed to represent the continental dialects. Not open access; its examples and page-cited quadros are used here via the open-access Brissos (2018), which reproduces them."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Portuguese_dialects",
+    "https://pt.wikipedia.org/wiki/Dialetos_da_l%C3%ADngua_portuguesa",
+    "https://pt.wikipedia.org/wiki/Portugu%C3%AAs_do_Norte",
+    "https://en.wikipedia.org/wiki/Northern_Portuguese"
+  ],
+  "timespan": {
+    "start_year": 1400,
+    "end_year": null
+  },
+  "iso639_3": "por",
+  "stress": {
+    "onset_clusters": ["bl", "br", "bɫ", "bɾ", "bʀ", "bʁ", "bʎ", "bχ", "dr", "dɾ", "dʀ", "dʁ", "dʎ", "dχ", "fl", "fr", "fɫ", "fɾ", "fʀ", "fʁ", "fʎ", "fχ", "kl", "kr", "kɫ", "kɾ", "kʀ", "kʁ", "kʎ", "kχ", "pl", "pr", "pɫ", "pɾ", "pʀ", "pʁ", "pʎ", "pχ", "tr", "tɾ", "tʀ", "tʁ", "tʎ", "tχ", "vl", "vr", "vɫ", "vɾ", "vʀ", "vʁ", "vʎ", "vχ", "ðr", "ðɾ", "ðʀ", "ðʁ", "ðʎ", "ðχ", "ɡl", "ɡr", "ɡɫ", "ɡɾ", "ɡʀ", "ɡʁ", "ɡʎ", "ɡχ", "ɣl", "ɣr", "ɣɫ", "ɣɾ", "ɣʀ", "ɣʁ", "ɣʎ", "ɣχ", "βl", "βr", "βɫ", "βɾ", "βʀ", "βʁ", "βʎ", "βχ"],
+    "cliticless_words": ["o", "a", "os", "as", "de", "do", "da", "dos", "das", "em", "no", "na", "nos", "nas", "por", "pelo", "pela", "pelos", "pelas", "ao", "aos", "à", "às", "com", "sem", "e", "que", "se", "me", "te", "lhe", "lhes", "vos", "lo", "la", "los", "las", "lho", "lha", "lhos", "lhas"],
+    "default_position": -2,
+    "final_stress_endings": [
+      "r",
+      "l",
+      "z",
+      "x",
+      "i",
+      "u",
+      "im",
+      "om",
+      "um",
+      "is",
+      "us",
+      "ns",
+      "ão",
+      "ãe",
+      "õe",
+      "au",
+      "éu",
+      "éi",
+      "ói"
+    ],
+    "penult_stress_endings": [],
+    "marked_vowels": [
+      "á",
+      "é",
+      "í",
+      "ó",
+      "ú",
+      "â",
+      "ê",
+      "ô",
+      "ã",
+      "õ"
+    ],
+    "stress_mark": "ˈ",
+    "notes": "Acordo Ortográfico 1990 conventions: paroxytone default; written accents override; final -i/-u/-r/-l/-z/-x/-im/-om/-um/-ns and nasal diphthongs attract final stress. Unmarked -em/-am stay paroxytone (homem, falam). DIPHTHONGS: declared so the bundled syllabifier counts nuclei correctly — without them every vowel run merges into one nucleus and co-e-lho is read as coe-lho, one syllable short, putting the stress and its vowel reduction on the wrong vowel. ⟨oe⟩ is hiatus, not a diphthong (Cunha & Cintra, §Ditongos).",
+    "diphthongs": [
+      "ãe",
+      "ão",
+      "õe",
+      "ai",
+      "ái",
+      "au",
+      "áu",
+      "ei",
+      "éi",
+      "êi",
+      "eu",
+      "éu",
+      "êu",
+      "iu",
+      "oi",
+      "ói",
+      "ôi",
+      "ou",
+      "ui"
+    ]
+  },
+  "location": {
+    "latitude": 41.15,
+    "longitude": -8.610833,
+    "source": "wikidata",
+    "notes": "Porto — the city the Portuense variety is named for. [Wikidata Q36433 P625]"
+  },
+  "word_exceptions_base": "pt-PT",
+  "audit": {
+    "clup_dialect": {
+      "conclusion": "sample_too_small",
+      "measured": "The clup_dialect row holds 17 scored sentences (clup_dialect is sentence-level: each gold entry is one interview sentence, scored as a single unit against the engine's whole-sentence transcription, so the bootstrap resamples across only 17 sentence-level PER values, not across words), per=0.4223, per_ci_low=0.3919, per_ci_high=0.4499 (benchmarks/results.json). At n=17 sentences the bootstrap interval is already collapsing toward a point for the same reason (few distinct values to resample), so its narrow width reflects the small sample, not precision; see docs/scoreboard.md's `95% CI` note and the THIN_ROW_MARK cutoff (rows under 20 scored items). This row cannot gate a production promotion on its own strength.",
+      "reference": "spec notes"
+    }
+  }
+}

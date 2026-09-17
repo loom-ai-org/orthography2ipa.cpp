@@ -1,0 +1,314 @@
+{
+  "code": "pln",
+  "name": "Palenquero (Lengua ri Palenge)",
+  "family": "Spanish Creole",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "parent": "es-ES",
+  "ancestors": [
+    {
+      "code": "es-ES",
+      "role": "lexifier",
+      "weight": 0.75,
+      "notes": "Spanish is the lexifier; the great majority of the lexicon and the seseo/yeismo phonology derive from (Caribbean/Andalusian) Spanish."
+    },
+    {
+      "code": "kg",
+      "role": "substrate",
+      "weight": 0.2,
+      "notes": "Kikongo (Bantu) substrate: the founders of San Basilio de Palenque were Kikongo/Kimbundu-speaking maroons. The most-cited substrate diagnostic is the word-initial prenasalized stops [mb nd ŋɡ] (ndulo < duro, ngota < gota, mbala < bala), categorically absent from the local Spanish of the same community (APiCS survey 48; Schwegler)."
+    }
+  ],
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "á": [
+      "a"
+    ],
+    "e": [
+      "e"
+    ],
+    "é": [
+      "e"
+    ],
+    "i": [
+      "i"
+    ],
+    "í": [
+      "i"
+    ],
+    "o": [
+      "o"
+    ],
+    "ó": [
+      "o"
+    ],
+    "u": [
+      "u"
+    ],
+    "ú": [
+      "u"
+    ],
+    "b": [
+      "b"
+    ],
+    "c": [
+      "k",
+      "s"
+    ],
+    "ch": [
+      "tʃ"
+    ],
+    "d": [
+      "d"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɡ",
+      "h"
+    ],
+    "gu": [
+      "ɡ"
+    ],
+    "h": [
+      ""
+    ],
+    "j": [
+      "h"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "ll": [
+      "j"
+    ],
+    "m": [
+      "m"
+    ],
+    "mb": [
+      "mb"
+    ],
+    "n": [
+      "n"
+    ],
+    "nd": [
+      "nd"
+    ],
+    "ng": [
+      "ŋɡ"
+    ],
+    "ñ": [
+      "ɲ"
+    ],
+    "p": [
+      "p"
+    ],
+    "q": [
+      "k"
+    ],
+    "qu": [
+      "k"
+    ],
+    "r": [
+      "ɾ"
+    ],
+    "rr": [
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "v": [
+      "b"
+    ],
+    "w": [
+      "w"
+    ],
+    "x": [
+      "ks"
+    ],
+    "y": [
+      "j"
+    ],
+    "z": [
+      "s"
+    ]
+  },
+  "positional_graphemes": {
+    "c": {
+      "before_front_vowel": [
+        "s"
+      ],
+      "default": [
+        "k"
+      ]
+    },
+    "g": {
+      "before_front_vowel": [
+        "h"
+      ],
+      "default": [
+        "ɡ"
+      ]
+    }
+  },
+  "allophones": {
+    "a": [
+      "a"
+    ],
+    "e": [
+      "e"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "o"
+    ],
+    "u": [
+      "u"
+    ],
+    "b": [
+      "b"
+    ],
+    "k": [
+      "k"
+    ],
+    "s": [
+      "s"
+    ],
+    "tʃ": [
+      "tʃ"
+    ],
+    "d": [
+      "d"
+    ],
+    "f": [
+      "f"
+    ],
+    "ɡ": [
+      "ɡ"
+    ],
+    "h": [
+      "h"
+    ],
+    "l": [
+      "l"
+    ],
+    "j": [
+      "j"
+    ],
+    "m": [
+      "m"
+    ],
+    "mb": [
+      "mb"
+    ],
+    "n": [
+      "n"
+    ],
+    "nd": [
+      "nd"
+    ],
+    "ŋɡ": [
+      "ŋɡ"
+    ],
+    "ɲ": [
+      "ɲ"
+    ],
+    "p": [
+      "p"
+    ],
+    "ɾ": [
+      "ɾ"
+    ],
+    "r": [
+      "r"
+    ],
+    "t": [
+      "t"
+    ],
+    "w": [
+      "w"
+    ],
+    "ks": [
+      "ks"
+    ]
+  },
+  "iso639_3": "pln",
+  "glottolog_code": "pale1260",
+  "wikidata_qid": "Q2657908",
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Palenquero"
+  ],
+  "sources": [
+    {
+      "id": "apics2013pln",
+      "author": "Schwegler, Armin (APiCS survey chapter)",
+      "year": 2013,
+      "title": "Palenquero structure dataset (Survey chapter 48)",
+      "publisher": "Atlas of Pidgin and Creole Language Structures Online (APiCS), eds. Michaelis, Maurer, Haspelmath & Huber",
+      "url": "https://apics-online.info/surveys/48",
+      "wikipedia_url": null,
+      "pages": "Vowel inventory /i e a o u/ (Caribbean-Spanish-type); consonant inventory /p t k b d ɡ ʝ f m n ɲ tʃ s x l ɾ r/; word-initial prenasalized stops [mb nd ŋɡ] as African-substrate diagnostic (ngota, ndulo, mbala); seseo (no /θ/) and yeismo (/ʝ/, no /ʎ/) inferable from the inventory; 'one phoneme / one letter' modern orthography (Palenke, kumé).",
+      "notes": "Primary source for the phonemic inventory, the prenasalized-stop diagnostic and the phonemic school orthography."
+    },
+    {
+      "id": "lipski2012",
+      "author": "Lipski, John M.",
+      "year": 2012,
+      "title": "The 'new' Palenquero: revitalization and re-creolization",
+      "publisher": "In: Colombian Varieties of Spanish, eds. File-Muriel & Orozco, Iberoamericana/Vervuert, pp. 21-42",
+      "url": "https://personal.psu.edu/jml34/Palenquero-UniverSOS.pdf",
+      "wikipedia_url": null,
+      "pages": "pp. 24-36: genuine glossed example sentences; TAM particles ta (imperfective), taba/-ba (past/imperfect), a (perfective/completive), asé (habitual); pronouns i (1sg), bo (2sg), ele (3sg), suto (1pl), ané (3pl), enú (2pl); postposed negation nu; preposed plural marker ma; copula jue; relativizer lo ke; the etymological c/qu transcription used for the gold register.",
+      "notes": "Open-access primary source; supplies the verified example sentences used in the gold set and the TAM/pronoun/negation morphosyntax."
+    },
+    {
+      "id": "schwegler_morton2003",
+      "author": "Schwegler, Armin & Morton, Thomas",
+      "year": 2003,
+      "title": "Vernacular Spanish in a microcosm: Kateyano in El Palenque de San Basilio (Colombia)",
+      "publisher": "Revista Internacional de Lingüística Iberoamericana 1(1), pp. 97-159",
+      "url": null,
+      "wikipedia_url": null,
+      "pages": "Contrast between Palenquero (creole) and local Kateyano (village Spanish); the prenasalized stops occur in the creole but not the local Spanish; intervocalic /b d ɡ/ lenition to [β ð ɣ]; acute accent marks stressed/high-tone syllables.",
+      "notes": "Key Schwegler phonology reference (consulted via citation; no open-access PDF located). Cited for the prenasalization contrast and the stress/tone orthography; not read first-hand — see PR body."
+    }
+  ],
+  "timespan": {
+    "start_year": 1600,
+    "end_year": null
+  },
+  "notes": "Palenquero (Lengua ri Palenge), the Spanish-lexifier creole of San Basilio de Palenque, Bolívar, Colombia (~3,500 speakers; the only surviving Spanish creole of Latin America). Kikongo (Bantu) substrate. KEY FEATURES: (1) FIVE-VOWEL SYSTEM /a e i o u/, Caribbean-Spanish-type. (2) WORD-INITIAL PRENASALIZED STOPS: ⟨mb nd ng⟩ = [mb nd ŋɡ] (ndá < dar, ndo < dos, ngombe 'cattle') — the chief substrate diagnostic, absent from the community's local Spanish. (3) SESEO: ⟨c⟩ before front vowels and ⟨z⟩ = [s], no /θ/. (4) YEISMO: ⟨ll⟩ = [j], no /ʎ/. (5) ⟨j⟩ and ⟨g⟩ before front vowels = [h] (aspiration; jende < gente, jambre < hambre, jue < fue). (6) BETACISM: ⟨v⟩ = [b]. (7) Acute accent marks stress/high tone, mapped here to the base vowel quality (no lexical-stress/tone model). MORPHOSYNTAX (Lipski 2012): preverbal TAM ta/taba/a/asé; pronouns i, bo, ele, suto, enú, ané; postposed negation nu; preposed plural ma. The gold register uses Lipski's (2012) etymological c/qu transcription; the spec also parses the k-based phonemic school orthography (Palenke, kumé). OPEN / UNVERIFIED (flagged, need Schwegler primary literature): final /n/ → [ŋ]; full /l/~/ɾ/~/d/ neutralization; coda-/s/ behaviour in the creole proper (vs. local Spanish); the exact spelling of /ɲ/. These are deliberately NOT modelled beyond the Spanish-inherited defaults.",
+  "location": {
+    "latitude": 10.1017,
+    "longitude": -75.2003,
+    "source": "manual",
+    "notes": "San Basilio de Palenque, Mahates municipality, Bolívar Department, Colombia."
+  },
+  "allophone_rules": [
+    {
+      "id": "ES_TRILL_AFTER_CORONAL",
+      "phonemes": [],
+      "surface": "r",
+      "notes": "NOT ASSERTED for this creole. The rule is inherited from the es-ES lexifier, where it is the Castilian vibrante multiple after a heterosyllabic coronal (Navarro Tomas 1977; Hualde 2005 ch. 9). No source in this spec's bibliography states that the Castilian rhotic distribution survives in the creole, and an uncited Peninsular process must not ride in on a lexifier link, so the id is re-declared with an empty 'phonemes' to disable it (the documented opt-out - see InheritanceMode.OVERLAY_BY_ID). Re-enable it with a citation."
+    },
+    {
+      "id": "ES_NASAL_LABIAL",
+      "phonemes": [],
+      "surface": "m",
+      "notes": "NOT ASSERTED for this creole, for the same reason as ES_TRILL_AFTER_CORONAL above: nasal place assimilation before a labial is cited for Castilian (Navarro Tomas 1977; Hualde 2005 ch. 3), not for this creole's phonology. Disabled by empty 'phonemes'; re-enable with a citation."
+    }
+  ]
+}

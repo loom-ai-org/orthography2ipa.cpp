@@ -1,0 +1,244 @@
+{
+  "code": "kaa",
+  "name": "Karakalpak",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "á": [
+      "æ"
+    ],
+    "b": [
+      "b"
+    ],
+    "d": [
+      "d"
+    ],
+    "e": [
+      "e"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "ǵ": [
+      "ɣ"
+    ],
+    "h": [
+      "h"
+    ],
+    "x": [
+      "x"
+    ],
+    "ı": [
+      "ɯ"
+    ],
+    "i": [
+      "i"
+    ],
+    "j": [
+      "ʒ"
+    ],
+    "k": [
+      "k"
+    ],
+    "q": [
+      "q"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ń": [
+      "ŋ"
+    ],
+    "o": [
+      "o"
+    ],
+    "ó": [
+      "œ"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "u": [
+      "u"
+    ],
+    "ú": [
+      "y"
+    ],
+    "v": [
+      "v"
+    ],
+    "w": [
+      "w"
+    ],
+    "y": [
+      "j"
+    ],
+    "z": [
+      "z"
+    ],
+    "sh": [
+      "ʃ"
+    ],
+    "c": [
+      "ts"
+    ],
+    "ch": [
+      "tʃ"
+    ]
+  },
+  "allophones": {
+    "a": [
+      "a"
+    ],
+    "æ": [
+      "æ"
+    ],
+    "b": [
+      "b"
+    ],
+    "d": [
+      "d"
+    ],
+    "e": [
+      "e"
+    ],
+    "f": [
+      "f"
+    ],
+    "ɡ": [
+      "ɡ"
+    ],
+    "ɣ": [
+      "ɣ"
+    ],
+    "h": [
+      "h"
+    ],
+    "x": [
+      "x"
+    ],
+    "ɯ": [
+      "ɯ"
+    ],
+    "i": [
+      "i"
+    ],
+    "ʒ": [
+      "ʒ"
+    ],
+    "k": [
+      "k"
+    ],
+    "q": [
+      "q"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ŋ": [
+      "ŋ"
+    ],
+    "o": [
+      "o"
+    ],
+    "œ": [
+      "œ"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "u": [
+      "u"
+    ],
+    "y": [
+      "y"
+    ],
+    "v": [
+      "v"
+    ],
+    "w": [
+      "w"
+    ],
+    "j": [
+      "j"
+    ],
+    "z": [
+      "z"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "ts": [
+      "ts"
+    ],
+    "tʃ": [
+      "tʃ"
+    ]
+  },
+  "notes": "Karakalpak (Qaraqalpaqsha), Kipchak Turkic language of Karakalpakstan (Uzbekistan). The mapping above is the 2016 Latin alphabet, the current official script; a Cyrillic alphabet is also in use and is not modelled here — Latin input is assumed. Regular one-letter-one-phoneme orthography with front/back vowel harmony (⟨á ó ú i e⟩ front, ⟨a o u ı⟩ back). ISO 639-3 is kaa and Glottolog kara1467; the Wikidata row supplied for this code pointed at the Karakalpak Wiktionary project rather than the language item, so no QID is asserted here.",
+  "iso639_3": "kaa",
+  "glottolog_code": null,
+  "wikidata_qid": "Q33541",
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Karakalpak_language"
+  ],
+  "sources": [
+    {
+      "id": "karakalpak_language_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Karakalpak language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Karakalpak_language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Karakalpak_language",
+      "pages": null,
+      "notes": "Orthography / phonology reference."
+    }
+  ],
+  "parent": "x-clade-turk1311",
+  "ancestors": [
+    {
+      "code": "x-clade-turk1311",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Turkic — the classification node this language sits under."
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "code": "lmo-x-milanese",
+  "name": "Lombard (classical Milanese orthography)",
+  "script": "Latin",
+  "parent": "lmo",
+  "graphemes_base": "lmo",
+  "allophones_base": "lmo",
+  "graphemes": {
+    "â": [
+      "aː"
+    ],
+    "ô": [
+      "oː"
+    ]
+  },
+  "ancestors": [
+    {
+      "code": "lmo",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Same language, same phonology; only the accented-vowel orthographic convention differs (see notes)."
+    }
+  ],
+  "notes": "Lombard written in the classical Milanese orthography (the Circolo Filologico Milanese's revision of Porta-era usage) rather than the Ticinese orthography that `lmo` targets. The two conventions genuinely diverge on the circumflex series and cannot both be served by one spec: the classical-Milanese source ('Ortografia milanese classica', 'Accenti' section, citing Porta, Poesie, ed. Isella, Mondadori 1982) states the circumflex marks a 'very closed timbre and long duration', and separately states plain 'o' is already pronounced as Italian 'u' in Milanese — so a circumflex applied to that already-[u] vowel gives [oː] by the source's stated closed+long rule read literally (the timbre component targets [o], distinct from the plain-o value [u]; the length component is the source's explicit claim). `lmo` instead maps ô to plain /u/ with no length, a choice measured against the WikiPron gold's two attested circumflex-o words ('rasô', 'resô'), both realized as /u/ with no length — a gold-fit reading, not the source's own rule. This entry ships the source's rule literally instead of the gold-fit reading: ô=/oː/, â=/aː/ (length only, since Lombard does not distinguish open/closed timbre on 'a'). Everything else — grave/acute accented vowels, ü/ö front rounded vowels, consonants, degemination, and the whole galloitalic-derived allophone table — is identical phonology to `lmo` and is inherited via `graphemes_base`/`allophones_base` rather than duplicated, per orthography2ipa's one-concept-one-place rule for orthography variants of the same language (compare `cdo-Latn-buc`, `zh-Hani`, and the `-x-` regional-orthography entries). No official body publishes the classical Milanese orthography — unlike Ticinese's CDE Canton Ticino, it is an editorial tradition maintained by the Circolo Filologico Milanese and by individual editors (e.g. Isella's 1982 edition of Porta); accordingly no `orthography_standard` is declared here. This entry is not scored against the existing `lmo`/wikipron benchmark row: that gold is overwhelmingly Ticinese-spelled (95 of 406 unique words use the Ticinese grave/acute series against 7 circumflex + 6 umlaut words in the classical-Milanese minority), so repointing or splitting that row would not improve its measurement of either convention. This entry exists to model the classical-Milanese circumflex rule correctly on its own terms, for a gold that is actually written in that convention, not to win points against a row that is not.",
+  "sources": [
+    {
+      "id": "porta_isella1982",
+      "author": "Porta, Carlo (ed. Isella, Dante)",
+      "year": 1982,
+      "title": "Poesie",
+      "publisher": "Mondadori",
+      "url": null,
+      "pages": null,
+      "notes": "The classical Milanese literary orthography this entry targets, as codified in Isella's critical edition of Porta's verse and summarized by the Circolo Filologico Milanese's 'Accenti' rule (circumflex = closed timbre + length; plain 'o' already pronounced [u]). Edition not directly consulted; the rule is reported via its Wikipedia summary (see ortografia_milanese_classica_wp), not read from the edition itself."
+    },
+    {
+      "id": "ortografia_milanese_classica_wp",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Ortografia milanese classica",
+      "publisher": "Wikipedia (it)",
+      "url": "https://it.wikipedia.org/wiki/Ortografia_milanese_classica",
+      "pages": null,
+      "notes": "Reading path only, not the phonemic authority: its 'Principi generali'/'Accenti' section cites Porta, Poesie (ed. Isella), Mondadori 1982, on the circumflex marking closed+long vowel timbre and on plain 'o' already being pronounced [u] in Milanese; the primary edition was not directly consulted."
+    }
+  ],
+  "wikipedia": [
+    "https://it.wikipedia.org/wiki/Ortografia_milanese_classica"
+  ],
+  "timespan": {
+    "start_year": 1600,
+    "end_year": null
+  },
+  "glottolog_code": "lomb1257",
+  "iso639_3": "lmo",
+  "wikidata_qid": "Q33754",
+  "quality": "research",
+  "script_type": "alphabet",
+  "location": {
+    "latitude": 45.4642,
+    "longitude": 9.19,
+    "source": "manual",
+    "notes": "Milan, historical center of the classical Milanese literary orthography."
+  }
+}

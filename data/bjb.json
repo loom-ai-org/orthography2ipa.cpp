@@ -1,0 +1,136 @@
+{
+  "code": "bjb",
+  "name": "Banggarla",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "dh": [
+      "d̪"
+    ],
+    "dy": [
+      "ɟ"
+    ],
+    "rd": [
+      "ɖ"
+    ],
+    "nh": [
+      "n̪"
+    ],
+    "ny": [
+      "ɲ"
+    ],
+    "ng": [
+      "ŋ"
+    ],
+    "rn": [
+      "ɳ"
+    ],
+    "lh": [
+      "l̪"
+    ],
+    "ly": [
+      "ʎ"
+    ],
+    "rl": [
+      "ɭ"
+    ],
+    "rr": [
+      "ɾ"
+    ],
+    "rh": [
+      "ɻ"
+    ],
+    "aa": [
+      "aː"
+    ],
+    "ii": [
+      "iː"
+    ],
+    "oo": [
+      "u"
+    ],
+    "b": [
+      "b"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "d": [
+      "d"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "l": [
+      "l"
+    ],
+    "r": [
+      "r"
+    ],
+    "w": [
+      "w"
+    ],
+    "y": [
+      "j"
+    ],
+    "a": [
+      "a"
+    ],
+    "i": [
+      "i"
+    ]
+  },
+  "parent": "x-clade-pama1250",
+  "ancestors": [
+    {
+      "code": "x-clade-pama1250",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Descent per Glottolog classification of Banggarla (bang1339)."
+    }
+  ],
+  "notes": "Pama-Nyungan (Thura-Yura) language of the Eyre Peninsula, South Australia, in the modern revival orthography. Retroflex consonants are written as r-plus-consonant digraphs (rd, rn, rl), the retroflex approximant as rh, dental consonants with h (dh, nh, lh) and the palatal stop as dy. The back vowel is written oo and mapped to /u/, and long vowels by doubling (aa ii). Word-initial stress and allophonic prestopping of nasals and laterals are not encoded. The dental lateral lh and trill/tap split are inferred from the series symmetry, so this is skeleton tier.",
+  "iso639_3": "bjb",
+  "glottolog_code": null,
+  "sources": [
+    {
+      "id": "bjb_glottolog",
+      "author": "Hammarström, H. et al. (Glottolog 5.0)",
+      "year": 2024,
+      "title": "Glottolog: Banggarla (bang1339)",
+      "publisher": "Max Planck Institute for Evolutionary Anthropology",
+      "url": "https://glottolog.org/resource/languoid/id/bang1339",
+      "pages": null,
+      "notes": "Classification reference for a skeleton-tier entry.",
+      "wikipedia_url": null
+    },
+    {
+      "id": "bjb_wikipedia",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Barngarla language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Barngarla_language",
+      "pages": null,
+      "notes": "Phonology and orthography reference for the skeleton grapheme map.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Barngarla_language"
+    },
+    {
+      "id": "bjb_clendon2015",
+      "author": "Clendon, Mark",
+      "year": 2015,
+      "title": "Clamor Schürmann's Barngarla Grammar: A commentary on the first section of A Vocabulary of the Parnkalla Language",
+      "publisher": "University of Adelaide Press",
+      "url": "https://www.adelaide.edu.au/press/titles/barngarla",
+      "pages": null,
+      "notes": "Modern scholarly reconstruction of Barngarla phonology and grammar from Schürmann's 1844 vocabulary, underlying the revival orthography this spec models."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Barngarla_language"
+  ]
+}

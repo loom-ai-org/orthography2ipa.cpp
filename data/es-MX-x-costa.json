@@ -1,0 +1,147 @@
+{
+  "code": "es-MX-x-costa",
+  "name": "Mexican Spanish (Coastal)",
+  "script": "Latin",
+  "graphemes_base": "es-ES",
+  "graphemes": {
+    "c": [
+      "k",
+      "s"
+    ],
+    "z": [
+      "s"
+    ],
+    "ll": [
+      "ʝ"
+    ]
+  },
+  "allophones_base": "es-ES",
+  "allophones": {
+    "d": [
+      "d",
+      "ð",
+      ""
+    ],
+    "s": [
+      "s",
+      "h",
+      "z"
+    ],
+    "ʝ": [
+      "ʝ",
+      "ɟʝ"
+    ],
+    "n": [
+      "n",
+      "ŋ"
+    ],
+    "l": [
+      "l",
+      "ɾ"
+    ],
+    "e": [
+      "e",
+      "e̥"
+    ],
+    "o": [
+      "o",
+      "o̥"
+    ],
+    "x": [
+      "h",
+      "x"
+    ]
+  },
+  "positional_graphemes_base": "es-ES",
+  "positional_graphemes": {
+    "d": {
+      "default": [
+        "d"
+      ],
+      "intervocalic": [
+        "ð",
+        ""
+      ],
+      "word_final": [
+        ""
+      ]
+    },
+    "s": {
+      "word_initial": [
+        "s"
+      ],
+      "intervocalic": [
+        "s"
+      ],
+      "before_consonant": [
+        "h",
+        ""
+      ],
+      "word_final": [
+        "h",
+        ""
+      ]
+    },
+    "n": {
+      "default": [
+        "n"
+      ],
+      "word_final": [
+        "ŋ"
+      ]
+    }
+  },
+  "parent": "es-ES",
+  "notes": "Coastal Mexican (Veracruz, Tabasco, Gulf/Pacific lowlands). Caribbean-influenced: coda /s/ aspiration, /x/ → [h], final /n/ velarisation, some liquid neutralisation.",
+  "quality": "research",
+  "script_type": "alphabet",
+  "sources": [
+    {
+      "id": "hualde2005",
+      "author": "Hualde, J.I.",
+      "year": 2005,
+      "title": "The Sounds of Spanish",
+      "publisher": "Cambridge University Press",
+      "url": null,
+      "pages": null,
+      "notes": null,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Spanish_phonology"
+    },
+    {
+      "id": "lope_blanch1972",
+      "author": "Lope Blanch, J.M.",
+      "year": 1972,
+      "title": "El concepto del prestigio y la norma lingüística del español",
+      "publisher": "UNAM",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "penny2002",
+      "author": "Penny, R.",
+      "year": 2002,
+      "title": "A History of the Spanish Language",
+      "publisher": "Cambridge University Press",
+      "url": null,
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Mexican_Spanish",
+    "https://es.wikipedia.org/wiki/Espa%C3%B1ol_mexicano"
+  ],
+  "timespan": {
+    "start_year": 1700,
+    "end_year": null
+  },
+  "glottolog_code": null,
+  "iso639_3": "spa",
+  "location": {
+    "latitude": 19.190278,
+    "longitude": -96.153333,
+    "source": "wikidata",
+    "notes": "Veracruz — a representative city of the Mexican Gulf lowlands (Veracruz, Tabasco). [Wikidata Q173270 P625]"
+  }
+}

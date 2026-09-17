@@ -1,0 +1,51 @@
+{
+  "code": "cpg",
+  "name": "Cappadocian Greek",
+  "script": "Greek",
+  "script_type": "alphabet",
+  "quality": "skeleton",
+  "iso639_3": "cpg",
+  "glottolog_code": "capp1239",
+  "graphemes_base": "el",
+  "graphemes": {},
+  "allophones_base": "el",
+  "allophones": {},
+  "parent": "el",
+  "ancestors": [
+    {
+      "code": "el",
+      "role": "parent_dialect",
+      "weight": 0.85,
+      "notes": "Modern Greek dialect group descended from Medieval Greek, formerly spoken in Cappadocia (central Anatolia) until the 1923 Greek-Turkish population exchange (Wikipedia: Cappadocian Greek)."
+    },
+    {
+      "code": "tr",
+      "role": "adstrate",
+      "weight": 0.3,
+      "notes": "\"Among all Greek dialects, Cappadocian Greek is the one most influenced by Turkish\": Turkish vowel harmony, SOV word-order tendencies, and phonemes not native to Greek — ı, ö, ü, š, ž, tš, dž (Wikipedia: Cappadocian Greek; Dawkins 1916 as cited there)."
+    }
+  ],
+  "notes": "Cappadocian Greek (Kapadokika), a critically endangered Modern Greek dialect group (~2,800 speakers, UNESCO 2015 figure) formerly spoken across Cappadocia, central Turkey; speakers were resettled in Central/Northern Greece after the 1923 population exchange. Documented in the Greek alphabet for modern purposes, so the base grapheme inventory is inherited from Modern Greek (`el`) unchanged. Turkish contact introduced phonemes absent from, or marginal in, standard Greek — /ɯ/ (ı), /ø/ (ö), /y/ (ü), /ʃ ʒ tʃ dʒ/ (š ž tš dž per Dawkins' transcription) — but no confirmed native Greek-alphabet spelling convention for these sounds could be sourced this session, so they are left unmapped rather than fabricated; a future revision with access to Dawkins (1916) 'Modern Greek in Asia Minor' or Janse's Cappadocian corpus could add them as graphemes/allophones. Turkish is wired as an adstrate per the cited descent, at a higher weight than the more modest Ottoman-period adstrate on `el` itself, reflecting Cappadocian's exceptionally deep Turkish contact.",
+  "sources": [
+    {
+      "id": "wiki-cpg",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Cappadocian Greek",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Cappadocian_Greek"
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Cappadocian_Greek"
+  ],
+  "timespan": {
+    "start_year": 1100,
+    "end_year": 1923
+  },
+  "location": {
+    "latitude": 38.7,
+    "longitude": 34.85,
+    "source": "wikipedia",
+    "notes": "Central Anatolia (Cappadocia), the region spoken in before the 1923 population exchange."
+  }
+}

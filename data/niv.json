@@ -1,0 +1,230 @@
+{
+  "code": "niv",
+  "name": "Gilyak",
+  "script": "Cyrillic",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "нь": [
+      "ɲ"
+    ],
+    "дь": [
+      "ɟ"
+    ],
+    "ть": [
+      "c"
+    ],
+    "р̌": [
+      "r̥"
+    ],
+    "т’": [
+      "tʰ"
+    ],
+    "тʼ": [
+      "tʰ"
+    ],
+    "к’": [
+      "kʰ"
+    ],
+    "кʼ": [
+      "kʰ"
+    ],
+    "п’": [
+      "pʰ"
+    ],
+    "пʼ": [
+      "pʰ"
+    ],
+    "ӄ’": [
+      "qʰ"
+    ],
+    "ӄʼ": [
+      "qʰ"
+    ],
+    "ъ": [
+      ""
+    ],
+    "ь": [
+      "ʲ"
+    ],
+    "а": [
+      "æ"
+    ],
+    "б": [
+      "b"
+    ],
+    "в": [
+      "v"
+    ],
+    "г": [
+      "ɡ"
+    ],
+    "ғ": [
+      "ɣ"
+    ],
+    "ӷ": [
+      "ʁ"
+    ],
+    "ҕ": [
+      "ʁ"
+    ],
+    "д": [
+      "d"
+    ],
+    "е": [
+      "je"
+    ],
+    "ё": [
+      "jo"
+    ],
+    "ж": [
+      "ʒ"
+    ],
+    "з": [
+      "z"
+    ],
+    "и": [
+      "i"
+    ],
+    "й": [
+      "j"
+    ],
+    "к": [
+      "k"
+    ],
+    "қ": [
+      "q"
+    ],
+    "ӄ": [
+      "q"
+    ],
+    "ҟ": [
+      "qʰ"
+    ],
+    "л": [
+      "l"
+    ],
+    "м": [
+      "m"
+    ],
+    "н": [
+      "n"
+    ],
+    "ӈ": [
+      "ŋ"
+    ],
+    "о": [
+      "o"
+    ],
+    "п": [
+      "p"
+    ],
+    "р": [
+      "r"
+    ],
+    "ҏ": [
+      "r̥"
+    ],
+    "с": [
+      "s"
+    ],
+    "т": [
+      "t"
+    ],
+    "у": [
+      "u"
+    ],
+    "ф": [
+      "f"
+    ],
+    "х": [
+      "x"
+    ],
+    "ӿ": [
+      "h"
+    ],
+    "ӻ": [
+      "ʁ"
+    ],
+    "ӽ": [
+      "χ"
+    ],
+    "ҳ": [
+      "χ"
+    ],
+    "ц": [
+      "ts"
+    ],
+    "ч": [
+      "tʃ"
+    ],
+    "ш": [
+      "ʃ"
+    ],
+    "щ": [
+      "ɕ"
+    ],
+    "ы": [
+      "ɨ"
+    ],
+    "э": [
+      "e"
+    ],
+    "ю": [
+      "ju"
+    ],
+    "я": [
+      "ja"
+    ]
+  },
+  "parent": "x-clade-nivk1234",
+  "ancestors": [
+    {
+      "code": "x-clade-nivk1234",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Descent per Glottolog classification of Amur Nivkh (gily1242)."
+    }
+  ],
+  "notes": "Research. Nivkh (Gilyak) is a Paleosiberian language isolate; this entry follows the Amur dialect Cyrillic alphabet (Gruzdeva 1998). Beyond the base Russian letters it covers the language-specific graphemes for the rich dorsal system: Ӈ (velar nasal), the velar/uvular fricatives Ғ (ɣ), Ӻ/Ӷ/Ҕ (ʁ), the uvular stops Ӄ/Қ and Ҟ, the uvular/velar fricatives Ҳ/Ӽ (χ), Ӿ (h), and the voiceless sonorant Ҏ (also spelled with base ⟨р⟩ plus a combining caron, ⟨р̌⟩, mapped as an equivalent multigraph). Nivkh contrasts aspirated and unaspirated stops: the practical orthography spells the default (unaspirated) series with the bare letter (п т к ӄ = [p t k q]) and the aspirated series by suffixing an apostrophe (п’ т’ к’ ӄ’ = [pʰ tʰ kʰ qʰ]) — the pre-upgrade spec had this backwards, defaulting to aspirated and never modelling the apostrophe. ⟨а⟩ is phonetically fronted [æ] in the sampled gold. The bare soft sign ⟨ь⟩ is a palatalisation mark and composes /ʲ/ onto the preceding consonant by default (matching ru/uk); it was previously mapped to nothing, silently deleting palatalisation. The northeuralex and wikipron golds agree that three of the resulting sequences are not plain C+ʲ concatenations but single fused segments: ⟨нь⟩ -> [ɲ] (palatal nasal), ⟨дь⟩ -> [ɟ] (palatal stop), ⟨ть⟩ -> [c] (voiceless palatal stop); these earn dedicated Cyrillic+ь multigraph keys. The few ⟨ь⟩ words after other consonants (л, р, з) in the golds are Russian loans (сентябрь, учитель, обезьяна) and compose the generic bare /ʲ/ correctly without a key of their own. Nivkh undergoes extensive initial-consonant mutation conditioned by morphology/syntax that is not recoverable from an isolated word's spelling and is left unencoded, so a residual PER floor from that mutation is expected. No `stress` block: Nivkh word stress is not lexically contrastive and is not treated as orthography-predictable by Gruzdeva (1998), so it is left unencoded (stress exemption).",
+  "iso639_3": "niv",
+  "glottolog_code": null,
+  "sources": [
+    {
+      "id": "niv_glottolog",
+      "author": "Hammarström, H. et al. (Glottolog 5.0)",
+      "year": 2024,
+      "title": "Glottolog: Amur Nivkh (gily1242)",
+      "publisher": "Max Planck Institute for Evolutionary Anthropology",
+      "url": "https://glottolog.org/resource/languoid/id/gily1242",
+      "pages": null,
+      "notes": "Classification reference for a skeleton-tier entry.",
+      "wikipedia_url": null
+    },
+    {
+      "id": "gruzdeva1998",
+      "author": "Gruzdeva, Ekaterina",
+      "year": 1998,
+      "title": "Nivkh (Languages of the World/Materials 111)",
+      "publisher": "Lincom Europa",
+      "url": null,
+      "pages": null,
+      "notes": "Grammar of Nivkh: Cyrillic (Amur dialect) orthography, the plain/apostrophe-aspirated stop contrast, the dorsal fricative/stop inventory, and initial-consonant mutation.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Nivkh_language"
+    },
+    {
+      "id": "niv_orthography",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Nivkh language — writing system and phonology",
+      "publisher": null,
+      "url": "https://en.wikipedia.org/wiki/Nivkh_language",
+      "pages": null,
+      "notes": "Orthography/phonology reference for the skeleton-tier grapheme map.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Nivkh_language"
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Nivkh_language"
+  ]
+}

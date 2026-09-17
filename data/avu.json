@@ -1,0 +1,246 @@
+{
+ "code": "avu",
+ "name": "Avokaya",
+ "script": "Latin",
+ "quality": "skeleton",
+ "graphemes": {
+  "a": [
+   "a"
+  ],
+  "b": [
+   "b"
+  ],
+  "c": [
+   "t͡s"
+  ],
+  "d": [
+   "d"
+  ],
+  "dr": [
+   "ɖ"
+  ],
+  "e": [
+   "ɛ"
+  ],
+  "f": [
+   "f"
+  ],
+  "g": [
+   "ɡ"
+  ],
+  "gb": [
+   "ɡ͡b"
+  ],
+  "h": [
+   "h"
+  ],
+  "i": [
+   "ɪ"
+  ],
+  "j": [
+   "d͡z"
+  ],
+  "k": [
+   "k"
+  ],
+  "kp": [
+   "k͡p"
+  ],
+  "l": [
+   "l"
+  ],
+  "m": [
+   "m"
+  ],
+  "mb": [
+   "ᵐb"
+  ],
+  "mv": [
+   "ᶬv"
+  ],
+  "n": [
+   "n"
+  ],
+  "nd": [
+   "ⁿd"
+  ],
+  "ndr": [
+   "ᶯɖ"
+  ],
+  "ng": [
+   "ᵑɡ"
+  ],
+  "ngb": [
+   "ᵑᵐɡ͡b"
+  ],
+  "nj": [
+   "ⁿd͡z"
+  ],
+  "ny": [
+   "ɲ"
+  ],
+  "o": [
+   "ɔ"
+  ],
+  "p": [
+   "p"
+  ],
+  "r": [
+   "r"
+  ],
+  "s": [
+   "s"
+  ],
+  "t": [
+   "t"
+  ],
+  "tr": [
+   "ʈ"
+  ],
+  "u": [
+   "u"
+  ],
+  "v": [
+   "v"
+  ],
+  "w": [
+   "w"
+  ],
+  "y": [
+   "j"
+  ],
+  "z": [
+   "z"
+  ],
+  "ŋ": [
+   "ŋ"
+  ],
+  "ạ": [
+   "ə"
+  ],
+  "ị": [
+   "i"
+  ],
+  "’": [
+   "ʔ"
+  ],
+  "’b": [
+   "ɓ"
+  ],
+  "’d": [
+   "ɗ"
+  ],
+  "’w": [
+   "ˀw"
+  ],
+  "’y": [
+   "ˀj"
+  ]
+ },
+ "allophones": {},
+ "notes": "Placed so the ancestry graph covers every living ISO 639-3 language. No orthography is claimed; the phoneme inventory follows the cited PHOIBLE inventory (which itself cites a published description): script is Zyyy (undetermined) until a cited description is encoded. Classification and coordinates follow Glottolog. Orthography from an Omniglot chart (c) Simon Ager, https://www.omniglot.com/, extracted via the AfriSpeech/africa-g2p compilation (avu.json). africa-g2p is a compilation tool, not the linguistic authority; the citation above is the original source it names.",
+ "iso639_3": "avu",
+ "glottolog_code": "avok1242",
+ "sources": [
+  {
+   "id": "glottolog2024",
+   "author": "Hammarström, Harald; Forkel, Robert; Haspelmath, Martin; Bank, Sebastian",
+   "year": 2024,
+   "title": "Glottolog 5.0",
+   "publisher": "Max Planck Institute for Evolutionary Anthropology",
+   "url": "https://glottolog.org/"
+  },
+  {
+   "id": "phoible2019",
+   "author": "Moran, Steven; McCloy, Daniel (eds.)",
+   "year": 2019,
+   "title": "PHOIBLE 2.0 (doi:10.5281/zenodo.2562766)",
+   "publisher": "Max Planck Institute for the Science of Human History",
+   "url": "https://phoible.org/inventories/view/660",
+   "notes": "Inventory 660 (aa), 51 non-marginal segments, 4 tones."
+  },
+  {
+   "id": "omniglot-avokaya",
+   "author": "Ager, Simon",
+   "year": 2026,
+   "title": "Omniglot chart (avokaya.xls)",
+   "publisher": "Omniglot",
+   "url": "https://www.omniglot.com/",
+   "notes": "Undated web chart; year is retrieval year, not publication year."
+  }
+ ],
+ "urls": [
+  "https://glottolog.org/resource/languoid/id/avok1242"
+ ],
+ "location": {
+  "latitude": 4.3864,
+  "longitude": 29.9379,
+  "source": "glottolog",
+  "notes": "Glottolog's representative point."
+ },
+ "parent": "x-clade-cent2225",
+ "phonemes": [
+  "b",
+  "d",
+  "dr",
+  "dz",
+  "f",
+  "h",
+  "j",
+  "k",
+  "kp",
+  "l",
+  "m",
+  "mb",
+  "n",
+  "nd",
+  "ndr",
+  "ndz",
+  "p",
+  "r",
+  "s",
+  "t",
+  "tr",
+  "ts",
+  "v",
+  "w",
+  "wˀ",
+  "z",
+  "ŋ",
+  "ŋmɡb",
+  "ŋɡ",
+  "ɓ",
+  "ɗ",
+  "ɡ",
+  "ɡb",
+  "ɱv",
+  "ɲ",
+  "ʔ",
+  "ʔʲ",
+  "a",
+  "aː",
+  "i",
+  "iː",
+  "u",
+  "uː",
+  "ɔ",
+  "ɔː",
+  "ə",
+  "əː",
+  "ɛ",
+  "ɛː",
+  "ɪ",
+  "ɪː"
+ ],
+ "tone_inventory": {
+  "˦": "PHOIBLE tone segment",
+  "˧": "PHOIBLE tone segment",
+  "˨": "PHOIBLE tone segment",
+  "˨˦": "PHOIBLE tone segment"
+ },
+ "phoible_id": "660",
+ "script_type": "alphabet",
+ "wikipedia": [
+  "https://en.wikipedia.org/wiki/Avokaya_language"
+ ]
+}

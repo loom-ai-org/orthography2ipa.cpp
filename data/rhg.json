@@ -1,0 +1,254 @@
+{
+  "code": "rhg",
+  "name": "Rohingya",
+  "script": "Latin",
+  "quality": "skeleton",
+  "graphemes": {
+    "b": [
+      "b"
+    ],
+    "c": [
+      "s"
+    ],
+    "d": [
+      "d"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "h": [
+      "h"
+    ],
+    "j": [
+      "dʒ"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ng": [
+      "ŋ"
+    ],
+    "p": [
+      "p"
+    ],
+    "q": [
+      "ʔ"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "sh": [
+      "ʃ"
+    ],
+    "t": [
+      "t"
+    ],
+    "v": [
+      "v"
+    ],
+    "w": [
+      "w"
+    ],
+    "y": [
+      "j"
+    ],
+    "z": [
+      "z"
+    ],
+    "a": [
+      "a"
+    ],
+    "aa": [
+      "aː"
+    ],
+    "e": [
+      "e"
+    ],
+    "ee": [
+      "eː"
+    ],
+    "i": [
+      "i"
+    ],
+    "ii": [
+      "iː"
+    ],
+    "o": [
+      "o"
+    ],
+    "oo": [
+      "oː"
+    ],
+    "u": [
+      "u"
+    ],
+    "uu": [
+      "uː"
+    ]
+  },
+  "allophones": {
+    "b": [
+      "b"
+    ],
+    "s": [
+      "s"
+    ],
+    "d": [
+      "d"
+    ],
+    "f": [
+      "f"
+    ],
+    "ɡ": [
+      "ɡ"
+    ],
+    "h": [
+      "h"
+    ],
+    "dʒ": [
+      "dʒ"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ŋ": [
+      "ŋ"
+    ],
+    "p": [
+      "p"
+    ],
+    "ʔ": [
+      "ʔ"
+    ],
+    "r": [
+      "r"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "t": [
+      "t"
+    ],
+    "v": [
+      "v"
+    ],
+    "w": [
+      "w"
+    ],
+    "j": [
+      "j"
+    ],
+    "z": [
+      "z"
+    ],
+    "a": [
+      "a"
+    ],
+    "aː": [
+      "aː"
+    ],
+    "e": [
+      "e"
+    ],
+    "eː": [
+      "eː"
+    ],
+    "i": [
+      "i"
+    ],
+    "iː": [
+      "iː"
+    ],
+    "o": [
+      "o"
+    ],
+    "oː": [
+      "oː"
+    ],
+    "u": [
+      "u"
+    ],
+    "uː": [
+      "uː"
+    ]
+  },
+  "notes": "Rohingya (of Rakhine State, Myanmar, and the diaspora) written input contract: the Rohingya Language Council's 2019 Latin standardisation (the community's most widely adopted digital-era alphabet alongside the bespoke Hanifi Rohingya script, Unicode block U+10D00-U+10D3F, which this skeleton does not yet cover). Double vowel letters spell length as a single nucleus (test 2: aa/ee/ii/oo/uu are one long vowel each, not a concatenation of two short ones); ng and sh each spell one consonant segment (test 1: ŋ and ʃ are not composable from their parts under this alphabet's other rules). Rohingya has phonemic vowel length and nasal vowels this skeleton does not yet encode; stress is not orthographically predictable and is exempt per quality_tiers.md. No WikiPron gold exists for rhg, so the tier stays at skeleton.",
+  "iso639_3": "rhg",
+  "glottolog_code": "rohi1238",
+  "sources": [
+    {
+      "id": "glottolog2024",
+      "author": "Hammarström, Harald; Forkel, Robert; Haspelmath, Martin; Bank, Sebastian",
+      "year": 2024,
+      "title": "Glottolog 5.0",
+      "publisher": "Max Planck Institute for Evolutionary Anthropology",
+      "url": "https://glottolog.org/"
+    },
+    {
+      "id": "rlc2019",
+      "author": "Rohingya Language Council",
+      "year": 2019,
+      "title": "Rohingya Latin Alphabet Standardisation",
+      "publisher": "Rohingya Language Council",
+      "url": null,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Rohingya_alphabets",
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "leider2018",
+      "author": "Leider, Jacques P.",
+      "year": 2018,
+      "title": "Rohingya: The History of a Muslim Identity in Myanmar",
+      "publisher": "Oxford Research Encyclopedia of Asian History",
+      "url": null,
+      "wikipedia_url": null,
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "urls": [
+    "https://glottolog.org/resource/languoid/id/rohi1238"
+  ],
+  "location": {
+    "latitude": 20.8331,
+    "longitude": 92.394,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point."
+  },
+  "parent": "x-clade-indo1319",
+  "script_type": "alphabet",
+  "orthography_standard": {
+    "name": "Rohingya Language Council Latin alphabet",
+    "authority": "Rohingya Language Council",
+    "year": 2019,
+    "url": "https://en.wikipedia.org/wiki/Rohingya_alphabets"
+  },
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Rohingya_language"
+  ]
+}

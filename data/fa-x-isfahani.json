@@ -1,0 +1,97 @@
+{
+  "code": "fa-x-isfahani",
+  "name": "Isfahani Persian",
+  "script": "Arabic",
+  "graphemes_base": "fa-x-tehran",
+  "allophones_base": "fa-x-tehran",
+  "allophones": {
+    "æ": [
+      "æ",
+      "ɛ"
+    ],
+    "q": [
+      "ɢ",
+      "ɣ"
+    ]
+  },
+  "parent": "fa-x-tehran",
+  "ancestors": [
+    {
+      "code": "fa-x-early",
+      "role": "parent",
+      "weight": 0.88,
+      "notes": "New Persian descent"
+    }
+  ],
+  "notes": "Isfahani Persian (Eṣfahānī). Isfahan — former Safavid capital. Similar to Tehran but: /æ/ → [ɛ] before nasals; uvular [ɢ] somewhat more frequent; slightly less vowel reduction of unstressed syllables. Historically considered a prestige variety alongside Tehran. Already-encoded allophones confirmed against the cited sources: /æ/ carries [ɛ] as an available variant (ENGINE LIMIT: the conditioning environment, before a nasal consonant, is not one of the engine's positional contexts, so [ɛ] is listed as an unconditioned alternate rather than a positionally-triggered rule); q/ɣ prefers the uvular stop [ɢ] over Tehran's default [ɣ] (Windfuhr 2009; Rezai & al.).",
+  "quality": "skeleton",
+  "script_type": "abjad",
+  "sources": [
+    {
+      "id": "mahootian1997",
+      "author": "Mahootian, S.",
+      "year": 1997,
+      "title": "Persian",
+      "publisher": "Routledge",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "windfuhr1979",
+      "author": "Windfuhr, G.",
+      "year": 1979,
+      "title": "Persian Grammar: History and State of Its Study",
+      "publisher": "Mouton",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "lazard1992",
+      "author": "Lazard, G.",
+      "year": 1992,
+      "title": "A Grammar of Contemporary Persian",
+      "publisher": "Mazda Publishers",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "windfuhr2009",
+      "author": "Windfuhr, G. (ed.)",
+      "year": 2009,
+      "title": "The Iranian Languages",
+      "publisher": "Routledge",
+      "url": null,
+      "pages": null,
+      "notes": "Regional-dialect chapter(s) on New Persian varieties (Tehran, Isfahan, Fars/Shiraz, Kerman, Khorasan/Mashhad, Yazd)."
+    },
+    {
+      "id": "rezai_dialectology",
+      "author": "Rezai, V. & al.",
+      "year": 2010,
+      "title": "Studies in Iranian regional Persian dialectology (Isfahan, Fars, Kerman, Khorasan)",
+      "publisher": "Iranian dialectology literature (regional descriptive studies)",
+      "url": null,
+      "pages": null,
+      "notes": "Secondary descriptive source for regional vowel-quality differences (majhul retention, ā/æ realisation) cross-checked against Windfuhr 2009 and Mahootian 1997."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Isfahan",
+    "https://fa.wikipedia.org/wiki/%D9%84%D9%87%D8%AC%D9%87_%D8%A7%D8%B5%D9%81%D9%87%D8%A7%D9%86%DB%8C"
+  ],
+  "timespan": {
+    "start_year": 1200,
+    "end_year": null
+  },
+  "glottolog_code": null,
+  "iso639_3": "fas",
+  "location": {
+    "latitude": 32.6525,
+    "longitude": 51.675,
+    "source": "wikidata",
+    "notes": "Isfahan — the city the variety is named for. [Wikidata Q42053 P625]"
+  }
+}

@@ -1,0 +1,183 @@
+{
+  "code": "haw",
+  "name": "Hawaiian",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "ʻ": [
+      "ʔ"
+    ],
+    "h": [
+      "h"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "p": [
+      "p"
+    ],
+    "w": [
+      "w"
+    ],
+    "a": [
+      "a"
+    ],
+    "e": [
+      "e"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "o"
+    ],
+    "u": [
+      "u"
+    ],
+    "ā": [
+      "aː"
+    ],
+    "ē": [
+      "eː"
+    ],
+    "ī": [
+      "iː"
+    ],
+    "ō": [
+      "oː"
+    ],
+    "ū": [
+      "uː"
+    ]
+  },
+  "allophones": {
+    "ʔ": [
+      "ʔ"
+    ],
+    "h": [
+      "h"
+    ],
+    "k": [
+      "k",
+      "t"
+    ],
+    "l": [
+      "l",
+      "n"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "p": [
+      "p"
+    ],
+    "w": [
+      "w",
+      "v"
+    ],
+    "a": [
+      "a"
+    ],
+    "e": [
+      "e"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "o"
+    ],
+    "u": [
+      "u"
+    ],
+    "aː": [
+      "aː"
+    ],
+    "eː": [
+      "eː"
+    ],
+    "iː": [
+      "iː"
+    ],
+    "oː": [
+      "oː"
+    ],
+    "uː": [
+      "uː"
+    ]
+  },
+  "iso639_3": "haw",
+  "glottolog_code": "hawa1245",
+  "notes": "Hawaiian (ʻŌlelo Hawaiʻi), Polynesian. The alphabet (pīʻāpā) has 13 letters: five vowels a e i o u, eight consonants h k l m n p w and the ʻokina ⟨ʻ⟩ = glottal stop /ʔ/, which is a full consonant. The kahakō (macron: ā ē ī ō ū) marks a long vowel. The orthography is essentially one-to-one phonemic. Allophony: /k/ varies [k]~[t] ([k] almost universally word-initially, [t] favoured before /i/); /w/ varies [w]~[v] ([v] usually after /i/ and /e/, [w] after /u/ and /o/); /l/ varies with [n] in some dialects. Diphthongs are written as vowel sequences and fall out of the single-vowel graphemes.",
+  "sources": [
+    {
+      "id": "elbert_pukui1979",
+      "author": "Elbert, Samuel H. & Pukui, Mary Kawena",
+      "year": 1979,
+      "title": "Hawaiian Grammar",
+      "publisher": "University of Hawaii Press",
+      "url": null,
+      "pages": null,
+      "notes": "Standard reference grammar; phoneme inventory and orthography.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Hawaiian_language"
+    },
+    {
+      "id": "hawaiian_language_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Hawaiian language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Hawaiian_language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Hawaiian_language",
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "hawaiian_phonology_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Hawaiian phonology",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Hawaiian_phonology",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Hawaiian_phonology",
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Hawaiian_language",
+    "https://haw.wikipedia.org/wiki/%CA%BB%C5%8Clelo_Hawai%CA%BBi"
+  ],
+  "timespan": {
+    "start_year": 1826,
+    "end_year": null
+  },
+  "parent": "x-clade-mala1545",
+  "ancestors": [
+    {
+      "code": "x-clade-mala1545",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Malayo-Polynesian, the Austronesian branch containing every Austronesian language outside Formosa."
+    }
+  ],
+  "location": {
+    "latitude": 19.6297,
+    "longitude": -155.43,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Hawaiian."
+  }
+}

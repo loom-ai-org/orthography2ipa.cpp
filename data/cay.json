@@ -1,0 +1,98 @@
+{
+  "code": "cay",
+  "name": "Cayuga",
+  "parent": "x-clade-iroq1247",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "a": ["a"],
+    "e": ["e"],
+    "i": ["i"],
+    "o": ["o"],
+    "ę": ["ɛ̃"],
+    "ǫ": ["õ"],
+    "n": ["n"],
+    "t": ["t"],
+    "d": ["t"],
+    "k": ["k"],
+    "g": ["k"],
+    "ts": ["ts"],
+    "j": ["ts"],
+    "s": ["s"],
+    "r": ["ɹ"],
+    "y": ["j"],
+    "w": ["w"],
+    "h": ["h"],
+    "ˀ": ["ʔ"]
+  },
+  "allophone_rules": [
+    {
+      "id": "CAY_TS_PALATALIZE",
+      "phonemes": ["ts"],
+      "surface": "tʃ",
+      "followed_by": "front_vowel",
+      "notes": "/ts/ → [tʃ] before a front vowel (Wikipedia, Cayuga language)."
+    },
+    {
+      "id": "CAY_S_PALATALIZE",
+      "phonemes": ["s"],
+      "surface": "ʃ",
+      "followed_by_phoneme": ["i", "j", "ɹ"],
+      "notes": "/s/ → [ʃ] before /i/, /j/ or /ɹ/ (Wikipedia, Cayuga language)."
+    }
+  ],
+  "notes": "Cayuga (Gayogo̱hó꞉nǫʼ), a Northern Iroquoian language of Six Nations of the Grand River, Ontario. The orthography spells one stop phoneme with two letters each: ⟨d⟩ and ⟨t⟩ both write /t/, ⟨g⟩ and ⟨k⟩ both write /k/, and ⟨j⟩ and ⟨ts⟩ both write /ts/ — the voiced-looking letters are used where the segment surfaces voiced before a sonorant, so the pairs are spelling variants of ONE phoneme, not a voicing contrast (Wikipedia consonant table, which gives the ⟨d, t⟩ / ⟨g, k⟩ / ⟨j, ts⟩ pairings explicitly). Nasal vowels have dedicated ogonek letters ⟨ę⟩ /ɛ̃/ and ⟨ǫ⟩ /õ/ — single vowel nuclei, so each earns a key; vowel+n sequences are NOT nasal-vowel digraphs here. Length is written with the raised colon ⟨꞉⟩ and glottal stop with ⟨ˀ⟩. The palatalizations (/ts/ → [tʃ] before front vowels, /s/ → [ʃ] before /i j ɹ/) are conditioned, so they live in the rule layer rather than as extra keys. Cayuga's h-conditioned vowel devoicing in odd-numbered syllables is documented in the source but NOT modelled: it depends on syllable counting from the word edge, which no current rule predicate expresses; stating it as an unconditioned allophone would overclaim.",
+  "iso639_3": "cay",
+  "glottolog_code": "cayu1261",
+  "wikidata_qid": "Q32967",
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Cayuga_language"
+  ],
+  "urls": [
+    "https://glottolog.org/resource/languoid/id/cayu1261"
+  ],
+  "sources": [
+    {
+      "id": "cayuga_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2025,
+      "title": "Cayuga language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Cayuga_language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Cayuga_language",
+      "pages": null,
+      "notes": "Consonant table with the ⟨d, t⟩ / ⟨g, k⟩ / ⟨j, ts⟩ spelling pairs; five oral vowels with long counterparts; nasal vowels [ɛ̃] ⟨ę⟩, [õ] ⟨ǫ⟩; /ts/ → [tʃ] before front vowels; /s/ → [ʃ] before /i/, /j/, /ɹ/."
+    },
+    {
+      "id": "dyck_etal2024",
+      "author": "Dyck, Carrie, Froman, Frances, Keye, Alfred and Keye, Lottie",
+      "year": 2024,
+      "title": "A grammar and dictionary of Gayogo̱hó:nǫˀ (Cayuga)",
+      "publisher": "Language Science Press",
+      "url": "https://zenodo.org/records/10473483/files/398-dyck-2024.pdf",
+      "pages": "13-17, 29-30",
+      "notes": "Ch. 2, pp. 13-17: the ⟨d, t⟩ / ⟨g, k⟩ / ⟨j, ts⟩ pairs are the modified Henry orthography's spelling of one obstruent phoneme each, voiced-looking letter used where the segment surfaces voiced not word-finally — corroborates the existing grapheme mapping, no contradiction. §3.9, pp. 29-30: confirms the not-modelled odd-numbered-syllable devoicing/laryngealization is real (citing Foster 1982 and Doherty 1993) and genuinely depends on counting syllables from the word edge, so the existing decision not to model it as an unconditioned allophone stands."
+    }
+  ],
+  "ancestors": [
+    {
+      "code": "x-clade-iroq1247",
+      "role": "parent",
+      "weight": 0.9,
+      "notes": "Northern Iroquoian; Cayuga is a Five Nations (Seneca-Cayuga) language."
+    },
+    {
+      "code": "moh",
+      "role": "adstrate",
+      "weight": 0.2,
+      "notes": "Sustained Haudenosaunee-confederacy contact with the neighbouring Northern Iroquoian languages at Six Nations."
+    },
+    {
+      "code": "en-GB",
+      "role": "adstrate",
+      "weight": 0.2,
+      "notes": "All present-day speakers are bilingual in Canadian English."
+    }
+  ]
+}

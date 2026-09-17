@@ -1,0 +1,94 @@
+{
+  "code": "fa-x-mashhadi",
+  "name": "Mashhadi Persian",
+  "script": "Arabic",
+  "graphemes_base": "fa-x-khorasani",
+  "allophones_base": "fa-x-khorasani",
+  "allophones": {
+    "ɒː": [
+      "aː",
+      "eː",
+      "ɒː"
+    ]
+  },
+  "parent": "fa-x-khorasani",
+  "ancestors": [
+    {
+      "code": "fa-x-khorasani",
+      "role": "parent",
+      "weight": 0.88,
+      "notes": "Khorasani base"
+    }
+  ],
+  "notes": "Mashhadi Persian (Mašhadī). Iran's second-largest city; capital of Khorasan. Urban Khorasani variety; prestige dialect of northeastern Iran. Conservative vowels (Khorasani base); some imāla in religious/Arabic vocabulary (pilgrimage city: shrine of Imam Reza). /q/ maintained in careful speech. Already-encoded allophones confirmed against the cited sources: ā carries the Khorasani conservative [aː] and a majhul [eː] variant (imāla-adjacent), alongside Tehran's [ɒː] (Windfuhr 2009). The imāla reported in religious/Arabic vocabulary specifically is lexically restricted to loanwords tied to the shrine-city register, not a general phonological rule, so it is documented here but intentionally left unencoded beyond the existing [eː] variant rather than forced.",
+  "quality": "skeleton",
+  "script_type": "abjad",
+  "sources": [
+    {
+      "id": "mahootian1997",
+      "author": "Mahootian, S.",
+      "year": 1997,
+      "title": "Persian",
+      "publisher": "Routledge",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "windfuhr1979",
+      "author": "Windfuhr, G.",
+      "year": 1979,
+      "title": "Persian Grammar: History and State of Its Study",
+      "publisher": "Mouton",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "lazard1992",
+      "author": "Lazard, G.",
+      "year": 1992,
+      "title": "A Grammar of Contemporary Persian",
+      "publisher": "Mazda Publishers",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "windfuhr2009",
+      "author": "Windfuhr, G. (ed.)",
+      "year": 2009,
+      "title": "The Iranian Languages",
+      "publisher": "Routledge",
+      "url": null,
+      "pages": null,
+      "notes": "Regional-dialect chapter(s) on New Persian varieties (Tehran, Isfahan, Fars/Shiraz, Kerman, Khorasan/Mashhad, Yazd)."
+    },
+    {
+      "id": "rezai_dialectology",
+      "author": "Rezai, V. & al.",
+      "year": 2010,
+      "title": "Studies in Iranian regional Persian dialectology (Isfahan, Fars, Kerman, Khorasan)",
+      "publisher": "Iranian dialectology literature (regional descriptive studies)",
+      "url": null,
+      "pages": null,
+      "notes": "Secondary descriptive source for regional vowel-quality differences (majhul retention, ā/æ realisation) cross-checked against Windfuhr 2009 and Mahootian 1997."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Mashhad",
+    "https://fa.wikipedia.org/wiki/%DA%AF%D9%88%DB%8C%D8%B4_%D9%85%D8%B4%D9%87%D8%AF%DB%8C"
+  ],
+  "timespan": {
+    "start_year": 1200,
+    "end_year": null
+  },
+  "glottolog_code": null,
+  "iso639_3": "fas",
+  "location": {
+    "latitude": 36.297494,
+    "longitude": 59.605923,
+    "source": "wikidata",
+    "notes": "Mashhad — the city the variety is named for. [Wikidata Q121157 P625]"
+  }
+}

@@ -1,0 +1,306 @@
+{
+  "code": "osx",
+  "name": "Old Saxon",
+  "script": "Latin",
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "e": [
+      "e"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "o"
+    ],
+    "u": [
+      "u"
+    ],
+    "ā": [
+      "aː"
+    ],
+    "ē": [
+      "eː"
+    ],
+    "ī": [
+      "iː"
+    ],
+    "ō": [
+      "oː"
+    ],
+    "ū": [
+      "uː"
+    ],
+    "ia": [
+      "iɑ"
+    ],
+    "ie": [
+      "ie"
+    ],
+    "io": [
+      "io"
+    ],
+    "uo": [
+      "uo"
+    ],
+    "p": [
+      "p"
+    ],
+    "t": [
+      "t"
+    ],
+    "k": [
+      "k"
+    ],
+    "c": [
+      "k"
+    ],
+    "b": [
+      "b"
+    ],
+    "d": [
+      "d"
+    ],
+    "g": [
+      "ɣ",
+      "ɡ"
+    ],
+    "f": [
+      "f",
+      "v"
+    ],
+    "v": [
+      "f",
+      "v"
+    ],
+    "ƀ": [
+      "v",
+      "f"
+    ],
+    "þ": [
+      "θ",
+      "ð"
+    ],
+    "th": [
+      "θ",
+      "ð"
+    ],
+    "s": [
+      "s"
+    ],
+    "h": [
+      "h",
+      "x"
+    ],
+    "r": [
+      "r"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ng": [
+      "ŋɡ"
+    ],
+    "w": [
+      "w"
+    ],
+    "j": [
+      "j"
+    ]
+  },
+  "allophones": {
+    "p": [
+      "p"
+    ],
+    "t": [
+      "t"
+    ],
+    "k": [
+      "k"
+    ],
+    "b": [
+      "b"
+    ],
+    "d": [
+      "d"
+    ],
+    "ɡ": [
+      "ɡ",
+      "ɣ"
+    ],
+    "f": [
+      "f",
+      "v"
+    ],
+    "θ": [
+      "θ",
+      "ð"
+    ],
+    "s": [
+      "s",
+      "z"
+    ],
+    "h": [
+      "h",
+      "x"
+    ],
+    "r": [
+      "r"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ŋ": [
+      "ŋ"
+    ],
+    "w": [
+      "w"
+    ],
+    "j": [
+      "j"
+    ],
+    "a": [
+      "a"
+    ],
+    "e": [
+      "e"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "o"
+    ],
+    "u": [
+      "u"
+    ],
+    "aː": [
+      "aː"
+    ],
+    "eː": [
+      "eː"
+    ],
+    "iː": [
+      "iː"
+    ],
+    "oː": [
+      "oː"
+    ],
+    "uː": [
+      "uː"
+    ],
+    "iɑ": [
+      "iɑ"
+    ],
+    "ie": [
+      "ie"
+    ],
+    "io": [
+      "io"
+    ],
+    "uo": [
+      "uo"
+    ]
+  },
+  "parent": "gem-x-ingvaeonic",
+  "ancestors": [
+    {
+      "code": "gem-x-ingvaeonic",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Ingvaeonic base; closely related to Old English"
+    }
+  ],
+  "notes": "Old Saxon (~800–1100 CE). Ancestor of Low German (Plattdeutsch). Major text: Heliand (~830 CE) — a Saxon gospel harmony in alliterative verse. NO HIGH GERMAN CONSONANT SHIFT: OS p, t, k unchanged (cf. OHG pf/ff, tz/ss, hh). OS makōn vs. OHG mahhōn 'to make'; OS water vs. OHG wazzer 'water'. Closely related to Old English and Old Frisian (all Ingvaeonic). Preserved þ as interdental, like OE. Source: Gallée (1993), Robinson (1992). `graphemes.v` was added because manuscript orthography interchanges b/ƀ/u/v/f for the single labiodental fricative phoneme that ⟨f⟩ also spells (Gallée 1910, pp. 126-128, 161, discusses this graphemic variation, e.g. `sivon` beside `sibun` 'seven'); the cached wikipron gold independently confirms it, transcribing every v-spelled word (avand, bokstaf's -av, geva, hovidmal, therva, etc.) with the same [f]/voiced-fricative alternation already modelled for ⟨f⟩, never with a distinct [v] phoneme. Two findings were checked but not acted on: unlike its Middle Low German descendant (gml), Old Saxon itself does not reduce unstressed-syllable vowels to schwa -- final -a in this gold overwhelmingly stays [ɑ] (19 of 21 -a-final words) rather than merging, consistent with Holthausen (1921) §147, so no `positional_graphemes`/`stress` block was added; and the gold's short ⟨a⟩ is transcribed [ɑ] in 186 of 191 tokens against only 5 as plain [a], which matches the back-vowel value modern surveys (e.g. the Old Saxon phonology summarized from Gallée 1910 and Lasch 1914) give for this phoneme, but Holthausen (1921) §40 only says short a is 'wie im Nhd.' (as in Standard German) without committing to a cardinal value, so this remains a measured distributional observation, not a sourced rule, and the grapheme table keeps [a]/[aː] pending a citation that states the quality explicitly. The cached wikipron gold is scraped from Wiktionary and spells Old Saxon the way the manuscripts do -- no editorial macrons anywhere in its 244 headwords, and the dental fricative written <th>, never <þ>. The grapheme table was built for the opposite convention (normalised editions, which mark length with macrons and often use <þ>), so <þ> and <ā ē ī ō ū> are kept for edition text while the manuscript spellings they correspond to are now mapped as well. `graphemes.th` is the dental fricative digraph: Gallée (1910) §175 states that the voiceless and voiced dental spirants are written th, ð, dh and d, and that word-initial th is regular in all older monuments, and §184.5 gives it the value of English th; without the entry the engine split <th> into [t]+[h] in 46 of the gold's rows. `graphemes.g` leads with [ɣ] and `positional_graphemes.g` devoices it word-finally and before a consonant, per Gallée §186.3 ('g ist meist stimmhafter gutturaler spirant. Im auslaut ist der stimmton verloren gegangen und g folglich zum stimmlosen Spiranten geworden'). `positional_graphemes.h` keeps [h] word-initially and before a vowel and gives [x] before a consonant and word-finally, per Gallée §186.4 ('h bezeichnet vor vokalen den hauchlaut ... Inlautend vor konsonanten und im auslaut ist h stimmloser spirant'). `graphemes.ƀ` is the same labiodental spirant as <v>, per Gallée §183.6 ('b, v oder u, auch ƀ geschrieben, ist labio-dentale spirans wie franz. v'); it was silently dropped before. `graphemes.c` is [k] per Gallée §168, which is a mismatch for the gold's single <c> word, the Latin loan kruci 'cross' (read [s]/[ts] with Romance assibilation), but a silent deletion is worse than a wrong segment and no native Old Saxon word in this gold spells [k] with <c>. Vowel length stays unpredictable: the gold marks it and the input spelling does not, and stripping length from both sides drops PER from 0.279 to 0.226, so about five points of what remains is editorial quantity the spec cannot see. The gold's short <a> is [ɑ] in 142 of the tokens where the spec reads [a]; the descriptive literature calls Old Saxon short a a low central vowel, so this stays a gold notation choice and the table keeps [a].",
+  "quality": "research",
+  "script_type": "alphabet",
+  "iso639_3": "osx",
+  "sources": [
+    {
+      "id": "gallee1910",
+      "author": "Gallée, J.H.",
+      "year": 1910,
+      "title": "Altsächsische Grammatik (2nd ed.)",
+      "publisher": "Max Niemeyer",
+      "url": "https://archive.org/details/altschsischegram00gall",
+      "pages": "126-128, 134 (§175), 146 (§183.6, §184.5), 148 (§186.3-4), 161",
+      "notes": "§168 c for the velar stop; §175 and §184.5 the dental fricative written th with the value of English th; §183.6 ƀ/b/v/u all the labiodental spirant; §186.3 g usually a voiced velar spirant, devoiced word-finally; §186.4 h the breath sound before vowels and a voiceless velar spirant before consonants and finally; pp. 126-128, 161 the manuscript interchange of ƀ, b, u, v and f."
+    },
+    {
+      "id": "holthausen1921",
+      "author": "Holthausen, F.",
+      "year": 1921,
+      "title": "Altsächsisches Elementarbuch (2nd ed.)",
+      "publisher": "Carl Winter",
+      "url": "https://archive.org/details/altschsischese00holt",
+      "pages": "23 (§40), 53 (§147)",
+      "notes": "§40 gives short a, i, o, u the same value as in Standard German without specifying a cardinal vowel quality; §147 shows unstressed final -a is retained rather than reduced in Old Saxon, used to justify not copying gml's schwa-reduction rule onto osx."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Old_Saxon",
+    "https://de.wikipedia.org/wiki/Alts%C3%A4chsische_Sprache"
+  ],
+  "urls": [
+    "https://en.wikipedia.org/wiki/Old_Saxon",
+    "https://en.wikipedia.org/wiki/Ingvaeonic_languages",
+    "https://en.wikipedia.org/wiki/Heliand",
+    "https://de.wikipedia.org/wiki/Alts%C3%A4chsische_Sprache"
+  ],
+  "timespan": {
+    "start_year": 800,
+    "end_year": 1150
+  },
+  "glottolog_code": "olds1250",
+  "wikidata_qid": "Q35219",
+  "location": {
+    "latitude": 52.37,
+    "longitude": 9.72,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Old Saxon."
+  },
+  "positional_graphemes": {
+    "g": {
+      "word_final": [
+        "x"
+      ],
+      "before_consonant": [
+        "x"
+      ],
+      "default": [
+        "ɣ"
+      ]
+    },
+    "h": {
+      "word_initial": [
+        "h"
+      ],
+      "before_vowel": [
+        "h"
+      ],
+      "before_consonant": [
+        "x"
+      ],
+      "word_final": [
+        "x"
+      ],
+      "default": [
+        "h"
+      ]
+    }
+  }
+}

@@ -1,0 +1,187 @@
+{
+  "code": "ale",
+  "name": "Aleut",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "skeleton",
+  "graphemes": {
+    "ng": [
+      "ŋ"
+    ],
+    "ch": [
+      "tʃ"
+    ],
+    "x́": [
+      "χ"
+    ],
+    "ǵ": [
+      "ʁ"
+    ],
+    "í": [
+      "i"
+    ],
+    "aa": [
+      "aː"
+    ],
+    "ii": [
+      "iː"
+    ],
+    "uu": [
+      "uː"
+    ],
+    "hng": [
+      "ŋ̊"
+    ],
+    "hm": [
+      "m̥"
+    ],
+    "hn": [
+      "n̥"
+    ],
+    "hl": [
+      "l̥"
+    ],
+    "hw": [
+      "w̥"
+    ],
+    "hy": [
+      "j̊"
+    ],
+    "x̂": [
+      "χ"
+    ],
+    "ĝ": [
+      "ʁ"
+    ],
+    "l̂": [
+      "ɬ"
+    ],
+    "a": [
+      "a"
+    ],
+    "i": [
+      "i"
+    ],
+    "u": [
+      "u"
+    ],
+    "d": [
+      "ð"
+    ],
+    "g": [
+      "ɣ"
+    ],
+    "x": [
+      "x"
+    ],
+    "q": [
+      "q"
+    ],
+    "s": [
+      "s"
+    ],
+    "z": [
+      "z"
+    ],
+    "h": [
+      "h"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "l": [
+      "l"
+    ],
+    "w": [
+      "w"
+    ],
+    "y": [
+      "j"
+    ],
+    "t": [
+      "t"
+    ],
+    "k": [
+      "k"
+    ],
+    "b": [
+      "b"
+    ],
+    "v": [
+      "v"
+    ],
+    "r": [
+      "ɹ"
+    ],
+    "f": [
+      "f"
+    ],
+    "p": [
+      "p"
+    ]
+  },
+  "parent": "x-clade-eski1264",
+  "ancestors": [
+    {
+      "code": "x-clade-eski1264",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Descent per Glottolog classification of Aleut (aleu1260)."
+    }
+  ],
+  "notes": "Skeleton. Eskimo-Aleut (Aleut/Unangam) language of the Aleutian Islands written in the Bergsland practical Latin orthography (Bergsland 1994, 1997) — the dominant modern writing system for Aleut (a historical Cyrillic orthography, introduced by Russian Orthodox missionaries in the 19th century, is now a minority/heritage convention; Latin is the one used in current pedagogical and dictionary materials, so it is the one modelled here). Long vowels are doubled (aa ii uu); ng=[ŋ], d=[ð], g=[ɣ] with circumflexed x̂=[χ] and ĝ=[ʁ] for the uvular fricatives, and l̂=[ɬ] are mapped. The h-prefixed voiceless sonorants (hm hn hng hl hw hy) are mapped to voiceless counterparts. The voiceless palato-alveolar affricate ch=[tʃ] (Bergsland 1994, p. xvi orthography table; corroborated by the phoneme inventory in Taff et al. 2001, 'Phonetic Structures of Aleut', Journal of Phonetics 29(3), doi:10.1006/jpho.2001.0142) was missing from earlier versions of this table despite being a core native phoneme, not a loanword-only sound. Taff et al. 2001 also documents (p), (b), (d), (g), (f), v and (ɹ,ɾ) as consonants that occur only in loanwords in Aleut, spelled with their plain Latin letters; b, v, r, f and p are mapped on that basis for the loanword layer (Russian month/weekday/animal borrowings such as 'baraaska', 'Yanvaari', 'Subuuta' in the gold). Predictable stress is left unencoded. IMPORTANT — gold-vs-orthography finding: the NorthEuraLex `ale` (northeuralex gold, Dellert2020 source column) forms were checked directly against this spec's tokenizer. The Value column consistently spells the two uvular fricatives with a COMBINING ACUTE ACCENT (U+0301) over x and g — ⟨x́⟩, ⟨ǵ⟩ — rather than the circumflex ⟨x̂⟩/⟨ĝ⟩ that Bergsland's practical orthography (and this spec) writes; this affects 497 of 896 rows (55.5%) and is the largest single driver of the tokenizer's unmapped-character rate, measured directly against the northeuralex gold only (not the union-across-datasets figure the mechanical diagnostic reports). Rather than rewrite the gold or change the spec's canonical spelling, `x́` and `ǵ` are mapped as alternate spellings of the SAME already-sourced uvular phonemes (χ, ʁ). A further 4/896 rows (0.4%) carry a precomposed acute-accented ⟨í⟩ immediately after one of these forms (e.g. 'chiǵilǵí-x́'), which on inspection is not a distinct phoneme but reads as a stress mark on /i/ in this transcription; it is mapped to plain i (stress already left unencoded elsewhere in this spec) rather than modelled as a new phonological contrast — this rests on a distributional observation, not a citation. The gold also shows a systematic vowel-quality shift not attested in Aleut phonology under Bergsland's analysis (unstressed i to [e], u to [y]/[o], a to [ɛ]/[ɑ] depending on the word, doubled aa to [ɛː] rather than [aː]); this is a narrow phonetic transcription of a specific recorded pronunciation (or a distinct source dialect's realization), not the practical orthography Aleut is written in, and modelling it as if it were the spelling would misdescribe the language, so it is documented as a gold transcription-convention mismatch rather than chased with orthography-violating rules. Measured directly (vowel-skeleton comparison between hypothesis and gold on every non-exact row), this shift alone touches 772 of the 813 non-exact rows (94.9% of all residual errors, 86.2% of the full 896-row gold) — e.g. `adi-x́` -> `aðiχ` against gold `adeχ`, `agalu-x́` -> `aɣaluχ` against gold `agaloχ` — and accounts for most of the remaining 0.2634 PER floor. Separately, the reviewer also noticed that this spec's blanket g->ɣ and d->ð rules look wrong in some cluster contexts, where the gold keeps plain [g]/[d]: `kamg-` gives gold `kamg` (not `kamɣ`), and `qiiliqda-x́` gives gold `qeːleqdɑχ` (keeping plain `d`). That looks like unmodelled positional/cluster allophony (g/d perhaps spirantizing only intervocalically or word-medially, not after another consonant), is PRE-EXISTING (predates this PR, not introduced by it), and is left as an open question for a future spec revision rather than fixed here without a source for the conditioning environment. Hyphens in the gold mark a stem/suffix citation-form boundary and are already stripped as punctuation by the engine. There are no homographs in the northeuralex gold for `ale` (896 distinct spellings, 896 distinct transcriptions). This spec keeps the real Bergsland Latin orthography and stays at `skeleton`.",
+  "iso639_3": "ale",
+  "glottolog_code": null,
+  "sources": [
+    {
+      "id": "ale_glottolog",
+      "author": "Hammarström, H. et al. (Glottolog 5.0)",
+      "year": 2024,
+      "title": "Glottolog: Aleut (aleu1260)",
+      "publisher": "Max Planck Institute for Evolutionary Anthropology",
+      "url": "https://glottolog.org/resource/languoid/id/aleu1260",
+      "pages": null,
+      "notes": "Classification reference for a skeleton-tier entry.",
+      "wikipedia_url": null
+    },
+    {
+      "id": "bergsland1997",
+      "author": "Bergsland, Knut",
+      "year": 1997,
+      "title": "Aleut Grammar (Unangam Tunuganaan Achixaasix̂)",
+      "publisher": "Alaska Native Language Center",
+      "url": null,
+      "pages": null,
+      "notes": "Reference grammar establishing the practical Latin orthography, phoneme inventory, and stress rules used as the basis for this spec; consulted to check the NorthEuraLex gold against the real orthography.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Aleut_language"
+    },
+    {
+      "id": "bergsland1994",
+      "author": "Bergsland, Knut",
+      "year": 1994,
+      "title": "Aleut Dictionary / Unangam Tunudgusii: An Unabridged Lexicon of the Aleutian, Pribilof, and Commander Islands Aleut Language",
+      "publisher": "Alaska Native Language Center",
+      "url": "https://archive.org/details/aleutdictionaryu0000berg",
+      "pages": "xvi",
+      "notes": "Front-matter orthography table for the 1972 practical Latin alphabet, including the ⟨ch⟩=[tʃ] affricate letter absent from earlier versions of this spec's grapheme table.",
+      "wikipedia_url": null
+    },
+    {
+      "id": "taff2001",
+      "author": "Taff, Alice; Rozelle, Lorna; Cho, Taehong; Ladefoged, Peter; Dirks, Moses; Wegelin, Jacob A.",
+      "year": 2001,
+      "title": "Phonetic Structures of Aleut",
+      "publisher": "Journal of Phonetics 29(3), 231-271",
+      "url": "https://doi.org/10.1006/jpho.2001.0142",
+      "pages": "231-271",
+      "notes": "Consonant phoneme inventory, including the set of consonants (p, b, d, g, f, v, r) attested only in loanwords, used to justify mapping ch, b, v, r, f, p in this spec.",
+      "wikipedia_url": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Aleut_language"
+  ]
+}

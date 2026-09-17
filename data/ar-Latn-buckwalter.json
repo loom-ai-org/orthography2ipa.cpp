@@ -1,0 +1,287 @@
+{
+  "code": "ar-Latn-buckwalter",
+  "name": "Arabic (Buckwalter transliteration)",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "orthography_kind": "transliteration",
+  "quality": "research",
+  "parent": "ar",
+  "allophones_base": "ar",
+  "graphemes": {
+    "$": [
+      "ʃ"
+    ],
+    "&": [
+      "ʔ"
+    ],
+    "'": [
+      "ʔ"
+    ],
+    "*": [
+      "ð"
+    ],
+    "<": [
+      "ʔi"
+    ],
+    ">": [
+      "ʔa"
+    ],
+    "A": [
+      "ʔ",
+      "aː"
+    ],
+    "Aa": [
+      "aː"
+    ],
+    "Al": [
+      "al",
+      "a"
+    ],
+    "D": [
+      "dˤ"
+    ],
+    "E": [
+      "ʕ"
+    ],
+    "F": [
+      "an"
+    ],
+    "H": [
+      "ħ"
+    ],
+    "K": [
+      "in"
+    ],
+    "N": [
+      "un"
+    ],
+    "S": [
+      "sˤ"
+    ],
+    "T": [
+      "tˤ"
+    ],
+    "Y": [
+      "aː"
+    ],
+    "Z": [
+      "ðˤ"
+    ],
+    "a": [
+      "a"
+    ],
+    "aA": [
+      "aː"
+    ],
+    "aY": [
+      "aː"
+    ],
+    "aw": [
+      "aw"
+    ],
+    "ay": [
+      "aj"
+    ],
+    "b": [
+      "b"
+    ],
+    "d": [
+      "d"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɣ"
+    ],
+    "h": [
+      "h"
+    ],
+    "i": [
+      "i"
+    ],
+    "iy": [
+      "iː"
+    ],
+    "j": [
+      "dʒ"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "o": [
+      ""
+    ],
+    "ow": [
+      "w"
+    ],
+    "oy": [
+      "j"
+    ],
+    "p": [
+      "a",
+      "at"
+    ],
+    "q": [
+      "q"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "u": [
+      "u"
+    ],
+    "uw": [
+      "uː"
+    ],
+    "v": [
+      "θ"
+    ],
+    "w": [
+      "w",
+      "uː"
+    ],
+    "wa": [
+      "wa"
+    ],
+    "waA": [
+      "waː"
+    ],
+    "wu": [
+      "wu"
+    ],
+    "x": [
+      "x"
+    ],
+    "y": [
+      "j",
+      "iː"
+    ],
+    "ya": [
+      "ja"
+    ],
+    "yaA": [
+      "jaː"
+    ],
+    "yi": [
+      "ji"
+    ],
+    "z": [
+      "z"
+    ],
+    "|": [
+      "ʔaː"
+    ],
+    "}": [
+      "ʔ"
+    ],
+    "~": [
+      "ː"
+    ]
+  },
+  "allophones": {},
+  "ancestors": [
+    {
+      "code": "ar",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "The same language and the same phonology as `ar`. Buckwalter re-encodes the Arabic SCRIPT; it does not change the language."
+    }
+  ],
+  "notes": "Buckwalter is NOT an orthography — it is a lossless 1:1 ASCII re-encoding of Arabic letters, devised so Arabic could be handled by ASCII-only tooling. Nobody reads Buckwalter as a language; it is a machine convenience, and it is recorded here as `orthography_kind: transliteration` to say so. Contrast Pinyin, which people genuinely read and write and which has a standards body. Buckwalter has none — that absence is the tell. It is supported because consumers hold Arabic corpora in ASCII, and because a transliteration is, structurally, just another grapheme map. INPUT CONTRACT — INHERITED, NOT ESCAPED: Buckwalter encodes the short-vowel diacritics when they are present (a i u F N K ~ o), so VOCALIZED Buckwalter is exactly as transcribable as vocalized Arabic, and UNVOCALIZED Buckwalter is exactly as untranscribable. Re-encoding a script cannot recover information the script never wrote down. The mapping is generated from `ar`'s own grapheme map through the Buckwalter table, so the two can never drift apart. CANONICAL ORDER: like the Arabic script it re-encodes, this spec expects the canonical diacritic order — consonant, then shadda, then vowel (mueal~im, not muEali~m). A re-encoding inherits the source script's conventions, ordering included.",
+  "sources": [
+    {
+      "id": "buckwalter2002",
+      "author": "Buckwalter, Tim",
+      "year": 2002,
+      "title": "Buckwalter Arabic Morphological Analyzer (LDC2002L49)",
+      "publisher": "Linguistic Data Consortium",
+      "url": "https://catalog.ldc.upenn.edu/LDC2002L49",
+      "pages": null,
+      "notes": "The transliteration table."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Buckwalter_transliteration"
+  ],
+  "positional_graphemes": {
+    "<": {
+      "default": [
+        "ʔi"
+      ],
+      "before_vowel": [
+        "ʔ"
+      ]
+    },
+    ">": {
+      "default": [
+        "ʔa"
+      ],
+      "before_vowel": [
+        "ʔ"
+      ]
+    },
+    "A": {
+      "word_initial": [
+        "ʔ",
+        "aː"
+      ],
+      "default": [
+        "aː",
+        "ʔ"
+      ]
+    },
+    "p": {
+      "after_vowel": [
+        ""
+      ],
+      "default": [
+        "a",
+        "at"
+      ]
+    },
+    "w": {
+      "word_final": [
+        "uː",
+        "w"
+      ],
+      "default": [
+        "w",
+        "uː"
+      ]
+    },
+    "y": {
+      "word_final": [
+        "iː",
+        "j"
+      ],
+      "default": [
+        "j",
+        "iː"
+      ]
+    }
+  },
+  "stress": {
+    "default_position": -3,
+    "quantity_sensitive": true,
+    "superheavy_final_attracts": true,
+    "max_onset": 1,
+    "stress_mark": "ˈ",
+    "notes": "Buckwalter re-encodes the Arabic script losslessly, so it transcribes to the same IPA and must take the same stress: a transliteration inherits every property of the script it re-encodes. See ar.json for the cascade and sources."
+  }
+}

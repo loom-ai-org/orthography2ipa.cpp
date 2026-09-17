@@ -1,0 +1,113 @@
+{
+  "code": "nan",
+  "name": "Southern Min (Minnan)",
+  "script": "Han",
+  "script_type": "logographic",
+  "quality": "stub",
+  "graphemes": {},
+  "allophones": {},
+  "parent": "och",
+  "ancestors": [
+    {
+      "code": "och",
+      "role": "parent",
+      "weight": 0.8,
+      "notes": "Min split from the Sinitic mainstream before the Middle Chinese of the rime dictionaries; its colloquial layer is not derivable from Middle Chinese (Norman 1988)."
+    },
+    {
+      "code": "ltc",
+      "role": "adstrate",
+      "weight": 0.15,
+      "notes": "Middle Chinese supplies Minnan's literary reading layer (文讀) alongside the older colloquial layer."
+    }
+  ],
+  "notes": "Grapheme inventory NOT YET SPECIFIED (stub). Southern Min (Hokkien / Taiwanese / Teochew) is written with Chinese characters (Han script), and also — uniquely among the Sinitic varieties — with a long-established full Latin orthography. No logographic character-to-phoneme map is claimed here: Chinese characters do not encode pronunciation systematically, so a Han-script G2P for this variety would need either a full character-reading lexicon or a romanised input. INPUT CONTRACT: this spec expects a Minnan romanisation as input, not Han characters — Pe̍h-ōe-jī (POJ, the missionary church romanisation) or the official Taiwanese Romanization System (Tâi-lô, 臺灣閩南語羅馬字拼音方案), which are inter-convertible. Compare: `zh` expects Hanyu Pinyin, Cantonese expects Jyutping, Hakka expects Pha̍k-fa-sṳ, Mindong expects Bàng-uâ-cê, Wu expects Wugniu. Minnan has 7-8 tones with pervasive sandhi; tone is written by POJ/Tâi-lô diacritics or digits. A POJ/Tâi-lô grapheme map is the obvious route to promote this spec to Tier A. PHONEME INVENTORY: attested inventory from PHOIBLE (glottocode minn1241), declared directly. `graphemes` stays empty because none of that depends on the writing system: the sounds of this language are known regardless of whether — or how — it is written.",
+  "iso639_3": "nan",
+  "glottolog_code": "minn1241",
+  "wikidata_qid": "Q36495",
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Southern_Min"
+  ],
+  "sources": [
+    {
+      "id": "nan_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Southern Min",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Southern_Min",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Southern_Min",
+      "pages": null,
+      "notes": "Classification, Han-script and POJ writing, tone system."
+    },
+    {
+      "id": "moe_tailo",
+      "author": "Ministry of Education, Republic of China (Taiwan)",
+      "year": 2006,
+      "title": "臺灣閩南語羅馬字拼音方案 (Taiwanese Romanization System, Tâi-lô)",
+      "publisher": "Ministry of Education",
+      "url": "https://language.moe.gov.tw/",
+      "wikipedia_url": null,
+      "pages": null,
+      "notes": "The official Minnan romanisation; the intended input convention for this spec."
+    },
+    {
+      "id": "douglas1873",
+      "author": "Douglas, Carstairs",
+      "year": 1873,
+      "title": "Chinese-English Dictionary of the Vernacular or Spoken Language of Amoy",
+      "publisher": "Trübner & Co.",
+      "url": null,
+      "wikipedia_url": null,
+      "pages": null,
+      "notes": "The classic Pe̍h-ōe-jī lexicon of Amoy Hokkien."
+    },
+    {
+      "id": "phoible",
+      "author": "Moran, Steven & McCloy, Daniel (eds.)",
+      "year": 2019,
+      "title": "PHOIBLE 2.0",
+      "publisher": "Max Planck Institute for the Science of Human History",
+      "url": "https://phoible.org/",
+      "pages": null,
+      "notes": "Attested phoneme inventory for glottocode minn1241."
+    }
+  ],
+  "timespan": {
+    "start_year": 900,
+    "end_year": null
+  },
+  "phonemes": [
+    "a",
+    "b",
+    "d̠ʒ",
+    "d̪z̪|dz",
+    "d̪|d",
+    "e",
+    "h",
+    "i",
+    "k",
+    "kʰ",
+    "m",
+    "n̪|n",
+    "o",
+    "p",
+    "pʰ",
+    "s̪|s",
+    "t̪s̪|ts",
+    "t̪s̪ʰ|tsʰ",
+    "t̪|t",
+    "t̪ʰ|tʰ",
+    "u",
+    "ŋ",
+    "ɔ",
+    "ɡ",
+    "ʔ"
+  ],
+  "location": {
+    "latitude": 24.5,
+    "longitude": 118.17,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Min Nan Chinese."
+  }
+}

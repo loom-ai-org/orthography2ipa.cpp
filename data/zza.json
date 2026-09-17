@@ -1,0 +1,178 @@
+{
+  "code": "zza",
+  "name": "Zaza",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "a": [
+      "ɑ"
+    ],
+    "b": [
+      "b"
+    ],
+    "c": [
+      "dʒ"
+    ],
+    "ç": [
+      "tʃ"
+    ],
+    "d": [
+      "d"
+    ],
+    "e": [
+      "ɛ"
+    ],
+    "ê": [
+      "e"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "ğ": [
+      "ɣ"
+    ],
+    "h": [
+      "h"
+    ],
+    "i": [
+      "i"
+    ],
+    "î": [
+      "iː"
+    ],
+    "ı": [
+      "ɨ"
+    ],
+    "j": [
+      "ʒ"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "ll": [
+      "ɫ"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "o": [
+      "o"
+    ],
+    "p": [
+      "p"
+    ],
+    "q": [
+      "q"
+    ],
+    "r": [
+      "ɾ"
+    ],
+    "rr": [
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "ş": [
+      "ʃ"
+    ],
+    "t": [
+      "t"
+    ],
+    "u": [
+      "u"
+    ],
+    "û": [
+      "uː"
+    ],
+    "v": [
+      "v"
+    ],
+    "w": [
+      "w"
+    ],
+    "x": [
+      "x"
+    ],
+    "y": [
+      "j"
+    ],
+    "z": [
+      "z"
+    ],
+    "'": [
+      "ʕ"
+    ],
+    "‘": [
+      "ʕ"
+    ]
+  },
+  "positional_graphemes": {
+    "r": {
+      "word_initial": [
+        "r"
+      ]
+    }
+  },
+  "parent": "x-clade-iran1269",
+  "ancestors": [
+    {
+      "code": "x-clade-iran1269",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Descent per Glottolog classification of Zaza (zaza1246)."
+    }
+  ],
+  "notes": "Zaza (Zazaki), a Northwestern Iranian (Indo-European) language of eastern Anatolia. Its Latin orthography is derived from the Turkish alphabet with ⟨x⟩, ⟨q⟩ and the diacritics ⟨'⟩ and ⟨^⟩ added (Werner 2012, Zazaki Alphabet, pp. 5-7); it is NOT the Kurmanji Hawar alphabet, and Zazaki is not Kurdish but a separate Northwest Iranian branch (Paul 2009, §1.1). Two letters therefore take their Turkish and not their Kurmanji values: ⟨a⟩ is the back open [ɑ] and ⟨i⟩ is the close front [i], the vowel Paul's inventory writes /i/ (Paul 2009, Table 9.1). Kurmanji reads ⟨i⟩ as a short central vowel; Zazaki writes that vowel with dotless ⟨ı⟩, which Werner describes as a lax central vowel — expressly contrasted with Turkish ⟨ı⟩, a tense back vowel — and which is transcribed here as [ɨ]. VIBRANTS: Zazaki has a phonemic flap/trill contrast (Paul 2009, Table 9.2, 'Vibrants, flap/trill'). Single ⟨r⟩ is the flap [ɾ], ⟨rr⟩ is the trill [r], and a word-initial vibrant is trilled although it is written with a single ⟨r⟩ (Werner 2012, p. 7 n. 3). VELARIZED LATERAL: the velarized [ɫ] is written ⟨'l⟩ word-initially and ⟨ll⟩ everywhere else (Werner 2012, p. 6); only the ⟨ll⟩ spelling is encoded, because the word-initial one is not distinguished from the pharyngealization mark. AYIN: ⟨'⟩ is the pharyngeal [ʕ], not a glottal stop, and is written both with the ASCII apostrophe and with U+2018; the same mark before ⟨h s t l⟩ marks pharyngealization, which is left unencoded because those digraphs are written inconsistently. Stress falls on the last syllable of the stem and endings and suffixes are unstressed (Paul 2009, §2.2), but it is not marked in the orthography and is left unencoded. The pharyngeals of some varieties are likewise not consistently written.",
+  "iso639_3": "zza",
+  "glottolog_code": null,
+  "sources": [
+    {
+      "id": "zza_glottolog",
+      "author": "Hammarström, H. et al. (Glottolog 5.0)",
+      "year": 2024,
+      "title": "Glottolog: Zaza (zaza1246)",
+      "publisher": "Max Planck Institute for Evolutionary Anthropology",
+      "url": "https://glottolog.org/resource/languoid/id/zaza1246",
+      "pages": null,
+      "notes": "Classification reference. zaza1246 is a FAMILY-level node, not a language-level languoid, which is why glottolog_code stays null.",
+      "wikipedia_url": null
+    },
+    {
+      "id": "paul2009",
+      "author": "Paul, L.",
+      "year": 2009,
+      "title": "Zazaki (chapter 9)",
+      "publisher": "In G. Windfuhr (ed.), The Iranian Languages, Routledge",
+      "url": null,
+      "doi": "10.4324/9780203641736-16",
+      "pages": "545-548",
+      "notes": "Read (scanned chapter, OCR). §1.1 states Zazaki is Northwest Iranian and 'more closely related to Gorani and the (Iranian) Azari dialects than to Kurdish'. §2.1 gives 8 vowels and 30 consonants for the Çermik-Siverek dialects; Table 9.1 (p. 547) has close front /i/ and no lax /ɪ/; Table 9.2 (p. 547) lists 'Vibrants, flap/trill' as a two-way contrast and a plain/velarized lateral pair. §2.2 (p. 547): 'As a rule, Zazaki words have their stress on the last syllable of the stem, while endings and suffixes are unstressed.'",
+      "wikipedia_url": null
+    },
+    {
+      "id": "werner2012",
+      "author": "Werner, B.",
+      "year": 2012,
+      "title": "Morphological Sketch of Southern Zazaki spoken in the area of Çermik, Çüngüş, Siverek and Gerger",
+      "publisher": "SIL International",
+      "url": "https://forum-linguistik.de/sites/www.forum-linguistik.de/files/uploads/Zazaki%20Grammar%20Sketch%20English%20(from%20Dictionary%202012).pdf",
+      "pages": "5-7",
+      "notes": "Read (PDF). 'Zazaki Alphabet' section: 'The Zazaki Alphabet is derived from the Latin based Turkish alphabet. Two letters, x and q, and the two diacritics ‘ and ^ are added'; 'the Zazaki letter ı represents a lax central vowel, while in Turkish ı represents a tense back vowel'. The letter/IPA table prints ‘ (eyn) = ʕ, A a = ɑ and E e = ɛ; the remaining IPA cells did not survive text extraction. It marks 'R r / rr' as thrill [sic] vs flap, with footnote 3: 'Generally, all word-initially vibrants are realized as (thrilled), but represented by single /r/', and marks ‘L ‘l (word-initial) / ll (elsewhere) as velarized, and ‘H ‘S ‘T as pharyngalized [sic].",
+      "wikipedia_url": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Zaza_language"
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "code": "kho",
+  "name": "Khotanese",
+  "script": "Brah",
+  "script_type": "abugida",
+  "quality": "stub",
+  "graphemes": {},
+  "allophones": {},
+  "notes": "STUB — no grapheme inventory modelled. Khotanese (Khotanese Saka), an Eastern Middle Iranian language of the Buddhist kingdom of Khotan on the southern Silk Road (Tarim Basin, modern Hotan, Xinjiang), attested in Buddhist and administrative manuscripts from roughly the 5th-10th centuries CE. It is written in a variant of the Brahmi abugida (South Turkestan Brahmi) adapted from an Indic model to Iranian phonology, with a complex and still-debated vowel/consonant value system (the script's Indic vowel signs and virama conventions do not map cleanly onto Khotanese's own phonemic inventory, and reconstructions of exact sound values remain contested among specialists, e.g. Emmerick vs. later revisions). No single, uncontroversial letter-to-IPA table is available from the sources consulted, so this spec is an honest stub rather than a guessed inventory. Added so it resolves as an ancestry/contact node for the Saka/Khotanese-Tumshuqese subgroup of Eastern Iranian.",
+  "sources": [
+    {
+      "id": "kho_wiki_saka",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Saka language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Saka_language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Saka_language",
+      "pages": null,
+      "notes": "Khotanese as the best-attested Saka dialect; Brahmi-derived script, historical/geographic context."
+    },
+    {
+      "id": "emmerick1989",
+      "author": "Emmerick, Ronald E.",
+      "year": 1989,
+      "title": "Khotanese and Tumshuqese",
+      "publisher": "In Schmitt (ed.), Compendium Linguarum Iranicarum, Reichert",
+      "url": null,
+      "pages": null,
+      "notes": "Standard reference grammar/phonology; the Brahmi-based script's phonetic value assignments are treated there as reconstructions, not a settled transliteration standard."
+    },
+    {
+      "id": "durkin_meisterernst2014",
+      "author": "Durkin-Meisterernst, D.",
+      "year": 2014,
+      "title": "Grammatik des Westmitteliranischen (Parthisch und Mittelpersisch)",
+      "publisher": "Verlag der Österreichischen Akademie der Wissenschaften",
+      "url": null,
+      "pages": null,
+      "notes": "Reference grammar for the Middle Iranian family context; already cited in pal.json."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Saka_language"
+  ],
+  "urls": [
+    "https://glottolog.org/resource/languoid/id/khot1251"
+  ],
+  "timespan": {
+    "start_year": 400,
+    "end_year": 1000
+  },
+  "iso639_3": "kho",
+  "glottolog_code": "khot1251",
+  "wikidata_qid": "Q130224860",
+  "parent": "ira",
+  "ancestors": [
+    {
+      "code": "ira",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Descent from Proto-Iranian, Eastern Iranian branch, Saka/Khotanese-Tumshuqese subgroup (Middle Iranian period)."
+    }
+  ],
+  "location": {
+    "latitude": 37.1128,
+    "longitude": 79.9302,
+    "source": "glottolog",
+    "notes": "Hotan (Khotan), Tarim Basin — the historical heartland of Khotanese speech."
+  }
+}

@@ -1,0 +1,1614 @@
+{
+  "code": "sga",
+  "name": "Old Irish",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "á": [
+      "aː"
+    ],
+    "é": [
+      "eː"
+    ],
+    "í": [
+      "iː"
+    ],
+    "ó": [
+      "oː"
+    ],
+    "ú": [
+      "uː"
+    ],
+    "a": [
+      "a"
+    ],
+    "e": [
+      "e"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "o"
+    ],
+    "u": [
+      "u"
+    ],
+    "ch": [
+      "x"
+    ],
+    "th": [
+      "θ"
+    ],
+    "ph": [
+      "ɸ"
+    ],
+    "mb": [
+      "m"
+    ],
+    "ng": [
+      "ŋɡ"
+    ],
+    "bb": [
+      "b"
+    ],
+    "cc": [
+      "k"
+    ],
+    "dd": [
+      "d"
+    ],
+    "gg": [
+      "ɡ"
+    ],
+    "ll": [
+      "l"
+    ],
+    "mm": [
+      "m"
+    ],
+    "nn": [
+      "n"
+    ],
+    "pp": [
+      "p"
+    ],
+    "rr": [
+      "r"
+    ],
+    "tt": [
+      "t"
+    ],
+    "b": [
+      "b"
+    ],
+    "c": [
+      "k"
+    ],
+    "d": [
+      "d"
+    ],
+    "f": [
+      "ɸ"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "h": [
+      "h"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "ɾ"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "áe": [
+      "aːi̯"
+    ],
+    "aí": [
+      "aːi̯"
+    ],
+    "óe": [
+      "oːi̯"
+    ],
+    "oí": [
+      "oːi̯"
+    ],
+    "ía": [
+      "iːa̯"
+    ],
+    "úa": [
+      "uːa̯"
+    ],
+    "eo": [
+      "eu̯"
+    ],
+    "eó": [
+      "eu̯"
+    ],
+    "éo": [
+      "eu̯"
+    ],
+    "ss": [
+      "s"
+    ],
+    "ae": [
+      "ae"
+    ]
+  },
+  "parent": "cel",
+  "trailing_vowel_axis_digraphs": [
+    "ía",
+    "úa"
+  ],
+  "ancestors": [
+    {
+      "code": "cel",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Descent from Common/Proto-Celtic via Primitive Irish (Ogham); Thurneysen (1946)"
+    }
+  ],
+  "notes": "Research. Old Irish (c. 600-900), the Goidelic stage before Middle Irish, written in the Latin alphabet. The spec models what Old Irish spelling encodes, and it shares most of that machinery with the sibling `mga` entry, which continues the same orthography.\n\nConsonant QUALITY (broad/velarised against slender/palatalised) is written with the flanking vowel letters under caol le caol, leathan le leathan: a consonant next to ⟨e i é í⟩ is slender, next to ⟨a o u á ó ú⟩ broad. A vowel letter written only to signal quality is not itself pronounced, so it is selected as quality context first and deleted afterwards. A following vowel letter outranks a preceding one, and inside a cluster the quality spreads to the neighbouring consonant, sonorants included.\n\nLENITION of ⟨b d g m⟩ is not written. A single letter after a vowel spells the lenited fricative [β ð ɣ β̃] and the doubled letter spells the unlenited stop, the same convention that makes a single ⟨c t p⟩ after a vowel spell the voiced [ɡ d b] against voiceless ⟨cc tt pp⟩. ⟨b⟩ and ⟨g⟩ lenite after a written ⟨l r n⟩ too, while ⟨d⟩ does not, which is what makes ⟨nd rd ld⟩ the standard spelling of an unlenited [d]. Word-initial lenition is a grammatical mutation the spelling of an isolated word form does not record, and is not modelled.\n\nUNSTRESSED VOWELS are where Old Irish parts company with Middle Irish, and the difference is the single largest thing in this spec. Middle Irish collapses every non-initial short vowel to [ə]. Old Irish does not: the Wikipedia account of Old Irish phonology states that “all short vowels may appear in absolutely final position (at the very end of a word) after both broad and slender consonants”, while “the distribution of short vowels in unstressed syllables, other than when absolutely final, was quite restricted”, with only “two allowed phonemes: /ə/ ... and /u/”. The spec therefore reduces an unstressed short vowel to [ə], but exempts ⟨u⟩, which keeps its quality anywhere, and exempts every vowel letter in absolute word-final position, where the `word_final` entries restore the full quality. The gold bears this out exactly: no word in it begins with [ə], and of 917 word-final unstressed short vowels not one is [ə].\n\nFORTIS AND LENIS SONORANTS are a real contrast, written double for the fortis series only where it continues a Proto-Celtic geminate. The two positions where a fortis sonorant is written single are stated in the `SGA_FORTIS_INITIAL_*` and `SGA_FORTIS_BEFORE_CORONAL_*` rules.\n\nThe digraphs ⟨áe aí óe oí⟩ spell the diphthong that early /ai/ and /oi/ merged into, which scribes kept writing with both spellings; ⟨ía úa⟩ spell the reflexes of the long mid vowels. A word-final ⟨ae⟩ without the acute is a plain [e] (⟨Machae⟩, ⟨Dagdae⟩, ⟨accae⟩).\n\nCONVENTION MISMATCH with the WikiPron gold: the gold is RECONSTRUCTED pronunciation, not attested speech, and it carries notational choices this spec adopts rather than argues with. It writes ⟨f ph⟩ as bilabial [ɸ] where the descriptive literature gives labiodental /f/ (the Wikipedia account has “the lenited stops ch, ph, and th become /x/, /f/, and /θ/”); the spec follows the gold, as the sibling `mga` entry does. It writes slender ⟨s⟩ as [sʲ] where the `mga` gold writes [ɕ] — the same segment in two notations, and each entry follows its own gold. It marks the broad coronals as dental [t̪ d̪ n̪ l̪], which the broad-mode benchmark normalizer folds away, so the spec does not emit the dental diacritic and the broad fortis/lenis contrast is left unnotated; the slender fortis series is emitted with the retracted diacritic [t̠ʲ d̠ʲ l̠ʲ n̠ʲ], which the normalizer does not fold. Many headwords are transcribed twice with competing reconstructions, scored as alternatives, so a residual floor from reconstruction disagreement is expected.\n\nRESIDUAL, named rather than fitted: the largest remaining error class is over-reduction of a vowel in the second syllable of a compound verb in deuterotonic form (⟨doberthe⟩, ⟨asidrubart⟩, ⟨focertar⟩), where the accent sits after the proclitic preverb and the vowel therefore does not reduce. 264 of the 340 remaining over-reduction errors fall on words beginning with one of the Old Irish preverbs. Fixing them needs to know that a given spelling is a compound VERB, which the preverb letters alone do not tell — ⟨do⟩, ⟨con⟩, ⟨ar⟩ and ⟨in⟩ begin ordinary nouns and prepositions too — so the spec keeps the general rule and leaves this to a verb-morphology-aware model.",
+  "iso639_3": "sga",
+  "glottolog_code": null,
+  "sources": [
+    {
+      "id": "thurneysen1946",
+      "author": "Thurneysen, Rudolf (trans. D. A. Binchy & Osborn Bergin)",
+      "year": 1946,
+      "title": "A Grammar of Old Irish",
+      "publisher": "Dublin Institute for Advanced Studies",
+      "url": null,
+      "pages": null,
+      "notes": "The standard reference grammar. Cited author-year for the caol le caol quality spellings, the unwritten lenition of ⟨b d g m⟩, the single/double letter voicing convention, the fortis/lenis sonorant contrast and the fixed word-initial stress. Edition not consulted for locators.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Old_Irish"
+    },
+    {
+      "id": "mccone2005",
+      "author": "McCone, Kim",
+      "year": 2005,
+      "title": "A First Old Irish Grammar and Reader",
+      "publisher": "Dept. of Old and Middle Irish, National University of Ireland, Maynooth",
+      "url": null,
+      "pages": null,
+      "notes": "Modern teaching grammar of the same material; cited author-year as a second description of the palatalised consonant series. Edition not consulted for locators, and no claim in this spec rests on it alone.",
+      "wikipedia_url": null
+    },
+    {
+      "id": "sga_wikipedia_phonology",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Old Irish phonology (Wikipedia)",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Old_Irish_phonology",
+      "pages": null,
+      "notes": "Read directly. Every passage quoted in this file's `notes`, `stress` and rule notes is quoted from this article: the restricted unstressed vowel system with /ə/ and /u/ against the free distribution of short vowels in absolutely final position, the tense sonorants that are not written double word-initially or before a consonant, the deuterotonic accent, the non-initial fricative values of ⟨b d g⟩ and the nasal fricative value of non-initial ⟨m⟩, and the /f/ value of ⟨ph⟩ that this spec departs from in favour of the gold's [ɸ].",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Old_Irish_phonology"
+    },
+    {
+      "id": "sga_wikipron",
+      "author": "CUNY Computational Linguistics Lab",
+      "year": 2024,
+      "title": "WikiPron scrape: sga_latn_broad",
+      "publisher": "CUNY-CL/wikipron",
+      "url": "https://github.com/CUNY-CL/wikipron/blob/master/data/scrape/tsv/sga_latn_broad.tsv",
+      "pages": null,
+      "notes": "The benchmark gold. Crowd-sourced Wiktionary reconstructions, used here to MEASURE the spec and to settle the two empirical narrowings named in the rule notes (fortis sonorant before a coronal; ⟨b g⟩ but not ⟨d⟩ lenited after ⟨l r n⟩). Not a source for any rule that is not independently described in the grammars.",
+      "wikipedia_url": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Old_Irish",
+    "https://en.wikipedia.org/wiki/Old_Irish_phonology"
+  ],
+  "timespan": {
+    "start_year": 600,
+    "end_year": 900
+  },
+  "positional_graphemes": {
+    "ch": {
+      "before_front_vowel": [
+        "xʲ"
+      ],
+      "before_back_vowel": [
+        "x"
+      ],
+      "after_i": [
+        "xʲ"
+      ]
+    },
+    "th": {
+      "before_front_vowel": [
+        "θʲ"
+      ],
+      "before_back_vowel": [
+        "θ"
+      ],
+      "after_i": [
+        "θʲ"
+      ]
+    },
+    "ph": {
+      "before_front_vowel": [
+        "ɸʲ"
+      ],
+      "before_back_vowel": [
+        "ɸ"
+      ],
+      "after_i": [
+        "ɸʲ"
+      ]
+    },
+    "ng": {
+      "before_front_vowel": [
+        "ŋʲɡʲ"
+      ],
+      "before_back_vowel": [
+        "ŋɡ"
+      ],
+      "word_final": [
+        "ŋɡ"
+      ],
+      "after_i": [
+        "ŋʲɡʲ"
+      ]
+    },
+    "mb": {
+      "before_front_vowel": [
+        "mʲ"
+      ],
+      "before_back_vowel": [
+        "m"
+      ],
+      "after_i": [
+        "mʲ"
+      ]
+    },
+    "bb": {
+      "before_front_vowel": [
+        "bʲ"
+      ],
+      "before_back_vowel": [
+        "b"
+      ],
+      "after_i": [
+        "bʲ"
+      ]
+    },
+    "cc": {
+      "before_front_vowel": [
+        "kʲ"
+      ],
+      "before_back_vowel": [
+        "k"
+      ],
+      "after_i": [
+        "kʲ"
+      ]
+    },
+    "dd": {
+      "before_front_vowel": [
+        "d̠ʲ"
+      ],
+      "before_back_vowel": [
+        "d"
+      ],
+      "after_i": [
+        "d̠ʲ"
+      ]
+    },
+    "gg": {
+      "before_front_vowel": [
+        "ɡʲ"
+      ],
+      "before_back_vowel": [
+        "ɡ"
+      ],
+      "after_i": [
+        "ɡʲ"
+      ]
+    },
+    "ll": {
+      "before_front_vowel": [
+        "l̠ʲ"
+      ],
+      "before_back_vowel": [
+        "l"
+      ],
+      "after_i": [
+        "l̠ʲ"
+      ]
+    },
+    "mm": {
+      "before_front_vowel": [
+        "mʲ"
+      ],
+      "before_back_vowel": [
+        "m"
+      ],
+      "after_i": [
+        "mʲ"
+      ]
+    },
+    "nn": {
+      "before_front_vowel": [
+        "n̠ʲ"
+      ],
+      "before_back_vowel": [
+        "n"
+      ],
+      "after_i": [
+        "n̠ʲ"
+      ]
+    },
+    "pp": {
+      "before_front_vowel": [
+        "pʲ"
+      ],
+      "before_back_vowel": [
+        "p"
+      ],
+      "after_i": [
+        "pʲ"
+      ]
+    },
+    "rr": {
+      "before_front_vowel": [
+        "rʲ"
+      ],
+      "before_back_vowel": [
+        "r"
+      ],
+      "after_i": [
+        "rʲ"
+      ]
+    },
+    "tt": {
+      "before_front_vowel": [
+        "t̠ʲ"
+      ],
+      "before_back_vowel": [
+        "t"
+      ],
+      "after_i": [
+        "t̠ʲ"
+      ]
+    },
+    "b": {
+      "before_front_vowel": [
+        "bʲ"
+      ],
+      "before_back_vowel": [
+        "b"
+      ],
+      "after_i": [
+        "bʲ"
+      ]
+    },
+    "c": {
+      "before_front_vowel": [
+        "kʲ"
+      ],
+      "before_back_vowel": [
+        "k"
+      ],
+      "after_i": [
+        "kʲ"
+      ]
+    },
+    "d": {
+      "before_front_vowel": [
+        "d̠ʲ"
+      ],
+      "before_back_vowel": [
+        "d"
+      ],
+      "after_i": [
+        "d̠ʲ"
+      ]
+    },
+    "f": {
+      "before_front_vowel": [
+        "ɸʲ"
+      ],
+      "before_back_vowel": [
+        "ɸ"
+      ],
+      "after_i": [
+        "ɸʲ"
+      ]
+    },
+    "g": {
+      "before_front_vowel": [
+        "ɡʲ"
+      ],
+      "before_back_vowel": [
+        "ɡ"
+      ],
+      "after_i": [
+        "ɡʲ"
+      ]
+    },
+    "l": {
+      "before_front_vowel": [
+        "lʲ"
+      ],
+      "before_back_vowel": [
+        "l"
+      ],
+      "after_i": [
+        "lʲ"
+      ]
+    },
+    "m": {
+      "before_front_vowel": [
+        "mʲ"
+      ],
+      "before_back_vowel": [
+        "m"
+      ],
+      "after_i": [
+        "mʲ"
+      ]
+    },
+    "n": {
+      "before_front_vowel": [
+        "nʲ"
+      ],
+      "before_back_vowel": [
+        "n"
+      ],
+      "after_i": [
+        "nʲ"
+      ]
+    },
+    "p": {
+      "before_front_vowel": [
+        "pʲ"
+      ],
+      "before_back_vowel": [
+        "p"
+      ],
+      "after_i": [
+        "pʲ"
+      ]
+    },
+    "r": {
+      "before_front_vowel": [
+        "ɾʲ"
+      ],
+      "before_back_vowel": [
+        "ɾ"
+      ],
+      "after_i": [
+        "ɾʲ"
+      ]
+    },
+    "s": {
+      "before_front_vowel": [
+        "sʲ"
+      ],
+      "before_back_vowel": [
+        "s"
+      ],
+      "after_i": [
+        "sʲ"
+      ]
+    },
+    "t": {
+      "before_front_vowel": [
+        "t̠ʲ"
+      ],
+      "before_back_vowel": [
+        "t"
+      ],
+      "after_i": [
+        "t̠ʲ"
+      ]
+    },
+    "a": {
+      "nucleus_unstressed": [
+        "ə"
+      ],
+      "word_final": [
+        "a"
+      ]
+    },
+    "e": {
+      "nucleus_unstressed": [
+        "ə"
+      ],
+      "word_final": [
+        "e"
+      ]
+    },
+    "i": {
+      "nucleus_unstressed": [
+        "ə"
+      ],
+      "word_final": [
+        "i"
+      ]
+    },
+    "o": {
+      "nucleus_unstressed": [
+        "ə"
+      ],
+      "word_final": [
+        "o"
+      ]
+    },
+    "ss": {
+      "before_front_vowel": [
+        "sʲ"
+      ],
+      "before_back_vowel": [
+        "s"
+      ],
+      "after_i": [
+        "sʲ"
+      ]
+    },
+    "ae": {
+      "word_final": [
+        "e"
+      ]
+    }
+  },
+  "allophone_rules": [
+    {
+      "id": "SGA_LENITION_b",
+      "phonemes": [
+        "b"
+      ],
+      "surface": "β",
+      "grapheme": [
+        "b"
+      ],
+      "preceded_by": "vowel",
+      "notes": "Lenition of ⟨b d g⟩ is not written in Old Irish spelling: a single ⟨b d g⟩ standing after a vowel spells the lenited fricative [β ð ɣ], while the geminate spelling ⟨bb dd gg⟩ spells the unlenited stop (⟨addaim⟩ [adaβ̃ʲ] against ⟨Ulad⟩ [uləð]). The Wikipedia account of Old Irish phonology states that in non-initial position “the voiced stops b, d, and g become fricative”. The rule fires after any vowel letter, covering the intervocalic, preconsonantal and word-final positions alike, and never word-initially, where lenition is a grammatically conditioned mutation that the spelling of an isolated word form does not record (Thurneysen 1946)."
+    },
+    {
+      "id": "SGA_LENITION_d",
+      "phonemes": [
+        "d"
+      ],
+      "surface": "ð",
+      "grapheme": [
+        "d"
+      ],
+      "preceded_by": "vowel",
+      "notes": "Lenition of ⟨b d g⟩ is not written in Old Irish spelling: a single ⟨b d g⟩ standing after a vowel spells the lenited fricative [β ð ɣ], while the geminate spelling ⟨bb dd gg⟩ spells the unlenited stop (⟨addaim⟩ [adaβ̃ʲ] against ⟨Ulad⟩ [uləð]). The Wikipedia account of Old Irish phonology states that in non-initial position “the voiced stops b, d, and g become fricative”. The rule fires after any vowel letter, covering the intervocalic, preconsonantal and word-final positions alike, and never word-initially, where lenition is a grammatically conditioned mutation that the spelling of an isolated word form does not record (Thurneysen 1946)."
+    },
+    {
+      "id": "SGA_LENITION_ɡ",
+      "phonemes": [
+        "ɡ"
+      ],
+      "surface": "ɣ",
+      "grapheme": [
+        "g"
+      ],
+      "preceded_by": "vowel",
+      "notes": "Lenition of ⟨b d g⟩ is not written in Old Irish spelling: a single ⟨b d g⟩ standing after a vowel spells the lenited fricative [β ð ɣ], while the geminate spelling ⟨bb dd gg⟩ spells the unlenited stop (⟨addaim⟩ [adaβ̃ʲ] against ⟨Ulad⟩ [uləð]). The Wikipedia account of Old Irish phonology states that in non-initial position “the voiced stops b, d, and g become fricative”. The rule fires after any vowel letter, covering the intervocalic, preconsonantal and word-final positions alike, and never word-initially, where lenition is a grammatically conditioned mutation that the spelling of an isolated word form does not record (Thurneysen 1946)."
+    },
+    {
+      "id": "SGA_LENITION_bʲ",
+      "phonemes": [
+        "bʲ"
+      ],
+      "surface": "βʲ",
+      "grapheme": [
+        "b"
+      ],
+      "preceded_by": "vowel",
+      "notes": "Lenition of ⟨b d g⟩ is not written in Old Irish spelling: a single ⟨b d g⟩ standing after a vowel spells the lenited fricative [β ð ɣ], while the geminate spelling ⟨bb dd gg⟩ spells the unlenited stop (⟨addaim⟩ [adaβ̃ʲ] against ⟨Ulad⟩ [uləð]). The Wikipedia account of Old Irish phonology states that in non-initial position “the voiced stops b, d, and g become fricative”. The rule fires after any vowel letter, covering the intervocalic, preconsonantal and word-final positions alike, and never word-initially, where lenition is a grammatically conditioned mutation that the spelling of an isolated word form does not record (Thurneysen 1946)."
+    },
+    {
+      "id": "SGA_LENITION_d̠ʲ",
+      "phonemes": [
+        "d̠ʲ"
+      ],
+      "surface": "ðʲ",
+      "grapheme": [
+        "d"
+      ],
+      "preceded_by": "vowel",
+      "notes": "Lenition of ⟨b d g⟩ is not written in Old Irish spelling: a single ⟨b d g⟩ standing after a vowel spells the lenited fricative [β ð ɣ], while the geminate spelling ⟨bb dd gg⟩ spells the unlenited stop (⟨addaim⟩ [adaβ̃ʲ] against ⟨Ulad⟩ [uləð]). The Wikipedia account of Old Irish phonology states that in non-initial position “the voiced stops b, d, and g become fricative”. The rule fires after any vowel letter, covering the intervocalic, preconsonantal and word-final positions alike, and never word-initially, where lenition is a grammatically conditioned mutation that the spelling of an isolated word form does not record (Thurneysen 1946)."
+    },
+    {
+      "id": "SGA_LENITION_ɡʲ",
+      "phonemes": [
+        "ɡʲ"
+      ],
+      "surface": "ɣʲ",
+      "grapheme": [
+        "g"
+      ],
+      "preceded_by": "vowel",
+      "notes": "Lenition of ⟨b d g⟩ is not written in Old Irish spelling: a single ⟨b d g⟩ standing after a vowel spells the lenited fricative [β ð ɣ], while the geminate spelling ⟨bb dd gg⟩ spells the unlenited stop (⟨addaim⟩ [adaβ̃ʲ] against ⟨Ulad⟩ [uləð]). The Wikipedia account of Old Irish phonology states that in non-initial position “the voiced stops b, d, and g become fricative”. The rule fires after any vowel letter, covering the intervocalic, preconsonantal and word-final positions alike, and never word-initially, where lenition is a grammatically conditioned mutation that the spelling of an isolated word form does not record (Thurneysen 1946)."
+    },
+    {
+      "id": "SGA_MEDIAL_VOICING_k",
+      "phonemes": [
+        "k"
+      ],
+      "surface": "ɡ",
+      "grapheme": [
+        "c"
+      ],
+      "preceded_by": "vowel",
+      "notes": "A single ⟨c t p⟩ standing after a vowel spells the voiced stop [ɡ d b], against the doubled ⟨cc tt pp⟩ for the voiceless one: ⟨Beccán⟩ [bʲeɡaːn] beside ⟨Afraicc⟩ [aɸɾəkʲ]. This is the same single/double convention that spells lenition on ⟨b d g⟩ (Thurneysen 1946)."
+    },
+    {
+      "id": "SGA_MEDIAL_VOICING_kʲ",
+      "phonemes": [
+        "kʲ"
+      ],
+      "surface": "ɡʲ",
+      "grapheme": [
+        "c"
+      ],
+      "preceded_by": "vowel",
+      "notes": "A single ⟨c t p⟩ standing after a vowel spells the voiced stop [ɡ d b], against the doubled ⟨cc tt pp⟩ for the voiceless one: ⟨Beccán⟩ [bʲeɡaːn] beside ⟨Afraicc⟩ [aɸɾəkʲ]. This is the same single/double convention that spells lenition on ⟨b d g⟩ (Thurneysen 1946)."
+    },
+    {
+      "id": "SGA_MEDIAL_VOICING_t",
+      "phonemes": [
+        "t"
+      ],
+      "surface": "d",
+      "grapheme": [
+        "t"
+      ],
+      "preceded_by": "vowel",
+      "notes": "A single ⟨c t p⟩ standing after a vowel spells the voiced stop [ɡ d b], against the doubled ⟨cc tt pp⟩ for the voiceless one: ⟨Beccán⟩ [bʲeɡaːn] beside ⟨Afraicc⟩ [aɸɾəkʲ]. This is the same single/double convention that spells lenition on ⟨b d g⟩ (Thurneysen 1946)."
+    },
+    {
+      "id": "SGA_MEDIAL_VOICING_t̠ʲ",
+      "phonemes": [
+        "t̠ʲ"
+      ],
+      "surface": "d̠ʲ",
+      "grapheme": [
+        "t"
+      ],
+      "preceded_by": "vowel",
+      "notes": "A single ⟨c t p⟩ standing after a vowel spells the voiced stop [ɡ d b], against the doubled ⟨cc tt pp⟩ for the voiceless one: ⟨Beccán⟩ [bʲeɡaːn] beside ⟨Afraicc⟩ [aɸɾəkʲ]. This is the same single/double convention that spells lenition on ⟨b d g⟩ (Thurneysen 1946)."
+    },
+    {
+      "id": "SGA_MEDIAL_VOICING_p",
+      "phonemes": [
+        "p"
+      ],
+      "surface": "b",
+      "grapheme": [
+        "p"
+      ],
+      "preceded_by": "vowel",
+      "notes": "A single ⟨c t p⟩ standing after a vowel spells the voiced stop [ɡ d b], against the doubled ⟨cc tt pp⟩ for the voiceless one: ⟨Beccán⟩ [bʲeɡaːn] beside ⟨Afraicc⟩ [aɸɾəkʲ]. This is the same single/double convention that spells lenition on ⟨b d g⟩ (Thurneysen 1946)."
+    },
+    {
+      "id": "SGA_MEDIAL_VOICING_pʲ",
+      "phonemes": [
+        "pʲ"
+      ],
+      "surface": "bʲ",
+      "grapheme": [
+        "p"
+      ],
+      "preceded_by": "vowel",
+      "notes": "A single ⟨c t p⟩ standing after a vowel spells the voiced stop [ɡ d b], against the doubled ⟨cc tt pp⟩ for the voiceless one: ⟨Beccán⟩ [bʲeɡaːn] beside ⟨Afraicc⟩ [aɸɾəkʲ]. This is the same single/double convention that spells lenition on ⟨b d g⟩ (Thurneysen 1946)."
+    },
+    {
+      "id": "SGA_CLUSTER_QUALITY_t_REGRESSIVE",
+      "phonemes": [
+        "t"
+      ],
+      "surface": "t̠ʲ",
+      "followed_by_phoneme": [
+        "ɾʲ",
+        "rʲ",
+        "lʲ",
+        "l̠ʲ",
+        "nʲ",
+        "n̠ʲ",
+        "mʲ"
+      ],
+      "notes": "Consonant quality spreads inside a cluster. A consonant standing before a slender consonant is slender itself, whatever vowel letter is written next to it, because the quality is a property of the whole cluster rather than of each member (Thurneysen 1946)."
+    },
+    {
+      "id": "SGA_CLUSTER_QUALITY_d_REGRESSIVE",
+      "phonemes": [
+        "d"
+      ],
+      "surface": "d̠ʲ",
+      "followed_by_phoneme": [
+        "ɾʲ",
+        "rʲ",
+        "lʲ",
+        "l̠ʲ",
+        "nʲ",
+        "n̠ʲ",
+        "mʲ"
+      ],
+      "notes": "Consonant quality spreads inside a cluster. A consonant standing before a slender consonant is slender itself, whatever vowel letter is written next to it, because the quality is a property of the whole cluster rather than of each member (Thurneysen 1946)."
+    },
+    {
+      "id": "SGA_CLUSTER_QUALITY_k_REGRESSIVE",
+      "phonemes": [
+        "k"
+      ],
+      "surface": "kʲ",
+      "followed_by_phoneme": [
+        "ɾʲ",
+        "rʲ",
+        "lʲ",
+        "l̠ʲ",
+        "nʲ",
+        "n̠ʲ",
+        "mʲ"
+      ],
+      "notes": "Consonant quality spreads inside a cluster. A consonant standing before a slender consonant is slender itself, whatever vowel letter is written next to it, because the quality is a property of the whole cluster rather than of each member (Thurneysen 1946)."
+    },
+    {
+      "id": "SGA_CLUSTER_QUALITY_ɡ_REGRESSIVE",
+      "phonemes": [
+        "ɡ"
+      ],
+      "surface": "ɡʲ",
+      "followed_by_phoneme": [
+        "ɾʲ",
+        "rʲ",
+        "lʲ",
+        "l̠ʲ",
+        "nʲ",
+        "n̠ʲ",
+        "mʲ"
+      ],
+      "notes": "Consonant quality spreads inside a cluster. A consonant standing before a slender consonant is slender itself, whatever vowel letter is written next to it, because the quality is a property of the whole cluster rather than of each member (Thurneysen 1946)."
+    },
+    {
+      "id": "SGA_CLUSTER_QUALITY_p_REGRESSIVE",
+      "phonemes": [
+        "p"
+      ],
+      "surface": "pʲ",
+      "followed_by_phoneme": [
+        "ɾʲ",
+        "rʲ",
+        "lʲ",
+        "l̠ʲ",
+        "nʲ",
+        "n̠ʲ",
+        "mʲ"
+      ],
+      "notes": "Consonant quality spreads inside a cluster. A consonant standing before a slender consonant is slender itself, whatever vowel letter is written next to it, because the quality is a property of the whole cluster rather than of each member (Thurneysen 1946)."
+    },
+    {
+      "id": "SGA_CLUSTER_QUALITY_b_REGRESSIVE",
+      "phonemes": [
+        "b"
+      ],
+      "surface": "bʲ",
+      "followed_by_phoneme": [
+        "ɾʲ",
+        "rʲ",
+        "lʲ",
+        "l̠ʲ",
+        "nʲ",
+        "n̠ʲ",
+        "mʲ"
+      ],
+      "notes": "Consonant quality spreads inside a cluster. A consonant standing before a slender consonant is slender itself, whatever vowel letter is written next to it, because the quality is a property of the whole cluster rather than of each member (Thurneysen 1946)."
+    },
+    {
+      "id": "SGA_CLUSTER_QUALITY_s_REGRESSIVE",
+      "phonemes": [
+        "s"
+      ],
+      "surface": "sʲ",
+      "followed_by_phoneme": [
+        "ɾʲ",
+        "rʲ",
+        "lʲ",
+        "l̠ʲ",
+        "nʲ",
+        "n̠ʲ",
+        "mʲ"
+      ],
+      "notes": "Consonant quality spreads inside a cluster. A consonant standing before a slender consonant is slender itself, whatever vowel letter is written next to it, because the quality is a property of the whole cluster rather than of each member (Thurneysen 1946)."
+    },
+    {
+      "id": "SGA_CLUSTER_QUALITY_ɸ_REGRESSIVE",
+      "phonemes": [
+        "ɸ"
+      ],
+      "surface": "ɸʲ",
+      "followed_by_phoneme": [
+        "ɾʲ",
+        "rʲ",
+        "lʲ",
+        "l̠ʲ",
+        "nʲ",
+        "n̠ʲ",
+        "mʲ"
+      ],
+      "notes": "Consonant quality spreads inside a cluster. A consonant standing before a slender consonant is slender itself, whatever vowel letter is written next to it, because the quality is a property of the whole cluster rather than of each member (Thurneysen 1946)."
+    },
+    {
+      "id": "SGA_CLUSTER_QUALITY_x_REGRESSIVE",
+      "phonemes": [
+        "x"
+      ],
+      "surface": "xʲ",
+      "followed_by_phoneme": [
+        "ɾʲ",
+        "rʲ",
+        "lʲ",
+        "l̠ʲ",
+        "nʲ",
+        "n̠ʲ",
+        "mʲ"
+      ],
+      "notes": "Consonant quality spreads inside a cluster. A consonant standing before a slender consonant is slender itself, whatever vowel letter is written next to it, because the quality is a property of the whole cluster rather than of each member (Thurneysen 1946)."
+    },
+    {
+      "id": "SGA_CLUSTER_QUALITY_θ_REGRESSIVE",
+      "phonemes": [
+        "θ"
+      ],
+      "surface": "θʲ",
+      "followed_by_phoneme": [
+        "ɾʲ",
+        "rʲ",
+        "lʲ",
+        "l̠ʲ",
+        "nʲ",
+        "n̠ʲ",
+        "mʲ"
+      ],
+      "notes": "Consonant quality spreads inside a cluster. A consonant standing before a slender consonant is slender itself, whatever vowel letter is written next to it, because the quality is a property of the whole cluster rather than of each member (Thurneysen 1946)."
+    },
+    {
+      "id": "SGA_CLUSTER_QUALITY_t_PROGRESSIVE",
+      "phonemes": [
+        "t"
+      ],
+      "surface": "t̠ʲ",
+      "preceded_by_phoneme": [
+        "ɾʲ",
+        "rʲ",
+        "lʲ",
+        "l̠ʲ",
+        "nʲ",
+        "n̠ʲ",
+        "mʲ",
+        "β̃ʲ",
+        "bʲ",
+        "βʲ",
+        "pʲ",
+        "d̠ʲ",
+        "ðʲ",
+        "t̠ʲ",
+        "kʲ",
+        "ɡʲ",
+        "ɣʲ",
+        "xʲ",
+        "θʲ",
+        "sʲ",
+        "ɸʲ"
+      ],
+      "word_final": true,
+      "notes": "Consonant quality spreads inside a cluster. A word-final consonant standing after a slender consonant is slender itself: the quality is a property of the whole cluster, so ⟨ainm⟩ has a slender ⟨m⟩ because the ⟨n⟩ it clusters with is slender, not because a front vowel letter stands next to it (Thurneysen 1946)."
+    },
+    {
+      "id": "SGA_CLUSTER_QUALITY_d_PROGRESSIVE",
+      "phonemes": [
+        "d"
+      ],
+      "surface": "d̠ʲ",
+      "preceded_by_phoneme": [
+        "ɾʲ",
+        "rʲ",
+        "lʲ",
+        "l̠ʲ",
+        "nʲ",
+        "n̠ʲ",
+        "mʲ",
+        "β̃ʲ",
+        "bʲ",
+        "βʲ",
+        "pʲ",
+        "d̠ʲ",
+        "ðʲ",
+        "t̠ʲ",
+        "kʲ",
+        "ɡʲ",
+        "ɣʲ",
+        "xʲ",
+        "θʲ",
+        "sʲ",
+        "ɸʲ"
+      ],
+      "word_final": true,
+      "notes": "Consonant quality spreads inside a cluster. A word-final consonant standing after a slender consonant is slender itself: the quality is a property of the whole cluster, so ⟨ainm⟩ has a slender ⟨m⟩ because the ⟨n⟩ it clusters with is slender, not because a front vowel letter stands next to it (Thurneysen 1946)."
+    },
+    {
+      "id": "SGA_CLUSTER_QUALITY_k_PROGRESSIVE",
+      "phonemes": [
+        "k"
+      ],
+      "surface": "kʲ",
+      "preceded_by_phoneme": [
+        "ɾʲ",
+        "rʲ",
+        "lʲ",
+        "l̠ʲ",
+        "nʲ",
+        "n̠ʲ",
+        "mʲ",
+        "β̃ʲ",
+        "bʲ",
+        "βʲ",
+        "pʲ",
+        "d̠ʲ",
+        "ðʲ",
+        "t̠ʲ",
+        "kʲ",
+        "ɡʲ",
+        "ɣʲ",
+        "xʲ",
+        "θʲ",
+        "sʲ",
+        "ɸʲ"
+      ],
+      "word_final": true,
+      "notes": "Consonant quality spreads inside a cluster. A word-final consonant standing after a slender consonant is slender itself: the quality is a property of the whole cluster, so ⟨ainm⟩ has a slender ⟨m⟩ because the ⟨n⟩ it clusters with is slender, not because a front vowel letter stands next to it (Thurneysen 1946)."
+    },
+    {
+      "id": "SGA_CLUSTER_QUALITY_ɡ_PROGRESSIVE",
+      "phonemes": [
+        "ɡ"
+      ],
+      "surface": "ɡʲ",
+      "preceded_by_phoneme": [
+        "ɾʲ",
+        "rʲ",
+        "lʲ",
+        "l̠ʲ",
+        "nʲ",
+        "n̠ʲ",
+        "mʲ",
+        "β̃ʲ",
+        "bʲ",
+        "βʲ",
+        "pʲ",
+        "d̠ʲ",
+        "ðʲ",
+        "t̠ʲ",
+        "kʲ",
+        "ɡʲ",
+        "ɣʲ",
+        "xʲ",
+        "θʲ",
+        "sʲ",
+        "ɸʲ"
+      ],
+      "word_final": true,
+      "notes": "Consonant quality spreads inside a cluster. A word-final consonant standing after a slender consonant is slender itself: the quality is a property of the whole cluster, so ⟨ainm⟩ has a slender ⟨m⟩ because the ⟨n⟩ it clusters with is slender, not because a front vowel letter stands next to it (Thurneysen 1946)."
+    },
+    {
+      "id": "SGA_CLUSTER_QUALITY_p_PROGRESSIVE",
+      "phonemes": [
+        "p"
+      ],
+      "surface": "pʲ",
+      "preceded_by_phoneme": [
+        "ɾʲ",
+        "rʲ",
+        "lʲ",
+        "l̠ʲ",
+        "nʲ",
+        "n̠ʲ",
+        "mʲ",
+        "β̃ʲ",
+        "bʲ",
+        "βʲ",
+        "pʲ",
+        "d̠ʲ",
+        "ðʲ",
+        "t̠ʲ",
+        "kʲ",
+        "ɡʲ",
+        "ɣʲ",
+        "xʲ",
+        "θʲ",
+        "sʲ",
+        "ɸʲ"
+      ],
+      "word_final": true,
+      "notes": "Consonant quality spreads inside a cluster. A word-final consonant standing after a slender consonant is slender itself: the quality is a property of the whole cluster, so ⟨ainm⟩ has a slender ⟨m⟩ because the ⟨n⟩ it clusters with is slender, not because a front vowel letter stands next to it (Thurneysen 1946)."
+    },
+    {
+      "id": "SGA_CLUSTER_QUALITY_b_PROGRESSIVE",
+      "phonemes": [
+        "b"
+      ],
+      "surface": "bʲ",
+      "preceded_by_phoneme": [
+        "ɾʲ",
+        "rʲ",
+        "lʲ",
+        "l̠ʲ",
+        "nʲ",
+        "n̠ʲ",
+        "mʲ",
+        "β̃ʲ",
+        "bʲ",
+        "βʲ",
+        "pʲ",
+        "d̠ʲ",
+        "ðʲ",
+        "t̠ʲ",
+        "kʲ",
+        "ɡʲ",
+        "ɣʲ",
+        "xʲ",
+        "θʲ",
+        "sʲ",
+        "ɸʲ"
+      ],
+      "word_final": true,
+      "notes": "Consonant quality spreads inside a cluster. A word-final consonant standing after a slender consonant is slender itself: the quality is a property of the whole cluster, so ⟨ainm⟩ has a slender ⟨m⟩ because the ⟨n⟩ it clusters with is slender, not because a front vowel letter stands next to it (Thurneysen 1946)."
+    },
+    {
+      "id": "SGA_CLUSTER_QUALITY_s_PROGRESSIVE",
+      "phonemes": [
+        "s"
+      ],
+      "surface": "sʲ",
+      "preceded_by_phoneme": [
+        "ɾʲ",
+        "rʲ",
+        "lʲ",
+        "l̠ʲ",
+        "nʲ",
+        "n̠ʲ",
+        "mʲ",
+        "β̃ʲ",
+        "bʲ",
+        "βʲ",
+        "pʲ",
+        "d̠ʲ",
+        "ðʲ",
+        "t̠ʲ",
+        "kʲ",
+        "ɡʲ",
+        "ɣʲ",
+        "xʲ",
+        "θʲ",
+        "sʲ",
+        "ɸʲ"
+      ],
+      "word_final": true,
+      "notes": "Consonant quality spreads inside a cluster. A word-final consonant standing after a slender consonant is slender itself: the quality is a property of the whole cluster, so ⟨ainm⟩ has a slender ⟨m⟩ because the ⟨n⟩ it clusters with is slender, not because a front vowel letter stands next to it (Thurneysen 1946)."
+    },
+    {
+      "id": "SGA_CLUSTER_QUALITY_ɸ_PROGRESSIVE",
+      "phonemes": [
+        "ɸ"
+      ],
+      "surface": "ɸʲ",
+      "preceded_by_phoneme": [
+        "ɾʲ",
+        "rʲ",
+        "lʲ",
+        "l̠ʲ",
+        "nʲ",
+        "n̠ʲ",
+        "mʲ",
+        "β̃ʲ",
+        "bʲ",
+        "βʲ",
+        "pʲ",
+        "d̠ʲ",
+        "ðʲ",
+        "t̠ʲ",
+        "kʲ",
+        "ɡʲ",
+        "ɣʲ",
+        "xʲ",
+        "θʲ",
+        "sʲ",
+        "ɸʲ"
+      ],
+      "word_final": true,
+      "notes": "Consonant quality spreads inside a cluster. A word-final consonant standing after a slender consonant is slender itself: the quality is a property of the whole cluster, so ⟨ainm⟩ has a slender ⟨m⟩ because the ⟨n⟩ it clusters with is slender, not because a front vowel letter stands next to it (Thurneysen 1946)."
+    },
+    {
+      "id": "SGA_CLUSTER_QUALITY_x_PROGRESSIVE",
+      "phonemes": [
+        "x"
+      ],
+      "surface": "xʲ",
+      "preceded_by_phoneme": [
+        "ɾʲ",
+        "rʲ",
+        "lʲ",
+        "l̠ʲ",
+        "nʲ",
+        "n̠ʲ",
+        "mʲ",
+        "β̃ʲ",
+        "bʲ",
+        "βʲ",
+        "pʲ",
+        "d̠ʲ",
+        "ðʲ",
+        "t̠ʲ",
+        "kʲ",
+        "ɡʲ",
+        "ɣʲ",
+        "xʲ",
+        "θʲ",
+        "sʲ",
+        "ɸʲ"
+      ],
+      "word_final": true,
+      "notes": "Consonant quality spreads inside a cluster. A word-final consonant standing after a slender consonant is slender itself: the quality is a property of the whole cluster, so ⟨ainm⟩ has a slender ⟨m⟩ because the ⟨n⟩ it clusters with is slender, not because a front vowel letter stands next to it (Thurneysen 1946)."
+    },
+    {
+      "id": "SGA_CLUSTER_QUALITY_θ_PROGRESSIVE",
+      "phonemes": [
+        "θ"
+      ],
+      "surface": "θʲ",
+      "preceded_by_phoneme": [
+        "ɾʲ",
+        "rʲ",
+        "lʲ",
+        "l̠ʲ",
+        "nʲ",
+        "n̠ʲ",
+        "mʲ",
+        "β̃ʲ",
+        "bʲ",
+        "βʲ",
+        "pʲ",
+        "d̠ʲ",
+        "ðʲ",
+        "t̠ʲ",
+        "kʲ",
+        "ɡʲ",
+        "ɣʲ",
+        "xʲ",
+        "θʲ",
+        "sʲ",
+        "ɸʲ"
+      ],
+      "word_final": true,
+      "notes": "Consonant quality spreads inside a cluster. A word-final consonant standing after a slender consonant is slender itself: the quality is a property of the whole cluster, so ⟨ainm⟩ has a slender ⟨m⟩ because the ⟨n⟩ it clusters with is slender, not because a front vowel letter stands next to it (Thurneysen 1946)."
+    },
+    {
+      "id": "SGA_GLIDE_I_AFTER_VOWEL",
+      "phonemes": [
+        "i",
+        "ə"
+      ],
+      "surface": "",
+      "grapheme": [
+        "i"
+      ],
+      "preceded_by": "vowel",
+      "notes": "An ⟨i⟩ written after another vowel letter is a quality-marking glide under caol le caol, not a vowel of its own, and is deleted once it has selected the quality of the following consonant: ⟨Bretain⟩ [bʲɾʲetənʲ] (Thurneysen 1946)."
+    },
+    {
+      "id": "SGA_GLIDE_BEFORE_BACK_VOWEL",
+      "phonemes": [
+        "e",
+        "i",
+        "ə"
+      ],
+      "surface": "",
+      "grapheme": [
+        "e",
+        "i"
+      ],
+      "preceded_by": "consonant",
+      "followed_by": "back_vowel",
+      "notes": "An ⟨e⟩ or ⟨i⟩ written between a consonant and a back vowel letter marks the quality of the preceding consonant and is not itself pronounced (Thurneysen 1946)."
+    },
+    {
+      "id": "SGA_CLUSTER_QUALITY_m_PROGRESSIVE",
+      "phonemes": [
+        "m"
+      ],
+      "surface": "mʲ",
+      "preceded_by_phoneme": [
+        "ɾʲ",
+        "rʲ",
+        "lʲ",
+        "l̠ʲ",
+        "nʲ",
+        "n̠ʲ",
+        "mʲ",
+        "β̃ʲ",
+        "bʲ",
+        "βʲ",
+        "pʲ",
+        "d̠ʲ",
+        "ðʲ",
+        "t̠ʲ",
+        "kʲ",
+        "ɡʲ",
+        "ɣʲ",
+        "xʲ",
+        "θʲ",
+        "sʲ",
+        "ɸʲ"
+      ],
+      "word_final": true,
+      "notes": "Consonant quality spreads inside a cluster. A word-final consonant standing after a slender consonant is slender itself: the quality is a property of the whole cluster, so ⟨ainm⟩ has a slender ⟨m⟩ because the ⟨n⟩ it clusters with is slender, not because a front vowel letter stands next to it (Thurneysen 1946)."
+    },
+    {
+      "id": "SGA_CLUSTER_QUALITY_n_PROGRESSIVE",
+      "phonemes": [
+        "n"
+      ],
+      "surface": "nʲ",
+      "preceded_by_phoneme": [
+        "ɾʲ",
+        "rʲ",
+        "lʲ",
+        "l̠ʲ",
+        "nʲ",
+        "n̠ʲ",
+        "mʲ",
+        "β̃ʲ",
+        "bʲ",
+        "βʲ",
+        "pʲ",
+        "d̠ʲ",
+        "ðʲ",
+        "t̠ʲ",
+        "kʲ",
+        "ɡʲ",
+        "ɣʲ",
+        "xʲ",
+        "θʲ",
+        "sʲ",
+        "ɸʲ"
+      ],
+      "word_final": true,
+      "notes": "Consonant quality spreads inside a cluster. A word-final consonant standing after a slender consonant is slender itself: the quality is a property of the whole cluster, so ⟨ainm⟩ has a slender ⟨m⟩ because the ⟨n⟩ it clusters with is slender, not because a front vowel letter stands next to it (Thurneysen 1946)."
+    },
+    {
+      "id": "SGA_CLUSTER_QUALITY_l_PROGRESSIVE",
+      "phonemes": [
+        "l"
+      ],
+      "surface": "lʲ",
+      "preceded_by_phoneme": [
+        "ɾʲ",
+        "rʲ",
+        "lʲ",
+        "l̠ʲ",
+        "nʲ",
+        "n̠ʲ",
+        "mʲ",
+        "β̃ʲ",
+        "bʲ",
+        "βʲ",
+        "pʲ",
+        "d̠ʲ",
+        "ðʲ",
+        "t̠ʲ",
+        "kʲ",
+        "ɡʲ",
+        "ɣʲ",
+        "xʲ",
+        "θʲ",
+        "sʲ",
+        "ɸʲ"
+      ],
+      "word_final": true,
+      "notes": "Consonant quality spreads inside a cluster. A word-final consonant standing after a slender consonant is slender itself: the quality is a property of the whole cluster, so ⟨ainm⟩ has a slender ⟨m⟩ because the ⟨n⟩ it clusters with is slender, not because a front vowel letter stands next to it (Thurneysen 1946)."
+    },
+    {
+      "id": "SGA_CLUSTER_QUALITY_ɾ_PROGRESSIVE",
+      "phonemes": [
+        "ɾ"
+      ],
+      "surface": "ɾʲ",
+      "preceded_by_phoneme": [
+        "ɾʲ",
+        "rʲ",
+        "lʲ",
+        "l̠ʲ",
+        "nʲ",
+        "n̠ʲ",
+        "mʲ",
+        "β̃ʲ",
+        "bʲ",
+        "βʲ",
+        "pʲ",
+        "d̠ʲ",
+        "ðʲ",
+        "t̠ʲ",
+        "kʲ",
+        "ɡʲ",
+        "ɣʲ",
+        "xʲ",
+        "θʲ",
+        "sʲ",
+        "ɸʲ"
+      ],
+      "word_final": true,
+      "notes": "Consonant quality spreads inside a cluster. A word-final consonant standing after a slender consonant is slender itself: the quality is a property of the whole cluster, so ⟨ainm⟩ has a slender ⟨m⟩ because the ⟨n⟩ it clusters with is slender, not because a front vowel letter stands next to it (Thurneysen 1946)."
+    },
+    {
+      "id": "SGA_POSTSONORANT_LENITION_b",
+      "phonemes": [
+        "b"
+      ],
+      "surface": "β",
+      "grapheme": [
+        "b"
+      ],
+      "preceded_by_grapheme": [
+        "l",
+        "r",
+        "n"
+      ],
+      "notes": "⟨b⟩ and ⟨g⟩ also spell the lenited fricative after a written ⟨l r n⟩, the other position in which the Proto-Celtic stop stood between voiced segments: ⟨irbág⟩ [œɹβaːɣ], ⟨airnaigde⟩. ⟨d⟩ does not, which is what makes ⟨nd rd ld⟩ the standard Old Irish spelling of an unlenited [d] (Thurneysen 1946)."
+    },
+    {
+      "id": "SGA_POSTSONORANT_LENITION_bʲ",
+      "phonemes": [
+        "bʲ"
+      ],
+      "surface": "βʲ",
+      "grapheme": [
+        "b"
+      ],
+      "preceded_by_grapheme": [
+        "l",
+        "r",
+        "n"
+      ],
+      "notes": "⟨b⟩ and ⟨g⟩ also spell the lenited fricative after a written ⟨l r n⟩, the other position in which the Proto-Celtic stop stood between voiced segments: ⟨irbág⟩ [œɹβaːɣ], ⟨airnaigde⟩. ⟨d⟩ does not, which is what makes ⟨nd rd ld⟩ the standard Old Irish spelling of an unlenited [d] (Thurneysen 1946)."
+    },
+    {
+      "id": "SGA_POSTSONORANT_LENITION_ɡ",
+      "phonemes": [
+        "ɡ"
+      ],
+      "surface": "ɣ",
+      "grapheme": [
+        "g"
+      ],
+      "preceded_by_grapheme": [
+        "l",
+        "r"
+      ],
+      "notes": "⟨g⟩ after a written ⟨l r⟩ spells the lenited fricative more often than not in the gold: ⟨rg⟩ is fricative 19 times against 16 stop, ⟨lg⟩ 9 against 5. This is a gold-settled majority rather than the clean Thurneysen (1946) generalisation the ⟨b⟩/⟨d⟩ contrast rests on (see SGA_POSTSONORANT_LENITION_b and the ⟨d⟩ rule it stands against), so the rule fires on the counts, not on the claim that Old Irish spelling regularly voices/lenites ⟨g⟩ in this position the way it does ⟨b⟩."
+    },
+    {
+      "id": "SGA_POSTSONORANT_LENITION_ɡʲ",
+      "phonemes": [
+        "ɡʲ"
+      ],
+      "surface": "ɣʲ",
+      "grapheme": [
+        "g"
+      ],
+      "preceded_by_grapheme": [
+        "l",
+        "r"
+      ],
+      "notes": "⟨g⟩ after a written ⟨l r⟩ spells the lenited fricative more often than not in the gold: ⟨rg⟩ is fricative 19 times against 16 stop, ⟨lg⟩ 9 against 5. This is a gold-settled majority rather than the clean Thurneysen (1946) generalisation the ⟨b⟩/⟨d⟩ contrast rests on (see SGA_POSTSONORANT_LENITION_b and the ⟨d⟩ rule it stands against), so the rule fires on the counts, not on the claim that Old Irish spelling regularly voices/lenites ⟨g⟩ in this position the way it does ⟨b⟩."
+    },
+    {
+      "id": "SGA_FORTIS_INITIAL_ɾ",
+      "phonemes": [
+        "ɾ"
+      ],
+      "surface": "r",
+      "word_initial": true,
+      "notes": "Old Irish contrasts tense (fortis) and lax (lenis) sonorants. The tense series is written double only where it continues a Proto-Celtic geminate; the Wikipedia account of Old Irish phonology states that “doubly written consonants of this sort do not occur in positions where tense sonorants developed from non-geminated Proto-Celtic sonorants (such as word-initially or before a consonant)”. A word-initial ⟨r l n⟩ is therefore tense although it is written single."
+    },
+    {
+      "id": "SGA_FORTIS_INITIAL_ɾʲ",
+      "phonemes": [
+        "ɾʲ"
+      ],
+      "surface": "rʲ",
+      "word_initial": true,
+      "notes": "Old Irish contrasts tense (fortis) and lax (lenis) sonorants. The tense series is written double only where it continues a Proto-Celtic geminate; the Wikipedia account of Old Irish phonology states that “doubly written consonants of this sort do not occur in positions where tense sonorants developed from non-geminated Proto-Celtic sonorants (such as word-initially or before a consonant)”. A word-initial ⟨r l n⟩ is therefore tense although it is written single."
+    },
+    {
+      "id": "SGA_FORTIS_INITIAL_lʲ",
+      "phonemes": [
+        "lʲ"
+      ],
+      "surface": "l̠ʲ",
+      "word_initial": true,
+      "notes": "Old Irish contrasts tense (fortis) and lax (lenis) sonorants. The tense series is written double only where it continues a Proto-Celtic geminate; the Wikipedia account of Old Irish phonology states that “doubly written consonants of this sort do not occur in positions where tense sonorants developed from non-geminated Proto-Celtic sonorants (such as word-initially or before a consonant)”. A word-initial ⟨r l n⟩ is therefore tense although it is written single."
+    },
+    {
+      "id": "SGA_FORTIS_INITIAL_nʲ",
+      "phonemes": [
+        "nʲ"
+      ],
+      "surface": "n̠ʲ",
+      "word_initial": true,
+      "notes": "Old Irish contrasts tense (fortis) and lax (lenis) sonorants. The tense series is written double only where it continues a Proto-Celtic geminate; the Wikipedia account of Old Irish phonology states that “doubly written consonants of this sort do not occur in positions where tense sonorants developed from non-geminated Proto-Celtic sonorants (such as word-initially or before a consonant)”. A word-initial ⟨r l n⟩ is therefore tense although it is written single."
+    },
+    {
+      "id": "SGA_FORTIS_BEFORE_CORONAL_ɾ",
+      "phonemes": [
+        "ɾ"
+      ],
+      "surface": "r",
+      "followed_by_phoneme": [
+        "d",
+        "d̠ʲ",
+        "dʲ",
+        "t",
+        "t̠ʲ",
+        "tʲ",
+        "s",
+        "sʲ",
+        "n",
+        "nʲ",
+        "n̠ʲ",
+        "l",
+        "lʲ",
+        "l̠ʲ"
+      ],
+      "notes": "The second of the two positions in which a tense sonorant is not written double is before a consonant (see the word-initial rule above for the quotation). The condition is narrowed here to a following CORONAL, which is where the Old Irish gold shows the tense reflex without exception (r before d/t/s/n/l: 92-100% tense) while a following labial or velar takes the lax one (r before b/ɡ/β/ɣ/x/m: 0-6% tense)."
+    },
+    {
+      "id": "SGA_FORTIS_BEFORE_CORONAL_ɾʲ",
+      "phonemes": [
+        "ɾʲ"
+      ],
+      "surface": "rʲ",
+      "followed_by_phoneme": [
+        "d",
+        "d̠ʲ",
+        "dʲ",
+        "t",
+        "t̠ʲ",
+        "tʲ",
+        "s",
+        "sʲ",
+        "n",
+        "nʲ",
+        "n̠ʲ",
+        "l",
+        "lʲ",
+        "l̠ʲ"
+      ],
+      "notes": "The second of the two positions in which a tense sonorant is not written double is before a consonant (see the word-initial rule above for the quotation). The condition is narrowed here to a following CORONAL, which is where the Old Irish gold shows the tense reflex without exception (r before d/t/s/n/l: 92-100% tense) while a following labial or velar takes the lax one (r before b/ɡ/β/ɣ/x/m: 0-6% tense)."
+    },
+    {
+      "id": "SGA_FORTIS_BEFORE_CORONAL_lʲ",
+      "phonemes": [
+        "lʲ"
+      ],
+      "surface": "l̠ʲ",
+      "followed_by_phoneme": [
+        "d",
+        "d̠ʲ",
+        "dʲ",
+        "t",
+        "t̠ʲ",
+        "tʲ",
+        "s",
+        "sʲ",
+        "n",
+        "nʲ",
+        "n̠ʲ",
+        "l",
+        "lʲ",
+        "l̠ʲ"
+      ],
+      "notes": "The second of the two positions in which a tense sonorant is not written double is before a consonant (see the word-initial rule above for the quotation). The condition is narrowed here to a following CORONAL, which is where the Old Irish gold shows the tense reflex without exception (r before d/t/s/n/l: 92-100% tense) while a following labial or velar takes the lax one (r before b/ɡ/β/ɣ/x/m: 0-6% tense)."
+    },
+    {
+      "id": "SGA_FORTIS_BEFORE_CORONAL_nʲ",
+      "phonemes": [
+        "nʲ"
+      ],
+      "surface": "n̠ʲ",
+      "followed_by_phoneme": [
+        "d",
+        "d̠ʲ",
+        "dʲ",
+        "t",
+        "t̠ʲ",
+        "tʲ",
+        "s",
+        "sʲ",
+        "n",
+        "nʲ",
+        "n̠ʲ",
+        "l",
+        "lʲ",
+        "l̠ʲ"
+      ],
+      "notes": "The second of the two positions in which a tense sonorant is not written double is before a consonant (see the word-initial rule above for the quotation). The condition is narrowed here to a following CORONAL, which is where the Old Irish gold shows the tense reflex without exception (r before d/t/s/n/l: 92-100% tense) while a following labial or velar takes the lax one (r before b/ɡ/β/ɣ/x/m: 0-6% tense)."
+    },
+    {
+      "id": "SGA_LENITION_m",
+      "phonemes": [
+        "m"
+      ],
+      "surface": "β̃",
+      "grapheme": [
+        "m"
+      ],
+      "preceded_by": "vowel",
+      "followed_by_grapheme_not": [
+        "b",
+        "p",
+        "c",
+        "ch",
+        "f",
+        "bb",
+        "pp",
+        "cc"
+      ],
+      "notes": "Non-initial ⟨m⟩ spells the lenited nasal fricative: the Wikipedia account of Old Irish phonology states that “in non-initial positions, the letter m usually becomes the nasal fricative”. It keeps its nasal stop inside the clusters ⟨mb mp mc mch mf⟩, where the nasal is the unlenited first member of a cluster rather than a lenited single consonant."
+    },
+    {
+      "id": "SGA_LENITION_mʲ",
+      "phonemes": [
+        "mʲ"
+      ],
+      "surface": "β̃ʲ",
+      "grapheme": [
+        "m"
+      ],
+      "preceded_by": "vowel",
+      "followed_by_grapheme_not": [
+        "b",
+        "p",
+        "c",
+        "ch",
+        "f",
+        "bb",
+        "pp",
+        "cc"
+      ],
+      "notes": "Non-initial ⟨m⟩ spells the lenited nasal fricative: the Wikipedia account of Old Irish phonology states that “in non-initial positions, the letter m usually becomes the nasal fricative”. It keeps its nasal stop inside the clusters ⟨mb mp mc mch mf⟩, where the nasal is the unlenited first member of a cluster rather than a lenited single consonant."
+    }
+  ],
+  "stress": {
+    "default_position": 1,
+    "quantity_sensitive": false,
+    "stress_mark": "ˈ",
+    "source": "rules",
+    "notes": "Old Irish stress is fixed on the first syllable of the word (Thurneysen 1946). `default_position=1` models that default. It is not the whole rule: in a compound verb the accent falls on the syllable after a proclitic preverb, the deuterotonic pattern the Wikipedia account of Old Irish phonology states as “in verbs it occurs on the second syllable when the first syllable is a clitic (the verbal prefix as- in as·beir)”. Whether a given spelling is a compound verb in deuterotonic form is morphosyntax that the spelling of an isolated word form does not record, so it is not modelled; see the RESIDUAL paragraph in `notes`."
+  }
+}

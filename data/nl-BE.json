@@ -1,0 +1,50 @@
+{
+  "code": "nl-BE",
+  "name": "Belgian Dutch (Flemish)",
+  "script": "Latin",
+  "graphemes_base": "nl",
+  "allophones_base": "nl",
+  "allophones": {
+    "ɣ": [
+      "ɣ",
+      "ʝ"
+    ],
+    "r": [
+      "r",
+      "ɾ"
+    ]
+  },
+  "parent": "nl",
+  "notes": "Flemish / Belgian Dutch (Vlaams). Alveolar /r/ [r] in most varieties (vs. NL uvular [ʀ]). /ɣ/ (voiced velar fricative) more robust than in NL Dutch. Considered more conservative than Netherlands Dutch in some features. Strong dialect continuum from West-Flemish to Limburgish. Source: König & van der Auwera (1994).",
+  "quality": "skeleton",
+  "script_type": "alphabet",
+  "sources": [
+    {
+      "id": "gussenhoven1999",
+      "author": "Gussenhoven, C.",
+      "year": 1999,
+      "title": "Dutch",
+      "publisher": "Cambridge University Press",
+      "url": null,
+      "pages": null,
+      "notes": "In: Handbook of the International Phonetic Association"
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Flemish",
+    "https://nl.wikipedia.org/wiki/Belgisch-Nederlands"
+  ],
+  "timespan": {
+    "start_year": 1600,
+    "end_year": null
+  },
+  "glottolog_code": null,
+  "iso639_3": "nld",
+  "wikidata_qid": "Q1404296",
+  "location": {
+    "latitude": 51,
+    "longitude": 4.5,
+    "source": "wikidata",
+    "notes": "the Flemish Region — the Dutch-speaking part of Belgium, not Belgium as a whole. A region-level point. [Wikidata Q9337 P625]"
+  }
+}

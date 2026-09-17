@@ -1,0 +1,181 @@
+{
+  "code": "quy",
+  "name": "Ayacucho Quechua",
+  "parent": "qu",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "i": [
+      "i"
+    ],
+    "u": [
+      "u"
+    ],
+    "p": [
+      "p"
+    ],
+    "t": [
+      "t"
+    ],
+    "ch": [
+      "tʃ"
+    ],
+    "k": [
+      "k"
+    ],
+    "q": [
+      "χ"
+    ],
+    "s": [
+      "s"
+    ],
+    "h": [
+      "h"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ñ": [
+      "ɲ"
+    ],
+    "l": [
+      "l"
+    ],
+    "ll": [
+      "ʎ"
+    ],
+    "r": [
+      "r"
+    ],
+    "w": [
+      "w"
+    ],
+    "y": [
+      "j"
+    ]
+  },
+  "allophone_rules": [
+    {
+      "id": "QUY_UVULAR_LOWER_A",
+      "phonemes": [
+        "a"
+      ],
+      "surface": "ɑ",
+      "followed_by_phoneme": [
+        "χ"
+      ],
+      "notes": "Vowel lowering/retraction adjacent to the uvular fricative /χ/: /a/ → [ɑ] (Wikipedia, Ayacucho Quechua)."
+    },
+    {
+      "id": "QUY_UVULAR_LOWER_A_AFTER",
+      "phonemes": [
+        "a"
+      ],
+      "surface": "ɑ",
+      "preceded_by_phoneme": [
+        "χ"
+      ],
+      "notes": "Same lowering when /χ/ precedes."
+    },
+    {
+      "id": "QUY_UVULAR_LOWER_I",
+      "phonemes": [
+        "i"
+      ],
+      "surface": "ɛ",
+      "followed_by_phoneme": [
+        "χ"
+      ],
+      "notes": "/i/ → [ɛ] adjacent to /χ/ (Wikipedia, Ayacucho Quechua)."
+    },
+    {
+      "id": "QUY_UVULAR_LOWER_I_AFTER",
+      "phonemes": [
+        "i"
+      ],
+      "surface": "ɛ",
+      "preceded_by_phoneme": [
+        "χ"
+      ],
+      "notes": "Same lowering when /χ/ precedes."
+    },
+    {
+      "id": "QUY_UVULAR_LOWER_U",
+      "phonemes": [
+        "u"
+      ],
+      "surface": "ɔ",
+      "followed_by_phoneme": [
+        "χ"
+      ],
+      "notes": "/u/ → [ɔ] adjacent to /χ/ (Wikipedia, Ayacucho Quechua)."
+    },
+    {
+      "id": "QUY_UVULAR_LOWER_U_AFTER",
+      "phonemes": [
+        "u"
+      ],
+      "surface": "ɔ",
+      "preceded_by_phoneme": [
+        "χ"
+      ],
+      "notes": "Same lowering when /χ/ precedes."
+    }
+  ],
+  "notes": "Ayacucho (Chanka) Quechua, the Southern Quechua variety of Ayacucho, Peru. Its defining difference from Cusco Quechua (quz) is the ABSENCE of the aspirated and ejective stop series — Wikipedia states plainly that Ayacucho 'lacks the aspirated and ejective series', so no ⟨ph th chh kh qh⟩ / ⟨p' t' ch' k' q'⟩ keys are asserted here; adding them would be a Cusco fact wrongly transplanted. The second difference is ⟨q⟩: Ayacucho has the uvular FRICATIVE /χ/ where Cusco has the stop /q/ (Wikipedia consonant table). Trivocalic alphabet (a, i, u); the uvular-conditioned lowering of /a i u/ to [ɑ ɛ ɔ] adjacent to /χ/ is expressed as rules, not as vowel+uvular grapheme keys. ⟨ll⟩ /ʎ/ and ⟨ñ⟩ /ɲ/ are single palatal segments. ⟨r⟩ is the trill /r/ per the Ayacucho consonant table.",
+  "iso639_3": "quy",
+  "glottolog_code": "ayac1239",
+  "wikidata_qid": "Q35145",
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Ayacucho_Quechua",
+    "https://en.wikipedia.org/wiki/Southern_Quechua"
+  ],
+  "urls": [
+    "https://glottolog.org/resource/languoid/id/ayac1239"
+  ],
+  "sources": [
+    {
+      "id": "ayacucho_quechua_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2025,
+      "title": "Ayacucho Quechua",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Ayacucho_Quechua",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Ayacucho_Quechua",
+      "pages": null,
+      "notes": "Consonant table giving ⟨q⟩ = /χ/ and ⟨r⟩ = /r/; explicit statement that there are no ejective stops; uvular lowering of /a i u/ to [ɑ ɛ ɔ] next to /χ/."
+    },
+    {
+      "id": "southern_quechua_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2025,
+      "title": "Southern Quechua",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Southern_Quechua",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Southern_Quechua",
+      "pages": null,
+      "notes": "Places Ayacucho within Southern Quechua and states it lacks the aspirated and ejective series that Cusco-Collao has."
+    }
+  ],
+  "ancestors": [
+    {
+      "code": "qu",
+      "role": "parent",
+      "weight": 0.9,
+      "notes": "Quechuan; Ayacucho (Chanka) is a Southern Quechua (Quechua II-C) variety."
+    },
+    {
+      "code": "es-PE",
+      "role": "adstrate",
+      "weight": 0.2,
+      "notes": "Sustained bilingual contact with Peruvian Spanish."
+    }
+  ]
+}

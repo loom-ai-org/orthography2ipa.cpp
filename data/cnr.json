@@ -1,0 +1,77 @@
+{
+  "code": "cnr",
+  "name": "Montenegrin",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "skeleton",
+  "iso639_3": "cnr",
+  "glottolog_code": "mont1282",
+  "timespan": {
+    "start_year": 2007,
+    "end_year": null
+  },
+  "graphemes_base": "hr",
+  "graphemes": {
+    "ś": [
+      "ɕ"
+    ],
+    "ź": [
+      "ʑ"
+    ]
+  },
+  "allophones": {},
+  "positional_graphemes": {},
+  "ancestors": [
+    {
+      "code": "sla",
+      "role": "parent",
+      "weight": 0.9,
+      "notes": "Descent from Proto-Slavic (South Slavic, western subgroup / Serbo-Croatian dialect continuum), same as sr/hr."
+    },
+    {
+      "code": "sr",
+      "role": "adstrate",
+      "weight": 0.4,
+      "notes": "Montenegrin, Serbian, Croatian and Bosnian form one pluricentric Shtokavian (Eastern Herzegovinian, Ijekavian) diasystem; the standards are mutually intelligible and share the bulk of their phonology."
+    },
+    {
+      "code": "hr",
+      "role": "adstrate",
+      "weight": 0.4,
+      "notes": "Same Shtokavian Ijekavian dialect basis as standard Croatian; graphemes inherited from hr (graphemes_base)."
+    },
+    {
+      "code": "tr",
+      "role": "adstrate",
+      "weight": 0.03,
+      "notes": "Ottoman Turkish adstrate lexicon, shared with the wider Serbo-Croatian dialect continuum."
+    },
+    {
+      "code": "it-IT",
+      "role": "adstrate",
+      "weight": 0.03,
+      "notes": "Venetian/Italian adstrate along the Montenegrin Adriatic coast (Kotor, Budva)."
+    }
+  ],
+  "parent": "x-clade-sout3147",
+  "notes": "Montenegrin, codified as a standard separate from Serbian/Croatian/Bosnian in 2007 (official since the 2007 constitution). Same Shtokavian Ijekavian base as standard Croatian, so the Latin grapheme table is inherited from hr (graphemes_base=hr). Adds two letters not in the shared Serbo-Croatian alphabet: ⟨ś⟩ /ɕ/ and ⟨ź⟩ /ʑ/ (Cyrillic С́/З́), replacing the digraphs ⟨sj⟩/⟨zj⟩ used elsewhere in the diasystem; Wikipedia notes some linguists analyze these as allophones rather than distinct phonemes, but they are official graphemes of the Montenegrin alphabet and so are mapped as their own units per AGENTS.md §2 test 1 (their pronunciation is not literally sj/zj concatenated).",
+  "sources": [
+    {
+      "id": "wiki-cnr",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Montenegrin language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Montenegrin_language"
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Montenegrin_language"
+  ],
+  "wikidata_qid": "Q8821",
+  "location": {
+    "latitude": 42.708,
+    "longitude": 19.374,
+    "source": "glottolog",
+    "notes": "Approximate centroid, Montenegro."
+  }
+}

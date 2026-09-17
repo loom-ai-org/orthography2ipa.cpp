@@ -1,0 +1,128 @@
+{
+ "code": "spo",
+ "name": "Spokane",
+ "script": "Zyyy",
+ "quality": "stub",
+ "graphemes": {},
+ "allophones": {
+  "l": [
+   "l",
+   "l̩"
+  ],
+  "m": [
+   "m",
+   "m̩"
+  ],
+  "n": [
+   "n",
+   "n̩"
+  ],
+  "p": [
+   "p",
+   "pʰ"
+  ],
+  "q": [
+   "q",
+   "qʰ"
+  ],
+  "r": [
+   "r",
+   "r̩"
+  ],
+  "t": [
+   "t",
+   "tʰ"
+  ],
+  "e": [
+   "a",
+   "æ",
+   "e"
+  ],
+  "i": [
+   "i",
+   "e"
+  ],
+  "o": [
+   "ɔ",
+   "o"
+  ],
+  "u": [
+   "u",
+   "o"
+  ]
+ },
+ "notes": "REGISTRY STUB (not a modelled G2P target). Placed so the ancestry graph covers every living ISO 639-3 language. No orthography is claimed; the phoneme inventory follows the cited PHOIBLE inventory (which itself cites a published description): script is Zyyy (undetermined) until a cited description is encoded. Classification and coordinates follow Glottolog.",
+ "iso639_3": "spo",
+ "glottolog_code": "spok1245",
+ "sources": [
+  {
+   "id": "glottolog2024",
+   "author": "Hammarström, Harald; Forkel, Robert; Haspelmath, Martin; Bank, Sebastian",
+   "year": 2024,
+   "title": "Glottolog 5.0",
+   "publisher": "Max Planck Institute for Evolutionary Anthropology",
+   "url": "https://glottolog.org/"
+  },
+  {
+   "id": "phoible2019",
+   "author": "Moran, Steven; McCloy, Daniel (eds.)",
+   "year": 2019,
+   "title": "PHOIBLE 2.0 (doi:10.5281/zenodo.2562766)",
+   "publisher": "Max Planck Institute for the Science of Human History",
+   "url": "https://phoible.org/inventories/view/1016",
+   "notes": "Inventory 1016 (ph), 39 non-marginal segments, 4 marginal excluded."
+  }
+ ],
+ "urls": [
+  "https://glottolog.org/resource/languoid/id/spok1245"
+ ],
+ "location": {
+  "latitude": 47.9087,
+  "longitude": -118.062,
+  "source": "glottolog",
+  "notes": "Glottolog's representative point."
+ },
+ "parent": "x-clade-sali1255",
+ "phonemes": [
+  "h",
+  "j",
+  "j̰",
+  "kʷ",
+  "k̰ʷ",
+  "l",
+  "l̰",
+  "m",
+  "m̰",
+  "n",
+  "n̰",
+  "p",
+  "p̰",
+  "q",
+  "qʷ",
+  "q̰",
+  "q̰ʷ",
+  "r",
+  "r̰",
+  "s",
+  "t",
+  "ts",
+  "ts̰",
+  "t̠ʃ",
+  "t̠ʃ̰",
+  "t̰",
+  "w",
+  "w̰",
+  "xʷ",
+  "ɬ",
+  "ʃ",
+  "ʔ",
+  "χ",
+  "χʷ",
+  "a",
+  "e",
+  "i",
+  "o",
+  "u"
+ ],
+ "phoible_id": "1016"
+}

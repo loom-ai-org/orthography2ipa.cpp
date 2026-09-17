@@ -1,0 +1,103 @@
+{
+  "code": "ar-AE",
+  "name": "Emirati Arabic",
+  "script": "Arabic",
+  "graphemes_base": "ar-x-gulf",
+  "allophones_base": "ar-x-gulf",
+  "allophones": {
+    "tʃ": [
+      "tʃ"
+    ],
+    "ɡ": [
+      "ɡ",
+      "j"
+    ],
+    "ŋ": [
+      "ŋ"
+    ]
+  },
+  "parent": "ar-x-gulf",
+  "ancestors": [
+    {
+      "code": "ar-x-gulf",
+      "role": "parent",
+      "weight": 0.88,
+      "notes": "Gulf Arabic base — inherits *q→[ɡ], velar affrication GULF_K_AFFRICATION/GULF_G_AFFRICATION, interdental retention and emphatic spreading."
+    }
+  ],
+  "notes": "Emirati Arabic (إماراتي) — UAE: Abu Dhabi, Dubai, Sharjah, RAK. Inherits the Gulf features: *q → [ɡ]; velar affrication /k/→[tʃ], /ɡ/→[dʒ] before high front /i, iː/; interdentals /θ ð ðˤ/ retained. Emirati-specific: (a) jiim and the reflex of *q vary with the palatal glide [j] (grapheme ج → [dʒ]~[j]; ɡ → [ɡ]~[j]) — Szreder & Derrick (2023) find the [dʒ~j] alternation to be a live synchronic process, and that the presence of a nearby similar coronal obstruent inhibits the (voiced) [j] variant of this dʒ~j alternation; (b) the /k~tʃ/ alternation is, per Szreder & Derrick (2023), a COMPLETED phonemic change (now two separate phonemes), so the inherited GULF_K_AFFRICATION rule is a predictive approximation of the historical distribution, not a synchronic process — and, unlike the voiced target, /k/-affrication was NOT inhibited by nearby similar consonants (if anything the reverse); (c) heaviest English influence of the Gulf dialects (Dubai effect): /p/, /v/, /tʃ/, /ŋ/ thoroughly integrated; strong South-Asian community lexical influence. Interior/tribal varieties (RAK, Fujairah) are more conservative. Input contract: fully diacritised (tashkeel) Arabic.",
+  "quality": "research",
+  "script_type": "abjad",
+  "sources": [
+    {
+      "id": "szreder_derrick2023",
+      "author": "Szreder, M. & Derrick, D.",
+      "year": 2023,
+      "title": "Phonological conditioning of affricate variability in Emirati Arabic",
+      "publisher": "Journal of the International Phonetic Association",
+      "url": "https://doi.org/10.1017/S0025100323000166",
+      "pages": "54(1):146-164",
+      "notes": "Abstract and published summary read (full text paywalled — cited only for what was read). Emirati-specific: [k~tʃ] is a completed phonemic change (lexicalised); [dʒ~j] is a synchronic phonological process; a nearby similar coronal obstruent inhibits the (voiced) [j] variant of the dʒ~j alternation, whereas /k/-affrication to [tʃ] is not inhibited by similar consonants."
+    },
+    {
+      "id": "alshammari2026",
+      "author": "Alshammari, K. K.",
+      "year": 2026,
+      "title": "An Optimality-Theoretic Account of Velar Affrication in Northern Najdi Arabic",
+      "publisher": "Journal of Language Teaching and Research 17(4)",
+      "url": "https://doi.org/10.17507/jltr.1704.19",
+      "pages": "1333-1341",
+      "notes": "Read in full. Literature review (p.1335) of Gulf velar affrication (Mustafawi Qatari, Matar Kuwaiti, Johnstone 1967 lexicalisation) supporting the inherited GULF_K/G_AFFRICATION rules."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Gulf_Arabic",
+    "https://ar.wikipedia.org/wiki/%D9%84%D9%87%D8%AC%D8%A9_%D8%AE%D9%84%D9%8A%D8%AC%D9%8A%D8%A9"
+  ],
+  "timespan": {
+    "start_year": 1900,
+    "end_year": null
+  },
+  "glottolog_code": "gulf1241",
+  "iso639_3": "ara",
+  "location": {
+    "latitude": 24.451111,
+    "longitude": 54.396944,
+    "source": "wikidata",
+    "notes": "Abu Dhabi. A national variety within the Gulf continuum: the capital stands in for the country. [Wikidata Q1519 P625]"
+  },
+  "optional_marks": [
+    "ً",
+    "ٌ",
+    "ٍ",
+    "َ",
+    "ُ",
+    "ِ",
+    "ّ",
+    "ْ",
+    "ٰ",
+    "ٓ"
+  ],
+  "stress": {
+    "default_position": -3,
+    "quantity_sensitive": true,
+    "superheavy_final_attracts": true,
+    "max_onset": 1,
+    "stress_mark": "ˈ",
+    "notes": "Arabic stress is QUANTITY-SENSITIVE: it falls on a syllable because that syllable is heavy, not because of any orthographic ending, so no ending table can express it. The cascade (Ryding, A Reference Grammar of MSA, CUP 2005, §2.3; Watson, The Phonology and Morphology of Arabic, OUP 2002, ch.3): a superheavy final syllable (CVːC/CVCC) takes the stress (kiˈtaːb); otherwise a heavy penult (CVː/CVC) does (muˈdarris); otherwise the antepenult (ˈmadrasa). max_onset=1 because Arabic onsets are obligatory and hold exactly one consonant — a medial cluster splits, closing the preceding syllable, and that boundary is what makes the penult of mudarris heavy. INPUT CONTRACT: weight is only recoverable from a complete transcription, so this requires diacritized input; an undiacritized skeleton has no vowels to weigh. The registered wikipron gold carries no stress marks, but the benchmark strips stress from both sides by default, so this costs no PER. Prosodic clitics: monosyllabic function words (negator maː, prepositions fiː/min/ʕan/ʕa/li/bi, vocative jaː, copula-negator muː/miʃ, conditional law/loː, wa-proclitic combinations) attach to a host and fall inside the host's stress domain, so they carry no word stress (Watson 2002, The Phonology and Morphology of Arabic, OUP, ch.3). Pan-Arabic class; the per-lect form list reflects the function words attested in this lect. Orthographic test — a clitic homograph (e.g. verb yā 'came') is destressed in every occurrence.",
+    "cliticless_words": [
+      "فِي",
+      "لِي",
+      "مَا",
+      "مُو",
+      "مِن"
+    ]
+  },
+  "word_exceptions": {
+    "لَو": "law",
+    "عِيش": "ʕeːʃ",
+    "الْعِيش": "ilʕeːʃ",
+    "الْيَوم": "iljoːm",
+    "اَلْيَوم": "iljoːm"
+  }
+}

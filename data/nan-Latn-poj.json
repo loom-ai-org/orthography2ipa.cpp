@@ -1,0 +1,202 @@
+{
+  "code": "nan-Latn-poj",
+  "name": "Southern Min (Hokkien / Taiwanese) — Pe̍h-ōe-jī",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "orthography_kind": "romanization",
+  "quality": "research",
+  "graphemes": {
+    "p": ["p"],
+    "ph": ["pʰ"],
+    "b": ["b"],
+    "m": ["m"],
+    "t": ["t"],
+    "th": ["tʰ"],
+    "l": ["l"],
+    "n": ["n"],
+    "k": ["k"],
+    "kh": ["kʰ"],
+    "g": ["ɡ"],
+    "ng": ["ŋ"],
+    "h": ["h"],
+    "ch": ["ts"],
+    "chh": ["tsʰ"],
+    "j": ["dz"],
+    "s": ["s"],
+    "a": ["a"],
+    "e": ["e"],
+    "i": ["i"],
+    "o": ["ə"],
+    "o͘": ["ɔ"],
+    "u": ["u"],
+    "aⁿ": ["ã"],
+    "eⁿ": ["ẽ"],
+    "iⁿ": ["ĩ"],
+    "o͘ⁿ": ["ɔ̃"],
+    "uⁿ": ["ũ"],
+    "ai": ["aɪ"],
+    "au": ["aʊ"],
+    "ia": ["ɪa"],
+    "io": ["ɪo"],
+    "iu": ["iu"],
+    "oa": ["ua"],
+    "oe": ["ue"],
+    "ui": ["ui"],
+    "iau": ["ɪaʊ"],
+    "oai": ["uai"]
+  },
+  "positional_graphemes": {
+    "p": {
+      "default": ["p"],
+      "word_final": ["p̚"]
+    },
+    "t": {
+      "default": ["t"],
+      "word_final": ["t̚"]
+    },
+    "k": {
+      "default": ["k"],
+      "word_final": ["k̚"]
+    },
+    "h": {
+      "default": ["h"],
+      "word_final": ["ʔ"]
+    }
+  },
+  "allophones": {
+    "p": ["p"], "pʰ": ["pʰ"], "b": ["b"], "m": ["m"],
+    "t": ["t"], "tʰ": ["tʰ"], "l": ["l", "ɾ"], "n": ["n"],
+    "k": ["k"], "kʰ": ["kʰ"], "ɡ": ["ɡ"], "ŋ": ["ŋ"], "h": ["h"],
+    "ts": ["ts"], "tsʰ": ["tsʰ"], "dz": ["dz"], "s": ["s"],
+    "a": ["a"], "e": ["e"], "i": ["i"], "ə": ["ə"], "ɔ": ["ɔ"], "u": ["u"],
+    "ã": ["ã"], "ẽ": ["ẽ"], "ĩ": ["ĩ"], "ɔ̃": ["ɔ̃"], "ũ": ["ũ"],
+    "aɪ": ["aɪ"], "aʊ": ["aʊ"], "ɪa": ["ɪa"], "ɪo": ["ɪo"],
+    "iu": ["iu"], "ua": ["ua"], "ue": ["ue"], "ui": ["ui"],
+    "ɪaʊ": ["ɪaʊ"], "uai": ["uai"],
+    "m̩": ["m̩"], "ŋ̍": ["ŋ̍"],
+    "p̚": ["p̚"], "t̚": ["t̚"], "k̚": ["k̚"], "ʔ": ["ʔ"]
+  },
+  "allophone_rules": [
+    {
+      "id": "NAN_POJ_CH_PALATAL_BEFORE_I",
+      "phonemes": ["ts"],
+      "surface": "tɕ",
+      "followed_by_phoneme": ["i", "ĩ", "ɪa", "ɪo", "iu", "ɪaʊ"],
+      "notes": "⟨ch⟩ /ts/ is alveolo-palatal [tɕ] before ⟨i⟩ (Chang 2001 calls this the 'chi' series, contrasting with plain ⟨ch⟩ before back vowels); phoneme-level context avoids a duplicate 'chi' grapheme key, since the orthography spells both with the same letters and only the following vowel decides."
+    },
+    {
+      "id": "NAN_POJ_CHH_PALATAL_BEFORE_I",
+      "phonemes": ["tsʰ"],
+      "surface": "tɕʰ",
+      "followed_by_phoneme": ["i", "ĩ", "ɪa", "ɪo", "iu", "ɪaʊ"],
+      "notes": "⟨chh⟩ /tsʰ/ is alveolo-palatal [tɕʰ] before ⟨i⟩; same distribution as NAN_POJ_CH_PALATAL_BEFORE_I."
+    },
+    {
+      "id": "NAN_POJ_J_PALATAL_BEFORE_I",
+      "phonemes": ["dz"],
+      "surface": "dʑ",
+      "followed_by_phoneme": ["i", "ĩ", "ɪa", "ɪo", "iu", "ɪaʊ"],
+      "notes": "⟨j⟩ /dz/ is alveolo-palatal [dʑ] before ⟨i⟩; same distribution."
+    },
+    {
+      "id": "NAN_POJ_S_PALATAL_BEFORE_I",
+      "phonemes": ["s"],
+      "surface": "ɕ",
+      "followed_by_phoneme": ["i", "ĩ", "ɪa", "ɪo", "iu", "ɪaʊ"],
+      "notes": "⟨s⟩ /s/ is alveolo-palatal [ɕ] before ⟨i⟩; same distribution."
+    }
+  ],
+  "tone_inventory": {
+    "◌́": "tone 2, im-siōng (dark rising)",
+    "◌̀": "tone 3, im-khì (dark departing)",
+    "◌̂": "tone 5, iông-pîng (light level)",
+    "◌̄": "tone 7, iông-khì (light departing)",
+    "◌̍": "tone 8, iông-ji̍p (light entering, checked syllables only)"
+  },
+  "notes": "Pe̍h-ōe-jī (POJ, 'vernacular writing', also called Church Romanization), the 19th-century missionary-developed Latin romanization of Southern Min / Hokkien, still in active use for Taiwanese Hokkien and Amoy Hokkien alongside the newer, near-identical official Tâi-lô standard (Ministry of Education, Taiwan, 2006). This spec models POJ rather than Han characters because Southern Min's Han orthography is logographic (see the companion stub `nan.json`, which explicitly declares an empty grapheme map for that reason and names POJ/Tâi-lô as 'the obvious route to promote this spec to Tier A'): a logographic character does not encode pronunciation systematically, so only a phonemic romanization gives this engine a real grapheme→IPA system to describe, exactly the same design choice already made in this dataset for other Sinitic/Sino-adjacent romanizations (Hanyu Pinyin for `zh`, presumably Jyutping for Cantonese, Pha̍k-fa-sṳ for Hakka). Filed under the BCP-47-style code `nan-Latn-poj` (script subtag + registered IANA variant subtag 'pehoeji') rather than overwriting `nan.json`, since that file already exists as the Han-script stub for the same ISO 639-3 code and this spec is additive, not a replacement. INITIALS: the aspiration and voicing contrasts follow the classic POJ initial table (unaspirated ⟨p t k ch⟩ /p t k ts/ vs. aspirated ⟨ph th kh chh⟩ /pʰ tʰ kʰ tsʰ/ vs. voiced ⟨b g j⟩ /b ɡ dz/, with no voiced counterpart to /t/); ⟨ch chh j s⟩ surface alveolo-palatal [tɕ tɕʰ dʑ ɕ] before any /i/-initial rime — plain ⟨i⟩/⟨iⁿ⟩ or a medial-i diphthong/triphthong (⟨ia io iu iau⟩) — expressed as allophone rules keyed on the following slot's chosen phoneme rather than as separate 'chi/chhi/ji/si' grapheme keys, since the orthography does not spell them differently (AGENTS.md §3: context belongs in the rule layer); the rule lists every /i/-headed rime phoneme explicitly because the diphthong graphemes resolve to a single fused phoneme string (e.g. ⟨ia⟩→/ɪa/) rather than a separate /i/ segment the rule could match generically. ⟨l⟩ is intermediate between [l] and a tap [ɾ]) per Chang (2001); both are declared as allophones with the rule layer left open for a caller to add position-specific bias. VOWELS: five oral vowel qualities and their nasalized counterparts, all attested with an unusual mid-central [ə] spelled plain ⟨o⟩ contrasting with an unrounded-vs-rounded back-vowel letter ⟨o͘⟩ (o + combining dot above, U+0358) for [ɔ] — a letter+diacritic single orthographic unit under AGENTS.md §2 test 2, not two graphemes; nasalization is written with a superscript ⟨ⁿ⟩ that likewise forms one grapheme with the preceding vowel letter (a genuine abugida-like diacritic unit, same test). Diphthongs/triphthongs ⟨ai au ia io iu oa oe ui iau oai⟩ are single syllable nuclei (test 2) and are cited with the exact IPA the source gives (Chang 2001 via Wikipedia's 'Pe̍h-ōe-jī' phonology tables), including the non-obvious ⟨io⟩ = [ɪo] and ⟨oa/oe⟩ = [ua]/[ue] mappings that a letter-by-letter reading would get wrong. CODAS: nasal codas ⟨m n ng⟩ and stop codas ⟨p t k⟩ (unreleased, hence the raised hook: p̚ t̚ k̚) plus the glottal-stop coda ⟨h⟩ are Middle-Chinese-inherited 'checked syllable' finals (Norman 1988). POJ spells these with the same plain letters as the onsets (there is no hyphen or other mark in real running text — a hyphen in POJ marks a compound boundary, not a coda), so the onset/coda contrast is expressed with `positional_graphemes` (`word_final` overriding `default`) rather than invented separate spellings: word-final ⟨p t k⟩ become the unreleased [p̚ t̚ k̚] and word-final ⟨h⟩ becomes glottal [ʔ], while ⟨m n ng⟩ keep the same nasal value onset or coda. Syllabic nasals (a whole syllable consisting of the nasal alone, e.g. ⟨m̍⟩ 'not', ⟨sng⟩ 'sour' — the ⟨ng⟩ here IS the nucleus, not a coda after a vowel) are a real Southern Min pattern this spec does not separately model: distinguishing a nasal-as-nucleus from a nasal-as-onset/coda needs a syllable-nucleus predicate this engine does not yet expose for consonant letters, so words of that shape will resolve through the plain ⟨m⟩/⟨ng⟩ consonant mapping rather than the syllabic [m̩]/[ŋ̍] reading — a gap to flag rather than paper over with an unworkable spelling convention. TONE — SCHEMA LIMITATION: Southern Min has 7-8 citation tones with pervasive sandhi (Ramsey 1987; Klöter 2005), and POJ marks the citation (pre-sandhi) tone with combining diacritics above the syllable's tone-bearing vowel (acute=2, grave=3, circumflex=5, macron=7, vertical-line-above=8; tones 1 and 4 are unmarked, distinguished only by the coda: sonorant coda/open syllable = 1, obstruent -p/-t/-k/-h coda = 4). This spec follows the convention already established in this dataset for other tone-marking Latin orthographies (Vietnamese `vi`, Yoruba `yo`): the diacritic is folded into the vowel grapheme's NFC form as a single orthographic unit (test 2) so the tokenizer accepts the spelling, but the mapped IPA is the plain vowel/consonant with no tone appended, and `tone_inventory` records the diacritic-to-tone-name correspondence as metadata only. The engine currently has no mechanism to append a tone mark to a slot's chosen IPA from a diacritic that rides on a DIFFERENT segment than the one it marks tonally (the tone belongs to the whole syllable, not to the vowel grapheme it happens to sit on) — this is a genuine missing engine capability (AGENTS.md §1), not something this spec can enumerate around, and it also cannot correctly express tone SANDHI (which changes the spoken tone away from what POJ writes) without a syllable-boundary-aware sandhi mechanism keyed on tone category rather than segmental content. TONE SANDHI, in particular, is not modelled at all here and would need a `sandhi_rules`-like mechanism operating on tone categories rather than phonemes.",
+  "iso639_3": "nan",
+  "glottolog_code": "minn1241",
+  "wikidata_qid": "Q36495",
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Pe%CC%8Dh-%C5%8De-j%C4%AB",
+    "https://en.wikipedia.org/wiki/Southern_Min"
+  ],
+  "urls": [
+    "https://glottolog.org/resource/languoid/id/minn1241"
+  ],
+  "sources": [
+    {
+      "id": "poj_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Pe̍h-ōe-jī",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Pe%CC%8Dh-%C5%8De-j%C4%AB",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Pe%CC%8Dh-%C5%8De-j%C4%AB",
+      "pages": null,
+      "notes": "Initial/final consonant and vowel tables with IPA, tone-diacritic table, coda inventory, nasalization marking."
+    },
+    {
+      "id": "chang2001",
+      "author": "Chang, Yu-hong (張裕宏)",
+      "year": 2001,
+      "title": "Pe̍h-ōe-jī hōe-gí (POJ handbook)",
+      "publisher": "Tainan: Jîn-kong Publishing",
+      "url": null,
+      "pages": "30-33, 86-88",
+      "notes": "Initial/vowel IPA tables and the six rules for tone-mark placement on diphthongs/triphthongs."
+    },
+    {
+      "id": "kloter2005",
+      "author": "Klöter, Henning",
+      "year": 2005,
+      "title": "Written Taiwanese",
+      "publisher": "Harrassowitz",
+      "url": null,
+      "pages": "14-15, 89-104",
+      "notes": "History and structure of POJ; citation vs. sandhi tone marking; checked-syllable coda analysis."
+    },
+    {
+      "id": "norman1988",
+      "author": "Norman, Jerry",
+      "year": 1988,
+      "title": "Chinese",
+      "publisher": "Cambridge University Press",
+      "url": null,
+      "pages": "237",
+      "notes": "Southern Min retention of unreleased Middle Chinese stop codas; classification of Min as splitting early from the Sinitic mainstream."
+    },
+    {
+      "id": "ramsey1987",
+      "author": "Ramsey, S. Robert",
+      "year": 1987,
+      "title": "The Languages of China",
+      "publisher": "Princeton University Press",
+      "url": null,
+      "pages": "109",
+      "notes": "Southern Min syllable structure (initial + medial + nucleus + stop + tone) and tone sandhi."
+    }
+  ],
+  "orthography_standard": {
+    "name": "Pe̍h-ōe-jī",
+    "authority": "Established by 19th-century Presbyterian missionary usage (Medhurst, Doty, Talmage); still in active community and church use",
+    "year": 1830,
+    "url": null,
+    "notes": "Superseded as Taiwan's official school-system standard by the near-identical Tâi-lô (2006), which this spec does not separately model; the two are inter-convertible letter-for-letter for the segments covered here."
+  },
+  "parent": "nan",
+  "ancestors": [
+    {
+      "code": "nan",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Same ISO 639-3 / Glottolog language (minn1241, Southern Min); this spec supplies the POJ Latin-romanization grapheme map that `nan.json`'s Han-script stub explicitly leaves for a future addition. Genetic descent (Old Chinese, Middle Chinese literary layer) is recorded on `nan.json` and inherited transitively through this parent edge rather than duplicated here."
+    }
+  ],
+  "location": {
+    "latitude": 24.15,
+    "longitude": 120.68,
+    "source": "glottolog",
+    "notes": "Approximate centroid of Taiwanese Hokkien speaking area (Glottolog minn1241 covers the wider Southern Min area including Fujian)."
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "code": "kxd",
+  "name": "Brunei",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "ng": ["ŋ"],
+    "ny": ["ɲ"],
+    "sy": ["ʃ"],
+    "kh": ["x"],
+    "gh": ["ɣ"],
+    "a": ["a"],
+    "e": ["ə"],
+    "i": ["i"],
+    "o": ["o"],
+    "u": ["u"],
+    "b": ["b"],
+    "c": ["tʃ"],
+    "d": ["d"],
+    "f": ["f"],
+    "g": ["ɡ"],
+    "h": ["h"],
+    "j": ["dʒ"],
+    "k": ["k"],
+    "l": ["l"],
+    "m": ["m"],
+    "n": ["n"],
+    "p": ["p"],
+    "q": ["k"],
+    "r": ["r"],
+    "s": ["s"],
+    "t": ["t"],
+    "v": ["v"],
+    "w": ["w"],
+    "y": ["j"],
+    "z": ["z"]
+  },
+  "parent": "x-clade-mala1545",
+  "ancestors": [
+    {
+      "code": "x-clade-mala1545",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Descent per Glottolog classification of Brunei (brun1242)."
+    }
+  ],
+  "notes": "Skeleton. Brunei Malay is a Malayic (Malayo-Polynesian) Austronesian language written with a Latin alphabet on the standard Malay/Rumi convention. The grapheme map follows Malay orthography: the digraphs ng, ny, sy, kh, gh; c=voiceless and j=voiced palatal affricates; and the vowels, with e mapped to schwa (the letter e also spells /e/ in some words, a distinction the orthography does not disambiguate). Brunei Malay characteristically reduces the vowel system toward /a i u/, so mid vowels o and e overlap with high vowels in native words; this conditioned variation is not encoded. Final /k/ and orthographic q realized as glottal stop, and any phonemic glottal stop, are left unencoded, as are stress and length. Loan letters f, v, z, q are mapped to their nearest Malay values.",
+  "iso639_3": "kxd",
+  "glottolog_code": null,
+  "sources": [
+    {
+      "id": "kxd_glottolog",
+      "author": "Hammarström, H. et al. (Glottolog 5.0)",
+      "year": 2024,
+      "title": "Glottolog: Brunei (brun1242)",
+      "publisher": "Max Planck Institute for Evolutionary Anthropology",
+      "url": "https://glottolog.org/resource/languoid/id/brun1242",
+      "pages": null,
+      "notes": "Classification reference for a skeleton-tier entry.",
+      "wikipedia_url": null
+    },
+    {
+      "id": "kxd_wikipedia",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Brunei Malay",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Brunei_Malay",
+      "pages": null,
+      "notes": "Phonology and orthography reference for the grapheme-to-IPA skeleton.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Brunei_Malay"
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Brunei_Malay"
+  ]
+}

@@ -1,0 +1,250 @@
+{
+ "code": "cdo-Latn-buc",
+ "name": "Eastern Min (Fuzhou) — Bàng-uâ-cê",
+ "script": "Latin",
+ "script_type": "alphabet",
+ "orthography_kind": "romanization",
+ "quality": "research",
+ "graphemes": {
+  "b": [
+   "p"
+  ],
+  "p": [
+   "pʰ"
+  ],
+  "m": [
+   "m"
+  ],
+  "d": [
+   "t"
+  ],
+  "t": [
+   "tʰ"
+  ],
+  "n": [
+   "n"
+  ],
+  "l": [
+   "l"
+  ],
+  "g": [
+   "k"
+  ],
+  "k": [
+   "kʰ"
+  ],
+  "ng": [
+   "ŋ"
+  ],
+  "h": [
+   "h"
+  ],
+  "c": [
+   "ts"
+  ],
+  "ch": [
+   "tsʰ"
+  ],
+  "s": [
+   "s"
+  ],
+  "a": [
+   "a"
+  ],
+  "ia": [
+   "ia"
+  ],
+  "ua": [
+   "ua"
+  ],
+  "a̤": [
+   "ɛ"
+  ],
+  "ie": [
+   "ie"
+  ],
+  "o̤": [
+   "ɔ"
+  ],
+  "io": [
+   "io"
+  ],
+  "uo": [
+   "uo"
+  ],
+  "e̤": [
+   "ø"
+  ],
+  "au": [
+   "au"
+  ],
+  "eu": [
+   "eu"
+  ],
+  "ieu": [
+   "ieu"
+  ],
+  "iu": [
+   "iu"
+  ],
+  "oi": [
+   "oi"
+  ],
+  "ai": [
+   "ai"
+  ],
+  "uai": [
+   "uai"
+  ],
+  "uoi": [
+   "uoi"
+  ],
+  "ui": [
+   "ui"
+  ],
+  "i": [
+   "i"
+  ],
+  "u": [
+   "u"
+  ],
+  "ṳ": [
+   "y"
+  ],
+  "ah": [
+   "aʔ"
+  ],
+  "iah": [
+   "iaʔ"
+  ],
+  "uah": [
+   "uaʔ"
+  ],
+  "a̤h": [
+   "ɛʔ"
+  ],
+  "ieh": [
+   "ieʔ"
+  ],
+  "o̤h": [
+   "ɔʔ"
+  ],
+  "ioh": [
+   "ioʔ"
+  ],
+  "uoh": [
+   "uoʔ"
+  ],
+  "e̤h": [
+   "øʔ"
+  ],
+  "ang": [
+   "aŋ"
+  ],
+  "iang": [
+   "iaŋ"
+  ],
+  "uang": [
+   "uaŋ"
+  ],
+  "ieng": [
+   "ieŋ"
+  ],
+  "iong": [
+   "ioŋ"
+  ],
+  "uong": [
+   "uoŋ"
+  ],
+  "ing": [
+   "iŋ"
+  ],
+  "eng": [
+   "eiŋ"
+  ],
+  "ung": [
+   "uŋ"
+  ],
+  "ong": [
+   "ouŋ"
+  ],
+  "e̤ng": [
+   "øŋ"
+  ]
+ },
+ "notes": "Bàng-uâ-cê (平話字, BUC, 'Foochow Romanized'), the mid-19th-century missionary Latin romanization for the Fuzhou dialect of Eastern Min (Mindong), developed by American Methodist and Church of England missionaries (M. C. White's initial scheme, standardized by Maclay, Stewart, and Hartwell in the 1890s). This spec models BUC rather than Han characters, exactly the same design choice already made for `nan-Latn-poj` (POJ over Southern Min) and named as the future input contract on the `cdo.json` Han-script stub. INITIALS: 14 onset letters follow the classic voicing-only three-way split White borrowed from the 'System of Sir William Jones' before it was replaced with the current voiced-letter convention (⟨b d g⟩ for the plain unaspirated stops /p t k/, ⟨p t k⟩ for the aspirated series, no separate voiced-obstruent series — Eastern Min's onset voicing is not phonemic the way Wu's is) plus the null-initial vowel-onset syllable (⟨鶯⟩, no letter). FINALS: this spec cites the source's TRADITIONAL pronunciation column (the Qi Lin Bayin-derived reading BUC was designed against) rather than the 'modern pronunciation' column the same table lists as a competing set of mergers (e.g. traditional ⟨a̤⟩ /ɛ/ vs modern /e/~/a/, traditional ⟨io⟩ /io/ vs modern /yo/): citing one column consistently avoids silently mixing two co-existing pronunciation layers under one grapheme table, and the traditional layer is the one the letters were literally designed to spell. Diphthong/triphthong finals (⟨uai⟩, ⟨ieu⟩, ⟨uoi⟩ …) are cited as single syllable-nucleus units (AGENTS.md §2 test 2) exactly as the source table gives them, not derived by concatenating vowel letters. CODAS: BUC has only two coda types — glottal stop (⟨-h⟩, a genuine coda letter suffixed onto a final, e.g. ⟨ah⟩ /aʔ/, ⟨ieh⟩ /ieʔ/) and the nasal-plus-velar-stop pairing spelled ⟨-ng⟩ (finals with codas [-ŋ] AND its checked counterpart [-k] share the same ⟨-ng⟩ spelling per the source table's own heading, distinguished only by tone category — Eastern Min's ⟨-ng⟩ finals are the nasalized counterpart of the plain vowel finals, not a segmental nasal+stop cluster) — both cited directly as whole-final units rather than decomposed into vowel+coda pieces, since the source documents them as single table entries with their own IPA, not a productive vowel-plus-suffix rule. TONE — SCHEMA LIMITATION, same honest treatment as `nan-Latn-poj`: BUC marks each syllable's citation tone with a combining diacritic riding on the syllable's tone-bearing vowel (breve for shàngpíng/xiàrù, macron for shǎngshēng, acute for shàngqù/shàngrù, grave for xiàpíng, circumflex for xiàqù — distinctively using the breve rather than the caron, per the source), which this spec folds into the vowel grapheme's NFC form as a single orthographic unit so the tokenizer accepts real spellings, but the mapped IPA carries no tone; `tone_inventory` records the diacritic-to-tone correspondence as metadata only, for the identical missing-engine-capability reason already documented on `nan-Latn-poj` — plus BUC's own well-attested tone sandhi (audible in the sample text's bracketed IPA, e.g. 北風 'Báe̤k-hŭng' surfacing as [pàøʔ.húŋ] with its first syllable's citation tone altered) is out of scope for the same reason sandhi is out of scope there.",
+ "sources": [
+  {
+   "id": "buc_wiki",
+   "author": "Wikipedia contributors",
+   "year": 2026,
+   "title": "Bàng-uâ-cê",
+   "publisher": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/B%C3%A0ng-u%C3%A2-c%C3%AA",
+   "wikipedia_url": "https://en.wikipedia.org/wiki/B%C3%A0ng-u%C3%A2-c%C3%AA",
+   "pages": null,
+   "notes": "Initials table, finals tables (without codas, with glottal coda, with -ng/-k coda), tone table with contour values, sample text with bracketed IPA showing sandhi."
+  },
+  {
+   "id": "li1993_qilinbayin",
+   "author": "Li, Zhuqing",
+   "year": 1993,
+   "title": "A study of the Qī Lín Bāyīn (戚林八音)",
+   "publisher": "University of Washington (doctoral dissertation)",
+   "url": "https://www.proquest.com/openview/dissertations/li-zhuqing-qi-lin-bayin",
+   "pages": null,
+   "notes": "Modern philological study of the Qing-era Fuzhou-dialect rime book (compiled c. 17th–18th century) whose categories underlie Bàng-uâ-cê; the rime book itself is the historical source of the sample characters in the Wikipedia initials/finals tables."
+  },
+  {
+   "id": "phoible",
+   "author": "Moran, Steven & McCloy, Daniel (eds.)",
+   "year": 2019,
+   "title": "PHOIBLE 2.0",
+   "publisher": "Max Planck Institute for the Science of Human History",
+   "url": "https://phoible.org/",
+   "pages": null,
+   "notes": "Attested phoneme inventory for glottocode mind1253, reconciled against this spec's grapheme-derived phoneme set (see `cdo.json`)."
+  }
+ ],
+ "orthography_standard": {
+  "name": "Bàng-uâ-cê (Foochow Romanized)",
+  "authority": "Established by 19th-century Methodist/Anglican missionary usage (White, Maclay, Stewart, Hartwell); standardized in the 1890s",
+  "year": 1850,
+  "url": null,
+  "notes": "Mainly used within church circles and mission schools in Fuzhou; never achieved the broader literacy uptake POJ did for Southern Min."
+ },
+ "iso639_3": "cdo",
+ "glottolog_code": "mind1253",
+ "wikidata_qid": "Q3317362",
+ "wikipedia": [
+  "https://en.wikipedia.org/wiki/B%C3%A0ng-u%C3%A2-c%C3%AA",
+  "https://en.wikipedia.org/wiki/Eastern_Min"
+ ],
+ "urls": [
+  "https://glottolog.org/resource/languoid/id/mind1253"
+ ],
+ "tone_inventory": {
+  "◌̆": "shàngpíng (上平), 55",
+  "◌̄": "shǎngshēng (上聲), 33",
+  "◌́-qu": "shàngqù (上去), 213",
+  "◌́-ru": "shàngrù (上入, checked syllable only), 24",
+  "◌̀": "xiàpíng (下平), 53",
+  "◌̂": "xiàqù (下去), 242",
+  "◌̆-ru": "xiàrù (下入, checked syllable only, same breve mark as shàngpíng), 5"
+ },
+ "parent": "cdo",
+ "ancestors": [
+  {
+   "code": "cdo",
+   "role": "parent",
+   "weight": 1.0,
+   "notes": "Same ISO 639-3 / Glottolog language (mind1253, Eastern Min); this spec supplies the Bàng-uâ-cê Latin-romanization grapheme map that `cdo.json`'s Han-script stub explicitly names as the future input contract."
+  }
+ ],
+ "location": {
+  "latitude": 26.0,
+  "longitude": 119.5,
+  "source": "glottolog",
+  "notes": "Glottolog's representative point for Eastern Min (mind1253), inherited from the `cdo` parent."
+ }
+}

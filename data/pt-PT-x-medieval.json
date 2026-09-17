@@ -1,0 +1,333 @@
+{
+  "code": "pt-PT-x-medieval",
+  "name": "Old Portuguese",
+  "script": "Latin",
+  "graphemes": {
+    "a": [
+      "a",
+      "ɐ"
+    ],
+    "e": [
+      "e",
+      "ɛ",
+      "ə"
+    ],
+    "o": [
+      "o",
+      "ɔ",
+      "u"
+    ],
+    "à": [
+      "a"
+    ],
+    "c": [
+      "k",
+      "s",
+      "s̺"
+    ],
+    "ç": [
+      "s̺",
+      "s"
+    ],
+    "g": [
+      "ɡ",
+      "ʒ"
+    ],
+    "j": [
+      "ʒ"
+    ],
+    "z": [
+      "z",
+      "z̺"
+    ],
+    "l": [
+      "l",
+      "ɫ"
+    ],
+    "ou": [
+      "ow",
+      "o"
+    ],
+    "ão": [
+      "ɐ̃w̃"
+    ],
+    "ãe": [
+      "ɐ̃j̃"
+    ],
+    "õe": [
+      "õj̃"
+    ],
+    "uão": [
+      "wɐ̃w̃"
+    ],
+    "uãe": [
+      "wɐ̃j̃"
+    ],
+    "uõe": [
+      "wõj̃"
+    ],
+    "ü": [
+      "w",
+      "u"
+    ],
+    "th": [
+      "t"
+    ],
+    "ph": [
+      "f"
+    ],
+    "rh": [
+      "ɾ"
+    ],
+    "éu": [
+      "ɛw"
+    ],
+    "êu": [
+      "ew"
+    ],
+    "ái": [
+      "aj"
+    ],
+    "áu": [
+      "aw"
+    ],
+    "éi": [
+      "ɛj"
+    ],
+    "êi": [
+      "ej"
+    ],
+    "ói": [
+      "ɔj"
+    ],
+    "ôi": [
+      "oj"
+    ],
+    "iu": [
+      "iw"
+    ]
+  },
+  "allophones": {
+    "l": [
+      "l",
+      "ɫ"
+    ],
+    "ɐ": [
+      "ɐ"
+    ],
+    "ə": [
+      "ə"
+    ],
+    "t͡ʃ": [
+      "t͡ʃ",
+      "ʃ"
+    ],
+    "t͡s": null,
+    "d͡z": null,
+    "d͡ʒ": null
+  },
+  "graphemes_base": "roa-x-galaicopt",
+  "allophones_base": "roa-x-galaicopt",
+  "positional_graphemes_base": "roa-x-galaicopt",
+  "positional_graphemes": {
+    "c": {
+      "before_e": [
+        "s̺"
+      ],
+      "before_i": [
+        "s̺"
+      ]
+    },
+    "g": {
+      "before_e": [
+        "ʒ"
+      ],
+      "before_i": [
+        "ʒ"
+      ]
+    },
+    "n": {
+      "before_consonant": [
+        "̃"
+      ],
+      "word_final": [
+        "̃"
+      ]
+    },
+    "m": {
+      "before_consonant": [
+        "̃"
+      ],
+      "word_final": [
+        "̃"
+      ]
+    },
+    "s": {
+      "word_initial": [
+        "s"
+      ],
+      "intervocalic": [
+        "z̺"
+      ]
+    },
+    "z": {
+      "intervocalic": [
+        "z̺"
+      ],
+      "word_initial": [
+        "z"
+      ],
+      "word_final": [
+        "z"
+      ]
+    },
+    "a": {
+      "nucleus_stressed": [
+        "a"
+      ],
+      "nucleus_unstressed": [
+        "a"
+      ],
+      "word_initial": [
+        "ɐ",
+        "a"
+      ],
+      "word_final": [
+        "ɐ"
+      ]
+    },
+    "e": {
+      "nucleus_stressed": [
+        "ɛ"
+      ]
+    },
+    "o": {
+      "nucleus_stressed": [
+        "ɔ"
+      ]
+    }
+  },
+  "parent": "roa-x-galaicopt",
+  "quality": "research",
+  "script_type": "alphabet",
+  "notes": "Old Portuguese (~14th–16th c. CE). The Portuguese language after the split from Galician, spoken during the Aviz dynasty and early Age of Discovery. Attested: Fernão Lopes chronicles (~1380–1460), Gil Vicente plays (~1465–1536), Cancioneiro Geral (1516), royal charters. KEY CHANGES FROM GALAICO-PORTUGUESE: (1) Sibilant deaffrication: /ts/→/s/, /dz/→/z/ — the 4-way contrast collapses to 2 (~14th–15th c.). (2) Vowel reduction beginning (unstressed /e/→[ə], /o/→[u]). (3) Nasal vowels fully phonemicised. (4) /dʒ/→/ʒ/ simplification. (5) /ou/ → [o] monophthongisation beginning centrally. (6) /tʃ/ → /ʃ/ deaffrication in progress. trema and grave accent start occasionally appearing. ACCENTED VOWEL DIGRAPHS: the acute writes the ditongo aberto and the circumflex its closed counterpart, so \u27e8\u00e9i\u27e9 \u27e8\u00f3i\u27e9 pattern with the \u27e8\u00e9u\u27e9 already listed here (Acordo Ortogr\u00e1fico 1990, Base VIII: \u201cos ditongos abertos grafados -\u00e9i, \u00e9u ou \u00f3i\u201d, an\u00e9is, bat\u00e9is, fi\u00e9is, pap\u00e9is; c\u00e9u, chap\u00e9u; her\u00f3i, s\u00f3is), while \u27e8\u00ea i\u27e9 and \u27e8\u00f4i\u27e9 carry the closed values of \u27e8\u00ea\u27e9 and \u27e8\u00f4\u27e9. Base IX leaves paroxytone \u27e8ei oi\u27e9 unaccented because their aperture oscillates, which is why the accented spellings are confined to oxytones and to proper nouns. Source: Williams (1962), Mattos e Silva (2006), Castro (2006).",
+  "sources": [
+    {
+      "id": "acordo1990",
+      "author": "Rep\u00fablica Portuguesa / CPLP",
+      "year": 1990,
+      "title": "Acordo Ortogr\u00e1fico da L\u00edngua Portuguesa",
+      "publisher": "Di\u00e1rio da Rep\u00fablica, I S\u00e9rie-A, n.\u00ba 193 (23-08-1991), Resolu\u00e7\u00e3o da Assembleia da Rep\u00fablica n.\u00ba 26/91",
+      "url": "https://pt.wikisource.org/wiki/Acordo_Ortogr%C3%A1fico_da_L%C3%ADngua_Portuguesa_(1990)",
+      "pages": "Bases VIII, IX, X",
+      "notes": "The orthographic standard itself. Base VIII lists the ditongos abertos \u27e8-\u00e9i \u00e9u \u00f3i\u27e9; Base IX explains why paroxytone \u27e8ei oi\u27e9 go unaccented; Base X \u00a71 accents \u27e8i u\u27e9 after a vowel precisely when the two do NOT form a diphthong, which is what makes \u27e8u\u00ed\u27e9 a written hiatus."
+    },
+    {
+      "id": "maia1986",
+      "author": "Maia, C.A.",
+      "year": 1986,
+      "title": "História do galego-português",
+      "publisher": "INIC",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "mateus_dandrade2000",
+      "author": "Mateus, M.H.M. & d'Andrade, E.",
+      "year": 2000,
+      "title": "The Phonology of Portuguese",
+      "publisher": "Oxford University Press",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "cunha_cintra1984",
+      "author": "Cunha, C. & Cintra, L.F.L.",
+      "year": 1984,
+      "title": "Nova Gramática do Português Contemporâneo",
+      "publisher": "Sá da Costa",
+      "url": null,
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Old_Portuguese",
+    "https://pt.wikipedia.org/wiki/Portugu%C3%AAs_arcaico",
+    "https://pt.wikipedia.org/wiki/Galego-portugu%C3%AAs",
+    "https://en.wikipedia.org/wiki/Galician%E2%80%93Portuguese"
+  ],
+  "urls": [
+    "https://en.wikipedia.org/wiki/Old_Portuguese",
+    "https://en.wikipedia.org/wiki/Galician-Portuguese",
+    "https://pt.wikipedia.org/wiki/Portugu%C3%AAs_arcaico"
+  ],
+  "timespan": {
+    "start_year": 1200,
+    "end_year": 1500
+  },
+  "glottolog_code": "oldp1257",
+  "iso639_3": "por",
+  "stress": {
+    "onset_clusters": ["bl", "br", "bɫ", "bɾ", "bʀ", "bʁ", "bʎ", "bχ", "dr", "dɾ", "dʀ", "dʁ", "dʎ", "dχ", "fl", "fr", "fɫ", "fɾ", "fʀ", "fʁ", "fʎ", "fχ", "kl", "kr", "kɫ", "kɾ", "kʀ", "kʁ", "kʎ", "kχ", "pl", "pr", "pɫ", "pɾ", "pʀ", "pʁ", "pʎ", "pχ", "tr", "tɾ", "tʀ", "tʁ", "tʎ", "tχ", "vl", "vr", "vɫ", "vɾ", "vʀ", "vʁ", "vʎ", "vχ", "ðr", "ðɾ", "ðʀ", "ðʁ", "ðʎ", "ðχ", "ɡl", "ɡr", "ɡɫ", "ɡɾ", "ɡʀ", "ɡʁ", "ɡʎ", "ɡχ", "ɣl", "ɣr", "ɣɫ", "ɣɾ", "ɣʀ", "ɣʁ", "ɣʎ", "ɣχ", "βl", "βr", "βɫ", "βɾ", "βʀ", "βʁ", "βʎ", "βχ"],
+    "cliticless_words": ["o", "a", "os", "as", "de", "do", "da", "dos", "das", "em", "no", "na", "nos", "nas", "por", "pelo", "pela", "pelos", "pelas", "ao", "aos", "à", "às", "com", "sem", "e", "que", "se", "me", "te", "lhe", "lhes", "vos", "lo", "la", "los", "las", "lho", "lha", "lhos", "lhas"],
+    "default_position": -2,
+    "final_stress_endings": [
+      "r",
+      "l",
+      "z",
+      "x",
+      "i",
+      "u",
+      "im",
+      "om",
+      "um",
+      "is",
+      "us",
+      "ns"
+    ],
+    "penult_stress_endings": [],
+    "marked_vowels": [
+      "à",
+      "á",
+      "é",
+      "í",
+      "ó",
+      "ú",
+      "â",
+      "ê",
+      "ô"
+    ],
+    "stress_mark": "ˈ",
+    "notes": "Medieval Portuguese stress: paroxytone default; grave accent (à) marks stress override. Early medieval orthography did not write the acute or circumflex, but when a modern-normalised input carries them they must attract stress rather than be dropped, so the acute/circumflex vowels join the marked set on the same front/back axis as their base letters. DIPHTHONGS: declared so the bundled syllabifier counts nuclei correctly — without them every vowel run merges into one nucleus and co-e-lho is read as coe-lho, one syllable short, putting the stress and its vowel reduction on the wrong vowel. ⟨oe⟩ is hiatus, not a diphthong (Cunha & Cintra, §Ditongos).",
+    "diphthongs": [
+      "ãe",
+      "ão",
+      "õe",
+      "ai",
+      "ái",
+      "au",
+      "áu",
+      "ei",
+      "éi",
+      "êi",
+      "eu",
+      "éu",
+      "êu",
+      "iu",
+      "oi",
+      "ói",
+      "ôi",
+      "ou",
+      "ui"
+    ]
+  },
+  "location": {
+    "latitude": 39.91,
+    "longitude": -8.1,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Old Portuguese."
+  }
+}

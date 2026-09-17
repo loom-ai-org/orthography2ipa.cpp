@@ -1,0 +1,136 @@
+{
+ "code": "mnc",
+ "name": "Manchu",
+ "script": "Latn",
+ "script_type": "alphabet",
+ "quality": "research",
+ "graphemes": {
+  "a": [
+   "a"
+  ],
+  "e": [
+   "ɤ"
+  ],
+  "i": [
+   "i"
+  ],
+  "o": [
+   "ɔ"
+  ],
+  "u": [
+   "u"
+  ],
+  "uu": [
+   "u"
+  ],
+  "b": [
+   "b"
+  ],
+  "p": [
+   "pʰ"
+  ],
+  "d": [
+   "d"
+  ],
+  "t": [
+   "tʰ"
+  ],
+  "g": [
+   "k"
+  ],
+  "k": [
+   "kʰ"
+  ],
+  "h": [
+   "x"
+  ],
+  "m": [
+   "m"
+  ],
+  "n": [
+   "n"
+  ],
+  "ng": [
+   "ŋ"
+  ],
+  "s": [
+   "s"
+  ],
+  "š": [
+   "ʃ"
+  ],
+  "c": [
+   "tʃʰ"
+  ],
+  "j": [
+   "tʃ"
+  ],
+  "y": [
+   "j"
+  ],
+  "w": [
+   "w"
+  ],
+  "l": [
+   "l"
+  ],
+  "r": [
+   "r"
+  ],
+  "f": [
+   "f"
+  ],
+  "z": [
+   "dz"
+  ],
+  "ū": [
+   "ʊ"
+  ],
+  "sy": [
+   "ʃ"
+  ],
+  "jy": [
+   "tʃ"
+  ]
+ },
+ "parent": "x-clade-tung1282",
+ "ancestors": [
+  {
+   "code": "x-clade-tung1282",
+   "role": "parent",
+   "weight": 1.0,
+   "notes": "Descent per Glottolog classification of Manchu (manc1252)."
+  }
+ ],
+ "notes": "The gold used to exercise this spec is NorthEuraLex's `mnc` row: its Value column is written in Latin letters (\"yasa\", \"oforo\", \"angga\", \"weihe\"), not the vertical Manchu (Mongolian-derived) script -- confirmed by direct inspection of lexibank/northeuralex forms.csv, which never produces script glyphs for this language. That romanization is the standard Moellendorff (1892) transliteration of the Manchu alphabet, still the citation form used in modern Manchu grammars (Gorelova 2002). This spec therefore targets the Moellendorff romanization as the orthography, not the vertical script (script left as `Mongolian` would have been a misdescription of what NEL's `Value` column actually contains): a letter-by-letter Moellendorff-to-IPA correspondence is a real, citable orthographic fact, unlike a raw-codepoint reading of the connected vertical script, which the previous skeleton note correctly flagged as unreliable without a lexicon/segmentation layer this engine does not have. Aspiration is contrastive and marked by plain vs geminate-looking letter pairs in Moellendorff (b/p, d/t, g/k, c/j) per Gorelova (2002); š, ū are Moellendorff's own diacritic letters for /ʃ/ and /ʊ/. Vowel harmony (front e vs back a/o/u series) is attested (Gorelova 2002) but not rule-encoded. Manchu word stress is not distinctive/predictable from spelling in the cited grammar; left unset as a documented exemption.",
+ "iso639_3": "mnc",
+ "glottolog_code": null,
+ "sources": [
+  {
+   "id": "moellendorff1892",
+   "author": "von Moellendorff, Paul Georg",
+   "year": 1892,
+   "title": "A Manchu Grammar, with Analysed Texts",
+   "publisher": "Shanghai: American Presbyterian Mission Press"
+  },
+  {
+   "id": "gorelova2002",
+   "author": "Gorelova, Liliya M.",
+   "year": 2002,
+   "title": "Manchu Grammar",
+   "publisher": "Brill (Handbook of Oriental Studies)"
+  },
+  {
+   "id": "mnc_glottolog",
+   "author": "Hammarström, H. et al. (Glottolog 5.0)",
+   "year": 2024,
+   "title": "Glottolog: Manchu (manc1252)",
+   "publisher": "Max Planck Institute for Evolutionary Anthropology",
+   "url": "https://glottolog.org/resource/languoid/id/manc1252"
+  }
+ ],
+ "wikipedia": [
+  "https://en.wikipedia.org/wiki/Manchu_language",
+  "https://en.wikipedia.org/wiki/Manchu_alphabet"
+ ]
+}

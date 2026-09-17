@@ -1,0 +1,629 @@
+{
+  "code": "pt-PT",
+  "name": "European Portuguese",
+  "script": "Latin",
+  "graphemes_base": "pt-PT-x-medieval",
+  "graphemes": {
+    "c": [
+      "k",
+      "s"
+    ],
+    "ç": [
+      "s"
+    ],
+    "s": [
+      "s",
+      "z"
+    ],
+    "z": [
+      "z"
+    ],
+    "ch": [
+      "ʃ"
+    ],
+    "e": [
+      "e",
+      "ɨ",
+      "ɛ"
+    ],
+    "r": [
+      "ɾ",
+      "ʁ"
+    ],
+    "w": [
+      "w",
+      "v"
+    ],
+    "x": [
+      "ʃ",
+      "ks",
+      "z",
+      "s",
+      "ɡz"
+    ],
+    "rr": [
+      "ʁ"
+    ],
+    "iu": [
+      "iw"
+    ],
+    "ou": [
+      "o",
+      "ow"
+    ],
+    "ph": null,
+    "th": null,
+    "rh": null,
+    "ü": null,
+    "qü": null,
+    "gü": null,
+    "á": [
+      "a"
+    ],
+    "é": [
+      "ɛ"
+    ],
+    "í": [
+      "i"
+    ],
+    "ó": [
+      "ɔ"
+    ],
+    "ú": [
+      "u"
+    ],
+    "â": [
+      "ɐ"
+    ],
+    "ê": [
+      "e"
+    ],
+    "ô": [
+      "o"
+    ]
+  },
+  "allophones_base": "pt-PT-x-medieval",
+  "allophones": {
+    "v": [
+      "v"
+    ],
+    "ɨ": [
+      "ɨ",
+      "ə"
+    ],
+    "ʁ": [
+      "ʁ",
+      "χ",
+      "h",
+      "ɦ"
+    ],
+    "f": [
+      "f",
+      "ɸ"
+    ],
+    "t͡ʃ": null
+  },
+  "positional_graphemes_base": "pt-PT-x-medieval",
+  "positional_graphemes": {
+    "c": {
+      "before_e": [
+        "s"
+      ],
+      "before_i": [
+        "s"
+      ]
+    },
+    "r": {
+      "word_initial": [
+        "ʁ"
+      ]
+    },
+    "s": {
+      "word_initial": [
+        "s"
+      ],
+      "intervocalic": [
+        "z"
+      ],
+      "word_final": [
+        "ʃ"
+      ],
+      "intervocalic_cross_word": [
+        "z"
+      ]
+    },
+    "z": {
+      "word_final": [
+        "ʃ",
+        "z"
+      ]
+    },
+    "l": {
+      "onset": [
+        "l"
+      ]
+    },
+    "e": {
+      "pretonic": [
+        "ɨ"
+      ],
+      "nucleus_stressed": [
+        "ɛ",
+        "e"
+      ],
+      "nucleus_unstressed": [
+        "ɨ"
+      ],
+      "word_initial": [
+        "e",
+        "i"
+      ],
+      "word_final": [
+        "ɨ"
+      ]
+    },
+    "o": {
+      "pretonic": [
+        "u"
+      ],
+      "nucleus_stressed": [
+        "ɔ"
+      ],
+      "nucleus_unstressed": [
+        "u"
+      ],
+      "word_initial": [
+        "o",
+        "ɔ"
+      ],
+      "word_final": [
+        "u"
+      ]
+    },
+    "a": {
+      "nucleus_stressed": [
+        "a"
+      ],
+      "nucleus_unstressed": [
+        "ɐ"
+      ],
+      "word_initial": [
+        "ɐ",
+        "a"
+      ],
+      "word_final": [
+        "ɐ"
+      ],
+      "pretonic": [
+        "ɐ"
+      ],
+      "posttonic": [
+        "ɐ"
+      ]
+    },
+    "m": {
+      "before_consonant": [
+        "̃"
+      ],
+      "word_final": [
+        "̃"
+      ]
+    },
+    "n": {
+      "before_consonant": [
+        "̃"
+      ],
+      "word_final": [
+        "̃"
+      ]
+    }
+  },
+  "parent": "pt-PT-x-medieval",
+  "allophone_rules": [
+    {
+      "id": "PT_FINAL_EM_NUCLEUS",
+      "phonemes": [
+        "e",
+        "ɛ",
+        "ɨ"
+      ],
+      "surface": "ɐ",
+      "grapheme": [
+        "e",
+        "é",
+        "ê"
+      ],
+      "followed_by_phoneme": [
+        "̃"
+      ],
+      "followed_by_2": "word_boundary",
+      "notes": "Word-final ⟨-em / -ém / -êm⟩ is the nasal DIPHTHONG [ɐ̃j̃] in European Portuguese, not the nasal monophthong [ẽ] (bem [ˈbɐ̃j̃], vem, tem, quem, também [tɐ̃ˈbɐ̃j̃], homem [ˈɔmɐ̃j̃], ontem [ˈõtɐ̃j̃]; Mateus & d'Andrade 2000: ch.4 'The nasal diphthongs'; Cruz-Ferreira 1995: 92). The nucleus of that diphthong is the central [ɐ̃], so the mid front vowel selected pre-lexically for the ⟨e⟩ (stressed [e]/[ɛ], unstressed reduced [ɨ]) LOWERS/centralises to the ORAL base [ɐ] here; the tilde is supplied by the coda ⟨m⟩ slot and the [j̃] offglide by PT_FINAL_EM_GLIDE, so [ɐ]+[̃]+[j̃] = [ɐ̃j̃]. Ordered BEFORE PT_NASAL_E_RAISE (which otherwise raises the stressed [ɛ]→[e] and blocks this centralisation), so a stressed monosyllable (bem, vem) centralises like an unstressed ⟨-em⟩ (homem). Gated on grapheme ⟨e⟩ + a following tautosyllabic nasal tilde + word boundary two graphemes on (the ⟨m⟩ then the edge), so it fires ONLY on a genuine word-final ⟨-em⟩: an ⟨em⟩ before another consonant (tempo, sempre — the tilde is followed by a stop, not the word edge) keeps the nasal monophthong [ẽ] via PT_NASAL_E_RAISE, and an oral ⟨e⟩ before an onset nasal (nome, pena) is untouched. Restricted to grapheme ⟨m⟩ spellings, so word-final ⟨-en⟩ (hífen, pólen) is not swept in."
+    },
+    {
+      "id": "PT_FINAL_EM_GLIDE",
+      "phonemes": [
+        "̃"
+      ],
+      "surface": "̃j̃",
+      "grapheme": [
+        "m"
+      ],
+      "word_final": true,
+      "preceded_by_phoneme": [
+        "e",
+        "ɛ",
+        "ɨ"
+      ],
+      "notes": "Palatal offglide of the word-final ⟨-em / -ém / -êm⟩ nasal diphthong [ɐ̃j̃] (see PT_FINAL_EM_NUCLEUS; Mateus & d'Andrade 2000: ch.4). The word-final coda ⟨m⟩ — realised as the nasalisation tilde [̃] by the positional m/n word_final map — carries a nasal palatal offglide [j̃] after a mid front vowel: [̃]→[̃j̃] (bem [ˈbɐ̃j̃], homem [ˈɔmɐ̃j̃]). Gated on the ORIGINAL preceding nucleus being a mid front vowel ([e ɛ ɨ], read before PT_FINAL_EM_NUCLEUS centralises it) so it never fires on ⟨-im -om -um⟩ (sim [ˈsĩ], bom [ˈbõ], um [ˈũ]) which keep a plain nasal monophthong. Word-final ⟨m⟩ only, so ⟨-en⟩ spellings are excluded."
+    },
+    {
+      "id": "PT_FINAL_AM_GLIDE",
+      "phonemes": [
+        "̃"
+      ],
+      "surface": "̃w̃",
+      "grapheme": [
+        "m"
+      ],
+      "word_final": true,
+      "preceded_by_phoneme": [
+        "a",
+        "ɐ"
+      ],
+      "notes": "Labiovelar offglide of the word-final ⟨-am⟩ nasal diphthong [ɐ̃w̃] (falam [ˈfalɐ̃w̃], custam [ˈkuʃtɐ̃w̃], brilham [ˈbɾiʎɐ̃w̃]; Mateus & d'Andrade 2000: ch.4 'The nasal diphthongs'; Cruz-Ferreira 1995: 92). Word-final unstressed ⟨-am⟩ (the 3rd-person-plural verb ending) is the nasal diphthong [ɐ̃w̃], homophonous with written ⟨-ão⟩ in unstressed position; the nucleus [ɐ̃] is already supplied by the ⟨a⟩→[ɐ] nasal raise (PT_NASAL_A_RAISE) and this rule adds the [w̃] offglide to the coda ⟨m⟩ tilde: [̃]→[̃w̃]. Gated on the ORIGINAL preceding nucleus being a low vowel [a ɐ], so it is disjoint from the ⟨-em⟩ glide (mid front → [j̃]) and never touches ⟨-im -om -um⟩. Word-final ⟨am⟩ only occurs as this verb ending in Portuguese; an ⟨am⟩ before a consonant (campo, ambos) is not word-final and keeps the plain nasal [ɐ̃]."
+    },
+    {
+      "id": "PT_NASAL_A_RAISE",
+      "phonemes": [
+        "a"
+      ],
+      "surface": "ɐ",
+      "followed_by_phoneme": [
+        "̃"
+      ],
+      "notes": "Coda-conditioned vowel nasalisation, general Portuguese (Mateus & d'Andrade 2000: ch.2, 'Nasality'): a vowel followed by a tautosyllabic (coda) nasal ⟨m/n⟩ nasalises while the nasal consonant is absorbed into the nasal vowel (campo, canto, ambos). The nasalisation itself is modelled pre-lexically by the positional 'm'/'n' before_consonant/word_final → [̃] (U+0303 combining tilde) map, which deletes the coda nasal and nasalises the preceding vowel by concatenation. This rule supplies only the accompanying VOWEL-QUALITY shift for ⟨a⟩: the nasal low vowel is the central [ɐ̃] (not [ã]), so the stressed oral [a] selected by the positional map raises to [ɐ] before the tilde — [ɐ]+[̃] = the nasal vowel [ɐ̃] (campo [ˈkɐ̃pu], cantar [kɐ̃ˈtaɾ]). The surface is the ORAL base [ɐ]; the nasal tilde comes only from the separate m/n slot, so no vowel is ever double-tilded. It fires ONLY when the next lattice slot is the nasalisation tilde, so an INTERVOCALIC (onset) ⟨m/n⟩ — which stays a consonant and leaves the vowel oral — is untouched (cama [ˈkamɐ], ano [ˈɐnu]). The word-initial ⟨a⟩ already selects [ɐ] (ambos [ˈɐ̃buʃ]), which this rule leaves unchanged."
+    },
+    {
+      "id": "PT_NASAL_E_RAISE",
+      "phonemes": [
+        "ɛ"
+      ],
+      "surface": "e",
+      "followed_by_phoneme": [
+        "̃"
+      ],
+      "notes": "Vowel-quality companion of the coda-nasalisation (see PT_NASAL_A_RAISE; Mateus & d'Andrade 2000: ch.2). The nasal mid front vowel of Portuguese is the close-mid [ẽ], so the open [ɛ] selected by the pre-lexical map raises to [e] before the nasalisation tilde — [e]+[̃] = [ẽ] (tempo [ˈtẽpu], entre, sempre). Surface is the ORAL [e]; the tilde is supplied only by the coda m/n slot (no double tilde). Fires only when the following slot is the tilde, so an oral ⟨e⟩ before an onset ⟨m/n⟩ (nome, pena) is unchanged."
+    },
+    {
+      "id": "PT_NASAL_O_RAISE",
+      "phonemes": [
+        "ɔ"
+      ],
+      "surface": "o",
+      "followed_by_phoneme": [
+        "̃"
+      ],
+      "notes": "Vowel-quality companion of the coda-nasalisation (see PT_NASAL_A_RAISE; Mateus & d'Andrade 2000: ch.2). The nasal mid back vowel of Portuguese is the close-mid [õ], so the open [ɔ] selected by the pre-lexical map raises to [o] before the nasalisation tilde — [o]+[̃] = [õ] (bom [ˈbõ], onde, ombro). Surface is the ORAL [o]; the tilde is supplied only by the coda m/n slot (no double tilde). Fires only when the following slot is the tilde, so an oral ⟨o⟩ before an onset ⟨m/n⟩ (fome, sono) is unchanged. A LEXICAL high vowel ⟨i⟩ or ⟨u⟩ needs no companion rule — its nasal quality [ĩ ũ] shares the oral base [i u] (sim [ˈsĩ], fim [ˈfĩ], mundo [ˈmũdu], um [ˈũ]); the one high-vowel case that DOES need a rule is a REDUCED [u] that came from an unstressed ⟨o⟩, which lowers back to [o] before the nasal — see PT_NASAL_O_UNRED."
+    },
+    {
+      "id": "PT_NASAL_O_UNRED",
+      "phonemes": [
+        "u"
+      ],
+      "surface": "o",
+      "followed_by_phoneme": [
+        "̃"
+      ],
+      "grapheme": [
+        "o"
+      ],
+      "notes": "European-Portuguese unstressed vowel reduction lowers ⟨o⟩ to [u] (pretonic/atonic o → u: contar [kũˈtaɾ] would be wrong). But that reduction is BLOCKED before a tautosyllabic nasal: an unstressed ⟨o⟩ before a coda ⟨m/n⟩ surfaces as the nasal mid [õ], not [ũ] (Mateus & d'Andrade 2000: ch.2, 'Nasality' — EP nasal [õ] does not raise to [ũ]). The pre-lexical map has already reduced this ⟨o⟩ to [u], so this rule lowers that reduced [u] back to the ORAL [o] before the nasalisation tilde — [o]+[̃] = [õ] (contar [kõˈtaɾ], comprar, montanha, bondade [bõˈdadɨ], pombal, conselho, and the first syllable of bombom [bõˈbõ]). It is gated on grapheme ⟨o⟩ so it fires ONLY on a reduced ⟨o⟩: a LEXICAL ⟨u⟩ before a nasal is a genuine high [ũ] and is left untouched (mundo [ˈmũdu], um [ˈũ], algum [aɫˈɡũ], segundo [sɨˈɡũdu]). pt-BR and the non-reducing Lusophone variants (pt-AO/MZ/TL) never reduce ⟨o⟩→[u], so their ⟨o⟩ before a nasal is already [o] and this rule is inert there."
+    },
+    {
+      "id": "PT_CODA_L_DARK",
+      "phonemes": [
+        "l"
+      ],
+      "surface": "ɫ",
+      "syllable_position": "coda",
+      "notes": "Velarised (dark) coda /l/ -> [ɫ]. In European Portuguese /l/ is velarised in the syllable coda (word-finally and pre-consonantally: sol, alto, mel) while onset /l/ stays clear. Mateus & d'Andrade (2000: ch.2); Cruz-Ferreira (1995: 91). This is the post-lexical coda realisation that the pre-lexical positional 'l' map does not reach word-finally."
+    },
+    {
+      "id": "PT_CODA_S_HUSH",
+      "phonemes": [
+        "s"
+      ],
+      "surface": "ʃ",
+      "syllable_position": "coda",
+      "notes": "Coda sibilant palatalisation /s/ -> [ʃ] (the 'chiado'): the Lisbon/standard European Portuguese realisation of a coda /s/ (word-final and pre-consonantal: as, pasta). Voicing before a voiced consonant ([ʃ]->[ʒ]) is handled by the PT_CODA_S_VOICING sandhi rule. Mateus & d'Andrade (2000: ch.2); Cruz-Ferreira (1995: 91). This is the Lisbon-standard value; some northern/insular dialects keep an apico-alveolar [s̺] in coda, which is a dialect delta and not modelled in the base."
+    },
+    {
+      "id": "PT_CODA_Z_HUSH",
+      "phonemes": [
+        "z"
+      ],
+      "surface": "ʒ",
+      "syllable_position": "coda",
+      "notes": "Voiced counterpart of PT_CODA_S_HUSH: a coda /z/ -> [ʒ] in Lisbon/standard European Portuguese. Mateus & d'Andrade (2000: ch.2)."
+    },
+    {
+      "id": "PT_LEX_CLOSE_O",
+      "phonemes": [
+        "o",
+        "ɔ"
+      ],
+      "surface": "o",
+      "stress": "stressed",
+      "word": [
+        "sobre",
+        "sopa",
+        "boa",
+        "como",
+        "porto",
+        "calor",
+        "catorze",
+        "saboroso",
+        "gostoso",
+        "famoso"
+      ],
+      "notes": "Lexically CLOSE stressed ⟨o⟩ = [o] for this curated set of frequent lexemes, overriding the pre-lexical default (which is the open [ɔ] in the European standard and, by inheritance, ambiguous elsewhere). Portuguese stressed mid-vowel height is lexically/etymologically fixed and not predictable from spelling — ⟨sopa⟩ [ˈsopɐ] (close, < Gmc *suppa) vs ⟨sova⟩ [ˈsɔvɐ] (open) are spelled and stressed alike (Mateus & d'Andrade 2000: ch.3 'The vowels'; Vigário 2003). This rule pins ONLY the stressed-vowel height and lets reduction, rhotics, sandhi and affrication run normally, so it inherits cleanly to every pt-PT / pt-BR dialect child. Includes the ⟨-oso⟩ masculine adjectival suffix (saboroso, gostoso, famoso), which is regularly close [o] against its open [ɔ] feminine ⟨-osa⟩ (PT_LEX_OPEN_O). SEED LIST — the arbitration-confirmed frequent lexemes; the long tail of Portuguese mid-vowel lexemes is documented residual, to be extended from Mateus & d'Andrade / a pronouncing dictionary."
+    },
+    {
+      "id": "PT_LEX_CLOSE_E",
+      "phonemes": [
+        "e",
+        "ɛ",
+        "ɨ"
+      ],
+      "surface": "e",
+      "stress": "stressed",
+      "word": [
+        "fresco"
+      ],
+      "notes": "Lexically CLOSE stressed ⟨e⟩ = [e] for this curated set, overriding the pre-lexical default (open [ɛ] first in the European standard). Stressed mid-vowel height is a lexical fact in Portuguese (⟨fresco⟩ [ˈfɾe(ʃ)ku] close vs many open ⟨e⟩ lexemes spelled alike; Mateus & d'Andrade 2000: ch.3; Vigário 2003). Pins only the vowel height, inherits cleanly. SEED LIST — documented residual for the tail."
+    },
+    {
+      "id": "PT_LEX_OPEN_O",
+      "phonemes": [
+        "o",
+        "ɔ"
+      ],
+      "surface": "ɔ",
+      "stress": "stressed",
+      "word": [
+        "corre",
+        "mora",
+        "sol",
+        "forte",
+        "nove",
+        "famosa",
+        "gostosa"
+      ],
+      "notes": "Lexically OPEN stressed ⟨o⟩ = [ɔ] for this curated set, overriding the pre-lexical default (which is the close [o] first selected in Brazilian and non-reducing inheritors, giving the wrong height for these lexemes). Height is a lexical/morphological fact (Mateus & d'Andrade 2000: ch.3; Vigário 2003): the 3sg present of ⟨-ar/-er⟩ verbs opens the stressed root vowel (mora, corre, espera), and the ⟨-osa⟩ feminine adjectival suffix is open [ɔ] (famosa, gostosa) against its close [o] masculine ⟨-oso⟩ (PT_LEX_CLOSE_O). This rule pins ONLY the stressed-vowel height (reduction, rhotics, l-vocalisation, affrication run normally), so it inherits cleanly to every pt-PT / pt-BR dialect child. SEED LIST — arbitration-confirmed lexemes; the tail is documented residual."
+    },
+    {
+      "id": "PT_LEX_OPEN_E",
+      "phonemes": [
+        "e",
+        "ɛ",
+        "ɨ"
+      ],
+      "surface": "ɛ",
+      "stress": "stressed",
+      "word": [
+        "era",
+        "dez",
+        "espera",
+        "terra",
+        "serra"
+      ],
+      "notes": "Lexically OPEN stressed ⟨e⟩ = [ɛ] for this curated set, overriding the pre-lexical default where a close [e] is selected (Brazilian and non-reducing inheritors). Includes items whose open height is etymological (Latin short ĕ: terra, serra), morphological (3sg present espera; the copula era) or simply lexical (dez). Mateus & d'Andrade 2000: ch.3; Vigário 2003. Pins only the vowel height and inherits cleanly. SEED LIST — documented residual for the tail."
+    },
+    {
+      "id": "PT_LEX_X_S",
+      "phonemes": [
+        "ʃ"
+      ],
+      "surface": "s",
+      "grapheme": [
+        "x"
+      ],
+      "word": [
+        "trouxe",
+        "trouxeste",
+        "trouxemos",
+        "trouxeram",
+        "trouxera",
+        "trouxeras",
+        "trouxéramos",
+        "trouxesse",
+        "trouxéssemos",
+        "trouxessem",
+        "trouxer",
+        "trouxermos",
+        "trouxerem"
+      ],
+      "notes": "The ⟨x⟩ of the trazer preterite/subjunctive stem ⟨troux-⟩ is [s], not the default [ʃ] (trouxe [ˈtɾo(w)sɨ] / BP [ˈtɾosi]; Cunha & Cintra 1984, §on ⟨x⟩; the value of orthographic ⟨x⟩ is lexically unpredictable — [ʃ] peixe, [s] trouxe/próximo, [ks] fixo, [z] exame). Keyed on the lexeme because no phonological context separates the trouxe ⟨x⟩=[s] from the luxo ⟨x⟩=[ʃ]; gated on grapheme ⟨x⟩ so it never touches a ⟨ch⟩ or lexical [ʃ]. Pins only the consonant, so vowel reduction and the surrounding processes run normally and it inherits to every pt child. SEED — the broader ⟨x⟩=[s]/[ks]/[z] lexicon (próximo, máximo, fixo, exame) is documented residual."
+    }
+  ],
+  "sandhi_rules": [
+    {
+      "id": "PT_CODA_S_VOICING",
+      "name": "coda-s-voicing",
+      "left_context": "[ʃ]$",
+      "right_context": "^[ˈˌ]?[bdgvzʒmnɲɾʁlʎ]",
+      "transform": "ʒ",
+      "obligatory": true,
+      "notes": "External (cross-word) VOICING ASSIMILATION of coda /s/: a word-final coda /s/ — which surfaces [ʃ] in isolation and before a voiceless consonant via the coda 'chiado' PT_CODA_S_HUSH — assimilates in voicing to a following VOICED consonant across the word boundary, surfacing as the post-alveolar [ʒ]: as bocas → [ˈɐʒ ˈbɔkɐʃ], os dois → [ˈoʒ ˈdojʃ], os meus → [uʒ ˈmewʃ]. This is the regular European Portuguese sandhi of coda sibilants (Mateus & d'Andrade 2000: ch.2; Wikipedia 'Portuguese phonology', Consonant-sandhi section: a coda sibilant is [ʒ] before a voiced consonant, [ʃ] before a voiceless one, and [z] before a vowel). Only VOICED consonants trigger it — a following voiceless consonant keeps [ʃ] (estás feliz → [eˈʃtaʃ fɨˈliʃ]). The right_context matches an OPTIONAL leading primary/secondary stress mark [ˈˌ] then a voiced consonant, because the engine's per-word IPA carries a leading stress mark on a stress-initial word (bocas → ˈbɔkɐʃ), so a bare consonant class would never fire on the real word forms."
+    },
+    {
+      "id": "PT_FINAL_S_PREVOCALIC_VOICE",
+      "name": "final-s-prevocalic-voicing",
+      "left_context": "[ʃ]$",
+      "right_context": "^[ˈˌ]?[aeiouɛɔɐɨəãõẽĩũ]",
+      "transform": "z",
+      "obligatory": true,
+      "notes": "External (cross-word) sandhi: a word-final coda /s/ — which surfaces [ʃ] in isolation and pre-consonantally via the coda 'chiado' PT_CODA_S_HUSH — VOICES across the word boundary to [z] before a vowel-initial following word (the final sibilant is resyllabified and treated as intervocalic): estás a ver → [eˈʃtaz ˈɐ ˈvɛɾ], os amigos → [ˈoz ɐˈmiɡuʃ], as aves → [ˈɐz ˈɐvɨʃ]. Alveolar [z] is the standard/broad European Portuguese realisation and is the value across the North (Porto, Braga), Lisbon and the neutral centre (Coimbra) — Mateus & d'Andrade (2000: ch.2), for whom a word-final sibilant before a vowel is treated as intervocalic; the standard EP transcription gives [z] here (Wikipedia 'Portuguese phonology', Consonant-sandhi section: 'If the next word begins with a vowel, the final sibilant is treated as intervocalic, and pronounced [z]', e.g. bons amigos [bõz ɐˈmiɣuʃ]). The SOUTHERN (Algarve, strongest/categorical) and AZOREAN (São Miguel) varieties instead realise this prevocalic sibilant as the post-alveolar [ʒ] (the 'Tajaver' pronunciation of estás a ver) — a dialect delta carried by pt-PT-x-algarve (via its word-final [ʒ] positional map) and pt-PT-x-acores (which re-declares this rule id with transform ʒ); the neutral Coimbra centre is variable [z]~[ʒ]. Lisbon and the North do NOT palatalise here — they keep [z]. The right_context matches an OPTIONAL leading stress mark [ˈˌ] then any word-initial vowel — oral (a e i o u ɛ ɔ), reduced (ɐ ɨ ə) or nasal (ã õ ẽ ĩ ũ, i.e. a base vowel + combining tilde) — because the engine's per-word IPA carries a leading stress mark and strong vowel reduction, so a bare [aeiou] class would never fire on the real word forms."
+    },
+    {
+      "id": "PT_ELISION",
+      "name": "schwa-elision",
+      "left_context": "[ɨ]$",
+      "right_context": "^[aeiouɛɔ]",
+      "transform": "",
+      "obligatory": false,
+      "notes": "de amanhã → d‿ɐmɐɲã"
+    }
+  ],
+  "quality": "research",
+  "script_type": "alphabet",
+  "notes": "Modern European Portuguese (PT-PT). Base mapping uses a neutral orthographic standard. Digraphs per Acordo Ortográfico. Portuguese preserves the /v/~/b/ distinction (unique in Ibero-Romance — Castilian merged them). Nasal vowels and extreme vowel reduction are diagnostic features. Post-lexical allophony: the diagnostic EP unstressed vowel reduction (unstressed /a/->[ɐ], /e/->[ɨ] (word-final often deletable), /o/->[u]) is realised in the PRE-lexical positional_graphemes map (the nucleus_stressed/nucleus_unstressed/pretonic/posttonic/word_final rows), so no redundant allophone rule restates it. The allophone_rules layer adds the post-lexical CONSONANT realisations that the grapheme map cannot reach cleanly at word edges: dark coda /l/->[ɫ], and the Lisbon-standard coda sibilants /s/->[ʃ], /z/->[ʒ] (the 'chiado'). Intervocalic voiced-stop spirantisation (/b d ɡ/->[β ð ɣ]; Mateus & d'Andrade 2000) is a genuine EP process but is DELIBERATELY NOT encoded here: every available pt gold (infopedia_pt, ep_dialects, wikipron) is broad/phonemic and transcribes the stops, so a spirantisation rule is correct yet regresses all measurable golds with none rewarding it; it is left for a future narrow-transcription task. Dialect-specific sibilant/vocalism deltas (northern apico-alveolar coda [s̺], insular vocalism) are handled by the pt-PT-x-* dialect specs, not the base. Benchmark honesty: the coda sibilant rules improve every pt gold; the dark-l rule improves the narrow human golds (infopedia_pt, ep_dialects) but regresses the broader WikiPron pt row (which transcribes coda /l/ as plain [l]) — it is kept per the honesty gate because the higher-quality golds reward it, with the divergence documented. Coda vowel nasalisation: a vowel before a tautosyllabic (coda) ⟨m/n⟩ nasalises (campo [ˈkɐ̃pu], sim [ˈsĩ], bom [ˈbõ]); this is modelled by the positional m/n before_consonant/word_final → U+0303 tilde plus the PT_NASAL_*_RAISE / PT_NASAL_O_UNRED vowel-quality rules (Mateus & d'Andrade 2000: ch.2, 'Nasality'). KNOWN SIMPLIFICATION: word-final ⟨-am⟩ and ⟨-em/-ém⟩ are the nasal DIPHTHONGS [ɐ̃w̃] and [ɐ̃j̃] (cantam [ˈkɐ̃tɐ̃w̃], homem [ˈɔmɐ̃j̃], bem [ˈbɐ̃j̃]); this base spec currently renders them as the nasal MONOPHTHONGS [ɐ̃]/[ẽ] (cantam→[ˈkɐ̃tɐ̃], bem→[ˈbẽ]), because the final-nasal offglide is a separate whole-cluster process not yet modelled — it is a pre-existing gap left for a dedicated final-nasal-diphthong task, out of scope for the coda-nasalisation work. Related pre-existing gap (NOT introduced by nasalisation): the ⟨gu⟩ digraph maps to [ɡ] dropping a NUCLEAR ⟨u⟩ before a consonant (algum, segundo, água), which is wrong for gu+a/o/u; the coda-nasalisation engine guard only ensures no invalid tilde is emitted onto the stranded [ɡ], it does not fix the ⟨gu⟩ vowel-drop itself.",
+  "sources": [
+    {
+      "id": "mateus_dandrade2000",
+      "author": "Mateus, M.H.M. & d'Andrade, E.",
+      "year": 2000,
+      "title": "The Phonology of Portuguese",
+      "publisher": "Oxford University Press",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "cruzferreira1995",
+      "author": "Cruz-Ferreira, Madalena",
+      "year": 1995,
+      "title": "European Portuguese",
+      "publisher": "Journal of the International Phonetic Association 25(2), 90-94 (Illustrations of the IPA), Cambridge University Press",
+      "url": "https://doi.org/10.1017/S0025100300005223",
+      "pages": "90-94",
+      "notes": "Illustration of the IPA for European (Lisbon-standard) Portuguese: velarised coda /l/ [ɫ], coda sibilant [ʃ ʒ], unstressed vowel reduction."
+    },
+    {
+      "id": "cunha_cintra1984",
+      "author": "Cunha, C. & Cintra, L.F.L.",
+      "year": 1984,
+      "title": "Nova Gramática do Português Contemporâneo",
+      "publisher": "Sá da Costa",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "start_cross2002",
+      "author": "Mateus, M.H.M. et al.",
+      "year": 2003,
+      "title": "Gramática da Língua Portuguesa (6th ed.)",
+      "publisher": "Caminho",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "vigario2003",
+      "author": "Vigário, Marina",
+      "year": 2003,
+      "title": "The Prosodic Word in European Portuguese",
+      "publisher": "Mouton de Gruyter",
+      "url": null,
+      "pages": null,
+      "notes": "Prosodic-word structure and stress in European Portuguese; background for the stress-conditioned mid-vowel height and reduction facts."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Portuguese_language",
+    "https://pt.wikipedia.org/wiki/L%C3%ADngua_portuguesa"
+  ],
+  "urls": [
+    "https://en.wikipedia.org/wiki/Portuguese_language",
+    "https://en.wikipedia.org/wiki/European_Portuguese",
+    "https://en.wikipedia.org/wiki/Portuguese_phonology",
+    "https://pt.wikipedia.org/wiki/L%C3%ADngua_portuguesa",
+    "https://pt.wikipedia.org/wiki/Portugu%C3%AAs_europeu"
+  ],
+  "timespan": {
+    "start_year": 1300,
+    "end_year": null
+  },
+  "glottolog_code": "port1283",
+  "iso639_3": "por",
+  "word_exceptions": {"e": "i"},
+  "stress": {
+    "onset_clusters": ["bl", "br", "bɫ", "bɾ", "bʀ", "bʁ", "bʎ", "bχ", "dr", "dɾ", "dʀ", "dʁ", "dʎ", "dχ", "fl", "fr", "fɫ", "fɾ", "fʀ", "fʁ", "fʎ", "fχ", "kl", "kr", "kɫ", "kɾ", "kʀ", "kʁ", "kʎ", "kχ", "pl", "pr", "pɫ", "pɾ", "pʀ", "pʁ", "pʎ", "pχ", "tr", "tɾ", "tʀ", "tʁ", "tʎ", "tχ", "vl", "vr", "vɫ", "vɾ", "vʀ", "vʁ", "vʎ", "vχ", "ðr", "ðɾ", "ðʀ", "ðʁ", "ðʎ", "ðχ", "ɡl", "ɡr", "ɡɫ", "ɡɾ", "ɡʀ", "ɡʁ", "ɡʎ", "ɡχ", "ɣl", "ɣr", "ɣɫ", "ɣɾ", "ɣʀ", "ɣʁ", "ɣʎ", "ɣχ", "βl", "βr", "βɫ", "βɾ", "βʀ", "βʁ", "βʎ", "βχ"],
+    "cliticless_words": ["o", "a", "os", "as", "de", "do", "da", "dos", "das", "em", "no", "na", "nos", "nas", "por", "pelo", "pela", "pelos", "pelas", "ao", "aos", "à", "às", "com", "sem", "e", "que", "se", "me", "te", "lhe", "lhes", "vos", "lo", "la", "los", "las", "lho", "lha", "lhos", "lhas"],
+    "default_position": -2,
+    "final_stress_endings": [
+      "r",
+      "l",
+      "z",
+      "x",
+      "i",
+      "u",
+      "im",
+      "om",
+      "um",
+      "is",
+      "us",
+      "ns",
+      "ão",
+      "ãe",
+      "õe",
+      "au",
+      "éu",
+      "éi",
+      "ói"
+    ],
+    "penult_stress_endings": [],
+    "marked_vowels": [
+      "á",
+      "é",
+      "í",
+      "ó",
+      "ú",
+      "â",
+      "ê",
+      "ô",
+      "ã",
+      "õ"
+    ],
+    "stress_mark": "ˈ",
+    "notes": "Acordo Ortográfico 1990 conventions: paroxytone default; written accents override; final -i/-u/-r/-l/-z/-x/-im/-om/-um/-ns and nasal diphthongs attract final stress. Unmarked -em/-am stay paroxytone (homem, falam). DIPHTHONGS: declared so the bundled syllabifier counts nuclei correctly. Without them every vowel run merges into one nucleus, so co-e-lho is read as coe-lho — one syllable short — and the stress, and therefore the unstressed-vowel reduction it conditions, land on the wrong vowel. ⟨oe⟩ is hiatus, not a diphthong, and is absent from this list for that reason (Cunha & Cintra, Nova Gramática do Português Contemporâneo, §Ditongos).",
+    "diphthongs": [
+      "ãe",
+      "ão",
+      "õe",
+      "ai",
+      "ái",
+      "au",
+      "áu",
+      "ei",
+      "éi",
+      "êi",
+      "eu",
+      "éu",
+      "êu",
+      "iu",
+      "oi",
+      "ói",
+      "ôi",
+      "ou",
+      "ui"
+    ]
+  },
+  "orthography_standard": {
+    "name": "Acordo Ortográfico da Língua Portuguesa",
+    "authority": "Academia das Ciências de Lisboa / Academia Brasileira de Letras",
+    "year": 1990,
+    "url": "https://www.parlamento.pt/Legislacao/Documents/Legislacao_Anotada/AcordoOrtografico_Simples.pdf",
+    "notes": "In force in Portugal since 2009 (transition to 2015). Governs the spelling this spec maps from."
+  },
+  "wikidata_qid": "Q5146",
+  "phoible_id": "port1283",
+  "wals_code": "por",
+  "location": {
+    "latitude": 39.91,
+    "longitude": -8.1,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Portuguese."
+  }
+}

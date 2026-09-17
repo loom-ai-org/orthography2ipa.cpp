@@ -1,0 +1,197 @@
+{
+  "code": "bbl",
+  "name": "Bats",
+  "script": "Georgian",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "ა": [
+      "a"
+    ],
+    "ბ": [
+      "b"
+    ],
+    "გ": [
+      "ɡ"
+    ],
+    "დ": [
+      "d"
+    ],
+    "ე": [
+      "ɛ"
+    ],
+    "ვ": [
+      "v"
+    ],
+    "ზ": [
+      "z"
+    ],
+    "თ": [
+      "tʰ"
+    ],
+    "ი": [
+      "i"
+    ],
+    "კ": [
+      "kʼ"
+    ],
+    "ლ": [
+      "l"
+    ],
+    "მ": [
+      "m"
+    ],
+    "ნ": [
+      "n"
+    ],
+    "ო": [
+      "ɔ"
+    ],
+    "პ": [
+      "pʼ"
+    ],
+    "ჟ": [
+      "ʒ"
+    ],
+    "რ": [
+      "r"
+    ],
+    "ს": [
+      "s"
+    ],
+    "ტ": [
+      "tʼ"
+    ],
+    "უ": [
+      "u"
+    ],
+    "ფ": [
+      "pʰ"
+    ],
+    "ქ": [
+      "kʰ"
+    ],
+    "ღ": [
+      "ɣ"
+    ],
+    "ყ": [
+      "qʼ"
+    ],
+    "შ": [
+      "ʃ"
+    ],
+    "ჩ": [
+      "tʃʰ"
+    ],
+    "ც": [
+      "tsʰ"
+    ],
+    "ძ": [
+      "dz"
+    ],
+    "წ": [
+      "tsʼ"
+    ],
+    "ჭ": [
+      "tʃʼ"
+    ],
+    "ხ": [
+      "x"
+    ],
+    "ჯ": [
+      "dʒ"
+    ],
+    "ჰ": [
+      "h"
+    ],
+    "ჷ": [
+      "ə"
+    ],
+    "ჺ": [
+      "ʕ"
+    ],
+    "ჸ": [
+      "ʔ"
+    ],
+    "ჶ": [
+      "f"
+    ],
+    "აჼ": [
+      "ã"
+    ],
+    "ეჼ": [
+      "ẽ"
+    ],
+    "იჼ": [
+      "ĩ"
+    ],
+    "ოჼ": [
+      "õ"
+    ],
+    "უჼ": [
+      "ũ"
+    ]
+  },
+  "parent": "x-clade-nakh1245",
+  "ancestors": [
+    {
+      "code": "x-clade-nakh1245",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Descent per Glottolog classification of Bats (bats1242)."
+    }
+  ],
+  "notes": "Research. Bats (Tsova-Tush) is a Nakh (Northeast Caucasian) language written in the Georgian Mkhedruli script supplemented by extra letters. The 33 standard Georgian letters take their usual phonemic values, including the ejective series; added signs write the schwa ჷ (ə), the pharyngeal ჺ (ʕ), the glottal stop ჸ (ʔ) and ჶ (f). Bats has a much larger consonant inventory than Georgian -- including pharyngealized consonants, additional uvulars, a voiceless-lateral series and nasalized vowels -- much of which is written with digraphs and diacritic combinations not resolved by this single-symbol map; those distinctions are left under-encoded, so a substantial PER floor is expected. Grapheme table checked against Holisky & Gagua (1994): no discrepancy found. Stress: Holisky & Gagua (1994) describe Bats stress as weak and dynamic but gravitating toward the word-initial syllable, occasionally shifting under morphological conditions the `stress` schema cannot express; `default_position=1` encodes the unmarked initial-stress tendency as an approximation, and the morphologically-conditioned shifts are a documented gap rather than silently wrong. The Georgian addition letter ჼ (Nar) marks nasalization of the preceding vowel by a synchronic rule described by Holisky & Gagua (1994, §1.4.5 'Nasalization'): a word-final (occasionally syllable-final) /n/ nasalizes the preceding vowel or diphthong nucleus and is itself deleted. The spec now encodes the majority, non-diphthong case as five vowel+ჼ digraphs (აჼ/ეჼ/იჼ/ოჼ/უჼ -> ã/ẽ/ĩ/õ/ũ), dropping wikipron PER from 0.3228 to 0.2790. In diphthong-final words the nasalization lands on the syllable nucleus rather than the trailing off-glide letter adjacent to ჼ (e.g. აუჼ realizes [ãu̯], not [aũ]); this residual ~6-word pattern is a documented gap, not fixed. The Georgian letter ჵ (Hoe), attested 13 times in the wikipron gold, is ambiguous there between the epiglottal stop /ʡ/ and the voiced pharyngeal fricative /ʕ/ (H&G describe /ħ/ and /ʕ/ contrasting only word-initially, and note Chrelashvili 1975 positing a third laryngeal /ʡ/); it remains unmapped by this spec rather than guessing a value the source does not settle, and measured folding of /ʡ/ and /ʕ/ out of the gold moves PER by under 0.001 -- a negative result, not a ceiling contributor. The wikipron gold additionally marks the voiceless lateral fricative /ɬ/ and voiceless pharyngeal fricative /ħ/ with a supplementary IPA modifier apostrophe that plain Mkhedruli, as attested in Holisky & Gagua (1994), does not write; this is folded in valid_ceiling.wikipron rather than fixed, since the practical orthography cannot recover it.",
+  "iso639_3": "bbl",
+  "glottolog_code": null,
+  "sources": [
+    {
+      "id": "bbl_glottolog",
+      "author": "Hammarström, H. et al. (Glottolog 5.0)",
+      "year": 2024,
+      "title": "Glottolog: Bats (bats1242)",
+      "publisher": "Max Planck Institute for Evolutionary Anthropology",
+      "url": "https://glottolog.org/resource/languoid/id/bats1242",
+      "pages": null,
+      "notes": "Classification reference for a skeleton-tier entry.",
+      "wikipedia_url": null
+    },
+    {
+      "id": "holisky_gagua1994",
+      "author": "Holisky, Dee Ann; Gagua, Rusudan",
+      "year": 1994,
+      "title": "Tsova-Tush (Batsbi)",
+      "publisher": "In Rieks Smeets (ed.), The Indigenous Languages of the Caucasus, vol. 4: North East Caucasian Languages, Part 2. Caravan Books, Delmar, NY, pp. 147-212",
+      "url": "https://people.umass.edu/maxfield/Resources/Tsova%20Tush.pdf",
+      "pages": "147-212",
+      "notes": "Reference grammar used to verify the Georgian-script grapheme table (ejective series, added letters) and to source the stress rule.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Bats_language"
+    },
+    {
+      "id": "bbl_orthography",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Bats language — writing system and phonology",
+      "publisher": null,
+      "url": "https://en.wikipedia.org/wiki/Bats_language",
+      "pages": null,
+      "notes": "Orthography/phonology reference for the skeleton-tier grapheme map.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Bats_language"
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Bats_language"
+  ],
+  "stress": {
+    "default_position": 1,
+    "stress_mark": "ˈ",
+    "notes": "Approximates Holisky & Gagua (1994)'s initial-syllable stress tendency; morphologically-conditioned shifts to a later syllable are not expressible in this schema and are left as a documented gap."
+  },
+  "valid_ceiling": {
+    "wikipron": {
+      "per": 0.2635,
+      "folded": "lateral+pharyngeal",
+      "citation": "Wikipron gold marks the Bats voiceless lateral fricative /ɬ/ and voiceless pharyngeal fricative /ħ/ with a supplementary IPA modifier apostrophe on top of plain Georgian letters (ლʻ, ჰʼ), a scholarly disambiguation the practical Georgian Mkhedruli orthography does not make -- confirmed against Holisky & Gagua (1994)'s grapheme table, which lists no such distinct letters. Folding /ɬ/->/l/, /ħ/->/h/ out of both sides drops wikipron/bbl PER from 0.2790 to 0.2635 (n=414); measured on fix/bbl-nasalization."
+    }
+  }
+}

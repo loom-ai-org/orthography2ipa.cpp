@@ -1,0 +1,194 @@
+{
+ "code": "gld",
+ "name": "Nanai",
+ "script": "Cyrl",
+ "quality": "research",
+ "graphemes": {
+  "а": [
+   "a"
+  ],
+  "ā": [
+   "aː"
+  ],
+  "и": [
+   "i"
+  ],
+  "ō": [
+   "oː"
+  ],
+  "ē": [
+   "əː"
+  ],
+  "б": [
+   "b"
+  ],
+  "в": [
+   "w"
+  ],
+  "г": [
+   "ɡ"
+  ],
+  "д": [
+   "d"
+  ],
+  "е": [
+   "je"
+  ],
+  "ё": [
+   "jo"
+  ],
+  "ж": [
+   "d̠ʒ"
+  ],
+  "з": [
+   "s"
+  ],
+  "й": [
+   "j"
+  ],
+  "к": [
+   "k"
+  ],
+  "л": [
+   "l"
+  ],
+  "м": [
+   "m"
+  ],
+  "н": [
+   "n"
+  ],
+  "ӈ": [
+   "ŋ"
+  ],
+  "о": [
+   "ɔ"
+  ],
+  "п": [
+   "p"
+  ],
+  "р": [
+   "r"
+  ],
+  "с": [
+   "s"
+  ],
+  "т": [
+   "t"
+  ],
+  "у": [
+   "u"
+  ],
+  "ф": [
+   "x"
+  ],
+  "х": [
+   "x"
+  ],
+  "ц": [
+   "t̠ʃ"
+  ],
+  "ч": [
+   "t̠ʃ"
+  ],
+  "ы": [
+   "ɪ"
+  ],
+  "э": [
+   "ə"
+  ],
+  "ю": [
+   "ju"
+  ],
+  "я": [
+   "ja"
+  ],
+  "ъ": [
+   ""
+  ],
+  "ь": [
+   ""
+  ],
+  "ӣ": [
+   "iː"
+  ]
+ },
+ "allophones": {},
+ "notes": "Cyrillic literary orthography for Nanai, following Avrorin (1959/1961, Grammatika nanaiskogo yazyka) and the standard Nanai alphabet in use since the 1980s (Stolyarov, ABC-based primers), which extends Russian with Ng (velar nasal) and macron-marked long vowels a-macron/o-macron/e-macron. Nanai has no phonemic voicing contrast in its dental/alveolar series (d/t, s/z, l/r pattern together per Avrorin); ф and х are merged as [x] in native vocabulary, ф being reserved for Russian loans. Vowel harmony conditions vowel choice across a word but is not rule-encoded here (as in evn/Evenki, its closer-studied Tungusic sibling). Word stress is not lexically contrastive/documented as orthography-predictable in the available grammars; left unset as a documented exemption.",
+ "iso639_3": "gld",
+ "glottolog_code": "nana1257",
+ "sources": [
+  {
+   "id": "glottolog2024",
+   "author": "Hammarström, Harald; Forkel, Robert; Haspelmath, Martin; Bank, Sebastian",
+   "year": 2024,
+   "title": "Glottolog 5.0",
+   "publisher": "Max Planck Institute for Evolutionary Anthropology",
+   "url": "https://glottolog.org/"
+  },
+  {
+   "id": "phoible2019",
+   "author": "Moran, Steven; McCloy, Daniel (eds.)",
+   "year": 2019,
+   "title": "PHOIBLE 2.0 (doi:10.5281/zenodo.2562766)",
+   "publisher": "Max Planck Institute for the Science of Human History",
+   "url": "https://phoible.org/inventories/view/341",
+   "notes": "Inventory 341 (upsid), 24 non-marginal segments."
+  },
+  {
+   "id": "avrorin1959",
+   "author": "Avrorin, Valentin A.",
+   "year": 1959,
+   "title": "Grammatika nanaiskogo yazyka, vol. 1",
+   "publisher": "Academy of Sciences, USSR"
+  },
+  {
+   "id": "an1961",
+   "author": "An, S. A.",
+   "year": 1961,
+   "title": "Nanai orthography and primer materials",
+   "publisher": "Uchpedgiz"
+  }
+ ],
+ "urls": [
+  "https://glottolog.org/resource/languoid/id/nana1257"
+ ],
+ "location": {
+  "latitude": 48.4343,
+  "longitude": 134.7973,
+  "source": "glottolog",
+  "notes": "Glottolog's representative point."
+ },
+ "parent": "x-clade-tung1282",
+ "phonemes": [
+  "b",
+  "d̠ʒ",
+  "d̪|d",
+  "k",
+  "l̪|l",
+  "m",
+  "n̪|n",
+  "p",
+  "r̪|r",
+  "s̪|s",
+  "t̠ʃ",
+  "t̪|t",
+  "x",
+  "ŋ",
+  "ɡ",
+  "ɲ",
+  "ʝ",
+  "β",
+  "a",
+  "i",
+  "o",
+  "u",
+  "ɘ",
+  "ɪ"
+ ],
+ "phoible_id": "341",
+ "script_type": "alphabet",
+ "wikipedia": [
+  "https://en.wikipedia.org/wiki/Nanai_language"
+ ]
+}

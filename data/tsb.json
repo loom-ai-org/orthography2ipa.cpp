@@ -1,0 +1,196 @@
+{
+ "code": "tsb",
+ "name": "Tsamai",
+ "script": "Zyyy",
+ "quality": "stub",
+ "graphemes": {},
+ "allophones": {
+  "c": [
+   "c",
+   "t̠ʃ",
+   "t̠ʃʼ"
+  ],
+  "cʼː": [
+   "cʼː",
+   "t̠ʃʼː"
+  ],
+  "cː": [
+   "cː",
+   "t̠ʃː"
+  ],
+  "n": [
+   "n",
+   "m",
+   "ŋ"
+  ],
+  "p": [
+   "p",
+   "pʰ",
+   "f",
+   "ɸ"
+  ],
+  "pː": [
+   "pː",
+   "pʰː",
+   "fː"
+  ],
+  "qʼ": [
+   "qʼ",
+   "qxʼ",
+   "ʛ̥",
+   "ʛ"
+  ],
+  "qʼː": [
+   "qʼː",
+   "ʛː",
+   "ʛ̥ː"
+  ],
+  "tsʼ": [
+   "tsʼ",
+   "sʼ"
+  ],
+  "tsʼː": [
+   "tsʼː",
+   "sʼː"
+  ],
+  "x": [
+   "x",
+   "χ",
+   "χ̃"
+  ],
+  "xː": [
+   "xː",
+   "χː"
+  ],
+  "ħ": [
+   "ħ",
+   "ħ̃"
+  ],
+  "ɓ": [
+   "ɓ",
+   "ɓ̥"
+  ],
+  "ɗ": [
+   "ɗ̺",
+   "ɗ",
+   "ˀd̺ː"
+  ],
+  "ɠ": [
+   "ɠ",
+   "ɠ̥"
+  ],
+  "ʒ": [
+   "ʒ",
+   "d̠ʒ"
+  ],
+  "ʕ": [
+   "ʕ",
+   "ʕˀ"
+  ]
+ },
+ "notes": "REGISTRY STUB (not a modelled G2P target). Placed so the ancestry graph covers every living ISO 639-3 language. No orthography is claimed; the phoneme inventory follows the cited PHOIBLE inventory (which itself cites a published description): script is Zyyy (undetermined) until a cited description is encoded. Classification and coordinates follow Glottolog.",
+ "iso639_3": "tsb",
+ "glottolog_code": "tsam1247",
+ "sources": [
+  {
+   "id": "glottolog2024",
+   "author": "Hammarström, Harald; Forkel, Robert; Haspelmath, Martin; Bank, Sebastian",
+   "year": 2024,
+   "title": "Glottolog 5.0",
+   "publisher": "Max Planck Institute for Evolutionary Anthropology",
+   "url": "https://glottolog.org/"
+  },
+  {
+   "id": "phoible2019",
+   "author": "Moran, Steven; McCloy, Daniel (eds.)",
+   "year": 2019,
+   "title": "PHOIBLE 2.0 (doi:10.5281/zenodo.2562766)",
+   "publisher": "Max Planck Institute for the Science of Human History",
+   "url": "https://phoible.org/inventories/view/1608",
+   "notes": "Inventory 1608 (ph), 66 non-marginal segments, 2 tones."
+  }
+ ],
+ "urls": [
+  "https://glottolog.org/resource/languoid/id/tsam1247"
+ ],
+ "location": {
+  "latitude": 5.3097,
+  "longitude": 36.9139,
+  "source": "glottolog",
+  "notes": "Glottolog's representative point."
+ },
+ "parent": "x-clade-afro1255",
+ "phonemes": [
+  "b",
+  "bː",
+  "c",
+  "cʼː",
+  "cː",
+  "d",
+  "dː",
+  "d̠ʒː",
+  "h",
+  "hː",
+  "j",
+  "jː",
+  "k",
+  "kː",
+  "l",
+  "lː",
+  "m",
+  "mː",
+  "n",
+  "nː",
+  "p",
+  "pː",
+  "qʼ",
+  "qʼː",
+  "r",
+  "rː",
+  "s",
+  "sː",
+  "t",
+  "tsʼ",
+  "tsʼː",
+  "tː",
+  "w",
+  "wː",
+  "x",
+  "xː",
+  "z",
+  "zː",
+  "ħ",
+  "ħː",
+  "ɓ",
+  "ɓː",
+  "ɗ",
+  "ɠ",
+  "ɠː",
+  "ɡ",
+  "ɡː",
+  "ɲ",
+  "ɲː",
+  "ʃ",
+  "ʃː",
+  "ʒ",
+  "ʔ",
+  "ʔː",
+  "ʕ",
+  "ʕː",
+  "a",
+  "aː",
+  "e",
+  "eː",
+  "i",
+  "iː",
+  "o",
+  "oː",
+  "u",
+  "uː"
+ ],
+ "tone_inventory": {
+  "˦": "PHOIBLE tone segment",
+  "˨": "PHOIBLE tone segment"
+ },
+ "phoible_id": "1608"
+}

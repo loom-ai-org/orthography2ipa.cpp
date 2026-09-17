@@ -1,0 +1,89 @@
+{
+  "code": "mrj",
+  "name": "Hill Mari (Western Mari)",
+  "script": "Cyrillic",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "а": ["ɑ"],
+    "ӓ": ["æ"],
+    "б": ["b"],
+    "в": ["v"],
+    "г": ["ɣ"],
+    "нг": ["ŋɡ"],
+    "д": ["ð"],
+    "е": ["e", "je"],
+    "ё": ["jo", "o"],
+    "ж": ["ʒ"],
+    "з": ["z"],
+    "и": ["i"],
+    "й": ["j"],
+    "к": ["k"],
+    "л": ["l"],
+    "м": ["m"],
+    "н": ["n"],
+    "ҥ": ["ŋ"],
+    "о": ["o"],
+    "ӧ": ["ø"],
+    "п": ["p"],
+    "р": ["r"],
+    "с": ["s"],
+    "т": ["t"],
+    "у": ["u"],
+    "ӱ": ["y"],
+    "ӹ": ["ɯ"],
+    "ф": ["f"],
+    "х": ["x"],
+    "ц": ["ts"],
+    "ч": ["tʃ"],
+    "ш": ["ʃ"],
+    "щ": ["ʃtʃ"],
+    "ъ": [""],
+    "ö": ["ø"],
+    "ы": ["ə"],
+    "ь": ["ʲ"],
+    "э": ["e"],
+    "ю": ["ju", "u"],
+    "я": ["ja", "ɑ"]
+  },
+  "allophones": {},
+  "parent": "chm",
+  "ancestors": [
+    {
+      "code": "chm",
+      "role": "parent",
+      "weight": 0.9,
+      "notes": "Mari macrolanguage node (ISO 639-3 chm); Hill/Western Mari is one of its two individual languages."
+    }
+  ],
+  "notes": "Hill Mari / Western Mari (кырык мары), Mari El, Russia. INPUT CONTRACT: modern Hill Mari 35-letter Cyrillic orthography, NFC (⟨Ӓӓ Ӧӧ Ӱӱ Ӹӹ⟩ are precomposed characters). ⟨ы⟩ and ⟨ӹ⟩ are two DISTINCT reduced/high-central vowels in Hill Mari, /ə/ and /ɯ/ respectively (Kangasmaa-Minn 1998; confirmed against NorthEuraLex Segments: ышма -> ə ʃ m ɑ, сӹнзӓ -> s ɯ n z æ), unlike Meadow Mari where ⟨ы⟩ alone covers this space — the two Mari varieties are not run off the same template (AGENTS.md, 'a shared alphabet is not a shared phonology'). ⟨г⟩ defaults to the fricative /ɣ/ (Kangasmaa-Minn 1998; NorthEuraLex шӹргӹ -> ʃ ɯ r ɣ ɯ), but hardens to the stop /ɡ/ after a nasal, so the sequence ⟨нг⟩ is entered as a multigraph /ŋɡ/ — its IPA is not the concatenation of ⟨н⟩ /n/ + ⟨г⟩ /ɣ/ (NorthEuraLex онгылаш -> o ŋ g ə l ɑ ʃ). Coronal palatalisation before iotated vowels, well attested for Meadow Mari, is NOT reproduced here for Hill Mari without its own citable evidence: NorthEuraLex's Hill Mari нер is transcribed plain [n e r] (unlike Meadow Mari's palatalised [nʲ e r]), so no palatalisation digraphs are claimed pending a source that states the rule for this variety specifically. Word stress in Hill Mari is not fixed and not reliably orthography-predictable (Kangasmaa-Minn 1998); documented here as an ENGINE-LIMIT stress exemption and not modelled. ITERATION FIX (error-analysis pass against NorthEuraLex): ⟨д⟩ corrected to the voiced dental fricative /ð/, not the stop /d/ — a genuine Hill Mari lenition absent from Meadow Mari (NorthEuraLex эдем -> eðem, кид -> kið, вӹд -> vɯð; the same 'shared alphabet is not shared phonology' caution as the ⟨ы⟩/⟨ӹ⟩ split above); the default reading of ⟨е⟩ was reordered to plain /e/ first (word-initial [j]-onset only applies in narrower positional contexts than the two-candidate list previously implied); and a Latin-letter ⟨ö⟩ variant of ⟨ӧ⟩ (/ø/, appearing in some digitised Hill Mari sources that mix Latin and Cyrillic diacritics) was added.",
+  "iso639_3": null,
+  "glottolog_code": null,
+  "wikidata_qid": "Q1776032",
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Hill_Mari_Wikipedia",
+    "https://mrj.wikipedia.org/wiki/%D0%9A%D1%8B%D1%80%D1%8B%D0%BA_%D0%BC%D0%B0%D1%80%D1%8B_%D0%92%D0%B8%D0%BA%D0%B8%D0%BF%D0%B5%D0%B4%D0%B8"
+  ],
+  "sources": [
+    {
+      "id": "kangasmaa-minn1998",
+      "author": "Kangasmaa-Minn, Eeva",
+      "year": 1998,
+      "title": "Mari",
+      "publisher": "in Daniel Abondolo (ed.), The Uralic Languages, Routledge",
+      "url": "https://www.routledge.com/The-Uralic-Languages/Abondolo-Valijarvi/p/book/9781138459166",
+      "notes": "Chapter-level reference grammar covering both Meadow and Hill Mari: vowel inventories (Hill Mari's ⟨ы⟩ /ə/ vs ⟨ӹ⟩ /ɯ/), consonant system, the г fricative/stop alternation, and word-stress placement."
+    },
+    {
+      "id": "hillmari_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Hill Mari language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Hill_Mari_language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Hill_Mari_language",
+      "pages": null,
+      "notes": "Alphabet and phonology overview."
+    }
+  ]
+}

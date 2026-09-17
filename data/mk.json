@@ -1,0 +1,292 @@
+{
+  "ancestors": [
+    {
+      "code": "sla",
+      "role": "parent",
+      "weight": 0.9,
+      "notes": "Descent from Proto-Slavic (South Slavic, eastern subgroup)."
+    },
+    {
+      "code": "cu",
+      "role": "ancestor",
+      "weight": 0.08,
+      "notes": "Old Church Slavonic literary ancestor."
+    },
+    {
+      "code": "tr",
+      "role": "adstrate",
+      "weight": 0.08,
+      "notes": "Ottoman Turkish adstrate: heavy lexical layer from Ottoman rule."
+    },
+    {
+      "code": "el",
+      "role": "adstrate",
+      "weight": 0.06,
+      "notes": "Greek adstrate; core Balkan sprachbund member."
+    }
+  ],
+  "code": "mk",
+  "name": "Macedonian",
+  "script": "Cyrillic",
+  "graphemes": {
+    "а": [
+      "a"
+    ],
+    "е": [
+      "ɛ"
+    ],
+    "и": [
+      "i"
+    ],
+    "о": [
+      "ɔ"
+    ],
+    "у": [
+      "u"
+    ],
+    "б": [
+      "b"
+    ],
+    "в": [
+      "v"
+    ],
+    "г": [
+      "ɡ"
+    ],
+    "д": [
+      "d"
+    ],
+    "ѓ": [
+      "ɟ"
+    ],
+    "ж": [
+      "ʒ"
+    ],
+    "з": [
+      "z"
+    ],
+    "ѕ": [
+      "dz"
+    ],
+    "ј": [
+      "j"
+    ],
+    "к": [
+      "k"
+    ],
+    "ќ": [
+      "c"
+    ],
+    "л": [
+      "l"
+    ],
+    "љ": [
+      "ʎ"
+    ],
+    "м": [
+      "m"
+    ],
+    "н": [
+      "n"
+    ],
+    "њ": [
+      "ɲ"
+    ],
+    "п": [
+      "p"
+    ],
+    "р": [
+      "r"
+    ],
+    "с": [
+      "s"
+    ],
+    "т": [
+      "t"
+    ],
+    "ф": [
+      "f"
+    ],
+    "х": [
+      "x"
+    ],
+    "ц": [
+      "ts"
+    ],
+    "ч": [
+      "tʃ"
+    ],
+    "џ": [
+      "dʒ"
+    ],
+    "ш": [
+      "ʃ"
+    ]
+  },
+  "allophones": {
+    "p": [
+      "p"
+    ],
+    "b": [
+      "b",
+      "p"
+    ],
+    "t": [
+      "t"
+    ],
+    "d": [
+      "d",
+      "t"
+    ],
+    "c": [
+      "c"
+    ],
+    "ɟ": [
+      "ɟ",
+      "c"
+    ],
+    "k": [
+      "k"
+    ],
+    "ɡ": [
+      "ɡ",
+      "k"
+    ],
+    "f": [
+      "f"
+    ],
+    "v": [
+      "v",
+      "f"
+    ],
+    "s": [
+      "s"
+    ],
+    "z": [
+      "z",
+      "s"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "ʒ": [
+      "ʒ",
+      "ʃ"
+    ],
+    "x": [
+      "x"
+    ],
+    "ts": [
+      "ts"
+    ],
+    "dz": [
+      "dz",
+      "ts"
+    ],
+    "tʃ": [
+      "tʃ"
+    ],
+    "dʒ": [
+      "dʒ",
+      "tʃ"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n",
+      "ŋ"
+    ],
+    "ɲ": [
+      "ɲ"
+    ],
+    "l": [
+      "l"
+    ],
+    "ʎ": [
+      "ʎ"
+    ],
+    "r": [
+      "r"
+    ],
+    "r̩": [
+      "r̩"
+    ],
+    "j": [
+      "j"
+    ],
+    "a": [
+      "a",
+      "ɐ"
+    ],
+    "ɛ": [
+      "ɛ"
+    ],
+    "i": [
+      "i"
+    ],
+    "ɔ": [
+      "ɔ"
+    ],
+    "u": [
+      "u"
+    ]
+  },
+  "parent": "x-clade-sout3147",
+  "notes": "Standard Macedonian, codified 1945. South Slavic, closely related to Bulgarian. Analytic case system (lost inflection). Fixed antepenultimate stress (third-from-last syllable). Unique letters: ⟨ѕ⟩ = [dz], ⟨ѓ⟩ = [ɟ], ⟨ќ⟩ = [c]. Definite article suffixed in three forms: -от/-та/-то (definite), -ов/-ва/-во (proximal), -он/-на/-но (distal). ⟨љ⟩ = [ʎ], ⟨њ⟩ = [ɲ].",
+  "quality": "research",
+  "script_type": "alphabet",
+  "sources": [
+    {
+      "id": "comrie_corbett1993",
+      "author": "Comrie, B. & Corbett, G. (eds.)",
+      "year": 1993,
+      "title": "The Slavonic Languages",
+      "publisher": "Routledge",
+      "url": null,
+      "pages": null,
+      "notes": null,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Slavic_languages"
+    },
+    {
+      "id": "friedman2001",
+      "author": "Friedman, V.A.",
+      "year": 2001,
+      "title": "Macedonian",
+      "publisher": "Lincom Europa",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "ladefoged_maddieson1996",
+      "author": "Ladefoged, P. & Maddieson, I.",
+      "year": 1996,
+      "title": "The Sounds of the World's Languages",
+      "publisher": "Blackwell",
+      "url": null,
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Macedonian_language",
+    "https://mk.wikipedia.org/wiki/Македонски_јазик",
+    "https://mk.wikipedia.org/wiki/%D0%9C%D0%B0%D0%BA%D0%B5%D0%B4%D0%BE%D0%BD%D1%81%D0%BA%D0%B8_%D1%98%D0%B0%D0%B7%D0%B8%D0%BA"
+  ],
+  "timespan": {
+    "start_year": 1800,
+    "end_year": null
+  },
+  "glottolog_code": "mace1250",
+  "iso639_3": "mkd",
+  "wikidata_qid": "Q9296",
+  "phoible_id": "mace1250",
+  "wals_code": "mcd",
+  "location": {
+    "latitude": 41.5957,
+    "longitude": 21.7932,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Macedonian."
+  }
+}

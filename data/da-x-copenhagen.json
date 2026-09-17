@@ -1,0 +1,72 @@
+{
+  "code": "da-x-copenhagen",
+  "name": "Danish (Copenhagen / Rigsdansk)",
+  "script": "Latin",
+  "graphemes_base": "da",
+  "allophones_base": "da",
+  "allophones": {
+    "d": [
+      "d",
+      "ð̞",
+      ""
+    ],
+    "ɡ": [
+      "ɡ",
+      "ɣ",
+      ""
+    ],
+    "v": [
+      "v",
+      "β̞"
+    ],
+    "r": [
+      "ʁ",
+      "ɐ",
+      ""
+    ]
+  },
+  "parent": "da",
+  "notes": "Copenhagen Danish (rigsdansk) — the national standard. STØD: glottalisation / laryngealisation on etymologically long vowels and sonorant-final syllables — replaces the Nordic pitch accent. SOFT D: /d/ → [ð̞] (very weak approximant, almost zero) in common words: bide [ˈb̥iˀð̞ə], hund [hɔnˀ]. /r/ → [ɐ] before consonants; often deleted. Very strong reduction processes — Danish is notoriously difficult for Scandinavian learners due to extreme lenition. Source: Grønnum (1998).",
+  "quality": "skeleton",
+  "script_type": "alphabet",
+  "sources": [
+    {
+      "id": "basboll2005",
+      "author": "Basbøll, H.",
+      "year": 2005,
+      "title": "The Phonology of Danish",
+      "publisher": "Oxford University Press",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "gronnum2005",
+      "author": "Grønnum, N.",
+      "year": 2005,
+      "title": "Fonetik og fonologi: Almen og dansk",
+      "publisher": "Akademisk Forlag",
+      "url": null,
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Danish_phonology",
+    "https://da.wikipedia.org/wiki/Rigsdansk",
+    "https://da.wikipedia.org/wiki/Dansk_fonologi"
+  ],
+  "timespan": {
+    "start_year": 1700,
+    "end_year": null
+  },
+  "glottolog_code": null,
+  "iso639_3": "dan",
+  "wikidata_qid": "Q837073",
+  "location": {
+    "latitude": 55.676111,
+    "longitude": 12.568889,
+    "source": "wikidata",
+    "notes": "Copenhagen — the city rigsdansk is the speech of. [Wikidata Q1748 P625]"
+  }
+}

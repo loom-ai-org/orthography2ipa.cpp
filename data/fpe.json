@@ -1,0 +1,185 @@
+{
+  "code": "fpe",
+  "name": "Fernando Po Creole English",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "kp": [
+      "k͡p"
+    ],
+    "gb": [
+      "ɡ͡b"
+    ],
+    "ch": [
+      "tʃ"
+    ],
+    "sh": [
+      "ʃ"
+    ],
+    "ny": [
+      "ɲ"
+    ],
+    "ng": [
+      "ŋ"
+    ],
+    "a": [
+      "à"
+    ],
+    "e": [
+      "è"
+    ],
+    "ɛ": [
+      "ɛ̀"
+    ],
+    "i": [
+      "ì"
+    ],
+    "o": [
+      "ò"
+    ],
+    "ɔ": [
+      "ɔ̀"
+    ],
+    "u": [
+      "ù"
+    ],
+    "á": [
+      "á"
+    ],
+    "é": [
+      "é"
+    ],
+    "í": [
+      "í"
+    ],
+    "ó": [
+      "ó"
+    ],
+    "ú": [
+      "ú"
+    ],
+    "ɛ́": [
+      "ɛ́"
+    ],
+    "ɔ́": [
+      "ɔ́"
+    ],
+    "b": [
+      "b"
+    ],
+    "d": [
+      "d"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "h": [
+      "h"
+    ],
+    "j": [
+      "dʒ"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "v": [
+      "v"
+    ],
+    "w": [
+      "w"
+    ],
+    "y": [
+      "j"
+    ],
+    "z": [
+      "z"
+    ]
+  },
+  "parent": "gem-x-ingvaeonic",
+  "ancestors": [
+    {
+      "code": "gem-x-ingvaeonic",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Descent per Glottolog classification of Pichi (fern1234)."
+    },
+    {
+      "code": "en-GB",
+      "role": "lexifier",
+      "weight": 0.55,
+      "notes": "English lexifier, inherited via Krio: Pichi is a direct offshoot of the English-lexicon Krio of Sierra Leone, brought to Bioko by Krio settlers from Freetown in 1827 (Yakpo 2019; APiCS ch. 19)."
+    },
+    {
+      "code": "es-GQ",
+      "role": "adstrate",
+      "weight": 0.25,
+      "notes": "Spanish adstrate, the co-official and sole educational-medium language of Equatorial Guinea: ~50% of nouns, ~30% of verbs and ~62% of numerals in the Pichi corpus are of Spanish origin, and code-mixing with Spanish is pervasive (Yakpo 2019; APiCS ch. 19, apics-online.info/surveys/19)."
+    }
+  ],
+  "notes": "Research tier, consulting Yakpo's grammar of Pichi. English-lexifier Atlantic creole of Bioko (Equatorial Guinea), an offshoot of Krio, written in a Latin phonemic orthography. Grapheme map covers the seven-vowel system (a e ɛ i o ɔ u), the labial-velar stops kp/gb, and the digraphs ch, sh, ny and ng. Pichi contrasts two level tones, a high tone (H) and a low tone (L) (Yakpo 2019: 40, §3.1.1). No commonly accepted standard orthography is in use for Pichi (Yakpo 2019: 11, §1.6); marking tone on every word is the convention Yakpo adopts throughout his grammar, not a property of a settled working orthography. The seven H-toned vowel graphemes (á, é, í, ó, ú, ɛ́, ɔ́ — the last two written as base vowel plus combining acute, U+0301, since Latin has no precomposed ɛ́/ɔ́) are declared because the material transcribed in that convention carries them, and each maps to the identical H-toned IPA vowel. The plain vowel letters carry L tone, which the orthography leaves unmarked, and they map to grave-marked IPA vowels: L is unmarked in writing but not absent from the phonology, and a bare vowel would under-specify it. This is confirmed in the wikipron fpe gold, where all 261 words are fully toned — 249 carry at least one acute, 114 at least one grave, none carry neither, and of 1087 phone tokens the 391 vowel tokens split 259 H to 132 L with no untoned vowel at all.\n\nKnown gap: Yakpo (2019: 12, §1.6) ends the orthography section with 'Acute accents over Spanish words are orthographic, and hence not tone marks.' Spanish is the adstrate and supplies roughly half of Pichi nouns, so a Spanish-origin loan spelled with a stress acute should not receive H tone. This spec maps á é í ó ú to H unconditionally, because it has no lexicon with which to identify Spanish-origin words, so such loans are over-marked. The exception does not surface in the wikipron fpe gold: across all 261 words the acute count of the input string equals the H-tone count of the gold transcription in every row, giving zero counterexamples to measure against.",
+  "iso639_3": "fpe",
+  "glottolog_code": null,
+  "sources": [
+    {
+      "id": "fpe_glottolog",
+      "author": "Hammarström, H. et al. (Glottolog 5.0)",
+      "year": 2024,
+      "title": "Glottolog: Pichi (fern1234)",
+      "publisher": "Max Planck Institute for Evolutionary Anthropology",
+      "url": "https://glottolog.org/resource/languoid/id/fern1234",
+      "pages": null,
+      "notes": "Classification reference for a skeleton-tier entry.",
+      "wikipedia_url": null
+    },
+    {
+      "id": "fpe_yakpo2019",
+      "author": "Yakpo, Kofi",
+      "year": 2019,
+      "title": "A Grammar of Pichi",
+      "publisher": "Language Science Press (Studies in Diversity Linguistics 23)",
+      "url": "https://langsci-press.org/catalog/book/85",
+      "pages": "11-12, 40",
+      "notes": "pp. 11-12, §1.6 Standardisation and orthography: 'No commonly accepted standard orthography is in use for Pichi.' (p. 11) and 'Tone is marked on all Pichi words throughout this book. H-toned syllables bear an acute accent, e.g. wét [wét] ‘wait’, and L-toned syllables remain unmarked, e.g. wet [wèt] ‘with’.' followed by 'Acute accents over Spanish words are orthographic, and hence not tone marks.' (p. 12). Source for the acute-accent H-tone graphemes and for the Spanish-loan exception recorded as a gap. p. 40, §3.1.1 Distinctive tones: 'Pichi contrasts two level tones, a high tone (H) and a low tone (L).' Source for treating the orthographically unmarked vowels as L-toned rather than toneless.",
+      "wikipedia_url": null
+    },
+    {
+      "id": "fpe_apics2013",
+      "author": "Yakpo, Kofi",
+      "year": 2013,
+      "title": "Pichi (Survey chapter and structure dataset)",
+      "publisher": "In: Michaelis, S.M., Maurer, P., Haspelmath, M. & Huber, M. (eds.), Atlas of Pidgin and Creole Language Structures Online, chapter 19, Max Planck Institute for Evolutionary Anthropology",
+      "url": "https://apics-online.info/surveys/19",
+      "pages": null,
+      "notes": "English lexifier via Krio, Spanish adstrate figures (~50% nouns, ~30% verbs, ~62% numerals of Spanish origin), minor Bube substrate.",
+      "wikipedia_url": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Pichi_language"
+  ]
+}

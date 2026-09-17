@@ -1,0 +1,489 @@
+{
+  "code": "ar-x-gulf",
+  "name": "Proto-Gulf Arabic",
+  "script": "Arabic",
+  "word_exceptions": {
+    "سَاكِن": "saːkin"
+  },
+  "graphemes_base": "ar-x-peninsular",
+  "graphemes": {
+    "وَيْ": [
+      "weː"
+    ],
+    "يَوْ": [
+      "joː"
+    ],
+    "ث": [
+      "θ",
+      "t"
+    ],
+    "ذ": [
+      "ð",
+      "d"
+    ],
+    "ظ": [
+      "ðˤ"
+    ],
+    "ض": [
+      "ðˤ",
+      "dˤ"
+    ],
+    "ج": [
+      "dʒ",
+      "j"
+    ],
+    "ق": [
+      "ɡ",
+      "q"
+    ],
+    "ك": [
+      "k"
+    ],
+    "پ": [
+      "p"
+    ],
+    "ڤ": [
+      "v"
+    ],
+    "الثث": [
+      "aθθ",
+      "att"
+    ],
+    "اَلثث": [
+      "aθθ",
+      "att"
+    ],
+    "لِلثث": [
+      "liθθ",
+      "litt"
+    ],
+    "وَالثث": [
+      "waθθ",
+      "watt"
+    ],
+    "فَالثث": [
+      "faθθ",
+      "fatt"
+    ],
+    "بِالثث": [
+      "biθθ",
+      "bitt"
+    ],
+    "كَالثث": [
+      "kaθθ",
+      "katt"
+    ],
+    "الضض": [
+      "aðˤðˤ",
+      "adˤdˤ"
+    ],
+    "اَلضض": [
+      "aðˤðˤ",
+      "adˤdˤ"
+    ],
+    "لِلضض": [
+      "liðˤðˤ",
+      "lidˤdˤ"
+    ],
+    "وَالضض": [
+      "waðˤðˤ",
+      "wadˤdˤ"
+    ],
+    "فَالضض": [
+      "faðˤðˤ",
+      "fadˤdˤ"
+    ],
+    "بِالضض": [
+      "biðˤðˤ",
+      "bidˤdˤ"
+    ],
+    "كَالضض": [
+      "kaðˤðˤ",
+      "kadˤdˤ"
+    ],
+    "الظظ": [
+      "aðˤðˤ"
+    ],
+    "اَلظظ": [
+      "aðˤðˤ"
+    ],
+    "لِلظظ": [
+      "liðˤðˤ"
+    ],
+    "وَالظظ": [
+      "waðˤðˤ"
+    ],
+    "فَالظظ": [
+      "faðˤðˤ"
+    ],
+    "بِالظظ": [
+      "biðˤðˤ"
+    ],
+    "كَالظظ": [
+      "kaðˤðˤ"
+    ],
+    "اِلثث": [
+      "iθθ",
+      "itt"
+    ],
+    "اِلضض": [
+      "iðˤðˤ",
+      "idˤdˤ"
+    ],
+    "اِلظظ": [
+      "iðˤðˤ"
+    ],
+    "وِالثث": [
+      "wiθθ",
+      "witt"
+    ],
+    "وِالضض": [
+      "wiðˤðˤ",
+      "widˤdˤ"
+    ],
+    "وِالظظ": [
+      "wiðˤðˤ"
+    ],
+    "چ": [
+      "tʃ"
+    ],
+    "َو": [
+      "oː",
+      "aw"
+    ],
+    "َي": [
+      "eː",
+      "aj"
+    ],
+    "گ": [
+      "ɡ"
+    ],
+    "خ": [
+      "χ"
+    ],
+    "غ": [
+      "ʁ"
+    ],
+    "يو": [
+      "juː",
+      "joː",
+      "iːw"
+    ],
+    "وي": [
+      "wiː",
+      "weː",
+      "uːj"
+    ],
+    "ية": [
+      "ja",
+      "jat"
+    ],
+    "وة": [
+      "wa",
+      "wat"
+    ],
+    "وية": [
+      "uːja",
+      "wja"
+    ],
+    "يوة": [
+      "iːwa",
+      "eːwa",
+      "jwa"
+    ]
+  },
+  "allophones_base": "ar-x-peninsular",
+  "allophones": {
+    "q": [
+      "ɡ",
+      "q"
+    ],
+    "ɮˤ": [
+      "ðˤ",
+      "dˤ"
+    ],
+    "dʒ": [
+      "dʒ",
+      "j"
+    ],
+    "a": [
+      "a",
+      "æ"
+    ],
+    "aː": [
+      "aː",
+      "eː",
+      "æː"
+    ],
+    "p": [
+      "p"
+    ],
+    "v": [
+      "v"
+    ]
+  },
+  "allophone_rules": [
+    {
+      "id": "GULF_K_AFFRICATION",
+      "phonemes": [
+        "k"
+      ],
+      "surface": "tʃ",
+      "followed_by_phoneme": [
+        "i",
+        "iː"
+      ],
+      "notes": "Velar affrication (kashkasha): /k/ → [tʃ] adjacent to a high front vowel /i, iː/. Alshammari 2026 (JLTR 17(4):1333-1341), literature review p.1335: 'Mustafawi (2006, 2007) examines the affrication phenomenon of velar stops /k/ and /g/ in Qatari Arabic (QA)... She proposes that the velar stop undergoes affrication only in the stem when adjacent to the high front vowels /i/ or /i:/. Conversely, affrication is blocked by the presence of any other segments including front vowels that are [-high].' The general Gulf/Peninsular pattern (attributed there to Ingham 1994; Holes 1991) affricates /k/ to [tʃ] 'in the presence of front vowels'. LIMITATIONS: the alternation is historically lexicalised — per Johnstone (1967), as reported in Alshammari 2026 p.1335, velar affrication 'is clearly no longer productive in Eastern Arabic' and /tʃ/ has 'attained the status of an independent phoneme'. It is further blocked by adjacent emphatics and by the OCP near /s z/. This rule models only the regular onset case (following high front vowel); coda affrication (e.g. samak → simatʃ) and emphatic/OCP blocking are not modelled. LEXICALIZED-CLASS EXEMPTION: because the alternation is lexicalized rather than productive (Johnstone 1967, as reported in Alshammari 2026 p.1335), the rule's bare 'front-vowel adjacency' condition OVER-APPLIES to words that stand outside the affricating class — سَاكِن 'living/resident' keeps [saːkin], not *[saːtʃin] (arbitrated gold, both judges; Johnstone). Such items are carried as word_exceptions, since a purely phonological onset rule cannot see lexical class membership. Input contract: fully diacritised (tashkeel) Arabic, so the conditioning vowel is a written kasra/yāʔ."
+    },
+    {
+      "id": "GULF_G_AFFRICATION",
+      "phonemes": [
+        "ɡ"
+      ],
+      "surface": "dʒ",
+      "followed_by_phoneme": [
+        "i",
+        "iː"
+      ],
+      "notes": "Velar affrication of /ɡ/ (< Old Arabic *q, realised [ɡ] in Bedouin/sedentary Gulf) → [dʒ] adjacent to a high front vowel /i, iː/. Alshammari 2026 abstract (p.1333) and p.1335: 'the affrication of /g/ to [dz] coincides with what has been reported in other Arabic dialects, where the conditioning environment is strictly limited to high front vowels', and /ɡ/ 'requires a higher degree of vocalic frontness and height to undergo affrication, compared to its voiceless counterpart /k/'. Matar (1969), as reported there, finds Kuwaiti /ɡ/ → [dʒ] adjacent to front vowels, including the emphatic context ðˤiːg → ðˤiːdʒ 'tightness'. LIMITATIONS: Matar's non-adjacent trigger (a front vowel across an intervening /r, l/, e.g. qariːb → dʒiriːb) and emphatic/OCP effects are not modelled — only the adjacent following high-front-vowel case."
+    }
+  ],
+  "parent": "ar-x-peninsular",
+  "ancestors": [
+    {
+      "code": "ar-x-peninsular",
+      "role": "parent",
+      "weight": 0.9,
+      "notes": "Peninsular Arabic base — interdental retention and emphatic (pharyngealisation) spreading inherited via the AR_PEN_EMPH_* allophone rules."
+    }
+  ],
+  "notes": "Proto-Gulf Arabic (Khaleeji) — abstract ancestor node for Emirati (ar-AE), Bahraini (ar-BH), Kuwaiti (ar-KW) and Qatari (ar-QA); Omani (ar-OM) is genetically Peninsular and inherits ar-x-peninsular directly. DEFINING FEATURES modelled here and inherited by descendants via graphemes_base/OVERLAY_BY_ID: (1) Old Arabic *q → [ɡ] (Bedouin/sedentary Gulf), with [q] retained as a secondary MSA/formal candidate; (2) velar affrication /k/ → [tʃ] and /ɡ/(<*q) → [dʒ] adjacent to a high front vowel /i, iː/ (allophone_rules GULF_K_AFFRICATION, GULF_G_AFFRICATION); (3) the DAD/ZAH MERGER: ‹ض› and ‹ظ› both surface as the emphatic interdental [ðˤ], the stop [dˤ] being kept only as a rank-2 MSA/formal candidate; the ‹الضض› sun-letter assimilation keys carry the same two-candidate order. The wikipron afb gold writes ‹ض› as [ðˤ] in all 15 of its tokens and never as [dˤ], and ‹ظ› as [ðˤ] in all 5. Al Taisan 2019 transcribes ضغط 'pressure' as /ðˤɑʁtˤ/, an incidental attestation of the same reflex; the merger as a pan-Gulf statement rests on the descriptive grammars (Holes 1990; Qafisheh 1977, editions not consulted); (4) UVULAR FRICATIVES: ‹خ› → [χ] and ‹غ› → [ʁ] rather than the MSA velars [x ɣ] inherited from arb. Al Taisan 2019 transcribes ‹غ› as [ʁ] throughout its Hasawi data and names /χ/ the dialect's voiceless uvular fricative, with no velar fricative anywhere in the paper. The wikipron afb gold agrees: 35 of 36 ‹خ› tokens are [χ] against a single [x], and 17 of 20 ‹غ› tokens are [ʁ] against a single [ɣ]; (5) HAMZAT AL-WAṢL carries no glottal onset: word-initial bare ‹ا› spells a prosthetic vowel, not a consonant, so it maps to [i] and the arb rule AR_WASL_EPENTHESIS (which supplies [ʔi]) is bypassed. The orthography already distinguishes it from hamzat al-qaṭʿ ‹أ إ›, which keep their [ʔ] (Wright I §19-20; Ryding 2005 §2.10, as cited on the arb rule). The diacritised spellings ‹اِ ‹اُ ‹اَ carry the written vowel directly (اِسْم → [ism], اُكْتُب → [uktub]) so the vowel is not doubled, and word-internally all four keys fall back to the mater-lectionis reading [aː]. Of the 55 bare-alif-initial rows in the wikipron afb gold, exactly one is transcribed with an initial [ʔ] — the bare article ‹ال› itself, cited elsewhere in the same gold without it; (6) the DEFINITE ARTICLE raises MSA /al-/ to /il-/ (Holes 1990; Qafisheh 1977, editions not consulted). The wikipron afb gold has an [ɪ] article vowel in 10 of its 15 ‹ال›-initial rows, against one [ə] and one [a]. The raising is carried on the plain bare ‹ال› key, scoped to word-initial position via positional_graphemes because the inherited arb ‹ال› grapheme key also matches word-internal alif+lam (غالي), where the article reading is wrong. It is a property of the UNWRITTEN waṣl vowel, so it applies to that bare ‹ال› key only: where the orthography writes a vowel on the seat — ‹اَل›, and the proclitic spellings ‹وَال فَال كَال بِال› — that vowel is read as written, the same literal treatment the ‹اَ اِ اُ› keys already get under this spec's fully-diacritised input contract. The 14 sun-letter assimilation keys (‹التت الثث الدد الذذ الرر الزز السس الشش الصص الضض الطط الظظ اللل النن›) are a separate inheritance from arb and keep the /a/ seat unraised — the afb gold's single sun-letter article row, الشارقة, is transcribed with [a] — so raising the assimilated forms is left for a separate pass. The sandhi rule AR_GULF_WASL_IL_ARTICLE elides the article's /i/ after a vowel-final word (فِي الْمَدِينَة → fiː lmaˈdiːna), the Gulf counterpart of the inherited arb AR_HAMZAT_WASL_ARTICLE, which only sees an /a/ seat. This entry is PER-NEUTRAL on the afb gold (the gold's [ɪ] is one substitution away from either [i] or [a]) and is carried for descriptive accuracy, not for score; (7) interdentals /θ ð ðˤ/ RETAINED, unlike sedentary Levantine/Egyptian which merge them to stops/sibilants — a Bedouin-type retention (grapheme mappings for ث ذ ظ list the interdental first); (8) jiim /dʒ/ ~ [j] variation (glide realisation common in the eastern Gulf); (9) integrated /p/, /v/ from loanwords (پ, ڤ). Emphatic spreading (low vowels back to [ɑ]/[ɑː] next to /tˤ dˤ sˤ ðˤ zˤ/) is inherited from ar-x-peninsular (AR_PEN_EMPH_*). Input contract: fully diacritised (tashkeel) Arabic. Grounded in sources actually read: Al Taisan 2019 (Hasawi uvulars), Alshammari 2026 (velar affrication, whose literature review surveys Mustafawi's Qatari and Matar's Kuwaiti data), Al-Balushi 2016 (Omani/Eastern-Arabian reflexes), Szreder & Derrick 2023 (Emirati affricate variability). MONOPHTHONGIZATION: the node declares the ay/aw→[eː oː] merger as the rank-1 realization of the ⟨َي⟩/⟨َو⟩ digraphs (graphemes َي→[eː,aj], َو→[oː,aw]; Gulf ē/ō monophthongs per Holes, as reported in the affrication sources' literature reviews). TOKENIZATION NOTE (word-initial diphthong digraphs): word-initially the onset digraphs يَ→/ja/ and وَ→/wa/ claim the fatha before an /aj//aw/ atom can form, so ⟨وَيْ⟩ came out *[waj] (وَيْن *wajn) and ⟨يَوْ⟩ *[jaw]. The two sequences are therefore spelled out in `graphemes` as وَيْ→[weː] (وَيْن → weːn 'where') and يَوْ→[joː] (يَوْم → joːm 'day') — the same [eː oː] monophthong the ⟨َي⟩/⟨َو⟩ digraphs already carry, reached from the fuller spelling instead of from the atom, the device already used on ar-SY and on the Hejazi/Qassimi specs for their identical seam. The explicit sukūn in both keys keeps حَيَوان /ħajawaːn/ and يَوَدّ /jawadd/ — where the glide carries its own vowel and there is no diphthong — out of the rule; the leaf specs (ar-AE, ar-BH, ar-KW, ar-QA, ar-SA-x-sharqiyya) inherit these keys via graphemes_base. MEASURED UNDECIDABLE-INPUT CEILING. Not one of the 763 WikiPron afb_arab_broad input words carries a single ḥaraka — no fatḥa, ḍamma, kasra, tanwīn, shadda or sukūn occurs anywhere on the orthographic side of this gold — while the gold transcriptions are fully vocalised: 29.2% of their phoneme segments are short vowels. Deleting every short vowel from the gold and rescoring with the harness's own scorer gives PER 0.2439, which is what a spec that emitted perfect consonants and long vowels and simply omitted the short vowels would score, and is therefore the hard floor for this row. The board row stands at 0.4270, so about 18.3 PER points separate the score from the floor. That gap is rule error and is tractable; the floor itself is undecidable input that no grapheme table can recover. A gap above the floor is a defect hypothesis, not an excuse: Hebrew sat above its own floor for what looked like the same structural reason and the excess turned out to be a real defect, an unmapped geresh. That vocalisation and not the grapheme tables dominates the Arabic error is measured on the MSA row rather than inferred: ar scores PER 0.3139 on raw WikiPron and 0.1721 on the SAME gold with the input auto-diacritized (the wikipron_ar_diacritized row, wired in scripts/benchmark.py) — below the raw row's own consonant-only floor of 0.2476. Vocalisation is worth about 14 PER points there, more than any grapheme-table change could be worth. No dialect row has such a companion: the diacritized loader is registered for ar alone, and wiring one for this row is the single highest-value follow-up available to it. It has to be labelled restored-MSA input rather than native vocalisation — the restorer targets MSA and Classical Arabic, so what it writes onto dialect orthography is an MSA reading, and a row scored against it measures the spec plus that assumption. MATRES LECTIONIS AFTER A CONSONANT. ⟨و⟩ and ⟨ي⟩ after a consonant letter are read first as the long vowels [uː] and [iː], then [oː] and [eː], then the glides [w] and [j]; word-initially and after a vowel they stay glides. Wikipedia 'Mater lectionis', section Arabic: \"the almost invariable rule is that a long vowel is written with a mater lectionis and a short vowel with a diacritic symbol\". Wikipedia 'Gulf Arabic' (source gulf_arabic_wiki) states no spelling rule, but its examples write the letters beside IPA: طين /tˤiːn/ and صيف /sˤeːf/ (Vowels, Allophony); موج moːj and أبوك ʔʊˈbʊːt͡ʃ (Consonants, Allophony); the glide readings قهوة [ɡɑhwɑ] and عافية /ʕaːfja/ also occur, so the glides stay as candidates. Gold count (WikiPron afb_arab_broad, 763 lines, sha256 9e42c5cd…, byte-identical to the CUNY-CL upstream scrape). A row counts when the nearest preceding letter, skipping harakat and tatweel, is an Arabic-script letter other than ا و ي ى آ and other than a hamza carrier أ إ ؤ ئ ء; the letter test is the Unicode category rather than the 0620–064A range, so the integrated Perso-Arabic consonants پ and چ count. ⟨و⟩ 137 rows, ⟨ي⟩ 205 rows. Segments inside those rows, matched exactly rather than by substring: ⟨و⟩ uː 53, oː 38, w 27, plus 5 geminate wː; ⟨ي⟩ iː 56, eː 51, j 47, plus 7 geminate jː. Counting the geminate glides with the plain ones gives ⟨ي⟩ iː 56, j 54, eː 51, so the long-vowel-first reading is rank 1 under either tally while the order of eː and j is not decided by this gold. These are segment counts inside matching rows, not a per-letter alignment. The gain is a rank-1 effect. PER falls 0.4270 to 0.3786 while the top-3 oracle moves only 0.3399 to 0.3338 and top-5 0.3313 to 0.3199, so a consumer reading the full candidate list sees almost none of it and a consumer taking the first candidate sees all of it. The rule moves no descendant row: ar-AE, ar-BH, ar-KW, ar-QA, ar-SA-x-sharqiyya and ar-SA-x-dawasir score the same on every committed dataset. ADJACENT LETTERS AND THE FINAL TA MARBUTA. Read one letter at a time, the after_consonant rule made both letters of يو and وي long vowels (بيوت biːuːt), and it made ⟨و⟩ and ⟨ي⟩ before a final ة long vowels (قهوة with uː). The grapheme keys يو [juː, joː, iːw], وي [wiː, weː, uːj], ية [ja, jat], وة [wa, wat], وية [uːja, wja] and يوة [iːwa, eːwa, jwa] read the first of two adjacent letters as the glide, and a letter before a final ة as the glide. Gold count (WikiPron ar-x-gulf): 763 lines. After a consonant letter, the pair (row counts by the reading in the transcription): وي glide+long 2; وي other 1; يو glide+long 4; يو long+glide 2; يو other 1. Word-final after a consonant letter: وة glide 5; ية glide 4. Wikipedia 'Gulf Arabic' (source gulf_arabic_wiki), Vowels, Allophony, read 2026-09-13 in the raw wikitext: قهوة ('coffee') [ɡɑhwɑ] and عافية ('health') /ʕaːfja/, each with the glide before the final ة.",
+  "quality": "research",
+  "script_type": "abjad",
+  "sources": [
+    {
+      "id": "alshammari2026",
+      "author": "Alshammari, K. K.",
+      "year": 2026,
+      "title": "An Optimality-Theoretic Account of Velar Affrication in Northern Najdi Arabic",
+      "publisher": "Journal of Language Teaching and Research 17(4)",
+      "url": "https://doi.org/10.17507/jltr.1704.19",
+      "pages": "1333-1341",
+      "notes": "Read in full (open-access PDF). Northern Najdi study whose literature review (p.1335) surveys Gulf velar affrication: Mustafawi (2006, 2007) Qatari — /k/,/ɡ/ affricate only adjacent to high front /i, iː/, blocked by [-high] and emphatics/OCP; Matar (1969) Kuwaiti /ɡ/→[dʒ]; Johnstone (1967) affrication lexicalised in Eastern Arabic; Ingham (1994), Holes (1991) general Gulf."
+    },
+    {
+      "id": "albalushi2016",
+      "author": "Al-Balushi, R.",
+      "year": 2016,
+      "title": "Omani Arabic: More than a Dialect",
+      "publisher": "Macrolinguistics 4(1)",
+      "url": "https://macrolinguistics.nju.edu.cn/23/17/c27354a467735/page.htm",
+      "pages": "80-125",
+      "notes": "Read the phonology sections (pp. 85-90, open-access PDF). Documents Eastern Arabian /q/ reflexes (Bedouin [ɡ]; sedentary [q]; northern mountains [k]; Sur/Sohar [dʒ]), /k/→[tʃ] affrication Bedouin 'in the vicinity of front vowels' vs unconditional in sedentary (Holes 2013), jiim /dʒ/~[ɡ] variation, and interdental/emphatic retention."
+    },
+    {
+      "id": "szreder_derrick2023",
+      "author": "Szreder, M. & Derrick, D.",
+      "year": 2023,
+      "title": "Phonological conditioning of affricate variability in Emirati Arabic",
+      "publisher": "Journal of the International Phonetic Association",
+      "url": "https://doi.org/10.1017/S0025100323000166",
+      "pages": "54(1):146-164",
+      "notes": "Abstract and published summary read (full text paywalled — cited only for what was read). Finds the [k~tʃ] alternation is a completed phonemic change (lexicalised) while [dʒ~j] is a synchronic process; a nearby similar coronal obstruent inhibits the (voiced) [j] variant of the dʒ~j alternation, whereas /k/-affrication to [tʃ] is not inhibited by similar consonants."
+    },
+    {
+      "id": "altaisan2019",
+      "author": "Al Taisan, Huda Ahmed",
+      "year": 2019,
+      "title": "Uvulars Alternation in Hasawi Arabic: A Harmonic Serialism Approach",
+      "publisher": "International Journal of Cognitive and Language Sciences 13(9)",
+      "url": "https://doi.org/10.5281/zenodo.3461938",
+      "pages": null,
+      "notes": "Open-access paper, read in full. Hasawi Arabic is the dialect of al-Ahsa in the Eastern Province of Saudi Arabia, which the paper places inside the Gulf group. It is a study of the [q]~[ʁ] alternation, so its direct evidence here is the dorsal fricative inventory: ⟨غ⟩ is transcribed [ʁ] throughout the data, /χ/ is named as the dialect's voiceless uvular fricative in the harmonic-serialism derivations, and no velar fricative appears anywhere. Its transcription of ضغط 'pressure' as /ðˤɑʁtˤ/ attests ⟨ض⟩ as the emphatic interdental, though the paper makes no claim about the merger itself. It says nothing about the definite article."
+    },
+    {
+      "id": "holes1990",
+      "author": "Holes, Clive",
+      "year": 1990,
+      "title": "Gulf Arabic",
+      "publisher": "Routledge (Croom Helm Descriptive Grammars)",
+      "url": null,
+      "pages": null,
+      "notes": "Standard descriptive grammar of Gulf Arabic, cited author-year for the pan-Gulf reflexes it is the reference work for: the ض/ظ merger to [ðˤ], the uvular fricatives, the /il-/ definite article and the ē/ō monophthongs. Edition not consulted — no locators, and no wording is quoted from it."
+    },
+    {
+      "id": "qafisheh1977",
+      "author": "Qafisheh, Hamdi A.",
+      "year": 1977,
+      "title": "A Short Reference Grammar of Gulf Arabic",
+      "publisher": "University of Arizona Press",
+      "url": null,
+      "pages": null,
+      "notes": "Reference grammar of Gulf Arabic, cited author-year alongside Holes for the same pan-Gulf reflexes. Edition not consulted — no locators, and no wording is quoted from it."
+    },
+    {
+      "id": "gulf_arabic_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Gulf Arabic",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Gulf_Arabic",
+      "pages": null,
+      "notes": "Sections Consonants/Allophony and Vowels/Allophony, read 2026-09-13 in the raw wikitext. The examples there cite Holes 1990 pp. 264-5; Holes was not consulted.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Gulf_Arabic"
+    },
+    {
+      "id": "mater_lectionis_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Mater lectionis",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Mater_lectionis",
+      "pages": null,
+      "notes": "Section Arabic, read 2026-09-13: \"the almost invariable rule is that a long vowel is written with a mater lectionis and a short vowel with a diacritic symbol\".",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Mater_lectionis"
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Gulf_Arabic",
+    "https://ar.wikipedia.org/wiki/%D9%84%D9%87%D8%AC%D8%A9_%D8%AE%D9%84%D9%8A%D8%AC%D9%8A%D8%A9"
+  ],
+  "timespan": {
+    "start_year": 1400,
+    "end_year": null
+  },
+  "glottolog_code": "gulf1241",
+  "iso639_3": "afb",
+  "location": {
+    "latitude": 30.17,
+    "longitude": 47.5,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Gulf Arabic."
+  },
+  "optional_marks": [
+    "ً",
+    "ٌ",
+    "ٍ",
+    "َ",
+    "ُ",
+    "ِ",
+    "ّ",
+    "ْ",
+    "ٰ",
+    "ٓ"
+  ],
+  "stress": {
+    "default_position": -3,
+    "quantity_sensitive": true,
+    "superheavy_final_attracts": true,
+    "max_onset": 1,
+    "stress_mark": "ˈ",
+    "notes": "Arabic stress is QUANTITY-SENSITIVE: it falls on a syllable because that syllable is heavy, not because of any orthographic ending, so no ending table can express it. The cascade (Ryding, A Reference Grammar of MSA, CUP 2005, §2.3; Watson, The Phonology and Morphology of Arabic, OUP 2002, ch.3): a superheavy final syllable (CVːC/CVCC) takes the stress (kiˈtaːb); otherwise a heavy penult (CVː/CVC) does (muˈdarris); otherwise the antepenult (ˈmadrasa). max_onset=1 because Arabic onsets are obligatory and hold exactly one consonant — a medial cluster splits, closing the preceding syllable, and that boundary is what makes the penult of mudarris heavy. INPUT CONTRACT: weight is only recoverable from a complete transcription, so this requires diacritized input; an undiacritized skeleton has no vowels to weigh. The registered wikipron gold carries no stress marks, but the benchmark strips stress from both sides by default, so this costs no PER. Prosodic clitics: monosyllabic function words (negator maː, prepositions fiː/min/ʕan/ʕa/li/bi, vocative jaː, copula-negator muː/miʃ, conditional law/loː, wa-proclitic combinations) attach to a host and fall inside the host's stress domain, so they carry no word stress (Watson 2002, The Phonology and Morphology of Arabic, OUP, ch.3). Pan-Arabic class; the per-lect form list reflects the function words attested in this lect. Orthographic test — a clitic homograph (e.g. verb yā 'came') is destressed in every occurrence.",
+    "cliticless_words": [
+      "فِي",
+      "مَا",
+      "مُو",
+      "مِن",
+      "يَا"
+    ]
+  },
+  "positional_graphemes": {
+    "ا": {
+      "word_initial": [
+        "i",
+        "a"
+      ],
+      "default": [
+        "aː",
+        "ʔ"
+      ]
+    },
+    "ال": {
+      "word_initial": [
+        "il",
+        "al"
+      ],
+      "default": [
+        "al",
+        "a"
+      ]
+    },
+    "اِ": {
+      "word_initial": [
+        "i"
+      ],
+      "default": [
+        "aː"
+      ]
+    },
+    "اُ": {
+      "word_initial": [
+        "u"
+      ],
+      "default": [
+        "aː"
+      ]
+    },
+    "اَ": {
+      "word_initial": [
+        "a"
+      ],
+      "default": [
+        "aː"
+      ]
+    },
+    "و": {
+      "word_initial": [
+        "w"
+      ],
+      "after_vowel": [
+        "w"
+      ],
+      "after_consonant": [
+        "uː",
+        "oː",
+        "w"
+      ],
+      "default": [
+        "w",
+        "uː"
+      ]
+    },
+    "ي": {
+      "word_initial": [
+        "j"
+      ],
+      "after_vowel": [
+        "j"
+      ],
+      "after_consonant": [
+        "iː",
+        "eː",
+        "j"
+      ],
+      "default": [
+        "j",
+        "iː"
+      ]
+    }
+  },
+  "sandhi_rules": [
+    {
+      "id": "AR_GULF_WASL_IL_ARTICLE",
+      "name": "hamzat-al-wasl (il- article) elision",
+      "left_context": "[aiueoɑæə]ː?$",
+      "right_context": "^i(?=l)",
+      "transform": null,
+      "right_transform": "",
+      "obligatory": true,
+      "notes": "The Gulf article vowel elides after a vowel-final word exactly as the MSA /a/ does: فِي الْمَدِينَة → fiː lmaˈdiːna. The inherited arb rule AR_HAMZAT_WASL_ARTICLE only matches an /a/ seat, so the /il-/ article needs its own; the /i/ is deleted only before the article's /l/, which leaves i-initial words such as [ism] untouched."
+    }
+  ],
+  "audit": {
+    "wikipron": {
+      "conclusion": "input_limited",
+      "measured": "0 of 763 wikipron input words (afb_arab_broad.tsv) carry a haraka (short-vowel diacritic); Wiktionary files Arabic entries at the unvocalized page title (Wiktionary:About_Arabic / Wiktionary:Arabic_entry_guidelines, 'Entry name'), so the scraped input is a consonant-plus-long-vowel skeleton, exactly the pattern independently measured on the bare 'ar' wikipron row (0/17,563 words carry a haraka there; see ar.json audit.wikipron). No fold was run for this dialect row -- doing so needs the dialect's own vowel inventory, not MSA's -- so no valid_ceiling is recorded here; the wikipron_ar_diacritized loader (scripts/benchmark.py) that would supply it is wired for the 'ar' row only.",
+      "reference": "spec notes; see ar.json audit.wikipron for the measured MSA precedent"
+    }
+  }
+}

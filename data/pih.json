@@ -1,0 +1,91 @@
+{
+  "code": "pih",
+  "name": "Pitkern-Norfolk",
+  "family": "Creole",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "stub",
+  "graphemes": {},
+  "allophones": {},
+  "iso639_3": "pih",
+  "glottolog_code": "pitc1234",
+  "wikidata_qid": "Q36554",
+  "notes": "STUB (deliberate): the grapheme inventory of Pitkern-Norfolk is NOT specified. Pitkern (Pitcairn) / Norfuk (Norfolk Island) is an English-lexifier creole with a Tahitian substrate. English Wikipedia states outright that 'Pitkern spelling is not standardised', and the Norfuk article — while recording that Norfuk was made official by the 2004 Norfolk Island Language Act and that Alice Buffett & Donald Laycock produced a standardised orthography (Speak Norfuk Today, 1988), alongside Beryl Nobbs-Palmer's 1986 dictionary — still notes a lack of standardisation and contains NO letter->IPA table. Buffett's orthography is not available online, and the Omniglot chart is an image. The only IPA on record is A. C. Gimson's transcription of a 1951 Moverley dialogue, which is a text transcription, not a grapheme map. No map is claimed. INPUT CONTRACT (for any future spec): Latin-script Pitkern/Norfuk text, after ONE orthography (realistically Buffett 1988) is obtained and cited.",
+  "sources": [
+    {
+      "id": "pitkern_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Pitkern",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Pitkern",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Pitkern",
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "norfuk_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Norfuk language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Norfuk_language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Norfuk_language",
+      "pages": null,
+      "notes": "Standardisation history (Buffett & Laycock 1988; Nobbs-Palmer 1986; 2004 Language Act). Contains no letter->IPA table and still reports a lack of standardisation."
+    },
+    {
+      "id": "buffett_laycock1988",
+      "author": "Buffett, Alice & Laycock, Donald",
+      "year": 1988,
+      "title": "Speak Norfuk Today: An Encyclopaedia of the Norfolk Island Language",
+      "publisher": "Himii Publishing Company, Norfolk Island",
+      "url": null,
+      "pages": null,
+      "notes": "The only credible normative Norfuk orthography. Not available online; not consulted, so no grapheme map is derived from it."
+    },
+    {
+      "id": "holm1989",
+      "author": "Holm, John",
+      "year": 1989,
+      "title": "Pidgins and Creoles, Volume II: Reference Survey",
+      "publisher": "Cambridge University Press",
+      "url": null,
+      "pages": null,
+      "notes": "Reference survey of Atlantic and Pacific pidgins/creoles; lexifier and substrate attributions."
+    },
+    {
+      "id": "apics2013",
+      "author": "Michaelis, S.M., Maurer, P., Haspelmath, M. & Huber, M. (eds.)",
+      "year": 2013,
+      "title": "The Atlas of Pidgin and Creole Language Structures (APiCS)",
+      "publisher": "Oxford University Press",
+      "url": "https://apics-online.info/",
+      "pages": null,
+      "notes": "Structural atlas of 76 pidgins/creoles; per-language survey chapters cited in ancestry notes."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Pitkern"
+  ],
+  "location": {
+    "latitude": -24.379858,
+    "longitude": -128.324075,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Pitcairn-Norfolk."
+  },
+  "ancestors": [
+    {
+      "code": "en-GB",
+      "role": "lexifier",
+      "weight": 0.7,
+      "notes": "English (late-18th-century nautical English of the Bounty mutineers) lexifier; Pitkern-Norfolk. Buffett & Laycock (1988); APiCS ch. 24 (Mühlhäusler)."
+    },
+    {
+      "code": "ty",
+      "role": "substrate",
+      "weight": 0.2,
+      "notes": "Tahitian substrate (the mutineers' Tahitian partners): vowel system, phonotactics and lexical items. Buffett & Laycock (1988)."
+    }
+  ]
+}

@@ -1,0 +1,245 @@
+{
+ "code": "mas",
+ "name": "Masai",
+ "script": "Latin",
+ "quality": "skeleton",
+ "graphemes": {
+  "'": [
+   "ʔ"
+  ],
+  "a": [
+   "a"
+  ],
+  "b": [
+   "ɓ"
+  ],
+  "c": [
+   "c"
+  ],
+  "d": [
+   "ɗ"
+  ],
+  "e": [
+   "e"
+  ],
+  "g": [
+   "ɠ"
+  ],
+  "h": [
+   "h"
+  ],
+  "i": [
+   "i"
+  ],
+  "j": [
+   "ʄ"
+  ],
+  "k": [
+   "k"
+  ],
+  "l": [
+   "l"
+  ],
+  "m": [
+   "m"
+  ],
+  "n": [
+   "n"
+  ],
+  "ny": [
+   "ɲ"
+  ],
+  "o": [
+   "o"
+  ],
+  "p": [
+   "p"
+  ],
+  "r": [
+   "ɾ"
+  ],
+  "rr": [
+   "r"
+  ],
+  "s": [
+   "s"
+  ],
+  "sh": [
+   "ʃ"
+  ],
+  "t": [
+   "t"
+  ],
+  "u": [
+   "u"
+  ],
+  "w": [
+   "w"
+  ],
+  "wu": [
+   "wː"
+  ],
+  "y": [
+   "j"
+  ],
+  "yi": [
+   "jː"
+  ],
+  "ŋ": [
+   "ŋ"
+  ],
+  "ɔ": [
+   "ɔ"
+  ],
+  "ɛ": [
+   "ɛ"
+  ],
+  "ɨ": [
+   "ɪ"
+  ],
+  "ʉ": [
+   "ʊ"
+  ]
+ },
+ "allophones": {
+  "j": [
+   "j",
+   "j",
+   "ɪ̯"
+  ],
+  "jː": [
+   "jː",
+   "jː"
+  ],
+  "k": [
+   "ɡ",
+   "ɣ",
+   "k"
+  ],
+  "p": [
+   "β",
+   "b",
+   "p"
+  ],
+  "t": [
+   "d",
+   "ð",
+   "t",
+   "t"
+  ],
+  "t̠ʃ": [
+   "d̠ʒ",
+   "t̠ʃ"
+  ],
+  "w": [
+   "ʊ̯",
+   "w",
+   "w"
+  ],
+  "wː": [
+   "wː",
+   "wː"
+  ],
+  "ɾ": [
+   "ɾ",
+   "ɾ"
+  ],
+  "a": [
+   "ə",
+   "a"
+  ]
+ },
+ "notes": "Placed so the ancestry graph covers every living ISO 639-3 language. No orthography is claimed; the phoneme inventory follows the cited PHOIBLE inventory (which itself cites a published description): script is Zyyy (undetermined) until a cited description is encoded. Classification and coordinates follow Glottolog. Orthography from an Omniglot chart (c) Simon Ager, https://www.omniglot.com/, extracted via the AfriSpeech/africa-g2p compilation (mas.json). africa-g2p is a compilation tool, not the linguistic authority; the citation above is the original source it names.",
+ "iso639_3": "mas",
+ "glottolog_code": "masa1300",
+ "sources": [
+  {
+   "id": "glottolog2024",
+   "author": "Hammarström, Harald; Forkel, Robert; Haspelmath, Martin; Bank, Sebastian",
+   "year": 2024,
+   "title": "Glottolog 5.0",
+   "publisher": "Max Planck Institute for Evolutionary Anthropology",
+   "url": "https://glottolog.org/"
+  },
+  {
+   "id": "phoible2019",
+   "author": "Moran, Steven; McCloy, Daniel (eds.)",
+   "year": 2019,
+   "title": "PHOIBLE 2.0 (doi:10.5281/zenodo.2562766)",
+   "publisher": "Max Planck Institute for the Science of Human History",
+   "url": "https://phoible.org/inventories/view/154",
+   "notes": "Inventory 154 (spa), 39 non-marginal segments, 4 tones."
+  },
+  {
+   "id": "omniglot-maasai",
+   "author": "Ager, Simon",
+   "year": 2026,
+   "title": "Omniglot chart (maasai.xls)",
+   "publisher": "Omniglot",
+   "url": "https://www.omniglot.com/",
+   "notes": "Undated web chart; year is retrieval year, not publication year."
+  }
+ ],
+ "urls": [
+  "https://glottolog.org/resource/languoid/id/masa1300"
+ ],
+ "location": {
+  "latitude": -3.1419,
+  "longitude": 36.4573,
+  "source": "glottolog",
+  "notes": "Glottolog's representative point."
+ },
+ "parent": "x-clade-nilo1247",
+ "phonemes": [
+  "j",
+  "jː",
+  "k",
+  "l",
+  "m",
+  "n",
+  "p",
+  "r̥",
+  "s",
+  "t",
+  "t̠ʃ",
+  "w",
+  "wː",
+  "ŋ",
+  "ɓ",
+  "ɗ",
+  "ɠ",
+  "ɲ",
+  "ɾ",
+  "ʃ",
+  "ʄ",
+  "a",
+  "aː",
+  "e",
+  "eː",
+  "i",
+  "iː",
+  "o",
+  "oː",
+  "u",
+  "uː",
+  "ɔ",
+  "ɔː",
+  "ɛ",
+  "ɛː",
+  "ɪ",
+  "ɪː",
+  "ʊ",
+  "ʊː"
+ ],
+ "tone_inventory": {
+  "˥": "PHOIBLE tone segment",
+  "˥˩": "PHOIBLE tone segment",
+  "˧": "PHOIBLE tone segment",
+  "˩": "PHOIBLE tone segment"
+ },
+ "phoible_id": "154",
+ "script_type": "alphabet",
+ "wikipedia": [
+  "https://en.wikipedia.org/wiki/Masai_language"
+ ]
+}

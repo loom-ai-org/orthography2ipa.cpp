@@ -1,0 +1,174 @@
+{
+  "code": "lv",
+  "name": "Latvian",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "iso639_3": "lav",
+  "glottolog_code": "latv1249",
+  "timespan": {
+    "start_year": 1585,
+    "end_year": null
+  },
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "ā": [
+      "aː"
+    ],
+    "b": [
+      "b"
+    ],
+    "c": [
+      "ts"
+    ],
+    "č": [
+      "tʃ"
+    ],
+    "d": [
+      "d"
+    ],
+    "e": [
+      "ɛ"
+    ],
+    "ē": [
+      "ɛː"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "ģ": [
+      "ɟ"
+    ],
+    "h": [
+      "x"
+    ],
+    "i": [
+      "i"
+    ],
+    "ī": [
+      "iː"
+    ],
+    "j": [
+      "j"
+    ],
+    "k": [
+      "k"
+    ],
+    "ķ": [
+      "c"
+    ],
+    "l": [
+      "l"
+    ],
+    "ļ": [
+      "ʎ"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ņ": [
+      "ɲ"
+    ],
+    "o": [
+      "uo"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "š": [
+      "ʃ"
+    ],
+    "t": [
+      "t"
+    ],
+    "u": [
+      "u"
+    ],
+    "ū": [
+      "uː"
+    ],
+    "v": [
+      "v"
+    ],
+    "z": [
+      "z"
+    ],
+    "ž": [
+      "ʒ"
+    ]
+  },
+  "allophones": {},
+  "positional_graphemes": {},
+  "ancestors": [
+    {
+      "code": "ine",
+      "role": "proto_language",
+      "weight": 1.0,
+      "notes": "Descended from Proto-Indo-European via Proto-Baltic"
+    }
+  ],
+  "parent": "x-clade-east2280",
+  "notes": "Latvian (Lettish), Baltic language spoken in Latvia. Palatalised consonants marked with cedilla. Long vowels marked with macron. Three tone system (level, falling, broken).",
+  "sources": [
+    {
+      "id": "wiki-lv",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Latvian language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Latvian_language"
+    },
+    {
+      "id": "wiki-lv-phon",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Latvian phonology",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Latvian_phonology"
+    },
+    {
+      "id": "kalnaca_lokmane2021",
+      "author": "Kalnača, Andra; Lokmane, Ilze",
+      "year": 2021,
+      "title": "Latvian Grammar",
+      "publisher": "University of Latvia Press (open access)",
+      "url": "https://dspace.lu.lv/dspace/handle/7/54312",
+      "wikipedia_url": null,
+      "pages": "20-21",
+      "notes": "The letter-sound correspondence tables (pp. 20-21, prepared by Ilze Auziņa), read in full. They give every letter with an IPA value and an example: the palatals ⟨ģ ķ ļ ņ⟩ = ɟ c ʎ ɲ, ⟨c dz č dž⟩ = ts dz tʃ dʒ, ⟨š ž⟩ = ʃ ʒ, the macron as length, and the diphthongs ⟨ie⟩ = i͜e, ⟨ai au ei ui iu eu ou oi⟩. Three values there that this map should be checked against: ⟨o⟩ is ɔ, ɔː or the diphthong u͜o depending on the word (omārs, opera, ola), ⟨e ē⟩ are e/æ and eː/æː by the same word-level rule (ezis vs ezers), ⟨h⟩ is x and ⟨j⟩ is written ʝ. A reference grammar of morphology and syntax; the phonology is this table and a short section, not a phonological analysis."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Latvian_language",
+    "https://en.wikipedia.org/wiki/Latvian_phonology",
+    "https://lv.wikipedia.org/wiki/Latvie%C5%A1u_valoda"
+  ],
+  "stress": {
+    "default_position": 1,
+    "final_stress_endings": [],
+    "penult_stress_endings": [],
+    "marked_vowels": [],
+    "stress_mark": "ˈ",
+    "notes": "Latvian has initial stress in the vast majority of native words. Enclitics and some loanwords may shift stress, but for G2P purposes initial-stress is the reliable default. Long vowels (ā ē ī ū) and circumflex/falling tones (ar̃) mark quantity/tone, not stress position. Source: Nau (1998), Latvian; Wikipedia: https://en.wikipedia.org/wiki/Latvian_phonology"
+  },
+  "wikidata_qid": "Q9078",
+  "wals_code": "lat",
+  "location": {
+    "latitude": 56.826108,
+    "longitude": 24.309118,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Latvian."
+  }
+}

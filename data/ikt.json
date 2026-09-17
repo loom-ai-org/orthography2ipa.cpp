@@ -1,0 +1,95 @@
+{
+  "code": "ikt",
+  "name": "Inuinnaqtun",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "orthography_kind": "native",
+  "quality": "skeleton",
+  "graphemes": {
+    "p": ["p"],
+    "t": ["t"],
+    "k": ["k"],
+    "q": ["q"],
+    "g": ["ɡ"],
+    "v": ["v"],
+    "l": ["l"],
+    "j": ["j"],
+    "jj": ["dʒ"],
+    "m": ["m"],
+    "n": ["n"],
+    "ng": ["ŋ"],
+    "nng": ["ŋː"],
+    "r": ["ʁ"],
+    "h": ["h"],
+    "a": ["a"],
+    "i": ["i"],
+    "u": ["u"],
+    "aa": ["aː"],
+    "ii": ["iː"],
+    "uu": ["uː"],
+    "'": ["ʔ"]
+  },
+  "allophones": {},
+  "iso639_3": "ikt",
+  "glottolog_code": "copp1244",
+  "wikidata_qid": "Q28070",
+  "notes": "Inuinnaqtun, an Eskimo-Aleut language, a child variety of the Inuktitut macrolanguage (iu), spoken in the central Canadian Arctic (Kitikmeot region of Nunavut and the Inuvialuit Settlement Region of the NWT). Written in Latin (Roman) orthography except in Gjoa Haven, where Inuit syllabics (as for Natsilingmiutut) are used instead; only the Latin orthography is covered here, since a syllabics chart specific to the Gjoa Haven convention was not found with the same confidence. Three vowels /i u a/, each with a long counterpart written by doubling the letter. DISTINCTIVE MERGER: unlike most other Inuit varieties (including Eastern Canadian Inuktitut, `ike`), Inuinnaqtun has merged the historical *s and *ɬ phonemes into /h/ — there is no /s/ or /ɬ/ phoneme, and the language has one fewer consonant than dialects such as North Baffin Inuktitut that keep the three-way s/ɬ/h contrast (Compton 2008; Dorais 2010). ⟨j⟩ is the palatal approximant /j/; the geminate ⟨jj⟩ is described as sounding like 'd+j', i.e. the affricate /dʒ/, a documented gemination-triggered affrication parallel to the /ŋː/ realisation of geminate ⟨nng⟩. ⟨r⟩ and ⟨q⟩ are both back-of-the-throat sounds per pedagogical descriptions, consistent with the uvular fricative /ʁ/ and uvular stop /q/ attested elsewhere in Inuktitut. Consonant gemination beyond ⟨nng⟩/⟨jj⟩ (doubled ⟨pp⟩, ⟨tt⟩, ⟨kk⟩, etc.) is a productive orthographic doubling process and is not enumerated key-by-key here.",
+  "sources": [
+    {
+      "id": "inuinnaqtun_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Inuinnaqtun",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Inuinnaqtun",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Inuinnaqtun",
+      "pages": null,
+      "notes": "Writing system (Roman orthography vs. syllabics in Gjoa Haven), classification."
+    },
+    {
+      "id": "omniglot_inuinnaqtun",
+      "author": "Ager, Simon",
+      "year": 2024,
+      "title": "Inuinnaqtun language and alphabet",
+      "publisher": "Omniglot",
+      "url": "https://www.omniglot.com/writing/inuinnaqtun.htm",
+      "wikipedia_url": null,
+      "pages": null,
+      "notes": "Doubled-letter length convention (aa/nn/nng), ⟨j⟩ pronunciation, ⟨r⟩/⟨q⟩/⟨ł⟩ pronunciation descriptions, ⟨jj⟩ as 'd+j'."
+    },
+    {
+      "id": "compton2008",
+      "author": "Compton, Richard",
+      "year": 2008,
+      "title": "Contrast in Inuit Consonant Inventories",
+      "publisher": "Proceedings of the 2008 Canadian Linguistic Association Annual Conference",
+      "url": "https://cla-acl.ca/pdfs/actes-2008/CLA2008_Compton.pdf",
+      "wikipedia_url": null,
+      "pages": null,
+      "notes": "Documents the merger of Proto-Inuit *s and *ɬ into /h/ in Inuinnaqtun, giving it one fewer consonant than dialects that retain the three-way contrast."
+    },
+    {
+      "id": "dorais2010_ikt",
+      "author": "Dorais, Louis-Jacques",
+      "year": 2010,
+      "title": "The Language of the Inuit: Syntax, Semantics, and Society in the Arctic",
+      "publisher": "McGill-Queen's University Press",
+      "url": null,
+      "wikipedia_url": null,
+      "pages": null,
+      "notes": "Reference grammar covering pan-Inuit phonology and dialect variation, including Inuinnaqtun."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Inuinnaqtun"
+  ],
+  "parent": "iu",
+  "ancestors": [
+    {
+      "code": "iu",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Inuktitut macrolanguage — Inuinnaqtun is one of its constituent varieties, distinguished by the s/ɬ > h merger."
+    }
+  ]
+}

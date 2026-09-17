@@ -1,0 +1,68 @@
+{
+  "code": "mdh",
+  "name": "Maguindanaon",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "ng": ["ŋ"],
+    "a": ["a"],
+    "e": ["ə"],
+    "i": ["i"],
+    "u": ["u"],
+    "b": ["b"],
+    "d": ["d"],
+    "g": ["ɡ"],
+    "h": ["h"],
+    "j": ["dʒ"],
+    "k": ["k"],
+    "l": ["l"],
+    "m": ["m"],
+    "n": ["n"],
+    "p": ["p"],
+    "r": ["r"],
+    "s": ["s"],
+    "t": ["t"],
+    "w": ["w"],
+    "y": ["j"]
+  },
+  "parent": "x-clade-mala1545",
+  "ancestors": [
+    {
+      "code": "x-clade-mala1545",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Descent per Glottolog classification of Maguindanao (magu1243)."
+    }
+  ],
+  "notes": "Skeleton. Maguindanaon is a Danao (Greater Central Philippine) Austronesian language of Mindanao, written in a Latin alphabet. The grapheme map covers the consonant inventory plus the digraph ng for the velar nasal and the four-vowel system, with the letter e mapped to schwa (the historical pepet vowel). Vowels i and u have lower allophones ([e]/[o]) not distinguished in spelling. The phonemic glottal stop is not consistently written and is left unencoded, as are stress and any length. Arabic-loan consonants beyond the native set are omitted from this skeleton.",
+  "iso639_3": "mdh",
+  "glottolog_code": null,
+  "sources": [
+    {
+      "id": "mdh_glottolog",
+      "author": "Hammarström, H. et al. (Glottolog 5.0)",
+      "year": 2024,
+      "title": "Glottolog: Maguindanao (magu1243)",
+      "publisher": "Max Planck Institute for Evolutionary Anthropology",
+      "url": "https://glottolog.org/resource/languoid/id/magu1243",
+      "pages": null,
+      "notes": "Classification reference for a skeleton-tier entry.",
+      "wikipedia_url": null
+    },
+    {
+      "id": "mdh_wikipedia",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Maguindanao language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Maguindanao_language",
+      "pages": null,
+      "notes": "Phonology and orthography reference for the grapheme-to-IPA skeleton.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Maguindanao_language"
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Maguindanao_language"
+  ]
+}

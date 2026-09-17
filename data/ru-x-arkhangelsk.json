@@ -1,0 +1,63 @@
+{
+  "code": "ru-x-arkhangelsk",
+  "name": "Arkhangelsk Russian",
+  "script": "Cyrillic",
+  "graphemes_base": "ru-x-northern",
+  "allophones_base": "ru-x-northern",
+  "word_exceptions_base": "ru-x-northern",
+  "grammatical_endings_base": "ru-x-northern",
+  "parent": "ru-x-northern",
+  "notes": "Northern Russian, Arkhangelsk (Pomor) group. Полное оканье, soft 'lisping' цоканье (мягкое «шепелявое» цоканье — one affricate between [tsʲ] and [tɕ]), and plosive /г/ alternating with [k] word- and syllable-finally. All three are the Northern-group system this spec inherits from `ru-x-northern` unchanged; the intermediate 'lisping' quality of the Pomor affricate has no separate IPA symbol here and is written [tsʲ] with the rest of the Northern zone. Retained as a named code for the Pomor area; its distinctive material (Pomor lexicon, заударное ёканье, which the sources themselves hedge) is not grapheme-level and is not encoded. NEEDS SOURCING before this file diverges from its parent.",
+  "quality": "stub",
+  "script_type": "alphabet",
+  "sources": [
+    {
+      "id": "comrie_corbett1993",
+      "author": "Comrie, B. & Corbett, G. (eds.)",
+      "year": 1993,
+      "title": "The Slavonic Languages",
+      "publisher": "Routledge",
+      "url": null,
+      "pages": null,
+      "notes": null,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Slavic_languages"
+    },
+    {
+      "id": "timberlake2004",
+      "author": "Timberlake, A.",
+      "year": 2004,
+      "title": "A Reference Grammar of Russian",
+      "publisher": "Cambridge University Press",
+      "url": null,
+      "pages": null,
+      "notes": null,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Russian_phonology"
+    },
+    {
+      "id": "zalizniak1985",
+      "author": "Zalizniak, A.A.",
+      "year": 1985,
+      "title": "Ot praslavyanskoy aktsentovki k russkoy",
+      "publisher": "Nauka",
+      "url": null,
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Arkhangelsk",
+    "https://ru.wikipedia.org/wiki/%D0%9F%D0%BE%D0%BC%D0%BE%D1%80%D1%81%D0%BA%D0%B8%D0%B5_%D0%B3%D0%BE%D0%B2%D0%BE%D1%80%D1%8B"
+  ],
+  "timespan": {
+    "start_year": 1600,
+    "end_year": null
+  },
+  "glottolog_code": null,
+  "iso639_3": "rus",
+  "location": {
+    "latitude": 64.543056,
+    "longitude": 40.5375,
+    "source": "wikidata",
+    "notes": "Arkhangelsk — the city the Northern subtype is named for. [Wikidata Q1851 P625]"
+  }
+}

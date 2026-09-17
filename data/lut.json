@@ -1,0 +1,156 @@
+{
+  "code": "lut",
+  "name": "Lushootseed",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "kʷ": [
+      "kʷ"
+    ],
+    "xʷ": [
+      "xʷ"
+    ],
+    "gʷ": [
+      "ɡʷ"
+    ],
+    "qʷ": [
+      "qʷ"
+    ],
+    "č": [
+      "tʃ"
+    ],
+    "c": [
+      "ts"
+    ],
+    "š": [
+      "ʃ"
+    ],
+    "ƛ": [
+      "tɬ"
+    ],
+    "ɬ": [
+      "ɬ"
+    ],
+    "x̌": [
+      "χ"
+    ],
+    "b": [
+      "b"
+    ],
+    "d": [
+      "d"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "p": [
+      "p"
+    ],
+    "t": [
+      "t"
+    ],
+    "k": [
+      "k"
+    ],
+    "q": [
+      "q"
+    ],
+    "s": [
+      "s"
+    ],
+    "h": [
+      "h"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "l": [
+      "l"
+    ],
+    "w": [
+      "w"
+    ],
+    "y": [
+      "j"
+    ],
+    "ʔ": [
+      "ʔ"
+    ],
+    "ʼ": [
+      "ʼ"
+    ],
+    "a": [
+      "a"
+    ],
+    "i": [
+      "i"
+    ],
+    "u": [
+      "u"
+    ],
+    "ə": [
+      "ə"
+    ]
+  },
+  "parent": "x-clade-sali1255",
+  "ancestors": [
+    {
+      "code": "x-clade-sali1255",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Descent per Glottolog classification of Northern Lushootseed (lush1252)."
+    }
+  ],
+  "notes": "Research. Salishan language of Puget Sound, Washington, written in a near-phonemic Americanist orthography. Symbols are close to IPA: č=[tʃ], c=[ts], š=[ʃ], ƛ=[tɬ], ɬ, x̌=[χ], and labialized kʷ/xʷ/gʷ/qʷ are mapped, with ʔ for glottal stop. The modifier apostrophe ʼ marks ejective/glottalized consonants; because it is written as a separate following symbol its glottalization is not fused onto the preceding stop here, and predictable stress and schwa placement remain the main PER contributors. Grapheme table checked against Bates, Hess & Hilbert (1994): no discrepancy found.",
+  "iso639_3": "lut",
+  "glottolog_code": null,
+  "sources": [
+    {
+      "id": "lut_glottolog",
+      "author": "Hammarström, H. et al. (Glottolog 5.0)",
+      "year": 2024,
+      "title": "Glottolog: Northern Lushootseed (lush1252)",
+      "publisher": "Max Planck Institute for Evolutionary Anthropology",
+      "url": "https://glottolog.org/resource/languoid/id/lush1252",
+      "pages": null,
+      "notes": "Classification reference for a skeleton-tier entry.",
+      "wikipedia_url": null
+    },
+    {
+      "id": "bates_hess_hilbert1994",
+      "author": "Bates, Dawn; Hess, Thom; Hilbert, Vi",
+      "year": 1994,
+      "title": "Lushootseed Dictionary",
+      "publisher": "University of Washington Press",
+      "url": null,
+      "pages": null,
+      "notes": "Dictionary with phonological introduction, used to verify the grapheme table and to source the stress rule (leftmost full, non-schwa vowel of the stem takes primary stress in the Northern dialect this spec models).",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Lushootseed"
+    },
+    {
+      "id": "lut_orthography",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Lushootseed, Wikipedia",
+      "publisher": "Wikimedia Foundation",
+      "url": "https://en.wikipedia.org/wiki/Lushootseed",
+      "pages": null,
+      "notes": "Orthography/phonology reference for a skeleton-tier grapheme map.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Lushootseed"
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Lushootseed"
+  ],
+  "stress": {
+    "default_position": 1,
+    "quantity_sensitive": false,
+    "stress_mark": "ˈ",
+    "source": "rules",
+    "notes": "Northern Lushootseed (the dialect this spec models) assigns primary stress to the syllable containing the stem's first non-schwa (full) vowel, with the first syllable stressed by default when every vowel is schwa (Bates, Hess & Hilbert 1994; the Southern dialect instead defaults to the penult, which is NOT modelled here). `default_position=1` (first syllable) approximates this; it is exact when the first vowel is a full vowel and wrong when the word opens with one or more schwa syllables before the first full vowel — the schema has no 'skip schwa vowels' primitive, so that case is a documented, not silently-wrong, gap."
+  }
+}

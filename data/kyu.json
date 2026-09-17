@@ -1,0 +1,47 @@
+{
+  "code": "kyu",
+  "name": "Western Kayah",
+  "script": "Kayah Li",
+  "script_type": "alphabet",
+  "quality": "stub",
+  "graphemes": {},
+  "parent": "x-clade-sino1245",
+  "ancestors": [
+    {
+      "code": "x-clade-sino1245",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Descent per Glottolog classification of Western Kayah (west2409)."
+    }
+  ],
+  "notes": "Skeleton (lexicon-dependent). Western Kayah is a Karenic (Sino-Tibetan) language of Myanmar/Thailand written in the Kayah Li script, an alphabet-abugida with vowel and tone signs. Lexical tone, where present, is not orthographically recoverable. More fundamentally, grapheme-to-IPA for this script requires a per-word lexicon/pronunciation stratum that the engine does not bundle: syllable-final and stacked/sign-conditioned readings are not derivable letter-by-letter, so engine coverage is lexicon-dependent and effectively zero without that stratum. No grapheme map is asserted for this reason.",
+  "iso639_3": "kyu",
+  "glottolog_code": null,
+  "sources": [
+    {
+      "id": "kyu_glottolog",
+      "author": "Hammarström, H. et al. (Glottolog 5.0)",
+      "year": 2024,
+      "title": "Glottolog: Western Kayah (west2409)",
+      "publisher": "Max Planck Institute for Evolutionary Anthropology",
+      "url": "https://glottolog.org/resource/languoid/id/west2409",
+      "pages": null,
+      "notes": "Classification reference for a skeleton-tier entry.",
+      "wikipedia_url": null
+    },
+    {
+      "id": "kyu_wikipedia",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Kayah Li language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Kayah_Li_language",
+      "pages": null,
+      "notes": "Orthography/phonology reference for a skeleton-tier entry.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Kayah_Li_language"
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Kayah_Li_language"
+  ]
+}

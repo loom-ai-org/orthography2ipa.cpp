@@ -1,0 +1,777 @@
+{
+  "code": "gl",
+  "name": "Galician",
+  "script": "Latin",
+  "parent": "roa-x-galaicopt",
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "á": [
+      "a"
+    ],
+    "e": [
+      "e",
+      "ɛ"
+    ],
+    "é": [
+      "ɛ"
+    ],
+    "i": [
+      "i"
+    ],
+    "í": [
+      "i"
+    ],
+    "o": [
+      "o",
+      "ɔ"
+    ],
+    "ó": [
+      "ɔ"
+    ],
+    "u": [
+      "u"
+    ],
+    "ú": [
+      "u"
+    ],
+    "b": [
+      "b"
+    ],
+    "c": [
+      "k",
+      "θ"
+    ],
+    "ch": [
+      "tʃ"
+    ],
+    "d": [
+      "d"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "gu": [
+      "ɡ"
+    ],
+    "h": [
+      ""
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "ll": [
+      "ʎ"
+    ],
+    "lh": null,
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ñ": [
+      "ɲ"
+    ],
+    "nh": [
+      "ŋ"
+    ],
+    "p": [
+      "p"
+    ],
+    "q": [
+      "k"
+    ],
+    "qu": [
+      "k"
+    ],
+    "r": [
+      "ɾ"
+    ],
+    "rr": [
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "ss": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "v": [
+      "b"
+    ],
+    "w": [
+      "w"
+    ],
+    "x": [
+      "ʃ"
+    ],
+    "y": [
+      "j",
+      "i"
+    ],
+    "z": [
+      "θ"
+    ],
+    "ç": null,
+    "ai": [
+      "aj"
+    ],
+    "ei": [
+      "ej"
+    ],
+    "oi": [
+      "oj"
+    ],
+    "au": [
+      "aw"
+    ],
+    "eu": [
+      "ew"
+    ],
+    "ou": [
+      "ow"
+    ],
+    "ia": [
+      "ja"
+    ],
+    "ie": [
+      "je"
+    ],
+    "io": [
+      "jo"
+    ],
+    "ua": [
+      "wa"
+    ],
+    "ue": [
+      "we"
+    ],
+    "uo": [
+      "wo"
+    ],
+    "iu": [
+      "iw"
+    ],
+    "ui": [
+      "wi"
+    ],
+    "an": null,
+    "en": null,
+    "in": null,
+    "on": null,
+    "un": null,
+    "án": null,
+    "én": null,
+    "ín": null,
+    "ón": null,
+    "ún": null,
+    "ã": null,
+    "ão": null,
+    "ãi": null,
+    "ü": [
+      "w"
+    ],
+    "iá": [
+      "ja"
+    ],
+    "ié": [
+      "jɛ"
+    ],
+    "ió": [
+      "jɔ"
+    ],
+    "uá": [
+      "wa"
+    ],
+    "ué": [
+      "wɛ"
+    ],
+    "uó": [
+      "wɔ"
+    ]
+  },
+  "allophones": {
+    "p": [
+      "p"
+    ],
+    "b": [
+      "b",
+      "β"
+    ],
+    "t": [
+      "t"
+    ],
+    "d": [
+      "d",
+      "ð"
+    ],
+    "k": [
+      "k"
+    ],
+    "ɡ": [
+      "ɡ",
+      "ɣ"
+    ],
+    "tʃ": [
+      "tʃ"
+    ],
+    "f": [
+      "f"
+    ],
+    "s": [
+      "s̺"
+    ],
+    "z": [
+      "z"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "ʒ": [
+      "ʒ"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n",
+      "ŋ"
+    ],
+    "ɲ": [
+      "ɲ"
+    ],
+    "l": [
+      "l"
+    ],
+    "ʎ": [
+      "ʎ"
+    ],
+    "ɾ": [
+      "ɾ"
+    ],
+    "r": [
+      "r"
+    ],
+    "j": [
+      "j"
+    ],
+    "w": [
+      "w"
+    ],
+    "a": [
+      "a"
+    ],
+    "e": [
+      "e"
+    ],
+    "ɛ": [
+      "ɛ"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "o"
+    ],
+    "ɔ": [
+      "ɔ"
+    ],
+    "u": [
+      "u"
+    ],
+    "t͡s": null,
+    "d͡z": null,
+    "θ": [
+      "θ"
+    ],
+    "ŋ": [
+      "ŋ"
+    ]
+  },
+  "positional_graphemes": {
+    "b": {
+      "word_initial": [
+        "b"
+      ],
+      "intervocalic": [
+        "β"
+      ],
+      "default": [
+        "β"
+      ]
+    },
+    "d": {
+      "word_initial": [
+        "d"
+      ],
+      "intervocalic": [
+        "ð"
+      ],
+      "default": [
+        "ð"
+      ]
+    },
+    "g": {
+      "word_initial": [
+        "ɡ"
+      ],
+      "intervocalic": [
+        "ɣ"
+      ],
+      "default": [
+        "ɣ"
+      ]
+    },
+    "c": {
+      "before_e": [
+        "θ"
+      ],
+      "before_i": [
+        "θ"
+      ]
+    },
+    "r": {
+      "word_initial": [
+        "r"
+      ],
+      "intervocalic": [
+        "ɾ"
+      ],
+      "before_consonant": [
+        "ɾ"
+      ],
+      "word_final": [
+        "ɾ"
+      ]
+    },
+    "n": {
+      "before_consonant": [
+        "n",
+        "ŋ"
+      ],
+      "word_final": [
+        "ŋ"
+      ]
+    },
+    "l": {
+      "onset": [
+        "l"
+      ]
+    },
+    "gu": {
+      "before_a": [
+        "ɡw"
+      ],
+      "before_o": [
+        "ɡw"
+      ],
+      "before_e": [
+        "ɡ"
+      ],
+      "before_i": [
+        "ɡ"
+      ],
+      "default": [
+        "ɡ"
+      ]
+    },
+    "v": {
+      "word_initial": [
+        "b"
+      ],
+      "intervocalic": [
+        "β"
+      ],
+      "default": [
+        "β"
+      ]
+    }
+  },
+  "ancestors": [
+    {
+      "code": "roa-x-galaicopt",
+      "role": "parent",
+      "weight": 0.75,
+      "notes": "Galaico-Portuguese: the common ancestor. Galician diverged from Portuguese in the 14th c. after the Portuguese court moved to Lisbon and Galicia came under increasing Castilian political control."
+    },
+    {
+      "code": "cel-x-gallaecia",
+      "role": "substrate",
+      "weight": 0.05,
+      "notes": "Gallaecian Celtic substrate, strong in northwest Iberia. Possible influences on prosody and nasal vowel development."
+    },
+    {
+      "code": "ast-x-leon",
+      "role": "adstrate",
+      "weight": 0.08,
+      "notes": "Asturleonese/Leonese adstrate: after political separation from Portugal, Galicia remained within the Crown of Castile/León. Castilian/Leonese influence intensified throughout the late medieval and early modern period, contributing to: betacism (v→b), z=/z/ retention, ⟨ll⟩ and ⟨ñ⟩ orthographic conventions (Castilian over Portuguese lh/nh), and loss of some Galaico-Portuguese features."
+    },
+    {
+      "code": "gem-x-suebi",
+      "role": "superstrate",
+      "weight": 0.04,
+      "notes": "Suebi superstrate: inherited through Galaico-Portuguese, centered in Gallaecia."
+    },
+    {
+      "code": "got",
+      "role": "superstrate",
+      "weight": 0.03,
+      "notes": "Visigothic superstrate: shared pan-Iberian overlay."
+    },
+    {
+      "code": "xaa",
+      "role": "adstrate",
+      "weight": 0.02,
+      "notes": "Andalusi Arabic: limited contact in the north, some lexical items through Castilian intermediary."
+    },
+    {
+      "code": "oc",
+      "role": "adstrate",
+      "weight": 0.01,
+      "notes": "Occitan: troubadour influence on medieval Galician-Portuguese lyric poetry."
+    },
+    {
+      "code": "xlg",
+      "role": "substrate",
+      "weight": 0.02,
+      "notes": "Lusitanian substrate: pre-Celtic IE of western Iberia, inherited through Galaico-Portuguese."
+    }
+  ],
+  "notes": "Standard Galician (galego) per the Real Academia Galega (RAG) *Normas ortográficas e morfolóxicas do idioma galego* (2003, revised 2012). Spoken by ~2.4 million people in the Autonomous Community of Galicia (Spain) and diaspora communities. KEY FEATURES vs. Portuguese: (1) DISTINCIÓN (interdental /θ/): standard Galician HAS the phoneme /θ/ — ⟨c⟩ before e/i and ⟨z⟩ = /θ/ (as in Castilian; Portuguese has no interdental, using /s/ vs /z/). SESEO — the merger of /θ/ into a lamino-alveolar [s] (⟨c/z⟩ = /s/) — is a WESTERN/coastal DIALECTAL feature, NOT part of the RAG standard; see gl-x-occidental. Regueira (1996: 119) describes standard Galician with /θ/ and explicitly notes it does not show the dialectal seseo or gheada. (2) APICO-ALVEOLAR /s/ [s̺] like Castilian/Asturian (not Portuguese predorsal [s̻]). (3) BETACISM: ⟨b⟩ = ⟨v⟩ = /b/ (unlike Portuguese which preserves /v/ ≠ /b/). (4) ⟨ll⟩ = /ʎ/, ⟨ñ⟩ = /ɲ/ (Castilian orthographic conventions, not Portuguese ⟨lh⟩/⟨nh⟩). (5) ⟨ch⟩ = /tʃ/ (standard pronunciation; urban registers increasingly /ʃ/ under Portuguese/Spanish influence). (6) ⟨x⟩ = /ʃ/ — covers many words where Castilian uses ⟨j⟩/⟨ge,gi⟩ (e.g. 'xeneral' [ʃeneˈɾal] vs. Spanish 'general'). (7) NO VOWEL REDUCTION: unstressed /a/ stays [a] (not /ɐ/ as in Portuguese). (8) 7 oral vowel qualities in tonic position: /a, e, ɛ, i, o, ɔ, u/. (9) NASAL VOWELS word-finally (irmán [ɐ̃], corazón [õ]). (10) Preserves diphthongs: ou /ow/ ('cousa'), ei /ej/ ('leite'). KEY FEATURES vs. Asturian: standard Galician (like standard Asturian) has interdental /θ/; it lacks Leonese diphthongization of Latin Ĕ/Ŏ in the systematic way Asturleonese shows, and descends from Galaico-Portuguese not Asturleonese. Sources: Freixeiro Mato (2006) *Gramática da Lingua Galega*, Regueira (1996), Ferreiro (1997). LENITION: /b d ɡ/ (and ⟨v⟩, which spells /b/) are approximants [β ð ɣ] in every position except after a pause and after a nasal — including after a liquid, where Galician differs from Castilian in lenting /d/ too (Regueira 2010). The spec states this as the DEFAULT positional value plus the GL_STOP_AFTER_NASAL* blocking rules. DIPHTHONGS: the rising diphthongs ⟨ia ie io ua ue uo⟩ keep their glide when RAG spelling writes the stress accent on the open vowel (⟨iá ié ió uá ué uó⟩), while an accent on the HIGH vowel (⟨ía íe úa ...⟩) marks a hiatus and is therefore deliberately NOT listed. CAVEAT on that asymmetry: it is only a reliable hiatus signal where the accent is OPTIONAL. In an aguda word ending in ⟨-n⟩/⟨-s⟩/a vowel the RAG accentuation rules FORCE the written accent regardless of syllable count, so ⟨-ián⟩/⟨-ión⟩/⟨-iá⟩ spellings carry no aperture-or-hiatus information at all: the glide reading is right for the productive ⟨-ción⟩/⟨-sión⟩ type and for camión, cirurxián, but a residue of mostly toponymic lexemes is a genuine hiatus (Xián [ʃiˈaŋ], Brión, Requián, Gundián, and the common nouns gorrión, folión, mión) and is lexical — a word-exception candidate, not a rule this spec can state; ⟨iu⟩ is a falling diphthong [iw] (viu, partiu), not [ju] (Freixeiro Mato 1998 I; RAG Normas). ⟨ü⟩ spells the [w] of ⟨güe/güi⟩ and is mapped as its own grapheme rather than as ⟨güe⟩/⟨güi⟩ digraph keys, so the ⟨g⟩ keeps its own positional lenition (ambigüidade [ambiɣwiˈðaðe]).",
+  "sources": [
+    {
+      "id": "freixeiro_mato1998",
+      "author": "Freixeiro Mato, X.R.",
+      "year": 1998,
+      "title": "Gramática da Lingua Galega",
+      "publisher": "A Nosa Terra",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "mateus_dandrade2000",
+      "author": "Mateus, M.H.M. & d'Andrade, E.",
+      "year": 2000,
+      "title": "The Phonology of Portuguese",
+      "publisher": "Oxford University Press",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "carballo_calero1979",
+      "author": "Carballo Calero, R.",
+      "year": 1979,
+      "title": "Gramática elemental del gallego común (7th ed.)",
+      "publisher": "Galaxia",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "regueira1996",
+      "author": "Regueira, X.L.",
+      "year": 1996,
+      "title": "Galician (Illustrations of the IPA)",
+      "publisher": "Journal of the International Phonetic Association 26(2)",
+      "url": "https://www.cambridge.org/core/journals/journal-of-the-international-phonetic-association/article/galician/12F7CB857C4D8CD3B8634FBD250580CF",
+      "pages": "119-122",
+      "notes": "Standard Galician illustration. p.119: consonant inventory includes interdental /θ/; states standard Galician does not show the western-dialectal seseo (/θ/,/ʃ/ merged to [s]) or gheada (/ɡ/→[h~x~χ]). Confirms distinción is the standard, seseo is dialectal."
+    },
+    {
+      "id": "cotovia_gtm_uvigo",
+      "author": "Gamallo, P., Regueira, X.L. & others",
+      "year": 2012,
+      "title": "Cotovia TTS System (GTM, Universidade de Vigo)",
+      "publisher": "GTM — Universidade de Vigo",
+      "url": null,
+      "pages": null,
+      "notes": "Stress rules derived from the Cotovia front-end acentuar_prosodicamente() implementation (sil_acen.cpp)."
+    },
+    {
+      "id": "regueira2010",
+      "author": "Regueira, X.L.",
+      "year": 2010,
+      "title": "Dicionario de pronuncia da lingua galega",
+      "publisher": "Real Academia Galega / Instituto da Lingua Galega",
+      "url": "https://ilg.usc.gal/pronuncia/",
+      "pages": null,
+      "notes": "The reference pronouncing dictionary for standard Galician. Introduction describes: (a) the lenition of /b d ɡ/ to the approximants [β ð ɣ] in every position except after a pause and after a nasal — unlike Castilian, /d/ lenites after /l/ too; (b) nasal place assimilation, with the coda nasal taking the place of the following consonant and the word-final nasal realised velar [ŋ]; (c) the absence of the open mid vowel /ɔ/ before a tautosyllabic nasal, where only close [o] occurs."
+    },
+    {
+      "id": "freixeiro_mato1998_fonetica",
+      "author": "Freixeiro Mato, X.R.",
+      "year": 1998,
+      "title": "Gramática da lingua galega I: Fonética e fonoloxía",
+      "publisher": "A Nosa Terra",
+      "url": null,
+      "pages": null,
+      "notes": "Volume I of the grammar (the phonetics/phonology volume). Chapters on the vowel system (tonic aperture; mid vowels before nasals), the diphthongs (⟨ia ie io ua ue uo⟩ rising, ⟨ai ei oi ui au eu ou iu⟩ falling — ⟨iu⟩ is decrescente [iw]), the consonant system (lenition of the voiced obstruents; the trill after heterosyllabic /l n s/) and nasal assimilation."
+    },
+    {
+      "id": "alvarez_xove2002",
+      "author": "Álvarez, R. & Xove, X.",
+      "year": 2002,
+      "title": "Gramática da lingua galega",
+      "publisher": "Galaxia",
+      "url": null,
+      "pages": null,
+      "notes": "Standard reference grammar; the phonetics/phonology introduction states the same lenition, nasal-assimilation and diphthong inventories."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Galician_language",
+    "https://gl.wikipedia.org/wiki/Lingua_galega",
+    "https://es.wikipedia.org/wiki/Idioma_gallego"
+  ],
+  "timespan": {
+    "start_year": 1300,
+    "end_year": null
+  },
+  "glottolog_code": "gali1258",
+  "iso639_3": "glg",
+  "quality": "research",
+  "stress": {
+    "onset_clusters": ["bl", "br", "bɫ", "bɾ", "bʀ", "bʁ", "bʎ", "bχ", "dr", "dɾ", "dʀ", "dʁ", "dʎ", "dχ", "fl", "fr", "fɫ", "fɾ", "fʀ", "fʁ", "fʎ", "fχ", "kl", "kr", "kɫ", "kɾ", "kʀ", "kʁ", "kʎ", "kχ", "pl", "pr", "pɫ", "pɾ", "pʀ", "pʁ", "pʎ", "pχ", "tr", "tɾ", "tʀ", "tʁ", "tʎ", "tχ", "vl", "vr", "vɫ", "vɾ", "vʀ", "vʁ", "vʎ", "vχ", "ðr", "ðɾ", "ðʀ", "ðʁ", "ðʎ", "ðχ", "ɡl", "ɡr", "ɡɫ", "ɡɾ", "ɡʀ", "ɡʁ", "ɡʎ", "ɡχ", "ɣl", "ɣr", "ɣɫ", "ɣɾ", "ɣʀ", "ɣʁ", "ɣʎ", "ɣχ", "βl", "βr", "βɫ", "βɾ", "βʀ", "βʁ", "βʎ", "βχ"],
+    "cliticless_words": [
+      "o",
+      "a",
+      "os",
+      "as",
+      "un",
+      "unha",
+      "uns",
+      "unhas",
+      "ao",
+      "aos",
+      "do",
+      "da",
+      "dos",
+      "das",
+      "no",
+      "na",
+      "nos",
+      "nas",
+      "co",
+      "coa",
+      "cos",
+      "coas",
+      "de",
+      "en",
+      "con",
+      "por",
+      "sen",
+      "para",
+      "e",
+      "ou",
+      "nin",
+      "que",
+      "se",
+      "mais",
+      "me",
+      "te",
+      "lle",
+      "lles",
+      "vos",
+      "che",
+      "llo",
+      "lla"
+    ],
+    "default_position": -2,
+    "final_stress_endings": [
+      "r",
+      "l",
+      "z",
+      "x",
+      "d"
+    ],
+    "penult_stress_endings": [
+      "n",
+      "s",
+      "ns"
+    ],
+    "marked_vowels": [
+      "á",
+      "é",
+      "í",
+      "ó",
+      "ú"
+    ],
+    "stress_mark": "ˈ",
+    "notes": "Galician accentuation as implemented in the Cotovia front-end (GTM, Universidade de Vigo): written accent wins; words ending in a vowel, -n or -s are paroxytone (casa, cantan, casas); words ending in any other consonant (r l z x d) are oxytone (falar, azul, rapaz). CLITICS: cliticless_words lists the Galician palabras atonas (Freixeiro Mato 1998, Gramatica da lingua galega, prosodia; RAG/ILG Normas; Regueira 1996) — the articles o/a/os/as, indefinite un/unha(+plurals), the preposition+article contractions ao/do/no/co (and variants), the atonic prepositions de/en/con/por/sen/a/para, the conjunctions e/ou/nin/que/se/mais, and the weak pronouns me/te/se/lle/lles/nos/vos/o/a/os/as/che and combined forms. The polo/pola contractions are TONIC and are deliberately excluded (they bear stress: pola [ˈpɔla])."
+  },
+  "orthography_standard": {
+    "name": "Normas ortográficas e morfolóxicas do idioma galego",
+    "authority": "Real Academia Galega / Instituto da Lingua Galega",
+    "year": 2012,
+    "url": "https://academia.gal/documents/10157/704901/Normas+ortogr%C3%A1ficas+e+morfol%C3%B3xicas+do+idioma+galego.pdf",
+    "notes": "23rd edition (revised). Defines the standard spelling; seseo and gheada are dialectal, not normative."
+  },
+  "wikidata_qid": "Q9307",
+  "phoible_id": "gali1258",
+  "wals_code": "glc",
+  "location": {
+    "latitude": 42.2446,
+    "longitude": -7.5343,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Galician."
+  },
+  "allophone_rules": [
+    {
+      "id": "GL_OPEN_O",
+      "phonemes": [
+        "o"
+      ],
+      "surface": "ɔ",
+      "stress": "stressed",
+      "word": [
+        "corre",
+        "corren",
+        "pola",
+        "polas"
+      ],
+      "notes": "Galician tonic ⟨o⟩ is open-mid [ɔ] in these lexemes, unmarked in RAG spelling (⟨ó⟩ is not written on them): corre [ˈkɔre], the tonic contraction pola [ˈpɔla] (Regueira 1996; Freixeiro Mato 1998; the gl-015 arbitration). Pins ONLY the stressed vowel; 'pola' is tonic (declared outside cliticless_words) so it also keeps its stress mark."
+    },
+    {
+      "id": "GL_STOP_AFTER_NASAL",
+      "phonemes": [
+        "β"
+      ],
+      "surface": "b",
+      "preceded_by": "coda_nasal",
+      "notes": "Galician /b/ is an approximant [β] in every position except utterance-initially and after a nasal (Regueira 2010, introduction; Freixeiro Mato 1998 I, consonant system; Álvarez & Xove 2002). The spec states the lenited value as the DEFAULT for ⟨b⟩/⟨v⟩ and this rule restores the stop after the nasal. IMPLEMENTATION SCOPE: the other blocking context is stated as WORD_INITIAL, not 'after a pause' — the engine transcribes one word at a time and has no utterance-boundary context here, so a word-initial ⟨b⟩ is always a stop even where connected speech would lenite it after a preceding vowel. No cross-word sandhi lenition is claimed or implemented. ⟨v⟩ is not a separate phoneme in Galician — RAG *Normas* keep it as a purely etymological spelling of /b/ — so it takes the identical treatment. Counter-cases: ambos [ˈambos], benvida [bemˈbiða] keep the stop; abla [ˈaβla], Albor [alˈβoɾ], biosbardo [bjosˈβaɾðo] lenite after a non-nasal."
+    },
+    {
+      "id": "GL_STOP_AFTER_NASAL_D",
+      "phonemes": [
+        "ð"
+      ],
+      "surface": "d",
+      "preceded_by": "coda_nasal",
+      "notes": "Same process for /d/ (Regueira 2010). NOTE the Galician-vs-Castilian difference the same source records: /d/ lenites after /l/ in Galician (Pardal [paɾˈðal], caldo [ˈkalðo]), so only the nasal blocks it."
+    },
+    {
+      "id": "GL_STOP_AFTER_NASAL_G",
+      "phonemes": [
+        "ɣ"
+      ],
+      "surface": "ɡ",
+      "preceded_by": "coda_nasal",
+      "notes": "Same process for /ɡ/ (Regueira 2010; Freixeiro Mato 1998 I). Counter-cases: tango [ˈtaŋɡo], ninguén [niŋˈɡeŋ] keep the stop after the nasal; Fidalgo [fiˈðalɣo], acerga [aˈθeɾɣa] lenite after a liquid."
+    },
+    {
+      "id": "GL_NASAL_VELAR",
+      "phonemes": [
+        "n"
+      ],
+      "surface": "ŋ",
+      "followed_by_phoneme": [
+        "k",
+        "ɡ",
+        "ɣ",
+        "x"
+      ],
+      "notes": "Nasal place assimilation: a coda nasal takes the place of the following consonant, so /n/ before a velar is [ŋ] — Angumil [aŋɡuˈmil], abanca [aˈβaŋka] (Regueira 2010; Freixeiro Mato 1998 I; Álvarez & Xove 2002). Keyed on the FOLLOWING SLOT's phoneme, not on a spelling, so it fires for ⟨nc⟩, ⟨ng⟩ and the lenited [ɣ] alike."
+    },
+    {
+      "id": "GL_NASAL_LABIAL",
+      "phonemes": [
+        "n"
+      ],
+      "surface": "m",
+      "followed_by_phoneme": [
+        "p",
+        "b",
+        "β",
+        "m"
+      ],
+      "notes": "The labial half of the same assimilation: /n/ before a labial is [m] — benvida [bemˈbiða], circunvalar [θiɾkumbaˈlaɾ] (Regueira 2010; Freixeiro Mato 1998 I)."
+    },
+    {
+      "id": "GL_NASAL_FINAL_NS",
+      "phonemes": [
+        "n"
+      ],
+      "surface": "ŋ",
+      "followed_by_phoneme": [
+        "s"
+      ],
+      "followed_by_2": "word_boundary",
+      "notes": "Galician word-final ⟨-n⟩ is velar [ŋ] (already stated in positional_graphemes) and KEEPS that velar articulation in the plural ⟨-ns⟩, where the /s/ is a following suffix, not a syllable-mate that could re-place it: Bertamiráns [beɾtamiˈɾaŋs], montóns [monˈtoŋs] (Regueira 2010; Freixeiro Mato 1998 I). Gated on the ⟨s⟩ being word-final so word-internal ⟨ns⟩ (consenso, inserir) is untouched."
+    },
+    {
+      "id": "GL_RAISE_O_BEFORE_NASAL",
+      "phonemes": [
+        "ɔ"
+      ],
+      "surface": "o",
+      "followed_by": "coda_nasal",
+      "notes": "Galician has no open /ɔ/ before a tautosyllabic nasal: a tonic ⟨o⟩/⟨ó⟩ closed by a nasal coda is close [o] — Antón [anˈtoŋ], camión [kaˈmjoŋ], aberración [aβeraˈθjoŋ] (Regueira 2010, vowel system; Freixeiro Mato 1998 I, tonic vowels before nasals). The gate is the CODA nasal, so a heterosyllabic onset nasal leaves the open vowel alone: cómodo [ˈkɔmoðo]. The mirror-image raising of /ɛ/ is NOT stated — Galician does keep open [ɛ] before a nasal coda (ben [bɛŋ], quen [kɛŋ]) — and the gold confirms it (see the PR's refuted section).",
+      "followed_by_phoneme": [
+        "n",
+        "m",
+        "ŋ",
+        "ɲ"
+      ]
+    },
+    {
+      "id": "GL_TRILL_AFTER_L_N_S",
+      "phonemes": [
+        "ɾ"
+      ],
+      "surface": "r",
+      "preceded_by_phoneme": [
+        "l",
+        "n",
+        "s",
+        "ŋ"
+      ],
+      "notes": "The rhotic is the trill /r/, not the tap, after a heterosyllabic /l n s/: alroto [alˈroto], bulra [ˈbulra], honra [ˈonra] (Freixeiro Mato 1998 I, the rhotics; Álvarez & Xove 2002). Keyed on the preceding SLOT's phoneme, so a tautosyllabic onset cluster is never touched: tres [ˈtɾes], pobre [ˈpoβɾe]."
+    },
+    {
+      "id": "GL_STOP_BEFORE_IDENTICAL_B",
+      "phonemes": [
+        "β"
+      ],
+      "surface": "b",
+      "followed_by_phoneme": [
+        "β"
+      ],
+      "notes": "An approximant is not a possible first member of a cluster of two IDENTICAL voiced obstruents: the lenited realisation is the continuant-adjacent one, so the syllable-final member of ⟨bv⟩/⟨bb⟩ keeps its stop articulation and the cluster surfaces [b]+[β], never [ββ] (Regueira 2010, introduction, on the distribution of the approximants; Freixeiro Mato 1998 I, the voiced obstruents). Note this is NARROWER than 'before any obstruent': lenition does apply across a heterorganic obstruent cluster — abdome [aβˈðome], adventista [aðβenˈtista]."
+    },
+    {
+      "id": "GL_STOP_BEFORE_IDENTICAL_D",
+      "phonemes": [
+        "ð"
+      ],
+      "surface": "d",
+      "followed_by_phoneme": [
+        "ð"
+      ],
+      "notes": "An approximant is not a possible first member of a cluster of two IDENTICAL voiced obstruents: the lenited realisation is the continuant-adjacent one, so the syllable-final member of ⟨dd⟩ and morpheme-boundary ⟨d+d⟩ sequences keeps its stop articulation and the cluster surfaces [d]+[ð], never [ββ] (Regueira 2010, introduction, on the distribution of the approximants; Freixeiro Mato 1998 I, the voiced obstruents). Note this is NARROWER than 'before any obstruent': lenition does apply across a heterorganic obstruent cluster — abdome [aβˈðome], adventista [aðβenˈtista]."
+    },
+    {
+      "id": "GL_STOP_BEFORE_IDENTICAL_G",
+      "phonemes": [
+        "ɣ"
+      ],
+      "surface": "ɡ",
+      "followed_by_phoneme": [
+        "ɣ"
+      ],
+      "notes": "An approximant is not a possible first member of a cluster of two IDENTICAL voiced obstruents: the lenited realisation is the continuant-adjacent one, so the syllable-final member of ⟨gg⟩ and morpheme-boundary ⟨g+g⟩ sequences keeps its stop articulation and the cluster surfaces [ɡ]+[ɣ], never [ββ] (Regueira 2010, introduction, on the distribution of the approximants; Freixeiro Mato 1998 I, the voiced obstruents). Note this is NARROWER than 'before any obstruent': lenition does apply across a heterorganic obstruent cluster — abdome [aβˈðome], adventista [aðβenˈtista]."
+    }
+  ]
+}

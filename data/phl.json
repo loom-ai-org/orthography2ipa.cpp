@@ -1,0 +1,213 @@
+{
+  "code": "phl",
+  "name": "Phalura",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "gh": [
+      "ɡʰ"
+    ],
+    "kh": [
+      "kʰ"
+    ],
+    "ph": [
+      "pʰ"
+    ],
+    "th": [
+      "tʰ"
+    ],
+    "ch": [
+      "tʃʰ"
+    ],
+    "bh": [
+      "bʰ"
+    ],
+    "dh": [
+      "dʰ"
+    ],
+    "jh": [
+      "dʒʰ"
+    ],
+    "aa": [
+      "aː"
+    ],
+    "ii": [
+      "iː"
+    ],
+    "uu": [
+      "uː"
+    ],
+    "ee": [
+      "eː"
+    ],
+    "oo": [
+      "oː"
+    ],
+    "á": [
+      "a"
+    ],
+    "í": [
+      "i"
+    ],
+    "ú": [
+      "u"
+    ],
+    "é": [
+      "e"
+    ],
+    "ó": [
+      "o"
+    ],
+    "a": [
+      "a"
+    ],
+    "i": [
+      "i"
+    ],
+    "u": [
+      "u"
+    ],
+    "e": [
+      "e"
+    ],
+    "o": [
+      "o"
+    ],
+    "ṛ": [
+      "ɽ"
+    ],
+    "ṭ": [
+      "ʈ"
+    ],
+    "ḍ": [
+      "ɖ"
+    ],
+    "ṇ": [
+      "ɳ"
+    ],
+    "ṣ": [
+      "ʂ"
+    ],
+    "c̣": [
+      "ʈʂ"
+    ],
+    "č": [
+      "tɕ"
+    ],
+    "š": [
+      "ɕ"
+    ],
+    "ǰ": [
+      "ʑ"
+    ],
+    "ẓ": [
+      "ʐ"
+    ],
+    "ã": [
+      "ã"
+    ],
+    "b": [
+      "b"
+    ],
+    "d": [
+      "d"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "h": [
+      "h"
+    ],
+    "j": [
+      "dʒ"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "w": [
+      "w"
+    ],
+    "y": [
+      "j"
+    ],
+    "z": [
+      "z"
+    ],
+    "c": [
+      "tʃ"
+    ],
+    "x": [
+      "x"
+    ],
+    "q": [
+      "q"
+    ],
+    "f": [
+      "f"
+    ],
+    "ɣ": [
+      "ɣ"
+    ]
+  },
+  "parent": "iir",
+  "ancestors": [
+    {
+      "code": "iir",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Descent from Indo-Aryan (Dardic, Indo-Iranian); Liljegren (2008)"
+    }
+  ],
+  "notes": "Phalura/Palula (Dardic, Indo-Aryan; Chitral, Pakistan) in Palula common transcription (PCT), the indological-style Latin transcription used by Liljegren and other Shina-variety scholars (Liljegren 2016, ch. 1.8) -- not the community's Arabic-based practical orthography, which this spec does not cover. Retroflex ṭ/ḍ/ṇ/ṣ/ṛ/c̣, the caron series č/š/ǰ (alveolo-palatal ʨ/ɕ/ʑ), and marginal ẓ/q/f/x/ɣ follow the PCT-to-IPA correspondence in Liljegren (2016), Table 1.8 and the consonant inventory in Table 3.1/2.1. ǰ is mapped to its phonemic value /ʑ/ per Table 1.8, even though the same source's phonology chapter (Table 3.1 discussion) notes the affricate [dʑ] is the more common surface allophone (especially in the A dialect) and the gold's transcriptions reflect that surface form; the phonemic PCT correspondence is kept. Aspirate digraphs and acute tone/accent marks are Latin practical additions; doubled vowels rendered long. Stress exemption: Phalura (Palula) has a lexical pitch-accent system that is only partially predictable and not consistently marked in the orthography modeled here; no stress block is declared. Sources: Liljegren, Henrik (2008), Towards a grammatical description of Palula, ch. on prosody; Liljegren, Henrik (2016), A Grammar of Palula, Language Science Press (open access), ch. 1.7-1.8 (orthography/PCT), ch. 2.1 and 3.1 (phoneme inventory).",
+  "iso639_3": "phl",
+  "glottolog_code": null,
+  "sources": [
+    {
+      "id": "liljegren2008",
+      "author": "Liljegren, Henrik",
+      "year": 2008,
+      "title": "Towards a grammatical description of Palula: An Indo-Aryan language of the Hindu Kush",
+      "publisher": "Stockholm University",
+      "url": null,
+      "pages": null,
+      "notes": "Grammar and phonology of Palula/Phalura.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Phalura_language"
+    },
+    {
+      "id": "liljegren2016",
+      "author": "Liljegren, Henrik",
+      "year": 2016,
+      "title": "A Grammar of Palula",
+      "publisher": "Language Science Press",
+      "url": "https://langsci-press.org/catalog/book/82",
+      "pages": null,
+      "notes": "Open access (CC BY 4.0). Table 1.5 (Palula alphabet/PCT), Table 1.8 (PCT-to-IPA correspondence table), Table 2.1/3.1 (consonant inventory).",
+      "wikipedia_url": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Phalura_language"
+  ]
+}

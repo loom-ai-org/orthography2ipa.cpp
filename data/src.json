@@ -1,0 +1,60 @@
+{
+  "code": "src",
+  "name": "Logudorese Sardinian",
+  "script": "Latin",
+  "graphemes_base": "sc",
+  "allophones_base": "sc",
+  "parent": "sc",
+  "ancestors": [
+    {
+      "code": "sc",
+      "role": "parent_dialect",
+      "weight": 0.9,
+      "notes": "Logudorese is a primary dialect group of Sardinian (macrolanguage srd), sharing sc's grapheme inventory."
+    }
+  ],
+  "notes": "Logudorese Sardinian (ISO 639-3 src). Spoken in north-central Sardinia; the English Wikipedia article on the Logudorese dialect describes it as one of the most conservative Romance varieties, changing only slowly from Vulgar Latin. Standard Logudorese does show intervocalic lenition of the voiceless plosives /p t k/ (e.g. focum > fogu), inherited here from the shared sc graphemes/allophones base. A sharper /t/ > [θ] fricativization before yod is attested, but only in the Nuorese subdialect and only in that specific phonological environment (not general intervocalic position) per the Wikipedia Logudorese dialect article; since it cannot be expressed without positional conditioning this spec does not model, it is left out rather than guessed as an unconditioned allophone. Wired as a graphemes_base dialect of sc (Sardinian), mirroring the sc-x-logudorese extended-tag entry, but filed under its own ISO 639-3 code.",
+  "quality": "research",
+  "script_type": "alphabet",
+  "sources": [
+    {
+      "id": "wikipedia_logudorese_dialect",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Logudorese dialect",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Logudorese_dialect",
+      "pages": null,
+      "notes": "Conservative-Romance status, intervocalic p/t/k lenition (Standard Logudorese), and the Nuorese-subdialect /t/>[θ]-before-yod detail; fetched this session."
+    },
+    {
+      "id": "sil_src",
+      "author": "SIL International",
+      "year": 2024,
+      "title": "ISO 639-3: src — Logudorese Sardinian",
+      "publisher": "SIL International",
+      "url": "https://iso639-3.sil.org/code/src",
+      "pages": null,
+      "notes": "Confirms ISO 639-3 identifier for Logudorese Sardinian, fetched this session."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Logudorese_Sardinian",
+    "https://en.wikipedia.org/wiki/Logudorese_dialect",
+    "https://sc.wikipedia.org/wiki/Sardu_logudoresu",
+    "https://it.wikipedia.org/wiki/Lingua_sarda_logudorese"
+  ],
+  "timespan": {
+    "start_year": 1000,
+    "end_year": null
+  },
+  "glottolog_code": "logu1236",
+  "iso639_3": "src",
+  "wikidata_qid": "Q777974",
+  "location": {
+    "latitude": 40.49,
+    "longitude": 9.09957,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Logudorese Sardinian."
+  }
+}

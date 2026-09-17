@@ -1,0 +1,97 @@
+{
+  "code": "pko",
+  "name": "Proto-Koreanic (family node)",
+  "parent": "x-clade-kore1284",
+  "script": "IPA-reconstruction",
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "i": [
+      "i"
+    ],
+    "u": [
+      "u"
+    ],
+    "e": [
+      "e"
+    ],
+    "o": [
+      "o"
+    ],
+    "p": [
+      "p"
+    ],
+    "t": [
+      "t"
+    ],
+    "k": [
+      "k"
+    ],
+    "b": [
+      "b"
+    ],
+    "d": [
+      "d"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "s": [
+      "s"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "l": [
+      "l"
+    ],
+    "r": [
+      "r"
+    ],
+    "w": [
+      "w"
+    ],
+    "j": [
+      "j"
+    ],
+    "h": [
+      "h"
+    ]
+  },
+  "allophones": {},
+  "notes": "STRUCTURAL ANCESTRY NODE (not a modelled G2P target). Proto-Koreanic is the reconstructed common ancestor of the Koreanic family (Korean and Jeju). It exists here only so the ancestry / phylogenetic-distance metrics of the modern varieties that reference it have a node to resolve to; NO phonology is claimed or reconstructed and the minimal grapheme set is a placeholder (afa.json / trk.json stub pattern).",
+  "quality": "stub",
+  "script_type": "reconstruction",
+  "iso639_3": null,
+  "glottolog_code": "kore1284",
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Koreanic_languages"
+  ],
+  "urls": [
+    "https://glottolog.org/resource/languoid/id/kore1284"
+  ],
+  "sources": [
+    {
+      "id": "leeramsey2011",
+      "author": "Lee, K.-M. & Ramsey, S. R.",
+      "year": 2011,
+      "title": "A History of the Korean Language",
+      "publisher": "Cambridge University Press",
+      "url": null,
+      "pages": null,
+      "notes": "Reference for Koreanic history (structural node only).",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Koreanic_languages"
+    }
+  ],
+  "wikidata_qid": "Q11263525",
+  "location": {
+    "latitude": 35.46025,
+    "longitude": 126.7677,
+    "source": "glottolog",
+    "notes": "Glottolog's computed centroid for the Koreanic family — a summary of a whole clade's range, not a place anyone speaks."
+  }
+}

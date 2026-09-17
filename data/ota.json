@@ -1,0 +1,593 @@
+{
+ "code": "ota",
+ "name": "Ottoman Turkish (1500-1928)",
+ "script": "Arabic",
+ "script_type": "abjad",
+ "quality": "research",
+ "graphemes": {
+  "ب": [
+   "b"
+  ],
+  "پ": [
+   "p"
+  ],
+  "ت": [
+   "t"
+  ],
+  "ث": [
+   "s"
+  ],
+  "ج": [
+   "dʒ"
+  ],
+  "چ": [
+   "tʃ"
+  ],
+  "ح": [
+   "h"
+  ],
+  "خ": [
+   "h",
+   "x"
+  ],
+  "د": [
+   "d"
+  ],
+  "ذ": [
+   "z"
+  ],
+  "ر": [
+   "ɾ"
+  ],
+  "ز": [
+   "z"
+  ],
+  "ژ": [
+   "ʒ"
+  ],
+  "س": [
+   "s"
+  ],
+  "ش": [
+   "ʃ"
+  ],
+  "ص": [
+   "s"
+  ],
+  "ض": [
+   "d"
+  ],
+  "ط": [
+   "t"
+  ],
+  "ظ": [
+   "z"
+  ],
+  "ع": [
+   "ʔ"
+  ],
+  "غ": [
+   "ɡ",
+   "ɣ",
+   ""
+  ],
+  "ف": [
+   "f"
+  ],
+  "ق": [
+   "k"
+  ],
+  "ك": [
+   "k",
+   "c",
+   "ɡ",
+   "ɟ",
+   "ŋ"
+  ],
+  "گ": [
+   "ɡ",
+   "ɟ"
+  ],
+  "ڭ": [
+   "ŋ"
+  ],
+  "ل": [
+   "l",
+   "ɫ"
+  ],
+  "م": [
+   "m"
+  ],
+  "ن": [
+   "n"
+  ],
+  "و": [
+   "v",
+   "u",
+   "o"
+  ],
+  "ه": [
+   "h"
+  ],
+  "ی": [
+   "j",
+   "i"
+  ],
+  "ء": [
+   "ʔ"
+  ],
+  "ا": [
+   "a"
+  ],
+  "آ": [
+   "a",
+   "aː"
+  ],
+  "ئ": [
+   "ʔ"
+  ],
+  "ة": [
+   "a"
+  ],
+  "َ": [
+   "e"
+  ],
+  "ِ": [
+   "i"
+  ],
+  "ُ": [
+   "u"
+  ],
+  "ْ": [
+   ""
+  ],
+  "ک": [
+   "k",
+   "c",
+   "ɡ",
+   "ɟ",
+   "ŋ"
+  ],
+  "ي": [
+   "j",
+   "i"
+  ],
+  "ى": [
+   "j",
+   "i"
+  ],
+  "أ": [
+   "ʔ"
+  ],
+  "إ": [
+   "ʔ"
+  ],
+  "ؤ": [
+   "ʔ"
+  ],
+  "ـ": [
+   ""
+  ],
+  "‌": [
+   ""
+  ]
+ },
+ "parent": "tr",
+ "ancestors": [
+  {
+   "code": "tr",
+   "role": "parent",
+   "weight": 1.0,
+   "notes": "Descent per Glottolog classification of Ottoman Turkish (otto1234)."
+  }
+ ],
+ "notes": "Ottoman Turkish, the Perso-Arabic-script form of Turkish written until the 1928 alphabet reform. Consonants map onto the parent Turkish inventory: the Perso-Turkish additions پ [p], چ [tʃ], ژ [ʒ], گ [ɡ] and sağır kef ڭ [ŋ] are carried directly, the rhotic is the tap [ɾ], and the Arabic emphatics and pharyngeals ث ص ض ط ظ ح ع fold into plain Turkish consonants — ⟨خ⟩ reads as /h/ in the Turkish stratum and keeps /x/ only as a secondary candidate.\n\nThe script is an abjad for Turkish vowels. Four letters carry them: ⟨ا⟩ writes /a/ and word-initially any short vowel, ⟨و⟩ writes all of /o ø u y/, ⟨ی⟩ writes /i/ and /ɯ/, and word-final ⟨ه⟩ writes the /e ~ a/ suffix vowel. Which member of a harmony pair a letter stands for is not written on the vowel at all; it is signalled by the consonant letters, the hard set ⟨ح خ ص ض ط ظ ع غ ق⟩ appearing in back-vowel words and the soft set ⟨ت س ك گ ه⟩ in front-vowel words. This spec reads that signal with word-scope allophone rules — the layer the other abjad specs do not need — which is also what recovers the palatal [c] of a kef whose conditioning vowel is unwritten.\n\nA hard floor remains. Across the 161-word WikiPron gold, 113 of 918 gold segments (12.3%) are vowels for which the spelling provides no vowel-bearing letter at all, affecting 81 of the 161 words; no rule can supply them, and that deficit alone puts a floor of about 0.12 PER under any purely graphemic transcription. On top of it, the harmony signal is absent in the Arabic and Persian loan strata, which do not harmonize, and the ⟨و⟩ height contrast (/u ~ o/, /y ~ ø/) and vowel length in loans stay unrecoverable.\n\nOne Ottoman letter reaches this spec under more than one codepoint, so both members of each pair are listed. Kef is ⟨ك⟩ U+0643 in the Arabic tradition and ⟨ک⟩ U+06A9 — the keheh, which the Unicode charts name kaf mashkula and assign to Persian, Urdu and Sindhi — in the Persian one; ye is ⟨ی⟩ U+06CC in the Persian tradition and ⟨ي⟩ U+064A or the dotless ⟨ى⟩ U+0649 in the Arabic one. Ottoman was set in both traditions, and a letter with no entry is dropped without an error, so honouring only one member of a pair deletes every occurrence of the other in silence. The word-scope harmony rules name their trigger letters by codepoint, so they name the alternates too. Hemze on a carrier ⟨أ إ ؤ⟩ reads /ʔ/, as ⟨ئ⟩ already does. The kashida ⟨ـ⟩ and the zero-width non-joiner shape a line rather than a word and are listed as empty, so that deletion is stated instead of accidental. Three lookalikes are deliberately absent: the he shapes ⟨ہ⟩ and ⟨ھ⟩ belong to Urdu and to Uyghur, the elif wasla ⟨ٱ⟩ to Quranic Arabic, and the swash kaf ⟨ڪ⟩ is a letter of Sindhi distinct from kef. None of the alternates occur in the WikiPron gold behind this row, which is written with U+0643 and U+06CC throughout; they are here for Ottoman text this spec did not gather.\n\nConvention mismatches against the WikiPron gold, kept rather than fitted: the gold's annotators vary freely between ⟨a⟩ (83 tokens) and ⟨ɑ⟩ (55) for Turkish's single low unrounded vowel, between ⟨e⟩ (38) and ⟨ɛ⟩ (66), between ⟨r⟩ (15) and ⟨ɾ⟩ (74), and between ⟨l⟩ (44) and ⟨ɫ⟩ (22), none of which is a Turkish contrast; ⟨ö⟩ is written /œ/ here to match the parent ⟨tr⟩ spec where the gold mostly writes ⟨ø⟩. Stress is left unencoded.",
+ "iso639_3": "ota",
+ "glottolog_code": null,
+ "sources": [
+  {
+   "id": "ota_glottolog",
+   "author": "Hammarström, H. et al. (Glottolog 5.0)",
+   "year": 2024,
+   "title": "Glottolog: Ottoman Turkish (otto1234)",
+   "publisher": "Max Planck Institute for Evolutionary Anthropology",
+   "url": "https://glottolog.org/resource/languoid/id/otto1234",
+   "pages": null,
+   "notes": "Classification reference for a skeleton-tier entry.",
+   "wikipedia_url": null
+  },
+  {
+   "id": "ota_wikipedia",
+   "author": "Wikipedia contributors",
+   "year": 2024,
+   "title": "Ottoman Turkish alphabet",
+   "publisher": "Wikipedia",
+   "url": null,
+   "pages": null,
+   "notes": "Orthography reference actually consulted for this spec: the matres lectionis inventory (elif ⟨ا⟩ for /a/; ye ⟨ی⟩ for /i/, /ɯ/; vav ⟨و⟩ for /o/, /œ/, /u/, /y/; he ⟨ه⟩ for /a/, /e/), the hard/soft consonant-letter split that signals vowel harmony, the multiple readings of kef ⟨ك⟩, and the statement that vowels are written ambiguously or not at all.",
+   "wikipedia_url": "https://en.wikipedia.org/wiki/Ottoman_Turkish_alphabet"
+  },
+  {
+   "id": "ota_zimmer_orgun",
+   "author": "Zimmer, K. & Orgun, O.",
+   "year": 1992,
+   "title": "Turkish (Illustrations of the IPA)",
+   "publisher": "Journal of the International Phonetic Association",
+   "url": null,
+   "pages": null,
+   "notes": "Consonant allophony of the parent Turkish inventory: the tap rhotic, the [k]~[c] and [ɡ]~[ɟ] palatal pairs, and clear versus velarized [l]. Author-year claim; edition not consulted this session.",
+   "wikipedia_url": null
+  },
+  {
+   "id": "ota_goksel_kerslake",
+   "author": "Göksel, A. & Kerslake, C.",
+   "year": 2005,
+   "title": "Turkish: A Comprehensive Grammar",
+   "publisher": "Routledge",
+   "url": null,
+   "pages": null,
+   "notes": "Vowel harmony and the eight-vowel system inherited from the parent Turkish spec. Author-year claim; edition not consulted this session.",
+   "wikipedia_url": null
+  },
+  {
+   "id": "ota_unicode_arabic_chart",
+   "author": "The Unicode Consortium",
+   "year": 2025,
+   "title": "The Unicode Standard 17.0, code chart: Arabic (Range 0600-06FF)",
+   "publisher": "Unicode, Inc.",
+   "url": "https://www.unicode.org/charts/PDF/U0600.pdf",
+   "pages": null,
+   "notes": "Codepoint identities for the confusable letters: U+06A9 KEHEH is annotated '= kaf mashkula' and assigned to Persian, Urdu and Sindhi; U+06CC FARSI YEH cross-references U+0649 ALEF MAKSURA and U+064A YEH; U+0640 TATWEEL is '= kashida', inserted to stretch characters; U+06C1 HEH GOAL is Urdu, U+0671 ALEF WASLA is Quranic Arabic, and U+06AA SWASH KAF 'represents a letter distinct from Arabic KAF in Sindhi'.",
+   "wikipedia_url": null
+  },
+  {
+   "id": "ota_jaf_kayhan2021",
+   "author": "Jaf, A. A. & Koc Kayhan, S.",
+   "year": 2021,
+   "title": "Machine-Based Transliterate of Ottoman to Latin-Based Script",
+   "publisher": "Scientific Programming 2021: 7152935",
+   "url": "https://doi.org/10.1155/2021/7152935",
+   "pages": null,
+   "notes": "An Ottoman-to-Latin transliteration system with the Ottoman alphabet tabulated by positional form. Its normalization step treats the hamza carriers as a set - 'the hamza in cases (ؤ، ئ، أ) is neglected to be replaced by Unicode base letters' - which is why all three carriers are read here rather than only ⟨ئ⟩.",
+   "wikipedia_url": null
+  }
+ ],
+ "wikipedia": [
+  "https://en.wikipedia.org/wiki/Ottoman_Turkish",
+  "https://en.wikipedia.org/wiki/Ottoman_Turkish_alphabet"
+ ],
+ "positional_graphemes": {
+  "ا": {
+   "word_initial": [
+    "e",
+    "a",
+    "i",
+    "ɯ"
+   ],
+   "default": [
+    "a"
+   ]
+  },
+  "ع": {
+   "word_final": [
+    ""
+   ],
+   "default": [
+    "",
+    "ʔ"
+   ]
+  },
+  "ه": {
+   "word_final": [
+    "e",
+    "a",
+    "h"
+   ],
+   "default": [
+    "h"
+   ]
+  },
+  "ی": {
+   "word_initial": [
+    "j"
+   ],
+   "after_vowel": [
+    "j"
+   ],
+   "before_vowel": [
+    "j"
+   ],
+   "default": [
+    "i",
+    "ɯ",
+    "j"
+   ]
+  },
+  "و": {
+   "word_initial": [
+    "v"
+   ],
+   "after_vowel": [
+    "v"
+   ],
+   "before_vowel": [
+    "v"
+   ],
+   "default": [
+    "u",
+    "o",
+    "y",
+    "œ",
+    "v"
+   ]
+  },
+  "ي": {
+   "word_initial": [
+    "j"
+   ],
+   "after_vowel": [
+    "j"
+   ],
+   "before_vowel": [
+    "j"
+   ],
+   "default": [
+    "i",
+    "ɯ",
+    "j"
+   ]
+  },
+  "ى": {
+   "word_initial": [
+    "j"
+   ],
+   "after_vowel": [
+    "j"
+   ],
+   "before_vowel": [
+    "j"
+   ],
+   "default": [
+    "i",
+    "ɯ",
+    "j"
+   ]
+  }
+ },
+ "allophone_rules": [
+  {
+   "id": "OTA_CARRIER_DROP_BEFORE_MATER",
+   "phonemes": [
+    "e",
+    "a"
+   ],
+   "surface": "",
+   "grapheme": [
+    "ا"
+   ],
+   "word_initial": true,
+   "followed_by_grapheme": [
+    "و",
+    "ی",
+    "ي",
+    "ى"
+   ],
+   "notes": "A word-initial ⟨ا⟩ standing immediately before ⟨و⟩ or ⟨ی⟩ is a bare orthographic carrier for the following mater lectionis, not a vowel of its own: ‹اوچ› is /ytʃ/ and ‹ایكیشر› /iciʃeɾ/, not /avtʃ/ and /ajkiʃeɾ/. Paired with OTA_VAV_NUCLEUS_AFTER_DROPPED_CARRIER and OTA_YE_NUCLEUS_AFTER_DROPPED_CARRIER, which restore the nucleus for each of the two matres this rule licenses — a drop without both restores leaves the mater as a bare onset glide."
+  },
+  {
+   "id": "OTA_YE_NUCLEUS_AFTER_DROPPED_CARRIER",
+   "phonemes": [
+    "j"
+   ],
+   "surface": "i",
+   "grapheme": [
+    "ی",
+    "ي",
+    "ى"
+   ],
+   "preceded_by_grapheme": [
+    "ا"
+   ],
+   "preceded_by_2": "word_boundary",
+   "notes": "Once OTA_CARRIER_DROP_BEFORE_MATER silences the carrier, ⟨ی⟩ is the word's first sound and therefore its nucleus, not an onset glide. Front /i/ rather than back /ɯ/ is the unmarked reading; OTA_YE_NUCLEUS_BACK_MEDIAL overrides it in hard-letter words."
+  },
+  {
+   "id": "OTA_VAV_NUCLEUS_AFTER_DROPPED_CARRIER",
+   "phonemes": [
+    "v"
+   ],
+   "surface": "o",
+   "grapheme": [
+    "و"
+   ],
+   "preceded_by_grapheme": [
+    "ا"
+   ],
+   "preceded_by_2": "word_boundary",
+   "notes": "The same repair as OTA_YE_NUCLEUS_AFTER_DROPPED_CARRIER for ⟨و⟩: with the carrier silenced a word-initial ⟨و⟩ is the syllable nucleus. ⟨او⟩ writes all four of /o ø u y/ and the abjad does not distinguish them; /o/ is the single surface, so ‹اولك› /øvlec/ and ‹اوچ› /ytʃ/ remain known gaps."
+  },
+  {
+   "id": "OTA_YE_NUCLEUS_BACK_MEDIAL",
+   "phonemes": [
+    "i"
+   ],
+   "surface": "ɯ",
+   "grapheme": [
+    "ی",
+    "ي",
+    "ى"
+   ],
+   "word_contains_grapheme": [
+    "ح",
+    "خ",
+    "ص",
+    "ض",
+    "ط",
+    "ظ",
+    "ع",
+    "غ",
+    "ق"
+   ],
+   "notes": "Ottoman spelling marks vowel harmony on the consonant letters, not on the (mostly unwritten) vowels: the hard letters ⟨ح خ ص ض ط ظ ع غ ق⟩ stand in back-vowel words and the soft letters ⟨ت س ك گ ه⟩ in front-vowel words (Ottoman Turkish alphabet, Wikipedia). ⟨ی⟩ writes both members of the /i ~ ɯ/ harmony pair, so the hard letters are the only recoverable signal for the back member: ‹قیشله› /kɯʃɫa/, ‹فشقی› /fɯʃkɯ/."
+  },
+  {
+   "id": "OTA_ELIF_BACK",
+   "phonemes": [
+    "e"
+   ],
+   "surface": "a",
+   "grapheme": [
+    "ا"
+   ],
+   "word_contains_grapheme": [
+    "ح",
+    "خ",
+    "ص",
+    "ض",
+    "ط",
+    "ظ",
+    "ع",
+    "غ",
+    "ق"
+   ],
+   "notes": "Ottoman spelling marks vowel harmony on the consonant letters, not on the (mostly unwritten) vowels: the hard letters ⟨ح خ ص ض ط ظ ع غ ق⟩ stand in back-vowel words and the soft letters ⟨ت س ك گ ه⟩ in front-vowel words (Ottoman Turkish alphabet, Wikipedia). The word-initial carrier ⟨ا⟩ reads the back member of the /e ~ a/ pair in a hard-letter word."
+  },
+  {
+   "id": "OTA_HE_FINAL_BACK",
+   "phonemes": [
+    "e"
+   ],
+   "surface": "a",
+   "grapheme": [
+    "ه"
+   ],
+   "word_final": true,
+   "word_contains_grapheme": [
+    "ح",
+    "خ",
+    "ص",
+    "ض",
+    "ط",
+    "ظ",
+    "ع",
+    "غ",
+    "ق"
+   ],
+   "notes": "Ottoman spelling marks vowel harmony on the consonant letters, not on the (mostly unwritten) vowels: the hard letters ⟨ح خ ص ض ط ظ ع غ ق⟩ stand in back-vowel words and the soft letters ⟨ت س ك گ ه⟩ in front-vowel words (Ottoman Turkish alphabet, Wikipedia). Word-final ⟨ه⟩ writes the /e ~ a/ suffix vowel (Ottoman Turkish alphabet, Wikipedia: he ⟨ه⟩ for /a/, /e/); the hard letters select /a/: ‹بالطه› /baɫta/, ‹قاصه› /kasa/."
+  },
+  {
+   "id": "OTA_VAV_FRONT",
+   "phonemes": [
+    "u"
+   ],
+   "surface": "y",
+   "grapheme": [
+    "و"
+   ],
+   "word_contains_grapheme_not": [
+    "ح",
+    "خ",
+    "ص",
+    "ض",
+    "ط",
+    "ظ",
+    "ع",
+    "غ",
+    "ق"
+   ],
+   "word_contains_grapheme": [
+    "ك",
+    "گ",
+    "ک"
+   ],
+   "notes": "Ottoman spelling marks vowel harmony on the consonant letters, not on the (mostly unwritten) vowels: the hard letters ⟨ح خ ص ض ط ظ ع غ ق⟩ stand in back-vowel words and the soft letters ⟨ت س ك گ ه⟩ in front-vowel words (Ottoman Turkish alphabet, Wikipedia). ⟨و⟩ writes all of /o ø u y/ (Ottoman Turkish alphabet, Wikipedia: vav ⟨و⟩ for /o/, /œ/, /u/, /y/). A soft ⟨ك⟩/⟨گ⟩ with no hard letter anywhere selects the front rounded member: ‹یورك› /jyɾec/, ‹كوپوك› /køpyc/ (the height contrast /y ~ ø/ stays unrecoverable)."
+  },
+  {
+   "id": "OTA_L_VELARIZED",
+   "phonemes": [
+    "l"
+   ],
+   "surface": "ɫ",
+   "preceded_by_phoneme": [
+    "a",
+    "o",
+    "u",
+    "ɯ"
+   ],
+   "notes": "Turkish /l/ is velarized [ɫ] after a back vowel and clear [l] after a front one (Zimmer & Orgun, Illustrations of the IPA: Turkish; the parent ⟨tr⟩ spec declares the same l → [l, ɫ] pair). Written with the vowel that conditions it, so it is recoverable wherever that vowel is written at all."
+  },
+  {
+   "id": "OTA_KEF_VELAR_NASAL",
+   "phonemes": [
+    "k"
+   ],
+   "surface": "ŋ",
+   "grapheme": [
+    "ك",
+    "ک"
+   ],
+   "word_final": true,
+   "notes": "Sağır kef: word-final ⟨ك⟩ after a written back vowel spells the velar nasal /ŋ/ rather than /k/ (Ottoman Turkish alphabet, Wikipedia: kef ⟨ك⟩ 'may be /k/, /ɡ/, /n/, /j/, or /ː/'). Plain kef is ambiguous between the stop and the nasal, so the rule is scoped to words that also carry a hard letter — ‹طوك› /doŋ/ — and ‹آلاك› /aɫaŋ/, which has no hard letter, is a known gap; without the restriction the rule also nasalizes the final kef of front words like ‹كوپوك› /køpyc/. Ottoman has the dedicated ⟨ڭ⟩ for the same sound, which this spec maps directly.",
+   "preceded_by_grapheme": [
+    "و",
+    "ا"
+   ],
+   "word_contains_grapheme": [
+    "ح",
+    "خ",
+    "ص",
+    "ض",
+    "ط",
+    "ظ",
+    "ع",
+    "غ",
+    "ق"
+   ]
+  },
+  {
+   "id": "OTA_KEF_PALATAL_HARMONY",
+   "phonemes": [
+    "k"
+   ],
+   "surface": "c",
+   "grapheme": [
+    "ك",
+    "ک"
+   ],
+   "word_contains_grapheme_not": [
+    "ح",
+    "خ",
+    "ص",
+    "ض",
+    "ط",
+    "ظ",
+    "ع",
+    "غ",
+    "ق"
+   ],
+   "notes": "Ottoman spelling marks vowel harmony on the consonant letters, not on the (mostly unwritten) vowels: the hard letters ⟨ح خ ص ض ط ظ ع غ ق⟩ stand in back-vowel words and the soft letters ⟨ت س ك گ ه⟩ in front-vowel words (Ottoman Turkish alphabet, Wikipedia). Kef is itself one of the soft letters, and Ottoman keeps the back/front distinction of the velar in the choice between ⟨ق⟩ and ⟨ك⟩: a kef in a word with no hard letter stands in a front-vowel word, where Turkish /k/ is palatal [c] (Zimmer & Orgun, Illustrations of the IPA: Turkish). This recovers the palatal reading in ‹اكمك› /ecmec/ and ‹كرس› /ciɾes/, whose conditioning vowels are unwritten and therefore invisible to OTA_K_PALATAL_AFTER/BEFORE."
+  },
+  {
+   "id": "OTA_GAF_PALATAL_HARMONY",
+   "phonemes": [
+    "ɡ"
+   ],
+   "surface": "ɟ",
+   "grapheme": [
+    "گ"
+   ],
+   "word_contains_grapheme_not": [
+    "ح",
+    "خ",
+    "ص",
+    "ض",
+    "ط",
+    "ظ",
+    "ع",
+    "غ",
+    "ق"
+   ],
+   "notes": "Ottoman spelling marks vowel harmony on the consonant letters, not on the (mostly unwritten) vowels: the hard letters ⟨ح خ ص ض ط ظ ع غ ق⟩ stand in back-vowel words and the soft letters ⟨ت س ك گ ه⟩ in front-vowel words (Ottoman Turkish alphabet, Wikipedia). The voiced counterpart of OTA_KEF_PALATAL_HARMONY: gaf is a soft letter, so in a word with no hard letter its /ɡ/ is palatal [ɟ] (Zimmer & Orgun, Illustrations of the IPA: Turkish). No ⟨گ⟩ occurs in the WikiPron gold, so this rule is unmeasurable there; it is kept because gaf is a live Ottoman letter and the palatal reading is the parent ⟨tr⟩ spec's declared g → [ɡ, ɟ] allophony."
+  }
+ ]
+}

@@ -1,0 +1,702 @@
+{
+  "code": "nn",
+  "name": "Norwegian Nynorsk",
+  "script": "Latin",
+  "parent": "no",
+  "ancestors": [
+    {
+      "code": "no",
+      "role": "parent",
+      "weight": 0.8,
+      "notes": "Norwegian macrolanguage node; Nynorsk is the written standard built on the western and inland dialects."
+    },
+    {
+      "code": "non",
+      "role": "ancestor",
+      "weight": 0.15,
+      "notes": "Old Norse (West Norse) — Nynorsk keeps the Old Norse diphthongs ⟨ei au øy⟩ and the ⟨kv-⟩ onset that Bokmål lost."
+    }
+  ],
+  "notes": "Norwegian Nynorsk — the minority written standard, codified on the western and inland dialects rather than on the Dano-Norwegian speech of the capital. The spec is SELF-CONTAINED and deliberately does not inherit its grapheme table from ⟨no⟩: the ⟨no⟩ node describes Urban East Norwegian (its own notes say so), and the two varieties differ exactly where a silent inheritance would be most damaging — in the diphthongs and in retroflexion. SHARED WITH BOKMÅL: complementary quantity (a stressed vowel is long before a single consonant and short before a geminate or a cluster; doubled letters are grapheme keys mapping to /Cː/ and the shortening rules fire before clusters), the long/short vowel pairs, unstressed ⟨e⟩ = [ə], ⟨k g sk⟩ softening before a front vowel, ⟨v w⟩ = the labiodental approximant [ʋ], silent ⟨d⟩ in final ⟨nd ld⟩, and the two tonemes (Kristoffersen 2000). DIVERGENT FROM BOKMÅL: (1) ⟨ei⟩ is [ɛɪ], not the Urban East [æɪ] — Kristoffersen notes that [æɪ] is the substitute used by speakers who lack [ɛɪ]; (2) ⟨au⟩ has the rounded western onset [œʊ], not [æʉ]; (3) ⟨øy⟩ is [œʏ], not the base's literal [øy]; (4) NO retroflexion of ⟨rd rl rn rs rt⟩ — the retroflex assimilation is an Eastern, Central and Northern feature and is absent from the southern and western dialects Nynorsk is codified on (Skjekkeland 1997, Sandøy 1985), so those sequences stay /rd rl rn rs rt/ and the retroflex grapheme keys of the ⟨no⟩ base are not carried over; (5) ⟨r⟩ is the apical trill [r], not the Urban East tap [ɾ] (Vanvik 1979); (6) final ⟨-a⟩ — the Nynorsk infinitive, weak-feminine definite and weak-past ending where Bokmål writes ⟨-e/-en/-et⟩ — is a full [ɑ], never a schwa, so ⟨a⟩ carries no reduction entry while ⟨e⟩ does (Beito 1986); (7) word-final ⟨rd⟩ loses its stop (gard, ferd, bord), while medial ⟨rd⟩ keeps it (ferdig). ⟨hv-⟩ is kept as [ʋ] for the Bokmål-spelt proper names that appear in Nynorsk text, but the productive Nynorsk spelling of that class is ⟨kv-⟩ (kva, kvit, kvifor), which is a plain /kʋ/ onset and is NOT given the ⟨hv⟩ treatment (Beito 1986). SOFTENING: ⟨k g sk⟩ are [ç j ʃ] before a front vowel but stay hard before plain ⟨e⟩ — the historically soft ⟨e⟩ cases are spelt ⟨kj gj skj⟩ (kjenne, gjere, skje). The ⟨e⟩ carve-out is written with the exact-letter position, which the engine also matches against the ⟨ei⟩ digraph, so ⟨gei kei skei⟩ (geit, skei, Geir) come out hard where they should be soft; separating them needs a positional condition on the whole neighbouring grapheme, which the engine does not have. LOW VOWEL: Norwegian has one low vowel, and two published notations for it — ⟨ɑ, ɑː⟩ (Kristoffersen 2000) and ⟨a, aː⟩ (Vanvik 1979). Both readings are declared, ⟨ɑ⟩ first; the crowd gold mixes the two conventions freely and the choice of first candidate is a notation call, not a phonological one. SHORT ⟨o⟩ is genuinely two-way ([ɔ] and [ʊ], as long ⟨o⟩ is [uː] and [oː]); both readings are declared so the lattice carries them. TONEMES (accent 1/2) are suprasegmental: ⟨accent2_mark⟩ declares that Nynorsk has the Scandinavian pitch-accent contrast on the same disyllabic-trochee class as Swedish, and the marks are prosody rather than segments. NOT ENCODED, deliberately: palatalisation of dentals ([ɲ ʎ c ɟ]) and the retroflex flap [ɽ] ('tjukk l') are real features of parts of the Nynorsk speech area but are dialect-conditioned rather than predictable from the spelling; compound stress, which is what gives the second member of a compound its own long vowel and full unstressed vowels, needs a morphological boundary the engine does not have and belongs downstream; and the ⟨-eg⟩/⟨-ig⟩ adjective endings, whose final ⟨g⟩ is usually silent, are morphology rather than orthography.",
+  "quality": "research",
+  "script_type": "alphabet",
+  "phonemes": [
+    "ɑ",
+    "ɑː",
+    "eː",
+    "ɛ",
+    "ə",
+    "iː",
+    "ɪ",
+    "uː",
+    "oː",
+    "ɔ",
+    "ʊ",
+    "ʉː",
+    "ʉ",
+    "yː",
+    "ʏ",
+    "æː",
+    "æ",
+    "øː",
+    "œ",
+    "ɛɪ",
+    "œʊ",
+    "œʏ",
+    "ɑɪ",
+    "p",
+    "b",
+    "t",
+    "d",
+    "k",
+    "ɡ",
+    "f",
+    "s",
+    "ʃ",
+    "ç",
+    "h",
+    "m",
+    "n",
+    "ŋ",
+    "l",
+    "r",
+    "ʋ",
+    "j"
+  ],
+  "graphemes": {
+    "b": [
+      "b"
+    ],
+    "c": [
+      "k",
+      "s"
+    ],
+    "d": [
+      "d"
+    ],
+    "f": [
+      "f"
+    ],
+    "h": [
+      "h"
+    ],
+    "j": [
+      "j"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "p": [
+      "p"
+    ],
+    "q": [
+      "k"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "v": [
+      "ʋ"
+    ],
+    "w": [
+      "ʋ"
+    ],
+    "x": [
+      "ks"
+    ],
+    "z": [
+      "s"
+    ],
+    "gj": [
+      "j"
+    ],
+    "hj": [
+      "j"
+    ],
+    "kj": [
+      "ç"
+    ],
+    "tj": [
+      "ç"
+    ],
+    "sj": [
+      "ʃ"
+    ],
+    "skj": [
+      "ʃ"
+    ],
+    "ng": [
+      "ŋ"
+    ],
+    "nk": [
+      "ŋk"
+    ],
+    "hv": [
+      "ʋ"
+    ],
+    "bb": [
+      "bː"
+    ],
+    "dd": [
+      "dː"
+    ],
+    "ff": [
+      "fː"
+    ],
+    "gg": [
+      "ɡː"
+    ],
+    "kk": [
+      "kː"
+    ],
+    "ll": [
+      "lː"
+    ],
+    "mm": [
+      "mː"
+    ],
+    "nn": [
+      "nː"
+    ],
+    "pp": [
+      "pː"
+    ],
+    "rr": [
+      "rː"
+    ],
+    "ss": [
+      "sː"
+    ],
+    "tt": [
+      "tː"
+    ],
+    "vv": [
+      "ʋː"
+    ],
+    "ck": [
+      "kː"
+    ],
+    "ai": [
+      "ɑɪ"
+    ]
+  },
+  "positional_graphemes": {
+    "a": {
+      "nucleus_stressed": [
+        "ɑː",
+        "aː"
+      ],
+      "default": [
+        "ɑ",
+        "a"
+      ]
+    },
+    "e": {
+      "nucleus_stressed": [
+        "eː"
+      ],
+      "nucleus_unstressed": [
+        "ə"
+      ],
+      "default": [
+        "ɛ"
+      ]
+    },
+    "i": {
+      "nucleus_stressed": [
+        "iː"
+      ],
+      "default": [
+        "ɪ"
+      ]
+    },
+    "o": {
+      "nucleus_stressed": [
+        "uː",
+        "oː"
+      ],
+      "default": [
+        "ɔ",
+        "ʊ"
+      ]
+    },
+    "u": {
+      "nucleus_stressed": [
+        "ʉː"
+      ],
+      "default": [
+        "ʉ"
+      ]
+    },
+    "y": {
+      "nucleus_stressed": [
+        "yː"
+      ],
+      "default": [
+        "ʏ"
+      ]
+    },
+    "æ": {
+      "nucleus_stressed": [
+        "æː"
+      ],
+      "default": [
+        "æ"
+      ]
+    },
+    "ø": {
+      "nucleus_stressed": [
+        "øː"
+      ],
+      "default": [
+        "œ"
+      ]
+    },
+    "å": {
+      "nucleus_stressed": [
+        "oː"
+      ],
+      "default": [
+        "ɔ"
+      ]
+    },
+    "ei": {
+      "nucleus_stressed": [
+        "ɛɪː"
+      ],
+      "default": [
+        "ɛɪ"
+      ]
+    },
+    "au": {
+      "nucleus_stressed": [
+        "œʊː"
+      ],
+      "default": [
+        "œʊ"
+      ]
+    },
+    "øy": {
+      "nucleus_stressed": [
+        "œʏː"
+      ],
+      "default": [
+        "œʏ"
+      ]
+    },
+    "k": {
+      "before_front_vowel": [
+        "ç"
+      ],
+      "default": [
+        "k"
+      ],
+      "before_e": [
+        "k"
+      ]
+    },
+    "g": {
+      "before_front_vowel": [
+        "j"
+      ],
+      "default": [
+        "ɡ"
+      ],
+      "before_e": [
+        "ɡ"
+      ]
+    },
+    "sk": {
+      "before_front_vowel": [
+        "ʃ"
+      ],
+      "default": [
+        "sk"
+      ],
+      "before_e": [
+        "sk"
+      ]
+    },
+    "lj": {
+      "word_initial": [
+        "j"
+      ],
+      "default": [
+        "lj"
+      ]
+    }
+  },
+  "allophones": {
+    "p": [
+      "p",
+      "pʰ"
+    ],
+    "b": [
+      "b"
+    ],
+    "t": [
+      "t",
+      "tʰ"
+    ],
+    "d": [
+      "d"
+    ],
+    "k": [
+      "k",
+      "kʰ"
+    ],
+    "ɡ": [
+      "ɡ"
+    ],
+    "f": [
+      "f"
+    ],
+    "ʋ": [
+      "ʋ",
+      "v"
+    ],
+    "s": [
+      "s"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "ç": [
+      "ç"
+    ],
+    "h": [
+      "h"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ŋ": [
+      "ŋ"
+    ],
+    "l": [
+      "l",
+      "ɽ"
+    ],
+    "r": [
+      "r",
+      "ɾ",
+      "ʁ"
+    ],
+    "j": [
+      "j"
+    ],
+    "ɑː": [
+      "ɑː"
+    ],
+    "ɛ": [
+      "ɛ"
+    ],
+    "eː": [
+      "eː"
+    ],
+    "ə": [
+      "ə"
+    ],
+    "ɪ": [
+      "ɪ"
+    ],
+    "iː": [
+      "iː"
+    ],
+    "ɔ": [
+      "ɔ"
+    ],
+    "ʊ": [
+      "ʊ"
+    ],
+    "oː": [
+      "oː"
+    ],
+    "uː": [
+      "uː"
+    ],
+    "ʉ": [
+      "ʉ"
+    ],
+    "ʉː": [
+      "ʉː"
+    ],
+    "ʏ": [
+      "ʏ"
+    ],
+    "yː": [
+      "yː"
+    ],
+    "æ": [
+      "æ"
+    ],
+    "æː": [
+      "æː"
+    ],
+    "œ": [
+      "œ"
+    ],
+    "øː": [
+      "øː"
+    ],
+    "ɛɪ": [
+      "ɛɪ"
+    ],
+    "œʊ": [
+      "œʊ"
+    ],
+    "œʏ": [
+      "œʏ"
+    ],
+    "ɑɪ": [
+      "ɑɪ"
+    ],
+    "ɑ": [
+      "ɑ"
+    ]
+  },
+  "allophone_rules": [
+    {
+      "id": "NN_SHORTEN_A",
+      "phonemes": [
+        "ɑː"
+      ],
+      "surface": "ɑ",
+      "followed_by": "consonant_cluster",
+      "notes": "complementary quantity: the stressed nucleus is short before a geminate or a consonant cluster (Kristoffersen 2000)"
+    },
+    {
+      "id": "NN_SHORTEN_E",
+      "phonemes": [
+        "eː"
+      ],
+      "surface": "ɛ",
+      "followed_by": "consonant_cluster",
+      "notes": "complementary quantity: short before a geminate or a consonant cluster"
+    },
+    {
+      "id": "NN_SHORTEN_I",
+      "phonemes": [
+        "iː"
+      ],
+      "surface": "ɪ",
+      "followed_by": "consonant_cluster",
+      "notes": "complementary quantity: short before a geminate or a consonant cluster"
+    },
+    {
+      "id": "NN_SHORTEN_O",
+      "phonemes": [
+        "uː"
+      ],
+      "surface": "ɔ",
+      "followed_by": "consonant_cluster",
+      "notes": "complementary quantity: short before a geminate or a consonant cluster"
+    },
+    {
+      "id": "NN_SHORTEN_U",
+      "phonemes": [
+        "ʉː"
+      ],
+      "surface": "ʉ",
+      "followed_by": "consonant_cluster",
+      "notes": "complementary quantity: short before a geminate or a consonant cluster"
+    },
+    {
+      "id": "NN_SHORTEN_Y",
+      "phonemes": [
+        "yː"
+      ],
+      "surface": "ʏ",
+      "followed_by": "consonant_cluster",
+      "notes": "complementary quantity: short before a geminate or a consonant cluster"
+    },
+    {
+      "id": "NN_SHORTEN_Æ",
+      "phonemes": [
+        "æː"
+      ],
+      "surface": "æ",
+      "followed_by": "consonant_cluster",
+      "notes": "complementary quantity: short before a geminate or a consonant cluster"
+    },
+    {
+      "id": "NN_SHORTEN_Ø",
+      "phonemes": [
+        "øː"
+      ],
+      "surface": "œ",
+      "followed_by": "consonant_cluster",
+      "notes": "complementary quantity: short before a geminate or a consonant cluster"
+    },
+    {
+      "id": "NN_SHORTEN_Å",
+      "phonemes": [
+        "oː"
+      ],
+      "surface": "ɔ",
+      "followed_by": "consonant_cluster",
+      "notes": "complementary quantity: short before a geminate or a consonant cluster"
+    },
+    {
+      "id": "NN_SHORTEN_EI",
+      "phonemes": [
+        "ɛɪː"
+      ],
+      "surface": "ɛɪ",
+      "followed_by": "consonant_cluster",
+      "notes": "the diphthong is a long nucleus and shortens under the same complementary quantity: ⟨Austrheim⟩ has short ⟨au⟩ before ⟨str⟩ and long ⟨ei⟩ before a single ⟨m⟩"
+    },
+    {
+      "id": "NN_SHORTEN_AU",
+      "phonemes": [
+        "œʊː"
+      ],
+      "surface": "œʊ",
+      "followed_by": "consonant_cluster",
+      "notes": "the diphthong is a long nucleus and shortens under the same complementary quantity"
+    },
+    {
+      "id": "NN_SHORTEN_ØY",
+      "phonemes": [
+        "œʏː"
+      ],
+      "surface": "œʏ",
+      "followed_by": "consonant_cluster",
+      "notes": "the diphthong is a long nucleus and shortens under the same complementary quantity"
+    },
+    {
+      "id": "NN_SILENT_D",
+      "phonemes": [
+        "d"
+      ],
+      "surface": "",
+      "preceded_by_phoneme": [
+        "n",
+        "l"
+      ],
+      "word_final": true,
+      "notes": "⟨d⟩ is silent after ⟨n l⟩ (land, kald); the cluster still shortens the preceding nucleus"
+    },
+    {
+      "id": "NN_SILENT_D_AFTER_R",
+      "phonemes": [
+        "d"
+      ],
+      "surface": "",
+      "preceded_by_phoneme": [
+        "r"
+      ],
+      "word_final": true,
+      "notes": "word-final ⟨rd⟩ is [r]: gard, ferd, Bård. Medial ⟨rd⟩ keeps /rd/."
+    }
+  ],
+  "stress": {
+    "default_position": 1,
+    "final_stress_endings": [],
+    "penult_stress_endings": [],
+    "marked_vowels": [],
+    "stress_mark": "ˈ",
+    "accent2_mark": "²",
+    "accent2_final_letters": [
+      "a",
+      "e"
+    ],
+    "notes": "Germanic initial stress: primary stress falls on the first syllable of the native root in the great majority of words (Kristoffersen 2000, ch. 9); loanwords and some suffixed forms deviate and are not modelled. Pitch accent: Nynorsk has the same two-way toneme contrast as the rest of mainland Scandinavian, and accent 2 requires a post-tonic syllable, so it is the default for the disyllabic trochees in final ⟨-a⟩/⟨-e⟩ — in Nynorsk that class is large, because ⟨-a⟩ is the productive infinitive, weak-feminine definite and weak-past ending (Beito 1986). Accent 1 is left unmarked, matching the gold's convention."
+  },
+  "sources": [
+    {
+      "id": "haugen1976",
+      "author": "Haugen, E.",
+      "year": 1976,
+      "title": "The Scandinavian Languages: An Introduction to their History",
+      "publisher": "Faber and Faber",
+      "url": null,
+      "pages": null,
+      "notes": "The Landsmål/Nynorsk codification and its dialect base."
+    },
+    {
+      "id": "kristoffersen2000",
+      "author": "Kristoffersen, G.",
+      "year": 2000,
+      "title": "The Phonology of Norwegian",
+      "publisher": "Oxford University Press",
+      "url": null,
+      "pages": null,
+      "notes": "Vowel quantity and the complementary length rule, the long/short vowel pairs, unstressed [ə], the tonemes, and the diphthong inventory — including that [æɪ] is the substitute used by speakers whose inventory lacks [ɛɪ], which is what separates the Urban East reading of ⟨ei⟩ from the Nynorsk one. Its segmental description is Urban East Norwegian, so it is cited here only for the properties it states to be general."
+    },
+    {
+      "id": "skjekkeland1997",
+      "author": "Skjekkeland, M.",
+      "year": 1997,
+      "title": "Dei norske dialektane: Tradisjonelle særdrag i jamføring med skriftmåla",
+      "publisher": "Høyskoleforlaget",
+      "url": null,
+      "pages": null,
+      "notes": "Traditional dialect features compared feature by feature against the two written standards. The source for the retroflexion isogloss (retroflex /r/+coronal is Eastern, Central and Northern; the southern and western areas lack it) and for the western realisation of the Old Norse diphthongs."
+    },
+    {
+      "id": "sandoy1985",
+      "author": "Sandøy, H.",
+      "year": 1985,
+      "title": "Norsk dialektkunnskap",
+      "publisher": "Novus",
+      "url": null,
+      "pages": null,
+      "notes": "Dialect geography with phonetically transcribed texts and a grammar sketch per dialect; corroborates the retroflexion and /r/ isoglosses and the western diphthong values."
+    },
+    {
+      "id": "beito1986",
+      "author": "Beito, O.T.",
+      "year": 1986,
+      "title": "Nynorsk grammatikk: Lyd- og ordlære",
+      "publisher": "Det Norske Samlaget",
+      "url": null,
+      "pages": null,
+      "notes": "The Nynorsk reference grammar. The source for the standard's own sound and form system: the ⟨kv-⟩ onset against Bokmål ⟨hv-⟩, and the productive ⟨-a⟩ endings (infinitive, weak-feminine definite, weak past) that Bokmål writes ⟨-e/-en/-et⟩."
+    },
+    {
+      "id": "vanvik1979",
+      "author": "Vanvik, A.",
+      "year": 1979,
+      "title": "Norsk fonetikk",
+      "publisher": "Universitetet i Oslo",
+      "url": null,
+      "pages": null,
+      "notes": "Segmental phonetics of Norwegian; the labiodental approximant [ʋ] for ⟨v⟩ and the apical realisations of /r/."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Nynorsk",
+    "https://nn.wikipedia.org/wiki/Nynorsk",
+    "https://en.wikipedia.org/wiki/Norwegian_dialects",
+    "https://en.wikipedia.org/wiki/Norwegian_phonology"
+  ],
+  "timespan": {
+    "start_year": 1850,
+    "end_year": null
+  },
+  "glottolog_code": "norw1262",
+  "iso639_3": "nno",
+  "wikidata_qid": "Q25164",
+  "location": {
+    "latitude": 59.92,
+    "longitude": 10.71,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Norwegian Nynorsk."
+  }
+}

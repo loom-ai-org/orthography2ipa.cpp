@@ -1,0 +1,129 @@
+{
+  "code": "mak",
+  "name": "Makasar",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "ng": [
+      "ŋ"
+    ],
+    "ny": [
+      "ɲ"
+    ],
+    "a": [
+      "a"
+    ],
+    "e": [
+      "e"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "o"
+    ],
+    "u": [
+      "u"
+    ],
+    "b": [
+      "b"
+    ],
+    "c": [
+      "c"
+    ],
+    "d": [
+      "d"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "h": [
+      "h"
+    ],
+    "j": [
+      "ɟ"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "w": [
+      "w"
+    ],
+    "y": [
+      "j"
+    ],
+    "ʼ": [
+      "ʔ"
+    ],
+    "’": [
+      "ʔ"
+    ],
+    "'": [
+      "ʔ"
+    ]
+  },
+  "parent": "poz",
+  "ancestors": [
+    {
+      "code": "poz",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Descent from Malayo-Polynesian (South Sulawesi, Austronesian)"
+    },
+    {
+      "code": "id",
+      "role": "adstrate",
+      "weight": 0.1,
+      "notes": "Indonesian/Malay adstrate"
+    }
+  ],
+  "notes": "Skeleton. Makasar/Makassarese (South Sulawesi, Austronesian), Latin orthography. Palatal stops ⟨c j⟩=/c ɟ/, ⟨ng⟩=/ŋ/, ⟨ny⟩=/ɲ/ and a phonemic glottal stop written ⟨ʼ⟩. Geminate consonants (doubled letters) are phonemic. Indonesian adstrate.",
+  "iso639_3": "mak",
+  "glottolog_code": null,
+  "sources": [
+    {
+      "id": "jukes2019",
+      "author": "Jukes, Anthony",
+      "year": 2019,
+      "title": "A Grammar of Makasar: A Language of South Sulawesi, Indonesia",
+      "publisher": "Brill",
+      "url": null,
+      "pages": null,
+      "notes": "Reference grammar and phonology of Makasar.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Makassarese_language"
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Makassarese_language"
+  ],
+  "stress": {
+    "default_position": -2,
+    "final_stress_endings": [],
+    "penult_stress_endings": [],
+    "marked_vowels": [],
+    "stress_mark": "ˈ",
+    "notes": "Makasar has regular penultimate word stress (Jukes 2019, Makassarese, ch. on phonology/prosody); no lexical exceptions are documented for the core vocabulary modeled here."
+  }
+}

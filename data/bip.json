@@ -1,0 +1,87 @@
+{
+ "code": "bip",
+ "name": "Bila",
+ "script": "Zyyy",
+ "quality": "stub",
+ "graphemes": {},
+ "allophones": {
+  "mb": [
+   "mb",
+   "mb"
+  ],
+  "nd": [
+   "nd",
+   "nd"
+  ]
+ },
+ "notes": "REGISTRY STUB (not a modelled G2P target). Placed so the ancestry graph covers every living ISO 639-3 language. No orthography is claimed; the phoneme inventory follows the cited PHOIBLE inventory (which itself cites a published description): script is Zyyy (undetermined) until a cited description is encoded. Classification and coordinates follow Glottolog.",
+ "iso639_3": "bip",
+ "glottolog_code": "bila1255",
+ "sources": [
+  {
+   "id": "glottolog2024",
+   "author": "Hammarström, Harald; Forkel, Robert; Haspelmath, Martin; Bank, Sebastian",
+   "year": 2024,
+   "title": "Glottolog 5.0",
+   "publisher": "Max Planck Institute for Evolutionary Anthropology",
+   "url": "https://glottolog.org/"
+  },
+  {
+   "id": "phoible2019",
+   "author": "Moran, Steven; McCloy, Daniel (eds.)",
+   "year": 2019,
+   "title": "PHOIBLE 2.0 (doi:10.5281/zenodo.2562766)",
+   "publisher": "Max Planck Institute for the Science of Human History",
+   "url": "https://phoible.org/inventories/view/1251",
+   "notes": "Inventory 1251 (ph), 28 non-marginal segments, 5 tones."
+  }
+ ],
+ "urls": [
+  "https://glottolog.org/resource/languoid/id/bila1255"
+ ],
+ "location": {
+  "latitude": 1.1684,
+  "longitude": 28.7626,
+  "source": "glottolog",
+  "notes": "Glottolog's representative point."
+ },
+ "parent": "x-clade-atla1278",
+ "phonemes": [
+  "h",
+  "j",
+  "k",
+  "kp",
+  "l",
+  "mb",
+  "nd",
+  "n̠d̠ʒ",
+  "p",
+  "s",
+  "t",
+  "t̠ʃ",
+  "w",
+  "ŋmɡb",
+  "ŋɡ",
+  "ɓ",
+  "ɗ",
+  "ɲ",
+  "ɸ",
+  "a",
+  "e",
+  "i",
+  "o",
+  "u",
+  "ɔ",
+  "ɛ",
+  "ɪ",
+  "ʊ"
+ ],
+ "tone_inventory": {
+  "˦": "PHOIBLE tone segment",
+  "˧": "PHOIBLE tone segment",
+  "˨": "PHOIBLE tone segment",
+  "˨˦": "PHOIBLE tone segment",
+  "˨˧": "PHOIBLE tone segment"
+ },
+ "phoible_id": "1251"
+}

@@ -1,0 +1,398 @@
+{
+  "code": "ar-TD",
+  "name": "Chadian Arabic",
+  "script": "Arabic",
+  "graphemes_base": "ar-x-mashriqi",
+  "graphemes": {
+    "ج": [
+      "dʒ",
+      "ɟ"
+    ],
+    "ق": [
+      "ɡ",
+      "q"
+    ],
+    "ث": [
+      "θ",
+      "t"
+    ],
+    "ذ": [
+      "ð",
+      "d"
+    ],
+    "ظ": [
+      "ðˤ",
+      "dˤ"
+    ],
+    "ض": [
+      "dˤ"
+    ],
+    "چ": [
+      "tʃ"
+    ],
+    "الثث": [
+      "aθθ",
+      "att"
+    ],
+    "اَلثث": [
+      "aθθ",
+      "att"
+    ],
+    "لِلثث": [
+      "liθθ",
+      "litt"
+    ],
+    "وَالثث": [
+      "waθθ",
+      "watt"
+    ],
+    "فَالثث": [
+      "faθθ",
+      "fatt"
+    ],
+    "بِالثث": [
+      "biθθ",
+      "bitt"
+    ],
+    "كَالثث": [
+      "kaθθ",
+      "katt"
+    ],
+    "الذذ": [
+      "aðð",
+      "add"
+    ],
+    "اَلذذ": [
+      "aðð",
+      "add"
+    ],
+    "لِلذذ": [
+      "liðð",
+      "lidd"
+    ],
+    "وَالذذ": [
+      "waðð",
+      "wadd"
+    ],
+    "فَالذذ": [
+      "faðð",
+      "fadd"
+    ],
+    "بِالذذ": [
+      "biðð",
+      "bidd"
+    ],
+    "كَالذذ": [
+      "kaðð",
+      "kadd"
+    ],
+    "اِلثث": [
+      "iθθ",
+      "itt"
+    ],
+    "اِلذذ": [
+      "iðð",
+      "idd"
+    ],
+    "وِالثث": [
+      "wiθθ",
+      "witt"
+    ],
+    "وِالذذ": [
+      "wiðð",
+      "widd"
+    ],
+    "الظظ": [
+      "aðˤðˤ",
+      "adˤdˤ"
+    ],
+    "اَلظظ": [
+      "aðˤðˤ",
+      "adˤdˤ"
+    ],
+    "اِلظظ": [
+      "iðˤðˤ",
+      "idˤdˤ"
+    ],
+    "لِلظظ": [
+      "liðˤðˤ",
+      "lidˤdˤ"
+    ],
+    "وَالظظ": [
+      "waðˤðˤ",
+      "wadˤdˤ"
+    ],
+    "فَالظظ": [
+      "faðˤðˤ",
+      "fadˤdˤ"
+    ],
+    "بِالظظ": [
+      "biðˤðˤ",
+      "bidˤdˤ"
+    ],
+    "كَالظظ": [
+      "kaðˤðˤ",
+      "kadˤdˤ"
+    ],
+    "وِالظظ": [
+      "wiðˤðˤ",
+      "widˤdˤ"
+    ],
+    "وَيْ": [
+      "weː"
+    ],
+    "يَوْ": [
+      "joː"
+    ]
+  },
+  "allophones_base": "ar-x-mashriqi",
+  "allophones": {
+    "b": [
+      "b",
+      "ɓ"
+    ],
+    "d": [
+      "d",
+      "ɗ"
+    ],
+    "θ": [
+      "θ",
+      "t"
+    ],
+    "ð": [
+      "ð",
+      "d"
+    ],
+    "ðˤ": [
+      "ðˤ",
+      "dˤ"
+    ],
+    "n": [
+      "n",
+      "ŋ",
+      "m"
+    ],
+    "a": [
+      "a",
+      "ə"
+    ],
+    "i": [
+      "i",
+      "ə"
+    ],
+    "u": [
+      "u",
+      "ə"
+    ],
+    "aː": [
+      "aː"
+    ],
+    "ŋ": [
+      "ŋ"
+    ]
+  },
+  "allophone_rules": [
+    {
+      "id": "TD_MONO_AW",
+      "phonemes": [
+        "aw"
+      ],
+      "surface": "oː",
+      "notes": "Urban N'Djamena monophthongization of /aw/ → [oː] (Kaye 1976; Jullien de Pommerol 1999): يَوْم *yawm > joːm 'day', ثَوْب *θawb > θoːb 'garment', نِدَوْر nidawr > nidoːr 'I look for'. This models the URBAN (sedentary N'Djamena) mainline that the arbitrated ar-TD gold selects for every /aw/ token; the word-initial ⟨يَوْ⟩ spelling is handled by an explicit grapheme because the onset digraph يَ claims the fatha before an /aw/ atom can form. THE BEDOUIN RETENTION IS PRESERVED for /aj/: Owens (1993) documents the diphthong-retaining Bedouin West Sudanic type (bajt, majʃ...), and the arbitrated gold accordingly keeps medial /aj/ as [aj] (بَيْت bajt, مشَيْت maʃajt, اشترَيْت ...rajt) — so NO general /aj/→eː rule is applied; only word-initial ⟨وَيْ⟩ monophthongizes (وَيْن → weːn), which the gold also selects. DELTA documented against the gold: the pronominal -aykum (علَيْكُم) is monophthongized to [eː] in the N'Djamena arbitration but retained here as [aj] on the same Bedouin-retention grounds — an honest under-application, since -aykum is not orthographically separable from the medial /aj/ that is retained. This dual modelling (urban /aw/ + word-initial /aj/ monophthongization as the mainline, Bedouin medial /aj/ retention documented and emitted) is the honest reconciliation the #459 discussion left open for the Chadian node."
+    },
+    {
+      "id": "AR_TD_GAHAWA_H_GLIDE",
+      "phonemes": [
+        "h"
+      ],
+      "surface": "ha",
+      "preceded_by": "vowel",
+      "followed_by_phoneme": [
+        "w",
+        "j"
+      ],
+      "notes": "Gahawa syndrome on the voiceless glottal /h/ (ه, a guttural for this rule) in the MEDIAL environment, the eponymous case: قَهْوَة /ɡahwa/ → [ɡahawa] 'coffee' (Jullien de Pommerol 1999; Owens 1993/2006; surveyed in Prochazka 2026). This CORRECTS the word-final-only scoping of AR_TD_GAHAWA_H/AIN/KH (Prochazka's type 2a), which under-applied by never inserting the echo vowel word-medially, so the canonical gahwa→gahawa was missed. The medial extension is scoped to a FOLLOWING GLIDE (/w j/): that is where the echo vowel surfaces in the gold (ɡa-ha-wa), and it keeps the rule off the medial guttural+obstruent clusters the same gold RETAINS — taʕbaːn (ʕ+b), ʔaxdˤar (x+d), ʔahliː (h+l), raħmat/jaħfɑðˤak (ħ+m, ħ+f) — preserving the taʕbaːn protection intact. /h/ was also absent from the inherited {ħ ʕ x} set, so this is the first gahawa rule to cover the glottal."
+    },
+    {
+      "id": "AR_TD_GAHAWA_H",
+      "phonemes": [
+        "ħ"
+      ],
+      "surface": "ħa",
+      "preceded_by": "vowel",
+      "followed_by": "consonant",
+      "notes": "Gahawa syndrome (low-vowel insertion after a guttural): a short /a/ is inserted after a guttural standing in a syllable word-final coda, CaGC# -> CaGaC, so /laħm/ 'meat' -> [laħam] and /baʕd/ 'after' -> [baʕad]. West Sudanic / Lake Chad Arabic is one of the classic areas for this rule (Owens 1993 for Nigerian/Lake Chad Arabic, Roth-Laly 1979 for Abeche Chadian; surveyed in Prochazka 2026, JSS, p.310, with the Nigerian type-2 example baxar 'back' p.318). Owens 2006 (Linguistic History of Arabic) gives the rule and the form ahamar 'red' < *ʔaḥmar (p.25). This rule fires on the voiceless pharyngeal ħ. Restricted to the word-final CaGC# environment (Prochazka's type 2a, p.318): the guttural coda is followed by a single word-final consonant, which is where the rule is most robustly attested and avoids over-applying inside longer words. The set {ħ, ʕ, x} encoded here is the robustly-attested core of Owens' fuller guttural set {ʔ h x q ħ ʕ}.",
+      "followed_by_2": "word_boundary"
+    },
+    {
+      "id": "AR_TD_GAHAWA_AIN",
+      "phonemes": [
+        "ʕ"
+      ],
+      "surface": "ʕa",
+      "preceded_by": "vowel",
+      "followed_by": "consonant",
+      "notes": "Gahawa syndrome on the voiced pharyngeal /ʕ/: /baʕd/ 'after' -> [baʕad]. Same rule and sources as AR_TD_GAHAWA_H (Owens 1993/2006 p.25; Roth-Laly 1979; Prochazka 2026 p.310). Restricted to the word-final CaGC# environment (Prochazka's type 2a, p.318): the guttural coda is followed by a single word-final consonant, which is where the rule is most robustly attested and avoids over-applying inside longer words. The set {ħ, ʕ, x} encoded here is the robustly-attested core of Owens' fuller guttural set {ʔ h x q ħ ʕ}.",
+      "followed_by_2": "word_boundary"
+    },
+    {
+      "id": "AR_TD_GAHAWA_KH",
+      "phonemes": [
+        "x"
+      ],
+      "surface": "xa",
+      "preceded_by": "vowel",
+      "followed_by": "consonant",
+      "notes": "Gahawa syndrome on the voiceless velar/uvular fricative /x/ (خ, a guttural for this rule): /naxl/ 'palm trees' -> [naxal]. Same rule and sources as AR_TD_GAHAWA_H (Owens 2006 p.25 lists the guttural set as ʔ, h, x, q; Prochazka 2026 p.310). Restricted to the word-final CaGC# environment (Prochazka's type 2a, p.318): the guttural coda is followed by a single word-final consonant, which is where the rule is most robustly attested and avoids over-applying inside longer words. The set {ħ, ʕ, x} encoded here is the robustly-attested core of Owens' fuller guttural set {ʔ h x q ħ ʕ}.",
+      "followed_by_2": "word_boundary"
+    }
+  ],
+  "parent": "ar-x-mashriqi",
+  "ancestors": [
+    {
+      "code": "ar-x-mashriqi",
+      "role": "parent",
+      "weight": 0.9,
+      "notes": "West Sudanic Arabic descends from the Bedouin Arabic carried south-west from Upper Egypt by nomadic migration beginning in the 14th c. (Owens & Hassan 2009, cited in Prochazka 2026 p.325); an eastern (Mashriqi) Bedouin base."
+    }
+  ],
+  "notes": "Chadian Arabic (ʕarabī šuwā / لهجة تشادية). Spoken across Chad, with closely related varieties reaching northern Cameroon, the CAR and, as Shuwa/Nigerian Arabic (ar-NG), north-eastern Nigeria. It is the western end of the 'West Sudanic' / 'Lake Chad' Arabic chain, Arabicised by Bedouin migration out of Upper Egypt from about the 14th c. (Owens & Hassan 2009; Prochazka 2026 p.325). DEFINING FEATURES (Owens 1993, 2006; Kaye 1976; Jullien de Pommerol 1999): qaf ق -> /ɡ/ (Bedouin-type voiced reflex; gal 'he said'), with /q/ only in learned/Classical borrowings, so ق is [ɡ, q]. jim ج -> /dʒ/, with a palatal-stop variant [ɟ] shared with neighbouring Sudanese Arabic (ar-SD). INTERDENTALS: Chadian Arabic is the more conservative end of the chain and variably retains θ ث and ð ذ (and emphatic ðˤ ظ), with a sedentary/urban (Abeche) tendency to merge them into the stops t, d, dˤ, hence ث [θ, t], ذ [ð, d], ظ [ðˤ, dˤ]; the full merger is completed one step further west in Nigerian Arabic (ar-NG). EMPHASIS is robust and, per Owens (2006 p.25), EXTENDED beyond the four Classical emphatics /tˤ dˤ sˤ (ðˤ)/ to phonemic /lˤ rˤ mˤ/, with minimal pairs gallab 'he galloped' vs galˤlˤab 'he got angry', karra 'he tore' vs karˤrˤa 'he dragged', amm 'uncle' vs amˤmˤ 'mother' (this CORRECTS the common assumption that Nigerian Arabic has 'weakened emphasis' -- emphasis is added, not lost; the extra emphatics /lˤ rˤ mˤ/ are not orthographically distinct and are inventory facts, not graphemes). GAHAWA SYNDROME: a short /a/ is inserted after a guttural in a closed syllable, CaGC -> CaGaC (laħm -> laħam, baʕd -> baʕad, naxl -> naxal), encoded in allophone_rules (Owens 1993/2006 p.25; Roth-Laly 1979; Prochazka 2026 p.310, 318). VOWELS: a five-quality system /i e a o u/ with length, the mid /e o/ largely from DIACHRONICALLY monophthongised */aj aw/ (Kaye 1976; Owens 2006) — this is the historical origin of the /e o/ phonemes, NOT a synchronic categorical rule. SYNCHRONICALLY this Bedouin-type West Sudanic variety RETAINS the diphthongs /aj aw/ (bajt 'house', wajn 'where', jawm 'day', ʕalajkum; Owens 1993, the diphthong-retaining Bedouin type — contrast the sedentary koines that monophthongize), so no synchronic /aj aw/→[eː oː] allophone rule is applied and the diphthongs surface as written. Categorical monophthongization is a sedentary (Abeche) tendency (Roth-Laly 1979), a documented variant, not the generic West Sudanic mainline modelled here or in the ar-TD/ar-NG gold. Emphatic backing of /a aː/ -> [ɑ ɑː] adjacent to an emphatic is inherited from the Mashriqi base. SUBSTRATE (statable as phonology, not lexicon): implosive allophones [ɓ ɗ] and a velar nasal /ŋ/ from Chadic/Fulfulde contact (Owens 2006 p.19).",
+  "quality": "research",
+  "script_type": "abjad",
+  "sources": [
+    {
+      "id": "owens1993",
+      "author": "Owens, Jonathan",
+      "year": 1993,
+      "title": "A Grammar of Nigerian Arabic",
+      "publisher": "Harrassowitz",
+      "url": null,
+      "pages": null,
+      "notes": "The primary descriptive grammar of the West Sudanic (Nigerian/Lake Chad) chain to which Chadian Arabic belongs: qaf -> [ɡ] (gal), loss/merger of the interdentals, the gahawa low-vowel insertion after gutturals, and the extended emphatic inventory."
+    },
+    {
+      "id": "owens2006",
+      "author": "Owens, Jonathan",
+      "year": 2006,
+      "title": "A Linguistic History of Arabic",
+      "publisher": "Oxford University Press",
+      "url": "https://archive.org/stream/TheLinguisticHistoryOfArabic/Owens-Linguistic_History_of_Arabic_djvu.txt",
+      "pages": "13-14, 19, 25",
+      "notes": "Owens' own later synthesis, read in full text. p.25: Nigerian Arabic has lost the interdentals (they merge with s/t/d), has six phonemic emphatics (the four Classical ones plus /lˤ rˤ mˤ/) with the minimal pairs gallab/galˤlˤab, karra/karˤrˤa, amm/amˤmˤ, and inserts /a/ after a guttural (ahamar < *ʔaḥmar). p.19: *t > [ɗˤ] emphatic implosive attributed to Fulfulde contact. p.13-14: 1sg perfect -t loss with stress evidence (katab 'I wrote' with final stress vs katab 'he wrote')."
+    },
+    {
+      "id": "kaye1976",
+      "author": "Kaye, Alan S.",
+      "year": 1976,
+      "title": "Chadian and Sudanese Arabic in the Light of Comparative Arabic Dialectology",
+      "publisher": "Mouton",
+      "url": null,
+      "pages": null,
+      "notes": "Comparative reference for the Chadian/Sudanese group: qaf -> /ɡ/, interdental treatment, monophthongisation of */aj aw/ to /eː oː/ feeding the five-vowel system."
+    },
+    {
+      "id": "pommerol1999",
+      "author": "Jullien de Pommerol, Patrice",
+      "year": 1999,
+      "title": "Grammaire pratique de l'arabe tchadien",
+      "publisher": "Karthala",
+      "url": null,
+      "pages": null,
+      "notes": "Practical descriptive grammar of Chadian Arabic proper (the Chad end of the chain); qaf -> /ɡ/, variable interdentals, five-vowel system."
+    },
+    {
+      "id": "roth1979",
+      "author": "Roth-Laly, Arlette",
+      "year": 1979,
+      "title": "Esquisse grammaticale du parler arabe d'Abbeche (Tchad)",
+      "publisher": "Geuthner",
+      "url": null,
+      "pages": null,
+      "notes": "Description of Abeche (sedentary Chadian) Arabic; the primary source for the gahawa syndrome in Chadian Arabic (cited as such in Prochazka 2026 p.310) and for the sedentary interdental merger."
+    },
+    {
+      "id": "prochazka2026",
+      "author": "Prochazka, Stephan",
+      "year": 2026,
+      "title": "The Low Vowel Insertion Rule After Gutturals (aka the Gahawa-Syndrome) in the Arabic Dialects",
+      "publisher": "Journal of Semitic Studies LXXI/1",
+      "url": "https://academic.oup.com/jss/advance-article-pdf/doi/10.1093/jss/fgaf037/66148694/fgaf037.pdf",
+      "doi": "10.1093/jss/fgaf037",
+      "pages": "310, 318, 325",
+      "notes": "Open-access survey of the gahawa syndrome. p.310: names Roth 1979 as the source for Chadian and Owens 1993 for Lake Chad/Nigerian Arabic. p.318: Nigerian type-2 example baxar 'back' (CaGC# > CaGaC#). p.325: dates the Arabicisation of western Sudan and Lake Chad to 14th-c. migration from Upper Egypt (Owens & Hassan 2009)."
+    },
+    {
+      "id": "watson2002",
+      "author": "Watson, J.C.E.",
+      "year": 2002,
+      "title": "The Phonology and Morphology of Arabic",
+      "publisher": "Oxford University Press",
+      "url": null,
+      "pages": null,
+      "notes": "General reference for emphasis (pharyngealisation) spreading, which backs /a aː/ to [ɑ ɑː] adjacent to an emphatic.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Chadian_Arabic"
+    },
+    {
+      "id": "holes2004",
+      "author": "Holes, C.",
+      "year": 2004,
+      "title": "Modern Arabic: Structures, Functions, and Varieties",
+      "publisher": "Georgetown University Press",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "versteegh2001",
+      "author": "Versteegh, K.",
+      "year": 2001,
+      "title": "The Arabic Language",
+      "publisher": "Edinburgh University Press",
+      "url": null,
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Chadian_Arabic",
+    "https://ar.wikipedia.org/wiki/%D9%84%D9%87%D8%AC%D8%A9_%D8%AA%D8%B4%D8%A7%D8%AF%D9%8A%D8%A9"
+  ],
+  "timespan": {
+    "start_year": 1700,
+    "end_year": null
+  },
+  "glottolog_code": "chad1249",
+  "iso639_3": "shu",
+  "location": {
+    "latitude": 14.67,
+    "longitude": 13.5,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Chadian Arabic."
+  },
+  "optional_marks": [
+    "ً",
+    "ٌ",
+    "ٍ",
+    "َ",
+    "ُ",
+    "ِ",
+    "ّ",
+    "ْ",
+    "ٰ",
+    "ٓ"
+  ],
+  "stress": {
+    "default_position": -3,
+    "quantity_sensitive": true,
+    "superheavy_final_attracts": true,
+    "max_onset": 1,
+    "stress_mark": "ˈ",
+    "notes": "Arabic stress is QUANTITY-SENSITIVE: it falls on a syllable because that syllable is heavy, not because of any orthographic ending, so no ending table can express it. The cascade (Ryding, A Reference Grammar of MSA, CUP 2005, §2.3; Watson, The Phonology and Morphology of Arabic, OUP 2002, ch.3): a superheavy final syllable (CVːC/CVCC) takes the stress (kiˈtaːb); otherwise a heavy penult (CVː/CVC) does (muˈdarris); otherwise the antepenult (ˈmadrasa). max_onset=1 because Arabic onsets are obligatory and hold exactly one consonant -- a medial cluster splits, closing the preceding syllable, and that boundary is what makes the penult of mudarris heavy. INPUT CONTRACT: weight is only recoverable from a complete transcription, so this requires diacritized input; an undiacritized skeleton has no vowels to weigh. The registered wikipron gold carries no stress marks, but the benchmark strips stress from both sides by default, so this costs no PER. Prosodic clitics: monosyllabic function words (negator maː, prepositions fiː/min/ʕan/ʕa/li/bi, vocative jaː, copula-negator muː/miʃ, conditional law/loː, wa-proclitic combinations) attach to a host and fall inside the host's stress domain, so they carry no word stress (Watson 2002, The Phonology and Morphology of Arabic, OUP, ch.3). Pan-Arabic class; the per-lect form list reflects the function words attested in this lect. Orthographic test — a clitic homograph (e.g. verb yā 'came') is destressed in every occurrence.",
+    "cliticless_words": [
+      "فِي",
+      "مَا",
+      "مِن",
+      "وَمَا"
+    ]
+  }
+}

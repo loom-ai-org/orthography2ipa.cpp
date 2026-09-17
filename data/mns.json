@@ -1,0 +1,288 @@
+{
+ "code": "mns",
+ "name": "Mansi",
+ "script": "Cyrillic",
+ "script_type": "alphabet",
+ "quality": "research",
+ "graphemes": {
+  "а": [
+   "a"
+  ],
+  "а̄": [
+   "aː"
+  ],
+  "б": [
+   "b"
+  ],
+  "в": [
+   "w"
+  ],
+  "г": [
+   "ɣ"
+  ],
+  "д": [
+   "d"
+  ],
+  "е": [
+   "je",
+   "e"
+  ],
+  "ё": [
+   "jo",
+   "o"
+  ],
+  "ж": [
+   "ʒ"
+  ],
+  "з": [
+   "z"
+  ],
+  "и": [
+   "i"
+  ],
+  "ӣ": [
+   "iː"
+  ],
+  "й": [
+   "j"
+  ],
+  "к": [
+   "k"
+  ],
+  "л": [
+   "l̪"
+  ],
+  "ле": [
+   "ʎe"
+  ],
+  "лё": [
+   "ʎo"
+  ],
+  "ли": [
+   "ʎi"
+  ],
+  "лю": [
+   "ʎu"
+  ],
+  "ля": [
+   "ʎa"
+  ],
+  "ль": [
+   "ʎ"
+  ],
+  "м": [
+   "m"
+  ],
+  "н": [
+   "n̪"
+  ],
+  "не": [
+   "ɲe"
+  ],
+  "нё": [
+   "ɲo"
+  ],
+  "ни": [
+   "ɲi"
+  ],
+  "ню": [
+   "ɲu"
+  ],
+  "ня": [
+   "ɲa"
+  ],
+  "нь": [
+   "ɲ"
+  ],
+  "ӈ": [
+   "ŋ"
+  ],
+  "о": [
+   "o"
+  ],
+  "о̄": [
+   "oɔ"
+  ],
+  "ӧ": [
+   "ə"
+  ],
+  "п": [
+   "p"
+  ],
+  "р": [
+   "r"
+  ],
+  "с": [
+   "s̪"
+  ],
+  "се": [
+   "sʲe"
+  ],
+  "си": [
+   "sʲi"
+  ],
+  "сю": [
+   "sʲu"
+  ],
+  "ся": [
+   "sʲa"
+  ],
+  "сь": [
+   "sʲ"
+  ],
+  "т": [
+   "t̪"
+  ],
+  "те": [
+   "t̪ʲe"
+  ],
+  "ти": [
+   "t̪ʲi"
+  ],
+  "тю": [
+   "t̪ʲu"
+  ],
+  "тя": [
+   "t̪ʲa"
+  ],
+  "ть": [
+   "t̪ʲ"
+  ],
+  "у": [
+   "u"
+  ],
+  "ӯ": [
+   "uː"
+  ],
+  "ф": [
+   "f"
+  ],
+  "х": [
+   "χ"
+  ],
+  "хв": [
+   "χʷ"
+  ],
+  "кв": [
+   "kʷ"
+  ],
+  "ц": [
+   "ts"
+  ],
+  "ч": [
+   "tɕ"
+  ],
+  "ш": [
+   "ʃ"
+  ],
+  "щ": [
+   "ɕ"
+  ],
+  "ъ": [
+   ""
+  ],
+  "ы": [
+   "ɪ"
+  ],
+  "ь": [
+   "ʲ"
+  ],
+  "э": [
+   "e"
+  ],
+  "э̄": [
+   "ɤː"
+  ],
+  "ю": [
+   "ju",
+   "u"
+  ],
+  "я": [
+   "ja",
+   "a"
+  ]
+ },
+ "allophones": {},
+ "notes": "Northern (Sosva) Mansi, Ob-Ugric branch, Khanty-Mansi Autonomous Okrug, Russia. INPUT CONTRACT: modern Sosva Mansi Cyrillic orthography, NFC. Long vowels are spelled with a combining macron over the base vowel letter (⟨а̄ о̄ э̄ ӣ ӯ⟩); short/long is therefore a real orthographic contrast, not free variation, so the macronised letters are separate grapheme keys (Riese 2001, Sec. 1.1-1.2). ⟨в⟩ is the labio-velar approximant /w/ (Riese 2001), not Russian /v/. The native (non-loanword) consonant inventory has no plain voiced obstruents (⟨б в г д ж з⟩ occur only in Russian loans; Riese 2001, Sec. 1.3) — their values here are the loanword pronunciation. The coronals ⟨л⟩, ⟨н⟩ and ⟨т⟩ palatalise before the iotated vowels ⟨е ё и ю я⟩ and the soft sign ⟨ь⟩ (Riese 2001; directly evidenced by NorthEuraLex нёл -> ɲ o l and питьми -> p i tʲ m i), so those sequences are entered as multigraph keys the maximal-munch matcher prefers over the bare consonant. Word stress in Mansi is fixed on the first syllable and therefore not phonemically distinctive (Riese 2001, Sec. 1.4); this is documented as an stress encoded (fixed initial, Riese 2001) (a fixed, non-contrastive position needs no per-word marking) rather than modelled with a stress schema. ITERATION FIX (error-analysis pass against NorthEuraLex): ⟨а⟩ corrected to /a/ (not /ɐ/) and ⟨а̄⟩ to /aː/ (not /ɑː/); ⟨э̄⟩ to /ɤː/ (NorthEuraLex э̄ӈын -> ɤːŋɪn); ⟨х⟩ to the uvular /χ/, with the labialised clusters ⟨хв⟩ /χʷ/ and ⟨кв⟩ /kʷ/ entered as multigraphs (NorthEuraLex эква -> əkʷa, ахвтас -> aχʷtas — the labialisation is not a separate /w/ segment); ⟨ы⟩ to /ɪ/ (distinct from the /ə/ of ⟨ы⟩'s reduced-vowel neighbour, matching NorthEuraLex лылыйэ̄п -> lɪlɪjɤːp); the palatal digraphs for ⟨л⟩/⟨н⟩ from the PHOIBLE-sourced fronted allophones /ʎ̟/ /ɲ̟/ to the plain /ʎ/ /ɲ/ that NorthEuraLex's transcription consistently shows (e.g. паль -> paʎ, аня -> aɲa); and a parallel /sʲ/ palatalisation series added for ⟨с⟩ before the same iotated-vowel/soft-sign environment (ся̄нь -> sʲaːɲ). Classification and coordinates follow Glottolog.",
+ "iso639_3": "mns",
+ "glottolog_code": "mans1258",
+ "wikipedia": [
+  "https://en.wikipedia.org/wiki/Mansi_language"
+ ],
+ "sources": [
+  {
+   "id": "riese2001",
+   "author": "Riese, Timothy",
+   "year": 2001,
+   "title": "Vogul",
+   "publisher": "Languages of the World/Materials 158, LINCOM Europa",
+   "url": "https://www.lincom-shop.eu/",
+   "notes": "Reference grammar of (Northern/Sosva) Mansi: Cyrillic orthography incl. macron-marked long vowels, ⟨в⟩ /w/, the loanword-only status of plain voiced obstruents, coronal palatalisation before iotated vowels, and fixed word-initial stress."
+  },
+  {
+   "id": "glottolog2024",
+   "author": "Hammarström, Harald; Forkel, Robert; Haspelmath, Martin; Bank, Sebastian",
+   "year": 2024,
+   "title": "Glottolog 5.0",
+   "publisher": "Max Planck Institute for Evolutionary Anthropology",
+   "url": "https://glottolog.org/"
+  },
+  {
+   "id": "phoible2019",
+   "author": "Moran, Steven; McCloy, Daniel (eds.)",
+   "year": 2019,
+   "title": "PHOIBLE 2.0 (doi:10.5281/zenodo.2562766)",
+   "publisher": "Max Planck Institute for the Science of Human History",
+   "url": "https://phoible.org/inventories/view/2475",
+   "notes": "Inventory 2475 (ea), 31 non-marginal segments."
+  }
+ ],
+ "urls": [
+  "https://glottolog.org/resource/languoid/id/mans1258"
+ ],
+ "location": {
+  "latitude": 64.4118,
+  "longitude": 61.344,
+  "source": "glottolog",
+  "notes": "Glottolog's representative point."
+ },
+ "parent": "x-clade-ural1272",
+ "phonemes": [
+  "j",
+  "k",
+  "kʷ",
+  "l̪",
+  "m",
+  "n̪",
+  "p",
+  "r",
+  "s̪",
+  "t̪",
+  "t̪ʲ",
+  "x",
+  "xʷ",
+  "ŋ",
+  "ŋʷ",
+  "ɕ",
+  "ɣ",
+  "ɲ̟",
+  "ʎ̟",
+  "β",
+  "e",
+  "eɛ",
+  "i",
+  "iː",
+  "o",
+  "oɔ",
+  "u",
+  "uː",
+  "ɐ",
+  "ɑː",
+  "ə"
+ ],
+ "phoible_id": "2475",
+ "stress": {
+  "default_position": 1,
+  "notes": "Fixed word-initial stress (Riese 2001, Vogul, §2.4): non-contrastive and fully predictable, so encoded rather than exempted."
+ }
+}

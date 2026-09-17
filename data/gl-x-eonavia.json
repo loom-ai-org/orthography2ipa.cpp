@@ -1,0 +1,134 @@
+{
+  "code": "gl-x-eonavia",
+  "name": "Eonavian (Galician-Asturian, gallego-asturiano)",
+  "script": "Latin",
+  "parent": "gl",
+  "graphemes_base": "gl",
+  "allophones_base": "gl",
+  "positional_graphemes_base": "gl",
+  "graphemes": {
+    "ch": [
+      "tʃ"
+    ],
+    "ll": [
+      "ʎ"
+    ],
+    "x": [
+      "ʃ"
+    ],
+    "nh": [
+      "ŋ"
+    ]
+  },
+  "allophones": {
+    "tʃ": [
+      "tʃ"
+    ],
+    "ʎ": [
+      "ʎ"
+    ],
+    "ʃ": [
+      "ʃ"
+    ]
+  },
+  "positional_graphemes": {
+    "ch": {
+      "word_initial": [
+        "tʃ"
+      ],
+      "intervocalic": [
+        "tʃ"
+      ]
+    }
+  },
+  "ancestors": [
+    {
+      "code": "gl",
+      "role": "parent",
+      "weight": 0.62,
+      "notes": "Galician / Galaico-Portuguese stock: Eonavian (the speech of the Navia-Eo region, western Asturias, between the río Navia and the río Eo) descends genetically from the same Galaico-Portuguese continuum as Galician, sharing its defining western-Ibero-Romance outcomes: Latin PL-/CL-/FL- → [tʃ] (chover, chave, chamar — not Asturian ll-), Latin -CT-/-ULT- → [it] (feito, muito), no diphthongisation of Latin Ĕ/Ŏ (terra, porta — not Asturian tierra, puerta), ⟨x⟩ = [ʃ], falling diphthongs ou/ei preserved. Galician-side scholarship (RAG, ILG, Fernández Rei) classifies it as 'galego de Asturias'."
+    },
+    {
+      "code": "ast-x-occidental",
+      "role": "adstrate",
+      "weight": 0.28,
+      "notes": "Western Asturian (Asturleonese) adstrate — the reason the ALLA (Academia de la Llingua Asturiana) names the variety 'gallego-asturiano / eonaviego' and treats it as a transitional speech of its own. Asturian contact features: raising of final unstressed -o → [-u] and -e → [-i] in the easternmost parishes, spread of the neuter-of-matter agreement, some lexical and morphological Asturianisms, and orthographic conventions of the ALLA's own 'Normes ortográfiques'. The east↔west gradient within Navia-Eo runs from more Asturian-like (Navia) to more Galician-like (Eo)."
+    },
+    {
+      "code": "cel-x-gallaecia",
+      "role": "substrate",
+      "weight": 0.05,
+      "notes": "Gallaecian Celtic substrate of the northwest, inherited through the Galaico-Portuguese stock."
+    },
+    {
+      "code": "got",
+      "role": "superstrate",
+      "weight": 0.03,
+      "notes": "Visigothic superstrate: shared pan-Iberian overlay."
+    }
+  ],
+  "notes": "Eonavian (eonaviego, gallego-asturiano, fala del Navia-Eo) — the Galician-Portuguese transitional speech of the Navia-Eo comarca in westernmost Asturias (Spain), between the río Eo (border with Galicia) and the río Navia. CODE CHOICE: modelled under the GALICIAN clade as gl-x-eonavia rather than under Asturian, because its structural phonology is Galaico-Portuguese (PL-/CL-/FL- → [tʃ], -CT- → [it], no Ĕ/Ŏ diphthongisation), which is the genetic-classification criterion the o2i graph already applies (gl.json and gl-x-oriental.json both name 'A Fala, Eonaviego' as the Galician-Asturian transitional zone). This is a deliberate, literature-grounded choice on a genuinely contested variety: the ALLA calls it 'gallego-asturiano' and administers it as an Asturian regional speech, while Galician institutions (RAG/ILG) call it 'galego de Asturias'; both agree it is Galician-Portuguese in origin with heavy Asturian adstrate, which the ancestry block encodes (parent gl weight 0.62, ast-x-occidental adstrate 0.28). KEY FEATURES modelled as deltas over gl: (1) ⟨ch⟩ = [tʃ] robustly PRESERVED word-initially and intervocalically (chover, cheo) — no urban deaffrication to [ʃ]. (2) ⟨ll⟩ = [ʎ] (palatal lateral retained; no yeísmo). (3) ⟨x⟩ = [ʃ]. FEATURES SHARED with the gl base and therefore inherited, not re-declared: seven tonic vowels /a e ɛ i o ɔ u/; apico-alveolar /s̺/; betacism ⟨b⟩=⟨v⟩=/b/; intervocalic voiced-stop spirantisation β/ð/ɣ; falling diphthongs ou/ei. DIALECT-INTERNAL GRADIENT (documented, not phoneme-split here): the easternmost parishes raise final -o/-e to [-u]/[-i] and show more Asturian traits; distinción (/θ/) is general, with pockets of seseo and gheada near the Galician side. Provenance honesty: base phonology inherited from the research-tier gl spec; the Eonavian-specific deltas are page-pinned to the ALLA Normas Fonética section (§1.1-1.3) and Frías Conde (Ianua 5, pp.93-106), both read directly.",
+  "sources": [
+    {
+      "id": "alla_normas_gallego_asturiano2007",
+      "author": "Academia de la Llingua Asturiana (Secretaría Llingüística del Navia-Eo)",
+      "year": 2007,
+      "title": "Normas ortográficas del gallego-asturiano",
+      "publisher": "ALLA, Uviéu",
+      "url": "https://alladixital.org/wp-content/uploads/2022/08/normas_gallego_asturianu.pdf",
+      "pages": "§1.1-1.3 (Fonética)",
+      "notes": "Read directly (papers/iberian/alla_normas_ortograficas_gallego_asturiano.pdf). §1.1 alphabet/consonant inventory /a b θ k tʃ d e ɛ f g i l ʎ m n ɲ o ɔ p ɾ r s t u/ plus /ʃ ʝ/. §1.2.2 /θ/ is a full phoneme (distinción; NO gheada, /g/ plain). §1.2.4 Latin -L-/-LL- → /ʎ/ in the eastern zone (lleite, llobo) vs /l/ in the west (leite) → the (l)l convention. §1.2.5 -LJ-/-K'L- → /ʎ/ everywhere (muller, ollo); /ʝ/ (y) with variable ʎ~ʝ merger. §1.2.6 native ⟨x⟩ = [ʃ] (xabón, queixo); Castilian jota /x/ not native. §1.3.1/§1.3.3 seven-vowel tonic system with /e ɛ/ and /o ɔ/. The variety's orthography is thus ALLA-administered even though its phonology is Galaico-Portuguese."
+    },
+    {
+      "id": "frias_conde2005",
+      "author": "Frías Conde, X.",
+      "year": 2005,
+      "title": "O relativo do continuum entre galego e asturiano en Asturias",
+      "publisher": "Ianua. Revista Philologica Romanica 5, pp. 93-106",
+      "url": "https://www.romaniaminor.org/ianua/Ianua05/ianua05_07.pdf",
+      "pages": "93-106",
+      "notes": "Read directly (papers/iberian/frias_conde_continuum_ianua05.pdf). The classification argument: rebuts García Arias point-by-point and affirms the galeguidade of eonaviego. p.96-97: the west→east -LL- gradient (leite > lleite > yeite) is argued as an ancient isogloss, not Asturian influence; native metaphony equa>eugua; characteristic intervocalic -n- denasalisation (farina>faría, miña>mía). Vocalism + nasality are the strongest Galaico-Portuguese diagnostics."
+    },
+    {
+      "id": "nieto_tfg_gallego_asturiano",
+      "author": "Nieto Rodríguez, S.",
+      "year": 2020,
+      "title": "El gallego-asturiano (TFG)",
+      "publisher": "Universidad de Oviedo (digibuo institutional repository)",
+      "url": "https://digibuo.uniovi.es/dspace/bitstream/handle/10651/64014/TFG_SaraNietoRodriguez.pdf",
+      "pages": null,
+      "notes": "Read (papers/iberian/nieto_tfg_gallego_asturiano_uniovi.pdf). Uniovi institutional-repository overview of the variety."
+    },
+    {
+      "id": "fernandez_rei1990",
+      "author": "Fernández Rei, F.",
+      "year": 1990,
+      "title": "Dialectoloxía da lingua galega",
+      "publisher": "Edicións Xerais de Galicia",
+      "url": null,
+      "pages": null,
+      "notes": "Classifies the Navia-Eo speech within the eastern Galician block ('galego de Asturias'). Book, not open — cited via the OA Frías Conde and Dubert sources."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Eonavian_dialect",
+    "https://gl.wikipedia.org/wiki/Galego-asturiano",
+    "https://ast.wikipedia.org/wiki/Gallego-asturianu",
+    "https://es.wikipedia.org/wiki/Gallego-asturiano"
+  ],
+  "timespan": {
+    "start_year": 1200,
+    "end_year": null
+  },
+  "glottolog_code": "gali1258",
+  "iso639_3": "glg",
+  "quality": "research",
+  "script_type": "alphabet",
+  "wikidata_qid": "Q353400",
+  "location": {
+    "latitude": 43.55,
+    "longitude": -6.9,
+    "source": "manual",
+    "notes": "Navia-Eo comarca, westernmost Asturias, between the río Eo and the río Navia (approx. Vegadeo/A Veiga)."
+  }
+}

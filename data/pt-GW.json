@@ -1,0 +1,250 @@
+{
+  "code": "pt-GW",
+  "glottolog_code": null,
+  "name": "Guinea-Bissau Portuguese",
+  "script": "Latin",
+  "quality": "research",
+  "script_type": "alphabet",
+  "parent": "pt-PT",
+  "graphemes_base": "pt-PT",
+  "allophones_base": "pt-PT",
+  "positional_graphemes_base": "pt-PT",
+  "graphemes": {
+    "r": [
+      "r",
+      "ɾ"
+    ],
+    "rr": [
+      "r"
+    ],
+    "e": [
+      "e",
+      "ɛ"
+    ],
+    "o": [
+      "o",
+      "ɔ"
+    ]
+  },
+  "allophones": {
+    "r": [
+      "r",
+      "ɾ"
+    ],
+    "ʁ": [
+      "r"
+    ]
+  },
+  "ancestors": [
+    {
+      "code": "pt-PT",
+      "role": "parent",
+      "weight": 0.65,
+      "notes": "European Portuguese colonial base. Guinea-Bissau was a Portuguese colony until 1974."
+    },
+    {
+      "code": "pov",
+      "role": "adstrate",
+      "weight": 0.25,
+      "notes": "Guinea-Bissau Creole (Kriol/GBC) adstrate: the true lingua franca, spoken as L1 by ~44% and as L2 by most of the population. Descended from Portuguese; exerts strong influence on the local Portuguese register."
+    },
+    {
+      "code": "ff",
+      "role": "substrate",
+      "weight": 0.1,
+      "notes": "Fula (Fulah) substrate: one of the major languages of Guinea-Bissau (Pulaar-speaking communities in the east); phonological transfer into Portuguese."
+    }
+  ],
+  "notes": "Guinea-Bissau Portuguese (Português da Guiné-Bissau). Official language; spoken as L1 by a small educated elite (<10%); Guinea-Bissau Creole (Kriol) is the actual national lingua franca. Portuguese functions mainly in formal, governmental, and educational domains. KEY FEATURES: (1) FIVE-VOWEL SYSTEM: /ɨ/ absent; full articulation of unstressed vowels. (2) SIBILANTS: alveolar [s] in coda (no palatalisation). (3) RHOTIC: alveolar trill [r]. (4) CREOLE TRANSFER: strong lexical and syntactic influence from Kriol; many speakers are effectively L2 users of Portuguese. (5) Very limited documentation of phonological features. Sources: Couto (1994), Kihm (1994), PALOP linguistic studies.",
+  "sources": [
+    {
+      "id": "couto1994",
+      "author": "Couto, H.H. do",
+      "year": 1994,
+      "title": "O crioulo português da Guiné-Bissau",
+      "publisher": "Helmut Buske Verlag",
+      "url": null,
+      "pages": null,
+      "notes": "Key reference for Guinea-Bissau Creole and its Portuguese relationship"
+    },
+    {
+      "id": "kihm1994",
+      "author": "Kihm, A.",
+      "year": 1994,
+      "title": "Kriyol Syntax: The Portuguese-based Creole Language of Guinea-Bissau",
+      "publisher": "John Benjamins",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "goncalves1996",
+      "author": "Gonçalves, P.",
+      "year": 1996,
+      "title": "Português de Moçambique: uma variedade em formação",
+      "publisher": "Universidade Eduardo Mondlane",
+      "url": null,
+      "pages": null,
+      "notes": "PALOP comparative reference"
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Guinea-Bissau_Creole",
+    "https://en.wikipedia.org/wiki/Languages_of_Guinea-Bissau",
+    "https://pt.wikipedia.org/wiki/Crioulo_da_Guin%C3%A9-Bissau",
+    "https://pt.wikipedia.org/wiki/L%C3%ADnguas_da_Guin%C3%A9-Bissau",
+    "https://pt.wikipedia.org/wiki/Portugu%C3%AAs_guineense",
+    "https://en.wikipedia.org/wiki/Guinean_Portuguese"
+  ],
+  "urls": [
+    "https://en.wikipedia.org/wiki/Guinea-Bissau_Creole",
+    "https://en.wikipedia.org/wiki/Languages_of_Guinea-Bissau",
+    "https://en.wikipedia.org/wiki/Portuguese_language_in_Africa",
+    "https://pt.wikipedia.org/wiki/Portugu%C3%AAs_da_Guin%C3%A9-Bissau"
+  ],
+  "timespan": {
+    "start_year": 1900,
+    "end_year": null
+  },
+  "iso639_3": "por",
+  "positional_graphemes": {
+    "s": {
+      "word_final": [
+        "s"
+      ]
+    },
+    "z": {
+      "word_final": [
+        "s"
+      ]
+    },
+    "e": {
+      "nucleus_stressed": [
+        "ɛ",
+        "e"
+      ],
+      "nucleus_unstressed": [
+        "e"
+      ],
+      "pretonic": [
+        "e"
+      ],
+      "word_final": [
+        "e"
+      ]
+    },
+    "o": {
+      "nucleus_stressed": [
+        "ɔ",
+        "o"
+      ],
+      "nucleus_unstressed": [
+        "o"
+      ],
+      "pretonic": [
+        "o"
+      ],
+      "word_final": [
+        "u"
+      ],
+      "posttonic": [
+        "u"
+      ]
+    }
+  },
+  "allophone_rules": [
+    {
+      "id": "PT_CODA_S_HUSH",
+      "phonemes": [
+        "s"
+      ],
+      "surface": "s",
+      "syllable_position": "coda",
+      "notes": "Guinea-Bissau Portuguese keeps an alveolar coda /s/ (no Lisbon 'chiado'); this overrides the inherited pt-PT PT_CODA_S_HUSH rule by id, matching the alveolar coda already declared in this spec's positional_graphemes."
+    },
+    {
+      "id": "PT_CODA_Z_HUSH",
+      "phonemes": [
+        "z"
+      ],
+      "surface": "z",
+      "syllable_position": "coda",
+      "notes": "Guinea-Bissau Portuguese keeps an alveolar coda /z/; overrides the inherited pt-PT PT_CODA_Z_HUSH rule by id."
+    },
+    {
+      "id": "PT_FINAL_EM_NUCLEUS",
+      "phonemes": [],
+      "surface": "ɐ",
+      "notes": "DISABLED for this variety. The EP Lisbon-standard centralisation of the word-final ⟨-em⟩ nucleus to [ɐ̃] (inherited from pt-PT) does not apply here: this variety keeps the close-mid nasal nucleus [ẽ], so ⟨-em⟩ is [ẽj̃] (glide via PT_FINAL_EM_GLIDE), not [ɐ̃j̃]. Peripheral/non-Iberian Portuguese does not follow the Lisbon centralisation."
+    }
+  ],
+  "stress": {
+    "onset_clusters": ["bl", "br", "bɫ", "bɾ", "bʀ", "bʁ", "bʎ", "bχ", "dr", "dɾ", "dʀ", "dʁ", "dʎ", "dχ", "fl", "fr", "fɫ", "fɾ", "fʀ", "fʁ", "fʎ", "fχ", "kl", "kr", "kɫ", "kɾ", "kʀ", "kʁ", "kʎ", "kχ", "pl", "pr", "pɫ", "pɾ", "pʀ", "pʁ", "pʎ", "pχ", "tr", "tɾ", "tʀ", "tʁ", "tʎ", "tχ", "vl", "vr", "vɫ", "vɾ", "vʀ", "vʁ", "vʎ", "vχ", "ðr", "ðɾ", "ðʀ", "ðʁ", "ðʎ", "ðχ", "ɡl", "ɡr", "ɡɫ", "ɡɾ", "ɡʀ", "ɡʁ", "ɡʎ", "ɡχ", "ɣl", "ɣr", "ɣɫ", "ɣɾ", "ɣʀ", "ɣʁ", "ɣʎ", "ɣχ", "βl", "βr", "βɫ", "βɾ", "βʀ", "βʁ", "βʎ", "βχ"],
+    "cliticless_words": ["o", "a", "os", "as", "de", "do", "da", "dos", "das", "em", "no", "na", "nos", "nas", "por", "pelo", "pela", "pelos", "pelas", "ao", "aos", "à", "às", "com", "sem", "e", "que", "se", "me", "te", "lhe", "lhes", "vos", "lo", "la", "los", "las", "lho", "lha", "lhos", "lhas"],
+    "default_position": -2,
+    "final_stress_endings": [
+      "r",
+      "l",
+      "z",
+      "x",
+      "i",
+      "u",
+      "im",
+      "om",
+      "um",
+      "is",
+      "us",
+      "ns",
+      "ão",
+      "ãe",
+      "õe",
+      "au",
+      "éu",
+      "éi",
+      "ói"
+    ],
+    "penult_stress_endings": [],
+    "marked_vowels": [
+      "á",
+      "é",
+      "í",
+      "ó",
+      "ú",
+      "â",
+      "ê",
+      "ô",
+      "ã",
+      "õ"
+    ],
+    "stress_mark": "ˈ",
+    "notes": "Acordo Ortográfico 1990 conventions: paroxytone default; written accents override; final -i/-u/-r/-l/-z/-x/-im/-om/-um/-ns and nasal diphthongs attract final stress. Unmarked -em/-am stay paroxytone (homem, falam). DIPHTHONGS: declared so the bundled syllabifier counts nuclei correctly — without them every vowel run merges into one nucleus and co-e-lho is read as coe-lho, one syllable short, putting the stress and its vowel reduction on the wrong vowel. ⟨oe⟩ is hiatus, not a diphthong (Cunha & Cintra, §Ditongos).",
+    "diphthongs": [
+      "ãe",
+      "ão",
+      "õe",
+      "ai",
+      "ái",
+      "au",
+      "áu",
+      "ei",
+      "éi",
+      "êi",
+      "eu",
+      "éu",
+      "êu",
+      "iu",
+      "oi",
+      "ói",
+      "ôi",
+      "ou",
+      "ui"
+    ]
+  },
+  "location": {
+    "latitude": 11.86,
+    "longitude": -15.583333,
+    "source": "wikidata",
+    "notes": "Bissau. Portuguese here is an elite L1/official register — the capital stands in for the country. [Wikidata Q3739 P625]"
+  },
+  "word_exceptions_base": "pt-PT"
+}

@@ -1,0 +1,187 @@
+{
+ "code": "bud",
+ "name": "Ntcham",
+ "script": "Latin",
+ "quality": "skeleton",
+ "graphemes": {
+  "a": [
+   "a"
+  ],
+  "b": [
+   "b"
+  ],
+  "c": [
+   "tʃ"
+  ],
+  "d": [
+   "d"
+  ],
+  "ee": [
+   "eː"
+  ],
+  "f": [
+   "f"
+  ],
+  "g": [
+   "ɡ"
+  ],
+  "gb": [
+   "ɡ͡b"
+  ],
+  "i": [
+   "i"
+  ],
+  "j": [
+   "dʒ"
+  ],
+  "k": [
+   "k"
+  ],
+  "kp": [
+   "k͡p"
+  ],
+  "l": [
+   "l"
+  ],
+  "m": [
+   "m"
+  ],
+  "n": [
+   "n"
+  ],
+  "ny": [
+   "ɲ"
+  ],
+  "oo": [
+   "oː"
+  ],
+  "p": [
+   "p"
+  ],
+  "r": [
+   "r"
+  ],
+  "s": [
+   "s"
+  ],
+  "t": [
+   "t"
+  ],
+  "u": [
+   "u"
+  ],
+  "w": [
+   "w"
+  ],
+  "y": [
+   "j"
+  ],
+  "ŋ": [
+   "ŋ"
+  ],
+  "ŋm": [
+   "ŋ͡m"
+  ],
+  "ɔ": [
+   "ɔ"
+  ]
+ },
+ "allophones": {
+  "l": [
+   "l",
+   "r"
+  ]
+ },
+ "notes": "Placed so the ancestry graph covers every living ISO 639-3 language. No orthography is claimed; the phoneme inventory follows the cited PHOIBLE inventory (which itself cites a published description): script is Zyyy (undetermined) until a cited description is encoded. Classification and coordinates follow Glottolog. Orthography from Hartell 1993, Alphabets of Africa (UNESCO/SIL), extracted via the AfriSpeech/africa-g2p compilation (bud.json). africa-g2p is a compilation tool, not the linguistic authority; the citation above is the original source it names.",
+ "iso639_3": "bud",
+ "glottolog_code": "ntch1242",
+ "sources": [
+  {
+   "id": "glottolog2024",
+   "author": "Hammarström, Harald; Forkel, Robert; Haspelmath, Martin; Bank, Sebastian",
+   "year": 2024,
+   "title": "Glottolog 5.0",
+   "publisher": "Max Planck Institute for Evolutionary Anthropology",
+   "url": "https://glottolog.org/"
+  },
+  {
+   "id": "phoible2019",
+   "author": "Moran, Steven; McCloy, Daniel (eds.)",
+   "year": 2019,
+   "title": "PHOIBLE 2.0 (doi:10.5281/zenodo.2562766)",
+   "publisher": "Max Planck Institute for the Science of Human History",
+   "url": "https://phoible.org/inventories/view/1264",
+   "notes": "Inventory 1264 (ph), 40 non-marginal segments, 3 tones."
+  },
+  {
+   "id": "hartell1993-p25",
+   "author": "Hartell, Rhonda L. (ed.)",
+   "year": 1993,
+   "title": "Alphabets of Africa, p. 25",
+   "publisher": "UNESCO/SIL, Dakar",
+   "url": null
+  }
+ ],
+ "urls": [
+  "https://glottolog.org/resource/languoid/id/ntch1242"
+ ],
+ "location": {
+  "latitude": 9.2397,
+  "longitude": 0.5993,
+  "source": "glottolog",
+  "notes": "Glottolog's representative point."
+ },
+ "parent": "x-clade-atla1278",
+ "phonemes": [
+  "b",
+  "c",
+  "d",
+  "f",
+  "j",
+  "k",
+  "kp",
+  "l",
+  "m",
+  "n",
+  "p",
+  "s",
+  "t",
+  "w",
+  "ŋ",
+  "ŋm",
+  "ɟ",
+  "ɡ",
+  "ɡb",
+  "ɱ",
+  "ɲ",
+  "a",
+  "aː",
+  "ãː",
+  "e",
+  "eː",
+  "ẽː",
+  "i",
+  "iː",
+  "ĩ",
+  "ĩː",
+  "o",
+  "oː",
+  "õː",
+  "u",
+  "uː",
+  "ũː",
+  "ɔ",
+  "ɔː",
+  "ɔ̃ː"
+ ],
+ "tone_inventory": {
+  "˦": "PHOIBLE tone segment",
+  "˧": "PHOIBLE tone segment",
+  "˨": "PHOIBLE tone segment"
+ },
+ "phoible_id": "1264",
+ "script_type": "alphabet",
+ "wikipedia": [
+  "https://en.wikipedia.org/wiki/Ntcham_language"
+ ]
+}

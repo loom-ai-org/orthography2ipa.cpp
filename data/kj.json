@@ -1,0 +1,98 @@
+{
+  "code": "kj",
+  "name": "Kwanyama",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "skeleton",
+  "parent": "bnt",
+  "graphemes": {
+    "a": ["a"],
+    "e": ["ɛ"],
+    "i": ["i"],
+    "o": ["ɔ"],
+    "u": ["u"],
+    "d": ["d"],
+    "f": ["f"],
+    "fy": ["fʲ"],
+    "h": ["x"],
+    "j": ["d̠ʒ"],
+    "k": ["k"],
+    "l": ["l"],
+    "ly": ["lʲ"],
+    "m": ["m"],
+    "mb": ["mb"],
+    "mh": ["m̥"],
+    "n": ["n"],
+    "nd": ["nd"],
+    "ndy": ["ndʲ"],
+    "nh": ["n̥"],
+    "ng": ["ŋɡ"],
+    "ngh": ["ŋ̥"],
+    "ny": ["nd̠ʒ"],
+    "p": ["p"],
+    "sh": ["ʃ"],
+    "t": ["t"],
+    "v": ["v"],
+    "w": ["w"],
+    "y": ["j"],
+    "z": ["ʒ"]
+  },
+  "allophones": {
+    "a": ["a"], "ɛ": ["ɛ"], "i": ["i"], "ɔ": ["ɔ"], "u": ["u"], "d": ["d"],
+    "f": ["f"], "fʲ": ["fʲ"], "x": ["x"], "d̠ʒ": ["d̠ʒ"], "k": ["k"], "l": ["l"],
+    "lʲ": ["lʲ"], "m": ["m"], "mb": ["mb"], "m̥": ["m̥"], "n": ["n"],
+    "nd": ["nd"], "ndʲ": ["ndʲ"], "n̥": ["n̥"], "ŋɡ": ["ŋɡ"], "ŋ̥": ["ŋ̥"],
+    "n̠d̠ʒ": ["n̠d̠ʒ"], "p": ["p"], "ʃ": ["ʃ"], "t": ["t"], "v": ["v"],
+    "w": ["w"], "j": ["j"], "ʒ": ["ʒ"]
+  },
+  "notes": "Kwanyama (Oshikwanyama / Kuanyama) — Bantu language of northern Namibia and southern Angola, one of the two written standards of Ovambo, written in the Latin script. SKELETON: grapheme inventory now specified from the PHOIBLE-attested phoneme list (glottocode kuan1247) already recorded in this spec's `phonemes` field. KEY FEATURES (Fivaz 1986, 'A Reference Grammar of Oshikwanyama'; Wikipedia): (1) prenasalised stops/affricates ⟨mb, nd, ny⟩ (the last spelling the postalveolar affricate /n̠d̠ʒ/, not a palatal nasal — Kwanyama's palatal nasal is written ⟨nh⟩... no: it is spelled with the digraph shown here) are single phonological units per AGENTS.md test 2 (Bantu prenasalised stops), NOT c+c clusters; (2) a parallel series of VOICELESS nasals ⟨mh, nh, ngh⟩ /m̥ n̥ ŋ̥/ contrasts with the plain nasals — an areal feature of the Wambo (Ndonga/Kwanyama) subgroup absent from most other Bantu languages, so it is asserted as data here rather than left to a generic engine rule; (3) ⟨h⟩ is the voiceless velar fricative /x/, not a glottal fricative; (4) Kwanyama has NO /r/ phoneme and no plain oral ⟨g⟩ outside the prenasalised ⟨ng⟩ digraph, matching the PHOIBLE inventory's absence of both. Tone (˦ high, ˨ low in the PHOIBLE inventory) is lexically/grammatically contrastive but is NOT marked in the standard orthography; no `stress` block is declared and tone is not asserted at the grapheme level (STRESS/TONE EXEMPTION). INPUT CONTRACT: input is expected in the Latin-script Kwanyama orthography.",
+  "iso639_3": "kua",
+  "glottolog_code": "kuan1247",
+  "wikidata_qid": "Q1405077",
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Kwanyama"
+  ],
+  "sources": [
+    {
+      "id": "kj_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Kwanyama",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Kwanyama",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Kwanyama",
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "fivaz1986",
+      "author": "Fivaz, Derek",
+      "year": 1986,
+      "title": "A Reference Grammar of Oshikwanyama",
+      "publisher": "Academic Books, Windhoek",
+      "url": null,
+      "notes": "Reference grammar; prenasalised and voiceless-nasal consonant series."
+    },
+    {
+      "id": "phoible",
+      "author": "Moran, Steven & McCloy, Daniel (eds.)",
+      "year": 2019,
+      "title": "PHOIBLE 2.0",
+      "publisher": "Max Planck Institute for the Science of Human History",
+      "url": "https://phoible.org/",
+      "pages": null,
+      "notes": "Attested phoneme inventory for glottocode kuan1247."
+    }
+  ],
+  "phonemes": [
+    "a", "d", "d̠ʒ", "f", "fʲ", "i", "j", "k", "l", "lʲ", "m", "mb", "m̥", "n",
+    "nd", "ndʲ", "n̠d̠ʒ", "n̥", "p", "t", "u", "v", "w", "x", "ŋɡ", "ŋ̥", "ɔ",
+    "ɛ", "ɲ", "ʃ", "ʒ", "˦", "˨"
+  ],
+  "location": {
+    "latitude": -17.7176,
+    "longitude": 16.58,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Kuanyama."
+  }
+}

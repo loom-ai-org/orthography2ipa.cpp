@@ -1,0 +1,209 @@
+{
+  "code": "ayl",
+  "name": "Libyan Arabic",
+  "script": "Arabic",
+  "script_type": "abjad",
+  "quality": "research",
+  "graphemes": {
+    "ب": [
+      "b"
+    ],
+    "ت": [
+      "t"
+    ],
+    "ث": [
+      "θ"
+    ],
+    "ح": [
+      "ħ"
+    ],
+    "خ": [
+      "x"
+    ],
+    "د": [
+      "d"
+    ],
+    "ذ": [
+      "ð"
+    ],
+    "ر": [
+      "r"
+    ],
+    "ز": [
+      "z"
+    ],
+    "س": [
+      "s"
+    ],
+    "ش": [
+      "ʃ"
+    ],
+    "ص": [
+      "sˤ"
+    ],
+    "ض": [
+      "dˤ"
+    ],
+    "ط": [
+      "tˤ"
+    ],
+    "ظ": [
+      "ðˤ"
+    ],
+    "ع": [
+      "ʕ"
+    ],
+    "غ": [
+      "ɣ"
+    ],
+    "ف": [
+      "f"
+    ],
+    "ك": [
+      "k"
+    ],
+    "ل": [
+      "l"
+    ],
+    "م": [
+      "m"
+    ],
+    "ن": [
+      "n"
+    ],
+    "ه": [
+      "h"
+    ],
+    "و": [
+      "w",
+      "uː"
+    ],
+    "ي": [
+      "j",
+      "iː"
+    ],
+    "ة": [
+      "a"
+    ],
+    "ء": [
+      "ʔ"
+    ],
+    "أ": [
+      "ʔ"
+    ],
+    "إ": [
+      "ʔ"
+    ],
+    "آ": [
+      "ʔaː"
+    ],
+    "ى": [
+      "aː"
+    ],
+    "ؤ": [
+      "ʔ"
+    ],
+    "ئ": [
+      "ʔ"
+    ],
+    "ا": [
+      "aː"
+    ],
+    "َ": [
+      "a"
+    ],
+    "ِ": [
+      "i"
+    ],
+    "ُ": [
+      "u"
+    ],
+    "ً": [
+      "an"
+    ],
+    "ٍ": [
+      "in"
+    ],
+    "ٌ": [
+      "un"
+    ],
+    "ْ": [
+      ""
+    ],
+    "ٰ": [
+      "aː"
+    ],
+    "ق": [
+      "ɡ"
+    ],
+    "ج": [
+      "dʒ"
+    ],
+    "ک": [
+      "k"
+    ],
+    "ی": [
+      "j",
+      "iː"
+    ],
+    "ـ": [
+      ""
+    ]
+  },
+  "parent": "ar-x-maghrebi",
+  "ancestors": [
+    {
+      "code": "ar-x-maghrebi",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Descent per Glottolog classification of Libyan Arabic (liby1240)."
+    }
+  ],
+  "notes": "Skeleton. Libyan (Sulaymitic Maghrebi) Arabic, a Semitic (Afroasiatic) variety written in the Arabic abjad. Consonant letters are mapped to IPA; qāf ⟨ق⟩ has the voiced velar reflex [ɡ] typical of the Bedouin-type dialect, jīm ⟨ج⟩ is [dʒ], and the interdentals ⟨ث ذ ظ⟩ are retained. Short vowels are not written in the abjad and, apart from optional harakāt, are left unencoded; gemination and stress are not recovered, so a high PER floor is expected. CONFUSABLE AND FORMATTING CODEPOINTS: three Unicode characters that occur in real Arabic-script text had no grapheme entry anywhere in this family, and a character with no entry is dropped without an error, so every occurrence was deleted in silence. ک KEHEH is the Persian/Urdu/Sindhi shape of kaf (annotated '= kaf mashkula') and is read here exactly as ك — [k]. ی FARSI YEH is annotated for Arabic as well as Persian, Urdu and Kashmiri, and is read exactly as ي — [j] or the mater lectionis [iː]. ـ TATWEEL is the kashida, inserted to stretch a word for justification and carrying no sound, so it maps to the empty string: the deletion is now stated instead of accidental, the treatment ٱ ALEF WASLA already had. ہ HEH GOAL is deliberately NOT added — Unicode assigns it to Urdu, and it occurs in none of the Arabic gold. The alternates are listed as bare letters only; a keheh or farsi yeh carrying a harakat does not match the diacritised digraph keys and falls back to the bare letter plus the mark, which yields the same phonemes. MEASURED UNDECIDABLE-INPUT CEILING. Not one of the 166 WikiPron ayl_arab_broad input words carries a single ḥaraka — no fatḥa, ḍamma, kasra, tanwīn, shadda or sukūn occurs anywhere on the orthographic side of this gold — while the gold transcriptions are fully vocalised: 23.8% of their phoneme segments are short vowels. Deleting every short vowel from the gold and rescoring with the harness's own scorer gives PER 0.1930, which is what a spec that emitted perfect consonants and long vowels and simply omitted the short vowels would score, and is therefore the hard floor for this row. The board row stands at 0.3799, so about 18.7 PER points separate the score from the floor. That gap is rule error and is tractable; the floor itself is undecidable input that no grapheme table can recover. A gap above the floor is a defect hypothesis, not an excuse: Hebrew sat above its own floor for what looked like the same structural reason and the excess turned out to be a real defect, an unmapped geresh. That vocalisation and not the grapheme tables dominates the Arabic error is measured on the MSA row rather than inferred: ar scores PER 0.3139 on raw WikiPron and 0.1721 on the SAME gold with the input auto-diacritized (the wikipron_ar_diacritized row, wired in scripts/benchmark.py) — below the raw row's own consonant-only floor of 0.2476. Vocalisation is worth about 14 PER points there, more than any grapheme-table change could be worth. No dialect row has such a companion: the diacritized loader is registered for ar alone, and wiring one for this row is the single highest-value follow-up available to it. It has to be labelled restored-MSA input rather than native vocalisation — the restorer targets MSA and Classical Arabic, so what it writes onto dialect orthography is an MSA reading, and a row scored against it measures the spec plus that assumption.",
+  "iso639_3": "ayl",
+  "glottolog_code": null,
+  "sources": [
+    {
+      "id": "ayl_glottolog",
+      "author": "Hammarström, H. et al. (Glottolog 5.0)",
+      "year": 2024,
+      "title": "Glottolog: Libyan Arabic (liby1240)",
+      "publisher": "Max Planck Institute for Evolutionary Anthropology",
+      "url": "https://glottolog.org/resource/languoid/id/liby1240",
+      "pages": null,
+      "notes": "Classification reference for a skeleton-tier entry.",
+      "wikipedia_url": null
+    },
+    {
+      "id": "ayl_wikipedia",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Libyan Arabic",
+      "publisher": "Wikipedia",
+      "url": null,
+      "pages": null,
+      "notes": "Orthography/phonology reference for a skeleton-tier consonant map.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Libyan_Arabic"
+    },
+    {
+      "id": "unicode_arabic_chart",
+      "author": "The Unicode Consortium",
+      "year": 2025,
+      "title": "The Unicode Standard, code chart: Arabic (Range 0600-06FF)",
+      "publisher": "Unicode, Inc.",
+      "url": "https://www.unicode.org/charts/PDF/U0600.pdf",
+      "pages": null,
+      "notes": "Read (chart PDF). U+06A9 KEHEH is annotated '= kaf mashkula' and assigned to 'Persian, Urdu, Sindhi, ...'; U+06CC FARSI YEH is assigned to 'Arabic, Persian, Urdu, Kashmiri, ...'; U+0640 TATWEEL is '= kashida', 'inserted to stretch characters or to carry tashkil with no base letter'; U+06C1 HEH GOAL is assigned to Urdu only."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Libyan_Arabic"
+  ],
+  "audit": {
+    "wikipron": {
+      "conclusion": "input_limited",
+      "measured": "0 of 166 wikipron input words (ayl_arab_broad.tsv) carry a haraka (short-vowel diacritic); Wiktionary files Arabic entries at the unvocalized page title (Wiktionary:About_Arabic / Wiktionary:Arabic_entry_guidelines, 'Entry name'), so the scraped input is a consonant-plus-long-vowel skeleton, exactly the pattern independently measured on the bare 'ar' wikipron row (0/17,563 words carry a haraka there; see ar.json audit.wikipron). No fold was run for this dialect row -- doing so needs the dialect's own vowel inventory, not MSA's -- so no valid_ceiling is recorded here; the wikipron_ar_diacritized loader (scripts/benchmark.py) that would supply it is wired for the 'ar' row only.",
+      "reference": "spec notes; see ar.json audit.wikipron for the measured MSA precedent"
+    }
+  }
+}

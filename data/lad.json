@@ -1,0 +1,332 @@
+{
+  "code": "lad",
+  "glottolog_code": "ladi1251",
+  "name": "Ladino (Judeo-Spanish)",
+  "script": "Latin",
+  "quality": "research",
+  "script_type": "alphabet",
+  "parent": "es-ES-x-medieval",
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "e": [
+      "e",
+      "ɛ"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "o",
+      "ɔ"
+    ],
+    "u": [
+      "u"
+    ],
+    "b": [
+      "b"
+    ],
+    "ç": [
+      "s"
+    ],
+    "ch": [
+      "tʃ"
+    ],
+    "d": [
+      "d"
+    ],
+    "dj": [
+      "dʒ"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "h": [
+      ""
+    ],
+    "j": [
+      "ʒ"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "ll": [
+      "ʎ",
+      "j"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ñ": [
+      "ɲ"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "ɾ"
+    ],
+    "rr": [
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "š": [
+      "ʃ"
+    ],
+    "t": [
+      "t"
+    ],
+    "ts": [
+      "ts"
+    ],
+    "v": [
+      "v"
+    ],
+    "w": [
+      "w"
+    ],
+    "x": [
+      "ʃ"
+    ],
+    "y": [
+      "j"
+    ],
+    "z": [
+      "z"
+    ],
+    "zh": [
+      "ʒ"
+    ],
+    "sh": [
+      "ʃ"
+    ],
+    "ny": [
+      "ɲ"
+    ]
+  },
+  "positional_graphemes": {
+    "b": {
+      "intervocalic": [
+        "β"
+      ],
+      "default": [
+        "b"
+      ]
+    },
+    "d": {
+      "intervocalic": [
+        "ð"
+      ],
+      "default": [
+        "d"
+      ]
+    },
+    "g": {
+      "intervocalic": [
+        "ɣ"
+      ],
+      "default": [
+        "ɡ"
+      ]
+    },
+    "r": {
+      "word_initial": [
+        "r"
+      ],
+      "intervocalic": [
+        "ɾ"
+      ],
+      "before_consonant": [
+        "ɾ"
+      ],
+      "word_final": [
+        "ɾ"
+      ]
+    },
+    "s": {
+      "intervocalic": [
+        "z",
+        "s"
+      ],
+      "word_final": [
+        "s"
+      ]
+    },
+    "ll": {
+      "default": [
+        "ʎ"
+      ]
+    }
+  },
+  "allophones": {
+    "a": [
+      "a"
+    ],
+    "e": [
+      "e"
+    ],
+    "ɛ": [
+      "ɛ"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "o"
+    ],
+    "ɔ": [
+      "ɔ"
+    ],
+    "u": [
+      "u"
+    ],
+    "b": [
+      "b",
+      "β"
+    ],
+    "tʃ": [
+      "tʃ"
+    ],
+    "d": [
+      "d",
+      "ð"
+    ],
+    "f": [
+      "f"
+    ],
+    "ɡ": [
+      "ɡ",
+      "ɣ"
+    ],
+    "dʒ": [
+      "dʒ"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "ʎ": [
+      "ʎ"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n",
+      "ŋ"
+    ],
+    "ɲ": [
+      "ɲ"
+    ],
+    "p": [
+      "p"
+    ],
+    "ɾ": [
+      "ɾ"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "t": [
+      "t"
+    ],
+    "ts": [
+      "ts"
+    ],
+    "w": [
+      "w"
+    ],
+    "ʒ": [
+      "ʒ"
+    ],
+    "j": [
+      "j"
+    ],
+    "z": [
+      "z"
+    ],
+    "v": [
+      "v"
+    ]
+  },
+  "ancestors": [
+    {
+      "code": "es-ES-x-medieval",
+      "role": "parent",
+      "weight": 0.85,
+      "notes": "Medieval Castilian (pre-1492 expulsion). The Sephardic Jews expelled from Spain in 1492 carried 15th-century Castilian with them; the language developed in diaspora (Ottoman Empire, North Africa, Balkans) with no further contact with evolving Castilian."
+    }
+  ],
+  "notes": "Ladino (Judezmo / Judeo-Spanish / Spanyolit). Romance language descending from medieval Castilian, preserved since the 1492 expulsion of Jews from Spain. Spoken by Sephardic communities in Turkey (Istanbul, Izmir), Greece (Thessaloniki), Israel, Morocco, and elsewhere. ~60,000–100,000 speakers (UNESCO: seriously endangered). Written in Rashi/Solitreo script historically; modern use favors Latin alphabet (Autoridad Nasionala del Ladino standard, Israel). KEY PHONOLOGICAL FEATURES: (1) SIBILANT PRESERVATION: /ʃ/ (⟨x/š⟩) and /ʒ/ (⟨j/zh⟩) are MAINTAINED — they never merged to /x/ as in modern Spanish. This is the most diagnostic feature. (2) AFFRICATES: /ts/ (⟨ts/ç⟩) and /dʒ/ (⟨dj⟩) preserved from medieval Castilian. (3) SESEO: no /θ/ — Latin c/z both → /s/ (like Andalusian/American Spanish). (4) BETACISM: /b/ and /v/ fully merged (⟨v⟩=⟨b⟩=[b]/[β]). (5) PALATAL LATERAL: /ʎ/ (⟨ll⟩) preserved in conservative varieties (unlike modern Spanish yeísmo). (6) F-PRESERVATION: initial F- maintained as [f] (Spanish underwent F→h→∅ but Ladino kept [f]: hijo vs Ladino fijo). (7) NO /x/: the modern Spanish velar fricative does not exist in Ladino. (8) VOWELS: 5-vowel system, some e~ɛ and o~ɔ alternation. (9) LOANWORDS: extensive Ottoman Turkish, Greek, Hebrew, and French borrowings.",
+  "sources": [
+    {
+      "id": "harris1994",
+      "author": "Harris, T.K.",
+      "year": 1994,
+      "title": "Death of a Language: The History of Judeo-Spanish",
+      "publisher": "University of Delaware Press",
+      "url": null,
+      "pages": null,
+      "notes": "History and phonological description"
+    },
+    {
+      "id": "penny2002",
+      "author": "Penny, R.",
+      "year": 2002,
+      "title": "A History of the Spanish Language",
+      "publisher": "Cambridge University Press",
+      "url": null,
+      "pages": "pp. 16–18, 276–280",
+      "notes": "Comparative section on Judeo-Spanish"
+    },
+    {
+      "id": "schmid2013",
+      "author": "Schmid, B.",
+      "year": 2013,
+      "title": "Judezmo",
+      "publisher": "In: The Languages and Linguistics of Europe, De Gruyter",
+      "url": null,
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Judaeo-Spanish",
+    "https://lad.wikipedia.org/wiki/Lingua_djudeo-espanyola"
+  ],
+  "urls": [
+    "https://en.wikipedia.org/wiki/Judaeo-Spanish",
+    "https://glottolog.org/resource/languoid/id/ladi1251",
+    "https://www.ethnologue.com/language/lad/"
+  ],
+  "iso639_3": "lad",
+  "wikidata_qid": "Q36196",
+  "phoible_id": "ladi1251",
+  "wals_code": "lno",
+  "location": {
+    "latitude": 41.205,
+    "longitude": 28.6632,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Ladino."
+  }
+}

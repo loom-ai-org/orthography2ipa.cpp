@@ -1,0 +1,300 @@
+{
+  "ancestors": [
+    {
+      "code": "sla",
+      "role": "parent",
+      "weight": 0.9,
+      "notes": "Descent from Proto-Slavic (South Slavic, western subgroup / Serbo-Croatian)."
+    },
+    {
+      "code": "it-IT",
+      "role": "adstrate",
+      "weight": 0.05,
+      "notes": "Italian/Venetian adstrate along the Adriatic (Dalmatian coast) lexicon."
+    },
+    {
+      "code": "de-DE",
+      "role": "adstrate",
+      "weight": 0.04,
+      "notes": "German adstrate via centuries of Habsburg administration."
+    },
+    {
+      "code": "tr",
+      "role": "adstrate",
+      "weight": 0.03,
+      "notes": "Ottoman Turkish adstrate (weaker than in Serbian/Bosnian)."
+    }
+  ],
+  "code": "hr",
+  "name": "Croatian",
+  "script": "Latin",
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "e": [
+      "ɛ"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "ɔ"
+    ],
+    "u": [
+      "u"
+    ],
+    "r": [
+      "r",
+      "r̩"
+    ],
+    "b": [
+      "b"
+    ],
+    "c": [
+      "ts"
+    ],
+    "č": [
+      "tʃ"
+    ],
+    "ć": [
+      "tɕ"
+    ],
+    "d": [
+      "d"
+    ],
+    "dž": [
+      "dʒ"
+    ],
+    "đ": [
+      "dʑ"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "h": [
+      "x"
+    ],
+    "j": [
+      "j"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "lj": [
+      "ʎ"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "nj": [
+      "ɲ"
+    ],
+    "p": [
+      "p"
+    ],
+    "s": [
+      "s"
+    ],
+    "š": [
+      "ʃ"
+    ],
+    "t": [
+      "t"
+    ],
+    "v": [
+      "v"
+    ],
+    "z": [
+      "z"
+    ],
+    "ž": [
+      "ʒ"
+    ]
+  },
+  "allophones": {
+    "p": [
+      "p"
+    ],
+    "b": [
+      "b",
+      "p"
+    ],
+    "t": [
+      "t"
+    ],
+    "d": [
+      "d",
+      "t"
+    ],
+    "k": [
+      "k"
+    ],
+    "ɡ": [
+      "ɡ",
+      "k"
+    ],
+    "f": [
+      "f"
+    ],
+    "v": [
+      "v",
+      "f"
+    ],
+    "s": [
+      "s"
+    ],
+    "z": [
+      "z",
+      "s"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "ʒ": [
+      "ʒ",
+      "ʃ"
+    ],
+    "x": [
+      "x"
+    ],
+    "ts": [
+      "ts"
+    ],
+    "tʃ": [
+      "tʃ"
+    ],
+    "tɕ": [
+      "tɕ"
+    ],
+    "dʒ": [
+      "dʒ",
+      "tʃ"
+    ],
+    "dʑ": [
+      "dʑ",
+      "tɕ"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n",
+      "ŋ"
+    ],
+    "ɲ": [
+      "ɲ"
+    ],
+    "l": [
+      "l"
+    ],
+    "ʎ": [
+      "ʎ"
+    ],
+    "r": [
+      "r"
+    ],
+    "r̩": [
+      "r̩"
+    ],
+    "j": [
+      "j"
+    ],
+    "a": [
+      "a"
+    ],
+    "ɛ": [
+      "ɛ"
+    ],
+    "i": [
+      "i"
+    ],
+    "ɔ": [
+      "ɔ"
+    ],
+    "u": [
+      "u"
+    ]
+  },
+  "parent": "x-clade-sout3147",
+  "notes": "Standard Croatian (Štokavian Ijekavian dialect basis). Latin script only (unlike Serbian). Shares the two palatal affricate pairs with Serbian: ⟨ć⟩ = [tɕ] (softer), ⟨č⟩ = [tʃ] (harder); ⟨đ⟩ = [dʑ], ⟨dž⟩ = [dʒ]. Four-pitch-accent system. Syllabic /r̩/ (e.g. *prst* 'finger'). Ijekavian: Proto-Slavic yat /æː/ → ije/je (vs Serbian Ekavian e).",
+  "quality": "research",
+  "script_type": "alphabet",
+  "sources": [
+    {
+      "id": "comrie_corbett1993",
+      "author": "Comrie, B. & Corbett, G. (eds.)",
+      "year": 1993,
+      "title": "The Slavonic Languages",
+      "publisher": "Routledge",
+      "url": null,
+      "pages": null,
+      "notes": null,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Slavic_languages"
+    },
+    {
+      "id": "browne_1993",
+      "author": "Browne, W.",
+      "year": 1993,
+      "title": "Serbo-Croat",
+      "publisher": "in B. Comrie & G. Corbett (eds.), The Slavonic Languages",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "ladefoged_maddieson1996",
+      "author": "Ladefoged, P. & Maddieson, I.",
+      "year": 1996,
+      "title": "The Sounds of the World's Languages",
+      "publisher": "Blackwell",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "landau_et_al1995",
+      "author": "Landau, E., Lončarić, M., Horga, D. & Škarić, I.",
+      "year": 1995,
+      "title": "Croatian",
+      "publisher": "Journal of the International Phonetic Association 25(2), 83-86",
+      "url": "https://doi.org/10.1017/S002510030000520X",
+      "pages": "85",
+      "notes": "\"Illustrations of the IPA\" series entry. States the four-way pitch-accent contrast (long rising, short rising, long falling, short falling) and the length mark are 'not part of the usual orthography, but are used to mark the accents in specialized linguistic works.'"
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Croatian_language",
+    "https://hr.wikipedia.org/wiki/Hrvatski_jezik"
+  ],
+  "timespan": {
+    "start_year": 1300,
+    "end_year": null
+  },
+  "glottolog_code": "croa1245",
+  "iso639_3": "hrv",
+  "wikidata_qid": "Q6654",
+  "phoible_id": "croa1245",
+  "location": {
+    "latitude": 45.555,
+    "longitude": 15.982,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Croatian Standard."
+  },
+  "valid_ceiling": {
+    "wikipron": {
+      "per": 0.1733,
+      "folded": "four-way pitch-accent diacritics (rising/falling x long/short) + vowel-length mark",
+      "citation": "As-scored PER (n=26469, broad+strip_stress convention) is 0.3000. Landau, Lončarić, Horga & Škarić 1995 (JIPA 25(2):83-86, doi:10.1017/S002510030000520X), p.85, describe the four-way word-accent contrast (long rising, short rising, long falling, short falling) and state the accent marks they use 'are not part of the usual orthography, but are used to mark the accents in specialized linguistic works'; standard Croatian spelling never writes them. Measured in the gold: 95.4% of wikipron/hbs_latn_broad entries carry a pitch-accent diacritic (caron/circumflex/grave/acute) on a vowel and 53.5% carry the length mark ː, against 0% of the orthographic input forms carrying either. Folding the accent diacritics out of both sides alone takes PER to 0.2269; folding length alone takes it to 0.2524; folding both together reaches 0.1733. Syllabic /r/ is written in the gold with the IPA syllabicity mark directly on r (e.g. prst -> p r̩̂ s t), not with an epenthetic schwa, and the spec's existing syllabic-r rule already targets that representation, so no schwa-insertion rule was needed or added. Measured this session against the wikipron/hr (hbs_latn_broad.tsv) gold; not itself sourced as a target number."
+    }
+  }
+}

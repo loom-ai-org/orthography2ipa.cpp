@@ -1,0 +1,378 @@
+{
+  "parent": "trk",
+  "ancestors": [
+    {
+      "code": "trk",
+      "role": "parent",
+      "weight": 0.85,
+      "notes": "Descent from Proto-Turkic (Oghuz branch)."
+    },
+    {
+      "code": "fa",
+      "role": "adstrate",
+      "weight": 0.15,
+      "notes": "Persian adstrate: dominant literary/prestige language of the Ottoman court; large lexical layer."
+    },
+    {
+      "code": "ar",
+      "role": "adstrate",
+      "weight": 0.15,
+      "notes": "Arabic adstrate: religious/scholarly vocabulary, largely via Persian; Ottoman Turkish was heavily Arabo-Persian."
+    }
+  ],
+  "code": "tr",
+  "name": "Turkish",
+  "script": "Latin",
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "e": [
+      "e"
+    ],
+    "ı": [
+      "ɯ"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "o"
+    ],
+    "ö": [
+      "œ"
+    ],
+    "u": [
+      "u"
+    ],
+    "ü": [
+      "y"
+    ],
+    "b": [
+      "b"
+    ],
+    "c": [
+      "dʒ"
+    ],
+    "ç": [
+      "tʃ"
+    ],
+    "d": [
+      "d"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɡ",
+      "ɟ"
+    ],
+    "ğ": [
+      ""
+    ],
+    "h": [
+      "h"
+    ],
+    "j": [
+      "ʒ"
+    ],
+    "k": [
+      "k",
+      "c"
+    ],
+    "l": [
+      "l",
+      "ɫ"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "ɾ"
+    ],
+    "s": [
+      "s"
+    ],
+    "ş": [
+      "ʃ"
+    ],
+    "t": [
+      "t"
+    ],
+    "v": [
+      "v"
+    ],
+    "y": [
+      "j"
+    ],
+    "z": [
+      "z"
+    ]
+  },
+  "allophones": {
+    "p": [
+      "p"
+    ],
+    "b": [
+      "b",
+      "p"
+    ],
+    "t": [
+      "t"
+    ],
+    "d": [
+      "d",
+      "t"
+    ],
+    "k": [
+      "k"
+    ],
+    "c": [
+      "c"
+    ],
+    "ɡ": [
+      "ɡ",
+      "k"
+    ],
+    "ɟ": [
+      "ɟ",
+      "c"
+    ],
+    "tʃ": [
+      "tʃ"
+    ],
+    "dʒ": [
+      "dʒ",
+      "tʃ"
+    ],
+    "f": [
+      "f"
+    ],
+    "v": [
+      "v",
+      "f"
+    ],
+    "s": [
+      "s"
+    ],
+    "z": [
+      "z",
+      "s"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "ʒ": [
+      "ʒ",
+      "ʃ"
+    ],
+    "h": [
+      "h",
+      "ç",
+      "x"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n",
+      "ŋ"
+    ],
+    "l": [
+      "l",
+      "ɫ"
+    ],
+    "ɾ": [
+      "ɾ",
+      "r"
+    ],
+    "j": [
+      "j"
+    ],
+    "a": [
+      "a"
+    ],
+    "e": [
+      "e"
+    ],
+    "ɯ": [
+      "ɯ"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "o"
+    ],
+    "œ": [
+      "œ"
+    ],
+    "u": [
+      "u"
+    ],
+    "y": [
+      "y"
+    ]
+  },
+  "notes": "Standard Istanbul Turkish. Near-transparent orthography. 8-vowel system with front/back × rounded/unrounded × high/low vowel harmony. VOWEL HARMONY: front vowels /e i œ y/ vs back vowels /a ɯ o u/ (backness axis), each also split by rounding (Zimmer & Orgun 1992). Ö is transcribed [œ] (open-mid front rounded), not [ø] (close-mid): Zimmer & Orgun's JIPA illustration lists /œ/ in the Turkish vowel inventory, and Göksel & Kerslake (2005:2) describe ö as 'the sound produced when e as in bet is pronounced with the lips rounded' (i.e. open-mid, matching German ö in 'offen'-type environments, not close-mid ö as in German 'schön'). PALATALIZATION: k→[c], g→[ɟ] before/after front vowels (e/i/ö/ü); l→[l] (clear) adjacent to front vowels vs [ɫ] (velarized) adjacent to back vowels (Göksel & Kerslake 2005:6.1-6.2). Ğ (yumuşak g, 'soft g'): has no independent consonantal realization in standard Turkish; between back vowels it is generally inaudible or a bilabial glide, between front vowels inaudible or a palatal glide [j] (mandatory in some minimal pairs, e.g. düğün 'wedding' vs dün 'yesterday'), and word-finally/preconsonantally it lengthens the preceding vowel (Göksel & Kerslake 2005:1.2.4, ~p.6-7; Zimmer & Orgun 1992). FINAL DEVOICING: /b d dʒ ɡ ɟ/ devoice word- and morpheme-finally to [p t tʃ k c] (Zimmer & Orgun 1992). KNOWN LIMITATION (casing): Turkish distinguishes dotted İ/i from dotless I/ı as separate letters; this library's tokenizer casefolds every language with Python's locale-agnostic str.lower(), which maps ASCII 'I' to 'i' (should be 'ı' in Turkish) and 'İ' to 'i̇' (i + combining dot, not 'i'), so upper-case Turkish text is mis-tokenized. Not fixed here (orthography2ipa/phonetok.py and orthography2ipa/g2p.py apply .lower() language-agnostically; a per-language casefold table is a tokenizer-level change out of scope for a data-only spec update) — flagged for a follow-up tokenizer PR. Sources: Göksel & Kerslake (2005), Zimmer & Orgun (1992/1999), Kornfilt (1997), Lewis (1967).",
+  "quality": "research",
+  "script_type": "alphabet",
+  "sources": [
+    {
+      "id": "goksel_kerslake2005",
+      "author": "Göksel, A. & Kerslake, C.",
+      "year": 2005,
+      "title": "Turkish: A Comprehensive Grammar",
+      "publisher": "Routledge",
+      "url": "https://www.routledge.com/Turkish-A-Comprehensive-Grammar/Goksel-Kerslake/p/book/9781138350533",
+      "pages": "1-39 (Part I: Phonology and orthography)",
+      "notes": "Read in full for phonology chapter: pronunciation-guide letter table (ö described as open-mid, 1.1), vowel harmony (ch.3), consonant palatalization/l-velarization/ğ realization rules with worked examples (1.2.4, 6.1-6.2), and word-stress exceptions (stressable vs unstressable suffixes, ch.4)."
+    },
+    {
+      "id": "zimmer_orgun1992",
+      "author": "Zimmer, K. & Orgun, O.",
+      "year": 1992,
+      "title": "Turkish (Illustrations of the IPA)",
+      "publisher": "Journal of the International Phonetic Association, 22(1-2), 43-45",
+      "url": "https://doi.org/10.1017/S0025100300004588",
+      "pages": "43-45",
+      "notes": "Canonical phoneme-inventory reference cited by Wikipedia's Turkish phonology article; gives ö = /œ/ (open-mid front rounded, not /ø/), the front /e i œ y/ vs back /a ɯ o u/ harmony split, k/ɡ/l palatalization before front vowels, /b d dʒ ɡ ɟ/ word-final devoicing, and ğ realization as vowel-lengthening or [j] depending on vowel context."
+    },
+    {
+      "id": "lewis1967",
+      "author": "Lewis, G.L.",
+      "year": 1967,
+      "title": "Turkish Grammar",
+      "publisher": "Oxford University Press",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "ladefoged_maddieson1996",
+      "author": "Ladefoged, P. & Maddieson, I.",
+      "year": 1996,
+      "title": "The Sounds of the World's Languages",
+      "publisher": "Blackwell",
+      "url": null,
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Turkish_language",
+    "https://tr.wikipedia.org/wiki/Türkçe",
+    "https://en.wikipedia.org/wiki/Turkish_phonology",
+    "https://tr.wikipedia.org/wiki/T%C3%BCrk%C3%A7e",
+    "https://tr.wikipedia.org/wiki/T%C3%BCrk%C3%A7e_sesbilgisi"
+  ],
+  "positional_graphemes": {
+    "k": {
+      "before_e": [
+        "c"
+      ],
+      "before_i": [
+        "c"
+      ],
+      "after_vowel": [
+        "k",
+        "c"
+      ],
+      "default": [
+        "k"
+      ]
+    },
+    "g": {
+      "word_final": [
+        "k"
+      ],
+      "default": [
+        "ɡ"
+      ]
+    },
+    "ğ": {
+      "after_vowel": [
+        ""
+      ],
+      "intervocalic": [
+        "j"
+      ],
+      "default": [
+        ""
+      ]
+    },
+    "l": {
+      "before_e": [
+        "l"
+      ],
+      "before_i": [
+        "l"
+      ],
+      "before_a": [
+        "ɫ"
+      ],
+      "before_o": [
+        "ɫ"
+      ],
+      "before_u": [
+        "ɫ"
+      ],
+      "default": [
+        "l"
+      ]
+    },
+    "b": {
+      "word_final": [
+        "p"
+      ],
+      "default": [
+        "b"
+      ]
+    },
+    "c": {
+      "word_final": [
+        "tʃ"
+      ],
+      "default": [
+        "dʒ"
+      ]
+    },
+    "d": {
+      "word_final": [
+        "t"
+      ],
+      "default": [
+        "d"
+      ]
+    }
+  },
+  "timespan": {
+    "start_year": 1300,
+    "end_year": null
+  },
+  "glottolog_code": "nucl1301",
+  "iso639_3": "tur",
+  "stress": {
+    "default_position": -1,
+    "final_stress_endings": [],
+    "penult_stress_endings": [],
+    "marked_vowels": [],
+    "stress_mark": "ˈ",
+    "notes": "Turkish default stress is word-final (-1). Exception classes not modeled: negation suffix -(m)e/-(m)a, question particle mı/mi/mu/mü, some place names and older borrowings carry lexical stress. Source: Göksel & Kerslake (2005), Kornfilt (1997)."
+  },
+  "wikidata_qid": "Q256",
+  "phoible_id": "nucl1301",
+  "wals_code": "tur",
+  "location": {
+    "latitude": 39.8667,
+    "longitude": 32.8667,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Turkish."
+  }
+}

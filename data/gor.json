@@ -1,0 +1,157 @@
+{
+  "code": "gor",
+  "name": "Gorontalo",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "ng": [
+      "ŋ"
+    ],
+    "ny": [
+      "ɲ"
+    ],
+    "b": [
+      "b",
+      "ɓ"
+    ],
+    "c": [
+      "c"
+    ],
+    "d": [
+      "d",
+      "ɗ",
+      "d̠"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "h": [
+      "h"
+    ],
+    "j": [
+      "ɟ"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "p": [
+      "p"
+    ],
+    "q": [
+      "ʔ"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "w": [
+      "w"
+    ],
+    "y": [
+      "j"
+    ],
+    "'": [
+      "ʔ"
+    ],
+    "’": [
+      "ʔ"
+    ],
+    "a": [
+      "a"
+    ],
+    "e": [
+      "e"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "o"
+    ],
+    "u": [
+      "u"
+    ]
+  },
+  "allophones": {},
+  "iso639_3": "gor",
+  "glottolog_code": "goro1259",
+  "wikidata_qid": "Q2501174",
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Gorontalo_language",
+    "https://gor.wikipedia.org/wiki/Bahasa_Hulontalo"
+  ],
+  "sources": [
+    {
+      "id": "gorontalo_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2025,
+      "title": "Gorontalo language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Gorontalo_language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Gorontalo_language",
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "steinhauer1991",
+      "author": "Steinhauer, Hein",
+      "year": 1991,
+      "title": "Sentence-initial elements in Gorontalo",
+      "publisher": "Pacific Linguistics",
+      "url": null,
+      "pages": null,
+      "notes": "Descriptive source on Gorontalo; a starting point for a future grapheme map."
+    },
+    {
+      "id": "omniglot_gorontalo",
+      "author": "Ager, Simon",
+      "year": 2026,
+      "title": "Gorontalo language, alphabet and pronunciation",
+      "publisher": "Omniglot",
+      "url": "https://www.omniglot.com/writing/gorontalo.htm",
+      "pages": null,
+      "notes": "Letter→IPA chart for the Gorontalo Latin alphabet: b [b/ɓ], c [c], d [d/ɗ/d̠], j [ɟ], q [ʔ], ng [ŋ], ny [ɲ], y [j], vowels a e i o u."
+    },
+    {
+      "id": "little1995",
+      "author": "Little, Elizabeth",
+      "year": 1995,
+      "title": "Gorontalo phonology (in: Sneddon, J. N. (ed.), Studies in Sulawesi Linguistics IV)",
+      "publisher": "Universitas Katolik Indonesia Atma Jaya (NUSA 37)",
+      "url": null,
+      "pages": "523",
+      "notes": "Five-vowel system and penultimate stress; consonant inventory including the implosives /ɓ ɗ/ and the laminal /d̠/."
+    }
+  ],
+  "notes": "Gorontalo (Bahasa Hulontalo) — Philippine-type Austronesian language of northern Sulawesi, Indonesia, written today in an Indonesian-based Latin alphabet (historically also in Jawi/Pegon Arabic script, which is out of scope). The map commits to the modern Latin orthography as tabulated by Omniglot, cross-checked against the phoneme inventory in the Wikipedia phonology (Little 1995; Steinhauer). Five vowels ⟨a e i o u⟩ = /a e i o u/. Consonants: ⟨ng⟩ = /ŋ/, ⟨ny⟩ = /ɲ/, ⟨c⟩ = the voiceless PALATAL stop /c/ (not the Indonesian affricate /tʃ/), ⟨j⟩ = /ɟ/, ⟨q⟩ = the glottal stop /ʔ/ (also written with an apostrophe in some texts, e.g. wala'o 'child'), ⟨y⟩ = /j/. The letters ⟨b⟩ and ⟨d⟩ are ambiguous: each spells both the plain voiced stop and the corresponding IMPLOSIVE (/b ɓ/, /d ɗ/), and ⟨d⟩ additionally spells the laminal post-alveolar /d̠/ (written ⟨ḓ⟩ only in linguistic materials) — that contrast is NOT recoverable from ordinary spelling, so the candidates are listed plain-first. INPUT CONTRACT: Latin-script Gorontalo in modern Indonesian-based spelling.",
+  "parent": "x-clade-aust1307",
+  "ancestors": [
+    {
+      "code": "x-clade-aust1307",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Austronesian — the classification node this language sits under."
+    }
+  ],
+  "location": {
+    "latitude": 0.62689,
+    "longitude": 122.288,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Gorontalo."
+  }
+}

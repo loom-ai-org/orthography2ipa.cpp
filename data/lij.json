@@ -1,0 +1,694 @@
+{
+  "code": "lij",
+  "name": "Ligurian",
+  "script": "Latin",
+  "graphemes_base": "la-x-galloitalic",
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "à": [
+      "a"
+    ],
+    "â": [
+      "aː"
+    ],
+    "ä": [
+      "aː"
+    ],
+    "e": [
+      "e"
+    ],
+    "è": [
+      "ɛ"
+    ],
+    "é": [
+      "e"
+    ],
+    "ê": [
+      "eː"
+    ],
+    "ë": [
+      "eː"
+    ],
+    "i": [
+      "i"
+    ],
+    "ì": [
+      "i"
+    ],
+    "î": [
+      "iː"
+    ],
+    "ï": [
+      "iː"
+    ],
+    "o": [
+      "u"
+    ],
+    "ò": [
+      "ɔ"
+    ],
+    "ó": [
+      "u"
+    ],
+    "ô": [
+      "uː"
+    ],
+    "ö": [
+      "ɔː"
+    ],
+    "u": [
+      "y"
+    ],
+    "ù": [
+      "y"
+    ],
+    "û": [
+      "yː"
+    ],
+    "ü": [
+      "yː"
+    ],
+    "æ": [
+      "ɛː"
+    ],
+    "eu": [
+      "ø"
+    ],
+    "êu": [
+      "øː"
+    ],
+    "ëu": [
+      "øː"
+    ],
+    "ei": [
+      "ej"
+    ],
+    "òu": [
+      "ɔw"
+    ],
+    "ou": [
+      "ɔw"
+    ],
+    "b": [
+      "b"
+    ],
+    "c": [
+      "k"
+    ],
+    "ç": [
+      "s"
+    ],
+    "ch": [
+      "k"
+    ],
+    "d": [
+      "d"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "gh": [
+      "ɡ"
+    ],
+    "gn": [
+      "ɲ"
+    ],
+    "j": [
+      "j"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ñ": [
+      "ŋ"
+    ],
+    "n-": [
+      "ŋ"
+    ],
+    "nn-": [
+      "ŋ"
+    ],
+    "p": [
+      "p"
+    ],
+    "q": [
+      "k"
+    ],
+    "qu": [
+      "kw"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "sc": [
+      "ʃ"
+    ],
+    "scc": [
+      "ʃtʃ"
+    ],
+    "t": [
+      "t"
+    ],
+    "v": [
+      "v"
+    ],
+    "x": [
+      "ʒ"
+    ],
+    "z": [
+      "z"
+    ],
+    "cia": [
+      "tʃa"
+    ],
+    "gia": [
+      "dʒa"
+    ],
+    "cià": [
+      "tʃa"
+    ],
+    "già": [
+      "dʒa"
+    ],
+    "ciâ": [
+      "tʃaː"
+    ],
+    "giâ": [
+      "dʒaː"
+    ],
+    "ciä": [
+      "tʃaː"
+    ],
+    "giä": [
+      "dʒaː"
+    ],
+    "cio": [
+      "tʃu"
+    ],
+    "gio": [
+      "dʒu"
+    ],
+    "ciò": [
+      "tʃɔ"
+    ],
+    "giò": [
+      "dʒɔ"
+    ],
+    "ció": [
+      "tʃu"
+    ],
+    "gió": [
+      "dʒu"
+    ],
+    "ciô": [
+      "tʃuː"
+    ],
+    "giô": [
+      "dʒuː"
+    ],
+    "ciö": [
+      "tʃɔː"
+    ],
+    "giö": [
+      "dʒɔː"
+    ],
+    "ciu": [
+      "tʃy"
+    ],
+    "giu": [
+      "dʒy"
+    ],
+    "ciù": [
+      "tʃy"
+    ],
+    "giù": [
+      "dʒy"
+    ],
+    "ciû": [
+      "tʃyː"
+    ],
+    "giû": [
+      "dʒyː"
+    ],
+    "ciü": [
+      "tʃyː"
+    ],
+    "giü": [
+      "dʒyː"
+    ],
+    "bb": [
+      "b"
+    ],
+    "cc": [
+      "k"
+    ],
+    "dd": [
+      "d"
+    ],
+    "ff": [
+      "f"
+    ],
+    "gg": [
+      "ɡ"
+    ],
+    "ll": [
+      "l"
+    ],
+    "mm": [
+      "m"
+    ],
+    "nn": [
+      "n"
+    ],
+    "pp": [
+      "p"
+    ],
+    "rr": [
+      "r"
+    ],
+    "ss": [
+      "s"
+    ],
+    "tt": [
+      "t"
+    ],
+    "vv": [
+      "v"
+    ],
+    "zz": [
+      "z"
+    ]
+  },
+  "positional_graphemes": {
+    "c": {
+      "default": [
+        "k"
+      ],
+      "before_front_vowel": [
+        "tʃ"
+      ]
+    },
+    "g": {
+      "default": [
+        "ɡ"
+      ],
+      "before_front_vowel": [
+        "dʒ"
+      ]
+    },
+    "sc": {
+      "default": [
+        "sk"
+      ],
+      "before_front_vowel": [
+        "ʃ"
+      ]
+    }
+  },
+  "allophones_base": "la-x-galloitalic",
+  "allophones": {
+    "p": [
+      "p"
+    ],
+    "b": [
+      "b"
+    ],
+    "t": [
+      "t"
+    ],
+    "d": [
+      "d"
+    ],
+    "k": [
+      "k"
+    ],
+    "ɡ": [
+      "ɡ"
+    ],
+    "tʃ": [
+      "tʃ"
+    ],
+    "dʒ": [
+      "dʒ"
+    ],
+    "f": [
+      "f"
+    ],
+    "v": [
+      "v"
+    ],
+    "s": [
+      "s",
+      "z"
+    ],
+    "z": [
+      "z"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "ʒ": [
+      "ʒ"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n",
+      "ŋ",
+      "m"
+    ],
+    "ɲ": [
+      "ɲ"
+    ],
+    "ŋ": [
+      "ŋ"
+    ],
+    "r": [
+      "r"
+    ],
+    "l": [
+      "l"
+    ],
+    "j": [
+      "j"
+    ],
+    "w": [
+      "w"
+    ],
+    "a": [
+      "a",
+      "ã"
+    ],
+    "e": [
+      "e",
+      "ẽ"
+    ],
+    "ɛ": [
+      "ɛ",
+      "ɛ̃"
+    ],
+    "i": [
+      "i",
+      "ĩ"
+    ],
+    "u": [
+      "u",
+      "ũ"
+    ],
+    "y": [
+      "y",
+      "ỹ"
+    ],
+    "ø": [
+      "ø",
+      "ø̃"
+    ],
+    "ɔ": [
+      "ɔ",
+      "ɔ̃"
+    ],
+    "aː": [
+      "aː"
+    ],
+    "eː": [
+      "eː"
+    ],
+    "ɛː": [
+      "ɛː"
+    ],
+    "iː": [
+      "iː"
+    ],
+    "uː": [
+      "uː"
+    ],
+    "yː": [
+      "yː"
+    ],
+    "øː": [
+      "øː"
+    ],
+    "ɔː": [
+      "ɔː"
+    ]
+  },
+  "allophone_rules": [
+    {
+      "id": "LIJ_N_VELAR_FINAL",
+      "phonemes": [
+        "n"
+      ],
+      "surface": "ŋ",
+      "word_final": true,
+      "notes": "Toso (1997), Grammatica del genovese: word-final orthographic ⟨n⟩ is realised as the velar nasal [ŋ] (e.g. can 'dog' → [kaŋ]). The grafia ofiçiâ writes the intervocalic velar nasal explicitly as ⟨n-⟩/⟨nn-⟩; word-finally it is unmarked but velar."
+    },
+    {
+      "id": "LIJ_N_VELAR_ASSIM",
+      "phonemes": [
+        "n"
+      ],
+      "surface": "ŋ",
+      "followed_by_phoneme": [
+        "k",
+        "ɡ"
+      ],
+      "notes": "Nasal place assimilation (Toso 1997): /n/ → [ŋ] before a velar stop."
+    },
+    {
+      "id": "LIJ_N_LABIAL_ASSIM",
+      "phonemes": [
+        "n"
+      ],
+      "surface": "m",
+      "followed_by_phoneme": [
+        "p",
+        "b",
+        "m",
+        "f"
+      ],
+      "notes": "Nasal place assimilation (Toso 1997): /n/ → [m] before a labial consonant."
+    },
+    {
+      "id": "LIJ_NASAL_A",
+      "phonemes": [
+        "a"
+      ],
+      "surface": "ã",
+      "followed_by_phoneme": [
+        "ŋ"
+      ],
+      "notes": "Vowel nasalisation before the velar nasal coda (Forner 1975; Toso 1997): a → [ã] / _ŋ (lann-a 'wool' → [ˈlãŋa])."
+    },
+    {
+      "id": "LIJ_NASAL_E",
+      "phonemes": [
+        "e"
+      ],
+      "surface": "ẽ",
+      "followed_by_phoneme": [
+        "ŋ"
+      ],
+      "notes": "Vowel nasalisation before the velar nasal coda (Forner 1975; Toso 1997)."
+    },
+    {
+      "id": "LIJ_NASAL_I",
+      "phonemes": [
+        "i"
+      ],
+      "surface": "ĩ",
+      "followed_by_phoneme": [
+        "ŋ"
+      ],
+      "notes": "Vowel nasalisation before the velar nasal coda (Forner 1975; Toso 1997)."
+    },
+    {
+      "id": "LIJ_NASAL_U",
+      "phonemes": [
+        "u"
+      ],
+      "surface": "ũ",
+      "followed_by_phoneme": [
+        "ŋ"
+      ],
+      "notes": "Vowel nasalisation before the velar nasal coda (Forner 1975; Toso 1997): orthographic ⟨o⟩ = /u/ nasalises to [ũ] before [ŋ]."
+    },
+    {
+      "id": "LIJ_NASAL_Y",
+      "phonemes": [
+        "y"
+      ],
+      "surface": "ỹ",
+      "followed_by_phoneme": [
+        "ŋ"
+      ],
+      "notes": "Vowel nasalisation before the velar nasal coda (Forner 1975; Toso 1997): orthographic ⟨u⟩ = /y/ nasalises to [ỹ] before [ŋ]."
+    },
+    {
+      "id": "LIJ_NASAL_O",
+      "phonemes": [
+        "ɔ"
+      ],
+      "surface": "ɔ̃",
+      "followed_by_phoneme": [
+        "ŋ"
+      ],
+      "notes": "Vowel nasalisation before the velar nasal coda (Forner 1975; Toso 1997)."
+    }
+  ],
+  "stress": {
+    "default_position": -2,
+    "marked_vowels": [
+      "à",
+      "è",
+      "é",
+      "ì",
+      "ò",
+      "ó",
+      "ù",
+      "â",
+      "ê",
+      "î",
+      "ô",
+      "û",
+      "ä",
+      "ë",
+      "ï",
+      "ö",
+      "ü",
+      "æ"
+    ],
+    "stress_mark": "ˈ",
+    "notes": "Stress per the Académia Ligùstica do Brénno grafia ofiçiâ. The default position is paroxytone (penultimate), as in most Gallo-Italic. Any orthographically accented vowel (grave à è ì ò ù, acute é ó, circumflex â ê î ô û, diaeresis ä ë ï ö ü, and the ligature æ) marks the stressed syllable and always wins; the circumflex and diaeresis additionally encode vowel length. This is an orthographic-encoding simplification: the grafia writes the accent precisely so stress is recoverable from the spelling."
+  },
+  "parent": "la-x-galloitalic",
+  "ancestors": [
+    {
+      "code": "la-x-galloitalic",
+      "role": "parent",
+      "weight": 0.78,
+      "notes": "Gallo-Italic parent."
+    },
+    {
+      "code": "xlg",
+      "role": "substrate",
+      "weight": 0.05,
+      "notes": "Ancient Ligurian substrate: pre-Indo-European or early IE population of Liguria."
+    },
+    {
+      "code": "grc",
+      "role": "adstrate",
+      "weight": 0.04,
+      "notes": "Greek adstrate: Genoa had significant maritime contact with the Greek world."
+    }
+  ],
+  "notes": "Ligurian (Zeneise / Zenéize), reference variety Genoese (Zenéize). Gallo-Italic language of Liguria, ~500,000 speakers. INPUT CONTRACT: this spec expects text in the standardised grafia ofiçiâ of the Académia Ligùstica do Brénno (the orthography of the Ligurian Wikipedia and of Toso's dictionaries); raw or ad-hoc spellings are out of scope. Modelled hallmark features of the grafia ofiçiâ: (1) o=/u/ (Genoese o is Italian u; ó also /u/, ô /uː/), while ò=/ɔ/, ö=/ɔː/. (2) u=/y/ (front rounded), û/ü=/yː/. (3) x=/ʒ/ — the diagnostic Genoese grapheme, the French j sound. (4) eu=/ø/ (êu /øː/). (5) æ=/ɛː/ (çitæ 'city'). (6) ç=/s/. (7) z=/z/ always (NOT an affricate). (8) sc=/ʃ/ before a front vowel (else /sk/), and the trigraph scc=/ʃtʃ/. (9) the velar nasal /ŋ/, written n-/nn- intervocalically and realised word-finally, with nasalisation of the preceding vowel (allophone_rules). (10) circumflex/diaeresis encode phonemic vowel length; the grafia marks stress with the written accent. Degemination is total in modern Genoese, so double consonants map to a single phoneme. Historical lingua franca of Mediterranean maritime trade (Forner 1975).",
+  "quality": "research",
+  "script_type": "alphabet",
+  "iso639_3": "lij",
+  "sources": [
+    {
+      "id": "academia_grafia_oficia",
+      "author": "Académia Ligùstica do Brénno",
+      "year": 2008,
+      "title": "Grafia ofiçiâ: grafia moderna do zeneize",
+      "publisher": "Académia Ligùstica do Brénno",
+      "url": "http://www.zeneize.net/",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Academia_Ligustica_do_Brenno",
+      "pages": null,
+      "notes": "The standardised (official) orthography of Genoese: canonical grapheme->sound correspondences (o=/u/, u=/y/, x=/ʒ/, eu=/ø/, æ=/ɛː/, ç=/s/, scc=/ʃtʃ/, n-/nn-=/ŋ/, accent-marked stress and length). Adopted for the Ligurian Wikipedia."
+    },
+    {
+      "id": "omniglot_genoese",
+      "author": "Omniglot",
+      "year": 2024,
+      "title": "Genoese (Zeneize) language and pronunciation",
+      "publisher": "Omniglot",
+      "url": "https://www.omniglot.com/writing/genoese.htm",
+      "pages": null,
+      "notes": "Tertiary reference used to cross-check the grafia ofiçiâ grapheme table (alphabet, c/g softening, s voicing, degemination)."
+    },
+    {
+      "id": "toso1997_grammatica",
+      "author": "Toso, Fiorenzo",
+      "year": 1997,
+      "title": "Grammatica del genovese: varietà urbana e di koinè",
+      "publisher": "Le Mani",
+      "url": null,
+      "pages": null,
+      "notes": "Descriptive grammar of Genoese phonology: vowel and consonant inventory, velar nasal, nasalisation, degemination, stress."
+    },
+    {
+      "id": "forner1975",
+      "author": "Forner, Werner",
+      "year": 1975,
+      "title": "Generative Phonologie des Dialekts von Genua",
+      "publisher": "Buske",
+      "url": null,
+      "pages": null,
+      "notes": "Generative phonology of the Genoa dialect: front rounded vowels /y ø/, nasal vowels, velar nasal, vowel length."
+    },
+    {
+      "id": "maiden_parry1997",
+      "author": "Maiden, M. & Parry, M. (eds.)",
+      "year": 1997,
+      "title": "The Dialects of Italy",
+      "publisher": "Routledge",
+      "url": null,
+      "pages": null,
+      "notes": "Ligurian within the Gallo-Italic group."
+    },
+    {
+      "id": "loporcaro2009",
+      "author": "Loporcaro, M.",
+      "year": 2009,
+      "title": "Profilo linguistico dei dialetti italiani",
+      "publisher": "Laterza",
+      "url": null,
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Ligurian_language_(Romance)",
+    "https://en.wikipedia.org/wiki/Genoese_dialect",
+    "https://it.wikipedia.org/wiki/Lingua_ligure",
+    "https://lij.wikipedia.org/wiki/Lengoa_ligure",
+    "https://lij.wikipedia.org/wiki/Lengoa_zeneize",
+    "https://en.wikipedia.org/wiki/Ligurian_language",
+    "https://it.wikipedia.org/wiki/Dialetto_genovese"
+  ],
+  "urls": [
+    "http://www.zeneize.net/",
+    "https://en.wikipedia.org/wiki/Academia_Ligustica_do_Brenno",
+    "https://www.omniglot.com/writing/genoese.htm"
+  ],
+  "timespan": {
+    "start_year": 1300,
+    "end_year": null
+  },
+  "glottolog_code": "ligu1248",
+  "wikidata_qid": "Q36106",
+  "phoible_id": "ligu1248",
+  "wals_code": "itg",
+  "location": {
+    "latitude": 44.0816,
+    "longitude": 7.90522,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Ligurian."
+  }
+}

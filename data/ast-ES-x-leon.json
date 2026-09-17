@@ -1,0 +1,85 @@
+{
+  "code": "ast-ES-x-leon",
+  "name": "Leonese",
+  "script": "Latin",
+  "graphemes_base": "ast-x-leon",
+  "allophones_base": "ast-x-leon",
+  "positional_graphemes_base": "ast-x-leon",
+  "parent": "ast-x-leon",
+  "notes": "Modern Leonese (Llionés), spoken in the provinces of León, Zamora, and Salamanca (Spain). Inherits all grapheme→phoneme correspondences from ast-x-leon, which is grounded in Morala & Egido (2009) and the Propuesta de Norma Ortográfica. Key values: ⟨x⟩=/ʃ/, ⟨ll⟩=/ʎ/, ⟨ch⟩=/tʃ/ (PL-/CL-/FL-), ⟨y⟩=/ʝ/ (-LJ- general), ⟨ñ⟩=/ɲ/. Western varieties retain ei/ou diphthongs and -u final (see ast-x-occidental). Related to Mirandese (Portugal), which descends from the same Leonese branch.",
+  "quality": "research",
+  "script_type": "alphabet",
+  "sources": [
+    {
+      "id": "morala_egido2009",
+      "author": "Morala Rodríguez, J.R. & Egido Fernández, M.C.",
+      "year": 2009,
+      "title": "A vueltas con una norma para el leonés",
+      "publisher": "Instituto Castellano y Leonés de la Lengua, Colección Beltenebros 23",
+      "pages": "209-241",
+      "notes": "ISBN: 978-84-936383-8-2. Descriptive survey confirming grapheme values from Leonese corpora."
+    },
+    {
+      "id": "propuesta_norma_ortografica",
+      "author": "Anonymous",
+      "year": 2010,
+      "title": "Propuesta de Norma Ortográfica para el Leonés",
+      "publisher": "Unpublished markdown document",
+      "pages": null,
+      "notes": "Prescriptive proposal, western Leonese base. Year is approximate (undated document)."
+    },
+    {
+      "id": "garcia_arias2003",
+      "author": "García Arias, X.Ll.",
+      "year": 2003,
+      "title": "Gramática histórica de la lengua asturiana",
+      "publisher": "Academia de la Llingua Asturiana",
+      "url": null,
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Leonese_dialect",
+    "https://ast.wikipedia.org/wiki/Lleon%C3%A9s_(lling%C3%BC%C3%ADstica)",
+    "https://es.wikipedia.org/wiki/Leon%C3%A9s_(asturleon%C3%A9s_de_Le%C3%B3n_y_Zamora)"
+  ],
+  "timespan": {
+    "start_year": 900,
+    "end_year": null
+  },
+  "glottolog_code": null,
+  "iso639_3": "ast",
+  "location": {
+    "latitude": 42.620046,
+    "longitude": -5.84066,
+    "source": "wikidata",
+    "notes": "the province of León — the core of the Leonese area, which also reaches into Zamora and Salamanca. A province-wide point, not a town. [Wikidata Q71140 P625]"
+  },
+  "graphemes": {
+    "c": [
+      "k",
+      "θ"
+    ],
+    "z": [
+      "θ"
+    ],
+    "ç": [
+      "θ"
+    ],
+    "j": [
+      "h"
+    ]
+  },
+  "positional_graphemes": {
+    "c": {
+      "before_e": [
+        "θ"
+      ],
+      "before_i": [
+        "θ"
+      ]
+    },
+    "z": {}
+  }
+}

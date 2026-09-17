@@ -1,0 +1,60 @@
+{
+  "code": "de-CH",
+  "name": "Swiss Standard German (Hochdeutsch)",
+  "script": "Latin",
+  "graphemes_base": "de-DE",
+  "allophones_base": "de-DE",
+  "allophones": {
+    "x": [
+      "x",
+      "χ"
+    ],
+    "ʁ": [
+      "r"
+    ]
+  },
+  "parent": "de-DE",
+  "notes": "Swiss Standard German (Schweizer Hochdeutsch). NO glottal stop /ʔ/ — absent from Swiss German phonology. /r/ = alveolar trill [r] (vs. Standard German uvular [ʀ]). Geminate consonants preserved as distinct (Alemannic feature). Swiss German DIALECTS (Schweizerdeutsch) are Alemannic and much more divergent than Swiss Standard German; they are modelled separately by de-x-alemannic, which carries ISO 639-3 gsw and the Alemannic grapheme divergences. Source: König & van der Auwera (1994). Stress exemption: Swiss Standard German stress broadly follows German root-initial stress, but pronunciation (and hence effective stress placement in loanwords/compounds) varies materially across the Swiss German dialect continuum feeding this register; no single spelling-predictable rule is declared. Source: Christen, Helen (1998), Dialekt im Alltag, on regional variation feeding Swiss Standard German usage; Wiese, Richard (1996), The Phonology of German.",
+  "quality": "research",
+  "script_type": "alphabet",
+  "sources": [
+    {
+      "id": "wiese1996",
+      "author": "Wiese, R.",
+      "year": 1996,
+      "title": "The Phonology of German",
+      "publisher": "Oxford University Press",
+      "url": null,
+      "pages": null,
+      "notes": null,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/German_phonology"
+    },
+    {
+      "id": "christen1998",
+      "author": "Christen, H.",
+      "year": 1998,
+      "title": "Convergenz und Divergenz in der schweizerdeutschen Gegenwartsdialekte",
+      "publisher": "Francke",
+      "url": null,
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Swiss_Standard_German",
+    "https://de.wikipedia.org/wiki/Schweizer_Hochdeutsch"
+  ],
+  "timespan": {
+    "start_year": 1800,
+    "end_year": null
+  },
+  "glottolog_code": null,
+  "iso639_3": "deu",
+  "wikidata_qid": "Q1366643",
+  "location": {
+    "latitude": 46.798562,
+    "longitude": 8.231973,
+    "source": "wikidata",
+    "notes": "Switzerland's representative point — and only the German-speaking north and east are meant. A weak, country-level stand-in. [Wikidata Q39 P625]"
+  }
+}

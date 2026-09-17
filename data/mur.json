@@ -1,0 +1,174 @@
+{
+ "code": "mur",
+ "name": "Murle",
+ "script": "Latin",
+ "quality": "skeleton",
+ "graphemes": {
+  "VV": [
+   "ː"
+  ],
+  "a": [
+   "a"
+  ],
+  "b": [
+   "b"
+  ],
+  "c": [
+   "tʃ"
+  ],
+  "d": [
+   "d"
+  ],
+  "e": [
+   "e"
+  ],
+  "g": [
+   "ɡ"
+  ],
+  "i": [
+   "i"
+  ],
+  "j": [
+   "dʒ"
+  ],
+  "k": [
+   "k"
+  ],
+  "l": [
+   "l"
+  ],
+  "m": [
+   "m"
+  ],
+  "n": [
+   "n"
+  ],
+  "ny": [
+   "ɲ"
+  ],
+  "o": [
+   "o"
+  ],
+  "p": [
+   "p"
+  ],
+  "r": [
+   "r"
+  ],
+  "t": [
+   "t"
+  ],
+  "u": [
+   "u"
+  ],
+  "v": [
+   "v"
+  ],
+  "w": [
+   "w"
+  ],
+  "y": [
+   "j"
+  ],
+  "z": [
+   "z"
+  ],
+  "ŋ": [
+   "ŋ"
+  ],
+  "ɔ": [
+   "ɔ"
+  ],
+  "ɛ": [
+   "ɛ"
+  ],
+  "ḏ": [
+   "d̪"
+  ],
+  "ṯ": [
+   "t̪"
+  ]
+ },
+ "allophones": {},
+ "notes": "Placed so the ancestry graph covers every living ISO 639-3 language. No orthography is claimed; the phoneme inventory follows the cited PHOIBLE inventory (which itself cites a published description): script is Zyyy (undetermined) until a cited description is encoded. Classification and coordinates follow Glottolog. Orthography from Hartell 1993, Alphabets of Africa (UNESCO/SIL), extracted via the AfriSpeech/africa-g2p compilation (mur.json). africa-g2p is a compilation tool, not the linguistic authority; the citation above is the original source it names.",
+ "iso639_3": "mur",
+ "glottolog_code": "murl1244",
+ "sources": [
+  {
+   "id": "glottolog2024",
+   "author": "Hammarström, Harald; Forkel, Robert; Haspelmath, Martin; Bank, Sebastian",
+   "year": 2024,
+   "title": "Glottolog 5.0",
+   "publisher": "Max Planck Institute for Evolutionary Anthropology",
+   "url": "https://glottolog.org/"
+  },
+  {
+   "id": "phoible2019",
+   "author": "Moran, Steven; McCloy, Daniel (eds.)",
+   "year": 2019,
+   "title": "PHOIBLE 2.0 (doi:10.5281/zenodo.2562766)",
+   "publisher": "Max Planck Institute for the Science of Human History",
+   "url": "https://phoible.org/inventories/view/793",
+   "notes": "Inventory 793 (aa), 34 non-marginal segments."
+  },
+  {
+   "id": "hartell1993-p93",
+   "author": "Hartell, Rhonda L. (ed.)",
+   "year": 1993,
+   "title": "Alphabets of Africa, p. 93",
+   "publisher": "UNESCO/SIL, Dakar",
+   "url": null
+  }
+ ],
+ "urls": [
+  "https://glottolog.org/resource/languoid/id/murl1244"
+ ],
+ "location": {
+  "latitude": 6.6976,
+  "longitude": 33.988,
+  "source": "glottolog",
+  "notes": "Glottolog's representative point."
+ },
+ "parent": "x-clade-surm1244",
+ "phonemes": [
+  "b",
+  "d",
+  "d̠ʒ",
+  "d̪",
+  "j",
+  "k",
+  "l",
+  "m",
+  "n",
+  "p",
+  "t",
+  "t̠ʃ",
+  "t̪",
+  "v",
+  "w",
+  "z",
+  "ŋ",
+  "ɡ",
+  "ɲ",
+  "ɾ",
+  "a",
+  "aː",
+  "e",
+  "eː",
+  "i",
+  "iː",
+  "o",
+  "oː",
+  "u",
+  "uː",
+  "ɔ",
+  "ɔː",
+  "ɛ",
+  "ɛː"
+ ],
+ "phoible_id": "793",
+ "script_type": "alphabet",
+ "wikipedia": [
+  "https://en.wikipedia.org/wiki/Murle_language"
+ ]
+}

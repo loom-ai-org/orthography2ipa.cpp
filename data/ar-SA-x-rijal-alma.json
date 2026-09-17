@@ -1,0 +1,215 @@
+{
+  "code": "ar-SA-x-rijal-alma",
+  "name": "Rijāl Almaʿ Arabic",
+  "script": "Arabic",
+  "graphemes_base": "ar-x-peninsular",
+  "graphemes": {
+    "ق": [
+      "ɡ",
+      "q"
+    ],
+    "ض": [
+      "ɮˤ"
+    ],
+    "ظ": [
+      "ɬˤ"
+    ],
+    "الضض": [
+      "aɮˤɮˤ"
+    ],
+    "اَلضض": [
+      "aɮˤɮˤ"
+    ],
+    "اِلضض": [
+      "iɮˤɮˤ"
+    ],
+    "لِلضض": [
+      "liɮˤɮˤ"
+    ],
+    "وَالضض": [
+      "waɮˤɮˤ"
+    ],
+    "فَالضض": [
+      "faɮˤɮˤ"
+    ],
+    "بِالضض": [
+      "biɮˤɮˤ"
+    ],
+    "كَالضض": [
+      "kaɮˤɮˤ"
+    ],
+    "وِالضض": [
+      "wiɮˤɮˤ"
+    ],
+    "الظظ": [
+      "aɬˤɬˤ"
+    ],
+    "اَلظظ": [
+      "aɬˤɬˤ"
+    ],
+    "اِلظظ": [
+      "iɬˤɬˤ"
+    ],
+    "لِلظظ": [
+      "liɬˤɬˤ"
+    ],
+    "وَالظظ": [
+      "waɬˤɬˤ"
+    ],
+    "فَالظظ": [
+      "faɬˤɬˤ"
+    ],
+    "بِالظظ": [
+      "biɬˤɬˤ"
+    ],
+    "كَالظظ": [
+      "kaɬˤɬˤ"
+    ],
+    "وِالظظ": [
+      "wiɬˤɬˤ"
+    ]
+  },
+  "allophones_base": "ar-x-peninsular",
+  "allophones": {
+    "ɮˤ": [
+      "ɮˤ"
+    ]
+  },
+  "parent": "ar-x-peninsular",
+  "ancestors": [
+    {
+      "code": "ar-x-peninsular",
+      "role": "parent",
+      "weight": 0.9,
+      "notes": "Peninsular Arabic base — most conservative; Rijāl Almaʿ is a highland/Tihāmah southwestern variety that preserves archaic features."
+    }
+  ],
+  "notes": "Rijāl Almaʿ Arabic (رجال ألمع), a sedentary dialect of the ʿAsīr / Saudi Tihāmah in southwestern Saudi Arabia. Its DEFINING, and genuinely archaic, feature is that it PRESERVES THE LATERAL EMPHATICS that every other modern Arabic dialect has lost: the reflex of Old-Arabic ḍād ض is a VOICED lateralized pharyngealized (inter)dental fricative [ɮˤ] — the very lateral articulation Sībawayhi described as making Arabic lughat al-ḍād — and the reflex of ẓāʾ ظ is the corresponding VOICELESS lateralized pharyngealized fricative [ɬˤ]. Crucially the two are kept DISTINCT (Asiri 2009; Watson & Al-Azraqi 2011:427-428; Al-Azraqi 2010), where MSA and every northern dialect neutralise *ḍ and *ẓ to a single [dˤ]~[ðˤ]. This makes Rijāl Almaʿ, alongside a handful of neighbouring Tihāmah dialects (al-Rubūʿah, al-Ghayil, al-ʿIzzi) and the Modern South Arabian languages, one of the last strongholds of the Proto-Semitic lateral series. MODELED HERE: ض → [ɮˤ] (grapheme override, blocking the inherited ɮˤ→[dˤ]/[ðˤ] delateralization of the peninsular parent) and ظ → [ɬˤ]. Watson & Al-Azraqi (2011:428) note the *ḍ/*ẓ correspondence is not always clean in Rijāl Almaʿ (some *ḍ words are non-lateral, some *ẓ words take the voiced [ɮˤ]); the transcriber models the regular grapheme-conditioned mapping (ض→[ɮˤ], ظ→[ɬˤ]) and the lexical irregularities are left to a downstream lexicon. CONSONANT SYSTEM: qaf ق → VOICED velar [ɡ] (grapheme override of the peninsular default [q]). Asiri's own Rijāl Almaʿ data, quoted verbatim in Alfaifi (2024:177-178, examples from Asiri 2008:72-73), realises historical *q as [ɡ] throughout — gābalt 'I met' (<qābal), im=bagar 'the cows' (<baqar), saragu 'they stole' (<saraq), gaṭaʕaw 'they cut' (<qaṭaʕ) — with no [q] anywhere in the dialect forms; the neighbouring SSA/Tihāmah lects behave identically (Davis et al. 2024:149 galam 'pen' <qalam; Faifi gāma/lagīt). This CORRECTS an earlier reading of this spec that inferred [q]-retention from a general 'southwestern sedentary = qaf-retaining' heuristic; the primary source contradicts it, so [ɡ] is primary and [q] is kept only as a secondary candidate for classicisms. The [ɡ] reflex means qāf is NOT the split between Rijāl Almaʿ and its neighbour Tihāmi Qaḥtāni (both are [ɡ]); their decisive difference is the ẓāʾ reflex (see below). Interdentals ث /θ/ ذ /ð/ retained, emphatic pharyngealization backing low vowels (AR_PEN_EMPH_*). NO ar-SA umbrella node: Saudi dialects do not form a pan-Saudi phonological group (the southwest patterns quite unlike Najd or the Hejaz), so ar-SA stays unassigned and this leaf parents directly to ar-x-peninsular. INPUT CONTRACT: transcribes orthography+harakat; short vowels surface only when the input is vocalised. TTS NOTE: [ɮˤ] and [ɬˤ] are rare symbols a neural frontend must have in its embedding table — the inventory-closure invariant enumerates them because this spec emits them. COMPARATIVE / HONEST-ATTRIBUTION NOTE: Rijāl Almaʿ sits in a continuum of conservative ʿAsīr/Tihāmah lects that must NOT be conflated. Its NEIGHBOUR Tihāmi Qaḥtāni (ar-SA-x-tihama-qahtan; K. Alqahtani 2015, Essex PhD) shares the voiced qāf → [ɡ] with Rijāl Almaʿ but differs on ǧīm → [ʒ] (vs [dʒ]) and, DECISIVELY, on its ẓāʾ reflex: Tihāmi Qaḥtāni has the emphatic INTERDENTAL [ðˤ] with ḍād→[ɮˤ] MERGING toward it, NOT the VOICELESS LATERAL [ɬˤ] that Watson & Al-Azraqi (2011:428) report kept distinct for Rijāl Almaʿ. The ẓāʾ→[ɬˤ] distinctness, not qāf, is what separates the two lects. The further-north Balqarn/Qarni lect (Alqarni 2025, Essex PhD) has plain non-lateral emphatics [dˤ]/[ðˤ] and no laterals at all. So the voiceless lateral [ɬˤ] modelled here is a Rijāl-Almaʿ-specific (and al-Rubūʿah) feature on the strength of Watson2011/Asiri2009, not a pan-Tihāmah one; the neighbouring theses corroborate the AREAL survival of a lateral ḍād while confirming the ẓāʾ→[ɬˤ] split is narrower. CAVEAT: Asiri (2008/2009), the primary Rijāl Almaʿ monograph, is not held locally, but Asiri's own worked examples are now accessible second-hand through Alfaifi (2024:177-178, quoting Asiri 2008:72-73): these resolve the qāf question in favour of [ɡ] (correcting the earlier [q] reading) and confirm diphthong retention (m=bayt, not *beet). The ǧīm→[dʒ] and [ɬˤ]-distinct claims still rest on Watson & Al-Azraqi (2011) plus Asiri as cited there — Alfaifi's RA examples write ǧīm with ⟨j⟩ (m=rajil, jārna), which does not disambiguate [dʒ]~[ʒ], so ǧīm is left unchanged.",
+  "quality": "research",
+  "script_type": "abjad",
+  "sources": [
+    {
+      "id": "watson2011",
+      "author": "Watson, J.C.E. & Al-Azraqi, M.",
+      "year": 2011,
+      "title": "Lateral fricatives and lateral emphatics in southern Saudi Arabia and Mehri",
+      "publisher": "Proceedings of the Seminar for Arabian Studies 41, 425-432. Archaeopress, Oxford",
+      "url": "https://eprints.whiterose.ac.uk/id/eprint/75746/",
+      "pages": "427-428",
+      "notes": "Open-access (White Rose). Documents lateral/lateralized reflexes of *ḍ and *ẓ in four Saudi Tihāmah dialects. p.427-428: Rijāl Almaʿ (Asiri 2009) has a VOICED lateralized pharyngealized interdental fricative reflex of *ḍ (transcribed [ðˤl], normalized here [ɮˤ]) and a VOICELESS lateralized pharyngealized interdental fricative reflex of *ẓ ([εl], normalized [ɬˤ]), kept distinct. Near-minimal pairs (p.428): yiḍlārib 'he fights', ṭaḍlḍlan 'she bit' (*ḍ); ḍlarf 'circumstance', εlāmī 'thirsty' (*ẓ); fāḍl 'it overfilled' (*fāḍ) vs māεl 'he churned'; tanūḍl 'she reminds' vs tamūεl 'she churns'. al-Rubūʿah younger generation contrasts voiced [ɮˤ] (*ḍ) with voiceless [ɬˤ] (*ẓ): ḍlaym 'pain', εlaym. al-Ghayil has an emphatic lateral sonorant [ɫ] (Ibn al-Jazarī's al-lām al-mufakhkhamah)."
+    },
+    {
+      "id": "asiri2009",
+      "author": "Asiri, Y.M.",
+      "year": 2009,
+      "title": "Aspects of the phonology and morphology of Rijal Almaʿ dialect (south-west Saudi Arabia) (PhD thesis)",
+      "publisher": "University of Salford",
+      "url": "https://drepo.sdl.edu.sa/items/d1cc2881-4d4c-4a2f-86a8-0fd32b815748",
+      "pages": null,
+      "notes": "The primary monograph on Rijāl Almaʿ. Establishes the distinct lateralized reflexes of *ḍ (voiced [ɮˤ]) and *ẓ (voiceless [ɬˤ]) reported in Watson & Al-Azraqi 2011, and the southwestern sedentary consonant system (qaf-retaining, interdentals retained). Glottolog reference id 300708."
+    },
+    {
+      "id": "alazraqi2010",
+      "author": "Al-Azraqi, M.",
+      "year": 2010,
+      "title": "The ancient Ḍād in southwest Saudi Arabia",
+      "publisher": "Arabica 57(1), 57-67",
+      "url": "https://doi.org/10.1163/057053910X12634522203520",
+      "pages": "57-67",
+      "notes": "Documents the survival of the lateral(ized) ḍād across the ʿAsīr and Tihāmah, matching the early grammarians' description of ḍād as a lateral emphatic. Corroborates the [ɮˤ] reflex modeled here."
+    },
+    {
+      "id": "watson2002",
+      "author": "Watson, J.C.E.",
+      "year": 2002,
+      "title": "The Phonology and Morphology of Arabic",
+      "publisher": "Oxford University Press",
+      "url": null,
+      "pages": null,
+      "notes": "Emphatic pharyngealization and vowel backing, inherited from the peninsular parent.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Arabic_phonology"
+    },
+    {
+      "id": "alqahtani2015",
+      "author": "Alqahtani, Khairiah",
+      "year": 2015,
+      "title": "A sociolinguistic study of the Tihami Qahtani dialect in Asir, Southern Arabia (PhD thesis)",
+      "publisher": "University of Essex",
+      "url": "https://repository.essex.ac.uk/15298/",
+      "pages": "30, 33, 45-46, 170",
+      "notes": "COMPARATIVE, not a source for Rijāl Almaʿ itself. The primary monograph on the NEIGHBOURING Tihāmi Qaḥtāni lect (modelled at ar-SA-x-tihama-qahtan). Cited here to fix the honest-attribution boundary: p.30 treats Rijāl Almaʿ (Asiri 2009) as a separate Tihāmat-ʿAsīr lect; p.33 groups the Tihāmi tribal lects as 'different but mutually intelligible'; pp.45-46 give Tihāmi Qaḥtāni's DIVERGENT reflexes (qāf→[ɡ], ǧīm→[ʒ], ẓāʾ→[ðˤ] not [ɬˤ]); p.170 the ḍād/ẓāʾ merger in progress — features that distinguish it from the qāf-retaining, [ɬˤ]-distinct Rijāl Almaʿ."
+    },
+    {
+      "id": "alfaifi2024",
+      "author": "Alfaifi, Abdullah",
+      "year": 2024,
+      "title": "Distal and proximal relative pronouns in Central Faifi Arabic",
+      "publisher": "In: Gasparini, Russell & Watson (eds.), Diversity across the Arabian Peninsula: Language, Culture, Nature. Semitic Languages and Cultures 28. Open Book Publishers, Cambridge",
+      "url": "https://doi.org/10.11647/OBP.0411.05",
+      "pages": "177-178",
+      "notes": "Open-access (CC BY-NC). Quotes Asiri (2008:72-73) directly for the Rijāl Almaʿ relative-pronoun examples (pp.177-178). These examples are the closest accessible window onto Asiri's own Rijāl Almaʿ data and settle the qāf reflex: historical *q surfaces as VOICED [ɡ] throughout — gābalt 'I met', im=bagar 'the cows', saragu 'they stole', gaṭaʕaw 'they cut' — NOT the [q] the spec previously inferred. The diphthong is retained (m=bayt 'the house', not *beet), corroborating the spec's diphthong retention. Rijāl Almaʿ also carries the m-/im- definite article (m=walad, im=bagar). ǧīm is written ⟨j⟩ (m=rajil, jārna), which does not disambiguate [dʒ]~[ʒ]."
+    },
+    {
+      "id": "davisetal2024",
+      "author": "Davis, S., Alshammari, W., Alahmari, M. & Alhuwaykim, M.",
+      "year": 2024,
+      "title": "Aspects of the phonology and morphology of Saudi varieties of Arabic",
+      "publisher": "In: Gasparini, Russell & Watson (eds.), Diversity across the Arabian Peninsula: Language, Culture, Nature. Semitic Languages and Cultures 28. Open Book Publishers, Cambridge",
+      "url": "https://doi.org/10.11647/OBP.0411.04",
+      "pages": "137, 149",
+      "notes": "Open-access (CC BY-NC). AREAL corroboration, not a source for Rijāl Almaʿ specifically. §1 (p.137) confirms the archaic lateral-fricative reflex of historical ḍād persists across the ʿAsīr and Saudi Tihāmah (citing Watson & Al-Azraqi 2011 and Al-Wer & Al-Qahtani 2016), consistent with Sībawayh's description — the areal fact the [ɮˤ] reflex modelled here rests on. §3 (Northern-Tihāmah SSA variety, Alahmari 2018) shows the same voiced qāf reflex ([ɡ]): galam 'pen' <qalam (p.149) — corroborating the qāf→[ɡ] correction for the wider SW-sedentary type."
+    },
+    {
+      "id": "alqarni2025",
+      "author": "Alqarni, Alaa",
+      "year": 2025,
+      "title": "Dialect Contact and Koineisation in Riyadh: A Study on the Dialect of Alqarni Tribe (PhD thesis)",
+      "publisher": "University of Essex",
+      "url": "https://repository.essex.ac.uk/43185/",
+      "pages": "46-48",
+      "notes": "COMPARATIVE, not a source for Rijāl Almaʿ itself. The Qarni/Balqarn lect is the northern member of the same Southern-Ḥijāz/ʿAsīr-Tihāmah-Sarawat continuum (Prochazka 1988 group i), with Rijāl Almaʿ further south. Its Prochazka-derived inventory (pp.46-48) has plain non-lateral emphatics ḍād [dˤ]/ẓāʾ [ðˤ] and NO laterals, plus qāf→[ɡ], heritage ǧīm→[j], /k/→[tʃ] affrication, m-article, and 3SF -an. Silent on lateral ḍād (not a study variable); marks the northern edge where the archaic lateral is not attested, bounding the lateral-reflex area to the south."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Arabic_phonology",
+    "https://en.wikipedia.org/wiki/%E1%B8%8Ad%C4%81d"
+  ],
+  "timespan": {
+    "start_year": 1400,
+    "end_year": null
+  },
+  "iso639_3": "ars",
+  "allophone_rules": [],
+  "location": {
+    "latitude": 18.1846,
+    "longitude": 42.2716,
+    "source": "manual",
+    "notes": "Rijāl Almaʿ, ʿAsīr Province, southwestern Saudi Arabia."
+  },
+  "optional_marks": [
+    "ً",
+    "ٌ",
+    "ٍ",
+    "َ",
+    "ُ",
+    "ِ",
+    "ّ",
+    "ْ",
+    "ٰ",
+    "ٓ"
+  ],
+  "stress": {
+    "default_position": -3,
+    "quantity_sensitive": true,
+    "superheavy_final_attracts": true,
+    "max_onset": 1,
+    "stress_mark": "ˈ",
+    "notes": "Quantity-sensitive Arabic stress, inherited from the peninsular parent; see ar-SA-x-najd for the cascade and input contract. Prosodic clitics: monosyllabic function words (negator maː, prepositions fiː/min/ʕan/ʕa/li/bi, vocative jaː, copula-negator muː/miʃ, conditional law/loː, wa-proclitic combinations) attach to a host and fall inside the host's stress domain, so they carry no word stress (Watson 2002, The Phonology and Morphology of Arabic, OUP, ch.3). Pan-Arabic class; the per-lect form list reflects the function words attested in this lect. Orthographic test — a clitic homograph (e.g. verb yā 'came') is destressed in every occurrence.",
+    "cliticless_words": [
+      "فِي",
+      "مَا",
+      "وَمَا",
+      "يَا"
+    ]
+  }
+}

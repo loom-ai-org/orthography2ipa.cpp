@@ -1,0 +1,90 @@
+{
+ "code": "efi",
+ "name": "Efik",
+ "script": "Latin",
+ "quality": "skeleton",
+ "graphemes": {
+  "a": ["a"],
+  "e": ["e"],
+  "ẹ": ["ɛ"],
+  "i": ["i"],
+  "o": ["o"],
+  "ọ": ["ɔ"],
+  "u": ["u"],
+  "b": ["b"],
+  "d": ["d"],
+  "f": ["f"],
+  "k": ["k"],
+  "kp": ["kp"],
+  "m": ["m"],
+  "n": ["n"],
+  "ñ": ["ɲ"],
+  "ng": ["ŋ"],
+  "s": ["s"],
+  "t": ["t"],
+  "w": ["w"],
+  "y": ["j"]
+ },
+ "allophones": {
+  "a": ["a"], "e": ["e"], "ɛ": ["ɛ"], "i": ["i"], "o": ["o"], "ɔ": ["ɔ"], "u": ["u"],
+  "b": ["b"], "d": ["d"], "f": ["f"], "k": ["k"], "kp": ["kp"], "m": ["m"],
+  "n": ["n"], "ɲ": ["ɲ"], "ŋ": ["ŋ"], "s": ["s"], "t": ["t"], "w": ["w"], "j": ["j"]
+ },
+ "notes": "Standard Efik Latin orthography, established by Presbyterian mission linguists (Goldie 1862, A Dictionary of the Efik Language) and still in current use for Efik-language publications in Nigeria's Cross River State. Follows the underdotted-vowel convention shared with neighbouring Cross River languages: ⟨ẹ⟩ and ⟨ọ⟩ write the open-mid vowels /ɛ/ and /ɔ/ as distinct units from ⟨e⟩ /e/ and ⟨o⟩ /o/. ⟨ñ⟩ spells the palatal nasal /ɲ/ and ⟨ng⟩ the velar nasal /ŋ/ — a true digraph, since the file defines no separate ⟨g⟩ grapheme for /ŋ/ to be read as n+g would give (AGENTS.md test 1). ⟨kp⟩ is the single labial-velar stop /kp/, not a k-p cluster. The palatal glide is spelled ⟨y⟩ for /j/. This grapheme set covers all 20 non-marginal segments of the cited PHOIBLE inventory (7 vowels, 13 consonants). Efik/Ibibio is tonal; tone is not marked in ordinary orthography and is not modelled here (documented exemption, as for stress). Efik lacks lexical stress as a separate category from tone.",
+ "iso639_3": "efi",
+ "glottolog_code": "efik1245",
+ "wikidata_qid": "Q34785",
+ "wikipedia": [
+  "https://en.wikipedia.org/wiki/Efik_language"
+ ],
+ "sources": [
+  {
+   "id": "glottolog2024",
+   "author": "Hammarström, Harald; Forkel, Robert; Haspelmath, Martin; Bank, Sebastian",
+   "year": 2024,
+   "title": "Glottolog 5.0",
+   "publisher": "Max Planck Institute for Evolutionary Anthropology",
+   "url": "https://glottolog.org/"
+  },
+  {
+   "id": "phoible2019",
+   "author": "Moran, Steven; McCloy, Daniel (eds.)",
+   "year": 2019,
+   "title": "PHOIBLE 2.0 (doi:10.5281/zenodo.2562766)",
+   "publisher": "Max Planck Institute for the Science of Human History",
+   "url": "https://phoible.org/inventories/view/316",
+   "notes": "Inventory 316 (upsid), 20 non-marginal segments."
+  },
+  {
+   "id": "goldie1862",
+   "author": "Goldie, Hugh",
+   "year": 1862,
+   "title": "A Dictionary of the Efik Language",
+   "publisher": "United Presbyterian Mission Press",
+   "notes": "Original codification of the Efik Latin orthography, still the basis of the modern one."
+  },
+  {
+   "id": "essien1990",
+   "author": "Essien, Okon E.",
+   "year": 1990,
+   "title": "A Grammar of the Ibibio Language",
+   "publisher": "University Press Limited, Ibadan",
+   "notes": "Cross River (Efik-Ibibio) phonology and shared underdot-vowel orthography."
+  }
+ ],
+ "urls": [
+  "https://glottolog.org/resource/languoid/id/efik1245"
+ ],
+ "location": {
+  "latitude": 4.8938,
+  "longitude": 8.3812,
+  "source": "glottolog",
+  "notes": "Glottolog's representative point."
+ },
+ "parent": "x-clade-atla1278",
+ "phonemes": [
+  "b", "d", "f", "j", "k", "kp", "m", "n", "s", "t", "w", "ŋ", "ɲ",
+  "a", "e", "i", "o", "u", "ɔ", "ɛ"
+ ],
+ "phoible_id": "316"
+}

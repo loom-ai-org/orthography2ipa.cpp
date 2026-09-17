@@ -1,0 +1,104 @@
+{
+  "code": "sem-x-ethiopic",
+  "name": "Proto-Ethiopian-Semitic (family node)",
+  "script": "IPA-reconstruction",
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "i": [
+      "i"
+    ],
+    "u": [
+      "u"
+    ],
+    "e": [
+      "e"
+    ],
+    "o": [
+      "o"
+    ],
+    "p": [
+      "p"
+    ],
+    "t": [
+      "t"
+    ],
+    "k": [
+      "k"
+    ],
+    "b": [
+      "b"
+    ],
+    "d": [
+      "d"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "s": [
+      "s"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "l": [
+      "l"
+    ],
+    "r": [
+      "r"
+    ],
+    "w": [
+      "w"
+    ],
+    "j": [
+      "j"
+    ],
+    "h": [
+      "h"
+    ]
+  },
+  "allophones": {},
+  "notes": "STRUCTURAL ANCESTRY NODE (not a modelled G2P target). Ethiopian Semitic is the South-Semitic sub-branch (under West Semitic) comprising Geʽez and the modern Amharic and Tigrinya. It exists here only so the ancestry / phylogenetic-distance metrics of the modern varieties that reference it have a node to resolve to; NO phonology is claimed or reconstructed and the minimal grapheme set is a placeholder (afa.json / trk.json stub pattern).",
+  "quality": "stub",
+  "script_type": "reconstruction",
+  "iso639_3": null,
+  "glottolog_code": "ethi1244",
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/South_Semitic_languages"
+  ],
+  "urls": [
+    "https://glottolog.org/resource/languoid/id/ethi1244"
+  ],
+  "sources": [
+    {
+      "id": "weninger2011",
+      "author": "Weninger, S. (ed.)",
+      "year": 2011,
+      "title": "The Semitic Languages: An International Handbook",
+      "publisher": "De Gruyter Mouton",
+      "url": null,
+      "pages": null,
+      "notes": "Reference for Ethiopian Semitic branching (structural node only).",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/South_Semitic_languages"
+    }
+  ],
+  "parent": "sem-x-west",
+  "ancestors": [
+    {
+      "code": "sem-x-west",
+      "role": "parent",
+      "weight": 0.9,
+      "notes": "South/Ethiopian Semitic under West Semitic."
+    }
+  ],
+  "location": {
+    "latitude": 12.257187,
+    "longitude": 39.591953,
+    "source": "glottolog",
+    "notes": "Glottolog's computed centroid for the Ethiosemitic family — a summary of a whole clade's range, not a place anyone speaks."
+  }
+}

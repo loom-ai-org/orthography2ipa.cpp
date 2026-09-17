@@ -1,0 +1,71 @@
+{
+  "code": "yhd",
+  "name": "Judeo-Iraqi Arabic",
+  "script": "Hebrew",
+  "script_type": "abjad",
+  "quality": "stub",
+  "graphemes": {},
+  "allophones": {},
+  "parent": "ar-IQ",
+  "ancestors": [
+    {
+      "code": "jrb",
+      "role": "related",
+      "weight": 0.3,
+      "notes": "Judeo-Arabic macrolanguage node (ISO 639 jrb): a sociolinguistic/orthographic collective, not genetic descent (see jrb.json notes) -- yhd's single genetic PARENT is ar-IQ, matching the engine constraint that every language has at most one PARENT ancestor."
+    },
+    {
+      "code": "ar-IQ",
+      "role": "parent",
+      "weight": 0.8,
+      "notes": "Regional descent: Judeo-Iraqi (Baghdadi Judeo-Arabic) is a qeltu-type Iraqi Arabic dialect, historically written in Hebrew script, distinct from the gilit dialect of Muslim Baghdad that ar-IQ.json describes."
+    },
+    {
+      "code": "he",
+      "role": "adstrate",
+      "weight": 0.15,
+      "notes": "Hebrew liturgical/lexical adstrate, shared with the rest of the Judeo-Arabic continuum (jrb.json)."
+    }
+  ],
+  "notes": "STUB. Judeo-Iraqi Arabic (ISO 639-3 yhd, confirmed this session via SIL/Ethnologue/Glottolog as denoting the variety spoken by Iraqi Jews, a member of the jrb macrolanguage), also called Baghdadi Judeo-Arabic. Like other qeltu (sedentary, pre-Hilalian-type) Mesopotamian Arabic dialects it preserves interdentals and the Classical Arabic /q/ where the Muslim Baghdadi 'gilit' dialect (ar-IQ.json) has innovated; it is historically written in Hebrew script rather than Arabic script. A complete letter-to-IPA grapheme table requires a dedicated phonological source (a JIPA illustration or descriptive grammar of Baghdadi Judeo-Arabic) that was not fetched with sufficient confidence this session; graphemes intentionally empty pending that sourcing pass. NOTE ar-IQ.json's own iso639_3 is 'acm' (the gilit/Muslim-Christian Mesopotamian Arabic macro-code); yhd is the separate code for the Jewish qeltu variety, hence the parent relation to ar-x-mashriqi's regional lineage via ar-IQ rather than identity with it.",
+  "iso639_3": "yhd",
+  "glottolog_code": "jude1266",
+  "wikidata_qid": "Q56599",
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Judeo-Iraqi_Arabic",
+    "https://en.wikipedia.org/wiki/Baghdadi_Judeo-Arabic"
+  ],
+  "urls": [
+    "https://iso639-3.sil.org/code/yhd",
+    "https://glottolog.org/resource/languoid/id/jude1266"
+  ],
+  "sources": [
+    {
+      "id": "judeo_iraqi_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Judeo-Iraqi Arabic",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Judeo-Iraqi_Arabic",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Judeo-Iraqi_Arabic",
+      "pages": null,
+      "notes": "Consulted this session to confirm yhd denotes the Jewish qeltu-type dialect of Baghdad/Iraq, distinct from the Muslim gilit dialect, and its Hebrew-script literary tradition."
+    },
+    {
+      "id": "iso639_3_yhd",
+      "author": "SIL International",
+      "year": 2026,
+      "title": "ISO 639-3: yhd",
+      "publisher": "iso639-3.sil.org",
+      "url": "https://iso639-3.sil.org/code/yhd",
+      "pages": null,
+      "notes": "Registry confirmation that yhd = Judeo-Iraqi Arabic, member of macrolanguage jrb. Fetched this session for identifier verification per the STRICT CITATIONS addendum."
+    }
+  ],
+  "location": {
+    "latitude": 33.31,
+    "longitude": 44.36,
+    "source": "glottolog",
+    "notes": "Baghdad, Iraq, the historical centre of Iraq's Jewish community."
+  }
+}

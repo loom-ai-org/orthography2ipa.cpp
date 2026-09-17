@@ -1,0 +1,175 @@
+{
+  "code": "pnt",
+  "name": "Pontic Greek",
+  "script": "Greek",
+  "script_type": "alphabet",
+  "quality": "research",
+  "iso639_3": "pnt",
+  "glottolog_code": "pont1253",
+  "timespan": {
+    "start_year": 700,
+    "end_year": null
+  },
+  "graphemes": {
+    "αι": [
+      "e"
+    ],
+    "ει": [
+      "i"
+    ],
+    "οι": [
+      "i"
+    ],
+    "ου": [
+      "u"
+    ],
+    "αυ": [
+      "av",
+      "af"
+    ],
+    "ευ": [
+      "ev",
+      "ef"
+    ],
+    "γγ": [
+      "ŋɡ"
+    ],
+    "γκ": [
+      "ŋk"
+    ],
+    "μπ": [
+      "mb",
+      "b"
+    ],
+    "ντ": [
+      "nd",
+      "d"
+    ],
+    "τσ": [
+      "ts"
+    ],
+    "τζ": [
+      "dz"
+    ],
+    "α": [
+      "a"
+    ],
+    "β": [
+      "v"
+    ],
+    "γ": [
+      "ɣ",
+      "j"
+    ],
+    "δ": [
+      "ð"
+    ],
+    "ε": [
+      "e"
+    ],
+    "ζ": [
+      "z"
+    ],
+    "η": [
+      "i"
+    ],
+    "θ": [
+      "θ"
+    ],
+    "ι": [
+      "i"
+    ],
+    "κ": [
+      "k"
+    ],
+    "λ": [
+      "l"
+    ],
+    "μ": [
+      "m"
+    ],
+    "ν": [
+      "n"
+    ],
+    "ξ": [
+      "ks"
+    ],
+    "ο": [
+      "o"
+    ],
+    "π": [
+      "p"
+    ],
+    "ρ": [
+      "r"
+    ],
+    "σ": [
+      "s"
+    ],
+    "ς": [
+      "s"
+    ],
+    "τ": [
+      "t"
+    ],
+    "υ": [
+      "i"
+    ],
+    "φ": [
+      "f"
+    ],
+    "χ": [
+      "x",
+      "ç"
+    ],
+    "ψ": [
+      "ps"
+    ],
+    "ω": [
+      "o"
+    ]
+  },
+  "allophones": {},
+  "positional_graphemes": {},
+  "ancestors": [
+    {
+      "code": "el",
+      "role": "parent_dialect",
+      "weight": 1.0,
+      "notes": "Descended from Ancient Greek; archaic Greek dialect spoken around Black Sea coast"
+    }
+  ],
+  "parent": "el",
+  "notes": "Pontic Greek (Ποντιακά), archaic Greek dialect originally spoken along the Black Sea (Pontic) coast of Anatolia. Now spoken mainly in Greece. Retains many features of Ancient and Medieval Greek lost in standard Modern Greek. Uses standard Greek orthography. /i/ represented by η, ι, υ, ει, οι.",
+  "sources": [
+    {
+      "id": "wiki-pnt",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Pontic Greek",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Pontic_Greek"
+    },
+    {
+      "id": "armostis_etal2020",
+      "author": "Armostis, Spyros; Voniati, Louiza; Drosos, Konstantinos; Tafiadis, Dionysios",
+      "year": 2020,
+      "title": "Trapezountian Pontic Greek in Etoloakarnania. Illustrations of the IPA",
+      "publisher": "Journal of the International Phonetic Association 52(2), 328-340 (free access)",
+      "url": "https://doi.org/10.1017/S0025100320000201",
+      "wikipedia_url": null,
+      "pages": "330-331, 338",
+      "notes": "Consonant table with Greek-spelled example words (pp. 330-331) and the note on the writing system (p. 338), read in full. Twenty-three consonants including the postalveolars ʃ tʃ dʒ and the affricates ts dz; five vowels a e i o u. The source states that Pontic Greek has no codified writing system and that its own orthographic version follows Papadopoulos 1955 with a diacritic over consonant letters for the postalveolars and the rough breathing for aspirates. That is the gap this map carries: it reads standard Greek letters only, so ʃ tʃ dʒ and the aspirates have no key, and the Pontic-specific letters some writers use (⟨σ̆ τσ̆ ντζ̆⟩, ⟨ä ö⟩ for the front rounded vowels of other Pontic varieties) are unread. Recorded here, not changed."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Pontic_Greek",
+    "https://pnt.wikipedia.org/wiki/%CE%A0%CE%BF%CE%BD%CF%84%CE%B9%CE%B1%CE%BA%CF%8C%CE%BD_%CE%BB%CE%B1%CE%BB%CE%AF%CE%B1%CE%BD"
+  ],
+  "wikidata_qid": "Q36748",
+  "location": {
+    "latitude": 41.266015,
+    "longitude": 36.097421,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Pontic."
+  }
+}

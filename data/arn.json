@@ -1,0 +1,142 @@
+{
+  "code": "arn",
+  "name": "Mapudungun",
+  "parent": "x-clade-arau1255",
+  "script": "Latin",
+  "graphemes": {
+    "tr": [
+      "ʈʂ"
+    ],
+    "ll": [
+      "ʎ"
+    ],
+    "ng": [
+      "ŋ"
+    ],
+    "ch": [
+      "tʃ"
+    ],
+    "a": [
+      "a"
+    ],
+    "e": [
+      "e"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "o"
+    ],
+    "u": [
+      "u"
+    ],
+    "ü": [
+      "ɨ"
+    ],
+    "p": [
+      "p"
+    ],
+    "t": [
+      "t"
+    ],
+    "k": [
+      "k"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ñ": [
+      "ɲ"
+    ],
+    "ḻ": [
+      "l̪"
+    ],
+    "ṉ": [
+      "n̪"
+    ],
+    "s": [
+      "s"
+    ],
+    "z": [
+      "z"
+    ],
+    "f": [
+      "f"
+    ],
+    "l": [
+      "l"
+    ],
+    "r": [
+      "ɻ"
+    ],
+    "w": [
+      "w"
+    ],
+    "y": [
+      "j"
+    ],
+    "h": [
+      "h"
+    ],
+    "g": [
+      "ɡ"
+    ]
+  },
+  "notes": "Research. Mapudungun (Mapuche/Araucanian), an isolate of central-southern Chile and Argentine Patagonia. This spec models the Alfabeto Mapuche Unificado (Unified Alphabet, Grafemario Unificado, Salas 2006) rather than the Azümchefe alternative: the WOLD gold sample's letters (⟨tr⟩, ⟨ll⟩, ⟨ng⟩, ⟨ch⟩, ⟨ü⟩, ⟨ḻ⟩/⟨ṉ⟩ for the dental laterals/nasal, ⟨ñ⟩) match the Unified Alphabet's conventions, not Azümchefe's (which instead uses ⟨tx⟩, ⟨lh⟩, ⟨g⟩, ⟨ch⟩/⟨c⟩, ⟨v⟩, etc.). Key correspondences: ⟨tr⟩ is the retroflex affricate [ʈʂ] (not t+r), ⟨ll⟩ is the palatal lateral [ʎ], ⟨ng⟩ is the velar nasal [ŋ], ⟨ch⟩ is [tʃ], ⟨ü⟩ is the high central vowel [ɨ], plain ⟨r⟩ is a retroflex approximant [ɻ] (not a tap/trill), and ⟨ḻ⟩/⟨ṉ⟩ (l/n with a combining macron below) write the dental lateral/nasal contrasting with the alveolar ⟨l⟩/⟨n⟩. This entry was previously a structural-adstrate placeholder (for Chilean/Argentine Spanish contact-linguistics nodes) claiming no phonology; the WOLD `Mapudungun` gold confirmed the Unified Alphabet matches real orthographic practice, so the placeholder has been replaced with a cited grapheme map. Mapudungun word stress is non-contrastive and largely predictable from the penultimate mora in descriptive accounts, but is not treated as reliably orthography-predictable across all dialects surveyed by Smeets (2008), so no `stress` block is asserted here (documented exemption).",
+  "quality": "research",
+  "script_type": "alphabet",
+  "iso639_3": "arn",
+  "glottolog_code": "mapu1245",
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Mapudungun_language"
+  ],
+  "urls": [
+    "https://glottolog.org/resource/languoid/id/mapu1245"
+  ],
+  "sources": [
+    {
+      "id": "campbell1997",
+      "author": "Campbell, Lyle",
+      "year": 1997,
+      "title": "American Indian Languages: The Historical Linguistics of Native America",
+      "publisher": "Oxford University Press",
+      "url": null,
+      "pages": null,
+      "notes": "Reference for the classification and geographic distribution of Mapudungun."
+    },
+    {
+      "id": "smeets2008",
+      "author": "Smeets, Ineke",
+      "year": 2008,
+      "title": "A Grammar of Mapuche",
+      "publisher": "Mouton de Gruyter",
+      "url": null,
+      "pages": null,
+      "notes": "Reference grammar of Mapudungun: phoneme inventory (retroflex ⟨tr⟩=[ʈʂ], dental ⟨ḻ⟩/⟨ṉ⟩, retroflex ⟨r⟩=[ɻ]) and stress.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Mapudungun_language"
+    },
+    {
+      "id": "salas2006",
+      "author": "Salas, Adalberto",
+      "year": 2006,
+      "title": "El mapuche o araucano: fonología, gramática y antología de cuentos",
+      "publisher": "Centro de Estudios Públicos",
+      "url": null,
+      "pages": null,
+      "notes": "Establishes the Alfabeto Mapuche Unificado (Unified Alphabet) modelled by this spec, as distinct from the Azümchefe alternative orthography."
+    }
+  ],
+  "wikidata_qid": "Q33730",
+  "phoible_id": "mapu1245",
+  "wals_code": "map",
+  "location": {
+    "latitude": -38.7392,
+    "longitude": -71.277,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Mapudungun."
+  }
+}

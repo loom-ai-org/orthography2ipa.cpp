@@ -1,0 +1,177 @@
+{
+ "code": "zne",
+ "name": "Zande (individual language)",
+ "script": "Latin",
+ "quality": "skeleton",
+ "graphemes": {
+  "a": [
+   "a"
+  ],
+  "b": [
+   "b"
+  ],
+  "d": [
+   "d"
+  ],
+  "e": [
+   "ɛ"
+  ],
+  "f": [
+   "f"
+  ],
+  "g": [
+   "ɡ"
+  ],
+  "gb": [
+   "ɡ͡b"
+  ],
+  "i": [
+   "ɪ"
+  ],
+  "k": [
+   "k"
+  ],
+  "kp": [
+   "k͡p"
+  ],
+  "m": [
+   "m"
+  ],
+  "mb": [
+   "m͡b"
+  ],
+  "mv": [
+   "m͡v"
+  ],
+  "n": [
+   "n"
+  ],
+  "nd": [
+   "n͡d"
+  ],
+  "ng": [
+   "ŋɡ"
+  ],
+  "ngb": [
+   "ŋɡ͡b"
+  ],
+  "ny": [
+   "ɲ"
+  ],
+  "nz": [
+   "n͡z"
+  ],
+  "o": [
+   "ɔ"
+  ],
+  "p": [
+   "p"
+  ],
+  "r": [
+   "r"
+  ],
+  "s": [
+   "s"
+  ],
+  "t": [
+   "t"
+  ],
+  "u": [
+   "ʊ"
+  ],
+  "v": [
+   "v"
+  ],
+  "w": [
+   "w"
+  ],
+  "y": [
+   "j"
+  ],
+  "z": [
+   "z"
+  ]
+ },
+ "allophones": {},
+ "notes": "Placed so the ancestry graph covers every living ISO 639-3 language. No orthography is claimed; the phoneme inventory follows the cited PHOIBLE inventory (which itself cites a published description): script is Zyyy (undetermined) until a cited description is encoded. Classification and coordinates follow Glottolog. Orthography from Hartell 1993, Alphabets of Africa (UNESCO/SIL), extracted via the AfriSpeech/africa-g2p compilation (zne.json). africa-g2p is a compilation tool, not the linguistic authority; the citation above is the original source it names.",
+ "iso639_3": "zne",
+ "glottolog_code": "zand1248",
+ "sources": [
+  {
+   "id": "glottolog2024",
+   "author": "Hammarström, Harald; Forkel, Robert; Haspelmath, Martin; Bank, Sebastian",
+   "year": 2024,
+   "title": "Glottolog 5.0",
+   "publisher": "Max Planck Institute for Evolutionary Anthropology",
+   "url": "https://glottolog.org/"
+  },
+  {
+   "id": "phoible2019",
+   "author": "Moran, Steven; McCloy, Daniel (eds.)",
+   "year": 2019,
+   "title": "PHOIBLE 2.0 (doi:10.5281/zenodo.2562766)",
+   "publisher": "Max Planck Institute for the Science of Human History",
+   "url": "https://phoible.org/inventories/view/849",
+   "notes": "Inventory 849 (aa), 29 non-marginal segments, 3 tones."
+  },
+  {
+   "id": "hartell1993-p149",
+   "author": "Hartell, Rhonda L. (ed.)",
+   "year": 1993,
+   "title": "Alphabets of Africa, p. 149",
+   "publisher": "UNESCO/SIL, Dakar",
+   "url": null
+  }
+ ],
+ "urls": [
+  "https://glottolog.org/resource/languoid/id/zand1248"
+ ],
+ "location": {
+  "latitude": 4.6205,
+  "longitude": 26.7157,
+  "source": "glottolog",
+  "notes": "Glottolog's representative point."
+ },
+ "parent": "x-clade-atla1278",
+ "phonemes": [
+  "b",
+  "d",
+  "f",
+  "j",
+  "k",
+  "kp",
+  "m",
+  "mb",
+  "n",
+  "nd",
+  "nz",
+  "p",
+  "r",
+  "s",
+  "t",
+  "v",
+  "w",
+  "z",
+  "ŋmɡb",
+  "ŋɡ",
+  "ɡ",
+  "ɡb",
+  "ɱv",
+  "ɲ",
+  "a",
+  "ɔ",
+  "ɛ",
+  "ɪ",
+  "ʊ"
+ ],
+ "tone_inventory": {
+  "˦": "PHOIBLE tone segment",
+  "˧": "PHOIBLE tone segment",
+  "˨": "PHOIBLE tone segment"
+ },
+ "phoible_id": "849",
+ "script_type": "alphabet",
+ "wikipedia": [
+  "https://en.wikipedia.org/wiki/Zande_language"
+ ]
+}

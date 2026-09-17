@@ -1,0 +1,319 @@
+{
+  "code": "hz",
+  "name": "Herero",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "a": [
+      "ɑ"
+    ],
+    "aa": [
+      "ɑː"
+    ],
+    "e": [
+      "ɛ"
+    ],
+    "ee": [
+      "ɛː"
+    ],
+    "i": [
+      "i"
+    ],
+    "ii": [
+      "iː"
+    ],
+    "o": [
+      "ɔ"
+    ],
+    "oo": [
+      "ɔː"
+    ],
+    "u": [
+      "u",
+      "w"
+    ],
+    "uu": [
+      "uː"
+    ],
+    "b": [
+      "b"
+    ],
+    "d": [
+      "d"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "h": [
+      "h"
+    ],
+    "j": [
+      "j"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "v": [
+      "v"
+    ],
+    "w": [
+      "w"
+    ],
+    "y": [
+      "j"
+    ],
+    "z": [
+      "ð"
+    ],
+    "mb": [
+      "ᵐb"
+    ],
+    "mw": [
+      "ᵐw"
+    ],
+    "nd": [
+      "ⁿd"
+    ],
+    "ndj": [
+      "ⁿdʒ"
+    ],
+    "ng": [
+      "ᵑɡ"
+    ],
+    "ngw": [
+      "ᵑɡʷ"
+    ],
+    "ny": [
+      "ɲ"
+    ],
+    "tj": [
+      "tʃ"
+    ]
+  },
+  "allophones": {
+    "ɑ": [
+      "ɑ"
+    ],
+    "ɑː": [
+      "ɑː"
+    ],
+    "ɛ": [
+      "ɛ"
+    ],
+    "ɛː": [
+      "ɛː"
+    ],
+    "i": [
+      "i"
+    ],
+    "iː": [
+      "iː"
+    ],
+    "ɔ": [
+      "ɔ"
+    ],
+    "ɔː": [
+      "ɔː"
+    ],
+    "u": [
+      "u"
+    ],
+    "w": [
+      "w"
+    ],
+    "uː": [
+      "uː"
+    ],
+    "b": [
+      "b"
+    ],
+    "d": [
+      "d"
+    ],
+    "f": [
+      "f"
+    ],
+    "ɡ": [
+      "ɡ"
+    ],
+    "h": [
+      "h"
+    ],
+    "j": [
+      "j"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "v": [
+      "v"
+    ],
+    "ð": [
+      "ð"
+    ],
+    "ᵐb": [
+      "ᵐb"
+    ],
+    "ᵐw": [
+      "ᵐw"
+    ],
+    "ⁿd": [
+      "ⁿd"
+    ],
+    "ⁿdʒ": [
+      "ⁿdʒ"
+    ],
+    "ᵑɡ": [
+      "ᵑɡ"
+    ],
+    "ᵑɡʷ": [
+      "ᵑɡʷ"
+    ],
+    "ɲ": [
+      "ɲ"
+    ],
+    "tʃ": [
+      "tʃ"
+    ]
+  },
+  "notes": "Herero (Otjiherero), a Bantu language of Namibia and Botswana. INPUT CONTRACT: the standard Latin Otjiherero orthography (the practical missionary-derived spelling used in Namibian publications and schools) is assumed; text is expected to be already normalised. KEY FEATURES: (1) DIGRAPHS/TRIGRAPHS: <tj> = /tʃ/ (as in Otjiherero), <ny> = /ɲ/, and the prenasalised series <mb> = /ᵐb/, <nd> = /ⁿd/, <ndj> = /ⁿdʒ/, <ng> = /ᵑɡ/, with labialised <ngw> = /ᵑɡʷ/ and <mw> = /ᵐw/. (2) VOWEL LENGTH is contrastive and IS written, by doubling: <aa ee ii oo uu> = /ɑː ɛː iː ɔː uː/. (3) FIVE VOWEL QUALITIES /i ɛ ɑ ɔ u/; <u> is also read /w/ in glide position. (4) <z> = /ð/ (voiced interdental fricative). (5) /f s l/ occur only in loanwords. (6) DENTAL SERIES NOT RECOVERABLE: Otjiherero contrasts dental /t̪ n̪ ⁿd̪/ with alveolar /t n ⁿd/, and has a voiceless interdental /θ/; the practical orthography writes the dentals with the same letters <t n nd s> as the alveolars (only scholarly transcriptions add sub-diacritics, e.g. ṱ ṋ nḓ ṣ), so dentality is NOT distinguished here — the alveolar value is emitted. (7) TONE: Otjiherero is tonal, but TONE IS NOT WRITTEN in the standard orthography (only in linguistic transcriptions, which mark high/low/mid/rising/falling with diacritics), so it is NOT recoverable from ordinary text and is not emitted.",
+  "iso639_3": "her",
+  "glottolog_code": "here1253",
+  "wikidata_qid": "Q33315",
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Herero_language"
+  ],
+  "sources": [
+    {
+      "id": "herero_language_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Herero language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Herero_language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Herero_language",
+      "pages": null,
+      "notes": "Overview of the language, script and orthography."
+    },
+    {
+      "id": "omniglot_herero",
+      "author": "Ager, S.",
+      "year": 2024,
+      "title": "Herero language, alphabet and pronunciation",
+      "publisher": "Omniglot",
+      "url": "https://www.omniglot.com/writing/herero.php",
+      "notes": "Letter-to-IPA chart for the Herero alphabet, including digraphs (mb, mw, nd, ndj, ng, ngw, ny, tj), doubled long vowels, and the tone-marking diacritics used in transcription."
+    },
+    {
+      "id": "mohlig_marten_kavari2002",
+      "author": "Möhlig, W.J.G., Marten, L. & Kavari, J.U.",
+      "year": 2002,
+      "title": "A Grammatical Sketch of Herero (Otjiherero)",
+      "publisher": "Rüdiger Köppe Verlag, Köln",
+      "notes": "Reference grammar; source of the consonant inventory (dental vs alveolar series, prenasalised stops, /θ ð/) and the note that /f s l/ occur only in loanwords."
+    },
+    {
+      "id": "herero_phonology_wiki_tables",
+      "author": "Wikipedia contributors",
+      "year": 2025,
+      "title": "Herero language — Phonology",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Herero_language#Phonology",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Herero_language",
+      "notes": "Consonant and vowel tables: /m n̪ n ɲ/, /p t̪ t tʃ k/, /ᵐb ⁿd̪ ⁿd ⁿdʒ ᵑɡ/, /θ ð v h/, /r w j/, five vowel qualities with contrastive length."
+    }
+  ],
+  "timespan": {
+    "start_year": 1880,
+    "end_year": null
+  },
+  "phonemes": [
+    "a",
+    "e",
+    "h",
+    "i",
+    "j",
+    "k",
+    "mb",
+    "n",
+    "ndʑ",
+    "nd̪",
+    "n̪",
+    "o",
+    "p",
+    "t",
+    "t̪",
+    "u",
+    "v",
+    "w",
+    "ð",
+    "ŋɡ",
+    "ɕ",
+    "ɲ",
+    "ɾ",
+    "˦",
+    "˨",
+    "θ"
+  ],
+  "parent": "x-clade-atla1278",
+  "ancestors": [
+    {
+      "code": "x-clade-atla1278",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Atlantic-Congo — the classification node this language sits under."
+    }
+  ],
+  "location": {
+    "latitude": -21.0231,
+    "longitude": 20.5655,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Herero."
+  }
+}

@@ -1,0 +1,291 @@
+{
+ "code": "guk",
+ "name": "Gumuz",
+ "script": "Latin",
+ "quality": "skeleton",
+ "graphemes": {
+  "-": [
+   "ʔ"
+  ],
+  "a": [
+   "a"
+  ],
+  "aa": [
+   "aː"
+  ],
+  "b": [
+   "b"
+  ],
+  "b'": [
+   "ɓ"
+  ],
+  "bw": [
+   "bʷ"
+  ],
+  "c": [
+   "c"
+  ],
+  "c'": [
+   "c’"
+  ],
+  "d": [
+   "d"
+  ],
+  "d'": [
+   "ɗ"
+  ],
+  "e": [
+   "e"
+  ],
+  "ee": [
+   "eː"
+  ],
+  "f": [
+   "f"
+  ],
+  "g": [
+   "ɡ"
+  ],
+  "gw": [
+   "ɡʷ"
+  ],
+  "h": [
+   "h"
+  ],
+  "hw": [
+   "χʷ"
+  ],
+  "i": [
+   "i"
+  ],
+  "ii": [
+   "iː"
+  ],
+  "j": [
+   "ɟ"
+  ],
+  "k": [
+   "k"
+  ],
+  "k'": [
+   "k’"
+  ],
+  "kw": [
+   "kʷ"
+  ],
+  "kw'": [
+   "kʼʷ"
+  ],
+  "l": [
+   "l"
+  ],
+  "m": [
+   "m"
+  ],
+  "n": [
+   "n"
+  ],
+  "o": [
+   "o"
+  ],
+  "oo": [
+   "oː"
+  ],
+  "p": [
+   "p"
+  ],
+  "p'": [
+   "p’"
+  ],
+  "r": [
+   "r"
+  ],
+  "s": [
+   "s"
+  ],
+  "s'": [
+   "ts’"
+  ],
+  "sh": [
+   "ʃ"
+  ],
+  "t": [
+   "t"
+  ],
+  "t'": [
+   "t’"
+  ],
+  "ts": [
+   "ts"
+  ],
+  "u": [
+   "u"
+  ],
+  "uu": [
+   "uː"
+  ],
+  "v": [
+   "v"
+  ],
+  "w": [
+   "w"
+  ],
+  "y": [
+   "j"
+  ],
+  "z": [
+   "z"
+  ],
+  "zh": [
+   "ʒ"
+  ],
+  "ç": [
+   "tʃ"
+  ],
+  "ç'": [
+   "tʃʼ"
+  ],
+  "ñ": [
+   "ɲ"
+  ],
+  "ŋ": [
+   "ŋ"
+  ],
+  "ŋw": [
+   "ŋʷ"
+  ]
+ },
+ "allophones": {
+  "b": [
+   "b",
+   "p"
+  ],
+  "d": [
+   "d",
+   "t"
+  ],
+  "k": [
+   "k",
+   "kː"
+  ],
+  "m": [
+   "m",
+   "ɱ"
+  ],
+  "p": [
+   "p",
+   "pʰ"
+  ],
+  "r": [
+   "r",
+   "ɾ",
+   "rː"
+  ],
+  "t": [
+   "t",
+   "tː"
+  ],
+  "ɓ": [
+   "ɓ",
+   "ɓ̚",
+   "bʷ"
+  ],
+  "a": [
+   "a",
+   "ʌ",
+   "ə",
+   "ɵ"
+  ]
+ },
+ "notes": "Placed so the ancestry graph covers every living ISO 639-3 language. No orthography is claimed; the phoneme inventory follows the cited PHOIBLE inventory (which itself cites a published description): script is Zyyy (undetermined) until a cited description is encoded. Classification and coordinates follow Glottolog. Orthography from an Omniglot chart (c) Simon Ager, https://www.omniglot.com/, extracted via the AfriSpeech/africa-g2p compilation (guk.json). africa-g2p is a compilation tool, not the linguistic authority; the citation above is the original source it names.",
+ "iso639_3": "guk",
+ "glottolog_code": "gumu1244",
+ "sources": [
+  {
+   "id": "glottolog2024",
+   "author": "Hammarström, Harald; Forkel, Robert; Haspelmath, Martin; Bank, Sebastian",
+   "year": 2024,
+   "title": "Glottolog 5.0",
+   "publisher": "Max Planck Institute for Evolutionary Anthropology",
+   "url": "https://glottolog.org/"
+  },
+  {
+   "id": "phoible2019",
+   "author": "Moran, Steven; McCloy, Daniel (eds.)",
+   "year": 2019,
+   "title": "PHOIBLE 2.0 (doi:10.5281/zenodo.2562766)",
+   "publisher": "Max Planck Institute for the Science of Human History",
+   "url": "https://phoible.org/inventories/view/1475",
+   "notes": "Inventory 1475 (ph), 43 non-marginal segments, 1 marginal excluded."
+  },
+  {
+   "id": "omniglot-gumuz",
+   "author": "Ager, Simon",
+   "year": 2026,
+   "title": "Omniglot chart (gumuz.xls)",
+   "publisher": "Omniglot",
+   "url": "https://www.omniglot.com/",
+   "notes": "Undated web chart; year is retrieval year, not publication year."
+  }
+ ],
+ "urls": [
+  "https://glottolog.org/resource/languoid/id/gumu1244"
+ ],
+ "location": {
+  "latitude": 11.05,
+  "longitude": 35.93,
+  "source": "glottolog",
+  "notes": "Glottolog's representative point."
+ },
+ "parent": "x-clade-gumu1250",
+ "phonemes": [
+  "b",
+  "cç",
+  "cçʼ",
+  "d",
+  "f",
+  "h",
+  "j",
+  "k",
+  "kʼ",
+  "l",
+  "m",
+  "n",
+  "p",
+  "r",
+  "s",
+  "t",
+  "ts",
+  "tsʼ",
+  "tʼ",
+  "t̠ʃ",
+  "t̠ʃʼ",
+  "w",
+  "z",
+  "ŋ",
+  "ɓ",
+  "ɟʝ",
+  "ɠ",
+  "ɡ",
+  "ɲ",
+  "ʃ",
+  "ʒ",
+  "ʔ",
+  "ᶑ",
+  "a",
+  "aː",
+  "e",
+  "eː",
+  "i",
+  "iː",
+  "o",
+  "oː",
+  "u",
+  "uː"
+ ],
+ "phoible_id": "1475",
+ "script_type": "alphabet",
+ "wikipedia": [
+  "https://en.wikipedia.org/wiki/Gumuz_language"
+ ]
+}

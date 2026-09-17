@@ -1,0 +1,188 @@
+{
+  "code": "hy",
+  "name": "Armenian",
+  "script": "Armenian",
+  "script_type": "alphabet",
+  "quality": "research",
+  "iso639_3": "hye",
+  "glottolog_code": "nucl1235",
+  "timespan": {
+    "start_year": 405,
+    "end_year": null
+  },
+  "graphemes": {
+    "ու": [
+      "u"
+    ],
+    "ա": [
+      "ɑ"
+    ],
+    "բ": [
+      "b"
+    ],
+    "գ": [
+      "ɡ"
+    ],
+    "դ": [
+      "d"
+    ],
+    "ե": [
+      "jɛ"
+    ],
+    "զ": [
+      "z"
+    ],
+    "է": [
+      "ɛ"
+    ],
+    "ը": [
+      "ə"
+    ],
+    "թ": [
+      "tʰ"
+    ],
+    "ժ": [
+      "ʒ"
+    ],
+    "ի": [
+      "i"
+    ],
+    "լ": [
+      "l"
+    ],
+    "խ": [
+      "χ"
+    ],
+    "ծ": [
+      "ts"
+    ],
+    "կ": [
+      "k"
+    ],
+    "հ": [
+      "h"
+    ],
+    "ձ": [
+      "dz"
+    ],
+    "ղ": [
+      "ʁ"
+    ],
+    "ճ": [
+      "tʃ"
+    ],
+    "մ": [
+      "m"
+    ],
+    "յ": [
+      "j"
+    ],
+    "ն": [
+      "n"
+    ],
+    "շ": [
+      "ʃ"
+    ],
+    "ո": [
+      "o",
+      "vo"
+    ],
+    "չ": [
+      "tʃʰ"
+    ],
+    "պ": [
+      "p"
+    ],
+    "ջ": [
+      "dʒ"
+    ],
+    "ռ": [
+      "r"
+    ],
+    "ս": [
+      "s"
+    ],
+    "վ": [
+      "v"
+    ],
+    "տ": [
+      "t"
+    ],
+    "ր": [
+      "ɾ"
+    ],
+    "ց": [
+      "tsʰ"
+    ],
+    "փ": [
+      "pʰ"
+    ],
+    "ք": [
+      "kʰ"
+    ],
+    "ֆ": [
+      "f"
+    ],
+    "և": [
+      "jɛv"
+    ],
+    "օ": [
+      "o"
+    ]
+  },
+  "allophones": {},
+  "positional_graphemes": {
+    "ե": {
+      "word_initial": [
+        "jɛ"
+      ],
+      "default": [
+        "ɛ"
+      ]
+    },
+    "ո": {
+      "word_initial": [
+        "vo"
+      ],
+      "default": [
+        "o"
+      ]
+    }
+  },
+  "ancestors": [
+    {
+      "code": "ine",
+      "role": "proto_language",
+      "weight": 1.0,
+      "notes": "Isolated Indo-European branch; Armenian alphabet created by Mesrop Mashtots in 405 CE"
+    }
+  ],
+  "parent": "x-clade-arme1241",
+  "notes": "Eastern Armenian (standard). Armenian alphabet (Aybuben) has 38 letters. Digraph ու = /u/. Letters ե and ո have positional allophones: word-initial ե = /jɛ/, medial = /ɛ/; word-initial ո = /vo/, medial = /o/. Aspirated stops (թ, չ, փ, ք, ց) vs plain voiced (բ, գ, դ) vs plain voiceless (կ, պ, տ).",
+  "sources": [
+    {
+      "id": "dumtragut2009",
+      "author": "Dum-Tragut, Jasmine",
+      "year": 2009,
+      "title": "Armenian: Modern Eastern Armenian",
+      "publisher": "London Oriental and African Language Library 14, John Benjamins",
+      "url": "https://doi.org/10.1075/loall.14",
+      "pages": null,
+      "notes": "Reference grammar of Modern Eastern Armenian. Confirmed via Crossref metadata (DOI 10.1075/loall.14) and publisher ISBN listing as a real, published grammar; not independently paged. Cited for the positional allophony of ե and ո (word-initial [jɛ]/[vo] vs. medial [ɛ]/[o]) and the three-way aspirated/plain-voiced/plain-voiceless stop contrast that this spec's notes describe -- claims consistent with the standard descriptive treatment of Eastern Armenian phonology, though the specific page ranges were not opened."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Armenian_language",
+    "https://en.wikipedia.org/wiki/Armenian_phonology",
+    "https://hy.wikipedia.org/wiki/%D5%80%D5%A1%D5%B5%D5%A5%D6%80%D5%A5%D5%B6"
+  ],
+  "wikidata_qid": "Q8785",
+  "phoible_id": "nucl1235",
+  "wals_code": "arz",
+  "location": {
+    "latitude": 40.0,
+    "longitude": 45.0,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Eastern Armenian."
+  }
+}

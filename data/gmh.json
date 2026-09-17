@@ -1,0 +1,192 @@
+{
+  "code": "gmh",
+  "name": "Middle High German",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "sch": [
+      "ʃ"
+    ],
+    "ch": [
+      "x"
+    ],
+    "ph": [
+      "pf"
+    ],
+    "qu": [
+      "kv"
+    ],
+    "â": [
+      "aː"
+    ],
+    "î": [
+      "iː"
+    ],
+    "ô": [
+      "oː"
+    ],
+    "û": [
+      "uː"
+    ],
+    "iu": [
+      "yː"
+    ],
+    "æ": [
+      "ɛː"
+    ],
+    "œ": [
+      "øː"
+    ],
+    "ei": [
+      "ei"
+    ],
+    "ou": [
+      "ou"
+    ],
+    "ie": [
+      "iə"
+    ],
+    "uo": [
+      "uə"
+    ],
+    "üe": [
+      "yə"
+    ],
+    "ü": [
+      "y"
+    ],
+    "ä": [
+      "ɛ"
+    ],
+    "ö": [
+      "ø"
+    ],
+    "a": [
+      "a"
+    ],
+    "e": [
+      "ɛ"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "ɔ"
+    ],
+    "u": [
+      "u"
+    ],
+    "b": [
+      "b"
+    ],
+    "c": [
+      "k"
+    ],
+    "d": [
+      "d"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "h": [
+      "h"
+    ],
+    "j": [
+      "j"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s̠"
+    ],
+    "t": [
+      "t"
+    ],
+    "v": [
+      "f"
+    ],
+    "w": [
+      "w"
+    ],
+    "tz": [
+      "t͡sː"
+    ],
+    "zz": [
+      "sː"
+    ],
+    "z": [
+      "t͡s"
+    ]
+  },
+  "positional_graphemes": {
+    "e": {
+      "posttonic": [
+        "ə"
+      ],
+      "nucleus_unstressed": [
+        "ə"
+      ]
+    }
+  },
+  "parent": "goh",
+  "ancestors": [
+    {
+      "code": "goh",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Descent from Old High German; Paul, Mittelhochdeutsche Grammatik"
+    }
+  ],
+  "notes": "Middle High German (c. 1050-1500), ancestor of the modern High German and Hunsrik varieties. The grapheme table targets the normalised orthography (Lachmann) with circumflex length, iu=/yː/, æ/œ umlaut vowels, but the shipped wikipron gold (gmh_latn_broad, n=1516) instead follows English Wiktionary's own article-title spelling convention (0 circumflex vowels and 0 ë tokens across the gold's 1724 source words, against 115 words carrying æ/œ and 130 carrying ä/ö/ü — see `gmh-x-wikt.json` and docs/gold_defects.md). That is a distinct, sourced orthography for the same language, not a reason to drop the circumflex/ë entries here, which are correct for edited normalised MHG text; the wikipron gold should be scored against `gmh-x-wikt`, which inherits this spec's phonology whole via `graphemes_base`. Unstressed inflectional ⟨e⟩ (Nebensilbenvokal) reduces to schwa; ⟨s⟩ is the apical fricative [s̠] distinct from dorsal ⟨z⟩; ⟨tz⟩/⟨zz⟩ spell the geminate affricate/fricative outcomes of the High German Consonant Shift. A bare, non-doubled ⟨z⟩ is genuinely ambiguous between the affricate and fricative reflex in this orthography (the historical z1/z2 problem some editions resolve with a diacritic ȝ that this gold does not use); it is left as the affricate default and not fitted to the gold. Measured per-change against the wikipron gold (n=1516, baseline PER 0.2938): the unstressed-e schwa reduction alone moves PER to 0.1667 (the dominant contributor); the apical ⟨s⟩ fix alone moves it to 0.2478; the ⟨tz⟩/⟨zz⟩ geminate split alone (tie bar aside) moves it to 0.2752; combined, PER is 0.1022. The [t͡s] tie bar on the bare ⟨z⟩ affricate is written for linguistic correctness only and contributes nothing to PER — the benchmark normalizer strips tie bars before comparison.",
+  "iso639_3": "gmh",
+  "glottolog_code": null,
+  "sources": [
+    {
+      "id": "paul2007mhg",
+      "author": "Paul, Hermann (rev. Klein, Solms & Wegera)",
+      "year": 2007,
+      "title": "Mittelhochdeutsche Grammatik (25th ed.)",
+      "publisher": "Max Niemeyer Verlag",
+      "url": null,
+      "pages": null,
+      "notes": "Standard MHG reference grammar.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Middle_High_German"
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Middle_High_German",
+    "https://en.wikipedia.org/wiki/Middle_High_German#Phonology"
+  ],
+  "timespan": {
+    "start_year": 1050,
+    "end_year": 1500
+  },
+  "stress": {
+    "default_position": 1,
+    "final_stress_endings": [],
+    "penult_stress_endings": [],
+    "marked_vowels": [],
+    "stress_mark": "ˈ",
+    "notes": "Middle High German inherits the Germanic root-initial stress rule: primary stress falls on the first syllable of the root, before any inflectional or (most) derivational affixes; unstressed prefixes (ge-, be-, ent- etc.) and borrowed words are not modeled here. Source: Paul, Mittelhochdeutsche Grammatik (rev. Klein, Solms & Wegera, 2007), stress chapter."
+  }
+}

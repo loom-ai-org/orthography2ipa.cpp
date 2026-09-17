@@ -1,0 +1,58 @@
+{
+  "code": "nci",
+  "name": "Classical Nahuatl",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "iso639_3": "nci",
+  "glottolog_code": "clas1250",
+  "wikidata_qid": "Q2704940",
+  "graphemes_base": "nhn",
+  "graphemes": {},
+  "allophones_base": "nhn",
+  "allophones": {},
+  "positional_graphemes_base": "nhn",
+  "positional_graphemes": {},
+  "notes": "Classical Nahuatl (Nāhuatlahtōlli), the Uto-Aztecan (Nahuan) literary language of the Aztec empire and colonial central Mexico, recorded in the traditional Hispanic-based ('Jesuit') orthography. The grapheme system is identical to the Central Nahuatl base (nhn): ⟨c⟩ = /k/ but /s/ before ⟨e i⟩; ⟨qu⟩ /k/, ⟨cu⟩ /kʷ/, ⟨z⟩ /s/, ⟨x⟩ /ʃ/, ⟨ch⟩ /t͡ʃ/, ⟨tz⟩ /t͡s/, ⟨tl⟩ /t͡ɬ/, ⟨hu⟩ /w/, ⟨ll⟩ /lː/, ⟨h⟩ the saltillo /ʔ/; vowels ⟨a e i o u⟩. As in the base, phonemic VOWEL LENGTH is not written in this orthography and is therefore under-generated relative to length-marked gold.",
+  "sources": [
+    {
+      "id": "andrews2003",
+      "author": "Andrews, J. Richard",
+      "year": 2003,
+      "title": "Introduction to Classical Nahuatl (Revised Edition)",
+      "publisher": "University of Oklahoma Press",
+      "url": null,
+      "pages": null,
+      "notes": "Standard reference for classical Nahuatl phonology, vowel length and orthography."
+    },
+    {
+      "id": "classical_nahuatl_wikipedia",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Classical Nahuatl — Phonology and Orthography",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Classical_Nahuatl",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Classical_Nahuatl",
+      "pages": null,
+      "notes": "Consonant inventory (/t͡ɬ kʷ ʔ/), traditional orthography and unwritten vowel length."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Classical_Nahuatl"
+  ],
+  "parent": "x-clade-utoa1244",
+  "ancestors": [
+    {
+      "code": "x-clade-utoa1244",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Uto-Aztecan — the classification node this language sits under."
+    }
+  ],
+  "location": {
+    "latitude": 19.43,
+    "longitude": -99.13,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Classical Nahuatl (Valley of Mexico)."
+  }
+}

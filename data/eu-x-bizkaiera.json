@@ -1,0 +1,110 @@
+{
+  "code": "eu-x-bizkaiera",
+  "name": "Biscayan Basque (Bizkaiera)",
+  "script": "Latin",
+  "graphemes_base": "eu",
+  "graphemes": {
+    "s": [
+      "s̺",
+      "ʃ"
+    ],
+    "z": [
+      "s̺",
+      "ʃ"
+    ],
+    "ts": [
+      "ts̻"
+    ],
+    "tz": [
+      "ts̻"
+    ],
+    "tt": [
+      "tʃ"
+    ]
+  },
+  "allophones_base": "eu",
+  "positional_graphemes_base": "eu",
+  "allophones": {
+    "s̺": [
+      "s̺",
+      "ʃ"
+    ],
+    "h": [
+      ""
+    ],
+    "n": [
+      "n",
+      "ɲ",
+      "ŋ"
+    ],
+    "l": [
+      "l",
+      "ʎ"
+    ]
+  },
+  "parent": "eu",
+  "glottolog_code": "bisc1236",
+  "ancestors": [
+    {
+      "code": "eu",
+      "role": "parent",
+      "weight": 0.9,
+      "notes": "Biscayan shares the standard Basque grapheme inventory but diverges significantly in morphology and phonology; inherits grapheme-to-phoneme base from Batua."
+    }
+  ],
+  "notes": "Biscayan (Bizkaiera/Bizkaia). Western Basque, spoken in Biscay and Araba. VALIDATED and CORRECTED against Bedialauneta Txurruka & Hualde (2023), an Illustration of the IPA of Markina Basque (a representative Biscayan variety). Key phonological features actually documented there: (1) MERGER of the apico-alveolar /s̺/ and lamino-alveolar /s̻/ fricatives in favour of a single apico-alveolar /s̺/, and of the affricates /ts̺/ and /ts̻/ in favour of a single denti-alveolar /ts̻/ (Bedialauneta & Hualde 2023: 1098) — so orthographic s and z both give /s̺/, and ts and tz both give /ts̻/; the standard three-way sibilant contrast of Batua is NOT present here. (2) MERGER of the voiceless palatal stop /c/ (spelled tt) with the postalveolar affricate /tʃ/, in favour of /tʃ/ (2023: 1098). (3) PALATALISATION after /i/: /s/→[ʃ] (haizea > /aiʃie/), /t/→[tʃ], /n/→[ɲ], /l/→[ʎ] (2023: 1102-1104). (4) NO aspiration: western Basque lost /h/ and has no aspirated stops (Hualde 2018: 2). (5) Voiced stops /b d ɡ/ are approximants [β ð ɣ] intervocalically and nasals assimilate in place to a following consonant (2023: 1099, 1103). Morphologically the most divergent dialect from Batua. NOTE (engine limit): the well-known Biscayan raising of the singular article /-a/ to [-e] after a high vowel (baso+a > basue, kale+a > kalie; Bedialauneta & Hualde 2023: 1107-1108) is a morphophonological process on the article, not a context-free grapheme rule, and is therefore not modelled at the orthography-to-IPA level.",
+  "quality": "research",
+  "urls": [
+    "https://en.wikipedia.org/wiki/Biscayan_dialect"
+  ],
+  "script_type": "alphabet",
+  "sources": [
+    {
+      "id": "bedialauneta_hualde2023",
+      "author": "Bedialauneta Txurruka, I. & Hualde, J.I.",
+      "year": 2023,
+      "title": "Markina Basque (Illustration of the IPA)",
+      "publisher": "Journal of the International Phonetic Association 53(3)",
+      "url": "https://doi.org/10.1017/S0025100322000032",
+      "pages": "1095-1122",
+      "notes": "Primary read source for Biscayan phonology: sibilant/affricate/palatal-stop mergers (p.1098), palatalisation after /i/ (pp.1102-1104), article vowel raising (pp.1107-1108)."
+    },
+    {
+      "id": "hualde2018_aspiration",
+      "author": "Hualde, J.I.",
+      "year": 2018,
+      "title": "Aspiration in Basque",
+      "publisher": "Papers in Historical Phonology 3",
+      "url": "https://doi.org/10.2218/pihph.3.2018.2602",
+      "pages": "1-27",
+      "notes": "Read for the loss of aspiration in western (Biscayan) Basque (p.84 fn.)."
+    },
+    {
+      "id": "hualde_ortiz_de_urbina2003",
+      "author": "Hualde, J.I. & Ortiz de Urbina, J. (eds.)",
+      "year": 2003,
+      "title": "A Grammar of Basque",
+      "publisher": "Mouton de Gruyter",
+      "url": null,
+      "pages": "15-65 (Hualde, 'Segmental phonology')",
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Biscayan_dialect",
+    "https://eu.wikipedia.org/wiki/Mendebaleko_euskara",
+    "https://es.wikipedia.org/wiki/Dialecto_occidental_del_euskera"
+  ],
+  "timespan": {
+    "start_year": 1600,
+    "end_year": null
+  },
+  "iso639_3": "eus",
+  "wikidata_qid": "Q749166",
+  "location": {
+    "latitude": 43.261944,
+    "longitude": -2.932222,
+    "source": "wikidata",
+    "notes": "Bizkaia — the province the dialect is named for. [Wikidata Q93366 P625]"
+  }
+}

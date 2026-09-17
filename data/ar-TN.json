@@ -1,0 +1,398 @@
+{
+  "code": "ar-TN",
+  "name": "Tunisian Arabic",
+  "script": "Arabic",
+  "graphemes_base": "ar-x-maghrebi",
+  "graphemes": {
+    "ث": [
+      "θ",
+      "t"
+    ],
+    "ظ": [
+      "ðˤ",
+      "dˤ"
+    ],
+    "ق": [
+      "q",
+      "ɡ"
+    ],
+    "e": [
+      "e"
+    ],
+    "o": [
+      "o"
+    ],
+    "الثث": [
+      "aθθ",
+      "att"
+    ],
+    "اَلثث": [
+      "aθθ",
+      "att"
+    ],
+    "لِلثث": [
+      "liθθ",
+      "litt"
+    ],
+    "وَالثث": [
+      "waθθ",
+      "watt"
+    ],
+    "فَالثث": [
+      "faθθ",
+      "fatt"
+    ],
+    "بِالثث": [
+      "biθθ",
+      "bitt"
+    ],
+    "كَالثث": [
+      "kaθθ",
+      "katt"
+    ],
+    "الظظ": [
+      "aðˤðˤ",
+      "adˤdˤ"
+    ],
+    "اَلظظ": [
+      "aðˤðˤ",
+      "adˤdˤ"
+    ],
+    "لِلظظ": [
+      "liðˤðˤ",
+      "lidˤdˤ"
+    ],
+    "وَالظظ": [
+      "waðˤðˤ",
+      "wadˤdˤ"
+    ],
+    "فَالظظ": [
+      "faðˤðˤ",
+      "fadˤdˤ"
+    ],
+    "بِالظظ": [
+      "biðˤðˤ",
+      "bidˤdˤ"
+    ],
+    "كَالظظ": [
+      "kaðˤðˤ",
+      "kadˤdˤ"
+    ],
+    "اِلثث": [
+      "iθθ",
+      "itt"
+    ],
+    "اِلظظ": [
+      "iðˤðˤ",
+      "idˤdˤ"
+    ],
+    "وِالثث": [
+      "wiθθ",
+      "witt"
+    ],
+    "وِالظظ": [
+      "wiðˤðˤ",
+      "widˤdˤ"
+    ],
+    "ذ": [
+      "ð",
+      "d"
+    ],
+    "الذذ": [
+      "aðð",
+      "add"
+    ],
+    "اَلذذ": [
+      "aðð",
+      "add"
+    ],
+    "اِلذذ": [
+      "iðð",
+      "idd"
+    ],
+    "لِلذذ": [
+      "liðð",
+      "lidd"
+    ],
+    "وَالذذ": [
+      "waðð",
+      "wadd"
+    ],
+    "فَالذذ": [
+      "faðð",
+      "fadd"
+    ],
+    "بِالذذ": [
+      "biðð",
+      "bidd"
+    ],
+    "كَالذذ": [
+      "kaðð",
+      "kadd"
+    ],
+    "وِالذذ": [
+      "wiðð",
+      "widd"
+    ]
+  },
+  "allophones_base": "ar-x-maghrebi",
+  "allophones": {
+    "q": [
+      "q",
+      "ɡ"
+    ],
+    "ðˤ": [
+      "ðˤ",
+      "dˤ",
+      "zˤ"
+    ],
+    "θ": [
+      "θ",
+      "t",
+      "s"
+    ],
+    "ð": [
+      "ð",
+      "d",
+      "z"
+    ],
+    "a": [
+      "a",
+      "ə",
+      ""
+    ],
+    "i": [
+      "i",
+      "ɪ",
+      "ə",
+      ""
+    ],
+    "u": [
+      "u",
+      "ʊ",
+      "ə",
+      ""
+    ],
+    "e": [
+      "e"
+    ],
+    "o": [
+      "o"
+    ],
+    "aː": [
+      "ɛː",
+      "aː"
+    ]
+  },
+  "parent": "ar-x-maghrebi",
+  "ancestors": [
+    {
+      "code": "ar-x-maghrebi",
+      "role": "parent",
+      "weight": 0.83,
+      "notes": "Maghrebi Arabic base"
+    },
+    {
+      "code": "ber",
+      "role": "substrate",
+      "weight": 0.08,
+      "notes": "Berber substrate (less dense than Morocco/Kabylie)"
+    },
+    {
+      "code": "fr-FR",
+      "role": "adstrate",
+      "weight": 0.04,
+      "notes": "French adstrate: /p/, /v/ established"
+    }
+  ],
+  "notes": "Tunisian Arabic (Derja تونسية; ISO 639-3 aeb), Tunis (Medina) baseline. Sedentary pre-Hilalian phonology. INTERDENTALS RETAINED: ث → /θ/, ذ → /ð/, ظ → /ðˤ/ (θlɛːθa 'three'), unlike sedentary Moroccan/Algiers which merge them to stops — Gibson 2009 ('Tunis Arabic', EALL vol.4); Singer 1984; Turki et al. 2024 (retention except the Sahel/Mahdia and the Jewish dialects). QĀF ق → /q/ retained in urban Tunis (qaːl 'he said'), with the Bedouin/rural variant /ɡ/ (gālū lī) also current in the country — Singer 1984; Gibson 2009; La Rosa 2021 p.9. ǦĪM ج → /ʒ/ (voiced post-alveolar fricative, no occlusive onset — the sedentary Maghrebi reflex; Watson 2002 p.16). STRONG IMĀLA: long /aː/ → [ɛː] except adjacent to an emphatic or a back consonant /q χ ʁ ħ ʕ r/ (bɛːb 'door', ktɛːb 'book'; daːr 'house' blocked) — Singer 1984; Gibson 2009. MONOPHTHONGISATION: inherited /aj aw/ → [iː uː] in Tunis (bīt, lūn); the Sahel (Sūsa, Mahdia) retains the diphthong or has [eː oː] — Talmoudi 1980; La Rosa 2021. Short vowels reduce to [ə]/∅ but less extremely than Moroccan. French/Italian adstrate: /p/ /v/ established.",
+  "quality": "research",
+  "script_type": "abjad",
+  "sources": [
+    {
+      "id": "watson2002",
+      "author": "Watson, J.C.E.",
+      "year": 2002,
+      "title": "The Phonology and Morphology of Arabic",
+      "publisher": "Oxford University Press",
+      "url": null,
+      "pages": null,
+      "notes": null,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Arabic_phonology"
+    },
+    {
+      "id": "holes2004",
+      "author": "Holes, C.",
+      "year": 2004,
+      "title": "Modern Arabic: Structures, Functions, and Varieties",
+      "publisher": "Georgetown University Press",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "gibson2009",
+      "author": "Maik Gibson",
+      "year": 2009,
+      "title": "Tunis Arabic (article in Encyclopedia of Arabic Language and Linguistics, vol. 4)",
+      "publisher": "Brill",
+      "notes": "Tunis Arabic retains the interdentals /θ ð ðˤ/ (θlāθa 'three'); basis for reordering the ث/ذ/ظ reflexes to interdental-primary."
+    },
+    {
+      "id": "singer1984",
+      "author": "Singer, H.-R.",
+      "year": 1984,
+      "title": "Grammatik der arabischen Mundart der Medina von Tunis",
+      "publisher": "de Gruyter, Berlin",
+      "url": null,
+      "pages": null,
+      "notes": "The reference descriptive grammar of the Arabic of the Medina of Tunis. Documents the Tunis consonant system with retained interdentals /θ ð ðˤ/, sedentary /q/, ǧīm /ʒ/, the strong imāla of /aː/ → [ɛː] and its blocking near emphatic/back consonants, and the monophthongisation of /aj aw/ → /iː uː/. Standard reference; not obtained to a readable folio for this pass (cited at the level of the phenomena it describes)."
+    },
+    {
+      "id": "talmoudi1980",
+      "author": "Talmoudi, F.",
+      "year": 1980,
+      "title": "The Arabic Dialect of Sūsa (Tunisia)",
+      "publisher": "Acta Universitatis Gothoburgensis, Göteborg",
+      "url": null,
+      "pages": null,
+      "notes": "Monograph on the Sahel (Sūsa) variety; source for the note that the Sahel diverges from the Tunis baseline in diphthong treatment (retention of /aj aw/ or [eː oː] where Tunis has [iː uː]). Not obtained to a readable folio for this pass."
+    },
+    {
+      "id": "larosa2021",
+      "author": "La Rosa, C.",
+      "year": 2021,
+      "title": "Mahdia Dialect: An Urban Vernacular in the Tunisian Sahel Context",
+      "publisher": "Languages 6(3): 145",
+      "url": "https://www.mdpi.com/2226-471X/6/3/145",
+      "pages": "8-11",
+      "notes": "Read (open-access, CC-BY; printed folios 'N of 23'). Tunisian Sahel (Mahdia/Msaken) data: qāf as [q] (sedentary) alongside Bedouin [ɡ] (gālū lī 'they told me', gutlak 'I told you', p.9); interdental loss in this Sahel variety (asātida 'professors' with /d/, p.9) — divergent from the Tunis retention this leaf encodes; raising of /aː/ (imāla) p.10. Source of the ar-TN primary-source gold rows."
+    },
+    {
+      "id": "turki2024",
+      "author": "Turki, H., Ellouze, K., Ben Ammar, H. et al.",
+      "year": 2024,
+      "title": "Normalized Orthography for Tunisian Arabic (NOTA)",
+      "publisher": "arXiv:2402.12940",
+      "url": "https://arxiv.org/abs/2402.12940",
+      "pages": null,
+      "notes": "Read (open-access). A CODA*-derived Arabic-script orthography norm for Tunisian; confirms interdental retention (except the Sahel), the /q/~/g/ split, four vowel qualities /a e i u/ with phonemic length, and the Perso-Arabic supplemental letters پ ڤ گ for /p v g/."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Tunisian_Arabic",
+    "https://ar.wikipedia.org/wiki/الدارجة_التونسية",
+    "https://ar.wikipedia.org/wiki/%D9%84%D9%87%D8%AC%D8%A9_%D8%AA%D9%88%D9%86%D8%B3%D9%8A%D8%A9"
+  ],
+  "timespan": {
+    "start_year": 1200,
+    "end_year": null
+  },
+  "glottolog_code": "tuni1259",
+  "iso639_3": "aeb",
+  "wikidata_qid": "Q56240",
+  "wals_code": "atu",
+  "location": {
+    "latitude": 33.7966,
+    "longitude": 9.56156,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Tunisian Arabic."
+  },
+  "optional_marks": [
+    "ً",
+    "ٌ",
+    "ٍ",
+    "َ",
+    "ُ",
+    "ِ",
+    "ّ",
+    "ْ",
+    "ٰ",
+    "ٓ"
+  ],
+  "stress": {
+    "default_position": -3,
+    "quantity_sensitive": true,
+    "superheavy_final_attracts": true,
+    "max_onset": 1,
+    "stress_mark": "ˈ",
+    "notes": "Arabic stress is QUANTITY-SENSITIVE: it falls on a syllable because that syllable is heavy, not because of any orthographic ending, so no ending table can express it. The cascade (Ryding, A Reference Grammar of MSA, CUP 2005, §2.3; Watson, The Phonology and Morphology of Arabic, OUP 2002, ch.3): a superheavy final syllable (CVːC/CVCC) takes the stress (kiˈtaːb); otherwise a heavy penult (CVː/CVC) does (muˈdarris); otherwise the antepenult (ˈmadrasa). max_onset=1 because Arabic onsets are obligatory and hold exactly one consonant — a medial cluster splits, closing the preceding syllable, and that boundary is what makes the penult of mudarris heavy. INPUT CONTRACT: weight is only recoverable from a complete transcription, so this requires diacritized input; an undiacritized skeleton has no vowels to weigh. The registered wikipron gold carries no stress marks, but the benchmark strips stress from both sides by default, so this costs no PER. Prosodic clitics: monosyllabic function words (negator maː, prepositions fiː/min/ʕan/ʕa/li/bi, vocative jaː, copula-negator muː/miʃ, conditional law/loː, wa-proclitic combinations) attach to a host and fall inside the host's stress domain, so they carry no word stress (Watson 2002, The Phonology and Morphology of Arabic, OUP, ch.3). Pan-Arabic class; the per-lect form list reflects the function words attested in this lect. Orthographic test — a clitic homograph (e.g. verb yā 'came') is destressed in every occurrence.",
+    "cliticless_words": [
+      "عَ",
+      "فِي",
+      "مِن"
+    ]
+  },
+  "allophone_rules": [
+    {
+      "id": "AR_TN_IMALA_BLOCK_BACK_AFTER",
+      "phonemes": [
+        "aː"
+      ],
+      "surface": "aː",
+      "preceded_by_phoneme": [
+        "q",
+        "χ",
+        "ʁ",
+        "ħ",
+        "ʕ",
+        "r"
+      ],
+      "notes": "Imāla is blocked when /aː/ is adjacent to a back consonant — the uvular /q/, the velar/uvular fricatives /χ ʁ/, the pharyngeals /ħ ʕ/, or /r/ — where the long vowel keeps its back [aː] quality (Singer 1984, Grammatik der arabischen Mundart der Medina von Tunis, §Vokalismus, imāla conditioned by non-back, non-emphatic neighbours; Gibson 2009, 'Tunis Arabic', EALL vol.4, §Phonology). Ordered before the raising rule so the block wins."
+    },
+    {
+      "id": "AR_TN_IMALA_BLOCK_BACK_BEFORE",
+      "phonemes": [
+        "aː"
+      ],
+      "surface": "aː",
+      "followed_by_phoneme": [
+        "q",
+        "χ",
+        "ʁ",
+        "ħ",
+        "ʕ",
+        "r"
+      ],
+      "notes": "Same imāla block, /aː/ immediately before a back consonant /q χ ʁ ħ ʕ r/: dār 'house' stays [daːr], not *[dɛːr] (Singer 1984; Gibson 2009, EALL 'Tunis Arabic')."
+    },
+    {
+      "id": "AR_TN_IMALA_AA",
+      "phonemes": [
+        "aː"
+      ],
+      "surface": "ɛː",
+      "notes": "Strong Tunis imāla: historical long /aː/ is raised and fronted to [ɛː] in every environment not blocked by an adjacent emphatic or back consonant — bɛːb 'door', ktɛːb 'book', θlɛːθa 'three' (Singer 1984, Grammatik der arabischen Mundart der Medina von Tunis, imāla of ā; Gibson 2009, 'Tunis Arabic', EALL vol.4; the same [ɛː]/[eː] raising is documented for the Sahel by La Rosa 2021 p.10 and Gibson 1998). Emphatic environments are already backed to [ɑː] by the inherited emphasis-spreading layer, so this rule never applies there."
+    },
+    {
+      "id": "AR_TN_MONO_AJ",
+      "phonemes": [
+        "aj"
+      ],
+      "surface": "iː",
+      "notes": "Sedentary Tunis monophthongised the inherited diphthong /aj/ to a long [iː]: bīt 'room/house' < bayt (Gibson 2009, 'Tunis Arabic', EALL vol.4, §Phonology; Singer 1984). The Sahel (Sūsa, Mahdia) retains the diphthong or has [eː] (Talmoudi 1980, The Arabic Dialect of Sūsa; La Rosa 2021) — a sub-varietal split noted but not modelled by this Tunis-baseline leaf."
+    },
+    {
+      "id": "AR_TN_MONO_AW",
+      "phonemes": [
+        "aw"
+      ],
+      "surface": "uː",
+      "notes": "Companion monophthongisation of inherited /aw/ to long [uː]: lūn 'colour' < lawn (Gibson 2009, EALL 'Tunis Arabic'; Singer 1984). Sahel retention as in the /aj/ case (Talmoudi 1980; La Rosa 2021 gives Sahel lūn [lɔːn])."
+    }
+  ],
+  "orthography_standard": {
+    "name": "Normalized Orthography for Tunisian Arabic (NOTA), a CODA* adaptation",
+    "authority": "Association Derja / Turki et al.",
+    "year": 2024,
+    "url": "https://arxiv.org/abs/2402.12940",
+    "notes": "Arabic-script normalisation for Tunisian based on CODA*; adds the supplemental letters پ /p/, ڤ /v/, گ /g/ and a four-quality vowel system with phonemic length."
+  },
+  "audit": {
+    "primary_sources": {
+      "conclusion": "sample_too_small",
+      "measured": "The primary_sources row holds 9 gold pairs, per=0.3059, per_ci_low=0.196, per_ci_high=0.425 (benchmarks/results.json). The 95% interval straddles the 0.25 gating threshold on both sides, so the row is statistically uninformative rather than failing. The same spec scores near zero on its other two rows (arabic_tts, n=20, per=0.0; gold20_arabic, n=20, per=0.0036), so Tunisian Arabic is not an unmeasured language overall -- only this thin gold set is.",
+      "reference": "spec notes"
+    }
+  }
+}

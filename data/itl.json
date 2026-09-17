@@ -1,0 +1,209 @@
+{
+ "code": "itl",
+ "name": "Itelmen",
+ "script": "Cyrl",
+ "quality": "research",
+ "graphemes": {
+  "а": [
+   "a"
+  ],
+  "и": [
+   "i"
+  ],
+  "о": [
+   "o"
+  ],
+  "у": [
+   "u"
+  ],
+  "э": [
+   "e"
+  ],
+  "й": [
+   "j"
+  ],
+  "л": [
+   "l"
+  ],
+  "м": [
+   "m"
+  ],
+  "н": [
+   "n"
+  ],
+  "ӈ": [
+   "ŋ"
+  ],
+  "п": [
+   "p"
+  ],
+  "п’": [
+   "pʔ"
+  ],
+  "р": [
+   "r"
+  ],
+  "с": [
+   "s"
+  ],
+  "т": [
+   "t"
+  ],
+  "т’": [
+   "tʔ"
+  ],
+  "к": [
+   "k"
+  ],
+  "к’": [
+   "kʔ"
+  ],
+  "ӄ": [
+   "q"
+  ],
+  "ч": [
+   "tʃ"
+  ],
+  "ч’": [
+   "tʃʔ"
+  ],
+  "з": [
+   "z"
+  ],
+  "х": [
+   "x"
+  ],
+  "ӷ": [
+   "ɣ"
+  ],
+  "ф": [
+   "ɸ"
+  ],
+  "в": [
+   "β"
+  ],
+  "ь": [
+   ""
+  ],
+  "’": [
+   "ʔ"
+  ],
+  "ҳ": [
+   "χ"
+  ],
+  "љ": [
+   "lʲ"
+  ],
+  "њ": [
+   "nʲ"
+  ],
+  "ӆ": [
+   "ɬ"
+  ],
+  "ә": [
+   "ə"
+  ],
+  "ц": [
+   "ts"
+  ],
+  "ш": [
+   "ʃ"
+  ],
+  "щ": [
+   "ɕ"
+  ],
+  "ж": [
+   "ʒ"
+  ],
+  "е": [
+   "e"
+  ],
+  "ё": [
+   "jo"
+  ],
+  "ю": [
+   "ju"
+  ],
+  "я": [
+   "ja"
+  ]
+ },
+ "allophones": {},
+ "notes": "Cyrillic literary orthography for (West) Itelmen described in Georg & Volodin (1999), Die itelmenische Sprache: Grammatik und Texte. Ejectives are marked with a following apostrophe, distinct from the plain glottal-stop apostrophe grapheme because pʼ/tʼ/kʼ/chʼ are not the concatenation of their base stop plus /ʔ/ (a different IPA symbol, the ejective release ʼ, not a following glottal stop). q-hook is uvular /q/; the gamma-tail letter is voiced velar fricative /ɣ/; ha-with-descender (ҳ) is uvular fricative /χ/. Itelmen practical Cyrillic borrows the Macedonian/Serbian palatal letters lje (љ) and nje (њ) to write the palatalised sonorants /lʲ/ /nʲ/ directly (distinct base letters, not a soft-sign digraph), and l-with-descender (ӆ) for the voiceless palatalised lateral /l̥ʲ/ (Georg & Volodin 1999); none of these are Cartesian products since each is its own atomic Cyrillic letter, not a constructed digraph. The soft sign (ь) elsewhere is silent (mapped to an empty candidate). Loanword-only letters (ts/sh/shch/zh/e/yo/yu/ya, from Russian) are mapped at face value. Stress is lexical and largely unpredictable from spelling (Georg & Volodin 1999); not encoded, documented exemption rather than an oversight.",
+ "iso639_3": "itl",
+ "glottolog_code": "itel1242",
+ "sources": [
+  {
+   "id": "glottolog2024",
+   "author": "Hammarström, Harald; Forkel, Robert; Haspelmath, Martin; Bank, Sebastian",
+   "year": 2024,
+   "title": "Glottolog 5.0",
+   "publisher": "Max Planck Institute for Evolutionary Anthropology",
+   "url": "https://glottolog.org/"
+  },
+  {
+   "id": "phoible2019",
+   "author": "Moran, Steven; McCloy, Daniel (eds.)",
+   "year": 2019,
+   "title": "PHOIBLE 2.0 (doi:10.5281/zenodo.2562766)",
+   "publisher": "Max Planck Institute for the Science of Human History",
+   "url": "https://phoible.org/inventories/view/2297",
+   "notes": "Inventory 2297 (ea), 32 non-marginal segments."
+  },
+  {
+   "id": "georg_volodin1999",
+   "author": "Georg, Stefan; Volodin, Alexander P.",
+   "year": 1999,
+   "title": "Die itelmenische Sprache: Grammatik und Texte",
+   "publisher": "Harrassowitz"
+  }
+ ],
+ "urls": [
+  "https://glottolog.org/resource/languoid/id/itel1242"
+ ],
+ "location": {
+  "latitude": 56.0462,
+  "longitude": 156.307,
+  "source": "glottolog",
+  "notes": "Glottolog's representative point."
+ },
+ "parent": "x-clade-chuk1271",
+ "phonemes": [
+  "j",
+  "k",
+  "kʼ",
+  "l",
+  "lʲ",
+  "l̥ʲ",
+  "m",
+  "n",
+  "nʲ",
+  "p",
+  "pʼ",
+  "q",
+  "q̺",
+  "r",
+  "s̺",
+  "t̺",
+  "t̺ɕ̺",
+  "t̺ɕ̺ʼ",
+  "t̺ʼ",
+  "x",
+  "z̺",
+  "ŋ",
+  "ɣ",
+  "ɸ",
+  "ʔ",
+  "β",
+  "χ",
+  "a",
+  "i",
+  "o̞̜",
+  "u̜",
+  "ɛ"
+ ],
+ "phoible_id": "2297",
+ "wikipedia": [
+  "https://en.wikipedia.org/wiki/Itelmen_language"
+ ]
+}

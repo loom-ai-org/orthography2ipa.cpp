@@ -1,0 +1,73 @@
+{
+  "code": "sog",
+  "name": "Sogdian",
+  "script": "Sogd",
+  "script_type": "abjad",
+  "quality": "stub",
+  "graphemes": {},
+  "allophones": {},
+  "notes": "STUB — no grapheme inventory modelled. Sogdian, an Eastern Middle Iranian language of Sogdia (Samarkand, Panjakent, Bukhara, Fergana; modern Uzbekistan/Tajikistan), the main lingua franca of the Silk Road and one of the official languages of the First Turkic Khanate. It survives in a large corpus across THREE distinct script traditions — the native Sogdian alphabet (an Aramaic-derived abjad-cum-alphabet with several regional cursive variants, ISO 15924 'Sogd'/'Sogo'), the Manichaean script, and the Syriac (Christian, 'Nestorian') script — with no single standard transliteration scheme unifying all three the way Hoffmann's does for Avestan; scholarly transliterations vary by script tradition and by editor. Building a cited grapheme->IPA inventory here would mean picking one script/editor's convention and presenting it as THE orthography, which is not supportable from the sources consulted. Added as a stub so it resolves as an ancestry/contact node (parallel to the arc.json/x-clade stub pattern) rather than left as a dangling reference from Eastern Iranian and Middle Iranian ancestry chains.",
+  "sources": [
+    {
+      "id": "sog_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Sogdian language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Sogdian_language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Sogdian_language",
+      "pages": null,
+      "notes": "Overview, script traditions (Sogdian, Manichaean, Syriac), historical role as Silk Road lingua franca."
+    },
+    {
+      "id": "sog_alphabet_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Sogdian alphabet",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Sogdian_alphabet",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Sogdian_alphabet",
+      "pages": null,
+      "notes": "Documents the native abjad-derived script and its regional cursive variants; no single normalised transliteration."
+    },
+    {
+      "id": "durkin_meisterernst2014",
+      "author": "Durkin-Meisterernst, D.",
+      "year": 2014,
+      "title": "Grammatik des Westmitteliranischen (Parthisch und Mittelpersisch)",
+      "publisher": "Verlag der Österreichischen Akademie der Wissenschaften",
+      "url": null,
+      "pages": null,
+      "notes": "Reference grammar for the Middle Iranian family context; already cited in pal.json."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Sogdian_language",
+    "https://en.wikipedia.org/wiki/Sogdian_alphabet"
+  ],
+  "urls": [
+    "https://glottolog.org/resource/languoid/id/sogd1245"
+  ],
+  "timespan": {
+    "start_year": -100,
+    "end_year": 1000
+  },
+  "iso639_3": "sog",
+  "glottolog_code": "sogd1245",
+  "wikidata_qid": "Q205979",
+  "parent": "ira",
+  "ancestors": [
+    {
+      "code": "ira",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Descent from Proto-Iranian, Eastern Iranian branch (Middle Iranian period)."
+    }
+  ],
+  "location": {
+    "latitude": 39.6542,
+    "longitude": 66.9597,
+    "source": "glottolog",
+    "notes": "Samarkand, Sogdia — the historical heartland of Sogdian speech."
+  }
+}

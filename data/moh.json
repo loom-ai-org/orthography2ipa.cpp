@@ -1,0 +1,89 @@
+{
+  "code": "moh",
+  "name": "Mohawk",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "orthography_kind": "native",
+  "quality": "research",
+  "graphemes": {
+    "a": ["a"],
+    "aa": ["aː"],
+    "e": ["e"],
+    "ee": ["eː"],
+    "i": ["i"],
+    "ii": ["iː"],
+    "o": ["o"],
+    "oo": ["oː"],
+    "en": ["ʌ̃"],
+    "on": ["ũ"],
+    "h": ["h"],
+    "k": ["k"],
+    "n": ["n"],
+    "r": ["r"],
+    "l": ["l"],
+    "s": ["s"],
+    "t": ["t"],
+    "w": ["w"],
+    "y": ["j"],
+    "ts": ["dʒ"],
+    "tsy": ["dʒ"],
+    "'": ["ʔ"]
+  },
+  "allophones": {
+    "k": ["k", "ɡ"],
+    "t": ["t", "d"],
+    "s": ["s", "z"],
+    "r": ["r", "l"]
+  },
+  "iso639_3": "moh",
+  "glottolog_code": "moha1258",
+  "wikidata_qid": "Q13339",
+  "notes": "Mohawk (Kanien'kéha), Northern Iroquoian. Four short oral vowels /a e i o/, each with a long counterpart written by doubling the letter (aa ee ii oo), plus two nasalized vowels written with a following ⟨n⟩: ⟨en⟩ /ʌ̃/ and ⟨on⟩ /ũ/ — the ⟨n⟩ here marks nasalization of the preceding vowel rather than a separate /n/ consonant, so the digraph is one phonological unit. ⟨ts⟩ (Eastern dialects, e.g. Kahnawà:ke/Akwesasne) and ⟨tsy⟩ (Western dialects, e.g. Six Nations) both spell the single affricate /dʒ/ before front vowels; ⟨ts⟩ before back vowels is instead the cluster /ts/, so only the affricate reading is asserted here and the plain-cluster case is left to the general t+s composition. /k t s/ are voiceless obstruents that voice allophonically to [ɡ d z] between vowels and before /j/; both realisations are captured as allophones of a single grapheme rather than separate keys. The rhotic/lateral consonant is written ⟨r⟩ in some community orthographies (Kahnawà:ke, Ahkwesásne) and ⟨l⟩ or bare vowel length in others (Six Nations Mohawk retains only /r/ in loans); ⟨r⟩ is kept as the primary key with ⟨l⟩ as an alternate spelling of the same phoneme. ⟨'⟩ is the glottal stop /ʔ/. Tone/pitch-accent and vowel length interactions are marked diacritically in some pedagogical materials but are not uniformly standardized across communities and are not represented here beyond the doubled-vowel length convention.",
+  "sources": [
+    {
+      "id": "mohawk_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Mohawk language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Mohawk_language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Mohawk_language",
+      "pages": null,
+      "notes": "Phoneme inventory and orthography correspondences, including dialectal r/l and y/i variation."
+    },
+    {
+      "id": "bonvillain1973",
+      "author": "Bonvillain, Nancy",
+      "year": 1973,
+      "title": "A Grammar of Akwesasne Mohawk",
+      "publisher": "National Museum of Man Mercury Series, Ethnology Division Paper No. 8 (Canadian Museum of History)",
+      "url": null,
+      "wikipedia_url": null,
+      "pages": null,
+      "notes": "Reference descriptive grammar of the Akwesasne Mohawk dialect."
+    },
+    {
+      "id": "michelson1988",
+      "author": "Michelson, Karin",
+      "year": 1988,
+      "title": "A Comparative Study of Lake-Iroquoian Accent",
+      "publisher": "Kluwer Academic Publishers",
+      "url": null,
+      "wikipedia_url": null,
+      "pages": null,
+      "notes": "Comparative Northern Iroquoian phonology, including Mohawk."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Mohawk_language"
+  ],
+  "parent": "x-clade-iroq1247",
+  "ancestors": [
+    {
+      "code": "x-clade-iroq1247",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Iroquoian — the classification node this language sits under (Northern Iroquoian, Five Nations branch)."
+    }
+  ]
+}

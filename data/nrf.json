@@ -1,0 +1,663 @@
+{
+  "code": "nrf",
+  "name": "Norman",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "iso639_3": "nrf",
+  "glottolog_code": "norm1245",
+  "timespan": {
+    "start_year": 911,
+    "end_year": null
+  },
+  "graphemes": {
+    "ngn": [
+      "ɲ"
+    ],
+    "gn": [
+      "ɲ"
+    ],
+    "tch": [
+      "tʃ"
+    ],
+    "dg": [
+      "dʒ"
+    ],
+    "th": [
+      "ð",
+      "θ"
+    ],
+    "ch": [
+      "ʃ"
+    ],
+    "ç": [
+      "ʃ"
+    ],
+    "qu": [
+      "k"
+    ],
+    "gu": [
+      "ɡ"
+    ],
+    "ph": [
+      "f"
+    ],
+    "sc": [
+      "s"
+    ],
+    "ck": [
+      "k"
+    ],
+    "aill": [
+      "aj"
+    ],
+    "eill": [
+      "ɛj"
+    ],
+    "ouill": [
+      "uj"
+    ],
+    "ill": [
+      "j"
+    ],
+    "ail": [
+      "aj"
+    ],
+    "eil": [
+      "ɛj"
+    ],
+    "ouil": [
+      "uj"
+    ],
+    "bb": [
+      "b"
+    ],
+    "cc": [
+      "k"
+    ],
+    "dd": [
+      "d"
+    ],
+    "ff": [
+      "f"
+    ],
+    "gg": [
+      "ɡ"
+    ],
+    "ll": [
+      "l"
+    ],
+    "mm": [
+      "m"
+    ],
+    "nn": [
+      "n"
+    ],
+    "pp": [
+      "p"
+    ],
+    "rr": [
+      "r"
+    ],
+    "ss": [
+      "s"
+    ],
+    "tt": [
+      "t"
+    ],
+    "iau": [
+      "jo"
+    ],
+    "eau": [
+      "o"
+    ],
+    "oû": [
+      "uː"
+    ],
+    "où": [
+      "u"
+    ],
+    "ou": [
+      "u"
+    ],
+    "aû": [
+      "ɔː"
+    ],
+    "au": [
+      "ɔ"
+    ],
+    "aî": [
+      "ɛː"
+    ],
+    "aï": [
+      "aj"
+    ],
+    "ai": [
+      "ɛ",
+      "e"
+    ],
+    "eî": [
+      "eː"
+    ],
+    "ei": [
+      "e",
+      "ɛ"
+    ],
+    "eû": [
+      "øː"
+    ],
+    "eu": [
+      "ø",
+      "œ"
+    ],
+    "œu": [
+      "œ"
+    ],
+    "oeu": [
+      "œ"
+    ],
+    "oê": [
+      "øː"
+    ],
+    "oe": [
+      "ø"
+    ],
+    "òê": [
+      "œː"
+    ],
+    "òe": [
+      "œ"
+    ],
+    "ée": [
+      "eː"
+    ],
+    "oî": [
+      "wɛ"
+    ],
+    "oi": [
+      "wa",
+      "wɛ"
+    ],
+    "â": [
+      "aː"
+    ],
+    "ê": [
+      "ɛː"
+    ],
+    "î": [
+      "iː"
+    ],
+    "ô": [
+      "oː"
+    ],
+    "û": [
+      "yː"
+    ],
+    "é": [
+      "e"
+    ],
+    "è": [
+      "ɛ"
+    ],
+    "ë": [
+      "ɛ"
+    ],
+    "ï": [
+      "i"
+    ],
+    "ù": [
+      "y"
+    ],
+    "ü": [
+      "y"
+    ],
+    "à": [
+      "a"
+    ],
+    "a": [
+      "a"
+    ],
+    "b": [
+      "b"
+    ],
+    "c": [
+      "k"
+    ],
+    "d": [
+      "d"
+    ],
+    "e": [
+      "ə",
+      "e",
+      "ɛ"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "h": [
+      "h",
+      ""
+    ],
+    "i": [
+      "i"
+    ],
+    "j": [
+      "ʒ"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "o": [
+      "o",
+      "ɔ"
+    ],
+    "p": [
+      "p"
+    ],
+    "q": [
+      "k"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s",
+      "z"
+    ],
+    "t": [
+      "t"
+    ],
+    "u": [
+      "y"
+    ],
+    "v": [
+      "v"
+    ],
+    "w": [
+      "w"
+    ],
+    "x": [
+      "ks"
+    ],
+    "y": [
+      "j",
+      "i"
+    ],
+    "z": [
+      "z"
+    ]
+  },
+  "positional_graphemes": {
+    "c": {
+      "before_front_vowel": [
+        "s"
+      ],
+      "word_final": [
+        ""
+      ],
+      "default": [
+        "k"
+      ]
+    },
+    "g": {
+      "before_front_vowel": [
+        "ʒ"
+      ],
+      "word_final": [
+        ""
+      ],
+      "default": [
+        "ɡ"
+      ]
+    },
+    "h": {
+      "word_initial": [
+        "h",
+        ""
+      ],
+      "default": [
+        ""
+      ]
+    },
+    "i": {
+      "before_vowel": [
+        "j",
+        "i"
+      ],
+      "default": [
+        "i"
+      ]
+    },
+    "e": {
+      "word_final": [
+        "",
+        "ə"
+      ],
+      "default": [
+        "ə",
+        "e",
+        "ɛ"
+      ]
+    },
+    "s": {
+      "intervocalic": [
+        "z"
+      ],
+      "word_final": [
+        ""
+      ],
+      "default": [
+        "s"
+      ]
+    },
+    "t": {
+      "word_final": [
+        ""
+      ],
+      "default": [
+        "t"
+      ]
+    },
+    "d": {
+      "word_final": [
+        ""
+      ],
+      "default": [
+        "d"
+      ]
+    },
+    "p": {
+      "word_final": [
+        ""
+      ],
+      "default": [
+        "p"
+      ]
+    },
+    "x": {
+      "word_final": [
+        ""
+      ],
+      "default": [
+        "ks"
+      ]
+    },
+    "r": {
+      "word_final": [
+        "",
+        "r"
+      ],
+      "default": [
+        "r"
+      ]
+    },
+    "ou": {
+      "before_vowel": [
+        "w"
+      ],
+      "default": [
+        "u"
+      ]
+    }
+  },
+  "grammatical_endings": {
+    "er": "e",
+    "ier": "je",
+    "ez": "e"
+  },
+  "allophones": {},
+  "allophone_rules": [
+    {
+      "id": "NRF_NASAL_a",
+      "phonemes": [
+        "a"
+      ],
+      "surface": "ɑ̃",
+      "followed_by": "coda_nasal",
+      "notes": "⟨an⟩ = /ɑ̃/. A vowel nasalises before a CODA nasal only; an onset nasal leaves it oral (⟨cana⟩)."
+    },
+    {
+      "id": "NRF_NASAL_aː",
+      "phonemes": [
+        "aː"
+      ],
+      "surface": "ɑ̃ː",
+      "followed_by": "coda_nasal",
+      "notes": "⟨ân⟩ = the long counterpart of ⟨an⟩; the circumflex marks length, which the nasal series preserves."
+    },
+    {
+      "id": "NRF_NASAL_IEN",
+      "phonemes": [
+        "ə"
+      ],
+      "surface": "ẽ",
+      "grapheme": [
+        "e"
+      ],
+      "preceded_by_phoneme": [
+        "j"
+      ],
+      "followed_by": "coda_nasal",
+      "notes": "⟨ien⟩ = /jẽ/ (⟨quien⟩, ⟨bien⟩): after the palatal glide the nasal is the close ⟨in⟩ vowel, not the ⟨an⟩ one."
+    },
+    {
+      "id": "NRF_NASAL_ə",
+      "phonemes": [
+        "ə"
+      ],
+      "surface": "ɑ̃",
+      "followed_by": "coda_nasal",
+      "notes": "⟨en⟩ = /ɑ̃/, merged with ⟨an⟩ as in the rest of Oïl."
+    },
+    {
+      "id": "NRF_NASAL_i",
+      "phonemes": [
+        "i"
+      ],
+      "surface": "ẽ",
+      "followed_by": "coda_nasal",
+      "notes": "⟨in⟩ = /ẽ/ — closer than the French /ɛ̃/ reflex."
+    },
+    {
+      "id": "NRF_NASAL_iː",
+      "phonemes": [
+        "iː"
+      ],
+      "surface": "ẽː",
+      "followed_by": "coda_nasal",
+      "notes": "⟨în⟩ = /ẽː/, the long counterpart of ⟨in⟩."
+    },
+    {
+      "id": "NRF_NASAL_o",
+      "phonemes": [
+        "o"
+      ],
+      "surface": "õ",
+      "followed_by": "coda_nasal",
+      "notes": "⟨on⟩ = /õ/."
+    },
+    {
+      "id": "NRF_NASAL_oː",
+      "phonemes": [
+        "oː"
+      ],
+      "surface": "õː",
+      "followed_by": "coda_nasal",
+      "notes": "⟨ôn⟩ = /õː/, the long counterpart of ⟨on⟩."
+    },
+    {
+      "id": "NRF_NASAL_u",
+      "phonemes": [
+        "u"
+      ],
+      "surface": "õ",
+      "followed_by": "coda_nasal",
+      "notes": "⟨oun⟩ spells the back nasal /õ/ (⟨raisoun⟩ /rɛzõ/); ⟨ou⟩ is otherwise /u/."
+    },
+    {
+      "id": "NRF_NASAL_y",
+      "phonemes": [
+        "y"
+      ],
+      "surface": "ø̃",
+      "followed_by": "coda_nasal",
+      "notes": "⟨un⟩ = /ø̃/ — the rounded front nasal Norman keeps where French merged it into /ɛ̃/."
+    },
+    {
+      "id": "NRF_NASAL_yː",
+      "phonemes": [
+        "yː"
+      ],
+      "surface": "ø̃ː",
+      "followed_by": "coda_nasal",
+      "notes": "⟨ûn⟩ = /ø̃ː/, the long counterpart of ⟨un⟩."
+    },
+    {
+      "id": "NRF_NASAL_ɛ",
+      "phonemes": [
+        "ɛ"
+      ],
+      "surface": "ɛ̃",
+      "followed_by": "coda_nasal",
+      "notes": "⟨ain⟩ / ⟨ein⟩ = /ɛ̃/, distinct from the ⟨in⟩ series."
+    },
+    {
+      "id": "NRF_NASAL_ɛː",
+      "phonemes": [
+        "ɛː"
+      ],
+      "surface": "ɛ̃ː",
+      "followed_by": "coda_nasal",
+      "notes": "⟨aîn⟩ / ⟨ên⟩ = /ɛ̃ː/, the long counterpart of ⟨ain⟩."
+    },
+    {
+      "id": "NRF_NASAL_ABSORB",
+      "phonemes": [
+        "n",
+        "m"
+      ],
+      "surface": "",
+      "syllable_position": "coda",
+      "preceded_by": "vowel",
+      "notes": "the coda nasal is absorbed into the nasal vowel it created; keyed on the nasal so it cannot bleed the rule that makes it"
+    },
+    {
+      "id": "NRF_CL_PALATAL",
+      "phonemes": [
+        "l"
+      ],
+      "surface": "",
+      "preceded_by": "consonant",
+      "followed_by_grapheme": [
+        "i",
+        "y"
+      ],
+      "notes": "Norman palatalised the Latin/Oïl clusters ⟨pl bl cl fl⟩ before a front glide: the ⟨l⟩ of ⟨blianc⟩, ⟨pliat⟩, ⟨cliair⟩ is mute and the following ⟨i⟩/⟨y⟩ carries /j/. Only in a cluster — an intervocalic ⟨l⟩ before ⟨i⟩ (⟨tolir⟩) is unaffected."
+    },
+    {
+      "id": "NRF_E_CLOSED",
+      "phonemes": [
+        "ə"
+      ],
+      "surface": "ɛ",
+      "grapheme": [
+        "e"
+      ],
+      "followed_by": "consonant_cluster",
+      "notes": "⟨e⟩ in a closed syllable is /ɛ/, not schwa."
+    },
+    {
+      "id": "NRF_E_FINAL_CLOSED",
+      "phonemes": [
+        "ə"
+      ],
+      "surface": "ɛ",
+      "grapheme": [
+        "e"
+      ],
+      "followed_by": "coda",
+      "followed_by_nucleus": false,
+      "notes": "⟨e⟩ in the closed final syllable is /ɛ/ (⟨hitchet⟩, ⟨abusette⟩), not schwa."
+    }
+  ],
+  "ancestors": [
+    {
+      "code": "la",
+      "role": "ancestor",
+      "weight": 1.0,
+      "notes": "Gallo-Romance language evolved from Vulgar Latin in Normandy; Old Norse superstrate"
+    }
+  ],
+  "parent": "x-clade-gallorom",
+  "notes": "Norman (Nouormand), an Oïl (Gallo-Romance) language of Normandy, Jersey (Jèrriais), Guernsey (Dgèrnésiais) and Sark (Sercquiais). COMMITMENT: this map implements ONE norm — JÈRRIAIS in its standard dictionary orthography (Le Maistre 1966) — because it is the only Norman variety with a settled spelling and a published spelling-to-sound table. Norman has three standardised spellings (continental, Jèrriais, Dgèrnésiais) and they assign different values to the same digraphs; continental forms fed to this spec get the Jèrriais reading of their letters, which is right for the shared inherited spellings (⟨qu⟩, ⟨ch⟩, ⟨ou⟩, the silent finals) and approximate elsewhere. INPUT CONTRACT: lowercase Norman text with its circumflexes and graves intact (â ê î ô û é è òe òê) — the accents carry vowel length, so stripping them destroys the mapping. Distinctively Norman: ⟨th⟩ = /ð/ (or /θ/), the dental fricative no other Oïl variety has; ⟨tch⟩ = /tʃ/ and ⟨dg⟩ = /dʒ/, the affricates written with plain ⟨ch⟩ and ⟨g⟩ in French; ⟨ch⟩ = /ʃ/ (the affricate is spelled ⟨tch⟩, so ⟨ch⟩ never carries it); ⟨ç⟩ = /ʃ/; ⟨ngn⟩ = /ɲ/; ⟨qu⟩ = /k/. Norman north of the Joret line kept Latin /k/ before /a/ where French palatalised it — ⟨cat⟩, ⟨cose⟩, ⟨quien⟩ against French chat, chose, chien — so ⟨c⟩ and ⟨qu⟩ before a back vowel stay /k/. Norse superstrate left an aspirate /h/ that French lost. Word-initial ⟨h⟩ is ranked /h/ first and mute second, because the retention is real but not exceptionless — Norman also inherited French words whose ⟨h⟩ was already mute, and the two readings are not predictable from the spelling. Elsewhere ⟨h⟩ is a spelling artifact of the digraphs and is silent outright. Norman ⟨ei⟩ stands where French writes ⟨oi⟩ (⟨beire⟩, ⟨creire⟩, ⟨veisin⟩) and is /e/ or /ɛ/, never /wa/. Vowels come in short/long pairs, the long member written with a circumflex. ⟨au⟩ is the open /ɔ/, not the close French /o/, and ⟨iau⟩ is the Norman reflex of French ⟨eau⟩ (⟨iau⟩ 'water', ⟨biauté⟩ 'beauty') — both are standard descriptions of Norman (e.g. Liddicoat 1994), stated here from the general literature rather than from a table consulted for this spec; edition not consulted. Five nasal vowels /ẽ ø̃ õ ɛ̃ ɑ̃/, each with a long counterpart, spelled ⟨in un on en an⟩. Which of ⟨en⟩ and ⟨ain⟩ carries /ɛ̃/ is NOT settled here: this spec reads ⟨en⟩ as /ɑ̃/, merged with ⟨an⟩ as elsewhere in Oïl, and gives /ɛ̃/ to ⟨ain⟩ and ⟨ein⟩, which is what the attested forms show; the source table's five-way pairing can also be read as ⟨en⟩ = /ɛ̃/. NEEDS NATIVE CHECK. The nasal spellings are NOT digraph keys — they fall out of the coda-nasal allophone rules, which correctly leave the vowel oral before an onset nasal (⟨janne⟩ /ʒan/). That generalisation is applied even where a gold transcription disagrees: the WikiPron ⟨janne⟩ row is nasal, /ʒɑ̃n/, and this spec does not follow it. Silent letters follow the Oïl convention: word-final unstressed ⟨e⟩ is mute, and so are word-final ⟨t d s p x c g⟩ and the ⟨r⟩ of an infinitive or agentive; a doubled consonant letter is French etymological spelling and spells a single consonant, because Jèrriais writes its real geminates with the apostrophe trigraph (⟨pâl'la⟩, ⟨c'mench'chons⟩). ENDING \"er\" is the first-conjugation infinitive, realised /e/ with the ⟨r⟩ mute (Liddicoat 1994; Le Maistre 1966). ENDING \"ier\" is the palatalised variant of that infinitive after a palatalising consonant, realised /je/ (Liddicoat 1994). ENDING \"ez\" is the second-person plural, realised /e/ with the ⟨z⟩ mute (Liddicoat 1994). All three are the Oïl endings French spells and silences the same way.",
+  "sources": [
+    {
+      "id": "wiki-nrf",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Norman language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Norman_language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Norman_language",
+      "notes": "Retention of Latin /k/ north of the Joret line (cat, cose, quien), the aspirate /h/ of Norse superstrate origin, ⟨ei⟩ for French ⟨oi⟩ (beire, creire), and the three standardised spellings."
+    },
+    {
+      "id": "wiki-jerriais",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Jèrriais",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/J%C3%A8rriais",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/J%C3%A8rriais",
+      "notes": "Carries the Jèrriais spelling-to-IPA tables this spec follows: consonants (⟨c⟩ before e/i/y = /s/, ⟨g⟩ before e/i = /ʒ/, ⟨dg⟩ = /dʒ/, ⟨tch⟩ = /tʃ/, ⟨th⟩ = /ð/ or /θ/, ⟨qu⟩ = /k/, ⟨ç⟩ and ⟨ch⟩ = /ʃ/, ⟨ngn⟩ = /ɲ/, silent final ⟨p g h r⟩), the nine short/long oral vowel pairs written with the circumflex, the five short/long nasal pairs spelled ⟨in un on en an⟩, and the apostrophe trigraph that writes true gemination."
+    },
+    {
+      "id": "lemaistre1966",
+      "author": "Le Maistre, Frank",
+      "year": 1966,
+      "title": "Dictionnaire Jersiais-Français",
+      "publisher": "Don Balleine Trust, Jersey",
+      "notes": "The reference dictionary that fixed the modern Jèrriais orthography this spec takes as its input contract. Edition not consulted."
+    },
+    {
+      "id": "liddicoat1994",
+      "author": "Liddicoat, Anthony J.",
+      "year": 1994,
+      "title": "A Grammar of the Norman French of the Channel Islands: The Dialects of Jersey and Sark",
+      "publisher": "Mouton de Gruyter, Berlin",
+      "notes": "The standard descriptive grammar of Island Norman; the reference for the phoneme inventory, the silent finals and the infinitive endings. Edition not consulted — cited by author-year only."
+    },
+    {
+      "id": "jones2001",
+      "author": "Jones, Mari C.",
+      "year": 2001,
+      "title": "Jersey Norman French: A Linguistic Study of an Obsolescent Dialect",
+      "publisher": "Blackwell, Oxford",
+      "notes": "Sociolinguistic and phonological study of Jèrriais. Edition not consulted — cited by author-year only."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Norman_language",
+    "https://en.wikipedia.org/wiki/J%C3%A8rriais",
+    "https://fr.wikipedia.org/wiki/Normand"
+  ],
+  "wikidata_qid": "Q33850",
+  "location": {
+    "latitude": 49.081,
+    "longitude": -0.6591,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Normand."
+  }
+}

@@ -1,0 +1,160 @@
+{
+  "code": "es-MX-x-yucatan",
+  "name": "Yucatec Mexican Spanish",
+  "script": "Latin",
+  "graphemes_base": "es-ES",
+  "graphemes": {
+    "c": [
+      "k",
+      "s"
+    ],
+    "z": [
+      "s"
+    ],
+    "ll": [
+      "ʝ"
+    ],
+    "j": [
+      "h"
+    ]
+  },
+  "allophones_base": "es-ES",
+  "positional_graphemes_base": "es-ES",
+  "positional_graphemes": {
+    "c": {
+      "before_e": [
+        "s"
+      ],
+      "before_i": [
+        "s"
+      ]
+    },
+    "b": {
+      "intervocalic": [
+        "b"
+      ]
+    },
+    "d": {
+      "intervocalic": [
+        "d"
+      ],
+      "word_final": [
+        "d"
+      ]
+    },
+    "g": {
+      "before_e": [
+        "h"
+      ],
+      "before_i": [
+        "h"
+      ],
+      "intervocalic": [
+        "ɡ"
+      ]
+    },
+    "n": {
+      "word_final": [
+        "m"
+      ],
+      "before_consonant": [
+        "n",
+        "ŋ"
+      ]
+    }
+  },
+  "parent": "es-MX",
+  "ancestors": [
+    {
+      "code": "es-MX",
+      "role": "parent",
+      "weight": 0.85,
+      "notes": "Immediate national variety (parent dialect)."
+    },
+    {
+      "code": "es-419",
+      "role": "ancestor",
+      "weight": 0.55,
+      "notes": "General Latin American Spanish (koine) — seseo/yeismo baseline shared by all LatAm varieties (Lipski 1994)."
+    },
+    {
+      "code": "yua",
+      "role": "adstrate",
+      "weight": 0.1,
+      "notes": "Yucatec Maya indigenous adstrate (regional contact influence; see stub yua.json)."
+    }
+  ],
+  "notes": "Yucatan-Peninsula Spanish — Lipski's (1994) 'Guatemala, parts of the Yucatan, and Costa Rica' zone; strong Yucatec Maya substrate. Over the pan-Latin-American baseline (seseo: c/z->/s/, yeismo: ll->/ʝ/) this spec models the four attested Yucatecan substrate reflexes: (1) SIGNATURE word/phrase-final /n/->[m] bilabialisation (positional_graphemes n.word_final; lope_blanch1987, michnowicz2008); (2) OCCLUSIVE intervocalic /b d g/ -> [b d g] instead of the Castilian spirants [β ð ɣ] (positional_graphemes b/d/g.intervocalic + d.word_final; michnowicz2012 p.105-106, lope_blanch1987); (3) aspirated /x/->[h] glottal jota, shared with the Mexican southern coasts (allophones x->h; lipski1994, lope_blanch1987). Glottalised/reinforced voiceless stops and glottal-stop hiatus insertion are attested but sociolinguistically stratified and variable (a minority realisation declining in apparent time, michnowicz2012 p.106, p.108-110), so they are documented here but NOT applied as a deterministic majority rule. All three modelled reflexes are themselves variable and stratified (younger/urban speakers converge on standard approximants and [x]; michnowicz2012 p.108-110); the spec encodes the traditional peninsular majority variant. Ancestry: es-ES-x-medieval -> es-ES -> es-419 -> es-MX -> es-MX-x-yucatan, with the Yucatec Maya substrate.",
+  "quality": "research",
+  "script_type": "alphabet",
+  "iso639_3": "spa",
+  "glottolog_code": null,
+  "timespan": {
+    "start_year": 1600,
+    "end_year": null
+  },
+  "sources": [
+    {
+      "id": "lipski_overview",
+      "author": "Lipski, John M.",
+      "year": 2011,
+      "title": "Geographical and Social Varieties of Spanish: An Overview",
+      "publisher": "In J.I. Hualde, A. Olarrea & E. O'Rourke (eds.), The Handbook of Hispanic Linguistics, Wiley-Blackwell",
+      "url": "https://johnlipski.github.io/geo.pdf",
+      "pages": "pp. 1-26",
+      "notes": "READ (geo.pdf). Reproduces the Lipski (1994) geographical dialect-zone classification of Latin American Spanish (list (2)): Mexican/SW-US; Caribbean; Guatemala-Yucatan-Costa Rica; El Salvador-Honduras-Nicaragua; interior Colombia + highland Venezuela; Pacific coast Colombia/Ecuador/Peru; Andean (Ecuador/Peru/Bolivia/NW-Argentina/NE-Chile); Chile; Paraguay/NE-Argentina/E-Bolivia; Argentina/Uruguay. Used here to enumerate the regional zones; no phonology quoted."
+    },
+    {
+      "id": "lipski1994",
+      "author": "Lipski, John M.",
+      "year": 1994,
+      "title": "Latin American Spanish",
+      "publisher": "Longman Linguistics Library, Longman",
+      "url": null,
+      "pages": "ch. Mexico, pp. 271-291 (Yucatan pp. 279-282)",
+      "notes": "The comprehensive dialect survey underlying the zone classification (cited via the author's own overview, geo.pdf, which was read). Documents the Yucatan peninsula sub-variety: retained coda /s/, seseo, and the glottal [h] realisation of /x/ shared with the Mexican southern coasts (as against highland velar [x]). Cited here for the /x/->[h] jota reflex and the conserved-/s/ peninsular baseline."
+    },
+    {
+      "id": "michnowicz2012",
+      "author": "Michnowicz, Jim",
+      "year": 2012,
+      "title": "The Standardization of Yucatan Spanish: Family Case Studies in Izamal and Merida",
+      "publisher": "In K. Geeslin & M. Diaz-Campos (eds.), Selected Proceedings of the 14th Hispanic Linguistics Symposium, Cascadilla Proceedings Project",
+      "url": "http://www.lingref.com/cpp/hls/14/paper2659.pdf",
+      "pages": "pp. 102-115",
+      "notes": "READ (deposited papers/michnowicz2012_standardization_yucatan_spanish_HLS14.pdf). Three Maya-contact phonological features of Yucatan Spanish enumerated p.103-104: (a) occlusive /b d g/ in non-neutralising (e.g. intervocalic) contexts where standard Spanish has spirants [β ð ɣ] (p.105-106, Figure 4); (b) hiatus across word boundaries via glottal-stop insertion (p.106, Figure 5); (c) aspiration of voiceless /k/ (p.106, Figure 6). Apparent-time results (p.108-110): non-standard stop/glottal/aspiration variants decline in the youngest speakers (e.g. 21M 16%, 25M 11% occlusive average), i.e. the substrate reflexes are variable and stratified; the traditional peninsular majority variant is modelled here. Rising final -m noted p.113. Cited for occlusive /b d g/ and for the variable status of glottalisation."
+    },
+    {
+      "id": "michnowicz2008",
+      "author": "Michnowicz, Jim",
+      "year": 2008,
+      "title": "Final -m in Yucatan Spanish: A rapid and anonymous survey",
+      "publisher": "In J. Bruhn de Garavito & E. Valenzuela (eds.), Selected Proceedings of the 10th Hispanic Linguistics Symposium, Cascadilla Proceedings Project",
+      "url": null,
+      "pages": "pp. 155-165",
+      "notes": "Dedicated study of the signature Yucatecan reflex: absolute word/phrase-final /n/ realised as bilabial [m] (e.g. pan [pam]), a Yucatec-Maya contact feature increasing in apparent time as a marker of regional identity. Cited for the final /n/->[m] rule (positional_graphemes n.word_final)."
+    },
+    {
+      "id": "lope_blanch1987",
+      "author": "Lope Blanch, Juan M.",
+      "year": 1987,
+      "title": "Estudios sobre el espanol de Yucatan",
+      "publisher": "Universidad Nacional Autonoma de Mexico (UNAM)",
+      "url": null,
+      "pages": null,
+      "notes": "Foundational descriptive survey of Yucatecan Spanish phonetics. Documents the polimorfismo yucateco: word-final nasal realisations dominated by [n] (~73%) with [m] (~12%) and [ŋ] (~8%); occlusive/reinforced /b d g/ with occlusion decreasing front-to-back (bilabial > dental > velar); glottalised and aspirated voiceless stops /p t k/ and glottal closure at vowel junctures; glottal [h] for /x/. Cited for final /n/->[m], occlusive /b d g/, /x/->[h] and the attested-but-variable glottalisation."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Spanish_dialects_and_varieties",
+    "https://es.wikipedia.org/wiki/Espa%C3%B1ol_yucateco",
+    "https://es.wikipedia.org/wiki/Espa%C3%B1ol_mexicano",
+    "https://en.wikipedia.org/wiki/Mexican_Spanish"
+  ],
+  "location": {
+    "latitude": 20.97,
+    "longitude": -89.62,
+    "source": "wikidata",
+    "notes": "Mérida (Yucatán) — the centre of the Yucatán peninsula. [Wikidata Q165204 P625]"
+  }
+}

@@ -1,0 +1,185 @@
+{
+  "code": "mus",
+  "name": "Muscogee",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "a": [
+      "aː",
+      "a"
+    ],
+    "e": [
+      "ɪ"
+    ],
+    "ē": [
+      "iː"
+    ],
+    "i": [
+      "ɛj"
+    ],
+    "o": [
+      "o"
+    ],
+    "u": [
+      "ʊ"
+    ],
+    "v": [
+      "ə"
+    ],
+    "c": [
+      "tʃ"
+    ],
+    "f": [
+      "f"
+    ],
+    "h": [
+      "h"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "ɬ"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "w": [
+      "w"
+    ],
+    "y": [
+      "j"
+    ]
+  },
+  "allophones": {
+    "aː": [
+      "aː"
+    ],
+    "a": [
+      "a"
+    ],
+    "ɪ": [
+      "ɪ"
+    ],
+    "iː": [
+      "iː"
+    ],
+    "ɛj": [
+      "ɛj"
+    ],
+    "o": [
+      "o"
+    ],
+    "ʊ": [
+      "ʊ"
+    ],
+    "ə": [
+      "ə"
+    ],
+    "tʃ": [
+      "tʃ"
+    ],
+    "f": [
+      "f"
+    ],
+    "h": [
+      "h"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "p": [
+      "p"
+    ],
+    "ɬ": [
+      "ɬ"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "w": [
+      "w"
+    ],
+    "j": [
+      "j"
+    ]
+  },
+  "iso639_3": "mus",
+  "glottolog_code": "cree1270",
+  "wikidata_qid": "Q523014",
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Muscogee_language",
+    "https://mus.wikipedia.org/wiki/Mvskoke"
+  ],
+  "sources": [
+    {
+      "id": "martin2011",
+      "author": "Martin, Jack B.",
+      "year": 2011,
+      "title": "A Grammar of Creek (Muskogee)",
+      "publisher": "University of Nebraska Press",
+      "url": null,
+      "pages": null,
+      "notes": "Reference grammar: phonology and the traditional orthography."
+    },
+    {
+      "id": "muscogee_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2025,
+      "title": "Muscogee language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Muscogee_language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Muscogee_language",
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "notes": "Muscogee / Creek (Mvskoke) — Muskogean language of Oklahoma, written in the Latin script with the traditional Creek alphabet. Two orthographic conventions deserve note: ⟨c⟩ = /tʃ/ and ⟨r⟩ = the voiceless lateral fricative /ɬ/ (not a rhotic). ⟨v⟩ is the short central vowel /ə ~ a/ and ⟨ē⟩ the long /iː/. Vowel length and pitch accent are phonemic; length is only partly written. This spec covers the traditional (Loughridge/Bible) alphabet, which remains the community standard.",
+  "timespan": {
+    "start_year": 1835,
+    "end_year": null
+  },
+  "parent": "x-clade-musk1252",
+  "ancestors": [
+    {
+      "code": "x-clade-musk1252",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Muskogean — the classification node this language sits under."
+    }
+  ],
+  "location": {
+    "latitude": 31.0,
+    "longitude": -87.5,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Creek."
+  }
+}

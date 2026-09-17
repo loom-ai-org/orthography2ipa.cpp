@@ -1,0 +1,85 @@
+{
+  "code": "en-AU",
+  "name": "Australian English",
+  "script": "Latin",
+  "graphemes_base": "en-GB",
+  "allophones_base": "en-GB",
+  "allophones": {
+    "t": [
+      "t",
+      "tʰ",
+      "ɾ",
+      "ʔ"
+    ],
+    "iː": [
+      "ɪi"
+    ],
+    "æ": [
+      "æ",
+      "æː"
+    ],
+    "eɪ": [
+      "æɪ",
+      "eɪ"
+    ],
+    "aɪ": [
+      "ɑɪ",
+      "aɪ"
+    ],
+    "oʊ": [
+      "əʉ",
+      "əʊ"
+    ],
+    "aʊ": [
+      "æɔ",
+      "aʊ"
+    ]
+  },
+  "parent": "en-GB",
+  "notes": "Australian English. Non-rhotic. FACE raising: /eɪ/ → [æɪ] (the 'Strine' stereotype). PRICE = [ɑɪ]; FLEECE = [ɪi] (diphthongal). Three sociolects: Broad (most Australian), General, Cultivated. Source: Wells (1982) vol. 3.",
+  "quality": "skeleton",
+  "script_type": "alphabet",
+  "sources": [
+    {
+      "id": "wells1982_vol3",
+      "author": "Wells, J.C.",
+      "year": 1982,
+      "title": "Accents of English, Vol. 3: Beyond the British Isles",
+      "publisher": "Cambridge University Press",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "cox_palethorpe2007",
+      "author": "Cox, F. & Palethorpe, S.",
+      "year": 2007,
+      "title": "Australian English",
+      "publisher": "Journal of the International Phonetic Association",
+      "url": null,
+      "pages": "341-350",
+      "notes": "JIPA 37(3)"
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Australian_English"
+  ],
+  "timespan": {
+    "start_year": 1800,
+    "end_year": null
+  },
+  "glottolog_code": "aust1314",
+  "iso639_3": "eng",
+  "wikidata_qid": "Q44679",
+  "location": {
+    "latitude": -25,
+    "longitude": 133,
+    "source": "wikidata",
+    "notes": "Australia's representative point. A national variety: weak. [Wikidata Q408 P625]"
+  },
+  "collapse_geminates": true,
+  "vowel_graphemes": [
+    "y"
+  ],
+  "word_exceptions_base": "en-GB"
+}

@@ -1,0 +1,60 @@
+{
+  "code": "fuv",
+  "name": "Nigerian Fulfulde",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes_base": "ff",
+  "graphemes": {},
+  "allophones_base": "ff",
+  "allophones": {},
+  "notes": "Nigerian Fulfulde, the Fula (ff) variety of Northern Nigeria, spoken by ~17 million people (2020 estimate) and following the Pan-Nigerian Latin alphabet standard for its Latin orthography. Inherits the shared Fula grapheme/allophone inventory from ff.json (graphemes_base/allophones_base): no source consulted documents a phonemic or orthographic divergence specific to Nigerian Fulfulde beyond the general vowel-harmony and stop/fricative/nasal pattern already described for ff. Shows 80-90% mutual intelligibility with Adamawa Fulfulde and is most similar to Central-Eastern Niger Fulfulde. Also written in a standardized Ajami (Arabic-based) orthography adopted since 2003 with adaptations for Fulfulde-specific phonemes, not covered by this spec (Latin-orthography scope only, matching the parent ff spec). Quality:research reflects that the child spec's own orthographic claims are not independently sourced beyond straight ff inheritance.",
+  "sources": [
+    {
+      "id": "fuv_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Nigerian Fulfulde",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Nigerian_Fulfulde",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Nigerian_Fulfulde",
+      "pages": null,
+      "notes": "Classification, speaker population, dialect intelligibility, Ajami/Latin script history."
+    },
+    {
+      "id": "arnott1970",
+      "author": "Arnott, D.W.",
+      "year": 1970,
+      "title": "The Nominal and Verbal System of Fula",
+      "publisher": "Oxford University Press",
+      "url": null,
+      "pages": null,
+      "notes": "Comparative Fula reference grammar."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Nigerian_Fulfulde",
+    "https://en.wikipedia.org/wiki/Fula_language"
+  ],
+  "urls": [
+    "https://glottolog.org/resource/languoid/id/nige1253",
+    "https://www.ethnologue.com/language/fuv/"
+  ],
+  "iso639_3": "fuv",
+  "glottolog_code": "nige1253",
+  "parent": "ff",
+  "ancestors": [
+    {
+      "code": "ff",
+      "role": "parent_dialect",
+      "weight": 1.0,
+      "notes": "Nigerian Fulfulde is the Northern Nigeria variety of the Fula macrolanguage."
+    }
+  ],
+  "location": {
+    "latitude": 12.0,
+    "longitude": 9.0,
+    "source": "glottolog",
+    "notes": "Approximate centroid of the Fulfulde-speaking region of Northern Nigeria."
+  }
+}

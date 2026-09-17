@@ -1,0 +1,293 @@
+{
+  "code": "rej",
+  "name": "Rejang",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "e": [
+      "ə"
+    ],
+    "é": [
+      "e"
+    ],
+    "è": [
+      "ɛ"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "o"
+    ],
+    "u": [
+      "u"
+    ],
+    "eu": [
+      "əu"
+    ],
+    "ea": [
+      "ɛa"
+    ],
+    "ai": [
+      "ai"
+    ],
+    "au": [
+      "au"
+    ],
+    "p": [
+      "p"
+    ],
+    "b": [
+      "b"
+    ],
+    "t": [
+      "t"
+    ],
+    "d": [
+      "d"
+    ],
+    "c": [
+      "c"
+    ],
+    "j": [
+      "ɟ"
+    ],
+    "k": [
+      "k"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "mb": [
+      "ᵐb"
+    ],
+    "nd": [
+      "ⁿd"
+    ],
+    "nj": [
+      "ᶮɟ"
+    ],
+    "ngg": [
+      "ᵑɡ"
+    ],
+    "s": [
+      "s"
+    ],
+    "h": [
+      "h"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ny": [
+      "ɲ"
+    ],
+    "ng": [
+      "ŋ"
+    ],
+    "l": [
+      "l"
+    ],
+    "r": [
+      "r"
+    ],
+    "w": [
+      "w"
+    ],
+    "y": [
+      "j"
+    ]
+  },
+  "positional_graphemes": {
+    "k": {
+      "word_final": [
+        "ʔ"
+      ],
+      "default": [
+        "k"
+      ]
+    }
+  },
+  "allophones": {
+    "a": [
+      "a"
+    ],
+    "ə": [
+      "ə"
+    ],
+    "e": [
+      "e"
+    ],
+    "ɛ": [
+      "ɛ"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "o"
+    ],
+    "u": [
+      "u"
+    ],
+    "əu": [
+      "əu"
+    ],
+    "ɛa": [
+      "ɛa"
+    ],
+    "ai": [
+      "ai"
+    ],
+    "au": [
+      "au"
+    ],
+    "p": [
+      "p"
+    ],
+    "b": [
+      "b"
+    ],
+    "t": [
+      "t"
+    ],
+    "d": [
+      "d"
+    ],
+    "c": [
+      "c"
+    ],
+    "ɟ": [
+      "ɟ"
+    ],
+    "k": [
+      "k"
+    ],
+    "ɡ": [
+      "ɡ"
+    ],
+    "ʔ": [
+      "ʔ"
+    ],
+    "ᵐb": [
+      "ᵐb"
+    ],
+    "ⁿd": [
+      "ⁿd"
+    ],
+    "ᶮɟ": [
+      "ᶮɟ"
+    ],
+    "ᵑɡ": [
+      "ᵑɡ"
+    ],
+    "s": [
+      "s"
+    ],
+    "h": [
+      "h"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ɲ": [
+      "ɲ"
+    ],
+    "ŋ": [
+      "ŋ"
+    ],
+    "l": [
+      "l"
+    ],
+    "r": [
+      "r"
+    ],
+    "w": [
+      "w"
+    ],
+    "j": [
+      "j"
+    ]
+  },
+  "notes": "Rejang, spoken by ~350,000 people in Bengkulu and South Sumatra provinces, southwestern Sumatra, Indonesia (Austronesian, Malayo-Polynesian). This spec describes the modern Latin orthography, which has largely superseded the traditional Rejang script (Surat Ulu / aksara Rejang, ISO 15924 'Rjng', an abugida) since the 1960s; that native script is NOT modelled here, only referenced — building a reliable grapheme inventory for it would need a dedicated, separately-sourced spec. There is no single codified Latin spelling standard for Rejang (per Wikipedia); the Latin orthography in use follows Indonesian-like conventions with digraphs and diacritics, which this spec approximates at 'basic' quality. CONSONANTS: plosives /p b t d c ɟ k ɡ/ (⟨c⟩/⟨j⟩ = palatal stops, not affricates — Jaspan/r12a phonemic description), fricatives /s h/, nasals /m n ɲ ŋ/ (⟨ny⟩/⟨ng⟩ digraphs), approximants /l w j/ (⟨y⟩ = /j/), and four PRENASALISED stops /ᵐb ⁿd ᶮɟ ᵑɡ/ (⟨mb nd nj ngg⟩) — a single phonological unit each, not a nasal+stop cluster (AGENTS.md §2 test 2). The trill /r/ occurs only in loanwords (r12a). Omniglot's Latin-alphabet chart notes were fetched directly and confirm: word-final ⟨k⟩ is pronounced [ʔ] ('K is pronounced [ʔ] at the end of words'), now modelled as a `positional_graphemes` word-final rule; the same notes state 'Q only appears at the end of words' but do not assign it a distinct IPA value, so ⟨q⟩ itself is left unmodelled for lack of a confidently sourced phonetic value. VOWELS: eight qualities /i e ɛ ə a ɔ o u/ (r12a) realised in the Latin orthography with the same unmarked-schwa / accented-full-vowel convention as neighbouring Sumatran Malayo-Polynesian orthographies (⟨e⟩=/ə/, ⟨é⟩=/e/, ⟨è⟩=/ɛ/); the back-vowel /o/–/ɔ/ contrast is not confidently sourced for the Latin spelling and is left unmarked. Four diphthongs /əu̯ ɛa̯ ai̯ au̯/ (⟨eu ea ai au⟩, r12a).",
+  "sources": [
+    {
+      "id": "rej_omniglot",
+      "author": "Ager, Simon",
+      "year": 2024,
+      "title": "Rejang script and language",
+      "publisher": "Omniglot",
+      "url": "https://www.omniglot.com/writing/redjang.htm",
+      "pages": null,
+      "notes": "Latin-alphabet pronunciation notes: word-final ⟨k⟩ = [ʔ]; ⟨q⟩ restricted to word-final position; confirms no standardised Rejang Latin spelling exists."
+    },
+    {
+      "id": "rej_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Rejang language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Rejang_language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Rejang_language",
+      "pages": null,
+      "notes": "Speaker population, region, note on Latin orthography superseding the Rejang script since the 1960s."
+    },
+    {
+      "id": "r12a_rjng",
+      "author": "Richard Ishida (r12a)",
+      "year": 2022,
+      "title": "Rejang orthography notes",
+      "publisher": "r12a.github.io",
+      "url": "https://r12a.github.io/scripts/rjng/rej.html",
+      "pages": null,
+      "notes": "Phonemic vowel/diphthong/consonant inventory (8 vowels, 4 diphthongs, 18 basic + 4 prenasalised consonants), syllable structure."
+    },
+    {
+      "id": "jaspan1961",
+      "author": "Jaspan, M.A.",
+      "year": 1961,
+      "title": "Fieldwork on Rejang language and culture, Bengkulu (1961-1963)",
+      "publisher": "Unpublished field notes, cited in Wikipedia 'Rejang language'",
+      "url": null,
+      "pages": null,
+      "notes": "Earliest systematic documentation of Rejang Latin-based phonological representation."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Rejang_language",
+    "https://en.wikipedia.org/wiki/Rejang_alphabet"
+  ],
+  "urls": [
+    "https://glottolog.org/resource/languoid/id/reja1240",
+    "https://r12a.github.io/scripts/rjng/rej.html",
+    "https://www.omniglot.com/writing/redjang.htm"
+  ],
+  "iso639_3": "rej",
+  "glottolog_code": "reja1240",
+  "wikidata_qid": "Q3056339",
+  "parent": "poz",
+  "ancestors": [
+    {
+      "code": "poz",
+      "role": "parent",
+      "weight": 0.9,
+      "notes": "Malayo-Polynesian branch of Austronesian; sometimes placed in a Greater North Borneo subgroup, itself unregistered."
+    }
+  ],
+  "location": {
+    "latitude": -3.8004,
+    "longitude": 102.2655,
+    "source": "glottolog",
+    "notes": "Bengkulu, southwestern Sumatra, the heartland of Rejang speech."
+  }
+}

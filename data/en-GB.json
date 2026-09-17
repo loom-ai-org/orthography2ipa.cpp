@@ -1,0 +1,1518 @@
+{
+  "code": "en-GB",
+  "name": "British English (RP)",
+  "script": "Latin",
+  "graphemes": {
+    "a": [
+      "æ",
+      "ɑː",
+      "eɪ",
+      "ə",
+      "ɔː"
+    ],
+    "b": [
+      "b"
+    ],
+    "c": [
+      "k",
+      "s"
+    ],
+    "d": [
+      "d"
+    ],
+    "e": [
+      "ɛ",
+      "iː",
+      "ə"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɡ",
+      "dʒ"
+    ],
+    "h": [
+      "h"
+    ],
+    "kh": [
+      "k"
+    ],
+    "i": [
+      "ɪ",
+      "iː",
+      "aɪ"
+    ],
+    "j": [
+      "dʒ"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "o": [
+      "ɒ",
+      "əʊ",
+      "ɔː",
+      "ʌ",
+      "uː"
+    ],
+    "p": [
+      "p"
+    ],
+    "q": [
+      "k"
+    ],
+    "r": [
+      "ɹ"
+    ],
+    "s": [
+      "s",
+      "z"
+    ],
+    "t": [
+      "t"
+    ],
+    "u": [
+      "ʌ",
+      "juː",
+      "uː",
+      "ʊ"
+    ],
+    "v": [
+      "v"
+    ],
+    "w": [
+      "w"
+    ],
+    "x": [
+      "ks",
+      "ɡz"
+    ],
+    "y": [
+      "j",
+      "iː",
+      "aɪ",
+      "ɪ"
+    ],
+    "z": [
+      "z"
+    ],
+    "ch": [
+      "tʃ",
+      "k",
+      "ʃ"
+    ],
+    "ck": [
+      "k"
+    ],
+    "dg": [
+      "dʒ"
+    ],
+    "gh": {
+      "ipa": [
+        "ɡ",
+        "f",
+        ""
+      ],
+      "weights": [
+        0.03,
+        0.12,
+        0.85
+      ]
+    },
+    "gg": [
+      "ɡ"
+    ],
+    "gn": [
+      "n"
+    ],
+    "kn": [
+      "n"
+    ],
+    "ng": [
+      "ŋ",
+      "ŋɡ"
+    ],
+    "ph": [
+      "f"
+    ],
+    "qu": [
+      "kw"
+    ],
+    "sc": [
+      "s"
+    ],
+    "sch": [
+      "sk"
+    ],
+    "sh": [
+      "ʃ"
+    ],
+    "ss": [
+      "s"
+    ],
+    "th": [
+      "θ",
+      "ð"
+    ],
+    "wh": [
+      "w",
+      "ʍ"
+    ],
+    "wr": [
+      "ɹ"
+    ],
+    "tch": [
+      "tʃ"
+    ],
+    "dge": [
+      "dʒ"
+    ],
+    "ai": [
+      "eɪ"
+    ],
+    "ay": [
+      "eɪ"
+    ],
+    "ea": [
+      "iː",
+      "ɛ"
+    ],
+    "ee": [
+      "iː"
+    ],
+    "ei": [
+      "iː",
+      "eɪ"
+    ],
+    "ey": [
+      "iː",
+      "eɪ"
+    ],
+    "ie": {
+      "ipa": [
+        "aɪ",
+        "iː"
+      ],
+      "weights": [
+        0.4,
+        0.6
+      ]
+    },
+    "oa": [
+      "əʊ"
+    ],
+    "oe": [
+      "əʊ",
+      "uː"
+    ],
+    "oi": [
+      "ɔɪ"
+    ],
+    "oo": [
+      "uː",
+      "ʊ"
+    ],
+    "ou": [
+      "aʊ",
+      "ʌ",
+      "uː"
+    ],
+    "ow": [
+      "aʊ",
+      "əʊ"
+    ],
+    "ue": [
+      "juː",
+      "uː"
+    ],
+    "ui": [
+      "uː",
+      "ɪ"
+    ],
+    "eau": [
+      "juː",
+      "əʊ"
+    ],
+    "igh": [
+      "aɪ"
+    ],
+    "ough": [
+      "ɔː",
+      "əʊ",
+      "ʌf",
+      "ɒf",
+      "aʊ",
+      "uː"
+    ],
+    "ar": [
+      "ɑːɹ"
+    ],
+    "au": [
+      "ɔː",
+      "ɑː",
+      "ɒ"
+    ],
+    "aw": [
+      "ɔː"
+    ],
+    "er": {
+      "ipa": [
+        "ɜːɹ",
+        "əɹ"
+      ],
+      "weights": [
+        0.2,
+        0.8
+      ]
+    },
+    "eu": [
+      "juː"
+    ],
+    "ew": [
+      "juː",
+      "uː"
+    ],
+    "ir": [
+      "ɜːɹ"
+    ],
+    "or": [
+      "ɔːɹ"
+    ],
+    "oy": [
+      "ɔɪ"
+    ],
+    "ur": [
+      "ɜːɹ"
+    ],
+    "air": [
+      "ɛəɹ"
+    ],
+    "are": [
+      "ɛəɹ"
+    ],
+    "ear": [
+      "ɪəɹ",
+      "ɛəɹ"
+    ],
+    "eer": [
+      "ɪəɹ"
+    ],
+    "ire": [
+      "aɪəɹ"
+    ],
+    "oar": [
+      "ɔːɹ"
+    ],
+    "ore": [
+      "ɔːɹ"
+    ],
+    "our": [
+      "aʊəɹ",
+      "ɔːɹ"
+    ],
+    "ure": [
+      "jʊəɹ",
+      "ʊəɹ"
+    ]
+  },
+  "allophones": {
+    "p": [
+      "p",
+      "pʰ",
+      "p̚"
+    ],
+    "b": [
+      "b",
+      "b̥"
+    ],
+    "t": [
+      "t",
+      "tʰ",
+      "ʔ",
+      "ɾ"
+    ],
+    "d": [
+      "d",
+      "d̥",
+      "ɾ"
+    ],
+    "k": [
+      "k",
+      "kʰ",
+      "k̚"
+    ],
+    "ɡ": [
+      "ɡ",
+      "ɡ̊"
+    ],
+    "f": [
+      "f"
+    ],
+    "v": [
+      "v",
+      "v̥"
+    ],
+    "θ": [
+      "θ"
+    ],
+    "ð": [
+      "ð",
+      "d̪"
+    ],
+    "s": [
+      "s"
+    ],
+    "z": [
+      "z",
+      "z̥"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "ʒ": [
+      "ʒ",
+      "ʒ̊"
+    ],
+    "h": [
+      "h",
+      "ɦ"
+    ],
+    "tʃ": [
+      "tʃ"
+    ],
+    "dʒ": [
+      "dʒ",
+      "dʒ̊"
+    ],
+    "m": [
+      "m",
+      "ɱ"
+    ],
+    "n": [
+      "n",
+      "n̪",
+      "ɱ",
+      "ŋ"
+    ],
+    "ŋ": [
+      "ŋ"
+    ],
+    "ɹ": [
+      "ɹ",
+      ""
+    ],
+    "l": [
+      "l",
+      "ɫ"
+    ],
+    "w": [
+      "w",
+      "ʍ",
+      "w̥"
+    ],
+    "j": [
+      "j"
+    ],
+    "iː": [
+      "iː"
+    ],
+    "ɪ": [
+      "ɪ"
+    ],
+    "ɛ": [
+      "ɛ"
+    ],
+    "æ": [
+      "æ",
+      "ɑː"
+    ],
+    "ɑː": [
+      "ɑː",
+      "ɒ"
+    ],
+    "ɒ": [
+      "ɒ",
+      "ɑ"
+    ],
+    "ɔː": [
+      "ɔː"
+    ],
+    "ʊ": [
+      "ʊ"
+    ],
+    "uː": [
+      "uː",
+      "ʉː"
+    ],
+    "ʌ": [
+      "ʌ",
+      "ɐ"
+    ],
+    "ɜːɹ": [
+      "ɜːɹ",
+      "ɝː"
+    ],
+    "ə": [
+      "ə",
+      "ɚ"
+    ],
+    "eɪ": [
+      "eɪ"
+    ],
+    "aɪ": [
+      "aɪ",
+      "ɑɪ"
+    ],
+    "ɔɪ": [
+      "ɔɪ"
+    ],
+    "əʊ": [
+      "əʊ",
+      "əʊ"
+    ],
+    "aʊ": [
+      "aʊ",
+      "æʊ"
+    ]
+  },
+  "parent": "enm",
+  "ancestors": [
+    {
+      "code": "enm",
+      "role": "parent",
+      "weight": 0.95,
+      "notes": "Middle English descent"
+    }
+  ],
+  "notes": "Received Pronunciation (RP) — traditional prestige accent of England. NON-RHOTIC: /r/ deleted before consonants and word-finally. TRAP-BATH split: BATH words = /ɑː/ (castle, grass, dance). LOT = /ɒ/ (rounded); GOAT = /əʊ/. T-glottaling common in contemporary RP (glottal stop for /t/ word-finally). Source: Wells (1982) vol. 1–2, Cruttenden (2014). C/G SOFTENING: c→[s] and g→[dʒ] before e/i/y (city, gem); exceptions: get, give, girl retain [ɡ]. INTERVOCALIC s: [z] between vowels (rose, nose) but [s] word-initially. TH DISTINCTION: [θ] in content words, [ð] in function words and intervocalically. X WORD-INITIAL: [z] (xylophone) vs [ks] elsewhere. SILENT FINAL E: orthographic word-final <e> after a consonant is not pronounced (mate, hope, time, judge); it historically marked the preceding vowel as tense/long, but that vowel-quality shift is not encoded here because the engine's positional model has no lookback to the preceding nucleus (known engine-limit exception). A small closed class of function words spelled with a genuinely pronounced final <e> (the, be, he, me, we, she) is carved out via `word_exceptions`, since the blanket positional rule cannot distinguish these monosyllables from the regular silent-e pattern. TION/SION FAMILY: -tion/-cian -> [ʃən], -ssion -> [ʃən] (mission, passion; matched via the dedicated `ssion` grapheme so maximal-munch tokenization picks it over `sion`), -sion -> [ʒən] after a vowel (vision, division, decision) or [ʃən] after a consonant (tension, pension, mansion), modelled with the `sion` entry in `positional_graphemes` using AFTER_VOWEL/AFTER_CONSONANT context, -tial/-cial -> [ʃəl], -cious/-tious -> [ʃəs] (Cruttenden 2014 spelling-to-sound correspondence rules). WORD STRESS AND UNSTRESSED-VOWEL REDUCTION: the `stress` block states the orthography-predictable part of English stress — a stem-initial default plus Fudge's two-syllable pre-stressed suffix classes — and its `notes` records what is NOT predictable and why, including the noun/verb pairs (ˈrecord vs reˈcord) that remain a lexical, part-of-speech ceiling. Stress is encoded because it CONDITIONS reduction: in RP the vowel of an unstressed syllable is not the vowel its spelling would take under stress but a weak vowel, overwhelmingly /ə/ (Cruttenden 2014 §9.4; Carney 1994 §II). REDUCTION: unstressed ⟨a⟩ (ˈwoman, ˈsalad, ˈbreakfast), ⟨o⟩ (ˈcommon, ˈmethod, ˈsecond) and ⟨u⟩ (ˈalbum, ˈcircus, ˈminus) are /ə/ wherever they are not the stressed nucleus; the r-coloured ⟨or⟩ (ˈdoctor, ˈtractor) and ⟨ar⟩ (ˈdollar, ˈsugar) are /əɹ/, which the non-rhotic rule then reduces to [ə] (Cruttenden 2014 §9.4, §8.7; Carney 1994). Every example here is a word whose reducing vowel the stress rules actually place in an UNSTRESSED syllable — ⟨about⟩ and ⟨mayor⟩ are not among them, because the stem-initial default stresses their first syllable, and ⟨suburb⟩ is not either, because its second nucleus is the ⟨ur⟩ grapheme rather than a bare ⟨u⟩. Unstressed ⟨e⟩ is /ə/ only in a CLOSED syllable (problem, open, garden, silent): in an OPEN unstressed syllable ⟨e⟩ is the other weak vowel /ɪ/, which is what the unreduced default already gives (beˈgin, deˈfine, reˈturn) — Cruttenden 2014 §9.4 separates the /ə/ and /ɪ/ weak-vowel distributions, and declaring a flat unstressed ⟨e⟩ → /ə/ instead is measurably worse. Unstressed ⟨i⟩ is left alone: its unreduced value is already /ɪ/, one of the weak vowels. LIMIT: the engine's stress is binary, so a syllable carrying SECONDARY stress (ˌcombiˈnation) is treated as fully weak and its vowel reduces where English keeps it full (Cruttenden 2014 §10.3) — this is the ceiling on how much stress placement can be cashed in as reduction. CANDIDATE WEIGHTS: a few ambiguous graphemes carry per-candidate `weights` (candidate frequencies) so the beam favours the corpus-dominant phoneme rather than the declared-first one — `er` = [ɜːɹ 0.2, əɹ 0.8] (unstressed schwar dominates the lexicon), `gh` = [ɡ 0.03, f 0.12, silent 0.85] (⟨gh⟩ is silent in the vast majority of words: night, though, high, weigh), `ie` = [aɪ 0.4, iː 0.6] (the /iː~i/ realisation of -ie/-ies edges out /aɪ/). Values are approximate frequencies grounded in Gontijo et al. (2003) British-English and Berndt et al. (1987) grapheme-phoneme probability studies, not PER-tuned parameters; graphemes without weights keep uniform rank ordering. See docs/candidate_scoring.md. SUFFIX PALATALIZATION (grammatical_endings, NOT graphemes): the suffix spellings ⟨-tion⟩ ⟨-stion⟩ ⟨-ssion⟩ ⟨-cion⟩ ⟨-cian⟩ ⟨-tial⟩ ⟨-cial⟩ ⟨-stial⟩ ⟨-tious⟩ ⟨-cious⟩ ⟨-stious⟩ are morphology, not units of the writing system, so they are declared in grammatical_endings and never as grapheme keys — a morpheme chunk as a grapheme key re-cuts the word's interior. Each is a cited claim about a suffix's realisation, not a pattern fitted to the score. The palatalization itself is Chomsky & Halle (1968) §4 The Sound Pattern of English: the stem-final coronal palatalizes before the -ion suffix, the surface values are Wells (2008) Longman Pronunciation Dictionary, and Carney (1994) A Survey of English Spelling documents the same correspondences from the orthographic side. Each key, with the source that covers it: ENDING \"tion\" is [ʃən] (nation, station, motion) (Chomsky & Halle 1968 §4; Wells 2008 LPD; Carney 1994). ENDING \"ssion\" is [ʃən] (mission, passion) (Chomsky & Halle 1968 §4; Wells 2008 LPD). ENDING \"cion\" is [ʃən] (coercion, suspicion) (Chomsky & Halle 1968 §4; Wells 2008 LPD). ENDING \"cian\" is [ʃən] (musician, physician) (Chomsky & Halle 1968 §4; Wells 2008 LPD; Carney 1994). ENDING \"tial\" is [ʃəl] (partial, martial) (Chomsky & Halle 1968 §4; Wells 2008 LPD). ENDING \"cial\" is [ʃəl] (special, crucial) (Chomsky & Halle 1968 §4; Wells 2008 LPD). ENDING \"tious\" is [ʃəs] (ambitious, cautious) (Chomsky & Halle 1968 §4; Wells 2008 LPD). ENDING \"cious\" is [ʃəs] (gracious, delicious) (Chomsky & Halle 1968 §4; Wells 2008 LPD). The ⟨s⟩-initial variants are separate keys because after ⟨s⟩ the coronal surfaces as the affricate [tʃ] rather than plain [ʃ], a bare [sʃ] cluster being phonotactically impossible in English, and longest-match-wins is what lets the longer key override the shorter one it contains: ENDING \"stion\" is [stʃən] (question, congestion) (Chomsky & Halle 1968 §4; Wells 2008 LPD). ENDING \"stial\" is [stʃəl] (celestial, bestial) (Chomsky & Halle 1968 §4; Wells 2008 LPD). ENDING \"stious\" is [stʃəs] — the ⟨-stious⟩ spelling is vanishingly rare in English, and the key exists so the ⟨s⟩ + coronal generalisation is stated uniformly across the three ⟨-ious⟩/⟨-ion⟩/⟨-ial⟩ families rather than holding for two of them and being silently out-munched by ⟨-tious⟩ in the third (Chomsky & Halle 1968 §4; Wells 2008 LPD). ENDING \"ture\" is [tʃə] (nature, picture, feature) — yod coalescence of the stem-final coronal with the suffix glide (Wells 2008 LPD; Cruttenden 2014 §9.7). ENDING \"sure\" is [ʒə] (measure, closure, leisure) — the same coalescence with a voiced coronal (Wells 2008 LPD; Cruttenden 2014 §9.7). ENDING \"ssure\" is [ʃə] (pressure, fissure) — the same coalescence after the voiceless ⟨ss⟩, and longest-match-wins is what lets it override ⟨-sure⟩ (Wells 2008 LPD; Cruttenden 2014 §9.7). ENDING \"ous\" is [əs] (famous, nervous, dangerous) — the unstressed adjectival suffix reduces to schwa plus [s]; this is suffix vowel reduction, NOT the palatalization the ⟨-ion⟩ family shares, and it is cited separately for that reason (Carney 1994 §II; Wells 2008 LPD). NOT covered on purpose: ⟨-sion⟩, which splits 96 gold [ʒ] against 107 gold [ʃ] on a left-context condition the ending matcher does not yet express, and the inflected ⟨-tions⟩/⟨-sions⟩, which English ⟨-s⟩ does not make transparent to effective_word_end. Both are open items, not silent gaps. English orthography is deep, so the general lexical residue still belongs to a lexicon or a morphological analyser in a downstream consumer of the lattice, not to this spec. WEAK-FORM ARTICLES: the indefinite articles a/an take the reduced weak form /ə/, /ən/ in citation/unstressed use (Wells 1982 vol.1, ch. on weak forms), matching the existing reduced-vowel treatment of \"the\" -> [ðə]; added to word_exceptions alongside it. NON-RHOTIC CODA /r/: RP keeps /r/ only before a vowel, so every rhotic nucleus (ɑːɹ, ɜːɹ, ɔːɹ, əɹ, ɛəɹ, ɪəɹ, ʊəɹ, aɪəɹ, aʊəɹ, and bare ɹ) loses its [ɹ] before a consonant and word-finally; the prevocalic (linking-r) realisation of the same spelling is untouched (Wells 1982 vol. 1 §3.2.2; Cruttenden 2014 §8.7). Stated as `allophone_rules` on the phoneme side, so a rhotic descendant states its rhoticity by re-declaring those ids with no target phonemes. PREVOCALIC ⟨r⟩: where the ⟨r⟩ is the onset of the next syllable the nucleus is the CHECKED vowel, not the long r-coloured one — marry [ˈmæɹi], merry [ˈmɛɹi], mirror [ˈmɪɹə], hurry [ˈhʌɹi], sorry [ˈsɒɹi] (Wells 1982 vol. 1 §2.2.6; Carney 1994). The condition is ORTHOGRAPHIC, not phonological: the rule reads the next grapheme, and a silent word-final ⟨e⟩ is a vowel letter, so ⟨here⟩ and ⟨sphere⟩ take the checked vowel too — the engine has no 'followed by an AUDIBLE vowel' neighbour class. The ⟨or⟩ member states the ⟨orange⟩/⟨forest⟩/⟨sorry⟩ majority and is wrong for the ⟨ore⟩-derived ⟨story⟩/⟨glory⟩ minority, which the spelling does not separate. GOAT = /əʊ/ in RP. WORD-FINAL VOWEL LETTERS: unstressed word-final ⟨a⟩ is /ə/ (sofa, America, data) and word-final ⟨o⟩ is /əʊ/ (photo, piano, go) — Carney 1994. ⟨y⟩ is declared a vowel letter (`vowel_graphemes`): it is the nucleus of very, myth and happy, and the closed Latin-letter inventory would otherwise call it a consonant, which mis-classifies the neighbour context every rule around it reads. NOT EXPRESSIBLE HERE: magic-e / open-syllable tensing (mate, home, music) needs a nucleus-quality condition the positional model cannot state — the `open_syllable` position exists but its syllabification calls every V.CV nucleus open, so it tenses happy, little and sofa too; and word-final ⟨-s⟩ voicing is inflectional rather than phonological (bus, gas, yes keep [s] where dogs, cars take [z]), so it belongs to the same downstream analyser as the lexical residue. ⟨-ed⟩ ENDING vs STEM ⟨ed⟩: the past-tense/participle rules (EN_GB_ED_EPENTHESIS, EN_GB_ED_SYNCOPE_AFTER_V/_C, EN_GB_ED_DEVOICING) read ⟨-ed⟩ as the grammatical ending. Whether a given ⟨ed⟩ IS that ending is a lexical fact, not an orthographic one — Carney 1994, ch. 3 treats the ⟨ed⟩ spelling as ambiguous between the ending and a stem the letters simply spell — and this engine has no morphology to decide it. The rules therefore carry a stem condition (a grapheme must precede the stem-final one), which already protects the C-onset monosyllables, and the remaining closed class of monosyllables whose ⟨ed⟩ is the stem (bed, bled, bred, cred, fed, fled, led, ped, pled, red, sed, shed, shred, sled, sped, ted, wed, zed — all /Cɛd/) is carved out in `word_exceptions`, with the values from Wells 2008 LPD. Polysyllables of the same shape (biped, cirriped, bloodshed) are NOT carved out: they are an open class, and enumerating them would be lexicon-building rather than description — they stay a documented limit.",
+  "quality": "research",
+  "script_type": "alphabet",
+  "sources": [
+    {
+      "id": "wells1982_vol1",
+      "author": "Wells, J.C.",
+      "year": 1982,
+      "title": "Accents of English, Vol. 1: An Introduction",
+      "publisher": "Cambridge University Press",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "wells1982_vol2",
+      "author": "Wells, J.C.",
+      "year": 1982,
+      "title": "Accents of English, Vol. 2: The British Isles",
+      "publisher": "Cambridge University Press",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "roach2009",
+      "author": "Roach, P.",
+      "year": 2009,
+      "title": "English Phonetics and Phonology: A Practical Course (4th ed.)",
+      "publisher": "Cambridge University Press",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "gimson2014",
+      "author": "Cruttenden, A. (ed.)",
+      "year": 2014,
+      "title": "Gimson's Pronunciation of English (8th ed.)",
+      "publisher": "Routledge",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "roach2004_jipa",
+      "author": "Roach, P.",
+      "year": 2004,
+      "title": "British English: Received Pronunciation",
+      "publisher": "Journal of the International Phonetic Association, 34(2), 239-245",
+      "url": "https://doi.org/10.1017/S0025100304001768",
+      "pages": "239-245",
+      "notes": "Illustrations of the IPA series entry; RP phoneme inventory and worked transcription."
+    },
+    {
+      "id": "gontijo2003",
+      "author": "Gontijo, P.F.D., Gontijo, I., & Shillcock, R.",
+      "year": 2003,
+      "title": "Grapheme-phoneme probabilities in British English",
+      "publisher": "Behavior Research Methods, Instruments, & Computers, 35(1), 136-157",
+      "url": "https://doi.org/10.3758/BF03195506",
+      "pages": "136-157",
+      "notes": "Corpus-derived conditional probabilities of grapheme-to-phoneme correspondences in British English. Basis for the `weights` on the `er`, `gh` and `ie` grapheme entries: candidate frequencies, not tuned parameters."
+    },
+    {
+      "id": "berndt1987",
+      "author": "Berndt, R.S., Reggia, J.A., & Mitchum, C.C.",
+      "year": 1987,
+      "title": "Empirically derived probabilities for grapheme-to-phoneme correspondences in English",
+      "publisher": "Behavior Research Methods, Instruments, & Computers, 19(1), 1-9",
+      "url": "https://doi.org/10.3758/BF03207663",
+      "pages": "1-9",
+      "notes": "Grapheme-to-phoneme correspondence probabilities from a 17,310-word corpus. Corroborates the dominant correspondences encoded in the weighted grapheme entries (e.g. `gh` most frequently silent; unstressed `er` = schwar)."
+    },
+    {
+      "id": "carney1994",
+      "author": "Carney, E.",
+      "year": 1994,
+      "title": "A Survey of English Spelling",
+      "publisher": "Routledge",
+      "url": null,
+      "pages": null,
+      "notes": "Reference description of English spelling-to-sound correspondences; basis for the positional vowel values (word-final ⟨a⟩, ⟨o⟩) and the ⟨Vrr⟩ / ⟨Vr⟩+vowel checked-vowel rule."
+    },
+    {
+      "id": "chomsky_halle1968",
+      "author": "Chomsky, N. & Halle, M.",
+      "year": 1968,
+      "title": "The Sound Pattern of English",
+      "publisher": "Harper & Row",
+      "url": null,
+      "pages": null,
+      "notes": "§4 on palatalization of a stem-final coronal before the -ion suffix: the citation for the ⟨-tion⟩/⟨-cion⟩/⟨-cian⟩/⟨-tial⟩/⟨-cious⟩ grammatical_endings family, and for the affricate outcome after ⟨s⟩."
+    },
+    {
+      "id": "wells2008",
+      "author": "Wells, J.C.",
+      "year": 2008,
+      "title": "Longman Pronunciation Dictionary (3rd ed.)",
+      "publisher": "Pearson Longman",
+      "url": null,
+      "pages": null,
+      "notes": "Surface values for the palatalized suffix endings declared in grammatical_endings, and the pronunciation authority for the yod-coalesced ⟨-ture⟩ [tʃə] and ⟨-sure⟩ [ʒə] / ⟨-ssure⟩ [ʃə] realisations."
+    },
+    {
+      "id": "fudge1984",
+      "author": "Fudge, E.",
+      "year": 1984,
+      "title": "English Word-Stress",
+      "publisher": "George Allen & Unwin",
+      "url": null,
+      "pages": null,
+      "notes": "Orthography-driven classification of English suffixes by their effect on stress placement (auto-stressed, pre-stressed 1/2, stress-neutral); the citation for the antepenult_stress_endings class and for the Germanic stem-initial default."
+    },
+    {
+      "id": "liberman_prince1977",
+      "author": "Liberman, M. & Prince, A.",
+      "year": 1977,
+      "title": "On Stress and Linguistic Rhythm",
+      "publisher": "Linguistic Inquiry 8(2), 249-336",
+      "url": null,
+      "pages": null,
+      "notes": "Word prominence is a relative, multi-level structure, not a stressed/unstressed switch — the basis of the secondary-stress level this spec declares."
+    },
+    {
+      "id": "hayes1995",
+      "author": "Hayes, B.",
+      "year": 1995,
+      "title": "Metrical Stress Theory: Principles and Case Studies",
+      "publisher": "University of Chicago Press",
+      "url": null,
+      "pages": null,
+      "notes": "Binary, quantity-insensitive foot construction (ch. 3) — the rule behind stress.secondary_stress = \"alternating\"."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/British_English",
+    "https://simple.wikipedia.org/wiki/British_English",
+    "https://en.wikipedia.org/wiki/English_phonology"
+  ],
+  "positional_graphemes": {
+    "c": {
+      "before_e": [
+        "s"
+      ],
+      "before_i": [
+        "s"
+      ],
+      "before_y": [
+        "s"
+      ],
+      "default": [
+        "k"
+      ]
+    },
+    "g": {
+      "before_e": [
+        "dʒ",
+        "ɡ"
+      ],
+      "before_i": [
+        "ɡ",
+        "dʒ"
+      ],
+      "before_y": [
+        "dʒ"
+      ],
+      "default": [
+        "ɡ"
+      ]
+    },
+    "s": {
+      "word_initial": [
+        "s"
+      ],
+      "intervocalic": [
+        "z"
+      ],
+      "word_final": [
+        "s",
+        "z"
+      ],
+      "default": [
+        "s"
+      ]
+    },
+    "x": {
+      "word_initial": [
+        "z"
+      ],
+      "default": [
+        "ks"
+      ]
+    },
+    "th": {
+      "word_initial": [
+        "θ",
+        "ð"
+      ],
+      "intervocalic": [
+        "ð"
+      ],
+      "default": [
+        "θ"
+      ]
+    },
+    "e": {
+      "before_mute_e": [
+        "iː"
+      ],
+      "word_final": [
+        ""
+      ],
+      "default": [
+        "ɛ",
+        "iː",
+        "ə"
+      ],
+      "nucleus_unstressed_closed": [
+        "ə"
+      ]
+    },
+    "y": {
+      "before_mute_e": [
+        "aɪ"
+      ],
+      "word_initial": [
+        "j"
+      ],
+      "before_vowel": [
+        "j"
+      ],
+      "word_final": [
+        "i",
+        "aɪ"
+      ],
+      "default": [
+        "ɪ",
+        "aɪ",
+        "i"
+      ]
+    },
+    "a": {
+      "before_mute_e": [
+        "eɪ"
+      ],
+      "word_final": [
+        "ə"
+      ],
+      "default": [
+        "æ",
+        "ɑː",
+        "eɪ",
+        "ə",
+        "ɔː"
+      ],
+      "nucleus_unstressed": [
+        "ə"
+      ]
+    },
+    "o": {
+      "before_mute_e": [
+        "əʊ"
+      ],
+      "word_final": [
+        "əʊ"
+      ],
+      "default": [
+        "ɒ",
+        "əʊ",
+        "ɔː",
+        "ʌ",
+        "uː"
+      ],
+      "nucleus_unstressed": [
+        "ə"
+      ]
+    },
+    "u": {
+      "before_mute_e": [
+        "juː",
+        "uː"
+      ],
+      "nucleus_unstressed": [
+        "ə"
+      ],
+      "default": [
+        "ʌ",
+        "juː",
+        "uː",
+        "ʊ"
+      ]
+    },
+    "or": {
+      "nucleus_unstressed": [
+        "əɹ"
+      ]
+    },
+    "ar": {
+      "nucleus_unstressed": [
+        "əɹ"
+      ]
+    },
+    "i": {
+      "before_vowel": [
+        "i"
+      ],
+      "word_final": [
+        "i"
+      ],
+      "before_mute_e": [
+        "aɪ"
+      ],
+      "default": [
+        "ɪ",
+        "iː",
+        "aɪ"
+      ]
+    },
+    "h": {
+      "word_final": [
+        ""
+      ],
+      "default": [
+        "h"
+      ]
+    },
+    "aw": {
+      "before_vowel": [
+        "əw"
+      ],
+      "default": [
+        "ɔː"
+      ]
+    },
+    "au": {
+      "before_vowel": [
+        "aʊ"
+      ],
+      "default": [
+        "ɔː",
+        "ɑː",
+        "ɒ"
+      ]
+    },
+    "sc": {
+      "before_e": [
+        "s"
+      ],
+      "before_i": [
+        "s"
+      ],
+      "before_y": [
+        "s"
+      ],
+      "default": [
+        "sk"
+      ]
+    },
+    "ng": {
+      "before_final_vowel": [
+        "ndʒ"
+      ],
+      "default": [
+        "ŋ"
+      ]
+    }
+  },
+  "grammatical_endings": {
+    "tion": "ʃən",
+    "stion": "stʃən",
+    "ssion": "ʃən",
+    "cion": "ʃən",
+    "cian": "ʃən",
+    "tial": "ʃəl",
+    "cial": "ʃəl",
+    "stial": "stʃəl",
+    "tious": "ʃəs",
+    "cious": "ʃəs",
+    "stious": "stʃəs",
+    "ture": "tʃə",
+    "sure": "ʒə",
+    "ssure": "ʃə",
+    "ous": "əs"
+  },
+  "word_exceptions": {
+    "the": "ðə",
+    "be": "biː",
+    "he": "hiː",
+    "me": "miː",
+    "we": "wiː",
+    "she": "ʃiː",
+    "a": "ə",
+    "an": "ən",
+    "have": "hæv",
+    "give": "ɡɪv",
+    "live": "lɪv",
+    "love": "lʌv",
+    "above": "əˈbʌv",
+    "glove": "ɡlʌv",
+    "dove": "dʌv",
+    "shove": "ʃʌv",
+    "come": "kʌm",
+    "some": "sʌm",
+    "done": "dʌn",
+    "none": "nʌn",
+    "gone": "ɡɒn",
+    "one": "wʌn",
+    "once": "wʌns",
+    "were": "wɜː",
+    "there": "ðɛə",
+    "where": "wɛə",
+    "move": "muːv",
+    "prove": "pruːv",
+    "lose": "luːz",
+    "whose": "huːz",
+    "do": "duː",
+    "does": "dʌz",
+    "doing": "ˈduːɪŋ"
+  },
+  "timespan": {
+    "start_year": 1500,
+    "end_year": null
+  },
+  "glottolog_code": "stan1293",
+  "iso639_3": "eng",
+  "wikidata_qid": "Q7979",
+  "phoible_id": "stan1293",
+  "location": {
+    "latitude": 53.0,
+    "longitude": -1.0,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for English."
+  },
+  "collapse_geminates": true,
+  "allophone_rules": [
+    {
+      "id": "EN_GB_PREVOCALIC_R_AR_GEMINATE",
+      "phonemes": [
+        "ɑːɹ"
+      ],
+      "surface": "æ",
+      "grapheme": [
+        "ar"
+      ],
+      "followed_by_grapheme": [
+        "r"
+      ],
+      "notes": "Before a vowel the ⟨r⟩ is the onset of the next syllable, so the preceding nucleus is the CHECKED (short) vowel, not the long r-coloured one: marry [ˈmæɹi], merry [ˈmɛɹi], mirror [ˈmɪɹə], hurry [ˈhʌɹi], sorry [ˈsɒɹi] (Wells 1982 vol.1 §2.2.6 and vol.2 §3.2.2 on the marry/merry/Mary and mirror/nearer/hurry/furry oppositions; Carney 1994 §II.4 on ⟨Vrr⟩ and ⟨Vr⟩+vowel spellings).",
+      "followed_by_2": "vowel"
+    },
+    {
+      "id": "EN_GB_PREVOCALIC_R_AR",
+      "phonemes": [
+        "ɑːɹ"
+      ],
+      "surface": "æɹ",
+      "grapheme": [
+        "ar"
+      ],
+      "followed_by": "vowel",
+      "notes": "Before a vowel the ⟨r⟩ is the onset of the next syllable, so the preceding nucleus is the CHECKED (short) vowel, not the long r-coloured one: marry [ˈmæɹi], merry [ˈmɛɹi], mirror [ˈmɪɹə], hurry [ˈhʌɹi], sorry [ˈsɒɹi] (Wells 1982 vol.1 §2.2.6 and vol.2 §3.2.2 on the marry/merry/Mary and mirror/nearer/hurry/furry oppositions; Carney 1994 §II.4 on ⟨Vrr⟩ and ⟨Vr⟩+vowel spellings)."
+    },
+    {
+      "id": "EN_GB_PREVOCALIC_R_ER_GEMINATE",
+      "phonemes": [
+        "əɹ"
+      ],
+      "surface": "ɛ",
+      "grapheme": [
+        "er"
+      ],
+      "followed_by_grapheme": [
+        "r"
+      ],
+      "notes": "Before a vowel the ⟨r⟩ is the onset of the next syllable, so the preceding nucleus is the CHECKED (short) vowel, not the long r-coloured one: marry [ˈmæɹi], merry [ˈmɛɹi], mirror [ˈmɪɹə], hurry [ˈhʌɹi], sorry [ˈsɒɹi] (Wells 1982 vol.1 §2.2.6 and vol.2 §3.2.2 on the marry/merry/Mary and mirror/nearer/hurry/furry oppositions; Carney 1994 §II.4 on ⟨Vrr⟩ and ⟨Vr⟩+vowel spellings).",
+      "followed_by_2": "vowel"
+    },
+    {
+      "id": "EN_GB_PREVOCALIC_R_ER",
+      "phonemes": [
+        "əɹ"
+      ],
+      "surface": "ɛɹ",
+      "grapheme": [
+        "er"
+      ],
+      "followed_by": "vowel",
+      "notes": "Before a vowel the ⟨r⟩ is the onset of the next syllable, so the preceding nucleus is the CHECKED (short) vowel, not the long r-coloured one: marry [ˈmæɹi], merry [ˈmɛɹi], mirror [ˈmɪɹə], hurry [ˈhʌɹi], sorry [ˈsɒɹi] (Wells 1982 vol.1 §2.2.6 and vol.2 §3.2.2 on the marry/merry/Mary and mirror/nearer/hurry/furry oppositions; Carney 1994 §II.4 on ⟨Vrr⟩ and ⟨Vr⟩+vowel spellings)."
+    },
+    {
+      "id": "EN_GB_PREVOCALIC_R_IR_GEMINATE",
+      "phonemes": [
+        "ɜːɹ"
+      ],
+      "surface": "ɪ",
+      "grapheme": [
+        "ir"
+      ],
+      "followed_by_grapheme": [
+        "r"
+      ],
+      "notes": "Before a vowel the ⟨r⟩ is the onset of the next syllable, so the preceding nucleus is the CHECKED (short) vowel, not the long r-coloured one: marry [ˈmæɹi], merry [ˈmɛɹi], mirror [ˈmɪɹə], hurry [ˈhʌɹi], sorry [ˈsɒɹi] (Wells 1982 vol.1 §2.2.6 and vol.2 §3.2.2 on the marry/merry/Mary and mirror/nearer/hurry/furry oppositions; Carney 1994 §II.4 on ⟨Vrr⟩ and ⟨Vr⟩+vowel spellings).",
+      "followed_by_2": "vowel"
+    },
+    {
+      "id": "EN_GB_PREVOCALIC_R_IR",
+      "phonemes": [
+        "ɜːɹ"
+      ],
+      "surface": "ɪɹ",
+      "grapheme": [
+        "ir"
+      ],
+      "followed_by": "vowel",
+      "notes": "Before a vowel the ⟨r⟩ is the onset of the next syllable, so the preceding nucleus is the CHECKED (short) vowel, not the long r-coloured one: marry [ˈmæɹi], merry [ˈmɛɹi], mirror [ˈmɪɹə], hurry [ˈhʌɹi], sorry [ˈsɒɹi] (Wells 1982 vol.1 §2.2.6 and vol.2 §3.2.2 on the marry/merry/Mary and mirror/nearer/hurry/furry oppositions; Carney 1994 §II.4 on ⟨Vrr⟩ and ⟨Vr⟩+vowel spellings)."
+    },
+    {
+      "id": "EN_GB_PREVOCALIC_R_UR_GEMINATE",
+      "phonemes": [
+        "ɜːɹ"
+      ],
+      "surface": "ʌ",
+      "grapheme": [
+        "ur"
+      ],
+      "followed_by_grapheme": [
+        "r"
+      ],
+      "notes": "Before a vowel the ⟨r⟩ is the onset of the next syllable, so the preceding nucleus is the CHECKED (short) vowel, not the long r-coloured one: marry [ˈmæɹi], merry [ˈmɛɹi], mirror [ˈmɪɹə], hurry [ˈhʌɹi], sorry [ˈsɒɹi] (Wells 1982 vol.1 §2.2.6 and vol.2 §3.2.2 on the marry/merry/Mary and mirror/nearer/hurry/furry oppositions; Carney 1994 §II.4 on ⟨Vrr⟩ and ⟨Vr⟩+vowel spellings).",
+      "followed_by_2": "vowel"
+    },
+    {
+      "id": "EN_GB_PREVOCALIC_R_UR",
+      "phonemes": [
+        "ɜːɹ"
+      ],
+      "surface": "ʌɹ",
+      "grapheme": [
+        "ur"
+      ],
+      "followed_by": "vowel",
+      "notes": "Before a vowel the ⟨r⟩ is the onset of the next syllable, so the preceding nucleus is the CHECKED (short) vowel, not the long r-coloured one: marry [ˈmæɹi], merry [ˈmɛɹi], mirror [ˈmɪɹə], hurry [ˈhʌɹi], sorry [ˈsɒɹi] (Wells 1982 vol.1 §2.2.6 and vol.2 §3.2.2 on the marry/merry/Mary and mirror/nearer/hurry/furry oppositions; Carney 1994 §II.4 on ⟨Vrr⟩ and ⟨Vr⟩+vowel spellings)."
+    },
+    {
+      "id": "EN_GB_PREVOCALIC_R_OR_GEMINATE",
+      "phonemes": [
+        "ɔːɹ"
+      ],
+      "surface": "ɒ",
+      "grapheme": [
+        "or"
+      ],
+      "followed_by_grapheme": [
+        "r"
+      ],
+      "notes": "Before a vowel the ⟨r⟩ is the onset of the next syllable, so the preceding nucleus is the CHECKED (short) vowel, not the long r-coloured one: marry [ˈmæɹi], merry [ˈmɛɹi], mirror [ˈmɪɹə], hurry [ˈhʌɹi], sorry [ˈsɒɹi] (Wells 1982 vol.1 §2.2.6 and vol.2 §3.2.2 on the marry/merry/Mary and mirror/nearer/hurry/furry oppositions; Carney 1994 §II.4 on ⟨Vrr⟩ and ⟨Vr⟩+vowel spellings).",
+      "followed_by_2": "vowel"
+    },
+    {
+      "id": "EN_GB_PREVOCALIC_R_OR",
+      "phonemes": [
+        "ɔːɹ"
+      ],
+      "surface": "ɒɹ",
+      "grapheme": [
+        "or"
+      ],
+      "followed_by": "vowel",
+      "notes": "Before a vowel the ⟨r⟩ is the onset of the next syllable, so the preceding nucleus is the CHECKED (short) vowel, not the long r-coloured one: marry [ˈmæɹi], merry [ˈmɛɹi], mirror [ˈmɪɹə], hurry [ˈhʌɹi], sorry [ˈsɒɹi] (Wells 1982 vol.1 §2.2.6 and vol.2 §3.2.2 on the marry/merry/Mary and mirror/nearer/hurry/furry oppositions; Carney 1994 §II.4 on ⟨Vrr⟩ and ⟨Vr⟩+vowel spellings)."
+    },
+    {
+      "id": "EN_GB_NONRHOTIC_AR_PRECONS",
+      "phonemes": [
+        "ɑːɹ"
+      ],
+      "surface": "ɑː",
+      "followed_by": "consonant",
+      "notes": "RP is non-rhotic: /r/ survives only before a vowel, so a rhotic nucleus loses its [ɹ] before a consonant and word-finally (Wells 1982 vol.1 §3.2.2; Cruttenden 2014 §8.7). Stated on the phoneme side so the prevocalic (linking-r) realisation of the same spelling is untouched."
+    },
+    {
+      "id": "EN_GB_NONRHOTIC_AR_FINAL",
+      "phonemes": [
+        "ɑːɹ"
+      ],
+      "surface": "ɑː",
+      "word_final": true,
+      "notes": "RP is non-rhotic: /r/ survives only before a vowel, so a rhotic nucleus loses its [ɹ] before a consonant and word-finally (Wells 1982 vol.1 §3.2.2; Cruttenden 2014 §8.7). Stated on the phoneme side so the prevocalic (linking-r) realisation of the same spelling is untouched."
+    },
+    {
+      "id": "EN_GB_NONRHOTIC_NURSE_PRECONS",
+      "phonemes": [
+        "ɜːɹ"
+      ],
+      "surface": "ɜː",
+      "followed_by": "consonant",
+      "notes": "RP is non-rhotic: /r/ survives only before a vowel, so a rhotic nucleus loses its [ɹ] before a consonant and word-finally (Wells 1982 vol.1 §3.2.2; Cruttenden 2014 §8.7). Stated on the phoneme side so the prevocalic (linking-r) realisation of the same spelling is untouched."
+    },
+    {
+      "id": "EN_GB_NONRHOTIC_NURSE_FINAL",
+      "phonemes": [
+        "ɜːɹ"
+      ],
+      "surface": "ɜː",
+      "word_final": true,
+      "notes": "RP is non-rhotic: /r/ survives only before a vowel, so a rhotic nucleus loses its [ɹ] before a consonant and word-finally (Wells 1982 vol.1 §3.2.2; Cruttenden 2014 §8.7). Stated on the phoneme side so the prevocalic (linking-r) realisation of the same spelling is untouched."
+    },
+    {
+      "id": "EN_GB_NONRHOTIC_OR_PRECONS",
+      "phonemes": [
+        "ɔːɹ"
+      ],
+      "surface": "ɔː",
+      "followed_by": "consonant",
+      "notes": "RP is non-rhotic: /r/ survives only before a vowel, so a rhotic nucleus loses its [ɹ] before a consonant and word-finally (Wells 1982 vol.1 §3.2.2; Cruttenden 2014 §8.7). Stated on the phoneme side so the prevocalic (linking-r) realisation of the same spelling is untouched."
+    },
+    {
+      "id": "EN_GB_NONRHOTIC_OR_FINAL",
+      "phonemes": [
+        "ɔːɹ"
+      ],
+      "surface": "ɔː",
+      "word_final": true,
+      "notes": "RP is non-rhotic: /r/ survives only before a vowel, so a rhotic nucleus loses its [ɹ] before a consonant and word-finally (Wells 1982 vol.1 §3.2.2; Cruttenden 2014 §8.7). Stated on the phoneme side so the prevocalic (linking-r) realisation of the same spelling is untouched."
+    },
+    {
+      "id": "EN_GB_NONRHOTIC_LETTER_PRECONS",
+      "phonemes": [
+        "əɹ"
+      ],
+      "surface": "ə",
+      "followed_by": "consonant",
+      "notes": "RP is non-rhotic: /r/ survives only before a vowel, so a rhotic nucleus loses its [ɹ] before a consonant and word-finally (Wells 1982 vol.1 §3.2.2; Cruttenden 2014 §8.7). Stated on the phoneme side so the prevocalic (linking-r) realisation of the same spelling is untouched."
+    },
+    {
+      "id": "EN_GB_NONRHOTIC_LETTER_FINAL",
+      "phonemes": [
+        "əɹ"
+      ],
+      "surface": "ə",
+      "word_final": true,
+      "notes": "RP is non-rhotic: /r/ survives only before a vowel, so a rhotic nucleus loses its [ɹ] before a consonant and word-finally (Wells 1982 vol.1 §3.2.2; Cruttenden 2014 §8.7). Stated on the phoneme side so the prevocalic (linking-r) realisation of the same spelling is untouched."
+    },
+    {
+      "id": "EN_GB_NONRHOTIC_SQUARE_PRECONS",
+      "phonemes": [
+        "ɛəɹ"
+      ],
+      "surface": "ɛə",
+      "followed_by": "consonant",
+      "notes": "RP is non-rhotic: /r/ survives only before a vowel, so a rhotic nucleus loses its [ɹ] before a consonant and word-finally (Wells 1982 vol.1 §3.2.2; Cruttenden 2014 §8.7). Stated on the phoneme side so the prevocalic (linking-r) realisation of the same spelling is untouched."
+    },
+    {
+      "id": "EN_GB_NONRHOTIC_SQUARE_FINAL",
+      "phonemes": [
+        "ɛəɹ"
+      ],
+      "surface": "ɛə",
+      "word_final": true,
+      "notes": "RP is non-rhotic: /r/ survives only before a vowel, so a rhotic nucleus loses its [ɹ] before a consonant and word-finally (Wells 1982 vol.1 §3.2.2; Cruttenden 2014 §8.7). Stated on the phoneme side so the prevocalic (linking-r) realisation of the same spelling is untouched."
+    },
+    {
+      "id": "EN_GB_NONRHOTIC_NEAR_PRECONS",
+      "phonemes": [
+        "ɪəɹ"
+      ],
+      "surface": "ɪə",
+      "followed_by": "consonant",
+      "notes": "RP is non-rhotic: /r/ survives only before a vowel, so a rhotic nucleus loses its [ɹ] before a consonant and word-finally (Wells 1982 vol.1 §3.2.2; Cruttenden 2014 §8.7). Stated on the phoneme side so the prevocalic (linking-r) realisation of the same spelling is untouched."
+    },
+    {
+      "id": "EN_GB_NONRHOTIC_NEAR_FINAL",
+      "phonemes": [
+        "ɪəɹ"
+      ],
+      "surface": "ɪə",
+      "word_final": true,
+      "notes": "RP is non-rhotic: /r/ survives only before a vowel, so a rhotic nucleus loses its [ɹ] before a consonant and word-finally (Wells 1982 vol.1 §3.2.2; Cruttenden 2014 §8.7). Stated on the phoneme side so the prevocalic (linking-r) realisation of the same spelling is untouched."
+    },
+    {
+      "id": "EN_GB_NONRHOTIC_CURE_PRECONS",
+      "phonemes": [
+        "ʊəɹ"
+      ],
+      "surface": "ʊə",
+      "followed_by": "consonant",
+      "notes": "RP is non-rhotic: /r/ survives only before a vowel, so a rhotic nucleus loses its [ɹ] before a consonant and word-finally (Wells 1982 vol.1 §3.2.2; Cruttenden 2014 §8.7). Stated on the phoneme side so the prevocalic (linking-r) realisation of the same spelling is untouched."
+    },
+    {
+      "id": "EN_GB_NONRHOTIC_CURE_FINAL",
+      "phonemes": [
+        "ʊəɹ"
+      ],
+      "surface": "ʊə",
+      "word_final": true,
+      "notes": "RP is non-rhotic: /r/ survives only before a vowel, so a rhotic nucleus loses its [ɹ] before a consonant and word-finally (Wells 1982 vol.1 §3.2.2; Cruttenden 2014 §8.7). Stated on the phoneme side so the prevocalic (linking-r) realisation of the same spelling is untouched."
+    },
+    {
+      "id": "EN_GB_NONRHOTIC_CURE_J_PRECONS",
+      "phonemes": [
+        "jʊəɹ"
+      ],
+      "surface": "jʊə",
+      "followed_by": "consonant",
+      "notes": "RP is non-rhotic: /r/ survives only before a vowel, so a rhotic nucleus loses its [ɹ] before a consonant and word-finally (Wells 1982 vol.1 §3.2.2; Cruttenden 2014 §8.7). Stated on the phoneme side so the prevocalic (linking-r) realisation of the same spelling is untouched."
+    },
+    {
+      "id": "EN_GB_NONRHOTIC_CURE_J_FINAL",
+      "phonemes": [
+        "jʊəɹ"
+      ],
+      "surface": "jʊə",
+      "word_final": true,
+      "notes": "RP is non-rhotic: /r/ survives only before a vowel, so a rhotic nucleus loses its [ɹ] before a consonant and word-finally (Wells 1982 vol.1 §3.2.2; Cruttenden 2014 §8.7). Stated on the phoneme side so the prevocalic (linking-r) realisation of the same spelling is untouched."
+    },
+    {
+      "id": "EN_GB_NONRHOTIC_FIRE_PRECONS",
+      "phonemes": [
+        "aɪəɹ"
+      ],
+      "surface": "aɪə",
+      "followed_by": "consonant",
+      "notes": "RP is non-rhotic: /r/ survives only before a vowel, so a rhotic nucleus loses its [ɹ] before a consonant and word-finally (Wells 1982 vol.1 §3.2.2; Cruttenden 2014 §8.7). Stated on the phoneme side so the prevocalic (linking-r) realisation of the same spelling is untouched."
+    },
+    {
+      "id": "EN_GB_NONRHOTIC_FIRE_FINAL",
+      "phonemes": [
+        "aɪəɹ"
+      ],
+      "surface": "aɪə",
+      "word_final": true,
+      "notes": "RP is non-rhotic: /r/ survives only before a vowel, so a rhotic nucleus loses its [ɹ] before a consonant and word-finally (Wells 1982 vol.1 §3.2.2; Cruttenden 2014 §8.7). Stated on the phoneme side so the prevocalic (linking-r) realisation of the same spelling is untouched."
+    },
+    {
+      "id": "EN_GB_NONRHOTIC_HOUR_PRECONS",
+      "phonemes": [
+        "aʊəɹ"
+      ],
+      "surface": "aʊə",
+      "followed_by": "consonant",
+      "notes": "RP is non-rhotic: /r/ survives only before a vowel, so a rhotic nucleus loses its [ɹ] before a consonant and word-finally (Wells 1982 vol.1 §3.2.2; Cruttenden 2014 §8.7). Stated on the phoneme side so the prevocalic (linking-r) realisation of the same spelling is untouched."
+    },
+    {
+      "id": "EN_GB_NONRHOTIC_HOUR_FINAL",
+      "phonemes": [
+        "aʊəɹ"
+      ],
+      "surface": "aʊə",
+      "word_final": true,
+      "notes": "RP is non-rhotic: /r/ survives only before a vowel, so a rhotic nucleus loses its [ɹ] before a consonant and word-finally (Wells 1982 vol.1 §3.2.2; Cruttenden 2014 §8.7). Stated on the phoneme side so the prevocalic (linking-r) realisation of the same spelling is untouched."
+    },
+    {
+      "id": "EN_GB_NONRHOTIC_R_PRECONS",
+      "phonemes": [
+        "ɹ"
+      ],
+      "surface": "",
+      "followed_by": "consonant",
+      "notes": "RP is non-rhotic: /r/ survives only before a vowel, so a rhotic nucleus loses its [ɹ] before a consonant and word-finally (Wells 1982 vol.1 §3.2.2; Cruttenden 2014 §8.7). Stated on the phoneme side so the prevocalic (linking-r) realisation of the same spelling is untouched. The bare-ɹ members additionally require a non-initial position: a word-initial ⟨r⟩ is an ONSET, and RP deletes coda /r/ only, so ⟨r⟩, ⟨R⟩ and ⟨re⟩ keep their [ɹ] instead of reducing the whole word to nothing.",
+      "word_initial": false
+    },
+    {
+      "id": "EN_GB_NONRHOTIC_R_FINAL",
+      "phonemes": [
+        "ɹ"
+      ],
+      "surface": "",
+      "word_final": true,
+      "notes": "RP is non-rhotic: /r/ survives only before a vowel, so a rhotic nucleus loses its [ɹ] before a consonant and word-finally (Wells 1982 vol.1 §3.2.2; Cruttenden 2014 §8.7). Stated on the phoneme side so the prevocalic (linking-r) realisation of the same spelling is untouched. The bare-ɹ members additionally require a non-initial position: a word-initial ⟨r⟩ is an ONSET, and RP deletes coda /r/ only, so ⟨r⟩, ⟨R⟩ and ⟨re⟩ keep their [ɹ] instead of reducing the whole word to nothing.",
+      "word_initial": false
+    },
+    {
+      "id": "EN_GB_ED_EPENTHESIS",
+      "phonemes": [
+        "ɛ",
+        "ə"
+      ],
+      "surface": "ɪ",
+      "grapheme": [
+        "e"
+      ],
+      "followed_by_grapheme": [
+        "d"
+      ],
+      "followed_by_2": "word_boundary",
+      "preceded_by_phoneme": [
+        "t",
+        "d"
+      ],
+      "notes": "English past-tense / past-participle ⟨-ed⟩ has three regular allomorphs conditioned by the final segment of the stem: [ɪd] after an alveolar plosive (wanted, ended), [t] after any other voiceless consonant (walked, missed), and [d] elsewhere (played, loved). Cruttenden 2014, § 4.3; Wells 2008 LPD gives the same three surface values. This rule is the [ɪd] branch: the vowel is kept (as [ɪ]) only after [t]/[d], where the two alveolar plosives could not otherwise be told apart. Requires a stem grapheme before the stem-final consonant (preceded_by_3=\"any\"), matching EN_GB_ED_SYNCOPE / EN_GB_ED_DEVOICING's stem condition, so wanted-shaped three-letter monosyllables (there are none for this branch, but the condition is symmetric with the other two -ed rules) stay excluded on the same grounds.",
+      "preceded_by_3": "any"
+    },
+    {
+      "id": "EN_GB_ED_SYNCOPE_AFTER_V",
+      "phonemes": [
+        "ɛ",
+        "ə"
+      ],
+      "surface": "",
+      "grapheme": [
+        "e"
+      ],
+      "followed_by_grapheme": [
+        "d"
+      ],
+      "followed_by_2": "word_boundary",
+      "notes": "English past-tense / past-participle ⟨-ed⟩ has three regular allomorphs conditioned by the final segment of the stem: [ɪd] after an alveolar plosive (wanted, ended), [t] after any other voiceless consonant (walked, missed), and [d] elsewhere (played, loved). Cruttenden 2014, § 4.3; Wells 2008 LPD gives the same three surface values. This rule is the syncope shared by the [t] and [d] branches: outside the alveolar-plosive environment the ⟨e⟩ of the ending spells no vowel at all. Ordered after EN_GB_ED_EPENTHESIS, which claims that environment first. The ending needs a stem in front of it: the rule fires only when a grapheme stands before the stem-final one, which is what keeps the monosyllables whose ⟨ed⟩ IS the stem (bed, red, shed) out of it. Declared as a pair because the engine's neighbour classes name 'vowel' and 'consonant' but have no way to say 'any grapheme'.",
+      "preceded_by_2": "vowel"
+    },
+    {
+      "id": "EN_GB_ED_SYNCOPE_AFTER_C",
+      "phonemes": [
+        "ɛ",
+        "ə"
+      ],
+      "surface": "",
+      "grapheme": [
+        "e"
+      ],
+      "followed_by_grapheme": [
+        "d"
+      ],
+      "followed_by_2": "word_boundary",
+      "notes": "English past-tense / past-participle ⟨-ed⟩ has three regular allomorphs conditioned by the final segment of the stem: [ɪd] after an alveolar plosive (wanted, ended), [t] after any other voiceless consonant (walked, missed), and [d] elsewhere (played, loved). Cruttenden 2014, § 4.3; Wells 2008 LPD gives the same three surface values. This rule is the syncope shared by the [t] and [d] branches: outside the alveolar-plosive environment the ⟨e⟩ of the ending spells no vowel at all. Ordered after EN_GB_ED_EPENTHESIS, which claims that environment first. The ending needs a stem in front of it: the rule fires only when a grapheme stands before the stem-final one, which is what keeps the monosyllables whose ⟨ed⟩ IS the stem (bed, red, shed) out of it. Declared as a pair because the engine's neighbour classes name 'vowel' and 'consonant' but have no way to say 'any grapheme'.",
+      "preceded_by_2": "consonant"
+    },
+    {
+      "id": "EN_GB_ED_DEVOICING",
+      "phonemes": [
+        "d"
+      ],
+      "surface": "t",
+      "grapheme": [
+        "d"
+      ],
+      "word_final": true,
+      "preceded_by_grapheme": [
+        "e"
+      ],
+      "notes": "English past-tense / past-participle ⟨-ed⟩ has three regular allomorphs conditioned by the final segment of the stem: [ɪd] after an alveolar plosive (wanted, ended), [t] after any other voiceless consonant (walked, missed), and [d] elsewhere (played, loved). Cruttenden 2014, § 4.3; Wells 2008 LPD gives the same three surface values. This rule is the [t] branch. It requires the mute ⟨e⟩ of the ending immediately before the ⟨d⟩, so it leaves food and good alone, and the voicing trigger is then read two graphemes back, past that ⟨e⟩, which spells nothing (EN_GB_ED_SYNCOPE). Requires a stem grapheme before the stem-final consonant (preceded_by_3=\"any\"), which is what keeps three-letter monosyllables whose <ed> IS the stem (fed, ted) out of this rule without needing an exception; the voicing trigger is read as the SURFACE (already-resolved) phoneme of the stem-final slot, not its first declared candidate, so used/closed/pleased/breathed (whose stem consonant already resolves voiced) are correctly excluded, and watched (tʃ) now correctly devoices.",
+      "preceded_by_surface_phoneme_2": [
+        "p",
+        "k",
+        "f",
+        "θ",
+        "s",
+        "ʃ",
+        "tʃ"
+      ],
+      "preceded_by_3": "any"
+    },
+    {
+      "id": "EN_GB_FINAL_S_VOICING",
+      "phonemes": [
+        "s"
+      ],
+      "surface": "z",
+      "grapheme": [
+        "s"
+      ],
+      "word_final": true,
+      "preceded_by_phoneme": [
+        "b",
+        "d",
+        "ɡ",
+        "v",
+        "ð",
+        "m",
+        "n",
+        "ŋ",
+        "l",
+        "ɹ"
+      ],
+      "notes": "Word-final ⟨-s⟩ after a voiced consonant is [z], not [s]: dogs, beds, films (Cruttenden 2014, § 4.3 on the voicing agreement of the ⟨-s⟩ ending; Wells 2008 LPD). Restricted to a preceding voiced CONSONANT: after a vowel the spelling is ambiguous between the ending (sees, boys) and a stem-final ⟨s⟩ (bus, gas, this, us), and telling them apart needs morphology this engine deliberately does not have. The sibilants [z ʒ dʒ] are likewise excluded: they take the [ɪz] allomorph (roses, bridges), which is a different branch. The ending is spelled with a bare final ⟨s⟩, so the rule also requires nothing to follow that letter: ⟨-se⟩ words (else, false, manse) keep [s], their ⟨s⟩ belonging to the stem and not to the ending.",
+      "followed_by": "word_boundary"
+    },
+    {
+      "id": "EN_GB_ES_EPENTHESIS",
+      "phonemes": [
+        "ɛ",
+        "ə",
+        "iː"
+      ],
+      "surface": "ɪ",
+      "grapheme": [
+        "e"
+      ],
+      "followed_by_grapheme": [
+        "s"
+      ],
+      "followed_by_2": "word_boundary",
+      "preceded_by_phoneme": [
+        "s",
+        "z",
+        "ʃ",
+        "ʒ",
+        "tʃ",
+        "dʒ",
+        "ɡ"
+      ],
+      "preceded_by_2": "vowel",
+      "notes": "English ⟨-s⟩ (plural, 3sg possessive-less) has the same three regular allomorphs as ⟨-ed⟩, conditioned by the final segment of the stem: [ɪz] after a sibilant (roses, cases, bridges), [s] after any other voiceless consonant (hopes, cats), and [z] elsewhere (scales, dogs) — Cruttenden 2014, § 4.3 on the voicing agreement of the ⟨-s⟩ ending; Wells 2008 LPD. These rules are the ⟨-Ces⟩ branch, where the mute ⟨e⟩ of the stem stands between the stem consonant and the ending: the existing EN_GB_FINAL_S_VOICING sees only a bare final ⟨s⟩ and cannot read past that ⟨e⟩. The stem shape required here (a vowel, one consonant, the ⟨e⟩) is the same ⟨VCe⟩ pattern the before_mute_e nucleus position states. This rule is the [ɪz] branch: after a sibilant the vowel is kept (as [ɪ]), because the two sibilants could not otherwise be told apart. [ɡ] is listed alongside the sibilants because the neighbour condition reads ⟨g⟩'s first declared candidate, the hard [ɡ], while a ⟨g⟩ standing before this mute ⟨e⟩ is always the soft [dʒ] (ages, pages, bridges, wages)."
+    },
+    {
+      "id": "EN_GB_ES_SYNCOPE",
+      "phonemes": [
+        "ɛ",
+        "ə",
+        "iː"
+      ],
+      "surface": "",
+      "grapheme": [
+        "e"
+      ],
+      "followed_by_grapheme": [
+        "s"
+      ],
+      "followed_by_2": "word_boundary",
+      "preceded_by": "consonant",
+      "preceded_by_2": "vowel",
+      "notes": "English ⟨-s⟩ (plural, 3sg possessive-less) has the same three regular allomorphs as ⟨-ed⟩, conditioned by the final segment of the stem: [ɪz] after a sibilant (roses, cases, bridges), [s] after any other voiceless consonant (hopes, cats), and [z] elsewhere (scales, dogs) — Cruttenden 2014, § 4.3 on the voicing agreement of the ⟨-s⟩ ending; Wells 2008 LPD. These rules are the ⟨-Ces⟩ branch, where the mute ⟨e⟩ of the stem stands between the stem consonant and the ending: the existing EN_GB_FINAL_S_VOICING sees only a bare final ⟨s⟩ and cannot read past that ⟨e⟩. The stem shape required here (a vowel, one consonant, the ⟨e⟩) is the same ⟨VCe⟩ pattern the before_mute_e nucleus position states. This rule is the syncope shared by the [s] and [z] branches: outside the sibilant environment the mute ⟨e⟩ spells no vowel at all. Ordered after EN_GB_ES_EPENTHESIS, which claims that environment first."
+    },
+    {
+      "id": "EN_GB_ES_VOICING_AFTER_MUTE_E",
+      "phonemes": [
+        "s"
+      ],
+      "surface": "z",
+      "grapheme": [
+        "s"
+      ],
+      "word_final": true,
+      "preceded_by_grapheme": [
+        "e"
+      ],
+      "preceded_by_surface_phoneme_2": [
+        "b",
+        "d",
+        "ɡ",
+        "v",
+        "ð",
+        "m",
+        "n",
+        "ŋ",
+        "l",
+        "ɹ"
+      ],
+      "notes": "English ⟨-s⟩ (plural, 3sg possessive-less) has the same three regular allomorphs as ⟨-ed⟩, conditioned by the final segment of the stem: [ɪz] after a sibilant (roses, cases, bridges), [s] after any other voiceless consonant (hopes, cats), and [z] elsewhere (scales, dogs) — Cruttenden 2014, § 4.3 on the voicing agreement of the ⟨-s⟩ ending; Wells 2008 LPD. These rules are the ⟨-Ces⟩ branch, where the mute ⟨e⟩ of the stem stands between the stem consonant and the ending: the existing EN_GB_FINAL_S_VOICING sees only a bare final ⟨s⟩ and cannot read past that ⟨e⟩. The stem shape required here (a vowel, one consonant, the ⟨e⟩) is the same ⟨VCe⟩ pattern the before_mute_e nucleus position states. This rule is the [z] branch, read two graphemes back past the syncopated ⟨e⟩ — the same past-the-mute-⟨e⟩ reach EN_GB_ED_DEVOICING already uses for ⟨-ed⟩."
+    },
+    {
+      "id": "EN_GB_ES_VOICING_AFTER_EPENTHESIS",
+      "phonemes": [
+        "s"
+      ],
+      "surface": "z",
+      "grapheme": [
+        "s"
+      ],
+      "word_final": true,
+      "preceded_by_grapheme": [
+        "e"
+      ],
+      "notes": "English ⟨-s⟩ (plural, 3sg possessive-less) has the same three regular allomorphs as ⟨-ed⟩, conditioned by the final segment of the stem: [ɪz] after a sibilant (roses, cases, bridges), [s] after any other voiceless consonant (hopes, cats), and [z] elsewhere (scales, dogs) — Cruttenden 2014, § 4.3 on the voicing agreement of the ⟨-s⟩ ending; Wells 2008 LPD. These rules are the ⟨-Ces⟩ branch, where the mute ⟨e⟩ of the stem stands between the stem consonant and the ending: the existing EN_GB_FINAL_S_VOICING sees only a bare final ⟨s⟩ and cannot read past that ⟨e⟩. The stem shape required here (a vowel, one consonant, the ⟨e⟩) is the same ⟨VCe⟩ pattern the before_mute_e nucleus position states. This rule voices the ⟨s⟩ of the [ɪz] branch. The trigger is the stem-final sibilant read two graphemes back, past the ⟨e⟩ that EN_GB_ES_EPENTHESIS has just realised as [ɪ] — the only environment in which that ⟨e⟩ keeps a vowel at all.",
+      "preceded_by_surface_phoneme_2": [
+        "s",
+        "z",
+        "ʃ",
+        "ʒ",
+        "tʃ",
+        "dʒ"
+      ]
+    },
+    {
+      "id": "EN_GB_OING_HIATUS",
+      "phonemes": [
+        "ɔɪ"
+      ],
+      "surface": "əʊɪ",
+      "grapheme": [
+        "oi"
+      ],
+      "followed_by_grapheme": [
+        "ng"
+      ],
+      "followed_by_2": "word_boundary",
+      "notes": "⟨oi⟩ is the CHOICE diphthong almost without exception (oil, coin, join, voice, avoid) — Carney 1994 on the ⟨oi⟩/⟨oy⟩ correspondence. The systematic exception is not a spelling fact but a morphological one: word-final ⟨-oing⟩ is the ⟨-ing⟩ suffix attached to a stem that already ended in ⟨o⟩, so the two letters belong to different morphemes and stay in hiatus — going, echoing, shoeing, toing. The condition is the same shape the ⟨-ed⟩ rules use: the ending's own grapheme immediately after, and nothing after that. The rule restores the HIATUS only; which vowel the stem then takes is the stem's own business, and for the ⟨do⟩ family that vowel is lexically GOOSE rather than GOAT (doing, and the prefixed undoing / redoing / outdoing, which stay wrong because the prefix puts them outside the closed set word_exceptions can hold)."
+    }
+  ],
+  "vowel_graphemes": [
+    "y"
+  ],
+  "stress": {
+    "default_position": 1,
+    "antepenult_stress_endings": [
+      "ical",
+      "ity",
+      "ities",
+      "ify",
+      "ifies",
+      "iency",
+      "ular",
+      "graphy",
+      "logy",
+      "ometer",
+      "onomy",
+      "ocracy"
+    ],
+    "penult_stress_endings": [
+      "ic",
+      "ics",
+      "ion",
+      "ions"
+    ],
+    "cliticless_words": [
+      "the",
+      "a",
+      "an"
+    ],
+    "secondary_stress": "alternating",
+    "notes": "English word stress is only PARTLY predictable from spelling, and this block states the predictable part, nothing more. DEFAULT = FIRST SYLLABLE (default_position 1): the Germanic stem-initial stress pattern that English inherited and that still governs the unsuffixed native vocabulary (Fudge 1984, English Word-Stress, ch. 1-2; Cruttenden 2014, Gimson's Pronunciation of English 8th ed. §10.4, on the early placement of English word accent). ANTEPENULT_STRESS_ENDINGS = Fudge's PRE-STRESSED suffix classes whose suffix is TWO orthographic syllables long, so 'the syllable before the suffix' is the antepenult of the whole word (Fudge 1984, ch. 3-4): -ical (ˈcritical), -ity/-ities (aˈbility), -ify/-ifies (ˈclassify), -iency (efˈficiency), -ular (ˈregular), -graphy/-logy/-ometer/-onomy/-ocracy (phoˈtography, biˈology, therˈmometer, aˈstronomy, deˈmocracy). PENULT_STRESS_ENDINGS = the ONE-syllable pre-stressed suffixes, which place the accent on the PENULT (Fudge 1984, ch. 3): -ic/-ics (aˈtomic, phoˈnetics) and -ion/-ions (ˌcombiˈnation, ˌeduˈcation). They are declarable only now that the block declares SECONDARY_STRESS: moving the accent rightwards in a long word used to leave the initial syllable fully weak, reducing a vowel English keeps full under secondary stress (ˌcombiˈnation) — measured on the en-GB wikipron gold, the class alone COST 0.0059 PER over its own 6,845 words and gains 0.0031 with the level in place. SECONDARY_STRESS = alternating: binary feet built leftward from the main stress (Liberman & Prince 1977; Hayes 1995 ch. 3), the rhythmic alternation English states as ˌcombiˈnation, reˌsponsiˈbility, ˌnatioˈnality (Cruttenden 2014 §10.3). A secondary foot head is not weak, so the reduction entries below no longer reach it. KNOWN MIS-SEATING: the feet are counted leftward from the main stress, so in a five-syllable word stressed on the penult the head lands on the SECOND syllable — ciˌviliˈzation and orˌganiˈzation, where Hayes' left-to-right construction gives the INITIAL syllable the secondary stress (ˌorganiˈzation). The level is seated one syllable late in that parity, which is a smaller error than having no level at all (measured net-positive on every en row) but is not the right analysis.\n\nNOT DECLARED, and why: (a) the remaining one-syllable pre-stressed suffixes -ial, -ious, -ian, -ient, -ience are Fudge's same class and place the accent correctly, but MEASURED on the en-GB wikipron gold each is PER-NEGATIVE even with secondary stress (-ian 0.2979→0.3387 over 1,421 words, -ial 0.2591→0.2745 over 437, -ious 0.2498→0.2614 over 300; -ians/-ient/-ience move inside the noise of 23/70/39 words). The stress they place is right; what the engine gets wrong is the vowel quality it then gives the newly full syllables, so the class stays out until that is fixed rather than being bought with a loss; (b) the AUTO-STRESSED suffixes -ee/-eer/-ese/-ette/-oon/-esque/-ade/-ique carry the stress themselves (Fudge 1984, ch. 3), but the orthographic syllabifier counts the mute ⟨e⟩ of -ese/-ette/-esque/-ade/-ique as a nucleus, so the end-anchored offset they need is not the one the spelling yields; (c) -ary/-ory/-acy need stress FOUR syllables from the end, a position no ending field expresses; (d) the WEAK-INITIAL IAMBS — an unaccented first syllable followed by the accented one: the Latinate and Greek prefixes aˈlarm, supˈport, aˈgain, aˈround, beˈcause (Fudge 1984, ch. 5, on the prefix classes) and the unprefixed loanwords that share the shape, guiˈtar, maˈchine, poˈlice. The stem-initial default gets these backwards, stressing the prefix and reducing the stem vowel that English keeps full: ⟨guitar⟩ comes out ˈɡuːtə. Measured on the en-GB wikipron gold, 3,948 of the 72,495 polysyllabic entries (5.4%) are schwa-initial iambs of this shape. Skipping a listed prefix would need a new engine mechanism, and by (a) above the accuracy it buys is not cashable as reduction until secondary stress exists, so the class is stated here as a known cost of the default rather than worked around; (e) NOUN/VERB stress pairs (ˈrecord vs reˈcord) are lexical and part-of-speech conditioned, not orthographic, and are a documented ceiling of any spelling rule (Cruttenden 2014 §10.7; Wells 2008 LPD). CLITICLESS_WORDS: the weak-form articles the/a/an, which word_exceptions already gives their reduced /ðə ə ən/ shapes — a weak form is by definition unstressed, so the stress placer must not then mark it (Cruttenden 2014 §9.2 on weak forms; Wells 1982 vol. 1)."
+  }
+}

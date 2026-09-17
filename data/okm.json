@@ -1,0 +1,36 @@
+{
+  "code": "okm",
+  "name": "Middle Korean (10th-16th cent.)",
+  "script": "Hangul",
+  "script_type": "alphabet",
+  "quality": "stub",
+  "graphemes": {},
+  "parent": "x-clade-kore1284",
+  "ancestors": [
+    {
+      "code": "x-clade-kore1284",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Descent per Glottolog classification of Middle Korean."
+    }
+  ],
+  "notes": "Historical stage of Koreanic (10th-16th century), written in early Hangul after 1443 with many now-obsolete jamo (arae-a, yesieung, pansios and other letters, plus obsolete consonant clusters) and marked with a pitch-accent tone-dot system. The text is encoded as precomposed syllable blocks, and recovering grapheme-to-IPA requires jamo decomposition together with a per-word philological pronunciation stratum for the obsolete letters that the engine does not bundle; engine coverage is therefore lexicon-dependent and effectively zero without that stratum. Left empty deliberately rather than faking single-codepoint syllable rules; the tone-dot marks are not encoded.",
+  "iso639_3": "okm",
+  "glottolog_code": null,
+  "sources": [
+    {
+      "id": "okm_glottolog",
+      "author": "Hammarström, H. et al. (Glottolog 5.0)",
+      "year": 2024,
+      "title": "Glottolog: Middle Korean",
+      "publisher": "Max Planck Institute for Evolutionary Anthropology",
+      "url": "https://glottolog.org/glottolog?name=Middle+Korean",
+      "pages": null,
+      "notes": "Classification reference for a skeleton-tier entry.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Middle_Korean"
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Middle_Korean"
+  ]
+}

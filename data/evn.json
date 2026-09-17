@@ -1,0 +1,180 @@
+{
+  "code": "evn",
+  "name": "Evenki",
+  "script": "Cyrillic",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "а̄": [
+      "aː"
+    ],
+    "э̄": [
+      "əː"
+    ],
+    "о̄": [
+      "oː"
+    ],
+    "ӣ": [
+      "iː"
+    ],
+    "ӯ": [
+      "uː"
+    ],
+    "ъ": [
+      ""
+    ],
+    "ь": [
+      ""
+    ],
+    "а": [
+      "a"
+    ],
+    "б": [
+      "b"
+    ],
+    "в": [
+      "w"
+    ],
+    "г": [
+      "ɡ"
+    ],
+    "д": [
+      "d"
+    ],
+    "е": [
+      "je"
+    ],
+    "ё": [
+      "jo"
+    ],
+    "ж": [
+      "ʒ"
+    ],
+    "з": [
+      "z"
+    ],
+    "и": [
+      "i"
+    ],
+    "й": [
+      "j"
+    ],
+    "к": [
+      "k"
+    ],
+    "л": [
+      "l"
+    ],
+    "м": [
+      "m"
+    ],
+    "н": [
+      "n"
+    ],
+    "ӈ": [
+      "ŋ"
+    ],
+    "о": [
+      "o"
+    ],
+    "п": [
+      "p"
+    ],
+    "р": [
+      "r"
+    ],
+    "с": [
+      "s"
+    ],
+    "т": [
+      "t"
+    ],
+    "у": [
+      "u"
+    ],
+    "ф": [
+      "f"
+    ],
+    "х": [
+      "x"
+    ],
+    "ц": [
+      "ts"
+    ],
+    "ч": [
+      "tʃ"
+    ],
+    "ш": [
+      "ʃ"
+    ],
+    "щ": [
+      "ɕ"
+    ],
+    "ы": [
+      "ɨ"
+    ],
+    "э": [
+      "ə"
+    ],
+    "ю": [
+      "ju"
+    ],
+    "я": [
+      "ja"
+    ]
+  },
+  "parent": "x-clade-tung1282",
+  "ancestors": [
+    {
+      "code": "x-clade-tung1282",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Descent per Glottolog classification of Evenki (even1259)."
+    }
+  ],
+  "stress": {
+    "default_position": -2,
+    "stress_mark": "ˈ"
+  },
+  "notes": "Research. Evenki is a Northern Tungusic language written in a Cyrillic alphabet (Nedjalkov 1997) that extends Russian with a single extra letter, Ӈ (velar nasal). The base Cyrillic letters are mapped with their usual values (в rendered as the approximant w, as in Evenki); ⟨э⟩ is central [ə] (not close-mid [e]) — the pre-upgrade mapping's largest single error source. Vowel length, phonemic in Evenki, is written with a combining macron over а/э/о (а̄ э̄ о̄) or with the dedicated precomposed letters Ӣ/Ӯ for и/у; all are modelled as long vowels here (Nedjalkov 1997). Word stress is non-contrastive, typically penultimate in the disyllabic-dominant sampled forms; marked here as penultimate by default. A productive native pattern in which н/д/л palatalize (to ɲ/dʒ/lʲ) and drop the following iotated vowel's glide before е/ё/ю/я is attested in the gold (⟨дюганӣ⟩ [dʒuɣaɲiː], ⟨няӈня⟩ [ɲaŋɲa]) but is NOT applied to Russian loanwords, which keep the Russian glide+vowel reading (⟨октябрь⟩ [oktjabrʲ], a borrowed month name) — because the same т/с/к graphemes keep the glide in loans but the pattern cannot be told apart from spelling alone without a loanword/native distinction the engine has no signal for, this palatalization is left unencoded as a known engine-limit gap rather than risk corrupting loanword output. Pervasive vowel harmony is conditioned rather than spelled and is left unencoded.",
+  "iso639_3": "evn",
+  "glottolog_code": null,
+  "sources": [
+    {
+      "id": "evn_glottolog",
+      "author": "Hammarström, H. et al. (Glottolog 5.0)",
+      "year": 2024,
+      "title": "Glottolog: Evenki (even1259)",
+      "publisher": "Max Planck Institute for Evolutionary Anthropology",
+      "url": "https://glottolog.org/resource/languoid/id/even1259",
+      "pages": null,
+      "notes": "Classification reference for a skeleton-tier entry.",
+      "wikipedia_url": null
+    },
+    {
+      "id": "nedjalkov1997",
+      "author": "Nedjalkov, Igor",
+      "year": 1997,
+      "title": "Evenki (Descriptive Grammars)",
+      "publisher": "Routledge",
+      "url": null,
+      "pages": null,
+      "notes": "Grammar of Evenki: Cyrillic orthography, vowel qualities (э=[ə]), macron/precomposed vowel length, and the native palatalization pattern before iotated vowels vs. Russian loanword retention.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Evenki_language"
+    },
+    {
+      "id": "evn_orthography",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Evenki language — writing system and phonology",
+      "publisher": null,
+      "url": "https://en.wikipedia.org/wiki/Evenki_language",
+      "pages": null,
+      "notes": "Orthography/phonology reference for the skeleton-tier grapheme map.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Evenki_language"
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Evenki_language"
+  ]
+}

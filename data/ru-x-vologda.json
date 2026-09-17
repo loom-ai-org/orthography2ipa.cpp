@@ -1,0 +1,63 @@
+{
+  "code": "ru-x-vologda",
+  "name": "Vologda Russian",
+  "script": "Cyrillic",
+  "graphemes_base": "ru-x-northern",
+  "allophones_base": "ru-x-northern",
+  "word_exceptions_base": "ru-x-northern",
+  "grammatical_endings_base": "ru-x-northern",
+  "parent": "ru-x-northern",
+  "notes": "Northern Russian, Vologda group. Полное оканье and soft цоканье — one affricate [tsʲ] for both ⟨ч⟩ and ⟨ц⟩ ('для значительной части вологодских говоров характерно употребление одной аффрикаты [ц']'), which is exactly the Northern-group system, so this spec adds no tables of its own and inherits `ru-x-northern` whole. Retained as a named code because the Vologda group is one of the two subtypes the Northern spec generalises over, and because the group's other diagnostics (strong consonantism, ⟨бм⟩/⟨дн⟩ assimilations, the -ой/-ей endings) are lexical and morphological rather than grapheme-level; encoding them would need sources not consulted for this spec. NEEDS SOURCING before this file diverges from its parent.",
+  "quality": "stub",
+  "script_type": "alphabet",
+  "sources": [
+    {
+      "id": "comrie_corbett1993",
+      "author": "Comrie, B. & Corbett, G. (eds.)",
+      "year": 1993,
+      "title": "The Slavonic Languages",
+      "publisher": "Routledge",
+      "url": null,
+      "pages": null,
+      "notes": null,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Slavic_languages"
+    },
+    {
+      "id": "timberlake2004",
+      "author": "Timberlake, A.",
+      "year": 2004,
+      "title": "A Reference Grammar of Russian",
+      "publisher": "Cambridge University Press",
+      "url": null,
+      "pages": null,
+      "notes": null,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Russian_phonology"
+    },
+    {
+      "id": "zalizniak1985",
+      "author": "Zalizniak, A.A.",
+      "year": 1985,
+      "title": "Ot praslavyanskoy aktsentovki k russkoy",
+      "publisher": "Nauka",
+      "url": null,
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Vologda",
+    "https://ru.wikipedia.org/wiki/%D0%92%D0%BE%D0%BB%D0%BE%D0%B3%D0%BE%D0%B4%D1%81%D0%BA%D0%B0%D1%8F_%D0%B3%D1%80%D1%83%D0%BF%D0%BF%D0%B0_%D0%B3%D0%BE%D0%B2%D0%BE%D1%80%D0%BE%D0%B2"
+  ],
+  "timespan": {
+    "start_year": 1600,
+    "end_year": null
+  },
+  "glottolog_code": null,
+  "iso639_3": "rus",
+  "location": {
+    "latitude": 59.216667,
+    "longitude": 39.9,
+    "source": "wikidata",
+    "notes": "Vologda — the city the Northern subtype is named for. [Wikidata Q1957 P625]"
+  }
+}

@@ -1,0 +1,451 @@
+{
+  "code": "cri",
+  "glottolog_code": "saot1239",
+  "name": "Sãotomense (Forro / Santome)",
+  "script": "Latin",
+  "quality": "research",
+  "script_type": "alphabet",
+  "parent": "pt-PT",
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "b": [
+      "b"
+    ],
+    "d": [
+      "d"
+    ],
+    "dj": [
+      "dʒ"
+    ],
+    "e": [
+      "ɛ",
+      "e"
+    ],
+    "ê": [
+      "e"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "gb": [
+      "ɡ͡b"
+    ],
+    "i": [
+      "i"
+    ],
+    "j": [
+      "ʒ"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "lh": [
+      "ʎ"
+    ],
+    "m": [
+      "m"
+    ],
+    "mb": [
+      "mb"
+    ],
+    "mp": [
+      "mp"
+    ],
+    "n": [
+      "n"
+    ],
+    "nd": [
+      "nd"
+    ],
+    "ng": [
+      "ŋɡ"
+    ],
+    "nh": [
+      "ɲ"
+    ],
+    "o": [
+      "ɔ",
+      "o"
+    ],
+    "ô": [
+      "o"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "ɾ"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "tx": [
+      "tʃ"
+    ],
+    "u": [
+      "u"
+    ],
+    "ũ": [
+      "ũ"
+    ],
+    "v": [
+      "v"
+    ],
+    "w": [
+      "w"
+    ],
+    "x": [
+      "ʃ"
+    ],
+    "y": [
+      "j"
+    ],
+    "z": [
+      "z"
+    ]
+  },
+  "positional_graphemes": {
+    "mb": {
+      "word_initial": [
+        "mb"
+      ]
+    },
+    "mp": {
+      "word_initial": [
+        "mp"
+      ]
+    },
+    "nd": {
+      "word_initial": [
+        "nd"
+      ]
+    },
+    "ng": {
+      "word_initial": [
+        "ŋɡ"
+      ]
+    }
+  },
+  "allophones": {
+    "a": [
+      "a"
+    ],
+    "ã": [
+      "ã"
+    ],
+    "b": [
+      "b"
+    ],
+    "d": [
+      "d"
+    ],
+    "dʒ": [
+      "dʒ"
+    ],
+    "e": [
+      "e"
+    ],
+    "ẽ": [
+      "ẽ"
+    ],
+    "ɛ": [
+      "ɛ"
+    ],
+    "f": [
+      "f"
+    ],
+    "ɡ": [
+      "ɡ"
+    ],
+    "ɡ͡b": [
+      "ɡ͡b"
+    ],
+    "i": [
+      "i"
+    ],
+    "ĩ": [
+      "ĩ"
+    ],
+    "ʒ": [
+      "ʒ"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "ʎ": [
+      "ʎ"
+    ],
+    "m": [
+      "m"
+    ],
+    "mb": [
+      "mb"
+    ],
+    "mp": [
+      "mp"
+    ],
+    "n": [
+      "n"
+    ],
+    "nd": [
+      "nd"
+    ],
+    "ŋ": [
+      "ŋ"
+    ],
+    "ŋɡ": [
+      "ŋɡ"
+    ],
+    "ɲ": [
+      "ɲ"
+    ],
+    "o": [
+      "o"
+    ],
+    "õ": [
+      "õ"
+    ],
+    "ɔ": [
+      "ɔ"
+    ],
+    "p": [
+      "p"
+    ],
+    "ɾ": [
+      "ɾ"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "tʃ": [
+      "tʃ"
+    ],
+    "u": [
+      "u"
+    ],
+    "ũ": [
+      "ũ"
+    ],
+    "v": [
+      "v"
+    ],
+    "w": [
+      "w"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "j": [
+      "j"
+    ],
+    "z": [
+      "z"
+    ]
+  },
+  "allophone_rules": [
+    {
+      "id": "CRI_NASAL_A",
+      "phonemes": [
+        "a"
+      ],
+      "surface": "ã",
+      "followed_by": "coda_nasal",
+      "notes": "Nasality in Santome is bi-phonemic: an oral vowel + a nasal coda consonant; the nasal feature spreads leftward onto the vowel and the coda deletes (Araujo & Agostinho 2010, pp. 65, 69: ALUSTP writes nasal vowels as V+n, or V+m before p/b — tason /tasõ/ 'to sit', tamen /tamẽ/ 'big', mpon [mpõ] 'bread'). ALUSTP marks no phonemic nasal vowels apart from lexicalized ũ (ũa 'one')."
+    },
+    {
+      "id": "CRI_NASAL_E",
+      "phonemes": [
+        "e",
+        "ɛ"
+      ],
+      "surface": "ẽ",
+      "followed_by": "coda_nasal",
+      "notes": "See CRI_NASAL_A. tamen /tamẽ/ 'big' (Araujo & Agostinho 2010, p. 65)."
+    },
+    {
+      "id": "CRI_NASAL_I",
+      "phonemes": [
+        "i"
+      ],
+      "surface": "ĩ",
+      "followed_by": "coda_nasal",
+      "notes": "See CRI_NASAL_A."
+    },
+    {
+      "id": "CRI_NASAL_O",
+      "phonemes": [
+        "o",
+        "ɔ"
+      ],
+      "surface": "õ",
+      "followed_by": "coda_nasal",
+      "notes": "See CRI_NASAL_A. tason /tasõ/ 'to sit' (Araujo & Agostinho 2010, p. 66)."
+    },
+    {
+      "id": "CRI_NASAL_U",
+      "phonemes": [
+        "u"
+      ],
+      "surface": "ũ",
+      "followed_by": "coda_nasal",
+      "notes": "See CRI_NASAL_A."
+    },
+    {
+      "id": "CRI_NASAL_ABSORB",
+      "phonemes": [
+        "n",
+        "m"
+      ],
+      "surface": "",
+      "syllable_position": "coda",
+      "preceded_by": "vowel",
+      "notes": "The coda nasal deletes after transferring its nasality to the preceding vowel (Araujo & Agostinho 2010, p. 65: bi-phonemic nasality — the nasal consonant is not itself realized; lexical items end in an oral or nasal vowel)."
+    },
+    {
+      "id": "PT_CODA_S_HUSH",
+      "phonemes": [
+        "s"
+      ],
+      "surface": "ʃ",
+      "syllable_position": "coda",
+      "notes": "REDECLARES the inherited pt-PT rule id with Santome-specific grounding: the only licit non-nasal coda in Santome is the voiceless palato-alveolar fricative, written ⟨x⟩ in ALUSTP (mlaxka 'mask'); a coda sibilant surfaces as [ʃ] — cf. stlijón [ʃtliʒõ] 'healer' (Araujo & Agostinho 2010, pp. 55, 67)."
+    },
+    {
+      "id": "PT_CODA_Z_HUSH",
+      "phonemes": [
+        "z"
+      ],
+      "surface": "z",
+      "syllable_position": "coda",
+      "notes": "DISABLES the inherited pt-PT coda /z/ → [ʒ]: Santome licenses no /z/ coda (codas are a nasal or /ʃ/ only; Araujo & Agostinho 2010, p. 67). Identity rewrite cancels the inherited rule by id."
+    },
+    {
+      "id": "PT_CODA_L_DARK",
+      "phonemes": [
+        "l"
+      ],
+      "surface": "l",
+      "syllable_position": "coda",
+      "notes": "DISABLES the inherited EP dark coda [ɫ]: no source describes velarization for Santome, whose codas are a nasal or /ʃ/ only (Araujo & Agostinho 2010, p. 67). Identity rewrite keeps [ɫ] out of the inventory."
+    }
+  ],
+  "ancestors": [
+    {
+      "code": "pt-PT",
+      "role": "superstrate",
+      "weight": 0.6,
+      "notes": "Portuguese superstrate: lexifier from the 1490s settlement of São Tomé; core vocabulary and much surface phonotactics restructured onto substrate patterns."
+    },
+    {
+      "code": "kg",
+      "role": "substrate",
+      "weight": 0.2,
+      "notes": "Kikongo (Bantu) substrate: Hagemeijer (2011, JPCL 26:1) characterizes the Gulf of Guinea creole substrate, in particular of Santome, as 'halfway Edo and Kongo'. Contributes prenasalized onsets and the strict (C)V template."
+    },
+    {
+      "code": "bin",
+      "role": "substrate",
+      "weight": 0.2,
+      "notes": "Edo/Bini (Edoid, Niger-Congo) substrate: primary substrate of the proto-Gulf-of-Guinea creole (Hagemeijer 2011; Hagemeijer & Ogie 2011). Source of the labial-velar stop /ɡ͡b/ and prenasalized stops."
+    }
+  ],
+  "notes": "Sãotomense / Forro / Santome. Portuguese-based Gulf of Guinea creole of São Tomé island (São Tomé and Príncipe), the LARGEST Gulf of Guinea creole (~70,000+ speakers). Sister of Principense (pre), Angolar (aoa) and Fa d'Ambô (fab), all descending from the 16th-century proto-creole of São Tomé. This spec targets the ALUSTP standard orthography (Alfabeto Unificado para as Línguas Nativas de S. Tomé e Príncipe), the standard used by the Araujo & Hagemeijer (2013) Dicionário livre santome. KEY FEATURES: (1) SEVEN ORAL VOWELS /i e ɛ a ɔ o u/ — ⟨ê ô⟩ are close-mid /e o/, bare ⟨e o⟩ are open-mid /ɛ ɔ/ (Araujo & Agostinho 2010, p. 65). (2) NASALITY IS BI-PHONEMIC: oral vowel + nasal coda; the coda deletes and nasalizes the vowel (written V+n, V+m before p/b); the tilde appears only in lexicalized ũ (ũa 'one'). Ferraz (1979) and APiCS instead analyse five phonemic nasal vowels — CONTESTED; this spec follows ALUSTP. (3) PRENASALIZED ONSETS mb/nd/ng/mp word-initially, which vary freely with plain oral stops (ngembu ~ gembu 'bat'); ALUSTP treats them as complex onsets, not unit phonemes. (4) LABIAL-VELAR /ɡ͡b/ ⟨gb⟩ (gbêgbê 'snail sp.'), an Edoid substrate retention; /k͡p/ belongs to Principense/Angolar, NOT Santome. (5) AFFRICATES/SIBILANTS: tx /tʃ/, dj /dʒ/, x /ʃ/, j /ʒ/. (6) SINGLE RHOTIC: one alveolar tap /ɾ/ ⟨r⟩; no tap/trill contrast; /r/ varies freely with /l/ for some speakers (Fontes 2007). (7) CODAS: only a nasal or /ʃ/ ⟨x⟩ (mlaxka 'mask'). (8) IMPLOSIVES /ɓ ɗ/ posited by Ferraz (1979)/APiCS are NOT phonemes of the ALUSTP analysis and have no ALUSTP grapheme — documented, not emitted. (9) STRESS/TONE CONTESTED: Ferraz analyses stress, Maurer/APiCS argue tone; ALUSTP marks neither (the circumflex marks vowel height, not stress), so word stress is NOT orthographically recoverable and this spec does not assign it.",
+  "sources": [
+    {
+      "id": "araujoagostinho2010",
+      "author": "Araujo, G. A. de & Agostinho, A. L. dos S.",
+      "year": 2010,
+      "title": "Padronização das línguas nacionais de São Tomé e Príncipe",
+      "publisher": "Revista de Letras (UFC), ed. 26",
+      "url": "http://www.revistalinguas.com/edicao26/artigo_3.pdf",
+      "pages": "55-69",
+      "notes": "Open access; reproduces the ALUSTP alphabet table verbatim (pp. 66-67): seven vowels, ê/ô vs e/o, x/j/tx/dj/nh/lh/gb graphemes, V+n nasality, single tap r; bi-phonemic nasality analysis (p. 65); prenasal ~ oral free variation (pp. 68-69)."
+    },
+    {
+      "id": "araujohagemeijer2013",
+      "author": "Araujo, G. A. de & Hagemeijer, T.",
+      "year": 2013,
+      "title": "Dicionário livre santome-português / Livlu-nglandji santome-putugêji",
+      "publisher": "Hedra, São Paulo",
+      "url": "https://repositorio.ulisboa.pt/handle/10451/31028",
+      "pages": null,
+      "notes": "The dictionary that adopts and disseminates the ALUSTP orthography this spec targets."
+    },
+    {
+      "id": "ferraz1979",
+      "author": "Ferraz, L. I.",
+      "year": 1979,
+      "title": "The Creole of São Tomé",
+      "publisher": "Witwatersrand University Press, Johannesburg",
+      "url": null,
+      "pages": null,
+      "notes": "Classic phonology; analyses five phonemic nasal vowels, implosives /ɓ ɗ/, stress, and vowel harmony (p. 25) — positions this spec records as contested where ALUSTP differs."
+    },
+    {
+      "id": "hagemeijermaurer_apics",
+      "author": "Hagemeijer, T. & Maurer, P.",
+      "year": 2013,
+      "title": "Santome (APiCS Online, survey chapter 35)",
+      "publisher": "In: Michaelis et al. (eds.), Atlas of Pidgin and Creole Language Structures, OUP",
+      "url": "https://apics-online.info/surveys/35",
+      "pages": null,
+      "notes": "Inventory incl. implosives and prenasals; palatalization of /t d s z/ before close front vowels; tone analysis; vowel-elision sandhi (mata ê → mat'e)."
+    },
+    {
+      "id": "hagemeijer2011",
+      "author": "Hagemeijer, T.",
+      "year": 2011,
+      "title": "The Gulf of Guinea creoles: genetic and typological relations",
+      "publisher": "Journal of Pidgin and Creole Languages 26(1)",
+      "url": "https://benjamins.com/catalog/jpcl.26.1.05hag",
+      "pages": null,
+      "notes": "Substrate 'halfway Edo and Kongo'; genetic unity of the four Gulf of Guinea creoles."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Forro_Creole"
+  ],
+  "urls": [
+    "https://en.wikipedia.org/wiki/Forro_Creole",
+    "https://apics-online.info/surveys/35",
+    "https://glottolog.org/resource/languoid/id/saot1239",
+    "https://www.ethnologue.com/language/cri/"
+  ],
+  "timespan": {
+    "start_year": 1550,
+    "end_year": null
+  },
+  "iso639_3": "cri",
+  "wikidata_qid": "Q36536",
+  "phoible_id": "saot1239",
+  "location": {
+    "latitude": 0.3301,
+    "longitude": 6.6835,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Saotomense."
+  },
+  "orthography_standard": {
+    "name": "ALUSTP — Alfabeto Unificado para as Línguas Nativas de São Tomé e Príncipe",
+    "authority": "Governo de São Tomé e Príncipe",
+    "year": 2013,
+    "url": "http://www.revistalinguas.com/edicao26/artigo_3.pdf",
+    "notes": "Proposed in Araujo & Agostinho (2010) and adopted (Diário da República de STP, 2013); used by the Araujo & Hagemeijer (2013) dictionary. Phonemic design: ê/ô close-mid vs bare e/o open-mid; x /ʃ/, j /ʒ/, tx /tʃ/, dj /dʒ/, nh /ɲ/, lh /ʎ/, gb /ɡ͡b/; nasality written V+n (V+m before p/b); no stress or tone marking."
+  }
+}

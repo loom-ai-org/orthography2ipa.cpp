@@ -1,0 +1,396 @@
+{
+  "ancestors": [
+    {
+      "code": "ira",
+      "role": "parent",
+      "weight": 0.82,
+      "notes": "Descent from Proto-Iranian via Old Persian and Middle Persian (Pahlavi) to New Persian."
+    },
+    {
+      "code": "ar",
+      "role": "adstrate",
+      "weight": 0.15,
+      "notes": "Arabic adstrate: after the Islamic conquest a very large lexical layer entered New Persian (and the Perso-Arabic script), though core phonology and grammar stayed Iranian."
+    }
+  ],
+  "code": "fa",
+  "name": "Persian (Farsi)",
+  "script": "Arabic",
+  "graphemes": {
+    "ا": [
+      "ʔ",
+      "ɒː"
+    ],
+    "آ": [
+      "ʔɒː"
+    ],
+    "ب": [
+      "b"
+    ],
+    "پ": [
+      "p"
+    ],
+    "ت": [
+      "t"
+    ],
+    "ث": [
+      "s"
+    ],
+    "ج": [
+      "dʒ"
+    ],
+    "چ": [
+      "tʃ"
+    ],
+    "ح": [
+      "h"
+    ],
+    "خ": [
+      "x"
+    ],
+    "د": [
+      "d"
+    ],
+    "ذ": [
+      "z"
+    ],
+    "ر": [
+      "ɾ"
+    ],
+    "ز": [
+      "z"
+    ],
+    "ژ": [
+      "ʒ"
+    ],
+    "س": [
+      "s"
+    ],
+    "ش": [
+      "ʃ"
+    ],
+    "ص": [
+      "s"
+    ],
+    "ض": [
+      "z"
+    ],
+    "ط": [
+      "t"
+    ],
+    "ظ": [
+      "z"
+    ],
+    "ع": [
+      "ʔ"
+    ],
+    "غ": [
+      "ɣ",
+      "ɢ"
+    ],
+    "ف": [
+      "f"
+    ],
+    "ق": [
+      "ɣ",
+      "ɢ"
+    ],
+    "ک": [
+      "k"
+    ],
+    "گ": [
+      "ɡ"
+    ],
+    "ل": [
+      "l"
+    ],
+    "م": [
+      "m"
+    ],
+    "ن": [
+      "n"
+    ],
+    "و": [
+      "v",
+      "uː",
+      "ow"
+    ],
+    "ه": [
+      "h",
+      "e"
+    ],
+    "ی": [
+      "j",
+      "iː"
+    ],
+    "َ": [
+      "æ"
+    ],
+    "ِ": [
+      "e"
+    ],
+    "ُ": [
+      "o"
+    ],
+    "ها": [
+      "hɒː"
+    ],
+    "ء": [
+      "ʔ"
+    ],
+    "أ": [
+      "ʔ"
+    ],
+    "ؤ": [
+      "ʔ"
+    ],
+    "ئ": [
+      "ʔ"
+    ],
+    "خوا": [
+      "xɒː"
+    ],
+    "اه": [
+      "ɒːh"
+    ],
+    "ك": [
+      "k"
+    ],
+    "ي": [
+      "j",
+      "iː"
+    ],
+    "آه": [
+      "ʔɒːh"
+    ],
+    "خواه": [
+      "xɒːh"
+    ]
+  },
+  "positional_graphemes": {
+    "ا": {
+      "word_initial": [
+        "ʔ"
+      ],
+      "default": [
+        "ɒː"
+      ]
+    },
+    "ی": {
+      "word_initial": [
+        "j"
+      ],
+      "default": [
+        "iː",
+        "j"
+      ]
+    },
+    "و": {
+      "word_initial": [
+        "v"
+      ],
+      "default": [
+        "uː",
+        "ow",
+        "v"
+      ]
+    },
+    "ه": {
+      "word_final": [
+        "e",
+        "h"
+      ],
+      "default": [
+        "h"
+      ]
+    },
+    "ي": {
+      "word_initial": [
+        "j"
+      ],
+      "default": [
+        "iː",
+        "j"
+      ]
+    }
+  },
+  "allophones": {
+    "p": [
+      "p",
+      "pʰ"
+    ],
+    "b": [
+      "b"
+    ],
+    "t": [
+      "t",
+      "tʰ"
+    ],
+    "d": [
+      "d"
+    ],
+    "k": [
+      "k",
+      "kʰ"
+    ],
+    "ɡ": [
+      "ɡ"
+    ],
+    "ʔ": [
+      "ʔ"
+    ],
+    "f": [
+      "f"
+    ],
+    "v": [
+      "v"
+    ],
+    "s": [
+      "s"
+    ],
+    "z": [
+      "z"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "ʒ": [
+      "ʒ"
+    ],
+    "x": [
+      "x"
+    ],
+    "ɣ": [
+      "ɣ",
+      "ʁ"
+    ],
+    "h": [
+      "h"
+    ],
+    "tʃ": [
+      "tʃ"
+    ],
+    "dʒ": [
+      "dʒ"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n",
+      "ŋ"
+    ],
+    "l": [
+      "l"
+    ],
+    "ɾ": [
+      "ɾ",
+      "r"
+    ],
+    "j": [
+      "j"
+    ],
+    "ɒː": [
+      "ɒː"
+    ],
+    "æ": [
+      "æ"
+    ],
+    "e": [
+      "e"
+    ],
+    "o": [
+      "o"
+    ],
+    "iː": [
+      "iː"
+    ],
+    "uː": [
+      "uː"
+    ]
+  },
+  "parent": "ira",
+  "notes": "Tehran standard. Many Arabic emphatic/pharyngeal consonants have merged with plain counterparts. 6-vowel system: /ɒː, æ, e, o, iː, uː/ (Windfuhr 1979/2009; Majidi & Ternes 1991 JIPA illustration; Toosarvandani 2004). ORTHOGRAPHY. Perso-Arabic is an abjad with three matres lectionis. Word-initially ا is a carrier for a vowel onset (transcribed here as the glottal onset ʔ, the following short vowel being unwritten); everywhere else ا spells long ā = /ɒː/. ⟨و⟩ and ⟨ی⟩ are consonantal /v/ and /j/ word-initially and vocalic /uː ow/ and /iː/ elsewhere, where the vocalic reading is the far more frequent one; the consonantal reading stays in the lattice as a ranked alternative because و and ی are also consonants after a mater (دیوار /diːvɒːɾ/). That context is not resolved yet: the positional resolver decides whether the preceding grapheme counts as a vowel by reading its FLAT-table primary, and it is the PRECEDING MATER's flat-table primary that matters, not ⟨ا⟩'s — in دیوار the preceding grapheme is ⟨ی⟩, whose flat table still lists j first even though this spec's own positional block gives ⟨ی⟩ iː as the default, so ⟨ی⟩ reads as non-vowel for that purpose and دیوار still comes out diːuːɒːɾ, with the following ⟨و⟩ resolving VOCALIC instead of the correct consonantal /v/. Fixing it means flipping the flat-table primaries for the matres and adding an after-vowel context to ⟨و ی⟩; word-initial ⟨ا⟩ is a carrier, not a mater, and needs separate handling first. Neither change has any effect on its own — flipping the flat-table primaries alone leaves دیوار diːuːɒːɾ unchanged, and adding the after-vowel context to ⟨و⟩ alone does too — but applied together they fix دیوار to diːvɒːɾ while breaking یونان (gold juːnɒːn) to jvnɒːn and ویران (gold viːɾɒːn) to vjɾɒːn, so the flat-table primaries stay as they are. Defining the unresolved class mechanically as a mater (ا آ و ی) immediately followed by ⟨و⟩ or ⟨ی⟩, 712 of the gold's 9283 unique headwords (7.7%) fall in it, where the consonantal/vocalic choice goes the wrong way. Word-final ⟨ه⟩ spells /e/ after a consonant (خانه /xɒːne/) but is consonantal /h/ after ā, so ⟨اه⟩ is listed as a unit (ماه /mɒːh/); the same /h/ reading also occurs after the matres ⟨و⟩ and ⟨ی⟩ (کوه /kuːh/), which are not protected the same way, so the /e/ rule overapplies there (kuːh → kuːe). Of the 132 gold headwords ending in ⟨وه⟩ or ⟨یه⟩, 20 end in gold /h/, so the unprotected rule is right about 85% of the time in that class. The same overapplication reaches ⟨آه⟩ and ⟨خواه⟩ too, for the same reason: ⟨خوا⟩ consumes the alef before ⟨اه⟩ can match, and ⟨آ⟩ is a separate grapheme from ⟨ا⟩, so neither is caught by the ⟨اه⟩ unit (آه → ʔɒːe, خواه → xɒːe, gold xʷaːh). 7 of the gold's unique headwords fall in this class — 1 ending ⟨آه⟩, 6 ending ⟨خواه⟩ (خودخواه, دادخواه, تنخواه, جمهوری‌خواه among them) — and all 7 come out wrong the same way. ⟨خوا⟩ carries the historical silent wāw (wāw-i maʿdūla) and reads /xɒː/ (خواب /xɒːb/); it is listed unpositioned, so it also fires word-internally where the sequence is instead a genuine, non-silent Arabic-loan /xw/ cluster — اخوان (gold ʔixwaːn) is the only such case among the gold's 59 ⟨خوا⟩-containing headwords; جهانخوار (a خوار compound) is not one — its gold is d͡ʒahaːnxaːr with no w at all, so the silent-wāw rule is correct there. These are standard descriptions of the writing system (Mahootian 1997; Windfuhr & Perry 2009); no page locator was verified. GOLD-CONVENTION DIVERGENCE: the WikiPron 'fa' set (fas_arab_broad) is predominantly the Classical / Early New Persian reading, not modern Iranian Persian. Measured over its 62914 gold segments it writes ⟨aː⟩ 5654 times against ⟨ɒː⟩ 142, ⟨r⟩ 4078 against ⟨ɾ⟩ 154, ⟨w⟩ 1130 times against ⟨v⟩ only 24 times across 23 rows — mostly visibly modern loans/forms, e.g. روادید /ræ v ɒː d̪ iː d̪/ and کارورزی /k ɒː ɾ v æ ɾ z iː/ — ⟨q⟩ 880 against ⟨ɣ⟩ 332, and it keeps the majhul vowels ⟨eː⟩ 513 and ⟨oː⟩ 523 that Iranian Persian merged into /iː uː/ centuries ago, plus labialised ⟨xʷ⟩ 124 for ⟨خو⟩. Modern short /e o/ appear 139 and 106 times against classical /i u/ at 2796 and 2075. Over the 10312 rows in the benchmark cache, 208 carry at least one modern marker (ɒː/ɾ/v/t̪ʰ/kʲ) against 7506 with a classical marker (aː/eː/oː/r/w/xʷ) and 20 with both, so the file is overwhelmingly, not universally, the classical reading. This spec follows the cited modern standard and does not chase that convention; see tests/test_fa_convention.py. Separately, 22.9% of those gold segments (14379 of 62914, over the short-vowel set a/e/i/o/u/æ/ə) are short vowels that the abjad simply does not write, and only the 1522 words ending in ⟨ه⟩ license one orthographically — an unwritten-vowel floor of about 20% of gold segments that no G2P over bare script can recover without a pronunciation lexicon. CEILING. The residual PER on this gold is dominated by two things the spec cannot answer for, and both were measured on the shipped spec over the full 9279-word row. Short vowels are 13092 of the gold's 67942 segments (19.3%); folding the short-vowel set a/e/i/o/u/æ/ə out of BOTH sides drops PER from 0.3943 to 0.2818, so a G2P over bare abjad text starts about 11 points above zero no matter how good its rules are. Folding the classical/modern convention pairs instead (aː~ɒː, eː~iː, oː~uː, r~ɾ, w~v, q~ɣ, xʷ~x) on both sides gives 0.2389, and folding both gives 0.0920 — the spec agrees with the gold on 91% of what is left once the unwritten vowels and the dialect convention are taken out. A sub-0.25 score on this row is therefore not reachable by describing Persian more accurately; it is reachable only by transcribing Classical Persian under the tag fa, which would be false. REMAINING SILENT DELETIONS. Enumerated by codepoint over the gold's 9283 unique headwords, these characters occur and have no grapheme key, so the tokenizer drops them: U+0629 TEH MARBUTA (6 words, Arabic loans only), U+06A4 VEH (3, where the gold reads /b/, i.e. non-Persian spellings), U+06D5 AE (2), U+0649 ALEF MAKSURA (2), U+200D ZWJ (2), U+06D2 YEH BARREE (1), U+064B FATHATAN (1), U+0654 HAMZA ABOVE (1). U+0640 TATWEEL (68 tokens) and U+200C ZWNJ (469 tokens, 464 words) are also unmapped but correctly carry no segment. The ZWNJ is not inert, though: it marks the non-joining morpheme boundary of the Persian plural and of clitics (Unicode 16.0 ch. 9: \"Examples requiring the use of a non-joiner include the Persian plural suffix, some Persian proper names, and Ottoman Turkish vowels\"), and the engine has no word-internal-boundary class, so ⟨ه⟩ before a ZWNJ does not count as word-final and ⟨ا⟩ after one does not count as word-initial — قهوه‌ای comes out ɣhuːhɒːiː. Closing that needs a generic engine capability, not a Persian rule.",
+  "quality": "research",
+  "script_type": "abjad",
+  "sources": [
+    {
+      "id": "mahootian1997",
+      "author": "Mahootian, S.",
+      "year": 1997,
+      "title": "Persian",
+      "publisher": "Routledge",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "windfuhr1979",
+      "author": "Windfuhr, G.",
+      "year": 1979,
+      "title": "Persian Grammar: History and State of Its Study",
+      "publisher": "Mouton",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "lazard1992",
+      "author": "Lazard, G.",
+      "year": 1992,
+      "title": "A Grammar of Contemporary Persian",
+      "publisher": "Mazda Publishers",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "majidi1991",
+      "author": "Majidi, M.-R. & Ternes, E.",
+      "year": 1991,
+      "title": "Persian (Farsi)",
+      "publisher": "Journal of the International Phonetic Association 21(2), Illustrations of the IPA",
+      "url": null,
+      "pages": "96-97",
+      "notes": "JIPA illustration confirming the six-vowel Tehrani inventory /i, e, æ, ɒ, o, u/ with phonetic backing/length on ɒː, iː, uː."
+    },
+    {
+      "id": "windfuhr2009",
+      "author": "Windfuhr, G. & Perry, J. R.",
+      "year": 2009,
+      "title": "Persian and Tajik (in G. Windfuhr, ed., The Iranian Languages)",
+      "publisher": "Routledge",
+      "url": null,
+      "pages": null,
+      "notes": "Cited for the standard description of the Perso-Arabic writing system (matres lectionis, word-initial vowel carrier, unwritten short vowels). Edition not consulted at page level; no locator claimed."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Persian_language",
+    "https://fa.wikipedia.org/wiki/زبان_فارسی",
+    "https://en.wikipedia.org/wiki/Persian_phonology",
+    "https://fa.wikipedia.org/wiki/%D8%B2%D8%A8%D8%A7%D9%86_%D9%81%D8%A7%D8%B1%D8%B3%DB%8C",
+    "https://fa.wikipedia.org/wiki/%D9%88%D8%A7%D8%AC%E2%80%8C%D8%B4%D9%86%D8%A7%D8%B3%DB%8C_%D9%81%D8%A7%D8%B1%D8%B3%DB%8C"
+  ],
+  "timespan": {
+    "start_year": 1000,
+    "end_year": null
+  },
+  "glottolog_code": "west2369",
+  "iso639_3": "fas",
+  "wikidata_qid": "Q9168",
+  "phoible_id": "west2369",
+  "location": {
+    "latitude": 32.9,
+    "longitude": 53.3,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Western Farsi."
+  },
+  "audit": {
+    "wikipron": {
+      "conclusion": "mislabeled_gold",
+      "measured": "Short vowels are 13092 of the wikipron/fa gold's 67942 segments (19.3%) and the Perso-Arabic abjad writes none of them outside the 1522 words ending in he; folding the short-vowel set out of both sides alone drops PER from 0.3943 to 0.2818, a floor no G2P over bare script can close without a lexicon. That leaves the LARGER factor: the gold set is predominantly an Early New Persian (ENP) reading, not Contemporary Iranian Persian (e.g. aː 5654 vs modern ɒː 142 occurrences; q 809 distinct from ɣ 325; r 3753 vs ɾ 131; majhul eː/oː 504/516 that Tehrani merged into iː/uː). Folding just those classical/modern convention pairs on both sides drops PER to 0.2389 -- a bigger single reduction than the short-vowel fold -- and a companion spec, fa-x-enp.json, that reads the same script under ENP phonology (Paul, 'PERSIAN LANGUAGE i. Early New Persian', Encyclopaedia Iranica; Miller 2012, 'Variation in Persian Vowel Systems') scores PER 0.2381 against this same gold, almost exactly reproducing that fold. Since the dominant single cause of this row's PER is that fas_arab_broad.tsv is tagged 'fa' (Contemporary Iranian Persian) but transcribes a different, older reading tradition of the same script, the row is best read as a labelling mismatch rather than a property of the modern spec: this spec follows the cited modern Tehrani standard and declines to chase the gold's convention (tests/test_fa_convention.py), and the ENP reading is scored honestly under its own tag instead. Folding both the short-vowel floor and the classical/modern convention pairs together drops PER to 0.0920, i.e. the two specs agree on 91% of what the abjad actually determines.",
+      "reference": "spec notes; data/fa-x-enp.json"
+    }
+  }
+}

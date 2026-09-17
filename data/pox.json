@@ -1,0 +1,208 @@
+{
+  "code": "pox",
+  "name": "Polabian",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "ch": [
+      "x"
+    ],
+    "x": [
+      "x"
+    ],
+    "a": [
+      "a"
+    ],
+    "e": [
+      "e"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "o"
+    ],
+    "u": [
+      "u"
+    ],
+    "y": [
+      "ɨ"
+    ],
+    "ə": [
+      "ə"
+    ],
+    "å": [
+      "ɔ"
+    ],
+    "ą": [
+      "ɔ̃"
+    ],
+    "ǫ": [
+      "ɔ̃"
+    ],
+    "ė": [
+      "e"
+    ],
+    "ü": [
+      "y"
+    ],
+    "ö": [
+      "ø"
+    ],
+    "ĕ": [
+      "ə"
+    ],
+    "b": [
+      "b"
+    ],
+    "c": [
+      "ts"
+    ],
+    "č": [
+      "tʃ"
+    ],
+    "ć": [
+      "tɕ"
+    ],
+    "d": [
+      "d"
+    ],
+    "ď": [
+      "dʲ"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "h": [
+      "x"
+    ],
+    "j": [
+      "j"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "ľ": [
+      "lʲ"
+    ],
+    "m": [
+      "m"
+    ],
+    "ḿ": [
+      "mʲ"
+    ],
+    "n": [
+      "n"
+    ],
+    "ń": [
+      "ɲ"
+    ],
+    "p": [
+      "p"
+    ],
+    "ṕ": [
+      "pʲ"
+    ],
+    "r": [
+      "r"
+    ],
+    "ŕ": [
+      "rʲ"
+    ],
+    "s": [
+      "s"
+    ],
+    "ś": [
+      "ɕ"
+    ],
+    "š": [
+      "ʃ"
+    ],
+    "t": [
+      "t"
+    ],
+    "ť": [
+      "tʲ"
+    ],
+    "v": [
+      "v"
+    ],
+    "z": [
+      "z"
+    ],
+    "ź": [
+      "ʑ"
+    ],
+    "ž": [
+      "ʒ"
+    ]
+  },
+  "parent": "x-clade-west2792",
+  "ancestors": [
+    {
+      "code": "x-clade-west2792",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Descent per Glottolog classification of Polabian (pola1255)."
+    }
+  ],
+  "notes": "Skeleton. West Slavic (Lechitic) language of the Elbe, extinct since the 18th century and known only from German-authored word lists and glossaries. The grapheme map follows the scholarly reconstruction transcription of Polański & Sehnert (1967): Latin base with diacritics for the reduced/rounded vowels å ü ö ə, the nasals ą/ǫ, the palatal sibilant/affricate series from historical iotation š ž č ś ź ć ń, and a separate secondary-palatalization series marked with an acute on the plain consonant. Kortlandt's Polabian Accentuation reproduces forms from that transcription attesting the acute as Cʲ (not a full palatal) on a dental stop (dělo /d'olü/ 'work', tьma /t'åmă/ 'darkness', kolo /t'ölü/ 'wheel'), a nasal (měra /m'oro/ 'measure') and, pre-existing in this spec, a lateral (ľ -> lʲ); this spec extends ť/ď/ḿ the same way. ŕ -> rʲ likewise: Żygis (2004) lists Polabian among the Slavic languages with a phonemic palatalized trill /rʲ/. ṕ -> pʲ completes the same labial/dental/lateral/nasal/trill series by pattern, but no attested p' token was found in the sources read for this entry, so it is an extension of the pattern rather than an independently attested form. Reading the acute as marking secondary palatalization (Cʲ) rather than something else is this spec's own inference from the attested forms, not a claim either source states explicitly. Bare ⟨x⟩ (distinct from the ⟨ch⟩/⟨h⟩ digraphs that resolve to the same sound) is the voiceless velar fricative [x], matching those digraphs. The reduced vowel ⟨ă⟩ and the letter ⟨ʒ⟩ are both attested in the source gold; Kortlandt's paper establishes that ă marks A reduced vowel (opposed to a full vowel) in a final syllable after a long/neoacute stem, but neither it nor any other source read for this entry gives ă's precise phonetic quality, so it is left unmapped rather than guessed, alongside ʒ (plausibly a voiced dz counterpart to c/ć by the spec's own affricate pattern, but likewise unconfirmed by a primary source read this round). Because the primary records were noted down with inconsistent German spelling conventions, the reconstructed values are uncertain; stress and vowel reduction patterns are only partly recoverable and are left unencoded, so an elevated PER floor is expected.",
+  "iso639_3": "pox",
+  "glottolog_code": null,
+  "sources": [
+    {
+      "id": "pox_glottolog",
+      "author": "Hammarström, H. et al. (Glottolog 5.0)",
+      "year": 2024,
+      "title": "Glottolog: Polabian (pola1255)",
+      "publisher": "Max Planck Institute for Evolutionary Anthropology",
+      "url": "https://glottolog.org/resource/languoid/id/pola1255",
+      "pages": null,
+      "notes": "Classification reference for a skeleton-tier entry.",
+      "wikipedia_url": null
+    },
+    {
+      "id": "pox_wikipedia",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Polabian language (Wikipedia)",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Polabian_language",
+      "pages": null,
+      "notes": "Orthography/phonology reference for a skeleton-tier reconstructed entry.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Polabian_language"
+    },
+    {
+      "id": "pox_kortlandt_accentuation",
+      "author": "Kortlandt, Frederik",
+      "year": 2011,
+      "title": "Polabian Accentuation",
+      "publisher": "Leiden University (kortlandt.nl)",
+      "url": "https://www.kortlandt.nl/publications/art107e.pdf",
+      "pages": "1-2",
+      "notes": "Reproduces forms from Polański & Sehnert's (1967) Polabian-English Dictionary transcription with the acute marking secondary palatalization on a dental stop and a nasal: dělo /d'olü/ 'work', tьma /t'åmă/ 'darkness', kolo /t'ölü/ 'wheel', bělъjь /b'olě/ 'white' (masc.), měra /m'oro/ 'measure'. Also establishes (p.1-3) that a final-syllable vowel after a long/neoacute stem is reduced, giving forms with ă (e.g. tьma /t'åmă/, bъčela /celă/), but does not state ă's phonetic quality.",
+      "wikipedia_url": null
+    },
+    {
+      "id": "pox_zygis_2004",
+      "author": "Żygis, Marzena",
+      "year": 2004,
+      "title": "(Un)markedness of trills: The case of Slavic r-palatalisation",
+      "publisher": "ZAS Papers in Linguistics 37, 137-166",
+      "url": "https://zaspil.leibniz-zas.de/article/download/592/572/1121",
+      "pages": "142",
+      "notes": "States that Polabian, alongside Upper/Lower Sorbian and Ukrainian, has a phonemic palatalized trill /rʲ/ (citing Hall 2000:8), grounding ŕ as rʲ.",
+      "wikipedia_url": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Polabian_language"
+  ]
+}

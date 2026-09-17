@@ -1,0 +1,297 @@
+{
+  "code": "tg",
+  "name": "Tajik",
+  "script": "Cyrillic",
+  "graphemes": {
+    "б": [
+      "b"
+    ],
+    "п": [
+      "p"
+    ],
+    "т": [
+      "t"
+    ],
+    "д": [
+      "d"
+    ],
+    "к": [
+      "k"
+    ],
+    "г": [
+      "ɡ"
+    ],
+    "қ": [
+      "q"
+    ],
+    "ъ": [
+      "ʔ"
+    ],
+    "ф": [
+      "f"
+    ],
+    "в": [
+      "v"
+    ],
+    "с": [
+      "s"
+    ],
+    "з": [
+      "z"
+    ],
+    "ш": [
+      "ʃ"
+    ],
+    "ж": [
+      "ʒ"
+    ],
+    "х": [
+      "x"
+    ],
+    "ғ": [
+      "ɣ"
+    ],
+    "ҳ": [
+      "h"
+    ],
+    "ч": [
+      "tʃ"
+    ],
+    "ҷ": [
+      "dʒ"
+    ],
+    "м": [
+      "m"
+    ],
+    "н": [
+      "n"
+    ],
+    "нг": [
+      "ŋ"
+    ],
+    "л": [
+      "l"
+    ],
+    "р": [
+      "r",
+      "ɾ"
+    ],
+    "й": [
+      "j"
+    ],
+    "а": [
+      "a"
+    ],
+    "о": [
+      "o"
+    ],
+    "е": [
+      "e"
+    ],
+    "и": [
+      "i"
+    ],
+    "у": [
+      "u"
+    ],
+    "ӣ": [
+      "iː"
+    ],
+    "ӯ": [
+      "ɵ",
+      "uː"
+    ],
+    "э": [
+      "e"
+    ],
+    "ю": [
+      "ju"
+    ],
+    "я": [
+      "ja"
+    ],
+    "ё": [
+      "jo"
+    ]
+  },
+  "allophones": {
+    "b": [
+      "b"
+    ],
+    "p": [
+      "p",
+      "pʰ"
+    ],
+    "t": [
+      "t",
+      "tʰ"
+    ],
+    "d": [
+      "d"
+    ],
+    "k": [
+      "k",
+      "kʰ"
+    ],
+    "ɡ": [
+      "ɡ"
+    ],
+    "q": [
+      "q"
+    ],
+    "ʔ": [
+      "ʔ",
+      ""
+    ],
+    "f": [
+      "f"
+    ],
+    "v": [
+      "v"
+    ],
+    "s": [
+      "s"
+    ],
+    "z": [
+      "z"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "ʒ": [
+      "ʒ"
+    ],
+    "x": [
+      "x"
+    ],
+    "ɣ": [
+      "ɣ"
+    ],
+    "h": [
+      "h"
+    ],
+    "tʃ": [
+      "tʃ"
+    ],
+    "dʒ": [
+      "dʒ"
+    ],
+    "ts": [
+      "ts"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n",
+      "ŋ"
+    ],
+    "ŋ": [
+      "ŋ"
+    ],
+    "l": [
+      "l"
+    ],
+    "r": [
+      "r",
+      "ɾ"
+    ],
+    "j": [
+      "j"
+    ],
+    "a": [
+      "a"
+    ],
+    "o": [
+      "o"
+    ],
+    "e": [
+      "e"
+    ],
+    "i": [
+      "i"
+    ],
+    "u": [
+      "u"
+    ],
+    "iː": [
+      "iː"
+    ],
+    "uː": [
+      "uː"
+    ],
+    "ɵ": [
+      "ɵ"
+    ]
+  },
+  "parent": "fa",
+  "ancestors": [
+    {
+      "code": "fa-x-early",
+      "role": "parent",
+      "weight": 0.85,
+      "notes": "Classical New Persian base; Tajik most conservative in vowels"
+    },
+    {
+      "code": "ru",
+      "role": "superstrate",
+      "weight": 0.08,
+      "notes": "Russian superstrate (Soviet period 1929–1991): Cyrillic script imposed; Russian loanwords; /ts/, /ʒ/ reinforced; consonant clusters from loans"
+    }
+  ],
+  "notes": "Tajik (Тоҷикӣ / Tojikī). Official language of Tajikistan. Persian with Cyrillic script (since ~1939, Soviet era). CONSERVATIVE VOWELS: No Tehran vowel shift; a=[a], ā=[aː]. /q/ → [q] maintained (like Dari; more than Tehran). DISTINCTIVE: Cyrillic script with special letters (Ӣ=ī, Ӯ=ū, Қ=q, Ғ=ɣ, Ҷ=dʒ, Ҳ=h). Uzbek/Turkic substrate: /ŋ/ phoneme in Turkic loanwords; uvular consonants reinforced. Russian superstrate: loanwords with initial consonant clusters unusual in native Persian (school/škola → Tg. maktab but also borrowed terms). /ts/ established from Russian loans. Perry (2005) is the primary reference grammar.",
+  "quality": "research",
+  "script_type": "alphabet",
+  "sources": [
+    {
+      "id": "perry2005",
+      "author": "Perry, J.R.",
+      "year": 2005,
+      "title": "A Tajik Persian Reference Grammar",
+      "publisher": "Brill",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "mahootian1997",
+      "author": "Mahootian, S.",
+      "year": 1997,
+      "title": "Persian",
+      "publisher": "Routledge",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "windfuhr1979",
+      "author": "Windfuhr, G.",
+      "year": 1979,
+      "title": "Persian Grammar: History and State of Its Study",
+      "publisher": "Mouton",
+      "url": null,
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Tajik_language",
+    "https://tg.wikipedia.org/wiki/Забони_тоҷикӣ",
+    "https://tg.wikipedia.org/wiki/%D0%97%D0%B0%D0%B1%D0%BE%D0%BD%D0%B8_%D1%82%D0%BE%D2%B7%D0%B8%D0%BA%D3%A3"
+  ],
+  "timespan": {
+    "start_year": 1000,
+    "end_year": null
+  },
+  "glottolog_code": "taji1245",
+  "iso639_3": "tgk",
+  "wikidata_qid": "Q9260",
+  "phoible_id": "taji1245",
+  "wals_code": "taj",
+  "location": {
+    "latitude": 38.8213,
+    "longitude": 68.5549,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Tajik."
+  }
+}

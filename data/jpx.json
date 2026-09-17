@@ -1,0 +1,96 @@
+{
+  "code": "jpx",
+  "name": "Proto-Japonic (family node)",
+  "parent": "x-clade-japo1237",
+  "script": "IPA-reconstruction",
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "i": [
+      "i"
+    ],
+    "u": [
+      "u"
+    ],
+    "e": [
+      "e"
+    ],
+    "o": [
+      "o"
+    ],
+    "p": [
+      "p"
+    ],
+    "t": [
+      "t"
+    ],
+    "k": [
+      "k"
+    ],
+    "b": [
+      "b"
+    ],
+    "d": [
+      "d"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "s": [
+      "s"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "l": [
+      "l"
+    ],
+    "r": [
+      "r"
+    ],
+    "w": [
+      "w"
+    ],
+    "j": [
+      "j"
+    ],
+    "h": [
+      "h"
+    ]
+  },
+  "allophones": {},
+  "notes": "STRUCTURAL ANCESTRY NODE (not a modelled G2P target). Proto-Japonic is the reconstructed common ancestor of the Japonic family (Japanese and Ryukyuan). It exists here only so the ancestry / phylogenetic-distance metrics of the modern varieties that reference it have a node to resolve to; NO phonology is claimed or reconstructed and the minimal grapheme set is a placeholder (afa.json / trk.json stub pattern).",
+  "quality": "stub",
+  "script_type": "reconstruction",
+  "iso639_3": null,
+  "glottolog_code": "japo1237",
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Proto-Japonic_language"
+  ],
+  "urls": [
+    "https://glottolog.org/resource/languoid/id/japo1237"
+  ],
+  "sources": [
+    {
+      "id": "frellesvig2010",
+      "author": "Frellesvig, B.",
+      "year": 2010,
+      "title": "A History of the Japanese Language",
+      "publisher": "Cambridge University Press",
+      "url": null,
+      "pages": null,
+      "notes": "Reference for Japonic reconstruction (structural node only).",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Proto-Japonic_language"
+    }
+  ],
+  "location": {
+    "latitude": 32.720649,
+    "longitude": 133.028005,
+    "source": "glottolog",
+    "notes": "Glottolog's computed centroid for the Japonic family — a summary of a whole clade's range, not a place anyone speaks."
+  }
+}

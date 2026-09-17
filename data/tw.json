@@ -1,0 +1,56 @@
+{
+  "code": "tw",
+  "name": "Twi",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes_base": "ak",
+  "graphemes": {},
+  "allophones_base": "ak",
+  "allophones": {},
+  "positional_graphemes_base": "ak",
+  "iso639_3": "aka",
+  "glottolog_code": "akan1250",
+  "wikidata_qid": "Q36850",
+  "notes": "Twi, the Akan literary standard used in Ashanti, Eastern, and parts of Bono/Bono East/Ahafo regions of Ghana; comprises the Asante and Akuapem sub-varieties. The `ak` spec in this dataset already encodes the Asante Twi grapheme/phoneme mapping under the 1961/1978 unified Akan orthography, so `tw` inherits it wholesale (`graphemes_base`/`allophones_base`/`positional_graphemes_base: ak`) rather than duplicating it: Twi and the `ak` (Akan) spec describe the same sound-to-letter mapping, `tw` simply names the individual language code (BCP-47/ISO distinguishes `ak` macrolanguage from `tw`=Twi/`fat`=Fante as individual languages) used by consumers that want the Twi-specific code rather than the Akan macrolanguage code. Differences between Twi and Fante (notably Fante's /ts~dz/ affricate contrast and extra vowel qualities ɪ ʊ) are NOT present in Twi and are captured separately in the `fat` spec.",
+  "sources": [
+    {
+      "id": "twi_language_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Twi",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Twi",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Twi",
+      "notes": "Vowel/consonant inventory, tongue-root harmony, palatalisation and orthography overview."
+    },
+    {
+      "id": "dolphyne1988",
+      "author": "Dolphyne, Florence Abena",
+      "year": 1988,
+      "title": "The Akan (Twi-Fante) Language: Its Sound Systems and Tonal Structure",
+      "publisher": "Ghana Universities Press",
+      "url": null,
+      "notes": "Standard reference description of Akan/Twi phonology, vowel harmony and tone."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Twi",
+    "https://en.wikipedia.org/wiki/Akan_language"
+  ],
+  "parent": "ak",
+  "ancestors": [
+    {
+      "code": "ak",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Twi is the individual-language code for the Akan variety this dataset's `ak` spec already describes (Asante-based unified orthography)."
+    }
+  ],
+  "location": {
+    "latitude": 6.75,
+    "longitude": -1.6,
+    "source": "glottolog",
+    "notes": "Ashanti Region, Ghana — the Twi-speaking heartland around Kumasi."
+  }
+}

@@ -1,0 +1,476 @@
+{
+  "code": "ar-SA-x-hejaz",
+  "name": "Hejazi Arabic",
+  "script": "Arabic",
+  "graphemes_base": "ar-x-peninsular",
+  "graphemes": {
+    "يَوْ": [
+      "joː"
+    ],
+    "وَيْ": [
+      "weː"
+    ],
+    "ث": [
+      "t",
+      "θ"
+    ],
+    "ج": [
+      "dʒ"
+    ],
+    "ذ": [
+      "d",
+      "ð"
+    ],
+    "ض": [
+      "dˤ"
+    ],
+    "ظ": [
+      "dˤ",
+      "zˤ"
+    ],
+    "ق": [
+      "ɡ",
+      "q"
+    ],
+    "الثث": [
+      "att",
+      "aθθ"
+    ],
+    "اَلثث": [
+      "att",
+      "aθθ"
+    ],
+    "لِلثث": [
+      "litt",
+      "liθθ"
+    ],
+    "وَالثث": [
+      "watt",
+      "waθθ"
+    ],
+    "فَالثث": [
+      "fatt",
+      "faθθ"
+    ],
+    "بِالثث": [
+      "bitt",
+      "biθθ"
+    ],
+    "كَالثث": [
+      "katt",
+      "kaθθ"
+    ],
+    "الذذ": [
+      "add",
+      "aðð"
+    ],
+    "اَلذذ": [
+      "add",
+      "aðð"
+    ],
+    "لِلذذ": [
+      "lidd",
+      "liðð"
+    ],
+    "وَالذذ": [
+      "wadd",
+      "waðð"
+    ],
+    "فَالذذ": [
+      "fadd",
+      "faðð"
+    ],
+    "بِالذذ": [
+      "bidd",
+      "biðð"
+    ],
+    "كَالذذ": [
+      "kadd",
+      "kaðð"
+    ],
+    "الضض": [
+      "adˤdˤ"
+    ],
+    "اَلضض": [
+      "adˤdˤ"
+    ],
+    "لِلضض": [
+      "lidˤdˤ"
+    ],
+    "وَالضض": [
+      "wadˤdˤ"
+    ],
+    "فَالضض": [
+      "fadˤdˤ"
+    ],
+    "بِالضض": [
+      "bidˤdˤ"
+    ],
+    "كَالضض": [
+      "kadˤdˤ"
+    ],
+    "الظظ": [
+      "adˤdˤ",
+      "azˤzˤ"
+    ],
+    "اَلظظ": [
+      "adˤdˤ",
+      "azˤzˤ"
+    ],
+    "لِلظظ": [
+      "lidˤdˤ",
+      "lizˤzˤ"
+    ],
+    "وَالظظ": [
+      "wadˤdˤ",
+      "wazˤzˤ"
+    ],
+    "فَالظظ": [
+      "fadˤdˤ",
+      "fazˤzˤ"
+    ],
+    "بِالظظ": [
+      "bidˤdˤ",
+      "bizˤzˤ"
+    ],
+    "كَالظظ": [
+      "kadˤdˤ",
+      "kazˤzˤ"
+    ],
+    "اِلثث": [
+      "itt",
+      "iθθ"
+    ],
+    "اِلذذ": [
+      "idd",
+      "iðð"
+    ],
+    "اِلضض": [
+      "idˤdˤ"
+    ],
+    "اِلظظ": [
+      "idˤdˤ",
+      "izˤzˤ"
+    ],
+    "وِالثث": [
+      "witt",
+      "wiθθ"
+    ],
+    "وِالذذ": [
+      "widd",
+      "wiðð"
+    ],
+    "وِالضض": [
+      "widˤdˤ"
+    ],
+    "وِالظظ": [
+      "widˤdˤ",
+      "wizˤzˤ"
+    ],
+    "يو": [
+      "juː",
+      "joː",
+      "iːw"
+    ],
+    "وي": [
+      "wiː",
+      "weː",
+      "uːj"
+    ],
+    "ية": [
+      "ja",
+      "jat"
+    ],
+    "وة": [
+      "wa",
+      "wat"
+    ],
+    "وية": [
+      "uːja",
+      "wja"
+    ],
+    "يوة": [
+      "iːwa",
+      "eːwa",
+      "jwa"
+    ]
+  },
+  "allophones_base": "ar-x-peninsular",
+  "allophones": {
+    "k": [
+      "k"
+    ],
+    "q": [
+      "ɡ",
+      "q"
+    ],
+    "ɮˤ": [
+      "dˤ"
+    ],
+    "ðˤ": [
+      "dˤ",
+      "zˤ"
+    ],
+    "θ": [
+      "t",
+      "θ"
+    ],
+    "ð": [
+      "d",
+      "ð"
+    ],
+    "dʒ": [
+      "dʒ"
+    ],
+    "aː": [
+      "aː",
+      "æː",
+      "eː"
+    ]
+  },
+  "parent": "ar-x-peninsular",
+  "ancestors": [
+    {
+      "code": "ar-x-peninsular",
+      "role": "parent",
+      "weight": 0.9,
+      "notes": "Peninsular Arabic base"
+    }
+  ],
+  "notes": "Hejazi Arabic (حجازي), urban western Saudi Arabia: Mecca, Medina, Jeddah. References Omar (1975) and Abdoh (2010). DEFINING FEATURES modeled here: (1) qaf ق → /ɡ/ (voiced velar stop) in inherited vocabulary — part of the early Hejazi /q/→/ɡ/ shift; /q/ retained only in learned/scientific/religious borrowings (older descriptions positing a /ʔ/ reflex are a misattribution of the Levantine/Egyptian feature); (2) jim ج → /dʒ/ (affricate; [ʒ] for some speakers); (3) interdentals MERGED TO STOPS in the urban koine — ث → /t/ (~/s/), ذ → /d/ (~/z/), ظ → /dˤ/ (~/zˤ/); interdentals are retained only in Bedouin/rural speech; (4) MONOPHTHONGIZATION — Classical /aj aw/ → [eː oː] (bayt→beːt, yawm→joːm), declared as allophone_rules HEJ_MONO_* (Omar 1975; Abdoh 2010), giving the 8-vowel system /a u i; aː uː iː eː oː/. TOKENIZATION NOTE: those rules rewrite the /aj/ and /aw/ ATOMS that the ⟨َي⟩/⟨َو⟩ digraphs emit, and in ⟨يَوْ⟩ and ⟨وَيْ⟩ the fatha is already spoken for — the inherited `ar` onset digraphs يَ→/ja/ and وَ→/wa/ claim it, so the glide that follows is a bare /w/ or /j/ and the diphthong atom never forms (يَوْم came out *[jawm]). The two sequences are therefore spelled out in `graphemes` as يَوْ→[joː] and وَيْ→[weː], which is the same monophthongization, reached from the spelling instead of from the atom. The explicit sukun in both keys is what keeps حَيَوَان /ħajawaːn/ and يَوَدّ /jawadd/ — where the waw carries its own vowel and there is no diphthong — out of the rule; (5) four emphatics /sˤ dˤ tˤ zˤ/ with pharyngealization spreading that backs low vowels — inherited from the ar-x-peninsular parent (AR_PEN_EMPH_*). No k→[tʃ] Gulf/Najdi affrication. Cosmopolitan koine shaped by Hajj contact. INPUT CONTRACT: transcribes orthography+harakat; short vowels surface only when the input is vocalised (dialectal Arabic is normally written defectively). NO ar-SA UMBRELLA NODE: Saudi dialects do not form one phonological group — they split across the Hejazi (this node), Najdi (ar-SA-x-najd + ar-SA-x-qassim), Gulf (ar-SA-x-sharqiyya) and Southwestern (ar-SA-x-rijal-alma) types — so the bare country code ar-SA is left unassigned (lang-code accuracy: null beats wrong; Omar 1975). The urban Hejazi koine modeled here is itself only the prestige city variety; rural and Bedouin Hejazi retain interdentals and lack the stop mergers. MATRES LECTIONIS AFTER A CONSONANT. ⟨و⟩ and ⟨ي⟩ after a consonant letter are read first as the long vowels [uː] and [iː], then [oː] and [eː], then the glides [w] and [j]; word-initially and after a vowel they stay glides. Wikipedia 'Hejazi Arabic' (source hejazi_arabic_wiki), section Writing system: \"the vowels /oː/ and /eː/ which were not part of the CA phonemic inventory are represented by the letters ⟨و⟩ and ⟨ي⟩ respectively.\" Its vowel table writes فوق /fuːg/ 'wake up!' and /foːg/ 'above', مو /ˈmuː/, جوا /ˈd͡ʒoː/, بيض /biːdˤ/ 'whites' and /beːdˤ/ 'eggs', ذي /ˈdiː/, عليه /ʕaˈleː/. The source does not rank [uː] against [oː]; [oː] first measures 0.2864 against 0.2877 for this order, which the sister specs use. ADJACENT LETTERS AND THE FINAL TA MARBUTA. Grapheme keys يو [juː, joː, iːw], وي [wiː, weː, uːj], ية [ja, jat], وة [wa, wat], وية [uːja, wja] and يوة [iːwa, eːwa, jwa] read the first of two adjacent letters, and a letter before a final ة, as the glide; without them the after_consonant rule makes both letters long (بيوت biːuːt). The source shows no such sequence after a consonant; these keys rest on the gold count. Gold count (WikiPron ar-SA-x-hejaz, acw_arab_broad.tsv): 2640 lines. Rows with the letter after a consonant letter: و 453, ي 606; segments in those rows: و uː 130, oː 178, w 176; ي iː 235, eː 139, j 231.",
+  "quality": "research",
+  "script_type": "abjad",
+  "sources": [
+    {
+      "id": "omar1975",
+      "author": "Omar, Margaret K.",
+      "year": 1975,
+      "title": "Saudi Arabic, Urban Hijazi Dialect: A Basic Course",
+      "publisher": "Foreign Service Institute, Washington DC",
+      "url": null,
+      "pages": "xi-xvi",
+      "notes": "Pronunciation guide (pp.xi-xvi), informants from Jidda. Page-pinned support for every defining feature modeled here: (a) qaf, p.xiii — '/q/ occurs only in classicized words; it often alternates with /g/', i.e. inherited vocab has [ɡ] (guul قول, gaal قال, giTaar قطار, giSSa قصة) and [q] survives only in learned/borrowed items (qur'aan قرآن, iqtiSaad اقتصاد); (b) interdentals, p.xiv ('The TH Consonants') — θalaaθa→talaata ث→[t], maθalan→masalan ث→[s], haaða→haada ذ→[d], ظ→[ẓ]=/zˤ/; (c) the 8-vowel system, p.xv — 'five basic vowels /a i u/ (long or short) ... two usually occur as long vowels /ee/ and /oo/ because they came from Classical /ay/ and /aw/'; (d) monophthongization, p.xii/xvi — xeer خير, beet بيت, feen فين [eː] < /ay/; Soot صوت, loon لون, moot موت [oː] < /aw/; (e) emphatics incl. velarized lam ḷ in aḷḷaah الله, p.xiv. See data/gold/primary_sources (omar1975-001..026)."
+    },
+    {
+      "id": "abdoh2010",
+      "author": "Abdoh, E.",
+      "year": 2010,
+      "title": "A Study of the Phonology and Morphology of Urban Meccan Arabic (PhD dissertation)",
+      "publisher": "University of Kansas",
+      "url": null,
+      "pages": null,
+      "notes": "Urban Meccan/Hejazi vowel chart; 8-vowel system with /eː oː/ from monophthongized diphthongs; four emphatics /sˤ dˤ tˤ zˤ/."
+    },
+    {
+      "id": "almahmoud2020",
+      "author": "Al Mahmoud, M.S.",
+      "year": 2020,
+      "title": "A Constraint-based Analysis of Velar Affrication in Najdi vs. Hijazi Arabic",
+      "publisher": "Education and Linguistics Research 6(2), 62-72. doi:10.5296/elr.v6i2.17551",
+      "url": "https://doi.org/10.5296/elr.v6i2.17551",
+      "doi": "10.5296/elr.v6i2.17551",
+      "pages": "62-72",
+      "notes": "Native-informant evidence that Hijazi has NO velar affrication: /kis/, /dik/, /ʕɪlk/, /keɪf/, /kɛlb/ all keep [k] in HA while Najdi alternates with [ts]; the qaf reflex is [ɡ] with no [dz]. Supports the k:[k] allophone list here."
+    },
+    {
+      "id": "almalky2020",
+      "author": "Almalky, Abdullah G.",
+      "year": 2020,
+      "title": "The Active Participle in Hijazi Arabic: An LFG Perspective (PhD thesis)",
+      "publisher": "University of Essex",
+      "url": null,
+      "pages": "29",
+      "notes": "Urban Hijazi (HA) morphosyntax; pronoun and active-participle paradigms. Confirms HA independent pronouns (Pana أنا, Pint إنت, huw هو with final-vowel loss) and the active-participle forms (e.g. saːkniːn 'residing', cf. gold row 010). Transcription P=ʔ, Q=ʕ, è=ħ."
+    },
+    {
+      "id": "almohanna1998",
+      "author": "Al-Mohanna, Faisal",
+      "year": 1998,
+      "title": "Syllabification and metrification in Urban Hijazi Arabic: Between rules and constraints (PhD thesis)",
+      "publisher": "University of Essex",
+      "url": null,
+      "pages": null,
+      "notes": "The reference account of URBAN (sedentary) Hijazi syllabification and stress — the quantity-sensitive, non-iambic system this node's `stress` block encodes. Distinct from the Bedouin Hijazi metrical system."
+    },
+    {
+      "id": "kabrah2004",
+      "author": "Kabrah, Rawiah S.",
+      "year": 2004,
+      "title": "Opacity and transparency in the phonology of Makkan Arabic: A Stratal Optimality-Theoretic approach (PhD thesis)",
+      "publisher": "Boston University",
+      "url": null,
+      "pages": null,
+      "notes": "Makkan (urban Hijazi) phonology and stress; sedentary quantity-sensitive metrics with a (H́L) foot option word-medially — again the sedentary system, contrasting with Bedouin iambic stress."
+    },
+    {
+      "id": "alsolami2023",
+      "author": "Al Solami, Majed",
+      "year": 2023,
+      "title": "An Optimality-Theoretic analysis of stress in the Bani Sulaim dialect",
+      "publisher": "Lingua Posnaniensis LXV(1), 7-24. doi:10.14746/linpo.2023.65.1.1",
+      "url": "https://doi.org/10.14746/linpo.2023.65.1.1",
+      "doi": "10.14746/linpo.2023.65.1.1",
+      "pages": "7-24",
+      "notes": "CONTRAST source: Bani Sulaim is a BEDOUIN Hijazi dialect with IAMBIC stress and vowel-deletion processes, explicitly opposed (p.8) to the trochaic stress of the non-Bedouin/urban Hijazi varieties this node models. Establishes that the sedentary koine here is NOT iambic. Bedouin Hijazi also retains interdentals (ʔaχaðu 'they took') — the same rural/Bedouin retention noted below."
+    },
+    {
+      "id": "alrohili2019",
+      "author": "Al-Rohili, Mohammad Awad",
+      "year": 2019,
+      "title": "Depalatalisation of /ɡʲ/ and /kʲ/ in the Ḥarbi dialect in Medina (PhD thesis)",
+      "publisher": "University of Essex",
+      "url": null,
+      "pages": "9-10",
+      "notes": "CONTRAST source: the Bedouin Ḥarbi dialect of Medina (North-West Arabian) has palatalised [ɡʲ]/[kʲ], retained interdentals ([ðiːb] ذيب), and an emphatic ǧiːm [ʒˤ]. None of these are urban-koine features; confirms the urban/Bedouin split within the Hijaz that motivates leaving the bare ar-SA unassigned and modeling only the prestige city variety here."
+    },
+    {
+      "id": "watson2002",
+      "author": "Watson, J.C.E.",
+      "year": 2002,
+      "title": "The Phonology and Morphology of Arabic",
+      "publisher": "Oxford University Press",
+      "url": null,
+      "pages": null,
+      "notes": null,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Arabic_phonology"
+    },
+    {
+      "id": "holes2004",
+      "author": "Holes, C.",
+      "year": 2004,
+      "title": "Modern Arabic: Structures, Functions, and Varieties",
+      "publisher": "Georgetown University Press",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "versteegh2001",
+      "author": "Versteegh, K.",
+      "year": 2001,
+      "title": "The Arabic Language",
+      "publisher": "Edinburgh University Press",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "hejazi_arabic_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Hejazi Arabic",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Hejazi_Arabic",
+      "pages": null,
+      "notes": "Section Writing system and the vowel table, read 2026-09-13 in the raw wikitext. The Writing system paragraph cites Holes (2004) p. 92 on its first sentence only.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Hejazi_Arabic"
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Hejazi_Arabic",
+    "https://ar.wikipedia.org/wiki/%D9%84%D9%87%D8%AC%D8%A9_%D8%AD%D8%AC%D8%A7%D8%B2%D9%8A%D8%A9"
+  ],
+  "timespan": {
+    "start_year": 1400,
+    "end_year": null
+  },
+  "glottolog_code": "hija1235",
+  "iso639_3": "acw",
+  "allophone_rules": [
+    {
+      "id": "HEJ_MONO_AY",
+      "phonemes": [
+        "aj"
+      ],
+      "surface": "eː",
+      "notes": "Urban Hejazi monophthongization (Omar 1975; Abdoh 2010): the Classical diphthong /aj/ is realised [eː], e.g. bayt → [beːt]. Yields the 8-vowel system /a u i aː uː iː eː oː/."
+    },
+    {
+      "id": "HEJ_MONO_AW",
+      "phonemes": [
+        "aw"
+      ],
+      "surface": "oː",
+      "notes": "Urban Hejazi monophthongization (Omar 1975; Abdoh 2010): the Classical diphthong /aw/ is realised [oː], e.g. yawm → [joːm]."
+    }
+  ],
+  "wikidata_qid": "Q56608",
+  "wals_code": "arh",
+  "location": {
+    "latitude": 22.8346,
+    "longitude": 38.9237,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Hijazi Arabic."
+  },
+  "optional_marks": [
+    "ً",
+    "ٌ",
+    "ٍ",
+    "َ",
+    "ُ",
+    "ِ",
+    "ّ",
+    "ْ",
+    "ٰ",
+    "ٓ"
+  ],
+  "stress": {
+    "default_position": -3,
+    "quantity_sensitive": true,
+    "superheavy_final_attracts": true,
+    "max_onset": 1,
+    "stress_mark": "ˈ",
+    "notes": "Arabic stress is QUANTITY-SENSITIVE: it falls on a syllable because that syllable is heavy, not because of any orthographic ending, so no ending table can express it. The cascade (Ryding, A Reference Grammar of MSA, CUP 2005, §2.3; Watson, The Phonology and Morphology of Arabic, OUP 2002, ch.3): a superheavy final syllable (CVːC/CVCC) takes the stress (kiˈtaːb); otherwise a heavy penult (CVː/CVC) does (muˈdarris); otherwise the antepenult (ˈmadrasa). max_onset=1 because Arabic onsets are obligatory and hold exactly one consonant — a medial cluster splits, closing the preceding syllable, and that boundary is what makes the penult of mudarris heavy. INPUT CONTRACT: weight is only recoverable from a complete transcription, so this requires diacritized input; an undiacritized skeleton has no vowels to weigh. The registered wikipron gold carries no stress marks, but the benchmark strips stress from both sides by default, so this costs no PER. URBAN vs BEDOUIN: the cascade above is the SEDENTARY (urban koine) system this node models — quantity-sensitive, non-iambic, with the sedentary trochaic default in disyllables (Al-Mohanna 1998, Syllabification and metrification in Urban Hijazi Arabic; Kabrah 2004 on Makkan). It is NOT the Bedouin Hijazi metrical system, which is IAMBIC with foot inventory (L.Ĺ)/(L.H́)/(H́) and a battery of vowel-deletion processes (Al Solami 2023:8 explicitly opposes Bedouin iambic to non-Bedouin trochaic stress; Al-Mozainy 1981). Modeling this node on the urban system is therefore a deliberate variety choice, not an omission. Prosodic clitics: monosyllabic function words (negator maː, prepositions fiː/min/ʕan/ʕa/li/bi, vocative jaː, copula-negator muː/miʃ, conditional law/loː, wa-proclitic combinations) attach to a host and fall inside the host's stress domain, so they carry no word stress (Watson 2002, The Phonology and Morphology of Arabic, OUP, ch.3). Pan-Arabic class; the per-lect form list reflects the function words attested in this lect. Orthographic test — a clitic homograph (e.g. verb yā 'came') is destressed in every occurrence.",
+    "cliticless_words": [
+      "فِي",
+      "لِي",
+      "مَا",
+      "مُو",
+      "مِن",
+      "يَا"
+    ]
+  },
+  "audit": {
+    "wikipron": {
+      "conclusion": "input_limited",
+      "measured": "0 of 2640 wikipron input words (acw_arab_broad.tsv) carry a haraka (short-vowel diacritic); Wiktionary files Arabic entries at the unvocalized page title (Wiktionary:About_Arabic / Wiktionary:Arabic_entry_guidelines, 'Entry name'), so the scraped input is a consonant-plus-long-vowel skeleton, exactly the pattern independently measured on the bare 'ar' wikipron row (0/17,563 words carry a haraka there; see ar.json audit.wikipron). No fold was run for this dialect row -- doing so needs the dialect's own vowel inventory, not MSA's -- so no valid_ceiling is recorded here; the wikipron_ar_diacritized loader (scripts/benchmark.py) that would supply it is wired for the 'ar' row only.",
+      "reference": "spec notes; see ar.json audit.wikipron for the measured MSA precedent"
+    }
+  },
+  "positional_graphemes": {
+    "و": {
+      "word_initial": [
+        "w"
+      ],
+      "after_vowel": [
+        "w"
+      ],
+      "after_consonant": [
+        "uː",
+        "oː",
+        "w"
+      ],
+      "default": [
+        "w",
+        "uː"
+      ]
+    },
+    "ي": {
+      "word_initial": [
+        "j"
+      ],
+      "after_vowel": [
+        "j"
+      ],
+      "after_consonant": [
+        "iː",
+        "eː",
+        "j"
+      ],
+      "default": [
+        "j",
+        "iː"
+      ]
+    }
+  }
+}

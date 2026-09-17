@@ -1,0 +1,240 @@
+{
+  "code": "guc",
+  "name": "Wayuu",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "aa": [
+      "aː"
+    ],
+    "e": [
+      "ɛ"
+    ],
+    "ee": [
+      "ɛː"
+    ],
+    "i": [
+      "i"
+    ],
+    "ii": [
+      "iː"
+    ],
+    "o": [
+      "ɔ"
+    ],
+    "oo": [
+      "ɔː"
+    ],
+    "u": [
+      "u"
+    ],
+    "uu": [
+      "uː"
+    ],
+    "ü": [
+      "ɨ"
+    ],
+    "üü": [
+      "ɨː"
+    ],
+    "p": [
+      "p"
+    ],
+    "pp": [
+      "pː"
+    ],
+    "t": [
+      "t"
+    ],
+    "tt": [
+      "tː"
+    ],
+    "k": [
+      "k"
+    ],
+    "kk": [
+      "kː"
+    ],
+    "m": [
+      "m"
+    ],
+    "mm": [
+      "mː"
+    ],
+    "n": [
+      "n"
+    ],
+    "nn": [
+      "nː"
+    ],
+    "s": [
+      "s"
+    ],
+    "sh": [
+      "ʃ"
+    ],
+    "j": [
+      "h"
+    ],
+    "l": [
+      "l"
+    ],
+    "r": [
+      "r"
+    ],
+    "w": [
+      "w"
+    ],
+    "y": [
+      "j"
+    ],
+    "ꞌ": [
+      "ʔ"
+    ],
+    "'": [
+      "ʔ"
+    ]
+  },
+  "allophones": {
+    "a": [
+      "a"
+    ],
+    "aː": [
+      "aː"
+    ],
+    "ɛ": [
+      "ɛ"
+    ],
+    "ɛː": [
+      "ɛː"
+    ],
+    "i": [
+      "i"
+    ],
+    "iː": [
+      "iː"
+    ],
+    "ɔ": [
+      "ɔ"
+    ],
+    "ɔː": [
+      "ɔː"
+    ],
+    "u": [
+      "u"
+    ],
+    "uː": [
+      "uː"
+    ],
+    "ɨ": [
+      "ɨ"
+    ],
+    "ɨː": [
+      "ɨː"
+    ],
+    "p": [
+      "p"
+    ],
+    "pː": [
+      "pː"
+    ],
+    "t": [
+      "t"
+    ],
+    "tː": [
+      "tː"
+    ],
+    "k": [
+      "k"
+    ],
+    "kː": [
+      "kː"
+    ],
+    "m": [
+      "m"
+    ],
+    "mː": [
+      "mː"
+    ],
+    "n": [
+      "n"
+    ],
+    "nː": [
+      "nː"
+    ],
+    "s": [
+      "s"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "h": [
+      "h"
+    ],
+    "l": [
+      "l"
+    ],
+    "r": [
+      "r"
+    ],
+    "w": [
+      "w"
+    ],
+    "j": [
+      "j"
+    ],
+    "ʔ": [
+      "ʔ"
+    ]
+  },
+  "notes": "Wayuu (wayuunaiki) — Arawakan language of the Guajira Peninsula (Colombia and Venezuela). Latin orthography standardised for bilingual education. Six vowel qualities /i ɛ ɨ a u ɔ/ (⟨i e ü a u o⟩), each with a long counterpart written by doubling. Plosives and nasals lengthen (geminate), written double: pp tt kk mm nn. ⟨sh⟩ = /ʃ/, ⟨j⟩ = /h/, ⟨ꞌ⟩ (saltillo, also typed as an apostrophe) = glottal stop. Stress generally falls on the second syllable, with exceptions for long vowels and closed syllables.",
+  "iso639_3": "guc",
+  "glottolog_code": "wayu1243",
+  "wikidata_qid": "Q891085",
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Wayuu_language",
+    "https://guc.wikipedia.org/wiki/Wayuunaiki"
+  ],
+  "sources": [
+    {
+      "id": "alvarez1994",
+      "author": "Álvarez, José",
+      "year": 1994,
+      "title": "Estudios de lingüística guajira",
+      "publisher": "Secretaría de Cultura del Estado Zulia, Maracaibo",
+      "url": null,
+      "pages": null,
+      "notes": "Reference description of Wayuunaiki phonology and orthography."
+    },
+    {
+      "id": "guc_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Wayuu language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Wayuu_language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Wayuu_language",
+      "pages": null,
+      "notes": "Phonology and orthography tables."
+    }
+  ],
+  "parent": "x-clade-araw1281",
+  "ancestors": [
+    {
+      "code": "x-clade-araw1281",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Arawakan — the classification node this language sits under."
+    }
+  ],
+  "location": {
+    "latitude": 11.395566,
+    "longitude": -72.199791,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Wayuu."
+  }
+}

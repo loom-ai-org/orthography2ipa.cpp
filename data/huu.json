@@ -1,0 +1,78 @@
+{
+  "code": "huu",
+  "name": "Murui Huitoto",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "ch": ["tʃ"],
+    "aa": ["aː"],
+    "ee": ["ɛː"],
+    "ii": ["iː"],
+    "oo": ["ɔː"],
+    "uu": ["uː"],
+    "ɨɨ": ["ɯː"],
+    "ɨ": ["ɯ"],
+    "a": ["a"],
+    "e": ["ɛ"],
+    "i": ["i"],
+    "o": ["ɔ"],
+    "u": ["u"],
+    "p": ["p"],
+    "b": ["b"],
+    "t": ["t"],
+    "d": ["d"],
+    "k": ["k"],
+    "g": ["ɡ"],
+    "f": ["ɸ"],
+    "v": ["β"],
+    "z": ["θ"],
+    "j": ["h"],
+    "s": ["s"],
+    "y": ["dʒ"],
+    "m": ["m"],
+    "n": ["n"],
+    "ñ": ["ɲ"],
+    "r": ["ɾ"],
+    "w": ["w"]
+  },
+  "parent": "x-clade-huit1251",
+  "ancestors": [
+    {
+      "code": "x-clade-huit1251",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Descent per Glottolog classification of Murui Huitoto (muru1274)."
+    }
+  ],
+  "notes": "Huitotoan language (Murui/Bue) of Colombia and Peru, with an orthography and phonology drawn from Wojtylak's descriptive grammar. Six vowel qualities each contrast for length (written doubled); ɨ is a high back unrounded vowel. The letter j is /h/, z is a dental fricative, y is a voiced affricate and ñ a palatal nasal; /s/ occurs mainly in Spanish loans. The high vowels also surface as glides word-initially. A pitch/tone contrast that the practical spelling does not mark, together with stress, is left unencoded, setting the PER floor.",
+  "iso639_3": "huu",
+  "glottolog_code": null,
+  "sources": [
+    {
+      "id": "huu_glottolog",
+      "author": "Hammarström, H. et al. (Glottolog 5.0)",
+      "year": 2024,
+      "title": "Glottolog: Murui Huitoto (muru1274)",
+      "publisher": "Max Planck Institute for Evolutionary Anthropology",
+      "url": "https://glottolog.org/resource/languoid/id/muru1274",
+      "pages": null,
+      "notes": "Classification reference.",
+      "wikipedia_url": null
+    },
+    {
+      "id": "huu_wikipedia",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Murui Huitoto language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Murui_Huitoto_language",
+      "pages": null,
+      "notes": "Phonology and orthography table (after Wojtylak's grammar).",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Murui_Huitoto_language"
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Murui_Huitoto_language"
+  ]
+}

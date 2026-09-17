@@ -1,0 +1,1476 @@
+{
+ "code": "mga",
+ "name": "Middle Irish (900-1200)",
+ "script": "Latin",
+ "script_type": "alphabet",
+ "quality": "research",
+ "graphemes": {
+  "á": [
+   "aː"
+  ],
+  "é": [
+   "eː"
+  ],
+  "í": [
+   "iː"
+  ],
+  "ó": [
+   "oː"
+  ],
+  "ú": [
+   "uː"
+  ],
+  "a": [
+   "a"
+  ],
+  "e": [
+   "e"
+  ],
+  "i": [
+   "i"
+  ],
+  "o": [
+   "o"
+  ],
+  "u": [
+   "u"
+  ],
+  "aí": [
+   "ɤː"
+  ],
+  "oí": [
+   "ɤː"
+  ],
+  "áe": [
+   "ɤː"
+  ],
+  "óe": [
+   "ɤː"
+  ],
+  "ae": [
+   "ɤː"
+  ],
+  "ao": [
+   "ɤː"
+  ],
+  "ía": [
+   "iːə"
+  ],
+  "úa": [
+   "uːə"
+  ],
+  "ia": [
+   "iə̯"
+  ],
+  "eo": [
+   "eo̯"
+  ],
+  "eó": [
+   "e̯oː"
+  ],
+  "éo": [
+   "e̯oː"
+  ],
+  "ch": [
+   "x"
+  ],
+  "th": [
+   "θ"
+  ],
+  "ph": [
+   "ɸ"
+  ],
+  "sh": [
+   "h"
+  ],
+  "fh": [
+   ""
+  ],
+  "mb": [
+   "m"
+  ],
+  "ng": [
+   "ŋɡ"
+  ],
+  "bb": [
+   "b"
+  ],
+  "cc": [
+   "k"
+  ],
+  "dd": [
+   "d"
+  ],
+  "gg": [
+   "ɡ"
+  ],
+  "ll": [
+   "l"
+  ],
+  "mm": [
+   "m"
+  ],
+  "nn": [
+   "n"
+  ],
+  "pp": [
+   "p"
+  ],
+  "rr": [
+   "r"
+  ],
+  "tt": [
+   "t"
+  ],
+  "b": [
+   "b"
+  ],
+  "c": [
+   "k"
+  ],
+  "d": [
+   "d"
+  ],
+  "f": [
+   "ɸ"
+  ],
+  "g": [
+   "ɡ"
+  ],
+  "h": [
+   "h"
+  ],
+  "l": [
+   "l"
+  ],
+  "m": [
+   "m"
+  ],
+  "n": [
+   "n"
+  ],
+  "p": [
+   "p"
+  ],
+  "r": [
+   "ɾ"
+  ],
+  "s": [
+   "s"
+  ],
+  "t": [
+   "t"
+  ]
+ },
+ "parent": "x-clade-goid1240",
+ "ancestors": [
+  {
+   "code": "x-clade-goid1240",
+   "role": "parent",
+   "weight": 1.0,
+   "notes": "Descent per Glottolog classification of Middle Irish (10-12th century) (midd1360)."
+  }
+ ],
+ "notes": "Research. Middle Irish (c. 900-1200), the Goidelic stage between Old Irish and Early Modern Irish, written in the Latin alphabet. The spec models the four things Middle Irish spelling actually encodes.\n\nConsonant QUALITY (broad/velarised against slender/palatalised) is written with the flanking vowel letters under caol le caol, leathan le leathan: a consonant next to ⟨e i é í⟩ is slender, next to ⟨a o u á ó ú⟩ broad. The vowel letter that only signals quality is not itself pronounced, so ⟨aile⟩ is [alʲə]; the glide letters are selected as quality context first and deleted afterwards. A following vowel letter outranks a preceding one, and inside a consonant cluster the quality spreads to the neighbouring obstruent.\n\nLENITION of ⟨b d g m⟩ is not written. A single letter after a vowel spells the lenited fricative [β ð ɣ β̃] and the doubled letter spells the unlenited stop, which is the same convention that makes a single ⟨c t p⟩ after a vowel spell the voiced [ɡ d b] against voiceless ⟨cc tt pp⟩. Word-initial lenition is a grammatical mutation the spelling of an isolated word form does not record, and is not modelled.\n\nUNSTRESSED VOWELS reduce to [ə]. The collapse of the Old Irish unstressed vowel system into a single schwa is the change that defines the Middle Irish stage (Breatnach 1994), and with fixed word-initial stress it reaches every non-initial short vowel.\n\nThe digraphs ⟨ae ao áe óe aí oí⟩ spell the long back unrounded vowel, and ⟨ía úa ia eo eó éo⟩ the falling diphthongs (⟨ia⟩ and ⟨eo eó éo⟩ short of the long ⟨ía⟩/⟨úa⟩ pair, e.g. ⟨dia⟩ [d̠ʲiə̯], ⟨deog⟩ [d̠ʲeo̯ɣ], ⟨Beóllán⟩ [bʲe̯oːlaːn]).\n\nCONSONANT-QUALITY SPREAD FROM ⟨i⟩: only an ⟨i⟩ written as a caol le caol quality-marking GLIDE — one itself preceded by another vowel letter, e.g. the ⟨i⟩ of ⟨aile⟩ — spreads its palatalisation onto a following consonant. A nucleus ⟨i í⟩ does not: ⟨cích⟩ is [kʲiːx], not *[kʲiːxʲ], and ⟨sicc⟩ is [ɕik], not *[ɕikʲ]. The engine's ``after_i_glide`` position (as opposed to the unconditional ``after_i``) encodes exactly this restriction.\n\nPERIOD CAVEAT: the fullest description of this orthography is Thurneysen's grammar of OLD Irish, which Middle Irish continues in almost every respect relevant here; the innovations of the Middle Irish stage proper (schwa collapse, the spread of unhistorical glide spellings, ⟨th⟩ weakening towards [h]) are cited to Breatnach (1994) and McCone (2005). Where the two stages differ the spec follows the Middle Irish description.\n\nCONVENTION MISMATCH with the WikiPron gold: the gold is RECONSTRUCTED pronunciation, not attested speech, and it carries two notational choices this spec adopts and one it does not. It writes slender ⟨s⟩ as [ɕ] and ⟨f ph⟩ as bilabial [ɸ] (both adopted here, the latter also matching the sibling `sga` entry); it marks the broad coronals as dental [t̪ d̪ n̪ l̪], which the broad-mode benchmark normalizer folds away, so the spec does not emit the dental diacritic; and it splits the slender coronals into retracted [t̠ʲ d̠ʲ l̠ʲ n̠ʲ] for the fortis series against plain [tʲ dʲ lʲ nʲ] for the lenis, a distinction the normalizer does NOT fold. The gold also transcribes many headwords twice with competing reconstructions (⟨Medb⟩ as both [mʲeðβ] and [mʲeɣβ], ⟨th⟩ as both [θ] and [h]); those variants are scored as alternatives, so a residual PER floor from reconstruction disagreement is expected and is not a defect in the spec.",
+ "iso639_3": "mga",
+ "glottolog_code": null,
+ "sources": [
+  {
+   "id": "mga_glottolog",
+   "author": "Hammarström, H. et al. (Glottolog 5.0)",
+   "year": 2024,
+   "title": "Glottolog: Middle Irish (10-12th century) (midd1360)",
+   "publisher": "Max Planck Institute for Evolutionary Anthropology",
+   "url": "https://glottolog.org/resource/languoid/id/midd1360",
+   "pages": null,
+   "notes": "Classification reference for a skeleton-tier entry.",
+   "wikipedia_url": null
+  },
+  {
+   "id": "thurneysen1946",
+   "author": "Thurneysen, Rudolf (trans. D. A. Binchy & Osborn Bergin)",
+   "year": 1946,
+   "title": "A Grammar of Old Irish",
+   "publisher": "Dublin Institute for Advanced Studies",
+   "url": null,
+   "pages": null,
+   "notes": "Standard reference grammar of Old Irish, which Middle Irish continues: source for the caol le caol quality spellings, the unwritten lenition of ⟨b d g m⟩, the single/double letter voicing convention, the fortis/lenis rhotic contrast, and the fixed word-initial stress encoded in the `stress` block. Also used for the sibling `sga` entry.",
+   "wikipedia_url": "https://en.wikipedia.org/wiki/Middle_Irish"
+  },
+  {
+   "id": "breatnach1994",
+   "author": "Breatnach, Liam",
+   "year": 1994,
+   "title": "An Mheán-Ghaeilge, in Stair na Gaeilge",
+   "publisher": "Roinn na Sean-Ghaeilge, Coláiste Phádraig, Maigh Nuad",
+   "url": null,
+   "pages": null,
+   "notes": "Standard descriptive account of the Middle Irish stage: source for the collapse of the unstressed vowels into schwa and for the continuity of the Old Irish lenition and voicing spelling conventions through the period. Author-year citation; edition not consulted for locators.",
+   "wikipedia_url": null
+  },
+  {
+   "id": "mccone2005",
+   "author": "McCone, Kim",
+   "year": 2005,
+   "title": "A First Old Irish Grammar and Reader",
+   "publisher": "Department of Old Irish, National University of Ireland, Maynooth",
+   "url": null,
+   "pages": null,
+   "notes": "Modern teaching grammar; used for the palatalised consonant series. The [ɸ] value given here for ⟨f ph⟩ is NOT drawn from this source (its edition was not consulted for locators); it follows the WikiPron gold's convention, matching the sibling `sga` entry (see the CONVENTION MISMATCH note above). Author-year citation.",
+   "wikipedia_url": null
+  },
+  {
+   "id": "mga_wikipedia",
+   "author": "Wikipedia contributors",
+   "year": 2024,
+   "title": "Middle Irish (Wikipedia)",
+   "publisher": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Middle_Irish",
+   "pages": null,
+   "notes": "Orthography and period overview.",
+   "wikipedia_url": "https://en.wikipedia.org/wiki/Middle_Irish"
+  }
+ ],
+ "wikipedia": [
+  "https://en.wikipedia.org/wiki/Middle_Irish"
+ ],
+ "stress": {
+  "default_position": 1,
+  "quantity_sensitive": false,
+  "stress_mark": "ˈ",
+  "source": "rules",
+  "notes": "Middle Irish, like Old Irish, has fixed word-initial stress (Thurneysen 1946, A Grammar of Old Irish): the first syllable of the word is stressed, with pretonic preverbal particles being proclitic (unstressed) rather than shifting the accent. `default_position=1` models the default case; proclitic preverb sequences are not separately handled for lack of a closed enumerable list applicable at the grapheme level."
+ },
+ "positional_graphemes": {
+  "ch": {
+   "before_front_vowel": [
+    "xʲ"
+   ],
+   "before_back_vowel": [
+    "x"
+   ],
+   "after_i": [
+    "xʲ"
+   ]
+  },
+  "th": {
+   "before_front_vowel": [
+    "θʲ"
+   ],
+   "before_back_vowel": [
+    "θ"
+   ],
+   "after_i": [
+    "θʲ"
+   ]
+  },
+  "ph": {
+   "before_front_vowel": [
+    "ɸʲ"
+   ],
+   "before_back_vowel": [
+    "ɸ"
+   ],
+   "after_i": [
+    "ɸʲ"
+   ]
+  },
+  "ng": {
+   "before_front_vowel": [
+    "ŋɡʲ"
+   ],
+   "before_back_vowel": [
+    "ŋɡ"
+   ],
+   "word_final": [
+    "ŋ"
+   ],
+   "after_i": [
+    "ŋɡʲ"
+   ]
+  },
+  "mb": {
+   "before_front_vowel": [
+    "mʲ"
+   ],
+   "before_back_vowel": [
+    "m"
+   ],
+   "after_i": [
+    "mʲ"
+   ]
+  },
+  "bb": {
+   "before_front_vowel": [
+    "bʲ"
+   ],
+   "before_back_vowel": [
+    "b"
+   ],
+   "after_i": [
+    "bʲ"
+   ]
+  },
+  "cc": {
+   "before_front_vowel": [
+    "kʲ"
+   ],
+   "before_back_vowel": [
+    "k"
+   ],
+   "after_i": [
+    "kʲ"
+   ]
+  },
+  "dd": {
+   "before_front_vowel": [
+    "d̠ʲ"
+   ],
+   "before_back_vowel": [
+    "d"
+   ],
+   "after_i": [
+    "d̠ʲ"
+   ]
+  },
+  "gg": {
+   "before_front_vowel": [
+    "ɡʲ"
+   ],
+   "before_back_vowel": [
+    "ɡ"
+   ],
+   "after_i": [
+    "ɡʲ"
+   ]
+  },
+  "ll": {
+   "before_front_vowel": [
+    "l̠ʲ"
+   ],
+   "before_back_vowel": [
+    "l"
+   ],
+   "after_i": [
+    "l̠ʲ"
+   ]
+  },
+  "mm": {
+   "before_front_vowel": [
+    "mʲ"
+   ],
+   "before_back_vowel": [
+    "m"
+   ],
+   "after_i": [
+    "mʲ"
+   ]
+  },
+  "nn": {
+   "before_front_vowel": [
+    "n̠ʲ"
+   ],
+   "before_back_vowel": [
+    "n"
+   ],
+   "after_i": [
+    "n̠ʲ"
+   ]
+  },
+  "pp": {
+   "before_front_vowel": [
+    "pʲ"
+   ],
+   "before_back_vowel": [
+    "p"
+   ],
+   "after_i": [
+    "pʲ"
+   ]
+  },
+  "rr": {
+   "before_front_vowel": [
+    "rʲ"
+   ],
+   "before_back_vowel": [
+    "r"
+   ],
+   "after_i": [
+    "rʲ"
+   ]
+  },
+  "tt": {
+   "before_front_vowel": [
+    "t̠ʲ"
+   ],
+   "before_back_vowel": [
+    "t"
+   ],
+   "after_i": [
+    "t̠ʲ"
+   ]
+  },
+  "b": {
+   "before_front_vowel": [
+    "bʲ"
+   ],
+   "before_back_vowel": [
+    "b"
+   ],
+   "after_i": [
+    "bʲ"
+   ]
+  },
+  "c": {
+   "before_front_vowel": [
+    "kʲ"
+   ],
+   "before_back_vowel": [
+    "k"
+   ],
+   "after_i": [
+    "kʲ"
+   ]
+  },
+  "d": {
+   "before_front_vowel": [
+    "d̠ʲ"
+   ],
+   "before_back_vowel": [
+    "d"
+   ],
+   "after_i": [
+    "d̠ʲ"
+   ]
+  },
+  "f": {
+   "before_front_vowel": [
+    "ɸʲ"
+   ],
+   "before_back_vowel": [
+    "ɸ"
+   ],
+   "after_i": [
+    "ɸʲ"
+   ]
+  },
+  "g": {
+   "before_front_vowel": [
+    "ɡʲ"
+   ],
+   "before_back_vowel": [
+    "ɡ"
+   ],
+   "after_i": [
+    "ɡʲ"
+   ]
+  },
+  "l": {
+   "before_front_vowel": [
+    "lʲ"
+   ],
+   "before_back_vowel": [
+    "l"
+   ],
+   "after_i": [
+    "lʲ"
+   ]
+  },
+  "m": {
+   "before_front_vowel": [
+    "mʲ"
+   ],
+   "before_back_vowel": [
+    "m"
+   ],
+   "after_i": [
+    "mʲ"
+   ]
+  },
+  "n": {
+   "before_front_vowel": [
+    "nʲ"
+   ],
+   "before_back_vowel": [
+    "n"
+   ],
+   "after_i": [
+    "nʲ"
+   ]
+  },
+  "p": {
+   "before_front_vowel": [
+    "pʲ"
+   ],
+   "before_back_vowel": [
+    "p"
+   ],
+   "after_i": [
+    "pʲ"
+   ]
+  },
+  "r": {
+   "before_front_vowel": [
+    "ɾʲ"
+   ],
+   "before_back_vowel": [
+    "ɾ"
+   ],
+   "after_i": [
+    "ɾʲ"
+   ]
+  },
+  "s": {
+   "before_front_vowel": [
+    "ɕ"
+   ],
+   "before_back_vowel": [
+    "s"
+   ],
+   "after_i": [
+    "ɕ"
+   ]
+  },
+  "t": {
+   "before_front_vowel": [
+    "t̠ʲ"
+   ],
+   "before_back_vowel": [
+    "t"
+   ],
+   "after_i": [
+    "t̠ʲ"
+   ]
+  },
+  "a": {
+   "nucleus_unstressed": [
+    "ə"
+   ]
+  },
+  "e": {
+   "nucleus_unstressed": [
+    "ə"
+   ]
+  },
+  "i": {
+   "nucleus_unstressed": [
+    "ə"
+   ]
+  },
+  "o": {
+   "nucleus_unstressed": [
+    "ə"
+   ]
+  },
+  "u": {
+   "nucleus_unstressed": [
+    "ə"
+   ]
+  }
+ },
+ "allophone_rules": [
+  {
+   "id": "MGA_LENITION_b",
+   "phonemes": [
+    "b"
+   ],
+   "surface": "β",
+   "grapheme": [
+    "b"
+   ],
+   "preceded_by": "vowel",
+   "notes": "Lenition of ⟨b d g⟩ is not written in Middle Irish spelling: a single ⟨b d g⟩ standing after a vowel spells the lenited fricative [β ð ɣ], while the geminate spelling ⟨bb dd gg⟩ spells the unlenited stop (⟨abbán⟩ [abaːn] against ⟨abacc⟩ [aβək]). The rule fires after any vowel letter, covering the intervocalic, preconsonantal and word-final positions alike, and never word-initially, where lenition is a grammatically conditioned mutation that the spelling of an isolated word form does not record (Thurneysen 1946; Breatnach 1994)."
+  },
+  {
+   "id": "MGA_LENITION_d",
+   "phonemes": [
+    "d"
+   ],
+   "surface": "ð",
+   "grapheme": [
+    "d"
+   ],
+   "preceded_by": "vowel",
+   "notes": "Lenition of ⟨b d g⟩ is not written in Middle Irish spelling: a single ⟨b d g⟩ standing after a vowel spells the lenited fricative [β ð ɣ], while the geminate spelling ⟨bb dd gg⟩ spells the unlenited stop (⟨abbán⟩ [abaːn] against ⟨abacc⟩ [aβək]). The rule fires after any vowel letter, covering the intervocalic, preconsonantal and word-final positions alike, and never word-initially, where lenition is a grammatically conditioned mutation that the spelling of an isolated word form does not record (Thurneysen 1946; Breatnach 1994)."
+  },
+  {
+   "id": "MGA_LENITION_ɡ",
+   "phonemes": [
+    "ɡ"
+   ],
+   "surface": "ɣ",
+   "grapheme": [
+    "g"
+   ],
+   "preceded_by": "vowel",
+   "notes": "Lenition of ⟨b d g⟩ is not written in Middle Irish spelling: a single ⟨b d g⟩ standing after a vowel spells the lenited fricative [β ð ɣ], while the geminate spelling ⟨bb dd gg⟩ spells the unlenited stop (⟨abbán⟩ [abaːn] against ⟨abacc⟩ [aβək]). The rule fires after any vowel letter, covering the intervocalic, preconsonantal and word-final positions alike, and never word-initially, where lenition is a grammatically conditioned mutation that the spelling of an isolated word form does not record (Thurneysen 1946; Breatnach 1994)."
+  },
+  {
+   "id": "MGA_LENITION_bʲ",
+   "phonemes": [
+    "bʲ"
+   ],
+   "surface": "βʲ",
+   "grapheme": [
+    "b"
+   ],
+   "preceded_by": "vowel",
+   "notes": "Lenition of ⟨b d g⟩ is not written in Middle Irish spelling: a single ⟨b d g⟩ standing after a vowel spells the lenited fricative [β ð ɣ], while the geminate spelling ⟨bb dd gg⟩ spells the unlenited stop (⟨abbán⟩ [abaːn] against ⟨abacc⟩ [aβək]). The rule fires after any vowel letter, covering the intervocalic, preconsonantal and word-final positions alike, and never word-initially, where lenition is a grammatically conditioned mutation that the spelling of an isolated word form does not record (Thurneysen 1946; Breatnach 1994)."
+  },
+  {
+   "id": "MGA_LENITION_d̠ʲ",
+   "phonemes": [
+    "d̠ʲ"
+   ],
+   "surface": "ðʲ",
+   "grapheme": [
+    "d"
+   ],
+   "preceded_by": "vowel",
+   "notes": "Lenition of ⟨b d g⟩ is not written in Middle Irish spelling: a single ⟨b d g⟩ standing after a vowel spells the lenited fricative [β ð ɣ], while the geminate spelling ⟨bb dd gg⟩ spells the unlenited stop (⟨abbán⟩ [abaːn] against ⟨abacc⟩ [aβək]). The rule fires after any vowel letter, covering the intervocalic, preconsonantal and word-final positions alike, and never word-initially, where lenition is a grammatically conditioned mutation that the spelling of an isolated word form does not record (Thurneysen 1946; Breatnach 1994)."
+  },
+  {
+   "id": "MGA_LENITION_ɡʲ",
+   "phonemes": [
+    "ɡʲ"
+   ],
+   "surface": "ɣʲ",
+   "grapheme": [
+    "g"
+   ],
+   "preceded_by": "vowel",
+   "notes": "Lenition of ⟨b d g⟩ is not written in Middle Irish spelling: a single ⟨b d g⟩ standing after a vowel spells the lenited fricative [β ð ɣ], while the geminate spelling ⟨bb dd gg⟩ spells the unlenited stop (⟨abbán⟩ [abaːn] against ⟨abacc⟩ [aβək]). The rule fires after any vowel letter, covering the intervocalic, preconsonantal and word-final positions alike, and never word-initially, where lenition is a grammatically conditioned mutation that the spelling of an isolated word form does not record (Thurneysen 1946; Breatnach 1994)."
+  },
+  {
+   "id": "MGA_LENITION_m_BEFORE_VOWEL",
+   "phonemes": [
+    "m"
+   ],
+   "surface": "β̃",
+   "grapheme": [
+    "m"
+   ],
+   "preceded_by": "vowel",
+   "notes": "Lenited ⟨m⟩ is the nasalised bilabial fricative [β̃], spelled with the plain letter exactly as the other unwritten lenitions are, while the geminate ⟨mm⟩ spells the unlenited nasal. Lenition needs a preceding vowel, so ⟨m⟩ in the sonorant clusters ⟨lm rm nm⟩ keeps its nasal stop (⟨calma⟩, ⟨Colmán⟩, ⟨ainm⟩). The rules here cover exactly three environments: before a vowel, before a following liquid, and word-finally (⟨amra⟩, ⟨dam⟩) (Thurneysen 1946; Breatnach 1994). A syllable-closing ⟨m⟩ before some other consonant is NOT covered by a general rule either way — the gold shows it going both ways (⟨aimser⟩ keeps the stop, but ⟨crimthan⟩, ⟨breithemnas⟩ and ⟨brígmar⟩ lenite), so no blanket claim is made about that environment.",
+   "followed_by": "vowel"
+  },
+  {
+   "id": "MGA_LENITION_m_BEFORE_LIQUID",
+   "phonemes": [
+    "m"
+   ],
+   "surface": "β̃",
+   "grapheme": [
+    "m"
+   ],
+   "preceded_by": "vowel",
+   "notes": "Lenited ⟨m⟩ is the nasalised bilabial fricative [β̃], spelled with the plain letter exactly as the other unwritten lenitions are, while the geminate ⟨mm⟩ spells the unlenited nasal. Lenition needs a preceding vowel, so ⟨m⟩ in the sonorant clusters ⟨lm rm nm⟩ keeps its nasal stop (⟨calma⟩, ⟨Colmán⟩, ⟨ainm⟩). The rules here cover exactly three environments: before a vowel, before a following liquid, and word-finally (⟨amra⟩, ⟨dam⟩) (Thurneysen 1946; Breatnach 1994). A syllable-closing ⟨m⟩ before some other consonant is NOT covered by a general rule either way — the gold shows it going both ways (⟨aimser⟩ keeps the stop, but ⟨crimthan⟩, ⟨breithemnas⟩ and ⟨brígmar⟩ lenite), so no blanket claim is made about that environment.",
+   "followed_by_grapheme": [
+    "l",
+    "r",
+    "ll",
+    "rr"
+   ]
+  },
+  {
+   "id": "MGA_LENITION_m_WORD_FINAL",
+   "phonemes": [
+    "m"
+   ],
+   "surface": "β̃",
+   "grapheme": [
+    "m"
+   ],
+   "preceded_by": "vowel",
+   "notes": "Lenited ⟨m⟩ is the nasalised bilabial fricative [β̃], spelled with the plain letter exactly as the other unwritten lenitions are, while the geminate ⟨mm⟩ spells the unlenited nasal. Lenition needs a preceding vowel, so ⟨m⟩ in the sonorant clusters ⟨lm rm nm⟩ keeps its nasal stop (⟨calma⟩, ⟨Colmán⟩, ⟨ainm⟩). The rules here cover exactly three environments: before a vowel, before a following liquid, and word-finally (⟨amra⟩, ⟨dam⟩) (Thurneysen 1946; Breatnach 1994). A syllable-closing ⟨m⟩ before some other consonant is NOT covered by a general rule either way — the gold shows it going both ways (⟨aimser⟩ keeps the stop, but ⟨crimthan⟩, ⟨breithemnas⟩ and ⟨brígmar⟩ lenite), so no blanket claim is made about that environment.",
+   "followed_by": "word_boundary"
+  },
+  {
+   "id": "MGA_LENITION_mʲ_BEFORE_VOWEL",
+   "phonemes": [
+    "mʲ"
+   ],
+   "surface": "β̃ʲ",
+   "grapheme": [
+    "m"
+   ],
+   "preceded_by": "vowel",
+   "notes": "Lenited ⟨m⟩ is the nasalised bilabial fricative [β̃], spelled with the plain letter exactly as the other unwritten lenitions are, while the geminate ⟨mm⟩ spells the unlenited nasal. Lenition needs a preceding vowel, so ⟨m⟩ in the sonorant clusters ⟨lm rm nm⟩ keeps its nasal stop (⟨calma⟩, ⟨Colmán⟩, ⟨ainm⟩). The rules here cover exactly three environments: before a vowel, before a following liquid, and word-finally (⟨amra⟩, ⟨dam⟩) (Thurneysen 1946; Breatnach 1994). A syllable-closing ⟨m⟩ before some other consonant is NOT covered by a general rule either way — the gold shows it going both ways (⟨aimser⟩ keeps the stop, but ⟨crimthan⟩, ⟨breithemnas⟩ and ⟨brígmar⟩ lenite), so no blanket claim is made about that environment.",
+   "followed_by": "vowel"
+  },
+  {
+   "id": "MGA_LENITION_mʲ_BEFORE_LIQUID",
+   "phonemes": [
+    "mʲ"
+   ],
+   "surface": "β̃ʲ",
+   "grapheme": [
+    "m"
+   ],
+   "preceded_by": "vowel",
+   "notes": "Lenited ⟨m⟩ is the nasalised bilabial fricative [β̃], spelled with the plain letter exactly as the other unwritten lenitions are, while the geminate ⟨mm⟩ spells the unlenited nasal. Lenition needs a preceding vowel, so ⟨m⟩ in the sonorant clusters ⟨lm rm nm⟩ keeps its nasal stop (⟨calma⟩, ⟨Colmán⟩, ⟨ainm⟩). The rules here cover exactly three environments: before a vowel, before a following liquid, and word-finally (⟨amra⟩, ⟨dam⟩) (Thurneysen 1946; Breatnach 1994). A syllable-closing ⟨m⟩ before some other consonant is NOT covered by a general rule either way — the gold shows it going both ways (⟨aimser⟩ keeps the stop, but ⟨crimthan⟩, ⟨breithemnas⟩ and ⟨brígmar⟩ lenite), so no blanket claim is made about that environment.",
+   "followed_by_grapheme": [
+    "l",
+    "r",
+    "ll",
+    "rr"
+   ]
+  },
+  {
+   "id": "MGA_LENITION_mʲ_WORD_FINAL",
+   "phonemes": [
+    "mʲ"
+   ],
+   "surface": "β̃ʲ",
+   "grapheme": [
+    "m"
+   ],
+   "preceded_by": "vowel",
+   "notes": "Lenited ⟨m⟩ is the nasalised bilabial fricative [β̃], spelled with the plain letter exactly as the other unwritten lenitions are, while the geminate ⟨mm⟩ spells the unlenited nasal. Lenition needs a preceding vowel, so ⟨m⟩ in the sonorant clusters ⟨lm rm nm⟩ keeps its nasal stop (⟨calma⟩, ⟨Colmán⟩, ⟨ainm⟩). The rules here cover exactly three environments: before a vowel, before a following liquid, and word-finally (⟨amra⟩, ⟨dam⟩) (Thurneysen 1946; Breatnach 1994). A syllable-closing ⟨m⟩ before some other consonant is NOT covered by a general rule either way — the gold shows it going both ways (⟨aimser⟩ keeps the stop, but ⟨crimthan⟩, ⟨breithemnas⟩ and ⟨brígmar⟩ lenite), so no blanket claim is made about that environment.",
+   "followed_by": "word_boundary"
+  },
+  {
+   "id": "MGA_MEDIAL_VOICING_k",
+   "phonemes": [
+    "k"
+   ],
+   "surface": "ɡ",
+   "grapheme": [
+    "c"
+   ],
+   "preceded_by": "vowel",
+   "notes": "In the inherited Old Irish spelling convention a single ⟨c t p⟩ after a vowel spells the VOICED stop [ɡ d b] and the doubled ⟨cc tt pp⟩ spells the voiceless one: ⟨abacc⟩ ends in [k] and ⟨attá⟩ has [t], while single ⟨c⟩ in ⟨oc⟩ is [ɡ]. Middle Irish keeps the convention (Thurneysen 1946; Breatnach 1994)."
+  },
+  {
+   "id": "MGA_MEDIAL_VOICING_kʲ",
+   "phonemes": [
+    "kʲ"
+   ],
+   "surface": "ɡʲ",
+   "grapheme": [
+    "c"
+   ],
+   "preceded_by": "vowel",
+   "notes": "In the inherited Old Irish spelling convention a single ⟨c t p⟩ after a vowel spells the VOICED stop [ɡ d b] and the doubled ⟨cc tt pp⟩ spells the voiceless one: ⟨abacc⟩ ends in [k] and ⟨attá⟩ has [t], while single ⟨c⟩ in ⟨oc⟩ is [ɡ]. Middle Irish keeps the convention (Thurneysen 1946; Breatnach 1994)."
+  },
+  {
+   "id": "MGA_MEDIAL_VOICING_t",
+   "phonemes": [
+    "t"
+   ],
+   "surface": "d",
+   "grapheme": [
+    "t"
+   ],
+   "preceded_by": "vowel",
+   "notes": "In the inherited Old Irish spelling convention a single ⟨c t p⟩ after a vowel spells the VOICED stop [ɡ d b] and the doubled ⟨cc tt pp⟩ spells the voiceless one: ⟨abacc⟩ ends in [k] and ⟨attá⟩ has [t], while single ⟨c⟩ in ⟨oc⟩ is [ɡ]. Middle Irish keeps the convention (Thurneysen 1946; Breatnach 1994)."
+  },
+  {
+   "id": "MGA_MEDIAL_VOICING_t̠ʲ",
+   "phonemes": [
+    "t̠ʲ"
+   ],
+   "surface": "d̠ʲ",
+   "grapheme": [
+    "t"
+   ],
+   "preceded_by": "vowel",
+   "notes": "In the inherited Old Irish spelling convention a single ⟨c t p⟩ after a vowel spells the VOICED stop [ɡ d b] and the doubled ⟨cc tt pp⟩ spells the voiceless one: ⟨abacc⟩ ends in [k] and ⟨attá⟩ has [t], while single ⟨c⟩ in ⟨oc⟩ is [ɡ]. Middle Irish keeps the convention (Thurneysen 1946; Breatnach 1994)."
+  },
+  {
+   "id": "MGA_MEDIAL_VOICING_p",
+   "phonemes": [
+    "p"
+   ],
+   "surface": "b",
+   "grapheme": [
+    "p"
+   ],
+   "preceded_by": "vowel",
+   "notes": "In the inherited Old Irish spelling convention a single ⟨c t p⟩ after a vowel spells the VOICED stop [ɡ d b] and the doubled ⟨cc tt pp⟩ spells the voiceless one: ⟨abacc⟩ ends in [k] and ⟨attá⟩ has [t], while single ⟨c⟩ in ⟨oc⟩ is [ɡ]. Middle Irish keeps the convention (Thurneysen 1946; Breatnach 1994)."
+  },
+  {
+   "id": "MGA_MEDIAL_VOICING_pʲ",
+   "phonemes": [
+    "pʲ"
+   ],
+   "surface": "bʲ",
+   "grapheme": [
+    "p"
+   ],
+   "preceded_by": "vowel",
+   "notes": "In the inherited Old Irish spelling convention a single ⟨c t p⟩ after a vowel spells the VOICED stop [ɡ d b] and the doubled ⟨cc tt pp⟩ spells the voiceless one: ⟨abacc⟩ ends in [k] and ⟨attá⟩ has [t], while single ⟨c⟩ in ⟨oc⟩ is [ɡ]. Middle Irish keeps the convention (Thurneysen 1946; Breatnach 1994)."
+  },
+  {
+   "id": "MGA_CLUSTER_QUALITY_t_REGRESSIVE",
+   "phonemes": [
+    "t"
+   ],
+   "surface": "t̠ʲ",
+   "followed_by_phoneme": [
+    "ɾʲ",
+    "rʲ",
+    "lʲ",
+    "l̠ʲ",
+    "nʲ",
+    "n̠ʲ",
+    "mʲ"
+   ],
+   "notes": "Caol le caol, leathan le leathan: a consonant CLUSTER carries one quality throughout, so an obstruent is palatalised when the consonant beside it in the cluster is (⟨tre⟩ [t̠ʲɾʲe], ⟨slis⟩ [ɕlʲiɕ], ⟨icht⟩ [ixʲt̠ʲ]). The grapheme layer sees only the immediate neighbour, which is a consonant letter in this configuration, so the quality is spread here at the phoneme layer instead (Thurneysen 1946)."
+  },
+  {
+   "id": "MGA_CLUSTER_QUALITY_d_REGRESSIVE",
+   "phonemes": [
+    "d"
+   ],
+   "surface": "d̠ʲ",
+   "followed_by_phoneme": [
+    "ɾʲ",
+    "rʲ",
+    "lʲ",
+    "l̠ʲ",
+    "nʲ",
+    "n̠ʲ",
+    "mʲ"
+   ],
+   "notes": "Caol le caol, leathan le leathan: a consonant CLUSTER carries one quality throughout, so an obstruent is palatalised when the consonant beside it in the cluster is (⟨tre⟩ [t̠ʲɾʲe], ⟨slis⟩ [ɕlʲiɕ], ⟨icht⟩ [ixʲt̠ʲ]). The grapheme layer sees only the immediate neighbour, which is a consonant letter in this configuration, so the quality is spread here at the phoneme layer instead (Thurneysen 1946)."
+  },
+  {
+   "id": "MGA_CLUSTER_QUALITY_k_REGRESSIVE",
+   "phonemes": [
+    "k"
+   ],
+   "surface": "kʲ",
+   "followed_by_phoneme": [
+    "ɾʲ",
+    "rʲ",
+    "lʲ",
+    "l̠ʲ",
+    "nʲ",
+    "n̠ʲ",
+    "mʲ"
+   ],
+   "notes": "Caol le caol, leathan le leathan: a consonant CLUSTER carries one quality throughout, so an obstruent is palatalised when the consonant beside it in the cluster is (⟨tre⟩ [t̠ʲɾʲe], ⟨slis⟩ [ɕlʲiɕ], ⟨icht⟩ [ixʲt̠ʲ]). The grapheme layer sees only the immediate neighbour, which is a consonant letter in this configuration, so the quality is spread here at the phoneme layer instead (Thurneysen 1946)."
+  },
+  {
+   "id": "MGA_CLUSTER_QUALITY_ɡ_REGRESSIVE",
+   "phonemes": [
+    "ɡ"
+   ],
+   "surface": "ɡʲ",
+   "followed_by_phoneme": [
+    "ɾʲ",
+    "rʲ",
+    "lʲ",
+    "l̠ʲ",
+    "nʲ",
+    "n̠ʲ",
+    "mʲ"
+   ],
+   "notes": "Caol le caol, leathan le leathan: a consonant CLUSTER carries one quality throughout, so an obstruent is palatalised when the consonant beside it in the cluster is (⟨tre⟩ [t̠ʲɾʲe], ⟨slis⟩ [ɕlʲiɕ], ⟨icht⟩ [ixʲt̠ʲ]). The grapheme layer sees only the immediate neighbour, which is a consonant letter in this configuration, so the quality is spread here at the phoneme layer instead (Thurneysen 1946)."
+  },
+  {
+   "id": "MGA_CLUSTER_QUALITY_p_REGRESSIVE",
+   "phonemes": [
+    "p"
+   ],
+   "surface": "pʲ",
+   "followed_by_phoneme": [
+    "ɾʲ",
+    "rʲ",
+    "lʲ",
+    "l̠ʲ",
+    "nʲ",
+    "n̠ʲ",
+    "mʲ"
+   ],
+   "notes": "Caol le caol, leathan le leathan: a consonant CLUSTER carries one quality throughout, so an obstruent is palatalised when the consonant beside it in the cluster is (⟨tre⟩ [t̠ʲɾʲe], ⟨slis⟩ [ɕlʲiɕ], ⟨icht⟩ [ixʲt̠ʲ]). The grapheme layer sees only the immediate neighbour, which is a consonant letter in this configuration, so the quality is spread here at the phoneme layer instead (Thurneysen 1946)."
+  },
+  {
+   "id": "MGA_CLUSTER_QUALITY_b_REGRESSIVE",
+   "phonemes": [
+    "b"
+   ],
+   "surface": "bʲ",
+   "followed_by_phoneme": [
+    "ɾʲ",
+    "rʲ",
+    "lʲ",
+    "l̠ʲ",
+    "nʲ",
+    "n̠ʲ",
+    "mʲ"
+   ],
+   "notes": "Caol le caol, leathan le leathan: a consonant CLUSTER carries one quality throughout, so an obstruent is palatalised when the consonant beside it in the cluster is (⟨tre⟩ [t̠ʲɾʲe], ⟨slis⟩ [ɕlʲiɕ], ⟨icht⟩ [ixʲt̠ʲ]). The grapheme layer sees only the immediate neighbour, which is a consonant letter in this configuration, so the quality is spread here at the phoneme layer instead (Thurneysen 1946)."
+  },
+  {
+   "id": "MGA_CLUSTER_QUALITY_s_REGRESSIVE",
+   "phonemes": [
+    "s"
+   ],
+   "surface": "ɕ",
+   "followed_by_phoneme": [
+    "ɾʲ",
+    "rʲ",
+    "lʲ",
+    "l̠ʲ",
+    "nʲ",
+    "n̠ʲ",
+    "mʲ"
+   ],
+   "notes": "Caol le caol, leathan le leathan: a consonant CLUSTER carries one quality throughout, so an obstruent is palatalised when the consonant beside it in the cluster is (⟨tre⟩ [t̠ʲɾʲe], ⟨slis⟩ [ɕlʲiɕ], ⟨icht⟩ [ixʲt̠ʲ]). The grapheme layer sees only the immediate neighbour, which is a consonant letter in this configuration, so the quality is spread here at the phoneme layer instead (Thurneysen 1946)."
+  },
+  {
+   "id": "MGA_CLUSTER_QUALITY_ɸ_REGRESSIVE",
+   "phonemes": [
+    "ɸ"
+   ],
+   "surface": "ɸʲ",
+   "followed_by_phoneme": [
+    "ɾʲ",
+    "rʲ",
+    "lʲ",
+    "l̠ʲ",
+    "nʲ",
+    "n̠ʲ",
+    "mʲ"
+   ],
+   "notes": "Caol le caol, leathan le leathan: a consonant CLUSTER carries one quality throughout, so an obstruent is palatalised when the consonant beside it in the cluster is (⟨tre⟩ [t̠ʲɾʲe], ⟨slis⟩ [ɕlʲiɕ], ⟨icht⟩ [ixʲt̠ʲ]). The grapheme layer sees only the immediate neighbour, which is a consonant letter in this configuration, so the quality is spread here at the phoneme layer instead (Thurneysen 1946)."
+  },
+  {
+   "id": "MGA_CLUSTER_QUALITY_x_REGRESSIVE",
+   "phonemes": [
+    "x"
+   ],
+   "surface": "xʲ",
+   "followed_by_phoneme": [
+    "ɾʲ",
+    "rʲ",
+    "lʲ",
+    "l̠ʲ",
+    "nʲ",
+    "n̠ʲ",
+    "mʲ"
+   ],
+   "notes": "Caol le caol, leathan le leathan: a consonant CLUSTER carries one quality throughout, so an obstruent is palatalised when the consonant beside it in the cluster is (⟨tre⟩ [t̠ʲɾʲe], ⟨slis⟩ [ɕlʲiɕ], ⟨icht⟩ [ixʲt̠ʲ]). The grapheme layer sees only the immediate neighbour, which is a consonant letter in this configuration, so the quality is spread here at the phoneme layer instead (Thurneysen 1946)."
+  },
+  {
+   "id": "MGA_CLUSTER_QUALITY_θ_REGRESSIVE",
+   "phonemes": [
+    "θ"
+   ],
+   "surface": "θʲ",
+   "followed_by_phoneme": [
+    "ɾʲ",
+    "rʲ",
+    "lʲ",
+    "l̠ʲ",
+    "nʲ",
+    "n̠ʲ",
+    "mʲ"
+   ],
+   "notes": "Caol le caol, leathan le leathan: a consonant CLUSTER carries one quality throughout, so an obstruent is palatalised when the consonant beside it in the cluster is (⟨tre⟩ [t̠ʲɾʲe], ⟨slis⟩ [ɕlʲiɕ], ⟨icht⟩ [ixʲt̠ʲ]). The grapheme layer sees only the immediate neighbour, which is a consonant letter in this configuration, so the quality is spread here at the phoneme layer instead (Thurneysen 1946)."
+  },
+  {
+   "id": "MGA_CLUSTER_QUALITY_t_PROGRESSIVE",
+   "phonemes": [
+    "t"
+   ],
+   "surface": "t̠ʲ",
+   "preceded_by_phoneme": [
+    "ɾʲ",
+    "rʲ",
+    "lʲ",
+    "l̠ʲ",
+    "nʲ",
+    "n̠ʲ",
+    "mʲ",
+    "β̃ʲ",
+    "bʲ",
+    "βʲ",
+    "pʲ",
+    "d̠ʲ",
+    "ðʲ",
+    "t̠ʲ",
+    "kʲ",
+    "ɡʲ",
+    "ɣʲ",
+    "xʲ",
+    "θʲ",
+    "ɕ",
+    "ɸʲ"
+   ],
+   "word_final": true,
+   "notes": "Caol le caol, leathan le leathan: a consonant CLUSTER carries one quality throughout, so an obstruent is palatalised when the consonant beside it in the cluster is (⟨tre⟩ [t̠ʲɾʲe], ⟨slis⟩ [ɕlʲiɕ], ⟨icht⟩ [ixʲt̠ʲ]). The grapheme layer sees only the immediate neighbour, which is a consonant letter in this configuration, so the quality is spread here at the phoneme layer instead (Thurneysen 1946)."
+  },
+  {
+   "id": "MGA_CLUSTER_QUALITY_d_PROGRESSIVE",
+   "phonemes": [
+    "d"
+   ],
+   "surface": "d̠ʲ",
+   "preceded_by_phoneme": [
+    "ɾʲ",
+    "rʲ",
+    "lʲ",
+    "l̠ʲ",
+    "nʲ",
+    "n̠ʲ",
+    "mʲ",
+    "β̃ʲ",
+    "bʲ",
+    "βʲ",
+    "pʲ",
+    "d̠ʲ",
+    "ðʲ",
+    "t̠ʲ",
+    "kʲ",
+    "ɡʲ",
+    "ɣʲ",
+    "xʲ",
+    "θʲ",
+    "ɕ",
+    "ɸʲ"
+   ],
+   "word_final": true,
+   "notes": "Caol le caol, leathan le leathan: a consonant CLUSTER carries one quality throughout, so an obstruent is palatalised when the consonant beside it in the cluster is (⟨tre⟩ [t̠ʲɾʲe], ⟨slis⟩ [ɕlʲiɕ], ⟨icht⟩ [ixʲt̠ʲ]). The grapheme layer sees only the immediate neighbour, which is a consonant letter in this configuration, so the quality is spread here at the phoneme layer instead (Thurneysen 1946)."
+  },
+  {
+   "id": "MGA_CLUSTER_QUALITY_k_PROGRESSIVE",
+   "phonemes": [
+    "k"
+   ],
+   "surface": "kʲ",
+   "preceded_by_phoneme": [
+    "ɾʲ",
+    "rʲ",
+    "lʲ",
+    "l̠ʲ",
+    "nʲ",
+    "n̠ʲ",
+    "mʲ",
+    "β̃ʲ",
+    "bʲ",
+    "βʲ",
+    "pʲ",
+    "d̠ʲ",
+    "ðʲ",
+    "t̠ʲ",
+    "kʲ",
+    "ɡʲ",
+    "ɣʲ",
+    "xʲ",
+    "θʲ",
+    "ɕ",
+    "ɸʲ"
+   ],
+   "word_final": true,
+   "notes": "Caol le caol, leathan le leathan: a consonant CLUSTER carries one quality throughout, so an obstruent is palatalised when the consonant beside it in the cluster is (⟨tre⟩ [t̠ʲɾʲe], ⟨slis⟩ [ɕlʲiɕ], ⟨icht⟩ [ixʲt̠ʲ]). The grapheme layer sees only the immediate neighbour, which is a consonant letter in this configuration, so the quality is spread here at the phoneme layer instead (Thurneysen 1946)."
+  },
+  {
+   "id": "MGA_CLUSTER_QUALITY_ɡ_PROGRESSIVE",
+   "phonemes": [
+    "ɡ"
+   ],
+   "surface": "ɡʲ",
+   "preceded_by_phoneme": [
+    "ɾʲ",
+    "rʲ",
+    "lʲ",
+    "l̠ʲ",
+    "nʲ",
+    "n̠ʲ",
+    "mʲ",
+    "β̃ʲ",
+    "bʲ",
+    "βʲ",
+    "pʲ",
+    "d̠ʲ",
+    "ðʲ",
+    "t̠ʲ",
+    "kʲ",
+    "ɡʲ",
+    "ɣʲ",
+    "xʲ",
+    "θʲ",
+    "ɕ",
+    "ɸʲ"
+   ],
+   "word_final": true,
+   "notes": "Caol le caol, leathan le leathan: a consonant CLUSTER carries one quality throughout, so an obstruent is palatalised when the consonant beside it in the cluster is (⟨tre⟩ [t̠ʲɾʲe], ⟨slis⟩ [ɕlʲiɕ], ⟨icht⟩ [ixʲt̠ʲ]). The grapheme layer sees only the immediate neighbour, which is a consonant letter in this configuration, so the quality is spread here at the phoneme layer instead (Thurneysen 1946)."
+  },
+  {
+   "id": "MGA_CLUSTER_QUALITY_p_PROGRESSIVE",
+   "phonemes": [
+    "p"
+   ],
+   "surface": "pʲ",
+   "preceded_by_phoneme": [
+    "ɾʲ",
+    "rʲ",
+    "lʲ",
+    "l̠ʲ",
+    "nʲ",
+    "n̠ʲ",
+    "mʲ",
+    "β̃ʲ",
+    "bʲ",
+    "βʲ",
+    "pʲ",
+    "d̠ʲ",
+    "ðʲ",
+    "t̠ʲ",
+    "kʲ",
+    "ɡʲ",
+    "ɣʲ",
+    "xʲ",
+    "θʲ",
+    "ɕ",
+    "ɸʲ"
+   ],
+   "word_final": true,
+   "notes": "Caol le caol, leathan le leathan: a consonant CLUSTER carries one quality throughout, so an obstruent is palatalised when the consonant beside it in the cluster is (⟨tre⟩ [t̠ʲɾʲe], ⟨slis⟩ [ɕlʲiɕ], ⟨icht⟩ [ixʲt̠ʲ]). The grapheme layer sees only the immediate neighbour, which is a consonant letter in this configuration, so the quality is spread here at the phoneme layer instead (Thurneysen 1946)."
+  },
+  {
+   "id": "MGA_CLUSTER_QUALITY_b_PROGRESSIVE",
+   "phonemes": [
+    "b"
+   ],
+   "surface": "bʲ",
+   "preceded_by_phoneme": [
+    "ɾʲ",
+    "rʲ",
+    "lʲ",
+    "l̠ʲ",
+    "nʲ",
+    "n̠ʲ",
+    "mʲ",
+    "β̃ʲ",
+    "bʲ",
+    "βʲ",
+    "pʲ",
+    "d̠ʲ",
+    "ðʲ",
+    "t̠ʲ",
+    "kʲ",
+    "ɡʲ",
+    "ɣʲ",
+    "xʲ",
+    "θʲ",
+    "ɕ",
+    "ɸʲ"
+   ],
+   "word_final": true,
+   "notes": "Caol le caol, leathan le leathan: a consonant CLUSTER carries one quality throughout, so an obstruent is palatalised when the consonant beside it in the cluster is (⟨tre⟩ [t̠ʲɾʲe], ⟨slis⟩ [ɕlʲiɕ], ⟨icht⟩ [ixʲt̠ʲ]). The grapheme layer sees only the immediate neighbour, which is a consonant letter in this configuration, so the quality is spread here at the phoneme layer instead (Thurneysen 1946)."
+  },
+  {
+   "id": "MGA_CLUSTER_QUALITY_s_PROGRESSIVE",
+   "phonemes": [
+    "s"
+   ],
+   "surface": "ɕ",
+   "preceded_by_phoneme": [
+    "ɾʲ",
+    "rʲ",
+    "lʲ",
+    "l̠ʲ",
+    "nʲ",
+    "n̠ʲ",
+    "mʲ",
+    "β̃ʲ",
+    "bʲ",
+    "βʲ",
+    "pʲ",
+    "d̠ʲ",
+    "ðʲ",
+    "t̠ʲ",
+    "kʲ",
+    "ɡʲ",
+    "ɣʲ",
+    "xʲ",
+    "θʲ",
+    "ɕ",
+    "ɸʲ"
+   ],
+   "word_final": true,
+   "notes": "Caol le caol, leathan le leathan: a consonant CLUSTER carries one quality throughout, so an obstruent is palatalised when the consonant beside it in the cluster is (⟨tre⟩ [t̠ʲɾʲe], ⟨slis⟩ [ɕlʲiɕ], ⟨icht⟩ [ixʲt̠ʲ]). The grapheme layer sees only the immediate neighbour, which is a consonant letter in this configuration, so the quality is spread here at the phoneme layer instead (Thurneysen 1946)."
+  },
+  {
+   "id": "MGA_CLUSTER_QUALITY_ɸ_PROGRESSIVE",
+   "phonemes": [
+    "ɸ"
+   ],
+   "surface": "ɸʲ",
+   "preceded_by_phoneme": [
+    "ɾʲ",
+    "rʲ",
+    "lʲ",
+    "l̠ʲ",
+    "nʲ",
+    "n̠ʲ",
+    "mʲ",
+    "β̃ʲ",
+    "bʲ",
+    "βʲ",
+    "pʲ",
+    "d̠ʲ",
+    "ðʲ",
+    "t̠ʲ",
+    "kʲ",
+    "ɡʲ",
+    "ɣʲ",
+    "xʲ",
+    "θʲ",
+    "ɕ",
+    "ɸʲ"
+   ],
+   "word_final": true,
+   "notes": "Caol le caol, leathan le leathan: a consonant CLUSTER carries one quality throughout, so an obstruent is palatalised when the consonant beside it in the cluster is (⟨tre⟩ [t̠ʲɾʲe], ⟨slis⟩ [ɕlʲiɕ], ⟨icht⟩ [ixʲt̠ʲ]). The grapheme layer sees only the immediate neighbour, which is a consonant letter in this configuration, so the quality is spread here at the phoneme layer instead (Thurneysen 1946)."
+  },
+  {
+   "id": "MGA_CLUSTER_QUALITY_x_PROGRESSIVE",
+   "phonemes": [
+    "x"
+   ],
+   "surface": "xʲ",
+   "preceded_by_phoneme": [
+    "ɾʲ",
+    "rʲ",
+    "lʲ",
+    "l̠ʲ",
+    "nʲ",
+    "n̠ʲ",
+    "mʲ",
+    "β̃ʲ",
+    "bʲ",
+    "βʲ",
+    "pʲ",
+    "d̠ʲ",
+    "ðʲ",
+    "t̠ʲ",
+    "kʲ",
+    "ɡʲ",
+    "ɣʲ",
+    "xʲ",
+    "θʲ",
+    "ɕ",
+    "ɸʲ"
+   ],
+   "word_final": true,
+   "notes": "Caol le caol, leathan le leathan: a consonant CLUSTER carries one quality throughout, so an obstruent is palatalised when the consonant beside it in the cluster is (⟨tre⟩ [t̠ʲɾʲe], ⟨slis⟩ [ɕlʲiɕ], ⟨icht⟩ [ixʲt̠ʲ]). The grapheme layer sees only the immediate neighbour, which is a consonant letter in this configuration, so the quality is spread here at the phoneme layer instead (Thurneysen 1946)."
+  },
+  {
+   "id": "MGA_CLUSTER_QUALITY_θ_PROGRESSIVE",
+   "phonemes": [
+    "θ"
+   ],
+   "surface": "θʲ",
+   "preceded_by_phoneme": [
+    "ɾʲ",
+    "rʲ",
+    "lʲ",
+    "l̠ʲ",
+    "nʲ",
+    "n̠ʲ",
+    "mʲ",
+    "β̃ʲ",
+    "bʲ",
+    "βʲ",
+    "pʲ",
+    "d̠ʲ",
+    "ðʲ",
+    "t̠ʲ",
+    "kʲ",
+    "ɡʲ",
+    "ɣʲ",
+    "xʲ",
+    "θʲ",
+    "ɕ",
+    "ɸʲ"
+   ],
+   "word_final": true,
+   "notes": "Caol le caol, leathan le leathan: a consonant CLUSTER carries one quality throughout, so an obstruent is palatalised when the consonant beside it in the cluster is (⟨tre⟩ [t̠ʲɾʲe], ⟨slis⟩ [ɕlʲiɕ], ⟨icht⟩ [ixʲt̠ʲ]). The grapheme layer sees only the immediate neighbour, which is a consonant letter in this configuration, so the quality is spread here at the phoneme layer instead (Thurneysen 1946)."
+  },
+  {
+   "id": "MGA_FORTIS_R_ɾ",
+   "phonemes": [
+    "ɾ"
+   ],
+   "surface": "r",
+   "grapheme": [
+    "r"
+   ],
+   "word_initial": true,
+   "notes": "Middle Irish keeps the inherited fortis/lenis rhotic contrast: the fortis trill [r] stands word-initially and where the spelling doubles the letter (⟨rr⟩), and the lenis tap [ɾ] stands everywhere else (Thurneysen 1946; Breatnach 1994)."
+  },
+  {
+   "id": "MGA_FORTIS_R_ɾʲ",
+   "phonemes": [
+    "ɾʲ"
+   ],
+   "surface": "rʲ",
+   "grapheme": [
+    "r"
+   ],
+   "word_initial": true,
+   "notes": "Middle Irish keeps the inherited fortis/lenis rhotic contrast: the fortis trill [r] stands word-initially and where the spelling doubles the letter (⟨rr⟩), and the lenis tap [ɾ] stands everywhere else (Thurneysen 1946; Breatnach 1994)."
+  },
+  {
+   "id": "MGA_GLIDE_I_AFTER_VOWEL",
+   "phonemes": [
+    "i",
+    "ə"
+   ],
+   "surface": "",
+   "grapheme": [
+    "i"
+   ],
+   "preceded_by": "vowel",
+   "notes": "Caol le caol, leathan le leathan: consonant quality is written with the flanking vowel letters, and a vowel letter written only to signal the quality of a neighbouring consonant is not itself pronounced. An ⟨i⟩ after another vowel letter is such a glide marker — ⟨aile⟩ is [alʲə], not [ailʲə] — and so is an ⟨e⟩ or ⟨i⟩ written before a back vowel to mark the preceding consonant slender (⟨fear⟩, ⟨fiu⟩). The glide letter is deleted once it has done its work of selecting the palatalised consonant (Thurneysen 1946)."
+  },
+  {
+   "id": "MGA_GLIDE_BEFORE_BACK_VOWEL",
+   "phonemes": [
+    "e",
+    "i",
+    "ə"
+   ],
+   "surface": "",
+   "grapheme": [
+    "e",
+    "i"
+   ],
+   "preceded_by": "consonant",
+   "followed_by": "back_vowel",
+   "notes": "Caol le caol, leathan le leathan: consonant quality is written with the flanking vowel letters, and a vowel letter written only to signal the quality of a neighbouring consonant is not itself pronounced. An ⟨i⟩ after another vowel letter is such a glide marker — ⟨aile⟩ is [alʲə], not [ailʲə] — and so is an ⟨e⟩ or ⟨i⟩ written before a back vowel to mark the preceding consonant slender (⟨fear⟩, ⟨fiu⟩). The glide letter is deleted once it has done its work of selecting the palatalised consonant (Thurneysen 1946)."
+  },
+  {
+   "id": "MGA_CLUSTER_QUALITY_m_PROGRESSIVE",
+   "phonemes": [
+    "m"
+   ],
+   "surface": "mʲ",
+   "preceded_by_phoneme": [
+    "ɾʲ",
+    "rʲ",
+    "lʲ",
+    "l̠ʲ",
+    "nʲ",
+    "n̠ʲ",
+    "mʲ",
+    "β̃ʲ",
+    "bʲ",
+    "βʲ",
+    "pʲ",
+    "d̠ʲ",
+    "ðʲ",
+    "t̠ʲ",
+    "kʲ",
+    "ɡʲ",
+    "ɣʲ",
+    "xʲ",
+    "θʲ",
+    "ɕ",
+    "ɸʲ"
+   ],
+   "word_final": true,
+   "notes": "Caol le caol, leathan le leathan: a consonant CLUSTER carries one quality throughout, so an obstruent is palatalised when the consonant beside it in the cluster is (⟨tre⟩ [t̠ʲɾʲe], ⟨slis⟩ [ɕlʲiɕ], ⟨icht⟩ [ixʲt̠ʲ]). The grapheme layer sees only the immediate neighbour, which is a consonant letter in this configuration, so the quality is spread here at the phoneme layer instead (Thurneysen 1946)."
+  },
+  {
+   "id": "MGA_CLUSTER_QUALITY_n_PROGRESSIVE",
+   "phonemes": [
+    "n"
+   ],
+   "surface": "nʲ",
+   "preceded_by_phoneme": [
+    "ɾʲ",
+    "rʲ",
+    "lʲ",
+    "l̠ʲ",
+    "nʲ",
+    "n̠ʲ",
+    "mʲ",
+    "β̃ʲ",
+    "bʲ",
+    "βʲ",
+    "pʲ",
+    "d̠ʲ",
+    "ðʲ",
+    "t̠ʲ",
+    "kʲ",
+    "ɡʲ",
+    "ɣʲ",
+    "xʲ",
+    "θʲ",
+    "ɕ",
+    "ɸʲ"
+   ],
+   "word_final": true,
+   "notes": "Caol le caol, leathan le leathan: a consonant CLUSTER carries one quality throughout, so an obstruent is palatalised when the consonant beside it in the cluster is (⟨tre⟩ [t̠ʲɾʲe], ⟨slis⟩ [ɕlʲiɕ], ⟨icht⟩ [ixʲt̠ʲ]). The grapheme layer sees only the immediate neighbour, which is a consonant letter in this configuration, so the quality is spread here at the phoneme layer instead (Thurneysen 1946)."
+  },
+  {
+   "id": "MGA_CLUSTER_QUALITY_l_PROGRESSIVE",
+   "phonemes": [
+    "l"
+   ],
+   "surface": "lʲ",
+   "preceded_by_phoneme": [
+    "ɾʲ",
+    "rʲ",
+    "lʲ",
+    "l̠ʲ",
+    "nʲ",
+    "n̠ʲ",
+    "mʲ",
+    "β̃ʲ",
+    "bʲ",
+    "βʲ",
+    "pʲ",
+    "d̠ʲ",
+    "ðʲ",
+    "t̠ʲ",
+    "kʲ",
+    "ɡʲ",
+    "ɣʲ",
+    "xʲ",
+    "θʲ",
+    "ɕ",
+    "ɸʲ"
+   ],
+   "word_final": true,
+   "notes": "Caol le caol, leathan le leathan: a consonant CLUSTER carries one quality throughout, so an obstruent is palatalised when the consonant beside it in the cluster is (⟨tre⟩ [t̠ʲɾʲe], ⟨slis⟩ [ɕlʲiɕ], ⟨icht⟩ [ixʲt̠ʲ]). The grapheme layer sees only the immediate neighbour, which is a consonant letter in this configuration, so the quality is spread here at the phoneme layer instead (Thurneysen 1946)."
+  },
+  {
+   "id": "MGA_CLUSTER_QUALITY_ɾ_PROGRESSIVE",
+   "phonemes": [
+    "ɾ"
+   ],
+   "surface": "ɾʲ",
+   "preceded_by_phoneme": [
+    "ɾʲ",
+    "rʲ",
+    "lʲ",
+    "l̠ʲ",
+    "nʲ",
+    "n̠ʲ",
+    "mʲ",
+    "β̃ʲ",
+    "bʲ",
+    "βʲ",
+    "pʲ",
+    "d̠ʲ",
+    "ðʲ",
+    "t̠ʲ",
+    "kʲ",
+    "ɡʲ",
+    "ɣʲ",
+    "xʲ",
+    "θʲ",
+    "ɕ",
+    "ɸʲ"
+   ],
+   "word_final": true,
+   "notes": "Caol le caol, leathan le leathan: a consonant CLUSTER carries one quality throughout, so an obstruent is palatalised when the consonant beside it in the cluster is (⟨tre⟩ [t̠ʲɾʲe], ⟨slis⟩ [ɕlʲiɕ], ⟨icht⟩ [ixʲt̠ʲ]). The grapheme layer sees only the immediate neighbour, which is a consonant letter in this configuration, so the quality is spread here at the phoneme layer instead (Thurneysen 1946)."
+  }
+ ]
+}

@@ -1,0 +1,336 @@
+{
+ "code": "mhi",
+ "name": "Ma'di",
+ "script": "Latin",
+ "quality": "skeleton",
+ "graphemes": {
+  "a": [
+   "a"
+  ],
+  "b": [
+   "b"
+  ],
+  "bw": [
+   "bʷ"
+  ],
+  "c": [
+   "t͡s"
+  ],
+  "d": [
+   "d"
+  ],
+  "dr": [
+   "ɖ"
+  ],
+  "drw": [
+   "d͡rʷ"
+  ],
+  "dw": [
+   "dʷ"
+  ],
+  "e": [
+   "ɛ"
+  ],
+  "f": [
+   "f"
+  ],
+  "g": [
+   "ɡ"
+  ],
+  "gb": [
+   "ɡ͡b"
+  ],
+  "gbw": [
+   "ɡ͡bʷ"
+  ],
+  "gw": [
+   "ɡʷ"
+  ],
+  "h": [
+   "h"
+  ],
+  "i": [
+   "ɪ"
+  ],
+  "j": [
+   "d͡z"
+  ],
+  "k": [
+   "k"
+  ],
+  "kp": [
+   "k͡p"
+  ],
+  "kpw": [
+   "k͡pʷ"
+  ],
+  "kw": [
+   "kʷ"
+  ],
+  "l": [
+   "l"
+  ],
+  "m": [
+   "m"
+  ],
+  "mb": [
+   "ᵐb"
+  ],
+  "mgb": [
+   "ᵑᵐɡ͡b"
+  ],
+  "mgbw": [
+   "ᵑᵐɡ͡bʷ"
+  ],
+  "mv": [
+   "ᶬv"
+  ],
+  "mw": [
+   "mʷ"
+  ],
+  "n": [
+   "n"
+  ],
+  "nd": [
+   "ⁿd"
+  ],
+  "ndr": [
+   "ᶯɖ"
+  ],
+  "ndrw": [
+   "ⁿd͡rʷ"
+  ],
+  "ng": [
+   "ᵑɡ"
+  ],
+  "ngw": [
+   "ᵑɡʷ"
+  ],
+  "nj": [
+   "ⁿd͡z"
+  ],
+  "ny": [
+   "ɲ"
+  ],
+  "nyw": [
+   "ɲʷ"
+  ],
+  "o": [
+   "ɔ"
+  ],
+  "p": [
+   "p"
+  ],
+  "pw": [
+   "pʷ"
+  ],
+  "r": [
+   "r"
+  ],
+  "rw": [
+   "rʷ"
+  ],
+  "s": [
+   "s"
+  ],
+  "sw": [
+   "sʷ"
+  ],
+  "t": [
+   "t"
+  ],
+  "tr": [
+   "ʈ"
+  ],
+  "trw": [
+   "t͡rʷ"
+  ],
+  "tw": [
+   "tʷ"
+  ],
+  "u": [
+   "ʊ"
+  ],
+  "v": [
+   "v"
+  ],
+  "vw": [
+   "vʷ"
+  ],
+  "w": [
+   "w"
+  ],
+  "y": [
+   "j"
+  ],
+  "z": [
+   "z"
+  ],
+  "ẹ": [
+   "e"
+  ],
+  "ị": [
+   "i"
+  ],
+  "ọ": [
+   "o"
+  ],
+  "ụ": [
+   "u"
+  ],
+  "’": [
+   "ʔ"
+  ],
+  "’b": [
+   "ɓ"
+  ],
+  "’bw": [
+   "ɓʷ"
+  ],
+  "’d": [
+   "ɗ"
+  ],
+  "’dw": [
+   "ɗʷ"
+  ],
+  "’gb": [
+   "ɡ͡ɓ"
+  ],
+  "’j": [
+   "ʄ"
+  ],
+  "’ng": [
+   "ŋ"
+  ],
+  "’w": [
+   "ˀw"
+  ],
+  "’y": [
+   "ˀj"
+  ]
+ },
+ "allophones": {
+  "k": [
+   "k",
+   "hʷ"
+  ],
+  "kʷ": [
+   "kʷ",
+   "hʷ"
+  ],
+  "ŋm": [
+   "ŋm",
+   "mʷ"
+  ],
+  "ɠɓ": [
+   "ɠɓ",
+   "ɓʷ"
+  ],
+  "a": [
+   "a",
+   "ʌ"
+  ]
+ },
+ "notes": "Placed so the ancestry graph covers every living ISO 639-3 language. No orthography is claimed; the phoneme inventory follows the cited PHOIBLE inventory (which itself cites a published description): script is Zyyy (undetermined) until a cited description is encoded. Classification and coordinates follow Glottolog. Orthography from an Omniglot chart (c) Simon Ager, https://www.omniglot.com/, extracted via the AfriSpeech/africa-g2p compilation (mhi.json). africa-g2p is a compilation tool, not the linguistic authority; the citation above is the original source it names.",
+ "iso639_3": "mhi",
+ "glottolog_code": "madi1260",
+ "sources": [
+  {
+   "id": "glottolog2024",
+   "author": "Hammarström, Harald; Forkel, Robert; Haspelmath, Martin; Bank, Sebastian",
+   "year": 2024,
+   "title": "Glottolog 5.0",
+   "publisher": "Max Planck Institute for Evolutionary Anthropology",
+   "url": "https://glottolog.org/"
+  },
+  {
+   "id": "phoible2019",
+   "author": "Moran, Steven; McCloy, Daniel (eds.)",
+   "year": 2019,
+   "title": "PHOIBLE 2.0 (doi:10.5281/zenodo.2562766)",
+   "publisher": "Max Planck Institute for the Science of Human History",
+   "url": "https://phoible.org/inventories/view/932",
+   "notes": "Inventory 932 (ph), 54 non-marginal segments."
+  },
+  {
+   "id": "omniglot-madi",
+   "author": "Ager, Simon",
+   "year": 2026,
+   "title": "Omniglot chart (madi.xls)",
+   "publisher": "Omniglot",
+   "url": "https://www.omniglot.com/",
+   "notes": "Undated web chart; year is retrieval year, not publication year."
+  }
+ ],
+ "urls": [
+  "https://glottolog.org/resource/languoid/id/madi1260"
+ ],
+ "location": {
+  "latitude": 3.625,
+  "longitude": 31.8471,
+  "source": "glottolog",
+  "notes": "Glottolog's representative point."
+ },
+ "parent": "x-clade-cent2225",
+ "phonemes": [
+  "b",
+  "d",
+  "dʷ",
+  "d̠ʒ",
+  "f",
+  "h",
+  "j",
+  "k",
+  "kp",
+  "kʷ",
+  "l",
+  "lʷ",
+  "m",
+  "mb",
+  "n",
+  "nd",
+  "ndʷ",
+  "n̠d̠ʒ",
+  "p",
+  "r",
+  "rʷ",
+  "s",
+  "t",
+  "tʷ",
+  "t̠ʃ",
+  "t̠ʃʷ",
+  "v",
+  "w",
+  "z",
+  "ŋ",
+  "ŋm",
+  "ŋmɡb",
+  "ŋɡ",
+  "ŋɡʷ",
+  "ɓ",
+  "ɗ",
+  "ɠɓ",
+  "ɡ",
+  "ɡb",
+  "ɡʷ",
+  "ɱv",
+  "ɲ",
+  "ʄ",
+  "ʔ",
+  "ʔʷ",
+  "a",
+  "e",
+  "i",
+  "o",
+  "u",
+  "ɔ",
+  "ɛ",
+  "ɨ",
+  "ʊ"
+ ],
+ "phoible_id": "932",
+ "script_type": "alphabet",
+ "wikipedia": [
+  "https://en.wikipedia.org/wiki/Ma%27di_language"
+ ]
+}

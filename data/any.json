@@ -1,0 +1,220 @@
+{
+ "code": "any",
+ "name": "Anyin",
+ "script": "Latin",
+ "quality": "skeleton",
+ "graphemes": {
+  "a": [
+   "ɐ"
+  ],
+  "b": [
+   "b"
+  ],
+  "c": [
+   "ʧ"
+  ],
+  "d": [
+   "d"
+  ],
+  "dy": [
+   "ɟ"
+  ],
+  "e": [
+   "e"
+  ],
+  "f": [
+   "f"
+  ],
+  "g": [
+   "ɡ"
+  ],
+  "gb": [
+   "ɡ͡b"
+  ],
+  "h": [
+   "h"
+  ],
+  "i": [
+   "i"
+  ],
+  "j": [
+   "ʤ"
+  ],
+  "k": [
+   "k"
+  ],
+  "kp": [
+   "k͡p"
+  ],
+  "l": [
+   "l"
+  ],
+  "m": [
+   "m"
+  ],
+  "n": [
+   "n"
+  ],
+  "ng": [
+   "ŋ"
+  ],
+  "ny": [
+   "ɲ"
+  ],
+  "o": [
+   "o"
+  ],
+  "p": [
+   "p"
+  ],
+  "r": [
+   "ɾ"
+  ],
+  "s": [
+   "s"
+  ],
+  "sh": [
+   "ʃ"
+  ],
+  "t": [
+   "t"
+  ],
+  "ty": [
+   "c"
+  ],
+  "u": [
+   "u"
+  ],
+  "v": [
+   "v"
+  ],
+  "w": [
+   "w"
+  ],
+  "y": [
+   "j"
+  ],
+  "z": [
+   "z"
+  ],
+  "ɔ": [
+   "ɔ"
+  ],
+  "ɛ": [
+   "ɛ"
+  ],
+  "ɩ": [
+   "ɪ"
+  ],
+  "ʋ": [
+   "ʊ"
+  ],
+  "’": [
+   "ʔ"
+  ]
+ },
+ "allophones": {
+  "c": [
+   "c",
+   "ç"
+  ],
+  "n": [
+   "n",
+   "ŋ",
+   "ɲ"
+  ],
+  "s": [
+   "s",
+   "z"
+  ]
+ },
+ "notes": "Placed so the ancestry graph covers every living ISO 639-3 language. No orthography is claimed; the phoneme inventory follows the cited PHOIBLE inventory (which itself cites a published description): script is Zyyy (undetermined) until a cited description is encoded. Classification and coordinates follow Glottolog. Orthography from an Omniglot chart (c) Simon Ager, https://www.omniglot.com/, extracted via the AfriSpeech/africa-g2p compilation (any.json). africa-g2p is a compilation tool, not the linguistic authority; the citation above is the original source it names.",
+ "iso639_3": "any",
+ "glottolog_code": "anyi1245",
+ "sources": [
+  {
+   "id": "glottolog2024",
+   "author": "Hammarström, Harald; Forkel, Robert; Haspelmath, Martin; Bank, Sebastian",
+   "year": 2024,
+   "title": "Glottolog 5.0",
+   "publisher": "Max Planck Institute for Evolutionary Anthropology",
+   "url": "https://glottolog.org/"
+  },
+  {
+   "id": "phoible2019",
+   "author": "Moran, Steven; McCloy, Daniel (eds.)",
+   "year": 2019,
+   "title": "PHOIBLE 2.0 (doi:10.5281/zenodo.2562766)",
+   "publisher": "Max Planck Institute for the Science of Human History",
+   "url": "https://phoible.org/inventories/view/1242",
+   "notes": "Inventory 1242 (ph), 34 non-marginal segments, 1 marginal excluded, 5 tones."
+  },
+  {
+   "id": "omniglot-anyin",
+   "author": "Ager, Simon",
+   "year": 2026,
+   "title": "Omniglot chart (anyin.xls)",
+   "publisher": "Omniglot",
+   "url": "https://www.omniglot.com/",
+   "notes": "Undated web chart; year is retrieval year, not publication year."
+  }
+ ],
+ "urls": [
+  "https://glottolog.org/resource/languoid/id/anyi1245"
+ ],
+ "location": {
+  "latitude": 6.3178,
+  "longitude": -3.3053,
+  "source": "glottolog",
+  "notes": "Glottolog's representative point."
+ },
+ "parent": "x-clade-atla1278",
+ "phonemes": [
+  "b",
+  "c",
+  "d",
+  "f",
+  "h",
+  "j",
+  "k",
+  "kp",
+  "l",
+  "m",
+  "n",
+  "p",
+  "s",
+  "t",
+  "w",
+  "ɟ",
+  "ɡ",
+  "ɡb",
+  "a",
+  "ã",
+  "e",
+  "i",
+  "ĩ",
+  "o",
+  "u",
+  "ũ",
+  "ɔ",
+  "ɛ",
+  "ɪ",
+  "ɪ̃",
+  "ʊ",
+  "ʊ̃",
+  "ʌ",
+  "ʌ̃"
+ ],
+ "tone_inventory": {
+  "˦": "PHOIBLE tone segment",
+  "˦˨": "PHOIBLE tone segment",
+  "˧": "PHOIBLE tone segment",
+  "˨": "PHOIBLE tone segment",
+  "˨˦": "PHOIBLE tone segment"
+ },
+ "phoible_id": "1242",
+ "script_type": "alphabet",
+ "wikipedia": [
+  "https://en.wikipedia.org/wiki/Anyin_language"
+ ]
+}

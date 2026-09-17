@@ -1,0 +1,85 @@
+{
+  "code": "ar-QA",
+  "name": "Qatari Arabic",
+  "script": "Arabic",
+  "graphemes_base": "ar-x-gulf",
+  "allophones_base": "ar-x-gulf",
+  "parent": "ar-x-gulf",
+  "ancestors": [
+    {
+      "code": "ar-x-gulf",
+      "role": "parent",
+      "weight": 0.91,
+      "notes": "Gulf Arabic base — inherits *q→[ɡ], velar affrication, interdental retention and emphatic spreading."
+    }
+  ],
+  "notes": "Qatari Arabic. Inherits the Gulf features: *q → [ɡ]; velar affrication /k/→[tʃ] and /ɡ/→[dʒ] before high front /i, iː/; interdentals /θ ð ðˤ/ retained (conservative). The inherited affrication rules are conditioned on high front /i, iː/ precisely to match Mustafawi's (2006, 2007) Qatari analysis, reported in Alshammari 2026 p.1335: 'the velar stop undergoes affrication only in the stem when adjacent to the high front vowels /i/ or /i:/'. Mustafawi further documents that affrication is blocked by [-high] segments, by adjacent emphatics, and by the OCP (near an identical/similar coronal), and is systematically absent from broken plurals, verbal nouns, verbs and participles (paradigmatic levelling) — these blocking environments are NOT modelled in the base rule and remain an engine limit. Somewhat stronger tribal/Bedouin character than urban Kuwaiti. Input contract: fully diacritised (tashkeel) Arabic.",
+  "quality": "research",
+  "script_type": "abjad",
+  "sources": [
+    {
+      "id": "alshammari2026",
+      "author": "Alshammari, K. K.",
+      "year": 2026,
+      "title": "An Optimality-Theoretic Account of Velar Affrication in Northern Najdi Arabic",
+      "publisher": "Journal of Language Teaching and Research 17(4)",
+      "url": "https://doi.org/10.17507/jltr.1704.19",
+      "pages": "1333-1341",
+      "notes": "Read in full (open-access PDF). Reports (p.1335) Mustafawi's (2006, 2007) Optimality-Theoretic account of Qatari velar affrication: /k/,/ɡ/ affricate only adjacent to high front /i, iː/; blocked by [-high] segments, emphatics, and the OCP; absent from broken plurals/verbal nouns/verbs/participles."
+    },
+    {
+      "id": "albalushi2016",
+      "author": "Al-Balushi, R.",
+      "year": 2016,
+      "title": "Omani Arabic: More than a Dialect",
+      "publisher": "Macrolinguistics 4(1)",
+      "url": "https://macrolinguistics.nju.edu.cn/23/17/c27354a467735/page.htm",
+      "pages": "80-125",
+      "notes": "Read the phonology sections. Cross-reference for Eastern Arabian interdental/emphatic retention and *q reflexes."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Gulf_Arabic",
+    "https://ar.wikipedia.org/wiki/%D9%84%D9%87%D8%AC%D8%A9_%D8%AE%D9%84%D9%8A%D8%AC%D9%8A%D8%A9"
+  ],
+  "timespan": {
+    "start_year": 1900,
+    "end_year": null
+  },
+  "glottolog_code": "gulf1241",
+  "iso639_3": "afb",
+  "location": {
+    "latitude": 25.286111,
+    "longitude": 51.529444,
+    "source": "wikidata",
+    "notes": "Doha. A national variety within the Gulf continuum. [Wikidata Q3861 P625]"
+  },
+  "optional_marks": [
+    "ً",
+    "ٌ",
+    "ٍ",
+    "َ",
+    "ُ",
+    "ِ",
+    "ّ",
+    "ْ",
+    "ٰ",
+    "ٓ"
+  ],
+  "stress": {
+    "default_position": -3,
+    "quantity_sensitive": true,
+    "superheavy_final_attracts": true,
+    "max_onset": 1,
+    "stress_mark": "ˈ",
+    "notes": "Arabic stress is QUANTITY-SENSITIVE: it falls on a syllable because that syllable is heavy, not because of any orthographic ending, so no ending table can express it. The cascade (Ryding, A Reference Grammar of MSA, CUP 2005, §2.3; Watson, The Phonology and Morphology of Arabic, OUP 2002, ch.3): a superheavy final syllable (CVːC/CVCC) takes the stress (kiˈtaːb); otherwise a heavy penult (CVː/CVC) does (muˈdarris); otherwise the antepenult (ˈmadrasa). max_onset=1 because Arabic onsets are obligatory and hold exactly one consonant — a medial cluster splits, closing the preceding syllable, and that boundary is what makes the penult of mudarris heavy. INPUT CONTRACT: weight is only recoverable from a complete transcription, so this requires diacritized input; an undiacritized skeleton has no vowels to weigh. The registered wikipron gold carries no stress marks, but the benchmark strips stress from both sides by default, so this costs no PER. Prosodic clitics: monosyllabic function words (negator maː, prepositions fiː/min/ʕan/ʕa/li/bi, vocative jaː, copula-negator muː/miʃ, conditional law/loː, wa-proclitic combinations) attach to a host and fall inside the host's stress domain, so they carry no word stress (Watson 2002, The Phonology and Morphology of Arabic, OUP, ch.3). Pan-Arabic class; the per-lect form list reflects the function words attested in this lect. Orthographic test — a clitic homograph (e.g. verb yā 'came') is destressed in every occurrence.",
+    "cliticless_words": [
+      "فِي",
+      "لِي",
+      "مَا",
+      "مُو",
+      "مِن",
+      "يَا"
+    ]
+  }
+}

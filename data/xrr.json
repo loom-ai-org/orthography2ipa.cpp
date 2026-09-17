@@ -1,0 +1,56 @@
+{
+  "code": "xrr",
+  "name": "Raetic",
+  "script": "Old Italic",
+  "script_type": "alphabet",
+  "quality": "stub",
+  "graphemes": {},
+  "parent": "x-clade-tyrsen",
+  "ancestors": [
+    {
+      "code": "x-clade-tyrsen",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Raetic is largely accepted as a non-Indo-European language closely related to Etruscan, within the (proposed) Tyrsenian family (Wikipedia: Rhaetic language; Rix 1998; De Simone & Marchesini 2013)."
+    },
+    {
+      "code": "ett",
+      "role": "adstrate",
+      "weight": 0.1,
+      "notes": "Etruscan-mediated Old Italic writing tradition: Raetic is written in Sanzeno/Magrè-variant alphabets transmitted via Venetic mediation from an Etruscan-derived script, not a direct daughter alphabet of Etruscan itself."
+    }
+  ],
+  "notes": "Stub: no citable grapheme-to-IPA inventory. Extinct language of the Alpine region (modern Italy/Austria/Switzerland/Germany/Slovenia), attested 6th-1st c. BCE in ~280 inscriptions, written in two Old Italic script variants (Sanzeno and Magrè alphabets). Wikipedia states plainly that 'our understanding of Raetic phonology is quite uncertain, and the working hypothesis is that it is very similar to Etruscan phonology' (Salomon 2020) -- i.e. the inventory below is not independently established from Raetic evidence itself but only inferred by analogy with Etruscan (ett.json). No published grapheme-by-grapheme phonological inventory for Raetic specifically was sourceable this session; adding an Etruscan-derived inventory here would misrepresent an analogy as an attested fact, so graphemes is left empty pending a dedicated Raetic phonological study.",
+  "iso639_3": "xrr",
+  "glottolog_code": "raet1238",
+  "sources": [
+    {
+      "id": "salomon2020",
+      "author": "Salomon, Corinna",
+      "year": 2020,
+      "title": "Raetic",
+      "publisher": "in Palaeohispanic languages and epigraphies / handbook chapter on ancient fragmentary languages",
+      "url": null,
+      "pages": null,
+      "notes": "Phonology, writing systems and morphology; cited via Wikipedia as the source for the uncertainty of Raetic phonology.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Rhaetic_language"
+    },
+    {
+      "id": "de_simone_marchesini2013",
+      "author": "De Simone, Carlo; Marchesini, Simona (eds.)",
+      "year": 2013,
+      "title": "Studi sul Camuno e altre iscrizioni alpine (Tyrrhenian family tree)",
+      "publisher": "TNT",
+      "url": null,
+      "pages": null,
+      "notes": "Classification within the proposed Tyrsenian family."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Rhaetic_language"
+  ],
+  "timespan": {
+    "start_year": -600,
+    "end_year": -100
+  }
+}

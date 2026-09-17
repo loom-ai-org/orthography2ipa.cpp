@@ -1,0 +1,226 @@
+{
+  "code": "la-x-hispania",
+  "name": "Hispanic Vulgar Latin",
+  "script": "Latin",
+  "parent": "x-clade-roma1334",
+  "graphemes_base": "la-x-late",
+  "graphemes": {
+    "f": [
+      "f",
+      "h"
+    ],
+    "h": [
+      "h",
+      ""
+    ],
+    "v": [
+      "β",
+      "w"
+    ],
+    "b": [
+      "b",
+      "β"
+    ],
+    "p": [
+      "p"
+    ],
+    "d": [
+      "d",
+      "ð"
+    ],
+    "t": [
+      "t"
+    ],
+    "g": [
+      "ɡ",
+      "ɣ"
+    ],
+    "c": [
+      "k"
+    ],
+    "j": [
+      "j",
+      "ʝ"
+    ],
+    "i": [
+      "i",
+      "j"
+    ],
+    "s": [
+      "s",
+      "z"
+    ]
+  },
+  "allophones": {
+    "h": [
+      "h",
+      ""
+    ]
+  },
+  "positional_graphemes": {
+    "k": {
+      "before_e": [
+        "t͡ʃ"
+      ],
+      "before_i": [
+        "t͡ʃ"
+      ]
+    },
+    "f": {
+      "word_initial": [
+        "h"
+      ],
+      "intervocalic": [
+        "h"
+      ]
+    },
+    "v": {
+      "intervocalic": [
+        "β"
+      ]
+    },
+    "b": {
+      "intervocalic": [
+        "β"
+      ]
+    },
+    "d": {
+      "intervocalic": [
+        "ð"
+      ]
+    },
+    "g": {
+      "intervocalic": [
+        "ɣ"
+      ],
+      "before_e": [
+        "d͡ʒ"
+      ],
+      "before_i": [
+        "d͡ʒ"
+      ]
+    },
+    "c": {
+      "before_e": [
+        "t͡ʃ"
+      ],
+      "before_i": [
+        "t͡ʃ"
+      ]
+    },
+    "s": {
+      "intervocalic": [
+        "z"
+      ]
+    },
+    "m": {
+      "before_consonant": [
+        "m",
+        "̃"
+      ],
+      "word_final": [
+        "m",
+        "̃"
+      ]
+    },
+    "n": {
+      "before_consonant": [
+        "n",
+        "̃"
+      ],
+      "word_final": [
+        "n",
+        "̃"
+      ]
+    }
+  },
+  "ancestors": [
+    {
+      "code": "cel",
+      "role": "substrate",
+      "weight": 0.02,
+      "notes": "Celtic substrate (Gallaecian / Celtiberian). Likely contributed to retention of /w/, initial f- weakening, and prosodic tendencies."
+    },
+    {
+      "code": "xce",
+      "role": "substrate",
+      "weight": 0.02,
+      "notes": "Celtiberian substrate of central Hispania."
+    },
+    {
+      "code": "xaq",
+      "role": "substrate",
+      "weight": 0.02,
+      "notes": "Aquitanian / proto-Basque substrate: probable source of f- → h- weakening."
+    },
+    {
+      "code": "txr",
+      "role": "substrate",
+      "weight": 0.02,
+      "notes": "Tartessian substrate (southern SW Iberia)."
+    },
+    {
+      "code": "xlg",
+      "role": "substrate",
+      "weight": 0.02,
+      "notes": "Lusitanian substrate: possible influence on preservation of /w/ and /v/~/b/ distinction."
+    },
+    {
+      "code": "xib",
+      "role": "substrate",
+      "weight": 0.02,
+      "notes": "Iberian substrate: language isolate of Mediterranean Iberia. ~2000+ inscriptions in Iberian semi-syllabary and Greek alphabet."
+    }
+  ],
+  "notes": "Hispanic Vulgar Latin (~3rd–7th c.). Transitional spoken Latin in Roman Hispania. Phonological innovations: (1) Classical vowel-length distinction lost; 10-vowel → 7-vowel merger by quality. (2) Lenition: intervocalic P/T/C → B/D/G → β/ð/ɣ. (3) Early palatalisation: /k/→[tʃ] before e/i; /g/→[dʒ] before e/i. (4) Initial /f/ weakening to [h] in much of Iberia. (5) /s/ → [z] intervocalically. (6) Nasal assimilation producing [ŋ] in coda. (7) Diphthong developments setting up later Romance outcomes. This is the immediate ancestor of all Ibero-Romance languages, including Galaico-Portuguese.",
+  "sources": [
+    {
+      "id": "lloyd1987",
+      "author": "Lloyd, P.M.",
+      "year": 1987,
+      "title": "From Latin to Spanish, vol. I",
+      "publisher": "American Philosophical Society",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "weiss2009",
+      "author": "Weiss, M.",
+      "year": 2009,
+      "title": "Outline of the Historical and Comparative Grammar of Latin",
+      "publisher": "Beech Stave Press",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "allen1978",
+      "author": "Allen, W.S.",
+      "year": 1978,
+      "title": "Vox Latina: A Guide to the Pronunciation of Classical Latin",
+      "publisher": "Cambridge University Press",
+      "url": null,
+      "pages": null,
+      "notes": null,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Latin_phonology"
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Ibero-Romance_languages"
+  ],
+  "timespan": {
+    "start_year": 200,
+    "end_year": 900
+  },
+  "glottolog_code": "sout3183",
+  "iso639_3": "lat",
+  "quality": "research",
+  "wikidata_qid": "Q749533",
+  "location": {
+    "latitude": 40.064602,
+    "longitude": 4.170502,
+    "source": "glottolog",
+    "notes": "Glottolog's computed centroid for the Southwestern Shifted Romance family — a summary of a whole clade's range, not a place anyone speaks."
+  }
+}

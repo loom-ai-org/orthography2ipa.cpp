@@ -1,0 +1,300 @@
+{
+ "code": "mdj",
+ "name": "Mangbetu",
+ "script": "Latin",
+ "quality": "skeleton",
+ "graphemes": {
+  "K": [
+   "k"
+  ],
+  "N": [
+   "n"
+  ],
+  "a": [
+   "a"
+  ],
+  "b": [
+   "b"
+  ],
+  "bh": [
+   "ɓ"
+  ],
+  "d": [
+   "d"
+  ],
+  "dh": [
+   "ɗ"
+  ],
+  "dr": [
+   "d͡r"
+  ],
+  "dy": [
+   "ɡʲ"
+  ],
+  "e": [
+   "e"
+  ],
+  "f": [
+   "f"
+  ],
+  "g": [
+   "ɡ"
+  ],
+  "gb": [
+   "ɡ͡b"
+  ],
+  "h": [
+   "h"
+  ],
+  "i": [
+   "i"
+  ],
+  "k": [
+   "k"
+  ],
+  "kp": [
+   "k͡p"
+  ],
+  "l": [
+   "l"
+  ],
+  "m": [
+   "m"
+  ],
+  "mb": [
+   "m͡b"
+  ],
+  "n": [
+   "n"
+  ],
+  "nd": [
+   "n͡d"
+  ],
+  "ndj": [
+   "ŋɡʲ"
+  ],
+  "ndr": [
+   "n͡d͡r"
+  ],
+  "ng": [
+   "ŋ͡ɡ"
+  ],
+  "ngb": [
+   "ŋ͡ɡ͡b"
+  ],
+  "nv": [
+   "ɱv"
+  ],
+  "nz": [
+   "n͡z"
+  ],
+  "o": [
+   "o"
+  ],
+  "p": [
+   "p"
+  ],
+  "r": [
+   "r"
+  ],
+  "s": [
+   "s"
+  ],
+  "t": [
+   "t"
+  ],
+  "tr": [
+   "t͡r"
+  ],
+  "ts": [
+   "kʲ"
+  ],
+  "u": [
+   "u"
+  ],
+  "v": [
+   "v"
+  ],
+  "vh": [
+   "ⱱ"
+  ],
+  "w": [
+   "w"
+  ],
+  "y": [
+   "j"
+  ],
+  "z": [
+   "z"
+  ],
+  "ŋ": [
+   "ŋ"
+  ],
+  "ɔ": [
+   "ɔ"
+  ],
+  "ɛ": [
+   "ɛ"
+  ],
+  "ɨ": [
+   "ɪ"
+  ],
+  "ʉ": [
+   "ʊ"
+  ]
+ },
+ "allophones": {
+  "b": [
+   "b",
+   "bʷ"
+  ],
+  "dr": [
+   "dr",
+   "dr"
+  ],
+  "kp": [
+   "kp",
+   "kpʷ"
+  ],
+  "p": [
+   "p",
+   "pʷ"
+  ],
+  "ɡ": [
+   "ɡ",
+   "ɡʲ"
+  ],
+  "a": [
+   "a",
+   "aː"
+  ],
+  "e": [
+   "e",
+   "eː"
+  ],
+  "i": [
+   "i",
+   "iː"
+  ],
+  "o": [
+   "o",
+   "oː"
+  ],
+  "u": [
+   "u",
+   "uː"
+  ],
+  "ɔ": [
+   "ɔ",
+   "ɔː"
+  ],
+  "ɛ": [
+   "ɛ",
+   "ɛː"
+  ],
+  "ɪ": [
+   "ɪ",
+   "ɪː"
+  ],
+  "ʊ": [
+   "ʊ",
+   "ʊː"
+  ]
+ },
+ "notes": "Placed so the ancestry graph covers every living ISO 639-3 language. No orthography is claimed; the phoneme inventory follows the cited PHOIBLE inventory (which itself cites a published description): script is Zyyy (undetermined) until a cited description is encoded. Classification and coordinates follow Glottolog. Orthography from Hartell 1993, Alphabets of Africa (UNESCO/SIL), extracted via the AfriSpeech/africa-g2p compilation (mdj.json). africa-g2p is a compilation tool, not the linguistic authority; the citation above is the original source it names.",
+ "iso639_3": "mdj",
+ "glottolog_code": "mang1394",
+ "sources": [
+  {
+   "id": "glottolog2024",
+   "author": "Hammarström, Harald; Forkel, Robert; Haspelmath, Martin; Bank, Sebastian",
+   "year": 2024,
+   "title": "Glottolog 5.0",
+   "publisher": "Max Planck Institute for Evolutionary Anthropology",
+   "url": "https://glottolog.org/"
+  },
+  {
+   "id": "phoible2019",
+   "author": "Moran, Steven; McCloy, Daniel (eds.)",
+   "year": 2019,
+   "title": "PHOIBLE 2.0 (doi:10.5281/zenodo.2562766)",
+   "publisher": "Max Planck Institute for the Science of Human History",
+   "url": "https://phoible.org/inventories/view/778",
+   "notes": "Inventory 778 (aa), 45 non-marginal segments, 2 tones."
+  },
+  {
+   "id": "hartell1993-p84",
+   "author": "Hartell, Rhonda L. (ed.)",
+   "year": 1993,
+   "title": "Alphabets of Africa, p. 84",
+   "publisher": "UNESCO/SIL, Dakar",
+   "url": null
+  }
+ ],
+ "urls": [
+  "https://glottolog.org/resource/languoid/id/mang1394"
+ ],
+ "location": {
+  "latitude": 2.5511,
+  "longitude": 27.0712,
+  "source": "glottolog",
+  "notes": "Glottolog's representative point."
+ },
+ "parent": "x-clade-cent2225",
+ "phonemes": [
+  "b",
+  "d",
+  "dr",
+  "d̠ʒ",
+  "f",
+  "h",
+  "j",
+  "k",
+  "kp",
+  "m",
+  "mb",
+  "n",
+  "nd",
+  "ndr",
+  "nz",
+  "p",
+  "s",
+  "t",
+  "t̠ʃ",
+  "v",
+  "w",
+  "z",
+  "ŋ",
+  "ŋmɡb",
+  "ŋɡ",
+  "ŋɡʲ",
+  "ɓ",
+  "ɗ",
+  "ɠ",
+  "ɡ",
+  "ɡb",
+  "ɭ",
+  "ɱv",
+  "ɸ",
+  "ɽ",
+  "β",
+  "a",
+  "e",
+  "i",
+  "o",
+  "u",
+  "ɔ",
+  "ɛ",
+  "ɪ",
+  "ʊ"
+ ],
+ "tone_inventory": {
+  "˦": "PHOIBLE tone segment",
+  "˨": "PHOIBLE tone segment"
+ },
+ "phoible_id": "778",
+ "script_type": "alphabet",
+ "wikipedia": [
+  "https://en.wikipedia.org/wiki/Mangbetu_language"
+ ]
+}

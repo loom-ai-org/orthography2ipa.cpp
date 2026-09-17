@@ -1,0 +1,221 @@
+{
+ "code": "hak-Latn-phak-fa-su",
+ "name": "Hakka Chinese — Phák-fa-sṳ",
+ "script": "Latin",
+ "script_type": "alphabet",
+ "orthography_kind": "romanization",
+ "quality": "research",
+ "graphemes": {
+  "p": [
+   "p"
+  ],
+  "ph": [
+   "pʰ"
+  ],
+  "m": [
+   "m"
+  ],
+  "f": [
+   "f"
+  ],
+  "v": [
+   "ʋ"
+  ],
+  "t": [
+   "t"
+  ],
+  "th": [
+   "tʰ"
+  ],
+  "n": [
+   "n"
+  ],
+  "l": [
+   "l"
+  ],
+  "k": [
+   "k"
+  ],
+  "kh": [
+   "kʰ"
+  ],
+  "ng": [
+   "ŋ"
+  ],
+  "h": [
+   "h"
+  ],
+  "ch": [
+   "ts"
+  ],
+  "chh": [
+   "tsʰ"
+  ],
+  "s": [
+   "s"
+  ],
+  "y": [
+   "j"
+  ],
+  "a": [
+   "a"
+  ],
+  "e": [
+   "e"
+  ],
+  "i": [
+   "i"
+  ],
+  "u": [
+   "u"
+  ],
+  "o": [
+   "o"
+  ],
+  "ṳ": [
+   "ɨ"
+  ],
+  "er": [
+   "ɤ"
+  ]
+ },
+ "allophones": {
+  "ts": [
+   "ts",
+   "tɕ"
+  ],
+  "tsʰ": [
+   "tsʰ",
+   "tɕʰ"
+  ],
+  "s": [
+   "s",
+   "ɕ"
+  ],
+  "ŋ": [
+   "ŋ",
+   "ɲ"
+  ]
+ },
+ "allophone_rules": [
+  {
+   "id": "HAK_PFS_CH_PALATAL_BEFORE_I",
+   "phonemes": [
+    "ts"
+   ],
+   "surface": "tɕ",
+   "followed_by_phoneme": [
+    "i"
+   ],
+   "notes": "⟨ch⟩ /ts/ surfaces as alveolo-palatal [tɕ] before ⟨i⟩ (Wikipedia 'Pha̍k-fa-sṳ' Extended-bopomofo column notes ㄗ/ㄐ, i.e. ts/tɕ, for the same letter, split by the following vowel); expressed as a rule keyed on the following phoneme rather than a separate 'chi' grapheme, per the POJ precedent (`nan-Latn-poj` NAN_POJ_CH_PALATAL_BEFORE_I)."
+  },
+  {
+   "id": "HAK_PFS_CHH_PALATAL_BEFORE_I",
+   "phonemes": [
+    "tsʰ"
+   ],
+   "surface": "tɕʰ",
+   "followed_by_phoneme": [
+    "i"
+   ],
+   "notes": "⟨chh⟩ /tsʰ/ before ⟨i⟩ is [tɕʰ]; same distribution as HAK_PFS_CH_PALATAL_BEFORE_I."
+  },
+  {
+   "id": "HAK_PFS_S_PALATAL_BEFORE_I",
+   "phonemes": [
+    "s"
+   ],
+   "surface": "ɕ",
+   "followed_by_phoneme": [
+    "i"
+   ],
+   "notes": "⟨s⟩ /s/ before ⟨i⟩ is [ɕ]; same distribution."
+  },
+  {
+   "id": "HAK_PFS_NG_PALATAL_BEFORE_I",
+   "phonemes": [
+    "ŋ"
+   ],
+   "surface": "ɲ",
+   "followed_by_phoneme": [
+    "i"
+   ],
+   "notes": "⟨ng(i)⟩ /ŋ/ before ⟨i⟩ is [ɲ], per the Wikipedia consonant table's ㄫ row (ŋ/ɲ split by the following vowel), the same palatalization-before-i pattern already attested for the other coronal/velar series."
+  }
+ ],
+ "notes": "Phák-fa-sṳ (白話字, 'vernacular writing'), the Presbyterian-missionary Latin romanization for Hakka developed after 1847 (Basel Mission: Hamberg, Lechler; MacIver's 1905 Shantou dictionary is its first published form), still in active church and community use and the source script of the 1924 Hakka New Testament. This spec models the Sixian-dialect Taiwanese Phák-fa-sṳ variant (the variety documented on Wikipedia's consolidated table) rather than Han characters, exactly the same design choice already made for `nan-Latn-poj` (POJ over Southern Min's logographic script) and named as the input contract on the `hak.json` Han-script stub. INITIALS: the aspirated/unaspirated stop and affricate series (⟨p ph⟩, ⟨t th⟩, ⟨k kh⟩, ⟨ch chh⟩) plus ⟨f v⟩ (labiodental fricative/approximant, Hakka's distinctive retention of Middle Chinese light-labial */б/ as a fricative rather than merging to /w/, Wikipedia 'Phák-fa-sṳ' consonant table), and the coronal/velar series ⟨ch chh s ng(i)⟩ that the source table itself marks with a dual ts/tɕ-style IPA cell split by the following vowel (parenthesized '(i)' in the letter itself) — expressed here as allophone rules per AGENTS.md §3 rather than duplicate 'chi/chhi/si/ngi' grapheme keys, since the orthography does not spell the palatal allophone with a different letter. VOWELS: the five cardinal vowels plus two Hakka-specific letters not found in POJ or pinyin: ⟨ṳ⟩ (u + combining diaeresis-below, a single letter+diacritic unit under AGENTS.md §2 test 2, the source's own dedicated grapheme name 'ú' /ɨ˨ or ɹ̩/ — close central unrounded, also realized as syllabic rhotic approximant) and ⟨er⟩ /ɤ˨ə/ (mid-central, a digraph earning its key on test 1: e+r would give /eɹ/ or /eɹ̩/ by concatenation, not the actual monophthongal schwa-like vowel). TONE — SCHEMA LIMITATION, same honest treatment as `nan-Latn-poj`: Sixian/Hailu Hakka mark citation tone with combining diacritics (circumflex, grave, acute, a ring, and a vertical line, plus two unmarked categories distinguished only by coda, mirroring POJ's own scheme) that this spec folds into the vowel grapheme's NFC form as a single orthographic unit so the tokenizer accepts real spellings, but the mapped IPA carries no tone; `tone_inventory` records the diacritic-to-tone correspondence as metadata only, for the identical missing-engine-capability reason documented on `nan-Latn-poj` (a tone mark belongs to the whole syllable, not to the one vowel grapheme it happens to sit on). Sixian Hakka additionally does not distinguish yīnshǎng/yángshǎng (both write acute), while Hailu does distinguish yīnqù/yángqù (ring diacritic) where Sixian does not — a dialect-internal split this spec does not attempt to resolve, consistent with tone marking being metadata-only here.",
+ "sources": [
+  {
+   "id": "pfs_wiki",
+   "author": "Wikipedia contributors",
+   "year": 2026,
+   "title": "Phák-fa-sṳ",
+   "publisher": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Pha%CC%8Dk-fa-s%E1%B9%B3",
+   "wikipedia_url": "https://en.wikipedia.org/wiki/Pha%CC%8Dk-fa-s%E1%B9%B3",
+   "pages": null,
+   "notes": "Letters table, consonant/semivowel/vowel IPA tables, tone-mark table (Sixian/Hailu), Chinese-vs-Taiwanese comparison tables."
+  },
+  {
+   "id": "hakka_new_testament_1924",
+   "author": "Basel Missionary Society (Hamberg, Lechler, Piton et al.)",
+   "year": 1924,
+   "title": "Hakka New Testament",
+   "publisher": "Basel Missionary Society",
+   "url": null,
+   "pages": null,
+   "notes": "First major published text fixing Phák-fa-sṳ spelling conventions."
+  },
+  {
+   "id": "phoible",
+   "author": "Moran, Steven & McCloy, Daniel (eds.)",
+   "year": 2019,
+   "title": "PHOIBLE 2.0",
+   "publisher": "Max Planck Institute for the Science of Human History",
+   "url": "https://phoible.org/",
+   "pages": null,
+   "notes": "Attested phoneme inventory for glottocode hakk1236, reconciled against this spec's grapheme-derived phoneme set (see `hak.json`)."
+  }
+ ],
+ "orthography_standard": {
+  "name": "Phák-fa-sṳ",
+  "authority": "Established by 19th-century Basel Presbyterian missionary usage (Hamberg, Lechler, MacIver); still in active church and community use",
+  "year": 1847,
+  "url": null,
+  "notes": "Distinct from, but closely related to, later Taiwanese-government romanizations (Taiwanese Hakka Romanization System); this spec follows the Sixian-dialect table as consolidated on Wikipedia, not a specific government standard document."
+ },
+ "iso639_3": "hak",
+ "glottolog_code": "hakk1236",
+ "wikidata_qid": "Q3971928",
+ "wikipedia": [
+  "https://en.wikipedia.org/wiki/Pha%CC%8Dk-fa-s%E1%B9%B3",
+  "https://en.wikipedia.org/wiki/Hakka_Chinese"
+ ],
+ "urls": [
+  "https://glottolog.org/resource/languoid/id/hakk1236"
+ ],
+ "tone_inventory": {
+  "◌́": "yīnpíng (陰平), Sixian 24 / Hailu 53",
+  "◌": "yángpíng (陽平, grave accent), Sixian 11 / Hailu 55",
+  "◌̀": "shǎng (上聲, acute accent — same mark as yīnpíng in this table; Sixian merges yīnshǎng/yángshǎng), Sixian 31 / Hailu 24",
+  "unmarked": "yīnqù (陰去, no mark), Sixian 55 / Hailu 11",
+  "◌̊": "yángqù (陽去, ring — Hailu only, Sixian merges with yīnqù), Hailu 33",
+  "unmarked-checked": "yīnrù (陰入, no mark, checked syllables only), Sixian 2 / Hailu 5",
+  "◌̍": "yángrù (陽入, vertical line, checked syllables only), Sixian 5 / Hailu 2"
+ },
+ "parent": "hak",
+ "ancestors": [
+  {
+   "code": "hak",
+   "role": "parent",
+   "weight": 1.0,
+   "notes": "Same ISO 639-3 / Glottolog language (hakk1236, Hakka Chinese); this spec supplies the Phák-fa-sṳ Latin-romanization grapheme map that `hak.json`'s Han-script stub explicitly names as the future input contract."
+  }
+ ],
+ "location": {
+  "latitude": 25.0,
+  "longitude": 116.0,
+  "source": "glottolog",
+  "notes": "Glottolog's representative point for Hakka Chinese (hakk1236), inherited from the `hak` parent."
+ }
+}

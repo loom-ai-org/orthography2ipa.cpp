@@ -1,0 +1,274 @@
+{
+  "code": "hno",
+  "name": "Northern Hindko",
+  "script": "Arabic",
+  "quality": "skeleton",
+  "graphemes": {
+    "ا": [
+      "aː"
+    ],
+    "ب": [
+      "b"
+    ],
+    "پ": [
+      "p"
+    ],
+    "ت": [
+      "t"
+    ],
+    "ٹ": [
+      "ʈ"
+    ],
+    "ث": [
+      "s"
+    ],
+    "ج": [
+      "dʒ"
+    ],
+    "چ": [
+      "tʃ"
+    ],
+    "ح": [
+      "h"
+    ],
+    "خ": [
+      "x"
+    ],
+    "د": [
+      "d"
+    ],
+    "ڈ": [
+      "ɖ"
+    ],
+    "ذ": [
+      "z"
+    ],
+    "ر": [
+      "r"
+    ],
+    "ڑ": [
+      "ɽ"
+    ],
+    "ز": [
+      "z"
+    ],
+    "ژ": [
+      "ʒ"
+    ],
+    "س": [
+      "s"
+    ],
+    "ش": [
+      "ʃ"
+    ],
+    "ص": [
+      "s"
+    ],
+    "ض": [
+      "z"
+    ],
+    "ط": [
+      "t"
+    ],
+    "ظ": [
+      "z"
+    ],
+    "ع": [
+      "ʔ"
+    ],
+    "غ": [
+      "ɣ"
+    ],
+    "ف": [
+      "f"
+    ],
+    "ق": [
+      "q"
+    ],
+    "ک": [
+      "k"
+    ],
+    "گ": [
+      "ɡ"
+    ],
+    "ل": [
+      "l"
+    ],
+    "م": [
+      "m"
+    ],
+    "ن": [
+      "n"
+    ],
+    "ں": [
+      "̃"
+    ],
+    "و": [
+      "ʋ",
+      "uː",
+      "oː"
+    ],
+    "ہ": [
+      "h"
+    ],
+    "ھ": [
+      "ʰ"
+    ],
+    "ء": [
+      "ʔ"
+    ],
+    "ی": [
+      "j",
+      "iː",
+      "eː"
+    ]
+  },
+  "allophones": {
+    "aː": [
+      "aː"
+    ],
+    "b": [
+      "b"
+    ],
+    "p": [
+      "p"
+    ],
+    "t": [
+      "t"
+    ],
+    "ʈ": [
+      "ʈ"
+    ],
+    "s": [
+      "s"
+    ],
+    "dʒ": [
+      "dʒ"
+    ],
+    "tʃ": [
+      "tʃ"
+    ],
+    "h": [
+      "h"
+    ],
+    "x": [
+      "x"
+    ],
+    "d": [
+      "d"
+    ],
+    "ɖ": [
+      "ɖ"
+    ],
+    "z": [
+      "z"
+    ],
+    "r": [
+      "r"
+    ],
+    "ɽ": [
+      "ɽ"
+    ],
+    "ʒ": [
+      "ʒ"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "q": [
+      "q"
+    ],
+    "k": [
+      "k"
+    ],
+    "ɡ": [
+      "ɡ"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ʔ": [
+      "ʔ"
+    ],
+    "ɣ": [
+      "ɣ"
+    ],
+    "f": [
+      "f"
+    ],
+    "ʋ": [
+      "ʋ"
+    ],
+    "uː": [
+      "uː"
+    ],
+    "oː": [
+      "oː"
+    ],
+    "ʰ": [
+      "ʰ"
+    ],
+    "j": [
+      "j"
+    ],
+    "iː": [
+      "iː"
+    ],
+    "eː": [
+      "eː"
+    ],
+    "̃": [
+      "̃"
+    ]
+  },
+  "notes": "Northern Hindko (of Hazara/Peshawar, Pakistan) Shahmukhi consonant inventory (Rensch, Hallberg & O'Leary 1992), sharing the extended Punjabi/Urdu Perso-Arabic letter set (retroflex ٹ ڈ ڑ, aspirate-marking ھ). Short vowels are unwritten (abjad); ا و ی carry long-vowel/glide values only, matching this repository's abjad input contract elsewhere. Word stress is not orthographically predictable and is exempt per quality_tiers.md. No WikiPron gold exists for hno, so the tier stays at skeleton pending a benchmark source.",
+  "iso639_3": "hno",
+  "glottolog_code": "nort2662",
+  "sources": [
+    {
+      "id": "glottolog2024",
+      "author": "Hammarström, Harald; Forkel, Robert; Haspelmath, Martin; Bank, Sebastian",
+      "year": 2024,
+      "title": "Glottolog 5.0",
+      "publisher": "Max Planck Institute for Evolutionary Anthropology",
+      "url": "https://glottolog.org/"
+    },
+    {
+      "id": "rensch1992",
+      "author": "Rensch, Calvin R.; Hallberg, Calinda E.; O'Leary, Clare F. (eds.)",
+      "year": 1992,
+      "title": "Hindko and Gujari (Sociolinguistic Survey of Northern Pakistan, vol. 3)",
+      "publisher": "National Institute of Pakistan Studies / Summer Institute of Linguistics",
+      "url": null,
+      "wikipedia_url": null,
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "urls": [
+    "https://glottolog.org/resource/languoid/id/nort2662"
+  ],
+  "location": {
+    "latitude": 34.3202,
+    "longitude": 73.3844,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point."
+  },
+  "parent": "x-clade-indo1319",
+  "script_type": "abjad",
+  "orthography_standard": {
+    "name": "Hindko Shahmukhi",
+    "authority": null,
+    "year": null,
+    "url": null
+  },
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Hindko"
+  ]
+}

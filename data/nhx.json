@@ -1,0 +1,136 @@
+{
+  "code": "nhx",
+  "name": "Isthmus-Mecayapan Nahuatl",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "ch": [
+      "tʃ"
+    ],
+    "ts": [
+      "ts"
+    ],
+    "cu": [
+      "kʷ"
+    ],
+    "qu": [
+      "k"
+    ],
+    "hu": [
+      "w"
+    ],
+    "x": [
+      "ʃ"
+    ],
+    "j": [
+      "h"
+    ],
+    "a": [
+      "a"
+    ],
+    "e": [
+      "e"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "o"
+    ],
+    "p": [
+      "p"
+    ],
+    "t": [
+      "t"
+    ],
+    "c": [
+      "k"
+    ],
+    "k": [
+      "k"
+    ],
+    "s": [
+      "s"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "l": [
+      "l"
+    ],
+    "y": [
+      "j"
+    ],
+    "w": [
+      "w"
+    ],
+    "b": [
+      "b"
+    ],
+    "d": [
+      "d"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "'": [
+      "ʔ"
+    ],
+    "ʼ": [
+      "ʔ"
+    ]
+  },
+  "parent": "nah",
+  "ancestors": [
+    {
+      "code": "nah",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Descent per Glottolog classification of Isthmus-Mecayapan Nahuatl (isth1242)."
+    }
+  ],
+  "notes": "Skeleton. Uto-Aztecan (Nahuan) variety of the Isthmus of Veracruz written in an SIL-based practical orthography. Digraphs ch=[tʃ], ts=[ts], cu/qu for [kʷ]/[k], hu=[w] and x=[ʃ], j=[h] are mapped; this variety merged the historic tl to [t]. Voiced stops b d g occur as allophones of the voiceless series in some contexts. Vowel length and the glottal stop are only partly recovered from spelling, raising the PER floor. Isthmus-Mecayapan Nahuatl stress is predictable (penultimate) and not separately orthographically marked; left unencoded (documented exemption).",
+  "iso639_3": "nhx",
+  "glottolog_code": null,
+  "sources": [
+    {
+      "id": "nhx_glottolog",
+      "author": "Hammarström, H. et al. (Glottolog 5.0)",
+      "year": 2024,
+      "title": "Glottolog: Isthmus-Mecayapan Nahuatl (isth1242)",
+      "publisher": "Max Planck Institute for Evolutionary Anthropology",
+      "url": "https://glottolog.org/resource/languoid/id/isth1242",
+      "pages": null,
+      "notes": "Classification reference for a skeleton-tier entry.",
+      "wikipedia_url": null
+    },
+    {
+      "id": "nhx_orthography",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Mecayapan Nahuatl (Isthmus-Mecayapan), Wikipedia",
+      "publisher": "Wikimedia Foundation",
+      "url": "https://en.wikipedia.org/wiki/Mecayapan_Nahuatl",
+      "pages": null,
+      "notes": "Orthography/phonology reference for a skeleton-tier grapheme map.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Mecayapan_Nahuatl"
+    },
+    {
+      "id": "nhx_wolgemuth2002",
+      "author": "Wolgemuth, Carl",
+      "year": 2002,
+      "title": "Gramática náhuatl (melaꞌtájto̱l) de los municipios de Mecayapan y Tatahuicapan de Juárez, Veracruz",
+      "publisher": "Instituto Lingüístico de Verano (SIL Mexico)",
+      "url": "https://mexico.sil.org/resources/archives/1919",
+      "pages": null,
+      "notes": "Descriptive grammar of Isthmus-Mecayapan Nahuatl by its principal documenter; consulted to check the SIL-based practical orthography (ch, ts, cu/qu, hu, x, j) modelled here."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Mecayapan_Nahuatl"
+  ]
+}

@@ -1,0 +1,115 @@
+{
+ "code": "dyu",
+ "name": "Dyula",
+ "script": "Latin",
+ "quality": "skeleton",
+ "graphemes": {
+  "a": ["a"],
+  "an": ["ã"],
+  "e": ["e"],
+  "en": ["ẽ"],
+  "ɛ": ["ɛ"],
+  "ɛn": ["ɛ̃"],
+  "i": ["i"],
+  "in": ["ĩ"],
+  "o": ["o"],
+  "on": ["õ"],
+  "ɔ": ["ɔ"],
+  "ɔn": ["ɔ̃"],
+  "u": ["u"],
+  "un": ["ũ"],
+  "b": ["b"],
+  "c": ["t̠ʃ"],
+  "d": ["d"],
+  "f": ["f"],
+  "g": ["ɡ"],
+  "gb": ["ɡb"],
+  "h": ["h"],
+  "j": ["d̠ʒ"],
+  "k": ["k"],
+  "kp": ["kp"],
+  "l": ["l"],
+  "m": ["m"],
+  "n": ["n"],
+  "ny": ["ɲ"],
+  "ŋ": ["ŋ"],
+  "p": ["p"],
+  "r": ["r"],
+  "s": ["s"],
+  "t": ["t"],
+  "v": ["v"],
+  "w": ["w"],
+  "y": ["j"],
+  "z": ["z"]
+ },
+ "allophones": {
+  "a": ["a"], "ã": ["ã"], "e": ["e"], "ẽ": ["ẽ"], "ɛ": ["ɛ"], "ɛ̃": ["ɛ̃"],
+  "i": ["i"], "ĩ": ["ĩ"], "o": ["o"], "õ": ["õ"], "ɔ": ["ɔ"], "ɔ̃": ["ɔ̃"],
+  "u": ["u"], "ũ": ["ũ"], "b": ["b"], "t̠ʃ": ["t̠ʃ"], "d": ["d"], "f": ["f"],
+  "ɡ": ["ɡ"], "ɡb": ["ɡb"], "h": ["h"], "d̠ʒ": ["d̠ʒ"], "k": ["k"], "kp": ["kp"],
+  "l": ["l"], "m": ["m"], "n": ["n"], "ɲ": ["ɲ"], "ŋ": ["ŋ"], "p": ["p"],
+  "r": ["r"], "s": ["s"], "t": ["t"], "v": ["v"], "w": ["w"], "j": ["j"], "z": ["z"]
+ },
+ "notes": "Standard Dyula (Jula) Latin orthography as used in Côte d'Ivoire and Burkina Faso (Braconnier & Diané 1982; DNAFLA-derived Manding conventions shared with Bambara). Nasal vowels are written with a vowel followed by ⟨n⟩ (⟨an⟩, ⟨en⟩, ⟨in⟩, ⟨on⟩, ⟨ɔn⟩, ⟨ɛn⟩, ⟨un⟩): each spells one nasalized vowel nucleus, not vowel+consonant (AGENTS.md test 1 — the phonemic value is not the concatenation of the oral vowel and /n/). ⟨ny⟩, ⟨gb⟩ and ⟨kp⟩ are true digraphs for the single segments /ɲ/, /ɡb/, /kp/ (labial-velars and the palatal nasal are not sequences in Manding phonology). ⟨c⟩ and ⟨j⟩ represent the palatal affricates /t̠ʃ/ and /d̠ʒ/. Dyula is tonal (two-tone system, PHOIBLE 696); tone is not consistently marked in everyday orthography and is left unencoded here — a documented exemption distinct from lexical stress, which Manding varieties do not contrast phonemically.",
+ "iso639_3": "dyu",
+ "glottolog_code": "dyul1238",
+ "wikidata_qid": "Q33641",
+ "wikipedia": [
+  "https://en.wikipedia.org/wiki/Dyula_language"
+ ],
+ "sources": [
+  {
+   "id": "glottolog2024",
+   "author": "Hammarström, Harald; Forkel, Robert; Haspelmath, Martin; Bank, Sebastian",
+   "year": 2024,
+   "title": "Glottolog 5.0",
+   "publisher": "Max Planck Institute for Evolutionary Anthropology",
+   "url": "https://glottolog.org/"
+  },
+  {
+   "id": "phoible2019",
+   "author": "Moran, Steven; McCloy, Daniel (eds.)",
+   "year": 2019,
+   "title": "PHOIBLE 2.0 (doi:10.5281/zenodo.2562766)",
+   "publisher": "Max Planck Institute for the Science of Human History",
+   "url": "https://phoible.org/inventories/view/696",
+   "notes": "Inventory 696 (aa), 37 non-marginal segments, 2 tones."
+  },
+  {
+   "id": "braconnier1982",
+   "author": "Braconnier, Cauvin; Diané, Moussa",
+   "year": 1982,
+   "title": "Dictionnaire Dioula",
+   "publisher": "Institut de Linguistique Appliquée, Abidjan",
+   "notes": "Standard Dyula/Jula Latin orthography (Côte d'Ivoire)."
+  },
+  {
+   "id": "dumestre2003",
+   "author": "Dumestre, Gérard",
+   "year": 2003,
+   "title": "Grammaire fondamentale du bambara",
+   "publisher": "Karthala",
+   "notes": "Shared Manding phonology/orthography conventions (Bambara-Dyula-Jula continuum)."
+  }
+ ],
+ "urls": [
+  "https://glottolog.org/resource/languoid/id/dyul1238"
+ ],
+ "location": {
+  "latitude": 9.291,
+  "longitude": -4.5823,
+  "source": "glottolog",
+  "notes": "Glottolog's representative point."
+ },
+ "parent": "x-clade-mand1469",
+ "phonemes": [
+  "b", "d", "d̠ʒ", "f", "h", "j", "k", "kp", "l", "m", "n", "p", "r", "s", "t", "t̠ʃ",
+  "v", "w", "z", "ŋ", "ɡ", "ɡb", "ɲ",
+  "a", "ã", "e", "ẽ", "i", "ĩ", "o", "õ", "u", "ũ", "ɔ", "ɔ̃", "ɛ", "ɛ̃"
+ ],
+ "tone_inventory": {
+  "˦": "PHOIBLE tone segment",
+  "˨": "PHOIBLE tone segment"
+ },
+ "phoible_id": "696"
+}

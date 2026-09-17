@@ -1,0 +1,74 @@
+{
+  "code": "see",
+  "name": "Seneca",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "orthography_kind": "native",
+  "quality": "research",
+  "graphemes": {
+    "n": ["n"],
+    "t": ["t"],
+    "d": ["d"],
+    "k": ["k"],
+    "g": ["ɡ"],
+    "ts": ["ts"],
+    "dz": ["dz"],
+    "č": ["tʃ"],
+    "j": ["dʒ"],
+    "s": ["s"],
+    "š": ["ʃ"],
+    "h": ["h"],
+    "y": ["j"],
+    "w": ["w"],
+    "'": ["ʔ"],
+    "i": ["i"],
+    "e": ["e"],
+    "ä": ["æ"],
+    "a": ["a"],
+    "o": ["o"],
+    "u": ["u"],
+    "ë": ["ɛ̃"],
+    "ö": ["ɔ̃"]
+  },
+  "allophones": {},
+  "iso639_3": "see",
+  "glottolog_code": "sene1264",
+  "wikidata_qid": "Q1185133",
+  "notes": "Seneca (Onödowáʼga:), Northern Iroquoian, the westernmost of the Five Nations Iroquoian languages. Eight vowels: six oral /i e æ a o u/ (written a ä e i o u, with ⟨ä⟩ for the near-open front vowel) and two nasal /ɛ̃ ɔ̃/ (written with trema, ë ö). ⟨ts⟩ and ⟨dz⟩ are alveolar affricates /ts/ /dz/ and ⟨č⟩/⟨j⟩ the postalveolar affricates /tʃ/ /dʒ/ — each digraph or single character spells one affricate segment. Stops pattern in voiceless/voiced pairs (t/d, k/g) that are largely allophonic (voicing conditioned by environment) rather than contrastive; both members are kept as separate keys because the practical orthography spells them with distinct letters. ⟨'⟩ is the glottal stop /ʔ/. Vowel length is marked with a raised colon ⟨:⟩ and stress with an acute accent; both are suprasegmental diacritics layered onto a vowel letter rather than distinct orthographic units and are not encoded as separate grapheme keys here.",
+  "sources": [
+    {
+      "id": "seneca_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Seneca language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Seneca_language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Seneca_language",
+      "pages": null,
+      "notes": "Phoneme inventory and orthography correspondences."
+    },
+    {
+      "id": "chafe1967",
+      "author": "Chafe, Wallace L.",
+      "year": 1967,
+      "title": "Seneca Morphology and Dictionary",
+      "publisher": "Smithsonian Contributions to Anthropology No. 4",
+      "url": null,
+      "wikipedia_url": null,
+      "pages": null,
+      "notes": "Reference grammar and dictionary establishing the modern Seneca practical orthography."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Seneca_language"
+  ],
+  "parent": "x-clade-iroq1247",
+  "ancestors": [
+    {
+      "code": "x-clade-iroq1247",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Iroquoian — the classification node this language sits under (Northern Iroquoian, Five Nations branch)."
+    }
+  ]
+}

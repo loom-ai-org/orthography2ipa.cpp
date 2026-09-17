@@ -1,0 +1,405 @@
+{
+  "code": "ha",
+  "name": "Hausa",
+  "glottolog_code": "haus1257",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "iso639_3": "hau",
+  "quality": "research",
+  "tone_inventory": {
+    "◌́": "high",
+    "◌̀": "low",
+    "◌̂": "falling"
+  },
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "b": [
+      "b"
+    ],
+    "ɓ": [
+      "ɓ"
+    ],
+    "c": [
+      "tʃ"
+    ],
+    "d": [
+      "d"
+    ],
+    "ɗ": [
+      "ɗ"
+    ],
+    "e": [
+      "e"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "h": [
+      "h"
+    ],
+    "i": [
+      "i"
+    ],
+    "j": [
+      "dʒ"
+    ],
+    "k": [
+      "k"
+    ],
+    "ƙ": [
+      "kʼ"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "nn": [
+      "nn"
+    ],
+    "o": [
+      "o"
+    ],
+    "r": [
+      "r",
+      "ɽ"
+    ],
+    "s": [
+      "s"
+    ],
+    "sh": [
+      "ʃ"
+    ],
+    "ssh": [
+      "ʃʃ"
+    ],
+    "t": [
+      "t"
+    ],
+    "ts": [
+      "sʼ",
+      "tsʼ"
+    ],
+    "tts": [
+      "sʼsʼ",
+      "tsʼtsʼ"
+    ],
+    "u": [
+      "u"
+    ],
+    "w": [
+      "w"
+    ],
+    "y": [
+      "j"
+    ],
+    "z": [
+      "z"
+    ],
+    "ƴ": [
+      "j̰",
+      "ʔʲ"
+    ],
+    "ʼy": [
+      "j̰",
+      "ʔʲ"
+    ],
+    "kw": [
+      "kʷ"
+    ],
+    "kkw": [
+      "kʷkʷ"
+    ],
+    "gw": [
+      "ɡʷ"
+    ],
+    "ggw": [
+      "ɡʷɡʷ"
+    ],
+    "ƙw": [
+      "kʷʼ"
+    ],
+    "ƙƙw": [
+      "kʷʼkʷʼ"
+    ],
+    "ky": [
+      "kʲ"
+    ],
+    "kky": [
+      "kʲkʲ"
+    ],
+    "gy": [
+      "ɡʲ"
+    ],
+    "ggy": [
+      "ɡʲɡʲ"
+    ],
+    "ƙy": [
+      "kʲʼ"
+    ],
+    "ƙƙy": [
+      "kʲʼkʲʼ"
+    ],
+    "fy": [
+      "fʲ"
+    ],
+    "ffy": [
+      "fʲfʲ"
+    ],
+    "p": [
+      "p"
+    ],
+    "'y": [
+      "j̰",
+      "ʔʲ"
+    ],
+    "'": [
+      "ʔ"
+    ],
+    "ʼ": [
+      "ʔ"
+    ],
+    "’y": [
+      "j̰",
+      "ʔʲ"
+    ],
+    "’": [
+      "ʔ"
+    ],
+    "r̃": [
+      "r"
+    ]
+  },
+  "positional_graphemes": {
+    "a": {
+      "word_initial": [
+        "ʔa"
+      ]
+    },
+    "e": {
+      "word_initial": [
+        "ʔe"
+      ]
+    },
+    "i": {
+      "word_initial": [
+        "ʔi"
+      ]
+    },
+    "o": {
+      "word_initial": [
+        "ʔo"
+      ]
+    },
+    "u": {
+      "word_initial": [
+        "ʔu"
+      ]
+    },
+    "r": {
+      "word_final": [
+        "r"
+      ]
+    },
+    "n": {
+      "word_final": [
+        "n",
+        "ŋ"
+      ]
+    }
+  },
+  "allophones": {
+    "a": [
+      "a"
+    ],
+    "b": [
+      "b"
+    ],
+    "ɓ": [
+      "ɓ"
+    ],
+    "tʃ": [
+      "tʃ"
+    ],
+    "d": [
+      "d"
+    ],
+    "ɗ": [
+      "ɗ"
+    ],
+    "e": [
+      "e"
+    ],
+    "f": [
+      "f",
+      "p",
+      "ɸ"
+    ],
+    "ɡ": [
+      "ɡ"
+    ],
+    "h": [
+      "h"
+    ],
+    "i": [
+      "i"
+    ],
+    "dʒ": [
+      "dʒ"
+    ],
+    "k": [
+      "k"
+    ],
+    "kʼ": [
+      "kʼ"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "o": [
+      "o"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "t": [
+      "t"
+    ],
+    "u": [
+      "u"
+    ],
+    "w": [
+      "w"
+    ],
+    "j": [
+      "j"
+    ],
+    "z": [
+      "z"
+    ],
+    "sʼ": [
+      "sʼ"
+    ],
+    "ɽ": [
+      "ɽ"
+    ],
+    "j̰": [
+      "j̰"
+    ],
+    "p": [
+      "p"
+    ],
+    "kʷ": [
+      "kʷ"
+    ],
+    "ɡʷ": [
+      "ɡʷ"
+    ],
+    "kʷʼ": [
+      "kʷʼ"
+    ],
+    "kʲ": [
+      "kʲ"
+    ],
+    "ɡʲ": [
+      "ɡʲ"
+    ],
+    "kʲʼ": [
+      "kʲʼ"
+    ],
+    "fʲ": [
+      "fʲ"
+    ]
+  },
+  "notes": "Hausa in the Boko (modified Roman) orthography, as used in Nigeria and Niger. The alphabet represents neither tone nor vowel length: Niger's attempt to write long vowels with doubled letters failed and was dropped (Newman 1996: 537 and its note 2). Both are therefore invisible to a grapheme-driven transcriber and are the dominant cost against any tone- and length-marked gold; see docs/languages/ha.md.\n\nThe glottalized series is written with hooked letters and one digraph. Ɓ and Ɗ are the laryngealized implosive stops /ɓ ɗ/; Ƙ and Ts are ejectives whose plain counterparts are /k/ and /s/ respectively, so Newman reads Ts as the ejective fricative /sʼ/ rather than an affricate (Newman 1996: 539). Schuh and Yalwa describe the same letter as ranging from an ejective alveolar affricate to an ejective fricative, and report that the Kano standard tends towards the affricate (Schuh & Yalwa 1999: 92). The two descriptions disagree, so Ts carries both readings as a candidate pair. The fricative stays first: it is Newman's unqualified statement, and it is what the one Hausa gold written in human notation uses, 140 times against no affricate. Ƴ (spelled ʼy in the Niger orthography) is Newman's glottalized, laryngealized palatal approximant /j̰/; Schuh and Yalwa give the same segment for Kano and a broad range of dialects as a palatalized glottal stop /ʔʲ/, historically a contraction of ɗ plus j that Sokoto still preserves — Sokoto ɗiyaa against Kano ʼyaa (Schuh & Yalwa 1999: 92). Both readings are candidates for the same reason. All four spellings of the letter are one phoneme and must transcribe alike.\n\nKw, gw, ƙw, ky, gy, ƙy and fy are unit phonemes, not consonant-plus-glide sequences: they contrast with their plain counterparts before /a(a)/, as in gadaa 'duiker' vs gwadaa 'test!' vs gyaɗaa 'peanuts' (Newman 1996: 538 Table 27-1, 539). Velars are additionally and redundantly labialized before back vowels and palatalized before front vowels; that allophony is not written and is not encoded here, because it is predictable rather than contrastive.\n\nThe apostrophe is a letter of the Boko alphabet and spells the glottal stop /ʔ/. Glottal stop is a historically recent Hausa phoneme whose medial and initial occurrences entered with Arabic loanwords, e.g. ’addu’aa ‘prayer’, saba’in ‘seventy’ (Newman 1996: 540). Both the typewriter apostrophe U+0027 and the modifier letter U+02BC are in use and map alike; the longer key ⟨’y⟩ still wins maximal munch, so the glottalized approximant is never split into /ʔ/ plus /j/.\n\nHausa contrasts two rhotics that Boko spells identically as ⟨r⟩: an apical tap or roll /r/ and a retroflex flap /ɽ/. The flap is the native Hausa rhotic; the roll entered through Arabic, Kanuri and English loans, through ideophones, and through rhotacization of syllable-final alveolars (Newman 1996: 539-540). Which one a word takes is lexical and carries no orthographic cue, so ⟨r⟩ is encoded as an ordered CANDIDATE pair rather than a single guess; the ordering is a decoding default, not a claim about relative frequency. One position is deterministic and is encoded positionally: word-finally only the roll occurs (Newman 1996: 539). Writing that does mark the contrast uses ⟨r̃⟩ for the tap or roll and leaves plain ⟨r⟩ for the flap — Newman's own citation forms, e.g. r̃aháa ‘pleasant chatting’ against raanii ‘dry season’ (Newman 1996: 539). Where the diacritic is written the flap is excluded, so ⟨r̃⟩ carries the single candidate /r/; unmarked ⟨r⟩ keeps the pair. Without the key the combining tilde is simply dropped and ⟨r̃⟩ inherits the flap candidate the diacritic exists to rule out.\n\nP is not a native Hausa phoneme; it is absent from the consonant inventory and appears only in unassimilated loan spellings (Pakistan, Paris), where it is read /p/. The reverse also holds: /f/ is variably realized [f], [p] or [ɸ], which is recorded in the allophone map (Newman 1996: 539). In word-final position /n/ is pronounced [ŋ] (Newman 1996: 539). The statement is strictly positional, so the realization is encoded as a word-final candidate of ⟨n⟩ and nowhere else: /n/ stays the broad transcription both golds agree with, [ŋ] stays reachable at the end of a word, and the impossible word-initial, intervocalic and half-geminate [ŋ] that an unconditioned allophone would generate never enter the lattice. Word-initial vowels take an obligatory epenthetic glottal-stop onset, Hausa having no vowel-initial syllables.\n\nTwo divergences from the wikipron gold are deliberate. Its orthographic column is stripped of the tone and length its IPA column carries, so no rule over that input can recover them. It writes ⟨j⟩ as /ʒ/, which is the Niger pronunciation; Standard (Kano) Hausa has the affricate /dʒ/ and that is what is encoded (Newman 1996: 538). It also writes ⟨ky gy⟩ as the palatal stops [c ɟ]; Newman's analysis, followed here, has palatalized velars /kʲ ɡʲ/ instead.\n\nAll Hausa consonants can be geminated. Where a digraph is involved, only the digraph's first letter is written doubled — ⟨sasshee⟩ for /saʃʃee/, not ⟨sashshee⟩ — but the phonemic result is a geminate of the whole digraph unit, e.g. gásasshee 'roasted' is /ɡasaʃʃee/, with a geminate /ʃʃ/, not a plain /s/ before the digraph (Newman 1996: 540). The same holds for the labialized and palatalized velar and /fʲ/ units: ⟨kkw⟩ is /kʷkʷ/, not /k/ + /kʷ/. That closed set of doubled-digraph spellings (⟨ssh⟩, ⟨tts⟩, ⟨kkw⟩, ⟨ggw⟩, ⟨ƙƙw⟩, ⟨kky⟩, ⟨ggy⟩, ⟨ƙƙy⟩, ⟨ffy⟩) is encoded directly in the grapheme table; gemination of plain single-letter consonants (⟨bb⟩, ⟨mm⟩, ...) already falls out of processing each doubled letter separately and needs no extra entry, with one exception: ⟨nn⟩ is encoded directly too, because processing its second letter separately would put it in word-final position and pull in the word-final [ŋ] candidate, producing an unattested half-geminate [nŋ]; the direct entry keeps ⟨nn⟩ a plain geminate /nn/.",
+  "sources": [
+    {
+      "id": "newman1996",
+      "author": "Newman, P.",
+      "year": 1996,
+      "title": "Hausa Phonology (chapter 27)",
+      "publisher": "In A. S. Kaye & P. T. Daniels (eds.), Phonologies of Asia and Africa, Eisenbrauns",
+      "url": "https://scholarworks.iu.edu/dspace/bitstreams/f1d4231b-d713-4134-970c-071c5f8485ed/download",
+      "pages": "537-552",
+      "notes": "Consulted directly; consonant inventory Table 27-1 p.538, segmental discussion pp.539-540."
+    },
+    {
+      "id": "schuh_yalwa1999",
+      "author": "Schuh, R. G. & Yalwa, L. D.",
+      "year": 1999,
+      "title": "Hausa (Illustrations of the IPA)",
+      "publisher": "In Handbook of the International Phonetic Association, Cambridge University Press",
+      "url": "https://archive.org/details/rosettaproject_hau_phon-4",
+      "pages": "90-95",
+      "notes": "Consulted directly; describes the Kano standard. Vowel system p.90, glottal stop before orthographic initial vowels p.91, the ejective ⟨ts⟩ range and the palatalized glottal stop p.92, the two rhotics p.93, distinctive tone p.94."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Hausa_language",
+    "https://en.wikipedia.org/wiki/Chadic_languages",
+    "https://ha.wikipedia.org/wiki/Harshen_Hausa",
+    "https://ha.wikipedia.org/wiki/Yarukan_Chadi"
+  ],
+  "timespan": {
+    "start_year": 1900,
+    "end_year": null
+  },
+  "parent": "cdc",
+  "ancestors": [
+    {
+      "code": "cdc",
+      "role": "parent",
+      "weight": 0.78,
+      "notes": "West Chadic branch of Afroasiatic."
+    },
+    {
+      "code": "ar",
+      "role": "adstrate",
+      "weight": 0.14,
+      "notes": "Arabic adstrate: massive religious/scholarly borrowing via Islam and Ajami literacy."
+    },
+    {
+      "code": "en-GB",
+      "role": "adstrate",
+      "weight": 0.05,
+      "notes": "English adstrate: colonial and modern loanwords (Nigeria)."
+    }
+  ],
+  "wikidata_qid": "Q56475",
+  "phoible_id": "haus1257",
+  "wals_code": "hau",
+  "location": {
+    "latitude": 11.1513,
+    "longitude": 8.7804,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Hausa."
+  },
+  "valid_ceiling": {
+    "wikipron": {
+      "per": 0.0223,
+      "folded": "tone+length",
+      "citation": "The wikipron ha gold's IPA column is fully marked for tone and length while the orthographic column is stripped of both (Module:ha-IPA output); measured over 1857 scored items, baseline PER 0.5340 drops to 0.0223 (89.1% exact match) once both tone and length are folded out of both sides -- folding tone alone gives 0.1690 and length alone gives 0.4565, which must not be conflated with the combined figure. See docs/languages/ha.md."
+    }
+  }
+}

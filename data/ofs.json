@@ -1,0 +1,400 @@
+{
+  "code": "ofs",
+  "glottolog_code": "oldf1241",
+  "name": "Old Frisian",
+  "script": "Latin",
+  "quality": "research",
+  "script_type": "alphabet",
+  "parent": "gem-x-ingvaeonic",
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "e": [
+      "e",
+      "ɛ"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "o"
+    ],
+    "u": [
+      "u"
+    ],
+    "ā": [
+      "aː"
+    ],
+    "ē": [
+      "eː"
+    ],
+    "ī": [
+      "iː"
+    ],
+    "ō": [
+      "oː"
+    ],
+    "ū": [
+      "uː"
+    ],
+    "ei": [
+      "ɛi"
+    ],
+    "ai": [
+      "ai"
+    ],
+    "au": [
+      "au"
+    ],
+    "ia": [
+      "ia"
+    ],
+    "ie": [
+      "ie"
+    ],
+    "io": [
+      "io"
+    ],
+    "iu": [
+      "iu"
+    ],
+    "p": [
+      "p"
+    ],
+    "t": [
+      "t"
+    ],
+    "k": [
+      "k"
+    ],
+    "c": [
+      "k"
+    ],
+    "b": [
+      "b"
+    ],
+    "d": [
+      "d"
+    ],
+    "g": [
+      "ɡ",
+      "ɣ"
+    ],
+    "f": [
+      "f",
+      "v"
+    ],
+    "th": [
+      "θ",
+      "ð"
+    ],
+    "þ": [
+      "θ",
+      "ð"
+    ],
+    "ð": [
+      "ð",
+      "θ"
+    ],
+    "s": [
+      "s",
+      "z"
+    ],
+    "h": [
+      "h",
+      "x"
+    ],
+    "r": [
+      "r"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ng": [
+      "ŋɡ",
+      "ŋ"
+    ],
+    "w": [
+      "w"
+    ],
+    "j": [
+      "j"
+    ],
+    "ts": [
+      "ts"
+    ],
+    "sz": [
+      "ts"
+    ],
+    "pp": [
+      "pː"
+    ],
+    "tt": [
+      "tː"
+    ],
+    "kk": [
+      "kː"
+    ],
+    "bb": [
+      "bː"
+    ],
+    "dd": [
+      "dː"
+    ],
+    "gg": [
+      "ɡː"
+    ],
+    "ff": [
+      "fː"
+    ],
+    "ss": [
+      "sː"
+    ],
+    "ll": [
+      "lː"
+    ],
+    "mm": [
+      "mː"
+    ],
+    "nn": [
+      "nː"
+    ],
+    "rr": [
+      "rː"
+    ]
+  },
+  "allophones": {
+    "p": [
+      "p"
+    ],
+    "t": [
+      "t"
+    ],
+    "k": [
+      "k"
+    ],
+    "b": [
+      "b"
+    ],
+    "d": [
+      "d"
+    ],
+    "ɡ": [
+      "ɡ",
+      "ɣ"
+    ],
+    "ts": [
+      "ts"
+    ],
+    "f": [
+      "f",
+      "v"
+    ],
+    "θ": [
+      "θ",
+      "ð"
+    ],
+    "s": [
+      "s",
+      "z"
+    ],
+    "h": [
+      "h",
+      "x"
+    ],
+    "r": [
+      "r"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ŋ": [
+      "ŋ"
+    ],
+    "w": [
+      "w"
+    ],
+    "j": [
+      "j"
+    ],
+    "a": [
+      "a"
+    ],
+    "e": [
+      "e"
+    ],
+    "ɛ": [
+      "ɛ"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "o"
+    ],
+    "u": [
+      "u"
+    ],
+    "aː": [
+      "aː"
+    ],
+    "eː": [
+      "eː"
+    ],
+    "iː": [
+      "iː"
+    ],
+    "oː": [
+      "oː"
+    ],
+    "uː": [
+      "uː"
+    ],
+    "ɛi": [
+      "ɛi"
+    ],
+    "ai": [
+      "ai"
+    ],
+    "au": [
+      "au"
+    ],
+    "ia": [
+      "ia"
+    ],
+    "ie": [
+      "ie"
+    ],
+    "io": [
+      "io"
+    ],
+    "iu": [
+      "iu"
+    ]
+  },
+  "positional_graphemes": {
+    "f": {
+      "intervocalic": [
+        "v"
+      ],
+      "default": [
+        "f"
+      ]
+    },
+    "s": {
+      "intervocalic": [
+        "z"
+      ],
+      "default": [
+        "s"
+      ]
+    },
+    "th": {
+      "intervocalic": [
+        "ð"
+      ],
+      "default": [
+        "θ"
+      ]
+    },
+    "g": {
+      "intervocalic": [
+        "ɣ"
+      ],
+      "default": [
+        "ɡ"
+      ]
+    }
+  },
+  "ancestors": [
+    {
+      "code": "gem-x-ingvaeonic",
+      "role": "parent",
+      "weight": 0.93,
+      "notes": "Ingvaeonic / Anglo-Frisian base. Old Frisian is the most conservative Ingvaeonic language, sharing the Nasal Spirant Law with Old English and Old Saxon."
+    },
+    {
+      "code": "la",
+      "role": "adstrate",
+      "weight": 0.04,
+      "notes": "Latin adstrate: ecclesiastical and legal vocabulary via Christianisation of the Frisians (c. 700–800 CE, missionised by Willibrord and Boniface)."
+    },
+    {
+      "code": "non",
+      "role": "adstrate",
+      "weight": 0.03,
+      "notes": "Old Norse adstrate: Viking contact along the Frisian coast; some Norse loanwords and personal names in Old Frisian legal texts."
+    }
+  ],
+  "notes": "Old Frisian (~1150–1550 CE). The earliest attested Frisian, known primarily from legal manuscripts (the Rüstring, Hunsingoer, Emsiger, and Brokmer law codes). Ancestor of all modern Frisian languages (West, North, Saterland). KEY FEATURES: (1) ANGLO-FRISIAN BRIGHTENING: PGmc *a → ā/ē before nasals (shared with Old English but not Old Saxon/OHG). (2) INGVAEONIC NASAL SPIRANT LAW: nasal lost before fricative with compensatory lengthening — *munþ → mūth, *fimf → fīf (shared with OE, OS). (3) PALATALISATION: PGmc *k → ts/tz before front vowels — *kinn → tsieze 'cheese', distinct from OE tʃ and absent in OS. (4) NO HIGH GERMAN CONSONANT SHIFT. (5) Retained þ/ð until late period. (6) Geminate consonants still distinctive. Most closely related to Old English; together they form the Anglo-Frisian sub-branch. Sources: Bremmer (2009), Stiles (1995), Markey (1981).",
+  "sources": [
+    {
+      "id": "bremmer2009",
+      "author": "Bremmer Jr., R.H.",
+      "year": 2009,
+      "title": "An Introduction to Old Frisian: History, Grammar, Reader, Glossary",
+      "publisher": "John Benjamins",
+      "url": null,
+      "pages": null,
+      "notes": "Standard reference grammar for Old Frisian"
+    },
+    {
+      "id": "stiles1995",
+      "author": "Stiles, P.V.",
+      "year": 1995,
+      "title": "Remarks on the 'Anglo-Frisian' Thesis",
+      "publisher": "Benjamins",
+      "url": null,
+      "pages": null,
+      "notes": "In: Frisian and its Neighbours (ed. Faltings et al.)"
+    },
+    {
+      "id": "markey1981",
+      "author": "Markey, T.L.",
+      "year": 1981,
+      "title": "Frisian",
+      "publisher": "Mouton",
+      "url": null,
+      "pages": null,
+      "notes": "Trends in Linguistics series"
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Old_Frisian",
+    "https://fy.wikipedia.org/wiki/Aldfrysk"
+  ],
+  "urls": [
+    "https://en.wikipedia.org/wiki/Old_Frisian",
+    "https://en.wikipedia.org/wiki/Frisian_languages",
+    "https://en.wikipedia.org/wiki/Anglo-Frisian_languages",
+    "https://en.wikipedia.org/wiki/Ingvaeonic_languages",
+    "https://de.wikipedia.org/wiki/Altfriesische_Sprache",
+    "https://nl.wikipedia.org/wiki/Oudfries",
+    "https://fy.wikipedia.org/wiki/Aldfrysk"
+  ],
+  "timespan": {
+    "start_year": 1150,
+    "end_year": 1500
+  },
+  "iso639_3": "ofs",
+  "wikidata_qid": "Q35133",
+  "location": {
+    "latitude": 53.35,
+    "longitude": 6.8,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Old Frisian."
+  }
+}

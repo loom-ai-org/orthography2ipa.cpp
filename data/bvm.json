@@ -1,0 +1,241 @@
+{
+ "code": "bvm",
+ "name": "Bamunka",
+ "script": "Latin",
+ "quality": "skeleton",
+ "graphemes": {
+  "a": [
+   "a"
+  ],
+  "b": [
+   "b"
+  ],
+  "ch": [
+   "t͡ʃ"
+  ],
+  "d": [
+   "d"
+  ],
+  "e": [
+   "e"
+  ],
+  "f": [
+   "f"
+  ],
+  "g": [
+   "ɡ"
+  ],
+  "gh": [
+   "ɣ"
+  ],
+  "h": [
+   "ʔ"
+  ],
+  "i": [
+   "i"
+  ],
+  "j": [
+   "d͡ʒ"
+  ],
+  "k": [
+   "k"
+  ],
+  "kp": [
+   "k͡p"
+  ],
+  "l": [
+   "l"
+  ],
+  "m": [
+   "m"
+  ],
+  "n": [
+   "n"
+  ],
+  "ny": [
+   "ɲ"
+  ],
+  "o": [
+   "o"
+  ],
+  "s": [
+   "s"
+  ],
+  "sh": [
+   "ʃ"
+  ],
+  "t": [
+   "t"
+  ],
+  "u": [
+   "u"
+  ],
+  "v": [
+   "v"
+  ],
+  "w": [
+   "w"
+  ],
+  "y": [
+   "j"
+  ],
+  "zh": [
+   "ʒ"
+  ],
+  "ŋ": [
+   "ŋ"
+  ],
+  "ɔ": [
+   "ɔ"
+  ],
+  "ə": [
+   "ə"
+  ],
+  "ɛ": [
+   "ɛ"
+  ],
+  "ɨ": [
+   "ɨ"
+  ]
+ },
+ "allophones": {
+  "b": [
+   "b",
+   "bʷ",
+   "bʲ"
+  ],
+  "d̪": [
+   "d̪",
+   "d",
+   "dʷ",
+   "dʲ"
+  ],
+  "f": [
+   "f",
+   "fʲ"
+  ],
+  "k": [
+   "k",
+   "kʷ",
+   "kʲ"
+  ],
+  "l": [
+   "l",
+   "lʷ"
+  ],
+  "n": [
+   "n",
+   "nʷ"
+  ],
+  "s": [
+   "s",
+   "sʷ"
+  ],
+  "t̪": [
+   "t̪",
+   "tʷ",
+   "tʲ"
+  ],
+  "v": [
+   "v",
+   "vʲ"
+  ],
+  "ŋ": [
+   "ŋ",
+   "ŋʷ"
+  ],
+  "ɡ": [
+   "ɡ",
+   "ɡʷ",
+   "ɡʲ"
+  ],
+  "ʃ": [
+   "ʃ",
+   "ʃʷ"
+  ],
+  "ʒ": [
+   "ʒ",
+   "ʒʷ"
+  ]
+ },
+ "notes": "Placed so the ancestry graph covers every living ISO 639-3 language. No orthography is claimed; the phoneme inventory follows the cited PHOIBLE inventory (which itself cites a published description): script is Zyyy (undetermined) until a cited description is encoded. Classification and coordinates follow Glottolog. Orthography from an Omniglot chart (c) Simon Ager, https://www.omniglot.com/, extracted via the AfriSpeech/africa-g2p compilation (bvm.json). africa-g2p is a compilation tool, not the linguistic authority; the citation above is the original source it names.",
+ "iso639_3": "bvm",
+ "glottolog_code": "bamu1256",
+ "sources": [
+  {
+   "id": "glottolog2024",
+   "author": "Hammarström, Harald; Forkel, Robert; Haspelmath, Martin; Bank, Sebastian",
+   "year": 2024,
+   "title": "Glottolog 5.0",
+   "publisher": "Max Planck Institute for Evolutionary Anthropology",
+   "url": "https://glottolog.org/"
+  },
+  {
+   "id": "phoible2019",
+   "author": "Moran, Steven; McCloy, Daniel (eds.)",
+   "year": 2019,
+   "title": "PHOIBLE 2.0 (doi:10.5281/zenodo.2562766)",
+   "publisher": "Max Planck Institute for the Science of Human History",
+   "url": "https://phoible.org/inventories/view/1182",
+   "notes": "Inventory 1182 (ph), 32 non-marginal segments."
+  },
+  {
+   "id": "omniglot-bamunka",
+   "author": "Ager, Simon",
+   "year": 2026,
+   "title": "Omniglot chart (bamunka.xls)",
+   "publisher": "Omniglot",
+   "url": "https://www.omniglot.com/",
+   "notes": "Undated web chart; year is retrieval year, not publication year."
+  }
+ ],
+ "urls": [
+  "https://glottolog.org/resource/languoid/id/bamu1256"
+ ],
+ "location": {
+  "latitude": 6.002,
+  "longitude": 10.5127,
+  "source": "glottolog",
+  "notes": "Glottolog's representative point."
+ },
+ "parent": "x-clade-atla1278",
+ "phonemes": [
+  "b",
+  "d̠ʒ",
+  "d̪",
+  "f",
+  "h",
+  "j",
+  "k",
+  "kp",
+  "l",
+  "m",
+  "n",
+  "s",
+  "t̠ʃ",
+  "t̪",
+  "v",
+  "w",
+  "ŋ",
+  "ɡ",
+  "ɣ",
+  "ɲ",
+  "ʃ",
+  "ʒ",
+  "ʔ",
+  "a",
+  "e",
+  "i",
+  "o",
+  "u",
+  "ɔ",
+  "ə",
+  "ɛ",
+  "ɨ"
+ ],
+ "phoible_id": "1182",
+ "script_type": "alphabet",
+ "wikipedia": [
+  "https://en.wikipedia.org/wiki/Bamunka_language"
+ ]
+}

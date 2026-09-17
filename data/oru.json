@@ -1,0 +1,72 @@
+{
+ "code": "oru",
+ "name": "Ormuri",
+ "script": "Zyyy",
+ "quality": "stub",
+ "graphemes": {},
+ "allophones": {},
+ "notes": "REGISTRY STUB (not a modelled G2P target). Placed so the ancestry graph covers every living ISO 639-3 language. No orthography is claimed; the phoneme inventory follows the cited PHOIBLE inventory (which itself cites a published description): script is Zyyy (undetermined) until a cited description is encoded. Classification and coordinates follow Glottolog.",
+ "iso639_3": "oru",
+ "glottolog_code": "ormu1247",
+ "sources": [
+  {
+   "id": "glottolog2024",
+   "author": "Hammarström, Harald; Forkel, Robert; Haspelmath, Martin; Bank, Sebastian",
+   "year": 2024,
+   "title": "Glottolog 5.0",
+   "publisher": "Max Planck Institute for Evolutionary Anthropology",
+   "url": "https://glottolog.org/"
+  },
+  {
+   "id": "phoible2019",
+   "author": "Moran, Steven; McCloy, Daniel (eds.)",
+   "year": 2019,
+   "title": "PHOIBLE 2.0 (doi:10.5281/zenodo.2562766)",
+   "publisher": "Max Planck Institute for the Science of Human History",
+   "url": "https://phoible.org/inventories/view/510",
+   "notes": "Inventory 510 (upsid), 29 non-marginal segments, 2 marginal excluded."
+  }
+ ],
+ "urls": [
+  "https://glottolog.org/resource/languoid/id/ormu1247"
+ ],
+ "location": {
+  "latitude": 32.6819,
+  "longitude": 69.3444,
+  "source": "glottolog",
+  "notes": "Glottolog's representative point."
+ },
+ "parent": "x-clade-indo1319",
+ "phonemes": [
+  "b",
+  "d̪z̪|dz",
+  "d̪|d",
+  "f",
+  "h",
+  "j",
+  "k",
+  "l̪|l",
+  "m",
+  "n̪|n",
+  "p",
+  "r̪|r",
+  "s̪|s",
+  "t̪s̪|ts",
+  "t̪|t",
+  "x",
+  "z̪|z",
+  "ɡ",
+  "ʁ",
+  "ʃ",
+  "ʒ",
+  "β̞",
+  "χ",
+  "a̟",
+  "e",
+  "o",
+  "ɔ",
+  "ɪ",
+  "ʊ"
+ ],
+ "phoible_id": "510"
+}

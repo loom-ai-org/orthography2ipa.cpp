@@ -1,0 +1,391 @@
+{
+  "code": "ar-x-peninsular",
+  "name": "Proto-Peninsular Arabic",
+  "script": "Arabic",
+  "graphemes_base": "ar",
+  "allophones_base": "arb",
+  "positional_graphemes_base": "ar",
+  "graphemes": {
+    "ث": [
+      "θ",
+      "t",
+      "s"
+    ],
+    "ذ": [
+      "ð",
+      "d"
+    ],
+    "ظ": [
+      "ðˤ",
+      "dˤ"
+    ],
+    "ض": [
+      "dˤ",
+      "ðˤ"
+    ],
+    "ج": [
+      "dʒ",
+      "ɡ",
+      "j"
+    ],
+    "ق": [
+      "q",
+      "ɡ"
+    ],
+    "الثث": [
+      "aθθ",
+      "att",
+      "ass"
+    ],
+    "اَلثث": [
+      "aθθ",
+      "att",
+      "ass"
+    ],
+    "لِلثث": [
+      "liθθ",
+      "litt",
+      "liss"
+    ],
+    "وَالثث": [
+      "waθθ",
+      "watt",
+      "wass"
+    ],
+    "فَالثث": [
+      "faθθ",
+      "fatt",
+      "fass"
+    ],
+    "بِالثث": [
+      "biθθ",
+      "bitt",
+      "biss"
+    ],
+    "كَالثث": [
+      "kaθθ",
+      "katt",
+      "kass"
+    ],
+    "الذذ": [
+      "aðð",
+      "add"
+    ],
+    "اَلذذ": [
+      "aðð",
+      "add"
+    ],
+    "لِلذذ": [
+      "liðð",
+      "lidd"
+    ],
+    "وَالذذ": [
+      "waðð",
+      "wadd"
+    ],
+    "فَالذذ": [
+      "faðð",
+      "fadd"
+    ],
+    "بِالذذ": [
+      "biðð",
+      "bidd"
+    ],
+    "كَالذذ": [
+      "kaðð",
+      "kadd"
+    ],
+    "الضض": [
+      "adˤdˤ",
+      "aðˤðˤ"
+    ],
+    "اَلضض": [
+      "adˤdˤ",
+      "aðˤðˤ"
+    ],
+    "لِلضض": [
+      "lidˤdˤ",
+      "liðˤðˤ"
+    ],
+    "وَالضض": [
+      "wadˤdˤ",
+      "waðˤðˤ"
+    ],
+    "فَالضض": [
+      "fadˤdˤ",
+      "faðˤðˤ"
+    ],
+    "بِالضض": [
+      "bidˤdˤ",
+      "biðˤðˤ"
+    ],
+    "كَالضض": [
+      "kadˤdˤ",
+      "kaðˤðˤ"
+    ],
+    "الظظ": [
+      "aðˤðˤ",
+      "adˤdˤ"
+    ],
+    "اَلظظ": [
+      "aðˤðˤ",
+      "adˤdˤ"
+    ],
+    "لِلظظ": [
+      "liðˤðˤ",
+      "lidˤdˤ"
+    ],
+    "وَالظظ": [
+      "waðˤðˤ",
+      "wadˤdˤ"
+    ],
+    "فَالظظ": [
+      "faðˤðˤ",
+      "fadˤdˤ"
+    ],
+    "بِالظظ": [
+      "biðˤðˤ",
+      "bidˤdˤ"
+    ],
+    "كَالظظ": [
+      "kaðˤðˤ",
+      "kadˤdˤ"
+    ],
+    "اِلثث": [
+      "iθθ",
+      "itt",
+      "iss"
+    ],
+    "اِلذذ": [
+      "iðð",
+      "idd"
+    ],
+    "اِلضض": [
+      "idˤdˤ",
+      "iðˤðˤ"
+    ],
+    "اِلظظ": [
+      "iðˤðˤ",
+      "idˤdˤ"
+    ],
+    "وِالثث": [
+      "wiθθ",
+      "witt",
+      "wiss"
+    ],
+    "وِالذذ": [
+      "wiðð",
+      "widd"
+    ],
+    "وِالضض": [
+      "widˤdˤ",
+      "wiðˤðˤ"
+    ],
+    "وِالظظ": [
+      "wiðˤðˤ",
+      "widˤdˤ"
+    ]
+  },
+  "allophones": {
+    "ɮˤ": [
+      "dˤ",
+      "ðˤ"
+    ],
+    "θ": [
+      "θ",
+      "t"
+    ],
+    "ð": [
+      "ð",
+      "d"
+    ],
+    "ðˤ": [
+      "ðˤ",
+      "dˤ"
+    ],
+    "q": [
+      "q",
+      "ɡ"
+    ],
+    "k": [
+      "k",
+      "tʃ"
+    ],
+    "dʒ": [
+      "dʒ",
+      "ɡ",
+      "j"
+    ]
+  },
+  "parent": "arb",
+  "ancestors": [
+    {
+      "code": "arb",
+      "role": "parent",
+      "weight": 0.95,
+      "notes": "Descent from Classical Arabic"
+    }
+  ],
+  "notes": "Proto-Peninsular Arabic — GROUPING NODE (glue node) for the Gulf subtree (ar-x-gulf → ar-AE/ar-BH/ar-KW/ar-QA), Najdi (ar-SA-x-najd), Hejazi (ar-SA-x-hejaz), Yemeni (ar-YE, Ṣanʿānī reference) and Omani (ar-OM, genetically Peninsular, NOT under the Gulf node). It declares only what the dialectological literature treats as SHARED across the whole Peninsula, and serves as the data-inheritance root the leaves build on; every reflex that splits WITHIN the group (qāf voicing, interdental merger, ǧīm, velar affrication) is documented here as leaf territory and is NOT asserted group-wide. GENUINELY GROUP-WIDE, MODELLED HERE: (1) EMPHASIS (pharyngealization) SPREADING — low vowels back to [ɑ]/[ɑː] adjacent to an emphatic /tˤ dˤ sˤ ðˤ zˤ/, declared as the AR_PEN_EMPH_* allophone_rules and inherited by every Peninsular descendant via graphemes_base/OVERLAY_BY_ID. VERIFIED against Watson 2002 ch.10 (printed pages checked): §10.4 p.273 — spread from the pharyngealized coronals 'may encompass the whole phonological word'; p.274 ex.(6) rightward (ṣubyān, ḍarab), leftward (rabaṭ, maraḍ) and bidirectional (baṣala) spread; §10.5 pp.279-281 for Ṣanʿānī (xāṣṣ, ṭīn, ṣayf; labialization as the San'ani-specific enhancement). The rules deliberately state only ADJACENT-vowel backing — the minimal common denominator — because the DOMAIN of spread is not constant across the Peninsula (Watson 2002:279: in Abha 'emphasis rarely spreads beyond the adjacent vowel' (Younes 1991) while in Qatari it 'spreads bi-directionally over the whole word' and across word boundaries (Bukshaisha 1985:217-19)); whole-word spread is leaf territory. (2) SHORT-VOWEL RETENTION AND TROCHAIC-TYPE STRESS — the Peninsula lies east of Watson's (2002:9) Salum–Chad East/West line: the /a i u/ triad is retained and the quantity-sensitive trochaic cascade in the stress block applies (Watson's fn.9 caveat: iambic stress is attested in Oman — a leaf may override). (3) CONSERVATIVE CONSONANTISM AS THE INHERITANCE-ROOT DEFAULT: the interdental fricatives θ/ð/ðˤ are listed as FIRST candidates (ث ذ ظ) because most Peninsular varieties keep them (Najdi — Ingham 1994; Gulf — Holes 2006; Ṣanʿānī — Watson 2002:14-15; Omani — Al-Balushi 2016). NOT GROUP-WIDE — LEFT TO LEAVES (only documented here): (a) INTERDENTAL RETENTION cannot be asserted group-wide even though it is widespread, because urban HEJAZI (ar-SA-x-hejaz — Mecca/Medina/Jeddah koine) MERGES the interdentals to stops (ث→t, ذ→d, ظ→dˤ; Omar 1975, Abdoh 2010, cited on the leaf); interdental preservation is a Bedouin-axis feature (Watson 2002:9), so the fricative-first candidate lists are the conservative root default the retaining leaves rely on, and the merging leaf overrides. (b) QĀF ق: the voiced reflex [ɡ] is the majority Peninsular TENDENCY (Najdi — Ingham 1994:13-16 as cited on the leaf; Gulf — Holes 2006; Ṣanʿānī gāl 'he said' — Watson 2002:17) but is NOT universal: *q is maintained, with contextually determined allophones ([x, ġ, q]), in sedentary dialects of the west and south of the Peninsula (Watson 2002:17, after Behnstedt 1985:41), OMANI sedentary varieties keep [q] (Al-Balushi 2016:88, cited on ar-OM: ħaqqūti), a few western north-Yemeni dialects have uvular /G/, and learned/religious words keep /q/ even in ɡ-dialects. Hence ق lists BOTH [q, ɡ] at the root and each leaf picks its own order; no group value is claimed. (c) ǦĪM ج: /dʒ/ in most of the Peninsula, but /ɟ/ in parts of the Peninsula including northern-Yemeni dialects, /ɡ/ in the Taʿizz/Hugariyyah lowlands, and lenited /j/ in the Gulf, Hadramawt and Dhofar (Watson 2002:16) — the candidate list [dʒ, ɡ, j] is the within-group range with the Classical/MSA affricate first, not a group claim; leaves reorder. (d) VELAR AFFRICATION: Gulf k→[tʃ]/ɡ→[dʒ] and Najdi k→[ts]/ɡ→[dz] near front vowels are SUBGROUP features declared on ar-x-gulf and ar-SA-x-najd respectively; the k→[k, tʃ] allophone candidates here are the root default only. ORTHOGRAPHIC READING BASE: graphemes/positional_graphemes inherit from the modern MSA leaf `ar` (not Classical `arb`), because the modern spoken varieties are written in MSA orthography — the onset-glide digraphs يَ/وَ (/ja/,/wa/, not diphthongs), the hamza carriers أ/إ as bare /ʔ/ before an explicit harakah, word-final ي/و preferring the long-vowel reading, and pausal tāʾ marbūṭa. Genealogy is unchanged (parent/ancestors still point at Classical arb); only the data-inheritance base moves. INPUT CONTRACT: fully diacritised (tashkeel) Arabic.",
+  "quality": "research",
+  "script_type": "abjad",
+  "sources": [
+    {
+      "id": "watson2002",
+      "author": "Watson, J.C.E.",
+      "year": 2002,
+      "title": "The Phonology and Morphology of Arabic",
+      "publisher": "Oxford University Press",
+      "url": null,
+      "pages": "9, 14-17, 273-274, 279-281",
+      "notes": "Read (full PDF, printed folios verified against the running heads). Ch.10 'Emphasis' grounds the AR_PEN_EMPH_* rules: §10.4 p.273 (spread from the pharyngealized coronals may encompass the whole phonological word), p.274 ex.(6) rightward/leftward/bidirectional Cairene examples, §10.5 pp.279-281 Ṣanʿānī (pharyngealization right-to-left in the stem, labialization as the San'ani-specific enhancing feature). p.279 is the load-bearing caveat for keeping the rules adjacent-only: the domain of emphasis is not constant cross-dialectally — Abha rarely beyond the adjacent vowel (Younes 1991) vs Qatari whole-word and across boundaries (Bukshaisha 1985:217-19). p.17 (§2.1.9): *q maintained with [x, ġ, q] allophones in sedentary west/south Peninsula (Behnstedt 1985:41), voiced [ɡ] in Bedouin dialects and Ṣanʿānī (gāl vs kāl minimal contrast), uvular /G/ in a few western north-Yemeni dialects. p.16 (§2.1.6): ǧīm /dʒ/ ~ /ɟ/ ~ /ɡ/ (Taʿizz) ~ /j/ (Gulf, Hadramawt, Dhofar) within the Peninsula. pp.14-15: Ṣanʿānī retains the interdentals. p.9: East/West split (short-vowel retention, trochaic stress; fn.9 — iambic attested in Oman) and the Bedouin-axis status of voiced qāf and interdental preservation.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Arabic_phonology"
+    },
+    {
+      "id": "ingham1994",
+      "author": "Ingham, B.",
+      "year": 1994,
+      "title": "Najdi Arabic: Central Arabian",
+      "publisher": "John Benjamins (London Oriental and African Language Library 1)",
+      "url": null,
+      "pages": "13-16",
+      "notes": "Not obtained to a readable page on this pass (no open full text found); cited as reported — it is the primary Najdi reference already carried, with the same pages, by the ar-SA-x-najd leaf — for the Najdi voiced qāf reflex [ɡ] and the ts/dz velar affrication that this node deliberately does NOT declare group-wide (the affrication is the leaf's NAJD_AFFRIC_* rules)."
+    },
+    {
+      "id": "holes2006",
+      "author": "Holes, C.",
+      "year": 2006,
+      "title": "Gulf Arabic (survey article), in K. Versteegh (ed.), Encyclopedia of Arabic Language and Linguistics, vol. II",
+      "publisher": "Brill",
+      "url": null,
+      "pages": null,
+      "notes": "Not obtained to a readable page on this pass (Brill paywall); cited as reported for the Gulf-subgroup profile this node leaves to ar-x-gulf: *q → [ɡ], interdentals retained, k → [tʃ] affrication near front vowels. No rule on this node rests on it alone; the group-wide claims rest on the page-verified Watson (2002) citations."
+    },
+    {
+      "id": "albalushi2016",
+      "author": "Al-Balushi, R.",
+      "year": 2016,
+      "title": "Omani Arabic: More than One Dialect",
+      "publisher": "Macrolinguistics 4(4)",
+      "url": null,
+      "pages": "80-125",
+      "notes": "Carried from the ar-OM leaf (where p.88 is quoted: sedentary Omani speakers 'pronounce /q/ as /q/, as in ħaqqūti'); cited here as the load-bearing counter-example that the Peninsular qāf-voicing tendency is NOT universal, which is why ق keeps both [q, ɡ] candidates at the root instead of a group-wide [ɡ]."
+    },
+    {
+      "id": "omar1975",
+      "author": "Omar, M.K.",
+      "year": 1975,
+      "title": "Saudi Arabic: Urban Hijazi Dialect, Basic Course",
+      "publisher": "Foreign Service Institute",
+      "url": null,
+      "pages": null,
+      "notes": "Carried from the ar-SA-x-hejaz leaf; cited here as the counter-example that interdental retention is NOT statable group-wide: the urban Hejazi koine merges ث ذ ظ to stops, so the fricative-first candidates on this node are a root default, not a claim about every Peninsular variety."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Peninsular_Arabic",
+    "https://ar.wikipedia.org/wiki/%D9%84%D9%87%D8%AC%D8%A7%D8%AA_%D8%B4%D8%A8%D9%87_%D8%A7%D9%84%D8%AC%D8%B2%D9%8A%D8%B1%D8%A9_%D8%A7%D9%84%D8%B9%D8%B1%D8%A8%D9%8A%D8%A9"
+  ],
+  "timespan": {
+    "start_year": 1400,
+    "end_year": null
+  },
+  "glottolog_code": "arab1393",
+  "iso639_3": "ara",
+  "allophone_rules": [
+    {
+      "id": "AR_PEN_EMPH_BACK_A_AFTER",
+      "phonemes": [
+        "a"
+      ],
+      "surface": "ɑ",
+      "preceded_by_phoneme": [
+        "tˤ",
+        "dˤ",
+        "sˤ",
+        "ðˤ",
+        "zˤ"
+      ],
+      "notes": "Emphasis (pharyngealization) spreading: short /a/ backs to [ɑ] when it follows an emphatic consonant /tˤ dˤ sˤ ðˤ (zˤ)/. Watson 2002, The Phonology and Morphology of Arabic (OUP), ch. 'Emphasis', pp. 267-286: pharyngealization spreads bidirectionally within the phonological word, backing low vowels. Shared Peninsular feature; inherited by Hejazi, Najdi, Gulf, Yemeni and Omani via graphemes_base/OVERLAY_BY_ID."
+    },
+    {
+      "id": "AR_PEN_EMPH_BACK_A_BEFORE",
+      "phonemes": [
+        "a"
+      ],
+      "surface": "ɑ",
+      "followed_by_phoneme": [
+        "tˤ",
+        "dˤ",
+        "sˤ",
+        "ðˤ",
+        "zˤ"
+      ],
+      "notes": "Emphasis spreading (leftward): short /a/ backs to [ɑ] before an adjacent emphatic consonant. Watson 2002, The Phonology and Morphology of Arabic (OUP), ch. 'Emphasis', pp. 267-286: pharyngealization spreads bidirectionally within the phonological word, backing low vowels. Shared Peninsular feature; inherited by Hejazi, Najdi, Gulf, Yemeni and Omani via graphemes_base/OVERLAY_BY_ID."
+    },
+    {
+      "id": "AR_PEN_EMPH_BACK_AA_AFTER",
+      "phonemes": [
+        "aː"
+      ],
+      "surface": "ɑː",
+      "preceded_by_phoneme": [
+        "tˤ",
+        "dˤ",
+        "sˤ",
+        "ðˤ",
+        "zˤ"
+      ],
+      "notes": "Emphasis spreading: long /aː/ backs to [ɑː] after an adjacent emphatic. Watson 2002, The Phonology and Morphology of Arabic (OUP), ch. 'Emphasis', pp. 267-286: pharyngealization spreads bidirectionally within the phonological word, backing low vowels. Shared Peninsular feature; inherited by Hejazi, Najdi, Gulf, Yemeni and Omani via graphemes_base/OVERLAY_BY_ID."
+    },
+    {
+      "id": "AR_PEN_EMPH_BACK_AA_BEFORE",
+      "phonemes": [
+        "aː"
+      ],
+      "surface": "ɑː",
+      "followed_by_phoneme": [
+        "tˤ",
+        "dˤ",
+        "sˤ",
+        "ðˤ",
+        "zˤ"
+      ],
+      "notes": "Emphasis spreading (leftward): long /aː/ backs to [ɑː] before an adjacent emphatic. Watson 2002, The Phonology and Morphology of Arabic (OUP), ch. 'Emphasis', pp. 267-286: pharyngealization spreads bidirectionally within the phonological word, backing low vowels. Shared Peninsular feature; inherited by Hejazi, Najdi, Gulf, Yemeni and Omani via graphemes_base/OVERLAY_BY_ID."
+    }
+  ],
+  "wikidata_qid": "Q15043573",
+  "location": {
+    "latitude": 20.423635,
+    "longitude": 45.762512,
+    "source": "glottolog",
+    "notes": "Glottolog's computed centroid for the Arabian Peninsula Arabic family — a summary of a whole clade's range, not a place anyone speaks."
+  },
+  "optional_marks": [
+    "ً",
+    "ٌ",
+    "ٍ",
+    "َ",
+    "ُ",
+    "ِ",
+    "ّ",
+    "ْ",
+    "ٰ",
+    "ٓ"
+  ],
+  "stress": {
+    "default_position": -3,
+    "quantity_sensitive": true,
+    "superheavy_final_attracts": true,
+    "max_onset": 1,
+    "stress_mark": "ˈ",
+    "notes": "Arabic stress is QUANTITY-SENSITIVE: it falls on a syllable because that syllable is heavy, not because of any orthographic ending, so no ending table can express it. The cascade (Ryding, A Reference Grammar of MSA, CUP 2005, §2.3; Watson, The Phonology and Morphology of Arabic, OUP 2002, ch.3): a superheavy final syllable (CVːC/CVCC) takes the stress (kiˈtaːb); otherwise a heavy penult (CVː/CVC) does (muˈdarris); otherwise the antepenult (ˈmadrasa). max_onset=1 because Arabic onsets are obligatory and hold exactly one consonant — a medial cluster splits, closing the preceding syllable, and that boundary is what makes the penult of mudarris heavy. INPUT CONTRACT: weight is only recoverable from a complete transcription, so this requires diacritized input; an undiacritized skeleton has no vowels to weigh. The registered wikipron gold carries no stress marks, but the benchmark strips stress from both sides by default, so this costs no PER. Prosodic clitics: monosyllabic function words (negator maː, prepositions fiː/min/ʕan/ʕa/li/bi, vocative jaː, copula-negator muː/miʃ, conditional law/loː, wa-proclitic combinations) attach to a host and fall inside the host's stress domain, so they carry no word stress (Watson 2002, The Phonology and Morphology of Arabic, OUP, ch.3). Pan-Arabic class; the per-lect form list reflects the function words attested in this lect. Orthographic test — a clitic homograph (e.g. verb yā 'came') is destressed in every occurrence.",
+    "cliticless_words": [
+      "فِي",
+      "مَا",
+      "مُو",
+      "مِن",
+      "يَا"
+    ]
+  }
+}

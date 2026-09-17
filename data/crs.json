@@ -1,0 +1,316 @@
+{
+  "code": "crs",
+  "name": "Seychellois Creole",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "e": [
+      "e"
+    ],
+    "ɛ": [
+      "ɛ"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "o"
+    ],
+    "ɔ": [
+      "ɔ"
+    ],
+    "ou": [
+      "u"
+    ],
+    "b": [
+      "b"
+    ],
+    "ch": [
+      "ʃ"
+    ],
+    "d": [
+      "d"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "h": [
+      "h"
+    ],
+    "j": [
+      "ʒ"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ng": [
+      "ŋ"
+    ],
+    "ny": [
+      "ɲ"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "ɣ"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "v": [
+      "v"
+    ],
+    "w": [
+      "w"
+    ],
+    "y": [
+      "j"
+    ],
+    "z": [
+      "z"
+    ]
+  },
+  "allophones": {
+    "a": [
+      "a"
+    ],
+    "ã": [
+      "ã"
+    ],
+    "e": [
+      "e"
+    ],
+    "ɛ": [
+      "ɛ"
+    ],
+    "ɛ̃": [
+      "ɛ̃"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "o"
+    ],
+    "ɔ": [
+      "ɔ"
+    ],
+    "ɔ̃": [
+      "ɔ̃"
+    ],
+    "u": [
+      "u"
+    ],
+    "b": [
+      "b"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "d": [
+      "d"
+    ],
+    "f": [
+      "f"
+    ],
+    "ɡ": [
+      "ɡ"
+    ],
+    "h": [
+      "h"
+    ],
+    "ʒ": [
+      "ʒ"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ŋ": [
+      "ŋ"
+    ],
+    "ɲ": [
+      "ɲ"
+    ],
+    "p": [
+      "p"
+    ],
+    "ɣ": [
+      "ɣ"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "v": [
+      "v"
+    ],
+    "w": [
+      "w"
+    ],
+    "j": [
+      "j"
+    ],
+    "z": [
+      "z"
+    ]
+  },
+  "notes": "Seychellois Creole (Kreol Seselwa), French-lexifier creole of the Seychelles, official alongside English and French since 1981 when the government's national orthography commission (following Bollée's proposals) standardised the current strictly phonemic spelling, later promoted by Lenstiti Kreol (Michaelis & Rosalie, APiCS ch. 56). ⟨ou⟩ = /u/, ⟨r⟩ = /ɣ/, ⟨ng⟩ = /ŋ/, ⟨y⟩ = /j/, mirroring the same French-creole conventions as Haitian Creole's IPN orthography (ht.json). Nasalisation is written by a following ⟨n⟩ after the nasal vowel, chiefly where contrastive, and is handled here the same way as Haitian's ⟨an en on⟩: predictable from a following coda nasal, not a separate grapheme. Ten oral vowels are described in the literature (length is not written); this spec keeps the seven-vowel inventory that the orthography actually distinguishes in writing (a e ɛ i o ɔ u) since vowel length is not spelled. Besides the French lexifier, APiCS ch. 56 documents an East African Bantu substrate (~35 lexical items, e.g. Swahili-derived 'toto' 'child') and a smaller Malagasy substrate (~25 items, e.g. 'kelkel' 'armpit') carried over from Mauritius, which supplied the settlers who founded Seychelles in 1770; both are wired as `ancestors` contact roles below.",
+  "iso639_3": "crs",
+  "glottolog_code": "sese1246",
+  "wikidata_qid": "Q34015",
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Seychellois_Creole"
+  ],
+  "urls": [
+    "https://glottolog.org/resource/languoid/id/sese1246",
+    "https://apics-online.info/surveys/56",
+    "https://apics-online.info/languages/56"
+  ],
+  "sources": [
+    {
+      "id": "michaelis_rosalie_apics56",
+      "author": "Michaelis, Susanne Maria & Rosalie, Marcel",
+      "year": 2013,
+      "title": "Seychelles Creole structure dataset (survey chapter 56)",
+      "publisher": "In: Michaelis, S.M. et al. (eds.), The Atlas of Pidgin and Creole Language Structures (APiCS), Oxford University Press",
+      "url": "https://apics-online.info/surveys/56",
+      "pages": null,
+      "notes": "Vowel/consonant inventory, orthography conventions (ou=/u/, r=/ɣ/, ng=/ŋ/, y=/j/), stress."
+    },
+    {
+      "id": "bollee1977",
+      "author": "Bollée, Annegret",
+      "year": 1977,
+      "title": "Le créole français des Seychelles: Esquisse d'une grammaire, textes, vocabulaire",
+      "publisher": "Niemeyer",
+      "url": null,
+      "pages": null,
+      "notes": "Basis of the 1981 official orthography."
+    },
+    {
+      "id": "seychellois_creole_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Seychellois Creole",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Seychellois_Creole",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Seychellois_Creole",
+      "pages": null,
+      "notes": "History and status; orthography standardisation in 1981."
+    }
+  ],
+  "timespan": {
+    "start_year": 1770,
+    "end_year": null
+  },
+  "location": {
+    "latitude": -4.6796,
+    "longitude": 55.492,
+    "source": "glottolog",
+    "notes": "Victoria, Mahé, Seychelles — Glottolog's representative point for Seychellois Creole."
+  },
+  "allophone_rules": [
+    {
+      "id": "CRS_NASAL_a",
+      "phonemes": [
+        "a"
+      ],
+      "surface": "ã",
+      "followed_by": "coda_nasal",
+      "notes": "Vowel nasalises before a CODA nasal, written with a following ⟨n⟩; an onset nasal leaves it oral. Same pattern as Haitian Creole (ht.json)."
+    },
+    {
+      "id": "CRS_NASAL_e",
+      "phonemes": [
+        "e"
+      ],
+      "surface": "ɛ̃",
+      "followed_by": "coda_nasal",
+      "notes": "Vowel nasalises before a CODA nasal, merging with /ɛ/'s nasal counterpart as in French-lexifier creoles generally."
+    },
+    {
+      "id": "CRS_NASAL_o",
+      "phonemes": [
+        "o"
+      ],
+      "surface": "ɔ̃",
+      "followed_by": "coda_nasal",
+      "notes": "Vowel nasalises before a CODA nasal."
+    },
+    {
+      "id": "CRS_NASAL_ABSORB",
+      "phonemes": [
+        "n",
+        "m"
+      ],
+      "surface": "",
+      "syllable_position": "coda",
+      "preceded_by": "vowel",
+      "notes": "The coda nasal that triggered vowel nasalisation is absorbed into the nasal vowel; keyed on the nasal vowel so it cannot bleed the rule that makes it."
+    },
+    {
+      "id": "FR_E_CLOSED_CLUSTER",
+      "phonemes": [],
+      "surface": "",
+      "notes": "Disabled inherited French closed-syllable e-rule: Seselwa has no /ə/ — French e-caduc merged into /e/ in the creole (Corne 1977), so there is no schwa for the rule to restore to [ɛ]."
+    },
+    {
+      "id": "FR_E_CLOSED_FINAL",
+      "phonemes": [],
+      "surface": "",
+      "notes": "Disabled inherited French closed-syllable e-rule: no /ə/ in Seselwa (Corne 1977)."
+    }
+  ],
+  "parent": "fr-FR",
+  "ancestors": [
+    {
+      "code": "fr-FR",
+      "role": "lexifier",
+      "weight": 0.85,
+      "notes": "French lexifier, formed from 18th-century colonial French with the settlement of Seychelles from 1770. Michaelis & Rosalie, APiCS ch. 56."
+    },
+    {
+      "code": "x-clade-atla1278",
+      "role": "substrate",
+      "weight": 0.1,
+      "notes": "East African Bantu substrate (Swahili, Makua, Yao, Sukuma/Nyamwezi and neighbours) via enslaved people brought to Seychelles/Mauritius; APiCS ch. 56 counts c. 35 Bantu-origin lexical items (e.g. 'toto' 'child' < Swahili)."
+    },
+    {
+      "code": "mg",
+      "role": "substrate",
+      "weight": 0.05,
+      "notes": "Malagasy substrate carried over from Mauritius, where Malagasy-speaking slaves were the majority of the enslaved population through the early-to-mid 18th century before Seychelles was settled from Mauritius in 1770; APiCS ch. 56 lists c. 25 Malagasy-origin loanwords (e.g. 'kelkel' 'armpit', 'kalou' 'pestle')."
+    }
+  ]
+}

@@ -1,0 +1,189 @@
+{
+  "code": "got",
+  "name": "Gothic",
+  "script": "Gothic",
+  "parent": "x-clade-east2805",
+  "notes": "Gothic (4th c. CE; Wulfila's Bible, Codex Argenteus). East Germanic, the earliest well-attested Germanic language; Visigothic kingdom in Iberia ~470-711 CE left substrate loanwords in Ibero-Romance (guerra, guardar, ropa, yelmo). INPUT CONTRACT: native Gothic-script text (Unicode block U+10330..U+1034A, NFC) — NOT the Latin transliteration (a, b, g, þ, ƕ …). The Gothic alphabet is an ALPHABET built by Wulfila from Greek, Latin and runic models. Digraphs 𐌰𐌹 ⟨ai⟩, 𐌰𐌿 ⟨au⟩, 𐌴𐌹 ⟨ei⟩, 𐌹𐌿 ⟨iu⟩ are single vowel/diphthong graphemes and are keyed as multigraphs. 𐌲 ⟨g⟩ is [ŋ] before 𐌲/𐌺/𐌵, keyed as the multigraphs 𐌲𐌲, 𐌲𐌺, 𐌲𐌵. Voiced fricatives [β ð ɣ] are positional realisations of /b d ɡ/. Conservative Germanic: no High German consonant shift; labiovelars 𐌵 /kʷ/ and 𐍈 /ʍ/. The two numeral-only signs 𐍁 (90) and 𐍊 (900) carry no phonetic value and are deliberately left out of the map.",
+  "sources": [
+    {
+      "id": "lambdin2006",
+      "author": "Lambdin, T.O.",
+      "year": 2006,
+      "title": "An Introduction to the Gothic Language",
+      "publisher": "Wipf & Stock",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "braune_heidermanns2004",
+      "author": "Braune, W. & Heidermanns, F.",
+      "year": 2004,
+      "title": "Gotische Grammatik (20th ed.)",
+      "publisher": "Niemeyer",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "fortson2010",
+      "author": "Fortson, B.W.",
+      "year": 2010,
+      "title": "Indo-European Language and Culture: An Introduction",
+      "publisher": "Blackwell",
+      "url": null,
+      "pages": null,
+      "notes": null,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Indo-European_languages"
+    },
+    {
+      "id": "gothic_alphabet_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Gothic alphabet",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Gothic_alphabet",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Gothic_alphabet",
+      "pages": null,
+      "notes": "Letter-by-letter table: Gothic character, transliteration and phonetic value; 𐍁/𐍊 numeral-only."
+    },
+    {
+      "id": "gothic_language_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Gothic language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Gothic_language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Gothic_language",
+      "pages": null,
+      "notes": "Phonology: vowel digraphs ai/au/ei/iu, [β ð ɣ] allophony, /ʍ/ and /kʷ/."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Gothic_language",
+    "https://got.wikipedia.org/wiki/%F0%90%8C%B2%F0%90%8C%BF%F0%90%8D%84%F0%90%8D%82%F0%90%8C%B0%F0%90%8C%B6%F0%90%8C%B3%F0%90%8C%B0"
+  ],
+  "timespan": {
+    "start_year": 350,
+    "end_year": 600
+  },
+  "glottolog_code": "goth1244",
+  "iso639_3": "got",
+  "quality": "research",
+  "wikidata_qid": "Q35722",
+  "location": {
+    "latitude": 46.9304,
+    "longitude": 29.9786,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Gothic."
+  },
+  "graphemes": {
+    "𐌰𐌹": [
+      "ɛ",
+      "ɛː"
+    ],
+    "𐌰𐌿": [
+      "ɔ",
+      "ɔː"
+    ],
+    "𐌴𐌹": [
+      "iː"
+    ],
+    "𐌹𐌿": [
+      "iu"
+    ],
+    "𐌲𐌲": [
+      "ŋɡ"
+    ],
+    "𐌲𐌺": [
+      "ŋk"
+    ],
+    "𐌲𐌵": [
+      "ŋkʷ"
+    ],
+    "𐌰": [
+      "a",
+      "aː"
+    ],
+    "𐌱": [
+      "b",
+      "β"
+    ],
+    "𐌲": [
+      "ɡ",
+      "ɣ",
+      "x"
+    ],
+    "𐌳": [
+      "d",
+      "ð"
+    ],
+    "𐌴": [
+      "eː"
+    ],
+    "𐌵": [
+      "kʷ"
+    ],
+    "𐌶": [
+      "z"
+    ],
+    "𐌷": [
+      "h",
+      "x"
+    ],
+    "𐌸": [
+      "θ"
+    ],
+    "𐌹": [
+      "i"
+    ],
+    "𐌺": [
+      "k"
+    ],
+    "𐌻": [
+      "l"
+    ],
+    "𐌼": [
+      "m"
+    ],
+    "𐌽": [
+      "n"
+    ],
+    "𐌾": [
+      "j"
+    ],
+    "𐌿": [
+      "u",
+      "uː"
+    ],
+    "𐍀": [
+      "p"
+    ],
+    "𐍂": [
+      "r"
+    ],
+    "𐍃": [
+      "s"
+    ],
+    "𐍄": [
+      "t"
+    ],
+    "𐍅": [
+      "w"
+    ],
+    "𐍆": [
+      "ɸ",
+      "f"
+    ],
+    "𐍇": [
+      "k"
+    ],
+    "𐍈": [
+      "ʍ",
+      "hʷ"
+    ],
+    "𐍉": [
+      "oː"
+    ]
+  }
+}

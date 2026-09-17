@@ -1,0 +1,156 @@
+{
+  "code": "wlm",
+  "name": "Middle Welsh",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "ll": [
+      "ɬ"
+    ],
+    "rh": [
+      "r̥"
+    ],
+    "ch": [
+      "x"
+    ],
+    "dd": [
+      "ð"
+    ],
+    "ff": [
+      "f"
+    ],
+    "ng": [
+      "ŋ"
+    ],
+    "th": [
+      "θ"
+    ],
+    "ph": [
+      "f"
+    ],
+    "a": [
+      "a"
+    ],
+    "e": [
+      "e"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "o"
+    ],
+    "u": [
+      "ɨ"
+    ],
+    "w": [
+      "u"
+    ],
+    "y": [
+      "ə"
+    ],
+    "b": [
+      "b"
+    ],
+    "c": [
+      "k"
+    ],
+    "k": [
+      "k"
+    ],
+    "d": [
+      "d"
+    ],
+    "f": [
+      "v"
+    ],
+    "v": [
+      "v"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "h": [
+      "h"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ]
+  },
+  "parent": "x-clade-bryt1239",
+  "ancestors": [
+    {
+      "code": "x-clade-bryt1239",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Descent per Glottolog classification of Middle Welsh (midd1363)."
+    }
+  ],
+  "notes": "Research. Brittonic (Insular Celtic) medieval stage written in the Latin alphabet. Grapheme map covers the vowels a e i o u w y, the characteristic digraphs ll [ɬ], rh, dd [ð], ff, ch, th, ng, and the plain consonants; Middle Welsh spelling was not standardised and freely used k and v where the modern language writes c and f. Vowel length, the two phonetic values of y, and consonant mutation triggered by context are not recoverable from the spelling and are left unencoded, raising the PER floor honestly. Grapheme table checked against Evans (1964): no discrepancy found.",
+  "iso639_3": "wlm",
+  "glottolog_code": null,
+  "sources": [
+    {
+      "id": "wlm_glottolog",
+      "author": "Hammarström, H. et al. (Glottolog 5.0)",
+      "year": 2024,
+      "title": "Glottolog: Middle Welsh (midd1363)",
+      "publisher": "Max Planck Institute for Evolutionary Anthropology",
+      "url": "https://glottolog.org/resource/languoid/id/midd1363",
+      "pages": null,
+      "notes": "Classification reference for a skeleton-tier entry.",
+      "wikipedia_url": null
+    },
+    {
+      "id": "evans1964",
+      "author": "Evans, D. Simon",
+      "year": 1964,
+      "title": "A Grammar of Middle Welsh",
+      "publisher": "Dublin Institute for Advanced Studies",
+      "url": null,
+      "pages": null,
+      "notes": "Standard reference grammar of Middle Welsh; used to verify the grapheme table and to source the fixed penultimate stress rule (continuing the Brittonic pattern also found in Modern Welsh) encoded in this spec's `stress` block.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Middle_Welsh"
+    },
+    {
+      "id": "wlm_wikipedia",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Middle Welsh (Wikipedia)",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Middle_Welsh",
+      "pages": null,
+      "notes": "Orthography/phonology reference for a skeleton-tier entry.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Middle_Welsh"
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Middle_Welsh"
+  ],
+  "stress": {
+    "default_position": -2,
+    "quantity_sensitive": false,
+    "stress_mark": "ˈ",
+    "source": "rules",
+    "notes": "Middle Welsh has the fixed penultimate word stress characteristic of Brittonic (continued unchanged into Modern Welsh; Evans 1964, A Grammar of Middle Welsh). `default_position=-2` models this directly."
+  }
+}

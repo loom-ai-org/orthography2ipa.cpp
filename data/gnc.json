@@ -1,0 +1,51 @@
+{
+  "code": "gnc",
+  "name": "Guanche",
+  "script": "Latin",
+  "script_type": "reconstruction",
+  "quality": "stub",
+  "graphemes": {},
+  "allophones": {},
+  "parent": "ber",
+  "ancestors": [
+    {
+      "code": "ber",
+      "role": "parent",
+      "weight": 0.6,
+      "notes": "Wikipedia (Guanche language): most linguists propose Guanche was likely a Berber language, or at least genealogically related to Berber, within Afroasiatic; the affiliation is a hypothesis, not a settled classification, hence the reduced weight."
+    }
+  ],
+  "notes": "STUB. Guanche, the extinct language (or dialect continuum) of the pre-Hispanic Guanche people of the Canary Islands, spoken until the 16th-17th century when the population was assimilated following the Spanish conquest. No native written corpus survives at any scale sufficient to reconstruct an orthography or a reliable phoneme inventory: what is known comes from a handful of words and phrases recorded by early modern geographers/travellers, place names, and Guanche lexical survivals in Canary Islands Spanish, all transmitted through ad hoc Spanish-based transcriptions of varying reliability rather than a native script or a standardised transliteration. There is therefore no citable grapheme-to-IPA mapping to assert; graphemes is left empty rather than inventing a Latin placeholder inventory, per the hard rule against fabricating an orthography for a poorly-attested language. The Berber-family hypothesis (weak but the mainstream position) is recorded as the sole ancestry link so this stub has a real parent rather than a graph hole.",
+  "iso639_3": "gnc",
+  "glottolog_code": "guan1277",
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Guanche_language"
+  ],
+  "urls": [
+    "https://www.ethnologue.com/language/gnc/",
+    "https://glottolog.org/resource/languoid/id/guan1277"
+  ],
+  "sources": [
+    {
+      "id": "guanche_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Guanche language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Guanche_language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Guanche_language",
+      "pages": null,
+      "notes": "Consulted this session: confirms extinction date (16th-17th c.), the Berber-affiliation hypothesis, and that attestation is limited to recorded words/phrases, place names, and lexical survivals in Canary Islands Spanish -- no basis for a grapheme table."
+    }
+  ],
+  "timespan": {
+    "start_year": -500,
+    "end_year": 1650
+  },
+  "location": {
+    "latitude": 28.29,
+    "longitude": -16.63,
+    "source": "glottolog",
+    "notes": "Canary Islands, Spain."
+  }
+}

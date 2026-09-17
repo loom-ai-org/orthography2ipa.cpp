@@ -1,0 +1,70 @@
+{
+  "code": "hbo",
+  "name": "Ancient Hebrew (Biblical Hebrew)",
+  "script": "Hebrew",
+  "script_type": "abjad",
+  "quality": "stub",
+  "graphemes": {},
+  "allophones": {},
+  "parent": "sem-x-central",
+  "ancestors": [
+    {
+      "code": "sem-x-central",
+      "role": "parent",
+      "weight": 0.85,
+      "notes": "Canaanite (Northwest Semitic), a branch of Central Semitic; ancestor of the whole Hebrew lineage, matching he.json's own placement."
+    },
+    {
+      "code": "phn",
+      "role": "adstrate",
+      "weight": 0.06,
+      "notes": "Phoenician/Canaanite areal contact; the Hebrew and Phoenician consonant inventories and the paleo-Hebrew script both descend from the same Canaanite alphabetic tradition."
+    }
+  ],
+  "notes": "STUB. Ancient Hebrew (ISO 639-3 hbo) is the umbrella code for pre-Modern varieties of Hebrew: Biblical/Classical Hebrew (the language of the Hebrew Bible, ~10th c. BCE - 2nd c. CE) and Mishnaic Hebrew. The Masoretic Text's TIBERIAN VOCALIZATION (~10th c. CE) is the best-attested phonological witness: it marks 22 consonant letters plus a system of vowel points distinguishing (per the secondary literature surveyed this session) seven vowel qualities with length and quality contrasts collapsed in Modern Hebrew (he.json), gemination via dagesh, and cantillation/stress. This is NOT the same phonology as he.json (Modern Israeli Hebrew): Tiberian Hebrew preserves distinctions Modern Hebrew merged (e.g. begadkefat spirantisation on all six stops rather than three, pharyngeals ħ/ʕ kept distinct from χ/ʔ, vowel quantity). Building an honest Tiberian grapheme table requires reconciling the Masoretic pointing conventions against a specific scholarly reconstruction (e.g. Khan's 'The Tiberian Pronunciation Tradition of Biblical Hebrew'), which was not fetched with sufficient confidence this session to assert a cited letter-by-letter mapping distinct from he.json's Modern-Hebrew niqqud table; rather than copy he.json's Modern values under a false Ancient-Hebrew label (they encode different, later mergers), this spec is left as a metadata-only stub per the 'never fabricate' rule. graphemes is intentionally empty pending a dedicated Tiberian-reconstruction pass.",
+  "iso639_3": "hbo",
+  "glottolog_code": "anci1244",
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Ancient_Hebrew_language",
+    "https://en.wikipedia.org/wiki/Biblical_Hebrew",
+    "https://en.wikipedia.org/wiki/Tiberian_vocalization",
+    "https://en.wikipedia.org/wiki/Tiberian_Hebrew"
+  ],
+  "urls": [
+    "https://iso639-3.sil.org/code/hbo",
+    "https://glottolog.org/resource/languoid/id/anci1244"
+  ],
+  "sources": [
+    {
+      "id": "khan_tiberian",
+      "author": "Khan, Geoffrey",
+      "year": 2020,
+      "title": "The Tiberian Pronunciation Tradition of Biblical Hebrew",
+      "publisher": "Open Book Publishers / University of Cambridge",
+      "url": null,
+      "pages": null,
+      "notes": "Standard modern reference for the Tiberian reading tradition; named as the reference work to build a future non-stub hbo grapheme table against. Not fetched in full this session; only secondary summaries (Wikipedia's Tiberian vocalization article) were consulted."
+    },
+    {
+      "id": "tiberian_vocalization_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Tiberian vocalization",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Tiberian_vocalization",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Tiberian_vocalization",
+      "pages": null,
+      "notes": "Consulted this session: confirms the 22-consonant letter inventory, the seven Tiberian vowel qualities with length contrasts, and the dagesh/mappiq/raphe apparatus, none of which is copied into an unsourced grapheme table here."
+    }
+  ],
+  "timespan": {
+    "start_year": -1000,
+    "end_year": 200
+  },
+  "location": {
+    "latitude": 31.77,
+    "longitude": 35.22,
+    "source": "glottolog",
+    "notes": "Jerusalem / ancient Judah, the core Biblical Hebrew-speaking area."
+  }
+}

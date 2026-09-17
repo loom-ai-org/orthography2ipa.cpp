@@ -1,0 +1,155 @@
+{
+  "code": "es-EC-x-andino",
+  "name": "Andean Ecuadorian Spanish",
+  "script": "Latin",
+  "graphemes_base": "es-ES",
+  "graphemes": {
+    "c": [
+      "k",
+      "s"
+    ],
+    "z": [
+      "s"
+    ],
+    "ll": [
+      "ʒ"
+    ],
+    "y": [
+      "ʒ",
+      "i"
+    ]
+  },
+  "allophones_base": "es-ES",
+  "positional_graphemes_base": "es-ES",
+  "positional_graphemes": {
+    "c": {
+      "before_e": [
+        "s"
+      ],
+      "before_i": [
+        "s"
+      ]
+    },
+    "y": {
+      "before_vowel": [
+        "ʒ"
+      ],
+      "default": [
+        "i"
+      ]
+    },
+    "hia": {
+      "word_initial": [
+        "ja"
+      ],
+      "default": [
+        "ja"
+      ]
+    },
+    "hiá": {
+      "word_initial": [
+        "ja"
+      ],
+      "default": [
+        "ja"
+      ]
+    },
+    "hie": {
+      "word_initial": [
+        "je"
+      ],
+      "default": [
+        "je"
+      ]
+    },
+    "hié": {
+      "word_initial": [
+        "je"
+      ],
+      "default": [
+        "je"
+      ]
+    },
+    "hio": {
+      "word_initial": [
+        "jo"
+      ],
+      "default": [
+        "jo"
+      ]
+    },
+    "hió": {
+      "word_initial": [
+        "jo"
+      ],
+      "default": [
+        "jo"
+      ]
+    }
+  },
+  "parent": "es-EC",
+  "ancestors": [
+    {
+      "code": "es-EC",
+      "role": "parent",
+      "weight": 0.85,
+      "notes": "Immediate national variety (parent dialect)."
+    },
+    {
+      "code": "es-419",
+      "role": "ancestor",
+      "weight": 0.55,
+      "notes": "General Latin American Spanish (koine) — seseo/yeismo baseline shared by all LatAm varieties (Lipski 1994)."
+    },
+    {
+      "code": "qu",
+      "role": "adstrate",
+      "weight": 0.1,
+      "notes": "Quechua indigenous adstrate (regional contact influence; see stub qu.json)."
+    }
+  ],
+  "notes": "STRUCTURAL STUB. Andean (sierra / highland, Quito) Ecuadorian Spanish — Lipski's (1994) Andean zone; strong Quichua (Quechua) adstrate. Only the pan-Latin-American baseline (seseo: c/z->/s/, yeismo: ll->/ʝ/; Lipski 1994) is modelled here; the dialect-specific phonology is deliberately not yet described (stub tier). Ancestry: es-ES-x-medieval -> es-ES -> es-419 -> es-EC -> es-EC-x-andino, with the indigenous adstrate(s) Quechua. Word-initial ⟨hie-, hia-, hio-⟩ keeps the GLIDE [j] rather than the es-ES parent's palatal obstruent, following the one rehilada variety for which this is documented: coloma2018 p.244 (cited by es-AR) prints hielo [ˈjelo] beside llama [ˈʃama], so the ⟨hi⟩ words do not join the merger there. EXTENDED BY ANALOGY to this lect because it is rehilada on the same axis; it is not separately attested here and NEEDS A NATIVE CHECK.",
+  "quality": "stub",
+  "script_type": "alphabet",
+  "iso639_3": "spa",
+  "glottolog_code": null,
+  "timespan": {
+    "start_year": 1600,
+    "end_year": null
+  },
+  "sources": [
+    {
+      "id": "lipski_overview",
+      "author": "Lipski, John M.",
+      "year": 2011,
+      "title": "Geographical and Social Varieties of Spanish: An Overview",
+      "publisher": "In J.I. Hualde, A. Olarrea & E. O'Rourke (eds.), The Handbook of Hispanic Linguistics, Wiley-Blackwell",
+      "url": "https://johnlipski.github.io/geo.pdf",
+      "pages": "pp. 1-26",
+      "notes": "READ (geo.pdf). Reproduces the Lipski (1994) geographical dialect-zone classification of Latin American Spanish (list (2)): Mexican/SW-US; Caribbean; Guatemala-Yucatan-Costa Rica; El Salvador-Honduras-Nicaragua; interior Colombia + highland Venezuela; Pacific coast Colombia/Ecuador/Peru; Andean (Ecuador/Peru/Bolivia/NW-Argentina/NE-Chile); Chile; Paraguay/NE-Argentina/E-Bolivia; Argentina/Uruguay. Used here to enumerate the regional zones; no phonology quoted."
+    },
+    {
+      "id": "lipski1994",
+      "author": "Lipski, John M.",
+      "year": 1994,
+      "title": "Latin American Spanish",
+      "publisher": "Longman Linguistics Library, Longman",
+      "url": null,
+      "pages": null,
+      "notes": "The comprehensive dialect survey underlying the zone classification (cited via the author's own overview, geo.pdf, which was read)."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Spanish_dialects_and_varieties",
+    "https://es.wikipedia.org/wiki/Espa%C3%B1ol_andino",
+    "https://en.wikipedia.org/wiki/Andean_Spanish",
+    "https://es.wikipedia.org/wiki/Espa%C3%B1ol_ecuatoriano",
+    "https://en.wikipedia.org/wiki/Ecuadorian_Spanish"
+  ],
+  "location": {
+    "latitude": -0.22,
+    "longitude": -78.5125,
+    "source": "wikidata",
+    "notes": "Quito — the centre of the Ecuadorian sierra. [Wikidata Q2900 P625]"
+  }
+}

@@ -1,0 +1,310 @@
+{
+  "code": "ar-x-maghrebi",
+  "name": "Proto-Maghrebi Arabic",
+  "script": "Arabic",
+  "graphemes_base": "ar",
+  "allophones_base": "arb",
+  "positional_graphemes_base": "ar",
+  "graphemes": {
+    "ث": [
+      "t",
+      "s"
+    ],
+    "ذ": [
+      "d"
+    ],
+    "ظ": [
+      "dˤ"
+    ],
+    "ض": [
+      "dˤ"
+    ],
+    "ج": [
+      "ʒ",
+      "dʒ"
+    ],
+    "ق": [
+      "q"
+    ],
+    "پ": [
+      "p"
+    ],
+    "ڤ": [
+      "v"
+    ],
+    "الثث": [
+      "att",
+      "ass"
+    ],
+    "اَلثث": [
+      "att",
+      "ass"
+    ],
+    "لِلثث": [
+      "litt",
+      "liss"
+    ],
+    "وَالثث": [
+      "watt",
+      "wass"
+    ],
+    "فَالثث": [
+      "fatt",
+      "fass"
+    ],
+    "بِالثث": [
+      "bitt",
+      "biss"
+    ],
+    "كَالثث": [
+      "katt",
+      "kass"
+    ],
+    "الذذ": [
+      "add"
+    ],
+    "اَلذذ": [
+      "add"
+    ],
+    "لِلذذ": [
+      "lidd"
+    ],
+    "وَالذذ": [
+      "wadd"
+    ],
+    "فَالذذ": [
+      "fadd"
+    ],
+    "بِالذذ": [
+      "bidd"
+    ],
+    "كَالذذ": [
+      "kadd"
+    ],
+    "الضض": [
+      "adˤdˤ"
+    ],
+    "اَلضض": [
+      "adˤdˤ"
+    ],
+    "لِلضض": [
+      "lidˤdˤ"
+    ],
+    "وَالضض": [
+      "wadˤdˤ"
+    ],
+    "فَالضض": [
+      "fadˤdˤ"
+    ],
+    "بِالضض": [
+      "bidˤdˤ"
+    ],
+    "كَالضض": [
+      "kadˤdˤ"
+    ],
+    "الظظ": [
+      "adˤdˤ"
+    ],
+    "اَلظظ": [
+      "adˤdˤ"
+    ],
+    "لِلظظ": [
+      "lidˤdˤ"
+    ],
+    "وَالظظ": [
+      "wadˤdˤ"
+    ],
+    "فَالظظ": [
+      "fadˤdˤ"
+    ],
+    "بِالظظ": [
+      "bidˤdˤ"
+    ],
+    "كَالظظ": [
+      "kadˤdˤ"
+    ],
+    "اِلثث": [
+      "itt",
+      "iss"
+    ],
+    "اِلذذ": [
+      "idd"
+    ],
+    "اِلضض": [
+      "idˤdˤ"
+    ],
+    "اِلظظ": [
+      "idˤdˤ"
+    ],
+    "وِالثث": [
+      "witt",
+      "wiss"
+    ],
+    "وِالذذ": [
+      "widd"
+    ],
+    "وِالضض": [
+      "widˤdˤ"
+    ],
+    "وِالظظ": [
+      "widˤdˤ"
+    ]
+  },
+  "allophones": {
+    "ɮˤ": [
+      "dˤ"
+    ],
+    "ðˤ": [
+      "dˤ"
+    ],
+    "θ": [
+      "t",
+      "s",
+      "θ"
+    ],
+    "ð": [
+      "d"
+    ],
+    "dʒ": [
+      "ʒ",
+      "dʒ"
+    ],
+    "a": [
+      "a",
+      ""
+    ],
+    "i": [
+      "i",
+      ""
+    ],
+    "u": [
+      "u",
+      ""
+    ],
+    "p": [
+      "p"
+    ],
+    "v": [
+      "v"
+    ]
+  },
+  "parent": "arb",
+  "ancestors": [
+    {
+      "code": "arb",
+      "role": "parent",
+      "weight": 0.85,
+      "notes": "Descent from Classical Arabic via 7th–8th c. expansion"
+    }
+  ],
+  "notes": "Proto-Maghrebi Arabic — GROUPING NODE (glue node) for Moroccan (ar-MA), Tunisian (ar-TN), Algerian (ar-DZ), Libyan (ar-LY) and Ḥassāniyya/Mauritanian (ar-MR) Arabic. It declares only what the dialectological literature treats as SHARED across the whole Maghrebi group, and serves as the data-inheritance root leaves build on; every reflex that splits *within* the group (qāf, interdentals, imāla strength) is documented here as leaf territory and is NOT asserted group-wide. GENUINELY GROUP-WIDE, MODELLED HERE: (1) SHORT-VOWEL COLLAPSE/SYNCOPE — the defining Maghrebi trait: Classical short vowels reduce to a single central schwa /ə/ or delete in weak metrical positions, yielding word-initial and medial consonant clusters (CCC legal), e.g. CA kataba → ktəb 'he wrote' (Watson 2002:13, Maghrebi smin vs Cairene simīn; the modelling is the allophones a/i/u → [ə]/Ø). (2) ǦĪM ج → /ʒ/, the voiced postalveolar FRICATIVE with no initial occlusive element — 'by far the most common reflex of Old Arabic *ǧ ... throughout Libya, Tunisia, Mauritania and Morocco' (Guerrero 2019:137ff; Watson 2002:16); the affricate /dʒ/ is kept as a secondary candidate for the pre-Hilali sedentary north-Algerian belt (Tlemcen, Algiers, Constantine) that retains it (Guerrero 2019). (3) SUN-LETTER (ʔidġām aš-šamsiyya) assimilation of the article ل to a following coronal is UNCHANGED from Classical/MSA and is inherited via the positional al-+coronal digraphs — Maghrebi vocalisation of the article differs but the assimilation itself is pan-Arabic, so no override is stated here. NOT GROUP-WIDE — LEFT TO LEAVES (only documented here): (a) QĀF ق: sedentary/pre-Hilali /q/ (Fès, Tlemcen, Tunis, Dellys — Souag 2005) vs Bedouin/Hilali /ɡ/ (Watson 2002:17); the two coexist even inside one country and are often lexically split, so no single group value is stated — leaves set their own (ar-MA lists q~ɡ, Ḥassāniyya/Libyan favour ɡ). The bare /q/ kept in the grapheme table is the inheritance-root default the sedentary leaves rely on, not a claim that the whole group is /q/. (b) INTERDENTALS ث ذ ظ: their MERGER to stops [t d dˤ] is a SEDENTARY isogloss, NOT a Maghrebi hallmark — Guerrero (2021, JAAL 13(2):288-308) shows interdental fricatives are retained (or were) across many first-layer/pre-Hilali dialects, and sedentary Dellys keeps θ ð ðˤ while having /q/ (Souag 2005); Bedouin/Hilali, Ḥassāniyya and much of Libyan retain them. The stop reflexes in the grapheme/allophone tables are the sedentary koiné default (what ar-MA/urban Tunis/Algiers do); interdental-retaining leaves override to restore the fricatives. (c) IMĀLA (fronting/raising of /aː/ toward [eː]/[ɛː], and final -a): a Maghrebi TENDENCY, strongest in pre-Hilali sedentary and Tunisian-Sahel varieties (contact feature — Mahdia, Sfax; Gibson) but weak or absent elsewhere, so it is a per-leaf reflex, not modelled at group level. SUBSTRATE: Berber (Amazigh) underlies the schwa reduction and the cluster phonotactics (encoded on leaves via the ber substrate ancestor). ORTHOGRAPHIC READING BASE: graphemes/positional_graphemes inherit from the modern MSA leaf `ar` (not Classical `arb`) because the modern spoken varieties are written in MSA orthography — the onset-glide digraphs يَ/وَ (/ja/,/wa/, not diphthongs), the hamza carriers أ/إ as bare /ʔ/ before an explicit harakah, word-final ي/و preferring the long-vowel reading, pausal tāʾ marbūṭa. Genealogy is unchanged (parent/ancestors point at Classical arb); only the data-inheritance base moves. INPUT CONTRACT: fully diacritised (tashkeel) Arabic; an undiacritised skeleton has no short vowels to reduce.",
+  "quality": "research",
+  "script_type": "abjad",
+  "sources": [
+    {
+      "id": "watson2002",
+      "author": "Watson, J.C.E.",
+      "year": 2002,
+      "title": "The Phonology and Morphology of Arabic",
+      "publisher": "Oxford University Press",
+      "url": null,
+      "pages": "13, 15-17",
+      "notes": "Read (full open-access PDF; printed pages). p.16: Maghribi jīm has no initial occlusive element, realized /ž/ [ʒ]. p.15: sedentary interdental→dental-stop merger. p.17: *q maintained (sedentary) vs /ɡ/ (Bedouin). p.13: unstressed-vowel deletion → initial clusters.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Arabic_phonology"
+    },
+    {
+      "id": "guerrero2019",
+      "author": "Guerrero, J.",
+      "year": 2019,
+      "title": "Reflexes of Old Arabic */ǧ/ in the Maghrebi Dialects",
+      "publisher": "Arabica 66(1-2): 137-169",
+      "url": "https://hal.science/hal-03516978",
+      "pages": "137-169",
+      "notes": "Read in full (open-access HAL preprint hal-03516978v1). Diachronic survey of Old Arabic *ǧ across the Maghreb. Finding (§2): the modern reflex is 'relatively quite uniform', two palato-alveolar reflexes /ž/ [ʒ] and /ǧ/ [dʒ] plus a marginal sibilant /z/. §2.2: 'The voiced alveo-palatal fricative /ž/ is by far the most common reflex of */ǧ/ ... spreads almost everywhere throughout Libya, Tunisia, Mauritania and Morocco'; for Algeria the affricate /ǧ/ obtains across the northern strip while /ž/ prevails elsewhere, and 'all Bedouin dialects in the Maghreb display /ž/ for */ǧ/'. §2.1: the affricate /ǧ/ [dʒ] is kept by the pre-Hilali sedentary dialects of northern Algeria (Tlemcen, Algiers, Cherchell, Ténès, Blida, Médéa, Constantine, Sétif, Msila) and survives in Moroccan Jebli pockets (northern Taza, Chefchaouen: ǧīr 'lime', naʕǧa 'sheep'). §3 documents the conditioned shifts kept off this node (sibilant harmony ž→z, ǧ→d dissimilation before a sibilant, ž→[ʃ] devoicing). Grounds the group-wide ج → /ʒ/ default with /dʒ/ as the secondary candidate; the harvested gold rows are its worked examples."
+    },
+    {
+      "id": "guerrero2021",
+      "author": "Guerrero, J.",
+      "year": 2021,
+      "title": "On Interdental Fricatives in the First-Layer Dialects of Maghrebi Arabic",
+      "publisher": "Brill's Journal of Afroasiatic Languages and Linguistics 13(2): 288-308",
+      "url": "https://shs.hal.science/hal-03465827",
+      "pages": "288-308",
+      "notes": "Read in full (open-access HAL preprint hal-03465827v1). Thesis (§1, conclusions §4): revisits and CHALLENGES the received view that absence of interdental fricatives and their merger with dental stops is a hallmark of pre-Hilali (first-layer) Maghrebi Arabic; 'if we make an inventory of the pre-Hilali varieties, we will find that many of them do (or did) have interdental consonants ... almost all Tunisian pre-Hilali dialects', and explicitly credits Souag (2005) for the point. The author retracts his own earlier claim that interdental loss is a distinguishing pre-Hilali feature. Cited here as the load-bearing evidence that interdental LOSS is NOT group-wide, so the merger is delegated to the sedentary leaves rather than asserted on this node."
+    },
+    {
+      "id": "souag2005",
+      "author": "Souag, L.",
+      "year": 2005,
+      "title": "Notes on the Algerian Arabic Dialect of Dellys",
+      "publisher": "Estudios de Dialectología Norteafricana y Andalusí 9: 151-180",
+      "url": "https://shs.hal.science/halshs-01376407",
+      "pages": "151-180",
+      "notes": "Primary text NOT obtained in full on this pass (HAL/SOAS PDFs behind an Anubis wall). Cited as reported via Guerrero 2021, which credits 'Souag 2005' for the observation that the Dellys dialect — a sedentary central-Algerian variety realising qāf as [q] — nevertheless RETAINS the Arabic interdentals /θ ð ðˤ/. This is the concrete counter-example to any pan-Maghrebi q→g or interdental-merger claim, and the reason qāf and the interdentals are left to the leaves rather than fixed on this node."
+    },
+    {
+      "id": "heath2002",
+      "author": "Heath, J.",
+      "year": 2002,
+      "title": "Jewish and Muslim Dialects of Moroccan Arabic",
+      "publisher": "Routledge Curzon",
+      "url": null,
+      "pages": null,
+      "notes": "Foundational Moroccan reference. Not obtained to a readable page on this pass; cited as reported (via secondary confirmation) for the /ǧ/ → /ž/ [ʒ] fricative realisation, the regressive sibilant harmony triggered by [ʒ] (z→ʒ, s→ʃ) and the schwa-reduction of short vowels — the sibilant-harmony and *ǧ→d dissimilation effects it documents are Moroccan/some-Algerian (leaf-level), which is itself why they are NOT modelled on this shared node."
+    },
+    {
+      "id": "marcais1977",
+      "author": "Marçais, Ph.",
+      "year": 1977,
+      "title": "Esquisse grammaticale de l'arabe maghrébin",
+      "publisher": "Librairie d'Amérique et d'Orient Adrien-Maisonneuve, Paris",
+      "url": null,
+      "pages": null,
+      "notes": "The classic differential grammar of Maghrebi Arabic. Not obtained in full on this pass; cited as the standard reference (as reported via Watson 2002 and Guerrero 2019/2021) for the pre-Hilali/Hilali (≈ sedentary/Bedouin) typology that underlies the qāf q~ɡ and interdental retention~merger isoglosses — i.e. the reason those reflexes are leaf-level rather than group-wide."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Maghrebi_Arabic",
+    "https://ar.wikipedia.org/wiki/%D9%84%D9%87%D8%AC%D8%A7%D8%AA_%D8%B9%D8%B1%D8%A8%D9%8A%D8%A9_%D9%85%D8%BA%D8%A7%D8%B1%D8%A8%D9%8A%D8%A9"
+  ],
+  "timespan": {
+    "start_year": 1000,
+    "end_year": null
+  },
+  "glottolog_code": "nort3191",
+  "iso639_3": "ara",
+  "wikidata_qid": "Q1194795",
+  "location": {
+    "latitude": 26.132563,
+    "longitude": 14.573491,
+    "source": "glottolog",
+    "notes": "Glottolog's computed centroid for the North African Arabic family — a summary of a whole clade's range, not a place anyone speaks."
+  },
+  "optional_marks": [
+    "ً",
+    "ٌ",
+    "ٍ",
+    "َ",
+    "ُ",
+    "ِ",
+    "ّ",
+    "ْ",
+    "ٰ",
+    "ٓ"
+  ],
+  "stress": {
+    "default_position": -3,
+    "quantity_sensitive": true,
+    "superheavy_final_attracts": true,
+    "max_onset": 1,
+    "stress_mark": "ˈ",
+    "notes": "Arabic stress is QUANTITY-SENSITIVE: it falls on a syllable because that syllable is heavy, not because of any orthographic ending, so no ending table can express it. The cascade (Ryding, A Reference Grammar of MSA, CUP 2005, §2.3; Watson, The Phonology and Morphology of Arabic, OUP 2002, ch.3): a superheavy final syllable (CVːC/CVCC) takes the stress (kiˈtaːb); otherwise a heavy penult (CVː/CVC) does (muˈdarris); otherwise the antepenult (ˈmadrasa). max_onset=1 because Arabic onsets are obligatory and hold exactly one consonant — a medial cluster splits, closing the preceding syllable, and that boundary is what makes the penult of mudarris heavy. INPUT CONTRACT: weight is only recoverable from a complete transcription, so this requires diacritized input; an undiacritized skeleton has no vowels to weigh. The registered wikipron gold carries no stress marks, but the benchmark strips stress from both sides by default, so this costs no PER. Prosodic clitics: monosyllabic function words (negator maː, prepositions fiː/min/ʕan/ʕa/li/bi, vocative jaː, copula-negator muː/miʃ, conditional law/loː, wa-proclitic combinations) attach to a host and fall inside the host's stress domain, so they carry no word stress (Watson 2002, The Phonology and Morphology of Arabic, OUP, ch.3). Pan-Arabic class; the per-lect form list reflects the function words attested in this lect. Orthographic test — a clitic homograph (e.g. verb yā 'came') is destressed in every occurrence.",
+    "cliticless_words": [
+      "عَ",
+      "فِي",
+      "كِي",
+      "مَا",
+      "مِن"
+    ]
+  }
+}

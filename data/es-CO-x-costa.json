@@ -1,0 +1,147 @@
+{
+  "code": "es-CO-x-costa",
+  "name": "Colombian Spanish (Coastal)",
+  "script": "Latin",
+  "graphemes_base": "es-ES",
+  "graphemes": {
+    "c": [
+      "k",
+      "s"
+    ],
+    "z": [
+      "s"
+    ],
+    "ll": [
+      "ʝ"
+    ]
+  },
+  "allophones_base": "es-ES",
+  "allophones": {
+    "d": [
+      "d",
+      "ð",
+      ""
+    ],
+    "s": [
+      "s",
+      "h",
+      ""
+    ],
+    "x": [
+      "h"
+    ],
+    "ʝ": [
+      "ʝ",
+      "ɟʝ"
+    ],
+    "n": [
+      "n",
+      "ŋ"
+    ],
+    "l": [
+      "l",
+      "ɾ",
+      "j"
+    ],
+    "ɾ": [
+      "ɾ",
+      "l"
+    ],
+    "r": [
+      "r"
+    ]
+  },
+  "positional_graphemes_base": "es-ES",
+  "positional_graphemes": {
+    "d": {
+      "intervocalic": [
+        "",
+        "ð"
+      ],
+      "word_final": [
+        "ð",
+        ""
+      ]
+    },
+    "n": {
+      "default": [
+        "n"
+      ],
+      "word_final": [
+        "ŋ"
+      ]
+    },
+    "c": {
+      "before_e": [
+        "s"
+      ],
+      "before_i": [
+        "s"
+      ]
+    }
+  },
+  "parent": "es-ES",
+  "notes": "Colombian coastal (costeño — Cartagena, Barranquilla, Santa Marta). Full Caribbean phonology: aspiration, [ŋ], liquid neutralisation, -d deletion. Phonologically divergent from Bogotá highland.",
+  "quality": "research",
+  "script_type": "alphabet",
+  "sources": [
+    {
+      "id": "hualde2005",
+      "author": "Hualde, J.I.",
+      "year": 2005,
+      "title": "The Sounds of Spanish",
+      "publisher": "Cambridge University Press",
+      "url": null,
+      "pages": null,
+      "notes": null,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Spanish_phonology"
+    },
+    {
+      "id": "fontanella_de_weinberg1992",
+      "author": "Fontanella de Weinberg, M.B.",
+      "year": 1992,
+      "title": "El español de América",
+      "publisher": "MAPFRE",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "penny2002",
+      "author": "Penny, R.",
+      "year": 2002,
+      "title": "A History of the Spanish Language",
+      "publisher": "Cambridge University Press",
+      "url": null,
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Colombian_Spanish",
+    "https://es.wikipedia.org/wiki/Espa%C3%B1ol_colombiano"
+  ],
+  "timespan": {
+    "start_year": 1700,
+    "end_year": null
+  },
+  "glottolog_code": null,
+  "iso639_3": "spa",
+  "location": {
+    "latitude": 10.983333,
+    "longitude": -74.801944,
+    "source": "wikidata",
+    "notes": "Barranquilla — a representative city of the Colombian Caribbean coast (with Cartagena and Santa Marta). [Wikidata Q62823 P625]"
+  },
+  "allophone_rules": [
+    {
+      "id": "CODA_S_ASPIRATION",
+      "phonemes": [
+        "s"
+      ],
+      "surface": "h",
+      "syllable_position": "coda",
+      "notes": "Lowland coda /s/ lenition (aspiration tier of Lipski's 1994 cline): syllable-final /s/ (from ⟨s⟩ and seseante ⟨z⟩) weakens to the glottal aspirate [h] (esta=[ˈehta], los=[loh], diez=[djeh])."
+    }
+  ]
+}

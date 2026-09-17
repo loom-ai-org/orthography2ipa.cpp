@@ -1,0 +1,68 @@
+{
+  "code": "tkl",
+  "name": "Tokelau",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "ā": ["aː"],
+    "ē": ["eː"],
+    "ī": ["iː"],
+    "ō": ["oː"],
+    "ū": ["uː"],
+    "a": ["a"],
+    "e": ["e"],
+    "i": ["i"],
+    "o": ["o"],
+    "u": ["u"],
+    "f": ["f"],
+    "g": ["ŋ"],
+    "h": ["h"],
+    "k": ["k"],
+    "l": ["l"],
+    "m": ["m"],
+    "n": ["n"],
+    "p": ["p"],
+    "t": ["t"],
+    "v": ["v"]
+  },
+  "parent": "x-clade-mala1545",
+  "ancestors": [
+    {
+      "code": "x-clade-mala1545",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Descent per Glottolog classification of Tokelau (toke1240)."
+    }
+  ],
+  "notes": "Skeleton. Tokelauan is a Polynesian (Nuclear Polynesian, Samoic-Ellicean) Austronesian language of Tokelau, written in a Latin alphabet on the Samoan pattern. The grapheme map covers the small consonant inventory (f, g=ŋ, h, k, l, m, n, p, t, v; h is marginal and mostly in loans) and the five vowels, with phonemic long vowels written using the macron and mapped to length. Note the language-specific convention that the letter g denotes the velar nasal, not a stop. Tokelauan lacks a phonemic glottal stop, so nothing is left unencoded on that account; word/phrase stress is predictable and not marked. Text that omits the macron would lose the vowel-length contrast and raise PER, but the map itself follows fully macron-marked orthography.",
+  "iso639_3": "tkl",
+  "glottolog_code": null,
+  "sources": [
+    {
+      "id": "tkl_glottolog",
+      "author": "Hammarström, H. et al. (Glottolog 5.0)",
+      "year": 2024,
+      "title": "Glottolog: Tokelau (toke1240)",
+      "publisher": "Max Planck Institute for Evolutionary Anthropology",
+      "url": "https://glottolog.org/resource/languoid/id/toke1240",
+      "pages": null,
+      "notes": "Classification reference for a skeleton-tier entry.",
+      "wikipedia_url": null
+    },
+    {
+      "id": "tkl_wikipedia",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Tokelauan language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Tokelauan_language",
+      "pages": null,
+      "notes": "Phonology and orthography reference for the grapheme-to-IPA skeleton.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Tokelauan_language"
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Tokelauan_language"
+  ]
+}

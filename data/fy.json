@@ -1,0 +1,535 @@
+{
+  "code": "fy",
+  "glottolog_code": "west2354",
+  "name": "West Frisian",
+  "script": "Latin",
+  "quality": "research",
+  "script_type": "alphabet",
+  "parent": "ofs",
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "â": [
+      "ɔː"
+    ],
+    "e": [
+      "ɛ",
+      "ə"
+    ],
+    "ê": [
+      "ɛː"
+    ],
+    "i": [
+      "ɪ"
+    ],
+    "y": [
+      "i"
+    ],
+    "o": [
+      "ɔ"
+    ],
+    "ô": [
+      "oː"
+    ],
+    "u": [
+      "ø"
+    ],
+    "û": [
+      "uː"
+    ],
+    "ú": [
+      "yː"
+    ],
+    "aa": [
+      "aː"
+    ],
+    "ee": [
+      "eː"
+    ],
+    "ii": [
+      "iː"
+    ],
+    "ie": [
+      "iə"
+    ],
+    "oo": [
+      "oː"
+    ],
+    "oe": [
+      "uː"
+    ],
+    "uu": [
+      "yː"
+    ],
+    "ea": [
+      "ɪə"
+    ],
+    "oa": [
+      "oə"
+    ],
+    "b": [
+      "b"
+    ],
+    "c": [
+      "k",
+      "s"
+    ],
+    "ch": [
+      "χ"
+    ],
+    "d": [
+      "d"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɡ",
+      "ɣ"
+    ],
+    "h": [
+      "h"
+    ],
+    "j": [
+      "j"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ng": [
+      "ŋ"
+    ],
+    "nk": [
+      "ŋk"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "sj": [
+      "ɕ"
+    ],
+    "t": [
+      "t"
+    ],
+    "th": [
+      "t"
+    ],
+    "tsj": [
+      "tɕ"
+    ],
+    "tj": [
+      "tɕ"
+    ],
+    "ts": [
+      "ts"
+    ],
+    "v": [
+      "v"
+    ],
+    "w": [
+      "ʋ",
+      "w"
+    ],
+    "x": [
+      "ks"
+    ],
+    "z": [
+      "z"
+    ],
+    "ai": [
+      "aj"
+    ],
+    "ei": [
+      "ɛi"
+    ],
+    "au": [
+      "ɔu"
+    ],
+    "ou": [
+      "ɔu"
+    ],
+    "oi": [
+      "oj"
+    ],
+    "ui": [
+      "øy"
+    ],
+    "aai": [
+      "aːj"
+    ],
+    "oai": [
+      "oːj"
+    ],
+    "oei": [
+      "uːj"
+    ],
+    "iuw": [
+      "iːw"
+    ]
+  },
+  "allophones": {
+    "p": [
+      "p"
+    ],
+    "b": [
+      "b",
+      "p"
+    ],
+    "t": [
+      "t"
+    ],
+    "d": [
+      "d",
+      "t"
+    ],
+    "k": [
+      "k"
+    ],
+    "ɡ": [
+      "ɡ"
+    ],
+    "ɣ": [
+      "ɣ",
+      "χ"
+    ],
+    "ɕ": [
+      "ɕ"
+    ],
+    "tɕ": [
+      "tɕ"
+    ],
+    "f": [
+      "f"
+    ],
+    "v": [
+      "v",
+      "f"
+    ],
+    "s": [
+      "s"
+    ],
+    "z": [
+      "z",
+      "s"
+    ],
+    "χ": [
+      "χ"
+    ],
+    "h": [
+      "h"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n",
+      "ŋ"
+    ],
+    "ŋ": [
+      "ŋ"
+    ],
+    "l": [
+      "l"
+    ],
+    "r": [
+      "r",
+      "ɾ"
+    ],
+    "ʋ": [
+      "ʋ",
+      "w"
+    ],
+    "j": [
+      "j"
+    ],
+    "a": [
+      "a",
+      "ɑ"
+    ],
+    "aː": [
+      "aː"
+    ],
+    "ɛ": [
+      "ɛ"
+    ],
+    "eː": [
+      "eː"
+    ],
+    "ɪ": [
+      "ɪ"
+    ],
+    "i": [
+      "i"
+    ],
+    "iː": [
+      "iː"
+    ],
+    "ɔ": [
+      "ɔ"
+    ],
+    "oː": [
+      "oː"
+    ],
+    "ø": [
+      "ø"
+    ],
+    "yː": [
+      "yː"
+    ],
+    "u": [
+      "u"
+    ],
+    "uː": [
+      "uː"
+    ],
+    "ə": [
+      "ə"
+    ],
+    "ɔː": [
+      "ɔː"
+    ],
+    "ɛː": [
+      "ɛː"
+    ],
+    "iə": [
+      "iə"
+    ],
+    "ɪə": [
+      "ɪə"
+    ],
+    "oə": [
+      "oə"
+    ],
+    "ɛi": [
+      "ɛi"
+    ],
+    "ɔu": [
+      "ɔu"
+    ],
+    "øy": [
+      "øy"
+    ]
+  },
+  "positional_graphemes": {
+    "b": {
+      "word_final": [
+        "p"
+      ],
+      "default": [
+        "b"
+      ]
+    },
+    "d": {
+      "word_final": [
+        "t"
+      ],
+      "default": [
+        "d"
+      ]
+    },
+    "g": {
+      "word_initial": [
+        "ɡ"
+      ],
+      "intervocalic": [
+        "ɣ"
+      ],
+      "word_final": [
+        "χ"
+      ],
+      "default": [
+        "ɡ"
+      ]
+    },
+    "v": {
+      "word_final": [
+        "f"
+      ],
+      "default": [
+        "v"
+      ]
+    },
+    "z": {
+      "word_final": [
+        "s"
+      ],
+      "default": [
+        "z"
+      ]
+    },
+    "c": {
+      "before_e": [
+        "s"
+      ],
+      "before_i": [
+        "s"
+      ],
+      "default": [
+        "k"
+      ]
+    },
+    "e": {
+      "nucleus_unstressed": [
+        "ə"
+      ],
+      "nucleus_stressed": [
+        "ɛ"
+      ],
+      "default": [
+        "ɛ",
+        "ə"
+      ]
+    }
+  },
+  "stress": {
+    "default_position": 1,
+    "stress_mark": "ˈ",
+    "diphthongs": [
+      "aai",
+      "oai",
+      "oei",
+      "iuw",
+      "aa",
+      "ee",
+      "ii",
+      "ie",
+      "oo",
+      "oe",
+      "uu",
+      "ea",
+      "oa",
+      "ue",
+      "ai",
+      "ei",
+      "au",
+      "ou",
+      "oi",
+      "ui",
+      "iə",
+      "ɪə",
+      "oə",
+      "ɛi",
+      "aj",
+      "ɔu",
+      "øy",
+      "oj"
+    ],
+    "notes": "Germanic word stress falls on the first syllable of the root; prefixes and a small set of loans are the systematic exceptions (Tiersma 1999, ch. 1). The declared sequences are the ones that form a single nucleus: the orthographic digraphs/trigraphs let the bundled syllabifier count one nucleus per diphthong, and their IPA realisations (⟨ei⟩ /ɛi/, ⟨au⟩/⟨ou⟩ /ɔu/, ⟨ui⟩ /øy/, the centring /iə ɪə oə/) are listed too so the same run stays one nucleus when the syllabifier is re-run over the transcription rather than the spelling."
+  },
+  "ancestors": [
+    {
+      "code": "ofs",
+      "role": "parent",
+      "weight": 0.82,
+      "notes": "Descent from Old Frisian (c. 1150–1550) via Middle Frisian (1550–1820). West Frisian is the West Frisian branch of the Anglo-Frisian sub-group."
+    },
+    {
+      "code": "nl",
+      "role": "adstrate",
+      "weight": 0.07,
+      "notes": "Dutch adstrate: centuries of Dutch administrative and literary dominance in Friesland (since 1498). Heavy lexical borrowing and phonological convergence, especially in urban varieties."
+    },
+    {
+      "code": "la",
+      "role": "adstrate",
+      "weight": 0.03,
+      "notes": "Latin adstrate: ecclesiastical and learned vocabulary via Christianisation and medieval scholarship."
+    },
+    {
+      "code": "fr-FR",
+      "role": "adstrate",
+      "weight": 0.02,
+      "notes": "French adstrate: indirect influence through Dutch and Burgundian-period borrowings."
+    }
+  ],
+  "notes": "West Frisian (Frysk) — the most widely spoken Frisian language, spoken in the province of Fryslân (Friesland), Netherlands, where it is an official language alongside Dutch. KEY FEATURES: (1) RICH VOWEL SYSTEM: monophthongs contrast in length and rounding, with long vowels (>250 ms) considerably longer than short (<150 ms) (Tiersma 1999, p. 9). Short ⟨a⟩ is front /a/, long ⟨aa⟩ /aː/. (2) CENTRING (BREAKING) DIPHTHONGS: ⟨ie⟩ /iə/, ⟨ea⟩ /ɪə/, ⟨oa⟩ /oə/ from historical long vowels — a hallmark of Frisian. Breaking (brekking) alternates a stressed falling diphthong with a rising one in derivation (stien /stiən/ ~ stiennen /stjɪn.../, beam /bɪəm/ ~ beamke /bjɛm.../; Tiersma 1999); this is a morphophonemic alternation not expressible in the grapheme→IPA map and is not encoded. (3) FINAL OBSTRUENT DEVOICING: word-final /b d v z ɣ/ merge to /p t f s χ/ (Tiersma 1999, p. 21). (4) ⟨g⟩ is a single phoneme with a stop [ɡ] word- and stressed-syllable-initially and a voiced velar fricative [ɣ] elsewhere, devoiced to [χ] word-finally (Hoekstra 2001). (5) DORSAL FRICATIVE: ⟨ch⟩ and the devoiced ⟨g⟩ are the voiceless post-velar/uvular fricative /χ/. (6) PALATALISATION: ⟨sj⟩ /ɕ/, ⟨tsj⟩ and ⟨tj⟩ /tɕ/ (alveolo-palatal). (7) CIRCUMFLEX VOWELS: ⟨â⟩ /ɔː/, ⟨ê⟩ /ɛː/, ⟨ô⟩ /oː/, ⟨û⟩ /uː/, ⟨ú⟩ /yː/ — a distinctive orthographic convention. (8) ⟨y⟩ = /i/ (a vowel, not a consonant); short ⟨i⟩ = /ɪ/; ⟨u⟩ = /ø/. (9) ANGLO-FRISIAN: shares innovations with English but diverged after the Old Frisian period. Sources: Tiersma (1999) *Frisian Reference Grammar*, Hoekstra (2001), Popkema (2006) *Grammatica Fries*.",
+  "sources": [
+    {
+      "id": "tiersma1999",
+      "author": "Tiersma, P.M.",
+      "year": 1999,
+      "title": "Frisian Reference Grammar",
+      "publisher": "Fryske Akademy",
+      "url": null,
+      "pages": null,
+      "notes": "Comprehensive reference grammar of Modern West Frisian"
+    },
+    {
+      "id": "hoekstra2001",
+      "author": "Hoekstra, J.",
+      "year": 2001,
+      "title": "Standard West Frisian",
+      "publisher": "In: Munske, H.H. (ed.), Handbuch des Friesischen / Handbook of Frisian Studies, Niemeyer",
+      "url": null,
+      "pages": "pp. 83-98",
+      "notes": "Consonant inventory; the ⟨g⟩ = [ɡ]~[ɣ] allophony and final devoicing to [χ]"
+    },
+    {
+      "id": "popkema2006",
+      "author": "Popkema, J.",
+      "year": 2006,
+      "title": "Grammatica Fries: de regels van het Fries",
+      "publisher": "Bornmeer",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "gorter2001",
+      "author": "Gorter, D. et al.",
+      "year": 2001,
+      "title": "Frisian in the Netherlands",
+      "publisher": "Mercator Education",
+      "url": null,
+      "pages": null,
+      "notes": "In: Regional Dossier series"
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/West_Frisian_language",
+    "https://fy.wikipedia.org/wiki/Fryske_taal",
+    "https://fy.wikipedia.org/wiki/Frysk",
+    "https://nl.wikipedia.org/wiki/Westerlauwers_Fries"
+  ],
+  "urls": [
+    "https://en.wikipedia.org/wiki/West_Frisian_language",
+    "https://en.wikipedia.org/wiki/West_Frisian_phonology",
+    "https://en.wikipedia.org/wiki/Help:IPA/West_Frisian",
+    "https://fy.wikipedia.org/wiki/Fryske_taal",
+    "https://en.wikipedia.org/wiki/Frisian_languages",
+    "https://en.wikipedia.org/wiki/Anglo-Frisian_languages",
+    "https://en.wikipedia.org/wiki/Old_Frisian",
+    "https://nl.wikipedia.org/wiki/Fries_(taal)",
+    "https://de.wikipedia.org/wiki/Westfriesische_Sprache"
+  ],
+  "timespan": {
+    "start_year": 1500,
+    "end_year": null
+  },
+  "iso639_3": "fry",
+  "wikidata_qid": "Q27175",
+  "phoible_id": "west2354",
+  "wals_code": "frw",
+  "location": {
+    "latitude": 53.143,
+    "longitude": 5.86091,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Western Frisian."
+  }
+}

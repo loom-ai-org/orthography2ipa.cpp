@@ -1,0 +1,288 @@
+{
+  "code": "mdf",
+  "name": "Moksha",
+  "script": "Cyrillic",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "лх": [
+      "l̥"
+    ],
+    "рх": [
+      "r̥"
+    ],
+    "йх": [
+      "j̥"
+    ],
+    "а": [
+      "a"
+    ],
+    "б": [
+      "b"
+    ],
+    "в": [
+      "v"
+    ],
+    "г": [
+      "ɡ"
+    ],
+    "д": [
+      "d"
+    ],
+    "е": [
+      "ʲe",
+      "je"
+    ],
+    "ё": [
+      "ʲo",
+      "jo"
+    ],
+    "ж": [
+      "ʒ"
+    ],
+    "з": [
+      "z"
+    ],
+    "и": [
+      "i"
+    ],
+    "й": [
+      "j"
+    ],
+    "к": [
+      "k"
+    ],
+    "л": [
+      "l"
+    ],
+    "м": [
+      "m"
+    ],
+    "н": [
+      "n"
+    ],
+    "о": [
+      "o"
+    ],
+    "п": [
+      "p"
+    ],
+    "р": [
+      "r"
+    ],
+    "с": [
+      "s"
+    ],
+    "т": [
+      "t"
+    ],
+    "у": [
+      "u"
+    ],
+    "ф": [
+      "f"
+    ],
+    "х": [
+      "x"
+    ],
+    "ц": [
+      "ts"
+    ],
+    "ч": [
+      "tɕ"
+    ],
+    "ш": [
+      "ʃ"
+    ],
+    "щ": [
+      "ɕ"
+    ],
+    "ы": [
+      "ɨ"
+    ],
+    "ь": [
+      "ʲ"
+    ],
+    "э": [
+      "e"
+    ],
+    "ю": [
+      "ʲu",
+      "ju"
+    ],
+    "я": [
+      "ʲa",
+      "ja"
+    ]
+  },
+  "allophones": {
+    "l̥": [
+      "l̥"
+    ],
+    "r̥": [
+      "r̥"
+    ],
+    "j̥": [
+      "j̥"
+    ],
+    "a": [
+      "a",
+      "ɑ",
+      "æ"
+    ],
+    "b": [
+      "b"
+    ],
+    "v": [
+      "v"
+    ],
+    "ɡ": [
+      "ɡ"
+    ],
+    "d": [
+      "d"
+    ],
+    "ʲe": [
+      "ʲe"
+    ],
+    "je": [
+      "je"
+    ],
+    "ʲo": [
+      "ʲo"
+    ],
+    "jo": [
+      "jo"
+    ],
+    "ʒ": [
+      "ʒ"
+    ],
+    "z": [
+      "z"
+    ],
+    "i": [
+      "i"
+    ],
+    "j": [
+      "j"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "o": [
+      "o",
+      "ə"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "u": [
+      "u"
+    ],
+    "f": [
+      "f"
+    ],
+    "x": [
+      "x"
+    ],
+    "ts": [
+      "ts"
+    ],
+    "tɕ": [
+      "tɕ"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "ɕ": [
+      "ɕ"
+    ],
+    "ɨ": [
+      "ɨ"
+    ],
+    "ʲ": [
+      "ʲ"
+    ],
+    "e": [
+      "e",
+      "ɛ",
+      "ə"
+    ],
+    "ʲu": [
+      "ʲu"
+    ],
+    "ju": [
+      "ju"
+    ],
+    "ʲa": [
+      "ʲa"
+    ],
+    "ja": [
+      "ja"
+    ]
+  },
+  "parent": "urj",
+  "ancestors": [
+    {
+      "code": "urj",
+      "role": "parent",
+      "weight": 0.9,
+      "notes": "Mordvinic branch of Uralic; Republic of Mordovia, Russia."
+    }
+  ],
+  "notes": "Moksha (мокшень кяль), Mordvinic (Uralic), Russia. Written in a Cyrillic alphabet identical in inventory to Russian. Palatalisation is phonemic and is written the Russian way (soft sign <ь>, iotated vowel letters <е ё ю я>), which is why those letters map to a palatalising sequence. Moksha additionally has voiceless sonorants, spelled <лх>, <рх>, <йх>. The reduced vowel /ə/ is not given its own letter — it is spelled <о>/<е>/<а> depending on context — so it appears here only as an allophone. Stress is largely on the first syllable but is not written.",
+  "iso639_3": "mdf",
+  "glottolog_code": "moks1248",
+  "wikidata_qid": "Q13343",
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Moksha_language",
+    "https://mdf.wikipedia.org/wiki/%D0%9C%D0%BE%D0%BA%D1%88%D0%B5%D0%BD%D1%8C_%D0%BA%D1%8F%D0%BB%D1%8C"
+  ],
+  "sources": [
+    {
+      "id": "bartens1999",
+      "author": "Bartens, Raija",
+      "year": 1999,
+      "title": "Mordvalaiskielten rakenne ja kehitys",
+      "publisher": "Suomalais-Ugrilainen Seura, Helsinki",
+      "url": null,
+      "pages": null,
+      "notes": "Reference description of Moksha and Erzya phonology."
+    },
+    {
+      "id": "moksha_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Moksha language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Moksha_language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Moksha_language",
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "location": {
+    "latitude": 54.1855,
+    "longitude": 42.6728,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Moksha."
+  }
+}

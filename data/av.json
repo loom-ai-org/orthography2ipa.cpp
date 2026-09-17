@@ -1,0 +1,394 @@
+{
+  "code": "av",
+  "name": "Avar",
+  "script": "Cyrillic",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "а": [
+      "a"
+    ],
+    "б": [
+      "b"
+    ],
+    "в": [
+      "w"
+    ],
+    "г": [
+      "ɡ"
+    ],
+    "гъ": [
+      "ʁ"
+    ],
+    "гь": [
+      "h"
+    ],
+    "гӏ": [
+      "ʕ"
+    ],
+    "д": [
+      "d"
+    ],
+    "е": [
+      "e",
+      "je"
+    ],
+    "ё": [
+      "jo"
+    ],
+    "ж": [
+      "ʒ"
+    ],
+    "з": [
+      "z"
+    ],
+    "и": [
+      "i"
+    ],
+    "й": [
+      "j"
+    ],
+    "к": [
+      "k"
+    ],
+    "кк": [
+      "kː"
+    ],
+    "кӏ": [
+      "kʼ"
+    ],
+    "къ": [
+      "q͡χʼː"
+    ],
+    "кь": [
+      "t͡ɬʼː"
+    ],
+    "л": [
+      "l"
+    ],
+    "лъ": [
+      "ɬ"
+    ],
+    "лълъ": [
+      "ɬː"
+    ],
+    "лӏ": [
+      "t͡ɬː"
+    ],
+    "м": [
+      "m"
+    ],
+    "н": [
+      "n"
+    ],
+    "о": [
+      "o"
+    ],
+    "п": [
+      "p"
+    ],
+    "р": [
+      "r"
+    ],
+    "с": [
+      "s"
+    ],
+    "сс": [
+      "sː"
+    ],
+    "т": [
+      "t"
+    ],
+    "тӏ": [
+      "tʼ"
+    ],
+    "у": [
+      "u"
+    ],
+    "ф": [
+      "f"
+    ],
+    "х": [
+      "χ"
+    ],
+    "хх": [
+      "χː"
+    ],
+    "хъ": [
+      "q͡χː"
+    ],
+    "хь": [
+      "x"
+    ],
+    "хьхь": [
+      "xː"
+    ],
+    "хӏ": [
+      "ħ"
+    ],
+    "ц": [
+      "t͡s"
+    ],
+    "цц": [
+      "t͡sː"
+    ],
+    "цӏ": [
+      "t͡sʼ"
+    ],
+    "цӏцӏ": [
+      "t͡sʼː"
+    ],
+    "ч": [
+      "t͡ʃ"
+    ],
+    "чч": [
+      "t͡ʃː"
+    ],
+    "чӏ": [
+      "t͡ʃʼ"
+    ],
+    "чӏчӏ": [
+      "t͡ʃʼː"
+    ],
+    "ш": [
+      "ʃ"
+    ],
+    "щ": [
+      "ʃː"
+    ],
+    "ъ": [
+      "ʔ"
+    ],
+    "ы": [
+      "ɨ"
+    ],
+    "ь": [
+      "ʲ"
+    ],
+    "э": [
+      "e"
+    ],
+    "ю": [
+      "ju"
+    ],
+    "я": [
+      "ja"
+    ]
+  },
+  "allophones": {
+    "a": [
+      "a"
+    ],
+    "b": [
+      "b"
+    ],
+    "w": [
+      "w"
+    ],
+    "ɡ": [
+      "ɡ"
+    ],
+    "ʁ": [
+      "ʁ"
+    ],
+    "h": [
+      "h"
+    ],
+    "ʕ": [
+      "ʕ"
+    ],
+    "d": [
+      "d"
+    ],
+    "e": [
+      "e"
+    ],
+    "je": [
+      "je"
+    ],
+    "jo": [
+      "jo"
+    ],
+    "ʒ": [
+      "ʒ"
+    ],
+    "z": [
+      "z"
+    ],
+    "i": [
+      "i"
+    ],
+    "j": [
+      "j"
+    ],
+    "k": [
+      "k"
+    ],
+    "kː": [
+      "kː"
+    ],
+    "kʼ": [
+      "kʼ"
+    ],
+    "q͡χʼː": [
+      "q͡χʼː"
+    ],
+    "t͡ɬʼː": [
+      "t͡ɬʼː"
+    ],
+    "l": [
+      "l"
+    ],
+    "ɬ": [
+      "ɬ"
+    ],
+    "ɬː": [
+      "ɬː"
+    ],
+    "t͡ɬː": [
+      "t͡ɬː"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "o": [
+      "o"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "sː": [
+      "sː"
+    ],
+    "t": [
+      "t"
+    ],
+    "tʼ": [
+      "tʼ"
+    ],
+    "u": [
+      "u"
+    ],
+    "f": [
+      "f"
+    ],
+    "χ": [
+      "χ"
+    ],
+    "χː": [
+      "χː"
+    ],
+    "q͡χː": [
+      "q͡χː"
+    ],
+    "x": [
+      "x"
+    ],
+    "xː": [
+      "xː"
+    ],
+    "ħ": [
+      "ħ"
+    ],
+    "t͡s": [
+      "t͡s"
+    ],
+    "t͡sː": [
+      "t͡sː"
+    ],
+    "t͡sʼ": [
+      "t͡sʼ"
+    ],
+    "t͡sʼː": [
+      "t͡sʼː"
+    ],
+    "t͡ʃ": [
+      "t͡ʃ"
+    ],
+    "t͡ʃː": [
+      "t͡ʃː"
+    ],
+    "t͡ʃʼ": [
+      "t͡ʃʼ"
+    ],
+    "t͡ʃʼː": [
+      "t͡ʃʼː"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "ʃː": [
+      "ʃː"
+    ],
+    "ʔ": [
+      "ʔ"
+    ],
+    "ɨ": [
+      "ɨ"
+    ],
+    "ʲ": [
+      "ʲ"
+    ],
+    "ju": [
+      "ju"
+    ],
+    "ja": [
+      "ja"
+    ]
+  },
+  "notes": "Avar (авар мацӏ, Magharul mats'), the largest Northeast Caucasian (Avar–Andic) language, literary language of Dagestan. Cyrillic alphabet since 1938; digraphs with ⟨ъ⟩, ⟨ь⟩ and the palochka ⟨ӏ⟩ mark uvulars, laterals and ejectives, and doubled letters mark the fortis (geminate) series. Letters ⟨ф ы э⟩ occur essentially only in Russian loans.",
+  "iso639_3": "ava",
+  "glottolog_code": "avar1256",
+  "wikidata_qid": "Q29561",
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Avar_language",
+    "https://av.wikipedia.org/wiki/%D0%90%D0%B2%D0%B0%D1%80_%D0%BC%D0%B0%D1%86%D3%80"
+  ],
+  "sources": [
+    {
+      "id": "avar_language_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Avar language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Avar_language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Avar_language",
+      "pages": null,
+      "notes": "Orthography / phonology reference."
+    },
+    {
+      "id": "charachidze1981",
+      "author": "Charachidzé, Georges",
+      "year": 1981,
+      "title": "Grammaire de la langue avar",
+      "publisher": "Éditions Jean-Favard",
+      "url": "https://archive.org/details/rosettaproject_ava_phon-1",
+      "pages": null,
+      "notes": "Only chapter 1, 'Remarques sur le système des sons', was consulted, through the two-page Rosetta Project scan, whose pages carry no printed numbers. It gives the five-vowel system with no phonemic length, the glottal onset before an initial vowel, and the consonant table with the lenis/fortis and glottalised series."
+    }
+  ],
+  "parent": "x-clade-nakh1245",
+  "ancestors": [
+    {
+      "code": "x-clade-nakh1245",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Nakh-Daghestanian — the classification node this language sits under."
+    }
+  ],
+  "location": {
+    "latitude": 41.7047,
+    "longitude": 46.558,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Avar."
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "code": "gpe",
+  "name": "Ghanaian Pidgin English",
+  "family": "Creole",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "stub",
+  "graphemes": {},
+  "allophones": {},
+  "notes": "Ghanaian Pidgin English, an English-lexifier West African pidgin/creole. DELIBERATE STUB: the grapheme inventory is NOT specified and must not be guessed. The language is written in the Latin script but has NO official or standardised orthography: APiCS Online (Huber, survey chapter 16) states plainly that 'there is no official orthography for Ghanaian Pidgin English, which is almost never used in print, but enjoys growing popularity in e-mails, chat groups, etc.' Writers use ad-hoc, English-etymological spellings, which are by definition not phonemic, so no cited letter-to-IPA table exists and none can be constructed without inventing one. The phonology itself IS described (Huber 2008, 'Ghanaian Pidgin English: phonology', in Varieties of English 4: Africa, South and Southeast Asia): 7-9 monophthongs with optional length and phonemic nasalisation, six diphthongs /ai au ɔi iɛ ɛa uɔ/, non-rhotic, with processes such as final-consonant devoicing and syllable simplification — but a phonology is not an orthography, and the mapping from ad-hoc English spelling to those phonemes is not recoverable. To lift this stub, an actual published GPE spelling standard with a letter-to-sound table is required (e.g. if a Naijá-SNO-style convention is ever adopted for Ghana); until then an honest stub is preferred over a fabricated English-like map.",
+  "iso639_3": "gpe",
+  "glottolog_code": "ghan1244",
+  "wikidata_qid": "Q5555465",
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Ghanaian_Pidgin_English",
+    "https://gpe.wikipedia.org/wiki/Ghanaian_Pidgin_English"
+  ],
+  "sources": [
+    {
+      "id": "ghanaian_pidgin_english_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Ghanaian Pidgin English",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Ghanaian_Pidgin_English",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Ghanaian_Pidgin_English",
+      "pages": null,
+      "notes": "Orthography / phonology reference."
+    },
+    {
+      "id": "huber_apics_gpe",
+      "author": "Huber, Magnus",
+      "year": 2013,
+      "title": "Ghanaian Pidgin English (Survey chapter 16)",
+      "publisher": "The Atlas of Pidgin and Creole Language Structures Online, Max Planck Institute for Evolutionary Anthropology",
+      "url": "https://apics-online.info/surveys/16",
+      "wikipedia_url": null,
+      "pages": null,
+      "notes": "Explicit statement that there is no official orthography for Ghanaian Pidgin English; it is almost never used in print. Basis for keeping this spec a stub."
+    },
+    {
+      "id": "huber_gpe_phonology",
+      "author": "Huber, Magnus",
+      "year": 2008,
+      "title": "Ghanaian Pidgin English: phonology",
+      "publisher": "Varieties of English 4: Africa, South and Southeast Asia, Mouton de Gruyter",
+      "url": "https://www.degruyterbrill.com/document/doi/10.1515/9783110208429.1.93/html",
+      "doi": "10.1515/9783110208429.1.93",
+      "wikipedia_url": null,
+      "pages": null,
+      "notes": "Segmental phonology (7-9 monophthongs, nasalisation, six diphthongs /ai au ɔi iɛ ɛa uɔ/, non-rhotic). Describes sounds, not a letter-to-sound mapping, so it cannot by itself yield a grapheme table."
+    },
+    {
+      "id": "holm1989",
+      "author": "Holm, John",
+      "year": 1989,
+      "title": "Pidgins and Creoles, Volume II: Reference Survey",
+      "publisher": "Cambridge University Press",
+      "url": null,
+      "pages": null,
+      "notes": "Reference survey of Atlantic and Pacific pidgins/creoles; lexifier and substrate attributions."
+    },
+    {
+      "id": "apics2013",
+      "author": "Michaelis, S.M., Maurer, P., Haspelmath, M. & Huber, M. (eds.)",
+      "year": 2013,
+      "title": "The Atlas of Pidgin and Creole Language Structures (APiCS)",
+      "publisher": "Oxford University Press",
+      "url": "https://apics-online.info/",
+      "pages": null,
+      "notes": "Structural atlas of 76 pidgins/creoles; per-language survey chapters cited in ancestry notes."
+    },
+    {
+      "id": "huber1999",
+      "author": "Huber, Magnus",
+      "year": 1999,
+      "title": "Ghanaian Pidgin English in its West African Context",
+      "publisher": "John Benjamins",
+      "url": null,
+      "pages": null,
+      "notes": "West African Pidgin English; Akan/Ga (Kwa) substrate."
+    }
+  ],
+  "location": {
+    "latitude": 5.793241,
+    "longitude": -0.283641,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Ghanaian Pidgin English."
+  },
+  "ancestors": [
+    {
+      "code": "en-GB",
+      "role": "lexifier",
+      "weight": 0.65,
+      "notes": "English lexifier; Ghanaian Pidgin English within the West African Pidgin English continuum. Huber (1999); APiCS ch. 17 (Huber)."
+    },
+    {
+      "code": "ak",
+      "role": "substrate",
+      "weight": 0.2,
+      "notes": "Akan (Kwa) substrate: tone/prosody, 7-vowel tendency with ATR harmony, labial-velar stops /kp ɡb/. Ga (also a substrate) is unregistered. Huber (1999)."
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "code": "gl-x-oriental",
+  "name": "Eastern Galician",
+  "script": "Latin",
+  "parent": "gl",
+  "graphemes_base": "gl",
+  "allophones_base": "gl",
+  "positional_graphemes_base": "gl",
+  "graphemes": {
+    "ie": [
+      "je"
+    ],
+    "ue": [
+      "we"
+    ]
+  },
+  "allophones": {
+    "ʎ": [
+      "ʎ"
+    ],
+    "tʃ": [
+      "tʃ"
+    ]
+  },
+  "positional_graphemes": {
+    "ch": {
+      "word_initial": [
+        "tʃ"
+      ],
+      "intervocalic": [
+        "tʃ"
+      ]
+    }
+  },
+  "ancestors": [
+    {
+      "code": "gl",
+      "role": "parent",
+      "weight": 0.82,
+      "notes": "Standard/Central Galician."
+    },
+    {
+      "code": "ast-x-leon",
+      "role": "adstrate",
+      "weight": 0.12,
+      "notes": "Asturleonese/Leonese adstrate: stronger in eastern Lugo and eastern Ourense, where Galician and Asturleonese were historically in closer contact. Features such as diphthongised vowels (ie/ue in stressed position from Latin Ĕ/Ŏ) and stronger /tʃ/ for ⟨ch⟩ reflect Asturian influence. The Galician-Asturian transitional zone (A Fala, Eonaviego) shows heavy mixing."
+    },
+    {
+      "code": "cel-x-gallaecia",
+      "role": "substrate",
+      "weight": 0.04,
+      "notes": "Celtic substrate of the interior highlands."
+    },
+    {
+      "code": "xlg",
+      "role": "substrate",
+      "weight": 0.02,
+      "notes": "Lusitanian substrate traces in the eastern border zone."
+    }
+  ],
+  "notes": "Eastern Galician (galego oriental), spoken in the eastern provinces of Lugo and Ourense, bordering Asturias and Castile-León. KEY FEATURES: (1) STRONGER ASTURLEONESE CONTACT: the eastern zone was historically the zone of maximum Galician-Asturleonese overlap. The transitional belt 'Eonaviego' or 'A Fala' spoken in the Eo-Navia region (western Asturias) is a direct intermediate. (2) DIPHTHONG PRESERVATION/INNOVATION: stressed short Latin vowels Ĕ/Ŏ may show diphthongised realisations (/je/, /we/) in some lexical items under Asturleonese influence, which standard Western Galician monophthongised. (3) ⟨ch⟩ = /tʃ/ RETAINED more consistently (vs. western and urban Galician where /ʃ/ is spreading). (4) /ʎ/ for ⟨ll⟩ robustly preserved (no yeísmo, influenced by Asturian conservatism). (5) No gheada (characteristic of the western coast, absent in the east). (6) Some archaic Galaico-Portuguese features retained longer due to geographic isolation. Sources: Fernández Rei (1990), García García (1983), Beswick (2007) *Regional Nationalism in Spain*.",
+  "sources": [
+    {
+      "id": "freixeiro_mato1998",
+      "author": "Freixeiro Mato, X.R.",
+      "year": 1998,
+      "title": "Gramática da Lingua Galega",
+      "publisher": "A Nosa Terra",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "mateus_dandrade2000",
+      "author": "Mateus, M.H.M. & d'Andrade, E.",
+      "year": 2000,
+      "title": "The Phonology of Portuguese",
+      "publisher": "Oxford University Press",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "fernandez_rei1990",
+      "author": "Fernández Rei, F.",
+      "year": 1990,
+      "title": "Dialectoloxía da lingua galega",
+      "publisher": "Xerais",
+      "url": null,
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Galician_language",
+    "https://gl.wikipedia.org/wiki/Lingua_galega",
+    "https://es.wikipedia.org/wiki/Idioma_gallego"
+  ],
+  "timespan": {
+    "start_year": 1300,
+    "end_year": null
+  },
+  "glottolog_code": null,
+  "iso639_3": "glg",
+  "quality": "research",
+  "location": {
+    "latitude": 43.133333,
+    "longitude": -7.066667,
+    "source": "wikidata",
+    "notes": "A Fonsagrada (eastern Lugo, on the Asturian border) — a representative locality of the eastern Galician block, where Asturleonese contact is strongest. [Wikidata Q1465213 P625]"
+  }
+}

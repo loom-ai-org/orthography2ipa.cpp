@@ -1,0 +1,702 @@
+{
+  "code": "mn",
+  "name": "Mongolian",
+  "glottolog_code": "halh1238",
+  "script": "Cyrillic",
+  "script_type": "alphabet",
+  "iso639_3": "mon",
+  "quality": "research",
+  "graphemes": {
+    "а": [
+      "a"
+    ],
+    "аа": [
+      "aː"
+    ],
+    "ай": [
+      "ai"
+    ],
+    "э": [
+      "e"
+    ],
+    "ээ": [
+      "eː"
+    ],
+    "эй": [
+      "eː"
+    ],
+    "и": [
+      "i"
+    ],
+    "ий": [
+      "iː"
+    ],
+    "ы": [
+      "i"
+    ],
+    "о": [
+      "ɔ"
+    ],
+    "оо": [
+      "ɔː"
+    ],
+    "ой": [
+      "ɔi"
+    ],
+    "ө": [
+      "ɵ"
+    ],
+    "өө": [
+      "ɵː"
+    ],
+    "у": [
+      "ʊ"
+    ],
+    "уу": [
+      "ʊː"
+    ],
+    "уй": [
+      "ʊi"
+    ],
+    "ү": [
+      "u"
+    ],
+    "үү": [
+      "uː"
+    ],
+    "үй": [
+      "ui"
+    ],
+    "е": [
+      "jɵ",
+      "je"
+    ],
+    "еэ": [
+      "jeː"
+    ],
+    "ё": [
+      "jɔ"
+    ],
+    "ёо": [
+      "jɔː"
+    ],
+    "ю": [
+      "jʊ",
+      "ju"
+    ],
+    "юу": [
+      "jʊː"
+    ],
+    "юү": [
+      "juː"
+    ],
+    "я": [
+      "ja"
+    ],
+    "яа": [
+      "jaː"
+    ],
+    "й": [
+      "j"
+    ],
+    "ь": [
+      "ʲ"
+    ],
+    "ъ": [
+      "ʲ"
+    ],
+    "б": [
+      "p"
+    ],
+    "в": [
+      "w"
+    ],
+    "г": [
+      "ɡ",
+      "ɣ"
+    ],
+    "д": [
+      "t"
+    ],
+    "ж": [
+      "tɕ"
+    ],
+    "з": [
+      "ts"
+    ],
+    "к": [
+      "kʰ"
+    ],
+    "л": [
+      "ɮ"
+    ],
+    "м": [
+      "m"
+    ],
+    "н": [
+      "n"
+    ],
+    "п": [
+      "pʰ"
+    ],
+    "р": [
+      "r"
+    ],
+    "с": [
+      "s"
+    ],
+    "т": [
+      "tʰ"
+    ],
+    "ф": [
+      "f"
+    ],
+    "х": [
+      "x"
+    ],
+    "ц": [
+      "tsʰ"
+    ],
+    "ч": [
+      "tɕʰ"
+    ],
+    "ш": [
+      "ɕ"
+    ],
+    "щ": [
+      "ɕ"
+    ],
+    "ья": [
+      "ja"
+    ],
+    "ьё": [
+      "jɔ"
+    ],
+    "ью": [
+      "jʊ"
+    ],
+    "ье": [
+      "jɵ",
+      "je"
+    ],
+    "ьяа": [
+      "jaː"
+    ],
+    "ьёо": [
+      "jɔː"
+    ],
+    "ьюу": [
+      "jʊː"
+    ],
+    "ьюү": [
+      "juː"
+    ],
+    "ьеэ": [
+      "jeː"
+    ],
+    "ъя": [
+      "ja"
+    ],
+    "ъё": [
+      "jɔ"
+    ],
+    "ъю": [
+      "jʊ"
+    ],
+    "ъе": [
+      "jɵ",
+      "je"
+    ],
+    "ъяа": [
+      "jaː"
+    ],
+    "ъёо": [
+      "jɔː"
+    ],
+    "ъюу": [
+      "jʊː"
+    ],
+    "ъюү": [
+      "juː"
+    ],
+    "ъеэ": [
+      "jeː"
+    ]
+  },
+  "allophones": {
+    "a": [
+      "a"
+    ],
+    "aː": [
+      "aː"
+    ],
+    "ai": [
+      "ai"
+    ],
+    "e": [
+      "e"
+    ],
+    "eː": [
+      "eː"
+    ],
+    "i": [
+      "i"
+    ],
+    "iː": [
+      "iː"
+    ],
+    "ɔ": [
+      "ɔ"
+    ],
+    "ɔː": [
+      "ɔː"
+    ],
+    "ɔi": [
+      "ɔi"
+    ],
+    "ɵ": [
+      "ɵ"
+    ],
+    "ɵː": [
+      "ɵː"
+    ],
+    "ʊ": [
+      "ʊ"
+    ],
+    "ʊː": [
+      "ʊː"
+    ],
+    "ʊi": [
+      "ʊi"
+    ],
+    "u": [
+      "u"
+    ],
+    "uː": [
+      "uː"
+    ],
+    "ui": [
+      "ui"
+    ],
+    "jɵ": [
+      "jɵ"
+    ],
+    "je": [
+      "je"
+    ],
+    "jɔ": [
+      "jɔ"
+    ],
+    "jʊ": [
+      "jʊ"
+    ],
+    "ju": [
+      "ju"
+    ],
+    "ja": [
+      "ja"
+    ],
+    "j": [
+      "j"
+    ],
+    "ʲ": [
+      "ʲ"
+    ],
+    "p": [
+      "p"
+    ],
+    "w": [
+      "w"
+    ],
+    "ɡ": [
+      "ɡ"
+    ],
+    "ɣ": [
+      "ɣ"
+    ],
+    "t": [
+      "t"
+    ],
+    "tɕ": [
+      "tɕ"
+    ],
+    "ts": [
+      "ts"
+    ],
+    "kʰ": [
+      "kʰ"
+    ],
+    "ɮ": [
+      "ɮ"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "pʰ": [
+      "pʰ"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "tʰ": [
+      "tʰ"
+    ],
+    "f": [
+      "f"
+    ],
+    "x": [
+      "x"
+    ],
+    "tsʰ": [
+      "tsʰ"
+    ],
+    "tɕʰ": [
+      "tɕʰ"
+    ],
+    "ɕ": [
+      "ɕ"
+    ],
+    "ʲɵ": [
+      "ʲɵ"
+    ],
+    "ʲe": [
+      "ʲe"
+    ],
+    "ʲɔ": [
+      "ʲɔ"
+    ],
+    "ʲʊ": [
+      "ʲʊ"
+    ],
+    "ʲu": [
+      "ʲu"
+    ],
+    "ʲa": [
+      "ʲa"
+    ],
+    "ŋ": [
+      "ŋ"
+    ],
+    "k": [
+      "k"
+    ],
+    "jaː": [
+      "jaː"
+    ],
+    "ʲaː": [
+      "ʲaː"
+    ],
+    "jɔː": [
+      "jɔː"
+    ],
+    "ʲɔː": [
+      "ʲɔː"
+    ],
+    "jʊː": [
+      "jʊː"
+    ],
+    "ʲʊː": [
+      "ʲʊː"
+    ],
+    "juː": [
+      "juː"
+    ],
+    "ʲuː": [
+      "ʲuː"
+    ],
+    "jeː": [
+      "jeː"
+    ],
+    "ʲeː": [
+      "ʲeː"
+    ]
+  },
+  "notes": "Khalkha Mongolian in Cyrillic script (Mongolia), described after Svantesson (2003), 'Khalkha', in Janhunen (ed.) The Mongolic Languages. Seven vowels a e i o ö u ü with pharyngeal (ATR) harmony: the historically back rounded vowels ⟨о у⟩ are pharyngealized [ɔ ʊ] and the historically front rounded ⟨ө ү⟩ are centralized [ɵ u]; ⟨и⟩ is neutral. Each vowel occurs short and long, the long ones written double (⟨аа ээ оо өө уу үү⟩), and there are four diphthongs in -i written with ⟨й⟩ (⟨ай ой уй үй⟩); ⟨ий⟩ writes long /iː/ and the historical diphthong ⟨эй⟩ has merged with long /eː/. An iotated letter followed by its matching plain vowel letter (⟨яа ёо юу юү еэ⟩) writes ONE long nucleus in the same way: ⟨юу⟩ is [jʊː], ⟨юү⟩ [juː]. Khalkha has no voiced obstruents: the contrast is strong (aspirated) against weak (plain voiceless unaspirated). ⟨п т ц ч к⟩ are the strong series [pʰ tʰ tsʰ tɕʰ kʰ] and ⟨б д з ж⟩ the weak series [p t ts tɕ]; the weak velar ⟨г⟩ is the one member that is functionally voiced [ɡ], voiceless [k] word-finally and before a voiceless consonant, and often fricative [ɣ] between vowels. ⟨л⟩ is the lateral fricative [ɮ] and ⟨ш⟩ the alveopalatal [ɕ]. Word-final ⟨н⟩ is /ŋ/ (the orthography writes ⟨н⟩ + vowel for /n/ and bare ⟨н⟩ for /ŋ/), and a nasal assimilates to a following velar or labial. The iotated letters ⟨е ё ю я⟩ write a palatal glide word-initially and after a vowel but palatalization of the preceding consonant after one; ⟨е⟩ is also the orthographic stand-in for iotated ö, hence /jɵ/. Both signs ⟨ь ъ⟩ are palatalization of the preceding consonant (⟨хорь⟩ [xɔrʲ], ⟨арьс⟩ [arʲs]). Before an iotated letter they are instead the separating signs of the Russian-derived spelling: they mark a syllable break that the iotated letter's own glide fills and contribute no segment of their own (⟨объект⟩ [ɔpjɵkʰtʰ], ⟨томьёо⟩ [tʰɔmjɔː], ⟨харьяалах⟩ [xarjaːɮax]). Svantesson does not treat the separating spellings, which occur in Russian loans; that reading is taken from the wikipron mon_cyrl_broad gold. Across the gold's 3563 entries, 38 words spell ⟨ь⟩ or ⟨ъ⟩ immediately before an iotated letter: 35 show a bare glide with no palatalization mark, one is palatalized (⟨харьяа⟩ [xarʲjaː], contradicted by its own derivative ⟨харьяалах⟩ [xarjaːɮax]), and two spell only a long vowel with no glide at all (⟨идье⟩ [itiː], ⟨оръё⟩ [ɔriː] — both voluntative forms; the spec predicts [itjɵ] and [ɔrjɔ] for these two, a known divergence). ⟨ь⟩ and ⟨ъ⟩ alternate freely in this position: the gold spells four words both ways with an identical transcription — ⟨объект⟩/⟨обьект⟩ both [ɔpjɵkʰtʰ], ⟨овъёос⟩/⟨овьёос⟩ both [ɔw̜jɔːs], ⟨авъяас⟩/⟨авьяас⟩ both [aw̜jaːs], ⟨Пёнъян⟩/⟨Пёньян⟩ both [pʰʲɔnjaŋ] — evidence that the sign here is a harmony-conditioned allograph rather than the Russian hard/soft contrast. The analysis holds on ⟨ь⟩ alone, without needing ⟨ъ⟩: of the 11 words that spell ⟨ь⟩ before an iotated letter, 9 show the bare glide, 1 is palatalized (⟨харьяа⟩), and 1 spells only the long vowel (⟨идье⟩). Orthographic non-initial short vowels are not phonemes: they are reduced schwas inserted where syllable structure demands one, and they are absent from the underlying form. Svantesson scopes this to NON-INITIAL syllables, and it depends on whether the surrounding cluster is a well-formed coda — a fact the spec cannot compute without a syllabifier the engine does not run for this spec. The spec therefore does not implement the reduction at all: every short vowel letter, medial or word-final, is transcribed with its full quality (⟨хана⟩ [xana], ⟨би⟩ [pi]), which also keeps a CV monosyllable's only vowel — a plain word-final rule would otherwise wrongly delete it, since that vowel sits in the word's initial, not a non-initial, syllable. ⟨ы⟩ has no ``word_final`` entry of its own in ``positional_graphemes``, unlike its sister short-vowel letters, but this is moot: none of them carry one either. Stress exemption: Khalkha word prominence is not contrastive and there is no agreement in the literature on its place, so no stress block is declared. Gold-convention mismatch (wikipron mon_cyrl_broad): that gold is a narrow phonetic transcription. It writes the weak velar as [k] word-initially — 239 of the 290 words that begin with ⟨г⟩ — but between vowels it mostly writes the fricative, 149 of the 222 words with an intervocalic ⟨г⟩, so on the lenition itself the gold agrees with the description rather than contradicting it. The gold also marks final sonorant devoicing ([r̥], [ɮ̥]), lowered [w̜] for ⟨в⟩, half-length, and the inserted schwa. Those are transcription depth, not disagreements about the phonology, and the spec does not imitate them.",
+  "sources": [
+    {
+      "id": "svantesson2003_khalkha",
+      "author": "Svantesson, Jan-Olof",
+      "year": 2003,
+      "title": "Khalkha",
+      "publisher": "In Juha Janhunen (ed.), The Mongolic Languages. London: Routledge",
+      "url": null,
+      "wikipedia_url": null,
+      "pages": null,
+      "notes": "Segmental phonemes, strong/weak laryngeal series, lateral fricative, pharyngeal vowel harmony, diphthongs, iotated letters and soft/hard sign, and the non-phonemic schwa of non-initial syllables."
+    },
+    {
+      "id": "mongolian_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Mongolian language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Mongolian_language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Mongolian_language",
+      "pages": null,
+      "notes": "Orientation only; every rule in this spec is stated from Svantesson (2003)."
+    }
+  ],
+  "parent": "xgn",
+  "ancestors": [
+    {
+      "code": "xgn",
+      "role": "parent",
+      "weight": 0.82,
+      "notes": "Descent from Proto-Mongolic (via Middle Mongol)."
+    },
+    {
+      "code": "bo",
+      "role": "adstrate",
+      "weight": 0.1,
+      "notes": "Tibetan adstrate: Buddhist religious vocabulary."
+    },
+    {
+      "code": "sa",
+      "role": "adstrate",
+      "weight": 0.05,
+      "notes": "Sanskrit adstrate: Buddhist learned terms via Tibetan."
+    },
+    {
+      "code": "zh",
+      "role": "adstrate",
+      "weight": 0.06,
+      "notes": "Chinese adstrate: areal and Inner-Mongolian loanwords."
+    },
+    {
+      "code": "ru",
+      "role": "adstrate",
+      "weight": 0.06,
+      "notes": "Russian adstrate: Soviet-era technical/administrative lexicon."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Mongolian_language",
+    "https://en.wikipedia.org/wiki/Mongolic_languages",
+    "https://mn.wikipedia.org/wiki/%D0%9C%D0%BE%D0%BD%D0%B3%D0%BE%D0%BB_%D1%85%D1%8D%D0%BB",
+    "https://mn.wikipedia.org/wiki/%D0%9C%D0%BE%D0%BD%D0%B3%D0%BE%D0%BB_%D1%85%D1%8D%D0%BB%D0%BD%D0%B8%D0%B9_%D1%8F%D0%B7%D0%B3%D1%83%D1%83%D1%80"
+  ],
+  "timespan": {
+    "start_year": 1941,
+    "end_year": null
+  },
+  "wikidata_qid": "Q9246",
+  "phoible_id": "halh1238",
+  "location": {
+    "latitude": 48.32397,
+    "longitude": 106.28874,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Halh Mongolian."
+  },
+  "positional_graphemes": {
+    "а": {
+      "word_initial": [
+        "a"
+      ],
+      "default": [
+        "a"
+      ]
+    },
+    "э": {
+      "word_initial": [
+        "e"
+      ],
+      "default": [
+        "e"
+      ]
+    },
+    "и": {
+      "word_initial": [
+        "i"
+      ],
+      "default": [
+        "i"
+      ]
+    },
+    "о": {
+      "word_initial": [
+        "ɔ"
+      ],
+      "default": [
+        "ɔ"
+      ]
+    },
+    "ө": {
+      "word_initial": [
+        "ɵ"
+      ],
+      "default": [
+        "ɵ"
+      ]
+    },
+    "у": {
+      "word_initial": [
+        "ʊ"
+      ],
+      "default": [
+        "ʊ"
+      ]
+    },
+    "ү": {
+      "word_initial": [
+        "u"
+      ],
+      "default": [
+        "u"
+      ]
+    },
+    "е": {
+      "after_consonant": [
+        "ʲɵ",
+        "ʲe"
+      ],
+      "default": [
+        "jɵ",
+        "je"
+      ]
+    },
+    "н": {
+      "word_final": [
+        "ŋ"
+      ],
+      "default": [
+        "n"
+      ]
+    },
+    "г": {
+      "intervocalic": [
+        "ɣ"
+      ],
+      "word_final": [
+        "k"
+      ],
+      "default": [
+        "ɡ"
+      ]
+    },
+    "ё": {
+      "after_consonant": [
+        "ʲɔ"
+      ],
+      "default": [
+        "jɔ"
+      ]
+    },
+    "ю": {
+      "after_consonant": [
+        "ʲʊ",
+        "ʲu"
+      ],
+      "default": [
+        "jʊ",
+        "ju"
+      ]
+    },
+    "я": {
+      "after_consonant": [
+        "ʲa"
+      ],
+      "default": [
+        "ja"
+      ]
+    },
+    "яа": {
+      "after_consonant": [
+        "ʲaː"
+      ],
+      "default": [
+        "jaː"
+      ]
+    },
+    "ёо": {
+      "after_consonant": [
+        "ʲɔː"
+      ],
+      "default": [
+        "jɔː"
+      ]
+    },
+    "юу": {
+      "after_consonant": [
+        "ʲʊː"
+      ],
+      "default": [
+        "jʊː"
+      ]
+    },
+    "юү": {
+      "after_consonant": [
+        "ʲuː"
+      ],
+      "default": [
+        "juː"
+      ]
+    },
+    "еэ": {
+      "after_consonant": [
+        "ʲeː"
+      ],
+      "default": [
+        "jeː"
+      ]
+    }
+  },
+  "allophone_rules": [
+    {
+      "id": "MN_N_VELAR_ASSIM",
+      "phonemes": [
+        "n"
+      ],
+      "surface": "ŋ",
+      "followed_by_phoneme": [
+        "ɡ",
+        "k",
+        "x",
+        "ɣ",
+        "kʰ"
+      ],
+      "notes": "Syllable-final ⟨н⟩ before a velar is the velar nasal /ŋ/: Svantesson (2003), 'Khalkha', in Janhunen (ed.) The Mongolic Languages, gives möngg [mɵŋɡ] 'silver' and myanggh [mjaŋɢ] 'thousand' as nasal+stop codas, and states that the n : ng contrast exists only in syllable-final position."
+    },
+    {
+      "id": "MN_N_LABIAL_ASSIM",
+      "phonemes": [
+        "n"
+      ],
+      "surface": "m",
+      "followed_by_phoneme": [
+        "p",
+        "pʰ",
+        "m",
+        "w"
+      ],
+      "notes": "Syllable-final ⟨н⟩ assimilates to a following labial. Svantesson (2003), 'Khalkha', in Janhunen (ed.) The Mongolic Languages, lists nasal + stop as a permitted coda type and all his examples are homorganic (xünd [xunt], möngg [mɵŋɡ], myanggh)."
+    },
+    {
+      "id": "MN_WEAK_VELAR_DEVOICE",
+      "phonemes": [
+        "ɡ"
+      ],
+      "surface": "k",
+      "followed_by_phoneme": [
+        "pʰ",
+        "tʰ",
+        "tsʰ",
+        "tɕʰ",
+        "kʰ",
+        "p",
+        "t",
+        "ts",
+        "tɕ",
+        "s",
+        "ɕ",
+        "x"
+      ],
+      "notes": "The weak velar is phonetically voiceless before a voiceless consonant: Svantesson (2003), 'Khalkha', in Janhunen (ed.) The Mongolic Languages — the weak velars 'can be phonetically voiceless [k] word-finally and before a voiceless consonant. In other positions, they are phonetically voiced.' The strong series ⟨п т ц ч к⟩ [pʰ tʰ tsʰ tɕʰ kʰ] and the weak series ⟨б д з ж⟩ [p t ts tɕ] are both voiceless — the same source calls the weak series 'plain voiceless unaspirated sounds' — so the trigger set covers both: bügd [pukt] is Svantesson's own example of the weak velar devoicing before the weak ⟨д⟩ [t]."
+    }
+  ]
+}

@@ -1,0 +1,115 @@
+{
+  "code": "vot",
+  "name": "Votic",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "iso639_3": "vot",
+  "glottolog_code": "voti1245",
+  "wikidata_qid": "Q32858",
+  "graphemes_base": "fi",
+  "graphemes": {
+    "š": [
+      "ʃ"
+    ],
+    "ž": [
+      "ʒ"
+    ],
+    "č": [
+      "t͡ʃ"
+    ],
+    "z": [
+      "z"
+    ],
+    "v": [
+      "v"
+    ],
+    "w": [
+      "v"
+    ],
+    "õ": [
+      "ɤ"
+    ],
+    "õõ": [
+      "ɤː"
+    ],
+    "ü": [
+      "y"
+    ],
+    "üü": [
+      "yː"
+    ],
+    "šš": [
+      "ʃː"
+    ],
+    "žž": [
+      "ʒː"
+    ],
+    "čč": [
+      "t͡ʃː"
+    ]
+  },
+  "allophones_base": "fi",
+  "allophones": {
+    "ʃ": [
+      "ʃ"
+    ],
+    "ʒ": [
+      "ʒ"
+    ],
+    "t͡ʃ": [
+      "t͡ʃ"
+    ],
+    "z": [
+      "z"
+    ],
+    "ɤ": [
+      "ɤ"
+    ],
+    "v": [
+      "v"
+    ]
+  },
+  "notes": "Votic (vaďďa tšeeli), a Finnic (Uralic) language of Ingria, closely related to Estonian and Ingrian. The Latin orthography used for it follows the Finnic pattern: vowel letters a e i o u y ä ö plus ⟨õ⟩ /ɤ/ (an unrounded back/central vowel shared with Estonian) and ⟨ü⟩ /y/, doubled for phonemic length; consonants as in Finnish plus ⟨š⟩ /ʃ/, ⟨ž⟩ /ʒ/, ⟨č⟩ /t͡ʃ/ and ⟨z⟩ /z/, with ⟨v⟩ realised as the labiodental /v/ (unlike the Finnish approximant /ʋ/). Consonant length is written by doubling. Like the other Finnic languages of the area, Votic has a phonemic palatalised consonant series and palatal /ʎ ɲ ʑ/ that surface as narrow diacritics and are not resolved from the plain orthography here, so palatalisation is under-generated. Diphthong offglides are written plain. Vowel/consonant inventory and the doubled-length convention follow the Finnish base.",
+  "sources": [
+    {
+      "id": "votic_language_wikipedia",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Votic language — Phonology and Orthography",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Votic_language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Votic_language",
+      "pages": null,
+      "notes": "Vowel inventory including /ɤ/ (õ) and /y/ (ü), the sibilant/affricate series /ʃ ʒ tʃ/, phonemic quantity and palatalisation."
+    },
+    {
+      "id": "abondolo1998",
+      "author": "Abondolo, D. (ed.)",
+      "year": 1998,
+      "title": "The Uralic Languages",
+      "publisher": "Routledge",
+      "url": null,
+      "pages": null,
+      "notes": "Finnic phonology reference."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Votic_language"
+  ],
+  "parent": "x-clade-finn1317",
+  "ancestors": [
+    {
+      "code": "x-clade-finn1317",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Finnic — the classification node this language sits under."
+    }
+  ],
+  "location": {
+    "latitude": 59.6,
+    "longitude": 28.4,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Votic."
+  }
+}

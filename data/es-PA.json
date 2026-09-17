@@ -1,0 +1,144 @@
+{
+  "code": "es-PA",
+  "name": "Panamanian Spanish",
+  "script": "Latin",
+  "graphemes_base": "es-ES",
+  "graphemes": {
+    "c": [
+      "k",
+      "s"
+    ],
+    "z": [
+      "s"
+    ],
+    "ll": [
+      "ʝ"
+    ]
+  },
+  "allophones_base": "es-ES",
+  "allophones": {
+    "d": [
+      "d",
+      "ð",
+      ""
+    ],
+    "s": [
+      "s",
+      "h",
+      ""
+    ],
+    "x": [
+      "h"
+    ],
+    "ʝ": [
+      "ʝ",
+      "ɟʝ"
+    ],
+    "n": [
+      "n",
+      "ŋ"
+    ],
+    "l": [
+      "l",
+      "ɾ",
+      "j"
+    ],
+    "ɾ": [
+      "ɾ",
+      "l"
+    ]
+  },
+  "positional_graphemes_base": "es-ES",
+  "positional_graphemes": {
+    "d": {
+      "default": [
+        "d"
+      ],
+      "intervocalic": [
+        "ð",
+        ""
+      ],
+      "word_final": [
+        ""
+      ]
+    },
+    "s": {
+      "word_initial": [
+        "s"
+      ],
+      "intervocalic": [
+        "s"
+      ],
+      "before_consonant": [
+        "h",
+        ""
+      ],
+      "word_final": [
+        "h",
+        ""
+      ]
+    },
+    "n": {
+      "default": [
+        "n"
+      ],
+      "word_final": [
+        "ŋ"
+      ]
+    }
+  },
+  "parent": "es-ES",
+  "notes": "Panamanian Spanish. Caribbean type: aspiration, /x/ → [h], final [ŋ], -d deletion. Canal Zone English contact influence. Transitional between Central American and Caribbean.",
+  "quality": "research",
+  "script_type": "alphabet",
+  "sources": [
+    {
+      "id": "hualde2005",
+      "author": "Hualde, J.I.",
+      "year": 2005,
+      "title": "The Sounds of Spanish",
+      "publisher": "Cambridge University Press",
+      "url": null,
+      "pages": null,
+      "notes": null,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Spanish_phonology"
+    },
+    {
+      "id": "fontanella_de_weinberg1992",
+      "author": "Fontanella de Weinberg, M.B.",
+      "year": 1992,
+      "title": "El español de América",
+      "publisher": "MAPFRE",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "penny2002",
+      "author": "Penny, R.",
+      "year": 2002,
+      "title": "A History of the Spanish Language",
+      "publisher": "Cambridge University Press",
+      "url": null,
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Panamanian_Spanish",
+    "https://es.wikipedia.org/wiki/Espa%C3%B1ol_paname%C3%B1o"
+  ],
+  "timespan": {
+    "start_year": 1700,
+    "end_year": null
+  },
+  "glottolog_code": null,
+  "iso639_3": "spa",
+  "wikidata_qid": "Q2691385",
+  "location": {
+    "latitude": 8.971111,
+    "longitude": -79.534722,
+    "source": "wikidata",
+    "notes": "Panama City. A national variety: the capital stands in for the country. [Wikidata Q3306 P625]"
+  }
+}

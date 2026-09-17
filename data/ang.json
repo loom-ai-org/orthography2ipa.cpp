@@ -1,0 +1,377 @@
+{
+  "code": "ang",
+  "name": "Old English (Anglo-Saxon)",
+  "script": "Latin",
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "æ": [
+      "æ"
+    ],
+    "e": [
+      "e"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "o"
+    ],
+    "u": [
+      "u"
+    ],
+    "y": [
+      "y"
+    ],
+    "ā": [
+      "aː"
+    ],
+    "ǣ": [
+      "æː"
+    ],
+    "ē": [
+      "eː"
+    ],
+    "ī": [
+      "iː"
+    ],
+    "ō": [
+      "oː"
+    ],
+    "ū": [
+      "uː"
+    ],
+    "ȳ": [
+      "yː"
+    ],
+    "ea": [
+      "æɑ"
+    ],
+    "eo": [
+      "eo"
+    ],
+    "ie": [
+      "ie"
+    ],
+    "ēa": [
+      "æːɑ"
+    ],
+    "ēo": [
+      "eːo"
+    ],
+    "īe": [
+      "iːe"
+    ],
+    "p": [
+      "p"
+    ],
+    "t": [
+      "t"
+    ],
+    "k": [
+      "k"
+    ],
+    "c": [
+      "k",
+      "tʃ"
+    ],
+    "cg": [
+      "dʒ"
+    ],
+    "b": [
+      "b"
+    ],
+    "d": [
+      "d"
+    ],
+    "g": [
+      "ɡ",
+      "j",
+      "ɣ"
+    ],
+    "sc": [
+      "ʃ"
+    ],
+    "f": [
+      "f",
+      "v"
+    ],
+    "þ": [
+      "θ",
+      "ð"
+    ],
+    "ð": [
+      "ð",
+      "θ"
+    ],
+    "s": [
+      "s",
+      "z"
+    ],
+    "h": [
+      "h",
+      "x",
+      "ç"
+    ],
+    "r": [
+      "r"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ng": [
+      "ŋɡ",
+      "ŋ"
+    ],
+    "nk": [
+      "ŋk"
+    ],
+    "w": [
+      "w"
+    ],
+    "j": [
+      "j"
+    ],
+    "pp": [
+      "pː"
+    ],
+    "tt": [
+      "tː"
+    ],
+    "cc": [
+      "kː"
+    ],
+    "bb": [
+      "bː"
+    ],
+    "dd": [
+      "dː"
+    ],
+    "gg": [
+      "ɡː"
+    ],
+    "ff": [
+      "fː"
+    ],
+    "þþ": [
+      "θː"
+    ],
+    "ss": [
+      "sː"
+    ],
+    "ll": [
+      "lː"
+    ],
+    "mm": [
+      "mː"
+    ],
+    "nn": [
+      "nː"
+    ],
+    "rr": [
+      "rː"
+    ]
+  },
+  "allophones": {
+    "p": [
+      "p"
+    ],
+    "t": [
+      "t"
+    ],
+    "k": [
+      "k"
+    ],
+    "b": [
+      "b"
+    ],
+    "d": [
+      "d"
+    ],
+    "ɡ": [
+      "ɡ",
+      "ɣ",
+      "j"
+    ],
+    "tʃ": [
+      "tʃ"
+    ],
+    "dʒ": [
+      "dʒ"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "f": [
+      "f",
+      "v"
+    ],
+    "θ": [
+      "θ",
+      "ð"
+    ],
+    "s": [
+      "s",
+      "z"
+    ],
+    "h": [
+      "h",
+      "x",
+      "ç"
+    ],
+    "r": [
+      "r"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ŋ": [
+      "ŋ"
+    ],
+    "w": [
+      "w"
+    ],
+    "j": [
+      "j"
+    ],
+    "a": [
+      "a"
+    ],
+    "æ": [
+      "æ"
+    ],
+    "e": [
+      "e"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "o"
+    ],
+    "u": [
+      "u"
+    ],
+    "y": [
+      "y"
+    ],
+    "aː": [
+      "aː"
+    ],
+    "æː": [
+      "æː"
+    ],
+    "eː": [
+      "eː"
+    ],
+    "iː": [
+      "iː"
+    ],
+    "oː": [
+      "oː"
+    ],
+    "uː": [
+      "uː"
+    ],
+    "yː": [
+      "yː"
+    ],
+    "æɑ": [
+      "æɑ"
+    ],
+    "eo": [
+      "eo"
+    ],
+    "ie": [
+      "ie"
+    ],
+    "æːɑ": [
+      "æːɑ"
+    ],
+    "eːo": [
+      "eːo"
+    ],
+    "iːe": [
+      "iːe"
+    ]
+  },
+  "parent": "gem-x-ingvaeonic",
+  "ancestors": [
+    {
+      "code": "gem-x-ingvaeonic",
+      "role": "parent",
+      "weight": 0.95,
+      "notes": "Ingvaeonic / Anglo-Frisian base"
+    },
+    {
+      "code": "non",
+      "role": "adstrate",
+      "weight": 0.05,
+      "notes": "Old Norse adstrate from Danelaw (~865–1013 CE): heavy lexical borrowing (sky, they, take, give, etc.); phonological influence in northern dialects"
+    }
+  ],
+  "notes": "Old English / Anglo-Saxon (~450–1150 CE). West Saxon literary standard; 4 dialects: West Saxon, Northumbrian, Mercian, Kentish. KEY FEATURES: Breaking (ea, eo diphthongs before -rC, -lC, -h); i-umlaut (mann/menn); Ingvaeonic nasal spirant law (mūþ, fīf, ūs); Palatalisation: *k→[tʃ] / ⟨c⟩ before front V (cild 'child'); *g→[j] before front V (gear 'year'); ⟨sc⟩ = /ʃ/ (scip 'ship'); ⟨cg⟩ = /dʒ/ (ecg 'edge'); ⟨f⟩ = [v] between voiced sounds. Primary texts: Beowulf, Anglo-Saxon Chronicle, Ælfric's Homilies. Source: Campbell (1959), Hogg (1992).",
+  "quality": "research",
+  "script_type": "alphabet",
+  "iso639_3": "ang",
+  "sources": [
+    {
+      "id": "hogg1992",
+      "author": "Hogg, R.M.",
+      "year": 1992,
+      "title": "A Grammar of Old English, Vol. 1: Phonology",
+      "publisher": "Blackwell",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "campbell1959",
+      "author": "Campbell, A.",
+      "year": 1959,
+      "title": "Old English Grammar",
+      "publisher": "Oxford University Press",
+      "url": null,
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Old_English",
+    "https://en.wikipedia.org/wiki/Old_English_phonology",
+    "https://ang.wikipedia.org/wiki/%C3%86nglis%C4%8B_spr%C7%A3%C4%8B"
+  ],
+  "urls": [
+    "https://en.wikipedia.org/wiki/Old_English",
+    "https://en.wikipedia.org/wiki/Old_English_phonology",
+    "https://en.wikipedia.org/wiki/Anglo-Frisian_languages",
+    "https://en.wikipedia.org/wiki/Ingvaeonic_languages",
+    "https://en.wikipedia.org/wiki/Old_English_grammar",
+    "https://de.wikipedia.org/wiki/Altenglische_Sprache"
+  ],
+  "timespan": {
+    "start_year": 450,
+    "end_year": 1150
+  },
+  "glottolog_code": "olde1238",
+  "wikidata_qid": "Q42365",
+  "location": {
+    "latitude": 51.06,
+    "longitude": -1.31,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Old English (ca. 450-1100)."
+  }
+}

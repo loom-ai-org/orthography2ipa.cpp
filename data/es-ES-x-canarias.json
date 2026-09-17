@@ -1,0 +1,128 @@
+{
+  "code": "es-ES-x-canarias",
+  "name": "Canarian Spanish",
+  "script": "Latin",
+  "graphemes_base": "es-ES",
+  "graphemes": {
+    "c": [
+      "k",
+      "s"
+    ],
+    "s": [
+      "s",
+      "h"
+    ],
+    "z": [
+      "s"
+    ],
+    "ll": [
+      "ʝ"
+    ]
+  },
+  "allophones_base": "es-ES",
+  "allophones": {
+    "d": [
+      "d",
+      "ð",
+      ""
+    ],
+    "s": [
+      "s",
+      "h"
+    ],
+    "ʎ": [
+      "ʝ"
+    ]
+  },
+  "positional_graphemes_base": "es-ES",
+  "positional_graphemes": {
+    "s": {
+      "word_initial": [
+        "s"
+      ],
+      "intervocalic": [
+        "s"
+      ],
+      "before_consonant": [
+        "h",
+        "s"
+      ],
+      "word_final": [
+        "h"
+      ]
+    },
+    "c": {
+      "before_e": [
+        "s"
+      ],
+      "before_i": [
+        "s"
+      ]
+    }
+  },
+  "allophone_rules": [
+    {
+      "id": "CANARIAS_X_TO_H",
+      "phonemes": [
+        "x"
+      ],
+      "surface": "h",
+      "notes": "Canarian /x/ (⟨j⟩ and ⟨g⟩ before front vowel) is a glottal/pharyngeal aspirate [h], never the Castilian velar [x] — a defining Atlantic feature shared with Andalusian and Caribbean Spanish: cojo [ˈkoho], trabajo [tɾaˈβaho], coge [ˈkohe] (Hualde 2005, The Sounds of Spanish, ch. on Canarian and Caribbean varieties; Zamora Vicente 1960, Dialectología española §El español de Canarias). Only the /x/ phoneme is rewritten; intervocalic /ɡ/→[ɣ] (which is a different phoneme) is untouched."
+    }
+  ],
+  "parent": "es-ES",
+  "notes": "Canarian Spanish (Islas Canarias). Systematic seseo (no /θ/), yeísmo, coda /s/ aspiration (less extreme than Andalusian), partial /x/ aspiration. Strong historical connections to Andalusian and Caribbean Spanish. Conservative affricate [tʃ] preservation. -d deletion in participial -ado.",
+  "quality": "research",
+  "script_type": "alphabet",
+  "sources": [
+    {
+      "id": "hualde2005",
+      "author": "Hualde, J.I.",
+      "year": 2005,
+      "title": "The Sounds of Spanish",
+      "publisher": "Cambridge University Press",
+      "url": null,
+      "pages": null,
+      "notes": null,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Spanish_phonology"
+    },
+    {
+      "id": "penny2002",
+      "author": "Penny, R.",
+      "year": 2002,
+      "title": "A History of the Spanish Language",
+      "publisher": "Cambridge University Press",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "zamora_vicente1960",
+      "author": "Zamora Vicente, A.",
+      "year": 1960,
+      "title": "Dialectología española",
+      "publisher": "Gredos",
+      "url": null,
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Canarian_Spanish",
+    "https://es.wikipedia.org/wiki/Dialecto_canario"
+  ],
+  "timespan": {
+    "start_year": 1500,
+    "end_year": null
+  },
+  "glottolog_code": "cana1269",
+  "iso639_3": "spa",
+  "wikidata_qid": "Q957764",
+  "wals_code": "spc",
+  "location": {
+    "latitude": 28,
+    "longitude": -15.75,
+    "source": "wikidata",
+    "notes": "the Canary Islands — the archipelago the variety is spoken in. [Wikidata Q5813 P625]"
+  }
+}

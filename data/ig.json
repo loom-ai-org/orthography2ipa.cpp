@@ -1,0 +1,264 @@
+{
+  "code": "ig",
+  "name": "Igbo",
+  "glottolog_code": "nucl1417",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "iso639_3": "ibo",
+  "quality": "skeleton",
+  "tone_inventory": {
+    "◌́": "high",
+    "◌̀": "low",
+    "◌̄": "mid"
+  },
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "b": [
+      "b"
+    ],
+    "ch": [
+      "tʃ"
+    ],
+    "d": [
+      "d"
+    ],
+    "e": [
+      "e"
+    ],
+    "ị": [
+      "ɪ"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "gb": [
+      "ɡ͡b"
+    ],
+    "gh": [
+      "ɣ"
+    ],
+    "gw": [
+      "ɡʷ"
+    ],
+    "h": [
+      "h"
+    ],
+    "i": [
+      "i"
+    ],
+    "j": [
+      "dʒ"
+    ],
+    "k": [
+      "k"
+    ],
+    "kp": [
+      "k͡p"
+    ],
+    "kw": [
+      "kʷ"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ṅ": [
+      "ŋ"
+    ],
+    "nw": [
+      "nʷ"
+    ],
+    "ny": [
+      "ɲ"
+    ],
+    "o": [
+      "o"
+    ],
+    "ọ": [
+      "ɔ"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "sh": [
+      "ʃ"
+    ],
+    "t": [
+      "t"
+    ],
+    "u": [
+      "u"
+    ],
+    "ụ": [
+      "ʊ"
+    ],
+    "w": [
+      "w"
+    ],
+    "y": [
+      "j"
+    ],
+    "z": [
+      "z"
+    ]
+  },
+  "allophones": {
+    "a": [
+      "a"
+    ],
+    "b": [
+      "b"
+    ],
+    "tʃ": [
+      "tʃ"
+    ],
+    "d": [
+      "d"
+    ],
+    "e": [
+      "e"
+    ],
+    "ɪ": [
+      "ɪ"
+    ],
+    "f": [
+      "f"
+    ],
+    "ɡ": [
+      "ɡ"
+    ],
+    "ɡ͡b": [
+      "ɡ͡b"
+    ],
+    "ɣ": [
+      "ɣ"
+    ],
+    "i": [
+      "i"
+    ],
+    "dʒ": [
+      "dʒ"
+    ],
+    "k": [
+      "k"
+    ],
+    "k͡p": [
+      "k͡p"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ŋ": [
+      "ŋ"
+    ],
+    "ɲ": [
+      "ɲ"
+    ],
+    "o": [
+      "o"
+    ],
+    "ɔ": [
+      "ɔ"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "t": [
+      "t"
+    ],
+    "u": [
+      "u"
+    ],
+    "ʊ": [
+      "ʊ"
+    ],
+    "w": [
+      "w"
+    ],
+    "j": [
+      "j"
+    ],
+    "z": [
+      "z"
+    ]
+  },
+  "notes": "Standard Igbo. Two series of vowels (ATR harmony). Labial-velar stops: KP = /k͡p/, GB = /ɡ͡b/. Dotted vowels Ị/Ọ/Ụ = lax counterparts. 2-tone (high/low) with downstep.",
+  "sources": [
+    {
+      "id": "igbo_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Igbo language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Igbo_language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Igbo_language",
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "parent": "nic",
+  "ancestors": [
+    {
+      "code": "nic",
+      "role": "parent",
+      "weight": 0.82,
+      "notes": "Volta-Niger (Igboid) branch of Niger-Congo."
+    },
+    {
+      "code": "en-GB",
+      "role": "adstrate",
+      "weight": 0.07,
+      "notes": "English adstrate: colonial and modern loanwords (Nigeria)."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Igbo_language",
+    "https://en.wikipedia.org/wiki/Volta%E2%80%93Niger_languages",
+    "https://ig.wikipedia.org/wiki/As%E1%BB%A5%CC%80s%E1%BB%A5%CC%80_%C3%8Cgb%C3%B2",
+    "https://ig.wikipedia.org/wiki/As%E1%BB%A5s%E1%BB%A5_Volta-Niger"
+  ],
+  "timespan": {
+    "start_year": 1900,
+    "end_year": null
+  },
+  "wikidata_qid": "Q33578",
+  "phoible_id": "nucl1417",
+  "wals_code": "igb",
+  "location": {
+    "latitude": 4.62705,
+    "longitude": 7.23441,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Igbo."
+  }
+}

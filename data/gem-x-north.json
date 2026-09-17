@@ -1,0 +1,265 @@
+{
+  "code": "gem-x-north",
+  "name": "Proto-North Germanic (Proto-Norse)",
+  "script": "IPA-reconstruction",
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "e": [
+      "e"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "o"
+    ],
+    "u": [
+      "u"
+    ],
+    "y": [
+      "y"
+    ],
+    "ø": [
+      "ø"
+    ],
+    "æ": [
+      "æ"
+    ],
+    "ā": [
+      "aː"
+    ],
+    "ē": [
+      "eː"
+    ],
+    "ī": [
+      "iː"
+    ],
+    "ō": [
+      "oː"
+    ],
+    "ū": [
+      "uː"
+    ],
+    "ȳ": [
+      "yː"
+    ],
+    "ei": [
+      "ej"
+    ],
+    "au": [
+      "ɑu"
+    ],
+    "øy": [
+      "øy"
+    ],
+    "p": [
+      "p"
+    ],
+    "t": [
+      "t"
+    ],
+    "k": [
+      "k"
+    ],
+    "b": [
+      "b"
+    ],
+    "d": [
+      "d"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "f": [
+      "f"
+    ],
+    "þ": [
+      "θ"
+    ],
+    "ð": [
+      "ð"
+    ],
+    "s": [
+      "s"
+    ],
+    "h": [
+      "h"
+    ],
+    "r": [
+      "r"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "w": [
+      "w"
+    ],
+    "j": [
+      "j"
+    ],
+    "ŋ": [
+      "ŋ"
+    ]
+  },
+  "allophones": {
+    "p": [
+      "p"
+    ],
+    "t": [
+      "t"
+    ],
+    "k": [
+      "k"
+    ],
+    "b": [
+      "b",
+      "β"
+    ],
+    "d": [
+      "d",
+      "ð"
+    ],
+    "ɡ": [
+      "ɡ",
+      "ɣ"
+    ],
+    "f": [
+      "f"
+    ],
+    "θ": [
+      "θ",
+      "ð"
+    ],
+    "s": [
+      "s"
+    ],
+    "h": [
+      "h",
+      "x"
+    ],
+    "r": [
+      "r"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ŋ": [
+      "ŋ"
+    ],
+    "w": [
+      "w"
+    ],
+    "j": [
+      "j"
+    ],
+    "y": [
+      "y"
+    ],
+    "ø": [
+      "ø"
+    ],
+    "æ": [
+      "æ"
+    ],
+    "a": [
+      "a"
+    ],
+    "e": [
+      "e"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "o"
+    ],
+    "u": [
+      "u"
+    ],
+    "aː": [
+      "aː"
+    ],
+    "eː": [
+      "eː"
+    ],
+    "iː": [
+      "iː"
+    ],
+    "oː": [
+      "oː"
+    ],
+    "uː": [
+      "uː"
+    ],
+    "yː": [
+      "yː"
+    ],
+    "øː": [
+      "øː"
+    ]
+  },
+  "parent": "x-clade-nort3160",
+  "ancestors": [
+    {
+      "code": "gem-x-northwest",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Descent from Proto-Northwest Germanic"
+    }
+  ],
+  "notes": "Proto-North Germanic / Proto-Norse (~200–700 CE). Ancestor of Old Norse and all Scandinavian languages. Attested through Elder Futhark runic inscriptions (~150–800 CE). KEY INNOVATIONS vs. West Germanic: (1) I-UMLAUT: systematic front vowels y, ø, æ from back vowels; (2) SYNCOPE: aggressive loss of unstressed syllables; (3) Definite suffix *-inn/*-in (suffixed article — unique to North Gmc); (4) Loss of PGmc *-a in nominative singular: *dagaz → dagr; (5) Rhotacism complete. Source: Nielsen (2000), Gordon (1957).",
+  "quality": "research",
+  "script_type": "reconstruction",
+  "sources": [
+    {
+      "id": "fortson2010",
+      "author": "Fortson IV, B.W.",
+      "year": 2010,
+      "title": "Indo-European Language and Culture: An Introduction (2nd ed.)",
+      "publisher": "Wiley-Blackwell",
+      "url": null,
+      "pages": null,
+      "notes": null,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Indo-European_languages"
+    },
+    {
+      "id": "ringe2006",
+      "author": "Ringe, D.",
+      "year": 2006,
+      "title": "From Proto-Indo-European to Proto-Germanic",
+      "publisher": "Oxford University Press",
+      "url": null,
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/North_Germanic_languages"
+  ],
+  "timespan": {
+    "start_year": 200,
+    "end_year": 800
+  },
+  "glottolog_code": "nort3160",
+  "wikidata_qid": "Q106085",
+  "location": {
+    "latitude": 59.150177,
+    "longitude": 11.26358,
+    "source": "glottolog",
+    "notes": "Glottolog's computed centroid for the North Germanic family — a summary of a whole clade's range, not a place anyone speaks."
+  }
+}

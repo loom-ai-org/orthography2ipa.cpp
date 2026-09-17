@@ -1,0 +1,199 @@
+{
+  "code": "nqo",
+  "name": "N'Ko (Manding koiné)",
+  "script": "N'Ko",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "ߊ": [
+      "a"
+    ],
+    "ߋ": [
+      "e"
+    ],
+    "ߌ": [
+      "i"
+    ],
+    "ߍ": [
+      "ɛ"
+    ],
+    "ߎ": [
+      "u"
+    ],
+    "ߏ": [
+      "o"
+    ],
+    "ߐ": [
+      "ɔ"
+    ],
+    "ߒ": [
+      "ŋ"
+    ],
+    "ߓ": [
+      "b"
+    ],
+    "ߔ": [
+      "p"
+    ],
+    "ߕ": [
+      "t"
+    ],
+    "ߖ": [
+      "dʒ"
+    ],
+    "ߗ": [
+      "tʃ"
+    ],
+    "ߘ": [
+      "d"
+    ],
+    "ߙ": [
+      "r",
+      "ɾ"
+    ],
+    "ߚ": [
+      "r"
+    ],
+    "ߛ": [
+      "s"
+    ],
+    "ߜ": [
+      "ɡb"
+    ],
+    "ߝ": [
+      "f"
+    ],
+    "ߞ": [
+      "k"
+    ],
+    "ߟ": [
+      "l"
+    ],
+    "ߠ": [
+      "n"
+    ],
+    "ߡ": [
+      "m"
+    ],
+    "ߢ": [
+      "ɲ"
+    ],
+    "ߣ": [
+      "n"
+    ],
+    "ߤ": [
+      "h"
+    ],
+    "ߥ": [
+      "w"
+    ],
+    "ߦ": [
+      "j"
+    ],
+    "ߧ": [
+      "ɲ"
+    ],
+    "ߑ": [
+      ""
+    ],
+    "߫": [
+      "˥"
+    ],
+    "߬": [
+      "˩"
+    ],
+    "߭": [
+      "˩˥"
+    ],
+    "߮": [
+      "ː˥˩"
+    ],
+    "߯": [
+      "ː˥"
+    ],
+    "߰": [
+      "ː˩"
+    ],
+    "߱": [
+      "ː˩˥"
+    ],
+    "߲": [
+      "̃"
+    ],
+    "ߴ": [
+      ""
+    ],
+    "ߵ": [
+      ""
+    ]
+  },
+  "allophones": {},
+  "notes": "N'Ko (ߒߞߏ), the Manding literary koiné written in the N'Ko script devised by Solomana Kanté in 1949. INPUT CONTRACT: native N'Ko-script text (Unicode block U+07C0..U+07FF, NFC), written RIGHT-TO-LEFT; no romanisation is accepted. N'Ko is an ALPHABET (not an abjad or abugida): seven vowel letters (ߊ ߋ ߌ ߍ ߎ ߏ ߐ) and nineteen consonant letters are written in full, plus combining diacritics. Tone and vowel length are written with seven combining marks (U+07EB..U+07F1): they are mapped to IPA tone letters (and ː for the long series) rather than to segments; an unmarked vowel is short with a falling tone. U+07F2 (nasalisation) maps to a combining tilde. ߑ DAGBASINNA is a silent letter marking the absence of a vowel in a consonant cluster and maps to the empty string. LEFT OUT ON PURPOSE: U+07F3 (double dot above) and the JONA letters ߨ ߩ ߪ, which modify a base letter for non-native sounds in loans — their value depends on the base letter and no single segmental value can be assigned.",
+  "iso639_3": "nqo",
+  "glottolog_code": "nkoa1234",
+  "wikidata_qid": "Q18546266",
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/N%27Ko_language",
+    "https://nqo.wikipedia.org/wiki/%DF%92%DF%9E%DF%8F_%28%DF%9E%DF%8A%DF%B2%29",
+    "https://en.wikipedia.org/wiki/N%27Ko_script"
+  ],
+  "sources": [
+    {
+      "id": "n'ko_script_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "N'Ko script",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/N%27Ko_script",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/N%27Ko_script",
+      "pages": null,
+      "notes": "Orthography / phonology reference."
+    },
+    {
+      "id": "n'ko_language_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "N'Ko language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/N%27Ko_language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/N%27Ko_language",
+      "pages": null,
+      "notes": "Orthography / phonology reference."
+    },
+    {
+      "id": "unicode_nko_ch19",
+      "author": "The Unicode Consortium",
+      "year": 2024,
+      "title": "The Unicode Standard, Version 16.0 — Chapter 19: African Scripts (§ N'Ko)",
+      "publisher": "Unicode Consortium",
+      "url": "https://www.unicode.org/versions/Unicode16.0.0/core-spec/chapter-19/",
+      "wikipedia_url": null,
+      "pages": null,
+      "notes": "Character semantics: combining tone marks, the nasalisation mark, DAGBASINNA as a silent letter, and the tone apostrophes."
+    },
+    {
+      "id": "doumbouya2012",
+      "author": "Doumbouya, Mamady",
+      "year": 2012,
+      "title": "Illustrated English/N'Ko Alphabet: An Introduction to N'Ko for English Speakers",
+      "publisher": "N'Ko Institute of America",
+      "url": "http://cormand.huma-num.fr/maninkabiblio/ouvrages/dunbuya-angile_nko.pdf",
+      "wikipedia_url": null,
+      "pages": "29",
+      "notes": "Letter inventory, and the diacritic modifications used for non-native sounds in loanwords."
+    }
+  ],
+  "timespan": {
+    "start_year": 1949,
+    "end_year": null
+  },
+  "parent": "x-clade-mand1469",
+  "ancestors": [
+    {
+      "code": "x-clade-mand1469",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Mande — the classification node this language sits under."
+    }
+  ]
+}

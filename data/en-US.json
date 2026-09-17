@@ -1,0 +1,455 @@
+{
+  "code": "en-US",
+  "name": "American English (General American)",
+  "script": "Latin",
+  "graphemes_base": "en-GB",
+  "allophones_base": "en-GB",
+  "grammatical_endings_base": "en-GB",
+  "allophones": {
+    "t": [
+      "t",
+      "tʰ",
+      "ɾ",
+      "ʔ",
+      "t̚"
+    ],
+    "ɹ": [
+      "ɹ"
+    ],
+    "l": [
+      "ɫ",
+      "l"
+    ],
+    "ɛ": [
+      "ɛ",
+      "ɪ"
+    ],
+    "æ": [
+      "æ",
+      "eə"
+    ],
+    "ɒ": [
+      "ɑː"
+    ],
+    "ɔː": [
+      "ɑː",
+      "ɔː"
+    ],
+    "oʊ": [
+      "oʊ",
+      "əʊ"
+    ]
+  },
+  "parent": "en-GB",
+  "ancestors": [
+    {
+      "code": "enm",
+      "role": "parent",
+      "weight": 0.93,
+      "notes": "Middle English descent via colonial English"
+    }
+  ],
+  "notes": "General American (GA) — reference accent for US media/education. RHOTIC: /r/ preserved in all positions. No TRAP-BATH split (bath words = /æ/). LOT-PALM merger: /ɑ/ for both (written without the length mark — see BROAD BY DECLARATION and the no-length-marks paragraph below). T-FLAPPING: /t/ → [ɾ] between vowels (butter, water, city) — an ALLOPHONIC process, declared in `allophones` and deliberately not in the default broad output; see BROAD BY DECLARATION below. Source: Wells (1982) vol. 3, Ladefoged & Johnson (2011). FLAPPING: /t/ and /d/ → [ɾ] intervocalically in unstressed syllables (butter, ladder, city). RHOTIC: fully rhotic — /r/ preserved in all positions. GA GOAT is /oʊ/, not the RP /əʊ/ this spec's parent declares (Wells 1982 vol.3 §6.1.4). The RP coda-/r/ deletion this spec inherits is re-declared with no target phonemes (Wells 1982 vol.3 §6.1; Ladefoged & Johnson 2011) — the id-keyed way a dialect states it lacks a parent's process. SUFFIX PALATALIZATION, RHOTIC COLUMN: the three yod-coalescing suffixes this spec inherits end in a coda /r/ that GA keeps, so each is re-declared with the r-coloured schwa [ɚ] in place of the RP [ə]. ENDING \"ture\" is [tʃɚ] (nature, picture, feature) — the coalesced coronal plus GA r-coloured schwa (Wells 2008 LPD; Wells 1982 vol 3 §6.1). ENDING \"sure\" is [ʒɚ] (measure, closure, leisure) — the same, with the voiced coronal (Wells 2008 LPD; Wells 1982 vol 3 §6.1). ENDING \"ssure\" is [ʃɚ] (pressure, fissure) — the same after the voiceless ⟨ss⟩, which longest-match-wins picks over ⟨-sure⟩ (Wells 2008 LPD; Wells 1982 vol 3 §6.1). BROAD BY DECLARATION: the default transcription is PHONEMIC. T/D-FLAPPING and word-initial aspiration are sub-phonemic realisations of /t/ and /d/ (Wells 1982 vol.3 §6.1.5 on the GA tapped /t/; Kretzschmar 2004 §2, which describes flapping as an allophonic rule of the reference accent; Ladefoged & Johnson 2011 ch. 3 on English aspiration as an allophone of the voiceless stop series), so they are declared in `allophones` — the field that states a phoneme's surface variants — and NOT forced into the default output by `positional_graphemes`. The narrow-vs-broad choice is the data's to make (see orthography2ipa.inventory.phoneme_inventory), and GA reference sources transcribe /t/ and /d/ phonemically (Kenyon & Knott 1953; Labov, Ash & Boberg 2006). General American is conventionally transcribed WITHOUT length marks: the RP length contrast this spec's parent declares is not part of the GA system, where the tense/lax opposition carries the contrast and duration is its allophonic correlate (Wells 1982 vol.3 §6.1.1; Kenyon & Knott 1953, the reference American pronouncing dictionary, which uses no length mark at all; Labov, Ash & Boberg 2006 §2.1, whose North-American vowel system is stated the same way; Kretzschmar 2004 §2). General American has TRUE r-coloured vowels, written with the rhotacised symbols ɝ (stressed NURSE) and ɚ (unstressed lettER) rather than as a vowel plus a separate rhotic consonant (Wells 1982 vol.3 §6.1.2; Kenyon & Knott 1953; Ladefoged & Johnson 2011 ch. 4; Kretzschmar 2004 §2). NO-LENGTH COVERAGE: the length marks are dropped by per-phoneme rules, so every length-bearing emission needs one. Besides the plain vowels that means the yod-plus-GOOSE compound ⟨u⟩/⟨eau⟩ reads as (juː → ju), and the five strong-form function words the parent freezes whole in `word_exceptions` (be, he, me, we, she) — a frozen exception bypasses the rule layer by design, so those are restated here in American notation rather than rewritten (Kenyon & Knott 1953; Wells 2008 LPD). The variant sets in `allophones` still list ʉː and ɝː, which is correct: those are declared VARIANTS of the parent's vowels and never the default reading. GRAPHEME ⟨aa⟩: the digraph occurs in English only in loans and proper names (aardvark, bazaar, salaam, Aachen), where GA reads it as the single low back vowel ɑ, never as a vowel sequence (Wells 2008 LPD). Without the entry the two ⟨a⟩s are read separately and the word gains a spurious syllable.",
+  "quality": "research",
+  "script_type": "alphabet",
+  "sources": [
+    {
+      "id": "wells1982_vol3",
+      "author": "Wells, J.C.",
+      "year": 1982,
+      "title": "Accents of English, Vol. 3: Beyond the British Isles",
+      "publisher": "Cambridge University Press",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "ladefoged1999_ame",
+      "author": "Ladefoged, P.",
+      "year": 1999,
+      "title": "American English",
+      "publisher": "Cambridge University Press",
+      "url": null,
+      "pages": null,
+      "notes": "In: Handbook of the International Phonetic Association"
+    },
+    {
+      "id": "ladefoged2011",
+      "author": "Ladefoged, P. & Johnson, K.",
+      "year": 2011,
+      "title": "A Course in Phonetics (6th ed.)",
+      "publisher": "Wadsworth",
+      "url": null,
+      "pages": null,
+      "notes": "General American vowel inventory: LOT-PALM merger and full rhoticity."
+    },
+    {
+      "id": "wells2008",
+      "author": "Wells, J.C.",
+      "year": 2008,
+      "title": "Longman Pronunciation Dictionary (3rd ed.)",
+      "publisher": "Pearson Longman",
+      "url": null,
+      "pages": null,
+      "notes": "Pronunciation authority for the yod-coalesced ⟨-ture⟩/⟨-sure⟩/⟨-ssure⟩ suffixes in both the RP and the GA column."
+    },
+    {
+      "id": "kenyon1953",
+      "author": "Kenyon, J.S. & Knott, T.A.",
+      "year": 1953,
+      "title": "A Pronouncing Dictionary of American English",
+      "publisher": "G. & C. Merriam",
+      "url": null,
+      "pages": null,
+      "notes": "The reference American pronouncing dictionary. Its GA transcription uses NO length marks and the r-coloured symbols ɝ/ɚ — the convention this spec adopts."
+    },
+    {
+      "id": "labov2006_anae",
+      "author": "Labov, W., Ash, S. & Boberg, C.",
+      "year": 2006,
+      "title": "The Atlas of North American English: Phonetics, Phonology and Sound Change",
+      "publisher": "Mouton de Gruyter",
+      "url": null,
+      "pages": null,
+      "notes": "North-American vowel system stated without length (§2.1); the cot-caught merger is mapped as an in-progress regional change (ch. 9), not as the reference system."
+    },
+    {
+      "id": "kretzschmar2004",
+      "author": "Kretzschmar, W.A.",
+      "year": 2004,
+      "title": "Standard American English pronunciation",
+      "publisher": "Mouton de Gruyter",
+      "url": null,
+      "pages": null,
+      "notes": "In: Kortmann & Schneider (eds), A Handbook of Varieties of English, vol. 1. Describes flapping and aspiration as allophonic rules of the reference accent."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/American_English"
+  ],
+  "positional_graphemes": {
+    "o": {
+      "before_mute_e": [
+        "oʊ"
+      ],
+      "word_final": [
+        "oʊ"
+      ],
+      "default": [
+        "ɒ",
+        "oʊ",
+        "ɔː",
+        "ʌ",
+        "uː"
+      ],
+      "nucleus_unstressed": [
+        "ə"
+      ]
+    }
+  },
+  "timespan": {
+    "start_year": 1500,
+    "end_year": null
+  },
+  "glottolog_code": null,
+  "iso639_3": "eng",
+  "wikidata_qid": "Q7976",
+  "location": {
+    "latitude": 39.828175,
+    "longitude": -98.5795,
+    "source": "wikidata",
+    "notes": "the geographic centre of the United States. General American is a media/education reference accent with NO regional home at all — this is the weakest point in the dataset and should be read as such. [Wikidata Q30 P625]"
+  },
+  "collapse_geminates": true,
+  "allophone_rules": [
+    {
+      "id": "EN_US_LOT_PALM_MERGER",
+      "phonemes": [
+        "ɒ"
+      ],
+      "surface": "ɑ",
+      "notes": "LOT-PALM merger: GA has no /ɒ/ - the RP LOT vowel merges with PALM as unrounded /ɑ/ (Wells 1982 vol.3 6.1.3)."
+    },
+    {
+      "id": "EN_GB_NONRHOTIC_AR_PRECONS",
+      "phonemes": [],
+      "surface": "ɑː",
+      "notes": "General American is fully rhotic: /r/ is preserved in every position, so the RP coda-/r/ deletion this spec inherits does not apply (Wells 1982 vol.3 §6.1; Ladefoged & Johnson 2011). Declared with no target phonemes, the id-keyed way a dialect states it lacks a parent's process."
+    },
+    {
+      "id": "EN_GB_NONRHOTIC_AR_FINAL",
+      "phonemes": [],
+      "surface": "ɑː",
+      "notes": "Same statement as EN_GB_NONRHOTIC_AR_PRECONS: this lect is rhotic, so it does not have the parent's coda-/r/ deletion."
+    },
+    {
+      "id": "EN_GB_NONRHOTIC_NURSE_PRECONS",
+      "phonemes": [],
+      "surface": "ɜː",
+      "notes": "Same statement as EN_GB_NONRHOTIC_AR_PRECONS: this lect is rhotic, so it does not have the parent's coda-/r/ deletion."
+    },
+    {
+      "id": "EN_GB_NONRHOTIC_NURSE_FINAL",
+      "phonemes": [],
+      "surface": "ɜː",
+      "notes": "Same statement as EN_GB_NONRHOTIC_AR_PRECONS: this lect is rhotic, so it does not have the parent's coda-/r/ deletion."
+    },
+    {
+      "id": "EN_GB_NONRHOTIC_OR_PRECONS",
+      "phonemes": [],
+      "surface": "ɔː",
+      "notes": "Same statement as EN_GB_NONRHOTIC_AR_PRECONS: this lect is rhotic, so it does not have the parent's coda-/r/ deletion."
+    },
+    {
+      "id": "EN_GB_NONRHOTIC_OR_FINAL",
+      "phonemes": [],
+      "surface": "ɔː",
+      "notes": "Same statement as EN_GB_NONRHOTIC_AR_PRECONS: this lect is rhotic, so it does not have the parent's coda-/r/ deletion."
+    },
+    {
+      "id": "EN_GB_NONRHOTIC_LETTER_PRECONS",
+      "phonemes": [],
+      "surface": "ə",
+      "notes": "Same statement as EN_GB_NONRHOTIC_AR_PRECONS: this lect is rhotic, so it does not have the parent's coda-/r/ deletion."
+    },
+    {
+      "id": "EN_GB_NONRHOTIC_LETTER_FINAL",
+      "phonemes": [],
+      "surface": "ə",
+      "notes": "Same statement as EN_GB_NONRHOTIC_AR_PRECONS: this lect is rhotic, so it does not have the parent's coda-/r/ deletion."
+    },
+    {
+      "id": "EN_GB_NONRHOTIC_SQUARE_PRECONS",
+      "phonemes": [],
+      "surface": "ɛə",
+      "notes": "Same statement as EN_GB_NONRHOTIC_AR_PRECONS: this lect is rhotic, so it does not have the parent's coda-/r/ deletion."
+    },
+    {
+      "id": "EN_GB_NONRHOTIC_SQUARE_FINAL",
+      "phonemes": [],
+      "surface": "ɛə",
+      "notes": "Same statement as EN_GB_NONRHOTIC_AR_PRECONS: this lect is rhotic, so it does not have the parent's coda-/r/ deletion."
+    },
+    {
+      "id": "EN_GB_NONRHOTIC_NEAR_PRECONS",
+      "phonemes": [],
+      "surface": "ɪə",
+      "notes": "Same statement as EN_GB_NONRHOTIC_AR_PRECONS: this lect is rhotic, so it does not have the parent's coda-/r/ deletion."
+    },
+    {
+      "id": "EN_GB_NONRHOTIC_NEAR_FINAL",
+      "phonemes": [],
+      "surface": "ɪə",
+      "notes": "Same statement as EN_GB_NONRHOTIC_AR_PRECONS: this lect is rhotic, so it does not have the parent's coda-/r/ deletion."
+    },
+    {
+      "id": "EN_GB_NONRHOTIC_CURE_PRECONS",
+      "phonemes": [],
+      "surface": "ʊə",
+      "notes": "Same statement as EN_GB_NONRHOTIC_AR_PRECONS: this lect is rhotic, so it does not have the parent's coda-/r/ deletion."
+    },
+    {
+      "id": "EN_GB_NONRHOTIC_CURE_FINAL",
+      "phonemes": [],
+      "surface": "ʊə",
+      "notes": "Same statement as EN_GB_NONRHOTIC_AR_PRECONS: this lect is rhotic, so it does not have the parent's coda-/r/ deletion."
+    },
+    {
+      "id": "EN_GB_NONRHOTIC_CURE_J_PRECONS",
+      "phonemes": [],
+      "surface": "jʊə",
+      "notes": "Same statement as EN_GB_NONRHOTIC_AR_PRECONS: this lect is rhotic, so it does not have the parent's coda-/r/ deletion."
+    },
+    {
+      "id": "EN_GB_NONRHOTIC_CURE_J_FINAL",
+      "phonemes": [],
+      "surface": "jʊə",
+      "notes": "Same statement as EN_GB_NONRHOTIC_AR_PRECONS: this lect is rhotic, so it does not have the parent's coda-/r/ deletion."
+    },
+    {
+      "id": "EN_GB_NONRHOTIC_FIRE_PRECONS",
+      "phonemes": [],
+      "surface": "aɪə",
+      "notes": "Same statement as EN_GB_NONRHOTIC_AR_PRECONS: this lect is rhotic, so it does not have the parent's coda-/r/ deletion."
+    },
+    {
+      "id": "EN_GB_NONRHOTIC_FIRE_FINAL",
+      "phonemes": [],
+      "surface": "aɪə",
+      "notes": "Same statement as EN_GB_NONRHOTIC_AR_PRECONS: this lect is rhotic, so it does not have the parent's coda-/r/ deletion."
+    },
+    {
+      "id": "EN_GB_NONRHOTIC_HOUR_PRECONS",
+      "phonemes": [],
+      "surface": "aʊə",
+      "notes": "Same statement as EN_GB_NONRHOTIC_AR_PRECONS: this lect is rhotic, so it does not have the parent's coda-/r/ deletion."
+    },
+    {
+      "id": "EN_GB_NONRHOTIC_HOUR_FINAL",
+      "phonemes": [],
+      "surface": "aʊə",
+      "notes": "Same statement as EN_GB_NONRHOTIC_AR_PRECONS: this lect is rhotic, so it does not have the parent's coda-/r/ deletion."
+    },
+    {
+      "id": "EN_GB_NONRHOTIC_R_PRECONS",
+      "phonemes": [],
+      "surface": "",
+      "notes": "Same statement as EN_GB_NONRHOTIC_AR_PRECONS: this lect is rhotic, so it does not have the parent's coda-/r/ deletion."
+    },
+    {
+      "id": "EN_GB_NONRHOTIC_R_FINAL",
+      "phonemes": [],
+      "surface": "",
+      "notes": "Same statement as EN_GB_NONRHOTIC_AR_PRECONS: this lect is rhotic, so it does not have the parent's coda-/r/ deletion."
+    },
+    {
+      "id": "EN_US_NURSE_RCOLOURED",
+      "phonemes": [
+        "ɜːɹ"
+      ],
+      "surface": "ɝ",
+      "notes": "R-COLOURED VOWELS (see notes): stressed NURSE is the single r-coloured vowel ɝ in GA, not a vowel plus a separate rhotic — bird, nurse, herd, word (Wells 1982 vol.3 §6.1.2; Kenyon & Knott 1953; Ladefoged & Johnson 2011 ch. 4; Kretzschmar 2004 §2). KNOWN LIMIT: the rewrite is per-emission, so a word that reaches the r-coloured vowel from one slot and a separate ⟨r⟩ grapheme from the next still surfaces as ɝɹ (and, less often, ɚɹ) — a vowel plus a separate rhotic, which is exactly what the r-coloured symbol is supposed to replace. Measured on the ipadict en-US gold this affects a small minority of words. Collapsing it needs a cross-slot condition the rule vocabulary does not express, so it is recorded here rather than papered over."
+    },
+    {
+      "id": "EN_US_LETTER_RCOLOURED",
+      "phonemes": [
+        "əɹ"
+      ],
+      "surface": "ɚ",
+      "notes": "R-COLOURED VOWELS (see notes): unstressed lettER is ɚ, the same vowel as ɝ without the accent — doctor, dollar, standard (Wells 1982 vol.3 §6.1.2; Kenyon & Knott 1953; Ladefoged & Johnson 2011 ch. 4). KNOWN LIMIT: the rule keys on the parent's ə+rhotic reading, so an ⟨-er⟩ word whose ⟨er⟩ the weights resolve to the NURSE reading instead (letter) surfaces with ɝ. Conditioning on stress=unstressed is the correct phonology and fixes those words, but measured PER-NEGATIVE on the one gold that has the distinction (ipadict en-US 0.3549 → 0.3652), which writes ɝ unstressed too."
+    },
+    {
+      "id": "EN_US_START_NO_LENGTH",
+      "phonemes": [
+        "ɑːɹ"
+      ],
+      "surface": "ɑɹ",
+      "notes": "NO LENGTH MARKS (see notes): START — car, park, hard — is plain ɑ before the rhotic GA keeps (Wells 1982 vol.3 §6.1.1; Kenyon & Knott 1953; Labov, Ash & Boberg 2006 §2.1)."
+    },
+    {
+      "id": "EN_US_NORTH_NO_LENGTH",
+      "phonemes": [
+        "ɔːɹ"
+      ],
+      "surface": "ɔɹ",
+      "notes": "NO LENGTH MARKS (see notes): NORTH/FORCE — more, born, four — is plain ɔ before the rhotic (Wells 1982 vol.3 §6.1.1; Kenyon & Knott 1953; Labov, Ash & Boberg 2006 §2.1)."
+    },
+    {
+      "id": "EN_US_PALM_NO_LENGTH",
+      "phonemes": [
+        "ɑː"
+      ],
+      "surface": "ɑ",
+      "notes": "NO LENGTH MARKS (see notes): PALM/LOT, the merged low back vowel EN_US_LOT_PALM_MERGER already states, written ɑ (Wells 1982 vol.3 §6.1.1; Kenyon & Knott 1953; Labov, Ash & Boberg 2006 §2.1)."
+    },
+    {
+      "id": "EN_US_THOUGHT_NO_LENGTH",
+      "phonemes": [
+        "ɔː"
+      ],
+      "surface": "ɔ",
+      "notes": "NO LENGTH MARKS (see notes): THOUGHT/CLOTH, written ɔ (Wells 1982 vol.3 §6.1.1; Kenyon & Knott 1953). KEPT DISTINCT from PALM: Labov, Ash & Boberg 2006 ch. 9 map the cot-caught merger as an in-progress REGIONAL change, not as the GA reference system this spec models, so the merger is deliberately not declared."
+    },
+    {
+      "id": "EN_US_FLEECE_NO_LENGTH",
+      "phonemes": [
+        "iː"
+      ],
+      "surface": "i",
+      "notes": "NO LENGTH MARKS (see notes): FLEECE, written i (Wells 1982 vol.3 §6.1.1; Kenyon & Knott 1953; Labov, Ash & Boberg 2006 §2.1). This also delivers GA happY tensing — city, happy, coffee — since the parent already reads final ⟨y⟩ as the FLEECE vowel (Wells 1982 §2.2.24; GA is tense)."
+    },
+    {
+      "id": "EN_US_GOOSE_NO_LENGTH",
+      "phonemes": [
+        "uː"
+      ],
+      "surface": "u",
+      "notes": "NO LENGTH MARKS (see notes): GOOSE, written u (Wells 1982 vol.3 §6.1.1; Kenyon & Knott 1953; Labov, Ash & Boberg 2006 §2.1)."
+    },
+    {
+      "id": "EN_US_GOOSE_YOD_NO_LENGTH",
+      "phonemes": [
+        "juː"
+      ],
+      "surface": "ju",
+      "notes": "NO LENGTH MARKS (see notes): the yod-plus-GOOSE compound that ⟨u⟩ and ⟨eau⟩ read as — cue, value, accrue, beauty. It is ONE declared emission, so segmentation matches it whole and the plain uː rule never sees it; without this entry the accent's own no-length invariant leaks on every yod word (Wells 1982 vol.3 §6.1.1; Kenyon & Knott 1953)."
+    },
+    {
+      "id": "EN_US_NURSE_NO_LENGTH",
+      "phonemes": [
+        "ɜː"
+      ],
+      "surface": "ɝ",
+      "notes": "R-COLOURED VOWELS (see notes): any residual bare ɜː is ɝ — the parent's NURSE vowel does not occur without rhoticity in a rhotic accent (Wells 1982 vol.3 §6.1.2; Kenyon & Knott 1953)."
+    },
+    {
+      "id": "EN_GB_OING_HIATUS",
+      "phonemes": [
+        "ɔɪ"
+      ],
+      "surface": "oʊɪ",
+      "grapheme": [
+        "oi"
+      ],
+      "followed_by_grapheme": [
+        "ng"
+      ],
+      "followed_by_2": "word_boundary",
+      "notes": "Same ⟨-oing⟩ hiatus as the parent, on this spec's own GOAT vowel: the parent states the RP [əʊ], and General American has [oʊ] — the value this spec's ⟨o⟩ grapheme already declares. Re-declared rather than inherited because the surface of an allophone rule is a literal, so a diphthong written into a parent rule cannot follow a child's inventory on its own."
+    }
+  ],
+  "vowel_graphemes": [
+    "y"
+  ],
+  "graphemes": {
+    "o": [
+      "ɒ",
+      "oʊ",
+      "ɔː",
+      "ʌ",
+      "uː"
+    ],
+    "oa": [
+      "oʊ"
+    ],
+    "oe": [
+      "oʊ",
+      "uː"
+    ],
+    "ow": [
+      "aʊ",
+      "oʊ"
+    ],
+    "eau": [
+      "juː",
+      "oʊ"
+    ],
+    "ough": [
+      "ɔː",
+      "oʊ",
+      "ʌf",
+      "ɒf",
+      "aʊ",
+      "uː"
+    ],
+    "aa": [
+      "ɑ"
+    ]
+  },
+  "grammatical_endings": {
+    "ture": "tʃɚ",
+    "sure": "ʒɚ",
+    "ssure": "ʃɚ"
+  },
+  "word_exceptions_base": "en-GB",
+  "word_exceptions": {
+    "be": "bi",
+    "he": "hi",
+    "me": "mi",
+    "we": "wi",
+    "she": "ʃi",
+    "do": "du",
+    "does": "dʌz",
+    "doing": "ˈduɪŋ"
+  }
+}

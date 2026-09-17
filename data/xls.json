@@ -1,0 +1,41 @@
+{
+  "code": "xls",
+  "name": "Lusitanian",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "orthography_kind": "native",
+  "quality": "stub",
+  "graphemes": {},
+  "parent": "ine",
+  "ancestors": [
+    {
+      "code": "ine",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Indo-European; exact subgroup disputed between Celtic-adjacent, Italic-adjacent, and pre-Celtic/pre-Italic western IE hypotheses (Wikipedia: Lusitanian language)."
+    }
+  ],
+  "notes": "Stub: no citable systematic grapheme-to-IPA inventory. Extinct Indo-European (Palaeohispanic) language of western Iberia (Lusitania), known from ~6 substantial inscriptions (c. 1st c. CE) plus theonyms and toponyms, written by bilingual speakers in the borrowed Latin alphabet -- Lusitanian had no native script. Sources describe individual sound-change arguments (c/g and t/d alternations suggesting lenition; likely intervocalic and post-r /β ɣ ð/ rather than Latin stop values) but not a complete, citable orthography-to-phoneme table, so a full `graphemes` map would overstate what is known; left empty rather than fabricated from Latin default values, which the Celtic/lenition evidence explicitly warns against. Classification (independent western IE branch vs. Celtic vs. Italic-linked) remains actively disputed, so only the safe IE parent is asserted.",
+  "iso639_3": "xls",
+  "glottolog_code": "lusi1235",
+  "sources": [
+    {
+      "id": "lusitanian_wikipedia_refs",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Lusitanian language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Lusitanian_language",
+      "pages": null,
+      "notes": "Consonant lenition alternations (c/g, t/d), Celtic vs. Italic classification debate, corpus of ~6 inscriptions.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Lusitanian_language"
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Lusitanian_language"
+  ],
+  "timespan": {
+    "start_year": -200,
+    "end_year": 150
+  }
+}

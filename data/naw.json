@@ -1,0 +1,197 @@
+{
+ "code": "naw",
+ "name": "Nawuri",
+ "script": "Latin",
+ "quality": "skeleton",
+ "graphemes": {
+  "a": [
+   "a"
+  ],
+  "b": [
+   "b"
+  ],
+  "d": [
+   "d"
+  ],
+  "e": [
+   "e"
+  ],
+  "f": [
+   "f"
+  ],
+  "g": [
+   "ɡ"
+  ],
+  "gb": [
+   "ɡ͡b"
+  ],
+  "h": [
+   "h"
+  ],
+  "i": [
+   "i"
+  ],
+  "j": [
+   "d͡ʒ"
+  ],
+  "k": [
+   "k"
+  ],
+  "kp": [
+   "k͡p"
+  ],
+  "l": [
+   "l"
+  ],
+  "m": [
+   "m"
+  ],
+  "n": [
+   "n"
+  ],
+  "o": [
+   "o"
+  ],
+  "q": [
+   "ʔ"
+  ],
+  "r": [
+   "r"
+  ],
+  "s": [
+   "s"
+  ],
+  "t": [
+   "t"
+  ],
+  "u": [
+   "u"
+  ],
+  "v": [
+   "v"
+  ],
+  "w": [
+   "w"
+  ],
+  "y": [
+   "j"
+  ],
+  "ŋ": [
+   "ŋ"
+  ],
+  "ŋm": [
+   "ŋ͡m"
+  ],
+  "ɔ": [
+   "ɔ"
+  ],
+  "ɛ": [
+   "ɛ"
+  ]
+ },
+ "allophones": {
+  "e": [
+   "e",
+   "ə"
+  ],
+  "i": [
+   "i",
+   "ɨ"
+  ],
+  "ɛ": [
+   "ɛ",
+   "ʌ"
+  ],
+  "ɪ": [
+   "ɪ",
+   "ɪ̠"
+  ]
+ },
+ "notes": "Placed so the ancestry graph covers every living ISO 639-3 language. No orthography is claimed; the phoneme inventory follows the cited PHOIBLE inventory (which itself cites a published description): script is Zyyy (undetermined) until a cited description is encoded. Classification and coordinates follow Glottolog. Orthography from Hartell 1993, Alphabets of Africa (UNESCO/SIL), extracted via the AfriSpeech/africa-g2p compilation (naw.json). africa-g2p is a compilation tool, not the linguistic authority; the citation above is the original source it names.",
+ "iso639_3": "naw",
+ "glottolog_code": "nawu1242",
+ "sources": [
+  {
+   "id": "glottolog2024",
+   "author": "Hammarström, Harald; Forkel, Robert; Haspelmath, Martin; Bank, Sebastian",
+   "year": 2024,
+   "title": "Glottolog 5.0",
+   "publisher": "Max Planck Institute for Evolutionary Anthropology",
+   "url": "https://glottolog.org/"
+  },
+  {
+   "id": "phoible2019",
+   "author": "Moran, Steven; McCloy, Daniel (eds.)",
+   "year": 2019,
+   "title": "PHOIBLE 2.0 (doi:10.5281/zenodo.2562766)",
+   "publisher": "Max Planck Institute for the Science of Human History",
+   "url": "https://phoible.org/inventories/view/1660",
+   "notes": "Inventory 1660 (ph), 36 non-marginal segments, 2 marginal excluded, 2 tones."
+  },
+  {
+   "id": "hartell1993-p105",
+   "author": "Hartell, Rhonda L. (ed.)",
+   "year": 1993,
+   "title": "Alphabets of Africa, p. 105",
+   "publisher": "UNESCO/SIL, Dakar",
+   "url": null
+  }
+ ],
+ "urls": [
+  "https://glottolog.org/resource/languoid/id/nawu1242"
+ ],
+ "location": {
+  "latitude": 8.4512,
+  "longitude": 0.0495,
+  "source": "glottolog",
+  "notes": "Glottolog's representative point."
+ },
+ "parent": "x-clade-atla1278",
+ "phonemes": [
+  "b",
+  "bʷ",
+  "d",
+  "d̠ʒ",
+  "f",
+  "fʷ",
+  "h",
+  "j",
+  "k",
+  "kp",
+  "kʷ",
+  "l",
+  "m",
+  "n",
+  "p",
+  "pʷ",
+  "r",
+  "s",
+  "sʷ",
+  "t",
+  "t̠ʃ",
+  "w",
+  "ŋ",
+  "ŋm",
+  "ɡ",
+  "ɡb",
+  "ɲ",
+  "a",
+  "e",
+  "i",
+  "o",
+  "u",
+  "u̞",
+  "ɔ",
+  "ɛ",
+  "ɪ"
+ ],
+ "tone_inventory": {
+  "˦": "PHOIBLE tone segment",
+  "˨": "PHOIBLE tone segment"
+ },
+ "phoible_id": "1660",
+ "script_type": "alphabet",
+ "wikipedia": [
+  "https://en.wikipedia.org/wiki/Nawuri_language"
+ ]
+}

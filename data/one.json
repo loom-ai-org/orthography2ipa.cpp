@@ -1,0 +1,115 @@
+{
+  "code": "one",
+  "name": "Oneida",
+  "parent": "x-clade-iroq1247",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "e": [
+      "e"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "o"
+    ],
+    "u": [
+      "ũ"
+    ],
+    "ʌ": [
+      "ə̃"
+    ],
+    "n": [
+      "n"
+    ],
+    "t": [
+      "t"
+    ],
+    "k": [
+      "k"
+    ],
+    "kw": [
+      "kʷ"
+    ],
+    "ts": [
+      "ts"
+    ],
+    "s": [
+      "s"
+    ],
+    "h": [
+      "h"
+    ],
+    "l": [
+      "l"
+    ],
+    "y": [
+      "j"
+    ],
+    "w": [
+      "w"
+    ],
+    "ʔ": [
+      "ʔ"
+    ]
+  },
+  "notes": "Oneida (Onʌyoteʔa·ka), a Northern Iroquoian language of Wisconsin, Ontario and New York. Its inventory is typologically striking and the source states it plainly: Oneida has NO bilabial consonants at all — no /p b/, no labiodental fricatives — so the absence of ⟨p⟩, ⟨b⟩, ⟨f⟩, ⟨v⟩ and ⟨m⟩ keys here is the language, not a gap in the spec. Four oral vowels /i e o a/ plus two nasal vowels written with dedicated letters: ⟨u⟩ spells /ũ/ (NOT [u] — a spelling trap for readers who assume the Latin value) and ⟨ʌ⟩ spells /ə̃/. Both are single nuclei, so each earns a key; vowel+n sequences are not nasal digraphs. ⟨kw⟩ /kʷ/ is one labialized dorsal segment, which is why it is a key rather than a k+w cluster. Length is written with the raised colon ⟨꞉⟩ and glottal stop with ⟨ʔ⟩. No allophone rules are asserted: the source describes the consonants as broadly English-like and gives no conditioned alternation precise enough to encode, and inventing one would overclaim.",
+  "iso639_3": "one",
+  "glottolog_code": "onei1249",
+  "wikidata_qid": "Q857858",
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Oneida_language"
+  ],
+  "urls": [
+    "https://glottolog.org/resource/languoid/id/onei1249"
+  ],
+  "sources": [
+    {
+      "id": "oneida_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2025,
+      "title": "Oneida language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Oneida_language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Oneida_language",
+      "pages": null,
+      "notes": "Consonant table (n, t, k, kʷ, ʔ, ts, s, h, l, j, w) with the explicit statement that Oneida lacks bilabial stops and labiodental fricatives; four oral vowels /i e o a/ and two nasal vowels /ũ/ ⟨u⟩ and /ə̃/ ⟨ʌ⟩; length marked with ⟨꞉⟩."
+    },
+    {
+      "id": "abbott2006",
+      "author": "Abbott, Clifford",
+      "year": 2006,
+      "title": "Oneida Teaching Grammar, Part I: Sounds and the alphabet",
+      "publisher": "University of Wisconsin-Green Bay, Oneida Language program",
+      "url": "https://www.uwgb.edu/UWGBCMS/media/Oneida-Language/files/PartI.pdf",
+      "wikipedia_url": null,
+      "pages": "6-8",
+      "notes": "Read in full. Six vowels ⟨a e i o u ʌ⟩ with ⟨u⟩ and ⟨ʌ⟩ nasal (the PDF renders ʌ as <), the resonants ⟨l n w y⟩, ⟨h⟩ frequent before consonants, ⟨t k s⟩ voiced before a vowel or resonant and voiceless elsewhere, and the glottal stop as a regular consonant that never follows another consonant. No bilabials, as this map has it. A teaching grammar in prose without IPA, cited for the letter set and the allophony it states; ⟨ts⟩ and ⟨kw⟩ are not treated as units there."
+    }
+  ],
+  "ancestors": [
+    {
+      "code": "x-clade-iroq1247",
+      "role": "parent",
+      "weight": 0.9,
+      "notes": "Northern Iroquoian; Oneida is a Five Nations language, closest to Mohawk."
+    },
+    {
+      "code": "moh",
+      "role": "adstrate",
+      "weight": 0.2,
+      "notes": "Closest sister language within the Haudenosaunee confederacy; sustained contact."
+    },
+    {
+      "code": "en-US",
+      "role": "adstrate",
+      "weight": 0.2,
+      "notes": "All present-day speakers are bilingual in English."
+    }
+  ]
+}

@@ -1,0 +1,177 @@
+{
+  "code": "dum",
+  "name": "Middle Dutch (ca. 1050-1350)",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "sch": [
+      "sx"
+    ],
+    "ch": [
+      "x"
+    ],
+    "ng": [
+      "ŋ"
+    ],
+    "ae": [
+      "aː"
+    ],
+    "ee": [
+      "eː"
+    ],
+    "oo": [
+      "oː"
+    ],
+    "oe": [
+      "u"
+    ],
+    "ie": [
+      "iː"
+    ],
+    "uu": [
+      "yː"
+    ],
+    "ij": [
+      "ɛi"
+    ],
+    "ou": [
+      "ɔu"
+    ],
+    "au": [
+      "ɔu"
+    ],
+    "ei": [
+      "ɛi"
+    ],
+    "a": [
+      "a"
+    ],
+    "e": [
+      "e"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "o"
+    ],
+    "u": [
+      "y"
+    ],
+    "y": [
+      "i"
+    ],
+    "b": [
+      "b"
+    ],
+    "c": [
+      "k"
+    ],
+    "d": [
+      "d"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɣ"
+    ],
+    "h": [
+      "h"
+    ],
+    "j": [
+      "j"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "v": [
+      "v"
+    ],
+    "w": [
+      "w"
+    ],
+    "z": [
+      "z"
+    ]
+  },
+  "parent": "x-clade-west2793",
+  "ancestors": [
+    {
+      "code": "x-clade-west2793",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Descent per Glottolog classification of Middle Dutch (midd1321)."
+    }
+  ],
+  "notes": "Research. West Germanic (Low Franconian) medieval stage written in the Latin alphabet. Grapheme map covers the monophthong letters, the digraph long vowels (ae/ee/oo/oe/ie/uu) and diphthongs (ij/ou/au/ei), the fricative digraphs sch and ch, and the plain consonants including g [ɣ] and w [w]. Middle Dutch spelling varied widely by scribe and region; vowel length was written inconsistently and reduced/schwa realisations of e are not recoverable, so these are left unencoded and a real PER floor is expected. DISCREPANCY FOUND AND FIXED while citing: `w` was mapped to [ʋ] (the labiodental approximant of the MODERN Dutch consonant system); Van Loey's Klankleer (Middelnederlandse Spraakkunst, part II) describes the medieval `w` as a bilabial semivowel [w], distinct from `v`, with the shift toward a labiodental realisation a later, early-modern development. Fixed to [w].",
+  "iso639_3": "dum",
+  "glottolog_code": null,
+  "sources": [
+    {
+      "id": "dum_glottolog",
+      "author": "Hammarström, H. et al. (Glottolog 5.0)",
+      "year": 2024,
+      "title": "Glottolog: Middle Dutch (midd1321)",
+      "publisher": "Max Planck Institute for Evolutionary Anthropology",
+      "url": "https://glottolog.org/resource/languoid/id/midd1321",
+      "pages": null,
+      "notes": "Classification reference for a skeleton-tier entry.",
+      "wikipedia_url": null
+    },
+    {
+      "id": "vanloey1976",
+      "author": "Van Loey, Adolf",
+      "year": 1976,
+      "title": "Middelnederlandse Spraakkunst II: Klankleer",
+      "publisher": "Wolters-Noordhoff, Groningen",
+      "url": "https://www.dbnl.org/titels/titel.php?id=loey001midd03",
+      "pages": null,
+      "notes": "Standard reference grammar of Middle Dutch phonology; used to verify the grapheme table (found and fixed the w=[ʋ] vs. [w] discrepancy) and to source the root-initial stress rule encoded in this spec's `stress` block.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Middle_Dutch"
+    },
+    {
+      "id": "dum_wikipedia",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Middle Dutch (Wikipedia)",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Middle_Dutch",
+      "pages": null,
+      "notes": "Orthography/phonology reference for a skeleton-tier entry.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Middle_Dutch"
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Middle_Dutch"
+  ],
+  "stress": {
+    "default_position": 1,
+    "quantity_sensitive": false,
+    "stress_mark": "ˈ",
+    "source": "rules",
+    "notes": "Middle Dutch keeps the inherited Common Germanic fixed root-initial stress (Van Loey 1976, Middelnederlandse Spraakkunst II). `default_position=1` (first syllable) models this; stress-neutral prefixes (e.g. ge-, be-, ver-) and French loanwords are not separately handled for lack of a documented closed list in the sources consulted."
+  }
+}

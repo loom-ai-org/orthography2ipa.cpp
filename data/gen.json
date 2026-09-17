@@ -1,0 +1,162 @@
+{
+  "code": "gen",
+  "name": "Gen (Mina)",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "b": [
+      "b"
+    ],
+    "d": [
+      "d"
+    ],
+    "ɖ": [
+      "ɖ"
+    ],
+    "e": [
+      "e"
+    ],
+    "ɛ": [
+      "ɛ"
+    ],
+    "f": [
+      "f"
+    ],
+    "ƒ": [
+      "ɸ"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "gb": [
+      "ɡ͡b"
+    ],
+    "ɣ": [
+      "ɣ"
+    ],
+    "h": [
+      "h"
+    ],
+    "i": [
+      "i"
+    ],
+    "k": [
+      "k"
+    ],
+    "kp": [
+      "k͡p"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ny": [
+      "ɲ"
+    ],
+    "ŋ": [
+      "ŋ"
+    ],
+    "o": [
+      "o"
+    ],
+    "ɔ": [
+      "ɔ"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "ts": [
+      "t͡s"
+    ],
+    "u": [
+      "u"
+    ],
+    "v": [
+      "v"
+    ],
+    "ʋ": [
+      "β"
+    ],
+    "w": [
+      "w"
+    ],
+    "x": [
+      "x"
+    ],
+    "y": [
+      "j"
+    ],
+    "z": [
+      "z"
+    ]
+  },
+  "allophones_base": "ee",
+  "allophones": {},
+  "iso639_3": "gej",
+  "glottolog_code": "genn1243",
+  "wikidata_qid": "Q33450",
+  "notes": "Gen (Gɛn, Gɛ̃gbe, Mina, Guin, Popo), a Gbe (Kwa) language of the Maritime Region of southeastern Togo and adjoining Benin, mutually intelligible with and sometimes classed as a dialect of Ewe. Same Africa-Alphabet-derived Latin orthography convention as Ewe: ɖ ƒ ɣ ŋ ɔ ɛ ʋ plus digraphs gb kp ny ts. Vowels a e ɛ i o ɔ u, with nasalised counterparts written with a following ⟨n⟩ (ã ẽ ɛ̃ ĩ õ ɔ̃ ũ), not modelled as separate graphemes here, matching the ee convention. Standardised in Benin's Alphabet des langues nationales (2008). TONE: Gen is tonal; the standard orthography is largely toneless like Ewe, so tone is not modelled here. Consonant/allophone inventory inherited from Ewe (`ee`) given the close genetic and orthographic relationship; graphemes stated independently here because Gen's own letter set and grapheme-to-phoneme values are directly attested.",
+  "sources": [
+    {
+      "id": "gen_language_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Gen language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Gen_language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Gen_language",
+      "notes": "Classification, speaker population, orthography and vowel inventory overview."
+    },
+    {
+      "id": "omniglot_gen",
+      "author": "Ager, Simon",
+      "year": 2024,
+      "title": "Gen language, alphabet and pronunciation",
+      "publisher": "Omniglot",
+      "url": "https://www.omniglot.com/writing/gen.htm",
+      "notes": "Alphabet and grapheme inventory reference."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Gen_language"
+  ],
+  "parent": "x-clade-atla1278",
+  "ancestors": [
+    {
+      "code": "x-clade-atla1278",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Atlantic-Congo — the classification node this language sits under; Gbe (Kwa) has no dedicated clade node in this dataset yet, following the ee/fon convention of pointing straight at the Atlantic-Congo node."
+    },
+    {
+      "code": "ee",
+      "role": "related",
+      "weight": 0.6,
+      "notes": "Gen is mutually intelligible with Ewe and treated by some sources as an Ewe dialect; grapheme-to-allophone conventions closely track Ewe's."
+    }
+  ],
+  "location": {
+    "latitude": 6.28,
+    "longitude": 1.53,
+    "source": "glottolog",
+    "notes": "Maritime Region, southeastern Togo — the Gen/Mina-speaking area around Aného."
+  }
+}

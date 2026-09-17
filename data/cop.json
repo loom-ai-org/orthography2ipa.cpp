@@ -1,0 +1,342 @@
+{
+  "code": "cop",
+  "name": "Coptic (Sahidic)",
+  "script": "Coptic",
+  "graphemes": {
+    "ⲁ": [
+      "a"
+    ],
+    "ⲉ": [
+      "ɛ"
+    ],
+    "ⲏ": [
+      "eː"
+    ],
+    "ⲓ": [
+      "i"
+    ],
+    "ⲟ": [
+      "ɔ"
+    ],
+    "ⲱ": [
+      "oː"
+    ],
+    "ⲩ": [
+      "u"
+    ],
+    "ⲃ": [
+      "b"
+    ],
+    "ⲅ": [
+      "ɡ"
+    ],
+    "ⲇ": [
+      "d"
+    ],
+    "ⲍ": [
+      "z"
+    ],
+    "ⲑ": [
+      "tʰ"
+    ],
+    "ⲕ": [
+      "k"
+    ],
+    "ⲗ": [
+      "l"
+    ],
+    "ⲙ": [
+      "m"
+    ],
+    "ⲛ": [
+      "n"
+    ],
+    "ⲝ": [
+      "ks"
+    ],
+    "ⲡ": [
+      "p"
+    ],
+    "ⲣ": [
+      "ɾ"
+    ],
+    "ⲥ": [
+      "s"
+    ],
+    "ⲧ": [
+      "t"
+    ],
+    "ⲫ": [
+      "pʰ"
+    ],
+    "ⲭ": [
+      "kʰ"
+    ],
+    "ⲯ": [
+      "ps"
+    ],
+    "ϣ": [
+      "ʃ"
+    ],
+    "ϥ": [
+      "f"
+    ],
+    "ϩ": [
+      "h"
+    ],
+    "ϫ": [
+      "tʃ"
+    ],
+    "ϭ": [
+      "kʲ"
+    ],
+    "ϯ": [
+      "ti"
+    ],
+    "ⲛ̄": [
+      "n̩"
+    ],
+    "ⲙ̄": [
+      "m̩"
+    ],
+    "ⲟⲩ": [
+      "uː"
+    ],
+    "ⲉⲓ": [
+      "iː"
+    ]
+  },
+  "allophones": {
+    "p": [
+      "p"
+    ],
+    "pʰ": [
+      "pʰ"
+    ],
+    "b": [
+      "b"
+    ],
+    "t": [
+      "t"
+    ],
+    "tʰ": [
+      "tʰ"
+    ],
+    "d": [
+      "d"
+    ],
+    "k": [
+      "k"
+    ],
+    "kʰ": [
+      "kʰ"
+    ],
+    "kʲ": [
+      "kʲ"
+    ],
+    "ɡ": [
+      "ɡ"
+    ],
+    "tʃ": [
+      "tʃ"
+    ],
+    "f": [
+      "f"
+    ],
+    "s": [
+      "s"
+    ],
+    "z": [
+      "z"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "h": [
+      "h"
+    ],
+    "m": [
+      "m",
+      "m̩"
+    ],
+    "n": [
+      "n",
+      "n̩",
+      "ŋ"
+    ],
+    "l": [
+      "l"
+    ],
+    "ɾ": [
+      "ɾ",
+      "r"
+    ],
+    "j": [
+      "j"
+    ],
+    "w": [
+      "w"
+    ],
+    "a": [
+      "a",
+      "ɐ"
+    ],
+    "ɛ": [
+      "ɛ"
+    ],
+    "eː": [
+      "eː"
+    ],
+    "i": [
+      "i"
+    ],
+    "iː": [
+      "iː"
+    ],
+    "ɔ": [
+      "ɔ"
+    ],
+    "oː": [
+      "oː"
+    ],
+    "u": [
+      "u"
+    ],
+    "uː": [
+      "uː"
+    ],
+    "ə": [
+      "ə"
+    ]
+  },
+  "notes": "Coptic — final stage of the Ancient Egyptian language. Sahidic dialect (Upper Egypt, literary standard, ~4th–10th c. CE). Written in Coptic alphabet (Greek + 6 Demotic letters). Classification: Afroasiatic > Egyptian (own primary branch). Extinct as spoken language ~14th–17th c. CE (replaced by Arabic). Survives as liturgical language of Coptic Orthodox Church. SUBSTRATE EFFECTS ON EGYPTIAN ARABIC: primarily lexical (agricultural terms, place names); minimal phonological impact. KEY DIFFERENCES FROM OLD EGYPTIAN: emphatics lost, pharyngeals lost, aspirated stops (pʰ tʰ kʰ), affricate /tʃ/ from *tj, rich qualitative vowel system. Refs: Loprieno (1995), Layton (2000), Peust (1999). The cop/wikipron gold (591 distinct spellings) is an agreement row, not attested speech: Wiktionary's own IPA line (verified 2026 by fetching https://en.wiktionary.org/wiki/ⲣⲱⲙⲉ) gives two competing pronunciations, /ˈrɔː.me/ and /ˈrɔː.mə/, for the same headword and glosses them with a '(key)' link to the English Wikipedia 'Coptic phonology' article rather than to a recording, i.e. both are rule-derived. The gold mixes at least two named reconstruction traditions documented on the English Wikipedia 'Coptic pronunciation reform' article (verified 2026, https://en.wikipedia.org/wiki/Coptic_pronunciation_reform), which cites Ishaq, Emile Maher (1975), 'The Phonetics and Phonology of the Bohairic Dialect of Coptic...' (DPhil thesis, Oxford University): a 19th-century liturgical 'Greco-Bohairic' reform pronunciation that introduced /θ/, /v/, a fricative reading of ⲃ as [β]/[v] instead of the stop [b] this spec uses, and an increased rate of glottal stops, alongside an older/academic Sahidic-style reconstruction that keeps ⲃ ⲫ ⲑ as stops (as this spec does) and uses schwa. Measured directly in the gold cache: 290 of 591 distinct spellings (49.1%) carry two or more mutually incompatible gold transcriptions for the identical string (e.g. ϣⲉⲛⲟⲩϯ → 'ʃ a n u d a' / 'ʃ e n u t i' / 'ʃ ə n uː t ə'), and the reformed-pronunciation markers are pervasive: ʔ appears in 194/881 references (22%), β in 69, v in 19, θ in 8 — segments this spec's Sahidic stop analysis does not predict. The gold also contains words spelled with letters this spec's Sahidic grapheme table cannot map by design, because they belong to other dialects' alphabets, not Sahidic's: ϧ ('khai', 17 occurrences across 591 words), which per the English Wikipedia 'Coptic alphabet' article (verified 2026, https://en.wikipedia.org/wiki/Coptic_alphabet) is a letter of the Bohairic (and Fayyumic) alphabets for /x/ and is not part of the Sahidic inventory, and ⳉ (3 occurrences), used only in Akhmimic. A low PER on this row would therefore measure conformance to a specific mixture of the Greco-Bohairic liturgical reform and an academic Sahidic/Old-Bohairic reconstruction, plus some share of genuinely cross-dialectal spellings, rather than accuracy of this spec's Sahidic analysis against Coptic as it was spoken; because the harness scores each word against its best-matching gold reference, a spec that leaned into whichever convention the gold uses most often could still lower PER on this row, but that would mean deliberately chasing the 19th-century Greco-Bohairic liturgical reading (β/v/θ, extra glottal stops) instead of the Sahidic target this spec commits to, the same trade this campaign has declined elsewhere (e.g. Persian's classical fold), so it is declined here too and reported instead of chased. Exact match is a different story: with 49.1% of spellings carrying two or more mutually incompatible gold readings and no single convention agreeing with all of them, exact match across the full set of variants is genuinely unreachable by any one deterministic spec.",
+  "quality": "research",
+  "script_type": "alphabet",
+  "iso639_3": "cop",
+  "sources": [
+    {
+      "id": "reintges2004",
+      "author": "Reintges, C.H.",
+      "year": 2004,
+      "title": "Coptic Egyptian (Sahidic Dialect): A Learner's Grammar",
+      "publisher": "Rüdiger Köppe Verlag",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "layton2011",
+      "author": "Layton, B.",
+      "year": 2011,
+      "title": "A Coptic Grammar (3rd ed.)",
+      "publisher": "Harrassowitz",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "ladefoged_maddieson1996",
+      "author": "Ladefoged, P. & Maddieson, I.",
+      "year": 1996,
+      "title": "The Sounds of the World's Languages",
+      "publisher": "Blackwell",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "ishaq1975",
+      "author": "Ishaq, Emile Maher",
+      "year": 1975,
+      "title": "The Phonetics and Phonology of the Bohairic Dialect of Coptic and the Survival of Coptic Words in the Colloquial and Classical Arabic of Egypt and of Coptic Grammatical Constructions in Colloquial Egyptian Arabic",
+      "publisher": "Oxford University (DPhil thesis)",
+      "url": null,
+      "pages": null,
+      "notes": "Documents the 19th-century Greco-Bohairic liturgical pronunciation reform versus the older Bohairic pronunciation; cited here to source the finding that the cop/wikipron gold mixes reconstruction traditions rather than reflecting attested Sahidic speech. Located via the English Wikipedia 'Coptic pronunciation reform' article's reference list; the thesis itself was not independently retrieved."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Coptic_language",
+    "https://cop.wikipedia.org/wiki/ϯⲙⲉⲧⲣⲉⲙⲛ̀ⲭⲏⲙⲓ",
+    "https://en.wikipedia.org/wiki/Egyptian_language"
+  ],
+  "timespan": {
+    "start_year": 200,
+    "end_year": 1400
+  },
+  "glottolog_code": "copt1239",
+  "parent": "egy",
+  "ancestors": [
+    {
+      "code": "egy",
+      "role": "parent",
+      "weight": 0.78,
+      "notes": "Direct descent from Ancient Egyptian (via Demotic)."
+    },
+    {
+      "code": "grc",
+      "role": "adstrate",
+      "weight": 0.2,
+      "notes": "Greek adstrate: the Coptic alphabet is Greek-based and Greek supplied a huge share of the lexicon."
+    }
+  ],
+  "wikidata_qid": "Q36155",
+  "wals_code": "cop",
+  "location": {
+    "latitude": 29.472,
+    "longitude": 31.2053,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Coptic."
+  },
+  "allophone_rules": [
+    {
+      "id": "EGY_EPEN_INITIAL",
+      "phonemes": [],
+      "surface": "",
+      "notes": "Coptic does not use the Egyptological reading convention it would otherwise inherit from its Egyptian parent: it is written in its own alphabet, which spells vowels, so there is no unvocalised consonant string to break and no weak consonant to read as a vowel. Declared with no target phonemes, the spec's way of saying that a parent's process is absent here."
+    },
+    {
+      "id": "EGY_EPEN_RUN_THIRD",
+      "phonemes": [],
+      "surface": "",
+      "notes": "Absent in Coptic, as EGY_EPEN_INITIAL."
+    },
+    {
+      "id": "EGY_EPEN_BEFORE_FINAL",
+      "phonemes": [],
+      "surface": "",
+      "notes": "Absent in Coptic, as EGY_EPEN_INITIAL."
+    },
+    {
+      "id": "EGY_LONE_CONSONANT",
+      "phonemes": [],
+      "surface": "",
+      "notes": "Absent in Coptic, as EGY_EPEN_INITIAL."
+    },
+    {
+      "id": "EGY_HIATUS_A",
+      "phonemes": [],
+      "surface": "",
+      "notes": "Absent in Coptic, as EGY_EPEN_INITIAL."
+    },
+    {
+      "id": "EGY_HIATUS_I",
+      "phonemes": [],
+      "surface": "",
+      "notes": "Absent in Coptic, as EGY_EPEN_INITIAL."
+    },
+    {
+      "id": "EGY_HIATUS_U",
+      "phonemes": [],
+      "surface": "",
+      "notes": "Absent in Coptic, as EGY_EPEN_INITIAL."
+    }
+  ],
+  "audit": {
+    "wikipron": {
+      "conclusion": "mislabeled_gold",
+      "measured": "290 of 591 distinct wikipron/cop spellings (49.1%) carry two or more mutually incompatible gold transcriptions for the identical string, because the gold mixes at least two named reconstruction traditions: a 19th-century Greco-Bohairic liturgical reform pronunciation (glottal stop in 22% of references, plus beta as a fricative and theta) alongside an older academic Sahidic/Old-Bohairic reconstruction that keeps stops and schwa, which is what this spec, committed to Sahidic, describes. The gold also contains words spelled with letters belonging to other dialects' alphabets (Bohairic khai, Akhmimic), not Sahidic's. A low PER on this row would measure conformance to the reform mixture rather than accuracy of a Sahidic analysis, and chasing it was declined and reported instead.",
+      "reference": "spec notes"
+    }
+  }
+}

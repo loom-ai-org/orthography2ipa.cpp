@@ -1,0 +1,71 @@
+{
+  "code": "xlu",
+  "name": "Cuneiform Luwian",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "orthography_kind": "transliteration",
+  "quality": "skeleton",
+  "graphemes": {
+    "a": ["a"],
+    "i": ["i"],
+    "u": ["u"],
+    "ā": ["aː"],
+    "ī": ["iː"],
+    "ū": ["uː"],
+    "p": ["p"],
+    "pp": ["pː"],
+    "t": ["t"],
+    "tt": ["tː"],
+    "k": ["k"],
+    "kk": ["kː"],
+    "l": ["l"],
+    "m": ["m"],
+    "n": ["n"],
+    "r": ["r"],
+    "s": ["s"],
+    "š": ["ʃ"],
+    "z": ["ts"],
+    "ḫ": ["χ"],
+    "w": ["w"],
+    "y": ["j"]
+  },
+  "parent": "x-clade-anat1257",
+  "ancestors": [
+    {
+      "code": "x-clade-anat1257",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Luwian is one of three major Anatolian sub-branches alongside Hittite and Palaic (Wikipedia: Luwian language)."
+    },
+    {
+      "code": "hit",
+      "role": "adstrate",
+      "weight": 0.1,
+      "notes": "Long contact with Hittite: cuneiform Luwian texts are transmitted within the Hittite scribal tradition and share the same cuneiform sign inventory/transliteration conventions."
+    }
+  ],
+  "notes": "Skeleton. Extinct Anatolian (Indo-European) language attested in cuneiform Luwian texts embedded in the Hittite archives (16th-13th c. BCE), scored in the standard Hittitological/Luwian Latin transliteration (as akk.json for Akkadian and hit.json for Hittite). Three-vowel system /a i u/ with length contrast; consonant inventory largely parallels Hittite, including doubled-letter spelling of the fortis member of a lenis-fortis contrast (⟨pp tt kk⟩ vs ⟨p t k⟩). ⟨š⟩=/ʃ/, ⟨ḫ⟩=/χ/, ⟨z⟩=/ts/. Rhotacism (certain consonants realized as /r/ in some environments) and syllabic cuneiform sign-boundary effects are not modeled; a substantial PER floor is expected. Distinct from Hieroglyphic Luwian (code hlu, its own native hieroglyphic script), not covered here.",
+  "iso639_3": "xlu",
+  "glottolog_code": "cune1239",
+  "sources": [
+    {
+      "id": "melchert2003",
+      "author": "Melchert, H. Craig (ed.)",
+      "year": 2003,
+      "title": "The Luwians",
+      "publisher": "Brill",
+      "url": null,
+      "pages": null,
+      "notes": "Standard reference grammar and phonology for cuneiform and hieroglyphic Luwian.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Luwian_language"
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Luwian_language",
+    "https://en.wikipedia.org/wiki/Anatolian_languages"
+  ],
+  "timespan": {
+    "start_year": -1600,
+    "end_year": -600
+  }
+}

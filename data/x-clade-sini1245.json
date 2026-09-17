@@ -1,0 +1,34 @@
+{
+  "code": "x-clade-sini1245",
+  "name": "Sinitic",
+  "script": "Zyyy",
+  "quality": "stub",
+  "clade": true,
+  "graphemes": {},
+  "allophones": {},
+  "notes": "Classification-only clade node for the Sinitic branch. Carries no phonology: it is never a data-inheritance source, only a step in the ancestry chain from which `family` is derived.",
+  "sources": [
+    {
+      "id": "glottolog2024",
+      "author": "Hammarström, Harald; Forkel, Robert; Haspelmath, Martin; Bank, Sebastian",
+      "year": 2024,
+      "title": "Glottolog 5.0",
+      "publisher": "Max Planck Institute for Evolutionary Anthropology",
+      "url": "https://glottolog.org/"
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Sinitic_languages"
+  ],
+  "parent": "sit",
+  "glottolog_code": "sini1245",
+  "urls": [
+    "https://glottolog.org/resource/languoid/id/sini1245"
+  ],
+  "location": {
+    "latitude": 30.422658,
+    "longitude": 113.886243,
+    "source": "glottolog",
+    "notes": "Glottolog's computed centroid for the Sinitic family — a summary of a whole clade's range, not a place anyone speaks."
+  }
+}

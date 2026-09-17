@@ -1,0 +1,237 @@
+{
+  "code": "io",
+  "name": "Ido",
+  "family": "Constructed",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "b": [
+      "b"
+    ],
+    "c": [
+      "ts"
+    ],
+    "ch": [
+      "tʃ"
+    ],
+    "d": [
+      "d"
+    ],
+    "e": [
+      "e"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "h": [
+      "h"
+    ],
+    "i": [
+      "i"
+    ],
+    "j": [
+      "ʒ"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "o": [
+      "o"
+    ],
+    "p": [
+      "p"
+    ],
+    "q": [
+      "k"
+    ],
+    "qu": [
+      "kw"
+    ],
+    "r": [
+      "ɾ"
+    ],
+    "s": [
+      "s"
+    ],
+    "sh": [
+      "ʃ"
+    ],
+    "t": [
+      "t"
+    ],
+    "u": [
+      "u"
+    ],
+    "v": [
+      "v"
+    ],
+    "w": [
+      "w"
+    ],
+    "x": [
+      "ks"
+    ],
+    "y": [
+      "j"
+    ],
+    "z": [
+      "z"
+    ]
+  },
+  "allophones": {
+    "a": [
+      "a"
+    ],
+    "b": [
+      "b"
+    ],
+    "ts": [
+      "ts"
+    ],
+    "tʃ": [
+      "tʃ"
+    ],
+    "d": [
+      "d"
+    ],
+    "e": [
+      "e",
+      "ɛ"
+    ],
+    "f": [
+      "f"
+    ],
+    "ɡ": [
+      "ɡ"
+    ],
+    "h": [
+      "h"
+    ],
+    "i": [
+      "i"
+    ],
+    "ʒ": [
+      "ʒ",
+      "dʒ"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "o": [
+      "o",
+      "ɔ"
+    ],
+    "p": [
+      "p"
+    ],
+    "kw": [
+      "kw",
+      "kv"
+    ],
+    "ɾ": [
+      "ɾ",
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "t": [
+      "t"
+    ],
+    "u": [
+      "u"
+    ],
+    "v": [
+      "v"
+    ],
+    "w": [
+      "w"
+    ],
+    "ks": [
+      "ks",
+      "ɡz"
+    ],
+    "j": [
+      "j"
+    ],
+    "z": [
+      "z"
+    ]
+  },
+  "iso639_3": "ido",
+  "glottolog_code": "idoo1234",
+  "wikidata_qid": "Q35224",
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Ido",
+    "https://io.wikipedia.org/wiki/Ido"
+  ],
+  "sources": [
+    {
+      "id": "beaufront1925",
+      "author": "de Beaufront, Louis",
+      "year": 1925,
+      "title": "Kompleta Gramatiko Detaloza di la Linguo Internaciona Ido",
+      "publisher": "Uniono por la Linguo Internaciona",
+      "url": null,
+      "wikipedia_url": null,
+      "pages": null,
+      "notes": "The official Ido grammar: alphabet, phonemic values of every letter and digraph, and the stress rule."
+    },
+    {
+      "id": "ido_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Ido",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Ido",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Ido",
+      "pages": "Alphabet/IPA table and stress rule.",
+      "notes": null
+    }
+  ],
+  "timespan": {
+    "start_year": 1907,
+    "end_year": null
+  },
+  "notes": "Ido (1907; reformed Esperanto). Uses the plain 26-letter Latin alphabet with no diacritics: ⟨c⟩ = /ts/, ⟨ch⟩ = /tʃ/, ⟨sh⟩ = /ʃ/, ⟨j⟩ = /ʒ/ (~/dʒ/), ⟨qu⟩ = /kw/ (~/kv/), ⟨x⟩ = /ks/ (~/ɡz/), ⟨y⟩ = /j/, ⟨w⟩ = /w/. Stress is on the penultimate syllable, except verb infinitives, which are stressed on the final syllable.",
+  "stress": {
+    "default_position": -2,
+    "final_stress_endings": [
+      "ar",
+      "ir",
+      "or"
+    ],
+    "penult_stress_endings": [],
+    "marked_vowels": [],
+    "stress_mark": "ˈ",
+    "notes": "Penultimate stress; verb infinitives in -ar/-ir/-or take final stress (Kompleta Gramatiko, de Beaufront 1925)."
+  }
+}

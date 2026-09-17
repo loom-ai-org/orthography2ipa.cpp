@@ -1,0 +1,404 @@
+{
+  "code": "ar",
+  "name": "Arabic",
+  "script": "Arabic",
+  "script_type": "abjad",
+  "iso639_3": "ara",
+  "quality": "research",
+  "graphemes_base": "arb",
+  "allophones_base": "arb",
+  "graphemes": {
+    "ض": [
+      "dˤ"
+    ],
+    "يَ": [
+      "ja"
+    ],
+    "وَ": [
+      "wa"
+    ],
+    "يِ": [
+      "ji"
+    ],
+    "وُ": [
+      "wu"
+    ],
+    "وَا": [
+      "waː"
+    ],
+    "يَا": [
+      "jaː"
+    ],
+    "الضض": [
+      "adˤdˤ"
+    ],
+    "اَلضض": [
+      "adˤdˤ"
+    ],
+    "لِلضض": [
+      "lidˤdˤ"
+    ],
+    "وَالضض": [
+      "wadˤdˤ"
+    ],
+    "فَالضض": [
+      "fadˤdˤ"
+    ],
+    "بِالضض": [
+      "bidˤdˤ"
+    ],
+    "كَالضض": [
+      "kadˤdˤ"
+    ],
+    "اِلضض": [
+      "idˤdˤ"
+    ],
+    "وِالضض": [
+      "widˤdˤ"
+    ]
+  },
+  "positional_graphemes": {
+    "أ": {
+      "before_vowel": [
+        "ʔ"
+      ],
+      "default": [
+        "ʔa"
+      ]
+    },
+    "إ": {
+      "before_vowel": [
+        "ʔ"
+      ],
+      "default": [
+        "ʔi"
+      ]
+    },
+    "ي": {
+      "word_final": [
+        "iː",
+        "j"
+      ],
+      "default": [
+        "j",
+        "iː"
+      ]
+    },
+    "و": {
+      "word_final": [
+        "uː",
+        "w"
+      ],
+      "default": [
+        "w",
+        "uː"
+      ]
+    },
+    "ا": {
+      "word_initial": [
+        "ʔ",
+        "aː"
+      ],
+      "default": [
+        "aː",
+        "ʔ"
+      ]
+    },
+    "ة": {
+      "after_vowel": [
+        ""
+      ],
+      "default": [
+        "a",
+        "at"
+      ]
+    },
+    "َة": {
+      "before_vowel": [
+        "at"
+      ],
+      "default": [
+        "a"
+      ]
+    }
+  },
+  "allophones": {},
+  "sources": [
+    {
+      "id": "watson2002",
+      "author": "Watson, J.C.E.",
+      "year": 2002,
+      "title": "The Phonology and Morphology of Arabic",
+      "publisher": "Oxford University Press",
+      "url": null,
+      "pages": null,
+      "notes": "Consulted for the consonant inventory (28 phonemes, 4 emphatics ط ض ص ظ, pharyngeals ح ع), sun/moon letter assimilation as a synchronic coronal-place-driven rule, and MSA gemination via shadda.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Arabic_phonology"
+    },
+    {
+      "id": "thelwall1990",
+      "author": "Thelwall, R. and Sa'Adeddin, M.A.",
+      "year": 1990,
+      "title": "Illustrations of the IPA: Arabic",
+      "publisher": "Journal of the International Phonetic Association, 20(2), 37-39",
+      "url": "https://phoible.org/sources/arb_thelwall1990",
+      "pages": "37-39",
+      "notes": "Cross-checked the emphatic/pharyngealized consonant set (sˤ, dˤ, tˤ, ðˤ) and glottal stop realisation against the JIPA reference illustration inventory catalogued in PHOIBLE."
+    },
+    {
+      "id": "holes2004",
+      "author": "Holes, C.",
+      "year": 2004,
+      "title": "Modern Arabic: Structures, Functions, and Varieties",
+      "publisher": "Georgetown University Press",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "versteegh2001",
+      "author": "Versteegh, K.",
+      "year": 2001,
+      "title": "The Arabic Language",
+      "publisher": "Edinburgh University Press",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "ryding2005",
+      "author": "Ryding, K.C.",
+      "year": 2005,
+      "title": "A Reference Grammar of Modern Standard Arabic",
+      "publisher": "Cambridge University Press",
+      "url": null,
+      "pages": "15-35",
+      "notes": "Ch. 2 'Phonology and script', read for the arbtok engine-improvement work: doubling of consonants (gemination) and the approximants/semivowels waaw & yaa as consonants (pp. 15–16); 'Strong hamza is a regular consonant and is pronounced under all circumstances' (p. 16); long vowels /ii/ /uu/ spelled with yaaʾ/waaw (pp. 25–27); 'Diphthongs and glides' — the diphthongs are /aw/ and /ay/, short-vowel + following semivowel (pp. 29–30). Also MSA emphatic (velarized/pharyngealized) consonants and their backing effect on adjacent vowels; four-emphatic inventory /tˤ dˤ sˤ ðˤ/ (pp. 33–35)."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Arabic",
+    "https://ar.wikipedia.org/wiki/لغة_عربية",
+    "https://en.wikipedia.org/wiki/Standard_Arabic_phonology",
+    "https://en.wikipedia.org/wiki/Sun_and_moon_letters",
+    "https://ar.wikipedia.org/wiki/%D8%A7%D9%84%D9%84%D8%BA%D8%A9_%D8%A7%D9%84%D8%B9%D8%B1%D8%A8%D9%8A%D8%A9",
+    "https://ar.wikipedia.org/wiki/%D8%A3%D8%B5%D9%88%D8%A7%D8%AA_%D8%A7%D9%84%D8%B9%D8%B1%D8%A8%D9%8A%D8%A9",
+    "https://ar.wikipedia.org/wiki/%D8%A7%D9%84%D9%84%D8%A7%D9%85_%D8%A7%D9%84%D8%B4%D9%85%D8%B3%D9%8A%D8%A9_%D9%88%D8%A7%D9%84%D9%84%D8%A7%D9%85_%D8%A7%D9%84%D9%82%D9%85%D8%B1%D9%8A%D8%A9"
+  ],
+  "timespan": {
+    "start_year": 1400,
+    "end_year": null
+  },
+  "glottolog_code": "stan1318",
+  "notes": "Modern Standard Arabic (MSA). Inherits its grapheme/allophone inventory from Classical Arabic (arb) via graphemes_base/allophones_base, with one MSA-specific override: ض is transcribed [dˤ] (emphatic alveolar stop), not the Classical lateral-fricative [ɮˤ] Sibawayhi describes and arb.json retains — MSA has merged ض onto the plosive series (Watson 2002; Standard_Arabic_phonology). INPUT CONTRACT / KNOWN LIMITATION: this spec assumes fully-diacritized (fully tashkeel-marked) input. Standard written MSA text omits short-vowel diacritics (fatḥa/ḍamma/kasra/sukūn/shadda/tanwīn) almost everywhere outside the Quran, children's books, and pedagogical material; undiacritized input is NOT disambiguated by this spec (no morphological/statistical diacritic-restoration is implemented) and will transcribe incorrectly or incompletely wherever short vowels or gemination are orthographically absent. To degrade gracefully on undiacritized skeletons the hamza carriers أ/إ fall back to their hamza+vowel default readings (ʔa/ʔi) and the matres ا/ي/و default to their long-vowel readings medially/finally. ENGINE IMPROVEMENTS (arbtok migration): (1) LIGATURE / PRESENTATION-FORM NORMALIZATION — the engine decomposes Arabic Presentation Forms-A/B (U+FB50–FDFF, U+FE70–FEFF), incl. the lam-alif ligatures ﻻ/ﻷ/ﻵ/ﻹ, to their canonical letters before tokenization, so ﻻ → [laː] (was empty). Arabic-script-scoped; no other script touched. (2) GEMINATION — shadda (ّ) now geminates its consonant (a doubled consonant, not a stranded length mark), for ALL consonants incl. the glides ي/و, via a normalization-time transform handling both C+shadda+harakat and C+harakat+shadda orderings: عَمَّ → [ʕamma], عُيِّنَ → [ʕujjina], قَوَّاس → [qawwaːs] (Ryding 2005 ch.2, pp.15–16; Watson 2002). This replaces the old inherited ّ → ː mapping. The greedy ـِي digraph is corrected by the AR_GLIDE_* allophone rules: a glide before another vowel or before its own geminate copy is consonantal, not length, so the nisba suffixes read ـِيّ /-ijj/ and ـِيَّة /-ijja/ (مِصْرِيّ misˤrijj, حُرِّيَّة ħurrijja) while a quiescent glide stays long (فِي fiː). (3) ar-LEAF SPEC FIXES — يَ/وَ are onsets /ja/,/wa/ (not diphthongs; diphthongs /aj/,/aw/ come from fatḥa-first َي/َو; Ryding 2005 pp.29–30); أ/إ are bare /ʔ/ before a written vowel with the vowel from the harakat (Ryding 2005 p.16 'strong hamza is a regular consonant'), so إِيْمَان → [ʔiːmaːn] (no ʔiiː doubling); word-final ي/و prefer the long-vowel reading via positional_graphemes word_final (يُصَلِّي → …[iː]; Ryding 2005 pp.25–27); ة after a harakat is the pausal /a/ (the preceding fatḥa supplies it) so مَدْرَسَة → [madrasa]; but a ة that CARRIES a vowel of its own is pronounced /t/ (before_vowel → [t]) — the tāʾ marbūṭa is only silent at a pause, and a case ending or an iḍāfa is not a pause: مَدِينَةُ الطِّفْل is [madiːnatu tˤtˤifl], not [madiːnau …] (Ryding 2005 §2.3.2). Remaining engine limits (need sentence/cross-word context, left unmodeled): ة construct-state /at/ in iḍāfa; pausal iʿrāb and word-final ا; cross-word sun-letter assimilation (see AR_SUN_ASSIMILATION). sandhi_rules is inherited directly from arb (AR_SUN_ASSIMILATION, AR_HAMZAT_WASL, AR_PAUSAL_TANWIN) with no leaf-level override; AR_SUN_ASSIMILATION only fires between whitespace-separated tokens and therefore does NOT trigger on standard Arabic orthography, where the definite article ال- is written attached to the following word as one token — see docs/languages/ar.md and the rule's own notes for detail. No stress block is declared: MSA word stress is quantity-sensitive (driven by syllable weight, not written vowel-length-independent orthography) and highly register/dialect-variable in connected speech, so it is not reliably orthography-predictable; this exempts the spec from the research-tier stress requirement per docs/quality_tiers.md. Gold benchmark: CUNY-CL/wikipron 'ara_arab_broad.tsv' (Wiktionary-sourced broad IPA transcriptions, community-curated, ~17.5k pairs) registered as the 'ar' entry of the 'wikipron' dataset in scripts/benchmark.py, matching the precedent already used for gl/es/pt in this project. EMPHATIC SPREADING: this spec now models pharyngealization (emphasis) spreading via allophone_rules (AR_EMPH_BACK_*): short /a/ and long /aː/ back to [ɑ]/[ɑː] when adjacent to an emphatic consonant /tˤ dˤ sˤ ðˤ/ (Watson 2002 ch. Emphasis; Ryding 2005 §2). HONESTY NOTE ON THE GOLD: the registered 'ar wikipron' gold is a BROAD Wiktionary transcription that writes the backed vowel as plain /a/, so it cannot reward the (correct) narrow [ɑ] realisation; activating the rule therefore adds a small uniform penalty (~+0.0015 PER, well below the 0.005 benchmark-regression epsilon). This is the same broad-gold limitation documented for the Catalan nasal-assimilation pilot (docs/allophony.md); the rule is retained because it is linguistically correct and the movement is within measurement noise. Sun-letter /l/ assimilation is handled by the inherited AR_SUN_ASSIMILATION sandhi rule (not duplicated here); it fires only across whitespace-separated tokens, so with the article ال written attached it does not trigger on standard orthography (see its rule notes). MEASURED UNDECIDABLE-INPUT CEILING. The input contract above is stated as a limitation; this is what it costs, measured. Exactly one of the 1,292,417 ipadict rows (857,160 distinct headwords) carries any ḥaraka at all — نشاشيبِيّ, one kasra in the whole file — while the gold transcriptions are fully vocalised: 31.6% of their characters are short vowels. Deleting every short vowel from the gold and rescoring with the harness's own scorer gives PER 0.3008, which is what a spec that emitted perfect consonants and long vowels and simply omitted the short vowels would score, and is therefore the hard floor for the ipadict row. That row stands at 0.3774, so about 7.7 PER points separate the score from the floor. That gap is rule error and is tractable; the floor itself is undecidable input that no grapheme table can recover. A gap above the floor is a defect hypothesis, not an excuse: Hebrew sat above its own floor for what looked like the same structural reason and the excess turned out to be a real defect, an unmapped geresh. The WikiPron row is the direct proof. Not one of its 17,563 input words carries a ḥaraka, its consonant-only floor is 0.2476, and the row scores 0.3139 — but the SAME gold with the input auto-diacritized (the wikipron_ar_diacritized row, wired in scripts/benchmark.py) scores 0.1721, below that floor. Vocalisation is worth about 14 PER points, more than any grapheme-table change could be worth. No dialect row has such a companion: the diacritized loader is registered for ar alone, and extending it to the dialect rows is the single highest-value follow-up in the Arabic family. Such a companion has to be labelled restored-MSA input rather than native vocalisation — the restorer targets MSA and Classical Arabic, so what it writes onto dialect orthography is an MSA reading, and a dialect row scored against it measures the spec plus that assumption.",
+  "allophone_rules": [
+    {
+      "id": "AR_EMPH_BACK_A_AFTER",
+      "phonemes": [
+        "a"
+      ],
+      "surface": "ɑ",
+      "preceded_by_phoneme": [
+        "tˤ",
+        "dˤ",
+        "sˤ",
+        "ðˤ",
+        "zˤ"
+      ],
+      "notes": "Emphasis (pharyngealization) spreading: short /a/ backs to [ɑ] when it follows an emphatic consonant /tˤ dˤ sˤ ðˤ (zˤ)/. Watson 2002, The Phonology and Morphology of Arabic (OUP), ch. 'Emphasis', pp. 267-286: pharyngealization spreads bidirectionally within the phonological word, backing low vowels."
+    },
+    {
+      "id": "AR_EMPH_BACK_A_BEFORE",
+      "phonemes": [
+        "a"
+      ],
+      "surface": "ɑ",
+      "followed_by_phoneme": [
+        "tˤ",
+        "dˤ",
+        "sˤ",
+        "ðˤ",
+        "zˤ"
+      ],
+      "notes": "Emphasis spreading (leftward): short /a/ backs to [ɑ] before an adjacent emphatic consonant. Watson 2002, The Phonology and Morphology of Arabic (OUP), ch. 'Emphasis', pp. 267-286: pharyngealization spreads bidirectionally within the phonological word, backing low vowels."
+    },
+    {
+      "id": "AR_EMPH_BACK_AA_AFTER",
+      "phonemes": [
+        "aː"
+      ],
+      "surface": "ɑː",
+      "preceded_by_phoneme": [
+        "tˤ",
+        "dˤ",
+        "sˤ",
+        "ðˤ",
+        "zˤ"
+      ],
+      "notes": "Emphasis spreading: long /aː/ backs to [ɑː] after an adjacent emphatic. Watson 2002, The Phonology and Morphology of Arabic (OUP), ch. 'Emphasis', pp. 267-286: pharyngealization spreads bidirectionally within the phonological word, backing low vowels."
+    },
+    {
+      "id": "AR_EMPH_BACK_AA_BEFORE",
+      "phonemes": [
+        "aː"
+      ],
+      "surface": "ɑː",
+      "followed_by_phoneme": [
+        "tˤ",
+        "dˤ",
+        "sˤ",
+        "ðˤ",
+        "zˤ"
+      ],
+      "notes": "Emphasis spreading (leftward): long /aː/ backs to [ɑː] before an adjacent emphatic. Watson 2002, The Phonology and Morphology of Arabic (OUP), ch. 'Emphasis', pp. 267-286: pharyngealization spreads bidirectionally within the phonological word, backing low vowels."
+    },
+    {
+      "id": "AR_GLIDE_YA_BEFORE_GEMINATE",
+      "phonemes": [
+        "iː"
+      ],
+      "surface": "ij",
+      "followed_by_phoneme": [
+        "iː"
+      ],
+      "notes": "The nisba ـِيّ: a shadda doubles the yāʾ (Wright I §14), so the digraph ⟨ِي⟩ is followed by the glide's own geminate copy. Word-finally that copy takes the long-vowel reading /iː/ from the positional table, so the pair reads iːiː. The first half is consonantal by definition — it is the onset the gemination doubles — so it becomes /ij/, and AR_GLIDE_YA_GEMINATE_COPY forces the second half to the consonant: مِصْرِيّ /misˤrijj/ (Ryding 2005 §5.4.1)."
+    },
+    {
+      "id": "AR_GLIDE_YA_GEMINATE_COPY",
+      "phonemes": [
+        "iː"
+      ],
+      "surface": "j",
+      "preceded_by_phoneme": [
+        "iː"
+      ],
+      "notes": "The second half of the geminated nisba yāʾ. A shadda doubles the yāʾ (Wright I §14), so the ⟨ِي⟩ digraph is followed by the glide's own copy, which word-finally takes the long-vowel reading from the positional table — giving iːiː. The pair is a geminate consonant, not two long vowels: the first half becomes the consonantal /ij/ (AR_GLIDE_YA_BEFORE_GEMINATE) and this copy becomes /j/, so ـِيّ ends /ijj/, never /ijiː/ — مِصْرِيّ /misˤrijj/, عَلِيّ /ʕalijj/ (Ryding 2005 §5.4.1). Conditioned on the PRECEDING slot's underlying /iː/, which is what the rescorer sees: rules read their neighbours before rescoring, not after."
+    },
+    {
+      "id": "AR_GLIDE_YA_CONSONANTAL",
+      "phonemes": [
+        "iː"
+      ],
+      "surface": "ij",
+      "followed_by_phoneme": [
+        "j",
+        "ja",
+        "ji",
+        "ju",
+        "jaː",
+        "jiː",
+        "juː"
+      ],
+      "notes": "The ⟨ِي⟩ mater-lectionis digraph reads as long /iː/ only when the yāʾ is QUIESCENT (bears no vowel of its own). A yāʾ after its homorganic short vowel is length solely 'when it closes the syllable'; otherwise it 'retains its consonantal power' and syllabifies as the onset of the next vowel (Wright, A Grammar of the Arabic Language, 3rd ed., I §4; Watson 2002 §2.6.1: onsets are obligatory, so a high vowel before another vowel resolves as V.GV). The grapheme table matches the digraph greedily and so swallows a consonantal glide too. This rule restores it in the context that proves it: a following yāʾ — either the glide's own geminate copy from a shadda (Wright I §14: shadda doubles the semivowels), which is the nisba suffix ـِيّ /-ijj/ and ـِيَّة /-ijja/ (Ryding 2005 §5.4.1), or a consonantal yāʾ onset. Without it حُرِّيَّة reads ħurriːja and مِصْرِيّ reads misˤriːiː."
+    },
+    {
+      "id": "AR_GLIDE_WAW_CONSONANTAL",
+      "phonemes": [
+        "uː"
+      ],
+      "surface": "uw",
+      "followed_by_phoneme": [
+        "w",
+        "wa",
+        "wi",
+        "wu",
+        "waː",
+        "wiː",
+        "wuː"
+      ],
+      "notes": "The wāw counterpart of AR_GLIDE_YA_CONSONANTAL: the ⟨ُو⟩ digraph is long /uː/ only when the wāw is quiescent. Before its own geminate copy or a consonantal wāw it keeps its consonantal power — أُبُوَّة /ʔubuwwa/ (Wright I §4, §14)."
+    }
+  ],
+  "parent": "xpa",
+  "ancestors": [
+    {
+      "code": "xpa",
+      "role": "parent",
+      "weight": 0.85,
+      "notes": "Descent from Proto-Arabic / Old Arabic (Central Semitic)."
+    },
+    {
+      "code": "arc",
+      "role": "adstrate",
+      "weight": 0.08,
+      "notes": "Aramaic adstrate: the Near-Eastern lingua franca before and alongside Arabic."
+    }
+  ],
+  "location": {
+    "latitude": 27.9625,
+    "longitude": 43.8525,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Standard Arabic."
+  },
+  "optional_marks": [
+    "ً",
+    "ٌ",
+    "ٍ",
+    "َ",
+    "ُ",
+    "ِ",
+    "ّ",
+    "ْ",
+    "ٰ",
+    "ٓ"
+  ],
+  "stress": {
+    "default_position": -3,
+    "quantity_sensitive": true,
+    "superheavy_final_attracts": true,
+    "max_onset": 1,
+    "stress_mark": "ˈ",
+    "notes": "Arabic stress is QUANTITY-SENSITIVE: it falls on a syllable because that syllable is heavy, not because of any orthographic ending, so no ending table can express it. The cascade (Ryding, A Reference Grammar of MSA, CUP 2005, §2.3; Watson, The Phonology and Morphology of Arabic, OUP 2002, ch.3): a superheavy final syllable (CVːC/CVCC) takes the stress (kiˈtaːb); otherwise a heavy penult (CVː/CVC) does (muˈdarris); otherwise the antepenult (ˈmadrasa). max_onset=1 because Arabic onsets are obligatory and hold exactly one consonant — a medial cluster splits, closing the preceding syllable, and that boundary is what makes the penult of mudarris heavy. INPUT CONTRACT: weight is only recoverable from a complete transcription, so this requires diacritized input; an undiacritized skeleton has no vowels to weigh. The registered wikipron gold carries no stress marks, but the benchmark strips stress from both sides by default, so this costs no PER. Prosodic clitics: monosyllabic function words (negator maː, prepositions fiː/min/ʕan/ʕa/li/bi, vocative jaː, copula-negator muː/miʃ, conditional law/loː, wa-proclitic combinations) attach to a host and fall inside the host's stress domain, so they carry no word stress (Watson 2002, The Phonology and Morphology of Arabic, OUP, ch.3). Pan-Arabic class; the per-lect form list reflects the function words attested in this lect. Orthographic test — a clitic homograph (e.g. verb yā 'came') is destressed in every occurrence.",
+    "cliticless_words": [
+      "فِي",
+      "مِن",
+      "يَا"
+    ]
+  },
+  "word_exceptions": {
+    "هذا": "haːðaː",
+    "هَذَا": "haːðaː",
+    "هٰذَا": "haːðaː",
+    "هذه": "haːðihi",
+    "هَذِهِ": "haːðihi",
+    "هَذِه": "haːðih",
+    "هذي": "haːðiː",
+    "هَذِي": "haːðiː",
+    "ذلك": "ðaːlika",
+    "ذَلِكَ": "ðaːlika",
+    "ذَلِك": "ðaːlik",
+    "لكن": "laːkin",
+    "لَكِن": "laːkin",
+    "لَكِنْ": "laːkin",
+    "لكنّ": "laːkinna",
+    "لَكِنَّ": "laːkinna",
+    "الله": "ɑɫɫɑːh",
+    "اللَّه": "ɑɫɫɑːh",
+    "اللَّهِ": "ɑɫɫɑːhi",
+    "اللَّهُ": "ɑɫɫɑːhu",
+    "اللَّهَ": "ɑɫɫɑːha",
+    "والله": "waɫɫɑːh",
+    "وَالله": "waɫɫɑːh",
+    "وَاللَّه": "waɫɫɑːh",
+    "اللّٰه": "ɑɫɫɑːh"
+  },
+  "audit": {
+    "wikipron": {
+      "conclusion": "input_limited",
+      "measured": "Not one of the 17,563 wikipron input words carries a haraka (short-vowel diacritic); Wiktionary files Arabic entries at the unvocalized page title (Wiktionary:About_Arabic / Wiktionary:Arabic_entry_guidelines, 'Entry name') even though headword-line templates show the vocalized form, so the scraped input column is a consonant-plus-long-vowel skeleton. Deleting every short vowel from the gold IPA and rescoring both sides with the harness's own scorer gives a consonant-only floor of 0.2476; the row measures 0.3139, about 7 PER points of which is tractable rule error above that floor. The wikipron_ar_diacritized row (input re-vocalized with an ONNX diacritizer) scores 0.1721, below the undiacritized floor, confirming vocalization -- not spec defects -- is the dominant cost.",
+      "reference": "spec notes; see the 'MEASURED UNDECIDABLE-INPUT CEILING' paragraph in this file's notes"
+    },
+    "ipadict": {
+      "conclusion": "input_limited",
+      "measured": "Exactly 1 of 857,160 ipa-dict headwords (the Buckwalter Arabic Morphological Analyzer's word column, ordinary written Arabic) carries any haraka, while the paired IPA gold is fully vocalized (31.6% of its characters are short vowels) -- this is the same undiacritized-input contract ar.json's own notes declare (MSA prose omits short-vowel diacritics outside the Quran and pedagogical text; Ryding 2005). Deleting every short vowel from the gold and rescoring gives PER 0.3008, the hard floor for a spec that gets every consonant and long vowel right and simply cannot supply vowels the input never wrote. The row measures 0.3774, roughly 7.7 PER points of which is tractable rule error above that floor. This 0.3008 figure is documented here in the spec notes but is NOT registered as a valid_ceiling: the ipadict row (n=857,160) was not rescored to carry it, so there is no committed board measurement to back it.",
+      "reference": "spec notes; see the 'MEASURED UNDECIDABLE-INPUT CEILING' paragraph in this file's notes"
+    }
+  },
+  "valid_ceiling": {
+    "wikipron": {
+      "per": 0.2476,
+      "folded": "short vowels (harakat)",
+      "citation": "Wiktionary files Arabic entries at the unvocalized page title (Wiktionary:About_Arabic), so the wikipron input column carries no harakat; folding short vowels out of the gold IPA before rescoring gives this consonant-only floor. See this file's notes, 'MEASURED UNDECIDABLE-INPUT CEILING'."
+    }
+  }
+}

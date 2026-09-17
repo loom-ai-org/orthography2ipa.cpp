@@ -1,0 +1,77 @@
+{
+  "code": "gl-x-reintegrado",
+  "name": "Galician (reintegrationist orthography)",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "parent": "gl",
+  "graphemes_base": "gl",
+  "allophones_base": "gl",
+  "graphemes": {
+    "nh": [
+      "ɲ"
+    ],
+    "lh": [
+      "ʎ"
+    ],
+    "ç": [
+      "θ"
+    ],
+    "j": [
+      "ʃ"
+    ],
+    "ñ": null,
+    "ll": null,
+    "mh": [
+      "ŋ"
+    ]
+  },
+  "ancestors": [
+    {
+      "code": "gl",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "The same language and the same phonology as standard (RAG) Galician. Reintegrationism is an ORTHOGRAPHIC position, not a different variety: it restores the Galician-Portuguese spelling tradition while the spoken language is unchanged."
+    }
+  ],
+  "orthography_standard": {
+    "name": "Normas ortográficas e morfolóxicas (reintegracionismo)",
+    "authority": "Associaçom Galega da Língua (AGAL)",
+    "year": 1983,
+    "url": "https://agal-gz.org/",
+    "notes": "The reintegrationist norm, opposed to the official RAG/ILG norm. It spells Galician within the Galician-Portuguese tradition rather than with Castilian conventions."
+  },
+  "notes": "SAME LANGUAGE, DIFFERENT ORTHOGRAPHY. This spec exists to model the reintegrationist spelling of Galician, not a different speech variety: it inherits its phonology wholesale from `gl` (`allophones_base`) and overrides only the grapheme map. Reintegrationism restores the Galician-Portuguese spelling tradition where the official RAG norm follows Castilian convention. KEY DIVERGENCES from RAG: (1) /ɲ/ is written <nh> (RAG: <ñ>, a Castilian convention) — NOTE the collision: in the RAG norm <nh> is the VELAR nasal /ŋ/ (unha [ˈuŋa]), so the same digraph denotes different phonemes under the two norms, which is precisely why a norm needs its own spec. (2) /ʎ/ is written <lh> (RAG: <ll>). (3) <ç> is restored for /θ/ (RAG has no <ç>). (4) Etymological <j> is restored, pronounced /ʃ/ — Galician has NO /ʒ/, so unlike Portuguese, reintegrationist <j> is voiceless; the spelling is Portuguese-like, the phonology is Galician. Betacism is unchanged (<v> = /b/), as it is a property of the language, not the norm. CONSEQUENCE, and the point of modelling it: reintegrationist Galician is orthographically much CLOSER to Portuguese than the RAG norm is, while being phonologically IDENTICAL to it. Only `spelling_divergence` can see this — `phonological_distance` cannot, by construction.",
+  "sources": [
+    {
+      "id": "agal_normas",
+      "author": "Associaçom Galega da Língua (AGAL)",
+      "year": 1983,
+      "title": "Estudo crítico das Normas ortográficas e morfolóxicas do idioma galego",
+      "publisher": "AGAL",
+      "url": "https://agal-gz.org/",
+      "notes": "The foundational reintegrationist critique of the official norm and the statement of the reintegrationist orthography."
+    },
+    {
+      "id": "regueira1996",
+      "author": "Regueira, X.L.",
+      "year": 1996,
+      "title": "Galician (Illustrations of the IPA)",
+      "publisher": "Journal of the International Phonetic Association 26(2)",
+      "url": "https://www.cambridge.org/core/journals/journal-of-the-international-phonetic-association/article/galician/12F7CB857C4D8CD3B8634FBD250580CF",
+      "pages": "119-122",
+      "notes": "The phonology inherited here. Confirms Galician has no /ʒ/ — hence reintegrationist <j> is /ʃ/, not the Portuguese /ʒ/."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Reintegrationism",
+    "https://gl.wikipedia.org/wiki/Reintegracionismo",
+    "https://pt.wikipedia.org/wiki/Reintegracionismo"
+  ],
+  "location": {
+    "latitude": 42.8,
+    "longitude": -7.9,
+    "source": "wikidata",
+    "notes": "Galicia. This spec is an ORTHOGRAPHY, not a speech variety — it shares its phonology and its territory with `gl`, so it shares its point. [Wikidata Q3908 P625]"
+  }
+}

@@ -1,0 +1,226 @@
+{
+  "code": "ast-x-leon",
+  "glottolog_code": "leon1250",
+  "name": "Leonese",
+  "script": "Latin",
+  "parent": "ast",
+  "graphemes_base": "ast",
+  "allophones_base": "ast",
+  "positional_graphemes_base": "ast",
+  "graphemes": {
+    "x": [
+      "ʃ"
+    ],
+    "ll": [
+      "ʎ"
+    ],
+    "ch": [
+      "tʃ"
+    ],
+    "y": [
+      "ʝ"
+    ],
+    "ñ": [
+      "ɲ"
+    ],
+    "c": [
+      "k",
+      "t͡s"
+    ],
+    "ç": [
+      "t͡s"
+    ],
+    "z": [
+      "d͡z",
+      "z̻"
+    ],
+    "s": [
+      "s̺",
+      "z̺"
+    ],
+    "ss": [
+      "s̺"
+    ],
+    "lh": [
+      "ʎ"
+    ],
+    "nh": [
+      "ɲ"
+    ],
+    "j": [
+      "ʒ",
+      "d͡ʒ"
+    ]
+  },
+  "allophones": {
+    "θ": null,
+    "t͡s": [
+      "t͡s",
+      "s̻"
+    ],
+    "d͡z": [
+      "d͡z",
+      "z̻"
+    ],
+    "s̺": [
+      "s̺"
+    ],
+    "z̺": [
+      "z̺"
+    ],
+    "s̻": [
+      "s̻"
+    ],
+    "z̻": [
+      "z̻"
+    ],
+    "ʎ": [
+      "ʎ"
+    ],
+    "ʒ": [
+      "ʒ"
+    ],
+    "d͡ʒ": [
+      "d͡ʒ"
+    ],
+    "ʝ": [
+      "ʝ"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "tʃ": [
+      "tʃ"
+    ],
+    "ɲ": [
+      "ɲ"
+    ]
+  },
+  "positional_graphemes": {
+    "c": {
+      "before_e": [
+        "t͡s"
+      ],
+      "before_i": [
+        "t͡s"
+      ]
+    },
+    "s": {
+      "word_initial": [
+        "s̺"
+      ],
+      "intervocalic": [
+        "z̺"
+      ]
+    },
+    "z": {
+      "word_initial": [
+        "d͡z"
+      ],
+      "intervocalic": [
+        "d͡z"
+      ],
+      "word_final": [
+        "z̻"
+      ]
+    },
+    "g": {
+      "before_e": [
+        "ʒ"
+      ],
+      "before_i": [
+        "ʒ"
+      ],
+      "intervocalic": [
+        "ɣ"
+      ]
+    }
+  },
+  "ancestors": [
+    {
+      "code": "ast",
+      "role": "parent",
+      "weight": 0.78,
+      "notes": "Common Asturleonese trunk. Leonese diverged southward during the Reconquista, developing its own written tradition in the Kingdom of León."
+    },
+    {
+      "code": "cel-x-gallaecia",
+      "role": "substrate",
+      "weight": 0.05,
+      "notes": "Celtic substrate of the Asturian-Leonese highlands, shared with central Asturian."
+    },
+    {
+      "code": "gem-x-suebi",
+      "role": "superstrate",
+      "weight": 0.04,
+      "notes": "Suebi superstrate, somewhat lighter in León than in the Asturian coast."
+    },
+    {
+      "code": "got",
+      "role": "superstrate",
+      "weight": 0.04,
+      "notes": "Visigothic superstrate: the Leonese meseta was more thoroughly Visigothic than coastal Asturias."
+    },
+    {
+      "code": "xaa",
+      "role": "adstrate",
+      "weight": 0.05,
+      "notes": "Andalusi Arabic: more intense in León than in Asturias, given the longer Moorish occupation of the meseta and the Reconquista repopulation from south."
+    },
+    {
+      "code": "mxi",
+      "role": "adstrate",
+      "weight": 0.04,
+      "notes": "Mozarabic adstrate: significant in the repopulation of the Leonese meseta, as Mozarabic-speaking Christians from al-Andalus joined the Reconquista settlements."
+    }
+  ],
+  "notes": "Medieval and modern Leonese (llingua llionesa / leonés). KEY GRAPHEME→PHONEME CORRESPONDENCES grounded in Morala & Egido (2009) and the Propuesta de Norma Ortográfica (anonymous, undated): (1) ⟨x⟩ = /ʃ/ (dorsopalatal fricative sorda, unanimous across all text models — Source B §2.3; Source A pp. 10, 15). WARNING: ⟨x⟩ applies ONLY where Castilian has ⟨j/ge/gi⟩ (velar origin). When Castilian has ⟨y/ll⟩ (palatal -LJ- etc.) Leonese uses ⟨y⟩, NOT ⟨x⟩ — *meyorar* not *mexorar*, *espeyu* not *espexar* (Source B §2.3; Source A p. 15). (2) ⟨ll⟩ = /ʎ/ (palatal lateral) from Latin L- initial and -LL-: *llugar, lluz, llobu* — mandatory for patrimonial vocabulary (Source B §2.2; Source A p. 10). Not applicable to PL-/CL-/FL- which give ⟨ch-⟩. (3) ⟨ch⟩ = /tʃ/ (africada palatal) from PL-, CL-, FL-: *chamar, chover, chegar* (Source B §3.5; Source A p. 16). (4) ⟨y⟩ = /ʝ/ (palatal sonora) from -LJ-, -DJ-, -GJ-, -C'L-: *meyor, fiyu, peleya* (Source B §1, §3.4; Source A p. 10). Alto Sil/Laciana admit /tʃ/ variant for -LJ-: *trabachar, mechor*. (5) ⟨ñ⟩ = /ɲ/ — general Leonese baseline (Source B §1); -NN- > /n/ simplification legitimate in NW zone: *cabana, pena*. NOTE: che vaqueira (ts/l.l) is Laciana/Alto Sil only (see ast-x-occidental). 4-WAY SIBILANT CONTRAST preserved in archaic/medieval register. Sources: Morala & Egido (2009); Propuesta de Norma Ortográfica.",
+  "sources": [
+    {
+      "id": "morala_egido2009",
+      "author": "Morala Rodríguez, J.R. & Egido Fernández, M.C.",
+      "year": 2009,
+      "title": "A vueltas con una norma para el leonés",
+      "publisher": "Instituto Castellano y Leonés de la Lengua, Colección Beltenebros 23, in El Leonés en el siglo XXI",
+      "pages": "209-241",
+      "notes": "ISBN: 978-84-936383-8-2. Descriptive/analytical survey of Leonese written texts; not prescriptive. Confirms grapheme values from corpora."
+    },
+    {
+      "id": "propuesta_norma_ortografica",
+      "author": "Anonymous",
+      "year": 2010,
+      "title": "Propuesta de Norma Ortográfica para el Leonés: Hacia una codificación coherente, patrimonial y dialectalmente inclusiva",
+      "publisher": "Unpublished markdown document",
+      "pages": null,
+      "notes": "Prescriptive orthographic proposal; explicitly cites Morala/Egido 2009. Western Leonese base. Year is approximate (undated document)."
+    },
+    {
+      "id": "garcia_arias2003",
+      "author": "García Arias, X.Ll.",
+      "year": 2003,
+      "title": "Gramática histórica de la lengua asturiana",
+      "publisher": "Academia de la Llingua Asturiana",
+      "url": null,
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Leonese_dialect",
+    "https://ast.wikipedia.org/wiki/Lleon%C3%A9s_(lling%C3%BC%C3%ADstica)",
+    "https://es.wikipedia.org/wiki/Leon%C3%A9s_(asturleon%C3%A9s_de_Le%C3%B3n_y_Zamora)"
+  ],
+  "timespan": {
+    "start_year": 1000,
+    "end_year": null
+  },
+  "iso639_3": "ast",
+  "quality": "research",
+  "wikidata_qid": "Q34108",
+  "location": {
+    "latitude": 42.620046,
+    "longitude": -5.84066,
+    "source": "wikidata",
+    "notes": "the province of León — the core of the Leonese area. [Wikidata Q71140 P625]"
+  }
+}

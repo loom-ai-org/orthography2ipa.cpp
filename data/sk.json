@@ -1,0 +1,446 @@
+{
+  "ancestors": [
+    {
+      "code": "sla",
+      "role": "parent",
+      "weight": 0.9,
+      "notes": "Descent from Proto-Slavic (West Slavic, Czech-Slovak subgroup)."
+    },
+    {
+      "code": "de-DE",
+      "role": "adstrate",
+      "weight": 0.07,
+      "notes": "German adstrate via the Kingdom of Hungary / Habsburg administration and Carpathian German settlement."
+    },
+    {
+      "code": "hu",
+      "role": "adstrate",
+      "weight": 0.06,
+      "notes": "Hungarian adstrate: ~1000 years within the Kingdom of Hungary."
+    },
+    {
+      "code": "cs",
+      "role": "adstrate",
+      "weight": 0.05,
+      "notes": "Czech adstrate: shared Czechoslovak literary contact."
+    }
+  ],
+  "code": "sk",
+  "name": "Slovak",
+  "script": "Latin",
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "e": [
+      "ɛ"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "ɔ"
+    ],
+    "u": [
+      "u"
+    ],
+    "y": [
+      "i"
+    ],
+    "á": [
+      "aː"
+    ],
+    "é": [
+      "ɛː"
+    ],
+    "í": [
+      "iː"
+    ],
+    "ó": [
+      "ɔː"
+    ],
+    "ú": [
+      "uː"
+    ],
+    "ý": [
+      "iː"
+    ],
+    "ia": [
+      "iɐ"
+    ],
+    "ie": [
+      "iɛ"
+    ],
+    "iu": [
+      "iu"
+    ],
+    "ô": [
+      "uɔ"
+    ],
+    "ŕ": [
+      "r̩ː"
+    ],
+    "ĺ": [
+      "l̩ː"
+    ],
+    "b": [
+      "b"
+    ],
+    "c": [
+      "ts"
+    ],
+    "č": [
+      "tʃ"
+    ],
+    "d": [
+      "d"
+    ],
+    "ď": [
+      "ɟ"
+    ],
+    "dz": [
+      "dz"
+    ],
+    "dž": [
+      "dʒ"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "h": [
+      "ɦ"
+    ],
+    "ch": [
+      "x"
+    ],
+    "j": [
+      "j"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "ľ": [
+      "lʲ"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ň": [
+      "ɲ"
+    ],
+    "p": [
+      "p"
+    ],
+    "q": [
+      "kv"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "š": [
+      "ʃ"
+    ],
+    "t": [
+      "t"
+    ],
+    "ť": [
+      "c"
+    ],
+    "v": [
+      "v"
+    ],
+    "w": [
+      "v"
+    ],
+    "x": [
+      "ks"
+    ],
+    "z": [
+      "z"
+    ],
+    "ž": [
+      "ʒ"
+    ],
+    "ä": [
+      "ɛ",
+      "æ"
+    ],
+    "de": [
+      "ɟɛ",
+      "dɛ"
+    ],
+    "te": [
+      "cɛ",
+      "tɛ"
+    ],
+    "ne": [
+      "ɲɛ",
+      "nɛ"
+    ],
+    "le": [
+      "lʲɛ",
+      "lɛ"
+    ],
+    "di": [
+      "ɟi",
+      "di"
+    ],
+    "ti": [
+      "ci",
+      "ti"
+    ],
+    "ni": [
+      "ɲi",
+      "ni"
+    ],
+    "li": [
+      "lʲi",
+      "li"
+    ],
+    "dí": [
+      "ɟiː",
+      "diː"
+    ],
+    "tí": [
+      "ciː",
+      "tiː"
+    ],
+    "ní": [
+      "ɲiː",
+      "niː"
+    ],
+    "lí": [
+      "lʲiː",
+      "liː"
+    ]
+  },
+  "allophones": {
+    "p": [
+      "p"
+    ],
+    "b": [
+      "b",
+      "p"
+    ],
+    "t": [
+      "t"
+    ],
+    "d": [
+      "d",
+      "t"
+    ],
+    "c": [
+      "c"
+    ],
+    "ɟ": [
+      "ɟ",
+      "c"
+    ],
+    "k": [
+      "k"
+    ],
+    "ɡ": [
+      "ɡ",
+      "k"
+    ],
+    "f": [
+      "f"
+    ],
+    "v": [
+      "v",
+      "f"
+    ],
+    "s": [
+      "s"
+    ],
+    "z": [
+      "z",
+      "s"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "ʒ": [
+      "ʒ",
+      "ʃ"
+    ],
+    "ɦ": [
+      "ɦ",
+      "x"
+    ],
+    "x": [
+      "x"
+    ],
+    "ts": [
+      "ts"
+    ],
+    "dz": [
+      "dz",
+      "ts"
+    ],
+    "tʃ": [
+      "tʃ"
+    ],
+    "dʒ": [
+      "dʒ",
+      "tʃ"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n",
+      "ŋ"
+    ],
+    "ɲ": [
+      "ɲ"
+    ],
+    "l": [
+      "l"
+    ],
+    "lʲ": [
+      "lʲ"
+    ],
+    "l̩": [
+      "l̩"
+    ],
+    "l̩ː": [
+      "l̩ː"
+    ],
+    "r": [
+      "r"
+    ],
+    "r̩": [
+      "r̩"
+    ],
+    "r̩ː": [
+      "r̩ː"
+    ],
+    "j": [
+      "j"
+    ],
+    "a": [
+      "a"
+    ],
+    "aː": [
+      "aː"
+    ],
+    "ɛ": [
+      "ɛ"
+    ],
+    "ɛː": [
+      "ɛː"
+    ],
+    "i": [
+      "i"
+    ],
+    "iː": [
+      "iː"
+    ],
+    "ɔ": [
+      "ɔ"
+    ],
+    "ɔː": [
+      "ɔː"
+    ],
+    "u": [
+      "u"
+    ],
+    "uː": [
+      "uː"
+    ],
+    "iɐ": [
+      "iɐ"
+    ],
+    "iɛ": [
+      "iɛ"
+    ],
+    "iu": [
+      "iu"
+    ],
+    "uɔ": [
+      "uɔ"
+    ],
+    "æ": [
+      "æ",
+      "ɛ"
+    ]
+  },
+  "parent": "x-clade-west2792",
+  "notes": "Standard Slovak. Close to Czech but distinct in several ways: ⟨h⟩ = [ɦ] (like Czech, not [h]); diphthongs ⟨ia ie iu ô⟩; syllabic liquids ⟨r l⟩ and their long counterparts ⟨ŕ ĺ⟩; rhythmic law: two consecutive long syllables not permitted (second long vowel shortens). Palatal consonant pair: ⟨ď ť⟩ = [ɟ c].",
+  "quality": "research",
+  "script_type": "alphabet",
+  "sources": [
+    {
+      "id": "comrie_corbett1993",
+      "author": "Comrie, B. & Corbett, G. (eds.)",
+      "year": 1993,
+      "title": "The Slavonic Languages",
+      "publisher": "Routledge",
+      "url": null,
+      "pages": null,
+      "notes": null,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Slavic_languages"
+    },
+    {
+      "id": "short1993b",
+      "author": "Short, D.",
+      "year": 1993,
+      "title": "Slovak",
+      "publisher": "in B. Comrie & G. Corbett (eds.), The Slavonic Languages",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "ladefoged_maddieson1996",
+      "author": "Ladefoged, P. & Maddieson, I.",
+      "year": 1996,
+      "title": "The Sounds of the World's Languages",
+      "publisher": "Blackwell",
+      "url": null,
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Slovak_language",
+    "https://sk.wikipedia.org/wiki/Slovenčina",
+    "https://sk.wikipedia.org/wiki/Sloven%C4%8Dina"
+  ],
+  "timespan": {
+    "start_year": 1400,
+    "end_year": null
+  },
+  "glottolog_code": "slov1269",
+  "iso639_3": "slk",
+  "stress": {
+    "default_position": 1,
+    "final_stress_endings": [],
+    "penult_stress_endings": [],
+    "marked_vowels": [],
+    "stress_mark": "ˈ",
+    "notes": "Slovak has categorical initial stress regardless of vowel length. Diacritics (á é í ó ú ý ä ô) mark quantity or quality, not stress. Source: Dvonč et al. (1966), Morfológia slovenského jazyka; Wikipedia: https://en.wikipedia.org/wiki/Slovak_phonology"
+  },
+  "wikidata_qid": "Q9058",
+  "phoible_id": "slov1269",
+  "wals_code": "svk",
+  "location": {
+    "latitude": 48.545705,
+    "longitude": 18.78479,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Slovak."
+  }
+}

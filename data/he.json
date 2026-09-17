@@ -1,0 +1,703 @@
+{
+  "code": "he",
+  "name": "Hebrew",
+  "glottolog_code": "hebr1245",
+  "script": "Hebrew",
+  "script_type": "abjad",
+  "iso639_3": "heb",
+  "quality": "research",
+  "graphemes": {
+    "א": [
+      "ʔ",
+      ""
+    ],
+    "ב": [
+      "b",
+      "v"
+    ],
+    "בּ": [
+      "b"
+    ],
+    "ג": [
+      "ɡ"
+    ],
+    "ג׳": [
+      "dʒ"
+    ],
+    "ג'": [
+      "dʒ"
+    ],
+    "ד": [
+      "d"
+    ],
+    "דּ": [
+      "d"
+    ],
+    "גּ": [
+      "ɡ"
+    ],
+    "ה": [
+      "h",
+      ""
+    ],
+    "הּ": [
+      "h"
+    ],
+    "ו": [
+      "v",
+      "o",
+      "u"
+    ],
+    "וו": [
+      "v"
+    ],
+    "וֹ": [
+      "o"
+    ],
+    "וּ": [
+      "u"
+    ],
+    "ז": [
+      "z"
+    ],
+    "ז׳": [
+      "ʒ"
+    ],
+    "ז'": [
+      "ʒ"
+    ],
+    "ח": [
+      "χ"
+    ],
+    "ט": [
+      "t"
+    ],
+    "י": [
+      "j",
+      "i"
+    ],
+    "יי": [
+      "j"
+    ],
+    "יּ": [
+      "j"
+    ],
+    "יִ": [
+      "ji"
+    ],
+    "יַ": [
+      "ja"
+    ],
+    "יָ": [
+      "ja"
+    ],
+    "יֶ": [
+      "je"
+    ],
+    "יֵ": [
+      "je"
+    ],
+    "יֹ": [
+      "jo"
+    ],
+    "יֻ": [
+      "ju"
+    ],
+    "וַ": [
+      "va"
+    ],
+    "וָ": [
+      "va"
+    ],
+    "וֶ": [
+      "ve"
+    ],
+    "וֵ": [
+      "ve"
+    ],
+    "וִ": [
+      "vi"
+    ],
+    "ִי": [
+      "i"
+    ],
+    "ֵי": [
+      "e"
+    ],
+    "כ": [
+      "k",
+      "χ"
+    ],
+    "כּ": [
+      "k"
+    ],
+    "ך": [
+      "χ"
+    ],
+    "ךּ": [
+      "k"
+    ],
+    "ל": [
+      "l"
+    ],
+    "מ": [
+      "m"
+    ],
+    "ם": [
+      "m"
+    ],
+    "נ": [
+      "n"
+    ],
+    "ן": [
+      "n"
+    ],
+    "ס": [
+      "s"
+    ],
+    "ע": [
+      "ʔ",
+      ""
+    ],
+    "פ": [
+      "p",
+      "f"
+    ],
+    "פּ": [
+      "p"
+    ],
+    "ף": [
+      "f"
+    ],
+    "צ": [
+      "ts"
+    ],
+    "צ׳": [
+      "tʃ"
+    ],
+    "צ'": [
+      "tʃ"
+    ],
+    "ץ": [
+      "ts"
+    ],
+    "ץ׳": [
+      "tʃ"
+    ],
+    "ץ'": [
+      "tʃ"
+    ],
+    "ק": [
+      "k"
+    ],
+    "ר": [
+      "ʁ",
+      "r"
+    ],
+    "ש": [
+      "ʃ",
+      "s"
+    ],
+    "שׁ": [
+      "ʃ"
+    ],
+    "שׂ": [
+      "s"
+    ],
+    "ת": [
+      "t"
+    ],
+    "תּ": [
+      "t"
+    ],
+    "ַ": [
+      "a"
+    ],
+    "ָ": [
+      "a",
+      "o"
+    ],
+    "ׇ": [
+      "o"
+    ],
+    "ֶ": [
+      "e"
+    ],
+    "ֵ": [
+      "e"
+    ],
+    "ִ": [
+      "i"
+    ],
+    "ֹ": [
+      "o"
+    ],
+    "ֺ": [
+      "o"
+    ],
+    "ֻ": [
+      "u"
+    ],
+    "ְ": [
+      "",
+      "e"
+    ],
+    "ֱ": [
+      "e"
+    ],
+    "ֲ": [
+      "a"
+    ],
+    "ֳ": [
+      "o"
+    ],
+    "ּ": [
+      ""
+    ],
+    "ֽ": [
+      ""
+    ],
+    "ֿ": [
+      ""
+    ],
+    "־": [
+      ""
+    ],
+    "בַּ": [
+      "ba"
+    ],
+    "בָּ": [
+      "ba"
+    ],
+    "בֶּ": [
+      "be"
+    ],
+    "בֵּ": [
+      "be"
+    ],
+    "בִּ": [
+      "bi"
+    ],
+    "בֹּ": [
+      "bo"
+    ],
+    "בֻּ": [
+      "bu"
+    ],
+    "בְּ": [
+      "b",
+      "be"
+    ],
+    "כַּ": [
+      "ka"
+    ],
+    "כָּ": [
+      "ka"
+    ],
+    "כֶּ": [
+      "ke"
+    ],
+    "כֵּ": [
+      "ke"
+    ],
+    "כִּ": [
+      "ki"
+    ],
+    "כֹּ": [
+      "ko"
+    ],
+    "כֻּ": [
+      "ku"
+    ],
+    "כְּ": [
+      "k",
+      "ke"
+    ],
+    "פַּ": [
+      "pa"
+    ],
+    "פָּ": [
+      "pa"
+    ],
+    "פֶּ": [
+      "pe"
+    ],
+    "פֵּ": [
+      "pe"
+    ],
+    "פִּ": [
+      "pi"
+    ],
+    "פֹּ": [
+      "po"
+    ],
+    "פֻּ": [
+      "pu"
+    ],
+    "פְּ": [
+      "p",
+      "pe"
+    ],
+    "שַׁ": [
+      "ʃa"
+    ],
+    "שַׂ": [
+      "sa"
+    ],
+    "שָׁ": [
+      "ʃa"
+    ],
+    "שָׂ": [
+      "sa"
+    ],
+    "שֶׁ": [
+      "ʃe"
+    ],
+    "שֶׂ": [
+      "se"
+    ],
+    "שֵׁ": [
+      "ʃe"
+    ],
+    "שֵׂ": [
+      "se"
+    ],
+    "שִׁ": [
+      "ʃi"
+    ],
+    "שִׂ": [
+      "si"
+    ],
+    "שֹׁ": [
+      "ʃo"
+    ],
+    "שֹׂ": [
+      "so"
+    ],
+    "שֻׁ": [
+      "ʃu"
+    ],
+    "שֻׂ": [
+      "su"
+    ],
+    "שְׁ": [
+      "ʃ",
+      "ʃe"
+    ],
+    "שְׂ": [
+      "s",
+      "se"
+    ],
+    "ׁ": [
+      ""
+    ],
+    "ׂ": [
+      ""
+    ],
+    "׳": [
+      ""
+    ],
+    "״": [
+      ""
+    ],
+    "'": [
+      ""
+    ],
+    "\"": [
+      ""
+    ]
+  },
+  "allophones": {
+    "ʔ": [
+      "ʔ",
+      ""
+    ],
+    "b": [
+      "b"
+    ],
+    "v": [
+      "v"
+    ],
+    "ɡ": [
+      "ɡ"
+    ],
+    "d": [
+      "d"
+    ],
+    "h": [
+      "h",
+      ""
+    ],
+    "z": [
+      "z"
+    ],
+    "χ": [
+      "χ",
+      "x"
+    ],
+    "t": [
+      "t"
+    ],
+    "j": [
+      "j"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "s": [
+      "s"
+    ],
+    "p": [
+      "p"
+    ],
+    "f": [
+      "f"
+    ],
+    "ts": [
+      "ts"
+    ],
+    "tʃ": [
+      "tʃ"
+    ],
+    "dʒ": [
+      "dʒ"
+    ],
+    "ʁ": [
+      "ʁ",
+      "r"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "ʒ": [
+      "ʒ"
+    ],
+    "a": [
+      "a"
+    ],
+    "e": [
+      "e"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "o"
+    ],
+    "u": [
+      "u"
+    ]
+  },
+  "positional_graphemes": {
+    "ב": {
+      "word_initial": [
+        "b"
+      ],
+      "intervocalic": [
+        "v"
+      ],
+      "default": [
+        "v"
+      ]
+    },
+    "כ": {
+      "word_initial": [
+        "k"
+      ],
+      "default": [
+        "χ"
+      ]
+    },
+    "פ": {
+      "word_initial": [
+        "p"
+      ],
+      "default": [
+        "f"
+      ]
+    },
+    "ה": {
+      "word_final": [
+        ""
+      ],
+      "default": [
+        "h"
+      ]
+    },
+    "ו": {
+      "word_initial": [
+        "v"
+      ],
+      "default": [
+        "o",
+        "u",
+        "v"
+      ]
+    },
+    "י": {
+      "word_initial": [
+        "j"
+      ],
+      "default": [
+        "i",
+        "j"
+      ]
+    },
+    "חַ": {
+      "word_final": [
+        "aχ"
+      ],
+      "default": [
+        "χa"
+      ]
+    },
+    "עַ": {
+      "word_final": [
+        "a"
+      ],
+      "default": [
+        "ʔa"
+      ]
+    }
+  },
+  "optional_marks": [
+    "ְ",
+    "ֱ",
+    "ֲ",
+    "ֳ",
+    "ִ",
+    "ֵ",
+    "ֶ",
+    "ַ",
+    "ָ",
+    "ֹ",
+    "ֺ",
+    "ֻ",
+    "ּ",
+    "ֽ",
+    "ֿ",
+    "ׁ",
+    "ׂ",
+    "ׇ"
+  ],
+  "notes": "Modern Israeli Hebrew (Non-Oriental pronunciation, Laufer 1999). Consonantal abjad — vowel diacritics (niqqud) are normally omitted in adult text, so all niqqud combining marks are declared optional_marks: an unpointed skeleton is UNDERSPECIFIED input (exactly like undiacritized Arabic in ar.json), while pointed text is transcribed fully. NIQQUD (Modern reading values, 5-vowel system /a e i o u/ with no phonemic length — Laufer 1999 p.98 vowel chart; Bolozky 1997): patach ַ and qamats (gadol) ָ = /a/; tsere ֵ and segol ֶ = /e/ (the Tiberian qamats/patach and tsere/segol quality distinctions are merged in Modern Hebrew); hiriq ִ = /i/; holam ֹ = /o/; qubuts ֻ = /u/; qamats qatan ׇ (U+05C7) = /o/ and plain qamats carries /o/ as a second-ranked candidate for the qamats-qatan syllables ordinary type does not distinguish (e.g. כָּל /kol/); hataf-segol ֱ /e/, hataf-patach ֲ /a/, hataf-qamats ֳ /o/. SHVA ְ: Modern Hebrew realises shva as either zero (shva nach and most historical shva-na positions: זְמַן /zman/) or /e/ (clusters of rising sonority difficulty and the prefixes בְּ/וְ/לְ: /be/, /ve/, /le/); the choice is morphology- and sonority-conditioned (Bolozky 1997) and not recoverable from the mark alone, so both candidates are listed with zero ranked first. MATRES LECTIONIS: holam male וֹ = /o/, shuruq וּ = /u/, hiriq male ִי = /i/, tsere male ֵי = /e/ (Modern Hebrew reads ֵי as plain /e/; Laufer 1999 p.98 treats the Non-Oriental [ei̯] variant as a vowel sequence). In unpointed ktiv male spelling a medial ו stands for /o/ or /u/ (consonantal /v/ is conventionally doubled וו) and a medial י for /i/ or /j/, so the positional tables rank the vowel readings first medially/finally but keep /v/, /j/ word-initially (the conjunction ו־ /ve/, prefix י־). DAGESH ּ: Modern Hebrew has NO gemination (dagesh forte is mute — Bolozky 1997; Laufer 1999 notes gemination survives only for some Oriental speakers), and of the historical begadkefat set only ב~v, כ~χ, פ~f still alternate with their stop values בּ /b/, כּ /k/, פּ /p/; dagesh in ג/ד/ת changes nothing (the historical fricatives [ɣ ð θ] merged into [ɡ d t]), so the bare mark maps to zero and only the letter+dagesh digraphs that matter are declared (בּ כּ פּ ךּ, plus תּ/יּ/הּ as explicit no-ops for the commonest carriers). SHIN/SIN DOTS: שׁ /ʃ/, שׂ /s/; undotted ש keeps both candidates, /ʃ/ first (more frequent). GUTTURALS: א and ע are /ʔ/ or zero for Non-Oriental speakers (Laufer 1999: in the Non-Oriental pronunciation /ʕ/ merges with /ʔ/ and /ħ/ with /χ/; the Oriental /ʕ ħ/ are not modeled in this leaf); ח = /χ/; ה = /h/ (elidable; silent word-finally as a mater for /a/ or /e/), הּ with mapiq is a real /h/. FURTIVE PATACH (patach gnuva): a word-final ח or ע bearing patach is read vowel-BEFORE-consonant: רוּחַ /ʁuaχ/, שׁוֹמֵעַ /ʃomea/ — modeled with the positional digraphs חַ/עַ word_final. RESH = /ʁ/ (uvular; Laufer 1999: usually a uvular approximant for Non-Orientals), alveolar [r] kept as a second candidate/allophone for Oriental speech. Maqaf ־, meteg ֽ and rafe ֿ are phonically null. KNOWN LIMITATION: unpointed text (the norm) omits most vowels; like ar.json this spec does no morphological vowel restoration, so unpointed transcriptions are consonant skeletons plus matres lectionis. The registered WikiPron gold heb_hebr_broad.tsv is unpointed and additionally mixes transcription traditions (a minority of rows are Tiberian-style: ɔː, ə, ŋ), so a high PER floor is structural there, not a spec bug. UNICODE MARK ORDER: real-world pointed Hebrew is inconsistently normalized — typed convention puts dagesh/shin-dot before the vowel point, but Unicode canonical ordering (NFC/NFD) sorts the vowel (ccc 10-20) before dagesh (ccc 21) and the shin/sin dots (ccc 24/25). The spec therefore declares BOTH orders: letter+dagesh and letter+vowel+dagesh digraphs for בּ/כּ/פּ, and letter+dot plus letter+vowel+dot digraphs for שׁ/שׂ, with the bare dots mapping to zero as a residual fallback. These are written-cluster contexts, not products: each names one letter+pointing combination attested in normalized text. GERESH ׳ (U+05F3): a geresh on a letter marks a consonant the historical Hebrew inventory lacks, so ג׳ = /dʒ/, ז׳ = /ʒ/ and צ׳ (final ץ׳) = /tʃ/ — the three palato-alveolar affricate/fricative slots Modern Hebrew acquired through borrowing and which Pariente (2021 §1.3.1 Table 1.1, pp. 6-7) lists in the consonant chart beside /ts/. Ordinary keyboards emit ASCII apostrophe U+0027 for the geresh and ASCII quotation mark U+0022 for the gershayim (the Unicode NamesList cross-references both pairs), so the ASCII spellings are declared alongside the Hebrew punctuation. A geresh NOT on one of those three letters marks an abbreviation (עמ׳ 'page', וכו׳ 'etcetera') and GERSHAYIM ״ (U+05F4) marks an acronym (ד״ר /doktoʁ/, בג״ץ /baɡats/); both expand to a full word or to a spelled-out or lexicalised reading that the letters do not encode, so the bare marks map to zero and their words are undecidable input rather than a rule gap. SPIRANTIZATION (begadkefat) is lexical and irregular in Modern Hebrew, not derivable from the unpointed skeleton: Pariente (2021 §1.3.2, pp. 8-9), citing Adam (2002), reports stops in onset and fricatives in coda as a tendency only, and the positional tables above model just the word-initial stop reading. KTIV MALE DOUBLING: in the unpointed full spelling a word-medial consonantal /v/ is written with a doubled vav ⟨וו⟩ and a word-medial consonantal /j/ with a doubled yod ⟨יי⟩, which is what keeps them apart from the single ⟨ו⟩ and ⟨י⟩ read as the matres /o u/ and /i/ — Academy of the Hebrew Language, Rules of Full Spelling, rule ה 2 (אווז, תקווה, הוועד; a single vav word-finally, rule ה 4) and rule ו 2 (בניין, עניין, צייר; a single yod word-initially, rule ו 1). The digraphs are declared unconditionally: the doubling itself already carries the positional information the rules describe.",
+  "sources": [
+    {
+      "id": "laufer1999",
+      "author": "Laufer, A.",
+      "year": 1999,
+      "title": "Hebrew (Illustrations of the IPA)",
+      "publisher": "Handbook of the International Phonetic Association, Cambridge University Press, pp. 96-99; earlier version in Journal of the International Phonetic Association 20(2), 1990, 40-43",
+      "url": "https://www.cambridge.org/core/journals/journal-of-the-international-phonetic-association/article/hebrew/D23594A30B44604EFD3E88172BE58EB1",
+      "pages": "96-99",
+      "notes": "Primary IPA illustration of Modern Israeli Hebrew, Oriental and Non-Oriental. Consulted for: the consonant chart (p.96: p b t d k ɡ ʔ, m n, r, f v s z ʃ ʒ χ h, plus ħ ʕ in Oriental speech only) and its minimal-pair word list (p.97); the 5-vowel system i e a o u (p.98 חִיל/חֵיל/חַל/חוֹל/חוּל series); distinctive stress (ˈbereχ 'knee' vs beˈreχ 'he blessed'); the Non-Oriental mergers ʕ→ʔ and ħ→χ; resh as a uvular approximant [ʁ] for Non-Orientals vs alveolar trill [r] for Orientals; gemination surviving only in (some) Oriental speech; the affricate /ts/ צ; ʔ/h elidable especially in unstressed syllables. Example transcriptions harvested into data/gold/primary_sources (rows laufer1999-*)."
+    },
+    {
+      "id": "bolozky1997",
+      "author": "Bolozky, S.",
+      "year": 1997,
+      "title": "Israeli Hebrew Phonology",
+      "publisher": "In A.S. Kaye (ed.), Phonologies of Asia and Africa, Vol. 1, pp. 287-311. Winona Lake: Eisenbrauns",
+      "url": null,
+      "pages": "287-311",
+      "notes": "Consulted for: the Modern (Israeli) Hebrew 5-vowel phoneme system with no length or gemination contrast; the reduction of the begadkefat alternation to the three pairs b~v, k~χ, p~f (t/d/ɡ no longer alternate); shva realisation as zero or [e] conditioned by morphology and cluster sonority; milra (final) default stress with lexical milel exceptions (segolates)."
+    },
+    {
+      "id": "pariente2021",
+      "author": "Pariente, I.",
+      "year": 2021,
+      "title": "Theoretical issues in Modern Hebrew phonology",
+      "publisher": "LOT Dissertation Series 599, Amsterdam: LOT (ISBN 978-94-6093-384-4)",
+      "url": "https://dx.medra.org/10.48273/LOT0599",
+      "pages": "6-9",
+      "notes": "Consulted for: the Modern Hebrew consonant chart (§1.3.1 Table 1.1, pp. 6-7), which lists the affricates /ts tʃ dʒ/ and the fricative /ʒ/ alongside /ʁ/ and marks the pharyngeals as Sephardic-only — the source for the three geresh consonants; and spirantization (§1.3.2, pp. 8-9), which states that only p~f, b~v and k~x still alternate in Modern Hebrew, that the fricative counterparts of t, d and g were lost, and that the alternation is limited and irregular (Schwarzwald 1976; Ravid 1991; Adam 2002)."
+    },
+    {
+      "id": "academy_ktiv_male",
+      "author": "Academy of the Hebrew Language",
+      "year": 2017,
+      "title": "Kelalei ha-ktiv ha-male (Rules of Full Spelling)",
+      "publisher": "Ha-Akademya la-Lashon ha-Ivrit, Jerusalem; revised edition, Sivan 5777 / May 2017",
+      "url": "https://web.archive.org/web/20170807214648/http://hebrew-academy.org.il/wp-content/uploads/Klaley-Ktiv-Male.pdf",
+      "pages": null,
+      "notes": "The body that publishes the Hebrew orthography, cited for the unpointed full spelling only. Rule He (vav denoting a consonant): section 2 doubles a word-medial consonantal vav, section 4 keeps a single vav word-finally. Rule Vav (yod denoting a consonant): section 1 keeps a single yod word-initially, section 2 doubles a word-medial consonantal yod when no mater lectionis stands beside it. The appendix on combining niqqud with full spelling points the FIRST letter of a doubled consonantal pair."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Hebrew_language",
+    "https://en.wikipedia.org/wiki/Modern_Hebrew_phonology",
+    "https://en.wikipedia.org/wiki/Niqqud",
+    "https://en.wikipedia.org/wiki/Mater_lectionis",
+    "https://en.wikipedia.org/wiki/Aramaic",
+    "https://en.wikipedia.org/wiki/Revival_of_the_Hebrew_language",
+    "https://he.wikipedia.org/wiki/%D7%A2%D7%91%D7%A8%D7%99%D7%AA",
+    "https://he.wikipedia.org/wiki/%D7%94%D7%92%D7%99%D7%99%D7%AA_%D7%94%D7%A2%D7%91%D7%A8%D7%99%D7%AA",
+    "https://he.wikipedia.org/wiki/%D7%A0%D7%99%D7%A7%D7%95%D7%93",
+    "https://he.wikipedia.org/wiki/%D7%90%D7%A8%D7%9E%D7%99%D7%AA",
+    "https://he.wikipedia.org/wiki/%D7%AA%D7%97%D7%99%D7%99%D7%AA_%D7%94%D7%9C%D7%A9%D7%95%D7%9F_%D7%94%D7%A2%D7%91%D7%A8%D7%99%D7%AA"
+  ],
+  "timespan": {
+    "start_year": 1948,
+    "end_year": null
+  },
+  "stress": {
+    "default_position": -1,
+    "final_stress_endings": [],
+    "penult_stress_endings": [],
+    "marked_vowels": [],
+    "stress_mark": "ˈ",
+    "notes": "Modern Israeli Hebrew default is milra (final stress, -1); stress is distinctive (Laufer 1999 p.98: ˈbereχ 'knee' vs beˈreχ 'he blessed'). Milel (penultimate) is common in a substantial minority of words (especially segolate nouns: מֶלֶךְ, שֶׁמֶשׁ) and cannot be predicted from unvocalized orthography. With niqqud the stressed syllable is identifiable; without niqqud (the norm in adult text) stress placement is not reliably computable from orthography alone. This block models the milra default only. Sources: Laufer (1999), Bolozky (1997)."
+  },
+  "parent": "hbo",
+  "ancestors": [
+    {
+      "code": "hbo",
+      "role": "parent",
+      "weight": 0.78,
+      "notes": "Modern Hebrew is the revived direct descendant of Ancient/Biblical Hebrew (hbo); sem-x-central (Canaanite/Central Semitic) is reached transitively via hbo.parent."
+    },
+    {
+      "code": "arc",
+      "role": "adstrate",
+      "weight": 0.14,
+      "notes": "Aramaic adstrate: dominant vernacular of Second-Temple Judea; heavy lexical/phonological layer."
+    },
+    {
+      "code": "yi",
+      "role": "adstrate",
+      "weight": 0.12,
+      "notes": "Yiddish adstrate on Revived (Modern) Hebrew: European-substrate phonology of the first speakers."
+    },
+    {
+      "code": "ar",
+      "role": "adstrate",
+      "weight": 0.05,
+      "notes": "Arabic adstrate: shared Semitic areal features and modern loanwords."
+    }
+  ],
+  "wikidata_qid": "Q9288",
+  "phoible_id": "hebr1245",
+  "wals_code": "heb",
+  "location": {
+    "latitude": 31.1056,
+    "longitude": 35.0179,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Modern Hebrew."
+  },
+  "audit": {
+    "wikipron": {
+      "conclusion": "input_limited",
+      "measured": "0 of 6811 wikipron input words (heb_hebr_broad.tsv) carry any niqqud combining mark (U+05B0-05BC, U+05BD, U+05C1, U+05C2, U+05C7); Wiktionary explicitly forbids niqqud in Hebrew page names (Wiktionary:About_Hebrew / Wiktionary:Hebrew_entry_guidelines, 'Entry name': 'Do not use niqqud (vowel points) in page names'), matching this spec's own notes ('unpointed text (the norm) omits most vowels'). Wiktionary keeps the pointing on the headword line, so it is recoverable from the MediaWiki API even though the scrape drops it: the wikipron_restored row puts it back on 3725 of the 6811 rows and PER falls from 0.3545 to 0.0741 on the 1821 words the harness scores, with word error from 0.9638 to 0.3449. No leak is expressible in that measurement -- the input is Hebrew script and the gold is IPA, so no restored word can equal its gold -- and pairing the restored words with shuffled golds gives 0.9924.\n\nThe gold's mixture of transcription traditions (a minority of rows are Tiberian-style: length marks, ɔ, ə, ŋ, θ, ð, sˤ, tˤ, hataf ă) is a real second effect on this row, and it is now quantified rather than left open. 2100 of the 6811 rows carry a segment Modern Israeli Hebrew's five-vowel, no-length, no-interdental inventory cannot produce (927 carry a vowel-length mark; 482 carry dev's narrower ɔː/ə/ŋ set). It does not move the restoration figure, because the harness scores each word against the best of ALL its gold transcriptions and most affected words also carry a Modern transcription: of the 1821 scored words only 27 have exclusively non-Modern references. Those 27 score 0.3344; the other 1794 score 0.0701. Excluding every row with a non-Modern segment (28.3% of the restored subset) moves the restored PER from 0.0741 to 0.0708 and the unrestored baseline from 0.3545 to 0.3528; excluding only the ɔː/ə/ŋ rows gives 0.0733 against 0.3542. The restoration effect is therefore not confounded by the tradition mixture at the 0.004 level.\n\nThe traditions still diverge where they are the only reference: restoration helps the Tiberian-flavoured rows (0.6510 to 0.5295 on the ɔː/ə/ŋ set, 0.5621 to 0.4063 on the full non-Modern set) but leaves a residual several times the Modern one, because this spec describes Modern Israeli Hebrew and cannot reproduce a Tiberian transcription whichever input it is given. No valid_ceiling is recorded: the residual after restoration is a tradition mismatch on a minority of rows, not a contrast the orthography fails to write.",
+      "reference": "spec notes; docs/benchmark_datasets.md"
+    }
+  }
+}

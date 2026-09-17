@@ -1,0 +1,107 @@
+{
+  "code": "lkt",
+  "name": "Lakota",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "orthography_kind": "native",
+  "quality": "research",
+  "graphemes": {
+    "a": ["a"],
+    "e": ["e"],
+    "i": ["i"],
+    "o": ["o"],
+    "u": ["u"],
+    "aŋ": ["ã"],
+    "iŋ": ["ĩ"],
+    "uŋ": ["ũ"],
+    "m": ["m"],
+    "n": ["n"],
+    "p": ["p"],
+    "ph": ["pʰ"],
+    "pȟ": ["pʰ"],
+    "p'": ["pʼ"],
+    "t": ["t"],
+    "th": ["tʰ"],
+    "tȟ": ["tʰ"],
+    "t'": ["tʼ"],
+    "č": ["tʃ"],
+    "čh": ["tʃʰ"],
+    "č'": ["tʃʼ"],
+    "k": ["k"],
+    "kh": ["kʰ"],
+    "kȟ": ["kʰ"],
+    "k'": ["kʼ"],
+    "'": ["ʔ"],
+    "s": ["s"],
+    "s'": ["sʼ"],
+    "š": ["ʃ"],
+    "š'": ["ʃʼ"],
+    "z": ["z"],
+    "ž": ["ʒ"],
+    "ȟ": ["χ"],
+    "ȟ'": ["χʼ"],
+    "ǧ": ["ʁ"],
+    "h": ["h"],
+    "w": ["w"],
+    "l": ["l"],
+    "y": ["j"]
+  },
+  "allophones": {
+    "pʰ": ["pʰ", "pˣ"],
+    "tʰ": ["tʰ", "tˣ"],
+    "kʰ": ["kʰ", "kˣ"],
+    "ʁ": ["ʁ", "ʀ", "ɣ"]
+  },
+  "iso639_3": "lkt",
+  "glottolog_code": "lako1247",
+  "wikidata_qid": "Q33537",
+  "notes": "Lakota (Lakȟótiyapi), Siouan (Dakotan branch, sister to Dakota). Orthography follows the New Lakota Dictionary / Lakota Language Consortium (LLC) standard. Five oral vowels /a e i o u/ (phonetically more open than cardinal for e/o) and three nasal vowels, spelled with a following ⟨ŋ⟩ digraph (⟨aŋ iŋ uŋ⟩ = /ã ĩ ũ/) rather than a diacritic. Stops/affricates show a three-way series: plain (p t k č), aspirated (ph th kh čh — the LLC orthography also allows the caron-h spelling pȟ tȟ kȟ for the same aspirated phonemes, with the aspiration realised as apical [pʰ tʰ kʰ] or velar-fricated [pˣ tˣ kˣ] depending on speaker/context), and ejective (p' t' k' č'), plus the fricatives s š ȟ with plain and ejective members (s' š' ȟ'). ⟨ȟ⟩ alone is the voiceless uvular fricative /χ/; its voiced counterpart ⟨ǧ⟩ /ʁ/ is realised as uvular trill-like [ʀ] before /i/ and as velar [ɣ] in fast speech. ⟨'⟩ standing alone is the glottal stop /ʔ/. ⟨l⟩ occurs in loanwords and some place names alongside native /j/ ⟨y⟩; ⟨r⟩ is not part of the standard consonant inventory. Digraphs (kh, kȟ, k', etc.) are alphabetized and treated as single units in LLC practice. Stress is marked with an acute accent on the vowel; this is suprasegmental and not encoded as a separate grapheme here.",
+  "sources": [
+    {
+      "id": "lakota_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Lakota language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Lakota_language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Lakota_language",
+      "pages": null,
+      "notes": "Phoneme inventory and LLC orthography correspondences."
+    },
+    {
+      "id": "ullrich2008",
+      "author": "Ullrich, Jan (ed.)",
+      "year": 2008,
+      "title": "New Lakota Dictionary",
+      "publisher": "Lakota Language Consortium",
+      "url": null,
+      "wikipedia_url": null,
+      "pages": null,
+      "notes": "Standard reference dictionary establishing the LLC practical orthography used here."
+    },
+    {
+      "id": "rood_taylor1996",
+      "author": "Rood, David S. & Taylor, Allan R.",
+      "year": 1996,
+      "title": "Sketch of Lakhota, a Siouan Language",
+      "publisher": "Handbook of North American Indians, Vol. 17 (Smithsonian Institution)",
+      "url": null,
+      "wikipedia_url": null,
+      "pages": null,
+      "notes": "Reference sketch of Lakota phonology."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Lakota_language",
+    "https://en.wikipedia.org/wiki/Sioux_language"
+  ],
+  "parent": "x-clade-siou1252",
+  "ancestors": [
+    {
+      "code": "x-clade-siou1252",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Siouan — the classification node this language sits under (Dakotan branch)."
+    }
+  ]
+}

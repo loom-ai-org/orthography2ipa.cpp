@@ -1,0 +1,136 @@
+{
+ "code": "kmo",
+ "name": "Kwoma",
+ "script": "Zyyy",
+ "quality": "stub",
+ "graphemes": {},
+ "allophones": {
+  "j": [
+   "l",
+   "j"
+  ],
+  "k": [
+   "k",
+   "ɡ"
+  ],
+  "mb": [
+   "mb",
+   "b"
+  ],
+  "t": [
+   "t",
+   "d"
+  ],
+  "t̠ʃ": [
+   "t̠ʃ",
+   "d̠ʒ"
+  ],
+  "ɸ": [
+   "ɸ",
+   "p"
+  ],
+  "ɸʷ": [
+   "pʷ",
+   "ɸʷ"
+  ],
+  "a": [
+   "a",
+   "ɜ",
+   "ḁ"
+  ],
+  "e": [
+   "e",
+   "ɪ",
+   "ɪ̥"
+  ],
+  "i": [
+   "i",
+   "y",
+   "i̥"
+  ],
+  "o̞": [
+   "o̞",
+   "ɔ",
+   "o̞̥"
+  ],
+  "u": [
+   "u̥",
+   "u"
+  ],
+  "ɛ": [
+   "ɛ",
+   "æ"
+  ],
+  "ɨ": [
+   "ʉ",
+   "ɨ",
+   "ɨ̥"
+  ]
+ },
+ "notes": "REGISTRY STUB (not a modelled G2P target). Placed so the ancestry graph covers every living ISO 639-3 language. No orthography is claimed; the phoneme inventory follows the cited PHOIBLE inventory (which itself cites a published description): script is Zyyy (undetermined) until a cited description is encoded. Classification and coordinates follow Glottolog.",
+ "iso639_3": "kmo",
+ "glottolog_code": "kwom1262",
+ "sources": [
+  {
+   "id": "glottolog2024",
+   "author": "Hammarström, Harald; Forkel, Robert; Haspelmath, Martin; Bank, Sebastian",
+   "year": 2024,
+   "title": "Glottolog 5.0",
+   "publisher": "Max Planck Institute for Evolutionary Anthropology",
+   "url": "https://glottolog.org/"
+  },
+  {
+   "id": "phoible2019",
+   "author": "Moran, Steven; McCloy, Daniel (eds.)",
+   "year": 2019,
+   "title": "PHOIBLE 2.0 (doi:10.5281/zenodo.2562766)",
+   "publisher": "Max Planck Institute for the Science of Human History",
+   "url": "https://phoible.org/inventories/view/53",
+   "notes": "Inventory 53 (spa), 31 non-marginal segments."
+  }
+ ],
+ "urls": [
+  "https://glottolog.org/resource/languoid/id/kwom1262"
+ ],
+ "location": {
+  "latitude": -4.0872,
+  "longitude": 142.664,
+  "source": "glottolog",
+  "notes": "Glottolog's representative point."
+ },
+ "parent": "x-clade-sepi1257",
+ "phonemes": [
+  "h",
+  "j",
+  "k",
+  "kʷ",
+  "m",
+  "mb",
+  "mbʷ",
+  "mʷ",
+  "n",
+  "nd",
+  "n̠d̠ʒ",
+  "s",
+  "t",
+  "t̠ʃ",
+  "w",
+  "ŋɡ",
+  "ŋɡʷ",
+  "ɲ",
+  "ɸ",
+  "ɸʷ",
+  "ɾ",
+  "ʃ",
+  "ʔ",
+  "β",
+  "a",
+  "e",
+  "i",
+  "o̞",
+  "u",
+  "ɛ",
+  "ɨ"
+ ],
+ "phoible_id": "53"
+}

@@ -1,0 +1,236 @@
+{
+  "code": "kru",
+  "name": "Kurukh",
+  "script": "Devanagari",
+  "script_type": "abugida",
+  "quality": "research",
+  "graphemes": {
+    "अ": [
+      "ə"
+    ],
+    "आ": [
+      "aː"
+    ],
+    "इ": [
+      "i"
+    ],
+    "ई": [
+      "iː"
+    ],
+    "उ": [
+      "u"
+    ],
+    "ऊ": [
+      "uː"
+    ],
+    "ए": [
+      "e"
+    ],
+    "ऐ": [
+      "ai"
+    ],
+    "ओ": [
+      "o"
+    ],
+    "औ": [
+      "au"
+    ],
+    "ा": [
+      "aː"
+    ],
+    "ि": [
+      "i"
+    ],
+    "ी": [
+      "iː"
+    ],
+    "ु": [
+      "u"
+    ],
+    "ू": [
+      "uː"
+    ],
+    "े": [
+      "e"
+    ],
+    "ै": [
+      "ai"
+    ],
+    "ो": [
+      "o"
+    ],
+    "ौ": [
+      "au"
+    ],
+    "ं": [
+      "̃"
+    ],
+    "ँ": [
+      "̃"
+    ],
+    "्": [
+      ""
+    ],
+    "ः": [
+      "h"
+    ],
+    "क": [
+      "k"
+    ],
+    "ख": [
+      "kʰ"
+    ],
+    "ग": [
+      "ɡ"
+    ],
+    "घ": [
+      "ɡʱ"
+    ],
+    "ङ": [
+      "ŋ"
+    ],
+    "च": [
+      "tʃ"
+    ],
+    "छ": [
+      "tʃʰ"
+    ],
+    "ज": [
+      "dʒ"
+    ],
+    "झ": [
+      "dʒʱ"
+    ],
+    "ञ": [
+      "ɲ"
+    ],
+    "ट": [
+      "ʈ"
+    ],
+    "ठ": [
+      "ʈʰ"
+    ],
+    "ड": [
+      "ɖ"
+    ],
+    "ढ": [
+      "ɖʱ"
+    ],
+    "ण": [
+      "ɳ"
+    ],
+    "त": [
+      "t̪"
+    ],
+    "थ": [
+      "t̪ʰ"
+    ],
+    "द": [
+      "d̪"
+    ],
+    "ध": [
+      "d̪ʱ"
+    ],
+    "न": [
+      "n"
+    ],
+    "प": [
+      "p"
+    ],
+    "फ": [
+      "pʰ"
+    ],
+    "ब": [
+      "b"
+    ],
+    "भ": [
+      "bʱ"
+    ],
+    "म": [
+      "m"
+    ],
+    "य": [
+      "j"
+    ],
+    "र": [
+      "r"
+    ],
+    "ल": [
+      "l"
+    ],
+    "व": [
+      "ʋ"
+    ],
+    "श": [
+      "ʃ"
+    ],
+    "ष": [
+      "ʃ"
+    ],
+    "स": [
+      "s"
+    ],
+    "ह": [
+      "h"
+    ],
+    "ड़": [
+      "ɽ"
+    ],
+    "ढ़": [
+      "ɽʱ"
+    ],
+    "ख़": [
+      "x"
+    ]
+  },
+  "parent": "x-clade-drav1251",
+  "ancestors": [
+    {
+      "code": "x-clade-drav1251",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Descent per Glottolog classification of Kurukh (kuru1301)."
+    }
+  ],
+  "notes": "Research. Kurukh (Oraon), a North Dravidian language of eastern India written in Devanagari. Consonant letters and vowel signs (matras) are mapped to standard Devanagari IPA values, including the retroflex and breathy-voiced series and nuqta letters ड़ ढ़ ख़. The abugida's inherent schwa after bare consonants (and its deletion by virama or context) is NOT modeled here, so unpointed consonant sequences under-recover vowels and a high PER floor is expected. Contrastive vowel length and nasalization are only partly written, and word accent is unwritten; all are left unencoded beyond what the script marks. Grapheme table checked against Winfield (1928): no discrepancy found. STRESS EXEMPTION: Winfield (1928) and subsequent descriptive phonological work report Kurukh word accent as weak and variable rather than a fixed positional rule -- prominence tends toward the first syllable in disyllables but is reported to shift unpredictably across syllables in longer words, with no single rule recoverable from spelling. Because the placement is not a documented deterministic function of syllable count or orthographic ending, no `stress` block is added rather than encoding a guess.",
+  "iso639_3": "kru",
+  "glottolog_code": null,
+  "sources": [
+    {
+      "id": "kru_glottolog",
+      "author": "Hammarström, H. et al. (Glottolog 5.0)",
+      "year": 2024,
+      "title": "Glottolog: Kurukh (kuru1301)",
+      "publisher": "Max Planck Institute for Evolutionary Anthropology",
+      "url": "https://glottolog.org/resource/languoid/id/kuru1301",
+      "pages": null,
+      "notes": "Classification reference for a skeleton-tier entry.",
+      "wikipedia_url": null
+    },
+    {
+      "id": "winfield1928",
+      "author": "Winfield, W. W.",
+      "year": 1928,
+      "title": "A Grammar of the Kurux Language",
+      "publisher": "Asiatic Society of Bengal, Calcutta",
+      "url": null,
+      "pages": null,
+      "notes": "Reference grammar used to verify the Devanagari grapheme table (retroflex/aspirate/nasal series, nuqta letters) and to document the stress exemption.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Kurukh_language"
+    },
+    {
+      "id": "kru_wikipedia",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Kurukh language",
+      "publisher": "Wikipedia",
+      "url": null,
+      "pages": null,
+      "notes": "Orthography/phonology reference for a skeleton-tier entry.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Kurukh_language"
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Kurukh_language"
+  ]
+}

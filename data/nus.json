@@ -1,0 +1,225 @@
+{
+ "code": "nus",
+ "name": "Nuer",
+ "script": "Latin",
+ "quality": "skeleton",
+ "graphemes": {
+  "a": [
+   "a"
+  ],
+  "a̱": [
+   "a̤"
+  ],
+  "b": [
+   "b"
+  ],
+  "c": [
+   "c"
+  ],
+  "d": [
+   "d"
+  ],
+  "dh": [
+   "d̪"
+  ],
+  "e": [
+   "e"
+  ],
+  "e̱": [
+   "e̤"
+  ],
+  "g": [
+   "ɡ"
+  ],
+  "h": [
+   "h"
+  ],
+  "i": [
+   "i"
+  ],
+  "i̱": [
+   "i̤"
+  ],
+  "j": [
+   "ɟ"
+  ],
+  "k": [
+   "k"
+  ],
+  "l": [
+   "l"
+  ],
+  "m": [
+   "m"
+  ],
+  "n": [
+   "n"
+  ],
+  "nh": [
+   "n̪"
+  ],
+  "ny": [
+   "ɲ"
+  ],
+  "o": [
+   "o"
+  ],
+  "o̱": [
+   "o̤"
+  ],
+  "p": [
+   "p"
+  ],
+  "r": [
+   "r"
+  ],
+  "t": [
+   "t"
+  ],
+  "th": [
+   "t̪"
+  ],
+  "u": [
+   "ṳ"
+  ],
+  "w": [
+   "w"
+  ],
+  "y": [
+   "j"
+  ],
+  "ä": [
+   "aˈ"
+  ],
+  "ë": [
+   "eˈ"
+  ],
+  "ö": [
+   "oˈ"
+  ],
+  "ŋ": [
+   "ŋ"
+  ],
+  "ɔ": [
+   "ɔ"
+  ],
+  "ɔ̱": [
+   "ɔ̤"
+  ],
+  "ɛ": [
+   "ɛ"
+  ],
+  "ɛ̈": [
+   "ɛˈ"
+  ],
+  "ɛ̱": [
+   "ɛ̤"
+  ],
+  "ɣ": [
+   "ɣ"
+  ]
+ },
+ "allophones": {
+  "p": [
+   "p",
+   "b",
+   "f"
+  ]
+ },
+ "notes": "Placed so the ancestry graph covers every living ISO 639-3 language. No orthography is claimed; the phoneme inventory follows the cited PHOIBLE inventory (which itself cites a published description): script is Zyyy (undetermined) until a cited description is encoded. Classification and coordinates follow Glottolog. Orthography from an Omniglot chart (c) Simon Ager, https://www.omniglot.com/, extracted via the AfriSpeech/africa-g2p compilation (nus.json). africa-g2p is a compilation tool, not the linguistic authority; the citation above is the original source it names.",
+ "iso639_3": "nus",
+ "glottolog_code": "nuer1246",
+ "sources": [
+  {
+   "id": "glottolog2024",
+   "author": "Hammarström, Harald; Forkel, Robert; Haspelmath, Martin; Bank, Sebastian",
+   "year": 2024,
+   "title": "Glottolog 5.0",
+   "publisher": "Max Planck Institute for Evolutionary Anthropology",
+   "url": "https://glottolog.org/"
+  },
+  {
+   "id": "phoible2019",
+   "author": "Moran, Steven; McCloy, Daniel (eds.)",
+   "year": 2019,
+   "title": "PHOIBLE 2.0 (doi:10.5281/zenodo.2562766)",
+   "publisher": "Max Planck Institute for the Science of Human History",
+   "url": "https://phoible.org/inventories/view/968",
+   "notes": "Inventory 968 (ph), 48 non-marginal segments."
+  },
+  {
+   "id": "omniglot-nuer",
+   "author": "Ager, Simon",
+   "year": 2026,
+   "title": "Omniglot chart (nuer.xls)",
+   "publisher": "Omniglot",
+   "url": "https://www.omniglot.com/",
+   "notes": "Undated web chart; year is retrieval year, not publication year."
+  }
+ ],
+ "urls": [
+  "https://glottolog.org/resource/languoid/id/nuer1246"
+ ],
+ "location": {
+  "latitude": 8.1391,
+  "longitude": 32.3829,
+  "source": "glottolog",
+  "notes": "Glottolog's representative point."
+ },
+ "parent": "x-clade-nilo1247",
+ "phonemes": [
+  "b",
+  "c",
+  "d",
+  "d̪",
+  "j",
+  "k",
+  "l",
+  "m",
+  "n",
+  "n̪",
+  "p",
+  "r",
+  "t",
+  "t̪",
+  "w",
+  "ŋ",
+  "ɟ",
+  "ɡ",
+  "ɦ",
+  "ɲ",
+  "a",
+  "aː",
+  "a̤",
+  "a̤ː",
+  "i",
+  "iː",
+  "i̤",
+  "i̤ː",
+  "o",
+  "oː",
+  "o̤",
+  "o̤ː",
+  "ṳ",
+  "ṳː",
+  "æ̤",
+  "æ̤ː",
+  "ɔ",
+  "ɔː",
+  "ɔ̤",
+  "ɔ̤ː",
+  "ɛ",
+  "ɛː",
+  "ɛ̤",
+  "ɛ̤ː",
+  "ɵ̤",
+  "ɵ̤ː",
+  "ʊ̤",
+  "ʊ̤ː"
+ ],
+ "phoible_id": "968",
+ "script_type": "alphabet",
+ "wikipedia": [
+  "https://en.wikipedia.org/wiki/Nuer_language"
+ ]
+}

@@ -1,0 +1,130 @@
+{
+  "code": "la-x-late",
+  "name": "Late Latin",
+  "script": "Latin",
+  "parent": "la",
+  "graphemes_base": "la",
+  "graphemes": {
+    "ae": [
+      "ɛ"
+    ],
+    "oe": [
+      "e"
+    ],
+    "au": [
+      "aw"
+    ],
+    "h": [
+      ""
+    ],
+    "v": [
+      "w",
+      "β"
+    ],
+    "ph": [
+      "f"
+    ],
+    "th": [
+      "t"
+    ],
+    "ch": [
+      "k"
+    ],
+    "c": [
+      "k",
+      "kʲ"
+    ],
+    "g": [
+      "ɡ",
+      "ɡʲ"
+    ]
+  },
+  "positional_graphemes": {
+    "c": {
+      "before_e": [
+        "kʲ"
+      ],
+      "before_i": [
+        "kʲ"
+      ]
+    },
+    "g": {
+      "before_e": [
+        "ɡʲ"
+      ],
+      "before_i": [
+        "ɡʲ"
+      ]
+    },
+    "v": {
+      "intervocalic": [
+        "β"
+      ]
+    }
+  },
+  "ancestors": [
+    {
+      "code": "la",
+      "role": "parent",
+      "weight": 0.9,
+      "notes": "Direct continuation of Classical Latin"
+    },
+    {
+      "code": "grc",
+      "role": "adstrate",
+      "weight": 0.05,
+      "notes": "Greek adstrate: Eastern Empire bilingualism, liturgical vocabulary, phonological influence on aspiration loss (ph→f, th→t, ch→k)"
+    }
+  ],
+  "notes": "Late Latin (~3rd–6th c. CE). The written Latin of the late Empire and early medieval period, coexisting with diverging spoken Vulgar Latin varieties. Key features: (1) Vowel quantity → quality: the 10→7 vowel merger underway (ĭ/ē→/e/, ĕ→/ɛ/, ŭ/ō→/o/, ŏ→/ɔ/). (2) ae→[ɛ(ː)], oe→[e(ː)] monophthongisation complete. (3) /h/ effectively silent. (4) B/V merger (betacism) visible in misspellings. (5) Palatalisation beginning: /k/ before e,i → [kʲ]; /t/ + i + V → [tsʲ]. (6) Greek aspirated stops → fricatives (ph→[f], th→[t]). Attested: Vulgate, Peregrinatio Aetheriae, Gregory of Tours, Isidore of Seville, Lex Salica. Source: Herman (2000), Väänänen (1981), Adams (2013).",
+  "sources": [
+    {
+      "id": "weiss2009",
+      "author": "Weiss, M.",
+      "year": 2009,
+      "title": "Outline of the Historical and Comparative Grammar of Latin",
+      "publisher": "Beech Stave Press",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "allen1978",
+      "author": "Allen, W.S.",
+      "year": 1978,
+      "title": "Vox Latina: A Guide to the Pronunciation of Classical Latin",
+      "publisher": "Cambridge University Press",
+      "url": null,
+      "pages": null,
+      "notes": null,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Latin_phonology"
+    },
+    {
+      "id": "clackson_horrocks2007",
+      "author": "Clackson, J. & Horrocks, G.",
+      "year": 2007,
+      "title": "The Blackwell History of the Latin Language",
+      "publisher": "Blackwell",
+      "url": null,
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Late_Latin"
+  ],
+  "timespan": {
+    "start_year": 200,
+    "end_year": 800
+  },
+  "glottolog_code": "late1252",
+  "iso639_3": "lat",
+  "quality": "research",
+  "wikidata_qid": "Q1503113",
+  "location": {
+    "latitude": 41.9026,
+    "longitude": 12.4502,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Late Latin."
+  }
+}

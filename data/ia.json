@@ -1,0 +1,266 @@
+{
+  "code": "ia",
+  "name": "Interlingua",
+  "family": "Constructed",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "b": [
+      "b"
+    ],
+    "c": [
+      "k",
+      "ts"
+    ],
+    "ch": [
+      "ʃ",
+      "k"
+    ],
+    "d": [
+      "d"
+    ],
+    "e": [
+      "e"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "h": [
+      "h"
+    ],
+    "i": [
+      "i"
+    ],
+    "j": [
+      "ʒ"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "o": [
+      "o"
+    ],
+    "p": [
+      "p"
+    ],
+    "ph": [
+      "f"
+    ],
+    "q": [
+      "k"
+    ],
+    "qu": [
+      "kw"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s",
+      "z"
+    ],
+    "t": [
+      "t"
+    ],
+    "th": [
+      "t"
+    ],
+    "u": [
+      "u"
+    ],
+    "v": [
+      "v"
+    ],
+    "w": [
+      "w",
+      "v"
+    ],
+    "x": [
+      "ks"
+    ],
+    "y": [
+      "j",
+      "i"
+    ],
+    "z": [
+      "z"
+    ]
+  },
+  "allophones": {
+    "a": [
+      "a"
+    ],
+    "b": [
+      "b"
+    ],
+    "k": [
+      "k"
+    ],
+    "ts": [
+      "ts"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "d": [
+      "d"
+    ],
+    "e": [
+      "e"
+    ],
+    "f": [
+      "f"
+    ],
+    "ɡ": [
+      "ɡ"
+    ],
+    "h": [
+      "h"
+    ],
+    "i": [
+      "i"
+    ],
+    "ʒ": [
+      "ʒ"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "o": [
+      "o"
+    ],
+    "p": [
+      "p"
+    ],
+    "kw": [
+      "kw"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s",
+      "z"
+    ],
+    "z": [
+      "z"
+    ],
+    "t": [
+      "t"
+    ],
+    "u": [
+      "u"
+    ],
+    "v": [
+      "v"
+    ],
+    "w": [
+      "w"
+    ],
+    "ks": [
+      "ks"
+    ],
+    "j": [
+      "j"
+    ]
+  },
+  "positional_graphemes": {
+    "c": {
+      "before_front_vowel": [
+        "ts"
+      ],
+      "default": [
+        "k"
+      ]
+    },
+    "s": {
+      "intervocalic": [
+        "z",
+        "s"
+      ],
+      "default": [
+        "s"
+      ]
+    },
+    "g": {
+      "default": [
+        "ɡ"
+      ]
+    }
+  },
+  "iso639_3": "ina",
+  "glottolog_code": "inte1239",
+  "wikidata_qid": "Q35934",
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Interlingua",
+    "https://ia.wikipedia.org/wiki/Interlingua"
+  ],
+  "sources": [
+    {
+      "id": "gode_blair1951",
+      "author": "Gode, Alexander & Blair, Hugh E.",
+      "year": 1951,
+      "title": "Interlingua: A Grammar of the International Language",
+      "publisher": "Storm Publishers (IALA)",
+      "url": null,
+      "wikipedia_url": null,
+      "pages": null,
+      "notes": "The official IALA grammar; §§1-6 define the pronunciation (collateral 'continental' values) and the stress rule."
+    },
+    {
+      "id": "gode1951_dict",
+      "author": "Gode, Alexander",
+      "year": 1951,
+      "title": "Interlingua-English: A Dictionary of the International Language",
+      "publisher": "Storm Publishers (IALA)",
+      "url": null,
+      "wikipedia_url": null,
+      "pages": null,
+      "notes": "Introduction states the orthography and its phonemic values."
+    },
+    {
+      "id": "interlingua_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Interlingua",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Interlingua",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Interlingua",
+      "pages": "Letter-to-sound table and stress rule.",
+      "notes": null
+    }
+  ],
+  "timespan": {
+    "start_year": 1951,
+    "end_year": null
+  },
+  "notes": "Interlingua (IALA, Gode & Blair 1951). Near-phonemic Latin orthography with 'continental' values. ⟨c⟩ = /k/, but /ts/ before e, i, y; ⟨ch⟩ = /ʃ/ in French-derived words, /k/ in Greek/Italian-derived ones; ⟨s⟩ is often voiced [z] between vowels; ⟨qu⟩ = /kw/ (but /k/ in que, qui). Default stress falls on the vowel before the last consonant (plural -es ignored).",
+  "location": {
+    "latitude": 48.203,
+    "longitude": 2.615,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Interlingua (International Auxiliary Language Association)."
+  }
+}

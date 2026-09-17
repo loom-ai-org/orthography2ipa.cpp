@@ -1,0 +1,943 @@
+{
+  "code": "ycl",
+  "name": "Lolopo",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "bb": [
+      "b"
+    ],
+    "dd": [
+      "d"
+    ],
+    "gg": [
+      "ɡ"
+    ],
+    "zz": [
+      "dz"
+    ],
+    "jj": [
+      "dʒ"
+    ],
+    "ss": [
+      "z"
+    ],
+    "hh": [
+      "ɣ"
+    ],
+    "ng": [
+      "ŋ"
+    ],
+    "b": [
+      "p"
+    ],
+    "d": [
+      "t"
+    ],
+    "g": [
+      "k"
+    ],
+    "p": [
+      "pʰ"
+    ],
+    "t": [
+      "tʰ"
+    ],
+    "k": [
+      "kʰ"
+    ],
+    "z": [
+      "ts"
+    ],
+    "c": [
+      "tsʰ"
+    ],
+    "s": [
+      "s"
+    ],
+    "j": [
+      "tʃ"
+    ],
+    "q": [
+      "tʃʰ"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "f": [
+      "f"
+    ],
+    "v": [
+      "v"
+    ],
+    "w": [
+      "w"
+    ],
+    "y": [
+      "ʝ"
+    ],
+    "h": [
+      "x",
+      "h"
+    ],
+    "a": [
+      "a³³"
+    ],
+    "o": [
+      "o³³"
+    ],
+    "e": [
+      "ɯ³³"
+    ],
+    "i": [
+      "i³³"
+    ],
+    "u": [
+      "ɤ³³"
+    ],
+    "ae": [
+      "æ³³"
+    ],
+    "ei": [
+      "e³³"
+    ],
+    "ie": [
+      "ʲɛ³³"
+    ],
+    "iae": [
+      "ʲæ³³"
+    ],
+    "ia": [
+      "ʲa³³"
+    ],
+    "io": [
+      "ʲo³³"
+    ],
+    "iu": [
+      "ʲo³³"
+    ],
+    "ua": [
+      "ʷa³³"
+    ],
+    "r": [
+      "²¹"
+    ],
+    "xl": [
+      "̠⁶⁶"
+    ],
+    "xr": [
+      "̠ʔ²¹"
+    ],
+    "l": [
+      "ɮ",
+      "l"
+    ],
+    "x": [
+      "ʃ"
+    ]
+  },
+  "parent": "x-clade-sino1245",
+  "ancestors": [
+    {
+      "code": "x-clade-sino1245",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Descent per Glottolog classification of Lolopo (lolo1259)."
+    }
+  ],
+  "notes": "Lolopo / Yao'an Central Yi (Loloish, Sino-Tibetan) of Yunnan, China, in the Roman practical orthography developed by W. Scott Merrifield, in which speakers call their own speech ⟨Loxrlavu⟩. The Yi syllabary is a SEPARATE writing system for the Yi languages and is not mapped here (see the `ii` spec). INPUT CONTRACT: Loxrlavu-orthography Lolopo. CONSONANTS (Merrifield 2010, Table 5): voiced stops/affricates are written DOUBLE — ⟨bb dd gg zz jj⟩ = /b d ɡ dz dʒ/ — voiceless unaspirated single ⟨b d g z j⟩ = /p t k ts tʃ/, and voiceless aspirated ⟨p t k c q⟩ = /pʰ tʰ kʰ tsʰ tʃʰ/. ⟨s ss⟩ = /s z/, ⟨x⟩ = /ʃ/, ⟨y⟩ = /ʝ/, ⟨h hh⟩ = /x~h ɣ/, ⟨ng⟩ = /ŋ/, ⟨l⟩ = /l~ɮ/. TONE IS WRITTEN WITH LETTERS, and they are mapped: a syllable-final ⟨l⟩ is the HIGH tone 55, ⟨r⟩ the LOW tone 21, and an unmarked syllable is MID 33 (Merrifield 2010 §2.1.1). ⟨x⟩ additionally marks the TIGHT-THROAT (tense) register, which raises the mid and high tones (⟨x⟩ = 44, ⟨xl⟩ = 66) and adds a syllable-final glottal stop to the low tone (⟨xr⟩ = 21 with /ʔ/). ⟨l⟩ and ⟨x⟩ are onsets before a vowel and tone letters elsewhere, which `positional_graphemes` decides; likewise ⟨xl xr⟩ are the tense tone digraphs only in a rime (⟨vixlux⟩ [vi̠⁴⁴ɮɤ̠⁴⁴]). VOWELS: the seven lax vowels ⟨i ei ae a e o u⟩ = /i e æ a ɯ o u/ (with ⟨u⟩ realised [ɤ] in the transcriptions modelled here) and the diphthongs ⟨ie iae ia io ua⟩ = /ʲɛ ʲæ ʲa ʲo ʷa/; ⟨iu⟩ is the variant spelling of ⟨io⟩ used in the Wiktionary corpus. A high vowel after a sibilant or affricate apicalises ([z̩], [z̩ʷ]) and ⟨e⟩ after a coronal centralises to [ə] — both in the rule layer, not enumerated. A word-initial vowel takes an epenthetic /ʔ/.",
+  "iso639_3": "ycl",
+  "glottolog_code": null,
+  "sources": [
+    {
+      "id": "ycl_glottolog",
+      "author": "Hammarström, H. et al. (Glottolog 5.0)",
+      "year": 2024,
+      "title": "Glottolog: Lolopo (lolo1259)",
+      "publisher": "Max Planck Institute for Evolutionary Anthropology",
+      "url": "https://glottolog.org/resource/languoid/id/lolo1259",
+      "notes": "Classification reference."
+    },
+    {
+      "id": "ycl_wikipedia",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Lolopo language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Lolopo_language",
+      "notes": "General orthography/phonology reference.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Lolopo_language"
+    },
+    {
+      "id": "ycl_merrifield_j2010",
+      "author": "Merrifield, Judith Thomas",
+      "year": 2010,
+      "title": "Yao'an Lolo Grammar Sketch",
+      "publisher": "MA thesis, Graduate Institute of Applied Linguistics",
+      "notes": "Tables 2-5 give the tone letters (⟨l⟩ 55, ⟨r⟩ 21, unmarked 33), the tight-throat ⟨x⟩ register, the seven lax/seven tense vowels with five diphthongs, and the full orthography→phoneme consonant chart this spec encodes."
+    },
+    {
+      "id": "ycl_merrifield2012",
+      "author": "Merrifield, W. Scott",
+      "year": 2012,
+      "title": "Yáo'ān Central Yi Phonology",
+      "publisher": "SIL International (SIL Electronic Working Papers 2012-002)",
+      "url": "https://www.sil.org/resources/publications/entry/48227",
+      "notes": "Phonology behind the Roman orthography; the autonym ⟨Loxrlavu⟩ shows the tone/register letters in use."
+    },
+    {
+      "id": "ycl_bradley2001",
+      "author": "Bradley, David",
+      "year": 2001,
+      "title": "Language policy for the Yi",
+      "publisher": "In: Harrell, S. (ed.), Perspectives on the Yi of Southwest China, University of California Press, pp. 195-213",
+      "notes": "Places the Roman Lolopo orthography against the Yi syllabary and the other Yi standards."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Lolopo_language"
+  ],
+  "positional_graphemes": {
+    "a": {
+      "word_initial": [
+        "ʔa³³"
+      ]
+    },
+    "o": {
+      "word_initial": [
+        "ʔo³³"
+      ]
+    },
+    "e": {
+      "word_initial": [
+        "ʔɯ³³"
+      ]
+    },
+    "i": {
+      "word_initial": [
+        "ʔi³³"
+      ]
+    },
+    "u": {
+      "word_initial": [
+        "ʔɤ³³"
+      ]
+    },
+    "ae": {
+      "word_initial": [
+        "ʔæ³³"
+      ]
+    },
+    "ei": {
+      "word_initial": [
+        "ʔe³³"
+      ]
+    },
+    "ie": {
+      "word_initial": [
+        "ʔʲɛ³³"
+      ]
+    },
+    "iae": {
+      "word_initial": [
+        "ʔʲæ³³"
+      ]
+    },
+    "ia": {
+      "word_initial": [
+        "ʔʲa³³"
+      ]
+    },
+    "io": {
+      "word_initial": [
+        "ʔʲo³³"
+      ]
+    },
+    "iu": {
+      "word_initial": [
+        "ʔʲo³³"
+      ]
+    },
+    "ua": {
+      "word_initial": [
+        "ʔʷa³³"
+      ]
+    },
+    "l": {
+      "before_vowel": [
+        "ɮ",
+        "l"
+      ],
+      "default": [
+        "⁵⁵"
+      ]
+    },
+    "x": {
+      "before_vowel": [
+        "ʃ"
+      ],
+      "default": [
+        "̠⁴⁴"
+      ]
+    },
+    "xl": {
+      "before_vowel": [
+        "̠⁴⁴ɮ"
+      ],
+      "default": [
+        "̠⁶⁶"
+      ]
+    },
+    "xr": {
+      "before_vowel": [
+        "̠⁴⁴²¹"
+      ],
+      "default": [
+        "̠ʔ²¹"
+      ]
+    }
+  },
+  "allophone_rules": [
+    {
+      "id": "YCL_MID_UNSPELLED_C_a",
+      "phonemes": [
+        "a³³"
+      ],
+      "surface": "a",
+      "followed_by_phoneme": [
+        "²¹",
+        "̠ʔ²¹",
+        "̠⁴⁴",
+        "̠⁴⁴ɮ",
+        "̠⁶⁶",
+        "⁵⁵"
+      ],
+      "notes": "A syllable with no tone letter carries the mid tone 33; when a tone letter follows, that letter spells the tone instead."
+    },
+    {
+      "id": "YCL_MID_UNSPELLED_C_e",
+      "phonemes": [
+        "e³³"
+      ],
+      "surface": "e",
+      "followed_by_phoneme": [
+        "²¹",
+        "̠ʔ²¹",
+        "̠⁴⁴",
+        "̠⁴⁴ɮ",
+        "̠⁶⁶",
+        "⁵⁵"
+      ],
+      "notes": "A syllable with no tone letter carries the mid tone 33; when a tone letter follows, that letter spells the tone instead."
+    },
+    {
+      "id": "YCL_APICAL_TONED_C_i",
+      "phonemes": [
+        "i³³"
+      ],
+      "surface": "z̩",
+      "preceded_by_phoneme": [
+        "s",
+        "z",
+        "ts",
+        "dz",
+        "tsʰ"
+      ],
+      "followed_by_phoneme": [
+        "²¹",
+        "̠ʔ²¹",
+        "̠⁴⁴",
+        "̠⁴⁴ɮ",
+        "̠⁶⁶",
+        "⁵⁵"
+      ],
+      "notes": "Register/apicalisation: a high vowel after a sibilant or affricate onset is realised as the apical vowel, and ⟨e⟩ after a coronal onset centralises to [ə]. A syllable with no tone letter carries the mid tone 33; when a tone letter follows, that letter spells the tone instead."
+    },
+    {
+      "id": "YCL_APICAL_C_i",
+      "phonemes": [
+        "i³³"
+      ],
+      "surface": "z̩³³",
+      "preceded_by_phoneme": [
+        "s",
+        "z",
+        "ts",
+        "dz",
+        "tsʰ"
+      ],
+      "notes": "Register/apicalisation: a high vowel after a sibilant or affricate onset is realised as the apical vowel, and ⟨e⟩ after a coronal onset centralises to [ə]."
+    },
+    {
+      "id": "YCL_MID_UNSPELLED_C_i",
+      "phonemes": [
+        "i³³"
+      ],
+      "surface": "i",
+      "followed_by_phoneme": [
+        "²¹",
+        "̠ʔ²¹",
+        "̠⁴⁴",
+        "̠⁴⁴ɮ",
+        "̠⁶⁶",
+        "⁵⁵"
+      ],
+      "notes": "A syllable with no tone letter carries the mid tone 33; when a tone letter follows, that letter spells the tone instead."
+    },
+    {
+      "id": "YCL_MID_UNSPELLED_C_o",
+      "phonemes": [
+        "o³³"
+      ],
+      "surface": "o",
+      "followed_by_phoneme": [
+        "²¹",
+        "̠ʔ²¹",
+        "̠⁴⁴",
+        "̠⁴⁴ɮ",
+        "̠⁶⁶",
+        "⁵⁵"
+      ],
+      "notes": "A syllable with no tone letter carries the mid tone 33; when a tone letter follows, that letter spells the tone instead."
+    },
+    {
+      "id": "YCL_MID_UNSPELLED_C_æ",
+      "phonemes": [
+        "æ³³"
+      ],
+      "surface": "æ",
+      "followed_by_phoneme": [
+        "²¹",
+        "̠ʔ²¹",
+        "̠⁴⁴",
+        "̠⁴⁴ɮ",
+        "̠⁶⁶",
+        "⁵⁵"
+      ],
+      "notes": "A syllable with no tone letter carries the mid tone 33; when a tone letter follows, that letter spells the tone instead."
+    },
+    {
+      "id": "YCL_APICAL_TONED_C_ɤ",
+      "phonemes": [
+        "ɤ³³"
+      ],
+      "surface": "z̩ʷ",
+      "preceded_by_phoneme": [
+        "s",
+        "z",
+        "ts",
+        "dz",
+        "tsʰ"
+      ],
+      "followed_by_phoneme": [
+        "²¹",
+        "̠ʔ²¹",
+        "̠⁴⁴",
+        "̠⁴⁴ɮ",
+        "̠⁶⁶",
+        "⁵⁵"
+      ],
+      "notes": "Register/apicalisation: a high vowel after a sibilant or affricate onset is realised as the apical vowel, and ⟨e⟩ after a coronal onset centralises to [ə]. A syllable with no tone letter carries the mid tone 33; when a tone letter follows, that letter spells the tone instead."
+    },
+    {
+      "id": "YCL_APICAL_C_ɤ",
+      "phonemes": [
+        "ɤ³³"
+      ],
+      "surface": "z̩ʷ³³",
+      "preceded_by_phoneme": [
+        "s",
+        "z",
+        "ts",
+        "dz",
+        "tsʰ"
+      ],
+      "notes": "Register/apicalisation: a high vowel after a sibilant or affricate onset is realised as the apical vowel, and ⟨e⟩ after a coronal onset centralises to [ə]."
+    },
+    {
+      "id": "YCL_MID_UNSPELLED_C_ɤ",
+      "phonemes": [
+        "ɤ³³"
+      ],
+      "surface": "ɤ",
+      "followed_by_phoneme": [
+        "²¹",
+        "̠ʔ²¹",
+        "̠⁴⁴",
+        "̠⁴⁴ɮ",
+        "̠⁶⁶",
+        "⁵⁵"
+      ],
+      "notes": "A syllable with no tone letter carries the mid tone 33; when a tone letter follows, that letter spells the tone instead."
+    },
+    {
+      "id": "YCL_APICAL_TONED_C_ɯ",
+      "phonemes": [
+        "ɯ³³"
+      ],
+      "surface": "ə",
+      "preceded_by_phoneme": [
+        "s",
+        "z",
+        "ts",
+        "dz",
+        "tsʰ",
+        "tʃ",
+        "dʒ",
+        "tʃʰ",
+        "t",
+        "d",
+        "n"
+      ],
+      "followed_by_phoneme": [
+        "²¹",
+        "̠ʔ²¹",
+        "̠⁴⁴",
+        "̠⁴⁴ɮ",
+        "̠⁶⁶",
+        "⁵⁵"
+      ],
+      "notes": "Register/apicalisation: a high vowel after a sibilant or affricate onset is realised as the apical vowel, and ⟨e⟩ after a coronal onset centralises to [ə]. A syllable with no tone letter carries the mid tone 33; when a tone letter follows, that letter spells the tone instead."
+    },
+    {
+      "id": "YCL_APICAL_C_ɯ",
+      "phonemes": [
+        "ɯ³³"
+      ],
+      "surface": "ə³³",
+      "preceded_by_phoneme": [
+        "s",
+        "z",
+        "ts",
+        "dz",
+        "tsʰ",
+        "tʃ",
+        "dʒ",
+        "tʃʰ",
+        "t",
+        "d",
+        "n"
+      ],
+      "notes": "Register/apicalisation: a high vowel after a sibilant or affricate onset is realised as the apical vowel, and ⟨e⟩ after a coronal onset centralises to [ə]."
+    },
+    {
+      "id": "YCL_MID_UNSPELLED_C_ɯ",
+      "phonemes": [
+        "ɯ³³"
+      ],
+      "surface": "ɯ",
+      "followed_by_phoneme": [
+        "²¹",
+        "̠ʔ²¹",
+        "̠⁴⁴",
+        "̠⁴⁴ɮ",
+        "̠⁶⁶",
+        "⁵⁵"
+      ],
+      "notes": "A syllable with no tone letter carries the mid tone 33; when a tone letter follows, that letter spells the tone instead."
+    },
+    {
+      "id": "YCL_MID_UNSPELLED_C_ʲa",
+      "phonemes": [
+        "ʲa³³"
+      ],
+      "surface": "ʲa",
+      "followed_by_phoneme": [
+        "²¹",
+        "̠ʔ²¹",
+        "̠⁴⁴",
+        "̠⁴⁴ɮ",
+        "̠⁶⁶",
+        "⁵⁵"
+      ],
+      "notes": "A syllable with no tone letter carries the mid tone 33; when a tone letter follows, that letter spells the tone instead."
+    },
+    {
+      "id": "YCL_MID_UNSPELLED_C_ʲo",
+      "phonemes": [
+        "ʲo³³"
+      ],
+      "surface": "ʲo",
+      "followed_by_phoneme": [
+        "²¹",
+        "̠ʔ²¹",
+        "̠⁴⁴",
+        "̠⁴⁴ɮ",
+        "̠⁶⁶",
+        "⁵⁵"
+      ],
+      "notes": "A syllable with no tone letter carries the mid tone 33; when a tone letter follows, that letter spells the tone instead."
+    },
+    {
+      "id": "YCL_MID_UNSPELLED_C_ʲæ",
+      "phonemes": [
+        "ʲæ³³"
+      ],
+      "surface": "ʲæ",
+      "followed_by_phoneme": [
+        "²¹",
+        "̠ʔ²¹",
+        "̠⁴⁴",
+        "̠⁴⁴ɮ",
+        "̠⁶⁶",
+        "⁵⁵"
+      ],
+      "notes": "A syllable with no tone letter carries the mid tone 33; when a tone letter follows, that letter spells the tone instead."
+    },
+    {
+      "id": "YCL_MID_UNSPELLED_C_ʲɛ",
+      "phonemes": [
+        "ʲɛ³³"
+      ],
+      "surface": "ʲɛ",
+      "followed_by_phoneme": [
+        "²¹",
+        "̠ʔ²¹",
+        "̠⁴⁴",
+        "̠⁴⁴ɮ",
+        "̠⁶⁶",
+        "⁵⁵"
+      ],
+      "notes": "A syllable with no tone letter carries the mid tone 33; when a tone letter follows, that letter spells the tone instead."
+    },
+    {
+      "id": "YCL_MID_UNSPELLED_C_ʷa",
+      "phonemes": [
+        "ʷa³³"
+      ],
+      "surface": "ʷa",
+      "followed_by_phoneme": [
+        "²¹",
+        "̠ʔ²¹",
+        "̠⁴⁴",
+        "̠⁴⁴ɮ",
+        "̠⁶⁶",
+        "⁵⁵"
+      ],
+      "notes": "A syllable with no tone letter carries the mid tone 33; when a tone letter follows, that letter spells the tone instead."
+    },
+    {
+      "id": "YCL_MID_UNSPELLED_ʔ_a",
+      "phonemes": [
+        "ʔa³³"
+      ],
+      "surface": "ʔa",
+      "followed_by_phoneme": [
+        "²¹",
+        "̠ʔ²¹",
+        "̠⁴⁴",
+        "̠⁴⁴ɮ",
+        "̠⁶⁶",
+        "⁵⁵"
+      ],
+      "notes": "A syllable with no tone letter carries the mid tone 33; when a tone letter follows, that letter spells the tone instead."
+    },
+    {
+      "id": "YCL_MID_UNSPELLED_ʔ_e",
+      "phonemes": [
+        "ʔe³³"
+      ],
+      "surface": "ʔe",
+      "followed_by_phoneme": [
+        "²¹",
+        "̠ʔ²¹",
+        "̠⁴⁴",
+        "̠⁴⁴ɮ",
+        "̠⁶⁶",
+        "⁵⁵"
+      ],
+      "notes": "A syllable with no tone letter carries the mid tone 33; when a tone letter follows, that letter spells the tone instead."
+    },
+    {
+      "id": "YCL_APICAL_TONED_ʔ_i",
+      "phonemes": [
+        "ʔi³³"
+      ],
+      "surface": "ʔz̩",
+      "preceded_by_phoneme": [
+        "s",
+        "z",
+        "ts",
+        "dz",
+        "tsʰ"
+      ],
+      "followed_by_phoneme": [
+        "²¹",
+        "̠ʔ²¹",
+        "̠⁴⁴",
+        "̠⁴⁴ɮ",
+        "̠⁶⁶",
+        "⁵⁵"
+      ],
+      "notes": "Register/apicalisation: a high vowel after a sibilant or affricate onset is realised as the apical vowel, and ⟨e⟩ after a coronal onset centralises to [ə]. A syllable with no tone letter carries the mid tone 33; when a tone letter follows, that letter spells the tone instead."
+    },
+    {
+      "id": "YCL_APICAL_ʔ_i",
+      "phonemes": [
+        "ʔi³³"
+      ],
+      "surface": "ʔz̩³³",
+      "preceded_by_phoneme": [
+        "s",
+        "z",
+        "ts",
+        "dz",
+        "tsʰ"
+      ],
+      "notes": "Register/apicalisation: a high vowel after a sibilant or affricate onset is realised as the apical vowel, and ⟨e⟩ after a coronal onset centralises to [ə]."
+    },
+    {
+      "id": "YCL_MID_UNSPELLED_ʔ_i",
+      "phonemes": [
+        "ʔi³³"
+      ],
+      "surface": "ʔi",
+      "followed_by_phoneme": [
+        "²¹",
+        "̠ʔ²¹",
+        "̠⁴⁴",
+        "̠⁴⁴ɮ",
+        "̠⁶⁶",
+        "⁵⁵"
+      ],
+      "notes": "A syllable with no tone letter carries the mid tone 33; when a tone letter follows, that letter spells the tone instead."
+    },
+    {
+      "id": "YCL_MID_UNSPELLED_ʔ_o",
+      "phonemes": [
+        "ʔo³³"
+      ],
+      "surface": "ʔo",
+      "followed_by_phoneme": [
+        "²¹",
+        "̠ʔ²¹",
+        "̠⁴⁴",
+        "̠⁴⁴ɮ",
+        "̠⁶⁶",
+        "⁵⁵"
+      ],
+      "notes": "A syllable with no tone letter carries the mid tone 33; when a tone letter follows, that letter spells the tone instead."
+    },
+    {
+      "id": "YCL_MID_UNSPELLED_ʔ_æ",
+      "phonemes": [
+        "ʔæ³³"
+      ],
+      "surface": "ʔæ",
+      "followed_by_phoneme": [
+        "²¹",
+        "̠ʔ²¹",
+        "̠⁴⁴",
+        "̠⁴⁴ɮ",
+        "̠⁶⁶",
+        "⁵⁵"
+      ],
+      "notes": "A syllable with no tone letter carries the mid tone 33; when a tone letter follows, that letter spells the tone instead."
+    },
+    {
+      "id": "YCL_APICAL_TONED_ʔ_ɤ",
+      "phonemes": [
+        "ʔɤ³³"
+      ],
+      "surface": "ʔz̩ʷ",
+      "preceded_by_phoneme": [
+        "s",
+        "z",
+        "ts",
+        "dz",
+        "tsʰ"
+      ],
+      "followed_by_phoneme": [
+        "²¹",
+        "̠ʔ²¹",
+        "̠⁴⁴",
+        "̠⁴⁴ɮ",
+        "̠⁶⁶",
+        "⁵⁵"
+      ],
+      "notes": "Register/apicalisation: a high vowel after a sibilant or affricate onset is realised as the apical vowel, and ⟨e⟩ after a coronal onset centralises to [ə]. A syllable with no tone letter carries the mid tone 33; when a tone letter follows, that letter spells the tone instead."
+    },
+    {
+      "id": "YCL_APICAL_ʔ_ɤ",
+      "phonemes": [
+        "ʔɤ³³"
+      ],
+      "surface": "ʔz̩ʷ³³",
+      "preceded_by_phoneme": [
+        "s",
+        "z",
+        "ts",
+        "dz",
+        "tsʰ"
+      ],
+      "notes": "Register/apicalisation: a high vowel after a sibilant or affricate onset is realised as the apical vowel, and ⟨e⟩ after a coronal onset centralises to [ə]."
+    },
+    {
+      "id": "YCL_MID_UNSPELLED_ʔ_ɤ",
+      "phonemes": [
+        "ʔɤ³³"
+      ],
+      "surface": "ʔɤ",
+      "followed_by_phoneme": [
+        "²¹",
+        "̠ʔ²¹",
+        "̠⁴⁴",
+        "̠⁴⁴ɮ",
+        "̠⁶⁶",
+        "⁵⁵"
+      ],
+      "notes": "A syllable with no tone letter carries the mid tone 33; when a tone letter follows, that letter spells the tone instead."
+    },
+    {
+      "id": "YCL_APICAL_TONED_ʔ_ɯ",
+      "phonemes": [
+        "ʔɯ³³"
+      ],
+      "surface": "ʔə",
+      "preceded_by_phoneme": [
+        "s",
+        "z",
+        "ts",
+        "dz",
+        "tsʰ",
+        "tʃ",
+        "dʒ",
+        "tʃʰ",
+        "t",
+        "d",
+        "n"
+      ],
+      "followed_by_phoneme": [
+        "²¹",
+        "̠ʔ²¹",
+        "̠⁴⁴",
+        "̠⁴⁴ɮ",
+        "̠⁶⁶",
+        "⁵⁵"
+      ],
+      "notes": "Register/apicalisation: a high vowel after a sibilant or affricate onset is realised as the apical vowel, and ⟨e⟩ after a coronal onset centralises to [ə]. A syllable with no tone letter carries the mid tone 33; when a tone letter follows, that letter spells the tone instead."
+    },
+    {
+      "id": "YCL_APICAL_ʔ_ɯ",
+      "phonemes": [
+        "ʔɯ³³"
+      ],
+      "surface": "ʔə³³",
+      "preceded_by_phoneme": [
+        "s",
+        "z",
+        "ts",
+        "dz",
+        "tsʰ",
+        "tʃ",
+        "dʒ",
+        "tʃʰ",
+        "t",
+        "d",
+        "n"
+      ],
+      "notes": "Register/apicalisation: a high vowel after a sibilant or affricate onset is realised as the apical vowel, and ⟨e⟩ after a coronal onset centralises to [ə]."
+    },
+    {
+      "id": "YCL_MID_UNSPELLED_ʔ_ɯ",
+      "phonemes": [
+        "ʔɯ³³"
+      ],
+      "surface": "ʔɯ",
+      "followed_by_phoneme": [
+        "²¹",
+        "̠ʔ²¹",
+        "̠⁴⁴",
+        "̠⁴⁴ɮ",
+        "̠⁶⁶",
+        "⁵⁵"
+      ],
+      "notes": "A syllable with no tone letter carries the mid tone 33; when a tone letter follows, that letter spells the tone instead."
+    },
+    {
+      "id": "YCL_MID_UNSPELLED_ʔ_ʲa",
+      "phonemes": [
+        "ʔʲa³³"
+      ],
+      "surface": "ʔʲa",
+      "followed_by_phoneme": [
+        "²¹",
+        "̠ʔ²¹",
+        "̠⁴⁴",
+        "̠⁴⁴ɮ",
+        "̠⁶⁶",
+        "⁵⁵"
+      ],
+      "notes": "A syllable with no tone letter carries the mid tone 33; when a tone letter follows, that letter spells the tone instead."
+    },
+    {
+      "id": "YCL_MID_UNSPELLED_ʔ_ʲo",
+      "phonemes": [
+        "ʔʲo³³"
+      ],
+      "surface": "ʔʲo",
+      "followed_by_phoneme": [
+        "²¹",
+        "̠ʔ²¹",
+        "̠⁴⁴",
+        "̠⁴⁴ɮ",
+        "̠⁶⁶",
+        "⁵⁵"
+      ],
+      "notes": "A syllable with no tone letter carries the mid tone 33; when a tone letter follows, that letter spells the tone instead."
+    },
+    {
+      "id": "YCL_MID_UNSPELLED_ʔ_ʲæ",
+      "phonemes": [
+        "ʔʲæ³³"
+      ],
+      "surface": "ʔʲæ",
+      "followed_by_phoneme": [
+        "²¹",
+        "̠ʔ²¹",
+        "̠⁴⁴",
+        "̠⁴⁴ɮ",
+        "̠⁶⁶",
+        "⁵⁵"
+      ],
+      "notes": "A syllable with no tone letter carries the mid tone 33; when a tone letter follows, that letter spells the tone instead."
+    },
+    {
+      "id": "YCL_MID_UNSPELLED_ʔ_ʲɛ",
+      "phonemes": [
+        "ʔʲɛ³³"
+      ],
+      "surface": "ʔʲɛ",
+      "followed_by_phoneme": [
+        "²¹",
+        "̠ʔ²¹",
+        "̠⁴⁴",
+        "̠⁴⁴ɮ",
+        "̠⁶⁶",
+        "⁵⁵"
+      ],
+      "notes": "A syllable with no tone letter carries the mid tone 33; when a tone letter follows, that letter spells the tone instead."
+    },
+    {
+      "id": "YCL_MID_UNSPELLED_ʔ_ʷa",
+      "phonemes": [
+        "ʔʷa³³"
+      ],
+      "surface": "ʔʷa",
+      "followed_by_phoneme": [
+        "²¹",
+        "̠ʔ²¹",
+        "̠⁴⁴",
+        "̠⁴⁴ɮ",
+        "̠⁶⁶",
+        "⁵⁵"
+      ],
+      "notes": "A syllable with no tone letter carries the mid tone 33; when a tone letter follows, that letter spells the tone instead."
+    }
+  ],
+  "orthography_kind": "romanization"
+}

@@ -1,0 +1,110 @@
+{
+  "code": "azb",
+  "name": "South Azerbaijani",
+  "script": "Arabic",
+  "script_type": "abjad",
+  "quality": "stub",
+  "graphemes": {},
+  "allophones": {},
+  "parent": "trk",
+  "ancestors": [
+    {
+      "code": "trk",
+      "role": "parent",
+      "weight": 0.85,
+      "notes": "Turkic (Oghuz branch)."
+    },
+    {
+      "code": "fa",
+      "role": "adstrate",
+      "weight": 0.1,
+      "notes": "Persian adstrate: lexicon and the Perso-Arabic writing tradition."
+    }
+  ],
+  "notes": "Grapheme inventory NOT YET SPECIFIED (stub). South Azerbaijani (Iran) is written in the Perso-Arabic script — an abjad in which short vowels are largely unwritten, although the Iranian Azerbaijani norm uses matres lectionis (ا آ و ی) and optional diacritics more heavily than Persian does. The Latin alphabet of North Azerbaijani (see `az`) is a different orthography and is not modelled here. No Arabic letter-to-phoneme map is claimed: a Tier-A spec would have to restore unwritten short vowels and Azerbaijani vowel harmony, which needs vocalised input or a lexicon. PHONEME INVENTORY: attested inventory from PHOIBLE (glottocode sout2697), declared directly. `graphemes` stays empty because none of that depends on the writing system: the sounds of this language are known regardless of whether — or how — it is written.",
+  "iso639_3": "azb",
+  "glottolog_code": "sout2697",
+  "wikidata_qid": "Q3449805",
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/South_Azerbaijani_language"
+  ],
+  "sources": [
+    {
+      "id": "azb_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "South Azerbaijani",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/South_Azerbaijani_language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/South_Azerbaijani_language",
+      "pages": null,
+      "notes": "Perso-Arabic orthography of Iranian Azerbaijani and its relation to the Latin-script northern standard."
+    },
+    {
+      "id": "azerbaijani_alphabet_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Azerbaijani alphabet",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Azerbaijani_alphabet",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Azerbaijani_alphabet",
+      "pages": null,
+      "notes": "Latin, Cyrillic and Perso-Arabic letter tables."
+    },
+    {
+      "id": "phoible",
+      "author": "Moran, Steven & McCloy, Daniel (eds.)",
+      "year": 2019,
+      "title": "PHOIBLE 2.0",
+      "publisher": "Max Planck Institute for the Science of Human History",
+      "url": "https://phoible.org/",
+      "pages": null,
+      "notes": "Attested phoneme inventory for glottocode sout2697."
+    }
+  ],
+  "timespan": {
+    "start_year": 1500,
+    "end_year": null
+  },
+  "phonemes": [
+    "b",
+    "cç",
+    "d̪",
+    "d̪z",
+    "e",
+    "f",
+    "h",
+    "i",
+    "j",
+    "k",
+    "l",
+    "m",
+    "n̪",
+    "o",
+    "p",
+    "s",
+    "t̪",
+    "t̪s",
+    "u",
+    "v",
+    "x",
+    "y",
+    "z",
+    "æ",
+    "œ",
+    "ɑ",
+    "ɟʝ",
+    "ɡ",
+    "ɣ",
+    "ɯ",
+    "ɾ",
+    "ʃ",
+    "ʒ"
+  ],
+  "location": {
+    "latitude": 36.5137,
+    "longitude": 48.4302,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for South Azerbaijani."
+  }
+}

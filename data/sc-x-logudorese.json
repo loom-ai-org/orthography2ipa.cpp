@@ -1,0 +1,67 @@
+{
+  "code": "sc-x-logudorese",
+  "name": "Logudorese Sardinian",
+  "script": "Latin",
+  "graphemes_base": "sc",
+  "allophones_base": "sc",
+  "allophones": {
+    "t": [
+      "t",
+      "θ"
+    ]
+  },
+  "parent": "sc",
+  "notes": "Logudorese Sardinian. The MOST archaic variety, spoken in north-central Sardinia. Less lenition than Campidanese, preserves intervocalic voiceless stops more consistently. Often cited as the closest living language to Latin.",
+  "quality": "skeleton",
+  "script_type": "alphabet",
+  "sources": [
+    {
+      "id": "blasco_ferrer1986",
+      "author": "Blasco Ferrer, E.",
+      "year": 1986,
+      "title": "La lingua sarda contemporanea",
+      "publisher": "Della Torre",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "maiden_parry1997",
+      "author": "Maiden, M. & Parry, M. (eds.)",
+      "year": 1997,
+      "title": "The Dialects of Italy",
+      "publisher": "Routledge",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "ladefoged_maddieson1996",
+      "author": "Ladefoged, P. & Maddieson, I.",
+      "year": 1996,
+      "title": "The Sounds of the World's Languages",
+      "publisher": "Blackwell",
+      "url": null,
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Logudorese_dialect",
+    "https://sc.wikipedia.org/wiki/Sardu_logudoresu",
+    "https://it.wikipedia.org/wiki/Lingua_sarda_logudorese"
+  ],
+  "timespan": {
+    "start_year": 1000,
+    "end_year": null
+  },
+  "glottolog_code": "logu1236",
+  "iso639_3": "srd",
+  "wikidata_qid": "Q777974",
+  "location": {
+    "latitude": 40.49,
+    "longitude": 9.09957,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Logudorese Sardinian."
+  }
+}

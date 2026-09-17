@@ -1,0 +1,192 @@
+{
+  "code": "ami",
+  "name": "Amis",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "iso639_3": "ami",
+  "glottolog_code": "amis1246",
+  "wikidata_qid": "Q35132",
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "c": [
+      "ts"
+    ],
+    "d": [
+      "ɮ"
+    ],
+    "f": [
+      "v"
+    ],
+    "g": [
+      "ɣ"
+    ],
+    "h": [
+      "h"
+    ],
+    "i": [
+      "i"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "ɺ"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ng": [
+      "ŋ"
+    ],
+    "o": [
+      "u"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "u": [
+      "u"
+    ],
+    "w": [
+      "w"
+    ],
+    "x": [
+      "ʜ"
+    ],
+    "y": [
+      "j"
+    ],
+    "e": [
+      "ə"
+    ],
+    "ʼ": [
+      "ʡ"
+    ],
+    "^": [
+      "ʔ"
+    ]
+  },
+  "allophones": {
+    "a": [
+      "a"
+    ],
+    "ts": [
+      "ts"
+    ],
+    "ɮ": [
+      "ɮ",
+      "ð"
+    ],
+    "v": [
+      "v"
+    ],
+    "ɣ": [
+      "ɣ"
+    ],
+    "h": [
+      "h"
+    ],
+    "i": [
+      "i"
+    ],
+    "k": [
+      "k"
+    ],
+    "ɺ": [
+      "ɺ"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n̪",
+      "n"
+    ],
+    "ŋ": [
+      "ŋ"
+    ],
+    "u": [
+      "u"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t̪",
+      "t"
+    ],
+    "w": [
+      "w"
+    ],
+    "ʜ": [
+      "ʜ"
+    ],
+    "j": [
+      "j"
+    ],
+    "ə": [
+      "ə"
+    ],
+    "ʡ": [
+      "ʡ",
+      "ʢ"
+    ],
+    "ʔ": [
+      "ʔ"
+    ]
+  },
+  "notes": "Amis (Pangcah) — the largest Formosan (Austronesian) language of Taiwan, written in the official romanised orthography promulgated by Taiwan's Council of Indigenous Peoples. Practical orthography: /ts/ = ⟨c⟩, /j/ = ⟨y⟩, /ʡ/ = ⟨ʼ⟩, /ʔ/ = ⟨^⟩, /ɮ/ = ⟨d⟩, /ŋ/ = ⟨ng⟩, /ʜ/ = ⟨x⟩, /v/ = ⟨f⟩, /ɺ/ = ⟨l⟩. Three-vowel system /i a u/ (⟨o⟩ and ⟨u⟩ both write /u/); ⟨e⟩ writes a short schwa of uncertain phonemic status.",
+  "sources": [
+    {
+      "id": "ami_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Amis language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Amis_language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Amis_language",
+      "pages": null,
+      "notes": "Consonant/vowel tables with orthographic letters and the practical-orthography note."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Amis_language",
+    "https://ami.wikipedia.org/wiki/Sowal_no_Pangcah"
+  ],
+  "parent": "x-clade-aust1307",
+  "ancestors": [
+    {
+      "code": "x-clade-aust1307",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Austronesian — the classification node this language sits under."
+    }
+  ],
+  "location": {
+    "latitude": 23.0917,
+    "longitude": 121.348,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Amis."
+  }
+}

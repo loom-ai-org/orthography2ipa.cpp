@@ -1,0 +1,63 @@
+{
+  "code": "de-AT",
+  "name": "Austrian German",
+  "script": "Latin",
+  "graphemes_base": "de-DE",
+  "allophones_base": "de-DE",
+  "allophones": {
+    "ɛː": [
+      "eː",
+      "ɛː"
+    ],
+    "ʁ": [
+      "ʀ",
+      "r",
+      "ɐ"
+    ]
+  },
+  "parent": "de-DE",
+  "notes": "Austrian Standard German (Österreichisches Hochdeutsch). ä [ɛ] → [eː] in most Austrian (merged with e:). /r/ varies: uvular [ʀ] in educated standard, alveolar [r] in rural and Bavarian-influenced speech. Bavarian dialect base: many Austrians use Bavarian dialects (see de-x-bavarian). Source: Dudenredaktion (2015).",
+  "quality": "skeleton",
+  "script_type": "alphabet",
+  "sources": [
+    {
+      "id": "wiese1996",
+      "author": "Wiese, R.",
+      "year": 1996,
+      "title": "The Phonology of German",
+      "publisher": "Oxford University Press",
+      "url": null,
+      "pages": null,
+      "notes": null,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/German_phonology"
+    },
+    {
+      "id": "muhr_schrodt1997",
+      "author": "Muhr, R. & Schrodt, R.",
+      "year": 1997,
+      "title": "Österreichisches Deutsch und andere nationale Varietäten plurizentrischer Sprachen in Europa",
+      "publisher": "Daedalus",
+      "url": null,
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Austrian_German",
+    "https://de.wikipedia.org/wiki/Österreichisches_Deutsch",
+    "https://de.wikipedia.org/wiki/%C3%96sterreichisches_Deutsch"
+  ],
+  "timespan": {
+    "start_year": 1800,
+    "end_year": null
+  },
+  "glottolog_code": null,
+  "iso639_3": "deu",
+  "wikidata_qid": "Q306626",
+  "location": {
+    "latitude": 48,
+    "longitude": 14,
+    "source": "wikidata",
+    "notes": "Austria's representative point. A national standard has no single locus; this is a weak, country-level stand-in. [Wikidata Q40 P625]"
+  }
+}

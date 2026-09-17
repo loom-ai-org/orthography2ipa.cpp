@@ -1,0 +1,294 @@
+{
+  "code": "kcn",
+  "name": "Ki-Nubi (Nubi)",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "orthography_kind": "native",
+  "quality": "research",
+  "iso639_3": "kcn",
+  "glottolog_code": "nubi1253",
+  "wikidata_qid": "Q3096908",
+  "parent": "x-clade-sudanic-creole",
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "á": [
+      "a"
+    ],
+    "e": [
+      "e"
+    ],
+    "é": [
+      "e"
+    ],
+    "i": [
+      "i"
+    ],
+    "í": [
+      "i"
+    ],
+    "o": [
+      "o"
+    ],
+    "ó": [
+      "o"
+    ],
+    "u": [
+      "u"
+    ],
+    "ú": [
+      "u"
+    ],
+    "b": [
+      "b"
+    ],
+    "p": [
+      "p"
+    ],
+    "t": [
+      "t"
+    ],
+    "d": [
+      "d"
+    ],
+    "k": [
+      "k"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "j": [
+      "dʒ"
+    ],
+    "f": [
+      "f"
+    ],
+    "v": [
+      "v"
+    ],
+    "s": [
+      "s"
+    ],
+    "z": [
+      "z"
+    ],
+    "sh": [
+      "ʃ"
+    ],
+    "š": [
+      "ʃ"
+    ],
+    "x": [
+      "x"
+    ],
+    "gh": [
+      "ɣ"
+    ],
+    "h": [
+      "h"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ny": [
+      "ɲ"
+    ],
+    "ng": [
+      "ŋ"
+    ],
+    "r": [
+      "r"
+    ],
+    "l": [
+      "l"
+    ],
+    "w": [
+      "w"
+    ],
+    "y": [
+      "j"
+    ]
+  },
+  "allophones": {
+    "a": [
+      "a"
+    ],
+    "e": [
+      "e"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "o"
+    ],
+    "u": [
+      "u"
+    ],
+    "b": [
+      "b"
+    ],
+    "p": [
+      "p"
+    ],
+    "t": [
+      "t"
+    ],
+    "d": [
+      "d"
+    ],
+    "k": [
+      "k"
+    ],
+    "ɡ": [
+      "ɡ"
+    ],
+    "dʒ": [
+      "dʒ",
+      "tʃ"
+    ],
+    "f": [
+      "f"
+    ],
+    "v": [
+      "v"
+    ],
+    "s": [
+      "s"
+    ],
+    "z": [
+      "z"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "x": [
+      "x",
+      "h",
+      "k"
+    ],
+    "ɣ": [
+      "ɣ",
+      "ɡ"
+    ],
+    "h": [
+      "h"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ɲ": [
+      "ɲ"
+    ],
+    "ŋ": [
+      "ŋ"
+    ],
+    "r": [
+      "r"
+    ],
+    "l": [
+      "l"
+    ],
+    "w": [
+      "w"
+    ],
+    "j": [
+      "j"
+    ]
+  },
+  "ancestors": [
+    {
+      "code": "x-clade-sudanic-creole",
+      "role": "parent",
+      "weight": 0.6,
+      "notes": "Descends from the 19th-century southern-Sudanese pidgin Arabic; sister of Juba Arabic (pga). Carried to Uganda/Kenya by the Emin Pasha Nubi soldiers from the 1890s (Luffin 2005; Wellens 2005)."
+    },
+    {
+      "code": "ar-SD",
+      "role": "lexifier",
+      "weight": 0.5,
+      "notes": "Sudanese Arabic, closest living relative of the camp lexifier that supplied the bulk of the Ki-Nubi lexicon."
+    },
+    {
+      "code": "sw",
+      "role": "adstrate",
+      "weight": 0.2,
+      "notes": "Swahili adstrate in the East African diaspora: the marginal loan phonemes (p, v, tʃ) and much recent vocabulary enter through Swahili and English (Luffin, APiCS ch. 63; Wellens 2005)."
+    }
+  ],
+  "notes": "Ki-Nubi / Nubi (ISO 639-3: kcn; Glottolog nubi1253) — an Arabic-based creole spoken by the Nubi community of Uganda and Kenya (and diaspora in the DR Congo), the East African offshoot of the same 19th-century southern-Sudanese pidgin that gave rise to Juba Arabic. Carried south by Sudanese ('Nubi') soldiers of Emin Pasha's forces from the 1890s. KEY PHONOLOGY (APiCS chapter 63, Luffin 2013; Wellens 2005): (1) FIVE-VOWEL system i e a o u; vowel LENGTH is not distinctive (rare Kenyan-Nubi minimal pairs aside, e.g. bara/baara). (2) PHARYNGEALS AND EMPHATICS LOST: the Arabic pharyngeals ħ ʕ and the emphatic series tˤ dˤ sˤ ðˤ have no place in the native inventory; the Arabic gutturals q ʔ x ɣ ħ, the interdentals θ ð, and the affricate tʃ survive only marginally in learned Arabic loans and in Swahili/English loans. (3) STRESS is lexically AND grammatically distinctive: sába 'seven' vs. sabá 'morning'; límu 'to gather' vs. limú 'to be gathered' — the passive is marked by a stress shift to the final syllable. ORTHOGRAPHY: no official standard; this spec models the Latin practical orthography used by Luffin and in the APiCS chapter (acute marks the stressed vowel, j = /dʒ/, sh/š = /ʃ/, ny = /ɲ/, ng = /ŋ/, y = /j/). Arabic script is not traditionally used by the community.",
+  "sources": [
+    {
+      "id": "luffin2013",
+      "author": "Luffin, X.",
+      "year": 2013,
+      "title": "Kinubi (Survey chapter and structure dataset)",
+      "publisher": "In: Michaelis, S.M., Maurer, P., Haspelmath, M. & Huber, M. (eds.), Atlas of Pidgin and Creole Language Structures Online, chapter 63, Max Planck Institute for Evolutionary Anthropology",
+      "url": "https://apics-online.info/surveys/63",
+      "notes": "Open-access, verifiable online. Consonants with marginal (loan-only) segments in parentheses (p, tš, ŋ, x, ġ), five vowels i e a o u, length non-distinctive, stress lexically and grammatically distinctive. Example IPA cited in spec notes and tests (chapter+example numbers); not harvestable into primary-source gold for lack of printed folios."
+    },
+    {
+      "id": "wellens2005",
+      "author": "Wellens, I.",
+      "year": 2005,
+      "title": "The Nubi Language of Uganda: An Arabic Creole in Africa",
+      "publisher": "Brill, Leiden",
+      "url": null,
+      "notes": "Reference grammar of Ugandan Nubi. Five-vowel system, loss of the Arabic guttural and emphatic series, distinctive stress including the stress-marked passive."
+    },
+    {
+      "id": "luffin2005",
+      "author": "Luffin, X.",
+      "year": 2005,
+      "title": "Un créole arabe: le kinubi de Mombasa, Kenya",
+      "publisher": "Lincom Europa, Munich",
+      "url": null,
+      "notes": "Description of Kenyan (Mombasa) Nubi; documents the marginal vowel-length pairs and Swahili adstrate."
+    },
+    {
+      "id": "owens1997",
+      "author": "Owens, J.",
+      "year": 1997,
+      "title": "Arabic-based pidgins and creoles",
+      "publisher": "In: Thomason, S.G. (ed.), Contact Languages: A Wider Perspective, John Benjamins, pp. 125-172",
+      "url": null,
+      "notes": "Places Ki-Nubi and Juba Arabic as sister creoles of one southern-Sudanese pidgin."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Nubi_language"
+  ],
+  "urls": [
+    "https://apics-online.info/contributions/63",
+    "https://glottolog.org/resource/languoid/id/nubi1253"
+  ],
+  "timespan": {
+    "start_year": 1890,
+    "end_year": null
+  },
+  "location": {
+    "latitude": 0.3476,
+    "longitude": 32.5825,
+    "source": "author",
+    "notes": "Kampala, Uganda — a principal centre of the Nubi community; the language is also spoken in Kenya and the DR Congo."
+  },
+  "stress": {
+    "default_position": -2,
+    "marked_vowels": [
+      "á",
+      "é",
+      "í",
+      "ó",
+      "ú"
+    ],
+    "stress_mark": "ˈ",
+    "notes": "Stress is lexically and grammatically distinctive (Luffin, APiCS ch. 63: sába 'seven' vs. sabá 'morning'; límu 'to gather' vs. limú 'to be gathered', the passive marked by a rightward stress shift). Being contrastive it is not weight-predictable; the practical orthography marks it with an acute accent, so a written acute pins the stressed vowel. default_position -2 is only the fallback for unaccented input."
+  }
+}

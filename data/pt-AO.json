@@ -1,0 +1,279 @@
+{
+  "code": "pt-AO",
+  "name": "Angolan Portuguese",
+  "script": "Latin",
+  "graphemes_base": "pt-PT",
+  "graphemes": {
+    "r": [
+      "ʁ",
+      "ɾ"
+    ],
+    "s": [
+      "s"
+    ]
+  },
+  "allophones_base": "pt-PT",
+  "allophones": {
+    "ʁ": [
+      "ʁ",
+      "r"
+    ]
+  },
+  "positional_graphemes_base": "pt-PT",
+  "parent": "pt-PT",
+  "notes": "Angolan Portuguese (Português de Angola, PA): the emerging L2/second-norm variety of educated Angolan speakers, NOT a creole. Portuguese has been the sole official language since 1975 and is the mother tongue of a growing urban minority and the second language of most Angolans, in contact with dozens of Bantu languages (Umbundu, Kimbundu, Kikongo, etc.). KEY MODELLED FEATURES, grounded in the vowel study of Undolo (2014) and the phonetics of Angolan Portuguese in Chavagne (2005): (1) NO EP-STYLE UNSTRESSED VOWEL REDUCTION. Unlike European Portuguese, final unstressed /a/ is NOT centralised to [ɐ] but stays open [a] (Undolo 2014:183, ['kaza]); pretonic /e/ does NOT centralise to [ɨ] but stays [e] (Undolo 2014:183, [atrope'ɫar], [prezi'dẽtɨ]); pretonic /o/ is NOT raised to [u] but stays [o] (Undolo 2014:184, [mo'rar], [namo'rar]). Undolo (2014:184) summarises: the PA vowel system 'não sofre elevação e centralização em posição átona'. Chavagne (2005:64) independently: 'les voyelles atones gardent le timbre des voyelles toniques'. (2) [ɨ] survives ONLY in final unstressed position ([ˈdisɨ]), not pretonically (Undolo 2014:183). (3) A general tendency to OPEN stressed mid vowels ([ɛ], [ɔ] favoured over [e], [o]) is documented (Undolo 2014:183-184) but is variable/lexical and modelled only as candidate ordering, not categorically. (4) Coda /s/ stays alveolar [s] (no Lisbon chiado). This spelling-closer vocalism is attributed to the simple, open-nucleus syllable structure of the Bantu substrate (Undolo 2014:186). LIMITS: the extra nasal [ã] vs EP [ɐ̃] (Undolo 2014:184) and the [ɐ]-loss are modelled via positional vowels; fine allophonic rhotic variation is left to downstream engines.",
+  "quality": "research",
+  "script_type": "alphabet",
+  "sources": [
+    {
+      "id": "mateus_dandrade2000",
+      "author": "Mateus, M.H.M. & d'Andrade, E.",
+      "year": 2000,
+      "title": "The Phonology of Portuguese",
+      "publisher": "Oxford University Press",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "cunha_cintra1984",
+      "author": "Cunha, C. & Cintra, L.F.L.",
+      "year": 1984,
+      "title": "Nova Gramática do Português Contemporâneo",
+      "publisher": "Sá da Costa",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "undolo2014",
+      "author": "Undolo, Márcio",
+      "year": 2014,
+      "title": "Caracterização do sistema vocálico do português culto falado em Angola",
+      "publisher": "Revista de Filología Románica 31(2), 181-187, Universidad Complutense de Madrid",
+      "url": "https://revistas.ucm.es/index.php/RFRM/article/view/51071",
+      "pages": "181-187",
+      "notes": "Read in full. Contrastive description of the educated Angolan Portuguese (PA) vowel system vs European Portuguese (PE). p.183: final unstressed /a/ keeps the open vowel [a], not EP [ɐ] ('não observamos a realização da vogal oral central média em posição átona final, mantendo-se a vogal aberta: [ˈkaza]'); pretonic [ɨ] does not occur, staying palatal [e] ([atropeˈɫar] PA vs [ɐtrupɨˈɫar] PE); [ɨ] survives only word-finally ([ˈdisɨ]). p.184: pretonic /o/ stays [o] not raised to [u] ([moˈrar], [namoˈrar]); summary (d) 'não sofre elevação e centralização em posição átona', (e) '[ɨ] restringe-se à posição átona final'. p.186: attributes the fuller vocalism to the open-nucleus syllable structure of Angolan Bantu languages."
+    },
+    {
+      "id": "chavagne2005",
+      "author": "Chavagne, Jean-Pierre",
+      "year": 2005,
+      "title": "La langue portugaise en Angola",
+      "publisher": "PhD thesis, Université Lumière Lyon 2",
+      "url": "http://theses.univ-lyon2.fr/documents/lyon2/2005/chavagne_jp",
+      "pages": "64",
+      "notes": "Read the phonetics/phonology part. p.64: unstressed syllables in Angolan Portuguese keep the timbre of the stressed vowels ('les voyelles atones gardent le timbre des voyelles toniques'); the intensity difference between tonic and atonic syllables is markedly smaller than in EP, with lengthening of pre- and post-tonic syllables — i.e. weak-to-absent vowel reduction."
+    },
+    {
+      "id": "inverno2011",
+      "author": "Inverno, Liliana",
+      "year": 2011,
+      "title": "Contact-induced restructuring of Portuguese morphosyntax in interior Angola: evidence from Dundo (Lunda Norte)",
+      "publisher": "PhD thesis, Universidade de Coimbra",
+      "url": "https://estudogeral.sib.uc.pt/handle/10316/15465",
+      "pages": null,
+      "notes": "Read. Primarily a MORPHOSYNTACTIC study of the restructured vernacular Angolan Portuguese of Dundo; consulted for the contact/sociolinguistic framing (Bantu substrate, nativisation). Its phonological content is limited to loan-adaptation and is not the source for the vowel model above (see Undolo 2014, Chavagne 2005)."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Angolan_Portuguese",
+    "https://pt.wikipedia.org/wiki/Português_de_Angola",
+    "https://pt.wikipedia.org/wiki/Portugu%C3%AAs_angolano"
+  ],
+  "timespan": {
+    "start_year": 1900,
+    "end_year": null
+  },
+  "iso639_3": "por",
+  "stress": {
+    "onset_clusters": ["bl", "br", "bɫ", "bɾ", "bʀ", "bʁ", "bʎ", "bχ", "dr", "dɾ", "dʀ", "dʁ", "dʎ", "dχ", "fl", "fr", "fɫ", "fɾ", "fʀ", "fʁ", "fʎ", "fχ", "kl", "kr", "kɫ", "kɾ", "kʀ", "kʁ", "kʎ", "kχ", "pl", "pr", "pɫ", "pɾ", "pʀ", "pʁ", "pʎ", "pχ", "tr", "tɾ", "tʀ", "tʁ", "tʎ", "tχ", "vl", "vr", "vɫ", "vɾ", "vʀ", "vʁ", "vʎ", "vχ", "ðr", "ðɾ", "ðʀ", "ðʁ", "ðʎ", "ðχ", "ɡl", "ɡr", "ɡɫ", "ɡɾ", "ɡʀ", "ɡʁ", "ɡʎ", "ɡχ", "ɣl", "ɣr", "ɣɫ", "ɣɾ", "ɣʀ", "ɣʁ", "ɣʎ", "ɣχ", "βl", "βr", "βɫ", "βɾ", "βʀ", "βʁ", "βʎ", "βχ"],
+    "cliticless_words": ["o", "a", "os", "as", "de", "do", "da", "dos", "das", "em", "no", "na", "nos", "nas", "por", "pelo", "pela", "pelos", "pelas", "ao", "aos", "à", "às", "com", "sem", "e", "que", "se", "me", "te", "lhe", "lhes", "vos", "lo", "la", "los", "las", "lho", "lha", "lhos", "lhas"],
+    "default_position": -2,
+    "final_stress_endings": [
+      "r",
+      "l",
+      "z",
+      "x",
+      "i",
+      "u",
+      "im",
+      "om",
+      "um",
+      "is",
+      "us",
+      "ns",
+      "ão",
+      "ãe",
+      "õe",
+      "au",
+      "éu",
+      "éi",
+      "ói"
+    ],
+    "penult_stress_endings": [],
+    "marked_vowels": [
+      "á",
+      "é",
+      "í",
+      "ó",
+      "ú",
+      "â",
+      "ê",
+      "ô",
+      "ã",
+      "õ"
+    ],
+    "stress_mark": "ˈ",
+    "notes": "Acordo Ortográfico 1990 conventions: paroxytone default; written accents override; final -i/-u/-r/-l/-z/-x/-im/-om/-um/-ns and nasal diphthongs attract final stress. Unmarked -em/-am stay paroxytone (homem, falam). DIPHTHONGS: declared so the bundled syllabifier counts nuclei correctly — without them every vowel run merges into one nucleus and co-e-lho is read as coe-lho, one syllable short, putting the stress and its vowel reduction on the wrong vowel. ⟨oe⟩ is hiatus, not a diphthong (Cunha & Cintra, §Ditongos).",
+    "diphthongs": [
+      "ãe",
+      "ão",
+      "õe",
+      "ai",
+      "ái",
+      "au",
+      "áu",
+      "ei",
+      "éi",
+      "êi",
+      "eu",
+      "éu",
+      "êu",
+      "iu",
+      "oi",
+      "ói",
+      "ôi",
+      "ou",
+      "ui"
+    ]
+  },
+  "positional_graphemes": {
+    "a": {
+      "nucleus_stressed": [
+        "a"
+      ],
+      "nucleus_unstressed": [
+        "a"
+      ],
+      "pretonic": [
+        "a"
+      ],
+      "posttonic": [
+        "a"
+      ],
+      "word_initial": [
+        "a"
+      ],
+      "word_final": [
+        "a"
+      ]
+    },
+    "e": {
+      "nucleus_stressed": [
+        "ɛ",
+        "e"
+      ],
+      "nucleus_unstressed": [
+        "e"
+      ],
+      "pretonic": [
+        "e"
+      ],
+      "word_final": [
+        "ɨ",
+        "e"
+      ],
+      "word_initial": [
+        "e"
+      ]
+    },
+    "o": {
+      "nucleus_stressed": [
+        "ɔ",
+        "o"
+      ],
+      "nucleus_unstressed": [
+        "o"
+      ],
+      "pretonic": [
+        "o"
+      ],
+      "word_final": [
+        "ʊ"
+      ],
+      "posttonic": [
+        "ʊ"
+      ]
+    },
+    "r": {
+      "word_initial": [
+        "ɾ"
+      ],
+      "intervocalic": [
+        "ɾ"
+      ],
+
+      "word_final": [
+        "ɾ"
+      ]
+    },
+    "s": {
+      "word_initial": [
+        "s"
+      ],
+      "intervocalic": [
+        "z"
+      ],
+
+      "word_final": [
+        "s"
+      ]
+    },
+    "z": {
+
+      "word_final": [
+        "z"
+      ]
+    },
+    "l": {
+      "onset": [
+        "l"
+      ]
+    }
+  },
+  "allophone_rules": [
+    {
+      "id": "PT_CODA_S_HUSH",
+      "phonemes": [
+        "s"
+      ],
+      "surface": "s",
+      "syllable_position": "coda",
+      "notes": "Angolan Portuguese keeps an alveolar coda /s/ (no Lisbon 'chiado'); this overrides the inherited pt-PT PT_CODA_S_HUSH rule by id, matching the alveolar coda already declared in this spec's positional_graphemes."
+    },
+    {
+      "id": "PT_CODA_Z_HUSH",
+      "phonemes": [
+        "z"
+      ],
+      "surface": "z",
+      "syllable_position": "coda",
+      "notes": "Angolan Portuguese keeps an alveolar coda /z/; overrides the inherited pt-PT PT_CODA_Z_HUSH rule by id."
+    },
+    {
+      "id": "PT_FINAL_EM_NUCLEUS",
+      "phonemes": [],
+      "surface": "ɐ",
+      "notes": "DISABLED for Angolan Portuguese. The EP centralisation of the ⟨-em⟩ nucleus to [ɐ̃] does not apply: Angolan Portuguese does not centralise atonic vowels (Undolo 2014:183-184, 'não sofre elevação e centralização em posição átona'), so ⟨-em⟩ keeps the close-mid nucleus [ẽ] with a palatal offglide → [ẽj̃]."
+    }
+  ],
+  "wikidata_qid": "Q2994901",
+  "location": {
+    "latitude": -8.838333,
+    "longitude": 13.234444,
+    "source": "wikidata",
+    "notes": "Luanda. A national L2/second-norm variety: the capital stands in for the country. Weak. [Wikidata Q3897 P625]"
+  },
+  "word_exceptions_base": "pt-PT"
+}

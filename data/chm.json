@@ -1,0 +1,39 @@
+{
+  "code": "chm",
+  "name": "Mari",
+  "script": "Cyrillic",
+  "script_type": "alphabet",
+  "quality": "stub",
+  "clade": true,
+  "parent": "urj",
+  "ancestors": [
+    {
+      "code": "urj",
+      "role": "parent",
+      "weight": 0.9,
+      "notes": "Mari branch of Uralic."
+    }
+  ],
+  "graphemes": {},
+  "allophones": {},
+  "notes": "Mari (марий йылме), the ISO 639-3 macrolanguage node covering the Mari branch of Uralic spoken in the Mari El Republic and surrounding regions of Russia. Mari has no single standard: it comprises the individual languages Meadow/Eastern Mari (mhr.json) and Hill Mari / Western Mari (mrj.json), each with its own Cyrillic-based literary norm and its own JSON spec in this dataset. This node is classification-only (clade=true, empty graphemes/allophones) — it asserts no orthography of its own and must not be inherited from; mhr and mrj each point their `parent` at this node.",
+  "iso639_3": "chm",
+  "glottolog_code": "mari1278",
+  "wikidata_qid": "Q973685",
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Mari_language"
+  ],
+  "sources": [
+    {
+      "id": "mari_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Mari language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Mari_language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Mari_language",
+      "pages": null,
+      "notes": "Source for the macrolanguage/individual-language split: chm (macrolanguage) covers mhr (Eastern/Meadow Mari) and mrj (Hill/Western Mari)."
+    }
+  ]
+}

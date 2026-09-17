@@ -1,0 +1,126 @@
+{
+ "code": "pmq",
+ "name": "Northern Pame",
+ "script": "Zyyy",
+ "quality": "stub",
+ "graphemes": {},
+ "allophones": {
+  "b": [
+   "b",
+   "p"
+  ],
+  "d": [
+   "d",
+   "t"
+  ],
+  "m": [
+   "m",
+   "bm"
+  ],
+  "n": [
+   "n",
+   "ŋ",
+   "ɡŋ",
+   "dn"
+  ],
+  "ɡ": [
+   "ɡ",
+   "k"
+  ],
+  "ɲ": [
+   "ɲ",
+   "ɟɲ"
+  ]
+ },
+ "notes": "REGISTRY STUB (not a modelled G2P target). Placed so the ancestry graph covers every living ISO 639-3 language. No orthography is claimed; the phoneme inventory follows the cited PHOIBLE inventory (which itself cites a published description): script is Zyyy (undetermined) until a cited description is encoded. Classification and coordinates follow Glottolog.",
+ "iso639_3": "pmq",
+ "glottolog_code": "nort2984",
+ "sources": [
+  {
+   "id": "glottolog2024",
+   "author": "Hammarström, Harald; Forkel, Robert; Haspelmath, Martin; Bank, Sebastian",
+   "year": 2024,
+   "title": "Glottolog 5.0",
+   "publisher": "Max Planck Institute for Evolutionary Anthropology",
+   "url": "https://glottolog.org/"
+  },
+  {
+   "id": "phoible2019",
+   "author": "Moran, Steven; McCloy, Daniel (eds.)",
+   "year": 2019,
+   "title": "PHOIBLE 2.0 (doi:10.5281/zenodo.2562766)",
+   "publisher": "Max Planck Institute for the Science of Human History",
+   "url": "https://phoible.org/inventories/view/1132",
+   "notes": "Inventory 1132 (ph), 52 non-marginal segments, 2 tones."
+  }
+ ],
+ "urls": [
+  "https://glottolog.org/resource/languoid/id/nort2984"
+ ],
+ "location": {
+  "latitude": 22.0968,
+  "longitude": -99.6434,
+  "source": "glottolog",
+  "notes": "Glottolog's representative point."
+ },
+ "parent": "x-clade-otom1299",
+ "phonemes": [
+  "b",
+  "d",
+  "h",
+  "j",
+  "k",
+  "kʰ",
+  "kʼ",
+  "l",
+  "lʱ",
+  "lʼ",
+  "m",
+  "mʱ",
+  "mʼ",
+  "n",
+  "nʱ",
+  "nʼ",
+  "p",
+  "pʰ",
+  "s",
+  "t",
+  "ts",
+  "tsʰ",
+  "tsʼ",
+  "tʰ",
+  "tʼ",
+  "t̠ʃ",
+  "t̠ʃʰ",
+  "t̠ʃʼ",
+  "w",
+  "ɡ",
+  "ɲ",
+  "ɲʱ",
+  "ɲʼ",
+  "ɾ",
+  "ɾʲ",
+  "ʃ",
+  "ʎ",
+  "ʎʱ",
+  "ʎʼ",
+  "ʔ",
+  "e",
+  "ẽ",
+  "i",
+  "ĩ",
+  "u",
+  "ũ",
+  "æ",
+  "æ̃",
+  "ɑ",
+  "ɑ̃",
+  "ə",
+  "ə̃"
+ ],
+ "tone_inventory": {
+  "˦": "PHOIBLE tone segment",
+  "˨˦": "PHOIBLE tone segment"
+ },
+ "phoible_id": "1132"
+}

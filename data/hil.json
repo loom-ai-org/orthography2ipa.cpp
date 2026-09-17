@@ -1,0 +1,68 @@
+{
+  "code": "hil",
+  "name": "Hiligaynon",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "ng": ["ŋ"],
+    "a": ["a"],
+    "e": ["ɛ"],
+    "i": ["i"],
+    "o": ["o"],
+    "u": ["u"],
+    "b": ["b"],
+    "d": ["d"],
+    "g": ["ɡ"],
+    "h": ["h"],
+    "k": ["k"],
+    "l": ["l"],
+    "m": ["m"],
+    "n": ["n"],
+    "p": ["p"],
+    "r": ["ɾ"],
+    "s": ["s"],
+    "t": ["t"],
+    "w": ["w"],
+    "y": ["j"]
+  },
+  "parent": "x-clade-mala1545",
+  "ancestors": [
+    {
+      "code": "x-clade-mala1545",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Descent per Glottolog classification of Hiligaynon (hili1240)."
+    }
+  ],
+  "notes": "Skeleton. A Central Philippine (Bisayan) Austronesian language of Panay and Negros, written in a Latin alphabet based on the modern Filipino/abakada convention. The grapheme map covers the native consonant and five-vowel inventory plus the digraph ng for the velar nasal. The phonemic glottal stop (word-initial, intervocalic, and word-final) is not written in the standard orthography and is left unencoded, as are contrastive stress and vowel length, so a nonzero PER floor is expected. The mid vowels e and o largely reflect Spanish loans and later mergers; e is mapped to a lax value. Spanish/English loan letters (c, f, j, ñ, q, v, x, z) are omitted from the native map.",
+  "iso639_3": "hil",
+  "glottolog_code": null,
+  "sources": [
+    {
+      "id": "hil_glottolog",
+      "author": "Hammarström, H. et al. (Glottolog 5.0)",
+      "year": 2024,
+      "title": "Glottolog: Hiligaynon (hili1240)",
+      "publisher": "Max Planck Institute for Evolutionary Anthropology",
+      "url": "https://glottolog.org/resource/languoid/id/hili1240",
+      "pages": null,
+      "notes": "Classification reference for a skeleton-tier entry.",
+      "wikipedia_url": null
+    },
+    {
+      "id": "hil_wikipedia",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Hiligaynon language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Hiligaynon_language",
+      "pages": null,
+      "notes": "Phonology and orthography reference for the grapheme-to-IPA skeleton.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Hiligaynon_language"
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Hiligaynon_language"
+  ]
+}

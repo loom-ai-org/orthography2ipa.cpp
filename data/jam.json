@@ -1,0 +1,311 @@
+{
+  "code": "jam",
+  "name": "Jamaican Patois",
+  "family": "English Creole",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "ky": [
+      "kʲ"
+    ],
+    "gy": [
+      "ɡʲ"
+    ],
+    "ii": [
+      "iː"
+    ],
+    "aa": [
+      "aː"
+    ],
+    "uu": [
+      "uː"
+    ],
+    "ie": [
+      "ie"
+    ],
+    "uo": [
+      "uo"
+    ],
+    "ai": [
+      "ai"
+    ],
+    "ou": [
+      "ou"
+    ],
+    "ch": [
+      "tʃ"
+    ],
+    "sh": [
+      "ʃ"
+    ],
+    "zh": [
+      "ʒ"
+    ],
+    "ng": [
+      "ŋ"
+    ],
+    "a": [
+      "a"
+    ],
+    "e": [
+      "e"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "o"
+    ],
+    "u": [
+      "u"
+    ],
+    "b": [
+      "b"
+    ],
+    "d": [
+      "d"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "h": [
+      "h"
+    ],
+    "j": [
+      "dʒ"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "v": [
+      "v"
+    ],
+    "w": [
+      "w"
+    ],
+    "y": [
+      "j"
+    ],
+    "z": [
+      "z"
+    ]
+  },
+  "allophones": {
+    "kʲ": [
+      "kʲ"
+    ],
+    "ɡʲ": [
+      "ɡʲ"
+    ],
+    "iː": [
+      "iː"
+    ],
+    "aː": [
+      "aː"
+    ],
+    "uː": [
+      "uː"
+    ],
+    "ie": [
+      "ie"
+    ],
+    "uo": [
+      "uo"
+    ],
+    "ai": [
+      "ai"
+    ],
+    "ou": [
+      "ou"
+    ],
+    "tʃ": [
+      "tʃ"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "ʒ": [
+      "ʒ"
+    ],
+    "ŋ": [
+      "ŋ"
+    ],
+    "a": [
+      "a"
+    ],
+    "e": [
+      "e"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "o"
+    ],
+    "u": [
+      "u"
+    ],
+    "b": [
+      "b"
+    ],
+    "d": [
+      "d"
+    ],
+    "f": [
+      "f"
+    ],
+    "ɡ": [
+      "ɡ"
+    ],
+    "h": [
+      "h"
+    ],
+    "dʒ": [
+      "dʒ"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "v": [
+      "v"
+    ],
+    "w": [
+      "w"
+    ],
+    "j": [
+      "j"
+    ],
+    "z": [
+      "z"
+    ]
+  },
+  "ancestors": [
+    {
+      "code": "en-GB",
+      "role": "lexifier",
+      "weight": 0.7,
+      "notes": "English (via British English, Hiberno-English and Scots dialects of 17th-century slaveholders and overseers) is the lexifier of Jamaican Patois."
+    },
+    {
+      "code": "ak",
+      "role": "substrate",
+      "weight": 0.15,
+      "notes": "Akan (Twi) substrate, the largest single African contributor: se 'that' < Ashanti Twi, duppy 'ghost' < Twi dupon, obeah < Ashanti Twi Ɔbayi (Cassidy & Le Page 1980; en.wikipedia.org/wiki/Jamaican_Patois)."
+    },
+    {
+      "code": "ig",
+      "role": "substrate",
+      "weight": 0.05,
+      "notes": "Igbo substrate: unu 'you (pl.)' < Igbo (Cassidy & Le Page 1980; en.wikipedia.org/wiki/Jamaican_Patois)."
+    },
+    {
+      "code": "yo",
+      "role": "substrate",
+      "weight": 0.05,
+      "notes": "Yoruba substrate: de 'to be (at a location)' < Yoruba (Cassidy & Le Page 1980; en.wikipedia.org/wiki/Jamaican_Patois)."
+    }
+  ],
+  "notes": "Jamaican Patois (Jumiekan Kryuol) written in the Cassidy/JLU orthography (Cassidy 1961; standardised by the Jamaican Language Unit, UWI Mona, 2002). Phonemic by design: short vowels i e a o u; long vowels doubled (ii, aa, uu); diphthongs <ie> <uo> <ai> <ou>; <ch>=/tʃ/, <j>=/dʒ/, <sh>=/ʃ/, <zh>=/ʒ/, <ng>=/ŋ/. Nasal vowels are written with a following -hn (e.g. kyaahn); that convention is not modelled here. <ky> and <gy> are read as the single palatalised velars [kʲ] [ɡʲ]: Harry 2006 derives [ɡʲaːd] 'guard' and [kʲuː] by palatalisation of a velar obstruent before a front-vowel + back-vowel sequence, and his 21-consonant inventory has no palatal stop. The palatal stops /c/ /ɟ/ of Cassidy & Le Page 1967/1980 are the older phonemic analysis of the same onsets and are superseded by that account. /h/ is variable across Jamaica. Note: much Patois is also written in ad-hoc English-based spelling, which this spec does NOT cover — Cassidy/JLU input is assumed.",
+  "iso639_3": "jam",
+  "glottolog_code": "jama1262",
+  "wikidata_qid": "Q35939",
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Jamaican_Patois",
+    "https://jam.wikipedia.org/wiki/Jumiekan_Kryuol"
+  ],
+  "sources": [
+    {
+      "id": "cassidy_lepage1980",
+      "author": "Cassidy, Frederic G. & Le Page, Robert B.",
+      "year": 1980,
+      "title": "Dictionary of Jamaican English (2nd ed.)",
+      "publisher": "Cambridge University Press",
+      "url": null,
+      "pages": null,
+      "notes": "Origin of the Cassidy writing system."
+    },
+    {
+      "id": "jlu2002",
+      "author": "Jamaican Language Unit, University of the West Indies",
+      "year": 2002,
+      "title": "Writing Jamaican the Jamaican Way / Ou fi Rait Jamiekan",
+      "publisher": "University of the West Indies, Mona",
+      "url": null,
+      "pages": null,
+      "notes": "The Cassidy/JLU standard orthography."
+    },
+    {
+      "id": "harry2006",
+      "author": "Harry, Otelemate G.",
+      "year": 2006,
+      "title": "Jamaican Creole (Illustrations of the IPA)",
+      "publisher": "Journal of the International Phonetic Association 36(1), 125-131",
+      "url": "https://doi.org/10.1017/S002510030600243X",
+      "pages": "126-127",
+      "notes": "Consonant inventory (p.126) and the Palatalisation section (p.127), which treats [c] [\u025f] [\u0272] as phonetic palatalised velars rather than phonemes."
+    },
+    {
+      "id": "jampatois_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Jamaican Patois",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Jamaican_Patois",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Jamaican_Patois",
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "location": {
+    "latitude": 18.13,
+    "longitude": -77.2612,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Jamaican Creole English."
+  }
+}

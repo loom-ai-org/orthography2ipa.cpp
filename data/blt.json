@@ -1,0 +1,47 @@
+{
+  "code": "blt",
+  "name": "Tai Dam",
+  "script": "Tai Viet",
+  "script_type": "abugida",
+  "quality": "stub",
+  "graphemes": {},
+  "parent": "x-clade-taik1256",
+  "ancestors": [
+    {
+      "code": "x-clade-taik1256",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Descent per Glottolog classification of Tai Dam (taid1247)."
+    }
+  ],
+  "notes": "Tai (Southwestern Tai) language of northwestern Vietnam and neighbouring areas, written with the Tai Viet script. Tai Viet is an abugida with paired high- and low-class consonant symbols, an inherent vowel, separately positioned vowel signs and only partial, often optional tone marking, so a consonant symbol's reading depends on its class and on tone that the spelling frequently does not record. Converting a spelling to IPA requires a per-word pronunciation lexicon that the engine does not bundle; grapheme->IPA coverage is lexicon-dependent and effectively zero without that stratum, and no letter->IPA table is asserted. Tai Dam is tonal, and tone is left unencoded.",
+  "iso639_3": "blt",
+  "glottolog_code": null,
+  "sources": [
+    {
+      "id": "blt_glottolog",
+      "author": "Hammarström, H. et al. (Glottolog 5.0)",
+      "year": 2024,
+      "title": "Glottolog: Tai Dam (taid1247)",
+      "publisher": "Max Planck Institute for Evolutionary Anthropology",
+      "url": "https://glottolog.org/resource/languoid/id/taid1247",
+      "pages": null,
+      "notes": "Classification reference for a skeleton-tier entry.",
+      "wikipedia_url": null
+    },
+    {
+      "id": "blt_script_wikipedia",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Tai Viet script",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Tai_Viet_script",
+      "pages": null,
+      "notes": "Description of the Tai Viet abugida, its consonant classes and partial tone marking.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Tai_Dam_language"
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Tai_Dam_language"
+  ]
+}

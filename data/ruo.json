@@ -1,0 +1,72 @@
+{
+  "code": "ruo",
+  "name": "Istro-Romanian",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "stub",
+  "iso639_3": "ruo",
+  "glottolog_code": "istr1245",
+  "timespan": {
+    "start_year": 1698,
+    "end_year": null
+  },
+  "graphemes": {},
+  "allophones": {},
+  "positional_graphemes": {},
+  "ancestors": [
+    {
+      "code": "la",
+      "role": "ancestor",
+      "weight": 1.0,
+      "notes": "Eastern Romance (Daco-Romance / Balkan Romance) language descended from Vulgar Latin, closely related to Romanian."
+    },
+    {
+      "code": "ro-RO",
+      "role": "adstrate",
+      "weight": 0.3,
+      "notes": "Closest living relative; some written traditions (Pușcariu's hybrid orthography) use Romanian-based graphemes."
+    },
+    {
+      "code": "hr",
+      "role": "adstrate",
+      "weight": 0.5,
+      "notes": "Wikipedia (Istro-Romanian language): a 2005 analysis puts 50% of Istro-Romanian vocabulary as Serbo-Croatian in origin, 16% Serbo-Croatian-or-Slovene, 3% Slovene, 3.5% Old Church Slavonic, vs. only 25% Latin. Wikipedia (Istro-Romanian alphabet): the mixed orthography is based on Kovačec's 1998 version, and the separate Croatian-based orthography (Vrzić, 2009) uses Croatian consonant letters/digraphs č/š/ć/đ/nj/lj in place of Romanian ț/ș, chosen because speakers are already literate in Croatian."
+    }
+  ],
+  "parent": "x-clade-east2714",
+  "notes": "STUB: Istro-Romanian has no single standardized orthography — up to three competing systems exist (Romanian-based, Croatian-based, and Pușcariu's 1920s hybrid), and no reliable, sourced letter-by-letter table for any one of them was fetched this session (a 2025 Sociolinguistica paper on 'Orthographic practices... writing Istro-Romanian' documents the disagreement but was not accessible for the concrete mapping). Per AGENTS.md, the inventory is left unspecified (graphemes: {}) rather than guessed. Phonology is documented independently of orthography: Wikipedia (Istro-Romanian language) gives consonants /m n ɲ/ (nasals), stops, affricates /ts tʃ/, fricatives, with /ɡ, x/ sometimes [ɣ, h] dialectally, and vowels /i e ə o u a ɛ ɔ/ (with /ɛ, ɔ/ sometimes lowered to [æ, ɒ]). Spoken by a few hundred people in villages of the Istrian peninsula, Croatia.",
+  "sources": [
+    {
+      "id": "wiki-ruo",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Istro-Romanian language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Istro-Romanian_language"
+    },
+    {
+      "id": "wiki-ruo-alpha",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Istro-Romanian alphabet",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Istro-Romanian_alphabet"
+    },
+    {
+      "id": "kovacec1998",
+      "author": "Kovačec, August",
+      "year": 1998,
+      "title": "Istrorumunjsko-hrvatski rječnik (s gramatikom i tekstovima)",
+      "publisher": "Znanstvena udruga Mediteran, Pula"
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Istro-Romanian_language",
+    "https://en.wikipedia.org/wiki/Istro-Romanian_alphabet"
+  ],
+  "wikidata_qid": "Q662668",
+  "location": {
+    "latitude": 45.27,
+    "longitude": 14.07,
+    "source": "glottolog",
+    "notes": "Istrian peninsula, Croatia."
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "code": "gmh-x-wikt",
+  "name": "Middle High German (Wiktionary title-form spelling)",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "orthography_kind": "native",
+  "graphemes_base": "gmh",
+  "graphemes": {
+    "â": null,
+    "î": null,
+    "ô": null,
+    "û": null
+  },
+  "parent": "gmh",
+  "ancestors": [
+    {
+      "code": "gmh",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Same language as `gmh`; this spec only changes which written convention is modeled. Phonology is pulled in whole via `graphemes_base` rather than restated."
+    }
+  ],
+  "notes": "English Wiktionary's Middle High German entries are lemmatised at Karl Lachmann's normalised spelling, but the MediaWiki PAGE TITLE that WikiPron scrapes is not the full normalised form: the project's own style page (Wiktionary:About Middle High German) states that 'certain letters with diacritics (ë ā ē ī ō ū ȥ) are not used in article titles, but are used when displaying the word (using the parameter head)', while 'this does not apply to the umlauted vowels ä, ö, ü, æ, œ, which are treated as separate letters and thus appear in titles like any other letter'. That policy, not a distinct scholarly orthography and not diplomatic manuscript spelling, is what the shipped wikipron gold (gmh_latn_broad, 1724 source words) actually contains: 0 words carry a circumflex vowel and 0 carry ë (both would be present under `gmh`'s Lachmann target), while 115 carry æ/œ (kept, matching the policy's separate-letter carve-out) and 130 carry ä/ö/ü. `gmh` itself uses circumflex, not macron, for length (â ê î ô û rather than Wiktionary's ā ē ī ō ū), so this spec nulls the circumflex entries via `graphemes_base` rather than trying to reuse them: in the title-form convention a long and a short peripheral vowel are written identically (both as the plain letter), so the length contrast is genuinely unrecoverable from spelling here, not merely differently spelled. `gmh` has no separate ë entry to begin with (its `e` grapheme already covers both), so no override is needed for that half of the policy. Everything else — consonants, the ä/ö/ü/æ/œ umlaut vowels, the ei/ou/ie/uo/üe diphthongs, the unstressed-e schwa reduction, the apical 〈s〉 fricative, the tz/zz gemination — is identical to `gmh` and is inherited whole through `graphemes_base`, not restated, since only the written convention differs and not the phonology. `parent` records the genealogy (same language) per InheritanceMode.OWN_ONLY; the grapheme data itself crosses through `graphemes_base` only.",
+  "iso639_3": "gmh",
+  "glottolog_code": null,
+  "sources": [
+    {
+      "id": "wiktionary_about_gmh",
+      "author": "English Wiktionary contributors",
+      "year": 2026,
+      "title": "Wiktionary:About Middle High German",
+      "publisher": "Wiktionary",
+      "url": "https://en.wiktionary.org/wiki/Wiktionary:About_Middle_High_German",
+      "pages": null,
+      "notes": "Quoted verbatim for the title-vs-head diacritic policy: 'ë ā ē ī ō ū ȥ' are display-only, while 'ä, ö, ü, æ, œ ... are treated as separate letters and thus appear in titles like any other letter.' This is the community's own editorial style page, not a linguistic description of MHG, and is cited only for the title-slug convention, not for phonology; the phonology sources are `gmh`'s own (Paul 2007), pulled in through `graphemes_base`."
+    }
+  ],
+  "orthography_standard": {
+    "name": "English Wiktionary Middle High German article-title convention",
+    "authority": "English Wiktionary editorial community (Wiktionary:About Middle High German) — a de facto wiki style policy, not a linguistic or governmental standards body",
+    "year": null,
+    "url": "https://en.wiktionary.org/wiki/Wiktionary:About_Middle_High_German",
+    "notes": "Governs only how MHG headwords are spelled as MediaWiki page titles (which drives WikiPron's scrape); it is not a scholarly normalisation of MHG the way Lachmann's convention (modeled by `gmh`) is."
+  },
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Middle_High_German"
+  ],
+  "timespan": {
+    "start_year": 1050,
+    "end_year": 1500
+  }
+}

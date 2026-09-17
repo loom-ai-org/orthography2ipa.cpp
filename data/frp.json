@@ -1,0 +1,364 @@
+{
+  "code": "frp",
+  "name": "Franco-Provençal (Arpitan)",
+  "script": "Latin",
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "â": [
+      "ɑ"
+    ],
+    "e": [
+      "e",
+      "ɛ"
+    ],
+    "é": [
+      "e"
+    ],
+    "è": [
+      "ɛ"
+    ],
+    "ê": [
+      "ɛ"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "o",
+      "ɔ"
+    ],
+    "ô": [
+      "o"
+    ],
+    "u": [
+      "y"
+    ],
+    "ou": [
+      "u"
+    ],
+    "an": [
+      "ã"
+    ],
+    "b": [
+      "b"
+    ],
+    "c": [
+      "k",
+      "s"
+    ],
+    "ch": [
+      "tʃ"
+    ],
+    "d": [
+      "d"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɡ",
+      "dʒ"
+    ],
+    "j": [
+      "dʒ",
+      "ʒ"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "p": [
+      "p"
+    ],
+    "qu": [
+      "k"
+    ],
+    "r": [
+      "ʁ",
+      "r"
+    ],
+    "s": [
+      "s",
+      "z"
+    ],
+    "t": [
+      "t"
+    ],
+    "v": [
+      "v"
+    ],
+    "z": [
+      "z",
+      "dz"
+    ],
+    "gn": [
+      "ɲ"
+    ],
+    "ll": [
+      "ʎ",
+      "j"
+    ],
+    "ts": [
+      "ts"
+    ],
+    "dz": [
+      "dz"
+    ],
+    "sh": [
+      "ʃ"
+    ],
+    "ai": [
+      "aj",
+      "ɛ"
+    ],
+    "ei": [
+      "ej"
+    ],
+    "oi": [
+      "we",
+      "wɛ"
+    ],
+    "au": [
+      "aw",
+      "o"
+    ]
+  },
+  "allophones": {
+    "p": [
+      "p"
+    ],
+    "b": [
+      "b",
+      "β"
+    ],
+    "t": [
+      "t"
+    ],
+    "d": [
+      "d",
+      "ð"
+    ],
+    "k": [
+      "k"
+    ],
+    "ɡ": [
+      "ɡ",
+      "ɣ"
+    ],
+    "tʃ": [
+      "tʃ",
+      "ts"
+    ],
+    "dʒ": [
+      "dʒ",
+      "dz"
+    ],
+    "f": [
+      "f"
+    ],
+    "v": [
+      "v"
+    ],
+    "s": [
+      "s"
+    ],
+    "z": [
+      "z"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "ʒ": [
+      "ʒ"
+    ],
+    "ts": [
+      "ts"
+    ],
+    "dz": [
+      "dz"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n",
+      "ŋ"
+    ],
+    "ɲ": [
+      "ɲ"
+    ],
+    "l": [
+      "l"
+    ],
+    "ʎ": [
+      "ʎ",
+      "j"
+    ],
+    "ʁ": [
+      "ʁ",
+      "ʀ"
+    ],
+    "r": [
+      "r",
+      "ɾ"
+    ],
+    "j": [
+      "j"
+    ],
+    "w": [
+      "w"
+    ],
+    "a": [
+      "a"
+    ],
+    "ɑ": [
+      "ɑ"
+    ],
+    "e": [
+      "e"
+    ],
+    "ɛ": [
+      "ɛ"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "o"
+    ],
+    "ɔ": [
+      "ɔ"
+    ],
+    "y": [
+      "y"
+    ],
+    "u": [
+      "u"
+    ],
+    "ã": [
+      "ã"
+    ],
+    "ẽ": [
+      "ẽ"
+    ],
+    "õ": [
+      "õ"
+    ]
+  },
+  "parent": "x-clade-gallorom",
+  "ancestors": [
+    {
+      "code": "la-x-gallia",
+      "role": "parent",
+      "weight": 0.78,
+      "notes": "Gallo-Romance parent: shares /u/→/y/ fronting, CA- palatalisation with French and Occitan."
+    },
+    {
+      "code": "xcg",
+      "role": "substrate",
+      "weight": 0.08,
+      "notes": "Gaulish substrate: shared with French. Vigesimal traces, some lexicon."
+    },
+    {
+      "code": "gem",
+      "role": "superstrate",
+      "weight": 0.07,
+      "notes": "Burgundian/Frankish superstrate: less intense than in French, more than in Occitan."
+    }
+  ],
+  "notes": "Franco-Provençal / Arpitan. A distinct Gallo-Romance language intermediate between French (Oïl) and Occitan (Oc). Spoken historically in Savoie, Lyonnais, Suisse Romande, and Aosta Valley. Key features: (1) CA- → [tʃ] (like French, vs Occitan [ka]). (2) Final -a preserved (unlike French). (3) /u/→/y/ fronting (shared with French). (4) Less nasal vowels than French. ~150,000 speakers, severely endangered (Kristol 2016).",
+  "quality": "research",
+  "script_type": "alphabet",
+  "iso639_3": "frp",
+  "sources": [
+    {
+      "id": "fouche1959",
+      "author": "Fouché, P.",
+      "year": 1959,
+      "title": "Traité de prononciation française",
+      "publisher": "Klincksieck",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "martin1990",
+      "author": "Martin, J.-B.",
+      "year": 1990,
+      "title": "Le francoprovençal: langue oubliée",
+      "publisher": "in G. Vermes (ed.), Vingt-cinq communautés linguistiques de la France",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "ladefoged_maddieson1996",
+      "author": "Ladefoged, P. & Maddieson, I.",
+      "year": 1996,
+      "title": "The Sounds of the World's Languages",
+      "publisher": "Blackwell",
+      "url": null,
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Arpitan_language",
+    "https://frp.wikipedia.org/wiki/Arpetan",
+    "https://en.wikipedia.org/wiki/Franco-Proven%C3%A7al",
+    "https://fr.wikipedia.org/wiki/Francoproven%C3%A7al"
+  ],
+  "timespan": {
+    "start_year": 1200,
+    "end_year": null
+  },
+  "glottolog_code": "fran1260",
+  "wikidata_qid": "Q15087",
+  "location": {
+    "latitude": 45.8051,
+    "longitude": 6.48152,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Arpitan."
+  },
+  "allophone_rules": [
+    {
+      "id": "FRP_NASAL_e",
+      "phonemes": [
+        "e"
+      ],
+      "surface": "ẽ",
+      "followed_by": "coda_nasal",
+      "notes": "vowel nasalises before a CODA nasal; an onset nasal (⟨canne⟩, ⟨cana⟩) leaves it oral"
+    },
+    {
+      "id": "FRP_NASAL_o",
+      "phonemes": [
+        "o"
+      ],
+      "surface": "õ",
+      "followed_by": "coda_nasal",
+      "notes": "vowel nasalises before a CODA nasal; an onset nasal (⟨canne⟩, ⟨cana⟩) leaves it oral"
+    },
+    {
+      "id": "FRP_NASAL_ABSORB",
+      "phonemes": [
+        "n",
+        "m"
+      ],
+      "surface": "",
+      "syllable_position": "coda",
+      "notes": "the coda nasal is absorbed into the nasal vowel it created; keyed on the nasal vowel so it cannot bleed the rule that makes it",
+      "preceded_by": "vowel"
+    }
+  ]
+}

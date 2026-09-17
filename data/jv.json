@@ -1,0 +1,254 @@
+{
+  "code": "jv",
+  "name": "Javanese",
+  "glottolog_code": "java1254",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "iso639_3": "jav",
+  "quality": "skeleton",
+  "graphemes": {
+    "a": [
+      "ɔ",
+      "a"
+    ],
+    "b": [
+      "b"
+    ],
+    "c": [
+      "tʃ"
+    ],
+    "d": [
+      "d"
+    ],
+    "dh": [
+      "ɖ"
+    ],
+    "e": [
+      "ə",
+      "e"
+    ],
+    "é": [
+      "e"
+    ],
+    "è": [
+      "ɛ"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "h": [
+      "h"
+    ],
+    "i": [
+      "i"
+    ],
+    "j": [
+      "dʒ"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "mb": [
+      "mb"
+    ],
+    "n": [
+      "n"
+    ],
+    "nd": [
+      "nd"
+    ],
+    "ng": [
+      "ŋ"
+    ],
+    "nj": [
+      "ndʒ"
+    ],
+    "ny": [
+      "ɲ"
+    ],
+    "o": [
+      "o"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "th": [
+      "ʈ"
+    ],
+    "u": [
+      "u"
+    ],
+    "w": [
+      "w"
+    ],
+    "y": [
+      "j"
+    ]
+  },
+  "allophones": {
+    "ɔ": [
+      "ɔ",
+      "a"
+    ],
+    "b": [
+      "b"
+    ],
+    "tʃ": [
+      "tʃ"
+    ],
+    "d": [
+      "d"
+    ],
+    "ɖ": [
+      "ɖ"
+    ],
+    "ə": [
+      "ə"
+    ],
+    "e": [
+      "e"
+    ],
+    "ɛ": [
+      "ɛ"
+    ],
+    "f": [
+      "f"
+    ],
+    "ɡ": [
+      "ɡ"
+    ],
+    "h": [
+      "h"
+    ],
+    "i": [
+      "i"
+    ],
+    "dʒ": [
+      "dʒ"
+    ],
+    "k": [
+      "k",
+      "ʔ"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ŋ": [
+      "ŋ"
+    ],
+    "ɲ": [
+      "ɲ"
+    ],
+    "o": [
+      "o"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "ʈ": [
+      "ʈ"
+    ],
+    "u": [
+      "u"
+    ],
+    "w": [
+      "w"
+    ],
+    "j": [
+      "j"
+    ]
+  },
+  "notes": "Javanese in Latin script. DH = retroflex /ɖ/, TH = retroflex /ʈ/ (from Sanskrit influence). Word-final K → /ʔ/ in many varieties. Unaccented 'a' = /ɔ/ (Central Javanese). 'e' without accent = schwa /ə/; é = /e/; è = /ɛ/. Prenasalized stops (mb, nd, nj, ng) are single phonemes.",
+  "sources": [
+    {
+      "id": "javanese_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Javanese language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Javanese_language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Javanese_language",
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "parent": "poz",
+  "ancestors": [
+    {
+      "code": "poz",
+      "role": "parent",
+      "weight": 0.78,
+      "notes": "Malayo-Polynesian branch of Austronesian."
+    },
+    {
+      "code": "sa",
+      "role": "adstrate",
+      "weight": 0.15,
+      "notes": "Sanskrit adstrate: Old Javanese (Kawi) was extraordinarily Sanskritized."
+    },
+    {
+      "code": "ar",
+      "role": "adstrate",
+      "weight": 0.08,
+      "notes": "Arabic adstrate: religious vocabulary via Islam."
+    },
+    {
+      "code": "nl",
+      "role": "adstrate",
+      "weight": 0.04,
+      "notes": "Dutch adstrate: colonial loanwords."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Javanese_language",
+    "https://en.wikipedia.org/wiki/Old_Javanese",
+    "https://jv.wikipedia.org/wiki/Basa_Jawa",
+    "https://jv.wikipedia.org/wiki/Basa_Kawi"
+  ],
+  "timespan": {
+    "start_year": 1900,
+    "end_year": null
+  },
+  "wikidata_qid": "Q33549",
+  "phoible_id": "java1254",
+  "wals_code": "jav",
+  "location": {
+    "latitude": -7.001,
+    "longitude": 109.287,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Javanese."
+  }
+}

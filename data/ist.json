@@ -1,0 +1,166 @@
+{
+  "code": "ist",
+  "name": "Istriot",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "skeleton",
+  "iso639_3": "ist",
+  "glottolog_code": "istr1244",
+  "timespan": {
+    "start_year": 1200,
+    "end_year": null
+  },
+  "graphemes": {
+    "dz": [
+      "dz"
+    ],
+    "ts": [
+      "ts"
+    ],
+    "nj": [
+      "ɲ"
+    ],
+    "gn": [
+      "ɲ"
+    ],
+    "a": [
+      "a"
+    ],
+    "b": [
+      "b"
+    ],
+    "c": [
+      "k"
+    ],
+    "d": [
+      "d"
+    ],
+    "e": [
+      "e"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "h": [
+      "h"
+    ],
+    "i": [
+      "i"
+    ],
+    "j": [
+      "j"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "o": [
+      "o"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "u": [
+      "u"
+    ],
+    "v": [
+      "v"
+    ],
+    "z": [
+      "z"
+    ]
+  },
+  "allophones": {},
+  "positional_graphemes": {
+    "c": {
+      "before_e": [
+        "tʃ"
+      ],
+      "before_i": [
+        "tʃ"
+      ],
+      "default": [
+        "k"
+      ]
+    },
+    "g": {
+      "before_e": [
+        "dʒ"
+      ],
+      "before_i": [
+        "dʒ"
+      ],
+      "default": [
+        "ɡ"
+      ]
+    }
+  },
+  "ancestors": [
+    {
+      "code": "la",
+      "role": "ancestor",
+      "weight": 1.0,
+      "notes": "Romance language of the Italo-Dalmatian group, descended from Vulgar Latin; classified by Glottolog under Italo-Romance."
+    },
+    {
+      "code": "vec",
+      "role": "adstrate",
+      "weight": 0.5,
+      "notes": "Wikipedia: Istriot is 'an autochthonous Romance language heavily influenced by Venetian', which functioned as a superstrate/adstrate across coastal Istria for centuries."
+    },
+    {
+      "code": "hr",
+      "role": "adstrate",
+      "weight": 0.2,
+      "notes": "Wikipedia (Istriot language) documents historical coexistence of Istriot with Chakavian Croatian and Istro-Venetian speech communities in the same southwestern Istrian towns (per its dialect-distribution map), consistent with Croatian contact influence alongside the better-documented Venetian superstrate."
+    }
+  ],
+  "parent": "x-clade-italorom",
+  "notes": "Istriot, spoken in a handful of towns on the southwestern Istrian coast (Rovinj/Rovigno, Vodnjan/Dignano, and others), Croatia. Not Eastern/Balkan Romance like Romanian/Aromanian/Istro-Romanian: Glottolog groups it in the Italo-Dalmatian subgroup of Italo-Romance, hence parent=x-clade-italorom (shared with Venetian). c/g follow the general Romance soft/hard split before front vowels e/i (⟨c⟩ [k] vs [tʃ], ⟨g⟩ [ɡ] vs [dʒ]), expressed via positional_graphemes rather than enumerated keys. ⟨nj⟩/⟨gn⟩ both spell the palatal nasal /ɲ/. ⟨dz⟩ /dz/ and ⟨ts⟩ /ts/ are kept as grapheme keys under AGENTS.md §2 test 2: each spells a single affricate segment, the same category as the explicitly-sanctioned ⟨dž⟩/⟨ts⟩ examples in AGENTS.md, even though the IPA string reads as the concatenation of its parts. Vowel length/pitch-accent distinctions are marked diacritically in some orthographic traditions (à/é/è/ó/ò) but do not change vowel quality, so are not separately keyed.",
+  "sources": [
+    {
+      "id": "wiki-ist",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Istriot language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Istriot_language"
+    },
+    {
+      "id": "cernecca1967",
+      "author": "Cernecca, Domenico",
+      "year": 1967,
+      "title": "Fonematica del dialetto di Valle d'Istria",
+      "publisher": "cited via Wikipedia: Istriot language"
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Istriot_language"
+  ],
+  "wikidata_qid": "Q642060",
+  "location": {
+    "latitude": 45.08,
+    "longitude": 13.64,
+    "source": "glottolog",
+    "notes": "Southwestern Istrian coast, Croatia."
+  }
+}

@@ -1,0 +1,236 @@
+{
+  "code": "bm",
+  "name": "Bambara",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "b": [
+      "b"
+    ],
+    "c": [
+      "tʃ"
+    ],
+    "d": [
+      "d"
+    ],
+    "e": [
+      "e"
+    ],
+    "ɛ": [
+      "ɛ"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "h": [
+      "h"
+    ],
+    "i": [
+      "i"
+    ],
+    "j": [
+      "dʒ"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ɲ": [
+      "ɲ"
+    ],
+    "ŋ": [
+      "ŋ"
+    ],
+    "o": [
+      "o"
+    ],
+    "ɔ": [
+      "ɔ"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "sh": [
+      "ʃ"
+    ],
+    "t": [
+      "t"
+    ],
+    "u": [
+      "u"
+    ],
+    "w": [
+      "w"
+    ],
+    "y": [
+      "j"
+    ],
+    "z": [
+      "z"
+    ]
+  },
+  "allophones": {
+    "a": [
+      "a"
+    ],
+    "b": [
+      "b"
+    ],
+    "tʃ": [
+      "tʃ"
+    ],
+    "d": [
+      "d"
+    ],
+    "e": [
+      "e"
+    ],
+    "ɛ": [
+      "ɛ"
+    ],
+    "f": [
+      "f"
+    ],
+    "ɡ": [
+      "ɡ",
+      "ɣ",
+      "ɡʷ"
+    ],
+    "h": [
+      "h"
+    ],
+    "i": [
+      "i"
+    ],
+    "dʒ": [
+      "dʒ"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ɲ": [
+      "ɲ"
+    ],
+    "ŋ": [
+      "ŋ"
+    ],
+    "o": [
+      "o"
+    ],
+    "ɔ": [
+      "ɔ"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "r",
+      "ɾ"
+    ],
+    "s": [
+      "s",
+      "ʃ",
+      "z"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "t": [
+      "t"
+    ],
+    "u": [
+      "u"
+    ],
+    "w": [
+      "w",
+      "u"
+    ],
+    "j": [
+      "j"
+    ],
+    "z": [
+      "z"
+    ]
+  },
+  "iso639_3": "bam",
+  "glottolog_code": "bamb1269",
+  "wikidata_qid": "Q33243",
+  "notes": "Bambara (bamanankan), Manding (Mande), Mali. Official Latin orthography (Bamako 1967 alphabet, revised 1982) with the African-reference-alphabet letters ɛ ɔ ɲ ŋ. Seven oral vowels a e ɛ i o ɔ u; length is written by doubling the vowel and nasalisation by a following ⟨n⟩ (both fall out of the base graphemes and are not listed separately). ⟨c⟩ = /t͡ʃ/, ⟨j⟩ = /d͡ʒ/, ⟨y⟩ = /j/. Bambara is a two-tone language (high vs low/mid) but tone is NOT written in the standard orthography, so no tone is emitted here. ⟨w⟩ as the plural suffix is realised [u]; ⟨s⟩ varies [s]~[ʃ]~[z] and ⟨g⟩ [ɡ]~[ɣ] — recorded as allophones.",
+  "sources": [
+    {
+      "id": "dumestre2003",
+      "author": "Dumestre, Gérard",
+      "year": 2003,
+      "title": "Grammaire fondamentale du bambara",
+      "publisher": "Karthala",
+      "url": null,
+      "pages": null,
+      "notes": "Reference grammar: phonology, orthography and tone.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Bambara_language"
+    },
+    {
+      "id": "bambara_language_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Bambara language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Bambara_language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Bambara_language",
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Bambara_language",
+    "https://bm.wikipedia.org/wiki/Bamanankan"
+  ],
+  "timespan": {
+    "start_year": 1967,
+    "end_year": null
+  },
+  "parent": "x-clade-mand1469",
+  "ancestors": [
+    {
+      "code": "x-clade-mand1469",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Mande — the classification node this language sits under."
+    }
+  ],
+  "location": {
+    "latitude": 12.9,
+    "longitude": -7.65,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Bambara."
+  }
+}

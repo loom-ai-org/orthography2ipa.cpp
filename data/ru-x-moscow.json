@@ -1,0 +1,61 @@
+{
+  "code": "ru-x-moscow",
+  "name": "Moscow Russian",
+  "script": "Cyrillic",
+  "graphemes_base": "ru",
+  "allophones_base": "ru",
+  "word_exceptions_base": "ru",
+  "grammatical_endings_base": "ru",
+  "parent": "ru",
+  "notes": "Moscow Russian — the Central Russian regional variety the standard was codified from, NOT the standard itself (that is `ru`, which this spec pulls every table from). Аканье and plosive [ɡ], shared with `ru` and inherited rather than restated. The genitive desinence ⟨-ого/-его⟩ = [v] is opted into from `ru` via `word_exceptions_base` and `grammatical_endings_base`; without that opt-in this spec emitted его = [ˈjeɡə], a spelling pronunciation no Russian variety has. The features that would make this file more than an alias of `ru` are the старомосковская норма items the modern codification dropped (⟨-чн-⟩ = [ʂn], soft reflexive ⟨-сь⟩, ⟨-кий⟩ = [-kəj], long soft [ʑː]). They are deliberately NOT encoded here: no source for them was consulted for this spec, and guessing a prestige norm's inventory is worse than an honest alias. NEEDS SOURCING before this file earns a quality above stub.",
+  "quality": "stub",
+  "script_type": "alphabet",
+  "sources": [
+    {
+      "id": "comrie_corbett1993",
+      "author": "Comrie, B. & Corbett, G. (eds.)",
+      "year": 1993,
+      "title": "The Slavonic Languages",
+      "publisher": "Routledge",
+      "url": null,
+      "pages": null,
+      "notes": null,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Slavic_languages"
+    },
+    {
+      "id": "timberlake2004",
+      "author": "Timberlake, A.",
+      "year": 2004,
+      "title": "A Reference Grammar of Russian",
+      "publisher": "Cambridge University Press",
+      "url": null,
+      "pages": null,
+      "notes": null,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Russian_phonology"
+    },
+    {
+      "id": "jones_ward1969",
+      "author": "Jones, D. & Ward, D.",
+      "year": 1969,
+      "title": "The Phonetics of Russian",
+      "publisher": "Cambridge University Press",
+      "url": null,
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "wikipedia": [],
+  "timespan": {
+    "start_year": 1600,
+    "end_year": null
+  },
+  "glottolog_code": null,
+  "iso639_3": "rus",
+  "wikidata_qid": "Q4304412",
+  "location": {
+    "latitude": 55.750556,
+    "longitude": 37.6175,
+    "source": "wikidata",
+    "notes": "Moscow — the Central Russian city the standard is based on. [Wikidata Q649 P625]"
+  }
+}

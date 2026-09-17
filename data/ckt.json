@@ -1,0 +1,230 @@
+{
+ "code": "ckt",
+ "name": "Chukot",
+ "script": "Cyrl",
+ "quality": "research",
+ "graphemes": {
+  "а": [
+   "a"
+  ],
+  "э": [
+   "e"
+  ],
+  "е": [
+   "e"
+  ],
+  "и": [
+   "i"
+  ],
+  "о": [
+   "o"
+  ],
+  "у": [
+   "u"
+  ],
+  "ы": [
+   "ə"
+  ],
+  "й": [
+   "j"
+  ],
+  "в": [
+   "β"
+  ],
+  "р": [
+   "ɹ"
+  ],
+  "л": [
+   "ɬ"
+  ],
+  "м": [
+   "m"
+  ],
+  "н": [
+   "n"
+  ],
+  "ӈ": [
+   "ŋ"
+  ],
+  "п": [
+   "p"
+  ],
+  "т": [
+   "t"
+  ],
+  "к": [
+   "k"
+  ],
+  "к’": [
+   "q"
+  ],
+  "ӄ": [
+   "q"
+  ],
+  "с": [
+   "sʲ"
+  ],
+  "ц": [
+   "ts"
+  ],
+  "ч": [
+   "tɕ"
+  ],
+  "г": [
+   "ɣ"
+  ],
+  "ь": [
+   "ʔ"
+  ],
+  "’": [
+   "ʔ"
+  ],
+  "ъ": [
+   "ʔ"
+  ]
+ },
+ "allophones": {
+  "j": [
+   "ʝ",
+   "j̥",
+   "j"
+  ],
+  "k": [
+   "kʰ",
+   "k",
+   "kx"
+  ],
+  "n": [
+   "n",
+   "nʲ"
+  ],
+  "q": [
+   "q",
+   "qχ"
+  ],
+  "sʲ": [
+   "ʃ",
+   "t̠ʃ",
+   "sʲ"
+  ],
+  "w": [
+   "ɸ",
+   "w"
+  ],
+  "ɣ": [
+   "ɣʷ",
+   "x",
+   "ɣ"
+  ],
+  "ɬ": [
+   "ɬ",
+   "tɮ",
+   "tɬ"
+  ],
+  "ʐ͇": [
+   "ʐ͇",
+   "r̠"
+  ],
+  "a": [
+   "a̯e",
+   "a",
+   "a"
+  ],
+  "e": [
+   "ɐ",
+   "e",
+   "e",
+   "e"
+  ],
+  "u": [
+   "u",
+   "ɵ",
+   "o̯u"
+  ],
+  "ə̆": [
+   "a̯ə",
+   "ɵ̞̆",
+   "ə̆"
+  ],
+  "ɪ": [
+   "e̯ɪ",
+   "ɪ",
+   "ɪ"
+  ]
+ },
+ "notes": "Cyrillic literary orthography for Chukchi, codified by Skorik (1961/1968, Grammatika chukotskogo yazyka) and described in Dunn (1999), A Grammar of Chukchi. L represents /ɬ/ (Chukchi has no phonemic plain /l/); V is the labial fricative /β/, corrected from an earlier /w/ assumption against NEL gold evidence (вэлёлгын [βeɫ oɫɣən], вамылкалгын [βaməɫkaɫɣən]); R is /ɹ/ (not the retroflex fricative previously assumed). K followed by an apostrophe (K') is an alternate spelling of the uvular stop /q/ (used interchangeably with the dedicated Q-hook letter in dictionaries lacking the special character), not an ejective -- Chukchi has no ejective series. Э and Е are both /e/ in the sampled gold (no orthographic ɛ/e contrast survives); И is /i/ (not /ɪ/); Ы is /ə/ (plain schwa, no breve). Glottal stop is written with an apostrophe, and in at least one sampled soft-sign form the soft sign itself also renders /ʔ/; both map to /ʔ/ here. Ч renders the alveolo-palatal affricate /tɕ/ (attested in the gold, e.g. мачо [matɕo]). Stress is largely rhythmic/iambic and unmarked in the orthography (Dunn 1999); not rule-encoded pending a positional-stress model -- documented exemption, not an oversight. Vowel harmony (dominant/recessive pairs i~e, u~o, schwa~e) governs vowel choice across a word but is not rule-encoded here; each Cyrillic vowel letter maps to its own phoneme regardless of harmony class. This mapping was revised after a NorthEuraLex error-analysis iteration (30-word gold sample) corrected the V, R, K'/apostrophe, Ы, И, Э, and Ч entries from their initial citation-only guesses.",
+ "iso639_3": "ckt",
+ "glottolog_code": "chuk1273",
+ "sources": [
+  {
+   "id": "glottolog2024",
+   "author": "Hammarström, Harald; Forkel, Robert; Haspelmath, Martin; Bank, Sebastian",
+   "year": 2024,
+   "title": "Glottolog 5.0",
+   "publisher": "Max Planck Institute for Evolutionary Anthropology",
+   "url": "https://glottolog.org/"
+  },
+  {
+   "id": "phoible2019",
+   "author": "Moran, Steven; McCloy, Daniel (eds.)",
+   "year": 2019,
+   "title": "PHOIBLE 2.0 (doi:10.5281/zenodo.2562766)",
+   "publisher": "Max Planck Institute for the Science of Human History",
+   "url": "https://phoible.org/inventories/view/195",
+   "notes": "Inventory 195 (spa), 22 non-marginal segments."
+  },
+  {
+   "id": "dunn1999",
+   "author": "Dunn, Michael John",
+   "year": 1999,
+   "title": "A Grammar of Chukchi",
+   "publisher": "PhD dissertation, Australian National University",
+   "url": "https://openresearch-repository.anu.edu.au/handle/1885/9331"
+  },
+  {
+   "id": "skorik1961",
+   "author": "Skorik, Pyotr Ya.",
+   "year": 1961,
+   "title": "Grammatika chukotskogo yazyka (Grammar of the Chukchi Language), vol. 1",
+   "publisher": "Academy of Sciences, USSR"
+  }
+ ],
+ "urls": [
+  "https://glottolog.org/resource/languoid/id/chuk1273"
+ ],
+ "location": {
+  "latitude": 68.6436,
+  "longitude": 170.045,
+  "source": "glottolog",
+  "notes": "Glottolog's representative point."
+ },
+ "parent": "x-clade-chuk1271",
+ "phonemes": [
+  "j",
+  "k",
+  "m",
+  "n",
+  "p",
+  "q",
+  "sʲ",
+  "t",
+  "ts",
+  "w",
+  "ŋ",
+  "ɣ",
+  "ɬ",
+  "ʐ͇",
+  "ʔ",
+  "a",
+  "e",
+  "o",
+  "u",
+  "ə̆",
+  "ɛ",
+  "ɪ"
+ ],
+ "phoible_id": "195",
+ "wikipedia": [
+  "https://en.wikipedia.org/wiki/Chukchi_language"
+ ]
+}

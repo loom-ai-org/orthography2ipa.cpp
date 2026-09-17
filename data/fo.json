@@ -1,0 +1,858 @@
+{
+  "code": "fo",
+  "name": "Faroese",
+  "script": "Latin",
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "á": [
+      "ɔ"
+    ],
+    "e": [
+      "ɛ"
+    ],
+    "i": [
+      "ɪ"
+    ],
+    "í": [
+      "ʊj"
+    ],
+    "o": [
+      "ɔ"
+    ],
+    "ó": [
+      "œ"
+    ],
+    "u": [
+      "ʊ"
+    ],
+    "ú": [
+      "ʏ"
+    ],
+    "y": [
+      "ɪ"
+    ],
+    "ý": [
+      "ʊj"
+    ],
+    "ø": [
+      "œ"
+    ],
+    "æ": [
+      "a"
+    ],
+    "ei": [
+      "ai"
+    ],
+    "ey": [
+      "ɛi"
+    ],
+    "oy": [
+      "ɔi"
+    ],
+    "au": [
+      "ɛu"
+    ],
+    "kei": [
+      "kʰaiː"
+    ],
+    "koy": [
+      "kʰɔiː"
+    ],
+    "gei": [
+      "kaiː"
+    ],
+    "goy": [
+      "kɔiː"
+    ],
+    "skei": [
+      "skaiː"
+    ],
+    "skoy": [
+      "skɔiː"
+    ],
+    "kí": [
+      "kʰʊiː"
+    ],
+    "ký": [
+      "kʰʊiː"
+    ],
+    "gí": [
+      "kʊiː"
+    ],
+    "gý": [
+      "kʊiː"
+    ],
+    "skí": [
+      "skʊiː"
+    ],
+    "ský": [
+      "skʊiː"
+    ],
+    "ógv": [
+      "ɛkv"
+    ],
+    "úgv": [
+      "ɪkv"
+    ],
+    "p": [
+      "p"
+    ],
+    "t": [
+      "t"
+    ],
+    "k": [
+      "k"
+    ],
+    "b": [
+      "p"
+    ],
+    "d": [
+      "t"
+    ],
+    "g": [
+      "k"
+    ],
+    "f": [
+      "f"
+    ],
+    "v": [
+      "v"
+    ],
+    "s": [
+      "s"
+    ],
+    "h": [
+      "h"
+    ],
+    "j": [
+      "j"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "l": [
+      "l"
+    ],
+    "r": [
+      "ɹ"
+    ],
+    "ð": [
+      "",
+      "j",
+      "v",
+      "w"
+    ],
+    "ggj": [
+      "tʃ"
+    ],
+    "gj": [
+      "tʃ"
+    ],
+    "kj": [
+      "tʃʰ"
+    ],
+    "hj": [
+      "j"
+    ],
+    "skj": [
+      "ʃ"
+    ],
+    "sj": [
+      "ʃ"
+    ],
+    "nj": [
+      "nj"
+    ],
+    "ng": [
+      "ŋk",
+      "ŋ"
+    ],
+    "nn": [
+      "nn",
+      "tn"
+    ],
+    "ll": [
+      "tl",
+      "ll"
+    ],
+    "kk": [
+      "ʰkk"
+    ],
+    "pp": [
+      "ʰpp"
+    ],
+    "tt": [
+      "ʰtt"
+    ],
+    "sk": [
+      "sk"
+    ],
+    "av": [
+      "av"
+    ]
+  },
+  "allophones": {
+    "a": [
+      "a"
+    ],
+    "ɔ": [
+      "ɔ"
+    ],
+    "ɛ": [
+      "ɛ"
+    ],
+    "ɪ": [
+      "ɪ"
+    ],
+    "ʊj": [
+      "ʊj"
+    ],
+    "œ": [
+      "œ"
+    ],
+    "ʊ": [
+      "ʊ"
+    ],
+    "ʏ": [
+      "ʏ"
+    ],
+    "ai": [
+      "ai"
+    ],
+    "ɛi": [
+      "ɛi"
+    ],
+    "ɔi": [
+      "ɔi"
+    ],
+    "ɛu": [
+      "ɛu"
+    ],
+    "kʰaiː": [
+      "kʰaiː"
+    ],
+    "kʰɔiː": [
+      "kʰɔiː"
+    ],
+    "kʰʊiː": [
+      "kʰʊiː"
+    ],
+    "kaiː": [
+      "kaiː"
+    ],
+    "kɔiː": [
+      "kɔiː"
+    ],
+    "skaiː": [
+      "skaiː"
+    ],
+    "skɔiː": [
+      "skɔiː"
+    ],
+    "kʊiː": [
+      "kʊiː"
+    ],
+    "skʊiː": [
+      "skʊiː"
+    ],
+    "ɛkv": [
+      "ɛkv"
+    ],
+    "ɪkv": [
+      "ɪkv"
+    ],
+    "p": [
+      "p"
+    ],
+    "t": [
+      "t"
+    ],
+    "k": [
+      "k"
+    ],
+    "f": [
+      "f"
+    ],
+    "v": [
+      "v"
+    ],
+    "s": [
+      "s"
+    ],
+    "h": [
+      "h"
+    ],
+    "j": [
+      "j"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "l": [
+      "l"
+    ],
+    "ɹ": [
+      "ɹ"
+    ],
+    "tʃ": [
+      "tʃ"
+    ],
+    "tʃʰ": [
+      "tʃʰ"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "nj": [
+      "nj"
+    ],
+    "ŋk": [
+      "ŋk"
+    ],
+    "ŋ": [
+      "ŋ"
+    ],
+    "nn": [
+      "nn"
+    ],
+    "tn": [
+      "tn"
+    ],
+    "tl": [
+      "tl"
+    ],
+    "ll": [
+      "ll"
+    ],
+    "ʰkk": [
+      "ʰkk"
+    ],
+    "ʰpp": [
+      "ʰpp"
+    ],
+    "ʰtt": [
+      "ʰtt"
+    ],
+    "sk": [
+      "sk"
+    ],
+    "av": [
+      "av"
+    ],
+    "ɛaː": [
+      "ɛaː"
+    ],
+    "aː": [
+      "aː"
+    ],
+    "ɔaː": [
+      "ɔaː"
+    ],
+    "eː": [
+      "eː"
+    ],
+    "iː": [
+      "iː"
+    ],
+    "ʊiː": [
+      "ʊiː"
+    ],
+    "oː": [
+      "oː"
+    ],
+    "ɔuː": [
+      "ɔuː"
+    ],
+    "uː": [
+      "uː"
+    ],
+    "ʉuː": [
+      "ʉuː"
+    ],
+    "øː": [
+      "øː"
+    ],
+    "aiː": [
+      "aiː"
+    ],
+    "ɛiː": [
+      "ɛiː"
+    ],
+    "ɔiː": [
+      "ɔiː"
+    ],
+    "ɛuː": [
+      "ɛuː"
+    ],
+    "au": [
+      "au"
+    ],
+    "kʰ": [
+      "kʰ"
+    ],
+    "pʰ": [
+      "pʰ"
+    ],
+    "tʰ": [
+      "tʰ"
+    ],
+    "ɲ": [
+      "ɲ"
+    ]
+  },
+  "parent": "non",
+  "ancestors": [
+    {
+      "code": "non",
+      "role": "parent",
+      "weight": 0.92,
+      "notes": "Old West Norse descent"
+    },
+    {
+      "code": "da",
+      "role": "adstrate",
+      "weight": 0.06,
+      "notes": "Danish adstrate — administrative language until 1948; heavy lexical influence"
+    }
+  ],
+  "notes": "Faroese (føroyskt), ~50,000 speakers in the Faroe Islands, Old West Norse descent alongside Icelandic. Hammershaimb's etymological orthography puts a large distance between spelling and sound, so the spec leans on positional entries rather than a flat grapheme table.\n\nQUANTITY. Every stressed vowel letter has two realisations that differ in QUALITY, not only in length: the long one in an open stressed syllable, the short one before a geminate or a consonant cluster. ⟨a⟩ is [ɛaː]/[a], ⟨á⟩ [ɔaː]/[ɔ], ⟨e⟩ [eː]/[ɛ], ⟨i y⟩ [iː]/[ɪ], ⟨í ý⟩ [ʊiː]/[ʊj], ⟨o⟩ [oː]/[ɔ], ⟨ó⟩ [ɔuː]/[œ], ⟨u⟩ [uː]/[ʊ], ⟨ú⟩ [ʉuː]/[ʏ], ⟨ø⟩ [øː]/[œ]. The long values sit in nucleus_stressed and the shortening before a cluster is an allophone rule (Thrainsson, Petersen, Jacobsen & Hansen 2004; Arnason 2011).\n\nSTOPS. Faroese has no voice contrast in stops; the contrast is aspiration. ⟨b d g⟩ are the unaspirated [p t k] and ⟨p t k⟩ are aspirated only in the word-initial onset — a medial or post-⟨s⟩ stop is plain. ⟨pp tt kk⟩ are preaspirated [ʰpp ʰtt ʰkk] (Arnason 2011).\n\nPALATALISATION. ⟨k g sk⟩ become [tʃʰ tʃ ʃ] before ⟨e i y⟩ and in the digraphs ⟨kj gj ggj skj sj⟩, but not before ⟨í ý⟩ — that pair patterns as a back-onset diphthong [ʊi], not a front vowel, and the velar survives (⟨kíkur⟩ [kʰʊiːkʊɹ], ⟨skína⟩ [skʊiːna]). The inherited diphthong spellings ⟨kei koy gei goy skei skoy⟩ likewise block it and keep the velar; ⟨ey⟩ does not block it (⟨geykur⟩ [tʃɛiːkʊɹ], ⟨skeyt⟩ [ʃɛiːt]). ⟨hj⟩ is [j] (Thrainsson, Petersen, Jacobsen & Hansen 2004).\n\nSKERPING. The Verschärfung spellings ⟨ógv úgv⟩ are [ɛkv] and [ɪkv] — the vowel changes quality and a stop appears, which no compositional reading of the letters gives, so they are grapheme units (Arnason 2011).\n\nRHOTIC AND ⟨ð⟩. /r/ is the alveolar approximant [ɹ], not a trill. ⟨ð⟩ is silent by default and surfaces as the glide [j] between vowels, with [v] and [w] as further allophones (Lockwood 1955; Thrainsson, Petersen, Jacobsen & Hansen 2004). WikiPron gold favours [w] after a rounded vowel and [v]/[j] elsewhere, but that conditioning is not stated in the cited sources and the spec does not encode it; [j] is the 1-best.\n\nNOT ENCODED. Retroflex assimilation of ⟨rn rs rt rl rd⟩ and the stop insertion that turns ⟨rn⟩ into [tn] are both real and both variable, and the WikiPron gold splits between them word by word; encoding either one as categorical would state something the sources do not. Danish loanwords keep unpalatalised velars and plain [a] where a native word would palatalise or diphthongise, and the spec has no loan lexicon to separate them. Secondary stress in compounds is not encoded: ⟨nucleus_stressed⟩ fires only on the word-initial syllable, so a second or later stem in a compound never gets its long vowel, which is the largest single error class against WikiPron gold (352 of 354 gold rows with two or more length marks come out short).",
+  "quality": "production",
+  "script_type": "alphabet",
+  "sources": [
+    {
+      "id": "arnason2011",
+      "author": "Árnason, K.",
+      "year": 2011,
+      "title": "The Phonology of Icelandic and Faroese",
+      "publisher": "Oxford University Press",
+      "url": null,
+      "pages": null,
+      "notes": "Quantity, aspiration and preaspiration, skerping."
+    },
+    {
+      "id": "thrainsson2004",
+      "author": "Þráinsson, H., Petersen, H. P., Jacobsen, J. í L. and Hansen, Z. S.",
+      "year": 2004,
+      "title": "Faroese: An Overview and Reference Grammar",
+      "publisher": "Føroya Fróðskaparfelag",
+      "url": null,
+      "pages": null,
+      "notes": "Vowel table, velar palatalisation, initial stress, variable retroflexion."
+    },
+    {
+      "id": "lockwood1955",
+      "author": "Lockwood, W. B.",
+      "year": 1955,
+      "title": "An Introduction to Modern Faroese",
+      "publisher": "Munksgaard",
+      "url": null,
+      "pages": null,
+      "notes": "⟨ð⟩ as a silent letter and as a glide between vowels."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Faroese_language",
+    "https://fo.wikipedia.org/wiki/Føroyskt_mál",
+    "https://fo.wikipedia.org/wiki/F%C3%B8royskt_m%C3%A1l"
+  ],
+  "timespan": {
+    "start_year": 1400,
+    "end_year": null
+  },
+  "glottolog_code": "faro1244",
+  "iso639_3": "fao",
+  "wikidata_qid": "Q25258",
+  "phoible_id": "faro1244",
+  "wals_code": "far",
+  "location": {
+    "latitude": 62.0732,
+    "longitude": -6.88497,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Faroese."
+  },
+  "positional_graphemes": {
+    "a": {
+      "nucleus_stressed": [
+        "ɛaː",
+        "aː"
+      ],
+      "default": [
+        "a"
+      ]
+    },
+    "á": {
+      "nucleus_stressed": [
+        "ɔaː"
+      ],
+      "default": [
+        "ɔ"
+      ]
+    },
+    "e": {
+      "nucleus_stressed": [
+        "eː"
+      ],
+      "default": [
+        "ɛ"
+      ]
+    },
+    "i": {
+      "nucleus_stressed": [
+        "iː"
+      ],
+      "default": [
+        "ɪ"
+      ]
+    },
+    "í": {
+      "nucleus_stressed": [
+        "ʊiː"
+      ],
+      "default": [
+        "ʊj"
+      ]
+    },
+    "o": {
+      "nucleus_stressed": [
+        "oː"
+      ],
+      "default": [
+        "ɔ"
+      ]
+    },
+    "ó": {
+      "nucleus_stressed": [
+        "ɔuː"
+      ],
+      "default": [
+        "œ"
+      ]
+    },
+    "u": {
+      "nucleus_stressed": [
+        "uː"
+      ],
+      "default": [
+        "ʊ"
+      ]
+    },
+    "ú": {
+      "nucleus_stressed": [
+        "ʉuː"
+      ],
+      "default": [
+        "ʏ"
+      ]
+    },
+    "y": {
+      "nucleus_stressed": [
+        "iː"
+      ],
+      "default": [
+        "ɪ"
+      ]
+    },
+    "ý": {
+      "nucleus_stressed": [
+        "ʊiː"
+      ],
+      "default": [
+        "ʊj"
+      ]
+    },
+    "ø": {
+      "nucleus_stressed": [
+        "øː"
+      ],
+      "default": [
+        "œ"
+      ]
+    },
+    "æ": {
+      "nucleus_stressed": [
+        "ɛaː"
+      ],
+      "default": [
+        "a"
+      ]
+    },
+    "ei": {
+      "nucleus_stressed": [
+        "aiː"
+      ],
+      "default": [
+        "ai"
+      ]
+    },
+    "ey": {
+      "nucleus_stressed": [
+        "ɛiː"
+      ],
+      "default": [
+        "ɛi"
+      ]
+    },
+    "oy": {
+      "nucleus_stressed": [
+        "ɔiː"
+      ],
+      "default": [
+        "ɔi"
+      ]
+    },
+    "au": {
+      "nucleus_stressed": [
+        "ɛuː"
+      ],
+      "default": [
+        "ɛu"
+      ]
+    },
+    "sk": {
+      "before_e": [
+        "ʃ"
+      ],
+      "before_i": [
+        "ʃ"
+      ],
+      "before_y": [
+        "ʃ"
+      ],
+      "default": [
+        "sk"
+      ]
+    },
+    "av": {
+      "before_consonant": [
+        "au"
+      ],
+      "default": [
+        "av"
+      ]
+    },
+    "k": {
+      "before_e": [
+        "tʃʰ"
+      ],
+      "before_i": [
+        "tʃʰ"
+      ],
+      "before_y": [
+        "tʃʰ"
+      ],
+      "word_initial": [
+        "kʰ"
+      ],
+      "default": [
+        "k"
+      ]
+    },
+    "g": {
+      "before_e": [
+        "tʃ"
+      ],
+      "before_i": [
+        "tʃ"
+      ],
+      "before_y": [
+        "tʃ"
+      ],
+      "intervocalic": [
+        "j",
+        "v"
+      ],
+      "default": [
+        "k"
+      ]
+    },
+    "p": {
+      "word_initial": [
+        "pʰ"
+      ],
+      "default": [
+        "p"
+      ]
+    },
+    "t": {
+      "word_initial": [
+        "tʰ"
+      ],
+      "default": [
+        "t"
+      ]
+    },
+    "ð": {
+      "intervocalic": [
+        "j",
+        "v",
+        "w"
+      ],
+      "default": [
+        "",
+        "j"
+      ]
+    },
+    "nj": {
+      "word_initial": [
+        "ɲ",
+        "nj"
+      ],
+      "default": [
+        "nj"
+      ]
+    }
+  },
+  "allophone_rules": [
+    {
+      "id": "FO_SHORTEN_00",
+      "phonemes": [
+        "ɛaː"
+      ],
+      "surface": "a",
+      "followed_by": "consonant_cluster",
+      "notes": "Faroese stressed vowels alternate in QUALITY as well as length: the long value appears in an open stressed syllable (before a single consonant or word-finally), the short value before a geminate or a consonant cluster (Thrainsson, Petersen, Jacobsen & Hansen 2004; Arnason 2011)."
+    },
+    {
+      "id": "FO_SHORTEN_01",
+      "phonemes": [
+        "aː"
+      ],
+      "surface": "a",
+      "followed_by": "consonant_cluster",
+      "notes": "Faroese stressed vowels alternate in QUALITY as well as length: the long value appears in an open stressed syllable (before a single consonant or word-finally), the short value before a geminate or a consonant cluster (Thrainsson, Petersen, Jacobsen & Hansen 2004; Arnason 2011)."
+    },
+    {
+      "id": "FO_SHORTEN_02",
+      "phonemes": [
+        "ɔaː"
+      ],
+      "surface": "ɔ",
+      "followed_by": "consonant_cluster",
+      "notes": "Faroese stressed vowels alternate in QUALITY as well as length: the long value appears in an open stressed syllable (before a single consonant or word-finally), the short value before a geminate or a consonant cluster (Thrainsson, Petersen, Jacobsen & Hansen 2004; Arnason 2011)."
+    },
+    {
+      "id": "FO_SHORTEN_03",
+      "phonemes": [
+        "eː"
+      ],
+      "surface": "ɛ",
+      "followed_by": "consonant_cluster",
+      "notes": "Faroese stressed vowels alternate in QUALITY as well as length: the long value appears in an open stressed syllable (before a single consonant or word-finally), the short value before a geminate or a consonant cluster (Thrainsson, Petersen, Jacobsen & Hansen 2004; Arnason 2011)."
+    },
+    {
+      "id": "FO_SHORTEN_04",
+      "phonemes": [
+        "iː"
+      ],
+      "surface": "ɪ",
+      "followed_by": "consonant_cluster",
+      "notes": "Faroese stressed vowels alternate in QUALITY as well as length: the long value appears in an open stressed syllable (before a single consonant or word-finally), the short value before a geminate or a consonant cluster (Thrainsson, Petersen, Jacobsen & Hansen 2004; Arnason 2011)."
+    },
+    {
+      "id": "FO_SHORTEN_05",
+      "phonemes": [
+        "ʊiː"
+      ],
+      "surface": "ʊj",
+      "followed_by": "consonant_cluster",
+      "notes": "Faroese stressed vowels alternate in QUALITY as well as length: the long value appears in an open stressed syllable (before a single consonant or word-finally), the short value before a geminate or a consonant cluster (Thrainsson, Petersen, Jacobsen & Hansen 2004; Arnason 2011)."
+    },
+    {
+      "id": "FO_SHORTEN_06",
+      "phonemes": [
+        "oː"
+      ],
+      "surface": "ɔ",
+      "followed_by": "consonant_cluster",
+      "notes": "Faroese stressed vowels alternate in QUALITY as well as length: the long value appears in an open stressed syllable (before a single consonant or word-finally), the short value before a geminate or a consonant cluster (Thrainsson, Petersen, Jacobsen & Hansen 2004; Arnason 2011)."
+    },
+    {
+      "id": "FO_SHORTEN_07",
+      "phonemes": [
+        "ɔuː"
+      ],
+      "surface": "œ",
+      "followed_by": "consonant_cluster",
+      "notes": "Faroese stressed vowels alternate in QUALITY as well as length: the long value appears in an open stressed syllable (before a single consonant or word-finally), the short value before a geminate or a consonant cluster (Thrainsson, Petersen, Jacobsen & Hansen 2004; Arnason 2011)."
+    },
+    {
+      "id": "FO_SHORTEN_08",
+      "phonemes": [
+        "uː"
+      ],
+      "surface": "ʊ",
+      "followed_by": "consonant_cluster",
+      "notes": "Faroese stressed vowels alternate in QUALITY as well as length: the long value appears in an open stressed syllable (before a single consonant or word-finally), the short value before a geminate or a consonant cluster (Thrainsson, Petersen, Jacobsen & Hansen 2004; Arnason 2011)."
+    },
+    {
+      "id": "FO_SHORTEN_09",
+      "phonemes": [
+        "ʉuː"
+      ],
+      "surface": "ʏ",
+      "followed_by": "consonant_cluster",
+      "notes": "Faroese stressed vowels alternate in QUALITY as well as length: the long value appears in an open stressed syllable (before a single consonant or word-finally), the short value before a geminate or a consonant cluster (Thrainsson, Petersen, Jacobsen & Hansen 2004; Arnason 2011)."
+    },
+    {
+      "id": "FO_SHORTEN_10",
+      "phonemes": [
+        "øː"
+      ],
+      "surface": "œ",
+      "followed_by": "consonant_cluster",
+      "notes": "Faroese stressed vowels alternate in QUALITY as well as length: the long value appears in an open stressed syllable (before a single consonant or word-finally), the short value before a geminate or a consonant cluster (Thrainsson, Petersen, Jacobsen & Hansen 2004; Arnason 2011)."
+    },
+    {
+      "id": "FO_SHORTEN_11",
+      "phonemes": [
+        "aiː"
+      ],
+      "surface": "ai",
+      "followed_by": "consonant_cluster",
+      "notes": "Faroese stressed vowels alternate in QUALITY as well as length: the long value appears in an open stressed syllable (before a single consonant or word-finally), the short value before a geminate or a consonant cluster (Thrainsson, Petersen, Jacobsen & Hansen 2004; Arnason 2011)."
+    },
+    {
+      "id": "FO_SHORTEN_12",
+      "phonemes": [
+        "ɛiː"
+      ],
+      "surface": "ɛi",
+      "followed_by": "consonant_cluster",
+      "notes": "Faroese stressed vowels alternate in QUALITY as well as length: the long value appears in an open stressed syllable (before a single consonant or word-finally), the short value before a geminate or a consonant cluster (Thrainsson, Petersen, Jacobsen & Hansen 2004; Arnason 2011)."
+    },
+    {
+      "id": "FO_SHORTEN_13",
+      "phonemes": [
+        "ɔiː"
+      ],
+      "surface": "ɔi",
+      "followed_by": "consonant_cluster",
+      "notes": "Faroese stressed vowels alternate in QUALITY as well as length: the long value appears in an open stressed syllable (before a single consonant or word-finally), the short value before a geminate or a consonant cluster (Thrainsson, Petersen, Jacobsen & Hansen 2004; Arnason 2011)."
+    },
+    {
+      "id": "FO_SHORTEN_14",
+      "phonemes": [
+        "ɛuː"
+      ],
+      "surface": "ɛu",
+      "followed_by": "consonant_cluster",
+      "notes": "Faroese stressed vowels alternate in QUALITY as well as length: the long value appears in an open stressed syllable (before a single consonant or word-finally), the short value before a geminate or a consonant cluster (Thrainsson, Petersen, Jacobsen & Hansen 2004; Arnason 2011)."
+    }
+  ],
+  "stress": {
+    "default_position": 1,
+    "final_stress_endings": [],
+    "penult_stress_endings": [],
+    "marked_vowels": [],
+    "stress_mark": "ˈ",
+    "notes": "Faroese has categorical word-initial stress; the acute-accented letters mark vowel quality, not stress placement (Thrainsson, Petersen, Jacobsen & Hansen 2004)."
+  }
+}

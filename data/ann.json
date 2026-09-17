@@ -1,0 +1,77 @@
+{
+  "code": "ann",
+  "name": "Obolo",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "stub",
+  "graphemes": {},
+  "allophones": {},
+  "iso639_3": null,
+  "glottolog_code": null,
+  "wikidata_qid": null,
+  "notes": "STUB — DELIBERATELY LEFT UNFILLED. Obolo (Andoni) is a Lower Cross (Cross River, Atlantic-Congo) language of Andoni LGA, Rivers State and Eastern Obolo LGA, Akwa Ibom State, Nigeria; Ngo is the prestige dialect and the basis of Standard (Literary) Obolo. WHAT IS ESTABLISHED: the orthography was created by Nicholas Faraclas in the 1980s, revised by Uche Aaron with the Obolo Language and Bible Translation Committee in 1991, and published by the NERDC in Orthographies of Nigerian Languages, Manual VI (2000). Its 32-letter alphabet is: a b ch d e f g gb gw i j k kp kw l m n n̄ nw ny o ọ p r s (sh) t u (v) w y (z) — the bracketed letters are dialect-specific. Faraclas's phonological analysis (summarised by Nurse, chapter 18 'Obolo') gives a consonant system with only two fricatives /f, s/ and NO /p/, and six vowel qualities, all occurring short and long. WHY STILL A STUB: no source consulted gives a LETTER-TO-IPA table. The letter list plus the phoneme inventory do not fix the mapping — most conspicuously ⟨p⟩ is in the alphabet while Faraclas's inventory has no /p/, and the values of ⟨e⟩, ⟨o⟩, ⟨ọ⟩, ⟨n̄⟩ and ⟨nw⟩ cannot be read off the letter list without guessing. Per project rule, no graphemes are recorded rather than fabricate IPA values. TO UNBLOCK: obtain Faraclas (1984) A Grammar of Obolo / The Phonology of Obolo, or the NERDC Manual VI (2000) Obolo chapter, or OLBTO's 'Reading and Writing Obolo' workshop manual, and read the letter-to-sound chart directly. INPUT CONTRACT (when filled): Standard (Ngo-based) Latin-script Obolo per the 1991/2000 NERDC orthography, already normalised; note ⟨n̄⟩ is n + COMBINING MACRON (U+0304) and ⟨ọ⟩ is o + dot below. TONE: Obolo has five tones (low, high, mid, falling, rising), borne by the vowels a, e, i, o, ọ, u and the consonants m, n. In practice only the low (`) and falling (ˆ) tones are written, obligatorily on the first syllable of verbs and verbal groups, elsewhere only to disambiguate minimal pairs. Tone is therefore only PARTIALLY written, and unwritten tone is NOT RECOVERABLE from the orthography. No ISO 639-3 or Glottolog code is recorded for this Wikimedia code in Wikidata, so those fields stay null; wikidata_qid left unset because the code's Wikidata row resolves to the Wikimedia project item, not the language item.",
+  "sources": [
+    {
+      "id": "obolo_wikidata",
+      "author": "Wikidata contributors",
+      "year": 2026,
+      "title": "Obolo (Q130548769)",
+      "publisher": "Wikidata",
+      "url": "https://www.wikidata.org/wiki/Q130548769",
+      "pages": null,
+      "notes": "Only verified identifier for this Wikimedia language code.",
+      "wikipedia_url": null
+    },
+    {
+      "id": "obolo_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Obolo language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Obolo_language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Obolo_language",
+      "pages": null,
+      "notes": "Gives the 32-letter Obolo alphabet and the tone-marking conventions, but NO letter-to-IPA values — hence the stub."
+    },
+    {
+      "id": "nurse_obolo",
+      "author": "Nurse, Derek",
+      "year": 2007,
+      "title": "Obolo (Lower Cross, Delta Cross, Cross River), chapter 18",
+      "publisher": "Memorial University of Newfoundland",
+      "url": "https://www.mun.ca/linguistics/media/production/memorial/academic/faculty-of-humanities-and-social-sciences/linguistics/media-library/more/e-books/Ch18.pdf",
+      "pages": "1",
+      "notes": "Read in full. Summarises Faraclas (1984): only /f, s/ fricatives and no /p/; six vowel qualities, short and long; three tones in Faraclas's analysis. Phonemic only — contains no orthography-to-IPA mapping."
+    },
+    {
+      "id": "faraclas1984",
+      "author": "Faraclas, Nicholas",
+      "year": 1984,
+      "title": "A Grammar of Obolo",
+      "publisher": "Indiana University Linguistics Club",
+      "url": null,
+      "pages": null,
+      "notes": "Primary description and origin of the Obolo orthography. NOT OBTAINED — needed (with the companion 'The Phonology of Obolo') before graphemes can be filled."
+    },
+    {
+      "id": "nerdc2000_obolo",
+      "author": "Nigeria Educational Research and Development Council",
+      "year": 2000,
+      "title": "Obolo, in Orthographies of Nigerian Languages, Manual VI",
+      "publisher": "NERDC",
+      "url": null,
+      "pages": null,
+      "notes": "The official orthography statement (Aaron's 1991 revision). NOT OBTAINED — the normative letter-to-sound chart lives here."
+    }
+  ],
+  "wikipedia": [],
+  "parent": "x-clade-atla1278",
+  "ancestors": [
+    {
+      "code": "x-clade-atla1278",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Atlantic-Congo — the classification node this language sits under."
+    }
+  ]
+}

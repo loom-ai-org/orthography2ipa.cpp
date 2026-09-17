@@ -1,0 +1,102 @@
+{
+  "code": "an-x-ansotano",
+  "name": "Ansotano Aragonese (Ansó valley)",
+  "script": "Latin",
+  "graphemes_base": "an",
+  "allophones_base": "an",
+  "positional_graphemes_base": "an",
+  "parent": "an",
+  "positional_graphemes": {
+    "r": {
+      "word_initial": [
+        "r"
+      ],
+      "intervocalic": [
+        "ɾ"
+      ],
+      "before_consonant": [
+        "ɾ"
+      ],
+      "word_final": [
+        ""
+      ]
+    }
+  },
+  "ancestors": [
+    {
+      "code": "an",
+      "role": "parent",
+      "weight": 0.9,
+      "notes": "Ansotano is a Western High-Aragonese valley variety inheriting the whole Aragonese grapheme→IPA system; it declares only the word-final ⟨r⟩ deletion delta and documents lexical/morphological distinctiveness in notes."
+    },
+    {
+      "code": "la-x-hispania",
+      "role": "ancestor",
+      "weight": 0.72,
+      "notes": "Hispanic Vulgar Latin, inherited via Aragonese (an)."
+    },
+    {
+      "code": "xaq",
+      "role": "substrate",
+      "weight": 0.05,
+      "notes": "Basque/Aquitanian substrate: the Ansó valley was Basque-speaking into the early medieval period, inherited via Aragonese."
+    }
+  ],
+  "quality": "skeleton",
+  "script_type": "alphabet",
+  "notes": "Ansotano — the Aragonese of the Ansó valley (Valle de Ansó, Huesca), a Western High-Aragonese variety, one of the most conservative and best-preserved traditional valleys (documented since Saroïhandy and Kuhn 1935). PHONOLOGICALLY-EXPRESSED DELTA modelled here: word-final ⟨r⟩ is NOT pronounced in Ansó (deleted in the infinitive and in nouns), whereas it is retained in neighbouring Fago and in Cheso — 'la -r final no se pronuncia en Ansó pero sí en Fago' (es.wikipedia 'Aragonés ansotano', secondary, after Barcos 2007). Modelled as a positional delta ⟨r⟩ word_final → [∅]; the base word-initial [r], intervocalic [ɾ] and non-final coda [ɾ] are preserved. Ansotano otherwise keeps the full Western Aragonese profile inherited from an: F- preserved, /θ/ distinción, /ʎ/ for ⟨ll⟩, ⟨ch⟩ = [tʃ]. FEATURES NOT PHONEME-MAPPABLE (documented, not modelled — Aragonese spelling is phonemic and these are lexical/morphological): retention of intervocalic -d- in words like 'odir' (oír); article o/a/os/as; conservative verb morphology. Diphthongisation Ĕ/Ŏ → ie/ue is inherited (Várvaro, AFA XLVI-XLVII, p. 250 discusses the Ansó documents). TIER RATIONALE: skeleton — the single robustly source-attested phoneme-level delta (final-r deletion) is modelled, but most of Ansotano's distinctiveness is lexical/morphological and the primary phonological monographs (Kuhn 1935; Barcos 2007; Benítez Marco 2001) were not directly obtainable, so the phonological description here rests on a secondary summary. PROVENANCE HONESTY: per-valley detail from the Spanish-Wikipedia dialect article (secondary, citing Kuhn/Barcos/Benítez Marco); Várvaro (AFA) read directly.",
+  "sources": [
+    {
+      "id": "kuhn1935",
+      "author": "Kuhn, A.",
+      "year": 1935,
+      "title": "Der hocharagonesische Dialekt",
+      "publisher": "Revue de Linguistique Romane XI, pp. 1-312",
+      "url": null,
+      "pages": null,
+      "notes": "The classic High-Aragonese dialect monograph, foundational for Ansó and Hecho. Cited via the secondary Spanish-Wikipedia dialect article; primary not directly obtainable."
+    },
+    {
+      "id": "barcos2007",
+      "author": "Barcos, M. A.",
+      "year": 2007,
+      "title": "El aragonés ansotano: estudio lingüístico de Ansó y Fago",
+      "publisher": "Gara d'Edizions / Institución Fernando el Católico",
+      "url": null,
+      "pages": null,
+      "notes": "Cited via the secondary Spanish-Wikipedia dialect article; primary not directly obtainable. Source of the Ansó vs Fago final-r contrast."
+    },
+    {
+      "id": "varvaro_afa",
+      "author": "Várvaro, A.",
+      "year": 1991,
+      "title": "De la escritura al habla: la diptongación de O breve tónica en el Alto Aragón",
+      "publisher": "Archivo de Filología Aragonesa XLVI-XLVII",
+      "url": "https://ifc.dpz.es/recursos/publicaciones/15/72/12varvaro.pdf",
+      "pages": "245-268",
+      "notes": "Read directly. Medieval Ŏ-diphthongisation geography including the Ansó documents (p. 250)."
+    }
+  ],
+  "wikipedia": [
+    "https://es.wikipedia.org/wiki/Aragon%C3%A9s_ansotano",
+    "https://en.wikipedia.org/wiki/Ans%C3%B3_Aragonese",
+    "https://an.wikipedia.org/wiki/Aragon%C3%A9s_ansotano"
+  ],
+  "urls": [
+    "https://es.wikipedia.org/wiki/Aragon%C3%A9s_ansotano",
+    "https://en.wikipedia.org/wiki/Ans%C3%B3_Aragonese"
+  ],
+  "timespan": {
+    "start_year": 1100,
+    "end_year": null
+  },
+  "glottolog_code": "west2340",
+  "iso639_3": "arg",
+  "wikidata_qid": "Q3574358",
+  "location": {
+    "latitude": 42.75,
+    "longitude": -0.816667,
+    "source": "wikidata",
+    "notes": "the Ansó valley (Huesca) — the valley the variety is named for. [Wikidata Q570484 P625]"
+  }
+}

@@ -1,0 +1,252 @@
+{
+ "code": "rng",
+ "name": "Ronga",
+ "script": "Latin",
+ "quality": "skeleton",
+ "graphemes": {
+  "a": [
+   "a"
+  ],
+  "b": [
+   "b"
+  ],
+  "by": [
+   "b͡ʐ"
+  ],
+  "c": [
+   "tʃ"
+  ],
+  "ch": [
+   "tʃ"
+  ],
+  "d": [
+   "d"
+  ],
+  "e": [
+   "e"
+  ],
+  "g": [
+   "ɡ"
+  ],
+  "h": [
+   "h"
+  ],
+  "hl": [
+   "ɸ"
+  ],
+  "i": [
+   "i"
+  ],
+  "j": [
+   "dʒ"
+  ],
+  "k": [
+   "k"
+  ],
+  "l": [
+   "l"
+  ],
+  "lh": [
+   "ʎ"
+  ],
+  "m": [
+   "m"
+  ],
+  "n": [
+   "n"
+  ],
+  "n’": [
+   "ŋ"
+  ],
+  "o": [
+   "ɔ"
+  ],
+  "p": [
+   "p"
+  ],
+  "ps": [
+   "p͡ʂ"
+  ],
+  "r": [
+   "r"
+  ],
+  "s": [
+   "s"
+  ],
+  "sv": [
+   "ʂ"
+  ],
+  "sw": [
+   "sʷ"
+  ],
+  "t": [
+   "t"
+  ],
+  "u": [
+   "u"
+  ],
+  "v": [
+   "v"
+  ],
+  "vh": [
+   "v"
+  ],
+  "w": [
+   "w"
+  ],
+  "x": [
+   "ʃ"
+  ],
+  "xj": [
+   "ʒ"
+  ],
+  "y": [
+   "j"
+  ],
+  "z": [
+   "z"
+  ],
+  "zv": [
+   "ʐ"
+  ],
+  "zw": [
+   "zʷ"
+  ],
+  "ŝ": [
+   "ʂ"
+  ],
+  "ṅ": [
+   "ŋ"
+  ],
+  "ẑ": [
+   "ʐ"
+  ]
+ },
+ "allophones": {
+  "e": [
+   "e",
+   "ɛ"
+  ],
+  "o": [
+   "o",
+   "ɔ"
+  ]
+ },
+ "notes": "Placed so the ancestry graph covers every living ISO 639-3 language. No orthography is claimed; the phoneme inventory follows the cited PHOIBLE inventory (which itself cites a published description): script is Zyyy (undetermined) until a cited description is encoded. Classification and coordinates follow Glottolog. Orthography from an Omniglot chart (c) Simon Ager, https://www.omniglot.com/, extracted via the AfriSpeech/africa-g2p compilation (rng.json). africa-g2p is a compilation tool, not the linguistic authority; the citation above is the original source it names.",
+ "iso639_3": "rng",
+ "glottolog_code": "rong1268",
+ "sources": [
+  {
+   "id": "glottolog2024",
+   "author": "Hammarström, Harald; Forkel, Robert; Haspelmath, Martin; Bank, Sebastian",
+   "year": 2024,
+   "title": "Glottolog 5.0",
+   "publisher": "Max Planck Institute for Evolutionary Anthropology",
+   "url": "https://glottolog.org/"
+  },
+  {
+   "id": "phoible2019",
+   "author": "Moran, Steven; McCloy, Daniel (eds.)",
+   "year": 2019,
+   "title": "PHOIBLE 2.0 (doi:10.5281/zenodo.2562766)",
+   "publisher": "Max Planck Institute for the Science of Human History",
+   "url": "https://phoible.org/inventories/view/1546",
+   "notes": "Inventory 1546 (ph), 69 non-marginal segments."
+  },
+  {
+   "id": "omniglot-ronga",
+   "author": "Ager, Simon",
+   "year": 2026,
+   "title": "Omniglot chart (ronga.xls)",
+   "publisher": "Omniglot",
+   "url": "https://www.omniglot.com/",
+   "notes": "Undated web chart; year is retrieval year, not publication year."
+  }
+ ],
+ "urls": [
+  "https://glottolog.org/resource/languoid/id/rong1268"
+ ],
+ "location": {
+  "latitude": -26.7329,
+  "longitude": 32.6167,
+  "source": "glottolog",
+  "notes": "Glottolog's representative point."
+ },
+ "parent": "x-clade-atla1278",
+ "phonemes": [
+  "b",
+  "bv",
+  "bzʷ",
+  "d",
+  "dlʷ",
+  "dz",
+  "d̠ʒ",
+  "f",
+  "j",
+  "k",
+  "kʰ",
+  "kʷ",
+  "kʷʰ",
+  "l",
+  "lʷ",
+  "m",
+  "m̤",
+  "n",
+  "nʷ",
+  "n̤",
+  "n̤ʷ",
+  "p",
+  "pf",
+  "pfʰ",
+  "psʷ",
+  "psʷʰ",
+  "pʰ",
+  "r",
+  "s",
+  "sʷ",
+  "t",
+  "ts",
+  "tsʰ",
+  "tʰ",
+  "tʷ",
+  "t̠ʃ",
+  "t̠ʃʰ",
+  "v",
+  "v̤",
+  "w",
+  "w̤",
+  "z",
+  "ŋʷ",
+  "ɓ",
+  "ɖʐ",
+  "ɖʐʷ",
+  "ɗ",
+  "ɡ",
+  "ɡǂ",
+  "ɡʷ",
+  "ɡ̤ʷ",
+  "ɦ",
+  "ɬ",
+  "ɬʷ",
+  "ɲ",
+  "ɲʷ",
+  "ʃ",
+  "ʃʷ",
+  "ʈʂ",
+  "ʈʂʰ",
+  "ʈʂʷ",
+  "ʐ",
+  "ʐʷ",
+  "ʒ",
+  "a",
+  "e",
+  "i",
+  "o",
+  "u"
+ ],
+ "phoible_id": "1546",
+ "script_type": "alphabet",
+ "wikipedia": [
+  "https://en.wikipedia.org/wiki/Ronga_language"
+ ]
+}

@@ -1,0 +1,77 @@
+{
+ "code": "lwo",
+ "name": "Luwo",
+ "script": "Zyyy",
+ "quality": "stub",
+ "graphemes": {},
+ "allophones": {},
+ "notes": "REGISTRY STUB (not a modelled G2P target). Placed so the ancestry graph covers every living ISO 639-3 language. No orthography is claimed; the phoneme inventory follows the cited PHOIBLE inventory (which itself cites a published description): script is Zyyy (undetermined) until a cited description is encoded. Classification and coordinates follow Glottolog.",
+ "iso639_3": "lwo",
+ "glottolog_code": "luwo1239",
+ "sources": [
+  {
+   "id": "glottolog2024",
+   "author": "Hammarström, Harald; Forkel, Robert; Haspelmath, Martin; Bank, Sebastian",
+   "year": 2024,
+   "title": "Glottolog 5.0",
+   "publisher": "Max Planck Institute for Evolutionary Anthropology",
+   "url": "https://glottolog.org/"
+  },
+  {
+   "id": "phoible2019",
+   "author": "Moran, Steven; McCloy, Daniel (eds.)",
+   "year": 2019,
+   "title": "PHOIBLE 2.0 (doi:10.5281/zenodo.2562766)",
+   "publisher": "Max Planck Institute for the Science of Human History",
+   "url": "https://phoible.org/inventories/view/1432",
+   "notes": "Inventory 1432 (ph), 29 non-marginal segments, 3 tones."
+  }
+ ],
+ "urls": [
+  "https://glottolog.org/resource/languoid/id/luwo1239"
+ ],
+ "location": {
+  "latitude": 7.3509,
+  "longitude": 28.1378,
+  "source": "glottolog",
+  "notes": "Glottolog's representative point."
+ },
+ "parent": "x-clade-nilo1247",
+ "phonemes": [
+  "b",
+  "c",
+  "d",
+  "d̪",
+  "j",
+  "k",
+  "l",
+  "m",
+  "n",
+  "n̪",
+  "p",
+  "t",
+  "t̪",
+  "w",
+  "ŋ",
+  "ɟ",
+  "ɡ",
+  "ɲ",
+  "ɾ",
+  "eː",
+  "i",
+  "oː",
+  "u",
+  "ɑ",
+  "ɔ",
+  "ə",
+  "ɛ",
+  "ɪ",
+  "ʊ"
+ ],
+ "tone_inventory": {
+  "˦": "PHOIBLE tone segment",
+  "˧": "PHOIBLE tone segment",
+  "˨": "PHOIBLE tone segment"
+ },
+ "phoible_id": "1432"
+}

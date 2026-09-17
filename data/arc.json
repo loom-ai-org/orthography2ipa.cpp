@@ -1,0 +1,106 @@
+{
+  "code": "arc",
+  "name": "Aramaic",
+  "script": "Latin",
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "i": [
+      "i"
+    ],
+    "u": [
+      "u"
+    ],
+    "e": [
+      "e"
+    ],
+    "o": [
+      "o"
+    ],
+    "p": [
+      "p"
+    ],
+    "t": [
+      "t"
+    ],
+    "k": [
+      "k"
+    ],
+    "b": [
+      "b"
+    ],
+    "d": [
+      "d"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "s": [
+      "s"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "l": [
+      "l"
+    ],
+    "r": [
+      "r"
+    ],
+    "w": [
+      "w"
+    ],
+    "j": [
+      "j"
+    ],
+    "h": [
+      "h"
+    ]
+  },
+  "allophones": {},
+  "notes": "STRUCTURAL CONTACT / ANCESTRY STUB (not a modelled G2P target). Aramaic is a Northwest (Central) Semitic language, for centuries the lingua franca of the Near East and the principal adstrate/substrate of Hebrew, of the Mesopotamian and Levantine Arabic dialects, and a co-liturgical language. It exists here only so specs referencing it as a contact node have something to resolve to; the grapheme set is a placeholder and no phonology is claimed (gn.json stub pattern).",
+  "quality": "stub",
+  "script_type": "alphabet",
+  "iso639_3": "arc",
+  "glottolog_code": "impe1235",
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Aramaic",
+    "https://arc.wikipedia.org/wiki/%DC%A0%DC%AB%DC%A2%DC%90_%DC%90%DC%AA%DC%A1%DC%9D%DC%90"
+  ],
+  "urls": [
+    "https://glottolog.org/resource/languoid/id/aram1259"
+  ],
+  "sources": [
+    {
+      "id": "gzella2015",
+      "author": "Gzella, H.",
+      "year": 2015,
+      "title": "A Cultural History of Aramaic",
+      "publisher": "Brill",
+      "url": null,
+      "pages": null,
+      "notes": "Reference for Aramaic and its contact history (contact node only).",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Aramaic"
+    }
+  ],
+  "parent": "sem-x-central",
+  "ancestors": [
+    {
+      "code": "sem-x-central",
+      "role": "parent",
+      "weight": 0.9,
+      "notes": "Northwest/Central Semitic."
+    }
+  ],
+  "wikidata_qid": "Q28602",
+  "location": {
+    "latitude": 33.905,
+    "longitude": 42.185,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Imperial Aramaic (700-300 BCE)."
+  }
+}

@@ -1,0 +1,331 @@
+{
+  "code": "ar-LY",
+  "name": "Libyan Arabic",
+  "script": "Arabic",
+  "graphemes_base": "ar-x-maghrebi",
+  "graphemes": {
+    "ث": [
+      "t",
+      "θ"
+    ],
+    "ذ": [
+      "d",
+      "ð"
+    ],
+    "ظ": [
+      "dˤ",
+      "ðˤ"
+    ],
+    "e": [
+      "e"
+    ],
+    "o": [
+      "o"
+    ],
+    "الثث": [
+      "att",
+      "aθθ"
+    ],
+    "اَلثث": [
+      "att",
+      "aθθ"
+    ],
+    "لِلثث": [
+      "litt",
+      "liθθ"
+    ],
+    "وَالثث": [
+      "watt",
+      "waθθ"
+    ],
+    "فَالثث": [
+      "fatt",
+      "faθθ"
+    ],
+    "بِالثث": [
+      "bitt",
+      "biθθ"
+    ],
+    "كَالثث": [
+      "katt",
+      "kaθθ"
+    ],
+    "الذذ": [
+      "add",
+      "aðð"
+    ],
+    "اَلذذ": [
+      "add",
+      "aðð"
+    ],
+    "لِلذذ": [
+      "lidd",
+      "liðð"
+    ],
+    "وَالذذ": [
+      "wadd",
+      "waðð"
+    ],
+    "فَالذذ": [
+      "fadd",
+      "faðð"
+    ],
+    "بِالذذ": [
+      "bidd",
+      "biðð"
+    ],
+    "كَالذذ": [
+      "kadd",
+      "kaðð"
+    ],
+    "الظظ": [
+      "adˤdˤ",
+      "aðˤðˤ"
+    ],
+    "اَلظظ": [
+      "adˤdˤ",
+      "aðˤðˤ"
+    ],
+    "لِلظظ": [
+      "lidˤdˤ",
+      "liðˤðˤ"
+    ],
+    "وَالظظ": [
+      "wadˤdˤ",
+      "waðˤðˤ"
+    ],
+    "فَالظظ": [
+      "fadˤdˤ",
+      "faðˤðˤ"
+    ],
+    "بِالظظ": [
+      "bidˤdˤ",
+      "biðˤðˤ"
+    ],
+    "كَالظظ": [
+      "kadˤdˤ",
+      "kaðˤðˤ"
+    ],
+    "اِلثث": [
+      "itt",
+      "iθθ"
+    ],
+    "اِلذذ": [
+      "idd",
+      "iðð"
+    ],
+    "اِلظظ": [
+      "idˤdˤ",
+      "iðˤðˤ"
+    ],
+    "وِالثث": [
+      "witt",
+      "wiθθ"
+    ],
+    "وِالذذ": [
+      "widd",
+      "wiðð"
+    ],
+    "وِالظظ": [
+      "widˤdˤ",
+      "wiðˤðˤ"
+    ],
+    "ق": [
+      "ɡ",
+      "q"
+    ],
+    "ج": [
+      "ʒ",
+      "dʒ"
+    ],
+    "گ": [
+      "ɡ"
+    ],
+    "وَيْ": [
+      "weː"
+    ],
+    "يَوْ": [
+      "joː"
+    ]
+  },
+  "allophones_base": "ar-x-maghrebi",
+  "allophones": {
+    "ðˤ": [
+      "dˤ",
+      "ðˤ"
+    ],
+    "θ": [
+      "t",
+      "θ"
+    ],
+    "ð": [
+      "d",
+      "ð"
+    ],
+    "a": [
+      "a",
+      "ə"
+    ],
+    "i": [
+      "i",
+      "ə"
+    ],
+    "u": [
+      "u",
+      "ə"
+    ],
+    "e": [
+      "e"
+    ],
+    "o": [
+      "o"
+    ]
+  },
+  "allophone_rules": [
+    {
+      "id": "LY_MONO_AY",
+      "phonemes": [
+        "aj"
+      ],
+      "surface": "eː",
+      "notes": "Tripoli monophthongization (Pereira 2010:66-67; 2011 EALL 'Tripoli Arabic'): the Classical diphthong /aj/ is realised [eː] in the urban Tripoli koine (*sayf > seːf 'sword'). This is the mainline reflex for the sedentary Tripoli koine and aligns Libyan with its sibling sedentary/urban Arabic koines — Levantine (ar-SY), Gulf (ar-x-gulf), Iraqi gilit (ar-IQ) and Qassimi (ar-SA-x-qassim) — all of which monophthongize /aj aw/. Diphthong retention (sajf) is a documented residual variant (Pereira 2010), not the default. Tokenization caveat, exactly as in QAS_MONO_AY: the ⟨وَيْ⟩/⟨يَوْ⟩ spellings are handled by explicit graphemes because the onset digraphs وَ/يَ claim the fatha before an /aj/ atom can form; this allophone rule fires on the general /aj/ atom (بَيْت → beːt). It does not fire on geminate glides (جَوّ → ʒaww) or on a long vowel plus glide (عَايْلة → ʕaːjla), which are not /aj//aw/ atoms."
+    },
+    {
+      "id": "LY_MONO_AW",
+      "phonemes": [
+        "aw"
+      ],
+      "surface": "oː",
+      "notes": "Tripoli monophthongization (Pereira 2010:66-67; 2011 EALL): the Classical diphthong /aw/ is realised [oː] in the urban Tripoli koine (*lawn > loːn 'colour'; *zawj > zōz 'two', the sibilant-harmony reflex registered as the primary-source attestation guerrero2019-006, whose vowel reflex Pereira 2010:66-67 documents). Mainline reflex for the sedentary Tripoli koine; diphthong retention is a documented residual variant (Pereira 2010), not the default."
+    }
+  ],
+  "parent": "ar-x-maghrebi",
+  "ancestors": [
+    {
+      "code": "ar-x-maghrebi",
+      "role": "parent",
+      "weight": 0.85,
+      "notes": "Maghrebi Arabic base"
+    },
+    {
+      "code": "ber",
+      "role": "substrate",
+      "weight": 0.07,
+      "notes": "Berber substrate (Nafusa plateau / interior)"
+    }
+  ],
+  "notes": "Libyan Arabic, baseline = the urban koine of Tripoli (Tripolitania) described by Pereira (2010, 2011 EALL 'Tripoli Arabic'). DEFINING CONSONANT REFLEXES: (1) qāf ق → [ɡ] almost universally — a Bedouin-type reflex that spread into the sedentary town speech; [q] survives only in recent Literary-Arabic borrowings (Pereira 2011; Wikipedia 'Libyan Arabic' after Pereira/Owens). (2) ǧīm ج → [ʒ] (voiced post-alveolar fricative, NOT the affricate); it became a SUN letter in Tripoli, unlike Classical Arabic (Wikipedia after Pereira 2011); the affricate [dʒ] survives in the east (Benghazi, Owens 1984) and in Italian loans (Benkato 2020: grīǧū 'grey' < grigio). (3) INTERDENTALS MERGE in the urban Tripoli koine — ث θ → [t], ذ ð → [d], ظ ðˤ → [dˤ] — the sedentary/Maghrebi innovation (Benkato 2020: 'sedentary dialects merged the interdental fricatives … with the dental stops', a common Maghrebi innovation; Wikipedia: 'Western dialects … the interdental fricatives /θ ð ðˤ/ have merged with the corresponding dental stops'). The conservative interdental fricative is kept as the second candidate because Eastern (Cyrenaican / Benghazi) and Bedouin Libyan RETAIN the interdentals (Owens 1984). NB this REVISES the older skeleton note and the roadmap brief, which described Tripoli interdentals as 'retained' — that holds for eastern/Bedouin Libyan, not for the urban Tripoli baseline. (4) Emphatics /tˤ dˤ sˤ (zˤ)/ with the inherited backing of adjacent /a aː/ → [ɑ ɑː] (Watson 2002, emphasis). VOWELS: short /a i u ə/, long /iː uː aː eː oː/; the mid /eː oː/ are the reflexes of the Classical diphthongs /aj aw/, which the urban Tripoli koine MONOPHTHONGIZES as the mainline (*sayf > seːf 'sword', *lawn > loːn 'colour', *zawj > zōz 'two'; Pereira 2010:66-67, 2011 EALL; the *zawj > zōz reflex is the registered primary-source attestation guerrero2019-006). This is encoded as the primary reflex in the LY_MONO_AY/AW allophone_rules plus the spelled-out ⟨وَيْ⟩→weː / ⟨يَوْ⟩→joː graphemes, exactly as in the sibling sedentary koines (Levantine ar-SY, Gulf ar-x-gulf, Qassimi ar-SA-x-qassim); the onset digraphs وَ/يَ claim the fatha before an /aj//aw/ atom can form, so those two spellings are given explicit graphemes. Diphthong retention (Tripoli sajf ~ seːf) is a documented residual variant (Pereira 2010), not the default. Vowel length is phonemic (galib 'heart' vs gaːlib 'mould'). Italian colonial contact (1911–1943) added /p v tʃ dʒ/ and the mid vowels in loanwords (Benkato 2020). Substrate: Berber (Nafusa / interior).",
+  "quality": "research",
+  "script_type": "abjad",
+  "sources": [
+    {
+      "id": "pereira2010",
+      "author": "Pereira, C.",
+      "year": 2010,
+      "title": "Le parler arabe de Tripoli (Libye)",
+      "publisher": "Instituto de Estudios Islámicos y del Oriente Próximo, Zaragoza",
+      "url": null,
+      "pages": null,
+      "notes": "The reference monograph on Tripoli Arabic (from the 2008 INALCO dissertation). Not obtained to a readable page for this pass; cited bibliographically."
+    },
+    {
+      "id": "pereira2011eall",
+      "author": "Pereira, C.",
+      "year": 2011,
+      "title": "Tripoli Arabic (Encyclopedia of Arabic Language and Linguistics, vol. 4)",
+      "publisher": "Brill",
+      "pages": "548-556",
+      "url": null,
+      "notes": "EALL article. qāf realised [ɡ] (Bedouin-type) in the town; ǧīm [ʒ], a sun letter in Tripoli. Basis for the /ɡ/ and /ʒ/ primaries. Page range from the EALL volume; not obtained to a readable folio this pass."
+    },
+    {
+      "id": "owens1984",
+      "author": "Owens, J.",
+      "year": 1984,
+      "title": "A Short Reference Grammar of Eastern Libyan Arabic",
+      "publisher": "Harrassowitz, Wiesbaden",
+      "url": null,
+      "pages": null,
+      "notes": "Eastern (Cyrenaican / Benghazi) Libyan: Bedouin type that RETAINS the interdentals and keeps the affricate [dʒ] for ǧīm — the basis for the second (retained-fricative / affricate) candidates."
+    },
+    {
+      "id": "benkato2020",
+      "author": "Benkato, A.",
+      "year": 2020,
+      "title": "Maghrebi Arabic (ch. 9 in Lucas & Manfredi, eds., Arabic and Contact-Induced Change)",
+      "publisher": "Language Science Press",
+      "url": "https://langsci-press.org/catalog/book/235",
+      "pages": "199-201",
+      "notes": "Read (open-access PDF). p.200: Maghrebi varieties delete vowels in light syllables (*katab > Tripoli ktǝb 'he wrote'; contrast Benghazi kitab, which allows the light syllable). p.201: European contact introduced /v, č, ǧ/ into Libyan Arabic Italian loans (grīǧū 'grey' < grigio); sedentary Maghrebi merged the interdentals with the dental stops."
+    },
+    {
+      "id": "watson2002",
+      "author": "Watson, J.C.E.",
+      "year": 2002,
+      "title": "The Phonology and Morphology of Arabic",
+      "publisher": "Oxford University Press",
+      "url": null,
+      "pages": "13-17",
+      "notes": "General Arabic phonology: sedentary interdental merger (p.15), *q → [ɡ] in Bedouin (p.17), Maghrebi light-syllable vowel deletion (p.13), emphasis and its backing of /a/ → [ɑ].",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Arabic_phonology"
+    },
+    {
+      "id": "holes2004",
+      "author": "Holes, C.",
+      "year": 2004,
+      "title": "Modern Arabic: Structures, Functions, and Varieties",
+      "publisher": "Georgetown University Press",
+      "url": null,
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Libyan_Arabic",
+    "https://ar.wikipedia.org/wiki/%D9%84%D9%87%D8%AC%D8%A9_%D9%84%D9%8A%D8%A8%D9%8A%D8%A9"
+  ],
+  "timespan": {
+    "start_year": 1600,
+    "end_year": null
+  },
+  "glottolog_code": "liby1240",
+  "iso639_3": "ayl",
+  "wikidata_qid": "Q56503",
+  "phoible_id": "liby1240",
+  "wals_code": "ael",
+  "location": {
+    "latitude": 22.0032,
+    "longitude": 15.0014,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Libyan Arabic."
+  },
+  "optional_marks": [
+    "ً",
+    "ٌ",
+    "ٍ",
+    "َ",
+    "ُ",
+    "ِ",
+    "ّ",
+    "ْ",
+    "ٰ",
+    "ٓ"
+  ],
+  "stress": {
+    "default_position": -3,
+    "quantity_sensitive": true,
+    "superheavy_final_attracts": true,
+    "max_onset": 1,
+    "stress_mark": "ˈ",
+    "notes": "Arabic stress is QUANTITY-SENSITIVE: it falls on a syllable because that syllable is heavy, not because of any orthographic ending, so no ending table can express it. The cascade (Ryding, A Reference Grammar of MSA, CUP 2005, §2.3; Watson, The Phonology and Morphology of Arabic, OUP 2002, ch.3): a superheavy final syllable (CVːC/CVCC) takes the stress (kiˈtaːb); otherwise a heavy penult (CVː/CVC) does (muˈdarris); otherwise the antepenult (ˈmadrasa). max_onset=1 because Arabic onsets are obligatory and hold exactly one consonant — a medial cluster splits, closing the preceding syllable, and that boundary is what makes the penult of mudarris heavy. INPUT CONTRACT: weight is only recoverable from a complete transcription, so this requires diacritized input; an undiacritized skeleton has no vowels to weigh. The registered wikipron gold carries no stress marks, but the benchmark strips stress from both sides by default, so this costs no PER. Prosodic clitics: monosyllabic function words (negator maː, prepositions fiː/min/ʕan/ʕa/li/bi, vocative jaː, copula-negator muː/miʃ, conditional law/loː, wa-proclitic combinations) attach to a host and fall inside the host's stress domain, so they carry no word stress (Watson 2002, The Phonology and Morphology of Arabic, OUP, ch.3). Pan-Arabic class; the per-lect form list reflects the function words attested in this lect. Orthographic test — a clitic homograph (e.g. verb yā 'came') is destressed in every occurrence.",
+    "cliticless_words": [
+      "عَ",
+      "فِي",
+      "كِي",
+      "لِي",
+      "مَا",
+      "مِن",
+      "يَا"
+    ]
+  }
+}

@@ -1,0 +1,388 @@
+{
+  "code": "idb",
+  "glottolog_code": "sril1245",
+  "name": "Sri Lanka Portuguese Creole",
+  "script": "Latin",
+  "quality": "research",
+  "script_type": "alphabet",
+  "orthography_kind": "transliteration",
+  "parent": "pt-PT",
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "aa": [
+      "aː"
+    ],
+    "b": [
+      "b"
+    ],
+    "ch": [
+      "tʃ"
+    ],
+    "d": [
+      "d"
+    ],
+    "e": [
+      "e"
+    ],
+    "ee": [
+      "eː"
+    ],
+    "ɛ": [
+      "ɛ"
+    ],
+    "ɛɛ": [
+      "ɛː"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "i": [
+      "i"
+    ],
+    "ii": [
+      "iː"
+    ],
+    "j": [
+      "dʒ"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ng": [
+      "ŋɡ"
+    ],
+    "nh": [
+      "ɲ"
+    ],
+    "o": [
+      "o"
+    ],
+    "oo": [
+      "oː"
+    ],
+    "ɔ": [
+      "ɔ"
+    ],
+    "ɔɔ": [
+      "ɔː"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "u": [
+      "u"
+    ],
+    "uu": [
+      "uː"
+    ],
+    "v": [
+      "ʋ"
+    ],
+    "w": [
+      "w"
+    ],
+    "y": [
+      "j"
+    ],
+    "z": [
+      "z"
+    ]
+  },
+  "positional_graphemes": {
+    "ng": {
+      "word_final": [
+        "ŋ"
+      ]
+    }
+  },
+  "allophones": {
+    "a": [
+      "a"
+    ],
+    "aː": [
+      "aː"
+    ],
+    "b": [
+      "b"
+    ],
+    "d": [
+      "d"
+    ],
+    "dʒ": [
+      "dʒ"
+    ],
+    "e": [
+      "e"
+    ],
+    "eː": [
+      "eː"
+    ],
+    "ɛ": [
+      "ɛ"
+    ],
+    "ɛː": [
+      "ɛː"
+    ],
+    "f": [
+      "f"
+    ],
+    "ɡ": [
+      "ɡ"
+    ],
+    "i": [
+      "i"
+    ],
+    "iː": [
+      "iː"
+    ],
+    "j": [
+      "j"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "ɭ": [
+      "ɭ"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ɳ": [
+      "ɳ"
+    ],
+    "ŋ": [
+      "ŋ"
+    ],
+    "ɲ": [
+      "ɲ"
+    ],
+    "o": [
+      "o"
+    ],
+    "oː": [
+      "oː"
+    ],
+    "ɔ": [
+      "ɔ"
+    ],
+    "ɔː": [
+      "ɔː"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "tʃ": [
+      "tʃ"
+    ],
+    "u": [
+      "u"
+    ],
+    "uː": [
+      "uː"
+    ],
+    "ʋ": [
+      "ʋ"
+    ],
+    "w": [
+      "w"
+    ],
+    "z": [
+      "z"
+    ]
+  },
+  "allophone_rules": [
+    {
+      "id": "PT_CODA_S_HUSH",
+      "phonemes": [
+        "s"
+      ],
+      "surface": "s",
+      "syllable_position": "coda",
+      "notes": "DISABLES the inherited EP Lisbon 'chiado' (coda /s/ → [ʃ]): SLPC has plain coda [s] — no:s 'we' (Hume & Tserdanelis 2002, p. 4). Identity rewrite cancels the inherited rule by id."
+    },
+    {
+      "id": "PT_CODA_Z_HUSH",
+      "phonemes": [
+        "z"
+      ],
+      "surface": "z",
+      "syllable_position": "coda",
+      "notes": "DISABLES the inherited coda /z/ → [ʒ]: no coda [ʒ] is documented for SLPC (Cardoso, APiCS survey ch. 41). Identity rewrite."
+    },
+    {
+      "id": "PT_CODA_L_DARK",
+      "phonemes": [
+        "l"
+      ],
+      "surface": "ɭ",
+      "syllable_position": "coda",
+      "preceded_by_phoneme": [
+        "aː",
+        "ɔː",
+        "oː",
+        "a",
+        "ɔ",
+        "o"
+      ],
+      "notes": "REPLACES the inherited EP dark-l id: SLPC coda /l/ after a non-high back vowel is the substrate retroflex [ɭ], not velarized [ɫ] — maal [mɑːɭ] 'bad' (Cardoso, APiCS survey ch. 41). After other vowels the lateral stays plain (no velarization documented)."
+    },
+    {
+      "id": "IDB_L_RETROFLEX_AFTER_BACK_V",
+      "phonemes": [
+        "l"
+      ],
+      "surface": "ɭ",
+      "preceded_by_phoneme": [
+        "aː",
+        "ɔː",
+        "oː",
+        "a",
+        "ɔ",
+        "o"
+      ],
+      "followed_by": "vowel",
+      "notes": "Substrate (Tamil/Sinhala) retroflex allophony, intervocalic case: /l/ is realized retroflex [ɭ] intervocalically after non-high back vowels (Cardoso, APiCS survey ch. 41; cf. əɳimaʟ 'animal', Hume & Tserdanelis 2002, p. 4). Coda case handled by the redeclared PT_CODA_L_DARK. Allophonic only; no phonemic retroflex series."
+    },
+    {
+      "id": "IDB_N_RETROFLEX_AFTER_BACK_V",
+      "phonemes": [
+        "n"
+      ],
+      "surface": "ɳ",
+      "preceded_by_phoneme": [
+        "aː",
+        "ɔː",
+        "oː",
+        "a",
+        "ɔ",
+        "o"
+      ],
+      "notes": "Same conditioning: /n/ → [ɳ] after non-high back vowels — nɔɔna [nɔːɳɐ] 'woman' (Cardoso, APiCS survey ch. 41). Conditioned on the phoneme list because the engine's orthographic back-vowel class excludes ɔ."
+    }
+  ],
+  "ancestors": [
+    {
+      "code": "pt-PT",
+      "role": "superstrate",
+      "weight": 0.55,
+      "notes": "Portuguese superstrate: lexifier from the Portuguese period in coastal Ceylon (1505-1658); the vowel system preserves a Middle-Portuguese-like quality set overlaid with a substrate length contrast."
+    },
+    {
+      "code": "ta",
+      "role": "substrate",
+      "weight": 0.3,
+      "notes": "Tamil substrate: dominant contact language of the Burgher communities of Batticaloa and Trincomalee. Contributes vowel length, retroflex allophones [ɳ ɭ], /v/ → [ʋ], and homorganic NC clusters (Smith 1977; Cardoso, APiCS survey ch. 41)."
+    },
+    {
+      "code": "si",
+      "role": "adstrate",
+      "weight": 0.1,
+      "notes": "Sinhala adstrate: areal reinforcement of the same South Asian features (retroflexion, [ʋ], NC clusters)."
+    }
+  ],
+  "notes": "Sri Lanka Portuguese Creole (SLPC), spoken by Burgher communities of eastern Sri Lanka (Batticaloa, Trincomalee); endangered. NO STABLE COMMUNITY ORTHOGRAPHY: modern documentation (Cardoso's SLP documentation project) uses a scholarly Latin convention; this spec models that convention (orthography_kind 'transliteration'): Portuguese-style digraphs nh /ɲ/, ng /ŋ/, ch /tʃ/, j /dʒ/, doubled vowel letters for the length contrast (maal, nɔɔna), and IPA ɛ/ɔ for the open-mid qualities where the sources write them. KEY FEATURES: (1) 19 CONSONANTS (Cardoso, APiCS survey ch. 41): /p b m w f t d s z n r l tʃ dʒ ɲ j k ɡ ŋ/ + approximant /ʋ/ for etymological /v/ (South Asian areal). NO phonemic retroflex or dental stop series. (2) RETROFLEX ALLOPHONES: [ɳ ɭ] for /n l/ after non-high back vowels (maal [mɑːɭ], nɔɔna [nɔːɳɐ]) — substrate transfer, encoded as allophone rules. (3) VOWEL LENGTH is phonemic across six qualities /i e ɛ a u o ɔ/ (long and short; Cardoso, APiCS ch. 41); schwa is marginal per Cardoso, while Smith's later sketches add full /ə/ and /æ æː/ — CONTESTED; the contested vowels are not encoded (null beats wrong). (4) HOMORGANIC NC CLUSTERS morpheme-internally, not prenasalized unit phonemes (li:ŋgu 'tongue', o:ndə 'wave', iɲtʃə 'draw' — Hume & Tserdanelis 2002, pp. 4-5). (5) GEMINATION of voiceless consonants after short stressed vowels (/saːku/ → [saːkku], Cardoso APiCS ch. 41) — documented, not emitted (length of consonants is not written). (6) STRESS is predictable, not contrastive: it falls on the syllable containing a phonemically long vowel, else on the initial syllable — encoded as quantity-sensitive stress with initial default.",
+  "sources": [
+    {
+      "id": "humetserdanelis2002",
+      "author": "Hume, E. & Tserdanelis, G.",
+      "year": 2002,
+      "title": "Labial Unmarkedness in Sri Lankan Portuguese Creole",
+      "publisher": "Phonology 19(3), 441-458",
+      "url": "https://roa.rutgers.edu/files/545-0902/545-0902-HUME-0-0.PDF",
+      "pages": "441-458",
+      "notes": "Open-access ROA preprint #545, read in full; nasal place assimilation and NC-cluster data with transcribed examples (preprint pp. 4-5)."
+    },
+    {
+      "id": "cardoso_apics",
+      "author": "Cardoso, H. C.",
+      "year": 2013,
+      "title": "Sri Lanka Portuguese (APiCS Online, survey chapter 41)",
+      "publisher": "In: Michaelis et al. (eds.), Atlas of Pidgin and Creole Language Structures, OUP",
+      "url": "https://apics-online.info/surveys/41",
+      "pages": null,
+      "notes": "Modern documenter's restatement: 19-consonant inventory, /ʋ/, vowel length across six qualities, retroflex allophony (maal, nɔɔna), gemination, quantity-sensitive stress."
+    },
+    {
+      "id": "smith1977",
+      "author": "Smith, I. R.",
+      "year": 1977,
+      "title": "Sri Lanka Creole Portuguese Phonology",
+      "publisher": "PhD dissertation, Cornell University (republished 1978, Dravidian Linguistics Association, Trivandrum)",
+      "url": null,
+      "pages": null,
+      "notes": "Foundational phonology. Not directly accessible; his later sketches (Smith 2013, Survey of Pidgin and Creole Languages vol. 2, pp. 111-121) posit additional /ə/ and /æ æː/ — recorded here as contested, not encoded."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Sri_Lankan_Portuguese_creole"
+  ],
+  "urls": [
+    "https://en.wikipedia.org/wiki/Sri_Lankan_Portuguese_creole",
+    "https://apics-online.info/surveys/41",
+    "https://glottolog.org/resource/languoid/id/sril1245",
+    "https://www.ethnologue.com/language/idb/"
+  ],
+  "timespan": {
+    "start_year": 1600,
+    "end_year": null
+  },
+  "iso639_3": "idb",
+  "wikidata_qid": "Q2427343",
+  "phoible_id": "sril1245",
+  "location": {
+    "latitude": 7.6,
+    "longitude": 81.7,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Sri Lanka Portuguese (Batticaloa area)."
+  },
+  "stress": {
+    "default_position": 1,
+    "stress_mark": "ˈ",
+    "quantity_sensitive": true,
+    "diphthongs": [
+      "ey",
+      "ay",
+      "oy",
+      "aw"
+    ],
+    "notes": "Stress is predictable and non-contrastive: it falls on the syllable with a phonemically long vowel, otherwise on the initial syllable (Cardoso, APiCS survey ch. 41). Encoded as quantity-sensitive with initial default: the doubled-vowel long nuclei are heavy and attract stress."
+  }
+}

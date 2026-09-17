@@ -1,0 +1,195 @@
+{
+  "code": "rue",
+  "name": "Rusyn",
+  "script": "Cyrillic",
+  "script_type": "alphabet",
+  "quality": "research",
+  "iso639_3": "rue",
+  "glottolog_code": "rusy1239",
+  "timespan": {
+    "start_year": 1600,
+    "end_year": null
+  },
+  "graphemes": {
+    "а": [
+      "a"
+    ],
+    "б": [
+      "b"
+    ],
+    "в": [
+      "v"
+    ],
+    "г": [
+      "ɦ",
+      "ɣ"
+    ],
+    "ґ": [
+      "ɡ"
+    ],
+    "д": [
+      "d"
+    ],
+    "е": [
+      "ɛ"
+    ],
+    "є": [
+      "jɛ"
+    ],
+    "ж": [
+      "ʒ"
+    ],
+    "з": [
+      "z"
+    ],
+    "и": [
+      "ɪ"
+    ],
+    "і": [
+      "i"
+    ],
+    "ї": [
+      "ji"
+    ],
+    "й": [
+      "j"
+    ],
+    "к": [
+      "k"
+    ],
+    "л": [
+      "l"
+    ],
+    "м": [
+      "m"
+    ],
+    "н": [
+      "n"
+    ],
+    "о": [
+      "o"
+    ],
+    "п": [
+      "p"
+    ],
+    "р": [
+      "r"
+    ],
+    "с": [
+      "s"
+    ],
+    "т": [
+      "t"
+    ],
+    "у": [
+      "u"
+    ],
+    "ф": [
+      "f"
+    ],
+    "х": [
+      "x"
+    ],
+    "ц": [
+      "ts"
+    ],
+    "ч": [
+      "tʃ"
+    ],
+    "ш": [
+      "ʃ"
+    ],
+    "щ": [
+      "ʃtʃ"
+    ],
+    "ъ": [
+      ""
+    ],
+    "ы": [
+      "ɨ"
+    ],
+    "ь": [
+      "ʲ"
+    ],
+    "ю": [
+      "ju"
+    ],
+    "я": [
+      "ja"
+    ],
+    "ё": [
+      "jo"
+    ],
+    "э": [
+      "ɛ"
+    ]
+  },
+  "allophones": {},
+  "positional_graphemes": {},
+  "ancestors": [
+    {
+      "code": "sla",
+      "role": "parent",
+      "weight": 0.88,
+      "notes": "Descent from Proto-Slavic (East Slavic, Rusyn subgroup)."
+    },
+    {
+      "code": "uk",
+      "role": "related",
+      "weight": 0.55,
+      "notes": "East Slavic variety closely related to Ukrainian; language-vs-dialect classification disputed."
+    },
+    {
+      "code": "sk",
+      "role": "adstrate",
+      "weight": 0.06,
+      "notes": "Slovak adstrate (Prešov/Carpathian contact zone)."
+    },
+    {
+      "code": "hu",
+      "role": "adstrate",
+      "weight": 0.05,
+      "notes": "Hungarian adstrate within the former Kingdom of Hungary."
+    },
+    {
+      "code": "pl",
+      "role": "adstrate",
+      "weight": 0.05,
+      "notes": "Polish adstrate (Lemko contact zone)."
+    }
+  ],
+  "parent": "x-clade-east1426",
+  "notes": "Rusyn (Русиньскый язык), East Slavic variety spoken in Carpathian region (Ukraine, Slovakia, Poland, Serbia). Classification as language vs. Ukrainian dialect contested. Uses Cyrillic script. Soft sign ь marks palatalization. Multiple codification standards exist.",
+  "sources": [
+    {
+      "id": "wiki-rue",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Rusyn language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Rusyn_language"
+    },
+    {
+      "id": "baptie2011",
+      "author": "Baptie, Gavin",
+      "year": 2011,
+      "title": "Issues in Rusyn language standardisation",
+      "publisher": "University of Glasgow MPhil thesis (Enlighten Theses)",
+      "url": "https://theses.gla.ac.uk/2781/",
+      "wikipedia_url": null,
+      "pages": "16, 106-107, 127",
+      "notes": "Appendix A (p. 127), read in full, tabulates the Prešov, Lemko, Transcarpathian and Vojvodina alphabets side by side with a transliteration column: ⟨г⟩ = h against ⟨ґ⟩ = g, ⟨є ї ю я⟩ = je ji ju ja after a vowel and a softening mark after a consonant, ⟨щ⟩ = šč, ⟨х⟩ = ch, ⟨ь⟩ the soft sign, ⟨ъ⟩ present in Prešov and Lemko; p. 16 gives ⟨ы⟩ = [ɨ] and the seven-vowel system ⟨а о у е і и ы⟩ of Prešov Rusyn and Lemko; pp. 106-107 explain that the variants agree on consonants and differ in vowels and in the soft and hard signs, that Lemko lacks ⟨ї⟩ and that ⟨ё⟩ is Prešov and Transcarpathian only. Two things it does not support in this map: ⟨э⟩ is in none of the four alphabets, and the map's single letter set covers what are four codified standards. A transliteration table, not an IPA one, so the consonant values rest on the East Slavic letter values it presupposes."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Rusyn_language",
+    "https://rue.wikipedia.org/wiki/%D0%A0%D1%83%D1%81%D0%B8%D0%BD%D1%8C%D1%81%D0%BA%D1%8B%D0%B9_%D1%8F%D0%B7%D1%8B%D0%BA"
+  ],
+  "wikidata_qid": "Q26245",
+  "phoible_id": "rusy1239",
+  "location": {
+    "latitude": 48.7171,
+    "longitude": 22.9579,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Rusyn."
+  }
+}

@@ -1,0 +1,208 @@
+{
+ "code": "fia",
+ "name": "Nobiin",
+ "script": "Latin",
+ "quality": "skeleton",
+ "graphemes": {
+  "a": [
+   "ɑ"
+  ],
+  "b": [
+   "b"
+  ],
+  "c": [
+   "cç"
+  ],
+  "d": [
+   "d"
+  ],
+  "e": [
+   "e"
+  ],
+  "f": [
+   "f"
+  ],
+  "g": [
+   "ɡ"
+  ],
+  "h": [
+   "h"
+  ],
+  "i": [
+   "i"
+  ],
+  "j": [
+   "ɟʝ"
+  ],
+  "k": [
+   "k"
+  ],
+  "l": [
+   "l"
+  ],
+  "m": [
+   "m"
+  ],
+  "n": [
+   "n"
+  ],
+  "o": [
+   "o"
+  ],
+  "p": [
+   "p"
+  ],
+  "r": [
+   "r"
+  ],
+  "s": [
+   "s"
+  ],
+  "t": [
+   "t"
+  ],
+  "u": [
+   "u"
+  ],
+  "w": [
+   "w"
+  ],
+  "y": [
+   "j"
+  ],
+  "z": [
+   "z"
+  ],
+  "ñ": [
+   "ɲ"
+  ],
+  "ŋ": [
+   "ŋ"
+  ],
+  "š": [
+   "ʃ"
+  ]
+ },
+ "allophones": {
+  "bː": [
+   "bː",
+   "pː"
+  ],
+  "kː": [
+   "ˀk",
+   "kː"
+  ],
+  "n": [
+   "ŋ",
+   "n",
+   "ŋː"
+  ],
+  "r": [
+   "r",
+   "ɾ"
+  ],
+  "s": [
+   "z",
+   "s"
+  ],
+  "ɡ": [
+   "ɡ",
+   "ˀk͉"
+  ]
+ },
+ "notes": "Placed so the ancestry graph covers every living ISO 639-3 language. No orthography is claimed; the phoneme inventory follows the cited PHOIBLE inventory (which itself cites a published description): script is Zyyy (undetermined) until a cited description is encoded. Classification and coordinates follow Glottolog. Orthography from an Omniglot chart (c) Simon Ager, https://www.omniglot.com/, extracted via the AfriSpeech/africa-g2p compilation (fia.json). africa-g2p is a compilation tool, not the linguistic authority; the citation above is the original source it names.",
+ "iso639_3": "fia",
+ "glottolog_code": "nobi1240",
+ "sources": [
+  {
+   "id": "glottolog2024",
+   "author": "Hammarström, Harald; Forkel, Robert; Haspelmath, Martin; Bank, Sebastian",
+   "year": 2024,
+   "title": "Glottolog 5.0",
+   "publisher": "Max Planck Institute for Evolutionary Anthropology",
+   "url": "https://glottolog.org/"
+  },
+  {
+   "id": "phoible2019",
+   "author": "Moran, Steven; McCloy, Daniel (eds.)",
+   "year": 2019,
+   "title": "PHOIBLE 2.0 (doi:10.5281/zenodo.2562766)",
+   "publisher": "Max Planck Institute for the Science of Human History",
+   "url": "https://phoible.org/inventories/view/152",
+   "notes": "Inventory 152 (spa), 43 non-marginal segments, 2 tones."
+  },
+  {
+   "id": "omniglot-nobiin",
+   "author": "Ager, Simon",
+   "year": 2026,
+   "title": "Omniglot chart (nobiin.xls)",
+   "publisher": "Omniglot",
+   "url": "https://www.omniglot.com/",
+   "notes": "Undated web chart; year is retrieval year, not publication year."
+  }
+ ],
+ "urls": [
+  "https://glottolog.org/resource/languoid/id/nobi1240"
+ ],
+ "location": {
+  "latitude": 22.8142,
+  "longitude": 31.8376,
+  "source": "glottolog",
+  "notes": "Glottolog's representative point."
+ },
+ "parent": "x-clade-nubi1251",
+ "phonemes": [
+  "b",
+  "bː",
+  "d",
+  "dː",
+  "d̠ʒ",
+  "f",
+  "fː",
+  "h",
+  "j",
+  "jː",
+  "k",
+  "kː",
+  "l",
+  "lː",
+  "m",
+  "mː",
+  "n",
+  "nː",
+  "r",
+  "rː",
+  "s",
+  "sː",
+  "t",
+  "tː",
+  "t̠ʃ",
+  "t̠ʃː",
+  "w",
+  "wː",
+  "ɡ",
+  "ɲ",
+  "ɲː",
+  "ʃ",
+  "ʃː",
+  "a",
+  "aː",
+  "e̞",
+  "e̞ː",
+  "i",
+  "iː",
+  "o̞",
+  "o̞ː",
+  "u",
+  "uː"
+ ],
+ "tone_inventory": {
+  "˥": "PHOIBLE tone segment",
+  "˩": "PHOIBLE tone segment"
+ },
+ "phoible_id": "152",
+ "script_type": "alphabet",
+ "wikipedia": [
+  "https://en.wikipedia.org/wiki/Nobiin_language"
+ ]
+}

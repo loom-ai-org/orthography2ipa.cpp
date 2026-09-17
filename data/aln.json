@@ -1,0 +1,59 @@
+{
+  "code": "aln",
+  "name": "Gheg Albanian",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "skeleton",
+  "iso639_3": "aln",
+  "glottolog_code": "gheg1238",
+  "timespan": {
+    "start_year": 1462,
+    "end_year": null
+  },
+  "graphemes_base": "sq",
+  "graphemes": {},
+  "allophones": {},
+  "positional_graphemes": {},
+  "ancestors": [
+    {
+      "code": "ine",
+      "role": "proto_language",
+      "weight": 1.0,
+      "notes": "Isolated Indo-European branch."
+    },
+    {
+      "code": "sq",
+      "role": "parent",
+      "weight": 0.95,
+      "notes": "Written with the same standard Albanian Latin alphabet as the Tosk-based literary standard; the two dialect groups share one orthography even though they diverge phonologically."
+    }
+  ],
+  "parent": "x-clade-alba1267",
+  "notes": "Gheg Albanian, spoken north of the Shkumbin river (Kosovo, northern Albania, North Macedonia, Montenegro). Uses the same Latin alphabet and letter values as standard (Tosk-based) Albanian, so the grapheme table is inherited unchanged (graphemes_base=sq); the well-documented phonological differences are NOT orthographically marked and so cannot be expressed as distinct grapheme keys without violating AGENTS.md §2/§3: Gheg has phonemic vowel length and nasalization (26 vowel qualities: /a e i o u y/ each long/short, oral/nasal, none written distinctly), a central rounded /øː/ in northwestern dialects (written œ, not in the standard alphabet), and in Northeastern Gheg the palatal stops /c/, /ɡʲ/ realized as standard Albanian orthography surfaces as post-alveolar affricates [t͡ʃ], [d͡ʒ]. Common consonant-cluster assimilations (mb→m, ngj→nj, nd→n) are colloquial/dialectal, not part of the literary norm, so left unencoded (word_exceptions would be needed for a closed list, which is out of scope for a stub-to-basic spec).",
+  "sources": [
+    {
+      "id": "wiki-aln",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Gheg Albanian",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Gheg_Albanian"
+    },
+    {
+      "id": "wiki-sq-phon",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Albanian phonology",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Albanian_phonology"
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Gheg_Albanian"
+  ],
+  "wikidata_qid": "Q34079",
+  "location": {
+    "latitude": 42.2,
+    "longitude": 20.4,
+    "source": "glottolog",
+    "notes": "Approximate Gheg-speaking area, northern Albania/Kosovo."
+  }
+}

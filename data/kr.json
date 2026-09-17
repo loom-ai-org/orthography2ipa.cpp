@@ -1,0 +1,302 @@
+{
+  "code": "kr",
+  "name": "Kanuri",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "e": [
+      "e"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "o"
+    ],
+    "u": [
+      "u"
+    ],
+    "ǝ": [
+      "ə",
+      "ɨ"
+    ],
+    "ə": [
+      "ə",
+      "ɨ"
+    ],
+    "b": [
+      "b"
+    ],
+    "c": [
+      "t͡ʃ"
+    ],
+    "d": [
+      "d"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "h": [
+      "h"
+    ],
+    "j": [
+      "d͡ʒ"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "mb": [
+      "mb"
+    ],
+    "n": [
+      "n"
+    ],
+    "nd": [
+      "nd"
+    ],
+    "ng": [
+      "ŋɡ",
+      "ŋ"
+    ],
+    "ny": [
+      "ɲ"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "r"
+    ],
+    "ɍ": [
+      "ɭ̆",
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "sh": [
+      "ʃ"
+    ],
+    "t": [
+      "t"
+    ],
+    "w": [
+      "w"
+    ],
+    "y": [
+      "j"
+    ],
+    "z": [
+      "z"
+    ]
+  },
+  "allophones": {
+    "a": [
+      "a"
+    ],
+    "e": [
+      "e"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "o"
+    ],
+    "u": [
+      "u"
+    ],
+    "ə": [
+      "ə",
+      "ɨ"
+    ],
+    "ɨ": [
+      "ɨ"
+    ],
+    "b": [
+      "b",
+      "β",
+      "p"
+    ],
+    "p": [
+      "p"
+    ],
+    "t": [
+      "t"
+    ],
+    "d": [
+      "d"
+    ],
+    "k": [
+      "k"
+    ],
+    "ɡ": [
+      "ɡ",
+      "ɣ"
+    ],
+    "ʔ": [
+      "ʔ"
+    ],
+    "t͡ʃ": [
+      "t͡ʃ"
+    ],
+    "d͡ʒ": [
+      "d͡ʒ"
+    ],
+    "f": [
+      "f",
+      "ɸ"
+    ],
+    "s": [
+      "s"
+    ],
+    "z": [
+      "z"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "h": [
+      "h"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n",
+      "ŋ"
+    ],
+    "ɲ": [
+      "ɲ"
+    ],
+    "ŋ": [
+      "ŋ"
+    ],
+    "l": [
+      "l",
+      "ɭ"
+    ],
+    "r": [
+      "r"
+    ],
+    "ɭ̆": [
+      "ɭ̆"
+    ],
+    "w": [
+      "w"
+    ],
+    "j": [
+      "j"
+    ],
+    "mb": [
+      "mb"
+    ],
+    "nd": [
+      "nd"
+    ],
+    "ŋɡ": [
+      "ŋɡ"
+    ],
+    "β": [
+      "β"
+    ],
+    "ɸ": [
+      "ɸ"
+    ],
+    "ɣ": [
+      "ɣ"
+    ],
+    "ɭ": [
+      "ɭ"
+    ]
+  },
+  "iso639_3": "kau",
+  "glottolog_code": "kanu1279",
+  "wikidata_qid": "Q36094",
+  "notes": "Kanuri (Kanuri: Kanuri) — Saharan (Nilo-Saharan) language of Borno (Nigeria), Niger, Chad and Cameroon. INPUT CONTRACT: the Standard Kanuri Orthography (SKO), the Latin orthography based on the Maiduguri/Yerwa dialect, developed by the Kanuri Research Unit and Kanuri Language Board and approved in Maiduguri in 1975 (also the basis of the Niger arrêté 213-99 alphabet). Ajami (Arabic-script) Kanuri is OUT OF SCOPE. The SKO letter set is: a b c d e ǝ f g h i j k l m n ny o p r ɍ s sh t u w y z. `kr` is a macrolanguage code (Yerwa/Central and Manga Kanuri); this map follows Yerwa (Maiduguri), the standard variety. KEY FEATURES: (1) DIGRAPHS: <c> = /t͡ʃ/, <j> = /d͡ʒ/, <sh> = /ʃ/, <ny> = /ɲ/ (Hutchison lists c, j, sh, ny as the palatal series of the SKO). (2) PRENASALIZED STOPS <mb nd ng> are written as digraphs in the SKO; <ng> also spells plain [ŋ], an allophone of /n/ before velars (the velar stop is often deleted). (3) SCHWA: <ǝ> is the central mid vowel /ə/ (encoded U+01DD in Kanuri practice, not U+0259; both code points are accepted as input keys here); [ɨ] is an allophone of /ə/. (4) <p> is not a phoneme but is a letter of the SKO: it is the realization of /b/ before a voiceless plosive (náb+t -> nápt) and varies freely with /f/ in some ideophones. (5) LENITION allophones, largely predictable and partly reflected in spelling: /b/ -> [β] and /f/ -> [ɸ] intervocalically/in open syllables (the SKO often writes the weakened result as <w>), /ɡ/ -> [ɣ] intervocalically. (6) RETROFLEX: <ɍ> writes the retroflex liquid of Yerwa; its occurrence is otherwise predictable before high front /i/ (where /l/ -> [ɭ]), and in loanwords it is written <r>. (7) TONE IS NOT WRITTEN in the SKO (Hutchison states this explicitly); Kanuri is tonal, so tone is NOT recoverable from standard orthography and is not emitted here. Glottal stop /ʔ/ is likewise not represented by a letter.",
+  "sources": [
+    {
+      "id": "kanuri_language_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Kanuri language",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Kanuri_language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Kanuri_language",
+      "pages": null,
+      "notes": "Phoneme inventory, allophony (p, ɸ, β, ɣ, ɭ, ŋ), and the 1975 Standard Kanuri Orthography letter list."
+    },
+    {
+      "id": "hutchison_intro",
+      "author": "Hutchison, John P.",
+      "year": 1981,
+      "title": "Introduction to the Kanuri Language",
+      "publisher": "African Studies Center, Boston University",
+      "url": "https://alma.matrix.msu.edu/assets/uploads/2023/02/ALMA_IntroductionToTheKanuriLanguageEdited2.pdf",
+      "pages": "5-8",
+      "notes": "Consonant/vowel schema presented in Standard Kanuri Orthography spellings: palatal series c, j, sh, ny; prenasalized mb, nd, ng; retroflex liquid; explicit statement that tone is not indicated in the SKO."
+    },
+    {
+      "id": "cyffer_hutchison1990",
+      "author": "Cyffer, Norbert & Hutchison, John P.",
+      "year": 1990,
+      "title": "Dictionary of the Kanuri Language",
+      "publisher": "Foris Publications / University of Maiduguri",
+      "url": null,
+      "pages": null,
+      "notes": "Reference lexicon written in the Standard Kanuri Orthography (ISBN 90-6765-412-4)."
+    },
+    {
+      "id": "cyffer1998",
+      "author": "Cyffer, Norbert",
+      "year": 1998,
+      "title": "A Sketch of Kanuri",
+      "publisher": "Rüdiger Köppe Verlag, Köln",
+      "url": null,
+      "pages": null,
+      "notes": "Reference sketch grammar; source of the nasal/velar allophony statement."
+    },
+    {
+      "id": "retroflex_lateral_flap_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Voiced retroflex lateral flap",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Voiced_retroflex_lateral_flap",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Voiced_retroflex_lateral_flap",
+      "pages": null,
+      "notes": "Reports a retroflex lateral flap [ɭ̆] for Kanuri in Nigeria — the value used here for the letter <ɍ>."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Kanuri_language"
+  ],
+  "parent": "x-clade-nilo1247",
+  "ancestors": [
+    {
+      "code": "x-clade-nilo1247",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Nilotic — the classification node this language sits under."
+    }
+  ],
+  "location": {
+    "latitude": 13.58425,
+    "longitude": 12.955131,
+    "source": "glottolog",
+    "notes": "Glottolog's computed centroid for the Kanuri-Kanembu family — a summary of a whole clade's range, not a place anyone speaks."
+  }
+}

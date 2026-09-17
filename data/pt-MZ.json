@@ -1,0 +1,322 @@
+{
+  "code": "pt-MZ",
+  "glottolog_code": null,
+  "name": "Mozambican Portuguese",
+  "script": "Latin",
+  "quality": "research",
+  "script_type": "alphabet",
+  "parent": "pt-PT",
+  "graphemes_base": "pt-PT",
+  "allophones_base": "pt-PT",
+  "positional_graphemes_base": "pt-PT",
+  "graphemes": {
+    "r": [
+      "r",
+      "ʁ"
+    ],
+    "rr": [
+      "r"
+    ],
+    "e": [
+      "e",
+      "ɛ"
+    ],
+    "o": [
+      "o",
+      "ɔ"
+    ]
+  },
+  "allophones": {
+    "r": [
+      "r",
+      "ɾ"
+    ],
+    "ʁ": [
+      "ʁ",
+      "r"
+    ]
+  },
+  "ancestors": [
+    {
+      "code": "pt-PT",
+      "role": "parent",
+      "weight": 0.7,
+      "notes": "Colonial and post-colonial European Portuguese standard. Mozambique was a Portuguese colony until independence in 1975; educated speech follows European norms more closely than Angola or Brazil."
+    },
+    {
+      "code": "sw",
+      "role": "substrate",
+      "weight": 0.12,
+      "notes": "Swahili substrate/adstrate: spoken across northern Mozambique (Cabo Delgado, Nampula) and as a trade language; some phonological patterns transferred."
+    },
+    {
+      "code": "ny",
+      "role": "substrate",
+      "weight": 0.1,
+      "notes": "Nyanja/Chewa substrate: major language of central Mozambique (Tete, Zambézia); five-vowel system transfers into Portuguese learner varieties."
+    },
+    {
+      "code": "ts",
+      "role": "substrate",
+      "weight": 0.08,
+      "notes": "Tsonga/Tswa-Ronga substrate: dominant in southern Mozambique (Gaza, Maputo provinces); influences tonality and vowel quality in Maputo Portuguese."
+    }
+  ],
+  "notes": "Mozambican Portuguese (Português de Moçambique, PM): the emerging non-native/L2 variety described by Gonçalves as arising from acquisition of Portuguese as a second language by children with Bantu mother tongues (Génese do Português de Moçambique, 2010; ~6.5% L1, the majority learning a Bantu language first — Barbosa 2011:202-203, reviewing Gonçalves 2010:7,25). NOT a creole. Modelled on the prestige Maputo educated variety. GROUNDED FEATURES: (1) WEAKER UNSTRESSED VOWEL REDUCTION than EP — /ɨ/ largely absent, unstressed /e/ tends to stay [e] (emerging-norm characterisation in Gonçalves 2010, ch. 2 'propriedades fónicas'; the direct instrumental study read here is Undolo 2014 for Angola, so the PM vowel figures are modelled by analogy to the shared Lusophone-African pattern and flagged accordingly in docs/languages/pt-MZ.md). (2) RHOTIC (Nhatuve 2019:136-137, Maputo oral Portuguese, READ): the strong rhotic <r>/<rr> is realised as an alveolar multiple vibrant [r]~[R] in all contexts, not the EP uvular [ʁ], and the /R/–/ɾ/ contrast tends to neutralise ('desaparece o fonema /r/'), a calque of the Bantu changana/ronga system which has only [R]; word-final coda <r> often triggers paragoge with epenthetic [ɨ] ([falaɾ]→[falarɨ]). (3) SIBILANT: coda /s/ stays alveolar [s], not palatalised to [ʃ] (the alveolar coda is declared in positional_graphemes and the inherited EP chiado rules are overridden by id below). (4) <lh> /ʎ/ shows voiced aspiration in Maputo speech, a Bantu calque (Nhatuve 2019:137) — documented but NOT modelled (narrow allophonic detail). UNDER-SOURCED (kept from prior skeleton, flagged in the doc page): coda /l/ → [w] vocalisation and Bantu-substrate pitch effects are not confirmed by the primaries read here and should be treated as tentative.",
+  "sources": [
+    {
+      "id": "goncalves1996",
+      "author": "Gonçalves, P.",
+      "year": 1996,
+      "title": "Português de Moçambique: uma variedade em formação",
+      "publisher": "Universidade Eduardo Mondlane / Livraria Universitária",
+      "url": null,
+      "pages": null,
+      "notes": "Foundational description of Mozambican Portuguese"
+    },
+    {
+      "id": "stroud_goncalves1997",
+      "author": "Stroud, C. & Gonçalves, P. (eds.)",
+      "year": 1997,
+      "title": "Panorama do Português Oral de Maputo",
+      "publisher": "Instituto Nacional do Desenvolvimento da Educação",
+      "url": null,
+      "pages": null,
+      "notes": "3-volume study of spoken Portuguese in Maputo"
+    },
+    {
+      "id": "lopes2004",
+      "author": "Lopes, A.J.",
+      "year": 2004,
+      "title": "A batalha das línguas: perspectivas sobre linguística aplicada em Moçambique",
+      "publisher": "Imprensa Universitária",
+      "url": null,
+      "pages": null,
+      "notes": "Bibliographic reference (not read in full for this spec)."
+    },
+    {
+      "id": "nhatuve2019",
+      "author": "Nhatuve, Diocleciano",
+      "year": 2019,
+      "title": "Para a normatização do português de Moçambique: aspectos fonético fonológicos da vibrante <r> e da lateral <lh> no português oral de Maputo",
+      "publisher": "Revista de Letras (UTFPR) 21(32), 130-144",
+      "url": "https://periodicos.utfpr.edu.br/rl/article/view/6948",
+      "pages": "130-144",
+      "notes": "Read in full. p.136: in Maputo oral Portuguese the onset <r> is realised as an alveolar multiple vibrant [R] regardless of the surrounding vowel, and word-final coda <r> takes an epenthetic vowel by paragoge ([falarɨ]); the /r/–/R/ opposition tends to disappear. p.137: <lh> /ʎ/ surfaces with voiced aspiration, a calque of changana/ronga (Bantu) where all <h> graphemes are aspirated; in the north (Emakhuwa area), lacking /R/ and /r/, the rhotic desvibrates to velar [l]. Concludes the Maputo variety is characterised by [R] in all contexts and the aspirated lateral, diverging from both EP and BP."
+    },
+    {
+      "id": "goncalves2010",
+      "author": "Gonçalves, Perpétua",
+      "year": 2010,
+      "title": "A Génese do Português de Moçambique",
+      "publisher": "Imprensa Nacional-Casa da Moeda, Lisboa (229 pp., ISBN 978-972-27-1882-0)",
+      "url": null,
+      "pages": "7, 25",
+      "notes": "Foundational monograph on PM as an emerging non-native variety acquired as L2 by Bantu-L1 children (p.7); ch. 2 characterises the phonic, lexical and (morpho)syntactic properties of the educated PM subvariety (p.25). Accessed via the detailed review of Barbosa (2011) rather than the full monograph; page attributions for the phonic-properties claim are to that review's discussion of the book's ch. 2."
+    },
+    {
+      "id": "barbosa2011",
+      "author": "Barbosa, Joaquim",
+      "year": 2011,
+      "title": "Recensão: Perpétua Gonçalves. A Génese do Português de Moçambique",
+      "publisher": "Revista de Estudos Linguísticos da Universidade do Porto 6(1), 201-204",
+      "url": "https://ler.letras.up.pt/uploads/ficheiros/9921.pdf",
+      "pages": "201-204",
+      "notes": "Read in full. Review of Gonçalves (2010): PM emerges from L2 acquisition by children with Bantu L1s (p.202, only ~6.5% of Mozambicans have Portuguese as L1); ch. 2 of the monograph describes the phonic properties of the educated PM subvariety (p.203, citing Gonçalves 2010:25)."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Mozambican_Portuguese",
+    "https://pt.wikipedia.org/wiki/Portugu%C3%AAs_mo%C3%A7ambicano"
+  ],
+  "urls": [
+    "https://en.wikipedia.org/wiki/Mozambican_Portuguese",
+    "https://en.wikipedia.org/wiki/Portuguese_language_in_Africa",
+    "https://pt.wikipedia.org/wiki/Portugu%C3%AAs_mo%C3%A7ambicano",
+    "https://en.wikipedia.org/wiki/Languages_of_Mozambique"
+  ],
+  "timespan": {
+    "start_year": 1900,
+    "end_year": null
+  },
+  "iso639_3": "por",
+  "positional_graphemes": {
+    "s": {
+
+      "word_final": [
+        "s"
+      ],
+      "word_initial": [
+        "s"
+      ],
+      "intervocalic": [
+        "z"
+      ],
+      "intervocalic_cross_word": [
+        "z"
+      ]
+    },
+    "r": {
+      "word_initial": [
+        "r"
+      ],
+      "intervocalic": [
+        "ɾ"
+      ],
+
+      "word_final": [
+        "ɾ"
+      ]
+    },
+    "e": {
+      "nucleus_stressed": [
+        "ɛ",
+        "e"
+      ],
+      "nucleus_unstressed": [
+        "e"
+      ],
+      "pretonic": [
+        "e"
+      ],
+      "word_final": [
+        "e",
+        "ɨ"
+      ],
+      "word_initial": [
+        "e"
+      ]
+    },
+    "o": {
+      "nucleus_stressed": [
+        "ɔ",
+        "o"
+      ],
+      "nucleus_unstressed": [
+        "o"
+      ],
+      "pretonic": [
+        "o"
+      ],
+      "word_final": [
+        "u"
+      ],
+      "posttonic": [
+        "u"
+      ]
+    },
+    "l": {
+      "onset": [
+        "l"
+      ]
+    },
+    "z": {
+
+      "word_final": [
+        "z"
+      ]
+    }
+  },
+  "allophone_rules": [
+    {
+      "id": "PT_CODA_S_HUSH",
+      "phonemes": [
+        "s"
+      ],
+      "surface": "s",
+      "syllable_position": "coda",
+      "notes": "Mozambican Portuguese keeps an alveolar coda /s/ (no Lisbon 'chiado'); this overrides the inherited pt-PT PT_CODA_S_HUSH rule by id, matching the alveolar coda already declared in this spec's positional_graphemes."
+    },
+    {
+      "id": "PT_CODA_Z_HUSH",
+      "phonemes": [
+        "z"
+      ],
+      "surface": "z",
+      "syllable_position": "coda",
+      "notes": "Mozambican Portuguese keeps an alveolar coda /z/; overrides the inherited pt-PT PT_CODA_Z_HUSH rule by id."
+    },
+    {
+      "id": "PT_FINAL_EM_NUCLEUS",
+      "phonemes": [],
+      "surface": "ɐ",
+      "notes": "DISABLED for this variety. The EP Lisbon-standard centralisation of the word-final ⟨-em⟩ nucleus to [ɐ̃] (inherited from pt-PT) does not apply here: this variety keeps the close-mid nasal nucleus [ẽ], so ⟨-em⟩ is [ẽj̃] (glide via PT_FINAL_EM_GLIDE), not [ɐ̃j̃]. Peripheral/non-Iberian Portuguese does not follow the Lisbon centralisation."
+    },
+    {
+      "id": "PT_FINAL_EM_GLIDE",
+      "phonemes": [],
+      "surface": "̃j̃",
+      "notes": "DISABLED for this variety: word-final ⟨-em⟩ stays a nasal MONOPHTHONG [ẽ] (no palatal offglide) here."
+    }
+  ],
+  "stress": {
+    "onset_clusters": ["bl", "br", "bɫ", "bɾ", "bʀ", "bʁ", "bʎ", "bχ", "dr", "dɾ", "dʀ", "dʁ", "dʎ", "dχ", "fl", "fr", "fɫ", "fɾ", "fʀ", "fʁ", "fʎ", "fχ", "kl", "kr", "kɫ", "kɾ", "kʀ", "kʁ", "kʎ", "kχ", "pl", "pr", "pɫ", "pɾ", "pʀ", "pʁ", "pʎ", "pχ", "tr", "tɾ", "tʀ", "tʁ", "tʎ", "tχ", "vl", "vr", "vɫ", "vɾ", "vʀ", "vʁ", "vʎ", "vχ", "ðr", "ðɾ", "ðʀ", "ðʁ", "ðʎ", "ðχ", "ɡl", "ɡr", "ɡɫ", "ɡɾ", "ɡʀ", "ɡʁ", "ɡʎ", "ɡχ", "ɣl", "ɣr", "ɣɫ", "ɣɾ", "ɣʀ", "ɣʁ", "ɣʎ", "ɣχ", "βl", "βr", "βɫ", "βɾ", "βʀ", "βʁ", "βʎ", "βχ"],
+    "cliticless_words": ["o", "a", "os", "as", "de", "do", "da", "dos", "das", "em", "no", "na", "nos", "nas", "por", "pelo", "pela", "pelos", "pelas", "ao", "aos", "à", "às", "com", "sem", "e", "que", "se", "me", "te", "lhe", "lhes", "vos", "lo", "la", "los", "las", "lho", "lha", "lhos", "lhas"],
+    "default_position": -2,
+    "final_stress_endings": [
+      "r",
+      "l",
+      "z",
+      "x",
+      "i",
+      "u",
+      "im",
+      "om",
+      "um",
+      "is",
+      "us",
+      "ns",
+      "ão",
+      "ãe",
+      "õe",
+      "au",
+      "éu",
+      "éi",
+      "ói"
+    ],
+    "penult_stress_endings": [],
+    "marked_vowels": [
+      "á",
+      "é",
+      "í",
+      "ó",
+      "ú",
+      "â",
+      "ê",
+      "ô",
+      "ã",
+      "õ"
+    ],
+    "stress_mark": "ˈ",
+    "notes": "Acordo Ortográfico 1990 conventions: paroxytone default; written accents override; final -i/-u/-r/-l/-z/-x/-im/-om/-um/-ns and nasal diphthongs attract final stress. Unmarked -em/-am stay paroxytone (homem, falam). DIPHTHONGS: declared so the bundled syllabifier counts nuclei correctly — without them every vowel run merges into one nucleus and co-e-lho is read as coe-lho, one syllable short, putting the stress and its vowel reduction on the wrong vowel. ⟨oe⟩ is hiatus, not a diphthong (Cunha & Cintra, §Ditongos).",
+    "diphthongs": [
+      "ãe",
+      "ão",
+      "õe",
+      "ai",
+      "ái",
+      "au",
+      "áu",
+      "ei",
+      "éi",
+      "êi",
+      "eu",
+      "éu",
+      "êu",
+      "iu",
+      "oi",
+      "ói",
+      "ôi",
+      "ou",
+      "ui"
+    ]
+  },
+  "wikidata_qid": "Q4373398",
+  "location": {
+    "latitude": -25.968889,
+    "longitude": 32.573333,
+    "source": "wikidata",
+    "notes": "Maputo. A national L2 variety: the capital stands in for the country. Weak. [Wikidata Q3889 P625]"
+  },
+  "word_exceptions_base": "pt-PT"
+}

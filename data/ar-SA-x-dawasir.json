@@ -1,0 +1,75 @@
+{
+  "code": "ar-SA-x-dawasir",
+  "name": "Dawāsir Arabic (Dammam, Eastern Province)",
+  "script": "Arabic",
+  "graphemes_base": "ar-SA-x-sharqiyya",
+  "graphemes": {
+    "ج": [
+      "j",
+      "dʒ"
+    ]
+  },
+  "allophones_base": "ar-SA-x-sharqiyya",
+  "allophones": {},
+  "parent": "ar-SA-x-sharqiyya",
+  "ancestors": [
+    {
+      "code": "ar-SA-x-sharqiyya",
+      "role": "parent",
+      "weight": 0.85,
+      "notes": "Shares the Eastern-Province Gulf overlay (qaf→[ɡ], *k→[tʃ] kaškaša, *ɡ→[dʒ] affrication, aw/ay→oː/eː, /ɑː/→[ɒː] rounding) with the sedentary Sharqiyya leaf, but sits on a Najdi-Bedouin substrate, so parenting is partial."
+    }
+  ],
+  "notes": "STUB. The Arabic of the Dawāsir tribe (بنو دواسر) as spoken in urban Dammam, Eastern Province of Saudi Arabia. The Dawāsir are a Sunni, Najdi/southern-origin tribe who migrated via Bahrain and settled the Eastern coast; typologically their dialect is a Najdi-Bedouin core with a Gulf overlay (Alaodini 2019). Modeled DELTA vs the sedentary ar-SA-x-sharqiyya leaf: jīm ج → [j] (yōd) as the PRIMARY (traditional/local) reflex — the distinctive Dawāsir marker, acquired under Bahraini Sunni-ʕArab prestige contact — with the affricate [dʒ] kept as the secondary, innovative and now-dominant reflex (Alaodini 2019 reports [dʒ] at 76%, [j] receding toward the Najdi/Riyadh koiné, led by men and the young; p.94, p.125). This is the mirror image of the sedentary Baḥārna/Hasawi leaf, which has [dʒ] primary. NAJDI-BEDOUIN substrate features documented for the variety but NOT yet modeled at stub tier (needs a research-tier pass): retained interdentals ث/ذ/ظ with *dˤ→ðˤ merger (Alaodini p.42); the gahawa syndrome, epenthetic a after gutturals (p.46); *k→[tʃ] kaškaša in stem and 2fsg suffix and *ɡ(<*q)→[dʒ] affrication before front vowels, but NEVER the interior-Najdi [ts]/[dz] type (p.43-45); Najdi short-vowel/syllable rules with no labial i>u raising, explicitly unlike Bahrani (p.54); word-medial long /ɑː/→[ɒː] backing/rounding, a pan-Eastern feature shared with al-Hasa and Bahrain (p.52, p.83); aw/ay→oː/eː monophthongization with residual word-final diphthongs (p.51-55). GULF OVERLAY INHERITED FROM ar-SA-x-sharqiyya: the ض/ظ merger to [ðˤ] — independently documented for this variety (Alaodini p.42) — the uvular fricatives [χ ʁ], the onsetless waṣl alif and the /il-/ definite article, with the MSA /al-/ kept as the rank-2 candidate. The article is the one of these with a Najdi-Bedouin pull the other way and no source consulted here gives the Dawāsir form; it is inherited rather than overridden because the variety is spoken in the Eastern Province contact zone and the spec is a delta over the Sharqiyya leaf, and the rank-2 /al-/ keeps the Najdi reading available. INPUT CONTRACT: transcribes orthography+harakat; short vowels surface only when the input is vocalised. Inherits the Sharqiyya/Gulf stress cascade.",
+  "quality": "stub",
+  "script_type": "abjad",
+  "sources": [
+    {
+      "id": "alaodini2019",
+      "author": "Alaodini, H.",
+      "year": 2019,
+      "title": "A Sociolinguistic Study of the Dawāsir Dialect in Dammam, Eastern Arabia: Variation and Change in a Tribal Community (PhD thesis)",
+      "publisher": "University of Essex",
+      "url": null,
+      "pages": "39-55, 82-94, 118-125, 170-174",
+      "notes": "The primary description of Dammam Dawāsir. Documents jīm [j]~[dʒ] variation (traditional [j], innovative [dʒ] 76%), the Najdi-Bedouin substrate (interdentals, gahawa, kaškaša, Najdi vowels) and the Gulf overlay ([ɒː] rounding, monophthongization), and the change in progress toward the Najdi/Riyadh koiné.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Najdi_Arabic"
+    },
+    {
+      "id": "ingham1982",
+      "author": "Ingham, B.",
+      "year": 1982,
+      "title": "North East Arabian Dialects",
+      "publisher": "Kegan Paul International (Library of Arabic Linguistics, Monograph 3)",
+      "url": null,
+      "pages": null,
+      "notes": "Groups the Eastern-Province bedouin ʕAjmān and Dawāsir as a 'Southern Najdi' bedouin type, defined negatively by the ABSENCE of *k→[tʃ] / *ɡ→[dz] affrication and by southern markers (retained ɡ in abgi, da 'this', jayy) — the bedouin pole against which the urban, affricating Dammam Dawāsir of Alaodini can be read as Gulf-influenced."
+    },
+    {
+      "id": "johnstone1967",
+      "author": "Johnstone, T.M.",
+      "year": 1967,
+      "title": "Eastern Arabian Dialect Studies",
+      "publisher": "Oxford University Press (London Oriental Series 17)",
+      "url": null,
+      "pages": null,
+      "notes": "Johnstone's Dōsiri texts (mixed ʿAjmān-Dawāsir) are the classical description; source of the *ǧīm→[j] lenition attribution for the tribe."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Najdi_Arabic",
+    "https://en.wikipedia.org/wiki/Gulf_Arabic"
+  ],
+  "timespan": {
+    "start_year": 1900,
+    "end_year": null
+  },
+  "iso639_3": "afb",
+  "allophone_rules": [],
+  "location": {
+    "latitude": 26.4207,
+    "longitude": 50.0888,
+    "source": "manual",
+    "notes": "Dammam, Eastern Province, Saudi Arabia — the urban seat of the Dawāsir community studied by Alaodini (2019)."
+  }
+}

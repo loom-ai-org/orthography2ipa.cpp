@@ -1,0 +1,226 @@
+{
+ "code": "ddo",
+ "name": "Dido",
+ "script": "Cyrl",
+ "quality": "research",
+ "graphemes": {
+  "а": [
+   "a"
+  ],
+  "аа": [
+   "aː"
+  ],
+  "ā": [
+   "aː"
+  ],
+  "е": [
+   "e"
+  ],
+  "и": [
+   "i"
+  ],
+  "о": [
+   "o"
+  ],
+  "у": [
+   "u"
+  ],
+  "б": [
+   "b"
+  ],
+  "в": [
+   "w"
+  ],
+  "г": [
+   "ɡ"
+  ],
+  "гъ": [
+   "ʁ"
+  ],
+  "гь": [
+   "h"
+  ],
+  "д": [
+   "d̪"
+  ],
+  "ж": [
+   "ʒ"
+  ],
+  "з": [
+   "z"
+  ],
+  "й": [
+   "j"
+  ],
+  "к": [
+   "k"
+  ],
+  "къ": [
+   "qʼ"
+  ],
+  "кь": [
+   "t̪ɬʼ"
+  ],
+  "кӏ": [
+   "kʼ"
+  ],
+  "л": [
+   "l"
+  ],
+  "лӏ": [
+   "ɬ"
+  ],
+  "м": [
+   "m"
+  ],
+  "н": [
+   "n̪"
+  ],
+  "п": [
+   "p"
+  ],
+  "пӏ": [
+   "pʼ"
+  ],
+  "р": [
+   "r̪"
+  ],
+  "с": [
+   "s"
+  ],
+  "т": [
+   "t̪"
+  ],
+  "тӏ": [
+   "t̪ʼ"
+  ],
+  "ф": [
+   "f"
+  ],
+  "х": [
+   "χ"
+  ],
+  "хъ": [
+   "q"
+  ],
+  "хь": [
+   "ʜ"
+  ],
+  "хӏ": [
+   "ħ"
+  ],
+  "ц": [
+   "ts"
+  ],
+  "цӏ": [
+   "tsʼ"
+  ],
+  "ч": [
+   "t̠ʃ"
+  ],
+  "чӏ": [
+   "t̠ʃʼ"
+  ],
+  "ш": [
+   "ʃ"
+  ],
+  "ъ": [
+   "ʔ"
+  ]
+ },
+ "allophones": {},
+ "notes": "Cyrillic-based practical orthography for Tsez following the Avar-based Cyrillic convention used for unwritten Daghestanian languages of this area (Alekseev & Radzhabov's descriptions; Comrie & Polinsky's Tsez fieldwork materials). As in the already-registered Avar/Lak/Lezgian specs (av, lbe, lez), the Cyrillic palochka letter (I) combines with a base consonant letter to spell an ejective, pharyngeal or lateral series that a plain Russian letter cannot: kI/pI/tI/lI/khI/chI -- each such digraph earns its key because the combination's IPA is not the concatenation of the base letter's IPA plus a palochka sound (the palochka has no sound of its own; the whole digraph names one segment, exactly the lbe/lez/av convention this spec follows). gъ/къ/хъ/хь/гь mark the uvular/pharyngeal series the same way. Pharyngealization (a documented but non-universal Tsez feature on some vowels, Comrie & Polinsky) is not rule-encoded pending clearer minimal-pair citations; only the plain vowel readings are mapped. Stress in Tsez is not distinctive/predictable from spelling in the cited descriptions; left unset as a documented exemption.",
+ "iso639_3": "ddo",
+ "glottolog_code": "dido1241",
+ "sources": [
+  {
+   "id": "glottolog2024",
+   "author": "Hammarström, Harald; Forkel, Robert; Haspelmath, Martin; Bank, Sebastian",
+   "year": 2024,
+   "title": "Glottolog 5.0",
+   "publisher": "Max Planck Institute for Evolutionary Anthropology",
+   "url": "https://glottolog.org/"
+  },
+  {
+   "id": "phoible2019",
+   "author": "Moran, Steven; McCloy, Daniel (eds.)",
+   "year": 2019,
+   "title": "PHOIBLE 2.0 (doi:10.5281/zenodo.2562766)",
+   "publisher": "Max Planck Institute for the Science of Human History",
+   "url": "https://phoible.org/inventories/view/2329",
+   "notes": "Inventory 2329 (ea), 42 non-marginal segments."
+  },
+  {
+   "id": "comrie_polinsky",
+   "author": "Comrie, Bernard; Polinsky, Maria",
+   "year": 1999,
+   "title": "Reciprocals without reflexives (and other Tsez/Daghestanian materials)",
+   "publisher": "in Frajzyngier & Curl (eds.), Reciprocals: Forms and Functions"
+  },
+  {
+   "id": "alekseev_dagh",
+   "author": "Alekseev, Mikhail E.",
+   "year": 2003,
+   "title": "Tsezskie jazyki (Tsezic languages), in Yazyki mira: Kavkazskie jazyki",
+   "publisher": "Academia"
+  }
+ ],
+ "urls": [
+  "https://glottolog.org/resource/languoid/id/dido1241"
+ ],
+ "location": {
+  "latitude": 42.2646,
+  "longitude": 45.8096,
+  "source": "glottolog",
+  "notes": "Glottolog's representative point."
+ },
+ "parent": "x-clade-nakh1245",
+ "phonemes": [
+  "b",
+  "d̪",
+  "h",
+  "j",
+  "k",
+  "kʼ",
+  "l",
+  "m",
+  "n̪",
+  "p",
+  "pʼ",
+  "q",
+  "qʼ",
+  "qˤ",
+  "qˤʼ",
+  "r̪",
+  "s",
+  "ts",
+  "tsʼ",
+  "t̠ʃ",
+  "t̠ʃʼ",
+  "t̪",
+  "t̪ɬ",
+  "t̪ɬʼ",
+  "t̪ʼ",
+  "w",
+  "z",
+  "ɡ",
+  "ɬ",
+  "ʁ",
+  "ʁˤ",
+  "ʃ",
+  "ʒ",
+  "ʜ",
+  "ʡ",
+  "χ",
+  "a",
+  "aː",
+  "e",
+  "i",
+  "o",
+  "u"
+ ],
+ "phoible_id": "2329",
+ "wikipedia": [
+  "https://en.wikipedia.org/wiki/Tsez_language"
+ ]
+}

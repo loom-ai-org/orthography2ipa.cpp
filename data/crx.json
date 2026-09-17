@@ -1,0 +1,48 @@
+{
+  "code": "crx",
+  "name": "Carrier",
+  "script": "Canadian Aboriginal",
+  "script_type": "syllabary",
+  "quality": "stub",
+  "graphemes": {},
+  "parent": "x-clade-atha1245",
+  "ancestors": [
+    {
+      "code": "x-clade-atha1245",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Descent per Glottolog classification of Central Carrier (carr1249)."
+    }
+  ],
+  "notes": "Skeleton. Carrier (Dakelh) is a Northern Athabaskan language of central British Columbia, here written in Canadian Aboriginal syllabics (the Carrier/Déné syllabary). The syllabics are abugida-like: each glyph encodes a consonant-plus-vowel unit whose value is set by glyph orientation and added marks, and the traditional syllabary does not consistently record tone, glottalization, or the full consonant inventory that the phonology contrasts. Recovering IPA from syllabic glyphs therefore needs a per-word orthographic-to-phonemic stratum that the engine does not bundle, so graphemes are left empty and coverage is effectively lexicon-dependent. Tone and ejective/glottalized contrasts are not recoverable from the syllabics.",
+  "iso639_3": "crx",
+  "glottolog_code": null,
+  "sources": [
+    {
+      "id": "crx_glottolog",
+      "author": "Hammarström, H. et al. (Glottolog 5.0)",
+      "year": 2024,
+      "title": "Glottolog: Central Carrier (carr1249)",
+      "publisher": "Max Planck Institute for Evolutionary Anthropology",
+      "url": "https://glottolog.org/resource/languoid/id/carr1249",
+      "pages": null,
+      "notes": "Classification reference for a skeleton-tier entry.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Carrier_language"
+    },
+    {
+      "id": "crx_wikipedia",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Carrier language; Canadian Aboriginal syllabics",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Canadian_Aboriginal_syllabics",
+      "pages": null,
+      "notes": "Describes the Athabaskan language and the Carrier/Dene syllabary used to write it.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Carrier_language"
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Carrier_language",
+    "https://en.wikipedia.org/wiki/Canadian_Aboriginal_syllabics"
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "code": "quc",
+  "name": "K'iche'",
+  "parent": "x-clade-maya1287",
+  "script": "Latin",
+  "quality": "skeleton",
+  "graphemes": {
+    "a": ["a"],
+    "aa": ["aː"],
+    "e": ["e"],
+    "ee": ["eː"],
+    "i": ["i"],
+    "ii": ["iː"],
+    "o": ["o"],
+    "oo": ["oː"],
+    "u": ["u"],
+    "uu": ["uː"],
+    "b'": ["ɓ"],
+    "ch": ["tʃ"],
+    "ch'": ["tʃʼ"],
+    "j": ["x"],
+    "k": ["k"],
+    "k'": ["kʼ"],
+    "l": ["l"],
+    "m": ["m"],
+    "n": ["n"],
+    "p": ["p"],
+    "q": ["q"],
+    "q'": ["qʼ"],
+    "r": ["ɾ"],
+    "s": ["s"],
+    "t": ["t"],
+    "t'": ["tʼ"],
+    "tz": ["ts"],
+    "tz'": ["tsʼ"],
+    "w": ["w"],
+    "x": ["ʃ"],
+    "y": ["j"],
+    "'": ["ʔ"]
+  },
+  "allophones": {
+    "a": ["a"], "aː": ["aː"], "e": ["e"], "eː": ["eː"], "i": ["i"], "iː": ["iː"],
+    "o": ["o"], "oː": ["oː"], "u": ["u"], "uː": ["uː"],
+    "ɓ": ["ɓ"], "tʃ": ["tʃ"], "tʃʼ": ["tʃʼ"], "x": ["x"], "k": ["k"], "kʼ": ["kʼ"],
+    "l": ["l"], "m": ["m"], "n": ["n"], "p": ["p"], "q": ["q"], "qʼ": ["qʼ"],
+    "ɾ": ["ɾ"], "s": ["s"], "t": ["t"], "tʼ": ["tʼ"], "ts": ["ts"], "tsʼ": ["tsʼ"],
+    "w": ["w"], "ʃ": ["ʃ"], "j": ["j"], "ʔ": ["ʔ"]
+  },
+  "notes": "Standard K'iche' Latin orthography as codified by the Academia de Lenguas Mayas de Guatemala (ALMG), described in Mondloch (1978), Basic Quiche Grammar. Ejective consonants are a following apostrophe on the plain stop/affricate letter (⟨k'⟩ /kʼ/, ⟨q'⟩ /qʼ/, ⟨t'⟩ /tʼ/, ⟨ch'⟩ /tʃʼ/, ⟨tz'⟩ /tsʼ/), each one glottalized segment rather than a stop plus a separate glottal stop (AGENTS.md test 2). ⟨b'⟩ is the implosive /ɓ/. ⟨ch⟩ and ⟨tz⟩ spell the single affricates /tʃ/ and /ts/. ⟨j⟩ and ⟨x⟩ distinguish the uvular/velar fricative /x/ from the palatal fricative /ʃ/ (a widespread K'iche'an contrast). Vowel length is phonemic in K'iche' and written by doubling the vowel letter. Stress is fixed on the final syllable and is not marked orthographically; it is left unencoded here as a documented, fully predictable exemption. This spec models the phonology and orthography of K'iche' as a language in its own right, distinct from its earlier role as a bare adstrate placeholder for Guatemalan Spanish contact studies.",
+  "script_type": "alphabet",
+  "iso639_3": "quc",
+  "glottolog_code": "kich1262",
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Kiche_language"
+  ],
+  "sources": [
+    {
+      "id": "campbell1997",
+      "author": "Campbell, Lyle",
+      "year": 1997,
+      "title": "American Indian Languages: The Historical Linguistics of Native America",
+      "publisher": "Oxford University Press",
+      "url": null,
+      "pages": null,
+      "notes": "Classification and geographic distribution."
+    },
+    {
+      "id": "mondloch1978",
+      "author": "Mondloch, James L.",
+      "year": 1978,
+      "title": "Basic Quiche Grammar",
+      "publisher": "Institute for Mesoamerican Studies, SUNY Albany",
+      "notes": "Reference grammar: phonology, orthography, stress."
+    },
+    {
+      "id": "almg",
+      "author": "Academia de Lenguas Mayas de Guatemala",
+      "year": 1988,
+      "title": "Documento de referencia para la pronunciación de los idiomas Mayas",
+      "publisher": "ALMG",
+      "notes": "Official Mayan-language alphabet standard, including K'iche'."
+    }
+  ],
+  "wikidata_qid": "Q36494",
+  "phoible_id": "kich1262",
+  "wals_code": "qch",
+  "location": {
+    "latitude": 14.5278,
+    "longitude": -91.1696,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for K'iche'."
+  }
+}

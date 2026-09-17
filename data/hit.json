@@ -1,0 +1,85 @@
+{
+  "code": "hit",
+  "name": "Hittite",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "orthography_kind": "transliteration",
+  "quality": "skeleton",
+  "graphemes": {
+    "a": ["a"],
+    "e": ["e"],
+    "i": ["i"],
+    "u": ["u"],
+    "ā": ["aː"],
+    "ē": ["eː"],
+    "ī": ["iː"],
+    "ū": ["uː"],
+    "p": ["p"],
+    "pp": ["pː"],
+    "t": ["t"],
+    "tt": ["tː"],
+    "k": ["k"],
+    "kk": ["kː"],
+    "l": ["l"],
+    "ll": ["lː"],
+    "m": ["m"],
+    "mm": ["mː"],
+    "n": ["n"],
+    "nn": ["nː"],
+    "r": ["r"],
+    "rr": ["rː"],
+    "s": ["s"],
+    "ss": ["sː"],
+    "š": ["ʃ"],
+    "šš": ["ʃː"],
+    "z": ["ts"],
+    "ḫ": ["χ"],
+    "ḫḫ": ["χː"],
+    "w": ["w"],
+    "y": ["j"]
+  },
+  "parent": "x-clade-anat1257",
+  "ancestors": [
+    {
+      "code": "x-clade-anat1257",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Hittite is the earliest-attested Anatolian language, split from Proto-Indo-European before the other branches (Hoffner & Melchert 2024)."
+    }
+  ],
+  "notes": "Skeleton. Extinct Anatolian (Indo-European) language of the Hittite Empire (c. 1650-1180 BCE), written in a form of Peripheral Akkadian cuneiform adapted from Northern Syria; the syllabic cuneiform signs are conventionally rendered in the standard Hittitological Latin transliteration scored here, following Assyriological practice as in akk.json. ⟨š⟩=/ʃ/, ⟨ḫ⟩ a laryngeal reconstructed as uvular fricative /χ/ (Kloekhorst 2008), macron marks vowel length. Doubled consonants ⟨pp tt kk ss šš ḫḫ⟩ intervocalically contrast with single-letter ⟨p t k s⟩; this is a genuine orthographic contrast, not a cartesian artifact, but its phonetic interpretation is debated in the literature — the traditional view (Melchert 1994, cited via Hoffner & Melchert 2024) reads it as a fortis/lenis (historically voiceless/voiced) contrast, while Wikipedia (Hittite language) notes Hittite scribes used the etymologically voiced and voiceless Akkadian cuneiform signs interchangeably, which some scholars instead take as evidence for a pure consonant-length distinction; scored here as a length/gemination contrast (doubled = long) without committing to the fortis/lenis phonetic story. Syllabic cuneiform sign-boundaries, plene (double vowel) writing, and word-internal sign polyphony are not modeled; a substantial PER floor is expected given the reconstructive nature of the transliteration.",
+  "iso639_3": "hit",
+  "glottolog_code": "hitt1242",
+  "wikidata_qid": "Q35618",
+  "sources": [
+    {
+      "id": "hoffner_melchert2024",
+      "author": "Hoffner, Harry A.; Melchert, H. Craig",
+      "year": 2024,
+      "title": "A Grammar of the Hittite Language",
+      "publisher": "Eisenbrauns",
+      "url": null,
+      "pages": null,
+      "notes": "Standard grammar; transliteration and phonology conventions, fortis/lenis consonant spelling.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Hittite_language"
+    },
+    {
+      "id": "kloekhorst2008",
+      "author": "Kloekhorst, Alwin",
+      "year": 2008,
+      "title": "Etymological Dictionary of the Hittite Inherited Lexicon",
+      "publisher": "Brill",
+      "url": null,
+      "pages": null,
+      "notes": "Reconstructed phonetic values, laryngeal ⟨ḫ⟩ = /χ/."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Hittite_language",
+    "https://en.wikipedia.org/wiki/Anatolian_languages"
+  ],
+  "timespan": {
+    "start_year": -1650,
+    "end_year": -1180
+  }
+}

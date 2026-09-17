@@ -1,0 +1,311 @@
+{
+  "code": "mfe",
+  "name": "Morisyen",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "graphemes": {
+    "ch": [
+      "ʃ"
+    ],
+    "ou": [
+      "u"
+    ],
+    "gn": [
+      "ɲ"
+    ],
+    "ng": [
+      "ŋ"
+    ],
+    "nn": [
+      "n"
+    ],
+    "a": [
+      "a"
+    ],
+    "e": [
+      "e"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "o"
+    ],
+    "u": [
+      "y"
+    ],
+    "é": [
+      "e"
+    ],
+    "è": [
+      "ɛ"
+    ],
+    "b": [
+      "b"
+    ],
+    "d": [
+      "d"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "h": [
+      "h"
+    ],
+    "j": [
+      "ʒ"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "ʁ"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "v": [
+      "v"
+    ],
+    "w": [
+      "w"
+    ],
+    "y": [
+      "j"
+    ],
+    "z": [
+      "z"
+    ]
+  },
+  "parent": "x-clade-roma1334",
+  "ancestors": [
+    {
+      "code": "x-clade-roma1334",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Descent per Glottolog classification of Morisyen (mori1278)."
+    },
+    {
+      "code": "fr-FR",
+      "role": "lexifier",
+      "weight": 0.65,
+      "notes": "French lexifier: Morisyen (Mauritian Creole) draws the large majority of its vocabulary from 18th-century colonial French. Baker & Kriegel, APiCS ch. 'Morisyen'; Corne (1999) From French to Creole."
+    },
+    {
+      "code": "mg",
+      "role": "substrate",
+      "weight": 0.08,
+      "notes": "Malagasy substrate: enslaved and indentured population brought from Madagascar contributed to the founder population of Isle de France/Mauritius alongside East African and Indian labourers (Baker & Kriegel, APiCS ch. 'Morisyen')."
+    },
+    {
+      "code": "sw",
+      "role": "adstrate",
+      "weight": 0.03,
+      "notes": "East African (Bantu, represented here by Swahili as the closest specced proxy) adstrate: enslaved population drawn from the East African coast during the French colonial period."
+    },
+    {
+      "code": "bho",
+      "role": "adstrate",
+      "weight": 0.05,
+      "notes": "Bhojpuri adstrate: 19th-century indentured Indian labourers (mostly from the Bhojpuri-speaking Gangetic plain) form a large share of the modern Mauritian population and contribute an ongoing contact layer (Baker & Kriegel, APiCS ch. 'Morisyen')."
+    }
+  ],
+  "notes": "French-lexifier creole of Mauritius written in a Latin, largely phonemic orthography. Grapheme map follows the modern conventions: ou [u], ch [ʃ], j [ʒ], z [z], gn [ɲ], ng [ŋ]. NASAL VOWELS: a vowel spelled with a following <n> nasalises only when that <n> closes the syllable (word-final or before a consonant); before a vowel the <n> stays a plain onset consonant and the vowel stays oral (allophone_rules, not enumerated digraphs -- see docs/allophony.md). RHOTIC: <r> is an onset approximant [ɰ] but a coda <r> is silent, lengthening the preceding vowel instead (allophone_rules). Standardisation of the spelling is recent and older French-etymology spellings still circulate; the phonetic value of some contextual variation (loanwords, frozen French compounds such as 'bien') is not fully recoverable and any prosody is left unencoded, so a PER floor is expected.",
+  "iso639_3": "mfe",
+  "glottolog_code": null,
+  "sources": [
+    {
+      "id": "mfe_glottolog",
+      "author": "Hammarström, H. et al. (Glottolog 5.0)",
+      "year": 2024,
+      "title": "Glottolog: Morisyen (mori1278)",
+      "publisher": "Max Planck Institute for Evolutionary Anthropology",
+      "url": "https://glottolog.org/resource/languoid/id/mori1278",
+      "pages": null,
+      "notes": "Classification reference for a skeleton-tier entry.",
+      "wikipedia_url": null
+    },
+    {
+      "id": "mfe_wikipedia",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Mauritian Creole (Wikipedia)",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Mauritian_Creole",
+      "pages": null,
+      "notes": "Orthography/phonology reference for a skeleton-tier entry.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Mauritian_Creole"
+    },
+    {
+      "id": "baker_kriegel_apics_morisyen",
+      "author": "Baker, Philip and Kriegel, Sibylle",
+      "year": 2013,
+      "title": "Morisyen structure dataset",
+      "publisher": "Atlas of Pidgin and Creole Language Structures (APiCS) Online",
+      "url": "https://apics-online.info/contributions/60",
+      "pages": null,
+      "notes": "APiCS structural chapter for Morisyen: orthography, rhotic realisation and nasal-vowel conventions cited by the allophone_rules here.",
+      "wikipedia_url": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Mauritian_Creole"
+  ],
+  "allophone_rules": [
+    {
+      "id": "MFE_R_ONSET",
+      "phonemes": [
+        "ʁ"
+      ],
+      "surface": "ɰ",
+      "syllable_position": "onset",
+      "notes": "Onset <r> (syllable-initial, before a vowel, incl. clusters like <gr>/<fr>) surfaces as the labio-velar approximant [ɰ], not the French uvular fricative (Baker & Kriegel, APiCS ch. 'Morisyen', on the Morisyen rhotic): frer [fɰɛː], gran [ɡɰɑ̃]."
+    },
+    {
+      "id": "MFE_R_CODA_DELETE",
+      "phonemes": [
+        "ʁ"
+      ],
+      "surface": "",
+      "syllable_position": "coda",
+      "notes": "Coda <r> (before a consonant or word-finally) is not pronounced; its mora surfaces as compensatory lengthening of the preceding vowel (see MFE_LENGTHEN_*): ser [sɛː], larzan [lɑːzɑ̃]."
+    },
+    {
+      "id": "MFE_LENGTHEN_A",
+      "phonemes": [
+        "a"
+      ],
+      "surface": "aː",
+      "followed_by": "coda",
+      "followed_by_phoneme": [
+        "ʁ"
+      ],
+      "notes": "Compensatory lengthening for a deleted coda <r> (Baker & Kriegel, APiCS ch. 'Morisyen'): ser [sɛː], pangar [pɑ̃ɡɑː]."
+    },
+    {
+      "id": "MFE_LENGTHEN_E",
+      "phonemes": [
+        "e"
+      ],
+      "surface": "eː",
+      "followed_by": "coda",
+      "followed_by_phoneme": [
+        "ʁ"
+      ],
+      "notes": "Compensatory lengthening for a deleted coda <r> (Baker & Kriegel, APiCS ch. 'Morisyen'): ser [sɛː], pangar [pɑ̃ɡɑː]."
+    },
+    {
+      "id": "MFE_LENGTHEN_I",
+      "phonemes": [
+        "i"
+      ],
+      "surface": "iː",
+      "followed_by": "coda",
+      "followed_by_phoneme": [
+        "ʁ"
+      ],
+      "notes": "Compensatory lengthening for a deleted coda <r> (Baker & Kriegel, APiCS ch. 'Morisyen'): ser [sɛː], pangar [pɑ̃ɡɑː]."
+    },
+    {
+      "id": "MFE_LENGTHEN_O",
+      "phonemes": [
+        "o"
+      ],
+      "surface": "oː",
+      "followed_by": "coda",
+      "followed_by_phoneme": [
+        "ʁ"
+      ],
+      "notes": "Compensatory lengthening for a deleted coda <r> (Baker & Kriegel, APiCS ch. 'Morisyen'): ser [sɛː], pangar [pɑ̃ɡɑː]."
+    },
+    {
+      "id": "MFE_LENGTHEN_Y",
+      "phonemes": [
+        "y"
+      ],
+      "surface": "yː",
+      "followed_by": "coda",
+      "followed_by_phoneme": [
+        "ʁ"
+      ],
+      "notes": "Compensatory lengthening for a deleted coda <r> (Baker & Kriegel, APiCS ch. 'Morisyen'): ser [sɛː], pangar [pɑ̃ɡɑː]."
+    },
+    {
+      "id": "MFE_LENGTHEN_Ɛ",
+      "phonemes": [
+        "ɛ"
+      ],
+      "surface": "ɛː",
+      "followed_by": "coda",
+      "followed_by_phoneme": [
+        "ʁ"
+      ],
+      "notes": "Compensatory lengthening for a deleted coda <r> (Baker & Kriegel, APiCS ch. 'Morisyen'): ser [sɛː], pangar [pɑ̃ɡɑː]."
+    },
+    {
+      "id": "MFE_NASAL_A",
+      "phonemes": [
+        "a"
+      ],
+      "surface": "ɑ̃",
+      "followed_by": "coda_nasal",
+      "notes": "A vowel before a coda nasal consonant nasalises and backs/lowers (Baker & Kriegel, APiCS ch. 'Morisyen', orthography section; Baker & Hookoomsing 1987 Diksyoner Morisyen): gran [ɡɰɑ̃], non [nɔ̃], morisien [moʁisjɛ̃], bezwin [bezwɛ̃]. The nasal letter itself is silent (see MFE_NASAL_ABSORB); a following-vowel context (fenomenal [fenomenal]) leaves the nasal an onset consonant and the vowel oral."
+    },
+    {
+      "id": "MFE_NASAL_O",
+      "phonemes": [
+        "o"
+      ],
+      "surface": "ɔ̃",
+      "followed_by": "coda_nasal",
+      "notes": "A vowel before a coda nasal consonant nasalises and backs/lowers (Baker & Kriegel, APiCS ch. 'Morisyen', orthography section; Baker & Hookoomsing 1987 Diksyoner Morisyen): gran [ɡɰɑ̃], non [nɔ̃], morisien [moʁisjɛ̃], bezwin [bezwɛ̃]. The nasal letter itself is silent (see MFE_NASAL_ABSORB); a following-vowel context (fenomenal [fenomenal]) leaves the nasal an onset consonant and the vowel oral."
+    },
+    {
+      "id": "MFE_NASAL_E",
+      "phonemes": [
+        "e"
+      ],
+      "surface": "ɛ̃",
+      "followed_by": "coda_nasal",
+      "notes": "A vowel before a coda nasal consonant nasalises and backs/lowers (Baker & Kriegel, APiCS ch. 'Morisyen', orthography section; Baker & Hookoomsing 1987 Diksyoner Morisyen): gran [ɡɰɑ̃], non [nɔ̃], morisien [moʁisjɛ̃], bezwin [bezwɛ̃]. The nasal letter itself is silent (see MFE_NASAL_ABSORB); a following-vowel context (fenomenal [fenomenal]) leaves the nasal an onset consonant and the vowel oral."
+    },
+    {
+      "id": "MFE_NASAL_I",
+      "phonemes": [
+        "i"
+      ],
+      "surface": "ɛ̃",
+      "followed_by": "coda_nasal",
+      "notes": "A vowel before a coda nasal consonant nasalises and backs/lowers (Baker & Kriegel, APiCS ch. 'Morisyen', orthography section; Baker & Hookoomsing 1987 Diksyoner Morisyen): gran [ɡɰɑ̃], non [nɔ̃], morisien [moʁisjɛ̃], bezwin [bezwɛ̃]. The nasal letter itself is silent (see MFE_NASAL_ABSORB); a following-vowel context (fenomenal [fenomenal]) leaves the nasal an onset consonant and the vowel oral."
+    },
+    {
+      "id": "MFE_NASAL_ABSORB",
+      "phonemes": [
+        "n"
+      ],
+      "surface": "",
+      "syllable_position": "coda",
+      "preceded_by": "vowel",
+      "notes": "The coda nasal consonant that conditions MFE_NASAL_* is itself silent, exactly like the French nasal-vowel pilot (see docs/allophony.md): kontan [kɔ̃tɑ̃], not [kɔ̃ntãn]."
+    }
+  ]
+}

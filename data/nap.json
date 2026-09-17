@@ -1,0 +1,374 @@
+{
+  "code": "nap",
+  "name": "Neapolitan",
+  "script": "Latin",
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "e": [
+      "e",
+      "ɛ"
+    ],
+    "ë": [
+      "ə"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "o",
+      "ɔ"
+    ],
+    "u": [
+      "u"
+    ],
+    "b": [
+      "b"
+    ],
+    "c": [
+      "k",
+      "tʃ"
+    ],
+    "ch": [
+      "k"
+    ],
+    "d": [
+      "d"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɡ",
+      "dʒ"
+    ],
+    "gh": [
+      "ɡ"
+    ],
+    "gn": [
+      "ɲ"
+    ],
+    "gl": [
+      "ʎ"
+    ],
+    "h": [
+      ""
+    ],
+    "j": [
+      "j"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "p": [
+      "p"
+    ],
+    "qu": [
+      "kw"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s",
+      "z"
+    ],
+    "sc": [
+      "ʃ"
+    ],
+    "t": [
+      "t"
+    ],
+    "v": [
+      "v"
+    ],
+    "z": [
+      "ts",
+      "dz"
+    ],
+    "bb": [
+      "bː"
+    ],
+    "cc": [
+      "kː",
+      "tːʃ"
+    ],
+    "dd": [
+      "dː"
+    ],
+    "ff": [
+      "fː"
+    ],
+    "gg": [
+      "ɡː",
+      "dːʒ"
+    ],
+    "ll": [
+      "lː"
+    ],
+    "mm": [
+      "mː"
+    ],
+    "nn": [
+      "nː"
+    ],
+    "pp": [
+      "pː"
+    ],
+    "rr": [
+      "rː"
+    ],
+    "ss": [
+      "sː"
+    ],
+    "tt": [
+      "tː"
+    ],
+    "zz": [
+      "tːs",
+      "dːz"
+    ]
+  },
+  "allophones": {
+    "p": [
+      "p"
+    ],
+    "b": [
+      "b",
+      "β"
+    ],
+    "t": [
+      "t"
+    ],
+    "d": [
+      "d",
+      "ð"
+    ],
+    "k": [
+      "k"
+    ],
+    "ɡ": [
+      "ɡ",
+      "ɣ"
+    ],
+    "tʃ": [
+      "tʃ"
+    ],
+    "dʒ": [
+      "dʒ"
+    ],
+    "ts": [
+      "ts"
+    ],
+    "dz": [
+      "dz"
+    ],
+    "f": [
+      "f"
+    ],
+    "v": [
+      "v"
+    ],
+    "s": [
+      "s",
+      "ʃ"
+    ],
+    "z": [
+      "z",
+      "ʒ"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n",
+      "ŋ",
+      "ɱ"
+    ],
+    "ɲ": [
+      "ɲ"
+    ],
+    "l": [
+      "l"
+    ],
+    "ʎ": [
+      "ʎ"
+    ],
+    "r": [
+      "r",
+      "ɾ"
+    ],
+    "j": [
+      "j"
+    ],
+    "w": [
+      "w"
+    ],
+    "a": [
+      "a"
+    ],
+    "ə": [
+      "ə"
+    ],
+    "e": [
+      "e"
+    ],
+    "ɛ": [
+      "ɛ"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "o"
+    ],
+    "ɔ": [
+      "ɔ"
+    ],
+    "u": [
+      "u"
+    ],
+    "bː": [
+      "bː"
+    ],
+    "dː": [
+      "dː"
+    ],
+    "ɡː": [
+      "ɡː"
+    ],
+    "pː": [
+      "pː"
+    ],
+    "tː": [
+      "tː"
+    ],
+    "kː": [
+      "kː"
+    ],
+    "fː": [
+      "fː"
+    ],
+    "sː": [
+      "sː"
+    ],
+    "lː": [
+      "lː"
+    ],
+    "mː": [
+      "mː"
+    ],
+    "nː": [
+      "nː"
+    ],
+    "rː": [
+      "rː"
+    ],
+    "tːʃ": [
+      "tːʃ"
+    ],
+    "dːʒ": [
+      "dːʒ"
+    ],
+    "tːs": [
+      "tːs"
+    ],
+    "dːz": [
+      "dːz"
+    ]
+  },
+  "parent": "x-clade-italorom",
+  "ancestors": [
+    {
+      "code": "la-x-italia",
+      "role": "parent",
+      "weight": 0.78,
+      "notes": "Italo-Romance parent."
+    },
+    {
+      "code": "grc",
+      "role": "substrate",
+      "weight": 0.1,
+      "notes": "Magna Graecia Greek substrate: Southern Italy was heavily Hellenised. Possible influence on consonant system and prosody."
+    },
+    {
+      "code": "got",
+      "role": "superstrate",
+      "weight": 0.04,
+      "notes": "Ostrogothic/Lombardic superstrate."
+    },
+    {
+      "code": "fr-FR",
+      "role": "superstrate",
+      "weight": 0.05,
+      "notes": "Norman French superstrate (11th–13th c.): Norman conquest of S. Italy and Sicily. Lexical influence, some structural."
+    }
+  ],
+  "notes": "Neapolitan. Southern Italo-Romance of Campania and broader S. mainland Italy. ~5.7 million speakers. Key features: (1) Metaphony (vowel harmony triggered by final vowel). (2) Unstressed vowels → [ə]. (3) Rich gemination. (4) Retroflex -DD- [ɖː] in some areas. Literary tradition from 16th c. (Ledgeway 2009, De Blasi & Imperatore 2000).",
+  "quality": "research",
+  "script_type": "alphabet",
+  "iso639_3": "nap",
+  "sources": [
+    {
+      "id": "maiden_parry1997",
+      "author": "Maiden, M. & Parry, M. (eds.)",
+      "year": 1997,
+      "title": "The Dialects of Italy",
+      "publisher": "Routledge",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "loporcaro2009",
+      "author": "Loporcaro, M.",
+      "year": 2009,
+      "title": "Profilo linguistico dei dialetti italiani",
+      "publisher": "Laterza",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "lepschy_lepschy1988",
+      "author": "Lepschy, A.L. & Lepschy, G.",
+      "year": 1988,
+      "title": "The Italian Language Today",
+      "publisher": "Hutchinson",
+      "url": null,
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Neapolitan_language",
+    "https://nap.wikipedia.org/wiki/Lengua_napulitana",
+    "https://it.wikipedia.org/wiki/Lingua_napoletana"
+  ],
+  "timespan": {
+    "start_year": 1300,
+    "end_year": null
+  },
+  "glottolog_code": "neap1235",
+  "wikidata_qid": "Q33845",
+  "wals_code": "itn",
+  "location": {
+    "latitude": 39.2288,
+    "longitude": 16.4225,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Continental Southern Italian."
+  }
+}

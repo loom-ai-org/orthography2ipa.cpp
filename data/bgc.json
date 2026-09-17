@@ -1,0 +1,68 @@
+{
+  "code": "bgc",
+  "name": "Haryanvi",
+  "script": "Devanagari",
+  "graphemes_base": "hi",
+  "graphemes": {},
+  "allophones_base": "hi",
+  "allophones": {},
+  "parent": "sa",
+  "ancestors": [
+    {
+      "code": "sa",
+      "role": "parent",
+      "weight": 0.8,
+      "notes": "Descent from Old Indo-Aryan (Sanskrit) via Sauraseni Prakrit and Apabhraṃśa, Western Hindi zone."
+    },
+    {
+      "code": "hi",
+      "role": "adstrate",
+      "weight": 0.12,
+      "notes": "Close Western Hindi relative; shares Standard Hindi's Devanagari letter-to-sound conventions (schwa inherent vowel, retroflex/dental contrast). Haryanvi speakers are largely literate in Standard Hindi and often use the Hindi orthographic register for writing."
+    }
+  ],
+  "notes": "Haryanvi (Bangaru), spoken mainly in Haryana, India. Western Hindi (Central Indo-Aryan) group. Written in Devanagari, generally following Standard Hindi orthographic conventions (no independent standardised spelling norm), hence graphemes_base=hi. Wikipedia's consonant table shows the same voiceless/voiced/aspirated/breathy-voiced four-way contrast as Hindi. No cited academic source was found describing an orthography distinct from Hindi's, so no overrides are asserted; distinctive Haryanvi phonological facts (e.g. its lexical tone/pitch-accent reported in some dialect descriptions) are not encoded here for lack of a citable grapheme-level source.",
+  "quality": "skeleton",
+  "script_type": "abugida",
+  "inherent_vowel": "ə",
+  "iso639_3": "bgc",
+  "sources": [
+    {
+      "id": "masica1991",
+      "author": "Masica, C.",
+      "year": 1991,
+      "title": "The Indo-Aryan Languages",
+      "publisher": "Cambridge University Press",
+      "url": null,
+      "pages": null,
+      "notes": "Western Hindi dialect classification including Bangaru/Haryanvi.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Indo-Aryan_languages"
+    },
+    {
+      "id": "yadav1996",
+      "author": "Yadav, N.",
+      "year": 1996,
+      "title": "Bangaru Phonology",
+      "publisher": "Central Institute of Hindi",
+      "url": null,
+      "pages": null,
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Haryanvi_language"
+  ],
+  "timespan": {
+    "start_year": 1500,
+    "end_year": null
+  },
+  "glottolog_code": "hary1238",
+  "wikidata_qid": "Q33410",
+  "wals_code": null,
+  "location": {
+    "latitude": 29.0588,
+    "longitude": 76.0856,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Haryanvi (Haryana, India)."
+  }
+}

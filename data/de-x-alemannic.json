@@ -1,0 +1,259 @@
+{
+  "code": "de-x-alemannic",
+  "name": "Alemannic German",
+  "script": "Latin",
+  "graphemes_base": "de-CH",
+  "allophones_base": "de-CH",
+  "parent": "de-CH",
+  "notes": "Alemannic German (Schwyzerdütsch, Alsatian, Swabian, Vorarlbergisch), ISO 639-3 gsw. This is the DIALECT, not Schweizerhochdeutsch: the parent de-CH models Swiss Standard German, which is Standard German with Swiss features and shares the de-DE grapheme table. Alemannic diverges from that table systematically, and the divergences below are what this spec declares.\n\nThe High German consonant shift ran to completion, so ⟨ch⟩ is the Ach-Laut [x]~[χ] in every position, word-initially included (Chatz, Chilbi, Chueche), and the Standard German Ich-Laut [ç] is absent altogether; ⟨k⟩ and ⟨ck⟩ spell the affricate /kx/ (Brocki, Stock, Anke). There are no voiced obstruents: ⟨s⟩ is [s] in every position, and the lenis series is voiceless-unaspirated, transcribed either plainly or with a voicelessness ring. /r/ is an alveolar trill [r], and Standard German ⟨-er⟩ vocalisation to [ɐ] does not apply.\n\nSpelling follows Dieth-Schreibung, where a doubled vowel letter marks length (Huus [huːs], Wii [viː], Füür [fyːr]) and ⟨y⟩/⟨yy⟩ traditionally stand for /iː/. A doubled consonant letter marks the preceding vowel short and, for the stops, spells the fortis rather than a geminate (Rugge [rukə]). The gold is split on how it writes that fortis — [k] in Rugge, a long lenis [ɡ̊ː] in seggle — so the ⟨gg⟩ entry costs a little PER against the second convention; the entry follows the description, not the majority notation.\n\nSources: Wikipedia, \"Swiss German\" (fortis/lenis, absence of voiced obstruents, /x/ without a [ç] allophone, ⟨k⟩/⟨ck⟩ = /kx/, alveolar-trill /r/, ⟨y⟩/⟨yy⟩ = /iː/); Wikipedia, \"Alemannic German\" (High and Highest Alemannic fricativize initial /k/ to [x]; these varieties use the Ach-Laut exclusively); de.wikipedia, \"Dieth-Schreibung\" (short vowels written singly, long vowels doubled). Russ (1994) and Haas (2000) are the standard descriptive references; editions not consulted.",
+  "quality": "research",
+  "script_type": "alphabet",
+  "sources": [
+    {
+      "id": "wiese1996",
+      "author": "Wiese, R.",
+      "year": 1996,
+      "title": "The Phonology of German",
+      "publisher": "Oxford University Press",
+      "url": null,
+      "pages": null,
+      "notes": null,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/German_phonology"
+    },
+    {
+      "id": "russ1994",
+      "author": "Russ, C.",
+      "year": 1994,
+      "title": "The Dialects of Modern German",
+      "publisher": "Routledge",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "haas2000",
+      "author": "Haas, W.",
+      "year": 2000,
+      "title": "Die deutschsprachige Schweiz",
+      "publisher": "Sauerländer",
+      "url": null,
+      "pages": null,
+      "notes": "In H. Bickel & R. Schläpfer (eds.), Die viersprachige Schweiz, Aarau; edition not consulted."
+    },
+    {
+      "id": "dieth1938",
+      "author": "Dieth, E.",
+      "year": 1938,
+      "title": "Schwyzertütschi Dialäktschrift",
+      "publisher": "Orell Füssli",
+      "url": null,
+      "pages": null,
+      "notes": "The doubling orthography this spec's vowel-length and fortis/lenis grapheme entries follow; consulted via de.wikipedia, \"Dieth-Schreibung\"."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Alemannic_German",
+    "https://de.wikipedia.org/wiki/Alemannische_Dialekte",
+    "https://als.wikipedia.org/wiki/Alemannisch"
+  ],
+  "timespan": {
+    "start_year": 1000,
+    "end_year": null
+  },
+  "glottolog_code": "alem1243",
+  "iso639_3": "gsw",
+  "wikidata_qid": "Q131339",
+  "wals_code": "gos",
+  "location": {
+    "latitude": 47.631173,
+    "longitude": 9.405268,
+    "source": "glottolog",
+    "notes": "Glottolog's computed centroid for the Alemannic family — a summary of a whole clade's range, not a place anyone speaks."
+  },
+  "graphemes": {
+    "ch": [
+      "x",
+      "χ"
+    ],
+    "k": [
+      "kx",
+      "k"
+    ],
+    "ck": [
+      "kx",
+      "k"
+    ],
+    "s": [
+      "s"
+    ],
+    "ss": [
+      "sː",
+      "s"
+    ],
+    "z": [
+      "ts"
+    ],
+    "w": [
+      "v",
+      "ʋ"
+    ],
+    "gg": [
+      "k",
+      "kː"
+    ],
+    "r": [
+      "r"
+    ],
+    "aa": [
+      "ɑː"
+    ],
+    "ee": [
+      "eː"
+    ],
+    "ii": [
+      "iː"
+    ],
+    "oo": [
+      "oː"
+    ],
+    "uu": [
+      "uː"
+    ],
+    "ää": [
+      "æː"
+    ],
+    "öö": [
+      "øː"
+    ],
+    "üü": [
+      "yː"
+    ],
+    "yy": [
+      "iː"
+    ],
+    "y": [
+      "iː"
+    ],
+    "a": [
+      "ɑ",
+      "a"
+    ],
+    "i": [
+      "i"
+    ],
+    "o": [
+      "o"
+    ],
+    "u": [
+      "u"
+    ],
+    "ä": [
+      "æ",
+      "ɛ"
+    ],
+    "ö": [
+      "ø"
+    ],
+    "ü": [
+      "y"
+    ],
+    "ue": [
+      "uə"
+    ],
+    "ie": [
+      "iə"
+    ],
+    "üe": [
+      "yə"
+    ],
+    "nk": [
+      "ŋkx",
+      "ŋk"
+    ],
+    "ll": [
+      "l"
+    ],
+    "mm": [
+      "m"
+    ],
+    "nn": [
+      "n"
+    ],
+    "rr": [
+      "r"
+    ]
+  },
+  "positional_graphemes_base": "de-CH",
+  "positional_graphemes": {
+    "ch": {
+      "word_initial": [
+        "x",
+        "χ"
+      ],
+      "after_a": [
+        "x",
+        "χ"
+      ],
+      "after_o": [
+        "x",
+        "χ"
+      ],
+      "after_u": [
+        "x",
+        "χ"
+      ],
+      "after_e": [
+        "x",
+        "χ"
+      ],
+      "after_i": [
+        "x",
+        "χ"
+      ],
+      "after_vowel": [
+        "x",
+        "χ"
+      ],
+      "default": [
+        "x",
+        "χ"
+      ]
+    },
+    "s": {
+      "word_initial": [
+        "s"
+      ],
+      "intervocalic": [
+        "s"
+      ],
+      "word_final": [
+        "s"
+      ],
+      "default": [
+        "s"
+      ]
+    },
+    "er": {
+      "word_final": [
+        "ər"
+      ],
+      "default": [
+        "ər"
+      ]
+    },
+    "e": {
+      "nucleus_unstressed": [
+        "ə"
+      ],
+      "nucleus_stressed": [
+        "e",
+        "ɛ"
+      ],
+      "default": [
+        "ə",
+        "e",
+        "ɛ"
+      ]
+    }
+  }
+}

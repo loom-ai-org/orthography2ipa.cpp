@@ -1,0 +1,105 @@
+{
+  "code": "ltc",
+  "name": "Middle Chinese",
+  "script": "Latin",
+  "graphemes": {
+    "a": [
+      "a"
+    ],
+    "i": [
+      "i"
+    ],
+    "u": [
+      "u"
+    ],
+    "e": [
+      "e"
+    ],
+    "o": [
+      "o"
+    ],
+    "p": [
+      "p"
+    ],
+    "t": [
+      "t"
+    ],
+    "k": [
+      "k"
+    ],
+    "b": [
+      "b"
+    ],
+    "d": [
+      "d"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "s": [
+      "s"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "l": [
+      "l"
+    ],
+    "r": [
+      "r"
+    ],
+    "w": [
+      "w"
+    ],
+    "j": [
+      "j"
+    ],
+    "h": [
+      "h"
+    ]
+  },
+  "allophones": {},
+  "notes": "STRUCTURAL ANCESTRY NODE (not a modelled G2P target). Middle Chinese (c. 600 CE, Qieyun) is the ancestor of the modern Sinitic varieties and the SOURCE of the Sino-Xenic literary borrowings in Japanese (kango), Korean (hanja) and Vietnamese (Sino-Vietnamese). It exists here only so the ancestry / phylogenetic-distance metrics of the modern varieties that reference it have a node to resolve to; NO phonology is claimed or reconstructed and the minimal grapheme set is a placeholder (afa.json / trk.json stub pattern).",
+  "quality": "stub",
+  "script_type": "alphabet",
+  "iso639_3": "ltc",
+  "glottolog_code": "midd1344",
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Middle_Chinese"
+  ],
+  "urls": [
+    "https://glottolog.org/resource/languoid/id/midd1344"
+  ],
+  "sources": [
+    {
+      "id": "pulleyblank1984",
+      "author": "Pulleyblank, E. G.",
+      "year": 1984,
+      "title": "Middle Chinese: A Study in Historical Phonology",
+      "publisher": "UBC Press",
+      "url": null,
+      "pages": null,
+      "notes": "Reference for Middle Chinese and Sino-Xenic strata (ancestry node only).",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Middle_Chinese"
+    }
+  ],
+  "parent": "och",
+  "ancestors": [
+    {
+      "code": "och",
+      "role": "parent",
+      "weight": 0.9,
+      "notes": "Descent from Old Chinese."
+    }
+  ],
+  "wikidata_qid": "Q2016252",
+  "location": {
+    "latitude": 34.27,
+    "longitude": 108.9,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Middle Chinese."
+  }
+}

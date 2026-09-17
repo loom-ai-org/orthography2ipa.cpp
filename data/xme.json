@@ -1,0 +1,50 @@
+{
+  "code": "xme",
+  "name": "Median",
+  "script": "Unattested",
+  "script_type": "reconstruction",
+  "quality": "stub",
+  "graphemes": {},
+  "parent": "x-clade-iran1269",
+  "ancestors": [
+    {
+      "code": "x-clade-iran1269",
+      "role": "parent",
+      "weight": 1.0,
+      "notes": "Northwestern Iranian branch of Indo-European; shares phonological isoglosses with Avestan rather than Old Persian (Schmitt 2021, Encyclopaedia Iranica)."
+    }
+  ],
+  "notes": "Stub: no citable grapheme-to-IPA inventory, and no direct attestation exists to source one from. Extinct Iranian language of the Median Empire (1st millennium BCE, western Iran); no Median-language texts survive. Everything known about Median is inferred indirectly from Median loanwords embedded in Old Persian inscriptions and from onomastics preserved in Greek and Elamite sources (Schmitt 2021; Tavernier 2007) -- there is no Median script or orthography to describe. Adding a grapheme table here would fabricate a writing system that never existed for the language; `graphemes` stays empty and `script` records the honest 'Unattested' status rather than borrowing a neighboring script.",
+  "iso639_3": "xme",
+  "glottolog_code": null,
+  "sources": [
+    {
+      "id": "schmitt2021",
+      "author": "Schmitt, Rüdiger",
+      "year": 2021,
+      "title": "Median language",
+      "publisher": "Encyclopaedia Iranica Online",
+      "url": null,
+      "pages": null,
+      "notes": "Standard survey; states nothing is known of Median grammar directly, only isoglosses inferred from loanwords.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Median_language"
+    },
+    {
+      "id": "tavernier2007",
+      "author": "Tavernier, Jan",
+      "year": 2007,
+      "title": "Iranica in the Achaemenid Period",
+      "publisher": "Peeters",
+      "url": null,
+      "pages": null,
+      "notes": "Iranian loanword/onomastic evidence used to reconstruct fragments of Median."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Median_language"
+  ],
+  "timespan": {
+    "start_year": -700,
+    "end_year": -300
+  }
+}

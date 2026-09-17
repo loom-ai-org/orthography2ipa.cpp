@@ -1,0 +1,195 @@
+{
+  "code": "csb",
+  "name": "Kashubian",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "iso639_3": "csb",
+  "glottolog_code": "kash1274",
+  "timespan": {
+    "start_year": 1589,
+    "end_year": null
+  },
+  "graphemes": {
+    "sz": [
+      "ʃ"
+    ],
+    "cz": [
+      "tʃ"
+    ],
+    "rz": [
+      "ʒ"
+    ],
+    "dż": [
+      "dʒ"
+    ],
+    "dz": [
+      "dz"
+    ],
+    "ą": [
+      "ɔ̃"
+    ],
+    "ë": [
+      "ə"
+    ],
+    "é": [
+      "ɛ"
+    ],
+    "ó": [
+      "o"
+    ],
+    "ô": [
+      "ɔ"
+    ],
+    "ù": [
+      "u"
+    ],
+    "a": [
+      "a"
+    ],
+    "b": [
+      "b"
+    ],
+    "c": [
+      "ts"
+    ],
+    "d": [
+      "d"
+    ],
+    "e": [
+      "ɛ"
+    ],
+    "f": [
+      "f"
+    ],
+    "g": [
+      "ɡ"
+    ],
+    "h": [
+      "x"
+    ],
+    "i": [
+      "i"
+    ],
+    "j": [
+      "j"
+    ],
+    "k": [
+      "k"
+    ],
+    "l": [
+      "l"
+    ],
+    "m": [
+      "m"
+    ],
+    "n": [
+      "n"
+    ],
+    "ń": [
+      "ɲ"
+    ],
+    "o": [
+      "ɔ"
+    ],
+    "p": [
+      "p"
+    ],
+    "r": [
+      "r"
+    ],
+    "s": [
+      "s"
+    ],
+    "t": [
+      "t"
+    ],
+    "u": [
+      "u"
+    ],
+    "w": [
+      "v"
+    ],
+    "y": [
+      "ɨ"
+    ],
+    "z": [
+      "z"
+    ],
+    "ł": [
+      "w"
+    ],
+    "ż": [
+      "ʒ"
+    ],
+    "ã": [
+      "ã"
+    ],
+    "ò": [
+      "wɛ"
+    ]
+  },
+  "allophones": {},
+  "positional_graphemes": {},
+  "ancestors": [
+    {
+      "code": "sla",
+      "role": "parent",
+      "weight": 0.88,
+      "notes": "Descent from Proto-Slavic (West Slavic, Lechitic / Pomeranian subgroup)."
+    },
+    {
+      "code": "pl",
+      "role": "related",
+      "weight": 0.6,
+      "notes": "Closely related Lechitic neighbour and roofing standard; sometimes classified as a dialect but has official regional-language status in Poland."
+    },
+    {
+      "code": "de-DE",
+      "role": "adstrate",
+      "weight": 0.14,
+      "notes": "German (Low German) adstrate: centuries under Prussia/Pomerania; very heavy lexical influence."
+    }
+  ],
+  "parent": "x-clade-west2792",
+  "notes": "Kashubian (Kaszëbsczi jãzëk), West Slavic language/dialect spoken in Pomerania, Poland. Official regional language since 2005. Nasal vowel ą /ɔ̃/, schwa ë /ə/. Digraphs sz, cz, rz, dż precede single letters. Significant German loanword influence. Open questions from Hopkins (2001: xi): his table of the official orthography gives ⟨é⟩ = /e/ rather than /ɛ/, and his note 4 makes the grave accent a labial glide onset, so ⟨ù⟩ would be /wu/ rather than the /u/ mapped here.",
+  "sources": [
+    {
+      "id": "wiki-csb",
+      "author": "Wikipedia contributors",
+      "year": 2024,
+      "title": "Kashubian language",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Kashubian_language"
+    },
+    {
+      "id": "hopkins2001",
+      "author": "Hopkins, Paul Stanley",
+      "year": 2001,
+      "title": "The phonological structure of the Kashubian word",
+      "publisher": "University of Victoria (PhD thesis)",
+      "url": "https://dspace.library.uvic.ca/items/3953007f-eb2c-4560-8c93-a003ed8b45be",
+      "pages": "xi",
+      "notes": "The 'Guide to Kashubian Orthography' table maps IPA to the official 1995 orthography; its note 4 states that the grave accent marks a labial glide onset to /o/ and /u/."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Kashubian_language",
+    "https://csb.wikipedia.org/wiki/Kasz%C3%ABbsczi_j%C3%A3z%C3%ABk"
+  ],
+  "stress": {
+    "default_position": -2,
+    "final_stress_endings": [],
+    "penult_stress_endings": [],
+    "marked_vowels": [],
+    "stress_mark": "ˈ",
+    "notes": "Kashubian (csb) generally follows the Polish penultimate stress pattern, though some dialects show initial stress. Diacritics ë é ó ô ù mark vowel quality. Source: Stone (1993), Kashubian; Wikipedia: https://en.wikipedia.org/wiki/Kashubian_language"
+  },
+  "wikidata_qid": "Q33690",
+  "wals_code": "ksu",
+  "location": {
+    "latitude": 54.2996,
+    "longitude": 18.6163,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Kashubian."
+  }
+}
