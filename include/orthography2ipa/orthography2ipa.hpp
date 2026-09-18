@@ -90,6 +90,12 @@ struct PhonologicalDistance {
     double allophone_sim{}, combined{};
 };
 
+struct PluginAnswer {
+    std::string name;
+    int priority = 0;
+    bool selected = false;
+};
+
 class Tokenizer {
 public:
     explicit Tokenizer(const LanguageSpec& spec);
@@ -106,6 +112,7 @@ public:
     explicit G2P(std::string language, std::map<std::string, std::vector<std::string>> plugin_overrides = {},
                  std::string dialect_profile = "");
     const LanguageSpec& spec() const;
+    const std::map<std::string, std::vector<std::string>>& plugin_overrides() const;
     std::string transcribe(const std::string& text, const std::string& search = "greedy",
                            std::size_t beam_width = 8) const;
     TranscriptionResult transcribe_detailed(const std::string& text,
@@ -171,6 +178,7 @@ std::string resolve(const std::string& code);
 const LanguageSpec& get(const std::string& code);
 std::vector<std::string> available_codes(bool include_clades = false);
 std::map<std::string, std::vector<std::string>> available_families();
+std::map<std::string, std::vector<PluginAnswer>> who_answers(const std::string& code);
 void set_data_directory(const std::string& path);
 
 void register_lexicon(const std::string& code, const std::string& source);

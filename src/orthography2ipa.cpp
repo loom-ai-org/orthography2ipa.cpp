@@ -529,14 +529,30 @@ std::vector<std::string> fallback_syllables(const std::string& word) {
     return result;
 }
 
-std::vector<std::string> syllables_for(const std::string& word, const std::string& language) {
+std::vector<std::string> syllables_for(const std::string& word, const std::string& language,
+                                       const std::vector<std::string>& requested = {}) {
     const SyllabifierPlugin* selected = nullptr;
-    for (const auto& [_, plugin] : syllabifier_plugins)
-        if (owns_language(*plugin, language) && (!selected || plugin->priority() > selected->priority())) selected = plugin.get();
+    if (!requested.empty()) {
+        for (const auto& name : requested) {
+            auto it = syllabifier_plugins.find(name);
+            if (it == syllabifier_plugins.end())
+                throw std::runtime_error("missing syllabify plugin: " + name + "; installed: " +
+                                         (syllabifier_plugins.empty() ? std::string("(none)") :
+                                          [&] { std::string names; for (const auto& p : syllabifier_plugins) { if (!names.empty()) names += ", "; names += p.first; } return names; }()));
+            if (!owns_language(*it->second, language))
+                throw std::runtime_error("syllabify plugin does not own language " + language + ": " + name);
+            if (!selected || it->second->priority() > selected->priority()) selected = it->second.get();
+        }
+    } else {
+        for (const auto& [_, plugin] : syllabifier_plugins)
+            if (owns_language(*plugin, language) && (!selected || plugin->priority() > selected->priority())) selected = plugin.get();
+    }
     if (selected) {
         auto result = selected->syllabify(word, language);
         std::string joined; for (const auto& syllable : result) joined += syllable;
         if (joined != word) throw std::runtime_error("syllabifier plugin returned a non-round-tripping result");
+        const auto again = selected->syllabify(word, language);
+        if (again != result) throw std::runtime_error("syllabify plugin returned non-deterministic output");
         return result;
     }
     return fallback_syllables(word);
@@ -732,6 +748,38 @@ std::vector<std::string> segment_ipa(const std::string& ipa, std::vector<std::st
         result.push_back(ipa.substr(i, end - i)); i = end;
     }
     return result;
+}
+
+bool same_paths(const std::vector<IPAPath>& a, const std::vector<IPAPath>& b) {
+    if (a.size() != b.size()) return false;
+    for (std::size_t i = 0; i < a.size(); ++i)
+        if (a[i].ipa != b[i].ipa || a[i].score != b[i].score ||
+            a[i].graphemes != b[i].graphemes || a[i].segments != b[i].segments) return false;
+    return true;
+}
+
+void validate_rescorer_output(const std::vector<IPAPath>& paths, const LanguageSpec& spec,
+                              const std::string& name) {
+    if (paths.empty()) throw std::runtime_error("rescore plugin returned no candidates: " + name);
+    const auto declared = inventory(spec);
+    const std::vector<std::string> atoms(declared.begin(), declared.end());
+    for (const auto& path : paths) {
+        for (const auto& segment : segment_ipa(path.ipa, atoms)) {
+            if (segment == "ˈ" || segment == "ˌ" || segment == "ː" || segment == "ˑ") continue;
+            bool known = declared.count(segment) != 0;
+            if (!known) for (const auto& atom : atoms) {
+                if (segment.rfind(atom, 0) != 0) continue;
+                known = true;
+                for (std::size_t offset = atom.size(); offset < segment.size();) {
+                    if (!ipa_modifier(segment, offset)) { known = false; break; }
+                    offset += utf8_char_size(segment, offset);
+                }
+                if (known) break;
+            }
+            if (!known)
+                throw std::runtime_error("rescore plugin emitted undeclared IPA " + segment + ": " + name);
+        }
+    }
 }
 
 std::string apply_allophony(const LanguageSpec& spec, IPAPath& path) {
@@ -1071,11 +1119,11 @@ std::vector<std::pair<std::size_t, std::string>> validate_lexicon(const std::str
     }
     return errors;
 }
-void register_normalize_plugin(const std::string& name, std::shared_ptr<NormalizePlugin> plugin) { normalize_plugins[name] = std::move(plugin); }
-void register_syllabifier_plugin(const std::string& name, std::shared_ptr<SyllabifierPlugin> plugin) { syllabifier_plugins[name] = std::move(plugin); }
-void register_stress_plugin(const std::string& name, std::shared_ptr<StressPlugin> plugin) { stress_plugins[name] = std::move(plugin); }
-void register_rescorer_plugin(const std::string& name, std::shared_ptr<RescorerPlugin> plugin) { rescorer_plugins[name] = std::move(plugin); }
-void register_sandhi_plugin(const std::string& name, std::shared_ptr<SandhiPlugin> plugin) { sandhi_plugins[name] = std::move(plugin); }
+void register_normalize_plugin(const std::string& name, std::shared_ptr<NormalizePlugin> plugin) { if (name.empty() || !plugin) throw std::invalid_argument("normalize plugin name and instance are required"); normalize_plugins[name] = std::move(plugin); }
+void register_syllabifier_plugin(const std::string& name, std::shared_ptr<SyllabifierPlugin> plugin) { if (name.empty() || !plugin) throw std::invalid_argument("syllabify plugin name and instance are required"); syllabifier_plugins[name] = std::move(plugin); }
+void register_stress_plugin(const std::string& name, std::shared_ptr<StressPlugin> plugin) { if (name.empty() || !plugin) throw std::invalid_argument("stress plugin name and instance are required"); stress_plugins[name] = std::move(plugin); }
+void register_rescorer_plugin(const std::string& name, std::shared_ptr<RescorerPlugin> plugin) { if (name.empty() || !plugin) throw std::invalid_argument("rescore plugin name and instance are required"); rescorer_plugins[name] = std::move(plugin); }
+void register_sandhi_plugin(const std::string& name, std::shared_ptr<SandhiPlugin> plugin) { if (name.empty() || !plugin) throw std::invalid_argument("sandhi plugin name and instance are required"); sandhi_plugins[name] = std::move(plugin); }
 void discover_plugins(const std::string& directory) {
     const char* env = std::getenv("ORTHOGRAPHY2IPA_PLUGIN_DIR");
     const fs::path dir = directory.empty() ? fs::path(env ? env : "") : fs::path(directory);
@@ -1107,6 +1155,27 @@ std::map<std::string, std::vector<std::string>> available_families() {
     for (const auto& [code, spec] : cache) if (!spec.clade) result[spec.family].push_back(code);
     return result;
 }
+std::map<std::string, std::vector<PluginAnswer>> who_answers(const std::string& code) {
+    const auto language = resolve(code);
+    std::map<std::string, std::vector<PluginAnswer>> result;
+    auto add = [&](const auto& plugins, const std::string& stage, auto priority) {
+        for (const auto& [name, plugin] : plugins)
+            if (owns_language(*plugin, language)) result[stage].push_back({name, priority(*plugin), false});
+        auto& answers = result[stage];
+        std::sort(answers.begin(), answers.end(), [](const auto& a, const auto& b) {
+            if (a.priority != b.priority) return a.priority > b.priority;
+            return a.name < b.name;
+        });
+        if (answers.empty()) answers.push_back({"built-in", 0, true});
+        else answers.front().selected = true;
+    };
+    add(normalize_plugins, "normalize", [](const auto&) { return 50; });
+    add(syllabifier_plugins, "syllabify", [](const auto& plugin) { return plugin.priority(); });
+    add(stress_plugins, "stress", [](const auto& plugin) { return plugin.priority(); });
+    add(rescorer_plugins, "rescore", [](const auto& plugin) { return plugin.priority(); });
+    add(sandhi_plugins, "sandhi", [](const auto&) { return 50; });
+    return result;
+}
 std::string transcribe(const std::string& text, const std::string& language) { return G2P(language).transcribe(text); }
 std::string apply_dialect_transform(const std::string& ipa, const std::string& profile,
                                     const std::string& orthography) {
@@ -1127,8 +1196,16 @@ G2P::G2P(std::string language, std::map<std::string, std::vector<std::string>> p
     std::call_once(discovery_once, [] { discover_plugins(); });
     if (!dialect_profile_.empty() && !dialect_profile_known(dialect_profile_))
         throw std::invalid_argument("unknown dialect profile: " + dialect_profile_);
+    for (const auto& [stage, names] : plugin_overrides_) {
+        if (stage != "normalize" && stage != "syllabify" && stage != "stress" &&
+            stage != "rescore" && stage != "sandhi")
+            throw std::invalid_argument("unknown plugin stage: " + stage);
+        if (std::any_of(names.begin(), names.end(), [](const auto& name) { return name.empty(); }))
+            throw std::invalid_argument("plugin names cannot be empty: " + stage);
+    }
 }
 const LanguageSpec& G2P::spec() const { return *spec_; }
+const std::map<std::string, std::vector<std::string>>& G2P::plugin_overrides() const { return plugin_overrides_; }
 std::vector<IPAPath> G2P::candidates(const std::string& word, std::size_t width) const { return Tokenizer(*spec_).beam(word, width); }
 double G2P::word_confidence(const std::string& word, std::size_t width) const {
     if (spec_->word_exceptions.count(lower_ascii(word)) || load_lexicon(language_).count(unicode_fold_nfc(word))) return 1.0;
@@ -1137,10 +1214,32 @@ double G2P::word_confidence(const std::string& word, std::size_t width) const {
 TranscriptionResult G2P::transcribe_detailed(const std::string& text, const std::string& search, std::size_t width) const {
     if (search != "greedy" && search != "beam") throw std::invalid_argument("search must be greedy or beam");
     auto stage = [&](const std::string& name) -> const std::vector<std::string>& { auto it = plugin_overrides_.find(name); return it == plugin_overrides_.end() ? plugin_names(*spec_, name) : it->second; };
+    auto validate_stage = [&](const std::string& name, const auto& plugins) {
+        for (const auto& plugin_name : stage(name)) {
+            auto plugin = plugins.find(plugin_name);
+            if (plugin == plugins.end())
+                throw std::runtime_error("missing " + name + " plugin: " + plugin_name);
+            if (!owns_language(*plugin->second, language_))
+                throw std::runtime_error(name + " plugin does not own language " + language_ + ": " + plugin_name);
+        }
+    };
+    validate_stage("normalize", normalize_plugins);
+    validate_stage("syllabify", syllabifier_plugins);
+    validate_stage("stress", stress_plugins);
+    validate_stage("rescore", rescorer_plugins);
+    validate_stage("sandhi", sandhi_plugins);
     TranscriptionResult result; result.lang = language_; std::vector<std::string> surfaces, ipa_words; std::vector<bool> pausal;
     std::vector<IPAPath> stress_paths; std::vector<std::optional<std::size_t>> forced_stress;
     auto normalize = [&](std::string value) {
-        for (const auto& name : stage("normalize")) { auto it = normalize_plugins.find(name); if (it == normalize_plugins.end()) throw std::runtime_error("missing normalize plugin: " + name); if (!owns_language(*it->second, language_)) throw std::runtime_error("normalize plugin does not own language " + language_ + ": " + name); value = it->second->normalize(value, language_); }
+        for (const auto& name : stage("normalize")) {
+            auto it = normalize_plugins.find(name);
+            if (it == normalize_plugins.end()) throw std::runtime_error("missing normalize plugin: " + name);
+            if (!owns_language(*it->second, language_)) throw std::runtime_error("normalize plugin does not own language " + language_ + ": " + name);
+            const auto normalized = it->second->normalize(value, language_);
+            if (it->second->normalize(value, language_) != normalized)
+                throw std::runtime_error("normalize plugin returned non-deterministic output: " + name);
+            value = normalized;
+        }
         return value;
     };
     const auto input_words = parse_input(text, normalize);
@@ -1163,7 +1262,16 @@ TranscriptionResult G2P::transcribe_detailed(const std::string& text, const std:
             const auto x = rescorer_plugins.find(a), y = rescorer_plugins.find(b);
             return x != rescorer_plugins.end() && y != rescorer_plugins.end() && x->second->priority() > y->second->priority();
         });
-        for (const auto& name : ordered_rescorers) { auto p = rescorer_plugins.find(name); if (p == rescorer_plugins.end()) throw std::runtime_error("missing rescore plugin: " + name); if (!owns_language(*p->second, language_)) throw std::runtime_error("rescore plugin does not own language " + language_ + ": " + name); paths = p->second->rescore(word, language_, paths); }
+        for (const auto& name : ordered_rescorers) {
+            auto p = rescorer_plugins.find(name);
+            if (p == rescorer_plugins.end()) throw std::runtime_error("missing rescore plugin: " + name);
+            if (!owns_language(*p->second, language_)) throw std::runtime_error("rescore plugin does not own language " + language_ + ": " + name);
+            const auto rescored = p->second->rescore(word, language_, paths);
+            if (!same_paths(rescored, p->second->rescore(word, language_, paths)))
+                throw std::runtime_error("rescore plugin returned non-deterministic output: " + name);
+            validate_rescorer_output(rescored, *spec_, name);
+            paths = rescored;
+        }
         wt.ipa = paths.front().ipa;
         std::optional<std::size_t> plugin_stress;
         auto stress_names = stage("stress"); std::vector<std::string> ordered_stress(stress_names.begin(), stress_names.end());
@@ -1172,11 +1280,15 @@ TranscriptionResult G2P::transcribe_detailed(const std::string& text, const std:
             return x != stress_plugins.end() && y != stress_plugins.end() && x->second->priority() > y->second->priority();
         });
         if (!ordered_stress.empty()) {
-            auto syllables = syllables_for(word, language_);
+            auto syllables = syllables_for(word, language_, stage("syllabify"));
             auto plugin = stress_plugins.find(ordered_stress.front());
             if (plugin == stress_plugins.end()) throw std::runtime_error("missing stress plugin: " + ordered_stress.front());
             if (!owns_language(*plugin->second, language_)) throw std::runtime_error("stress plugin does not own language " + language_ + ": " + ordered_stress.front());
             plugin_stress = plugin->second->stressed_index(word, syllables, language_);
+            if (plugin->second->stressed_index(word, syllables, language_) != plugin_stress)
+                throw std::runtime_error("stress plugin returned non-deterministic output: " + ordered_stress.front());
+            if (plugin_stress && *plugin_stress >= syllables.size())
+                throw std::runtime_error("stress plugin returned an out-of-range syllable: " + ordered_stress.front());
         }
         stress_paths.push_back({wt.ipa, paths.front().score, paths.front().graphemes, paths.front().segments});
         forced_stress.push_back(plugin_stress);
@@ -1184,7 +1296,16 @@ TranscriptionResult G2P::transcribe_detailed(const std::string& text, const std:
         result.words.push_back(wt); surfaces.push_back(word); ipa_words.push_back(wt.ipa); pausal.push_back(input.pausal);
     }
     ipa_words = apply_sandhi(*spec_, std::move(ipa_words), pausal);
-    for (const auto& name : stage("sandhi")) { auto p = sandhi_plugins.find(name); if (p == sandhi_plugins.end()) throw std::runtime_error("missing sandhi plugin: " + name); if (!owns_language(*p->second, language_)) throw std::runtime_error("sandhi plugin does not own language " + language_ + ": " + name); ipa_words = p->second->apply(ipa_words, surfaces, pausal, language_); }
+    for (const auto& name : stage("sandhi")) {
+        auto p = sandhi_plugins.find(name);
+        if (p == sandhi_plugins.end()) throw std::runtime_error("missing sandhi plugin: " + name);
+        if (!owns_language(*p->second, language_)) throw std::runtime_error("sandhi plugin does not own language " + language_ + ": " + name);
+        const auto transformed = p->second->apply(ipa_words, surfaces, pausal, language_);
+        if (transformed.size() != ipa_words.size()) throw std::runtime_error("sandhi plugin changed word count: " + name);
+        if (p->second->apply(ipa_words, surfaces, pausal, language_) != transformed)
+            throw std::runtime_error("sandhi plugin returned non-deterministic output: " + name);
+        ipa_words = transformed;
+    }
     for (std::size_t i = 0; i < ipa_words.size(); ++i) {
         if (!stress_paths[i].graphemes.empty())
             ipa_words[i] = add_stress(*spec_, surfaces[i], IPAPath{ipa_words[i], stress_paths[i].score, stress_paths[i].graphemes, stress_paths[i].segments}, forced_stress[i]);

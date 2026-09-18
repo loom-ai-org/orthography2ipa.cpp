@@ -46,6 +46,7 @@ auto spec = orthography2ipa::get("en-GB");
 The native port covers registry/spec loading, aliases, maximal-munch tokenization,
 candidate beams, basic stress placement, detailed transcription, sidecar lexicons,
 declarative allophone rules, and registered normalize/rescore/sandhi plugin hooks.
-Plugin classes are declared in the public header and are selected by the JSON
-`plugins` field. Remote URL/Hugging Face lexicon fetching and the most advanced
-Python allophone contexts remain future work.
+Plugin classes are declared in the public header and can be selected by the JSON
+`plugins` field or explicit caller overrides. Runtime conformance checks and
+`who_answers()` introspection are also available. Remote URL/Hugging Face lexicon
+fetching and the most advanced Python allophone contexts remain future work.
