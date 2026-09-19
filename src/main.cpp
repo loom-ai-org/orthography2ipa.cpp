@@ -5,7 +5,7 @@
 using namespace orthography2ipa;
 
 static void usage() {
-    std::cerr << "usage: orthography2ipa [--data DIR] <list|info|transcribe|distance> ...\n";
+    std::cerr << "usage: orthography2ipa [--data DIR] <list|info|validate|transcribe|distance> ...\n";
 }
 
 int main(int argc, char** argv) {
@@ -34,6 +34,13 @@ int main(int argc, char** argv) {
                       << "Graphemes: " << s.graphemes.size() << "\nAllophones: "
                       << s.allophones.size() << "\n";
             return 0;
+        }
+        if (command == "validate") {
+            if (i >= argc) { usage(); return 2; }
+            const auto errors = validate(argv[i]);
+            if (errors.empty()) { std::cout << "valid\n"; return 0; }
+            for (const auto& error : errors) std::cout << error << "\n";
+            return 1;
         }
         if (command == "transcribe" && i + 1 < argc) {
             const std::string code = argv[i++];

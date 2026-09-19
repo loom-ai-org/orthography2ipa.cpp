@@ -196,6 +196,53 @@ std::vector<SandhiRule> overlay_sandhi(const std::vector<SandhiRule>& base,
     return result;
 }
 
+std::vector<AllophoneRule> overlay_allophone(const std::vector<AllophoneRule>& base,
+                                             const std::vector<AllophoneRule>& own) {
+    auto result = base;
+    for (const auto& rule : own) {
+        if (rule.id.empty()) { result.push_back(rule); continue; }
+        auto it = std::find_if(result.begin(), result.end(), [&](const auto& inherited) { return inherited.id == rule.id; });
+        if (it == result.end()) result.push_back(rule); else *it = rule;
+    }
+    return result;
+}
+
+template <typename T>
+std::optional<T> optional_value(const ptree& p, const std::string& key) {
+    return p.get_optional<T>(key);
+}
+
+std::vector<LinguisticSource> parse_sources(const ptree& p) {
+    std::vector<LinguisticSource> out;
+    if (auto values = p.get_child_optional("sources")) for (const auto& item : *values) {
+        const auto& v = item.second; LinguisticSource source;
+        source.id = v.get<std::string>("id", ""); source.author = v.get<std::string>("author", "");
+        source.year = v.get<int>("year", 0); source.title = v.get<std::string>("title", "");
+        source.publisher = v.get<std::string>("publisher", ""); source.url = v.get<std::string>("url", "");
+        source.doi = v.get<std::string>("doi", ""); source.wikipedia_url = v.get<std::string>("wikipedia_url", "");
+        source.pages = v.get<std::string>("pages", ""); source.notes = v.get<std::string>("notes", ""); out.push_back(std::move(source));
+    }
+    return out;
+}
+
+std::vector<OrthographyStandard> parse_orthography_standards(const ptree& p) {
+    std::vector<OrthographyStandard> out; auto values = p.get_child_optional("orthography_standard");
+    if (!values) return out;
+    if (values->empty()) { out.push_back({values->data(), "", "", "", 0}); return out; }
+    for (const auto& item : *values) {
+        const auto& v = item.second; OrthographyStandard standard;
+        standard.name = v.get<std::string>("name", v.data()); standard.authority = v.get<std::string>("authority", "");
+        standard.year = v.get<int>("year", 0); standard.url = v.get<std::string>("url", "");
+        standard.notes = v.get<std::string>("notes", ""); out.push_back(std::move(standard));
+    }
+    return out;
+}
+
+std::vector<std::string> optional_list(const ptree& p, const std::string& key) {
+    if (auto child = p.get_child_optional(key)) return string_or_list(*child);
+    return {};
+}
+
 std::map<std::string, std::vector<std::string>> ipa_map(const ptree& p, const std::string& key) {
     std::map<std::string, std::vector<std::string>> result;
     auto child = p.get_child_optional(key);
@@ -238,6 +285,15 @@ LanguageSpec load_raw(const std::string& code, std::set<std::string>& loading) {
     LanguageSpec s;
     s.code = raw.get<std::string>("code", code);
     s.name = raw.get<std::string>("name", s.code);
+    s.notes = raw.get<std::string>("notes", "");
+    s.glottolog_code = raw.get<std::string>("glottolog_code", ""); s.iso639_3 = raw.get<std::string>("iso639_3", "");
+    s.wikidata_qid = raw.get<std::string>("wikidata_qid", ""); s.phoible_id = raw.get<std::string>("phoible_id", "");
+    s.wals_code = raw.get<std::string>("wals_code", ""); s.sources = parse_sources(raw);
+    s.orthography_standards = parse_orthography_standards(raw);
+    s.wikipedia = optional_list(raw, "wikipedia"); s.urls = optional_list(raw, "urls");
+    s.optional_marks = optional_list(raw, "optional_marks");
+    for (const auto& key : {"glottolog_code", "iso639_3", "wikidata_qid", "phoible_id", "wals_code"})
+        if (auto value = raw.get_optional<std::string>(key)) s.identifiers[key] = *value;
     s.script = raw.get<std::string>("script", "");
     s.script_type = raw.get<std::string>("script_type", "alphabet");
     s.inherent_vowel = raw.get<std::string>("inherent_vowel", "");
@@ -270,6 +326,20 @@ LanguageSpec load_raw(const std::string& code, std::set<std::string>& loading) {
     }
     if (auto loc = raw.get_child_optional("location")) {
         s.latitude = loc->get<double>("latitude", 0); s.longitude = loc->get<double>("longitude", 0);
+        s.location = Location{*s.latitude, *s.longitude, loc->get<std::string>("source", ""), loc->get<std::string>("notes", "")};
+    }
+    if (auto timespan = raw.get_child_optional("timespan")) {
+        TimeSpan value; value.start_year = timespan->get<int>("start_year", 0);
+        if (auto end = timespan->get_optional<int>("end_year")) value.end_year = *end;
+        s.timespan = value;
+    }
+    if (auto tone = raw.get_child_optional("tone_inventory")) {
+        ToneData value; value.no_mark = raw.get<std::string>("tone_rules.no_mark", "none");
+        value.notes = raw.get<std::string>("tone_rules.notes", "");
+        if (auto classes = tone->get_child_optional("classes")) for (const auto& x : *classes) value.classes[x.first] = x.second.data();
+        if (auto marks = tone->get_child_optional("marks")) for (const auto& x : *marks) value.marks[x.first] = x.second.data();
+        if (auto tones = tone->get_child_optional("tones")) for (const auto& x : *tones) value.tones[x.first] = x.second.data();
+        value.dead_codas = optional_list(*tone, "dead_codas"); s.tone = value;
     }
     if (auto ex = raw.get_child_optional("word_exceptions"))
         for (const auto& x : *ex) s.word_exceptions[x.first] = x.second.data();
@@ -309,7 +379,7 @@ LanguageSpec load_raw(const std::string& code, std::set<std::string>& loading) {
         const std::string positional_base = raw.get<std::string>("positional_graphemes_base", "");
         if (!positional_base.empty() && positional_base != code)
             merge_positional(s.positional_graphemes, load_raw(positional_base, loading).positional_graphemes);
-        if (s.allophone_rules.empty()) s.allophone_rules = b.allophone_rules;
+        s.allophone_rules = overlay_allophone(b.allophone_rules, s.allophone_rules);
         s.sandhi_rules = overlay_sandhi(b.sandhi_rules, s.sandhi_rules);
         for (const auto& [stage, names] : b.plugins) if (!s.plugins.count(stage)) s.plugins[stage] = names;
         if (!raw.get_child_optional("stress") && s.default_stress_position == -2) {
@@ -329,14 +399,36 @@ LanguageSpec load_raw(const std::string& code, std::set<std::string>& loading) {
     if (!allo_base.empty() && allo_base != code) {
         LanguageSpec b = load_raw(allo_base, loading);
         for (const auto& x : b.allophones) if (!s.allophones.count(x.first)) s.allophones[x.first] = x.second;
+        s.allophone_rules = overlay_allophone(b.allophone_rules, s.allophone_rules);
+        s.sandhi_rules = overlay_sandhi(b.sandhi_rules, s.sandhi_rules);
     }
     if (!endings_base.empty() && endings_base != code) {
         LanguageSpec b = load_raw(endings_base, loading);
         for (const auto& [ending, values] : b.grammatical_endings)
             if (!s.grammatical_endings.count(ending)) s.grammatical_endings[ending] = values;
     }
-    if (s.family.empty() && !s.parent.empty() && s.parent != code) {
-        try { s.family = load_raw(s.parent, loading).family; } catch (...) {}
+    if (base.empty() && !s.parent.empty() && s.parent != code) {
+        LanguageSpec ancestor = load_raw(s.parent, loading);
+        std::set<std::string> seen{code, s.parent};
+        while (ancestor.clade && !ancestor.parent.empty() && !seen.count(ancestor.parent)) {
+            seen.insert(ancestor.parent); ancestor = load_raw(ancestor.parent, loading);
+        }
+        for (const auto& x : ancestor.graphemes) if (!s.graphemes.count(x.first)) s.graphemes[x.first] = x.second;
+        for (const auto& x : ancestor.allophones) if (!s.allophones.count(x.first)) s.allophones[x.first] = x.second;
+        merge_positional(s.positional_graphemes, ancestor.positional_graphemes);
+        s.allophone_rules = overlay_allophone(ancestor.allophone_rules, s.allophone_rules);
+        s.sandhi_rules = overlay_sandhi(ancestor.sandhi_rules, s.sandhi_rules);
+    }
+    if (!s.parent.empty() && s.parent != code) {
+        std::vector<std::string> path; std::set<std::string> seen{code}; std::string ancestor = s.parent;
+        while (!ancestor.empty() && !seen.count(ancestor)) {
+            seen.insert(ancestor); LanguageSpec a = load_raw(ancestor, loading);
+            if (a.clade && !a.name.empty()) path.push_back(a.name);
+            ancestor = a.parent;
+        }
+        std::reverse(path.begin(), path.end());
+        s.family_path_metadata = path;
+        if (s.family.empty()) for (std::size_t i = 0; i < path.size(); ++i) { if (i) s.family += " > "; s.family += path[i]; }
     }
     loading.erase(code);
     cache[code] = s;
@@ -1010,6 +1102,7 @@ std::string apply_dialect_impl(std::string ipa, const std::string& profile, cons
 }
 
 std::vector<std::string> LanguageSpec::family_path() const {
+    if (!family_path_metadata.empty()) return family_path_metadata;
     std::vector<std::string> out;
     std::stringstream stream(family); std::string part;
     while (std::getline(stream, part, '>')) { if (!part.empty() && part[0] == ' ') part.erase(0, 1); out.push_back(part); }
@@ -1070,10 +1163,20 @@ std::vector<IPAPath> Tokenizer::beam(const std::string& word, std::size_t width)
 }
 
 std::string resolve(const std::string& code) {
-    static const std::map<std::string, std::string> aliases{{"por", "pt-PT"}, {"eng", "en-GB"}, {"spa", "es-ES"}, {"fra", "fr-FR"}, {"deu", "de-DE"}, {"ita", "it-IT"}, {"pt", "pt-PT"}, {"en", "en-GB"}, {"es", "es-ES"}};
-    auto it = aliases.find(code); if (it != aliases.end()) return it->second;
-    for (const auto& c : available_codes(true)) if (lower_ascii(c) == lower_ascii(code)) return c;
-    return code;
+    static const std::map<std::string, std::string> aliases{{"por", "pt-PT"}, {"eng", "en-GB"}, {"spa", "es-ES"}, {"fra", "fr-FR"}, {"deu", "de-DE"}, {"ita", "it-IT"}, {"de", "de-DE"}, {"en", "en-GB"}, {"es", "es-ES"}, {"fr", "fr-FR"}, {"it", "it-IT"}, {"pt", "pt-PT"}, {"ron", "ro-RO"}, {"rus", "ru"}, {"ara", "ar"}, {"fas", "fa"}, {"zho", "zh"}, {"jpn", "ja"}, {"kor", "ko"}, {"cat", "ca"}, {"glg", "gl"}, {"eus", "eu"}, {"tur", "tr"}, {"nld", "nl"}, {"pol", "pl"}, {"ces", "cs"}, {"ell", "el"}};
+    std::string normalized = code; std::replace(normalized.begin(), normalized.end(), '_', '-');
+    if (auto it = aliases.find(lower_ascii(normalized)); it != aliases.end()) return it->second;
+    std::stringstream parts(normalized); std::string part; std::vector<std::string> subtags;
+    while (std::getline(parts, part, '-')) if (!part.empty()) subtags.push_back(part);
+    if (!subtags.empty()) { subtags[0] = lower_ascii(subtags[0]); for (std::size_t i = 1; i < subtags.size(); ++i) subtags[i] = (subtags[i].size() == 2 || (subtags[i].size() == 3 && std::all_of(subtags[i].begin(), subtags[i].end(), ::isdigit))) ? [&] { std::string x = subtags[i]; for (char& c : x) c = static_cast<char>(std::toupper(static_cast<unsigned char>(c))); return x; }() : lower_ascii(subtags[i]); }
+    normalized.clear(); for (std::size_t i = 0; i < subtags.size(); ++i) { if (i) normalized += "-"; normalized += subtags[i]; }
+    const auto codes = available_codes(true);
+    for (const auto& c : codes) if (lower_ascii(c) == lower_ascii(normalized)) return c;
+    static const std::map<std::string, std::string> defaults{{"de", "de-DE"}, {"en", "en-GB"}, {"es", "es-ES"}, {"fr", "fr-FR"}, {"it", "it-IT"}, {"pt", "pt-PT"}, {"ro", "ro-RO"}};
+    if (auto it = defaults.find(normalized); it != defaults.end()) return it->second;
+    std::string language = subtags.empty() ? normalized : subtags.front();
+    for (const auto& c : codes) if (lower_ascii(c).rfind(language + "-", 0) == 0 || lower_ascii(c) == language) return c;
+    return normalized;
 }
 const LanguageSpec& get(const std::string& code) {
     const std::string canonical = resolve(code); std::set<std::string> loading; load_raw(canonical, loading); return cache.at(canonical);
@@ -1148,12 +1251,38 @@ std::vector<std::string> available_codes(bool include_clades) {
     std::sort(out.begin(), out.end()); return out;
 }
 std::map<std::string, std::vector<std::string>> available_families() {
-    // Family derivation requires walking ancestry and would force parsing the
-    // entire catalog. Keep this query cheap and report loaded metadata; callers
-    // can load individual specs with get() when they need the full graph.
     std::map<std::string, std::vector<std::string>> result;
-    for (const auto& [code, spec] : cache) if (!spec.clade) result[spec.family].push_back(code);
+    std::map<std::string, ptree> raw_specs;
+    if (!fs::is_directory(data_dir)) return result;
+    for (const auto& entry : fs::directory_iterator(data_dir)) if (entry.path().extension() == ".json") {
+        std::ifstream input(entry.path()); if (!input) continue; ptree raw; boost::property_tree::read_json(input, raw); raw_specs[entry.path().stem().string()] = std::move(raw);
+    }
+    for (const auto& [code, raw] : raw_specs) {
+        if (raw.get<bool>("clade", false)) continue;
+        std::string family = raw.get<std::string>("family", "");
+        if (family.empty()) { std::vector<std::string> path; std::set<std::string> seen{code}; std::string parent = raw.get<std::string>("parent", "");
+            while (!parent.empty() && !seen.count(parent)) { seen.insert(parent); auto it = raw_specs.find(parent); if (it == raw_specs.end()) break; if (it->second.get<bool>("clade", false)) path.push_back(it->second.get<std::string>("name", parent)); parent = it->second.get<std::string>("parent", ""); }
+            std::reverse(path.begin(), path.end()); for (std::size_t i = 0; i < path.size(); ++i) { if (i) family += " > "; family += path[i]; }
+        }
+        result[family].push_back(code);
+    }
+    for (auto& [_, codes] : result) std::sort(codes.begin(), codes.end());
     return result;
+}
+std::vector<std::string> validate(const std::string& code) {
+    std::vector<std::string> errors; const auto canonical = resolve(code);
+    try {
+        const auto& spec = get(canonical);
+        if (spec.code.empty()) errors.push_back("missing code");
+        if (spec.name.empty()) errors.push_back("missing name");
+        if (spec.script_type != "alphabet" && spec.script_type != "abjad" && spec.script_type != "abugida" &&
+            spec.script_type != "syllabary" && spec.script_type != "logographic" && spec.script_type != "featural" &&
+            spec.script_type != "mixed" && spec.script_type != "reconstruction") errors.push_back("invalid script_type: " + spec.script_type);
+        std::set<std::string> ids; for (const auto& rule : spec.allophone_rules) if (!rule.id.empty() && !ids.insert(rule.id).second) errors.push_back("duplicate allophone rule id: " + rule.id);
+        ids.clear(); for (const auto& rule : spec.sandhi_rules) if (!rule.id.empty() && !ids.insert(rule.id).second) errors.push_back("duplicate sandhi rule id: " + rule.id);
+        if (!spec.parent.empty()) { try { get(spec.parent); } catch (const std::exception&) { errors.push_back("missing parent: " + spec.parent); } }
+    } catch (const std::exception& e) { errors.push_back(e.what()); }
+    return errors;
 }
 std::map<std::string, std::vector<PluginAnswer>> who_answers(const std::string& code) {
     const auto language = resolve(code);

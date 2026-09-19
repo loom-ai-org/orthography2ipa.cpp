@@ -34,8 +34,25 @@ struct SandhiRule {
     std::string notes;
 };
 
+struct LinguisticSource {
+    std::string id, author, title, publisher, url, doi, wikipedia_url, pages, notes;
+    int year = 0;
+};
+struct OrthographyStandard {
+    std::string name, authority, url, notes;
+    int year = 0;
+};
+struct TimeSpan { int start_year = 0; std::optional<int> end_year; };
+struct Location { double latitude = 0, longitude = 0; std::string source, notes; };
+struct ToneData {
+    std::map<std::string, std::string> classes, marks, tones;
+    std::vector<std::string> dead_codas;
+    std::string no_mark, notes;
+};
+
 struct LanguageSpec {
     std::string code, name, family, script, parent, quality;
+    std::string glottolog_code, iso639_3, wikidata_qid, phoible_id, wals_code, notes;
     bool clade = false;
     std::map<std::string, std::vector<std::string>> graphemes;
     std::map<std::string, std::vector<std::string>> allophones;
@@ -59,6 +76,13 @@ struct LanguageSpec {
     std::string inherent_vowel, inherent_vowel_final, virama_final_vowel;
     bool coda_no_inherent_vowel = false;
     std::optional<double> latitude, longitude;
+    std::vector<LinguisticSource> sources;
+    std::vector<OrthographyStandard> orthography_standards;
+    std::optional<TimeSpan> timespan;
+    std::optional<Location> location;
+    std::optional<ToneData> tone;
+    std::vector<std::string> optional_marks, wikipedia, urls, family_path_metadata;
+    std::map<std::string, std::string> identifiers;
 
     std::vector<std::string> family_path() const;
 };
@@ -179,6 +203,7 @@ const LanguageSpec& get(const std::string& code);
 std::vector<std::string> available_codes(bool include_clades = false);
 std::map<std::string, std::vector<std::string>> available_families();
 std::map<std::string, std::vector<PluginAnswer>> who_answers(const std::string& code);
+std::vector<std::string> validate(const std::string& code);
 void set_data_directory(const std::string& path);
 
 void register_lexicon(const std::string& code, const std::string& source);
