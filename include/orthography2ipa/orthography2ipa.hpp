@@ -102,6 +102,11 @@ struct TranscriptionResult {
     std::string ipa, lang;
     std::vector<WordTranscription> words;
 };
+struct GraphemeFeature {
+    std::string grapheme, position, previous, next;
+    bool vowel = false, consonant = false;
+    std::vector<std::string> candidates;
+};
 
 struct InventoryDistance {
     double jaccard{}, feature_mean{};
@@ -154,6 +159,8 @@ public:
                                             const std::string& search = "greedy",
                                             std::size_t beam_width = 8) const;
     std::vector<IPAPath> candidates(const std::string& word, std::size_t beam_width = 8) const;
+    std::vector<IPAPath> lattice(const std::string& word, std::size_t beam_width = 8) const;
+    std::vector<GraphemeFeature> features(const std::string& word) const;
     double word_confidence(const std::string& word, std::size_t beam_width = 8) const;
 private:
     std::string language_;

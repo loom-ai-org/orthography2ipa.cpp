@@ -25,7 +25,12 @@ namespace orthography2ipa {
 namespace {
 using boost::property_tree::ptree;
 namespace fs = std::filesystem;
-std::string data_dir = O2I_DEFAULT_DATA_DIR;
+std::string initial_data_directory() {
+    if (const char* override_dir = std::getenv("ORTHOGRAPHY2IPA_DATA_DIR")) return override_dir;
+    if (fs::is_directory(O2I_DEFAULT_DATA_DIR)) return O2I_DEFAULT_DATA_DIR;
+    return O2I_INSTALL_DATA_DIR;
+}
+std::string data_dir = initial_data_directory();
 std::map<std::string, LanguageSpec> cache;
 std::map<std::string, std::string> registered_lexicons;
 std::optional<std::string> lexicon_directory;
@@ -1339,6 +1344,18 @@ G2P::G2P(std::string language, std::map<std::string, std::vector<std::string>> p
 const LanguageSpec& G2P::spec() const { return *spec_; }
 const std::map<std::string, std::vector<std::string>>& G2P::plugin_overrides() const { return plugin_overrides_; }
 std::vector<IPAPath> G2P::candidates(const std::string& word, std::size_t width) const { return Tokenizer(*spec_).beam(word, width); }
+std::vector<IPAPath> G2P::lattice(const std::string& word, std::size_t width) const { return candidates(word, width); }
+std::vector<GraphemeFeature> G2P::features(const std::string& word) const {
+    std::vector<std::string> unmapped; const auto graphemes = Tokenizer(*spec_).tokenize_word(word, &unmapped); std::vector<GraphemeFeature> result;
+    for (std::size_t i = 0; i < graphemes.size(); ++i) {
+        const auto& g = graphemes[i]; const auto it = spec_->graphemes.find(g); const bool vowel = vowel_grapheme(g);
+        GraphemeFeature feature; feature.grapheme = g; feature.position = i == 0 ? "initial" : (i + 1 == graphemes.size() ? "final" : "medial");
+        feature.previous = i ? graphemes[i - 1] : ""; feature.next = i + 1 < graphemes.size() ? graphemes[i + 1] : ""; feature.vowel = vowel; feature.consonant = !vowel;
+        if (it != spec_->graphemes.end()) feature.candidates = it->second;
+        result.push_back(std::move(feature));
+    }
+    return result;
+}
 double G2P::word_confidence(const std::string& word, std::size_t width) const {
     if (spec_->word_exceptions.count(lower_ascii(word)) || load_lexicon(language_).count(unicode_fold_nfc(word))) return 1.0;
     auto paths = candidates(word, width); return paths.size() > 1 ? 1.0 / (1.0 + paths[1].score) : 1.0;
