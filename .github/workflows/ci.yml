@@ -16,7 +16,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Install dependencies
-        run: sudo apt-get update && sudo apt-get install -y cmake libicu-dev
+        run: sudo apt-get update && sudo apt-get install -y cmake libicu-dev libboost-dev
       - name: Configure
         run: cmake -S . -B build -DBUILD_TESTING=ON
       - name: Build

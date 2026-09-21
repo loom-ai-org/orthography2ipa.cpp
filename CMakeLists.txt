@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 3.16)
 project(orthography2ipa VERSION 0.1.0 LANGUAGES CXX)
 
 find_package(ICU REQUIRED COMPONENTS uc)
+find_package(Boost REQUIRED)
 include(CTest)
 include(CMakePackageConfigHelpers)
 
@@ -15,7 +16,7 @@ add_library(orthography2ipa src/orthography2ipa.cpp)
 target_include_directories(orthography2ipa PUBLIC
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
     $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>)
-target_link_libraries(orthography2ipa PUBLIC ICU::uc ${CMAKE_DL_LIBS})
+target_link_libraries(orthography2ipa PUBLIC ICU::uc Boost::headers ${CMAKE_DL_LIBS})
 target_compile_definitions(orthography2ipa PUBLIC
     O2I_DEFAULT_DATA_DIR="${CMAKE_CURRENT_SOURCE_DIR}/data"
     O2I_INSTALL_DATA_DIR="${CMAKE_INSTALL_FULL_DATADIR}/orthography2ipa")
