@@ -301,6 +301,9 @@ LanguageSpec load_raw(const std::string& code, std::set<std::string>& loading) {
     s.virama_final_vowel = raw.get<std::string>("virama_final_vowel", "");
     s.coda_no_inherent_vowel = raw.get<bool>("coda_no_inherent_vowel", false);
     s.parent = raw.get<std::string>("parent", "");
+    if (auto ancestors = raw.get_child_optional("ancestors")) for (const auto& item : *ancestors) {
+        const auto& a = item.second; s.ancestors.push_back({a.get<std::string>("code", ""), a.get<std::string>("role", "parent"), a.get<std::string>("notes", ""), a.get<double>("weight", 1.0)});
+    }
     s.family = raw.get<std::string>("family", "");
     s.quality = raw.get<std::string>("quality", "research");
     s.clade = raw.get<bool>("clade", false);
@@ -1451,20 +1454,104 @@ TranscriptionResult G2P::transcribe_detailed(const std::string& text, const std:
 }
 std::string G2P::transcribe(const std::string& text, const std::string& search, std::size_t width) const { return transcribe_detailed(text, search, width).ipa; }
 
-double segment_distance(const std::string& a, const std::string& b) { if (a == b) return 0; if (a.empty() || b.empty()) return 1; return 1.0; }
+std::vector<std::string> feature_names() {
+    return {"syllabic", "sonorant", "consonantal", "continuant", "delayed_release", "lateral", "nasal", "strident", "voice", "spread_glottis", "constricted_glottis", "anterior", "coronal", "distributed", "labial", "high", "low", "back", "round", "tense", "long", "click", "nasal_vowel"};
+}
+std::vector<double> feature_vector(const std::string& segment) {
+    std::vector<double> v(23, .5); if (segment.empty() || segment == "∅") return v;
+    std::size_t n = utf8_char_size(segment, 0); const std::string base = segment.substr(0, n);
+    const std::string vowels = "iɪeɛæaɑɒɔoʊuʉyʏøœɨɯɐəɵ";
+    const std::string high = "iɪɨʉuʊyʏɯ"; const std::string low = "aɑɒæɐ";
+    const std::string back = "ɯuʊoɔɑɒɒɤɣqχ"; const std::string round = "uʊoɔyʏøœɵʉ";
+    const std::string nasals = "mɱnɲŋɳɴ"; const std::string voiced = "bdɡɢɟɖɗʒʐzvðɣʁɲɳmnŋɲɾrl";
+    const std::string labial = "mpbvfβɸɱ"; const std::string coronal = "tdszʃʒnlɾɹɻɲɳʈɖθð";
+    const std::string strident = "sʃʒzʂʐɕʑ";
+    const bool vowel = vowels.find(base) != std::string::npos;
+    const bool known = vowel || std::string("pbtdkɡcqʔfvszʃʒʂʐxɣχħʕmɱnɲŋɳɴlrɾɹj wɥɰ").find(base) != std::string::npos;
+    if (!known) return v;
+    v[0] = vowel ? 1 : 0; v[1] = vowel || nasals.find(base) != std::string::npos || std::string("lɾɹrwj").find(base) != std::string::npos ? 1 : 0; v[2] = vowel ? 0 : 1;
+    v[3] = vowel || std::string("fvszʃʒʂʐxɣχħʕθðj wɥɰ").find(base) != std::string::npos ? 1 : 0;
+    v[4] = (segment.find("tʃ") == 0 || segment.find("dʒ") == 0 || segment.find("ɕ") == 0) ? 1 : 0;
+    v[5] = std::string("lɬɮʎ").find(base) != std::string::npos; v[6] = nasals.find(base) != std::string::npos;
+    v[7] = strident.find(base) != std::string::npos; v[8] = voiced.find(base) != std::string::npos;
+    v[9] = segment.find("ʰ") != std::string::npos; v[10] = segment.find("ʼ") != std::string::npos || segment.find("ˤ") != std::string::npos;
+    v[11] = coronal.find(base) != std::string::npos; v[12] = coronal.find(base) != std::string::npos; v[13] = std::string("ʃʒʂʐɕʑθð").find(base) != std::string::npos;
+    v[14] = labial.find(base) != std::string::npos; v[15] = high.find(base) != std::string::npos || std::string("cjɟɲʎj").find(base) != std::string::npos;
+    v[16] = low.find(base) != std::string::npos; v[17] = back.find(base) != std::string::npos; v[18] = round.find(base) != std::string::npos; v[19] = vowel ? 1 : .5;
+    v[20] = segment.find("ː") != std::string::npos; v[21] = std::string("ǀǁǂǃ").find(base) != std::string::npos; v[22] = segment.find("̃") != std::string::npos && vowel;
+    return v;
+}
+double segment_distance(const std::string& a, const std::string& b) {
+    if (a == b) return 0;
+    if (a.empty() || b.empty() || a == "∅" || b == "∅") return 1;
+    const auto x = feature_vector(a), y = feature_vector(b); bool unknown_x = true, unknown_y = true;
+    for (double value : x) unknown_x = unknown_x && value == .5;
+    for (double value : y) unknown_y = unknown_y && value == .5;
+    if (unknown_x || unknown_y) return 1;
+    if (x[0] != y[0]) return 1;
+    double total = 0, weight = 0; for (std::size_t i = 0; i < x.size(); ++i) { const double w = i < 3 ? 7.0 : 1.0; total += w * std::abs(x[i] - y[i]); weight += w; }
+    return std::min(1.0, total / weight);
+}
 InventoryDistance inventory_distance(const LanguageSpec& a, const LanguageSpec& b) {
     auto x = inventory(a), y = inventory(b); std::size_t shared = 0; for (const auto& p : x) shared += y.count(p);
     std::set<std::string> union_set = x; union_set.insert(y.begin(), y.end());
     double j = union_set.empty() ? 0 : 1.0 - static_cast<double>(shared) / union_set.size();
-    double f = (x.empty() || y.empty()) ? 1 : (j); return {j, f, x.size(), y.size(), shared};
+    auto mean_min = [](const auto& source, const auto& target) { if (source.empty() || target.empty()) return 1.0; double sum = 0; for (const auto& p : source) { double best = 1; for (const auto& q : target) best = std::min(best, segment_distance(p, q)); sum += best; } return sum / source.size(); };
+    return {j, (mean_min(x, y) + mean_min(y, x)) / 2, x.size(), y.size(), shared};
 }
 GraphemeDivergence grapheme_divergence(const LanguageSpec& a, const LanguageSpec& b) {
     std::set<std::string> x, y; for (const auto& [k, _] : a.graphemes) x.insert(lower_ascii(k)); for (const auto& [k, _] : b.graphemes) y.insert(lower_ascii(k));
-    std::size_t shared = 0; double total = 0; for (const auto& k : x) if (y.count(k)) { ++shared; total += a.graphemes.at(k).empty() || b.graphemes.at(k).empty() ? 1 : segment_distance(a.graphemes.at(k).front(), b.graphemes.at(k).front()); }
+    std::size_t shared = 0; double total = 0; for (const auto& k : x) if (y.count(k)) { ++shared; auto find = [](const auto& m, const auto& key) -> const std::vector<std::string>& { for (const auto& [k, v] : m) if (lower_ascii(k) == key) return v; static const std::vector<std::string> empty; return empty; }; const auto& va = find(a.graphemes, k); const auto& vb = find(b.graphemes, k); if (va.empty() || vb.empty()) total += 1; else { double d = 0; for (const auto& p : va) { double best = 1; for (const auto& q : vb) best = std::min(best, segment_distance(p, q)); d += best; } for (const auto& q : vb) { double best = 1; for (const auto& p : va) best = std::min(best, segment_distance(q, p)); d += best; } total += d / (va.size() + vb.size()); } }
     std::set<std::string> u = x; u.insert(y.begin(), y.end()); return {shared, u.size(), shared ? total / shared : 1, u.empty() ? 0 : static_cast<double>(shared) / u.size()};
 }
 double allophone_overlap(const LanguageSpec& a, const LanguageSpec& b) { std::set<std::string> x, y; for (const auto& [_, v] : a.allophones) x.insert(v.begin(), v.end()); for (const auto& [_, v] : b.allophones) y.insert(v.begin(), v.end()); std::set<std::string> u = x; u.insert(y.begin(), y.end()); std::size_t n = 0; for (const auto& p : x) n += y.count(p); return u.empty() ? 1 : static_cast<double>(n) / u.size(); }
 PhonologicalDistance phonological_distance(const LanguageSpec& a, const LanguageSpec& b) { auto i = inventory_distance(a, b); auto g = grapheme_divergence(a, b); auto o = allophone_overlap(a, b); return {i, g, o, .6 * i.feature_mean + .4 * (1 - o)}; }
-double ancestry_similarity(const LanguageSpec& a, const LanguageSpec& b) { if (a.code == b.code) return 1; if (!a.parent.empty() && a.parent == b.code) return .95; if (!b.parent.empty() && b.parent == a.code) return .95; return (!a.family.empty() && a.family == b.family) ? .4 : 0; }
+std::map<std::string, double> ancestry_weights(const LanguageSpec& spec, int depth = 10, bool temporal_decay = false, double decay_halflife = 1000.0) {
+    std::map<std::string, double> result; std::vector<std::tuple<std::string, double, int>> queue;
+    if (!spec.ancestors.empty()) for (const auto& link : spec.ancestors) queue.emplace_back(link.code, link.weight, 1);
+    else if (!spec.parent.empty()) queue.emplace_back(spec.parent, 1.0, 1);
+    while (!queue.empty()) { auto [code, weight, level] = queue.back(); queue.pop_back(); if (level > depth || code.empty()) continue; try { const auto& current = get(code); if (current.clade && !current.parent.empty()) queue.emplace_back(current.parent, weight, level + 1); else { auto it = result.find(code); if (it == result.end() || weight > it->second) result[code] = weight; auto push = [&](const std::string& target, double edge) { double decay = 1; if (temporal_decay) try { const auto& ancestor = get(target); if (spec.timespan && ancestor.timespan) { const int end = ancestor.timespan->end_year.value_or(ancestor.timespan->start_year); const int gap = spec.timespan->start_year - end; if (gap > 0) decay = std::exp(-static_cast<double>(gap) / decay_halflife); } } catch (...) {} queue.emplace_back(target, weight * edge * decay, level + 1); }; for (const auto& link : current.ancestors) push(link.code, link.weight); if (current.ancestors.empty() && !current.parent.empty()) push(current.parent, 1.0); } } catch (...) {} }
+    return result;
+}
+double ancestry_similarity(const LanguageSpec& a, const LanguageSpec& b, int max_depth, bool temporal_decay, double decay_halflife) {
+    if (a.code == b.code) return 1;
+    const auto x = ancestry_weights(a, max_depth, temporal_decay, decay_halflife), y = ancestry_weights(b, max_depth, temporal_decay, decay_halflife); double best = 0;
+    if (auto it = x.find(b.code); it != x.end()) best = std::max(best, it->second);
+    if (auto it = y.find(a.code); it != y.end()) best = std::max(best, it->second);
+    for (const auto& [code, weight] : x) if (auto it = y.find(code); it != y.end()) best = std::max(best, weight * it->second);
+    if (best == 0 && !a.family.empty() && a.family == b.family) best = .4;
+    return std::min(1.0, best);
+}
+SpellingDivergence spelling_divergence(const LanguageSpec& a, const LanguageSpec& b) {
+    std::map<std::string, std::set<std::string>> x, y;
+    for (const auto& [g, values] : a.graphemes) for (const auto& p : values) if (!p.empty()) x[p].insert(lower_ascii(g));
+    for (const auto& [g, values] : b.graphemes) for (const auto& p : values) if (!p.empty()) y[p].insert(lower_ascii(g));
+    std::set<std::string> shared, all; for (const auto& [p, _] : x) all.insert(p); for (const auto& [p, _] : y) { all.insert(p); if (x.count(p)) shared.insert(p); }
+    if (shared.empty()) return {0, all.size(), 0, 0, 1};
+    double total = 0; std::size_t identical = 0, disjoint = 0;
+    for (const auto& p : shared) { std::set<std::string> u = x[p]; u.insert(y[p].begin(), y[p].end()); std::set<std::string> overlap; for (const auto& g : x[p]) if (y[p].count(g)) overlap.insert(g); const double d = 1.0 - static_cast<double>(overlap.size()) / u.size(); total += d; if (d == 0) ++identical; if (overlap.empty()) ++disjoint; }
+    return {shared.size(), all.size(), identical, disjoint, total / shared.size()};
+}
+std::optional<double> temporal_distance(const LanguageSpec& a, const LanguageSpec& b, int reference_year) {
+    if (!a.timespan || !b.timespan) return std::nullopt;
+    const int ea = a.timespan->end_year.value_or(reference_year), eb = b.timespan->end_year.value_or(reference_year);
+    const int overlap = std::max(0, std::min(ea, eb) - std::max(a.timespan->start_year, b.timespan->start_year)); const int span = std::max(ea, eb) - std::min(a.timespan->start_year, b.timespan->start_year); return span <= 0 ? 0 : 1.0 - static_cast<double>(overlap) / span;
+}
+double positional_divergence(const LanguageSpec& a, const LanguageSpec& b) {
+    std::set<std::string> keys; for (const auto& [g, _] : a.positional_graphemes) keys.insert(lower_ascii(g)); for (const auto& [g, _] : b.positional_graphemes) keys.insert(lower_ascii(g)); if (keys.empty()) return 0;
+    double total = 0; for (const auto& key : keys) { auto lookup = [&](const auto& map) { for (const auto& [g, positions] : map) if (lower_ascii(g) == key) return positions; return std::map<std::string, std::vector<std::string>>{}; }; const auto x = lookup(a.positional_graphemes), y = lookup(b.positional_graphemes); std::set<std::string> positions; for (const auto& [p, _] : x) positions.insert(p); for (const auto& [p, _] : y) positions.insert(p); if (x.empty() || y.empty()) total += 1; else for (const auto& p : positions) { auto ix = x.find(p), iy = y.find(p); if (ix == x.end() || iy == y.end() || ix->second.empty() || iy->second.empty()) total += 1.0 / positions.size(); else total += segment_distance(ix->second.front(), iy->second.front()) / positions.size(); } }
+    return std::min(1.0, total / keys.size());
+}
+double phoneme_coverage(const LanguageSpec& native, const LanguageSpec& target) { const auto x = inventory(native), y = inventory(target); if (y.empty()) return 1; std::size_t shared = 0; for (const auto& p : y) shared += x.count(p); return static_cast<double>(shared) / y.size(); }
+double orthographic_distance(const LanguageSpec& a, const LanguageSpec& b) { const auto g = grapheme_divergence(a, b); if (a.script == b.script) return g.mean_ipa_distance; const double script = a.script_type == b.script_type ? .25 : .5; return .6 * script + .4 * g.mean_ipa_distance; }
+double full_distance(const LanguageSpec& a, const LanguageSpec& b, double w_phonological, double w_ancestry) { const auto p = phonological_distance(a, b); return w_phonological * p.combined + w_ancestry * (1.0 - ancestry_similarity(a, b)); }
+WeightedDistance weighted_full_distance(const LanguageSpec& a, const LanguageSpec& b, double wi, double wg, double wa, double wy, double wt, int year) {
+    const auto i = inventory_distance(a, b); const auto g = grapheme_divergence(a, b); const double o = allophone_overlap(a, b), an = ancestry_similarity(a, b); const auto temporal = temporal_distance(a, b, year); const double effective = temporal ? wt : 0; const double total = wi + wg + wa + wy + effective;
+    const double combined = total == 0 ? 0 : (wi * i.feature_mean + wg * g.mean_ipa_distance + wa * (1 - o) + wy * (1 - an) + effective * temporal.value_or(0)) / total;
+    return {i.feature_mean, g.mean_ipa_distance, o, an, temporal.value_or(std::numeric_limits<double>::quiet_NaN()), combined, {wi, wg, wa, wy, wt}};
+}
+std::vector<std::vector<double>> pairwise_distances(const std::vector<LanguageSpec>& specs, const std::string& metric) {
+    std::vector<std::vector<double>> matrix(specs.size(), std::vector<double>(specs.size(), 0)); for (std::size_t i = 0; i < specs.size(); ++i) for (std::size_t j = i + 1; j < specs.size(); ++j) { double value; const auto p = phonological_distance(specs[i], specs[j]); if (metric == "inventory") value = p.inventory.feature_mean; else if (metric == "grapheme") value = p.grapheme.mean_ipa_distance; else if (metric == "allophone") value = 1 - p.allophone_sim; else if (metric == "ancestry") value = 1 - ancestry_similarity(specs[i], specs[j]); else value = p.combined; matrix[i][j] = matrix[j][i] = value; } return matrix;
+}
 double geographic_distance(const LanguageSpec& a, const LanguageSpec& b, bool normalize) { if (!a.latitude || !a.longitude || !b.latitude || !b.longitude) return std::numeric_limits<double>::quiet_NaN(); constexpr double R = 6371.0088; auto rad=[](double d){return d*3.141592653589793/180;}; double p1=rad(*a.latitude), p2=rad(*b.latitude), dp=rad(*b.latitude-*a.latitude), dl=rad(*b.longitude-*a.longitude); double h=std::sin(dp/2)*std::sin(dp/2)+std::cos(p1)*std::cos(p2)*std::sin(dl/2)*std::sin(dl/2); double km=2*R*std::asin(std::sqrt(h)); return normalize ? km/(3.141592653589793*R) : km; }
 } // namespace orthography2ipa

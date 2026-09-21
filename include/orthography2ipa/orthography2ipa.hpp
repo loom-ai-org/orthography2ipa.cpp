@@ -8,6 +8,7 @@
 #include <functional>
 #include <memory>
 #include <utility>
+#include <array>
 
 namespace orthography2ipa {
 
@@ -49,11 +50,13 @@ struct ToneData {
     std::vector<std::string> dead_codas;
     std::string no_mark, notes;
 };
+struct AncestorLink { std::string code, role, notes; double weight = 0.0; };
 
 struct LanguageSpec {
     std::string code, name, family, script, parent, quality;
     std::string glottolog_code, iso639_3, wikidata_qid, phoible_id, wals_code, notes;
     bool clade = false;
+    std::vector<AncestorLink> ancestors;
     std::map<std::string, std::vector<std::string>> graphemes;
     std::map<std::string, std::vector<std::string>> allophones;
     std::map<std::string, std::map<std::string, std::vector<std::string>>> positional_graphemes;
@@ -107,6 +110,14 @@ struct InventoryDistance {
 struct GraphemeDivergence {
     std::size_t shared_graphemes{}, total_graphemes{};
     double mean_ipa_distance{}, overlap_ratio{};
+};
+struct SpellingDivergence {
+    std::size_t shared_phonemes{}, total_phonemes{}, identical_spellings{}, disjoint_spellings{};
+    double mean_distance{};
+};
+struct WeightedDistance {
+    double inventory{}, grapheme{}, allophone{}, ancestry{}, temporal{}, combined{};
+    std::array<double, 5> weights{};
 };
 struct PhonologicalDistance {
     InventoryDistance inventory;
@@ -220,11 +231,26 @@ std::string apply_dialect_transform(const std::string& ipa, const std::string& p
                                     const std::string& orthography = "");
 std::vector<std::string> available_dialect_profiles();
 double segment_distance(const std::string& a, const std::string& b);
+std::vector<double> feature_vector(const std::string& segment);
+std::vector<std::string> feature_names();
 InventoryDistance inventory_distance(const LanguageSpec& a, const LanguageSpec& b);
 GraphemeDivergence grapheme_divergence(const LanguageSpec& a, const LanguageSpec& b);
+SpellingDivergence spelling_divergence(const LanguageSpec& a, const LanguageSpec& b);
+double orthographic_distance(const LanguageSpec& a, const LanguageSpec& b);
 double allophone_overlap(const LanguageSpec& a, const LanguageSpec& b);
 PhonologicalDistance phonological_distance(const LanguageSpec& a, const LanguageSpec& b);
-double ancestry_similarity(const LanguageSpec& a, const LanguageSpec& b);
+double full_distance(const LanguageSpec& a, const LanguageSpec& b, double w_phonological = .6, double w_ancestry = .4);
+WeightedDistance weighted_full_distance(const LanguageSpec& a, const LanguageSpec& b,
+                                        double w_inventory = .25, double w_grapheme = .20,
+                                        double w_allophone = .15, double w_ancestry = .40,
+                                        double w_temporal = 0.0, int reference_year = 2025);
+double ancestry_similarity(const LanguageSpec& a, const LanguageSpec& b, int max_depth = 10,
+                           bool temporal_decay = false, double decay_halflife = 1000.0);
+std::optional<double> temporal_distance(const LanguageSpec& a, const LanguageSpec& b, int reference_year = 2025);
+double positional_divergence(const LanguageSpec& a, const LanguageSpec& b);
+double phoneme_coverage(const LanguageSpec& native, const LanguageSpec& target);
 double geographic_distance(const LanguageSpec& a, const LanguageSpec& b, bool normalize = true);
+std::vector<std::vector<double>> pairwise_distances(const std::vector<LanguageSpec>& specs,
+                                                    const std::string& metric = "combined");
 
 } // namespace orthography2ipa
