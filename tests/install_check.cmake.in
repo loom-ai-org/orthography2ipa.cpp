@@ -1,0 +1,24 @@
+set(prefix "@CMAKE_BINARY_DIR@/test-install")
+execute_process(COMMAND "@CMAKE_COMMAND@" --install "@CMAKE_BINARY_DIR@" --prefix "${prefix}"
+                RESULT_VARIABLE install_result)
+if(NOT install_result EQUAL 0)
+    message(FATAL_ERROR "install failed: ${install_result}")
+endif()
+set(ENV{ORTHOGRAPHY2IPA_DATA_DIR} "${prefix}/share/orthography2ipa")
+execute_process(COMMAND "${prefix}/bin/orthography2ipa" --json info pt
+                OUTPUT_VARIABLE output RESULT_VARIABLE run_result)
+if(NOT run_result EQUAL 0 OR NOT output MATCHES "\\\"code\\\":\\\"pt-PT\\\"")
+    message(FATAL_ERROR "installed CLI failed: ${run_result} ${output}")
+endif()
+execute_process(COMMAND "@CMAKE_COMMAND@" -S "@CMAKE_SOURCE_DIR@/tests/package_consumer"
+                -B "${prefix}/consumer-build"
+                -Dorthography2ipa_DIR=${prefix}/lib/cmake/orthography2ipa
+                RESULT_VARIABLE configure_result)
+if(NOT configure_result EQUAL 0)
+    message(FATAL_ERROR "downstream configure failed: ${configure_result}")
+endif()
+execute_process(COMMAND "@CMAKE_COMMAND@" --build "${prefix}/consumer-build"
+                RESULT_VARIABLE build_result)
+if(NOT build_result EQUAL 0)
+    message(FATAL_ERROR "downstream build failed: ${build_result}")
+endif()

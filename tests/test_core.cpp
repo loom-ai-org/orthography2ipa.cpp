@@ -1,0 +1,57 @@
+#include "orthography2ipa/orthography2ipa.hpp"
+
+#include <cassert>
+#include <fstream>
+#include <stdexcept>
+
+using namespace orthography2ipa;
+
+int main() {
+    assert(resolve("por") == "pt-PT");
+    assert(!available_codes().empty());
+
+    const auto& portuguese = get("pt");
+    const auto& spanish = get("es");
+    assert(!portuguese.graphemes.empty());
+    assert(!portuguese.family_path().empty());
+    assert(!get("ga").sources.empty());
+    assert(get("ga").timespan.has_value());
+
+    Tokenizer tokenizer(portuguese);
+    std::vector<std::string> unmapped;
+    const auto tokens = tokenizer.tokenize_word("olá", &unmapped);
+    assert(!tokens.empty() && unmapped.empty());
+    const auto beam = tokenizer.beam("casa", 4);
+    assert(!beam.empty() && beam.size() <= 4);
+
+    G2P engine("pt");
+    assert(!engine.transcribe_detailed("olá").words.empty());
+    assert(!engine.lattice("casa").empty());
+    assert(!engine.features("casa").empty());
+    assert(engine.word_confidence("casa") > 0);
+
+    bool missing_plugin = false;
+    try { G2P missing("pt", {{"normalize", {"not-installed"}}}); missing.transcribe("casa"); }
+    catch (const std::exception&) { missing_plugin = true; }
+    assert(missing_plugin);
+
+    const auto vector = feature_vector("p");
+    assert(vector.size() == 23);
+    assert(segment_distance("p", "p") == 0);
+    assert(inventory_distance(portuguese, spanish).feature_mean >= 0);
+    assert(spelling_divergence(portuguese, spanish).total_phonemes > 0);
+    assert(full_distance(portuguese, spanish) >= 0);
+    assert(pairwise_distances({portuguese, spanish}).size() == 2);
+
+    const std::string path = "/tmp/orthography2ipa-cpp-test.tsv";
+    { std::ofstream output(path); output << "casa\tkaza\n"; }
+    register_lexicon("pt", path);
+    assert(get_lexicon("pt").at("casa") == "kaza");
+    clear_lexicons();
+
+    const auto malformed = validate_lexicon("bad line\n");
+    assert(!malformed.empty());
+    const auto unicode_malformed = validate_lexicon("cafe\xCC\x81\tk\n");
+    assert(!unicode_malformed.empty());
+    return 0;
+}

@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.16)
+project(orthography2ipaConsumer LANGUAGES CXX)
+find_package(orthography2ipa CONFIG REQUIRED)
+add_executable(orthography2ipa-consumer main.cpp)
+target_link_libraries(orthography2ipa-consumer PRIVATE orthography2ipa::orthography2ipa)

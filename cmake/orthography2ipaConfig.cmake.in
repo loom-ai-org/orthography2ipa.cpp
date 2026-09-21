@@ -1,0 +1,6 @@
+@PACKAGE_INIT@
+
+include(CMakeFindDependencyMacro)
+find_dependency(ICU COMPONENTS uc)
+include("${CMAKE_CURRENT_LIST_DIR}/orthography2ipaTargets.cmake")
+check_required_components(orthography2ipa)
