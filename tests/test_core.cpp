@@ -21,6 +21,23 @@ int main() {
     std::vector<std::string> unmapped;
     const auto tokens = tokenizer.tokenize_word("olá", &unmapped);
     assert(!tokens.empty() && unmapped.empty());
+    const auto unicode_tokens = tokenizer.tokenize("CH 3☕.");
+    assert(unicode_tokens.size() == 5);
+    assert(unicode_tokens[0].kind == TokenKind::GRAPHEME && unicode_tokens[0].grapheme == "ch");
+    assert(unicode_tokens[0].length == 2);
+    assert(unicode_tokens[1].kind == TokenKind::WHITESPACE);
+    assert(unicode_tokens[2].kind == TokenKind::DIGIT);
+    assert(unicode_tokens[3].kind == TokenKind::UNKNOWN);
+    assert(unicode_tokens[4].kind == TokenKind::PUNCTUATION);
+    const auto normalized = tokenizer.tokenize("CAFE\xCC\x81");
+    assert(normalized.size() == 4);
+    assert(normalized.back().grapheme == "é");
+    const auto context = tokenizer.tokenize_with_context("casa!");
+    assert(context.graphemes.size() == 4);
+    assert(context.graphemes[0].next()->grapheme() == "a");
+    assert(context.graphemes[0].prev() == nullptr);
+    assert(context.graphemes[3].next() == nullptr);
+    assert(context.graphemes[0].span().first == 0 && context.graphemes[0].span().second == 1);
     const auto beam = tokenizer.beam("casa", 4);
     assert(!beam.empty() && beam.size() <= 4);
 

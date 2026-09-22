@@ -300,11 +300,18 @@ LanguageSpec load_raw(const std::string& code, std::set<std::string>& loading) {
     for (const auto& key : {"glottolog_code", "iso639_3", "wikidata_qid", "phoible_id", "wals_code"})
         if (auto value = raw.get_optional<std::string>(key)) s.identifiers[key] = *value;
     s.script = raw.get<std::string>("script", "");
+    s.orthography_kind = raw.get<std::string>("orthography_kind", "native");
     s.script_type = raw.get<std::string>("script_type", "alphabet");
     s.inherent_vowel = raw.get<std::string>("inherent_vowel", "");
     s.inherent_vowel_final = raw.get<std::string>("inherent_vowel_final", "");
     s.virama_final_vowel = raw.get<std::string>("virama_final_vowel", "");
     s.coda_no_inherent_vowel = raw.get<bool>("coda_no_inherent_vowel", false);
+    s.collapse_geminates = raw.get<bool>("collapse_geminates", false);
+    s.doubled_letters_geminate = raw.get<bool>("doubled_letters_geminate", true);
+    s.constrain_onsets = raw.get<bool>("constrain_onsets", false);
+    s.fold_diacritics = optional_list(raw, "fold_diacritics"); s.vowel_graphemes = optional_list(raw, "vowel_graphemes");
+    s.dependent_vowels = optional_list(raw, "dependent_vowels"); s.preposed_vowels = optional_list(raw, "preposed_vowels");
+    s.trailing_vowel_axis_digraphs = optional_list(raw, "trailing_vowel_axis_digraphs");
     s.parent = raw.get<std::string>("parent", "");
     if (auto ancestors = raw.get_child_optional("ancestors")) for (const auto& item : *ancestors) {
         const auto& a = item.second; s.ancestors.push_back({a.get<std::string>("code", ""), a.get<std::string>("role", "parent"), a.get<std::string>("notes", ""), a.get<double>("weight", 1.0)});
@@ -318,6 +325,7 @@ LanguageSpec load_raw(const std::string& code, std::set<std::string>& loading) {
     s.phonemes = optional_strings(raw, "phonemes");
     s.marked_vowels = optional_strings(raw.get_child("stress", ptree{}), "marked_vowels");
     if (auto stress = raw.get_child_optional("stress")) {
+        s.stress_defined = true;
         s.default_stress_position = stress->get<int>("default_position", -2);
         s.stress_mark = stress->get<std::string>("stress_mark", "ˈ");
         s.final_stress_endings = optional_strings(*stress, "final_stress_endings");
@@ -330,6 +338,9 @@ LanguageSpec load_raw(const std::string& code, std::set<std::string>& loading) {
         s.superheavy_final_attracts = stress->get<bool>("superheavy_final_attracts", false);
         s.max_onset = stress->get<int>("max_onset", 1);
         s.secondary_stress = stress->get<std::string>("secondary_stress", "");
+        s.accent2_mark = stress->get<std::string>("accent2_mark", "");
+        s.accent2_final_letters = optional_list(*stress, "accent2_final_letters"); s.cliticless_words = optional_list(*stress, "cliticless_words");
+        s.constrain_mark_onsets = stress->get<bool>("constrain_mark_onsets", true); s.coda_liquid_capture = stress->get<bool>("coda_liquid_capture", false); s.iambic_length = stress->get<bool>("iambic_length", false);
         s.marked_vowels = optional_strings(*stress, "marked_vowels");
     }
     if (auto loc = raw.get_child_optional("location")) {
@@ -347,7 +358,18 @@ LanguageSpec load_raw(const std::string& code, std::set<std::string>& loading) {
         if (auto classes = tone->get_child_optional("classes")) for (const auto& x : *classes) value.classes[x.first] = x.second.data();
         if (auto marks = tone->get_child_optional("marks")) for (const auto& x : *marks) value.marks[x.first] = x.second.data();
         if (auto tones = tone->get_child_optional("tones")) for (const auto& x : *tones) value.tones[x.first] = x.second.data();
-        value.dead_codas = optional_list(*tone, "dead_codas"); s.tone = value;
+        value.dead_codas = optional_list(*tone, "dead_codas");
+        for (const auto& x : *tone) s.tone_inventory[x.first] = x.second.data();
+        s.tone = value;
+    }
+    s.tone_marks_syllable_final = raw.get<bool>("tone_marks_syllable_final", false);
+    if (auto rules = raw.get_child_optional("tone_rules")) {
+        ToneData value = s.tone.value_or(ToneData{});
+        if (auto table = rules->get_child_optional("table")) for (const auto& c : *table) for (const auto& sclass : c.second) for (const auto& mark : sclass.second) value.table[c.first][sclass.first][mark.first] = mark.second.data();
+        value.classes = {}; if (auto classes = rules->get_child_optional("classes")) for (const auto& x : *classes) value.classes[x.first] = x.second.data();
+        value.marks = {}; if (auto marks = rules->get_child_optional("marks")) for (const auto& x : *marks) value.marks[x.first] = x.second.data();
+        value.tones = {}; if (auto tones = rules->get_child_optional("tones")) for (const auto& x : *tones) value.tones[x.first] = x.second.data();
+        value.no_mark = rules->get<std::string>("no_mark", "none"); value.notes = rules->get<std::string>("notes", ""); value.dead_codas = optional_list(*rules, "dead_codas"); s.tone = value;
     }
     if (auto ex = raw.get_child_optional("word_exceptions"))
         for (const auto& x : *ex) s.word_exceptions[x.first] = x.second.data();
@@ -379,6 +401,7 @@ LanguageSpec load_raw(const std::string& code, std::set<std::string>& loading) {
     const std::string base = raw.get<std::string>("graphemes_base", "");
     const std::string allo_base = raw.get<std::string>("allophones_base", "");
     const std::string endings_base = raw.get<std::string>("grammatical_endings_base", "");
+    const std::string exceptions_base = raw.get<std::string>("word_exceptions_base", "");
     if (!base.empty() && base != code) {
         LanguageSpec b = load_raw(base, loading);
         for (const auto& x : b.graphemes) if (!s.graphemes.count(x.first)) s.graphemes[x.first] = x.second;
@@ -389,9 +412,8 @@ LanguageSpec load_raw(const std::string& code, std::set<std::string>& loading) {
             merge_positional(s.positional_graphemes, load_raw(positional_base, loading).positional_graphemes);
         s.allophone_rules = overlay_allophone(b.allophone_rules, s.allophone_rules);
         s.sandhi_rules = overlay_sandhi(b.sandhi_rules, s.sandhi_rules);
-        for (const auto& [stage, names] : b.plugins) if (!s.plugins.count(stage)) s.plugins[stage] = names;
         if (!raw.get_child_optional("stress") && s.default_stress_position == -2) {
-            s.default_stress_position = b.default_stress_position; s.stress_mark = b.stress_mark;
+            s.default_stress_position = b.default_stress_position; s.stress_mark = b.stress_mark; s.stress_defined = b.stress_defined;
             s.marked_vowels = b.marked_vowels; s.final_stress_endings = b.final_stress_endings;
             s.penult_stress_endings = b.penult_stress_endings; s.antepenult_stress_endings = b.antepenult_stress_endings;
             s.diphthongs = b.diphthongs; s.vowel_letters = b.vowel_letters;
@@ -415,15 +437,16 @@ LanguageSpec load_raw(const std::string& code, std::set<std::string>& loading) {
         for (const auto& [ending, values] : b.grammatical_endings)
             if (!s.grammatical_endings.count(ending)) s.grammatical_endings[ending] = values;
     }
+    if (!exceptions_base.empty() && exceptions_base != code) {
+        const auto b = load_raw(exceptions_base, loading);
+        for (const auto& [word, ipa] : b.word_exceptions) if (!s.word_exceptions.count(word)) s.word_exceptions[word] = ipa;
+    }
     if (base.empty() && !s.parent.empty() && s.parent != code) {
         LanguageSpec ancestor = load_raw(s.parent, loading);
         std::set<std::string> seen{code, s.parent};
         while (ancestor.clade && !ancestor.parent.empty() && !seen.count(ancestor.parent)) {
             seen.insert(ancestor.parent); ancestor = load_raw(ancestor.parent, loading);
         }
-        for (const auto& x : ancestor.graphemes) if (!s.graphemes.count(x.first)) s.graphemes[x.first] = x.second;
-        for (const auto& x : ancestor.allophones) if (!s.allophones.count(x.first)) s.allophones[x.first] = x.second;
-        merge_positional(s.positional_graphemes, ancestor.positional_graphemes);
         s.allophone_rules = overlay_allophone(ancestor.allophone_rules, s.allophone_rules);
         s.sandhi_rules = overlay_sandhi(ancestor.sandhi_rules, s.sandhi_rules);
     }
@@ -521,8 +544,12 @@ std::string normalize_script_text(const LanguageSpec& spec, const std::string& i
         for (std::size_t i = 0; i < text.size();) {
             const auto n = utf8_char_size(text, i); const auto cp = utf8_codepoint(text, i);
             if ((cp >= 0xfb50 && cp <= 0xfdff) || (cp >= 0xfe70 && cp <= 0xfeff)) {
-                if (cp == 0xfefb || cp == 0xfefc) decomposed += "لا";
-                else decomposed += text.substr(i, n);
+                UErrorCode status = U_ZERO_ERROR;
+                const auto* nfkc = icu::Normalizer2::getNFKCInstance(status);
+                auto glyph = icu::UnicodeString::fromUTF8(text.substr(i, n));
+                icu::UnicodeString normalized;
+                nfkc->normalize(glyph, normalized, status);
+                std::string value; normalized.toUTF8String(value); decomposed += value;
             } else decomposed += text.substr(i, n);
             i += n;
         }
@@ -546,11 +573,50 @@ std::string normalize_script_text(const LanguageSpec& spec, const std::string& i
         }
         text = expanded;
     }
+    for (const auto& mark : spec.fold_diacritics) {
+        std::size_t pos = 0; while ((pos = text.find(mark, pos)) != std::string::npos) text.erase(pos, mark.size());
+    }
     return text;
 }
 
+bool ipa_vowel_segment(const std::string& value);
+std::vector<std::string> unicode_units(const std::string& text);
+bool spec_vowel(const LanguageSpec& spec, const std::string& value) {
+    if ((!spec.vowel_graphemes.empty() && in(value, spec.vowel_graphemes)) || vowel_grapheme(value)) return true;
+    auto it = spec.graphemes.find(value); if (it != spec.graphemes.end()) for (const auto& candidate : it->second) for (std::size_t i = 0; i < candidate.size(); ++i) if (std::string("iɪeɛæaɑɒɔoʊuʉyʏøœɨɯɐəɵ").find(candidate.substr(i, utf8_char_size(candidate, i))) != std::string::npos) return true;
+    return false;
+}
+
+bool ipa_vowel_segment(const std::string& value) {
+    if (value.empty()) return false;
+    const auto units = unicode_units(value);
+    return !units.empty() && std::string("iɪeɛæaɑɒɔoʊuʉyʏøœɨɯɐəɵ").find(units.front()) != std::string::npos;
+}
+
+std::string apply_computed_tones(const LanguageSpec& spec, const IPAPath& path) {
+    if (!spec.tone || path.graphemes.empty() || path.segments.empty() || spec.tone->table.empty()) return path.ipa;
+    std::vector<std::size_t> nuclei; for (std::size_t i = 0; i < path.segments.size(); ++i) if (ipa_vowel_segment(path.segments[i])) nuclei.push_back(i);
+    if (nuclei.empty()) return path.ipa;
+    std::string output;
+    for (std::size_t n = 0; n < nuclei.size(); ++n) {
+        const std::size_t begin = n == 0 ? 0 : nuclei[n - 1] + 1; const std::size_t end = n + 1 < nuclei.size() ? nuclei[n + 1] : path.segments.size();
+        std::string ipa; for (std::size_t i = begin; i < end; ++i) ipa += path.segments[i];
+        std::string cls, mark = spec.tone->no_mark.empty() ? "none" : spec.tone->no_mark;
+        for (std::size_t i = begin; i < end && i < path.graphemes.size(); ++i) for (const char ch : path.graphemes[i]) {
+            const std::string key(1, ch); if (cls.empty()) { auto it = spec.tone->classes.find(key); if (it != spec.tone->classes.end()) cls = it->second; }
+            auto it = spec.tone->marks.find(key); if (it != spec.tone->marks.end()) mark = it->second;
+        }
+        const bool long_vowel = ipa.find("ː") != std::string::npos; const bool dead = end > nuclei[n] + 1;
+        const std::string shape = dead ? (long_vowel ? "dead_long" : "dead_short") : "live";
+        std::string tone_name;
+        auto ci = spec.tone->table.find(cls); if (ci != spec.tone->table.end()) { auto si = ci->second.find(shape); if (si == ci->second.end()) si = ci->second.find("any"); if (si != ci->second.end()) { auto mi = si->second.find(mark); if (mi != si->second.end()) tone_name = mi->second; } }
+        auto ti = spec.tone->tones.find(tone_name); output += ipa; if (ti != spec.tone->tones.end()) output += ti->second;
+    }
+    return output.empty() ? path.ipa : output;
+}
+
 std::string add_stress(const LanguageSpec& spec, const std::string& word, const IPAPath& path, std::optional<std::size_t> forced = std::nullopt) {
-    if (path.graphemes.empty() || spec.stress_mark.empty()) return path.ipa;
+    if (!spec.stress_defined || path.graphemes.empty() || spec.stress_mark.empty()) return path.ipa;
     std::vector<std::vector<std::size_t>> nuclei;
     auto ipa_vowel = [](const std::string& value) { return value.find_first_of("aeiouɑɐɒəɛɪɔʊɨʉɵøœy") != std::string::npos; };
     auto is_vowel = [&](const std::string& g, std::size_t i) { return (!spec.vowel_letters.empty() && in(g, spec.vowel_letters)) || (spec.vowel_letters.empty() && vowel_grapheme(g)) || (i < path.segments.size() && ipa_vowel(path.segments[i])); };
@@ -685,7 +751,26 @@ std::map<std::string, std::string> load_lexicon(const std::string& code) {
 }
 
 bool in(const std::string& value, const std::vector<std::string>& list) { return std::find(list.begin(), list.end(), value) != list.end(); }
-bool vowel_grapheme(const std::string& value) { return value.find_first_of("aeiouAEIOUáéíóúâêôãõÁÉÍÓÚÂÊÔÃÕ") != std::string::npos; }
+std::vector<std::string> unicode_units(const std::string& text);
+bool vowel_grapheme(const std::string& value) {
+    const auto folded = unicode_fold_nfc(value);
+    const auto units = unicode_units(folded);
+    for (const auto& unit : units) {
+        auto u = icu::UnicodeString::fromUTF8(unit); UChar32 cp = 0; int32_t i = 0;
+        U16_NEXT(u.getBuffer(), i, u.length(), cp);
+        if (u_getCombiningClass(cp) != 0) continue;
+        // Unicode-aware orthographic vowel classification. IPA vowels are
+        // included because positional rules also inspect resolved IPA atoms.
+        if (std::string("aeiouyɑɐɒæɛɨɯɵəɔœøʉʊɪɤɞɜɘɚɝɶ").find(unit) != std::string::npos)
+            return true;
+        auto name = std::string(); icu::UnicodeString(cp).toUTF8String(name);
+        if (name == "á" || name == "é" || name == "í" || name == "ó" || name == "ú" ||
+            name == "à" || name == "è" || name == "ì" || name == "ò" || name == "ù" ||
+            name == "â" || name == "ê" || name == "î" || name == "ô" || name == "û" ||
+            name == "ã" || name == "õ" || name == "ä" || name == "ë" || name == "ï" || name == "ö" || name == "ü") return true;
+    }
+    return false;
+}
 bool front_grapheme(const std::string& value);
 bool back_grapheme(const std::string& value);
 bool palatal_ipa(const std::string& value);
@@ -735,14 +820,14 @@ bool class_match(const std::string& cls, const std::vector<std::string>& gs,
         const long next = pos + (distance < 0 ? -1 : 1);
         return !vowel_grapheme(gs[p]) && next >= 0 && next < static_cast<long>(gs.size()) && !vowel_grapheme(gs[static_cast<std::size_t>(next)]);
     }
-    if (cls == "coda_nasal") return !vowel_grapheme(gs[p]) && !phones[p].empty() && std::string("mnɲŋɳɴ").find(phones[p][0]) != std::string::npos;
+    if (cls == "coda_nasal") return gs[p] != "mm" && gs[p] != "nn" && !vowel_grapheme(gs[p]) && !phones[p].empty() && std::string("mnɲŋɳɴ").find(phones[p][0]) != std::string::npos;
     if (cls == "palatal") return palatal_ipa(phones[p]);
     if (cls == "emphatic") return phones[p].find("ˤ") != std::string::npos;
     return false;
 }
 
 bool stressed_grapheme(const LanguageSpec& spec, const std::vector<std::string>& gs, std::size_t index) {
-    std::vector<std::size_t> nuclei; for (std::size_t i = 0; i < gs.size(); ++i) if (vowel_grapheme(gs[i])) nuclei.push_back(i);
+    std::vector<std::size_t> nuclei; for (std::size_t i = 0; i < gs.size(); ++i) if (spec_vowel(spec, gs[i])) nuclei.push_back(i);
     if (nuclei.empty()) return false;
     std::size_t target = nuclei.size() - 1; bool marked = false;
     for (const auto& mark : spec.marked_vowels) for (std::size_t i = 0; i < gs.size(); ++i) if (gs[i].find(mark) != std::string::npos) { target = static_cast<std::size_t>(std::find(nuclei.begin(), nuclei.end(), i) - nuclei.begin()); marked = true; }
@@ -751,7 +836,7 @@ bool stressed_grapheme(const LanguageSpec& spec, const std::vector<std::string>&
 }
 
 std::optional<std::size_t> stress_nucleus(const LanguageSpec& spec, const std::vector<std::string>& gs) {
-    std::vector<std::size_t> nuclei; for (std::size_t i = 0; i < gs.size(); ++i) if (vowel_grapheme(gs[i])) nuclei.push_back(i);
+    std::vector<std::size_t> nuclei; for (std::size_t i = 0; i < gs.size(); ++i) if (spec_vowel(spec, gs[i])) nuclei.push_back(i);
     if (nuclei.empty()) return std::nullopt;
     std::size_t target = nuclei.size() - 1; bool marked = false;
     for (const auto& mark : spec.marked_vowels) for (std::size_t i = 0; i < gs.size(); ++i) if (gs[i].find(mark) != std::string::npos) { target = static_cast<std::size_t>(std::find(nuclei.begin(), nuclei.end(), i) - nuclei.begin()); marked = true; }
@@ -760,13 +845,18 @@ std::optional<std::size_t> stress_nucleus(const LanguageSpec& spec, const std::v
 }
 
 bool front_grapheme(const std::string& value) {
-    return value.find_first_of("eEiIyYéÉêÊíÍëËïÏ") != std::string::npos;
+    const auto units = unicode_units(unicode_fold_nfc(value));
+    return !units.empty() && std::string("eiɛɪəy").find(units.front()) != std::string::npos;
 }
 bool back_grapheme(const std::string& value) {
-    return value.find_first_of("aAoOuUáÁâÂãÃóÓôÔõÕ") != std::string::npos;
+    const auto units = unicode_units(unicode_fold_nfc(value));
+    return !units.empty() && std::string("aouɑɔɒɯɐ").find(units.front()) != std::string::npos;
 }
 bool palatal_ipa(const std::string& value) {
-    return value.find_first_of("ʃʒɲʎjtɕdʑ") != std::string::npos || value.find("ʲ") != std::string::npos;
+    const auto units = unicode_units(value);
+    return std::any_of(units.begin(), units.end(), [](const auto& unit) {
+        return std::string("ʃʒɲʎjtɕdʑ").find(unit) != std::string::npos || unit == "ʲ";
+    });
 }
 
 std::vector<std::string> positional_values(const LanguageSpec& spec,
@@ -784,9 +874,9 @@ std::vector<std::string> positional_values(const LanguageSpec& spec,
     };
     const bool initial = index == 0;
     const bool final = index + 1 == gs.size();
-    const bool vowel = vowel_grapheme(gs[index]);
-    const bool prev_vowel = index > 0 && vowel_grapheme(gs[index - 1]);
-    const bool next_vowel = index + 1 < gs.size() && vowel_grapheme(gs[index + 1]);
+    const bool vowel = spec_vowel(spec, gs[index]);
+    const bool prev_vowel = index > 0 && spec_vowel(spec, gs[index - 1]);
+    const bool next_vowel = index + 1 < gs.size() && spec_vowel(spec, gs[index + 1]);
     const auto next_ipa = index + 1 < gs.size() && !spec.graphemes.at(gs[index + 1]).empty()
         ? spec.graphemes.at(gs[index + 1]).front() : std::string{};
     const auto prev_ipa = index > 0 && !spec.graphemes.at(gs[index - 1]).empty()
@@ -897,6 +987,14 @@ std::string apply_allophony(const LanguageSpec& spec, IPAPath& path) {
     }
     std::vector<std::string> segments = original; std::string word;
     for (const auto& g : path.graphemes) word += lower_ascii(g);
+    auto coda_position = [&](std::size_t owner) {
+        if (owner < path.graphemes.size() && (path.graphemes[owner] == "mm" || path.graphemes[owner] == "nn")) return false;
+        if (owner + 1 < path.segments.size() && ipa_vowel_segment(path.segments[owner + 1])) return false;
+        std::size_t vowel = owner + 1; while (vowel < path.segments.size() && !ipa_vowel_segment(path.segments[vowel])) ++vowel;
+        if (vowel == path.graphemes.size()) return true;
+        std::size_t onset = vowel; while (onset > owner + 1 && !ipa_vowel_segment(path.segments[onset - 1])) --onset;
+        return owner < onset;
+    };
 
     // Segmental rules operate on phoneme-sized atoms inside a slot and can see
     // across slot boundaries. This is the distinction Python makes between
@@ -928,7 +1026,8 @@ std::string apply_allophony(const LanguageSpec& spec, IPAPath& path) {
          if (!rule.preceded_by_phoneme.empty() && (i == 0 || !in(flat[i - 1], rule.preceded_by_phoneme))) continue;
          if (!rule.followed_by_phoneme.empty() && (i + 1 == flat.size() || !in(flat[i + 1], rule.followed_by_phoneme))) continue;
          if (!rule.preceded_by.empty() && !class_match(rule.preceded_by, path.graphemes, original, owner, -1)) continue;
-         if (!rule.followed_by.empty() && !class_match(rule.followed_by, path.graphemes, original, owner, 1)) continue;
+          if (!rule.followed_by.empty() && rule.followed_by == "coda_nasal" && owner + 1 < path.graphemes.size() && (path.graphemes[owner + 1] == "mm" || path.graphemes[owner + 1] == "nn")) continue;
+          if (!rule.followed_by.empty() && !(rule.followed_by == "coda_nasal" && owner + 1 < path.graphemes.size() && (path.graphemes[owner + 1] == "mm" || path.graphemes[owner + 1] == "nn")) && !class_match(rule.followed_by, path.graphemes, original, owner, 1)) continue;
          if (!rule.preceded_by_2.empty() && !class_match(rule.preceded_by_2, path.graphemes, original, owner, -2)) continue;
          if (!rule.followed_by_2.empty() && !class_match(rule.followed_by_2, path.graphemes, original, owner, 2)) continue;
          if (!rule.preceded_by_3.empty() && !class_match(rule.preceded_by_3, path.graphemes, original, owner, -3)) continue;
@@ -945,7 +1044,7 @@ std::string apply_allophony(const LanguageSpec& spec, IPAPath& path) {
             const bool vowel = vowel_grapheme(path.graphemes[owner]);
             if (rule.syllable_position == "nucleus" && !vowel) continue;
             if (rule.syllable_position == "onset" && (owner + 1 == path.graphemes.size() || !vowel_grapheme(path.graphemes[owner + 1]))) continue;
-            if (rule.syllable_position == "coda" && owner + 1 < path.graphemes.size() && vowel_grapheme(path.graphemes[owner + 1])) continue;
+            if (rule.syllable_position == "coda" && !coda_position(owner)) continue;
         }
         flat[i] = rule.append.empty() ? rule.surface : flat[i] + rule.append;
         if (!rule.mutates_neighbor.empty()) {
@@ -954,6 +1053,13 @@ std::string apply_allophony(const LanguageSpec& spec, IPAPath& path) {
             if (rule.mutates_neighbor_side == "following" && i + 1 < flat.size())
                 flat[i + 1] += rule.mutates_neighbor;
         }
+    }
+    if (spec.script.find("Cyrillic") != std::string::npos) {
+        for (std::size_t i = 0; i + 1 < flat.size(); ++i) {
+            if (flat[i].find("ʲ") != std::string::npos && flat[i + 1].rfind("j", 0) == 0)
+                flat[i + 1].erase(0, utf8_char_size(flat[i + 1], 0));
+        }
+        for (auto& segment : flat) while (segment.find("ʲʲ") != std::string::npos) segment.erase(segment.find("ʲʲ") + std::string("ʲ").size(), std::string("ʲ").size());
     }
     segments.assign(original.size(), "");
     for (std::size_t i = 0; i < flat.size(); ++i) segments[owners[i]] += flat[i];
@@ -992,14 +1098,17 @@ std::string apply_allophony(const LanguageSpec& spec, IPAPath& path) {
         if (rule.followed_by_nucleus && *rule.followed_by_nucleus != later) continue;
         if (rule.syllable_position == "nucleus" && !vowel_grapheme(path.graphemes[i])) continue;
         if (rule.syllable_position == "onset" && (i + 1 == path.graphemes.size() || !vowel_grapheme(path.graphemes[i + 1]))) continue;
-        if (rule.syllable_position == "coda" && i + 1 < path.graphemes.size() && vowel_grapheme(path.graphemes[i + 1])) continue;
+        if (rule.syllable_position == "coda" && !coda_position(i)) continue;
         segments[i] = rule.append.empty() ? rule.surface : original[i] + rule.append;
         if (!rule.mutates_neighbor.empty() && rule.mutates_neighbor_side == "preceding" && i > 0) segments[i - 1] = original[i - 1] + rule.mutates_neighbor;
         if (!rule.mutates_neighbor.empty() && rule.mutates_neighbor_side == "following" && i + 1 < segments.size()) segments[i + 1] = original[i + 1] + rule.mutates_neighbor;
         break;
     }
+    if (spec.script.find("Cyrillic") != std::string::npos) for (auto& segment : segments) while (segment.find("ʲʲ") != std::string::npos) segment.erase(segment.find("ʲʲ") + std::string("ʲ").size(), std::string("ʲ").size());
     path.segments = segments;
-    std::string result; for (const auto& segment : segments) result += segment; return result;
+    std::string result; for (const auto& segment : segments) result += segment;
+    if (spec.script.find("Cyrillic") != std::string::npos) while (result.find("ʲʲ") != std::string::npos) result.erase(result.find("ʲʲ") + std::string("ʲ").size(), std::string("ʲ").size());
+    return result;
 }
 
 std::vector<IPAPath> apply_grammatical_endings(const LanguageSpec& spec,
@@ -1119,17 +1228,277 @@ std::vector<std::string> LanguageSpec::family_path() const {
 
 Tokenizer::Tokenizer(const LanguageSpec& spec) : spec_(spec) {
     for (const auto& [key, _] : spec.graphemes) keys_.push_back(key);
-    std::sort(keys_.begin(), keys_.end(), [](const auto& a, const auto& b) { return a.size() > b.size(); });
+    language_ = spec.code;
+    std::sort(keys_.begin(), keys_.end(), [](const auto& a, const auto& b) {
+        return std::count_if(a.begin(), a.end(), [](unsigned char c) { return (c & 0xc0) != 0x80; }) >
+               std::count_if(b.begin(), b.end(), [](unsigned char c) { return (c & 0xc0) != 0x80; });
+    });
+}
+
+namespace {
+std::vector<std::string> unicode_units(const std::string& text) {
+    std::vector<std::string> out;
+    for (std::size_t i = 0; i < text.size();) {
+        const auto n = utf8_char_size(text, i);
+        out.push_back(text.substr(i, n));
+        i += n;
+    }
+    return out;
+}
+std::string fold_units(const std::vector<std::string>& units, std::size_t start, std::size_t count) {
+    std::string value;
+    for (std::size_t i = start; i < start + count && i < units.size(); ++i) value += units[i];
+    return unicode_fold_nfc(value);
+}
+std::string lower_unicode(const std::string& text, const std::string& lang) {
+    std::string result;
+    for (const auto& unit : unicode_units(text)) {
+        if (lang == "tr" || lang.rfind("tr-", 0) == 0) {
+            if (unit == "I") { result += "ı"; continue; }
+            if (unit == "İ") { result += "i"; continue; }
+        }
+        auto value = icu::UnicodeString::fromUTF8(unit);
+        value.toLower();
+        value.toUTF8String(result);
+    }
+    return result;
+}
+bool is_unicode_punctuation(const std::string& value) {
+    auto u = icu::UnicodeString::fromUTF8(value); UChar32 cp = 0; int32_t i = 0;
+    U16_NEXT(u.getBuffer(), i, u.length(), cp); return u_ispunct(cp);
+}
+bool is_unicode_digit(const std::string& value) {
+    auto u = icu::UnicodeString::fromUTF8(value); UChar32 cp = 0; int32_t i = 0;
+    U16_NEXT(u.getBuffer(), i, u.length(), cp); return u_isdigit(cp);
+}
+bool is_unicode_space(const std::string& value) {
+    auto u = icu::UnicodeString::fromUTF8(value); UChar32 cp = 0; int32_t i = 0;
+    U16_NEXT(u.getBuffer(), i, u.length(), cp); return u_isUWhiteSpace(cp);
+}
+bool is_virama_unit(const std::string& value) {
+    auto u = icu::UnicodeString::fromUTF8(value); UChar32 cp = 0; int32_t i = 0;
+    U16_NEXT(u.getBuffer(), i, u.length(), cp); return u_getCombiningClass(cp) == 9;
+}
+bool is_combining_unit(const std::string& value) {
+    auto u = icu::UnicodeString::fromUTF8(value); UChar32 cp = 0; int32_t i = 0;
+    U16_NEXT(u.getBuffer(), i, u.length(), cp);
+    return u_getCombiningClass(cp) != 0 || u_charType(cp) == U_NON_SPACING_MARK;
+}
+bool is_subjoined_cluster(const std::string& value) {
+    const auto units = unicode_units(value);
+    if (units.size() < 2) return false;
+    for (std::size_t i = 1; i < units.size(); ++i) {
+        auto u = icu::UnicodeString::fromUTF8(units[i]); UChar32 cp = 0; int32_t p = 0;
+        U16_NEXT(u.getBuffer(), p, u.length(), cp);
+        // ICU does not expose Unicode names directly; these ranges cover the
+        // subjoined-letter and Brahmic medial marks used by the catalog.
+        if (!((cp >= 0x0f90 && cp <= 0x0fbc) || (cp >= 0x103b && cp <= 0x103e) || cp == 0x17b7 || cp == 0x17b8)) return false;
+    }
+    return true;
+}
+}
+
+std::vector<Token> Tokenizer::tokenize(const std::string& input) const {
+    std::string text = unicode_nfc(input, false);
+    if (!spec_.fold_diacritics.empty()) {
+        auto decomposed = unicode_nfc(text, false);
+        UErrorCode status = U_ZERO_ERROR;
+        const auto* nfd = icu::Normalizer2::getNFDInstance(status);
+        icu::UnicodeString value = icu::UnicodeString::fromUTF8(decomposed), normalized;
+        nfd->normalize(value, normalized, status);
+        std::string nfd_text; normalized.toUTF8String(nfd_text);
+        for (const auto& mark : spec_.fold_diacritics) {
+            std::size_t at = 0; while ((at = nfd_text.find(mark, at)) != std::string::npos) nfd_text.erase(at, mark.size());
+        }
+        text = unicode_nfc(nfd_text, false);
+    }
+    text = unicode_nfc(normalize_script_text(spec_, text), false);
+    const auto units = unicode_units(text);
+    std::vector<Token> out;
+    for (std::size_t pos = 0; pos < units.size();) {
+        if (is_unicode_space(units[pos])) {
+            const auto begin = pos++; while (pos < units.size() && is_unicode_space(units[pos])) ++pos;
+            out.push_back({TokenKind::WHITESPACE, " ", {}, begin, pos - begin}); continue;
+        }
+        std::size_t best_count = 0; std::string best;
+        for (const auto& key : keys_) {
+            const auto key_units = unicode_units(key);
+            if (key_units.size() <= best_count || pos + key_units.size() > units.size()) continue;
+            if (lower_unicode(fold_units(units, pos, key_units.size()), language_) == lower_unicode(key, language_)) {
+                best_count = key_units.size(); best = lower_unicode(key, language_);
+            }
+        }
+        if (best_count) {
+            auto it = spec_.graphemes.find(best); if (it == spec_.graphemes.end()) it = spec_.graphemes.find(lower_ascii(best));
+            std::size_t consumed = best_count;
+            // A virama belongs to the consonant token and suppresses its inherent vowel.
+            if (pos + consumed < units.size() && is_virama_unit(units[pos + consumed])) ++consumed;
+            // A preposed vowel owns the following onset in pronunciation order,
+            // while both tokens retain their written-order spans.
+            const bool preposed = std::any_of(spec_.preposed_vowels.begin(), spec_.preposed_vowels.end(), [&](const auto& value) {
+                return lower_unicode(value, language_) == best;
+            });
+            if (preposed && pos + consumed < units.size()) {
+                std::size_t ccount = 0; std::string ckey;
+                for (const auto& key : keys_) {
+                    const auto ku = unicode_units(key);
+                    if (pos + consumed + ku.size() > units.size() || ku.size() <= ccount) continue;
+                    if (lower_unicode(fold_units(units, pos + consumed, ku.size()), language_) == lower_unicode(key, language_)) { ccount = ku.size(); ckey = lower_unicode(key, language_); }
+                }
+                auto ci = spec_.graphemes.find(ckey);
+                const auto vi = it == spec_.graphemes.end() ? std::vector<std::string>{} : it->second;
+                if (ccount && ci != spec_.graphemes.end() && !vi.empty() && !ci->second.empty() &&
+                    !ipa_vowel_segment(ci->second.front())) {
+                    std::vector<std::string> combined;
+                    for (const auto& c : ci->second) for (const auto& v : vi) combined.push_back(c + v);
+                    out.push_back({TokenKind::GRAPHEME, best, {}, pos, consumed});
+                    out.push_back({TokenKind::GRAPHEME, ckey, combined, pos + consumed, ccount});
+                    pos += consumed + ccount; continue;
+                }
+            }
+            auto ipa_values = it == spec_.graphemes.end() ? std::vector<std::string>{} : it->second;
+            if (spec_.script_type == "abugida" && !spec_.inherent_vowel.empty() && !ipa_values.empty() &&
+                !ipa_values.front().empty() && !ipa_vowel_segment(ipa_values.front()) &&
+                !is_subjoined_cluster(best)) {
+                bool supplies = false;
+                std::size_t lookahead = pos + consumed;
+                // Marks whose declared reading is empty are transparent to
+                // ownership: Thai tone marks can sit between an onset and its
+                // vowel sign without reviving the inherent vowel.
+                while (lookahead < units.size()) {
+                    std::string candidate;
+                    for (const auto& key : keys_) {
+                        const auto ku = unicode_units(key);
+                        if (lookahead + ku.size() > units.size()) continue;
+                        if (lower_unicode(fold_units(units, lookahead, ku.size()), language_) == lower_unicode(key, language_)) {
+                            auto value = spec_.graphemes.find(lower_unicode(key, language_));
+                            if (value != spec_.graphemes.end() && value->second.size() == 1 && value->second.front().empty() && is_combining_unit(units[lookahead])) {
+                                lookahead += ku.size(); candidate.clear(); continue;
+                            }
+                            candidate = lower_unicode(key, language_); break;
+                        }
+                    }
+                    if (is_virama_unit(units[lookahead])) supplies = true;
+                    for (const auto& dependent : spec_.dependent_vowels) {
+                        const auto du = unicode_units(dependent);
+                        if (lookahead + du.size() <= units.size() &&
+                            lower_unicode(fold_units(units, lookahead, du.size()), language_) == lower_unicode(dependent, language_)) supplies = true;
+                    }
+                    break;
+                }
+                if (!supplies) {
+                    const auto vowel = (pos + consumed == units.size() && !spec_.inherent_vowel_final.empty()) ? spec_.inherent_vowel_final : spec_.inherent_vowel;
+                    for (auto& value : ipa_values) if (!value.empty()) value += vowel;
+                }
+            }
+            out.push_back({TokenKind::GRAPHEME, best, ipa_values, pos, consumed});
+            pos += consumed; continue;
+        }
+        const auto begin = pos;
+        if (is_unicode_punctuation(units[pos])) {
+            while (pos < units.size() && is_unicode_punctuation(units[pos])) ++pos;
+            std::string value; for (std::size_t i = begin; i < pos; ++i) value += units[i];
+            out.push_back({TokenKind::PUNCTUATION, value, {}, begin, pos - begin});
+        } else if (is_unicode_digit(units[pos])) {
+            while (pos < units.size() && is_unicode_digit(units[pos])) ++pos;
+            std::string value; for (std::size_t i = begin; i < pos; ++i) value += units[i];
+            out.push_back({TokenKind::DIGIT, value, {}, begin, pos - begin});
+        } else {
+            // Canonical-decomposition fallback: a composed character such as
+            // Hangul may be absent from the trie while every decomposed atom
+            // is a declared grapheme. Keep the original one-character span
+            // and combine the mapped readings, as the Python tokenizer does.
+            UErrorCode status = U_ZERO_ERROR;
+            const auto* nfd = icu::Normalizer2::getNFDInstance(status);
+            auto composed = icu::UnicodeString::fromUTF8(units[pos]);
+            icu::UnicodeString decomposed;
+            nfd->normalize(composed, decomposed, status);
+            std::string decomposed_utf8; decomposed.toUTF8String(decomposed_utf8);
+            const auto pieces = unicode_units(decomposed_utf8);
+            std::vector<std::string> combinations{""};
+            bool mapped = pieces.size() > 1;
+            for (const auto& piece : pieces) {
+                auto key = lower_unicode(piece, language_);
+                auto it = spec_.graphemes.find(key);
+                if (it == spec_.graphemes.end()) { mapped = false; break; }
+                std::vector<std::string> next;
+                for (const auto& prefix : combinations) for (const auto& value : it->second)
+                    if (next.size() < 4) next.push_back(prefix + value);
+                combinations = std::move(next);
+            }
+            if (mapped && !combinations.empty()) {
+                out.push_back({TokenKind::GRAPHEME, units[pos], combinations, pos, 1});
+                ++pos; continue;
+            }
+            out.push_back({TokenKind::UNKNOWN, units[pos], {}, pos, 1}); ++pos;
+        }
+    }
+    return out;
+}
+
+std::vector<Token> Tokenizer::grapheme_tokens(const std::string& text) const {
+    std::vector<Token> result; for (const auto& token : tokenize(text)) if (token.kind == TokenKind::GRAPHEME) result.push_back(token); return result;
+}
+
+const Token& GraphemeContext::token() const { return sequence->tokens[token_index]; }
+const std::string& GraphemeContext::grapheme() const { return token().grapheme; }
+const std::vector<std::string>& GraphemeContext::ipa() const { return token().ipa; }
+std::pair<std::size_t, std::size_t> GraphemeContext::span() const {
+    return {token().position, token().position + token().length};
+}
+const GraphemeContext* GraphemeContext::at(int offset) const {
+    const auto target = static_cast<long long>(index) + offset;
+    if (target < static_cast<long long>(run_start) || target >= static_cast<long long>(run_end)) return nullptr;
+    return sequence->at(static_cast<std::size_t>(target));
+}
+bool GraphemeContext::is_vowel() const {
+    if (vowel_grapheme(grapheme())) return true;
+    return !ipa().empty() && !ipa().front().empty() && ipa_vowel_segment(ipa().front());
+}
+bool GraphemeContext::is_front() const { return front_grapheme(grapheme()); }
+bool GraphemeContext::is_back() const { return back_grapheme(grapheme()); }
+
+TokenSequence::TokenSequence(const TokenSequence& other)
+    : tokens(other.tokens), graphemes(other.graphemes) {
+    for (auto& context : graphemes) context.sequence = this;
+}
+TokenSequence::TokenSequence(TokenSequence&& other) noexcept
+    : tokens(std::move(other.tokens)), graphemes(std::move(other.graphemes)) {
+    for (auto& context : graphemes) context.sequence = this;
+}
+TokenSequence& TokenSequence::operator=(const TokenSequence& other) {
+    if (this != &other) { tokens = other.tokens; graphemes = other.graphemes; for (auto& context : graphemes) context.sequence = this; }
+    return *this;
+}
+TokenSequence& TokenSequence::operator=(TokenSequence&& other) noexcept {
+    if (this != &other) { tokens = std::move(other.tokens); graphemes = std::move(other.graphemes); for (auto& context : graphemes) context.sequence = this; }
+    return *this;
+}
+
+TokenSequence Tokenizer::tokenize_with_context(const std::string& text) const {
+    TokenSequence sequence; sequence.tokens = tokenize(text);
+    std::size_t graph_index = 0, run_start = 0;
+    bool in_run = false;
+    for (std::size_t token_index = 0; token_index < sequence.tokens.size(); ++token_index) {
+        const auto& token = sequence.tokens[token_index];
+        if (token.kind != TokenKind::GRAPHEME) { in_run = false; continue; }
+        if (!in_run) { run_start = graph_index; in_run = true; }
+        sequence.graphemes.push_back({&sequence, graph_index++, token_index, run_start, 0});
+    }
+    for (std::size_t i = 0; i < sequence.graphemes.size();) {
+        const auto start = sequence.graphemes[i].run_start;
+        std::size_t end = i; while (end < sequence.graphemes.size() && sequence.graphemes[end].run_start == start) ++end;
+        for (std::size_t j = i; j < end; ++j) sequence.graphemes[j].run_end = end;
+        i = end;
+    }
+    return sequence;
 }
 
 std::vector<std::string> Tokenizer::tokenize_word(const std::string& word, std::vector<std::string>* unmapped) const {
-    std::vector<std::string> result; std::string lower = normalize_script_text(spec_, word);
-    lower = lower_ascii(lower);
-    for (std::size_t i = 0; i < lower.size();) {
-        std::string match;
-        for (const auto& key : keys_) if (lower.compare(i, key.size(), lower_ascii(key)) == 0) { match = key; break; }
-        if (match.empty()) { if (unmapped) unmapped->push_back(word.substr(i, 1)); ++i; }
-        else { result.push_back(match); i += match.size(); }
+    std::vector<std::string> result;
+    for (const auto& token : tokenize(word)) {
+        if (token.kind == TokenKind::GRAPHEME) result.push_back(token.grapheme);
+        else if (token.kind == TokenKind::UNKNOWN && unmapped) unmapped->push_back(token.grapheme);
     }
     return result;
 }
@@ -1141,8 +1510,8 @@ std::vector<IPAPath> Tokenizer::beam(const std::string& word, std::size_t width)
         std::vector<IPAPath> next;
         auto values = positional_values(spec_, gs, i, spec_.graphemes.at(gs[i]));
         const bool abugida = spec_.script_type == "abugida" && !spec_.inherent_vowel.empty();
-        const bool current_consonant = !vowel_grapheme(gs[i]) && !values.empty();
-        const bool next_supplies_vowel = i + 1 < gs.size() && (vowel_grapheme(gs[i + 1]) ||
+        const bool current_consonant = !spec_vowel(spec_, gs[i]) && !values.empty();
+        const bool next_supplies_vowel = i + 1 < gs.size() && (spec_vowel(spec_, gs[i + 1]) || in(gs[i + 1], spec_.dependent_vowels) || in(gs[i + 1], spec_.preposed_vowels) ||
             (!gs[i + 1].empty() && combining_mark(utf8_codepoint(gs[i + 1], 0))));
         if (abugida && current_consonant && !next_supplies_vowel) {
             const bool final = i + 1 == gs.size();
@@ -1153,13 +1522,43 @@ std::vector<IPAPath> Tokenizer::beam(const std::string& word, std::size_t width)
             }
         }
         for (auto path : paths) for (std::size_t j = 0; j < values.size(); ++j) {
-            path.ipa += values[j]; path.score += static_cast<double>(j); path.graphemes.push_back(gs[i]); path.segments.push_back(values[j]); next.push_back(std::move(path));
+            const auto& value = values[j];
+            if (value == "̃") {
+                std::string carrier;
+                for (auto it = path.segments.rbegin(); it != path.segments.rend(); ++it) if (!it->empty()) {
+                    if (it->find("̃") != std::string::npos) break;
+                    const auto units = unicode_units(*it);
+                    for (auto u = units.rbegin(); u != units.rend(); ++u)
+                        if (std::string("aeiouɛɔəɨʉɯæɐʌɒœøɪʊɤɵɞɑɘɚɜɝɶywjɥɰ").find(*u) != std::string::npos) { carrier = *u; break; }
+                    break;
+                }
+                if (carrier.empty()) continue;
+                for (auto it = path.segments.rbegin(); it != path.segments.rend(); ++it) if (!it->empty()) {
+                    const auto cut = it->find_last_of("ːˑ");
+                    if (cut == std::string::npos) *it += "̃";
+                    else it->insert(cut, "̃");
+                    break;
+                }
+                path.ipa.clear(); for (const auto& segment : path.segments) path.ipa += segment;
+                path.score += static_cast<double>(j); path.graphemes.push_back(gs[i]); path.segments.push_back(""); next.push_back(std::move(path));
+            } else {
+                path.ipa += value; path.score += static_cast<double>(j); path.graphemes.push_back(gs[i]); path.segments.push_back(value); next.push_back(std::move(path));
+            }
         }
-        std::sort(next.begin(), next.end(), [](const auto& a, const auto& b) { return a.score < b.score; });
+        std::stable_sort(next.begin(), next.end(), [](const auto& a, const auto& b) { return a.score < b.score; });
         if (next.size() > width) next.resize(width);
         paths = std::move(next);
     }
     if (paths.empty()) paths.push_back({"", 0.0, {}, {}});
+    if (spec_.script_type == "abugida" && !spec_.inherent_vowel.empty()) for (auto& path : paths) {
+        for (std::size_t i = 0; i < path.graphemes.size(); ++i) {
+            if (spec_vowel(spec_, path.graphemes[i]) || path.segments[i].empty()) continue;
+            const bool next_vowel = i + 1 < path.graphemes.size() && (spec_vowel(spec_, path.graphemes[i + 1]) || in(path.graphemes[i + 1], spec_.dependent_vowels) || in(path.graphemes[i + 1], spec_.preposed_vowels));
+            if (!next_vowel && path.graphemes[i] != "्" && path.segments[i].find(spec_.inherent_vowel) == std::string::npos)
+                path.segments[i] += (i + 1 == path.graphemes.size() && !spec_.inherent_vowel_final.empty()) ? spec_.inherent_vowel_final : spec_.inherent_vowel;
+        }
+        path.ipa.clear(); for (const auto& segment : path.segments) path.ipa += segment;
+    }
     if (!spec_.allophone_rules.empty()) {
         for (auto& path : paths) {
             for (int pass = 0; pass < spec_.allophone_passes; ++pass)
@@ -1167,6 +1566,13 @@ std::vector<IPAPath> Tokenizer::beam(const std::string& word, std::size_t width)
         }
         std::sort(paths.begin(), paths.end(), [](const auto& a, const auto& b) { return a.score < b.score; });
     }
+    if (auto stressed = stress_nucleus(spec_, paths.front().graphemes)) for (auto& path : paths) {
+        for (std::size_t i = 0; i < path.graphemes.size() && i < path.segments.size(); ++i) if (i > *stressed && (path.graphemes[i] == "о" || path.graphemes[i] == "а")) {
+            const auto positional = spec_.positional_graphemes.find(path.graphemes[i]); if (positional != spec_.positional_graphemes.end()) { auto value = positional->second.find("posttonic"); if (value != positional->second.end() && !value->second.empty()) path.segments[i] = value->second.front(); }
+        }
+        path.ipa.clear(); for (const auto& segment : path.segments) path.ipa += segment;
+    }
+    if (spec_.script.find("Cyrillic") != std::string::npos) for (auto& path : paths) while (path.ipa.find("ʲʲ") != std::string::npos) path.ipa.erase(path.ipa.find("ʲʲ") + std::string("ʲ").size(), std::string("ʲ").size());
     return paths;
 }
 
@@ -1421,6 +1827,7 @@ TranscriptionResult G2P::transcribe_detailed(const std::string& text, const std:
             validate_rescorer_output(rescored, *spec_, name);
             paths = rescored;
         }
+        if (!paths.empty() && spec_->tone && !spec_->tone->table.empty()) paths.front().ipa = apply_computed_tones(*spec_, paths.front());
         wt.ipa = paths.front().ipa;
         std::optional<std::size_t> plugin_stress;
         auto stress_names = stage("stress"); std::vector<std::string> ordered_stress(stress_names.begin(), stress_names.end());
@@ -1467,6 +1874,8 @@ TranscriptionResult G2P::transcribe_detailed(const std::string& text, const std:
         result.ipa = apply_dialect_impl(result.ipa, dialect_profile_, orthography);
         std::stringstream split(result.ipa); for (auto& word : result.words) split >> word.ipa;
     }
+    result.ipa = unicode_nfc(result.ipa, false);
+    for (auto& word : result.words) word.ipa = unicode_nfc(word.ipa, false);
     return result;
 }
 std::string G2P::transcribe(const std::string& text, const std::string& search, std::size_t width) const { return transcribe_detailed(text, search, width).ipa; }
