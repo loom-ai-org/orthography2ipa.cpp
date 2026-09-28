@@ -17,7 +17,7 @@ static void strings_json(const std::vector<std::string>& values) {
     std::cout << '['; for (std::size_t i = 0; i < values.size(); ++i) { if (i) std::cout << ','; std::cout << json(values[i]); } std::cout << ']';
 }
 static void path_json(const IPAPath& path) {
-    std::cout << "{\"ipa\":" << json(path.ipa) << ",\"score\":" << path.score << ",\"graphemes\": "; strings_json(path.graphemes); std::cout << ",\"segments\":"; strings_json(path.segments); std::cout << '}';
+    std::cout << "{\"ipa\":" << json(path.ipa) << ",\"score\":" << std::setprecision(17) << path.score << ",\"graphemes\": "; strings_json(path.graphemes); std::cout << ",\"segments\":"; strings_json(path.segments); std::cout << '}';
 }
 static void detailed_json(const TranscriptionResult& result) {
     std::cout << "{\"lang\":" << json(result.lang) << ",\"ipa\":" << json(result.ipa) << ",\"words\":[";
@@ -26,6 +26,22 @@ static void detailed_json(const TranscriptionResult& result) {
         for (std::size_t j = 0; j < word.candidates.size(); ++j) { if (j) std::cout << ','; path_json(word.candidates[j]); } std::cout << "]}";
     }
     std::cout << "]}\n";
+}
+
+static void tokens_json(const std::vector<Token>& tokens) {
+    std::cout << '[';
+    for (std::size_t i = 0; i < tokens.size(); ++i) {
+        if (i) std::cout << ',';
+        const auto& t = tokens[i];
+        std::cout << "{\"kind\":" << json(to_string(t.kind)) << ",\"grapheme\":" << json(t.grapheme)
+                  << ",\"ipa\":["; 
+        for (std::size_t j = 0; j < t.ipa.size(); ++j) {
+            if (j) std::cout << ',';
+            std::cout << json(t.ipa[j]);
+        }
+        std::cout << "],\"position\":" << t.position << ",\"length\":" << t.length << '}';
+    }
+    std::cout << "]\n";
 }
 
 int main(int argc, char** argv) {
@@ -72,6 +88,32 @@ int main(int argc, char** argv) {
             if (text.empty()) { usage(); return 2; } G2P engine(code, {}, dialect);
             const auto result = engine.transcribe_detailed(text, width > 1 ? "beam" : "greedy", width);
             if (json_output || detailed) detailed_json(result); else std::cout << result.ipa << '\n';
+            return 0;
+        }
+        if (command == "tokens" && i + 1 < argc) {
+            const std::string code = argv[i++];
+            if (i >= argc) { usage(); return 2; }
+            const std::string text = argv[i++];
+            tokens_json(Tokenizer(get(code)).tokenize(text));
+            return 0;
+        }
+        if (command == "beam" && i + 1 < argc) {
+            // Debug/parity surface for PhonetokTokenizer::ipa_beam.
+            const std::string code = argv[i++];
+            if (i >= argc) { usage(); return 2; }
+            const std::string text = argv[i++];
+            std::size_t width = 8; bool allophones = false;
+            while (i < argc) {
+                const std::string option = argv[i++];
+                if (option == "--json") json_output = true;
+                else if (option == "--width" && i < argc) width = static_cast<std::size_t>(std::stoul(argv[i++]));
+                else if (option == "--allophones") allophones = true;
+                else throw std::invalid_argument("unknown beam option: " + option);
+            }
+            const auto paths = PhonetokTokenizer(get(code)).ipa_beam(text, width, allophones);
+            std::cout << '[';
+            for (std::size_t j = 0; j < paths.size(); ++j) { if (j) std::cout << ','; path_json(paths[j]); }
+            std::cout << "]\n";
             return 0;
         }
         if (command == "distance" && i + 1 < argc) {

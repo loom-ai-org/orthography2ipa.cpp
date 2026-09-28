@@ -12,7 +12,12 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 
 include(GNUInstallDirs)
 
-add_library(orthography2ipa src/orthography2ipa.cpp)
+add_library(orthography2ipa
+    src/beam.cpp
+    src/orthography2ipa.cpp
+    src/phonetok.cpp
+    src/unicode_util.cpp
+    src/vowels.cpp)
 target_include_directories(orthography2ipa PUBLIC
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
     $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>)
@@ -58,7 +63,16 @@ if(BUILD_TESTING)
     add_test(NAME orthography2ipa-install COMMAND ${CMAKE_COMMAND} -P ${CMAKE_CURRENT_BINARY_DIR}/install_check.cmake)
     find_package(Python3 COMPONENTS Interpreter QUIET)
     if(Python3_Interpreter_FOUND)
+        # The reference Python package next door powers the parity tests;
+        # each harness fails loudly when it is unavailable.
+        if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/../orthography2ipa/orthography2ipa/phonetok.py")
+            set(ENV{O2I_PYTHON_ROOT} "${CMAKE_CURRENT_SOURCE_DIR}/../orthography2ipa")
+        endif()
         add_test(NAME orthography2ipa-python-parity
                  COMMAND ${Python3_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/tests/python_parity.py $<TARGET_FILE:orthography2ipa-cli>)
+        add_test(NAME orthography2ipa-token-parity
+                 COMMAND ${Python3_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/tests/token_parity.py $<TARGET_FILE:orthography2ipa-cli>)
+        add_test(NAME orthography2ipa-beam-parity
+                 COMMAND ${Python3_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/tests/beam_parity.py $<TARGET_FILE:orthography2ipa-cli>)
     endif()
 endif()

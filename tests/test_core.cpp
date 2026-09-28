@@ -33,11 +33,11 @@ int main() {
     assert(normalized.size() == 4);
     assert(normalized.back().grapheme == "é");
     const auto context = tokenizer.tokenize_with_context("casa!");
-    assert(context.graphemes.size() == 4);
-    assert(context.graphemes[0].next()->grapheme() == "a");
-    assert(context.graphemes[0].prev() == nullptr);
-    assert(context.graphemes[3].next() == nullptr);
-    assert(context.graphemes[0].span().first == 0 && context.graphemes[0].span().second == 1);
+    assert(context.graphemes->size() == 4);
+    assert(context.at(0)->next()->grapheme() == "a");
+    assert(context.at(0)->prev() == nullptr);
+    assert(context.at(3)->next() == nullptr);
+    assert(context.at(0)->span().first == 0 && context.at(0)->span().second == 1);
     const auto beam = tokenizer.beam("casa", 4);
     assert(!beam.empty() && beam.size() <= 4);
 

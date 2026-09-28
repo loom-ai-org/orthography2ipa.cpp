@@ -1,5 +1,7 @@
 #pragma once
 
+#include "orthography2ipa/phonetok.hpp"
+
 #include <cstddef>
 #include <map>
 #include <optional>
@@ -12,47 +14,9 @@
 
 namespace orthography2ipa {
 
-enum class TokenKind { GRAPHEME, WHITESPACE, PUNCTUATION, DIGIT, UNKNOWN, BOS, EOS };
-struct Token {
-    TokenKind kind = TokenKind::UNKNOWN;
-    std::string grapheme;
-    std::vector<std::string> ipa;
-    std::size_t position = 0;
-    std::size_t length = 0;
-};
-struct TokenSequence;
-struct GraphemeContext {
-    const TokenSequence* sequence = nullptr;
-    std::size_t index = 0;
-    std::size_t token_index = 0;
-    std::size_t run_start = 0;
-    std::size_t run_end = 0;
-    const Token& token() const;
-    const std::string& grapheme() const;
-    const std::vector<std::string>& ipa() const;
-    std::pair<std::size_t, std::size_t> span() const;
-    const GraphemeContext* at(int offset) const;
-    const GraphemeContext* prev() const { return at(-1); }
-    const GraphemeContext* next() const { return at(1); }
-    bool is_vowel() const;
-    bool is_consonant() const { return !is_vowel(); }
-    bool is_front() const;
-    bool is_back() const;
-};
-struct TokenSequence {
-    std::vector<Token> tokens;
-    std::vector<GraphemeContext> graphemes;
-    TokenSequence() = default;
-    TokenSequence(const TokenSequence& other);
-    TokenSequence(TokenSequence&& other) noexcept;
-    TokenSequence& operator=(const TokenSequence& other);
-    TokenSequence& operator=(TokenSequence&& other) noexcept;
-    const GraphemeContext* at(std::size_t index) const {
-        return index < graphemes.size() ? &graphemes[index] : nullptr;
-    }
-};
 struct Candidate { std::string ipa; double score{}; };
-struct IPAPath { std::string ipa; double score{}; std::vector<std::string> graphemes; std::vector<std::string> segments; };
+// IPAPath is defined in orthography2ipa/phonetok.hpp (the shared beam
+// path type both the tokenizer and the engine produce).
 
 struct AllophoneRule {
     std::string id, surface, append, syllable_position, stress, preceded_by, followed_by;
@@ -121,10 +85,17 @@ struct LanguageSpec {
     std::string stress_mark = "ˈ";
     bool stress_defined = false;
     std::string script_type = "alphabet";
-    std::string inherent_vowel, inherent_vowel_final, virama_final_vowel;
+    std::string inherent_vowel;
+    // Optional with a meaningful empty-string state (as/bn declare "" =
+    // suppress the final inherent vowel), hence the tri-state.
+    std::optional<std::string> inherent_vowel_final;
+    std::string virama_final_vowel;
     bool coda_no_inherent_vowel = false;
     bool collapse_geminates = false, doubled_letters_geminate = true, constrain_onsets = false;
     std::vector<std::string> fold_diacritics, vowel_graphemes, dependent_vowels, preposed_vowels, trailing_vowel_axis_digraphs;
+    // Per-candidate weights for the weighted-object grapheme form
+    // ({"ipa": [...], "weights": [...]}); own-only, sparse.
+    std::map<std::string, std::vector<double>> grapheme_weights;
     std::map<std::string, std::string> tone_inventory;
     bool tone_marks_syllable_final = false;
     std::optional<double> latitude, longitude;
@@ -196,8 +167,7 @@ public:
     std::vector<IPAPath> beam(const std::string& word, std::size_t width = 8) const;
 private:
     const LanguageSpec& spec_;
-    std::vector<std::string> keys_;
-    std::string language_;
+    PhonetokTokenizer tokenizer_;
 };
 
 class G2P {
