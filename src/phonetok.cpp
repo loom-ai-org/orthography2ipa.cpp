@@ -7,6 +7,7 @@
 
 #include "beam.hpp"
 #include "orthography2ipa/orthography2ipa.hpp"
+#include "orthography2ipa/rescorer.hpp"
 #include "orthography2ipa/vowels.hpp"
 #include "unicode_util.hpp"
 
@@ -1169,7 +1170,8 @@ TokenSequence PhonetokTokenizer::tokenize_with_context(const std::string& text) 
 // with the engine's positional beam.
 std::vector<IPAPath> PhonetokTokenizer::ipa_beam(
         const std::string& text, std::size_t beam_width, bool expand_allophones,
-        const std::string& word_separator, bool include_special) const {
+        const std::string& word_separator, bool include_special,
+        const std::vector<const rescorer::LatticeRescorer*>* rescorers) const {
     const std::vector<Token> tokens = tokenize(text);
     const TokenSequence seq = tokenize_with_context(text);
     const std::vector<GraphemeContext>& contexts = *seq.graphemes;
@@ -1181,8 +1183,38 @@ std::vector<IPAPath> PhonetokTokenizer::ipa_beam(
     // the standalone path — the full engine supplies it).
     std::vector<std::vector<beam::Branch>> slot_branches;
     slot_branches.reserve(contexts.size());
-    for (const auto& ctx : contexts)
-        slot_branches.push_back(beam::resolve_branches(spec_, ctx, *this, allophone_map));
+    if (rescorers != nullptr && !rescorers->empty()) {
+        // phonetok.py _rescored_branches: resolve full slots, run the
+        // rescorers (in order) over them, and flatten each slot back to
+        // the (ipa, cost) branch shape the beam consumes. An empty inner
+        // list marks a rescorer-deleted slot. Stress context is absent on
+        // this standalone path, so a stress-conditioned rule declines to
+        // fire (RescoreContext::is_stressed is nullopt).
+        std::vector<rescorer::SegmentSlot> slots;
+        slots.reserve(contexts.size());
+        for (std::size_t i = 0; i < contexts.size(); ++i) {
+            rescorer::SegmentSlot slot;
+            slot.grapheme = contexts[i].grapheme();
+            slot.span = contexts[i].span();
+            const auto branches =
+                beam::resolve_branches(spec_, contexts[i], *this, allophone_map);
+            slot.candidates.reserve(branches.size());
+            for (const auto& branch : branches)
+                slot.candidates.push_back({branch.ipa, branch.cost});
+            slots.push_back(std::move(slot));
+        }
+        const auto rescored = rescorer::apply_rescorers(slots, contexts, *rescorers);
+        for (const auto& slot : rescored) {
+            std::vector<beam::Branch> branches;
+            branches.reserve(slot.candidates.size());
+            for (const auto& cand : slot.candidates)
+                branches.push_back({cand.ipa, cand.score});
+            slot_branches.push_back(std::move(branches));
+        }
+    } else {
+        for (const auto& ctx : contexts)
+            slot_branches.push_back(beam::resolve_branches(spec_, ctx, *this, allophone_map));
+    }
     beam::constrain_nasal_carriers(slot_branches);
 
     std::vector<beam::Hypothesis> beam{{{}, 0.0}};

@@ -1,5 +1,6 @@
 #include "orthography2ipa/orthography2ipa.hpp"
 #include "orthography2ipa/stress.hpp"
+#include "orthography2ipa/tone.hpp"
 #include "beam.hpp"
 
 #include <cassert>
@@ -112,5 +113,56 @@ int main() {
     assert(!malformed.empty());
     const auto unicode_malformed = validate_lexicon("cafe\xCC\x81\tk\n");
     assert(!unicode_malformed.empty());
+
+    // ── Allophony rescorer (allophony.py / rescorer.py ports) ──
+    {
+        // segment_ipa: atoms tried longest-first (so tɕʰ is ONE segment,
+        // never t + ɕʰ); a match must not be followed by a modifier, so k͈
+        // keeps the base of k͈al, and bare single characters need no atom.
+        assert((segment_ipa("atɕʰa", {"tɕʰ", "tɕ"}) ==
+                std::vector<std::string>{"a", "tɕʰ", "a"}));
+        assert((segment_ipa("k͈al") == std::vector<std::string>{"k͈", "a", "l"}));
+        assert((segment_ipa("tɕa", {"tɕ"}) == std::vector<std::string>{"tɕ", "a"}));
+        // The compiled rescorer is null for a spec without rules (the
+        // default engine path stays byte-identical), and non-null for one
+        // that declares them.
+        const auto& no_rules = get("zh");
+        assert(no_rules.allophone_rules.empty());
+        assert(rescorer::compile_allophone_rescorer(no_rules.allophone_rules) == nullptr);
+        // French declares the nasal-absorption-style rules the flat
+        // stand-in could not evaluate; the engine path realizes jeune as
+        // ʒœn (the final n is NOT absorbed word-finally).
+        const auto& french_spec = get("fr-FR");
+        assert(!french_spec.allophone_rules.empty());
+        assert(rescorer::compile_allophone_rescorer(french_spec.allophone_rules) != nullptr);
+        auto fr_rescorer = rescorer::compile_allophone_rescorer(
+            french_spec.allophone_rules, french_spec.doubled_letters_geminate);
+        assert(fr_rescorer != nullptr);
+        assert(G2P("fr-FR").transcribe_word("jeune") == "\xca\x92\xc5\x93n");
+        // The rescorer runs at the slot seam: a rescorer-deleted slot
+        // contributes no segment, and the paths reflect the rewrite.
+        const auto fr_paths = Tokenizer(french_spec).beam("bonne");
+        assert(!fr_paths.empty());
+        // Geminate atomicity: the shadda-expanded doubled pair is realised
+        // as one unit ( عمّ → ˈʕmm), not split by an outside rule.
+        assert(G2P("ar").transcribe_word("\xd8\xb9\xd9\x85\xd9\x91") == "\xcb\x88\xca\x95mm");
+    }
+
+    // ── Tone syllable model (tone.py port) ──
+    {
+        const auto& thai = get("th");
+        assert(thai.tone.has_value());  // tone_rules -> the engine tone data
+        // Computed tone: ปู่ (mid class, live, mai tho) takes the falling
+        // tone; กราบ (low class, dead-long) takes the low tone.
+        assert(G2P("th").transcribe_word("ปู่") == "pu\xcb\x90\xcb\xa8\xcb\xa9");
+        assert(G2P("th").transcribe_word("กราบ") == "kra\xcb\x90p\xcc\x9a\xcb\xa8\xcb\xa9");
+        // kix declares only the docking convention.
+        assert(get("kix").tone_marks_syllable_final);
+        assert(!get("kix").tone.has_value());
+        // dock_tone_marks is idempotent and moves a mark to its syllable edge.
+        assert(tone::dock_tone_marks("o\xCB\xA7\xC5\x8B", {}) == "o\xC5\x8B\xCB\xA7");
+        assert(tone::dock_tone_marks("o\xC5\x8B\xCB\xA7", {}) == "o\xC5\x8B\xCB\xA7");
+        assert(tone::dock_tone_marks("ai", {}) == "ai");  // no marks: no-op
+    }
     return 0;
 }

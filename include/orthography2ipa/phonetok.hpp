@@ -21,6 +21,7 @@
 namespace orthography2ipa {
 
 struct LanguageSpec;
+namespace rescorer { class LatticeRescorer; }
 
 enum class TokenKind { GRAPHEME, WHITESPACE, PUNCTUATION, DIGIT, UNKNOWN, BOS, EOS };
 
@@ -193,7 +194,8 @@ public:
                                   std::size_t beam_width = 8,
                                   bool expand_allophones = false,
                                   const std::string& word_separator = " ",
-                                  bool include_special = false) const;
+                                  bool include_special = false,
+                                  const std::vector<const rescorer::LatticeRescorer*>* rescorers = nullptr) const;
 
     static constexpr const char* BOS_STR = "<bos>";
     static constexpr const char* EOS_STR = "<eos>";

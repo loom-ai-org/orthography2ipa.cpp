@@ -14,7 +14,11 @@
 
 namespace orthography2ipa {
 
-struct Candidate { std::string ipa; double score{}; };
+struct Candidate {
+    std::string ipa;
+    double score{};
+    bool operator==(const Candidate& other) const { return ipa == other.ipa && score == other.score; }
+};
 // IPAPath is defined in orthography2ipa/phonetok.hpp (the shared beam
 // path type both the tokenizer and the engine produce).
 
@@ -30,6 +34,16 @@ struct AllophoneRule {
     std::optional<bool> requires_other_nucleus, followed_by_nucleus;
     std::optional<bool> word_initial, word_final;
 };
+
+} // namespace orthography2ipa
+
+// The lattice rescoring seam (rescorer.py) and the post-lexical allophone
+// rule layer compiled into it (allophony.py). Included AFTER the
+// Candidate/AllophoneRule declarations above: the rescorer API stores both
+// by value.
+#include "orthography2ipa/rescorer.hpp"
+
+namespace orthography2ipa {
 
 struct SandhiRule {
     std::string id, name, left_context, right_context;
@@ -181,6 +195,13 @@ private:
     // _silent_stress_marks).
     bool uses_aperture_ = false;
     std::string silent_stress_marks_;
+    // g2p.py G2P._rescorers: the spec's compiled allophone rescorer
+    // (allophony.py compile_allophone_rescorer), repeated allophone_passes
+    // times so a rule that only fires on another rule's output can feed off
+    // it. Null when the spec declares no rules — the chain is empty and the
+    // default path is byte-identical.
+    std::unique_ptr<rescorer::LatticeRescorer> allophone_rescorer_;
+    std::vector<const rescorer::LatticeRescorer*> rescorers_;
 };
 
 class G2P {
@@ -194,6 +215,12 @@ public:
     TranscriptionResult transcribe_detailed(const std::string& text,
                                             const std::string& search = "greedy",
                                             std::size_t beam_width = 8) const;
+    /// g2p.py transcribe_word: transcribe a single *word* through the
+    /// per-word pipeline (beam, grammatical endings, computed tone,
+    /// geminate collapse, word-final virama, tone-mark docking, stress).
+    std::string transcribe_word(const std::string& word,
+                                const std::string& search = "greedy",
+                                std::size_t beam_width = 8) const;
     std::vector<IPAPath> candidates(const std::string& word, std::size_t beam_width = 8) const;
     std::vector<IPAPath> lattice(const std::string& word, std::size_t beam_width = 8) const;
     std::vector<GraphemeFeature> features(const std::string& word) const;
@@ -203,6 +230,11 @@ private:
     const LanguageSpec* spec_;
     std::map<std::string, std::vector<std::string>> plugin_overrides_;
     std::string dialect_profile_;
+    // g2p.py _transcribe_word: the per-word stage of the pipeline (word
+    // overrides, grammatical endings, rescorer plugins, the word-final
+    // ordering), shared by transcribe_detailed and transcribe_word.
+    WordTranscription transcribe_one(const std::string& word, std::size_t width,
+                                     bool forced, const std::string& forced_ipa) const;
 };
 
 class NormalizePlugin {
