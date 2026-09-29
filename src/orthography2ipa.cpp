@@ -2,6 +2,8 @@
 #include "orthography2ipa/orthography2ipa.hpp"
 #include "orthography2ipa/tone.hpp"
 #include "orthography2ipa/stress.hpp"
+#include "orthography2ipa/sandhi.hpp"
+#include "orthography2ipa/transform.hpp"
 #include "unicode_util.hpp"
 #include "orthography2ipa/vowels.hpp"
 
@@ -526,53 +528,158 @@ LanguageSpec load_raw(const std::string& code, std::set<std::string>& loading) {
 
 std::size_t utf8_char_size(const std::string& text, std::size_t pos);
 
-std::pair<std::vector<std::string>, std::vector<bool>> sentence_words(const std::string& text) {
-    std::vector<std::string> result; std::vector<bool> pausal; std::string current;
-    bool pause = false;
-    auto flush = [&] { if (!current.empty()) { result.push_back(current); pausal.push_back(pause); current.clear(); pause = false; } };
-    for (std::size_t i = 0; i < text.size();) {
-        const unsigned char c = static_cast<unsigned char>(text[i]);
-        std::size_t n = c < 0x80 ? 1 : utf8_char_size(text, i);
-        const std::string character = text.substr(i, n);
-        const bool ascii_pause = n == 1 && std::string(",.;:!?...").find(character) != std::string::npos;
-        const bool unicode_pause = character == "\xD8\x8C" || character == "\xD8\x9F" || character == "\xE2\x80\xA6";
-        if (c <= 32 || std::ispunct(c) || ascii_pause || unicode_pause) {
-            if (ascii_pause || unicode_pause) pause = true;
+namespace {
+
+// g2p.py _Word: one input word, with the pause the tokenizer read off its
+// trailing punctuation and the <phoneme> forcing if the input carried one.
+struct InputWord {
+    std::string surface;
+    std::string forced_ipa;
+    bool forced = false;
+    bool pausal = false;
+    bool sentence_initial = false;
+    bool sentence_final = false;
+};
+
+/// Python `str.strip()`: whitespace at both ends, by Unicode definition.
+std::u32string u32_strip(const std::u32string& text) {
+    const auto space = [](char32_t c) {
+        if (c == U' ' || c == U'\t' || c == U'\n' || c == U'\v' || c == U'\f' || c == U'\r')
+            return true;
+        const std::string cat = uni::category(c);
+        return cat == "Zs" || cat == "Zl" || cat == "Zp";
+    };
+    std::size_t begin = 0, end = text.size();
+    while (begin < end && space(text[begin])) ++begin;
+    while (end > begin && space(text[end - 1])) --end;
+    return text.substr(begin, end - begin);
+}
+
+// g2p.py G2P._group_words: group ONE plain run's TOKEN stream into words.
+//
+// The splitter is the spec's own tokenizer, not a punctuation test over the
+// characters: a mark the grapheme table claims (an Afrikaans or Kurdish
+// apostrophe, a Cyrillic soft sign) is a GRAPHEME token and stays inside the
+// word, while a mark it does not claim is a PUNCTUATION token and breaks the
+// word. An ASCII `ispunct` test gets both halves of that wrong at once: it
+// split `hy's` after the letters and dropped the apostrophe the spec does
+// claim, and it kept nothing for a script whose punctuation is not ASCII.
+//
+// It appends to *words* rather than returning, because a pause is not confined
+// to the run it is written in: punctuation opening a plain run falls AFTER
+// whatever preceded it, and what preceded it may be a forced word.
+void group_words(const PhonetokTokenizer& tokenizer, const std::string& text,
+                 std::vector<InputWord>& words) {
+    std::u32string run;                     // the surface being built, code points
+    const auto flush = [&] {
+        if (run.empty()) return;
+        words.push_back(InputWord{to_utf8(run), "", false, false, false, false});
+        run.clear();
+    };
+    for (const auto& token : tokenizer.tokenize(text)) {
+        if (token.kind == TokenKind::BOS || token.kind == TokenKind::EOS) continue;
+        if (token.kind == TokenKind::WHITESPACE) { flush(); continue; }
+        if (token.kind == TokenKind::PUNCTUATION) {
             flush();
-        } else current += character;
-        i += n;
+            if (words.empty()) continue;
+            const std::u32string mark = to_utf32(token.grapheme);
+            bool pause = false;
+            for (std::size_t i = 0; i < mark.size(); ++i) {
+                std::string one = to_utf8(std::u32string(1, mark[i]));
+                if (is_pause_punctuation(one)) { pause = true; break; }
+            }
+            // `pausal` on the word that stands before the pause, keeping every
+            // other field of it (a forced word must keep its forced_ipa).
+            if (pause) words.back().pausal = true;
+            continue;
+        }
+        // Reconstruct the SURFACE span, not just the grapheme key: a token may
+        // consume more characters than its grapheme names (an abugida
+        // consonant plus its virama), and the word is re-tokenised downstream.
+        const std::u32string span = to_utf32(token.text_span(text));
+        const std::u32string key = to_utf32(token.grapheme);
+        run += key;
+        if (span.size() > key.size()) run.append(span, key.size(), std::u32string::npos);
     }
     flush();
-    return {std::move(result), std::move(pausal)};
 }
 
-struct InputWord { std::string surface, forced_ipa; bool forced = false, pausal = false; };
-
-std::vector<InputWord> parse_input(const std::string& text,
+// g2p.py G2P._split_words: parse the input into words, forced pronunciations
+// included. Markup is read BEFORE normalization, so a `normalize` plugin never
+// sees a tag: it is handed the plain runs and nothing else.
+std::vector<InputWord> split_words(const LanguageSpec& spec, const std::string& text,
                                    const std::function<std::string(const std::string&)>& normalize) {
     std::vector<InputWord> words;
+    const PhonetokTokenizer tokenizer(spec);
     const std::regex tag(R"(<phoneme\b([^>]*)>([\s\S]*?)</phoneme\s*>)", std::regex::icase);
-    std::smatch match; std::string remaining = text; bool found_tag = false;
+    std::smatch match;
+    std::string remaining = text;
+    bool found_tag = false;
+    const auto plain = [&](const std::string& run) {
+        group_words(tokenizer, normalize(run), words);
+    };
     while (std::regex_search(remaining, match, tag)) {
         found_tag = true;
-        auto plain = sentence_words(normalize(match.prefix().str()));
-        for (std::size_t i = 0; i < plain.first.size(); ++i) words.push_back({plain.first[i], "", false, plain.second[i]});
+        plain(match.prefix().str());
         const std::string attrs = match[1].str();
-        std::smatch ph; const std::regex ph_attr(R"(\bph\s*=\s*["']([^"']+)["'])", std::regex::icase);
+        std::smatch ph;
+        const std::regex ph_attr(R"(\bph\s*=\s*["']([^"']+)["'])", std::regex::icase);
         if (!std::regex_search(attrs, ph, ph_attr) || ph[1].str().empty())
             throw std::invalid_argument("<phoneme> requires a non-empty ph attribute");
-        const std::string surface = match[2].str();
-        if (surface.find_first_not_of(" \t\r\n") == std::string::npos)
-            throw std::invalid_argument("<phoneme> must wrap text");
-        words.push_back({surface, ph[1].str(), true, false});
+        // markup.py: the wrapped text IS the spelling, and g2p.py strips it;
+        // an empty spelling is refused because cross-word rules read it.
+        const std::u32string surface = u32_strip(to_utf32(match[2].str()));
+        if (surface.empty()) throw std::invalid_argument("<phoneme> must wrap text");
+        // `_check_forced`: the forced IPA is used stripped, never re-derived.
+        const std::string forced_ipa = to_utf8(u32_strip(to_utf32(ph[1].str())));
+        if (forced_ipa.empty()) throw std::invalid_argument("<phoneme> requires a non-empty ph attribute");
+        words.push_back(InputWord{to_utf8(surface), forced_ipa, true, false, false, false});
         remaining = match.suffix().str();
     }
-    auto plain = sentence_words(normalize(remaining));
-    for (std::size_t i = 0; i < plain.first.size(); ++i) words.push_back({plain.first[i], "", false, plain.second[i]});
-    if (!found_tag && text.find("<phoneme") != std::string::npos)
-        throw std::invalid_argument("unclosed <phoneme> tag");
+    plain(remaining);
+    // markup.py _reject_stray_tag: a `<phoneme` or `</phoneme` left in the
+    // plain text never closed, and would be read as letters — silently.
+    if (!found_tag) {
+        const std::u32string plain = to_utf32(text);
+        const std::u32string needle_open = U"<phoneme", needle_close = U"</phoneme";
+        const auto followed_by_break = [&](std::size_t at) {
+            const char32_t c = plain[at];
+            return c == U'>' || c == U' ' || c == U'\t' || c == U'\n';
+        };
+        for (std::size_t i = plain.find(needle_open); i != std::u32string::npos;
+             i = plain.find(needle_open, i + 1))
+            if (i + needle_open.size() < plain.size() && followed_by_break(i + needle_open.size()))
+                throw std::invalid_argument("unclosed <phoneme> tag");
+        for (std::size_t i = plain.find(needle_close); i != std::u32string::npos;
+             i = plain.find(needle_close, i + 1))
+            if (i + needle_close.size() < plain.size() && followed_by_break(i + needle_close.size()))
+                throw std::invalid_argument("unclosed <phoneme> tag");
+    }
+
+    // g2p.py G2P._flag: mark the edges of the utterance. The last word stands
+    // before a pause — the end of the utterance IS an intonational phrase
+    // break, and a pause is exactly what strips a case ending.
+    if (words.empty()) return words;
+    for (std::size_t i = 0; i < words.size(); ++i) {
+        words[i].sentence_initial = i == 0;
+        words[i].sentence_final = i + 1 == words.size();
+        if (i + 1 == words.size()) words[i].pausal = true;
+    }
     return words;
 }
+
+// g2p.py G2P._unmarked: *word* without the silent stress marks the spec
+// declares. Whole-word data that supplies SEGMENTS is keyed on bare
+// orthography, so a caller who marks the stress must not miss the lookup.
+std::string unmarked_word(const std::string& silent_marks, const std::string& word) {
+    if (silent_marks.empty()) return word;
+    std::u32string out;
+    for (const char32_t ch : to_utf32(word))
+        if (silent_marks.find(ch) == std::string::npos) out.push_back(ch);
+    return to_utf8(out);
+}
+
+} // namespace
 
 std::vector<std::string> unicode_units(const std::string& text) {
     std::vector<std::string> out;
@@ -655,41 +762,6 @@ std::map<std::string, std::string> load_lexicon(const std::string& code) {
 }
 
 
-std::string replacement_pattern(std::string replacement) {
-    // Python's re.sub uses \1; std::regex_replace uses $1.
-    for (std::size_t i = 0; i + 1 < replacement.size(); ++i)
-        if (replacement[i] == '\\' && replacement[i + 1] >= '1' && replacement[i + 1] <= '9') {
-            replacement[i] = '$'; replacement.erase(i + 1, 1);
-        }
-    return replacement;
-}
-
-std::vector<std::string> apply_sandhi(const LanguageSpec& spec, std::vector<std::string> ipa,
-                                      const std::vector<bool>& pausal) {
-    if (pausal.size() != ipa.size()) throw std::invalid_argument("pausal flag count must match word count");
-    if (ipa.size() < 2 || spec.sandhi_rules.empty()) return ipa;
-    for (std::size_t i = 0; i + 1 < ipa.size(); ++i) {
-        if (pausal[i]) continue;
-        const auto left = ipa[i], right = ipa[i + 1];
-        bool left_done = false, right_done = false;
-        for (const auto& rule : spec.sandhi_rules) {
-            if (left_done && right_done) break;
-            try {
-                const std::regex l(rule.left_context), r(rule.right_context);
-                if (!std::regex_search(left, l) || !std::regex_search(right, r)) continue;
-                if (rule.transform && !left_done) { ipa[i] = std::regex_replace(left, l, replacement_pattern(*rule.transform)); left_done = true; }
-                if (rule.right_transform && !right_done) { ipa[i + 1] = std::regex_replace(right, r, replacement_pattern(*rule.right_transform)); right_done = true; }
-            } catch (const std::regex_error& e) { throw std::runtime_error("invalid sandhi rule " + rule.id + ": " + e.what()); }
-        }
-    }
-    return ipa;
-}
-
-
-
-
-
-
 std::size_t utf8_char_size(const std::string& text, std::size_t pos) {
     const unsigned char c = static_cast<unsigned char>(text[pos]);
     if (c < 0x80) return 1;
@@ -702,6 +774,7 @@ bool ipa_modifier(const std::string& text, std::size_t pos) {
     const auto cp = [&]() -> unsigned int { const unsigned char c = static_cast<unsigned char>(text[pos]); if (c < 0x80) return c; if ((c & 0xe0) == 0xc0) return ((c & 0x1f) << 6) | (text[pos + 1] & 0x3f); if ((c & 0xf0) == 0xe0) return ((c & 0xf) << 12) | ((text[pos + 1] & 0x3f) << 6) | (text[pos + 2] & 0x3f); return ((c & 7) << 18) | ((text[pos + 1] & 0x3f) << 12) | ((text[pos + 2] & 0x3f) << 6) | (text[pos + 3] & 0x3f); }();
     return (cp >= 0x300 && cp <= 0x36f) || (cp >= 0x2b0 && cp <= 0x2ff) || (cp >= 0x1d00 && cp <= 0x1dff) || cp == 0x2d0 || cp == 0x2d1 || cp == 0x203f;
 }
+
 std::vector<std::string> segment_ipa_impl(const std::string& ipa, const std::vector<std::string>& atoms) {
 
     // allophony.py segment_ipa — public; also used by the stress port. Atoms
@@ -842,72 +915,11 @@ std::vector<IPAPath> apply_grammatical_endings(const LanguageSpec& spec,
 }
 
 bool dialect_profile_known(const std::string& profile) {
-    static const std::set<std::string> profiles{
-        "estremenho", "lisbon", "ribatejano", "beira_baixa", "algarve_barlavento",
-        "northern", "transmontano", "baixo_minhoto", "porto", "beira_alta",
-        "galician", "galician_west", "leonese", "rionorese", "guadramilese"};
-    return profiles.count(profile) != 0;
+    // transforms.py DIALECT_PROFILES, through the port's own table.
+    return transform::profile_for(profile) != nullptr;
 }
 
-bool transform_context(const std::string& ipa, std::size_t pos, std::size_t length,
-                       const std::string& context, const std::string& orthography) {
-    if (context.empty()) return true;
-    if (context == "word_final") return pos + length >= ipa.size() || ipa[pos + length] == ' ';
-    if (context == "ortho_has_ou") return lower_ascii(orthography).find("ou") != std::string::npos;
-    if (context == "ortho_source_is_ch") return lower_ascii(orthography).find("ch") != std::string::npos;
-    if (context == "ortho_source_is_z") return lower_ascii(orthography).find('z') != std::string::npos;
-    if (context == "stressed") {
-        return ipa.rfind("ˈ", pos) != std::string::npos;
-    }
-    if (context == "unstressed_pretonic") {
-        return ipa.find("ˈ", pos) != std::string::npos;
-    }
-    return false;
-}
-
-std::string replace_rule(std::string ipa, const std::string& from, const std::string& to,
-                         const std::string& context = "", const std::string& orthography = "") {
-    if (from.empty()) return ipa;
-    for (std::size_t pos = 0; (pos = ipa.find(from, pos)) != std::string::npos;) {
-        if (transform_context(ipa, pos, from.size(), context, orthography)) { ipa.replace(pos, from.size(), to); pos += to.size(); }
-        else pos += from.size();
-    }
-    return ipa;
-}
-
-std::string apply_dialect_impl(std::string ipa, const std::string& profile, const std::string& orthography) {
-    if (profile == "rionorese" || profile == "guadramilese") {
-        std::stringstream sounds(ipa), spellings(orthography); std::vector<std::string> iw, ow; std::string value;
-        while (sounds >> value) iw.push_back(value);
-        while (spellings >> value) ow.push_back(value);
-        if (iw.size() == ow.size()) for (std::size_t i = 0; i < iw.size(); ++i) {
-            if (profile == "rionorese" && ow[i] == "o") iw[i] = replace_rule(iw[i], "u", "al");
-            if (profile == "rionorese" && ow[i] == "eu") iw[i] = replace_rule(iw[i], "ew", "jew");
-            if (profile == "guadramilese" && ow[i] == "eu") iw[i] = replace_rule(iw[i], "ew", "jow");
-            if (profile == "guadramilese" && ow[i] == "ia") iw[i] = replace_rule(iw[i], "iɐ", "dibɐ");
-        }
-        ipa.clear(); for (const auto& word : iw) { if (!ipa.empty()) ipa += " "; ipa += word; }
-    }
-    if (profile == "lisbon") { ipa = replace_rule(ipa, "ej", "ɐj"); ipa = replace_rule(ipa, "ow", "o"); ipa = replace_rule(ipa, "e", "ɨ", "unstressed_pretonic", orthography); ipa = replace_rule(ipa, "l", "ɫ"); return ipa; }
-    const bool northern = profile == "northern" || profile == "transmontano" || profile == "baixo_minhoto" || profile == "porto" || profile == "beira_alta" || profile == "leonese" || profile == "rionorese" || profile == "guadramilese";
-    const bool galician = profile == "galician" || profile == "galician_west";
-    if (northern || galician) { ipa = replace_rule(ipa, "v", "b"); ipa = replace_rule(ipa, "o", "ow", "ortho_has_ou", orthography); }
-    if (galician) { ipa = replace_rule(ipa, "ʒ", "ʃ"); ipa = replace_rule(ipa, "z", "s"); if (profile == "galician_west") ipa = replace_rule(ipa, "ɡ", "x"); }
-    if (profile == "transmontano" || profile == "leonese" || profile == "rionorese" || profile == "guadramilese") { ipa = replace_rule(ipa, "ʃ", "tʃ", "ortho_source_is_ch", orthography); ipa = replace_rule(ipa, "s", "s̺"); }
-    if (profile == "baixo_minhoto" || profile == "beira_alta" || profile == "porto") { ipa = replace_rule(ipa, "s", "s̺"); ipa = replace_rule(ipa, "z", "z̺"); }
-    if (profile == "ribatejano" || profile == "beira_baixa" || profile == "algarve_barlavento") ipa = replace_rule(ipa, "ej", "e");
-    if (profile == "beira_baixa") ipa = replace_rule(ipa, "u", "y", "stressed");
-    if (profile == "algarve_barlavento") {
-        ipa = replace_rule(ipa, "a", "\x01"); ipa = replace_rule(ipa, "ɔ", "\x02");
-        ipa = replace_rule(ipa, "o", "\x03"); ipa = replace_rule(ipa, "u", "\x04");
-        ipa = replace_rule(ipa, "ɛ", "\x05"); ipa = replace_rule(ipa, "e", "\x06");
-        ipa = replace_rule(ipa, "\x01", "ɔ"); ipa = replace_rule(ipa, "\x02", "o");
-        ipa = replace_rule(ipa, "\x03", "u"); ipa = replace_rule(ipa, "\x04", "y");
-        ipa = replace_rule(ipa, "\x05", "æ"); ipa = replace_rule(ipa, "\x06", "ɛ");
-    }
-    return ipa;
-}
-}
+} // namespace
 
 std::vector<std::string> LanguageSpec::family_path() const {
     if (!family_path_metadata.empty()) return family_path_metadata;
@@ -917,7 +929,8 @@ std::vector<std::string> LanguageSpec::family_path() const {
     return out;
 }
 
-Tokenizer::Tokenizer(const LanguageSpec& spec) : spec_(spec), tokenizer_(spec) {
+Tokenizer::Tokenizer(const LanguageSpec& spec, bool expand_allophones, bool apply_allophony)
+    : spec_(spec), tokenizer_(spec), expand_allophones_(expand_allophones) {
     // g2p.py G2P.__init__ engine-side derivations.
     // _uses_aperture: does any grapheme in this spec key on syllable
     // APERTURE? If not, the aperture question is never asked: a stress-less
@@ -946,9 +959,11 @@ Tokenizer::Tokenizer(const LanguageSpec& spec) : spec_(spec), tokenizer_(spec) {
     // compiles to null, so the chain is empty and the default path stays
     // byte-identical. The allophone pass may run more than once (bounded):
     // each repeat rebuilds the segment context from the previous pass.
-    allophone_rescorer_ =
-        rescorer::compile_allophone_rescorer(spec.allophone_rules,
-                                             spec.doubled_letters_geminate);
+    // g2p.py: `compile_allophone_rescorer(...) if apply_allophony else None`.
+    allophone_rescorer_ = apply_allophony
+        ? rescorer::compile_allophone_rescorer(spec.allophone_rules,
+                                               spec.doubled_letters_geminate)
+        : nullptr;
     if (allophone_rescorer_ != nullptr)
         rescorers_.assign(static_cast<std::size_t>(std::max(1, spec.allophone_passes)),
                           allophone_rescorer_.get());
@@ -1065,13 +1080,34 @@ std::vector<std::string> Tokenizer::tokenize_word(const std::string& word, std::
     return result;
 }
 
+std::vector<IPAPath> Tokenizer::rescored_beam(const std::string& word, std::size_t width) const {
+    // g2p.py _transcribe_word's other branch:
+    // `self._tokenizer.ipa_beam(word, beam_width=width,
+    //  expand_allophones=self.expand_allophones, rescorer=self._rescorers)`.
+    // The plain tokenizer beam carries no stress context, so a
+    // `stress`-conditioned allophone rule cannot fire on it — which is
+    // exactly why the engine only takes this branch when
+    // _needs_context_beam is false.
+    return tokenizer_.ipa_beam(word, width, expand_allophones_, " ", false,
+                               rescorers_.empty() ? nullptr : &rescorers_);
+}
+
+std::vector<IPAPath> Tokenizer::plain_beam(const std::string& word, std::size_t width) const {
+    // g2p.py G2P.candidates / `_positional_beam`'s no-graphemes fallback:
+    // `self._tokenizer.ipa_beam(word, beam_width=width,
+    // expand_allophones=self.expand_allophones)` — no rescorer chain.
+    return tokenizer_.ipa_beam(word, width, expand_allophones_);
+}
+
 std::vector<IPAPath> Tokenizer::beam(const std::string& word, std::size_t width) const {
     // g2p.py _positional_beam, sharing the token model's beam machinery
     // (resolve_branches / constrain_nasal_carriers / _expand_beam) so
     // greedy (width 1) and beam search expand slots through the exact
     // same code.
     const auto g_tokens = tokenizer_.grapheme_tokens(word);
-    if (g_tokens.empty()) return std::vector<IPAPath>{{"", 0.0, {}, {}}};
+    // g2p.py _positional_beam: a word with no grapheme token at all falls back
+    // to the plain tokenizer beam (it can still spell through the specials).
+    if (g_tokens.empty()) return plain_beam(word, width);
     const std::set<std::string> vowel_set(spec_.vowel_graphemes.begin(),
                                           spec_.vowel_graphemes.end());
     const auto seq = flat_contexts(g_tokens, vowel_set);
@@ -1118,7 +1154,10 @@ std::vector<IPAPath> Tokenizer::beam(const std::string& word, std::size_t width)
     for (std::size_t i = 0; i < contexts.size(); ++i)
         slot_branches.push_back(beam::resolve_branches(
             spec_, contexts[i], tokenizer_,
-            /*allophone_map=*/nullptr, syll_for_token[i], stressed_syll_idx,
+            // g2p.py _positional_beam: `allophone_map=spec.allophones` only
+            // when the caller asked for expand_allophones.
+            expand_allophones_ ? &spec_.allophones : nullptr,
+            syll_for_token[i], stressed_syll_idx,
             secondary_syll_idxs, aperture.syllable(syll_for_token[i]),
             aperture.is_final(syll_for_token[i])));
     // g2p.py _positional_beam: when a rescorer is configured the slots are
@@ -1342,19 +1381,22 @@ std::map<std::string, std::vector<PluginAnswer>> who_answers(const std::string& 
 std::string transcribe(const std::string& text, const std::string& language) { return G2P(language).transcribe(text); }
 std::string apply_dialect_transform(const std::string& ipa, const std::string& profile,
                                     const std::string& orthography) {
-    if (!dialect_profile_known(profile)) throw std::invalid_argument("unknown dialect profile: " + profile);
-    return apply_dialect_impl(ipa, profile, orthography);
+    // transforms.py apply_transform: the profile's de-biasing step, chain
+    // shifts, lexical rules and ordered phonological rules over the whole
+    // string it is handed, with the spelling as context.
+    return transform::apply_transform(ipa, profile, orthography);
 }
 std::vector<std::string> available_dialect_profiles() {
-    return {"algarve_barlavento", "baixo_minhoto", "beira_alta", "beira_baixa", "estremenho",
-            "galician", "galician_west", "guadramilese", "leonese", "lisbon", "northern",
-            "porto", "ribatejano", "rionorese", "transmontano"};
+    // transforms.py available_profiles.
+    return transform::available_profiles();
 }
 
 G2P::G2P(std::string language, std::map<std::string, std::vector<std::string>> plugin_overrides,
-         std::string dialect_profile)
+         std::string dialect_profile, bool expand_allophones,
+         bool apply_sandhi, bool apply_stress, bool apply_allophony)
     : language_(resolve(language)), spec_(&get(language_)), plugin_overrides_(std::move(plugin_overrides)),
-      dialect_profile_(std::move(dialect_profile)) {
+      dialect_profile_(std::move(dialect_profile)), expand_allophones_(expand_allophones),
+      apply_sandhi_(apply_sandhi), apply_stress_(apply_stress), apply_allophony_(apply_allophony) {
     static std::once_flag discovery_once;
     std::call_once(discovery_once, [] { discover_plugins(); });
     if (!dialect_profile_.empty() && !dialect_profile_known(dialect_profile_))
@@ -1366,10 +1408,30 @@ G2P::G2P(std::string language, std::map<std::string, std::vector<std::string>> p
         if (std::any_of(names.begin(), names.end(), [](const auto& name) { return name.empty(); }))
             throw std::invalid_argument("plugin names cannot be empty: " + stage);
     }
+    // g2p.py G2P.__init__'s engine-side derivations, in the reference's order.
+    silent_marks_ = silent_marks_of(*spec_);
+    // `self._sandhi = SandhiEngine(self.spec.sandhi_rules) if
+    // self.spec.sandhi_rules else None` — the contexts compile once here, so a
+    // malformed one is an error at construction, never a silently dead rule.
+    if (!spec_->sandhi_rules.empty())
+        sandhi_ = std::make_shared<sandhi::Engine>(spec_->sandhi_rules);
+    // `self._needs_context_beam = self.spec.has_positional_data()
+    //  or any(r.stress for r in self.spec.allophone_rules)`: the plain
+    // tokenizer beam carries no stress context, so a spec whose rules name one
+    // needs the positional beam just as a spec with positional overrides does.
+    needs_context_beam_ = !spec_->positional_graphemes.empty();
+    for (const auto& rule : spec_->allophone_rules)
+        if (!rule.stress.empty()) { needs_context_beam_ = true; break; }
 }
 const LanguageSpec& G2P::spec() const { return *spec_; }
 const std::map<std::string, std::vector<std::string>>& G2P::plugin_overrides() const { return plugin_overrides_; }
-std::vector<IPAPath> G2P::candidates(const std::string& word, std::size_t width) const { return Tokenizer(*spec_).beam(word, width); }
+std::vector<IPAPath> G2P::candidates(const std::string& word, std::size_t width) const {
+    // g2p.py G2P.candidates: the RAW beam paths — the tokenizer's own
+    // ipa_beam with the caller's expand_allophones, no rescorer chain and no
+    // grammatical-ending rewrite. `transcribe_word` runs the word pipeline;
+    // this is the read surface for the unpended candidates.
+    return Tokenizer(*spec_, expand_allophones_, apply_allophony_).plain_beam(word, width);
+}
 std::vector<IPAPath> G2P::lattice(const std::string& word, std::size_t width) const { return candidates(word, width); }
 std::vector<GraphemeFeature> G2P::features(const std::string& word) const {
     std::vector<std::string> unmapped; const auto graphemes = Tokenizer(*spec_).tokenize_word(word, &unmapped); std::vector<GraphemeFeature> result;
@@ -1400,10 +1462,14 @@ namespace {
 //
 // Cross-word stages (sandhi, dialect transform) are NOT applied here: they
 // act on the whole utterance, not on a word.
+/// `apply_stress` is g2p.py G2P.apply_stress: the caller's gate on the stress
+/// stage alone (the reference's `self.apply_stress and self.spec.stress is not
+/// None`). Everything else about the word-final order is the spec's.
 std::string finalize_word_ipa(const LanguageSpec& spec, const std::string& word,
                               const std::string& ipa_in,
                               const std::optional<std::string>& forced_ipa,
-                              const IPAPath* path, bool collapse_geminates_flag) {
+                              const IPAPath* path, bool collapse_geminates_flag,
+                              bool apply_stress = true) {
     std::string ipa = ipa_in;
     // Computed tone runs first, on the path's own slots: it is the only
     // stage that needs to see which grapheme produced which segment, and
@@ -1439,7 +1505,7 @@ std::string finalize_word_ipa(const LanguageSpec& spec, const std::string& word,
         // never moves the mark.
         ipa = stress::apply_iambic_length(ipa, spec);
     }
-    if (!forced_ipa.has_value() && spec.stress_defined && !ipa.empty() &&
+    if (!forced_ipa.has_value() && apply_stress && spec.stress_defined && !ipa.empty() &&
             !engine_is_cliticless(spec, silent_marks_of(spec), word)) {
         if (spec.quantity_sensitive) {
             // Weight is a property of the transcription, not the spelling.
@@ -1479,28 +1545,8 @@ std::string finalize_word_ipa(const LanguageSpec& spec, const std::string& word,
 }
 } // namespace
 
-WordTranscription G2P::transcribe_one(const std::string& word, std::size_t width,
-                                      bool forced, const std::string& forced_ipa) const {
-    // g2p.py _transcribe_word: the per-word stage of the pipeline —
-    // whole-word overrides (forced / word_exceptions / lexicon), the beam,
-    // grammatical endings, rescorer plugins, then the word-final ordering
-    // (computed tone, geminate collapse, word-final virama, tone-mark
-    // docking, iambic length, stress). Cross-word stages (sandhi, dialect
-    // transform) belong to transcribe_detailed.
-    WordTranscription wt; wt.word = word;
-    auto it = spec_->word_exceptions.find(lower_ascii(word));
-    if (forced) {
-        if (forced_ipa.empty()) throw std::invalid_argument("empty forced pronunciation");
-        auto atoms = inventory(*spec_); const std::vector<std::string> atom_list(atoms.begin(), atoms.end()); const auto segments = segment_ipa(forced_ipa, atom_list);
-        for (const auto& segment : segments) if (!atoms.count(segment) && segment != "ˈ" && segment != "ˌ") throw std::invalid_argument("forced pronunciation contains undeclared IPA: " + segment);
-    }
-    auto paths = forced ? std::vector<IPAPath>{{forced_ipa, 0.0, {}, {}}} :
-        (it != spec_->word_exceptions.end() ? std::vector<IPAPath>{{it->second, 0.0, {}, {}}} : candidates(word, width));
-    auto lex = it == spec_->word_exceptions.end() ? load_lexicon(language_) : std::map<std::string, std::string>{};
-    if (it == spec_->word_exceptions.end()) { auto li = lex.find(unicode_fold_nfc(word)); if (li != lex.end()) paths = {{li->second, 0.0, {}, {}}}; }
-    if (!forced && it == spec_->word_exceptions.end() && lex.find(unicode_fold_nfc(word)) == lex.end())
-        paths = apply_grammatical_endings(*spec_, word, std::move(paths));
-    auto ordered_rescorers = plugin_names(*spec_, "rescore");
+std::vector<IPAPath> G2P::apply_rescorer_plugins(const std::string& word, std::vector<IPAPath> paths) const {
+auto ordered_rescorers = plugin_names(*spec_, "rescore");
     {
         auto override_names = plugin_overrides_.find("rescore");
         if (override_names != plugin_overrides_.end()) ordered_rescorers = override_names->second;
@@ -1519,20 +1565,89 @@ WordTranscription G2P::transcribe_one(const std::string& word, std::size_t width
         validate_rescorer_output(rescored, *spec_, name);
         paths = rescored;
     }
-    // The word-final pipeline runs per word, BEFORE the cross-word stages.
-    if (!paths.empty()) {
-        const bool has_override =
-            forced || it != spec_->word_exceptions.end() ||
-            lex.find(unicode_fold_nfc(word)) != lex.end();
-        wt.ipa = finalize_word_ipa(
-            *spec_, word, paths.front().ipa,
-            forced ? std::optional<std::string>(forced_ipa) : std::nullopt,
-            has_override ? nullptr : &paths.front(),
-            /*collapse_geminates_flag=*/!has_override);
+    
+    return paths;
+}
+
+WordTranscription G2P::transcribe_one(const std::string& word, std::size_t width,
+                                      bool forced, const std::string& forced_ipa) const {
+    // g2p.py G2P._transcribe_word — the per-word stage of the pipeline, in the
+    // reference's order: whole-word override (forced > word_exceptions >
+    // lexicon), else the beam (positional when the spec needs the context, the
+    // plain tokenizer beam otherwise), then the grammatical-ending rewrite,
+    // then the word-final stages. Cross-word stages belong to
+    // transcribe_detailed.
+    WordTranscription wt; wt.word = word;
+
+    // `_override_for`: both whole-word tables are keyed on BARE orthography —
+    // language-aware lower-casing of the word with the spec's silent stress
+    // marks removed, so его́ looks up as его.
+    std::optional<std::string> override;
+    if (forced) {
+        if (forced_ipa.empty()) throw std::invalid_argument("empty forced pronunciation");
+        const auto atoms = inventory(*spec_);
+        const std::vector<std::string> atom_list(atoms.begin(), atoms.end());
+        for (const auto& segment : segment_ipa(forced_ipa, atom_list))
+            if (!atoms.count(segment) && segment != "ˈ" && segment != "ˌ")
+                throw std::invalid_argument("forced pronunciation contains undeclared IPA: " + segment);
+        override = forced_ipa;
     } else {
-        wt.ipa = word;
+        const std::string key = lower_str(unmarked_word(silent_marks_, word), spec_->code);
+        if (auto hit = spec_->word_exceptions.find(key); hit != spec_->word_exceptions.end())
+            override = hit->second;
+        else {
+            const auto& lex = load_lexicon(language_);
+            if (auto li = lex.find(unicode_nfc(key, false)); li != lex.end()) override = li->second;
+        }
     }
-    wt.candidates = paths; wt.confidence = word_confidence(word, width);
+
+    std::vector<IPAPath> paths;
+    std::string ipa;
+    if (override.has_value()) {
+        ipa = *override;
+    } else {
+        // `if self._needs_context_beam: self._positional_beam(...)
+        //  else: self._tokenizer.ipa_beam(..., rescorer=self._rescorers)`.
+        Tokenizer tokenizer(*spec_, expand_allophones_, apply_allophony_);
+        paths = needs_context_beam_ ? tokenizer.beam(word, width)
+                                    : tokenizer.rescored_beam(word, width);
+        // Declared `rescore` plugins: the reference composes them into the
+        // rescorer chain that runs at the slot seam. The C++ plugin contract is
+        // a whole-word pass over the resolved paths, so its seam is here —
+        // after the beam, before the grammatical-ending rewrite.
+        paths = apply_rescorer_plugins(word, std::move(paths));
+        paths = apply_grammatical_endings(*spec_, word, std::move(paths));
+        ipa = paths.empty() ? word : paths.front().ipa;
+        ipa = finalize_word_ipa(*spec_, word, ipa,
+                                forced ? std::optional<std::string>(forced_ipa) : std::nullopt,
+                                paths.empty() ? nullptr : &paths.front(),
+                                /*collapse_geminates_flag=*/true, apply_stress_);
+    }
+    // A whole-word reading still runs the word-final stages (with the geminate
+    // collapse skipped): a lexicon or `ph` answer is a READING, not a finished
+    // utterance — the computed tone, virama vowel, docking and stress that the
+    // rules would have applied still apply, and `ph` alone is left as written.
+    if (override.has_value())
+        ipa = finalize_word_ipa(*spec_, word, ipa,
+                                forced ? std::optional<std::string>(forced_ipa) : std::nullopt,
+                                /*path=*/nullptr, /*collapse_geminates_flag=*/false, apply_stress_);
+
+    // g2p.py `_unmapped_chars`: the UNKNOWN tokens the grapheme table does not
+    // cover, and the coverage fraction they reduce.
+    {
+        std::size_t total = 0, missing = 0;
+        for (const auto& token : Tokenizer(*spec_).tokenize(word)) {
+            if (token.kind == TokenKind::GRAPHEME) total += token.length;
+            else if (token.kind == TokenKind::UNKNOWN) {
+                wt.unmapped.push_back(token.grapheme);
+                ++missing; total += token.length;
+            }
+        }
+        wt.coverage = total == 0 ? 1.0 : double(total - missing) / double(total);
+    }
+    wt.ipa = ipa;
+    wt.candidates = width > 1 ? paths : std::vector<IPAPath>{};
+    wt.confidence = (override.has_value() ? 1.0 : word_confidence(word, width)) * wt.coverage;
     return wt;
 }
 
@@ -1563,7 +1678,6 @@ TranscriptionResult G2P::transcribe_detailed(const std::string& text, const std:
     validate_stage("stress", stress_plugins);
     validate_stage("rescore", rescorer_plugins);
     validate_stage("sandhi", sandhi_plugins);
-    TranscriptionResult result; result.lang = language_; std::vector<std::string> surfaces, ipa_words; std::vector<bool> pausal;
     auto normalize = [&](std::string value) {
         for (const auto& name : stage("normalize")) {
             auto it = normalize_plugins.find(name);
@@ -1576,13 +1690,34 @@ TranscriptionResult G2P::transcribe_detailed(const std::string& text, const std:
         }
         return value;
     };
-    const auto input_words = parse_input(text, normalize);
-    for (const auto& input : input_words) {
-        const WordTranscription wt = transcribe_one(
-            input.surface, search == "greedy" ? 1 : width, input.forced, input.forced_ipa);
-        result.words.push_back(wt); surfaces.push_back(wt.word); ipa_words.push_back(wt.ipa); pausal.push_back(input.pausal);
+
+    // ─── g2p.py transcribe_detailed, stage by stage ───
+    // 1. split the input into words (markup read before normalization);
+    // 2. transcribe + finalize EACH word, IPA left DECOMPOSED;
+    // 3. the spec's declarative sandhi pass, with the pause flags;
+    // 4. the `sandhi` plugins;
+    // 5. join, then the dialect transform on the whole sentence;
+    // 6. NFC — the output contract, asserted only once every cross-word stage
+    //    has run (composing earlier would blind a rule that names a nasal
+    //    vowel by its decomposed shape).
+    TranscriptionResult result; result.lang = language_;
+    const auto words = split_words(*spec_, text, normalize);
+    if (words.empty()) return result;
+
+    std::vector<std::string> surfaces, ipa_words;
+    std::vector<bool> pausal;
+    const std::size_t beam_width = search == "greedy" ? 1 : width;
+    for (const auto& input : words) {
+        result.words.push_back(transcribe_one(input.surface, beam_width, input.forced,
+                                              input.forced_ipa));
+        surfaces.push_back(input.surface);
+        ipa_words.push_back(result.words.back().ipa);
+        pausal.push_back(input.pausal);
     }
-    ipa_words = apply_sandhi(*spec_, std::move(ipa_words), pausal);
+
+    if (apply_sandhi_ && sandhi_)
+        ipa_words = sandhi_->apply(ipa_words, /*obligatory_only=*/false, pausal);
+
     for (const auto& name : stage("sandhi")) {
         auto p = sandhi_plugins.find(name);
         if (p == sandhi_plugins.end()) throw std::runtime_error("missing sandhi plugin: " + name);
@@ -1593,20 +1728,32 @@ TranscriptionResult G2P::transcribe_detailed(const std::string& text, const std:
             throw std::runtime_error("sandhi plugin returned non-deterministic output: " + name);
         ipa_words = transformed;
     }
+
+    // A word a stage emptied contributes nothing to the sentence, and no
+    // spacer around it: `" ".join(w for w in ipa_words if w)`.
     for (std::size_t i = 0; i < ipa_words.size(); ++i) {
-        if (i) result.ipa += " ";
+        if (ipa_words[i].empty()) continue;
+        if (!result.ipa.empty()) result.ipa += " ";
         result.ipa += ipa_words[i];
-        result.words[i].ipa = ipa_words[i];
     }
     if (!dialect_profile_.empty()) {
-        std::string orthography; for (std::size_t i = 0; i < surfaces.size(); ++i) { if (i) orthography += " "; orthography += surfaces[i]; }
-        result.ipa = apply_dialect_impl(result.ipa, dialect_profile_, orthography);
-        std::stringstream split(result.ipa); for (auto& word : result.words) split >> word.ipa;
+        // The spelling the transform reads is the words', normalized — which is
+        // also the only spelling there is: a forced word contributes the text
+        // it wrapped. The transform acts on the SENTENCE; the per-word readings
+        // below keep their own (pre-transform) IPA, as in the reference.
+        std::string orthography;
+        for (std::size_t i = 0; i < surfaces.size(); ++i) { if (i) orthography += " "; orthography += surfaces[i]; }
+        result.ipa = transform::apply_transform(result.ipa, dialect_profile_, orthography);
     }
-    result.ipa = unicode_nfc(result.ipa, false);
-    for (auto& word : result.words) word.ipa = unicode_nfc(word.ipa, false);
+    if (!result.ipa.empty()) result.ipa = unicode_nfc(result.ipa, false);
+    for (std::size_t i = 0; i < result.words.size(); ++i) {
+        result.words[i].word = surfaces[i];
+        result.words[i].ipa = ipa_words[i].empty() ? ipa_words[i]
+                                                   : unicode_nfc(ipa_words[i], false);
+    }
     return result;
 }
+
 std::string G2P::transcribe(const std::string& text, const std::string& search, std::size_t width) const { return transcribe_detailed(text, search, width).ipa; }
 
 std::vector<std::string> feature_names() {

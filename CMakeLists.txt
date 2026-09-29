@@ -15,12 +15,15 @@ include(GNUInstallDirs)
 add_library(orthography2ipa
     src/allophony.cpp
     src/beam.cpp
+    src/codepoint_regex.cpp
     src/feats.cpp
     src/orthography2ipa.cpp
     src/rescorer.cpp
     src/phonetok.cpp
+    src/sandhi.cpp
     src/stress.cpp
     src/tone.cpp
+    src/transform.cpp
     src/unicode_util.cpp
     src/vowels.cpp)
 target_include_directories(orthography2ipa PUBLIC
@@ -88,5 +91,7 @@ if(BUILD_TESTING)
                  COMMAND ${Python3_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/tests/allophony_parity.py $<TARGET_FILE:orthography2ipa-cli>)
         add_test(NAME orthography2ipa-tone-parity
                  COMMAND ${Python3_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/tests/tone_parity.py $<TARGET_FILE:orthography2ipa-cli>)
+        add_test(NAME orthography2ipa-sentence-parity
+                 COMMAND ${Python3_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/tests/sentence_parity.py $<TARGET_FILE:orthography2ipa-cli> --sweep)
     endif()
 endif()

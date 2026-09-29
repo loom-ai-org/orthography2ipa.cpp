@@ -87,8 +87,12 @@ def main():
         except Exception:
             continue  # the reference cannot answer this case; skip it
         try:
+            # `word`, not `transcribe`: this battery compares the reference's
+            # per-word pipeline (transcribe_word), which does no word splitting.
+            # The sentence path re-tokenizes a shadda-expanded surface, so
+            # comparing it against transcribe_word invents diffs.
             actual = subprocess.check_output(
-                [str(binary), "transcribe", lang, word],
+                [str(binary), "word", lang, word],
                 text=True, stderr=subprocess.PIPE).strip()
         except subprocess.CalledProcessError as e:
             print(f"FAIL {lang} {word!r}: CLI error: {e.stderr}")

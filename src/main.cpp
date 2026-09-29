@@ -7,7 +7,7 @@
 using namespace orthography2ipa;
 
 static void usage() {
-    std::cerr << "usage: orthography2ipa [--data DIR] [--json] <list|info|validate|transcribe|stress|beam|tokens|distance> ...\n";
+    std::cerr << "usage: orthography2ipa [--data DIR] [--json] <list|info|validate|transcribe|word|stress|beam|tokens|distance> ...\n";
 }
 static std::string json(const std::string& value) {
     std::ostringstream out; out << '"';
@@ -89,6 +89,24 @@ int main(int argc, char** argv) {
             if (text.empty()) { usage(); return 2; } G2P engine(code, {}, dialect);
             const auto result = engine.transcribe_detailed(text, width > 1 ? "beam" : "greedy", width);
             if (json_output || detailed) detailed_json(result); else std::cout << result.ipa << '\n';
+            return 0;
+        }
+        if (command == "word" && i + 1 < argc) {
+            // Debug/parity surface for the reference G2P.transcribe_word: the
+            // per-word pipeline with NO word splitting. The sentence path
+            // re-tokenizes a shadda-expanded or clitic-broken surface, so a
+            // per-word battery must be compared against this, not `transcribe`.
+            const std::string code = argv[i++];
+            if (i >= argc) { usage(); return 2; }
+            const std::string text = argv[i++];
+            std::string search = "greedy"; std::size_t width = 8;
+            while (i < argc) {
+                const std::string option = argv[i++];
+                if (option == "--json") json_output = true;
+                else if (option == "--beam") { search = "beam"; if (i < argc) width = static_cast<std::size_t>(std::stoul(argv[i++])); }
+                else throw std::invalid_argument("unknown word option: " + option);
+            }
+            std::cout << G2P(code).transcribe_word(text, search, width) << "\n";
             return 0;
         }
         if (command == "tokens" && i + 1 < argc) {

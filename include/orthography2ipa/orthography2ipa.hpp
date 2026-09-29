@@ -14,6 +14,8 @@
 
 namespace orthography2ipa {
 
+namespace sandhi { class Engine; }
+
 struct Candidate {
     std::string ipa;
     double score{};
@@ -179,13 +181,30 @@ struct PluginAnswer {
 
 class Tokenizer {
 public:
-    explicit Tokenizer(const LanguageSpec& spec);
+    /// `expand_allophones` is g2p.py G2P.expand_allophones: the positional
+    /// beam folds the spec's declared allophones into each slot's branches
+    /// when it is set (`allophone_map=spec.allophones`), and the beam is
+    /// byte-identical to the plain one when it is not.
+    /// `apply_allophony` is g2p.py G2P.apply_allophony: the spec's allophone
+    /// rules compile to null when it is off, so the rescorer chain is empty.
+    explicit Tokenizer(const LanguageSpec& spec, bool expand_allophones = false,
+                       bool apply_allophony = true);
     std::vector<Token> tokenize(const std::string& text) const;
     std::vector<Token> grapheme_tokens(const std::string& text) const;
     TokenSequence tokenize_with_context(const std::string& text) const;
     std::vector<std::string> tokenize_word(const std::string& word,
                                             std::vector<std::string>* unmapped = nullptr) const;
+    /// g2p.py G2P._positional_beam: the context-carrying beam (stress,
+    /// aperture, syllable and allophone context, and the compiled allophone
+    /// rescorer chain at the slot seam).
     std::vector<IPAPath> beam(const std::string& word, std::size_t width = 8) const;
+    /// g2p.py `self._tokenizer.ipa_beam(word, ..., rescorer=self._rescorers)`:
+    /// the plain tokenizer beam WITH the rescorer chain, which is the word
+    /// path for a spec that needs no context. No stress context exists on it.
+    std::vector<IPAPath> rescored_beam(const std::string& word, std::size_t width) const;
+    /// g2p.py G2P.candidates: the tokenizer beam with NO rescorer chain —
+    /// the raw per-word candidate paths.
+    std::vector<IPAPath> plain_beam(const std::string& word, std::size_t width) const;
 private:
     const LanguageSpec& spec_;
     PhonetokTokenizer tokenizer_;
@@ -195,6 +214,7 @@ private:
     // _silent_stress_marks).
     bool uses_aperture_ = false;
     std::string silent_stress_marks_;
+    bool expand_allophones_ = false;
     // g2p.py G2P._rescorers: the spec's compiled allophone rescorer
     // (allophony.py compile_allophone_rescorer), repeated allophone_passes
     // times so a rule that only fires on another rule's output can feed off
@@ -206,8 +226,15 @@ private:
 
 class G2P {
 public:
+    /// The stage gates mirror the reference constructor's keyword defaults:
+    /// `expand_allophones=False`, `apply_sandhi=True`, `apply_stress=True`,
+    /// `apply_allophony=True`. They decide which stages exist at all, so they
+    /// belong to the pipeline port; the remaining constructor options are a
+    /// separate public-API gap.
     explicit G2P(std::string language, std::map<std::string, std::vector<std::string>> plugin_overrides = {},
-                 std::string dialect_profile = "");
+                 std::string dialect_profile = "", bool expand_allophones = false,
+                 bool apply_sandhi = true, bool apply_stress = true,
+                 bool apply_allophony = true);
     const LanguageSpec& spec() const;
     const std::map<std::string, std::vector<std::string>>& plugin_overrides() const;
     std::string transcribe(const std::string& text, const std::string& search = "greedy",
@@ -230,11 +257,37 @@ private:
     const LanguageSpec* spec_;
     std::map<std::string, std::vector<std::string>> plugin_overrides_;
     std::string dialect_profile_;
+    // g2p.py G2P.__init__: `self._sandhi = SandhiEngine(spec.sandhi_rules) if
+    // spec.sandhi_rules else None`. The rule contexts are compiled once per
+    // engine, so a malformed context is an error at construction, exactly as
+    // `re.compile` raises in the reference. Null for a spec without rules —
+    // the sentence pipeline then skips the sandhi stage entirely.
+    std::shared_ptr<sandhi::Engine> sandhi_;
+    // g2p.py G2P._needs_context_beam: whether the word path takes the
+    // context-carrying positional beam or the plain tokenizer beam.
+    bool needs_context_beam_ = false;
+    // g2p.py G2P.expand_allophones / apply_sandhi / apply_stress /
+    // apply_allophony: the stage gates.
+    bool expand_allophones_ = false;
+    bool apply_sandhi_ = true;
+    bool apply_stress_ = true;
+    bool apply_allophony_ = true;
+    // g2p.py G2P._silent_stress_marks (g2p.py: the graphemes the spec
+    // declares as stress marks that emit nothing) — `_unmarked` strips them
+    // before every whole-word key lookup.
+    std::string silent_marks_;
     // g2p.py _transcribe_word: the per-word stage of the pipeline (word
     // overrides, grammatical endings, rescorer plugins, the word-final
     // ordering), shared by transcribe_detailed and transcribe_word.
     WordTranscription transcribe_one(const std::string& word, std::size_t width,
                                      bool forced, const std::string& forced_ipa) const;
+    /// The declared (or caller-overridden) `rescore` plugins, in priority
+    /// order, each applied to the whole-word path list — the C++ stand-in for
+    /// the reference's per-slot rescorer chain (whose contract is a separate
+    /// public-API gap). Missing, foreign and non-deterministic plugins all
+    /// raise, and inventory conformance is checked on the output.
+    std::vector<IPAPath> apply_rescorer_plugins(const std::string& word,
+                                                 std::vector<IPAPath> paths) const;
 };
 
 class NormalizePlugin {
