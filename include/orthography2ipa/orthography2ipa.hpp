@@ -77,6 +77,13 @@ struct LanguageSpec {
     std::vector<std::string> vowel_letters, onset_clusters;
     bool quantity_sensitive = false, superheavy_final_attracts = false;
     int max_onset = 1;
+    // Whether max_onset came from the spec or is merely the default — the
+    // default 1 is a placeholder and must not cap the onsets (Python
+    // StressRules.max_onset_declared, set by the loader).
+    bool max_onset_declared = false;
+    // StressRules.source: "rules" (the declarative stress system) or
+    // "plugin" (a registered StressPlugin; missing then is fatal).
+    std::string stress_source = "rules";
     std::string secondary_stress;
     std::string accent2_mark;
     std::vector<std::string> accent2_final_letters, cliticless_words;
@@ -168,6 +175,12 @@ public:
 private:
     const LanguageSpec& spec_;
     PhonetokTokenizer tokenizer_;
+    // g2p.py engine-side derivations: whether any positional entry keys on
+    // syllable aperture (the engine's _uses_aperture), and the graphemes
+    // the spec declares as stress marks that emit nothing (the engine's
+    // _silent_stress_marks).
+    bool uses_aperture_ = false;
+    std::string silent_stress_marks_;
 };
 
 class G2P {
@@ -232,6 +245,12 @@ public:
                                             const std::string& lang) const = 0;
 };
 
+// registry.py get_stress_plugin / get_syllabifier: the plugin registered
+// for *code*, if any (registry lookups, distinct from the declared-stage
+// name lookups the engine uses).
+const StressPlugin* get_stress_plugin(const std::string& code);
+const SyllabifierPlugin* get_syllabifier(const std::string& code);
+
 void register_normalize_plugin(const std::string& name, std::shared_ptr<NormalizePlugin> plugin);
 void register_syllabifier_plugin(const std::string& name, std::shared_ptr<SyllabifierPlugin> plugin);
 void register_stress_plugin(const std::string& name, std::shared_ptr<StressPlugin> plugin);
@@ -255,6 +274,13 @@ std::map<std::string, std::string> get_lexicon(const std::string& code);
 std::optional<std::string> lexicon_source(const std::string& code);
 std::optional<std::string> lexicon_path(const std::string& code);
 std::vector<std::pair<std::size_t, std::string>> validate_lexicon(const std::string& text);
+
+// allophony.py segment_ipa: split an IPA candidate string into
+// phoneme-sized segments. *atoms* are multi-character phonemes the caller
+// cares about, tried longest-first; everything else groups as one base
+// character plus its trailing modifiers.
+std::vector<std::string> segment_ipa(const std::string& ipa,
+                                     std::vector<std::string> atoms = {});
 
 std::string transcribe(const std::string& text, const std::string& language);
 std::string apply_dialect_transform(const std::string& ipa, const std::string& profile,

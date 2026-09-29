@@ -14,8 +14,10 @@ include(GNUInstallDirs)
 
 add_library(orthography2ipa
     src/beam.cpp
+    src/feats.cpp
     src/orthography2ipa.cpp
     src/phonetok.cpp
+    src/stress.cpp
     src/unicode_util.cpp
     src/vowels.cpp)
 target_include_directories(orthography2ipa PUBLIC
@@ -58,6 +60,9 @@ install(FILES
 if(BUILD_TESTING)
     add_executable(orthography2ipa-tests tests/test_core.cpp)
     target_link_libraries(orthography2ipa-tests PRIVATE orthography2ipa)
+    # The stress/ending parity checks reach the internal beam header
+    # (src/beam.hpp), which owns the positional.py port.
+    target_include_directories(orthography2ipa-tests PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/src)
     add_test(NAME orthography2ipa-core COMMAND orthography2ipa-tests)
     configure_file(tests/install_check.cmake.in ${CMAKE_CURRENT_BINARY_DIR}/install_check.cmake @ONLY)
     add_test(NAME orthography2ipa-install COMMAND ${CMAKE_COMMAND} -P ${CMAKE_CURRENT_BINARY_DIR}/install_check.cmake)
@@ -74,5 +79,7 @@ if(BUILD_TESTING)
                  COMMAND ${Python3_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/tests/token_parity.py $<TARGET_FILE:orthography2ipa-cli>)
         add_test(NAME orthography2ipa-beam-parity
                  COMMAND ${Python3_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/tests/beam_parity.py $<TARGET_FILE:orthography2ipa-cli>)
+        add_test(NAME orthography2ipa-stress-parity
+                 COMMAND ${Python3_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/tests/stress_parity.py $<TARGET_FILE:orthography2ipa-cli>)
     endif()
 endif()

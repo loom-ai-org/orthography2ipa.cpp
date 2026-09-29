@@ -1,4 +1,5 @@
 #include "orthography2ipa/orthography2ipa.hpp"
+#include "orthography2ipa/stress.hpp"
 #include <iomanip>
 #include <iostream>
 #include <sstream>
@@ -6,7 +7,7 @@
 using namespace orthography2ipa;
 
 static void usage() {
-    std::cerr << "usage: orthography2ipa [--data DIR] [--json] <list|info|validate|transcribe|distance> ...\n";
+    std::cerr << "usage: orthography2ipa [--data DIR] [--json] <list|info|validate|transcribe|stress|beam|tokens|distance> ...\n";
 }
 static std::string json(const std::string& value) {
     std::ostringstream out; out << '"';
@@ -114,6 +115,37 @@ int main(int argc, char** argv) {
             std::cout << '[';
             for (std::size_t j = 0; j < paths.size(); ++j) { if (j) std::cout << ','; path_json(paths[j]); }
             std::cout << "]\n";
+            return 0;
+        }
+        if (command == "stress" && i + 1 < argc) {
+            // Debug/parity surface for the stress pipeline (stress.py):
+            // syllabify → detect_stress → apply_stress_mark with secondary
+            // positions, on the word's orthographic syllables.
+            const std::string code = argv[i++];
+            if (i >= argc) { usage(); return 2; }
+            const std::string word = argv[i++];
+            const LanguageSpec& spec = get(code);
+            const auto sylls = stress::syllables_for(word, spec.code, spec.diphthongs, &spec);
+            std::cout << '{';
+            std::cout << "\"syllables\":[";
+            for (std::size_t k = 0; k < sylls.size(); ++k) { if (k) std::cout << ','; std::cout << '"' << sylls[k] << '"'; }
+            std::cout << ']';
+            if (spec.stress_defined) {
+                const int idx = stress::detect_stress(word, spec, &sylls);
+                const auto secondary = stress::secondary_stress_positions(
+                    static_cast<int>(sylls.size()), idx, spec);
+                std::cout << ",\"stress\":" << idx;
+                std::cout << ",\"secondary\":[";
+                bool first = true;
+                for (const int s : secondary) { if (!first) std::cout << ','; std::cout << s; first = false; }
+                std::cout << ']';
+                std::cout << ",\"marked\":\""
+                          << stress::apply_stress_mark(
+                                 word, spec, idx, &sylls, nullptr, "",
+                                 std::vector<int>(secondary.begin(), secondary.end()))
+                          << '"';
+            }
+            std::cout << "}\n";
             return 0;
         }
         if (command == "distance" && i + 1 < argc) {

@@ -4,6 +4,7 @@
 // entry points convert at UTF-8 boundaries.
 #include "orthography2ipa/vowels.hpp"
 
+#include "orthography2ipa/feats.hpp"
 #include "unicode_util.hpp"
 
 #include <algorithm>
@@ -316,6 +317,182 @@ std::string grapheme_vowel_axis(const std::string& grapheme, const std::vector<s
     for (const auto& value : vowel_overrides) overrides.insert(to_utf32(value));
     const auto axis = grapheme_vowel_axis_u32(to_utf32(grapheme), ipa_u32, overrides);
     return axis ? std::string(*axis) : std::string();
+}
+
+
+// ── Sonority and phonological classes — vowels.py (the sonority half) ──
+// The feature table these derive from is the feats.py port
+// (orthography2ipa/feats.hpp); see the Python module for every citation.
+
+namespace {
+
+// feats.py _TIE_BARS: t͡s and ts are the SAME affricate written two ways.
+bool tie_bar(char32_t cp) { return cp == U'͡' || cp == U'͜'; }
+
+// feats.py _PRENASAL_MARKS: a prenasalized stop is ONE segment.
+bool prenasal_mark(char32_t cp) {
+    return contains_codepoint(U"ᵐⁿᶬᶯᶮᵑᶰ", cp);
+}
+
+// feats.py _PHONE_ALIASES: Latin ⟨g⟩ stands in for IPA ⟨ɡ⟩.
+std::u32string normalize_segment_u32(const std::u32string& ipa) {
+    std::u32string out;
+    for (char32_t ch : ipa)
+        if (!tie_bar(ch) && !prenasal_mark(ch)) out.push_back(ch);
+    if (out == U"g") out = U"ɡ";
+    return out;
+}
+
+std::string normalize_segment(const std::string& ipa) {
+    return to_utf8(normalize_segment_u32(to_utf32(ipa)));
+}
+
+// Size in bytes of the UTF-8 character at *pos* (local helper; Python
+// iterates code points).
+std::size_t char_size(const std::string& text, std::size_t pos) {
+    const unsigned char c = static_cast<unsigned char>(text[pos]);
+    return c < 0x80 ? 1 : (c & 0xe0) == 0xc0 ? 2 : (c & 0xf0) == 0xe0 ? 3 : 4;
+}
+
+// feats.py _AFFRICATE_SEQUENCES, as bare two-character prefixes.
+const std::u32string& affricate_prefix(std::size_t index) {
+    static const std::array<std::u32string, 21> sequences = {
+        to_utf32("ts"), to_utf32("dz"), to_utf32("tʃ"), to_utf32("dʒ"),
+        to_utf32("tɕ"), to_utf32("dʑ"), to_utf32("ʈʂ"), to_utf32("ɖʐ"),
+        to_utf32("tʂ"), to_utf32("dʐ"), to_utf32("pf"), to_utf32("bv"),
+        to_utf32("tɬ"), to_utf32("dɮ"), to_utf32("kx"), to_utf32("ɡɣ"),
+        to_utf32("qχ"), to_utf32("tθ"), to_utf32("dð"), to_utf32("cç"),
+        to_utf32("ɟʝ")};
+    return sequences[index];
+}
+
+// feats.py _RHOTICS: a PHONOLOGICAL class, not a phonetic one.
+bool rhotic(char32_t cp) {
+    return contains_codepoint(U"rɾɹɻʀʁɽɺ", cp);
+}
+
+// feats.py _GLOTTAL_FRICATIVES / _GLOTTAL_STOPS.
+bool glottal_fricative(char32_t cp) { return contains_codepoint(U"hɦɧ", cp); }
+bool glottal_stop(char32_t cp) { return contains_codepoint(U"ʔ", cp); }
+
+// feats.py _LABIAL_APPROXIMANTS: ⟨v w ʋ⟩ after an obstruent form the Cw
+// onsets of Germanic and Slavic.
+bool labial_approximant(char32_t cp) { return contains_codepoint(U"wʋʍv", cp); }
+
+// feats.py _PALATAL_GLIDES: ⟨Cj⟩ is an onset over ANY head.
+bool palatal_glide_cp(char32_t cp) { return contains_codepoint(U"jɥ", cp); }
+
+using feats::TriState;
+
+// feats.py _phone_vector: the 23-feature vector of *ipa*, or nullptr.
+const std::vector<TriState>* phone_vector(const std::string& seg,
+                                          std::vector<TriState>& scratch) {
+    scratch = feats::vectorize_phones(seg);
+    return scratch.empty() ? nullptr : &scratch;
+}
+
+const std::vector<TriState>* phone_vector_of(const std::string& seg,
+                                             std::vector<TriState>& scratch) {
+    // vec = _phone_vector(seg) or _phone_vector(seg[0])
+    if (auto* v = phone_vector(seg, scratch)) return v;
+    if (seg.empty()) return nullptr;
+    const auto n = char_size(seg, 0);
+    if (n == seg.size()) return nullptr;
+    return phone_vector(seg.substr(0, n), scratch);
+}
+
+} // namespace
+
+bool is_affricate(const std::string& ipa) {
+    const std::u32string seg = normalize_segment_u32(to_utf32(ipa));
+    if (seg.size() < 2) return false;
+    for (std::size_t i = 0; i < 21; ++i) {
+        const std::u32string& prefix = affricate_prefix(i);
+        if (seg.compare(0, prefix.size(), prefix) == 0) return true;
+    }
+    return false;
+}
+
+int sonority_class(const std::string& ipa) {
+    // _sonority
+    const std::u32string u32 = to_utf32(ipa);
+    const std::u32string syllabic_marks = to_utf32(SYLLABIC_MARKS);
+    for (char32_t ch : u32)
+        if (syllabic_marks.find(ch) != std::u32string::npos)
+            return SONORITY_VOWEL;    // /m̩ n̩ l̩/ ARE nuclei
+    const std::u32string seg = normalize_segment_u32(u32);
+    if (seg.empty()) return SONORITY_UNKNOWN;
+    if (is_affricate(to_utf8(seg))) return SONORITY_STOP;
+    const char32_t head = seg[0];
+    if (rhotic(head)) return SONORITY_LIQUID;
+    if (glottal_stop(head)) return SONORITY_STOP;
+    if (glottal_fricative(head)) return SONORITY_FRICATIVE;
+    std::vector<TriState> scratch;
+    const auto seg8 = to_utf8(seg);
+    const std::vector<TriState>* vec = phone_vector(seg8, scratch);
+    if (vec == nullptr) {
+        const auto head8 = to_utf8(std::u32string(1, head));
+        vec = phone_vector(head8, scratch);
+    }
+    if (vec == nullptr) {
+        // No feature entry: fall back to the orthography-independent vowel
+        // test, so an unknown vocoid is still a nucleus rather than nothing.
+        return is_ipa_vowel(head) ? SONORITY_VOWEL : SONORITY_UNKNOWN;
+    }
+    if ((*vec)[0] == TriState(1)) return SONORITY_VOWEL;                  // syllabic
+    if ((*vec)[1] == TriState(1)) {                                       // sonorant
+        if ((*vec)[2] == TriState(0)) return SONORITY_GLIDE;              // consonantal
+        if ((*vec)[6] == TriState(1)) return SONORITY_NASAL;              // nasal
+        return SONORITY_LIQUID;
+    }
+    return (*vec)[3] == TriState(1) ? SONORITY_FRICATIVE : SONORITY_STOP; // continuant
+}
+
+bool is_sibilant(const std::string& ipa) {
+    if (is_affricate(ipa)) return false;  // an affricate is not the appendix
+    std::vector<TriState> scratch;
+    const std::vector<TriState>* vec = phone_vector_of(normalize_segment(ipa), scratch);
+    if (vec == nullptr) return false;
+    return (*vec)[7] == TriState(1) && (*vec)[1] != TriState(1) &&
+           (*vec)[12] == TriState(1);   // strident, not sonorant, coronal
+}
+
+std::optional<bool> is_voiced(const std::string& ipa) {
+    std::vector<TriState> scratch;
+    const std::vector<TriState>* vec = phone_vector_of(normalize_segment(ipa), scratch);
+    if (vec == nullptr || (*vec)[8] == TriState(-1)) return std::nullopt;
+    return (*vec)[8] == TriState(1);
+}
+
+std::string place_class(const std::string& ipa) {
+    std::vector<TriState> scratch;
+    const std::vector<TriState>* vec = phone_vector_of(normalize_segment(ipa), scratch);
+    if (vec == nullptr) return "";
+    if ((*vec)[12] == TriState(1)) return "coronal";
+    if ((*vec)[14] == TriState(1)) return "labial";
+    if ((*vec)[15] == TriState(1) || (*vec)[17] == TriState(1)) return "dorsal";
+    return "";
+}
+
+bool is_lateral(const std::string& ipa) {
+    std::vector<TriState> scratch;
+    const std::vector<TriState>* vec = phone_vector_of(normalize_segment(ipa), scratch);
+    return vec != nullptr && (*vec)[5] == TriState(1);
+}
+
+bool is_glottal(const std::string& ipa) {
+    const std::u32string seg = normalize_segment_u32(to_utf32(ipa));
+    return !seg.empty() && (glottal_fricative(seg[0]) || glottal_stop(seg[0]));
+}
+
+bool is_palatal_glide(const std::string& ipa) {
+    const std::u32string seg = normalize_segment_u32(to_utf32(ipa));
+    return !seg.empty() && palatal_glide_cp(seg[0]);
+}
+
+bool is_labial_approximant(const std::string& ipa) {
+    const std::u32string seg = normalize_segment_u32(to_utf32(ipa));
+    return !seg.empty() && labial_approximant(seg[0]);
 }
 
 } // namespace orthography2ipa::vowels

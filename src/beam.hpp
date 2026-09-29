@@ -59,12 +59,21 @@ std::vector<Branch> build_branches(
 // positional.py grapheme_positions: the ordered positions to try for
 // the grapheme wrapped by *ctx*, most specific first. syll_idx /
 // stressed_syll_idx add the stress-conditioned nucleus positions
-// (nullopt = no stress context, the standalone tokenizer); the aperture
-// positions arrive with the syllabification port.
+// (nullopt = no stress context, the standalone tokenizer);
+// secondary_syll_idxs are the syllables carrying SECONDARY stress (they
+// get nucleus_secondary instead of nucleus_unstressed, so a spec's
+// reduction entry no longer reaches them). syllable / syllable_final are
+// the aperture context, both owned by the caller: the syllable string
+// this grapheme's syllable contributes a nucleus to (nullopt = no
+// syllabification, no aperture position is emitted) and whether that
+// string ends the word.
 std::vector<const char*> grapheme_positions(
     const GraphemeContext& ctx, const LanguageSpec* spec,
     std::optional<std::size_t> syll_idx = std::nullopt,
-    std::optional<std::size_t> stressed_syll_idx = std::nullopt);
+    std::optional<std::size_t> stressed_syll_idx = std::nullopt,
+    const std::set<std::size_t>& secondary_syll_idxs = {},
+    const std::optional<std::string>& syllable = std::nullopt,
+    std::optional<bool> syllable_final = std::nullopt);
 
 // positional.py positional_candidates: the first positional override
 // matching *grapheme* over *positions*, or nullopt when the grapheme has
@@ -83,7 +92,66 @@ std::vector<Branch> resolve_branches(
     const PhonetokTokenizer& tokenizer,
     const std::map<std::string, std::vector<std::string>>* allophone_map,
     std::optional<std::size_t> syll_idx = std::nullopt,
-    std::optional<std::size_t> stressed_syll_idx = std::nullopt);
+    std::optional<std::size_t> stressed_syll_idx = std::nullopt,
+    const std::set<std::size_t>& secondary_syll_idxs = {},
+    const std::optional<std::string>& syllable = std::nullopt,
+    std::optional<bool> syllable_final = std::nullopt);
+
+// positional.py GrammaticalEnding: a matched grammatical_endings entry,
+// in token terms. *tokens* counts the trailing grapheme tokens the match
+// covers — the ending itself plus the transparent grammatical suffix
+// behind it, if any — so the caller replaces exactly that many emitted
+// segments with *ipa* and never touches the word's interior. *ipa* is
+// absent for a DEFERRING ending (rank 1 is whatever the grapheme tables
+// already produced, and only *alternatives* are contributed).
+struct GrammaticalEnding {
+    std::string ending;                        // the orthographic ending as declared (lowercase)
+    std::optional<std::string> ipa;            // rank-1 realisation, or deferring when absent
+    std::size_t tokens = 0;                    // how many trailing grapheme tokens the tail spans
+    std::vector<std::string> alternatives;     // lower-ranked licit realisations, in declared order
+};
+
+// positional.py match_grammatical_ending: the longest
+// spec.grammatical_endings entry sitting at the word end. Matched on
+// surface letters, replaced by whole tokens (a cut inside a token rounds
+// OUTWARD to that token's start); requires at least one head token.
+std::optional<GrammaticalEnding> match_grammatical_ending(
+    const std::vector<std::string>& graphemes, const LanguageSpec* spec);
+
+// positional.py merge_nucleusless_final_syllable: fold a final syllable
+// with no audible nucleus into the one before. Returns a new vector; the
+// input is not modified.
+std::vector<std::string> merge_nucleusless_final_syllable(
+    const std::vector<std::string>& syllables, const LanguageSpec* spec);
+
+// g2p.py _ApertureView: the syllable list APERTURE reads, and how to
+// index it. Stress needs the syllabifier's own output; aperture needs it
+// with any nucleus-less final syllable folded away (French mute e), which
+// shifts the last index and changes which syllable is word-final. This
+// holds the merged list and the index remapping in one place so the two
+// beams cannot drift apart.
+class ApertureView {
+public:
+    ApertureView(const std::vector<std::string>& syllables,
+                 const LanguageSpec* spec, bool enabled);
+
+    // The list aperture judges (merged when enabled).
+    const std::vector<std::string>& syllables() const { return syllables_; }
+
+    // *idx*, a syllable index of the RAW list, remapped onto this one.
+    std::optional<std::size_t> index(std::optional<std::size_t> idx) const;
+    // The syllable string aperture should judge, or nullopt.
+    std::optional<std::string> syllable(std::optional<std::size_t> idx) const;
+    // Does *idx*'s syllable end the word IN THIS list? Word-final is the
+    // one place a silent tail comes off, so this is answered after the
+    // merge, never by comparing raw indices.
+    std::optional<bool> is_final(std::optional<std::size_t> idx) const;
+
+private:
+    bool enabled_;
+    std::vector<std::string> syllables_;
+    bool merged_ = false;
+};
 
 // phonetok.py constrain_nasal_carriers: a slot whose ONLY reading is the
 // bare combining tilde needs a preceding oral vowel/glide carrier; the

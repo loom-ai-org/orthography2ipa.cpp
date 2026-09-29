@@ -11,6 +11,9 @@ namespace orthography2ipa::beam {
 
 namespace {
 
+using uni::to_utf32;
+using uni::to_utf8;
+
 // phonetok.py _NASAL_TILDE: the bare combining tilde a coda nasal slot
 // emits for a nasalised-vowel reading.
 constexpr char32_t NASAL_TILDE = U'\u0303';
@@ -117,8 +120,12 @@ struct WordEnd {
 };
 
 // positional.py effective_word_end: is this slot effectively word-final,
-// under the spec's declared word_final overrides only?
-WordEnd effective_word_end(const GraphemeContext* ctx, const LanguageSpec* spec) {
+// under the spec's declared word_final overrides only? Templated because
+// the ending matcher works on grapheme KEYS, not on the tokenizer's
+// context objects (positional.py _EndSlot) — any slot exposing
+// next()/grapheme()/is_vowel() answers the same question.
+template <class Slot>
+WordEnd effective_word_end(const Slot* ctx, const LanguageSpec* spec) {
     if (ctx == nullptr || spec == nullptr) return {};
     const auto silenced_word_finally = [&](const std::string& grapheme) {
         const auto entry = spec->positional_graphemes.find(grapheme);
@@ -129,7 +136,7 @@ WordEnd effective_word_end(const GraphemeContext* ctx, const LanguageSpec* spec)
                          final_candidates->second.end(),
                          std::string{}) != final_candidates->second.end();
     };
-    const GraphemeContext* tail = ctx->next();
+    const auto* tail = ctx->next();
     WordEnd out;
     out.final_slot = tail == nullptr;
     out.last_audible_slot =
@@ -261,10 +268,81 @@ std::vector<Branch> build_branches(
     return out;
 }
 
+// positional.py _silent_word_finally: does *spec* emit nothing for the
+// grapheme *letters* at a word end? Two ways a spec can say "mute here":
+// a positional word_final entry whose FIRST candidate is empty, and a flat
+// graphemes entry whose first candidate is empty (mute unconditionally).
+bool silent_word_finally(const LanguageSpec* spec, const std::string& letters) {
+    if (spec == nullptr) return false;
+    const auto entry = spec->positional_graphemes.find(letters);
+    if (entry != spec->positional_graphemes.end() && !entry->second.empty()) {
+        if (auto candidates = entry->second.find("word_final");
+            candidates != entry->second.end() && !candidates->second.empty())
+            return candidates->second.front().empty();
+        if (auto default_candidates = entry->second.find("default");
+            default_candidates != entry->second.end() && !default_candidates->second.empty())
+            return default_candidates->second.front().empty();
+    }
+    const auto flat = spec->graphemes.find(letters);
+    return flat != spec->graphemes.end() && !flat->second.empty() &&
+           flat->second.front().empty();
+}
+
+// positional.py _MAX_SILENT_TAIL: longest silent-tail grapheme considered.
+constexpr std::size_t MAX_SILENT_TAIL = 3;
+
+// positional.py _strip_silent_tail: remove the trailing graphemes *spec*
+// emits nothing for. Longest grapheme first, repeated so a stack of mute
+// finals is fully removed.
+std::u32string strip_silent_tail(std::u32string syllable, const LanguageSpec* spec) {
+    bool changed = true;
+    while (changed && !syllable.empty()) {
+        changed = false;
+        const std::size_t max_size = std::min(MAX_SILENT_TAIL, syllable.size());
+        for (std::size_t size = max_size; size >= 1; --size) {
+            const std::u32string tail = syllable.substr(syllable.size() - size);
+            if (silent_word_finally(spec, to_utf8(uni::lower(tail)))) {
+                syllable.erase(syllable.size() - size);
+                changed = true;
+                break;
+            }
+        }
+    }
+    return syllable;
+}
+
+// positional.py _is_open_syllable: is *syllable* open (no coda)? Decided
+// orthographically, on the syllable the spec's own syllabifier produced.
+// nullopt when it cannot be decided.
+std::optional<bool> is_open_syllable(std::u32string syllable,
+                                     const LanguageSpec* spec,
+                                     bool word_final = false) {
+    while (!syllable.empty()) {
+        const char32_t last = syllable.back();
+        if (uni::is_alpha(last) || uni::combining(last) != 0) break;
+        // A hyphen, an apostrophe or a space is NOT a segment, so it is no
+        // coda: it cannot make an open syllable closed. It is also an
+        // orthographic word boundary, so what stands before it is
+        // word-final and its silent tail comes off with the same rule a
+        // true word-final syllable gets.
+        syllable.pop_back();
+        word_final = true;
+    }
+    if (word_final) syllable = strip_silent_tail(std::move(syllable), spec);
+    bool has_vowel = false;
+    for (char32_t ch : syllable)
+        if (vowels::is_orthographic_vowel(ch)) { has_vowel = true; break; }
+    if (syllable.empty() || !has_vowel) return std::nullopt;
+    return vowels::is_orthographic_vowel(syllable.back());
+}
+
 std::vector<const char*> grapheme_positions(
         const GraphemeContext& ctx, const LanguageSpec* spec,
         std::optional<std::size_t> syll_idx,
-        std::optional<std::size_t> stressed_syll_idx) {
+        std::optional<std::size_t> stressed_syll_idx,
+        const std::set<std::size_t>& secondary_syll_idxs,
+        const std::optional<std::string>& syllable,
+        std::optional<bool> syllable_final) {
     std::vector<const char*> pos;
     const bool is_vowel = ctx.is_vowel();
     const GraphemeContext* prev = ctx.prev();
@@ -298,14 +376,50 @@ std::vector<const char*> grapheme_positions(
     // 3. intervocalic (consonants between two vowels)
     if (prev_is_v && next_is_v) pos.push_back("intervocalic");
 
-    // 4. stress-conditioned nucleus positions (the aperture positions
-    // arrive with the syllabification port).
+    // 4. nucleus_stressed / nucleus_unstressed for graphemes carrying a
+    // nucleus. Besides plain vowel letters this covers CV units whose IPA
+    // contains a vowel, whose reduction is conditioned on the same stress
+    // geometry.
+    // 4a. syllable aperture (open/closed), on its own and crossed with
+    // stress. The crossed positions are emitted first (most specific),
+    // then the aperture-only pair, and only then the stress-only
+    // positions kept below. Aperture is unknown without a syllabification,
+    // so nothing is emitted when syllable is absent.
+    const std::optional<bool> open_syllable =
+        syllable.has_value() ? is_open_syllable(to_utf32(*syllable), spec,
+                                                 syllable_final.value_or(false))
+                             : std::nullopt;
+    if (open_syllable.has_value() && (is_vowel || carries_nucleus(ctx))) {
+        if (syll_idx.has_value() && stressed_syll_idx.has_value()) {
+            if (*syll_idx == *stressed_syll_idx) {
+                pos.push_back(*open_syllable ? "nucleus_stressed_open"
+                                             : "nucleus_stressed_closed");
+            // A secondary foot head takes NEITHER crossed pair: it is not
+            // the main stress, and it is not weak either, so the UNSTRESSED
+            // pair (the reduction entry) must not reach it.
+            } else if (secondary_syll_idxs.count(*syll_idx) == 0) {
+                pos.push_back(*open_syllable ? "nucleus_unstressed_open"
+                                             : "nucleus_unstressed_closed");
+            }
+        }
+        pos.push_back(*open_syllable ? "open_syllable" : "closed_syllable");
+    }
+
     if (syll_idx.has_value() && stressed_syll_idx.has_value() &&
             (is_vowel || carries_nucleus(ctx))) {
         if (*syll_idx == *stressed_syll_idx) {
             pos.push_back("nucleus_stressed");
         } else {
-            pos.push_back("nucleus_unstressed");
+            // Prominence LEVEL: a secondary foot head is stressed, just
+            // not the main accent, so it gets its own position and never
+            // nucleus_unstressed. PRETONIC/POSTTONIC are about POSITION
+            // relative to the main stress, a different fact, and are
+            // emitted either way.
+            if (secondary_syll_idxs.count(*syll_idx) != 0) {
+                pos.push_back("nucleus_secondary");
+            } else {
+                pos.push_back("nucleus_unstressed");
+            }
             if (*syll_idx < *stressed_syll_idx) {
                 if (*syll_idx + 1 == *stressed_syll_idx) pos.push_back("first_pretonic");
                 pos.push_back("pretonic");
@@ -389,12 +503,16 @@ std::vector<Branch> resolve_branches(
         const PhonetokTokenizer& tokenizer,
         const std::map<std::string, std::vector<std::string>>* allophone_map,
         std::optional<std::size_t> syll_idx,
-        std::optional<std::size_t> stressed_syll_idx) {
+        std::optional<std::size_t> stressed_syll_idx,
+        const std::set<std::size_t>& secondary_syll_idxs,
+        const std::optional<std::string>& syllable,
+        std::optional<bool> syllable_final) {
     const std::string& grapheme = ctx.grapheme();
     const std::vector<std::string> base_candidates = ctx.ipa();
 
     const auto positions =
-        grapheme_positions(ctx, &spec, syll_idx, stressed_syll_idx);
+        grapheme_positions(ctx, &spec, syll_idx, stressed_syll_idx,
+                           secondary_syll_idxs, syllable, syllable_final);
     const auto pos_candidates = positional_candidates(spec, grapheme, positions);
 
     std::vector<std::string> candidates;
@@ -490,6 +608,138 @@ std::vector<Hypothesis> expand_beam(std::vector<Hypothesis> beam,
                      });
     if (new_beam.size() > width) new_beam.resize(width);
     return new_beam;
+}
+
+// ── positional.py normalize_ending_value / match_grammatical_ending ──
+
+// positional.py normalize_ending_value: one grammatical_endings value →
+// (rank1, alts). A string is one realisation; a list whose FIRST element
+// is null defers rank 1 to the grapheme tables and adds only the remaining
+// elements as lower-ranked candidates.
+void normalize_ending_value(const std::vector<std::optional<std::string>>& value,
+                            std::optional<std::string>& rank1,
+                            std::vector<std::string>& alternatives) {
+    if (value.empty()) return;
+    rank1 = value.front();
+    for (std::size_t i = 1; i < value.size(); ++i)
+        if (value[i].has_value()) alternatives.push_back(*value[i]);
+}
+
+std::optional<GrammaticalEnding> match_grammatical_ending(
+        const std::vector<std::string>& graphemes, const LanguageSpec* spec) {
+    if (spec == nullptr || spec->grammatical_endings.empty() || graphemes.size() < 2)
+        return std::nullopt;
+
+    // Trailing transparent grammatical suffix, if the spec declares one.
+    std::size_t suffix_tokens = 0;
+    {
+        // positional.py _EndSlot: a minimal duck-typed grapheme context —
+        // the two fields effective_word_end reads.
+        struct EndSlot {
+            std::string g;
+            const EndSlot* next_slot = nullptr;
+            const EndSlot* next() const { return next_slot; }
+            const std::string& grapheme() const { return g; }
+            bool is_vowel() const { return false; }
+        };
+        EndSlot last{to_utf8(uni::lower(to_utf32(graphemes.back()))), nullptr};
+        EndSlot penult{to_utf8(uni::lower(to_utf32(graphemes[graphemes.size() - 2]))), &last};
+        if (effective_word_end(&penult, spec).last_audible_slot) suffix_tokens = 1;
+    }
+
+    const std::size_t end = graphemes.size() - suffix_tokens;
+    // Letter offset at which each candidate token span starts, so a
+    // surface-letter ending can be rounded outward to whole tokens.
+    std::vector<std::string> stem;
+    for (std::size_t i = 0; i < end; ++i) stem.push_back(to_utf8(uni::lower(to_utf32(graphemes[i]))));
+    std::string surface;
+    std::vector<std::size_t> starts;
+    std::size_t offset = 0;
+    for (const auto& token : stem) {
+        starts.push_back(offset);
+        offset += to_utf32(token).size();
+        surface += token;
+    }
+    if (surface.empty()) return std::nullopt;
+    // Ascending letter cut => the first hit is the longest ending. A cut
+    // inside a token rounds OUTWARD to that token's start, and the span is
+    // admissible only while at least one whole token still precedes it.
+    for (std::size_t cut = 1; cut < to_utf32(surface).size(); ++cut) {
+        // surface[cut:] — a code-point suffix of the joined stem.
+        const std::u32string surface32 = to_utf32(surface);
+        const std::string tail = to_utf8(surface32.substr(cut));
+        if (spec->grammatical_endings.find(tail) == spec->grammatical_endings.end())
+            continue;
+        std::optional<std::string> rank1;
+        std::vector<std::string> alternatives;
+        normalize_ending_value(spec->grammatical_endings.at(tail), rank1, alternatives);
+        // first = bisect_right(starts, cut) - 1: the last token start <= cut.
+        std::size_t first = 0;
+        bool found = false;
+        for (std::size_t i = 0; i < starts.size(); ++i)
+            if (starts[i] <= cut) { first = i; found = true; }
+        if (!found || first < 1)
+            // This ending's outward-rounded span leaves no head token; a
+            // SHORTER ending later in the scan may still fit.
+            continue;
+        GrammaticalEnding out;
+        out.ending = tail;
+        out.ipa = rank1;
+        out.tokens = end - first + suffix_tokens;
+        out.alternatives = alternatives;
+        return out;
+    }
+    return std::nullopt;
+}
+
+// ── positional.py merge_nucleusless_final_syllable / g2p.py _ApertureView ──
+
+std::vector<std::string> merge_nucleusless_final_syllable(
+        const std::vector<std::string>& syllables, const LanguageSpec* spec) {
+    std::vector<std::string> result = syllables;
+    if (result.size() < 2) return result;
+    std::u32string core = to_utf32(result.back());
+    while (!core.empty()) {
+        const char32_t last = core.back();
+        if (uni::is_alpha(last) || uni::combining(last) != 0) break;
+        core.pop_back();
+    }
+    core = strip_silent_tail(std::move(core), spec);
+    bool has_vowel = false;
+    for (char32_t ch : core)
+        if (vowels::is_orthographic_vowel(ch)) { has_vowel = true; break; }
+    if (!core.empty() && has_vowel) return result;
+    result[result.size() - 2] += result[result.size() - 1];
+    result.pop_back();
+    return result;
+}
+
+ApertureView::ApertureView(const std::vector<std::string>& syllables,
+                           const LanguageSpec* spec, bool enabled)
+    : enabled_(enabled),
+      syllables_(enabled ? merge_nucleusless_final_syllable(syllables, spec)
+                         : syllables),
+      merged_(syllables_.size() < syllables.size()) {}
+
+std::optional<std::size_t> ApertureView::index(std::optional<std::size_t> idx) const {
+    if (!idx.has_value()) return std::nullopt;
+    std::size_t i = *idx;
+    if (merged_) i = std::min(i, syllables_.size() - 1);
+    if (i >= syllables_.size()) return std::nullopt;
+    return i;
+}
+
+std::optional<std::string> ApertureView::syllable(std::optional<std::size_t> idx) const {
+    if (!enabled_) return std::nullopt;
+    const auto i = index(idx);
+    if (!i.has_value()) return std::nullopt;
+    return syllables_[*i];
+}
+
+std::optional<bool> ApertureView::is_final(std::optional<std::size_t> idx) const {
+    const auto i = index(idx);
+    if (!i.has_value()) return std::nullopt;
+    return *i == syllables_.size() - 1;
 }
 
 } // namespace orthography2ipa::beam

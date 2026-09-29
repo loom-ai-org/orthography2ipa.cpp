@@ -130,7 +130,7 @@ def catalog_sweep():
 
 
 def main():
-    binary = pathlib.Path(sys.argv[1])
+    binary = pathlib.Path(os.path.abspath(sys.argv[1]))  # avoid a PATH lookup shadowing the local build
     data_dir = None
     if "--data" in sys.argv:
         i = sys.argv.index("--data")

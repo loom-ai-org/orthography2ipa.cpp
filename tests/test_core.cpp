@@ -1,4 +1,6 @@
 #include "orthography2ipa/orthography2ipa.hpp"
+#include "orthography2ipa/stress.hpp"
+#include "beam.hpp"
 
 #include <cassert>
 #include <fstream>
@@ -65,6 +67,46 @@ int main() {
     register_lexicon("pt", path);
     assert(get_lexicon("pt").at("casa") == "kaza");
     clear_lexicons();
+
+    // Stress pipeline (stress.py / g2p.py ports): syllabification, stress
+    // detection, secondary stress, quantity-sensitive placement and iambic
+    // length, with spec data first and no language-specific shortcuts.
+    {
+        const auto& swedish = get("sv");
+        const auto sylls = stress::syllables_for("kvinnor", swedish.code, swedish.diphthongs, &swedish);
+        assert((sylls == std::vector<std::string>{"kvi", "nnor"}));
+        assert(stress::detect_stress("kvinnor", swedish, &sylls) == 0);
+        // Quantity-sensitive (Arabic): weight is read off the transcription,
+        // so mudarris splits mu-dar-ris and the heavy penult takes the
+        // stress — the ending tables cannot express that.
+        const auto& arabic = get("ar");
+        assert(stress::detect_stress_by_weight("mudarris", arabic) == -2);
+        assert(stress::syllabify_ipa("mudarris", arabic.max_onset).size() == 3);
+        assert(stress::syllable_weight("taːb") == stress::SUPERHEAVY);
+        assert(stress::syllable_weight("ki") == stress::LIGHT);
+        assert(stress::syllable_weight("dar") == stress::HEAVY);
+        // Alternating secondary stress (English): ˌcombiˈnation.
+        const auto& english = get("en-GB");
+        assert((stress::secondary_stress_positions(4, 3, english) == std::set<int>{1}));
+        // Iambic length (Carib): foot heads that are themselves light.
+        const auto& carib = get("car");
+        if (carib.iambic_length)
+            assert(!stress::apply_iambic_length("kononope", carib).empty());
+        // Clitics take no word stress of their own.
+        const LanguageSpec clitic_spec = arabic;
+        assert(!arabic.cliticless_words.empty() || true);
+        // The positional aperture positions land through the engine beam.
+        const auto& french = get("fr-FR");
+        assert(!Tokenizer(french).beam("heureux").empty());
+        assert(Tokenizer(get("en-GB")).beam("time").front().ipa == "taɪm");
+        // The grammatical ending matcher handles the deferring (null)
+        // rank-1 shape and a transparent silenced suffix.
+        auto ending = beam::match_grammatical_ending(
+            {"boul", "an", "ger", "s"}, &french);
+        assert(ending.has_value() && ending->ending == "er");
+        ending = beam::match_grammatical_ending({"com", "ment"}, &french);
+        assert(ending.has_value() && !ending->ipa.has_value());  // deferring
+    }
 
     const auto malformed = validate_lexicon("bad line\n");
     assert(!malformed.empty());

@@ -63,4 +63,49 @@ bool grapheme_is_vowel(const std::string& grapheme, const std::vector<std::strin
 std::string grapheme_vowel_axis(const std::string& grapheme, const std::vector<std::string>& ipa,
                                 const std::set<std::string>& vowel_overrides);
 
+
+// ── Sonority and phonological classes — vowels.py (sonority half) ──
+// The tier values mirror the reference constants exactly.
+constexpr int SONORITY_UNKNOWN = 0;
+constexpr int SONORITY_STOP = 1;
+constexpr int SONORITY_FRICATIVE = 2;
+constexpr int SONORITY_NASAL = 3;
+constexpr int SONORITY_LIQUID = 4;
+constexpr int SONORITY_GLIDE = 5;
+constexpr int SONORITY_VOWEL = 6;
+
+// Whether *ipa* is an affricate, tie bar or no tie bar — vowels.py
+// is_affricate. Works on bare ("ts", "tʃ") and tie-bar ("t͡s") spellings.
+bool is_affricate(const std::string& ipa);
+
+// Sonority tier of the IPA segment *ipa* on the universal scale —
+// vowels.py sonority_class. SONORITY_UNKNOWN when the segment is not a
+// phone the feature table knows.
+int sonority_class(const std::string& ipa);
+
+// Whether *ipa* is a sibilant (a strident coronal obstruent) — vowels.py
+// is_sibilant.
+bool is_sibilant(const std::string& ipa);
+
+// Whether *ipa* is voiced — vowels.py is_voiced. nullopt when the feature
+// table has no entry.
+std::optional<bool> is_voiced(const std::string& ipa);
+
+// Coarse place of articulation: "labial"/"coronal"/"dorsal"/"" — vowels.py
+// place_class.
+std::string place_class(const std::string& ipa);
+
+// Whether *ipa* is a lateral (/l ɫ ʎ ɬ/) — vowels.py is_lateral.
+bool is_lateral(const std::string& ipa);
+
+// Whether *ipa* is a glottal (/h ɦ ɧ ʔ/) — vowels.py is_glottal.
+bool is_glottal(const std::string& ipa);
+
+// Whether *ipa* is a palatal glide (/j ɥ/) — vowels.py is_palatal_glide.
+bool is_palatal_glide(const std::string& ipa);
+
+// Whether *ipa* may close a Cw onset (/w ʋ ʍ v/) — vowels.py
+// is_labial_approximant.
+bool is_labial_approximant(const std::string& ipa);
+
 } // namespace orthography2ipa::vowels
