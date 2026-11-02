@@ -19,7 +19,7 @@ import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 CPP_ROOT = os.path.dirname(HERE)
-reference = sys.argv[1] if len(sys.argv) > 1 else os.path.join(os.path.dirname(CPP_ROOT), "orthography2ipa")
+reference = sys.argv[1] if len(sys.argv) > 1 else (os.environ.get("O2I_PYTHON_ROOT") or os.path.join(os.path.dirname(CPP_ROOT), "orthography2ipa"))
 if not os.path.isfile(os.path.join(reference, "orthography2ipa", "transforms.py")):
     raise SystemExit(f"reference package not found at {reference!r}")
 sys.path.insert(0, reference)

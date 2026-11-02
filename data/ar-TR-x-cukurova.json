@@ -1,0 +1,37 @@
+{
+ "code": "ar-TR-x-cukurova",
+ "name": "Çukurova Arabic (Cilician)",
+ "script": "Arabic",
+ "script_type": "abjad",
+ "parent": "ar-SY",
+ "graphemes_base": "ar-SY",
+ "graphemes": {},
+ "allophones_base": "ar-SY",
+ "allophones": {},
+ "quality": "stub",
+ "ancestors": [
+  {
+   "code": "ar-SY",
+   "role": "parent",
+   "weight": 0.9,
+   "notes": "Inherited placeholder table; see notes on ar-TR-x-cukurova."
+  }
+ ],
+ "notes": "The Arabic dialects of the Çukurova plain in southern Turkey. ATTESTED, NOT YET DESCRIBED HERE. A published description exists and is named in `sources`; its phonology has not been read into this spec. The grapheme table is inherited from the parent and is a placeholder, NOT a claim about this variety — no reflex below has been checked against the source. The entry exists so the lect has a code and resolves to something usable rather than to nothing; `quality` is `stub` for exactly that reason. Replace the inherited table with cited reflexes before treating any reading here as this variety's. The parent is Syrian on geographic and historical grounds — these are Levantine-derived dialects north of the Syrian border — and that placement is itself unverified against Prochazka.",
+ "sources": [
+  {
+   "id": "prochazka2002",
+   "author": "Prochazka, S.",
+   "year": 2002,
+   "title": "Die arabischen Dialekte der Çukurova (Südtürkei)",
+   "publisher": "Wiesbaden: Harrassowitz"
+  },
+  {
+   "id": "watsonasiri2007",
+   "author": "Watson, J.C.E. & Asiri, B.",
+   "year": 2007,
+   "title": "Pre-pausal devoicing and glottalisation in varieties of the south-western Arabian Peninsula",
+   "publisher": "Proceedings of ICPhS XVI, Saarbrücken, paper 1738"
+  }
+ ]
+}

@@ -50,3 +50,22 @@ Plugin classes are declared in the public header and can be selected by the JSON
 `plugins` field or explicit caller overrides. Runtime conformance checks and
 `who_answers()` introspection are also available. Remote URL/Hugging Face lexicon
 fetching and the most advanced Python allophone contexts remain future work.
+
+## Reference data
+
+The language specs in `data/` and the tables in `src/*_tables.inc` are copied from one
+release of the Python [orthography2ipa](https://pypi.org/project/orthography2ipa/). The
+file `tests/reference_version.txt` names that release. Specs and engine code change
+together: a spec field without the code that reads it is ignored. For this reason the
+build never fetches specs. They change only through the sync script:
+
+```
+python3 tools/sync_reference.py 7.111.14a1   # or: latest
+```
+
+The script downloads the wheel from PyPI and checks its sha256. It then replaces
+`data/`, writes the pin, and runs the `tests/gen_*.py` generators against that wheel.
+Run the script with a Python that has the reference's dependencies installed. After
+a sync, rebuild and run the parity suite with `O2I_PYTHON_ROOT` set to a reference of
+the same version. To try newer specs at runtime without a rebuild, point
+`set_data_directory()` at them.

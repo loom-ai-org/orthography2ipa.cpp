@@ -113,6 +113,17 @@
     "dj": [
       "j"
     ],
+    "hj": [
+      "j"
+    ],
+    "gn": [
+      "ŋn",
+      "ɡn"
+    ],
+    "sc": [
+      "s",
+      "sk"
+    ],
     "gj": [
       "j"
     ],
@@ -391,7 +402,38 @@
     "https://sv.wikipedia.org/wiki/Svenska",
     "https://en.wikipedia.org/wiki/Swedish_phonology"
   ],
+  "audit": {
+    "vox_communis": {
+      "conclusion": "at_ceiling_documented",
+      "measured": "Board PER 0.3717 (n=19492) before the three spelling rules this row measured, 0.3695 after them: ⟨c⟩ before e i y ä ö is [s] (309 words, all [s] in the gold, 133 [s] here before, 302 after), ⟨gn⟩ inside a word is [ŋn] (154 words, all [ŋn] in the gold, 11 here before, 130 after; the 10 word-initial ⟨gn⟩ words stay [ɡn] on both sides), ⟨hj⟩ is [j] (54 words, all [j] in the gold, 0 here before, 54 after), and ⟨sc⟩ before a front vowel is [s] (18 words). The rest of the row is the gold's notation. It is epitran-derived, and scripts/fold_sv_notation.py folds five of its conventions out of BOTH sides cumulatively with the harness's own normalize() (broad) and levenshtein(): every open-syllable vowel is long in the gold, stressed or not (16923 gold words carry a length mark against 6501 here; all 2165 words ending in ⟨-e⟩ end in eː), and dropping length takes 0.3695 to 0.3128; the gold writes 12 geminates in 19492 words where this spec writes the Swedish long consonant, 0.2723; ⟨r⟩ + dental is two segments in the gold and the assimilated retroflex here, 0.2388; ⟨sk⟩ is ɧ before any vowel there, 0.2173; and vowel quality follows length (ɛ ɐ ɑ ɪ ʊ ʏ œ ɵ ɔ here against e a ɑː i u y ø ʉ o there), 0.0200, after which 17144 of 19492 words (88.0%) match exactly. None of these is a contrast the spelling fails to write, so no valid_ceiling is recorded (T-2583). What the folds leave is the gold misreading the spelling, counted and not folded: ⟨ng⟩ as nj (396 words), ⟨nk⟩ with no velar nasal (253), ⟨ck⟩ as kɕ (131); this spec's ŋ, ŋk and kː stand (Riad 2014). ⟨ch⟩ is ɧ in every one of the gold's 142 ⟨ch⟩ words, including och; this spec keeps ɕ first, since the letter group is lexically variable, and the gold is not a source for that choice.",
+      "reference": "riad2014 (spelling-to-sound of ⟨c gn hj sc⟩); see scripts/fold_sv_notation.py"
+    }
+  },
   "positional_graphemes": {
+    "c": {
+      "before_front_vowel": [
+        "s"
+      ],
+      "default": [
+        "k"
+      ]
+    },
+    "gn": {
+      "word_initial": [
+        "ɡn"
+      ],
+      "default": [
+        "ŋn"
+      ]
+    },
+    "sc": {
+      "before_front_vowel": [
+        "s"
+      ],
+      "default": [
+        "sk"
+      ]
+    },
     "k": {
       "before_front_vowel": [
         "ɕ"

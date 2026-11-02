@@ -1,12 +1,12 @@
 {
-  "code": "gl-x-reintegrado",
+  "code": "gl-ES-x-reintegrado",
   "name": "Galician (reintegrationist orthography)",
   "script": "Latin",
   "script_type": "alphabet",
   "quality": "research",
-  "parent": "gl",
-  "graphemes_base": "gl",
-  "allophones_base": "gl",
+  "parent": "gl-ES",
+  "graphemes_base": "gl-ES",
+  "allophones_base": "gl-ES",
   "graphemes": {
     "nh": [
       "ɲ"
@@ -28,7 +28,7 @@
   },
   "ancestors": [
     {
-      "code": "gl",
+      "code": "gl-ES",
       "role": "parent",
       "weight": 1.0,
       "notes": "The same language and the same phonology as standard (RAG) Galician. Reintegrationism is an ORTHOGRAPHIC position, not a different variety: it restores the Galician-Portuguese spelling tradition while the spoken language is unchanged."
@@ -41,7 +41,7 @@
     "url": "https://agal-gz.org/",
     "notes": "The reintegrationist norm, opposed to the official RAG/ILG norm. It spells Galician within the Galician-Portuguese tradition rather than with Castilian conventions."
   },
-  "notes": "SAME LANGUAGE, DIFFERENT ORTHOGRAPHY. This spec exists to model the reintegrationist spelling of Galician, not a different speech variety: it inherits its phonology wholesale from `gl` (`allophones_base`) and overrides only the grapheme map. Reintegrationism restores the Galician-Portuguese spelling tradition where the official RAG norm follows Castilian convention. KEY DIVERGENCES from RAG: (1) /ɲ/ is written <nh> (RAG: <ñ>, a Castilian convention) — NOTE the collision: in the RAG norm <nh> is the VELAR nasal /ŋ/ (unha [ˈuŋa]), so the same digraph denotes different phonemes under the two norms, which is precisely why a norm needs its own spec. (2) /ʎ/ is written <lh> (RAG: <ll>). (3) <ç> is restored for /θ/ (RAG has no <ç>). (4) Etymological <j> is restored, pronounced /ʃ/ — Galician has NO /ʒ/, so unlike Portuguese, reintegrationist <j> is voiceless; the spelling is Portuguese-like, the phonology is Galician. Betacism is unchanged (<v> = /b/), as it is a property of the language, not the norm. CONSEQUENCE, and the point of modelling it: reintegrationist Galician is orthographically much CLOSER to Portuguese than the RAG norm is, while being phonologically IDENTICAL to it. Only `spelling_divergence` can see this — `phonological_distance` cannot, by construction.",
+  "notes": "SAME LANGUAGE, DIFFERENT ORTHOGRAPHY. This spec exists to model the reintegrationist spelling of Galician, not a different speech variety: it inherits its phonology wholesale from `gl-ES` (`allophones_base`) and overrides only the grapheme map. Reintegrationism restores the Galician-Portuguese spelling tradition where the official RAG norm follows Castilian convention. KEY DIVERGENCES from RAG: (1) /ɲ/ is written <nh> (RAG: <ñ>, a Castilian convention) — NOTE the collision: in the RAG norm <nh> is the VELAR nasal /ŋ/ (unha [ˈuŋa]), so the same digraph denotes different phonemes under the two norms, which is precisely why a norm needs its own spec. (2) /ʎ/ is written <lh> (RAG: <ll>). (3) <ç> is restored for /θ/ (RAG has no <ç>). (4) Etymological <j> is restored, pronounced /ʃ/ — Galician has NO /ʒ/, so unlike Portuguese, reintegrationist <j> is voiceless; the spelling is Portuguese-like, the phonology is Galician. Betacism is unchanged (<v> = /b/), as it is a property of the language, not the norm. CONSEQUENCE, and the point of modelling it: reintegrationist Galician is orthographically much CLOSER to Portuguese than the RAG norm is, while being phonologically IDENTICAL to it. Only `spelling_divergence` can see this — `phonological_distance` cannot, by construction.",
   "sources": [
     {
       "id": "agal_normas",
@@ -72,6 +72,6 @@
     "latitude": 42.8,
     "longitude": -7.9,
     "source": "wikidata",
-    "notes": "Galicia. This spec is an ORTHOGRAPHY, not a speech variety — it shares its phonology and its territory with `gl`, so it shares its point. [Wikidata Q3908 P625]"
+    "notes": "Galicia. This spec is an ORTHOGRAPHY, not a speech variety — it shares its phonology and its territory with `gl-ES`, so it shares its point. [Wikidata Q3908 P625]"
   }
 }

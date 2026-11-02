@@ -1,0 +1,71 @@
+{
+ "code": "ar-BH-x-baharna",
+ "name": "Bahārna Arabic (B dialects of Bahrain)",
+ "script": "Arabic",
+ "script_type": "abjad",
+ "parent": "ar-BH",
+ "graphemes_base": "ar-BH",
+ "iso639_3": "abv",
+ "quality": "research",
+ "graphemes": {
+  "ث": [
+   "f",
+   "θ"
+  ],
+  "ض": [
+   "dˤ",
+   "ðˤ"
+  ],
+  "ظ": [
+   "dˤ",
+   "ðˤ"
+  ],
+  "ذ": [
+   "d",
+   "ð"
+  ],
+  "ق": [
+   "k",
+   "ɡ",
+   "q"
+  ],
+  "ك": [
+   "tʃ",
+   "k"
+  ],
+  "ج": [
+   "dʒ",
+   "j"
+  ]
+ },
+ "allophones_base": "ar-BH",
+ "allophones": {},
+ "ancestors": [
+  {
+   "code": "ar-BH",
+   "role": "parent",
+   "weight": 0.9,
+   "notes": "Bahrain's Gulf table is the base; the B reflexes below replace the ones that differ, and several differ sharply."
+  }
+ ],
+ "notes": "The Bahārna (B) dialects of Bahrain -- the Shiʿi sedentary communities -- as against the ʿArab (A) dialects of the Sunni population, which the country spec ar-BH describes. Primary reference Holes (2016), Dialect, Culture and Society in Eastern Arabia vol. III, read directly; every reflex here is quoted in the grapheme comments with its page.\n\nWHY THIS IS NOT ar-BH. The parent inherits the Gulf table, and on the single most salient B feature the Gulf table cannot express the B reading at all: ar-BH gives ⟨ث⟩ as [θ, t], while every B dialect reads it [f]. The two also merge the emphatics in opposite directions -- B to the stop [dˤ], Gulf to the fricative [ðˤ]. A B row read under ar-BH is not a coarser description of the same variety; it is the other community's speech.\n\nWHAT MUST NOT BE HERE. In the A dialects /g/ < OA /q/ affricates to /ǧ/ before front vowels -- 'ǧīma', 'firīǧ', 'ṣidǧ' -- and Holes calls this \"a saliently A feature\" (§2.1.1.2 p.52). No B system has ǧ < q. So ⟨ق⟩ is deliberately [k, ɡ, q] and never [dʒ]: adding the affricate would make this spec describe the community it exists to distinguish. The y-reflex of ⟨ج⟩ is shared with A, but only because B4 has it categorically in its own right.\n\nFOUR SYSTEMS, NOT ONE. Holes distinguishes B1/B1a (eastern and south-western villages), B2 (two central villages), B3 (most of Manāma) and B4 (one Manāma quarter and three northern villages). They disagree on exactly the three variables above, and which system a recording belongs to is a fact about the speaker that no orthography records -- so each grapheme carries every attested reading and audio decides, which is what an allophone list is for.\n\nTIME DEPTH, RECORDED NOT SILENT. Holes §7.3 p.475 lists among features now largely gone the \"loss of /k/ < OA /q/ (adoption of /g/)\" and the loss of /č/ < OA /k/ where it is not shared with A. So 1970s fieldwork gives k/č and modern speech plausibly gives g/k. Both are carried rather than choosing a period.\n\nA SECOND SOURCE PARTLY DISAGREES. Al-Tajir (1982) pp.40-41 calls f for ṯ a free variant rather than categorical, and reports j > g in some rural B areas. The disagreement is why ⟨ث⟩ keeps [θ] as an alternative instead of reading [f] alone.\n\nWHY ⟨ج⟩ IS DECLARED THOUGH IT MATCHES THE PARENT. ar-BH also reads it [dʒ, j], so this key changes nothing today and looks redundant. It is declared because both readings are B claims in their own right: Holes gives /ǧ/ = [ʤ] for B1 through B3 (p.61) and /y/ < OA /ǧ/ \"categorically\" for B4 (p.62). The agreement with the Gulf table is a coincidence, and declaring the key means this spec keeps Holes' reading if ar-BH is ever corrected rather than silently following it. test_jim_is_declared_on_holes_and_not_inherited pins the coincidence, so the day the two diverge is a test failure somebody reads instead of a drift nobody sees.\n\nNOT ENCODABLE HERE. Of the eight features Holes groups as B-defining, only the ṯ > f reflex is segmental. The rest -- existential šī, the interrogative particles -ǝ? and lā?, the -in(n)- infix, intīn(a)/intūn, 2sg -č/-čim -- are morphosyntactic and cannot live in a grapheme table.",
+ "sources": [
+  {
+   "id": "holes2016",
+   "author": "Holes, C.",
+   "year": 2016,
+   "title": "Dialect, Culture, and Society in Eastern Arabia, Volume III: Phonology, Morphology, Syntax, Style",
+   "publisher": "Leiden: Brill"
+  },
+  {
+   "id": "altajir1982",
+   "author": "Al-Tajir, M.A.",
+   "year": 1982,
+   "title": "Language and Linguistic Origins in Baḥrain: The Baḥārnah Dialect of Arabic",
+   "publisher": "London: Kegan Paul"
+  }
+ ],
+ "wikipedia": [
+  "https://en.wikipedia.org/wiki/Bahrani_Arabic"
+ ]
+}

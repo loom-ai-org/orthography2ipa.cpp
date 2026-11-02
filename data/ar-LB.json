@@ -218,6 +218,9 @@
     ],
     "اِلْغ": [
       "alɣ"
+    ],
+    "گ": [
+      "ɡ"
     ]
   },
   "allophones_base": "ar-x-levantine",
@@ -255,7 +258,7 @@
       "notes": "French adstrate (Mandate-era and ongoing): heavy loanword stratum, /ʒ/ reinforced, code-switching."
     }
   ],
-  "notes": "Lebanese Arabic — Beiruti urban koine, a South-Central Levantine variety. INPUT CONTRACT: fully-diacritized Arabic. ق qaf → /ʔ/ (urban; rural/Bedouin /ɡ/ via the Levantine parent). ج jim → /ʒ/. Interdentals merged in urban speech (θ→/t/, ð→/d/, ðˤ→/dˤ/). DISTINGUISHING FEATURE: STRONG imāla — Classical /aː/ raised to [eː] except adjacent to emphatic/guttural consonants, and final /-a/ (ة) raised to [e]; modelled here as allophone_rules (LB_IMALA_*) that compose after the inherited emphasis-backing rules. This pervasive vowel raising is the most salient Lebanese marker. The five-long / three-short vowel system and /aj aw/→[eː oː] monophthongization are inherited from the Levantine parent. French is a heavy adstrate.",
+  "notes": "Lebanese Arabic — Beiruti urban koine, a South-Central Levantine variety. INPUT CONTRACT: fully-diacritized Arabic. ق qaf → /ʔ/ (urban; rural/Bedouin /ɡ/ via the Levantine parent). ج jim → /ʒ/. Interdentals merged in urban speech (θ→/t/, ð→/d/, ðˤ→/dˤ/). DISTINGUISHING FEATURE: STRONG imāla — Classical /aː/ raised to [eː] except adjacent to emphatic/guttural consonants, and final /-a/ (ة) raised to [e]; modelled here as allophone_rules (LB_IMALA_*) that compose after the inherited emphasis-backing rules. This pervasive vowel raising is the most salient Lebanese marker. The five-long / three-short vowel system and /aj aw/→[eː oː] monophthongization are inherited from the Levantine parent. French is a heavy adstrate. LOAN GRAPHEME گ, AND THE PHONE IT BRINGS. This spec narrows the inherited ‹ق› to [ʔ] and [q] — the urban glottal reflex — and in doing so has no /ɡ/ at all, unlike its ar-x-levantine parent and its ar-PS and ar-JO siblings. So mapping ‹گ› here is NOT free: it adds /ɡ/ to the inventory, and that is the claim, stated rather than slipped in beside a grapheme. It is a LOAN phoneme and it leaves the native qāf reflex untouched: urban Levantine says [ʔ] for قال and still says [ɡ] in a borrowed word. The evidence is the shared North Levantine WikiPron gold, apc_arab_broad, where all seven ‹گ› rows read [ɡ] and all seven are loans — تفنگة (Turkish tüfek), گراماتيك, گراڤات, لگن, زنگيل, گرب, گريب. Before this the letter was dropped: dev reads تفنگة as ˈtfna, losing the consonant outright. THIS SPEC HAS NO WORD-LEVEL GOLD OF ITS OWN. apc_arab_broad is registered to ar-SY, not here; ar-LB's committed rows are arabic_tts and gold20_arabic, 20 rows each, and neither carries ‹گ› or moves. So the reading above is inherited from the shared North Levantine evidence rather than measured on Lebanese rows, and nothing here scores it. Said explicitly because the sentence it rests on is shared with ar-SY and only ar-SY can call that gold its own.",
   "quality": "research",
   "script_type": "abjad",
   "sources": [
@@ -298,6 +301,15 @@
       "url": null,
       "pages": null,
       "notes": "Emphasis (pharyngealization) spreading onto neighbouring low vowels. Not obtained in full; cited for the widely-described emphasis-spreading process."
+    },
+    {
+      "id": "wikipron_apc_gold",
+      "author": "WikiPron / Wiktionary contributors (gold set, crowd-scraped)",
+      "year": 2026,
+      "title": "apc_arab_broad — the North Levantine gold this spec is scored against",
+      "publisher": "CUNY-CL WikiPron scrape, loaded by scripts/benchmark.py",
+      "pages": "7 rows containing ⟨گ⟩",
+      "notes": "Cited for what the letter reads, from the board's own scoring set rather than from literature. Every ⟨گ⟩ row in this gold transcribes it [ɡ]: تفنگة → t f i n ɡ e, زنگيل → z a n ɡ iː l, لگن → l a ɡ a n, گراماتيك → ɡ r aː m aː t iː k, گراڤات → ɡ r aː v aː t, گرب → ɡ a r r a b, گريب → ɡ r iː b. All seven are loanwords — tfinge from Turkish tüfek, grammatik, cravate — which is the point: the reading is a LOAN phoneme and says nothing about the native qāf reflex. PROVENANCE CAVEAT, per the scoreboard's own legend: a crowd-scraped gold is weaker than a lexicon or an expert annotation, and seven rows is a small n. What carries it is that all seven agree and that the alternative is deleting the consonant."
     }
   ],
   "wikipedia": [

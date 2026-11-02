@@ -8,13 +8,14 @@ the reference, never retyped. Run after any change to types.py:
 
     /home/flavio/.venvs/piper/bin/python3 tests/gen_types_tables.py
 """
+import os
 import pathlib
 import sys
 from dataclasses import fields as dc_fields
 
 HERE = pathlib.Path(__file__).resolve().parent
 CPP_ROOT = HERE.parent
-reference = str(CPP_ROOT.parent / "orthography2ipa")
+reference = os.environ.get("O2I_PYTHON_ROOT") or str(CPP_ROOT.parent / "orthography2ipa")
 sys.path.insert(0, reference)
 
 import orthography2ipa.types as T  # noqa: E402

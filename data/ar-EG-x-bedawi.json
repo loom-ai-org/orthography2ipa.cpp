@@ -1,0 +1,80 @@
+{
+  "code": "ar-EG-x-bedawi",
+  "name": "Eastern Egyptian Bedawi Arabic",
+  "script": "Arabic",
+  "script_type": "abjad",
+  "parent": "ar-EG",
+  "graphemes_base": "ar-EG",
+  "allophones_base": "ar-EG",
+  "graphemes": {
+    "ق": [
+      "ɡ"
+    ],
+    "ج": [
+      "dʒ",
+      "ʒ"
+    ],
+    "ث": [
+      "θ"
+    ],
+    "ذ": [
+      "ð"
+    ],
+    "ظ": [
+      "ðˤ"
+    ],
+    "ض": [
+      "ðˤ"
+    ]
+  },
+  "allophones": {},
+  "ancestors": [
+    {
+      "code": "ar-EG",
+      "role": "parent",
+      "weight": 0.9,
+      "notes": "Egyptian Arabic base; this leaf declares only the consonants that differ."
+    }
+  ],
+  "notes": "Eastern Egyptian Bedawi Arabic, the Bedouin dialects of Sinai and the eastern desert. INPUT CONTRACT: transcribes orthography+harakat. It hangs off ar-EG and differs from Cairene in three places, one of them structural.\n\nق qāf → [ɡ], not [ʔ]. de Jong 2004:155: 'The reflex for CA *q is voiced g, which, as in all known dialects of Sinai, is not palatalised, e.g. gaḷbī 'my heart', suwwāg 'driver''.\n\nج jīm → [dʒ] with [ʒ] second. de Jong 2004:156: '*ǧ has a ǧ reflex; ž (I.P.A. [ʒ]) is seldom'. The order follows that frequency statement.\n\nTHE INTERDENTALS ARE RETAINED, which is the structural difference from Cairene and the reason this cannot be transcribed as Egyptian. de Jong 2004:155: 'Most Bedouin dialects have three interdental phonemes: /ṯ/, /ḏ/ as the regular reflexes of Classical Arabic *ṯ and *ḏ, and the emphatic /ḏ̣/ as the reflex for both CA *ḍ and *ẓ', with ṯalāṯih 'three', xaḏ 'he took', ḏ̣arabu 'he hit him', ʿaḏ̣m 'bone'. So ث → [θ], ذ → [ð], and BOTH ظ and ض → [ðˤ], where Cairene merges all of them to stops and sibilants. This adds /θ ð/ to the inventory against the parent, which is the claim the citation carries.\n\nSUB-REGIONAL SPLIT, stated rather than resolved: de Jong's fieldwork is SOUTHERN Sinai (Mzeinah, Garārišah, Ǧbāliyyah, Samāʿnah, ʿAgāylah). He flags at 2004:154 n.5 that NORTHERN Sinai 'group I' dialects retain the Classical diphthongs in some environments where southern Sinai monophthongises categorically (2004:154: 'typically southern Sinai dialects are characterised by monophthongs in all positions, which yields the additional long vowel phonemes /ē/ and /ō/'). The ISO code avl covers both. Nothing here declares a diphthong rule, so the parent's behaviour stands and this note is the warning rather than a silent choice.",
+  "quality": "research",
+  "sources": [
+    {
+      "id": "dejong2004",
+      "author": "de Jong, R.",
+      "year": 2004,
+      "title": "Characteristics of Bedouin Dialects in Southern Sinai: Preliminary Observations",
+      "publisher": "Brill, in Haak, de Jong & Versteegh (eds.), Approaches to Arabic Dialects",
+      "url": "https://archive.org/details/book1_10527",
+      "pages": "151-164, esp. 154-156",
+      "notes": "Primary description, the author's own southern Sinai fieldwork. Glottolog's top reference for east2690 is the same author's 2011 grammar of the same material."
+    },
+    {
+      "id": "watson2002",
+      "author": "Watson, J.C.E.",
+      "year": 2002,
+      "title": "The Phonology and Morphology of Arabic",
+      "publisher": "Oxford University Press",
+      "url": null,
+      "pages": "9",
+      "notes": "General framing, citing Versteegh 1997:144: voiced qaf and preserved interdentals are the typical Bedouin features. Corroborates de Jong point for point; not Sinai-specific."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Eastern_Egyptian_Bedawi_Arabic"
+  ],
+  "timespan": {
+    "start_year": 1400,
+    "end_year": null
+  },
+  "glottolog_code": "east2690",
+  "iso639_3": "avl",
+  "allophone_rules": [],
+  "wikidata_qid": null,
+  "location": {
+    "latitude": 29.5,
+    "longitude": 34.0,
+    "source": "manual",
+    "notes": "Southern Sinai, the area of de Jong's fieldwork; the ISO code also covers northern Sinai and the eastern desert."
+  }
+}

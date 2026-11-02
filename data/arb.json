@@ -734,6 +734,15 @@
     ],
     "ـ": [
       ""
+    ],
+    "ھ": [
+      "h"
+    ],
+    "ڪ": [
+      "k"
+    ],
+    "ٲ": [
+      "ʔa"
     ]
   },
   "allophones": {
@@ -877,7 +886,7 @@
       "notes": "The hamzat-wasl /a/ of a word-initial definite article elides after a vowel-final word: fiː albajti → fiː lbajti; fiː aʃʃamsi → fiː ʃʃamsi (Ryding 2005 §2.10). Only the article's seat vowel is deleted (right_transform) — hamzat qatʕ words start /ʔ/ and are untouched."
     }
   ],
-  "notes": "Classical Arabic (العربية الفصحى, al-ʿArabiyya al-fuṣḥā). The variety of the Quran and pre-Islamic poetry (~6th–9th c. CE). All modern Arabic dialects descend from spoken Classical Arabic (not from Modern Standard Arabic / MSA). 28-consonant inventory. KEY CLASSICAL FEATURES: (1) ض /ɮˤ/ — emphatic LATERAL fricative (described by Sibawayhi as a lateral sound; modern dialects shift to /dˤ/ or /zˤ/); (2) ث /θ/ and ذ /ð/ fully preserved as interdentals; (3) ء /ʔ/ always realised (not dropped); (4) ق /q/ always uvular (no urban ʔ variant); (5) all three short vowels (/a i u/) fully pronounced (no deletion); (6) word-final case vowels (iʿrāb) pronounced; (7) diphthongs /aj/ and /aw/ preserved (not monophthongised). Source: Sibawayhi, al-Kitāb (8th c.); Wright (1896); Watson (2002). Tā' marbūṭa: realized [at] when a vowel follows (inflected, non-pausal context) and [a] pre-pausally — Classical behaviour per Watson (2002) and Versteegh (2001); encoded positionally (before_vowel). CONFUSABLE AND FORMATTING CODEPOINTS: three Unicode characters that occur in real Arabic-script text had no grapheme entry anywhere in this family, and a character with no entry is dropped without an error, so every occurrence was deleted in silence. ک KEHEH is the Persian/Urdu/Sindhi shape of kaf (annotated '= kaf mashkula') and is read here exactly as ك — [k]. ی FARSI YEH is annotated for Arabic as well as Persian, Urdu and Kashmiri, and is read exactly as ي — [j] or the mater lectionis [iː]. ـ TATWEEL is the kashida, inserted to stretch a word for justification and carrying no sound, so it maps to the empty string: the deletion is now stated instead of accidental, the treatment ٱ ALEF WASLA already had. ہ HEH GOAL is deliberately NOT added — Unicode assigns it to Urdu, and it occurs in none of the Arabic gold. The alternates are listed as bare letters only; a keheh or farsi yeh carrying a harakat does not match the diacritised digraph keys and falls back to the bare letter plus the mark, which yields the same phonemes.",
+  "notes": "Classical Arabic (العربية الفصحى, al-ʿArabiyya al-fuṣḥā). The variety of the Quran and pre-Islamic poetry (~6th–9th c. CE). All modern Arabic dialects descend from spoken Classical Arabic (not from Modern Standard Arabic / MSA). 28-consonant inventory. KEY CLASSICAL FEATURES: (1) ض /ɮˤ/ — emphatic LATERAL fricative (described by Sibawayhi as a lateral sound; modern dialects shift to /dˤ/ or /zˤ/); (2) ث /θ/ and ذ /ð/ fully preserved as interdentals; (3) ء /ʔ/ always realised (not dropped); (4) ق /q/ always uvular (no urban ʔ variant); (5) all three short vowels (/a i u/) fully pronounced (no deletion); (6) word-final case vowels (iʿrāb) pronounced; (7) diphthongs /aj/ and /aw/ preserved (not monophthongised). Source: Sibawayhi, al-Kitāb (8th c.); Wright (1896); Watson (2002). Tā' marbūṭa: realized [at] when a vowel follows (inflected, non-pausal context) and [a] pre-pausally — Classical behaviour per Watson (2002) and Versteegh (2001); encoded positionally (before_vowel). CONFUSABLE AND FORMATTING CODEPOINTS: three Unicode characters that occur in real Arabic-script text had no grapheme entry anywhere in this family, and a character with no entry is dropped without an error, so every occurrence was deleted in silence. ک KEHEH is the Persian/Urdu/Sindhi shape of kaf (annotated '= kaf mashkula') and is read here exactly as ك — [k]. ی FARSI YEH is annotated for Arabic as well as Persian, Urdu and Kashmiri, and is read exactly as ي — [j] or the mater lectionis [iː]. ـ TATWEEL is the kashida, inserted to stretch a word for justification and carrying no sound, so it maps to the empty string: the deletion is now stated instead of accidental, the treatment ٱ ALEF WASLA already had. ہ HEH GOAL is deliberately NOT added — Unicode assigns it to Urdu, and it occurs in none of the Arabic gold. The alternates are listed as bare letters only; a keheh or farsi yeh carrying a harakat does not match the diacritised digraph keys and falls back to the bare letter plus the mark, which yields the same phonemes. VARIANT LETTER FORMS ھ ڪ ٲ. These are not borrowed consonants and carry no sound of their own: each is another way of writing a letter this spec already has, so each reads exactly what its base letter reads and no phone is introduced anywhere. Two facts, each cited. What the letters ARE: the Unicode names are normative and state the base letter outright — HEH DOACHASHMEE, SWASH KAF, ALEF WITH WAVY HAMZA ABOVE. That they occur this way in Arabic text, and unanimously: over the five transcript files of the phone-label pool, all 16 ‹ھ› tokens are ‹ه› words (ھل، تجاھل، اليھم), all 7 ‹ڪ› tokens are ‹ك› words (يمڪن، ڪتابي، لڪن), all 3 ‹ٲ› tokens are ‹أ› words (ٲعطاني، الٲساتذة). That second half is a DATASET citation and is weighed as one: it says these spellings occur, not that they are correct. The counts are small and the unanimity is what carries them. THESE READINGS MIRROR THEIR BASE LETTERS BY CONSTRUCTION and a test asserts it, so a later change to ‹ه›, ‹ك› or ‹أ› cannot leave the variant behind reading something the base no longer does. The letters keep their own, different values in the specs that use them as letters in their own right — kas, ckb, ur, ug and others — which is why this entry sits on the Arabic base node and not in those.",
   "sources": [
     {
       "id": "watson2002",
@@ -929,6 +938,15 @@
       "url": "https://www.unicode.org/charts/PDF/U0600.pdf",
       "pages": null,
       "notes": "Read (chart PDF). U+06A9 KEHEH is annotated '= kaf mashkula' and assigned to 'Persian, Urdu, Sindhi, ...'; U+06CC FARSI YEH is assigned to 'Arabic, Persian, Urdu, Kashmiri, ...'; U+0640 TATWEEL is '= kashida', 'inserted to stretch characters or to carry tashkil with no base letter'; U+06C1 HEH GOAL is assigned to Urdu only."
+    },
+    {
+      "id": "phoonnx_pool_2026_09",
+      "author": "TigreGotico phone-label pool (dataset, not literature)",
+      "year": 2026,
+      "title": "Arabic transcript pool for the aligner phone labels, five sources",
+      "publisher": "Internal dataset; casablanca, omniasr, cv_ar, sada and lahgtna transcripts",
+      "pages": "counted 2026-09-17 over 159,638 rows",
+      "notes": "A DATASET CITATION, weighed differently from a source: it records what spellings occur, never what they ought to be. Counted over the five named transcript files by sha256 (casablanca-pool-text 91c14879, omniasr-pool-text 31ad39c2, cv_ar-pool-text 93c66122, sada-pool-text da0d77cb, lahgtna-voted-text 9267e43d). ‹ھ› occurs in 16 tokens, 16 distinct, and EVERY ONE is a ‹ه› word: ھل، تجاھل، الاستفھام، اليھم، نسيانھم، مذھولین، زاھد. ‹ڪ› occurs in 7 tokens, 6 distinct, and every one is a ‹ك› word: يمڪن، ڪتابي، ويڪون، لڪن، وڪأنه، بيناتڪم. ‹ٲ› occurs in 3 tokens and every one is an ‹أ› word: ٲعطاني، الٲساتذة، ٲرجعها. The counts are small; the unanimity is the evidence, not the volume."
     }
   ],
   "wikipedia": [

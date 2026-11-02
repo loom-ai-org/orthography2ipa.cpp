@@ -1,0 +1,22 @@
+{
+ "code": "ar-SA-x-janubi",
+ "name": "Janūbi Arabic (southern Saudi)",
+ "script": "Arabic",
+ "script_type": "abjad",
+ "parent": "ar-x-peninsular",
+ "graphemes_base": "ar-x-peninsular",
+ "graphemes": {},
+ "allophones_base": "ar-x-peninsular",
+ "allophones": {},
+ "quality": "stub",
+ "ancestors": [
+  {
+   "code": "ar-x-peninsular",
+   "role": "parent",
+   "weight": 0.9,
+   "notes": "Inherited placeholder table; see notes on ar-SA-x-janubi."
+  }
+ ],
+ "notes": "Southern Saudi Arabia, the label used in the SADA corpus. ATTESTED AS A LABEL, NOT AS A LANGUOID. No source describes a 'Janūbi' variety as a unit: the literature describes named villages of ʿAsīr and the Tihāma that disagree with each other at village-to-village distance, and the region's described varieties already have their own specs (ar-SA-x-rijal-alma, ar-SA-x-tihama-qahtan). The parent is the peninsular proto-node rather than either of those, because choosing one would assert a grouping no source supports. The entry exists so the corpus label resolves; it is not a claim that the variety is uniform.",
+ "sources": []
+}

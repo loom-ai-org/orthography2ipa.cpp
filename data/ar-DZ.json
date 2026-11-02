@@ -93,6 +93,12 @@
     "وِالظظ": [
       "widˤdˤ",
       "wizˤzˤ"
+    ],
+    "ڨ": [
+      "ɡ"
+    ],
+    "ڭ": [
+      "ɡ"
     ]
   },
   "allophones_base": "ar-x-maghrebi",
@@ -167,7 +173,7 @@
       "notes": "French adstrate (1830–1962): /p/, /v/ phonemes, heavy loanword influence"
     }
   ],
-  "notes": "Algerian Arabic (Dziriya; ISO 639-3 arq), Algiers (al-ʿĀṣima) urban baseline. Sedentary pre-Hilalian phonology of the old city, with the Bedouin/rural layer diffusing in. INTERDENTALS MERGED to stops in Algiers: ث → /t/, ذ → /d/, ظ/ض → /dˤ/ (θalāθa → tlaːta) — Boucherit 2002; Marçais 1902 (Tlemcen); the isogloss against Tunis, which retains /θ ð ðˤ/. QĀF ق → /q/ in old-urban Algiers, with the Bedouin/rural variant /ɡ/ current across the country (dual /q ~ ɡ/) — Boucherit 2002; Grand'Henry 1972 (Cherchell). ǦĪM ج → /ʒ/ (voiced postalveolar fricative, sedentary Maghrebi; Watson 2002 p.16); the pre-Hilalian Algiers affricate /dʒ/ survives as the secondary candidate (Boucherit 2002; Marçais 1902). HEAVY SYNCOPE: short /a i u/ reduce to schwa [ə] or ∅ in weak positions, licensing initial consonant clusters (ktaːb, tlaːta) — the defining Maghrebi trait, reinforced by the Berber (Amazigh) substrate; Boucherit 2002; Marçais 1902. NO strong imāla — long /aː/ keeps its back quality (ktaːb, not the Tunis ktɛːb). Emphasis spreads, backing /a aː/ to [ɑ ɑː] near emphatics (inherited layer; Watson 2002). TĀʾ MARBŪṬA: /-a/ in pause, /-at/ in the construct (inherited pausal handling; Boucherit 2002). French adstrate is the deepest of the Maghrebi dialects (130+ years): /p/ /v/ phonemes and heavy loan integration.",
+  "notes": "Algerian Arabic (Dziriya; ISO 639-3 arq), Algiers (al-ʿĀṣima) urban baseline. Sedentary pre-Hilalian phonology of the old city, with the Bedouin/rural layer diffusing in. INTERDENTALS MERGED to stops in Algiers: ث → /t/, ذ → /d/, ظ/ض → /dˤ/ (θalāθa → tlaːta) — Boucherit 2002; Marçais 1902 (Tlemcen); the isogloss against Tunis, which retains /θ ð ðˤ/. QĀF ق → /q/ in old-urban Algiers, with the Bedouin/rural variant /ɡ/ current across the country (dual /q ~ ɡ/) — Boucherit 2002; Grand'Henry 1972 (Cherchell). ǦĪM ج → /ʒ/ (voiced postalveolar fricative, sedentary Maghrebi; Watson 2002 p.16); the pre-Hilalian Algiers affricate /dʒ/ survives as the secondary candidate (Boucherit 2002; Marçais 1902). HEAVY SYNCOPE: short /a i u/ reduce to schwa [ə] or ∅ in weak positions, licensing initial consonant clusters (ktaːb, tlaːta) — the defining Maghrebi trait, reinforced by the Berber (Amazigh) substrate; Boucherit 2002; Marçais 1902. NO strong imāla — long /aː/ keeps its back quality (ktaːb, not the Tunis ktɛːb). Emphasis spreads, backing /a aː/ to [ɑ ɑː] near emphatics (inherited layer; Watson 2002). TĀʾ MARBŪṬA: /-a/ in pause, /-at/ in the construct (inherited pausal handling; Boucherit 2002). French adstrate is the deepest of the Maghrebi dialects (130+ years): /p/ /v/ phonemes and heavy loan integration. LOAN GRAPHEME ڨ. Two facts, each cited, neither inferred from the other. What the letter is: U+06A8 ARABIC LETTER QAF WITH THREE DOTS ABOVE, a qāf-derived character written for [ɡ] — Saadane & Habash 2015 §4.1 p.70 lists it among the realisations of the MSA ‹ق› consonant as 'palatal sound \"ڨ\" [g]' and states it for Algerian, Moroccan and Tunisian alike; the Unicode code chart annotates the character 'Tunisian Arabic' but names no sound, which is why the annotation alone would not license this. That this variety has the sound: /ɡ/ is already in this spec's inventory as its ‹ق› reflex, so no phone is introduced. The reading is the sound the letter writes in a spec that already has it. CODA prescribes the cognate ‹ق› for /g/ here (Zribi et al. 2014), so this key reads a spelling that occurs without endorsing it. LOAN GRAPHEME ڭ. Read [ɡ] on Algerian evidence, and that evidence is MIXED in a way the Moroccan is not. Measured over 297 Algerian-labelled rows of the judged tree at /root/speech/data-lane/trees-units/judged/lahgtna, label field `dialect`: 391 occurrences over roughly 300 distinct forms, a long tail rather than a paradigm — the twenty commonest forms cover only about a quarter of tokens. Counted 2026-09-17, independently by two lanes. TWO POPULATIONS ARE MIXED HERE. Qāf reflexes: ڭاع (قاع), ڭالو (قالو), and the حُڭْرة / محڭورة / يحڭروك family. And French loanwords carrying a /ɡ/ that never was a qāf: ڭروب (groupe), ڭارديو and نڭارديو (regarder), الڭاطو (gâteau), ڭاراج (garage), دروڭ, بلوڭلي. Both read [ɡ], so one mapping serves — but the licence is that this letter writes /ɡ/ in Algerian whatever its origin, NOT that it stands for a reflex of ‹ق›, which is only half of what the rows show. Position does not restrict it: medial 250, initial 114, final 27, counted over each word's Arabic letters so that vowel marks cannot make an initial letter look medial. /ɡ/ is already this spec's inventory, so no phone is introduced. THE SHAPE OF THE LIST CARRIES WHAT THE TOTAL CANNOT: 387 tokens over roughly 300 forms with the twenty commonest covering about 23% is a long tail, which is what borrowed vocabulary looks like, against the tight paradigm the Moroccan list shows. A count alone cannot tell those apart and they mean opposite things. COUNTING CONVENTION, so these Algerian figures are reproducible from a rule rather than from whichever tokeniser ran: forms are counted as written, with diacritics attached, so ڭاع and ڭاعْ and ڭَاعْ are three forms of one word and are listed apart. It matters here: 387 Algerian tokens give 292 distinct forms as written and 260 with diacritics stripped, and ڭاع rises from 22 to 36 once its variants are folded in. Two lanes measured this independently and differed only on that choice.",
   "quality": "research",
   "script_type": "abjad",
   "sources": [
@@ -231,6 +237,25 @@
       "url": null,
       "pages": null,
       "notes": null
+    },
+    {
+      "id": "saadane_habash2015",
+      "author": "Saadane, H. & Habash, N.",
+      "year": 2015,
+      "title": "A Conventional Orthography for Algerian Arabic",
+      "publisher": "Proceedings of the Second Workshop on Arabic Natural Language Processing, Beijing (ACL W15-3208)",
+      "url": "https://aclanthology.org/W15-3208/",
+      "pages": "§4.1 Phonological Variations, p.70",
+      "notes": "The source that pairs the LETTER with the sound, which the Unicode annotation does not. §4.1 lists the realisations of the consonant equivalent to MSA ‹ق› and gives one of them as: 'palatal sound \"ڨ\" [g]: this sound is also used in both Moroccan and Tunisian dialects in addition to the ALG one. In Algeria, this sound is used in some cities like Annaba and Sétif, in addition to the Bedouin dialects where this sound is widely employed.' So ‹ڨ› is a qāf-derived letter written for [ɡ], stated for Algerian, Moroccan and Tunisian. SCOPE: 'palatal' is the paper's word for a velar stop, and the paper names no variety outside the Maghreb — it is not a source for ‹ڨ› in Saudi, Gulf or Egyptian writing. Note also that CODA itself prescribes the cognate ‹ق› for /g/ in Tunisian (Zribi et al. 2014, 'The letter ق q is used to represent the two consonants /q/ and /g/'), so this letter is a spelling that OCCURS, not one CODA endorses."
+    },
+    {
+      "id": "lahgtna_judged_2026_09",
+      "author": "TigreGotico lahgtna judged tree (dataset, not literature)",
+      "year": 2026,
+      "title": "Dialect-labelled Arabic transcripts, judged tree",
+      "publisher": "Internal dataset, /root/speech/data-lane/trees-units/judged/lahgtna (305 shards, 608,124 rows), label field `dialect`",
+      "pages": "counted 2026-09-17 by the data lane",
+      "notes": "A DATASET CITATION and weighed as one: it records which spellings occur and how often, never which are correct, and it cannot be checked from outside this organisation — so the lane that ran it is named. UNITS ARE STATED because rows and occurrences differ by about 1.8x here and have already been confused once. ‹ڭ› U+06AD: 1,925 rows / 3,250 occurrences overall; Moroccan 1,551 rows / 2,742 occurrences, Algerian 297 / 391, Tunisian 54 / 80. ‹ݣ› U+0763, same tree and date: 2,031 rows / 3,437 occurrences; Moroccan 1,717 / 3,042, Algerian 260 / 328, Tunisian 48 / 61. ‹ڨ› U+06A8 by contrast is Algerian-dominant: 24,511 Algerian rows against 37 Moroccan. The twenty most frequent Moroccan ‹ڭ› forms are ڭال 171, ڭلت 166, نڭول 115, ڭاع 101, كنڭول 77, ڭالت 70, كتڭول 41, ڭول 37, كيڭول 37, ڭَالْ 34, تڭول 32, ڭالي 31, ڭُلْتْ 29, كانڭول 29, ڭالْ 24, ڭُلتْ 22, ڭاليا 19, كيتڭال 18, نڭلس 18, ڭولي 17 — every one a qāf word (قال، قلت، نقول، قاع، كنقول), with no mixture and no residue. CAVEAT: counts are over the judged tree as it stands with no gates applied, so they describe what the corpus holds rather than what a pool would take."
     }
   ],
   "wikipedia": [
