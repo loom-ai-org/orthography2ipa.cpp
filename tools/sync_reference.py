@@ -10,7 +10,10 @@ a pinned reference release, and this script is the only way they move. It
   2. replaces data/*.json with the wheel's specs (removed specs are deleted);
   3. writes the pin to tests/reference_version.txt;
   4. re-runs the tests/gen_*.py table generators against that same wheel, so
-     the transcribed registry, type, script and transform tables match it.
+     the transcribed registry, type, script and transform tables match it;
+  5. pins the reference checkout in .github/workflows/ci.yml to the commit
+     that the reference repository tags as VERSION, so CI compares against
+     the same release.
 
 The generators import the reference package, so run this script with a Python
 that has the reference's dependencies installed (for example a virtual
@@ -30,6 +33,7 @@ import hashlib
 import json
 import os
 import pathlib
+import re
 import shutil
 import subprocess
 import sys
@@ -41,6 +45,8 @@ PACKAGE = "orthography2ipa"
 CPP_ROOT = pathlib.Path(__file__).resolve().parent.parent
 DATA = CPP_ROOT / "data"
 PIN = CPP_ROOT / "tests" / "reference_version.txt"
+CI = CPP_ROOT / ".github" / "workflows" / "ci.yml"
+REFERENCE_REPO = "TigreGotico/orthography2ipa"
 GENERATORS = (
     "gen_registry_tables.py",
     "gen_types_tables.py",
@@ -107,6 +113,20 @@ def sync_specs(source: pathlib.Path) -> None:
         print(f"  added   {name}")
 
 
+def pin_ci(version: str) -> None:
+    """Point the CI reference checkout at the commit tagged *version*."""
+    url = f"https://api.github.com/repos/{REFERENCE_REPO}/commits/{version}"
+    with urllib.request.urlopen(url, timeout=60) as response:
+        sha = json.load(response)["sha"]
+    text = CI.read_text(encoding="utf-8")
+    pattern = rf"(repository: {re.escape(REFERENCE_REPO)}\n\s+ref: )[0-9a-f]{{40}}"
+    pinned, count = re.subn(pattern, rf"\g<1>{sha}", text)
+    if count != 1:
+        sys.exit(f"{CI.relative_to(CPP_ROOT)}: expected one {REFERENCE_REPO} checkout, found {count}")
+    CI.write_text(pinned, encoding="utf-8")
+    print(f"pinned {CI.relative_to(CPP_ROOT)}: {REFERENCE_REPO}@{sha}")
+
+
 def run_generators(reference: pathlib.Path, python: str, langcodes: bool) -> None:
     env = dict(os.environ, O2I_PYTHON_ROOT=str(reference))
     names = GENERATORS + (("gen_langcodes_tables.py",) if langcodes else ())
@@ -140,6 +160,7 @@ def main() -> None:
         PIN.write_text(f"{PACKAGE}=={version}\n", encoding="utf-8")
         run_generators(reference, args.python, args.langcodes)
     print(f"pinned {PIN.relative_to(CPP_ROOT)}: {PACKAGE}=={version}")
+    pin_ci(version)
 
 
 if __name__ == "__main__":
