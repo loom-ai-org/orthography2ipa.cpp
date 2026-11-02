@@ -11,7 +11,8 @@ The C++ side runs as a driver binary (one JSON line per spec, built from
 ``src/inventory.cpp`` + ``tests/_scratch/inventory_catalog_driver.cpp`` against
 the library); the reference side runs in this process. That is why this file
 must be run with the interpreter that can import the reference
-(``/home/flavio/.venvs/piper/bin/python3``), from a path that resolves the
+(the interpreter that runs this harness must have the reference's
+requirements — numpy included), from a path that resolves the
 reference package — never a copy in ``/tmp``, which would import the
 pip-installed copy and invent diffs.
 
