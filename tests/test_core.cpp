@@ -46,9 +46,23 @@ int main() {
 
     G2P engine("pt");
     assert(!engine.transcribe_detailed("olá").words.empty());
-    assert(!engine.lattice("casa").empty());
     assert(!engine.features("casa").empty());
+    // g2p.py ipa_lattice: one slot per grapheme, ranked candidates, spans in
+    // CODE POINTS, and the top-of-slot concatenation is a valid reading.
+    const auto slots = engine.ipa_lattice("casa");
+    assert(!slots.empty());
+    for (const auto& slot : slots) {
+        assert(!slot.candidates.empty());
+        assert(slot.span.second > slot.span.first);
+        assert(slot.candidates.front().score <= slot.candidates.back().score);
+    }
+    assert(!engine.word_candidates("casa").empty());
     assert(engine.word_confidence("casa") > 0);
+    // ConfidenceBreakdown: value == lattice × coverage, per-slot read present.
+    const auto breakdown = engine.confidence_breakdown("casa");
+    assert(breakdown.per_slot.size() == slots.size());
+    assert(breakdown.coverage == 1.0 && breakdown.unmapped.empty());
+    assert(std::abs(breakdown.value - breakdown.lattice * breakdown.coverage) < 1e-12);
 
     bool missing_plugin = false;
     try { G2P missing("pt", {{"normalize", {"not-installed"}}}); missing.transcribe("casa"); }

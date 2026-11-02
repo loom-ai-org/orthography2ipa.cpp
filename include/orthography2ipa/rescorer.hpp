@@ -17,18 +17,9 @@
 
 namespace orthography2ipa::rescorer {
 
-// phonetok.py SegmentSlot: one position in the structured pronunciation
-// lattice — a single GRAPHEME token with its ranked IPA options, best
-// (lowest cost) first. An EMPTY candidates list marks a slot a rescorer
-// deleted (it contributes no segment to any beam path).
-struct SegmentSlot {
-    std::string grapheme;
-    std::pair<std::size_t, std::size_t> span{0, 0};
-    std::vector<Candidate> candidates;
-
-    /// The best (lowest-cost) candidate; callers must check emptiness.
-    const Candidate& top() const { return candidates.front(); }
-};
+// phonetok.py SegmentSlot is declared in orthography2ipa/phonetok.hpp (the
+// token model owns the slot dataclass); it is in scope here as
+// rescorer::SegmentSlot.
 
 // rescorer.py RescoreContext: everything a LatticeRescorer sees about one
 // slot's context. All neighbour views describe the lattice AS RESOLVED
@@ -92,6 +83,28 @@ std::vector<SegmentSlot> apply_rescorers(
     const std::vector<const LatticeRescorer*>& rescorers,
     const std::vector<std::size_t>* syll_for_token = nullptr,
     std::optional<long long> stressed_syll_idx = std::nullopt);
+
+/// rescorer.py `RescorerArg = Union[None, LatticeRescorer,
+/// Iterable[LatticeRescorer]]` — the public `rescorer=` argument of
+/// PhonetokTokenizer.ipa_beam/ipa_lattice and of G2P. The three Python forms
+/// are the three implicit conversions here.
+struct RescorerArg {
+    RescorerArg() = default;                                     // None
+    RescorerArg(std::nullptr_t) {}                                // None
+    RescorerArg(const LatticeRescorer* one) : items{one} {}       // one
+    RescorerArg(const std::vector<const LatticeRescorer*>& many)  // iterable
+        : items(many) {}
+    std::vector<const LatticeRescorer*> items;
+};
+
+/// rescorer.py normalize_rescorers: coerce the public `rescorer=` argument to
+/// an ordered collection. nullptr yields the EMPTY collection — the
+/// byte-identical default path — one rescorer yields a one-element collection,
+/// and a collection keeps iteration order (duplicates included). A null entry
+/// raises std::invalid_argument where the reference raises TypeError.
+std::vector<const LatticeRescorer*> normalize_rescorers(const RescorerArg& rescorer);
+std::vector<const LatticeRescorer*> normalize_rescorers(
+        const std::vector<const LatticeRescorer*>& rescorers);
 
 // allophony.py SegmentContext: one segment's phonological neighbourhood
 // inside a word. Neighbours look across slot boundaries: the segment

@@ -360,8 +360,15 @@ std::vector<const char*> grapheme_positions(
     // 1. before_X (exact letter), then the front/back vowel class, then
     // the palatal consonant class (same class tier).
     if (next != nullptr) {
-        const std::string nc =
-            vowels::base_vowel_letter(next->grapheme().substr(0, 1));
+        // positional.py: `base_vowel_letter(next_ctx.grapheme[0])` — the FIRST
+        // CODE POINT (Python string indexing). The byte substr() this replaced
+        // handed base_vowel_letter half of 'ú', which no longer maps to 'u'
+        // and silently dropped the before_u/before_front positions (measured:
+        // ga `d'thuisiú`, the i before ú lost its silent before_u reading).
+        const std::u32string next_units = uni::to_utf32(next->grapheme());
+        const std::string nc = next_units.empty()
+            ? std::string()
+            : vowels::base_vowel_letter(uni::to_utf8(std::u32string(1, next_units.front())));
         if (const char* exact = before_exact(nc)) pos.push_back(exact);
         if (next->is_front()) pos.push_back("before_front_vowel");
         else if (next->is_back()) pos.push_back("before_back_vowel");
@@ -450,9 +457,13 @@ std::vector<const char*> grapheme_positions(
                     if (lower == uni::lower(uni::to_utf32(d))) return true;
                 return false;
             }();
+        // Same code-point rule: the trailing vowel axis digraph's LAST code
+        // point, otherwise the grapheme's FIRST code point (Python [0]/[-1]).
+        const std::u32string prev_units = uni::to_utf32(prev->grapheme());
         const std::string prev_trailing = trailing_axis
-            ? prev->grapheme().substr(prev->grapheme().size() - 1)
-            : prev->grapheme().substr(0, 1);
+            ? uni::to_utf8(std::u32string(1, prev_units.back()))
+            : (prev_units.empty() ? std::string()
+                                  : uni::to_utf8(std::u32string(1, prev_units.front())));
         const std::string pc = vowels::base_vowel_letter(prev_trailing);
         if (const char* exact = after_exact(pc)) pos.push_back(exact);
         if (trailing_axis && vowels::is_front_vowel(prev_trailing))

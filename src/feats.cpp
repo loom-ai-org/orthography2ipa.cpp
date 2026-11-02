@@ -176,13 +176,6 @@ std::vector<TriState> vectorize_phones(const std::string& phones) {
 
     const auto& table = phone_table();
 
-    // Fast path: a single symbol needs no merging. (Multi-byte UTF-8 safe:
-    // the tables are keyed by the same UTF-8 spellings the callers pass.)
-    if (table.count(key)) {
-        const FeatVec& vec = table.at(key);
-        return std::vector<TriState>(vec.v, vec.v + NUM_FEATURES);
-    }
-
     // Decode UTF-8 code points (Python iterates characters; the table keys
     // above are multi-byte but single-character spellings).
     std::vector<std::string> chars;
@@ -193,10 +186,19 @@ std::vector<TriState> vectorize_phones(const std::string& phones) {
         i += n;
     }
 
-    // Fast path: a single symbol needs no merging -- a lone modifier is
-    // unrecognized on this path, exactly as the Python len(phones) == 1
-    // lookup that raises before modifiers are consulted.
-    if (chars.size() == 1) return {};
+    // feats.py:498 `if len(phones) == 1: return phone_features[phones]` —
+    // the whole-spelling table lookup happens ONLY for a single character. A
+    // multi-code-point key ("tsʼ", "tʃʼ", "ᵐb", "ᵑɡ") is NOT a lookup: the
+    // reference always merges that spelling's base characters, and a base it
+    // does not know ("ᵐ") raises, which vectorize_phones reports as the empty
+    // (unknown) vector. Consulting the table for those four keys silently
+    // returned a curated row the reference never reaches.
+    if (chars.size() == 1) {
+        const auto row = table.find(key);
+        if (row == table.end()) return {};
+        const FeatVec& vec = row->second;
+        return std::vector<TriState>(vec.v, vec.v + NUM_FEATURES);
+    }
 
     // Composite: merge the base phones' vectors per feature with
     // TRUE > FALSE > UNKNOWN dominance, then layer the modifiers on top.
@@ -227,6 +229,155 @@ std::vector<TriState> vectorize_phones(const std::string& phones) {
 
 bool is_known_phone(const std::string& phones) {
     return !vectorize_phones(phones).empty();
+}
+
+} // namespace orthography2ipa::feats
+
+// ---------------------------------------------------------------------------
+// feats.py's distance-and-classification layer, and the deprecated lm.py
+// aliases. Appended block; the tables above are the reference's own
+// (feats.py:348-456), transcribed with the reference's exact decimal literals.
+// ---------------------------------------------------------------------------
+#include "orthography2ipa/lm.hpp"
+
+namespace orthography2ipa::feats {
+namespace {
+
+/// feats.py:452-453 — `sum(feature_weights[i] for i in <the index set>)`.
+/// Ascending index order, so the running float total matches Python's bit for
+/// bit; the sums are memoised like the module-level constants are.
+double sum_weights(const std::vector<std::size_t>& indices,
+                   const std::vector<double>& weights) {
+    double total = 0.0;
+    for (const std::size_t idx : indices) total += weights[idx];
+    return total;
+}
+
+} // namespace
+
+const std::vector<std::size_t>& vowel_features() {
+    static const std::vector<std::size_t> indices{0, 1, 3, 8, 14, 15, 16, 17, 18, 19, 20, 22};
+    return indices;
+}
+
+const std::vector<std::size_t>& consonant_features() {
+    static const std::vector<std::size_t> indices{1, 2, 3, 4, 5, 6, 7, 8, 10,
+                                                  11, 12, 13, 14, 15, 16, 17, 18, 19,
+                                                  21};
+    return indices;
+}
+
+const std::vector<double>& feature_weights() {
+    static const std::vector<double> weights{
+        0.13793103448275862,  // 0 syllabic          (major class)
+        0.13793103448275862,  // 1 sonorant          (major class)
+        0.13793103448275862,  // 2 consonantal       (major class)
+        0.06896551724137931,  // 3 continuant
+        0.03448275862068965,  // 4 delayed release
+        0.03448275862068965,  // 5 lateral
+        0.03448275862068965,  // 6 nasal
+        0.01724137931034483,  // 7 strident
+        0.01724137931034483,  // 8 voice
+        0.01724137931034483,  // 9 spread_glottis
+        0.01724137931034483,  // 10 constricted_glottis
+        0.03448275862068965,  // 11 anterior
+        0.03448275862068965,  // 12 coronal
+        0.01724137931034483,  // 13 distributed
+        0.03448275862068965,  // 14 labial
+        0.03448275862068965,  // 15 high
+        0.03448275862068965,  // 16 low
+        0.03448275862068965,  // 17 back
+        0.03448275862068965,  // 18 round
+        0.03448275862068965,  // 19 tense
+        0.01724137931034483,  // 20 long
+        0.01724137931034483,  // 21 click
+        0.01724137931034483,  // 22 nasal_vowel
+    };
+    return weights;
+}
+
+const std::vector<double>& standard_weights() {
+    static const std::vector<double> weights(NUM_FEATURES, 1.0 / NUM_FEATURES);
+    return weights;
+}
+
+const std::vector<double>& zero_weights() {
+    static const std::vector<double> weights(NUM_FEATURES, 0.0);
+    return weights;
+}
+
+double total_vowel_weight() {
+    static const double total = sum_weights(vowel_features(), feature_weights());
+    return total;
+}
+
+double total_consonant_weight() {
+    static const double total = sum_weights(consonant_features(), feature_weights());
+    return total;
+}
+
+TriState vowel_phone_flag(const std::string& phone) {
+    const std::vector<TriState> vec = vectorize_phones(phone);
+    if (vec.empty()) return FALSE;  // Python raises; is_vowel_phone returns False
+    return vec[0];
+}
+
+bool is_vowel_phone(const std::string& phone) {
+    return vowel_phone_flag(phone) == TRUE;
+}
+
+double phonetic_distance(const std::string& phone_a, const std::string& phone_b) {
+    // feats.py: a space is a phone that matches only itself.
+    if (phone_a == " " || phone_b == " ") return phone_a == phone_b ? 0.0 : 1.0;
+
+    // feats.py compares the raw feature[0] values with `!=`, where an
+    // undefined feature is None — different from both True and False, so a
+    // phone whose feature[0] is undefined is "a different class" from any
+    // definite phone and "the same class" as another undefined one (whose
+    // branch is then the consonant one, because `if vowel:` sees a falsy
+    // None).
+    const TriState vowel = vowel_phone_flag(phone_a);
+    if (vowel != vowel_phone_flag(phone_b)) return 1.0;
+
+    const std::vector<double>& weights = feature_weights();
+    const std::vector<std::size_t>* feature_indices;
+    double total_weights;
+    double factor;
+    if (vowel == TRUE) {
+        feature_indices = &vowel_features();
+        total_weights = total_vowel_weight();
+        factor = 1.0;
+    } else {
+        feature_indices = &consonant_features();
+        total_weights = total_consonant_weight();
+        factor = 2.0;
+    }
+
+    const std::vector<TriState> vec_a = vectorize_phones(phone_a);
+    const std::vector<TriState> vec_b = vectorize_phones(phone_b);
+    if (vec_a.empty() || vec_b.empty()) return 3.0;  // the caught ValueError
+
+    double diff_sum = 0.0;
+    for (const std::size_t idx : *feature_indices)
+        if (vec_a[idx] != vec_b[idx]) diff_sum += weights[idx];
+    return (diff_sum / total_weights) * factor;
+}
+
+std::map<std::string, std::vector<double>> phoneme_embeddings(const LanguageSpec& spec) {
+    // feats.py:606 is a deprecated alias: it warns and calls lm.py.
+    return lm::phoneme_embeddings(spec);
+}
+
+::orthography2ipa::lm::NgramLM build_ngram_lm(const std::vector<std::string>& words,
+                                              const LanguageSpec& spec, int n) {
+    // feats.py:618 is a deprecated alias: it warns and calls lm.py.
+    return ::orthography2ipa::lm::build_ngram_lm(words, spec, n);
+}
+
+double perplexity(const ::orthography2ipa::lm::NgramLM& lm,
+                  const std::vector<std::string>& test_words, const LanguageSpec& spec, int n) {
+    // feats.py:630 is a deprecated alias: it warns and calls lm.py.
+    return ::orthography2ipa::lm::perplexity(lm, test_words, spec, n);
 }
 
 } // namespace orthography2ipa::feats

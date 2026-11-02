@@ -16,14 +16,29 @@ add_library(orthography2ipa
     src/allophony.cpp
     src/beam.cpp
     src/codepoint_regex.cpp
+    src/conformance.cpp
+    src/exceptions.cpp
+    src/features.cpp
     src/feats.cpp
+    src/inventory.cpp
+    src/langcodes.cpp
+    src/lattice_per.cpp
+    src/lm.cpp
+    src/markup.cpp
     src/orthography2ipa.cpp
-    src/rescorer.cpp
     src/phonetok.cpp
+    src/registry.cpp
+    src/rescorer.cpp
     src/sandhi.cpp
+    src/schema.cpp
+    src/script_distance.cpp
+    src/sentence.cpp
     src/stress.cpp
+    src/syllabifiers.cpp
     src/tone.cpp
     src/transform.cpp
+    src/types.cpp
+    src/underspecification.cpp
     src/unicode_util.cpp
     src/vowels.cpp)
 target_include_directories(orthography2ipa PUBLIC
@@ -70,6 +85,16 @@ if(BUILD_TESTING)
     # (src/beam.hpp), which owns the positional.py port.
     target_include_directories(orthography2ipa-tests PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/src)
     add_test(NAME orthography2ipa-core COMMAND orthography2ipa-tests)
+
+    # ── parity-harness drivers ────────────────────────────────────────────────
+    # The per-module harnesses drive a small check binary instead of the CLI
+    # (a process per spec for 7662 specs is not workable through the CLI).
+    foreach(driver langcodes inventory lm_feats lattice_per features_conformance tables sentence)
+        add_executable(orthography2ipa-check-${driver} tests/check_${driver}_driver.cpp)
+        target_link_libraries(orthography2ipa-check-${driver} PRIVATE orthography2ipa)
+        # Several drivers reach the library's private beam/unicode headers.
+        target_include_directories(orthography2ipa-check-${driver} PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/src)
+    endforeach()
     configure_file(tests/install_check.cmake.in ${CMAKE_CURRENT_BINARY_DIR}/install_check.cmake @ONLY)
     add_test(NAME orthography2ipa-install COMMAND ${CMAKE_COMMAND} -P ${CMAKE_CURRENT_BINARY_DIR}/install_check.cmake)
     find_package(Python3 COMPONENTS Interpreter QUIET)
@@ -93,5 +118,81 @@ if(BUILD_TESTING)
                  COMMAND ${Python3_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/tests/tone_parity.py $<TARGET_FILE:orthography2ipa-cli>)
         add_test(NAME orthography2ipa-sentence-parity
                  COMMAND ${Python3_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/tests/sentence_parity.py $<TARGET_FILE:orthography2ipa-cli> --sweep)
+        # Section 8's intermediate gate over the six named languages: the
+        # required battery compares the INTERMEDIATES (tokens/beam/lattice/
+        # pre-rescore/stress/tone/word-candidates/confidence), not only the
+        # final strings, and fails loudly on a missing surface.
+        add_test(NAME orthography2ipa-reference-regression-required
+                 COMMAND ${Python3_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/tests/reference_regression.py
+                         $<TARGET_FILE:orthography2ipa-cli> --battery required --surface all)
+        # The registry resolution gate (section 7's last item): aliases, the
+        # bare/region defaults, the private-use case fold and nearest-language
+        # distance over the alias/catalog battery.
+        add_test(NAME orthography2ipa-registry-parity
+                 COMMAND ${Python3_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/tests/registry_parity.py
+                         $<TARGET_FILE:orthography2ipa-cli> --pairs 800)
+        # The langcodes engine behind the registry port: standardize_tag,
+        # tag_distance and the parse/maximize round-trips against the
+        # installed langcodes (CTest-sized battery; --full is a manual sweep).
+        add_test(NAME orthography2ipa-langcodes-parity
+                 COMMAND ${Python3_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/tests/langcodes_parity.py
+                         $<TARGET_FILE:orthography2ipa-check-langcodes>)
+        # The ten requirement categories (Arabic, abugidas, tone languages,
+        # combining marks, viramas, preposed vowels, geminates, clitics,
+        # multi-candidate allophony) over every surface; `LABELS: sweep`
+        # because it is the heavy battery.
+        add_test(NAME orthography2ipa-reference-regression-categories
+                 COMMAND ${Python3_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/tests/reference_regression.py
+                         $<TARGET_FILE:orthography2ipa-cli> --battery categories --surface all)
+        # Multi-word cases: the confirmed spine plus two-word and comma
+        # sentences from every sandhi spec.
+        add_test(NAME orthography2ipa-reference-regression-sentence
+                 COMMAND ${Python3_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/tests/reference_regression.py
+                         $<TARGET_FILE:orthography2ipa-cli> --battery sentence --surface sentence
+                         --surface detailed --surface tokens --surface beam)
+        # The catalog sweep (every spec's word_exceptions) stays a MANUAL step
+        # on purpose: `ctest -R sweep` or the direct harness command.
+        add_test(NAME orthography2ipa-reference-regression-sweep
+                 COMMAND ${Python3_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/tests/reference_regression.py
+                         $<TARGET_FILE:orthography2ipa-cli> --battery required --surface all --sweep)
+        set_tests_properties(orthography2ipa-reference-regression-sweep
+                             orthography2ipa-reference-regression-categories
+                             orthography2ipa-registry-parity
+                             PROPERTIES ENVIRONMENT "O2I_PYTHON_ROOT=${CMAKE_CURRENT_SOURCE_DIR}/../orthography2ipa")
+        # The three catalog-scale batteries are minutes-long: the sweep and the
+        # categories run every spec's word_exceptions across every surface, and
+        # the registry gate walks a mutation battery. CTest labels them `sweep`;
+        # they have generous timeouts so a plain ctest still runs them.
+        set_tests_properties(orthography2ipa-reference-regression-sweep
+                             PROPERTIES LABELS sweep TIMEOUT 14400)
+        set_tests_properties(orthography2ipa-reference-regression-categories
+                             PROPERTIES LABELS sweep TIMEOUT 10800)
+        set_tests_properties(orthography2ipa-registry-parity
+                             PROPERTIES TIMEOUT 3600)
+        set_tests_properties(orthography2ipa-reference-regression-required
+                             orthography2ipa-reference-regression-sentence
+                             orthography2ipa-registry-parity
+                             orthography2ipa-langcodes-parity
+                             PROPERTIES ENVIRONMENT "O2I_PYTHON_ROOT=${CMAKE_CURRENT_SOURCE_DIR}/../orthography2ipa")
+
+        # The module-level parity harnesses: each drives its own check binary.
+        add_test(NAME orthography2ipa-inventory-parity
+                 COMMAND ${Python3_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/tests/inventory_parity.py
+                         $<TARGET_FILE:orthography2ipa-check-inventory> --battery 60)
+        add_test(NAME orthography2ipa-lm-parity
+                 COMMAND ${Python3_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/tests/lm_parity.py
+                         $<TARGET_FILE:orthography2ipa-check-lm_feats>)
+        add_test(NAME orthography2ipa-lattice-per-parity
+                 COMMAND ${Python3_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/tests/lattice_per_parity.py
+                         $<TARGET_FILE:orthography2ipa-check-lattice_per>)
+        add_test(NAME orthography2ipa-features-conformance-parity
+                 COMMAND ${Python3_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/tests/features_conformance_parity.py
+                         $<TARGET_FILE:orthography2ipa-check-features_conformance>)
+        set_tests_properties(orthography2ipa-inventory-parity
+                             orthography2ipa-lm-parity
+                             orthography2ipa-lattice-per-parity
+                             orthography2ipa-features-conformance-parity
+                             PROPERTIES ENVIRONMENT "O2I_PYTHON_ROOT=${CMAKE_CURRENT_SOURCE_DIR}/../orthography2ipa"
+                                        TIMEOUT 3600)
     endif()
 endif()

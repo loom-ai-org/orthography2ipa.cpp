@@ -97,6 +97,15 @@ std::vector<Branch> resolve_branches(
     const std::optional<std::string>& syllable = std::nullopt,
     std::optional<bool> syllable_final = std::nullopt);
 
+// positional.py normalize_ending_value: one grammatical_endings value ->
+// (rank1, alts). A string is one realisation; a list whose FIRST element is
+// null defers rank 1 to the grapheme tables and adds only the remaining
+// elements as lower-ranked candidates. (src/beam.cpp defines it; declared here
+// so inventory.cpp reads the same ending values the beam does.)
+void normalize_ending_value(const std::vector<std::optional<std::string>>& value,
+                            std::optional<std::string>& rank1,
+                            std::vector<std::string>& alternatives);
+
 // positional.py GrammaticalEnding: a matched grammatical_endings entry,
 // in token terms. *tokens* counts the trailing grapheme tokens the match
 // covers — the ending itself plus the transparent grammatical suffix

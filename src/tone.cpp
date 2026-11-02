@@ -1,4 +1,7 @@
 #include "orthography2ipa/orthography2ipa.hpp"
+// After it, per the include-order rule: tone.hpp declares the public Rime /
+// syllable-tone readers over the complete ToneData.
+#include "orthography2ipa/tone.hpp"
 #include "orthography2ipa/vowels.hpp"
 #include "unicode_util.hpp"
 
@@ -39,11 +42,9 @@ bool is_nucleus(const std::string& seg) {
 // no coda and its nucleus is short. Length is read off the IPA length
 // mark, so it is a property of the transcription rather than of the
 // spelling. std::nullopt when the syllable has no nucleus at all.
-struct Rime {
-    std::size_t nucleus_end = 0;
-    bool long_vowel = false;
-    bool dead = false;
-};
+// (Declared in tone.hpp: the `tone` debug surface reads these intermediates.)
+} // namespace (anonymous) — the rime/tone readings are public
+
 std::optional<Rime> rime(const std::string& ipa, const std::vector<std::string>& atoms,
                          const std::vector<std::string>& dead_codas) {
     const std::vector<std::string> segs = segment_ipa(ipa, atoms);
@@ -56,12 +57,20 @@ std::optional<Rime> rime(const std::string& ipa, const std::vector<std::string>&
     if (i == segs.size()) return std::nullopt;
     std::size_t j = i;
     while (j < segs.size() && vowel_start(segs[j])) ++j;
-    std::string nucleus, coda, before;
-    for (std::size_t k = 0; k < j; ++k) nucleus += segs[k];
+    std::string nucleus, coda;
+    for (std::size_t k = i; k < j; ++k) nucleus += segs[k];
     for (std::size_t k = j; k < segs.size(); ++k) coda += segs[k];
-    for (std::size_t k = 0; k < i; ++k) before += segs[k];
     Rime out;
-    out.nucleus_end = to_utf32(before).size() + to_utf32(nucleus).size();
+    // tone.py: `len("".join(segs[:j]))` — the offset just past the nucleus,
+    // measured over CODE POINTS the way Python measures string length. (The
+    // version here built `nucleus` from segs[0..j), so the onset was counted
+    // twice and the offset came out one rune too long: measured, th เก
+    // reported 4 instead of 3.)
+    {
+        std::string onset_and_nucleus;
+        for (std::size_t k = 0; k < j; ++k) onset_and_nucleus += segs[k];
+        out.nucleus_end = to_utf32(onset_and_nucleus).size();
+    }
     out.long_vowel = nucleus.find("\xcb\x90") != std::string::npos;  // ː
     if (!coda.empty()) {
         out.dead = false;
@@ -73,22 +82,24 @@ std::optional<Rime> rime(const std::string& ipa, const std::vector<std::string>&
     return out;
 }
 
-// tone.py _syllable_tone: the tone letter one syllable's spelling calls
-// for, or "".
-std::string syllable_tone(const std::vector<std::string>& graphemes,
-                          const std::string& ipa, const ToneData& rules,
-                          const std::vector<std::string>& atoms) {
-    std::string cls;
+// tone.py _syllable_tone's first step: the initial-consonant CLASS, taken
+// from the first grapheme whose first mapped character declares one (the
+// reference scans characters in order and keeps the first hit).
+std::string syllable_class(const std::vector<std::string>& graphemes,
+                           const ToneData& rules) {
     for (const auto& grapheme : graphemes) {
         for (const char32_t ch : to_utf32(grapheme)) {
             const auto it = rules.classes.find(to_utf8(std::u32string(1, ch)));
-            if (it != rules.classes.end()) { cls = it->second; break; }
+            if (it != rules.classes.end()) return it->second;
         }
-        if (!cls.empty()) break;
     }
-    if (cls.empty()) return "";
-    const auto by_shape = rules.table.find(cls);
-    if (by_shape == rules.table.end()) return "";
+    return "";
+}
+
+// tone.py _syllable_tone's second step: the tone MARK the spelling carries,
+// which is the spec's `no_mark` when nothing in the syllable is marked.
+std::string syllable_mark(const std::vector<std::string>& graphemes,
+                          const ToneData& rules) {
     std::string mark = rules.no_mark;
     for (const auto& grapheme : graphemes) {
         for (const char32_t ch : to_utf32(grapheme)) {
@@ -96,6 +107,19 @@ std::string syllable_tone(const std::vector<std::string>& graphemes,
             if (it != rules.marks.end()) mark = it->second;
         }
     }
+    return mark;
+}
+
+// tone.py _syllable_tone: the tone letter one syllable's spelling calls
+// for, or "" (declared in tone.hpp).
+std::string syllable_tone(const std::vector<std::string>& graphemes,
+                          const std::string& ipa, const ToneData& rules,
+                          const std::vector<std::string>& atoms) {
+    const std::string cls = syllable_class(graphemes, rules);
+    if (cls.empty()) return "";
+    const auto by_shape = rules.table.find(cls);
+    if (by_shape == rules.table.end()) return "";
+    const std::string mark = syllable_mark(graphemes, rules);
     const std::optional<Rime> shape = rime(ipa, atoms, rules.dead_codas);
     if (!shape.has_value()) return "";
     const std::string shape_name = shape->dead
@@ -115,7 +139,6 @@ std::string syllable_tone(const std::vector<std::string>& graphemes,
     return tone == rules.tones.end() ? std::string{} : tone->second;
 }
 
-} // namespace
 
 // tone.py _syllable_slots: group slot indices into syllables by maximal
 // onset over SLOTS. A slot whose IPA holds a vocoid is a nucleus. Of the

@@ -32,3 +32,93 @@ std::vector<TriState> vectorize_phones(const std::string& phones);
 bool is_known_phone(const std::string& phones);
 
 } // namespace orthography2ipa::feats
+
+// ---------------------------------------------------------------------------
+// feats.py's distance-and-classification layer, and the deprecated aliases of
+// the lm.py trio (feats.py:606, :618, :630).
+//
+// They sit in a second `namespace orthography2ipa::feats` block at the end of
+// the header because they need <map> and the lm::NgramLM / LanguageSpec names,
+// and an #include cannot live inside a namespace. As with every other header
+// here, include this one at GLOBAL scope (a `#include` from inside a reopened
+// `namespace orthography2ipa { ... }` nests these blocks one level too deep).
+// ---------------------------------------------------------------------------
+#include <map>
+
+namespace orthography2ipa { struct LanguageSpec; }
+namespace orthography2ipa { namespace lm { struct NgramLM; } }
+
+namespace orthography2ipa::feats {
+
+/// feats.py vowel_features (feats.py:348): the feature indices that score a
+/// VOWEL pair. Ascending — which is also the order CPython iterates that set
+/// (small ints hash to their own slot), hence the order of the reference's
+/// weighted `sum`, whose running float total is bit-reproducible.
+const std::vector<std::size_t>& vowel_features();
+
+/// feats.py consonant_features (feats.py:363): the indices that score a
+/// CONSONANT pair, ascending as above.
+const std::vector<std::size_t>& consonant_features();
+
+/// feats.py feature_weights (feats.py:426): the hand-tuned weight of each
+/// feature index — major-class features weigh most.
+const std::vector<double>& feature_weights();
+
+/// feats.py standard_weights (feats.py:455): 1 / NUM_FEATURES per index.
+const std::vector<double>& standard_weights();
+
+/// feats.py zero_weights (feats.py:456): 0.0 per index.
+const std::vector<double>& zero_weights();
+
+/// feats.py total_vowel_weight / total_consonant_weight (feats.py:452-453):
+/// the divisor of each class's distance, summed over the two index sets above
+/// in that same order.
+double total_vowel_weight();
+double total_consonant_weight();
+
+/// feats.py is_vowel_phone (feats.py:543) as Python actually returns it: the
+/// phone's feature[0], i.e. TRUE/FALSE, or UNKNOWN where the reference hands
+/// back `None` — a composite of diacritics alone ("ːʲ") has no defined
+/// feature[0]. An unrecognized phone is FALSE, matching the reference's
+/// `except (ValueError, KeyError, IndexError): return False`.
+TriState vowel_phone_flag(const std::string& phone);
+
+/// feats.py is_vowel_phone, as its declared `bool`: whether the phone's
+/// feature[0] is True. Python's callers see the same truthiness, because its
+/// `None` is as falsy as FALSE. `phonetic_distance` needs the tri-state form:
+/// the reference compares feature[0] with `!=`, where None differs from both
+/// True and False.
+bool is_vowel_phone(const std::string& phone);
+
+/// feats.py phonetic_distance (feats.py:557): the weighted Hamming distance
+/// over the feature subset relevant to the phones' class, divided by that
+/// subset's total weight. The bounds the reference can return:
+///   0.0 or 1.0  a space (' ') is a phone that matches only itself;
+///   1.0         vowel against consonant — the two subsets are not
+///               commensurable, so nothing finer is meaningful across the
+///               class boundary (and a phone with an undefined feature[0]
+///               counts as differing from both classes, as None does);
+///   [0, 1]      a vowel pair, over vowel_features;
+///   [0, 2]      a consonant pair, over consonant_features and scaled by the
+///               x2 consonant factor;
+///   3.0         either phone is not in the feature table (the ValueError
+///               vectorize_phones raises, caught here as in the reference).
+double phonetic_distance(const std::string& phone_a, const std::string& phone_b);
+
+/// feats.py phoneme_embeddings (feats.py:606): the deprecated alias of
+/// orthography2ipa::lm::phoneme_embeddings, which holds the implementation
+/// (lm.py:24). Include orthography2ipa/lm.hpp for the returned map's type.
+std::map<std::string, std::vector<double>> phoneme_embeddings(const LanguageSpec& spec);
+
+/// feats.py build_ngram_lm (feats.py:618): the deprecated alias of
+/// orthography2ipa::lm::build_ngram_lm (lm.py:51).
+::orthography2ipa::lm::NgramLM build_ngram_lm(const std::vector<std::string>& words,
+                                              const LanguageSpec& spec, int n = 3);
+
+/// feats.py perplexity (feats.py:630): the deprecated alias of
+/// orthography2ipa::lm::perplexity (lm.py:81).
+double perplexity(const ::orthography2ipa::lm::NgramLM& lm,
+                  const std::vector<std::string>& test_words, const LanguageSpec& spec,
+                  int n = 3);
+
+} // namespace orthography2ipa::feats

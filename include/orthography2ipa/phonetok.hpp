@@ -23,6 +23,36 @@ namespace orthography2ipa {
 struct LanguageSpec;
 namespace rescorer { class LatticeRescorer; }
 
+/// phonetok.py Candidate: one ranked IPA option for a lattice slot, `cost`
+/// being its additive -log P (or rank cost for a spec without weights).
+struct Candidate {
+    std::string ipa;
+    double score{};
+    bool operator==(const Candidate& other) const { return ipa == other.ipa && score == other.score; }
+};
+
+namespace rescorer {
+
+/// phonetok.py SegmentSlot: one position in the structured pronunciation
+/// lattice — a single GRAPHEME token with its ranked IPA options, best
+/// (lowest cost) first. An EMPTY candidates list marks a slot a rescorer
+/// deleted (it contributes no segment to any beam path). Declared here
+/// because the token model PRODUCES slots (phonetok.py owns the dataclass);
+/// rescorer.hpp consumes them.
+struct SegmentSlot {
+    std::string grapheme;
+    std::pair<std::size_t, std::size_t> span{0, 0};
+    std::vector<Candidate> candidates;
+
+    /// The best (lowest-cost) candidate; callers must check emptiness.
+    const Candidate& top() const { return candidates.front(); }
+};
+
+} // namespace rescorer
+} // namespace orthography2ipa
+
+namespace orthography2ipa {
+
 enum class TokenKind { GRAPHEME, WHITESPACE, PUNCTUATION, DIGIT, UNKNOWN, BOS, EOS };
 
 const char* to_string(TokenKind kind);
@@ -132,6 +162,17 @@ struct TokenSequence {
 TokenSequence flat_contexts(const std::vector<Token>& g_tokens,
                             const std::set<std::string>& vowel_graphemes = {});
 
+/// phonetok.py slot_confidence: confidence in `slot.top` being the right
+/// realisation, in [0, 1] — the intra-slot ambiguity margin (top-1 vs top-2
+/// cost, `1 - exp(-margin)`, and 1.0 when no rival exists) times the rarity of
+/// the winner (`exp(-cost1)`, 1.0 at cost 0). 0.0 for an empty slot.
+double slot_confidence(const rescorer::SegmentSlot& slot);
+
+/// phonetok.py lattice_confidence: the WEAKEST-LINK (minimum) slot
+/// confidence over a word's lattice; 1.0 for an empty lattice — there is
+/// nothing the engine was unsure about. Coverage/OOV is NOT folded in here.
+double lattice_confidence(const std::vector<rescorer::SegmentSlot>& slots);
+
 /// Punctuation that writes a PAUSE, across every writing system —
 /// phonetok.py PAUSE_PUNCTUATION: character → Unicode name.
 const std::vector<std::pair<std::string, std::string>>& pause_punctuation();
@@ -182,6 +223,32 @@ public:
     /// Per-candidate weights for *grapheme* (lookup key lower-cased), or
     /// nullopt when the grapheme declares no weights (rank cost).
     std::optional<std::vector<double>> weights_for(const std::string& grapheme) const;
+
+    /// phonetok.py ipa_lattice: the structured pronunciation lattice for
+    /// *text* — one SegmentSlot per GRAPHEME token, in surface order, each
+    /// with its source grapheme, code-point span and ranked candidates.
+    /// Non-grapheme tokens produce no slot. Candidates come from the SAME
+    /// shared branch resolver the beam uses, so positional overrides and
+    /// per-candidate weights apply exactly as in ipa_beam.
+    ///
+    /// `beam_width` caps the candidates KEPT PER SLOT (SIZE_MAX keeps every
+    /// one — the reference's `2 ** 31` for a negative width). When `rescorers`
+    /// is given, slots are resolved full, re-costed through the chain in
+    /// order, and only then truncated; a rescorer that empties a slot DELETES
+    /// it. A slot that resolves to no candidates at all (a silenced marker
+    /// grapheme whose reading folded into its consonant) is omitted the same
+    /// way, so `SegmentSlot::top` stays total.
+    std::vector<rescorer::SegmentSlot> ipa_lattice(
+        const std::string& text, std::size_t beam_width = 8,
+        bool expand_allophones = false,
+        const std::vector<const rescorer::LatticeRescorer*>* rescorers = nullptr) const;
+
+    /// phonetok.py ipa_best: the single best reading — `ipa_beam(...,
+    /// beam_width=1)[0].ipa`, and "" when there is no path at all.
+    std::string ipa_best(const std::string& text, bool expand_allophones = false,
+                         const std::string& word_separator = " ",
+                         bool include_special = false,
+                         const std::vector<const rescorer::LatticeRescorer*>* rescorers = nullptr) const;
 
     /// phonetok.py ipa_beam: beam search over the token stream —
     /// per-slot branch resolution (positional overrides, weights,

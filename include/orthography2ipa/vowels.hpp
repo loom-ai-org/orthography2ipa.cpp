@@ -91,6 +91,12 @@ bool is_sibilant(const std::string& ipa);
 // table has no entry.
 std::optional<bool> is_voiced(const std::string& ipa);
 
+// Whether *ipa* is [+anterior] (dental/alveolar) — vowels.py is_anterior.
+// Separates /s/ from /ʃ ʂ/, which is the difference between the ⟨sw⟩ no
+// Germanic language has and the ⟨schw⟩ German does. nullopt when the feature
+// table has no entry (Python's None).
+std::optional<bool> is_anterior(const std::string& ipa);
+
 // Coarse place of articulation: "labial"/"coronal"/"dorsal"/"" — vowels.py
 // place_class.
 std::string place_class(const std::string& ipa);

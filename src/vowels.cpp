@@ -457,6 +457,17 @@ bool is_sibilant(const std::string& ipa) {
            (*vec)[12] == TriState(1);   // strident, not sonorant, coronal
 }
 
+// vowels.py is_anterior: the [+anterior] (dental/alveolar) test — feature 11
+// of the curated matrix (dental/alveolar), None when the table has no entry.
+// Separates /s/ from /ʃ ʂ/, which is the difference between the ⟨sw⟩ no
+// Germanic language has and the ⟨schw⟩ German does.
+std::optional<bool> is_anterior(const std::string& ipa) {
+    std::vector<TriState> scratch;
+    const std::vector<TriState>* vec = phone_vector_of(normalize_segment(ipa), scratch);
+    if (vec == nullptr || (*vec)[11] == TriState(-1)) return std::nullopt;
+    return (*vec)[11] == TriState(1);
+}
+
 std::optional<bool> is_voiced(const std::string& ipa) {
     std::vector<TriState> scratch;
     const std::vector<TriState>* vec = phone_vector_of(normalize_segment(ipa), scratch);

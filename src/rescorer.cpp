@@ -105,4 +105,22 @@ std::vector<SegmentSlot> apply_rescorers(
     return current;
 }
 
+
+// rescorer.py normalize_rescorers — see rescorer.hpp for the contract.
+std::vector<const LatticeRescorer*> normalize_rescorers(const RescorerArg& rescorer) {
+    return normalize_rescorers(rescorer.items);
+}
+
+std::vector<const LatticeRescorer*> normalize_rescorers(
+        const std::vector<const LatticeRescorer*>& rescorers) {
+    std::vector<const LatticeRescorer*> out;
+    out.reserve(rescorers.size());
+    for (const LatticeRescorer* r : rescorers) {
+        if (r == nullptr)
+            throw std::invalid_argument("rescorer entries must be LatticeRescorer, got None");
+        out.push_back(r);
+    }
+    return out;
+}
+
 } // namespace orthography2ipa::rescorer

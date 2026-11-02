@@ -12,6 +12,7 @@
 #include "unicode_util.hpp"
 
 #include <algorithm>
+#include <cmath>
 #include <cstdint>
 
 namespace orthography2ipa {
@@ -1168,6 +1169,94 @@ TokenSequence PhonetokTokenizer::tokenize_with_context(const std::string& text) 
 // phonetok.py PhonetokTokenizer.ipa_beam: beam search over the token
 // stream, sharing resolve_branches/constrain_nasal_carriers/_expand_beam
 // with the engine's positional beam.
+// phonetok.py slot_confidence / lattice_confidence: the per-slot and
+// whole-lattice confidence reads. Ambiguity = 1 - exp(-margin) between the
+// top-2 costs (1.0 when there is no rival), rarity = exp(-cost1) when the
+// winner costs anything at all (1.0 at cost 0); the word is the WEAKEST LINK
+// (minimum) over its slots, and an empty lattice is 1.0 — nothing the engine
+// was unsure about. Coverage/OOV is folded in by the caller.
+double slot_confidence(const rescorer::SegmentSlot& slot) {
+    const auto& cands = slot.candidates;
+    if (cands.empty()) return 0.0;
+    const double cost1 = cands.front().score;
+    double ambiguity = 1.0;
+    if (cands.size() >= 2) ambiguity = 1.0 - std::exp(-(cands[1].score - cost1));
+    const double rarity = cost1 > 0.0 ? std::exp(-cost1) : 1.0;
+    return ambiguity * rarity;
+}
+
+double lattice_confidence(const std::vector<rescorer::SegmentSlot>& slots) {
+    double best = 1.0;
+    bool any = false;
+    for (const auto& slot : slots) {
+        const double value = slot_confidence(slot);
+        if (!any || value < best) best = value;
+        any = true;
+    }
+    return any ? best : 1.0;
+}
+
+// phonetok.py PhonetokTokenizer.ipa_lattice: one SegmentSlot per GRAPHEME
+// token in surface order, from the SAME branch resolver the beam uses. A
+// negative beam_width keeps every candidate (the reference's 2 ** 31).
+// Rescorer-deleted and never-sounding slots are omitted, so `top` is total.
+std::vector<rescorer::SegmentSlot> PhonetokTokenizer::ipa_lattice(
+        const std::string& text, std::size_t beam_width, bool expand_allophones,
+        const std::vector<const rescorer::LatticeRescorer*>* rescorers) const {
+    const std::vector<Token> tokens = tokenize(text);
+    const TokenSequence seq = tokenize_with_context(text);
+    const std::vector<GraphemeContext>& contexts = *seq.graphemes;
+    const std::map<std::string, std::vector<std::string>>* allophone_map =
+        expand_allophones ? &spec_.allophones : nullptr;
+    const std::size_t keep = beam_width;
+
+    std::vector<rescorer::SegmentSlot> out;
+    if (rescorers != nullptr && !rescorers->empty()) {
+        // phonetok.py: resolve the FULL slots, re-cost them through the
+        // chain, truncate, and drop the emptied ones.
+        std::vector<rescorer::SegmentSlot> slots;
+        slots.reserve(contexts.size());
+        for (std::size_t i = 0; i < contexts.size(); ++i) {
+            rescorer::SegmentSlot slot;
+            slot.grapheme = contexts[i].grapheme();
+            slot.span = contexts[i].span();
+            for (const auto& branch :
+                    beam::resolve_branches(spec_, contexts[i], *this, allophone_map))
+                slot.candidates.push_back({branch.ipa, branch.cost});
+            slots.push_back(std::move(slot));
+        }
+        for (const auto& slot : rescorer::apply_rescorers(slots, contexts, *rescorers))
+            if (!slot.candidates.empty()) {
+                auto trimmed = slot;
+                trimmed.candidates.resize(std::min(keep, trimmed.candidates.size()));
+                out.push_back(std::move(trimmed));
+            }
+        return out;
+    }
+
+    std::size_t g_idx = 0;
+    for (const auto& token : tokens) {
+        if (token.kind != TokenKind::GRAPHEME) continue;
+        const auto branches =
+            beam::resolve_branches(spec_, contexts[g_idx++], *this, allophone_map);
+        if (branches.empty()) continue;  // a silenced marker grapheme
+        rescorer::SegmentSlot slot;
+        slot.grapheme = token.grapheme;
+        slot.span = {token.position, token.position + token.length};
+        for (std::size_t i = 0; i < branches.size() && i < keep; ++i)
+            slot.candidates.push_back({branches[i].ipa, branches[i].cost});
+        if (!slot.candidates.empty()) out.push_back(std::move(slot));
+    }
+    return out;
+}
+
+std::string PhonetokTokenizer::ipa_best(const std::string& text, bool expand_allophones,
+                                        const std::string& word_separator, bool include_special,
+                                        const std::vector<const rescorer::LatticeRescorer*>* rescorers) const {
+    const auto paths = ipa_beam(text, 1, expand_allophones, word_separator, include_special, rescorers);
+    return paths.empty() ? std::string() : paths.front().ipa;
+}
+
 std::vector<IPAPath> PhonetokTokenizer::ipa_beam(
         const std::string& text, std::size_t beam_width, bool expand_allophones,
         const std::string& word_separator, bool include_special,

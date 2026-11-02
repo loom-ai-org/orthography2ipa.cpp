@@ -10,7 +10,7 @@ const char32_t PALATAL_SET[] = {0x6a, 0x272, 0x283, 0x28e, 0x292, 0};
 const char32_t STRESS_MARK = 0x2c8;
 
 // The regex sources the predicates and the de-biasing steps compile.
-const char DB1_RE[] = "(?<=[^ae\u025b\u0250i\u0268o\u0254u\u0251\u00e6\u00f8\u0153y\u00e3\u1ebd\u0129\u00f5\u0169\s])\u0250j";
+const char DB1_RE[] = "(?<=[^ae\u025b\u0250i\u0268o\u0254u\u0251\u00e6\u00f8\u0153y\u00e3\u1ebd\u0129\u00f5\u0169\\s])\u0250j";
 const char DB2_RE[] = "o(?=[tdsz\u0283nl\u027e])";
 const char BEFORE_R_C[] = "[\u027er][bcdf\u0261hjklmnpqrstvwxz\u0283\u0292\u014b\u0272\u028e]";
 const char BEFORE_NASAL_C[] = "[mn][bcdf\u0261hjklmnpqrstvwxz\u0283\u0292\u014b\u0272\u028e]";

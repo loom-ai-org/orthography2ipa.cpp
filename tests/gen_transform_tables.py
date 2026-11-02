@@ -31,11 +31,11 @@ def esc(s):
     for ch in s:
         o = ord(ch)
         if ch == '"': out.append('\\"')
-        elif ch == '\\\\': out.append('\\\\\\\\')
+        elif o == 92: out.append(chr(92) + chr(92))       # backslash -> \\\\
         elif 0x20 <= o <= 0x7e: out.append(ch)
-        elif o <= 0xffff: out.append('\\u%04x' % o)
-        else: out.append('\\U%08x' % o)
-    return '"' + ''.join(out) + '"'
+        elif o <= 0xffff: out.append(chr(92) + ("u%04x" % o))
+        else: out.append(chr(92) + ("U%08x" % o))
+    return '"' + "".join(out) + '"'
 
 def cps(s):
     return ", ".join("0x%x" % ord(c) for c in s) + ", 0"

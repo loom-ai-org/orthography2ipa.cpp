@@ -7,12 +7,24 @@
 #include "unicode_util.hpp"
 
 #include <algorithm>
+#include <cctype>
+#include <cmath>
+#include <fstream>
 #include <map>
 #include <optional>
+#include <sstream>
 #include <stdexcept>
 
 namespace orthography2ipa::transform {
 namespace {
+
+// load_clup_profile: the region match is case-insensitive, as the reference's
+// str.lower() substring test is.
+std::string lower_ascii(const std::string& text) {
+    std::string out = text;
+    for (auto& ch : out) ch = static_cast<char>(std::tolower(static_cast<unsigned char>(ch)));
+    return out;
+}
 
 using uni::category;
 using uni::lower;
@@ -127,7 +139,7 @@ bool is_word_final(const std::u32string& ipa, std::size_t pos, std::size_t lengt
 bool adjacent_to_palatal(const std::u32string& ipa, std::size_t pos) {
     if (pos > 0 && is_palatal(ipa[pos - 1])) return true;
     if (pos + 1 < ipa.size() && is_palatal(ipa[pos + 1])) return true;
-    for (const std::u32string palatal : {std::u32string(U"tʃ"), std::u32string(U"dʒ")})
+    for (const std::u32string& palatal : {std::u32string(U"tʃ"), std::u32string(U"dʒ")})
         for (std::size_t offset = 0; offset < palatal.size(); ++offset) {
             if (pos < offset) continue;
             const std::size_t start = pos - offset;
@@ -366,6 +378,91 @@ std::string apply_transform(const std::string& ipa, const std::string& profile,
             out = apply_contextual(out, rule, spelling);
     }
     return to_utf8(out);
+}
+
+
+// transforms.py load_clup_profile: the analysis CSV (a research artifact, not
+// shipped data) is normalized into the weight keys apply_transform consults —
+// the boolean flags YES -> 1.0, the direct rate column read as float, and the
+// counts divided by the row's ipa_chars and rounded to 6 places.
+std::optional<std::map<std::string, double>> load_clup_profile(
+        const std::string& region, const std::string& clup_csv) {
+    std::ifstream file(clup_csv);
+    if (!file) return std::nullopt;
+    std::string header_line;
+    if (!std::getline(file, header_line)) return std::nullopt;
+    std::vector<std::string> columns;
+    {
+        std::string column;
+        std::istringstream header(header_line);
+        while (std::getline(header, column, ',')) columns.push_back(column);
+    }
+    const auto index_of = [&](const std::string& name) -> long long {
+        for (std::size_t i = 0; i < columns.size(); ++i)
+            if (columns[i] == name) return static_cast<long long>(i);
+        return -1;
+    };
+    // transforms.py _CLUP_BOOL_COLUMNS / _CLUP_RATE_COLUMNS / _CLUP_COUNT_COLUMNS
+    const std::pair<const char*, const char*> bool_columns[] = {
+        {"retroflex_sibilant", "retroflex_sibilant"}, {"uvular_trill_\u0280", "uvular_trill"},
+        {"voiceless_uvular_\u03c7", "voiceless_uvular"}, {"retroflex_tap_\u027d", "retroflex_tap"},
+        {"retroflex_lateral_\u026d", "retroflex_lateral"}, {"aspiration", "aspiration"},
+        {"insular_vowel_shift", "insular_vowel_shift"}};
+    const std::pair<const char*, const char*> rate_columns[] = {
+        {"vowel_reduction_ratio", "vowel_reduction_ratio"}};
+    const std::pair<const char*, const char*> count_columns[] = {
+        {"spirant_count", "spirantization_rate"}, {"devoicing_count", "devoicing_rate"},
+        {"retroflex_sib_count", "retroflex_sibilant_rate"},
+        {"aspiration_count", "aspiration_rate"}};
+
+    const std::string region_lower = lower_ascii(region);
+    std::string row_line;
+    while (std::getline(file, row_line)) {
+        if (row_line.empty()) continue;
+        std::vector<std::string> cells;
+        std::string cell;
+        std::istringstream row(row_line);
+        while (std::getline(row, cell, ',')) cells.push_back(cell);
+        const auto field_text = [&](const char* name) -> std::string {
+            const auto at = index_of(name);
+            if (at < 0 || static_cast<std::size_t>(at) >= cells.size()) return "";
+            std::string value = cells[static_cast<std::size_t>(at)];
+            if (!value.empty() && value.front() == '"')
+                value = value.substr(1, value.size() > 1 && value.back() == '"' ? value.size() - 2 : 1);
+            return value;
+        };
+        const std::string row_region = field_text("region");
+        if (lower_ascii(row_region).find(region_lower) == std::string::npos) continue;
+
+        const std::string chars_text = field_text("ipa_chars");
+        long long ipa_chars = 1;
+        try { ipa_chars = chars_text.empty() ? 1 : std::stoll(chars_text); }
+        catch (const std::exception&) { ipa_chars = 1; }
+
+        std::map<std::string, double> weights;
+        for (const auto& [csv_column, key] : bool_columns) {
+            std::string value = field_text(csv_column);
+            for (auto& ch : value)
+                ch = static_cast<char>(std::toupper(static_cast<unsigned char>(ch)));
+            weights[key] = value == "YES" ? 1.0 : 0.0;
+        }
+        for (const auto& [csv_column, key] : rate_columns) {
+            const std::string text = field_text(csv_column);
+            try { weights[key] = text.empty() ? 0.0 : std::stod(text); }
+            catch (const std::exception&) { weights[key] = 0.0; }
+        }
+        for (const auto& [csv_column, key] : count_columns) {
+            const std::string text = field_text(csv_column);
+            long long count = 0;
+            try { count = text.empty() ? 0 : std::stoll(text); }
+            catch (const std::exception&) { count = 0; }
+            weights[key] = ipa_chars > 0
+                ? std::round(static_cast<double>(count) / static_cast<double>(ipa_chars) * 1e6) / 1e6
+                : 0.0;
+        }
+        return weights;
+    }
+    return std::nullopt;
 }
 
 } // namespace orthography2ipa::transform

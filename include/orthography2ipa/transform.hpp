@@ -14,6 +14,8 @@
 #pragma once
 
 #include <cstddef>
+#include <map>
+#include <optional>
 #include <string>
 #include <utility>
 #include <vector>
@@ -74,6 +76,26 @@ std::string debias_lisbon(const std::string& ipa, const std::string& ortho = "")
 /// transforms.py debias_lisbon_preserve_spirants.
 std::string debias_lisbon_preserve_spirants(const std::string& ipa,
                                             const std::string& ortho = "");
+
+/// transforms.py's three rule KINDS exposed as the reference's class names:
+/// IPARule (ctx-applied find/replace), IPAChainShift (one-pass mapping) and
+/// IPALexicalRule (orthographic-word-triggered). They are data, so the C++
+/// port carries one Rule record; these aliases give the reference's API the
+/// same names a caller of transforms.py uses.
+using IPARule = Rule;
+using IPAChainShift = Rule;
+using IPALexicalRule = Rule;
+
+/// transforms.py DialectTransform as its class name. `profile_code` is
+/// Profile::code.
+using DialectTransform = Profile;
+
+/// transforms.py load_clup_profile: the CLUP analysis CSV's per-region
+/// allophone flags -> the weight keys apply_transform's spirantization_rate /
+/// devoicing thresholds read. nullopt when the CSV is missing or the region
+/// does not appear in it (the reference returns None).
+std::optional<std::map<std::string, double>> load_clup_profile(
+    const std::string& region, const std::string& clup_csv);
 
 /// transforms.py apply_transform. An empty *profile* is not a transform and
 /// returns *ipa* unchanged; an unknown profile throws, as KeyError does.
