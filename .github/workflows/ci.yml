@@ -7,8 +7,16 @@ on:
 jobs:
   build:
     strategy:
+      # Each cell reports its own result: a red cell does not cancel the rest.
+      fail-fast: false
       matrix:
         compiler: [gcc, clang]
+        silabificador: [false]
+        # One cell builds against the silabificador C++ port. Its reference
+        # then needs the Python silabificador too, or the pt parity differs.
+        include:
+          - compiler: gcc
+            silabificador: true
     runs-on: ubuntu-latest
     env:
       CC: ${{ matrix.compiler == 'clang' && 'clang' || 'gcc' }}
@@ -40,7 +48,31 @@ jobs:
         run: sudo apt-get update && sudo apt-get install -y cmake libicu-dev libboost-dev
       - name: Install the reference's Python requirements
         run: python3 -m pip install numpy langcodes ovos-spec-tools || python3 -m pip install --break-system-packages numpy langcodes ovos-spec-tools
+      # Pinned to the silabificador.cpp commit held at byte parity with Python
+      # silabificador 2.1.1a2, the release the reference gets below.
+      - uses: actions/checkout@v4
+        if: matrix.silabificador
+        with:
+          repository: loom-ai-org/silabificador.cpp
+          ref: fbe7a2c93fd7b9b2269e03170d9d6bfdc89f94e1
+          path: silabificador
+      - name: Build and install silabificador.cpp
+        if: matrix.silabificador
+        run: |
+          cmake -S silabificador -B "$RUNNER_TEMP/silabificador-build" -DSILABIFICADOR_BUILD_TESTS=OFF
+          cmake --build "$RUNNER_TEMP/silabificador-build" --parallel
+          cmake --install "$RUNNER_TEMP/silabificador-build" --prefix "$RUNNER_TEMP/silabificador"
+      # The reference finds its syllabifier through an entry point, so the
+      # reference itself is installed (editable, no dependencies) for the
+      # entry point to exist.
+      - name: Give the reference its Portuguese syllabifier
+        if: matrix.silabificador
+        run: |
+          python3 -m pip install silabificador==2.1.1a2 || python3 -m pip install --break-system-packages silabificador==2.1.1a2
+          python3 -m pip install --no-deps -e ../orthography2ipa || python3 -m pip install --break-system-packages --no-deps -e ../orthography2ipa
       - name: Configure
+        env:
+          CMAKE_PREFIX_PATH: ${{ matrix.silabificador && format('{0}/silabificador', runner.temp) || '' }}
         run: cmake -S . -B build -DBUILD_TESTING=ON
       - name: Build
         run: cmake --build build --parallel

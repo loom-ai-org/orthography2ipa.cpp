@@ -58,6 +58,14 @@ if(silabificador_FOUND)
     target_link_libraries(orthography2ipa PRIVATE silabificador::silabificador)
     target_compile_definitions(orthography2ipa PRIVATE O2I_HAVE_SILABIFICADOR)
 endif()
+# A static library hands silabificador on to whatever links it; a shared one
+# carries it inside, so its consumers do not need the package.
+get_target_property(o2i_library_type orthography2ipa TYPE)
+if(silabificador_FOUND AND o2i_library_type STREQUAL "STATIC_LIBRARY")
+    set(O2I_EXPORTS_SILABIFICADOR ON)
+else()
+    set(O2I_EXPORTS_SILABIFICADOR OFF)
+endif()
 
 add_executable(orthography2ipa-cli src/main.cpp)
 target_link_libraries(orthography2ipa-cli PRIVATE orthography2ipa)

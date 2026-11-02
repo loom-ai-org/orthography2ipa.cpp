@@ -226,13 +226,16 @@ public:
 /// A syllabifier that claims only *code* and splits nothing.
 class WholeWord : public orthography2ipa::SyllabifierPlugin {
 public:
-    explicit WholeWord(std::vector<std::string> codes) : codes_(std::move(codes)) {}
+    explicit WholeWord(std::vector<std::string> codes, int priority = 50)
+        : codes_(std::move(codes)), priority_(priority) {}
     std::vector<std::string> language_codes() const override { return codes_; }
     std::vector<std::string> syllabify(const std::string& word, const std::string&) const override {
         return {word};
     }
+    int priority() const override { return priority_; }
 private:
     std::vector<std::string> codes_;
+    int priority_;
 };
 
 /// _Backs_a: rewrite /a/ to [ɐ] — a symbol pt-PT declares, so this is legal
@@ -398,6 +401,11 @@ int conformance_mode() {
     const NoClaim no_claim;
     const MergesHiatus merges_hiatus;
     const WholeWord portuguese{std::vector<std::string>{"pt-PT"}};
+    // Below any plugin registered for pt-PT at the neutral priority: the check
+    // must still measure THIS plugin against the built-in splitter.
+    const WholeWord portuguese_low{std::vector<std::string>{"pt-PT"}, 40};
+    const std::vector<std::string> moved_by_whole_word{
+        "naquelas", "leque", "saque", "aguardem", "albergue", "embarque", "inextinguível"};
     const WholeWord french{std::vector<std::string>{"fr-FR"}};
     const WholeWord spanish_only{std::vector<std::string>{"es-ES"}};
     const BacksA backs_a;
@@ -443,6 +451,11 @@ int conformance_mode() {
     });
     run({"syllabifier:default words, pt-PT", "syllabifier", "pt-PT", probe}, [&]{
         orthography2ipa::conformance::assert_syllabifier_conforms(portuguese, {}, "pt-PT");
+    });
+    run({"syllabifier:whole word at priority 40, pt-PT", "syllabifier", "pt-PT",
+         moved_by_whole_word}, [&]{
+        orthography2ipa::conformance::assert_syllabifier_conforms(portuguese_low,
+            moved_by_whole_word, "pt-PT");
     });
     run({"lattice:a to ɐ (declared)", "lattice", "pt-PT", casa}, [&]{
         orthography2ipa::conformance::assert_rescorer_conforms(backs_a, "pt-PT", casa);
