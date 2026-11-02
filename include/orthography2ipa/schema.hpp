@@ -235,6 +235,7 @@ struct StressRulesModel {
     std::string accent2_mark;
     std::optional<std::vector<std::string>> accent2_final_letters;
     std::optional<std::vector<std::string>> diphthongs;
+    std::optional<std::vector<std::string>> ipa_diphthongs;
     std::optional<std::vector<std::string>> vowel_letters;
     bool quantity_sensitive = false;
     bool superheavy_final_attracts = true;

@@ -1947,6 +1947,7 @@ bool stress_rules_model(Report& report, const Json& json, StressRulesModel& out)
     ok = b.str("accent2_mark", out.accent2_mark, kDefaulted) && ok;
     ok = b.strings("accent2_final_letters", out.accent2_final_letters, kOptional) && ok;
     ok = b.strings("diphthongs", out.diphthongs, kOptional) && ok;
+    ok = b.strings("ipa_diphthongs", out.ipa_diphthongs, kOptional) && ok;
     ok = b.strings("vowel_letters", out.vowel_letters, kOptional) && ok;
     ok = b.boolean("quantity_sensitive", out.quantity_sensitive, kDefaulted) && ok;
     ok = b.boolean("superheavy_final_attracts", out.superheavy_final_attracts, kDefaulted) && ok;
@@ -2405,6 +2406,7 @@ void dump(Writer& w, const StressRulesModel& m) {
         member(out, first, "accent2_mark", m.accent2_mark);
         member(out, first, "accent2_final_letters", m.accent2_final_letters);
         member(out, first, "diphthongs", m.diphthongs);
+        member(out, first, "ipa_diphthongs", m.ipa_diphthongs);
         member(out, first, "vowel_letters", m.vowel_letters);
         member(out, first, "quantity_sensitive", m.quantity_sensitive);
         member(out, first, "superheavy_final_attracts", m.superheavy_final_attracts);

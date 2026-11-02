@@ -97,6 +97,9 @@ struct LanguageSpec {
     std::map<std::string, std::vector<std::string>> plugins;
     std::vector<std::string> marked_vowels, final_stress_endings, penult_stress_endings;
     std::vector<std::string> antepenult_stress_endings, diphthongs;
+    // IPA vowel sequences that form one nucleus where the stress mark is
+    // placed; unset, the transcription is split with `diphthongs`.
+    std::optional<std::vector<std::string>> ipa_diphthongs;
     std::vector<std::string> vowel_letters, onset_clusters;
     bool quantity_sensitive = false, superheavy_final_attracts = false;
     int max_onset = 1;
