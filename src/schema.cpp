@@ -1701,6 +1701,7 @@ bool allophone_rule_model(Report& report, const Json& json, AllophoneRuleModel& 
     ok = b.opt_literal("preceded_by_2", out.preceded_by_2, values::kStressContext) && ok;
     ok = b.opt_literal("followed_by_2", out.followed_by_2, values::kStressContext) && ok;
     ok = b.opt_literal("preceded_by_3", out.preceded_by_3, values::kStressContext) && ok;
+    ok = b.opt_literal("followed_by_3", out.followed_by_3, values::kStressContext) && ok;
     ok = b.strings("preceded_by_phoneme_2", out.preceded_by_phoneme_2, kOptional) && ok;
     ok = b.strings("followed_by_phoneme_2", out.followed_by_phoneme_2, kOptional) && ok;
     ok = b.strings("preceded_by_surface_phoneme_2", out.preceded_by_surface_phoneme_2, kOptional) && ok;
@@ -2320,6 +2321,7 @@ void dump(Writer& w, const AllophoneRuleModel& m) {
         member(out, first, "preceded_by_2", m.preceded_by_2);
         member(out, first, "followed_by_2", m.followed_by_2);
         member(out, first, "preceded_by_3", m.preceded_by_3);
+        member(out, first, "followed_by_3", m.followed_by_3);
         member(out, first, "preceded_by_phoneme_2", m.preceded_by_phoneme_2);
         member(out, first, "followed_by_phoneme_2", m.followed_by_phoneme_2);
         member(out, first, "preceded_by_surface_phoneme_2", m.preceded_by_surface_phoneme_2);

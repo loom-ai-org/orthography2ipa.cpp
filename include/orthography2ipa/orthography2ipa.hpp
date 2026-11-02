@@ -33,7 +33,7 @@ namespace sandhi { class Engine; }
 
 struct AllophoneRule {
     std::string id, surface, append, syllable_position, stress, preceded_by, followed_by;
-    std::string preceded_by_2, followed_by_2, preceded_by_3;
+    std::string preceded_by_2, followed_by_2, preceded_by_3, followed_by_3;
     std::string mutates_neighbor, mutates_neighbor_side;
     std::vector<std::string> phonemes, graphemes, word;
     std::vector<std::string> preceded_by_phoneme, followed_by_phoneme;
