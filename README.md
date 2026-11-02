@@ -15,6 +15,25 @@ cmake -S . -B build
 cmake --build build -j
 ```
 
+Portuguese syllables come from the C++ port of
+[silabificador](https://github.com/loom-ai-org/silabificador.cpp) when CMake
+finds its `silabificador` package. The Python package loads the same plugin
+through the `orthography2ipa[portuguese]` extra.
+
+The plugin claims the `pt` codes at priority 50. Point CMake at the install
+prefix:
+
+```sh
+cmake -S . -B build -DCMAKE_PREFIX_PATH=/path/to/silabificador/prefix
+```
+
+When CMake does not find the package, the bundled vowel-group splitter
+syllabifies Portuguese, as the Python package does without the extra. The
+configure step prints a status line only when it finds silabificador.
+
+The installed `orthography2ipaConfig.cmake` calls
+`find_dependency(silabificador)` only when the build used it.
+
 The catalog is bundled from the Python project. To use another catalog:
 
 ```sh

@@ -3,5 +3,8 @@
 include(CMakeFindDependencyMacro)
 find_dependency(ICU COMPONENTS uc)
 find_dependency(Boost)
+if(@silabificador_FOUND@)
+    find_dependency(silabificador)
+endif()
 include("${CMAKE_CURRENT_LIST_DIR}/orthography2ipaTargets.cmake")
 check_required_components(orthography2ipa)

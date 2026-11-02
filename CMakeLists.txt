@@ -3,6 +3,10 @@ project(orthography2ipa VERSION 0.1.0 LANGUAGES CXX)
 
 find_package(ICU REQUIRED COMPONENTS uc)
 find_package(Boost REQUIRED)
+# The reference reaches its Portuguese syllabifier through the optional
+# orthography2ipa[portuguese] extra; the C++ port of that package is optional
+# here in the same way.
+find_package(silabificador CONFIG QUIET)
 include(CTest)
 include(CMakePackageConfigHelpers)
 
@@ -49,6 +53,11 @@ target_compile_definitions(orthography2ipa PUBLIC
     O2I_DEFAULT_DATA_DIR="${CMAKE_CURRENT_SOURCE_DIR}/data"
     O2I_INSTALL_DATA_DIR="${CMAKE_INSTALL_FULL_DATADIR}/orthography2ipa")
 target_compile_options(orthography2ipa PRIVATE -Wall -Wextra -Wpedantic)
+if(silabificador_FOUND)
+    message(STATUS "silabificador ${silabificador_VERSION}: Portuguese syllables come from it")
+    target_link_libraries(orthography2ipa PRIVATE silabificador::silabificador)
+    target_compile_definitions(orthography2ipa PRIVATE O2I_HAVE_SILABIFICADOR)
+endif()
 
 add_executable(orthography2ipa-cli src/main.cpp)
 target_link_libraries(orthography2ipa-cli PRIVATE orthography2ipa)

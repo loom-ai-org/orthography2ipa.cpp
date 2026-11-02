@@ -6,6 +6,7 @@
 #include "orthography2ipa/transform.hpp"
 #include "orthography2ipa/markup.hpp"
 #include "orthography2ipa/registry.hpp"
+#include "orthography2ipa/syllabifiers.hpp"
 #include "unicode_util.hpp"
 #include "orthography2ipa/vowels.hpp"
 
@@ -29,6 +30,9 @@
 #include <unicode/normalizer2.h>
 #include <unicode/unistr.h>
 #include <unicode/uchar.h>
+#ifdef O2I_HAVE_SILABIFICADOR
+#include <silabificador/silabificador.hpp>
+#endif
 
 namespace orthography2ipa {
 namespace {
@@ -56,7 +60,19 @@ std::map<std::string, std::string> registered_lexicons;
 std::optional<std::string> lexicon_directory;
 std::map<std::string, std::map<std::string, std::string>> lexicon_cache;
 std::map<std::string, std::shared_ptr<NormalizePlugin>> normalize_plugins;
-std::map<std::string, std::shared_ptr<SyllabifierPlugin>> syllabifier_plugins;
+// registry.py _discover_syllabifiers over the package's own entry point,
+// `silabificador = orthography2ipa.syllabifiers:SilabificadorSyllabifier`:
+// the plugin is there when the silabificador library is, and absent otherwise.
+std::map<std::string, std::shared_ptr<SyllabifierPlugin>> bundled_syllabifiers() {
+    std::map<std::string, std::shared_ptr<SyllabifierPlugin>> plugins;
+#ifdef O2I_HAVE_SILABIFICADOR
+    syllabifiers::SilabificadorSyllabifier::provide(
+        [](const std::string& word) { return silabificador::syllabify(word); });
+    plugins["silabificador"] = std::make_shared<syllabifiers::SilabificadorSyllabifier>();
+#endif
+    return plugins;
+}
+std::map<std::string, std::shared_ptr<SyllabifierPlugin>> syllabifier_plugins = bundled_syllabifiers();
 std::map<std::string, std::shared_ptr<StressPlugin>> stress_plugins;
 std::map<std::string, std::shared_ptr<RescorerPlugin>> rescorer_plugins;
 std::map<std::string, std::shared_ptr<SandhiPlugin>> sandhi_plugins;
