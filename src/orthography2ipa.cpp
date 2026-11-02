@@ -349,7 +349,8 @@ LanguageSpec load_raw(const std::string& code, std::set<std::string>& loading) {
     s.allophones = ipa_map(raw, "allophones");
     s.positional_graphemes = positional_map(raw);
     s.phonemes = optional_strings(raw, "phonemes");
-    s.marked_vowels = optional_strings(raw.get_child("stress", ptree{}), "marked_vowels");
+    static const ptree no_stress;
+    s.marked_vowels = optional_strings(raw.get_child("stress", no_stress), "marked_vowels");
     if (auto stress = raw.get_child_optional("stress")) {
         s.stress_defined = true;
         s.default_stress_position = stress->get<int>("default_position", -2);
