@@ -1058,6 +1058,11 @@
       "conclusion": "at_ceiling_documented",
       "measured": "Raw PER 0.3455 (n=4331). Stod, the true input-limitation (unwritten in the orthography, marked in 901/4331 gold entries), folds PER to only 0.3288 -- a small movement, not the dominant driver. The larger movers are this gold's own notation choices for the uvular rhotic (r vs [ʁ], folds to 0.2919) and post-s stop voicing (sk/st/sp vs this spec's sɡ/sd/sb convention, folds to 0.3232); these are documented as convention, not folded into valid_ceiling, per the rule against crediting the spec's own correctness as an input limitation. All three combined reach 0.2509, short of a defensible ceiling and mixing legitimate and illegitimate folds, so no valid_ceiling is recorded.",
       "reference": "spec notes"
+    },
+    "ipa_childes": {
+      "conclusion": "at_ceiling_documented",
+      "measured": "Raw PER 0.4476 (n=2233), the worst da row on the board. The gold is espeak-derived, so it records espeak-ng's Danish conventions rather than an independent transcription. scripts/fold_da_notation.py folds them out of BOTH sides cumulatively with the harness's own normalize() (broad) and levenshtein(): the stod mark stays unwritten in the orthography and folds 0.4476 to 0.4134 (1302 of 2233 gold words mark it); this gold marks no vowel length, which takes it to 0.2841 and is the largest single mover (we write a length mark in 1029 words, the gold in 61); the rhotic r for this spec's uvular ʁ takes it to 0.2656; ʋ for v to 0.2477; œ for ø to 0.2303; the r-coloured schwa ɐ read as ɔr to 0.2296; and the post-s stop convention sk st sp for this spec's sɡ sd sb, the same convention audit.wikipron records, to 0.2108. Only the stod fold is a contrast the orthography does not write, and it moves 0.0342, so no valid_ceiling is recorded for this row (T-2583): the rest are this gold's notation and crediting them would count the spec's own conventions as an input limitation.",
+      "reference": "spec notes; see scripts/fold_da_notation.py and audit.wikipron"
     }
   }
 }

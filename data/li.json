@@ -1,5 +1,16 @@
 {
   "code": "li",
+  "collapse_geminates": true,
+  "positional_graphemes": {
+    "g": {
+      "before_front_vowel": [
+        "ʝ"
+      ],
+      "default": [
+        "ɣ"
+      ]
+    }
+  },
   "name": "Limburgish",
   "script": "Latin",
   "script_type": "alphabet",
@@ -240,6 +251,9 @@
     "ch": [
       "ç"
     ],
+    "sch": [
+      "ʃ"
+    ],
     "dj": [
       "dʒ",
       "ɟ"
@@ -319,6 +333,7 @@
       "f"
     ],
     "g": [
+      "ɣ",
       "ʝ"
     ],
     "h": [
@@ -595,7 +610,7 @@
       "notes": "NOT a phonological authority; cited only for a distributional fact about the wikipron/li gold set this spec is benchmarked against. Wiktionary tags competing Limburgish spelling conventions as alternative forms of the same headword: 'aap' is labelled Veldeke spelling (= Spelling 2003) while its capitalised, umlaut-bearing counterpart 'Aap' is labelled German-based spelling; 'bekker' is Veldeke spelling while 'Bäcker' is explicitly labelled German-based spelling, with further alternates for Rheinische Dokumenta and Eupen-dialect spelling. The wikipron/li gold scrapes headwords across these conventions, most of which this spec's Spelling-2003 INPUT CONTRACT declares out of scope; see the measured ratio in the notes field below."
     }
   ],
-  "notes": "Limburgish (Limburgs) — West Germanic (Low Franconian) of the Meuse-Rhenish area. COMMITMENT: this map implements the *Spelling 2003 voor de Limburgse dialecten* (the 'Veldekespelling'), adopted by the Raod veur 't Limburgs and Veldeke-Limburg, using the grapheme->IPA rendering of that system; the norm's own reference variety is Remunjs (Roermond), and the values here are the pan-Limburgish values the norm assigns, not any single village dialect. INPUT CONTRACT: Limburgish text written in Spelling 2003, lowercase, already normalised; Dutch-based or German-based ad-hoc spellings are OUT OF SCOPE and will mis-transcribe. Spelling 2003 is deliberately readable-first: it writes the same sound the same way across dialects, so a grapheme such as <ae> or <ao> stands for the *norm's* vowel, which a given dialect may realise differently. TONE IS NOT REPRESENTED: Limburgish contrasts sleeptoon (dragging tone, Accent 1) with stoottoon (push tone, Accent 2); Spelling 2003 does not write the contrast, so no tonal information can be recovered from the orthography and none is emitted. Mouillering is written with the <j> digraphs (tj, dj, sj, zj, nj, lj). BENCHMARK CEILING (measured against the cached li/wikipron gold, 989 distinct headwords): 90/1128 gold pronunciation lines (55 distinct words) carry an IPA tone letter (˨/˧/˦); folding those tone letters out of both hypothesis and gold moves PER only from 0.3819 to 0.3771 — unlike the Hausa/Kikuyu tone folds, tone marking is NOT the dominant error source here, a deliberate negative result. 123/989 distinct spellings (12.4%) are homographs with two or more distinct gold pronunciations, corroborating that the orthography underdetermines pronunciation (partly tone, partly dialect variation) even though it does not by itself floor the score (the harness scores the best-matching gold). The larger, dominant driver is DATASET COMPOSITION, not tone: 330/989 gold headwords (33.4%) contain a character (ä, é, ï, ë, ǫ, ą, ṣ, ü, or a syllabic-consonant mark) absent from the Spelling-2003 grapheme table and therefore rendered as an untranscribed UNKNOWN token; per wiktionary_li_orthography_mix, these headwords are drawn from Wiktionary's German-based-spelling, Rheinische-Dokumenta, and Eupen-dialect alternative forms rather than the Veldeke/Spelling-2003 form this spec targets, and mistranscribing them is the documented, expected behaviour of the stated INPUT CONTRACT (out of scope), not a spec defect. Restricting scoring to the 659 gold headwords with no such character still leaves PER at 0.358 (vs 0.430 on the other 328), so the orthography mismatch is a real, partial, and honestly-reported ceiling contributor rather than the whole gap; the remainder is ordinary segmental/allophonic residual error, not corrected here for lack of a fetched primary source pinning down the specific substitutions (see PR discussion).",
+  "notes": "Limburgish (Limburgs) — West Germanic (Low Franconian) of the Meuse-Rhenish area. COMMITMENT: this map implements the *Spelling 2003 voor de Limburgse dialecten* (the 'Veldekespelling'), adopted by the Raod veur 't Limburgs and Veldeke-Limburg, using the grapheme->IPA rendering of that system; the norm's own reference variety is Remunjs (Roermond), and the values here are the pan-Limburgish values the norm assigns, not any single village dialect. INPUT CONTRACT: Limburgish text written in Spelling 2003, lowercase, already normalised; Dutch-based or German-based ad-hoc spellings are OUT OF SCOPE and will mis-transcribe. Spelling 2003 is deliberately readable-first: it writes the same sound the same way across dialects, so a grapheme such as <ae> or <ao> stands for the *norm's* vowel, which a given dialect may realise differently. TONE IS NOT REPRESENTED: Limburgish contrasts sleeptoon (dragging tone, Accent 1) with stoottoon (push tone, Accent 2); Spelling 2003 does not write the contrast, so no tonal information can be recovered from the orthography and none is emitted. Mouillering is written with the <j> digraphs (tj, dj, sj, zj, nj, lj). BENCHMARK CEILING (measured against the cached li/wikipron gold, 989 distinct headwords): 90/1128 gold pronunciation lines (55 distinct words) carry an IPA tone letter (˨/˧/˦); folding those tone letters out of both hypothesis and gold moves PER only from 0.3819 to 0.3771 — unlike the Hausa/Kikuyu tone folds, tone marking is NOT the dominant error source here, a deliberate negative result. 123/989 distinct spellings (12.4%) are homographs with two or more distinct gold pronunciations, corroborating that the orthography underdetermines pronunciation (partly tone, partly dialect variation) even though it does not by itself floor the score (the harness scores the best-matching gold). The larger, dominant driver is DATASET COMPOSITION, not tone: 330/989 gold headwords (33.4%) contain a character (ä, é, ï, ë, ǫ, ą, ṣ, ü, or a syllabic-consonant mark) absent from the Spelling-2003 grapheme table and therefore rendered as an untranscribed UNKNOWN token; per wiktionary_li_orthography_mix, these headwords are drawn from Wiktionary's German-based-spelling, Rheinische-Dokumenta, and Eupen-dialect alternative forms rather than the Veldeke/Spelling-2003 form this spec targets, and mistranscribing them is the documented, expected behaviour of the stated INPUT CONTRACT (out of scope), not a spec defect. Restricting scoring to the 659 gold headwords with no such character still leaves PER at 0.358 (vs 0.430 on the other 328), so the orthography mismatch is a real, partial, and honestly-reported ceiling contributor rather than the whole gap; the remainder is ordinary segmental/allophonic residual error, not corrected here for lack of a fetched primary source pinning down the specific substitutions (see PR discussion). SPELLING (Veldeke, Spelling 2003 voor de Limburgse dialecten, https://www.veldeke.net/wp-content/uploads/2024/02/Spelling-2003.pdf): printed p. 13 §7, 'De medeklinkers die in de spelling van het Limburgs gebruikt worden, zijn dezelfde als die van het Nederlands als er dezelfde klanken mee aangeduid worden', so a doubled consonant letter is Dutch-style spelling of a short vowel, not a geminate (collapse_geminates); printed p. 11 gives ⟨sj⟩ for [ʃ] with 'sjoon \"schoon\"', so the Dutch-style ⟨sch⟩ found in headwords is read [ʃ]. ⟨g⟩: Wikipedia, 'Limburgish', Phonology/Consonants (read 2026-09-13), charts /ɣ/ and notes '[ç] and [ʝ] are allophones of /x/ and /ɣ/, occurring in a front-vowel environment'; so ⟨g⟩ is [ɣ] by default and [ʝ] before a front vowel. ⟨w⟩ is left as [w]/[β]: the same chart gives /w/ and '/w/ is realized as [β̞] in Belgian Limburgish'.",
   "parent": "x-clade-germ1287",
   "ancestors": [
     {

@@ -1,0 +1,37 @@
+{
+ "code": "ar-EG-x-fayyum",
+ "name": "Eastern Fayyum Arabic",
+ "script": "Arabic",
+ "script_type": "abjad",
+ "parent": "ar-EG",
+ "graphemes_base": "ar-EG",
+ "graphemes": {},
+ "allophones_base": "ar-EG",
+ "allophones": {},
+ "quality": "stub",
+ "ancestors": [
+  {
+   "code": "ar-EG",
+   "role": "parent",
+   "weight": 0.9,
+   "notes": "Inherited placeholder table; see notes on ar-EG-x-fayyum."
+  }
+ ],
+ "notes": "The eastern Fayyum oasis, Egypt. ATTESTED, NOT YET DESCRIBED HERE. A published description exists and is named in `sources`; its phonology has not been read into this spec. The grapheme table is inherited from the parent and is a placeholder, NOT a claim about this variety — no reflex below has been checked against the source. The entry exists so the lect has a code and resolves to something usable rather than to nothing; `quality` is `stub` for exactly that reason. Replace the inherited table with cited reflexes before treating any reading here as this variety's. Cited by Watson & Asiri (2007) for pre-pausal devoicing with glottalisation.",
+ "sources": [
+  {
+   "id": "behnstedt2005",
+   "author": "Behnstedt, P. & M. Woidich",
+   "year": 2005,
+   "title": "Arabische Dialektgeographie",
+   "publisher": "Wiesbaden: Harrassowitz"
+  },
+  {
+   "id": "watsonasiri2007",
+   "author": "Watson, J.C.E. & Asiri, B.",
+   "year": 2007,
+   "title": "Pre-pausal devoicing and glottalisation in varieties of the south-western Arabian Peninsula",
+   "publisher": "Proceedings of ICPhS XVI, Saarbrücken, paper 1738"
+  }
+ ]
+}

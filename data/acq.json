@@ -2,13 +2,59 @@
  "code": "acq",
  "name": "Ta'izzi-Adeni Arabic",
  "script": "Zyyy",
- "quality": "stub",
- "graphemes": {},
+ "quality": "research",
+ "graphemes": {
+  "ث": [
+   "t",
+   "θ"
+  ],
+  "ذ": [
+   "d",
+   "ð"
+  ],
+  "ج": [
+   "ɡ",
+   "dʒ"
+  ],
+  "ض": [
+   "dˤ",
+   "ðˤ"
+  ],
+  "ظ": [
+   "dˤ",
+   "ðˤ"
+  ]
+ },
  "allophones": {},
- "notes": "REGISTRY STUB (not a modelled G2P target). Placed so the ancestry graph covers every living ISO 639-3 language. No orthography or phonology is claimed: script is Zyyy (undetermined) until a cited description is encoded. Classification and coordinates follow Glottolog.",
+ "notes": "Ta'izzi-Adeni Arabic. The description encoded here is of the ADEN variety specifically; the ISO code is wider than the source, and nothing below is claimed for Ta'izz.\n\nTHE THREE REFLEXES ARE CITED AND THE PARENT CANNOT EXPRESS TWO OF THEM. Adeni Arabic omits the interdentals and the voiced affricate of Standard Arabic and substitutes /t/, /d/ and /g/ respectively, with the worked examples thala:thah 'three' -> tala:tah, dha:kirah 'a memory' -> da:kirah, and jabal 'a mountain' -> gabal. The parent ar-YE reads the interdentals as [th] and [dh] alone, so it cannot produce the Adeni forms at all; it does already offer [g] among the values of jim, which this spec narrows to.\n\nWHERE THIS WAS READ. Feghali (1991), quoted by Al-Athwary (2025), 'Phonological Adaptation of Hindi-Urdu Loanwords in Adeni Arabic: A Constraint-based Account', PSYCHOLINGUISTICS 38(1):6-40, in its Adeni Arabic section describing the consonant inventory drawn from Bahumaid (1992), Dawod (1952), Feghali (1991) and Watson (2007). Feghali has NOT been read directly; the statement and its examples are quoted from Al-Athwary, and the fricatives are carried second rather than dropped because the source describes a substitution rather than an absence from the writing.\n\nTHE TWO EMPHATICS, AND WHICH HALF IS QUOTED AND WHICH IS INFERRED. The source states that Adeni LACKS the emphatic fricative, so any reading that emits it as a variety's canonical value is contradicted by the only source this spec cites.\n\nFor dad the correction needs no inference at all. The parent already offers both the fricative and the stop and merely orders the fricative first; applying the source's statement is a REORDERING, and it is the same operation this spec already performs on jim, where the parent's order is reversed on the same author's authority. One sentence licenses both and an earlier draft applied it to one.\n\nFor zaa the parent offers the fricative ALONE, so there is nothing to reorder and the stop here is an INFERENCE, named as one. It extends the substitution the source states for the plain interdentals -- thaa to the stop, dhaal to the stop, both with worked examples -- to the third member of the same series, whose fricative the same sentence says the variety does not have. That is weaker than quoting and stronger than invention, and it is recorded here so a reader can reject it: if the inference is refused, the honest alternative is to declare the letter with no reading and let the word degrade, NOT to keep emitting a phone the source denies. Shipping a sole reading a cited source contradicts is not an absence of knowledge, it is a positive claim against the evidence.\n\nBoth letters carry the fricative second rather than dropping it, as thaa and dhaal do, because Modern Standard forms are read and written in Aden whatever the dialect lacks.\n\nQAF AND KAF ARE NOT TOUCHED. The source lists both /q/ and /g/ in the inventory and does not say which the letter takes, which is the case a phone inventory cannot settle. They are left to the parent.\n\nWHY THIS IS NOT THE 1952 THESIS. Dawod (1952), the SOAS thesis on the Aden dialect, was recovered in full and its one table mapping letters to phonetic symbols has the symbol column faded off the scan. The reflexes above come instead from a modern paper's background section, which cites Dawod among its sources -- so what was unreadable in the original is legible where a later author restated it.",
  "iso639_3": "acq",
  "glottolog_code": "taiz1242",
  "sources": [
+  {
+   "id": "alathwary2025",
+   "author": "Al-Athwary, Anwar A. H.",
+   "year": 2025,
+   "title": "Phonological Adaptation of Hindi-Urdu Loanwords in Adeni Arabic: A Constraint-based Account",
+   "publisher": "PSYCHOLINGUISTICS 38(1): 6-40",
+   "url": "https://doi.org/10.31470/2309-1797-2025-38-1-6-40"
+  },
+  {
+   "id": "feghali1991",
+   "author": "Feghali, Habaka J.",
+   "year": 1991,
+   "title": "Arabic Adeni Textbook",
+   "publisher": "Dunwoody Press",
+   "notes": "Quoted by Al-Athwary (2025); not read directly."
+  },
+  {
+   "id": "dawod1952",
+   "author": "Dawod, T. H. O. M.",
+   "year": 1952,
+   "title": "The phonetics and phonology of an Aden dialect of Arabic",
+   "publisher": "PhD thesis, SOAS",
+   "url": "https://doi.org/10.25501/SOAS.00029329",
+   "notes": "Recovered in full; the letter-to-symbol table has its symbol column faded off the scan."
+  },
   {
    "id": "glottolog2024",
    "author": "Hammarström, Harald; Forkel, Robert; Haspelmath, Martin; Bank, Sebastian",
@@ -27,5 +73,10 @@
   "source": "glottolog",
   "notes": "Glottolog's representative point."
  },
- "parent": "x-clade-afro1255"
+ "parent": "ar-YE",
+ "graphemes_base": "ar-YE",
+ "allophones_base": "ar-YE",
+ "wikipedia": [
+  "https://en.wikipedia.org/wiki/Ta%CA%BDizzi-Adeni_Arabic"
+ ]
 }

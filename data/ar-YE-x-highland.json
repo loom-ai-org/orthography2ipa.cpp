@@ -1,0 +1,37 @@
+{
+ "code": "ar-YE-x-highland",
+ "name": "Central Highland Yemeni Arabic",
+ "script": "Arabic",
+ "script_type": "abjad",
+ "parent": "ar-YE",
+ "graphemes_base": "ar-YE",
+ "graphemes": {},
+ "allophones_base": "ar-YE",
+ "allophones": {},
+ "quality": "stub",
+ "ancestors": [
+  {
+   "code": "ar-YE",
+   "role": "parent",
+   "weight": 0.9,
+   "notes": "Inherited placeholder table; see notes on ar-YE-x-highland."
+  }
+ ],
+ "notes": "The central highland dialects of north Yemen, mapped by Behnstedt's atlas. ATTESTED, NOT YET DESCRIBED HERE. A published description exists and is named in `sources`; its phonology has not been read into this spec. The grapheme table is inherited from the parent and is a placeholder, NOT a claim about this variety — no reflex below has been checked against the source. The entry exists so the lect has a code and resolves to something usable rather than to nothing; `quality` is `stub` for exactly that reason. Replace the inherited table with cited reflexes before treating any reading here as this variety's. Cited by Watson & Asiri (2007) for pre-pausal devoicing.",
+ "sources": [
+  {
+   "id": "behnstedt1985",
+   "author": "Behnstedt, P.",
+   "year": 1985,
+   "title": "Die nordjemenitischen Dialekte. Teil I: Atlas",
+   "publisher": "Wiesbaden: Dr Ludwig Reichert"
+  },
+  {
+   "id": "watsonasiri2007",
+   "author": "Watson, J.C.E. & Asiri, B.",
+   "year": 2007,
+   "title": "Pre-pausal devoicing and glottalisation in varieties of the south-western Arabian Peninsula",
+   "publisher": "Proceedings of ICPhS XVI, Saarbrücken, paper 1738"
+  }
+ ]
+}

@@ -50,7 +50,54 @@
     "j": [
       "ʒ",
       "d͡ʒ"
-    ]
+    ],
+    "'": null,
+    "ai": [
+      "aj"
+    ],
+    "au": [
+      "aw"
+    ],
+    "e": [
+      "e",
+      "ɛ"
+    ],
+    "ei": [
+      "ej"
+    ],
+    "eu": [
+      "ew"
+    ],
+    "güe": [
+      "ɡwe"
+    ],
+    "güi": [
+      "ɡwi"
+    ],
+    "l.l": null,
+    "o": [
+      "o",
+      "ɔ"
+    ],
+    "oi": [
+      "oj"
+    ],
+    "ou": [
+      "ow"
+    ],
+    "qu'": null,
+    "quʼ": null,
+    "qu’": null,
+    "é": [
+      "ɛ"
+    ],
+    "ó": [
+      "ɔ"
+    ],
+    "ü": null,
+    "ʼ": null,
+    "ḷḷ": null,
+    "’": null
   },
   "allophones": {
     "θ": null,
@@ -134,7 +181,196 @@
       "intervocalic": [
         "ɣ"
       ]
+    },
+    "b": {
+      "intervocalic": [
+        "β"
+      ]
+    },
+    "d": {
+      "intervocalic": [
+        "ð"
+      ]
+    },
+    "n": {
+      "before_consonant": [
+        "n",
+        "ŋ"
+      ],
+      "word_final": [
+        "n",
+        "ŋ"
+      ]
     }
+  },
+  "allophone_rules": [
+    {
+      "id": "AST_GLIDE_I_RISING",
+      "phonemes": [],
+      "surface": "j",
+      "notes": "DISABLED for Leonese. The rule rests on the Academia de la Llingua Asturiana description of Asturian; no source for this process in León, Zamora or the Leonese of Portugal was read, so the output stays what it was."
+    },
+    {
+      "id": "AST_GLIDE_U_RISING",
+      "phonemes": [],
+      "surface": "w",
+      "notes": "DISABLED for Leonese. The rule rests on the Academia de la Llingua Asturiana description of Asturian; no source for this process in León, Zamora or the Leonese of Portugal was read, so the output stays what it was."
+    },
+    {
+      "id": "AST_GLIDE_I_FALLING",
+      "phonemes": [],
+      "surface": "i̯",
+      "notes": "DISABLED for Leonese. The rule rests on the Academia de la Llingua Asturiana description of Asturian; no source for this process in León, Zamora or the Leonese of Portugal was read, so the output stays what it was."
+    },
+    {
+      "id": "AST_GLIDE_U_FALLING",
+      "phonemes": [],
+      "surface": "u̯",
+      "notes": "DISABLED for Leonese. The rule rests on the Academia de la Llingua Asturiana description of Asturian; no source for this process in León, Zamora or the Leonese of Portugal was read, so the output stays what it was."
+    },
+    {
+      "id": "AST_SPIRANT_B",
+      "phonemes": [],
+      "surface": "β",
+      "notes": "DISABLED for Leonese. The rule rests on the Academia de la Llingua Asturiana description of Asturian; no source for this process in León, Zamora or the Leonese of Portugal was read, so the output stays what it was."
+    },
+    {
+      "id": "AST_SPIRANT_D",
+      "phonemes": [],
+      "surface": "ð",
+      "notes": "DISABLED for Leonese. The rule rests on the Academia de la Llingua Asturiana description of Asturian; no source for this process in León, Zamora or the Leonese of Portugal was read, so the output stays what it was."
+    },
+    {
+      "id": "AST_SPIRANT_G",
+      "phonemes": [],
+      "surface": "ɣ",
+      "notes": "DISABLED for Leonese. The rule rests on the Academia de la Llingua Asturiana description of Asturian; no source for this process in León, Zamora or the Leonese of Portugal was read, so the output stays what it was."
+    },
+    {
+      "id": "AST_SPIRANT_G_INITIAL",
+      "phonemes": [],
+      "surface": "ɣ",
+      "notes": "DISABLED for Leonese. The rule rests on the Academia de la Llingua Asturiana description of Asturian; no source for this process in León, Zamora or the Leonese of Portugal was read, so the output stays what it was."
+    },
+    {
+      "id": "AST_AFFRICATE_Y_INITIAL",
+      "phonemes": [],
+      "surface": "ɟ͡ʝ",
+      "notes": "DISABLED for Leonese. The rule rests on the Academia de la Llingua Asturiana description of Asturian; no source for this process in León, Zamora or the Leonese of Portugal was read, so the output stays what it was."
+    },
+    {
+      "id": "AST_TRILL_AFTER_L_N_S",
+      "phonemes": [],
+      "surface": "r",
+      "notes": "DISABLED for Leonese. The rule rests on the Academia de la Llingua Asturiana description of Asturian; no source for this process in León, Zamora or the Leonese of Portugal was read, so the output stays what it was."
+    },
+    {
+      "id": "AST_NASAL_LABIAL",
+      "phonemes": [],
+      "surface": "m",
+      "notes": "DISABLED for Leonese. The rule rests on the Academia de la Llingua Asturiana description of Asturian; no source for this process in León, Zamora or the Leonese of Portugal was read, so the output stays what it was."
+    },
+    {
+      "id": "AST_NASAL_VELAR",
+      "phonemes": [],
+      "surface": "ŋ",
+      "notes": "DISABLED for Leonese. The rule rests on the Academia de la Llingua Asturiana description of Asturian; no source for this process in León, Zamora or the Leonese of Portugal was read, so the output stays what it was."
+    },
+    {
+      "id": "AST_NASAL_FINAL",
+      "phonemes": [],
+      "surface": "ŋ",
+      "notes": "DISABLED for Leonese. The rule rests on the Academia de la Llingua Asturiana description of Asturian; no source for this process in León, Zamora or the Leonese of Portugal was read, so the output stays what it was."
+    },
+    {
+      "id": "AST_VOICE_S",
+      "phonemes": [],
+      "surface": "z",
+      "notes": "DISABLED for Leonese. The rule rests on the Academia de la Llingua Asturiana description of Asturian; no source for this process in León, Zamora or the Leonese of Portugal was read, so the output stays what it was."
+    },
+    {
+      "id": "AST_VOICE_THETA",
+      "phonemes": [],
+      "surface": "ð",
+      "notes": "DISABLED for Leonese. The rule rests on the Academia de la Llingua Asturiana description of Asturian; no source for this process in León, Zamora or the Leonese of Portugal was read, so the output stays what it was."
+    },
+    {
+      "id": "AST_VOICE_SH",
+      "phonemes": [],
+      "surface": "ʒ",
+      "notes": "DISABLED for Leonese. The rule rests on the Academia de la Llingua Asturiana description of Asturian; no source for this process in León, Zamora or the Leonese of Portugal was read, so the output stays what it was."
+    }
+  ],
+  "stress": {
+    "onset_clusters": ["bl", "br", "bɫ", "bɾ", "bʀ", "bʁ", "bʎ", "bχ", "dr", "dɾ", "dʀ", "dʁ", "dʎ", "dχ", "fl", "fr", "fɫ", "fɾ", "fʀ", "fʁ", "fʎ", "fχ", "kl", "kr", "kɫ", "kɾ", "kʀ", "kʁ", "kʎ", "kχ", "pl", "pr", "pɫ", "pɾ", "pʀ", "pʁ", "pʎ", "pχ", "tr", "tɾ", "tʀ", "tʁ", "tʎ", "tχ", "vl", "vr", "vɫ", "vɾ", "vʀ", "vʁ", "vʎ", "vχ", "ðr", "ðɾ", "ðʀ", "ðʁ", "ðʎ", "ðχ", "ɡl", "ɡr", "ɡɫ", "ɡɾ", "ɡʀ", "ɡʁ", "ɡʎ", "ɡχ", "ɣl", "ɣr", "ɣɫ", "ɣɾ", "ɣʀ", "ɣʁ", "ɣʎ", "ɣχ", "βl", "βr", "βɫ", "βɾ", "βʀ", "βʁ", "βʎ", "βχ"],
+    "cliticless_words": [
+      "el",
+      "la",
+      "lo",
+      "los",
+      "les",
+      "un",
+      "una",
+      "unos",
+      "unes",
+      "al",
+      "del",
+      "na",
+      "nel",
+      "nes",
+      "nos",
+      "pel",
+      "pela",
+      "ples",
+      "polos",
+      "a",
+      "de",
+      "en",
+      "con",
+      "por",
+      "sin",
+      "pa",
+      "ente",
+      "so",
+      "y",
+      "o",
+      "nin",
+      "que",
+      "si",
+      "me",
+      "te",
+      "se",
+      "yos",
+      "vos",
+      "lu",
+      "-y",
+      "-yos"
+    ],
+    "default_position": -2,
+    "final_stress_endings": [
+      "r",
+      "l",
+      "d",
+      "z",
+      "x",
+      "t",
+      "n",
+      "m",
+      "f"
+    ],
+    "penult_stress_endings": [
+      "s",
+      "ns"
+    ],
+    "marked_vowels": [
+      "á",
+      "é",
+      "í",
+      "ó",
+      "ú"
+    ],
+    "stress_mark": "ˈ",
+    "notes": "Asturian accentuation per the Gramática Asturiana (ALLA 2001): written accent wins. Default paroxytone. Words ending in a vowel or -s are paroxytone; words ending in any other consonant (r, l, d, z, x, t, n, m, f) are oxytone. Proparoxytones always carry a written accent. CLITICS: cliticless_words lists the Asturian pallabres atones (Academia de la Llingua Asturiana, Gramatica de la llingua asturiana, prosodia and l'articulu) — articles el/la/lo/los/les, indefinite un/una/unos/unes, the preposition+article contractions al/del/na/nel/pel/polos etc., the atonic prepositions a/de/en/con/por/sin/pa/ente/so, the conjunctions y/o/nin/que/si, and the weak object pronouns me/te/se/y(=lle)/yos/nos/vos/lu/la/los/les. Asturian is enclitic in affirmative finite clauses, but the clitic still bears no word stress."
   },
   "ancestors": [
     {
@@ -174,7 +410,7 @@
       "notes": "Mozarabic adstrate: significant in the repopulation of the Leonese meseta, as Mozarabic-speaking Christians from al-Andalus joined the Reconquista settlements."
     }
   ],
-  "notes": "Medieval and modern Leonese (llingua llionesa / leonés). KEY GRAPHEME→PHONEME CORRESPONDENCES grounded in Morala & Egido (2009) and the Propuesta de Norma Ortográfica (anonymous, undated): (1) ⟨x⟩ = /ʃ/ (dorsopalatal fricative sorda, unanimous across all text models — Source B §2.3; Source A pp. 10, 15). WARNING: ⟨x⟩ applies ONLY where Castilian has ⟨j/ge/gi⟩ (velar origin). When Castilian has ⟨y/ll⟩ (palatal -LJ- etc.) Leonese uses ⟨y⟩, NOT ⟨x⟩ — *meyorar* not *mexorar*, *espeyu* not *espexar* (Source B §2.3; Source A p. 15). (2) ⟨ll⟩ = /ʎ/ (palatal lateral) from Latin L- initial and -LL-: *llugar, lluz, llobu* — mandatory for patrimonial vocabulary (Source B §2.2; Source A p. 10). Not applicable to PL-/CL-/FL- which give ⟨ch-⟩. (3) ⟨ch⟩ = /tʃ/ (africada palatal) from PL-, CL-, FL-: *chamar, chover, chegar* (Source B §3.5; Source A p. 16). (4) ⟨y⟩ = /ʝ/ (palatal sonora) from -LJ-, -DJ-, -GJ-, -C'L-: *meyor, fiyu, peleya* (Source B §1, §3.4; Source A p. 10). Alto Sil/Laciana admit /tʃ/ variant for -LJ-: *trabachar, mechor*. (5) ⟨ñ⟩ = /ɲ/ — general Leonese baseline (Source B §1); -NN- > /n/ simplification legitimate in NW zone: *cabana, pena*. NOTE: che vaqueira (ts/l.l) is Laciana/Alto Sil only (see ast-x-occidental). 4-WAY SIBILANT CONTRAST preserved in archaic/medieval register. Sources: Morala & Egido (2009); Propuesta de Norma Ortográfica.",
+  "notes": "Medieval and modern Leonese (llingua llionesa / leonés). KEY GRAPHEME→PHONEME CORRESPONDENCES grounded in Morala & Egido (2009) and the Propuesta de Norma Ortográfica (anonymous, undated): (1) ⟨x⟩ = /ʃ/ (dorsopalatal fricative sorda, unanimous across all text models — Source B §2.3; Source A pp. 10, 15). WARNING: ⟨x⟩ applies ONLY where Castilian has ⟨j/ge/gi⟩ (velar origin). When Castilian has ⟨y/ll⟩ (palatal -LJ- etc.) Leonese uses ⟨y⟩, NOT ⟨x⟩ — *meyorar* not *mexorar*, *espeyu* not *espexar* (Source B §2.3; Source A p. 15). (2) ⟨ll⟩ = /ʎ/ (palatal lateral) from Latin L- initial and -LL-: *llugar, lluz, llobu* — mandatory for patrimonial vocabulary (Source B §2.2; Source A p. 10). Not applicable to PL-/CL-/FL- which give ⟨ch-⟩. (3) ⟨ch⟩ = /tʃ/ (africada palatal) from PL-, CL-, FL-: *chamar, chover, chegar* (Source B §3.5; Source A p. 16). (4) ⟨y⟩ = /ʝ/ (palatal sonora) from -LJ-, -DJ-, -GJ-, -C'L-: *meyor, fiyu, peleya* (Source B §1, §3.4; Source A p. 10). Alto Sil/Laciana admit /tʃ/ variant for -LJ-: *trabachar, mechor*. (5) ⟨ñ⟩ = /ɲ/ — general Leonese baseline (Source B §1); -NN- > /n/ simplification legitimate in NW zone: *cabana, pena*. NOTE: che vaqueira (ts/l.l) is Laciana/Alto Sil only (see ast-x-occidental). 4-WAY SIBILANT CONTRAST preserved in archaic/medieval register. Sources: Morala & Egido (2009); Propuesta de Norma Ortográfica. The ALLA phonetic description of Asturian (Normes Ortográfiques 2021, Gramática de la Llingua Asturiana 2001) covers the Principality of Asturias only, so this spec keeps its own grapheme values, stress block and positional values where the ast spec follows the ALLA, and disables the ast allophone rules. No source for those processes in León, Zamora or the Leonese of Portugal was read.",
   "sources": [
     {
       "id": "morala_egido2009",

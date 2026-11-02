@@ -1,11 +1,11 @@
 {
-  "code": "gl-x-oriental",
+  "code": "gl-ES-x-oriental",
   "name": "Eastern Galician",
   "script": "Latin",
-  "parent": "gl",
-  "graphemes_base": "gl",
-  "allophones_base": "gl",
-  "positional_graphemes_base": "gl",
+  "parent": "gl-ES",
+  "graphemes_base": "gl-ES",
+  "allophones_base": "gl-ES",
+  "positional_graphemes_base": "gl-ES",
   "graphemes": {
     "ie": [
       "je"
@@ -34,7 +34,7 @@
   },
   "ancestors": [
     {
-      "code": "gl",
+      "code": "gl-ES",
       "role": "parent",
       "weight": 0.82,
       "notes": "Standard/Central Galician."

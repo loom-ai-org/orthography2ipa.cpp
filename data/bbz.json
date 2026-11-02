@@ -1,0 +1,15 @@
+{
+ "code": "bbz",
+ "name": "Babalia Creole Arabic",
+ "script": "Arabic",
+ "script_type": "abjad",
+ "parent": "x-clade-afro1255",
+ "graphemes_base": "ar-TD",
+ "graphemes": {},
+ "allophones_base": "ar-TD",
+ "allophones": {},
+ "iso639_3": "bbz",
+ "quality": "stub",
+ "notes": "Babalia Creole Arabic (bbz), spoken by the Babalia around Massenya in the Chari-Baguirmi region of Chad. ATTESTED, NOT DESCRIBED HERE. The ISO 639-3 registry lists it as a living individual language within the Arabic macrolanguage; no phonological description has been read into this spec, and the grapheme table is inherited from ar-TD and is a placeholder rather than a claim — no reflex below has been checked against a source.\n\nTHE GRAPHEMES BASE IS GEOGRAPHIC AND THE FIT IS POOR; THE CLASSIFICATION IS NOT CHANGED. `parent` stays on the Afro-Asiatic clade node, because a creole is not a Chadian dialect and this file must not assert a descent it spends this paragraph qualifying. Only `graphemes_base` points at ar-TD. Chadian Arabic, which is the nearest described variety in the same country, but this is a CREOLE with Arabic as its lexifier and a Baguirmi substrate, so an Arabic dialect's grapheme table is a weaker fit here than it would be for a dialect. It is used because a code that resolves to a usable table is better than one that resolves to nothing, not because the tables are believed to agree.\n\nThe entry exists so the code is reachable and its gap is visible. Replace the inherited table with cited reflexes before treating any reading here as Babalia's.",
+ "sources": []
+}

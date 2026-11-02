@@ -1,0 +1,66 @@
+{
+  "code": "ar-OM-x-dhofari",
+  "name": "Coastal Dhofari Arabic",
+  "script": "Arabic",
+  "script_type": "abjad",
+  "parent": "ar-OM",
+  "graphemes_base": "ar-OM",
+  "allophones_base": "ar-OM",
+  "graphemes": {
+    "ج": [
+      "ɡ",
+      "dʒ",
+      "j"
+    ]
+  },
+  "allophones": {},
+  "ancestors": [
+    {
+      "code": "ar-OM",
+      "role": "parent",
+      "weight": 0.9,
+      "notes": "Omani Arabic base; this leaf declares only the jim range."
+    }
+  ],
+  "notes": "Coastal Dhofari Arabic, the Arabic of Salalah and the Dhofar coast of southern Oman. INPUT CONTRACT: transcribes orthography+harakat. It hangs off ar-OM and declares one delta, which is a range rather than a value.\n\nج jīm is THREE READINGS because the coastal plain holds three coexisting sociolects that disagree about it. Davey 2013 table 2.34 (thesis pp.52-53) separates them: Group 1, the monolingual historic coastal community and the thesis's actual object of study, reads jīm [ɡ]; Group 2, bilingual in Sheḥri or Mehri and of mountain origin, reads [dʒ]; Group 3, migrants of Nejd and highland origin around Shisr and Thumrait, reads [dʒ] or [j], a pattern Davey says is 'attested to in Ḥaḍrāmi Arabic'. All three are listed, Group 1 first because it is the described variety, and the lattice carries the others rather than a choice being made on the reader's behalf. THIS IS NOT FREE VARIATION WITHIN ONE SPEAKER: it is three communities, and which one a recording belongs to is a fact about the speaker that the text cannot show.\n\nق qāf is INHERITED UNCHANGED and that is deliberate. Davey's Groups 1 and 2 read [q], Group 3 reads [ɡ], and ar-OM already offers ['q', 'ɡ'] in that order — the same range in the same order, so there is nothing to declare. The interdentals are likewise inherited: Davey p.38 names 'the retention of the interdentals /θ/, /ð/, and /ð̣/, as well as the voiceless uvular plosive /q/, which is rare outside of the region (Holes 2004: 81)', and the parent already retains them.\n\nNOT MODELLED. Davey p.38 reports imāla, word-final vowel raising, 'which local speakers consider to be the most prominent feature of their language' — no rule is declared for it here because the thesis gives it as a salient impression rather than a stated environment, and a rule invented to fit would be this file's guess wearing a citation. Kaškaša with the 2FS suffix as [-iš] (p.100, citing al-Azraqi 2007:555-557) is a morphological fact about a suffix, not a grapheme reading.\n\nCLASSIFICATION: Dhofari is Arabic and is not Modern South Arabian. Mehri, Sheḥri and Jibbali are separate Semitic languages in contact with it, and the Group 2 speakers above are bilingual in one of them; nothing in Davey treats Dhofari phonology as MSAL-derived. ISO adf, Glottolog dhof1235 — NOT acw, which is Hejazi.\n\nPAGINATION WARNING: the page numbers above are the 2013 Manchester thesis's own, from the author's freely available PDF. The 2016 Brill edition is repaginated and these numbers will not match it.",
+  "quality": "research",
+  "sources": [
+    {
+      "id": "davey2013",
+      "author": "Davey, R.J.",
+      "year": 2013,
+      "title": "Coastal Dhofārī Arabic: A Sketch Grammar",
+      "publisher": "PhD thesis, University of Manchester (published Brill 2016, Studies in Semitic Languages and Linguistics 87)",
+      "url": "https://arabic.humanities.manchester.ac.uk/wp-content/uploads/2017/11/Davey-2013.pdf",
+      "pages": "38, 52-53, 100",
+      "notes": "Primary description, read in full. Table 2.34 pp.52-53 is the three-sociolect table this spec's jim range comes from. Thesis pagination, not the Brill book's."
+    },
+    {
+      "id": "holes2004",
+      "author": "Holes, C.",
+      "year": 2004,
+      "title": "Modern Arabic: Structures, Functions and Varieties",
+      "publisher": "Georgetown University Press",
+      "url": null,
+      "pages": "81",
+      "notes": "Cited by Davey p.38 for the rarity of retained /q/ outside the region. Not opened here; carried as Davey's citation, not as an independent one."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Dhofari_Arabic"
+  ],
+  "timespan": {
+    "start_year": 1400,
+    "end_year": null
+  },
+  "glottolog_code": "dhof1235",
+  "iso639_3": "adf",
+  "allophone_rules": [],
+  "wikidata_qid": null,
+  "location": {
+    "latitude": 17.0,
+    "longitude": 54.1,
+    "source": "manual",
+    "notes": "Salalah and the Dhofar coastal plain, the area of Davey's fieldwork."
+  }
+}

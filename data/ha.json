@@ -399,7 +399,7 @@
     "wikipron": {
       "per": 0.0223,
       "folded": "tone+length",
-      "citation": "The wikipron ha gold's IPA column is fully marked for tone and length while the orthographic column is stripped of both (Module:ha-IPA output); measured over 1857 scored items, baseline PER 0.5340 drops to 0.0223 (89.1% exact match) once both tone and length are folded out of both sides -- folding tone alone gives 0.1690 and length alone gives 0.4565, which must not be conflated with the combined figure. See docs/languages/ha.md."
+      "citation": "The wikipron ha gold's IPA column is fully marked for tone and length while the orthographic column is stripped of both (Module:ha-IPA output); measured over 1857 scored items, baseline PER 0.5340 drops to 0.0223 (89.1% exact match) once both tone and length are folded out of both sides -- folding tone alone gives 0.1690 and length alone gives 0.4565, which must not be conflated with the combined figure. Reproduce with scripts/fold_ha_notation.py. See docs/languages/ha.md."
     }
   }
 }

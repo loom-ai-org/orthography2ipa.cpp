@@ -1,0 +1,67 @@
+{
+  "code": "ar-EG-x-saidi",
+  "name": "Saʿīdi Arabic (Upper Egyptian)",
+  "script": "Arabic",
+  "script_type": "abjad",
+  "parent": "ar-EG",
+  "graphemes_base": "ar-EG",
+  "allophones_base": "ar-EG",
+  "graphemes": {
+    "ق": [
+      "ɡ"
+    ],
+    "ج": [
+      "dʒ"
+    ]
+  },
+  "allophones": {},
+  "ancestors": [
+    {
+      "code": "ar-EG",
+      "role": "parent",
+      "weight": 0.9,
+      "notes": "Egyptian Arabic base; this leaf declares only the consonants that differ."
+    }
+  ],
+  "notes": "Saʿīdi (Upper Egyptian) Arabic, صعيدي, the Nile valley south of Cairo. INPUT CONTRACT: transcribes orthography+harakat; short vowels surface only when the input is vocalised. It hangs off ar-EG and differs from Cairene in the two consonants that most distinguish them.\n\nق qāf → [ɡ], not the Cairene [ʔ]. Khalafallah 1969 lists voiced /g/ in the velar stop row of the phoneme chart (§1.1.1 p.13), separate from the uvular fricative, and the lexicon carries it throughout: /galb/ 'heart' (p.42), /gaːdi/ 'judge' (p.52), /giddaːm/ 'in front of' (p.80), /gabl/ 'before' (p.82), all from Classical qāf. This is the firmest claim in the spec and every source agrees on it.\n\nج jīm → [dʒ], not the Cairene [ɡ]. Khalafallah's chart puts voiced /j/ in the AFFRICATE row, in its own row separate from the stops where /g/ sits (§1.1.1 p.13), and §4.1.8 p.25 describes its allophones as an affricate would behave. UNRESOLVED, and deliberately not encoded: Watson 2002:16 (citing Fischer & Jastrow 1980:105) and Nishio 1994 on the Qifṭ dialect are reported to give a voiced PALATAL STOP [ɟ] for southern Upper Egypt. Nishio was not obtainable, so the [ɟ] claim rests on secondary citation while [dʒ] rests on a primary source read directly. [ɟ] is therefore NOT listed as a second reading: adding it would put a phone in this inventory on a source nobody here has opened. Whether the two describe a real sub-regional split — Khalafallah's villages ~530 km south of Cairo against the Qifṭ area — or a transcription convention is open, and Woidich & Zack 2009, 'The g/ǧ-Question in Egyptian Arabic Revisited', is the paper that would settle it.\n\nINHERITED UNCHANGED from ar-EG: the interdentals. Khalafallah's chart has no interdental row at all and the lexicon shows the merger (talat for Classical ṯalāṯ, p.82), which matches Cairene and matches Watson 2002:14-15 on sedentary Egyptian generally, so there is no delta to declare.\n\nNOT MODELLED: Khalafallah treats emphasis as a prosodic harmony (§5 pp.29ff.) rather than as segmental phonemes, so his chart's lack of an emphatic row is an analytical choice and must not be read as an inventory claim. The emphatics are inherited from the parent unchanged.",
+  "quality": "research",
+  "sources": [
+    {
+      "id": "khalafallah1969",
+      "author": "Khalafallah, A.A.",
+      "year": 1969,
+      "title": "A Descriptive Grammar of Saʿi:di Egyptian Colloquial Arabic",
+      "publisher": "Mouton",
+      "url": "https://archive.org/details/120-saeidi-egyptian-colloquial-arabic",
+      "pages": "13, 25, 42, 52, 80, 82",
+      "notes": "Primary description. Phoneme chart §1.1.1 p.13 gives /g/ in the velar stop row and /j/ in the affricate row; the qaf-to-g lexicon is pp.42-82."
+    },
+    {
+      "id": "watson2002",
+      "author": "Watson, J.C.E.",
+      "year": 2002,
+      "title": "The Phonology and Morphology of Arabic",
+      "publisher": "Oxford University Press",
+      "url": null,
+      "pages": "14-16",
+      "notes": "Corroborates the sedentary Egyptian interdental merger (pp.14-15). p.16 reports a palatal-stop jim for Upper Egypt citing Fischer & Jastrow 1980:105 -- the unresolved claim recorded in the notes."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Sa%27idi_Arabic"
+  ],
+  "timespan": {
+    "start_year": 1400,
+    "end_year": null
+  },
+  "glottolog_code": "said1239",
+  "iso639_3": "aec",
+  "allophone_rules": [],
+  "wikidata_qid": null,
+  "location": {
+    "latitude": 26.0,
+    "longitude": 32.0,
+    "source": "manual",
+    "notes": "Approximate centre of the Nile valley south of Cairo; Khalafallah's informants are from villages about 530 km south of Cairo."
+  }
+}

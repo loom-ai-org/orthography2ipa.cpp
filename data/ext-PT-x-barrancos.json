@@ -184,6 +184,60 @@
  },
  "allophone_rules": [
   {
+   "id": "PT_LEX_OPEN_E_SUFFIX",
+   "phonemes": [],
+   "surface": "e",
+   "notes": "DISABLED for Barranquenho. No source for the stressed vowel of this ending in Barranquenho was read, so its output stays what it was; the pt-PT rule rests on Infopédia readings of standard European Portuguese."
+  },
+  {
+   "id": "PT_SUFFIX_EZ_CLOSE",
+   "phonemes": [],
+   "surface": "e",
+   "notes": "DISABLED for Barranquenho. No source for the stressed vowel of this ending in Barranquenho was read, so its output stays what it was; the pt-PT rule rests on Infopédia readings of standard European Portuguese."
+  },
+  {
+   "id": "PT_SUFFIX_EZA_ESA_CLOSE",
+   "phonemes": [],
+   "surface": "e",
+   "notes": "DISABLED for Barranquenho. No source for the stressed vowel of this ending in Barranquenho was read, so its output stays what it was; the pt-PT rule rests on Infopédia readings of standard European Portuguese."
+  },
+  {
+   "id": "PT_SUFFIX_EMA_CLOSE",
+   "phonemes": [],
+   "surface": "e",
+   "notes": "DISABLED for Barranquenho. No source for the stressed vowel of this ending in Barranquenho was read, so its output stays what it was; the pt-PT rule rests on Infopédia readings of standard European Portuguese."
+  },
+  {
+   "id": "PT_SUFFIX_ESCO_CLOSE",
+   "phonemes": [],
+   "surface": "e",
+   "notes": "DISABLED for Barranquenho. No source for the stressed vowel of this ending in Barranquenho was read, so its output stays what it was; the pt-PT rule rests on Infopédia readings of standard European Portuguese."
+  },
+  {
+   "id": "PT_LEX_OPEN_O_SUFFIX",
+   "phonemes": [],
+   "surface": "o",
+   "notes": "DISABLED for Barranquenho. No source for the stressed vowel of this ending in Barranquenho was read, so its output stays what it was; the pt-PT rule rests on Infopédia readings of standard European Portuguese."
+  },
+  {
+   "id": "PT_SUFFIX_OR_CLOSE",
+   "phonemes": [],
+   "surface": "o",
+   "notes": "DISABLED for Barranquenho. No source for the stressed vowel of this ending in Barranquenho was read, so its output stays what it was; the pt-PT rule rests on Infopédia readings of standard European Portuguese."
+  },
+  {
+   "id": "PT_SUFFIX_OSO_CLOSE",
+   "phonemes": [],
+   "surface": "o",
+   "notes": "DISABLED for Barranquenho. No source for the stressed vowel of this ending in Barranquenho was read, so its output stays what it was; the pt-PT rule rests on Infopédia readings of standard European Portuguese."
+  },
+  {
+   "id": "PT_SUFFIX_ONHO_CLOSE",
+   "phonemes": [],
+   "surface": "o",
+   "notes": "DISABLED for Barranquenho. No source for the stressed vowel of this ending in Barranquenho was read, so its output stays what it was; the pt-PT rule rests on Infopédia readings of standard European Portuguese."
+  },
+  {
    "id": "PT_CODA_S_HUSH",
    "phonemes": [
     "s"
@@ -255,8 +309,50 @@
    "phonemes": [],
    "surface": "̃j̃",
    "notes": "DISABLED for Barranquenho: word-final ⟨-em/-én⟩ is a nasal MONOPHTHONG [ẽ] (quen [ˈkẽ], bem [ˈbẽ]) per the Convenção Ortográfica do Barranquenho, not the EP nasal diphthong [ɐ̃j̃]. The Alentejo-Extremaduran substrate keeps the mid nasal without the palatal offglide or Lisbon centralisation."
-  }
- ],
+  },
+  {
+   "id": "PT_FINAL_ENS_NUCLEUS",
+   "phonemes": [],
+   "surface": "ɐ",
+   "notes": "Not inherited from the pt-PT base. Barranquenho is its own language, and no source on its nasal ⟨e⟩ or its ⟨-ens⟩ was read for this rule, so the spec keeps its reduced nasal [ɨ̃] (onten [ˈõtɨ̃], lembrá [lɨ̃ˈbɾa]) and the plain [ẽ] of -en."
+  },
+  {
+   "id": "PT_FINAL_ENS_GLIDE",
+   "phonemes": [],
+   "surface": "̃j̃",
+   "notes": "Not inherited from the pt-PT base. Barranquenho is its own language, and no source on its nasal ⟨e⟩ or its ⟨-ens⟩ was read for this rule, so the spec keeps its reduced nasal [ɨ̃] (onten [ˈõtɨ̃], lembrá [lɨ̃ˈbɾa]) and the plain [ẽ] of -en."
+  },
+  {
+   "id": "PT_NASAL_E_UNRED",
+   "phonemes": [],
+   "surface": "e",
+   "notes": "Not inherited from the pt-PT base. Barranquenho is its own language, and no source on its nasal ⟨e⟩ or its ⟨-ens⟩ was read for this rule, so the spec keeps its reduced nasal [ɨ̃] (onten [ˈõtɨ̃], lembrá [lɨ̃ˈbɾa]) and the plain [ẽ] of -en."
+  },
+    {
+      "id": "PT_FINAL_EN_NUCLEUS",
+      "phonemes": [],
+      "surface": "e",
+      "notes": "DISABLED for Barranquenho. No source for a learned word-final ⟨-en⟩ in this variety was read, so its output stays what it was; the pt-PT rule rests on Infopédia and Priberam entries for standard European Portuguese."
+    },
+    {
+      "id": "PT_FINAL_EN_CODA",
+      "phonemes": [],
+      "surface": "e",
+      "notes": "DISABLED for Barranquenho. No source for a learned word-final ⟨-en⟩ in this variety was read, so its output stays what it was; the pt-PT rule rests on Infopédia and Priberam entries for standard European Portuguese."
+    },
+    {
+      "id": "PT_ER_CLOSE",
+      "phonemes": [],
+      "surface": "e",
+      "notes": "DISABLED for Barranquenho. No source for the stressed vowel of a word-final ⟨-er⟩ in this variety was read, so its output stays what it was; the pt-PT rule rests on Infopédia and Priberam entries for standard European Portuguese."
+    },
+    {
+      "id": "PT_LEX_OPEN_ER",
+      "phonemes": [],
+      "surface": "e",
+      "notes": "DISABLED for Barranquenho. No source for the stressed vowel of a word-final ⟨-er⟩ in this variety was read, so its output stays what it was; the pt-PT rule rests on Infopédia and Priberam entries for standard European Portuguese."
+    }
+  ],
  "ancestors": [
   {
    "code": "pt-PT",

@@ -384,6 +384,60 @@
   },
   "allophone_rules": [
     {
+      "id": "PT_LEX_OPEN_E_SUFFIX",
+      "phonemes": [],
+      "surface": "e",
+      "notes": "DISABLED for Cape Verdean Creole, a creole that inherits the pt-PT rule layer. No source for the stressed vowel of this ending in Cape Verdean Creole was read, so its output stays what it was; the pt-PT rule rests on Infopédia readings of standard European Portuguese."
+    },
+    {
+      "id": "PT_SUFFIX_EZ_CLOSE",
+      "phonemes": [],
+      "surface": "e",
+      "notes": "DISABLED for Cape Verdean Creole, a creole that inherits the pt-PT rule layer. No source for the stressed vowel of this ending in Cape Verdean Creole was read, so its output stays what it was; the pt-PT rule rests on Infopédia readings of standard European Portuguese."
+    },
+    {
+      "id": "PT_SUFFIX_EZA_ESA_CLOSE",
+      "phonemes": [],
+      "surface": "e",
+      "notes": "DISABLED for Cape Verdean Creole, a creole that inherits the pt-PT rule layer. No source for the stressed vowel of this ending in Cape Verdean Creole was read, so its output stays what it was; the pt-PT rule rests on Infopédia readings of standard European Portuguese."
+    },
+    {
+      "id": "PT_SUFFIX_EMA_CLOSE",
+      "phonemes": [],
+      "surface": "e",
+      "notes": "DISABLED for Cape Verdean Creole, a creole that inherits the pt-PT rule layer. No source for the stressed vowel of this ending in Cape Verdean Creole was read, so its output stays what it was; the pt-PT rule rests on Infopédia readings of standard European Portuguese."
+    },
+    {
+      "id": "PT_SUFFIX_ESCO_CLOSE",
+      "phonemes": [],
+      "surface": "e",
+      "notes": "DISABLED for Cape Verdean Creole, a creole that inherits the pt-PT rule layer. No source for the stressed vowel of this ending in Cape Verdean Creole was read, so its output stays what it was; the pt-PT rule rests on Infopédia readings of standard European Portuguese."
+    },
+    {
+      "id": "PT_LEX_OPEN_O_SUFFIX",
+      "phonemes": [],
+      "surface": "o",
+      "notes": "DISABLED for Cape Verdean Creole, a creole that inherits the pt-PT rule layer. No source for the stressed vowel of this ending in Cape Verdean Creole was read, so its output stays what it was; the pt-PT rule rests on Infopédia readings of standard European Portuguese."
+    },
+    {
+      "id": "PT_SUFFIX_OR_CLOSE",
+      "phonemes": [],
+      "surface": "o",
+      "notes": "DISABLED for Cape Verdean Creole, a creole that inherits the pt-PT rule layer. No source for the stressed vowel of this ending in Cape Verdean Creole was read, so its output stays what it was; the pt-PT rule rests on Infopédia readings of standard European Portuguese."
+    },
+    {
+      "id": "PT_SUFFIX_OSO_CLOSE",
+      "phonemes": [],
+      "surface": "o",
+      "notes": "DISABLED for Cape Verdean Creole, a creole that inherits the pt-PT rule layer. No source for the stressed vowel of this ending in Cape Verdean Creole was read, so its output stays what it was; the pt-PT rule rests on Infopédia readings of standard European Portuguese."
+    },
+    {
+      "id": "PT_SUFFIX_ONHO_CLOSE",
+      "phonemes": [],
+      "surface": "o",
+      "notes": "DISABLED for Cape Verdean Creole, a creole that inherits the pt-PT rule layer. No source for the stressed vowel of this ending in Cape Verdean Creole was read, so its output stays what it was; the pt-PT rule rests on Infopédia readings of standard European Portuguese."
+    },
+    {
       "id": "KEA_NASAL_A",
       "phonemes": [
         "a"
@@ -440,6 +494,12 @@
       "syllable_position": "coda",
       "preceded_by": "vowel",
       "notes": "The coda nasal is absorbed into the nasal vowel it created; in ALUPEC the coda n marks nasality of the preceding vowel and is not itself pronounced."
+    },
+    {
+      "id": "PT_LEX_OPEN_ER",
+      "phonemes": [],
+      "surface": "e",
+      "notes": "DISABLED for Kabuverdianu. No source for the stressed vowel of a word-final ⟨-er⟩ in this language was read, so its output stays what it was; the pt-PT list rests on Infopédia entries for standard European Portuguese."
     }
   ],
   "stress": {

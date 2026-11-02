@@ -1,0 +1,302 @@
+{
+  "code": "gl-ES-x-eonavia",
+  "name": "Eonavian (Galician-Asturian, gallego-asturiano)",
+  "script": "Latin",
+  "parent": "gl-ES",
+  "graphemes_base": "gl-ES",
+  "allophones_base": "gl-ES",
+  "positional_graphemes_base": "gl-ES",
+  "graphemes": {
+    "ch": [
+      "tʃ"
+    ],
+    "ll": [
+      "ʎ"
+    ],
+    "x": [
+      "ʃ"
+    ],
+    "nh": [
+      "ŋ"
+    ],
+    "y": [
+      "ʝ",
+      "i"
+    ],
+    "j": [
+      "χ"
+    ],
+    "ái": [
+      "aj"
+    ],
+    "éi": [
+      "ej"
+    ],
+    "ói": [
+      "oj"
+    ],
+    "áu": [
+      "aw"
+    ],
+    "éu": [
+      "ew"
+    ],
+    "óu": [
+      "ow"
+    ]
+  },
+  "allophones": {
+    "tʃ": [
+      "tʃ"
+    ],
+    "ʎ": [
+      "ʎ"
+    ],
+    "ʃ": [
+      "ʃ"
+    ],
+    "ʝ": [
+      "ʝ"
+    ],
+    "χ": [
+      "χ"
+    ]
+  },
+  "positional_graphemes": {
+    "ch": {
+      "word_initial": [
+        "tʃ"
+      ],
+      "intervocalic": [
+        "tʃ"
+      ]
+    },
+    "y": {
+      "before_vowel": [
+        "ʝ"
+      ],
+      "default": [
+        "i"
+      ]
+    }
+  },
+  "ancestors": [
+    {
+      "code": "gl-ES",
+      "role": "parent",
+      "weight": 0.62,
+      "notes": "Galician / Galaico-Portuguese stock: Eonavian (the speech of the Navia-Eo region, western Asturias, between the río Navia and the río Eo) descends genetically from the same Galaico-Portuguese continuum as Galician, sharing its defining western-Ibero-Romance outcomes: Latin PL-/CL-/FL- → [tʃ] (chover, chave, chamar — not Asturian ll-), Latin -CT-/-ULT- → [it] (feito, muito), no diphthongisation of Latin Ĕ/Ŏ (terra, porta — not Asturian tierra, puerta), ⟨x⟩ = [ʃ], falling diphthongs ou/ei preserved. Galician-side scholarship (RAG, ILG, Fernández Rei) classifies it as 'galego de Asturias'."
+    },
+    {
+      "code": "ast-x-occidental",
+      "role": "adstrate",
+      "weight": 0.28,
+      "notes": "Western Asturian (Asturleonese) adstrate — the reason the ALLA (Academia de la Llingua Asturiana) names the variety 'gallego-asturiano / eonaviego' and treats it as a transitional speech of its own. Asturian contact features: raising of final unstressed -o → [-u] and -e → [-i] in the easternmost parishes, spread of the neuter-of-matter agreement, some lexical and morphological Asturianisms, and orthographic conventions of the ALLA's own 'Normes ortográfiques'. The east↔west gradient within Navia-Eo runs from more Asturian-like (Navia) to more Galician-like (Eo)."
+    },
+    {
+      "code": "cel-x-gallaecia",
+      "role": "substrate",
+      "weight": 0.05,
+      "notes": "Gallaecian Celtic substrate of the northwest, inherited through the Galaico-Portuguese stock."
+    },
+    {
+      "code": "got",
+      "role": "superstrate",
+      "weight": 0.03,
+      "notes": "Visigothic superstrate: shared pan-Iberian overlay."
+    }
+  ],
+  "notes": "Eonavian (eonaviego, gallego-asturiano, fala del Navia-Eo) — the Galician-Portuguese transitional speech of the Navia-Eo comarca in westernmost Asturias (Spain), between the río Eo (border with Galicia) and the río Navia. CODE CHOICE: modelled under the GALICIAN clade as gl-ES-x-eonavia rather than under Asturian, because its structural phonology is Galaico-Portuguese (PL-/CL-/FL- → [tʃ], -CT- → [it], no Ĕ/Ŏ diphthongisation), which is the genetic-classification criterion the o2i graph already applies (gl-ES.json and gl-ES-x-oriental.json both name 'A Fala, Eonaviego' as the Galician-Asturian transitional zone). This is a deliberate, literature-grounded choice on a genuinely contested variety: the ALLA calls it 'gallego-asturiano' and administers it as an Asturian regional speech, while Galician institutions (RAG/ILG) call it 'galego de Asturias'; both agree it is Galician-Portuguese in origin with heavy Asturian adstrate, which the ancestry block encodes (parent gl-ES weight 0.62, ast-x-occidental adstrate 0.28). KEY FEATURES modelled as deltas over gl-ES: (1) ⟨ch⟩ = [tʃ] robustly PRESERVED word-initially and intervocalically (chover, cheo) — no urban deaffrication to [ʃ]. (2) ⟨ll⟩ = [ʎ] (palatal lateral retained; no yeísmo). (3) ⟨x⟩ = [ʃ]. (4) ⟨y⟩ = /ʝ/ before a vowel: the alphabet table (§1.1, p. 15) gives ⟨y⟩ the values /ʝ/ and /i/, and §1.2.5 (p. 16) states \"El fonema /ʝ/ represéntase por y: coyer, trabayar, mayo, muyer, yelso, díxoye, fixéronyas\". The /i/ value is the conjunction y, the one place where §1.3.2 (p. 17) lets ⟨y⟩ write a vowel; a word-final diphthong is written with ⟨i⟩ (hoi, hai, rei). /ʝ/ and /ʎ/ are separate phonemes: note 1 to §1.2.5 (p. 16) says that a native speaker of the palatalising zone says coyello, allargarye, cebolla, coye \"estremando ben os dous sonidos\". (5) ⟨j⟩ = /χ/ in unadapted loans only: §1.2.6 (p. 17) states \"El fonema /χ/ (grafiao como j) nun é propio del noso sistema llingüístico\"; adapted learned words take ⟨x⟩ /ʃ/ (antropoloxía, dixital, relixón). (6) An acute accent on the first vowel of ⟨ái éi ói áu éu óu⟩ marks the stress of a falling diphthong, and the second letter stays the glide [j] or [w]. §1.5.2 (p. 20) accents a diphthong \"según 1.5.1, poñendo el acento na vocal máis aberta: calzóis, baxóu, cantéi ~ cantéin, caráuter\", and §1.3.2 (p. 17) names hoi, hai, rei, penséi, cantái as diphthongs. The norms do not state the vowel quality inside these diphthongs. The vowel keeps the quality of the unaccented ⟨ai ei oi au eu ou⟩ inherited from gl-ES, because §1.5.4.2 (p. 21) gives the accent a timbre value only \"noutros poucos casos\": vén/ven, óso/oso, pé/pe, présa/presa and the P4 perfect coyémos, where it marks the open vowel /ɛ, ɔ/. FEATURES SHARED with the gl-ES base and therefore inherited, not re-declared: seven tonic vowels /a e ɛ i o ɔ u/; apico-alveolar /s̺/; betacism ⟨b⟩=⟨v⟩=/b/; intervocalic voiced-stop spirantisation β/ð/ɣ; falling diphthongs ou/ei. DIALECT-INTERNAL GRADIENT (documented, not phoneme-split here): the easternmost parishes raise final -o/-e to [-u]/[-i] and show more Asturian traits; distinción (/θ/) is general, with pockets of seseo and gheada near the Galician side. Provenance honesty: base phonology inherited from the research-tier gl-ES spec; the Eonavian-specific deltas are page-pinned to the ALLA Normas Fonética section (§1.1-1.3) and Frías Conde (Ianua 5, pp.93-106), both read directly.",
+  "sources": [
+    {
+      "id": "alla_normas_eonaviego2025",
+      "author": "Academia de la Llingua Asturiana (Secretaría Llingüística del Navia-Eo)",
+      "year": 2025,
+      "title": "Normas ortográficas del eonaviego (fala ou gallego-asturiano)",
+      "publisher": "ALLA, Uviéu (Os llibros d'Entrambasauguas 22)",
+      "url": null,
+      "pages": "§1.1-1.5 (Fonética), pp. 15-22",
+      "notes": "Third edition, ISBN 978-84-8168-652-4. Read directly (papers/iberian/alla_normas_ortograficas_eonaviego_2025.pdf); the printed page numbers equal the PDF page numbers. Source of the ⟨y⟩ /ʝ/, ⟨j⟩ /χ/, accented-diphthong and stress statements in this spec. The PDF text layer drops the IPA symbols /ɲ/ and /ʝ/ on pp. 15-17; they are read from the page images."
+    },
+    {
+      "id": "alla_normas_gallego_asturiano2007",
+      "author": "Academia de la Llingua Asturiana (Secretaría Llingüística del Navia-Eo)",
+      "year": 2007,
+      "title": "Normas ortográficas del gallego-asturiano",
+      "publisher": "ALLA, Uviéu",
+      "url": "https://alladixital.org/wp-content/uploads/2022/08/normas_gallego_asturianu.pdf",
+      "pages": "§1.1-1.3 (Fonética)",
+      "notes": "Read directly (papers/iberian/alla_normas_ortograficas_gallego_asturiano.pdf). §1.1 alphabet/consonant inventory /a b θ k tʃ d e ɛ f g i l ʎ m n ɲ o ɔ p ɾ r s t u/ plus /ʃ ʝ/. §1.2.2 /θ/ is a full phoneme (distinción; NO gheada, /g/ plain). §1.2.4 Latin -L-/-LL- → /ʎ/ in the eastern zone (lleite, llobo) vs /l/ in the west (leite) → the (l)l convention. §1.2.5 -LJ-/-K'L- → /ʎ/ everywhere (muller, ollo); /ʝ/ (y) with variable ʎ~ʝ merger. §1.2.6 native ⟨x⟩ = [ʃ] (xabón, queixo); Castilian jota /x/ not native. §1.3.1/§1.3.3 seven-vowel tonic system with /e ɛ/ and /o ɔ/. The variety's orthography is thus ALLA-administered even though its phonology is Galaico-Portuguese."
+    },
+    {
+      "id": "frias_conde2005",
+      "author": "Frías Conde, X.",
+      "year": 2005,
+      "title": "O relativo do continuum entre galego e asturiano en Asturias",
+      "publisher": "Ianua. Revista Philologica Romanica 5, pp. 93-106",
+      "url": "https://www.romaniaminor.org/ianua/Ianua05/ianua05_07.pdf",
+      "pages": "93-106",
+      "notes": "Read directly (papers/iberian/frias_conde_continuum_ianua05.pdf). The classification argument: rebuts García Arias point-by-point and affirms the galeguidade of eonaviego. p.96-97: the west→east -LL- gradient (leite > lleite > yeite) is argued as an ancient isogloss, not Asturian influence; native metaphony equa>eugua; characteristic intervocalic -n- denasalisation (farina>faría, miña>mía). Vocalism + nasality are the strongest Galaico-Portuguese diagnostics."
+    },
+    {
+      "id": "nieto_tfg_gallego_asturiano",
+      "author": "Nieto Rodríguez, S.",
+      "year": 2020,
+      "title": "El gallego-asturiano (TFG)",
+      "publisher": "Universidad de Oviedo (digibuo institutional repository)",
+      "url": "https://digibuo.uniovi.es/dspace/bitstream/handle/10651/64014/TFG_SaraNietoRodriguez.pdf",
+      "pages": null,
+      "notes": "Read (papers/iberian/nieto_tfg_gallego_asturiano_uniovi.pdf). Uniovi institutional-repository overview of the variety."
+    },
+    {
+      "id": "fernandez_rei1990",
+      "author": "Fernández Rei, F.",
+      "year": 1990,
+      "title": "Dialectoloxía da lingua galega",
+      "publisher": "Edicións Xerais de Galicia",
+      "url": null,
+      "pages": null,
+      "notes": "Classifies the Navia-Eo speech within the eastern Galician block ('galego de Asturias'). Book, not open — cited via the OA Frías Conde and Dubert sources."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Eonavian_dialect",
+    "https://gl.wikipedia.org/wiki/Galego-asturiano",
+    "https://ast.wikipedia.org/wiki/Gallego-asturianu",
+    "https://es.wikipedia.org/wiki/Gallego-asturiano"
+  ],
+  "timespan": {
+    "start_year": 1200,
+    "end_year": null
+  },
+  "glottolog_code": "gali1258",
+  "iso639_3": "glg",
+  "quality": "research",
+  "script_type": "alphabet",
+  "stress": {
+    "onset_clusters": ["bl", "br", "bɫ", "bɾ", "bʀ", "bʁ", "bʎ", "bχ", "dr", "dɾ", "dʀ", "dʁ", "dʎ", "dχ", "fl", "fr", "fɫ", "fɾ", "fʀ", "fʁ", "fʎ", "fχ", "kl", "kr", "kɫ", "kɾ", "kʀ", "kʁ", "kʎ", "kχ", "pl", "pr", "pɫ", "pɾ", "pʀ", "pʁ", "pʎ", "pχ", "tr", "tɾ", "tʀ", "tʁ", "tʎ", "tχ", "vl", "vr", "vɫ", "vɾ", "vʀ", "vʁ", "vʎ", "vχ", "ðr", "ðɾ", "ðʀ", "ðʁ", "ðʎ", "ðχ", "ɡl", "ɡr", "ɡɫ", "ɡɾ", "ɡʀ", "ɡʁ", "ɡʎ", "ɡχ", "ɣl", "ɣr", "ɣɫ", "ɣɾ", "ɣʀ", "ɣʁ", "ɣʎ", "ɣχ", "βl", "βr", "βɫ", "βɾ", "βʀ", "βʁ", "βʎ", "βχ"],
+    "cliticless_words": [
+      "o",
+      "a",
+      "os",
+      "as",
+      "un",
+      "unha",
+      "uns",
+      "unhas",
+      "ao",
+      "aos",
+      "do",
+      "da",
+      "dos",
+      "das",
+      "no",
+      "na",
+      "nos",
+      "nas",
+      "co",
+      "coa",
+      "cos",
+      "coas",
+      "de",
+      "en",
+      "con",
+      "por",
+      "sen",
+      "para",
+      "e",
+      "ou",
+      "nin",
+      "que",
+      "se",
+      "mais",
+      "me",
+      "te",
+      "lle",
+      "lles",
+      "vos",
+      "che",
+      "llo",
+      "lla"
+    ],
+    "default_position": -2,
+    "final_stress_endings": [
+      "r",
+      "l",
+      "z",
+      "x",
+      "d"
+    ],
+    "penult_stress_endings": [
+      "n",
+      "s",
+      "ns"
+    ],
+    "marked_vowels": [
+      "á",
+      "é",
+      "í",
+      "ó",
+      "ú"
+    ],
+    "stress_mark": "ˈ",
+    "notes": "Placement follows the Normas ortográficas del eonaviego §1.5.1 (p. 20): \"Llevan acento gráfico: a) Todas as palabras agudas acabadas en vocal, -n, ou -s [...] b) Todas as palabras graves acabadas en consonante que nun sía nin -n nin -s [...] c) As palabras esdrúxulas\". An unaccented word that ends in a vowel, -n or -s is therefore paroxytone, and an unaccented word that ends in another consonant is oxytone; §1.4.1c (p. 18) limits word-final consonants to z, s, n, l, r. That is the placement of the gl-ES block, so the endings, the onset clusters and the clitic list are the ones gl-ES states. The block differs from gl-ES in two ways. It has vowel_letters, and it has none of the gl-ES endings for an unaccented final falling diphthong, because §1.5.2 (p. 20) writes the accent on an oxytone diphthong (baxóu, cantéi), so an unaccented one is paroxytone by §1.5.1. ⟨y⟩ is never a syllable nucleus inside an Eonavian word: §1.2.5 (p. 16) states \"El fonema /ʝ/ represéntase por y\", and §1.3.2 (p. 17) writes a word-final diphthong with ⟨i⟩ (hoi, hai, rei) and keeps ⟨y⟩ as a vowel only for the conjunction y. A splitter that counts ⟨y⟩ as a vowel merges ⟨ayo⟩ into one nucleus and puts the stress of mayo [ˈmaʝo], paya and díxoye on the wrong syllable. HIATUS: §1.5.3 (p. 20) states that two or three adjacent vowels that belong to different syllables are in hiatus, and that the closed vowel takes the accent when it is tonic (falcatrúa, recibíu). That is the system of the RAG/ILG Normas §2.5, so diphthongs keeps the gl-ES list of the vowel sequences that form one syllable, and every other vowel pair splits. ipa_diphthongs is empty for the gl-ES reason: the inherited grapheme map writes every diphthong with a glide. The norm does not state how ⟨uei⟩ divides. The spec keeps the inherited gl-ES key ⟨uei⟩ [uej], the value Regueira's Dicionario de pronuncia gives for the same Galician lexemes (bidueiro biðuˈejɾo̝), so bidueira, which §1.4.1 (p. 18) lists, is stressed on its [ej] nucleus. diphthongs lists ⟨uei⟩ as one unit for the gl-ES reason: after ⟨qu gu⟩ the ⟨u⟩ is mute and ⟨quei guei⟩ hold the one nucleus [ej], so an unaccented merquei stays paroxytone by §1.5.1.",
+    "vowel_letters": [
+      "a",
+      "e",
+      "i",
+      "o",
+      "u",
+      "á",
+      "é",
+      "í",
+      "ó",
+      "ú"
+    ],
+    "diphthongs": [
+      "uei",
+      "ai",
+      "au",
+      "ei",
+      "eu",
+      "iu",
+      "oi",
+      "ou",
+      "ui",
+      "ái",
+      "áu",
+      "éi",
+      "éu",
+      "ói",
+      "óu",
+      "ia",
+      "ie",
+      "io",
+      "ua",
+      "ue",
+      "uo",
+      "iá",
+      "ié",
+      "ió",
+      "uá",
+      "ué",
+      "uó",
+      "üe",
+      "üi"
+    ],
+    "ipa_diphthongs": []
+  },
+  "orthography_standard": {
+    "name": "Normas ortográficas del eonaviego (fala ou gallego-asturiano)",
+    "authority": "Academia de la Llingua Asturiana, Secretaría Llingüística del Navia-Eo",
+    "year": 2025,
+    "notes": "Third edition (ISBN 978-84-8168-652-4). The norm writes both the eastern palatal and the western alveolar outcome of Latin L- and -LL- (lleite ~ leite, §1.2.4, p. 16), so the spelling of a text shows the zone of its writer. It is a separate norm from the Galician RAG/ILG Normas, which the gl-ES parent follows."
+  },
+  "wikidata_qid": "Q353400",
+  "location": {
+    "latitude": 43.55,
+    "longitude": -6.9,
+    "source": "manual",
+    "notes": "Navia-Eo comarca, westernmost Asturias, between the río Eo and the río Navia (approx. Vegadeo/A Veiga)."
+  }
+}

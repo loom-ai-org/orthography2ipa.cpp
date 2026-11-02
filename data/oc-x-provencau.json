@@ -1,0 +1,190 @@
+{
+  "code": "oc-x-provencau",
+  "name": "Provençal (Occitan)",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "parent": "oc",
+  "graphemes_base": "oc",
+  "allophones_base": "oc",
+  "positional_graphemes_base": "oc",
+  "notes": "Provençal (provençau) in the classical (Alibertine) norm, as a child of the Lengadocian spec. Only the letters whose value the source states SEPARATELY for Provençal are written here. Everything else is inherited through graphemes_base, allophones_base and positional_graphemes_base, so a value this dialect shares with Lengadocian has exactly one definition in the data and cannot drift away from it.\n\nConsonants that diverge. Written ⟨v⟩ is [v], initially and between vowels: the betacism that merges it into [b] is a Gascon and Lengadocian feature, and Provençal keeps the two apart. Word-final ⟨-d⟩, ⟨-g⟩, ⟨-c⟩ and ⟨-t⟩ are silent, where Lengadocian reads [t], [t͡ʃ] or [k], and [k], and [t]. Word-final ⟨-tz⟩ is [s], not [t͡s]. Word-final ⟨-lh⟩ is [j], not the [l] of Lengadocian.\n\nTwo finals go the other way, and they are the reason this cannot be a blanket rule about final-consonant loss. Word-final ⟨-n⟩ is PRONOUNCED [n] in Provençal, where the Lengadocian parent drops it (⟨pichon⟩), and word-final ⟨-r⟩ is the uvular [ʀ], where the parent drops that too. A spec written from the general statement 'Provençal loses its final consonants' would get both of these backwards.\n\nVowels and diphthongs that diverge. Written ⟨á⟩ is [e], not the [ɔ] of the parent. ⟨ai⟩ and ⟨au⟩ have a distinct ATONE value, [ej] and [ɔw] against the stressed [aj] and [aw], and they are written here under both pretonic and posttonic, which together are what 'atone' means. ⟨oi⟩ is [wej] against the parent's [uj].\n\nNOT encoded, and why. The ⟨-l⟩ vocalisation that oc.json's own notes name as a Provençal feature is absent from the source's tables: its consonant table gives ⟨l⟩ one value and records no vocalised sequence, and its diphthong table has no ⟨al⟩, ⟨el⟩ or ⟨ol⟩ entry. It is left out rather than guessed, and it needs a second cited source before it can be added. The verb endings ⟨-ás⟩ [es] and ⟨-án⟩ [en] are also left out: the source marks them as verb forms, and telling a verb from a noun of the same shape needs morphology this layer does not have, exactly as the parent's ⟨-an -en -in -on -un⟩ note already says.\n\nISO 639-3 once had a separate code for this dialect, prv, and retired it on 2007-03-14. The live code is oci, which is what this spec records; prv is noted here so a reader who meets it in older data knows what it was.",
+  "sources": [
+    {
+      "id": "locongres_graphie_phonie",
+      "author": "Lo Congrès permanent de la lenga occitana; scientific direction Maurici Romieu, with Joan Claudi Rixte and Bernat Molin",
+      "year": 2026,
+      "title": "Relacions grafia-fonia / Relations graphie-phonie",
+      "publisher": "Lo Congrès permanent de la lenga occitana",
+      "url": "https://locongres.org/fr/competences/normes/graphie-phonie/prononciation",
+      "pages": null,
+      "notes": "The per-grapheme tables give, for each letter, the general Occitan value and then the values that differ by dialect, naming provençal among them. Every value in this spec comes from the consonant table, the vowel table or the diphthong table of this source. The credits page names the scientific direction (Maurici Romieu, vice-president of the Conseil linguistic) and the scientific team (Romieu, Joan Claudi Rixte, Bernat Molin), and states NO publication year. The year recorded here is therefore the year the tables were consulted, 2026, on the model of the dated Glottolog snapshots this repository already cites, and it is not a publication date. A secondary description of these tables gives them as 'Romieu & Vaux 2014'; the credits page names no author called Vaux, so that attribution is not used."
+    },
+    {
+      "id": "alibert1976",
+      "author": "Alibert, L.",
+      "year": 1976,
+      "title": "Gramatica occitana",
+      "publisher": "Institut d'Estudis Occitans",
+      "url": null,
+      "pages": null,
+      "notes": "The classical norm itself, which this dialect is written in. Not the source of any value below."
+    },
+    {
+      "id": "bec1973",
+      "author": "Bec, P.",
+      "year": 1973,
+      "title": "Manuel pratique d'occitan moderne",
+      "publisher": "Picard",
+      "url": null,
+      "pages": null,
+      "notes": "Background on the dialect divisions. Not the source of any value below."
+    }
+  ],
+  "wikipedia": [
+    "https://fr.wikipedia.org/wiki/Proven%C3%A7al",
+    "https://oc.wikipedia.org/wiki/Proven%C3%A7au"
+  ],
+  "timespan": {
+    "start_year": 1200,
+    "end_year": null
+  },
+  "glottolog_code": "prov1235",
+  "iso639_3": "oci",
+  "wikidata_qid": "Q241243",
+  "quality": "research",
+  "constrain_onsets": true,
+  "location": {
+    "latitude": 43.5297,
+    "longitude": 5.4474,
+    "source": "manual",
+    "notes": "Aix-en-Provence, a centre of the Provençal-speaking area. Glottolog's prov1235 page carries no coordinate and Wikidata Q241243 carries none either, so this point is chosen by hand and marked as such rather than attributed to either."
+  },
+  "graphemes": {
+    "v": [
+      "v"
+    ],
+    "á": [
+      "e"
+    ],
+    "oi": [
+      "wej"
+    ]
+  },
+  "positional_graphemes": {
+    "v": {
+      "default": [
+        "v"
+      ],
+      "intervocalic": [
+        "v"
+      ]
+    },
+    "d": {
+      "default": [
+        "d"
+      ],
+      "intervocalic": [
+        "ð"
+      ],
+      "word_final": [
+        ""
+      ]
+    },
+    "g": {
+      "default": [
+        "ɡ"
+      ],
+      "intervocalic": [
+        "ɣ"
+      ],
+      "before_e": [
+        "dʒ"
+      ],
+      "before_i": [
+        "dʒ"
+      ],
+      "word_final": [
+        ""
+      ]
+    },
+    "c": {
+      "default": [
+        "k"
+      ],
+      "before_e": [
+        "s"
+      ],
+      "before_i": [
+        "s"
+      ],
+      "word_final": [
+        ""
+      ]
+    },
+    "t": {
+      "default": [
+        "t"
+      ],
+      "word_final": [
+        ""
+      ]
+    },
+    "tz": {
+      "default": [
+        "ts"
+      ],
+      "word_final": [
+        "s"
+      ]
+    },
+    "lh": {
+      "default": [
+        "ʎ"
+      ],
+      "word_final": [
+        "j"
+      ]
+    },
+    "n": {
+      "default": [
+        "n"
+      ],
+      "word_final": [
+        "n"
+      ]
+    },
+    "r": {
+      "default": [
+        "ɾ"
+      ],
+      "word_initial": [
+        "r"
+      ],
+      "word_final": [
+        "ʀ"
+      ]
+    },
+    "ai": {
+      "default": [
+        "aj"
+      ],
+      "pretonic": [
+        "ej"
+      ],
+      "posttonic": [
+        "ej"
+      ]
+    },
+    "au": {
+      "default": [
+        "aw"
+      ],
+      "pretonic": [
+        "ɔw"
+      ],
+      "posttonic": [
+        "ɔw"
+      ]
+    }
+  }
+}

@@ -332,7 +332,7 @@
     ]
   },
   "parent": "x-clade-gree1276",
-  "notes": "Reconstructed Classical Attic Greek (5th–4th c. BCE) per Allen (1968). Key features: (1) ⟨φ θ χ⟩ = aspirated stops [pʰ tʰ kʰ], NOT fricatives. (2) ⟨β δ γ⟩ = voiced stops [b d ɡ], NOT fricatives. (3) ⟨υ⟩ = front rounded [y]. (4) ⟨ζ⟩ = [zd]. (5) ⟨ει ου⟩ already monophthongised to [eː oː]. (6) Pitch accent (not captured segmentally). (7) Rough breathing = [h]. (8) ⟨γ⟩ before velars = [ŋ]. (9) Geminate consonants phonemic. (10) /r/ probably trilled, voiceless word-initially [r̥]. The combining pitch accents (acute/grave/perispomeni), length marks (macron/breve), diaeresis, breathings and iota subscript are folded away before reading (`fold_diacritics`): they ride on a vowel letter and this broad transcription does not encode them, so ⟨ό⟩ is read as the vowel ⟨ο⟩ rather than left an unknown character that drops the vowel with it (Smyth, *Greek Grammar* §§149-187 on the accents and breathings).",
+  "notes": "Reconstructed Classical Attic Greek (5th–4th c. BCE) per Allen (1968). Key features: (1) ⟨φ θ χ⟩ = aspirated stops [pʰ tʰ kʰ], NOT fricatives. (2) ⟨β δ γ⟩ = voiced stops [b d ɡ], NOT fricatives. (3) ⟨υ⟩ = front rounded [y]. (4) ⟨ζ⟩ = [zd]. (5) ⟨ει ου⟩ already monophthongised to [eː oː]. (6) Pitch accent (not captured segmentally). (7) Rough breathing = [h]. (8) ⟨γ⟩ before velars = [ŋ]. (9) Geminate consonants phonemic. (10) /r/ probably trilled, voiceless word-initially [r̥]. The combining pitch accents (acute/grave/perispomeni), the diaeresis, the breve and the smooth breathing are folded away before reading (`fold_diacritics`): they ride on a vowel letter and this broad transcription does not encode them, so ⟨ό⟩ is read as the vowel ⟨ο⟩ rather than left an unknown character that drops the vowel with it (Smyth, *Greek Grammar* §§149-187 on the accents and breathings). The smooth breathing folds because it marks the ABSENCE of /h/, so ἀ and α read alike. The rough breathing, the macron and the iota subscript do not fold: they are segmental, the table gives them readings of their own, and folding them made those readings unreachable — ἑπτά and ἐπτά both came out [epta], collapsing a minimal pair.",
   "sources": [
     {
       "id": "allen1987",
@@ -388,11 +388,8 @@
     "́",
     "̀",
     "͂",
-    "̄",
     "̆",
     "̈",
-    "̓",
-    "̔",
-    "ͅ"
+    "̓"
   ]
 }

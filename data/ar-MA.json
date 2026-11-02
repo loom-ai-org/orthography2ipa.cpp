@@ -42,6 +42,19 @@
     ],
     "گ": [
       "ɡ"
+    ],
+    "ڨ": [
+      "ɡ"
+    ],
+    "ݣ": [
+      "ɡ"
+    ],
+    "ڭ": [
+      "ɡ"
+    ],
+    "چ": [
+      "ʒ",
+      "dʒ"
     ]
   },
   "allophones_base": "ar-x-maghrebi",
@@ -117,7 +130,7 @@
       "notes": "French adstrate: /p/, /v/, /e/, /o/ phonemes"
     }
   ],
-  "notes": "Moroccan Arabic 'Darija' (دارجة). Most divergent mainstream dialect. DEFINING FEATURE: extreme short-vowel reduction — Noamane (2020) p.49: the vocalic inventory is 'limited to three underlying short vowels /i, u, a/ and an epenthetic schwa /ə/' with no long vowels; Heath (2020) p.216: the koiné 'reduce[s] all three short vowels to just one short vowel ə', original short vowels 'syncopate in weak metrical positions', yielding word-initial consonant clusters (Watson 2002 p.13, Moroccan smin 'fat' vs Cairene simīn). ج jim → /ʒ/ (voiced postalveolar fricative, NOT the affricate /dʒ/): Watson (2002) p.16 'in the majority of Maghribi dialects (cf. Heath 1987:20–1 for Moroccan), the phoneme does not have an initial occlusive element and is realized as /ž/'; Ennaji et al. (2004) p.2 inventory lists /ž/ and no /dʒ/. Interdentals merged to stops: ث θ → /t/, ذ ð → /d/, ظ/ض → /dˤ/ — Watson (2002) p.15 'in the sedentary dialects the original interdental fricatives *θ, *ð and *ð̣ merged with the dental stops'; Ennaji et al. (2004) p.2 inventory has no interdentals. ق → /q/ PRESERVED (sedentary/pre-Hilali; /ɡ/ in Bedouin/rural — Watson p.17); Moroccan has both /q/ and /ɡ/ as phonemes (Ennaji p.2). Pharyngeals ħ, ʕ strong. French adstrate: /p/, /v/, /e/, /o/. Berber (Amazigh) substrate underlies the schwa reduction and consonant-cluster phonotactics.",
+  "notes": "Moroccan Arabic 'Darija' (دارجة). Most divergent mainstream dialect. DEFINING FEATURE: extreme short-vowel reduction — Noamane (2020) p.49: the vocalic inventory is 'limited to three underlying short vowels /i, u, a/ and an epenthetic schwa /ə/' with no long vowels; Heath (2020) p.216: the koiné 'reduce[s] all three short vowels to just one short vowel ə', original short vowels 'syncopate in weak metrical positions', yielding word-initial consonant clusters (Watson 2002 p.13, Moroccan smin 'fat' vs Cairene simīn). ج jim → /ʒ/ (voiced postalveolar fricative, NOT the affricate /dʒ/): Watson (2002) p.16 'in the majority of Maghribi dialects (cf. Heath 1987:20–1 for Moroccan), the phoneme does not have an initial occlusive element and is realized as /ž/'; Ennaji et al. (2004) p.2 inventory lists /ž/ and no /dʒ/. Interdentals merged to stops: ث θ → /t/, ذ ð → /d/, ظ/ض → /dˤ/ — Watson (2002) p.15 'in the sedentary dialects the original interdental fricatives *θ, *ð and *ð̣ merged with the dental stops'; Ennaji et al. (2004) p.2 inventory has no interdentals. ق → /q/ PRESERVED (sedentary/pre-Hilali; /ɡ/ in Bedouin/rural — Watson p.17); Moroccan has both /q/ and /ɡ/ as phonemes (Ennaji p.2). Pharyngeals ħ, ʕ strong. French adstrate: /p/, /v/, /e/, /o/. Berber (Amazigh) substrate underlies the schwa reduction and consonant-cluster phonotactics. LOAN GRAPHEME ڨ. Two facts, each cited, neither inferred from the other. What the letter is: U+06A8 ARABIC LETTER QAF WITH THREE DOTS ABOVE, a qāf-derived character written for [ɡ] — Saadane & Habash 2015 §4.1 p.70 lists it among the realisations of the MSA ‹ق› consonant as 'palatal sound \"ڨ\" [g]' and states it for Algerian, Moroccan and Tunisian alike; the Unicode code chart annotates the character 'Tunisian Arabic' but names no sound, which is why the annotation alone would not license this. That this variety has the sound: /ɡ/ is already in this spec's inventory as its ‹ق› reflex, so no phone is introduced. The reading is the sound the letter writes in a spec that already has it. CODA prescribes the cognate ‹ق› for /g/ here (Zribi et al. 2014), so this key reads a spelling that occurs without endorsing it. LOAN GRAPHEME ݣ. Two facts, each cited. What the letter is: U+0763 ARABIC LETTER KEHEH WITH THREE DOTS ABOVE, the form-B kāf with three dots that Kew 2003 (Unicode L2/03-176) §3 states 'is well established as the letter representing /ɡ/' in Morocco, with photographic evidence — a street sign, a petrol pump labelled 'gasoil', a medicine package, and the Royal Moroccan Academy's Amazigh dictionary. That this variety has the sound: /ɡ/ is already in this spec's inventory, arriving from its own ‹گ› key, so no phone is introduced. CONFUSABLE, AND THE CONFUSION IS EXPENSIVE HERE: the proposal warns that this letter is visually identical to U+06AD ARABIC LETTER NG in initial and medial joined forms and that both occur in real text. ‹ڭ› is NOT mapped here and the data lane counts it 2,742 times in Moroccan-labelled rows of lahgtna's judged tree against 3,042 for ‹ݣ› — so Morocco writes /ɡ/ with both letters at about the same rate, and this spec still drops the other one. That is the largest unmapped letter counted so far and it needs its own decision, not an assumption that the two letters are interchangeable. LOAN GRAPHEME ڭ. The Unicode name misleads here and the gold settles it. U+06AD is named ARABIC LETTER NG, reads [ŋ] in the specs that own it as a letter (ota, ug), and its annotation lists Moroccan Arabic among its users without giving a value for that use; CODA-Moroccan, CODA-Algerian, CODA-Tunisian, CODA*, Kew's encoding proposal and the Unicode chart were each fetched and none pairs the letter with a sound. THIS SPEC'S OWN SCORING GOLD does: ary_arab_broad carries 13 rows with ‹ڭ› and transcribes every one [ɡ] — أڭادير → ʔ a ɡ aː d iː r, فريڭو → f r iː ɡ u, عڭون → ʕ a ɡ ɡ uː n, زڭى, فزڭ. Corroborated by the corpus: over 1,551 Moroccan-labelled rows of the judged tree the twenty most frequent forms are ڭال، ڭلت، نڭول، ڭاع، كنڭول and their paradigm, every one a qāf word. /ɡ/ is already this spec's inventory, so no phone is introduced. WHY IT MATTERS MORE THAN ITS OBSCURITY SUGGESTS: Morocco writes /ɡ/ with ‹ݣ› and ‹ڭ› at nearly the same rate, 3,042 occurrences against 2,742, so a spec mapping one and not the other reads a little over half of Morocco's /ɡ/ spellings. ⟨چ⟩ U+0686 reads what ⟨ج⟩ reads here, [ʒ] then [dʒ]. In this variety the letter writes jīm rather than a foreign affricate, and it is attested in HUMAN-WRITTEN transcripts rather than only in machine ones: 26 gold rows over 24 distinct forms, all jīm words — al-ʾūnǧlī, al-frīǧū, bǧāʿ, tǧālat. A larger machine-transcribed sample agrees with the gold about what the letter writes, substituting ⟨ج⟩ finding a plain twin in the same variety two to three times as often as substituting ⟨ك⟩, but the gold is what this rests on. This follows ⟨ڢ⟩, which reads what ⟨ف⟩ reads because it is the same letter in another hand. No phone is added.\n\nWHAT THIS DOES NOT COVER: a minority of the forms are words whose donor sound is /tʃ/ — cheese, challenge, culture — and they will read [ʒ] here, which is wrong for those words. /tʃ/ is not in this spec's inventory, so the letter cannot be given that reading without an inventory claim and a source for it, and no source for ⟨چ⟩ in this variety was found: CODA-Tunisian and CODA* contain the letter nowhere, and the one Tunisian affricate source spells the sound ت+ش instead. Reading them [ʒ] is wrong in the vowel-bearing consonant; dropping the letter, which is what happens today, is wrong in the consonant AND leaves the vowel stranded.",
   "quality": "research",
   "script_type": "abjad",
   "sources": [
@@ -181,6 +194,35 @@
       "url": null,
       "pages": null,
       "notes": null
+    },
+    {
+      "id": "saadane_habash2015",
+      "author": "Saadane, H. & Habash, N.",
+      "year": 2015,
+      "title": "A Conventional Orthography for Algerian Arabic",
+      "publisher": "Proceedings of the Second Workshop on Arabic Natural Language Processing, Beijing (ACL W15-3208)",
+      "url": "https://aclanthology.org/W15-3208/",
+      "pages": "§4.1 Phonological Variations, p.70",
+      "notes": "The source that pairs the LETTER with the sound, which the Unicode annotation does not. §4.1 lists the realisations of the consonant equivalent to MSA ‹ق› and gives one of them as: 'palatal sound \"ڨ\" [g]: this sound is also used in both Moroccan and Tunisian dialects in addition to the ALG one. In Algeria, this sound is used in some cities like Annaba and Sétif, in addition to the Bedouin dialects where this sound is widely employed.' So ‹ڨ› is a qāf-derived letter written for [ɡ], stated for Algerian, Moroccan and Tunisian. SCOPE: 'palatal' is the paper's word for a velar stop, and the paper names no variety outside the Maghreb — it is not a source for ‹ڨ› in Saudi, Gulf or Egyptian writing. Note also that CODA itself prescribes the cognate ‹ق› for /g/ in Tunisian (Zribi et al. 2014, 'The letter ق q is used to represent the two consonants /q/ and /g/'), so this letter is a spelling that OCCURS, not one CODA endorses."
+    },
+    {
+      "id": "kew2003",
+      "author": "Kew, J. (SIL International)",
+      "year": 2003,
+      "title": "Proposal to encode Jawi and Moroccan Arabic GAF characters",
+      "publisher": "Unicode document L2/03-176, 3 June 2003",
+      "url": "https://unicode.org/L2/L2003/03176-gafs.pdf",
+      "pages": "§3 Moroccan GAF, pp.5-6",
+      "notes": "The encoding proposal behind U+0763, and the only source that states the letter-to-sound pairing outright — the Moroccan grammars transcribe in Latin and so never name a letter. §3: 'Although standard Arabic does not write a /ɡ/ sound, in Morocco the use of a form B kaf with three dots above is well established as the letter representing /ɡ/.' Evidence is photographic — a street name, a petrol pump labelled 'gasoil', a 'Megamag' medicine package, and the Royal Moroccan Academy's Amazigh dictionary (Shafiq 1996 p.136). p.6, Figure 12 (from Norris 1968 p.73): 'A similar form is seen in Mauritanian texts, where a kaf written in shape B with three dots added is also used to represent /ɡ/.' TRAPS: the proposal notes the letter is visually identical to U+06AD ARABIC LETTER NG in initial and medial joined forms, so the two are confusable in real text and both occur; and it states that published literature is in standard Arabic and does not use the letter, so frequency in edited prose tests nothing about its status."
+    },
+    {
+      "id": "lahgtna_judged_2026_09",
+      "author": "TigreGotico lahgtna judged tree (dataset, not literature)",
+      "year": 2026,
+      "title": "Dialect-labelled Arabic transcripts, judged tree",
+      "publisher": "Internal dataset, /root/speech/data-lane/trees-units/judged/lahgtna (305 shards, 608,124 rows), label field `dialect`",
+      "pages": "counted 2026-09-17 by the data lane",
+      "notes": "A DATASET CITATION and weighed as one: it records which spellings occur and how often, never which are correct, and it cannot be checked from outside this organisation — so the lane that ran it is named. UNITS ARE STATED because rows and occurrences differ by about 1.8x here and have already been confused once. ‹ڭ› U+06AD: 1,925 rows / 3,250 occurrences overall; Moroccan 1,551 rows / 2,742 occurrences, Algerian 297 / 391, Tunisian 54 / 80. ‹ݣ› U+0763, same tree and date: 2,031 rows / 3,437 occurrences; Moroccan 1,717 / 3,042, Algerian 260 / 328, Tunisian 48 / 61. ‹ڨ› U+06A8 by contrast is Algerian-dominant: 24,511 Algerian rows against 37 Moroccan. The twenty most frequent Moroccan ‹ڭ› forms are ڭال 171, ڭلت 166, نڭول 115, ڭاع 101, كنڭول 77, ڭالت 70, كتڭول 41, ڭول 37, كيڭول 37, ڭَالْ 34, تڭول 32, ڭالي 31, ڭُلْتْ 29, كانڭول 29, ڭالْ 24, ڭُلتْ 22, ڭاليا 19, كيتڭال 18, نڭلس 18, ڭولي 17 — every one a qāf word (قال، قلت، نقول، قاع، كنقول), with no mixture and no residue. CAVEAT: counts are over the judged tree as it stands with no gates applied, so they describe what the corpus holds rather than what a pool would take."
     }
   ],
   "wikipedia": [
