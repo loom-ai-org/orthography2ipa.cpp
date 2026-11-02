@@ -108,11 +108,23 @@ if(BUILD_TESTING)
     add_test(NAME orthography2ipa-install COMMAND ${CMAKE_COMMAND} -P ${CMAKE_CURRENT_BINARY_DIR}/install_check.cmake)
     find_package(Python3 COMPONENTS Interpreter QUIET)
     if(Python3_Interpreter_FOUND)
-        # The reference Python package next door powers the parity tests;
-        # each harness fails loudly when it is unavailable.
+        # ALL of the parity harnesses compare against the reference Python
+        # package that lives NEXT DOOR — locally that is ../orthography2ipa,
+        # and CI checks it out (see .github/workflows/ci.yml) and installs the
+        # reference's own requirements.txt into its interpreter. Each harness
+        # fails loudly when its reference is missing or its interpreter lacks
+        # a dependency; the REGISTRATION here is what decides whether the
+        # suite can run at all. Without the reference, CTest still runs the
+        # pure C++ gates (core + install) and the build stays green on a
+        # machine that has never seen the reference.
+        set(O2I_PARITY_ENABLED OFF)
         if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/../orthography2ipa/orthography2ipa/phonetok.py")
             set(ENV{O2I_PYTHON_ROOT} "${CMAKE_CURRENT_SOURCE_DIR}/../orthography2ipa")
+            set(ENV{O2I_PYTHON} "${Python3_EXECUTABLE}")
+            set(O2I_PARITY_ENABLED ON)
+            set(O2I_REF_ROOT "${CMAKE_CURRENT_SOURCE_DIR}/../orthography2ipa")
         endif()
+        if(O2I_PARITY_ENABLED)
         add_test(NAME orthography2ipa-python-parity
                  COMMAND ${Python3_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/tests/python_parity.py $<TARGET_FILE:orthography2ipa-cli>)
         add_test(NAME orthography2ipa-token-parity
@@ -139,7 +151,7 @@ if(BUILD_TESTING)
         # distance over the alias/catalog battery.
         add_test(NAME orthography2ipa-registry-parity
                  COMMAND ${Python3_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/tests/registry_parity.py
-                         $<TARGET_FILE:orthography2ipa-cli> --pairs 800)
+                         $<TARGET_FILE:orthography2ipa-cli> --pairs 800 --mutations 2000)
         # The langcodes engine behind the registry port: standardize_tag,
         # tag_distance and the parse/maximize round-trips against the
         # installed langcodes (CTest-sized battery; --full is a manual sweep).
@@ -164,25 +176,29 @@ if(BUILD_TESTING)
         add_test(NAME orthography2ipa-reference-regression-sweep
                  COMMAND ${Python3_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/tests/reference_regression.py
                          $<TARGET_FILE:orthography2ipa-cli> --battery required --surface all --sweep)
-        set_tests_properties(orthography2ipa-reference-regression-sweep
+        set_tests_properties(orthography2ipa-python-parity
+                             orthography2ipa-token-parity
+                             orthography2ipa-beam-parity
+                             orthography2ipa-stress-parity
+                             orthography2ipa-allophony-parity
+                             orthography2ipa-tone-parity
+                             orthography2ipa-sentence-parity
+                             orthography2ipa-reference-regression-required
                              orthography2ipa-reference-regression-categories
-                             orthography2ipa-registry-parity
-                             PROPERTIES ENVIRONMENT "O2I_PYTHON_ROOT=${CMAKE_CURRENT_SOURCE_DIR}/../orthography2ipa")
-        # The three catalog-scale batteries are minutes-long: the sweep and the
-        # categories run every spec's word_exceptions across every surface, and
-        # the registry gate walks a mutation battery. CTest labels them `sweep`;
-        # they have generous timeouts so a plain ctest still runs them.
+                             orthography2ipa-reference-regression-sentence
+                             PROPERTIES ENVIRONMENT "O2I_PYTHON_ROOT=${O2I_REF_ROOT}"
+                                        TIMEOUT 3600)
+        set_tests_properties(orthography2ipa-registry-parity
+                             orthography2ipa-langcodes-parity
+                             PROPERTIES ENVIRONMENT "O2I_PYTHON_ROOT=${O2I_REF_ROOT};O2I_PYTHON=${Python3_EXECUTABLE}")
         set_tests_properties(orthography2ipa-reference-regression-sweep
-                             PROPERTIES LABELS sweep TIMEOUT 14400)
+                             PROPERTIES ENVIRONMENT "O2I_PYTHON_ROOT=${O2I_REF_ROOT}" TIMEOUT 14400)
         set_tests_properties(orthography2ipa-reference-regression-categories
                              PROPERTIES LABELS sweep TIMEOUT 10800)
+        set_tests_properties(orthography2ipa-reference-regression-sweep
+                             PROPERTIES LABELS sweep)
         set_tests_properties(orthography2ipa-registry-parity
                              PROPERTIES TIMEOUT 3600)
-        set_tests_properties(orthography2ipa-reference-regression-required
-                             orthography2ipa-reference-regression-sentence
-                             orthography2ipa-registry-parity
-                             orthography2ipa-langcodes-parity
-                             PROPERTIES ENVIRONMENT "O2I_PYTHON_ROOT=${CMAKE_CURRENT_SOURCE_DIR}/../orthography2ipa")
 
         # The module-level parity harnesses: each drives its own check binary.
         add_test(NAME orthography2ipa-inventory-parity
@@ -201,7 +217,8 @@ if(BUILD_TESTING)
                              orthography2ipa-lm-parity
                              orthography2ipa-lattice-per-parity
                              orthography2ipa-features-conformance-parity
-                             PROPERTIES ENVIRONMENT "O2I_PYTHON_ROOT=${CMAKE_CURRENT_SOURCE_DIR}/../orthography2ipa"
+                             PROPERTIES ENVIRONMENT "O2I_PYTHON_ROOT=${O2I_REF_ROOT};O2I_PYTHON=${Python3_EXECUTABLE}"
                                         TIMEOUT 3600)
+        endif()
     endif()
 endif()

@@ -15,8 +15,31 @@ jobs:
       CXX: ${{ matrix.compiler == 'clang' && 'clang++' || 'g++' }}
     steps:
       - uses: actions/checkout@v4
+      # The parity suite compares against the reference package, which is a
+      # sibling repository: CI clones it to the same relative position a
+      # developer's checkout has (../orthography2ipa), and installs ITS OWN
+      # requirements — numpy, langcodes, ovos-spec-tools — so the reference is
+      # importable from the system python the harnesses run it through.
+      # Pinned (actions/checkout fetches an exact SHA, which a --depth-1
+      # clone cannot) to the reference commit the generated tables and the
+      # parity gates were validated against (TigreGotico/orthography2ipa,
+      # branch dev). Bump it deliberately, alongside regenerating the
+      # generated tables (tests/gen_*.py) and re-running the sweeps — never
+      # let CI red-spam on upstream drift. The reference then moves one level
+      # up, because every harness resolves it as the SIBLING directory
+      # ../orthography2ipa of this repository, exactly like a developer's
+      # checkout.
+      - uses: actions/checkout@v4
+        with:
+          repository: TigreGotico/orthography2ipa
+          ref: d89484ff654a72852b41d46dbfd18df952a7f0fc
+          path: reference
+      - name: Place the reference at its sibling path
+        run: mv "$GITHUB_WORKSPACE/reference" "$GITHUB_WORKSPACE/../orthography2ipa"
       - name: Install dependencies
         run: sudo apt-get update && sudo apt-get install -y cmake libicu-dev libboost-dev
+      - name: Install the reference's Python requirements
+        run: python3 -m pip install numpy langcodes ovos-spec-tools || python3 -m pip install --break-system-packages numpy langcodes ovos-spec-tools
       - name: Configure
         run: cmake -S . -B build -DBUILD_TESTING=ON
       - name: Build
