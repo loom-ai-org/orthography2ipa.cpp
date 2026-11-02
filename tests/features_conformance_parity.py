@@ -368,13 +368,17 @@ class MergesHiatus(SyllabifierPlugin):
 
 
 class WholeWord(SyllabifierPlugin):
-    def __init__(self, codes):
+    def __init__(self, codes, priority=50):
         self._codes = list(codes)
+        self._priority = priority
     def syllabify(self, word, lang=None):
         return [word]
     @property
     def language_codes(self):
         return list(self._codes)
+    @property
+    def priority(self):
+        return self._priority
 
 
 class BacksA(LatticeRescorer):
@@ -455,6 +459,9 @@ class LatticePlugin(RescorerPlugin):
 
 FR = ["terre", "femme", "verre"]
 THREE = ["casa", "kata", "mesa"]
+# Words whose pt-PT transcription a whole-word syllabifier moves.
+MOVED_BY_WHOLE_WORD = ["naquelas", "leque", "saque", "aguardem", "albergue",
+                       "embarque", "inextinguível"]
 
 
 def reference_scenarios():
@@ -475,6 +482,9 @@ def reference_scenarios():
          lambda: assert_syllabifier_conforms(WholeWord(["es-ES"]), FR, "fr-FR")),
         ("syllabifier:default words, pt-PT",
          lambda: assert_syllabifier_conforms(WholeWord(["pt-PT"]), None, "pt-PT")),
+        ("syllabifier:whole word at priority 40, pt-PT",
+         lambda: assert_syllabifier_conforms(WholeWord(["pt-PT"], 40),
+                                             MOVED_BY_WHOLE_WORD, "pt-PT")),
         ("lattice:a to ɐ (declared)",
          lambda: assert_rescorer_conforms(LatticePlugin(BacksA), ["casa"], "pt-PT")),
         ("lattice:a to Q (invented)",
@@ -554,7 +564,7 @@ def run_conformance(binary):
           f"{messages}/{compared}")
     print(f"  C++-only scenarios (the whole-word RescorerPlugin seam): "
           f"{len(cpp_only)}")
-    return agreed, compared
+    return agreed, len(want)
 
 
 def main():
@@ -570,7 +580,10 @@ def main():
     if only != "conformance":
         run_features(binary)
     if only != "features":
-        run_conformance(binary)
+        # Every reference scenario must reach the same verdict on the C++ side.
+        agreed, expected = run_conformance(binary)
+        if agreed != expected:
+            sys.exit(1)
 
 
 if __name__ == "__main__":

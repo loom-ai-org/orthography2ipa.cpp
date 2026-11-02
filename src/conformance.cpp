@@ -2,6 +2,7 @@
 #include "orthography2ipa/conformance.hpp"
 
 #include "orthography2ipa/orthography2ipa.hpp"
+#include "plugin_registry.hpp"
 #include "unicode_util.hpp"
 
 #include <algorithm>
@@ -20,13 +21,20 @@ using uni::to_utf32;
 using uni::to_utf8;
 
 // conformance.py installs the kit's plugin in the registry for the duration of
-// the check and restores what was there in a `finally`. The C++ registry keys
-// plugins by name and has no unregister, so the kit registers ONE entry under
-// its own name (the reference's `"__conformance__"`) that delegates to the
+// the check and restores what was there in a `finally`. The kit's entry has
+// its own name (the reference's `"__conformance__"`); it delegates to the
 // caller's plugin while enabled and claims no language code at all while
-// disabled. `owns_language` (registry.py) then routes nothing to it, which is
-// the same observable state as `registry._syllabifiers = {}`: the built-in
-// answer runs.
+// disabled.
+//
+// For syllabifiers the reference REPLACES the registry: the two passes run
+// under `registry._syllabifiers = {code: plugin}` and `= {}`. The kit's entry
+// is therefore the only syllabifier registered during the check, enabled for
+// the first pass and disabled for the second, so the second pass is the
+// built-in answer even when another plugin claims the language.
+//
+// Rescorers run only when something names them, so the kit registers its
+// entry beside the others and names it alone, which is the reference's
+// `registry._declared["rescore"] = {"__conformance__": plugin}`.
 const char* const CONFORMANCE_NAME = "__conformance__";
 
 /// The registry gate's common half, so one RAII object restores either kind.
@@ -49,6 +57,20 @@ public:
 
 private:
     Gate& gate_;
+};
+
+/// conformance.py `saved = registry._syllabifiers` ... `finally:
+/// registry._syllabifiers = saved`.
+class ReplaceSyllabifiers {
+public:
+    explicit ReplaceSyllabifiers(SyllabifierRegistry plugins)
+        : saved_(exchange_syllabifiers(std::move(plugins))) {}
+    ReplaceSyllabifiers(const ReplaceSyllabifiers&) = delete;
+    ReplaceSyllabifiers& operator=(const ReplaceSyllabifiers&) = delete;
+    ~ReplaceSyllabifiers() { exchange_syllabifiers(std::move(saved_)); }
+
+private:
+    SyllabifierRegistry saved_;
 };
 
 class ScopedSyllabifier : public SyllabifierPlugin, public Gate {
@@ -378,7 +400,7 @@ void check_downstream_neutrality(const SyllabifierPlugin& plugin,
                                  const std::string& lang) {
     const std::map<std::string, std::vector<std::string>> no_plugins;
     auto wrapper = std::make_shared<ScopedSyllabifier>(plugin, install_codes(plugin.language_codes(), lang));
-    register_syllabifier_plugin(CONFORMANCE_NAME, wrapper);
+    const ReplaceSyllabifiers only_the_kit({{CONFORMANCE_NAME, wrapper}});
     const RestoreOnExit restore(*wrapper);
 
     wrapper->set_enabled(true);

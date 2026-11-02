@@ -1,4 +1,5 @@
 #include "beam.hpp"
+#include "plugin_registry.hpp"
 #include "orthography2ipa/orthography2ipa.hpp"
 #include "orthography2ipa/tone.hpp"
 #include "orthography2ipa/stress.hpp"
@@ -6,6 +7,7 @@
 #include "orthography2ipa/transform.hpp"
 #include "orthography2ipa/markup.hpp"
 #include "orthography2ipa/registry.hpp"
+#include "orthography2ipa/syllabifiers.hpp"
 #include "unicode_util.hpp"
 #include "orthography2ipa/vowels.hpp"
 
@@ -29,6 +31,9 @@
 #include <unicode/normalizer2.h>
 #include <unicode/unistr.h>
 #include <unicode/uchar.h>
+#ifdef O2I_HAVE_SILABIFICADOR
+#include <silabificador/silabificador.hpp>
+#endif
 
 namespace orthography2ipa {
 namespace {
@@ -56,7 +61,19 @@ std::map<std::string, std::string> registered_lexicons;
 std::optional<std::string> lexicon_directory;
 std::map<std::string, std::map<std::string, std::string>> lexicon_cache;
 std::map<std::string, std::shared_ptr<NormalizePlugin>> normalize_plugins;
-std::map<std::string, std::shared_ptr<SyllabifierPlugin>> syllabifier_plugins;
+// registry.py _discover_syllabifiers over the package's own entry point,
+// `silabificador = orthography2ipa.syllabifiers:SilabificadorSyllabifier`:
+// the plugin is there when the silabificador library is, and absent otherwise.
+std::map<std::string, std::shared_ptr<SyllabifierPlugin>> bundled_syllabifiers() {
+    std::map<std::string, std::shared_ptr<SyllabifierPlugin>> plugins;
+#ifdef O2I_HAVE_SILABIFICADOR
+    syllabifiers::SilabificadorSyllabifier::provide(
+        [](const std::string& word) { return silabificador::syllabify(word); });
+    plugins["silabificador"] = std::make_shared<syllabifiers::SilabificadorSyllabifier>();
+#endif
+    return plugins;
+}
+std::map<std::string, std::shared_ptr<SyllabifierPlugin>> syllabifier_plugins = bundled_syllabifiers();
 std::map<std::string, std::shared_ptr<StressPlugin>> stress_plugins;
 std::map<std::string, std::shared_ptr<RescorerPlugin>> rescorer_plugins;
 std::map<std::string, std::shared_ptr<SandhiPlugin>> sandhi_plugins;
@@ -1517,9 +1534,11 @@ const StressPlugin* get_stress_plugin(const std::string& code) {
 }
 
 const SyllabifierPlugin* get_syllabifier(const std::string& code) {
+    // registry.py get_syllabifier: `code = _resolve_code(code)` before the lookup.
+    const std::string language = resolve(code);
     const SyllabifierPlugin* best = nullptr;
     for (const auto& [_, plugin] : syllabifier_plugins)
-        if (owns_language(*plugin, code) &&
+        if (owns_language(*plugin, language) &&
             (best == nullptr || plugin->priority() > best->priority()))
             best = plugin.get();
     return best;
@@ -1539,6 +1558,19 @@ void discover_plugins(const std::string& directory) {
         if (!register_function) { dlclose(handle); throw std::runtime_error("plugin lacks orthography2ipa_register_plugins: " + entry.path().string()); }
         register_function(); plugin_handles.push_back(handle);
     }
+}
+namespace {
+void discover_plugins_once() {
+    static std::once_flag discovery_once;
+    std::call_once(discovery_once, [] { discover_plugins(); });
+}
+} // namespace
+SyllabifierRegistry exchange_syllabifiers(SyllabifierRegistry plugins) {
+    // Discover first: a plugin library loaded later would register into the
+    // map that is swapped out.
+    discover_plugins_once();
+    syllabifier_plugins.swap(plugins);
+    return plugins;
 }
 std::vector<std::string> available_codes(bool include_clades) {
     std::vector<std::string> out; if (!fs::exists(data_dir)) return out;
@@ -1629,8 +1661,7 @@ G2P::G2P(std::string language, std::map<std::string, std::vector<std::string>> p
       sentence_rescorers_(sentence::normalize_sentence_rescorers(sentence_rescorer)),
       // `user_rescorers = normalize_rescorers(rescorer)`
       user_rescorers_(rescorer::normalize_rescorers(rescorer)) {
-    static std::once_flag discovery_once;
-    std::call_once(discovery_once, [] { discover_plugins(); });
+    discover_plugins_once();
     if (!dialect_profile_.empty() && !dialect_profile_known(dialect_profile_))
         throw std::invalid_argument("unknown dialect profile: " + dialect_profile_);
     for (const auto& [stage, names] : plugin_overrides_) {

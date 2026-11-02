@@ -178,5 +178,23 @@ int main() {
         assert(tone::dock_tone_marks("o\xC5\x8B\xCB\xA7", {}) == "o\xC5\x8B\xCB\xA7");
         assert(tone::dock_tone_marks("ai", {}) == "ai");  // no marks: no-op
     }
+
+    // ── Syllabifier lookup resolves the code (registry.py get_syllabifier) ──
+    {
+        struct WholeWord : SyllabifierPlugin {
+            std::vector<std::string> language_codes() const override { return {"pt-PT"}; }
+            std::vector<std::string> syllabify(const std::string& word,
+                                               const std::string&) const override {
+                return {word};
+            }
+            int priority() const override { return 90; }
+        };
+        const auto plugin = std::make_shared<WholeWord>();
+        register_syllabifier_plugin("test-whole-word", plugin);
+        for (const char* code : {"pt-PT", "pt", "por", "pt-pt", "pt_PT"})
+            assert(get_syllabifier(code) == plugin.get());
+        assert(get_syllabifier("pt-PT-x-lisbon") != plugin.get());
+        assert(stress::syllables_for("ponte", "por") == std::vector<std::string>{"ponte"});
+    }
     return 0;
 }
