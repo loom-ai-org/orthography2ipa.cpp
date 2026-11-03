@@ -3,12 +3,15 @@
 #include "orthography2ipa/schema.hpp"
 #include "orthography2ipa/tone.hpp"
 #include "beam.hpp"
+#include "codepoint_regex.hpp"
 
+#include <atomic>
 #include <cassert>
 #include <cstdlib>
 #include <filesystem>
 #include <fstream>
 #include <stdexcept>
+#include <thread>
 
 using namespace orthography2ipa;
 
@@ -506,6 +509,25 @@ int main() {
         assert(english.transcribe_word("\xe2\x80\x9czork\xe2\x80\x99" "flim\xe2\x80\x9d") == "\xcb\x88z\xc9\xaa\xc5\x8bk");
         clear_lexicons();
         std::filesystem::remove_all(dir);
+    }
+    {
+        // A search on one thread never bounds the repetitions of a search on
+        // another: each sees its own subject's length as the repeat limit.
+        const re32::Regex long_run = re32::Regex::compile(U"a*b");
+        const re32::Regex short_run = re32::Regex::compile(U"x*");
+        const std::u32string subject = std::u32string(500, U'a') + U"b";
+        std::atomic<bool> done{false};
+        std::thread other([&] {
+            while (!done) short_run.search(U"x", nullptr);
+        });
+        int wrong = 0;
+        for (int i = 0; i < 2000; ++i) {
+            re32::Match m;
+            if (!long_run.search(subject, &m) || m.start != 0 || m.end != subject.size()) ++wrong;
+        }
+        done = true;
+        other.join();
+        assert(wrong == 0);
     }
     return 0;
 }
