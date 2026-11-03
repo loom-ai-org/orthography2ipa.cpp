@@ -532,17 +532,26 @@ LanguageSpec load_raw(const std::string& code, std::set<std::string>& loading) {
         s.allophone_rules = overlay_allophone(ancestor.allophone_rules, s.allophone_rules);
         s.sandhi_rules = overlay_sandhi(ancestor.sandhi_rules, s.sandhi_rules);
     }
-    if (!s.parent.empty() && s.parent != code) {
-        std::vector<std::string> path; std::set<std::string> seen{code}; std::string ancestor = s.parent;
-        while (!ancestor.empty() && !seen.count(ancestor)) {
-            seen.insert(ancestor); LanguageSpec a = load_raw(ancestor, loading);
-            if (a.clade && !a.name.empty()) path.push_back(a.name);
-            ancestor = a.parent;
-        }
-        std::reverse(path.begin(), path.end());
-        s.family_path_metadata = path;
-        if (s.family.empty()) for (std::size_t i = 0; i < path.size(); ++i) { if (i) s.family += " > "; s.family += path[i]; }
+    // json_loader.py: classify through `parent`, or else through the first
+    // ancestor with the PARENT role. The path is that spec's own path, plus
+    // its name when it is a clade. `family` is OWN_ONLY: the JSON value, or
+    // else the path joined, never the graphemes base's family.
+    std::string classification_parent = s.parent;
+    if (classification_parent.empty())
+        for (const auto& a : s.ancestors) if (a.role == "parent") { classification_parent = a.code; break; }
+    if (!classification_parent.empty() && classification_parent != code) {
+        try {
+            const LanguageSpec p = load_raw(classification_parent, loading);
+            s.family_path_metadata = p.family_path_metadata;
+            if (p.clade) s.family_path_metadata.push_back(p.name);
+        } catch (const std::exception&) {}
     }
+    s.family = raw.get<std::string>("family", "");
+    if (s.family.empty())
+        for (std::size_t i = 0; i < s.family_path_metadata.size(); ++i) {
+            if (i) s.family += " > ";
+            s.family += s.family_path_metadata[i];
+        }
     // Inheritance nulls (JSON null) delete the inherited entry wholesale —
     // types.py __post_init__ pops them after the base merge. property_tree
     // cannot distinguish null from an empty list, so an empty entry acts as
@@ -556,6 +565,10 @@ LanguageSpec load_raw(const std::string& code, std::set<std::string>& loading) {
     };
     drop_null_entries(s.graphemes);
     drop_null_entries(s.allophones);
+    // types.py __post_init__: a spec that names its parent only in
+    // `ancestors` (PARENT role) takes it as `parent`.
+    if (s.parent.empty())
+        for (const auto& a : s.ancestors) if (a.role == "parent") { s.parent = a.code; break; }
     // positional_graphemes: an empty entry is a MEANINGFUL shadow (it
     // blocks inheriting the base's refinements for that grapheme), so it
     // stays.
@@ -993,11 +1006,9 @@ bool dialect_profile_known(const std::string& profile) {
 } // namespace
 
 std::vector<std::string> LanguageSpec::family_path() const {
-    if (!family_path_metadata.empty()) return family_path_metadata;
-    std::vector<std::string> out;
-    std::stringstream stream(family); std::string part;
-    while (std::getline(stream, part, '>')) { if (!part.empty() && part[0] == ' ') part.erase(0, 1); out.push_back(part); }
-    return out;
+    // types.py family_path: the derived clade path only. An explicit
+    // `family` string (Isolate, Creole) is not a path.
+    return family_path_metadata;
 }
 
 Tokenizer::Tokenizer(const LanguageSpec& spec, bool expand_allophones, bool apply_allophony,
