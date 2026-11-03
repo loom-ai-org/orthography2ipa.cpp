@@ -4,6 +4,7 @@
 #include "beam.hpp"
 
 #include <cassert>
+#include <filesystem>
 #include <fstream>
 #include <stdexcept>
 
@@ -82,6 +83,23 @@ int main() {
     register_lexicon("pt", path);
     assert(get_lexicon("pt").at("casa") == "kaza");
     clear_lexicons();
+
+    // A lexicon-dir file belongs to the spec its name resolves to, so en.tsv
+    // serves en-GB, the spec that en resolves to.
+    {
+        const std::string dir = "/tmp/orthography2ipa-cpp-lexicon-dir";
+        std::filesystem::create_directories(dir);
+        { std::ofstream output(dir + "/en.tsv"); output << "zorkflim\tzɔɹkflɪm\n"; }
+        set_lexicon_directory(dir);
+        assert(resolve("en") == "en-GB");
+        assert(lexicon_path("en-GB") == dir + "/en.tsv");
+        assert(get_lexicon("en-GB").at("zorkflim") == "zɔɹkflɪm");
+        // The reference adds the primary stress mark to the lexicon entry.
+        assert(transcribe("zorkflim", "en-GB") == "ˈzɔɹkflɪm");
+        assert(transcribe("zorkflim", "en") == "ˈzɔɹkflɪm");
+        clear_lexicons();
+        std::filesystem::remove_all(dir);
+    }
 
     // Stress pipeline (stress.py / g2p.py ports): syllabification, stress
     // detection, secondary stress, quantity-sensitive placement and iambic

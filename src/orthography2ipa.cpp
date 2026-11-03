@@ -710,15 +710,31 @@ bool owns_language(const Plugin& plugin, const std::string& language) {
 
 
 
+// lexicon.py lexicon_path: the lexicon-dir file that serves the resolved
+// *code*. A file named exactly for the code wins; otherwise the first *.tsv,
+// in sorted order, whose name resolves to the code serves it, so en.tsv
+// serves en-GB.
+std::optional<fs::path> lexicon_dir_file(const std::string& code) {
+    const char* env = std::getenv("ORTHOGRAPHY2IPA_LEXICON_DIR");
+    const std::string dir = lexicon_directory ? *lexicon_directory : (env ? env : "");
+    if (dir.empty()) return std::nullopt;
+    const fs::path exact = fs::path(dir) / (code + ".tsv");
+    if (fs::is_regular_file(exact)) return exact;
+    if (!fs::is_directory(dir)) return std::nullopt;
+    std::vector<fs::path> files;
+    for (const auto& entry : fs::directory_iterator(dir))
+        if (entry.path().extension() == ".tsv") files.push_back(entry.path());
+    std::sort(files.begin(), files.end());
+    for (const auto& file : files)
+        if (resolve(file.stem().string()) == code) return file;
+    return std::nullopt;
+}
+
 std::map<std::string, std::string> load_lexicon(const std::string& code) {
     auto cached = lexicon_cache.find(code); if (cached != lexicon_cache.end()) return cached->second;
     std::string source;
     if (auto it = registered_lexicons.find(code); it != registered_lexicons.end()) source = it->second;
-    else {
-        const char* env = std::getenv("ORTHOGRAPHY2IPA_LEXICON_DIR");
-        const std::string dir = lexicon_directory ? *lexicon_directory : (env ? env : "");
-        if (!dir.empty() && fs::is_regular_file(fs::path(dir) / (code + ".tsv"))) source = (fs::path(dir) / (code + ".tsv")).string();
-    }
+    else if (const auto file = lexicon_dir_file(code); file && fs::is_regular_file(*file)) source = file->string();
     std::map<std::string, std::string> result;
     if (!source.empty()) {
         fs::path path = source;
@@ -1490,10 +1506,7 @@ std::map<std::string, std::string> get_lexicon(const std::string& code) { return
 std::optional<std::string> lexicon_source(const std::string& code) {
     const auto canonical = resolve(code);
     if (auto it = registered_lexicons.find(canonical); it != registered_lexicons.end()) return it->second;
-    const char* env = std::getenv("ORTHOGRAPHY2IPA_LEXICON_DIR");
-    const std::string dir = lexicon_directory ? *lexicon_directory : (env ? env : "");
-    if (!dir.empty() && fs::is_regular_file(fs::path(dir) / (canonical + ".tsv")))
-        return (fs::path(dir) / (canonical + ".tsv")).string();
+    if (const auto file = lexicon_dir_file(canonical)) return file->string();
     return std::nullopt;
 }
 std::optional<std::string> lexicon_path(const std::string& code) {
