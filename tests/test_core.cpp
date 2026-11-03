@@ -4,6 +4,8 @@
 #include "beam.hpp"
 
 #include <cassert>
+#include <cstdlib>
+#include <filesystem>
 #include <fstream>
 #include <stdexcept>
 
@@ -195,6 +197,21 @@ int main() {
             assert(get_syllabifier(code) == plugin.get());
         assert(get_syllabifier("pt-PT-x-lisbon") != plugin.get());
         assert(stress::syllables_for("ponte", "por") == std::vector<std::string>{"ponte"});
+    }
+    {
+        // A lexicon entry written with U+0027 answers a word typed with U+2019
+        // that also carries edge punctuation: the reference straightens the
+        // stripped key as well as the exact key.
+        std::string pattern = (std::filesystem::temp_directory_path() / "orthography2ipa-cpp-XXXXXX").string();
+        const std::string dir = mkdtemp(pattern.data());
+        { std::ofstream output(dir + "/en-US.tsv"); output << "zork'flim\tz\xc9\xaa\xc5\x8bk\n"; }
+        set_lexicon_directory(dir);
+        G2P english("en-US");
+        assert(english.transcribe_word("zork\xe2\x80\x99" "flim") == "\xcb\x88z\xc9\xaa\xc5\x8bk");
+        assert(english.transcribe_word("zork\xe2\x80\x99" "flim,") == "\xcb\x88z\xc9\xaa\xc5\x8bk");
+        assert(english.transcribe_word("\xe2\x80\x9czork\xe2\x80\x99" "flim\xe2\x80\x9d") == "\xcb\x88z\xc9\xaa\xc5\x8bk");
+        clear_lexicons();
+        std::filesystem::remove_all(dir);
     }
     return 0;
 }

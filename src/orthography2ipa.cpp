@@ -2116,12 +2116,17 @@ std::optional<std::string> G2P::override_for(const std::string& word) const {
     if (const std::string stripped = strip_edge_punctuation(key); !stripped.empty() && stripped != key)
         keys.push_back(stripped);
     constexpr std::string_view curly = "\u2019";
-    if (spec_->word_internal_apostrophe && key.find(curly) != std::string::npos) {
-        // Entries are written with U+0027; a typographic U+2019 is the same word.
-        std::string straight = key;
-        for (std::size_t at; (at = straight.find(curly)) != std::string::npos;)
-            straight.replace(at, curly.size(), "'");
-        keys.push_back(straight);
+    if (spec_->word_internal_apostrophe) {
+        // Entries are written with U+0027; a typographic U+2019 is the same
+        // word, for the exact key and the stripped key alike.
+        const std::size_t count = keys.size();
+        for (std::size_t i = 0; i < count; ++i) {
+            if (keys[i].find(curly) == std::string::npos) continue;
+            std::string straight = keys[i];
+            for (std::size_t at; (at = straight.find(curly)) != std::string::npos;)
+                straight.replace(at, curly.size(), "'");
+            keys.push_back(std::move(straight));
+        }
     }
     const auto& lex = load_lexicon(language_);
     for (const auto& k : keys) {
