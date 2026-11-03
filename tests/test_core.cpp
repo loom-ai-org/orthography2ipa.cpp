@@ -1,5 +1,6 @@
 #include "orthography2ipa/orthography2ipa.hpp"
 #include "orthography2ipa/stress.hpp"
+#include "orthography2ipa/schema.hpp"
 #include "orthography2ipa/tone.hpp"
 #include "beam.hpp"
 
@@ -14,6 +15,36 @@ using namespace orthography2ipa;
 int main() {
     assert(resolve("por") == "pt-PT");
     assert(!available_codes().empty());
+    {
+        // registry.py available_codes drops every clade node, whatever its
+        // code: chm (Mari) is a clade without the x-clade- prefix.
+        const auto codes = available_codes();
+        bool chm = false;
+        for (const auto& code : codes) chm = chm || code == "chm";
+        assert(!chm);
+        for (const auto& code : codes) assert(code.rfind("x-clade-", 0) != 0);
+        // A guard, not a fail-before row: include_clades still lists chm.
+        bool listed = false;
+        for (const auto& code : available_codes(true)) listed = listed || code == "chm";
+        assert(listed);
+    }
+    {
+        // A clade key is the key whatever its spacing or escapes: Python json
+        // and read_json both read "cl\u0061de" as clade.
+        std::string pattern = (std::filesystem::temp_directory_path() / "orthography2ipa-cpp-XXXXXX").string();
+        const char* made = mkdtemp(pattern.data());
+        assert(made != nullptr);
+        const std::string dir = made;
+        std::ofstream(dir + "/zz-plain.json") << R"({"code": "zz-plain", "name": "Plain"})";
+        std::ofstream(dir + "/zz-spaced.json") << R"({"code": "zz-spaced", "name": "Spaced", "clade"  :  true})";
+        std::ofstream(dir + "/zz-escaped.json") << R"({"code": "zz-escaped", "name": "Escaped", "cl\u0061de": true})";
+        set_data_directory(dir);
+        assert(available_codes() == std::vector<std::string>{"zz-plain"});
+        assert(available_codes(true).size() == 3);
+        // schema::data_directory() resolves the same default and is not moved here.
+        set_data_directory(schema::data_directory());
+        std::filesystem::remove_all(dir);
+    }
 
     const auto& portuguese = get("pt");
     const auto& spanish = get("es");
