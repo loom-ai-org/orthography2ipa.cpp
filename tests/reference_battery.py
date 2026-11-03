@@ -47,6 +47,12 @@ PINNED = {
     "ru": ["молоко"],
     "th": ["กรวด", "ขวด"],
     "fr-FR": ["jeune", "agneau", "les", "amis"],
+    "oc": ["Califòrnia", "sciéncia"],
+    # médico-dentário also needs compound_stress and the followed_by_3
+    # allophone condition.
+    "pt-PT-x-alentejo": ["capitólio", "aquário", "médico-dentário"],
+    "pt-PT-x-acores": ["3Aüau;-üj3bíe"],
+    "pt-CV": [",jrü1êAxà"],
     "hi": ["कृष्ण", "क्या", "राम", "नमस्ते", "भारत", "किताब", "दो", "क्", "क्ष",
            "श्र", "मुक्ति", "हिन्दी", "बिल्ल्", "सिक्ख"],
     "lo": ["ເອກ", "ເຫຼົ້າ", "ດອກ", "ເບິ່ງ", "ກ", "ງ", "ຈ", "ສາວ", "ລາວ", "ພາສາ",
