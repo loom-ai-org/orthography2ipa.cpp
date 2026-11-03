@@ -339,7 +339,7 @@ std::optional<bool> is_open_syllable(std::u32string syllable,
 std::vector<const char*> grapheme_positions(
         const GraphemeContext& ctx, const LanguageSpec* spec,
         std::optional<std::size_t> syll_idx,
-        std::optional<std::size_t> stressed_syll_idx,
+        std::optional<long long> stressed_syll_idx,
         const std::set<std::size_t>& secondary_syll_idxs,
         const std::optional<std::string>& syllable,
         std::optional<bool> syllable_final) {
@@ -398,7 +398,7 @@ std::vector<const char*> grapheme_positions(
                              : std::nullopt;
     if (open_syllable.has_value() && (is_vowel || carries_nucleus(ctx))) {
         if (syll_idx.has_value() && stressed_syll_idx.has_value()) {
-            if (*syll_idx == *stressed_syll_idx) {
+            if (static_cast<long long>(*syll_idx) == *stressed_syll_idx) {
                 pos.push_back(*open_syllable ? "nucleus_stressed_open"
                                              : "nucleus_stressed_closed");
             // A secondary foot head takes NEITHER crossed pair: it is not
@@ -414,7 +414,10 @@ std::vector<const char*> grapheme_positions(
 
     if (syll_idx.has_value() && stressed_syll_idx.has_value() &&
             (is_vowel || carries_nucleus(ctx))) {
-        if (*syll_idx == *stressed_syll_idx) {
+        // A prosodic clitic carries the sentinel -1, so every one of its
+        // syllables is unstressed and posttonic.
+        const long long syll = static_cast<long long>(*syll_idx);
+        if (syll == *stressed_syll_idx) {
             pos.push_back("nucleus_stressed");
         } else {
             // Prominence LEVEL: a secondary foot head is stressed, just
@@ -427,8 +430,8 @@ std::vector<const char*> grapheme_positions(
             } else {
                 pos.push_back("nucleus_unstressed");
             }
-            if (*syll_idx < *stressed_syll_idx) {
-                if (*syll_idx + 1 == *stressed_syll_idx) pos.push_back("first_pretonic");
+            if (syll < *stressed_syll_idx) {
+                if (syll + 1 == *stressed_syll_idx) pos.push_back("first_pretonic");
                 pos.push_back("pretonic");
             } else {
                 pos.push_back("posttonic");
@@ -514,7 +517,7 @@ std::vector<Branch> resolve_branches(
         const PhonetokTokenizer& tokenizer,
         const std::map<std::string, std::vector<std::string>>* allophone_map,
         std::optional<std::size_t> syll_idx,
-        std::optional<std::size_t> stressed_syll_idx,
+        std::optional<long long> stressed_syll_idx,
         const std::set<std::size_t>& secondary_syll_idxs,
         const std::optional<std::string>& syllable,
         std::optional<bool> syllable_final) {
