@@ -15,9 +15,25 @@ using namespace orthography2ipa;
 static void usage() {
     std::cerr << "usage: orthography2ipa [--data DIR] [--json] <list|info|validate|transcribe|word|word-candidates|lattice|tone|stress|beam|tokens|resolve|distance> ...\n";
 }
+// The escapes of Python's json.dumps(..., ensure_ascii=False), which the
+// reference CLI uses: the short forms where JSON has one, \u00XX for the
+// other control characters, and every other byte as it is.
 static std::string json(const std::string& value) {
     std::ostringstream out; out << '"';
-    for (unsigned char c : value) { if (c == '"') out << "\\\""; else if (c == '\\') out << "\\\\"; else if (c == '\n') out << "\\n"; else if (c == '\r') out << "\\r"; else if (c == '\t') out << "\\t"; else out << c; }
+    for (unsigned char c : value) {
+        switch (c) {
+            case '"': out << "\\\""; break;
+            case '\\': out << "\\\\"; break;
+            case '\b': out << "\\b"; break;
+            case '\f': out << "\\f"; break;
+            case '\n': out << "\\n"; break;
+            case '\r': out << "\\r"; break;
+            case '\t': out << "\\t"; break;
+            default:
+                if (c < 0x20) out << "\\u00" << "0123456789abcdef"[c >> 4] << "0123456789abcdef"[c & 15];
+                else out << c;
+        }
+    }
     return out.str() + '"';
 }
 static void strings_json(const std::vector<std::string>& values) {
@@ -106,7 +122,7 @@ static void tone_json(const std::string& code, const std::string& word,
     const bool has_rules = spec.tone.has_value();
     const ToneData rules = has_rules ? *spec.tone : ToneData{};
 
-    std::cout << std::setprecision(17) << "{\"lang\":" << json(code)
+    std::cout << std::setprecision(17) << "{\"lang\":" << json(spec.code)
               << ",\"word\":" << json(supplied.empty() ? word : supplied)
               << ",\"atoms\":"; strings_json(atoms);
     std::cout << ",\"graphemes\":"; strings_json(graphemes);
@@ -346,7 +362,7 @@ int main(int argc, char** argv) {
             const auto readings = G2P(code).word_candidates(
                 text, static_cast<std::size_t>(k),
                 beam.has_value() ? std::optional<std::size_t>(*beam) : std::nullopt);
-            std::cout << "{\"lang\":" << json(code) << ",\"word\":" << json(text)
+            std::cout << "{\"lang\":" << json(get(code).code) << ",\"word\":" << json(text)
                       << ",\"k\":" << k << ",\"beam_width\":"
                       << (beam.has_value() ? *beam : (k < 8 ? 8 : k))
                       << ",\"candidates\":";
@@ -393,7 +409,7 @@ int main(int argc, char** argv) {
                 }
                 const std::vector<std::string> atoms(spec.phonemes.begin(), spec.phonemes.end());
                 const auto sylls = stress::syllabify_ipa(ipa, spec.max_onset, atoms);
-                std::cout << std::setprecision(17) << "{\"lang\":" << json(code)
+                std::cout << std::setprecision(17) << "{\"lang\":" << json(spec.code)
                           << ",\"input\":" << json(ipa) << ",\"mode\":\"ipa\",\"syllables\":";
                 strings_json(sylls);
                 std::cout << ",\"weights\":[";
@@ -429,9 +445,8 @@ int main(int argc, char** argv) {
             const LanguageSpec& spec = get(code);
             const auto sylls = stress::syllables_for(word, spec.code, spec.diphthongs, &spec);
             std::cout << '{';
-            std::cout << "\"syllables\":[";
-            for (std::size_t k = 0; k < sylls.size(); ++k) { if (k) std::cout << ','; std::cout << '"' << sylls[k] << '"'; }
-            std::cout << ']';
+            std::cout << "\"syllables\":";
+            strings_json(sylls);
             if (spec.stress_defined) {
                 const int idx = stress::detect_stress(word, spec, &sylls);
                 const auto secondary = stress::secondary_stress_positions(
@@ -441,11 +456,10 @@ int main(int argc, char** argv) {
                 bool first = true;
                 for (const int s : secondary) { if (!first) std::cout << ','; std::cout << s; first = false; }
                 std::cout << ']';
-                std::cout << ",\"marked\":\""
-                          << stress::apply_stress_mark(
+                std::cout << ",\"marked\":"
+                          << json(stress::apply_stress_mark(
                                  word, spec, idx, &sylls, nullptr, "",
-                                 std::vector<int>(secondary.begin(), secondary.end()))
-                          << '"';
+                                 std::vector<int>(secondary.begin(), secondary.end())));
             }
             std::cout << "}\n";
             return 0;
