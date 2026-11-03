@@ -16,8 +16,11 @@ a pinned reference release, and this script is the only way they move. It
      the same release.
 
 The tag is resolved before step 1. A PyPI release that the reference
-repository never tagged stops the script before anything is written, so data/
-and ci.yml cannot end up at two different releases.
+repository never tagged stops the script before anything is written, so an
+untagged release cannot leave data/ and ci.yml at two different releases. A
+step that fails after step 2, such as a generator, still can: data/ and
+tests/reference_version.txt are then at VERSION while ci.yml keeps the old
+commit. Run the script again, or restore the tree with git, before you commit.
 
 The generators import the reference package, so run this script with a Python
 that has the reference's dependencies installed (for example a virtual
