@@ -91,6 +91,33 @@ int main() {
     G2P engine("pt");
     assert(!engine.transcribe_detailed("olá").words.empty());
     assert(!engine.features("casa").empty());
+    {
+        // g2p.py: transcribe, features and sentence_lattice all split through
+        // _normalize, which runs the normalize stage with the caller's override.
+        struct Digits : NormalizePlugin {
+            std::vector<std::string> language_codes() const override { return {"pt-PT"}; }
+            std::string normalize(const std::string& text, const std::string&) const override {
+                std::string out = text;
+                for (auto at = out.find("23"); at != std::string::npos; at = out.find("23", at)) out.replace(at, 2, "vinte");
+                return out;
+            }
+        };
+        register_normalize_plugin("test-digits", std::make_shared<Digits>());
+        const G2P normalized("pt-PT", {{"normalize", {"test-digits"}}});
+        assert(normalized.transcribe_detailed("tenho 23").words.at(1).word == "vinte");
+        assert(normalized.features("tenho 23").at(1).word == "vinte");
+        assert(normalized.sentence_lattice("tenho 23").words.at(1).surface == "vinte");
+        // registry.py runs a declared plugin by name, whatever languages it
+        // owns: an es-ES normalizer named on a pt-PT engine runs on every path.
+        struct Foreign : Digits {
+            std::vector<std::string> language_codes() const override { return {"es-ES"}; }
+        };
+        register_normalize_plugin("test-digits-es", std::make_shared<Foreign>());
+        const G2P foreign("pt-PT", {{"normalize", {"test-digits-es"}}});
+        assert(foreign.transcribe_detailed("tenho 23").words.at(1).word == "vinte");
+        assert(foreign.features("tenho 23").at(1).word == "vinte");
+        assert(foreign.sentence_lattice("tenho 23").words.at(1).surface == "vinte");
+    }
     // g2p.py ipa_lattice: one slot per grapheme, ranked candidates, spans in
     // CODE POINTS, and the top-of-slot concatenation is a valid reading.
     const auto slots = engine.ipa_lattice("casa");

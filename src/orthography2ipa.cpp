@@ -1999,14 +1999,15 @@ std::vector<features::WordFeatures> G2P::features(const std::string& text) const
     // context), confidence_breakdown (the confidence value) and flat_contexts
     // (predicates + neighbours) — no vowel logic is recomputed here.
     std::vector<features::WordFeatures> out;
+    // The caller's normalize override wins over the spec's list, as in
+    // transcribe_detailed (g2p.py _StagePlugins).
+    const auto overridden = plugin_overrides_.find("normalize");
+    const auto& normalizers = overridden == plugin_overrides_.end() ? plugin_names(*spec_, "normalize") : overridden->second;
     const auto normalize = [&](std::string value) {
-        for (const auto& name : plugin_names(*spec_, "normalize")) {
+        for (const auto& name : normalizers) {
             auto it = normalize_plugins.find(name);
             if (it == normalize_plugins.end())
                 throw std::runtime_error("missing normalize plugin: " + name);
-            if (!owns_language(*it->second, language_))
-                throw std::runtime_error("normalize plugin does not own language " +
-                                         language_ + ": " + name);
             value = it->second->normalize(value, language_);
         }
         return value;
@@ -2037,8 +2038,10 @@ sentence::SentenceLattice G2P::sentence_lattice(const std::string& text,
     if (search != "greedy" && search != "beam")
         throw std::invalid_argument("search must be 'greedy' or 'beam', got " + search);
     const std::size_t width = search == "greedy" ? 1 : beam_width;
+    const auto overridden = plugin_overrides_.find("normalize");
+    const auto& normalizers = overridden == plugin_overrides_.end() ? plugin_names(*spec_, "normalize") : overridden->second;
     const auto normalize = [&](std::string value) {
-        for (const auto& name : plugin_names(*spec_, "normalize")) {
+        for (const auto& name : normalizers) {
             auto it = normalize_plugins.find(name);
             if (it == normalize_plugins.end())
                 throw std::runtime_error("missing normalize plugin: " + name);
@@ -2462,16 +2465,19 @@ std::string G2P::transcribe_word(const std::string& word, const std::string& sea
 TranscriptionResult G2P::transcribe_detailed(const std::string& text, const std::string& search, std::size_t width) const {
     if (search != "greedy" && search != "beam") throw std::invalid_argument("search must be greedy or beam");
     auto stage = [&](const std::string& name) -> const std::vector<std::string>& { auto it = plugin_overrides_.find(name); return it == plugin_overrides_.end() ? plugin_names(*spec_, name) : it->second; };
-    auto validate_stage = [&](const std::string& name, const auto& plugins) {
+    auto validate_stage = [&](const std::string& name, const auto& plugins, bool check_owner = true) {
         for (const auto& plugin_name : stage(name)) {
             auto plugin = plugins.find(plugin_name);
             if (plugin == plugins.end())
                 throw std::runtime_error("missing " + name + " plugin: " + plugin_name);
-            if (!owns_language(*plugin->second, language_))
+            if (check_owner && !owns_language(*plugin->second, language_))
                 throw std::runtime_error(name + " plugin does not own language " + language_ + ": " + plugin_name);
         }
     };
-    validate_stage("normalize", normalize_plugins);
+    // registry.py get_declared_plugins resolves a declared normalize plugin by
+    // name and does not ask which languages it owns; every normalize path here
+    // does the same.
+    validate_stage("normalize", normalize_plugins, false);
     validate_stage("syllabify", syllabifier_plugins);
     validate_stage("stress", stress_plugins);
     validate_stage("rescore", rescorer_plugins);
@@ -2480,7 +2486,6 @@ TranscriptionResult G2P::transcribe_detailed(const std::string& text, const std:
         for (const auto& name : stage("normalize")) {
             auto it = normalize_plugins.find(name);
             if (it == normalize_plugins.end()) throw std::runtime_error("missing normalize plugin: " + name);
-            if (!owns_language(*it->second, language_)) throw std::runtime_error("normalize plugin does not own language " + language_ + ": " + name);
             const auto normalized = it->second->normalize(value, language_);
             if (it->second->normalize(value, language_) != normalized)
                 throw std::runtime_error("normalize plugin returned non-deterministic output: " + name);
