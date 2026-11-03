@@ -157,6 +157,7 @@ struct AllophoneRuleModel {
     std::optional<std::string> preceded_by_2;
     std::optional<std::string> followed_by_2;
     std::optional<std::string> preceded_by_3;
+    std::optional<std::string> followed_by_3;
     std::optional<std::vector<std::string>> preceded_by_phoneme_2;
     std::optional<std::vector<std::string>> followed_by_phoneme_2;
     std::optional<std::vector<std::string>> preceded_by_surface_phoneme_2;
