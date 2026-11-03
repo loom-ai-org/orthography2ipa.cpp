@@ -345,7 +345,7 @@ int main(int argc, char** argv) {
             const auto readings = G2P(code).word_candidates(
                 text, static_cast<std::size_t>(k),
                 beam.has_value() ? std::optional<std::size_t>(*beam) : std::nullopt);
-            std::cout << "{\"lang\":" << json(code) << ",\"word\":" << json(text)
+            std::cout << "{\"lang\":" << json(get(code).code) << ",\"word\":" << json(text)
                       << ",\"k\":" << k << ",\"beam_width\":"
                       << (beam.has_value() ? *beam : (k < 8 ? 8 : k))
                       << ",\"candidates\":";
