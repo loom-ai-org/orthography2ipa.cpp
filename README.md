@@ -32,9 +32,9 @@ syllabifies Portuguese, as the Python package does without the extra. The
 configure step prints a status line only when it finds silabificador.
 
 The installed `orthography2ipaConfig.cmake` calls
-`find_dependency(silabificador)` only for a static library that uses it. A
-shared library contains silabificador, so its consumers do not need the
-package.
+`find_dependency(silabificador)` when the build used it. The one exception is
+a shared orthography2ipa built against a static silabificador: the shared
+library then contains silabificador, so its consumers do not need the package.
 
 The parity tests compare against the Python reference, so the reference must
 match the build. When the build uses silabificador, install the reference
