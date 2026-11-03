@@ -180,6 +180,11 @@ const std::vector<std::pair<std::string, std::string>>& pause_punctuation();
 /// Is *text* at `pos` a pause mark? (PAUSE_PUNCTUATION membership.)
 bool is_pause_punctuation(const std::string& character);
 
+/// g2p.py _EDGE_PUNCT_RE: *word* without the punctuation that clings to
+/// either end of a raw token. An apostrophe (U+0027, U+2019) spells an
+/// elision and is not stripped.
+std::string strip_edge_punctuation(const std::string& word);
+
 /// Language-aware lowercasing for a whole string — phonetok.py
 /// lower_str. Turkish dotted/dotless I is handled via explicit mapping;
 /// every other language uses plain full Unicode lowercasing.
@@ -287,7 +292,9 @@ private:
     std::vector<std::size_t> dependent_vowel_spans_;
     std::set<std::u32string> preposed_vowels_;
     bool coda_no_inherent_vowel_ = false;
+    std::vector<std::pair<std::u32string, std::u32string>> consonant_nuclei_;  // lowered letter -> nucleus
     std::optional<std::u32string> inherent_vowel_final_;
+    std::set<std::u32string> codas_;
     std::shared_ptr<const std::set<std::string>> vowel_graphemes_;
 
     // Internal token used while tokenize() is building the stream: the
@@ -316,6 +323,10 @@ private:
     bool syllable_has_nucleus(const std::vector<UToken>& tokens) const;
     bool prev_gives_nucleus(const UToken* prev_tok) const;
     bool silenced_before_consonant(const std::u32string& gkey) const;
+    long consonant_nucleus_at(const std::u32string& text, std::size_t pos,
+                              const std::vector<UToken>& tokens) const;
+    std::u32string unfuse_consonant_nucleus(const std::u32string& gkey, const std::u32string& text,
+                                            std::size_t pos, const std::vector<UToken>& tokens) const;
 
     std::vector<UToken> tokenize_u32(const std::u32string& text) const;
 };

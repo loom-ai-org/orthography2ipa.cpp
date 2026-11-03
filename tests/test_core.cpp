@@ -1,9 +1,12 @@
 #include "orthography2ipa/orthography2ipa.hpp"
 #include "orthography2ipa/stress.hpp"
+#include "orthography2ipa/schema.hpp"
 #include "orthography2ipa/tone.hpp"
 #include "beam.hpp"
 
 #include <cassert>
+#include <cstdlib>
+#include <filesystem>
 #include <fstream>
 #include <stdexcept>
 
@@ -12,13 +15,54 @@ using namespace orthography2ipa;
 int main() {
     assert(resolve("por") == "pt-PT");
     assert(!available_codes().empty());
+    {
+        // registry.py available_codes drops every clade node, whatever its
+        // code: chm (Mari) is a clade without the x-clade- prefix.
+        const auto codes = available_codes();
+        bool chm = false;
+        for (const auto& code : codes) chm = chm || code == "chm";
+        assert(!chm);
+        for (const auto& code : codes) assert(code.rfind("x-clade-", 0) != 0);
+        // A guard, not a fail-before row: include_clades still lists chm.
+        bool listed = false;
+        for (const auto& code : available_codes(true)) listed = listed || code == "chm";
+        assert(listed);
+    }
+    {
+        // A clade key is the key whatever its spacing or escapes: Python json
+        // and read_json both read "cl\u0061de" as clade.
+        std::string pattern = (std::filesystem::temp_directory_path() / "orthography2ipa-cpp-XXXXXX").string();
+        const char* made = mkdtemp(pattern.data());
+        assert(made != nullptr);
+        const std::string dir = made;
+        std::ofstream(dir + "/zz-plain.json") << R"({"code": "zz-plain", "name": "Plain"})";
+        std::ofstream(dir + "/zz-spaced.json") << R"({"code": "zz-spaced", "name": "Spaced", "clade"  :  true})";
+        std::ofstream(dir + "/zz-escaped.json") << R"({"code": "zz-escaped", "name": "Escaped", "cl\u0061de": true})";
+        set_data_directory(dir);
+        assert(available_codes() == std::vector<std::string>{"zz-plain"});
+        assert(available_codes(true).size() == 3);
+        // schema::data_directory() resolves the same default and is not moved here.
+        set_data_directory(schema::data_directory());
+        std::filesystem::remove_all(dir);
+    }
 
     const auto& portuguese = get("pt");
     const auto& spanish = get("es");
     assert(!portuguese.graphemes.empty());
     assert(!portuguese.family_path().empty());
+    // json_loader.py classification. brx names its parent only in
+    // `ancestors`. aao takes no family from its graphemes base ar-DZ.
+    // gem-x-ingvaeonic reaches West Germanic through a clade whose own
+    // parent is not a clade.
+    assert(get("brx").parent == "brx-x-proto-boro-garo" && get("brx").family == "Sino-Tibetan");
+    assert(get("aao").family == "Afro-Asiatic");
+    assert(get("gem-x-ingvaeonic").family == "Indo-European > Germanic > Northwest Germanic > West Germanic");
     assert(!get("ga").sources.empty());
     assert(get("ga").timespan.has_value());
+    // types.py __post_init__: aae declares no allophones, so each of its 35
+    // phonemes is its own allophone.
+    assert(get("aae").allophones.size() == 35);
+    assert(get("aae").allophones.at("\xc3\xb0") == std::vector<std::string>{"\xc3\xb0"});
 
     Tokenizer tokenizer(portuguese);
     std::vector<std::string> unmapped;
@@ -47,6 +91,33 @@ int main() {
     G2P engine("pt");
     assert(!engine.transcribe_detailed("olá").words.empty());
     assert(!engine.features("casa").empty());
+    {
+        // g2p.py: transcribe, features and sentence_lattice all split through
+        // _normalize, which runs the normalize stage with the caller's override.
+        struct Digits : NormalizePlugin {
+            std::vector<std::string> language_codes() const override { return {"pt-PT"}; }
+            std::string normalize(const std::string& text, const std::string&) const override {
+                std::string out = text;
+                for (auto at = out.find("23"); at != std::string::npos; at = out.find("23", at)) out.replace(at, 2, "vinte");
+                return out;
+            }
+        };
+        register_normalize_plugin("test-digits", std::make_shared<Digits>());
+        const G2P normalized("pt-PT", {{"normalize", {"test-digits"}}});
+        assert(normalized.transcribe_detailed("tenho 23").words.at(1).word == "vinte");
+        assert(normalized.features("tenho 23").at(1).word == "vinte");
+        assert(normalized.sentence_lattice("tenho 23").words.at(1).surface == "vinte");
+        // registry.py runs a declared plugin by name, whatever languages it
+        // owns: an es-ES normalizer named on a pt-PT engine runs on every path.
+        struct Foreign : Digits {
+            std::vector<std::string> language_codes() const override { return {"es-ES"}; }
+        };
+        register_normalize_plugin("test-digits-es", std::make_shared<Foreign>());
+        const G2P foreign("pt-PT", {{"normalize", {"test-digits-es"}}});
+        assert(foreign.transcribe_detailed("tenho 23").words.at(1).word == "vinte");
+        assert(foreign.features("tenho 23").at(1).word == "vinte");
+        assert(foreign.sentence_lattice("tenho 23").words.at(1).surface == "vinte");
+    }
     // g2p.py ipa_lattice: one slot per grapheme, ranked candidates, spans in
     // CODE POINTS, and the top-of-slot concatenation is a valid reading.
     const auto slots = engine.ipa_lattice("casa");
@@ -96,11 +167,37 @@ int main() {
     assert(full_distance(portuguese, spanish) >= 0);
     assert(pairwise_distances({portuguese, spanish}).size() == 2);
 
-    const std::string path = "/tmp/orthography2ipa-cpp-test.tsv";
-    { std::ofstream output(path); output << "casa\tkaza\n"; }
-    register_lexicon("pt", path);
-    assert(get_lexicon("pt").at("casa") == "kaza");
-    clear_lexicons();
+    {
+        std::string pattern = (std::filesystem::temp_directory_path() / "orthography2ipa-cpp-XXXXXX").string();
+        const char* made = mkdtemp(pattern.data());
+        assert(made != nullptr);
+        const std::string dir = made;
+        const std::string path = dir + "/pt.tsv";
+        { std::ofstream output(path); output << "casa\tkaza\n"; }
+        register_lexicon("pt", path);
+        assert(get_lexicon("pt").at("casa") == "kaza");
+        clear_lexicons();
+        std::filesystem::remove_all(dir);
+    }
+
+    // A lexicon-dir file belongs to the spec its name resolves to, so en.tsv
+    // serves en-GB, the spec that en resolves to.
+    {
+        std::string pattern = (std::filesystem::temp_directory_path() / "orthography2ipa-cpp-XXXXXX").string();
+        const char* made = mkdtemp(pattern.data());
+        assert(made != nullptr);
+        const std::string dir = made;
+        { std::ofstream output(dir + "/en.tsv"); output << "zorkflim\tzɔɹkflɪm\n"; }
+        set_lexicon_directory(dir);
+        assert(resolve("en") == "en-GB");
+        assert(lexicon_path("en-GB") == dir + "/en.tsv");
+        assert(get_lexicon("en-GB").at("zorkflim") == "zɔɹkflɪm");
+        // The reference adds the primary stress mark to the lexicon entry.
+        assert(transcribe("zorkflim", "en-GB") == "ˈzɔɹkflɪm");
+        assert(transcribe("zorkflim", "en") == "ˈzɔɹkflɪm");
+        clear_lexicons();
+        std::filesystem::remove_all(dir);
+    }
 
     // Stress pipeline (stress.py / g2p.py ports): syllabification, stress
     // detection, secondary stress, quantity-sensitive placement and iambic
@@ -214,6 +311,23 @@ int main() {
             assert(get_syllabifier(code) == plugin.get());
         assert(get_syllabifier("pt-PT-x-lisbon") != plugin.get());
         assert(stress::syllables_for("ponte", "por") == std::vector<std::string>{"ponte"});
+    }
+    {
+        // A lexicon entry written with U+0027 answers a word typed with U+2019
+        // that also carries edge punctuation: the reference straightens the
+        // stripped key as well as the exact key.
+        std::string pattern = (std::filesystem::temp_directory_path() / "orthography2ipa-cpp-XXXXXX").string();
+        const char* made = mkdtemp(pattern.data());
+        assert(made != nullptr);
+        const std::string dir = made;
+        { std::ofstream output(dir + "/en-US.tsv"); output << "zork'flim\tz\xc9\xaa\xc5\x8bk\n"; }
+        set_lexicon_directory(dir);
+        G2P english("en-US");
+        assert(english.transcribe_word("zork\xe2\x80\x99" "flim") == "\xcb\x88z\xc9\xaa\xc5\x8bk");
+        assert(english.transcribe_word("zork\xe2\x80\x99" "flim,") == "\xcb\x88z\xc9\xaa\xc5\x8bk");
+        assert(english.transcribe_word("\xe2\x80\x9czork\xe2\x80\x99" "flim\xe2\x80\x9d") == "\xcb\x88z\xc9\xaa\xc5\x8bk");
+        clear_lexicons();
+        std::filesystem::remove_all(dir);
     }
     return 0;
 }

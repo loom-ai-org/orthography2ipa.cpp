@@ -10,7 +10,17 @@ a pinned reference release, and this script is the only way they move. It
   2. replaces data/*.json with the wheel's specs (removed specs are deleted);
   3. writes the pin to tests/reference_version.txt;
   4. re-runs the tests/gen_*.py table generators against that same wheel, so
-     the transcribed registry, type, script and transform tables match it.
+     the transcribed registry, type, script and transform tables match it;
+  5. pins the reference checkout in .github/workflows/ci.yml to the commit
+     that the reference repository tags as VERSION, so CI compares against
+     the same release.
+
+The tag is resolved before step 1. A PyPI release that the reference
+repository never tagged stops the script before anything is written, so an
+untagged release cannot leave data/ and ci.yml at two different releases. A
+step that fails after step 2, such as a generator, still can: data/ and
+tests/reference_version.txt are then at VERSION while ci.yml keeps the old
+commit. Run the script again, or restore the tree with git, before you commit.
 
 The generators import the reference package, so run this script with a Python
 that has the reference's dependencies installed (for example a virtual
@@ -30,10 +40,12 @@ import hashlib
 import json
 import os
 import pathlib
+import re
 import shutil
 import subprocess
 import sys
 import tempfile
+import urllib.error
 import urllib.request
 import zipfile
 
@@ -41,6 +53,8 @@ PACKAGE = "orthography2ipa"
 CPP_ROOT = pathlib.Path(__file__).resolve().parent.parent
 DATA = CPP_ROOT / "data"
 PIN = CPP_ROOT / "tests" / "reference_version.txt"
+CI = CPP_ROOT / ".github" / "workflows" / "ci.yml"
+REFERENCE_REPO = "TigreGotico/orthography2ipa"
 GENERATORS = (
     "gen_registry_tables.py",
     "gen_types_tables.py",
@@ -107,6 +121,33 @@ def sync_specs(source: pathlib.Path) -> None:
         print(f"  added   {name}")
 
 
+def tag_commit(version: str) -> str:
+    """The commit that the reference repository tags *version*."""
+    url = f"https://api.github.com/repos/{REFERENCE_REPO}/commits/{version}"
+    try:
+        with urllib.request.urlopen(url, timeout=60) as response:
+            return json.load(response)["sha"]
+    except urllib.error.HTTPError as error:
+        # GitHub answers 404 or 422 for a ref it does not know. Any other
+        # status (a 403 rate limit, a 5xx) says nothing about the tag.
+        if error.code in (404, 422):
+            sys.exit(f"{REFERENCE_REPO} has no tag {version} (GitHub answered {error.code}); "
+                     "nothing was written")
+        sys.exit(f"could not resolve tag {version} of {REFERENCE_REPO}: GitHub answered "
+                 f"HTTP {error.code}; nothing was written")
+
+
+def pin_ci(sha: str) -> None:
+    """Point the CI reference checkout at *sha*."""
+    text = CI.read_text(encoding="utf-8")
+    pattern = rf"(repository: {re.escape(REFERENCE_REPO)}\n\s+ref: )[0-9a-f]{{40}}"
+    pinned, count = re.subn(pattern, rf"\g<1>{sha}", text)
+    if count != 1:
+        sys.exit(f"{CI.relative_to(CPP_ROOT)}: expected one {REFERENCE_REPO} checkout, found {count}")
+    CI.write_text(pinned, encoding="utf-8")
+    print(f"pinned {CI.relative_to(CPP_ROOT)}: {REFERENCE_REPO}@{sha}")
+
+
 def run_generators(reference: pathlib.Path, python: str, langcodes: bool) -> None:
     env = dict(os.environ, O2I_PYTHON_ROOT=str(reference))
     names = GENERATORS + (("gen_langcodes_tables.py",) if langcodes else ())
@@ -129,6 +170,8 @@ def main() -> None:
 
     version = latest_version() if args.version == "latest" else args.version
     print(f"reference: {PACKAGE}=={version}")
+    sha = tag_commit(version)
+    print(f"tag: {REFERENCE_REPO}@{version} is {sha}")
     with tempfile.TemporaryDirectory(prefix="o2i-reference-") as scratch:
         scratch = pathlib.Path(scratch)
         with zipfile.ZipFile(fetch_wheel(version, scratch)) as wheel:
@@ -140,6 +183,7 @@ def main() -> None:
         PIN.write_text(f"{PACKAGE}=={version}\n", encoding="utf-8")
         run_generators(reference, args.python, args.langcodes)
     print(f"pinned {PIN.relative_to(CPP_ROOT)}: {PACKAGE}=={version}")
+    pin_ci(sha)
 
 
 if __name__ == "__main__":
