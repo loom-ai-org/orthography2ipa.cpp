@@ -74,6 +74,45 @@ int main() {
         assert(foreign.features("tenho 23").at(1).word == "vinte");
         assert(foreign.sentence_lattice("tenho 23").words.at(1).surface == "vinte");
     }
+    {
+        // registry.py get_declared_plugins resolves a declared plugin by name
+        // for every stage and never asks which languages it owns: es-ES
+        // plugins named on a pt-PT engine run there.
+        struct Syllables : SyllabifierPlugin {
+            std::vector<std::string> language_codes() const override { return {"es-ES"}; }
+            std::vector<std::string> syllabify(const std::string& word, const std::string&) const override { return {word}; }
+        };
+        struct Stress : StressPlugin {
+            std::vector<std::string> language_codes() const override { return {"es-ES"}; }
+            std::optional<std::size_t> stressed_index(const std::string&, const std::vector<std::string>&, const std::string&) const override { return std::nullopt; }
+        };
+        static int rescored = 0;
+        struct Rescore : RescorerPlugin {
+            std::vector<std::string> language_codes() const override { return {"es-ES"}; }
+            std::vector<IPAPath> rescore(const std::string&, const std::string&, const std::vector<IPAPath>& paths) const override { ++rescored; return paths; }
+        };
+        struct Sandhi : SandhiPlugin {
+            std::vector<std::string> language_codes() const override { return {"es-ES"}; }
+            std::vector<std::string> apply(const std::vector<std::string>& words, const std::vector<std::string>&,
+                                           const std::vector<bool>&, const std::string&) const override {
+                std::vector<std::string> out = words;
+                out.back() += "|";
+                return out;
+            }
+        };
+        register_syllabifier_plugin("test-syllabify-es", std::make_shared<Syllables>());
+        register_stress_plugin("test-stress-es", std::make_shared<Stress>());
+        register_rescorer_plugin("test-rescore-es", std::make_shared<Rescore>());
+        register_sandhi_plugin("test-sandhi-es", std::make_shared<Sandhi>());
+        const std::string plain = G2P("pt-PT").transcribe_detailed("tenho casa").ipa;
+        assert(G2P("pt-PT", {{"syllabify", {"test-syllabify-es"}}}).transcribe_detailed("tenho casa").ipa == plain);
+        assert(G2P("pt-PT", {{"stress", {"test-stress-es"}}}).transcribe_detailed("tenho casa").ipa == plain);
+        const G2P rescore("pt-PT", {{"rescore", {"test-rescore-es"}}});
+        assert(rescore.transcribe_detailed("tenho casa").ipa == plain && rescored > 0);
+        rescored = 0;
+        assert(!rescore.word_candidates("casa").empty() && rescored > 0);
+        assert(G2P("pt-PT", {{"sandhi", {"test-sandhi-es"}}}).transcribe_detailed("tenho casa").ipa == plain + "|");
+    }
     // g2p.py ipa_lattice: one slot per grapheme, ranked candidates, spans in
     // CODE POINTS, and the top-of-slot concatenation is a valid reading.
     const auto slots = engine.ipa_lattice("casa");

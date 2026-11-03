@@ -2193,7 +2193,6 @@ auto ordered_rescorers = plugin_names(*spec_, "rescore");
     for (const auto& name : ordered_rescorers) {
         auto p = rescorer_plugins.find(name);
         if (p == rescorer_plugins.end()) throw std::runtime_error("missing rescore plugin: " + name);
-        if (!owns_language(*p->second, language_)) throw std::runtime_error("rescore plugin does not own language " + language_ + ": " + name);
         const auto rescored = p->second->rescore(word, language_, paths);
         if (!same_paths(rescored, p->second->rescore(word, language_, paths)))
             throw std::runtime_error("rescore plugin returned non-deterministic output: " + name);
@@ -2294,19 +2293,14 @@ std::string G2P::transcribe_word(const std::string& word, const std::string& sea
 TranscriptionResult G2P::transcribe_detailed(const std::string& text, const std::string& search, std::size_t width) const {
     if (search != "greedy" && search != "beam") throw std::invalid_argument("search must be greedy or beam");
     auto stage = [&](const std::string& name) -> const std::vector<std::string>& { auto it = plugin_overrides_.find(name); return it == plugin_overrides_.end() ? plugin_names(*spec_, name) : it->second; };
-    auto validate_stage = [&](const std::string& name, const auto& plugins, bool check_owner = true) {
-        for (const auto& plugin_name : stage(name)) {
-            auto plugin = plugins.find(plugin_name);
-            if (plugin == plugins.end())
+    // registry.py get_declared_plugins resolves a declared plugin by name and
+    // does not ask which languages it owns, for any stage.
+    auto validate_stage = [&](const std::string& name, const auto& plugins) {
+        for (const auto& plugin_name : stage(name))
+            if (plugins.find(plugin_name) == plugins.end())
                 throw std::runtime_error("missing " + name + " plugin: " + plugin_name);
-            if (check_owner && !owns_language(*plugin->second, language_))
-                throw std::runtime_error(name + " plugin does not own language " + language_ + ": " + plugin_name);
-        }
     };
-    // registry.py get_declared_plugins resolves a declared normalize plugin by
-    // name and does not ask which languages it owns; every normalize path here
-    // does the same.
-    validate_stage("normalize", normalize_plugins, false);
+    validate_stage("normalize", normalize_plugins);
     validate_stage("syllabify", syllabifier_plugins);
     validate_stage("stress", stress_plugins);
     validate_stage("rescore", rescorer_plugins);
@@ -2363,7 +2357,6 @@ TranscriptionResult G2P::transcribe_detailed(const std::string& text, const std:
     for (const auto& name : stage("sandhi")) {
         auto p = sandhi_plugins.find(name);
         if (p == sandhi_plugins.end()) throw std::runtime_error("missing sandhi plugin: " + name);
-        if (!owns_language(*p->second, language_)) throw std::runtime_error("sandhi plugin does not own language " + language_ + ": " + name);
         const auto transformed = p->second->apply(ipa_words, surfaces, pausal, language_);
         if (transformed.size() != ipa_words.size()) throw std::runtime_error("sandhi plugin changed word count: " + name);
         if (p->second->apply(ipa_words, surfaces, pausal, language_) != transformed)
