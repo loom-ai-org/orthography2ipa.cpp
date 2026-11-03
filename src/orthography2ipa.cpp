@@ -61,7 +61,9 @@ std::string data_dir = initial_data_directory();
 std::map<std::string, LanguageSpec> cache;
 std::map<std::string, std::string> registered_lexicons;
 std::optional<std::string> lexicon_directory;
-std::map<std::string, std::map<std::string, std::string>> lexicon_cache;
+// One loaded lexicon per resolved code, shared with every caller that reads
+// it. A setter replaces or drops the entry; it never edits a loaded map.
+std::map<std::string, std::shared_ptr<const std::map<std::string, std::string>>> lexicon_cache;
 std::map<std::string, std::shared_ptr<NormalizePlugin>> normalize_plugins;
 // registry.py _discover_syllabifiers over the package's own entry point,
 // `silabificador = orthography2ipa.syllabifiers:SilabificadorSyllabifier`:
@@ -817,7 +819,7 @@ std::optional<fs::path> lexicon_dir_file(const std::string& code) {
     return std::nullopt;
 }
 
-std::map<std::string, std::string> load_lexicon(const std::string& code) {
+std::shared_ptr<const std::map<std::string, std::string>> load_lexicon(const std::string& code) {
     auto cached = lexicon_cache.find(code); if (cached != lexicon_cache.end()) return cached->second;
     std::string source;
     if (auto it = registered_lexicons.find(code); it != registered_lexicons.end()) source = it->second;
@@ -836,7 +838,9 @@ std::map<std::string, std::string> load_lexicon(const std::string& code) {
             if (!result.count(word)) result[word] = ipa;
         }
     }
-    lexicon_cache[code] = result; return result;
+    auto loaded = std::make_shared<const std::map<std::string, std::string>>(std::move(result));
+    lexicon_cache[code] = loaded;
+    return loaded;
 }
 
 
@@ -1592,7 +1596,7 @@ std::vector<std::string> available_lexicon_codes() {
     if (!dir.empty() && fs::is_directory(dir)) for (const auto& e : fs::directory_iterator(dir)) if (e.path().extension() == ".tsv") codes.insert(e.path().stem().string());
     return {codes.begin(), codes.end()};
 }
-std::map<std::string, std::string> get_lexicon(const std::string& code) { return load_lexicon(resolve(code)); }
+std::map<std::string, std::string> get_lexicon(const std::string& code) { return *load_lexicon(resolve(code)); }
 std::optional<std::string> lexicon_source(const std::string& code) {
     const auto canonical = resolve(code);
     if (auto it = registered_lexicons.find(canonical); it != registered_lexicons.end()) return it->second;
@@ -1800,12 +1804,45 @@ MissingStressPlugin::MissingStressPlugin(const std::string& message)
     : std::runtime_error(message) {}
 
 namespace {
+// The str a Python caller passes as these bytes. A Python name can hold a lone
+// surrogate, which encodes to ED A0..BF xx ("surrogatepass"), and a raw byte
+// read from outside, which is U+DC80..DCFF ("surrogateescape"). Every other
+// byte that is not valid UTF-8 decodes as a surrogateescape byte, one by one.
+std::u32string python_name(const std::string& text) {
+    std::u32string out;
+    const auto byte = [&text](std::size_t i) { return static_cast<unsigned char>(text[i]); };
+    const auto in = [&](std::size_t i, unsigned low, unsigned high) {
+        return i < text.size() && byte(i) >= low && byte(i) <= high;
+    };
+    for (std::size_t i = 0; i < text.size();) {
+        const unsigned lead = byte(i);
+        std::size_t length = 0;
+        if (lead < 0x80) length = 1;
+        else if (lead >= 0xC2 && lead <= 0xDF) length = in(i + 1, 0x80, 0xBF) ? 2 : 0;
+        else if (lead >= 0xE0 && lead <= 0xEF)
+            length = in(i + 1, lead == 0xE0 ? 0xA0 : 0x80, 0xBF) && in(i + 2, 0x80, 0xBF) ? 3 : 0;
+        else if (lead >= 0xF0 && lead <= 0xF4)
+            length = in(i + 1, lead == 0xF0 ? 0x90 : 0x80, lead == 0xF4 ? 0x8F : 0xBF) &&
+                     in(i + 2, 0x80, 0xBF) && in(i + 3, 0x80, 0xBF) ? 4 : 0;
+        if (length == 0) {
+            out.push_back(0xDC00 + lead);
+            ++i;
+            continue;
+        }
+        char32_t cp = length == 1 ? lead : lead & (0x7F >> length);
+        for (std::size_t k = 1; k < length; ++k) cp = (cp << 6) | (byte(i + k) & 0x3F);
+        out.push_back(cp);
+        i += length;
+    }
+    return out;
+}
+
 // Python's repr() of a str (unicodeobject.c unicode_repr) — what the
 // reference interpolates into its MissingPlugin message. The quote is ' unless
 // the text holds ' and no ", and a code point str.isprintable() rejects is
 // written as a \x, \u or \U escape.
 std::string py_repr(const std::string& text) {
-    const std::u32string units = to_utf32(text);
+    const std::u32string units = python_name(text);
     const bool double_quote = units.find(U'\'') != std::u32string::npos && units.find(U'"') == std::u32string::npos;
     const char32_t quote = double_quote ? U'"' : U'\'';
     const auto hex = [](char32_t cp, int digits) {
@@ -2221,11 +2258,11 @@ std::optional<std::string> G2P::override_for(const std::string& word) const {
             keys.push_back(std::move(straight));
         }
     }
-    const auto& lex = load_lexicon(language_);
+    const auto lex = load_lexicon(language_);
     for (const auto& k : keys) {
         if (auto hit = spec_->word_exceptions.find(k); hit != spec_->word_exceptions.end())
             return hit->second;
-        if (auto li = lex.find(unicode_nfc(k, false)); li != lex.end()) return li->second;
+        if (auto li = lex->find(unicode_nfc(k, false)); li != lex->end()) return li->second;
     }
     return std::nullopt;
 }

@@ -93,7 +93,14 @@ int main() {
             {"nope", "'nope'"}, {"it's", "\"it's\""}, {"a'b\"c", "'a\\'b\"c'"}, {"x\ty", "'x\\ty'"},
             {"a\\b", "'a\\\\b'"}, {"\xc3\xa9", "'\xc3\xa9'"}, {"\x7f", "'\\x7f'"}, {"\xc2\x85", "'\\x85'"},
             {"\xe2\x80\x8b", "'\\u200b'"}, {"\xcd\xb8", "'\\u0378'"}, {"\xf3\xa0\x80\x81", "'\\U000e0001'"},
-            {"\xf0\x9f\x98\x80", "'\xf0\x9f\x98\x80'"}};
+            {"\xf0\x9f\x98\x80", "'\xf0\x9f\x98\x80'"},
+            // Not valid UTF-8: a lone surrogate (surrogatepass) and raw bytes
+            // (surrogateescape), as Python holds such a name.
+            {"\xed\xa0\x80", "'\\ud800'"}, {"\xed\xb0\x80", "'\\udc00'"}, {"\xed\xbf\xbf", "'\\udfff'"},
+            {"a\xed\xa0\xbd", "'a\\ud83d'"}, {"\xff", "'\\udcff'"}, {"\xc3", "'\\udcc3'"},
+            {"\xc0\xaf", "'\\udcc0\\udcaf'"}, {"\xe0\x80\xaf", "'\\udce0\\udc80\\udcaf'"},
+            {"\xf4\x90\x80\x80", "'\\udcf4\\udc90\\udc80\\udc80'"}, {"\xf0\x9f\x98", "'\\udcf0\\udc9f\\udc98'"},
+            {"\xed\xa0", "'\\udced\\udca0'"}};
         for (const auto& [name, quoted] : names)
             assert(missing([&] { G2P("pt-PT", {{"rescore", {name}}}); }) == message("rescore", quoted, "nothing"));
         struct Same : NormalizePlugin {
@@ -595,7 +602,15 @@ int main() {
         assert(english.transcribe_word("zork\xe2\x80\x99" "flim") == "\xcb\x88z\xc9\xaa\xc5\x8bk");
         assert(english.transcribe_word("zork\xe2\x80\x99" "flim,") == "\xcb\x88z\xc9\xaa\xc5\x8bk");
         assert(english.transcribe_word("\xe2\x80\x9czork\xe2\x80\x99" "flim\xe2\x80\x9d") == "\xcb\x88z\xc9\xaa\xc5\x8bk");
+        // A new lexicon source replaces the cached one for an engine that is
+        // already built, and the copy get_lexicon returned stays as it was.
+        const auto before = get_lexicon("en-US");
+        { std::ofstream output(dir + "/en-US.tsv"); output << "zork'flim\tz\xc9\x94k\n"; }
+        set_lexicon_directory(dir);
+        assert(english.transcribe_word("zork'flim") == "\xcb\x88z\xc9\x94k");
+        assert(before.at("zork'flim") == "z\xc9\xaa\xc5\x8bk" && get_lexicon("en-US").at("zork'flim") == "z\xc9\x94k");
         clear_lexicons();
+        assert(english.transcribe_word("zork'flim") != "\xcb\x88z\xc9\x94k" && get_lexicon("en-US").empty());
         std::filesystem::remove_all(dir);
     }
     {

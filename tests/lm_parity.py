@@ -32,9 +32,13 @@ import sys
 
 HERE = pathlib.Path(__file__).resolve().parent
 CPP_ROOT = HERE.parent
+SCRATCH = HERE / "_scratch"
 # The reference side needs numpy and the reference package importable from
 # $O2I_PYTHON_ROOT: $O2I_PYTHON, else the interpreter running the harness.
 REFERENCE_PYTHON = os.environ.get("O2I_PYTHON") or sys.executable
+# Python 3.12 made sum() of floats compensated (Neumaier), and the port sums
+# as 3.12 does. An older reference sums naively and gives other distances.
+MIN_REFERENCE = (3, 12)
 
 
 def run(command, label):
@@ -42,7 +46,7 @@ def run(command, label):
     result = subprocess.run(command, cwd=str(CPP_ROOT), text=True,
                             capture_output=True)
     if result.stdout.strip():
-        print(result.stdout.strip()[-1200:])
+        print(result.stdout.strip())
     if result.stderr.strip():
         print(result.stderr.strip())
     if result.returncode != 0:
@@ -63,6 +67,20 @@ def main():
     if not os.path.exists(REFERENCE_PYTHON):
         print(f"reference interpreter missing: {REFERENCE_PYTHON!r} (set $O2I_PYTHON)")
         sys.exit(1)
+
+    found = subprocess.run([REFERENCE_PYTHON, "-c", "import sys; print(*sys.version_info[:2])"],
+                           text=True, capture_output=True, check=True).stdout.split()
+    version = tuple(int(part) for part in found)
+    if version < MIN_REFERENCE:
+        print(f"FAIL reference interpreter: {REFERENCE_PYTHON} is Python {version[0]}.{version[1]}. "
+              f"The port sums floats as Python {MIN_REFERENCE[0]}.{MIN_REFERENCE[1]} and later do, "
+              f"so an older reference gives different distances. Set $O2I_PYTHON to Python "
+              f"{MIN_REFERENCE[0]}.{MIN_REFERENCE[1]} or later.")
+        sys.exit(1)
+    # A dump left from an earlier run must never stand in for one that a step
+    # failed to write.
+    for stale in SCRATCH.glob("_lm_feats_*"):
+        stale.unlink()
 
     run([REFERENCE_PYTHON, str(HERE / "lm_feats_ref.py")], "reference dump")
     run([checker], "C++ dump")
