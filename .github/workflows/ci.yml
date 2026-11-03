@@ -17,6 +17,12 @@ jobs:
         include:
           - compiler: gcc
             silabificador: true
+          # One cell builds both libraries shared and runs the install check:
+          # its consumer links only if the installed package hands the shared
+          # silabificador on.
+          - compiler: gcc
+            silabificador: true
+            shared: true
     runs-on: ubuntu-latest
     env:
       CC: ${{ matrix.compiler == 'clang' && 'clang' || 'gcc' }}
@@ -59,7 +65,8 @@ jobs:
       - name: Build and install silabificador.cpp
         if: matrix.silabificador
         run: |
-          cmake -S silabificador -B "$RUNNER_TEMP/silabificador-build" -DSILABIFICADOR_BUILD_TESTS=OFF
+          cmake -S silabificador -B "$RUNNER_TEMP/silabificador-build" -DSILABIFICADOR_BUILD_TESTS=OFF \
+            -DBUILD_SHARED_LIBS=${{ matrix.shared && 'ON' || 'OFF' }}
           cmake --build "$RUNNER_TEMP/silabificador-build" --parallel
           cmake --install "$RUNNER_TEMP/silabificador-build" --prefix "$RUNNER_TEMP/silabificador"
       # The reference finds its syllabifier through an entry point, so the
@@ -73,8 +80,17 @@ jobs:
       - name: Configure
         env:
           CMAKE_PREFIX_PATH: ${{ matrix.silabificador && format('{0}/silabificador', runner.temp) || '' }}
-        run: cmake -S . -B build -DBUILD_TESTING=ON
+        run: cmake -S . -B build -DBUILD_TESTING=ON -DBUILD_SHARED_LIBS=${{ matrix.shared && 'ON' || 'OFF' }}
       - name: Build
         run: cmake --build build --parallel
       - name: Test
+        if: ${{ !matrix.shared }}
         run: ctest --test-dir build --output-on-failure
+      # The installed CLI has no RPATH, so it finds both shared libraries
+      # through LD_LIBRARY_PATH. The check links its consumer with that
+      # variable unset.
+      - name: Test the shared install
+        if: matrix.shared
+        env:
+          LD_LIBRARY_PATH: ${{ format('{0}/build/test-install/lib:{1}/silabificador/lib', github.workspace, runner.temp) }}
+        run: ctest --test-dir build --output-on-failure -R 'orthography2ipa-(core|install)$'
