@@ -126,6 +126,9 @@ struct LanguageSpec {
     std::optional<std::string> inherent_vowel_final;
     std::string virama_final_vowel;
     bool coda_no_inherent_vowel = false;
+    // A consonant letter that spells the nucleus between an unvowelled onset
+    // and a closing consonant (Thai ⟨ว⟩ /uːa/), in declaration order; own-only.
+    std::vector<std::pair<std::string, std::string>> consonant_nuclei;
     bool collapse_geminates = false, doubled_letters_geminate = true, constrain_onsets = false;
     // An apostrophe between two letters belongs to the written word (doesn't).
     bool word_internal_apostrophe = false;

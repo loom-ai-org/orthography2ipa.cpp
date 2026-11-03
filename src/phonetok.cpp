@@ -558,6 +558,8 @@ PhonetokTokenizer::PhonetokTokenizer(const LanguageSpec& spec, bool add_bos, boo
     dependent_vowel_spans_.assign(spans.begin(), spans.end());
     for (const auto& vowel : spec.preposed_vowels) preposed_vowels_.insert(uni::lower(u32(vowel)));
     coda_no_inherent_vowel_ = spec.coda_no_inherent_vowel;
+    for (const auto& [letter, nucleus] : spec.consonant_nuclei)
+        consonant_nuclei_.emplace_back(uni::lower(u32(letter)), u32(nucleus));
     if (spec.inherent_vowel_final) inherent_vowel_final_ = u32(*spec.inherent_vowel_final);
     vowel_graphemes_ =
         std::make_shared<const std::set<std::string>>(spec.vowel_graphemes.begin(),
@@ -591,6 +593,47 @@ bool PhonetokTokenizer::supplies_vowel_at(const std::u32string& text, std::size_
         }
     }
     return supplies_vowel(text[pos]);
+}
+
+// phonetok.py PhonetokTokenizer._consonant_nucleus_at: the offset of the
+// consonant letter at *pos* that spells the nucleus, or -1. *tokens* are the
+// tokens before the consonant that precedes the letter, so the test sees
+// whether that consonant is an onset with no vowel of its own.
+long PhonetokTokenizer::consonant_nucleus_at(const std::u32string& text, std::size_t pos,
+                                             const std::vector<UToken>& tokens) const {
+    if (consonant_nuclei_.empty() || syllable_has_nucleus(tokens)) return -1;
+    while (pos < text.size() && spells_nothing(std::u32string(1, text[pos]))) ++pos;
+    const auto letter = trie_->longest_match(text, pos);
+    if (!letter || std::none_of(consonant_nuclei_.begin(), consonant_nuclei_.end(),
+                                [&](const auto& entry) { return entry.first == *letter; }))
+        return -1;
+    std::size_t close = pos + letter->size();
+    while (close < text.size() && spells_nothing(std::u32string(1, text[close]))) ++close;
+    const auto coda = trie_->longest_match(text, close);
+    const auto* coda_ipa = coda ? ipa_for(*coda) : nullptr;
+    if (coda_ipa == nullptr || coda_ipa->empty() || (*coda_ipa)[0].empty() ||
+        is_nucleus_ipa((*coda_ipa)[0]) || supplies_vowel_at(text, close + coda->size()))
+        return -1;
+    return static_cast<long>(pos);
+}
+
+// phonetok.py PhonetokTokenizer._unfuse_consonant_nucleus: *gkey* without its
+// last letter when that letter is a consonant nucleus, so a cluster key
+// (Thai ⟨ขว⟩ /kʰw/ in ⟨ขวา⟩) does not swallow the nucleus of ⟨ขวด⟩.
+std::u32string PhonetokTokenizer::unfuse_consonant_nucleus(
+    const std::u32string& gkey, const std::u32string& text, std::size_t pos,
+    const std::vector<UToken>& tokens) const {
+    const auto* key_ipa = ipa_for(gkey);
+    if (key_ipa == nullptr || key_ipa->empty() || is_nucleus_ipa((*key_ipa)[0])) return gkey;
+    for (const auto& [letter, nucleus] : consonant_nuclei_) {
+        if (letter.size() >= gkey.size() || gkey.compare(gkey.size() - letter.size(), letter.size(), letter) != 0)
+            continue;
+        const std::u32string head = gkey.substr(0, gkey.size() - letter.size());
+        if (ipa_for(head) != nullptr &&
+            consonant_nucleus_at(text, pos + head.size(), tokens) == static_cast<long>(pos + head.size()))
+            return head;
+    }
+    return gkey;
 }
 
 // phonetok.py PhonetokTokenizer._spells_nothing: a combining mark (or a
@@ -796,6 +839,7 @@ std::vector<PhonetokTokenizer::UToken> PhonetokTokenizer::tokenize_u32(
     std::vector<UToken> tokens;
     const std::size_t n = text.size();
     std::size_t pos = 0;
+    long nucleus_at = -1;  // where a consonant_nuclei letter spells the nucleus
 
     if (add_bos_)
         tokens.push_back({TokenKind::BOS, u32(BOS_STR), {}, 0, 0});
@@ -1002,8 +1046,12 @@ std::vector<PhonetokTokenizer::UToken> PhonetokTokenizer::tokenize_u32(
                         *gkey = gkey->substr(0, gkey->size() - 1);
                 }
             }
+            if (!consonant_nuclei_.empty()) *gkey = unfuse_consonant_nucleus(*gkey, text, pos, tokens);
             std::vector<std::u32string> ipa_vals;
             if (const auto* values = ipa_for(*gkey)) ipa_vals = *values;
+            if (static_cast<long>(pos) == nucleus_at)
+                for (const auto& [letter, nucleus] : consonant_nuclei_)
+                    if (letter == *gkey) ipa_vals = {nucleus};
             std::size_t consumed = gkey->size();
             // Inherent vowel for abugidas: a consonant letter carries
             // one, cancelled by a virama or a dependent vowel sign; marks
@@ -1018,11 +1066,12 @@ std::vector<PhonetokTokenizer::UToken> PhonetokTokenizer::tokenize_u32(
                     const std::size_t next_pos = pos + consumed;
                     const bool has_next = next_pos < n;
                     const char32_t next_ch = has_next ? text[next_pos] : 0;
+                    nucleus_at = consonant_nucleus_at(text, next_pos, tokens);
                     if (has_next && is_virama_char(next_ch)) {
                         // Virama — bare consonant; consume the mark so
                         // C+virama+C falls out as a cluster.
                         consumed += 1;
-                    } else if (!supplies_vowel_at(text, next_pos)) {
+                    } else if (nucleus_at < 0 && !supplies_vowel_at(text, next_pos)) {
                         // Nothing supplies a vowel — but a consonant
                         // closing an already-nucleused syllable gets no
                         // inherent vowel of its own (Tai coda rule),

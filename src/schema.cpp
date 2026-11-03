@@ -2074,6 +2074,8 @@ bool language_spec_model(Report& report, const Json& json, LanguageSpecModel& ou
     ok = b.strings("preposed_vowels", out.preposed_vowels, kOptional) && ok;
     ok = b.strings("trailing_vowel_axis_digraphs", out.trailing_vowel_axis_digraphs, kOptional) && ok;
     ok = b.opt_boolean("coda_no_inherent_vowel", out.coda_no_inherent_vowel) && ok;
+    ok = b.opt_map("consonant_nuclei", out.consonant_nuclei,
+                   [](Report& r, const Json& v, std::string& slot) { return value_str(r, v, slot); }) && ok;
     ok = b.opt_str("inherent_vowel_final", out.inherent_vowel_final) && ok;
     ok = b.opt_str("virama_final_vowel", out.virama_final_vowel) && ok;
     ok = b.opt_boolean("collapse_geminates", out.collapse_geminates) && ok;
@@ -2610,6 +2612,7 @@ std::string dump_json(const LanguageSpecModel& model) {
     m("preposed_vowels", model.preposed_vowels);
     m("trailing_vowel_axis_digraphs", model.trailing_vowel_axis_digraphs);
     m("coda_no_inherent_vowel", model.coda_no_inherent_vowel);
+    m("consonant_nuclei", model.consonant_nuclei);
     m("inherent_vowel_final", model.inherent_vowel_final);
     m("virama_final_vowel", model.virama_final_vowel);
     m("collapse_geminates", model.collapse_geminates);
