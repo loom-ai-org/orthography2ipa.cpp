@@ -1696,23 +1696,14 @@ std::vector<std::string> available_codes(bool include_clades) {
     }
     std::sort(out.begin(), out.end()); return out;
 }
+// registry.py available_families: each listed code under its loaded spec's
+// `family`, so the grouping follows the loader's classification. A code whose
+// spec does not load is left out.
 std::map<std::string, std::vector<std::string>> available_families() {
     std::map<std::string, std::vector<std::string>> result;
-    std::map<std::string, ptree> raw_specs;
-    if (!fs::is_directory(data_dir)) return result;
-    for (const auto& entry : fs::directory_iterator(data_dir)) if (entry.path().extension() == ".json") {
-        std::ifstream input(entry.path()); if (!input) continue; ptree raw; boost::property_tree::read_json(input, raw); raw_specs[entry.path().stem().string()] = std::move(raw);
+    for (const auto& code : available_codes()) {
+        try { result[get(code).family].push_back(code); } catch (const std::exception&) {}
     }
-    for (const auto& [code, raw] : raw_specs) {
-        if (raw.get<bool>("clade", false)) continue;
-        std::string family = raw.get<std::string>("family", "");
-        if (family.empty()) { std::vector<std::string> path; std::set<std::string> seen{code}; std::string parent = raw.get<std::string>("parent", "");
-            while (!parent.empty() && !seen.count(parent)) { seen.insert(parent); auto it = raw_specs.find(parent); if (it == raw_specs.end()) break; if (it->second.get<bool>("clade", false)) path.push_back(it->second.get<std::string>("name", parent)); parent = it->second.get<std::string>("parent", ""); }
-            std::reverse(path.begin(), path.end()); for (std::size_t i = 0; i < path.size(); ++i) { if (i) family += " > "; family += path[i]; }
-        }
-        result[family].push_back(code);
-    }
-    for (auto& [_, codes] : result) std::sort(codes.begin(), codes.end());
     return result;
 }
 std::vector<std::string> validate(const std::string& code) {
