@@ -406,6 +406,14 @@ private:
     // normalized once. Composed with the declared plugins' lattice rescorers in
     // front of the spec's allophone chain by `chain_rescorers()`.
     std::vector<const rescorer::LatticeRescorer*> user_rescorers_;
+    // g2p.py G2P.__init__ `declared_rescorers`: `plugin.rescorers(self.lang)`
+    // for each declared `rescore` plugin, caller override over the spec's
+    // list, resolved once at construction.
+    std::vector<const rescorer::LatticeRescorer*> declared_rescorers_;
+    /// g2p.py _StagePlugins.get: the plugins declared for *stage*, the caller's
+    /// override over the spec's list, resolved by name. Throws MissingPlugin
+    /// for a name that nothing provides.
+    std::vector<std::string> declared(const std::string& stage) const;
     /// g2p.py G2P._rescorers minus the allophone chain: what Tokenizer needs in
     /// front of the chain it compiles itself (user rescorers, then the
     /// declared `rescore` plugins' lattice rescorers for this language).

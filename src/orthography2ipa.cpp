@@ -1771,13 +1771,12 @@ G2P::G2P(std::string language, std::map<std::string, std::vector<std::string>> p
     discover_plugins_once();
     if (!dialect_profile_.empty() && !dialect_profile_known(dialect_profile_))
         throw std::invalid_argument("unknown dialect profile: " + dialect_profile_);
-    for (const auto& [stage, names] : plugin_overrides_) {
-        if (stage != "normalize" && stage != "syllabify" && stage != "stress" &&
-            stage != "rescore" && stage != "sandhi")
-            throw std::invalid_argument("unknown plugin stage: " + stage);
-        if (std::any_of(names.begin(), names.end(), [](const auto& name) { return name.empty(); }))
-            throw std::invalid_argument("plugin names cannot be empty: " + stage);
-    }
+    // `self.plugins = {**(self.spec.plugins or {}), **_as_names(plugins or {})}`
+    // takes any stage key; only the stages g2p.py reads are ever resolved.
+    // The rescore stage resolves here, so a missing name fails construction.
+    for (const auto& name : declared("rescore"))
+        for (const auto* r : rescorer_plugins.at(name)->lattice_rescorers(language_))
+            declared_rescorers_.push_back(r);
     // g2p.py G2P.__init__'s engine-side derivations, in the reference's order.
     silent_marks_ = silent_marks_of(*spec_);
     // `self._sandhi = SandhiEngine(self.spec.sandhi_rules) if
@@ -1818,11 +1817,9 @@ std::string py_repr(const std::string& text) {
 // the order it names them, resolved against what is registered for that stage.
 // A name nothing provides is FATAL, with the reference's own message: the spec
 // named the plugin precisely because the built-in answer is not its answer.
-std::vector<std::string> get_declared_plugins(const std::string& stage,
-                                              const LanguageSpec& spec) {
-    auto entry = spec.plugins.find(stage);
-    if (entry == spec.plugins.end()) return {};
-    const std::vector<std::string>& names = entry->second;
+namespace {
+std::vector<std::string> resolve_declared(const std::string& stage, const std::string& code,
+                                          const std::vector<std::string>& names) {
     if (names.empty()) return {};
 
     // registry.py `_discover_stage(stage)`: the installed plugins keyed by
@@ -1854,9 +1851,9 @@ std::vector<std::string> get_declared_plugins(const std::string& stage,
                 first = false; listed += py_repr(known);
             }
             listed += "]";
-            throw MissingPlugin("the " + py_repr(spec.code) + " spec names the " +
-                py_repr(stage) + " plugin " + py_repr(name) + ", and it is not installed.\n\n"
-                "Installed for this stage: " + (installed.empty() ? std::string("'nothing'") : listed) +
+            throw MissingPlugin("the " + py_repr(code) + " spec names the " +
+                stage + " plugin " + py_repr(name) + ", and it is not installed.\n\n"
+                "Installed for this stage: " + (installed.empty() ? std::string("nothing") : listed) +
                 ".\n\nThis is fatal on purpose. The spec asked for this plugin because the "
                 "built-in answer is not the answer it wants — so falling back would not be a "
                 "graceful degradation, it would be a DIFFERENT TRANSCRIPTION, silently. "
@@ -1865,6 +1862,23 @@ std::vector<std::string> get_declared_plugins(const std::string& stage,
         out.push_back(name);
     }
     return out;
+}
+} // namespace
+
+std::vector<std::string> get_declared_plugins(const std::string& stage,
+                                              const LanguageSpec& spec) {
+    const auto entry = spec.plugins.find(stage);
+    return entry == spec.plugins.end() ? std::vector<std::string>{}
+                                       : resolve_declared(stage, spec.code, entry->second);
+}
+
+std::vector<std::string> G2P::declared(const std::string& stage) const {
+    // `merged = replace(self._spec, plugins=self._declared)`: the caller's
+    // list for a stage replaces the spec's.
+    const auto overridden = plugin_overrides_.find(stage);
+    return resolve_declared(stage, spec_->code,
+                            overridden == plugin_overrides_.end() ? plugin_names(*spec_, stage)
+                                                                  : overridden->second);
 }
 
 // registry.py ancestry_chain: the `parent` chain above *code*, nearest
@@ -1922,15 +1936,7 @@ std::vector<const rescorer::LatticeRescorer*> G2P::chain_rescorers() const {
     // (`plugin.rescorers(self.lang)` for each plugin, in plugin order); the
     // allophone chain itself is appended by Tokenizer, which owns it.
     std::vector<const rescorer::LatticeRescorer*> out = user_rescorers_;
-    for (const auto& name : plugin_names(*spec_, "rescore")) {
-        auto override_names = plugin_overrides_.find("rescore");
-        (void)override_names;
-        auto plugin = rescorer_plugins.find(name);
-        if (plugin == rescorer_plugins.end())
-            throw MissingPlugin("the " + spec_->code + " spec names the rescore plugin " +
-                                name + ", and it is not installed.");
-        for (const auto* r : plugin->second->lattice_rescorers(language_)) out.push_back(r);
-    }
+    out.insert(out.end(), declared_rescorers_.begin(), declared_rescorers_.end());
     return out;
 }
 
@@ -1992,19 +1998,7 @@ std::vector<features::WordFeatures> G2P::features(const std::string& text) const
     // context), confidence_breakdown (the confidence value) and flat_contexts
     // (predicates + neighbours) — no vowel logic is recomputed here.
     std::vector<features::WordFeatures> out;
-    // The caller's normalize override wins over the spec's list, as in
-    // transcribe_detailed (g2p.py _StagePlugins).
-    const auto overridden = plugin_overrides_.find("normalize");
-    const auto& normalizers = overridden == plugin_overrides_.end() ? plugin_names(*spec_, "normalize") : overridden->second;
-    const auto normalize = [&](std::string value) {
-        for (const auto& name : normalizers) {
-            auto it = normalize_plugins.find(name);
-            if (it == normalize_plugins.end())
-                throw std::runtime_error("missing normalize plugin: " + name);
-            value = it->second->normalize(value, language_);
-        }
-        return value;
-    };
+    const auto normalize = [this](std::string value) { return normalized(std::move(value)); };
     for (const auto& input : split_words(*spec_, text, normalize)) {
         const std::string& word = input.surface;
         const auto slots = ipa_lattice(word);
@@ -2031,17 +2025,7 @@ sentence::SentenceLattice G2P::sentence_lattice(const std::string& text,
     if (search != "greedy" && search != "beam")
         throw std::invalid_argument("search must be 'greedy' or 'beam', got " + search);
     const std::size_t width = search == "greedy" ? 1 : beam_width;
-    const auto overridden = plugin_overrides_.find("normalize");
-    const auto& normalizers = overridden == plugin_overrides_.end() ? plugin_names(*spec_, "normalize") : overridden->second;
-    const auto normalize = [&](std::string value) {
-        for (const auto& name : normalizers) {
-            auto it = normalize_plugins.find(name);
-            if (it == normalize_plugins.end())
-                throw std::runtime_error("missing normalize plugin: " + name);
-            value = it->second->normalize(value, language_);
-        }
-        return value;
-    };
+    const auto normalize = [this](std::string value) { return normalized(std::move(value)); };
     const auto inputs = split_words(*spec_, text, normalize);
     if (inputs.empty()) {
         sentence::SentenceLattice empty;
@@ -2222,14 +2206,8 @@ std::optional<std::string> G2P::override_for(const std::string& word) const {
 }
 
 std::string G2P::normalized(std::string text) const {
-    const auto overridden = plugin_overrides_.find("normalize");
-    const auto& names = overridden == plugin_overrides_.end() ? plugin_names(*spec_, "normalize")
-                                                              : overridden->second;
-    for (const auto& name : names) {
-        auto it = normalize_plugins.find(name);
-        if (it == normalize_plugins.end()) throw std::runtime_error("missing normalize plugin: " + name);
-        text = it->second->normalize(text, language_);
-    }
+    for (const auto& name : declared("normalize"))
+        text = normalize_plugins.at(name)->normalize(text, language_);
     return text;
 }
 
@@ -2456,25 +2434,14 @@ std::string G2P::transcribe_word(const std::string& word, const std::string& sea
 
 TranscriptionResult G2P::transcribe_detailed(const std::string& text, const std::string& search, std::size_t width) const {
     if (search != "greedy" && search != "beam") throw std::invalid_argument("search must be greedy or beam");
-    auto stage = [&](const std::string& name) -> const std::vector<std::string>& { auto it = plugin_overrides_.find(name); return it == plugin_overrides_.end() ? plugin_names(*spec_, name) : it->second; };
-    // registry.py get_declared_plugins resolves a declared plugin by name and
-    // does not ask which languages it owns, for any stage. g2p.py resolves
-    // only the normalize, rescore and sandhi stages; it never reads a
-    // declared syllabify or stress plugin, so a missing one is no error.
-    auto validate_stage = [&](const std::string& name, const auto& plugins) {
-        for (const auto& plugin_name : stage(name))
-            if (plugins.find(plugin_name) == plugins.end())
-                throw std::runtime_error("missing " + name + " plugin: " + plugin_name);
-    };
-    validate_stage("normalize", normalize_plugins);
-    validate_stage("rescore", rescorer_plugins);
-    validate_stage("sandhi", sandhi_plugins);
+    // g2p.py resolves a declared stage when it first runs it and never asks
+    // which languages a plugin owns: normalize per chunk, sandhi after the
+    // words, rescore at construction.
     auto normalize = [&](std::string value) {
-        for (const auto& name : stage("normalize")) {
-            auto it = normalize_plugins.find(name);
-            if (it == normalize_plugins.end()) throw std::runtime_error("missing normalize plugin: " + name);
-            const auto normalized = it->second->normalize(value, language_);
-            if (it->second->normalize(value, language_) != normalized)
+        for (const auto& name : declared("normalize")) {
+            const auto& plugin = normalize_plugins.at(name);
+            const auto normalized = plugin->normalize(value, language_);
+            if (plugin->normalize(value, language_) != normalized)
                 throw std::runtime_error("normalize plugin returned non-deterministic output: " + name);
             value = normalized;
         }
@@ -2523,12 +2490,11 @@ TranscriptionResult G2P::transcribe_detailed(const std::string& text, const std:
     if (apply_sandhi_ && sandhi_)
         ipa_words = sandhi_->apply(ipa_words, /*obligatory_only=*/false, pausal);
 
-    for (const auto& name : stage("sandhi")) {
-        auto p = sandhi_plugins.find(name);
-        if (p == sandhi_plugins.end()) throw std::runtime_error("missing sandhi plugin: " + name);
-        const auto transformed = p->second->apply(ipa_words, surfaces, pausal, language_);
+    for (const auto& name : declared("sandhi")) {
+        const auto& p = sandhi_plugins.at(name);
+        const auto transformed = p->apply(ipa_words, surfaces, pausal, language_);
         if (transformed.size() != ipa_words.size()) throw std::runtime_error("sandhi plugin changed word count: " + name);
-        if (p->second->apply(ipa_words, surfaces, pausal, language_) != transformed)
+        if (p->apply(ipa_words, surfaces, pausal, language_) != transformed)
             throw std::runtime_error("sandhi plugin returned non-deterministic output: " + name);
         ipa_words = transformed;
     }

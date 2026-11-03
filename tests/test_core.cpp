@@ -180,6 +180,55 @@ int main() {
             assert(undeclared.transcribe("").empty());
         }
     }
+    {
+        // g2p.py resolves a declared stage when it first runs it, with the
+        // caller's list over the spec's, and raises MissingPlugin for a name
+        // that nothing provides: rescore in G2P(), normalize on the first
+        // chunk, sandhi after the words. Any other stage key is never read.
+        const auto missing = [](const auto& call) {
+            try { call(); } catch (const MissingPlugin& e) { return std::string(e.what()); }
+            return std::string();
+        };
+        // The message is the reference's; the installed list depends on what
+        // this process registered before.
+        const std::string message = missing([] { G2P("pt-PT", {{"rescore", {"nope"}}}); });
+        assert(message.rfind("the 'pt-PT' spec names the rescore plugin 'nope', and it is not installed.\n\n"
+                             "Installed for this stage: ", 0) == 0);
+        const std::string tail = "it would be a DIFFERENT TRANSCRIPTION, silently. Install it, or change the spec.";
+        assert(message.size() > tail.size() && message.compare(message.size() - tail.size(), tail.size(), tail) == 0);
+        const G2P normalize("pt-PT", {{"normalize", {"nope"}}});
+        assert(!missing([&] { normalize.transcribe("tenho casa"); }).empty());
+        assert(!missing([&] { normalize.features("tenho casa"); }).empty());
+        assert(!missing([&] { normalize.sentence_lattice("tenho casa"); }).empty());
+        const G2P sandhi("pt-PT", {{"sandhi", {"nope"}}});
+        assert(sandhi.transcribe("").empty());
+        assert(!missing([&] { sandhi.transcribe("tenho casa"); }).empty());
+        assert(G2P("pt-PT", {{"foo", {"nope"}}}).transcribe("tenho casa") == G2P("pt-PT").transcribe("tenho casa"));
+
+        // g2p.py G2P.__init__ calls `plugin.rescorers(self.lang)` once for each
+        // declared rescore plugin, the caller's override included.
+        static int contributed = 0, consulted = 0;
+        struct Identity : rescorer::LatticeRescorer {
+            std::vector<Candidate> rescore(const rescorer::SegmentSlot& slot, const rescorer::RescoreContext&) const override {
+                ++consulted;
+                return slot.candidates;
+            }
+        };
+        struct Lattice : RescorerPlugin {
+            Identity identity;
+            std::vector<std::string> language_codes() const override { return {"pt-PT"}; }
+            std::vector<IPAPath> rescore(const std::string&, const std::string&, const std::vector<IPAPath>& paths) const override { return paths; }
+            std::vector<const rescorer::LatticeRescorer*> lattice_rescorers(const std::string&) const override {
+                ++contributed;
+                return {&identity};
+            }
+        };
+        register_rescorer_plugin("test-lattice", std::make_shared<Lattice>());
+        const G2P lattice("pt-PT", {{"rescore", {"test-lattice"}}});
+        assert(contributed == 1);
+        assert(lattice.transcribe("tenho casa") == G2P("pt-PT").transcribe("tenho casa"));
+        assert(contributed == 1 && consulted > 0);
+    }
     // g2p.py ipa_lattice: one slot per grapheme, ranked candidates, spans in
     // CODE POINTS, and the top-of-slot concatenation is a valid reading.
     const auto slots = engine.ipa_lattice("casa");
