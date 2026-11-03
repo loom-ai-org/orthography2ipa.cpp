@@ -293,6 +293,7 @@ struct LanguageSpecModel {
     std::optional<std::vector<std::string>> trailing_vowel_axis_digraphs;
     std::optional<bool> coda_no_inherent_vowel;
     std::optional<std::string> inherent_vowel_final;
+    std::optional<std::vector<std::string>> codas;
     std::optional<std::string> virama_final_vowel;
     std::optional<bool> collapse_geminates;
     std::optional<bool> doubled_letters_geminate;

@@ -119,6 +119,8 @@ struct LanguageSpec {
     // Optional with a meaningful empty-string state (as/bn declare "" =
     // suppress the final inherent vowel), hence the tri-state.
     std::optional<std::string> inherent_vowel_final;
+    // The segments a syllable may close on; empty leaves codas unconstrained. Own-only.
+    std::vector<std::string> codas;
     std::string virama_final_vowel;
     bool coda_no_inherent_vowel = false;
     bool collapse_geminates = false, doubled_letters_geminate = true, constrain_onsets = false;

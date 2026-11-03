@@ -338,6 +338,7 @@ LanguageSpec load_raw(const std::string& code, std::set<std::string>& loading) {
     if (auto value = raw.get_optional<std::string>("inherent_vowel_final"))
         s.inherent_vowel_final = *value;
     s.virama_final_vowel = raw.get<std::string>("virama_final_vowel", "");
+    s.codas = optional_list(raw, "codas");
     s.coda_no_inherent_vowel = raw.get<bool>("coda_no_inherent_vowel", false);
     s.collapse_geminates = raw.get<bool>("collapse_geminates", false);
     s.doubled_letters_geminate = raw.get<bool>("doubled_letters_geminate", true);
