@@ -1885,8 +1885,12 @@ std::vector<features::WordFeatures> G2P::features(const std::string& text) const
     // context), confidence_breakdown (the confidence value) and flat_contexts
     // (predicates + neighbours) — no vowel logic is recomputed here.
     std::vector<features::WordFeatures> out;
+    // The caller's normalize override wins over the spec's list, as in
+    // transcribe_detailed (g2p.py _StagePlugins).
+    const auto overridden = plugin_overrides_.find("normalize");
+    const auto& normalizers = overridden == plugin_overrides_.end() ? plugin_names(*spec_, "normalize") : overridden->second;
     const auto normalize = [&](std::string value) {
-        for (const auto& name : plugin_names(*spec_, "normalize")) {
+        for (const auto& name : normalizers) {
             auto it = normalize_plugins.find(name);
             if (it == normalize_plugins.end())
                 throw std::runtime_error("missing normalize plugin: " + name);
@@ -1923,8 +1927,10 @@ sentence::SentenceLattice G2P::sentence_lattice(const std::string& text,
     if (search != "greedy" && search != "beam")
         throw std::invalid_argument("search must be 'greedy' or 'beam', got " + search);
     const std::size_t width = search == "greedy" ? 1 : beam_width;
+    const auto overridden = plugin_overrides_.find("normalize");
+    const auto& normalizers = overridden == plugin_overrides_.end() ? plugin_names(*spec_, "normalize") : overridden->second;
     const auto normalize = [&](std::string value) {
-        for (const auto& name : plugin_names(*spec_, "normalize")) {
+        for (const auto& name : normalizers) {
             auto it = normalize_plugins.find(name);
             if (it == normalize_plugins.end())
                 throw std::runtime_error("missing normalize plugin: " + name);
