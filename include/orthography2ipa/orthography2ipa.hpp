@@ -555,6 +555,15 @@ std::vector<std::string> get_declared_plugins(const std::string& stage,
 /// registered for the resolved code.
 std::vector<const rescorer::LatticeRescorer*> get_rescorers(const std::string& code);
 
+/// Threads: the library keeps process-wide state and has no lock for it. That
+/// state is the plugin registry, the spec cache, the lexicon registry and the
+/// data directory. The register_*_plugin functions, discover_plugins,
+/// set_data_directory, register_lexicon, set_lexicon_directory and
+/// clear_lexicons write it. Do not call one of them while another thread
+/// calls into the library. The G2P constructor and get() fill the spec cache
+/// on first use, so do not build two engines at the same time either. A
+/// program that uses the library from more than one thread puts these calls
+/// behind a mutex of its own.
 void register_normalize_plugin(const std::string& name, std::shared_ptr<NormalizePlugin> plugin);
 void register_syllabifier_plugin(const std::string& name, std::shared_ptr<SyllabifierPlugin> plugin);
 void register_stress_plugin(const std::string& name, std::shared_ptr<StressPlugin> plugin);
