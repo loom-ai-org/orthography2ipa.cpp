@@ -58,13 +58,17 @@ if(silabificador_FOUND)
     target_link_libraries(orthography2ipa PRIVATE silabificador::silabificador)
     target_compile_definitions(orthography2ipa PRIVATE O2I_HAVE_SILABIFICADOR)
 endif()
-# A static library hands silabificador on to whatever links it; a shared one
-# carries it inside, so its consumers do not need the package.
-get_target_property(o2i_library_type orthography2ipa TYPE)
-if(silabificador_FOUND AND o2i_library_type STREQUAL "STATIC_LIBRARY")
-    set(O2I_EXPORTS_SILABIFICADOR ON)
-else()
-    set(O2I_EXPORTS_SILABIFICADOR OFF)
+# Consumers need the silabificador package unless it is linked into a shared
+# orthography2ipa: a static orthography2ipa hands silabificador on, and a
+# shared silabificador stays a library of its own.
+set(O2I_EXPORTS_SILABIFICADOR OFF)
+if(silabificador_FOUND)
+    get_target_property(o2i_library_type orthography2ipa TYPE)
+    get_target_property(silabificador_library_type silabificador::silabificador TYPE)
+    if(NOT (o2i_library_type STREQUAL "SHARED_LIBRARY" AND
+            silabificador_library_type STREQUAL "STATIC_LIBRARY"))
+        set(O2I_EXPORTS_SILABIFICADOR ON)
+    endif()
 endif()
 
 add_executable(orthography2ipa-cli src/main.cpp)
@@ -102,11 +106,16 @@ if(BUILD_TESTING)
     # (src/beam.hpp), which owns the positional.py port.
     target_include_directories(orthography2ipa-tests PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/src)
     add_test(NAME orthography2ipa-core COMMAND orthography2ipa-tests)
+    # `--json distance` writes Python repr floats, as the reference's json.dumps
+    # does. The pt-PT/es-ES allophone overlap is 7/13.
+    add_test(NAME orthography2ipa-cli-distance-json COMMAND orthography2ipa-cli --json distance pt-PT es-ES)
+    set_tests_properties(orthography2ipa-cli-distance-json PROPERTIES
+        PASS_REGULAR_EXPRESSION "\"allophone\":0\\.5384615384615384[,}]")
 
     # ── parity-harness drivers ────────────────────────────────────────────────
     # The per-module harnesses drive a small check binary instead of the CLI
     # (a process per spec for 7662 specs is not workable through the CLI).
-    foreach(driver langcodes inventory lm_feats lattice_per features_conformance tables sentence)
+    foreach(driver langcodes inventory lm_feats lattice_per features_conformance tables sentence py_float)
         add_executable(orthography2ipa-check-${driver} tests/check_${driver}_driver.cpp)
         target_link_libraries(orthography2ipa-check-${driver} PRIVATE orthography2ipa)
         # Several drivers reach the library's private beam/unicode headers.
@@ -135,6 +144,10 @@ if(BUILD_TESTING)
         # suite can run at all. Without the reference, CTest still runs the
         # pure C++ gates (core + install) and the build stays green on a
         # machine that has never seen the reference.
+        # repr() comes from the interpreter alone, so this check needs no reference.
+        add_test(NAME orthography2ipa-py-float-parity
+                 COMMAND ${Python3_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/tests/py_float_parity.py
+                         $<TARGET_FILE:orthography2ipa-check-py_float>)
         set(O2I_PARITY_ENABLED OFF)
         if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/../orthography2ipa/orthography2ipa/phonetok.py")
             set(ENV{O2I_PYTHON_ROOT} "${CMAKE_CURRENT_SOURCE_DIR}/../orthography2ipa")

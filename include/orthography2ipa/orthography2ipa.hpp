@@ -33,7 +33,7 @@ namespace sandhi { class Engine; }
 
 struct AllophoneRule {
     std::string id, surface, append, syllable_position, stress, preceded_by, followed_by;
-    std::string preceded_by_2, followed_by_2, preceded_by_3;
+    std::string preceded_by_2, followed_by_2, preceded_by_3, followed_by_3;
     std::string mutates_neighbor, mutates_neighbor_side;
     std::vector<std::string> phonemes, graphemes, word;
     std::vector<std::string> preceded_by_phoneme, followed_by_phoneme;
@@ -97,6 +97,9 @@ struct LanguageSpec {
     std::map<std::string, std::vector<std::string>> plugins;
     std::vector<std::string> marked_vowels, final_stress_endings, penult_stress_endings;
     std::vector<std::string> antepenult_stress_endings, diphthongs;
+    // IPA vowel sequences that form one nucleus where the stress mark is
+    // placed; unset, the transcription is split with `diphthongs`.
+    std::optional<std::vector<std::string>> ipa_diphthongs;
     std::vector<std::string> vowel_letters, onset_clusters;
     bool quantity_sensitive = false, superheavy_final_attracts = false;
     int max_onset = 1;
@@ -108,6 +111,8 @@ struct LanguageSpec {
     // "plugin" (a registered StressPlugin; missing then is fatal).
     std::string stress_source = "rules";
     std::string secondary_stress;
+    // "last": a hyphen-joined group keeps the main stress on its last marked element.
+    std::string compound_stress;
     std::string accent2_mark;
     std::vector<std::string> accent2_final_letters, cliticless_words;
     bool constrain_mark_onsets = true, coda_liquid_capture = false, iambic_length = false;
@@ -119,9 +124,16 @@ struct LanguageSpec {
     // Optional with a meaningful empty-string state (as/bn declare "" =
     // suppress the final inherent vowel), hence the tri-state.
     std::optional<std::string> inherent_vowel_final;
+    // The segments a syllable may close on; empty leaves codas unconstrained. Own-only.
+    std::vector<std::string> codas;
     std::string virama_final_vowel;
     bool coda_no_inherent_vowel = false;
+    // A consonant letter that spells the nucleus between an unvowelled onset
+    // and a closing consonant (Thai ⟨ว⟩ /uːa/), in declaration order; own-only.
+    std::vector<std::pair<std::string, std::string>> consonant_nuclei;
     bool collapse_geminates = false, doubled_letters_geminate = true, constrain_onsets = false;
+    // An apostrophe between two letters belongs to the written word (doesn't).
+    bool word_internal_apostrophe = false;
     std::vector<std::string> fold_diacritics, vowel_graphemes, dependent_vowels, preposed_vowels, trailing_vowel_axis_digraphs;
     // Per-candidate weights for the weighted-object grapheme form
     // ({"ipa": [...], "weights": [...]}); own-only, sparse.
@@ -411,6 +423,11 @@ private:
     /// `word_exceptions` then the lexicon, each keyed on the language-aware
     /// lower-casing of the word with the spec's silent stress marks removed.
     std::optional<std::string> override_for(const std::string& word) const;
+    /// g2p.py G2P._normalize: the input after the spec's normalize plugins.
+    std::string normalized(std::string text) const;
+    /// g2p.py G2P._compound_elements: the element surfaces of a hyphen-joined
+    /// word the spec stresses as one compound, or nullopt.
+    std::optional<std::vector<std::string>> compound_elements(const std::string& word) const;
     /// g2p.py G2P._unmapped_chars: the UNKNOWN tokens the grapheme table does
     /// not cover, and the coverage fraction they reduce.
     void unmapped_chars(const std::string& word, std::vector<std::string>* unmapped,
