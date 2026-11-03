@@ -79,11 +79,37 @@ int main() {
     assert(full_distance(portuguese, spanish) >= 0);
     assert(pairwise_distances({portuguese, spanish}).size() == 2);
 
-    const std::string path = "/tmp/orthography2ipa-cpp-test.tsv";
-    { std::ofstream output(path); output << "casa\tkaza\n"; }
-    register_lexicon("pt", path);
-    assert(get_lexicon("pt").at("casa") == "kaza");
-    clear_lexicons();
+    {
+        std::string pattern = (std::filesystem::temp_directory_path() / "orthography2ipa-cpp-XXXXXX").string();
+        const char* made = mkdtemp(pattern.data());
+        assert(made != nullptr);
+        const std::string dir = made;
+        const std::string path = dir + "/pt.tsv";
+        { std::ofstream output(path); output << "casa\tkaza\n"; }
+        register_lexicon("pt", path);
+        assert(get_lexicon("pt").at("casa") == "kaza");
+        clear_lexicons();
+        std::filesystem::remove_all(dir);
+    }
+
+    // A lexicon-dir file belongs to the spec its name resolves to, so en.tsv
+    // serves en-GB, the spec that en resolves to.
+    {
+        std::string pattern = (std::filesystem::temp_directory_path() / "orthography2ipa-cpp-XXXXXX").string();
+        const char* made = mkdtemp(pattern.data());
+        assert(made != nullptr);
+        const std::string dir = made;
+        { std::ofstream output(dir + "/en.tsv"); output << "zorkflim\tzɔɹkflɪm\n"; }
+        set_lexicon_directory(dir);
+        assert(resolve("en") == "en-GB");
+        assert(lexicon_path("en-GB") == dir + "/en.tsv");
+        assert(get_lexicon("en-GB").at("zorkflim") == "zɔɹkflɪm");
+        // The reference adds the primary stress mark to the lexicon entry.
+        assert(transcribe("zorkflim", "en-GB") == "ˈzɔɹkflɪm");
+        assert(transcribe("zorkflim", "en") == "ˈzɔɹkflɪm");
+        clear_lexicons();
+        std::filesystem::remove_all(dir);
+    }
 
     // Stress pipeline (stress.py / g2p.py ports): syllabification, stress
     // detection, secondary stress, quantity-sensitive placement and iambic
