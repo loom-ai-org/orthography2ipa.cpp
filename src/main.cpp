@@ -121,7 +121,7 @@ static void tone_json(const std::string& code, const std::string& word,
     const bool has_rules = spec.tone.has_value();
     const ToneData rules = has_rules ? *spec.tone : ToneData{};
 
-    std::cout << std::setprecision(17) << "{\"lang\":" << json(code)
+    std::cout << std::setprecision(17) << "{\"lang\":" << json(spec.code)
               << ",\"word\":" << json(supplied.empty() ? word : supplied)
               << ",\"atoms\":"; strings_json(atoms);
     std::cout << ",\"graphemes\":"; strings_json(graphemes);
@@ -361,7 +361,7 @@ int main(int argc, char** argv) {
             const auto readings = G2P(code).word_candidates(
                 text, static_cast<std::size_t>(k),
                 beam.has_value() ? std::optional<std::size_t>(*beam) : std::nullopt);
-            std::cout << "{\"lang\":" << json(code) << ",\"word\":" << json(text)
+            std::cout << "{\"lang\":" << json(get(code).code) << ",\"word\":" << json(text)
                       << ",\"k\":" << k << ",\"beam_width\":"
                       << (beam.has_value() ? *beam : (k < 8 ? 8 : k))
                       << ",\"candidates\":";
@@ -408,7 +408,7 @@ int main(int argc, char** argv) {
                 }
                 const std::vector<std::string> atoms(spec.phonemes.begin(), spec.phonemes.end());
                 const auto sylls = stress::syllabify_ipa(ipa, spec.max_onset, atoms);
-                std::cout << std::setprecision(17) << "{\"lang\":" << json(code)
+                std::cout << std::setprecision(17) << "{\"lang\":" << json(spec.code)
                           << ",\"input\":" << json(ipa) << ",\"mode\":\"ipa\",\"syllables\":";
                 strings_json(sylls);
                 std::cout << ",\"weights\":[";

@@ -38,14 +38,31 @@ SIX = ["pt-PT", "hi", "lo", "ru", "fr-FR", "es-ES"]
 # the module docstring) have no word_exceptions at all, so these lists ARE the
 # battery for them; they are the cases the audit confirmed by hand.
 PINNED = {
-    "pt-PT": ["chuva", "as", "aves", "os", "dois", "irmãos", "estás", "ver"],
+    "pt-PT": ["chuva", "as", "aves", "os", "dois", "irmãos", "estás", "ver",
+              "guarda-chuva", "chamo-me"],
+    "pt-BR": ["guarda-chuva", "boa-nova"],
+    "pt-AO": ["boa-nova"],
+    "pt-MZ": ["guarda-chuva"],
     "es-ES": ["seguro"],
+    "en-US": ["i'll.", "(i'm)"],
+    "af": ["'n."],
     "ru": ["молоко"],
+    "th": ["กรวด", "ขวด"],
     "fr-FR": ["jeune", "agneau", "les", "amis"],
+    "oc": ["Califòrnia", "sciéncia"],
+    # médico-dentário also needs compound_stress and the followed_by_3
+    # allophone condition.
+    "pt-PT-x-alentejo": ["capitólio", "aquário", "médico-dentário"],
+    "pt-PT-x-acores": ["3Aüau;-üj3bíe"],
+    "pt-CV": [",jrü1êAxà"],
     "hi": ["कृष्ण", "क्या", "राम", "नमस्ते", "भारत", "किताब", "दो", "क्", "क्ष",
            "श्र", "मुक्ति", "हिन्दी", "बिल्ल्", "सिक्ख"],
+    "pt-BR-x-bahia": ["em", "nos", "botar os pingos nos is"],
+    "pt-BR-x-mg": ["em"],
+    "pt-BR-x-recife": ["os"],
     "lo": ["ເອກ", "ເຫຼົ້າ", "ດອກ", "ເບິ່ງ", "ກ", "ງ", "ຈ", "ສາວ", "ລາວ", "ພາສາ",
-           "ຂອບໃຈ", "ໃຈ", "ແຜ່ນ", "ໂລກ", "ເຮືອນ", "ຊີວິດ", "ມື", "ບໍ່", "ແມ່", "ຄົນ"],
+           "ຂອບໃຈ", "ໃຈ", "ແຜ່ນ", "ໂລກ", "ເຮືອນ", "ຊີວິດ", "ມື", "ບໍ່", "ແມ່", "ຄົນ",
+           "ອາໂຫລ", "ອາໂຫຼ"],
 }
 
 # A quote mark and a backslash inside a word: every JSON surface escapes them.
@@ -56,6 +73,10 @@ TONE_LANGS = ["th", "lo", "vi", "yo", "km", "my", "bo", "ko", "kix", "zh", "pa"]
 ARABIC = ["ar", "ar-IQ", "ar-LB"]
 SHADDA = "\u0651"
 
+# Specs that take constrain_onsets from their graphemes base.
+PINNED["nl-BE"] = ["arco", "alto"]
+PINNED["de-AT"] = ["Fenster"]
+
 # The combining-mark / virama / preposed-vowel / geminate / clitic / multi
 # builders walk these lists; they are the languages the requirement names.
 COMBINING = ["pt-PT", "el", "vi", "tr", "ar", "hi", "cs", "pl", "sv", "hu", "th", "lo", "yo"]
@@ -64,6 +85,10 @@ GEMINATE = ["ar", "it-IT", "sv", "hu", "en-GB", "fo", "de-DE", "pt-PT", "es-ES",
 GEMINATE_AR = ["ar", "it-IT", "sv", "hu"]
 CLITIC = ["fr-FR", "en-GB", "ru", "pt-PT", "ar", "ar-IQ", "it-IT", "ca", "ga", "he", "sv", "da"]
 MULTI = ["fr-FR", "sv", "fo", "en-GB", "pt-PT", "ru", "it-IT", "de-DE", "is", "el", "hi", "th", "ko", "my"]
+
+# Aliases: a surface reports the code that the alias resolves to.
+PINNED["gl"] = ["casa"]
+PINNED["ro"] = ["casă"]
 
 # The code points of the viramas this catalog actually uses.
 VIRAMAS = {0x094D, 0x09CD, 0x0A4D, 0x0ACD, 0x0B4D, 0x0BCD, 0x0C4D, 0x0CCD,
