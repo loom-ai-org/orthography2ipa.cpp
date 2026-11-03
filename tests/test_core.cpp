@@ -7,6 +7,9 @@
 #include "codepoint_regex.hpp"
 
 #include <atomic>
+// Every check below is an assert, so a Release build (-DNDEBUG) must not
+// compile them out.
+#undef NDEBUG
 #include <cassert>
 #include <cstdlib>
 #include <filesystem>
@@ -29,7 +32,8 @@ int main() {
             {"acx-419", "arb", 5}, {"apd-Arab", "ar", 5}, {"aec", "arb", 5},
             {"acx-419", "ar-EG", 64}, {"apd-Latn", "ar", 64}, {"acx-x-test", "ar", 64},
             {"acx-Arab-x-oman", "ar", 10}, {"ar-Latn", "ar", 20}, {"arz-Latn", "ar", 60},
-            {"yue", "zh", 64}, {"mt", "ar", 134}, {"he", "ar", 134}, {"ar", "acx", 134}};
+            {"yue", "zh", 64}, {"mt", "ar", 134}, {"he", "ar", 134}, {"ar", "acx", 134},
+            {"ar-SA", "ar", 4}};
         for (const auto& row : rows)
             assert(registry::lang_distance(row.desired, row.supported) == row.distance);
         assert(resolve("acx-419") == "ar");
@@ -329,6 +333,69 @@ int main() {
         register_rescorer_plugin("test-life", std::make_shared<Life>(&new_used));
         assert(life.transcribe("tenho casa") == G2P("pt-PT").transcribe("tenho casa"));
         assert(old_used > 0 && new_used == 0);
+
+        // The per-word hook calls the plugins the engine holds, never the
+        // registry's current entry under the same name.
+        static int old_paths = 0, new_paths = 0;
+        struct PathCount : RescorerPlugin {
+            int* calls;
+            explicit PathCount(int* counter) : calls(counter) {}
+            std::vector<std::string> language_codes() const override { return {"qaa-x-foreign"}; }
+            std::vector<IPAPath> rescore(const std::string&, const std::string&, const std::vector<IPAPath>& paths) const override {
+                ++*calls;
+                return paths;
+            }
+        };
+        register_rescorer_plugin("test-hook", std::make_shared<PathCount>(&old_paths));
+        const G2P hook("pt-PT", {{"rescore", {"test-hook"}}});
+        register_rescorer_plugin("test-hook", std::make_shared<PathCount>(&new_paths));
+        assert(hook.transcribe("tenho casa") == G2P("pt-PT").transcribe("tenho casa"));
+        assert(old_paths > 0 && new_paths == 0);
+
+        // Declared plugins run in the order the spec names them, whatever
+        // their priority: registry.get_declared_plugins keeps that order and
+        // G2P.__init__ composes their rescorers in it. The reference, given
+        // these three plugins declared as low, high, mid, runs their lattice
+        // rescorers low, high, mid on every pass. The per-word hook keeps the
+        // same order and calls each plugin twice to check it is deterministic.
+        static std::vector<std::string> ran, lattice_ran;
+        struct Recording : rescorer::LatticeRescorer {
+            std::string label;
+            explicit Recording(std::string name) : label(std::move(name)) {}
+            std::vector<Candidate> rescore(const rescorer::SegmentSlot& slot, const rescorer::RescoreContext&) const override {
+                lattice_ran.push_back(label);
+                return slot.candidates;
+            }
+        };
+        struct Ranked : RescorerPlugin {
+            std::string label;
+            int rank;
+            Recording recording;
+            Ranked(const std::string& name, int value) : label(name), rank(value), recording(name) {}
+            std::vector<std::string> language_codes() const override { return {"qaa-x-foreign"}; }
+            int priority() const override { return rank; }
+            std::vector<IPAPath> rescore(const std::string&, const std::string&, const std::vector<IPAPath>& paths) const override {
+                ran.push_back(label);
+                return paths;
+            }
+            std::vector<const rescorer::LatticeRescorer*> lattice_rescorers(const std::string&) const override { return {&recording}; }
+        };
+        register_rescorer_plugin("test-rank-low", std::make_shared<Ranked>("low", 10));
+        register_rescorer_plugin("test-rank-high", std::make_shared<Ranked>("high", 90));
+        register_rescorer_plugin("test-rank-mid", std::make_shared<Ranked>("mid", 50));
+        const G2P ranked("pt-PT", {{"rescore", {"test-rank-low", "test-rank-high", "test-rank-mid"}}});
+        ran.clear();
+        lattice_ran.clear();
+        assert(ranked.transcribe("casa") == G2P("pt-PT").transcribe("casa"));
+        std::vector<std::string> lattice_runs;
+        for (const auto& label : lattice_ran)
+            if (lattice_runs.empty() || lattice_runs.back() != label) lattice_runs.push_back(label);
+        const std::vector<std::string> pass_order = {"low", "high", "mid"};
+        assert(!lattice_runs.empty() && lattice_runs.size() % pass_order.size() == 0);
+        for (std::size_t i = 0; i < lattice_runs.size(); ++i) assert(lattice_runs[i] == pass_order[i % pass_order.size()]);
+        const std::vector<std::string> word_order = {"low", "low", "high", "high", "mid", "mid"};
+        assert(!ran.empty() && ran.size() % word_order.size() == 0);
+        for (std::size_t i = 0; i < ran.size(); ++i) assert(ran[i] == word_order[i % word_order.size()]);
     }
     // g2p.py ipa_lattice: one slot per grapheme, ranked candidates, spans in
     // CODE POINTS, and the top-of-slot concatenation is a valid reading.
