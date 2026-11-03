@@ -92,7 +92,14 @@ int main() {
             {"nope", "'nope'"}, {"it's", "\"it's\""}, {"a'b\"c", "'a\\'b\"c'"}, {"x\ty", "'x\\ty'"},
             {"a\\b", "'a\\\\b'"}, {"\xc3\xa9", "'\xc3\xa9'"}, {"\x7f", "'\\x7f'"}, {"\xc2\x85", "'\\x85'"},
             {"\xe2\x80\x8b", "'\\u200b'"}, {"\xcd\xb8", "'\\u0378'"}, {"\xf3\xa0\x80\x81", "'\\U000e0001'"},
-            {"\xf0\x9f\x98\x80", "'\xf0\x9f\x98\x80'"}};
+            {"\xf0\x9f\x98\x80", "'\xf0\x9f\x98\x80'"},
+            // Not valid UTF-8: a lone surrogate (surrogatepass) and raw bytes
+            // (surrogateescape), as Python holds such a name.
+            {"\xed\xa0\x80", "'\\ud800'"}, {"\xed\xb0\x80", "'\\udc00'"}, {"\xed\xbf\xbf", "'\\udfff'"},
+            {"a\xed\xa0\xbd", "'a\\ud83d'"}, {"\xff", "'\\udcff'"}, {"\xc3", "'\\udcc3'"},
+            {"\xc0\xaf", "'\\udcc0\\udcaf'"}, {"\xe0\x80\xaf", "'\\udce0\\udc80\\udcaf'"},
+            {"\xf4\x90\x80\x80", "'\\udcf4\\udc90\\udc80\\udc80'"}, {"\xf0\x9f\x98", "'\\udcf0\\udc9f\\udc98'"},
+            {"\xed\xa0", "'\\udced\\udca0'"}};
         for (const auto& [name, quoted] : names)
             assert(missing([&] { G2P("pt-PT", {{"rescore", {name}}}); }) == message("rescore", quoted, "nothing"));
         struct Same : NormalizePlugin {
