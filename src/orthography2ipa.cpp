@@ -1932,8 +1932,8 @@ std::vector<std::string> ancestry_chain(const std::string& code) {
 // registry.py get_rescorers: the rescorers every registered plugin contributes
 // for *code*. Plugins are ordered by priority, LOWEST first, so the
 // highest-priority plugin sees the others' work and gets the last word — the
-// reference's `_discover_rescorer_plugins` sort, which the C++ registry applies
-// the same way the engine orders its `rescore` stage.
+// reference's `_discover_rescorer_plugins` sort. An engine's declared `rescore`
+// stage does not sort: it keeps the order the spec names.
 std::vector<const rescorer::LatticeRescorer*> get_rescorers(const std::string& code) {
     const std::string resolved = resolve(code);
     std::vector<std::string> names;
@@ -2343,12 +2343,9 @@ std::vector<std::string> G2P::word_candidates(const std::string& word, std::size
     return out;
 }
 std::vector<IPAPath> G2P::apply_rescorer_plugins(const std::string& word, std::vector<IPAPath> paths) const {
-    // The plugins G2P() resolved and holds, highest priority first.
-    auto ordered = declared_rescore_plugins_;
-    std::stable_sort(ordered.begin(), ordered.end(), [](const auto& a, const auto& b) {
-        return a.second->priority() > b.second->priority();
-    });
-    for (const auto& [name, plugin] : ordered) {
+    // The plugins G2P() resolved and holds, in the order the spec names them,
+    // as g2p.py composes the declared plugins' rescorers.
+    for (const auto& [name, plugin] : declared_rescore_plugins_) {
         const auto rescored = plugin->rescore(word, language_, paths);
         if (!same_paths(rescored, plugin->rescore(word, language_, paths)))
             throw std::runtime_error("rescore plugin returned non-deterministic output: " + name);
