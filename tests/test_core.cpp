@@ -7,6 +7,9 @@
 #include "codepoint_regex.hpp"
 
 #include <atomic>
+// Every check below is an assert, so a Release build (-DNDEBUG) must not
+// compile them out.
+#undef NDEBUG
 #include <cassert>
 #include <cstdlib>
 #include <filesystem>
