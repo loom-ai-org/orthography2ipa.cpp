@@ -203,7 +203,9 @@ int main() {
         // that also carries edge punctuation: the reference straightens the
         // stripped key as well as the exact key.
         std::string pattern = (std::filesystem::temp_directory_path() / "orthography2ipa-cpp-XXXXXX").string();
-        const std::string dir = mkdtemp(pattern.data());
+        const char* made = mkdtemp(pattern.data());
+        assert(made != nullptr);
+        const std::string dir = made;
         { std::ofstream output(dir + "/en-US.tsv"); output << "zork'flim\tz\xc9\xaa\xc5\x8bk\n"; }
         set_lexicon_directory(dir);
         G2P english("en-US");
