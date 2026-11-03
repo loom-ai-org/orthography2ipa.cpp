@@ -157,6 +157,7 @@ struct AllophoneRuleModel {
     std::optional<std::string> preceded_by_2;
     std::optional<std::string> followed_by_2;
     std::optional<std::string> preceded_by_3;
+    std::optional<std::string> followed_by_3;
     std::optional<std::vector<std::string>> preceded_by_phoneme_2;
     std::optional<std::vector<std::string>> followed_by_phoneme_2;
     std::optional<std::vector<std::string>> preceded_by_surface_phoneme_2;
@@ -235,6 +236,7 @@ struct StressRulesModel {
     std::string accent2_mark;
     std::optional<std::vector<std::string>> accent2_final_letters;
     std::optional<std::vector<std::string>> diphthongs;
+    std::optional<std::vector<std::string>> ipa_diphthongs;
     std::optional<std::vector<std::string>> vowel_letters;
     bool quantity_sensitive = false;
     bool superheavy_final_attracts = true;
@@ -244,6 +246,7 @@ struct StressRulesModel {
     std::optional<std::vector<std::string>> cliticless_words;
     bool coda_liquid_capture = false;
     std::string secondary_stress;                       // "" | "alternating"
+    std::string compound_stress;                        // "" | "last"
     bool iambic_length = false;
     std::string source = "rules";                       // "rules" | "plugin"
     std::optional<std::string> notes;
@@ -292,11 +295,14 @@ struct LanguageSpecModel {
     std::optional<std::vector<std::string>> preposed_vowels;
     std::optional<std::vector<std::string>> trailing_vowel_axis_digraphs;
     std::optional<bool> coda_no_inherent_vowel;
+    std::optional<Dict<std::string>> consonant_nuclei;
     std::optional<std::string> inherent_vowel_final;
+    std::optional<std::vector<std::string>> codas;
     std::optional<std::string> virama_final_vowel;
     std::optional<bool> collapse_geminates;
     std::optional<bool> doubled_letters_geminate;
     std::optional<bool> constrain_onsets;
+    std::optional<bool> word_internal_apostrophe;
     std::optional<std::string> iso639_3;
     std::optional<std::string> glottolog_code;
     std::optional<std::string> wikidata_qid;
