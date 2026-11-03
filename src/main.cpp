@@ -2,8 +2,8 @@
 #include "orthography2ipa/stress.hpp"
 #include "orthography2ipa/registry.hpp"
 #include "orthography2ipa/tone.hpp"
+#include "py_float.hpp"
 #include <climits>
-#include <cmath>
 #include <optional>
 #include <algorithm>
 #include <iomanip>
@@ -161,40 +161,6 @@ static void tone_json(const std::string& code, const std::string& word,
     if (supplied.empty()) std::cout << ",\"final\":" << json(engine.transcribe_word(word));
     std::cout << ",\"tone_marks_syllable_final\":" << (spec.tone_marks_syllable_final ? "true" : "false")
               << ",\"declares_tone_rules\":" << (has_rules ? "true" : "false") << "}\n";
-}
-
-// Python repr(float), which json.dumps writes: the shortest digits that read
-// back as the same double, in fixed notation for exponents -4 to 15 and in
-// exponent notation outside that range, with ".0" on an integral value.
-static std::string py_float(double value) {
-    if (std::isnan(value)) return "NaN";
-    if (std::isinf(value)) return value > 0 ? "Infinity" : "-Infinity";
-    char buffer[40];
-    for (int precision = 0; precision <= 16; ++precision) {
-        std::snprintf(buffer, sizeof buffer, "%.*e", precision, value);
-        if (std::strtod(buffer, nullptr) == value) break;
-    }
-    std::string text(buffer);
-    const auto mark = text.find('e');
-    const int exponent = std::stoi(text.substr(mark + 1));
-    std::string digits = text.substr(0, mark);
-    const bool negative = digits[0] == '-';
-    digits.erase(std::remove_if(digits.begin(), digits.end(), [](char c) { return c == '-' || c == '.'; }), digits.end());
-    std::string out;
-    if (exponent < -4 || exponent >= 16) {
-        out = digits.substr(0, 1);
-        if (digits.size() > 1) out += "." + digits.substr(1);
-        char tail[8];
-        std::snprintf(tail, sizeof tail, "e%c%02d", exponent < 0 ? '-' : '+', std::abs(exponent));
-        out += tail;
-    } else if (exponent < 0) {
-        out = "0." + std::string(-exponent - 1, '0') + digits;
-    } else if (static_cast<int>(digits.size()) <= exponent + 1) {
-        out = digits + std::string(exponent + 1 - digits.size(), '0') + ".0";
-    } else {
-        out = digits.substr(0, exponent + 1) + "." + digits.substr(exponent + 1);
-    }
-    return negative ? "-" + out : out;
 }
 
 int main(int argc, char** argv) {
@@ -487,7 +453,7 @@ int main(int argc, char** argv) {
         if (command == "distance" && i + 1 < argc) {
             if (i + 2 < argc && std::string(argv[i + 2]) == "--json") json_output = true;
             const auto d = phonological_distance(get(argv[i]), get(argv[i + 1]));
-            if (json_output) std::cout << "{\"combined\":" << py_float(d.combined) << ",\"inventory\":" << py_float(d.inventory.feature_mean) << ",\"allophone\":" << py_float(d.allophone_sim) << ",\"grapheme\":" << py_float(d.grapheme.mean_ipa_distance) << "}\n";
+            if (json_output) std::cout << "{\"combined\":" << detail::py_float(d.combined) << ",\"inventory\":" << detail::py_float(d.inventory.feature_mean) << ",\"allophone\":" << detail::py_float(d.allophone_sim) << ",\"grapheme\":" << detail::py_float(d.grapheme.mean_ipa_distance) << "}\n";
             else std::cout << std::fixed << std::setprecision(4) << "combined: " << d.combined << "\ninventory: " << d.inventory.feature_mean << "\nallophone: " << d.allophone_sim << "\ngrapheme: " << d.grapheme.mean_ipa_distance << "\n";
             return 0;
         }
