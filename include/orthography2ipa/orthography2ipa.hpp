@@ -122,6 +122,8 @@ struct LanguageSpec {
     std::string virama_final_vowel;
     bool coda_no_inherent_vowel = false;
     bool collapse_geminates = false, doubled_letters_geminate = true, constrain_onsets = false;
+    // An apostrophe between two letters belongs to the written word (doesn't).
+    bool word_internal_apostrophe = false;
     std::vector<std::string> fold_diacritics, vowel_graphemes, dependent_vowels, preposed_vowels, trailing_vowel_axis_digraphs;
     // Per-candidate weights for the weighted-object grapheme form
     // ({"ipa": [...], "weights": [...]}); own-only, sparse.

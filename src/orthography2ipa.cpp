@@ -342,6 +342,8 @@ LanguageSpec load_raw(const std::string& code, std::set<std::string>& loading) {
     s.collapse_geminates = raw.get<bool>("collapse_geminates", false);
     s.doubled_letters_geminate = raw.get<bool>("doubled_letters_geminate", true);
     s.constrain_onsets = raw.get<bool>("constrain_onsets", false);
+    const auto own_word_internal_apostrophe = raw.get_optional<bool>("word_internal_apostrophe");
+    s.word_internal_apostrophe = own_word_internal_apostrophe.value_or(false);
     s.fold_diacritics = optional_list(raw, "fold_diacritics"); s.vowel_graphemes = optional_list(raw, "vowel_graphemes");
     s.dependent_vowels = optional_list(raw, "dependent_vowels"); s.preposed_vowels = optional_list(raw, "preposed_vowels");
     s.trailing_vowel_axis_digraphs = optional_list(raw, "trailing_vowel_axis_digraphs");
@@ -489,6 +491,9 @@ LanguageSpec load_raw(const std::string& code, std::set<std::string>& loading) {
             s.iambic_length = b.iambic_length;
         }
         if (s.family.empty()) s.family = b.family;
+        // BASE_SCALAR: a spec that does not state the field takes its
+        // graphemes base's resolved value.
+        if (!own_word_internal_apostrophe) s.word_internal_apostrophe = b.word_internal_apostrophe;
     }
     const std::string positional_base = raw.get<std::string>("positional_graphemes_base", "");
     if (!positional_base.empty() && positional_base != code)
@@ -579,6 +584,16 @@ std::u32string u32_strip(const std::u32string& text) {
     return text.substr(begin, end - begin);
 }
 
+// g2p.py G2P._is_word_internal_apostrophe: an apostrophe (U+0027 or U+2019)
+// between two letters, in a spec that writes contractions and possessives as
+// one word, stays inside the word instead of breaking it.
+bool is_word_internal_apostrophe(const std::u32string& text, const Token& token) {
+    const std::size_t start = token.position, end = start + token.length;
+    return (token.grapheme == "'" || token.grapheme == "\u2019")
+        && 0 < start && end < text.size()
+        && uni::is_alpha(text[start - 1]) && uni::is_alpha(text[end]);
+}
+
 // g2p.py G2P._group_words: group ONE plain run's TOKEN stream into words.
 //
 // The splitter is the spec's own tokenizer, not a punctuation test over the
@@ -593,8 +608,9 @@ std::u32string u32_strip(const std::u32string& text) {
 // to the run it is written in: punctuation opening a plain run falls AFTER
 // whatever preceded it, and what preceded it may be a forced word.
 void group_words(const PhonetokTokenizer& tokenizer, const std::string& text,
-                 std::vector<InputWord>& words) {
+                 bool word_internal_apostrophe, std::vector<InputWord>& words) {
     std::u32string run;                     // the surface being built, code points
+    const std::u32string units = to_utf32(text);
     const auto flush = [&] {
         if (run.empty()) return;
         words.push_back(InputWord{to_utf8(run), "", false, false, false, false});
@@ -603,6 +619,11 @@ void group_words(const PhonetokTokenizer& tokenizer, const std::string& text,
     for (const auto& token : tokenizer.tokenize(text)) {
         if (token.kind == TokenKind::BOS || token.kind == TokenKind::EOS) continue;
         if (token.kind == TokenKind::WHITESPACE) { flush(); continue; }
+        if (token.kind == TokenKind::PUNCTUATION && word_internal_apostrophe
+            && is_word_internal_apostrophe(units, token)) {
+            run += to_utf32(token.grapheme);
+            continue;
+        }
         if (token.kind == TokenKind::PUNCTUATION) {
             flush();
             if (words.empty()) continue;
@@ -656,7 +677,7 @@ std::vector<InputWord> split_words(const LanguageSpec& spec, const std::string& 
                 throw std::invalid_argument("<phoneme> requires a non-empty ph attribute");
             words.push_back(InputWord{to_utf8(surface), forced_ipa, true, false, false, false});
         } else {
-            group_words(tokenizer, normalize(chunk.text), words);
+            group_words(tokenizer, normalize(chunk.text), spec.word_internal_apostrophe, words);
         }
     }
     if (words.empty()) return words;
@@ -2083,13 +2104,20 @@ std::optional<std::string> G2P::override_for(const std::string& word) const {
     // None, both keyed on the language-aware lower-casing of the word with the
     // spec's silent stress marks removed.
     const std::string key = lower_str(unmarked_word(silent_marks_, word), spec_->code);
-    if (!spec_->word_exceptions.empty()) {
-        if (auto hit = spec_->word_exceptions.find(key); hit != spec_->word_exceptions.end())
-            return hit->second;
+    std::vector<std::string> keys{key};
+    constexpr std::string_view curly = "\u2019";
+    if (spec_->word_internal_apostrophe && key.find(curly) != std::string::npos) {
+        // Entries are written with U+0027; a typographic U+2019 is the same word.
+        std::string straight = key;
+        for (std::size_t at; (at = straight.find(curly)) != std::string::npos;)
+            straight.replace(at, curly.size(), "'");
+        keys.push_back(straight);
     }
     const auto& lex = load_lexicon(language_);
-    if (!lex.empty()) {
-        if (auto li = lex.find(unicode_nfc(key, false)); li != lex.end()) return li->second;
+    for (const auto& k : keys) {
+        if (auto hit = spec_->word_exceptions.find(k); hit != spec_->word_exceptions.end())
+            return hit->second;
+        if (auto li = lex.find(unicode_nfc(k, false)); li != lex.end()) return li->second;
     }
     return std::nullopt;
 }
@@ -2224,13 +2252,7 @@ WordTranscription G2P::transcribe_one(const std::string& word, std::size_t width
                 throw std::invalid_argument("forced pronunciation contains undeclared IPA: " + segment);
         override = forced_ipa;
     } else {
-        const std::string key = lower_str(unmarked_word(silent_marks_, word), spec_->code);
-        if (auto hit = spec_->word_exceptions.find(key); hit != spec_->word_exceptions.end())
-            override = hit->second;
-        else {
-            const auto& lex = load_lexicon(language_);
-            if (auto li = lex.find(unicode_nfc(key, false)); li != lex.end()) override = li->second;
-        }
+        override = override_for(word);
     }
 
     std::vector<IPAPath> paths;

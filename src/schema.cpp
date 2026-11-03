@@ -2076,6 +2076,7 @@ bool language_spec_model(Report& report, const Json& json, LanguageSpecModel& ou
     ok = b.opt_boolean("collapse_geminates", out.collapse_geminates) && ok;
     ok = b.opt_boolean("doubled_letters_geminate", out.doubled_letters_geminate) && ok;
     ok = b.opt_boolean("constrain_onsets", out.constrain_onsets) && ok;
+    ok = b.opt_boolean("word_internal_apostrophe", out.word_internal_apostrophe) && ok;
     ok = b.opt_str("iso639_3", out.iso639_3, 0, &kIso6393Pattern) && ok;
     ok = b.opt_str("glottolog_code", out.glottolog_code, 0, &kGlottologPattern) && ok;
     ok = b.opt_str("wikidata_qid", out.wikidata_qid, 0, &kWikidataPattern) && ok;
@@ -2608,6 +2609,7 @@ std::string dump_json(const LanguageSpecModel& model) {
     m("collapse_geminates", model.collapse_geminates);
     m("doubled_letters_geminate", model.doubled_letters_geminate);
     m("constrain_onsets", model.constrain_onsets);
+    m("word_internal_apostrophe", model.word_internal_apostrophe);
     m("iso639_3", model.iso639_3);
     m("glottolog_code", model.glottolog_code);
     m("wikidata_qid", model.wikidata_qid);
