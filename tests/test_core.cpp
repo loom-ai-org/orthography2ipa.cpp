@@ -170,6 +170,16 @@ int main() {
         assert(!rescore.word_candidates("casa").empty() && rescored > 0);
         assert(G2P("pt-PT", {{"sandhi", {"test-sandhi-es"}}}).transcribe_detailed("tenho casa").ipa == plain + "|");
     }
+    {
+        // g2p.py reads only the normalize, rescore and sandhi stages, so a
+        // declared syllabify or stress plugin that nothing provides is no error.
+        const std::string plain = G2P("pt-PT").transcribe("tenho casa");
+        for (const std::string stage : {"syllabify", "stress"}) {
+            const G2P undeclared("pt-PT", {{stage, {"nope"}}});
+            assert(undeclared.transcribe("tenho casa") == plain);
+            assert(undeclared.transcribe("").empty());
+        }
+    }
     // g2p.py ipa_lattice: one slot per grapheme, ranked candidates, spans in
     // CODE POINTS, and the top-of-slot concatenation is a valid reading.
     const auto slots = engine.ipa_lattice("casa");
