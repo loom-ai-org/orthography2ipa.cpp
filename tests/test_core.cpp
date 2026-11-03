@@ -15,7 +15,12 @@ int main() {
     {
         // registry.py available_codes drops every clade node, whatever its
         // code: chm (Mari) is a clade without the x-clade- prefix.
-        for (const auto& code : available_codes()) assert(code != "chm" && code.rfind("x-clade-", 0) != 0);
+        const auto codes = available_codes();
+        bool chm = false;
+        for (const auto& code : codes) chm = chm || code == "chm";
+        assert(!chm);
+        for (const auto& code : codes) assert(code.rfind("x-clade-", 0) != 0);
+        // A guard, not a fail-before row: include_clades still lists chm.
         bool listed = false;
         for (const auto& code : available_codes(true)) listed = listed || code == "chm";
         assert(listed);
