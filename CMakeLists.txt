@@ -124,15 +124,16 @@ if(BUILD_TESTING)
     configure_file(tests/install_check.cmake.in ${CMAKE_CURRENT_BINARY_DIR}/install_check.cmake @ONLY)
     add_test(NAME orthography2ipa-install COMMAND ${CMAKE_COMMAND} -P ${CMAKE_CURRENT_BINARY_DIR}/install_check.cmake)
     # `list --family` follows cli.py _cmd_list: it matches the whole path or
-    # any one step without regard to case, and an unknown family exits 1.
-    add_test(NAME orthography2ipa-cli-list-family COMMAND orthography2ipa-cli list --family romance)
-    set_tests_properties(orthography2ipa-cli-list-family PROPERTIES
-        PASS_REGULAR_EXPRESSION "\nIndo-European > Italic > Romance > Ibero-Romance: an, an-x-ansotano, ")
-    add_test(NAME orthography2ipa-cli-list-family-unknown COMMAND orthography2ipa-cli list --family Ger)
-    set_tests_properties(orthography2ipa-cli-list-family-unknown PROPERTIES WILL_FAIL TRUE)
-    add_test(NAME orthography2ipa-cli-list-family-unknown-message COMMAND orthography2ipa-cli list --family Ger)
-    set_tests_properties(orthography2ipa-cli-list-family-unknown-message PROPERTIES
-        PASS_REGULAR_EXPRESSION "^Unknown family: Ger\n$")
+    # any one step without regard to case, and an unknown family prints
+    # "Unknown family: X" on stderr alone and exits 1.
+    add_test(NAME orthography2ipa-cli-list-family
+             COMMAND ${CMAKE_COMMAND} -DCLI=$<TARGET_FILE:orthography2ipa-cli> -DARGS=list|--family|romance -DRESULT=0
+                     "-DSTDOUT_MATCHES=\nIndo-European > Italic > Romance > Ibero-Romance: an, an-x-ansotano, "
+                     -P ${CMAKE_CURRENT_SOURCE_DIR}/tests/cli_check.cmake)
+    add_test(NAME orthography2ipa-cli-list-family-unknown
+             COMMAND ${CMAKE_COMMAND} -DCLI=$<TARGET_FILE:orthography2ipa-cli> -DARGS=list|--family|Ger -DRESULT=1
+                     "-DSTDERR_EQUALS=Unknown family: Ger\n"
+                     -P ${CMAKE_CURRENT_SOURCE_DIR}/tests/cli_check.cmake)
     find_package(Python3 COMPONENTS Interpreter QUIET)
     if(Python3_Interpreter_FOUND)
         # ALL of the parity harnesses compare against the reference Python

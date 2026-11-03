@@ -167,23 +167,24 @@ int main() {
     }
     {
         // registry.py get_declared_plugins resolves a declared plugin by name
-        // for every stage and never asks which languages it owns: es-ES
-        // plugins named on a pt-PT engine run there.
+        // for every stage and never asks which languages it owns: plugins that
+        // own only qaa-x-foreign, a code no spec resolves to, run on a pt-PT
+        // engine. They stay registered, so no later engine may own that code.
         struct Syllables : SyllabifierPlugin {
-            std::vector<std::string> language_codes() const override { return {"es-ES"}; }
+            std::vector<std::string> language_codes() const override { return {"qaa-x-foreign"}; }
             std::vector<std::string> syllabify(const std::string& word, const std::string&) const override { return {word}; }
         };
         struct Stress : StressPlugin {
-            std::vector<std::string> language_codes() const override { return {"es-ES"}; }
+            std::vector<std::string> language_codes() const override { return {"qaa-x-foreign"}; }
             std::optional<std::size_t> stressed_index(const std::string&, const std::vector<std::string>&, const std::string&) const override { return std::nullopt; }
         };
         static int rescored = 0;
         struct Rescore : RescorerPlugin {
-            std::vector<std::string> language_codes() const override { return {"es-ES"}; }
+            std::vector<std::string> language_codes() const override { return {"qaa-x-foreign"}; }
             std::vector<IPAPath> rescore(const std::string&, const std::string&, const std::vector<IPAPath>& paths) const override { ++rescored; return paths; }
         };
         struct Sandhi : SandhiPlugin {
-            std::vector<std::string> language_codes() const override { return {"es-ES"}; }
+            std::vector<std::string> language_codes() const override { return {"qaa-x-foreign"}; }
             std::vector<std::string> apply(const std::vector<std::string>& words, const std::vector<std::string>&,
                                            const std::vector<bool>&, const std::string&) const override {
                 std::vector<std::string> out = words;
@@ -191,18 +192,23 @@ int main() {
                 return out;
             }
         };
-        register_syllabifier_plugin("test-syllabify-es", std::make_shared<Syllables>());
-        register_stress_plugin("test-stress-es", std::make_shared<Stress>());
-        register_rescorer_plugin("test-rescore-es", std::make_shared<Rescore>());
-        register_sandhi_plugin("test-sandhi-es", std::make_shared<Sandhi>());
+        // The engine looks a syllabifier or stress plugin up by language, so a
+        // test plugin that owned es-ES would change every later Spanish
+        // transcription in this process.
+        const std::string spanish = G2P("es-ES").transcribe("ventana murci\xc3\xa9lago");
+        register_syllabifier_plugin("test-syllabify-foreign", std::make_shared<Syllables>());
+        register_stress_plugin("test-stress-foreign", std::make_shared<Stress>());
+        register_rescorer_plugin("test-rescore-foreign", std::make_shared<Rescore>());
+        register_sandhi_plugin("test-sandhi-foreign", std::make_shared<Sandhi>());
         const std::string plain = G2P("pt-PT").transcribe_detailed("tenho casa").ipa;
-        assert(G2P("pt-PT", {{"syllabify", {"test-syllabify-es"}}}).transcribe_detailed("tenho casa").ipa == plain);
-        assert(G2P("pt-PT", {{"stress", {"test-stress-es"}}}).transcribe_detailed("tenho casa").ipa == plain);
-        const G2P rescore("pt-PT", {{"rescore", {"test-rescore-es"}}});
+        assert(G2P("pt-PT", {{"syllabify", {"test-syllabify-foreign"}}}).transcribe_detailed("tenho casa").ipa == plain);
+        assert(G2P("pt-PT", {{"stress", {"test-stress-foreign"}}}).transcribe_detailed("tenho casa").ipa == plain);
+        const G2P rescore("pt-PT", {{"rescore", {"test-rescore-foreign"}}});
         assert(rescore.transcribe_detailed("tenho casa").ipa == plain && rescored > 0);
         rescored = 0;
         assert(!rescore.word_candidates("casa").empty() && rescored > 0);
-        assert(G2P("pt-PT", {{"sandhi", {"test-sandhi-es"}}}).transcribe_detailed("tenho casa").ipa == plain + "|");
+        assert(G2P("es-ES").transcribe("ventana murci\xc3\xa9lago") == spanish);
+        assert(G2P("pt-PT", {{"sandhi", {"test-sandhi-foreign"}}}).transcribe_detailed("tenho casa").ipa == plain + "|");
     }
     {
         // g2p.py reads only the normalize, rescore and sandhi stages, so a
