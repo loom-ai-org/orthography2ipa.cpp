@@ -61,7 +61,9 @@ std::string data_dir = initial_data_directory();
 std::map<std::string, LanguageSpec> cache;
 std::map<std::string, std::string> registered_lexicons;
 std::optional<std::string> lexicon_directory;
-std::map<std::string, std::map<std::string, std::string>> lexicon_cache;
+// One loaded lexicon per resolved code, shared with every caller that reads
+// it. A setter replaces or drops the entry; it never edits a loaded map.
+std::map<std::string, std::shared_ptr<const std::map<std::string, std::string>>> lexicon_cache;
 std::map<std::string, std::shared_ptr<NormalizePlugin>> normalize_plugins;
 // registry.py _discover_syllabifiers over the package's own entry point,
 // `silabificador = orthography2ipa.syllabifiers:SilabificadorSyllabifier`:
@@ -817,7 +819,7 @@ std::optional<fs::path> lexicon_dir_file(const std::string& code) {
     return std::nullopt;
 }
 
-std::map<std::string, std::string> load_lexicon(const std::string& code) {
+std::shared_ptr<const std::map<std::string, std::string>> load_lexicon(const std::string& code) {
     auto cached = lexicon_cache.find(code); if (cached != lexicon_cache.end()) return cached->second;
     std::string source;
     if (auto it = registered_lexicons.find(code); it != registered_lexicons.end()) source = it->second;
@@ -836,7 +838,9 @@ std::map<std::string, std::string> load_lexicon(const std::string& code) {
             if (!result.count(word)) result[word] = ipa;
         }
     }
-    lexicon_cache[code] = result; return result;
+    auto loaded = std::make_shared<const std::map<std::string, std::string>>(std::move(result));
+    lexicon_cache[code] = loaded;
+    return loaded;
 }
 
 
@@ -1592,7 +1596,7 @@ std::vector<std::string> available_lexicon_codes() {
     if (!dir.empty() && fs::is_directory(dir)) for (const auto& e : fs::directory_iterator(dir)) if (e.path().extension() == ".tsv") codes.insert(e.path().stem().string());
     return {codes.begin(), codes.end()};
 }
-std::map<std::string, std::string> get_lexicon(const std::string& code) { return load_lexicon(resolve(code)); }
+std::map<std::string, std::string> get_lexicon(const std::string& code) { return *load_lexicon(resolve(code)); }
 std::optional<std::string> lexicon_source(const std::string& code) {
     const auto canonical = resolve(code);
     if (auto it = registered_lexicons.find(canonical); it != registered_lexicons.end()) return it->second;
@@ -2221,11 +2225,11 @@ std::optional<std::string> G2P::override_for(const std::string& word) const {
             keys.push_back(std::move(straight));
         }
     }
-    const auto& lex = load_lexicon(language_);
+    const auto lex = load_lexicon(language_);
     for (const auto& k : keys) {
         if (auto hit = spec_->word_exceptions.find(k); hit != spec_->word_exceptions.end())
             return hit->second;
-        if (auto li = lex.find(unicode_nfc(k, false)); li != lex.end()) return li->second;
+        if (auto li = lex->find(unicode_nfc(k, false)); li != lex->end()) return li->second;
     }
     return std::nullopt;
 }

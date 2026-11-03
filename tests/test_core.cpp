@@ -531,7 +531,15 @@ int main() {
         assert(english.transcribe_word("zork\xe2\x80\x99" "flim") == "\xcb\x88z\xc9\xaa\xc5\x8bk");
         assert(english.transcribe_word("zork\xe2\x80\x99" "flim,") == "\xcb\x88z\xc9\xaa\xc5\x8bk");
         assert(english.transcribe_word("\xe2\x80\x9czork\xe2\x80\x99" "flim\xe2\x80\x9d") == "\xcb\x88z\xc9\xaa\xc5\x8bk");
+        // A new lexicon source replaces the cached one for an engine that is
+        // already built, and the copy get_lexicon returned stays as it was.
+        const auto before = get_lexicon("en-US");
+        { std::ofstream output(dir + "/en-US.tsv"); output << "zork'flim\tz\xc9\x94k\n"; }
+        set_lexicon_directory(dir);
+        assert(english.transcribe_word("zork'flim") == "\xcb\x88z\xc9\x94k");
+        assert(before.at("zork'flim") == "z\xc9\xaa\xc5\x8bk" && get_lexicon("en-US").at("zork'flim") == "z\xc9\x94k");
         clear_lexicons();
+        assert(english.transcribe_word("zork'flim") != "\xcb\x88z\xc9\x94k" && get_lexicon("en-US").empty());
         std::filesystem::remove_all(dir);
     }
     {
