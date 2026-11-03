@@ -70,6 +70,10 @@ TONE_LANGS = ["th", "lo", "vi", "yo", "km", "my", "bo", "ko", "kix", "zh", "pa"]
 ARABIC = ["ar", "ar-IQ", "ar-LB"]
 SHADDA = "\u0651"
 
+# Specs that take constrain_onsets from their graphemes base.
+PINNED["nl-BE"] = ["arco", "alto"]
+PINNED["de-AT"] = ["Fenster"]
+
 # The combining-mark / virama / preposed-vowel / geminate / clitic / multi
 # builders walk these lists; they are the languages the requirement names.
 COMBINING = ["pt-PT", "el", "vi", "tr", "ar", "hi", "cs", "pl", "sv", "hu", "th", "lo", "yo"]
