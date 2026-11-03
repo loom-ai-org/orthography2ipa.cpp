@@ -15,6 +15,13 @@ a pinned reference release, and this script is the only way they move. It
      that the reference repository tags as VERSION, so CI compares against
      the same release.
 
+The tag is resolved before step 1. A PyPI release that the reference
+repository never tagged stops the script before anything is written, so an
+untagged release cannot leave data/ and ci.yml at two different releases. A
+step that fails after step 2, such as a generator, still can: data/ and
+tests/reference_version.txt are then at VERSION while ci.yml keeps the old
+commit. Run the script again, or restore the tree with git, before you commit.
+
 The generators import the reference package, so run this script with a Python
 that has the reference's dependencies installed (for example a virtual
 environment with `orthography2ipa[portuguese]==VERSION`). The package itself is
@@ -38,6 +45,7 @@ import shutil
 import subprocess
 import sys
 import tempfile
+import urllib.error
 import urllib.request
 import zipfile
 
@@ -113,11 +121,24 @@ def sync_specs(source: pathlib.Path) -> None:
         print(f"  added   {name}")
 
 
-def pin_ci(version: str) -> None:
-    """Point the CI reference checkout at the commit tagged *version*."""
+def tag_commit(version: str) -> str:
+    """The commit that the reference repository tags *version*."""
     url = f"https://api.github.com/repos/{REFERENCE_REPO}/commits/{version}"
-    with urllib.request.urlopen(url, timeout=60) as response:
-        sha = json.load(response)["sha"]
+    try:
+        with urllib.request.urlopen(url, timeout=60) as response:
+            return json.load(response)["sha"]
+    except urllib.error.HTTPError as error:
+        # GitHub answers 404 or 422 for a ref it does not know. Any other
+        # status (a 403 rate limit, a 5xx) says nothing about the tag.
+        if error.code in (404, 422):
+            sys.exit(f"{REFERENCE_REPO} has no tag {version} (GitHub answered {error.code}); "
+                     "nothing was written")
+        sys.exit(f"could not resolve tag {version} of {REFERENCE_REPO}: GitHub answered "
+                 f"HTTP {error.code}; nothing was written")
+
+
+def pin_ci(sha: str) -> None:
+    """Point the CI reference checkout at *sha*."""
     text = CI.read_text(encoding="utf-8")
     pattern = rf"(repository: {re.escape(REFERENCE_REPO)}\n\s+ref: )[0-9a-f]{{40}}"
     pinned, count = re.subn(pattern, rf"\g<1>{sha}", text)
@@ -149,6 +170,8 @@ def main() -> None:
 
     version = latest_version() if args.version == "latest" else args.version
     print(f"reference: {PACKAGE}=={version}")
+    sha = tag_commit(version)
+    print(f"tag: {REFERENCE_REPO}@{version} is {sha}")
     with tempfile.TemporaryDirectory(prefix="o2i-reference-") as scratch:
         scratch = pathlib.Path(scratch)
         with zipfile.ZipFile(fetch_wheel(version, scratch)) as wheel:
@@ -160,7 +183,7 @@ def main() -> None:
         PIN.write_text(f"{PACKAGE}=={version}\n", encoding="utf-8")
         run_generators(reference, args.python, args.langcodes)
     print(f"pinned {PIN.relative_to(CPP_ROOT)}: {PACKAGE}=={version}")
-    pin_ci(version)
+    pin_ci(sha)
 
 
 if __name__ == "__main__":
