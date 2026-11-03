@@ -29,6 +29,12 @@ jobs:
       CXX: ${{ matrix.compiler == 'clang' && 'clang++' || 'g++' }}
     steps:
       - uses: actions/checkout@v4
+      # lm-parity needs a Python 3.12 or later reference: the port sums floats
+      # as 3.12 sum() does, with compensation. Pinned here, not left to the
+      # runner image's python3.
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
       # The parity suite compares against the reference package, which is a
       # sibling repository: CI clones it to the same relative position a
       # developer's checkout has (../orthography2ipa), and installs ITS OWN

@@ -12,6 +12,7 @@
 #include <algorithm>
 #include <cstdint>
 #include <cstdio>
+#include <cstdlib>
 #include <fstream>
 #include <iostream>
 #include <limits>
@@ -25,6 +26,16 @@ const char* kScratch = "tests/_scratch/";
 const char* kSep = "\x1f";   // context-phone separator (never inside a phone)
 
 std::string scratch(const std::string& name) { return std::string(kScratch) + name; }
+
+/// Close a dump and exit non-zero when any write to it failed, so that the
+/// compare never reads a dump this run did not write.
+void finish(std::ofstream& out, const std::string& name) {
+    out.close();
+    if (!out) {
+        std::cerr << "cannot write " << scratch(name) << "\n";
+        std::exit(1);
+    }
+}
 
 std::vector<std::string> read_lines(const std::string& path) {
     std::ifstream in(path, std::ios::binary);
@@ -124,6 +135,8 @@ int main() {
             vowel << (flag == feats::TRUE ? "T" : flag == feats::FALSE ? "F" : "N") << "\n";
             if (flag == feats::UNKNOWN) ++none_flag;
         }
+        finish(vec, "_lm_feats_cpp_vec.txt");
+        finish(vowel, "_lm_feats_cpp_vowel.txt");
         std::cout << "vectorize unknown (ValueError): " << unknown
                   << ", undefined feature[0]: " << none_flag << "\n";
     }
@@ -141,6 +154,7 @@ int main() {
                 if (d > max_distance) max_distance = d;
             }
         }
+        finish(bin, "_lm_feats_cpp_fdist.bin");
         bytes = static_cast<std::uint64_t>(n) * n * sizeof(double);
         std::cout << "phonetic_distance pairs: " << n * n << ", bytes: " << bytes
                   << ", max: " << number(max_distance) << "\n";
@@ -170,6 +184,7 @@ int main() {
                 out << "\n";
             }
         }
+        finish(out, "_lm_feats_cpp_embed.txt");
     }
 
     // --- build_ngram_lm / perplexity --------------------------------------
@@ -210,6 +225,7 @@ int main() {
             }
             out << "END\n";
         }
+        finish(out, "_lm_feats_cpp_lm.txt");
         std::cout << "lm cases: " << cases.size() << "\n";
     }
     return 0;

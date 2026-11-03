@@ -23,7 +23,11 @@ def read(name: str) -> bytes:
 
 
 def main() -> int:
-    phones = read("_lm_feats_battery.txt").decode("utf-8").split("\n")[1:-1]
+    battery = read("_lm_feats_battery.txt").decode("utf-8").split("\n")
+    phones = battery[1:-1]
+    if not phones or battery[0] != str(len(phones)):
+        print(f"battery: the header says {battery[0]!r}, and {len(phones)} phones follow")
+        return 1
     failures = 0
 
     for dump in TEXT_DUMPS:
@@ -32,6 +36,10 @@ def main() -> int:
         differ = [i for i in range(max(len(ref), len(cpp)))
                   if i >= len(ref) or i >= len(cpp) or ref[i] != cpp[i]]
         print(f"{dump}: {len(ref)} reference lines, {len(cpp)} C++ lines, {len(differ)} differ")
+        if dump in ("vec", "vowel") and not len(ref) == len(cpp) == len(phones) + 1:
+            print(f"  {dump}: {len(phones)} phones, but {len(ref) - 1} reference and"
+                  f" {len(cpp) - 1} C++ lines")
+            failures += 1
         for i in differ[:SHOWN]:
             label = f" phone {phones[i]!r}" if dump in ("vec", "vowel") and i < len(phones) else ""
             print(f"  line {i + 1}{label}: reference {ref[i] if i < len(ref) else None!r}"
