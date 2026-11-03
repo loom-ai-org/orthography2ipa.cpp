@@ -547,10 +547,11 @@ bool is_cliticless(const std::string& word, const LanguageSpec& spec) {
 // ── the bundled vowel-group syllabifier ──
 
 // stress.py _split_nuclei: split a vowel *run* into nuclei using
-// *diphthongs*, greedy longest-first.
+// *diphthongs*, greedy longest-first, so an empty *diphthongs* makes every
+// vowel a nucleus.
 std::vector<std::string> split_nuclei(const std::string& run,
                                       const std::vector<std::string>& diphthongs) {
-    if (diphthongs.empty() || to_utf32(run).size() < 2) return {run};
+    if (to_utf32(run).size() < 2) return {run};
     std::vector<std::u32string> ordered;
     for (const auto& d : diphthongs) ordered.push_back(to_utf32(d));
     std::stable_sort(ordered.begin(), ordered.end(),
@@ -705,8 +706,13 @@ std::vector<std::string> syllabify(const std::string& word,
 
 std::vector<std::string> syllabify_for_mark(const std::string& ipa,
                                             const LanguageSpec& spec) {
+    // `ipa_diphthongs`, where the spec declares it, replaces the orthographic
+    // `diphthongs` for the transcription.
     std::vector<std::string> sylls =
-        syllabify(ipa, nullptr, spec.diphthongs);
+        spec.ipa_diphthongs
+            ? syllabify_with_diphthongs(
+                  ipa, [](const std::string& c) { return is_vowel_char(c); }, *spec.ipa_diphthongs)
+            : syllabify(ipa, nullptr, spec.diphthongs);
     if (!spec.constrain_mark_onsets) {
         if (spec.coda_liquid_capture) sylls = capture_coda_liquids(sylls);
         return sylls;
