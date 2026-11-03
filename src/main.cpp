@@ -14,9 +14,25 @@ using namespace orthography2ipa;
 static void usage() {
     std::cerr << "usage: orthography2ipa [--data DIR] [--json] <list|info|validate|transcribe|word|word-candidates|lattice|tone|stress|beam|tokens|resolve|distance> ...\n";
 }
+// The escapes of Python's json.dumps(..., ensure_ascii=False), which the
+// reference CLI uses: the short forms where JSON has one, \u00XX for the
+// other control characters, and every other byte as it is.
 static std::string json(const std::string& value) {
     std::ostringstream out; out << '"';
-    for (unsigned char c : value) { if (c == '"') out << "\\\""; else if (c == '\\') out << "\\\\"; else if (c == '\n') out << "\\n"; else if (c == '\r') out << "\\r"; else if (c == '\t') out << "\\t"; else if (c < 0x20) out << "\\u00" << "0123456789abcdef"[c >> 4] << "0123456789abcdef"[c & 15]; else out << c; }
+    for (unsigned char c : value) {
+        switch (c) {
+            case '"': out << "\\\""; break;
+            case '\\': out << "\\\\"; break;
+            case '\b': out << "\\b"; break;
+            case '\f': out << "\\f"; break;
+            case '\n': out << "\\n"; break;
+            case '\r': out << "\\r"; break;
+            case '\t': out << "\\t"; break;
+            default:
+                if (c < 0x20) out << "\\u00" << "0123456789abcdef"[c >> 4] << "0123456789abcdef"[c & 15];
+                else out << c;
+        }
+    }
     return out.str() + '"';
 }
 static void strings_json(const std::vector<std::string>& values) {
