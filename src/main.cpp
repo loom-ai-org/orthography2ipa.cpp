@@ -16,7 +16,7 @@ static void usage() {
 }
 static std::string json(const std::string& value) {
     std::ostringstream out; out << '"';
-    for (unsigned char c : value) { if (c == '"') out << "\\\""; else if (c == '\\') out << "\\\\"; else if (c == '\n') out << "\\n"; else if (c == '\r') out << "\\r"; else if (c == '\t') out << "\\t"; else out << c; }
+    for (unsigned char c : value) { if (c == '"') out << "\\\""; else if (c == '\\') out << "\\\\"; else if (c == '\n') out << "\\n"; else if (c == '\r') out << "\\r"; else if (c == '\t') out << "\\t"; else if (c < 0x20) out << "\\u00" << "0123456789abcdef"[c >> 4] << "0123456789abcdef"[c & 15]; else out << c; }
     return out.str() + '"';
 }
 static void strings_json(const std::vector<std::string>& values) {
@@ -428,9 +428,8 @@ int main(int argc, char** argv) {
             const LanguageSpec& spec = get(code);
             const auto sylls = stress::syllables_for(word, spec.code, spec.diphthongs, &spec);
             std::cout << '{';
-            std::cout << "\"syllables\":[";
-            for (std::size_t k = 0; k < sylls.size(); ++k) { if (k) std::cout << ','; std::cout << '"' << sylls[k] << '"'; }
-            std::cout << ']';
+            std::cout << "\"syllables\":";
+            strings_json(sylls);
             if (spec.stress_defined) {
                 const int idx = stress::detect_stress(word, spec, &sylls);
                 const auto secondary = stress::secondary_stress_positions(
@@ -440,11 +439,10 @@ int main(int argc, char** argv) {
                 bool first = true;
                 for (const int s : secondary) { if (!first) std::cout << ','; std::cout << s; first = false; }
                 std::cout << ']';
-                std::cout << ",\"marked\":\""
-                          << stress::apply_stress_mark(
+                std::cout << ",\"marked\":"
+                          << json(stress::apply_stress_mark(
                                  word, spec, idx, &sylls, nullptr, "",
-                                 std::vector<int>(secondary.begin(), secondary.end()))
-                          << '"';
+                                 std::vector<int>(secondary.begin(), secondary.end())));
             }
             std::cout << "}\n";
             return 0;

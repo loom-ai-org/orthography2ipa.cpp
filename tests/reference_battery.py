@@ -48,6 +48,9 @@ PINNED = {
            "ຂອບໃຈ", "ໃຈ", "ແຜ່ນ", "ໂລກ", "ເຮືອນ", "ຊີວິດ", "ມື", "ບໍ່", "ແມ່", "ຄົນ"],
 }
 
+# A quote mark and a backslash inside a word: every JSON surface escapes them.
+PINNED["it-IT"] = ['"casa"', "ca\\sa"]
+
 ABUGIDAS = ["hi", "bn", "ta", "te", "kn", "ml", "mr", "ne", "or", "as", "sa", "sid"]
 TONE_LANGS = ["th", "lo", "vi", "yo", "km", "my", "bo", "ko", "kix", "zh", "pa"]
 ARABIC = ["ar", "ar-IQ", "ar-LB"]
@@ -150,6 +153,8 @@ def build():
         if spec is not None:
             six += [[lang, w] for w in _exceptions(spec)]
         six += [[lang, w] for w in PINNED.get(lang, [])]
+    # Pinned rows for specs outside the six.
+    six += [[lang, w] for lang in PINNED if lang not in SIX for w in PINNED[lang]]
     cats["six"] = _dedupe(six)
 
     # 2. Arabic: exceptions, shadda + harakat spellings, presentation forms.
