@@ -191,7 +191,7 @@ std::vector<AllophoneRule> parse_allophone_rules(const ptree& p) {
         rule.stress = r.get<std::string>("stress", ""); rule.phonemes = optional_strings(r, "phonemes");
         rule.preceded_by = r.get<std::string>("preceded_by", ""); rule.followed_by = r.get<std::string>("followed_by", "");
         rule.preceded_by_2 = r.get<std::string>("preceded_by_2", ""); rule.followed_by_2 = r.get<std::string>("followed_by_2", "");
-        rule.preceded_by_3 = r.get<std::string>("preceded_by_3", "");
+        rule.preceded_by_3 = r.get<std::string>("preceded_by_3", ""); rule.followed_by_3 = r.get<std::string>("followed_by_3", "");
         rule.graphemes = optional_strings(r, "grapheme"); rule.word = optional_strings(r, "word");
         rule.preceded_by_phoneme = optional_strings(r, "preceded_by_phoneme"); rule.followed_by_phoneme = optional_strings(r, "followed_by_phoneme");
         rule.preceded_by_phoneme_2 = optional_strings(r, "preceded_by_phoneme_2"); rule.followed_by_phoneme_2 = optional_strings(r, "followed_by_phoneme_2");
@@ -338,10 +338,15 @@ LanguageSpec load_raw(const std::string& code, std::set<std::string>& loading) {
     if (auto value = raw.get_optional<std::string>("inherent_vowel_final"))
         s.inherent_vowel_final = *value;
     s.virama_final_vowel = raw.get<std::string>("virama_final_vowel", "");
+    s.codas = optional_list(raw, "codas");
     s.coda_no_inherent_vowel = raw.get<bool>("coda_no_inherent_vowel", false);
+    if (auto nuclei = raw.get_child_optional("consonant_nuclei"))
+        for (const auto& x : *nuclei) s.consonant_nuclei.emplace_back(x.first, x.second.data());
     s.collapse_geminates = raw.get<bool>("collapse_geminates", false);
     s.doubled_letters_geminate = raw.get<bool>("doubled_letters_geminate", true);
     s.constrain_onsets = raw.get<bool>("constrain_onsets", false);
+    const auto own_word_internal_apostrophe = raw.get_optional<bool>("word_internal_apostrophe");
+    s.word_internal_apostrophe = own_word_internal_apostrophe.value_or(false);
     s.fold_diacritics = optional_list(raw, "fold_diacritics"); s.vowel_graphemes = optional_list(raw, "vowel_graphemes");
     s.dependent_vowels = optional_list(raw, "dependent_vowels"); s.preposed_vowels = optional_list(raw, "preposed_vowels");
     s.trailing_vowel_axis_digraphs = optional_list(raw, "trailing_vowel_axis_digraphs");
@@ -375,6 +380,7 @@ LanguageSpec load_raw(const std::string& code, std::set<std::string>& loading) {
         s.penult_stress_endings = optional_strings(*stress, "penult_stress_endings");
         s.antepenult_stress_endings = optional_strings(*stress, "antepenult_stress_endings");
         s.diphthongs = optional_strings(*stress, "diphthongs");
+        if (auto ipa = stress->get_child_optional("ipa_diphthongs")) s.ipa_diphthongs = strings(*ipa);
         s.vowel_letters = optional_strings(*stress, "vowel_letters");
         s.onset_clusters = optional_strings(*stress, "onset_clusters");
         s.quantity_sensitive = stress->get<bool>("quantity_sensitive", false);
@@ -390,6 +396,7 @@ LanguageSpec load_raw(const std::string& code, std::set<std::string>& loading) {
         s.max_onset_declared = stress->get_child_optional("max_onset").has_value();
         s.stress_source = stress->get<std::string>("source", "rules");
         s.secondary_stress = stress->get<std::string>("secondary_stress", "");
+        s.compound_stress = stress->get<std::string>("compound_stress", "");
         s.accent2_mark = stress->get<std::string>("accent2_mark", "");
         s.accent2_final_letters = optional_list(*stress, "accent2_final_letters"); s.cliticless_words = optional_list(*stress, "cliticless_words");
         s.constrain_mark_onsets = stress->get<bool>("constrain_mark_onsets", true); s.coda_liquid_capture = stress->get<bool>("coda_liquid_capture", false); s.iambic_length = stress->get<bool>("iambic_length", false);
@@ -478,17 +485,21 @@ LanguageSpec load_raw(const std::string& code, std::set<std::string>& loading) {
             s.default_stress_position = b.default_stress_position; s.stress_mark = b.stress_mark; s.stress_defined = b.stress_defined;
             s.marked_vowels = b.marked_vowels; s.final_stress_endings = b.final_stress_endings;
             s.penult_stress_endings = b.penult_stress_endings; s.antepenult_stress_endings = b.antepenult_stress_endings;
-            s.diphthongs = b.diphthongs; s.vowel_letters = b.vowel_letters;
+            s.diphthongs = b.diphthongs; s.ipa_diphthongs = b.ipa_diphthongs; s.vowel_letters = b.vowel_letters;
             s.onset_clusters = b.onset_clusters; s.quantity_sensitive = b.quantity_sensitive;
             s.superheavy_final_attracts = b.superheavy_final_attracts; s.max_onset = b.max_onset;
             s.max_onset_declared = b.max_onset_declared; s.stress_source = b.stress_source;
             s.secondary_stress = b.secondary_stress;
+            s.compound_stress = b.compound_stress;
             s.cliticless_words = b.cliticless_words;
             s.accent2_mark = b.accent2_mark; s.accent2_final_letters = b.accent2_final_letters;
             s.constrain_mark_onsets = b.constrain_mark_onsets; s.coda_liquid_capture = b.coda_liquid_capture;
             s.iambic_length = b.iambic_length;
         }
         if (s.family.empty()) s.family = b.family;
+        // BASE_SCALAR: a spec that does not state the field takes its
+        // graphemes base's resolved value.
+        if (!own_word_internal_apostrophe) s.word_internal_apostrophe = b.word_internal_apostrophe;
     }
     const std::string positional_base = raw.get<std::string>("positional_graphemes_base", "");
     if (!positional_base.empty() && positional_base != code)
@@ -563,6 +574,8 @@ struct InputWord {
     bool pausal = false;
     bool sentence_initial = false;
     bool sentence_final = false;
+    // Joined to the word before it by a hyphen, with no space between.
+    bool hyphen_joined = false;
 };
 
 /// Python `str.strip()`: whitespace at both ends, by Unicode definition.
@@ -579,6 +592,21 @@ std::u32string u32_strip(const std::u32string& text) {
     return text.substr(begin, end - begin);
 }
 
+// g2p.py G2P._is_word_internal_apostrophe: an apostrophe (U+0027 or U+2019)
+// between two letters, in a spec that writes contractions and possessives as
+// one word, stays inside the word instead of breaking it.
+bool is_word_internal_apostrophe(const std::u32string& text, const Token& token) {
+    const std::size_t start = token.position, end = start + token.length;
+    return (token.grapheme == "'" || token.grapheme == "\u2019")
+        && 0 < start && end < text.size()
+        && uni::is_alpha(text[start - 1]) && uni::is_alpha(text[end]);
+}
+
+// g2p.py _HYPHENS: the hyphens that join the words of a compound.
+bool is_hyphen(const std::string& grapheme) {
+    return grapheme == "-" || grapheme == "\u2010" || grapheme == "\u2011";
+}
+
 // g2p.py G2P._group_words: group ONE plain run's TOKEN stream into words.
 //
 // The splitter is the spec's own tokenizer, not a punctuation test over the
@@ -593,17 +621,27 @@ std::u32string u32_strip(const std::u32string& text) {
 // to the run it is written in: punctuation opening a plain run falls AFTER
 // whatever preceded it, and what preceded it may be a forced word.
 void group_words(const PhonetokTokenizer& tokenizer, const std::string& text,
-                 std::vector<InputWord>& words) {
+                 bool word_internal_apostrophe, std::vector<InputWord>& words) {
     std::u32string run;                     // the surface being built, code points
+    const std::u32string units = to_utf32(text);
+    // hyphen_joined of the word in `run`, and of the next one
+    bool joined = false, after_hyphen = false;
     const auto flush = [&] {
         if (run.empty()) return;
-        words.push_back(InputWord{to_utf8(run), "", false, false, false, false});
+        words.push_back(InputWord{to_utf8(run), "", false, false, false, false, joined});
         run.clear();
     };
     for (const auto& token : tokenizer.tokenize(text)) {
         if (token.kind == TokenKind::BOS || token.kind == TokenKind::EOS) continue;
-        if (token.kind == TokenKind::WHITESPACE) { flush(); continue; }
+        if (token.kind == TokenKind::WHITESPACE) { flush(); after_hyphen = false; continue; }
+        if (token.kind == TokenKind::PUNCTUATION && word_internal_apostrophe
+            && is_word_internal_apostrophe(units, token)) {
+            run += to_utf32(token.grapheme);
+            continue;
+        }
         if (token.kind == TokenKind::PUNCTUATION) {
+            // A hyphen right after a word joins it to the word right after.
+            after_hyphen = !run.empty() && is_hyphen(token.grapheme);
             flush();
             if (words.empty()) continue;
             const std::u32string mark = to_utf32(token.grapheme);
@@ -622,6 +660,7 @@ void group_words(const PhonetokTokenizer& tokenizer, const std::string& text,
         // consonant plus its virama), and the word is re-tokenised downstream.
         const std::u32string span = to_utf32(token.text_span(text));
         const std::u32string key = to_utf32(token.grapheme);
+        if (run.empty()) { joined = after_hyphen; after_hyphen = false; }
         run += key;
         if (span.size() > key.size()) run.append(span, key.size(), std::u32string::npos);
     }
@@ -654,9 +693,9 @@ std::vector<InputWord> split_words(const LanguageSpec& spec, const std::string& 
             const std::string forced_ipa = to_utf8(u32_strip(to_utf32(*chunk.forced_ipa)));
             if (forced_ipa.empty())
                 throw std::invalid_argument("<phoneme> requires a non-empty ph attribute");
-            words.push_back(InputWord{to_utf8(surface), forced_ipa, true, false, false, false});
+            words.push_back(InputWord{to_utf8(surface), forced_ipa, true, false, false, false, false});
         } else {
-            group_words(tokenizer, normalize(chunk.text), words);
+            group_words(tokenizer, normalize(chunk.text), spec.word_internal_apostrophe, words);
         }
     }
     if (words.empty()) return words;
@@ -666,6 +705,29 @@ std::vector<InputWord> split_words(const LanguageSpec& spec, const std::string& 
     words.back().pausal = true;
     words.back().sentence_final = true;
     return words;
+}
+
+// g2p.py G2P._mark_compounds: one main stress per hyphen-joined group. The
+// last element that carries the main *mark* keeps it, and every earlier one is
+// written with the secondary mark instead. *joined[i]* says word i is
+// hyphen-joined to word i - 1.
+std::vector<std::string> mark_compounds(const std::vector<bool>& joined,
+                                        std::vector<std::string> ipa_words,
+                                        const std::string& mark) {
+    std::size_t start = 0;
+    for (std::size_t end = 1; end <= ipa_words.size(); ++end) {
+        if (end < ipa_words.size() && joined[end]) continue;
+        std::vector<std::size_t> marked;
+        for (std::size_t i = start; i < end; ++i)
+            if (ipa_words[i].find(mark) != std::string::npos) marked.push_back(i);
+        for (std::size_t m = 0; m + 1 < marked.size(); ++m) {
+            std::string& ipa = ipa_words[marked[m]];
+            for (std::size_t at; (at = ipa.find(mark)) != std::string::npos;)
+                ipa.replace(at, mark.size(), stress::SECONDARY_MARK);
+        }
+        start = end;
+    }
+    return ipa_words;
 }
 
 // g2p.py G2P._unmarked: *word* without the silent stress marks the spec
@@ -710,15 +772,31 @@ bool owns_language(const Plugin& plugin, const std::string& language) {
 
 
 
+// lexicon.py lexicon_path: the lexicon-dir file that serves the resolved
+// *code*. A file named exactly for the code wins; otherwise the first *.tsv,
+// in sorted order, whose name resolves to the code serves it, so en.tsv
+// serves en-GB.
+std::optional<fs::path> lexicon_dir_file(const std::string& code) {
+    const char* env = std::getenv("ORTHOGRAPHY2IPA_LEXICON_DIR");
+    const std::string dir = lexicon_directory ? *lexicon_directory : (env ? env : "");
+    if (dir.empty()) return std::nullopt;
+    const fs::path exact = fs::path(dir) / (code + ".tsv");
+    if (fs::is_regular_file(exact)) return exact;
+    if (!fs::is_directory(dir)) return std::nullopt;
+    std::vector<fs::path> files;
+    for (const auto& entry : fs::directory_iterator(dir))
+        if (entry.path().extension() == ".tsv") files.push_back(entry.path());
+    std::sort(files.begin(), files.end());
+    for (const auto& file : files)
+        if (resolve(file.stem().string()) == code) return file;
+    return std::nullopt;
+}
+
 std::map<std::string, std::string> load_lexicon(const std::string& code) {
     auto cached = lexicon_cache.find(code); if (cached != lexicon_cache.end()) return cached->second;
     std::string source;
     if (auto it = registered_lexicons.find(code); it != registered_lexicons.end()) source = it->second;
-    else {
-        const char* env = std::getenv("ORTHOGRAPHY2IPA_LEXICON_DIR");
-        const std::string dir = lexicon_directory ? *lexicon_directory : (env ? env : "");
-        if (!dir.empty() && fs::is_regular_file(fs::path(dir) / (code + ".tsv"))) source = (fs::path(dir) / (code + ".tsv")).string();
-    }
+    else if (const auto file = lexicon_dir_file(code); file && fs::is_regular_file(*file)) source = file->string();
     std::map<std::string, std::string> result;
     if (!source.empty()) {
         fs::path path = source;
@@ -979,7 +1057,12 @@ bool engine_is_cliticless(const LanguageSpec& spec, const std::string& silent_ma
         if (word.find(silent_marks.substr(i, utf8_char_size(silent_marks, i))) != std::string::npos)
             return false;
         else i += utf8_char_size(silent_marks, i);
-    return stress::is_cliticless(word, spec);
+    if (stress::is_cliticless(word, spec)) return true;
+    // The same clinging punctuation G2P::override_for sees past: a clitic stays
+    // a clitic with a comma after it. The exact key is tried first, as there.
+    const std::string key = to_utf8(uni::nfc(to_utf32(lower_str(word, spec.code))));
+    const std::string stripped = strip_edge_punctuation(key);
+    return !stripped.empty() && stripped != key && stress::is_cliticless(stripped, spec);
 }
 
 // g2p.py _map_tokens_to_syllables: map each grapheme token index to its
@@ -1490,10 +1573,7 @@ std::map<std::string, std::string> get_lexicon(const std::string& code) { return
 std::optional<std::string> lexicon_source(const std::string& code) {
     const auto canonical = resolve(code);
     if (auto it = registered_lexicons.find(canonical); it != registered_lexicons.end()) return it->second;
-    const char* env = std::getenv("ORTHOGRAPHY2IPA_LEXICON_DIR");
-    const std::string dir = lexicon_directory ? *lexicon_directory : (env ? env : "");
-    if (!dir.empty() && fs::is_regular_file(fs::path(dir) / (canonical + ".tsv")))
-        return (fs::path(dir) / (canonical + ".tsv")).string();
+    if (const auto file = lexicon_dir_file(canonical)) return file->string();
     return std::nullopt;
 }
 std::optional<std::string> lexicon_path(const std::string& code) {
@@ -2083,15 +2163,62 @@ std::optional<std::string> G2P::override_for(const std::string& word) const {
     // None, both keyed on the language-aware lower-casing of the word with the
     // spec's silent stress marks removed.
     const std::string key = lower_str(unmarked_word(silent_marks_, word), spec_->code);
-    if (!spec_->word_exceptions.empty()) {
-        if (auto hit = spec_->word_exceptions.find(key); hit != spec_->word_exceptions.end())
-            return hit->second;
+    // The word as given, then the word with the punctuation that clings to it
+    // in raw text stripped from both ends (`I,` `"I`). The exact key stays first
+    // so an entry spelled with a mark (Afrikaans `'n`) still hits.
+    std::vector<std::string> keys{key};
+    if (const std::string stripped = strip_edge_punctuation(key); !stripped.empty() && stripped != key)
+        keys.push_back(stripped);
+    constexpr std::string_view curly = "\u2019";
+    if (spec_->word_internal_apostrophe) {
+        // Entries are written with U+0027; a typographic U+2019 is the same
+        // word, for the exact key and the stripped key alike.
+        const std::size_t count = keys.size();
+        for (std::size_t i = 0; i < count; ++i) {
+            if (keys[i].find(curly) == std::string::npos) continue;
+            std::string straight = keys[i];
+            for (std::size_t at; (at = straight.find(curly)) != std::string::npos;)
+                straight.replace(at, curly.size(), "'");
+            keys.push_back(std::move(straight));
+        }
     }
     const auto& lex = load_lexicon(language_);
-    if (!lex.empty()) {
-        if (auto li = lex.find(unicode_nfc(key, false)); li != lex.end()) return li->second;
+    for (const auto& k : keys) {
+        if (auto hit = spec_->word_exceptions.find(k); hit != spec_->word_exceptions.end())
+            return hit->second;
+        if (auto li = lex.find(unicode_nfc(k, false)); li != lex.end()) return li->second;
     }
     return std::nullopt;
+}
+
+std::string G2P::normalized(std::string text) const {
+    const auto overridden = plugin_overrides_.find("normalize");
+    const auto& names = overridden == plugin_overrides_.end() ? plugin_names(*spec_, "normalize")
+                                                              : overridden->second;
+    for (const auto& name : names) {
+        auto it = normalize_plugins.find(name);
+        if (it == normalize_plugins.end()) throw std::runtime_error("missing normalize plugin: " + name);
+        text = it->second->normalize(text, language_);
+    }
+    return text;
+}
+
+std::optional<std::vector<std::string>> G2P::compound_elements(const std::string& word) const {
+    if (!spec_->stress_defined || spec_->compound_stress != "last") return std::nullopt;
+    const auto units = to_utf32(word);
+    const bool hyphenated = std::any_of(units.begin(), units.end(), [](char32_t c) {
+        return is_hyphen(to_utf8(std::u32string(1, c)));
+    });
+    // An override for the whole spelling wins, as it does for any word.
+    if (!hyphenated || override_for(word).has_value()) return std::nullopt;
+    const auto elements = split_words(*spec_, word, [this](const std::string& text) { return normalized(text); });
+    if (elements.size() < 2) return std::nullopt;
+    std::vector<std::string> surfaces;
+    for (std::size_t i = 0; i < elements.size(); ++i) {
+        if (i > 0 && !elements[i].hyphen_joined) return std::nullopt;
+        surfaces.push_back(elements[i].surface);
+    }
+    return surfaces;
 }
 
 void G2P::unmapped_chars(const std::string& word, std::vector<std::string>* unmapped,
@@ -2158,6 +2285,11 @@ std::vector<std::string> G2P::word_candidates(const std::string& word, std::size
                                               /*collapse_geminates_flag=*/false,
                                               apply_stress_),
                             false)};
+    // A hyphen-joined compound has one reading, the one transcribe_word returns.
+    if (compound_elements(word).has_value()) {
+        const std::string compound = transcribe_word(word);
+        return compound.empty() ? std::vector<std::string>{} : std::vector<std::string>{compound};
+    }
     Tokenizer tokenizer(*spec_, expand_allophones_, apply_allophony_);
     auto paths = needs_context_beam_ ? tokenizer.beam(word, width)
                                      : tokenizer.rescored_beam(word, width);
@@ -2224,13 +2356,7 @@ WordTranscription G2P::transcribe_one(const std::string& word, std::size_t width
                 throw std::invalid_argument("forced pronunciation contains undeclared IPA: " + segment);
         override = forced_ipa;
     } else {
-        const std::string key = lower_str(unmarked_word(silent_marks_, word), spec_->code);
-        if (auto hit = spec_->word_exceptions.find(key); hit != spec_->word_exceptions.end())
-            override = hit->second;
-        else {
-            const auto& lex = load_lexicon(language_);
-            if (auto li = lex.find(unicode_nfc(key, false)); li != lex.end()) override = li->second;
-        }
+        override = override_for(word);
     }
 
     std::vector<IPAPath> paths;
@@ -2283,8 +2409,19 @@ std::string G2P::transcribe_word(const std::string& word, const std::string& sea
     if (search != "greedy" && search != "beam") throw std::invalid_argument("search must be greedy or beam");
     // Output contract: NFC composed here, at the emission boundary (see
     // the note in g2p.py transcribe_word).
-    const std::string ipa = transcribe_one(
-        word, search == "greedy" ? 1 : beam_width, false, "").ipa;
+    // A hyphen-joined word the spec stresses as one compound is transcribed
+    // element by element and marked as transcribe marks it, but returned as
+    // one token, with no space between the elements.
+    const std::size_t width = search == "greedy" ? 1 : beam_width;
+    std::string ipa;
+    if (const auto elements = compound_elements(word)) {
+        std::vector<std::string> ipa_words;
+        for (const auto& element : *elements) ipa_words.push_back(transcribe_one(element, width, false, "").ipa);
+        std::vector<bool> joined(ipa_words.size(), true);
+        for (const auto& element_ipa : mark_compounds(joined, ipa_words, spec_->stress_mark)) ipa += element_ipa;
+    } else {
+        ipa = transcribe_one(word, width, false, "").ipa;
+    }
     return ipa.empty() ? ipa : unicode_nfc(ipa, false);
 }
 
@@ -2340,6 +2477,11 @@ TranscriptionResult G2P::transcribe_detailed(const std::string& text, const std:
         surfaces.push_back(input.surface);
         ipa_words.push_back(result.words.back().ipa);
         pausal.push_back(input.pausal);
+    }
+    if (spec_->stress_defined && spec_->compound_stress == "last") {
+        std::vector<bool> joined;
+        for (const auto& input : words) joined.push_back(input.hyphen_joined);
+        ipa_words = mark_compounds(joined, std::move(ipa_words), spec_->stress_mark);
     }
 
     // g2p.py transcribe_detailed: the SENTENCE-scope (cross-word) rescorers run

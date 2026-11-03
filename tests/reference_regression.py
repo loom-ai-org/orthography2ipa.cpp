@@ -299,6 +299,7 @@ def surface_tone(lang, word):
                 for ch in grapheme:
                     if ch in rules.classes:
                         cls = rules.classes[ch]
+                        break
                 if cls:
                     break
             for grapheme in syl_g:
