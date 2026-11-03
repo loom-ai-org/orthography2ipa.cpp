@@ -105,7 +105,7 @@ static void tone_json(const std::string& code, const std::string& word,
     const bool has_rules = spec.tone.has_value();
     const ToneData rules = has_rules ? *spec.tone : ToneData{};
 
-    std::cout << std::setprecision(17) << "{\"lang\":" << json(code)
+    std::cout << std::setprecision(17) << "{\"lang\":" << json(spec.code)
               << ",\"word\":" << json(supplied.empty() ? word : supplied)
               << ",\"atoms\":"; strings_json(atoms);
     std::cout << ",\"graphemes\":"; strings_json(graphemes);
@@ -392,7 +392,7 @@ int main(int argc, char** argv) {
                 }
                 const std::vector<std::string> atoms(spec.phonemes.begin(), spec.phonemes.end());
                 const auto sylls = stress::syllabify_ipa(ipa, spec.max_onset, atoms);
-                std::cout << std::setprecision(17) << "{\"lang\":" << json(code)
+                std::cout << std::setprecision(17) << "{\"lang\":" << json(spec.code)
                           << ",\"input\":" << json(ipa) << ",\"mode\":\"ipa\",\"syllables\":";
                 strings_json(sylls);
                 std::cout << ",\"weights\":[";
