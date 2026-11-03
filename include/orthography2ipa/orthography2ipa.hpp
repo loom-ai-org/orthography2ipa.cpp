@@ -108,6 +108,8 @@ struct LanguageSpec {
     // "plugin" (a registered StressPlugin; missing then is fatal).
     std::string stress_source = "rules";
     std::string secondary_stress;
+    // "last": a hyphen-joined group keeps the main stress on its last marked element.
+    std::string compound_stress;
     std::string accent2_mark;
     std::vector<std::string> accent2_final_letters, cliticless_words;
     bool constrain_mark_onsets = true, coda_liquid_capture = false, iambic_length = false;
@@ -413,6 +415,11 @@ private:
     /// `word_exceptions` then the lexicon, each keyed on the language-aware
     /// lower-casing of the word with the spec's silent stress marks removed.
     std::optional<std::string> override_for(const std::string& word) const;
+    /// g2p.py G2P._normalize: the input after the spec's normalize plugins.
+    std::string normalized(std::string text) const;
+    /// g2p.py G2P._compound_elements: the element surfaces of a hyphen-joined
+    /// word the spec stresses as one compound, or nullopt.
+    std::optional<std::vector<std::string>> compound_elements(const std::string& word) const;
     /// g2p.py G2P._unmapped_chars: the UNKNOWN tokens the grapheme table does
     /// not cover, and the coverage fraction they reduce.
     void unmapped_chars(const std::string& word, std::vector<std::string>* unmapped,

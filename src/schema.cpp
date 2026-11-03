@@ -1956,6 +1956,7 @@ bool stress_rules_model(Report& report, const Json& json, StressRulesModel& out)
     ok = stress_entries(report, b, "cliticless_words", out.cliticless_words) && ok;
     ok = b.boolean("coda_liquid_capture", out.coda_liquid_capture, kDefaulted) && ok;
     ok = b.literal("secondary_stress", out.secondary_stress, {"", "alternating"}, kDefaulted) && ok;
+    ok = b.literal("compound_stress", out.compound_stress, {"", "last"}, kDefaulted) && ok;
     ok = b.boolean("iambic_length", out.iambic_length, kDefaulted) && ok;
     ok = b.literal("source", out.source, {"rules", "plugin"}, kDefaulted) && ok;
     ok = b.opt_str("notes", out.notes) && ok;
@@ -2415,6 +2416,7 @@ void dump(Writer& w, const StressRulesModel& m) {
         member(out, first, "cliticless_words", m.cliticless_words);
         member(out, first, "coda_liquid_capture", m.coda_liquid_capture);
         member(out, first, "secondary_stress", m.secondary_stress);
+        member(out, first, "compound_stress", m.compound_stress);
         member(out, first, "iambic_length", m.iambic_length);
         member(out, first, "source", m.source);
         member(out, first, "notes", m.notes);

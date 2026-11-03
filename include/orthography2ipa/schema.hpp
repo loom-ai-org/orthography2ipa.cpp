@@ -244,6 +244,7 @@ struct StressRulesModel {
     std::optional<std::vector<std::string>> cliticless_words;
     bool coda_liquid_capture = false;
     std::string secondary_stress;                       // "" | "alternating"
+    std::string compound_stress;                        // "" | "last"
     bool iambic_length = false;
     std::string source = "rules";                       // "rules" | "plugin"
     std::optional<std::string> notes;
