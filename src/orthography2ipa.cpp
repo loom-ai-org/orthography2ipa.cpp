@@ -10,6 +10,7 @@
 #include "orthography2ipa/syllabifiers.hpp"
 #include "unicode_util.hpp"
 #include "orthography2ipa/vowels.hpp"
+#include "orthography2ipa/feats.hpp"
 
 #include <boost/property_tree/json_parser.hpp>
 #include <boost/property_tree/ptree.hpp>
@@ -2396,40 +2397,34 @@ std::string G2P::transcribe(const std::string& text, const std::string& search, 
 std::vector<std::string> feature_names() {
     return {"syllabic", "sonorant", "consonantal", "continuant", "delayed_release", "lateral", "nasal", "strident", "voice", "spread_glottis", "constricted_glottis", "anterior", "coronal", "distributed", "labial", "high", "low", "back", "round", "tense", "long", "click", "nasal_vowel"};
 }
+// distance.py feature_vector: feats.vectorize_phones as floats (True 1.0,
+// False 0.0, None 0.5). An unknown segment retries with the listed marks
+// stripped, and stays all 0.5 when that fails too.
 std::vector<double> feature_vector(const std::string& segment) {
-    std::vector<double> v(23, .5); if (segment.empty() || segment == "∅") return v;
-    std::size_t n = utf8_char_size(segment, 0); const std::string base = segment.substr(0, n);
-    const std::string vowels = "iɪeɛæaɑɒɔoʊuʉyʏøœɨɯɐəɵ";
-    const std::string high = "iɪɨʉuʊyʏɯ"; const std::string low = "aɑɒæɐ";
-    const std::string back = "ɯuʊoɔɑɒɒɤɣqχ"; const std::string round = "uʊoɔyʏøœɵʉ";
-    const std::string nasals = "mɱnɲŋɳɴ"; const std::string voiced = "bdɡɢɟɖɗʒʐzvðɣʁɲɳmnŋɲɾrl";
-    const std::string labial = "mpbvfβɸɱ"; const std::string coronal = "tdszʃʒnlɾɹɻɲɳʈɖθð";
-    const std::string strident = "sʃʒzʂʐɕʑ";
-    const bool vowel = vowels.find(base) != std::string::npos;
-    const bool known = vowel || std::string("pbtdkɡcqʔfvszʃʒʂʐxɣχħʕmɱnɲŋɳɴlrɾɹj wɥɰ").find(base) != std::string::npos;
-    if (!known) return v;
-    v[0] = vowel ? 1 : 0; v[1] = vowel || nasals.find(base) != std::string::npos || std::string("lɾɹrwj").find(base) != std::string::npos ? 1 : 0; v[2] = vowel ? 0 : 1;
-    v[3] = vowel || std::string("fvszʃʒʂʐxɣχħʕθðj wɥɰ").find(base) != std::string::npos ? 1 : 0;
-    v[4] = (segment.find("tʃ") == 0 || segment.find("dʒ") == 0 || segment.find("ɕ") == 0) ? 1 : 0;
-    v[5] = std::string("lɬɮʎ").find(base) != std::string::npos; v[6] = nasals.find(base) != std::string::npos;
-    v[7] = strident.find(base) != std::string::npos; v[8] = voiced.find(base) != std::string::npos;
-    v[9] = segment.find("ʰ") != std::string::npos; v[10] = segment.find("ʼ") != std::string::npos || segment.find("ˤ") != std::string::npos;
-    v[11] = coronal.find(base) != std::string::npos; v[12] = coronal.find(base) != std::string::npos; v[13] = std::string("ʃʒʂʐɕʑθð").find(base) != std::string::npos;
-    v[14] = labial.find(base) != std::string::npos; v[15] = high.find(base) != std::string::npos || std::string("cjɟɲʎj").find(base) != std::string::npos;
-    v[16] = low.find(base) != std::string::npos; v[17] = back.find(base) != std::string::npos; v[18] = round.find(base) != std::string::npos; v[19] = vowel ? 1 : .5;
-    v[20] = segment.find("ː") != std::string::npos; v[21] = std::string("ǀǁǂǃ").find(base) != std::string::npos; v[22] = segment.find("̃") != std::string::npos && vowel;
-    return v;
+    const std::vector<double> neutral(feats::NUM_FEATURES, .5);
+    if (segment.empty() || segment == "∅") return neutral;
+    auto floats = [](const std::vector<feats::TriState>& vector) {
+        std::vector<double> out;
+        for (const auto value : vector) out.push_back(value == feats::TRUE ? 1.0 : value == feats::FALSE ? 0.0 : .5);
+        return out;
+    };
+    if (const auto vector = feats::vectorize_phones(segment); !vector.empty()) return floats(vector);
+    std::string stripped = segment;
+    for (const char* mark : {"̃", "̥", "̩", "̪", "̻", "̺", "̝", "̞", "̈",
+                             "̊", "̆", "ʰ", "ʷ", "ʱ", "ˤ", "ˠ", "ʲ", "ˑ", "ː"})
+        for (std::size_t at = stripped.find(mark); at != std::string::npos; at = stripped.find(mark, at))
+            stripped.erase(at, std::char_traits<char>::length(mark));
+    if (!stripped.empty() && stripped != segment)
+        if (const auto vector = feats::vectorize_phones(stripped); !vector.empty()) return floats(vector);
+    return neutral;
 }
+// distance.py segment_distance: feats.phonetic_distance capped at 1.0. The
+// reference's fallback for a raising phonetic_distance never runs, because
+// phonetic_distance returns 3.0 for an unknown phone instead of raising.
 double segment_distance(const std::string& a, const std::string& b) {
     if (a == b) return 0;
     if (a.empty() || b.empty() || a == "∅" || b == "∅") return 1;
-    const auto x = feature_vector(a), y = feature_vector(b); bool unknown_x = true, unknown_y = true;
-    for (double value : x) unknown_x = unknown_x && value == .5;
-    for (double value : y) unknown_y = unknown_y && value == .5;
-    if (unknown_x || unknown_y) return 1;
-    if (x[0] != y[0]) return 1;
-    double total = 0, weight = 0; for (std::size_t i = 0; i < x.size(); ++i) { const double w = i < 3 ? 7.0 : 1.0; total += w * std::abs(x[i] - y[i]); weight += w; }
-    return std::min(1.0, total / weight);
+    return std::min(feats::phonetic_distance(a, b), 1.0);
 }
 InventoryDistance inventory_distance(const LanguageSpec& a, const LanguageSpec& b) {
     auto x = declared_phonemes(a), y = declared_phonemes(b); std::size_t shared = 0; for (const auto& p : x) shared += y.count(p);
@@ -2438,12 +2433,59 @@ InventoryDistance inventory_distance(const LanguageSpec& a, const LanguageSpec& 
     auto mean_min = [](const auto& source, const auto& target) { if (source.empty() || target.empty()) return 1.0; double sum = 0; for (const auto& p : source) { double best = 1; for (const auto& q : target) best = std::min(best, segment_distance(p, q)); sum += best; } return sum / source.size(); };
     return {j, (mean_min(x, y) + mean_min(y, x)) / 2, x.size(), y.size(), shared};
 }
+// distance.py grapheme_divergence. Keys compare after str.lower(). When two
+// keys lower to one, the reference keeps the value of the key it read last.
+// The spec keeps no key order, so the key that is already lower case wins.
 GraphemeDivergence grapheme_divergence(const LanguageSpec& a, const LanguageSpec& b) {
-    std::set<std::string> x, y; for (const auto& [k, _] : a.graphemes) x.insert(lower_ascii(k)); for (const auto& [k, _] : b.graphemes) y.insert(lower_ascii(k));
-    std::size_t shared = 0; double total = 0; for (const auto& k : x) if (y.count(k)) { ++shared; auto find = [](const auto& m, const auto& key) -> const std::vector<std::string>& { for (const auto& [k, v] : m) if (lower_ascii(k) == key) return v; static const std::vector<std::string> empty; return empty; }; const auto& va = find(a.graphemes, k); const auto& vb = find(b.graphemes, k); if (va.empty() || vb.empty()) total += 1; else { double d = 0; for (const auto& p : va) { double best = 1; for (const auto& q : vb) best = std::min(best, segment_distance(p, q)); d += best; } for (const auto& q : vb) { double best = 1; for (const auto& p : va) best = std::min(best, segment_distance(q, p)); d += best; } total += d / (va.size() + vb.size()); } }
-    std::set<std::string> u = x; u.insert(y.begin(), y.end()); return {shared, u.size(), shared ? total / shared : 1, u.empty() ? 0 : static_cast<double>(shared) / u.size()};
+    auto lowered = [](const LanguageSpec& spec) {
+        std::map<std::string, const std::vector<std::string>*> out;
+        for (const auto& [key, values] : spec.graphemes) {
+            const std::string lower = to_utf8(uni::lower(to_utf32(key)));
+            if (!out.count(lower) || key == lower) out[lower] = &values;
+        }
+        return out;
+    };
+    const auto x = lowered(a), y = lowered(b);
+    std::set<std::string> keys;
+    for (const auto& [key, _] : x) keys.insert(key);
+    for (const auto& [key, _] : y) keys.insert(key);
+    std::size_t shared = 0; double total = 0;
+    for (const auto& [key, va] : x) {
+        const auto found = y.find(key);
+        if (found == y.end()) continue;
+        ++shared;
+        const auto& vb = *found->second;
+        if (va->empty() || vb.empty()) { total += 1; continue; }
+        std::vector<double> nearest;
+        auto closest = [&](const std::vector<std::string>& from, const std::vector<std::string>& to) {
+            for (const auto& p : from) {
+                if (p.empty()) continue;
+                double best = 1; bool any = false;
+                for (const auto& q : to) if (!q.empty()) { best = any ? std::min(best, segment_distance(p, q)) : segment_distance(p, q); any = true; }
+                nearest.push_back(best);
+            }
+        };
+        closest(*va, vb); closest(vb, *va);
+        double sum = 0; for (const double d : nearest) sum += d;
+        total += nearest.empty() ? 1 : sum / nearest.size();
+    }
+    if (!shared) return {0, keys.size(), 1, 0};
+    return {shared, keys.size(), total / shared, static_cast<double>(shared) / keys.size()};
 }
-double allophone_overlap(const LanguageSpec& a, const LanguageSpec& b) { std::set<std::string> x, y; for (const auto& [_, v] : a.allophones) x.insert(v.begin(), v.end()); for (const auto& [_, v] : b.allophones) y.insert(v.begin(), v.end()); std::set<std::string> u = x; u.insert(y.begin(), y.end()); std::size_t n = 0; for (const auto& p : x) n += y.count(p); return u.empty() ? 1 : static_cast<double>(n) / u.size(); }
+// distance.py _extract_allophones skips "∅" and "".
+double allophone_overlap(const LanguageSpec& a, const LanguageSpec& b) {
+    auto realisations = [](const LanguageSpec& spec) {
+        std::set<std::string> out;
+        for (const auto& [_, values] : spec.allophones)
+            for (const auto& value : values) if (!value.empty() && value != "∅") out.insert(value);
+        return out;
+    };
+    const auto x = realisations(a), y = realisations(b);
+    if (x.empty() && y.empty()) return 1;
+    std::set<std::string> u = x; u.insert(y.begin(), y.end());
+    std::size_t n = 0; for (const auto& p : x) n += y.count(p);
+    return static_cast<double>(n) / u.size();
+}
 PhonologicalDistance phonological_distance(const LanguageSpec& a, const LanguageSpec& b) { auto i = inventory_distance(a, b); auto g = grapheme_divergence(a, b); auto o = allophone_overlap(a, b); return {i, g, o, .6 * i.feature_mean + .4 * (1 - o)}; }
 std::map<std::string, double> ancestry_weights(const LanguageSpec& spec, int depth = 10, bool temporal_decay = false, double decay_halflife = 1000.0) {
     std::map<std::string, double> result; std::vector<std::tuple<std::string, double, int>> queue;

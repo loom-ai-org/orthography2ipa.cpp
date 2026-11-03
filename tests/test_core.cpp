@@ -73,6 +73,15 @@ int main() {
     assert(vector.size() == 23);
     assert(segment_distance("p", "p") == 0);
     assert(inventory_distance(portuguese, spanish).feature_mean >= 0);
+    // distance.py values from the reference, which sums over sets in hash order,
+    // so the last bits can differ.
+    auto close_to = [](double value, double expected) { return value - expected < 1e-12 && expected - value < 1e-12; };
+    assert(close_to(segment_distance("p", "b"), 0.042553191489361715));
+    assert(feature_vector("p")[7] == .5 && feature_vector("p")[11] == 1);
+    const auto pt_es = phonological_distance(portuguese, spanish);
+    assert(close_to(pt_es.combined, 0.21661900286704905));
+    assert(close_to(pt_es.inventory.feature_mean, 0.05333936375277406));
+    assert(close_to(pt_es.grapheme.mean_ipa_distance, 0.2292352969556617));
     assert(spelling_divergence(portuguese, spanish).total_phonemes > 0);
     assert(full_distance(portuguese, spanish) >= 0);
     assert(pairwise_distances({portuguese, spanish}).size() == 2);
