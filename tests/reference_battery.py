@@ -40,6 +40,8 @@ SIX = ["pt-PT", "hi", "lo", "ru", "fr-FR", "es-ES"]
 PINNED = {
     "pt-PT": ["chuva", "as", "aves", "os", "dois", "irmãos", "estás", "ver"],
     "es-ES": ["seguro"],
+    "en-US": ["i'll.", "(i'm)"],
+    "af": ["'n."],
     "ru": ["молоко"],
     "fr-FR": ["jeune", "agneau", "les", "amis"],
     "hi": ["कृष्ण", "क्या", "राम", "नमस्ते", "भारत", "किताब", "दो", "क्", "क्ष",
@@ -150,6 +152,8 @@ def build():
         if spec is not None:
             six += [[lang, w] for w in _exceptions(spec)]
         six += [[lang, w] for w in PINNED.get(lang, [])]
+    # Pinned rows for specs outside the six.
+    six += [[lang, w] for lang in PINNED if lang not in SIX for w in PINNED[lang]]
     cats["six"] = _dedupe(six)
 
     # 2. Arabic: exceptions, shadda + harakat spellings, presentation forms.

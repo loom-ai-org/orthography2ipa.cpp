@@ -180,6 +180,11 @@ const std::vector<std::pair<std::string, std::string>>& pause_punctuation();
 /// Is *text* at `pos` a pause mark? (PAUSE_PUNCTUATION membership.)
 bool is_pause_punctuation(const std::string& character);
 
+/// g2p.py _EDGE_PUNCT_RE: *word* without the punctuation that clings to
+/// either end of a raw token. An apostrophe (U+0027, U+2019) spells an
+/// elision and is not stripped.
+std::string strip_edge_punctuation(const std::string& word);
+
 /// Language-aware lowercasing for a whole string — phonetok.py
 /// lower_str. Turkish dotted/dotless I is handled via explicit mapping;
 /// every other language uses plain full Unicode lowercasing.

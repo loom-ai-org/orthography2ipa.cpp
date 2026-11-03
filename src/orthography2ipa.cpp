@@ -1000,7 +1000,12 @@ bool engine_is_cliticless(const LanguageSpec& spec, const std::string& silent_ma
         if (word.find(silent_marks.substr(i, utf8_char_size(silent_marks, i))) != std::string::npos)
             return false;
         else i += utf8_char_size(silent_marks, i);
-    return stress::is_cliticless(word, spec);
+    if (stress::is_cliticless(word, spec)) return true;
+    // The same clinging punctuation G2P::override_for sees past: a clitic stays
+    // a clitic with a comma after it. The exact key is tried first, as there.
+    const std::string key = to_utf8(uni::nfc(to_utf32(lower_str(word, spec.code))));
+    const std::string stripped = strip_edge_punctuation(key);
+    return !stripped.empty() && stripped != key && stress::is_cliticless(stripped, spec);
 }
 
 // g2p.py _map_tokens_to_syllables: map each grapheme token index to its
@@ -2104,7 +2109,12 @@ std::optional<std::string> G2P::override_for(const std::string& word) const {
     // None, both keyed on the language-aware lower-casing of the word with the
     // spec's silent stress marks removed.
     const std::string key = lower_str(unmarked_word(silent_marks_, word), spec_->code);
+    // The word as given, then the word with the punctuation that clings to it
+    // in raw text stripped from both ends (`I,` `"I`). The exact key stays first
+    // so an entry spelled with a mark (Afrikaans `'n`) still hits.
     std::vector<std::string> keys{key};
+    if (const std::string stripped = strip_edge_punctuation(key); !stripped.empty() && stripped != key)
+        keys.push_back(stripped);
     constexpr std::string_view curly = "\u2019";
     if (spec_->word_internal_apostrophe && key.find(curly) != std::string::npos) {
         // Entries are written with U+0027; a typographic U+2019 is the same word.
