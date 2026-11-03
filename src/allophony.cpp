@@ -578,6 +578,9 @@ bool AllophoneRescorer::matches_slot(const AllophoneRule& rule,
     if (!rule.preceded_by_3.empty() &&
         !neighbor_is(rule.preceded_by_3, g.at(-3), -1))
         return false;
+    if (!rule.followed_by_3.empty() &&
+        !neighbor_is(rule.followed_by_3, g.at(3), 1))
+        return false;
     if (!rule.preceded_by_surface_phoneme_2.empty()) {
         if (ctx.index < 2) return false;
         const SegmentSlot& two_back = (*ctx.slots)[ctx.index - 2];

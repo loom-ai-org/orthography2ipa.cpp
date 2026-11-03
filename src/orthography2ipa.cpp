@@ -191,7 +191,7 @@ std::vector<AllophoneRule> parse_allophone_rules(const ptree& p) {
         rule.stress = r.get<std::string>("stress", ""); rule.phonemes = optional_strings(r, "phonemes");
         rule.preceded_by = r.get<std::string>("preceded_by", ""); rule.followed_by = r.get<std::string>("followed_by", "");
         rule.preceded_by_2 = r.get<std::string>("preceded_by_2", ""); rule.followed_by_2 = r.get<std::string>("followed_by_2", "");
-        rule.preceded_by_3 = r.get<std::string>("preceded_by_3", "");
+        rule.preceded_by_3 = r.get<std::string>("preceded_by_3", ""); rule.followed_by_3 = r.get<std::string>("followed_by_3", "");
         rule.graphemes = optional_strings(r, "grapheme"); rule.word = optional_strings(r, "word");
         rule.preceded_by_phoneme = optional_strings(r, "preceded_by_phoneme"); rule.followed_by_phoneme = optional_strings(r, "followed_by_phoneme");
         rule.preceded_by_phoneme_2 = optional_strings(r, "preceded_by_phoneme_2"); rule.followed_by_phoneme_2 = optional_strings(r, "followed_by_phoneme_2");
@@ -377,6 +377,7 @@ LanguageSpec load_raw(const std::string& code, std::set<std::string>& loading) {
         s.penult_stress_endings = optional_strings(*stress, "penult_stress_endings");
         s.antepenult_stress_endings = optional_strings(*stress, "antepenult_stress_endings");
         s.diphthongs = optional_strings(*stress, "diphthongs");
+        if (auto ipa = stress->get_child_optional("ipa_diphthongs")) s.ipa_diphthongs = strings(*ipa);
         s.vowel_letters = optional_strings(*stress, "vowel_letters");
         s.onset_clusters = optional_strings(*stress, "onset_clusters");
         s.quantity_sensitive = stress->get<bool>("quantity_sensitive", false);
@@ -481,7 +482,7 @@ LanguageSpec load_raw(const std::string& code, std::set<std::string>& loading) {
             s.default_stress_position = b.default_stress_position; s.stress_mark = b.stress_mark; s.stress_defined = b.stress_defined;
             s.marked_vowels = b.marked_vowels; s.final_stress_endings = b.final_stress_endings;
             s.penult_stress_endings = b.penult_stress_endings; s.antepenult_stress_endings = b.antepenult_stress_endings;
-            s.diphthongs = b.diphthongs; s.vowel_letters = b.vowel_letters;
+            s.diphthongs = b.diphthongs; s.ipa_diphthongs = b.ipa_diphthongs; s.vowel_letters = b.vowel_letters;
             s.onset_clusters = b.onset_clusters; s.quantity_sensitive = b.quantity_sensitive;
             s.superheavy_final_attracts = b.superheavy_final_attracts; s.max_onset = b.max_onset;
             s.max_onset_declared = b.max_onset_declared; s.stress_source = b.stress_source;

@@ -33,7 +33,7 @@ namespace sandhi { class Engine; }
 
 struct AllophoneRule {
     std::string id, surface, append, syllable_position, stress, preceded_by, followed_by;
-    std::string preceded_by_2, followed_by_2, preceded_by_3;
+    std::string preceded_by_2, followed_by_2, preceded_by_3, followed_by_3;
     std::string mutates_neighbor, mutates_neighbor_side;
     std::vector<std::string> phonemes, graphemes, word;
     std::vector<std::string> preceded_by_phoneme, followed_by_phoneme;
@@ -97,6 +97,9 @@ struct LanguageSpec {
     std::map<std::string, std::vector<std::string>> plugins;
     std::vector<std::string> marked_vowels, final_stress_endings, penult_stress_endings;
     std::vector<std::string> antepenult_stress_endings, diphthongs;
+    // IPA vowel sequences that form one nucleus where the stress mark is
+    // placed; unset, the transcription is split with `diphthongs`.
+    std::optional<std::vector<std::string>> ipa_diphthongs;
     std::vector<std::string> vowel_letters, onset_clusters;
     bool quantity_sensitive = false, superheavy_final_attracts = false;
     int max_onset = 1;
