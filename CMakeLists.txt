@@ -102,6 +102,11 @@ if(BUILD_TESTING)
     # (src/beam.hpp), which owns the positional.py port.
     target_include_directories(orthography2ipa-tests PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/src)
     add_test(NAME orthography2ipa-core COMMAND orthography2ipa-tests)
+    # `--json distance` writes Python repr floats, as the reference's json.dumps
+    # does. The pt-PT/es-ES allophone overlap is 7/13.
+    add_test(NAME orthography2ipa-cli-distance-json COMMAND orthography2ipa-cli --json distance pt-PT es-ES)
+    set_tests_properties(orthography2ipa-cli-distance-json PROPERTIES
+        PASS_REGULAR_EXPRESSION "\"allophone\":0\\.5384615384615384[,}]")
 
     # ── parity-harness drivers ────────────────────────────────────────────────
     # The per-module harnesses drive a small check binary instead of the CLI
