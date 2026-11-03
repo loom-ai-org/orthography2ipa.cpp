@@ -476,6 +476,11 @@ public:
                                                        const std::string& lang) const = 0;
     virtual int priority() const { return 50; }
 };
+/// A G2P that declares a rescore plugin holds it through a shared_ptr for its
+/// whole life. So a plugin must not own, through a shared_ptr, a G2P that
+/// declares this plugin: the two then keep each other alive, and neither is
+/// ever destroyed. A plugin that needs such an engine keeps a std::weak_ptr
+/// to it.
 class RescorerPlugin {
 public:
     virtual ~RescorerPlugin() = default;
