@@ -1701,6 +1701,7 @@ bool allophone_rule_model(Report& report, const Json& json, AllophoneRuleModel& 
     ok = b.opt_literal("preceded_by_2", out.preceded_by_2, values::kStressContext) && ok;
     ok = b.opt_literal("followed_by_2", out.followed_by_2, values::kStressContext) && ok;
     ok = b.opt_literal("preceded_by_3", out.preceded_by_3, values::kStressContext) && ok;
+    ok = b.opt_literal("followed_by_3", out.followed_by_3, values::kStressContext) && ok;
     ok = b.strings("preceded_by_phoneme_2", out.preceded_by_phoneme_2, kOptional) && ok;
     ok = b.strings("followed_by_phoneme_2", out.followed_by_phoneme_2, kOptional) && ok;
     ok = b.strings("preceded_by_surface_phoneme_2", out.preceded_by_surface_phoneme_2, kOptional) && ok;
@@ -1947,6 +1948,7 @@ bool stress_rules_model(Report& report, const Json& json, StressRulesModel& out)
     ok = b.str("accent2_mark", out.accent2_mark, kDefaulted) && ok;
     ok = b.strings("accent2_final_letters", out.accent2_final_letters, kOptional) && ok;
     ok = b.strings("diphthongs", out.diphthongs, kOptional) && ok;
+    ok = b.strings("ipa_diphthongs", out.ipa_diphthongs, kOptional) && ok;
     ok = b.strings("vowel_letters", out.vowel_letters, kOptional) && ok;
     ok = b.boolean("quantity_sensitive", out.quantity_sensitive, kDefaulted) && ok;
     ok = b.boolean("superheavy_final_attracts", out.superheavy_final_attracts, kDefaulted) && ok;
@@ -1956,6 +1958,7 @@ bool stress_rules_model(Report& report, const Json& json, StressRulesModel& out)
     ok = stress_entries(report, b, "cliticless_words", out.cliticless_words) && ok;
     ok = b.boolean("coda_liquid_capture", out.coda_liquid_capture, kDefaulted) && ok;
     ok = b.literal("secondary_stress", out.secondary_stress, {"", "alternating"}, kDefaulted) && ok;
+    ok = b.literal("compound_stress", out.compound_stress, {"", "last"}, kDefaulted) && ok;
     ok = b.boolean("iambic_length", out.iambic_length, kDefaulted) && ok;
     ok = b.literal("source", out.source, {"rules", "plugin"}, kDefaulted) && ok;
     ok = b.opt_str("notes", out.notes) && ok;
@@ -2071,7 +2074,10 @@ bool language_spec_model(Report& report, const Json& json, LanguageSpecModel& ou
     ok = b.strings("preposed_vowels", out.preposed_vowels, kOptional) && ok;
     ok = b.strings("trailing_vowel_axis_digraphs", out.trailing_vowel_axis_digraphs, kOptional) && ok;
     ok = b.opt_boolean("coda_no_inherent_vowel", out.coda_no_inherent_vowel) && ok;
+    ok = b.opt_map("consonant_nuclei", out.consonant_nuclei,
+                   [](Report& r, const Json& v, std::string& slot) { return value_str(r, v, slot); }) && ok;
     ok = b.opt_str("inherent_vowel_final", out.inherent_vowel_final) && ok;
+    ok = b.strings("codas", out.codas, kOptional) && ok;
     ok = b.opt_str("virama_final_vowel", out.virama_final_vowel) && ok;
     ok = b.opt_boolean("collapse_geminates", out.collapse_geminates) && ok;
     ok = b.opt_boolean("doubled_letters_geminate", out.doubled_letters_geminate) && ok;
@@ -2321,6 +2327,7 @@ void dump(Writer& w, const AllophoneRuleModel& m) {
         member(out, first, "preceded_by_2", m.preceded_by_2);
         member(out, first, "followed_by_2", m.followed_by_2);
         member(out, first, "preceded_by_3", m.preceded_by_3);
+        member(out, first, "followed_by_3", m.followed_by_3);
         member(out, first, "preceded_by_phoneme_2", m.preceded_by_phoneme_2);
         member(out, first, "followed_by_phoneme_2", m.followed_by_phoneme_2);
         member(out, first, "preceded_by_surface_phoneme_2", m.preceded_by_surface_phoneme_2);
@@ -2406,6 +2413,7 @@ void dump(Writer& w, const StressRulesModel& m) {
         member(out, first, "accent2_mark", m.accent2_mark);
         member(out, first, "accent2_final_letters", m.accent2_final_letters);
         member(out, first, "diphthongs", m.diphthongs);
+        member(out, first, "ipa_diphthongs", m.ipa_diphthongs);
         member(out, first, "vowel_letters", m.vowel_letters);
         member(out, first, "quantity_sensitive", m.quantity_sensitive);
         member(out, first, "superheavy_final_attracts", m.superheavy_final_attracts);
@@ -2415,6 +2423,7 @@ void dump(Writer& w, const StressRulesModel& m) {
         member(out, first, "cliticless_words", m.cliticless_words);
         member(out, first, "coda_liquid_capture", m.coda_liquid_capture);
         member(out, first, "secondary_stress", m.secondary_stress);
+        member(out, first, "compound_stress", m.compound_stress);
         member(out, first, "iambic_length", m.iambic_length);
         member(out, first, "source", m.source);
         member(out, first, "notes", m.notes);
@@ -2604,7 +2613,9 @@ std::string dump_json(const LanguageSpecModel& model) {
     m("preposed_vowels", model.preposed_vowels);
     m("trailing_vowel_axis_digraphs", model.trailing_vowel_axis_digraphs);
     m("coda_no_inherent_vowel", model.coda_no_inherent_vowel);
+    m("consonant_nuclei", model.consonant_nuclei);
     m("inherent_vowel_final", model.inherent_vowel_final);
+    m("codas", model.codas);
     m("virama_final_vowel", model.virama_final_vowel);
     m("collapse_geminates", model.collapse_geminates);
     m("doubled_letters_geminate", model.doubled_letters_geminate);
