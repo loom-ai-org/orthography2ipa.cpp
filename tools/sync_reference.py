@@ -125,8 +125,13 @@ def tag_commit(version: str) -> str:
         with urllib.request.urlopen(url, timeout=60) as response:
             return json.load(response)["sha"]
     except urllib.error.HTTPError as error:
-        sys.exit(f"{REFERENCE_REPO} has no tag {version} (GitHub answered {error.code}); "
-                 "nothing was written")
+        # GitHub answers 404 or 422 for a ref it does not know. Any other
+        # status (a 403 rate limit, a 5xx) says nothing about the tag.
+        if error.code in (404, 422):
+            sys.exit(f"{REFERENCE_REPO} has no tag {version} (GitHub answered {error.code}); "
+                     "nothing was written")
+        sys.exit(f"could not resolve tag {version} of {REFERENCE_REPO}: GitHub answered "
+                 f"HTTP {error.code}; nothing was written")
 
 
 def pin_ci(sha: str) -> None:
