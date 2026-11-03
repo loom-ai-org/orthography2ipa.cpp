@@ -2458,15 +2458,15 @@ TranscriptionResult G2P::transcribe_detailed(const std::string& text, const std:
     if (search != "greedy" && search != "beam") throw std::invalid_argument("search must be greedy or beam");
     auto stage = [&](const std::string& name) -> const std::vector<std::string>& { auto it = plugin_overrides_.find(name); return it == plugin_overrides_.end() ? plugin_names(*spec_, name) : it->second; };
     // registry.py get_declared_plugins resolves a declared plugin by name and
-    // does not ask which languages it owns, for any stage.
+    // does not ask which languages it owns, for any stage. g2p.py resolves
+    // only the normalize, rescore and sandhi stages; it never reads a
+    // declared syllabify or stress plugin, so a missing one is no error.
     auto validate_stage = [&](const std::string& name, const auto& plugins) {
         for (const auto& plugin_name : stage(name))
             if (plugins.find(plugin_name) == plugins.end())
                 throw std::runtime_error("missing " + name + " plugin: " + plugin_name);
     };
     validate_stage("normalize", normalize_plugins);
-    validate_stage("syllabify", syllabifier_plugins);
-    validate_stage("stress", stress_plugins);
     validate_stage("rescore", rescorer_plugins);
     validate_stage("sandhi", sandhi_plugins);
     auto normalize = [&](std::string value) {
