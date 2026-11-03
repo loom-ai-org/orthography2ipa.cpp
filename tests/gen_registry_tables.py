@@ -52,6 +52,15 @@ def table(name: str, mapping, *docs: str) -> str:
     return "\n".join(lines) + "\n"
 
 
+def string_list(name: str, values, *docs: str) -> str:
+    lines = list(docs)
+    lines.append(f"static const char* const {name}[] {{")
+    for value in values:
+        lines.append(f"    {cstr(value)},")
+    lines.append("};")
+    return "\n".join(lines) + "\n"
+
+
 ALIASES_DOC = [
     "// registry.py _ALIASES: the fallback alias table for ISO 639-3 -> BCP-47",
     "// normalisation. langcodes resolves standard codes when it is available;",
@@ -75,6 +84,15 @@ NORM_DOC = [
     "// FROM inside lang_distance, so `pt` falls back to `pt-PT` before `pt-BR`.",
     "// Diverges from langcodes' population default on purpose.",
 ]
+ARABIC_DOC = [
+    "// ovos_spec_tools.language _ARABIC_VARIETIES: the individual languages of",
+    "// the ISO 639-3 `ara` macrolanguage, plus `ar`. Measured against bare MSA",
+    "// (_MSA) in Arabic script or with no script, lang_distance is at most",
+    "// _ARABIC_FALLBACK_DISTANCE. The reference holds a frozenset; it is sorted.",
+]
+MSA_DOC = [
+    "// ovos_spec_tools.language _MSA: the bare Modern Standard Arabic tags.",
+]
 
 
 def main() -> None:
@@ -87,6 +105,12 @@ def main() -> None:
         table("_BARE_DEFAULTS", registry._BARE_DEFAULTS, *BARE_DOC),
         table("_REGION_DEFAULTS", registry._REGION_DEFAULTS, *REGION_DOC),
         table("_NORM_REGION", o2i_language._NORM_REGION, *NORM_DOC),
+        string_list("_ARABIC_VARIETIES", sorted(o2i_language._ARABIC_VARIETIES), *ARABIC_DOC),
+        string_list("_MSA", o2i_language._MSA, *MSA_DOC),
+        "// ovos_spec_tools.language _ARABIC_FALLBACK_DISTANCE.",
+        f"constexpr int _ARABIC_FALLBACK_DISTANCE = "
+        f"{o2i_language._ARABIC_FALLBACK_DISTANCE};",
+        "",
         "// registry.py/ovos_spec_tools: the inclusive upper bound closest_lang",
         "// accepts (OVOS-INTENT-2 section 2.2's \"up to 10 is a usable match\").",
         f"constexpr int DEFAULT_MAX_LANGUAGE_DISTANCE = "
@@ -100,6 +124,9 @@ def main() -> None:
         len(registry._ALIASES), len(registry._BARE_DEFAULTS),
         len(registry._REGION_DEFAULTS), len(o2i_language._NORM_REGION),
         o2i_language.DEFAULT_MAX_LANGUAGE_DISTANCE))
+    print("arabic_varieties=%d msa=%d arabic_fallback_distance=%d" % (
+        len(o2i_language._ARABIC_VARIETIES), len(o2i_language._MSA),
+        o2i_language._ARABIC_FALLBACK_DISTANCE))
 
 
 if __name__ == "__main__":

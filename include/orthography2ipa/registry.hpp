@@ -17,7 +17,9 @@
 // The distance is ovos_spec_tools.language.lang_distance: both tags
 // standardized, a bare tag measured FROM its norm region, `langcodes
 // .tag_distance` when it can compute one and the coarse 3/5/100 measure when
-// it cannot; `closest_lang` then takes the minimum within
+// it cannot, then capped at 5 for an `ara` macrolanguage member in Arabic
+// script (or with no script) against bare `ar` or `arb`; `closest_lang` then
+// takes the minimum within
 // DEFAULT_MAX_LANGUAGE_DISTANCE, ties going to the FIRST candidate in the
 // order it is given (here: `available_json_codes()` order, as in the
 // reference).
@@ -46,7 +48,9 @@ std::string standardize_lang(const std::string& tag);
 std::string with_norm_region(const std::string& tag);
 
 /// ovos_spec_tools.language lang_distance: 0 for identical, a small value for a
-/// regional difference, >= 100 for a different primary language.
+/// regional difference, >= 100 for a different primary language. An `ara`
+/// macrolanguage member in Arabic script, or with no script subtag, is at most
+/// 5 from bare `ar` or `arb`.
 int lang_distance(const std::string& desired, const std::string& supported);
 
 /// ovos_spec_tools.language _coarse_distance: the langcodes-free fallback. The

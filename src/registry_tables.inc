@@ -132,6 +132,53 @@ static const std::pair<const char*, const char*> _NORM_REGION[] {
     {"pt", "PT"},
 };
 
+// ovos_spec_tools.language _ARABIC_VARIETIES: the individual languages of
+// the ISO 639-3 `ara` macrolanguage, plus `ar`. Measured against bare MSA
+// (_MSA) in Arabic script or with no script, lang_distance is at most
+// _ARABIC_FALLBACK_DISTANCE. The reference holds a frozenset; it is sorted.
+static const char* const _ARABIC_VARIETIES[] {
+    "aao",
+    "abh",
+    "abv",
+    "acm",
+    "acq",
+    "acw",
+    "acx",
+    "acy",
+    "adf",
+    "aeb",
+    "aec",
+    "afb",
+    "ajp",
+    "apc",
+    "apd",
+    "ar",
+    "arb",
+    "arq",
+    "ars",
+    "ary",
+    "arz",
+    "auz",
+    "avl",
+    "ayh",
+    "ayl",
+    "ayn",
+    "ayp",
+    "bbz",
+    "pga",
+    "shu",
+    "ssh",
+};
+
+// ovos_spec_tools.language _MSA: the bare Modern Standard Arabic tags.
+static const char* const _MSA[] {
+    "ar",
+    "arb",
+};
+
+// ovos_spec_tools.language _ARABIC_FALLBACK_DISTANCE.
+constexpr int _ARABIC_FALLBACK_DISTANCE = 5;
+
 // registry.py/ovos_spec_tools: the inclusive upper bound closest_lang
 // accepts (OVOS-INTENT-2 section 2.2's "up to 10 is a usable match").
 constexpr int DEFAULT_MAX_LANGUAGE_DISTANCE = 10;
