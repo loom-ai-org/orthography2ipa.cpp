@@ -83,6 +83,10 @@ GEMINATE_AR = ["ar", "it-IT", "sv", "hu"]
 CLITIC = ["fr-FR", "en-GB", "ru", "pt-PT", "ar", "ar-IQ", "it-IT", "ca", "ga", "he", "sv", "da"]
 MULTI = ["fr-FR", "sv", "fo", "en-GB", "pt-PT", "ru", "it-IT", "de-DE", "is", "el", "hi", "th", "ko", "my"]
 
+# Aliases: a surface reports the code that the alias resolves to.
+PINNED["gl"] = ["casa"]
+PINNED["ro"] = ["casă"]
+
 # The code points of the viramas this catalog actually uses.
 VIRAMAS = {0x094D, 0x09CD, 0x0A4D, 0x0ACD, 0x0B4D, 0x0BCD, 0x0C4D, 0x0CCD,
            0x0D4D, 0x0D3B, 0x0E3A, 0x1039, 0x17D2, 0x0F84, 0x1714}
