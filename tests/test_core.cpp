@@ -63,6 +63,16 @@ int main() {
         assert(normalized.transcribe_detailed("tenho 23").words.at(1).word == "vinte");
         assert(normalized.features("tenho 23").at(1).word == "vinte");
         assert(normalized.sentence_lattice("tenho 23").words.at(1).surface == "vinte");
+        // registry.py runs a declared plugin by name, whatever languages it
+        // owns: an es-ES normalizer named on a pt-PT engine runs on every path.
+        struct Foreign : Digits {
+            std::vector<std::string> language_codes() const override { return {"es-ES"}; }
+        };
+        register_normalize_plugin("test-digits-es", std::make_shared<Foreign>());
+        const G2P foreign("pt-PT", {{"normalize", {"test-digits-es"}}});
+        assert(foreign.transcribe_detailed("tenho 23").words.at(1).word == "vinte");
+        assert(foreign.features("tenho 23").at(1).word == "vinte");
+        assert(foreign.sentence_lattice("tenho 23").words.at(1).surface == "vinte");
     }
     // g2p.py ipa_lattice: one slot per grapheme, ranked candidates, spans in
     // CODE POINTS, and the top-of-slot concatenation is a valid reading.
