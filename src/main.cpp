@@ -2,6 +2,7 @@
 #include "orthography2ipa/stress.hpp"
 #include "orthography2ipa/registry.hpp"
 #include "orthography2ipa/tone.hpp"
+#include "py_float.hpp"
 #include <climits>
 #include <optional>
 #include <algorithm>
@@ -466,7 +467,7 @@ int main(int argc, char** argv) {
         if (command == "distance" && i + 1 < argc) {
             if (i + 2 < argc && std::string(argv[i + 2]) == "--json") json_output = true;
             const auto d = phonological_distance(get(argv[i]), get(argv[i + 1]));
-            if (json_output) std::cout << "{\"combined\":" << d.combined << ",\"inventory\":" << d.inventory.feature_mean << ",\"allophone\":" << d.allophone_sim << ",\"grapheme\":" << d.grapheme.mean_ipa_distance << "}\n";
+            if (json_output) std::cout << "{\"combined\":" << detail::py_float(d.combined) << ",\"inventory\":" << detail::py_float(d.inventory.feature_mean) << ",\"allophone\":" << detail::py_float(d.allophone_sim) << ",\"grapheme\":" << detail::py_float(d.grapheme.mean_ipa_distance) << "}\n";
             else std::cout << std::fixed << std::setprecision(4) << "combined: " << d.combined << "\ninventory: " << d.inventory.feature_mean << "\nallophone: " << d.allophone_sim << "\ngrapheme: " << d.grapheme.mean_ipa_distance << "\n";
             return 0;
         }
