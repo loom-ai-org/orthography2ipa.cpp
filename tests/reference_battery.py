@@ -53,6 +53,10 @@ TONE_LANGS = ["th", "lo", "vi", "yo", "km", "my", "bo", "ko", "kix", "zh", "pa"]
 ARABIC = ["ar", "ar-IQ", "ar-LB"]
 SHADDA = "\u0651"
 
+# Specs that take constrain_onsets from their graphemes base.
+PINNED["nl-BE"] = ["arco", "alto"]
+PINNED["de-AT"] = ["Fenster"]
+
 # The combining-mark / virama / preposed-vowel / geminate / clitic / multi
 # builders walk these lists; they are the languages the requirement names.
 COMBINING = ["pt-PT", "el", "vi", "tr", "ar", "hi", "cs", "pl", "sv", "hu", "th", "lo", "yo"]
@@ -150,6 +154,8 @@ def build():
         if spec is not None:
             six += [[lang, w] for w in _exceptions(spec)]
         six += [[lang, w] for w in PINNED.get(lang, [])]
+    # Pinned rows for specs outside the six.
+    six += [[lang, w] for lang in PINNED if lang not in SIX for w in PINNED[lang]]
     cats["six"] = _dedupe(six)
 
     # 2. Arabic: exceptions, shadda + harakat spellings, presentation forms.

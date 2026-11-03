@@ -457,6 +457,9 @@ LanguageSpec load_raw(const std::string& code, std::set<std::string>& loading) {
     if (!base.empty() && base != code) {
         LanguageSpec b = load_raw(base, loading);
         for (const auto& x : b.graphemes) if (!s.graphemes.count(x.first)) s.graphemes[x.first] = x.second;
+        // BASE_SCALAR (json_loader.py): a spec that does not state the field
+        // takes the resolved value of its graphemes base.
+        if (!raw.get_optional<bool>("constrain_onsets")) s.constrain_onsets = b.constrain_onsets;
         for (const auto& x : b.positional_graphemes)
             if (!s.positional_graphemes.count(x.first)) s.positional_graphemes[x.first] = x.second;
         const std::string positional_base = raw.get<std::string>("positional_graphemes_base", "");
