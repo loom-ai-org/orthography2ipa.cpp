@@ -17,6 +17,13 @@ int main() {
     const auto& spanish = get("es");
     assert(!portuguese.graphemes.empty());
     assert(!portuguese.family_path().empty());
+    // json_loader.py classification. brx names its parent only in
+    // `ancestors`. aao takes no family from its graphemes base ar-DZ.
+    // gem-x-ingvaeonic reaches West Germanic through a clade whose own
+    // parent is not a clade.
+    assert(get("brx").parent == "brx-x-proto-boro-garo" && get("brx").family == "Sino-Tibetan");
+    assert(get("aao").family == "Afro-Asiatic");
+    assert(get("gem-x-ingvaeonic").family == "Indo-European > Germanic > Northwest Germanic > West Germanic");
     assert(!get("ga").sources.empty());
     assert(get("ga").timespan.has_value());
 
