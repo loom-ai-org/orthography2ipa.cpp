@@ -298,6 +298,8 @@ private:
     std::vector<const rescorer::LatticeRescorer*> rescorers_;
 };
 
+class RescorerPlugin;
+
 class G2P {
 public:
     /// The stage gates mirror the reference constructor's keyword defaults:
@@ -406,6 +408,17 @@ private:
     // normalized once. Composed with the declared plugins' lattice rescorers in
     // front of the spec's allophone chain by `chain_rescorers()`.
     std::vector<const rescorer::LatticeRescorer*> user_rescorers_;
+    // g2p.py G2P.__init__ `declared_rescorers`: `plugin.rescorers(self.lang)`
+    // for each declared `rescore` plugin, caller override over the spec's
+    // list, resolved once at construction. The engine holds each plugin, so
+    // the rescorers it owns live as long as the engine, as in the reference,
+    // even when the registry replaces the plugin under the same name.
+    std::vector<std::pair<std::string, std::shared_ptr<const RescorerPlugin>>> declared_rescore_plugins_;
+    std::vector<const rescorer::LatticeRescorer*> declared_rescorers_;
+    /// g2p.py _StagePlugins.get: the plugins declared for *stage*, the caller's
+    /// override over the spec's list, resolved by name. Throws MissingPlugin
+    /// for a name that nothing provides.
+    std::vector<std::string> declared(const std::string& stage) const;
     /// g2p.py G2P._rescorers minus the allophone chain: what Tokenizer needs in
     /// front of the chain it compiles itself (user rescorers, then the
     /// declared `rescore` plugins' lattice rescorers for this language).
@@ -472,11 +485,12 @@ public:
     virtual int priority() const { return 50; }
     /// rescorer_plugin.py RescorerPlugin.rescorers: the LATTICE rescorers this
     /// plugin contributes for *lang*, in application order — the seam the
-    /// reference composes into `G2P._rescorers`. Called only for a code in
-    /// language_codes(); an empty result contributes nothing for that variety.
-    /// The plugin OWNS the returned objects; the engine keeps raw pointers for
-    /// the duration of the call chain, exactly as the reference holds the
-    /// sequence.
+    /// reference composes into `G2P._rescorers`. A G2P calls it once at
+    /// construction for each declared plugin, whatever its language_codes();
+    /// an empty result contributes nothing for that variety.
+    /// The plugin OWNS the returned objects; the engine keeps raw pointers to
+    /// them and holds the plugin itself for as long as it uses them, exactly
+    /// as the reference holds the sequence.
     virtual std::vector<const rescorer::LatticeRescorer*> lattice_rescorers(
             const std::string& /*lang*/) const { return {}; }
 };

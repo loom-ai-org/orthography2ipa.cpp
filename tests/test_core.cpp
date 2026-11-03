@@ -46,6 +46,40 @@ int main() {
         std::filesystem::remove_all(dir);
     }
 
+    {
+        // registry.py MissingPlugin: `{spec.code!r}`, the bare stage, `{name!r}`
+        // and `{sorted(available) or 'nothing'}`. No plugin is registered yet
+        // at this point. Each quoted name is Python 3.12's repr() of it.
+        const auto missing = [](const auto& call) {
+            try { call(); } catch (const MissingPlugin& e) { return std::string(e.what()); }
+            return std::string();
+        };
+        const auto message = [](const std::string& stage, const std::string& quoted, const std::string& installed) {
+            return "the 'pt-PT' spec names the " + stage + " plugin " + quoted + ", and it is not installed.\n\n"
+                   "Installed for this stage: " + installed + ".\n\nThis is fatal on purpose. The spec asked "
+                   "for this plugin because the built-in answer is not the answer it wants \xe2\x80\x94 so "
+                   "falling back would not be a graceful degradation, it would be a DIFFERENT TRANSCRIPTION, "
+                   "silently. Install it, or change the spec.";
+        };
+        const std::vector<std::pair<std::string, std::string>> names = {
+            {"nope", "'nope'"}, {"it's", "\"it's\""}, {"a'b\"c", "'a\\'b\"c'"}, {"x\ty", "'x\\ty'"},
+            {"a\\b", "'a\\\\b'"}, {"\xc3\xa9", "'\xc3\xa9'"}, {"\x7f", "'\\x7f'"}, {"\xc2\x85", "'\\x85'"},
+            {"\xe2\x80\x8b", "'\\u200b'"}, {"\xcd\xb8", "'\\u0378'"}, {"\xf3\xa0\x80\x81", "'\\U000e0001'"},
+            {"\xf0\x9f\x98\x80", "'\xf0\x9f\x98\x80'"}};
+        for (const auto& [name, quoted] : names)
+            assert(missing([&] { G2P("pt-PT", {{"rescore", {name}}}); }) == message("rescore", quoted, "nothing"));
+        struct Same : NormalizePlugin {
+            std::vector<std::string> language_codes() const override { return {"qaa-x-foreign"}; }
+            std::string normalize(const std::string& text, const std::string&) const override { return text; }
+        };
+        register_normalize_plugin("test-list-b", std::make_shared<Same>());
+        register_normalize_plugin("test-list-a", std::make_shared<Same>());
+        assert(missing([] { G2P("pt-PT", {{"normalize", {"nope"}}}).transcribe("casa"); }) ==
+               message("normalize", "'nope'", "['test-list-a', 'test-list-b']"));
+        // g2p.py takes an empty name, and never reads the syllabify stage.
+        assert(G2P("pt-PT", {{"syllabify", {""}}}).transcribe("tenho casa") == G2P("pt-PT").transcribe("tenho casa"));
+    }
+
     const auto& portuguese = get("pt");
     const auto& spanish = get("es");
     assert(!portuguese.graphemes.empty());
@@ -185,6 +219,82 @@ int main() {
             assert(undeclared.transcribe("tenho casa") == plain);
             assert(undeclared.transcribe("").empty());
         }
+    }
+    {
+        // g2p.py resolves a declared stage when it first runs it, with the
+        // caller's list over the spec's, and raises MissingPlugin for a name
+        // that nothing provides: rescore in G2P(), normalize on the first
+        // chunk, sandhi after the words. Any other stage key is never read.
+        const auto missing = [](const auto& call) {
+            try { call(); } catch (const MissingPlugin& e) { return std::string(e.what()); }
+            return std::string();
+        };
+        // The message is the reference's; the installed list depends on what
+        // this process registered before.
+        const std::string message = missing([] { G2P("pt-PT", {{"rescore", {"nope"}}}); });
+        assert(message.rfind("the 'pt-PT' spec names the rescore plugin 'nope', and it is not installed.\n\n"
+                             "Installed for this stage: ", 0) == 0);
+        const std::string tail = "it would be a DIFFERENT TRANSCRIPTION, silently. Install it, or change the spec.";
+        assert(message.size() > tail.size() && message.compare(message.size() - tail.size(), tail.size(), tail) == 0);
+        const G2P normalize("pt-PT", {{"normalize", {"nope"}}});
+        assert(!missing([&] { normalize.transcribe("tenho casa"); }).empty());
+        assert(!missing([&] { normalize.features("tenho casa"); }).empty());
+        assert(!missing([&] { normalize.sentence_lattice("tenho casa"); }).empty());
+        const G2P sandhi("pt-PT", {{"sandhi", {"nope"}}});
+        assert(sandhi.transcribe("").empty());
+        assert(!missing([&] { sandhi.transcribe("tenho casa"); }).empty());
+        assert(G2P("pt-PT", {{"foo", {"nope"}}}).transcribe("tenho casa") == G2P("pt-PT").transcribe("tenho casa"));
+
+        // g2p.py G2P.__init__ calls `plugin.rescorers(self.lang)` once for each
+        // declared rescore plugin, the caller's override included.
+        static int contributed = 0, consulted = 0;
+        struct Identity : rescorer::LatticeRescorer {
+            std::vector<Candidate> rescore(const rescorer::SegmentSlot& slot, const rescorer::RescoreContext&) const override {
+                ++consulted;
+                return slot.candidates;
+            }
+        };
+        struct Lattice : RescorerPlugin {
+            Identity identity;
+            // A code no spec resolves to: g2p.py does not ask, and the plugin
+            // stays registered for the rest of this process.
+            std::vector<std::string> language_codes() const override { return {"qaa-x-foreign"}; }
+            std::vector<IPAPath> rescore(const std::string&, const std::string&, const std::vector<IPAPath>& paths) const override { return paths; }
+            std::vector<const rescorer::LatticeRescorer*> lattice_rescorers(const std::string&) const override {
+                ++contributed;
+                return {&identity};
+            }
+        };
+        register_rescorer_plugin("test-lattice", std::make_shared<Lattice>());
+        const G2P lattice("pt-PT", {{"rescore", {"test-lattice"}}});
+        assert(contributed == 1);
+        assert(lattice.transcribe("tenho casa") == G2P("pt-PT").transcribe("tenho casa"));
+        assert(contributed == 1 && consulted > 0);
+
+        // G2P() holds the plugins it resolved. A plugin registered later under
+        // the same name does not reach a built engine, and the old one stays
+        // alive for it, as the reference keeps the object it resolved.
+        static int old_used = 0, new_used = 0;
+        struct Counting : rescorer::LatticeRescorer {
+            int* used;
+            explicit Counting(int* counter) : used(counter) {}
+            std::vector<Candidate> rescore(const rescorer::SegmentSlot& slot, const rescorer::RescoreContext&) const override {
+                ++*used;
+                return slot.candidates;
+            }
+        };
+        struct Life : RescorerPlugin {
+            Counting counting;
+            explicit Life(int* counter) : counting(counter) {}
+            std::vector<std::string> language_codes() const override { return {"qaa-x-foreign"}; }
+            std::vector<IPAPath> rescore(const std::string&, const std::string&, const std::vector<IPAPath>& paths) const override { return paths; }
+            std::vector<const rescorer::LatticeRescorer*> lattice_rescorers(const std::string&) const override { return {&counting}; }
+        };
+        register_rescorer_plugin("test-life", std::make_shared<Life>(&old_used));
+        const G2P life("pt-PT", {{"rescore", {"test-life"}}});
+        register_rescorer_plugin("test-life", std::make_shared<Life>(&new_used));
+        assert(life.transcribe("tenho casa") == G2P("pt-PT").transcribe("tenho casa"));
+        assert(old_used > 0 && new_used == 0);
     }
     // g2p.py ipa_lattice: one slot per grapheme, ranked candidates, spans in
     // CODE POINTS, and the top-of-slot concatenation is a valid reading.
