@@ -82,6 +82,16 @@ int main() {
     assert(close_to(pt_es.combined, 0.21661900286704905));
     assert(close_to(pt_es.inventory.feature_mean, 0.05333936375277406));
     assert(close_to(pt_es.grapheme.mean_ipa_distance, 0.2292352969556617));
+    // distance.py orthographic, positional and ancestry values from the reference.
+    // aa/sfw name a script outside SCRIPT_REGISTRY (0.5 term); ab/nmq name two in it.
+    assert(close_to(orthographic_distance(get("aa"), get("sfw")), 0.7));
+    assert(close_to(orthographic_distance(get("ab"), get("nmq")), 0.45));
+    // mwl has a grapheme with an empty positional map, which takes no part.
+    assert(close_to(positional_divergence(get("mwl"), get("fr-FR")), 0.9996640537513992));
+    // abi and mos share only a root clade; nrb and khh share only a family string.
+    assert(ancestry_similarity(get("abi"), get("mos")) == 0);
+    assert(ancestry_similarity(get("nrb"), get("khh")) == 0);
+    assert(close_to(ancestry_similarity(get("aae"), get("es-CO-x-valluno"), 10, true), 0.0006686902052946891));
     assert(spelling_divergence(portuguese, spanish).total_phonemes > 0);
     assert(full_distance(portuguese, spanish) >= 0);
     assert(pairwise_distances({portuguese, spanish}).size() == 2);
