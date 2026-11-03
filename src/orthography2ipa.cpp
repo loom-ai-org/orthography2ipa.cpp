@@ -11,6 +11,7 @@
 #include "unicode_util.hpp"
 #include "orthography2ipa/vowels.hpp"
 #include "orthography2ipa/feats.hpp"
+#include "orthography2ipa/script_distance.hpp"
 
 #include <boost/property_tree/json_parser.hpp>
 #include <boost/property_tree/ptree.hpp>
@@ -2667,11 +2668,63 @@ double allophone_overlap(const LanguageSpec& a, const LanguageSpec& b) {
     return static_cast<double>(n) / u.size();
 }
 PhonologicalDistance phonological_distance(const LanguageSpec& a, const LanguageSpec& b) { auto i = inventory_distance(a, b); auto g = grapheme_divergence(a, b); auto o = allophone_overlap(a, b); return {i, g, o, .6 * i.feature_mean + .4 * (1 - o)}; }
-std::map<std::string, double> ancestry_weights(const LanguageSpec& spec, int depth = 10, bool temporal_decay = false, double decay_halflife = 1000.0) {
-    std::map<std::string, double> result; std::vector<std::tuple<std::string, double, int>> queue;
-    if (!spec.ancestors.empty()) for (const auto& link : spec.ancestors) queue.emplace_back(link.code, link.weight, 1);
-    else if (!spec.parent.empty()) queue.emplace_back(spec.parent, 1.0, 1);
-    while (!queue.empty()) { auto [code, weight, level] = queue.back(); queue.pop_back(); if (level > depth || code.empty()) continue; try { const auto& current = get(code); if (current.clade && !current.parent.empty()) queue.emplace_back(current.parent, weight, level + 1); else { auto it = result.find(code); if (it == result.end() || weight > it->second) result[code] = weight; auto push = [&](const std::string& target, double edge) { double decay = 1; if (temporal_decay) try { const auto& ancestor = get(target); if (spec.timespan && ancestor.timespan) { const int end = ancestor.timespan->end_year.value_or(ancestor.timespan->start_year); const int gap = spec.timespan->start_year - end; if (gap > 0) decay = std::exp(-static_cast<double>(gap) / decay_halflife); } } catch (...) {} queue.emplace_back(target, weight * edge * decay, level + 1); }; for (const auto& link : current.ancestors) push(link.code, link.weight); if (current.ancestors.empty() && !current.parent.empty()) push(current.parent, 1.0); } } catch (...) {} }
+// distance.py _data_ancestors: the spec's ancestors (or its parent at weight
+// 1.0), each clade replaced by the nearest data-bearing spec above it and
+// dropped when there is none.
+std::vector<AncestorLink> data_ancestors(const LanguageSpec& spec) {
+    std::vector<AncestorLink> links = spec.ancestors;
+    if (links.empty() && !spec.parent.empty()) links.push_back({spec.parent, "parent", "", 1.0});
+    std::vector<AncestorLink> out;
+    for (auto link : links) {
+        std::string code = link.code;
+        std::set<std::string> seen;
+        while (!code.empty() && !seen.count(code)) {
+            seen.insert(code);
+            const LanguageSpec* candidate = nullptr;
+            try { candidate = &get(code); } catch (const std::exception&) { code.clear(); break; }
+            if (!candidate->clade) break;
+            code = candidate->parent;
+        }
+        if (code.empty()) continue;
+        link.code = code;
+        out.push_back(link);
+    }
+    return out;
+}
+// distance.py _trace_ancestry_weights and _trace_ancestry_weights_temporal:
+// a breadth-first walk from the spec that keeps the strongest path weight to
+// each data-bearing ancestor. With temporal decay, each step is scaled by
+// exp(-gap / halflife), the gap running from the ancestor's end to the start
+// of the nearest descendant on the path. The reference always traces to its
+// default depth of 10.
+std::map<std::string, double> trace_ancestry_weights(const LanguageSpec& spec, bool temporal_decay, double decay_halflife) {
+    constexpr int max_depth = 10;
+    struct Step { std::string code; double weight; int depth; const LanguageSpec* descendant; };
+    std::map<std::string, double> result;
+    std::vector<Step> queue{{spec.code, 1.0, 0, &spec}};
+    for (std::size_t next = 0; next < queue.size(); ++next) {
+        const Step step = queue[next];
+        if (step.depth > max_depth) continue;
+        const LanguageSpec* current = nullptr;
+        try { current = &get(step.code); } catch (const std::exception&) { continue; }
+        for (const auto& link : data_ancestors(*current)) {
+            double decay = 1.0;
+            const LanguageSpec* ancestor = nullptr;
+            if (temporal_decay) {
+                try { ancestor = &get(link.code); } catch (const std::exception&) {}
+                if (ancestor && ancestor->timespan && step.descendant->timespan) {
+                    const int end = ancestor->timespan->end_year.value_or(ancestor->timespan->start_year);
+                    const int gap = step.descendant->timespan->start_year - end;
+                    if (gap > 0) decay = std::exp(-gap / decay_halflife);
+                }
+            }
+            const double weight = step.weight * link.weight * decay;
+            const auto found = result.find(link.code);
+            if (found != result.end() && weight <= found->second) continue;
+            result[link.code] = weight;
+            queue.push_back({link.code, weight, step.depth + 1, ancestor ? ancestor : step.descendant});
+        }
+    }
     return result;
 }
 
@@ -2692,14 +2745,19 @@ double tone_distance(const LanguageSpec& a, const LanguageSpec& b) {
                    std::inserter(union_set, union_set.end()));
     return 1.0 - (double(shared.size()) / double(union_set.size()));
 }
-double ancestry_similarity(const LanguageSpec& a, const LanguageSpec& b, int max_depth, bool temporal_decay, double decay_halflife) {
+// distance.py ancestry_similarity. A direct ancestor returns its path weight
+// or the best shared-ancestor product, whichever is higher; otherwise the best
+// shared-ancestor product, capped at 1.0. The reference ignores max_depth.
+double ancestry_similarity(const LanguageSpec& a, const LanguageSpec& b, int, bool temporal_decay, double decay_halflife) {
     if (a.code == b.code) return 1;
-    const auto x = ancestry_weights(a, max_depth, temporal_decay, decay_halflife), y = ancestry_weights(b, max_depth, temporal_decay, decay_halflife); double best = 0;
-    if (auto it = x.find(b.code); it != x.end()) best = std::max(best, it->second);
-    if (auto it = y.find(a.code); it != y.end()) best = std::max(best, it->second);
-    for (const auto& [code, weight] : x) if (auto it = y.find(code); it != y.end()) best = std::max(best, weight * it->second);
-    if (best == 0 && !a.family.empty() && a.family == b.family) best = .4;
-    return std::min(1.0, best);
+    const auto x = trace_ancestry_weights(a, temporal_decay, decay_halflife);
+    const auto y = trace_ancestry_weights(b, temporal_decay, decay_halflife);
+    double shared = 0;
+    for (const auto& [code, weight] : x)
+        if (const auto found = y.find(code); found != y.end()) shared = std::max(shared, weight * found->second);
+    if (const auto found = y.find(a.code); found != y.end()) return std::max(found->second, shared);
+    if (const auto found = x.find(b.code); found != x.end()) return std::max(found->second, shared);
+    return std::min(shared, 1.0);
 }
 SpellingDivergence spelling_divergence(const LanguageSpec& a, const LanguageSpec& b) {
     std::map<std::string, std::set<std::string>> x, y;
@@ -2716,13 +2774,51 @@ std::optional<double> temporal_distance(const LanguageSpec& a, const LanguageSpe
     const int ea = a.timespan->end_year.value_or(reference_year), eb = b.timespan->end_year.value_or(reference_year);
     const int overlap = std::max(0, std::min(ea, eb) - std::max(a.timespan->start_year, b.timespan->start_year)); const int span = std::max(ea, eb) - std::min(a.timespan->start_year, b.timespan->start_year); return span <= 0 ? 0 : 1.0 - static_cast<double>(overlap) / span;
 }
+// distance.py positional_divergence. A grapheme with an empty positional map
+// takes no part, keys compare as written, and an empty candidate list reads
+// as "".
 double positional_divergence(const LanguageSpec& a, const LanguageSpec& b) {
-    std::set<std::string> keys; for (const auto& [g, _] : a.positional_graphemes) keys.insert(lower_ascii(g)); for (const auto& [g, _] : b.positional_graphemes) keys.insert(lower_ascii(g)); if (keys.empty()) return 0;
-    double total = 0; for (const auto& key : keys) { auto lookup = [&](const auto& map) { for (const auto& [g, positions] : map) if (lower_ascii(g) == key) return positions; return std::map<std::string, std::vector<std::string>>{}; }; const auto x = lookup(a.positional_graphemes), y = lookup(b.positional_graphemes); std::set<std::string> positions; for (const auto& [p, _] : x) positions.insert(p); for (const auto& [p, _] : y) positions.insert(p); if (x.empty() || y.empty()) total += 1; else for (const auto& p : positions) { auto ix = x.find(p), iy = y.find(p); if (ix == x.end() || iy == y.end() || ix->second.empty() || iy->second.empty()) total += 1.0 / positions.size(); else total += segment_distance(ix->second.front(), iy->second.front()) / positions.size(); } }
-    return std::min(1.0, total / keys.size());
+    auto mappings = [](const LanguageSpec& spec) {
+        std::map<std::string, std::map<std::string, std::string>> out;
+        for (const auto& [grapheme, positions] : spec.positional_graphemes) {
+            std::map<std::string, std::string> entry;
+            for (const auto& [position, candidates] : positions) entry[position] = candidates.empty() ? "" : candidates.front();
+            if (!entry.empty()) out[grapheme] = entry;
+        }
+        return out;
+    };
+    const auto x = mappings(a), y = mappings(b);
+    std::set<std::string> graphemes;
+    for (const auto& [grapheme, _] : x) graphemes.insert(grapheme);
+    for (const auto& [grapheme, _] : y) graphemes.insert(grapheme);
+    if (graphemes.empty()) return 0;
+    double total = 0;
+    for (const auto& grapheme : graphemes) {
+        const auto ix = x.find(grapheme), iy = y.find(grapheme);
+        if (ix == x.end() || iy == y.end()) { total += 1; continue; }
+        std::set<std::string> positions;
+        for (const auto& [position, _] : ix->second) positions.insert(position);
+        for (const auto& [position, _] : iy->second) positions.insert(position);
+        for (const auto& position : positions) {
+            const auto pa = ix->second.find(position), pb = iy->second.find(position);
+            if (pa == ix->second.end() || pb == iy->second.end()) total += 1.0 / positions.size();
+            else total += segment_distance(pa->second, pb->second) / positions.size();
+        }
+    }
+    return std::min(1.0, total / graphemes.size());
 }
 double phoneme_coverage(const LanguageSpec& native, const LanguageSpec& target) { const auto x = declared_phonemes(native), y = declared_phonemes(target); if (y.empty()) return 1; std::size_t shared = 0; for (const auto& p : y) shared += x.count(p); return static_cast<double>(shared) / y.size(); }
-double orthographic_distance(const LanguageSpec& a, const LanguageSpec& b) { const auto g = grapheme_divergence(a, b); if (a.script == b.script) return g.mean_ipa_distance; const double script = a.script_type == b.script_type ? .25 : .5; return .6 * script + .4 * g.mean_ipa_distance; }
+// distance.py orthographic_distance: the script distance by name, or 0.0 for
+// equal and 0.5 for different names outside SCRIPT_REGISTRY. A zero script
+// distance leaves the grapheme divergence alone.
+double orthographic_distance(const LanguageSpec& a, const LanguageSpec& b) {
+    const auto g = grapheme_divergence(a, b);
+    double script = 0;
+    try { script = script_distance::script_distance_by_name(a.script, b.script); }
+    catch (const std::out_of_range&) { script = a.script == b.script ? 0.0 : 0.5; }
+    if (script == 0.0) return g.mean_ipa_distance;
+    return .6 * script + .4 * g.mean_ipa_distance;
+}
 double full_distance(const LanguageSpec& a, const LanguageSpec& b, double w_phonological, double w_ancestry) { const auto p = phonological_distance(a, b); return w_phonological * p.combined + w_ancestry * (1.0 - ancestry_similarity(a, b)); }
 WeightedDistance weighted_full_distance(const LanguageSpec& a, const LanguageSpec& b, double wi, double wg, double wa, double wy, double wt, int year) {
     const auto i = inventory_distance(a, b); const auto g = grapheme_divergence(a, b); const double o = allophone_overlap(a, b), an = ancestry_similarity(a, b); const auto temporal = temporal_distance(a, b, year); const double effective = temporal ? wt : 0; const double total = wi + wg + wa + wy + effective;
