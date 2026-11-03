@@ -65,6 +65,9 @@ PINNED = {
            "ອາໂຫລ", "ອາໂຫຼ"],
 }
 
+# A quote mark and a backslash inside a word: every JSON surface escapes them.
+PINNED["it-IT"] = ['"casa"', "ca\\sa"]
+
 ABUGIDAS = ["hi", "bn", "ta", "te", "kn", "ml", "mr", "ne", "or", "as", "sa", "sid"]
 TONE_LANGS = ["th", "lo", "vi", "yo", "km", "my", "bo", "ko", "kix", "zh", "pa"]
 ARABIC = ["ar", "ar-IQ", "ar-LB"]
