@@ -289,6 +289,7 @@ private:
     bool coda_no_inherent_vowel_ = false;
     std::vector<std::pair<std::u32string, std::u32string>> consonant_nuclei_;  // lowered letter -> nucleus
     std::optional<std::u32string> inherent_vowel_final_;
+    std::set<std::u32string> codas_;
     std::shared_ptr<const std::set<std::string>> vowel_graphemes_;
 
     // Internal token used while tokenize() is building the stream: the

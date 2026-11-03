@@ -561,6 +561,7 @@ PhonetokTokenizer::PhonetokTokenizer(const LanguageSpec& spec, bool add_bos, boo
     for (const auto& [letter, nucleus] : spec.consonant_nuclei)
         consonant_nuclei_.emplace_back(uni::lower(u32(letter)), u32(nucleus));
     if (spec.inherent_vowel_final) inherent_vowel_final_ = u32(*spec.inherent_vowel_final);
+    for (const auto& coda : spec.codas) codas_.insert(u32(coda));
     vowel_graphemes_ =
         std::make_shared<const std::set<std::string>>(spec.vowel_graphemes.begin(),
                                                       spec.vowel_graphemes.end());
@@ -711,6 +712,12 @@ bool PhonetokTokenizer::marker_head_is_the_onset(const std::u32string& gkey,
                                                   std::size_t after) const {
     const auto* v_ipa = ipa_for(gkey);
     if (v_ipa == nullptr || v_ipa->empty() || !ends_in_a_vowel((*v_ipa)[0])) return false;
+    // A spec that declares its codas limits this to codas the language has:
+    // /l/ closes no Lao syllable, so ⟨ໂຫລ⟩ keeps its ho nam reading.
+    if (!codas_.empty()) {
+        const auto* tail_ipa = ipa_for(ckey.substr(1));
+        if (tail_ipa != nullptr && !tail_ipa->empty() && !codas_.count((*tail_ipa)[0])) return false;
+    }
     std::size_t pos = after + ckey.size();
     bool first = true;
     while (pos < text.size()) {

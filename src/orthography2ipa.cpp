@@ -338,6 +338,7 @@ LanguageSpec load_raw(const std::string& code, std::set<std::string>& loading) {
     if (auto value = raw.get_optional<std::string>("inherent_vowel_final"))
         s.inherent_vowel_final = *value;
     s.virama_final_vowel = raw.get<std::string>("virama_final_vowel", "");
+    s.codas = optional_list(raw, "codas");
     s.coda_no_inherent_vowel = raw.get<bool>("coda_no_inherent_vowel", false);
     if (auto nuclei = raw.get_child_optional("consonant_nuclei"))
         for (const auto& x : *nuclei) s.consonant_nuclei.emplace_back(x.first, x.second.data());
