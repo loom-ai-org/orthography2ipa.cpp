@@ -46,6 +46,40 @@ int main() {
         std::filesystem::remove_all(dir);
     }
 
+    {
+        // registry.py MissingPlugin: `{spec.code!r}`, the bare stage, `{name!r}`
+        // and `{sorted(available) or 'nothing'}`. No plugin is registered yet
+        // at this point. Each quoted name is Python 3.12's repr() of it.
+        const auto missing = [](const auto& call) {
+            try { call(); } catch (const MissingPlugin& e) { return std::string(e.what()); }
+            return std::string();
+        };
+        const auto message = [](const std::string& stage, const std::string& quoted, const std::string& installed) {
+            return "the 'pt-PT' spec names the " + stage + " plugin " + quoted + ", and it is not installed.\n\n"
+                   "Installed for this stage: " + installed + ".\n\nThis is fatal on purpose. The spec asked "
+                   "for this plugin because the built-in answer is not the answer it wants \xe2\x80\x94 so "
+                   "falling back would not be a graceful degradation, it would be a DIFFERENT TRANSCRIPTION, "
+                   "silently. Install it, or change the spec.";
+        };
+        const std::vector<std::pair<std::string, std::string>> names = {
+            {"nope", "'nope'"}, {"it's", "\"it's\""}, {"a'b\"c", "'a\\'b\"c'"}, {"x\ty", "'x\\ty'"},
+            {"a\\b", "'a\\\\b'"}, {"\xc3\xa9", "'\xc3\xa9'"}, {"\x7f", "'\\x7f'"}, {"\xc2\x85", "'\\x85'"},
+            {"\xe2\x80\x8b", "'\\u200b'"}, {"\xcd\xb8", "'\\u0378'"}, {"\xf3\xa0\x80\x81", "'\\U000e0001'"},
+            {"\xf0\x9f\x98\x80", "'\xf0\x9f\x98\x80'"}};
+        for (const auto& [name, quoted] : names)
+            assert(missing([&] { G2P("pt-PT", {{"rescore", {name}}}); }) == message("rescore", quoted, "nothing"));
+        struct Same : NormalizePlugin {
+            std::vector<std::string> language_codes() const override { return {"qaa-x-foreign"}; }
+            std::string normalize(const std::string& text, const std::string&) const override { return text; }
+        };
+        register_normalize_plugin("test-list-b", std::make_shared<Same>());
+        register_normalize_plugin("test-list-a", std::make_shared<Same>());
+        assert(missing([] { G2P("pt-PT", {{"normalize", {"nope"}}}).transcribe("casa"); }) ==
+               message("normalize", "'nope'", "['test-list-a', 'test-list-b']"));
+        // g2p.py takes an empty name, and never reads the syllabify stage.
+        assert(G2P("pt-PT", {{"syllabify", {""}}}).transcribe("tenho casa") == G2P("pt-PT").transcribe("tenho casa"));
+    }
+
     const auto& portuguese = get("pt");
     const auto& spanish = get("es");
     assert(!portuguese.graphemes.empty());

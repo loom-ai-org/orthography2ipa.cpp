@@ -1800,16 +1800,40 @@ MissingStressPlugin::MissingStressPlugin(const std::string& message)
     : std::runtime_error(message) {}
 
 namespace {
-// Python's repr() of a str, single-quoted — what the reference interpolates
-// into its MissingPlugin message.
+// Python's repr() of a str (unicodeobject.c unicode_repr) — what the
+// reference interpolates into its MissingPlugin message. The quote is ' unless
+// the text holds ' and no ", and a code point str.isprintable() rejects is
+// written as a \x, \u or \U escape.
 std::string py_repr(const std::string& text) {
-    std::string out = "'";
-    for (const char ch : text) {
-        if (ch == '\\') out += "\\\\";
-        else if (ch == '\'') out += "'";        // Python leaves a bare ' unescaped
-        else out += ch;
+    const std::u32string units = to_utf32(text);
+    const bool double_quote = units.find(U'\'') != std::u32string::npos && units.find(U'"') == std::u32string::npos;
+    const char32_t quote = double_quote ? U'"' : U'\'';
+    const auto hex = [](char32_t cp, int digits) {
+        static const char* const digit = "0123456789abcdef";
+        std::string out;
+        for (int shift = 4 * (digits - 1); shift >= 0; shift -= 4) out += digit[(cp >> shift) & 0xF];
+        return out;
+    };
+    std::string out(1, static_cast<char>(quote));
+    for (const char32_t cp : units) {
+        if (cp == quote || cp == U'\\') out += '\\' + to_utf8(std::u32string(1, cp));
+        else if (cp == U'\t') out += "\\t";
+        else if (cp == U'\n') out += "\\n";
+        else if (cp == U'\r') out += "\\r";
+        else if (cp < 0x20 || cp == 0x7F) out += "\\x" + hex(cp, 2);
+        else if (cp < 0x7F) out += static_cast<char>(cp);
+        else {
+            // Py_UNICODE_ISPRINTABLE: false for the Other and Separator
+            // categories, except the ASCII space handled above.
+            const std::string category = uni::category(cp);
+            const bool printable = category[0] != 'C' && category[0] != 'Z';
+            if (printable) out += to_utf8(std::u32string(1, cp));
+            else if (cp <= 0xFF) out += "\\x" + hex(cp, 2);
+            else if (cp <= 0xFFFF) out += "\\u" + hex(cp, 4);
+            else out += "\\U" + hex(cp, 8);
+        }
     }
-    return out + "'";
+    return out + static_cast<char>(quote);
 }
 
 } // namespace
