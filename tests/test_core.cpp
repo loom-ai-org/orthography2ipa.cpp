@@ -24,6 +24,19 @@ int main() {
     assert(get("brx").parent == "brx-x-proto-boro-garo" && get("brx").family == "Sino-Tibetan");
     assert(get("aao").family == "Afro-Asiatic");
     assert(get("gem-x-ingvaeonic").family == "Indo-European > Germanic > Northwest Germanic > West Germanic");
+    {
+        // registry.py available_families groups by the loaded family, so brx
+        // and kha, which name their parent only in `ancestors`, are classified.
+        const auto families = available_families();
+        auto lists = [&](const std::string& family, const std::string& code) {
+            const auto found = families.find(family);
+            if (found == families.end()) return false;
+            for (const auto& listed : found->second) if (listed == code) return true;
+            return false;
+        };
+        assert(lists("Sino-Tibetan", "brx"));
+        assert(lists("Austroasiatic", "kha"));
+    }
     assert(!get("ga").sources.empty());
     assert(get("ga").timespan.has_value());
 
