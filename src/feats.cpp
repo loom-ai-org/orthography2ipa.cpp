@@ -240,17 +240,38 @@ bool is_known_phone(const std::string& phones) {
 // ---------------------------------------------------------------------------
 #include "orthography2ipa/lm.hpp"
 
+#include <cmath>
+
 namespace orthography2ipa::feats {
 namespace {
 
-/// feats.py:452-453 — `sum(feature_weights[i] for i in <the index set>)`.
-/// Ascending index order, so the running float total matches Python's bit for
-/// bit; the sums are memoised like the module-level constants are.
+/// Python's sum() of floats (bltinmodule.c builtin_sum_impl), which since
+/// Python 3.12 adds with Neumaier compensation. A plain running total differs
+/// from it in the last bit for many of the distance sums below.
+class PythonFloatSum {
+public:
+    void add(double x) {
+        const double t = sum_ + x;
+        compensation_ += std::fabs(sum_) >= std::fabs(x) ? (sum_ - t) + x : (x - t) + sum_;
+        sum_ = t;
+    }
+    double value() const {
+        return compensation_ != 0.0 && std::isfinite(compensation_) ? sum_ + compensation_ : sum_;
+    }
+
+private:
+    double sum_ = 0.0;
+    double compensation_ = 0.0;
+};
+
+/// feats.py:452-453 — `sum(feature_weights[i] for i in <the index set>)`, in
+/// ascending index order; the sums are memoised like the module-level
+/// constants are.
 double sum_weights(const std::vector<std::size_t>& indices,
                    const std::vector<double>& weights) {
-    double total = 0.0;
-    for (const std::size_t idx : indices) total += weights[idx];
-    return total;
+    PythonFloatSum total;
+    for (const std::size_t idx : indices) total.add(weights[idx]);
+    return total.value();
 }
 
 } // namespace
@@ -357,10 +378,10 @@ double phonetic_distance(const std::string& phone_a, const std::string& phone_b)
     const std::vector<TriState> vec_b = vectorize_phones(phone_b);
     if (vec_a.empty() || vec_b.empty()) return 3.0;  // the caught ValueError
 
-    double diff_sum = 0.0;
+    PythonFloatSum diff_sum;
     for (const std::size_t idx : *feature_indices)
-        if (vec_a[idx] != vec_b[idx]) diff_sum += weights[idx];
-    return (diff_sum / total_weights) * factor;
+        if (vec_a[idx] != vec_b[idx]) diff_sum.add(weights[idx]);
+    return (diff_sum.value() / total_weights) * factor;
 }
 
 std::map<std::string, std::vector<double>> phoneme_embeddings(const LanguageSpec& spec) {

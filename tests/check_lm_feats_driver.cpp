@@ -1,13 +1,9 @@
 // Standalone validation program for the lm.py / feats.py distance-and-LM port
 // (src/lm.cpp and the appended half of src/feats.cpp). It reads the SAME
-// battery and case files the reference dump (tests/_scratch/_lm_feats_ref.py)
-// wrote, computes the ported functions over them, and writes parallel files
-// for tests/_scratch/_lm_feats_compare.py to diff.
-//
-// Build (see build/notes/worker_lm_feats.md for the full command):
-//   g++ -std=c++17 -Iinclude -Isrc with the two O2I data-dir defines, then
-//   src/lm.cpp src/feats.cpp this file, and the prebuilt library snapshot at
-//   tests/_scratch/agentlib/libortho2ipa_snapshot.a plus -licuuc -ldl.
+// battery and case files the reference dump (tests/lm_feats_ref.py) wrote to
+// tests/_scratch/, computes the ported functions over them, and writes
+// parallel files for tests/lm_feats_compare.py to compare. tests/lm_parity.py
+// runs the three steps; CMake builds this file as orthography2ipa-check-lm_feats.
 #include "orthography2ipa/feats.hpp"
 #include "orthography2ipa/lm.hpp"
 #include "orthography2ipa/orthography2ipa.hpp"
