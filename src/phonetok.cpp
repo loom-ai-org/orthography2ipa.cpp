@@ -377,6 +377,15 @@ bool is_pause_punctuation(const std::string& character) {
     return units.size() == 1 && pause_codepoints().count(units[0]) != 0;
 }
 
+std::string strip_edge_punctuation(const std::string& word) {
+    const auto clinging = [](char32_t cp) { return cp != U'\'' && cp != U'\u2019' && is_punct_class(cp); };
+    const std::u32string units = uni::to_utf32(word);
+    std::size_t begin = 0, end = units.size();
+    while (begin < end && clinging(units[begin])) ++begin;
+    while (end > begin && clinging(units[end - 1])) --end;
+    return uni::to_utf8(units.substr(begin, end - begin));
+}
+
 std::string lower_str(const std::string& text, const std::string& lang) {
     const std::u32string units = uni::to_utf32(text);
     if (!lang.empty() && is_turkish(lang)) {

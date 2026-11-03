@@ -44,6 +44,8 @@ PINNED = {
     "pt-AO": ["boa-nova"],
     "pt-MZ": ["guarda-chuva"],
     "es-ES": ["seguro"],
+    "en-US": ["i'll.", "(i'm)"],
+    "af": ["'n."],
     "ru": ["молоко"],
     "th": ["กรวด", "ขวด"],
     "fr-FR": ["jeune", "agneau", "les", "amis"],
