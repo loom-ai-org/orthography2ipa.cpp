@@ -1774,9 +1774,10 @@ G2P::G2P(std::string language, std::map<std::string, std::vector<std::string>> p
     // `self.plugins = {**(self.spec.plugins or {}), **_as_names(plugins or {})}`
     // takes any stage key; only the stages g2p.py reads are ever resolved.
     // The rescore stage resolves here, so a missing name fails construction.
-    for (const auto& name : declared("rescore"))
-        for (const auto* r : rescorer_plugins.at(name)->lattice_rescorers(language_))
-            declared_rescorers_.push_back(r);
+    for (const auto& name : declared("rescore")) {
+        const auto& plugin = declared_rescore_plugins_.emplace_back(name, rescorer_plugins.at(name)).second;
+        for (const auto* r : plugin->lattice_rescorers(language_)) declared_rescorers_.push_back(r);
+    }
     // g2p.py G2P.__init__'s engine-side derivations, in the reference's order.
     silent_marks_ = silent_marks_of(*spec_);
     // `self._sandhi = SandhiEngine(self.spec.sandhi_rules) if
@@ -2318,25 +2319,18 @@ std::vector<std::string> G2P::word_candidates(const std::string& word, std::size
     return out;
 }
 std::vector<IPAPath> G2P::apply_rescorer_plugins(const std::string& word, std::vector<IPAPath> paths) const {
-auto ordered_rescorers = plugin_names(*spec_, "rescore");
-    {
-        auto override_names = plugin_overrides_.find("rescore");
-        if (override_names != plugin_overrides_.end()) ordered_rescorers = override_names->second;
-    }
-    std::sort(ordered_rescorers.begin(), ordered_rescorers.end(), [&](const auto& a, const auto& b) {
-        const auto x = rescorer_plugins.find(a), y = rescorer_plugins.find(b);
-        return x != rescorer_plugins.end() && y != rescorer_plugins.end() && x->second->priority() > y->second->priority();
+    // The plugins G2P() resolved and holds, highest priority first.
+    auto ordered = declared_rescore_plugins_;
+    std::stable_sort(ordered.begin(), ordered.end(), [](const auto& a, const auto& b) {
+        return a.second->priority() > b.second->priority();
     });
-    for (const auto& name : ordered_rescorers) {
-        auto p = rescorer_plugins.find(name);
-        if (p == rescorer_plugins.end()) throw std::runtime_error("missing rescore plugin: " + name);
-        const auto rescored = p->second->rescore(word, language_, paths);
-        if (!same_paths(rescored, p->second->rescore(word, language_, paths)))
+    for (const auto& [name, plugin] : ordered) {
+        const auto rescored = plugin->rescore(word, language_, paths);
+        if (!same_paths(rescored, plugin->rescore(word, language_, paths)))
             throw std::runtime_error("rescore plugin returned non-deterministic output: " + name);
         validate_rescorer_output(rescored, *spec_, name);
         paths = rescored;
     }
-    
     return paths;
 }
 

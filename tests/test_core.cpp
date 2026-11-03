@@ -230,6 +230,31 @@ int main() {
         assert(contributed == 1);
         assert(lattice.transcribe("tenho casa") == G2P("pt-PT").transcribe("tenho casa"));
         assert(contributed == 1 && consulted > 0);
+
+        // G2P() holds the plugins it resolved. A plugin registered later under
+        // the same name does not reach a built engine, and the old one stays
+        // alive for it, as the reference keeps the object it resolved.
+        static int old_used = 0, new_used = 0;
+        struct Counting : rescorer::LatticeRescorer {
+            int* used;
+            explicit Counting(int* counter) : used(counter) {}
+            std::vector<Candidate> rescore(const rescorer::SegmentSlot& slot, const rescorer::RescoreContext&) const override {
+                ++*used;
+                return slot.candidates;
+            }
+        };
+        struct Life : RescorerPlugin {
+            Counting counting;
+            explicit Life(int* counter) : counting(counter) {}
+            std::vector<std::string> language_codes() const override { return {"qaa-x-foreign"}; }
+            std::vector<IPAPath> rescore(const std::string&, const std::string&, const std::vector<IPAPath>& paths) const override { return paths; }
+            std::vector<const rescorer::LatticeRescorer*> lattice_rescorers(const std::string&) const override { return {&counting}; }
+        };
+        register_rescorer_plugin("test-life", std::make_shared<Life>(&old_used));
+        const G2P life("pt-PT", {{"rescore", {"test-life"}}});
+        register_rescorer_plugin("test-life", std::make_shared<Life>(&new_used));
+        assert(life.transcribe("tenho casa") == G2P("pt-PT").transcribe("tenho casa"));
+        assert(old_used > 0 && new_used == 0);
     }
     // g2p.py ipa_lattice: one slot per grapheme, ranked candidates, spans in
     // CODE POINTS, and the top-of-slot concatenation is a valid reading.
