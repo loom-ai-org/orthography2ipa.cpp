@@ -555,15 +555,22 @@ std::vector<std::string> get_declared_plugins(const std::string& stage,
 /// registered for the resolved code.
 std::vector<const rescorer::LatticeRescorer*> get_rescorers(const std::string& code);
 
-/// Threads: the library keeps process-wide state and has no lock for it. That
-/// state is the plugin registry, the spec cache, the lexicon registry and the
-/// data directory. The register_*_plugin functions, discover_plugins,
-/// set_data_directory, register_lexicon, set_lexicon_directory and
-/// clear_lexicons write it. Do not call one of them while another thread
-/// calls into the library. The G2P constructor and get() fill the spec cache
-/// on first use, so do not build two engines at the same time either. A
-/// program that uses the library from more than one thread puts these calls
-/// behind a mutex of its own.
+/// Threads: the library keeps process-wide state with no lock. That state is
+/// the plugin registry, the spec cache, the lexicon registry and its cache,
+/// and the data directory. Many free functions read or write it, for example
+/// get, resolve, validate, who_answers, get_lexicon, the free transcribe and
+/// every register_* and set_* function, and the G2P constructor fills the
+/// spec cache. This pattern is safe from more than one thread:
+///   1. On one thread, register every plugin and lexicon, build every G2P,
+///      and call transcribe once on each G2P. That call loads the lexicon of
+///      the engine's language into the cache.
+///   2. Then several threads can call transcribe and transcribe_detailed on
+///      those G2P objects at the same time. This does not hold for a G2P
+///      built with a dialect profile: the profile's patterns compile into a
+///      shared cache on first use.
+/// While step 2 runs, no thread calls a free function of this library or
+/// builds a G2P. A program that needs other calls from more than one thread
+/// puts its library calls behind a mutex of its own.
 void register_normalize_plugin(const std::string& name, std::shared_ptr<NormalizePlugin> plugin);
 void register_syllabifier_plugin(const std::string& name, std::shared_ptr<SyllabifierPlugin> plugin);
 void register_stress_plugin(const std::string& name, std::shared_ptr<StressPlugin> plugin);
