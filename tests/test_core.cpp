@@ -4,6 +4,8 @@
 #include "beam.hpp"
 
 #include <cassert>
+#include <cstdlib>
+#include <filesystem>
 #include <fstream>
 #include <stdexcept>
 
@@ -208,6 +210,22 @@ int main() {
             assert(get_syllabifier(code) == plugin.get());
         assert(get_syllabifier("pt-PT-x-lisbon") != plugin.get());
         assert(stress::syllables_for("ponte", "por") == std::vector<std::string>{"ponte"});
+    }
+    {
+        // A clade key is the key whatever its spacing or escapes: Python json
+        // and read_json both read "cl\u0061de" as clade. Last block: it moves
+        // the data directory.
+        std::string pattern = (std::filesystem::temp_directory_path() / "orthography2ipa-cpp-XXXXXX").string();
+        const char* made = mkdtemp(pattern.data());
+        assert(made != nullptr);
+        const std::string dir = made;
+        std::ofstream(dir + "/zz-plain.json") << R"({"code": "zz-plain", "name": "Plain"})";
+        std::ofstream(dir + "/zz-spaced.json") << R"({"code": "zz-spaced", "name": "Spaced", "clade"  :  true})";
+        std::ofstream(dir + "/zz-escaped.json") << R"({"code": "zz-escaped", "name": "Escaped", "cl\u0061de": true})";
+        set_data_directory(dir);
+        assert(available_codes() == std::vector<std::string>{"zz-plain"});
+        assert(available_codes(true).size() == 3);
+        std::filesystem::remove_all(dir);
     }
     return 0;
 }

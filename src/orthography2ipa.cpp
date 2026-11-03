@@ -1580,12 +1580,13 @@ std::vector<std::string> available_codes(bool include_clades) {
         // registry.py available_codes: a classification-only clade node
         // (`"clade": true`, whatever its code) is not a language. A spec
         // that does not load stays listed, as in the reference. Only a file
-        // that holds the text "clade" is parsed, so the listing stays fast.
+        // that holds the text "clade", or a \u escape that could spell that
+        // key, is parsed, so the listing stays fast.
         std::ifstream input(e.path(), std::ios::binary);
         std::string text(static_cast<std::size_t>(e.file_size()), '\0');
         input.read(text.data(), static_cast<std::streamsize>(text.size()));
         bool clade = false;
-        if (text.find("\"clade\"") != std::string::npos) try {
+        if (text.find("\"clade\"") != std::string::npos || text.find("\\u") != std::string::npos) try {
             std::istringstream json(text); ptree raw; boost::property_tree::read_json(json, raw);
             clade = raw.get<bool>("clade", false);
         } catch (const std::exception&) {}
