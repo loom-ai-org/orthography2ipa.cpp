@@ -38,7 +38,11 @@ SIX = ["pt-PT", "hi", "lo", "ru", "fr-FR", "es-ES"]
 # the module docstring) have no word_exceptions at all, so these lists ARE the
 # battery for them; they are the cases the audit confirmed by hand.
 PINNED = {
-    "pt-PT": ["chuva", "as", "aves", "os", "dois", "irmãos", "estás", "ver"],
+    "pt-PT": ["chuva", "as", "aves", "os", "dois", "irmãos", "estás", "ver",
+              "guarda-chuva", "chamo-me"],
+    "pt-BR": ["guarda-chuva", "boa-nova"],
+    "pt-AO": ["boa-nova"],
+    "pt-MZ": ["guarda-chuva"],
     "es-ES": ["seguro"],
     "ru": ["молоко"],
     "fr-FR": ["jeune", "agneau", "les", "amis"],
@@ -150,6 +154,8 @@ def build():
         if spec is not None:
             six += [[lang, w] for w in _exceptions(spec)]
         six += [[lang, w] for w in PINNED.get(lang, [])]
+    # Pinned rows for specs outside the six.
+    six += [[lang, w] for lang in PINNED if lang not in SIX for w in PINNED[lang]]
     cats["six"] = _dedupe(six)
 
     # 2. Arabic: exceptions, shadda + harakat spellings, presentation forms.
