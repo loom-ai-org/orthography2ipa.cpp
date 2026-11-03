@@ -19,6 +19,10 @@ int main() {
     assert(!portuguese.family_path().empty());
     assert(!get("ga").sources.empty());
     assert(get("ga").timespan.has_value());
+    // types.py __post_init__: aae declares no allophones, so each of its 35
+    // phonemes is its own allophone.
+    assert(get("aae").allophones.size() == 35);
+    assert(get("aae").allophones.at("\xc3\xb0") == std::vector<std::string>{"\xc3\xb0"});
 
     Tokenizer tokenizer(portuguese);
     std::vector<std::string> unmapped;

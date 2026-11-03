@@ -545,6 +545,12 @@ LanguageSpec load_raw(const std::string& code, std::set<std::string>& loading) {
     // positional_graphemes: an empty entry is a MEANINGFUL shadow (it
     // blocks inheriting the base's refinements for that grapheme), so it
     // stays.
+    // types.py __post_init__: a spec with graphemes and no allophones gets
+    // the identity map, each phoneme a grapheme emits realised as itself.
+    if (s.allophones.empty())
+        for (const auto& [grapheme, ipa] : s.graphemes)
+            for (const auto& phoneme : ipa)
+                if (!phoneme.empty()) s.allophones.emplace(phoneme, std::vector<std::string>{phoneme});
     loading.erase(code);
     cache[code] = s;
     return s;
