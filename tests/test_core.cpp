@@ -216,7 +216,9 @@ int main() {
         };
         struct Lattice : RescorerPlugin {
             Identity identity;
-            std::vector<std::string> language_codes() const override { return {"pt-PT"}; }
+            // A code no spec resolves to: g2p.py does not ask, and the plugin
+            // stays registered for the rest of this process.
+            std::vector<std::string> language_codes() const override { return {"qaa-x-foreign"}; }
             std::vector<IPAPath> rescore(const std::string&, const std::string&, const std::vector<IPAPath>& paths) const override { return paths; }
             std::vector<const rescorer::LatticeRescorer*> lattice_rescorers(const std::string&) const override {
                 ++contributed;
