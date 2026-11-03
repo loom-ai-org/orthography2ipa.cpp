@@ -79,11 +79,18 @@ int main() {
     assert(full_distance(portuguese, spanish) >= 0);
     assert(pairwise_distances({portuguese, spanish}).size() == 2);
 
-    const std::string path = "/tmp/orthography2ipa-cpp-test.tsv";
-    { std::ofstream output(path); output << "casa\tkaza\n"; }
-    register_lexicon("pt", path);
-    assert(get_lexicon("pt").at("casa") == "kaza");
-    clear_lexicons();
+    {
+        std::string pattern = (std::filesystem::temp_directory_path() / "orthography2ipa-cpp-XXXXXX").string();
+        const char* made = mkdtemp(pattern.data());
+        assert(made != nullptr);
+        const std::string dir = made;
+        const std::string path = dir + "/pt.tsv";
+        { std::ofstream output(path); output << "casa\tkaza\n"; }
+        register_lexicon("pt", path);
+        assert(get_lexicon("pt").at("casa") == "kaza");
+        clear_lexicons();
+        std::filesystem::remove_all(dir);
+    }
 
     // A lexicon-dir file belongs to the spec its name resolves to, so en.tsv
     // serves en-GB, the spec that en resolves to.
