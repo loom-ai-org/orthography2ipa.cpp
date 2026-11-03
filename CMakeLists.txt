@@ -123,6 +123,16 @@ if(BUILD_TESTING)
     endforeach()
     configure_file(tests/install_check.cmake.in ${CMAKE_CURRENT_BINARY_DIR}/install_check.cmake @ONLY)
     add_test(NAME orthography2ipa-install COMMAND ${CMAKE_COMMAND} -P ${CMAKE_CURRENT_BINARY_DIR}/install_check.cmake)
+    # `list --family` follows cli.py _cmd_list: it matches the whole path or
+    # any one step without regard to case, and an unknown family exits 1.
+    add_test(NAME orthography2ipa-cli-list-family COMMAND orthography2ipa-cli list --family romance)
+    set_tests_properties(orthography2ipa-cli-list-family PROPERTIES
+        PASS_REGULAR_EXPRESSION "\nIndo-European > Italic > Romance > Ibero-Romance: an, an-x-ansotano, ")
+    add_test(NAME orthography2ipa-cli-list-family-unknown COMMAND orthography2ipa-cli list --family Ger)
+    set_tests_properties(orthography2ipa-cli-list-family-unknown PROPERTIES WILL_FAIL TRUE)
+    add_test(NAME orthography2ipa-cli-list-family-unknown-message COMMAND orthography2ipa-cli list --family Ger)
+    set_tests_properties(orthography2ipa-cli-list-family-unknown-message PROPERTIES
+        PASS_REGULAR_EXPRESSION "^Unknown family: Ger\n$")
     find_package(Python3 COMPONENTS Interpreter QUIET)
     if(Python3_Interpreter_FOUND)
         # ALL of the parity harnesses compare against the reference Python

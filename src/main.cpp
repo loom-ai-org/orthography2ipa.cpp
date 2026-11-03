@@ -10,6 +10,8 @@
 #include <iostream>
 #include <sstream>
 
+#include "unicode_util.hpp"
+
 using namespace orthography2ipa;
 
 static void usage() {
@@ -35,6 +37,28 @@ static std::string json(const std::string& value) {
         }
     }
     return out.str() + '"';
+}
+// Python str.strip().lower(): str.isspace() code points off both ends, then
+// the full Unicode lowercase.
+static std::string strip_lower(const std::string& text) {
+    const auto is_space = [](char32_t c) {
+        return (c >= 0x09 && c <= 0x0D) || (c >= 0x1C && c <= 0x20) || c == 0x85 || c == 0xA0 || c == 0x1680
+            || (c >= 0x2000 && c <= 0x200A) || c == 0x2028 || c == 0x2029 || c == 0x202F || c == 0x205F || c == 0x3000;
+    };
+    const std::u32string value = uni::to_utf32(text);
+    const auto first = std::find_if_not(value.begin(), value.end(), is_space);
+    const auto last = std::find_if_not(value.rbegin(), value.rend(), is_space).base();
+    return first < last ? uni::to_utf8(uni::lower(std::u32string(first, last))) : std::string();
+}
+// cli.py _cmd_list: a family matches on its whole path or on any one step of it.
+static bool family_matches(const std::string& family, const std::string& key) {
+    if (uni::to_utf8(uni::lower(uni::to_utf32(family))) == key) return true;
+    for (std::size_t start = 0;;) {
+        const std::size_t end = family.find('>', start);
+        if (strip_lower(family.substr(start, end - start)) == key) return true;
+        if (end == std::string::npos) return false;
+        start = end + 1;
+    }
 }
 static void strings_json(const std::vector<std::string>& values) {
     std::cout << '['; for (std::size_t i = 0; i < values.size(); ++i) { if (i) std::cout << ','; std::cout << json(values[i]); } std::cout << ']';
@@ -231,10 +255,17 @@ int main(int argc, char** argv) {
         if (command == "list") {
             bool families = false; std::string family_filter;
             while (i < argc) { const std::string option = argv[i++]; if (option == "--json") json_output = true; else if (option == "--families") families = true; else if (option == "--family" && i < argc) family_filter = argv[i++]; else throw std::invalid_argument("unknown list option: " + option); }
-            if (families) {
-                const auto families_map = available_families();
-                if (json_output) { std::cout << '{'; bool first = true; for (const auto& [family, codes] : families_map) { if (!family_filter.empty() && family.find(family_filter) == std::string::npos) continue; if (!first) std::cout << ','; first = false; std::cout << json(family) << ':'; strings_json(codes); } std::cout << "}\n"; }
-                else for (const auto& [family, codes] : families_map) if (family_filter.empty() || family.find(family_filter) != std::string::npos) { std::cout << family << ":"; for (const auto& code : codes) std::cout << " " << code; std::cout << "\n"; }
+            const bool filtered = !family_filter.empty();
+            if (families || filtered) {
+                auto families_map = available_families();
+                if (filtered) {
+                    const std::string key = strip_lower(family_filter);
+                    for (auto it = families_map.begin(); it != families_map.end();) it = family_matches(it->first, key) ? std::next(it) : families_map.erase(it);
+                    if (families_map.empty()) { std::cerr << "Unknown family: " << family_filter << "\n"; return 1; }
+                }
+                for (auto& [family, codes] : families_map) std::sort(codes.begin(), codes.end());
+                if (json_output) { std::cout << '{'; bool first = true; for (const auto& [family, codes] : families_map) { if (!first) std::cout << ','; first = false; std::cout << json(family) << ':'; strings_json(codes); } std::cout << "}\n"; }
+                else for (const auto& [family, codes] : families_map) { std::cout << family << ": "; for (std::size_t c = 0; c < codes.size(); ++c) std::cout << (c ? ", " : "") << codes[c]; std::cout << "\n"; }
             } else { auto codes = available_codes(); if (json_output) { strings_json(codes); std::cout << '\n'; } else for (const auto& code : codes) std::cout << code << "\n"; }
             return 0;
         }
