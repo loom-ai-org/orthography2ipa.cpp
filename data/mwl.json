@@ -27,7 +27,7 @@
     }
   ],
   "quality": "research",
-  "notes": "Mirandese (mirandés), spoken in the Miranda do Douro municipality, northeastern Portugal. Classified as Asturleonese. Recognised as a regional/minority language in Portugal since 1999. Retains archaic Asturleonese features: diphthongisation of Latin short /e/ and /o/ (written ⟨iê/ie⟩, ⟨uô/uo⟩), palatal lateral /ʎ/ preserved (written ⟨lh⟩ in all positions; word-initial ⟨l⟩ before vowel = /ʎ/ in traditional lexicon per Convenção § L). Heavy Portuguese adstrate via official education and administration. Mirandese preserves the medieval four-way+ sibilant contrast that Portuguese lost, the hallmark of the language: (1) voiceless apico-alveolar /s̺/ ⟨s, ss⟩ and its voiced intervocalic counterpart /z̺/ ⟨-s-⟩; (2) voiceless (pre)dorso-dental /s/ ⟨c (before e/i), ç⟩ and voiced /z/ ⟨z⟩; (3) postalveolar /ʃ/ ⟨x⟩ and /ʒ/ ⟨j, g (before e/i)⟩; (4) the affricate /tʃ/ ⟨ch⟩ (still an affricate, unlike modern European Portuguese). NOTATION CONVENTION (matches the TigreGotico/mirandese_g2p expert gold): the apical/dorsal CONTRAST is written by marking only the apical series with the ̺ diacritic (⟨s⟩ = /s̺/, /z̺/) and leaving the dorso-dental series unmarked (⟨c, ç, z⟩ = plain /s/, /z/); this is IPA-standard, keeps the phonemic contrast explicit, and avoids the over-narrow laminal ̻ diacritic the gold does not use. ⟨ç⟩ is a fricative, not an affricate, and occurs word-finally (rapaç, lhuç) where Portuguese writes -z. ⟨j⟩ is /ʒ/ (western Iberian, never the Asturian palatal ʝ) — ⟨y⟩ is the glide /j/. INITIAL-L PALATALISATION (Leonese): word-initial ⟨l⟩ before a vowel = /ʎ/ (luç → [ˈʎus], Convenção § L; bare ⟨l⟩ /l/ survives only in loanwords, proper nouns and the article — a documented residual limit); ⟨lh⟩ = /ʎ/ and ⟨nh⟩ = /ɲ/. The trigraphs ⟨anh, enh, inh, onh, unh⟩ are given explicitly (oral vowel + /ɲ/, e.g. danho → [ˈdaɲu]) so the greedy nasal-vowel digraph does not swallow the /ɲ/ of a following ⟨nh⟩. Nasal digraphs ⟨an, en, in, on, un⟩ realise Portuguese-adstrate nasal vowels /ɐ̃ ẽ ĩ õ ũ/ before a consonant or at word boundary (brando → [ˈbɾɐ̃du]); before a vowel they are oral vowel + /n/. ALLOPHONY (post-lexical, allophone_rules): coda /n/ assimilates in place to a following labial ([m]) or velar ([ŋ]). Ibero-Romance intervocalic voiced-stop spirantisation (⟨b d g⟩ → [β ð ɣ]) is a REAL native process — voiced stops lenite to [β ð ɣ] everywhere except after a pause or a nasal (Mateus & d'Andrade 2000:11; Ferreira & Raposo 1999; mwl Wikipedia phonology, \"voiced stops /b d ɡ/ MAY be lenited as fricatives [β ð ɣ]\"). It is applied PER PHONEME on the basis of the expert-human TigreGotico/mirandese_g2p gold measured at true oral-intervocalic positions (post-nasal excluded): /b/ is spirant-dominant (β:9/b:5), so MWL_SPIRANT_B rewrites intervocalic /b/→[β] (a net win on the human gold, PER 0.1901→0.1851). /ɡ/ is already spirantised to [ɣ] intervocalically at the positional_graphemes layer (⟨g⟩ intervocalic → [ɣ]), so no allophone rule is needed — adding one only misfires after a diphthong glide (eigual → gold stop [ɐjˈɡwal]). /d/, however, remains STOP-dominant intervocalically in the gold (d:13/ð:7) — the documented Asturleonese conservatism/occlusion of /d/, and the reason the Wikipedia wording is hedged (\"may be\") — so /d/ keeps its positional default [d] and /d/→[ð] is DELIBERATELY NOT applied as a rewrite (a blanket /d/ rule regresses this expert gold); [ð] stays declared in the `allophones` inventory for the lattice / downstream mwl_phonemizer where lexical conditioning is available. Word-onset and post-nasal /b d ɡ/ keep the stop. Pre-consonantal nasal digraphs ⟨an en in on un⟩ (and ⟨am…⟩) before ANY stop — voiceless or voiced ⟨mb nd ng nt…⟩ — nasalise the preceding vowel and the nasal is absorbed, with the following stop retained (brando→[ˈbɾɐ̃du], quando→[ˈkwɐ̃du], bufanda→[buˈfɐ̃dɐ], abandono→[abɐ̃ˈdonu], lhéngua→[ˈʎẽɡwɐ], sendo→[ˈs̺ẽdu], mirandés→[miɾɐ̃ˈdes̺]). This is the inherited Ibero-Romance nasal-vowel + AST_NASAL_ABSORB behaviour and matches the native-speaker gold (TigreGotico/mirandese_g2p) on every nasal+stop word; the earlier oral-digraph treatment (⟨mb nd ng⟩ kept as [mb nd ŋɡ] with an oral vowel) was contradicted by the gold and has been removed. The stressed open-mid realisations [ɛ ɔ] raise to close-mid nasal [ẽ õ] (MWL_NASAL_E_OPEN; nasal mid vowels are close-mid, Mateus & d Andrade 2000). HUMAN-GOLD CALIBRATION (TigreGotico/mirandese_g2p, 219 words) vs Vasconcelos, Estudos de Philologia Mirandesa vol.1: (4) the preserved Leonese rising diphthongs are CLOSE — ⟨ie/iê⟩→[je], ⟨uo/uô⟩→[wo] — because Mirandese has a single intermediate mid /e o/ quality, \"menos abertos que os nossos\", and the ⟨ie⟩ nucleus is described as lying between [i] and [e] (Vasconcelos v1 §§2,4,10, pp.178-183); open [jɛ/wɔ] and stressed open [ɛ/ɔ] (fuorte→[ˈfwɔɾtɨ], era→[ˈɛɾɐ]) are non-contrastive allophonic variants of the same mid phoneme, not a separate target, so the spec does not force them. (5) ⟨ei⟩→[ej] is kept as the normative central value; Vasconcelos v1 §11 p.184 records general oscillation ei~ai (eigual~aigual, beilar~bailar), so the gold s [ɐj]/[aj] realisations (purmeiro→[puɾˈmɐjɾu]) are attested free variants, not errors. (6) ⟨s, ss⟩ and intervocalic ⟨-s-⟩ stay apico-alveolar [s̺]/[z̺] (Vasconcelos v1 §12 p.191, \"análogo ao s castelhano\", word-initial and ⟨ss⟩; intervocalic voiced counterpart), distinct from dorsal ⟨c/ç/z⟩ — the medieval sibilant contrast; the gold s plain [s]/[z] is notational under-marking, so the apical diacritic is retained. UNSTRESSED VOWEL QUALITY. The published description of central Mirandese gives the values the spec uses. Leite de Vasconcelos, Estudos de Philologia Mirandesa I (1900), describes the speech of Duas-Igrejas, which is the central variety this spec targets. His letter table (§24, p. 200) reads unstressed ⟨o⟩ as the Portuguese unstressed o, i.e. [u]; unstressed ⟨u⟩ as \"quasi u port. em tu, rua\"; and unstressed ⟨e⟩ as the Portuguese \"e surdo\", example \"de\", i.e. [ɨ]. The vowel-by-vowel description agrees: /u/ is \"talvez mais fechado que em português, e parecido com o ou francês\", closer than Portuguese rather than centralised, and it occurs stressed and unstressed alike (§2). The centralised [ʉ] and half-open [e̞] that appear in part of the TigreGotico/mirandese_g2p gold are one contributor's narrower notation rather than a described norm: under the same 'central' dialect tag the gold writes 65 [u] against 36 [ʉ] with no environment separating them (ˈbʉɫtiʉ and ɐˈdultu are both closed syllables), and word-final ⟨e⟩ splits 20 [ɨ] against 3 [e̞]. The spec keeps the broad [u] and [ɨ]. CODA /l/ is genuinely velarised in Mirandese — §13 lists a separate lateral that \"só existe em fim de syllaba\" with \"o mesmo som que existe em português em caldo, sol\", §3a has the preceding vowel velarise with it, and §113 states that every word-final -l inherited from Latin -L is \"gutturalizado\" — but the same §13 writes it \"só em notação phonetica\", plain l \"no uso corrente\", and the gold follows that practice (coda [l] 14 against [ɫ] 6). The spec is a broad transcription, so coda ⟨l⟩ stays [l].",
+  "notes": "Mirandese (mirandés), spoken in the Miranda do Douro municipality, northeastern Portugal. Classified as Asturleonese. Recognised as a regional/minority language in Portugal since 1999. Retains archaic Asturleonese features: diphthongisation of Latin short /e/ and /o/ (written ⟨iê/ie⟩, ⟨uô/uo⟩), palatal lateral /ʎ/ preserved (written ⟨lh⟩ in all positions; a written initial ⟨l⟩ is plain [l]). Heavy Portuguese adstrate via official education and administration. Mirandese preserves the medieval four-way+ sibilant contrast that Portuguese lost, the hallmark of the language: (1) voiceless apico-alveolar /s̺/ ⟨s, ss⟩ and its voiced counterpart /z̺/ ⟨-s-⟩ between vowels and before a voiced consonant; (2) voiceless (pre)dorso-dental /s/ ⟨c (before e/i), ç⟩ and voiced /z/ ⟨z⟩; (3) postalveolar /ʃ/ ⟨x⟩ and /ʒ/ ⟨j, g (before e/i)⟩; (4) the affricate /tʃ/ ⟨ch⟩ (still an affricate, unlike modern European Portuguese). NOTATION CONVENTION (matches the TigreGotico/mirandese_g2p expert gold): the apical/dorsal CONTRAST is written by marking only the apical series with the ̺ diacritic (⟨s⟩ = /s̺/, /z̺/) and leaving the dorso-dental series unmarked (⟨c, ç, z⟩ = plain /s/, /z/); this is IPA-standard, keeps the phonemic contrast explicit, and avoids the over-narrow laminal ̻ diacritic the gold does not use. ⟨ç⟩ is a fricative, not an affricate, and occurs word-finally (rapaç, lhuç) where Portuguese writes -z. ⟨j⟩ is /ʒ/ (western Iberian, never the Asturian palatal ʝ) — ⟨y⟩ is the Spanish palatal [ʝ]: Leite de Vasconcellos (1900, vol. I, §13, p. 191): \"Como o y castelhano normal em yo\". Disagreement: the Convenção Ortográfica (1999), letter Y (PDF p. 17), gives \"a semivogal anterior [j] (por vezes levemente fricatizada) nos vocábulos yê, you, yá, yêuga, yêrba e yêrbo\", and the mirandese_g2p gold writes [j]. [j] is the second candidate of ⟨y⟩, and it is ranked below [ʝ]. With [ʝ] as the only candidate, the top 10 (word_candidates, k=10) holds [j] in 0 of the 3 mirandese_g2p gold words with initial ⟨y⟩, so [j] is admitted as the second candidate. A word-final ⟨y⟩ is the glide [j] (positional entry): LdV gives the consonant as \"Inicial ou medial\" (p. 191), so it has no word-final use (rey → [ˈrej], Paraguay → [pɐˈɾaɣwaj]). INITIAL L. A written initial ⟨l⟩ is [l] (lindo → [ˈlĩndu], litro → [ˈlitɾu]). Leite de Vasconcellos (1900, vol. I, §13, p. 188) gives \"lĩ-ndo\" with [l] and describes l as \"Como em português na palavra lapa\". The Latin initial L that became [ʎ] is written ⟨lh⟩ (§111, p. 259: \"O L inicial latino mudou-se normalmente no mirandês central ou normal em lh\"), so ⟨lh⟩ = /ʎ/ and ⟨nh⟩ = /ɲ/. LETTERS V AND Ê. ⟨v⟩ maps like ⟨b⟩ (§14, p. 193: \"Na pronúncia normal mirandesa não existe differença entre b e v\"): a stop at the start of a word and after a nasal, a spirant between vowels. ⟨ê⟩ is [e] (Convenção letter table E, PDF p. 9: seno, abiêspra); ⟨yê⟩ is [ʝ] + [e]. The Convenção (\"Grafia dos ditongos\", PDF p. 18) gives the spelling of the word-initial diphthong: \"O ditongo [je] escreve-se yê na 3ª pessoa do singular do presente do indicativo do verbo ser e em palavras como yêrba, yêrbo, yêuga.\" The trigraphs ⟨anh, enh, inh, onh, unh⟩ are given explicitly (oral vowel + /ɲ/, e.g. danho → [ˈdaɲu]) so the greedy nasal-vowel digraph does not swallow the /ɲ/ of a following ⟨nh⟩. Nasal digraphs ⟨an, en, in, on, un⟩ realise Portuguese-adstrate nasal vowels /ɐ̃ ẽ ĩ õ ũ/ before a consonant or at word boundary (brando → [ˈbɾɐ̃du]); before a vowel they are oral vowel + /n/. ALLOPHONY (post-lexical, allophone_rules): coda /n/ assimilates in place to a following labial ([m]) or velar ([ŋ]). SPIRANTS. [β ð ɣ] follow the contexts of Leite de Vasconcellos (1900, vol. I, §13). He gives b as a stop \"no princípio de palavra (depois de pausa ou de nasal), e no meio de palavra depois de nasal\" and as a spirant \"entre vogaes, e depois de consoante sonora\" (p. 187); d as a spirant \"Intervocalico, e depois de s, ç (ʒ) e r\" and as a stop \"no principio de palavra (depois de pausa, de nasal e de l)\" (p. 188); g as a spirant \"intervocalico, e depois de s, l, r\" (p. 192). MWL_SPIRANT_B, MWL_SPIRANT_B_AFTER_CONSONANT, MWL_SPIRANT_D, MWL_SPIRANT_G, the positional entries of ⟨b d g⟩ and the sandhi rules MWL_SPIRANT_D_ONSET, MWL_SPIRANT_B_ONSET and MWL_SPIRANT_G_ONSET (the initial consonant after a word-final trigger: ls dedos, lhuç del cielo, ls bonos, la bida) state them. A word-initial b or d after a vowel is a spirant, because LdV allows the word-initial stop only after a pause or a nasal (b) or after a pause, a nasal or l (d). For g he states the spirant \"intervocalico, e depois de s, l, r\" and the stop as \"Medial e inicial\" with no context, so the page does not decide a word-initial g after a vowel, and the spec keeps the stop there (la gata → [lɐ ˈɡatɐ]). The Convenção Ortográfica (1999), letters B, D and G (PDF pp. 13-14), agrees with LdV for b and d. The TigreGotico/mirandese_g2p gold disagrees in places; the notes of each rule give the counts. NASAL + STOP. LdV keeps the nasal consonant before a stop: ã-mbos, sã-nto, lĩ-ndo, põ-ŋgo (pp. 187-188). So ambos → [ˈɐ̃mbus̺], santo → [ˈs̺ɐ̃ntu], pongo → [ˈpõŋɡu] (AST_NASAL_ABSORB, MWL_NASAL_LABIAL, MWL_NASAL_VELAR). A word-final nasal is absorbed (MWL_NASAL_ABSORB_FINAL). The gold absorbs the nasal before a stop and no modern source says so; see AST_NASAL_ABSORB. The mid vowels [e o] give the broad mid nasals [ẽ õ] (AST_NASAL_e, AST_NASAL_o), and MWL_NASAL_E_OPEN does the same for [ɛ]. Leite de Vasconcellos (1900, vol. I, §6, p. 180) gives nasal e as \"Tão aberto como em berra\" and nasal o as \"Tão aberto como em obra\"; the nasal table (§24, p. 201) gives \"com e entre é e ê\" and \"com o entre ó e ô\". His e and o are the Spanish ones (§22, p. 198). HUMAN-GOLD CALIBRATION (TigreGotico/mirandese_g2p, 219 words) vs Vasconcelos, Estudos de Philologia Mirandesa vol.1: (4) the preserved Leonese rising diphthongs are Leite de Vasconcellos's lax vowels. ⟨ie, iê⟩ is [jɪ]: his ẹ̌ is the vowel \"entre o i do port. viu (na pronúncia de Lisboa) e o ê do port. cêrca\" and \"Não deve differir muito do i das palavras inglesas fill, fit, little\" (§2, p. 173), and in the diphthong it is \"o phenomeno normal\" (p. 182, Obs. 1). ⟨uo, uô⟩ is [ʊ]: his ọ̌ is \"Muito semelhante ao u do inglês full, butcher\" (p. 177), and (p. 182, Obs. 2) \"O ditongo ùọ̌ não é normal na falla mirandesa; só se ouve em emphase ou voz pausada\" and \"Como o som normal é ọ̌, indico-o nos textos sempre assim\". Disagreement: the Convenção Ortográfica (1999) writes the diphthongs \"uô e uôn (puôrta, fuônte)\" and says \"Muitas vezes, na fala de algumas localidades, estes ditongos reduzem-se à vogal média [o] ou nasal [õ]\" (letter O, PDF p. 15); it says \"Geralmente, o mirandês apresenta iê em palavras que em português têm [ɛ] aberto\" (\"Grafia dos ditongos\", PDF p. 18), and its footnote 13 gives the diphthongs the values [je] and [wo]: \"Actualmente a utilização destes ditongos é variável, sendo o aparecimento de [wo] menos frequente que o de [je]\". The same footnote agrees with LdV for his own village: \"noutras, como Duas Igrejas e Constantim, [wo] é esporádico\". Duas Igrejas is the central village that LdV describes, and a sporadic [wo] is his diphthong that \"só se ouve em emphase ou voz pausada\" (p. 182, Obs. 2). Ferreira et al. (2014, §3.4) list je, jen, wo and won in the Mirandese TTS phone set, and the mirandese_g2p gold writes [je] and [wo]. [je] and [wo] are the second candidates of ⟨ie, iê⟩ and ⟨uo, uô⟩, and they are ranked below the LdV vowels. With the LdV vowels as the only candidates, the top 10 (word_candidates, k=10) holds [wo] or [wõ] in 0 of 11 mirandese_g2p gold words and [je] or [jẽ] in 0 of 12, so both are admitted as second candidates. (5) ⟨ei⟩→[ej] is kept as the normative central value; Vasconcelos v1 §11 p.184 records general oscillation ei~ai (eigual~aigual, beilar~bailar), so the gold s [ɐj]/[aj] realisations (purmeiro→[puɾˈmɐjɾu]) are attested free variants, not errors. (6) ⟨s, ss⟩ and intervocalic ⟨-s-⟩ stay apico-alveolar [s̺]/[z̺] (Vasconcelos v1 §12 p.191, \"análogo ao s castelhano\", word-initial and ⟨ss⟩; intervocalic voiced counterpart), distinct from dorsal ⟨c/ç/z⟩ — the medieval sibilant contrast; the gold s plain [s]/[z] is notational under-marking, so the apical diacritic is retained. UNSTRESSED VOWEL QUALITY. The published description of central Mirandese gives the values the spec uses. Leite de Vasconcelos, Estudos de Philologia Mirandesa I (1900), describes the speech of Duas-Igrejas, which is the central variety this spec targets. His letter table (§24, p. 200) reads unstressed ⟨o⟩ as the Portuguese unstressed o, i.e. [u]; unstressed ⟨u⟩ as \"quasi u port. em tu, rua\"; and unstressed ⟨e⟩ as the Portuguese \"e surdo\", example \"de\", i.e. [ɨ]. The vowel-by-vowel description agrees: /u/ is \"talvez mais fechado que em português, e parecido com o ou francês\", closer than Portuguese rather than centralised, and it occurs stressed and unstressed alike (§2). The centralised [ʉ] and half-open [e̞] that appear in part of the TigreGotico/mirandese_g2p gold are one contributor's narrower notation rather than a described norm: under the same 'central' dialect tag the gold writes 65 [u] against 36 [ʉ] with no environment separating them (ˈbʉɫtiʉ and ɐˈdultu are both closed syllables), and word-final ⟨e⟩ splits 20 [ɨ] against 3 [e̞]. The spec keeps the broad [u] and [ɨ]. CODA /l/ is velarised [ɫ] (caldo → [ˈkaɫdu], sol → [ˈs̺oɫ]). Leite de Vasconcellos (1900, vol. I, §13, p. 188) lists a separate lateral that \"Só existe em fim de syllaba (geralmente medial)\" and \"quando por si só constitue uma syllaba, como no artigo l antes de consoante\", with \"Este som existe em português em caldo, sol\". §3 (p. 179) has the preceding vowel velarise with it, and §113 states that every word-final -l inherited from Latin -L is \"gutturalizado\". He writes the sound ⟨ł⟩ \"só em notação phonetica\" and plain ⟨l⟩ \"no uso corrente\", which is a choice of spelling and not a second sound. The mirandese_g2p gold writes coda [l] 14 times against [ɫ] 6; the spec follows LdV. The velarisation of the preceding vowel is not modelled. SIBILANT VOICING. The apical ⟨s⟩ is voiced to [z̺] before a voiced consonant, inside a word and across words (asno, mesmo, ls nius), and final ⟨ç⟩ is [z] before a voiced consonant in the next word (lhuç del cielo → [ˈʎuz ˈdel ...]; MWL_S_VOICING, MWL_FINAL_S_VOICING, MWL_FINAL_C_VOICING): Leite de Vasconcellos (1900, vol. I, §13, p. 190): \"final de palavra antes de consoante sonora\" and \"em fim de palavra só póde ouvir-se quando a palavra seguinte começa por consoante sonora\". Before a voiceless consonant, a vowel or a pause the sibilant stays voiceless. The article l before a consonant is [ɫ] (MWL_ARTICLE_L_VELAR). OPEN MID VOWELS. Leite de Vasconcellos (1900, vol. I, §22, p. 198): \"os sons portugueses é—è em pé e prègar, e ó—ò em pó e pòveiro, não existem na pronúncia normal mirandesa, mas são substituidos por sons que ficam respectivamente entre é—ê e ó—ô portugueses, isto é, por sons iguaes ao e, o hespanhoes\". So ⟨é⟩, ⟨ó⟩ and the stressed ⟨e⟩ and ⟨o⟩ are [e] and [o]: pé → [ˈpe], pós → [ˈpos̺], chapéu → [tʃɐˈpew]. Disagreement: the Convenção Ortográfica (1999) says that the acute accent \"marca também a qualidade relativamente aberta das vogais a, e e o (yá, sés, nó)\" (PDF p. 20) and that o \"Quando representa [ɔ] aberto em sílaba tónica de palavras agudas e esdrúxulas, recebe acento agudo (abó, bóbida)\" (letter O, PDF p. 15); the gold writes [ɛ ɔ]. The open vowel is the second candidate of ⟨é⟩ and ⟨ó⟩, and it is ranked below the LdV vowel. With [e] and [o] as the only candidates, the top 10 (word_candidates, k=10) holds an open vowel in 0 of the 7 mirandese_g2p gold words spelled with ⟨é⟩ or ⟨ó⟩, so the open vowel is admitted as the second candidate of these two letters. Plain ⟨e⟩ and ⟨o⟩ have no open candidate: the Convenção marks the open vowels with the accent, and the gold writes [ɛ] in unmarked words such as era and francesa, which no source supports. FINAL -ON. ENDING \"on\" is the nasal diphthong [ɵ̃w̃] of Latin -ONE (Vasconcelos 1900, vol. I, §110: \"-ONE- > -öũ\", perdigöũ, with \"coraçon, melon, freijon\" written -on by the Convenção). ENDING \"ion\" is [jɵ̃w̃] for the same reason (Vasconcelos 1900, §110), and it is needed because the tokenizer reads ⟨io⟩ as one grapheme and ENDING \"on\" would drop the glide. LdV's footnote says \"Em sendinês parece que se diz -ão\", which mwl-x-sendim states. LdV (§110 a, p. 257) gives non > nó, and nũ when proclitic, so the word exception non is [ˈno]. LATTICE-HOLE EVIDENCE for \"on\": the mirandese_g2p gold has 3 words that end in the nasal vowel [õ] (son, ourganizaçon, çcriçon). With [ɵ̃w̃] as the only reading, the top 10 (word_candidates, k=10) holds [õ] in 0 of the 3. ORDERING BASIS for \"on\": rank 1 is LdV's [ɵ̃w̃] because he is the primary authority and he states it as the normal sound (§110, p. 257); the second reading [õ] is the spelling of the gold and of the Convenção (letter N, PDF p. 15: \"indica a nasalidade da vogal em fim de vocábulo (lhion)\"), and it is ranked below [ɵ̃w̃]. No modern source gives [õ] as a vowel quality, so the choice is open. FINAL -IE AND -UE. Leite de Vasconcellos (1900, vol. I, §11, p. 185, Obs. 4): \"Digraphos como -ùệ em tùệ (tua), -ìệ em tìệ (tia) ... não são ditongos propriamente ditos, mas verdadeiros dissyllabos\", and \"Em um manuscrito mirandês moderno lê-se ruo (rua) e fazie, pudie, tenie\". His ì is the lax i (p. 174: \"Este som ì é muito semelhante ou quasi igual a ẹ̌\"), his ù is the lax u (p. 177: \"Este som não differe de ọ̌, ou, se differe, é tão leve a differença, que a não distingo\"), and his ệ is the indistinct e [ə] (p. 178). So a written final ⟨ie⟩ is [ɪə] and a final ⟨ue⟩ is [ʊə] (positional entries): two syllables, with the stress on the first vowel. The two vowels carry no syllable dot; two IPA vowels with no non-syllabic mark are two syllables. -ie is an oxytone ending (final_stress_endings), so the stress falls on the i and the vowels before it reduce as in any pretonic syllable (p. 200): fazie → [fɐˈzɪə], tenie → [tɨˈnɪə], as fazer → [fɐˈzeɾ]. The Convenção Ortográfica (1999), 2.1.2.1 (PDF p. 20), writes these words with no accent: \"As palavras como mie (pronome possessivo), tenie, tenerie, darie, (formas verbais), Marie, die, não são acentuadas\". A written accent keeps the stress where it is written: série → [ˈs̺eɾɪə], superfície → [s̺upɨɾˈfisɪə]. LdV gives no unstressed final -ie, and his ẹ̌ \"só póde ser tonico de origem\" (p. 173), so the tail of série is the spec's reading and not a citation. A final ⟨-ue⟩ is the same hiatus: §67 (p. 232) gives rü(g)a > \"rùệ\", \"e em send. ru\", and vol. II (p. 28) gives \"rùệ em Duas-Igrejas\", so rue → [ˈrʊə]. The one-syllable spellings tie, die, mie, frie, tue and sue (tìệ p. 185, dìệ and frìệ p. 225, mìệ p. 174, tùệ and sùệ p. 177) are word exceptions with the stress written out, because the syllabifier counts a final ⟨ie⟩ or ⟨ue⟩ as one syllable and would otherwise put the stress mark on the [ə]. pie is a word exception with the diphthong of Latin Ĕ: §50 (p. 219) gives pĕde > \"pi̊ẹ̌\", one syllable, so pie → [ˈpjɪ]. LIMIT: the spelling does not show which one-syllable -ie words have the diphthong of Ĕ (pie) and which have the hiatus of Latin ī + a (tie). A one-syllable -ie word that is not a word exception gets [ɪə]. The Convenção Ortográfica (1999), footnote 19 (PDF p. 20), records the final syllable of mie, tenie, darie, die as \"quer hiato [ie] (Duas Igrejas), quer ditongo [je] (Malhadas), quer monotongação em [e] (Ifanes), quer monotongação em [i] (Sendim)\". Duas Igrejas has LdV's hiatus. Disagreement, named locality: Malhadas has the diphthong [je]. Malhadas is not one of the Raiano villages that mwl-x-ifanes covers (LdV vol. II, p. 28: \"A raia sêcca mirandesa é constituida pelas seguintes aldeias: Paradella, Ifanez, Constantim, Cicouro e S. Martinho de Angueira\"), and no child spec models it. The ending -ien is not split. Central quien and bien have the diphthong ẹ̌ (quĩẹ̌̃ p. 220, bĩẹ̌̃ p. 180) and the verb ending fugien is fugìḙ̃ (p. 185). The two have the same spelling, so fugien is [ˈfuʒjɪ̃], with the stress on fu, and not LdV's [fuˈʒɪə̃]. FINAL -UO. LdV's ọ̌ \"creio que só se encontra em syllaba tonica de origem\" (p. 177), so a word-final unstressed ⟨-uo⟩ after a written accent is not [ʊ]; it is the hiatus of an unstressed u and an unstressed o, both [u] (p. 200): mútuo → [ˈmutuu], indibíduo → [ĩndiˈβiðuu] (positional entry). LIMIT: a pretonic ⟨uo⟩ (fuortemente) keeps [ʊ], and a one-syllable final ⟨uo⟩ (duo) gets [uu]. NOTATION OF THE QUOTES. LdV's diacritics are written as follows: ẹ̌ is his e with a caron below [ɪ], ẹ̥ (e̥) his e with a ring below, the \"e surdo\" [ɨ], ḙ (ệ) his e with a caret below [ə] (p. 178), ọ̌ his o with a caron below [ʊ], i̊ his i with a ring above in the diphthong i̊ẹ̌, ʒ his letter for the voiced dorsal sibilant written ⟨z⟩ (p. 190: \"corresponde physiologicamente, como consoante sonora, ao ç\"), and đ his letter for the spirant [ð] (p. 188). NASAL + VOWEL. The words ũa, ũas, algũa and algũas have [ŋ] between the nasal vowel and the vowel (Leite de Vasconcellos 1900, vol. I, §13, p. 192: \"ũŋa\"), and they are word exceptions because an inserted [ŋ] would move the stress (see MWL_NASAL_VELAR_ONSET for the sandhi rule).",
   "sources": [
     {
       "id": "ferreira1995",
@@ -66,8 +66,8 @@
       "title": "Estudos de Philologia Mirandesa",
       "publisher": "Imprensa Nacional, Lisboa",
       "url": "https://archive.org/details/estudosdephilolo01vascuoft",
-      "pages": "173-179, 187-191, 200, 265",
-      "notes": "Foundational description of Mirandese phonology, including the six-sibilant system. Based on the speech of Duas-Igrejas (central Mirandese). §2 (pp. 173-179) describes each vowel; §13 (pp. 187 ff.) each consonant, including the coda-only velarised lateral; §24 (p. 200) tabulates the phonetic value of every letter by syllable type, and is the locator for unstressed ⟨o⟩ = Portuguese [u], unstressed ⟨u⟩ = [u], unstressed ⟨e⟩ = Portuguese \"e surdo\" [ɨ]. §113 (p. 265) covers word-final -l from Latin -L."
+      "pages": "173-180, 187-191, 200-201, 237-239, 265",
+      "notes": "Foundational description of Mirandese phonology, including the six-sibilant system. Based on the speech of Duas-Igrejas (central Mirandese). §2 (pp. 173-179) describes each vowel; §13 (pp. 187 ff.) each consonant, including the coda-only velarised lateral; §24 (p. 200) tabulates the phonetic value of every letter by syllable type, and is the locator for unstressed ⟨o⟩ = Portuguese [u], unstressed ⟨u⟩ = [u], unstressed ⟨e⟩ = Portuguese \"e surdo\" [ɨ]. §24 (p. 201) tabulates the nasal vowels, including the \"e surdo\" nasal ẽ̥ [ɨ̃]. §§75-77 (pp. 237-239) give unstressed initial en- → ã-, medial -en- → ẽ̥ [ɨ̃], and final -em → the intermediate ḙ̃ [ə̃] (central, defined p. 178, nasal p. 180) or ẽ̥ [ɨ̃] (Sendinês). §113 (p. 265) covers word-final -l from Latin -L."
     },
     {
       "id": "convencao1999",
@@ -88,6 +88,16 @@
       "url": null,
       "pages": null,
       "notes": "February 2000 addendum. Key provision: Sendinese speakers may optionally write word-initial l- (not lh-) to represent /l/ rather than /ʎ/ (e.g., luna/lhuna). Sendinese monophthongisation of iê→i and uô→u also codified. Source: secondary (studosmirandeses.blogs.sapo.pt, cursodemirandes.wordpress.com); standalone PDF not located."
+    },
+    {
+      "id": "ferreira2014",
+      "author": "Ferreira, J.P., Chesi, C., Cho, H., Baldewijns, D., Braga, D. & Dias, M.",
+      "year": 2014,
+      "title": "On Mirandese Language Resources for Text-To-Speech",
+      "publisher": "Proceedings of SLTU-2014, St. Petersburg, pp. 87-92",
+      "url": "https://www.researchgate.net/publication/263392110_On_Mirandese_Language_Resources_for_Text-To-Speech",
+      "pages": "88-89",
+      "notes": "Mirandese TTS phone set (43 phones). §2 notes \"the rare nasal schwa\"; §3.4 lists exn, a \"voiced central high sonorant nasal vowel\" [ɨ̃]. It gives no word list for that phone."
     }
   ],
   "wikipedia": [
@@ -123,7 +133,8 @@
       "is",
       "us",
       "ns",
-      "ão"
+      "ão",
+      "ie"
     ],
     "penult_stress_endings": [],
     "marked_vowels": [
@@ -167,9 +178,10 @@
       "me",
       "te",
       "se",
-      "bos"
+      "bos",
+      "del"
     ],
-    "notes": "Convenção Ortográfica da Língua Mirandesa (1999) accentuation, Portuguese-based: paroxytone default; written accent (acute or tilde) overrides. Oxytone-attracting endings reflect Mirandese orthography: consonant-final r/l/z/ç (rapaç, Pertual, falar) and the final nasals written with -n in the Asturleonese manner — -in (camin, Sendin), -un, and the systematically oxytone -on class from Latin -ōnem (naçon, coraçon, Associaçon). Unmarked -an/-en verb endings stay paroxytone as in Portuguese -am/-em. cliticless_words are the monosyllabic function words (definite article l/la/ls/las and its prep+article contractions, the prepositions and coordinating conjunctions, and the enclitic object pronouns) that lean prosodically on their host and carry no word stress (Convenção §L article paradigm; the same proclitic/enclitic inventory #527 marks for Portuguese, given in Mirandese orthography)."
+    "notes": "Convenção Ortográfica da Língua Mirandesa (1999) accentuation, Portuguese-based: paroxytone default; written accent (acute or tilde) overrides. Oxytone-attracting endings reflect Mirandese orthography: consonant-final r/l/z/ç (rapaç, Pertual, falar) and the final nasals written with -n in the Asturleonese manner — -in (camin, Sendin), -un, and the systematically oxytone -on class from Latin -ōnem (naçon, coraçon, Associaçon). Unmarked -an/-en verb endings stay paroxytone as in Portuguese -am/-em. The ending -ie is oxytone: the stress falls on the i of the hiatus (fazie, tenie, Marie), which the Convenção writes with no accent (2.1.2.1, PDF p. 20: \"As palavras como mie (pronome possessivo), tenie, tenerie, darie, (formas verbais), Marie, die, não são acentuadas\"). del is a clitic: Leite de Vasconcellos (1900, vol. I, p. 188) writes it dẹ̥l, with the \"e surdo\". cliticless_words are the monosyllabic function words (definite article l/la/ls/las and its prep+article contractions, the prepositions and coordinating conjunctions, and the enclitic object pronouns) that lean prosodically on their host and carry no word stress (Convenção §L article paradigm; the same proclitic/enclitic inventory #527 marks for Portuguese, given in Mirandese orthography)."
   },
   "graphemes": {
     "j": [
@@ -190,15 +202,49 @@
       "ʒ"
     ],
     "y": [
+      "ʝ",
       "j"
     ],
+    "ê": [
+      "e"
+    ],
+    "e": [
+      "e"
+    ],
+    "o": [
+      "o"
+    ],
+    "é": [
+      "e",
+      "ɛ"
+    ],
+    "ó": [
+      "o",
+      "ɔ"
+    ],
+    "éu": [
+      "ew"
+    ],
+    "ou": [
+      "ɵw"
+    ],
+    "v": [
+      "b"
+    ],
     "ie": [
+      "jɪ",
       "je"
     ],
     "iê": [
+      "jɪ",
       "je"
     ],
+    "uo": [
+      "ʊ",
+      "wo"
+    ],
     "uô": [
+      "ʊ",
       "wo"
     ],
     "ui": [
@@ -207,12 +253,29 @@
     "gu": [
       "ɡw",
       "ɡ"
-    ],
-    "amp": [
-      "ɐ̃p"
     ]
   },
   "positional_graphemes": {
+    "ie": {
+      "word_final": [
+        "ɪə"
+      ]
+    },
+    "ue": {
+      "word_final": [
+        "ʊə"
+      ]
+    },
+    "uo": {
+      "word_final": [
+        "uu"
+      ]
+    },
+    "y": {
+      "word_final": [
+        "j"
+      ]
+    },
     "io": {
       "word_final": [
         "iu"
@@ -243,8 +306,8 @@
         "d"
       ],
       "intervocalic": [
-        "d",
-        "ð"
+        "ð",
+        "d"
       ]
     },
     "c": {
@@ -266,12 +329,16 @@
         "z"
       ]
     },
-    "l": {
+    "v": {
       "word_initial": [
-        "ʎ"
+        "b"
       ],
-      "onset": [
-        "l"
+      "after_consonant": [
+        "b"
+      ],
+      "intervocalic": [
+        "b",
+        "β"
       ]
     },
     "g": {
@@ -304,8 +371,7 @@
     },
     "e": {
       "nucleus_stressed": [
-        "e",
-        "ɛ"
+        "e"
       ],
       "nucleus_unstressed": [
         "ɨ"
@@ -319,8 +385,7 @@
     },
     "o": {
       "nucleus_stressed": [
-        "o",
-        "ɔ"
+        "o"
       ],
       "nucleus_unstressed": [
         "u"
@@ -348,6 +413,7 @@
     }
   },
   "allophones": {
+    "v": null,
     "b": [
       "b",
       "β"
@@ -363,6 +429,32 @@
   },
   "allophone_rules": [
     {
+      "id": "AST_NASAL_ABSORB",
+      "phonemes": [
+        "n",
+        "m"
+      ],
+      "surface": "",
+      "syllable_position": "coda",
+      "preceded_by": "vowel",
+      "followed_by_phoneme": [
+        "f", "s̺", "z̺", "s", "z", "ʃ", "ʒ", "l", "ɫ", "ʎ", "ɾ", "r", "tʃ", "ɲ", "m", "n", "v", "h"
+      ],
+      "notes": "The coda nasal consonant is absorbed into the nasal vowel before a fricative, an affricate, a liquid or another nasal: honra → [ˈõɾɐ]. Before a stop it is kept, and MWL_NASAL_LABIAL and MWL_NASAL_VELAR give it the place of the stop. Word-finally it is absorbed (MWL_NASAL_ABSORB_FINAL). Leite de Vasconcellos (1900, vol. I, §13, p. 187): \"Em palavras como ambos, sĩẹ̌mpre, não é mera resonancia nasal, pois, se denota que a vogal precedente se nasala, indíca tambem que entre ella e o p e b immediatos se intercala a consoante nasal m\"; and for santo, lindo, pongo (p. 188): \"indíca tambem que entre ella e a consoante seguinte se desenvolve n ou ŋ\", with the transcriptions \"ã-mbos\", \"sã-nto\", \"lĩ-ndo\", \"põ-ŋgo\". His examples are all stops. No source gives a kept nasal before another consonant, so the inherited absorption stays there. Disagreement: the TigreGotico/mirandese_g2p gold writes the nasal vowel with no nasal consonant before a stop (santo → [ˈsɐ̃tu]). No modern source says so. The Convenção Ortográfica (1999), letters M and N (PDF p. 15), says that m \"é utilizada para indicar a nasalidade da vogal antes de p e de b\" and that n \"indica a nasalidade da vogal em fim de vocábulo (lhion) e antes de qualquer consoante que não seja p ou b (canto)\", which describes the spelling and not the pronunciation. The gold alone is not a citation, so the nasal consonant stays."
+    },
+    {
+      "id": "MWL_NASAL_ABSORB_FINAL",
+      "phonemes": [
+        "n",
+        "m"
+      ],
+      "surface": "",
+      "syllable_position": "coda",
+      "preceded_by": "vowel",
+      "word_final": true,
+      "notes": "A word-final nasal consonant is absorbed into the vowel: pan → [ˈpɐ̃], fin → [ˈfĩ], comun → [kuˈmũ]. Leite de Vasconcellos (1900, vol. I, §110, p. 257) lists pane > pã, fine > fĩ and commune > comũ, and says: \"o n desappareceu, sim, como consoante, mas transformando-se em resonancia nasal que se applicou á vogal antecedente\". The Convenção Ortográfica (1999), letter N (PDF p. 15), writes the nasality of a word-final vowel with n (lhion)."
+    },
+    {
       "id": "MWL_NASAL_LABIAL",
       "phonemes": [
         "n"
@@ -373,7 +465,7 @@
         "b",
         "m"
       ],
-      "notes": "Nasal place assimilation (Mateus & d'Andrade 2000 §3; general Ibero-Romance): a coda /n/ agrees in place with a following labial stop/nasal, surfacing as [m]."
+      "notes": "Nasal place assimilation (Mateus & d'Andrade 2000 §3; general Ibero-Romance): a coda /n/ agrees in place with a following labial stop/nasal, surfacing as [m]. Leite de Vasconcellos (1900, vol. I, §13, p. 187) writes the nasal before p and b as m: \"ã-mbos, sĩẹ̌-mpre\"."
     },
     {
       "id": "MWL_NASAL_VELAR",
@@ -385,7 +477,7 @@
         "k",
         "ɡ"
       ],
-      "notes": "Nasal place assimilation (Mateus & d'Andrade 2000 §3): a coda /n/ agrees in place with a following velar stop, surfacing as [ŋ]."
+      "notes": "Nasal place assimilation (Mateus & d'Andrade 2000 §3): a coda /n/ agrees in place with a following velar stop, surfacing as [ŋ]. Leite de Vasconcellos (1900, vol. I, §13, p. 188): \"mõ-ŋcas, põ-ŋgo\". Ferreira et al. (2014, §3.4) list the velar nasal ng in the Mirandese TTS phone set."
     },
     {
       "id": "MWL_SPIRANT_B",
@@ -395,7 +487,7 @@
       "surface": "β",
       "preceded_by": "vowel",
       "followed_by": "vowel",
-      "notes": "Intervocalic spirantisation, /b/ → [β] between vowels (rabudo → [rɐˈβudu], haber → [ɐˈβeɾ], nuobo → [ˈnwoβu]). This is the general Ibero-Romance lenition of voiced stops: in northern/central EP and Mirandese, /b d ɡ/ are realised as the fricatives/approximants [β ð ɣ] everywhere EXCEPT after a pause or a nasal (Mateus & d'Andrade 2000:11), which is why this rule is conditioned on a preceding vowel (the MWL_NASAL_* environments and word onset keep the stop). The Mirandese-specific process is attested by Ferreira & Raposo 1999 and the mwl Wikipedia phonology (\"voiced stops /b d ɡ/ may be lenited as fricatives [β ð ɣ]\"). Applied per-phoneme on the evidence of the expert-human TigreGotico/mirandese_g2p gold, measured at true oral-intervocalic positions (post-nasal excluded): /b/ is spirant-dominant (β:9 vs b:5), so this rule is a net win on the human gold (11 words corrected vs 6 lexically-conservative loan stops such as 'brabo', 'alternatibo' left over-spirantised — the residual lexical variability the downstream mwl_phonemizer can condition on). /ɡ/ is NOT given an allophone rule: intervocalic ⟨g⟩ is already spirantised to [ɣ] at the positional_graphemes layer, and an additional /ɡ/→[ɣ] rewrite misfires after the glide of a falling diphthong (eigual → gold [ɐjˈɡwal], stop retained). /d/ is NOT spirantised: intervocalic /d/ is stop-dominant in the gold (d:13 vs ð:7), the documented Asturleonese conservatism of /d/, so its positional default correctly stays [d] and [ð] remains only a lattice candidate."
+      "notes": "Intervocalic spirantisation, /b/ → [β] between vowels (rabudo → [rɐˈβudu], haber → [ɐˈβeɾ], nuobo → [ˈnʊβu]). Leite de Vasconcellos (1900, vol. I, §13, p. 187), on the spirant: \"Ouve-se entre vogaes, e depois de consoante sonora\", and on the stop: \"Só póde ouvir-se no princípio de palavra (depois de pausa ou de nasal), e no meio de palavra depois de nasal (m)\". The context after a consonant is MWL_SPIRANT_B_AFTER_CONSONANT. The Convenção Ortográfica (1999), letter B (PDF p. 13), agrees: the stop is \"em posição inicial (buôno) e após vogal nasal (ambeija)\" and the fricative \"quando está entre vogais (abe) ou depois de consoante sonora (orbelhaca)\". Disagreement: the TigreGotico/mirandese_g2p gold writes some intervocalic stops (a plain count over the 205 words gives [β] 9 times and [b] 6 times). The gold alone is not a citation, and the Convenção agrees with LdV."
     },
     {
       "id": "MWL_NASAL_A_REDUCED",
@@ -411,9 +503,38 @@
       "phonemes": [
         "ɨ"
       ],
-      "surface": "ẽ",
+      "surface": "ɨ̃",
       "followed_by": "coda_nasal",
-      "notes": "Nasalisation of the unstressed/reduced [ɨ] (from ⟨e⟩) before a tautosyllabic coda nasal, the front-vowel counterpart of MWL_NASAL_A_REDUCED: unstressed -en raises to close-mid nasal [ẽ] rather than surfacing as an oral [ɨ] with a dropped nasal (Convenção §Nasalidade; Mirandese nasal mid vowels are close-mid, Mateus & d'Andrade 2000)."
+      "followed_by_2": "any",
+      "notes": "Unstressed ⟨e⟩ [ɨ] before a tautosyllabic coda nasal inside the word stays a central vowel and nasalises to [ɨ̃]. Leite de Vasconcellos (1900, vol. I, §76, p. 238): \"A port. -en- (-em-) atono no interior de palavras corresponde em mir. -ẽ̥- (-e̥n-, -e̥m-)\", with entender → antẽ̥dér, lembrar → lhẽ̥mbrar, ventura → bẽ̥ntura, and \"O phenomeno normal porém é ẽ̥\". The nasal list of §6 (p. 180) gives the same vowel as \"e̥ — Ex.: stẽ̥nder\". His ring below marks the \"e surdo\" [ɨ]; the nasal-vowel table (§24, p. 201) defines ẽ̥ as \"i. é, e surdo (= e̥) nasal\". Ferreira et al. (2014, §2, §3.4) list the same vowel in the Mirandese TTS phone set as \"voiced central high sonorant nasal vowel\" (\"the rare nasal schwa\"). The Convenção Ortográfica (1999) agrees: its letter table (PDF p. 9; the PDF prints no page numbers) gives ⟨e⟩ = [ɨ̃] in \"bendima, centeno\", and \"Representação da nasalidade\" (PDF p. 19) says \"o en de bendima lê-se geralmente com um e muito fechado, quase mudo [ɨ]\". Recorded disagreement: the mirandese_g2p gold writes [ẽ] in oucidental (ows̻idẽˈtal) but [ɨ̃] in antender and antentar. The rule requires a grapheme after the nasal, so it leaves a word-final -en to MWL_NASAL_E_REDUCED_FINAL. The p. 201 table also allows a stressed ẽ̥ but gives no word for it, so stressed [ɨ̃] is not modelled."
+    },
+    {
+      "id": "MWL_NASAL_E_REDUCED_FINAL",
+      "phonemes": [
+        "ɨ"
+      ],
+      "surface": "ə̃",
+      "followed_by": "coda_nasal",
+      "followed_by_2": "word_boundary",
+      "notes": "Unstressed word-final ⟨-en⟩ [ɨ] nasalises to the mid central vowel [ə̃] in central Mirandese. Leite de Vasconcellos (1900, vol. I, §77, p. 239): \"A -em atono no fim de palavras corresponde em mirandês normal -ḙ̃ e em sendinês -ẽ̥\", with amen → amḙ̃, amassem → amassḙ̃, têem → tenḙ̃, devem → debḙ̃. His e with a caret below is defined on p. 178: \"Som que participa de ḁ e de e̥; posso por isso chamá-lo indeciso ou intermédio … Muito semelhante ao e allemão final em eine, Tage … Alguns phoneticistas representam estes últimos sons por ə\". The nasal list of §6 (p. 180) gives it as \"ḙ — Ex.: corrḙ̃\", with note 1: \"Só existe em fim de palavras (nos verbos). É ás vezes difficil distinguir nestes casos -ḙ̃ de -ẽ̥, -ḁ̃ (e ainda -ẽ̌?) atonos. O normal é porém -ḙ̃.\" Limit: the spec cannot tell a verb from another word, so the rule applies to every unstressed word-final -en. The variants -ẽ̥ [ɨ̃] and -ḁ̃ [ɐ̃] that p. 180 n. 1 records are not modelled. The Convenção (1999) gives no value for final unstressed -en. Recorded disagreement: the llm-generated mirandese_dict gold writes [ẽ] here (comen ˈkomẽ, sáben ˈs̺aβẽ, puoden ˈpwodẽ). mwl-x-sendim re-declares this id with [ɨ̃]."
+    },
+    {
+      "id": "MWL_NASAL_DIPHTHONG_JI",
+      "phonemes": [
+        "jɪ"
+      ],
+      "surface": "jɪ̃",
+      "followed_by": "coda_nasal",
+      "notes": "Nasalisation of the lax diphthong nucleus [jɪ] (⟨ie, iê⟩) before a tautosyllabic coda nasal: bien → [ˈbjɪ̃], siempre → [ˈs̺jɪ̃mpɾɨ]. Leite de Vasconcellos (1900, vol. I, §6, p. 180): \"ẹ̌ — Só no ditongo iẹ̌; ex.: bĩẹ̌̃\", and §110 (p. 257): bene > bĩẹ̌̃. His ẹ̌ is the vowel \"entre o i do port. viu (na pronúncia de Lisboa) e o ê do port. cêrca\" (p. 173). MWL_NASAL_DIPHTHONG_JE does the same for the second candidate [je]."
+    },
+    {
+      "id": "MWL_NASAL_U_LAX",
+      "phonemes": [
+        "ʊ"
+      ],
+      "surface": "ʊ̃",
+      "followed_by": "coda_nasal",
+      "notes": "Nasalisation of the lax back vowel [ʊ] (⟨uo, uô⟩) before a tautosyllabic coda nasal: fuonte → [ˈfʊ̃ntɨ]. Leite de Vasconcellos (1900, vol. I, §6, p. 180): \"ọ̌ — Ex.: fọ̌nte\". MWL_NASAL_DIPHTHONG_WO does the same for the second candidate [wo]."
     },
     {
       "id": "MWL_NASAL_DIPHTHONG_JE",
@@ -423,7 +544,7 @@
       ],
       "surface": "jẽ",
       "followed_by": "coda_nasal",
-      "notes": "Nasalisation of the Leonese rising diphthong ⟨ie/ié⟩ [jɛ] before a tautosyllabic coda nasal, parallel to the inherited AST_NASAL_* rules that nasalise the simple vowels (a e i o u) in the same environment. The base rules key on single-segment nuclei, so a diphthong nucleus is not matched and its coda /n m/ was still absorbed (AST_NASAL_ABSORB) — yielding an oral vowel with a dropped nasal (bien → *[bjɛ]). Mirandese nasal mid vowels are close-mid, as in Portuguese (Mateus & d'Andrade 2000), so [jɛ] raises to [jẽ]: bien → [ˈbjẽ]."
+      "notes": "Nasalisation of the second candidate of ⟨ie, iê⟩, the rising diphthong [je] (and open [jɛ]), before a tautosyllabic coda nasal: bien → [ˈbjẽ] when [je] is chosen. The first candidate is [jɪ] (MWL_NASAL_DIPHTHONG_JI). Leite de Vasconcellos (1900, vol. I, §2, p. 173) gives the nucleus as ẹ̌, \"Não deve differir muito do i das palavras inglesas fill, fit, little\", and (p. 182, Obs. 1) \"é este o phenomeno normal\". Disagreement: the Convenção Ortográfica (1999), \"Grafia dos ditongos\" (PDF p. 18), says \"Geralmente, o mirandês apresenta iê em palavras que em português têm [ɛ] aberto\", and its footnote 13 gives the diphthong as [je]: \"sendo o aparecimento de [wo] menos frequente que o de [je]\". Ferreira et al. (2014, §3.4) list je and the nasal diphthong jen in the Mirandese TTS phone set; the mirandese_g2p gold writes [je]. With [jɪ] as the only candidate, the top 10 (word_candidates, k=10) holds [je] or [jẽ] in 0 of 12 mirandese_g2p gold words, so [je] is admitted as the second candidate."
     },
     {
       "id": "MWL_NASAL_DIPHTHONG_WO",
@@ -433,7 +554,7 @@
       ],
       "surface": "wõ",
       "followed_by": "coda_nasal",
-      "notes": "Nasalisation of the preserved Leonese rising diphthong ⟨uo/uô⟩ [wo]/[wɔ] before a tautosyllabic coda nasal (fuonte → [ˈfwõtɨ]), the back-vowel counterpart of MWL_NASAL_DIPHTHONG_JE. Both open [wɔ] and close [wo] raise to close-mid nasal [õ], as Portuguese nasal /o/ is always close-mid (Mateus & d'Andrade 2000)."
+      "notes": "Nasalisation of the second candidate of ⟨uo, uô⟩, the rising diphthong [wo] (and open [wɔ]), before a tautosyllabic coda nasal: fuonte → [ˈfwõntɨ] when [wo] is chosen. The first candidate is [ʊ] (MWL_NASAL_U_LAX). Leite de Vasconcellos (1900, vol. I, §2, p. 177) gives ọ̌ as \"Muito semelhante ao u do inglês full, butcher\", and (p. 182, Obs. 2): \"O ditongo ùọ̌ não é normal na falla mirandesa; só se ouve em emphase ou voz pausada\" and \"Como o som normal é ọ̌, indico-o nos textos sempre assim\". Disagreement: the Convenção Ortográfica (1999), letter O (PDF p. 15), writes \"dos ditongos uô e uôn (puôrta, fuônte)\" and says \"Muitas vezes, na fala de algumas localidades, estes ditongos reduzem-se à vogal média [o] ou nasal [õ]\"; its footnote 13 (PDF p. 18) says \"sendo o aparecimento de [wo] menos frequente que o de [je]\". Ferreira et al. (2014, §3.4) list wo and the nasal diphthong won in the Mirandese TTS phone set; the mirandese_g2p gold writes [wo]. The same footnote 13 agrees with LdV for his village: \"noutras, como Duas Igrejas e Constantim, [wo] é esporádico\". With [ʊ] as the only candidate, the top 10 (word_candidates, k=10) holds [wo] or [wõ] in 0 of 11 mirandese_g2p gold words, so [wo] is admitted as the second candidate."
     },
     {
       "id": "MWL_NASAL_E_OPEN",
@@ -442,16 +563,193 @@
       ],
       "surface": "ẽ",
       "followed_by": "coda_nasal",
-      "notes": "Nasalisation of stressed open-mid [ɛ] (from marked ⟨é⟩) before a tautosyllabic coda nasal; Mirandese nasal mid vowels are close-mid (Mateus & d'Andrade 2000), so [ɛ]→[ẽ]: lhéngua → [ˈʎẽɡwɐ]. Counterpart of MWL_NASAL_E_REDUCED for the stressed realisation."
+      "notes": "Nasalisation of open-mid [ɛ] before a tautosyllabic coda nasal, to the broad mid nasal [ẽ]: lhéngua → [ˈʎẽŋɡwɐ] when [ɛ] is chosen. [ɛ] occurs only as the second candidate of ⟨é⟩. Leite de Vasconcellos (1900, vol. I, §6, p. 180) gives nasal e as \"Tão aberto como em berra\" and nasal o as \"Tão aberto como em obra\"; the nasal table (§24, p. 201) gives \"com e entre é e ê\" and \"com o entre ó e ô\". His Mirandese e and o are \"menos abertos que os nossos\" (§4, p. 179), the Spanish e and o (§22, p. 198: \"sons iguaes ao e, o hespanhoes\"), so the nasal vowel is the mid vowel, written [ẽ õ]. Counterpart of MWL_NASAL_E_REDUCED for the stressed realisation."
+    },
+    {
+      "id": "AST_NASAL_e",
+      "phonemes": [
+        "e"
+      ],
+      "surface": "ẽ",
+      "followed_by": "coda_nasal",
+      "notes": "Stressed e nasalises before a coda nasal, to the broad mid nasal [ẽ]. Leite de Vasconcellos (1900, vol. I, §6, p. 180): \"drento, tẽ. Tão aberto como em berra.\" The nasal table (§24, p. 201) reads \"com e entre é e ê\". The value is the Mirandese mid e of §22, p. 198 (\"sons iguaes ao e, o hespanhoes\"). Overrides the inherited rule only to carry this citation."
+    },
+    {
+      "id": "AST_NASAL_o",
+      "phonemes": [
+        "o"
+      ],
+      "surface": "õ",
+      "followed_by": "coda_nasal",
+      "notes": "Stressed o nasalises before a coda nasal, to the broad mid nasal [õ]. Leite de Vasconcellos (1900, vol. I, §6, p. 180): \"pongo. Tão aberto como em obra.\" The nasal table (§24, p. 201) reads \"com o entre ó e ô\". The value is the Mirandese mid o of §22, p. 198 (\"sons iguaes ao e, o hespanhoes\"). Overrides the inherited rule only to carry this citation."
+    },
+    {
+      "id": "MWL_S_VOICING",
+      "phonemes": [
+        "s̺"
+      ],
+      "surface": "z̺",
+      "followed_by_phoneme": [
+        "b",
+        "d",
+        "ɡ",
+        "β",
+        "ð",
+        "ɣ",
+        "m",
+        "n",
+        "ɲ",
+        "l",
+        "ʎ",
+        "ɾ",
+        "r",
+        "ʒ",
+        "z"
+      ],
+      "notes": "The apical s is voiced before a voiced consonant inside a word: asno → [ˈaz̺nu]. Leite de Vasconcellos (1900, vol. I, §13, p. 190), on the voiced apical: \"Medial (e intervocalico), final de palavra antes de consoante sonora\", with the examples rosa, asno, sabel and ls nius; and on the voiceless apical: \"Final de syllaba (antes de consoante surda)\". The Convenção Ortográfica (1999), § S, lists mesmo, smagar and cismar. Before a voiceless consonant s stays [s̺]: pasta. The glides [j w] are not treated as voiced consonants, because no source cited here says so."
+    },
+    {
+      "id": "MWL_L_VELAR",
+      "phonemes": [
+        "l"
+      ],
+      "surface": "ɫ",
+      "syllable_position": "coda",
+      "notes": "Coda l is the velarised [ɫ]: caldo → [ˈkaɫdu], sol → [ˈs̺oɫ]. Leite de Vasconcellos (1900, vol. I, §13, p. 188): \"Só existe em fim de syllaba (geralmente medial)\" and \"Este som existe em português em caldo, sol\". He writes it ⟨ł⟩ \"Só em notação phonetica\" and ⟨l⟩ \"no uso corrente\". Onset l is [l] (\"Como em português na palavra lapa\"). The velarisation of the preceding vowel (§3, p. 179) is not modelled."
+    },
+    {
+      "id": "MWL_SPIRANT_D",
+      "phonemes": [
+        "d"
+      ],
+      "surface": "ð",
+      "preceded_by_phoneme": [
+        "s̺",
+        "z̺",
+        "s",
+        "z",
+        "ɾ"
+      ],
+      "notes": "⟨d⟩ is the spirant [ð] after s, z and r: tarde → [ˈtaɾðɨ], berde → [ˈbeɾðɨ]. Leite de Vasconcellos (1900, vol. I, §13, p. 188), on the spirant: \"Intervocalico, e depois de s, ç (ʒ) e r\", with the examples \"codiçoso, ls dedos, lhuç dẹ̥l ci̊ẹ̌lo, tarde\"; and on the stop: \"no meio, depois de nasal ou de consoante que não seja s, ʒ ou r\", so ⟨d⟩ after l or a nasal stays [d] (caldo, mundo). His ʒ is the voiced dorsal sibilant written ⟨z⟩ (p. 190). The Convenção Ortográfica (1999), letter D (PDF p. 14), agrees: \"uma fricativa se está, por exemplo, entre vogais (bida) ou depois de r (berde)\" and \"oclusiva ... depois de nasal (mundo) e de l (caldo)\". Disagreement: the TigreGotico/mirandese_g2p gold writes intervocalic [d] more often than [ð] (a plain count over the 205 words gives [d] 25 times and [ð] 7 times). The gold alone is not a citation, and the Convenção agrees with LdV. Between vowels the positional entry of ⟨d⟩ gives [ð] first and [d] second."
+    },
+    {
+      "id": "MWL_SPIRANT_B_AFTER_CONSONANT",
+      "phonemes": [
+        "b"
+      ],
+      "surface": "β",
+      "preceded_by_phoneme": [
+        "l",
+        "ɫ",
+        "ʎ",
+        "ɾ",
+        "r",
+        "s̺",
+        "z̺",
+        "z",
+        "ʒ"
+      ],
+      "notes": "⟨b⟩ and ⟨v⟩ are the spirant [β] after l, lh, r, z and a voiced s: silba → [ˈs̺iɫβɐ], orbelhaca → [uɾβɨˈʎakɐ], servir → [s̺ɨɾˈβiɾ]. Leite de Vasconcellos (1900, vol. I, §13, p. 187): \"Ouve-se entre vogaes, e depois de consoante sonora\", with the examples \"adabinar, silba, yẹ̌rba, ls bọnos\". After a nasal the stop stays (ambos). The Convenção Ortográfica (1999), letter B (PDF p. 13): \"fricativa quando está entre vogais (abe) ou depois de consoante sonora (orbelhaca)\". The gold has one post-consonantal ⟨b⟩ in 205 words, a stop, which is too few to count."
+    },
+    {
+      "id": "MWL_SPIRANT_G",
+      "phonemes": [
+        "ɡ"
+      ],
+      "surface": "ɣ",
+      "preceded_by_phoneme": [
+        "s̺",
+        "z̺",
+        "l",
+        "ɫ",
+        "ɾ"
+      ],
+      "notes": "⟨g⟩ is the spirant [ɣ] after s, l and r: algo → [ˈaɫɣu], lhargo → [ˈʎaɾɣu], esgrimir → [ɨz̺ɣɾiˈmiɾ]. Leite de Vasconcellos (1900, vol. I, §13, p. 192): \"apparece nas mesmas condições que nesta lingoa: intervocalico, e depois de s, l, r\". After a nasal the stop stays (pongo). The Convenção Ortográfica (1999), letter G (PDF p. 14), gives the spirant \"designadamente entre vogais (fago) e depois de r (lhargo)\" and does not name s and l."
     }
   ],
+  "sandhi_rules": [
+    {
+      "id": "MWL_FINAL_S_VOICING",
+      "name": "final apical s before a voiced consonant",
+      "left_context": "s̺$",
+      "right_context": "^ˈ?[bdɡβðɣmnɲlɫʎɾrʒz]",
+      "transform": "z̺",
+      "notes": "Word-final apical s is voiced before a voiced consonant in the next word: ls nius → [ɫz̺ ˈnjus̺]. Leite de Vasconcellos (1900, vol. I, §13, p. 190): \"final de palavra antes de consoante sonora\" (ls nius). Before a voiceless consonant, a vowel or a pause s stays [s̺]: \"final de palavra (em pausa, ou antes de consoante surda)\". The glides [j w] are not treated as voiced consonants."
+    },
+    {
+      "id": "MWL_FINAL_C_VOICING",
+      "name": "final ç before a voiced consonant",
+      "left_context": "(?<!t)s$",
+      "right_context": "^ˈ?[bdɡβðɣmnɲlɫʎɾrʒz]",
+      "transform": "z",
+      "notes": "Word-final ⟨ç⟩ is [z] before a voiced consonant in the next word: lhuç del cielo → [ˈʎuz ˈdel ...]. Leite de Vasconcellos (1900, vol. I, §13, p. 190): \"em fim de palavra só póde ouvir-se quando a palavra seguinte começa por consoante sonora: lhuç dẹ̥l ci̊ẹ̌lo (pronúncia: lhuʒ đẹ̥l çi̊ẹ̌lṷ)\". The Convenção Ortográfica (1999), § Ç: \"paç de la tiêrra\" is read with [z]. Written final ⟨z⟩ is [z] already."
+    },
+    {
+      "id": "MWL_ARTICLE_L_VELAR",
+      "name": "article l before a consonant",
+      "left_context": "^l$",
+      "right_context": "^ˈ?[pbtdkɡfsʃʒzmnɲlʎɾrβðɣ]",
+      "transform": "ɫ",
+      "notes": "The article l is the velarised [ɫ] before a consonant: l pai → [ɫ ˈpaj]. Leite de Vasconcellos (1900, vol. I, §13, p. 188): \"quando por si só constitue uma syllaba, como no artigo l antes de consoante\". Before a vowel the article l is not asserted to be velarised, and stays [l]."
+    },
+    {
+      "id": "MWL_NASAL_VELAR_ONSET",
+      "name": "velar nasal between a nasal vowel and a following vowel",
+      "left_context": "(?:[ãẽĩõũ]|[ɐɨɪʊə]\u0303)$",
+      "right_context": "^(ˈ?)(?=[aeiouɐɨɪʊəɵáéíóú])",
+      "right_transform": "\\1ŋ",
+      "notes": "Leite de Vasconcellos (1900, vol. I, §13, p. 192): the velar nasal is \"Medial, isto é, entre nasal e vogal, quer pertencentes á mesma palavra, quer a palavras diversas\", with the examples \"ũŋa, bĩẹ̌̃ ŋ alto\". A nasal vowel at the end of a word and a vowel at the start of the next word give an initial [ŋ]: bien alto → [ˈbjɪ̃ ˈŋaɫtu]. His footnote doubts that the sound is heard word-finally after a nasal vowel before a pause, so a pause blocks the rule. Inside a word the same sound is carried by the word exceptions ũa, ũas, algũa and algũas, because the syllabifier counts ⟨ũa⟩ as one syllable and an inserted [ŋ] would move the stress. LdV p. 257 §109 Obs. 3 says \"Em mirandês diz-se ũŋa e ũ\". The mirandese_g2p gold writes [ˈũŋɐ] for ũa. Disagreement on the scope of [ŋ]: the modern sources limit it to a stressed nasal u before a vowel. Ferreira et al. (2014, §2, p. 88): \"contextual intervocalic velar nasal [ŋ] after a stressed nasal /u/ preceding a vowel\". The Convenção Ortográfica (1999), \"Representação da nasalidade\" (PDF p. 19): \"Um caso particular é o do artigo indefinido feminino e de alguns pronomes indefinidos, onde u nasal é seguido de a, quer em hiato quer com uma transição nasal velar\", so it also allows the hiatus with no [ŋ]. LdV gives [ŋ] after any nasal vowel before a vowel, in the same word or across words (bĩẹ̌̃ ŋ alto), and the spec follows LdV: pan i bino → [ˈpɐ̃ ŋi ˈbinu]."
+    },
+    {
+      "id": "MWL_SPIRANT_D_ONSET",
+      "name": "initial d after s, z, r or a vowel",
+      "left_context": "(?:[sz]̺?|ɾ|[aeiouɐɨɪʊəɛɔɵjw])$",
+      "right_context": "^(ˈ?)d",
+      "right_transform": "\\1ð",
+      "notes": "The initial ⟨d⟩ of a word is the spirant [ð] after a word-final s, ç (ʒ), r or vowel: ls dedos → [ɫz̺ ˈðeðus̺], lhuç del cielo → [ˈʎuz ðɨɫ ˈsjɪlu], de dous → [dɨ ˈðɵws̺]. Leite de Vasconcellos (1900, vol. I, §13, p. 188) gives the spirant \"Intervocalico, e depois de s, ç (ʒ) e r\" with the examples \"ls dedos, lhuç dẹ̥l ci̊ẹ̌lo\", and the stop \"no principio de palavra (depois de pausa, de nasal e de l)\". After a vowel the initial d is between vowels, which is not one of the stop contexts. After l or a nasal the initial d stays a stop, and a nasal vowel does not trigger the rule. His dẹ̥l has the \"e surdo\", so del is a clitic with no stress (cliticless_words)."
+    },
+    {
+      "id": "MWL_SPIRANT_B_ONSET",
+      "name": "initial b after s, z, l, r or a vowel",
+      "left_context": "(?:[sz]̺?|[lɫɾ]|[aeiouɐɨɪʊəɛɔɵjw])$",
+      "right_context": "^(ˈ?)b",
+      "right_transform": "\\1β",
+      "notes": "The initial ⟨b⟩ of a word is the spirant [β] after a word-final s, ç (ʒ), l, r or vowel: ls bonos → [ɫz̺ ˈβonus̺], la bida → [lɐ ˈβiðɐ]. Leite de Vasconcellos (1900, vol. I, §13, p. 187) gives the spirant \"entre vogaes, e depois de consoante sonora\" with the example \"ls bọnos\", and the stop \"no princípio de palavra (depois de pausa ou de nasal)\". After a nasal vowel the stop stays (un bino)."
+    },
+    {
+      "id": "MWL_SPIRANT_G_ONSET",
+      "name": "initial g after s, l or r",
+      "left_context": "(?:s̺|[lɫɾ])$",
+      "right_context": "^(ˈ?)ɡ",
+      "right_transform": "\\1ɣ",
+      "notes": "The initial ⟨g⟩ of a word is the spirant [ɣ] after a word-final s, l or r: l gato → [ɫ ˈɣatu]. Leite de Vasconcellos (1900, vol. I, §13, p. 192) gives the spirant \"depois de s, l, r\"."
+    }
+  ],
+  "grammatical_endings": {
+    "on": [
+      "ɵ̃w̃",
+      "õ"
+    ],
+    "ion": "jɵ̃w̃"
+  },
   "word_exceptions": {
     "l": "l",
     "la": "lɐ",
-    "ls": "ls̺",
+    "ls": "ɫs̺",
     "las": "lɐs̺",
-    "litro": "ˈlitɾu",
-    "quien": "ˈkjɛn"
+    "quien": "ˈkjɪ̃",
+    "pie": "ˈpjɪ",
+    "tie": "ˈtɪə",
+    "die": "ˈdɪə",
+    "mie": "ˈmɪə",
+    "frie": "ˈfɾɪə",
+    "tue": "ˈtʊə",
+    "sue": "ˈs̺ʊə",
+    "ũa": "ˈũŋɐ",
+    "ũas": "ˈũŋɐs̺",
+    "algũa": "ɐɫˈɣũŋɐ",
+    "algũas": "ɐɫˈɣũŋɐs̺",
+    "non": "ˈno"
   },
   "wikidata_qid": "Q13330",
   "phoible_id": "mira1251",

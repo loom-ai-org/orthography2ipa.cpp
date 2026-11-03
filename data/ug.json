@@ -5,21 +5,13 @@
   "script_type": "abjad",
   "quality": "research",
   "graphemes": {
-    "ئا": ["ɑ"],
     "ا": ["ɑ"],
-    "ئە": ["ɛ"],
-    "ه": ["ɛ"],
-    "ئو": ["o"],
+    "ە": ["ɛ"],
     "و": ["o"],
-    "ئۇ": ["u"],
     "ۇ": ["u"],
-    "ئۆ": ["ø"],
     "ۆ": ["ø"],
-    "ئۈ": ["y"],
     "ۈ": ["y"],
-    "ئې": ["e"],
     "ې": ["e"],
-    "ئى": ["i"],
     "ى": ["i"],
     "ي": ["j"],
     "ئ": ["ʔ"],
@@ -48,6 +40,12 @@
     "ھ": ["h"],
     "ۋ": ["w", "v"]
   },
+  "positional_graphemes": {
+    "ئ": {
+      "word_initial": [""],
+      "default": ["ʔ"]
+    }
+  },
   "allophones": {
     "ɑ": ["ɑ"], "ɛ": ["ɛ"], "o": ["o"], "u": ["u"], "ø": ["ø"], "y": ["y"],
     "e": ["e"], "i": ["i"], "j": ["j"], "ʔ": ["ʔ"], "b": ["b"], "p": ["p"],
@@ -56,7 +54,7 @@
     "q": ["q"], "k": ["k"], "ɡ": ["ɡ"], "ŋ": ["ŋ"], "l": ["l"], "m": ["m"],
     "n": ["n"], "h": ["h"], "w": ["w"], "v": ["v"]
   },
-  "notes": "Uyghur, written in the Uyghur Perso-Arabic alphabet (Uyghur Ereb Yéziqi, UEY), the official script in Xinjiang. RESEARCH: grapheme inventory now specified. Unlike Persian/Arabic proper, UEY writes EVERY vowel with a full letter (ئا/ا ئە/ه ئو/و ئۇ/ۇ ئۆ/ۆ ئۈ/ۈ ئې/ې ئى/ى), so despite being classified `abjad` by script family it behaves as a near-alphabetic system (Hahn 1991, 'Spoken Uyghur'; Wikipedia 'Uyghur alphabets'): word-initial vowels carry a hamza-bearing letter (ئا, ئە, …) while the same vowel word-medially/finally drops the hamza (ا, ه, …) — both spellings are given their own grapheme key here because the hamza-initial form is a genuinely distinct multigraph the orthography uses at a fixed position, earning its key under test 3 (AGENTS.md: it blocks the plain vowel-letter reading of an isolated hamza before a bare vowel letter). ⟨ه⟩ (no dots on top, used word-finally) writes short /ɛ/ and is distinct from ⟨ھ⟩ (dotted, aspirated) /h/ — a minimal pair the Arabic-script Uyghur orthography keeps apart that Persian's single ⟨ه⟩ does not. ⟨خ⟩ is realised as the uvular fricative /χ/ (not velar /x/) and ⟨غ⟩ as /ʁ/, matching Hahn's uvular analysis of the Uyghur dorsal fricative series (contrast the velar analysis used for `fa`/`glk`). ⟨ك⟩ and ⟨ک⟩ are both attested Kaf variants for /k/ in modern Uyghur typesetting and are mapped identically. ⟨ۋ⟩ covers both the labiodental approximant/fricative realisations reported in the literature (Hahn 1991). Latin (Uyghur Latin Yëziqi, ULY) and Cyrillic orthographies are also in use and are not modelled here. WikiPron gold (`uig_arab_broad.tsv`, ~2674 rows) is registered in scripts/benchmark.py's DATASETS; a PER is recorded in benchmarks/results.json. STRESS EXEMPTION: Uyghur word stress generally falls on the final syllable and is largely predictable rather than lexically contrastive; the position is not orthographically marked, so no `stress` block is declared here (exemption documented per docs/quality_tiers.md).",
+  "notes": "Uyghur, written in the Uyghur Perso-Arabic alphabet (Uyghur Ereb Yéziqi, UEY), the official script in Xinjiang. RESEARCH: grapheme inventory now specified. Unlike Persian/Arabic proper, UEY writes EVERY vowel with a full letter (ئا/ا ئە/ە ئو/و ئۇ/ۇ ئۆ/ۆ ئۈ/ۈ ئې/ې ئى/ى), so despite being classified `abjad` by script family it behaves as a near-alphabetic system (Hahn 1991, 'Spoken Uyghur'; Wikipedia 'Uyghur alphabets'): word-initial vowels carry a hamza-bearing letter (ئا, ئە, …) while the same vowel word-medially/finally drops the hamza (ا, ە, …) — the seat ⟨ئ⟩ is its own grapheme, silent word-initially and /ʔ/ everywhere else (positional_graphemes word_initial). Wikipedia 'Uyghur Arabic alphabet': ⟨ئ⟩ 'also represents /ʔ/ but it is usually ignored at the beginning of words. It still reads /ʔ/ in the middle, such as سائەت /sɑʔæt/ hour'. So ⟨ئ⟩ + vowel letter needs no key of its own: in either position its value is the seat's value followed by the vowel's, which fails all three key tests (AGENTS.md) — it is a concatenation, it is two segments wherever the seat is pronounced, and once the seat is a grapheme of its own there is no wrong longer match for such a key to block. WikiPron gold (uig_arab_broad) writes /ʔ/ for the seat word-initially too, in 572 of 580 seat-initial rows; that is a transcription convention the cited source contradicts, so the spec keeps the initial seat silent and the gold disagreement is accepted. ⟨ە⟩ is ARABIC LETTER AE (U+06D5), the bare form of ⟨ئە⟩ in every position after a consonant, medially and word-finally (قەشقەر Qeshqer, ئۇيغۇرچە Uyghurche); it writes /ɛ/ (Wikipedia 'Uyghur alphabets', vowel table: /æ~ɛ/, ULY e) and is distinct from ⟨ھ⟩ (U+06BE) /h/. It is not ARABIC LETTER HEH (U+0647) ⟨ه⟩, which looks the same in final position: UEY does not use that code point, which belongs to the pre-1950s Perso-Arabic spelling, where it is /h/ (Wikipedia 'Uyghur Arabic alphabet', historical spellings table, ULY h). A key on U+0647 matches no UEY text and leaves every bare ⟨ە⟩ unmapped. ⟨خ⟩ is realised as the uvular fricative /χ/ (not velar /x/) and ⟨غ⟩ as /ʁ/, matching Hahn's uvular analysis of the Uyghur dorsal fricative series (contrast the velar analysis used for `fa`/`glk`). ⟨ك⟩ and ⟨ک⟩ are both attested Kaf variants for /k/ in modern Uyghur typesetting and are mapped identically. ⟨ۋ⟩ covers both the labiodental approximant/fricative realisations reported in the literature (Hahn 1991). Latin (Uyghur Latin Yëziqi, ULY) and Cyrillic orthographies are also in use and are not modelled here. WikiPron gold (`uig_arab_broad.tsv`, ~2674 rows) is registered in scripts/benchmark.py's DATASETS; a PER is recorded in benchmarks/results.json. STRESS EXEMPTION: Uyghur word stress generally falls on the final syllable and is largely predictable rather than lexically contrastive; the position is not orthographically marked, so no `stress` block is declared here (exemption documented per docs/quality_tiers.md).",
   "iso639_3": "uig",
   "glottolog_code": "uigh1240",
   "wikidata_qid": "Q13263",
@@ -83,6 +81,7 @@
   ],
   "wikipedia": [
     "https://en.wikipedia.org/wiki/Uyghur_language",
+    "https://en.wikipedia.org/wiki/Uyghur_Arabic_alphabet",
     "https://ug.wikipedia.org/wiki/%D8%A6%DB%87%D9%8A%D8%BA%DB%87%D8%B1_%D8%AA%D9%89%D9%84%D9%89"
   ],
   "sources": [

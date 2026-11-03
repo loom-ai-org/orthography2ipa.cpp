@@ -14,12 +14,13 @@ ovos_spec_tools.language:
 
     /home/flavio/.venvs/piper/bin/python3 tests/gen_registry_tables.py
 """
+import os
 import pathlib
 import sys
 
 HERE = pathlib.Path(__file__).resolve().parent
 CPP_ROOT = HERE.parent
-reference = str(CPP_ROOT.parent / "orthography2ipa")
+reference = os.environ.get("O2I_PYTHON_ROOT") or str(CPP_ROOT.parent / "orthography2ipa")
 if not (pathlib.Path(reference) / "orthography2ipa" / "phonetok.py").is_file():
     sys.exit(f"reference package not found at {reference!r}")
 sys.path.insert(0, reference)

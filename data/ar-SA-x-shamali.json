@@ -1,0 +1,78 @@
+{
+ "code": "ar-SA-x-shamali",
+ "name": "Northern Najdi Arabic (Shamali)",
+ "script": "Arabic",
+ "script_type": "abjad",
+ "graphemes_base": "ar-SA-x-najd",
+ "allophones_base": "ar-SA-x-najd",
+ "parent": "ar-SA-x-najd",
+ "quality": "research",
+ "graphemes": {},
+ "allophones": {},
+ "allophone_rules": [
+  {
+   "id": "SHAMALI_AFFRIC_K_BEFORE_CENTRAL_A",
+   "phonemes": [
+    "k"
+   ],
+   "surface": "ts",
+   "followed_by_phoneme": [
+    "a"
+   ],
+   "word_initial": true,
+   "notes": "Word-initial /k/ before central /a/. HOW THE ENGINE CARRIES THE VARIATION: this rule rewrites the slot, so transcribe_word() gives the affricate and candidates() (the pre-rule beam) gives the plain velar; the plain~affricate pair itself lives in the allophones table (k: [k, ts], inherited from ar-SA-x-najd through allophones_base) and both arcs appear in candidates() only with expand_allophones=True, where the allophone branch is not conditioned on the vowel. A caller who wants two arcs must opt in; a caller reading one output gets the dialect-diagnostic reflex. Alshammari (2026, JLTR 17(4):1333-1341) ex. (1d) p.1335, /kalb/ -> [tsalb] 'dog', with /kabd/ -> [tsabd] 'liver' beside it. SCOPED TO WORD-INITIAL DELIBERATELY: the author reports at p.1336 that \"it was difficult to find a word that is affricated in the environment of the central vowel /a/ word-medially in NNA\", so the medial case is unattested and is not claimed here."
+  },
+  {
+   "id": "SHAMALI_AFFRIC_K_BEFORE_CENTRAL_AA",
+   "phonemes": [
+    "k"
+   ],
+   "surface": "ts",
+   "followed_by_phoneme": [
+    "aː"
+   ],
+   "notes": "/k/ before central /aː/, unrestricted in position because BOTH are attested rather than because neither is denied. Word-initially: ex. (1f-g) p.1335, /kaː.jid/ -> [tsaː.jid] 'hard' and /kaː.mi/ -> [tsaː.mi]. Word-medially: ex. (2) p.1336, /mi.kaːn/ -> [mi.tsaːn] 'place' and /wi.kaːd/ -> [wi.tsaːd] 'surely', with the statement that medial /k/ is affricated 'conditioned by adjacency to the front vowels /i/, /i:/, and the central /a:/'. /mi.kaːn/ is also the input Alshammari evaluates in Tableau 1, p.1339. An earlier draft of this rule left the position open on the ground that word-medial /aː/ was not among the cells the author says he could not find; that was an argument from silence, and a cell is attested or it is not."
+  },
+  {
+   "id": "SHAMALI_AFFRIC_K_AFTER_CENTRAL_A",
+   "phonemes": [
+    "k"
+   ],
+   "surface": "ts",
+   "preceded_by_phoneme": [
+    "a"
+   ],
+   "word_final": true,
+   "notes": "Word-final /k/ after central /a/. The /aː/ counterpart is NOT written: Alshammari p.1336 reports that word-finally \"it is difficult to find words where /k/ is in free variation with the affricate [ts] adjacent to /a:/\", so that cell is unattested and left to the inherited front-vowel rule."
+  }
+ ],
+ "notes": "Northern Najdi (Shamali) of Ha\\u02beil, the variety of Alshammari (2026), spoken across the northern Najd. IT DIFFERS FROM ITS PARENT IN EXACTLY ONE RULE and the spec carries only that rule; everything else -- qaf as /\\u0261/, the interdentals, gahawa, emphasis spreading, stress -- is inherited from ar-SA-x-najd unchanged.\n\nTHE DELTA. Central Najdi affricates /k/ -> [ts] next to front vowels only. Northern Najdi extends it to the central vowels /a a:/ as well, so /kalb/ \\u0027dog\\u0027 is [tsalb] here and [kalb] in the parent. The VOICED counterpart is NOT extended: /\\u0261/ -> [dz] stays restricted to /i i:/ in both, which Alshammari states as a phonological asymmetry (p.1337) and the parent already encodes. The two rules were always separate in this repo, which is why widening one does not touch the other -- an earlier ruling that a Shamali spec was impossible assumed that widening /k/ would force qaf-initial /\\u0261alb/ \\u0027heart\\u0027 to *[dzalb], and it does not, because that word is reached by the /\\u0261/ rule.\n\nWHAT IS NOT MODELLED, AND WHY. Loanwords resist affrication even where the environment is met: Alshammari ex. (4) p.1336 gives /ka.lat\\u0283/ \\u0027clutch\\u0027, /ta\\u00f0.ki.rah/ \\u0027ticket\\u0027, /ka.bat/ \\u0027cupboard\\u0027 and /mi.ki:.nah/ \\u0027machine\\u0027 as unaffricated \\\"because these words have been borrowed from either Modern Standard Arabic or other languages\\\". That is a lexical stratum, not a phonological environment, so it belongs in word_exceptions rather than in the rule. No word_exceptions are written here because the source gives the forms in IPA and not in Arabic orthography, and constructing the spellings would be a guess; a future editor with the orthographic forms should add them, and until then the rule over-applies on MSA and foreign vocabulary.\n\nSCOPED TO WHAT THE SOURCE ATTESTS, NOT TO WHAT IT GENERALISES. Alshammari's summary at p.1337 reads \"/k/ undergoes affrication when it is adjacent to the high front vowels /i/ and /i:/ and to the central vowels /a/ and /a:/ in certain cases\", and the hedge is his. He names two cells he could not attest: central /a/ word-medially, and /a:/ word-finally, both p.1336. The three rules above cover the cells he does attest and leave those two alone. The wider reading, central /a a:/ in every position, is available and is NOT taken: a hedge is an author declining to generalise, and adopting it anyway would be a claim the source does not make. This repo has refused that move three times -- <ch> was left without /tS/ for want of a source, Shihhi's qaf was left to its parent rather than inferred from a marginal-/g/ remark, and the gaf was held to the varieties Saadane and Habash name rather than extended on frequency. A later source attesting the missing cells can widen this, and the file records what was known when it was written.\n\nPOSITIONAL ATTESTATION IS UNEVEN and the author says so: p.1336 records that a word-medial affrication next to central /a/ was difficult to find, and likewise a word-final one next to /a:/. His own summary at p.1337 therefore reads \\\"in certain cases\\\". This spec follows his generalisation over front and central vowels rather than scoping to the attested positions, which is the less conservative of the two readings and is recorded here so the choice is visible.\n\nNO WIKIPEDIA ARTICLE DESCRIBES THIS VARIETY ON ITS OWN. The `wikipedia` field carries the Najdi Arabic articles, which treat Northern Najdi as one of the sub-dialects; they are the parent's references and are listed here because the field is required, not because either article describes the delta modelled above.",
+ "iso639_3": "ars",
+ "sources": [
+  {
+   "id": "alshammari2026",
+   "author": "Alshammari, Khalid K.",
+   "year": 2026,
+   "title": "An Optimality-Theoretic Account of Velar Affrication in Northern Najdi Arabic",
+   "publisher": "Journal of Language Teaching and Research 17(4): 1333-1341",
+   "url": "https://doi.org/10.17507/jltr.1704.19"
+  },
+  {
+   "id": "ingham1994",
+   "author": "Ingham, Bruce",
+   "year": 1994,
+   "title": "Najdi Arabic: Central Arabian",
+   "publisher": "John Benjamins"
+  }
+ ],
+ "location": {
+  "latitude": 30.3371,
+  "longitude": 42.1773,
+  "source": "glottolog",
+  "notes": "Glottolog's representative point for Najdi Arabic."
+ },
+ "wikipedia": [
+  "https://en.wikipedia.org/wiki/Najdi_Arabic",
+  "https://ar.wikipedia.org/wiki/%D9%84%D9%87%D8%AC%D8%A9_%D9%86%D8%AC%D8%AF%D9%8A%D8%A9"
+ ]
+}

@@ -161,7 +161,72 @@
     "notes": "the geographic centre of the United States. General American is a media/education reference accent with NO regional home at all — this is the weakest point in the dataset and should be read as such. [Wikidata Q30 P625]"
   },
   "collapse_geminates": true,
+  "audit": {
+    "ipa_babylm": {
+      "conclusion": "at_ceiling_documented",
+      "measured": "Board PER 0.3666 (n=20103) before the rules this row measured, 0.3602 after them: EN_US_FINAL_S_VOICING_AFTER_TENSE_VOWEL (word-final ⟨s⟩ after a tense vowel, a diphthong or an r-coloured vowel is z: of 410 gold words ending in a vowel digraph plus ⟨s⟩ the gold writes z in 320 and this spec now in 287, was 1; of 364 ending in vowel, ⟨r⟩, ⟨s⟩ the gold writes z in 338 and this spec now in 364, was 69), EN_US_FINAL_Y_MONOSYLLABLE (word-final ⟨y⟩ with no other vowel letter is aɪ: 55 words, gold aɪ in 50, this spec now 55, was 0), and whole-word exceptions for I, I'm, I'll, I'd, I've, is, as, was, has, his (66 words, all as the gold reads them). The rest of the row is two things. First, the gold is espeak-derived and scripts/fold_en_us_notation.py folds six of espeak-ng's conventions out of BOTH sides cumulatively with the harness's own normalize() (broad) and levenshtein(): tense-vowel length 0.3482, the retraction mark on d̠ʒ t̠ʃ 0.3402, ɝ ɚ ~ ɜ ~ əɹ 0.3048, doubled ɹɹ 0.3018, ʌ ~ ə 0.2955, final i ~ ɪ 0.2926; 8072 of 20103 words (40.2%) then match exactly. None of these is a contrast the spelling fails to write, so no valid_ceiling is recorded (T-2583). Second, and larger, what the folds leave is English spelling: 61.9% of the remaining edit operations are one vowel for another (only ɑnli, pæpɝ against oʊnli, peɪpəɹ), the reading a vowel letter does not signal and no rule layer can supply without a lexicon, which is the same floor the cmudict and ipadict rows show for this spec. That residue is counted, not folded, and it is the row's floor for the rule layer as it stands. One engine gap this gold exposes, left as residue: word_exceptions do not see past trailing punctuation, so I, and is. in the gold's raw tokens miss the exception (26 of the 66 exception words carry punctuation).",
+      "reference": "wells1982_vol3, kenyon1953 (the -s morpheme and final ⟨y⟩); see scripts/fold_en_us_notation.py"
+    }
+  },
   "allophone_rules": [
+    {
+      "id": "EN_US_FINAL_S_VOICING_AFTER_TENSE_VOWEL",
+      "phonemes": [
+        "s"
+      ],
+      "surface": "z",
+      "grapheme": [
+        "s"
+      ],
+      "word_final": true,
+      "followed_by": "word_boundary",
+      "preceded_by_phoneme": [
+        "i",
+        "u",
+        "eɪ",
+        "oʊ",
+        "aɪ",
+        "aʊ",
+        "ɔɪ",
+        "ɑ",
+        "ɔ",
+        "ɑɹ",
+        "ɔɹ",
+        "ɪəɹ",
+        "ɛəɹ",
+        "ʊəɹ",
+        "aɪəɹ",
+        "aʊəɹ",
+        "əɹ",
+        "ɝ",
+        "ɚ",
+        "iː",
+        "uː",
+        "ɑːɹ",
+        "ɔːɹ",
+        "ɜːɹ"
+      ],
+      "notes": "A word-final ⟨s⟩ after a tense vowel, a diphthong or an r-coloured vowel is [z]: days [deɪz], goes [ɡoʊz], sees [siz], shoes [ʃuz], cars [kɑɹz], years [jɪɹz], doors [dɔɹz] (Wells 1982 vol. 1 §3.1.4 on the -s morpheme; Kenyon 1953 §on final s). EN_GB_FINAL_S_VOICING covers a voiced consonant before the ⟨s⟩ but not a vowel, and in this spec the vowel-plus-r graphemes (⟨ar or ear⟩) are one slot whose phoneme is ɑɹ ɔɹ ɪəɹ, which that rule's ɹ never matches. The lax short vowels ɪ ɛ æ ʌ ʊ are left out on purpose: this, yes, gas, bus, us end in [s]. Measured on the ipa_babylm gold: of 395 words ending in a vowel digraph plus ⟨s⟩ the gold writes z in 310, and of 352 ending in a vowel, ⟨r⟩ and ⟨s⟩ it writes z in 328, against 1 and 69 here before the rule."
+    },
+    {
+      "id": "EN_US_FINAL_Y_MONOSYLLABLE",
+      "phonemes": [
+        "i"
+      ],
+      "surface": "aɪ",
+      "grapheme": [
+        "y"
+      ],
+      "word_final": true,
+      "word_contains_grapheme_not": [
+        "a",
+        "e",
+        "i",
+        "o",
+        "u"
+      ],
+      "notes": "Word-final ⟨y⟩ is [aɪ] when it is the word's only vowel letter: my, by, why, try, cry, fly, sky, dry, shy, sly, spy, thy (Wells 1982 vol. 1 §3.1; Kenyon 1953). The word-final positional reading of ⟨y⟩ is [i], the ending of happy and city, which is right only after another syllable, so the rule keys on the absence of any other vowel letter in the word. Measured on the ipa_babylm gold: 38 monosyllables end in a consonant letter plus ⟨y⟩, the gold writes aɪ in 37, and this spec wrote it in 0 before the rule."
+    },
     {
       "id": "EN_US_LOT_PALM_MERGER",
       "phonemes": [
@@ -443,6 +508,20 @@
   },
   "word_exceptions_base": "en-GB",
   "word_exceptions": {
+    "i": "aɪ",
+    "i'm": "aɪm",
+    "i'll": "aɪl",
+    "i'd": "aɪd",
+    "i've": "aɪv",
+    "i’m": "aɪm",
+    "i’ll": "aɪl",
+    "i’d": "aɪd",
+    "i’ve": "aɪv",
+    "is": "ɪz",
+    "as": "æz",
+    "was": "wʌz",
+    "has": "hæz",
+    "his": "hɪz",
     "be": "bi",
     "he": "hi",
     "me": "mi",

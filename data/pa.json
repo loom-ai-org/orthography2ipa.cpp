@@ -1009,5 +1009,12 @@
       "word_final": true,
       "notes": "Word-final schwa deletion; see PA_SCHWA_FINAL_b."
     }
-  ]
+  ],
+  "audit": {
+    "vox_communis": {
+      "conclusion": "at_ceiling_documented",
+      "measured": "Board PER 0.4454 (n=4003); scripts/fold_pa_notation.py measures 0.4432 in its own session, the vox_communis snapshot drifting by a few words between fetches. The gold is epitran-derived and writes Punjabi in epitran's conventions. Folding them out of BOTH sides cumulatively with the harness's own normalize() (broad) and levenshtein(): this gold marks no vowel length (we write a length mark in 3511 words, the gold in 1), which takes 0.4432 to 0.2176 and is the largest single mover; its ɑ for this spec's long ⟨ਾ⟩ takes it to 0.1282; and its absence of the low tone letter ˩ takes it to 0.1131. None of these three is a contrast the Gurmukhi script fails to write, so no valid_ceiling is recorded. What remains after the folds is not notation, and it is counted rather than folded: in 836 of 4003 words we write more schwas than the gold, which is medial schwa deletion (ਮਸਜਦ məsdʒəd, ਜਗਜੀਤ dʒəɡdʒit), the rule this spec's notes already cite from Singh & Lehal and deliberately leave unmodelled because it is context-sensitive beyond the rule layer; and in 35 words a word-final voiced aspirate letter surfaces voiceless in the gold (ਸਿੰਘ sɪ̃k) where this spec writes the voiced stop plus tone, the Kanwal & Ritchart devoicing the notes describe for the initial position only. Both are real phonological facts, so the 0.1131 residue is a measured floor for the rule layer as it stands, not a gold defect.",
+      "reference": "spec notes (PA_SCHWA_FINAL_*, singh_lehal_schwa, kanwal_ritchart2015); see scripts/fold_pa_notation.py"
+    }
+  }
 }

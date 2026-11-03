@@ -37,7 +37,22 @@ import sys
 HERE = pathlib.Path(__file__).resolve().parent
 CPP_ROOT = HERE.parent
 SCRATCH = HERE / "_scratch"
-REFERENCE_PYTHON = "/home/flavio/.venvs/piper/bin/python3"
+# The reference side needs numpy + the reference package importable from
+# $O2I_PYTHON_ROOT. Order: $O2I_PYTHON, the interpreter RUNNING the harness
+# (that is what a CI venv is: its python has the installed deps), then the
+# documented local venv path this repository was developed against.
+def _reference_python() -> str:
+    env = os.environ.get("O2I_PYTHON")
+    if env:
+        return env
+    for candidate in (sys.executable,
+                      "/home/flavio/.venvs/piper/bin/python3"):
+        if os.path.exists(candidate):
+            return candidate
+    return sys.executable
+
+
+REFERENCE_PYTHON = _reference_python()
 
 
 def run(command, label):

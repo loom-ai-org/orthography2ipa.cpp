@@ -53,8 +53,8 @@ try:
                                       NORMALIZED_MACROLANGUAGES,
                                       TERRITORY_REPLACEMENTS)
 except ImportError as exc:
-    print(f"this harness needs the langcodes package ({exc}); run it with "
-          f"/home/flavio/.venvs/piper/bin/python3")
+    print(f"this harness needs the langcodes package ({exc}); "
+          f"install it into the interpreter that runs this harness")
     sys.exit(1)
 
 REFERENCE = os.environ.get("O2I_PYTHON_ROOT") or str(CPP_ROOT.parent / "orthography2ipa")
