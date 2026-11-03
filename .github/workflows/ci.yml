@@ -54,8 +54,16 @@ jobs:
         run: mv "$GITHUB_WORKSPACE/reference" "$GITHUB_WORKSPACE/../orthography2ipa"
       - name: Install dependencies
         run: sudo apt-get update && sudo apt-get install -y cmake libicu-dev libboost-dev
+      # langcodes and ovos-spec-tools decide registry resolution and language
+      # distance at run time, so they are pinned to the versions the
+      # reference release was validated with. Every ovos-spec-tools release
+      # is an alpha, which pip installs when no final release exists: left
+      # unpinned, a new alpha changes the reference under the parity gates.
+      # Bump these with the reference commit above.
       - name: Install the reference's Python requirements
-        run: python3 -m pip install numpy langcodes ovos-spec-tools || python3 -m pip install --break-system-packages numpy langcodes ovos-spec-tools
+        run: |
+          deps="numpy langcodes==3.5.1 ovos-spec-tools==1.16.2a1"
+          python3 -m pip install $deps || python3 -m pip install --break-system-packages $deps
       # Pinned to the silabificador.cpp commit held at byte parity with Python
       # silabificador 2.1.1a2, the release the reference gets below.
       - uses: actions/checkout@v4
