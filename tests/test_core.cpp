@@ -4,6 +4,7 @@
 #include "beam.hpp"
 
 #include <cassert>
+#include <cstdlib>
 #include <filesystem>
 #include <fstream>
 #include <stdexcept>
@@ -87,8 +88,10 @@ int main() {
     // A lexicon-dir file belongs to the spec its name resolves to, so en.tsv
     // serves en-GB, the spec that en resolves to.
     {
-        const std::string dir = "/tmp/orthography2ipa-cpp-lexicon-dir";
-        std::filesystem::create_directories(dir);
+        std::string pattern = (std::filesystem::temp_directory_path() / "orthography2ipa-cpp-XXXXXX").string();
+        const char* made = mkdtemp(pattern.data());
+        assert(made != nullptr);
+        const std::string dir = made;
         { std::ofstream output(dir + "/en.tsv"); output << "zorkflim\tzɔɹkflɪm\n"; }
         set_lexicon_directory(dir);
         assert(resolve("en") == "en-GB");
