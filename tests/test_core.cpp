@@ -12,6 +12,14 @@ using namespace orthography2ipa;
 int main() {
     assert(resolve("por") == "pt-PT");
     assert(!available_codes().empty());
+    {
+        // registry.py available_codes drops every clade node, whatever its
+        // code: chm (Mari) is a clade without the x-clade- prefix.
+        for (const auto& code : available_codes()) assert(code != "chm" && code.rfind("x-clade-", 0) != 0);
+        bool listed = false;
+        for (const auto& code : available_codes(true)) listed = listed || code == "chm";
+        assert(listed);
+    }
 
     const auto& portuguese = get("pt");
     const auto& spanish = get("es");

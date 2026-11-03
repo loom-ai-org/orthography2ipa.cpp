@@ -1576,8 +1576,16 @@ std::vector<std::string> available_codes(bool include_clades) {
     std::vector<std::string> out; if (!fs::exists(data_dir)) return out;
     for (const auto& e : fs::directory_iterator(data_dir)) if (e.path().extension() == ".json") {
         const auto code = e.path().stem().string();
-        if (include_clades) out.push_back(code);
-        else if (code.rfind("x-clade-", 0) != 0) out.push_back(code);
+        if (include_clades) { out.push_back(code); continue; }
+        // registry.py available_codes: a classification-only clade node
+        // (`"clade": true`, whatever its code) is not a language. A spec
+        // that does not load stays listed, as in the reference.
+        bool clade = false;
+        try {
+            std::ifstream input(e.path()); ptree raw; boost::property_tree::read_json(input, raw);
+            clade = raw.get<bool>("clade", false);
+        } catch (const std::exception&) {}
+        if (!clade) out.push_back(code);
     }
     std::sort(out.begin(), out.end()); return out;
 }
