@@ -109,6 +109,38 @@ int coarse_distance(const std::string& desired, const std::string& supported) {
     return 5;                                                 // two regions, one language
 }
 
+// ovos_spec_tools.language lang_distance's Arabic fallback, on the tags after
+// _with_norm_region:
+//     scripts = [t.lower() for t in a.split("-")[1:] if len(t) == 4 and t.isalpha()]
+//     if (b.lower() in _MSA and a.split("-")[0].lower() in _ARABIC_VARIETIES
+//             and scripts in ([], ["arab"])):
+//         distance = min(distance, _ARABIC_FALLBACK_DISTANCE)
+// Every subtag after the primary counts, private-use ones included.
+int arabic_fallback(const std::string& a, const std::string& b, int distance) {
+    const auto listed = [](const auto& table, const std::string& key) {
+        return std::find_if(std::begin(table), std::end(table),
+                            [&](const char* entry) { return key == entry; }) != std::end(table);
+    };
+    std::vector<std::string> subtags;
+    for (std::size_t start = 0;;) {
+        const auto dash = a.find('-', start);
+        subtags.push_back(a.substr(start, dash - start));
+        if (dash == std::string::npos) break;
+        start = dash + 1;
+    }
+    if (!listed(_MSA, lower_ascii(b)) || !listed(_ARABIC_VARIETIES, lower_ascii(subtags.front())))
+        return distance;
+    std::vector<std::string> scripts;
+    for (std::size_t i = 1; i < subtags.size(); ++i) {
+        const std::u32string units = uni::to_utf32(subtags[i]);
+        if (units.size() == 4 && std::all_of(units.begin(), units.end(), uni::is_alpha))
+            scripts.push_back(lower_ascii(subtags[i]));
+    }
+    if (scripts.empty() || (scripts.size() == 1 && scripts.front() == "arab"))
+        return std::min(distance, _ARABIC_FALLBACK_DISTANCE);
+    return distance;
+}
+
 // ovos_spec_tools.language lang_distance, memoized per (desired, supported)
 // pair at langcodes' own _DISTANCE_CACHE seam.
 int lang_distance(const std::string& desired, const std::string& supported) {
@@ -135,10 +167,16 @@ int lang_distance_uncached(const std::string& desired, const std::string& suppor
     if (lower_ascii(expanded_a) == lower_ascii(expanded_b)) return 0;
     // _langcodes_distance retries on the candidate's PRIMARY subtag and yields
     // None only when both attempts raise; the coarse measure is the fallback.
-    if (auto direct = langcodes::tag_distance(expanded_a, expanded_b)) return *direct;
-    const std::string primary = expanded_b.substr(0, expanded_b.find('-'));
-    if (auto via_primary = langcodes::tag_distance(expanded_a, primary)) return *via_primary;
-    return coarse_distance(expanded_a, expanded_b);
+    int distance;
+    if (auto direct = langcodes::tag_distance(expanded_a, expanded_b)) {
+        distance = *direct;
+    } else if (auto via_primary = langcodes::tag_distance(
+                   expanded_a, expanded_b.substr(0, expanded_b.find('-')))) {
+        distance = *via_primary;
+    } else {
+        distance = coarse_distance(expanded_a, expanded_b);
+    }
+    return arabic_fallback(expanded_a, expanded_b, distance);
 }
 
 // ovos_spec_tools.language closest_lang: strictly-smaller-wins scan, so a tie

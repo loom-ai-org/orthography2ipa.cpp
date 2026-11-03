@@ -1,4 +1,5 @@
 #include "orthography2ipa/orthography2ipa.hpp"
+#include "orthography2ipa/registry.hpp"
 #include "orthography2ipa/stress.hpp"
 #include "orthography2ipa/schema.hpp"
 #include "orthography2ipa/tone.hpp"
@@ -17,6 +18,29 @@ using namespace orthography2ipa;
 
 int main() {
     assert(resolve("por") == "pt-PT");
+    {
+        // ovos_spec_tools.language lang_distance: an `ara` macrolanguage member
+        // in Arabic script or with no script is at most 5 from bare `ar` or
+        // `arb`. Any other 4-letter subtag, private-use ones included, a
+        // non-MSA candidate, or a language outside `ara` keeps langcodes'
+        // distance. Each expected value is the reference's own.
+        const struct { const char* desired; const char* supported; int distance; } rows[] = {
+            {"acx-419", "ar", 5}, {"aec-XX", "ar", 5}, {"apd-oxendict", "ar", 5},
+            {"acx-419", "arb", 5}, {"apd-Arab", "ar", 5}, {"aec", "arb", 5},
+            {"acx-419", "ar-EG", 64}, {"apd-Latn", "ar", 64}, {"acx-x-test", "ar", 64},
+            {"acx-Arab-x-oman", "ar", 10}, {"ar-Latn", "ar", 20}, {"arz-Latn", "ar", 60},
+            {"yue", "zh", 64}, {"mt", "ar", 134}, {"he", "ar", 134}, {"ar", "acx", 134}};
+        for (const auto& row : rows)
+            assert(registry::lang_distance(row.desired, row.supported) == row.distance);
+        assert(resolve("acx-419") == "ar");
+        assert(resolve("aec-XX") == "ar");
+        assert(resolve("apd-oxendict") == "ar");
+        assert(resolve("acx-x-test") == "acx-x-test");
+        assert(resolve("apd-Latn") == "apd-Latn");
+        assert(resolve("yue") == "yue");
+        assert(resolve("mt") == "mt");
+        assert(resolve("he-IL") == "he");
+    }
     assert(!available_codes().empty());
     {
         // registry.py available_codes drops every clade node, whatever its
