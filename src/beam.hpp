@@ -70,7 +70,7 @@ std::vector<Branch> build_branches(
 std::vector<const char*> grapheme_positions(
     const GraphemeContext& ctx, const LanguageSpec* spec,
     std::optional<std::size_t> syll_idx = std::nullopt,
-    std::optional<std::size_t> stressed_syll_idx = std::nullopt,
+    std::optional<long long> stressed_syll_idx = std::nullopt,
     const std::set<std::size_t>& secondary_syll_idxs = {},
     const std::optional<std::string>& syllable = std::nullopt,
     std::optional<bool> syllable_final = std::nullopt);
@@ -92,7 +92,7 @@ std::vector<Branch> resolve_branches(
     const PhonetokTokenizer& tokenizer,
     const std::map<std::string, std::vector<std::string>>* allophone_map,
     std::optional<std::size_t> syll_idx = std::nullopt,
-    std::optional<std::size_t> stressed_syll_idx = std::nullopt,
+    std::optional<long long> stressed_syll_idx = std::nullopt,
     const std::set<std::size_t>& secondary_syll_idxs = {},
     const std::optional<std::string>& syllable = std::nullopt,
     std::optional<bool> syllable_final = std::nullopt);
