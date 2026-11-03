@@ -399,8 +399,10 @@ bool ends_at(const std::u32string& s, std::size_t pos) {
 }
 
 /// No useful iteration can consume less than zero characters more times than
-/// the subject has positions, so this bounds every repetition loop.
-static std::size_t kRepeatGuard = 0;
+/// the subject has positions, so this bounds every repetition loop. Each
+/// search sets it for its own subject; it is per thread so that a search on
+/// one thread never bounds a search on another.
+thread_local std::size_t repeat_guard = 0;
 
 bool walk(const std::vector<NodePtr>& nodes, std::size_t index, const std::u32string& s,
           std::size_t pos, Caps& caps, const Accept& accept);
@@ -522,7 +524,7 @@ bool match_node(const NodePtr& node, const std::u32string& s, std::size_t pos, C
                 auto finish = [&]() -> bool { return count >= node->min && accept(at); };
                 auto more = [&]() -> bool {
                     if (node->max >= 0 && count >= node->max) return false;
-                    if (static_cast<std::size_t>(count) >= kRepeatGuard) return false;
+                    if (static_cast<std::size_t>(count) >= repeat_guard) return false;
                     Caps before = caps;
                     const bool ok = match_node(node->child, s, at, caps,
                                                [&](std::size_t np) {
@@ -569,7 +571,7 @@ Regex Regex::compile(const std::u32string& pattern) {
 
 bool Regex::search(const std::u32string& subject, Match* out, std::size_t from) const {
     if (from > subject.size()) return false;
-    kRepeatGuard = subject.size() + 1;
+    repeat_guard = subject.size() + 1;
     const Caps fresh(group_count_ + 1,
                     {static_cast<std::size_t>(-1), static_cast<std::size_t>(-1)});
     for (std::size_t start = from; start <= subject.size(); ++start) {

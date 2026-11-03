@@ -100,8 +100,9 @@ install(FILES
     DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/orthography2ipa)
 
 if(BUILD_TESTING)
+    find_package(Threads REQUIRED)
     add_executable(orthography2ipa-tests tests/test_core.cpp)
-    target_link_libraries(orthography2ipa-tests PRIVATE orthography2ipa)
+    target_link_libraries(orthography2ipa-tests PRIVATE orthography2ipa Threads::Threads)
     # The stress/ending parity checks reach the internal beam header
     # (src/beam.hpp), which owns the positional.py port.
     target_include_directories(orthography2ipa-tests PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/src)
