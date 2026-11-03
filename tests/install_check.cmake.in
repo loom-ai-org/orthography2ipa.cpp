@@ -27,7 +27,10 @@ execute_process(COMMAND "@CMAKE_COMMAND@" -S "@CMAKE_SOURCE_DIR@/tests/package_c
 if(NOT configure_result EQUAL 0)
     message(FATAL_ERROR "downstream configure failed: ${configure_result}")
 endif()
-execute_process(COMMAND "@CMAKE_COMMAND@" --build "${prefix}/consumer-build"
+# The linker also searches LD_LIBRARY_PATH, which would hide a shared
+# dependency that the installed package fails to hand on.
+execute_process(COMMAND "@CMAKE_COMMAND@" -E env --unset=LD_LIBRARY_PATH
+                        "@CMAKE_COMMAND@" --build "${prefix}/consumer-build"
                 RESULT_VARIABLE build_result)
 if(NOT build_result EQUAL 0)
     message(FATAL_ERROR "downstream build failed: ${build_result}")

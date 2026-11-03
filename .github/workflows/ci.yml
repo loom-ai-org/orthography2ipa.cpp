@@ -17,6 +17,12 @@ jobs:
         include:
           - compiler: gcc
             silabificador: true
+          # One cell builds both libraries shared and runs the install check:
+          # its consumer links only if the installed package hands the shared
+          # silabificador on.
+          - compiler: gcc
+            silabificador: true
+            shared: true
     runs-on: ubuntu-latest
     env:
       CC: ${{ matrix.compiler == 'clang' && 'clang' || 'gcc' }}
@@ -30,8 +36,10 @@ jobs:
       # importable from the system python the harnesses run it through.
       # Pinned (actions/checkout fetches an exact SHA, which a --depth-1
       # clone cannot) to the reference commit the generated tables and the
-      # parity gates were validated against (TigreGotico/orthography2ipa,
-      # branch dev). Bump it deliberately, alongside regenerating the
+      # parity gates were validated against: the TigreGotico/orthography2ipa
+      # release that tests/reference_version.txt names, which
+      # tools/sync_reference.py pins here together with data/. Bump it
+      # deliberately, alongside regenerating the
       # generated tables (tests/gen_*.py) and re-running the sweeps — never
       # let CI red-spam on upstream drift. The reference then moves one level
       # up, because every harness resolves it as the SIBLING directory
@@ -40,7 +48,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           repository: TigreGotico/orthography2ipa
-          ref: d89484ff654a72852b41d46dbfd18df952a7f0fc
+          ref: ae348df0f4f6755dbe76f0f669d79846754c8280
           path: reference
       - name: Place the reference at its sibling path
         run: mv "$GITHUB_WORKSPACE/reference" "$GITHUB_WORKSPACE/../orthography2ipa"
@@ -59,7 +67,8 @@ jobs:
       - name: Build and install silabificador.cpp
         if: matrix.silabificador
         run: |
-          cmake -S silabificador -B "$RUNNER_TEMP/silabificador-build" -DSILABIFICADOR_BUILD_TESTS=OFF
+          cmake -S silabificador -B "$RUNNER_TEMP/silabificador-build" -DSILABIFICADOR_BUILD_TESTS=OFF \
+            -DBUILD_SHARED_LIBS=${{ matrix.shared && 'ON' || 'OFF' }}
           cmake --build "$RUNNER_TEMP/silabificador-build" --parallel
           cmake --install "$RUNNER_TEMP/silabificador-build" --prefix "$RUNNER_TEMP/silabificador"
       # The reference finds its syllabifier through an entry point, so the
@@ -73,8 +82,17 @@ jobs:
       - name: Configure
         env:
           CMAKE_PREFIX_PATH: ${{ matrix.silabificador && format('{0}/silabificador', runner.temp) || '' }}
-        run: cmake -S . -B build -DBUILD_TESTING=ON
+        run: cmake -S . -B build -DBUILD_TESTING=ON -DBUILD_SHARED_LIBS=${{ matrix.shared && 'ON' || 'OFF' }}
       - name: Build
         run: cmake --build build --parallel
       - name: Test
+        if: ${{ !matrix.shared }}
         run: ctest --test-dir build --output-on-failure
+      # The installed CLI has no RPATH, so it finds both shared libraries
+      # through LD_LIBRARY_PATH. The check links its consumer with that
+      # variable unset.
+      - name: Test the shared install
+        if: matrix.shared
+        env:
+          LD_LIBRARY_PATH: ${{ format('{0}/build/test-install/lib:{1}/silabificador/lib', github.workspace, runner.temp) }}
+        run: ctest --test-dir build --output-on-failure -R 'orthography2ipa-(core|install)$'
