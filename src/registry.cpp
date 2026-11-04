@@ -49,7 +49,8 @@ bool in_catalog(const std::vector<std::string>& available, const std::string& co
 } // namespace
 
 // registry.py _resolve_code, in the documented order.
-std::string resolve_code(const std::string& code_in, const std::vector<std::string>& available) {
+std::string resolve_code(const std::string& code_in, const std::vector<std::string>& available,
+                         bool allow_nearest) {
     if (const auto* hit = find_in(_ALIASES, code_in)) return hit->second;
     // A registered code names its own spec: macro=True below would fold an
     // individual language into its macrolanguage and miss it.
@@ -75,6 +76,7 @@ std::string resolve_code(const std::string& code_in, const std::vector<std::stri
         if (in_catalog(available, fallback)) return fallback;
     }
     if (const auto* hit = find_in(_REGION_DEFAULTS, code)) return hit->second;
+    if (!allow_nearest) return code;
     // An unknown variant falls back to the standard variety: the candidates
     // are the catalog and the old keys of renamed specs, sorted as one set.
     std::vector<std::string> candidates = available;

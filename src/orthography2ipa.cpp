@@ -1738,20 +1738,29 @@ std::vector<AncestorLink> LanguageSpec::get_ancestors(const std::string* role) c
     return chain;
 }
 
-std::string resolve(const std::string& code) {
-    // registry.py `_resolve_code`, matched against the catalog the reference
-    // calls `available`: json_loader.available_json_codes(), i.e. every spec
-    // file on disk (clades included) in SORTED order — the order closest_lang's
-    // tie-break reads, so it is part of the answer and not an implementation
-    // detail. Cached per data directory; set_data_directory() resets it.
+// The catalog that registry.py `_resolve_code` calls `available`:
+// json_loader.available_json_codes(), i.e. every spec file on disk (clades
+// included) in SORTED order — the order closest_lang's tie-break reads, so it
+// is part of the answer and not an implementation detail. Cached per data
+// directory; set_data_directory() resets it.
+static const std::vector<std::string>& resolution_catalog() {
     static std::vector<std::string> catalog;
     static std::string catalog_dir = "\x00";
     if (catalog_dir != data_dir) {
         catalog_dir = data_dir;
         catalog = available_codes(true);
     }
-    return registry::resolve_code(code, catalog);
-}const LanguageSpec& get(const std::string& code) {
+    return catalog;
+}
+
+std::string resolve(const std::string& code) { return registry::resolve_code(code, resolution_catalog()); }
+
+bool resolves_exactly(const std::string& code) {
+    const auto& catalog = resolution_catalog();
+    return std::binary_search(catalog.begin(), catalog.end(), registry::resolve_code(code, catalog, false));
+}
+
+const LanguageSpec& get(const std::string& code) {
     const std::string canonical = resolve(code); std::set<std::string> loading; load_raw(canonical, loading); return cache.at(canonical);
 }
 void set_data_directory(const std::string& path) { data_dir = path; cache.clear(); }
