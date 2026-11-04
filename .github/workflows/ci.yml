@@ -68,7 +68,7 @@ jobs:
       # Bump these with the reference commit above.
       - name: Install the reference's Python requirements
         run: |
-          deps="numpy langcodes==3.5.1 linguatag==0.1.3a1"
+          deps="numpy langcodes==3.5.1 linguatag==0.1.5a1"
           python3 -m pip install $deps || python3 -m pip install --break-system-packages $deps
       # Pinned to the silabificador.cpp commit held at byte parity with Python
       # silabificador 2.1.1a2, the release the reference gets below.

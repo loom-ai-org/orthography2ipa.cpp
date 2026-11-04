@@ -47,12 +47,16 @@ logging.disable(logging.CRITICAL)
 try:
     import linguatag
     from linguatag import lects, matching, regions
+    from linguatag.version import VERSION_STR as LINGUATAG_VERSION
 except ImportError as exc:
     print(f"this harness needs the linguatag package ({exc}); "
           f"install it into the interpreter that runs this harness")
     sys.exit(1)
 import orthography2ipa.registry as registry
 from orthography2ipa.json_loader import available_json_codes
+
+TABLES = CPP_ROOT / "src" / "linguatag_tables.inc"
+GENERATED_FROM = TABLES.read_text(encoding="utf-8").split("\n", 1)[0].rsplit(" ", 1)[-1].rstrip(".")
 
 DRIVER = pathlib.Path(os.path.abspath(sys.argv[1]))
 MODES = ("none", "dialect", "standard")
@@ -65,7 +69,9 @@ ODD = ["", "-", "x-foo", "en--US", "ar-", "-ar", "ar_", "zh-HK-HiuMaanNeural", "
        "zh", "cmn", "zh-CN", "zh-TW", "ur", "ur-PK", "ur-Arab", "en-US-x-twang", "gl-x-central",
        "an-x-cheso", "an-x-ansotano", "ǅa", "İt", "ß", "sh", "mo", "no", "nb", "nn", "und", "root",
        "x-clade-romance", "art-lojban", "zh-guoyu", "sgn-BR", "en-GB-oed", "ast-PT-x-rionor",
-       "pt-PT-x-trasosmontes", "tmg", "aja", "ajg", "ajg-BJ", "pt-BR-x-brasilia", "pt-BR-x-cuiaba"]
+       "pt-PT-x-trasosmontes", "tmg", "aja", "ajg", "ajg-BJ", "pt-BR-x-brasilia", "pt-BR-x-cuiaba",
+       "acy", "acy-CY", "acy-Latn", "acy-Arab", "acy-Arab-CY", "pga", "pga-SS", "pga-Arab", "ACY",
+       "apc", "apc-TR", "ar-TR", "AR-TR", "arb-TR", "ara-TR", "apc-Latn-TR"]
 
 # closest_lang cases where two candidates share the smallest distance.
 TIES = [("pt-PT", ["pt", "pt-PT"]), ("pt-PT", ["pt-PT", "pt"]), ("pt", ["pt-PT", "pt"]),
@@ -119,6 +125,16 @@ def requests():
         add(["pu", tag], lambda: ",".join(lects.private_use(tag)))
         add(["wpu", tag], lambda: lects.without_private_use(tag))
     pairs = [pair for child, parent in parents.items() for pair in ((child, parent), (parent, child))]
+    # A lect against the tags a request names it by: its own tag without the
+    # private-use part (`apc-TR` for `apc-TR-x-cukurova`) and its language in
+    # each region of the tree. The tree, not the tag, decides how far they are.
+    nodes = sorted(node for node in set(parents) | set(parents.values()) if not node.startswith("x-"))
+    tree_regions = sorted({part for node in nodes for part in lects.without_private_use(node).split("-")[1:]
+                           if len(part) == 2})
+    for node in nodes:
+        language = node.split("-")[0]
+        for tag in sorted({lects.without_private_use(node), *(f"{language}-{region}" for region in tree_regions)}):
+            pairs += [(tag, node), (node, tag)]
     pt = [tag for tag in tags if tag.lower().startswith("pt")]
     pairs += [("pt-UY", b) for b in pt] + [(a, "pt-UY") for a in pt] + [("pt-UY-x-foo", b) for b in pt]
     pairs += [(rng.choice(tags), rng.choice(tags)) for _ in range(30000)]
@@ -167,7 +183,12 @@ def main():
         print(f"  {fn}: {total} cases, {differ} differ")
     for line, want, answer in diffs[:40]:
         print(f"  DIFF {line!r}: linguatag {want!r}, cpp {answer!r}")
-    if len(got) != len(cases) or diffs:
+    stale = GENERATED_FROM != LINGUATAG_VERSION
+    if stale:
+        print(f"src/linguatag_tables.inc is generated from linguatag {GENERATED_FROM}, but this "
+              f"interpreter has linguatag {LINGUATAG_VERSION}: install linguatag=={GENERATED_FROM}, "
+              f"or port that release and regenerate with tests/gen_registry_tables.py")
+    if len(got) != len(cases) or diffs or stale:
         print("FAIL")
         return 1
     print("OK")
