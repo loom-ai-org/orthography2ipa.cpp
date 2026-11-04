@@ -6,6 +6,7 @@
 //   path<TAB>code<TAB>source register_lexicon, then lexicon_path(code)
 //   dir<TAB>dir<TAB>code    set_lexicon_directory, then lexicon_path(code)
 //   envdir<TAB>code         lexicon_path(code) under $ORTHOGRAPHY2IPA_LEXICON_DIR
+//   envget<TAB>code         get_lexicon(code) under $ORTHOGRAPHY2IPA_LEXICON_DIR
 #include "orthography2ipa/orthography2ipa.hpp"
 
 #include <iostream>
@@ -21,6 +22,11 @@ namespace {
 std::string run(const std::vector<std::string>& field) {
     const std::string& command = field[0];
     if (command == "resolve") return resolve_lexicon_source(field[1]);
+    if (command == "envget") {
+        std::string entries;
+        for (const auto& [word, ipa] : get_lexicon(field[1])) entries += word + "=" + ipa + ",";
+        return entries;
+    }
     if (command == "get" || command == "path") {
         register_lexicon(field[1], field[2]);
         if (command == "path") return lexicon_path(field[1]).value_or("None");

@@ -37,6 +37,8 @@ def expected(field):
     try:
         if command == "resolve":
             value = str(lexicon.resolve_lexicon_source(field[1]))
+        elif command == "envget":
+            value = "".join(f"{word}={ipa}," for word, ipa in sorted(lexicon.get_lexicon(field[1]).items()))
         elif command in ("get", "path"):
             lexicon.register_lexicon(field[1], field[2])
             if command == "path":
@@ -87,6 +89,11 @@ def main():
         (home / "sub").mkdir(parents=True)
         (home / "lex.tsv").write_text("casa\tkaza\n", encoding="utf-8")
         (home / "sub" / "en.tsv").write_text("zorkflim\tzɔɹkflɪm\n", encoding="utf-8")
+        (root / "pt-PT.tsv").write_text("casa\tkaza\n", encoding="utf-8")
+        (home / "loop.tsv").symlink_to("loop.tsv")
+        (home / "loopdir").mkdir()
+        (home / "loopdir" / "en-GB.tsv").symlink_to("en-GB.tsv")
+        double_root = "//" + str(home).lstrip("/")
         local = [
             ("resolve", "~/lex.tsv"), ("resolve", "~//lex.tsv"), ("resolve", "~/./sub/../lex.tsv"),
             ("resolve", "~/lex.tsv/"), ("resolve", "~"), ("resolve", "~/"), ("resolve", "~/missing.tsv"),
@@ -97,6 +104,8 @@ def main():
             ("get", "pt-PT", "~/lex.tsv"), ("get", "pt-PT", "~/missing.tsv"), ("get", "pt", UNKNOWN_USER + "/x"),
             ("path", "pt-PT", "~/lex.tsv"), ("path", "pt-PT", "~/missing.tsv"),
             ("dir", "~/sub", "en-GB"), ("dir", "~/sub/", "en-GB"), ("dir", UNKNOWN_USER, "en-GB"),
+            ("resolve", "~/loop.tsv"), ("get", "pt-PT", "~/loop.tsv"), ("path", "pt-PT", "~/loop.tsv"),
+            ("dir", ".", "pt-PT"), ("dir", "", "pt-PT"), ("dir", "./", "pt-PT"), ("dir", "/", "pt-PT"),
         ]
         runs = [
             ("HOME=<tmp>", {"HOME": str(home)}, local),
@@ -104,11 +113,19 @@ def main():
             ("HOME=", {"HOME": ""}, [("resolve", "~/lex.tsv"), ("resolve", "~"), ("resolve", "~/home/lex.tsv")]),
             ("HOME=/", {"HOME": "/"}, [("resolve", "~/lex.tsv"), ("resolve", "~" + str(home) + "/lex.tsv")]),
             ("HOME=~z", {"HOME": "~z"}, [("resolve", "~/lex.tsv"), ("resolve", "home/lex.tsv")]),
+            ("HOME=.", {"HOME": "."}, [("dir", "~", "pt-PT"), ("resolve", "~/pt-PT.tsv")]),
+            ("HOME=//", {"HOME": "//"}, [("resolve", "~/" + double_root[2:] + "/lex.tsv"), ("resolve", "~")]),
+            ("HOME=//<tmp>", {"HOME": double_root}, [("resolve", "~/lex.tsv"), ("resolve", "~"),
+                                                     ("dir", "~", "lex")]),
             ("HOME unset", {"HOME": None}, [("resolve", "~/o2i-no-such-lexicon.tsv"), ("resolve", "~")]),
             ("lexicon dir ~/sub", {"HOME": str(home), "ORTHOGRAPHY2IPA_LEXICON_DIR": "~/sub"},
              [("envdir", "en-GB"), ("envdir", "pt-PT")]),
             ("lexicon dir ~unknown", {"HOME": str(home), "ORTHOGRAPHY2IPA_LEXICON_DIR": UNKNOWN_USER},
              [("envdir", "en-GB")]),
+            ("lexicon dir with a symlink loop", {"HOME": str(home), "ORTHOGRAPHY2IPA_LEXICON_DIR": "~/loopdir"},
+             [("envdir", "en-GB"), ("envget", "en-GB"), ("envdir", "pt-PT")]),
+            ("lexicon dir ~/sub, read", {"HOME": str(home), "ORTHOGRAPHY2IPA_LEXICON_DIR": "~/sub"},
+             [("envget", "en-GB"), ("envget", "en-US")]),
         ]
         total = failed = 0
         for label, env, commands in runs:

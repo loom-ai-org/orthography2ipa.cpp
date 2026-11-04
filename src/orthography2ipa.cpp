@@ -20,6 +20,7 @@
 #include <boost/property_tree/ptree.hpp>
 #include <algorithm>
 #include <cctype>
+#include <cerrno>
 #include <cmath>
 #include <filesystem>
 #include <fstream>
@@ -145,9 +146,21 @@ std::string fetch_url(const std::string& url) {
     return body;
 }
 
+// Path.is_file() and Path.is_dir(): false for the stat errors pathlib
+// ignores, a symlink loop among them; any other stat error is raised.
+fs::file_status path_status(const fs::path& path) {
+    std::error_code ec;
+    const fs::file_status status = fs::status(path, ec);
+    if (ec && ec.value() != ENOENT && ec.value() != ENOTDIR && ec.value() != EBADF && ec.value() != ELOOP)
+        throw fs::filesystem_error("status", path, ec);
+    return status;
+}
+bool path_is_file(const fs::path& path) { return fs::is_regular_file(path_status(path)); }
+bool path_is_dir(const fs::path& path) { return fs::is_directory(path_status(path)); }
+
 fs::path resolve_remote_lexicon(const std::string& source) {
     const auto cached = remote_cache_path(source);
-    if (fs::is_regular_file(cached)) return cached;
+    if (path_is_file(cached)) return cached;
     std::string url = source;
     if (source.rfind("hf://", 0) == 0) {
         const std::string spec = source.substr(5); const auto slash = spec.find('/');
@@ -858,12 +871,12 @@ std::string lexicon_dir() {
 std::optional<fs::path> lexicon_dir_file(const std::string& code) {
     const std::string dir = lexicon_dir();
     if (dir.empty()) return std::nullopt;
-    const fs::path exact = fs::path(dir) / (code + ".tsv");
-    if (fs::is_regular_file(exact)) return exact;
-    if (!fs::is_directory(dir)) return std::nullopt;
+    const fs::path exact = posix_path((dir.back() == '/' ? dir : dir + "/") + code + ".tsv");
+    if (path_is_file(exact)) return exact;
+    if (!path_is_dir(dir)) return std::nullopt;
     std::vector<fs::path> files;
     for (const auto& entry : fs::directory_iterator(dir))
-        if (entry.path().extension() == ".tsv") files.push_back(entry.path());
+        if (entry.path().extension() == ".tsv") files.push_back(posix_path(entry.path().string()));
     std::sort(files.begin(), files.end());
     for (const auto& file : files)
         if (resolve(file.stem().string()) == code) return file;
@@ -918,7 +931,7 @@ std::string read_text_utf8(const std::string& bytes) {
 std::shared_ptr<const std::map<std::string, std::string>> load_lexicon(const std::string& code) {
     auto cached = lexicon_cache.find(code); if (cached != lexicon_cache.end()) return cached->second;
     std::map<std::string, std::string> result;
-    if (const auto path = lexicon_path(code); path && fs::is_regular_file(*path)) {
+    if (const auto path = lexicon_path(code); path && path_is_file(*path)) {
         std::ifstream input(*path, std::ios::binary); if (!input) throw std::runtime_error("lexicon not found: " + *path);
         result = parse_lexicon_text(read_text_utf8(std::string(std::istreambuf_iterator<char>(input), {})));
     }
@@ -1569,7 +1582,7 @@ std::string resolve_lexicon_source(const std::string& source) {
     if (source.rfind("http://", 0) == 0 || source.rfind("https://", 0) == 0 || source.rfind("hf://", 0) == 0)
         return resolve_remote_lexicon(source).string();
     const std::string path = expand_user(source);
-    if (!fs::is_regular_file(path)) throw FileNotFoundError("lexicon not found: " + source);
+    if (!path_is_file(path)) throw FileNotFoundError("lexicon not found: " + source);
     return path;
 }
 
@@ -1680,7 +1693,7 @@ void clear_lexicons() { registered_lexicons.clear(); lexicon_directory.reset(); 
 std::vector<std::string> available_lexicon_codes() {
     std::set<std::string> codes; for (const auto& [code, _] : registered_lexicons) codes.insert(code);
     const std::string dir = lexicon_dir();
-    if (!dir.empty() && fs::is_directory(dir)) for (const auto& e : fs::directory_iterator(dir)) if (e.path().extension() == ".tsv") codes.insert(e.path().stem().string());
+    if (!dir.empty() && path_is_dir(dir)) for (const auto& e : fs::directory_iterator(dir)) if (e.path().extension() == ".tsv") codes.insert(e.path().stem().string());
     return {codes.begin(), codes.end()};
 }
 std::map<std::string, std::string> get_lexicon(const std::string& code) { return *load_lexicon(resolve(code)); }
