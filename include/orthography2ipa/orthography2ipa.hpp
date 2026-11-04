@@ -137,7 +137,7 @@ struct LanguageSpec {
     std::vector<std::string> fold_diacritics, vowel_graphemes, dependent_vowels, preposed_vowels, trailing_vowel_axis_digraphs;
     // Per-candidate weights for the weighted-object grapheme form
     // ({"ipa": [...], "weights": [...]}); own-only, sparse.
-    std::map<std::string, std::vector<double>> grapheme_weights;
+    std::map<std::string, std::vector<CandidateWeight>> grapheme_weights;
     std::map<std::string, std::string> tone_inventory;
     bool tone_marks_syllable_final = false;
     std::optional<double> latitude, longitude;
@@ -612,7 +612,7 @@ std::string resolve_lexicon_source(const std::string& source);
 /// weights empty; the weighted-object form {"ipa": [...], "weights": [...]}
 /// carries them; a null (the inheritance tombstone) is passed through as an
 /// empty ipa with weights-less, which the SPLIT preserves as nullopt.
-std::pair<std::optional<std::vector<std::string>>, std::optional<std::vector<double>>>
+std::pair<std::optional<std::vector<std::string>>, std::optional<std::vector<CandidateWeight>>>
 normalize_grapheme_value(const boost::property_tree::ptree& value);
 /// weights.py split_weighted_graphemes: the raw grapheme table -> the flat
 /// (grapheme -> readings) map — keeping the inheritance nulls as nullopt
@@ -620,7 +620,7 @@ normalize_grapheme_value(const boost::property_tree::ptree& value);
 /// semantics — plus the SPARSE weight table (an entry only for keys in the
 /// weighted-object form).
 std::pair<std::map<std::string, std::optional<std::vector<std::string>>>,
-          std::map<std::string, std::vector<double>>>
+          std::map<std::string, std::vector<CandidateWeight>>>
 split_weighted_graphemes(const boost::property_tree::ptree& raw_graphemes);
 void set_lexicon_directory(const std::string& path);
 void clear_lexicons();

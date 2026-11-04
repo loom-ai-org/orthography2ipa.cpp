@@ -31,6 +31,17 @@ struct Candidate {
     bool operator==(const Candidate& other) const { return ipa == other.ipa && score == other.score; }
 };
 
+/// One per-candidate weight as json.load hands it to weights.py. A JSON number
+/// with no fraction and no exponent is an exact Python int, any other number
+/// is a float, and sum() adds the two kinds differently.
+struct CandidateWeight {
+    /// float(weight); infinite for an int too large to convert.
+    double value{};
+    /// The int's decimal digits with an optional '-', no leading zeros; empty
+    /// for a float.
+    std::string integer;
+};
+
 namespace rescorer {
 
 /// phonetok.py SegmentSlot: one position in the structured pronunciation
@@ -227,7 +238,7 @@ public:
 
     /// Per-candidate weights for *grapheme* (lookup key lower-cased), or
     /// nullopt when the grapheme declares no weights (rank cost).
-    std::optional<std::vector<double>> weights_for(const std::string& grapheme) const;
+    std::optional<std::vector<CandidateWeight>> weights_for(const std::string& grapheme) const;
 
     /// phonetok.py ipa_lattice: the structured pronunciation lattice for
     /// *text* — one SegmentSlot per GRAPHEME token, in surface order, each
@@ -282,7 +293,7 @@ private:
 
     const LanguageSpec& spec_;
     std::map<std::u32string, std::vector<std::u32string>> grapheme_ipa_;
-    std::map<std::u32string, std::vector<double>> grapheme_weights_;
+    std::map<std::u32string, std::vector<CandidateWeight>> grapheme_weights_;
     std::set<std::u32string> fold_diacritics_;
     bool add_bos_ = false;
     bool add_eos_ = false;
