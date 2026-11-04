@@ -50,6 +50,8 @@ target_include_directories(orthography2ipa PUBLIC
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
     $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>)
 target_link_libraries(orthography2ipa PUBLIC ICU::uc Boost::headers ${CMAKE_DL_LIBS})
+# A static build links into the shared libraries of its consumers.
+set_target_properties(orthography2ipa PROPERTIES POSITION_INDEPENDENT_CODE ON)
 target_compile_definitions(orthography2ipa PUBLIC
     O2I_DEFAULT_DATA_DIR="${CMAKE_CURRENT_SOURCE_DIR}/data"
     O2I_INSTALL_DATA_DIR="${CMAKE_INSTALL_FULL_DATADIR}/orthography2ipa")
