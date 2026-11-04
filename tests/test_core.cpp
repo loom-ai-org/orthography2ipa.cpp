@@ -2,6 +2,7 @@
 #include "orthography2ipa/registry.hpp"
 #include "orthography2ipa/stress.hpp"
 #include "orthography2ipa/schema.hpp"
+#include "orthography2ipa/exceptions.hpp"
 #include "orthography2ipa/tone.hpp"
 #include "beam.hpp"
 #include "codepoint_regex.hpp"
@@ -516,6 +517,33 @@ int main() {
         assert(ending.has_value() && ending->ending == "er");
         ending = beam::match_grammatical_ending({"com", "ment"}, &french);
         assert(ending.has_value() && !ending->ipa.has_value());  // deferring
+        // weights.py divides by float(sum(weights)), which Python 3.12 adds
+        // with compensation. The expected costs are the reference's.
+        const std::vector<double> tenths = beam::candidate_base_costs({"a", "b", "c"}, std::vector<double>{0.1, 0.2, 0.3}, "g");
+        assert((tenths == std::vector<double>{1.791759469228055, 1.0986122886681096, 0.6931471805599453}));
+        const std::vector<double> spread = beam::candidate_base_costs({"a", "b", "c", "d"}, std::vector<double>{0.7, 0.1, 0.1, 0.1}, "g");
+        assert(spread.front() == 0.35667494393873245);
+        const std::vector<double> big = beam::candidate_base_costs({"a", "b", "c"}, std::vector<double>{1e16, 1.0, 1.0}, "g");
+        assert(big.front() == 2.2204460492503136e-16);
+    }
+
+    // exceptions.py quotes with repr(): ASCII controls as \x escapes, and a
+    // byte that is not UTF-8 as the \udXXX of the str a Python caller holds.
+    // The expected messages are the reference's.
+    {
+        const auto said = [](const std::string& word, const std::string& unmapped) {
+            return std::string(UnmappedScriptError(word, {unmapped}, "pt-PT").what());
+        };
+        assert(said(std::string("a\0b", 3), std::string(1, '\0')) ==
+               "pt-PT: word 'a\\x00b' has unmapped characters '\\x00' not covered by the grapheme table");
+        assert(said("\x1b[0m", "\x1b") ==
+               "pt-PT: word '\\x1b[0m' has unmapped characters '\\x1b' not covered by the grapheme table");
+        assert(said("x\x7fy", "\x7f") ==
+               "pt-PT: word 'x\\x7fy' has unmapped characters '\\x7f' not covered by the grapheme table");
+        assert(said("ab\xff", "\xff") ==
+               "pt-PT: word 'ab\\udcff' has unmapped characters '\\udcff' not covered by the grapheme table");
+        assert(said("ab\xed\xa0\x80", "\xed\xa0\x80") ==
+               "pt-PT: word 'ab\\ud800' has unmapped characters '\\ud800' not covered by the grapheme table");
     }
 
     const auto malformed = validate_lexicon("bad line\n");

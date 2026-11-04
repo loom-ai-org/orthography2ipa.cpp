@@ -1,4 +1,5 @@
 #include "beam.hpp"
+#include "py_float.hpp"
 
 #include "orthography2ipa/orthography2ipa.hpp"
 #include "unicode_util.hpp"
@@ -204,14 +205,18 @@ std::vector<double> candidate_base_costs(
         const std::string& grapheme) {
     (void)grapheme; // only names the malformed-weights warning in Python
     const std::size_t n = ipa.size();
+    // _valid_weights checks a plain running total; the costs divide by
+    // `float(sum(weights))`, which Python adds with compensation.
     bool valid = weights.has_value() && weights->size() == n;
-    double total = 0.0;
+    double running = 0.0;
+    detail::PythonFloatSum sum;
     if (valid)
         for (const double w : *weights) {
             if (w < 0.0) { valid = false; break; }
-            total += w;
+            running += w;
+            sum.add(w);
         }
-    if (valid && !(total > 0.0)) valid = false;
+    if (valid && !(running > 0.0)) valid = false;
     if (!valid) {
         // Malformed (or absent) weights: uniform-descending rank cost —
         // byte-identical to the behaviour that predates weights.
@@ -220,6 +225,7 @@ std::vector<double> candidate_base_costs(
             costs[rank] = static_cast<double>(rank);
         return costs;
     }
+    const double total = sum.value();
     std::vector<double> costs;
     costs.reserve(n);
     for (const double w : *weights) {
