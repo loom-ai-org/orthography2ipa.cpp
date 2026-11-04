@@ -1,4 +1,5 @@
 #include "beam.hpp"
+#include "data_directory.hpp"
 #include "plugin_registry.hpp"
 #include "orthography2ipa/orthography2ipa.hpp"
 #include "orthography2ipa/tone.hpp"
@@ -54,7 +55,7 @@ std::string silent_marks_of(const LanguageSpec& spec) {
     return marks;
 }
 namespace fs = std::filesystem;
-std::string data_dir = schema::data_directory();
+std::string data_dir = schema::default_data_directory();
 std::map<std::string, LanguageSpec> cache;
 std::map<std::string, std::string> registered_lexicons;
 std::optional<std::string> lexicon_directory;

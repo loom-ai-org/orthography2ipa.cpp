@@ -16,8 +16,16 @@ file(READ "${spec}" text)
 string(REPLACE "\"name\": \"European Portuguese\"" "\"name\": \"European Portuguese (installed)\"" text "${text}")
 file(WRITE "${spec}" "${text}")
 unset(ENV{ORTHOGRAPHY2IPA_DATA_DIR})
-execute_process(COMMAND "${prefix}/@CMAKE_INSTALL_BINDIR@/orthography2ipa" --json info pt
-                OUTPUT_VARIABLE output RESULT_VARIABLE run_result)
-if(NOT run_result EQUAL 0 OR NOT output MATCHES "\"name\":\"European Portuguese \\(installed\\)\"")
-    message(FATAL_ERROR "installed CLI did not read the installed specs: ${run_result} ${output}")
-endif()
+# A shared build runs with the libraries of this prefix.
+set(ENV{LD_LIBRARY_PATH} "${prefix}/@CMAKE_INSTALL_LIBDIR@:$ENV{LD_LIBRARY_PATH}")
+# By absolute path, and by bare name through PATH from the prefix, which holds
+# no file of that name.
+foreach(cli "${prefix}/@CMAKE_INSTALL_BINDIR@/orthography2ipa" orthography2ipa)
+    execute_process(COMMAND "@CMAKE_COMMAND@" -E env "PATH=${prefix}/@CMAKE_INSTALL_BINDIR@:$ENV{PATH}"
+                            ${cli} --json info pt
+                    WORKING_DIRECTORY "${prefix}"
+                    OUTPUT_VARIABLE output RESULT_VARIABLE run_result)
+    if(NOT run_result EQUAL 0 OR NOT output MATCHES "\"name\":\"European Portuguese \\(installed\\)\"")
+        message(FATAL_ERROR "installed CLI (${cli}) did not read the installed specs: ${run_result} ${output}")
+    endif()
+endforeach()

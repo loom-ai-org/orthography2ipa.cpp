@@ -54,11 +54,13 @@ target_compile_definitions(orthography2ipa PUBLIC
     O2I_INSTALL_DATA_DIR="${CMAKE_INSTALL_FULL_DATADIR}/orthography2ipa")
 # The specs relative to the installed library, or to the executable it is
 # linked into: an install made with `cmake --install --prefix` into another
-# prefix reads them before the source tree and the configured prefix.
+# prefix reads them before the source tree and the configured prefix. A
+# program of this build tree keeps the source tree.
 file(RELATIVE_PATH o2i_data_from_lib "${CMAKE_INSTALL_FULL_LIBDIR}" "${CMAKE_INSTALL_FULL_DATADIR}/orthography2ipa")
 file(RELATIVE_PATH o2i_data_from_bin "${CMAKE_INSTALL_FULL_BINDIR}" "${CMAKE_INSTALL_FULL_DATADIR}/orthography2ipa")
 target_compile_definitions(orthography2ipa PRIVATE
-    O2I_DATA_FROM_LIBDIR="${o2i_data_from_lib}" O2I_DATA_FROM_BINDIR="${o2i_data_from_bin}")
+    O2I_DATA_FROM_LIBDIR="${o2i_data_from_lib}" O2I_DATA_FROM_BINDIR="${o2i_data_from_bin}"
+    O2I_BUILD_DIR="${CMAKE_BINARY_DIR}")
 target_compile_options(orthography2ipa PRIVATE -Wall -Wextra -Wpedantic)
 if(silabificador_FOUND)
     message(STATUS "silabificador ${silabificador_VERSION}: Portuguese syllables come from it")
@@ -134,6 +136,10 @@ if(BUILD_TESTING)
     configure_file(tests/relocated_install_check.cmake.in ${CMAKE_CURRENT_BINARY_DIR}/relocated_install_check.cmake @ONLY)
     add_test(NAME orthography2ipa-relocated-install
              COMMAND ${CMAKE_COMMAND} -P ${CMAKE_CURRENT_BINARY_DIR}/relocated_install_check.cmake)
+    configure_file(tests/install_layouts_check.cmake.in ${CMAKE_CURRENT_BINARY_DIR}/install_layouts_check.cmake @ONLY)
+    add_test(NAME orthography2ipa-install-layouts
+             COMMAND ${CMAKE_COMMAND} -P ${CMAKE_CURRENT_BINARY_DIR}/install_layouts_check.cmake)
+    set_tests_properties(orthography2ipa-install-layouts PROPERTIES TIMEOUT 3600)
     # `list --family` follows cli.py _cmd_list: it matches the whole path or
     # any one step without regard to case, and an unknown family prints
     # "Unknown family: X" on stderr alone and exits 1.
@@ -264,4 +270,8 @@ if(BUILD_TESTING)
                                         TIMEOUT 3600)
         endif()
     endif()
+    # Every test reads the specs of this source tree, whatever is installed.
+    get_property(o2i_tests DIRECTORY PROPERTY TESTS)
+    set_property(TEST ${o2i_tests} APPEND PROPERTY ENVIRONMENT
+                 "ORTHOGRAPHY2IPA_DATA_DIR=${CMAKE_CURRENT_SOURCE_DIR}/data")
 endif()

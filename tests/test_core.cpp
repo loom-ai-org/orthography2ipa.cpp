@@ -21,6 +21,14 @@
 using namespace orthography2ipa;
 
 int main() {
+    {
+        // schema::data_directory() reads ORTHOGRAPHY2IPA_DATA_DIR on its first
+        // call, so a value set in main() reaches it.
+        const char* env = std::getenv("ORTHOGRAPHY2IPA_DATA_DIR");
+        const std::string dir = std::string(env != nullptr ? env : O2I_DEFAULT_DATA_DIR) + "/";
+        setenv("ORTHOGRAPHY2IPA_DATA_DIR", dir.c_str(), 1);
+        assert(schema::data_directory() == dir);
+    }
     assert(resolve("por") == "pt-PT");
     {
         // ovos_spec_tools.language lang_distance: an `ara` macrolanguage member
