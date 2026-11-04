@@ -826,9 +826,8 @@ std::optional<fs::path> lexicon_dir_file(const std::string& code) {
 
 // Path.read_text(encoding="utf-8"): strict UTF-8, which raises
 // UnicodeDecodeError with the codec's message, then universal newlines, which
-// turn \r\n and a lone \r into \n. The position counts bytes from the start
-// of the file, as it does in the reference for a file shorter than one 8 KiB
-// read.
+// turn \r\n and a lone \r into \n. The error position counts bytes from the
+// start of the file, as the reference's does.
 std::string read_text_utf8(const std::string& bytes) {
     const auto byte = [&bytes](std::size_t i) { return static_cast<unsigned char>(bytes[i]); };
     const auto hex = [](unsigned value) {
