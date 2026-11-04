@@ -457,6 +457,40 @@ int main() {
         register_lexicon("pt", path);
         assert(get_lexicon("pt").at("casa") == "kaza");
         clear_lexicons();
+
+        // lexicon.py get_lexicon reads with universal newlines, keeps the word
+        // as written, and skips a line that is whitespace or is not exactly
+        // two fields. The expected map is the reference's for these bytes.
+        const std::string mixed = dir + "/mixed.tsv";
+        {
+            std::ofstream output(mixed, std::ios::binary);
+            output << "Casa\tA\r\ncasa\tb\rmar\tma\xc9\xbe\textra\nStra\xc3\x9f" "e\tx\n"
+                      "\x1c\t\x1c\n\xe3\x80\x80\t\xe3\x80\x80\nluz\tlu\xca\x83\t\nsol\ts\xc9\x94l\r";
+        }
+        register_lexicon("pt-PT", mixed);
+        const std::map<std::string, std::string> parsed{
+            {"Casa", "A"}, {"casa", "b"}, {"Stra\xc3\x9f" "e", "x"}, {"sol", "s\xc9\x94l"}};
+        assert(get_lexicon("pt-PT") == parsed);
+        clear_lexicons();
+
+        // parse_lexicon_text skips a line that is all Python whitespace, and
+        // only such a line. The expected map is the reference's.
+        const std::map<std::string, std::string> spaced{
+            {"\xe3\x80\x80", "x"}, {"A", "b"}, {"\xc2\x85", "y"}, {"c", "d\r"}};
+        assert(parse_lexicon_text("\xe3\x80\x80\tx\nA\tb\n\x1c\t\x1c\n\xc2\x85\ty\nc\td\r\n") == spaced);
+
+        // A file that is not UTF-8 raises the codec's UnicodeDecodeError.
+        const std::string bad = dir + "/bad.tsv";
+        { std::ofstream output(bad, std::ios::binary); output << "casa\tkaza\nmar\tm\xffr\n"; }
+        register_lexicon("pt-PT", bad);
+        bool raised = false;
+        try {
+            get_lexicon("pt-PT");
+        } catch (const schema::UnicodeDecodeError& error) {
+            raised = std::string(error.what()) == "'utf-8' codec can't decode byte 0xff in position 15: invalid start byte";
+        }
+        assert(raised);
+        clear_lexicons();
         std::filesystem::remove_all(dir);
     }
 

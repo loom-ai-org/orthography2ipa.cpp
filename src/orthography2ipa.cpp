@@ -7,6 +7,7 @@
 #include "orthography2ipa/transform.hpp"
 #include "orthography2ipa/markup.hpp"
 #include "orthography2ipa/registry.hpp"
+#include "orthography2ipa/schema.hpp"
 #include "orthography2ipa/syllabifiers.hpp"
 #include "unicode_util.hpp"
 #include "orthography2ipa/vowels.hpp"
@@ -606,17 +607,20 @@ struct InputWord {
     bool hyphen_joined = false;
 };
 
+/// Python `str.isspace()` for one code point: bidirectional class WS, B or S,
+/// or category Zs. Besides the Zs, Zl and Zp characters that is \t to \r,
+/// U+001C to U+001F and U+0085.
+bool py_isspace(char32_t c) {
+    if ((c >= U'\t' && c <= U'\r') || (c >= 0x1C && c <= 0x1F) || c == U' ' || c == 0x85) return true;
+    const std::string cat = uni::category(c);
+    return cat == "Zs" || cat == "Zl" || cat == "Zp";
+}
+
 /// Python `str.strip()`: whitespace at both ends, by Unicode definition.
 std::u32string u32_strip(const std::u32string& text) {
-    const auto space = [](char32_t c) {
-        if (c == U' ' || c == U'\t' || c == U'\n' || c == U'\v' || c == U'\f' || c == U'\r')
-            return true;
-        const std::string cat = uni::category(c);
-        return cat == "Zs" || cat == "Zl" || cat == "Zp";
-    };
     std::size_t begin = 0, end = text.size();
-    while (begin < end && space(text[begin])) ++begin;
-    while (end > begin && space(text[end - 1])) --end;
+    while (begin < end && py_isspace(text[begin])) ++begin;
+    while (end > begin && py_isspace(text[end - 1])) --end;
     return text.substr(begin, end - begin);
 }
 
@@ -820,6 +824,48 @@ std::optional<fs::path> lexicon_dir_file(const std::string& code) {
     return std::nullopt;
 }
 
+// Path.read_text(encoding="utf-8"): strict UTF-8, which raises
+// UnicodeDecodeError with the codec's message, then universal newlines, which
+// turn \r\n and a lone \r into \n. The error position counts bytes from the
+// start of the file, as the reference's does.
+std::string read_text_utf8(const std::string& bytes) {
+    const auto byte = [&bytes](std::size_t i) { return static_cast<unsigned char>(bytes[i]); };
+    const auto hex = [](unsigned value) {
+        static const char* const digits = "0123456789abcdef";
+        return std::string("0x") + digits[value >> 4] + digits[value & 15];
+    };
+    const auto fail = [&](std::size_t start, std::size_t length, const std::string& reason) {
+        const std::string where = length == 1
+            ? "byte " + hex(byte(start)) + " in position " + std::to_string(start)
+            : "bytes in position " + std::to_string(start) + "-" + std::to_string(start + length - 1);
+        throw schema::UnicodeDecodeError("'utf-8' codec can't decode " + where + ": " + reason);
+    };
+    for (std::size_t i = 0; i < bytes.size();) {
+        const unsigned lead = byte(i);
+        std::size_t length = 1;
+        unsigned low = 0x80, high = 0xBF;
+        if (lead < 0x80) { ++i; continue; }
+        if (lead >= 0xC2 && lead <= 0xDF) length = 2;
+        else if (lead >= 0xE0 && lead <= 0xEF) { length = 3; if (lead == 0xE0) low = 0xA0; if (lead == 0xED) high = 0x9F; }
+        else if (lead >= 0xF0 && lead <= 0xF4) { length = 4; if (lead == 0xF0) low = 0x90; if (lead == 0xF4) high = 0x8F; }
+        else fail(i, 1, "invalid start byte");
+        for (std::size_t k = 1; k < length; ++k) {
+            if (i + k >= bytes.size()) fail(i, k, "unexpected end of data");
+            const unsigned next = byte(i + k);
+            if (next < (k == 1 ? low : 0x80) || next > (k == 1 ? high : 0xBF)) fail(i, k, "invalid continuation byte");
+        }
+        i += length;
+    }
+    std::string text;
+    text.reserve(bytes.size());
+    for (std::size_t i = 0; i < bytes.size(); ++i) {
+        if (bytes[i] != '\r') { text += bytes[i]; continue; }
+        text += '\n';
+        if (i + 1 < bytes.size() && bytes[i + 1] == '\n') ++i;
+    }
+    return text;
+}
+
 std::shared_ptr<const std::map<std::string, std::string>> load_lexicon(const std::string& code) {
     auto cached = lexicon_cache.find(code); if (cached != lexicon_cache.end()) return cached->second;
     std::string source;
@@ -830,14 +876,8 @@ std::shared_ptr<const std::map<std::string, std::string>> load_lexicon(const std
         fs::path path = source;
         if (source.rfind("http://", 0) == 0 || source.rfind("https://", 0) == 0 || source.rfind("hf://", 0) == 0)
             path = resolve_remote_lexicon(source);
-        std::ifstream input(path); if (!input) throw std::runtime_error("lexicon not found: " + source);
-        std::string line;
-        while (std::getline(input, line)) {
-            const auto tab = line.find('\t'); if (tab == std::string::npos || tab == 0 || tab + 1 >= line.size()) continue;
-            const std::string word = unicode_fold_nfc(line.substr(0, tab));
-            const std::string ipa = unicode_nfc(line.substr(tab + 1), false);
-            if (!result.count(word)) result[word] = ipa;
-        }
+        std::ifstream input(path, std::ios::binary); if (!input) throw std::runtime_error("lexicon not found: " + source);
+        result = parse_lexicon_text(read_text_utf8(std::string(std::istreambuf_iterator<char>(input), {})));
     }
     auto loaded = std::make_shared<const std::map<std::string, std::string>>(std::move(result));
     lexicon_cache[code] = loaded;
@@ -1450,12 +1490,14 @@ bool is_ipa_string(const std::string& ipa) {
 
 std::map<std::string, std::string> parse_lexicon_text(const std::string& text) {
     // lexicon.py parse_lexicon_text: "word<TAB>ipa" lines, both halves NFC,
-    // malformed and blank lines skipped, the first entry of a word winning.
+    // lines that are empty or Python whitespace (`not line.strip()`) and
+    // malformed lines skipped, the first entry of a word winning. The word
+    // keeps the case it is written in.
     std::map<std::string, std::string> out;
     std::istringstream input(text);
     std::string line;
     while (std::getline(input, line)) {
-        if (line.empty() || line.find_first_not_of(" \t\r\v\f") == std::string::npos) continue;
+        if (line.empty() || u32_strip(to_utf32(line)).empty()) continue;
         const auto tab = line.find('\t');
         if (tab == std::string::npos || tab == 0 || tab + 1 >= line.size()) {
             // A second tab means a malformed triple; the reference's split
