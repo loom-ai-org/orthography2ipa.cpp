@@ -7,6 +7,15 @@
 #include "orthography2ipa/orthography2ipa.hpp"
 #include "unicode_util.hpp"
 
+#include "data_directory.hpp"
+
+#include <dlfcn.h>
+#if defined(__linux__)
+#include <sys/auxv.h>
+#elif defined(__APPLE__)
+#include <mach-o/dyld.h>
+#endif
+
 #include <algorithm>
 #include <cctype>
 #include <charconv>
@@ -2144,18 +2153,46 @@ bool language_spec_model(Report& report, const Json& json, LanguageSpecModel& ou
 // schema.py DATA_DIR
 // ═══════════════════════════════════════════════════════════════════════════
 
-std::string& data_dir_slot() {
-    static std::string dir = [] {
-        if (const char* override_dir = std::getenv("ORTHOGRAPHY2IPA_DATA_DIR")) return std::string(override_dir);
-#ifdef O2I_DEFAULT_DATA_DIR
-        if (fs::is_directory(O2I_DEFAULT_DATA_DIR)) return std::string(O2I_DEFAULT_DATA_DIR);
-#endif
-#ifdef O2I_INSTALL_DATA_DIR
-        return std::string(O2I_INSTALL_DATA_DIR);
+// The installed data directory beside the shared library or the program that
+// holds this code, so that an install moved to another prefix reads its own
+// specs. Empty when that directory does not hold them, and for a program of
+// the build tree when the directory is outside the build tree: an install
+// beside the build directory must not hide the source tree.
+std::string relocated_data_dir() {
+    Dl_info self{};
+    if (dladdr(reinterpret_cast<void*>(&data_directory), &self) == 0 || self.dli_fname == nullptr) return {};
+    fs::path object = self.dli_fname;
+    // A shared library finds the specs from LIBDIR, the main program from BINDIR.
+    const char* relative = O2I_DATA_FROM_LIBDIR;
+#if defined(__linux__)
+    // glibc names the main program by argv[0], which need not be a path.
+    Dl_info program{};
+    if (dladdr(reinterpret_cast<void*>(getauxval(AT_PHDR)), &program) != 0 &&
+        program.dli_fbase == self.dli_fbase) {
+        object = "/proc/self/exe";
+        relative = O2I_DATA_FROM_BINDIR;
+    }
+#elif defined(__APPLE__)
+    if (self.dli_fbase == static_cast<const void*>(_dyld_get_image_header(0))) relative = O2I_DATA_FROM_BINDIR;
 #else
-        return std::string();
+    return {};
 #endif
-    }();
+    std::error_code ec;
+    const fs::path dir = fs::canonical(object, ec).parent_path();
+    if (ec) return {};
+    const fs::path candidate = (dir / relative).lexically_normal();
+    const fs::path build = fs::weakly_canonical(O2I_BUILD_DIR, ec);
+    const auto in_build = [&build](const fs::path& path) {
+        const fs::path rest = path.lexically_relative(build);
+        return !rest.empty() && *rest.begin() != "..";
+    };
+    if (!ec && in_build(dir) && !in_build(candidate)) return {};
+    if (!fs::is_regular_file(candidate / "pt-PT.json", ec)) return {};
+    return candidate.string();
+}
+
+std::string& data_dir_slot() {
+    static std::string dir = default_data_directory();
     return dir;
 }
 
@@ -2466,6 +2503,19 @@ JsonDecodeError::JsonDecodeError(std::string message, std::size_t pos, std::size
 // ═══════════════════════════════════════════════════════════════════════════
 // schema.py's public API
 // ═══════════════════════════════════════════════════════════════════════════
+
+std::string default_data_directory() {
+    if (const char* override_dir = std::getenv("ORTHOGRAPHY2IPA_DATA_DIR")) return override_dir;
+    if (std::string relocated = relocated_data_dir(); !relocated.empty()) return relocated;
+#ifdef O2I_DEFAULT_DATA_DIR
+    if (fs::is_directory(O2I_DEFAULT_DATA_DIR)) return O2I_DEFAULT_DATA_DIR;
+#endif
+#ifdef O2I_INSTALL_DATA_DIR
+    return O2I_INSTALL_DATA_DIR;
+#else
+    return std::string();
+#endif
+}
 
 const std::string& data_directory() { return data_dir_slot(); }
 

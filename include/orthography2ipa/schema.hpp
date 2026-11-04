@@ -411,9 +411,11 @@ public:
 
 // ─── schema.py validation helpers ──────────────────────────────────────────
 /// schema.py DATA_DIR — the directory the specs are read from. It follows the
-/// registry's own search order (``ORTHOGRAPHY2IPA_DATA_DIR``, then
-/// ``O2I_DEFAULT_DATA_DIR``, then ``O2I_INSTALL_DATA_DIR``) and can be pointed
-/// elsewhere with set_data_directory().
+/// registry's own search order (``ORTHOGRAPHY2IPA_DATA_DIR``, then the install
+/// beside the library or the executable, then ``O2I_DEFAULT_DATA_DIR``, then
+/// ``O2I_INSTALL_DATA_DIR``) on its first call, and can be pointed elsewhere
+/// with set_data_directory(). A program of the build tree skips an install
+/// outside the build tree.
 const std::string& data_directory();
 void set_data_directory(const std::string& path);
 

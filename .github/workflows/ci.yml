@@ -109,4 +109,4 @@ jobs:
         if: matrix.shared
         env:
           LD_LIBRARY_PATH: ${{ format('{0}/build/test-install/lib:{1}/silabificador/lib', github.workspace, runner.temp) }}
-        run: ctest --test-dir build --output-on-failure -R 'orthography2ipa-(core|install)$'
+        run: ctest --test-dir build --output-on-failure -R 'orthography2ipa-(core|install|relocated-install)$'
