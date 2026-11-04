@@ -287,12 +287,13 @@ int language_distance(const std::string& desired, const std::string& supported) 
     else distance = coarse_distance(a, b);
     if (cantonese_against_mandarin(a, b))
         distance = std::max(distance, DIFFERENT_LANGUAGE_DISTANCE);
+    const std::string language = primary_lower(a);
     std::vector<std::string> scripts;
     const auto subtags = split(without_private_use(a));
     for (std::size_t i = 1; i < subtags.size(); ++i)
         if (py_len(subtags[i]) == 4 && py_isalpha(subtags[i])) scripts.push_back(py_lower(subtags[i]));
-    if (to_msa && listed(ARABIC_VARIETIES, primary_lower(a)) &&
-        (scripts.empty() || (scripts.size() == 1 && scripts.front() == "arab")))
+    if (scripts.empty()) scripts.push_back(listed(LATIN_SCRIPT_ARABIC, language) ? "latn" : "arab");
+    if (to_msa && listed(ARABIC_VARIETIES, language) && scripts == std::vector<std::string>{"arab"})
         distance = std::min(distance, ARABIC_FALLBACK_DISTANCE);
     return distance;
 }

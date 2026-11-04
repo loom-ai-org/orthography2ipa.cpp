@@ -11,6 +11,8 @@ harness therefore does not sample — it compares
     `OVERRIDES` names, and every code in the catalog;
   * a mutation battery over those tags (case flips, '_' separators, added
     script/region/variant/private subtags, ISO 639-3 forms);
+  * each language of the lect tree in each region its lects carry, with
+    script, private-use and case forms, where the tree decides the match;
   * linguatag `lang_distance` over the pairs the reference actually ranks,
     with no lect score and with each lect mode;
   * linguatag `lang_distance` over every edge of the lect tree, in both
@@ -44,7 +46,7 @@ import warnings
 logging.disable(logging.CRITICAL)
 import orthography2ipa.registry as registry
 from orthography2ipa.json_loader import available_json_codes
-from linguatag import OVERRIDES, lang_distance, lects
+from linguatag import OVERRIDES, lang_distance, lects, matching
 
 # A private-use tag that names no spec warns as it resolves; the harness
 # compares the resolution, not the warning.
@@ -100,6 +102,35 @@ def resolve_battery():
     return sorted(tags)
 
 
+def lect_tree_battery():
+    """The tags whose nearest spec the lect tree decides.
+
+    A tag in the region of a lect (`ar-TR` for `apc-TR-x-cukurova`) has no spec
+    of its own, and its distance to the lect comes from the tree. Each language
+    of the tree is tried in each region its lects carry; an Arabic variety in
+    each region of any Arabic lect, because the MSA fallback lets every variety
+    reach every other. Each tag also comes with a script, an unknown
+    private-use part and other letter cases.
+    """
+    parents = lects._parents()
+    nodes = [node for node in set(parents) | set(parents.values()) if not node.startswith("x-")]
+    arabic = set(matching._ARABIC_VARIETIES) | {"ara"}
+    regions = {}
+    for node in nodes:
+        language = node.split("-")[0].lower()
+        for part in lects.without_private_use(node).split("-")[1:]:
+            if len(part) == 2:
+                for each in (arabic if language in arabic else {language}):
+                    regions.setdefault(each, set()).add(part)
+    tags = set()
+    for language, places in regions.items():
+        for region in places:
+            tags |= {f"{language}-{region}", f"{language.upper()}-{region}",
+                     f"{language.title()}-{region}", f"{language}-Arab-{region}",
+                     f"{language}-Latn-{region}", f"{language}-{region}-x-zz"}
+    return sorted(tags)
+
+
 def mutate(tag, rng, extra):
     forms = [tag.upper(), tag.lower(), tag.replace("-", "_")]
     if "-" in tag:
@@ -141,7 +172,9 @@ def main():
     if len(extra) > MUTATION_CAP:
         step = len(extra) / MUTATION_CAP
         extra = [extra[int(i * step)] for i in range(MUTATION_CAP)]
-    every = sorted(set(battery) | set(extra))
+    tree = lect_tree_battery()
+    print(f"lect tree battery: {len(tree)} tags")
+    every = sorted(set(battery) | set(extra) | set(tree))
     print(f"resolve battery: {len(every)} tags")
 
     failures = []
