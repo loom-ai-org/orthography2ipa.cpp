@@ -1228,7 +1228,9 @@
       "eu",
       "iu",
       "oi",
-      "ou"
+      "ou",
+      "ny",
+      "nys"
     ],
     "penult_stress_endings": [
       "as",
@@ -1264,12 +1266,22 @@
       "gü",
       "qü"
     ],
-    "notes": "Catalan accentuation per the Institut d'Estudis Catalans (IEC) norm (Gramàtica de la llengua catalana, ch. 3; Wheeler 2005 §3.1). A written accent (à è é í ò ó ú) always wins and marks the stressed vowel. Unmarked words are OXYTONE when they end in a consonant other than -s-preceded-by-a-vowel and other than -en/-in — including the consonant+s plurals (-ns, -rs, -ts, -nts, -ps …), which are oxytone because the plural preserves the stress of the singular (important → importants). A word ending in a falling DIPHTHONG (-ai -au -ei -eu -iu -oi -ou) is oxytone (remei [rəˈmɛj], correu [kuˈrɛw], avui [əˈβuj]) — the diphthong is one syllable, so the word does not end in a bare vowel. Unmarked words are PAROXYTONE when they end in a (single) vowel, in a vowel + -s (-as, -es, -is, -os, -us) or in -en/-in (semblen, parlin). The diaeresis ⟨ï ü⟩ marks hiatus/pronounced ⟨u⟩, NOT stress, so it is deliberately absent from marked_vowels (següent is [səˈɣwen], not [səˈɣwent] with stress on ⟨ü⟩). Proparoxytones always carry a written accent, so the unmarked default is paroxytone. The diphthongs list is the Catalan inventory of tautosyllabic vowel sequences (Wheeler 2005 §2.5; IEC grammar ch. 4): the falling diphthongs ⟨ai au ei eu iu oi ou ui⟩ and the rising ⟨ua ue uo ui⟩ after ⟨g/q⟩. Every other vowel sequence is HIATUS and counts as two syllables — te-ni-a, ve-ï-na, di-a — which is what puts the stress, and therefore the unstressed-vowel reduction, on the right vowel."
+    "notes": "Catalan accentuation per the Institut d'Estudis Catalans (IEC) norm (Gramàtica de la llengua catalana, ch. 3; Wheeler 2005 §3.1). A written accent (à è é í ò ó ú) always wins and marks the stressed vowel. Unmarked words are OXYTONE when they end in a consonant other than -s-preceded-by-a-vowel and other than -en/-in — including the consonant+s plurals (-ns, -rs, -ts, -nts, -ps …), which are oxytone because the plural preserves the stress of the singular (important → importants). A word ending in a falling DIPHTHONG (-ai -au -ei -eu -iu -oi -ou) is oxytone (remei [rəˈmɛj], correu [kuˈrɛw], avui [əˈβuj]) — the diphthong is one syllable, so the word does not end in a bare vowel. Unmarked words are PAROXYTONE when they end in a (single) vowel, in a vowel + -s (-as, -es, -is, -os, -us) or in -en/-in (semblen, parlin). The diaeresis ⟨ï ü⟩ marks hiatus/pronounced ⟨u⟩, NOT stress, so it is deliberately absent from marked_vowels (següent is [səˈɣwen], not [səˈɣwent] with stress on ⟨ü⟩). Proparoxytones always carry a written accent, so the unmarked default is paroxytone. The diphthongs list is the Catalan inventory of tautosyllabic vowel sequences (Wheeler 2005 §2.5; IEC grammar ch. 4): the falling diphthongs ⟨ai au ei eu iu oi ou ui⟩ and the rising ⟨ua ue uo ui⟩ after ⟨g/q⟩. Every other vowel sequence is HIATUS and counts as two syllables — te-ni-a, ve-ï-na, di-a — which is what puts the stress, and therefore the unstressed-vowel reduction, on the right vowel. A word ending in the digraph ⟨ny⟩ /ɲ/ ends in a consonant, so ny and its plural nys join the oxytone endings: the IEC accent table puts oxytones 'acabats en altres terminacions' under 'No s'accentuen' and paroxytones with those endings under 'S'accentuen' (IEC, Ortografia catalana, § 3.1, quadre 29), so unmarked Montseny, estany, company are oxytone. The spec lists ⟨y⟩ only inside ⟨ny⟩, so the syllabifier never takes ⟨y⟩ as a nucleus."
   },
   "quality": "research",
   "script_type": "alphabet",
   "notes": "OLD CATALAN (català antic, roughly the 11th–15th c.) — the data-bearing COMMON CORE of the Catalan diasystem and the parent every modern variety inherits from. It exists because the modern varieties did NOT descend from modern Central Catalan: the Eastern/Western split predates the modern standard, and Balearic descends from the Eastern (Empordà) settlers of the 13th-century conquest, not from Barcelona. Making a dialect a child of Central Catalan asserts a false history, and the false history then generates false phonology — an inherited rule can be overridden by id but not switched off, so Balearic and Valencian were forced to simplify final clusters exactly as Central does. Here the Central innovations live in ca and nowhere else, and each variety declares its own. What this node carries is (a) the pan-Catalan grapheme table, (b) the conservative Old-Catalan phonology on every point where the modern varieties diverge — the seven-vowel system with NO unstressed reduction, /v/ distinct from /b/, the affricate /dʒ/ for ⟨j⟩ and ⟨g⟩ before a front vowel, the glide of ⟨ix⟩ = [jʃ], and word-final ⟨-r⟩ still pronounced (Moll 2006; Rasico 1982; Veny 1982 ch. 1) — and (c) the allophony and sandhi genuinely common to ALL varieties: post-continuant spirantization of /b d ɡ/ with pre-lateral gemination blocking it, final-obstruent devoicing, nasal place assimilation, word-final ⟨-ig⟩ = [tʃ], ⟨x⟩/⟨ex-⟩, cross-word voicing assimilation and phrase-level lenition, and PRE-CONSONANTAL cluster simplification. It is authored against the MODERN orthography (which is deliberately etymological and largely continuous with the medieval one), so its stress block is the modern IEC orthographic accentuation; medieval manuscripts are unaccented and this node is not a spec for reading them. Not modelled, deliberately: the medieval affricates /ts dz/ for ⟨c/ç⟩ and ⟨tz⟩, which are lost in every modern variety, and the apico-alveolar sibilants, which only Valencian still keeps distinct.",
   "sources": [
+    {
+      "id": "iec_ortografia2016",
+      "author": "Institut d'Estudis Catalans",
+      "year": 2016,
+      "title": "Ortografia catalana",
+      "publisher": "Institut d'Estudis Catalans, Barcelona",
+      "url": "https://ddd.uab.cat/pub/pagweb/2008/detotunamicaenllengues/files/2020/01/Ortografia_catalana_IEC-accents.pdf",
+      "pages": "§ 3.1, quadre 29",
+      "notes": "Chapter 3, L'accent i la dièresi, read in the excerpt at the URL. Quadre 29: oxytones ending in a vowel, vowel + s, -en or -in take the accent; oxytones with any other ending do not."
+    },
     {
       "id": "moll1952",
       "author": "Moll, F. de B.",

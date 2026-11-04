@@ -52,8 +52,14 @@ SilabificadorSyllabifier::SilabificadorSyllabifier() {
 
 std::vector<std::string> SilabificadorSyllabifier::language_codes() const {
     // syllabifiers.py language_codes: the Portuguese lects the package covers.
+    // The regional pt-BR specs read the pt-BR grapheme table (graphemes_base),
+    // so they take the pt-BR syllables with it.
     return {"pt", "pt-PT", "pt-BR", "pt-AO", "pt-MZ", "pt-TL",
-            "pt-CV", "pt-GW", "pt-ST", "pt-MO", "pt-UY"};
+            "pt-CV", "pt-GW", "pt-ST", "pt-MO", "pt-UY",
+            "pt-BR-x-bahia", "pt-BR-x-caipira", "pt-BR-x-ce",
+            "pt-BR-x-cuiaba", "pt-BR-x-floripa", "pt-BR-x-fluminen",
+            "pt-BR-x-mg", "pt-BR-x-norte", "pt-BR-x-pr", "pt-BR-x-recife",
+            "pt-BR-x-rj", "pt-BR-x-sp", "pt-BR-x-sul"};
 }
 
 std::vector<std::string> SilabificadorSyllabifier::syllabify(

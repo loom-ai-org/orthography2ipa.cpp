@@ -225,6 +225,14 @@ struct ToneRulesModel {
     std::optional<std::string> notes;
 };
 
+/// schema.py ClosedHiatusModel — a diphthong split by a closing consonant
+/// (``stress.closed_hiatus``).
+struct ClosedHiatusModel {
+    std::vector<std::string> pairs;                     // min_length=1
+    std::vector<std::string> onsets;
+    std::vector<std::string> codas;
+};
+
 /// schema.py StressRulesModel — declarative stress placement.
 struct StressRulesModel {
     long long default_position = -2;
@@ -237,6 +245,7 @@ struct StressRulesModel {
     std::optional<std::vector<std::string>> accent2_final_letters;
     std::optional<std::vector<std::string>> diphthongs;
     std::optional<std::vector<std::string>> ipa_diphthongs;
+    std::optional<ClosedHiatusModel> closed_hiatus;
     std::optional<std::vector<std::string>> vowel_letters;
     bool quantity_sensitive = false;
     bool superheavy_final_attracts = true;
@@ -313,7 +322,9 @@ struct LanguageSpecModel {
     std::optional<std::vector<SandhiRuleModel>> sandhi_rules;
     std::optional<std::vector<AllophoneRuleModel>> allophone_rules;
     long long allophone_passes = 1;
-    std::optional<StressRulesModel> stress;
+    // Union[StressRulesModel, Literal[False], None]: ``false`` takes no block,
+    // the spec opts out of the inherited one.
+    std::optional<std::variant<StressRulesModel, bool>> stress;
     std::optional<ToneRulesModel> tone_rules;
     std::optional<Dict<std::string>> tone_inventory;
     std::optional<bool> tone_marks_syllable_final;

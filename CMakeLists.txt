@@ -27,6 +27,7 @@ add_library(orthography2ipa
     src/inventory.cpp
     src/langcodes.cpp
     src/lattice_per.cpp
+    src/linguatag.cpp
     src/lm.cpp
     src/markup.cpp
     src/orthography2ipa.cpp
@@ -200,7 +201,7 @@ if(BUILD_TESTING)
         # distance over the alias/catalog battery.
         add_test(NAME orthography2ipa-registry-parity
                  COMMAND ${Python3_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/tests/registry_parity.py
-                         $<TARGET_FILE:orthography2ipa-cli> --pairs 800 --mutations 2000)
+                         $<TARGET_FILE:orthography2ipa-cli> --pairs 24000 --mutations 2000)
         # The langcodes engine behind the registry port: standardize_tag,
         # tag_distance and the parse/maximize round-trips against the
         # installed langcodes (CTest-sized battery; --full is a manual sweep).

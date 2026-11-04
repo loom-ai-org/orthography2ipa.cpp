@@ -39,7 +39,8 @@ from orthography2ipa.stress import (  # noqa: E402
 CASES = [
     ("pt-PT", ["falar", "casa", "chuva", "panela", "café", "ponte", "dobrar",
                "avô", "avó", "livros", "volátil", "fácil", "difícil",
-               "português", "publicável", "livros"]),
+               "português", "publicável", "livros",
+               "rainha", "saia", "juiz", "ruindade", "moinho", "paul", "raiz"]),
     ("pt-BR", ["panela", "velho", "ciência", "fazendo"]),
     ("es-ES", ["casa", "seguro", "rápido", "árbol", "reloj", "ciudad",
                "teléfono", "corazón", "espárrago", "ayer", "compás"]),

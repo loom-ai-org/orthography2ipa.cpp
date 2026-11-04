@@ -12,7 +12,7 @@
       "s"
     ],
     "ll": [
-      "ʝ"
+      "ʃ"
     ]
   },
   "allophones_base": "es-ES",
@@ -24,6 +24,14 @@
       ],
       "before_i": [
         "s"
+      ]
+    },
+    "y": {
+      "before_vowel": [
+        "ʃ"
+      ],
+      "default": [
+        "i"
       ]
     }
   },
@@ -42,7 +50,7 @@
       "notes": "General Latin American Spanish (koine) — seseo/yeismo baseline shared by all LatAm varieties (Lipski 1994)."
     }
   ],
-  "notes": "STRUCTURAL STUB. Cuyo (Mendoza / San Juan / San Luis) Spanish — the west-central Cuyano variety, transitional between Rioplatense and Chilean influence within Lipski's (1994) Argentine zone. Only the pan-Latin-American baseline (seseo: c/z->/s/, yeismo: ll->/ʝ/; Lipski 1994) is modelled here; the dialect-specific phonology is deliberately not yet described (stub tier). Ancestry: es-ES-x-medieval -> es-ES -> es-419 -> es-AR -> es-AR-x-cuyo.",
+  "notes": "STRUCTURAL STUB. Cuyo (Mendoza / San Juan / San Luis) Spanish — the west-central Cuyano variety, transitional between Rioplatense and Chilean influence within Lipski's (1994) Argentine zone. Only the pan-Latin-American baseline (seseo: c/z->/s/; Lipski 1994) and the Argentine–Uruguayan merger of ⟨ll⟩ and ⟨y⟩ below are modelled here; the dialect-specific phonology is deliberately not yet described (stub tier). Ancestry: es-ES-x-medieval -> es-ES -> es-419 -> es-AR -> es-AR-x-cuyo. ⟨LL⟩ AND ⟨Y⟩: both are [ʃ] before a vowel (calle [ˈkaʃe], yo [ˈʃo]). Lipski (2018, p. 502): «In most of Argentina and Uruguay, /j/ has traditionally been realized as a voiced fricative, [ʒ], but devoicing to [ʃ] has extended from Buenos Aires and Montevideo to much of the remaining territory.» The devoiced [ʃ] is the value that sentence gives for the present-day spread; [ʒ] is the older value.",
   "quality": "stub",
   "script_type": "alphabet",
   "iso639_3": "spa",
@@ -71,6 +79,16 @@
       "url": null,
       "pages": null,
       "notes": "The comprehensive dialect survey underlying the zone classification (cited via the author's own overview, geo.pdf, which was read)."
+    },
+    {
+      "id": "lipski2018_dialects",
+      "author": "Lipski, John M.",
+      "year": 2018,
+      "title": "Dialects of Spanish and Portuguese",
+      "publisher": "In C. Boberg, J. Nerbonne & D. Watt (eds.), The Handbook of Dialectology, ch. 30, Wiley-Blackwell",
+      "url": null,
+      "pages": "p. 502",
+      "notes": "READ (papers/iberian/lipski_dialects-spanish-portuguese-chapter.pdf). p. 502: «In most of Argentina and Uruguay, /j/ has traditionally been realized as a voiced fricative, [ʒ], but devoicing to [ʃ] has extended from Buenos Aires and Montevideo to much of the remaining territory.»"
     }
   ],
   "wikipedia": [

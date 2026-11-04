@@ -3,67 +3,9 @@
   "name": "Proto-Japonic (family node)",
   "parent": "x-clade-japo1237",
   "script": "IPA-reconstruction",
-  "graphemes": {
-    "a": [
-      "a"
-    ],
-    "i": [
-      "i"
-    ],
-    "u": [
-      "u"
-    ],
-    "e": [
-      "e"
-    ],
-    "o": [
-      "o"
-    ],
-    "p": [
-      "p"
-    ],
-    "t": [
-      "t"
-    ],
-    "k": [
-      "k"
-    ],
-    "b": [
-      "b"
-    ],
-    "d": [
-      "d"
-    ],
-    "g": [
-      "ɡ"
-    ],
-    "s": [
-      "s"
-    ],
-    "m": [
-      "m"
-    ],
-    "n": [
-      "n"
-    ],
-    "l": [
-      "l"
-    ],
-    "r": [
-      "r"
-    ],
-    "w": [
-      "w"
-    ],
-    "j": [
-      "j"
-    ],
-    "h": [
-      "h"
-    ]
-  },
+  "graphemes": {},
   "allophones": {},
-  "notes": "STRUCTURAL ANCESTRY NODE (not a modelled G2P target). Proto-Japonic is the reconstructed common ancestor of the Japonic family (Japanese and Ryukyuan). It exists here only so the ancestry / phylogenetic-distance metrics of the modern varieties that reference it have a node to resolve to; NO phonology is claimed or reconstructed and the minimal grapheme set is a placeholder (afa.json / trk.json stub pattern).",
+  "notes": "STRUCTURAL ANCESTRY NODE (not a modelled G2P target). Proto-Japonic is the reconstructed common ancestor of the Japonic family (Japanese and Ryukyuan). It exists so that the ancestry and phylogenetic-distance metrics of the modern varieties that reference it have a node to resolve to. It carries no grapheme table: the ancestry metrics use only its classification and its ancestor links. A grapheme table needs a cited reconstruction that states its notation and the sound value of each symbol.",
   "quality": "stub",
   "script_type": "reconstruction",
   "iso639_3": null,

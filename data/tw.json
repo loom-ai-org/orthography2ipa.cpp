@@ -9,7 +9,7 @@
   "allophones_base": "ak",
   "allophones": {},
   "positional_graphemes_base": "ak",
-  "iso639_3": "aka",
+  "iso639_3": "twi",
   "glottolog_code": "akan1250",
   "wikidata_qid": "Q36850",
   "notes": "Twi, the Akan literary standard used in Ashanti, Eastern, and parts of Bono/Bono East/Ahafo regions of Ghana; comprises the Asante and Akuapem sub-varieties. The `ak` spec in this dataset already encodes the Asante Twi grapheme/phoneme mapping under the 1961/1978 unified Akan orthography, so `tw` inherits it wholesale (`graphemes_base`/`allophones_base`/`positional_graphemes_base: ak`) rather than duplicating it: Twi and the `ak` (Akan) spec describe the same sound-to-letter mapping, `tw` simply names the individual language code (BCP-47/ISO distinguishes `ak` macrolanguage from `tw`=Twi/`fat`=Fante as individual languages) used by consumers that want the Twi-specific code rather than the Akan macrolanguage code. Differences between Twi and Fante (notably Fante's /ts~dz/ affricate contrast and extra vowel qualities ɪ ʊ) are NOT present in Twi and are captured separately in the `fat` spec.",

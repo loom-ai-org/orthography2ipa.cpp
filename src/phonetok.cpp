@@ -4,6 +4,7 @@
 // std::u32string (Python code points); Token positions/lengths count
 // code points in the normalized input, exactly like Python indices.
 #include "orthography2ipa/phonetok.hpp"
+#include "orthography2ipa/stress.hpp"
 
 #include "beam.hpp"
 #include "orthography2ipa/orthography2ipa.hpp"
@@ -529,15 +530,26 @@ PhonetokTokenizer::PhonetokTokenizer(const LanguageSpec& spec, bool add_bos, boo
       add_bos_(add_bos),
       add_eos_(add_eos),
       collapse_whitespace_(collapse_whitespace) {
-    // Normalised lookup (lowercase keys — Python lowercases the map keys
-    // themselves, not just the trie) from the base grapheme table.
-    for (const auto& [key, values] : spec.graphemes)
-        grapheme_ipa_[uni::lower(u32(key))] = u32vec(values);
+    for (const auto& mark : spec.fold_diacritics) fold_diacritics_.insert(u32(mark));
+    // Normalised lookup from the base grapheme table. A key takes the form
+    // tokenize gives the text (lowercase, NFC, folded diacritics removed), so
+    // the trie can reach every key. A key written in another form yields to
+    // its twin written in that form (phonetok.py _normalised_keys).
+    auto normalised_keys = [this](const auto& table, auto convert, auto& out) {
+        for (const auto& [key, value] : table) {
+            const std::u32string low = uni::lower(u32(key));
+            if (normalise(low) == low) out[low] = convert(value);
+        }
+        for (const auto& [key, value] : table)
+            out.emplace(normalise(uni::lower(u32(key))), convert(value));
+    };
+    normalised_keys(spec.graphemes, [](const std::vector<std::string>& v) { return u32vec(v); },
+                    grapheme_ipa_);
 
-    // Per-candidate weights aligned to grapheme_ipa_ (lowercased keys);
+    // Per-candidate weights aligned to grapheme_ipa_ (normalised keys);
     // sparse — absent → weights_for returns nullopt → rank cost.
-    for (const auto& [key, weights] : spec.grapheme_weights)
-        grapheme_weights_[uni::lower(u32(key))] = weights;
+    normalised_keys(spec.grapheme_weights, [](const std::vector<double>& w) { return w; },
+                    grapheme_weights_);
 
     // Grapheme keys that exist only as positional overrides must still be
     // discoverable by the maximal-munch trie; seed a fallback IPA value
@@ -545,7 +557,7 @@ PhonetokTokenizer::PhonetokTokenizer(const LanguageSpec& spec, bool add_bos, boo
     // the first declared position).
     for (const auto& [grapheme, pos_map] : spec.positional_graphemes) {
         if (pos_map.empty()) continue;
-        const std::u32string key = uni::lower(u32(grapheme));
+        const std::u32string key = normalise(uni::lower(u32(grapheme)));
         if (grapheme_ipa_.count(key)) continue;
         const std::vector<std::string>* candidates = nullptr;
         const auto def = pos_map.find("default");
@@ -557,7 +569,6 @@ PhonetokTokenizer::PhonetokTokenizer(const LanguageSpec& spec, bool add_bos, boo
     trie_ = std::make_unique<GraphemeTrie>();
     trie_->build(grapheme_ipa_, spec.code);
 
-    for (const auto& mark : spec.fold_diacritics) fold_diacritics_.insert(u32(mark));
     for (const auto& vowel : spec.dependent_vowels) dependent_vowels_.insert(u32(vowel));
     // Declared dependent-vowel graphemes longer than one character, by
     // descending length — the lengths supplies_vowel_at must try first.
@@ -574,6 +585,46 @@ PhonetokTokenizer::PhonetokTokenizer(const LanguageSpec& spec, bool add_bos, boo
     vowel_graphemes_ =
         std::make_shared<const std::set<std::string>>(spec.vowel_graphemes.begin(),
                                                       spec.vowel_graphemes.end());
+    closed_hiatus_ = spec.stress_defined && spec.closed_hiatus.has_value();
+}
+
+std::u32string PhonetokTokenizer::normalise(const std::u32string& input) const {
+    // NFC normalization handles combining marks (Arabic harakat, Devanagari
+    // matras, accented Latin characters). The diacritics the spec declares
+    // as segment-less are then folded away: decompose so a precomposed
+    // letter exposes its combining marks, drop the listed ones, recompose.
+    std::u32string text = uni::nfc(input);
+    if (!fold_diacritics_.empty()) {
+        const std::u32string decomposed = uni::nfd(text);
+        std::u32string stripped;
+        stripped.reserve(decomposed.size());
+        for (char32_t c : decomposed)
+            if (!fold_diacritics_.count(std::u32string(1, c))) stripped.push_back(c);
+        text = uni::nfc(stripped);
+    }
+    return text;
+}
+
+std::u32string PhonetokTokenizer::closed_hiatus_prefix(const std::u32string& text,
+                                                       std::size_t pos,
+                                                       const std::u32string& gkey) const {
+    auto is_letter = [](char32_t c) {
+        const char kind = uni::category(c)[0];
+        return kind == 'L' || kind == 'M';
+    };
+    std::size_t start = pos;
+    while (start > 0 && is_letter(text[start - 1])) --start;
+    std::size_t end = pos;
+    while (end < text.size() && is_letter(text[end])) ++end;
+    const std::u32string word = text.substr(start, end - start);
+    auto hit = hiatus_by_word_.find(word);
+    if (hit == hiatus_by_word_.end())
+        hit = hiatus_by_word_.emplace(word, stress::closed_hiatus_positions(uni::to_utf8(word), spec_))
+                  .first;
+    for (std::size_t cut = 1; cut < gkey.size(); ++cut)
+        if (hit->second.count(pos - start + cut) && grapheme_ipa_.count(gkey.substr(0, cut)))
+            return gkey.substr(0, cut);
+    return gkey;
 }
 
 const std::vector<std::u32string>* PhonetokTokenizer::ipa_for(const std::u32string& key) const {
@@ -826,21 +877,7 @@ std::optional<std::vector<std::u32string>> PhonetokTokenizer::positional_u32(
 // phonetok.py PhonetokTokenizer.tokenize — the core tokenization scan.
 std::vector<PhonetokTokenizer::UToken> PhonetokTokenizer::tokenize_u32(
     const std::u32string& input) const {
-    // NFC normalization handles combining marks (Arabic harakat,
-    // Devanagari matras, accented Latin characters).
-    std::u32string text = uni::nfc(input);
-
-    // Fold away the diacritics the spec declares as segment-less:
-    // decompose so a precomposed letter exposes its combining marks, drop
-    // the listed ones, recompose.
-    if (!fold_diacritics_.empty()) {
-        const std::u32string decomposed = uni::nfd(text);
-        std::u32string stripped;
-        stripped.reserve(decomposed.size());
-        for (char32_t c : decomposed)
-            if (!fold_diacritics_.count(std::u32string(1, c))) stripped.push_back(c);
-        text = uni::nfc(stripped);
-    }
+    std::u32string text = normalise(input);
 
     // Arabic-script pre-tokenization normalization (script-scoped).
     if (spec_.script == "Arabic") {
@@ -994,15 +1031,20 @@ std::vector<PhonetokTokenizer::UToken> PhonetokTokenizer::tokenize_u32(
         }
 
         if (gkey.has_value()) {
+            if (closed_hiatus_ && gkey->size() > 1 && vowels::is_orthographic_vowel((*gkey)[0]))
+                gkey = closed_hiatus_prefix(text, pos, *gkey);
             // Vowel-gated digraph. A consonant-initial digraph ending
             // in a high glide letter ⟨u⟩/⟨i⟩ uses that letter as a
             // mute/glide marker only when a vowel follows; before a
             // consonant or word-end the same letter is a syllabic
-            // nucleus. When the digraph-minus-glide is itself a mapped
-            // grapheme, back off to it.
+            // nucleus. When the digraph-minus-glide and the glide letter
+            // are both mapped graphemes, back off. A spec that writes the
+            // letter only inside digraphs keeps the digraph, since the
+            // bare letter has no reading.
             if (gkey->size() >= 2 && (gkey->back() == U'u' || gkey->back() == U'i') &&
                 !vowels::is_orthographic_vowel((*gkey)[0]) &&
-                grapheme_ipa_.count(gkey->substr(0, gkey->size() - 1)) != 0) {
+                grapheme_ipa_.count(gkey->substr(0, gkey->size() - 1)) != 0 &&
+                grapheme_ipa_.count(gkey->substr(gkey->size() - 1)) != 0) {
                 const std::size_t after = pos + gkey->size();
                 const bool has_next = after < n;
                 const char32_t next_ch = has_next ? text[after] : 0;

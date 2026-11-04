@@ -195,7 +195,7 @@ LatticePER lattice_per(const std::string& hyp_ipa, const std::string& ref_text,
 
     // Reading 1: every path through the pre-sandhi sentence lattice.
     const sentence::SentenceLattice lattice =
-        g2p.sentence_lattice(ref_text, "greedy", beam_width);
+        g2p.sentence_lattice(ref_text, "beam", beam_width);
     std::vector<SlotCandidates> slot_candidates;
     for (const auto& word : lattice) {
         if (word.slots.empty()) {

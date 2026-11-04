@@ -3,10 +3,10 @@
 // parser, the `Language` object's normalization chain (prefer_macrolanguage,
 // simplify_script, maximize) and the CLDR language-distance algorithm.
 //
-// The reference reaches langcodes through two calls —
-// `langcodes.standardize_tag(code, macro=True)` in registry.py `_resolve_code`
-// and `langcodes.tag_distance(desired, supported)` through
-// ovos_spec_tools.language `lang_distance` — and both are re-implemented here
+// The reference reaches langcodes through registry.py `_resolve_code`
+// (`langcodes.standardize_tag(code, macro=True)`) and through linguatag, which
+// parses and maximizes tags and calls `langcodes.tag_distance(desired,
+// supported)` in `lang_distance` (see linguatag.hpp). Each is re-implemented here
 // from langcodes' own source, against tables generated from its own data files
 // (src/langcodes_tables.inc, by tests/gen_langcodes_tables.py). Nothing is
 // approximated and nothing is added: a tag that langcodes cannot parse raises

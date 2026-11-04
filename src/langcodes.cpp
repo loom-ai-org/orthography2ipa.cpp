@@ -1,6 +1,6 @@
 // langcodes port: BCP-47 tag parsing, the Language normalization chain, and the
 // CLDR language-distance algorithm, as the reference's registry.py and
-// ovos_spec_tools.language use them. The tables are generated from langcodes'
+// linguatag use them. The tables are generated from langcodes'
 // own data files into src/langcodes_tables.inc; the code below is a
 // line-for-line port of langcodes/tag_parser.py, langcodes/__init__.py
 // (Language, standardize_tag, tag_distance) and

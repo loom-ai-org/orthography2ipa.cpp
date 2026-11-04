@@ -48,6 +48,7 @@ static const std::pair<const char*, const char*> kInheritanceMode[] {
     {"OVERLAY_BY_ID", "overlay_by_id"},
     {"NOT_INHERITED", "not_inherited"},
     {"BASE_SCALAR", "base_scalar"},
+    {"BASE_BLOCK", "base_block"},
     {"OWN_ONLY", "own_only"},
 };
 
@@ -164,7 +165,7 @@ static const std::pair<const char*, const char*> kFieldInheritance[] {
     {"timespan", "own_only"},
     {"valid_ceiling", "own_only"},
     {"audit", "own_only"},
-    {"stress", "not_inherited"},
+    {"stress", "base_block"},
     {"word_exceptions", "base_merge"},
     {"grammatical_endings", "base_merge"},
     {"grapheme_weights", "not_inherited"},

@@ -1,9 +1,12 @@
 #include "orthography2ipa/orthography2ipa.hpp"
+#include "orthography2ipa/linguatag.hpp"
 #include "orthography2ipa/registry.hpp"
 #include "orthography2ipa/stress.hpp"
 #include "orthography2ipa/schema.hpp"
 #include "orthography2ipa/exceptions.hpp"
 #include "orthography2ipa/tone.hpp"
+#include "orthography2ipa/transform.hpp"
+#include "orthography2ipa/types.hpp"
 #include "beam.hpp"
 #include "codepoint_regex.hpp"
 
@@ -17,6 +20,9 @@
 #include <fstream>
 #include <stdexcept>
 #include <thread>
+#include <variant>
+#include <iterator>
+#include <set>
 
 using namespace orthography2ipa;
 
@@ -31,28 +37,38 @@ int main() {
     }
     assert(resolve("por") == "pt-PT");
     {
-        // ovos_spec_tools.language lang_distance: an `ara` macrolanguage member
-        // in Arabic script or with no script is at most 5 from bare `ar` or
-        // `arb`. Any other 4-letter subtag, private-use ones included, a
-        // non-MSA candidate, or a language outside `ara` keeps langcodes'
-        // distance. Each expected value is the reference's own.
+        // linguatag lang_distance: an `ara` macrolanguage member, or `ar`
+        // with any region, in Arabic script or with no script, is at most 5
+        // from a spelling of MSA (`ar`, `arb`, `ar-001`); private use counts
+        // for nothing. Cantonese against `zh` in Simplified script is a
+        // different language (100). Each expected value is the reference's own.
         const struct { const char* desired; const char* supported; int distance; } rows[] = {
             {"acx-419", "ar", 5}, {"aec-XX", "ar", 5}, {"apd-oxendict", "ar", 5},
             {"acx-419", "arb", 5}, {"apd-Arab", "ar", 5}, {"aec", "arb", 5},
-            {"acx-419", "ar-EG", 64}, {"apd-Latn", "ar", 64}, {"acx-x-test", "ar", 64},
-            {"acx-Arab-x-oman", "ar", 10}, {"ar-Latn", "ar", 20}, {"arz-Latn", "ar", 60},
-            {"yue", "zh", 64}, {"mt", "ar", 134}, {"he", "ar", 134}, {"ar", "acx", 134},
+            {"acx-419", "ar-EG", 64}, {"apd-Latn", "ar", 64}, {"acx-x-test", "ar", 5},
+            {"acx-Arab-x-oman", "ar", 5}, {"ar-Latn", "ar", 24}, {"arz-Latn", "ar", 64},
+            {"yue", "zh", 100}, {"mt", "ar", 134}, {"he", "ar", 134}, {"ar", "acx", 134},
             {"ar-SA", "ar", 4}};
         for (const auto& row : rows)
-            assert(registry::lang_distance(row.desired, row.supported) == row.distance);
-        assert(resolve("acx-419") == "ar");
-        assert(resolve("aec-XX") == "ar");
-        assert(resolve("apd-oxendict") == "ar");
-        assert(resolve("acx-x-test") == "acx-x-test");
+            assert(linguatag::lang_distance(row.desired, row.supported) == row.distance);
+        assert(resolve("acx-419") == "acx-OM");
+        assert(resolve("aec-XX") == "aec-EG");
+        assert(resolve("apd-oxendict") == "apd-SD");
+        assert(resolve("acx-x-test") == "acx-OM");
         assert(resolve("apd-Latn") == "apd-Latn");
         assert(resolve("yue") == "yue");
         assert(resolve("mt") == "mt");
         assert(resolve("he-IL") == "he");
+        // A bare tag names its motherland variety; an old key is an alias.
+        assert(resolve("pt") == "pt-PT");
+        assert(resolve("en") == "en-GB");
+        assert(resolve("ar-SA") == "ars-SA");
+        assert(resolve("yue-HK") == "yue");
+        assert(resolve("pt-PT-x-trasosmontes") == "pt-PT-x-tras-os-montes");
+        // Old keys that are the ISO 639-3 code of another language are no
+        // aliases: they resolve unchanged and name no spec.
+        assert(resolve("tmg") == "tmg");
+        assert(resolve("aja") == "aja");
     }
     assert(!available_codes().empty());
     {
@@ -644,6 +660,36 @@ int main() {
         assert(tone::dock_tone_marks("ai", {}) == "ai");  // no marks: no-op
     }
 
+    // stress.closed_hiatus, the semivowel roles of ⟨y⟩ and ⟨w⟩, the ⟨qu⟩
+    // onset grapheme and the declared-diphthong weight. Every expected value
+    // is the reference's (stress._syllables_for, closed_hiatus_positions,
+    // syllable_weight, G2P.transcribe). It runs before the block below
+    // registers a whole-word pt-PT syllabifier for the rest of the process.
+    {
+        const LanguageSpec& pt = get("pt-PT");
+        const LanguageSpec& es = get("es-ES");
+        using V = std::vector<std::string>;
+        assert(stress::syllables_for("rainha", "", pt.diphthongs, &pt) == (V{"ra", "i", "nha"}));
+        assert(stress::syllables_for("saia", "", pt.diphthongs, &pt) == (V{"sai", "a"}));
+        assert(stress::closed_hiatus_positions("rainha", pt) == (std::set<std::size_t>{2}));
+        assert(stress::closed_hiatus_positions("juiz", pt) == (std::set<std::size_t>{2}));
+        assert(stress::closed_hiatus_positions("ruindade", pt).empty());
+        assert(stress::syllables_for("mayo", "", es.diphthongs, &es) == (V{"ma", "yo"}));
+        assert(stress::syllables_for("rey", "", es.diphthongs, &es) == (V{"rey"}));
+        assert(stress::syllables_for("rugby", "", es.diphthongs, &es) == (V{"ru", "gby"}));
+        assert(stress::syllables_for("quieres", "", es.diphthongs, &es) == (V{"quie", "res"}));
+        assert(stress::syllables_for("acequia", "", es.diphthongs, &es) == (V{"a", "ce", "quia"}));
+        assert(stress::syllable_weight("baj") == stress::HEAVY);
+        assert(stress::syllable_weight("ba") == stress::LIGHT);
+        assert(G2P("pt-PT").transcribe("rainha") == "ʁɐˈiɲɐ");
+        assert(G2P("es-ES").transcribe("país") == "paˈis");
+        assert(G2P("es-ES").transcribe("ahorrábamos") == "aoˈraβamos");
+        // "stress": false opts out of the inherited block; el-CY, with no
+        // ISO 639-3 code of its own, takes el's block (BASE_BLOCK).
+        assert(!get("eu-biscayan").stress_defined);
+        assert(get("el-CY").stress_defined);
+    }
+
     // ── Syllabifier lookup resolves the code (registry.py get_syllabifier) ──
     {
         struct WholeWord : SyllabifierPlugin {
@@ -704,6 +750,64 @@ int main() {
         done = true;
         other.join();
         assert(wrong == 0);
+    }
+
+    // types.py FIELD_INHERITANCE["stress"] is BASE_BLOCK, and InheritanceMode
+    // looks a member up by its value.
+    {
+        assert(types::field_inheritance("stress") == types::InheritanceMode::BASE_BLOCK);
+        assert(types::field_inheritance("graphemes") == types::InheritanceMode::BASE_MERGE);
+        assert(types::field_inheritance("allophone_passes") == types::InheritanceMode::NOT_INHERITED);
+        assert(std::string(types::to_string(types::inheritance_mode("base_block"))) == "base_block");
+        // transforms.py VOWEL_SET is vowels.IPA_VOWEL_SYMBOLS: ⟨ə⟩ is a vowel,
+        // so the Lisbon coda rule velarises the ⟨l⟩ after it (the reference's
+        // apply_transform("ˈpəlɐ", "lisbon")).
+        assert(transform::apply_transform("ˈpəlɐ", "lisbon") == "ˈpəɫɐ");
+    }
+
+    // schema.py: Union[StressRulesModel, Literal[False], None] for `stress`
+    // and ClosedHiatusModel. Messages and locations are pydantic 2.12's.
+    {
+        const std::string dir = schema::data_directory();
+        const auto biscayan = schema::validate_spec_file(dir + "/eu-biscayan.json");
+        assert(biscayan.stress && std::holds_alternative<bool>(*biscayan.stress) &&
+               !std::get<bool>(*biscayan.stress));
+        const auto portuguese = schema::validate_spec_file(dir + "/pt-PT.json");
+        assert(portuguese.stress && std::holds_alternative<schema::StressRulesModel>(*portuguese.stress));
+        const auto& hiatus = std::get<schema::StressRulesModel>(*portuguese.stress).closed_hiatus;
+        assert(hiatus && !hiatus->pairs.empty());
+        std::ifstream input(dir + "/eu-biscayan.json");
+        const std::string text((std::istreambuf_iterator<char>(input)), std::istreambuf_iterator<char>());
+        auto errors_for = [&](const std::string& value) {
+            std::string edited = text;
+            const std::string key = "\"stress\": false";
+            edited.replace(edited.find(key), key.size(), "\"stress\": " + value);
+            std::vector<std::string> out;
+            try {
+                schema::validate_spec_json(edited);
+            } catch (const schema::ValidationError& error) {
+                for (const auto& m : error.messages()) {
+                    std::string loc;
+                    for (const auto& part : m.loc) loc += (loc.empty() ? "" : ".") + part.text();
+                    out.push_back(loc + " | " + m.type + " | " + m.msg);
+                }
+            }
+            return out;
+        };
+        assert(errors_for("true") == (std::vector<std::string>{
+            "stress.StressRulesModel | model_type | Input should be a valid dictionary or instance of StressRulesModel",
+            "stress.literal[False] | literal_error | Input should be False"}));
+        assert(errors_for("{\"closed_hiatus\": {\"pairs\": []}}") == (std::vector<std::string>{
+            "stress.StressRulesModel.closed_hiatus.pairs | too_short | List should have at least 1 item after validation, not 0",
+            "stress.literal[False] | literal_error | Input should be False"}));
+        assert(errors_for("{\"closed_hiatus\": {\"pairs\": [\"ai\"], \"x\": 1}}") == (std::vector<std::string>{
+            "stress.StressRulesModel.closed_hiatus.x | extra_forbidden | Extra inputs are not permitted",
+            "stress.literal[False] | literal_error | Input should be False"}));
+        assert(errors_for("{\"closed_hiatus\": null}").empty());
+        // schema.py validate_all(): every shipped spec validates.
+        const auto results = schema::validate_all();
+        assert(results.failures.empty());
+        assert(results.ok.size() == schema::iter_spec_files().size());
     }
     return 0;
 }

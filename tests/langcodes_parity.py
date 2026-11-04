@@ -137,7 +137,7 @@ def registry_tags():
     logging.disable(logging.CRITICAL)
     from orthography2ipa import registry
     tags = set()
-    for table in (registry._ALIASES, registry._BARE_DEFAULTS, registry._REGION_DEFAULTS):
+    for table in (registry._ALIASES, registry._RENAMED, registry._REGION_DEFAULTS):
         tags.update(table.keys())
         tags.update(table.values())
     return tags

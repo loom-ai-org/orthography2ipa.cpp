@@ -2,67 +2,9 @@
   "code": "arc",
   "name": "Aramaic",
   "script": "Latin",
-  "graphemes": {
-    "a": [
-      "a"
-    ],
-    "i": [
-      "i"
-    ],
-    "u": [
-      "u"
-    ],
-    "e": [
-      "e"
-    ],
-    "o": [
-      "o"
-    ],
-    "p": [
-      "p"
-    ],
-    "t": [
-      "t"
-    ],
-    "k": [
-      "k"
-    ],
-    "b": [
-      "b"
-    ],
-    "d": [
-      "d"
-    ],
-    "g": [
-      "ɡ"
-    ],
-    "s": [
-      "s"
-    ],
-    "m": [
-      "m"
-    ],
-    "n": [
-      "n"
-    ],
-    "l": [
-      "l"
-    ],
-    "r": [
-      "r"
-    ],
-    "w": [
-      "w"
-    ],
-    "j": [
-      "j"
-    ],
-    "h": [
-      "h"
-    ]
-  },
+  "graphemes": {},
   "allophones": {},
-  "notes": "STRUCTURAL CONTACT / ANCESTRY STUB (not a modelled G2P target). Aramaic is a Northwest (Central) Semitic language, for centuries the lingua franca of the Near East and the principal adstrate/substrate of Hebrew, of the Mesopotamian and Levantine Arabic dialects, and a co-liturgical language. It exists here only so specs referencing it as a contact node have something to resolve to; the grapheme set is a placeholder and no phonology is claimed (gn.json stub pattern).",
+  "notes": "STRUCTURAL CONTACT / ANCESTRY STUB (not a modelled G2P target). Aramaic is a Northwest (Central) Semitic language, for centuries the lingua franca of the Near East and the principal adstrate/substrate of Hebrew, of the Mesopotamian and Levantine Arabic dialects, and a co-liturgical language. It exists so that specs that reference it as a contact node have a node to resolve to. It carries no grapheme table. A table needs a cited description of one Aramaic writing system (for example the Syriac or the Square script) and the sound value of each letter.",
   "quality": "stub",
   "script_type": "alphabet",
   "iso639_3": "arc",

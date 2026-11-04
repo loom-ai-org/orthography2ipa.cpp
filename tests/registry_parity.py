@@ -1,16 +1,20 @@
 #!/usr/bin/env python3
 """Registry-resolution parity harness: the C++ `resolve` surface vs the
-reference registry.py `resolve()` / ovos_spec_tools `lang_distance`.
+reference registry.py `resolve()` / linguatag `lang_distance`.
 
 registry.py's resolution is the ONE gate every other surface sits behind: a tag
 that resolves to the wrong spec silently transcribes a different language. This
 harness therefore does not sample — it compares
 
-  * every alias key and value in registry.py `_ALIASES`, every
-    `_BARE_DEFAULTS`/`_REGION_DEFAULTS` key, and every code in the catalog;
+  * every alias key and value in registry.py `_ALIASES` (old keys of renamed
+    specs included), every `_REGION_DEFAULTS` key, every language linguatag
+    `OVERRIDES` names, and every code in the catalog;
   * a mutation battery over those tags (case flips, '_' separators, added
     script/region/variant/private subtags, ISO 639-3 forms);
-  * `lang_distance` over the pairs the reference actually ranks.
+  * linguatag `lang_distance` over the pairs the reference actually ranks,
+    with no lect score and with each lect mode;
+  * linguatag `lang_distance` over every edge of the lect tree, in both
+    directions and in each lect mode.
 
 Usage: registry_parity.py <path-to-cli> [--pairs N]
 
@@ -36,10 +40,15 @@ if not (pathlib.Path(reference) / "orthography2ipa" / "phonetok.py").is_file():
 sys.path.insert(0, reference)
 
 import logging
+import warnings
 logging.disable(logging.CRITICAL)
 import orthography2ipa.registry as registry
 from orthography2ipa.json_loader import available_json_codes
-from ovos_spec_tools.language import lang_distance
+from linguatag import OVERRIDES, lang_distance, lects
+
+# A private-use tag that names no spec warns as it resolves; the harness
+# compares the resolution, not the warning.
+warnings.simplefilter("ignore", registry.UnknownVariantWarning)
 
 CLI = pathlib.Path(os.path.abspath(sys.argv[1]))
 MUTATION_CAP = int(os.environ.get("O2I_REGISTRY_MUTATIONS", "6000"))
@@ -71,8 +80,10 @@ def resolve_battery():
     tags = set(codes)
     tags |= set(registry._ALIASES.keys())
     tags |= set(registry._ALIASES.values())
-    tags |= set(registry._BARE_DEFAULTS.keys())
+    tags |= set(registry._RENAMED.keys())
+    tags |= set(registry._RENAMED.values())
     tags |= set(registry._REGION_DEFAULTS.keys())
+    tags |= set(OVERRIDES)
     # ISO 639-3 / 1 forms of the catalog's primary subtags, and the forms the
     # alias table exists to catch.
     tags |= {"por", "eng", "spa", "fra", "deu", "ita", "nld", "swe", "dan", "nor",
@@ -81,7 +92,9 @@ def resolve_battery():
              "arg", "lat", "arb", "phn", "acy", "peo", "pal", "tgk", "prs", "bxr",
              "diq", "quz", "quy", "tw", "fat", "mhr", "mrj", "aju", "als", "rmy",
              "src", "oji", "mnk", "haz", "kas", "bcc", "arz", "ary", "apc", "ajp",
-             "afb", "acw", "acm", "acx", "adq"}
+             "afb", "acw", "acm", "acx", "adq", "aja", "tmg", "ajg", "gej", "gen",
+             "tpw", "tpn", "vsn", "pnb", "haz", "bar", "cbk", "bbz", "yue-HK",
+             "yue-MO", "yue-Hant", "ar-001", "en", "pt", "ur", "ar"}
     return sorted(tags)
 
 
@@ -101,7 +114,7 @@ def mutate(tag, rng, extra):
 
 
 def main():
-    pairs_limit = 4000
+    pairs_limit = 72000
     global MUTATION_CAP
     for index, argument in enumerate(sys.argv):
         if argument == "--pairs" and index + 1 < len(sys.argv):
@@ -144,23 +157,43 @@ def main():
         got = resolved.get(tag)
         if got != want:
             failures.append(("resolve", tag, want, got))
+    print(f"resolve tags: {len(every)} in, {len(resolved)} out")
     print(f"resolve: {len(every) - len(failures)}/{len(every)}")
 
-    # lang_distance over real pairs: every tag against a sample of catalog codes.
+    # lang_distance over real pairs: tags against a sample of catalog codes,
+    # in every lect mode, through one CLI process.
     sample = rng.sample(available_json_codes(), 60)
-    pair_cases = [(a, b) for a in battery[:400] for b in sample][:pairs_limit]
+    tags = battery[:400] + rng.sample(battery, min(len(battery), 400))
+    pair_cases = [(a, b, mode) for a in tags for b in sample
+                  for mode in ("none", "dialect", "standard")][:pairs_limit]
+    # The sampled pairs rarely meet two lects of one language, so the lect
+    # tree is compared edge by edge, outside the --pairs limit.
+    lect_cases = [(a, b, mode) for child, parent in lects._parents().items()
+                  for a, b in ((child, parent), (parent, child))
+                  for mode in ("dialect", "standard")]
+    print(f"lect tree pairs: {len(lect_cases)}")
+    pair_cases += lect_cases
+    lines = "".join(f"{a}\t{b}\t{mode}\n" for a, b, mode in pair_cases)
+    run = subprocess.run([str(CLI), "resolve", "--distances"], input=lines,
+                         capture_output=True, text=True)
+    if run.returncode != 0:
+        print(f"CLI resolve --distances rc={run.returncode}: {run.stderr.strip()[:200]}")
+        return 1
+    answers = run.stdout.split("\n")[:-1]
+    print(f"lang_distance pairs: {len(pair_cases)} in, {len(answers)} out")
+    if len(answers) != len(pair_cases):
+        return 1
     distance_failures = []
-    for desired, supported in pair_cases:
-        want = lang_distance(desired, supported)
-        got = cli_args("resolve", desired, "--lang-distance", supported)
+    for (desired, supported, mode), got in zip(pair_cases, answers):
+        want = lang_distance(desired, supported, None if mode == "none" else mode)
         if str(want) != got:
-            distance_failures.append((desired, supported, want, got))
+            distance_failures.append((desired, supported, mode, want, got))
     print(f"lang_distance: {len(pair_cases) - len(distance_failures)}/{len(pair_cases)}")
 
     for kind, a, want, got in failures[:40]:
         print(f"  FAIL {kind}: {a!r}: reference {want!r} vs cpp {got!r}")
-    for a, b, want, got in distance_failures[:40]:
-        print(f"  FAIL lang_distance({a!r}, {b!r}): reference {want} vs cpp {got}")
+    for a, b, mode, want, got in distance_failures[:40]:
+        print(f"  FAIL lang_distance({a!r}, {b!r}, lects={mode}): reference {want} vs cpp {got}")
     return 1 if failures or distance_failures else 0
 
 

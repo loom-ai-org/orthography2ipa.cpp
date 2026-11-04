@@ -1,5 +1,6 @@
 #include "orthography2ipa/orthography2ipa.hpp"
 #include "orthography2ipa/stress.hpp"
+#include "orthography2ipa/linguatag.hpp"
 #include "orthography2ipa/registry.hpp"
 #include "orthography2ipa/tone.hpp"
 #include "py_float.hpp"
@@ -222,22 +223,52 @@ int main(int argc, char** argv) {
             // batch codes into one process.
             // --lang-distance is a one-shot mode: it measures the LAST given
             // code against its value, prints the integer, and stops.
+            // --lects dialect|standard adds linguatag's lect score to it.
+            // `resolve --distances` reads `desired TAB supported TAB mode`
+            // lines from stdin (mode: none, dialect or standard) and prints
+            // one linguatag lang_distance per line.
             const std::vector<std::string> catalog = available_codes(true);
+            const auto lect_mode = [](const std::string& name) {
+                if (name == "none") return linguatag::Lects::none;
+                if (name == "dialect") return linguatag::Lects::dialect;
+                if (name == "standard") return linguatag::Lects::standard;
+                throw std::invalid_argument("lects must be none, dialect or standard, not " + name);
+            };
             std::vector<std::string> codes;
             std::string other;
+            linguatag::Lects lects = linguatag::Lects::none;
             bool distance_mode = false;
+            bool distances_mode = false;
             while (i < argc) {
                 const std::string option = argv[i++];
                 if (option == "--json") json_output = true;
-                else if (option == "--lang-distance") {
+                else if (option == "--distances") distances_mode = true;
+                else if (option == "--lects") {
+                    if (i >= argc) { usage(); return 2; }
+                    lects = lect_mode(argv[i++]);
+                } else if (option == "--lang-distance") {
                     if (i >= argc) { usage(); return 2; }
                     other = argv[i++];
                     distance_mode = true;
                 } else codes.push_back(option);
             }
+            if (distances_mode) {
+                std::string line;
+                while (std::getline(std::cin, line)) {
+                    const auto first = line.find('\t');
+                    const auto second = line.find('\t', first + 1);
+                    if (first == std::string::npos || second == std::string::npos)
+                        throw std::invalid_argument("--distances needs desired TAB supported TAB mode lines");
+                    std::cout << linguatag::lang_distance(line.substr(0, first),
+                                                          line.substr(first + 1, second - first - 1),
+                                                          lect_mode(line.substr(second + 1)))
+                              << "\n";
+                }
+                return 0;
+            }
             if (codes.empty()) { usage(); return 2; }
             if (distance_mode) {
-                std::cout << registry::lang_distance(codes.back(), other) << "\n";
+                std::cout << linguatag::lang_distance(codes.back(), other, lects) << "\n";
                 return 0;
             }
             for (const auto& requested : codes) {

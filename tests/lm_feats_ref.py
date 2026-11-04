@@ -26,7 +26,7 @@ the spec does not map, and empty lists.
 
 The reference package is imported from $O2I_PYTHON_ROOT, else from the sibling
 directory of this repository. The interpreter must have the reference's
-requirements (numpy, ovos-spec-tools).
+requirements (numpy, linguatag).
 """
 import logging
 import os

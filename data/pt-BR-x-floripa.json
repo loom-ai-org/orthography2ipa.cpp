@@ -1,0 +1,136 @@
+{
+  "code": "pt-BR-x-floripa",
+  "name": "Florianópolis Portuguese (manezinho)",
+  "script": "Latin",
+  "parent": "pt-BR",
+  "quality": "research",
+  "script_type": "alphabet",
+  "iso639_3": "por",
+  "allophone_passes": 2,
+  "graphemes_base": "pt-BR",
+  "allophones_base": "pt-BR",
+  "positional_graphemes_base": "pt-BR",
+  "notes": "The traditional speech of native Florianópolis, the 'manezinho' or 'ilhéu' variety of the island of Santa Catarina. Two features set it apart from the pt-BR base. Coda /S/ is palato-alveolar [ʃ ʒ]: Brescancini (2015: 82) finds 'a variante palato-alveolar como predominante na amostra [...] em 83% das ocorrências'. /t d/ stay stops before [i]: 'Uma das características mais evidentes no falar \"manezinho\" é ausência da africação de /t,d/' (Dias 2010: 2). The stops describe native speakers: the ALiB rates palatalisation in the capital as 'moderada' (Battisti & Dornelles Filho 2015: 226), because the city has many migrants (Dias 2010: 2). Everything else is inherited from pt-BR.",
+  "sources": [
+    {
+      "id": "brescancini2015",
+      "author": "Brescancini, C.R.",
+      "year": 2015,
+      "title": "A palatalização em coda em Florianópolis/SC: variáveis sociais",
+      "publisher": "Working Papers em Linguística (UFSC) 16(1): 75-97",
+      "url": "https://periodicos.ufsc.br/index.php/workingpapers/article/download/1984-8420.2015v16n1p75/30779/140284",
+      "pages": "82",
+      "notes": "doi:10.5007/1984-8420.2015v16n1p75"
+    },
+    {
+      "id": "dias2010",
+      "author": "Dias, E.C.O.",
+      "year": 2010,
+      "title": "Uso variável das oclusivas alveolares /t, d/ em Florianópolis",
+      "publisher": "Working Papers em Linguística (UFSC), special issue: 1-19",
+      "url": "https://periodicos.ufsc.br/index.php/workingpapers/article/download/1984-8420.2010v11nespp1/17210/57527",
+      "pages": "2",
+      "notes": null
+    },
+    {
+      "id": "battisti_dornellesfilho2015",
+      "author": "Battisti, E. & Dornelles Filho, A.A.",
+      "year": 2015,
+      "title": "Análise em tempo real da palatalização de /t/ e /d/ no português falado em uma comunidade ítalo-brasileira",
+      "publisher": "Revista da ABRALIN 14(1): 221-246",
+      "url": "https://revista.abralin.org/index.php/abralin/article/download/1239/1162/549",
+      "pages": "226",
+      "notes": "Summarises the ALiB capital map of /t d/ palatalisation (Cardoso et al. 2014: 123)."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Florian%C3%B3polis",
+    "https://pt.wikipedia.org/wiki/Manezinho",
+    "https://pt.wikipedia.org/wiki/Dialeto_florianopolitano"
+  ],
+  "positional_graphemes": {
+    "t": {
+      "before_i": [
+        "t"
+      ]
+    },
+    "d": {
+      "before_i": [
+        "d"
+      ]
+    }
+  },
+  "allophones": {
+    "s": [
+      "s",
+      "ʃ"
+    ],
+    "z": [
+      "z",
+      "ʒ"
+    ]
+  },
+  "allophone_rules": [
+    {
+      "id": "BR_AFFRIC_T_RAISED",
+      "phonemes": [],
+      "surface": "t͡ʃ",
+      "notes": "DISABLED: /t/ stays a stop before [i]; see the positional before_i map."
+    },
+    {
+      "id": "BR_AFFRIC_D_RAISED",
+      "phonemes": [],
+      "surface": "d͡ʒ",
+      "notes": "DISABLED: /d/ stays a stop before [i]; see the positional before_i map."
+    },
+    {
+      "id": "FLORIPA_CODA_S",
+      "phonemes": [
+        "s"
+      ],
+      "surface": "ʃ",
+      "syllable_position": "coda",
+      "notes": "Coda /S/ is palato-alveolar [ʃ] before a voiceless consonant and word-finally (festa, mas). Brescancini (2015: 82): 'a variante palato-alveolar como predominante na amostra [...] em 83% das ocorrências'."
+    },
+    {
+      "id": "FLORIPA_CODA_Z",
+      "phonemes": [
+        "z"
+      ],
+      "surface": "ʒ",
+      "syllable_position": "coda",
+      "notes": "Voiced counterpart of FLORIPA_CODA_S: a coda /z/ before a voiced consonant surfaces as [ʒ] (Brescancini 2015: 82)."
+    },
+    {
+      "id": "BR_CODA_SH_VOICED",
+      "phonemes": [
+        "ʃ"
+      ],
+      "surface": "ʒ",
+      "syllable_position": "coda",
+      "followed_by_phoneme": [
+        "b",
+        "d",
+        "ɡ",
+        "v",
+        "z",
+        "ʒ",
+        "d͡ʒ",
+        "m",
+        "n",
+        "ɲ",
+        "l",
+        "ʎ",
+        "ɾ",
+        "ʁ"
+      ],
+      "notes": "The palatal coda /S/ takes the voicing of a following voiced consonant: mesmo [ˈmeʒmu], desde [ˈdeʒdi], Lisboa [liʒˈboɐ]. Brescancini (2015: 76): '[s] ou [S] antes de consoante surda ou pausa e [z] ou [Z] antes de consoante sonora' (fe[S]ta, me[Z]mo). The rule runs in the second pass, after FLORIPA_CODA_S has written the coda as [ʃ]."
+    }
+  ],
+  "location": {
+    "latitude": -27.593281,
+    "longitude": -48.553047,
+    "source": "wikidata",
+    "notes": "Florianópolis — the island city whose native 'manezinho' speech this spec models. [Wikidata Q132997 P625]"
+  }
+}

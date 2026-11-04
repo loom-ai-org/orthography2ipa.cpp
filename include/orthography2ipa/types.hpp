@@ -28,6 +28,7 @@ enum class InheritanceMode {
     OVERLAY_BY_ID,
     NOT_INHERITED,
     BASE_SCALAR,
+    BASE_BLOCK,
     OWN_ONLY,
 };
 
