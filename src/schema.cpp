@@ -7,6 +7,11 @@
 #include "orthography2ipa/orthography2ipa.hpp"
 #include "unicode_util.hpp"
 
+#include <dlfcn.h>
+#ifdef __linux__
+#include <sys/auxv.h>
+#endif
+
 #include <algorithm>
 #include <cctype>
 #include <charconv>
@@ -2144,9 +2149,35 @@ bool language_spec_model(Report& report, const Json& json, LanguageSpecModel& ou
 // schema.py DATA_DIR
 // ═══════════════════════════════════════════════════════════════════════════
 
+// The installed data directory beside the shared library or the executable
+// that holds this code, so that an install moved to another prefix reads its
+// own specs. Empty when that directory does not hold them.
+std::string relocated_data_dir() {
+    Dl_info self{};
+    if (dladdr(reinterpret_cast<void*>(&data_directory), &self) == 0 || self.dli_fname == nullptr) return {};
+    fs::path object = self.dli_fname;
+#ifdef __linux__
+    // glibc names the main program by argv[0], which need not be a path.
+    Dl_info program{};
+    if (dladdr(reinterpret_cast<void*>(getauxval(AT_PHDR)), &program) != 0 &&
+        program.dli_fbase == self.dli_fbase)
+        object = "/proc/self/exe";
+#endif
+    std::error_code ec;
+    const fs::path dir = fs::canonical(object, ec).parent_path();
+    if (ec) return {};
+    for (const char* relative : {O2I_DATA_FROM_LIBDIR, O2I_DATA_FROM_BINDIR}) {
+        const fs::path candidate = (dir / relative).lexically_normal();
+        if (fs::is_regular_file(candidate / "pt-PT.json", ec)) return candidate.string();
+    }
+    return {};
+}
+
+// An installed library reads the specs beside it before the source tree's.
 std::string& data_dir_slot() {
     static std::string dir = [] {
         if (const char* override_dir = std::getenv("ORTHOGRAPHY2IPA_DATA_DIR")) return std::string(override_dir);
+        if (std::string relocated = relocated_data_dir(); !relocated.empty()) return relocated;
 #ifdef O2I_DEFAULT_DATA_DIR
         if (fs::is_directory(O2I_DEFAULT_DATA_DIR)) return std::string(O2I_DEFAULT_DATA_DIR);
 #endif

@@ -54,12 +54,7 @@ std::string silent_marks_of(const LanguageSpec& spec) {
     return marks;
 }
 namespace fs = std::filesystem;
-std::string initial_data_directory() {
-    if (const char* override_dir = std::getenv("ORTHOGRAPHY2IPA_DATA_DIR")) return override_dir;
-    if (fs::is_directory(O2I_DEFAULT_DATA_DIR)) return O2I_DEFAULT_DATA_DIR;
-    return O2I_INSTALL_DATA_DIR;
-}
-std::string data_dir = initial_data_directory();
+std::string data_dir = schema::data_directory();
 std::map<std::string, LanguageSpec> cache;
 std::map<std::string, std::string> registered_lexicons;
 std::optional<std::string> lexicon_directory;
