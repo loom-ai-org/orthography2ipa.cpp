@@ -591,6 +591,14 @@ std::map<std::string, std::vector<PluginAnswer>> who_answers(const std::string& 
 std::vector<std::string> validate(const std::string& code);
 void set_data_directory(const std::string& path);
 
+/// ``FileNotFoundError``, which lexicon.py resolve_lexicon_source raises for a
+/// local lexicon source that is not a file. ``what()`` reads like Python's
+/// ``str(exc)``.
+class FileNotFoundError : public std::runtime_error {
+public:
+    explicit FileNotFoundError(const std::string& message) : std::runtime_error(message) {}
+};
+
 void register_lexicon(const std::string& code, const std::string& source);
 /// lexicon.py is_ipa_string: True when *ipa* is NFC and every character is a
 /// phonetic letter, combining mark, or one of the tolerated prosodic
@@ -603,9 +611,11 @@ std::map<std::string, std::string> parse_lexicon_text(const std::string& text);
 /// lexicon.py validate_lexicon_text: (line, reason) pairs for every malformed
 /// line (the same checks the reference runs when registering a lexicon).
 std::vector<std::pair<std::size_t, std::string>> validate_lexicon_text(const std::string& text);
-/// lexicon.py resolve_lexicon_source: local path as-is, http(s):// and hf://
-/// fetched once into the cache and reused. Throws when a local source is
-/// missing. Returns the local FILE path.
+/// lexicon.py resolve_lexicon_source: a local path with a leading ~ expanded
+/// (std::runtime_error when the home directory cannot be found), and
+/// http(s):// and hf:// fetched once into the cache and reused. Throws
+/// FileNotFoundError when a local source is not a file. Returns the local FILE
+/// path.
 std::string resolve_lexicon_source(const std::string& source);
 /// weights.py normalize_grapheme_value (over the loader's JSON node): one
 /// grapheme's value -> (ipa, weights-or-nothing). The plain-list form keeps
@@ -622,6 +632,8 @@ normalize_grapheme_value(const boost::property_tree::ptree& value);
 std::pair<std::map<std::string, std::optional<std::vector<std::string>>>,
           std::map<std::string, std::vector<double>>>
 split_weighted_graphemes(const boost::property_tree::ptree& raw_graphemes);
+/// lexicon.py set_lexicon_dir: a leading ~ in *path* is expanded, as it is in
+/// $ORTHOGRAPHY2IPA_LEXICON_DIR.
 void set_lexicon_directory(const std::string& path);
 void clear_lexicons();
 std::vector<std::string> available_lexicon_codes();
