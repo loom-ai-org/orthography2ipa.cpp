@@ -12,6 +12,7 @@
 #include <cstddef>
 #include <map>
 #include <memory>
+#include <mutex>
 #include <optional>
 #include <set>
 #include <string>
@@ -285,6 +286,9 @@ private:
     std::map<std::u32string, std::vector<double>> grapheme_weights_;
     std::set<std::u32string> fold_diacritics_;
     bool closed_hiatus_ = false;
+    // Threads that share one const tokenizer share this cache, so the mutex
+    // guards every read and write of it.
+    mutable std::mutex hiatus_mutex_;
     mutable std::map<std::u32string, std::set<std::size_t>> hiatus_by_word_;
     bool add_bos_ = false;
     bool add_eos_ = false;

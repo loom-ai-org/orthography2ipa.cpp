@@ -84,6 +84,8 @@ def resolve_battery():
     tags |= set(registry._RENAMED.values())
     tags |= set(registry._REGION_DEFAULTS.keys())
     tags |= set(OVERRIDES)
+    # The bare tags that take a default region (`de` -> `de-DE`).
+    tags |= {"de", "en", "es", "fr", "gl", "it", "pt", "ro"}
     # ISO 639-3 / 1 forms of the catalog's primary subtags, and the forms the
     # alias table exists to catch.
     tags |= {"por", "eng", "spa", "fra", "deu", "ita", "nld", "swe", "dan", "nor",

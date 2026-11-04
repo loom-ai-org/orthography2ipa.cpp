@@ -617,10 +617,16 @@ std::u32string PhonetokTokenizer::closed_hiatus_prefix(const std::u32string& tex
     std::size_t end = pos;
     while (end < text.size() && is_letter(text[end])) ++end;
     const std::u32string word = text.substr(start, end - start);
+    std::unique_lock<std::mutex> lock(hiatus_mutex_);
     auto hit = hiatus_by_word_.find(word);
-    if (hit == hiatus_by_word_.end())
-        hit = hiatus_by_word_.emplace(word, stress::closed_hiatus_positions(uni::to_utf8(word), spec_))
-                  .first;
+    if (hit == hiatus_by_word_.end()) {
+        // The stress pass runs unlocked, so a miss does not hold up other
+        // threads. Two threads that miss the same word compute the same set.
+        lock.unlock();
+        std::set<std::size_t> closed = stress::closed_hiatus_positions(uni::to_utf8(word), spec_);
+        lock.lock();
+        hit = hiatus_by_word_.emplace(word, std::move(closed)).first;
+    }
     for (std::size_t cut = 1; cut < gkey.size(); ++cut)
         if (hit->second.count(pos - start + cut) && grapheme_ipa_.count(gkey.substr(0, cut)))
             return gkey.substr(0, cut);
