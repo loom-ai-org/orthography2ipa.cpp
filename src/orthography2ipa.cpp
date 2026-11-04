@@ -7,12 +7,12 @@
 #include "orthography2ipa/transform.hpp"
 #include "orthography2ipa/markup.hpp"
 #include "orthography2ipa/registry.hpp"
-#include "orthography2ipa/exceptions.hpp"
 #include "orthography2ipa/syllabifiers.hpp"
 #include "unicode_util.hpp"
 #include "orthography2ipa/vowels.hpp"
 #include "orthography2ipa/feats.hpp"
 #include "orthography2ipa/script_distance.hpp"
+#include "orthography2ipa/exceptions.hpp"
 
 #include <boost/property_tree/json_parser.hpp>
 #include <boost/property_tree/ptree.hpp>
