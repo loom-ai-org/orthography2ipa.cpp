@@ -7,6 +7,8 @@
 #include <algorithm>
 #include <map>
 #include <set>
+#include <iterator>
+#include <stdexcept>
 #include <utility>
 
 namespace orthography2ipa::types {
@@ -46,19 +48,24 @@ const char* to_string(InheritanceMode mode) {
         case InheritanceMode::OVERLAY_BY_ID: return "overlay_by_id";
         case InheritanceMode::NOT_INHERITED: return "not_inherited";
         case InheritanceMode::BASE_SCALAR: return "base_scalar";
+        case InheritanceMode::BASE_BLOCK: return "base_block";
         case InheritanceMode::OWN_ONLY: return "own_only";
     }
     return "";
 }
 
 InheritanceMode inheritance_mode(const std::string& value) {
-    const auto* mode = find(kInheritanceMode, value);
-    if (mode == nullptr)
+    // InheritanceMode(value) looks the member up by its VALUE.
+    const auto* mode = std::find_if(std::begin(kInheritanceMode), std::end(kInheritanceMode),
+                                    [&](const auto& entry) { return value == entry.second; });
+    if (mode == std::end(kInheritanceMode))
         throw std::invalid_argument("'" + value + "' is not a valid InheritanceMode");
-    if (std::string(mode->second) == "base_merge") return InheritanceMode::BASE_MERGE;
-    if (std::string(mode->second) == "overlay_by_id") return InheritanceMode::OVERLAY_BY_ID;
-    if (std::string(mode->second) == "not_inherited") return InheritanceMode::NOT_INHERITED;
-    if (std::string(mode->second) == "base_scalar") return InheritanceMode::BASE_SCALAR;
+    const std::string name = mode->first;
+    if (name == "BASE_MERGE") return InheritanceMode::BASE_MERGE;
+    if (name == "OVERLAY_BY_ID") return InheritanceMode::OVERLAY_BY_ID;
+    if (name == "NOT_INHERITED") return InheritanceMode::NOT_INHERITED;
+    if (name == "BASE_SCALAR") return InheritanceMode::BASE_SCALAR;
+    if (name == "BASE_BLOCK") return InheritanceMode::BASE_BLOCK;
     return InheritanceMode::OWN_ONLY;
 }
 

@@ -12,6 +12,7 @@
 #include <cstddef>
 #include <map>
 #include <memory>
+#include <mutex>
 #include <optional>
 #include <set>
 #include <string>
@@ -295,6 +296,11 @@ private:
     std::map<std::u32string, std::vector<std::u32string>> grapheme_ipa_;
     std::map<std::u32string, std::vector<CandidateWeight>> grapheme_weights_;
     std::set<std::u32string> fold_diacritics_;
+    bool closed_hiatus_ = false;
+    // Threads that share one const tokenizer share this cache, so the mutex
+    // guards every read and write of it.
+    mutable std::mutex hiatus_mutex_;
+    mutable std::map<std::u32string, std::set<std::size_t>> hiatus_by_word_;
     bool add_bos_ = false;
     bool add_eos_ = false;
     bool collapse_whitespace_ = true;
@@ -322,6 +328,13 @@ private:
     std::optional<std::vector<std::u32string>> positional_u32(const std::u32string& gkey,
                                                               const char* position) const;
 
+    // phonetok.py _normalise: *text* in NFC, with the spec's segment-less
+    // diacritics removed.
+    std::u32string normalise(const std::u32string& text) const;
+    // phonetok.py _closed_hiatus_prefix: *gkey*, cut before a letter that
+    // opens a nucleus of its own under stress.closed_hiatus.
+    std::u32string closed_hiatus_prefix(const std::u32string& text, std::size_t pos,
+                                        const std::u32string& gkey) const;
     bool supplies_vowel_at(const std::u32string& text, std::size_t pos) const;
     bool spells_nothing(const std::u32string& ch) const;
     std::pair<std::optional<std::u32string>, std::size_t> match_transparent(

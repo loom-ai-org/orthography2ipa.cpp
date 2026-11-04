@@ -1,5 +1,6 @@
 {
   "code": "pt-BR-x-ce",
+  "allophone_passes": 2,
   "name": "Cearense Portuguese",
   "script": "Latin",
   "graphemes": {
@@ -315,7 +316,7 @@
     ]
   },
   "parent": "pt-BR",
-  "notes": "Cearense (Fortaleza). Northeastern-type open pretonic vowels /e/ -> [ɛ], /o/ -> [ɔ]. RESOLVED variability: ALiB and the Fortaleza urban norm make /t,d/ palatalisation before /i/ the prestige default (attributed to northern-dialect influence), so palatalisation is RETAINED (base default). Diagnostic coda /S/ aspiration -> [h] before a consonant (as costas -> [ˈkahtɐs]), distinct from both the alveolar [s] and the palatal chiado; word-final /S/ kept [s]. Distinctive melodic prosody.",
+  "notes": "Cearense (Fortaleza). Pretonic /e o/ open to [ɛ ɔ] before an open, nasal or low stressed vowel (Mota & Lopes 2018: 215). /t d/ affricate before [i]: ALiB rates Fortaleza categorical (Battisti & Dornelles Filho 2015: 226). Coda /S/ is alveolar (Marins & Margotti 2012: 257), aspirated before /d n/ in popular speech (Toledo & Cantoni 2021: 27). Coda /R/ is the aspirate [h] and is deleted word-finally (Callou, Serra & Cunha 2015: 197, 207).",
   "quality": "research",
   "script_type": "alphabet",
   "sources": [
@@ -358,6 +359,56 @@
       "url": null,
       "pages": null,
       "notes": "Geolinguistic atlas; pretonic-vowel and palatalization isoglosses."
+    },
+    {
+      "id": "mota_lopes2018",
+      "author": "Mota, J.A. & Lopes, P.H.S.",
+      "year": 2018,
+      "title": "Os subfalares do Norte e o traçado das vogais médias pretônicas",
+      "publisher": "Estudos de Lingüística Galega, volume especial I: 209-218",
+      "url": "https://doi.org/10.15304/elg.ve1.3480",
+      "pages": "212-217",
+      "notes": null
+    },
+    {
+      "id": "battisti_dornellesfilho2015",
+      "author": "Battisti, E. & Dornelles Filho, A.A.",
+      "year": 2015,
+      "title": "Análise em tempo real da palatalização de /t/ e /d/ no português falado em uma comunidade ítalo-brasileira",
+      "publisher": "Revista da ABRALIN 14(1): 221-246",
+      "url": "https://revista.abralin.org/index.php/abralin/article/download/1239/1162/549",
+      "pages": "225-227",
+      "notes": "Summarises the ALiB capital map (Cardoso et al. 2014: 123) on p. 226."
+    },
+    {
+      "id": "marins_margotti2012",
+      "author": "Marins, F.S. & Margotti, F.W.",
+      "year": 2012,
+      "title": "Comportamento fonético-fonológico do /S/ pós-vocálico em Manaus",
+      "publisher": "Investigações 25(2): 249-274",
+      "url": "https://periodicos.ufpe.br/revistas/INV/article/download/348/293/804",
+      "pages": "254-265",
+      "notes": null
+    },
+    {
+      "id": "toledo_cantoni2021",
+      "author": "Toledo, G.D. & Cantoni, M.M.",
+      "year": 2021,
+      "title": "Aspiração do /s/ em coda no português brasileiro: uma revisão sociolinguística",
+      "publisher": "Revista Colineares 8(2): 21-46",
+      "url": null,
+      "pages": "27",
+      "notes": null
+    },
+    {
+      "id": "callou_serra_cunha2015",
+      "author": "Callou, D., Serra, C. & Cunha, C.",
+      "year": 2015,
+      "title": "Mudança em curso no português brasileiro: o apagamento do R no dialeto nordestino",
+      "publisher": "Revista da ABRALIN 14(1): 195-219",
+      "url": "https://revista.abralin.org/index.php/abralin/article/download/1238/1161",
+      "pages": "197, 207",
+      "notes": null
     }
   ],
   "wikipedia": [
@@ -372,79 +423,13 @@
     "end_year": null
   },
   "iso639_3": "por",
-  "stress": {
-    "onset_clusters": ["bl", "br", "bɫ", "bɾ", "bʀ", "bʁ", "bʎ", "bχ", "dr", "dɾ", "dʀ", "dʁ", "dʎ", "dχ", "fl", "fr", "fɫ", "fɾ", "fʀ", "fʁ", "fʎ", "fχ", "kl", "kr", "kɫ", "kɾ", "kʀ", "kʁ", "kʎ", "kχ", "pl", "pr", "pɫ", "pɾ", "pʀ", "pʁ", "pʎ", "pχ", "tr", "tɾ", "tʀ", "tʁ", "tʎ", "tχ", "vl", "vr", "vɫ", "vɾ", "vʀ", "vʁ", "vʎ", "vχ", "ðr", "ðɾ", "ðʀ", "ðʁ", "ðʎ", "ðχ", "ɡl", "ɡr", "ɡɫ", "ɡɾ", "ɡʀ", "ɡʁ", "ɡʎ", "ɡχ", "ɣl", "ɣr", "ɣɫ", "ɣɾ", "ɣʀ", "ɣʁ", "ɣʎ", "ɣχ", "βl", "βr", "βɫ", "βɾ", "βʀ", "βʁ", "βʎ", "βχ"],
-    "cliticless_words": ["o", "a", "os", "as", "de", "do", "da", "dos", "das", "em", "no", "na", "nos", "nas", "por", "pelo", "pela", "pelos", "pelas", "ao", "aos", "à", "às", "com", "sem", "e", "que", "se", "me", "te", "lhe", "lhes", "vos", "lo", "la", "los", "las", "lho", "lha", "lhos", "lhas"],
-    "compound_stress": "last",
-    "default_position": -2,
-    "final_stress_endings": [
-      "r",
-      "l",
-      "z",
-      "x",
-      "i",
-      "u",
-      "im",
-      "om",
-      "um",
-      "is",
-      "us",
-      "ins",
-      "ons",
-      "uns",
-      "ão",
-      "ãe",
-      "õe",
-      "au",
-      "éu",
-      "éi",
-      "ói"
-    ],
-    "penult_stress_endings": [],
-    "marked_vowels": [
-      "á",
-      "é",
-      "í",
-      "ó",
-      "ú",
-      "â",
-      "ê",
-      "ô",
-      "ã",
-      "õ"
-    ],
-    "stress_mark": "ˈ",
-    "notes": "Acordo Ortográfico 1990 conventions: paroxytone default; written accents override; final -i/-u/-r/-l/-z/-x/-im/-om/-um/-ins/-ons/-uns and nasal diphthongs attract final stress. Unmarked -em/-ens/-am stay paroxytone (homem, homens, falam): an oxytone of more than one syllable in -em or -ens is written with an acute (Acordo Ortográfico 1990, Base VIII, 1.º c: deténs, haréns, provéns, também). DIPHTHONGS: declared so the bundled syllabifier counts nuclei correctly — without them every vowel run merges into one nucleus and co-e-lho is read as coe-lho, one syllable short, putting the stress and its vowel reduction on the wrong vowel. ⟨oe⟩ is hiatus, not a diphthong (Cunha & Cintra, §Ditongos). COMPOUNDS: a hyphenated compound is one prosodic word. Each element keeps its own stress and the last is the strongest (Bechara, Moderna Gramática Portuguesa, p. 340, quoted in Ciberdúvidas, resposta 28042), so compound_stress is \"last\": guarda-chuva gwˌaɾdɐˈʃuvɐ (Portal da Língua Portuguesa). IPA_DIPHTHONGS is empty: the grapheme table writes every diphthong with a glide ([aj], [uj], [ɐ̃w̃]), so two full vowels side by side in the transcription are always a hiatus, and the stress mark is placed with each IPA vowel as a nucleus of its own. Read with the orthographic list, the IPA [ui] of ⟨proíbe⟩ /pɾuibɨ/ and [iu] of ⟨viúva⟩ merge into one syllable and the mark lands a syllable early. The acute on a tonic ⟨i u⟩ after a vowel marks exactly this hiatus (Acordo Ortográfico 1990, Base X, 1.º: juízes, ruína, ciúme, miúdo, saída, baú).",
-    "diphthongs": [
-      "ãe",
-      "ão",
-      "õe",
-      "ai",
-      "ái",
-      "au",
-      "áu",
-      "ei",
-      "éi",
-      "êi",
-      "eu",
-      "éu",
-      "êu",
-      "iu",
-      "oi",
-      "ói",
-      "ôi",
-      "ou",
-      "ui"
-    ],
-    "ipa_diphthongs": []
-  },
   "graphemes_base": "pt-BR",
   "allophones_base": "pt-BR",
   "positional_graphemes_base": "pt-BR",
   "positional_graphemes": {
     "e": {
-      "pretonic": [
-        "ɛ"
+      "nucleus_unstressed": [
+        "e"
       ],
       "word_final": [
         "ɪ"
@@ -454,39 +439,28 @@
       ]
     },
     "o": {
-      "pretonic": [
-        "ɔ"
-      ],
       "word_final": [
         "ʊ"
+      ],
+      "nucleus_unstressed": [
+        "o"
       ],
       "posttonic": [
         "ʊ"
       ]
     },
-    "s": {
+    "r": {
       "word_initial": [
-        "s"
+        "ʁ"
       ],
       "intervocalic": [
-        "z"
+        "ɾ"
       ],
       "before_consonant": [
         "h"
       ],
       "word_final": [
-        "s"
-      ],
-      "intervocalic_cross_word": [
-        "z"
-      ]
-    },
-    "z": {
-      "before_consonant": [
         "h"
-      ],
-      "word_final": [
-        "s"
       ]
     }
   },
@@ -498,16 +472,65 @@
   },
   "allophone_rules": [
     {
-      "id": "BR_AFFRIC_T_RAISED",
-      "phonemes": [],
-      "surface": "t͡ʃ",
-      "notes": "DISABLED for the Cearense variety: no affrication of /t d/ before a raised final ⟨e⟩."
+      "id": "NE_PRETONIC_OPEN_E",
+      "phonemes": [
+        "e"
+      ],
+      "surface": "ɛ",
+      "stress": "unstressed",
+      "followed_by_phoneme_2": [
+        "a",
+        "ɐ",
+        "ɛ",
+        "ɔ",
+        "ɐ̃",
+        "ẽ",
+        "õ"
+      ],
+      "notes": "Mota & Lopes (2018: 215, ALiB, North and Northeast capitals): pretonic mid vowels 'têm uma maior probabilidade de se tornarem médias abertas no contexto de tônica também de timbre aberto (médias-baixas), médias nasais e diante da vogal baixa [a]'; before a close-mid stressed vowel they stay closed in 86 % (/e/) and 91 % (/o/) of tokens. The trigger is the vowel two graphemes to the right, so a pretonic syllable closed by a consonant (espera) keeps the closed vowel."
     },
     {
-      "id": "BR_AFFRIC_D_RAISED",
-      "phonemes": [],
-      "surface": "d͡ʒ",
-      "notes": "DISABLED for the Cearense variety: no affrication of /t d/ before a raised final ⟨e⟩."
+      "id": "NE_PRETONIC_OPEN_O",
+      "phonemes": [
+        "o"
+      ],
+      "surface": "ɔ",
+      "stress": "unstressed",
+      "followed_by_phoneme_2": [
+        "a",
+        "ɐ",
+        "ɛ",
+        "ɔ",
+        "ɐ̃",
+        "ẽ",
+        "õ"
+      ],
+      "notes": "Mota & Lopes (2018: 215, ALiB, North and Northeast capitals): pretonic mid vowels 'têm uma maior probabilidade de se tornarem médias abertas no contexto de tônica também de timbre aberto (médias-baixas), médias nasais e diante da vogal baixa [a]'; before a close-mid stressed vowel they stay closed in 86 % (/e/) and 91 % (/o/) of tokens. The trigger is the vowel two graphemes to the right, so a pretonic syllable closed by a consonant (espera) keeps the closed vowel."
+    },
+    {
+      "id": "NE_FINAL_R_DELETION",
+      "phonemes": [
+        "h",
+        "ɾ"
+      ],
+      "surface": "",
+      "word_final": true,
+      "notes": "Callou, Serra & Cunha (2015: 207, ALiB, Northeast capitals): word-final /R/ deletion reaches 94-98 % in verbs and 62-95 % in other words in every capital. Coda /R/ elsewhere is the aspirate [h]: the norm in these capitals is '[- vibrante] e [- anterior]' (p. 197)."
+    },
+    {
+      "id": "CE_CODA_S_ASPIRATION",
+      "phonemes": [
+        "s",
+        "z"
+      ],
+      "surface": "h",
+      "syllable_position": "coda",
+      "followed_by_phoneme": [
+        "d",
+        "d͡ʒ",
+        "n"
+      ],
+      "notes": "Toledo & Cantoni (2021: 27) report Roncarati & Uchôa (2014), Fortaleza DSC corpus: 16.1 % aspiration overall, and 52 % before /d/ and 61 % before /n/, the two contexts where it is the majority. ALiB gives Fortaleza only 2 % aspiration (ibid.), and Fortaleza keeps the alveolar 'em qualquer contexto' (Marins & Margotti 2012: 257, quoting Jesus & Mota 2007); the rule models the popular speech of the DSC corpus. [d͡ʒ] is listed because a /d/ before [i] affricates first (desde)."
     }
   ]
 }

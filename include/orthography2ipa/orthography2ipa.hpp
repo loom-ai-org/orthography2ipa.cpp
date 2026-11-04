@@ -79,6 +79,12 @@ struct ToneData {
 };
 struct AncestorLink { std::string code, role, notes; double weight = 0.0; };
 
+/// types.py ClosedHiatus: written vowel pairs that are two nuclei where a
+/// consonant closes the syllable of the second letter (stress.closed_hiatus).
+struct ClosedHiatus {
+    std::vector<std::string> pairs, onsets, codas;
+};
+
 struct LanguageSpec {
     std::string code, name, family, script, parent, quality;
     std::string glottolog_code, iso639_3, wikidata_qid, phoible_id, wals_code, notes;
@@ -100,6 +106,8 @@ struct LanguageSpec {
     // IPA vowel sequences that form one nucleus where the stress mark is
     // placed; unset, the transcription is split with `diphthongs`.
     std::optional<std::vector<std::string>> ipa_diphthongs;
+    // stress.closed_hiatus; unset leaves every listed diphthong one nucleus.
+    std::optional<ClosedHiatus> closed_hiatus;
     std::vector<std::string> vowel_letters, onset_clusters;
     bool quantity_sensitive = false, superheavy_final_attracts = false;
     int max_onset = 1;

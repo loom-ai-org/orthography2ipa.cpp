@@ -630,7 +630,7 @@
     "wikipron": {
       "conclusion": "mislabeled_gold",
       "measured": "The gold filed under `li` is not predominantly written in the Spelling 2003 (Veldeke) convention this spec models. Of the 140 gold headwords whose IPA contains a postalveolar fricative, 130 spell it <sch> and 7 spell it <sj>, the Spelling 2003 form; <ae> appears in 10 headwords and <ao> in 14, against 114 with <ae-umlaut> and 34 with <u-umlaut>. Two further conventions are present and are disjoint from each other: 89 headwords carry a sign exclusive to Rheinische Dokumenta (e-with-vertical-line, o-ogonek, s-with-dot, c-tie-h) and 222 carry the acute/diaeresis signs of the Eupen-dialect spelling, with zero headwords carrying both. The Rheinische Dokumenta block is now modeled by `li-x-rheindok`, which scores it at PER 0.0609 where `li` scores 0.3245; that entry is not on the board, which continues to score the whole file against `li`. The Eupen block is not modeled, for want of a published orthography for it.",
-      "reference": "spec notes on `li` and on `li-x-rheindok`; docs/gold_defects.md"
+      "reference": "spec notes on `li` and on `li-x-rheindok`; docs/evaluation/gold_defects.md"
     }
   }
 }

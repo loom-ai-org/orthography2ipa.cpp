@@ -1,5 +1,6 @@
 {
   "code": "pt-BR-x-caipira",
+  "allophone_passes": 2,
   "name": "Caipira Portuguese",
   "script": "Latin",
   "graphemes": {
@@ -141,7 +142,7 @@
       "ʃ"
     ],
     "lh": [
-      "ʎ"
+      "j"
     ],
     "nh": [
       "ɲ"
@@ -317,7 +318,7 @@
     ]
   },
   "parent": "pt-BR",
-  "notes": "Caipira (SP interior, western Minas Gerais, Goiás, Mato Grosso, Mato Grosso do Sul, Paraná hinterland). Hallmark: retroflex approximant rhotic [ɻ] in coda and clusters — the 'erre caipira / erre retroflexo' (porta -> [ˈpoɻtɐ], mar -> [maɻ]; open-mid /ɔ/ in 'porta' is lexical and unmarked in spelling, so the engine derives [o]). Directly described by Amaral (1920) §6b: 'r inter e post-vocálico (arara, carta) possui um valor peculiar: é linguo-palatal e guturalizado ... a língua ... vira a extremidade para cima, sem tocá-la na abóbada palatal. Não há quase nenhuma vibração tremulante ... este r caipira assemelha-se bastante ao r inglês post-vocálico' — i.e. a non-trilled retroflex approximant. Coda /S/ stays alveolar laminodental ciciante with no chiado (Amaral §6a: 's propriamente sibilante, assobiado, e bem assim chiante, são aqui desconhecidos'). Coda /l/ historically rhotacises to r and merges into the retroflex — Amaral §22a: 'l - Em final de sílaba, muda-se em r: quarquér, papér, mér, arma'; modern urban caipira more often vocalises to [w] (kept as the primary coda-/l/ realisation, with [ɻ] as the traditional Amaral variant). Word-final /r/ elides (Amaral §23a: 'Cai, quando final de palavra: andá, muié, esquecê'). /ʎ/ vocalises to [j] (Amaral §25: 'Vocaliza-se em i: espaiado, maio, muié'; §6e: lh 'não existe no dialeto'). /t,d/ palatalisation before /i/ is retained from the pt-BR base. NB Amaral §8 records that early-20c rural caipira did NOT raise final unstressed /e/->[i] or /o/->[u] ('Não se operou aqui a permuta de e final por i ... como não se operou a de o por u'); the spec inherits the modern pt-BR reduction, which now prevails, and this historical divergence is documented rather than modelled.",
+  "notes": "Caipira (interior of São Paulo state and the neighbouring areas). Coda /r/ is the retroflex approximant [ɻ] (porta [ˈpoɻtɐ], mar [maɻ]). Amaral (1920) §6b: 'r inter e post-vocálico (arara, carta) possui um valor peculiar: é linguò-palatal e guturalizado'; ALiB: 'o /r/ caipira está presente de forma praticamente categórica em todo o estado de São Paulo [...] exceto na capital e na cidade de Santos' (Silva 2023: 70; Castro 2013: 566). ⟨lh⟩ is [j] (Amaral §25: 'Vocaliza-se em i: [...] muié, fiio'). Coda /l/ is [ɻ] (Amaral §22a: 'Em final de sílaba, muda-se em r: quarqué [...] arma'), with [w] as the second candidate. Amaral also describes intervocalic r as retroflex, ⟨ch j⟩ as affricates (§6d) and final e/o as unraised (§8); the spec does not encode these, because no modern source was opened to confirm them. /t d/ before [i] follow the base: no opened source describes them for this variety.",
   "quality": "research",
   "script_type": "alphabet",
   "sources": [
@@ -370,6 +371,26 @@
       "url": null,
       "pages": null,
       "notes": null
+    },
+    {
+      "id": "silva2023",
+      "author": "Silva, H.C.",
+      "year": 2023,
+      "title": "Mapeamento da variação do /R/, em coda silábica interna, na Região Sudeste: contribuições do QGIS",
+      "publisher": "Signum: Estudos da Linguagem 26(3): 62-77",
+      "url": "https://doi.org/10.5433/2237-4876.2023v26n3p62-77",
+      "pages": "67-70",
+      "notes": null
+    },
+    {
+      "id": "castro2013",
+      "author": "Castro, V.S.",
+      "year": 2013,
+      "title": "O 'r caipira' em Mato Grosso do Sul: estudo baseado em dados do ALMS, Atlas linguístico do Mato Grosso do Sul",
+      "publisher": "Estudos Linguísticos (GEL) 42(1): 566-575",
+      "url": "https://revistadogel.emnuvens.com.br/estudos-linguisticos/article/download/1129/694/3129",
+      "pages": "566",
+      "notes": null
     }
   ],
   "wikipedia": [
@@ -381,72 +402,6 @@
     "end_year": null
   },
   "iso639_3": "por",
-  "stress": {
-    "onset_clusters": ["bl", "br", "bɫ", "bɾ", "bʀ", "bʁ", "bʎ", "bχ", "dr", "dɾ", "dʀ", "dʁ", "dʎ", "dχ", "fl", "fr", "fɫ", "fɾ", "fʀ", "fʁ", "fʎ", "fχ", "kl", "kr", "kɫ", "kɾ", "kʀ", "kʁ", "kʎ", "kχ", "pl", "pr", "pɫ", "pɾ", "pʀ", "pʁ", "pʎ", "pχ", "tr", "tɾ", "tʀ", "tʁ", "tʎ", "tχ", "vl", "vr", "vɫ", "vɾ", "vʀ", "vʁ", "vʎ", "vχ", "ðr", "ðɾ", "ðʀ", "ðʁ", "ðʎ", "ðχ", "ɡl", "ɡr", "ɡɫ", "ɡɾ", "ɡʀ", "ɡʁ", "ɡʎ", "ɡχ", "ɣl", "ɣr", "ɣɫ", "ɣɾ", "ɣʀ", "ɣʁ", "ɣʎ", "ɣχ", "βl", "βr", "βɫ", "βɾ", "βʀ", "βʁ", "βʎ", "βχ"],
-    "cliticless_words": ["o", "a", "os", "as", "de", "do", "da", "dos", "das", "em", "no", "na", "nos", "nas", "por", "pelo", "pela", "pelos", "pelas", "ao", "aos", "à", "às", "com", "sem", "e", "que", "se", "me", "te", "lhe", "lhes", "vos", "lo", "la", "los", "las", "lho", "lha", "lhos", "lhas"],
-    "compound_stress": "last",
-    "default_position": -2,
-    "final_stress_endings": [
-      "r",
-      "l",
-      "z",
-      "x",
-      "i",
-      "u",
-      "im",
-      "om",
-      "um",
-      "is",
-      "us",
-      "ins",
-      "ons",
-      "uns",
-      "ão",
-      "ãe",
-      "õe",
-      "au",
-      "éu",
-      "éi",
-      "ói"
-    ],
-    "penult_stress_endings": [],
-    "marked_vowels": [
-      "á",
-      "é",
-      "í",
-      "ó",
-      "ú",
-      "â",
-      "ê",
-      "ô",
-      "ã",
-      "õ"
-    ],
-    "stress_mark": "ˈ",
-    "notes": "Acordo Ortográfico 1990 conventions: paroxytone default; written accents override; final -i/-u/-r/-l/-z/-x/-im/-om/-um/-ins/-ons/-uns and nasal diphthongs attract final stress. Unmarked -em/-ens/-am stay paroxytone (homem, homens, falam): an oxytone of more than one syllable in -em or -ens is written with an acute (Acordo Ortográfico 1990, Base VIII, 1.º c: deténs, haréns, provéns, também). DIPHTHONGS: declared so the bundled syllabifier counts nuclei correctly — without them every vowel run merges into one nucleus and co-e-lho is read as coe-lho, one syllable short, putting the stress and its vowel reduction on the wrong vowel. ⟨oe⟩ is hiatus, not a diphthong (Cunha & Cintra, §Ditongos). COMPOUNDS: a hyphenated compound is one prosodic word. Each element keeps its own stress and the last is the strongest (Bechara, Moderna Gramática Portuguesa, p. 340, quoted in Ciberdúvidas, resposta 28042), so compound_stress is \"last\": guarda-chuva gwˌaɾdɐˈʃuvɐ (Portal da Língua Portuguesa). IPA_DIPHTHONGS is empty: the grapheme table writes every diphthong with a glide ([aj], [uj], [ɐ̃w̃]), so two full vowels side by side in the transcription are always a hiatus, and the stress mark is placed with each IPA vowel as a nucleus of its own. Read with the orthographic list, the IPA [ui] of ⟨proíbe⟩ /pɾuibɨ/ and [iu] of ⟨viúva⟩ merge into one syllable and the mark lands a syllable early. The acute on a tonic ⟨i u⟩ after a vowel marks exactly this hiatus (Acordo Ortográfico 1990, Base X, 1.º: juízes, ruína, ciúme, miúdo, saída, baú).",
-    "diphthongs": [
-      "ãe",
-      "ão",
-      "õe",
-      "ai",
-      "ái",
-      "au",
-      "áu",
-      "ei",
-      "éi",
-      "êi",
-      "eu",
-      "éu",
-      "êu",
-      "iu",
-      "oi",
-      "ói",
-      "ôi",
-      "ou",
-      "ui"
-    ],
-    "ipa_diphthongs": []
-  },
   "graphemes_base": "pt-BR",
   "allophones_base": "pt-BR",
   "positional_graphemes_base": "pt-BR",
@@ -475,12 +430,12 @@
         "l"
       ],
       "before_consonant": [
-        "w",
-        "ɻ"
+        "ɻ",
+        "w"
       ],
       "word_final": [
-        "w",
-        "ɻ"
+        "ɻ",
+        "w"
       ]
     }
   },
@@ -491,18 +446,5 @@
     "source": "wikidata",
     "notes": "Piracicaba — a representative locality of the caipira area, whose retroflex-rhotic region stretches from interior São Paulo across Goiás and Mato Grosso. A point badly under-describes it. [Wikidata Q330175 P625]"
   },
-  "allophone_rules": [
-    {
-      "id": "BR_AFFRIC_T_RAISED",
-      "phonemes": [],
-      "surface": "t͡ʃ",
-      "notes": "DISABLED for caipira: the interior Paulista variety keeps a conservative DENTAL /t d/ before a RAISED final unstressed ⟨e⟩ (leite [ˈlejti], tarde [ˈtaɾdi]), even though it does affricate before an etymological ⟨i⟩ (tio, dia, petisca — kept by the positional before_i map). Only the post-lexical final-⟨e⟩ affrication is opted out here."
-    },
-    {
-      "id": "BR_AFFRIC_D_RAISED",
-      "phonemes": [],
-      "surface": "d͡ʒ",
-      "notes": "DISABLED for caipira: the interior Paulista variety keeps a conservative DENTAL /t d/ before a RAISED final unstressed ⟨e⟩ (leite [ˈlejti], tarde [ˈtaɾdi]), even though it does affricate before an etymological ⟨i⟩ (tio, dia, petisca — kept by the positional before_i map). Only the post-lexical final-⟨e⟩ affrication is opted out here."
-    }
-  ]
+  "allophone_rules": []
 }

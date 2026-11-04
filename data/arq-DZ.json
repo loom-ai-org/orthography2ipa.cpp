@@ -1,0 +1,320 @@
+{
+  "code": "arq-DZ",
+  "name": "Algerian Arabic",
+  "script": "Arabic",
+  "graphemes_base": "ar-x-maghrebi",
+  "graphemes": {
+    "ذ": [
+      "d",
+      "z"
+    ],
+    "ظ": [
+      "dˤ",
+      "zˤ"
+    ],
+    "ق": [
+      "q",
+      "ɡ"
+    ],
+    "e": [
+      "e"
+    ],
+    "o": [
+      "o"
+    ],
+    "الذذ": [
+      "add",
+      "azz"
+    ],
+    "اَلذذ": [
+      "add",
+      "azz"
+    ],
+    "لِلذذ": [
+      "lidd",
+      "lizz"
+    ],
+    "وَالذذ": [
+      "wadd",
+      "wazz"
+    ],
+    "فَالذذ": [
+      "fadd",
+      "fazz"
+    ],
+    "بِالذذ": [
+      "bidd",
+      "bizz"
+    ],
+    "كَالذذ": [
+      "kadd",
+      "kazz"
+    ],
+    "الظظ": [
+      "adˤdˤ",
+      "azˤzˤ"
+    ],
+    "اَلظظ": [
+      "adˤdˤ",
+      "azˤzˤ"
+    ],
+    "لِلظظ": [
+      "lidˤdˤ",
+      "lizˤzˤ"
+    ],
+    "وَالظظ": [
+      "wadˤdˤ",
+      "wazˤzˤ"
+    ],
+    "فَالظظ": [
+      "fadˤdˤ",
+      "fazˤzˤ"
+    ],
+    "بِالظظ": [
+      "bidˤdˤ",
+      "bizˤzˤ"
+    ],
+    "كَالظظ": [
+      "kadˤdˤ",
+      "kazˤzˤ"
+    ],
+    "اِلذذ": [
+      "idd",
+      "izz"
+    ],
+    "اِلظظ": [
+      "idˤdˤ",
+      "izˤzˤ"
+    ],
+    "وِالذذ": [
+      "widd",
+      "wizz"
+    ],
+    "وِالظظ": [
+      "widˤdˤ",
+      "wizˤzˤ"
+    ],
+    "ڨ": [
+      "ɡ"
+    ],
+    "ڭ": [
+      "ɡ"
+    ]
+  },
+  "allophones_base": "ar-x-maghrebi",
+  "allophones": {
+    "q": [
+      "q",
+      "ɡ"
+    ],
+    "ðˤ": [
+      "dˤ",
+      "zˤ"
+    ],
+    "θ": [
+      "t",
+      "s"
+    ],
+    "ð": [
+      "d",
+      "z"
+    ],
+    "a": [
+      "a",
+      "ə",
+      ""
+    ],
+    "i": [
+      "i",
+      "ə",
+      ""
+    ],
+    "u": [
+      "u",
+      "ə",
+      ""
+    ],
+    "e": [
+      "e"
+    ],
+    "o": [
+      "o"
+    ]
+  },
+  "allophone_rules": [
+    {
+      "id": "DZ_SHORT_REDUCE",
+      "phonemes": [
+        "i"
+      ],
+      "surface": "ə",
+      "followed_by": "consonant_cluster",
+      "notes": "Algiers short-vowel reduction (heavy syncope): a historic short high vowel /i/ in the weak position before a consonant cluster reduces to schwa [ə], licensing the initial clusters that define Maghrebi vocalism — Boucherit (2002); Marçais (1902); the same weak-position class the ary-MA spec cites off Heath (2020) p.216 and Watson (2002) p.13. Blind-judge consensus (verification round C9): both judges independently corrected these full vowels to [ə], the same arbitration as ary-MA. SCOPED to /i/-before-cluster for the same reason as MA_SHORT_REDUCE: short /a/ also reduces but is retained next to gutturals/pharyngeals (Heath 2002) and the condition vocabulary has no negated-neighbour 'guttural' class to express that, so a categorical /a/→ə rule over-generates; deferred pending that engine class. Short /u/ retained. Runs post-lexically after the inherited emphasis-backing rules."
+    }
+  ],
+  "parent": "ar-x-maghrebi",
+  "ancestors": [
+    {
+      "code": "ar-x-maghrebi",
+      "role": "parent",
+      "weight": 0.8,
+      "notes": "Maghrebi Arabic base"
+    },
+    {
+      "code": "ber",
+      "role": "substrate",
+      "weight": 0.12,
+      "notes": "Berber (Tamazight/Kabyle) substrate: vowel reduction, consonant cluster tolerance; dense Berber-speaking areas especially Kabylie"
+    },
+    {
+      "code": "fr-FR",
+      "role": "adstrate",
+      "weight": 0.05,
+      "notes": "French adstrate (1830–1962): /p/, /v/ phonemes, heavy loanword influence"
+    }
+  ],
+  "notes": "Algerian Arabic (Dziriya; ISO 639-3 arq), Algiers (al-ʿĀṣima) urban baseline. Sedentary pre-Hilalian phonology of the old city, with the Bedouin/rural layer diffusing in. INTERDENTALS MERGED to stops in Algiers: ث → /t/, ذ → /d/, ظ/ض → /dˤ/ (θalāθa → tlaːta) — Boucherit 2002; Marçais 1902 (Tlemcen); the isogloss against Tunis, which retains /θ ð ðˤ/. QĀF ق → /q/ in old-urban Algiers, with the Bedouin/rural variant /ɡ/ current across the country (dual /q ~ ɡ/) — Boucherit 2002; Grand'Henry 1972 (Cherchell). ǦĪM ج → /ʒ/ (voiced postalveolar fricative, sedentary Maghrebi; Watson 2002 p.16); the pre-Hilalian Algiers affricate /dʒ/ survives as the secondary candidate (Boucherit 2002; Marçais 1902). HEAVY SYNCOPE: short /a i u/ reduce to schwa [ə] or ∅ in weak positions, licensing initial consonant clusters (ktaːb, tlaːta) — the defining Maghrebi trait, reinforced by the Berber (Amazigh) substrate; Boucherit 2002; Marçais 1902. NO strong imāla — long /aː/ keeps its back quality (ktaːb, not the Tunis ktɛːb). Emphasis spreads, backing /a aː/ to [ɑ ɑː] near emphatics (inherited layer; Watson 2002). TĀʾ MARBŪṬA: /-a/ in pause, /-at/ in the construct (inherited pausal handling; Boucherit 2002). French adstrate is the deepest of the Maghrebi dialects (130+ years): /p/ /v/ phonemes and heavy loan integration. LOAN GRAPHEME ڨ. Two facts, each cited, neither inferred from the other. What the letter is: U+06A8 ARABIC LETTER QAF WITH THREE DOTS ABOVE, a qāf-derived character written for [ɡ] — Saadane & Habash 2015 §4.1 p.70 lists it among the realisations of the MSA ‹ق› consonant as 'palatal sound \"ڨ\" [g]' and states it for Algerian, Moroccan and Tunisian alike; the Unicode code chart annotates the character 'Tunisian Arabic' but names no sound, which is why the annotation alone would not license this. That this variety has the sound: /ɡ/ is already in this spec's inventory as its ‹ق› reflex, so no phone is introduced. The reading is the sound the letter writes in a spec that already has it. CODA prescribes the cognate ‹ق› for /g/ here (Zribi et al. 2014), so this key reads a spelling that occurs without endorsing it. LOAN GRAPHEME ڭ. Read [ɡ] on Algerian evidence, and that evidence is MIXED in a way the Moroccan is not. Measured over 297 Algerian-labelled rows of the judged tree at /root/speech/data-lane/trees-units/judged/lahgtna, label field `dialect`: 391 occurrences over roughly 300 distinct forms, a long tail rather than a paradigm — the twenty commonest forms cover only about a quarter of tokens. Counted 2026-09-17, independently by two lanes. TWO POPULATIONS ARE MIXED HERE. Qāf reflexes: ڭاع (قاع), ڭالو (قالو), and the حُڭْرة / محڭورة / يحڭروك family. And French loanwords carrying a /ɡ/ that never was a qāf: ڭروب (groupe), ڭارديو and نڭارديو (regarder), الڭاطو (gâteau), ڭاراج (garage), دروڭ, بلوڭلي. Both read [ɡ], so one mapping serves — but the licence is that this letter writes /ɡ/ in Algerian whatever its origin, NOT that it stands for a reflex of ‹ق›, which is only half of what the rows show. Position does not restrict it: medial 250, initial 114, final 27, counted over each word's Arabic letters so that vowel marks cannot make an initial letter look medial. /ɡ/ is already this spec's inventory, so no phone is introduced. THE SHAPE OF THE LIST CARRIES WHAT THE TOTAL CANNOT: 387 tokens over roughly 300 forms with the twenty commonest covering about 23% is a long tail, which is what borrowed vocabulary looks like, against the tight paradigm the Moroccan list shows. A count alone cannot tell those apart and they mean opposite things. COUNTING CONVENTION, so these Algerian figures are reproducible from a rule rather than from whichever tokeniser ran: forms are counted as written, with diacritics attached, so ڭاع and ڭاعْ and ڭَاعْ are three forms of one word and are listed apart. It matters here: 387 Algerian tokens give 292 distinct forms as written and 260 with diacritics stripped, and ڭاع rises from 22 to 36 once its variants are folded in. Two lanes measured this independently and differed only on that choice.",
+  "quality": "research",
+  "script_type": "abjad",
+  "sources": [
+    {
+      "id": "watson2002",
+      "author": "Watson, J.C.E.",
+      "year": 2002,
+      "title": "The Phonology and Morphology of Arabic",
+      "publisher": "Oxford University Press",
+      "url": null,
+      "pages": null,
+      "notes": null,
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Arabic_phonology"
+    },
+    {
+      "id": "holes2004",
+      "author": "Holes, C.",
+      "year": 2004,
+      "title": "Modern Arabic: Structures, Functions, and Varieties",
+      "publisher": "Georgetown University Press",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "grand_henry1972",
+      "author": "Grand'Henry, J.",
+      "year": 1972,
+      "title": "Le parler arabe de Cherchell (Algérie)",
+      "publisher": "Institut Orientaliste de Louvain",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "boucherit2002",
+      "author": "Boucherit, A.",
+      "year": 2002,
+      "title": "L'arabe parlé à Alger: aspects sociolinguistiques et énonciatifs",
+      "publisher": "Peeters, Paris–Louvain",
+      "url": null,
+      "pages": null,
+      "notes": "The reference monograph on the Arabic of Algiers. Documents the urban Algiers pre-Hilalian phonology: qāf /q/ in the old-urban variety with the Bedouin/rural /ɡ/ spreading in; interdentals /θ ð ðˤ/ merged to the dental stops /t d dˤ/ in Algiers; ǧīm as the postalveolar /ʒ/ (with the affricate /dʒ/ in pre-Hilalian/eastern varieties); heavy short-vowel syncope yielding initial clusters; tāʾ marbūṭa as /-a/ in pause, /-at/ in the construct. Standard reference; not obtained to a readable folio for this pass."
+    },
+    {
+      "id": "marcais1902",
+      "author": "Marçais, W.",
+      "year": 1902,
+      "title": "Le dialecte arabe parlé à Tlemcen",
+      "publisher": "Ernest Leroux, Paris",
+      "url": "https://archive.org/details/arabe_tlemcen",
+      "pages": null,
+      "notes": "Classic (public-domain) description of a western-Algerian sedentary pre-Hilalian dialect: interdental merger to stops, ǧīm /ʒ/, heavy syncope. Tlemcen itself has the divergent qāf → [ʔ] reflex (not the Algiers /q/), so it is cited for the shared consonantism and syncope, not the qāf reflex."
+    },
+    {
+      "id": "versteegh2001",
+      "author": "Versteegh, K.",
+      "year": 2001,
+      "title": "The Arabic Language",
+      "publisher": "Edinburgh University Press",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "saadane_habash2015",
+      "author": "Saadane, H. & Habash, N.",
+      "year": 2015,
+      "title": "A Conventional Orthography for Algerian Arabic",
+      "publisher": "Proceedings of the Second Workshop on Arabic Natural Language Processing, Beijing (ACL W15-3208)",
+      "url": "https://aclanthology.org/W15-3208/",
+      "pages": "§4.1 Phonological Variations, p.70",
+      "notes": "The source that pairs the LETTER with the sound, which the Unicode annotation does not. §4.1 lists the realisations of the consonant equivalent to MSA ‹ق› and gives one of them as: 'palatal sound \"ڨ\" [g]: this sound is also used in both Moroccan and Tunisian dialects in addition to the ALG one. In Algeria, this sound is used in some cities like Annaba and Sétif, in addition to the Bedouin dialects where this sound is widely employed.' So ‹ڨ› is a qāf-derived letter written for [ɡ], stated for Algerian, Moroccan and Tunisian. SCOPE: 'palatal' is the paper's word for a velar stop, and the paper names no variety outside the Maghreb — it is not a source for ‹ڨ› in Saudi, Gulf or Egyptian writing. Note also that CODA itself prescribes the cognate ‹ق› for /g/ in Tunisian (Zribi et al. 2014, 'The letter ق q is used to represent the two consonants /q/ and /g/'), so this letter is a spelling that OCCURS, not one CODA endorses."
+    },
+    {
+      "id": "lahgtna_judged_2026_09",
+      "author": "TigreGotico lahgtna judged tree (dataset, not literature)",
+      "year": 2026,
+      "title": "Dialect-labelled Arabic transcripts, judged tree",
+      "publisher": "Internal dataset, /root/speech/data-lane/trees-units/judged/lahgtna (305 shards, 608,124 rows), label field `dialect`",
+      "pages": "counted 2026-09-17 by the data lane",
+      "notes": "A DATASET CITATION and weighed as one: it records which spellings occur and how often, never which are correct, and it cannot be checked from outside this organisation — so the lane that ran it is named. UNITS ARE STATED because rows and occurrences differ by about 1.8x here and have already been confused once. ‹ڭ› U+06AD: 1,925 rows / 3,250 occurrences overall; Moroccan 1,551 rows / 2,742 occurrences, Algerian 297 / 391, Tunisian 54 / 80. ‹ݣ› U+0763, same tree and date: 2,031 rows / 3,437 occurrences; Moroccan 1,717 / 3,042, Algerian 260 / 328, Tunisian 48 / 61. ‹ڨ› U+06A8 by contrast is Algerian-dominant: 24,511 Algerian rows against 37 Moroccan. The twenty most frequent Moroccan ‹ڭ› forms are ڭال 171, ڭلت 166, نڭول 115, ڭاع 101, كنڭول 77, ڭالت 70, كتڭول 41, ڭول 37, كيڭول 37, ڭَالْ 34, تڭول 32, ڭالي 31, ڭُلْتْ 29, كانڭول 29, ڭالْ 24, ڭُلتْ 22, ڭاليا 19, كيتڭال 18, نڭلس 18, ڭولي 17 — every one a qāf word (قال، قلت، نقول، قاع، كنقول), with no mixture and no residue. CAVEAT: counts are over the judged tree as it stands with no gates applied, so they describe what the corpus holds rather than what a pool would take."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Algerian_Arabic",
+    "https://ar.wikipedia.org/wiki/لهجة_جزائرية",
+    "https://ar.wikipedia.org/wiki/%D9%84%D9%87%D8%AC%D8%A9_%D8%AC%D8%B2%D8%A7%D8%A6%D8%B1%D9%8A%D8%A9"
+  ],
+  "timespan": {
+    "start_year": 1500,
+    "end_year": null
+  },
+  "glottolog_code": "alge1239",
+  "iso639_3": "arq",
+  "wikidata_qid": "Q56499",
+  "location": {
+    "latitude": 35.4208,
+    "longitude": 3.23033,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Algerian Arabic."
+  },
+  "optional_marks": [
+    "ً",
+    "ٌ",
+    "ٍ",
+    "َ",
+    "ُ",
+    "ِ",
+    "ّ",
+    "ْ",
+    "ٰ",
+    "ٓ"
+  ],
+  "stress": {
+    "default_position": -3,
+    "quantity_sensitive": true,
+    "superheavy_final_attracts": true,
+    "max_onset": 1,
+    "stress_mark": "ˈ",
+    "notes": "Arabic stress is QUANTITY-SENSITIVE: it falls on a syllable because that syllable is heavy, not because of any orthographic ending, so no ending table can express it. The cascade (Ryding, A Reference Grammar of MSA, CUP 2005, §2.3; Watson, The Phonology and Morphology of Arabic, OUP 2002, ch.3): a superheavy final syllable (CVːC/CVCC) takes the stress (kiˈtaːb); otherwise a heavy penult (CVː/CVC) does (muˈdarris); otherwise the antepenult (ˈmadrasa). max_onset=1 because Arabic onsets are obligatory and hold exactly one consonant — a medial cluster splits, closing the preceding syllable, and that boundary is what makes the penult of mudarris heavy. INPUT CONTRACT: weight is only recoverable from a complete transcription, so this requires diacritized input; an undiacritized skeleton has no vowels to weigh. The registered wikipron gold carries no stress marks, but the benchmark strips stress from both sides by default, so this costs no PER. Prosodic clitics: monosyllabic function words (negator maː, prepositions fiː/min/ʕan/ʕa/li/bi, vocative jaː, copula-negator muː/miʃ, conditional law/loː, wa-proclitic combinations) attach to a host and fall inside the host's stress domain, so they carry no word stress (Watson 2002, The Phonology and Morphology of Arabic, OUP, ch.3). Pan-Arabic class; the per-lect form list reflects the function words attested in this lect. Orthographic test — a clitic homograph (e.g. verb yā 'came') is destressed in every occurrence.",
+    "cliticless_words": [
+      "فِي",
+      "لِي",
+      "مَا",
+      "مِن",
+      "يَا"
+    ]
+  },
+  "orthography_standard": {
+    "name": "CODA (Conventional Orthography for Dialectal Arabic), Algerian guidelines",
+    "authority": "Habash et al. (CODA*)",
+    "year": 2018,
+    "url": "https://arxiv.org/abs/1906.05758",
+    "notes": "Algerian dialectal text is written in MSA-shaped Arabic script; CODA* provides the per-dialect conventions, plus the supplemental letters پ /p/, ڤ /v/, گ /ɡ/ for French/Berber loans."
+  },
+  "audit": {
+    "primary_sources": {
+      "conclusion": "sample_too_small",
+      "measured": "The primary_sources row holds exactly one gold pair (id guerrero2019-010); per_ci_low and per_ci_high both read 0.7143 in benchmarks/results.json because a confidence interval needs more than one row. The single example is western-Algerian Tlemcen speech (Guerrero 2019, quoting Marcais 1908/1902), not the Algiers baseline the spec models, so it diagnoses rules rather than certifies the variety.",
+      "reference": "docs/evaluation/gold_defects.md, 'Algerian Arabic, primary_sources' section"
+    }
+  }
+}

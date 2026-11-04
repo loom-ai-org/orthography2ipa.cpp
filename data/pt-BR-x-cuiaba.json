@@ -1,0 +1,226 @@
+{
+  "code": "pt-BR-x-cuiaba",
+  "name": "Cuiabano Portuguese",
+  "script": "Latin",
+  "parent": "pt-BR",
+  "quality": "research",
+  "script_type": "alphabet",
+  "iso639_3": "por",
+  "allophone_passes": 2,
+  "graphemes_base": "pt-BR",
+  "allophones_base": "pt-BR",
+  "positional_graphemes_base": "pt-BR",
+  "notes": "The traditional speech of the Cuiabá river valley (Baixada Cuiabana), Mato Grosso, as described by Almeida (2004) for riverside speakers with little schooling, about fifty years old, of Cuiabá-born parents (p. 149). /t d/ stay stops before [i] (pp. 151-152). ⟨ch x j⟩ and soft ⟨g⟩ are commonly the affricates [t͡ʃ d͡ʒ] (pp. 154-155). Coda /S/ is palato-alveolar, mainly word-finally (p. 153). Coda /l/ and coda /R/ are retroflex (pp. 157, 159). Onset strong /R/ is a trill (pp. 158-159), and word-final /R/ tends to drop (p. 159). Each of these alternates with the pt-BR form, even in one speaker; the spec gives the traditional form first. The ALiB rates /t d/ palatalisation in the capital as 'moderada' (Battisti & Dornelles Filho 2015: 226).",
+  "sources": [
+    {
+      "id": "almeida2004",
+      "author": "Almeida, M.M.S.",
+      "year": 2004,
+      "title": "As consoantes do português falado no Vale do Cuiabá",
+      "publisher": "Signum: Estudos da Linguagem (UEL) 7(1): 149-163",
+      "url": "https://ojs.uel.br/revistas/uel/index.php/signum/article/download/3880/3119/13043",
+      "pages": "149-159",
+      "notes": null
+    },
+    {
+      "id": "battisti_dornellesfilho2015",
+      "author": "Battisti, E. & Dornelles Filho, A.A.",
+      "year": 2015,
+      "title": "Análise em tempo real da palatalização de /t/ e /d/ no português falado em uma comunidade ítalo-brasileira",
+      "publisher": "Revista da ABRALIN 14(1): 221-246",
+      "url": "https://revista.abralin.org/index.php/abralin/article/download/1239/1162/549",
+      "pages": "226",
+      "notes": "Summarises the ALiB capital map of /t d/ palatalisation (Cardoso et al. 2014: 123)."
+    },
+    {
+      "id": "cristofaro_silva2025",
+      "author": "Cristófaro Silva, T.",
+      "year": 2025,
+      "title": "A Representação Fonológica dos Róticos no Português Brasileiro",
+      "publisher": "Caligrama 30(3): 238-254",
+      "url": "https://doi.org/10.35699/2238-3824.2025.61138",
+      "pages": "240",
+      "notes": "The R-forte after a coda consonant (BR_STRONG_R_AFTER_CODA)."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Cuiab%C3%A1"
+  ],
+  "graphemes": {
+    "rr": [
+      "r",
+      "x"
+    ]
+  },
+  "allophones": {
+    "s": [
+      "s",
+      "ʃ"
+    ],
+    "z": [
+      "z",
+      "ʒ"
+    ],
+    "ʃ": [
+      "ʃ",
+      "t͡ʃ"
+    ],
+    "ʒ": [
+      "ʒ",
+      "d͡ʒ"
+    ]
+  },
+  "positional_graphemes": {
+    "t": {
+      "before_i": [
+        "t"
+      ]
+    },
+    "d": {
+      "before_i": [
+        "d"
+      ]
+    },
+    "l": {
+      "before_vowel": [
+        "l"
+      ],
+      "onset": [
+        "l"
+      ],
+      "before_consonant": [
+        "ɻ",
+        "w"
+      ],
+      "word_final": [
+        "ɻ",
+        "w"
+      ]
+    },
+    "r": {
+      "word_initial": [
+        "r",
+        "x"
+      ],
+      "intervocalic": [
+        "ɾ"
+      ],
+      "before_consonant": [
+        "ɻ"
+      ],
+      "word_final": [
+        "ɻ",
+        ""
+      ]
+    }
+  },
+  "allophone_rules": [
+    {
+      "id": "BR_AFFRIC_T_RAISED",
+      "phonemes": [],
+      "surface": "t͡ʃ",
+      "notes": "DISABLED: /t/ stays a stop before [i]; see the positional before_i map."
+    },
+    {
+      "id": "BR_AFFRIC_D_RAISED",
+      "phonemes": [],
+      "surface": "d͡ʒ",
+      "notes": "DISABLED: /d/ stays a stop before [i]; see the positional before_i map."
+    },
+    {
+      "id": "CUIABA_AFFRIC_SH",
+      "phonemes": [
+        "ʃ"
+      ],
+      "surface": "t͡ʃ",
+      "syllable_position": "onset",
+      "notes": "Onset /ʃ/ (⟨ch x⟩) is the affricate [t͡ʃ]. Almeida (2004: 154-155): the fricatives 'comumente são pronunciadas, respectivamente, como africadas surda /tS/ e sonora /dZ/': [tSe»ga] chegar, [»petSi] peixe, [»putSa] puxa."
+    },
+    {
+      "id": "CUIABA_AFFRIC_ZH",
+      "phonemes": [
+        "ʒ"
+      ],
+      "surface": "d͡ʒ",
+      "syllable_position": "onset",
+      "notes": "Onset /ʒ/ (⟨j⟩, soft ⟨g⟩) is the affricate [d͡ʒ]. Almeida (2004: 155): [»dZe)ti] gente, [»dZa] já, [»odZi] hoje."
+    },
+    {
+      "id": "CUIABA_CODA_S",
+      "phonemes": [
+        "s"
+      ],
+      "surface": "ʃ",
+      "syllable_position": "coda",
+      "notes": "Coda /S/ is palato-alveolar [ʃ]. Almeida (2004: 153): alveolar /s/ 'passa a pré-palatal /S/, principalmente quando se encontra em final de vocábulo: [»doS] dois, [»maS] mas', and also word-internally: [»fEStaS] festas."
+    },
+    {
+      "id": "CUIABA_CODA_Z",
+      "phonemes": [
+        "z"
+      ],
+      "surface": "ʒ",
+      "syllable_position": "coda",
+      "notes": "Voiced counterpart of CUIABA_CODA_S. Almeida (2004: 154): 'O recuo do ponto de articulação também ocorre com a sonora [z] > [Z]'."
+    },
+    {
+      "id": "BR_CODA_SH_VOICED",
+      "phonemes": [
+        "ʃ"
+      ],
+      "surface": "ʒ",
+      "syllable_position": "coda",
+      "followed_by_phoneme": [
+        "b",
+        "d",
+        "ɡ",
+        "v",
+        "z",
+        "ʒ",
+        "d͡ʒ",
+        "m",
+        "n",
+        "ɲ",
+        "l",
+        "ʎ",
+        "ɾ",
+        "ʁ"
+      ],
+      "notes": "The palatal coda /S/ takes the voicing of a following voiced consonant: mesmo [ˈmeʒmu], rasga [ˈraʒɡɐ]. Almeida (2004: 154): 'O recuo do ponto de articulação também ocorre com a sonora [z] > [Z]', with [»raZga] rasga and [»vaZa] várzea. The rule runs in the second pass, after CUIABA_CODA_S has written the coda as [ʃ]."
+    },
+    {
+      "id": "CUIABA_FINAL_R_DELETION",
+      "phonemes": [
+        "ɻ",
+        "ɾ"
+      ],
+      "surface": "",
+      "grapheme": [
+        "r"
+      ],
+      "word_final": true,
+      "notes": "Word-final /R/ drops: 'Quando temos /R/ em final de vocábulo, a tendência é ocorrer o apagamento da consoante: [fa»ze] fazer, [ka»za] casar, [mu»¥E] mulher' (Almeida 2004: 159). The rate is below 100 %, and slow speech keeps a retroflex."
+    },
+    {
+      "id": "BR_STRONG_R_AFTER_CODA",
+      "phonemes": [
+        "ɾ"
+      ],
+      "surface": "r",
+      "preceded_by_phoneme": [
+        "̃",
+        "s",
+        "z",
+        "ʃ",
+        "ʒ"
+      ],
+      "notes": "An ⟨r⟩ after a coda consonant is the strong rhotic, the trill of rapaz and burro (Almeida 2004: 158-159): honra [ˈõrɐ], genro [ˈd͡ʒẽru]. Cristófaro Silva (2025: 240) puts the R-forte in one class across three contexts: 'início de sílaba que coincide com início de palavra (rapaz, rio, rosa etc.); início de sílaba em meio de palavra (carro, terra) ou início de sílaba após consoante (Israel, desrespeito etc.)'."
+    }
+  ],
+  "location": {
+    "latitude": -15.595833,
+    "longitude": -56.096944,
+    "source": "wikidata",
+    "notes": "Cuiabá — the centre of the Baixada Cuiabana, the river valley this spec models. [Wikidata Q170762 P625]"
+  }
+}

@@ -309,6 +309,53 @@
       "phonemes": [],
       "surface": "m",
       "notes": "NOT ASSERTED for this creole, for the same reason as ES_TRILL_AFTER_CORONAL above: nasal place assimilation before a labial is cited for Castilian (Navarro Tomas 1977; Hualde 2005 ch. 3), not for this creole's phonology. Disabled by empty 'phonemes'; re-enable with a citation."
+    },
+    {
+      "id": "ES_SPIRANT_B",
+      "phonemes": [],
+      "surface": "β",
+      "notes": "NOT ASSERTED for this creole, for the same reason as ES_TRILL_AFTER_CORONAL above: spirantization of /b d ɡ/ after a non-nasal is cited for Castilian (Navarro Tomás 1918, §§ 82, 101, 129), not for this creole's phonology. Disabled by empty 'phonemes'; re-enable with a citation."
+    },
+    {
+      "id": "ES_SPIRANT_D",
+      "phonemes": [],
+      "surface": "ð",
+      "notes": "NOT ASSERTED for this creole, for the same reason as ES_TRILL_AFTER_CORONAL above: spirantization of /b d ɡ/ after a non-nasal is cited for Castilian (Navarro Tomás 1918, §§ 82, 101, 129), not for this creole's phonology. Disabled by empty 'phonemes'; re-enable with a citation."
+    },
+    {
+      "id": "ES_SPIRANT_G",
+      "phonemes": [],
+      "surface": "ɣ",
+      "notes": "NOT ASSERTED for this creole, for the same reason as ES_TRILL_AFTER_CORONAL above: spirantization of /b d ɡ/ after a non-nasal is cited for Castilian (Navarro Tomás 1918, §§ 82, 101, 129), not for this creole's phonology. Disabled by empty 'phonemes'; re-enable with a citation."
+    }
+  ],
+  "sandhi_rules": [
+    {
+      "id": "ES_EXT_SPIRANT_B",
+      "name": "initial b stays a stop",
+      "left_context": "[^mnŋɲ̃]$",
+      "right_context": "^([ˈˌ]?)b",
+      "right_transform": "\\1b",
+      "obligatory": true,
+      "notes": "NOT ASSERTED for this creole: phrase-level spirantization of /b d ɡ/ is cited for Castilian (Navarro Tomás 1918, §§ 82, 101-102), not for this creole. Replaced by id with a rule that writes the stop back; replace it with a cited rule to change that."
+    },
+    {
+      "id": "ES_EXT_SPIRANT_D",
+      "name": "initial d stays a stop",
+      "left_context": "[^mnŋɲ̃lʎ]$",
+      "right_context": "^([ˈˌ]?)d",
+      "right_transform": "\\1d",
+      "obligatory": true,
+      "notes": "NOT ASSERTED for this creole: phrase-level spirantization of /b d ɡ/ is cited for Castilian (Navarro Tomás 1918, §§ 82, 101-102), not for this creole. Replaced by id with a rule that writes the stop back; replace it with a cited rule to change that."
+    },
+    {
+      "id": "ES_EXT_SPIRANT_G",
+      "name": "initial g stays a stop",
+      "left_context": "[^mnŋɲ̃]$",
+      "right_context": "^([ˈˌ]?)ɡ",
+      "right_transform": "\\1ɡ",
+      "obligatory": true,
+      "notes": "NOT ASSERTED for this creole: phrase-level spirantization of /b d ɡ/ is cited for Castilian (Navarro Tomás 1918, §§ 82, 101-102), not for this creole. Replaced by id with a rule that writes the stop back; replace it with a cited rule to change that."
     }
   ]
 }

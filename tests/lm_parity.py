@@ -7,7 +7,7 @@ The harness runs three steps and fails on any differing value:
 
   1. tests/lm_feats_ref.py writes the battery, the cases and the reference
      values to tests/_scratch/ (it needs the reference interpreter, with numpy
-     and ovos-spec-tools installed)
+     and linguatag installed)
   2. the C++ check program recomputes every value from the same battery and
      case files
   3. tests/lm_feats_compare.py compares the two dumps byte for byte

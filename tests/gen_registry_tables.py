@@ -1,18 +1,23 @@
 #!/usr/bin/env python3
-"""Generate src/registry_tables.inc from the reference registry.
+"""Generate src/registry_tables.inc and src/linguatag_tables.inc.
 
-registry.py's code-resolution tables are DATA, and this port's rule for data is
-that it is transcribed, never retyped (the same rule that makes
-tests/gen_transform_tables.py the provenance of src/transform_tables.inc). This
-script imports the reference and writes every table `resolve()` and
-`lang_distance()` consults — `_ALIASES`, `_BARE_DEFAULTS`, `_REGION_DEFAULTS`
-and `ovos_spec_tools.language._NORM_REGION` — as C++ initializer lists, in the
-reference's own declaration order.
+registry.py's code-resolution tables and the linguatag data it measures tags
+with are DATA, and this port's rule for data is that it is transcribed, never
+retyped (the same rule that makes tests/gen_transform_tables.py the provenance
+of src/transform_tables.inc). This script imports the reference and the
+linguatag it resolves with, and writes every table `resolve()` and
+`lang_distance()` consult as C++ initializer lists, in the source's own
+declaration order:
 
-Run it after any change to the reference registry or to
-ovos_spec_tools.language:
+  * src/registry_tables.inc: registry.py `_ALIASES` (which holds `_RENAMED`),
+    `_RENAMED` and `_REGION_DEFAULTS`;
+  * src/linguatag_tables.inc: linguatag `OVERRIDES`, the CLDR likely regions
+    and the lect tree it reads from its data files, and the Arabic, Chinese and
+    threshold constants of linguatag.matching and linguatag.lects.
 
-    /home/flavio/.venvs/piper/bin/python3 tests/gen_registry_tables.py
+Run it after any change to the reference registry or to linguatag:
+
+    python3 tests/gen_registry_tables.py
 """
 import os
 import pathlib
@@ -25,8 +30,9 @@ if not (pathlib.Path(reference) / "orthography2ipa" / "phonetok.py").is_file():
     sys.exit(f"reference package not found at {reference!r}")
 sys.path.insert(0, reference)
 
+from linguatag import lects, matching, regions  # noqa: E402
+from linguatag.version import VERSION_STR as LINGUATAG_VERSION  # noqa: E402
 import orthography2ipa.registry as registry  # noqa: E402
-from ovos_spec_tools import language as o2i_language  # noqa: E402
 
 
 def cstr(value: str) -> str:
@@ -61,72 +67,102 @@ def string_list(name: str, values, *docs: str) -> str:
     return "\n".join(lines) + "\n"
 
 
+def constant(name: str, value, *docs: str) -> str:
+    if isinstance(value, str):
+        return "\n".join([*docs, f"constexpr const char* {name} = {cstr(value)};"]) + "\n"
+    return "\n".join([*docs, f"constexpr int {name} = {value};"]) + "\n"
+
+
 ALIASES_DOC = [
     "// registry.py _ALIASES: the fallback alias table for ISO 639-3 -> BCP-47",
-    "// normalisation. langcodes resolves standard codes when it is available;",
-    "// private-use subtags always come through here, and the self-pins (bxr,",
-    "// diq, quz, quy, tw, fat, mhr, mrj, aju, als, rmy, src, oji, mnk, kas,",
-    "// bcc, arb, phn, acy, peo, pal, mwl, ast) stop langcodes' macro=True",
-    "// collapse from rewriting an individual code that has its own spec.",
+    "// normalisation, with _RENAMED folded in as the reference does",
+    "// (_ALIASES.update(_RENAMED)). Private-use subtags always come through",
+    "// here, and the self-pins stop langcodes' macro=True collapse from",
+    "// rewriting an individual code that has its own spec.",
 ]
-BARE_DOC = [
-    "// registry.py _BARE_DEFAULTS: the reference variety of a bare",
-    "// primary-language tag whose specs are all regional (pt -> pt-PT),",
-    "// deliberately NOT langcodes' most-populous choice (pt -> pt-BR).",
+RENAMED_DOC = [
+    "// registry.py _RENAMED: the key a spec had before it took its canonical",
+    "// key, mapped to that key. closest_lang also measures a tag against these",
+    "// old keys, and a match on one maps through this table.",
 ]
 REGION_DOC = [
     "// registry.py _REGION_DEFAULTS: the default variety for a region tag whose",
-    "// specs are all sub-regional (ar-SA -> ar-SA-x-najd). An editorial",
-    "// convention, stated here and nowhere in the spec data.",
+    "// specs are all sub-regional (ar-SA -> ars-SA). An editorial convention,",
+    "// stated here and nowhere in the spec data.",
 ]
-NORM_DOC = [
-    "// ovos_spec_tools.language _NORM_REGION: the region a BARE tag is MEASURED",
-    "// FROM inside lang_distance, so `pt` falls back to `pt-PT` before `pt-BR`.",
-    "// Diverges from langcodes' population default on purpose.",
-]
-ARABIC_DOC = [
-    "// ovos_spec_tools.language _ARABIC_VARIETIES: the individual languages of",
-    "// the ISO 639-3 `ara` macrolanguage, plus `ar`. Measured against bare MSA",
-    "// (_MSA) in Arabic script or with no script, lang_distance is at most",
-    "// _ARABIC_FALLBACK_DISTANCE. The reference holds a frozenset; it is sorted.",
-]
-MSA_DOC = [
-    "// ovos_spec_tools.language _MSA: the bare Modern Standard Arabic tags.",
-]
+
+
+def registry_tables() -> str:
+    return "\n".join([
+        "// GENERATED by tests/gen_registry_tables.py from the reference",
+        "// registry.py tables. Do not edit: regenerate after any change to the",
+        "// reference.",
+        "",
+        table("_ALIASES", registry._ALIASES, *ALIASES_DOC),
+        table("_RENAMED", registry._RENAMED, *RENAMED_DOC),
+        table("_REGION_DEFAULTS", registry._REGION_DEFAULTS, *REGION_DOC),
+    ])
+
+
+def linguatag_tables() -> str:
+    likely = regions._likely_regions()
+    parents = lects._parents()
+    overrides = ["// linguatag.regions OVERRIDES: language -> (script, region) of its",
+                 "// default, where the region is not the CLDR likely region.",
+                 "struct Override { const char* language; const char* script; const char* region; };",
+                 "static const Override OVERRIDES[] {"]
+    for language, (script, region) in regions.OVERRIDES.items():
+        overrides.append(f"    {{{cstr(language)}, {cstr(script)}, {cstr(region)}}},")
+    overrides.append("};")
+    return "\n".join([
+        f"// GENERATED by tests/gen_registry_tables.py from linguatag {LINGUATAG_VERSION}.",
+        "// Do not edit: regenerate after any change to linguatag.",
+        "",
+        "\n".join(overrides) + "\n",
+        table("LIKELY_REGIONS", likely,
+              "// linguatag data/likely_regions.json `regions`: the CLDR likely region",
+              "// of a language, or of a language-script pair."),
+        table("LECT_PARENTS", parents,
+              "// linguatag data/lineage.json `parents`: the lect tree, each tag",
+              "// mapped to its parent."),
+        string_list("ARABIC_VARIETIES", sorted(matching._ARABIC_VARIETIES),
+                    "// linguatag.matching _ARABIC_VARIETIES: the individual languages of",
+                    "// the ISO 639-3 `ara` macrolanguage, and `ar`. The source holds a",
+                    "// frozenset; it is sorted."),
+        string_list("MSA", matching._MSA,
+                    "// linguatag.matching _MSA: the spellings of Modern Standard Arabic."),
+        constant("ARABIC_FALLBACK_DISTANCE", matching._ARABIC_FALLBACK_DISTANCE,
+                 "// linguatag.matching _ARABIC_FALLBACK_DISTANCE."),
+        constant("DIFFERENT_LANGUAGE_DISTANCE", matching._DIFFERENT_LANGUAGE_DISTANCE,
+                 "// linguatag.matching _DIFFERENT_LANGUAGE_DISTANCE."),
+        constant("DEFAULT_MAX_LANGUAGE_DISTANCE", matching.DEFAULT_MAX_LANGUAGE_DISTANCE,
+                 "// linguatag.matching DEFAULT_MAX_LANGUAGE_DISTANCE: the inclusive",
+                 "// upper bound of a usable match."),
+        constant("CANTONESE", matching._CANTONESE, "// linguatag.matching _CANTONESE."),
+        constant("MANDARIN", matching._MANDARIN, "// linguatag.matching _MANDARIN."),
+        constant("CHINESE", matching._CHINESE, "// linguatag.matching _CHINESE."),
+        constant("LECT_FAR", lects._FAR, "// linguatag.lects _FAR."),
+        constant("LECT_STANDARD_LAST", lects._STANDARD_LAST,
+                 "// linguatag.lects _STANDARD_LAST."),
+        "",
+    ])
 
 
 def main() -> None:
-    body = "\n".join([
-        "// GENERATED by tests/gen_registry_tables.py from the reference",
-        "// registry.py tables and ovos_spec_tools.language._NORM_REGION.",
-        "// Do not edit: regenerate after any change to the reference.",
-        "",
-        table("_ALIASES", registry._ALIASES, *ALIASES_DOC),
-        table("_BARE_DEFAULTS", registry._BARE_DEFAULTS, *BARE_DOC),
-        table("_REGION_DEFAULTS", registry._REGION_DEFAULTS, *REGION_DOC),
-        table("_NORM_REGION", o2i_language._NORM_REGION, *NORM_DOC),
-        string_list("_ARABIC_VARIETIES", sorted(o2i_language._ARABIC_VARIETIES), *ARABIC_DOC),
-        string_list("_MSA", o2i_language._MSA, *MSA_DOC),
-        "// ovos_spec_tools.language _ARABIC_FALLBACK_DISTANCE.",
-        f"constexpr int _ARABIC_FALLBACK_DISTANCE = "
-        f"{o2i_language._ARABIC_FALLBACK_DISTANCE};",
-        "",
-        "// registry.py/ovos_spec_tools: the inclusive upper bound closest_lang",
-        "// accepts (OVOS-INTENT-2 section 2.2's \"up to 10 is a usable match\").",
-        f"constexpr int DEFAULT_MAX_LANGUAGE_DISTANCE = "
-        f"{o2i_language.DEFAULT_MAX_LANGUAGE_DISTANCE};",
-        "",
-    ])
-    out = CPP_ROOT / "src" / "registry_tables.inc"
-    out.write_text(body, encoding="utf-8")
-    print(f"wrote {out} ({len(body)} bytes)")
-    print("aliases=%d bare=%d region=%d norm=%d max_distance=%d" % (
-        len(registry._ALIASES), len(registry._BARE_DEFAULTS),
-        len(registry._REGION_DEFAULTS), len(o2i_language._NORM_REGION),
-        o2i_language.DEFAULT_MAX_LANGUAGE_DISTANCE))
-    print("arabic_varieties=%d msa=%d arabic_fallback_distance=%d" % (
-        len(o2i_language._ARABIC_VARIETIES), len(o2i_language._MSA),
-        o2i_language._ARABIC_FALLBACK_DISTANCE))
+    outputs = {
+        CPP_ROOT / "src" / "registry_tables.inc": registry_tables(),
+        CPP_ROOT / "src" / "linguatag_tables.inc": linguatag_tables(),
+    }
+    for path, body in outputs.items():
+        path.write_text(body, encoding="utf-8")
+        print(f"wrote {path} ({len(body)} bytes)")
+    print("aliases=%d renamed=%d region=%d overrides=%d likely=%d parents=%d "
+          "arabic_varieties=%d msa=%d max_distance=%d" % (
+              len(registry._ALIASES), len(registry._RENAMED),
+              len(registry._REGION_DEFAULTS), len(regions.OVERRIDES),
+              len(regions._likely_regions()), len(lects._parents()),
+              len(matching._ARABIC_VARIETIES), len(matching._MSA),
+              matching.DEFAULT_MAX_LANGUAGE_DISTANCE))
 
 
 if __name__ == "__main__":

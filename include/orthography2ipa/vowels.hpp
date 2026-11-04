@@ -4,6 +4,7 @@
 // see the Python docstrings for the linguistic rationale.
 #pragma once
 
+#include <map>
 #include <optional>
 #include <set>
 #include <string>
@@ -113,5 +114,26 @@ bool is_palatal_glide(const std::string& ipa);
 // Whether *ipa* may close a Cw onset (/w ʋ ʍ v/) — vowels.py
 // is_labial_approximant.
 bool is_labial_approximant(const std::string& ipa);
+
+// vowels.py SEMIVOWEL_LETTERS: Latin letters that write a vowel in some
+// orthographies and a consonant in others; and the three answers
+// semivowel_role gives.
+constexpr const char* SEMIVOWEL_LETTERS = "yw";
+constexpr const char* SEMIVOWEL_NUCLEUS = "nucleus";
+constexpr const char* SEMIVOWEL_MARGIN = "margin";
+constexpr const char* SEMIVOWEL_CONTEXTUAL = "contextual";
+
+// Whether *ch* is one of the five basic Latin vowel letters under any
+// diacritic — vowels.py is_basic_vowel_letter. ⟨y⟩ never is.
+bool is_basic_vowel_letter(const std::string& ch);
+
+// How a SEMIVOWEL_LETTERS letter takes part in syllables of a spec, read
+// from its flat grapheme table — vowels.py semivowel_role. *conditioned*
+// tells whether the spec's positional rules choose among the letter's
+// readings. nullopt when the table does not mention the letter at all.
+std::optional<std::string> semivowel_role(
+    const std::string& letter,
+    const std::map<std::string, std::vector<std::string>>& graphemes,
+    bool conditioned = false);
 
 } // namespace orthography2ipa::vowels

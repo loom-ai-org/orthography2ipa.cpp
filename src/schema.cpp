@@ -1931,6 +1931,30 @@ bool stress_entries(Report& report, Binding& b, const std::string& name,
     });
 }
 
+bool closed_hiatus_model(Report& report, const Json& json, ClosedHiatusModel& out) {
+    Binding b(report, json, "ClosedHiatusModel");
+    if (!b.begin()) return false;
+    // pairs: List[str] = Field(min_length=1)
+    bool ok = b.field("pairs", kRequired, [&](const Json& v) {
+        std::vector<std::string> items;
+        if (!value_string_list(report, v, items)) return false;
+        if (items.empty()) {
+            report.add("too_short", "List should have at least 1 item after validation, not 0");
+            return false;
+        }
+        out.pairs = std::move(items);
+        return true;
+    });
+    ok = b.field("onsets", kDefaulted, [&](const Json& v) {
+        return value_string_list(report, v, out.onsets);
+    }) && ok;
+    ok = b.field("codas", kDefaulted, [&](const Json& v) {
+        return value_string_list(report, v, out.codas);
+    }) && ok;
+    b.extras();
+    return ok && b.built();
+}
+
 bool stress_rules_model(Report& report, const Json& json, StressRulesModel& out) {
     Binding b(report, json, "StressRulesModel");
     if (!b.begin()) return false;
@@ -1958,6 +1982,10 @@ bool stress_rules_model(Report& report, const Json& json, StressRulesModel& out)
     ok = b.strings("accent2_final_letters", out.accent2_final_letters, kOptional) && ok;
     ok = b.strings("diphthongs", out.diphthongs, kOptional) && ok;
     ok = b.strings("ipa_diphthongs", out.ipa_diphthongs, kOptional) && ok;
+    ok = b.submodel("closed_hiatus", out.closed_hiatus,
+                    [](Report& r, const Json& v, ClosedHiatusModel& slot) {
+                        return closed_hiatus_model(r, v, slot);
+                    }) && ok;
     ok = b.strings("vowel_letters", out.vowel_letters, kOptional) && ok;
     ok = b.boolean("quantity_sensitive", out.quantity_sensitive, kDefaulted) && ok;
     ok = b.boolean("superheavy_final_attracts", out.superheavy_final_attracts, kDefaulted) && ok;
@@ -2106,10 +2134,27 @@ bool language_spec_model(Report& report, const Json& json, LanguageSpecModel& ou
                     return allophone_rule_model(r, v, slot);
                 }) && ok;
     ok = b.integer("allophone_passes", out.allophone_passes, kDefaulted, 1, true, 4, true) && ok;
-    ok = b.submodel("stress", out.stress,
-                    [](Report& r, const Json& v, StressRulesModel& slot) {
-                        return stress_rules_model(r, v, slot);
-                    }) && ok;
+    // stress: Union[StressRulesModel, Literal[False], None]
+    ok = b.field("stress", kOptional, [&](const Json& v) {
+        if (v.is_null()) { out.stress.reset(); return true; }
+        const std::size_t base_of_stress = report.messages.size();
+        StressRulesModel rules;
+        if (union_member(report, "StressRulesModel",
+                         [&]() { return stress_rules_model(report, v, rules); })) {
+            out.stress = rules;
+            return true;
+        }
+        if (union_member(report, "literal[False]", [&]() {
+                if (v.kind == Json::Kind::Bool && !v.boolean) return true;
+                report.add("literal_error", "Input should be False");
+                return false;
+            })) {
+            report.truncate(base_of_stress);
+            out.stress = false;
+            return true;
+        }
+        return false;
+    }) && ok;
     ok = b.submodel("tone_rules", out.tone_rules,
                     [](Report& r, const Json& v, ToneRulesModel& slot) {
                         return tone_rules_model(r, v, slot);
@@ -2439,6 +2484,14 @@ void dump(Writer& w, const ToneRulesModel& m) {
     });
 }
 
+void dump(Writer& w, const ClosedHiatusModel& m) {
+    model_object(w, [&](Writer& out, bool& first) {
+        member(out, first, "pairs", m.pairs);
+        member(out, first, "onsets", m.onsets);
+        member(out, first, "codas", m.codas);
+    });
+}
+
 void dump(Writer& w, const StressRulesModel& m) {
     model_object(w, [&](Writer& out, bool& first) {
         member(out, first, "default_position", m.default_position);
@@ -2451,6 +2504,7 @@ void dump(Writer& w, const StressRulesModel& m) {
         member(out, first, "accent2_final_letters", m.accent2_final_letters);
         member(out, first, "diphthongs", m.diphthongs);
         member(out, first, "ipa_diphthongs", m.ipa_diphthongs);
+        member(out, first, "closed_hiatus", m.closed_hiatus);
         member(out, first, "vowel_letters", m.vowel_letters);
         member(out, first, "quantity_sensitive", m.quantity_sensitive);
         member(out, first, "superheavy_final_attracts", m.superheavy_final_attracts);

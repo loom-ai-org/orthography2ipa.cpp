@@ -506,4 +506,44 @@ bool is_labial_approximant(const std::string& ipa) {
     return !seg.empty() && labial_approximant(seg[0]);
 }
 
+bool is_basic_vowel_letter(const std::string& ch) {
+    const std::u32string base = uni::nfd(uni::lower(to_utf32(ch)));
+    return !base.empty() && std::u32string_view(U"aeiou").find(base[0]) != std::u32string_view::npos;
+}
+
+namespace {
+
+// vowels.py _first_segment: the first character of *ipa* with the combining
+// marks written on it.
+std::string first_segment(const std::string& ipa) {
+    const std::u32string units = to_utf32(ipa);
+    std::size_t end = 1;
+    while (end < units.size() && uni::combining(units[end]) != 0) ++end;
+    return to_utf8(units.substr(0, std::min(end, units.size())));
+}
+
+bool writes_vowel(const std::string& ipa) {
+    return !ipa.empty() && feats::is_vowel_phone(first_segment(ipa));
+}
+
+} // namespace
+
+std::optional<std::string> semivowel_role(
+        const std::string& letter,
+        const std::map<std::string, std::vector<std::string>>& graphemes,
+        bool conditioned) {
+    const auto readings = graphemes.find(letter);
+    if (readings == graphemes.end()) {
+        for (const auto& [key, _] : graphemes)
+            if (key.find(letter) != std::string::npos) return std::string(SEMIVOWEL_MARGIN);
+        return std::nullopt;
+    }
+    bool any_vowel = false, any_other = false;
+    for (const auto& ipa : readings->second) (writes_vowel(ipa) ? any_vowel : any_other) = true;
+    if (any_vowel && !any_other) return std::string(SEMIVOWEL_NUCLEUS);
+    if (!any_vowel) return std::string(SEMIVOWEL_MARGIN);
+    if (!conditioned && writes_vowel(readings->second.front())) return std::string(SEMIVOWEL_NUCLEUS);
+    return std::string(SEMIVOWEL_CONTEXTUAL);
+}
+
 } // namespace orthography2ipa::vowels

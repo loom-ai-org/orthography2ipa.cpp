@@ -340,6 +340,54 @@ positional_map(const ptree& p) {
     return result;
 }
 
+LanguageSpec load_raw(const std::string& code, std::set<std::string>& loading);
+
+// The spec's own iso639_3, absent when the JSON leaves it out or sets it to
+// null (property_tree reads a JSON null as the text "null").
+std::optional<std::string> declared_iso639_3(const LanguageSpec& spec) {
+    const auto hit = spec.identifiers.find("iso639_3");
+    if (hit == spec.identifiers.end() || hit->second == "null") return std::nullopt;
+    return hit->second;
+}
+
+// json_loader.py _nearest_data_ancestor: *code* itself, or the first spec on
+// its `parent` chain that is not a classification-only clade. A spec that
+// cannot be loaded ends the walk, as one missing from the loaded set does in
+// the reference.
+std::optional<std::string> nearest_data_ancestor(std::string code, std::set<std::string>& loading) {
+    std::set<std::string> seen;
+    while (!code.empty() && !seen.count(code)) {
+        seen.insert(code);
+        LanguageSpec spec;
+        try {
+            spec = load_raw(code, loading);
+        } catch (const std::exception&) {
+            return std::nullopt;
+        }
+        if (!spec.clade) return code;
+        code = spec.parent;
+    }
+    return std::nullopt;
+}
+
+// json_loader.py: a spec takes its stress base's resolved StressRules whole.
+void inherit_stress(LanguageSpec& s, const LanguageSpec& b) {
+    s.default_stress_position = b.default_stress_position; s.stress_mark = b.stress_mark; s.stress_defined = b.stress_defined;
+    s.marked_vowels = b.marked_vowels; s.final_stress_endings = b.final_stress_endings;
+    s.penult_stress_endings = b.penult_stress_endings; s.antepenult_stress_endings = b.antepenult_stress_endings;
+    s.diphthongs = b.diphthongs; s.ipa_diphthongs = b.ipa_diphthongs; s.closed_hiatus = b.closed_hiatus;
+    s.vowel_letters = b.vowel_letters;
+    s.onset_clusters = b.onset_clusters; s.quantity_sensitive = b.quantity_sensitive;
+    s.superheavy_final_attracts = b.superheavy_final_attracts; s.max_onset = b.max_onset;
+    s.max_onset_declared = b.max_onset_declared; s.stress_source = b.stress_source;
+    s.secondary_stress = b.secondary_stress;
+    s.compound_stress = b.compound_stress;
+    s.cliticless_words = b.cliticless_words;
+    s.accent2_mark = b.accent2_mark; s.accent2_final_letters = b.accent2_final_letters;
+    s.constrain_mark_onsets = b.constrain_mark_onsets; s.coda_liquid_capture = b.coda_liquid_capture;
+    s.iambic_length = b.iambic_length;
+}
+
 LanguageSpec load_raw(const std::string& code, std::set<std::string>& loading) {
     if (cache.count(code)) return cache.at(code);
     if (loading.count(code)) throw std::runtime_error("cyclic language inheritance: " + code);
@@ -402,7 +450,13 @@ LanguageSpec load_raw(const std::string& code, std::set<std::string>& loading) {
     s.phonemes = optional_strings(raw, "phonemes");
     static const ptree no_stress;
     s.marked_vowels = optional_strings(raw.get_child("stress", no_stress), "marked_vowels");
-    if (auto stress = raw.get_child_optional("stress")) {
+    // json_loader.py: a non-empty object is the spec's own block; `false`
+    // takes no block at all; anything else (absent, null, {}) inherits one.
+    const auto raw_stress = raw.get_child_optional("stress");
+    const bool own_stress = raw_stress && !raw_stress->empty();
+    const bool stress_opt_out = raw_stress && raw_stress->empty() && raw_stress->data() == "false";
+    if (own_stress) {
+        const auto& stress = raw_stress;
         s.stress_defined = true;
         s.default_stress_position = stress->get<int>("default_position", -2);
         s.stress_mark = stress->get<std::string>("stress_mark", "ˈ");
@@ -411,6 +465,10 @@ LanguageSpec load_raw(const std::string& code, std::set<std::string>& loading) {
         s.antepenult_stress_endings = optional_strings(*stress, "antepenult_stress_endings");
         s.diphthongs = optional_strings(*stress, "diphthongs");
         if (auto ipa = stress->get_child_optional("ipa_diphthongs")) s.ipa_diphthongs = strings(*ipa);
+        if (auto hiatus = stress->get_child_optional("closed_hiatus"); hiatus && !hiatus->empty())
+            s.closed_hiatus = ClosedHiatus{optional_strings(*hiatus, "pairs"),
+                                           optional_strings(*hiatus, "onsets"),
+                                           optional_strings(*hiatus, "codas")};
         s.vowel_letters = optional_strings(*stress, "vowel_letters");
         s.onset_clusters = optional_strings(*stress, "onset_clusters");
         s.quantity_sensitive = stress->get<bool>("quantity_sensitive", false);
@@ -509,26 +567,6 @@ LanguageSpec load_raw(const std::string& code, std::set<std::string>& loading) {
                 if (!s.positional_graphemes.count(x.first)) s.positional_graphemes[x.first] = x.second;
         s.allophone_rules = overlay_allophone(b.allophone_rules, s.allophone_rules);
         s.sandhi_rules = overlay_sandhi(b.sandhi_rules, s.sandhi_rules);
-        if (!raw.get_child_optional("stress") && s.default_stress_position == -2) {
-            // No own stress block: inherit the graphemes-base spec's
-            // resolved stress rules WHOLESALE (json_loader.py), so a child
-            // that shares its base's orthography also shares its
-            // accentuation — every StressRules field, cliticless_words and
-            // the accent-2 block included.
-            s.default_stress_position = b.default_stress_position; s.stress_mark = b.stress_mark; s.stress_defined = b.stress_defined;
-            s.marked_vowels = b.marked_vowels; s.final_stress_endings = b.final_stress_endings;
-            s.penult_stress_endings = b.penult_stress_endings; s.antepenult_stress_endings = b.antepenult_stress_endings;
-            s.diphthongs = b.diphthongs; s.ipa_diphthongs = b.ipa_diphthongs; s.vowel_letters = b.vowel_letters;
-            s.onset_clusters = b.onset_clusters; s.quantity_sensitive = b.quantity_sensitive;
-            s.superheavy_final_attracts = b.superheavy_final_attracts; s.max_onset = b.max_onset;
-            s.max_onset_declared = b.max_onset_declared; s.stress_source = b.stress_source;
-            s.secondary_stress = b.secondary_stress;
-            s.compound_stress = b.compound_stress;
-            s.cliticless_words = b.cliticless_words;
-            s.accent2_mark = b.accent2_mark; s.accent2_final_letters = b.accent2_final_letters;
-            s.constrain_mark_onsets = b.constrain_mark_onsets; s.coda_liquid_capture = b.coda_liquid_capture;
-            s.iambic_length = b.iambic_length;
-        }
         if (s.family.empty()) s.family = b.family;
         // BASE_SCALAR: a spec that does not state the field takes its
         // graphemes base's resolved value.
@@ -552,6 +590,23 @@ LanguageSpec load_raw(const std::string& code, std::set<std::string>& loading) {
     if (!exceptions_base.empty() && exceptions_base != code) {
         const auto b = load_raw(exceptions_base, loading);
         for (const auto& [word, ipa] : b.word_exceptions) if (!s.word_exceptions.count(word)) s.word_exceptions[word] = ipa;
+    }
+    // InheritanceMode.BASE_BLOCK (json_loader.py): a spec with no stress
+    // block of its own takes the resolved block of its graphemes base, else
+    // of the nearest data ancestor on `parent` when that ancestor is the same
+    // language (the spec's iso639_3 is unset or equal to the ancestor's).
+    if (!own_stress && !stress_opt_out) {
+        std::string stress_base = base;
+        if (stress_base.empty()) {
+            const auto data_parent = nearest_data_ancestor(s.parent, loading);
+            if (data_parent) {
+                const auto own_iso = declared_iso639_3(s);
+                if (!own_iso || own_iso == declared_iso639_3(load_raw(*data_parent, loading)))
+                    stress_base = *data_parent;
+            }
+        }
+        if (!stress_base.empty() && stress_base != code)
+            inherit_stress(s, load_raw(stress_base, loading));
     }
     if (base.empty() && !s.parent.empty() && s.parent != code) {
         LanguageSpec ancestor = load_raw(s.parent, loading);
@@ -2233,7 +2288,7 @@ std::string finalize_word_ipa(const LanguageSpec& spec, const std::string& word,
             const std::vector<int> secondary_indices(secondary.begin(), secondary.end());
             ipa = stress::apply_stress_mark(ipa, spec, idx, &sylls,
                                             /*ipa_syllables=*/nullptr, mark,
-                                            secondary_indices);
+                                            secondary_indices, &spec);
         }
     }
     // NOT NFC-composed here: cross-word sandhi still needs to run on this

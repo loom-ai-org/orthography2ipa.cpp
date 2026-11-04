@@ -27,6 +27,7 @@ add_library(orthography2ipa
     src/inventory.cpp
     src/langcodes.cpp
     src/lattice_per.cpp
+    src/linguatag.cpp
     src/lm.cpp
     src/markup.cpp
     src/orthography2ipa.cpp
@@ -116,6 +117,11 @@ if(BUILD_TESTING)
     # (src/beam.hpp), which owns the positional.py port.
     target_include_directories(orthography2ipa-tests PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/src)
     add_test(NAME orthography2ipa-core COMMAND orthography2ipa-tests)
+    # One const pt-PT tokenizer shared by four threads: its closed-hiatus cache
+    # must give each thread the tokens of a tokenizer that one thread uses.
+    add_executable(orthography2ipa-threads-phonetok tests/threads_phonetok.cpp)
+    target_link_libraries(orthography2ipa-threads-phonetok PRIVATE orthography2ipa Threads::Threads)
+    add_test(NAME orthography2ipa-threads-phonetok COMMAND orthography2ipa-threads-phonetok)
     # `--json distance` writes Python repr floats, as the reference's json.dumps
     # does. The pt-PT/es-ES allophone overlap is 7/13.
     add_test(NAME orthography2ipa-cli-distance-json COMMAND orthography2ipa-cli --json distance pt-PT es-ES)
@@ -125,7 +131,7 @@ if(BUILD_TESTING)
     # ── parity-harness drivers ────────────────────────────────────────────────
     # The per-module harnesses drive a small check binary instead of the CLI
     # (a process per spec for 7662 specs is not workable through the CLI).
-    foreach(driver langcodes inventory lm_feats lattice_per features_conformance tables sentence py_float weights)
+    foreach(driver langcodes linguatag inventory lm_feats lattice_per features_conformance tables sentence py_float weights)
         add_executable(orthography2ipa-check-${driver} tests/check_${driver}_driver.cpp)
         target_link_libraries(orthography2ipa-check-${driver} PRIVATE orthography2ipa)
         # Several drivers reach the library's private beam/unicode headers.
@@ -203,7 +209,7 @@ if(BUILD_TESTING)
         # distance over the alias/catalog battery.
         add_test(NAME orthography2ipa-registry-parity
                  COMMAND ${Python3_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/tests/registry_parity.py
-                         $<TARGET_FILE:orthography2ipa-cli> --pairs 800 --mutations 2000)
+                         $<TARGET_FILE:orthography2ipa-cli> --pairs 24000 --mutations 2000)
         # The langcodes engine behind the registry port: standardize_tag,
         # tag_distance and the parse/maximize round-trips against the
         # installed langcodes (CTest-sized battery; --full is a manual sweep).
@@ -240,8 +246,14 @@ if(BUILD_TESTING)
                              orthography2ipa-reference-regression-sentence
                              PROPERTIES ENVIRONMENT "O2I_PYTHON_ROOT=${O2I_REF_ROOT}"
                                         TIMEOUT 3600)
+        # The linguatag port called directly: every public function against the
+        # installed linguatag, closest_lang tie lists included.
+        add_test(NAME orthography2ipa-linguatag-parity
+                 COMMAND ${Python3_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/tests/linguatag_parity.py
+                         $<TARGET_FILE:orthography2ipa-check-linguatag>)
         set_tests_properties(orthography2ipa-registry-parity
                              orthography2ipa-langcodes-parity
+                             orthography2ipa-linguatag-parity
                              PROPERTIES ENVIRONMENT "O2I_PYTHON_ROOT=${O2I_REF_ROOT};O2I_PYTHON=${Python3_EXECUTABLE}")
         set_tests_properties(orthography2ipa-reference-regression-sweep
                              PROPERTIES ENVIRONMENT "O2I_PYTHON_ROOT=${O2I_REF_ROOT}" TIMEOUT 14400)

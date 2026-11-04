@@ -17,6 +17,8 @@
 
 #include "orthography2ipa/orthography2ipa.hpp"
 
+#include <cstddef>
+#include <map>
 #include <optional>
 #include <set>
 #include <string>
@@ -48,13 +50,28 @@ bool is_cliticless(const std::string& word, const LanguageSpec& spec);
 // trailing consonants to the last syllable. *vowels* is the optional set
 // of nucleus letters (stress.vowel_letters, lowercased); *diphthongs*
 // splits a vowel run into several nuclei. *max_onset* caps the onset.
+// *semivowels* gives the semivowel_role of ⟨y⟩ and ⟨w⟩. *onset_graphemes*
+// are the consonant graphemes that end in a vowel letter (Spanish ⟨qu gu⟩),
+// kept in the onset before a vowel. *hiatus* holds the code-point indices
+// of letters that open a nucleus of their own (closed_hiatus_positions);
+// both are read with *diphthongs* only.
 std::vector<std::string> syllabify(
     const std::string& word,
     const std::set<std::string>* vowels = nullptr,
     const std::vector<std::string>& diphthongs = {},
     bool coda_liquid_capture = false,
     const LanguageSpec* spec = nullptr,
-    std::optional<int> max_onset = std::nullopt);
+    std::optional<int> max_onset = std::nullopt,
+    const std::map<std::string, std::string>* semivowels = nullptr,
+    const std::set<std::string>& onset_graphemes = {},
+    const std::set<std::size_t>& hiatus = {});
+
+// stress.py closed_hiatus_positions: the code-point indices of the letters
+// of *word* that open a stressed nucleus of their own under the spec's
+// stress.closed_hiatus (Portuguese ⟨rainha⟩ ra-i-nha). A candidate is kept
+// only when it starts the syllable the stress rules stress.
+std::set<std::size_t> closed_hiatus_positions(const std::string& word,
+                                              const LanguageSpec& spec);
 
 // stress.py syllabify_for_mark: divide a transcription into syllables for
 // stress marking — maximal onset, constrained by what the language licenses.
@@ -105,13 +122,17 @@ std::set<int> secondary_stress_positions(int n_syllables,
 // (*syllables*) and converted to an end-anchored offset; a negative one is
 // the end-anchored offset directly. *ipa_syllables* is a pre-computed
 // syllable division OF THE IPA (a quantity-sensitive caller's own
-// division). Already-marked transcriptions are returned unchanged.
+// division). *written* is the spec *syllables* were divided with (the
+// reference's `spec` argument): it tells which letters are silent, so that a
+// hiatus written across one (Spanish ⟨ahí⟩) can divide the transcription
+// too. Already-marked transcriptions are returned unchanged.
 std::string apply_stress_mark(
     const std::string& ipa, const LanguageSpec& spec, int stress_index,
     const std::vector<std::string>* syllables = nullptr,
     const std::vector<std::string>* ipa_syllables = nullptr,
     const std::string& mark = "",
-    const std::vector<int>& secondary_indices = {});
+    const std::vector<int>& secondary_indices = {},
+    const LanguageSpec* written = nullptr);
 
 // stress.py iambic_length_positions: the 0-based indices of
 // *ipa_syllables* whose nucleus should lengthen (weight-alternating

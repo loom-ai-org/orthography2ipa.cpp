@@ -1,0 +1,65 @@
+{
+  "code": "cbk-PH-x-ternate",
+  "name": "Chavacano (Ternateño / Bahra)",
+  "family": "Spanish Creole",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "stub",
+  "parent": "cbk-PH",
+  "ancestors": [
+    {
+      "code": "es-ES",
+      "role": "lexifier",
+      "weight": 0.8,
+      "notes": "Spanish is the lexifier; written with the Spanish alphabet."
+    },
+    {
+      "code": "tl",
+      "role": "substrate",
+      "weight": 0.15,
+      "notes": "Tagalog substrate; the earliest layer also carries a Portuguese-Malay (Ternate, Moluccas) Mardijker component."
+    }
+  ],
+  "graphemes_base": "cbk-PH",
+  "graphemes": {
+    "ng": [
+      "ŋ"
+    ]
+  },
+  "allophones_base": "cbk-PH",
+  "allophones": {
+    "ŋ": [
+      "ŋ"
+    ]
+  },
+  "notes": "Ternateño Chabacano (locally 'Bahra'), the Spanish-lexifier creole of Ternate, Cavite, Luzon, Philippines, the oldest and most conservative Manila-Bay Chabacano. There is no official orthography: Sippola (2013, §4 Phonology) states that writing often follows etymological conventions and displays considerable variation, and §3 states that there is no standardized orthography for Ternate Chabacano. The spec therefore takes the Spanish-based cbk-PH table over `graphemes_base: cbk-PH`. Sippola's consonant table (§4, Table 2) writes /ŋ/ as ⟨ng⟩, /tʃ/ as ⟨ch⟩ and /j/ as ⟨y⟩; ⟨ch⟩ and ⟨y⟩ agree with cbk-PH, and ⟨ng⟩ = [ŋ] is stated here, as in mánga 'plural marker' (§5). Sippola's own forms write /h/ as ⟨h⟩ and /k/ as ⟨k⟩ (hénte [hénte] 'people', kása 'house', muhér 'woman'), which cbk-PH also reads as [h] and [k]. A Spanish-origin ⟨n⟩ + ⟨g⟩ sequence written etymologically also reads as [ŋ] under this key; no source separates the two. The other letter values and the non-lenited allophone map are inherited from cbk-PH with no Ternate source that states them. Sippola lists 17 consonants with no /f/ or /v/, and /dʒ/ and /ʃ/ only in English loanwords; the inherited ⟨f⟩ = [f] therefore has no phoneme in the inventory, and no opened source gives the reading of an etymological ⟨f⟩. The inventory has /h/ and no /x/ either, and no opened source gives the reading of an etymological ⟨g⟩ before a front vowel, which keeps the cbk-PH [x]. The alternation of unstressed e~i and o~u (hénte [hénte] or [hénti]) is a variant and is not encoded. Stress is not marked: cbk-PH carries no stress block, and kása against kasá is contrastive (Sippola 2013, §4). The APiCS segment chart of the same contribution (apics-online.info/contributions/44) also lists a long /uː/ beside /u/, which the five-vowel cbk-PH table does not encode. The variety was brought by Mardijker settlers from Ternate (Moluccas) in 1663. The spec declares `cbk`, the code of Chavacano, and not `tmg`: the SIL code page for `tmg` (iso639-3.sil.org/code/tmg) names Ternateño as an extinct individual language, and Wikidata Q7232597, the item that carries `tmg`, describes it as an extinct creole from the Moluccas, Indonesia. That is the ancestral Portuguese creole of Ternate, not this living variety of Cavite. Ternateño-specific traits (a Portuguese-Malay lexical layer, distinct pronoun and TMA systems) are not encoded.",
+  "iso639_3": "cbk",
+  "glottolog_code": "tern1248",
+  "wikidata_qid": "Q33281",
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Chavacano"
+  ],
+  "sources": [
+    {
+      "id": "sippola2013ternate",
+      "author": "Sippola, Eeva",
+      "year": 2013,
+      "title": "Ternate Chabacano (APiCS survey chapter 44)",
+      "publisher": "Atlas of Pidgin and Creole Language Structures Online (APiCS), eds. Michaelis, Maurer, Haspelmath & Huber",
+      "url": "https://apics-online.info/surveys/44",
+      "wikipedia_url": null,
+      "pages": "Online survey chapter, §3 Sociolinguistic situation (no standardized orthography) and §4 Phonology: five vowels with unstressed e~i and o~u alternation (hénte [hénte]~[hénti]); Table 2, 17 consonants p t k ʔ b d g m n ŋ<ng> r s h tʃ<ch> l w j<y>, with no /f/ or /v/; 'There is no official orthography for Chabacano; the writing often follows etymological conventions and displays considerable variation'; kása 'house' against kasá 'to marry'. §5 Noun phrase: mánga kása 'houses'. Print chapter: The survey of pidgin and creole languages, vol. 2, Oxford University Press; print page numbers not checked.",
+      "notes": "Primary descriptive source for the variety, and the source of every letter value the spec states or confirms."
+    }
+  ],
+  "timespan": {
+    "start_year": 1663,
+    "end_year": null
+  },
+  "location": {
+    "latitude": 14.2911,
+    "longitude": 120.7169,
+    "source": "manual",
+    "notes": "Ternate, Cavite, Philippines."
+  }
+}

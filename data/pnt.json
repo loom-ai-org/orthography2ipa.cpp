@@ -11,6 +11,144 @@
     "end_year": null
   },
   "graphemes": {
+    "αί": [
+      "e"
+    ],
+    "εί": [
+      "i"
+    ],
+    "οί": [
+      "i"
+    ],
+    "ού": [
+      "u"
+    ],
+    "αύ": [
+      "av",
+      "af"
+    ],
+    "εύ": [
+      "ev",
+      "ef"
+    ],
+    "υί": [
+      "i"
+    ],
+    "ά": [
+      "a"
+    ],
+    "έ": [
+      "e"
+    ],
+    "ή": [
+      "i"
+    ],
+    "ί": [
+      "i"
+    ],
+    "ό": [
+      "o"
+    ],
+    "ύ": [
+      "i"
+    ],
+    "ώ": [
+      "o"
+    ],
+    "ϊ": [
+      "i"
+    ],
+    "ϋ": [
+      "i"
+    ],
+    "ΐ": [
+      "i"
+    ],
+    "ΰ": [
+      "i"
+    ],
+    "ᾶ": [
+      "a"
+    ],
+    "ῆ": [
+      "i"
+    ],
+    "ῖ": [
+      "i"
+    ],
+    "ῦ": [
+      "i"
+    ],
+    "ῶ": [
+      "o"
+    ],
+    "ὰ": [
+      "a"
+    ],
+    "ὲ": [
+      "e"
+    ],
+    "ὴ": [
+      "i"
+    ],
+    "ὶ": [
+      "i"
+    ],
+    "ὸ": [
+      "o"
+    ],
+    "ὺ": [
+      "i"
+    ],
+    "ὼ": [
+      "o"
+    ],
+    "αῖ": [
+      "e"
+    ],
+    "εῖ": [
+      "i"
+    ],
+    "οῖ": [
+      "i"
+    ],
+    "οῦ": [
+      "u"
+    ],
+    "αῦ": [
+      "av",
+      "af"
+    ],
+    "εῦ": [
+      "ev",
+      "ef"
+    ],
+    "αὶ": [
+      "e"
+    ],
+    "εὶ": [
+      "i"
+    ],
+    "οὶ": [
+      "i"
+    ],
+    "οὺ": [
+      "u"
+    ],
+    "αὺ": [
+      "av",
+      "af"
+    ],
+    "εὺ": [
+      "ev",
+      "ef"
+    ],
+    "υῖ": [
+      "i"
+    ],
+    "υὶ": [
+      "i"
+    ],
     "αι": [
       "e"
     ],
@@ -31,11 +169,14 @@
       "ev",
       "ef"
     ],
+    "υι": [
+      "i"
+    ],
     "γγ": [
       "ŋɡ"
     ],
     "γκ": [
-      "ŋk"
+      "ŋɡ"
     ],
     "μπ": [
       "mb",
@@ -130,7 +271,45 @@
     ]
   },
   "allophones": {},
-  "positional_graphemes": {},
+  "positional_graphemes": {
+    "γκ": {
+      "word_initial": [
+        "ɡ"
+      ],
+      "default": [
+        "ŋɡ"
+      ]
+    }
+  },
+  "stress": {
+    "constrain_mark_onsets": false,
+    "default_position": -2,
+    "marked_vowels": [
+      "ά",
+      "έ",
+      "ή",
+      "ί",
+      "ό",
+      "ύ",
+      "ώ",
+      "ΐ",
+      "ΰ",
+      "ᾶ",
+      "ῆ",
+      "ῖ",
+      "ῦ",
+      "ῶ",
+      "ὰ",
+      "ὲ",
+      "ὴ",
+      "ὶ",
+      "ὸ",
+      "ὺ",
+      "ὼ"
+    ],
+    "stress_mark": "ˈ",
+    "notes": "Pontic Greek has lexical stress, and stress is contrastive: [kaˈla] καλά 'well' against [ˈkala] κάλλα 'better' (Armostis et al. 2020: 337). The authors write the stressed vowel with the acute accent (tonos) of the Modern Greek monotonic orthography. In their orthographic version of 'The North Wind and the Sun' (p. 339), the tonos is on the vowel that the broad transcription (p. 338) stresses, in every word that the transcription stresses. The monotonic rule writes an accent mark on each word of two or more syllables and no mark on a monosyllable (Petrounias 1999, §3.1, the official Οδηγίες nos. 3 and 4 in the author's short wording). Some function words carry the tonos in the text but no stress in the transcription (ότι, από, ασούς, p. 338-339; p. 337: stress applies 'with the exception of clitics and some functional words'). This block marks the written accent. The engine marks each monosyllable as stressed, as it does for el. marked_vowels are the seven accented vowels and the dialytika-tonos letters ΐ ΰ. default_position -2 has no Pontic source: it applies only to input with no accent mark, such as text in capitals. The secondary stress on long clitic groups (p. 337) is not marked. constrain_mark_onsets is false, as in el: with true, 3 of 44 words of the source text get the mark inside a cluster (polˈla for [poˈla]). The polytonic grave and circumflex vowels (ᾶ ῆ ῖ ῦ ῶ ὰ ὲ ὴ ὶ ὸ ὺ ὼ) are marked vowels too: Oeconomides (1908: 125) writes the stressed syllable with the acute, the grave or the circumflex, e.g. 'Der Accent wird zurückgezogen ... im Vocativ': μῶρε (st. μωρὲ), and in the adjectives in -ικος: Τούρκικον (st. Τουρκικὸν)."
+  },
   "ancestors": [
     {
       "code": "el",
@@ -140,7 +319,7 @@
     }
   ],
   "parent": "el",
-  "notes": "Pontic Greek (Ποντιακά), archaic Greek dialect originally spoken along the Black Sea (Pontic) coast of Anatolia. Now spoken mainly in Greece. Retains many features of Ancient and Medieval Greek lost in standard Modern Greek. Uses standard Greek orthography. /i/ represented by η, ι, υ, ει, οι.",
+  "notes": "Pontic Greek (Ποντιακά), archaic Greek dialect originally spoken along the Black Sea (Pontic) coast of Anatolia. Now spoken mainly in Greece. Retains many features of Ancient and Medieval Greek lost in standard Modern Greek. Uses standard Greek orthography. /i/ represented by η, ι, υ, ει, οι. An accented vowel (ά έ ή ί ό ύ ώ, and αί εί οί ού αύ εύ) has the value of the plain vowel, because the tonos marks only the stressed syllable; ϊ ϋ ΐ ΰ write a vowel that is not part of a digraph. A doubled consonant letter reads as one consonant (collapse_geminates): Oeconomides (1908: 175, on p. 9) states that forms such as ἄλλο, ἄλλος, 'die mit Doppelkonsonant geschrieben sind, sind trotzdem so auszusprechen, als ob sie mit einfachem Konsonant geschrieben wären', and Armostis et al. (2020) transcribe κάλλα as [ˈkala] (p. 337) and πολλά as [poˈla] (pp. 338-339). ⟨γκ⟩ is [ɡ] at the start of a word, as in γκαρίζ’ [ɡaˈɾiz] (Armostis et al. 2020: 331, 334), and [ŋɡ] inside a word, as in ενεγκάστεν [eneˈŋɡasten] and αναγκάστεν [anaˈŋɡasten] (narrow transcription, p. 339; the broad transcription on p. 338 has /nɡ/, and p. 335 states that /n/ takes the place of a following /k ɡ x/). Oeconomides (1908: 2-3) writes a different system, in which κ̇ with a dot is [ɡ] and plain γκ is [ŋk], as in ἀνάγκα 'Not' (p. 9). This map reads the spelling of Armostis et al., which has no dotted κ, so plain ⟨γκ⟩ is [ŋɡ]. Polytonic spelling: Oeconomides (1908) writes Pontic forms with breathings and with the acute, grave and circumflex accents. The breathings write no sound and fold away (fold_diacritics): Pontic forms that look as if they lost a rough breathing are 'in späterer Zeit gebildet, als man den Spiritus asper nicht mehr sprach' (p. 34), and the smooth breathing follows the etymology: 'Gewöhnlich schreibt man ἔτσι mit Spiritus lenis, weil man es auf ἔτι oder ἔστι zurückführt' (p. 84). The digraph ⟨υι⟩ (υί υῖ υὶ, and υἱ with the breathing) is [i]: 'η, ει, οι, υι wie i' (p. 2, note). The grave and circumflex vowels (ᾶ ῆ ῖ ῦ ῶ ὰ ὲ ὴ ὶ ὸ ὺ ὼ, and the digraphs αῖ εῖ οῖ οῦ αῦ εῦ αὶ εὶ οὶ οὺ αὺ εὺ) have the value of the plain vowel: the vowel table gives one value for each vowel letter (p. 2), and the accent marks the stressed syllable (p. 125). The iota subscript (ᾳ ῃ ῳ) and the dialytika with an accent other than the acute (ῒ ῢ ῗ ῧ) have no key: no opened source shows them in Pontic.",
   "sources": [
     {
       "id": "wiki-pnt",
@@ -157,13 +336,36 @@
       "publisher": "Journal of the International Phonetic Association 52(2), 328-340 (free access)",
       "url": "https://doi.org/10.1017/S0025100320000201",
       "wikipedia_url": null,
-      "pages": "330-331, 338",
-      "notes": "Consonant table with Greek-spelled example words (pp. 330-331) and the note on the writing system (p. 338), read in full. Twenty-three consonants including the postalveolars ʃ tʃ dʒ and the affricates ts dz; five vowels a e i o u. The source states that Pontic Greek has no codified writing system and that its own orthographic version follows Papadopoulos 1955 with a diacritic over consonant letters for the postalveolars and the rough breathing for aspirates. That is the gap this map carries: it reads standard Greek letters only, so ʃ tʃ dʒ and the aspirates have no key, and the Pontic-specific letters some writers use (⟨σ̆ τσ̆ ντζ̆⟩, ⟨ä ö⟩ for the front rounded vowels of other Pontic varieties) are unread. Recorded here, not changed."
+      "pages": "330-331, 334-335, 337-339",
+      "notes": "Consonant table with Greek-spelled example words (pp. 330-331) and the note on the writing system (p. 338), read in full. Twenty-three consonants including the postalveolars ʃ tʃ dʒ and the affricates ts dz; five vowels a e i o u. The source states that Pontic Greek has no codified writing system and that its own orthographic version follows Papadopoulos 1955 with a diacritic over consonant letters for the postalveolars and the rough breathing for aspirates. That is the gap this map carries: it reads standard Greek letters only, so ʃ tʃ dʒ and the aspirates have no key, and the Pontic-specific letters some writers use (⟨σ̆ τσ̆ ντζ̆⟩, ⟨ä ö⟩ for the front rounded vowels of other Pontic varieties) are unread. Recorded here, not changed. The stress section (p. 337) and the broad transcription (p. 338) with the orthographic version (p. 339) of 'The North Wind and the Sun' were read for the stress block. The palatal-consonant section (p. 335), the tap/trill section (p. 334) and the narrow transcription (p. 339) were read for ⟨γκ⟩; the stress section (p. 337) and the transcriptions (pp. 338-339) give the single consonant for ⟨λλ⟩."
+    },
+    {
+      "id": "petrounias1999",
+      "author": "Petrounias, Evangelos",
+      "year": 1999,
+      "title": "Κριτική του «μονοτονικού» ορθογραφικού συστήματος [A critique of the monotonic orthographic system]",
+      "publisher": "Κέντρο Ελληνικής Γλώσσας, Πύλη για την ελληνική γλώσσα (Θέματα ιστορίας της ελληνικής γλώσσας)",
+      "url": "https://www.greek-language.gr/greekLang/el/studies/history/thema_16/01.html",
+      "wikipedia_url": null,
+      "pages": "§3.1",
+      "notes": "Quotes the official rule (Οδηγίες, nos. 3 and 4) in the author's short wording: 'Oι μονοσύλλαβες λέξεις γράφονται χωρίς τονικό σημάδι, οι υπερμονοσύλλαβες γράφονται με τονικό σημάδι.'"
+    },
+    {
+      "id": "oeconomides1908",
+      "author": "Oeconomides, Demosthenes E.",
+      "year": 1908,
+      "title": "Lautlehre des Pontischen",
+      "publisher": "Leipzig: A. Deichert'sche Verlagsbuchhandlung Nachf.",
+      "url": "https://archive.org/details/lautlehredespont00oikouoft",
+      "wikipedia_url": null,
+      "pages": "2-3, 9, 34, 84, 125, 175",
+      "notes": "Cited by Armostis et al. (2020) for the Pontic vowel system. The book writes Pontic in polytonic spelling with its own dotted letters. Read for the vowel, digraph and consonant tables (pp. 2-3), the doubled consonant letters (p. 9 and the addendum on p. 175), the breathings (pp. 34, 84) and the accent (p. 125)."
     }
   ],
   "wikipedia": [
     "https://en.wikipedia.org/wiki/Pontic_Greek",
-    "https://pnt.wikipedia.org/wiki/%CE%A0%CE%BF%CE%BD%CF%84%CE%B9%CE%B1%CE%BA%CF%8C%CE%BD_%CE%BB%CE%B1%CE%BB%CE%AF%CE%B1%CE%BD"
+    "https://pnt.wikipedia.org/wiki/%CE%A0%CE%BF%CE%BD%CF%84%CE%B9%CE%B1%CE%BA%CF%8C%CE%BD_%CE%BB%CE%B1%CE%BB%CE%AF%CE%B1%CE%BD",
+    "https://en.wikipedia.org/wiki/Greek_diacritics"
   ],
   "wikidata_qid": "Q36748",
   "location": {
@@ -171,5 +373,10 @@
     "longitude": 36.097421,
     "source": "glottolog",
     "notes": "Glottolog's representative point for Pontic."
-  }
+  },
+  "collapse_geminates": true,
+  "fold_diacritics": [
+    "̓",
+    "̔"
+  ]
 }

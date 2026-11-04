@@ -83,42 +83,93 @@ const std::u32string& liquids() {
 
 bool is_liquid_cp(char32_t cp) { return liquids().find(cp) != std::u32string::npos; }
 
+// stress.py _nucleus_mask: which code points of *word* belong to a syllable
+// nucleus. *semivowels* maps ⟨y⟩/⟨w⟩ to its semivowel_role in the language,
+// and its answer replaces *is_vowel_fn* for that letter. A contextual letter
+// is a nucleus only when neither neighbour is a nucleus on its own account.
+// Combining marks are never nuclei, and they are skipped when the
+// neighbours are read.
+std::vector<bool> nucleus_mask(const std::u32string& word,
+                               const std::function<bool(const std::string&)>& is_vowel_fn,
+                               const std::map<std::string, std::string>* semivowels = nullptr) {
+    // 1 nucleus, 0 not, -1 contextual (the reference's None).
+    std::vector<int> fixed;
+    fixed.reserve(word.size());
+    for (char32_t ch : word) {
+        const std::string* role = nullptr;
+        if (semivowels != nullptr) {
+            const auto hit = semivowels->find(to_utf8(uni::lower_one(ch)));
+            if (hit != semivowels->end()) role = &hit->second;
+        }
+        if (uni::combining(ch) != 0) fixed.push_back(0);
+        else if (role == nullptr) fixed.push_back(is_vowel_fn(to_utf8(std::u32string(1, ch))) ? 1 : 0);
+        else if (*role == vowels::SEMIVOWEL_CONTEXTUAL) fixed.push_back(-1);
+        else fixed.push_back(*role == vowels::SEMIVOWEL_NUCLEUS ? 1 : 0);
+    }
+    std::vector<bool> mask;
+    mask.reserve(word.size());
+    for (std::size_t i = 0; i < fixed.size(); ++i) {
+        int status = fixed[i];
+        if (status == -1) {
+            int before = 0, after = 0;
+            for (std::size_t k = i; k-- > 0;)
+                if (uni::combining(word[k]) == 0) { before = fixed[k]; break; }
+            for (std::size_t k = i + 1; k < word.size(); ++k)
+                if (uni::combining(word[k]) == 0) { after = fixed[k]; break; }
+            status = !(before == 1 || after == 1) ? 1 : 0;
+        }
+        mask.push_back(status == 1);
+    }
+    return mask;
+}
+
+std::vector<bool> nucleus_mask(const std::string& word,
+                               const std::function<bool(const std::string&)>& is_vowel_fn,
+                               const std::map<std::string, std::string>* semivowels = nullptr) {
+    return nucleus_mask(to_utf32(word), is_vowel_fn, semivowels);
+}
+
+// The code points of each syllable, with the offset of each syllable's first
+// code point in the word the syllables divide.
+std::vector<std::u32string> syllable_units(const std::vector<std::string>& syllables) {
+    std::vector<std::u32string> out;
+    out.reserve(syllables.size());
+    for (const auto& syll : syllables) out.push_back(to_utf32(syll));
+    return out;
+}
+
 // stress.py _capture_coda_liquids: move a syllable-initial liquid that
 // heads a consonant cluster back onto the preceding syllable as its coda.
+// *nucleus* is the nucleus_mask of the word the syllables divide.
 std::vector<std::string> capture_coda_liquids(
-    const std::vector<std::string>& syllables) {
+    const std::vector<std::string>& syllables, const std::vector<bool>& nucleus) {
     if (syllables.size() < 2) return syllables;
+    const auto units = syllable_units(syllables);
     std::vector<std::string> out{syllables[0]};
-    for (std::size_t s = 1; s < syllables.size(); ++s) {
-        const std::string& syll = syllables[s];
+    std::size_t start = units[0].size();
+    for (std::size_t s = 1; s < units.size(); ++s) {
+        const std::u32string& syll = units[s];
         // onset = the leading consonant segments before the first nucleus char
         std::size_t j = 0;
-        while (j < syll.size() && !is_vowel_char(syll.substr(j, char_size(syll, j))))
-            j += char_size(syll, j);
-        const std::string onset = syll.substr(0, j);
+        while (j < syll.size() && (uni::combining(syll[j]) != 0 || !nucleus[start + j])) ++j;
+        start += syll.size();
         // the base consonant characters of the onset (combining marks ride along)
-        std::vector<std::string> cons;
-        for (const auto& c : chars(onset))
-            if (!combining(c)) cons.push_back(c);
+        std::vector<char32_t> cons;
+        for (std::size_t k = 0; k < j; ++k)
+            if (uni::combining(syll[k]) == 0) cons.push_back(syll[k]);
         // Capture only a FALLING cluster: liquid followed by an
         // equal-or-lower sonority consonant. A liquid + glide RISES in
         // sonority and is a legal complex onset, so it is left intact.
-        bool peel = false;
-        if (cons.size() >= 2 && !out.back().empty()) {
-            const auto first = to_utf32(cons[0]);
-            const auto second = to_utf32(cons[1]);
-            peel = first.size() == 1 && is_liquid_cp(first[0]) &&
-                   !(second.size() == 1 && is_glide_cp(second[0]));
-        }
+        const bool peel = cons.size() >= 2 && !out.back().empty() &&
+                          is_liquid_cp(cons[0]) && !is_glide_cp(cons[1]);
         if (peel) {
             // peel the leading liquid (plus any combining marks riding on it)
-            std::size_t k = char_size(syll, 0);
-            while (k < syll.size() && combining(syll.substr(k, char_size(syll, k))))
-                k += char_size(syll, k);
-            out.back() += syll.substr(0, k);
-            out.push_back(syll.substr(k));
+            std::size_t k = 1;
+            while (k < syll.size() && uni::combining(syll[k]) != 0) ++k;
+            out.back() += to_utf8(syll.substr(0, k));
+            out.push_back(to_utf8(syll.substr(k)));
         } else {
-            out.push_back(syll);
+            out.push_back(syllables[s]);
         }
     }
     return out;
@@ -190,12 +241,30 @@ std::vector<std::string> segment_with_affricates(
 class OnsetJudge {
 public:
     OnsetJudge(const LanguageSpec& spec, std::optional<int> max_onset)
-        : spec_(spec), code_(spec.code), max_onset_(max_onset) {
+        : spec_(spec), code_(spec.code), max_onset_(max_onset),
+          onsets_(spec.onset_clusters.begin(), spec.onset_clusters.end()) {
         for (const auto& [g, values] : spec.graphemes) {
             if (g.empty()) continue;
             ordered_graphemes_.push_back(to_utf32(g));
             ipa_of_.emplace(to_utf32(g),
                             values.empty() ? std::u32string() : to_utf32(values[0]));
+        }
+        // Consonant graphemes whose last letter is a vowel letter, such as
+        // Spanish ⟨qu gu⟩ (/k ɡ/): every reading is a consonant, so the
+        // vowel letter is part of the onset and never a nucleus of its own.
+        for (const auto& [g, values] : spec.graphemes) {
+            const std::u32string units = to_utf32(g);
+            if (units.size() < 2 || values.empty()) continue;
+            if (is_vowel_char(to_utf8(units.substr(0, 1))) ||
+                    !is_vowel_char(to_utf8(units.substr(units.size() - 1))))
+                continue;
+            const bool consonants = std::all_of(values.begin(), values.end(), [](const std::string& r) {
+                if (r.empty()) return false;
+                for (const auto& c : chars(r))
+                    if (is_vowel_char(c)) return false;
+                return true;
+            });
+            if (consonants) vowel_final_consonants_.insert(plain_lower(g));
         }
         // key=len, reverse=True — a stable sort keeps equal lengths in
         // declaration order, exactly like Python's sorted().
@@ -285,6 +354,9 @@ public:
                                : vowels::SONORITY_UNKNOWN;
     }
 
+    /// stress.py _OnsetJudge.vowel_final_consonants.
+    const std::set<std::string>& vowel_final_consonants() const { return vowel_final_consonants_; }
+
     // licit: whether the orthographic consonant *run* may open a syllable.
     bool licit(const std::u32string& run) {
         const std::string key = to_utf8(run);
@@ -316,6 +388,7 @@ protected:
             return false;
         if (opens_with_velar_nasal(units[0])) return false;  // coda-only segment
         if (units.size() == 1) return true;  // every language licenses a simple onset
+        if (!onsets_.empty()) return declared(units);
         if (units.size() > MAX_MEMBERS) return false;
         for (const auto& u : units)
             if (is_geminate(u)) return false;  // a geminate never joins a complex onset
@@ -393,6 +466,26 @@ protected:
         return two_member(rest[0], rest[1]);
     }
 
+    // _declared: whether the graphemes *units* spell an onset the spec
+    // declares (stress.onset_clusters). A final glide rides on the onset
+    // before it.
+    bool declared(const std::vector<std::u32string>& units) {
+        const auto last = segment(units.back());
+        if (last.has_value() && vowels::sonority_class(to_utf8(*last)) == vowels::SONORITY_GLIDE) {
+            if (units.size() == 2) return true;
+            std::u32string head;
+            for (std::size_t k = 0; k + 1 < units.size(); ++k) head += units[k];
+            return licit(head);
+        }
+        std::string joined;
+        for (const auto& unit : units) {
+            const auto seg = segment(unit);
+            if (!seg.has_value()) return false;
+            joined += to_utf8(*seg);
+        }
+        return onsets_.count(joined) != 0;
+    }
+
     bool is_palatal_glide_unit(const std::u32string& grapheme) const {
         const auto seg = segment(grapheme);
         return seg.has_value() && vowels::is_palatal_glide(to_utf8(*seg));
@@ -402,8 +495,10 @@ private:
     const LanguageSpec& spec_;
     std::string code_;
     std::optional<int> max_onset_;
+    std::set<std::string> onsets_;
     std::vector<std::u32string> ordered_graphemes_;
     std::map<std::u32string, std::u32string> ipa_of_;
+    std::set<std::string> vowel_final_consonants_;
     std::map<std::string, bool> cache_;
 };
 
@@ -487,40 +582,40 @@ private:
 
 // stress.py _rebalance_onsets: move whatever the language cannot license
 // as an onset into the coda. The first syllable's onset is never re-judged.
+// *nucleus* is the nucleus_mask of the word the syllables divide.
 std::vector<std::string> rebalance_onsets(const std::vector<std::string>& syllables,
+                                          const std::vector<bool>& nucleus,
                                           OnsetJudge& judge) {
     if (syllables.size() < 2) return syllables;
+    const auto units = syllable_units(syllables);
     std::vector<std::string> out{syllables[0]};
-    for (std::size_t s = 1; s < syllables.size(); ++s) {
-        const std::string& syll = syllables[s];
+    std::size_t start = units[0].size();
+    for (std::size_t s = 1; s < units.size(); ++s) {
+        const std::u32string& syll = units[s];
         std::size_t j = 0;
-        while (j < syll.size()) {
-            const std::size_t n = char_size(syll, j);
-            if (!combining(syll.substr(j, n)) && is_vowel_char(syll.substr(j, n))) break;
-            j += n;
-        }
-        const std::string onset = syll.substr(0, j);
+        while (j < syll.size() && (uni::combining(syll[j]) != 0 || !nucleus[start + j])) ++j;
+        start += syll.size();
+        const std::u32string onset = syll.substr(0, j);
         if (onset.empty() || out.back().empty()) {
-            out.push_back(syll);
+            out.push_back(syllables[s]);
             continue;
         }
-        const auto units = judge.graphemes_of(to_utf32(onset));
+        const auto pieces = judge.graphemes_of(onset);
         std::size_t keep = 0;
-        for (std::size_t k = units.size(); k >= 1 && k <= units.size(); --k) {
+        for (std::size_t k = pieces.size(); k >= 1; --k) {
             std::u32string tail;
-            for (std::size_t u = units.size() - k; u < units.size(); ++u) tail += units[u];
+            for (std::size_t u = pieces.size() - k; u < pieces.size(); ++u) tail += pieces[u];
             if (judge.licit(tail)) {
-                keep = to_utf8(tail).size();
+                keep = tail.size();
                 break;
             }
-            if (k == 1) break;
         }
         if (keep >= onset.size()) {
-            out.push_back(syll);
+            out.push_back(syllables[s]);
             continue;
         }
-        out.back() += onset.substr(0, onset.size() - keep);
-        out.push_back(syll.substr(onset.size() - keep));
+        out.back() += to_utf8(onset.substr(0, onset.size() - keep));
+        out.push_back(to_utf8(syll.substr(onset.size() - keep)));
     }
     return out;
 }
@@ -546,183 +641,222 @@ bool is_cliticless(const std::string& word, const LanguageSpec& spec) {
 
 // ── the bundled vowel-group syllabifier ──
 
+namespace {
+
+std::string cp_str(char32_t cp) { return to_utf8(std::u32string(1, cp)); }
+
+std::string slice_utf8(const std::u32string& text, std::size_t from, std::size_t to) {
+    return to_utf8(text.substr(from, to - from));
+}
+
 // stress.py _split_nuclei: split a vowel *run* into nuclei using
 // *diphthongs*, greedy longest-first, so an empty *diphthongs* makes every
-// vowel a nucleus.
-std::vector<std::string> split_nuclei(const std::string& run,
-                                      const std::vector<std::string>& diphthongs) {
-    if (to_utf32(run).size() < 2) return {run};
+// vowel a nucleus. *hiatus* holds offsets into *run* of letters that open a
+// nucleus of their own: no listed sequence is consumed across one.
+std::vector<std::string> split_nuclei(const std::u32string& run,
+                                      const std::vector<std::string>& diphthongs,
+                                      const std::set<std::size_t>& hiatus) {
+    if (run.size() < 2) return {to_utf8(run)};
     std::vector<std::u32string> ordered;
     for (const auto& d : diphthongs) ordered.push_back(to_utf32(d));
     std::stable_sort(ordered.begin(), ordered.end(),
                      [](const std::u32string& a, const std::u32string& b) {
                          return a.size() > b.size();
                      });
-    const std::u32string lowered = uni::lower(to_utf32(run));
+    const std::u32string lowered = uni::lower(run);
     std::vector<std::string> nuclei;
     std::size_t i = 0;
     while (i < lowered.size()) {
         bool matched = false;
         for (const auto& diph : ordered) {
             if (diph.size() <= lowered.size() - i &&
-                    lowered.compare(i, diph.size(), diph) == 0) {
-                // run[i:i + len(diph)] — the ORIGINAL text's slice.
-                std::string nucleus;
-                for (std::size_t k = i; k < i + diph.size(); ++k)
-                    nucleus += to_utf8(std::u32string(1, to_utf32(run)[k]));
-                nuclei.push_back(nucleus);
+                    lowered.compare(i, diph.size(), diph) == 0 &&
+                    std::none_of(hiatus.begin(), hiatus.end(), [&](std::size_t h) {
+                        return i < h && h < i + diph.size();
+                    })) {
+                nuclei.push_back(slice_utf8(run, i, i + diph.size()));
                 i += diph.size();
                 matched = true;
                 break;
             }
         }
         if (!matched) {
-            nuclei.push_back(to_utf8(std::u32string(1, to_utf32(run)[i])));
+            nuclei.push_back(cp_str(run[i]));
             i += 1;
         }
         // a combining mark, or the length mark, is not a nucleus of its own
         while (i < lowered.size() &&
                (uni::combining(lowered[i]) != 0 || is_length_mark_cp(lowered[i]))) {
-            if (!nuclei.empty()) nuclei.back() += to_utf8(std::u32string(1, to_utf32(run)[i]));
-            else nuclei.push_back(to_utf8(std::u32string(1, to_utf32(run)[i])));
+            if (!nuclei.empty()) nuclei.back() += cp_str(run[i]);
+            else nuclei.push_back(cp_str(run[i]));
             i += 1;
         }
     }
     return nuclei;
 }
 
+// Whether the onset so far and the letter *ch* spell one of the
+// *onset_graphemes* (stress.py, the ⟨qu gu⟩ test of
+// _syllabify_with_diphthongs).
+bool extends_onset_grapheme(const std::u32string& onset, char32_t ch,
+                            const std::set<std::string>& onset_graphemes) {
+    const std::u32string letter = uni::lower(std::u32string(1, ch));
+    for (const auto& g : onset_graphemes) {
+        const std::u32string units = to_utf32(g);
+        if (units.empty() || std::u32string(1, units.back()) != letter) continue;
+        const std::size_t head = units.size() - 1;
+        if (onset.size() < head) continue;
+        if (uni::lower(onset.substr(onset.size() - head)) == units.substr(0, head)) return true;
+    }
+    return false;
+}
+
 // stress.py _syllabify_with_diphthongs: syllabify with a vowel run split
 // into nuclei by *diphthongs*, onset-maximising like the plain splitter.
+// *nucleus* is the nucleus_mask of *word*. A consonant grapheme of
+// *onset_graphemes* that ends in a vowel letter keeps that letter in the
+// onset before another vowel (Spanish ⟨quieres⟩ quie-res).
 std::vector<std::string> syllabify_with_diphthongs(
-    const std::string& word,
-    const std::function<bool(const std::string&)>& is_vowel_char_fn,
-    const std::vector<std::string>& diphthongs) {
+    const std::u32string& word, const std::vector<bool>& nucleus,
+    const std::vector<std::string>& diphthongs,
+    const std::set<std::string>& onset_graphemes = {},
+    const std::set<std::size_t>& hiatus = {}) {
     std::vector<std::string> syllables;
-    std::string onset;
+    std::u32string onset;
     std::size_t i = 0;
     while (i < word.size()) {
-        const std::string c = word.substr(i, char_size(word, i));
-        if (!is_vowel_char_fn(c)) {
-            onset += c;
-            i += char_size(word, i);
-            while (i < word.size() && combining(word.substr(i, char_size(word, i)))) {
-                onset += word.substr(i, char_size(word, i));
-                i += char_size(word, i);
+        if (!onset.empty() && i + 1 < word.size() && nucleus[i + 1] &&
+                extends_onset_grapheme(onset, word[i], onset_graphemes)) {
+            onset += word[i];
+            i += 1;
+            continue;
+        }
+        if (!nucleus[i]) {
+            onset += word[i];
+            i += 1;
+            // a combining mark rides along with whatever it sits on
+            while (i < word.size() && uni::combining(word[i]) != 0) {
+                onset += word[i];
+                i += 1;
             }
             continue;
         }
         std::size_t j = i;
-        while (j < word.size()) {
-            const std::string d = word.substr(j, char_size(word, j));
-            if (is_vowel_char_fn(d) || combining(d) || to_utf32(d)[0] == U'ː') {
-                j += char_size(word, j);
-                continue;
-            }
-            break;
-        }
-        const auto nuclei = split_nuclei(word.substr(i, j - i), diphthongs);
+        while (j < word.size() &&
+               (nucleus[j] || uni::combining(word[j]) != 0 || word[j] == U'ː'))
+            ++j;
+        std::set<std::size_t> run_hiatus;
+        for (const std::size_t h : hiatus)
+            if (i < h && h < j) run_hiatus.insert(h - i);
+        const auto nuclei = split_nuclei(word.substr(i, j - i), diphthongs, run_hiatus);
         for (std::size_t k = 0; k < nuclei.size(); ++k)
-            syllables.push_back((k == 0 ? onset : std::string()) + nuclei[k]);
+            syllables.push_back((k == 0 ? to_utf8(onset) : std::string()) + nuclei[k]);
         onset.clear();
         i = j;
     }
     if (!onset.empty()) {
-        if (!syllables.empty()) syllables.back() += onset;
-        else syllables.push_back(onset);
+        if (!syllables.empty()) syllables.back() += to_utf8(onset);
+        else syllables.push_back(to_utf8(onset));
     }
     return syllables;
 }
 
-std::vector<std::string> syllabify(const std::string& word,
+bool any_of_range(const std::vector<bool>& mask, std::size_t from, std::size_t to) {
+    for (std::size_t k = from; k < to && k < mask.size(); ++k)
+        if (mask[k]) return true;
+    return false;
+}
+
+} // namespace
+
+std::vector<std::string> syllabify(const std::string& word_utf8,
                                    const std::set<std::string>* vowels_set,
                                    const std::vector<std::string>& diphthongs,
                                    bool coda_liquid_capture,
                                    const LanguageSpec* spec,
-                                   std::optional<int> max_onset) {
+                                   std::optional<int> max_onset,
+                                   const std::map<std::string, std::string>* semivowels,
+                                   const std::set<std::string>& onset_graphemes,
+                                   const std::set<std::size_t>& hiatus) {
     auto is_vowel_char_fn = [&](const std::string& c) {
         if (vowels_set != nullptr)
             return vowels_set->count(plain_lower(c)) != 0;  // c.lower() in vowels
         return is_vowel_char(c);
     };
-    if (word.empty()) return {};
+    if (word_utf8.empty()) return {};
+    const std::u32string word = to_utf32(word_utf8);
+    const std::vector<bool> nucleus = nucleus_mask(word, is_vowel_char_fn, semivowels);
+    std::optional<OnsetJudge> judge;
+    if (spec != nullptr) judge.emplace(*spec, max_onset);
     if (!diphthongs.empty()) {
-        auto sylls = syllabify_with_diphthongs(word, is_vowel_char_fn, diphthongs);
-        // Onset maximisation is a preference, and it stops at what the
-        // language licenses (the spec's _OnsetJudge, when a spec is given).
-        if (spec != nullptr) {
-            OnsetJudge judge(*spec, max_onset);
-            sylls = rebalance_onsets(sylls, judge);
-        }
-        if (coda_liquid_capture) sylls = capture_coda_liquids(sylls);
+        auto sylls = syllabify_with_diphthongs(word, nucleus, diphthongs,
+                                               onset_graphemes, hiatus);
+        if (judge) sylls = rebalance_onsets(sylls, nucleus, *judge);
+        if (coda_liquid_capture) sylls = capture_coda_liquids(sylls, nucleus);
         return sylls;
     }
     // indices of nucleus starts
     std::vector<std::string> syllables;
-    std::string current;
+    std::u32string current;
+    std::size_t current_start = 0;
     bool in_nucleus = false;
-    for (std::size_t i = 0; i < word.size();) {
-        const std::string c = word.substr(i, char_size(word, i));
-        const auto cp = to_utf32(c)[0];
+    for (std::size_t i = 0; i < word.size(); ++i) {
+        const char32_t cp = word[i];
         if (uni::combining(cp) != 0 || cp == U'ː') {
             // A combining mark, or the IPA length mark ː, belongs to the
             // character it sits on: neither opens or closes a syllable.
-            current += c;
-            i += char_size(word, i);
+            current += cp;
             continue;
         }
-        const bool vowel = is_vowel_char_fn(c);
-        bool current_has_vowel = false;
-        for (const auto& d : chars(current))
-            if (is_vowel_char_fn(d)) { current_has_vowel = true; break; }
-        if (vowel && !in_nucleus && !current.empty() && current_has_vowel) {
+        const bool vowel = nucleus[i];
+        if (vowel && !in_nucleus && !current.empty() &&
+                any_of_range(nucleus, current_start, i)) {
             // a new nucleus after the previous syllable already has one
-            syllables.push_back(current);
-            current = c;
+            syllables.push_back(to_utf8(current));
+            current = std::u32string(1, cp);
+            current_start = i;
         } else if (!vowel && in_nucleus) {
             // first consonant after a nucleus: close the syllable here so
             // the consonant opens the next one (onset-maximising)
-            syllables.push_back(current);
-            current = c;
+            syllables.push_back(to_utf8(current));
+            current = std::u32string(1, cp);
+            current_start = i;
         } else {
-            current += c;
+            current += cp;
         }
         in_nucleus = vowel;
-        i += char_size(word, i);
     }
     if (!current.empty()) {
-        bool current_has_vowel = false;
-        for (const auto& d : chars(current))
-            if (is_vowel_char_fn(d)) { current_has_vowel = true; break; }
-        if (current_has_vowel || syllables.empty()) syllables.push_back(current);
-        else syllables.back() += current;  // trailing consonant cluster joins the last syllable
+        if (any_of_range(nucleus, current_start, word.size()) || syllables.empty())
+            syllables.push_back(to_utf8(current));
+        else
+            syllables.back() += to_utf8(current);  // trailing consonant cluster joins the last syllable
     }
-    if (spec != nullptr) {
-        OnsetJudge judge(*spec, max_onset);
-        syllables = rebalance_onsets(syllables, judge);
-    }
-    if (coda_liquid_capture) syllables = capture_coda_liquids(syllables);
+    if (judge) syllables = rebalance_onsets(syllables, nucleus, *judge);
+    if (coda_liquid_capture) syllables = capture_coda_liquids(syllables, nucleus);
     return syllables;
 }
 
 std::vector<std::string> syllabify_for_mark(const std::string& ipa,
                                             const LanguageSpec& spec) {
+    const std::vector<bool> nucleus =
+        nucleus_mask(ipa, [](const std::string& c) { return is_vowel_char(c); });
     // `ipa_diphthongs`, where the spec declares it, replaces the orthographic
     // `diphthongs` for the transcription.
     std::vector<std::string> sylls =
         spec.ipa_diphthongs
-            ? syllabify_with_diphthongs(
-                  ipa, [](const std::string& c) { return is_vowel_char(c); }, *spec.ipa_diphthongs)
+            ? syllabify_with_diphthongs(to_utf32(ipa), nucleus, *spec.ipa_diphthongs)
             : syllabify(ipa, nullptr, spec.diphthongs);
     if (!spec.constrain_mark_onsets) {
-        if (spec.coda_liquid_capture) sylls = capture_coda_liquids(sylls);
+        if (spec.coda_liquid_capture) sylls = capture_coda_liquids(sylls, nucleus);
         return sylls;
     }
     const std::optional<int> cap = spec.max_onset_declared
                                        ? std::optional<int>(spec.max_onset)
                                        : std::nullopt;
     IpaOnsetJudge judge(cap, spec.onset_clusters);
-    sylls = rebalance_onsets(sylls, judge);
-    if (spec.coda_liquid_capture) sylls = capture_coda_liquids(sylls);
+    sylls = rebalance_onsets(sylls, nucleus, judge);
+    if (spec.coda_liquid_capture) sylls = capture_coda_liquids(sylls, nucleus);
     return sylls;
 }
 
@@ -755,15 +889,6 @@ std::set<int> secondary_stress_positions(int n_syllables,
 
 namespace {
 
-// stress.py _WRITTEN_VOWELS / _is_written_vowel: whether *ch* is a vowel
-// LETTER, with any diacritic ignored. ⟨y⟩ is left out on purpose: it is a
-// consonant in some orthographies.
-bool is_written_vowel(const std::string& ch) {
-    const std::u32string base = uni::nfd(uni::lower(to_utf32(ch)));
-    return !base.empty() && std::u32string_view(U"aeiou").find(base[0]) !=
-                                std::u32string_view::npos;
-}
-
 // stress.py _hiatus_merge_sites: the index of the syllable AFTER each
 // boundary where the syllable before ends in a vowel letter and the one
 // after starts with one, the site of glide formation.
@@ -773,10 +898,119 @@ std::vector<int> hiatus_merge_sites(const std::vector<std::string>& syllables) {
         const std::vector<std::string> before = chars(syllables[i - 1]);
         const std::vector<std::string> after = chars(syllables[i]);
         if (before.empty() || after.empty()) continue;
-        if (is_written_vowel(before.back()) && is_written_vowel(after.front()))
+        if (vowels::is_basic_vowel_letter(before.back()) &&
+                vowels::is_basic_vowel_letter(after.front()))
             sites.push_back(static_cast<int>(i));
     }
     return sites;
+}
+
+// stress.py _NON_SYLLABIC: the IPA diacritics that make a vowel
+// non-syllabic, inverted breve below and above.
+bool is_non_syllabic_cp(char32_t cp) { return cp == U'\u032f' || cp == U'\u0311'; }
+
+enum class Contact { hiatus, merge };
+
+// stress.py _written_vowel_contacts: the boundaries of *syllables* where two
+// written vowels are in contact, keyed by the index of the syllable AFTER
+// the boundary. A hiatus where the two letters are not one of the spec's
+// diphthongs; a merge where they are, across an onset that writes nothing.
+std::map<int, Contact> written_vowel_contacts(const std::vector<std::string>& syllables,
+                                              const LanguageSpec& rules,
+                                              const LanguageSpec* spec) {
+    std::set<std::string> diphthongs;
+    for (const auto& d : rules.diphthongs) diphthongs.insert(to_utf8(uni::lower(to_utf32(d))));
+    std::optional<OnsetJudge> judge;
+    if (spec != nullptr) judge.emplace(*spec, std::nullopt);
+    std::map<int, Contact> contacts;
+    for (std::size_t i = 1; i < syllables.size(); ++i) {
+        const std::u32string before = to_utf32(syllables[i - 1]);
+        const std::u32string after = to_utf32(syllables[i]);
+        if (before.empty() || !vowels::is_basic_vowel_letter(to_utf8(before.substr(before.size() - 1))))
+            continue;
+        std::size_t j = 0;
+        while (j < after.size() && !vowels::is_basic_vowel_letter(to_utf8(after.substr(j, 1)))) ++j;
+        if (j == after.size()) continue;
+        if (j != 0) {
+            bool silent = judge.has_value();
+            if (silent) {
+                const std::u32string onset = to_utf32(lower_str(to_utf8(after.substr(0, j)), spec->code));
+                for (const auto& g : judge->graphemes_of(onset)) {
+                    const auto hit = spec->graphemes.find(to_utf8(g));
+                    if (hit == spec->graphemes.end() ||
+                            std::any_of(hit->second.begin(), hit->second.end(),
+                                        [](const std::string& r) { return !r.empty(); })) {
+                        silent = false;
+                        break;
+                    }
+                }
+            }
+            if (!silent) continue;
+        }
+        const std::string pair =
+            to_utf8(uni::lower(std::u32string{before.back(), after[j]}));
+        if (!diphthongs.count(pair)) contacts[static_cast<int>(i)] = Contact::hiatus;
+        else if (j != 0) contacts[static_cast<int>(i)] = Contact::merge;
+    }
+    return contacts;
+}
+
+// stress.py _split_first_nucleus: *syll* cut after its first syllabic vowel,
+// when another one follows; nullopt when the nucleus has one syllabic vowel
+// only.
+std::optional<std::pair<std::string, std::string>> split_first_nucleus(const std::string& syll8) {
+    const std::u32string syll = to_utf32(syll8);
+    auto vowel_at = [&](std::size_t k) { return is_vowel_char(to_utf8(syll.substr(k, 1))); };
+    std::size_t i = 0;
+    while (i < syll.size() && !vowel_at(i)) ++i;
+    if (i == syll.size()) return std::nullopt;
+    ++i;
+    while (i < syll.size() && (uni::combining(syll[i]) != 0 || is_length_mark_cp(syll[i]))) {
+        if (is_non_syllabic_cp(syll[i])) return std::nullopt;
+        ++i;
+    }
+    if (i == syll.size() || !vowel_at(i)) return std::nullopt;
+    if (i + 1 < syll.size() && is_non_syllabic_cp(syll[i + 1])) return std::nullopt;
+    return std::make_pair(to_utf8(syll.substr(0, i)), to_utf8(syll.substr(i)));
+}
+
+// stress.py _align_written_syllables: map each written syllable onto the IPA
+// syllable that holds its nucleus, where two written vowels in contact show
+// where the transcription has fewer syllables. Returns the IPA syllables, cut
+// where needed, and the IPA slot of each written syllable; nullopt when no
+// contact accounts for the difference.
+std::optional<std::pair<std::vector<std::string>, std::vector<int>>> align_written_syllables(
+    const std::vector<std::string>& syllables, const std::vector<std::string>& ipa_sylls,
+    const LanguageSpec& rules, const LanguageSpec* spec) {
+    const auto contacts = written_vowel_contacts(syllables, rules, spec);
+    if (contacts.empty()) return std::nullopt;
+    std::vector<std::string> out;
+    std::vector<int> slots{0};
+    std::string pending = ipa_sylls[0];
+    std::size_t j = 0;
+    for (std::size_t k = 1; k < syllables.size(); ++k) {
+        const auto hit = contacts.find(static_cast<int>(k));
+        const bool has_kind = hit != contacts.end();
+        const bool merge = has_kind && hit->second == Contact::merge;
+        const auto cut = has_kind ? split_first_nucleus(pending) : std::nullopt;
+        if (merge && cut) {
+            slots.push_back(static_cast<int>(out.size()));
+            continue;
+        }
+        if (merge || !cut) {
+            ++j;
+            if (j == ipa_sylls.size()) return std::nullopt;
+            out.push_back(pending);
+            pending = ipa_sylls[j];
+        } else {
+            out.push_back(cut->first);
+            pending = cut->second;
+        }
+        slots.push_back(static_cast<int>(out.size()));
+    }
+    if (j != ipa_sylls.size() - 1) return std::nullopt;
+    out.push_back(pending);
+    return std::make_pair(out, slots);
 }
 
 // stress.py _glide_anchored_index: the IPA syllable the stress lands on when
@@ -813,7 +1047,8 @@ std::string apply_stress_mark(const std::string& ipa, const LanguageSpec& spec,
                               const std::vector<std::string>* syllables,
                               const std::vector<std::string>* ipa_syllables,
                               const std::string& mark,
-                              const std::vector<int>& secondary_indices) {
+                              const std::vector<int>& secondary_indices,
+                              const LanguageSpec* written) {
     const std::string stress_mark = !mark.empty() ? mark : spec.stress_mark;
     if (ipa.find(stress_mark) != std::string::npos ||
             ipa.find(spec.stress_mark) != std::string::npos)
@@ -823,6 +1058,36 @@ std::string apply_stress_mark(const std::string& ipa, const LanguageSpec& spec,
                                              ? *ipa_syllables
                                              : syllabify_for_mark(ipa, spec);
     if (ipa_sylls.empty()) return ipa;
+    const long long n_written = syllables != nullptr ? static_cast<long long>(syllables->size()) : 0;
+    const auto aligned =
+        syllables != nullptr && ipa_sylls.size() < syllables->size() &&
+                -n_written <= stress_index && stress_index < n_written
+            ? align_written_syllables(*syllables, ipa_sylls, spec, written)
+            : std::nullopt;
+    if (aligned) {
+        // The transcription has fewer syllables than the spelling, and the
+        // spelling shows where: two written vowels in contact. The anchorings
+        // below would guess the place instead, and a merge on the other side
+        // of the stress (⟨ahorrábamos⟩ [aoraβamos]) moves the mark.
+        ipa_sylls = aligned->first;
+        const std::vector<int>& slots = aligned->second;
+        const int main_slot =
+            slots[static_cast<std::size_t>(stress_index < 0 ? n_written + stress_index : stress_index)];
+        std::set<int> marked{main_slot};
+        for (const int sec : secondary_indices) {
+            if (sec < 0 || static_cast<std::size_t>(sec) >= slots.size()) continue;
+            const int slot = slots[static_cast<std::size_t>(sec)];
+            if (marked.count(slot)) continue;
+            marked.insert(slot);
+            ipa_sylls[static_cast<std::size_t>(slot)] =
+                prefix_mark(ipa_sylls[static_cast<std::size_t>(slot)], SECONDARY_MARK);
+        }
+        ipa_sylls[static_cast<std::size_t>(main_slot)] =
+            prefix_mark(ipa_sylls[static_cast<std::size_t>(main_slot)], stress_mark);
+        std::string out;
+        for (const auto& s : ipa_sylls) out += s;
+        return out;
+    }
 
     int offset_from_end;
     if (stress_index < 0) {
@@ -972,6 +1237,33 @@ std::vector<std::string> syllabify_ipa(const std::string& ipa, int max_onset,
     return syllables;
 }
 
+namespace {
+
+// stress.py _holds_diphthong: whether one segment holds a vowel letter
+// followed by a second vowel letter, or by a glide letter (stress.py
+// _OFFGLIDES) that no vowel letter follows.
+bool holds_diphthong(const std::string& segment) {
+    std::u32string letters;
+    for (const char32_t cp : to_utf32(segment))
+        if (uni::combining(cp) == 0) letters += cp;
+    std::vector<bool> vowel;
+    for (const char32_t cp : letters) {
+        const std::string c = to_utf8(std::u32string(1, cp));
+        vowel.push_back(vowels::is_ipa_vowel(c) || feats::is_vowel_phone(c));
+    }
+    vowel.push_back(false);
+    static const std::u32string offglides = U"jwɥɰ";
+    for (std::size_t i = 0; i + 1 < letters.size(); ++i) {
+        const char32_t c = letters[i + 1];
+        if (vowel[i] && (vowel[i + 1] ||
+                         (offglides.find(c) != std::u32string::npos && !vowel[i + 2])))
+            return true;
+    }
+    return false;
+}
+
+} // namespace
+
 std::string syllable_weight(const std::string& syllable,
                             const std::vector<std::string>& atoms) {
     const auto segs = segment_with_affricates(syllable, atoms);
@@ -980,10 +1272,14 @@ std::string syllable_weight(const std::string& syllable,
     const std::size_t start = static_cast<std::size_t>(first_vowel - segs.begin());
     std::size_t end = start;
     while (end < segs.size() && is_vowel_segment(segs[end])) ++end;
-    // A long vowel or a diphthong is a branching (heavy) nucleus.
+    // A long vowel or a diphthong is a branching (heavy) nucleus. A diphthong
+    // the spec declares as one atom is one segment that holds a vowel letter
+    // and, next to it, a second vowel letter or a glide letter with no vowel
+    // after it (``aj``, ``aw``).
     bool long_vowel = end - start > 1;
     for (std::size_t k = start; k < end && !long_vowel; ++k)
-        if (segs[k].find(LENGTH) != std::string::npos) long_vowel = true;
+        if (segs[k].find(LENGTH) != std::string::npos || holds_diphthong(segs[k]))
+            long_vowel = true;
     const std::size_t coda = segs.size() - end;
     if (long_vowel && coda > 0) return SUPERHEAVY;
     if (coda >= 2) return SUPERHEAVY;
@@ -1145,6 +1441,110 @@ const LanguageSpec* spec_for(const std::string& lang) {
     }
 }
 
+namespace {
+
+// stress.py _semivowel_roles: the semivowel_role of each semivowel letter in
+// *spec*.
+std::map<std::string, std::string> semivowel_roles(const LanguageSpec& spec) {
+    std::map<std::string, std::string> roles;
+    for (const char letter : std::string(vowels::SEMIVOWEL_LETTERS)) {
+        const std::string key(1, letter);
+        const auto role = vowels::semivowel_role(key, spec.graphemes,
+                                                 spec.positional_graphemes.count(key) != 0);
+        if (role.has_value()) roles.emplace(key, *role);
+    }
+    return roles;
+}
+
+// stress.py _bundled_syllables: the bundled splitter's division of *word*,
+// read from *spec*.
+std::vector<std::string> bundled_syllables(const std::string& word, const LanguageSpec* spec,
+                                           const std::vector<std::string>& diphthongs,
+                                           const std::set<std::size_t>& hiatus = {}) {
+    // Read before the phonotactics guard below can drop the spec: which
+    // letters are nuclei is the language's own statement, independent of
+    // whether its onset inventory has been checked.
+    std::set<std::string> vowel_set;
+    const std::set<std::string>* vowels_set = nullptr;
+    std::map<std::string, std::string> roles;
+    const std::map<std::string, std::string>* semivowels = nullptr;
+    if (spec != nullptr && spec->stress_defined && !spec->vowel_letters.empty()) {
+        for (const auto& v : spec->vowel_letters) vowel_set.insert(plain_lower(v));
+        vowels_set = &vowel_set;
+    } else if (spec != nullptr) {
+        roles = semivowel_roles(*spec);
+        semivowels = &roles;
+    }
+    std::set<std::string> onset_graphemes;
+    if (spec != nullptr) onset_graphemes = OnsetJudge(*spec, std::nullopt).vowel_final_consonants();
+    const LanguageSpec* used_spec = spec;
+    std::optional<int> max_onset;
+    if (used_spec != nullptr && !used_spec->constrain_onsets) {
+        // The spec has not opted in: its onset inventory has not been
+        // checked against the shapes the judge knows. Maximise the onset
+        // unconstrained, exactly as before.
+        used_spec = nullptr;
+    }
+    if (used_spec != nullptr && used_spec->stress_defined && used_spec->max_onset_declared)
+        max_onset = used_spec->max_onset;
+    return syllabify(word, vowels_set, diphthongs, /*coda_liquid_capture=*/false,
+                     used_spec, max_onset, semivowels, onset_graphemes, hiatus);
+}
+
+bool starts_with(const std::u32string& text, const std::u32string& prefix) {
+    return text.size() >= prefix.size() && text.compare(0, prefix.size(), prefix) == 0;
+}
+
+// stress.py _closed_hiatus_candidates: indices of the letters of *word* that
+// stress.closed_hiatus splits from the vowel before them, before the stress
+// is known.
+std::vector<std::size_t> closed_hiatus_candidates(const std::string& word,
+                                                  const LanguageSpec& spec) {
+    const ClosedHiatus& rule = *spec.closed_hiatus;
+    const std::u32string lowered = uni::lower(to_utf32(word));
+    std::set<std::u32string> pairs, codas;
+    for (const auto& p : rule.pairs) pairs.insert(to_utf32(p));
+    for (const auto& c : rule.codas) codas.insert(to_utf32(c));
+    std::vector<std::u32string> onsets;
+    for (const auto& o : rule.onsets) onsets.push_back(to_utf32(o));
+    std::vector<std::size_t> found;
+    for (std::size_t k = 1; k < lowered.size(); ++k) {
+        if (!pairs.count(lowered.substr(k - 1, 2))) continue;
+        const std::u32string rest = lowered.substr(k + 1);
+        const bool onset = std::any_of(onsets.begin(), onsets.end(),
+                                       [&](const std::u32string& o) { return starts_with(rest, o); });
+        bool coda = codas.count(rest.substr(0, 1)) != 0 &&
+                    !(rest.size() > 1 && vowels::is_orthographic_vowel(rest[1]));
+        if (coda) {
+            for (const auto& [g, values] : spec.graphemes) {
+                (void)values;
+                const std::u32string units = to_utf32(g);
+                if (units.size() > 1 && starts_with(rest, units)) { coda = false; break; }
+            }
+        }
+        if (onset || coda) found.push_back(k);
+    }
+    return found;
+}
+
+} // namespace
+
+std::set<std::size_t> closed_hiatus_positions(const std::string& word, const LanguageSpec& spec) {
+    if (!spec.stress_defined || !spec.closed_hiatus) return {};
+    const auto found = closed_hiatus_candidates(word, spec);
+    if (found.empty()) return {};
+    const std::set<std::size_t> all(found.begin(), found.end());
+    const auto sylls = bundled_syllables(word, &spec, spec.diphthongs, all);
+    const int stressed = detect_stress(word, spec, &sylls);
+    std::size_t start = 0;
+    for (int k = 0; k < stressed && k < static_cast<int>(sylls.size()); ++k)
+        start += to_utf32(sylls[k]).size();
+    std::set<std::size_t> out;
+    for (const std::size_t k : found)
+        if (k == start) out.insert(k);
+    return out;
+}
+
 std::vector<std::string> syllables_for(const std::string& word, const std::string& lang,
                                        const std::vector<std::string>& diphthongs,
                                        const LanguageSpec* spec) {
@@ -1165,28 +1565,9 @@ std::vector<std::string> syllables_for(const std::string& word, const std::strin
     }
     const LanguageSpec* used_spec = spec;
     if (used_spec == nullptr && !lang.empty()) used_spec = spec_for(lang);
-    // Read before the phonotactics guard below can drop the spec: which
-    // letters are nuclei is the language's own statement, independent of
-    // whether its onset inventory has been checked.
-    std::set<std::string> vowel_set;
-    const std::set<std::string>* vowels_set = nullptr;
-    if (used_spec != nullptr && used_spec->stress_defined &&
-            !used_spec->vowel_letters.empty()) {
-        for (const auto& v : used_spec->vowel_letters)
-            vowel_set.insert(plain_lower(v));
-        vowels_set = &vowel_set;
-    }
-    std::optional<int> max_onset;
-    if (used_spec != nullptr && !used_spec->constrain_onsets) {
-        // The spec has not opted in: its onset inventory has not been
-        // checked against the shapes the judge knows. Maximise the onset
-        // unconstrained, exactly as before.
-        used_spec = nullptr;
-    }
-    if (used_spec != nullptr && used_spec->stress_defined && used_spec->max_onset_declared)
-        max_onset = used_spec->max_onset;
-    return syllabify(word, vowels_set, diphthongs, /*coda_liquid_capture=*/false,
-                     used_spec, max_onset);
+    const std::set<std::size_t> hiatus =
+        used_spec != nullptr ? closed_hiatus_positions(word, *used_spec) : std::set<std::size_t>{};
+    return bundled_syllables(word, used_spec, diphthongs, hiatus);
 }
 
 } // namespace orthography2ipa::stress
