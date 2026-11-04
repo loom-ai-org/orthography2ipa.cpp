@@ -201,20 +201,26 @@ bool carries_nucleus(const GraphemeContext& ctx) {
 
 std::vector<double> candidate_base_costs(
         const std::vector<std::string>& ipa,
-        const std::optional<std::vector<double>>& weights,
+        const std::optional<std::vector<CandidateWeight>>& weights,
         const std::string& grapheme) {
     (void)grapheme; // only names the malformed-weights warning in Python
     const std::size_t n = ipa.size();
-    // _valid_weights checks a plain running total; the costs divide by
-    // `float(sum(weights))`, which Python adds with compensation.
+    // _valid_weights checks a plain running total, where `total += w`
+    // converts an int weight to float. The costs divide by
+    // `float(sum(weights))`, which adds ints and floats as sum() does.
     bool valid = weights.has_value() && weights->size() == n;
     double running = 0.0;
-    detail::PythonFloatSum sum;
+    detail::PythonSum sum;
     if (valid)
-        for (const double w : *weights) {
-            if (w < 0.0) { valid = false; break; }
-            running += w;
-            sum.add(w);
+        for (const CandidateWeight& w : *weights) {
+            if (w.value < 0.0) { valid = false; break; }
+            if (w.integer.empty()) {
+                running += w.value;
+                sum.add_float(w.value);
+            } else {
+                running += detail::py_int_to_float(w.integer);
+                sum.add_int(w.integer);
+            }
         }
     if (valid && !(running > 0.0)) valid = false;
     if (!valid) {
@@ -228,8 +234,8 @@ std::vector<double> candidate_base_costs(
     const double total = sum.value();
     std::vector<double> costs;
     costs.reserve(n);
-    for (const double w : *weights) {
-        const double p = std::max(w / total, WEIGHT_FLOOR);
+    for (const CandidateWeight& w : *weights) {
+        const double p = std::max(w.value / total, WEIGHT_FLOOR);
         costs.push_back(-std::log(p));
     }
     return costs;
@@ -239,7 +245,7 @@ std::vector<double> candidate_base_costs(
 
 std::vector<Branch> build_branches(
         const std::vector<std::string>& candidates,
-        const std::optional<std::vector<double>>& weights,
+        const std::optional<std::vector<CandidateWeight>>& weights,
         const std::map<std::string, std::vector<std::string>>* allophone_map,
         const std::string& grapheme) {
     const std::vector<double> costs = candidate_base_costs(candidates, weights, grapheme);
@@ -536,7 +542,7 @@ std::vector<Branch> resolve_branches(
     const auto pos_candidates = positional_candidates(spec, grapheme, positions);
 
     std::vector<std::string> candidates;
-    std::optional<std::vector<double>> weights;
+    std::optional<std::vector<CandidateWeight>> weights;
     if (!pos_candidates.has_value()) {
         // Flat table: per-candidate weights (if any) apply.
         candidates = base_candidates;

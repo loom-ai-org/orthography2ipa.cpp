@@ -548,7 +548,7 @@ PhonetokTokenizer::PhonetokTokenizer(const LanguageSpec& spec, bool add_bos, boo
 
     // Per-candidate weights aligned to grapheme_ipa_ (normalised keys);
     // sparse — absent → weights_for returns nullopt → rank cost.
-    normalised_keys(spec.grapheme_weights, [](const std::vector<double>& w) { return w; },
+    normalised_keys(spec.grapheme_weights, [](const std::vector<CandidateWeight>& w) { return w; },
                     grapheme_weights_);
 
     // Grapheme keys that exist only as positional overrides must still be
@@ -638,7 +638,7 @@ const std::vector<std::u32string>* PhonetokTokenizer::ipa_for(const std::u32stri
     return it == grapheme_ipa_.end() ? nullptr : &it->second;
 }
 
-std::optional<std::vector<double>> PhonetokTokenizer::weights_for(
+std::optional<std::vector<CandidateWeight>> PhonetokTokenizer::weights_for(
     const std::string& grapheme) const {
     const auto it = grapheme_weights_.find(uni::lower(u32(grapheme)));
     if (it == grapheme_weights_.end()) return std::nullopt;

@@ -43,7 +43,7 @@ struct Hypothesis {
 // finite but strongly disfavoured.
 std::vector<double> candidate_base_costs(
     const std::vector<std::string>& ipa,
-    const std::optional<std::vector<double>>& weights,
+    const std::optional<std::vector<CandidateWeight>>& weights,
     const std::string& grapheme = {});
 
 // positional.py build_branches: each candidate becomes a branch at its
@@ -52,7 +52,7 @@ std::vector<double> candidate_base_costs(
 // collapse to their lowest cost; the result is sorted (cost, ipa).
 std::vector<Branch> build_branches(
     const std::vector<std::string>& candidates,
-    const std::optional<std::vector<double>>& weights,
+    const std::optional<std::vector<CandidateWeight>>& weights,
     const std::map<std::string, std::vector<std::string>>* allophone_map,
     const std::string& grapheme);
 

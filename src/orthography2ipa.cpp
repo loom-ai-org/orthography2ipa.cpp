@@ -298,6 +298,19 @@ std::map<std::string, std::vector<std::string>> ipa_map(const ptree& p, const st
     return result;
 }
 
+// json.load reads a number with no fraction and no exponent as an int, and
+// weights.py keeps it one. property_tree holds the number as it is written.
+CandidateWeight candidate_weight(const ptree& node) {
+    const std::string& text = node.data();
+    const std::size_t start = text.rfind('-', 0) == 0 ? 1 : 0;
+    if (text.size() > start && text.find_first_not_of("0123456789", start) == std::string::npos) {
+        std::string digits = text.substr(std::min(text.find_first_not_of('0', start), text.size() - 1));
+        if (start == 1 && digits != "0") digits.insert(0, "-");
+        return {std::strtod(digits.c_str(), nullptr), digits};
+    }
+    return {node.get_value<double>(0.0), {}};
+}
+
 std::map<std::string, std::map<std::string, std::vector<std::string>>>
 positional_map(const ptree& p) {
     std::map<std::string, std::map<std::string, std::vector<std::string>>> result;
@@ -414,8 +427,8 @@ LanguageSpec load_raw(const std::string& code, std::set<std::string>& loading) {
     if (auto graphemes = raw.get_child_optional("graphemes"))
         for (const auto& item : *graphemes)
             if (auto weights = item.second.get_child_optional("weights")) {
-                std::vector<double> values;
-                for (const auto& w : *weights) values.push_back(w.second.get_value<double>(0.0));
+                std::vector<CandidateWeight> values;
+                for (const auto& w : *weights) values.push_back(candidate_weight(w.second));
                 s.grapheme_weights[item.first] = std::move(values);
             }
     s.allophones = ipa_map(raw, "allophones");
@@ -1580,18 +1593,18 @@ std::string resolve_lexicon_source(const std::string& source) {
     return resolve_remote_lexicon(source).string();
 }
 
-std::pair<std::optional<std::vector<std::string>>, std::optional<std::vector<double>>>
+std::pair<std::optional<std::vector<std::string>>, std::optional<std::vector<CandidateWeight>>>
 normalize_grapheme_value(const ptree& value) {
     // weights.py normalize_grapheme_value over the loader's node.
     if (value.data().empty() && value.empty()) return {};   // a JSON null
     if (!value.empty() && value.begin()->first == "ipa") {
-        std::pair<std::optional<std::vector<std::string>>, std::optional<std::vector<double>>> out;
+        std::pair<std::optional<std::vector<std::string>>, std::optional<std::vector<CandidateWeight>>> out;
         std::vector<std::string> ipa;
         for (const auto& reading : value.get_child("ipa")) ipa.push_back(reading.second.data());
         out.first = std::move(ipa);
         if (auto weights = value.get_child_optional("weights")) {
-            std::vector<double> values;
-            for (const auto& w : *weights) values.push_back(w.second.get_value<double>(0.0));
+            std::vector<CandidateWeight> values;
+            for (const auto& w : *weights) values.push_back(candidate_weight(w.second));
             out.second = std::move(values);
         }
         return out;
@@ -1602,12 +1615,12 @@ normalize_grapheme_value(const ptree& value) {
 }
 
 std::pair<std::map<std::string, std::optional<std::vector<std::string>>>,
-          std::map<std::string, std::vector<double>>>
+          std::map<std::string, std::vector<CandidateWeight>>>
 split_weighted_graphemes(const ptree& raw_graphemes) {
     // weights.py split_weighted_graphemes: the flat readings (inheritance
     // nulls preserved as nullopt) plus the SPARSE weight table.
     std::pair<std::map<std::string, std::optional<std::vector<std::string>>>,
-              std::map<std::string, std::vector<double>>> out;
+              std::map<std::string, std::vector<CandidateWeight>>> out;
     for (const auto& [key, node] : raw_graphemes) {
         const auto normalized = normalize_grapheme_value(node);
         out.first[key] = normalized.first;

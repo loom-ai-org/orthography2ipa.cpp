@@ -577,11 +577,11 @@ int main() {
         assert(ending.has_value() && !ending->ipa.has_value());  // deferring
         // weights.py divides by float(sum(weights)), which Python 3.12 adds
         // with compensation. The expected costs are the reference's.
-        const std::vector<double> tenths = beam::candidate_base_costs({"a", "b", "c"}, std::vector<double>{0.1, 0.2, 0.3}, "g");
+        const std::vector<double> tenths = beam::candidate_base_costs({"a", "b", "c"}, std::vector<CandidateWeight>{{0.1}, {0.2}, {0.3}}, "g");
         assert((tenths == std::vector<double>{1.791759469228055, 1.0986122886681096, 0.6931471805599453}));
-        const std::vector<double> spread = beam::candidate_base_costs({"a", "b", "c", "d"}, std::vector<double>{0.7, 0.1, 0.1, 0.1}, "g");
+        const std::vector<double> spread = beam::candidate_base_costs({"a", "b", "c", "d"}, std::vector<CandidateWeight>{{0.7}, {0.1}, {0.1}, {0.1}}, "g");
         assert(spread.front() == 0.35667494393873245);
-        const std::vector<double> big = beam::candidate_base_costs({"a", "b", "c"}, std::vector<double>{1e16, 1.0, 1.0}, "g");
+        const std::vector<double> big = beam::candidate_base_costs({"a", "b", "c"}, std::vector<CandidateWeight>{{1e16}, {1.0}, {1.0}}, "g");
         assert(big.front() == 2.2204460492503136e-16);
     }
 

@@ -131,7 +131,7 @@ if(BUILD_TESTING)
     # ── parity-harness drivers ────────────────────────────────────────────────
     # The per-module harnesses drive a small check binary instead of the CLI
     # (a process per spec for 7662 specs is not workable through the CLI).
-    foreach(driver langcodes linguatag inventory lm_feats lattice_per features_conformance tables sentence py_float)
+    foreach(driver langcodes linguatag inventory lm_feats lattice_per features_conformance tables sentence py_float weights)
         add_executable(orthography2ipa-check-${driver} tests/check_${driver}_driver.cpp)
         target_link_libraries(orthography2ipa-check-${driver} PRIVATE orthography2ipa)
         # Several drivers reach the library's private beam/unicode headers.
@@ -274,10 +274,14 @@ if(BUILD_TESTING)
         add_test(NAME orthography2ipa-features-conformance-parity
                  COMMAND ${Python3_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/tests/features_conformance_parity.py
                          $<TARGET_FILE:orthography2ipa-check-features_conformance>)
+        add_test(NAME orthography2ipa-weights-parity
+                 COMMAND ${Python3_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/tests/weights_parity.py
+                         $<TARGET_FILE:orthography2ipa-check-weights>)
         set_tests_properties(orthography2ipa-inventory-parity
                              orthography2ipa-lm-parity
                              orthography2ipa-lattice-per-parity
                              orthography2ipa-features-conformance-parity
+                             orthography2ipa-weights-parity
                              PROPERTIES ENVIRONMENT "O2I_PYTHON_ROOT=${O2I_REF_ROOT};O2I_PYTHON=${Python3_EXECUTABLE}"
                                         TIMEOUT 3600)
         endif()
