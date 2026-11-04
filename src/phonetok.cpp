@@ -581,7 +581,7 @@ const std::vector<std::u32string>* PhonetokTokenizer::ipa_for(const std::u32stri
     return it == grapheme_ipa_.end() ? nullptr : &it->second;
 }
 
-std::optional<std::vector<double>> PhonetokTokenizer::weights_for(
+std::optional<std::vector<CandidateWeight>> PhonetokTokenizer::weights_for(
     const std::string& grapheme) const {
     const auto it = grapheme_weights_.find(uni::lower(u32(grapheme)));
     if (it == grapheme_weights_.end()) return std::nullopt;
