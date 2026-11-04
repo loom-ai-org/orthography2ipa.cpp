@@ -131,6 +131,9 @@ if(BUILD_TESTING)
         # Several drivers reach the library's private beam/unicode headers.
         target_include_directories(orthography2ipa-check-${driver} PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/src)
     endforeach()
+    # lexicon_parity.py drives it with HOME and the lexicon dir set per run.
+    add_executable(orthography2ipa-check-lexicon tests/check_lexicon_driver.cpp)
+    target_link_libraries(orthography2ipa-check-lexicon PRIVATE orthography2ipa)
     configure_file(tests/install_check.cmake.in ${CMAKE_CURRENT_BINARY_DIR}/install_check.cmake @ONLY)
     add_test(NAME orthography2ipa-install COMMAND ${CMAKE_COMMAND} -P ${CMAKE_CURRENT_BINARY_DIR}/install_check.cmake)
     configure_file(tests/relocated_install_check.cmake.in ${CMAKE_CURRENT_BINARY_DIR}/relocated_install_check.cmake @ONLY)
@@ -272,6 +275,10 @@ if(BUILD_TESTING)
                              orthography2ipa-weights-parity
                              PROPERTIES ENVIRONMENT "O2I_PYTHON_ROOT=${O2I_REF_ROOT};O2I_PYTHON=${Python3_EXECUTABLE}"
                                         TIMEOUT 3600)
+        add_test(NAME orthography2ipa-lexicon-parity
+                 COMMAND ${Python3_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/tests/lexicon_parity.py
+                         $<TARGET_FILE:orthography2ipa-check-lexicon>)
+        set_tests_properties(orthography2ipa-lexicon-parity PROPERTIES ENVIRONMENT "O2I_PYTHON_ROOT=${O2I_REF_ROOT}")
         endif()
     endif()
     # Every test reads the specs of this source tree, whatever is installed.

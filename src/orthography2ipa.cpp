@@ -20,6 +20,7 @@
 #include <boost/property_tree/ptree.hpp>
 #include <algorithm>
 #include <cctype>
+#include <cerrno>
 #include <cmath>
 #include <filesystem>
 #include <fstream>
@@ -29,6 +30,7 @@
 #include <stdexcept>
 #include <regex>
 #include <mutex>
+#include <pwd.h>
 #include <sys/types.h>
 #include <sys/wait.h>
 #include <unistd.h>
@@ -144,9 +146,21 @@ std::string fetch_url(const std::string& url) {
     return body;
 }
 
+// Path.is_file() and Path.is_dir(): false for the stat errors pathlib
+// ignores, a symlink loop among them; any other stat error is raised.
+fs::file_status path_status(const fs::path& path) {
+    std::error_code ec;
+    const fs::file_status status = fs::status(path, ec);
+    if (ec && ec.value() != ENOENT && ec.value() != ENOTDIR && ec.value() != EBADF && ec.value() != ELOOP)
+        throw fs::filesystem_error("status", path, ec);
+    return status;
+}
+bool path_is_file(const fs::path& path) { return fs::is_regular_file(path_status(path)); }
+bool path_is_dir(const fs::path& path) { return fs::is_directory(path_status(path)); }
+
 fs::path resolve_remote_lexicon(const std::string& source) {
     const auto cached = remote_cache_path(source);
-    if (fs::is_regular_file(cached)) return cached;
+    if (path_is_file(cached)) return cached;
     std::string url = source;
     if (source.rfind("hf://", 0) == 0) {
         const std::string spec = source.substr(5); const auto slash = spec.find('/');
@@ -813,20 +827,69 @@ bool owns_language(const Plugin& plugin, const std::string& language) {
 
 
 
+// str(pathlib.PurePosixPath(path)): empty and "." components dropped, and a
+// root of exactly two slashes kept as it is.
+std::string posix_path(const std::string& path) {
+    const std::string root = path.rfind("//", 0) == 0 && path.rfind("///", 0) != 0 ? "//"
+                           : path.rfind('/', 0) == 0 ? "/" : "";
+    std::string out = root;
+    std::istringstream parts(path);
+    for (std::string part; std::getline(parts, part, '/');) {
+        if (part.empty() || part == ".") continue;
+        if (out.size() > root.size()) out += '/';
+        out += part;
+    }
+    return out.empty() ? "." : out;
+}
+
+// str(pathlib.Path(path).expanduser()). A first component of ~ takes $HOME,
+// or the password entry of the current user when HOME is unset, and ~name
+// takes the entry of that user. A home that is not found, or that starts with
+// ~ itself, raises RuntimeError.
+std::string expand_user(const std::string& path) {
+    const std::string parsed = posix_path(path);
+    if (parsed.front() != '~') return parsed;
+    const std::size_t slash = parsed.find('/');
+    const std::string name = parsed.substr(1, slash == std::string::npos ? std::string::npos : slash - 1);
+    std::optional<std::string> home;
+    if (name.empty()) {
+        if (const char* env = std::getenv("HOME")) home = env;
+        else if (const passwd* entry = getpwuid(getuid())) home = entry->pw_dir;
+    } else if (const passwd* entry = getpwnam(name.c_str())) {
+        home = entry->pw_dir;
+    }
+    // posixpath.expanduser: the home without its trailing slashes, or the root.
+    if (home) home->erase(home->find_last_not_of('/') + 1);
+    if (home && home->empty()) home = "/";
+    if (!home || home->front() == '~') throw std::runtime_error("Could not determine home directory.");
+    const std::string home_path = posix_path(*home);
+    if (slash == std::string::npos) return home_path;
+    const std::string rest = parsed.substr(slash + 1);
+    if (home_path == ".") return rest;
+    return home_path.back() == '/' ? home_path + rest : home_path + "/" + rest;
+}
+
+// lexicon.py _lexicon_dir: the directory set_lexicon_directory chose, else
+// $ORTHOGRAPHY2IPA_LEXICON_DIR with a leading ~ expanded; empty for neither.
+std::string lexicon_dir() {
+    if (lexicon_directory) return *lexicon_directory;
+    const char* env = std::getenv("ORTHOGRAPHY2IPA_LEXICON_DIR");
+    return env && *env ? expand_user(env) : "";
+}
+
 // lexicon.py lexicon_path: the lexicon-dir file that serves the resolved
 // *code*. A file named exactly for the code wins; otherwise the first *.tsv,
 // in sorted order, whose name resolves to the code serves it, so en.tsv
 // serves en-GB.
 std::optional<fs::path> lexicon_dir_file(const std::string& code) {
-    const char* env = std::getenv("ORTHOGRAPHY2IPA_LEXICON_DIR");
-    const std::string dir = lexicon_directory ? *lexicon_directory : (env ? env : "");
+    const std::string dir = lexicon_dir();
     if (dir.empty()) return std::nullopt;
-    const fs::path exact = fs::path(dir) / (code + ".tsv");
-    if (fs::is_regular_file(exact)) return exact;
-    if (!fs::is_directory(dir)) return std::nullopt;
+    const fs::path exact = posix_path((dir.back() == '/' ? dir : dir + "/") + code + ".tsv");
+    if (path_is_file(exact)) return exact;
+    if (!path_is_dir(dir)) return std::nullopt;
     std::vector<fs::path> files;
     for (const auto& entry : fs::directory_iterator(dir))
-        if (entry.path().extension() == ".tsv") files.push_back(entry.path());
+        if (entry.path().extension() == ".tsv") files.push_back(posix_path(entry.path().string()));
     std::sort(files.begin(), files.end());
     for (const auto& file : files)
         if (resolve(file.stem().string()) == code) return file;
@@ -875,17 +938,14 @@ std::string read_text_utf8(const std::string& bytes) {
     return text;
 }
 
+// lexicon.py get_lexicon: lexicon_path, which raises FileNotFoundError for a
+// registered local source that is not a file, then an empty lexicon when no
+// file serves the code.
 std::shared_ptr<const std::map<std::string, std::string>> load_lexicon(const std::string& code) {
     auto cached = lexicon_cache.find(code); if (cached != lexicon_cache.end()) return cached->second;
-    std::string source;
-    if (auto it = registered_lexicons.find(code); it != registered_lexicons.end()) source = it->second;
-    else if (const auto file = lexicon_dir_file(code); file && fs::is_regular_file(*file)) source = file->string();
     std::map<std::string, std::string> result;
-    if (!source.empty()) {
-        fs::path path = source;
-        if (source.rfind("http://", 0) == 0 || source.rfind("https://", 0) == 0 || source.rfind("hf://", 0) == 0)
-            path = resolve_remote_lexicon(source);
-        std::ifstream input(path, std::ios::binary); if (!input) throw std::runtime_error("lexicon not found: " + source);
+    if (const auto path = lexicon_path(code); path && path_is_file(*path)) {
+        std::ifstream input(*path, std::ios::binary); if (!input) throw std::runtime_error("lexicon not found: " + *path);
         result = parse_lexicon_text(read_text_utf8(std::string(std::istreambuf_iterator<char>(input), {})));
     }
     auto loaded = std::make_shared<const std::map<std::string, std::string>>(std::move(result));
@@ -1532,10 +1592,11 @@ std::vector<std::pair<std::size_t, std::string>> validate_lexicon_text(const std
 }
 
 std::string resolve_lexicon_source(const std::string& source) {
-    // lexicon.py resolve_lexicon_source: a local path returned as-is (missing
-    // -> whatever the reference's FileNotFoundError message is), and the
-    // http(s):// / hf:// sources fetched once and reused.
-    return resolve_remote_lexicon(source).string();
+    if (source.rfind("http://", 0) == 0 || source.rfind("https://", 0) == 0 || source.rfind("hf://", 0) == 0)
+        return resolve_remote_lexicon(source).string();
+    const std::string path = expand_user(source);
+    if (!path_is_file(path)) throw FileNotFoundError("lexicon not found: " + source);
+    return path;
 }
 
 std::pair<std::optional<std::vector<std::string>>, std::optional<std::vector<CandidateWeight>>>
@@ -1640,12 +1701,12 @@ std::string resolve(const std::string& code) {
 }
 void set_data_directory(const std::string& path) { data_dir = path; cache.clear(); }
 void register_lexicon(const std::string& code, const std::string& source) { registered_lexicons[resolve(code)] = source; lexicon_cache.erase(resolve(code)); }
-void set_lexicon_directory(const std::string& path) { lexicon_directory = path; lexicon_cache.clear(); }
+void set_lexicon_directory(const std::string& path) { lexicon_directory = expand_user(path); lexicon_cache.clear(); }
 void clear_lexicons() { registered_lexicons.clear(); lexicon_directory.reset(); lexicon_cache.clear(); }
 std::vector<std::string> available_lexicon_codes() {
     std::set<std::string> codes; for (const auto& [code, _] : registered_lexicons) codes.insert(code);
-    const char* env = std::getenv("ORTHOGRAPHY2IPA_LEXICON_DIR"); const std::string dir = lexicon_directory ? *lexicon_directory : (env ? env : "");
-    if (!dir.empty() && fs::is_directory(dir)) for (const auto& e : fs::directory_iterator(dir)) if (e.path().extension() == ".tsv") codes.insert(e.path().stem().string());
+    const std::string dir = lexicon_dir();
+    if (!dir.empty() && path_is_dir(dir)) for (const auto& e : fs::directory_iterator(dir)) if (e.path().extension() == ".tsv") codes.insert(e.path().stem().string());
     return {codes.begin(), codes.end()};
 }
 std::map<std::string, std::string> get_lexicon(const std::string& code) { return *load_lexicon(resolve(code)); }
@@ -1656,11 +1717,11 @@ std::optional<std::string> lexicon_source(const std::string& code) {
     return std::nullopt;
 }
 std::optional<std::string> lexicon_path(const std::string& code) {
-    const auto source = lexicon_source(code); if (!source) return std::nullopt;
-    fs::path path = *source;
-    if (source->rfind("http://", 0) == 0 || source->rfind("https://", 0) == 0 || source->rfind("hf://", 0) == 0)
-        path = resolve_remote_lexicon(*source);
-    return path.string();
+    const auto canonical = resolve(code);
+    if (auto it = registered_lexicons.find(canonical); it != registered_lexicons.end())
+        return resolve_lexicon_source(it->second);
+    if (const auto file = lexicon_dir_file(canonical)) return file->string();
+    return std::nullopt;
 }
 std::vector<std::pair<std::size_t, std::string>> validate_lexicon(const std::string& text) {
     std::vector<std::pair<std::size_t, std::string>> errors; std::set<std::string> seen; std::stringstream stream(text); std::string line; std::size_t n = 0;

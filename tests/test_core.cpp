@@ -499,6 +499,19 @@ int main() {
         }
         assert(raised);
         clear_lexicons();
+
+        // A registered local source that is not a file raises FileNotFoundError,
+        // which a caller that catches std::runtime_error still catches.
+        register_lexicon("pt-PT", dir + "/missing.tsv");
+        raised = false;
+        try {
+            get_lexicon("pt-PT");
+        } catch (const std::runtime_error& error) {
+            raised = dynamic_cast<const FileNotFoundError*>(&error) != nullptr &&
+                     std::string(error.what()) == "lexicon not found: " + dir + "/missing.tsv";
+        }
+        assert(raised);
+        clear_lexicons();
         std::filesystem::remove_all(dir);
     }
 
