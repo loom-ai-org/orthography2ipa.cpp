@@ -12,9 +12,11 @@
 namespace orthography2ipa {
 
 namespace detail {
-/// CPython's `repr()` of a `str`. exceptions.py and schema.py both build their
-/// messages with `{value!r}`, so the one implementation lives with the exception
-/// types it serves and the schema port reuses it.
+/// CPython's `repr()` of a `str`. exceptions.py, schema.py and registry.py all
+/// build their messages with `{value!r}`, so the one implementation lives with
+/// the exception types it serves and the others reuse it. Bytes that are not
+/// valid UTF-8 stand for the str a Python caller would hold: a lone surrogate
+/// (surrogatepass) or a raw byte (surrogateescape), both written as \udXXX.
 std::string py_repr(const std::string& utf8);
 } // namespace detail
 
