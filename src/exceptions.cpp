@@ -8,31 +8,37 @@
 namespace orthography2ipa {
 namespace {
 
-/// Python's `str.isprintable()` for one code point: everything except the
-/// "Other" and "Separator" categories, space itself included.
-bool is_printable(char32_t cp) {
-    if (cp == U' ') return true;
-    const std::string cat = uni::category(cp);
-    if (cat.empty()) return false;
-    switch (cat[0]) {
-        case 'C': case 'Z': return false;
-        default: return true;
+// The str a Python caller passes as these bytes. A Python name can hold a lone
+// surrogate, which encodes to ED A0..BF xx ("surrogatepass"), and a raw byte
+// read from outside, which is U+DC80..DCFF ("surrogateescape"). Every other
+// byte that is not valid UTF-8 decodes as a surrogateescape byte, one by one.
+std::u32string python_str(const std::string& text) {
+    std::u32string out;
+    const auto byte = [&text](std::size_t i) { return static_cast<unsigned char>(text[i]); };
+    const auto in = [&](std::size_t i, unsigned low, unsigned high) {
+        return i < text.size() && byte(i) >= low && byte(i) <= high;
+    };
+    for (std::size_t i = 0; i < text.size();) {
+        const unsigned lead = byte(i);
+        std::size_t length = 0;
+        if (lead < 0x80) length = 1;
+        else if (lead >= 0xC2 && lead <= 0xDF) length = in(i + 1, 0x80, 0xBF) ? 2 : 0;
+        else if (lead >= 0xE0 && lead <= 0xEF)
+            length = in(i + 1, lead == 0xE0 ? 0xA0 : 0x80, 0xBF) && in(i + 2, 0x80, 0xBF) ? 3 : 0;
+        else if (lead >= 0xF0 && lead <= 0xF4)
+            length = in(i + 1, lead == 0xF0 ? 0x90 : 0x80, lead == 0xF4 ? 0x8F : 0xBF) &&
+                     in(i + 2, 0x80, 0xBF) && in(i + 3, 0x80, 0xBF) ? 4 : 0;
+        if (length == 0) {
+            out.push_back(0xDC00 + lead);
+            ++i;
+            continue;
+        }
+        char32_t cp = length == 1 ? lead : lead & (0x7F >> length);
+        for (std::size_t k = 1; k < length; ++k) cp = (cp << 6) | (byte(i + k) & 0x3F);
+        out.push_back(cp);
+        i += length;
     }
-}
-
-/// CPython's non-printable escape form for one code point.
-void put_escape(std::string& out, char32_t cp) {
-    static const char* const hex = "0123456789abcdef";
-    if (cp < 0x100) {
-        out += "\\x";
-        out += hex[(cp >> 4) & 0xF]; out += hex[cp & 0xF];
-    } else if (cp < 0x10000) {
-        out += "\\u";
-        for (int shift = 12; shift >= 0; shift -= 4) out += hex[(cp >> shift) & 0xF];
-    } else {
-        out += "\\U";
-        for (int shift = 28; shift >= 0; shift -= 4) out += hex[(cp >> shift) & 0xF];
-    }
+    return out;
 }
 
 /// exceptions.py builds its message with `{word!r}` / `{''.join(unmapped)!r}`:
@@ -49,29 +55,40 @@ std::string message(const std::string& word, const std::vector<std::string>& unm
 
 namespace detail {
 
-std::string py_repr(const std::string& utf8) {
-    // CPython's repr() of a str: single quotes unless the text contains a
-    // single quote and no double quote; the active quote, backslash, \n, \r,
-    // \t and every non-printable code point are escaped.
-    const std::u32string text = uni::to_utf32(utf8);
-    const bool has_single = text.find(U'\'') != std::u32string::npos;
-    const bool has_double = text.find(U'"') != std::u32string::npos;
-    const char32_t quote = (has_single && !has_double) ? U'"' : U'\'';
-
-    std::string out;
-    out += static_cast<char>(quote);
-    for (const char32_t cp : text) {
-        if (cp == U'\\') { out += "\\\\"; continue; }
-        if (cp == quote) { out += '\\'; out += uni::to_utf8(std::u32string(1, cp)); continue; }
-        if (cp == U'\n') { out += "\\n"; continue; }
-        if (cp == U'\r') { out += "\\r"; continue; }
-        if (cp == U'\t') { out += "\\t"; continue; }
-        if (cp < 0x80) { out += static_cast<char>(cp); continue; }
-        if (is_printable(cp)) { out += uni::to_utf8(std::u32string(1, cp)); continue; }
-        put_escape(out, cp);
+// Python's repr() of a str (unicodeobject.c unicode_repr) — what the
+// reference interpolates with `!r` into its messages. The quote is ' unless
+// the text holds ' and no ", and a code point str.isprintable() rejects is
+// written as a \x, \u or \U escape.
+std::string py_repr(const std::string& text) {
+    const std::u32string units = python_str(text);
+    const bool double_quote = units.find(U'\'') != std::u32string::npos && units.find(U'"') == std::u32string::npos;
+    const char32_t quote = double_quote ? U'"' : U'\'';
+    const auto hex = [](char32_t cp, int digits) {
+        static const char* const digit = "0123456789abcdef";
+        std::string out;
+        for (int shift = 4 * (digits - 1); shift >= 0; shift -= 4) out += digit[(cp >> shift) & 0xF];
+        return out;
+    };
+    std::string out(1, static_cast<char>(quote));
+    for (const char32_t cp : units) {
+        if (cp == quote || cp == U'\\') out += '\\' + uni::to_utf8(std::u32string(1, cp));
+        else if (cp == U'\t') out += "\\t";
+        else if (cp == U'\n') out += "\\n";
+        else if (cp == U'\r') out += "\\r";
+        else if (cp < 0x20 || cp == 0x7F) out += "\\x" + hex(cp, 2);
+        else if (cp < 0x7F) out += static_cast<char>(cp);
+        else {
+            // Py_UNICODE_ISPRINTABLE: false for the Other and Separator
+            // categories, except the ASCII space handled above.
+            const std::string category = uni::category(cp);
+            const bool printable = category[0] != 'C' && category[0] != 'Z';
+            if (printable) out += uni::to_utf8(std::u32string(1, cp));
+            else if (cp <= 0xFF) out += "\\x" + hex(cp, 2);
+            else if (cp <= 0xFFFF) out += "\\u" + hex(cp, 4);
+            else out += "\\U" + hex(cp, 8);
+        }
     }
-    out += static_cast<char>(quote);
-    return out;
+    return out + static_cast<char>(quote);
 }
 
 } // namespace detail

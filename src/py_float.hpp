@@ -1,4 +1,5 @@
-// Python repr(float), which json.dumps writes for a float.
+// Python float behaviour the port must match: repr(float), which json.dumps
+// writes for a float, and sum() of floats.
 #pragma once
 
 #include <charconv>
@@ -39,5 +40,25 @@ inline std::string py_float(double value) {
     }
     return negative ? "-" + out : out;
 }
+
+/// Python's sum() of floats (bltinmodule.c builtin_sum_impl), which since
+/// Python 3.12 adds with Neumaier compensation. A plain running total differs
+/// from it in the last bit. An int item is not a float to sum(): Python adds it
+/// without compensation, so this class serves an all-float sequence only.
+class PythonFloatSum {
+public:
+    void add(double x) {
+        const double t = sum_ + x;
+        compensation_ += std::fabs(sum_) >= std::fabs(x) ? (sum_ - t) + x : (x - t) + sum_;
+        sum_ = t;
+    }
+    double value() const {
+        return compensation_ != 0.0 && std::isfinite(compensation_) ? sum_ + compensation_ : sum_;
+    }
+
+private:
+    double sum_ = 0.0;
+    double compensation_ = 0.0;
+};
 
 } // namespace orthography2ipa::detail

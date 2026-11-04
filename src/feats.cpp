@@ -239,30 +239,14 @@ bool is_known_phone(const std::string& phones) {
 // (feats.py:348-456), transcribed with the reference's exact decimal literals.
 // ---------------------------------------------------------------------------
 #include "orthography2ipa/lm.hpp"
+#include "py_float.hpp"
 
 #include <cmath>
 
 namespace orthography2ipa::feats {
 namespace {
 
-/// Python's sum() of floats (bltinmodule.c builtin_sum_impl), which since
-/// Python 3.12 adds with Neumaier compensation. A plain running total differs
-/// from it in the last bit for many of the distance sums below.
-class PythonFloatSum {
-public:
-    void add(double x) {
-        const double t = sum_ + x;
-        compensation_ += std::fabs(sum_) >= std::fabs(x) ? (sum_ - t) + x : (x - t) + sum_;
-        sum_ = t;
-    }
-    double value() const {
-        return compensation_ != 0.0 && std::isfinite(compensation_) ? sum_ + compensation_ : sum_;
-    }
-
-private:
-    double sum_ = 0.0;
-    double compensation_ = 0.0;
-};
+using detail::PythonFloatSum;
 
 /// feats.py:452-453 — `sum(feature_weights[i] for i in <the index set>)`, in
 /// ascending index order; the sums are memoised like the module-level
