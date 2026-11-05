@@ -247,6 +247,7 @@ struct StressRulesModel {
     std::optional<std::vector<std::string>> penult_stress_endings;
     std::optional<std::vector<std::string>> antepenult_stress_endings;
     std::optional<std::vector<std::string>> unstressed_prefixes;
+    std::optional<std::vector<std::string>> schwa_rimes;
     std::optional<std::vector<std::string>> marked_vowels;
     std::string stress_mark = "\xCB\x88";               // U+02C8 ˈ
     std::string accent2_mark;

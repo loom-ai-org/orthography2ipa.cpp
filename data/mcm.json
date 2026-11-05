@@ -315,6 +315,12 @@
       "phonemes": [],
       "surface": "e",
       "notes": "DISABLED for the mcm creole. No source for the stressed vowel of a word-final ⟨-er⟩ in this language was read, so its output stays what it was; the pt-PT list rests on Infopédia entries for standard European Portuguese."
+    },
+    {
+      "id": "PT_LEX_CLITIC_O",
+      "phonemes": [],
+      "surface": "u",
+      "notes": "DISABLED for Kristang (Papia Kristang, Malacca Creole Portuguese). PT_LEX_CLITIC_O gives the pt-PT article ⟨o os⟩ the [u] that an unstressed ⟨o⟩ reduces to in pt-PT. This spec keeps an unstressed ⟨o⟩ as [o] (bonito keeps its pretonic [o]), and ⟨o os⟩ need not be the pt-PT article in this language. So the rule does not apply, and o and os keep the reading of this spec."
     }
   ],
   "ancestors": [

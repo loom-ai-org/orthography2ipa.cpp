@@ -1914,7 +1914,8 @@ bool tone_rules_model(Report& report, const Json& json, ToneRulesModel& out) {
 // ═══════════════════════════════════════════════════════════════════════════
 
 /// @field_validator("final_stress_endings", "penult_stress_endings",
-///                  "antepenult_stress_endings", "unstressed_prefixes", "marked_vowels", "cliticless_words")
+///                  "antepenult_stress_endings", "unstressed_prefixes", "schwa_rimes",
+///                  "marked_vowels", "cliticless_words")
 bool stress_entries(Report& report, Binding& b, const std::string& name,
                     std::optional<std::vector<std::string>>& out) {
     return b.field(name, kOptional, [&](const Json& v) {
@@ -1998,6 +1999,7 @@ bool stress_rules_model(Report& report, const Json& json, StressRulesModel& out)
     ok = stress_entries(report, b, "penult_stress_endings", out.penult_stress_endings) && ok;
     ok = stress_entries(report, b, "antepenult_stress_endings", out.antepenult_stress_endings) && ok;
     ok = stress_entries(report, b, "unstressed_prefixes", out.unstressed_prefixes) && ok;
+    ok = stress_entries(report, b, "schwa_rimes", out.schwa_rimes) && ok;
     ok = stress_entries(report, b, "marked_vowels", out.marked_vowels) && ok;
     ok = b.str("stress_mark", out.stress_mark, kDefaulted) && ok;
     ok = b.str("accent2_mark", out.accent2_mark, kDefaulted) && ok;
@@ -2534,6 +2536,7 @@ void dump(Writer& w, const StressRulesModel& m) {
         member(out, first, "penult_stress_endings", m.penult_stress_endings);
         member(out, first, "antepenult_stress_endings", m.antepenult_stress_endings);
         member(out, first, "unstressed_prefixes", m.unstressed_prefixes);
+        member(out, first, "schwa_rimes", m.schwa_rimes);
         member(out, first, "marked_vowels", m.marked_vowels);
         member(out, first, "stress_mark", m.stress_mark);
         member(out, first, "accent2_mark", m.accent2_mark);

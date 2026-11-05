@@ -111,6 +111,9 @@ struct LanguageSpec {
     std::vector<std::string> antepenult_stress_endings, diphthongs;
     // Word-initial prefixes that never take the default stress.
     std::vector<std::string> unstressed_prefixes;
+    // Spelt rimes of a word-final schwa syllable: the rest of a word after an
+    // unstressed prefix that is one such syllable leaves the word unprefixed.
+    std::vector<std::string> schwa_rimes;
     // IPA vowel sequences that form one nucleus where the stress mark is
     // placed; unset, the transcription is split with `diphthongs`.
     std::optional<std::vector<std::string>> ipa_diphthongs;
