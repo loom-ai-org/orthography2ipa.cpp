@@ -479,6 +479,14 @@ int main() {
         register_rescorer_plugin("test-unchanged-undeclared", std::make_shared<Unchanged>());
         assert(G2P("pt-PT", {{"rescore", {"test-unchanged-undeclared"}}}).transcribe_word("casa") == "\xcb\x88kQz\xc9\x90");
 
+        // word_candidates runs the engine's whole chain, the caller's rescorer
+        // included: g2p.py `rescorer=self._rescorers or None`.
+        const Undeclared user_rescorer;
+        const G2P user("pt-PT", {}, "", false, true, true, true, nullptr, &user_rescorer);
+        assert((user.word_candidates("casa") == std::vector<std::string>{
+            "\xcb\x88kQz\xc9\x90", "\xcb\x88kQs\xc9\x90", "\xcb\x88kQzQ",
+            "\xcb\x88k\xc9\x90z\xc9\x90", "\xcb\x88sQz\xc9\x90"}));
+
         static int calls = 0;
         struct NoPaths : RescorerPlugin {
             std::vector<std::string> language_codes() const override { return {"qaa-x-foreign"}; }

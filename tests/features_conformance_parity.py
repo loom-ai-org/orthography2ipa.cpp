@@ -253,6 +253,7 @@ def run_features(binary):
             print(f"  ... {index} words", flush=True)
     cases += synthetic_cases()
 
+    SCRATCH.mkdir(exist_ok=True)
     fixture = SCRATCH / "_features_fixture.json"
     fixture.write_text(json.dumps({"cases": cases}, ensure_ascii=False), encoding="utf-8")
     proc = subprocess.run([str(binary), "features", str(fixture)],
@@ -407,26 +408,6 @@ class FirstSlotMark(LatticeRescorer):
         return slot.candidates
 
 
-class WordCounting(LatticeRescorer):
-    """Answers differently for the same word depending on how many words it has
-    already seen: the same input, read at a different point in a batch, gives a
-    different transcription."""
-    def __init__(self):
-        self.words_seen = 0
-        self.at_word_start = False
-    def rescore(self, slot, context):
-        if context.index == 0:
-            if not self.at_word_start:
-                self.words_seen += 1
-            self.at_word_start = True
-        else:
-            self.at_word_start = False
-        if (slot.candidates and slot.candidates[0].ipa == "a"
-                and self.words_seen % 2 == 0):
-            return (Candidate(ipa="ɐ", cost=0.0),)
-        return slot.candidates
-
-
 class PerEngine(LatticeRescorer):
     """Answers differently for the same word depending on WHICH engine built
     it — the shape of the state a plugin naturally carries, because
@@ -476,6 +457,20 @@ class RewritesCandidates(LatticeRescorer):
 class KeepsSlots(LatticeRescorer):
     def rescore(self, slot, context):
         return slot.candidates
+
+
+class StressedToQ(LatticeRescorer):
+    def rescore(self, slot, context):
+        return (Candidate(ipa="Q", cost=0.0),) if context.is_stressed else slot.candidates
+
+
+class RescorersByLang(RescorerPlugin):
+    """Contributes Q for pt-PT and nothing for any other code."""
+    def rescorers(self, lang):
+        return [Invents()] if lang == "pt-PT" else []
+    @property
+    def language_codes(self):
+        return ["pt-PT"]
 
 
 class EmptiesEverySlot(LatticeRescorer):
@@ -537,6 +532,12 @@ def reference_scenarios():
              lambda: FirstSlotMark(), ("fr-FR",)), FR, "fr-FR")),
         ("lattice:answers depend on the run",
          lambda: assert_rescorer_conforms(LatticePlugin(PerEngine), THREE, "pt-PT")),
+        ("lattice:Q on the stressed syllable",
+         lambda: assert_rescorer_conforms(LatticePlugin(StressedToQ, ("ar",)), ["صفر"], "ar")),
+        ("lattice:keeps every slot",
+         lambda: assert_rescorer_conforms(LatticePlugin(KeepsSlots), ["ontem"], "pt-PT")),
+        ("plugin:rescorers depend on the code",
+         lambda: assert_rescorer_conforms(RescorersByLang(), ["casa"], "pt-PT")),
         ("lattice:empties every slot",
          lambda: assert_rescorer_conforms(LatticePlugin(EmptiesEverySlot), ["casa"], "pt-PT")),
         ("rescorer:claims nothing, no lang",
@@ -557,7 +558,8 @@ def reference_scenarios():
     return out
 
 
-# The whole-word seam has no reference row, and the kit is the only gate on it.
+# The whole-word seam has no reference row, and a bare rescorer object has no
+# per-engine state to compare. The kit is the only gate on both.
 CPP_ONLY_SCENARIOS = {
     "path:a to æ (undeclared)": ("refused", "inventory"),
     "path:a to ɐ (declared)": ("conforms", ""),
@@ -566,6 +568,7 @@ CPP_ONLY_SCENARIOS = {
     "path:empties every path": ("conforms", ""),
     "path:flips on every call": ("refused", "determinism"),
     "path:a to Q in the plugin's lattice rescorer": ("refused", "inventory"),
+    "lattice:changes after the first word": ("refused", "determinism"),
 }
 
 
@@ -648,8 +651,10 @@ PATH_CASES = {"path:keeps": "keeps", "path:a to Q": "a to Q",
 
 def comparable(case, surface, result):
     """G2P.ipa_lattice memoises per engine and the C++ engine does not, so a
-    lattice rescorer gets one more call on a repeated word. Only a rescorer that
-    breaks its determinism rule can tell, and this one can from the third word."""
+    lattice rescorer gets one more pass on a repeated word. Any rescorer that
+    keeps state can tell, and the kit does not refuse every such rescorer: this
+    one reads differently from the third word, and its verdict depends on the
+    probe words."""
     if case == "flips on every call" and surface == "three_calls" and "value" in result:
         return {"value": result["value"][:2]}
     return result

@@ -275,24 +275,37 @@ public:
     }
 };
 
-/// Answers differently for the same word depending on how many words it has
-/// already seen — a transcription that varies run to run.
-class WordCounting : public orthography2ipa::rescorer::LatticeRescorer {
+/// PerEngine: answers differently for the same word depending on WHICH engine
+/// built it, the shape of the state a plugin naturally carries.
+class PerEngine : public orthography2ipa::rescorer::LatticeRescorer {
 public:
-    mutable std::size_t words_seen = 0;
-    mutable bool at_word_start = false;
-
-    std::vector<Candidate> rescore(const SegmentSlot& slot, const RescoreContext& context) const override {
-        if (context.index == 0) {
-            if (!at_word_start) ++words_seen;
-            at_word_start = true;
-        } else {
-            at_word_start = false;
-        }
-        if (!slot.candidates.empty() && slot.candidates[0].ipa == "a" && words_seen % 2 == 0)
+    explicit PerEngine(bool even) : even_(even) {}
+    std::vector<Candidate> rescore(const SegmentSlot& slot, const RescoreContext&) const override {
+        if (!slot.candidates.empty() && slot.candidates[0].ipa == "a" && even_)
             return {Candidate{"ɐ", 0.0}};
         return slot.candidates;
     }
+private:
+    bool even_;
+};
+
+/// An engine calls lattice_rescorers once at construction, so each engine gets
+/// its own PerEngine, as `rescorers(lang)` builds one in the reference.
+class PerEnginePlugin : public orthography2ipa::RescorerPlugin {
+public:
+    std::vector<std::string> language_codes() const override { return {"pt-PT"}; }
+    std::vector<orthography2ipa::IPAPath> rescore(
+        const std::string&, const std::string&,
+        const std::vector<orthography2ipa::IPAPath>& paths) const override {
+        return paths;
+    }
+    std::vector<const orthography2ipa::rescorer::LatticeRescorer*> lattice_rescorers(
+        const std::string&) const override {
+        built_.push_back(std::make_unique<PerEngine>((built_.size() + 1) % 2 == 0));
+        return {built_.back().get()};
+    }
+private:
+    mutable std::vector<std::unique_ptr<PerEngine>> built_;
 };
 
 /// The whole-word RescorerPlugin counterparts (the C++ engine's own seam).
@@ -427,6 +440,50 @@ private:
     std::shared_ptr<orthography2ipa::rescorer::LatticeRescorer> rescorer_;
 };
 
+/// Emits Q on the stressed syllable. The context exists only on the engine's
+/// beam, so a check that reads a bare tokenizer beam never sees the symbol.
+class StressedToQ : public orthography2ipa::rescorer::LatticeRescorer {
+public:
+    std::vector<Candidate> rescore(const SegmentSlot& slot, const RescoreContext& context) const override {
+        const auto stressed = context.is_stressed();
+        if (stressed && *stressed) return {Candidate{"Q", 0.0}};
+        return slot.candidates;
+    }
+};
+
+/// One rescorer object answers one way on the first word and another way after
+/// it, so the two kit runs read different answers.
+class ChangesAfterFirstWord : public orthography2ipa::rescorer::LatticeRescorer {
+public:
+    std::vector<Candidate> rescore(const SegmentSlot& slot, const RescoreContext& context) const override {
+        if (context.index == 0) ++word_starts_;
+        if (word_starts_ > 2 && !slot.candidates.empty() && slot.candidates[0].ipa == "a")
+            return {Candidate{"ɐ", 0.0}};
+        return slot.candidates;
+    }
+private:
+    mutable std::size_t word_starts_ = 0;
+};
+
+/// Contributes Q for pt-PT and nothing for any other code, so the verdict turns
+/// on the code the engine hands to lattice_rescorers.
+class RescorersByLang : public orthography2ipa::RescorerPlugin {
+public:
+    std::vector<std::string> language_codes() const override { return {"pt-PT"}; }
+    std::vector<orthography2ipa::IPAPath> rescore(
+        const std::string&, const std::string&,
+        const std::vector<orthography2ipa::IPAPath>& paths) const override {
+        return paths;
+    }
+    std::vector<const orthography2ipa::rescorer::LatticeRescorer*> lattice_rescorers(
+        const std::string& lang) const override {
+        if (lang == "pt-PT") return {&invents_};
+        return {};
+    }
+private:
+    Invents invents_;
+};
+
 class EmptiesPaths : public orthography2ipa::RescorerPlugin {
 public:
     explicit EmptiesPaths(std::vector<std::string> codes) : codes_(std::move(codes)) {}
@@ -510,7 +567,11 @@ int conformance_mode() {
     const BacksA backs_a;
     const Invents invents;
     const InsertsSecondary inserts_secondary;
-    const std::shared_ptr<WordCounting> word_counting = std::make_shared<WordCounting>();
+    const PerEnginePlugin per_engine;
+    const KeepsSlots keeps_slots;
+    const StressedToQ stressed_to_q;
+    const ChangesAfterFirstWord changes_after_first_word;
+    const RescorersByLang rescorers_by_lang;
     const std::shared_ptr<PathRewriter> path_a_to_ae =
         std::make_shared<PathRewriter>(std::vector<std::string>{"pt-PT"}, "a", "æ");
     const std::shared_ptr<PathRewriter> path_a_to_ash =
@@ -572,7 +633,23 @@ int conformance_mode() {
             std::vector<std::string>{"terre", "femme", "verre"});
     });
     run({"lattice:answers depend on the run", "lattice", "pt-PT", three}, [&]{
-        orthography2ipa::conformance::assert_rescorer_conforms(*word_counting, "pt-PT", three);
+        orthography2ipa::conformance::assert_rescorer_conforms(per_engine, three, "pt-PT");
+    });
+    run({"lattice:Q on the stressed syllable", "lattice", "ar",
+         std::vector<std::string>{"صفر"}}, [&]{
+        orthography2ipa::conformance::assert_rescorer_conforms(stressed_to_q, "ar",
+            std::vector<std::string>{"صفر"});
+    });
+    run({"lattice:keeps every slot", "lattice", "pt-PT",
+         std::vector<std::string>{"ontem"}}, [&]{
+        orthography2ipa::conformance::assert_rescorer_conforms(keeps_slots, "pt-PT",
+            std::vector<std::string>{"ontem"});
+    });
+    run({"lattice:changes after the first word", "lattice", "pt-PT", casa}, [&]{
+        orthography2ipa::conformance::assert_rescorer_conforms(changes_after_first_word, "pt-PT", casa);
+    });
+    run({"plugin:rescorers depend on the code", "path", "pt-PT", casa}, [&]{
+        orthography2ipa::conformance::assert_rescorer_conforms(rescorers_by_lang, casa, "pt-PT");
     });
     run({"lattice:empties every slot", "lattice", "pt-PT", casa}, [&]{
         orthography2ipa::conformance::assert_rescorer_conforms(empties_every_slot, "pt-PT", casa);
