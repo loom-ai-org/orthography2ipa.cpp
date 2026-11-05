@@ -101,11 +101,15 @@ PINNED["nl-SR"] = ["kunst"]
 # ⟨ew⟩ before a vowel (prevocalic_glide_backoff), long [ʏː] and doubled [ɔɔ].
 PINNED["pt-PT"] += ["distraiu", "saiu", "instruiu", "pauis", "viu", "baiuca",
                     "feiura", "tuiuiú", "maiúscula", "cheiinho", "abaiucado",
-                    "cãibra", "cãimbra", "põem"]
-PINNED["pt-BR"] += ["saiu", "pauis", "baiuca", "teiú", "cãimbra", "falar", "comer"]
+                    "cãibra", "cãimbra", "põem", "Piauí", "cauim", "cauila"]
+PINNED["pt-BR"] += ["saiu", "pauis", "baiuca", "teiú", "cãimbra", "falar", "comer",
+                    "Piauí", "cauim", "cauila"]
 # Specs that take the pt-PT and pt-BR stress block whole.
-PINNED["pt-AO"] = ["boa-nova", "distraiu", "baiuca"]
-PINNED["pt-BR-x-mg"] = ["em", "saiu", "feiura"]
+PINNED["pt-AO"] += ["distraiu", "baiuca"]
+PINNED["pt-BR-x-mg"] += ["saiu", "feiura"]
+PINNED["pt-PT-x-lisbon"] = ["Piauí", "atraiu", "baiuca", "cãi", "cãimbra"]
+PINNED["pt-BR-x-sp"] = ["Piauí", "atraiu", "baiuca", "cãi", "cãimbra", "falar"]
+PINNED["pt-UY"] = ["Piauí", "atraiu", "baiuca", "pauis", "cãimbra"]
 PINNED["li"] = ["geweun", "bewaar", "eweg", "kewa", "gebroek", "verstand",
                 "verlange", "gebeure", "geve", "beste", "Gennep", "deh", "nih",
                 "zàèle", "vàèl"]
@@ -117,6 +121,19 @@ PINNED["nl-BE"] += ["wang", "wit", "kwaad", "zwak"]
 PINNED["sv"] = ["blyerts", "cykel"]
 PINNED["nb"] = ["gynge"]
 PINNED["enm"] = ["toot", "poo"]
+# A coda nasal before a velar (ES_NASAL_VELAR), in es-ES, in the specs that
+# inherit it and in the specs that carry their own copy.
+PINNED["es-ES"] += ["banco", "cinco"]
+for code in ["es-MX", "es-VE", "es-CO-x-llanero", "es-ES-x-canarias",
+             "ast-x-cantabri", "ast-x-pasiego", "ext"]:
+    PINNED[code] = ["banco", "cinco"]
+# Galician falling diphthongs after a rising one (Paraguai, anunciou).
+PINNED["gl-ES"] = ["Paraguai", "anunciou"]
+PINNED["gl-ES-x-central"] = ["apaziguou"]
+PINNED["gl-ES-x-eonavia"] = ["Paraguai"]
+# Pontic Greek ⟨αυ ευ⟩ before a voiceless sound, the palatals before a front
+# vowel, ⟨νγκ⟩, word-initial ⟨μπ⟩ and the dotted ⟨τ̇⟩.
+PINNED["pnt"] = ["αυ", "Τουρκικὸν", "ένγκεν", "ΕΝΓΚΑ", "μπαλόν’", "τ\u0307σ"]
 
 # The code points of the viramas this catalog actually uses.
 VIRAMAS = {0x094D, 0x09CD, 0x0A4D, 0x0ACD, 0x0B4D, 0x0BCD, 0x0C4D, 0x0CCD,
