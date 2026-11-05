@@ -233,12 +233,20 @@ struct ClosedHiatusModel {
     std::vector<std::string> codas;
 };
 
+/// schema.py FinalDiphthongsModel — diphthongs that end a word after a vowel
+/// (``stress.final_diphthongs``).
+struct FinalDiphthongsModel {
+    std::vector<std::string> diphthongs;                // min_length=1
+    std::vector<std::string> finals;
+};
+
 /// schema.py StressRulesModel — declarative stress placement.
 struct StressRulesModel {
     long long default_position = -2;
     std::optional<std::vector<std::string>> final_stress_endings;
     std::optional<std::vector<std::string>> penult_stress_endings;
     std::optional<std::vector<std::string>> antepenult_stress_endings;
+    std::optional<std::vector<std::string>> unstressed_prefixes;
     std::optional<std::vector<std::string>> marked_vowels;
     std::string stress_mark = "\xCB\x88";               // U+02C8 ˈ
     std::string accent2_mark;
@@ -246,6 +254,8 @@ struct StressRulesModel {
     std::optional<std::vector<std::string>> diphthongs;
     std::optional<std::vector<std::string>> ipa_diphthongs;
     std::optional<ClosedHiatusModel> closed_hiatus;
+    std::optional<FinalDiphthongsModel> final_diphthongs;
+    std::optional<std::vector<std::string>> tonic_after_diphthong;
     std::optional<std::vector<std::string>> vowel_letters;
     bool quantity_sensitive = false;
     bool superheavy_final_attracts = true;
@@ -303,6 +313,7 @@ struct LanguageSpecModel {
     std::optional<std::vector<std::string>> dependent_vowels;
     std::optional<std::vector<std::string>> preposed_vowels;
     std::optional<std::vector<std::string>> trailing_vowel_axis_digraphs;
+    std::optional<std::vector<std::string>> prevocalic_glide_backoff;
     std::optional<bool> coda_no_inherent_vowel;
     std::optional<Dict<std::string>> consonant_nuclei;
     std::optional<std::string> inherent_vowel_final;

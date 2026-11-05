@@ -155,6 +155,21 @@
       "surface": "",
       "syllable_position": "coda",
       "notes": "Chocó Afro-Hispanic coda /s/ lenition (deletion tier of Lipski's 1994 cline; Schwegler): syllable-final /s/ is radically deleted (esas=[ˈesa], las mujeres=[la muˈheɾe])."
+    },
+    {
+      "id": "ES_NASAL_VELAR",
+      "phonemes": [
+        "n"
+      ],
+      "surface": "ŋ",
+      "followed_by_phoneme": [
+        "k",
+        "ɡ",
+        "ɣ",
+        "w"
+      ],
+      "syllable_position": "coda",
+      "notes": "Overrides the es-ES rule without /x/. Here /x/ is the glottal [h] (GLOTTAL_JOTA), not a velar consonant. Navarro Tomás (1918, § 133, pp. 111-112) gives [ŋ] before a velar consonant, and no source in this spec gives [ŋ] before [h]. ES_EXT_FINAL_N_VELAR also leaves a nasal unchanged before [h]. So a coda nasal is [ŋ] only before k ɡ ɣ w."
     }
   ],
   "sandhi_rules": [

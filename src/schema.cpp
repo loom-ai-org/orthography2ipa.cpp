@@ -1914,7 +1914,7 @@ bool tone_rules_model(Report& report, const Json& json, ToneRulesModel& out) {
 // ═══════════════════════════════════════════════════════════════════════════
 
 /// @field_validator("final_stress_endings", "penult_stress_endings",
-///                  "antepenult_stress_endings", "marked_vowels", "cliticless_words")
+///                  "antepenult_stress_endings", "unstressed_prefixes", "marked_vowels", "cliticless_words")
 bool stress_entries(Report& report, Binding& b, const std::string& name,
                     std::optional<std::vector<std::string>>& out) {
     return b.field(name, kOptional, [&](const Json& v) {
@@ -1955,6 +1955,27 @@ bool closed_hiatus_model(Report& report, const Json& json, ClosedHiatusModel& ou
     return ok && b.built();
 }
 
+bool final_diphthongs_model(Report& report, const Json& json, FinalDiphthongsModel& out) {
+    Binding b(report, json, "FinalDiphthongsModel");
+    if (!b.begin()) return false;
+    // diphthongs: List[str] = Field(min_length=1)
+    bool ok = b.field("diphthongs", kRequired, [&](const Json& v) {
+        std::vector<std::string> items;
+        if (!value_string_list(report, v, items)) return false;
+        if (items.empty()) {
+            report.add("too_short", "List should have at least 1 item after validation, not 0");
+            return false;
+        }
+        out.diphthongs = std::move(items);
+        return true;
+    });
+    ok = b.field("finals", kDefaulted, [&](const Json& v) {
+        return value_string_list(report, v, out.finals);
+    }) && ok;
+    b.extras();
+    return ok && b.built();
+}
+
 bool stress_rules_model(Report& report, const Json& json, StressRulesModel& out) {
     Binding b(report, json, "StressRulesModel");
     if (!b.begin()) return false;
@@ -1976,6 +1997,7 @@ bool stress_rules_model(Report& report, const Json& json, StressRulesModel& out)
     ok = stress_entries(report, b, "final_stress_endings", out.final_stress_endings) && ok;
     ok = stress_entries(report, b, "penult_stress_endings", out.penult_stress_endings) && ok;
     ok = stress_entries(report, b, "antepenult_stress_endings", out.antepenult_stress_endings) && ok;
+    ok = stress_entries(report, b, "unstressed_prefixes", out.unstressed_prefixes) && ok;
     ok = stress_entries(report, b, "marked_vowels", out.marked_vowels) && ok;
     ok = b.str("stress_mark", out.stress_mark, kDefaulted) && ok;
     ok = b.str("accent2_mark", out.accent2_mark, kDefaulted) && ok;
@@ -1986,6 +2008,11 @@ bool stress_rules_model(Report& report, const Json& json, StressRulesModel& out)
                     [](Report& r, const Json& v, ClosedHiatusModel& slot) {
                         return closed_hiatus_model(r, v, slot);
                     }) && ok;
+    ok = b.submodel("final_diphthongs", out.final_diphthongs,
+                    [](Report& r, const Json& v, FinalDiphthongsModel& slot) {
+                        return final_diphthongs_model(r, v, slot);
+                    }) && ok;
+    ok = b.strings("tonic_after_diphthong", out.tonic_after_diphthong, kOptional) && ok;
     ok = b.strings("vowel_letters", out.vowel_letters, kOptional) && ok;
     ok = b.boolean("quantity_sensitive", out.quantity_sensitive, kDefaulted) && ok;
     ok = b.boolean("superheavy_final_attracts", out.superheavy_final_attracts, kDefaulted) && ok;
@@ -2110,6 +2137,7 @@ bool language_spec_model(Report& report, const Json& json, LanguageSpecModel& ou
     ok = b.strings("dependent_vowels", out.dependent_vowels, kOptional) && ok;
     ok = b.strings("preposed_vowels", out.preposed_vowels, kOptional) && ok;
     ok = b.strings("trailing_vowel_axis_digraphs", out.trailing_vowel_axis_digraphs, kOptional) && ok;
+    ok = b.strings("prevocalic_glide_backoff", out.prevocalic_glide_backoff, kOptional) && ok;
     ok = b.opt_boolean("coda_no_inherent_vowel", out.coda_no_inherent_vowel) && ok;
     ok = b.opt_map("consonant_nuclei", out.consonant_nuclei,
                    [](Report& r, const Json& v, std::string& slot) { return value_str(r, v, slot); }) && ok;
@@ -2492,12 +2520,20 @@ void dump(Writer& w, const ClosedHiatusModel& m) {
     });
 }
 
+void dump(Writer& w, const FinalDiphthongsModel& m) {
+    model_object(w, [&](Writer& out, bool& first) {
+        member(out, first, "diphthongs", m.diphthongs);
+        member(out, first, "finals", m.finals);
+    });
+}
+
 void dump(Writer& w, const StressRulesModel& m) {
     model_object(w, [&](Writer& out, bool& first) {
         member(out, first, "default_position", m.default_position);
         member(out, first, "final_stress_endings", m.final_stress_endings);
         member(out, first, "penult_stress_endings", m.penult_stress_endings);
         member(out, first, "antepenult_stress_endings", m.antepenult_stress_endings);
+        member(out, first, "unstressed_prefixes", m.unstressed_prefixes);
         member(out, first, "marked_vowels", m.marked_vowels);
         member(out, first, "stress_mark", m.stress_mark);
         member(out, first, "accent2_mark", m.accent2_mark);
@@ -2505,6 +2541,8 @@ void dump(Writer& w, const StressRulesModel& m) {
         member(out, first, "diphthongs", m.diphthongs);
         member(out, first, "ipa_diphthongs", m.ipa_diphthongs);
         member(out, first, "closed_hiatus", m.closed_hiatus);
+        member(out, first, "final_diphthongs", m.final_diphthongs);
+        member(out, first, "tonic_after_diphthong", m.tonic_after_diphthong);
         member(out, first, "vowel_letters", m.vowel_letters);
         member(out, first, "quantity_sensitive", m.quantity_sensitive);
         member(out, first, "superheavy_final_attracts", m.superheavy_final_attracts);
@@ -2716,6 +2754,7 @@ std::string dump_json(const LanguageSpecModel& model) {
     m("dependent_vowels", model.dependent_vowels);
     m("preposed_vowels", model.preposed_vowels);
     m("trailing_vowel_axis_digraphs", model.trailing_vowel_axis_digraphs);
+    m("prevocalic_glide_backoff", model.prevocalic_glide_backoff);
     m("coda_no_inherent_vowel", model.coda_no_inherent_vowel);
     m("consonant_nuclei", model.consonant_nuclei);
     m("inherent_vowel_final", model.inherent_vowel_final);

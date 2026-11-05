@@ -40,7 +40,7 @@ const std::u32string GLIDES_WITH_VOWEL_BASE = to_utf32("йў");
 // ── IPA vowels (vocoids) ──
 const std::u32string IPA_VOWELS = to_utf32(
     "aeiou"
-    "ɛɔəɨʉɯæɐʌɒœøɪʊɤɵɞɑ"
+    "ɛɔəɨʉɯæɐʌɒœøɪʏʊɤɵɞɑ"
     "ɘɚɜɝɶy"
     "ãẽĩõũ"
     "̯̃");

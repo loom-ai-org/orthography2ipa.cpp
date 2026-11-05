@@ -420,6 +420,7 @@ def sentence_cases():
         ("ru", "он не пришёл"), ("ru", "он же не знал"),
         ("pt-PT", "as aves"), ("pt-PT", "os dois"), ("pt-PT", "estás a ver"),
         ("pt-PT", "os irmãos"), ("pt-PT", "não me digas"), ("pt-PT", "ele deu-me o livro"),
+        ("pt-PT", "os jogos"), ("pt-PT", "três jovens"),
         ("ca", "els nens i les nenes"), ("ca", "la porta és"), ("ca", "el'"),
         ("it-IT", "l'amico"), ("it-IT", "un'amica"),
         ("ar", "في البيت"), ("ar", "مِنَ الكتابِ"), ("ar-LB", "بُكْرَا الْيَوم"),

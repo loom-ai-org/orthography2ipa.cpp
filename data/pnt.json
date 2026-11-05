@@ -192,6 +192,54 @@
     "τζ": [
       "dz"
     ],
+    "νγκ": [
+      "ŋɡ"
+    ],
+    "ντζ": [
+      "ndz"
+    ],
+    "α̈υ": [
+      "æv"
+    ],
+    "α̈": [
+      "æ"
+    ],
+    "ο̈": [
+      "ø"
+    ],
+    "ω̈": [
+      "ø"
+    ],
+    "τ̇σ̇": [
+      "dʒ"
+    ],
+    "τσ̇": [
+      "tʃ"
+    ],
+    "κ̇": [
+      "ɡ"
+    ],
+    "τ̇": [
+      "d"
+    ],
+    "δ̇": [
+      "d"
+    ],
+    "π̇": [
+      "b"
+    ],
+    "β̇": [
+      "b"
+    ],
+    "σ̇": [
+      "ʃ"
+    ],
+    "χ̇": [
+      "ʃ"
+    ],
+    "ψ̇": [
+      "pʃ"
+    ],
     "α": [
       "a"
     ],
@@ -279,8 +327,206 @@
       "default": [
         "ŋɡ"
       ]
+    },
+    "μπ": {
+      "word_initial": [
+        "b"
+      ],
+      "default": [
+        "mb"
+      ]
+    },
+    "ντ": {
+      "word_initial": [
+        "d"
+      ],
+      "default": [
+        "nd"
+      ]
     }
   },
+  "allophone_rules": [
+    {
+      "id": "PNT_K_PALATAL",
+      "phonemes": [
+        "k"
+      ],
+      "surface": "c",
+      "grapheme": [
+        "κ",
+        "γ",
+        "χ",
+        "γκ",
+        "γγ",
+        "νγκ"
+      ],
+      "followed_by_phoneme": [
+        "e",
+        "i"
+      ],
+      "notes": "Armostis et al. (2020: 335): 'the dorsal plosives /k g/ and fricatives /x ɣ/ have two allophones in complementary distribution: the velar [k g x ɣ] and the palatal [c ɟ ç ʝ]. The palatals appear before front vowels /i e/, while velars appear everywhere else, e.g. [ˈlikon] λύκον 'wolf.NOM' vs. [ˈlice] λύκε 'wolf.VOC'.' The front vowel is the phoneme, so ⟨αι⟩ [e] and ⟨οι⟩ [i] count: και is [ce] in the narrow transcription (p. 339). The rule is limited to the plain letters: Oeconomides (1908: 2) writes a velar κ̇ with a dot and a palatal one with a second mark."
+    },
+    {
+      "id": "PNT_G_PALATAL",
+      "phonemes": [
+        "ɡ"
+      ],
+      "surface": "ɟ",
+      "grapheme": [
+        "κ",
+        "γ",
+        "χ",
+        "γκ",
+        "γγ",
+        "νγκ"
+      ],
+      "followed_by_phoneme": [
+        "e",
+        "i"
+      ],
+      "notes": "/ɡ/ is [ɟ] before /i e/ (Armostis et al. 2020: 335), as stated in PNT_K_PALATAL. This covers word-initial ⟨γκ⟩ [ɡ]."
+    },
+    {
+      "id": "PNT_NG_PALATAL",
+      "phonemes": [
+        "ŋɡ"
+      ],
+      "surface": "ɲɟ",
+      "grapheme": [
+        "κ",
+        "γ",
+        "χ",
+        "γκ",
+        "γγ",
+        "νγκ"
+      ],
+      "followed_by_phoneme": [
+        "e",
+        "i"
+      ],
+      "notes": "The nasal and the stop of ⟨γκ γγ νγκ⟩ are palatal before /i e/: 'the nasal /n/ assimilates to their place of articulation ... e.g. [ˈeŋga] ένγκα 'I brought', but [ˈeɲɟen] ένγκεν 's/he brought'' (Armostis et al. 2020: 335). See PNT_K_PALATAL."
+    },
+    {
+      "id": "PNT_X_PALATAL",
+      "phonemes": [
+        "x"
+      ],
+      "surface": "ç",
+      "grapheme": [
+        "κ",
+        "γ",
+        "χ",
+        "γκ",
+        "γγ",
+        "νγκ"
+      ],
+      "followed_by_phoneme": [
+        "e",
+        "i"
+      ],
+      "notes": "Before a front vowel 'the voiceless dorsal fricative /x/ is realised either as a palatal [ç] or a palatoalveolar [ʃ], a variation which is lexically determined, e.g. [ˈçile] χείλε 'lips', but [eʃ] εσ̆' 's/he has'' (Armostis et al. 2020: 335). The rule gives [ç]; the source writes [ʃ] with the breve letter σ̆. See PNT_K_PALATAL."
+    },
+    {
+      "id": "PNT_GAMMA_PALATAL",
+      "phonemes": [
+        "ɣ"
+      ],
+      "surface": "ʝ",
+      "grapheme": [
+        "κ",
+        "γ",
+        "χ",
+        "γκ",
+        "γγ",
+        "νγκ"
+      ],
+      "followed_by_phoneme": [
+        "e",
+        "i"
+      ],
+      "notes": "/ɣ/ is [ʝ] before /i e/ (Armostis et al. 2020: 335), as stated in PNT_K_PALATAL. The inherited EL_GAMMA_FRONTING reads the next letter; this rule reads the next phoneme, so it also covers ⟨γαι γοι⟩."
+    },
+    {
+      "id": "PNT_AU_VOICELESS",
+      "phonemes": [
+        "av"
+      ],
+      "surface": "af",
+      "followed_by": "consonant",
+      "followed_by_grapheme_not": [
+        "β",
+        "γ",
+        "δ",
+        "ζ",
+        "λ",
+        "μ",
+        "ν",
+        "ρ",
+        "γκ",
+        "γγ",
+        "νγκ",
+        "μπ",
+        "ντ",
+        "ντζ",
+        "β̇",
+        "δ̇",
+        "κ̇",
+        "τ̇",
+        "π̇",
+        "τ̇σ̇"
+      ],
+      "notes": "Oeconomides (1908: 25, § 13): 'Vor den Vocalen und den weichen Consonanten β, γ, δ, ζ, λ, μ, ν, ρ wird das υ des Diphthonges αυ wie β (= w), sonst wie φ (= f) gesprochen. Dasselbe gilt auch für ευ.' The vowel table (p. 2) gives 'αυ = aw, af' and 'ευ = ew, ef'. The letter groups that begin with one of these letters (γκ γγ νγκ μπ ντ ντζ, and β̇ δ̇) count as that letter. Oeconomides' dotted letters for a soft consonant (κ̇ 'velar. = g', p. 2; τ̇ 'd', π̇ 'b' and τ̇σ̇ 'dsch', p. 3) are soft consonants too, so ⟨αυ ευ⟩ keeps [v] before them."
+    },
+    {
+      "id": "PNT_AU_FINAL",
+      "phonemes": [
+        "av"
+      ],
+      "surface": "af",
+      "word_final": true,
+      "notes": "The 'sonst' of Oeconomides (1908: 25, § 13) includes the end of a word. See PNT_AU_VOICELESS."
+    },
+    {
+      "id": "PNT_EU_VOICELESS",
+      "phonemes": [
+        "ev"
+      ],
+      "surface": "ef",
+      "followed_by": "consonant",
+      "followed_by_grapheme_not": [
+        "β",
+        "γ",
+        "δ",
+        "ζ",
+        "λ",
+        "μ",
+        "ν",
+        "ρ",
+        "γκ",
+        "γγ",
+        "νγκ",
+        "μπ",
+        "ντ",
+        "ντζ",
+        "β̇",
+        "δ̇",
+        "κ̇",
+        "τ̇",
+        "π̇",
+        "τ̇σ̇"
+      ],
+      "notes": "Oeconomides (1908: 25, § 13): 'Dasselbe gilt auch für ευ.' See PNT_AU_VOICELESS."
+    },
+    {
+      "id": "PNT_EU_FINAL",
+      "phonemes": [
+        "ev"
+      ],
+      "surface": "ef",
+      "word_final": true,
+      "notes": "The 'sonst' of Oeconomides (1908: 25, § 13) includes the end of a word. See PNT_AU_VOICELESS."
+    }
+  ],
   "stress": {
     "constrain_mark_onsets": false,
     "default_position": -2,
@@ -319,7 +565,7 @@
     }
   ],
   "parent": "el",
-  "notes": "Pontic Greek (Ποντιακά), archaic Greek dialect originally spoken along the Black Sea (Pontic) coast of Anatolia. Now spoken mainly in Greece. Retains many features of Ancient and Medieval Greek lost in standard Modern Greek. Uses standard Greek orthography. /i/ represented by η, ι, υ, ει, οι. An accented vowel (ά έ ή ί ό ύ ώ, and αί εί οί ού αύ εύ) has the value of the plain vowel, because the tonos marks only the stressed syllable; ϊ ϋ ΐ ΰ write a vowel that is not part of a digraph. A doubled consonant letter reads as one consonant (collapse_geminates): Oeconomides (1908: 175, on p. 9) states that forms such as ἄλλο, ἄλλος, 'die mit Doppelkonsonant geschrieben sind, sind trotzdem so auszusprechen, als ob sie mit einfachem Konsonant geschrieben wären', and Armostis et al. (2020) transcribe κάλλα as [ˈkala] (p. 337) and πολλά as [poˈla] (pp. 338-339). ⟨γκ⟩ is [ɡ] at the start of a word, as in γκαρίζ’ [ɡaˈɾiz] (Armostis et al. 2020: 331, 334), and [ŋɡ] inside a word, as in ενεγκάστεν [eneˈŋɡasten] and αναγκάστεν [anaˈŋɡasten] (narrow transcription, p. 339; the broad transcription on p. 338 has /nɡ/, and p. 335 states that /n/ takes the place of a following /k ɡ x/). Oeconomides (1908: 2-3) writes a different system, in which κ̇ with a dot is [ɡ] and plain γκ is [ŋk], as in ἀνάγκα 'Not' (p. 9). This map reads the spelling of Armostis et al., which has no dotted κ, so plain ⟨γκ⟩ is [ŋɡ]. Polytonic spelling: Oeconomides (1908) writes Pontic forms with breathings and with the acute, grave and circumflex accents. The breathings write no sound and fold away (fold_diacritics): Pontic forms that look as if they lost a rough breathing are 'in späterer Zeit gebildet, als man den Spiritus asper nicht mehr sprach' (p. 34), and the smooth breathing follows the etymology: 'Gewöhnlich schreibt man ἔτσι mit Spiritus lenis, weil man es auf ἔτι oder ἔστι zurückführt' (p. 84). The digraph ⟨υι⟩ (υί υῖ υὶ, and υἱ with the breathing) is [i]: 'η, ει, οι, υι wie i' (p. 2, note). The grave and circumflex vowels (ᾶ ῆ ῖ ῦ ῶ ὰ ὲ ὴ ὶ ὸ ὺ ὼ, and the digraphs αῖ εῖ οῖ οῦ αῦ εῦ αὶ εὶ οὶ οὺ αὺ εὺ) have the value of the plain vowel: the vowel table gives one value for each vowel letter (p. 2), and the accent marks the stressed syllable (p. 125). The iota subscript (ᾳ ῃ ῳ) and the dialytika with an accent other than the acute (ῒ ῢ ῗ ῧ) have no key: no opened source shows them in Pontic.",
+  "notes": "Pontic Greek (Ποντιακά), archaic Greek dialect originally spoken along the Black Sea (Pontic) coast of Anatolia. Now spoken mainly in Greece. Retains many features of Ancient and Medieval Greek lost in standard Modern Greek. Uses standard Greek orthography. /i/ represented by η, ι, υ, ει, οι. An accented vowel (ά έ ή ί ό ύ ώ, and αί εί οί ού αύ εύ) has the value of the plain vowel, because the tonos marks only the stressed syllable; ϊ ϋ ΐ ΰ write a vowel that is not part of a digraph. A doubled consonant letter reads as one consonant (collapse_geminates): Oeconomides (1908: 175, on p. 9) states that forms such as ἄλλο, ἄλλος, 'die mit Doppelkonsonant geschrieben sind, sind trotzdem so auszusprechen, als ob sie mit einfachem Konsonant geschrieben wären', and Armostis et al. (2020) transcribe κάλλα as [ˈkala] (p. 337) and πολλά as [poˈla] (pp. 338-339). ⟨γκ⟩ is [ɡ] at the start of a word, as in γκαρίζ’ [ɡaˈɾiz] (Armostis et al. 2020: 331, 334), and [ŋɡ] inside a word, as in ενεγκάστεν [eneˈŋɡasten] and αναγκάστεν [anaˈŋɡasten] (narrow transcription, p. 339; the broad transcription on p. 338 has /nɡ/, and p. 335 states that /n/ takes the place of a following /k ɡ x/). Oeconomides (1908: 2-3) writes a different system, in which κ̇ with a dot is [ɡ] and plain γκ is [ŋk], as in ἀνάγκα 'Not' (p. 9). This map reads the spelling of Armostis et al., which has no dotted κ, so plain ⟨γκ⟩ is [ŋɡ]. Polytonic spelling: Oeconomides (1908) writes Pontic forms with breathings and with the acute, grave and circumflex accents. The breathings write no sound and fold away (fold_diacritics): Pontic forms that look as if they lost a rough breathing are 'in späterer Zeit gebildet, als man den Spiritus asper nicht mehr sprach' (p. 34), and the smooth breathing follows the etymology: 'Gewöhnlich schreibt man ἔτσι mit Spiritus lenis, weil man es auf ἔτι oder ἔστι zurückführt' (p. 84). The digraph ⟨υι⟩ (υί υῖ υὶ, and υἱ with the breathing) is [i]: 'η, ει, οι, υι wie i' (p. 2, note). The grave and circumflex vowels (ᾶ ῆ ῖ ῦ ῶ ὰ ὲ ὴ ὶ ὸ ὺ ὼ, and the digraphs αῖ εῖ οῖ οῦ αῦ εῦ αὶ εὶ οὶ οὺ αὺ εὺ) have the value of the plain vowel: the vowel table gives one value for each vowel letter (p. 2), and the accent marks the stressed syllable (p. 125). The iota subscript (ᾳ ῃ ῳ) and the dialytika with an accent other than the acute (ῒ ῢ ῗ ῧ) have no key: no opened source shows them in Pontic. ⟨μπ⟩ and ⟨ντ⟩ are [b] and [d] at the start of a word and [mb] and [nd] inside it: μπαλόν’ [baˈlon] and ντολμάδε [dolˈmaðe] (Armostis et al. 2020: 331), and ντο [do] 'what', 'a word-initial voiced [d] with substantial prevoicing' (p. 332), against ζαντόν [zanˈdon] (p. 331) and τσάντα [ˈtʃʰan̪d̪a] (p. 334). ⟨ντζ⟩ keeps the nasal at the start of a word: ντζίτζιφα [ˈnd͡zid͡zifa] has 'a fully-fledged word-initial nasal of around 140 ms' (p. 332). ⟨νγκ⟩ is one nasal and the stop: ένγκα [ˈeŋga] (p. 335) and ενενγκάστα [eneˈŋgasta] (p. 334). The dorsals are palatal before /i e/ (the PNT_*_PALATAL allophone rules, p. 335), and ⟨αυ ευ⟩ are [af ef] before a consonant other than β γ δ ζ λ μ ν ρ and at the end of a word (the PNT_AU_* and PNT_EU_* rules, Oeconomides 1908: 25, § 13). Oeconomides' own letters (pp. 2-3): α̈ is [æ] ('α̈ = deutsches ä'), ο̈ and ω̈ are [ø] ('deutsches ö'), and α̈υ is [æv] ('α̈υ = äw', p. 2; § 14, p. 25). The letters with a dot above are κ̇ [ɡ] ('κ̇ velar. = g', p. 2), τ̇ and δ̇ [d], π̇ and β̇ [b], σ̇ and χ̇ [ʃ] ('sch'), ψ̇ [pʃ], τσ̇ [tʃ] and τ̇σ̇ [dʒ] (p. 3). The dot is U+0307 COMBINING DOT ABOVE. Armostis et al. (2020: 336-337) report that their speaker has none of the vowels [æ ø y]: an expected [ø] is [o], and an expected [æ] is mainly [a], or [e] in ντολμάδä [dolˈmaðæ], said [dolˈmaðe]. This map reads Oeconomides' letters with his values. These letters have no key: ϋ, which Oeconomides gives as [y] ('ϋ = ü', p. 2) but which the monotonic spelling uses as the dialytika on [i]; and the other marked letters of p. 3 (with an acute, an arc or a mark below, and the Latin k letters for [tʃ] and [dʒ]), whose marks the scan does not settle to a code point.",
   "sources": [
     {
       "id": "wiki-pnt",
@@ -336,8 +582,8 @@
       "publisher": "Journal of the International Phonetic Association 52(2), 328-340 (free access)",
       "url": "https://doi.org/10.1017/S0025100320000201",
       "wikipedia_url": null,
-      "pages": "330-331, 334-335, 337-339",
-      "notes": "Consonant table with Greek-spelled example words (pp. 330-331) and the note on the writing system (p. 338), read in full. Twenty-three consonants including the postalveolars ʃ tʃ dʒ and the affricates ts dz; five vowels a e i o u. The source states that Pontic Greek has no codified writing system and that its own orthographic version follows Papadopoulos 1955 with a diacritic over consonant letters for the postalveolars and the rough breathing for aspirates. That is the gap this map carries: it reads standard Greek letters only, so ʃ tʃ dʒ and the aspirates have no key, and the Pontic-specific letters some writers use (⟨σ̆ τσ̆ ντζ̆⟩, ⟨ä ö⟩ for the front rounded vowels of other Pontic varieties) are unread. Recorded here, not changed. The stress section (p. 337) and the broad transcription (p. 338) with the orthographic version (p. 339) of 'The North Wind and the Sun' were read for the stress block. The palatal-consonant section (p. 335), the tap/trill section (p. 334) and the narrow transcription (p. 339) were read for ⟨γκ⟩; the stress section (p. 337) and the transcriptions (pp. 338-339) give the single consonant for ⟨λλ⟩."
+      "pages": "330-339",
+      "notes": "Consonant table with Greek-spelled example words (pp. 330-331) and the note on the writing system (p. 338), read in full. Twenty-three consonants including the postalveolars ʃ tʃ dʒ and the affricates ts dz; five vowels a e i o u. The source states that Pontic Greek has no codified writing system and that its own orthographic version follows Papadopoulos 1955 with a diacritic over consonant letters for the postalveolars and the rough breathing for aspirates. That is the gap this map carries: it reads standard Greek letters only, so ʃ tʃ dʒ and the aspirates have no key, and the breve letters ⟨σ̆ τσ̆ ντζ̆⟩ for the postalveolars are unread. The plosive section (p. 332) and the consonant table (p. 331) were read for word-initial ⟨μπ ντ⟩, the nasal section (p. 334) and the palatal-consonant section (p. 335) for ⟨νγκ⟩ and the palatal dorsals, and the vowel section (pp. 336-337) for the vowels [æ ø y]. The stress section (p. 337) and the broad transcription (p. 338) with the orthographic version (p. 339) of 'The North Wind and the Sun' were read for the stress block. The palatal-consonant section (p. 335), the tap/trill section (p. 334) and the narrow transcription (p. 339) were read for ⟨γκ⟩; the stress section (p. 337) and the transcriptions (pp. 338-339) give the single consonant for ⟨λλ⟩."
     },
     {
       "id": "petrounias1999",
@@ -358,8 +604,8 @@
       "publisher": "Leipzig: A. Deichert'sche Verlagsbuchhandlung Nachf.",
       "url": "https://archive.org/details/lautlehredespont00oikouoft",
       "wikipedia_url": null,
-      "pages": "2-3, 9, 34, 84, 125, 175",
-      "notes": "Cited by Armostis et al. (2020) for the Pontic vowel system. The book writes Pontic in polytonic spelling with its own dotted letters. Read for the vowel, digraph and consonant tables (pp. 2-3), the doubled consonant letters (p. 9 and the addendum on p. 175), the breathings (pp. 34, 84) and the accent (p. 125)."
+      "pages": "2-3, 9, 25, 34, 84, 125, 175",
+      "notes": "Cited by Armostis et al. (2020) for the Pontic vowel system. The book writes Pontic in polytonic spelling with its own dotted letters. Read for the vowel, digraph and consonant tables (pp. 2-3), the diphthongs αυ ευ α̈υ (p. 25, §§ 13-14), the doubled consonant letters (p. 9 and the addendum on p. 175), the breathings (pp. 34, 84) and the accent (p. 125)."
     }
   ],
   "wikipedia": [

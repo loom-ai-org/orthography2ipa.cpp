@@ -1040,6 +1040,40 @@ std::optional<int> glide_anchored_index(const std::vector<std::string>* syllable
     return shifted;
 }
 
+// stress.py _glide_to_diphthong: *ipa_sylls* with the glide of a written
+// diphthong moved back into the syllable before the stress, under
+// stress.tonic_after_diphthong (Portuguese baiuca bai-u-ca, [bajˈukɐ]).
+std::vector<std::string> glide_to_diphthong(const std::vector<std::string>& syllables,
+                                            const std::vector<std::string>& ipa_sylls,
+                                            int stress_index, const LanguageSpec& spec) {
+    const auto& letters = spec.tonic_after_diphthong;
+    if (letters.empty() || ipa_sylls.size() != syllables.size()) return ipa_sylls;
+    const int n = static_cast<int>(syllables.size());
+    const int i = stress_index >= 0 ? stress_index : n + stress_index;
+    if (i < 1 || i >= n) return ipa_sylls;
+    const std::u32string stressed = uni::lower(uni::nfc(to_utf32(syllables[static_cast<std::size_t>(i)])));
+    const std::u32string before = uni::lower(uni::nfc(to_utf32(syllables[static_cast<std::size_t>(i - 1)])));
+    if (stressed.empty() ||
+            std::find(letters.begin(), letters.end(), cp_str(stressed[0])) == letters.end())
+        return ipa_sylls;
+    const bool after_diphthong =
+        std::any_of(spec.diphthongs.begin(), spec.diphthongs.end(), [&](const std::string& d) {
+            const std::u32string lowered = uni::lower(to_utf32(d));
+            return to_utf32(d).size() > 1 && before.size() >= lowered.size() &&
+                   before.compare(before.size() - lowered.size(), lowered.size(), lowered) == 0;
+        });
+    if (!after_diphthong) return ipa_sylls;
+    const std::u32string head = to_utf32(ipa_sylls[static_cast<std::size_t>(i)]);
+    const std::u32string prev = to_utf32(ipa_sylls[static_cast<std::size_t>(i - 1)]);
+    if (head.size() < 2 || (head[0] != U'j' && head[0] != U'w') ||
+            !is_vowel_char(cp_str(head[1])) || prev.empty() || !is_vowel_char(cp_str(prev.back())))
+        return ipa_sylls;
+    std::vector<std::string> out = ipa_sylls;
+    out[static_cast<std::size_t>(i - 1)] = to_utf8(prev + head[0]);
+    out[static_cast<std::size_t>(i)] = to_utf8(head.substr(1));
+    return out;
+}
+
 } // namespace
 
 std::string apply_stress_mark(const std::string& ipa, const LanguageSpec& spec,
@@ -1058,6 +1092,8 @@ std::string apply_stress_mark(const std::string& ipa, const LanguageSpec& spec,
                                              ? *ipa_syllables
                                              : syllabify_for_mark(ipa, spec);
     if (ipa_sylls.empty()) return ipa;
+    if (syllables != nullptr)
+        ipa_sylls = glide_to_diphthong(*syllables, ipa_sylls, stress_index, spec);
     const long long n_written = syllables != nullptr ? static_cast<long long>(syllables->size()) : 0;
     const auto aligned =
         syllables != nullptr && ipa_sylls.size() < syllables->size() &&
@@ -1427,8 +1463,37 @@ int detect_stress(const std::string& word, const LanguageSpec& spec,
 
     // 5. default position, clamped into the word.
     const int pos = spec.default_stress_position;
-    if (pos >= 1) return std::min(pos - 1, static_cast<int>(n) - 1);
-    return std::max(0, static_cast<int>(n) + pos);
+    const int count = static_cast<int>(n);
+    const int index = pos >= 1 ? std::min(pos - 1, count - 1) : std::max(0, count + pos);
+
+    // 6. a default that lands inside an unstressed prefix moves to the first
+    // syllable after it, but never onto a final open syllable.
+    std::vector<std::u32string> prefixes;
+    for (const auto& p : spec.unstressed_prefixes) prefixes.push_back(to_utf32(p));
+    std::stable_sort(prefixes.begin(), prefixes.end(),
+                     [](const std::u32string& a, const std::u32string& b) {
+                         return a.size() > b.size();
+                     });
+    for (const auto& prefix : prefixes) {
+        if (lowered.size() < prefix.size() || lowered.compare(0, prefix.size(), prefix) != 0)
+            continue;
+        int inside = 0;
+        std::size_t end = 0;
+        for (const auto& syll : sylls) {
+            end += to_utf32(syll).size();
+            if (end > prefix.size()) break;
+            ++inside;
+        }
+        std::u32string final_letters;
+        for (const char32_t cp : to_utf32(sylls.back()))
+            if (uni::is_alpha(cp)) final_letters.push_back(cp);
+        const bool final_open =
+            !final_letters.empty() && vowels::is_orthographic_vowel(final_letters.back());
+        if (index < inside && inside < count && !(inside == count - 1 && final_open))
+            return inside;
+        break;
+    }
+    return index;
 }
 
 
@@ -1527,11 +1592,40 @@ std::vector<std::size_t> closed_hiatus_candidates(const std::string& word,
     return found;
 }
 
+// stress.py _final_diphthong_candidates: indices of the letters of *word*
+// that stress.final_diphthongs splits from the vowel before them, before the
+// stress is known.
+std::vector<std::size_t> final_diphthong_candidates(const std::string& word,
+                                                    const LanguageSpec& spec) {
+    const FinalDiphthongs& rule = *spec.final_diphthongs;
+    const std::u32string lowered = uni::lower(to_utf32(word));
+    std::vector<std::u32string> finals{U""};
+    for (const auto& f : rule.finals) finals.push_back(to_utf32(f));
+    std::vector<std::size_t> found;
+    for (const auto& d : rule.diphthongs) {
+        const std::u32string diphthong = to_utf32(d);
+        for (const auto& final : finals) {
+            const std::u32string tail = diphthong + final;
+            if (lowered.size() < tail.size() + 1) continue;
+            const std::size_t k = lowered.size() - tail.size();
+            if (lowered.compare(k, tail.size(), tail) == 0 &&
+                    vowels::is_orthographic_vowel(lowered[k - 1]))
+                found.push_back(k);
+        }
+    }
+    return found;
+}
+
 } // namespace
 
-std::set<std::size_t> closed_hiatus_positions(const std::string& word, const LanguageSpec& spec) {
-    if (!spec.stress_defined || !spec.closed_hiatus) return {};
-    const auto found = closed_hiatus_candidates(word, spec);
+std::set<std::size_t> hiatus_positions(const std::string& word, const LanguageSpec& spec) {
+    if (!spec.stress_defined) return {};
+    std::vector<std::size_t> found;
+    if (spec.closed_hiatus) found = closed_hiatus_candidates(word, spec);
+    if (spec.final_diphthongs) {
+        const auto finals = final_diphthong_candidates(word, spec);
+        found.insert(found.end(), finals.begin(), finals.end());
+    }
     if (found.empty()) return {};
     const std::set<std::size_t> all(found.begin(), found.end());
     const auto sylls = bundled_syllables(word, &spec, spec.diphthongs, all);
@@ -1566,7 +1660,7 @@ std::vector<std::string> syllables_for(const std::string& word, const std::strin
     const LanguageSpec* used_spec = spec;
     if (used_spec == nullptr && !lang.empty()) used_spec = spec_for(lang);
     const std::set<std::size_t> hiatus =
-        used_spec != nullptr ? closed_hiatus_positions(word, *used_spec) : std::set<std::size_t>{};
+        used_spec != nullptr ? hiatus_positions(word, *used_spec) : std::set<std::size_t>{};
     return bundled_syllables(word, used_spec, diphthongs, hiatus);
 }
 

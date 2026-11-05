@@ -89,6 +89,34 @@ MULTI = ["fr-FR", "sv", "fo", "en-GB", "pt-PT", "ru", "it-IT", "de-DE", "is", "e
 # Aliases: a surface reports the code that the alias resolves to.
 PINNED["gl"] = ["casa"]
 PINNED["ro"] = ["casă"]
+PINNED["nl"] = ["kunst"]
+PINNED["nld"] = ["lezen"]
+# A region with no spec of its own resolves through the renamed nl key.
+PINNED["nl-SR"] = ["kunst"]
+
+# Spelling rules the word_exceptions do not reach: a final ⟨iu ui⟩ after a
+# vowel (stress.final_diphthongs), a stressed vowel after a diphthong
+# (stress.tonic_after_diphthong), the nasal diphthong ⟨ãi⟩ before a coda
+# nasal, the Limburgish unstressed prefixes (stress.unstressed_prefixes) and
+# ⟨ew⟩ before a vowel (prevocalic_glide_backoff), long [ʏː] and doubled [ɔɔ].
+PINNED["pt-PT"] += ["distraiu", "saiu", "instruiu", "pauis", "viu", "baiuca",
+                    "feiura", "tuiuiú", "maiúscula", "cheiinho", "abaiucado",
+                    "cãibra", "cãimbra", "põem"]
+PINNED["pt-BR"] += ["saiu", "pauis", "baiuca", "teiú", "cãimbra", "falar", "comer"]
+# Specs that take the pt-PT and pt-BR stress block whole.
+PINNED["pt-AO"] = ["boa-nova", "distraiu", "baiuca"]
+PINNED["pt-BR-x-mg"] = ["em", "saiu", "feiura"]
+PINNED["li"] = ["geweun", "bewaar", "eweg", "kewa", "gebroek", "verstand",
+                "verlange", "gebeure", "geve", "beste", "Gennep", "deh", "nih",
+                "zàèle", "vàèl"]
+PINNED["li-x-rheindok"] = ["gebroek", "ve\u0329rstand", "Gele\u0329"]
+PINNED["nl-NL-x-limburg"] = ["huis", "zeggen", "geweest"]
+PINNED["nl-NL-x-polder"] = ["tijd", "twijfelen", "vrijheid", "huis"]
+PINNED["nl-NL-x-groninge"] = ["vier", "fier", "goed", "lachen"]
+PINNED["nl-BE"] += ["wang", "wit", "kwaad", "zwak"]
+PINNED["sv"] = ["blyerts", "cykel"]
+PINNED["nb"] = ["gynge"]
+PINNED["enm"] = ["toot", "poo"]
 
 # The code points of the viramas this catalog actually uses.
 VIRAMAS = {0x094D, 0x09CD, 0x0A4D, 0x0ACD, 0x0B4D, 0x0BCD, 0x0C4D, 0x0CCD,

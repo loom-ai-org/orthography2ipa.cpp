@@ -53,7 +53,7 @@ bool is_cliticless(const std::string& word, const LanguageSpec& spec);
 // *semivowels* gives the semivowel_role of ⟨y⟩ and ⟨w⟩. *onset_graphemes*
 // are the consonant graphemes that end in a vowel letter (Spanish ⟨qu gu⟩),
 // kept in the onset before a vowel. *hiatus* holds the code-point indices
-// of letters that open a nucleus of their own (closed_hiatus_positions);
+// of letters that open a nucleus of their own (hiatus_positions);
 // both are read with *diphthongs* only.
 std::vector<std::string> syllabify(
     const std::string& word,
@@ -66,12 +66,13 @@ std::vector<std::string> syllabify(
     const std::set<std::string>& onset_graphemes = {},
     const std::set<std::size_t>& hiatus = {});
 
-// stress.py closed_hiatus_positions: the code-point indices of the letters
-// of *word* that open a stressed nucleus of their own under the spec's
-// stress.closed_hiatus (Portuguese ⟨rainha⟩ ra-i-nha). A candidate is kept
-// only when it starts the syllable the stress rules stress.
-std::set<std::size_t> closed_hiatus_positions(const std::string& word,
-                                              const LanguageSpec& spec);
+// stress.py hiatus_positions: the code-point indices of the letters of
+// *word* that open a stressed nucleus of their own under the spec's
+// stress.closed_hiatus (Portuguese ⟨rainha⟩ ra-i-nha) and
+// stress.final_diphthongs (⟨saiu⟩ sa-iu). A candidate is kept only when it
+// starts the syllable the stress rules stress.
+std::set<std::size_t> hiatus_positions(const std::string& word,
+                                       const LanguageSpec& spec);
 
 // stress.py syllabify_for_mark: divide a transcription into syllables for
 // stress marking — maximal onset, constrained by what the language licenses.

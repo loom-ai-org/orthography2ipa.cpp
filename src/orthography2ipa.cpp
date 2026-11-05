@@ -376,6 +376,8 @@ void inherit_stress(LanguageSpec& s, const LanguageSpec& b) {
     s.marked_vowels = b.marked_vowels; s.final_stress_endings = b.final_stress_endings;
     s.penult_stress_endings = b.penult_stress_endings; s.antepenult_stress_endings = b.antepenult_stress_endings;
     s.diphthongs = b.diphthongs; s.ipa_diphthongs = b.ipa_diphthongs; s.closed_hiatus = b.closed_hiatus;
+    s.unstressed_prefixes = b.unstressed_prefixes; s.final_diphthongs = b.final_diphthongs;
+    s.tonic_after_diphthong = b.tonic_after_diphthong;
     s.vowel_letters = b.vowel_letters;
     s.onset_clusters = b.onset_clusters; s.quantity_sensitive = b.quantity_sensitive;
     s.superheavy_final_attracts = b.superheavy_final_attracts; s.max_onset = b.max_onset;
@@ -427,6 +429,7 @@ LanguageSpec load_raw(const std::string& code, std::set<std::string>& loading) {
     s.fold_diacritics = optional_list(raw, "fold_diacritics"); s.vowel_graphemes = optional_list(raw, "vowel_graphemes");
     s.dependent_vowels = optional_list(raw, "dependent_vowels"); s.preposed_vowels = optional_list(raw, "preposed_vowels");
     s.trailing_vowel_axis_digraphs = optional_list(raw, "trailing_vowel_axis_digraphs");
+    s.prevocalic_glide_backoff = optional_list(raw, "prevocalic_glide_backoff");
     s.parent = raw.get<std::string>("parent", "");
     if (auto ancestors = raw.get_child_optional("ancestors")) for (const auto& item : *ancestors) {
         const auto& a = item.second; s.ancestors.push_back({a.get<std::string>("code", ""), a.get<std::string>("role", "parent"), a.get<std::string>("notes", ""), a.get<double>("weight", 1.0)});
@@ -463,12 +466,17 @@ LanguageSpec load_raw(const std::string& code, std::set<std::string>& loading) {
         s.final_stress_endings = optional_strings(*stress, "final_stress_endings");
         s.penult_stress_endings = optional_strings(*stress, "penult_stress_endings");
         s.antepenult_stress_endings = optional_strings(*stress, "antepenult_stress_endings");
+        s.unstressed_prefixes = optional_strings(*stress, "unstressed_prefixes");
         s.diphthongs = optional_strings(*stress, "diphthongs");
         if (auto ipa = stress->get_child_optional("ipa_diphthongs")) s.ipa_diphthongs = strings(*ipa);
         if (auto hiatus = stress->get_child_optional("closed_hiatus"); hiatus && !hiatus->empty())
             s.closed_hiatus = ClosedHiatus{optional_strings(*hiatus, "pairs"),
                                            optional_strings(*hiatus, "onsets"),
                                            optional_strings(*hiatus, "codas")};
+        if (auto final = stress->get_child_optional("final_diphthongs"); final && !final->empty())
+            s.final_diphthongs = FinalDiphthongs{optional_strings(*final, "diphthongs"),
+                                                 optional_strings(*final, "finals")};
+        s.tonic_after_diphthong = optional_strings(*stress, "tonic_after_diphthong");
         s.vowel_letters = optional_strings(*stress, "vowel_letters");
         s.onset_clusters = optional_strings(*stress, "onset_clusters");
         s.quantity_sensitive = stress->get<bool>("quantity_sensitive", false);
@@ -1318,7 +1326,7 @@ std::vector<std::size_t> map_tokens_to_syllables(const std::vector<Token>& token
 // is a long vowel and is left alone, and a length or stress mark riding
 // between two identical consonants does not block the merge.
 std::string collapse_geminates(const std::string& ipa) {
-    static const std::u32string VOWEL_IPA = to_utf32("aeiouɑɐɒæɓəɘɛɜɞɤɪɨɯɵøœʊʉʌʏyɶ");
+    static const std::u32string VOWEL_IPA = to_utf32("aeiouɑɐɒæɔəɘɛɜɞɤɪɨɯɵøœʊʉʌʏyɶ");
     std::u32string out;
     for (char32_t ch : to_utf32(ipa)) {
         if (!out.empty() && ch == out.back() && VOWEL_IPA.find(ch) == std::u32string::npos &&
