@@ -23,6 +23,9 @@ extern const std::string SYLLABIC_MARKS;
 bool is_orthographic_vowel(char32_t ch);
 bool is_orthographic_vowel(const std::u32string& ch);
 bool is_ipa_vowel(char32_t ch);
+// vowels.py IPA_VOWEL_SYMBOLS membership: an IPA vowel symbol that is not a
+// combining mark, compared as is, with no lowercasing and no decomposition.
+bool is_ipa_vowel_symbol(char32_t ch);
 bool is_front_vowel(const std::u32string& ch);
 bool is_back_vowel(const std::u32string& ch);
 bool is_nucleus_only(const std::u32string& ipa);

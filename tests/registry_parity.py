@@ -17,8 +17,10 @@ harness therefore does not sample — it compares
     with no lect score and with each lect mode;
   * linguatag `lang_distance` over every edge of the lect tree, in both
     directions and in each lect mode;
+  * private-use tags with a script subtag: the language's Suppress-Script,
+    which registry.py drops before the match, and scripts it keeps;
   * `resolves_exactly` and `_resolve_code(allow_nearest=False)` over the
-    resolve and lect tree batteries, the case forms of every catalog code
+    resolve, lect tree and Suppress-Script batteries, the case forms of every catalog code
     and alias, and tags that only the nearest-language match resolves.
 
 Usage: registry_parity.py <path-to-cli> [--pairs N]
@@ -134,6 +136,39 @@ def lect_tree_battery():
     return sorted(tags)
 
 
+def suppress_script_battery():
+    """Private-use tags that carry a script subtag.
+
+    registry.py drops a script that is the language's IANA Suppress-Script
+    (langcodes DEFAULT_SCRIPTS) before it matches a private-use tag, so
+    `pt-Latn-BR-x-sp` names `pt-BR-x-sp`, while `pt-Cyrl-BR-x-sp` names no
+    spec. Each private-use code and alias key comes with its Suppress-Script,
+    with other scripts and in other cases, and languages with no
+    Suppress-Script (sr, zh) or a non-Latin one (ru) come with and without a
+    private-use part.
+    """
+    from langcodes.data_dicts import DEFAULT_SCRIPTS
+    tags = set()
+    for code in [*available_json_codes(), *registry._ALIASES]:
+        if "-x-" not in code.lower():
+            continue
+        language, rest = code.split("-", 1)
+        for script in {DEFAULT_SCRIPTS.get(language.lower(), "Latn"), "Latn", "Cyrl", "Arab"}:
+            tag = f"{language}-{script}-{rest}"
+            tags |= {tag, tag.upper(), tag.lower()}
+    for head in ("pt-Latn", "pt-Latn-BR", "pt-Latn-PT", "es-Latn-ES", "en-Latn-GB",
+                 "ru-Cyrl", "ru-Cyrl-RU", "ru-Latn", "sr-Latn", "sr-Latn-RS", "sr-Cyrl",
+                 "sr-Cyrl-RS", "zh-Hans", "zh-Hans-CN", "zh-Hant-TW", "cmn-Hans-CN",
+                 "yi-Hebr", "ar-Arab-SA", "pt-Latn-Latn-BR", "pt-BR-Latn",
+                 "pt-Latn-BR-u-ca-gregory", "pt-Latn-BR-oxendict", "por-Latn-BR", "pt-Qaaa-BR",
+                 "i-klingon", "Latn", ""):
+        for private in ("", "-x-sp", "-x-zz", "-x-lisbon", "-x-thisislongerthan8", "-x-sp-x-zz"):
+            tags.add(head + private)
+    tags |= {"x-sp", "pt-Latn-BR-x-", "pt-Latn-BR-x", "pt-Latn-br_x_sp"}
+    tags.discard("")
+    return sorted(tags)
+
+
 def mutate(tag, rng, extra):
     forms = [tag.upper(), tag.lower(), tag.replace("-", "_")]
     if "-" in tag:
@@ -151,7 +186,7 @@ def mutate(tag, rng, extra):
 
 def check_resolves_exactly():
     """resolves_exactly and _resolve_code(allow_nearest=False) vs `resolve --strict`."""
-    tags = set(resolve_battery()) | set(lect_tree_battery())
+    tags = set(resolve_battery()) | set(lect_tree_battery()) | set(suppress_script_battery())
     for code in [*available_json_codes(), *registry._ALIASES]:
         tags |= {code.upper(), code.lower(), code.swapcase()}
     for tag in [*registry._ALIASES, *registry._REGION_DEFAULTS, *OVERRIDES]:
@@ -216,7 +251,9 @@ def main():
         extra = [extra[int(i * step)] for i in range(MUTATION_CAP)]
     tree = lect_tree_battery()
     print(f"lect tree battery: {len(tree)} tags")
-    every = sorted(set(battery) | set(extra) | set(tree))
+    suppress = suppress_script_battery()
+    print(f"suppress-script battery: {len(suppress)} tags")
+    every = sorted(set(battery) | set(extra) | set(tree) | set(suppress))
     print(f"resolve battery: {len(every)} tags")
 
     failures = []

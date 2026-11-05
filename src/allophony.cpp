@@ -112,11 +112,14 @@ bool neighbor_is(const std::string& cls, const GraphemeContext* gctx, int step) 
 // syllable nucleus. The base letter is read from the DECOMPOSED form,
 // because a segment can arrive precomposed: a tone language writes its
 // vowels with the accent baked in, so í is the single codepoint U+00ED
-// and its first character is not the vowel letter i at all.
+// and its first character is not the vowel letter i at all. The base must
+// be a vowel symbol, not a combining mark: pt-BR writes the coda nasal of
+// ⟨em⟩ as a bare tilde on the ⟨m⟩ slot, and a slot of marks alone is no
+// syllable.
 bool is_nucleus_segment(const std::string& seg) {
     const std::u32string base = uni::nfd(to_utf32(seg));
     if (base.empty()) return false;
-    if (vowels::is_ipa_vowel(base[0])) return true;
+    if (vowels::is_ipa_vowel_symbol(base[0])) return true;
     for (const char32_t m : to_utf32(vowels::SYLLABIC_MARKS))
         if (seg.find(to_utf8(std::u32string(1, m))) != std::string::npos) return true;
     return false;
@@ -133,11 +136,8 @@ bool has_other_nucleus(const RescoreContext& ctx) {
         if (slot.candidates.empty()) continue;
         const std::string& ipa = slot.top().ipa;
         if (ipa.empty()) continue;
-        for (const auto& seg : segment_ipa(ipa)) {
-            if (vowels::is_ipa_vowel(head_char(seg))) return true;
-            for (const char32_t m : to_utf32(vowels::SYLLABIC_MARKS))
-                if (seg.find(to_utf8(std::u32string(1, m))) != std::string::npos) return true;
-        }
+        for (const auto& seg : segment_ipa(ipa))
+            if (is_nucleus_segment(seg)) return true;
     }
     return false;
 }

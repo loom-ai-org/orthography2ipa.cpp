@@ -28,131 +28,8 @@
       "default": [
         "v"
       ]
-    },
-    "g": {
-      "word_final": [
-        "χ"
-      ],
-      "default": [
-        "χ"
-      ]
-    },
-    "berg": {
-      "word_final": [
-        "bɛrχ"
-      ],
-      "default": [
-        "bɛrχ"
-      ]
     }
   },
-  "allophone_rules": [
-    {
-      "id": "NL_CODA_DEVOICE_G",
-      "phonemes": [
-        "ɣ"
-      ],
-      "surface": "x",
-      "syllable_position": "coda",
-      "followed_by_phoneme": [
-        "t",
-        "k",
-        "s",
-        "f",
-        "p",
-        "x",
-        "χ"
-      ],
-      "grapheme": [
-        "g"
-      ],
-      "notes": "Regressive devoicing assimilation (Booij 1995, ch. 2 sec. 2.5): Dutch obstruents in coda devoice not only word-finally but also before a following voiceless obstruent within the word, e.g. zeg-t [zɛxt], lieg-t [liːxt], hoog-te [ɦoːxtə]. The existing word_final positional override for ⟨g⟩ handles the absolute-final case; this rule extends the same devoicing to pre-obstruent coda position without touching ⟨g⟩ before a sonorant/vowel (dag-je stays [ɣ]: j is not an obstruent). nl-NL-x-groninge adds [χ], its value of ⟨g⟩, to followed_by_phoneme, so the devoicing also applies before the uvular."
-    },
-    {
-      "id": "NL_CODA_DEVOICE_B",
-      "phonemes": [
-        "b"
-      ],
-      "surface": "p",
-      "syllable_position": "coda",
-      "followed_by_phoneme": [
-        "t",
-        "k",
-        "s",
-        "f",
-        "p",
-        "x",
-        "χ"
-      ],
-      "grapheme": [
-        "b"
-      ],
-      "notes": "Regressive devoicing assimilation (Booij 1995, ch. 2 sec. 2.5): a Dutch obstruent in coda devoices before a following voiceless obstruent, not only word-finally -- raad-sel [raːtsəl], web-site, lief-st, rei-zt. The rule is stated for the whole obstruent series; ⟨g⟩ already had it (NL_CODA_DEVOICE_G) and the remaining voiced obstruents ⟨b d v z⟩ follow the same generalisation. nl-NL-x-groninge adds [χ], its value of ⟨g⟩, to followed_by_phoneme, so the devoicing also applies before the uvular."
-    },
-    {
-      "id": "NL_CODA_DEVOICE_D",
-      "phonemes": [
-        "d"
-      ],
-      "surface": "t",
-      "syllable_position": "coda",
-      "followed_by_phoneme": [
-        "t",
-        "k",
-        "s",
-        "f",
-        "p",
-        "x",
-        "χ"
-      ],
-      "grapheme": [
-        "d"
-      ],
-      "notes": "Regressive devoicing assimilation (Booij 1995, ch. 2 sec. 2.5): a Dutch obstruent in coda devoices before a following voiceless obstruent, not only word-finally -- raad-sel [raːtsəl], web-site, lief-st, rei-zt. The rule is stated for the whole obstruent series; ⟨g⟩ already had it (NL_CODA_DEVOICE_G) and the remaining voiced obstruents ⟨b d v z⟩ follow the same generalisation. nl-NL-x-groninge adds [χ], its value of ⟨g⟩, to followed_by_phoneme, so the devoicing also applies before the uvular."
-    },
-    {
-      "id": "NL_CODA_DEVOICE_V",
-      "phonemes": [
-        "v"
-      ],
-      "surface": "f",
-      "syllable_position": "coda",
-      "followed_by_phoneme": [
-        "t",
-        "k",
-        "s",
-        "f",
-        "p",
-        "x",
-        "χ"
-      ],
-      "grapheme": [
-        "v"
-      ],
-      "notes": "Regressive devoicing assimilation (Booij 1995, ch. 2 sec. 2.5): a Dutch obstruent in coda devoices before a following voiceless obstruent, not only word-finally -- raad-sel [raːtsəl], web-site, lief-st, rei-zt. The rule is stated for the whole obstruent series; ⟨g⟩ already had it (NL_CODA_DEVOICE_G) and the remaining voiced obstruents ⟨b d v z⟩ follow the same generalisation. nl-NL-x-groninge adds [χ], its value of ⟨g⟩, to followed_by_phoneme, so the devoicing also applies before the uvular."
-    },
-    {
-      "id": "NL_CODA_DEVOICE_Z",
-      "phonemes": [
-        "z"
-      ],
-      "surface": "s",
-      "syllable_position": "coda",
-      "followed_by_phoneme": [
-        "t",
-        "k",
-        "s",
-        "f",
-        "p",
-        "x",
-        "χ"
-      ],
-      "grapheme": [
-        "z"
-      ],
-      "notes": "Regressive devoicing assimilation (Booij 1995, ch. 2 sec. 2.5): a Dutch obstruent in coda devoices before a following voiceless obstruent, not only word-finally -- raad-sel [raːtsəl], web-site, lief-st, rei-zt. The rule is stated for the whole obstruent series; ⟨g⟩ already had it (NL_CODA_DEVOICE_G) and the remaining voiced obstruents ⟨b d v z⟩ follow the same generalisation. nl-NL-x-groninge adds [χ], its value of ⟨g⟩, to followed_by_phoneme, so the devoicing also applies before the uvular."
-    }
-  ],
   "quality": "skeleton",
   "iso639_3": "nld",
   "glottolog_code": null,
@@ -162,7 +39,7 @@
     "source": "wikidata",
     "notes": "the province of Groningen in the Netherlands, a region-level point. The teacher-corpus towns are Assen (Drenthe), Veendam and Winschoten. [Wikidata Q752 P625]"
   },
-  "notes": "Regionally coloured Standard Dutch of Groningen and north Drenthe: the standard language as spoken by educated speakers from the region, not the Low Saxon dialects of Groningen. Gronings is a separate variety with its own ISO 639-3 code (gos) and its own spec. The data are the teacher corpus of Van Hout et al. (1999), region N-N, with the towns Assen, Veendam and Winschoten (van der Harst 2011, p. 55). van der Harst (2011, p. 54) defines N-N as 'the Groningen province and the north of the Drenthe province', and p. 53 states the reason for the speakers: 'Teachers of Dutch were selected, since they are professional language users who are assumed to speak the standard language on a daily basis'. Van de Velde (2016, p. 10): 'We kozen voor docenten, want als er één groep mensen is van wie je kunt verwachten dat ze de standaardtaal spreken, dan is die het wel.' The spec is a delta over nl-NL: it inherits every grapheme, positional entry, word exception, allophone rule and the stress block, and it states only the features below. MODELLED (1) WORD-INITIAL ⟨v⟩ AS VOICELESS [f]. Van de Velde (2016, p. 10): 'in het noorden van Nederland de v aan het begin van een woord in slechts 9% van de gevallen als een v wordt uitgesproken. Ze zeggen in het noorden dus meestal ‘fier’ als het cijfer vier is bedoeld.' The same page gives 41% voiced initial v in the Randstad, 53% in the middle and 65% in the south. The positional entry for ⟨v⟩ states [f] at the start and at the end of a word and [v] elsewhere. The source measures the word-initial position only, so a ⟨v⟩ inside a word keeps the nl-NL value (geven [ˈɣeːvən] in nl-NL). Taeldeman (2006, p. 184) reports the same devoicing in the dialects of the area: 'hier scoort Drente nagenoeg 100% f-'. (2) /ɣ/ AS THE VOICELESS UVULAR [χ]. van der Harst & Van de Velde (2007, p. 184): 'in de Randstad (N-R) en in het noorden (N-N) enkel uvulaire realisaties voorkomen'. Table 3 (p. 184) gives N-N 100.0% uvular, and Table 4 (p. 184) gives N-N 90.0% voiceless (-stem), 7.5% partly voiced and 2.5% voiced. p. 189: 'In de regio’s boven de rivieren (N-M, N-N en N-R) is de sterk geschraapte stemloze uvulair de norm'. p. 191: 'In Noord-Nederland en in de Randstad komen enkel uvulairen voor, in deze regio’s wordt ook het sterkst geschraapt'. The positional entry for ⟨g⟩ states [χ] in every position, and the nl-NL grapheme ⟨berg⟩, which spells the same ⟨g⟩ inside one key, is restated as [bɛrχ]. The copy keeps the [r] of the nl-NL entry, so a change to that entry in nl-NL must be copied here. The scraping is a voice quality that the IPA value does not show. The child states both values itself, so it keeps them whatever value nl-NL gives ⟨g⟩ and ⟨v⟩. NOT MODELLED: (a) ⟨ch⟩. The source measures /ɣ/ only, so ⟨ch⟩ takes the nl-NL value. (b) Initial ⟨z⟩. No opened source measures it in the regional standard of the north; Taeldeman (2006, p. 185) describes a mixed dialect picture, with Westerwolde 'enkel z-' and the Groningse Westerkwartier and parts of north Drenthe 'alleen s-vormen'. (c) Final ⟨-en⟩. Van de Velde & van Hout (2001, Table 3, p. 96) count 347 tokens with [n] against 130 without in N-N, the highest Netherlandic rate; nl-NL already gives [ən] (lopen [ˈloːpən]), so the child needs no delta. (d) The diphthongs. Voeten (2021, p. 166): 'in the Netherlands-North the vowel /œy/ diphthongizes significantly more than in the Randstad', and 'for the /εi/ vowel, the regions Netherlands-Middle and Netherlands-North have a significantly lower F1 than the Netherlands Randstad'. These are gradient differences with no change of category, so the spec takes the nl-NL vowel values. The inherited regressive devoicing rules NL_CODA_DEVOICE_B, _D, _G, _V and _Z list the voiceless triggers of nl-NL, which hold [x] but not [χ]. The spec restates the five rules by id with [χ] added, so a coda obstruent devoices before the new uvular as it does before [x] in nl-NL: zandgrond [ˈzɑntχrɔnt]. The copies keep every other field of the nl-NL rules, so a change to those rules in nl-NL must be copied here. (e) Low Saxon substrate features such as syllabic nasals. Van de Velde & van Hout (2001, p. 95) find syllabic realisations of final -n in less than 1% of all tokens of the corpus.",
+  "notes": "Regionally coloured Standard Dutch of Groningen and north Drenthe: the standard language as spoken by educated speakers from the region, not the Low Saxon dialects of Groningen. Gronings is a separate variety with its own ISO 639-3 code (gos) and its own spec. The data are the teacher corpus of Van Hout et al. (1999), region N-N, with the towns Assen, Veendam and Winschoten (van der Harst 2011, p. 55). van der Harst (2011, p. 54) defines N-N as 'the Groningen province and the north of the Drenthe province', and p. 53 states the reason for the speakers: 'Teachers of Dutch were selected, since they are professional language users who are assumed to speak the standard language on a daily basis'. Van de Velde (2016, p. 10): 'We kozen voor docenten, want als er één groep mensen is van wie je kunt verwachten dat ze de standaardtaal spreken, dan is die het wel.' The spec is a delta over nl-NL: it inherits every grapheme, positional entry, word exception, allophone rule and the stress block, and it states only the features below. MODELLED (1) WORD-INITIAL ⟨v⟩ AS VOICELESS [f]. Van de Velde (2016, p. 10): 'in het noorden van Nederland de v aan het begin van een woord in slechts 9% van de gevallen als een v wordt uitgesproken. Ze zeggen in het noorden dus meestal ‘fier’ als het cijfer vier is bedoeld.' The same page gives 41% voiced initial v in the Randstad, 53% in the middle and 65% in the south. The positional entry for ⟨v⟩ states [f] at the start and at the end of a word and [v] elsewhere. The source measures the word-initial position only, so a ⟨v⟩ inside a word keeps the nl-NL value (geven [ˈχeivən] in nl-NL). Taeldeman (2006, p. 184) reports the same devoicing in the dialects of the area: 'hier scoort Drente nagenoeg 100% f-'. (2) /ɣ/ AS THE VOICELESS UVULAR [χ]. van der Harst & Van de Velde (2007, p. 184): 'in de Randstad (N-R) en in het noorden (N-N) enkel uvulaire realisaties voorkomen'. Table 3 (p. 184) gives N-N 100.0% uvular, and Table 4 (p. 184) gives N-N 90.0% voiceless (-stem), 7.5% partly voiced and 2.5% voiced. p. 189: 'In de regio’s boven de rivieren (N-M, N-N en N-R) is de sterk geschraapte stemloze uvulair de norm'. p. 191: 'In Noord-Nederland en in de Randstad komen enkel uvulairen voor, in deze regio’s wordt ook het sterkst geschraapt'. nl-NL gives ⟨g⟩ the same voiceless uvular [χ] in every position (Gussenhoven 1992, JIPA 22, p. 45), so the spec takes ⟨g⟩ and ⟨berg⟩ from nl-NL. The scraping is a voice quality that the IPA value does not show. The child states ⟨v⟩ itself, so it keeps it whatever value nl-NL gives ⟨v⟩. NOT MODELLED: (a) ⟨ch⟩. The source measures /ɣ/ only, so ⟨ch⟩ takes the nl-NL value. (b) Initial ⟨z⟩. No opened source measures it in the regional standard of the north; Taeldeman (2006, p. 185) describes a mixed dialect picture, with Westerwolde 'enkel z-' and the Groningse Westerkwartier and parts of north Drenthe 'alleen s-vormen'. (c) Final ⟨-en⟩. Van de Velde & van Hout (2001, Table 3, p. 96) count 347 tokens with [n] against 130 without in N-N, the highest Netherlandic rate; nl-NL already gives [ən] (lopen [ˈloupən]), so the child needs no delta. (d) The diphthongs. Voeten (2021, p. 166): 'in the Netherlands-North the vowel /œy/ diphthongizes significantly more than in the Randstad', and 'for the /εi/ vowel, the regions Netherlands-Middle and Netherlands-North have a significantly lower F1 than the Netherlands Randstad'. These are gradient differences with no change of category, so the spec takes the nl-NL vowel values. The inherited regressive devoicing rules NL_CODA_DEVOICE_* list [χ] as a trigger, so a coda obstruent devoices before the uvular: zandgrond [ˈzɑntχrɔnt]. (e) Low Saxon substrate features such as syllabic nasals. Van de Velde & van Hout (2001, p. 95) find syllabic realisations of final -n in less than 1% of all tokens of the corpus.",
   "sources": [
     {
       "id": "vandevelde2016",

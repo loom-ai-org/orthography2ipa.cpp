@@ -134,6 +134,26 @@ PINNED["gl-ES-x-eonavia"] = ["Paraguai"]
 # Pontic Greek ⟨αυ ευ⟩ before a voiceless sound, the palatals before a front
 # vowel, ⟨νγκ⟩, word-initial ⟨μπ⟩ and the dotted ⟨τ̇⟩.
 PINNED["pnt"] = ["αυ", "Τουρκικὸν", "ένγκεν", "ΕΝΓΚΑ", "μπαλόν’", "τ\u0307σ"]
+# pt-PT reads porque with [u] and ⟨ã⟩ as [ɐ̃]; the specs with full unstressed
+# vowels switch the porque rule off again.
+PINNED["pt-PT"] += ["porque", "amanhã"]
+for code in ["pt-AO", "pt-GW", "pt-MZ", "pt-ST", "pt-TL", "pt-PT-x-algarve"]:
+    PINNED.setdefault(code, []).append("porque")
+# pt-BR raises a word-initial pretonic ⟨e⟩ before a coda sibilant and ⟨en em⟩
+# to the close nasal vowel, but not the one-syllable ⟨em⟩; pt-UY switches both
+# rules off. ⟨pôr⟩ and ⟨lugar⟩ hold the two other r-drop rules
+# (BR_INFINITIVE_R_DROP_POR, BR_FINAL_R_NONVERB).
+PINNED["pt-BR"] += ["escola", "entrar", "embora", "em", "amanhã", "pôr", "lugar"]
+PINNED["pt-UY"] += ["escola", "entrar", "amanhã"]
+PINNED["pt-BR-x-cuiaba"] = ["tchau", "tchibum"]
+# Netherlandic ⟨ee eu oo⟩ as closing diphthongs and ⟨g ch⟩ as uvular [χ]; nl-BE
+# and af keep their own readings, and nl-NL-x-limburg keeps the velar [x].
+PINNED["nl-NL"] = ["been", "boom", "neus", "deur", "goed", "acht", "regen"]
+PINNED["nl-BE"] += ["goed", "acht", "school", "berg"]
+PINNED["af"] += ["kné", "café", "vér"]
+PINNED["nl-NL-x-groninge"] += ["been", "boom"]
+PINNED["nl-NL-x-polder"] += ["been", "acht"]
+PINNED["nl-NL-x-limburg"] += ["tjerkgaast", "school", "acht"]
 
 # The code points of the viramas this catalog actually uses.
 VIRAMAS = {0x094D, 0x09CD, 0x0A4D, 0x0ACD, 0x0B4D, 0x0BCD, 0x0C4D, 0x0CCD,

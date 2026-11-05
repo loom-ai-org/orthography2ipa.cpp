@@ -129,7 +129,7 @@
       "s"
     ],
     "ch": [
-      "x"
+      "χ"
     ],
     "ng": [
       "ŋ"
@@ -192,8 +192,7 @@
       "yu"
     ],
     "berg": [
-      "bɛrɣ",
-      "bɛrx"
+      "bɛrχ"
     ],
     "veld": [
       "vɛld",
@@ -203,7 +202,7 @@
       "kɛrk"
     ],
     "brecht": [
-      "brɛxt"
+      "brɛχt"
     ],
     "isch": [
       "is"
@@ -241,12 +240,11 @@
       "z",
       "s"
     ],
-    "x": [
-      "x"
+    "χ": [
+      "χ"
     ],
     "ɣ": [
-      "ɣ",
-      "x"
+      "χ"
     ],
     "ɦ": [
       "ɦ",
@@ -364,7 +362,7 @@
       "notes": "French adstrate: centuries of Burgundian/French influence in S. Netherlands; cf. van der Wal (2008)"
     }
   ],
-  "notes": "Standard Dutch (ABN / Algemeen Nederlands). ⟨g⟩ realisation is [ɣ] in northern NL and [x] in southern NL / Flanders. /r/ is highly variable. FINAL DEVOICING: b/d/g/v/z devoiced in coda and word-finally. G: voiced [ɣ] onset, voiceless [x] coda — northern Dutch. H: breathy [ɦ]; fully silent in southern dialects. Sources: van Oostendorp (2000), Gussenhoven (1992), Booij (1995). COMPOUND-FINAL SECONDARY STRESS (Booij 1995, ch. 5): non-head members of a compound carry secondary stress and resist the unstressed e -> schwa reduction that a plain unstressed syllable undergoes; the closed set of toponymic/compound-final graphemes ⟨berg⟩/⟨veld⟩/⟨kerk⟩/⟨brecht⟩ is pinned to its unreduced [ɛ] realisation for this reason (Aalbert-style ⟨bert⟩ was left out: wikipron gold is split roughly evenly between [ɛrt] compound forms and [ərt] given-name forms, so no closed rule is safely citable there). ⟨berg⟩/⟨veld⟩ are positionally scoped (positional_graphemes, word_final vs. default) rather than plain unconditional graphemes: a plain grapheme maximal-munch matches inside ordinary inflected forms too (bergen, velden), where the ⟨g⟩/⟨d⟩ is NOT in coda (onset of the following syllable) and must stay voiced per the regular g/d positional rules above -- only word-final ⟨berg⟩/⟨veld⟩ get the devoiced [x]/[t]. ⟨kerk⟩/⟨brecht⟩ need no such split: ⟨k⟩ and ⟨ch⟩ never alternate in Dutch, so the same surface form is correct word-finally and word-internally (kerken, Hubrecht). The adjectival/toponymic suffix ⟨isch⟩ ([-is], ⟨ch⟩ silent, per the existing word-final ⟨sch⟩ -> [s] rule) is likewise pinned as a fixed grapheme rather than derived, since it is a single closed morpheme. HETEROMORPHEMIC ⟨tj⟩ (Booij 1995, ch. 2-3): the digraph ⟨tj⟩ was previously pinned to a single palatalized/affricate segment ([tʲ]/[tʃ]); WikiPron gold shows this is wrong for the overwhelming majority of ⟨tj⟩ words, both the productive diminutive suffix -tje/-etje attached after a stem-final plosive (katje, potje, witje: coda /t/ + suffix onset /j/ across the morpheme boundary, no coalescence) and word-initial ⟨tj-⟩ placenames (Tjalk, Tjonge): [tj], not [tʲ]. The digraph entry was removed so ⟨tj⟩ falls through to the plain ⟨t⟩+⟨j⟩ graphemes, which also fixes a second-order bug: the coalesced digraph was counted as a single intervocalic consonant by the open-syllable-lengthening rule, wrongly lengthening the stem vowel (witje -> *[ʋiːtʲə] instead of [ʋɪtjə]) because tj is phonemically two segments (a closed syllable), not one. A handful of Frisian-influenced placenames (Tjerkgaast, Tjalhuizum) keep an affricate [tʃ] in gold; that minority variant is lexical, not ruled out here. HETEROMORPHEMIC vs TAUTOMORPHEMIC ⟨tj⟩ (word_exceptions, Booij 1995 ch. 2-3 + WikiPron gold): a small closed set of Malay/Indonesian loanwords (ketjap-family: tjap \"seal/brand\", tjappen, tjaffelen, tjanten, tjetten, tjaptjoi, tjauwmin, tjokvol, matjok, nestje) and Frisian-influenced placenames (Tietjerk, Tjalhuizum, Tjerkgaast, Tjerkwerd) keep ⟨tj⟩ as the coalesced affricate [tʃ] the general rule above no longer produces, because in these words ⟨tj⟩ is TAUTOMORPHEMIC (one morpheme, one syllable onset) rather than the productive diminutive/placename-compound boundary the general rule targets. This is a closed irregular set per AGENTS.md 2 (\"a closed irregular set -> word_exceptions; a productive pattern -> the rule layer\"), not a general grapheme rule, since the vast majority of ⟨tj⟩ tokens (diminutives, word-initial placenames like Tjalk/Tjonge) are the plain [tj] sequence. \"ketjap\" and \"tjalk\" were deliberately NOT added: WikiPron records both the [tj] and [tʃ] pronunciation as attested variants of \"ketjap\" (multi-reference scoring already credits either), and \"tjalk\" is genuinely ambiguous at the same lowercased key -- the placename \"Tjalk\" (Friesland) is gold [tj] while the common noun \"tjalk\" (a sailing barge) is gold [tʃ]; a single override cannot satisfy both senses, so the word is left on the general (majority, placename-consistent) rule. OPEN-SYLLABLE LENGTHENING/TENSING: Open-syllable lengthening / tensing (Booij 1995, ch. 2, and Gussenhoven 1999, JIPA Illustration of Dutch): a single vowel letter is read as the TENSE vowel in an open syllable (ma-ken, lo-pen, u-ren, li-ter) and as the LAX vowel in a closed one (mak-ken, lop, ur-nen, lip). Keyed on syllable APERTURE, so the spec's own syllabifier -- onset-constrained for Dutch -- decides it: a-bri-koos and a-cro-baat have an open first syllable because /br/ and /kr/ are legal Dutch onsets. SHORT TENSE HIGH VOWELS (Booij 1995, ch. 2; Gussenhoven 1999, JIPA Illustration of Dutch): Dutch /i y u/ -- spelt ⟨ie⟩ ⟨uu⟩ ⟨oe⟩ and the open-syllable readings of ⟨i⟩ ⟨u⟩ -- are tense but SHORT, not long; only /eː øː oː aː/ are long. /i/ and /y/ lengthen before /r/ (NL_HIGH_TENSE_LENGTHENING_BEFORE_R_I/_Y). /u/ does NOT: although Booij states the lengthening for the whole series, WikiPron gold is 5.8:1 AGAINST it (78 [uːr] to 450 [ur]) -- boer [bur], aanvoer [aːnvur], beroerd [bərurt] -- and adding the /u/ member measured PER 0.0902 -> 0.0910, WER 0.4444 -> 0.4486 on nl-NL wikipron. The rule is therefore stated per-vowel, not for the series. DIPHTHONGS SPELT WITH ⟨w⟩ (Paardekooper 1987, ABN-uitspraakgids; Zonneveld & Trommelen 1980): ⟨ouw⟩ and ⟨auw⟩ spell the diphthong of ⟨ou⟩, and the ⟨w⟩ has no sound of its own. Paardekooper's key gives one value for \"nou, nauw\" (p. VIII), and Zonneveld & Trommelen write that \"ou has the spelling variants ouw, au, and auw\" (p. 267, note 1). The older spelling ⟨aauw⟩ (blaauw, Graauw) has the same diphthong: in Modern Standard Dutch the velar diphthongs collapsed, \"first 'aau' and 'au' then 'au' and 'ou'\" (Zonneveld & Trommelen 1980, p. 267). Before a vowel Paardekooper hears a transitional w in nauwe, blauwe and does not transcribe it (p. XVIII), so bouwen is [bɑuən]. ⟨eeuw⟩ and ⟨ieuw⟩ \"aan het eind van een woord of van een morfeem voor een medeklinker (eeuwfeest, kieuwbreedte) spreek je uit als eu, resp. iu. Maar voor een klinker is ew en iw normaal\" (p. XVIII): leeuw [leːu], nieuw [niu], leeuwen [leːʋən], nieuwe [niʋə]. Stressed ⟨uw⟩ is [yu] word-finally and before a consonant (\"dyu, ryu, slyu, sxyu, dyubot\"), and before a vowel \"heeft yw de voorkeur\" (\"rywə naast ryuə, dywə naast dyuə\", p. XVIII). Paardekooper's w is the labiodental [ʋ] (\"De w is in het ABN een liptandklank\", p. XVIII). Gussenhoven (1992, JIPA 22, p. 46) states that \"/ʋ/ is realized as [β̞] in the coda\". If ⟨eeuw ieuw uw⟩ end in /ʋ/, that rule gives [leːβ̞]. The spec follows Paardekooper, who states the value of these words.",
+  "notes": "Standard Dutch (ABN / Algemeen Nederlands). ⟨g⟩ and ⟨ch⟩ are the voiceless uvular [χ]. Gussenhoven (1992, JIPA 22, p. 45) has one dorsal fricative in the consonant chart, uvular, \"χ gat 'hole'\", and his transcription (p. 47) writes it for ⟨g⟩ and ⟨ch⟩: vraag [fraːχ], begon [bəχɔn], krijgen [kreiχə], zich [zɪχ], dichter [dɪχtər], slechts [slɛχs]. Verhoeven (2005, JIPA 35(2), p. 244): \"Belgian Dutch has a voiced and voiceless velar fricative: these are absent in the Netherlands. The Netherlands has a voiceless uvular fricative which does not occur in Belgian Dutch.\" The grapheme table keeps the phoneme /ɣ/ for ⟨g⟩, and the positional entry states its [χ] in every position, so the syllabifier still keeps ⟨s⟩+⟨g⟩ apart (as-gat) while ⟨sch⟩ opens a syllable. nl-BE states the velar pair itself. TENSE MID VOWELS: Gussenhoven (1992, p. 46): \"/eː, øː, oː/ are narrow closing diphthongs ([ei, øy, ou]), except before /r/ in the same word, when they are pronounced [eᵊ, øᵊ, oᵊ]\". The tables keep the phonemes /eː øː oː/, and the NL_MID_TENSE_* rules write the realisation: beet [beit], boot [bout], meer [meᵊr]. The chart on the same page keeps /ɛi/ for ⟨ei⟩, so ⟨ee⟩ [ei] and ⟨ij⟩ [ɛi] stay apart. nl-BE disables the rules and keeps the monophthongs. /r/ is highly variable. FINAL DEVOICING: b/d/g/v/z devoiced in coda and word-finally. H: breathy [ɦ]; fully silent in southern dialects. Sources: van Oostendorp (2000), Gussenhoven (1992), Booij (1995). COMPOUND-FINAL SECONDARY STRESS (Booij 1995, ch. 5): non-head members of a compound carry secondary stress and resist the unstressed e -> schwa reduction that a plain unstressed syllable undergoes; the closed set of toponymic/compound-final graphemes ⟨berg⟩/⟨veld⟩/⟨kerk⟩/⟨brecht⟩ is pinned to its unreduced [ɛ] realisation for this reason (Aalbert-style ⟨bert⟩ was left out: wikipron gold is split roughly evenly between [ɛrt] compound forms and [ərt] given-name forms, so no closed rule is safely citable there). ⟨veld⟩ is positionally scoped (positional_graphemes, word_final vs. default) rather than a plain unconditional grapheme: a plain grapheme maximal-munch matches inside ordinary inflected forms too (velden), where the ⟨d⟩ is NOT in coda (onset of the following syllable) and must stay voiced per the regular d positional rules above -- only word-final ⟨veld⟩ gets the devoiced [t]. ⟨berg⟩ needs no such split, because its ⟨g⟩ is [χ] in every position. ⟨kerk⟩/⟨brecht⟩ need no such split: ⟨k⟩ and ⟨ch⟩ never alternate in Dutch, so the same surface form is correct word-finally and word-internally (kerken, Hubrecht). The adjectival/toponymic suffix ⟨isch⟩ ([-is], ⟨ch⟩ silent, per the existing word-final ⟨sch⟩ -> [s] rule) is likewise pinned as a fixed grapheme rather than derived, since it is a single closed morpheme. HETEROMORPHEMIC ⟨tj⟩ (Booij 1995, ch. 2-3): the digraph ⟨tj⟩ was previously pinned to a single palatalized/affricate segment ([tʲ]/[tʃ]); WikiPron gold shows this is wrong for the overwhelming majority of ⟨tj⟩ words, both the productive diminutive suffix -tje/-etje attached after a stem-final plosive (katje, potje, witje: coda /t/ + suffix onset /j/ across the morpheme boundary, no coalescence) and word-initial ⟨tj-⟩ placenames (Tjalk, Tjonge): [tj], not [tʲ]. The digraph entry was removed so ⟨tj⟩ falls through to the plain ⟨t⟩+⟨j⟩ graphemes, which also fixes a second-order bug: the coalesced digraph was counted as a single intervocalic consonant by the open-syllable-lengthening rule, wrongly lengthening the stem vowel (witje -> *[ʋiːtʲə] instead of [ʋɪtjə]) because tj is phonemically two segments (a closed syllable), not one. A handful of Frisian-influenced placenames (Tjerkgaast, Tjalhuizum) keep an affricate [tʃ] in gold; that minority variant is lexical, not ruled out here. HETEROMORPHEMIC vs TAUTOMORPHEMIC ⟨tj⟩ (word_exceptions, Booij 1995 ch. 2-3 + WikiPron gold): a small closed set of Malay/Indonesian loanwords (ketjap-family: tjap \"seal/brand\", tjappen, tjaffelen, tjanten, tjetten, tjaptjoi, tjauwmin, tjokvol, matjok, nestje) and Frisian-influenced placenames (Tietjerk, Tjalhuizum, Tjerkgaast, Tjerkwerd) keep ⟨tj⟩ as the coalesced affricate [tʃ] the general rule above no longer produces, because in these words ⟨tj⟩ is TAUTOMORPHEMIC (one morpheme, one syllable onset) rather than the productive diminutive/placename-compound boundary the general rule targets. This is a closed irregular set per AGENTS.md 2 (\"a closed irregular set -> word_exceptions; a productive pattern -> the rule layer\"), not a general grapheme rule, since the vast majority of ⟨tj⟩ tokens (diminutives, word-initial placenames like Tjalk/Tjonge) are the plain [tj] sequence. \"ketjap\" and \"tjalk\" were deliberately NOT added: WikiPron records both the [tj] and [tʃ] pronunciation as attested variants of \"ketjap\" (multi-reference scoring already credits either), and \"tjalk\" is genuinely ambiguous at the same lowercased key -- the placename \"Tjalk\" (Friesland) is gold [tj] while the common noun \"tjalk\" (a sailing barge) is gold [tʃ]; a single override cannot satisfy both senses, so the word is left on the general (majority, placename-consistent) rule. OPEN-SYLLABLE LENGTHENING/TENSING: Open-syllable lengthening / tensing (Booij 1995, ch. 2, and Gussenhoven 1999, JIPA Illustration of Dutch): a single vowel letter is read as the TENSE vowel in an open syllable (ma-ken, lo-pen, u-ren, li-ter) and as the LAX vowel in a closed one (mak-ken, lop, ur-nen, lip). Keyed on syllable APERTURE, so the spec's own syllabifier -- onset-constrained for Dutch -- decides it: a-bri-koos and a-cro-baat have an open first syllable because /br/ and /kr/ are legal Dutch onsets. SHORT TENSE HIGH VOWELS (Booij 1995, ch. 2; Gussenhoven 1999, JIPA Illustration of Dutch): Dutch /i y u/ -- spelt ⟨ie⟩ ⟨uu⟩ ⟨oe⟩ and the open-syllable readings of ⟨i⟩ ⟨u⟩ -- are tense but SHORT, not long; only /eː øː oː aː/ are long. /i/ and /y/ lengthen before /r/ (NL_HIGH_TENSE_LENGTHENING_BEFORE_R_I/_Y). /u/ does NOT: although Booij states the lengthening for the whole series, WikiPron gold is 5.8:1 AGAINST it (78 [uːr] to 450 [ur]) -- boer [bur], aanvoer [aːnvur], beroerd [bərurt] -- and adding the /u/ member measured PER 0.0902 -> 0.0910, WER 0.4444 -> 0.4486 on nl-NL wikipron. The rule is therefore stated per-vowel, not for the series. DIPHTHONGS SPELT WITH ⟨w⟩ (Paardekooper 1987, ABN-uitspraakgids; Zonneveld & Trommelen 1980): ⟨ouw⟩ and ⟨auw⟩ spell the diphthong of ⟨ou⟩, and the ⟨w⟩ has no sound of its own. Paardekooper's key gives one value for \"nou, nauw\" (p. VIII), and Zonneveld & Trommelen write that \"ou has the spelling variants ouw, au, and auw\" (p. 267, note 1). The older spelling ⟨aauw⟩ (blaauw, Graauw) has the same diphthong: in Modern Standard Dutch the velar diphthongs collapsed, \"first 'aau' and 'au' then 'au' and 'ou'\" (Zonneveld & Trommelen 1980, p. 267). Before a vowel Paardekooper hears a transitional w in nauwe, blauwe and does not transcribe it (p. XVIII), so bouwen is [bɑuən]. ⟨eeuw⟩ and ⟨ieuw⟩ \"aan het eind van een woord of van een morfeem voor een medeklinker (eeuwfeest, kieuwbreedte) spreek je uit als eu, resp. iu. Maar voor een klinker is ew en iw normaal\" (p. XVIII): leeuw [leːu], nieuw [niu], leeuwen [leːʋən], nieuwe [niʋə]. Stressed ⟨uw⟩ is [yu] word-finally and before a consonant (\"dyu, ryu, slyu, sxyu, dyubot\"), and before a vowel \"heeft yw de voorkeur\" (\"rywə naast ryuə, dywə naast dyuə\", p. XVIII). Paardekooper's w is the labiodental [ʋ] (\"De w is in het ABN een liptandklank\", p. XVIII). Gussenhoven (1992, JIPA 22, p. 46) states that \"/ʋ/ is realized as [β̞] in the coda\". If ⟨eeuw ieuw uw⟩ end in /ʋ/, that rule gives [leːβ̞]. The spec follows Paardekooper, who states the value of these words.",
   "quality": "research",
   "script_type": "alphabet",
   "sources": [
@@ -407,6 +405,26 @@
       "url": "https://www.dbnl.org/tekst/zonn004eggo01_01/zonn004eggo01_01_0001.php",
       "pages": "265-292",
       "notes": "In: Studies in Dutch Phonology (Dutch Studies 4), The Hague"
+    },
+    {
+      "id": "gussenhoven1992",
+      "author": "Gussenhoven, C.",
+      "year": 1992,
+      "title": "Dutch",
+      "publisher": "Journal of the International Phonetic Association",
+      "url": "https://doi.org/10.1017/S002510030000459X",
+      "pages": "45-47",
+      "notes": "Illustrations of the IPA, JIPA 22(1-2)"
+    },
+    {
+      "id": "verhoeven2005",
+      "author": "Verhoeven, J.",
+      "year": 2005,
+      "title": "Belgian Standard Dutch",
+      "publisher": "Journal of the International Phonetic Association",
+      "url": "https://doi.org/10.1017/S0025100305002173",
+      "pages": "243-247",
+      "notes": "Illustrations of the IPA, JIPA 35(2)"
     }
   ],
   "wikipedia": [
@@ -414,14 +432,6 @@
     "https://nl.wikipedia.org/wiki/Nederlands"
   ],
   "positional_graphemes": {
-    "berg": {
-      "word_final": [
-        "bɛrx"
-      ],
-      "default": [
-        "bɛrɣ"
-      ]
-    },
     "veld": {
       "word_final": [
         "vɛlt"
@@ -448,10 +458,10 @@
     },
     "g": {
       "word_final": [
-        "x"
+        "χ"
       ],
       "default": [
-        "ɣ"
+        "χ"
       ]
     },
     "v": {
@@ -509,7 +519,7 @@
         "s"
       ],
       "default": [
-        "sx"
+        "sχ"
       ]
     },
     "a": {
@@ -572,7 +582,7 @@
   "word_exceptions": {
     "tietjerk": "ˈtitʃɛrk",
     "tjalhuizum": "ˈtʃɑlɦœyzʏm",
-    "tjerkgaast": "ˈtʃɛrkɣaːst",
+    "tjerkgaast": "ˈtʃɛrkχaːst",
     "tjerkwerd": "ˈtʃɛrkʋərt",
     "matjok": "ˈmaːtʃɔk",
     "nestje": "ˈnɛstʃə",
@@ -622,7 +632,8 @@
         "s",
         "f",
         "p",
-        "x"
+        "x",
+        "χ"
       ],
       "grapheme": [
         "g"
@@ -678,6 +689,68 @@
       "notes": "The tense high vowels /i, y, u/ are phonologically SHORT in Dutch -- unlike the long mid vowels /eː, øː, oː/ (Booij 1995, ch. 2; Gussenhoven 1999, JIPA Illustration of Dutch, transcribes them [i] [y] [u]). Booij states lengthening before /r/ for the series; WikiPron gold bears it out for /i/ and /y/ but REFUTES it for /u/, so the series is split into per-vowel rules rather than applied wholesale. For /y/ gold runs 739 [yːr] to 257 [yr] (2.9:1 FOR lengthening): aanvuren [aːnvyːrə], afsturen [ɑfstyːrə], achturig [ɑxtyːrəx]. Measured on nl-NL wikipron, removing this rule alone costs PER 0.0902 -> 0.0908 and WER 0.4446 -> 0.4503 (measured on the post-#850 tree)."
     },
     {
+      "id": "NL_MID_TENSE_CENTRING_BEFORE_R_E",
+      "phonemes": [
+        "eː"
+      ],
+      "surface": "eᵊ",
+      "followed_by_phoneme": [
+        "r"
+      ],
+      "notes": "Gussenhoven (1992, JIPA 22, p. 46): \"/eː, øː, oː/ are narrow closing diphthongs ([ei, øy, ou]), except before /r/ in the same word, when they are pronounced [eᵊ, øᵊ, oᵊ]\". Before /r/ the vowel takes the centring glide: meer [meᵊr]. This rule comes before NL_MID_TENSE_CLOSING_DIPHTHONG_E, because the first rule that matches applies."
+    },
+    {
+      "id": "NL_MID_TENSE_CENTRING_BEFORE_R_OE",
+      "phonemes": [
+        "øː"
+      ],
+      "surface": "øᵊ",
+      "followed_by_phoneme": [
+        "r"
+      ],
+      "notes": "Gussenhoven (1992, JIPA 22, p. 46): \"/eː, øː, oː/ are narrow closing diphthongs ([ei, øy, ou]), except before /r/ in the same word, when they are pronounced [eᵊ, øᵊ, oᵊ]\". Before /r/ the vowel takes the centring glide: deur [døᵊr]. This rule comes before NL_MID_TENSE_CLOSING_DIPHTHONG_OE, because the first rule that matches applies."
+    },
+    {
+      "id": "NL_MID_TENSE_CENTRING_BEFORE_R_O",
+      "phonemes": [
+        "oː"
+      ],
+      "surface": "oᵊ",
+      "followed_by_phoneme": [
+        "r"
+      ],
+      "notes": "Gussenhoven (1992, JIPA 22, p. 46): \"/eː, øː, oː/ are narrow closing diphthongs ([ei, øy, ou]), except before /r/ in the same word, when they are pronounced [eᵊ, øᵊ, oᵊ]\". Before /r/ the vowel takes the centring glide: door [doᵊr]. This rule comes before NL_MID_TENSE_CLOSING_DIPHTHONG_O, because the first rule that matches applies."
+    },
+    {
+      "id": "NL_MID_TENSE_CLOSING_DIPHTHONG_E",
+      "phonemes": [
+        "eː"
+      ],
+      "surface": "ei",
+      "notes": "Gussenhoven (1992, JIPA 22, p. 46): \"/eː, øː, oː/ are narrow closing diphthongs ([ei, øy, ou]), except before /r/ in the same word, when they are pronounced [eᵊ, øᵊ, oᵊ]\". Elsewhere the vowel is the narrow closing diphthong: beet [beit]. The rule applies to every slot that is the long vowel alone: ⟨ee eu oo é eau⟩ and the open-syllable ⟨e o⟩. The keys ⟨eeuw⟩ and ⟨ieu⟩ keep the values that Paardekooper (1987) states (leeuw [leːu], milieu [miljøː]). Before /r/ the centring rule reaches the vowel of ⟨ieu⟩ too: ingenieur [ɪŋənjøᵊr]."
+    },
+    {
+      "id": "NL_MID_TENSE_CLOSING_DIPHTHONG_OE",
+      "phonemes": [
+        "øː"
+      ],
+      "surface": "øy",
+      "notes": "Gussenhoven (1992, JIPA 22, p. 46): \"/eː, øː, oː/ are narrow closing diphthongs ([ei, øy, ou]), except before /r/ in the same word, when they are pronounced [eᵊ, øᵊ, oᵊ]\". Elsewhere the vowel is the narrow closing diphthong: neus [nøys]. The rule applies to every slot that is the long vowel alone: ⟨ee eu oo é eau⟩ and the open-syllable ⟨e o⟩. The keys ⟨eeuw⟩ and ⟨ieu⟩ keep the values that Paardekooper (1987) states (leeuw [leːu], milieu [miljøː]). Before /r/ the centring rule reaches the vowel of ⟨ieu⟩ too: ingenieur [ɪŋənjøᵊr]."
+    },
+    {
+      "id": "NL_MID_TENSE_CLOSING_DIPHTHONG_O",
+      "phonemes": [
+        "oː"
+      ],
+      "surface": "ou",
+      "notes": "Gussenhoven (1992, JIPA 22, p. 46): \"/eː, øː, oː/ are narrow closing diphthongs ([ei, øy, ou]), except before /r/ in the same word, when they are pronounced [eᵊ, øᵊ, oᵊ]\". Elsewhere the vowel is the narrow closing diphthong: boot [bout]. The rule applies to every slot that is the long vowel alone: ⟨ee eu oo é eau⟩ and the open-syllable ⟨e o⟩. The keys ⟨eeuw⟩ and ⟨ieu⟩ keep the values that Paardekooper (1987) states (leeuw [leːu], milieu [miljøː]). Before /r/ the centring rule reaches the vowel of ⟨ieu⟩ too: ingenieur [ɪŋənjøᵊr]. Known gap: the rule leaves ⟨oo⟩ before ⟨i ie isch⟩ at [oː] (mooi [moːi], kooien [koːin]). No opened source states how ⟨ooi⟩ is realised, so the spec does not write [ou] there.",
+      "followed_by_grapheme_not": [
+        "i",
+        "ie",
+        "isch"
+      ]
+    },
+    {
       "id": "NL_CODA_DEVOICE_B",
       "phonemes": [
         "b"
@@ -690,7 +763,8 @@
         "s",
         "f",
         "p",
-        "x"
+        "x",
+        "χ"
       ],
       "grapheme": [
         "b"
@@ -710,7 +784,8 @@
         "s",
         "f",
         "p",
-        "x"
+        "x",
+        "χ"
       ],
       "grapheme": [
         "d"
@@ -730,7 +805,8 @@
         "s",
         "f",
         "p",
-        "x"
+        "x",
+        "χ"
       ],
       "grapheme": [
         "v"
@@ -750,7 +826,8 @@
         "s",
         "f",
         "p",
-        "x"
+        "x",
+        "χ"
       ],
       "grapheme": [
         "z"

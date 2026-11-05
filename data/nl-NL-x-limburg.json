@@ -9,7 +9,7 @@
       "code": "nl-NL",
       "role": "parent",
       "weight": 0.9,
-      "notes": "Standard Dutch of the Netherlands; the Limburg regional standard differs from it in the realisation of /ɣ/."
+      "notes": "Standard Dutch of the Netherlands; the Limburg regional standard differs from it in the realisation of /ɣ/ and /x/."
     }
   ],
   "graphemes_base": "nl-NL",
@@ -17,6 +17,14 @@
   "positional_graphemes_base": "nl-NL",
   "word_exceptions_base": "nl-NL",
   "collapse_geminates": true,
+  "graphemes": {
+    "ch": [
+      "x"
+    ],
+    "brecht": [
+      "brɛxt"
+    ]
+  },
   "positional_graphemes": {
     "g": {
       "word_final": [
@@ -41,7 +49,18 @@
       "default": [
         "v"
       ]
+    },
+    "sch": {
+      "word_final": [
+        "s"
+      ],
+      "default": [
+        "sx"
+      ]
     }
+  },
+  "word_exceptions": {
+    "tjerkgaast": "ˈtʃɛrkxaːst"
   },
   "quality": "skeleton",
   "iso639_3": "nld",
@@ -52,7 +71,7 @@
     "source": "wikidata",
     "notes": "the province of Limburg in the Netherlands, a region-level point. The teacher-corpus towns are Sittard, Geleen and Roermond. [Wikidata Q1093 P625]"
   },
-  "notes": "Regionally coloured Standard Dutch of Dutch Limburg: the standard language as spoken by educated speakers from the province, not the Limburgish dialects (li). The data are the teacher corpus of Van Hout et al. (1999), region N-Z (Zuid), with the towns Geleen, Roermond and Sittard (van der Harst & Van de Velde 2007, p. 178; van der Harst 2011, p. 55). van der Harst (2011, p. 53): the teachers 'are professional language users who are assumed to speak the standard language on a daily basis'. The spec is a delta over nl-NL: it inherits every grapheme, positional entry, word exception, allophone rule and the stress block, and it states only the features below. MODELLED (1) /ɣ/ AS THE VOICELESS VELAR [x], the 'soft g'. van der Harst & Van de Velde (2007, p. 184): 'In Nederlands Limburg (N-Z) vinden we zoals verwacht vooral velairen (52.5%) en palato-velairen (42.5%). De uvulair komt er maar zelden voor (5%) in dit type taalgebruik.' Table 4 (p. 184) gives the voicing for N-Z: -stem 77.5%, +-stem 5.0%, +stem 17.5%. p. 185: 'In Nederlands-Limburg (N-Z) wordt bijna nooit geschraapt'. p. 189 states the regional norm: 'in de regio's onder de rivieren (N-Z en de vier Vlaamse regio's) is de stemloze velair de norm'; Table 6 (pp. 189-190) has ve1, the voiceless unscraped velar, as the most frequent N-Z variant (16 of 40 tokens). p. 192: 'Limburg onttrekt zich echter volledig aan dit patroon en heeft een eigen uitspraaknorm. Daar komen vooral stemloze velairen en palato-velairen voor. Nederlands-Limburg deelt die uitspraaknorm voor /γ/ met Vlaanderen.' The measured context is a word-initial stressed /ɣ/ after a schwa and before /œy/, in the carrier sentence 'in de guize horen we g' (pp. 178-179). The positional entry for ⟨g⟩ states [x] in every position. The word-final [x] is the velar place of /ɣ/ with the final devoicing of nl-NL; the source does not measure the coda. The child states both values itself, so it keeps the velar place whatever dorsal value nl-NL gives ⟨g⟩. The nl-NL grapheme ⟨berg⟩ spells the same ⟨g⟩ inside one key, so the spec restates it as [bɛrx] in both positions: bergen [ˈbɛrxən], and berggebied degeminates to [ˈbɛrxəbit] as in nl-NL. The copy keeps the [r] of the nl-NL entry, so a change to that entry in nl-NL must be copied here. The inherited rules act on the new [x]: NL_CODA_DEVOICE_* devoices a coda obstruent before it (zandgrond [ˈzɑntxrɔnt]), and collapse_geminates merges it with a preceding [x] (lachgas [ˈlɑxɑs]). The nl-NL grapheme ⟨veld⟩ is one slot, so its [d] does not devoice before the new [x] (veldgrijs [ˈvɛldxrɛis]); that is an nl-NL limit. (2) WORD-INITIAL ⟨v⟩ AS VOICED [v]. Van de Velde (2016, p. 10), for the same teacher regions: 'In de Randstad gebruikt 41% die v aan het begin van een woord, in de middenregio 53% en in het zuiden 65%.' The positional entry for ⟨v⟩ states the default [v] and the word-final [f] itself, so a devoiced initial ⟨v⟩ in the positional map of nl-NL does not reach this spec. If nl-NL devoices initial ⟨v⟩ with an allophone rule instead, this spec must switch that rule off by its id. NOT MODELLED: (a) The palato-velar realisation of /ɣ/ (42.5%, p. 184). The paper scores it as a category and gives no conditioning context, so no rule selects it. (b) ⟨ch⟩. The source measures /ɣ/ only, and no opened source measures /x/ in Dutch Limburg, so ⟨ch⟩ takes the nl-NL value. (c) /r/. Van Bezooijen & van den Berg (2004, p. 94) describe South Limburg as 'een gebied met vrijwel uitsluitend huig-r. De Gooise r komt hier nauwelijks of niet voor, evenmin als de tongpunt-r.' This is a background statement about the home region of a listener group, with no measurement, so the spec takes the nl-NL value of ⟨r⟩. (d) The long mid vowels and the diphthongs. Voeten (2021, p. 166): /eː/ is a vowel 'which the three non-Randstad regions in the Netherlands also diphthongize less strongly than the Randstad region', and 'For the vowels /øː,oː,œy/, Netherlands-Limburg goes along with the Flemish regions, in having higher F1s.' p. 171: 'The between-region effects are phonetically gradual: there are no regions which categorically do not diphthongize their vowels'. These are gradient differences with no category change, so the spec takes the nl-NL vowel values. van der Harst (2011, p. 200) adds that 'N-S differs more from the other Dutch regions than it does from the Flemish regions' in the vowels. (e) Tone and pitch accent belong to the Limburgish dialects; no opened source measures them in regional Standard Dutch.",
+  "notes": "Regionally coloured Standard Dutch of Dutch Limburg: the standard language as spoken by educated speakers from the province, not the Limburgish dialects (li). The data are the teacher corpus of Van Hout et al. (1999), region N-Z (Zuid), with the towns Geleen, Roermond and Sittard (van der Harst & Van de Velde 2007, p. 178; van der Harst 2011, p. 55). van der Harst (2011, p. 53): the teachers 'are professional language users who are assumed to speak the standard language on a daily basis'. The spec is a delta over nl-NL: it inherits every grapheme, positional entry, word exception, allophone rule and the stress block, and it states only the features below. MODELLED (1) /ɣ/ AS THE VOICELESS VELAR [x], the 'soft g'. van der Harst & Van de Velde (2007, p. 184): 'In Nederlands Limburg (N-Z) vinden we zoals verwacht vooral velairen (52.5%) en palato-velairen (42.5%). De uvulair komt er maar zelden voor (5%) in dit type taalgebruik.' Table 4 (p. 184) gives the voicing for N-Z: -stem 77.5%, +-stem 5.0%, +stem 17.5%. p. 185: 'In Nederlands-Limburg (N-Z) wordt bijna nooit geschraapt'. p. 189 states the regional norm: 'in de regio's onder de rivieren (N-Z en de vier Vlaamse regio's) is de stemloze velair de norm'; Table 6 (pp. 189-190) has ve1, the voiceless unscraped velar, as the most frequent N-Z variant (16 of 40 tokens). p. 192: 'Limburg onttrekt zich echter volledig aan dit patroon en heeft een eigen uitspraaknorm. Daar komen vooral stemloze velairen en palato-velairen voor. Nederlands-Limburg deelt die uitspraaknorm voor /γ/ met Vlaanderen.' The measured context is a word-initial stressed /ɣ/ after a schwa and before /œy/, in the carrier sentence 'in de guize horen we g' (pp. 178-179). The positional entry for ⟨g⟩ states [x] in every position. The word-final [x] is the velar place of /ɣ/ with the final devoicing of nl-NL; the source does not measure the coda. The child states both values itself, so it keeps the velar place whatever dorsal value nl-NL gives ⟨g⟩. The nl-NL grapheme ⟨berg⟩ spells the same ⟨g⟩ inside one key, so the spec restates it as [bɛrx] in both positions: bergen [ˈbɛrxən], and berggebied degeminates to [ˈbɛrxəbit] as in nl-NL. The copy keeps the [r] of the nl-NL entry, so a change to that entry in nl-NL must be copied here. The inherited rules act on the new [x]: NL_CODA_DEVOICE_* devoices a coda obstruent before it (zandgrond [ˈzɑntxrɔnt]), and collapse_geminates merges it with a preceding [x], so ⟨g⟩ next to ⟨ch⟩ gives one [x] (lachgas [ˈlɑxɑs], Egchel [ˈɛxəl]). The nl-NL grapheme ⟨veld⟩ is one slot, so its [d] does not devoice before the new [x] (veldgrijs [ˈvɛldxrɛis]); that is an nl-NL limit. (2) WORD-INITIAL ⟨v⟩ AS VOICED [v]. Van de Velde (2016, p. 10), for the same teacher regions: 'In de Randstad gebruikt 41% die v aan het begin van een woord, in de middenregio 53% en in het zuiden 65%.' The positional entry for ⟨v⟩ states the default [v] and the word-final [f] itself, so a devoiced initial ⟨v⟩ in the positional map of nl-NL does not reach this spec. If nl-NL devoices initial ⟨v⟩ with an allophone rule instead, this spec must switch that rule off by its id. (3) ⟨ch⟩ AS THE VOICELESS VELAR [x]. No opened source measures /x/ in Dutch Limburg; the source above measures /ɣ/ only. The value rests on the regional norm it names: 'Limburg onttrekt zich echter volledig aan dit patroon en heeft een eigen uitspraaknorm. Daar komen vooral stemloze velairen en palato-velairen voor. Nederlands-Limburg deelt die uitspraaknorm voor /γ/ met Vlaanderen' (van der Harst & Van de Velde 2007, p. 192). In the Flemish standard that Limburg shares this norm with, ⟨ch⟩ is the voiceless velar: Verhoeven (2005, p. 244): 'Belgian Dutch has a voiced and voiceless velar fricative: these are absent in the Netherlands. The Netherlands has a voiceless uvular fricative which does not occur in Belgian Dutch', with x for ⟨ch⟩ in chijl in the word list. The Maastricht dialect has the same velar pair and no uvular fricative (Gussenhoven & Aarts 1999, pp. 155-156, x in the word for 'laugh'); that is dialect data, cited as background only. So the spec gives ⟨ch⟩ the same voiceless velar [x] as ⟨g⟩, and the voiceless onset /ɣ/ of the norm and /x/ meet in one value: lachen [ˈlaːxən], acht [ˈɑxt]. The nl-NL keys that spell the same ⟨ch⟩ inside one slot are restated with [x]: ⟨sch⟩ as [sx] (school [ˈsxoːl]) with the word-final [s] of nl-NL (logisch [ˈloːxis]), and ⟨brecht⟩ as [brɛxt]. The nl-NL word exception tjerkgaast is restated as [ˈtʃɛrkxaːst], because a word exception bypasses the grapheme layer. Every copy keeps the other segments of the nl-NL entry, so a change to that entry in nl-NL must be copied here. NOT MODELLED: (a) The palato-velar realisation of /ɣ/ (42.5%, p. 184). The paper scores it as a category and gives no conditioning context, so no rule selects it. (b) /r/. Van Bezooijen & van den Berg (2004, p. 94) describe South Limburg as 'een gebied met vrijwel uitsluitend huig-r. De Gooise r komt hier nauwelijks of niet voor, evenmin als de tongpunt-r.' This is a background statement about the home region of a listener group, with no measurement, so the spec takes the nl-NL value of ⟨r⟩. (c) The long mid vowels and the diphthongs. Voeten (2021, p. 166): /eː/ is a vowel 'which the three non-Randstad regions in the Netherlands also diphthongize less strongly than the Randstad region', and 'For the vowels /øː,oː,œy/, Netherlands-Limburg goes along with the Flemish regions, in having higher F1s.' p. 171: 'The between-region effects are phonetically gradual: there are no regions which categorically do not diphthongize their vowels'. These are gradient differences with no category change, so the spec takes the nl-NL vowel values. van der Harst (2011, p. 200) adds that 'N-S differs more from the other Dutch regions than it does from the Flemish regions' in the vowels. (d) Tone and pitch accent belong to the Limburgish dialects; no opened source measures them in regional Standard Dutch.",
   "sources": [
     {
       "id": "vanderharst_vandevelde2007",
@@ -63,6 +82,28 @@
       "url": "https://www.journal-archive.aup.nl/taal-en-tongval/jrg_2007_vol_59_-_17_gs_in_het_standaardnederlands.pdf",
       "pages": "pp. 178-179, 184-185, 189-192",
       "notes": "Auditory transcription of word-initial /ɣ/ by 160 teachers of Dutch in eight regions. Tables 3 and 4 give place and voicing per region; the N-Z (Dutch Limburg) norm is the voiceless velar."
+    },
+    {
+      "id": "verhoeven2005",
+      "author": "Verhoeven, J.",
+      "year": 2005,
+      "title": "Belgian Standard Dutch",
+      "publisher": "Journal of the International Phonetic Association 35(2), 243-247",
+      "url": null,
+      "doi": "10.1017/S0025100305002173",
+      "pages": "p. 244",
+      "notes": "Belgian Dutch has a voiced and a voiceless velar fricative, and no uvular; the word list gives x for ⟨ch⟩ in chijl. Cited for ⟨ch⟩, with the shared Limburg-Flemish /ɣ/ norm of van der Harst & Van de Velde (2007, p. 192)."
+    },
+    {
+      "id": "gussenhoven_aarts1999",
+      "author": "Gussenhoven, C. & Aarts, F.",
+      "year": 1999,
+      "title": "The dialect of Maastricht",
+      "publisher": "Journal of the International Phonetic Association 29(2), 155-166",
+      "url": null,
+      "doi": "10.1017/S0025100300006526",
+      "pages": "pp. 155-156",
+      "notes": "Dialect data: the consonant chart has the velar fricatives x and ɣ and no uvular fricative; ⟨ch⟩ is x in the word for 'laugh'. Background for ⟨ch⟩ only; the dialect is not the regional standard."
     },
     {
       "id": "vandevelde2016",

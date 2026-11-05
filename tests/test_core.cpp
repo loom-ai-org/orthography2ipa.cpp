@@ -70,6 +70,19 @@ int main() {
         // aliases: they resolve unchanged and name no spec.
         assert(resolve("tmg") == "tmg");
         assert(resolve("aja") == "aja");
+        // A script subtag that is the language's Suppress-Script adds nothing
+        // (RFC 5646 §3.1.9), so the private-use tag still names its lect; any
+        // other script does not, and an unknown lect falls back as before.
+        // Expected values are registry.py resolve() and resolves_exactly().
+        assert(resolve("pt-Latn-BR-x-sp") == "pt-BR-x-sp");
+        assert(resolves_exactly("pt-Latn-BR-x-sp"));
+        assert(resolve("PT-LATN-br-X-SP") == "pt-BR-x-sp");
+        assert(resolve("pt-Latn-PT-x-lisbon") == "pt-PT-x-lisbon");
+        assert(resolves_exactly("nl-Latn-NL-x-polder"));
+        assert(resolve("pt-Cyrl-BR-x-sp") == "pt-Cyrl-BR-x-sp");
+        assert(!resolves_exactly("pt-Cyrl-BR-x-sp"));
+        assert(resolve("pt-Latn-BR-x-zz") == "pt-BR");
+        assert(!resolves_exactly("pt-Latn-BR-x-zz"));
     }
     assert(!available_codes().empty());
     {
@@ -455,8 +468,8 @@ int main() {
     assert(close_to(segment_distance("p", "b"), 0.042553191489361715));
     assert(feature_vector("p")[7] == .5 && feature_vector("p")[11] == 1);
     const auto pt_es = phonological_distance(portuguese, spanish);
-    assert(close_to(pt_es.combined, 0.21661900286704905));
-    assert(close_to(pt_es.inventory.feature_mean, 0.05333936375277406));
+    assert(close_to(pt_es.combined, 0.2169145693695121));
+    assert(close_to(pt_es.inventory.feature_mean, 0.05383197459021247));
     assert(close_to(pt_es.grapheme.mean_ipa_distance, 0.2292352969556617));
     // distance.py orthographic, positional and ancestry values from the reference.
     // aa/sfw name a script outside SCRIPT_REGISTRY (0.5 term); ab/nmq name two in it.
@@ -655,6 +668,39 @@ int main() {
         // Geminate atomicity: the shadda-expanded doubled pair is realised
         // as one unit ( عمّ → ˈʕmm), not split by an outside rule.
         assert(G2P("ar").transcribe_word("\xd8\xb9\xd9\x85\xd9\x91") == "\xcb\x88\xca\x95mm");
+    }
+
+    // allophony.py _is_nucleus_segment: a slot whose value is only a combining
+    // mark is no nucleus, for followed_by_nucleus and requires_other_nucleus
+    // alike. The synthetic spec writes ⟨m⟩ as a bare tilde, as pt-BR writes
+    // the coda nasal of ⟨em⟩. Every expected value is the reference's
+    // PhonetokTokenizer.ipa_best with compile_allophone_rescorer.
+    {
+        LanguageSpec bare_tilde;
+        bare_tilde.code = "xx-test";
+        bare_tilde.graphemes = {{"e", {"e"}}, {"m", {"\u0303"}}, {"k", {"k"}}, {"a", {"a"}}};
+        AllophoneRule raise;
+        raise.id = "RAISE_E";
+        raise.phonemes = {"e"};
+        raise.surface = "i";
+        raise.followed_by_nucleus = true;
+        AllophoneRule drop;
+        drop.id = "DROP_E";
+        drop.phonemes = {"e"};
+        drop.requires_other_nucleus = true;
+        auto best = [&](const AllophoneRule& rule, const std::string& word) {
+            LanguageSpec spec = bare_tilde;
+            spec.allophone_rules = {rule};
+            const auto chain = rescorer::compile_allophone_rescorer(spec.allophone_rules);
+            const std::vector<const rescorer::LatticeRescorer*> rescorers{chain.get()};
+            return PhonetokTokenizer(spec).ipa_best(word, false, " ", false, &rescorers);
+        };
+        assert(best(raise, "em") == "e\u0303");
+        assert(best(raise, "eka") == "ika");
+        assert(best(raise, "emka") == "i\u0303ka");
+        assert(best(drop, "em") == "e\u0303");
+        assert(best(drop, "eka") == "ka");
+        assert(best(drop, "emka") == "\u0303ka");
     }
 
     // ── Tone syllable model (tone.py port) ──

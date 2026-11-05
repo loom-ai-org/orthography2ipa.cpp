@@ -9,7 +9,9 @@
 //   3. langcodes.standardize_tag(macro=True), skipped for a private-use tag,
 //      then the alias table and the catalog again;
 //   4. a private-use CASE FOLD (langcodes never sees a `-x-` tag, so
-//      `ar-sa-x-najd` would otherwise miss `ar-SA-x-najd`);
+//      `ar-sa-x-najd` would otherwise miss `ar-SA-x-najd`), first of the tag
+//      itself and then of the tag without a script subtag that is the
+//      language's Suppress-Script (`pt-Latn-BR-x-sp` -> `pt-BR-x-sp`);
 //   5. the default region of a bare tag (linguatag with_default_region,
 //      `pt` -> `pt-PT`) when that spec is registered, then the curated
 //      sub-region defaults (`ar-SA` -> `ars-SA`);
