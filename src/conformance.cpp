@@ -109,6 +109,9 @@ public:
                                  const std::vector<IPAPath>& paths) const override {
         return plugin_.rescore(word, lang, paths);
     }
+    std::vector<const rescorer::LatticeRescorer*> lattice_rescorers(const std::string& lang) const override {
+        return plugin_.lattice_rescorers(lang);
+    }
     int priority() const override { return plugin_.priority(); }
 
 private:

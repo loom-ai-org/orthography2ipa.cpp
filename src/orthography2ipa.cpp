@@ -1179,38 +1179,6 @@ std::vector<std::string> segment_ipa_impl(const std::string& ipa, const std::vec
 }
 
 
-bool same_paths(const std::vector<IPAPath>& a, const std::vector<IPAPath>& b) {
-    if (a.size() != b.size()) return false;
-    for (std::size_t i = 0; i < a.size(); ++i)
-        if (a[i].ipa != b[i].ipa || a[i].score != b[i].score ||
-            a[i].graphemes != b[i].graphemes || a[i].segments != b[i].segments) return false;
-    return true;
-}
-
-void validate_rescorer_output(const std::vector<IPAPath>& paths, const LanguageSpec& spec,
-                              const std::string& name) {
-    if (paths.empty()) throw std::runtime_error("rescore plugin returned no candidates: " + name);
-    const auto declared = declared_phonemes(spec);
-    const std::vector<std::string> atoms(declared.begin(), declared.end());
-    for (const auto& path : paths) {
-        for (const auto& segment : segment_ipa(path.ipa, atoms)) {
-            if (segment == "ˈ" || segment == "ˌ" || segment == "ː" || segment == "ˑ") continue;
-            bool known = declared.count(segment) != 0;
-            if (!known) for (const auto& atom : atoms) {
-                if (segment.rfind(atom, 0) != 0) continue;
-                known = true;
-                for (std::size_t offset = atom.size(); offset < segment.size();) {
-                    if (!ipa_modifier(segment, offset)) { known = false; break; }
-                    offset += utf8_char_size(segment, offset);
-                }
-                if (known) break;
-            }
-            if (!known)
-                throw std::runtime_error("rescore plugin emitted undeclared IPA " + segment + ": " + name);
-        }
-    }
-}
-
 std::vector<IPAPath> apply_grammatical_endings(const LanguageSpec& spec,
                                                const std::string& word,
                                                std::vector<IPAPath> paths) {
@@ -2689,7 +2657,7 @@ std::vector<std::string> G2P::word_candidates(const std::string& word, std::size
         const std::string compound = transcribe_word(word);
         return compound.empty() ? std::vector<std::string>{} : std::vector<std::string>{compound};
     }
-    Tokenizer tokenizer(*spec_, expand_allophones_, apply_allophony_);
+    Tokenizer tokenizer(*spec_, expand_allophones_, apply_allophony_, chain_rescorers());
     auto paths = needs_context_beam_ ? tokenizer.beam(word, width)
                                      : tokenizer.rescored_beam(word, width);
     paths = apply_rescorer_plugins(word, std::move(paths));
@@ -2710,13 +2678,15 @@ std::vector<std::string> G2P::word_candidates(const std::string& word, std::size
 }
 std::vector<IPAPath> G2P::apply_rescorer_plugins(const std::string& word, std::vector<IPAPath> paths) const {
     // The plugins G2P() resolved and holds, in the order the spec names them,
-    // as g2p.py composes the declared plugins' rescorers.
+    // as g2p.py composes the declared plugins' rescorers. rescorer.py
+    // apply_rescorers validates nothing at run time: the contract belongs to
+    // conformance::assert_rescorer_conforms.
     for (const auto& [name, plugin] : declared_rescore_plugins_) {
-        const auto rescored = plugin->rescore(word, language_, paths);
-        if (!same_paths(rescored, plugin->rescore(word, language_, paths)))
-            throw std::runtime_error("rescore plugin returned non-deterministic output: " + name);
-        validate_rescorer_output(rescored, *spec_, name);
-        paths = rescored;
+        auto rescored = plugin->rescore(word, language_, paths);
+        // phonetok.py ipa_beam: a rescorer that empties every slot leaves one
+        // empty path, so the word reads as nothing and not as its spelling.
+        if (rescored.empty() && !paths.empty()) rescored.emplace_back();
+        paths = std::move(rescored);
     }
     return paths;
 }

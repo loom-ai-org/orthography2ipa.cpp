@@ -415,7 +415,8 @@ int main() {
         // G2P.__init__ composes their rescorers in it. The reference, given
         // these three plugins declared as low, high, mid, runs their lattice
         // rescorers low, high, mid on every pass. The per-word hook keeps the
-        // same order and calls each plugin twice to check it is deterministic.
+        // same order and calls each plugin once, as rescorer.py apply_rescorers
+        // calls a rescorer once per slot.
         static std::vector<std::string> ran, lattice_ran;
         struct Recording : rescorer::LatticeRescorer {
             std::string label;
@@ -451,9 +452,44 @@ int main() {
         const std::vector<std::string> pass_order = {"low", "high", "mid"};
         assert(!lattice_runs.empty() && lattice_runs.size() % pass_order.size() == 0);
         for (std::size_t i = 0; i < lattice_runs.size(); ++i) assert(lattice_runs[i] == pass_order[i % pass_order.size()]);
-        const std::vector<std::string> word_order = {"low", "low", "high", "high", "mid", "mid"};
+        const std::vector<std::string> word_order = {"low", "high", "mid"};
         assert(!ran.empty() && ran.size() % word_order.size() == 0);
         for (std::size_t i = 0; i < ran.size(); ++i) assert(ran[i] == word_order[i % word_order.size()]);
+    }
+    {
+        // A declared rescore plugin is checked by the conformance kit, never at
+        // run time: rescorer.py apply_rescorers validates nothing, and
+        // rescorer_plugin.py names assert_rescorer_conforms as the check.
+        // Expected values come from the reference on the same plugins.
+        struct Undeclared : rescorer::LatticeRescorer {
+            std::vector<Candidate> rescore(const rescorer::SegmentSlot& slot, const rescorer::RescoreContext&) const override {
+                auto out = slot.candidates;
+                for (auto& candidate : out) if (candidate.ipa == "a") candidate.ipa = "Q";
+                return out;
+            }
+        };
+        // arbtok's shape: the whole-word pass returns the paths it was given,
+        // and those paths already hold the symbol the lattice rescorer emitted.
+        struct Unchanged : RescorerPlugin {
+            Undeclared undeclared;
+            std::vector<std::string> language_codes() const override { return {"qaa-x-foreign"}; }
+            std::vector<IPAPath> rescore(const std::string&, const std::string&, const std::vector<IPAPath>& paths) const override { return paths; }
+            std::vector<const rescorer::LatticeRescorer*> lattice_rescorers(const std::string&) const override { return {&undeclared}; }
+        };
+        register_rescorer_plugin("test-unchanged-undeclared", std::make_shared<Unchanged>());
+        assert(G2P("pt-PT", {{"rescore", {"test-unchanged-undeclared"}}}).transcribe_word("casa") == "\xcb\x88kQz\xc9\x90");
+
+        static int calls = 0;
+        struct NoPaths : RescorerPlugin {
+            std::vector<std::string> language_codes() const override { return {"qaa-x-foreign"}; }
+            std::vector<IPAPath> rescore(const std::string&, const std::string&, const std::vector<IPAPath>&) const override { ++calls; return {}; }
+        };
+        register_rescorer_plugin("test-no-paths", std::make_shared<NoPaths>());
+        const G2P silent("pt-PT", {{"rescore", {"test-no-paths"}}});
+        assert(silent.transcribe_word("casa").empty());
+        assert(calls == 1);
+        assert(silent.word_candidates("casa").empty());
+        assert(silent.transcribe("tenho casa").empty());
     }
     // g2p.py ipa_lattice: one slot per grapheme, ranked candidates, spans in
     // CODE POINTS, and the top-of-slot concatenation is a valid reading.

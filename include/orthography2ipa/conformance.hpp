@@ -84,12 +84,8 @@ void assert_syllabifier_conforms(const SyllabifierPlugin& plugin,
 /// word, and every emitted symbol is read back against the spec's declared
 /// inventory.
 ///
-/// Note that the C++ engine enforces the same contract at this seam and raises
-/// `std::runtime_error` itself ("rescore plugin does not own language …",
-/// "… returned non-deterministic output …", "… emitted undeclared IPA …"), so a
-/// plugin that breaks one of those three rules can be stopped by the engine
-/// before the kit gets to describe it. Both reject; the engine's message names
-/// the offending symbol or language instead of explaining the contract.
+/// This kit is the only check on the contract. As in the reference, the engine
+/// runs a declared plugin without validating what it returns.
 void assert_rescorer_conforms(const RescorerPlugin& plugin,
                               const std::vector<std::string>& words = {},
                               const std::string& lang = "");
