@@ -599,7 +599,10 @@ std::vector<const rescorer::LatticeRescorer*> get_rescorers(const std::string& c
 ///      shared cache on first use.
 /// While step 2 runs, no thread calls a free function of this library or
 /// builds a G2P. A program that needs other calls from more than one thread
-/// puts its library calls behind a mutex of its own.
+/// puts its library calls behind a mutex of its own. Every lexicon setter
+/// (register_lexicon, set_lexicon_directory, use_packaged_lexicons,
+/// clear_lexicons) drops the whole lexicon cache, so call them all before
+/// the first transcribe call of step 1.
 void register_normalize_plugin(const std::string& name, std::shared_ptr<NormalizePlugin> plugin);
 void register_syllabifier_plugin(const std::string& name, std::shared_ptr<SyllabifierPlugin> plugin);
 void register_stress_plugin(const std::string& name, std::shared_ptr<StressPlugin> plugin);
@@ -625,6 +628,13 @@ void set_data_directory(const std::string& path);
 class FileNotFoundError : public std::runtime_error {
 public:
     explicit FileNotFoundError(const std::string& message) : std::runtime_error(message) {}
+};
+
+/// ``LookupError``, which lexicon.py use_packaged_lexicons raises for a code
+/// that no packaged lexicon provider serves.
+class LookupError : public std::runtime_error {
+public:
+    explicit LookupError(const std::string& message) : std::runtime_error(message) {}
 };
 
 void register_lexicon(const std::string& code, const std::string& source);
@@ -663,7 +673,52 @@ split_weighted_graphemes(const boost::property_tree::ptree& raw_graphemes);
 /// lexicon.py set_lexicon_dir: a leading ~ in *path* is expanded, as it is in
 /// $ORTHOGRAPHY2IPA_LEXICON_DIR.
 void set_lexicon_directory(const std::string& path);
+/// lexicon.py clear_lexicons: forgets every registered lexicon, the lexicon
+/// dir, the discovered packaged-lexicon providers and the enabled ones.
 void clear_lexicons();
+/// lexicon.py use_packaged_lexicons: enables the packaged lexicon of every
+/// discovered provider, or of the providers that serve *codes* (each resolved
+/// as get() resolves it), and returns every enabled resolved code, sorted. A
+/// packaged lexicon ranks below register_lexicon and the lexicon dir, and above
+/// the rules; clear_lexicons disables it. Throws LookupError when a code in
+/// *codes* has no provider. Finding a provider enables nothing: only this call
+/// does.
+///
+/// Python discovers providers through the ``orthography2ipa.lexicons`` entry
+/// points. The port reads a search path instead, once, on the first call of
+/// this function or of packaged_lexicon_sources (and again after
+/// clear_lexicons):
+///   - $ORTHOGRAPHY2IPA_PACKAGED_LEXICONS, a ':'-separated list of roots, in
+///     order (empty entries are skipped, a leading ~ is expanded); set to the
+///     empty string, it names no root;
+///   - when that variable is unset, the o2i-lexicons directory beside the
+///     default spec data directory: <prefix>/share/o2i-lexicons for an
+///     install.
+/// A root has the layout of the o2i-lexicons package's data directory,
+/// ``<root>/<code>/<source>.tsv``. Each directory under a root that holds a
+/// ``*.tsv`` file is one provider, named for the directory as an entry point
+/// is named for its code. Its lexicon is the one ``*.tsv`` file in it, as
+/// o2i_lexicons.tsv_path returns it; a provider with more than one fails and
+/// serves nothing. A provider whose name does not resolve exactly (see
+/// resolves_exactly) is skipped. When two providers serve one spec, the one
+/// named for the exact resolved code wins, then the earlier root, then the
+/// name. Skipped and failing providers are reported on stderr with the
+/// reference's warning text.
+///
+/// A root that does not exist, that is a file, or that the process cannot
+/// list is skipped with no message. Discovery throws
+/// std::filesystem::filesystem_error when the process cannot read the status
+/// of a root or of a directory in it: a root under a directory it cannot
+/// search, or a root it can list but not search, which fails on
+/// <root>/<code>. It throws std::runtime_error ("Could not determine home
+/// directory.") for a ``~user`` entry whose user is unknown. Neither is a
+/// LookupError.
+std::vector<std::string> use_packaged_lexicons();
+std::vector<std::string> use_packaged_lexicons(const std::vector<std::string>& codes);
+/// lexicon.py packaged_lexicon_sources: the discovered providers as
+/// {resolved code: local file}. Enables nothing; a failing provider is left
+/// out.
+std::map<std::string, std::string> packaged_lexicon_sources();
 std::vector<std::string> available_lexicon_codes();
 std::map<std::string, std::string> get_lexicon(const std::string& code);
 std::optional<std::string> lexicon_source(const std::string& code);

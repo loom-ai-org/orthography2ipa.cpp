@@ -24,10 +24,12 @@
 #include <cmath>
 #include <filesystem>
 #include <fstream>
+#include <iostream>
 #include <cstdlib>
 #include <set>
 #include <sstream>
 #include <stdexcept>
+#include <tuple>
 #include <regex>
 #include <mutex>
 #include <pwd.h>
@@ -64,6 +66,16 @@ std::optional<std::string> lexicon_directory;
 // One loaded lexicon per resolved code, shared with every caller that reads
 // it. A setter replaces or drops the entry; it never edits a loaded map.
 std::map<std::string, std::shared_ptr<const std::map<std::string, std::string>>> lexicon_cache;
+// lexicon.py _PACKAGED and _ENABLED: the packaged-lexicon providers by resolved
+// code, unset until the first discovery, and the resolved codes whose packaged
+// lexicon the caller enabled.
+struct PackagedProvider {
+    std::string name;        // the directory name, which is the entry point's name
+    std::size_t root;        // the position of its root in the search path
+    fs::path directory;
+};
+std::optional<std::map<std::string, PackagedProvider>> packaged_providers_found;
+std::set<std::string> enabled_packaged;
 std::map<std::string, std::shared_ptr<NormalizePlugin>> normalize_plugins;
 // registry.py _discover_syllabifiers over the package's own entry point,
 // `silabificador = orthography2ipa.syllabifiers:SilabificadorSyllabifier`:
@@ -959,6 +971,110 @@ std::optional<fs::path> lexicon_dir_file(const std::string& code) {
     return std::nullopt;
 }
 
+// lexicon.py _LOG.warning. The reference configures no handler, so Python's
+// last-resort handler writes the message alone to stderr.
+void warn(const std::string& message) { std::cerr << message << '\n'; }
+
+bool is_tsv_name(const std::string& name) { return name.size() >= 4 && name.compare(name.size() - 4, 4, ".tsv") == 0; }
+
+// Path(directory).glob("*.tsv"), sorted.
+std::vector<fs::path> tsv_files(const fs::path& directory) {
+    std::vector<fs::path> files;
+    std::error_code ec;
+    for (const auto& entry : fs::directory_iterator(directory, ec))
+        if (is_tsv_name(entry.path().filename().string())) files.push_back(entry.path());
+    std::sort(files.begin(), files.end());
+    return files;
+}
+
+// The roots that stand in for the installed distributions: the entries of
+// $ORTHOGRAPHY2IPA_PACKAGED_LEXICONS, split on ':', in order; when the variable
+// is unset, the o2i-lexicons directory beside the default spec data directory
+// (<prefix>/share/o2i-lexicons for an install).
+std::vector<fs::path> packaged_lexicon_roots() {
+    std::vector<fs::path> roots;
+    if (const char* env = std::getenv("ORTHOGRAPHY2IPA_PACKAGED_LEXICONS")) {
+        std::stringstream parts(env);
+        for (std::string part; std::getline(parts, part, ':');)
+            if (!part.empty()) roots.emplace_back(expand_user(part));
+    } else if (const std::string data = schema::default_data_directory(); !data.empty()) {
+        roots.push_back((fs::path(data) / "..").lexically_normal() / "o2i-lexicons");
+    }
+    return roots;
+}
+
+// lexicon.py _packaged_providers, over the search path instead of the
+// orthography2ipa.lexicons entry points. Each directory under a root that holds
+// a *.tsv file is one provider, named for the directory. A name must resolve
+// exactly; when two providers serve one spec, the one named for the exact
+// resolved code wins, then the earlier root, then the name.
+const std::map<std::string, PackagedProvider>& packaged_providers() {
+    if (packaged_providers_found) return *packaged_providers_found;
+    std::vector<std::pair<std::string, PackagedProvider>> candidates;
+    const auto roots = packaged_lexicon_roots();
+    for (std::size_t root = 0; root < roots.size(); ++root) {
+        if (!path_is_dir(roots[root])) continue;
+        std::vector<fs::path> directories;
+        std::error_code ec;
+        for (const auto& entry : fs::directory_iterator(roots[root], ec))
+            if (path_is_dir(entry.path()) && !tsv_files(entry.path()).empty()) directories.push_back(entry.path());
+        std::sort(directories.begin(), directories.end());
+        for (const auto& directory : directories) {
+            const std::string name = directory.filename().string();
+            if (resolves_exactly(name))
+                candidates.push_back({resolve(name), {name, root, directory}});
+            else
+                warn("lexicon provider " + detail::py_repr(name) + " names no registered spec; skipped");
+        }
+    }
+    std::stable_sort(candidates.begin(), candidates.end(), [](const auto& a, const auto& b) {
+        return std::make_tuple(a.second.name != a.first, a.second.root, a.second.name) <
+               std::make_tuple(b.second.name != b.first, b.second.root, b.second.name);
+    });
+    std::map<std::string, PackagedProvider> found;
+    for (const auto& [code, provider] : candidates) {
+        if (const auto it = found.find(code); it != found.end()) {
+            const std::string kept = detail::py_repr(it->second.directory.string());
+            warn("lexicon providers " + kept + " and " + detail::py_repr(provider.directory.string()) +
+                 " both serve " + detail::py_repr(code) + "; using " + kept);
+        } else {
+            found.emplace(code, provider);
+        }
+    }
+    packaged_providers_found = std::move(found);
+    return *packaged_providers_found;
+}
+
+// lexicon.py _packaged_path, with o2i_lexicons.tsv_path as the provider: the
+// one *.tsv file in the provider's directory. No file, or more than one, is a
+// failing provider; it is logged and serves nothing.
+std::optional<fs::path> packaged_path(const std::string& code) {
+    const auto& providers = packaged_providers();
+    const auto it = providers.find(code);
+    if (it == providers.end()) return std::nullopt;
+    const PackagedProvider& provider = it->second;
+    const auto files = tsv_files(provider.directory);
+    std::string failure;
+    if (files.empty()) {
+        failure = "no packaged lexicon for " + detail::py_repr(provider.name);
+    } else if (files.size() > 1) {
+        failure = detail::py_repr(provider.name) + " has " + std::to_string(files.size()) +
+                  " lexicon files, expected one: ";
+        for (std::size_t i = 0; i < files.size(); ++i) failure += (i ? ", " : "") + files[i].filename().string();
+    }
+    if (!failure.empty()) {
+        warn("lexicon provider " + detail::py_repr(provider.directory.string()) + " failed for " +
+             detail::py_repr(code) + ": " + failure);
+        return std::nullopt;
+    }
+    if (!path_is_file(files.front())) {
+        warn("lexicon provider " + detail::py_repr(provider.directory.string()) + " returned " +
+             files.front().string() + ", which is not a file");
+        return std::nullopt;
+    }
+    return files.front();
+}
+
 // Path.read_text(encoding="utf-8"): strict UTF-8, which raises
 // UnicodeDecodeError with the codec's message, then universal newlines, which
 // turn \r\n and a lone \r into \n. The error position counts bytes from the
@@ -1772,11 +1888,45 @@ const LanguageSpec& get(const std::string& code) {
     const std::string canonical = resolve(code); std::set<std::string> loading; load_raw(canonical, loading); return cache.at(canonical);
 }
 void set_data_directory(const std::string& path) { data_dir = path; cache.clear(); }
-void register_lexicon(const std::string& code, const std::string& source) { registered_lexicons[resolve(code)] = source; lexicon_cache.erase(resolve(code)); }
+void register_lexicon(const std::string& code, const std::string& source) { registered_lexicons[resolve(code)] = source; lexicon_cache.clear(); }
 void set_lexicon_directory(const std::string& path) { lexicon_directory = expand_user(path); lexicon_cache.clear(); }
-void clear_lexicons() { registered_lexicons.clear(); lexicon_directory.reset(); lexicon_cache.clear(); }
+void clear_lexicons() {
+    registered_lexicons.clear(); lexicon_directory.reset(); lexicon_cache.clear();
+    packaged_providers_found.reset(); enabled_packaged.clear();
+}
+std::vector<std::string> use_packaged_lexicons() {
+    for (const auto& [code, _] : packaged_providers()) enabled_packaged.insert(code);
+    lexicon_cache.clear();
+    return {enabled_packaged.begin(), enabled_packaged.end()};
+}
+std::vector<std::string> use_packaged_lexicons(const std::vector<std::string>& codes) {
+    const auto& providers = packaged_providers();
+    std::set<std::string> wanted;
+    for (const auto& code : codes) wanted.insert(resolve(code));
+    std::vector<std::string> missing, installed;
+    for (const auto& code : wanted) if (!providers.count(code)) missing.push_back(code);
+    for (const auto& [code, _] : providers) installed.push_back(code);
+    if (!missing.empty()) {
+        const auto list = [](const std::vector<std::string>& values) {
+            std::string out = "[";
+            for (std::size_t i = 0; i < values.size(); ++i) out += (i ? ", " : "") + detail::py_repr(values[i]);
+            return out + "]";
+        };
+        throw LookupError("no installed package provides a lexicon for " + list(missing) +
+                          "; installed: " + (installed.empty() ? "nothing" : list(installed)));
+    }
+    enabled_packaged.insert(wanted.begin(), wanted.end());
+    lexicon_cache.clear();
+    return {enabled_packaged.begin(), enabled_packaged.end()};
+}
+std::map<std::string, std::string> packaged_lexicon_sources() {
+    std::map<std::string, std::string> found;
+    for (const auto& [code, _] : packaged_providers())
+        if (const auto path = packaged_path(code)) found.emplace(code, path->string());
+    return found;
+}
 std::vector<std::string> available_lexicon_codes() {
-    std::set<std::string> codes; for (const auto& [code, _] : registered_lexicons) codes.insert(code);
+    std::set<std::string> codes(enabled_packaged); for (const auto& [code, _] : registered_lexicons) codes.insert(code);
     const std::string dir = lexicon_dir();
     if (!dir.empty() && path_is_dir(dir)) for (const auto& e : fs::directory_iterator(dir)) if (e.path().extension() == ".tsv") codes.insert(e.path().stem().string());
     return {codes.begin(), codes.end()};
@@ -1786,6 +1936,7 @@ std::optional<std::string> lexicon_source(const std::string& code) {
     const auto canonical = resolve(code);
     if (auto it = registered_lexicons.find(canonical); it != registered_lexicons.end()) return it->second;
     if (const auto file = lexicon_dir_file(canonical)) return file->string();
+    if (enabled_packaged.count(canonical)) if (const auto file = packaged_path(canonical)) return file->string();
     return std::nullopt;
 }
 std::optional<std::string> lexicon_path(const std::string& code) {
@@ -1793,6 +1944,7 @@ std::optional<std::string> lexicon_path(const std::string& code) {
     if (auto it = registered_lexicons.find(canonical); it != registered_lexicons.end())
         return resolve_lexicon_source(it->second);
     if (const auto file = lexicon_dir_file(canonical)) return file->string();
+    if (enabled_packaged.count(canonical)) if (const auto file = packaged_path(canonical)) return file->string();
     return std::nullopt;
 }
 std::vector<std::pair<std::size_t, std::string>> validate_lexicon(const std::string& text) {
