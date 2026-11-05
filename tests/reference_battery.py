@@ -165,6 +165,9 @@ PINNED["af"] += ["vaart"]
 PINNED["nl-NL-x-polder"] += ["vaart", "betalen", "verkopen"]
 PINNED["nl-NL-x-limburg"] += ["vaart", "geloven", "berg"]
 PINNED["nl-NL-x-groninge"] += ["verkopen"]
+# Catalan ⟨gu⟩ reads [ɡu] before a consonant in the positional table only, so
+# its vowel is written and the stress count keeps its syllable.
+PINNED["ca"] = ["vingut", "vengut"]
 # pt-BR inserts [i] after a stop that follows the stressed vowel, and the mark
 # stays on the stressed syllable (pacto [ˈpakitu]); ⟨ck⟩ takes no vowel; an
 # obstruent cluster that opens a stressed word takes [i] (pseudo). The

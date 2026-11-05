@@ -700,6 +700,9 @@ int main() {
         assert(G2P("pt-BR").transcribe_word("rapto") == "\u02c8\u0281apitu");
         assert(G2P("pt-BR-x-sul").transcribe_word("capto") == "\u02c8kaptu");
         assert(G2P("pt-BR").transcribe_word("advogado") == "ad\u0361\u0292ivo\u02c8\u0261adu");
+        // A syllable folds only when every vowel character in it is inserted:
+        // the rule adds the tilde of [iw̃], but its [i] is written, so it stays.
+        assert(G2P("pt-BR-x-recife").transcribe_word("oilmr") == "o\u02c8iw\u0303");
         const auto candidates = G2P("pt-BR").word_candidates("pacto", 3);
         assert(candidates.size() == 3);
         assert(candidates[0] == "\u02c8pakitu");
