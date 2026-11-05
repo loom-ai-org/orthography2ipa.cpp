@@ -219,6 +219,12 @@
   },
   "allophone_rules": [
     {
+      "id": "PT_LEX_REDUCED_O",
+      "phonemes": [],
+      "surface": "u",
+      "notes": "DISABLED for Mozambican Portuguese. PT_LEX_REDUCED_O gives ⟨porque⟩ the [u] that an unstressed ⟨o⟩ reduces to in pt-PT. This spec keeps an unstressed ⟨o⟩ as [o]: its positional map gives pretonic and unstressed-nucleus ⟨o⟩ [o]. So the reduced vowel does not apply, and porque keeps the reading of the rules. The vowel of porque in this variety has no variety-specific source. The Portal da Língua Portuguesa action=fonetica readings are output of the Ashby et al. (2012) rule-based generator, and they were not used."
+    },
+    {
       "id": "PT_LEX_OPEN_E_SUFFIX",
       "phonemes": [],
       "surface": "e",

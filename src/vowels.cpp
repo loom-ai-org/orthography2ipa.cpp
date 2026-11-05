@@ -252,6 +252,9 @@ const std::string SYLLABIC_MARKS = "̩̍";
 
 bool is_orthographic_vowel(char32_t ch) { return is_orthographic_vowel_u32(ch); }
 bool is_ipa_vowel(char32_t ch) { return is_ipa_vowel_u32(ch); }
+bool is_ipa_vowel_symbol(char32_t ch) {
+    return uni::combining(ch) == 0 && contains_codepoint(IPA_VOWELS, ch);
+}
 bool is_front_vowel(const std::u32string& ch) { return vowel_axis(ch) == std::string_view("front"); }
 bool is_back_vowel(const std::u32string& ch) { return vowel_axis(ch) == std::string_view("back"); }
 bool is_nucleus_only(const std::u32string& ipa) { return is_nucleus_only_u32(ipa); }

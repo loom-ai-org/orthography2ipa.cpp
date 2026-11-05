@@ -4,6 +4,9 @@
   "script": "Latin",
   "graphemes_base": "pt-PT-x-medieval",
   "graphemes": {
+    "ã": [
+      "ɐ̃"
+    ],
     "ãi": [
       "ɐ̃j̃"
     ],
@@ -370,7 +373,7 @@
       "followed_by_phoneme": [
         "̃"
       ],
-      "notes": "Coda-conditioned vowel nasalisation, general Portuguese (Mateus & d'Andrade 2000: ch.2, 'Nasality'): a vowel followed by a tautosyllabic (coda) nasal ⟨m/n⟩ nasalises while the nasal consonant is absorbed into the nasal vowel (campo, canto, ambos). The nasalisation itself is modelled pre-lexically by the positional 'm'/'n' before_consonant/word_final → [̃] (U+0303 combining tilde) map, which deletes the coda nasal and nasalises the preceding vowel by concatenation. This rule supplies only the accompanying VOWEL-QUALITY shift for ⟨a⟩: the nasal low vowel is the central [ɐ̃] (not [ã]), so the stressed oral [a] selected by the positional map raises to [ɐ] before the tilde — [ɐ]+[̃] = the nasal vowel [ɐ̃] (campo [ˈkɐ̃pu], cantar [kɐ̃ˈtaɾ]). The surface is the ORAL base [ɐ]; the nasal tilde comes only from the separate m/n slot, so no vowel is ever double-tilded. It fires ONLY when the next lattice slot is the nasalisation tilde, so an INTERVOCALIC (onset) ⟨m/n⟩ — which stays a consonant and leaves the vowel oral — is untouched (cama [ˈkamɐ], ano [ˈɐnu]). The word-initial ⟨a⟩ already selects [ɐ] (ambos [ˈɐ̃buʃ]), which this rule leaves unchanged."
+      "notes": "Coda-conditioned vowel nasalisation, general Portuguese (Mateus & d'Andrade 2000: ch.2, 'Nasality'): a vowel followed by a tautosyllabic (coda) nasal ⟨m/n⟩ nasalises while the nasal consonant is absorbed into the nasal vowel (campo, canto, ambos). The nasalisation itself is modelled pre-lexically by the positional 'm'/'n' before_consonant/word_final → [̃] (U+0303 combining tilde) map, which deletes the coda nasal and nasalises the preceding vowel by concatenation. This rule supplies only the accompanying VOWEL-QUALITY shift for ⟨a⟩: the nasal low vowel is the central [ɐ̃] (not [ã]), so the stressed oral [a] selected by the positional map raises to [ɐ] before the tilde — [ɐ]+[̃] = the nasal vowel [ɐ̃] (campo [ˈkɐ̃pu], cantar [kɐ̃ˈtaɾ]). The surface is the ORAL base [ɐ]; the nasal tilde comes only from the separate m/n slot, so no vowel is ever double-tilded. It fires ONLY when the next lattice slot is the nasalisation tilde, so an INTERVOCALIC (onset) ⟨m/n⟩ — which stays a consonant and leaves the vowel oral — is untouched (cama [ˈkamɐ], ano [ˈɐnu]). The word-initial ⟨a⟩ already selects [ɐ] (ambos [ˈɐ̃buʃ]), which this rule leaves unchanged. The letter ⟨ã⟩ writes the same nasal vowel, so graphemes maps ⟨ã⟩ to [ɐ̃] (maçã [mɐˈsɐ̃], lã [ˈlɐ̃]). Cruz-Ferreira (1999, Handbook of the IPA, p. 127) lists five nasalized vowels, [ĩ ẽ ɐ̃ õ ũ] (antro [ˈɐ̃tɾu]); there is no open nasal [ã]."
     },
     {
       "id": "PT_NASAL_E_RAISE",
@@ -557,6 +560,19 @@
         "fresco"
       ],
       "notes": "Lexically CLOSE stressed ⟨e⟩ = [e] for this curated set, overriding the pre-lexical default (open [ɛ] first in the European standard). Stressed mid-vowel height is a lexical fact in Portuguese (⟨fresco⟩ [ˈfɾe(ʃ)ku] close vs many open ⟨e⟩ lexemes spelled alike; Mateus & d'Andrade 2000: ch.3; Vigário 2003). Pins only the vowel height, inherits cleanly. SEED LIST — documented residual for the tail."
+    },
+    {
+      "id": "PT_LEX_REDUCED_O",
+      "phonemes": [
+        "o",
+        "ɔ"
+      ],
+      "surface": "u",
+      "stress": "stressed",
+      "word": [
+        "porque"
+      ],
+      "notes": "⟨porque⟩, the conjunction and adverb, is [ˈpuɾkɨ]: the stressed ⟨o⟩ is the reduced [u], not the default stressed [ɔ]. The WikiPron pt-PT gold has porque p u ɾ k ɨ; it is the output of the en.wiktionary {{pt-IPA}} module from the human respelling pt=purque. The CLUP dialect transcriptions, which are speech data, write ˈpuɾkɨ in all 13 tokens, and pt.wiktionary gives Portugal /ˈpuɾ.kɨ/. The Portal da Língua Portuguesa Dicionário fonético (index.php?action=pronunciation) agrees, with por·que advérbio 'puɾkɨ and por·que conjunção 'puɾkɨ, but it is a resource with no documented provenance. The Portal's other resource, the Dicionário Fonético 'Pronúncia indicativa' (index.php?action=fonetica, entry 24295), gives Lisboa padrão pˈoɾ.kɨ. That page is marked 'Recurso em teste' and its readings come from the rule-based generator of Ashby et al. (2012, 'A Rule Based Pronunciation Generator and Regional Accent Databank for Portuguese', Interspeech 2012), so it is not lexicographic evidence. The [u] is the vowel that an unstressed ⟨o⟩ reduces to in this spec (positional map: pretonic and unstressed-nucleus ⟨o⟩ [u]). A child that keeps an unstressed ⟨o⟩ as [o] disables this rule. The rule changes only the vowel, so each child keeps its own consonants. porquê is a different word with its own stress, /puɾ.ˈke/ in pt.wiktionary and p u ɾ k e in WikiPron pt-PT, and the rule does not reach it."
     },
     {
       "id": "PT_LEX_OPEN_O",
@@ -819,11 +835,11 @@
     {
       "id": "PT_CODA_S_BEFORE_ZH",
       "name": "coda-s-deletion-before-zh",
-      "left_context": "[ʃ]$",
+      "left_context": "([aeiouyɛɔəɨʉɯæɐʌɒœøɪʏʊɤɵɞɑɘɚɜɝɶãõẽĩũ].*)[ʃ]$",
       "right_context": "^[ˈˌ]?ʒ",
-      "transform": "",
+      "transform": "\\1",
       "obligatory": true,
-      "notes": "A word-final coda sibilant is deleted before a word that starts with /ʒ/: \"Syllable-final /ʃ/ occurs as [ʒ] before a voiced consonant (except before /ʒ/ itself, where it is deleted)\" (Cruz-Ferreira 1999: 128). So os jogos is [o ˈʒɔɡuʃ] and mais giro is [ˈmaj ˈʒiɾu], not [oʒ ˈʒɔɡuʃ]. PT_CODA_S_VOICING leaves /ʒ/ out of its voiced class, so the two rules never compete. Only the cross-word case is encoded here; a word-internal coda sibilant before /ʒ/ (desgelo, desjejum) is not voiced by any rule of this spec either."
+      "notes": "A word-final coda sibilant is deleted before a word that starts with /ʒ/: \"Syllable-final /ʃ/ occurs as [ʒ] before a voiced consonant (except before /ʒ/ itself, where it is deleted)\" (Cruz-Ferreira 1999: 128). So os jogos is [u ˈʒɔɡuʃ] and mais giro is [ˈmaj ˈʒiɾu], not [uʒ ˈʒɔɡuʃ]. The article is unstressed [uʃ]: the same page writes qual dos dois era o as [kṷal duʒ doiz ˈɛɾɔ]. PT_CODA_S_VOICING leaves /ʒ/ out of its voiced class, so the two rules never compete. Only the cross-word case is encoded here; a word-internal coda sibilant before /ʒ/ (desgelo, desjejum) is not voiced by any rule of this spec either. The source speaks of a syllable-final /ʃ/, so the left context requires a vowel before the [ʃ] in the same word, and the group keeps that part of the word. A word that is only [ʃ], such as the letter s or an abbreviation, has no syllable, and the rule leaves it: s jogos keeps its [ʃ], where a deletion would leave a word with no segment."
     },
     {
       "id": "PT_CODA_S_VOICING",

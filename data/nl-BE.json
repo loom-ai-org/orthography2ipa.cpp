@@ -5,11 +5,45 @@
   "graphemes_base": "nl-NL",
   "allophones_base": "nl-NL",
   "graphemes": {
+    "ch": [
+      "x"
+    ],
+    "berg": [
+      "bɛrɣ",
+      "bɛrx"
+    ],
+    "brecht": [
+      "brɛxt"
+    ],
     "w": [
       "w"
     ]
   },
   "positional_graphemes": {
+    "g": {
+      "word_final": [
+        "x"
+      ],
+      "default": [
+        "ɣ"
+      ]
+    },
+    "berg": {
+      "word_final": [
+        "bɛrx"
+      ],
+      "default": [
+        "bɛrɣ"
+      ]
+    },
+    "sch": {
+      "word_final": [
+        "s"
+      ],
+      "default": [
+        "sx"
+      ]
+    },
     "ieuw": {
       "before_vowel": [
         "iw"
@@ -36,6 +70,9 @@
     }
   },
   "allophones": {
+    "x": [
+      "x"
+    ],
     "ɣ": [
       "ɣ",
       "ʝ"
@@ -49,7 +86,7 @@
     ]
   },
   "parent": "nl-NL",
-  "notes": "Flemish / Belgian Dutch (Vlaams). Alveolar /r/ [r] in most varieties (vs. NL uvular [ʀ]). /ɣ/ (voiced velar fricative) more robust than in NL Dutch. Considered more conservative than Netherlands Dutch in some features. Strong dialect continuum from West-Flemish to Limburgish. Source: König & van der Auwera (1994). ⟨w⟩ (Verhoeven 2005, JIPA 35(2)): \"[w] has a labial-velar articulation rather than labiodental in many accents of Netherlandic Dutch\" (p. 245), with \"w waːʀ̥ waar 'true'\" in the word list (p. 244). So ⟨w⟩ is [w], against the [ʋ] of nl-NL, and the consonant that ⟨ieuw eeuw uw⟩ give before a vowel is [w] too: leeuwen [leːwən], nieuwe [niwə], duwen [dywən]. Paardekooper (1987, ABN-uitspraakgids, p. XVIII) notes the same bilabial w \"in veel zuidelijke dialecten\".",
+  "notes": "Flemish / Belgian Dutch (Vlaams). Alveolar /r/ [r] in most varieties (vs. NL uvular [ʀ]). /ɣ/ (voiced velar fricative) more robust than in NL Dutch. Considered more conservative than Netherlands Dutch in some features. Strong dialect continuum from West-Flemish to Limburgish. Source: König & van der Auwera (1994). ⟨w⟩ (Verhoeven 2005, JIPA 35(2)): \"[w] has a labial-velar articulation rather than labiodental in many accents of Netherlandic Dutch\" (p. 245), with \"w waːʀ̥ waar 'true'\" in the word list (p. 244). So ⟨w⟩ is [w], against the [ʋ] of nl-NL, and the consonant that ⟨ieuw eeuw uw⟩ give before a vowel is [w] too: leeuwen [leːwən], nieuwe [niwə], duwen [dywən]. Paardekooper (1987, ABN-uitspraakgids, p. XVIII) notes the same bilabial w \"in veel zuidelijke dialecten\". ⟨g ch⟩ (Verhoeven 2005, p. 244): \"Belgian Dutch has a voiced and voiceless velar fricative: these are absent in the Netherlands\", with \"x xɛil chijl\" and \"ɣ ɣɛil geil\" in the word list. So nl-BE restates the velar values of ⟨g ch sch berg brecht⟩ against the uvular [χ] of nl-NL. ⟨ee eu oo⟩ and the open-syllable ⟨e o⟩ (Verhoeven 2005, pp. 245-246): \"In Belgian Dutch, however, they are always monophthongs\". So nl-BE disables the six NL_MID_TENSE_* rules by id and keeps [eː øː oː] against the closing diphthongs [ei øy ou] of nl-NL.",
   "quality": "skeleton",
   "script_type": "alphabet",
   "sources": [
@@ -90,5 +127,43 @@
     "longitude": 4.5,
     "source": "wikidata",
     "notes": "the Flemish Region — the Dutch-speaking part of Belgium, not Belgium as a whole. A region-level point. [Wikidata Q9337 P625]"
-  }
+  },
+  "allophone_rules": [
+    {
+      "id": "NL_MID_TENSE_CENTRING_BEFORE_R_E",
+      "phonemes": [],
+      "surface": "",
+      "notes": "Verhoeven (2005, JIPA 35(2), pp. 245-246): \"The main difference between Belgian Dutch and Netherlandic Dutch has to do with the pronunciation of the half-close long vowels [eː], [øː] and [oː]. In the Netherlands, these are frequently diphthongized. In Belgian Dutch, however, they are always monophthongs.\" So nl-BE disables the inherited nl-NL rule and keeps the monophthong."
+    },
+    {
+      "id": "NL_MID_TENSE_CENTRING_BEFORE_R_OE",
+      "phonemes": [],
+      "surface": "",
+      "notes": "Verhoeven (2005, JIPA 35(2), pp. 245-246): \"The main difference between Belgian Dutch and Netherlandic Dutch has to do with the pronunciation of the half-close long vowels [eː], [øː] and [oː]. In the Netherlands, these are frequently diphthongized. In Belgian Dutch, however, they are always monophthongs.\" So nl-BE disables the inherited nl-NL rule and keeps the monophthong."
+    },
+    {
+      "id": "NL_MID_TENSE_CENTRING_BEFORE_R_O",
+      "phonemes": [],
+      "surface": "",
+      "notes": "Verhoeven (2005, JIPA 35(2), pp. 245-246): \"The main difference between Belgian Dutch and Netherlandic Dutch has to do with the pronunciation of the half-close long vowels [eː], [øː] and [oː]. In the Netherlands, these are frequently diphthongized. In Belgian Dutch, however, they are always monophthongs.\" So nl-BE disables the inherited nl-NL rule and keeps the monophthong."
+    },
+    {
+      "id": "NL_MID_TENSE_CLOSING_DIPHTHONG_E",
+      "phonemes": [],
+      "surface": "",
+      "notes": "Verhoeven (2005, JIPA 35(2), pp. 245-246): \"The main difference between Belgian Dutch and Netherlandic Dutch has to do with the pronunciation of the half-close long vowels [eː], [øː] and [oː]. In the Netherlands, these are frequently diphthongized. In Belgian Dutch, however, they are always monophthongs.\" So nl-BE disables the inherited nl-NL rule and keeps the monophthong."
+    },
+    {
+      "id": "NL_MID_TENSE_CLOSING_DIPHTHONG_OE",
+      "phonemes": [],
+      "surface": "",
+      "notes": "Verhoeven (2005, JIPA 35(2), pp. 245-246): \"The main difference between Belgian Dutch and Netherlandic Dutch has to do with the pronunciation of the half-close long vowels [eː], [øː] and [oː]. In the Netherlands, these are frequently diphthongized. In Belgian Dutch, however, they are always monophthongs.\" So nl-BE disables the inherited nl-NL rule and keeps the monophthong."
+    },
+    {
+      "id": "NL_MID_TENSE_CLOSING_DIPHTHONG_O",
+      "phonemes": [],
+      "surface": "",
+      "notes": "Verhoeven (2005, JIPA 35(2), pp. 245-246): \"The main difference between Belgian Dutch and Netherlandic Dutch has to do with the pronunciation of the half-close long vowels [eː], [øː] and [oː]. In the Netherlands, these are frequently diphthongized. In Belgian Dutch, however, they are always monophthongs.\" So nl-BE disables the inherited nl-NL rule and keeps the monophthong."
+    }
+  ]
 }

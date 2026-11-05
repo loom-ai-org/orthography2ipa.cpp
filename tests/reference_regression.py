@@ -422,7 +422,7 @@ def sentence_cases():
         ("pt-PT", "os irmãos"), ("pt-PT", "não me digas"), ("pt-PT", "ele deu-me o livro"),
         ("pt-PT", "os jogos"), ("pt-PT", "três jovens"),
         ("pt-PT-x-lisbon", "os jogos"), ("pt-MO", "os jogos"), ("mzs", "os jogos"),
-        ("ext-PT-x-barranco", "dez jovens"),
+        ("ext-PT-x-barranco", "dez jovens"), ("pt-PT", "s jogos"), ("pt-PT", "S João"),
         ("es-ES", "un buen baile"), ("es-ES", "en casa"), ("es-ES", "sin par"),
         ("es-MX", "un coche"), ("es-CU", "con son"), ("es-CU", "canción vieja"),
         ("es-VE", "con música"), ("ext", "cantan pola"),

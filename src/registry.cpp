@@ -35,11 +35,34 @@ std::string py_lower(const std::string& text) {
 }
 
 // registry.py _PRIVATE_USE: the singleton "-x-", matched case-insensitively.
-bool has_private_use(const std::string& code) {
+// The offset of its first match, or npos.
+std::size_t private_use_at(const std::string& code) {
     for (std::size_t at = 0; at + 3 <= code.size(); ++at)
         if (code[at] == '-' && (code[at + 1] == 'x' || code[at + 1] == 'X') && code[at + 2] == '-')
-            return true;
-    return false;
+            return at;
+    return std::string::npos;
+}
+
+bool has_private_use(const std::string& code) {
+    return private_use_at(code) != std::string::npos;
+}
+
+// The lowered forms a private-use tag matches a key by: the tag itself, and
+// the tag without a script subtag that is the language's IANA Suppress-Script
+// (langcodes DEFAULT_SCRIPTS). RFC 5646 §3.1.9 says such a script adds no
+// information, so pt-Latn-BR-x-sp names pt-BR-x-sp. Only the part before the
+// private use goes to langcodes, unnormalized, so no macrolanguage folding
+// happens and a private-use subtag over 8 characters never reaches the parser.
+std::vector<std::string> private_use_forms(const std::string& code) {
+    std::vector<std::string> forms{py_lower(code)};
+    const std::size_t at = private_use_at(code);
+    const std::string head = code.substr(0, at);
+    const auto parsed = langcodes::parse(head, /*normalize=*/false);
+    if (!parsed) return forms;
+    const std::string bare = langcodes::simplify_script(parsed.lang).to_tag();
+    if (!bare.empty() && py_lower(bare) != py_lower(head))
+        forms.push_back(py_lower(bare + "-x-" + code.substr(at + 3)));
+    return forms;
 }
 
 bool in_catalog(const std::vector<std::string>& available, const std::string& code) {
@@ -62,13 +85,15 @@ std::string resolve_code(const std::string& code_in, const std::vector<std::stri
     }
     if (in_catalog(available, code)) return code;
     // BCP-47 tags are case-insensitive and langcodes never saw a private-use
-    // tag, so its case is folded here; aliases are tried before catalog codes.
+    // tag, so its case is folded here; aliases are tried before catalog codes,
+    // for each form in turn.
     if (has_private_use(code)) {
-        const std::string folded = py_lower(code);
-        for (const auto& [known, target] : _ALIASES)
-            if (py_lower(known) == folded) return target;
-        for (const auto& known : available)
-            if (py_lower(known) == folded) return known;
+        for (const std::string& folded : private_use_forms(code)) {
+            for (const auto& [known, target] : _ALIASES)
+                if (py_lower(known) == folded) return target;
+            for (const auto& known : available)
+                if (py_lower(known) == folded) return known;
+        }
     }
     // A bare tag names its motherland variety (pt -> pt-PT).
     if (code.find('-') == std::string::npos) {
