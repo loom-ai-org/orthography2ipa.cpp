@@ -54,7 +54,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           repository: TigreGotico/orthography2ipa
-          ref: 55d5c4736693ca2683350c1d880662fbf5d2bea1
+          ref: 665e7716c5e96c1b1e18ac8d74c155dc8b2a00e1
           path: reference
       - name: Place the reference at its sibling path
         run: mv "$GITHUB_WORKSPACE/reference" "$GITHUB_WORKSPACE/../orthography2ipa"

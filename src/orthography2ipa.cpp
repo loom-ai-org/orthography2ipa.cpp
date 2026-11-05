@@ -2222,6 +2222,66 @@ sentence::SentenceLattice G2P::sentence_lattice(const std::string& text,
 
 
 namespace {
+// g2p.py _vowel_offsets: the code-point offsets of the vowel characters.
+std::vector<std::size_t> vowel_offsets(const std::string& ipa) {
+    std::vector<std::size_t> out;
+    const std::u32string text = to_utf32(ipa);
+    for (std::size_t i = 0; i < text.size(); ++i)
+        if (vowels::is_ipa_vowel(text[i])) out.push_back(i);
+    return out;
+}
+
+// g2p.py _fold_inserted_nuclei: the syllables of *ipa* with each inserted
+// nucleus folded into the syllable before it, or nullopt. The stress mark
+// counts syllables from the end of the word, so a nucleus the spelling does
+// not write (an `append` epenthesis) after the stressed one lands the mark
+// one syllable late: pt-BR pacto [ˈpakitu] came out [paˈkitu]. A segment's
+// vowels are inserted when no value the grapheme table or the positional
+// table gives its grapheme holds a vowel; a syllable whose only vowels are
+// inserted joins the syllable before it.
+std::optional<std::vector<std::string>> fold_inserted_nuclei(
+        const LanguageSpec& spec, const Tokenizer& tokenizer, const std::string& word,
+        const std::string& ipa, const IPAPath* path) {
+    if (path == nullptr || path->graphemes.empty() || path->ipa != ipa) return std::nullopt;
+    const auto tokens = tokenizer.grapheme_tokens(word);
+    std::set<std::size_t> inserted;
+    std::size_t offset = 0, t = 0;
+    const std::size_t pairs = std::min(path->graphemes.size(), path->segments.size());
+    for (std::size_t i = 0; i < pairs; ++i) {
+        const std::string& grapheme = path->graphemes[i];
+        const std::string& segment = path->segments[i];
+        while (t < tokens.size() && tokens[t].grapheme != grapheme) ++t;
+        if (t == tokens.size()) return std::nullopt;
+        std::vector<std::string> readings = tokens[t].ipa;
+        if (const auto positional = spec.positional_graphemes.find(grapheme);
+                positional != spec.positional_graphemes.end())
+            for (const auto& [position, values] : positional->second)
+                readings.insert(readings.end(), values.begin(), values.end());
+        const bool written = std::any_of(readings.begin(), readings.end(),
+            [](const std::string& reading) { return !vowel_offsets(reading).empty(); });
+        if (!written)
+            for (const std::size_t at : vowel_offsets(segment)) inserted.insert(offset + at);
+        offset += to_utf32(segment).size();
+        ++t;
+    }
+    if (inserted.empty()) return std::nullopt;
+    const std::vector<std::string> syllables = stress::syllabify_for_mark(ipa, spec);
+    std::vector<std::string> folded;
+    offset = 0;
+    for (const auto& syllable : syllables) {
+        const auto nuclei = vowel_offsets(syllable);
+        const bool only_inserted = std::all_of(nuclei.begin(), nuclei.end(),
+            [&](std::size_t at) { return inserted.count(offset + at) != 0; });
+        if (!folded.empty() && !nuclei.empty() && only_inserted)
+            folded.back() += syllable;
+        else
+            folded.push_back(syllable);
+        offset += to_utf32(syllable).size();
+    }
+    if (folded.size() < syllables.size()) return folded;
+    return std::nullopt;
+}
+
 // g2p.py _finalize_word_ipa: apply the per-path word-final stages to one
 // beam path's *ipa* — the stages that turn a raw beam path into the string
 // transcribe_word emits: computed tone, geminate collapse, word-final
@@ -2238,7 +2298,8 @@ std::string finalize_word_ipa(const LanguageSpec& spec, const std::string& word,
                               const std::string& ipa_in,
                               const std::optional<std::string>& forced_ipa,
                               const IPAPath* path, bool collapse_geminates_flag,
-                              bool apply_stress = true) {
+                              bool apply_stress = true,
+                              const Tokenizer* tokenizer = nullptr) {
     std::string ipa = ipa_in;
     // Computed tone runs first, on the path's own slots: it is the only
     // stage that needs to see which grapheme produced which segment, and
@@ -2303,8 +2364,11 @@ std::string finalize_word_ipa(const LanguageSpec& spec, const std::string& word,
             const auto secondary = stress::secondary_stress_positions(
                 static_cast<int>(sylls.size()), idx, spec);
             const std::vector<int> secondary_indices(secondary.begin(), secondary.end());
+            const auto folded = tokenizer != nullptr
+                ? fold_inserted_nuclei(spec, *tokenizer, word, ipa, path)
+                : std::nullopt;
             ipa = stress::apply_stress_mark(ipa, spec, idx, &sylls,
-                                            /*ipa_syllables=*/nullptr, mark,
+                                            folded ? &*folded : nullptr, mark,
                                             secondary_indices, &spec);
         }
     }
@@ -2485,7 +2549,7 @@ std::vector<std::string> G2P::word_candidates(const std::string& word, std::size
     for (const auto& candidate : raw) {
         const std::string final = unicode_nfc(
             finalize_word_ipa(*spec_, word, candidate.ipa, std::nullopt, &candidate,
-                              /*collapse_geminates_flag=*/true, apply_stress_),
+                              /*collapse_geminates_flag=*/true, apply_stress_, &tokenizer),
             false);
         if (!final.empty() && std::find(out.begin(), out.end(), final) == out.end())
             out.push_back(final);
@@ -2551,7 +2615,7 @@ WordTranscription G2P::transcribe_one(const std::string& word, std::size_t width
         ipa = finalize_word_ipa(*spec_, word, ipa,
                                 forced ? std::optional<std::string>(forced_ipa) : std::nullopt,
                                 paths.empty() ? nullptr : &paths.front(),
-                                /*collapse_geminates_flag=*/true, apply_stress_);
+                                /*collapse_geminates_flag=*/true, apply_stress_, &tokenizer);
     }
     // A whole-word reading still runs the word-final stages (with the geminate
     // collapse skipped): a lexicon or `ph` answer is a READING, not a finished

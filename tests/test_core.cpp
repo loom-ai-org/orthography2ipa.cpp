@@ -83,6 +83,25 @@ int main() {
         assert(!resolves_exactly("pt-Cyrl-BR-x-sp"));
         assert(resolve("pt-Latn-BR-x-zz") == "pt-BR");
         assert(!resolves_exactly("pt-Latn-BR-x-zz"));
+        // The nearest match stays inside the tag's own language (RFC 5646
+        // §2.2.1): cnr is nearer to sr-Latn-RS by distance, but sr names it.
+        // A tag whose own language has no spec (sh, hbs) takes the language it
+        // standardizes to. An exact match ignores case (§2.1.1): MNK is mnk,
+        // not a macrolanguage member. Expected values are registry.py.
+        assert(resolve("sr-Latn-RS") == "sr");
+        assert(resolve("sr-ME") == "sr");
+        assert(resolve("sh") == "sr");
+        assert(resolve("hbs") == "sr");
+        assert(resolve("cnr-RS") == "cnr");
+        assert(resolve("cnr-XK") == "cnr");
+        assert(resolve("als-AL") == "als");
+        assert(resolve("hr-Cyrl") == "sr");
+        assert(!resolves_exactly("hr-Cyrl"));
+        assert(resolve("cnr-Cyrl-ME") == "sr");
+        assert(resolves_exactly("cnr-Cyrl-ME"));
+        assert(resolve("MNK") == "mnk");
+        assert(resolves_exactly("MNK"));
+        assert(resolve("EN-gb") == "en-GB");
     }
     assert(!available_codes().empty());
     {
@@ -668,6 +687,23 @@ int main() {
         // Geminate atomicity: the shadda-expanded doubled pair is realised
         // as one unit ( عمّ → ˈʕmm), not split by an outside rule.
         assert(G2P("ar").transcribe_word("\xd8\xb9\xd9\x85\xd9\x91") == "\xcb\x88\xca\x95mm");
+    }
+
+    // g2p.py _fold_inserted_nuclei: the stress mark counts written syllables,
+    // so a nucleus a rule inserts after the stressed vowel does not move the
+    // mark (pt-BR BR_EPENTHESIS_POSTTONIC: pacto [ˈpakitu], not [paˈkitu]).
+    // The top-k readings run the same fold. Expected values are the
+    // reference's transcribe and word_candidates.
+    {
+        assert(G2P("pt-BR").transcribe_word("pacto") == "\u02c8pakitu");
+        assert(G2P("pt-BR").transcribe_word("Pacto") == "\u02c8pakitu");
+        assert(G2P("pt-BR").transcribe_word("rapto") == "\u02c8\u0281apitu");
+        assert(G2P("pt-BR-x-sul").transcribe_word("capto") == "\u02c8kaptu");
+        assert(G2P("pt-BR").transcribe_word("advogado") == "ad\u0361\u0292ivo\u02c8\u0261adu");
+        const auto candidates = G2P("pt-BR").word_candidates("pacto", 3);
+        assert(candidates.size() == 3);
+        assert(candidates[0] == "\u02c8pakitu");
+        assert(candidates[1] == "\u02c8pakito");
     }
 
     // allophony.py _is_nucleus_segment: a slot whose value is only a combining
