@@ -189,6 +189,16 @@ void enabling_drops_a_cached_empty_lexicon() {
     CHECK(get_lexicon("pt-PT") == (std::map<std::string, std::string>{{"casa", "kazɐ"}}));
 }
 
+// The same for use_packaged_lexicons() with no codes.
+void enabling_every_provider_drops_a_cached_empty_lexicon() {
+    const fs::path root = tmp / "cached-empty-all";
+    tsv(root / "pt-PT" / "x.tsv", "casa\tkazɐ\n");
+    install({root});
+    CHECK(get_lexicon("pt-PT").empty());
+    CHECK(use_packaged_lexicons() == std::vector<std::string>{"pt-PT"});
+    CHECK(get_lexicon("pt-PT") == (std::map<std::string, std::string>{{"casa", "kazɐ"}}));
+}
+
 // ─── precedence: word_exceptions > register / dir > packaged > rules ────────
 
 void registered_lexicon_beats_packaged() {
@@ -361,7 +371,7 @@ int main() {
                             register_lexicon_reads_every_lexicon_again,
                             provider_for_an_unregistered_code_is_skipped, failing_provider_falls_back_to_rules,
                             provider_returning_a_missing_file_is_ignored, exact_code_provider_wins_over_an_alias,
-                            enabling_drops_a_cached_empty_lexicon,
+                            enabling_drops_a_cached_empty_lexicon, enabling_every_provider_drops_a_cached_empty_lexicon,
                             the_earlier_root_wins_between_equal_providers, the_root_decides_before_the_name,
                             a_directory_without_a_tsv_is_no_provider,
                             the_default_root_is_beside_the_spec_data_directory, a_root_may_start_with_a_tilde}) {

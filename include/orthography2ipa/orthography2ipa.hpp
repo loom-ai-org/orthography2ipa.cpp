@@ -602,7 +602,7 @@ std::vector<const rescorer::LatticeRescorer*> get_rescorers(const std::string& c
 /// puts its library calls behind a mutex of its own. Every lexicon setter
 /// (register_lexicon, set_lexicon_directory, use_packaged_lexicons,
 /// clear_lexicons) drops the whole lexicon cache, so call them all before
-/// step 1, not between step 1 and step 2.
+/// the first transcribe call of step 1.
 void register_normalize_plugin(const std::string& name, std::shared_ptr<NormalizePlugin> plugin);
 void register_syllabifier_plugin(const std::string& name, std::shared_ptr<SyllabifierPlugin> plugin);
 void register_stress_plugin(const std::string& name, std::shared_ptr<StressPlugin> plugin);
@@ -705,11 +705,14 @@ void clear_lexicons();
 /// name. Skipped and failing providers are reported on stderr with the
 /// reference's warning text.
 ///
-/// A root that does not exist, or that is a file, is skipped with no message.
-/// Discovery throws std::filesystem::filesystem_error when the process cannot
-/// read the status of a root, for example under a directory it cannot search,
-/// and std::runtime_error ("Could not determine home directory.") for a
-/// ``~user`` entry whose user is unknown. Neither is a LookupError.
+/// A root that does not exist, that is a file, or that the process cannot
+/// list is skipped with no message. Discovery throws
+/// std::filesystem::filesystem_error when the process cannot read the status
+/// of a root or of a directory in it: a root under a directory it cannot
+/// search, or a root it can list but not search, which fails on
+/// <root>/<code>. It throws std::runtime_error ("Could not determine home
+/// directory.") for a ``~user`` entry whose user is unknown. Neither is a
+/// LookupError.
 std::vector<std::string> use_packaged_lexicons();
 std::vector<std::string> use_packaged_lexicons(const std::vector<std::string>& codes);
 /// lexicon.py packaged_lexicon_sources: the discovered providers as
