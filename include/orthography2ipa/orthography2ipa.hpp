@@ -583,7 +583,10 @@ std::vector<const rescorer::LatticeRescorer*> get_rescorers(const std::string& c
 ///      shared cache on first use.
 /// While step 2 runs, no thread calls a free function of this library or
 /// builds a G2P. A program that needs other calls from more than one thread
-/// puts its library calls behind a mutex of its own.
+/// puts its library calls behind a mutex of its own. Every lexicon setter
+/// (register_lexicon, set_lexicon_directory, use_packaged_lexicons,
+/// clear_lexicons) drops the whole lexicon cache, so call them all before
+/// step 1, not between step 1 and step 2.
 void register_normalize_plugin(const std::string& name, std::shared_ptr<NormalizePlugin> plugin);
 void register_syllabifier_plugin(const std::string& name, std::shared_ptr<SyllabifierPlugin> plugin);
 void register_stress_plugin(const std::string& name, std::shared_ptr<StressPlugin> plugin);
@@ -685,6 +688,12 @@ void clear_lexicons();
 /// named for the exact resolved code wins, then the earlier root, then the
 /// name. Skipped and failing providers are reported on stderr with the
 /// reference's warning text.
+///
+/// A root that does not exist, or that is a file, is skipped with no message.
+/// Discovery throws std::filesystem::filesystem_error when the process cannot
+/// read the status of a root, for example under a directory it cannot search,
+/// and std::runtime_error ("Could not determine home directory.") for a
+/// ``~user`` entry whose user is unknown. Neither is a LookupError.
 std::vector<std::string> use_packaged_lexicons();
 std::vector<std::string> use_packaged_lexicons(const std::vector<std::string>& codes);
 /// lexicon.py packaged_lexicon_sources: the discovered providers as

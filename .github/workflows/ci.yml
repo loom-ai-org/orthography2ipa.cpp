@@ -74,8 +74,9 @@ jobs:
       # in both engines. --no-deps: its orthography2ipa requirement is met by
       # the sibling reference; a PyPI copy would add a second distribution
       # with its own entry points.
+      - uses: astral-sh/setup-uv@v6
       - name: Install the packaged lexicons
-        run: python3 -m pip install --no-deps --pre o2i-lexicons || python3 -m pip install --break-system-packages --no-deps --pre o2i-lexicons
+        run: uv pip install --system --python python3 --no-deps --prerelease=allow o2i-lexicons
       # Pinned to the silabificador.cpp commit held at byte parity with Python
       # silabificador 2.1.1a2, the release the reference gets below.
       - uses: actions/checkout@v4

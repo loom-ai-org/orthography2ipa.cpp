@@ -178,6 +178,17 @@ void clear_disables_the_packaged_lexicon() {
     CHECK(transcribe_all("en-GB") == rules);
 }
 
+// lexicon.py use_packaged_lexicons calls get_lexicon.cache_clear(): a lexicon
+// read empty before the call is read again after it.
+void enabling_drops_a_cached_empty_lexicon() {
+    const fs::path root = tmp / "cached-empty";
+    tsv(root / "pt-PT" / "x.tsv", "casa\tkazɐ\n");
+    install({root});
+    CHECK(get_lexicon("pt-PT").empty());
+    CHECK(use_packaged_lexicons({"pt-PT"}) == std::vector<std::string>{"pt-PT"});
+    CHECK(get_lexicon("pt-PT") == (std::map<std::string, std::string>{{"casa", "kazɐ"}}));
+}
+
 // ─── precedence: word_exceptions > register / dir > packaged > rules ────────
 
 void registered_lexicon_beats_packaged() {
@@ -283,6 +294,21 @@ void the_earlier_root_wins_between_equal_providers() {
     CHECK(get_lexicon("en-GB").at("colonel") == "kɝnəl");
 }
 
+// Two providers with different names, neither named for the exact code: the
+// root decides before the name. The reference's key (name != code, dist, name)
+// gives the first distribution's provider, pt-pt, and the name alone would
+// give pt.
+void the_root_decides_before_the_name() {
+    const fs::path first = tmp / "r0", second = tmp / "r1";
+    tsv(first / "pt-pt" / "x.tsv", "casa\tkazɐ\n");
+    tsv(second / "pt" / "x.tsv", "casa\tkɐzɐ\n");
+    install({first, second});
+    const Stderr log;
+    CHECK(use_packaged_lexicons({"pt-PT"}) == std::vector<std::string>{"pt-PT"});
+    CHECK(get_lexicon("pt-PT") == (std::map<std::string, std::string>{{"casa", "kazɐ"}}));
+    CHECK(log.has("both serve 'pt-PT'; using '" + (first / "pt-pt").string() + "'"));
+}
+
 void a_directory_without_a_tsv_is_no_provider() {
     const fs::path root = tmp / "no-tsv";
     tsv(root / "en-GB" / "wikipron.meta.json", "{}\n");
@@ -335,7 +361,9 @@ int main() {
                             register_lexicon_reads_every_lexicon_again,
                             provider_for_an_unregistered_code_is_skipped, failing_provider_falls_back_to_rules,
                             provider_returning_a_missing_file_is_ignored, exact_code_provider_wins_over_an_alias,
-                            the_earlier_root_wins_between_equal_providers, a_directory_without_a_tsv_is_no_provider,
+                            enabling_drops_a_cached_empty_lexicon,
+                            the_earlier_root_wins_between_equal_providers, the_root_decides_before_the_name,
+                            a_directory_without_a_tsv_is_no_provider,
                             the_default_root_is_beside_the_spec_data_directory, a_root_may_start_with_a_tilde}) {
         test();
         clear_lexicons();
