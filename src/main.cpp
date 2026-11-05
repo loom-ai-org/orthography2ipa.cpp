@@ -224,6 +224,9 @@ int main(int argc, char** argv) {
             // --lang-distance is a one-shot mode: it measures the LAST given
             // code against its value, prints the integer, and stops.
             // --lects dialect|standard adds linguatag's lect score to it.
+            // --strict resolves as registry.py `_resolve_code(code,
+            // allow_nearest=False)` does, and --json then adds "exact", the
+            // answer of `resolves_exactly(code)`.
             // `resolve --distances` reads `desired TAB supported TAB mode`
             // lines from stdin (mode: none, dialect or standard) and prints
             // one linguatag lang_distance per line.
@@ -239,10 +242,12 @@ int main(int argc, char** argv) {
             linguatag::Lects lects = linguatag::Lects::none;
             bool distance_mode = false;
             bool distances_mode = false;
+            bool strict = false;
             while (i < argc) {
                 const std::string option = argv[i++];
                 if (option == "--json") json_output = true;
                 else if (option == "--distances") distances_mode = true;
+                else if (option == "--strict") strict = true;
                 else if (option == "--lects") {
                     if (i >= argc) { usage(); return 2; }
                     lects = lect_mode(argv[i++]);
@@ -272,13 +277,14 @@ int main(int argc, char** argv) {
                 return 0;
             }
             for (const auto& requested : codes) {
-                const std::string resolved = registry::resolve_code(requested, catalog);
-                if (json_output)
+                const std::string resolved = registry::resolve_code(requested, catalog, !strict);
+                if (json_output) {
                     std::cout << "{\"requested\":" << json(requested)
                               << ",\"resolved\":" << json(resolved) << ",\"known\":"
-                              << (std::find(catalog.begin(), catalog.end(), resolved) != catalog.end() ? "true" : "false")
-                              << "}\n";
-                else std::cout << resolved << "\n";
+                              << (std::find(catalog.begin(), catalog.end(), resolved) != catalog.end() ? "true" : "false");
+                    if (strict) std::cout << ",\"exact\":" << (resolves_exactly(requested) ? "true" : "false");
+                    std::cout << "}\n";
+                } else std::cout << resolved << "\n";
             }
             return 0;
         }

@@ -16,7 +16,10 @@ harness therefore does not sample — it compares
   * linguatag `lang_distance` over the pairs the reference actually ranks,
     with no lect score and with each lect mode;
   * linguatag `lang_distance` over every edge of the lect tree, in both
-    directions and in each lect mode.
+    directions and in each lect mode;
+  * `resolves_exactly` and `_resolve_code(allow_nearest=False)` over the
+    resolve and lect tree batteries, the case forms of every catalog code
+    and alias, and tags that only the nearest-language match resolves.
 
 Usage: registry_parity.py <path-to-cli> [--pairs N]
 
@@ -146,6 +149,45 @@ def mutate(tag, rng, extra):
     return extra
 
 
+def check_resolves_exactly():
+    """resolves_exactly and _resolve_code(allow_nearest=False) vs `resolve --strict`."""
+    tags = set(resolve_battery()) | set(lect_tree_battery())
+    for code in [*available_json_codes(), *registry._ALIASES]:
+        tags |= {code.upper(), code.lower(), code.swapcase()}
+    for tag in [*registry._ALIASES, *registry._REGION_DEFAULTS, *OVERRIDES]:
+        mutate(tag, None, tags)
+    # Tags that only the nearest-language match resolves, and malformed tags.
+    tags |= {"ext-PT", "pt-001", "en-NZ", "ar-BH-x-unknown", "pt-PT-x-unknown", "zz-ZZ",
+             "", " pt", "-", "x-", "x-foo", "pt--PT", "pt-", "123", "-aa", "pt_PT", "a" * 12}
+    tags = sorted(tags)
+    results = {}
+    for start in range(0, len(tags), 400):
+        try:
+            out = cli_args("resolve", "--strict", "--json", *tags[start:start + 400])
+        except RuntimeError as error:
+            print(str(error))
+            return False
+        for line in out.splitlines():
+            obj = json.loads(line)
+            results[obj["requested"]] = (obj["resolved"], obj.get("exact"))
+    print(f"resolves_exactly tags: {len(tags)} in, {len(results)} out")
+    catalog = set(available_json_codes())
+    exact = nearest_only = 0
+    failures = []
+    for tag in tags:
+        want = (registry._resolve_code(tag, allow_nearest=False), registry.resolves_exactly(tag))
+        exact += want[1]
+        nearest_only += not want[1] and registry.resolve(tag) in catalog
+        if results.get(tag) != want:
+            failures.append((tag, want, results.get(tag)))
+    print(f"resolves_exactly: {len(tags) - len(failures)}/{len(tags)}"
+          f" ({exact} exact, {nearest_only} nearest only)")
+    for tag, want, got in failures[:40]:
+        print(f"  FAIL resolves_exactly: {tag!r}: reference {want!r} vs cpp {got!r}")
+    # The battery must reach both answers, or a constant would pass it.
+    return not failures and len(results) == len(tags) and exact > 0 and nearest_only > 0
+
+
 def main():
     pairs_limit = 72000
     global MUTATION_CAP
@@ -229,7 +271,8 @@ def main():
         print(f"  FAIL {kind}: {a!r}: reference {want!r} vs cpp {got!r}")
     for a, b, mode, want, got in distance_failures[:40]:
         print(f"  FAIL lang_distance({a!r}, {b!r}, lects={mode}): reference {want} vs cpp {got}")
-    return 1 if failures or distance_failures else 0
+    exact_ok = check_resolves_exactly()
+    return 1 if failures or distance_failures or not exact_ok else 0
 
 
 if __name__ == "__main__":

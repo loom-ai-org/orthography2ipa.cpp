@@ -30,7 +30,10 @@ namespace registry {
 /// to. A code with no usable resolution is returned unchanged, so `get()` can
 /// raise for it. *available* is the catalog the request is matched against;
 /// passing it explicitly keeps this function pure (the loader supplies it).
-std::string resolve_code(const std::string& code, const std::vector<std::string>& available);
+/// With *allow_nearest* false, the nearest-language match is not tried, and a
+/// code that the earlier steps do not name is returned unchanged.
+std::string resolve_code(const std::string& code, const std::vector<std::string>& available,
+                         bool allow_nearest = true);
 
 } // namespace registry
 } // namespace orthography2ipa

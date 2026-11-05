@@ -592,6 +592,10 @@ void register_sandhi_plugin(const std::string& name, std::shared_ptr<SandhiPlugi
 void discover_plugins(const std::string& directory = "");
 
 std::string resolve(const std::string& code);
+/// registry.py `resolves_exactly`: true when *code* names a spec through the
+/// alias tables, case folding, BCP-47 standardization or a default region,
+/// and false when only the nearest-language match finds one.
+bool resolves_exactly(const std::string& code);
 const LanguageSpec& get(const std::string& code);
 std::vector<std::string> available_codes(bool include_clades = false);
 std::map<std::string, std::vector<std::string>> available_families();
