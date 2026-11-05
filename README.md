@@ -80,6 +80,41 @@ Plugin classes are declared in the public header and can be selected by the JSON
 `who_answers()` introspection are also available. Remote URL/Hugging Face lexicon
 fetching and the most advanced Python allophone contexts remain future work.
 
+## Packaged lexicons
+
+A package such as [o2i-lexicons](https://pypi.org/project/o2i-lexicons/) supplies a
+residual lexicon per language: the words that the rules get wrong, in a
+`word<TAB>ipa` file. The install changes no output. The caller enables a packaged
+lexicon in code, as in Python:
+
+```cpp
+orthography2ipa::packaged_lexicon_sources();          // lists the providers, enables nothing
+orthography2ipa::use_packaged_lexicons();             // enables every provider
+orthography2ipa::use_packaged_lexicons({"pt-PT"});    // enables only these, or throws LookupError
+orthography2ipa::clear_lexicons();                    // disables them with every registration
+```
+
+A packaged lexicon ranks below `register_lexicon` and the lexicon directory, and
+above the rules. Python finds the providers through the `orthography2ipa.lexicons`
+entry points. C++ has no entry points, so the port reads a search path of provider
+roots. Each root has the layout of the package's data directory,
+`<root>/<code>/<source>.tsv`:
+
+- `$ORTHOGRAPHY2IPA_PACKAGED_LEXICONS` lists the roots, separated by `:`, in order.
+  An empty value names no root.
+- When the variable is unset, the root is `<prefix>/share/o2i-lexicons`, the
+  directory beside the installed spec data.
+
+Each directory under a root that holds a `*.tsv` file is one provider for the code
+that the directory names. The provider fails when it holds more than one `*.tsv`
+file. A name that does not resolve exactly to a spec is skipped. When two
+providers serve one spec, the one named for the exact code wins, then the one in
+the earlier root. To use the lexicons of the installed Python package:
+
+```sh
+export ORTHOGRAPHY2IPA_PACKAGED_LEXICONS="$(python3 -c 'import o2i_lexicons; print(o2i_lexicons.DATA_DIR)')"
+```
+
 ## Reference data
 
 The language specs in `data/` and the tables in `src/*_tables.inc` are copied from one
