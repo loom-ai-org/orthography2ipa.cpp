@@ -7,6 +7,7 @@
 #include "orthography2ipa/tone.hpp"
 #include "orthography2ipa/transform.hpp"
 #include "orthography2ipa/types.hpp"
+#include "orthography2ipa/vowels.hpp"
 #include "beam.hpp"
 #include "codepoint_regex.hpp"
 
@@ -69,6 +70,19 @@ int main() {
         // aliases: they resolve unchanged and name no spec.
         assert(resolve("tmg") == "tmg");
         assert(resolve("aja") == "aja");
+        // A script subtag that is the language's Suppress-Script adds nothing
+        // (RFC 5646 §3.1.9), so the private-use tag still names its lect; any
+        // other script does not, and an unknown lect falls back as before.
+        // Expected values are registry.py resolve() and resolves_exactly().
+        assert(resolve("pt-Latn-BR-x-sp") == "pt-BR-x-sp");
+        assert(resolves_exactly("pt-Latn-BR-x-sp"));
+        assert(resolve("PT-LATN-br-X-SP") == "pt-BR-x-sp");
+        assert(resolve("pt-Latn-PT-x-lisbon") == "pt-PT-x-lisbon");
+        assert(resolves_exactly("nl-Latn-NL-x-polder"));
+        assert(resolve("pt-Cyrl-BR-x-sp") == "pt-Cyrl-BR-x-sp");
+        assert(!resolves_exactly("pt-Cyrl-BR-x-sp"));
+        assert(resolve("pt-Latn-BR-x-zz") == "pt-BR");
+        assert(!resolves_exactly("pt-Latn-BR-x-zz"));
     }
     assert(!available_codes().empty());
     {
@@ -454,8 +468,8 @@ int main() {
     assert(close_to(segment_distance("p", "b"), 0.042553191489361715));
     assert(feature_vector("p")[7] == .5 && feature_vector("p")[11] == 1);
     const auto pt_es = phonological_distance(portuguese, spanish);
-    assert(close_to(pt_es.combined, 0.21661900286704905));
-    assert(close_to(pt_es.inventory.feature_mean, 0.05333936375277406));
+    assert(close_to(pt_es.combined, 0.2169145693695121));
+    assert(close_to(pt_es.inventory.feature_mean, 0.05383197459021247));
     assert(close_to(pt_es.grapheme.mean_ipa_distance, 0.2292352969556617));
     // distance.py orthographic, positional and ancestry values from the reference.
     // aa/sfw name a script outside SCRIPT_REGISTRY (0.5 term); ab/nmq name two in it.
@@ -656,6 +670,39 @@ int main() {
         assert(G2P("ar").transcribe_word("\xd8\xb9\xd9\x85\xd9\x91") == "\xcb\x88\xca\x95mm");
     }
 
+    // allophony.py _is_nucleus_segment: a slot whose value is only a combining
+    // mark is no nucleus, for followed_by_nucleus and requires_other_nucleus
+    // alike. The synthetic spec writes ⟨m⟩ as a bare tilde, as pt-BR writes
+    // the coda nasal of ⟨em⟩. Every expected value is the reference's
+    // PhonetokTokenizer.ipa_best with compile_allophone_rescorer.
+    {
+        LanguageSpec bare_tilde;
+        bare_tilde.code = "xx-test";
+        bare_tilde.graphemes = {{"e", {"e"}}, {"m", {"\u0303"}}, {"k", {"k"}}, {"a", {"a"}}};
+        AllophoneRule raise;
+        raise.id = "RAISE_E";
+        raise.phonemes = {"e"};
+        raise.surface = "i";
+        raise.followed_by_nucleus = true;
+        AllophoneRule drop;
+        drop.id = "DROP_E";
+        drop.phonemes = {"e"};
+        drop.requires_other_nucleus = true;
+        auto best = [&](const AllophoneRule& rule, const std::string& word) {
+            LanguageSpec spec = bare_tilde;
+            spec.allophone_rules = {rule};
+            const auto chain = rescorer::compile_allophone_rescorer(spec.allophone_rules);
+            const std::vector<const rescorer::LatticeRescorer*> rescorers{chain.get()};
+            return PhonetokTokenizer(spec).ipa_best(word, false, " ", false, &rescorers);
+        };
+        assert(best(raise, "em") == "e\u0303");
+        assert(best(raise, "eka") == "ika");
+        assert(best(raise, "emka") == "i\u0303ka");
+        assert(best(drop, "em") == "e\u0303");
+        assert(best(drop, "eka") == "ka");
+        assert(best(drop, "emka") == "\u0303ka");
+    }
+
     // ── Tone syllable model (tone.py port) ──
     {
         const auto& thai = get("th");
@@ -673,9 +720,41 @@ int main() {
         assert(tone::dock_tone_marks("ai", {}) == "ai");  // no marks: no-op
     }
 
+    // phonetok.py _expand_beam: a coda nasal tilde lands on an oral vowel,
+    // ʏ included; after a segment that ends in the tilde it is an empty
+    // segment; after a consonant the oral branch wins. Every expected beam is
+    // the reference's PhonetokTokenizer._expand_beam.
+    {
+        using H = std::vector<beam::Hypothesis>;
+        auto rows = [](const H& beam) {
+            std::vector<std::pair<std::vector<std::string>, double>> out;
+            for (const auto& h : beam) out.emplace_back(h.segments, h.score);
+            return out;
+        };
+        using R = std::vector<std::pair<std::vector<std::string>, double>>;
+        const std::vector<beam::Branch> after_n{{"\u0303", 0.0}, {"n", 1.0}};
+        const std::vector<beam::Branch> after_m{{"\u0303", 0.0}, {"m", 1.0}};
+        assert(rows(beam::expand_beam({{{"ʏ"}, 0.0}}, after_n, 8)) ==
+               (R{{{"ʏ\u0303", ""}, 0.0}, {{"ʏ", "n"}, 1.0}}));
+        assert(rows(beam::expand_beam({{{"k", "ɐ̃j̃"}, 0.0}}, after_m, 8)) ==
+               (R{{{"k", "ɐ̃j̃", ""}, 0.0}, {{"k", "ɐ̃j̃", "m"}, 1.0}}));
+        assert(rows(beam::expand_beam({{{"ɡ"}, 0.0}}, after_m, 8)) == (R{{{"ɡ", "m"}, 1.0}}));
+    }
+
+    // The 28 vowels of the IPA chart are IPA vowels, and a doubled [ɔɔ] is a
+    // long vowel that the geminate collapse keeps (the reference's
+    // is_ipa_vowel and G2P.transcribe).
+    {
+        for (const char* v : {"i", "y", "ɨ", "ʉ", "ɯ", "u", "ɪ", "ʏ", "ʊ", "e", "ø", "ɘ", "ɵ", "ɤ",
+                              "o", "ə", "ɛ", "œ", "ɜ", "ɞ", "ʌ", "ɔ", "æ", "ɐ", "a", "ɶ", "ɑ", "ɒ"})
+            assert(vowels::is_ipa_vowel(std::string(v)));
+        assert(G2P("enm").transcribe("toot") == "tɔɔt");
+        assert(G2P("sv").transcribe("blyerts") == "ˈblyːæʈʂ");
+    }
+
     // stress.closed_hiatus, the semivowel roles of ⟨y⟩ and ⟨w⟩, the ⟨qu⟩
     // onset grapheme and the declared-diphthong weight. Every expected value
-    // is the reference's (stress._syllables_for, closed_hiatus_positions,
+    // is the reference's (stress._syllables_for, hiatus_positions,
     // syllable_weight, G2P.transcribe). It runs before the block below
     // registers a whole-word pt-PT syllabifier for the rest of the process.
     {
@@ -684,9 +763,26 @@ int main() {
         using V = std::vector<std::string>;
         assert(stress::syllables_for("rainha", "", pt.diphthongs, &pt) == (V{"ra", "i", "nha"}));
         assert(stress::syllables_for("saia", "", pt.diphthongs, &pt) == (V{"sai", "a"}));
-        assert(stress::closed_hiatus_positions("rainha", pt) == (std::set<std::size_t>{2}));
-        assert(stress::closed_hiatus_positions("juiz", pt) == (std::set<std::size_t>{2}));
-        assert(stress::closed_hiatus_positions("ruindade", pt).empty());
+        assert(stress::hiatus_positions("rainha", pt) == (std::set<std::size_t>{2}));
+        assert(stress::hiatus_positions("juiz", pt) == (std::set<std::size_t>{2}));
+        assert(stress::hiatus_positions("ruindade", pt).empty());
+        // stress.final_diphthongs: a final ⟨iu ui⟩ after a vowel.
+        assert(stress::hiatus_positions("distraiu", pt) == (std::set<std::size_t>{6}));
+        assert(stress::hiatus_positions("pauis", pt) == (std::set<std::size_t>{2}));
+        assert(stress::hiatus_positions("viu", pt).empty());
+        // stress.unstressed_prefixes, but never onto a final open syllable.
+        const LanguageSpec& li = get("li");
+        const V gebroek{"ge", "broek"}, geve{"ge", "ve"};
+        assert(stress::detect_stress("gebroek", li, &gebroek, "li") == 1);
+        assert(stress::detect_stress("geve", li, &geve, "li") == 0);
+        // The tokenizer reads stress.final_diphthongs without closed_hiatus too.
+        LanguageSpec final_only = pt;
+        final_only.closed_hiatus.reset();
+        assert(PhonetokTokenizer(final_only).graphemes("distraiu") ==
+               (V{"d", "i", "s", "t", "r", "a", "iu"}));
+        final_only.final_diphthongs.reset();
+        assert(PhonetokTokenizer(final_only).graphemes("distraiu") ==
+               (V{"d", "i", "s", "t", "r", "ai", "u"}));
         assert(stress::syllables_for("mayo", "", es.diphthongs, &es) == (V{"ma", "yo"}));
         assert(stress::syllables_for("rey", "", es.diphthongs, &es) == (V{"rey"}));
         assert(stress::syllables_for("rugby", "", es.diphthongs, &es) == (V{"ru", "gby"}));
@@ -779,7 +875,8 @@ int main() {
     }
 
     // schema.py: Union[StressRulesModel, Literal[False], None] for `stress`
-    // and ClosedHiatusModel. Messages and locations are pydantic 2.12's.
+    // ClosedHiatusModel and FinalDiphthongsModel. Messages and locations are
+    // pydantic 2.12's.
     {
         const std::string dir = schema::data_directory();
         const auto biscayan = schema::validate_spec_file(dir + "/eu-biscayan.json");
@@ -817,6 +914,15 @@ int main() {
             "stress.StressRulesModel.closed_hiatus.x | extra_forbidden | Extra inputs are not permitted",
             "stress.literal[False] | literal_error | Input should be False"}));
         assert(errors_for("{\"closed_hiatus\": null}").empty());
+        assert(errors_for("{\"final_diphthongs\": {\"diphthongs\": []}}") == (std::vector<std::string>{
+            "stress.StressRulesModel.final_diphthongs.diphthongs | too_short | List should have at least 1 item after validation, not 0",
+            "stress.literal[False] | literal_error | Input should be False"}));
+        assert(errors_for("{\"final_diphthongs\": {\"diphthongs\": [\"iu\"], \"x\": 1}}") == (std::vector<std::string>{
+            "stress.StressRulesModel.final_diphthongs.x | extra_forbidden | Extra inputs are not permitted",
+            "stress.literal[False] | literal_error | Input should be False"}));
+        assert(errors_for("{\"unstressed_prefixes\": [\"\"]}") == (std::vector<std::string>{
+            "stress.StressRulesModel.unstressed_prefixes | value_error | Value error, stress rule entries must be non-empty strings",
+            "stress.literal[False] | literal_error | Input should be False"}));
         // schema.py validate_all(): every shipped spec validates.
         const auto results = schema::validate_all();
         assert(results.failures.empty());

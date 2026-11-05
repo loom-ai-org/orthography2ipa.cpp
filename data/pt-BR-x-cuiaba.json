@@ -128,6 +128,18 @@
       "notes": "DISABLED: /d/ stays a stop before [i]; see the positional before_i map."
     },
     {
+      "id": "CUIABA_TCH_SH",
+      "phonemes": [
+        "ʃ"
+      ],
+      "surface": "ʃ",
+      "syllable_position": "onset",
+      "preceded_by_grapheme": [
+        "t"
+      ],
+      "notes": "The ⟨ch⟩ of ⟨tch⟩ stays [ʃ], so the ⟨t⟩ and the ⟨ch⟩ give one affricate, as in pt-BR. CUIABA_AFFRIC_SH would make it [t͡ʃ] after the [t] of the ⟨t⟩, a doubled stop. pt.wiktionary gives tchau as '/tʃaʊ/', with one affricate. The rule stands before CUIABA_AFFRIC_SH, and the first rule that matches wins."
+    },
+    {
       "id": "CUIABA_AFFRIC_SH",
       "phonemes": [
         "ʃ"

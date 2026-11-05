@@ -6,69 +6,57 @@
     "a": [
       "ɑ"
     ],
-    "aa": [
-      "aː"
-    ],
     "e": [
       "ɛ",
       "ə"
     ],
-    "ee": [
-      "eː"
-    ],
     "i": [
       "ɪ"
-    ],
-    "ie": [
-      "iː"
     ],
     "o": [
       "ɔ"
     ],
-    "oo": [
-      "oː"
-    ],
     "u": [
       "ʏ"
     ],
-    "uu": [
-      "yː"
+    "aa": [
+      "aː"
+    ],
+    "ee": [
+      "eː"
+    ],
+    "ie": [
+      "i"
+    ],
+    "oo": [
+      "oː"
     ],
     "oe": [
       "u"
     ],
+    "uu": [
+      "y"
+    ],
     "eu": [
       "øː"
     ],
-    "ei": [
-      "ɛi"
+    "é": [
+      "eː"
     ],
-    "ij": [
-      "ɛi"
+    "è": [
+      "ɛ"
     ],
-    "au": [
-      "ɑu"
+    "ê": [
+      "ɛ"
     ],
-    "ou": [
-      "ɑu"
+    "ë": [
+      "ə"
     ],
-    "ui": [
-      "œy"
+    "ï": [
+      "i"
     ],
-    "aai": [
-      "aːi"
-    ],
-    "ooi": [
-      "oːi"
-    ],
-    "oei": [
-      "ui"
-    ],
-    "ieuw": [
-      "iːw"
-    ],
-    "uw": [
-      "yːw"
+    "ü": [
+      "y"
     ],
     "b": [
       "b"
@@ -131,11 +119,17 @@
     "x": [
       "ks"
     ],
+    "y": [
+      "i",
+      "j",
+      "ei̞"
+    ],
     "z": [
-      "z"
+      "z",
+      "s"
     ],
     "ch": [
-      "x"
+      "χ"
     ],
     "ng": [
       "ŋ"
@@ -143,80 +137,78 @@
     "nk": [
       "ŋk"
     ],
+    "sj": [
+      "ʃ"
+    ],
     "th": [
       "t"
     ],
     "ph": [
       "f"
     ],
-    "qu": [
-      "kw"
+    "ei": [
+      "ɛi"
     ],
-    "tj": [
-      "tʃ"
+    "ij": [
+      "ɛi"
     ],
-    "sj": [
-      "ʃ"
+    "ou": [
+      "ɑu"
+    ],
+    "au": [
+      "ɑu"
+    ],
+    "ui": [
+      "œy"
+    ],
+    "ai": [
+      "aːi"
+    ],
+    "oi": [
+      "ɔi"
+    ],
+    "eau": [
+      "oː"
+    ],
+    "ieu": [
+      "jøː"
+    ],
+    "aauw": [
+      "ɑu"
+    ],
+    "ouw": [
+      "ɑu"
+    ],
+    "auw": [
+      "ɑu"
+    ],
+    "ieuw": [
+      "iu"
     ],
     "eeuw": [
-      "eːw"
+      "eːu"
+    ],
+    "uw": [
+      "yu"
+    ],
+    "berg": [
+      "bɛrχ"
+    ],
+    "veld": [
+      "vɛld",
+      "vɛlt"
+    ],
+    "kerk": [
+      "kɛrk"
+    ],
+    "brecht": [
+      "brɛχt"
+    ],
+    "isch": [
+      "is"
     ]
   },
   "allophones": {
-    "ɑ": [
-      "ɑ"
-    ],
-    "aː": [
-      "aː"
-    ],
-    "ɛ": [
-      "ɛ"
-    ],
-    "eː": [
-      "eː"
-    ],
-    "ɪ": [
-      "ɪ"
-    ],
-    "iː": [
-      "iː"
-    ],
-    "ɔ": [
-      "ɔ"
-    ],
-    "oː": [
-      "oː"
-    ],
-    "ʏ": [
-      "ʏ"
-    ],
-    "yː": [
-      "yː"
-    ],
-    "u": [
-      "u"
-    ],
-    "uː": [
-      "uː"
-    ],
-    "øː": [
-      "øː"
-    ],
-    "ə": [
-      "ə"
-    ],
-    "ɛi": [
-      "ɛi",
-      "ɛɪ"
-    ],
-    "ɑu": [
-      "ɑu",
-      "ʌu"
-    ],
-    "œy": [
-      "œy",
-      "œʏ"
-    ],
     "p": [
       "p"
     ],
@@ -234,13 +226,6 @@
     "k": [
       "k"
     ],
-    "ɣ": [
-      "ɣ",
-      "x"
-    ],
-    "x": [
-      "x"
-    ],
     "f": [
       "f"
     ],
@@ -255,8 +240,11 @@
       "z",
       "s"
     ],
-    "ʃ": [
-      "ʃ"
+    "χ": [
+      "χ"
+    ],
+    "ɣ": [
+      "χ"
     ],
     "ɦ": [
       "ɦ",
@@ -290,50 +278,69 @@
     ],
     "j": [
       "j"
+    ],
+    "ɑ": [
+      "ɑ"
+    ],
+    "aː": [
+      "aː"
+    ],
+    "ɛ": [
+      "ɛ"
+    ],
+    "eː": [
+      "eː"
+    ],
+    "ɪ": [
+      "ɪ"
+    ],
+    "iː": [
+      "iː"
+    ],
+    "ɔ": [
+      "ɔ"
+    ],
+    "oː": [
+      "oː"
+    ],
+    "ʏ": [
+      "ʏ"
+    ],
+    "yː": [
+      "yː"
+    ],
+    "uː": [
+      "uː"
+    ],
+    "øː": [
+      "øː"
+    ],
+    "ə": [
+      "ə"
+    ],
+    "ɛi": [
+      "ɛi",
+      "ɛɪ"
+    ],
+    "ɑu": [
+      "ɑu",
+      "ʌu"
+    ],
+    "œy": [
+      "œy",
+      "œʏ"
+    ],
+    "i": [
+      "i"
+    ],
+    "y": [
+      "y"
+    ],
+    "u": [
+      "u"
     ]
   },
-  "positional_graphemes": {
-    "b": {
-      "default": [
-        "b"
-      ],
-      "word_final": [
-        "p"
-      ]
-    },
-    "d": {
-      "default": [
-        "d"
-      ],
-      "word_final": [
-        "t"
-      ]
-    },
-    "v": {
-      "default": [
-        "v"
-      ],
-      "word_final": [
-        "f"
-      ]
-    },
-    "z": {
-      "default": [
-        "z"
-      ],
-      "word_final": [
-        "s"
-      ]
-    },
-    "sch": {
-      "word_final": [
-        "s"
-      ],
-      "default": [
-        "sx"
-      ]
-    }
-  },
+  "collapse_geminates": true,
   "parent": "x-clade-west2793",
   "ancestors": [
     {
@@ -355,7 +362,7 @@
       "notes": "French adstrate: centuries of Burgundian/French influence in S. Netherlands; cf. van der Wal (2008)"
     }
   ],
-  "notes": "Standard Dutch (ABN / Algemeen Nederlands). ⟨g⟩ realisation is [ɣ] in northern NL and [x] in southern NL / Flanders. /r/ is highly variable. Final obstruent devoicing (same as German Auslautverhärtung). Source: Booij, G. (1995). The Phonology of Dutch; Gussenhoven, C. (1999).",
+  "notes": "Standard Dutch (ABN / Algemeen Nederlands). ⟨g⟩ and ⟨ch⟩ are the voiceless uvular [χ]. Gussenhoven (1992, JIPA 22, p. 45) has one dorsal fricative in the consonant chart, uvular, \"χ gat 'hole'\", and his transcription (p. 47) writes it for ⟨g⟩ and ⟨ch⟩: vraag [fraːχ], begon [bəχɔn], krijgen [kreiχə], zich [zɪχ], dichter [dɪχtər], slechts [slɛχs]. Verhoeven (2005, JIPA 35(2), p. 244): \"Belgian Dutch has a voiced and voiceless velar fricative: these are absent in the Netherlands. The Netherlands has a voiceless uvular fricative which does not occur in Belgian Dutch.\" The grapheme table keeps the phoneme /ɣ/ for ⟨g⟩, and the positional entry states its [χ] in every position, so the syllabifier still keeps ⟨s⟩+⟨g⟩ apart (as-gat) while ⟨sch⟩ opens a syllable. nl-BE states the velar pair itself. TENSE MID VOWELS: Gussenhoven (1992, p. 46): \"/eː, øː, oː/ are narrow closing diphthongs ([ei, øy, ou]), except before /r/ in the same word, when they are pronounced [eᵊ, øᵊ, oᵊ]\". The tables keep the phonemes /eː øː oː/, and the NL_MID_TENSE_* rules write the realisation: beet [beit], boot [bout], meer [meᵊr]. The chart on the same page keeps /ɛi/ for ⟨ei⟩, so ⟨ee⟩ [ei] and ⟨ij⟩ [ɛi] stay apart. nl-BE disables the rules and keeps the monophthongs. /r/ is highly variable. FINAL DEVOICING: b/d/g/v/z devoiced in coda and word-finally. H: breathy [ɦ]; fully silent in southern dialects. Sources: van Oostendorp (2000), Gussenhoven (1992), Booij (1995). COMPOUND-FINAL SECONDARY STRESS (Booij 1995, ch. 5): non-head members of a compound carry secondary stress and resist the unstressed e -> schwa reduction that a plain unstressed syllable undergoes; the closed set of toponymic/compound-final graphemes ⟨berg⟩/⟨veld⟩/⟨kerk⟩/⟨brecht⟩ is pinned to its unreduced [ɛ] realisation for this reason (Aalbert-style ⟨bert⟩ was left out: wikipron gold is split roughly evenly between [ɛrt] compound forms and [ərt] given-name forms, so no closed rule is safely citable there). ⟨veld⟩ is positionally scoped (positional_graphemes, word_final vs. default) rather than a plain unconditional grapheme: a plain grapheme maximal-munch matches inside ordinary inflected forms too (velden), where the ⟨d⟩ is NOT in coda (onset of the following syllable) and must stay voiced per the regular d positional rules above -- only word-final ⟨veld⟩ gets the devoiced [t]. ⟨berg⟩ needs no such split, because its ⟨g⟩ is [χ] in every position. ⟨kerk⟩/⟨brecht⟩ need no such split: ⟨k⟩ and ⟨ch⟩ never alternate in Dutch, so the same surface form is correct word-finally and word-internally (kerken, Hubrecht). The adjectival/toponymic suffix ⟨isch⟩ ([-is], ⟨ch⟩ silent, per the existing word-final ⟨sch⟩ -> [s] rule) is likewise pinned as a fixed grapheme rather than derived, since it is a single closed morpheme. HETEROMORPHEMIC ⟨tj⟩ (Booij 1995, ch. 2-3): the digraph ⟨tj⟩ was previously pinned to a single palatalized/affricate segment ([tʲ]/[tʃ]); WikiPron gold shows this is wrong for the overwhelming majority of ⟨tj⟩ words, both the productive diminutive suffix -tje/-etje attached after a stem-final plosive (katje, potje, witje: coda /t/ + suffix onset /j/ across the morpheme boundary, no coalescence) and word-initial ⟨tj-⟩ placenames (Tjalk, Tjonge): [tj], not [tʲ]. The digraph entry was removed so ⟨tj⟩ falls through to the plain ⟨t⟩+⟨j⟩ graphemes, which also fixes a second-order bug: the coalesced digraph was counted as a single intervocalic consonant by the open-syllable-lengthening rule, wrongly lengthening the stem vowel (witje -> *[ʋiːtʲə] instead of [ʋɪtjə]) because tj is phonemically two segments (a closed syllable), not one. A handful of Frisian-influenced placenames (Tjerkgaast, Tjalhuizum) keep an affricate [tʃ] in gold; that minority variant is lexical, not ruled out here. HETEROMORPHEMIC vs TAUTOMORPHEMIC ⟨tj⟩ (word_exceptions, Booij 1995 ch. 2-3 + WikiPron gold): a small closed set of Malay/Indonesian loanwords (ketjap-family: tjap \"seal/brand\", tjappen, tjaffelen, tjanten, tjetten, tjaptjoi, tjauwmin, tjokvol, matjok, nestje) and Frisian-influenced placenames (Tietjerk, Tjalhuizum, Tjerkgaast, Tjerkwerd) keep ⟨tj⟩ as the coalesced affricate [tʃ] the general rule above no longer produces, because in these words ⟨tj⟩ is TAUTOMORPHEMIC (one morpheme, one syllable onset) rather than the productive diminutive/placename-compound boundary the general rule targets. This is a closed irregular set per AGENTS.md 2 (\"a closed irregular set -> word_exceptions; a productive pattern -> the rule layer\"), not a general grapheme rule, since the vast majority of ⟨tj⟩ tokens (diminutives, word-initial placenames like Tjalk/Tjonge) are the plain [tj] sequence. \"ketjap\" and \"tjalk\" were deliberately NOT added: WikiPron records both the [tj] and [tʃ] pronunciation as attested variants of \"ketjap\" (multi-reference scoring already credits either), and \"tjalk\" is genuinely ambiguous at the same lowercased key -- the placename \"Tjalk\" (Friesland) is gold [tj] while the common noun \"tjalk\" (a sailing barge) is gold [tʃ]; a single override cannot satisfy both senses, so the word is left on the general (majority, placename-consistent) rule. OPEN-SYLLABLE LENGTHENING/TENSING: Open-syllable lengthening / tensing (Booij 1995, ch. 2, and Gussenhoven 1999, JIPA Illustration of Dutch): a single vowel letter is read as the TENSE vowel in an open syllable (ma-ken, lo-pen, u-ren, li-ter) and as the LAX vowel in a closed one (mak-ken, lop, ur-nen, lip). Keyed on syllable APERTURE, so the spec's own syllabifier -- onset-constrained for Dutch -- decides it: a-bri-koos and a-cro-baat have an open first syllable because /br/ and /kr/ are legal Dutch onsets. SHORT TENSE HIGH VOWELS (Booij 1995, ch. 2; Gussenhoven 1999, JIPA Illustration of Dutch): Dutch /i y u/ -- spelt ⟨ie⟩ ⟨uu⟩ ⟨oe⟩ and the open-syllable readings of ⟨i⟩ ⟨u⟩ -- are tense but SHORT, not long; only /eː øː oː aː/ are long. /i/ and /y/ lengthen before /r/ (NL_HIGH_TENSE_LENGTHENING_BEFORE_R_I/_Y). /u/ does NOT: although Booij states the lengthening for the whole series, WikiPron gold is 5.8:1 AGAINST it (78 [uːr] to 450 [ur]) -- boer [bur], aanvoer [aːnvur], beroerd [bərurt] -- and adding the /u/ member measured PER 0.0902 -> 0.0910, WER 0.4444 -> 0.4486 on nl-NL wikipron. The rule is therefore stated per-vowel, not for the series. DIPHTHONGS SPELT WITH ⟨w⟩ (Paardekooper 1987, ABN-uitspraakgids; Zonneveld & Trommelen 1980): ⟨ouw⟩ and ⟨auw⟩ spell the diphthong of ⟨ou⟩, and the ⟨w⟩ has no sound of its own. Paardekooper's key gives one value for \"nou, nauw\" (p. VIII), and Zonneveld & Trommelen write that \"ou has the spelling variants ouw, au, and auw\" (p. 267, note 1). The older spelling ⟨aauw⟩ (blaauw, Graauw) has the same diphthong: in Modern Standard Dutch the velar diphthongs collapsed, \"first 'aau' and 'au' then 'au' and 'ou'\" (Zonneveld & Trommelen 1980, p. 267). Before a vowel Paardekooper hears a transitional w in nauwe, blauwe and does not transcribe it (p. XVIII), so bouwen is [bɑuən]. ⟨eeuw⟩ and ⟨ieuw⟩ \"aan het eind van een woord of van een morfeem voor een medeklinker (eeuwfeest, kieuwbreedte) spreek je uit als eu, resp. iu. Maar voor een klinker is ew en iw normaal\" (p. XVIII): leeuw [leːu], nieuw [niu], leeuwen [leːʋən], nieuwe [niʋə]. Stressed ⟨uw⟩ is [yu] word-finally and before a consonant (\"dyu, ryu, slyu, sxyu, dyubot\"), and before a vowel \"heeft yw de voorkeur\" (\"rywə naast ryuə, dywə naast dyuə\", p. XVIII). Paardekooper's w is the labiodental [ʋ] (\"De w is in het ABN een liptandklank\", p. XVIII). Gussenhoven (1992, JIPA 22, p. 46) states that \"/ʋ/ is realized as [β̞] in the coda\". If ⟨eeuw ieuw uw⟩ end in /ʋ/, that rule gives [leːβ̞]. The spec follows Paardekooper, who states the value of these words.",
   "quality": "research",
   "script_type": "alphabet",
   "sources": [
@@ -368,24 +375,465 @@
       "url": null,
       "pages": null,
       "notes": "In: Handbook of the International Phonetic Association"
+    },
+    {
+      "id": "vdHulst_ritter1999",
+      "author": "van der Hulst, H. & Ritter, N.A. (eds.)",
+      "year": 1999,
+      "title": "The Syllable: Views and Facts",
+      "publisher": "Mouton de Gruyter",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "paardekooper1987",
+      "author": "Paardekooper, P.C.",
+      "year": 1987,
+      "title": "ABN-uitspraakgids",
+      "publisher": "Heideland-Orbis",
+      "url": "https://www.dbnl.org/tekst/paar001abnu01_01/",
+      "pages": "VIII, X, XVIII",
+      "notes": "Second, fully revised edition, Antwerpen; first edition 1978"
+    },
+    {
+      "id": "zonneveld_trommelen1980",
+      "author": "Zonneveld, W. & Trommelen, M.",
+      "year": 1980,
+      "title": "Egg, onion, ouch! On the representation of Dutch diphthongs",
+      "publisher": "Martinus Nijhoff",
+      "url": "https://www.dbnl.org/tekst/zonn004eggo01_01/zonn004eggo01_01_0001.php",
+      "pages": "265-292",
+      "notes": "In: Studies in Dutch Phonology (Dutch Studies 4), The Hague"
+    },
+    {
+      "id": "gussenhoven1992",
+      "author": "Gussenhoven, C.",
+      "year": 1992,
+      "title": "Dutch",
+      "publisher": "Journal of the International Phonetic Association",
+      "url": "https://doi.org/10.1017/S002510030000459X",
+      "pages": "45-47",
+      "notes": "Illustrations of the IPA, JIPA 22(1-2)"
+    },
+    {
+      "id": "verhoeven2005",
+      "author": "Verhoeven, J.",
+      "year": 2005,
+      "title": "Belgian Standard Dutch",
+      "publisher": "Journal of the International Phonetic Association",
+      "url": "https://doi.org/10.1017/S0025100305002173",
+      "pages": "243-247",
+      "notes": "Illustrations of the IPA, JIPA 35(2)"
     }
   ],
   "wikipedia": [
     "https://en.wikipedia.org/wiki/Dutch_language",
-    "https://nl.wikipedia.org/wiki/Nederlandse_taal",
     "https://nl.wikipedia.org/wiki/Nederlands"
   ],
+  "positional_graphemes": {
+    "veld": {
+      "word_final": [
+        "vɛlt"
+      ],
+      "default": [
+        "vɛld"
+      ]
+    },
+    "b": {
+      "word_final": [
+        "p"
+      ],
+      "default": [
+        "b"
+      ]
+    },
+    "d": {
+      "word_final": [
+        "t"
+      ],
+      "default": [
+        "d"
+      ]
+    },
+    "g": {
+      "word_final": [
+        "χ"
+      ],
+      "default": [
+        "χ"
+      ]
+    },
+    "v": {
+      "word_final": [
+        "f"
+      ],
+      "default": [
+        "v"
+      ]
+    },
+    "z": {
+      "word_final": [
+        "s"
+      ],
+      "default": [
+        "z"
+      ]
+    },
+    "c": {
+      "before_e": [
+        "s"
+      ],
+      "before_i": [
+        "s"
+      ],
+      "default": [
+        "k"
+      ]
+    },
+    "e": {
+      "nucleus_stressed_open": [
+        "eː"
+      ],
+      "nucleus_stressed_closed": [
+        "ɛ"
+      ],
+      "nucleus_unstressed": [
+        "ə"
+      ],
+      "default": [
+        "ɛ",
+        "ə"
+      ]
+    },
+    "h": {
+      "word_initial": [
+        "ɦ"
+      ],
+      "default": [
+        "ɦ"
+      ]
+    },
+    "sch": {
+      "word_final": [
+        "s"
+      ],
+      "default": [
+        "sχ"
+      ]
+    },
+    "a": {
+      "open_syllable": [
+        "aː"
+      ],
+      "default": [
+        "ɑ"
+      ]
+    },
+    "o": {
+      "open_syllable": [
+        "oː"
+      ],
+      "default": [
+        "ɔ"
+      ]
+    },
+    "u": {
+      "open_syllable": [
+        "y"
+      ],
+      "default": [
+        "ʏ"
+      ]
+    },
+    "i": {
+      "open_syllable": [
+        "i"
+      ],
+      "default": [
+        "ɪ"
+      ]
+    },
+    "ieuw": {
+      "before_vowel": [
+        "iʋ"
+      ],
+      "default": [
+        "iu"
+      ]
+    },
+    "eeuw": {
+      "before_vowel": [
+        "eːʋ"
+      ],
+      "default": [
+        "eːu"
+      ]
+    },
+    "uw": {
+      "before_vowel": [
+        "yʋ"
+      ],
+      "default": [
+        "yu"
+      ]
+    }
+  },
+  "word_exceptions": {
+    "tietjerk": "ˈtitʃɛrk",
+    "tjalhuizum": "ˈtʃɑlɦœyzʏm",
+    "tjerkgaast": "ˈtʃɛrkχaːst",
+    "tjerkwerd": "ˈtʃɛrkʋərt",
+    "matjok": "ˈmaːtʃɔk",
+    "nestje": "ˈnɛstʃə",
+    "tjaffelen": "ˈtʃɑfələn",
+    "tjanten": "ˈtʃɑntən",
+    "tjap": "ˈtʃɑp",
+    "tjappen": "ˈtʃɑpən",
+    "tjaptjoi": "ˈtʃɑptʃɔi",
+    "tjauwmin": "ˈtʃɑumɪn",
+    "tjetten": "ˈtʃɛtən",
+    "tjokvol": "ˈtʃɔkfɔl"
+  },
   "timespan": {
     "start_year": 1500,
     "end_year": null
   },
   "glottolog_code": "dutc1256",
   "iso639_3": "nld",
+  "wikidata_qid": "Q7411",
+  "phoible_id": "dutc1256",
+  "wals_code": "dut",
   "location": {
     "latitude": 52.0,
     "longitude": 5.0,
     "source": "glottolog",
     "notes": "Glottolog's representative point for Dutch."
   },
+  "stress": {
+    "default_position": 1,
+    "final_stress_endings": [],
+    "penult_stress_endings": [],
+    "marked_vowels": [],
+    "stress_mark": "ˈ",
+    "notes": "Germanic initial stress default (Booij 1995, ch. 5); the -e(n) verbal/plural ending is unstressed, which is what the open/closed-syllable vowel-length rule and the e -> schwa reduction below need."
+  },
+  "allophone_rules": [
+    {
+      "id": "NL_CODA_DEVOICE_G",
+      "phonemes": [
+        "ɣ"
+      ],
+      "surface": "x",
+      "syllable_position": "coda",
+      "followed_by_phoneme": [
+        "t",
+        "k",
+        "s",
+        "f",
+        "p",
+        "x",
+        "χ"
+      ],
+      "grapheme": [
+        "g"
+      ],
+      "notes": "Regressive devoicing assimilation (Booij 1995, ch. 2 sec. 2.5): Dutch obstruents in coda devoice not only word-finally but also before a following voiceless obstruent within the word, e.g. zeg-t [zɛxt], lieg-t [liːxt], hoog-te [ɦoːxtə]. The existing word_final positional override for ⟨g⟩ handles the absolute-final case; this rule extends the same devoicing to pre-obstruent coda position without touching ⟨g⟩ before a sonorant/vowel (dag-je stays [ɣ]: j is not an obstruent)."
+    },
+    {
+      "id": "NL_UNSTRESSED_TENSE_I_FINAL",
+      "phonemes": [
+        "ɪ"
+      ],
+      "surface": "i",
+      "stress": "unstressed",
+      "word_final": true,
+      "grapheme": [
+        "i"
+      ],
+      "notes": "Unstressed tense vowel (Booij 1995, ch. 2): an unstressed word-final ⟨i⟩ surfaces tense-but-short [i], not lax [ɪ] -- Ali [aːli], Adri [aːdri]. Mirrors the analogous German DE_UNSTRESSED_TENSE_*_FINAL rules (final unstressed high/mid vowels resist laxing)."
+    },
+    {
+      "id": "NL_UNSTRESSED_TENSE_I_HIATUS",
+      "phonemes": [
+        "ɪ"
+      ],
+      "surface": "i",
+      "stress": "unstressed",
+      "followed_by": "vowel",
+      "grapheme": [
+        "i"
+      ],
+      "notes": "Unstressed tense vowel in hiatus (Booij 1995, ch. 2): an unstressed ⟨i⟩ directly before another vowel letter (Aziaat, Ariër, Adriaan, -ië/-iër loanword endings) surfaces tense-but-short [i], not lax [ɪ]; the hiatus context blocks the closed-syllable laxing that a following consonant would trigger."
+    },
+    {
+      "id": "NL_HIGH_TENSE_LENGTHENING_BEFORE_R_I",
+      "phonemes": [
+        "i"
+      ],
+      "surface": "iː",
+      "followed_by_phoneme": [
+        "r"
+      ],
+      "notes": "The tense high vowels /i, y, u/ are phonologically SHORT in Dutch -- unlike the long mid vowels /eː, øː, oː/ (Booij 1995, ch. 2; Gussenhoven 1999, JIPA Illustration of Dutch, transcribes them [i] [y] [u]). Booij states lengthening before /r/ for the series; WikiPron gold bears it out for /i/ and /y/ but REFUTES it for /u/, so the series is split into per-vowel rules rather than applied wholesale. For /i/ gold runs 703 [iːr] to 349 [ir] (2.0:1 FOR lengthening): banier [baːniːr], bankier [bɑŋkiːr], aasgier [aːsxiːr]. Measured on nl-NL wikipron, removing this rule alone costs PER 0.0902 -> 0.0905 and WER 0.4446 -> 0.4490 (measured on the post-#850 tree)."
+    },
+    {
+      "id": "NL_HIGH_TENSE_LENGTHENING_BEFORE_R_Y",
+      "phonemes": [
+        "y"
+      ],
+      "surface": "yː",
+      "followed_by_phoneme": [
+        "r"
+      ],
+      "notes": "The tense high vowels /i, y, u/ are phonologically SHORT in Dutch -- unlike the long mid vowels /eː, øː, oː/ (Booij 1995, ch. 2; Gussenhoven 1999, JIPA Illustration of Dutch, transcribes them [i] [y] [u]). Booij states lengthening before /r/ for the series; WikiPron gold bears it out for /i/ and /y/ but REFUTES it for /u/, so the series is split into per-vowel rules rather than applied wholesale. For /y/ gold runs 739 [yːr] to 257 [yr] (2.9:1 FOR lengthening): aanvuren [aːnvyːrə], afsturen [ɑfstyːrə], achturig [ɑxtyːrəx]. Measured on nl-NL wikipron, removing this rule alone costs PER 0.0902 -> 0.0908 and WER 0.4446 -> 0.4503 (measured on the post-#850 tree)."
+    },
+    {
+      "id": "NL_MID_TENSE_CENTRING_BEFORE_R_E",
+      "phonemes": [
+        "eː"
+      ],
+      "surface": "eᵊ",
+      "followed_by_phoneme": [
+        "r"
+      ],
+      "notes": "Gussenhoven (1992, JIPA 22, p. 46): \"/eː, øː, oː/ are narrow closing diphthongs ([ei, øy, ou]), except before /r/ in the same word, when they are pronounced [eᵊ, øᵊ, oᵊ]\". Before /r/ the vowel takes the centring glide: meer [meᵊr]. This rule comes before NL_MID_TENSE_CLOSING_DIPHTHONG_E, because the first rule that matches applies."
+    },
+    {
+      "id": "NL_MID_TENSE_CENTRING_BEFORE_R_OE",
+      "phonemes": [
+        "øː"
+      ],
+      "surface": "øᵊ",
+      "followed_by_phoneme": [
+        "r"
+      ],
+      "notes": "Gussenhoven (1992, JIPA 22, p. 46): \"/eː, øː, oː/ are narrow closing diphthongs ([ei, øy, ou]), except before /r/ in the same word, when they are pronounced [eᵊ, øᵊ, oᵊ]\". Before /r/ the vowel takes the centring glide: deur [døᵊr]. This rule comes before NL_MID_TENSE_CLOSING_DIPHTHONG_OE, because the first rule that matches applies."
+    },
+    {
+      "id": "NL_MID_TENSE_CENTRING_BEFORE_R_O",
+      "phonemes": [
+        "oː"
+      ],
+      "surface": "oᵊ",
+      "followed_by_phoneme": [
+        "r"
+      ],
+      "notes": "Gussenhoven (1992, JIPA 22, p. 46): \"/eː, øː, oː/ are narrow closing diphthongs ([ei, øy, ou]), except before /r/ in the same word, when they are pronounced [eᵊ, øᵊ, oᵊ]\". Before /r/ the vowel takes the centring glide: door [doᵊr]. This rule comes before NL_MID_TENSE_CLOSING_DIPHTHONG_O, because the first rule that matches applies."
+    },
+    {
+      "id": "NL_MID_TENSE_CLOSING_DIPHTHONG_E",
+      "phonemes": [
+        "eː"
+      ],
+      "surface": "ei",
+      "notes": "Gussenhoven (1992, JIPA 22, p. 46): \"/eː, øː, oː/ are narrow closing diphthongs ([ei, øy, ou]), except before /r/ in the same word, when they are pronounced [eᵊ, øᵊ, oᵊ]\". Elsewhere the vowel is the narrow closing diphthong: beet [beit]. The rule applies to every slot that is the long vowel alone: ⟨ee eu oo é eau⟩ and the open-syllable ⟨e o⟩. The keys ⟨eeuw⟩ and ⟨ieu⟩ keep the values that Paardekooper (1987) states (leeuw [leːu], milieu [miljøː]). Before /r/ the centring rule reaches the vowel of ⟨ieu⟩ too: ingenieur [ɪŋənjøᵊr]."
+    },
+    {
+      "id": "NL_MID_TENSE_CLOSING_DIPHTHONG_OE",
+      "phonemes": [
+        "øː"
+      ],
+      "surface": "øy",
+      "notes": "Gussenhoven (1992, JIPA 22, p. 46): \"/eː, øː, oː/ are narrow closing diphthongs ([ei, øy, ou]), except before /r/ in the same word, when they are pronounced [eᵊ, øᵊ, oᵊ]\". Elsewhere the vowel is the narrow closing diphthong: neus [nøys]. The rule applies to every slot that is the long vowel alone: ⟨ee eu oo é eau⟩ and the open-syllable ⟨e o⟩. The keys ⟨eeuw⟩ and ⟨ieu⟩ keep the values that Paardekooper (1987) states (leeuw [leːu], milieu [miljøː]). Before /r/ the centring rule reaches the vowel of ⟨ieu⟩ too: ingenieur [ɪŋənjøᵊr]."
+    },
+    {
+      "id": "NL_MID_TENSE_CLOSING_DIPHTHONG_O",
+      "phonemes": [
+        "oː"
+      ],
+      "surface": "ou",
+      "notes": "Gussenhoven (1992, JIPA 22, p. 46): \"/eː, øː, oː/ are narrow closing diphthongs ([ei, øy, ou]), except before /r/ in the same word, when they are pronounced [eᵊ, øᵊ, oᵊ]\". Elsewhere the vowel is the narrow closing diphthong: boot [bout]. The rule applies to every slot that is the long vowel alone: ⟨ee eu oo é eau⟩ and the open-syllable ⟨e o⟩. The keys ⟨eeuw⟩ and ⟨ieu⟩ keep the values that Paardekooper (1987) states (leeuw [leːu], milieu [miljøː]). Before /r/ the centring rule reaches the vowel of ⟨ieu⟩ too: ingenieur [ɪŋənjøᵊr]. Known gap: the rule leaves ⟨oo⟩ before ⟨i ie isch⟩ at [oː] (mooi [moːi], kooien [koːin]). No opened source states how ⟨ooi⟩ is realised, so the spec does not write [ou] there.",
+      "followed_by_grapheme_not": [
+        "i",
+        "ie",
+        "isch"
+      ]
+    },
+    {
+      "id": "NL_CODA_DEVOICE_B",
+      "phonemes": [
+        "b"
+      ],
+      "surface": "p",
+      "syllable_position": "coda",
+      "followed_by_phoneme": [
+        "t",
+        "k",
+        "s",
+        "f",
+        "p",
+        "x",
+        "χ"
+      ],
+      "grapheme": [
+        "b"
+      ],
+      "notes": "Regressive devoicing assimilation (Booij 1995, ch. 2 sec. 2.5): a Dutch obstruent in coda devoices before a following voiceless obstruent, not only word-finally -- raad-sel [raːtsəl], web-site, lief-st, rei-zt. The rule is stated for the whole obstruent series; ⟨g⟩ already had it (NL_CODA_DEVOICE_G) and the remaining voiced obstruents ⟨b d v z⟩ follow the same generalisation."
+    },
+    {
+      "id": "NL_CODA_DEVOICE_D",
+      "phonemes": [
+        "d"
+      ],
+      "surface": "t",
+      "syllable_position": "coda",
+      "followed_by_phoneme": [
+        "t",
+        "k",
+        "s",
+        "f",
+        "p",
+        "x",
+        "χ"
+      ],
+      "grapheme": [
+        "d"
+      ],
+      "notes": "Regressive devoicing assimilation (Booij 1995, ch. 2 sec. 2.5): a Dutch obstruent in coda devoices before a following voiceless obstruent, not only word-finally -- raad-sel [raːtsəl], web-site, lief-st, rei-zt. The rule is stated for the whole obstruent series; ⟨g⟩ already had it (NL_CODA_DEVOICE_G) and the remaining voiced obstruents ⟨b d v z⟩ follow the same generalisation."
+    },
+    {
+      "id": "NL_CODA_DEVOICE_V",
+      "phonemes": [
+        "v"
+      ],
+      "surface": "f",
+      "syllable_position": "coda",
+      "followed_by_phoneme": [
+        "t",
+        "k",
+        "s",
+        "f",
+        "p",
+        "x",
+        "χ"
+      ],
+      "grapheme": [
+        "v"
+      ],
+      "notes": "Regressive devoicing assimilation (Booij 1995, ch. 2 sec. 2.5): a Dutch obstruent in coda devoices before a following voiceless obstruent, not only word-finally -- raad-sel [raːtsəl], web-site, lief-st, rei-zt. The rule is stated for the whole obstruent series; ⟨g⟩ already had it (NL_CODA_DEVOICE_G) and the remaining voiced obstruents ⟨b d v z⟩ follow the same generalisation."
+    },
+    {
+      "id": "NL_CODA_DEVOICE_Z",
+      "phonemes": [
+        "z"
+      ],
+      "surface": "s",
+      "syllable_position": "coda",
+      "followed_by_phoneme": [
+        "t",
+        "k",
+        "s",
+        "f",
+        "p",
+        "x",
+        "χ"
+      ],
+      "grapheme": [
+        "z"
+      ],
+      "notes": "Regressive devoicing assimilation (Booij 1995, ch. 2 sec. 2.5): a Dutch obstruent in coda devoices before a following voiceless obstruent, not only word-finally -- raad-sel [raːtsəl], web-site, lief-st, rei-zt. The rule is stated for the whole obstruent series; ⟨g⟩ already had it (NL_CODA_DEVOICE_G) and the remaining voiced obstruents ⟨b d v z⟩ follow the same generalisation."
+    }
+  ],
   "constrain_onsets": true
 }

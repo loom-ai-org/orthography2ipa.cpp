@@ -77,6 +77,21 @@
       ],
       "surface": "h",
       "notes": "Canarian /x/ (⟨j⟩ and ⟨g⟩ before front vowel) is a glottal/pharyngeal aspirate [h], never the Castilian velar [x] — a defining Atlantic feature shared with Andalusian and Caribbean Spanish: cojo [ˈkoho], trabajo [tɾaˈβaho], coge [ˈkohe] (Hualde 2005, The Sounds of Spanish, ch. on Canarian and Caribbean varieties; Zamora Vicente 1960, Dialectología española §El español de Canarias). Only the /x/ phoneme is rewritten; intervocalic /ɡ/→[ɣ] (which is a different phoneme) is untouched."
+    },
+    {
+      "id": "ES_NASAL_VELAR",
+      "phonemes": [
+        "n"
+      ],
+      "surface": "ŋ",
+      "followed_by_phoneme": [
+        "k",
+        "ɡ",
+        "ɣ",
+        "w"
+      ],
+      "syllable_position": "coda",
+      "notes": "Overrides the es-ES rule without /x/. Here /x/ is the glottal [h] (CANARIAS_X_TO_H), not a velar consonant. Navarro Tomás (1918, § 133, pp. 111-112) gives [ŋ] before a velar consonant, and no source in this spec gives [ŋ] before [h]. ES_EXT_FINAL_N_VELAR also leaves a nasal unchanged before [h]. So a coda nasal is [ŋ] only before k ɡ ɣ w."
     }
   ],
   "parent": "es-ES",

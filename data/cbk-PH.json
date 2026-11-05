@@ -312,6 +312,12 @@
       "notes": "NOT ASSERTED for this creole, for the same reason as ES_TRILL_AFTER_CORONAL above: nasal place assimilation before a labial is cited for Castilian (Navarro Tomas 1977; Hualde 2005 ch. 3), not for this creole's phonology. Disabled by empty 'phonemes'; re-enable with a citation."
     },
     {
+      "id": "ES_NASAL_VELAR",
+      "phonemes": [],
+      "surface": "ŋ",
+      "notes": "NOT ASSERTED for this creole, for the same reason as ES_NASAL_LABIAL: nasal place assimilation before a velar is cited for Castilian (Navarro Tomás 1918, § 133, pp. 111-112), not for this creole's phonology. Disabled by empty 'phonemes'; re-enable with a citation."
+    },
+    {
       "id": "ES_SPIRANT_B",
       "phonemes": [],
       "surface": "β",
@@ -357,6 +363,33 @@
       "right_transform": "\\1ɡ",
       "obligatory": true,
       "notes": "NOT ASSERTED for this creole: phrase-level spirantization of /b d ɡ/ is cited for Castilian (Navarro Tomás 1918, §§ 82, 101-102), not for this creole. Replaced by id with a rule that writes the stop back; replace it with a cited rule to change that."
+    },
+    {
+      "id": "ES_EXT_FINAL_N_LABIAL",
+      "name": "word-final nasal keeps its place",
+      "left_context": "([nŋ])$",
+      "right_context": "^[ˈˌ]?[pbβm]",
+      "transform": "\\1",
+      "obligatory": true,
+      "notes": "NOT ASSERTED for this creole, for the same reason as ES_NASAL_LABIAL: the cross-word place assimilation of a word-final nasal is cited for Castilian (Navarro Tomás 1918, §§ 87, 133), not for this creole's phonology. Replaced by id with a rule that keeps the nasal; replace it with a cited rule to change that."
+    },
+    {
+      "id": "ES_EXT_FINAL_N_CORONAL",
+      "name": "word-final nasal keeps its place",
+      "left_context": "([nŋ])$",
+      "right_context": "^[ˈˌ]?[tdðθszlɾrnɲʎʝʃʒf]",
+      "transform": "\\1",
+      "obligatory": true,
+      "notes": "NOT ASSERTED for this creole, for the same reason as ES_NASAL_LABIAL: the cross-word place assimilation of a word-final nasal is cited for Castilian (Navarro Tomás 1918, §§ 87, 133), not for this creole's phonology. Replaced by id with a rule that keeps the nasal; replace it with a cited rule to change that."
+    },
+    {
+      "id": "ES_EXT_FINAL_N_VELAR",
+      "name": "word-final nasal keeps its place",
+      "left_context": "([nŋ])$",
+      "right_context": "^[ˈˌ]?[kɡɣxw]",
+      "transform": "\\1",
+      "obligatory": true,
+      "notes": "NOT ASSERTED for this creole, for the same reason as ES_NASAL_LABIAL: the cross-word place assimilation of a word-final nasal is cited for Castilian (Navarro Tomás 1918, §§ 87, 133), not for this creole's phonology. Replaced by id with a rule that keeps the nasal; replace it with a cited rule to change that."
     }
   ]
 }

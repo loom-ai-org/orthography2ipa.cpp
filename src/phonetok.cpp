@@ -585,7 +585,10 @@ PhonetokTokenizer::PhonetokTokenizer(const LanguageSpec& spec, bool add_bos, boo
     vowel_graphemes_ =
         std::make_shared<const std::set<std::string>>(spec.vowel_graphemes.begin(),
                                                       spec.vowel_graphemes.end());
-    closed_hiatus_ = spec.stress_defined && spec.closed_hiatus.has_value();
+    hiatus_ = spec.stress_defined &&
+              (spec.closed_hiatus.has_value() || spec.final_diphthongs.has_value());
+    for (const auto& g : spec.prevocalic_glide_backoff)
+        prevocalic_glide_backoff_.insert(uni::lower(u32(g)));
 }
 
 std::u32string PhonetokTokenizer::normalise(const std::u32string& input) const {
@@ -605,9 +608,9 @@ std::u32string PhonetokTokenizer::normalise(const std::u32string& input) const {
     return text;
 }
 
-std::u32string PhonetokTokenizer::closed_hiatus_prefix(const std::u32string& text,
-                                                       std::size_t pos,
-                                                       const std::u32string& gkey) const {
+std::u32string PhonetokTokenizer::hiatus_prefix(const std::u32string& text,
+                                                std::size_t pos,
+                                                const std::u32string& gkey) const {
     auto is_letter = [](char32_t c) {
         const char kind = uni::category(c)[0];
         return kind == 'L' || kind == 'M';
@@ -623,9 +626,9 @@ std::u32string PhonetokTokenizer::closed_hiatus_prefix(const std::u32string& tex
         // The stress pass runs unlocked, so a miss does not hold up other
         // threads. Two threads that miss the same word compute the same set.
         lock.unlock();
-        std::set<std::size_t> closed = stress::closed_hiatus_positions(uni::to_utf8(word), spec_);
+        std::set<std::size_t> hiatus = stress::hiatus_positions(uni::to_utf8(word), spec_);
         lock.lock();
-        hit = hiatus_by_word_.emplace(word, std::move(closed)).first;
+        hit = hiatus_by_word_.emplace(word, std::move(hiatus)).first;
     }
     for (std::size_t cut = 1; cut < gkey.size(); ++cut)
         if (hit->second.count(pos - start + cut) && grapheme_ipa_.count(gkey.substr(0, cut)))
@@ -1037,8 +1040,16 @@ std::vector<PhonetokTokenizer::UToken> PhonetokTokenizer::tokenize_u32(
         }
 
         if (gkey.has_value()) {
-            if (closed_hiatus_ && gkey->size() > 1 && vowels::is_orthographic_vowel((*gkey)[0]))
-                gkey = closed_hiatus_prefix(text, pos, *gkey);
+            if (hiatus_ && gkey->size() > 1 && vowels::is_orthographic_vowel((*gkey)[0]))
+                gkey = hiatus_prefix(text, pos, *gkey);
+            // A listed vowel + glide sign (Limburgish ⟨ew⟩) gives its glide
+            // letter to the next syllable when a vowel letter follows.
+            if (prevocalic_glide_backoff_.count(*gkey) &&
+                grapheme_ipa_.count(gkey->substr(0, gkey->size() - 1)) &&
+                grapheme_ipa_.count(gkey->substr(gkey->size() - 1)) &&
+                pos + gkey->size() < n &&
+                vowels::is_orthographic_vowel(text[pos + gkey->size()]))
+                gkey = gkey->substr(0, gkey->size() - 1);
             // Vowel-gated digraph. A consonant-initial digraph ending
             // in a high glide letter ⟨u⟩/⟨i⟩ uses that letter as a
             // mute/glide marker only when a vowel follows; before a

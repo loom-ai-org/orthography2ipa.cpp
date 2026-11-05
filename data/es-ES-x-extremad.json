@@ -63,6 +63,21 @@
       ],
       "surface": "h",
       "notes": "Extremaduran /x/ (⟨j⟩ and ⟨g⟩ before front vowel) is the aspirate [h], not the Castilian velar [x] — a southern/western feature shared with Andalusian: coge [ˈkohe], bajo [ˈbaho], juegan [ˈhweɣan], pájaro [ˈpaharo] (González Salgado 2003, Cartografía lingüística de Extremadura; Penny 2002, A History of the Spanish Language §Southern features). Only the /x/ phoneme is rewritten; intervocalic /ɡ/→[ɣ] is a different phoneme and is untouched."
+    },
+    {
+      "id": "ES_NASAL_VELAR",
+      "phonemes": [
+        "n"
+      ],
+      "surface": "ŋ",
+      "followed_by_phoneme": [
+        "k",
+        "ɡ",
+        "ɣ",
+        "w"
+      ],
+      "syllable_position": "coda",
+      "notes": "Overrides the es-ES rule without /x/. Here /x/ is the glottal [h] (EXTREMADURA_X_TO_H), not a velar consonant. Navarro Tomás (1918, § 133, pp. 111-112) gives [ŋ] before a velar consonant, and no source in this spec gives [ŋ] before [h]. ES_EXT_FINAL_N_VELAR also leaves a nasal unchanged before [h]. So a coda nasal is [ŋ] only before k ɡ ɣ w."
     }
   ],
   "parent": "es-ES",

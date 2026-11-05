@@ -89,6 +89,71 @@ MULTI = ["fr-FR", "sv", "fo", "en-GB", "pt-PT", "ru", "it-IT", "de-DE", "is", "e
 # Aliases: a surface reports the code that the alias resolves to.
 PINNED["gl"] = ["casa"]
 PINNED["ro"] = ["casă"]
+PINNED["nl"] = ["kunst"]
+PINNED["nld"] = ["lezen"]
+# A region with no spec of its own resolves through the renamed nl key.
+PINNED["nl-SR"] = ["kunst"]
+
+# Spelling rules the word_exceptions do not reach: a final ⟨iu ui⟩ after a
+# vowel (stress.final_diphthongs), a stressed vowel after a diphthong
+# (stress.tonic_after_diphthong), the nasal diphthong ⟨ãi⟩ before a coda
+# nasal, the Limburgish unstressed prefixes (stress.unstressed_prefixes) and
+# ⟨ew⟩ before a vowel (prevocalic_glide_backoff), long [ʏː] and doubled [ɔɔ].
+PINNED["pt-PT"] += ["distraiu", "saiu", "instruiu", "pauis", "viu", "baiuca",
+                    "feiura", "tuiuiú", "maiúscula", "cheiinho", "abaiucado",
+                    "cãibra", "cãimbra", "põem", "Piauí", "cauim", "cauila"]
+PINNED["pt-BR"] += ["saiu", "pauis", "baiuca", "teiú", "cãimbra", "falar", "comer",
+                    "Piauí", "cauim", "cauila"]
+# Specs that take the pt-PT and pt-BR stress block whole.
+PINNED["pt-AO"] += ["distraiu", "baiuca"]
+PINNED["pt-BR-x-mg"] += ["saiu", "feiura"]
+PINNED["pt-PT-x-lisbon"] = ["Piauí", "atraiu", "baiuca", "cãi", "cãimbra"]
+PINNED["pt-BR-x-sp"] = ["Piauí", "atraiu", "baiuca", "cãi", "cãimbra", "falar"]
+PINNED["pt-UY"] = ["Piauí", "atraiu", "baiuca", "pauis", "cãimbra"]
+PINNED["li"] = ["geweun", "bewaar", "eweg", "kewa", "gebroek", "verstand",
+                "verlange", "gebeure", "geve", "beste", "Gennep", "deh", "nih",
+                "zàèle", "vàèl"]
+PINNED["li-x-rheindok"] = ["gebroek", "ve\u0329rstand", "Gele\u0329"]
+PINNED["nl-NL-x-limburg"] = ["huis", "zeggen", "geweest"]
+PINNED["nl-NL-x-polder"] = ["tijd", "twijfelen", "vrijheid", "huis"]
+PINNED["nl-NL-x-groninge"] = ["vier", "fier", "goed", "lachen"]
+PINNED["nl-BE"] += ["wang", "wit", "kwaad", "zwak"]
+PINNED["sv"] = ["blyerts", "cykel"]
+PINNED["nb"] = ["gynge"]
+PINNED["enm"] = ["toot", "poo"]
+# A coda nasal before a velar (ES_NASAL_VELAR), in es-ES, in the specs that
+# inherit it and in the specs that carry their own copy.
+PINNED["es-ES"] += ["banco", "cinco"]
+for code in ["es-MX", "es-VE", "es-CO-x-llanero", "es-ES-x-canarias",
+             "ast-x-cantabri", "ast-x-pasiego", "ext"]:
+    PINNED[code] = ["banco", "cinco"]
+# Galician falling diphthongs after a rising one (Paraguai, anunciou).
+PINNED["gl-ES"] = ["Paraguai", "anunciou"]
+PINNED["gl-ES-x-central"] = ["apaziguou"]
+PINNED["gl-ES-x-eonavia"] = ["Paraguai"]
+# Pontic Greek ⟨αυ ευ⟩ before a voiceless sound, the palatals before a front
+# vowel, ⟨νγκ⟩, word-initial ⟨μπ⟩ and the dotted ⟨τ̇⟩.
+PINNED["pnt"] = ["αυ", "Τουρκικὸν", "ένγκεν", "ΕΝΓΚΑ", "μπαλόν’", "τ\u0307σ"]
+# pt-PT reads porque with [u] and ⟨ã⟩ as [ɐ̃]; the specs with full unstressed
+# vowels switch the porque rule off again.
+PINNED["pt-PT"] += ["porque", "amanhã"]
+for code in ["pt-AO", "pt-GW", "pt-MZ", "pt-ST", "pt-TL", "pt-PT-x-algarve"]:
+    PINNED.setdefault(code, []).append("porque")
+# pt-BR raises a word-initial pretonic ⟨e⟩ before a coda sibilant and ⟨en em⟩
+# to the close nasal vowel, but not the one-syllable ⟨em⟩; pt-UY switches both
+# rules off. ⟨pôr⟩ and ⟨lugar⟩ hold the two other r-drop rules
+# (BR_INFINITIVE_R_DROP_POR, BR_FINAL_R_NONVERB).
+PINNED["pt-BR"] += ["escola", "entrar", "embora", "em", "amanhã", "pôr", "lugar"]
+PINNED["pt-UY"] += ["escola", "entrar", "amanhã"]
+PINNED["pt-BR-x-cuiaba"] = ["tchau", "tchibum"]
+# Netherlandic ⟨ee eu oo⟩ as closing diphthongs and ⟨g ch⟩ as uvular [χ]; nl-BE
+# and af keep their own readings, and nl-NL-x-limburg keeps the velar [x].
+PINNED["nl-NL"] = ["been", "boom", "neus", "deur", "goed", "acht", "regen"]
+PINNED["nl-BE"] += ["goed", "acht", "school", "berg"]
+PINNED["af"] += ["kné", "café", "vér"]
+PINNED["nl-NL-x-groninge"] += ["been", "boom"]
+PINNED["nl-NL-x-polder"] += ["been", "acht"]
+PINNED["nl-NL-x-limburg"] += ["tjerkgaast", "school", "acht"]
 
 # The code points of the viramas this catalog actually uses.
 VIRAMAS = {0x094D, 0x09CD, 0x0A4D, 0x0ACD, 0x0B4D, 0x0BCD, 0x0C4D, 0x0CCD,
