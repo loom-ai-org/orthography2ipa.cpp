@@ -26,7 +26,7 @@ constexpr char32_t NASAL_TILDE = U'\u0303';
 const std::u32string& nasal_carriers() {
     static const std::u32string set =
         U"\u0061\u0065\u0069\u006f\u0075"                       // aeiou
-        U"\u025b\u0254\u0259\u0268\u0289\u026f\u00e6\u0250\u028c\u0252\u0153\u00f8\u026a\u028a\u0264\u0275\u025e\u0251\u0258\u025a\u025c\u025d\u0276" // IPA vowels
+        U"\u025b\u0254\u0259\u0268\u0289\u026f\u00e6\u0250\u028c\u0252\u0153\u00f8\u026a\u028f\u028a\u0264\u0275\u025e\u0251\u0258\u025a\u025c\u025d\u0276" // IPA vowels
         U"\u0079"                                               // y
         U"\u0077\u006a\u0265\u0270";                            // wjɥɰ
     return set;
@@ -607,6 +607,14 @@ std::vector<Hypothesis> expand_beam(std::vector<Hypothesis> beam,
                             tail = carrier_tail(uni::to_utf32(*it));
                             break;
                         }
+                    // A coda nasal after a segment that already ends in the
+                    // tilde only marks nasality that is already written.
+                    if (guarded && tail == tilde) {
+                        Hypothesis next{hyp.segments, hyp.score + branch.cost};
+                        next.segments.emplace_back();
+                        out.push_back(std::move(next));
+                        continue;
+                    }
                     const bool legal =
                         !tail.empty() &&
                         nasal_carriers().find(tail[0]) != std::u32string::npos;

@@ -85,6 +85,12 @@ struct ClosedHiatus {
     std::vector<std::string> pairs, onsets, codas;
 };
 
+/// types.py FinalDiphthongs: written diphthongs that end a word as one
+/// stressed nucleus after a vowel (stress.final_diphthongs).
+struct FinalDiphthongs {
+    std::vector<std::string> diphthongs, finals;
+};
+
 struct LanguageSpec {
     std::string code, name, family, script, parent, quality;
     std::string glottolog_code, iso639_3, wikidata_qid, phoible_id, wals_code, notes;
@@ -103,11 +109,19 @@ struct LanguageSpec {
     std::map<std::string, std::vector<std::string>> plugins;
     std::vector<std::string> marked_vowels, final_stress_endings, penult_stress_endings;
     std::vector<std::string> antepenult_stress_endings, diphthongs;
+    // Word-initial prefixes that never take the default stress.
+    std::vector<std::string> unstressed_prefixes;
     // IPA vowel sequences that form one nucleus where the stress mark is
     // placed; unset, the transcription is split with `diphthongs`.
     std::optional<std::vector<std::string>> ipa_diphthongs;
     // stress.closed_hiatus; unset leaves every listed diphthong one nucleus.
     std::optional<ClosedHiatus> closed_hiatus;
+    // stress.final_diphthongs; unset lets the vowel before a final diphthong
+    // take its first letter as a glide.
+    std::optional<FinalDiphthongs> final_diphthongs;
+    // Vowel letters that open a stressed syllable of their own after a
+    // written diphthong (stress.tonic_after_diphthong).
+    std::vector<std::string> tonic_after_diphthong;
     std::vector<std::string> vowel_letters, onset_clusters;
     bool quantity_sensitive = false, superheavy_final_attracts = false;
     int max_onset = 1;
@@ -143,6 +157,8 @@ struct LanguageSpec {
     // An apostrophe between two letters belongs to the written word (doesn't).
     bool word_internal_apostrophe = false;
     std::vector<std::string> fold_diacritics, vowel_graphemes, dependent_vowels, preposed_vowels, trailing_vowel_axis_digraphs;
+    // Vowel + glide multigraphs that give the glide to a following vowel; own-only.
+    std::vector<std::string> prevocalic_glide_backoff;
     // Per-candidate weights for the weighted-object grapheme form
     // ({"ipa": [...], "weights": [...]}); own-only, sparse.
     std::map<std::string, std::vector<CandidateWeight>> grapheme_weights;

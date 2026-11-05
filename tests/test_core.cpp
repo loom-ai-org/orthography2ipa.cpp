@@ -7,6 +7,7 @@
 #include "orthography2ipa/tone.hpp"
 #include "orthography2ipa/transform.hpp"
 #include "orthography2ipa/types.hpp"
+#include "orthography2ipa/vowels.hpp"
 #include "beam.hpp"
 #include "codepoint_regex.hpp"
 
@@ -673,9 +674,41 @@ int main() {
         assert(tone::dock_tone_marks("ai", {}) == "ai");  // no marks: no-op
     }
 
+    // phonetok.py _expand_beam: a coda nasal tilde lands on an oral vowel,
+    // ʏ included; after a segment that ends in the tilde it is an empty
+    // segment; after a consonant the oral branch wins. Every expected beam is
+    // the reference's PhonetokTokenizer._expand_beam.
+    {
+        using H = std::vector<beam::Hypothesis>;
+        auto rows = [](const H& beam) {
+            std::vector<std::pair<std::vector<std::string>, double>> out;
+            for (const auto& h : beam) out.emplace_back(h.segments, h.score);
+            return out;
+        };
+        using R = std::vector<std::pair<std::vector<std::string>, double>>;
+        const std::vector<beam::Branch> after_n{{"\u0303", 0.0}, {"n", 1.0}};
+        const std::vector<beam::Branch> after_m{{"\u0303", 0.0}, {"m", 1.0}};
+        assert(rows(beam::expand_beam({{{"ʏ"}, 0.0}}, after_n, 8)) ==
+               (R{{{"ʏ\u0303", ""}, 0.0}, {{"ʏ", "n"}, 1.0}}));
+        assert(rows(beam::expand_beam({{{"k", "ɐ̃j̃"}, 0.0}}, after_m, 8)) ==
+               (R{{{"k", "ɐ̃j̃", ""}, 0.0}, {{"k", "ɐ̃j̃", "m"}, 1.0}}));
+        assert(rows(beam::expand_beam({{{"ɡ"}, 0.0}}, after_m, 8)) == (R{{{"ɡ", "m"}, 1.0}}));
+    }
+
+    // The 28 vowels of the IPA chart are IPA vowels, and a doubled [ɔɔ] is a
+    // long vowel that the geminate collapse keeps (the reference's
+    // is_ipa_vowel and G2P.transcribe).
+    {
+        for (const char* v : {"i", "y", "ɨ", "ʉ", "ɯ", "u", "ɪ", "ʏ", "ʊ", "e", "ø", "ɘ", "ɵ", "ɤ",
+                              "o", "ə", "ɛ", "œ", "ɜ", "ɞ", "ʌ", "ɔ", "æ", "ɐ", "a", "ɶ", "ɑ", "ɒ"})
+            assert(vowels::is_ipa_vowel(std::string(v)));
+        assert(G2P("enm").transcribe("toot") == "tɔɔt");
+        assert(G2P("sv").transcribe("blyerts") == "ˈblyːæʈʂ");
+    }
+
     // stress.closed_hiatus, the semivowel roles of ⟨y⟩ and ⟨w⟩, the ⟨qu⟩
     // onset grapheme and the declared-diphthong weight. Every expected value
-    // is the reference's (stress._syllables_for, closed_hiatus_positions,
+    // is the reference's (stress._syllables_for, hiatus_positions,
     // syllable_weight, G2P.transcribe). It runs before the block below
     // registers a whole-word pt-PT syllabifier for the rest of the process.
     {
@@ -684,9 +717,26 @@ int main() {
         using V = std::vector<std::string>;
         assert(stress::syllables_for("rainha", "", pt.diphthongs, &pt) == (V{"ra", "i", "nha"}));
         assert(stress::syllables_for("saia", "", pt.diphthongs, &pt) == (V{"sai", "a"}));
-        assert(stress::closed_hiatus_positions("rainha", pt) == (std::set<std::size_t>{2}));
-        assert(stress::closed_hiatus_positions("juiz", pt) == (std::set<std::size_t>{2}));
-        assert(stress::closed_hiatus_positions("ruindade", pt).empty());
+        assert(stress::hiatus_positions("rainha", pt) == (std::set<std::size_t>{2}));
+        assert(stress::hiatus_positions("juiz", pt) == (std::set<std::size_t>{2}));
+        assert(stress::hiatus_positions("ruindade", pt).empty());
+        // stress.final_diphthongs: a final ⟨iu ui⟩ after a vowel.
+        assert(stress::hiatus_positions("distraiu", pt) == (std::set<std::size_t>{6}));
+        assert(stress::hiatus_positions("pauis", pt) == (std::set<std::size_t>{2}));
+        assert(stress::hiatus_positions("viu", pt).empty());
+        // stress.unstressed_prefixes, but never onto a final open syllable.
+        const LanguageSpec& li = get("li");
+        const V gebroek{"ge", "broek"}, geve{"ge", "ve"};
+        assert(stress::detect_stress("gebroek", li, &gebroek, "li") == 1);
+        assert(stress::detect_stress("geve", li, &geve, "li") == 0);
+        // The tokenizer reads stress.final_diphthongs without closed_hiatus too.
+        LanguageSpec final_only = pt;
+        final_only.closed_hiatus.reset();
+        assert(PhonetokTokenizer(final_only).graphemes("distraiu") ==
+               (V{"d", "i", "s", "t", "r", "a", "iu"}));
+        final_only.final_diphthongs.reset();
+        assert(PhonetokTokenizer(final_only).graphemes("distraiu") ==
+               (V{"d", "i", "s", "t", "r", "ai", "u"}));
         assert(stress::syllables_for("mayo", "", es.diphthongs, &es) == (V{"ma", "yo"}));
         assert(stress::syllables_for("rey", "", es.diphthongs, &es) == (V{"rey"}));
         assert(stress::syllables_for("rugby", "", es.diphthongs, &es) == (V{"ru", "gby"}));
@@ -779,7 +829,8 @@ int main() {
     }
 
     // schema.py: Union[StressRulesModel, Literal[False], None] for `stress`
-    // and ClosedHiatusModel. Messages and locations are pydantic 2.12's.
+    // ClosedHiatusModel and FinalDiphthongsModel. Messages and locations are
+    // pydantic 2.12's.
     {
         const std::string dir = schema::data_directory();
         const auto biscayan = schema::validate_spec_file(dir + "/eu-biscayan.json");
@@ -817,6 +868,15 @@ int main() {
             "stress.StressRulesModel.closed_hiatus.x | extra_forbidden | Extra inputs are not permitted",
             "stress.literal[False] | literal_error | Input should be False"}));
         assert(errors_for("{\"closed_hiatus\": null}").empty());
+        assert(errors_for("{\"final_diphthongs\": {\"diphthongs\": []}}") == (std::vector<std::string>{
+            "stress.StressRulesModel.final_diphthongs.diphthongs | too_short | List should have at least 1 item after validation, not 0",
+            "stress.literal[False] | literal_error | Input should be False"}));
+        assert(errors_for("{\"final_diphthongs\": {\"diphthongs\": [\"iu\"], \"x\": 1}}") == (std::vector<std::string>{
+            "stress.StressRulesModel.final_diphthongs.x | extra_forbidden | Extra inputs are not permitted",
+            "stress.literal[False] | literal_error | Input should be False"}));
+        assert(errors_for("{\"unstressed_prefixes\": [\"\"]}") == (std::vector<std::string>{
+            "stress.StressRulesModel.unstressed_prefixes | value_error | Value error, stress rule entries must be non-empty strings",
+            "stress.literal[False] | literal_error | Input should be False"}));
         // schema.py validate_all(): every shipped spec validates.
         const auto results = schema::validate_all();
         assert(results.failures.empty());

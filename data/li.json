@@ -9,6 +9,14 @@
       "default": [
         "ɣ"
       ]
+    },
+    "e": {
+      "word_final": [
+        "ə"
+      ],
+      "nucleus_stressed": [
+        "æ"
+      ]
     }
   },
   "name": "Limburgish",
@@ -164,6 +172,15 @@
       "ɛːə"
     ],
     "èw": [
+      "ɛːw"
+    ],
+    "àè": [
+      "ɛː"
+    ],
+    "àèë": [
+      "ɛːə"
+    ],
+    "àèw": [
       "ɛːw"
     ],
     "ie": [
@@ -383,6 +400,12 @@
     ],
     "z": [
       "z"
+    ],
+    "~": [
+      "²"
+    ],
+    "\\": [
+      "¹"
     ]
   },
   "allophones": {
@@ -608,9 +631,102 @@
       "url": "https://en.wiktionary.org/wiki/Aap#Limburgish",
       "pages": null,
       "notes": "NOT a phonological authority; cited only for a distributional fact about the wikipron/li gold set this spec is benchmarked against. Wiktionary tags competing Limburgish spelling conventions as alternative forms of the same headword: 'aap' is labelled Veldeke spelling (= Spelling 2003) while its capitalised, umlaut-bearing counterpart 'Aap' is labelled German-based spelling; 'bekker' is Veldeke spelling while 'Bäcker' is explicitly labelled German-based spelling, with further alternates for Rheinische Dokumenta and Eupen-dialect spelling. The wikipron/li gold scrapes headwords across these conventions, most of which this spec's Spelling-2003 INPUT CONTRACT declares out of scope; see the measured ratio in the notes field below."
+    },
+    {
+      "id": "peters2006_hasselt",
+      "author": "Peters, Jörg",
+      "year": 2006,
+      "title": "The dialect of Hasselt",
+      "publisher": "Journal of the International Phonetic Association 36(1)",
+      "url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/CC3128C98C906168AC7A7C5888225895/S0025100306002428a.pdf/dialect_of_hasselt.pdf",
+      "doi": "10.1017/S0025100306002428",
+      "pages": "pp. 117-124",
+      "notes": "Illustration of the IPA for a West Limburgish dialect. p. 118: the vowel table, with short ɛ (dɛk ‘often’) and æ (mæs² ‘knife’), long eː, and ə 'restricted to unstressed syllables'; p. 117: superscript 2 marks accent 2; p. 119: short stressed vowels are followed by a coda consonant, /bəˈsxeən/ ‘perhaps’, stress location as in Standard Belgian Dutch; p. 123: bəˈɣɔs ‘began’; p. 120: stoottoon and sleeptoon are accent 1 and accent 2, and the accent occurs on syllables with main or secondary stress."
+    },
+    {
+      "id": "gussenhoven_peters2019",
+      "author": "Gussenhoven, Carlos & Peters, Jörg",
+      "year": 2019,
+      "title": "Franconian tones fare better as tones than as feet: a reply to Köhnlein (2016)",
+      "publisher": "Phonology 36(3)",
+      "url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/76ADA3C5BF45D85B5C112ABCDA846950/S095267571900023Xa.pdf/franconian-tones-fare-better-as-tones-than-as-feet-a-reply-to-kohnlein-2016.pdf",
+      "doi": "10.1017/S095267571900023X",
+      "pages": "pp. 497-530",
+      "notes": "Open access (CC BY 4.0). p. 497: the syllable with main stress, typically the final or penultimate, carries the Accent 1 / Accent 2 contrast; p. 498: the superscript transcription [man¹] [man²] and the dialect dependence of the F0 contours; p. 499: the contrast is confined to stressed syllables with two sonorant moras, except in West Limburgish."
+    },
+    {
+      "id": "hermans2008",
+      "author": "Hermans, Ben",
+      "year": 2008,
+      "title": "Een fonologische analyse van de Maastrichtse diftongering",
+      "publisher": "Taal & Tongval, themanummer 21",
+      "url": "https://www.journal-archive.aup.nl/taal-en-tongval/jrg_2008_themanr_21_-_een_fonologische_analyse_van_de_maastrichtse.pdf",
+      "pages": "pp. 39-72",
+      "notes": "p. 40, example (1): Roermond minimal pairs after Gussenhoven (2000a), Accent1 [ha:s] 'haas' against Accent2 [ha:s] 'handschoen'. This is the pair Spelling 2003 p. 27 writes haa\\s and haa~s, so it fixes which sign is which accent number."
+    },
+    {
+      "id": "gussenhoven1992_dutch",
+      "author": "Gussenhoven, Carlos",
+      "year": 1992,
+      "title": "Dutch (Illustrations of the IPA)",
+      "publisher": "Journal of the International Phonetic Association 22(1-2)",
+      "url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/7B078FF950183FB74A78382A79465344/S002510030000459Xa.pdf/dutch.pdf",
+      "doi": "10.1017/S002510030000459X",
+      "pages": "pp. 45-47",
+      "notes": "p. 47, 'Stress and accentuation': main stress falls in a window of the last three syllables, and minimal pairs exist (canon, kanon), so the position is lexical. p. 46, the vowel chart: lax 'ɛ bed ‘bed’' and, among the vowels of recent loans, 'ɛː serre ‘conservatory’'. Read for the Dutch vowel that Spelling 2003 p. 10 names in 'àè (de e van Ned. pet maar dan lang)'."
+    },
+    {
+      "id": "kohnlein2015_taalportaal",
+      "author": "Köhnlein, Björn",
+      "year": 2015,
+      "title": "Taalportaal, Dutch Phonology: 'Penultimate stress as the default location of primary stress in Dutch?', 'Three-Syllable Window' and 'Schwa restriction' (version 1.0)",
+      "publisher": "Taalportaal, Dutch Language Institute",
+      "url": "https://taalportaal.org/taalportaal/topic/pid/topic-14020545841308454",
+      "pages": null,
+      "notes": "Online grammar topics, version 1.0, no page numbers: topic-14020545841308454 (default penultimate stress), topic-14020545843750305 (three-syllable window), topic-14020545842376229 (schwa restriction)."
+    },
+    {
+      "id": "heijmans_gussenhoven1998_weert",
+      "author": "Heijmans, Linda & Gussenhoven, Carlos",
+      "year": 1998,
+      "title": "The Dutch dialect of Weert",
+      "publisher": "Journal of the International Phonetic Association 28(1-2)",
+      "url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/F919F489D4F25A97AB3F823BCEB44BA2/S0025100300006307a.pdf/the-dutch-dialect-of-weert.pdf",
+      "doi": "10.1017/S0025100300006307",
+      "pages": "pp. 107-112",
+      "notes": "Illustration of the IPA for a Limburgish city dialect. p. 111: stress 'identical to that of standard Dutch'; the transcribed passage writes vəʀˈbeːj ‘voorbij’ and bəɣɔs ‘began’. pp. 108-109: the long monophthongs 'include the series [iː, eː, ɛː, æː, aː, ɑː, ɔː, oː, uː]', and 'The vowels [ɑː] and [æː] are restricted to positions before a sonorant consonant in the coda'; the table gives 'ɛː ˈblɛːcə ‘leaf +DIM’'."
+    },
+    {
+      "id": "schultink1976",
+      "author": "Schultink, H.",
+      "year": 1976,
+      "title": "Nederlandse affixen en hun boundaries",
+      "publisher": "Spektator 6",
+      "url": "https://www.dbnl.org/tekst/_spe011197601_01/_spe011197601_01_0069.php",
+      "pages": "p. 475",
+      "notes": "Dutch, not Limburgish. p. 475: the prefixes be-, er-, ge-, ont- and ver- 'altijd accentloos'. Read for li through the Peters 2006 and Heijmans & Gussenhoven 1998 statements that the stress follows the standard language."
+    },
+    {
+      "id": "trommelen_zonneveld1997",
+      "author": "Trommelen, Mieke & Zonneveld, Wim",
+      "year": 1997,
+      "title": "Ha! Een analyse!",
+      "publisher": "Nederlandse Taalkunde 2",
+      "url": "https://www.dbnl.org/tekst/_ned020199701_01/_ned020199701_01_0027.php",
+      "pages": "pp. 318-332",
+      "notes": "Dutch, not Limburgish. p. 320, (7): 'In een syllabe komt h nooit voor in postvocalische positie, alleen in prevocalische positie.' Read for li through Spelling 2003 p. 13, which compares the Limburgish final ⟨h⟩ with the Dutch ⟨h⟩ of bah, oh, eh."
+    },
+    {
+      "id": "wells_sampa_dutch",
+      "author": "Wells, J. C.",
+      "year": 1996,
+      "title": "SAMPA for Dutch",
+      "publisher": "University College London, Phonetics and Linguistics",
+      "url": "https://www.phon.ucl.ac.uk/home/sampa/dutch.htm",
+      "notes": "Dutch, not Limburgish. The checked vowels include 'E pet pEt'; the marginal vowels of loanwords include 'E: crème krE:m'. The X-SAMPA chart (https://www.phon.ucl.ac.uk/home/sampa/x-sampa.htm) gives E as the 'open-mid front unrounded' vowel, IPA [ɛ]. Read for the vowel that Spelling 2003 p. 10 names in 'àè (de e van Ned. pet maar dan lang)'."
     }
   ],
-  "notes": "Limburgish (Limburgs) — West Germanic (Low Franconian) of the Meuse-Rhenish area. COMMITMENT: this map implements the *Spelling 2003 voor de Limburgse dialecten* (the 'Veldekespelling'), adopted by the Raod veur 't Limburgs and Veldeke-Limburg, using the grapheme->IPA rendering of that system; the norm's own reference variety is Remunjs (Roermond), and the values here are the pan-Limburgish values the norm assigns, not any single village dialect. INPUT CONTRACT: Limburgish text written in Spelling 2003, lowercase, already normalised; Dutch-based or German-based ad-hoc spellings are OUT OF SCOPE and will mis-transcribe. Spelling 2003 is deliberately readable-first: it writes the same sound the same way across dialects, so a grapheme such as <ae> or <ao> stands for the *norm's* vowel, which a given dialect may realise differently. TONE IS NOT REPRESENTED: Limburgish contrasts sleeptoon (dragging tone, Accent 1) with stoottoon (push tone, Accent 2); Spelling 2003 does not write the contrast, so no tonal information can be recovered from the orthography and none is emitted. Mouillering is written with the <j> digraphs (tj, dj, sj, zj, nj, lj). BENCHMARK CEILING (measured against the cached li/wikipron gold, 989 distinct headwords): 90/1128 gold pronunciation lines (55 distinct words) carry an IPA tone letter (˨/˧/˦); folding those tone letters out of both hypothesis and gold moves PER only from 0.3819 to 0.3771 — unlike the Hausa/Kikuyu tone folds, tone marking is NOT the dominant error source here, a deliberate negative result. 123/989 distinct spellings (12.4%) are homographs with two or more distinct gold pronunciations, corroborating that the orthography underdetermines pronunciation (partly tone, partly dialect variation) even though it does not by itself floor the score (the harness scores the best-matching gold). The larger, dominant driver is DATASET COMPOSITION, not tone: 330/989 gold headwords (33.4%) contain a character (ä, é, ï, ë, ǫ, ą, ṣ, ü, or a syllabic-consonant mark) absent from the Spelling-2003 grapheme table and therefore rendered as an untranscribed UNKNOWN token; per wiktionary_li_orthography_mix, these headwords are drawn from Wiktionary's German-based-spelling, Rheinische-Dokumenta, and Eupen-dialect alternative forms rather than the Veldeke/Spelling-2003 form this spec targets, and mistranscribing them is the documented, expected behaviour of the stated INPUT CONTRACT (out of scope), not a spec defect. Restricting scoring to the 659 gold headwords with no such character still leaves PER at 0.358 (vs 0.430 on the other 328), so the orthography mismatch is a real, partial, and honestly-reported ceiling contributor rather than the whole gap; the remainder is ordinary segmental/allophonic residual error, not corrected here for lack of a fetched primary source pinning down the specific substitutions (see PR discussion). SPELLING (Veldeke, Spelling 2003 voor de Limburgse dialecten, https://www.veldeke.net/wp-content/uploads/2024/02/Spelling-2003.pdf): printed p. 13 §7, 'De medeklinkers die in de spelling van het Limburgs gebruikt worden, zijn dezelfde als die van het Nederlands als er dezelfde klanken mee aangeduid worden', so a doubled consonant letter is Dutch-style spelling of a short vowel, not a geminate (collapse_geminates); printed p. 11 gives ⟨sj⟩ for [ʃ] with 'sjoon \"schoon\"', so the Dutch-style ⟨sch⟩ found in headwords is read [ʃ]. ⟨g⟩: Wikipedia, 'Limburgish', Phonology/Consonants (read 2026-09-13), charts /ɣ/ and notes '[ç] and [ʝ] are allophones of /x/ and /ɣ/, occurring in a front-vowel environment'; so ⟨g⟩ is [ɣ] by default and [ʝ] before a front vowel. ⟨w⟩ is left as [w]/[β]: the same chart gives /w/ and '/w/ is realized as [β̞] in Belgian Limburgish'.",
+  "notes": "Limburgish (Limburgs) — West Germanic (Low Franconian) of the Meuse-Rhenish area. COMMITMENT: this map implements the *Spelling 2003 voor de Limburgse dialecten* (the 'Veldekespelling'), adopted by the Raod veur 't Limburgs and Veldeke-Limburg, using the grapheme->IPA rendering of that system; the norm's own reference variety is Remunjs (Roermond), and the values here are the pan-Limburgish values the norm assigns, not any single village dialect. INPUT CONTRACT: Limburgish text written in Spelling 2003, lowercase, already normalised; Dutch-based or German-based ad-hoc spellings are OUT OF SCOPE and will mis-transcribe. Spelling 2003 is deliberately readable-first: it writes the same sound the same way across dialects, so a grapheme such as <ae> or <ao> stands for the *norm's* vowel, which a given dialect may realise differently. TONE ACCENT: Limburgish contrasts two tone accents on stressed syllables. Peters 2006 (JIPA 36(1), p. 120): the contrast 'is traditionally known as the distinction between STOOTTOON (‘push tone’) and SLEEPTOON (‘dragging tone’) [...] here referred to as accent 1 and accent 2, respectively'. Spelling 2003 writes the accent with two optional signs. Printed p. 27, §8 h-i: '~ (inkel tilde) is ’t teiken wo me sjleiptoon mit kan aangaeve. Det teiken mót me zitte vlak nao de klinker dae de sjleiptoon haet' and '\\ (‘backslash’) is ’t teiken veur sjtoottoon', with the pairs 'haa~s ‘handschoen’ naeve haa\\s ‘haas’' and 'be~rg ‘berg’ naeve be\\rg ‘bergen’'. Printed p. 17, §14 f, says the same in Dutch and adds 'Het is overigens ongebruikelijk om de tekens voor sleeptoon en stoottoon in lopende teksten te zetten'. Hermans 2008 (Taal & Tongval themanr. 21, p. 40) gives the same Roermond pair with the accent numbers: Accent1 [ha:s] ‘haas’, Accent2 [ha:s] ‘handschoen’. So ⟨~⟩ is Accent 2 and ⟨\\⟩ is Accent 1. The table reads ⟨~⟩ as ² and ⟨\\⟩ as ¹, the superscripts of Gussenhoven & Peters 2019 (Phonology 36, p. 498: '[man¹] ‘basket’ [man²] ‘man’'), and tone_marks_syllable_final puts the digit at the end of its syllable, as Peters 2006 writes it (p. 119: /boːt²/ ‘boat’, /ˈpoː²kər/ ‘poker’). The digit names the accent class, not a pitch: Gussenhoven & Peters 2019, p. 498, 'The shapes of the F0 contours for the two categories generally depend on the identity of the intonational tones in the syllable'. A word written without either sign gets no digit. Its accent cannot be read from the spelling, because the same letters spell both accents (haas ‘haas’ and ‘handschoen’). Printed p. 27, §8 g, also says that the circumflex marks length only: 'Aan det teiken kan me neet laeze of de klinker sjtoottoon of sjleiptoon haet'. Mouillering is written with the <j> digraphs (tj, dj, sj, zj, nj, lj). BENCHMARK CEILING (measured against the cached li/wikipron gold, 989 distinct headwords): 90/1128 gold pronunciation lines (55 distinct words) carry an IPA tone letter (˨/˧/˦); folding those tone letters out of both hypothesis and gold moves PER only from 0.3819 to 0.3771 — unlike the Hausa/Kikuyu tone folds, tone marking is NOT the dominant error source here, a deliberate negative result. 123/989 distinct spellings (12.4%) are homographs with two or more distinct gold pronunciations, corroborating that the orthography underdetermines pronunciation (partly tone, partly dialect variation) even though it does not by itself floor the score (the harness scores the best-matching gold). The larger, dominant driver is DATASET COMPOSITION, not tone: 330/989 gold headwords (33.4%) contain a character (ä, é, ï, ë, ǫ, ą, ṣ, ü, or a syllabic-consonant mark) absent from the Spelling-2003 grapheme table and therefore rendered as an untranscribed UNKNOWN token; per wiktionary_li_orthography_mix, these headwords are drawn from Wiktionary's German-based-spelling, Rheinische-Dokumenta, and Eupen-dialect alternative forms rather than the Veldeke/Spelling-2003 form this spec targets, and mistranscribing them is the documented, expected behaviour of the stated INPUT CONTRACT (out of scope), not a spec defect. Restricting scoring to the 659 gold headwords with no such character still leaves PER at 0.358 (vs 0.430 on the other 328), so the orthography mismatch is a real, partial, and honestly-reported ceiling contributor rather than the whole gap; the remainder is ordinary segmental/allophonic residual error, not corrected here for lack of a fetched primary source pinning down the specific substitutions (see PR discussion). SPELLING (Veldeke, Spelling 2003 voor de Limburgse dialecten, https://www.veldeke.net/wp-content/uploads/2024/02/Spelling-2003.pdf): printed p. 13 §7, 'De medeklinkers die in de spelling van het Limburgs gebruikt worden, zijn dezelfde als die van het Nederlands als er dezelfde klanken mee aangeduid worden', so a doubled consonant letter is Dutch-style spelling of a short vowel, not a geminate (collapse_geminates); printed p. 11 gives ⟨sj⟩ for [ʃ] with 'sjoon \"schoon\"', so the Dutch-style ⟨sch⟩ found in headwords is read [ʃ]. ⟨g⟩: Wikipedia, 'Limburgish', Phonology/Consonants (read 2026-09-13), charts /ɣ/ and notes '[ç] and [ʝ] are allophones of /x/ and /ɣ/, occurring in a front-vowel environment'; so ⟨g⟩ is [ɣ] by default and [ʝ] before a front vowel. ⟨w⟩ is left as [w]/[β]: the same chart gives /w/ and '/w/ is realized as [β̞] in Belgian Limburgish'. VOWEL ⟨e⟩: the letter spells three vowels, and stress and syllable shape choose among them. Spelling 2003, printed p. 10, Overzicht 1, gives short ⟨e⟩ with its long partner 'àè (de e van Ned. pet maar dan lang)', gives the long vowel 'e (Limb. sjpele)' in the row of 'ee (Ned. beest)', and gives 'e of ' = onbeklemtoonde klinker zoals men die hoort in de, m’n, ‘t, ‘nne'. The Roermond sign list, printed p. 23, writes the short vowel as 'e (Ned. pet)'. So ⟨e⟩ is [ə] in an unstressed syllable (the first value of the table), short in a stressed syllable (nucleus_stressed), and long [eː] where it ends a stressed syllable inside the word (allophone rules LI_OPEN_SYLLABLE_E and LI_OPEN_SYLLABLE_E_TONE_SIGN). A word-final ⟨e⟩ is [ə] (word_final). The spelling writes the other two vowels there with two signs. Printed p. 13, §8 a: 'In het Limburgs komen vaak korte klinkers op het einde van een woord voor. Om die kortheid aan te geven, moeten ze gevolgd worden door een h: deh, meh, nih'. Printed p. 16, §14 b, keeps ⟨ee⟩ where 'het basiswoord eindigt op die noodzakelijke dubbele ee. Vandaar Roermonds tweede, zeezalt, reebout'. The symbol of the short vowel comes from Peters 2006 (JIPA 36(1), p. 118). Hasselt has four short front unrounded vowels, 'i mik ‘bread’', 'ɪ mɪs ‘wrong’', 'ɛ dɛk ‘often’' and 'æ mæs² ‘knife’', and a schwa that 'is restricted to unstressed syllables'. Spelling 2003 also writes four: ⟨ie⟩ (Ned. Piet), ⟨i⟩ (Ned. kip), ⟨è⟩ and ⟨e⟩. Printed p. 11, §5 a, puts ⟨è⟩ above ⟨e⟩: 'Het is een korte klinker die wat openheid van de mond ligt tussen twee klanken die in het Nederlands wél voorkomen: de e en de i in bed en bid'. So ⟨è⟩ is the higher [ɛ] and short ⟨e⟩ the lower [æ]. Spelling 2003 describes its vowels by analogy, so the mapping of its four signs onto the four Hasselt vowels is an inference from their order, not a statement of either source. LONG ⟨àè⟩: Spelling 2003, printed p. 10, gives the long partner of short ⟨e⟩ as 'àè (de e van Ned. pet maar dan lang)', with the after-glide signs ⟨àèë⟩ and ⟨àèw⟩. The Dutch vowel of pet is [ɛ]. Wells, SAMPA for Dutch, lists 'E pet pEt' among the checked vowels, and the X-SAMPA chart gives E as the 'open-mid front unrounded' vowel. Gussenhoven 1992 (JIPA 22, p. 46) gives that vowel as 'ɛ bed' and its long form as 'ɛː serre'. So ⟨àè⟩ is [ɛː], ⟨àèë⟩ is [ɛːə] and ⟨àèw⟩ is [ɛːw], in the shape of ⟨èè⟩, ⟨èë⟩ and ⟨èw⟩. Heijmans & Gussenhoven 1998 (Weert, pp. 108-109) find a Limburgish long [ɛː], 'blɛːcə ‘leaf +DIM’', beside a long [æː] that is 'restricted to positions before a sonorant consonant in the coda'. The p. 10 row pairs ⟨àè⟩ with short ⟨e⟩, which this table reads [æ], so the two signs of the pair differ in quality. The table follows the p. 10 description, because it names the quality of ⟨àè⟩ directly. NOT MODELLED: the stress block puts the stress on a schwa syllable in a stem before two schwa syllables (hinjere), so the ⟨e⟩ of that syllable gets a full vowel. An obstruent and a liquid after the ⟨e⟩ can open the syllable (Dutch zebra), but LI_OPEN_SYLLABLE_E reads every consonant cluster as closing it. GLIDE BEFORE A VOWEL (prevocalic_glide_backoff): before a vowel letter, ⟨ew⟩ is ⟨e⟩ + ⟨w⟩, and the ⟨w⟩ opens the next syllable, so ⟨geweun⟩ is ge-weun. Spelling 2003, printed p. 10, lists ⟨ew⟩ as a sign of one syllable, in the column 'met naslag (ë, è, j of w)' and the row of short ⟨e⟩. Printed p. 12, §6 g, says that these signs 'binnen de lettergreepgrens gebruikt worden', and that two syllables are spelled with a glide letter instead: 'Bij eenlettergrepigheid is de spelling dan ieë; als er twee lettergrepen zijn, wordt er gekozen voor de spelling –ieje'. Printed p. 13, §6 h, puts that ⟨j⟩ between two vowels: 'De j kan er goed aan het einde van een beklemtoonde lettergreep en aan het begin van een onbeklemtoonde lettergreep staan'. These quotes name ⟨j⟩, not ⟨w⟩. The same reading of ⟨w⟩ is an analogy from them and from the p. 10 column, which groups ⟨j⟩ and ⟨w⟩. Printed p. 27 writes 'geweu\\n' with the tone sign after ⟨eu⟩, so ⟨eu⟩ is the nucleus of the stressed syllable and the ⟨w⟩ is its onset. Only ⟨ew⟩ is listed, because the cited word is ⟨geweu\\n⟩. No source opened covers the other vowel + ⟨w⟩ signs before a vowel, and a back-off of ⟨iew⟩ would turn the long [iː] of ⟨biewaord⟩ into the short [i] of ⟨ie⟩.",
   "parent": "x-clade-germ1287",
   "ancestors": [
     {
@@ -632,5 +748,94 @@
       "measured": "The gold filed under `li` is not predominantly written in the Spelling 2003 (Veldeke) convention this spec models. Of the 140 gold headwords whose IPA contains a postalveolar fricative, 130 spell it <sch> and 7 spell it <sj>, the Spelling 2003 form; <ae> appears in 10 headwords and <ao> in 14, against 114 with <ae-umlaut> and 34 with <u-umlaut>. Two further conventions are present and are disjoint from each other: 89 headwords carry a sign exclusive to Rheinische Dokumenta (e-with-vertical-line, o-ogonek, s-with-dot, c-tie-h) and 222 carry the acute/diaeresis signs of the Eupen-dialect spelling, with zero headwords carrying both. The Rheinische Dokumenta block is now modeled by `li-x-rheindok`, which scores it at PER 0.0609 where `li` scores 0.3245; that entry is not on the board, which continues to score the whole file against `li`. The Eupen block is not modeled, for want of a published orthography for it.",
       "reference": "spec notes on `li` and on `li-x-rheindok`; docs/evaluation/gold_defects.md"
     }
-  }
+  },
+  "tone_marks_syllable_final": true,
+  "tone_inventory": {
+    "¹": "Accent 1 (stoottoon), written ⟨\\⟩ in Spelling 2003",
+    "²": "Accent 2 (sleeptoon), written ⟨~⟩ in Spelling 2003"
+  },
+  "stress": {
+    "default_position": -2,
+    "stress_mark": "ˈ",
+    "notes": "Penultimate by default; a monosyllable takes the stress. Peters 2006 (JIPA 36(1), p. 119) for Hasselt: 'Stress location is as in Standard Belgian Dutch.' Gussenhoven & Peters 2019 (Phonology 36, p. 497) for the Franconian tone area that includes Limburgish: 'the syllable with main stress, typically the final or penultimate, displays a surface pitch contrast'. For Dutch, Gussenhoven 1992 (JIPA 22, p. 47): 'Main stress falls on the antepenult, the penult, or the final syllable of the word if the penult is open, and on the penult or the final syllable if the penult is closed. Minimal pairs are rare'. Köhnlein 2015 (Taalportaal, Dutch Phonology): 'Many longer words in Dutch have penultimate stress' (topic 'Penultimate stress as the default location of primary stress in Dutch?'); 'A syllable headed by a schwa never receives stress' (topic 'Schwa restriction'); native words 'usually contain only one full vowel' (topic 'Three-Syllable Window'). Spelling 2003, printed p. 10, gives the sign for the unstressed vowel: \"e of ' = onbeklemtoonde klinker\". So the penult is the stressed syllable of the most frequent native shapes, a stem before a final schwa syllable (kómme) and a schwa prefix, a stem and a final schwa syllable (verlange). NOT MODELLED: the spelling does not show the place of the stress in general, because inside the window it is lexical (Gussenhoven 1992, p. 47). These shapes get the mark on the wrong syllable: a stem followed by two schwa syllables (hinjere, p. 27), French loans with final stress (Peters 2006, p. 120: 'French loan words partly preserve their original stress pattern, i.e. primary word stress is on the last syllable'), and compounds with stress on the head (p. 119). The tone signs ⟨~ \\⟩ are not read as stress marks: Peters 2006, p. 120: 'The tonal contrast occurs on syllables that bear main or secondary word stress', as in /ˈopˌɣië²tə/ ‘eat up’, so a sign does not show which syllable has the main stress. UNSTRESSED PREFIXES (unstressed_prefixes): ⟨ge⟩, ⟨be⟩ and ⟨ver⟩ take no stress. A default that falls on one of them moves to the first syllable after it. Two Limburgish illustrations say that word stress follows the standard language: Peters 2006, p. 119, for Hasselt (quoted above), and Heijmans & Gussenhoven 1998 (JIPA 28, p. 111) for Weert, 'The stress pattern in the dialect of Weert is identical to that of standard Dutch'. For Dutch, Schultink 1976 (Spektator 6, p. 475) names the prefixes 'die altijd accentloos zijn en de accentuering van de afleiding niet beïnvloeden: be-, er-, ge-, ont- en ver-'. The Limburgish sources show the three listed here without stress. Spelling 2003, printed p. 27, §8 i, uses the tone signs as 'de middele óm de lettergreepbetoning aan te gaeve', and its marked sentence writes 'gebroe~k' and 'geweu\\n' with the sign on the stem. Peters 2006 transcribes /bəˈsxeən/ ‘perhaps’ (p. 119) and bəˈɣɔs ‘began’ (p. 123). Heijmans & Gussenhoven 1998 transcribe vəʀˈbeːj ‘voorbij’ (p. 111). ⟨er⟩ and ⟨ont⟩ are not listed, because no Limburgish source here shows them. The stress does not move onto a final open syllable. This guards against a false match on the spelling, and it is not a claim about Limburgish stress: an unprefixed disyllable such as ⟨geve⟩ or ⟨beste⟩ starts with the letters of a prefix, and keeps the penult. The match is on the spelling, so an unprefixed word that starts with ⟨ge⟩, ⟨be⟩ or ⟨ver⟩ and has a closed final syllable moves too (the place name Bezel). constrain_onsets keeps a consonant after a short vowel in the coda, as Peters 2006, p. 119, states for Hasselt: 'In stressed syllables, short vowels are followed by a coda consonant'. So ⟨bergen⟩ is ber-gen and ⟨Gennep⟩ is Gen-nep, and neither starts with a prefix syllable.",
+    "unstressed_prefixes": [
+      "ge",
+      "be",
+      "ver"
+    ]
+  },
+  "allophone_rules": [
+    {
+      "id": "LI_OPEN_SYLLABLE_E",
+      "phonemes": [
+        "æ"
+      ],
+      "surface": "eː",
+      "grapheme": [
+        "e"
+      ],
+      "stress": "stressed",
+      "followed_by": "consonant",
+      "followed_by_2": "vowel",
+      "followed_by_grapheme_not": [
+        "ch",
+        "dj",
+        "gk",
+        "lj",
+        "ng",
+        "nj",
+        "sch",
+        "sj",
+        "tj",
+        "zj"
+      ],
+      "notes": "Spelling 2003, printed p. 16, §14 b: 'In het Nederlands en ook in het Limburgs bestaat een regel die zegt, dat er op het einde van de lettergreep maar één a, e, u, o mag staan'. So a single ⟨e⟩ that ends a stressed syllable is the long vowel of printed p. 10, 'e (Limb. sjpele)', in the row of 'ee (Ned. beest)': [eː] (Peters 2006, JIPA 36(1), p. 118: 'eː meː² Fr. Aimé'). The syllable ends after the ⟨e⟩ when one consonant sign and then a vowel follow it. A doubled consonant letter, or a consonant sign of more than one letter, closes the syllable instead. The signs are those of the consonant list on printed p. 23 (ch, gk, sj, zj, tj, dj, ng, nj, lj), and ⟨sch⟩, which the table reads as [ʃ]. Printed p. 14, §8 f, 'In het Nederlands geldt dat een dubbel spellingteken voor één klank bij een korte klinker werkt als twee aparte tekens. Vergelijk: zingen (ng: twee tekens voor één klank) [...] De combinatie sj is een geval van twee tekens voor één klank. De verdubbeling van de s is overbodig.' Printed p. 10 gives sjpele, and p. 27 gives ze~ve 'het cijfer zeven'."
+    },
+    {
+      "id": "LI_OPEN_SYLLABLE_E_TONE_SIGN",
+      "phonemes": [
+        "æ"
+      ],
+      "surface": "eː",
+      "grapheme": [
+        "e"
+      ],
+      "stress": "stressed",
+      "followed_by_grapheme": [
+        "~",
+        "\\"
+      ],
+      "followed_by_2": "consonant",
+      "followed_by_3": "vowel",
+      "notes": "LI_OPEN_SYLLABLE_E when a tone sign stands after the ⟨e⟩. The sign is not a consonant: printed p. 27, §8 h, '~ (inkel tilde) is ’t teiken wo me sjleiptoon mit kan aangaeve. Det teiken mót me zitte vlak nao de klinker dae de sjleiptoon haet', with the pair ze~ve / ze\\ve."
+    },
+    {
+      "id": "LI_FINAL_H_LENGTH_SIGN",
+      "phonemes": [
+        "h",
+        "ɦ"
+      ],
+      "surface": "",
+      "grapheme": [
+        "h"
+      ],
+      "word_final": true,
+      "preceded_by_grapheme": [
+        "a",
+        "á",
+        "e",
+        "è",
+        "i",
+        "o",
+        "ó",
+        "ö",
+        "u"
+      ],
+      "notes": "Spelling 2003, printed p. 13, §8 a, 'de h die een klinker kort kan houden op het woordeinde': 'In het Limburgs komen vaak korte klinkers op het einde van een woord voor. Om die kortheid aan te geven, moeten ze gevolgd worden door een h: deh, meh, nih ‘daar, maar, niet’.' The same paragraph compares the Dutch use of the letter: 'In het Nederlands wordt de h gebruikt als teken dat kan wijzen op kortheid van de voorafgaande klinker: bah, oh, eh.' The ⟨h⟩ is a sign for the length of the vowel, and it has no sound. For Dutch, Trommelen & Zonneveld 1997 (Nederlandse Taalkunde 2, p. 320) state: 'In een syllabe komt h nooit voor in postvocalische positie, alleen in prevocalische positie.' The rule covers what the quote names: a word-final ⟨h⟩ right after a single vowel letter of the 'kort' column of printed p. 10 (i, è, e, u, ö, ó, o, a, á). The source does not say what a final ⟨h⟩ after a long vowel sign or a consonant is, so those keep [h]."
+    }
+  ],
+  "constrain_onsets": true,
+  "prevocalic_glide_backoff": [
+    "ew"
+  ]
 }
