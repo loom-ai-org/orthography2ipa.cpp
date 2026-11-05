@@ -393,7 +393,7 @@
       "title": "O /S/ pós-vocálico na fala carioca: uma análise dos falantes mais velhos de Copacabana",
       "publisher": "Monografia, Faculdade de Letras, UFRJ",
       "url": "https://pantheon.ufrj.br/bitstream/11422/22317/1/RFNanini.pdf",
-      "pages": "17",
+      "pages": "12, 17, 19, 26",
       "notes": null
     },
     {
@@ -465,7 +465,7 @@
       ],
       "surface": "ʃ",
       "syllable_position": "coda",
-      "notes": "The 'chiado carioca': coda /S/ is palatal [ʃ] before a consonant and word-finally (mesmo, paz, dois). Brito (2016: 148): '[ʃ] or [ʒ] account for 85.3% of the occurrences'; the ALiB map gives above 76 % only in Rio de Janeiro, Belém and Florianópolis (Borges & Mendonça 2019: 58, quoting Cardoso et al. 2014: 111). Before a vowel across words it is [z] (Nanini: 17)."
+      "notes": "The 'chiado carioca': coda /S/ is palatal [ʃ] before a consonant and word-finally (mesmo, paz, dois). Brito (2016: 148): '[ʃ] or [ʒ] account for 85.3% of the occurrences'; the ALiB map gives above 76 % only in Rio de Janeiro, Belém and Florianópolis (Borges & Mendonça 2019: 58, quoting Cardoso et al. 2014: 111). Before a vowel across words it is [z] (Nanini: 17), the sandhi rule RJ_FINAL_SH_PREVOCALIC_VOICE."
     },
     {
       "id": "RJ_CHIADO_CODA_Z",
@@ -584,6 +584,26 @@
       "notes": "Switched off. This spec writes every word-final /R/ as the aspirate of RJ_CODA_R_FINAL, which stands after the base rules, so the base drop would pre-empt it in verbs and the base tap list in non-verbs. Callou, Moraes & Leite (1998: 67) give Rio de Janeiro verbs 73-82 % deletion and other words 32 %; the spec keeps one value for both classes."
     }
   ],
+    "sandhi_rules": [
+      {
+        "id": "RJ_FINAL_SH_VOICING",
+        "name": "final-sh-voicing-before-voiced-consonant",
+        "left_context": "ʃ$",
+        "right_context": "^[ˈˌ]?[bdɡvzʒmnɲlʎɾʁ]",
+        "transform": "ʒ",
+        "obligatory": true,
+        "notes": "A word-final chiado [ʃ] takes the voicing of a voiced consonant at the start of the next word: os dois [uʒ ˈdojʃ], as mesas [aʒ ˈmezɐʃ]. It is BR_FINAL_S_VOICING for the palatal that RJ_CHIADO_CODA_S writes. Nanini (2022: 12), reporting Brito (2016), states the distribution: 'são realizadas como [z] ou [ʒ] em final de sílaba seguidas de uma consoante vozeada'. Her Copacabana count (p. 19, Tabela 1) gives the voiced palatal across a word boundary, '[ʒ] meus neto 159/1033 = 15,39% [‘meuʒ‘nɛ.tʊ]', against '[z] os barros 80/1033 = 7,74% [‘uz ‘bar̄uØ]'. The spec writes [ʒ], the more frequent of the two voiced values and the palatal of the chiado. The strong /r/ of this spec is the voiceless [χ], so ⟨r⟩ at the start of the next word does not voice the sibilant."
+      },
+      {
+        "id": "RJ_FINAL_SH_PREVOCALIC_VOICE",
+        "name": "final-sh-before-vowel",
+        "left_context": "ʃ$",
+        "right_context": "^[ˈˌ]?[aeiouɛɔɐɪʊãẽĩõũ]",
+        "transform": "z",
+        "obligatory": true,
+        "notes": "A word-final /S/ before a word that starts with a vowel is the alveolar [z]: dez anos [ˈdɛz ˈɐ̃nuʃ], os amigos [uz aˈmiɡuʃ]. It is BR_FINAL_S_PREVOCALIC_VOICE for the palatal that RJ_CHIADO_CODA_S writes. Nanini (2022: 17) excludes the resyllabified sibilant from her count because its value is categorical: 'se excluíram das análises os dados de aspiração, apagamento e ressilabificação do /S/ em coda externa, já que a realização deste último nesse contexto é, categoricamente, a fricativa alveolar sonora [z]'. Her example on p. 26 is 'mas era' '[‘mɐi’zɛɾɐ]'."
+      }
+    ],
   "wikidata_qid": "Q10265995",
   "location": {
     "latitude": -22.911111,

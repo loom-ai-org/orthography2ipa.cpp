@@ -17,11 +17,14 @@ harness therefore does not sample — it compares
     with no lect score and with each lect mode;
   * linguatag `lang_distance` over every edge of the lect tree, in both
     directions and in each lect mode;
+  * tags whose nearest match stays inside the tag's own language, and every
+    catalog code in upper and lower case;
   * private-use tags with a script subtag: the language's Suppress-Script,
     which registry.py drops before the match, and scripts it keeps;
   * `resolves_exactly` and `_resolve_code(allow_nearest=False)` over the
-    resolve, lect tree and Suppress-Script batteries, the case forms of every catalog code
-    and alias, and tags that only the nearest-language match resolves.
+    resolve, lect tree, own-language and Suppress-Script batteries, the case
+    forms of every catalog code and alias, and tags that only the
+    nearest-language match resolves.
 
 Usage: registry_parity.py <path-to-cli> [--pairs N]
 
@@ -169,6 +172,33 @@ def suppress_script_battery():
     return sorted(tags)
 
 
+def own_language_battery(rng):
+    """Tags whose nearest match the tag's own language decides.
+
+    registry.py searches the codes of the requested primary language first,
+    then of the standardized one, and every code only when none of them is
+    near enough: `sr-Latn-RS` names sr, though cnr is nearer by distance. An
+    exact match ignores case, so `MNK` names mnk before langcodes folds it into
+    a macrolanguage. Each catalog code comes in upper and lower case, and a
+    seeded sample of catalog languages comes with a script subtag.
+    """
+    tags = {"sr-Latn", "sr-Latn-RS", "sr-Latn-BA", "sr-Latn-ME", "sr-Latn-XK", "sr-ME",
+            "sr-Cyrl-ME", "hr-BA", "hr-Latn-BA", "cnr-RS", "cnr-BA", "cnr-HR", "cnr-XK",
+            "cnr-ME", "cnr-Latn-RS", "sq-AL", "als-AL", "sw-CD", "rom-CH", "quz-PE",
+            "bxr-RU", "ks-IN", "src-IT", "fat-GH", "jrb-US", "arb-TR", "mhr-RU",
+            "arb-x-zzz", "ar-x-zzz", "sh", "hbs", "sh-Latn", "hbs-Latn-RS", "sh-ME",
+            "sh-Cyrl", "aao-Arab", "acm-Arab", "cdo-Hans", "bs-Cyrl", "hr-Cyrl",
+            "hr-Cyrl-HR", "zh-HK", "cnr-Cyrl", "cnr-Cyrl-BA", "cnr-Cyrl-HR",
+            "cnr-Cyrl-ME", "cnr-Cyrl-RS", "cnr-Cyrl-XK", "CNR-CYRL", "MNK", "PNB-PK",
+            "ALS", "TL", "BCL", "TWI", "EN-gb", "i-klingon", "x-sr", "a-sr"}
+    for code in available_json_codes():
+        tags |= {code.upper(), code.lower()}
+    languages = sorted({code.split("-")[0].lower() for code in available_json_codes()})
+    for language in rng.sample(languages, 300):
+        tags |= {f"{language}-Latn", f"{language}-Cyrl", f"{language.upper()}-ZZ"}
+    return sorted(tags)
+
+
 def mutate(tag, rng, extra):
     forms = [tag.upper(), tag.lower(), tag.replace("-", "_")]
     if "-" in tag:
@@ -186,7 +216,8 @@ def mutate(tag, rng, extra):
 
 def check_resolves_exactly():
     """resolves_exactly and _resolve_code(allow_nearest=False) vs `resolve --strict`."""
-    tags = set(resolve_battery()) | set(lect_tree_battery()) | set(suppress_script_battery())
+    tags = (set(resolve_battery()) | set(lect_tree_battery()) | set(suppress_script_battery())
+            | set(own_language_battery(random.Random(20261105))))
     for code in [*available_json_codes(), *registry._ALIASES]:
         tags |= {code.upper(), code.lower(), code.swapcase()}
     for tag in [*registry._ALIASES, *registry._REGION_DEFAULTS, *OVERRIDES]:
@@ -253,7 +284,9 @@ def main():
     print(f"lect tree battery: {len(tree)} tags")
     suppress = suppress_script_battery()
     print(f"suppress-script battery: {len(suppress)} tags")
-    every = sorted(set(battery) | set(extra) | set(tree) | set(suppress))
+    own = own_language_battery(random.Random(20261105))
+    print(f"own-language battery: {len(own)} tags")
+    every = sorted(set(battery) | set(extra) | set(tree) | set(suppress) | set(own))
     print(f"resolve battery: {len(every)} tags")
 
     failures = []

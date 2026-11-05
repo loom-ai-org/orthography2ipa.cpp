@@ -154,6 +154,29 @@ PINNED["af"] += ["kné", "café", "vér"]
 PINNED["nl-NL-x-groninge"] += ["been", "boom"]
 PINNED["nl-NL-x-polder"] += ["been", "acht"]
 PINNED["nl-NL-x-limburg"] += ["tjerkgaast", "school", "acht"]
+# Netherlandic coda /r/ is the approximant [ɹ]; nl-BE keeps the trill,
+# voiceless finally and before /p t k/, and af keeps its own /r/. nl-NL leaves
+# the prefixes be- ge- ver- ont- unstressed.
+PINNED["nl-NL"] += ["vaart", "kaart", "arm", "dorp", "kerk", "door", "bier", "dichter",
+                    "betalen", "bedoelen", "geloven", "verkopen", "bezien", "ontkennen",
+                    "beste"]
+PINNED["nl-BE"] += ["door", "vaart", "dorp", "kerk", "harder", "betalen", "verkopen"]
+PINNED["af"] += ["vaart"]
+PINNED["nl-NL-x-polder"] += ["vaart", "betalen", "verkopen"]
+PINNED["nl-NL-x-limburg"] += ["vaart", "geloven", "berg"]
+PINNED["nl-NL-x-groninge"] += ["verkopen"]
+# Catalan ⟨gu⟩ reads [ɡu] before a consonant in the positional table only, so
+# its vowel is written and the stress count keeps its syllable.
+PINNED["ca"] = ["vingut", "vengut"]
+# pt-BR inserts [i] after a stop that follows the stressed vowel, and the mark
+# stays on the stressed syllable (pacto [ˈpakitu]); ⟨ck⟩ takes no vowel; an
+# obstruent cluster that opens a stressed word takes [i] (pseudo). The
+# southern children and pt-UY switch the rules off.
+PINNED["pt-BR"] += ["pacto", "capto", "rapto", "compacto", "egípcio", "helicóptero",
+                    "hockey", "pseudo", "psique", "pneu", "psicologia", "Djavan"]
+for code in ["pt-BR-x-sul", "pt-BR-x-floripa", "pt-BR-x-pr", "pt-BR-x-sp", "pt-BR-x-rj",
+             "pt-UY"]:
+    PINNED.setdefault(code, []).extend(["capto", "pseudo"])
 
 # The code points of the viramas this catalog actually uses.
 VIRAMAS = {0x094D, 0x09CD, 0x0A4D, 0x0ACD, 0x0B4D, 0x0BCD, 0x0C4D, 0x0CCD,

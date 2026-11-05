@@ -6,18 +6,25 @@
 //
 //   1. the manual alias table, which holds the old keys of renamed specs;
 //   2. an exact match against the registered spec codes;
-//   3. langcodes.standardize_tag(macro=True), skipped for a private-use tag,
-//      then the alias table and the catalog again;
-//   4. a private-use CASE FOLD (langcodes never sees a `-x-` tag, so
-//      `ar-sa-x-najd` would otherwise miss `ar-SA-x-najd`), first of the tag
-//      itself and then of the tag without a script subtag that is the
-//      language's Suppress-Script (`pt-Latn-BR-x-sp` -> `pt-BR-x-sp`);
+//   3. a CASE FOLD of every tag, before standardization: the lowered tag
+//      against the alias keys, then the catalog, so `MNK` names `mnk` before
+//      macrolanguage folding can turn it into `man`, and `ar-sa-x-najd` names
+//      `ar-SA-x-najd`;
+//   4. langcodes.standardize_tag(macro=True), skipped for a private-use tag,
+//      then the alias table and the catalog again. A private-use tag also
+//      matches, without regard to case, with a script subtag dropped when that
+//      script is the language's Suppress-Script (`pt-Latn-BR-x-sp` ->
+//      `pt-BR-x-sp`);
 //   5. the default region of a bare tag (linguatag with_default_region,
 //      `pt` -> `pt-PT`) when that spec is registered, then the curated
 //      sub-region defaults (`ar-SA` -> `ars-SA`);
-//   6. the nearest code by linguatag closest_lang with lects="standard" over
-//      the catalog and the old keys, an old key mapped to its new one; no
-//      usable match leaves the request unchanged.
+//   6. the nearest code by linguatag closest_lang with lects="standard". The
+//      own-language search comes first: the catalog codes and old keys of the
+//      requested primary language, or of the standardized one when the
+//      requested language has none (`sr-Latn-RS` -> `sr`, not `cnr`). A
+//      one-letter primary subtag selects no language. With no match there, the
+//      search takes every catalog code and old key. An old key maps to its
+//      new one, and no usable match leaves the request unchanged.
 //
 // The tag measures themselves are the linguatag port in linguatag.hpp.
 #pragma once
