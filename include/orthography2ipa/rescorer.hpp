@@ -11,6 +11,7 @@
 #include <cstddef>
 #include <memory>
 #include <optional>
+#include <set>
 #include <string>
 #include <utility>
 #include <vector>
@@ -41,6 +42,10 @@ struct RescoreContext {
     /// Index of the word's stressed syllable, or nullopt when unavailable
     /// (-1 = the engine's clitic sentinel: a clitic takes no stress).
     std::optional<long long> stressed_syll_idx;
+    /// Syllable index of every slot of the word, aligned with `slots`, or
+    /// nullptr when the entry path has no stress context (the standalone
+    /// tokenizer).
+    const std::vector<std::size_t>* syll_indices = nullptr;
 
     /// The resolved slot immediately before this one within the same word,
     /// or nullptr at a word start or when an earlier rescorer emptied
@@ -128,7 +133,8 @@ struct SegmentContext {
 class AllophoneRescorer : public LatticeRescorer {
 public:
     AllophoneRescorer(std::vector<AllophoneRule> rules,
-                      bool doubled_letters_geminate = true);
+                      bool doubled_letters_geminate = true,
+                      std::set<std::string> positional_vowel_graphemes = {});
 
     std::vector<Candidate> rescore(const SegmentSlot& slot,
                                    const RescoreContext& context) const override;
@@ -141,7 +147,10 @@ private:
     std::vector<AllophoneRule> rules_;
     std::vector<std::string> atoms_;
     bool doubling_is_geminate_ = true;
+    std::set<std::string> positional_vowel_graphemes_;
 
+    bool holds_vowel(const GraphemeContext& gctx) const;
+    RescoreContext inserted_vowel_context(const RescoreContext& context) const;
     std::optional<std::string> neighbor_mutation(const RescoreContext& context) const;
     std::optional<int> geminate_twin_side(const std::string& ipa,
                                           const RescoreContext& context) const;
@@ -158,7 +167,14 @@ private:
 
 // allophony.py compile_allophone_rescorer: compile allophone_rules into a
 // rescorer, or nullptr when the rules are empty ("no post-lexical pass").
+// *positional_vowel_graphemes* names the graphemes that read a vowel only in a
+// positional value, so a vowel they give is not taken for an inserted one.
 std::unique_ptr<LatticeRescorer> compile_allophone_rescorer(
-    const std::vector<AllophoneRule>& rules, bool doubled_letters_geminate = true);
+    const std::vector<AllophoneRule>& rules, bool doubled_letters_geminate = true,
+    const std::set<std::string>& positional_vowel_graphemes = {});
+
+// g2p.py G2P.__init__ `positional_vowel_graphemes`: the graphemes of *spec*
+// that hold a vowel in a positional value.
+std::set<std::string> positional_vowel_graphemes(const LanguageSpec& spec);
 
 } // namespace orthography2ipa::rescorer

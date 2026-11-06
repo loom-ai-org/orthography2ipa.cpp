@@ -33,10 +33,12 @@ directory of this repository. The harness fails loudly (exit 1) when the
 reference or the `resolve` surface is unavailable — a missing surface is a
 FAILURE, never a skip.
 """
+import itertools
 import json
 import os
 import pathlib
 import random
+import string
 import subprocess
 import sys
 
@@ -52,6 +54,7 @@ sys.path.insert(0, reference)
 import logging
 import warnings
 logging.disable(logging.CRITICAL)
+import langcodes
 import orthography2ipa.registry as registry
 from orthography2ipa.json_loader import available_json_codes
 from linguatag import OVERRIDES, lang_distance, lects, matching
@@ -193,6 +196,11 @@ def own_language_battery(rng):
             "ALS", "TL", "BCL", "TWI", "EN-gb", "i-klingon", "x-sr", "a-sr"}
     for code in available_json_codes():
         tags |= {code.upper(), code.lower()}
+    # A Cyrillic cnr tag with no alias reaches cnr only through the distance
+    # limit, so every region a tag can name is compared.
+    for region in map("".join, itertools.product(string.ascii_uppercase, repeat=2)):
+        if langcodes.Language.get(f"und-{region}").is_valid():
+            tags.add(f"cnr-Cyrl-{region}")
     languages = sorted({code.split("-")[0].lower() for code in available_json_codes()})
     for language in rng.sample(languages, 300):
         tags |= {f"{language}-Latn", f"{language}-Cyrl", f"{language.upper()}-ZZ"}

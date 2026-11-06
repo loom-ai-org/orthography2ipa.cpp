@@ -521,30 +521,6 @@
       "notes": "Pretonic nasalisation before the palatal nasal: ganhar [ɡɐ̃ˈɲaɾ], senhor [sẽˈɲoɾ]. Barbosa & Albano (2004: 229): 'In pre-stressed position, there is a ten-vowel phonetic contrast, where the quality of the corresponding stressed vowel is roughly preserved: [i e a o u ĩ ẽ ɐ̃ õ ũ]. Nasalised vowels in this position surface either before /N/ (e.g. temporal tẽᵐpoˈɾaʊ̯ ‘temporal’) or before /ɲ/ (e.g. ganhar gɐ̃ˈɲaɾ ‘(to) win’).' A pretonic vowel before /m n/ is not in that list and stays oral."
     },
     {
-      "id": "BR_EPENTHETIC_I_ORAL",
-      "phonemes": [
-        "i"
-      ],
-      "surface": "i",
-      "stress": "stressed",
-      "grapheme": [
-        "p",
-        "b",
-        "t",
-        "d",
-        "c",
-        "k",
-        "g",
-        "f",
-        "v"
-      ],
-      "followed_by_phoneme": [
-        "m",
-        "n"
-      ],
-      "notes": "The vowel that BR_EPENTHESIS_ONSET inserts after a consonant before /m n/ stays oral: pneu [piˈnew]. The inserted vowel opens a syllable of its own before the stressed nucleus, so it is pretonic, but the engine reads it in the slot of the consonant, which carries the stress of its syllable. Without this rule, BR_NASAL_STRESSED_I nasalises it as if it were the stressed vowel of cima. Nascimento (2015: 62-63) reports the analysis of Collischonn (1996: 151-155) with an oral vowel: 'pneu [pi'new], Ptolomeu [pitolo'mew]'. Barbosa & Albano (2004: 227): 'The epenthetic vowel is always [i] or [ɪ]'. The spec nasalises a pretonic vowel only before /ɲ/ (BR_NASAL_PRETONIC_I_NH). The rule keys on the consonant letter of the slot, so a written ⟨i⟩ before a nasal keeps BR_NASAL_STRESSED_I: cima [ˈsĩmɐ] (Barbosa & Albano 2004: 229)."
-    },
-    {
       "id": "BR_NASAL_STRESSED_I",
       "phonemes": [
         "i"
@@ -2276,7 +2252,7 @@
         "t͡ʃ",
         "d͡ʒ"
       ],
-      "notes": "Vowel epenthesis after the stressed vowel: capto [ˈkapitu], pacto [ˈpakitu], rapto [ˈʁapitu]. It is BR_EPENTHESIS for a stop or a labiodental fricative after the stressed vowel, before an obstruent, with a nucleus after it. A word-final cluster (chips, blitz) has no nucleus after it and stays as spelled. A cluster at the start of the stressed syllable (pseudo, psique) has no vowel before it, so it is outside this rule and stays as spelled. Curioletti & Sandri (2019, Cadernos do IL 59, PDF p. 6): 'Daí decorre a epêntese, que só se aplica em sequências não-homorgânicas, como em capto [kapitu], e não em geminadas subjacentes (carro) ou de superfície (carta) (MONARETTO, 1997, p. 188)'. Monaretto (1997) was not opened. Collischonn (2004: 66) reports Câmara Jr.: 'Como observa Câmara Jr. (1969, p. 28), na posição postônica a vogal se reduz, da mesma forma que ocorre com a vogal da penúltima sílaba de proparoxítonas, sendo, portanto, idênticas as pautas prosódicas de rapto e rápido.' Câmara Jr. was not opened. Barbosa & Albano (2004: 227) state the epenthesis for 'most two-obstruent sequences' and do not restrict it by position. The rate after the stress is lower than before it. Collischonn (2004: 67, Tabela 1) counts 49 of 206 post-tonic tokens (24 %) against 225 of 325 pretonic tokens (69 %) in the speech of Porto Alegre, Florianópolis and Curitiba, and reads the post-tonic grammar without epenthesis as the preferred one (p. 76: 'na pauta postônica: ALINH-PÉ-DIR >> CODA-COND NÃO HÁ EPÊNTESE Ordenação preferida'). Silveira & Seara (2009, Revista do GEL 6(2): 22, Tabela 6) count 77 of 100 post-tonic tokens for the two women and 49 of 100 for the two men of a Florianópolis reading task. No source measures the rate in São Paulo, so the base follows the statement of Barbosa & Albano and the forms of Curioletti & Sandri and Câmara Jr. The scope is an obstruent after the stop, because that is the scope of the statement of Barbosa & Albano and of the form capto. No opened source states or measures a post-tonic stop before a nasal for the base variety, so técnico, digno, ritmo, étnico and dogma keep the cluster for lack of a source, not by a stated limit. Collischonn (2004: 68, Tabela 2) counts the nasal context over both positions together and labels the row with the post-tonic mogno: 'Oclusiva Nasal (mogno) 116/151 77 0,74'. No table of hers crosses the following consonant with the position. Her analysis takes mogno as the post-tonic example: in its tableau (p. 75) the optimum is the candidate without the vowel, with the syllables g.no, and a candidate with the vowel gi is the sub-optimum. For the pretonic magnata the optimum is 'ma.gi.(ná.ta)'. That is the grammar of the three southern capitals. pt-BR-x-sul, pt-BR-x-floripa and pt-BR-x-pr switch the rule off by id on Collischonn's count. The stress count folds a syllable whose only vowel a rule inserted into the syllable before it, so the mark stays on the stressed syllable."
+      "notes": "Vowel epenthesis after the stressed vowel: capto [ˈkapitu], pacto [ˈpakitu], rapto [ˈʁapitu]. It is BR_EPENTHESIS for a stop or a labiodental fricative after the stressed vowel, before an obstruent, with a nucleus after it. A word-final cluster (chips, blitz) has no nucleus after it and stays as spelled. A cluster at the start of the stressed syllable (pseudo, psique) has no vowel before it, so it is outside this rule and stays as spelled. Curioletti & Sandri (2019, Cadernos do IL 59, PDF p. 6): 'Daí decorre a epêntese, que só se aplica em sequências não-homorgânicas, como em capto [kapitu], e não em geminadas subjacentes (carro) ou de superfície (carta) (MONARETTO, 1997, p. 188)'. Monaretto (1997) was not opened. Collischonn (2004: 66) reports Câmara Jr.: 'Como observa Câmara Jr. (1969, p. 28), na posição postônica a vogal se reduz, da mesma forma que ocorre com a vogal da penúltima sílaba de proparoxítonas, sendo, portanto, idênticas as pautas prosódicas de rapto e rápido.' Câmara Jr. was not opened. Barbosa & Albano (2004: 227) state the epenthesis for 'most two-obstruent sequences' and do not restrict it by position. The rate after the stress is lower than before it. Collischonn (2004: 67, Tabela 1) counts 49 of 206 post-tonic tokens (24 %) against 225 of 325 pretonic tokens (69 %) in the speech of Porto Alegre, Florianópolis and Curitiba, and reads the post-tonic grammar without epenthesis as the preferred one (p. 76: 'na pauta postônica: ALINH-PÉ-DIR >> CODA-COND NÃO HÁ EPÊNTESE Ordenação preferida'). Silveira & Seara (2009, Revista do GEL 6(2): 22, Tabela 6) count 77 of 100 post-tonic tokens for the two women and 49 of 100 for the two men of a Florianópolis reading task. No source measures the rate in São Paulo, so the base follows the statement of Barbosa & Albano and the forms of Curioletti & Sandri and Câmara Jr. The scope is an obstruent after the stop, because that is the scope of the statement of Barbosa & Albano and of the form capto. Sources give a vowel for a post-tonic stop before a nasal. Collischonn (2004: 67) counts 24 % of the post-tonic words, 'em palavras como egípcios, étnico ou ritmo', and 'em 73% de casos em que a consoante perdida é uma oclusiva alveolar, como em ritmo, a epêntese ocorre' (p. 68), in the three southern capitals. Nascimento (2015: 57-60) reports three more, with no original opened. Câmara Jr. (1989 [1970]: 56-57) names compacto, apto, ritmo and afta, and Nascimento writes: 'o autor afirma que há a intercalação de uma vogal entre uma consoante e outra'. Cagliari (1981: 107) lists t + m in ritmo and k + n in técnica. Bisol (1999: 729-730) derives ritmo: 'O resultado é ri.ti.mo, com padrão silábico CV. CV. CV'. This rule does not reach that context, so técnico, digno, ritmo, étnico and dogma keep the cluster. That is a gap in the rule, not a stated limit of the variety. Collischonn (2004: 68, Tabela 2) counts the nasal context over both positions together and labels the row with the post-tonic mogno: 'Oclusiva Nasal (mogno) 116/151 77 0,74'. No table of hers crosses the following consonant with the position. Her analysis takes mogno as the post-tonic example: in its tableau (p. 75) the optimum is the candidate without the vowel, with the syllables g.no, and a candidate with the vowel gi is the sub-optimum. For the pretonic magnata the optimum is 'ma.gi.(ná.ta)'. That is the grammar of the three southern capitals. pt-BR-x-sul, pt-BR-x-floripa and pt-BR-x-pr switch the rule off by id on Collischonn's count. The stress count folds a syllable whose only vowel a rule inserted into the syllable before it, so the mark stays on the stressed syllable."
     },
     {
       "id": "BR_EPENTHESIS_ONSET",
@@ -2312,7 +2288,7 @@
       "m",
       "n"
       ],
-      "notes": "Vowel epenthesis in a cluster of a stop or labiodental fricative and an obstruent or /m n/ that opens a stressed word-initial syllable: pseudo [piˈsewdu], psique [piˈsiki], pneu [piˈnew]. It is BR_EPENTHESIS for the first consonant of the word when that consonant stands in the stressed syllable. Barbosa & Albano (2004: 227): 'BP exhibits vowel epenthesis, breaking most two-obstruent sequences. For phonotactic reasons common to both BP and EP, one of the consonants is always an apical: psicologia pisɪkoloʒiɐ or pɪsikoloʒiɐ ‘psychology’ in BP vs. psɪkoloʒiɐ in EP. The epenthetic vowel is always [i] or [ɪ]'. The statement does not restrict the process by stress, and its example breaks a word-initial cluster. Nascimento (2015, Epêntese vocálica em encontros consonantais por falantes brasileiros de inglês como língua estrangeira, master's thesis, UNESP Araraquara, pp. 62-63) reports the analysis of Collischonn (1996: 151-155): a word-initial consonant that the syllable cannot hold takes the vowel to its right, with the forms 'pneu [pi'new], Ptolomeu [pitolo'mew]'. The vowel of pneu stands before a stressed nucleus. Collischonn (1996) was not opened. Romano & Seabra (2017, Signum 20(1), pp. 284-285) find the vowel in every ALiB response to aftosa, pneu and advogado from 220 speakers of Paraná and São Paulo: 'houve a ocorrência da vogal epentética em todos os inquéritos, seja com a realização da vogal alta anterior [i] ou da vogal média anterior [e], tratando-se, portanto, de uma regra categórica no corpus analisado'. The rule has the scope of BR_EPENTHESIS, a nasal included, so pneu is [piˈnew], the form of Collischonn (1996). Romano & Seabra (2017: 286) find [e] in most pneu responses: 'em pneu, no qual se verifica a predominância da vogal média alta anterior [e] em 80,37% das respostas'. The spec keeps the [i] of Barbosa & Albano. Collischonn (2004: 65) codes the position of the lost consonant as a factor ('inicial (psicólogo) ou medial (opção)') and gives no rate for the word-initial position, so the regional specs inherit the rule. A cluster inside the word is split by the syllabifier and reads BR_EPENTHESIS or BR_EPENTHESIS_POSTTONIC. The stress count keeps the mark after the inserted vowel, before the stressed nucleus."
+      "notes": "Vowel epenthesis in a cluster of a stop or labiodental fricative and an obstruent or /m n/ that opens a stressed word-initial syllable: pseudo [piˈsewdu], psique [piˈsiki], pneu [piˈnew]. It is BR_EPENTHESIS for the first consonant of the word when that consonant stands in the stressed syllable. Barbosa & Albano (2004: 227): 'BP exhibits vowel epenthesis, breaking most two-obstruent sequences. For phonotactic reasons common to both BP and EP, one of the consonants is always an apical: psicologia pisɪkoloʒiɐ or pɪsikoloʒiɐ ‘psychology’ in BP vs. psɪkoloʒiɐ in EP. The epenthetic vowel is always [i] or [ɪ]'. The statement does not restrict the process by stress, and its example breaks a word-initial cluster. Nascimento (2015, Epêntese vocálica em encontros consonantais por falantes brasileiros de inglês como língua estrangeira, master's thesis, UNESP Araraquara, pp. 62-63) reports the analysis of Collischonn (1996: 151-155): a word-initial consonant that the syllable cannot hold takes the vowel to its right, with the forms 'pneu [pi'new], Ptolomeu [pitolo'mew]'. The vowel of pneu stands before a stressed nucleus. It opens a syllable of its own, so it is pretonic and oral, and BR_NASAL_STRESSED_I does not apply to it. Collischonn (1996) was not opened. Romano & Seabra (2017, Signum 20(1), pp. 284-285) find the vowel in every ALiB response to aftosa, pneu and advogado from 220 speakers of Paraná and São Paulo: 'houve a ocorrência da vogal epentética em todos os inquéritos, seja com a realização da vogal alta anterior [i] ou da vogal média anterior [e], tratando-se, portanto, de uma regra categórica no corpus analisado'. The rule has the scope of BR_EPENTHESIS, a nasal included, so pneu is [piˈnew], the form of Collischonn (1996). Romano & Seabra (2017: 286) find [e] in most pneu responses: 'em pneu, no qual se verifica a predominância da vogal média alta anterior [e] em 80,37% das respostas'. The spec keeps the [i] of Barbosa & Albano. Collischonn (2004: 65) codes the position of the lost consonant as a factor ('inicial (psicólogo) ou medial (opção)') and gives no rate for the word-initial position, so the regional specs inherit the rule. A cluster inside the word is split by the syllabifier and reads BR_EPENTHESIS or BR_EPENTHESIS_POSTTONIC. The stress count keeps the mark after the inserted vowel, before the stressed nucleus."
     },
     {
       "id": "BR_RAISE_FINAL_ES",
@@ -2393,7 +2369,8 @@
         "catorze",
         "saboroso",
         "gostoso",
-        "famoso"
+        "famoso",
+        "gol"
       ],
       "notes": "Lexically CLOSE stressed ⟨o⟩ = [o] for this curated set of frequent lexemes, overriding the pre-lexical default (which is the open [ɔ] in the European standard and, by inheritance, ambiguous elsewhere). Portuguese stressed mid-vowel height is lexically/etymologically fixed and not predictable from spelling — ⟨sopa⟩ [ˈsopɐ] (close, < Gmc *suppa) vs ⟨sova⟩ [ˈsɔvɐ] (open) are spelled and stressed alike (Mateus & d'Andrade 2000: ch.3 'The vowels'; Vigário 2003). This rule pins ONLY the stressed-vowel height and lets reduction, rhotics, sandhi and affrication run normally, so it inherits cleanly to every pt-PT / pt-BR dialect child. Includes the ⟨-oso⟩ masculine adjectival suffix (saboroso, gostoso, famoso), which is regularly close [o] against its open [ɔ] feminine ⟨-osa⟩ (PT_LEX_OPEN_O). SEED LIST — the arbitration-confirmed frequent lexemes; the long tail of Portuguese mid-vowel lexemes is documented residual, to be extended from Mateus & d'Andrade / a pronouncing dictionary."
     },
@@ -2449,6 +2426,32 @@
       "notes": "Lexically OPEN stressed ⟨e⟩ = [ɛ] for this curated set, overriding the pre-lexical default where a close [e] is selected (Brazilian and non-reducing inheritors). Includes items whose open height is etymological (Latin short ĕ: terra, serra), morphological (3sg present espera; the copula era) or simply lexical (dez). Mateus & d'Andrade 2000: ch.3; Vigário 2003. Pins only the vowel height and inherits cleanly. SEED LIST — documented residual for the tail."
     },
     {
+      "id": "BR_FINAL_EL_OPEN",
+      "phonemes": [
+        "e"
+      ],
+      "surface": "ɛ",
+      "stress": "stressed",
+      "followed_by_grapheme": [
+        "l"
+      ],
+      "followed_by_2": "word_boundary",
+      "notes": "A stressed word-final ⟨el⟩ has the open [ɛ]. Bagno (2012: 191): 'Como no PB o [l] final se vocalizou completamente na maioria das variedades em /ʊ/, a pronúncia das palavras terminadas em -éu e -el se tornou idêntica', and Base VIII, 1.º d) of the Acordo Ortográfico 1990 writes the open ⟨éu⟩ of chapéu, céu, véu. Bagno (2012: 148) transcribes mel [mɛʊ] and, for the rural varieties that keep the lateral, papel [pa'pɛli], so the vowel does not depend on the vocalisation. Battisti & Moras (2016: 100, Quadro 1) class the vowel the same way: 'Vogal média-baixa anterior: papel, aluguel'. Their next line, 'Vogal média-alta anterior: maleável, horrível', is the reason the rule reads the stress: an unstressed final ⟨el⟩ keeps the close [e]. The positional table of pt-BR has no nucleus_stressed entry for ⟨e⟩, so a stressed ⟨e⟩ takes the first reading of the grapheme table, the close [e]. pt-PT has the open vowel from its own nucleus_stressed entry, which this spec does not inherit."
+    },
+    {
+      "id": "BR_FINAL_OL_OPEN",
+      "phonemes": [
+        "o"
+      ],
+      "surface": "ɔ",
+      "stress": "stressed",
+      "followed_by_grapheme": [
+        "l"
+      ],
+      "followed_by_2": "word_boundary",
+      "notes": "A stressed word-final ⟨ol⟩ has the open [ɔ]. Battisti & Moras (2016: 100, Quadro 1): 'Vogal média baixa posterior: futebol, lençol', against 'Vogal média-alta posterior: voltar, moldura'. Bagno (2012: 148) transcribes [sɔli] for sol. Base VIII, 1.º d) of the Acordo Ortográfico 1990 writes the plural with the open diphthong: 'os ditongos abertos grafados -éi, éu ou ói [...] herói(s) [...] sóis'. The rule stands after PT_LEX_CLOSE_O, which lists gol: Bagno (2012: 148) transcribes gol [goʊ]. The rule reads the stress, so unstressed álcool keeps its close [o]. The same reasoning as BR_FINAL_EL_OPEN explains the close default. This rule rests on word classes: the sources list the words above and give no general statement for final ⟨ol⟩, as Bagno (2012: 191) does for final ⟨el⟩."
+    },
+    {
       "id": "PT_LEX_X_S",
       "phonemes": [
         "ʃ"
@@ -2473,6 +2476,44 @@
         "trouxerem"
       ],
       "notes": "The ⟨x⟩ of the trazer preterite/subjunctive stem ⟨troux-⟩ is [s], not the default [ʃ] (trouxe [ˈtɾo(w)sɨ] / BP [ˈtɾosi]; Cunha & Cintra 1984, §on ⟨x⟩; the value of orthographic ⟨x⟩ is lexically unpredictable — [ʃ] peixe, [s] trouxe/próximo, [ks] fixo, [z] exame). Keyed on the lexeme because no phonological context separates the trouxe ⟨x⟩=[s] from the luxo ⟨x⟩=[ʃ]; gated on grapheme ⟨x⟩ so it never touches a ⟨ch⟩ or lexical [ʃ]. Pins only the consonant, so vowel reduction and the surrounding processes run normally and it inherits to every pt child. SEED — the broader ⟨x⟩=[s]/[ks]/[z] lexicon (próximo, máximo, fixo, exame) is documented residual."
+    },
+    {
+      "id": "PT_LEX_NASAL_UI",
+      "phonemes": [
+        "u"
+      ],
+      "surface": "ũ",
+      "followed_by_phoneme": [
+        "j"
+      ],
+      "word": [
+        "muito",
+        "muita",
+        "muitos",
+        "muitas",
+        "muitíssimo",
+        "mui"
+      ],
+      "notes": "The words muito, muita, muitos, muitas, muitíssimo and mui have the nasal diphthong [ũj̃], although no nasal letter is written. No general rule gives this nasality, so the rule names the words. It changes only the vowel and the glide, so each child keeps its own consonants and final vowel. Barbosa & Albano (2004, JIPA 34, p. 231) transcribe com muita as [kõ ˈmũĩ̯ta]. pt.wiktionary gives muito /ˈmũj.tu/, muitíssimo /mũjˈtʃisimʊ/ and mui /ˈmũj/ for Brazil."
+    },
+    {
+      "id": "PT_LEX_NASAL_UI_GLIDE",
+      "phonemes": [
+        "j"
+      ],
+      "surface": "j̃",
+      "preceded_by_phoneme": [
+        "u"
+      ],
+      "word": [
+        "muito",
+        "muita",
+        "muitos",
+        "muitas",
+        "muitíssimo",
+        "mui"
+      ],
+      "notes": "The nasal glide of [ũj̃] in muito, muita, muitos, muitas, muitíssimo, mui. See PT_LEX_NASAL_UI."
     },
     {
       "id": "PT_INITIAL_EX_VOICED",
@@ -2665,6 +2706,26 @@
       "url": "https://agendapos.fclar.unesp.br/agenda-pos/linguistica_lingua_portuguesa/3463.pdf",
       "pages": "62-63",
       "notes": "Reports the forms of Collischonn (1996: 151), which was not opened (BR_EPENTHESIS_ONSET)."
+    },
+    {
+      "id": "bagno2012",
+      "author": "Bagno, M.",
+      "year": 2012,
+      "title": "Gramática pedagógica do português brasileiro",
+      "publisher": "Parábola Editorial",
+      "url": null,
+      "pages": "148, 191",
+      "notes": "p. 148: coda /l/ and the transcriptions of mel, gol, sol and papel. p. 191: final ⟨-el⟩ and ⟨-éu⟩ read alike. Read from the scan of the first edition, second reprint (2016)."
+    },
+    {
+      "id": "battisti_moras2016",
+      "author": "Battisti, E. & Moras, V.T.",
+      "year": 2016,
+      "title": "A vocalização da consoante lateral em coda silábica em uma variedade de português brasileiro: análise sociolinguística em tempo real",
+      "publisher": "Gragoatá 40, pp. 90-112",
+      "url": "https://periodicos.uff.br/gragoata/article/view/33376",
+      "pages": "100",
+      "notes": "Quadro 1 classes the vowel before coda /l/ by height, with example words. Moras & Battisti (2015, Caderno de Letras 24: 43) give the same classes."
     }
   ],
   "wikipedia": [
@@ -2817,6 +2878,7 @@
     "compound_stress": "last",
     "default_position": -2,
     "final_stress_endings": [
+      "djavan",
       "r",
       "l",
       "z",
@@ -2853,7 +2915,7 @@
       "õ"
     ],
     "stress_mark": "ˈ",
-    "notes": "Acordo Ortográfico 1990 conventions: paroxytone default; written accents override; final -i/-u/-r/-l/-z/-x/-im/-om/-um/-ins/-ons/-uns and nasal diphthongs attract final stress. Unmarked -em/-ens/-am stay paroxytone (homem, homens, falam): an oxytone of more than one syllable in -em or -ens is written with an acute (Acordo Ortográfico 1990, Base VIII, 1.º c: deténs, haréns, provéns, também). DIPHTHONGS: declared so the bundled syllabifier counts nuclei correctly — without them every vowel run merges into one nucleus and co-e-lho is read as coe-lho, one syllable short, putting the stress and its vowel reduction on the wrong vowel. ⟨oe⟩ is hiatus, not a diphthong (Cunha & Cintra, §Ditongos). COMPOUNDS: a hyphenated compound is one prosodic word. Each element keeps its own stress and the last is the strongest (Bechara, Moderna Gramática Portuguesa, p. 340, quoted in Ciberdúvidas, resposta 28042), so compound_stress is \"last\": guarda-chuva gwˌaɾdɐˈʃuvɐ (Portal da Língua Portuguesa). IPA_DIPHTHONGS is empty: the grapheme table writes every diphthong with a glide ([aj], [uj], [ɐ̃w̃]), so two full vowels side by side in the transcription are always a hiatus, and the stress mark is placed with each IPA vowel as a nucleus of its own. Read with the orthographic list, the IPA [ui] of ⟨proíbe⟩ /pɾuibɨ/ and [iu] of ⟨viúva⟩ merge into one syllable and the mark lands a syllable early. The acute on a tonic ⟨i u⟩ after a vowel marks exactly this hiatus (Acordo Ortográfico 1990, Base X, 1.º: juízes, ruína, ciúme, miúdo, saída, baú). ONSETS: constrain_onsets is set, and onset_clusters names the complex onsets, so the bundled syllabifier divides a word as the silabificador plugin does and the transcription does not depend on whether the plugin is installed. A complex onset has two segments and the second is a non-nasal sonorant: 'No ataque podem se apresentar dois segmentos, dos quais o segundo é uma soante não nasal' (Curioletti & Sandri 2019, Cadernos do IL 59, PDF p. 6, citing Bisol 2013, not opened). Collischonn (2004: 66) says the same of a stop before a stop or a nasal (espectro, hipnose): 'a seqüência resultante não é admitida nem como ataque, nem como coda + ataque, pela estrutura canônica da sílaba em português'. So the first stop of ⟨pacto apto opção⟩ closes the syllable before it (pac.to, ap.to, op.ção), and BR_EPENTHESIS reads its stress there. ⟨st⟩ and ⟨dv⟩ have no sonorant second member, so escola is es.co.la and advogado is ad.vo.ga.do. CLOSED HIATUS: a tonic ⟨i u⟩ after a vowel takes no acute when it forms a syllable with the next consonant, and it is still a nucleus in hiatus: \"As vogais tónicas/tônicas grafadas i e u das palavras oxítonas e paroxítonas não levam acento agudo quando, antecedidas de vogal com que não formam ditongo, constituem sílaba com a consoante seguinte, como é o caso de nh, l, m, n, r e z: bainha, moinho, rainha; adail, paul, Raul; Aboim, Coimbra, ruim; ainda, constituinte, oriundo, ruins, triunfo; atrair, demiurgo, influir, influirmos; juiz, raiz, etc.\" (Acordo Ortográfico 1990, Base X, 2.º, Portal da Língua Portuguesa, acordo.php?action=acordo&version=1990). closed_hiatus states it: the ⟨i u⟩ of ⟨ai au ei eu iu oi ui⟩ is split off before ⟨nh⟩, or before l m n r z when no vowel follows and the letter does not start ⟨lh rr⟩. ⟨ou⟩ is left out: Base X, 2.º gives no ⟨ou⟩ example, and the ⟨ou⟩ words of this shape are loans and foreign names (Lourdes, gourmet, tour). A following ⟨s⟩ is excluded (Base X, 1.º: \"excetuando o caso de s\"), so animais keeps its diphthong. The split holds only where the ⟨i u⟩ is stressed: Base XIV, 1.º says the spelling does not tell an atonic ⟨i u⟩ in hiatus from a diphthong (arruinar, faiscar), so an atonic one keeps the diphthong reading. FINAL DIPHTHONGS: a final ⟨iu ui⟩ after a vowel is one stressed diphthong, and the vowel before it is a nucleus of its own: \"Prescinde-se do acento agudo nos ditongos tónicos/tônicos grafados iu e ui, quando precedidos de vogal: distraiu, instruiu, pauis (pl. de paul).\" (Acordo Ortográfico 1990, Base X, 6.º, Portal da Língua Portuguesa, acordo.php?action=acordo&version=1990). So distraiu is dis-tra-iu and pauis is pa-uis, not dis-trai-u and pau-is. final_diphthongs states it for a word-final ⟨iu ui⟩, alone or before ⟨s⟩. A medial ⟨iu ui⟩ after a vowel is outside it: Base X, 4.º reads a tonic ⟨i u⟩ after a diphthong there (baiuca, cauila). A final one cannot have that reading unwritten, because Base X, 5.º writes the acute on a final tonic ⟨i u⟩ after a diphthong (Piauí, teiú, teiús). The split holds only where the diphthong is stressed. Barbosa & Albano (2004: 230): \"A large list of oral diphthongs can be formed by combining the stressed oral vowels above with the offglides [ɪ̯] and [ʊ̯], *[iɪ̯] being the only impossible diphthong\", so [iʊ̯] is a falling diphthong, and the transcribed passage gives desistiu [dʒizisˈtʃiʊ̯] with the stress on it (p. 231). TONIC AFTER DIPHTHONG: a stressed ⟨i u⟩ after a diphthong is a syllable of its own, and the diphthong keeps its glide: \"Prescinde-se do acento agudo nas vogais tónicas/tônicas grafadas i e u das palavras paroxítonas, quando elas estão precedidas de ditongo: baiuca, boiuno, cauila (var. cauira), cheiinho (de cheio), saiinha (de saia).\" (Acordo Ortográfico 1990, Base X, 4.º) and \"Levam, porém, acento agudo as vogais tónicas/tônicas grafadas i e u quando, precedidas de ditongo, pertencem a palavras oxítonas e estão em posição final ou seguidas de s: Piauí, teiú, teiús, tuiuiú, tuiuiús. Obs.: Se, neste caso, a consoante final for diferente de s, tais vogais dispensam o acento agudo: cauim.\" (Base X, 5.º, Portal da Língua Portuguesa, acordo.php?action=acordo&version=1990). So baiuca is bai-u-ca and teiú is tei-ú. tonic_after_diphthong states it: where the stressed written syllable starts with ⟨i u í ú⟩ after a syllable that ends in a listed diphthong, the glide stays in the syllable before and the mark follows it. The rule reads only the place of the mark: the transcription already writes the glide and the vowel. An unstressed ⟨i u⟩ after a diphthong is outside it. NASAL DIPHTHONG ⟨ãi⟩: \"Os ditongos representados por vogal com til e semivogal são quatro, considerando-se apenas a língua padrão contemporânea: ãe (usado em vocábulos oxítonos e derivados), ãi (usado em vocábulos anoxítonos e derivados), ão e õe. Exemplos: cães, Guimarães, mãe, mãezinha; cãibas, cãibeiro, cãibra, zãibo; [...]\" (Acordo Ortográfico 1990, Base VII, 3 a), Portal da Língua Portuguesa, acordo.php?action=acordo&version=1990). So ⟨ãi⟩ is one nucleus, the diphthong of ⟨ãe⟩, and the grapheme table gives it the reading of ⟨ãe⟩. It is not in final_stress_endings, because Base VII, 3 a) uses it in anoxytones: cãibra is cãi-bra, stressed on the diphthong. Barbosa & Albano (2004: 230): \"Nasalised diphthongs are formed by combining [ẽ ɐ̃ õ ũ] with the offglide [ɪ̯̃]\", so [ɐ̃ɪ̯̃] is the nasal diphthong of both ⟨ãe⟩ and ⟨ãi⟩.",
+    "notes": "Acordo Ortográfico 1990 conventions: paroxytone default; written accents override; final -i/-u/-r/-l/-z/-x/-im/-om/-um/-ins/-ons/-uns and nasal diphthongs attract final stress. Unmarked -em/-ens/-am stay paroxytone (homem, homens, falam): an oxytone of more than one syllable in -em or -ens is written with an acute (Acordo Ortográfico 1990, Base VIII, 1.º c: deténs, haréns, provéns, também). DIPHTHONGS: declared so the bundled syllabifier counts nuclei correctly — without them every vowel run merges into one nucleus and co-e-lho is read as coe-lho, one syllable short, putting the stress and its vowel reduction on the wrong vowel. ⟨oe⟩ is hiatus, not a diphthong (Cunha & Cintra, §Ditongos). COMPOUNDS: a hyphenated compound is one prosodic word. Each element keeps its own stress and the last is the strongest (Bechara, Moderna Gramática Portuguesa, p. 340, quoted in Ciberdúvidas, resposta 28042), so compound_stress is \"last\". IPA_DIPHTHONGS is empty: the grapheme table writes every diphthong with a glide ([aj], [uj], [ɐ̃w̃]), so two full vowels side by side in the transcription are always a hiatus, and the stress mark is placed with each IPA vowel as a nucleus of its own. Read with the orthographic list, the IPA [ui] of ⟨proíbe⟩ /pɾuibɨ/ and [iu] of ⟨viúva⟩ merge into one syllable and the mark lands a syllable early. The acute on a tonic ⟨i u⟩ after a vowel marks exactly this hiatus (Acordo Ortográfico 1990, Base X, 1.º: juízes, ruína, ciúme, miúdo, saída, baú). ONSETS: constrain_onsets is set, and onset_clusters names the complex onsets, so the bundled syllabifier divides a word as the silabificador plugin does and the transcription does not depend on whether the plugin is installed. A complex onset has two segments and the second is a non-nasal sonorant: 'No ataque podem se apresentar dois segmentos, dos quais o segundo é uma soante não nasal' (Curioletti & Sandri 2019, Cadernos do IL 59, PDF p. 6, citing Bisol 2013, not opened). Collischonn (2004: 66) says the same of a stop before a stop or a nasal (espectro, hipnose): 'a seqüência resultante não é admitida nem como ataque, nem como coda + ataque, pela estrutura canônica da sílaba em português'. So the first stop of ⟨pacto apto opção⟩ closes the syllable before it (pac.to, ap.to, op.ção), and BR_EPENTHESIS reads its stress there. ⟨st⟩ and ⟨dv⟩ have no sonorant second member, so escola is es.co.la and advogado is ad.vo.ga.do. CLOSED HIATUS: a tonic ⟨i u⟩ after a vowel takes no acute when it forms a syllable with the next consonant, and it is still a nucleus in hiatus: \"As vogais tónicas/tônicas grafadas i e u das palavras oxítonas e paroxítonas não levam acento agudo quando, antecedidas de vogal com que não formam ditongo, constituem sílaba com a consoante seguinte, como é o caso de nh, l, m, n, r e z: bainha, moinho, rainha; adail, paul, Raul; Aboim, Coimbra, ruim; ainda, constituinte, oriundo, ruins, triunfo; atrair, demiurgo, influir, influirmos; juiz, raiz, etc.\" (Acordo Ortográfico 1990, Base X, 2.º, Portal da Língua Portuguesa, acordo.php?action=acordo&version=1990). closed_hiatus states it: the ⟨i u⟩ of ⟨ai au ei eu iu oi ui⟩ is split off before ⟨nh⟩, or before l m n r z when no vowel follows and the letter does not start ⟨lh rr⟩. ⟨ou⟩ is left out: Base X, 2.º gives no ⟨ou⟩ example, and the ⟨ou⟩ words of this shape are loans and foreign names (Lourdes, gourmet, tour). A following ⟨s⟩ is excluded (Base X, 1.º: \"excetuando o caso de s\"), so animais keeps its diphthong. The split holds only where the ⟨i u⟩ is stressed: Base XIV, 1.º says the spelling does not tell an atonic ⟨i u⟩ in hiatus from a diphthong (arruinar, faiscar), so an atonic one keeps the diphthong reading. FINAL DIPHTHONGS: a final ⟨iu ui⟩ after a vowel is one stressed diphthong, and the vowel before it is a nucleus of its own: \"Prescinde-se do acento agudo nos ditongos tónicos/tônicos grafados iu e ui, quando precedidos de vogal: distraiu, instruiu, pauis (pl. de paul).\" (Acordo Ortográfico 1990, Base X, 6.º, Portal da Língua Portuguesa, acordo.php?action=acordo&version=1990). So distraiu is dis-tra-iu and pauis is pa-uis, not dis-trai-u and pau-is. final_diphthongs states it for a word-final ⟨iu ui⟩, alone or before ⟨s⟩. A medial ⟨iu ui⟩ after a vowel is outside it: Base X, 4.º reads a tonic ⟨i u⟩ after a diphthong there (baiuca, cauila). A final one cannot have that reading unwritten, because Base X, 5.º writes the acute on a final tonic ⟨i u⟩ after a diphthong (Piauí, teiú, teiús). The split holds only where the diphthong is stressed. Barbosa & Albano (2004: 230): \"A large list of oral diphthongs can be formed by combining the stressed oral vowels above with the offglides [ɪ̯] and [ʊ̯], *[iɪ̯] being the only impossible diphthong\", so [iʊ̯] is a falling diphthong, and the transcribed passage gives desistiu [dʒizisˈtʃiʊ̯] with the stress on it (p. 231). TONIC AFTER DIPHTHONG: a stressed ⟨i u⟩ after a diphthong is a syllable of its own, and the diphthong keeps its glide: \"Prescinde-se do acento agudo nas vogais tónicas/tônicas grafadas i e u das palavras paroxítonas, quando elas estão precedidas de ditongo: baiuca, boiuno, cauila (var. cauira), cheiinho (de cheio), saiinha (de saia).\" (Acordo Ortográfico 1990, Base X, 4.º) and \"Levam, porém, acento agudo as vogais tónicas/tônicas grafadas i e u quando, precedidas de ditongo, pertencem a palavras oxítonas e estão em posição final ou seguidas de s: Piauí, teiú, teiús, tuiuiú, tuiuiús. Obs.: Se, neste caso, a consoante final for diferente de s, tais vogais dispensam o acento agudo: cauim.\" (Base X, 5.º, Portal da Língua Portuguesa, acordo.php?action=acordo&version=1990). So baiuca is bai-u-ca and teiú is tei-ú. tonic_after_diphthong states it: where the stressed written syllable starts with ⟨i u í ú⟩ after a syllable that ends in a listed diphthong, the glide stays in the syllable before and the mark follows it. The rule reads only the place of the mark: the transcription already writes the glide and the vowel. An unstressed ⟨i u⟩ after a diphthong is outside it. NASAL DIPHTHONG ⟨ãi⟩: \"Os ditongos representados por vogal com til e semivogal são quatro, considerando-se apenas a língua padrão contemporânea: ãe (usado em vocábulos oxítonos e derivados), ãi (usado em vocábulos anoxítonos e derivados), ão e õe. Exemplos: cães, Guimarães, mãe, mãezinha; cãibas, cãibeiro, cãibra, zãibo; [...]\" (Acordo Ortográfico 1990, Base VII, 3 a), Portal da Língua Portuguesa, acordo.php?action=acordo&version=1990). So ⟨ãi⟩ is one nucleus, the diphthong of ⟨ãe⟩, and the grapheme table gives it the reading of ⟨ãe⟩. It is not in final_stress_endings, because Base VII, 3 a) uses it in anoxytones: cãibra is cãi-bra, stressed on the diphthong. Barbosa & Albano (2004: 230): \"Nasalised diphthongs are formed by combining [ẽ ɐ̃ õ ũ] with the offglide [ɪ̯̃]\", so [ɐ̃ɪ̯̃] is the nasal diphthong of both ⟨ãe⟩ and ⟨ãi⟩. NAME IN FINAL ⟨an⟩: final_stress_endings lists the whole name ⟨djavan⟩, so the mark moves and each spec keeps its own segments. Collischonn (1996: 151), read only through Nascimento (2015: 63), gives \"Djavan [dʒiʒa'vã]\". Final ⟨an⟩ is not listed as a class. Wetzels (2007: 37) says a final heavy syllable in a foreign name \"is usually stressed\", and also says: \"Foreign nouns do not always adapt automatically to the phonotactic requirements of the borrowing language\". The spelling does not separate the two groups: Priberam gives barman |bárman|, stressed on the penult.",
     "diphthongs": [
       "ãe",
       "ãi",

@@ -327,11 +327,12 @@ int main(int argc, char** argv) {
         }
         if (command == "transcribe" && i + 1 < argc) {
             const std::string code = argv[i++]; std::string dialect, text; std::size_t width = 8; bool detailed = false;
-            bool have_text = false;
-            while (i < argc) { const std::string option = argv[i++]; if (option == "--json") json_output = true; else if (option == "--lexicon" && i < argc) register_lexicon(code, argv[i++]); else if (option == "--dialect" && i < argc) dialect = argv[i++]; else if (option == "--beam" && i < argc) width = static_cast<std::size_t>(std::stoul(argv[i++])); else if (option == "--detailed") detailed = true; else { if (have_text && !text.empty()) text += ' '; text += option; have_text = true; } }
+            bool have_text = false; std::optional<std::map<std::string, std::string>> lexicon;
+            while (i < argc) { const std::string option = argv[i++]; if (option == "--json") json_output = true; else if (option == "--lexicon" && i < argc) lexicon = load_lexicon(argv[i++]); else if (option == "--dialect" && i < argc) dialect = argv[i++]; else if (option == "--beam" && i < argc) width = static_cast<std::size_t>(std::stoul(argv[i++])); else if (option == "--detailed") detailed = true; else { if (have_text && !text.empty()) text += ' '; text += option; have_text = true; } }
             // An explicitly empty text is a valid utterance: the reference
             // returns "" for it rather than a usage error.
-            if (!have_text) { usage(); return 2; } G2P engine(code, {}, dialect);
+            if (!have_text) { usage(); return 2; }
+            G2P engine(code, {}, dialect, false, true, true, true, nullptr, nullptr, Pipeline{lexicon});
             const auto result = engine.transcribe_detailed(text, width > 1 ? "beam" : "greedy", width);
             if (json_output || detailed) detailed_json(result); else std::cout << result.ipa << '\n';
             return 0;

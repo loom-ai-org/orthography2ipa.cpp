@@ -209,6 +209,71 @@ for code in ["pt-AO", "pt-GW", "pt-MZ", "pt-ST", "pt-TL", "pt-PT-x-algarve", "ao
 for code in ["pt-BR-x-sul", "pt-BR-x-floripa", "pt-BR-x-pr", "pt-BR-x-sp", "pt-BR-x-rj",
              "pt-UY"]:
     PINNED.setdefault(code, []).extend(["capto", "pseudo"])
+# An inserted vowel has its own unstressed syllable: pneu and advogado read it as
+# pretonic, pacto and egípcio as post-tonic. A written stressed ⟨i⟩ before a nasal
+# stays nasal, and the [u] of a positional ⟨qu⟩ is written, so it keeps its stress.
+PINNED["pt-BR"] += ["advogado", "gnomo", "tmese", "cima", "taqu"]
+# muito reads the nasal diphthong [ũj̃], and the creoles switch the rules off.
+PINNED["pt-PT"] += ["muito", "muita", "muitos", "muitas", "muitíssimo", "muitíssima", "Muito",
+                    "mui", "fortuito", "circuito", "gratuito", "cuidado", "mudo", "fui"]
+PINNED["pt-BR"] += ["muito", "muita", "muitos", "muitas", "muitíssimo", "muitíssima", "mui",
+                    "fortuito", "circuito", "gratuito", "cuidado", "mudo", "fui"]
+# pt-PT reads the contraction ao as [aw], and the specs below keep their own
+# reading of it or switch the rules off.
+PINNED["pt-PT"] += ["ao", "Ao", "AO", "aos", "caos", "pau", "mau"]
+PINNED["pt-BR"] += ["ao"]
+# A pt-PT coda sibilant is voiced word-internally before a voiced consonant, and
+# not word-initially. A word-internal [ʒ] takes the sibilant away before [ʒ].
+PINNED["pt-PT"] += ["esbelto", "desdém", "musgo", "desligar", "mesmo", "abismo", "lesma",
+                    "desmaio", "desregrado", "asno", "cisne", "desnível", "esnobe", "desnudar",
+                    "desgelo", "desjejum", "disjunto", "desjeito", "snobe", "slogan", "smoking",
+                    "sbirro", "pasta", "mesquita", "esfera", "chmm"]
+for code in ["pt-PT-x-acores", "pt-PT-x-alentejo", "pt-PT-x-alfena", "pt-PT-x-algarve",
+             "pt-PT-x-aveiro", "pt-PT-x-beira", "pt-PT-x-braga", "pt-PT-x-coimbra",
+             "pt-PT-x-lisbon", "pt-PT-x-madeira", "pt-PT-x-minho", "pt-PT-x-porto",
+             "pt-PT-x-sao-miguel", "pt-PT-x-terceira", "pt-PT-x-tras-os-montes",
+             "pt-PT-x-viana", "pt-MO"]:
+    PINNED.setdefault(code, []).extend(["muito", "ao", "mesmo", "desdém"])
+for code in ["pt-AO", "pt-CV", "pt-GW", "pt-MZ", "pt-ST", "pt-TL", "ext-PT-x-barranco", "aoa",
+             "cri", "idb", "kea", "mcm", "mzs", "pap", "pov", "pre", "vkp", "pt-PT-x-medieval"]:
+    PINNED.setdefault(code, []).extend(["muito", "ao", "mesmo", "desdém", "pasta"])
+# pt-BR: a stressed final ⟨el ol⟩ has an open vowel, and an unstressed one, ⟨gol⟩
+# and a coda ⟨l⟩ inside the word keep their vowel. pt-UY switches the rules off.
+PINNED["pt-BR"] += ["papel", "mel", "hotel", "aluguel", "pastel", "gel", "futebol", "farol",
+                    "lençol", "girassol", "caracol", "gol", "nível", "móvel", "túnel", "solto",
+                    "feltro", "amor", "vez"]
+for code in ["pt-BR-x-bahia", "pt-BR-x-ce", "pt-BR-x-floripa", "pt-BR-x-fluminen", "pt-BR-x-mg",
+             "pt-BR-x-norte", "pt-BR-x-pr", "pt-BR-x-recife", "pt-BR-x-rj", "pt-BR-x-sp",
+             "pt-BR-x-sul", "pt-BR-x-caipira", "pt-BR-x-cuiaba", "pt-UY"]:
+    PINNED.setdefault(code, []).extend(["papel", "lençol", "muito"])
+# pt-BR Djavan takes the final stress of its spelling, and each child keeps the
+# segments of its own rules. ⟨an⟩ does not draw the stress by itself.
+PINNED["pt-BR"] += ["barman"]
+for code in ["pt-BR-x-floripa", "pt-BR-x-recife", "pt-BR-x-cuiaba", "pt-UY"]:
+    PINNED.setdefault(code, []).append("Djavan")
+# nl: a coda obstruent devoices inside the one-slot keys ⟨veld⟩ and ⟨berg⟩.
+PINNED["nl-NL"] += ["veldkeuken", "veldslag", "veldpost", "veldtocht", "velden", "veldbed",
+                    "slagveld"]
+PINNED["nl-NL-x-polder"] += ["veldslag"]
+PINNED["nl-NL-x-groninge"] += ["veldkeuken"]
+PINNED["nl-NL-x-limburg"] += ["veldslag"]
+PINNED["nl-BE"] += ["veldslag", "veldpost", "bergtop", "bergketen", "gebergte", "velden",
+                    "veldbed", "bergen", "berg"]
+PINNED["nl-BE-x-antwerp"] += ["veldslag", "bergtop", "bergketen", "gebergte", "Aarveld"]
+# nl: ⟨qu⟩ reads [kʋ], and [k] in the French loans the guide lists.
+for code in ["nl-NL", "nl-NL-x-polder", "nl-NL-x-groninge", "nl-NL-x-limburg", "nl-BE",
+             "nl-BE-x-antwerp"]:
+    PINNED[code] += ["quiz", "quota", "quantum", "equator", "aquarel", "eloquent", "frequent",
+                     "requiem", "colloquium", "queue", "quarantaine", "quotiënt", "equipe",
+                     "etiquette", "cheque", "croquet", "calqueren", "communiqué", "huurquote",
+                     "pubquiz"]
+PINNED["nl-NL"] += ["enquête", "etiquettes"]
+# cnr reads both Montenegrin alphabets. С́ and З́ are a base letter and U+0301,
+# which has no precomposed form.
+PINNED["cnr"] = ["с́екира", "с́евер", "с́еница", "с́еме", "пос́ећи", "гус́еница", "мус́", "з́еница",
+                 "из́ести", "из́елица", "коз́и", "З́агора", "љубав", "Њујорк", "џем", "ЏЕМ", "ЉЕТО",
+                 "ЊЕДРА", "рђа", "прст", "крст", "смртан", "срп", "Подгорица", "Никшић", "Жабљак",
+                 "расходовати", "читај", "фонем", "бизин", "śekira", "źenica", "ljubav", "voda"]
 
 # The code points of the viramas this catalog actually uses.
 VIRAMAS = {0x094D, 0x09CD, 0x0A4D, 0x0ACD, 0x0B4D, 0x0BCD, 0x0C4D, 0x0CCD,

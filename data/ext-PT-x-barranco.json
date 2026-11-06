@@ -238,6 +238,18 @@
    "notes": "DISABLED for Barranquenho. No source for the stressed vowel of this ending in Barranquenho was read, so its output stays what it was; the pt-PT rule rests on Infopédia readings of standard European Portuguese."
   },
   {
+    "id": "PT_CODA_S_BEFORE_ZH_INTERNAL",
+    "phonemes": [],
+    "surface": "",
+    "notes": "DISABLED for Barranquenho. PT_CODA_S_BEFORE_ZH_INTERNAL deletes the pt-PT coda [ʃ] before /ʒ/ inside a word. In this spec PT_CODA_S_HUSH gives a coda /s/ [h], not [ʃ], so the deletion does not apply, and the coda keeps the reading of this spec. The word-internal coda sibilant before /ʒ/ in this variety has no variety-specific source."
+  },
+  {
+    "id": "PT_CODA_S_VOICING_INTERNAL",
+    "phonemes": [],
+    "surface": "",
+    "notes": "DISABLED for Barranquenho. PT_CODA_S_VOICING_INTERNAL voices the pt-PT coda [ʃ] to [ʒ] before a voiced consonant inside a word. In this spec PT_CODA_S_HUSH gives a coda /s/ [h], not [ʃ], so the voiced [ʒ] does not apply, and the coda keeps the reading of this spec. The voicing of a word-internal coda sibilant in this variety has no variety-specific source."
+  },
+  {
    "id": "PT_CODA_S_HUSH",
    "phonemes": [
     "s"

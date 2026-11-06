@@ -310,9 +310,11 @@ std::vector<std::string> rule_atoms(const std::vector<AllophoneRule>& rules) {
 // ── AllophoneRescorer (allophony.py) ─────────────────────────────────────
 
 AllophoneRescorer::AllophoneRescorer(std::vector<AllophoneRule> rules,
-                                     bool doubled_letters_geminate)
+                                     bool doubled_letters_geminate,
+                                     std::set<std::string> positional_vowel_graphemes)
     : rules_(std::move(rules)), atoms_(rule_atoms(rules_)),
-      doubling_is_geminate_(doubled_letters_geminate) {}
+      doubling_is_geminate_(doubled_letters_geminate),
+      positional_vowel_graphemes_(std::move(positional_vowel_graphemes)) {}
 
 std::vector<Candidate> AllophoneRescorer::rescore(
         const SegmentSlot& slot, const RescoreContext& context) const {
@@ -371,6 +373,7 @@ std::optional<std::string> AllophoneRescorer::neighbor_mutation(
         marker_ctx.grapheme = marker_g;
         marker_ctx.syll_idx = context.syll_idx;
         marker_ctx.stressed_syll_idx = context.stressed_syll_idx;
+        marker_ctx.syll_indices = context.syll_indices;
         const std::string ipa = marker_slot.top().ipa;
         for (const auto& rule : rules_) {
             if (!rule.mutates_neighbor.empty() &&
@@ -437,14 +440,23 @@ std::optional<std::string> AllophoneRescorer::realize(
 std::optional<std::string> AllophoneRescorer::realize_segments(
         const std::vector<std::string>& segments,
         const RescoreContext& context) const {
-    // Apply the first matching rule to each segment; nullopt = no-op.
+    // Apply the first matching rule to each segment; nullopt = no-op. A vowel
+    // in a slot whose grapheme reads no vowel was inserted by a rule (an
+    // `append` epenthesis). It is matched in its own unstressed syllable, not
+    // with the stress of the consonant's slot.
     bool changed = false;
     std::string out;
+    std::optional<RescoreContext> inserted_ctx;
     for (std::size_t i = 0; i < segments.size(); ++i) {
         const OwnedSegmentContext owned = segment_context(segments, i, context, atoms_);
         const SegmentContext& seg_ctx = owned.ctx;
+        const RescoreContext* slot_ctx = &context;
+        if (vowels::is_ipa_vowel(head_char(segments[i])) && !holds_vowel(*context.grapheme)) {
+            if (!inserted_ctx.has_value()) inserted_ctx = inserted_vowel_context(context);
+            slot_ctx = &*inserted_ctx;
+        }
         const std::optional<std::string> surface =
-            realize_one_segment(segments[i], seg_ctx, context);
+            realize_one_segment(segments[i], seg_ctx, *slot_ctx);
         if (surface.has_value() && *surface != segments[i]) {
             changed = true;
             out += *surface;
@@ -454,6 +466,39 @@ std::optional<std::string> AllophoneRescorer::realize_segments(
     }
     if (!changed) return std::nullopt;
     return out;
+}
+
+bool AllophoneRescorer::holds_vowel(const GraphemeContext& gctx) const {
+    // allophony.py _holds_vowel: a value of the grapheme's table entry, or a
+    // positional value, holds a vowel. It is the test the stress mark uses to
+    // find an inserted nucleus (g2p.py _fold_inserted_nuclei).
+    for (const auto& reading : gctx.ipa())
+        for (const char32_t ch : to_utf32(reading))
+            if (vowels::is_ipa_vowel(ch)) return true;
+    return positional_vowel_graphemes_.count(gctx.grapheme()) != 0;
+}
+
+RescoreContext AllophoneRescorer::inserted_vowel_context(const RescoreContext& context) const {
+    // allophony.py _inserted_vowel_context: the inserted vowel and the
+    // consonant before it make a syllable that the spelling does not write, and
+    // that syllable never takes the stress. It stands after the syllable of the
+    // nearest earlier grapheme that holds a vowel, so the context numbers it as
+    // a syllable of its own there and moves the later syllables, the stressed
+    // one among them, one place on.
+    if (context.syll_indices == nullptr || !context.stressed_syll_idx.has_value())
+        return context;
+    long long before = -1;
+    for (std::size_t step = 1; step <= context.index; ++step) {
+        const GraphemeContext* earlier = context.grapheme->at(-static_cast<int>(step));
+        if (earlier != nullptr && holds_vowel(*earlier)) {
+            before = static_cast<long long>((*context.syll_indices)[context.index - step]);
+            break;
+        }
+    }
+    RescoreContext inserted = context;
+    inserted.syll_idx = static_cast<std::size_t>(before + 1);
+    if (*context.stressed_syll_idx > before) inserted.stressed_syll_idx = *context.stressed_syll_idx + 1;
+    return inserted;
 }
 
 std::optional<std::string> AllophoneRescorer::realize_one_segment(
@@ -617,11 +662,23 @@ bool AllophoneRescorer::matches_slot(const AllophoneRule& rule,
 }
 
 std::unique_ptr<LatticeRescorer> compile_allophone_rescorer(
-        const std::vector<AllophoneRule>& rules, bool doubled_letters_geminate) {
+        const std::vector<AllophoneRule>& rules, bool doubled_letters_geminate,
+        const std::set<std::string>& positional_vowel_graphemes) {
     // "No rules" compiles to nullptr: the caller treats it as "no
     // post-lexical pass", keeping the default engine path byte-identical.
     if (rules.empty()) return nullptr;
-    return std::make_unique<AllophoneRescorer>(rules, doubled_letters_geminate);
+    return std::make_unique<AllophoneRescorer>(rules, doubled_letters_geminate,
+                                               positional_vowel_graphemes);
+}
+
+std::set<std::string> positional_vowel_graphemes(const LanguageSpec& spec) {
+    std::set<std::string> out;
+    for (const auto& [grapheme, positions] : spec.positional_graphemes)
+        for (const auto& [position, readings] : positions)
+            for (const auto& reading : readings)
+                for (const char32_t ch : to_utf32(reading))
+                    if (vowels::is_ipa_vowel(ch)) out.insert(grapheme);
+    return out;
 }
 
 } // namespace orthography2ipa::rescorer

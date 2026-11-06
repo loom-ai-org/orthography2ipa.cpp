@@ -230,6 +230,42 @@
   },
   "allophone_rules": [
     {
+      "id": "PT_LEX_NASAL_UI",
+      "phonemes": [],
+      "surface": "ũ",
+      "notes": "DISABLED for Sri Lanka Portuguese Creole. PT_LEX_NASAL_UI and PT_LEX_NASAL_UI_GLIDE give the pt-PT and pt-BR words muito, muita, muitos, muitas and mui the nasal diphthong [ũj̃]. No source for these words in this language was read, so its output stays what it was."
+    },
+    {
+      "id": "PT_LEX_NASAL_UI_GLIDE",
+      "phonemes": [],
+      "surface": "j̃",
+      "notes": "DISABLED for Sri Lanka Portuguese Creole. PT_LEX_NASAL_UI and PT_LEX_NASAL_UI_GLIDE give the pt-PT and pt-BR words muito, muita, muitos, muitas and mui the nasal diphthong [ũj̃]. No source for these words in this language was read, so its output stays what it was."
+    },
+    {
+      "id": "PT_LEX_AO_A",
+      "phonemes": [],
+      "surface": "a",
+      "notes": "DISABLED for Sri Lanka Portuguese Creole. PT_LEX_AO_A and PT_LEX_AO_GLIDE give the pt-PT contraction ao the diphthong [aw]. No source for ao in this language was read, so its output stays what it was."
+    },
+    {
+      "id": "PT_LEX_AO_GLIDE",
+      "phonemes": [],
+      "surface": "w",
+      "notes": "DISABLED for Sri Lanka Portuguese Creole. PT_LEX_AO_A and PT_LEX_AO_GLIDE give the pt-PT contraction ao the diphthong [aw]. No source for ao in this language was read, so its output stays what it was."
+    },
+    {
+      "id": "PT_CODA_S_BEFORE_ZH_INTERNAL",
+      "phonemes": [],
+      "surface": "",
+      "notes": "DISABLED for Sri Lanka Portuguese Creole. PT_CODA_S_BEFORE_ZH_INTERNAL deletes the pt-PT coda [ʃ] before /ʒ/ inside a word. In this spec PT_CODA_S_HUSH gives a coda /s/ [s], not [ʃ], so the deletion does not apply, and the coda keeps the reading of this spec. The word-internal coda sibilant before /ʒ/ in this variety has no variety-specific source."
+    },
+    {
+      "id": "PT_CODA_S_VOICING_INTERNAL",
+      "phonemes": [],
+      "surface": "ʒ",
+      "notes": "DISABLED for Sri Lanka Portuguese Creole. PT_CODA_S_VOICING_INTERNAL voices the pt-PT coda [ʃ] to [ʒ] before a voiced consonant inside a word. In this spec PT_CODA_S_HUSH gives a coda /s/ [s], not [ʃ], so the voiced [ʒ] does not apply, and the coda keeps the reading of this spec. The voicing of a word-internal coda sibilant in this variety has no variety-specific source."
+    },
+    {
       "id": "PT_CODA_S_HUSH",
       "phonemes": [
         "s"

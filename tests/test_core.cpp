@@ -97,8 +97,16 @@ int main() {
         assert(resolve("als-AL") == "als");
         assert(resolve("hr-Cyrl") == "sr");
         assert(!resolves_exactly("hr-Cyrl"));
-        assert(resolve("cnr-Cyrl-ME") == "sr");
+        // cnr has its own Cyrillic keys, and С́ and З́ are each a base letter plus
+        // U+0301. Expected values are registry.py and G2P("cnr").
+        assert(resolve("cnr-Cyrl") == "cnr");
+        assert(resolves_exactly("cnr-Cyrl"));
+        assert(resolve("cnr-Cyrl-ME") == "cnr");
         assert(resolves_exactly("cnr-Cyrl-ME"));
+        assert(G2P("cnr").transcribe("с\u0301екира") == "ɕɛkira");
+        assert(G2P("cnr").transcribe("з\u0301еница") == "ʑɛnitsa");
+        assert(G2P("cnr").transcribe("љубав вода") == "ʎubav vɔda");
+        assert(G2P("cnr-Cyrl-ME").transcribe("с\u0301екира") == "ɕɛkira");
         assert(resolve("MNK") == "mnk");
         assert(resolves_exactly("MNK"));
         assert(resolve("EN-gb") == "en-GB");
@@ -872,6 +880,9 @@ int main() {
         assert(stress::detect_stress("geleden", rimes, &geleden) == 1);
         assert(stress::detect_stress("gebrr", rimes, &gebrr) == 1);
         assert(stress::detect_stress("geween", rimes, &geween) == 1);
+        // The rime starts at the first vowel letter, written with a diacritic too.
+        const V gezeen{"ge", "zëen"};
+        assert(stress::detect_stress("gezëen", rimes, &gezeen) == 1);
         rimes.schwa_rimes.clear();
         assert(stress::detect_stress("geven", rimes, &geven) == 1);
         assert(G2P("nl-NL").transcribe("geven") == "\u02c8\u03c7eiv\u0259n");
@@ -1046,6 +1057,62 @@ int main() {
         const auto results = schema::validate_all();
         assert(results.failures.empty());
         assert(results.ok.size() == schema::iter_spec_files().size());
+    }
+    {
+        // Each word run reads the syllables of its own slots, at a word-local
+        // index. The engine passes syllables for one run only, so this calls
+        // apply_rescorers directly. The value is the reference's for this call.
+        using Seen = std::vector<std::pair<std::size_t, std::vector<std::size_t>>>;
+        static Seen seen;
+        struct Recording : rescorer::LatticeRescorer {
+            std::vector<Candidate> rescore(const rescorer::SegmentSlot& slot,
+                                           const rescorer::RescoreContext& context) const override {
+                seen.emplace_back(context.index, *context.syll_indices);
+                return slot.candidates;
+            }
+        };
+        const auto sequence = Tokenizer(get("pt-PT")).tokenize_with_context("pa ta");
+        std::vector<rescorer::SegmentSlot> slots;
+        for (const auto& context : *sequence.graphemes) {
+            rescorer::SegmentSlot slot;
+            slot.grapheme = context.grapheme();
+            slot.candidates = {Candidate{"a", 0.0}};
+            slots.push_back(std::move(slot));
+        }
+        const Recording recording;
+        const std::vector<std::size_t> sylls{5, 6, 7, 8};
+        rescorer::apply_rescorers(slots, *sequence.graphemes, {&recording}, &sylls, 0);
+        assert(seen == (Seen{{0, {5, 6}}, {1, {5, 6}}, {0, {7, 8}}, {1, {7, 8}}}));
+    }
+    {
+        // A syllable list shorter than the slots gives a run it does not cover
+        // no syllables, and a slot past its end no index. The reference raises
+        // IndexError for this input, and the port reads nothing past the list.
+        struct Seen {
+            bool has_run;
+            std::optional<std::size_t> index;
+            bool operator==(const Seen& other) const { return has_run == other.has_run && index == other.index; }
+        };
+        static std::vector<Seen> seen;
+        struct Recording : rescorer::LatticeRescorer {
+            std::vector<Candidate> rescore(const rescorer::SegmentSlot& slot,
+                                           const rescorer::RescoreContext& context) const override {
+                seen.push_back({context.syll_indices != nullptr, context.syll_idx});
+                return slot.candidates;
+            }
+        };
+        const auto sequence = Tokenizer(get("pt-PT")).tokenize_with_context("pa ta");
+        std::vector<rescorer::SegmentSlot> slots;
+        for (const auto& context : *sequence.graphemes) {
+            rescorer::SegmentSlot slot;
+            slot.grapheme = context.grapheme();
+            slot.candidates = {Candidate{"a", 0.0}};
+            slots.push_back(std::move(slot));
+        }
+        const Recording recording;
+        const std::vector<std::size_t> sylls{5, 6, 7};
+        rescorer::apply_rescorers(slots, *sequence.graphemes, {&recording}, &sylls, 0);
+        assert(seen == (std::vector<Seen>{{true, 5}, {true, 6}, {false, 7}, {false, std::nullopt}}));
     }
     return 0;
 }

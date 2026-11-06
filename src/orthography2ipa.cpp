@@ -1,6 +1,7 @@
 #include "beam.hpp"
 #include "data_directory.hpp"
 #include "plugin_registry.hpp"
+#include "process_lexicon.hpp"
 #include "orthography2ipa/orthography2ipa.hpp"
 #include "orthography2ipa/tone.hpp"
 #include "orthography2ipa/stress.hpp"
@@ -1119,20 +1120,35 @@ std::string read_text_utf8(const std::string& bytes) {
     return text;
 }
 
-// lexicon.py get_lexicon: lexicon_path, which raises FileNotFoundError for a
-// registered local source that is not a file, then an empty lexicon when no
+// lexicon.py `parse_lexicon_text(path.read_text(encoding="utf-8"))`.
+std::map<std::string, std::string> read_lexicon_file(const std::string& path) {
+    std::ifstream input(path, std::ios::binary); if (!input) throw std::runtime_error("lexicon not found: " + path);
+    return parse_lexicon_text(read_text_utf8(std::string(std::istreambuf_iterator<char>(input), {})));
+}
+
+// A sorted Python list of strings, as a str.format of it prints.
+std::string py_list(const std::vector<std::string>& values) {
+    std::string out = "[";
+    for (std::size_t i = 0; i < values.size(); ++i) out += (i ? ", " : "") + detail::py_repr(values[i]);
+    return out + "]";
+}
+} // namespace
+
+namespace detail {
+// lexicon.py _process_lexicon: lexicon_path, which raises FileNotFoundError for
+// a registered local source that is not a file, then an empty lexicon when no
 // file serves the code.
-std::shared_ptr<const std::map<std::string, std::string>> load_lexicon(const std::string& code) {
+std::shared_ptr<const std::map<std::string, std::string>> process_lexicon(const std::string& code) {
     auto cached = lexicon_cache.find(code); if (cached != lexicon_cache.end()) return cached->second;
     std::map<std::string, std::string> result;
-    if (const auto path = lexicon_path(code); path && path_is_file(*path)) {
-        std::ifstream input(*path, std::ios::binary); if (!input) throw std::runtime_error("lexicon not found: " + *path);
-        result = parse_lexicon_text(read_text_utf8(std::string(std::istreambuf_iterator<char>(input), {})));
-    }
+    if (const auto path = lexicon_path(code); path && path_is_file(*path)) result = read_lexicon_file(*path);
     auto loaded = std::make_shared<const std::map<std::string, std::string>>(std::move(result));
     lexicon_cache[code] = loaded;
     return loaded;
 }
+} // namespace detail
+
+namespace {
 
 
 std::size_t utf8_char_size(const std::string& text, std::size_t pos) {
@@ -1284,8 +1300,10 @@ std::vector<std::string> LanguageSpec::family_path() const {
 }
 
 Tokenizer::Tokenizer(const LanguageSpec& spec, bool expand_allophones, bool apply_allophony,
-                     const std::vector<const rescorer::LatticeRescorer*>& extra_rescorers)
-    : spec_(spec), tokenizer_(spec), expand_allophones_(expand_allophones) {
+                     const std::vector<const rescorer::LatticeRescorer*>& extra_rescorers,
+                     const SyllabifierPlugin* syllabifier)
+    : spec_(spec), tokenizer_(spec), expand_allophones_(expand_allophones),
+      syllabifier_(syllabifier) {
     // g2p.py G2P.__init__ engine-side derivations.
     // _uses_aperture: does any grapheme in this spec key on syllable
     // APERTURE? If not, the aperture question is never asked: a stress-less
@@ -1317,7 +1335,8 @@ Tokenizer::Tokenizer(const LanguageSpec& spec, bool expand_allophones, bool appl
     // g2p.py: `compile_allophone_rescorer(...) if apply_allophony else None`.
     allophone_rescorer_ = apply_allophony
         ? rescorer::compile_allophone_rescorer(spec.allophone_rules,
-                                               spec.doubled_letters_geminate)
+                                               spec.doubled_letters_geminate,
+                                               rescorer::positional_vowel_graphemes(spec))
         : nullptr;
     // g2p.py: `self._rescorers = user_rescorers + self._allophone_chain`, and
     // a declared `rescore` plugin's lattice rescorers are spliced in front of
@@ -1499,6 +1518,7 @@ std::vector<rescorer::SegmentSlot> positional_slots_impl(
         bool expand_allophones, bool uses_aperture,
         const std::string& silent_marks,
         const std::vector<const rescorer::LatticeRescorer*>& rescorers,
+        const SyllabifierPlugin* syllabifier,
         const std::string& word, std::size_t width, bool pre_rescore) {
     // g2p.py ipa_lattice: one slot per GRAPHEME token in surface order,
     // candidates truncated per slot AFTER the rescorer chain, and a slot with
@@ -1518,7 +1538,7 @@ std::vector<rescorer::SegmentSlot> positional_slots_impl(
     // whenever either is in play — same rule as the beam.
     std::vector<std::string> sylls;
     if (spec.stress_defined || uses_aperture)
-        sylls = stress::syllables_for(word, spec.code, spec.diphthongs, &spec);
+        sylls = stress::syllables_for(word, spec.code, spec.diphthongs, &spec, syllabifier);
     std::optional<long long> stressed_syll_idx;
     std::set<std::size_t> secondary_syll_idxs;
     if (spec.stress_defined) {
@@ -1618,7 +1638,7 @@ std::vector<IPAPath> Tokenizer::beam(const std::string& word, std::size_t width)
     // index below.
     std::vector<std::string> sylls;
     if (spec_.stress_defined || uses_aperture_)
-        sylls = stress::syllables_for(word, spec_.code, spec_.diphthongs, &spec_);
+        sylls = stress::syllables_for(word, spec_.code, spec_.diphthongs, &spec_, syllabifier_);
     std::optional<long long> stressed_syll_idx;
     std::set<std::size_t> secondary_syll_idxs;
     if (spec_.stress_defined) {
@@ -1670,7 +1690,7 @@ std::vector<rescorer::SegmentSlot> Tokenizer::positional_slots(
         const std::string& word, std::size_t width, bool pre_rescore) const {
     return positional_slots_impl(spec_, tokenizer_,
                                  expand_allophones_, uses_aperture_, silent_stress_marks_,
-                                 rescorers_, word, width, pre_rescore);
+                                 rescorers_, syllabifier_, word, width, pre_rescore);
 }
 
 // lexicon.py _IPA_MODIFIERS: the non-letter IPA symbols a transcription may
@@ -1859,6 +1879,20 @@ const LanguageSpec& get(const std::string& code) {
 }
 void set_data_directory(const std::string& path) { data_dir = path; cache.clear(); }
 void register_lexicon(const std::string& code, const std::string& source) { registered_lexicons[resolve(code)] = source; lexicon_cache.clear(); }
+std::map<std::string, std::string> load_lexicon(const std::string& source) {
+    return read_lexicon_file(resolve_lexicon_source(source));
+}
+std::map<std::string, std::string> packaged_lexicon(const std::string& code) {
+    const std::string resolved = resolve(code);
+    const auto path = packaged_path(resolved);
+    if (!path) {
+        std::vector<std::string> installed;
+        for (const auto& [provider, _] : packaged_providers()) installed.push_back(provider);
+        throw LookupError("no installed package supplies a lexicon file for " + detail::py_repr(resolved) +
+                          "; installed: " + (installed.empty() ? "nothing" : py_list(installed)));
+    }
+    return load_lexicon(path->string());
+}
 void set_lexicon_directory(const std::string& path) { lexicon_directory = expand_user(path); lexicon_cache.clear(); }
 void clear_lexicons() {
     registered_lexicons.clear(); lexicon_directory.reset(); lexicon_cache.clear();
@@ -1876,15 +1910,9 @@ std::vector<std::string> use_packaged_lexicons(const std::vector<std::string>& c
     std::vector<std::string> missing, installed;
     for (const auto& code : wanted) if (!providers.count(code)) missing.push_back(code);
     for (const auto& [code, _] : providers) installed.push_back(code);
-    if (!missing.empty()) {
-        const auto list = [](const std::vector<std::string>& values) {
-            std::string out = "[";
-            for (std::size_t i = 0; i < values.size(); ++i) out += (i ? ", " : "") + detail::py_repr(values[i]);
-            return out + "]";
-        };
-        throw LookupError("no installed package provides a lexicon for " + list(missing) +
-                          "; installed: " + (installed.empty() ? "nothing" : list(installed)));
-    }
+    if (!missing.empty())
+        throw LookupError("no installed package provides a lexicon for " + py_list(missing) +
+                          "; installed: " + (installed.empty() ? "nothing" : py_list(installed)));
     enabled_packaged.insert(wanted.begin(), wanted.end());
     lexicon_cache.clear();
     return {enabled_packaged.begin(), enabled_packaged.end()};
@@ -1901,7 +1929,7 @@ std::vector<std::string> available_lexicon_codes() {
     if (!dir.empty() && path_is_dir(dir)) for (const auto& e : fs::directory_iterator(dir)) if (e.path().extension() == ".tsv") codes.insert(e.path().stem().string());
     return {codes.begin(), codes.end()};
 }
-std::map<std::string, std::string> get_lexicon(const std::string& code) { return *load_lexicon(resolve(code)); }
+std::map<std::string, std::string> get_lexicon(const std::string& code) { return *detail::process_lexicon(resolve(code)); }
 std::optional<std::string> lexicon_source(const std::string& code) {
     const auto canonical = resolve(code);
     if (auto it = registered_lexicons.find(canonical); it != registered_lexicons.end()) return it->second;
@@ -2071,8 +2099,9 @@ G2P::G2P(std::string language, std::map<std::string, std::vector<std::string>> p
          std::string dialect_profile, bool expand_allophones,
          bool apply_sandhi, bool apply_stress, bool apply_allophony,
          const sentence::SentenceRescorerArg& sentence_rescorer,
-         const rescorer::RescorerArg& rescorer)
+         const rescorer::RescorerArg& rescorer, const Pipeline& pipeline)
     : language_(resolve(language)), spec_(&get(language_)), plugin_overrides_(std::move(plugin_overrides)),
+      pipeline_(std::make_shared<const Pipeline>(pipeline)),
       dialect_profile_(std::move(dialect_profile)), expand_allophones_(expand_allophones),
       apply_sandhi_(apply_sandhi), apply_stress_(apply_stress), apply_allophony_(apply_allophony),
       // `self._sentence_rescorers = normalize_sentence_rescorers(sentence_rescorer)`
@@ -2245,7 +2274,7 @@ std::vector<IPAPath> G2P::candidates(const std::string& word, std::size_t width)
     // ipa_beam with the caller's expand_allophones, no rescorer chain and no
     // grammatical-ending rewrite. `transcribe_word` runs the word pipeline;
     // this is the read surface for the unpended candidates.
-    return Tokenizer(*spec_, expand_allophones_, apply_allophony_).plain_beam(word, width);
+    return Tokenizer(*spec_, expand_allophones_, apply_allophony_, {}, pipeline_->syllabifier.get()).plain_beam(word, width);
 }
 
 // g2p.py G2P._build_sentence_lattice + _word_positions, shared by
@@ -2421,7 +2450,8 @@ std::string finalize_word_ipa(const LanguageSpec& spec, const std::string& word,
                               const std::optional<std::string>& forced_ipa,
                               const IPAPath* path, bool collapse_geminates_flag,
                               bool apply_stress = true,
-                              const Tokenizer* tokenizer = nullptr) {
+                              const Tokenizer* tokenizer = nullptr,
+                              const SyllabifierPlugin* syllabifier = nullptr) {
     std::string ipa = ipa_in;
     // Computed tone runs first, on the path's own slots: it is the only
     // stage that needs to see which grapheme produced which segment, and
@@ -2470,7 +2500,7 @@ std::string finalize_word_ipa(const LanguageSpec& spec, const std::string& word,
             ipa = stress::apply_stress_mark(ipa, spec, idx, /*syllables=*/nullptr,
                                             &ipa_sylls);
         } else {
-            const auto sylls = stress::syllables_for(word, spec.code, spec.diphthongs, &spec);
+            const auto sylls = stress::syllables_for(word, spec.code, spec.diphthongs, &spec, syllabifier);
             const int idx = stress::detect_stress(word, spec, &sylls);
             std::string mark;
             if (!spec.accent2_mark.empty() && sylls.size() >= 2) {
@@ -2502,7 +2532,8 @@ std::string finalize_word_ipa(const LanguageSpec& spec, const std::string& word,
 
 IPAPath G2P::engine_path(const std::string& word, std::size_t width) const {
     // The beam the word pipeline walks, before the word-final stages.
-    Tokenizer tokenizer(*spec_, expand_allophones_, apply_allophony_, chain_rescorers());
+    Tokenizer tokenizer(*spec_, expand_allophones_, apply_allophony_, chain_rescorers(),
+                        pipeline_->syllabifier.get());
     auto paths = needs_context_beam_ ? tokenizer.beam(word, width)
                                      : tokenizer.rescored_beam(word, width);
     paths = apply_rescorer_plugins(word, std::move(paths));
@@ -2520,7 +2551,7 @@ std::vector<rescorer::SegmentSlot> G2P::ipa_lattice(const std::string& word,
     // the engine uses to pick a pronunciation. This is the pre-lexical
     // lattice: built before stress-mark insertion, cross-word sandhi and any
     // whole-word override or grammatical-ending rewrite.
-    return Tokenizer(*spec_, expand_allophones_, apply_allophony_, chain_rescorers())
+    return Tokenizer(*spec_, expand_allophones_, apply_allophony_, chain_rescorers(), pipeline_->syllabifier.get())
             .positional_slots(word, beam_width, /*pre_rescore=*/false);
 }
 
@@ -2529,7 +2560,7 @@ std::vector<rescorer::SegmentSlot> G2P::lattice_pre_rescore(const std::string& w
     // The `positional.resolve_branches` output BEFORE rescorer.py
     // apply_rescorers — the view in which the allophony rescorer's slot
     // rewrites are visible.
-    return Tokenizer(*spec_, expand_allophones_, apply_allophony_, chain_rescorers())
+    return Tokenizer(*spec_, expand_allophones_, apply_allophony_, chain_rescorers(), pipeline_->syllabifier.get())
             .positional_slots(word, beam_width, /*pre_rescore=*/true);
 }
 
@@ -2557,11 +2588,13 @@ std::optional<std::string> G2P::override_for(const std::string& word) const {
             keys.push_back(std::move(straight));
         }
     }
-    const auto lex = load_lexicon(language_);
+    const auto& own = pipeline_->lexicon;
+    const auto process = own.has_value() ? nullptr : detail::process_lexicon(language_);
+    const auto& lex = own.has_value() ? *own : *process;
     for (const auto& k : keys) {
         if (auto hit = spec_->word_exceptions.find(k); hit != spec_->word_exceptions.end())
             return hit->second;
-        if (auto li = lex->find(unicode_nfc(k, false)); li != lex->end()) return li->second;
+        if (auto li = lex.find(unicode_nfc(k, false)); li != lex.end()) return li->second;
     }
     return std::nullopt;
 }
@@ -2652,14 +2685,14 @@ std::vector<std::string> G2P::word_candidates(const std::string& word, std::size
         // came back `haːðaː` instead of `ˈhaːðaː`).
         return {unicode_nfc(finalize_word_ipa(*spec_, word, *override, std::nullopt, nullptr,
                                               /*collapse_geminates_flag=*/false,
-                                              apply_stress_),
+                                              apply_stress_, nullptr, pipeline_->syllabifier.get()),
                             false)};
     // A hyphen-joined compound has one reading, the one transcribe_word returns.
     if (compound_elements(word).has_value()) {
         const std::string compound = transcribe_word(word);
         return compound.empty() ? std::vector<std::string>{} : std::vector<std::string>{compound};
     }
-    Tokenizer tokenizer(*spec_, expand_allophones_, apply_allophony_, chain_rescorers());
+    Tokenizer tokenizer(*spec_, expand_allophones_, apply_allophony_, chain_rescorers(), pipeline_->syllabifier.get());
     auto paths = needs_context_beam_ ? tokenizer.beam(word, width)
                                      : tokenizer.rescored_beam(word, width);
     paths = apply_rescorer_plugins(word, std::move(paths));
@@ -2671,7 +2704,8 @@ std::vector<std::string> G2P::word_candidates(const std::string& word, std::size
     for (const auto& candidate : raw) {
         const std::string final = unicode_nfc(
             finalize_word_ipa(*spec_, word, candidate.ipa, std::nullopt, &candidate,
-                              /*collapse_geminates_flag=*/true, apply_stress_, &tokenizer),
+                              /*collapse_geminates_flag=*/true, apply_stress_, &tokenizer,
+                              pipeline_->syllabifier.get()),
             false);
         if (!final.empty() && std::find(out.begin(), out.end(), final) == out.end())
             out.push_back(final);
@@ -2709,11 +2743,24 @@ WordTranscription G2P::transcribe_one(const std::string& word, std::size_t width
     std::optional<std::string> override;
     if (forced) {
         if (forced_ipa.empty()) throw std::invalid_argument("empty forced pronunciation");
-        const auto atoms = declared_phonemes(*spec_);
-        const std::vector<std::string> atom_list(atoms.begin(), atoms.end());
-        for (const auto& segment : segment_ipa(forced_ipa, atom_list))
-            if (!atoms.count(segment) && segment != "ˈ" && segment != "ˌ")
-                throw std::invalid_argument("forced pronunciation contains undeclared IPA: " + segment);
+        // g2p.py _check_forced: the inventory counts the engine's lexicon, and an
+        // engine with none reads the process-wide one.
+        const auto& own = pipeline_->lexicon;
+        const std::map<std::string, std::string>* lexicon = own.has_value() ? &*own : nullptr;
+        const auto declared = phoneme_inventory(*spec_, lexicon);
+        std::vector<std::string> outside;
+        for (const auto& token : tokenize(forced_ipa, *spec_, lexicon))
+            if (!declared.count(token)) outside.push_back(token);
+        if (!outside.empty())
+            throw markup::MarkupError(
+                "<phoneme ph=" + detail::py_repr(forced_ipa) + "> uses " + py_list(outside) + ", which the " +
+                spec_->code + " spec does not declare.\n\n"
+                "The inventory is every segment the spec's tables can emit, allophones included. A symbol "
+                "outside it has no embedding at synthesis time, so the word carrying it is mispronounced "
+                "permanently and silently. This is the usual shape of a loanword forced in its donor's "
+                "phonology.\n\n"
+                "Give the nativised reading, or — if the phonology really does have this sound — declare it "
+                "in the spec, where it can be read, cited and diffed.");
         override = forced_ipa;
     } else {
         override = override_for(word);
@@ -2726,7 +2773,8 @@ WordTranscription G2P::transcribe_one(const std::string& word, std::size_t width
     } else {
         // `if self._needs_context_beam: self._positional_beam(...)
         //  else: self._tokenizer.ipa_beam(..., rescorer=self._rescorers)`.
-        Tokenizer tokenizer(*spec_, expand_allophones_, apply_allophony_, chain_rescorers());
+        Tokenizer tokenizer(*spec_, expand_allophones_, apply_allophony_, chain_rescorers(),
+                        pipeline_->syllabifier.get());
         paths = needs_context_beam_ ? tokenizer.beam(word, width)
                                     : tokenizer.rescored_beam(word, width);
         // Declared `rescore` plugins: the reference composes them into the
@@ -2739,7 +2787,8 @@ WordTranscription G2P::transcribe_one(const std::string& word, std::size_t width
         ipa = finalize_word_ipa(*spec_, word, ipa,
                                 forced ? std::optional<std::string>(forced_ipa) : std::nullopt,
                                 paths.empty() ? nullptr : &paths.front(),
-                                /*collapse_geminates_flag=*/true, apply_stress_, &tokenizer);
+                                /*collapse_geminates_flag=*/true, apply_stress_, &tokenizer,
+                                pipeline_->syllabifier.get());
     }
     // A whole-word reading still runs the word-final stages (with the geminate
     // collapse skipped): a lexicon or `ph` answer is a READING, not a finished
@@ -2748,7 +2797,8 @@ WordTranscription G2P::transcribe_one(const std::string& word, std::size_t width
     if (override.has_value())
         ipa = finalize_word_ipa(*spec_, word, ipa,
                                 forced ? std::optional<std::string>(forced_ipa) : std::nullopt,
-                                /*path=*/nullptr, /*collapse_geminates_flag=*/false, apply_stress_);
+                                /*path=*/nullptr, /*collapse_geminates_flag=*/false, apply_stress_,
+                                nullptr, pipeline_->syllabifier.get());
 
     unmapped_chars(word, &wt.unmapped, &wt.coverage);
     wt.ipa = ipa;
