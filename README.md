@@ -124,7 +124,7 @@ together: a spec field without the code that reads it is ignored. For this reaso
 build never fetches specs. They change only through the sync script:
 
 ```
-python3 tools/sync_reference.py 7.117.20a1  # or: latest
+python3 tools/sync_reference.py 7.118.4a1  # or: latest
 ```
 
 The script downloads the wheel from PyPI and checks its sha256. It then replaces

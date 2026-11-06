@@ -168,12 +168,44 @@ PINNED["nl-NL-x-groninge"] += ["verkopen"]
 # Catalan ⟨gu⟩ reads [ɡu] before a consonant in the positional table only, so
 # its vowel is written and the stress count keeps its syllable.
 PINNED["ca"] = ["vingut", "vengut"]
+# A final syllable in stress.schwa_rimes leaves the word without a prefix, so
+# the stress stays on the root. bevel, gestel, gezel and gezwel have a stem with
+# a full vowel and are word exceptions; bestel is not one. nl-BE reads a doubled
+# consonant letter as one consonant, and nl-NL-x-limburg keeps coda /r/ as [r].
+PINNED["nl-NL"] += ["geven", "beter", "beren", "bezem", "veren", "verder", "beker", "beten",
+                    "gebed", "geleden", "vereren", "bevel", "gestel", "gezel", "gezwel",
+                    "bestel"]
+PINNED["nl-BE"] += ["geven", "beter", "bezem", "verder", "gebed", "bevel", "gestel", "gezel",
+                    "gezwel", "kennen", "zitten", "hebben", "zeggen", "bakken", "uittrekken",
+                    "induffelde"]
+PINNED["nl-NL-x-polder"] += ["geven", "beter", "gezel"]
+PINNED["nl-NL-x-groninge"] += ["geven", "beter", "gezel"]
+PINNED["nl-NL-x-limburg"] += ["bergen", "kerk", "tietjerk", "tjerkwerd", "geven", "beter",
+                              "gestel", "gezel", "gezwel"]
+# nl-BE-x-antwerp: the onset tap, a schwa after /r/ in a coda cluster, long
+# stressed [i] and [u], and the stress block of nl-BE.
+PINNED["nl-BE-x-antwerp"] = ["rok", "brood", "beraad", "sturen", "kerk", "berg", "bergen",
+                             "arm", "door", "Piet", "spoed", "geven", "beter", "gezel",
+                             "kennen", "harder"]
 # pt-BR inserts [i] after a stop that follows the stressed vowel, and the mark
 # stays on the stressed syllable (pacto [ˈpakitu]); ⟨ck⟩ takes no vowel; an
 # obstruent cluster that opens a stressed word takes [i] (pseudo). The
 # southern children and pt-UY switch the rules off.
 PINNED["pt-BR"] += ["pacto", "capto", "rapto", "compacto", "egípcio", "helicóptero",
                     "hockey", "pseudo", "psique", "pneu", "psicologia", "Djavan"]
+# A pretonic stop before a nasal takes [i] too (hipnose); the southern specs keep
+# the cluster after the stressed vowel (mogno). Two nasals keep it everywhere.
+PINNED["pt-BR"] += ["hipnose", "abnegado", "admitir", "etnia", "mogno", "magnata", "amnésia"]
+for code in ["pt-BR-x-sul", "pt-BR-x-floripa", "pt-BR-x-pr"]:
+    PINNED.setdefault(code, []).extend(["hipnose", "mogno", "magnata"])
+# pt-PT reads the article ⟨o os⟩ with [u]; a spec that keeps an unstressed ⟨o⟩
+# as [o] switches the rule off.
+PINNED["pt-PT"] += ["o", "os", "O", "Os", "osso", "ovo"]
+for code in ["pt-PT-x-lisbon", "pt-PT-x-porto", "pt-MO", "pt-CV", "ext-PT-x-barranco"]:
+    PINNED.setdefault(code, []).extend(["o", "os"])
+for code in ["pt-AO", "pt-GW", "pt-MZ", "pt-ST", "pt-TL", "pt-PT-x-algarve", "aoa", "cri",
+             "idb", "kea", "mcm", "mzs", "pap", "pov", "pre", "vkp"]:
+    PINNED.setdefault(code, []).extend(["o", "os"])
 for code in ["pt-BR-x-sul", "pt-BR-x-floripa", "pt-BR-x-pr", "pt-BR-x-sp", "pt-BR-x-rj",
              "pt-UY"]:
     PINNED.setdefault(code, []).extend(["capto", "pseudo"])

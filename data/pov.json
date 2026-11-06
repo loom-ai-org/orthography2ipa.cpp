@@ -413,6 +413,12 @@
       "phonemes": [],
       "surface": "o",
       "notes": "DISABLED for Guinea-Bissau Creole, a creole that inherits the pt-PT rule layer. No source for the stressed vowel of this ending in Guinea-Bissau Creole was read, so its output stays what it was; the pt-PT rule rests on Infopédia readings of standard European Portuguese."
+    },
+    {
+      "id": "PT_LEX_CLITIC_O",
+      "phonemes": [],
+      "surface": "u",
+      "notes": "DISABLED for Guinea-Bissau Creole (Kriol). PT_LEX_CLITIC_O gives the pt-PT article ⟨o os⟩ the [u] that an unstressed ⟨o⟩ reduces to in pt-PT. This spec keeps an unstressed ⟨o⟩ as [o] (bonito keeps its pretonic [o]), and ⟨o os⟩ need not be the pt-PT article in this language. So the rule does not apply, and o and os keep the reading of this spec."
     }
   ]
 }
