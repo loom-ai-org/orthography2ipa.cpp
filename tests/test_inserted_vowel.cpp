@@ -109,6 +109,9 @@ int main() {
         const G2P halves("pt-BR", {}, "", false, true, true, true, nullptr, nullptr,
                          Pipeline{std::nullopt, std::make_shared<const Halves>()});
         CHECK_IPA(halves.transcribe("adaptar"), "adapɨˈta");
+        // ⟨qu⟩ is no vowel grapheme, and its reading holds the vowel of the syllable
+        // before ⟨c⟩ in the division qu|cto.
+        CHECK_IPA(halves.transcribe("qucto"), "ˈkukətu");
         const G2P probed("pt-BR");
         CHECK_IPA(probed.transcribe("pneu"), "pɨˈnew");
         CHECK_IPA(probed.transcribe("advogado"), "ad͡ʒɨvoˈɡadu");

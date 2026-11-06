@@ -7,6 +7,9 @@
     "ei": [
       "e"
     ],
+    "uei": [
+      "we"
+    ],
     "ou": [
       "o"
     ],
@@ -170,6 +173,23 @@
       "word_final": true,
       "stress": "unstressed",
       "notes": "Deletion of final unstressed high vowels -u/-i/-e. Primary source: Brissos (2014), acoustic study of central-southern EP (‘final unstressed [u] disappears or is reduced to [ɨ]’, e.g. [sˈœʃt] ‘cesto’). Cintra (1971) mentions it only in note 58 (p. 27), summarising Lüdtke (1956/57) — ‘a queda das vogais finais -u, -i (ou -e), outro dos fenómenos mais típicos desta região, mas cujos limites não coincidem perfeitamente com os dos primeiros’ — so it is NOT Cintra’s own main-text diagnostic and is not cited as such. In pt-PT the final unstressed vowels surface as [u] (from graphic o/u) and [ɨ] (from e); this rule drops them word-finally (gosto→[ˈɡɔʃt], noite→[ˈnojt]). Conditioned word_final + unstressed so it never touches stressed or word-medial vowels; final /ɐ/ (from -a) is deliberately excluded, matching the sources, which list only final -u, -i, -e. This is a categorical realisation of a variable process; see notes on the divergence from the small-n ep_dialects gold."
+    },
+    {
+      "id": "PT_STRESSED_A_BEFORE_NASAL",
+      "phonemes": [
+        "a"
+      ],
+      "surface": "ɐ̃",
+      "stress": "stressed",
+      "grapheme": [
+        "a"
+      ],
+      "followed_by_phoneme": [
+        "m",
+        "n",
+        "ɲ"
+      ],
+      "notes": "In the Alentejo a stressed /a/ before an onset nasal is raised and nasal. Lao, Rodrigues & Brissos (2020, Revista da Associação Portuguesa de Linguística 7, p. 308) names the regions that prefer [ɐ] and adds: \"e de resto, o que predomina é [ɐ̃]\". That rest holds the Alentejo and the Algarve, which page 301 marks among the areas of highest nasalisation."
     }
   ],
   "word_exceptions": {

@@ -539,8 +539,8 @@ int main() {
     assert(close_to(segment_distance("p", "b"), 0.042553191489361715));
     assert(feature_vector("p")[7] == .5 && feature_vector("p")[11] == 1);
     const auto pt_es = phonological_distance(portuguese, spanish);
-    assert(close_to(pt_es.combined, 0.2169145693695121));
-    assert(close_to(pt_es.inventory.feature_mean, 0.05383197459021247));
+    assert(close_to(pt_es.combined, 0.21661900286704905));
+    assert(close_to(pt_es.inventory.feature_mean, 0.053339363752774045));
     assert(close_to(pt_es.grapheme.mean_ipa_distance, 0.2292352969556617));
     // distance.py orthographic, positional and ancestry values from the reference.
     // aa/sfw name a script outside SCRIPT_REGISTRY (0.5 term); ab/nmq name two in it.
