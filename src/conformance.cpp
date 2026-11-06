@@ -109,6 +109,9 @@ public:
                                  const std::vector<IPAPath>& paths) const override {
         return plugin_.rescore(word, lang, paths);
     }
+    std::vector<const rescorer::LatticeRescorer*> lattice_rescorers(const std::string& lang) const override {
+        return plugin_.lattice_rescorers(lang);
+    }
     int priority() const override { return plugin_.priority(); }
 
 private:
@@ -270,37 +273,21 @@ bool is_space(const std::string& text) {
 // word with an engine that runs the declared plugins (first pass reuses one
 // engine, second pass builds a fresh one), and return word -> IPA. Word-level
 // plugins are the C++ whole-word `RescorerPlugin::rescore` seam; the reference
-// composes plugin.rescorers() into the slot chain instead, which
-// `lattice_pass` below covers.
+// composes plugin.rescorers() into the slot chain instead, which a bare
+// *rescorer* reaches through the engine's `rescorer=` argument.
 Dict<std::string> transcribe_pass(const std::string& lang,
                                   const std::vector<std::string>& words,
                                   const std::map<std::string, std::vector<std::string>>& plugins,
-                                  bool fresh_engine) {
+                                  bool fresh_engine,
+                                  const rescorer::RescorerArg& rescorer = nullptr) {
     Dict<std::string> results;
     std::unique_ptr<G2P> engine;
     for (const auto& word : words) {
         if (fresh_engine || engine == nullptr) {
-            engine = std::make_unique<G2P>(plugins.count(lang) ? lang : lang, plugins);
+            engine = std::make_unique<G2P>(lang, plugins, "", false, true, true, true,
+                                           nullptr, rescorer);
         }
         results.insert(word, engine->transcribe_word(word));
-    }
-    return results;
-}
-
-/// The lattice seam's counterpart: the tokenizer beam the slot chain runs on,
-/// width 1 = the engine's default `search="greedy"`.
-Dict<std::string> lattice_pass(const LanguageSpec& spec, const std::vector<std::string>& words,
-                              const std::vector<const rescorer::LatticeRescorer*>& chain,
-                              bool fresh_engine) {
-    Dict<std::string> results;
-    std::unique_ptr<PhonetokTokenizer> tokenizer;
-    if (!fresh_engine) tokenizer = std::make_unique<PhonetokTokenizer>(spec);
-    for (const auto& word : words) {
-        std::unique_ptr<PhonetokTokenizer> per_word;
-        if (fresh_engine) per_word = std::make_unique<PhonetokTokenizer>(spec);
-        const auto paths = (per_word ? *per_word : *tokenizer)
-            .ipa_beam(word, 1, false, " ", false, &chain);
-        results.insert(word, paths.empty() ? std::string() : paths.front().ipa);
     }
     return results;
 }
@@ -513,17 +500,10 @@ void assert_rescorer_conforms(const rescorer::LatticeRescorer& plugin,
     const LanguageSpec& spec = get(lang);
     const auto declared = phoneme_inventory(spec);
 
-    // rescorer.py `self._rescorers`: the caller's rescorer first, then the
-    // spec's own allophone rules, which keep the last word.
-    const auto allophone = rescorer::compile_allophone_rescorer(
-        spec.allophone_rules, spec.doubled_letters_geminate);
-    std::vector<const rescorer::LatticeRescorer*> chain = {&plugin};
-    if (allophone != nullptr)
-        for (int pass = 0; pass < std::max(1, spec.allophone_passes); ++pass)
-            chain.push_back(allophone.get());
-
-    const auto first = lattice_pass(spec, probe, chain, /*fresh_engine=*/false);
-    const auto second = lattice_pass(spec, probe, chain, /*fresh_engine=*/true);
+    // The engine puts the caller's rescorer in front of the spec's allophone
+    // rules, the place a declared plugin's rescorers take.
+    const auto first = transcribe_pass(lang, probe, {}, /*fresh_engine=*/false, &plugin);
+    const auto second = transcribe_pass(lang, probe, {}, /*fresh_engine=*/true, &plugin);
 
     check_rescorer_rules(first, second, probe, spec, declared, lang);
 }

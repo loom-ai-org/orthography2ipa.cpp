@@ -21,8 +21,13 @@ reference package.
                and the same C++ classes, and the verdict, the rule and the
                message are compared.
 
+  rescorer-runtime — a declared rescore plugin of each kind runs through the
+               public surfaces of both engines, and the results are compared.
+               The reference checks a rescorer only in the conformance kit, so
+               neither engine may raise here.
+
 Usage: features_conformance_parity.py <path-to-check-binary> [--sweep N]
-                                      [--only features|conformance]
+                                      [--only features|conformance|rescorer-runtime]
 """
 import json
 import os
@@ -43,7 +48,7 @@ sys.path.insert(0, reference)
 import logging  # noqa: E402
 logging.disable(logging.CRITICAL)
 
-from orthography2ipa import available_codes, get  # noqa: E402
+from orthography2ipa import available_codes, get, registry  # noqa: E402
 from orthography2ipa.features import build_word_features  # noqa: E402
 from orthography2ipa.g2p import G2P  # noqa: E402
 from orthography2ipa.phonetok import (Candidate, SegmentSlot, Token, TokenKind,  # noqa: E402
@@ -248,6 +253,7 @@ def run_features(binary):
             print(f"  ... {index} words", flush=True)
     cases += synthetic_cases()
 
+    SCRATCH.mkdir(exist_ok=True)
     fixture = SCRATCH / "_features_fixture.json"
     fixture.write_text(json.dumps({"cases": cases}, ensure_ascii=False), encoding="utf-8")
     proc = subprocess.run([str(binary), "features", str(fixture)],
@@ -402,26 +408,6 @@ class FirstSlotMark(LatticeRescorer):
         return slot.candidates
 
 
-class WordCounting(LatticeRescorer):
-    """Answers differently for the same word depending on how many words it has
-    already seen: the same input, read at a different point in a batch, gives a
-    different transcription."""
-    def __init__(self):
-        self.words_seen = 0
-        self.at_word_start = False
-    def rescore(self, slot, context):
-        if context.index == 0:
-            if not self.at_word_start:
-                self.words_seen += 1
-            self.at_word_start = True
-        else:
-            self.at_word_start = False
-        if (slot.candidates and slot.candidates[0].ipa == "a"
-                and self.words_seen % 2 == 0):
-            return (Candidate(ipa="ɐ", cost=0.0),)
-        return slot.candidates
-
-
 class PerEngine(LatticeRescorer):
     """Answers differently for the same word depending on WHICH engine built
     it — the shape of the state a plugin naturally carries, because
@@ -455,6 +441,58 @@ class LatticePlugin(RescorerPlugin):
     @property
     def language_codes(self):
         return list(self._codes)
+
+
+class RewritesCandidates(LatticeRescorer):
+    """Rewrites one symbol in every candidate of every slot, keeping the costs."""
+    def __init__(self, source, target):
+        self.source = source
+        self.target = target
+    def rescore(self, slot, context):
+        return tuple(
+            Candidate(ipa=self.target if c.ipa == self.source else c.ipa, cost=c.cost)
+            for c in slot.candidates)
+
+
+class KeepsSlots(LatticeRescorer):
+    def rescore(self, slot, context):
+        return slot.candidates
+
+
+class StressedToQ(LatticeRescorer):
+    def rescore(self, slot, context):
+        return (Candidate(ipa="Q", cost=0.0),) if context.is_stressed else slot.candidates
+
+
+class RescorersByLang(RescorerPlugin):
+    """Contributes Q for pt-PT and nothing for any other code."""
+    def rescorers(self, lang):
+        return [Invents()] if lang == "pt-PT" else []
+    @property
+    def language_codes(self):
+        return ["pt-PT"]
+
+
+class EmptiesEverySlot(LatticeRescorer):
+    def rescore(self, slot, context):
+        return ()
+
+
+class EmptiesFirstSlot(LatticeRescorer):
+    def rescore(self, slot, context):
+        return () if context.index == 0 else slot.candidates
+
+
+class FlipsFirstSlot(LatticeRescorer):
+    """The first slot reads Q on every odd call: same input, different answers."""
+    def __init__(self):
+        self.calls = 0
+    def rescore(self, slot, context):
+        if context.index == 0:
+            self.calls += 1
+            if self.calls % 2:
+                return (Candidate(ipa="Q", cost=0.0),)
+        return slot.candidates
 
 
 FR = ["terre", "femme", "verre"]
@@ -494,6 +532,14 @@ def reference_scenarios():
              lambda: FirstSlotMark(), ("fr-FR",)), FR, "fr-FR")),
         ("lattice:answers depend on the run",
          lambda: assert_rescorer_conforms(LatticePlugin(PerEngine), THREE, "pt-PT")),
+        ("lattice:Q on the stressed syllable",
+         lambda: assert_rescorer_conforms(LatticePlugin(StressedToQ, ("ar",)), ["صفر"], "ar")),
+        ("lattice:keeps every slot",
+         lambda: assert_rescorer_conforms(LatticePlugin(KeepsSlots), ["ontem"], "pt-PT")),
+        ("plugin:rescorers depend on the code",
+         lambda: assert_rescorer_conforms(RescorersByLang(), ["casa"], "pt-PT")),
+        ("lattice:empties every slot",
+         lambda: assert_rescorer_conforms(LatticePlugin(EmptiesEverySlot), ["casa"], "pt-PT")),
         ("rescorer:claims nothing, no lang",
          lambda: assert_rescorer_conforms(NoClaimRescorer())),
         ("rescorer:default words, no lang given",
@@ -510,6 +556,20 @@ def reference_scenarios():
             out.append({"scenario": name, "verdict": "engine-refused",
                         "message": f"{type(error).__name__}: {error}"})
     return out
+
+
+# The whole-word seam has no reference row, and a bare rescorer object has no
+# per-engine state to compare. The kit is the only gate on both.
+CPP_ONLY_SCENARIOS = {
+    "path:a to æ (undeclared)": ("refused", "inventory"),
+    "path:a to ɐ (declared)": ("conforms", ""),
+    "path:ɛ to ˌ in a spec with no stress": ("refused", "inventory"),
+    "path:answers depend on the run": ("refused", "determinism"),
+    "path:empties every path": ("conforms", ""),
+    "path:flips on every call": ("refused", "determinism"),
+    "path:a to Q in the plugin's lattice rescorer": ("refused", "inventory"),
+    "lattice:changes after the first word": ("refused", "determinism"),
+}
 
 
 def rule_of(message):
@@ -556,15 +616,128 @@ def run_conformance(binary):
             print(f"    cpp: {actual['message'][:220]}")
             print(f"    py : {expected['message'][:220]}")
     cpp_only = sorted(set(got) - set(want))
+    wrong = sorted(set(cpp_only) ^ set(CPP_ONLY_SCENARIOS))
     for name in cpp_only:
+        verdict = (got[name]["verdict"], rule_of(got[name]["message"]))
         print(f"  cpp-only scenario (no reference seam for it): {name} "
-              f"-> {got[name]['verdict']}: {rule_of(got[name]['message'])}")
+              f"-> {verdict[0]}: {verdict[1]}")
+        if name in CPP_ONLY_SCENARIOS and verdict != CPP_ONLY_SCENARIOS[name]:
+            print(f"  DIFF {name}: want {CPP_ONLY_SCENARIOS[name]}")
+            wrong.append(name)
     print(f"  scenarios compared: {compared}; verdict agreed {agreed}/{compared}; "
           f"rule agreed {rules}/{compared}; message byte-identical "
           f"{messages}/{compared}")
     print(f"  C++-only scenarios (the whole-word RescorerPlugin seam): "
-          f"{len(cpp_only)}")
-    return agreed, len(want)
+          f"{len(cpp_only)}, wrong {len(wrong)}")
+    return agreed - len(wrong), len(want)
+
+
+# ─── rescorer-runtime ─────────────────────────────────────────────────────
+
+RUNTIME_WORDS = [("pt-PT", "casa"), ("ro-RO", "casa"), ("ar", "صفر")]
+RUNTIME_CASES = {
+    "keeps": KeepsSlots,
+    "a to Q": lambda: RewritesCandidates("a", "Q"),
+    "a to ɐ": lambda: RewritesCandidates("a", "ɐ"),
+    "empties every slot": EmptiesEverySlot,
+    "empties the first slot": EmptiesFirstSlot,
+    "flips on every call": FlipsFirstSlot,
+}
+# A whole-word plugin has no reference seam. Each one is held to the reference
+# case that has the same effect on the word.
+PATH_CASES = {"path:keeps": "keeps", "path:a to Q": "a to Q",
+              "path:empties": "empties every slot"}
+
+
+def comparable(case, surface, result):
+    """G2P.ipa_lattice memoises per engine and the C++ engine does not, so a
+    lattice rescorer gets one more pass on a repeated word. Any rescorer that
+    keeps state can tell, and the kit does not refuse every such rescorer: this
+    one reads differently from the third word, and its verdict depends on the
+    probe words."""
+    if case == "flips on every call" and surface == "three_calls" and "value" in result:
+        return {"value": result["value"][:2]}
+    return result
+
+
+def reference_surfaces(lang, word, factory):
+    name = "__rescorer_runtime__"
+
+    def engine():
+        registry._declared["rescore"] = {name: LatticePlugin(factory, (lang,))}
+        return G2P(lang, plugins={"rescore": name})
+
+    def three_calls():
+        g2p = engine()
+        return [g2p.transcribe_word(word) for _ in range(3)]
+
+    calls = {
+        "transcribe_word": lambda: engine().transcribe_word(word),
+        "transcribe": lambda: engine().transcribe(word),
+        "sentence": lambda: engine().transcribe(f"{word} {word}"),
+        "transcribe_detailed": lambda: engine().transcribe_detailed(word).ipa,
+        "word_candidates": lambda: engine().word_candidates(word),
+        "three_calls": three_calls,
+    }
+    saved = registry._declared.get("rescore")
+    try:
+        out = {}
+        for surface, call in calls.items():
+            try:
+                out[surface] = {"value": call()}
+            except Exception as error:        # noqa: BLE001
+                out[surface] = {"raised": f"{type(error).__name__}: {error}"}
+        return out
+    finally:
+        if saved is None:
+            registry._declared.pop("rescore", None)
+        else:
+            registry._declared["rescore"] = saved
+
+
+def run_rescorer_runtime(binary):
+    print("\u2500\u2500 rescorer run-time parity \u2500\u2500")
+    branches = {G2P(lang)._needs_context_beam for lang, _ in RUNTIME_WORDS}
+    if branches != {True, False}:
+        print(f"  the words cover only these beam branches: {branches}")
+        sys.exit(1)
+    want = {}
+    for lang, word in RUNTIME_WORDS:
+        for case, factory in RUNTIME_CASES.items():
+            want[case, lang, word] = reference_surfaces(lang, word, factory)
+        for case, source in PATH_CASES.items():
+            want[case, lang, word] = want[source, lang, word]
+        # An odd call rewrites and an even call does not, so the three calls
+        # alternate between two reference readings. One extra call per word
+        # would change this sequence.
+        rewritten = want["a to ɐ", lang, word]
+        plain = want["keeps", lang, word]
+        first = rewritten["transcribe_word"]["value"]
+        second = plain["transcribe_word"]["value"]
+        want["path:flips", lang, word] = {
+            **{k: v for k, v in rewritten.items() if k != "sentence"},
+            "three_calls": {"value": [first, second, first]},
+        }
+    proc = subprocess.run([str(binary), "rescorer-runtime"], capture_output=True, text=True)
+    if proc.returncode != 0:
+        print("check binary failed:", proc.stdout[-2000:], proc.stderr[-2000:])
+        sys.exit(1)
+    got = {}
+    for line in proc.stdout.splitlines():
+        row = json.loads(line)
+        got[row["case"], row["lang"], row["word"]] = row["surfaces"]
+    checked = bad = 0
+    for key, expected in want.items():
+        for surface, value in expected.items():
+            checked += 1
+            actual = got.get(key, {}).get(surface, {})
+            if comparable(key[0], surface, actual) != comparable(key[0], surface, value) \
+                    or "raised" in value:
+                bad += 1
+                print(f"  DIFF {key} {surface}: cpp={actual} py={value}")
+    print(f"  rows: {len(want)} wanted, {len(got)} from the binary; "
+          f"surfaces agreed {checked - bad}/{checked}")
+    return bad == 0 and len(got) == len(want)
 
 
 def main():
@@ -577,13 +750,15 @@ def main():
         only = sys.argv[sys.argv.index("--only") + 1]
     if "--sweep" in sys.argv:
         os.environ["O2I_SWEEP_LIMIT"] = sys.argv[sys.argv.index("--sweep") + 1]
-    if only != "conformance":
+    if only in (None, "features"):
         run_features(binary)
-    if only != "features":
+    if only in (None, "conformance"):
         # Every reference scenario must reach the same verdict on the C++ side.
         agreed, expected = run_conformance(binary)
         if agreed != expected:
             sys.exit(1)
+    if only in (None, "rescorer-runtime") and not run_rescorer_runtime(binary):
+        sys.exit(1)
 
 
 if __name__ == "__main__":

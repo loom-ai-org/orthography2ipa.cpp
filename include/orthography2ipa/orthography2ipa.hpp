@@ -475,8 +475,8 @@ private:
     /// The declared (or caller-overridden) `rescore` plugins, in priority
     /// order, each applied to the whole-word path list — the C++ stand-in for
     /// the reference's per-slot rescorer chain (whose contract is a separate
-    /// public-API gap). Missing, foreign and non-deterministic plugins all
-    /// raise, and inventory conformance is checked on the output.
+    /// public-API gap). Each plugin runs once per word and nothing is checked
+    /// at run time; conformance::assert_rescorer_conforms holds the contract.
     std::vector<IPAPath> apply_rescorer_plugins(const std::string& word,
                                                  std::vector<IPAPath> paths) const;
 };

@@ -84,12 +84,10 @@ void assert_syllabifier_conforms(const SyllabifierPlugin& plugin,
 /// word, and every emitted symbol is read back against the spec's declared
 /// inventory.
 ///
-/// Note that the C++ engine enforces the same contract at this seam and raises
-/// `std::runtime_error` itself ("rescore plugin does not own language …",
-/// "… returned non-deterministic output …", "… emitted undeclared IPA …"), so a
-/// plugin that breaks one of those three rules can be stopped by the engine
-/// before the kit gets to describe it. Both reject; the engine's message names
-/// the offending symbol or language instead of explaining the contract.
+/// As in the reference, the engine runs a declared plugin without validating
+/// what it returns, so this kit is the only check. It compares two runs of the
+/// probe words. A rescorer that gives different answers but lands on the same
+/// answers in both runs conforms, here and in the reference.
 void assert_rescorer_conforms(const RescorerPlugin& plugin,
                               const std::vector<std::string>& words = {},
                               const std::string& lang = "");
@@ -101,9 +99,10 @@ void assert_rescorer_conforms(const RescorerPlugin& plugin,
 /// engine composes into its slot chain (user rescorers first, then the spec's
 /// own allophone rules, which keep the last word). A bare LatticeRescorer claims
 /// no language codes, so *lang* is the caller's — the code this rescorer is being
-/// checked under. The probe words run through the lattice with the same chain
-/// and the same two passes as the whole-word form; determinism and the declared
-/// inventory are the two rules the reference checks, with the same messages.
+/// checked under. It reaches the engine as `G2P(lang, rescorer=plugin)`, and the
+/// probe words run through `transcribe_word` in the same two passes as the
+/// whole-word form; determinism and the declared inventory are the two rules the
+/// reference checks, with the same messages.
 void assert_rescorer_conforms(const rescorer::LatticeRescorer& plugin,
                               const std::string& lang,
                               const std::vector<std::string>& words = {});

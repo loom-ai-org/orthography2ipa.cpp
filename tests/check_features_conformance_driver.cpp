@@ -10,6 +10,10 @@
 //   check_features_conformance conformance
 //       runs the conformance kit over the same good / bad plugins the
 //       reference's own tests use and prints verdict + message per scenario
+//   check_features_conformance rescorer-runtime
+//       transcribes through a declared rescore plugin of each kind (one that
+//       changes nothing, invents a symbol, leaves no candidates, or answers
+//       differently per call) and prints what each public surface returned
 #include "orthography2ipa/conformance.hpp"
 #include "orthography2ipa/features.hpp"
 #include "orthography2ipa/orthography2ipa.hpp"
@@ -258,39 +262,50 @@ public:
 };
 
 /// A secondary stress mark where the spec declares no stress at all: outside
-/// the inventory by the same argument as `Q`, and the C++ engine's own gate
-/// skips exactly this character, so the kit is the only thing that can see it.
+/// the inventory by the same argument as `Q`.
 class InsertsSecondary : public orthography2ipa::rescorer::LatticeRescorer {
 public:
     std::vector<Candidate> rescore(const SegmentSlot& slot, const RescoreContext& context) const override {
         // The word's FIRST slot becomes a secondary stress mark, whatever the
         // tables said: a symbol the fr-FR spec does not declare (it declares no
-        // stress at all), and one the C++ engine's own gate skips by name — so
-        // the kit is the only thing that can see it.
+        // stress at all).
         if (context.index == 0 && !slot.candidates.empty())
             return {Candidate{orthography2ipa::uni::to_utf8(U"ˌ"), 0.0}};
         return slot.candidates;
     }
 };
 
-/// Answers differently for the same word depending on how many words it has
-/// already seen — a transcription that varies run to run.
-class WordCounting : public orthography2ipa::rescorer::LatticeRescorer {
+/// PerEngine: answers differently for the same word depending on WHICH engine
+/// built it, the shape of the state a plugin naturally carries.
+class PerEngine : public orthography2ipa::rescorer::LatticeRescorer {
 public:
-    mutable std::size_t words_seen = 0;
-    mutable bool at_word_start = false;
-
-    std::vector<Candidate> rescore(const SegmentSlot& slot, const RescoreContext& context) const override {
-        if (context.index == 0) {
-            if (!at_word_start) ++words_seen;
-            at_word_start = true;
-        } else {
-            at_word_start = false;
-        }
-        if (!slot.candidates.empty() && slot.candidates[0].ipa == "a" && words_seen % 2 == 0)
+    explicit PerEngine(bool even) : even_(even) {}
+    std::vector<Candidate> rescore(const SegmentSlot& slot, const RescoreContext&) const override {
+        if (!slot.candidates.empty() && slot.candidates[0].ipa == "a" && even_)
             return {Candidate{"ɐ", 0.0}};
         return slot.candidates;
     }
+private:
+    bool even_;
+};
+
+/// An engine calls lattice_rescorers once at construction, so each engine gets
+/// its own PerEngine, as `rescorers(lang)` builds one in the reference.
+class PerEnginePlugin : public orthography2ipa::RescorerPlugin {
+public:
+    std::vector<std::string> language_codes() const override { return {"pt-PT"}; }
+    std::vector<orthography2ipa::IPAPath> rescore(
+        const std::string&, const std::string&,
+        const std::vector<orthography2ipa::IPAPath>& paths) const override {
+        return paths;
+    }
+    std::vector<const orthography2ipa::rescorer::LatticeRescorer*> lattice_rescorers(
+        const std::string&) const override {
+        built_.push_back(std::make_unique<PerEngine>((built_.size() + 1) % 2 == 0));
+        return {built_.back().get()};
+    }
+private:
+    mutable std::vector<std::unique_ptr<PerEngine>> built_;
 };
 
 /// The whole-word RescorerPlugin counterparts (the C++ engine's own seam).
@@ -330,8 +345,7 @@ public:
 };
 
 /// A path plugin that answers differently for the same word depending on how
-/// many words it has already seen (deterministic within one word, so the
-/// engine's own two-call check passes it, and unstable across runs).
+/// many words it has already seen.
 class WordCountingPaths : public orthography2ipa::RescorerPlugin {
 public:
     explicit WordCountingPaths(std::vector<std::string> codes) : codes_(std::move(codes)) {}
@@ -356,6 +370,148 @@ private:
     std::vector<std::string> codes_;
     mutable std::size_t calls = 0;
     mutable std::string last_word;
+};
+
+/// Rewrites one symbol in every candidate of every slot, keeping the costs.
+class RewritesCandidates : public orthography2ipa::rescorer::LatticeRescorer {
+public:
+    RewritesCandidates(std::string from, std::string to)
+        : from_(std::move(from)), to_(std::move(to)) {}
+    std::vector<Candidate> rescore(const SegmentSlot& slot, const RescoreContext&) const override {
+        auto out = slot.candidates;
+        for (auto& candidate : out) if (candidate.ipa == from_) candidate.ipa = to_;
+        return out;
+    }
+private:
+    std::string from_;
+    std::string to_;
+};
+
+class KeepsSlots : public orthography2ipa::rescorer::LatticeRescorer {
+public:
+    std::vector<Candidate> rescore(const SegmentSlot& slot, const RescoreContext&) const override {
+        return slot.candidates;
+    }
+};
+
+class EmptiesEverySlot : public orthography2ipa::rescorer::LatticeRescorer {
+public:
+    std::vector<Candidate> rescore(const SegmentSlot&, const RescoreContext&) const override {
+        return {};
+    }
+};
+
+class EmptiesFirstSlot : public orthography2ipa::rescorer::LatticeRescorer {
+public:
+    std::vector<Candidate> rescore(const SegmentSlot& slot, const RescoreContext& context) const override {
+        if (context.index == 0) return {};
+        return slot.candidates;
+    }
+};
+
+/// The first slot reads Q on every odd call: same input, different answers.
+class FlipsFirstSlot : public orthography2ipa::rescorer::LatticeRescorer {
+public:
+    std::vector<Candidate> rescore(const SegmentSlot& slot, const RescoreContext& context) const override {
+        if (context.index == 0 && ++calls_ % 2 == 1) return {Candidate{"Q", 0.0}};
+        return slot.candidates;
+    }
+private:
+    mutable std::size_t calls_ = 0;
+};
+
+/// arbtok's plugin shape: all its phonology sits in the lattice rescorer it
+/// contributes, and the whole-word pass returns the paths it was given.
+class ContributesLattice : public orthography2ipa::RescorerPlugin {
+public:
+    explicit ContributesLattice(std::shared_ptr<orthography2ipa::rescorer::LatticeRescorer> rescorer)
+        : rescorer_(std::move(rescorer)) {}
+    std::vector<std::string> language_codes() const override { return {}; }
+    std::vector<orthography2ipa::IPAPath> rescore(
+        const std::string&, const std::string&,
+        const std::vector<orthography2ipa::IPAPath>& paths) const override {
+        return paths;
+    }
+    std::vector<const orthography2ipa::rescorer::LatticeRescorer*> lattice_rescorers(
+        const std::string&) const override {
+        return {rescorer_.get()};
+    }
+private:
+    std::shared_ptr<orthography2ipa::rescorer::LatticeRescorer> rescorer_;
+};
+
+/// Emits Q on the stressed syllable. The context exists only on the engine's
+/// beam, so a check that reads a bare tokenizer beam never sees the symbol.
+class StressedToQ : public orthography2ipa::rescorer::LatticeRescorer {
+public:
+    std::vector<Candidate> rescore(const SegmentSlot& slot, const RescoreContext& context) const override {
+        const auto stressed = context.is_stressed();
+        if (stressed && *stressed) return {Candidate{"Q", 0.0}};
+        return slot.candidates;
+    }
+};
+
+/// One rescorer object answers one way on the first word and another way after
+/// it, so the two kit runs read different answers.
+class ChangesAfterFirstWord : public orthography2ipa::rescorer::LatticeRescorer {
+public:
+    std::vector<Candidate> rescore(const SegmentSlot& slot, const RescoreContext& context) const override {
+        if (context.index == 0) ++word_starts_;
+        if (word_starts_ > 2 && !slot.candidates.empty() && slot.candidates[0].ipa == "a")
+            return {Candidate{"ɐ", 0.0}};
+        return slot.candidates;
+    }
+private:
+    mutable std::size_t word_starts_ = 0;
+};
+
+/// Contributes Q for pt-PT and nothing for any other code, so the verdict turns
+/// on the code the engine hands to lattice_rescorers.
+class RescorersByLang : public orthography2ipa::RescorerPlugin {
+public:
+    std::vector<std::string> language_codes() const override { return {"pt-PT"}; }
+    std::vector<orthography2ipa::IPAPath> rescore(
+        const std::string&, const std::string&,
+        const std::vector<orthography2ipa::IPAPath>& paths) const override {
+        return paths;
+    }
+    std::vector<const orthography2ipa::rescorer::LatticeRescorer*> lattice_rescorers(
+        const std::string& lang) const override {
+        if (lang == "pt-PT") return {&invents_};
+        return {};
+    }
+private:
+    Invents invents_;
+};
+
+class EmptiesPaths : public orthography2ipa::RescorerPlugin {
+public:
+    explicit EmptiesPaths(std::vector<std::string> codes) : codes_(std::move(codes)) {}
+    std::vector<std::string> language_codes() const override { return codes_; }
+    std::vector<orthography2ipa::IPAPath> rescore(
+        const std::string&, const std::string&,
+        const std::vector<orthography2ipa::IPAPath>&) const override {
+        return {};
+    }
+private:
+    std::vector<std::string> codes_;
+};
+
+/// Rewrites a to ɐ on every odd call and returns the paths on every even call.
+class FlipsPaths : public orthography2ipa::RescorerPlugin {
+public:
+    explicit FlipsPaths(std::vector<std::string> codes)
+        : codes_(codes), rewriter_(std::move(codes), "a", "ɐ") {}
+    std::vector<std::string> language_codes() const override { return codes_; }
+    std::vector<orthography2ipa::IPAPath> rescore(
+        const std::string& word, const std::string& lang,
+        const std::vector<orthography2ipa::IPAPath>& paths) const override {
+        return ++calls_ % 2 == 1 ? rewriter_.rescore(word, lang, paths) : paths;
+    }
+private:
+    std::vector<std::string> codes_;
+    PathRewriter rewriter_;
+    mutable std::size_t calls_ = 0;
 };
 
 struct Scenario {
@@ -411,7 +567,11 @@ int conformance_mode() {
     const BacksA backs_a;
     const Invents invents;
     const InsertsSecondary inserts_secondary;
-    const std::shared_ptr<WordCounting> word_counting = std::make_shared<WordCounting>();
+    const PerEnginePlugin per_engine;
+    const KeepsSlots keeps_slots;
+    const StressedToQ stressed_to_q;
+    const ChangesAfterFirstWord changes_after_first_word;
+    const RescorersByLang rescorers_by_lang;
     const std::shared_ptr<PathRewriter> path_a_to_ae =
         std::make_shared<PathRewriter>(std::vector<std::string>{"pt-PT"}, "a", "æ");
     const std::shared_ptr<PathRewriter> path_a_to_ash =
@@ -426,6 +586,10 @@ int conformance_mode() {
     const std::shared_ptr<WordCountingPaths> word_counting_paths =
         std::make_shared<WordCountingPaths>(std::vector<std::string>{"pt-PT"});
     const NoClaimPath no_claim_path;
+    const EmptiesEverySlot empties_every_slot;
+    const EmptiesPaths empties_paths{std::vector<std::string>{"pt-PT"}};
+    const FlipsPaths flips_paths{std::vector<std::string>{"pt-PT"}};
+    const ContributesLattice invents_in_lattice{std::make_shared<Invents>()};
 
     run({"syllabifier:claims nothing, lang given", "syllabifier", "pt-PT", one}, [&]{
         orthography2ipa::conformance::assert_syllabifier_conforms(no_claim, one, "pt-PT");
@@ -469,7 +633,26 @@ int conformance_mode() {
             std::vector<std::string>{"terre", "femme", "verre"});
     });
     run({"lattice:answers depend on the run", "lattice", "pt-PT", three}, [&]{
-        orthography2ipa::conformance::assert_rescorer_conforms(*word_counting, "pt-PT", three);
+        orthography2ipa::conformance::assert_rescorer_conforms(per_engine, three, "pt-PT");
+    });
+    run({"lattice:Q on the stressed syllable", "lattice", "ar",
+         std::vector<std::string>{"صفر"}}, [&]{
+        orthography2ipa::conformance::assert_rescorer_conforms(stressed_to_q, "ar",
+            std::vector<std::string>{"صفر"});
+    });
+    run({"lattice:keeps every slot", "lattice", "pt-PT",
+         std::vector<std::string>{"ontem"}}, [&]{
+        orthography2ipa::conformance::assert_rescorer_conforms(keeps_slots, "pt-PT",
+            std::vector<std::string>{"ontem"});
+    });
+    run({"lattice:changes after the first word", "lattice", "pt-PT", casa}, [&]{
+        orthography2ipa::conformance::assert_rescorer_conforms(changes_after_first_word, "pt-PT", casa);
+    });
+    run({"plugin:rescorers depend on the code", "path", "pt-PT", casa}, [&]{
+        orthography2ipa::conformance::assert_rescorer_conforms(rescorers_by_lang, casa, "pt-PT");
+    });
+    run({"lattice:empties every slot", "lattice", "pt-PT", casa}, [&]{
+        orthography2ipa::conformance::assert_rescorer_conforms(empties_every_slot, "pt-PT", casa);
     });
     run({"path:a to æ (undeclared)", "path", "pt-PT", casa}, [&]{
         orthography2ipa::conformance::assert_rescorer_conforms(*path_a_to_ae, casa, "pt-PT");
@@ -485,12 +668,88 @@ int conformance_mode() {
     run({"path:answers depend on the run", "path", "pt-PT", three}, [&]{
         orthography2ipa::conformance::assert_rescorer_conforms(*word_counting_paths, three, "pt-PT");
     });
+    run({"path:empties every path", "path", "pt-PT", casa}, [&]{
+        orthography2ipa::conformance::assert_rescorer_conforms(empties_paths, casa, "pt-PT");
+    });
+    run({"path:flips on every call", "path", "pt-PT", casa}, [&]{
+        orthography2ipa::conformance::assert_rescorer_conforms(flips_paths, casa, "pt-PT");
+    });
+    run({"path:a to Q in the plugin's lattice rescorer", "path", "pt-PT", casa}, [&]{
+        orthography2ipa::conformance::assert_rescorer_conforms(invents_in_lattice, casa, "pt-PT");
+    });
     run({"rescorer:claims nothing, no lang", "path", "", {}}, [&]{
         orthography2ipa::conformance::assert_rescorer_conforms(no_claim_path);
     });
     run({"rescorer:default words, no lang given", "path", "", probe}, [&]{
         orthography2ipa::conformance::assert_rescorer_conforms(*path_a_to_ash);
     });
+    return 0;
+}
+
+std::string attempt(const std::function<std::string()>& body) {
+    try {
+        return "{\"value\":" + body() + "}";
+    } catch (const std::exception& e) {
+        return "{\"raised\":" + jstr(e.what()) + "}";
+    }
+}
+
+std::string jstrings(const std::vector<std::string>& values) {
+    std::vector<std::string> out;
+    for (const auto& value : values) out.push_back(jstr(value));
+    return jlist(out);
+}
+
+int rescorer_runtime_mode() {
+    using orthography2ipa::G2P;
+    using Plugin = std::shared_ptr<orthography2ipa::RescorerPlugin>;
+    const auto lattice = [](auto make) {
+        return [make]() -> Plugin { return std::make_shared<ContributesLattice>(make()); };
+    };
+    const std::vector<std::string> codes{"pt-PT", "ro-RO", "ar"};
+    const std::vector<std::pair<std::string, std::function<Plugin()>>> cases = {
+        {"keeps", lattice([] { return std::make_shared<KeepsSlots>(); })},
+        {"a to Q", lattice([] { return std::make_shared<RewritesCandidates>("a", "Q"); })},
+        {"a to ɐ", lattice([] { return std::make_shared<RewritesCandidates>("a", "ɐ"); })},
+        {"empties every slot", lattice([] { return std::make_shared<EmptiesEverySlot>(); })},
+        {"empties the first slot", lattice([] { return std::make_shared<EmptiesFirstSlot>(); })},
+        {"flips on every call", lattice([] { return std::make_shared<FlipsFirstSlot>(); })},
+        {"path:keeps", [] { return std::make_shared<NoClaimPath>(); }},
+        {"path:a to Q", [&] { return std::make_shared<PathRewriter>(codes, "a", "Q"); }},
+        {"path:empties", [&] { return std::make_shared<EmptiesPaths>(codes); }},
+        {"path:flips", [&] { return std::make_shared<FlipsPaths>(codes); }},
+    };
+    const std::vector<std::pair<std::string, std::string>> words = {
+        {"pt-PT", "casa"}, {"ro-RO", "casa"}, {"ar", "صفر"}};
+    const std::string name = "__rescorer_runtime__";
+    for (const auto& [lang, word] : words) {
+        for (const auto& [label, make] : cases) {
+            // A fresh plugin and engine per surface: a stateful rescorer then
+            // starts each surface from the same call count.
+            const auto engine = [&, &lang = lang, &make = make] {
+                orthography2ipa::register_rescorer_plugin(name, make());
+                return G2P(lang, {{"rescore", {name}}});
+            };
+            std::cout << "{\"case\":" << jstr(label) << ",\"lang\":" << jstr(lang)
+                      << ",\"word\":" << jstr(word) << ",\"surfaces\":{"
+                      << "\"transcribe_word\":" << attempt([&, &word = word] {
+                             return jstr(engine().transcribe_word(word)); })
+                      << ",\"transcribe\":" << attempt([&, &word = word] {
+                             return jstr(engine().transcribe(word)); })
+                      << ",\"sentence\":" << attempt([&, &word = word] {
+                             return jstr(engine().transcribe(word + " " + word)); })
+                      << ",\"transcribe_detailed\":" << attempt([&, &word = word] {
+                             return jstr(engine().transcribe_detailed(word).ipa); })
+                      << ",\"word_candidates\":" << attempt([&, &word = word] {
+                             return jstrings(engine().word_candidates(word)); })
+                      << ",\"three_calls\":" << attempt([&, &word = word] {
+                             const auto g2p = engine();
+                             std::vector<std::string> out;
+                             for (int i = 0; i < 3; ++i) out.push_back(g2p.transcribe_word(word));
+                             return jstrings(out); })
+                      << "}}\n" << std::flush;
+        }
+    }
     return 0;
 }
 
@@ -501,10 +760,11 @@ int main(int argc, char** argv) {
     try {
         if (mode == "features" && argc > 2) return features_mode(argv[2]);
         if (mode == "conformance") return conformance_mode();
+        if (mode == "rescorer-runtime") return rescorer_runtime_mode();
     } catch (const std::exception& e) {
         std::cout << "{\"error\":" << jstr(e.what()) << "}\n" << std::flush;
         return 1;
     }
-    std::cout << "{\"error\":\"usage: features <fixture.json> | conformance\"}\n";
+    std::cout << "{\"error\":\"usage: features <fixture.json> | conformance | rescorer-runtime\"}\n";
     return 2;
 }
