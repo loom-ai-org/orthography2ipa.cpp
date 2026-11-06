@@ -284,6 +284,12 @@
       "phonemes": [],
       "surface": "u",
       "notes": "DISABLED for Guinea-Bissau Portuguese. PT_LEX_CLITIC_O gives the article ⟨o os⟩ the [u] that an unstressed ⟨o⟩ reduces to in pt-PT. This spec keeps an unstressed ⟨o⟩ as [o]: its positional map gives pretonic and unstressed-nucleus ⟨o⟩ [o]. So the reduced vowel does not apply, and o and os keep the reading of this spec. The vowel of the article in this variety has no variety-specific source."
+    },
+    {
+      "id": "PT_STRESSED_A_BEFORE_NASAL",
+      "phonemes": [],
+      "surface": "ɐ",
+      "notes": "DISABLED for Guinea-Bissau Portuguese. No source read covers a stressed /a/ before an onset nasal in this variety. The reading is the spec default and makes no claim about this context."
     }
   ],
   "location": {

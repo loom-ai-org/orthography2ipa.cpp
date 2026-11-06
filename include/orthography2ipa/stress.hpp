@@ -137,6 +137,14 @@ std::string apply_stress_mark(
     const std::vector<int>& secondary_indices = {},
     const LanguageSpec* written = nullptr);
 
+// stress.py _lost_after_stress: whether a shorter consonant-final *ipa* lost its
+// syllables after the stress, so that *stress_index* still counts from the start.
+// The answer is no when written vowels that the transcription merged account for
+// every missing syllable and none of them stands after the stress. A site whose
+// second vowel still opens a syllable, with a vowel or a glide, did not merge.
+bool lost_after_stress(const std::string& ipa, const std::vector<std::string>& syllables,
+                       const std::vector<std::string>& ipa_sylls, int stress_index);
+
 // stress.py iambic_length_positions: the 0-based indices of
 // *ipa_syllables* whose nucleus should lengthen (weight-alternating
 // footing; empty for a word of fewer than three syllables).

@@ -43,8 +43,12 @@ from reference_regression import engine_path, pre_rescore_slots  # noqa: E402
 CLICK = "ʘ"
 MODES = ["halves", "whole", "chars", "empty", "bad", "raise"]
 WORDS = {
-    "pt-PT": ["gato", "rato", "pasta", "mesmo", "muitíssimo", "e", "cão", "Lisboa,", "abacaxi"],
-    "pt-BR": ["gato", "pneu", "pacto", "advogado", "papel", "cima", "egípcio", "Djavan", "taqu"],
+    "pt-PT": ["gato", "rato", "pasta", "mesmo", "muitíssimo", "e", "cão", "Lisboa,", "abacaxi",
+              "distribuidoras", "bueiros"],
+    "pt-BR": ["gato", "pneu", "pacto", "advogado", "papel", "cima", "egípcio", "Djavan", "taqu",
+              "distribuidoras", "bueiros"],
+    "pt-PT-x-alentejo": ["teatro", "havaiano"],
+    "ca": ["lingüístics"],
     "es-ES": ["cantaba", "gato", "ahí", "país", "construcción", "hola"],
     "en-GB": ["colonel", "yacht", "nation", "the", "water"],
     "nl-NL": ["geven", "gebed", "verder", "veldslag", "quota"],
@@ -60,8 +64,10 @@ WORDS = {
 TEXTS = {"pt-PT": ["os gatos", "gato, rato"],
          "pt-BR": ["os gatos", "muito bem"], "en-GB": ["the yacht", "colonel Mustard"]}
 # A click no table emits, the click of each lexicon, a word that only segmentation
-# declares, a lone stress mark before a vowel, and a vowel of few specs.
-FORCED = [f"<phoneme ph=\"{ipa}\">x</phoneme>" for ipa in ("ʘa", "ʘɐ", "ɡato", "ˈa", "ə")]
+# declares, a lone stress mark before a vowel, a vowel of few specs, a repeated token
+# that the message lists twice, and an apostrophe that changes the repr quotes.
+FORCED = [f"<phoneme ph=\"{ipa}\">x</phoneme>"
+          for ipa in ("ʘa", "ʘɐ", "ɡato", "ˈa", "ə", "ʘʘ", "a'ʘ")]
 
 
 class Mode(SyllabifierPlugin):

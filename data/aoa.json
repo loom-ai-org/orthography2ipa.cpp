@@ -432,6 +432,12 @@
       "phonemes": [],
       "surface": "ʒ",
       "notes": "DISABLED for Angolar. PT_CODA_S_VOICING_INTERNAL voices the pt-PT coda [ʃ] to [ʒ] before a voiced consonant inside a word. The voicing of a word-internal coda sibilant in this language has no variety-specific source, so the coda keeps the reading of this spec."
+    },
+    {
+      "id": "PT_STRESSED_A_BEFORE_NASAL",
+      "phonemes": [],
+      "surface": "ɐ",
+      "notes": "DISABLED for Angolar. No source read covers a stressed /a/ before an onset nasal in this variety. The reading is the spec default and makes no claim about this context."
     }
   ]
 }

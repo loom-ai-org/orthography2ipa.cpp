@@ -424,6 +424,7 @@ def sentence_cases():
         ("pt-PT", "os gatos"), ("pt-PT", "o gato"), ("pt-AO", "os gatos"), ("pap", "os gatos"),
         ("pt-PT", "muitos amigos"), ("pt-BR", "muito bem"), ("pt-PT", "ao vê-lo"),
         ("cnr", "с́екира љубав"), ("cnr", "љубав вода"), ("cnr", "śekira ljubav"),
+        ("pt-PT", "norte e"), ("pt-PT", "de amanhã"), ("pt-PT", "de ouro"),
         ("pt-PT-x-lisbon", "os jogos"), ("pt-MO", "os jogos"), ("mzs", "os jogos"),
         ("ext-PT-x-barranco", "dez jovens"), ("pt-PT", "s jogos"), ("pt-PT", "S João"),
         ("es-ES", "un buen baile"), ("es-ES", "en casa"), ("es-ES", "sin par"),

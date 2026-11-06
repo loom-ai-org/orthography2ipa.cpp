@@ -78,6 +78,12 @@
       "followed_by_3": "word_boundary",
       "surface": "e",
       "notes": "Overridden for this northern variety with PT_FINAL_EM_NUCLEUS: the nucleus of the plural ⟨-ens⟩ is the close-mid [e], so it is [ẽj̃ʃ]. The sources are under PT_FINAL_EM_NUCLEUS in this spec."
+    },
+    {
+      "id": "PT_STRESSED_A_BEFORE_NASAL",
+      "phonemes": [],
+      "surface": "ɐ",
+      "notes": "DISABLED for Alfena Portuguese (vowel-breaking). The Northwest keeps an open /a/ before an onset nasal. Lao, Rodrigues & Brissos (2020, Revista da Associação Portuguesa de Linguística 7, p. 308): \"o Noroeste possui [a] e [ã]\". Page 301 of the same paper names the Northwest as \"Minho e Douro Litoral\"."
     }
   ],
   "notes": "Alfena Portuguese (Greater Porto, Valongo — Douro-Litoral / Duriense zone), a northern EP dialect in Cintra's Baixo-Minhoto-Duriense-Beirão group. MODELLED FEATURES: (1) APICO-ALVEOLAR-ONLY SIBILANT SYSTEM — ⟨s/ss⟩ AND ⟨c/ç/z⟩ all merge to apico-alveolar [s̺]/[z̺]; the four-sibilant opposition is reduced to the single apical branch (Cintra 1971 p.93; Álvarez Pérez 2014 pp.37-38, Durienses 'kept only the apico-alveolar branch'). Coda ⟨s/z⟩ keep chiado [ʃ]/[ʒ]. (2) BETACISM — /v/–/b/ merged to /b/ ~ [β] (Cintra 1971 p.88; Pérez 2014 pp.35-37). Alfena is additionally known for a local vowel-breaking (Brechung) of stressed mid vowels ([ɛ]>[ɛ͜ɐ] etc.); those are enumerated as secondary allophonic variants from regional-dialect literature, not from Cintra/Pérez, and are not asserted as default output. Porto je/wo diphthongisation is not applied. Inherits pt-PT base. ⟨ss⟩ is declared apico-alveolar [s̺] here because the pt-PT base maps it to plain [s]; the value follows feature (1) above, which puts ⟨s/ss⟩ in the apical branch. Cintra 1971 (read in the Instituto Camões CVC reprint, pp. 11-13) draws the main North/South isogloss on the sibilant of the graphemes s and ss: apico-alveolar in the North, predorsodental in the South. His southern limit of the apical runs from the Ria de Aveiro to the Mondego, which it crosses upstream of Coimbra, and on towards Castelo Branco.",

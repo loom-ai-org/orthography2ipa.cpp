@@ -1076,6 +1076,24 @@ std::vector<std::string> glide_to_diphthong(const std::vector<std::string>& syll
 
 } // namespace
 
+bool lost_after_stress(const std::string& ipa, const std::vector<std::string>& syllables,
+                       const std::vector<std::string>& ipa_sylls, int stress_index) {
+    if (ends_in_vowel(ipa)) return false;
+    std::vector<int> merged;
+    for (const int site : hiatus_merge_sites(syllables)) {
+        const std::size_t slot = static_cast<std::size_t>(site) - merged.size();
+        if (slot >= ipa_sylls.size()) {
+            merged.push_back(site);
+            continue;
+        }
+        const char32_t head = to_utf32(ipa_sylls[slot]).at(0);
+        if (!is_vowel_char(cp_str(head)) && !is_glide_cp(head)) merged.push_back(site);
+    }
+    return syllables.size() - merged.size() != ipa_sylls.size() ||
+           std::any_of(merged.begin(), merged.end(),
+                       [stress_index](int site) { return site > stress_index; });
+}
+
 std::string apply_stress_mark(const std::string& ipa, const LanguageSpec& spec,
                               int stress_index,
                               const std::vector<std::string>* syllables,
@@ -1165,21 +1183,23 @@ std::string apply_stress_mark(const std::string& ipa, const LanguageSpec& spec,
             ipa_sylls = merged;
         } else if (overflow < 0 &&
                    stress_index <= static_cast<long long>(ipa_sylls.size()) - 1 &&
-                   (!ends_in_vowel(ipa) ||
+                   (lost_after_stress(ipa, *syllables, ipa_sylls, stress_index) ||
                     glide_anchored_index(syllables, ipa_sylls, stress_index, spec))) {
             // The IPA has FEWER syllables than the orthography, the
             // start-anchored stress index still points inside it, AND the
             // transcription ends in a consonant while the spelling ended in
             // a vowel — word-final vowel APOCOPE. The stressed nucleus
             // keeps its start-anchored index; end-anchoring would drag the
-            // mark forward onto an earlier syllable.
+            // mark forward onto an earlier syllable. A loss the spelling places
+            // before the stress falls through: the division dis-tri-bu-i-do-ras
+            // counts a syllable that the transcription writes with a glide.
             //
             // The second licensed cause is glide formation, which merges two
             // written syllables into one and can do it AFTER the stress. There
             // the index is the one `glide_anchored_index` counts, and the
             // transcription is vowel-final, which the apocope test refuses.
             const int target_index =
-                !ends_in_vowel(ipa)
+                lost_after_stress(ipa, *syllables, ipa_sylls, stress_index)
                     ? stress_index
                     : *glide_anchored_index(syllables, ipa_sylls, stress_index, spec);
             for (const int sec : secondary_indices)
