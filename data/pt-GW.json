@@ -154,6 +154,78 @@
   },
   "allophone_rules": [
     {
+      "id": "PT_LEX_REDUCED_O",
+      "phonemes": [],
+      "surface": "u",
+      "notes": "DISABLED for Guinea-Bissau Portuguese. PT_LEX_REDUCED_O gives ⟨porque⟩ the [u] that an unstressed ⟨o⟩ reduces to in pt-PT. This spec keeps an unstressed ⟨o⟩ as [o]: its positional map gives pretonic and unstressed-nucleus ⟨o⟩ [o]. So the reduced vowel does not apply, and porque keeps the reading of the rules. The vowel of porque in this variety has no variety-specific source. The Portal da Língua Portuguesa action=fonetica readings are output of the Ashby et al. (2012) rule-based generator, and they were not used."
+    },
+    {
+      "id": "PT_LEX_OPEN_E_SUFFIX",
+      "phonemes": [],
+      "surface": "e",
+      "notes": "DISABLED for Guinea-Bissau Portuguese. No source for the stressed vowel of this ending in this variety was read, so its output stays what it was; the pt-PT rule rests on Infopédia readings of standard European Portuguese."
+    },
+    {
+      "id": "PT_SUFFIX_EZ_CLOSE",
+      "phonemes": [],
+      "surface": "e",
+      "notes": "DISABLED for Guinea-Bissau Portuguese. No source for the stressed vowel of this ending in this variety was read, so its output stays what it was; the pt-PT rule rests on Infopédia readings of standard European Portuguese."
+    },
+    {
+      "id": "PT_SUFFIX_EZA_ESA_CLOSE",
+      "phonemes": [],
+      "surface": "e",
+      "notes": "DISABLED for Guinea-Bissau Portuguese. No source for the stressed vowel of this ending in this variety was read, so its output stays what it was; the pt-PT rule rests on Infopédia readings of standard European Portuguese."
+    },
+    {
+      "id": "PT_SUFFIX_EMA_CLOSE",
+      "phonemes": [],
+      "surface": "e",
+      "notes": "DISABLED for Guinea-Bissau Portuguese. No source for the stressed vowel of this ending in this variety was read, so its output stays what it was; the pt-PT rule rests on Infopédia readings of standard European Portuguese."
+    },
+    {
+      "id": "PT_SUFFIX_ESCO_CLOSE",
+      "phonemes": [],
+      "surface": "e",
+      "notes": "DISABLED for Guinea-Bissau Portuguese. No source for the stressed vowel of this ending in this variety was read, so its output stays what it was; the pt-PT rule rests on Infopédia readings of standard European Portuguese."
+    },
+    {
+      "id": "PT_LEX_OPEN_O_SUFFIX",
+      "phonemes": [],
+      "surface": "o",
+      "notes": "DISABLED for Guinea-Bissau Portuguese. No source for the stressed vowel of this ending in this variety was read, so its output stays what it was; the pt-PT rule rests on Infopédia readings of standard European Portuguese."
+    },
+    {
+      "id": "PT_SUFFIX_OR_CLOSE",
+      "phonemes": [],
+      "surface": "o",
+      "notes": "DISABLED for Guinea-Bissau Portuguese. No source for the stressed vowel of this ending in this variety was read, so its output stays what it was; the pt-PT rule rests on Infopédia readings of standard European Portuguese."
+    },
+    {
+      "id": "PT_SUFFIX_OSO_CLOSE",
+      "phonemes": [],
+      "surface": "o",
+      "notes": "DISABLED for Guinea-Bissau Portuguese. No source for the stressed vowel of this ending in this variety was read, so its output stays what it was; the pt-PT rule rests on Infopédia readings of standard European Portuguese."
+    },
+    {
+      "id": "PT_SUFFIX_ONHO_CLOSE",
+      "phonemes": [],
+      "surface": "o",
+      "notes": "DISABLED for Guinea-Bissau Portuguese. No source for the stressed vowel of this ending in this variety was read, so its output stays what it was; the pt-PT rule rests on Infopédia readings of standard European Portuguese."
+    },
+    {
+      "id": "PT_CODA_S_BEFORE_ZH_INTERNAL",
+      "phonemes": [],
+      "surface": "",
+      "notes": "DISABLED for Guinea-Bissau Portuguese. PT_CODA_S_BEFORE_ZH_INTERNAL deletes the pt-PT coda [ʃ] before /ʒ/ inside a word. In this spec PT_CODA_S_HUSH gives a coda /s/ [s], not [ʃ], so the deletion does not apply, and the coda keeps the reading of this spec. The word-internal coda sibilant before /ʒ/ in this variety has no variety-specific source."
+    },
+    {
+      "id": "PT_CODA_S_VOICING_INTERNAL",
+      "phonemes": [],
+      "surface": "ʒ",
+      "notes": "DISABLED for Guinea-Bissau Portuguese. PT_CODA_S_VOICING_INTERNAL voices the pt-PT coda [ʃ] to [ʒ] before a voiced consonant inside a word. In this spec PT_CODA_S_HUSH gives a coda /s/ [s], not [ʃ], so the voiced [ʒ] does not apply, and the coda keeps the reading of this spec. The voicing of a word-internal coda sibilant in this variety has no variety-specific source."
+    },
+    {
       "id": "PT_CODA_S_HUSH",
       "phonemes": [
         "s"
@@ -176,70 +248,44 @@
       "phonemes": [],
       "surface": "ɐ",
       "notes": "DISABLED for this variety. The EP Lisbon-standard centralisation of the word-final ⟨-em⟩ nucleus to [ɐ̃] (inherited from pt-PT) does not apply here: this variety keeps the close-mid nasal nucleus [ẽ], so ⟨-em⟩ is [ẽj̃] (glide via PT_FINAL_EM_GLIDE), not [ɐ̃j̃]. Peripheral/non-Iberian Portuguese does not follow the Lisbon centralisation."
+    },
+    {
+      "id": "PT_FINAL_ENS_NUCLEUS",
+      "phonemes": [],
+      "surface": "ɐ",
+      "notes": "DISABLED with PT_FINAL_EM_NUCLEUS in this spec, for the same reason: the plural ⟨-ens⟩ keeps the close-mid nucleus of ⟨-em⟩."
+    },
+    {
+      "id": "PT_ER_CLOSE",
+      "phonemes": [],
+      "surface": "e",
+      "notes": "DISABLED for Guinea-Bissau Portuguese. No source for the stressed vowel of a word-final ⟨-er⟩ in this variety was read, so its output stays what it was; the pt-PT rule rests on Infopédia and Priberam entries for standard European Portuguese."
+    },
+    {
+      "id": "PT_LEX_OPEN_ER",
+      "phonemes": [],
+      "surface": "e",
+      "notes": "DISABLED for Guinea-Bissau Portuguese. No source for the stressed vowel of a word-final ⟨-er⟩ in this variety was read, so its output stays what it was; the pt-PT rule rests on Infopédia and Priberam entries for standard European Portuguese."
+    },
+    {
+      "id": "PT_FINAL_EN_NUCLEUS",
+      "phonemes": [],
+      "surface": "e",
+      "notes": "DISABLED for Guinea-Bissau Portuguese. No source for a learned word-final ⟨-en⟩ in this variety was read, so its output stays what it was; the pt-PT rule rests on Infopédia and Priberam entries for standard European Portuguese."
+    },
+    {
+      "id": "PT_FINAL_EN_CODA",
+      "phonemes": [],
+      "surface": "e",
+      "notes": "DISABLED for Guinea-Bissau Portuguese. No source for a learned word-final ⟨-en⟩ in this variety was read, so its output stays what it was; the pt-PT rule rests on Infopédia and Priberam entries for standard European Portuguese."
+    },
+    {
+      "id": "PT_LEX_CLITIC_O",
+      "phonemes": [],
+      "surface": "u",
+      "notes": "DISABLED for Guinea-Bissau Portuguese. PT_LEX_CLITIC_O gives the article ⟨o os⟩ the [u] that an unstressed ⟨o⟩ reduces to in pt-PT. This spec keeps an unstressed ⟨o⟩ as [o]: its positional map gives pretonic and unstressed-nucleus ⟨o⟩ [o]. So the reduced vowel does not apply, and o and os keep the reading of this spec. The vowel of the article in this variety has no variety-specific source."
     }
   ],
-  "stress": {
-    "onset_clusters": ["bl", "br", "bɫ", "bɾ", "bʀ", "bʁ", "bʎ", "bχ", "dr", "dɾ", "dʀ", "dʁ", "dʎ", "dχ", "fl", "fr", "fɫ", "fɾ", "fʀ", "fʁ", "fʎ", "fχ", "kl", "kr", "kɫ", "kɾ", "kʀ", "kʁ", "kʎ", "kχ", "pl", "pr", "pɫ", "pɾ", "pʀ", "pʁ", "pʎ", "pχ", "tr", "tɾ", "tʀ", "tʁ", "tʎ", "tχ", "vl", "vr", "vɫ", "vɾ", "vʀ", "vʁ", "vʎ", "vχ", "ðr", "ðɾ", "ðʀ", "ðʁ", "ðʎ", "ðχ", "ɡl", "ɡr", "ɡɫ", "ɡɾ", "ɡʀ", "ɡʁ", "ɡʎ", "ɡχ", "ɣl", "ɣr", "ɣɫ", "ɣɾ", "ɣʀ", "ɣʁ", "ɣʎ", "ɣχ", "βl", "βr", "βɫ", "βɾ", "βʀ", "βʁ", "βʎ", "βχ"],
-    "cliticless_words": ["o", "a", "os", "as", "de", "do", "da", "dos", "das", "em", "no", "na", "nos", "nas", "por", "pelo", "pela", "pelos", "pelas", "ao", "aos", "à", "às", "com", "sem", "e", "que", "se", "me", "te", "lhe", "lhes", "vos", "lo", "la", "los", "las", "lho", "lha", "lhos", "lhas"],
-    "default_position": -2,
-    "final_stress_endings": [
-      "r",
-      "l",
-      "z",
-      "x",
-      "i",
-      "u",
-      "im",
-      "om",
-      "um",
-      "is",
-      "us",
-      "ns",
-      "ão",
-      "ãe",
-      "õe",
-      "au",
-      "éu",
-      "éi",
-      "ói"
-    ],
-    "penult_stress_endings": [],
-    "marked_vowels": [
-      "á",
-      "é",
-      "í",
-      "ó",
-      "ú",
-      "â",
-      "ê",
-      "ô",
-      "ã",
-      "õ"
-    ],
-    "stress_mark": "ˈ",
-    "notes": "Acordo Ortográfico 1990 conventions: paroxytone default; written accents override; final -i/-u/-r/-l/-z/-x/-im/-om/-um/-ns and nasal diphthongs attract final stress. Unmarked -em/-am stay paroxytone (homem, falam). DIPHTHONGS: declared so the bundled syllabifier counts nuclei correctly — without them every vowel run merges into one nucleus and co-e-lho is read as coe-lho, one syllable short, putting the stress and its vowel reduction on the wrong vowel. ⟨oe⟩ is hiatus, not a diphthong (Cunha & Cintra, §Ditongos).",
-    "diphthongs": [
-      "ãe",
-      "ão",
-      "õe",
-      "ai",
-      "ái",
-      "au",
-      "áu",
-      "ei",
-      "éi",
-      "êi",
-      "eu",
-      "éu",
-      "êu",
-      "iu",
-      "oi",
-      "ói",
-      "ôi",
-      "ou",
-      "ui"
-    ]
-  },
   "location": {
     "latitude": 11.86,
     "longitude": -15.583333,

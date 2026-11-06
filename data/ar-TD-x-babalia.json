@@ -1,0 +1,15 @@
+{
+ "code": "ar-TD-x-babalia",
+ "name": "Babalia Creole Arabic",
+ "script": "Arabic",
+ "script_type": "abjad",
+ "parent": "x-clade-afro1255",
+ "graphemes_base": "shu-TD",
+ "graphemes": {},
+ "allophones_base": "shu-TD",
+ "allophones": {},
+ "iso639_3": null,
+ "quality": "stub",
+ "notes": "Babalia Creole Arabic, spoken by the Babalia around Massenya in the Chari-Baguirmi region of Chad. ATTESTED, NOT DESCRIBED HERE. CODE: SIL retired the ISO 639-3 code bbz on 2020-01-23 with reason N (non-existent) and names no replacement (iso-639-3_Retirements.tab), and IANA deprecated the subtag bbz on 2020-03-28 with no Preferred-Value (language-subtag-registry). The variety has no ISO 639-3 code, so the key is a private-use extension of the Arabic macrolanguage, under which IANA listed bbz, with the region of Chad, and iso639_3 is null; bbz stays an alias of this key. No phonological description has been read into this spec, and the grapheme table is inherited from shu-TD and is a placeholder rather than a claim — no reflex below has been checked against a source.\n\nTHE GRAPHEMES BASE IS GEOGRAPHIC AND THE FIT IS POOR; THE CLASSIFICATION IS NOT CHANGED. `parent` stays on the Afro-Asiatic clade node, because a creole is not a Chadian dialect and this file must not assert a descent it spends this paragraph qualifying. Only `graphemes_base` points at shu-TD. Chadian Arabic, which is the nearest described variety in the same country, but this is a CREOLE with Arabic as its lexifier and a Baguirmi substrate, so an Arabic dialect's grapheme table is a weaker fit here than it would be for a dialect. It is used because a code that resolves to a usable table is better than one that resolves to nothing, not because the tables are believed to agree.\n\nThe entry exists so the code is reachable and its gap is visible. Replace the inherited table with cited reflexes before treating any reading here as Babalia's.",
+ "sources": []
+}

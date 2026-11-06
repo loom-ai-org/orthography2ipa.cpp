@@ -1,0 +1,273 @@
+{
+  "code": "nl-BE-x-antwerp",
+  "name": "Antwerp Standard Dutch (Belgium)",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "parent": "nl-BE",
+  "ancestors": [
+    {
+      "code": "nl-BE",
+      "role": "parent",
+      "weight": 0.9,
+      "notes": "Belgian Standard Dutch; the regional standard of Antwerp differs from it in the onset tap, the schwa between /r/ and a non-coronal coda consonant, and the long stressed /i u/."
+    }
+  ],
+  "graphemes_base": "nl-BE",
+  "allophones_base": "nl-BE",
+  "positional_graphemes_base": "nl-BE",
+  "word_exceptions_base": "nl-BE",
+  "collapse_geminates": true,
+  "positional_graphemes": {
+    "kerk": {
+      "before_vowel": [
+        "kɛr̥k"
+      ],
+      "default": [
+        "kɛɾək"
+      ]
+    },
+    "berg": {
+      "before_vowel": [
+        "bɛrɣ"
+      ],
+      "word_final": [
+        "bɛɾəx"
+      ],
+      "default": [
+        "bɛɾəɣ"
+      ]
+    }
+  },
+  "allophone_rules": [
+    {
+      "id": "NL_BE_R_DEVOICE_BEFORE_VOICELESS_STOP",
+      "phonemes": [],
+      "surface": "",
+      "notes": "Switched off in place and restated as NL_BE_X_ANTWERP_R_DEVOICE_BEFORE_VOICELESS_STOP after the schwa rules."
+    },
+    {
+      "id": "NL_BE_X_ANTWERP_R_TAP_ONSET",
+      "phonemes": [
+        "r"
+      ],
+      "surface": "ɾ",
+      "syllable_position": "onset",
+      "notes": "Sebregts (2014, p. 88): 'Taps are by far the most common onset realisation for alveolar r speakers'. Table 3-26 (p. 88), Antwerp, 41 speakers: voiced alveolar tap 418 of 636 word-onset tokens (65.7%) and 271 of 395 intervocalic tokens (68.6%); the voiced alveolar trill is 14.0% and 5.7%. The word-onset items include the clusters of brood, trein, strik, kruk, schrift and gras, and the intervocalic items are beroep, beraad, giraffe, bureau, beren and sturen (Table 3-2, p. 53). p. 86: 'By far the most common realisation of r in Antwerp is the voiced alveolar tap, which is found with over 90% of all Antwerp speakers in the data'. Table 4-2 (p. 127): 35 of the 41 Antwerp speakers (85.4%) have alveolar r. So /r/ before a vowel is the voiced tap [ɾ]: rood [ˈɾoːt], waren [ˈwaːɾən], brood [ˈbɾoːt]."
+    },
+    {
+      "id": "NL_BE_X_ANTWERP_R_SCHWA_INSERTION_FINAL",
+      "phonemes": [
+        "r"
+      ],
+      "surface": "ɾə",
+      "syllable_position": "coda",
+      "followed_by_phoneme": [
+        "p",
+        "b",
+        "f",
+        "v",
+        "k",
+        "ɡ",
+        "ɣ",
+        "x",
+        "m",
+        "n"
+      ],
+      "followed_by_2": "word_boundary",
+      "followed_by_grapheme_not": [
+        "kerk",
+        "berg"
+      ],
+      "notes": "Schwa insertion. Sebregts (2014, p. 54) states the context as a class: 'r followed by a nasal or by a non-coronal obstruent (4). In the latter context, but not in the former, an optional process of schwa-insertion is said to take place'; p. 236: 'the appearance of an epenthetic vowel between /r/ and a following non-coronal or nasal consonant in a coda cluster', with 'kern /kɛrn/ [ˈkɛrən]'; p. 259: 'between a liquid and a following nasal (labial or coronal) or a following non-coronal obstruent'. Table 6-2 (p. 242): Antwerp, 322 tokens, 95.0% with schwa (harp 92.5, kerk 97.5, arm 92.4, berg 97.5). p. 244: 'none of the speakers from Antwerp and Hasselt are' categorically non-schwa-inserting, and '83% of the Antwerp speakers realise schwa categorically in the relevant items'. Table 3-27 (p. 89): in the schwa-insertion context the r is the voiced alveolar tap in 236 of 322 tokens (73.3%). So a coda /r/ before a coda /p b f v k ɡ x m n/ is the tap with an inserted schwa [ɾə]: harp [ˈɦɑɾəp], arm [ˈɑɾəm], kern [ˈkɛɾən]. The rule stands before the voiceless-stop devoicing, because the tap of this context is voiced. This rule covers the word-final cluster that Sebregts measures; the rules NL_BE_X_ANTWERP_R_SCHWA_INSERTION_BEFORE_NASAL_CODA and NL_BE_X_ANTWERP_R_SCHWA_INSERTION_BEFORE_OBSTRUENT_CODA cover the same cluster inside a word. The keys ⟨kerk⟩ and ⟨berg⟩ hold a vowel, so they are not a coda consonant."
+    },
+    {
+      "id": "NL_BE_X_ANTWERP_R_SCHWA_INSERTION_BEFORE_NASAL_CODA",
+      "phonemes": [
+        "r"
+      ],
+      "surface": "ɾə",
+      "syllable_position": "coda",
+      "followed_by_phoneme": [
+        "m",
+        "n"
+      ],
+      "followed_by_2": "consonant",
+      "followed_by_grapheme_not": [
+        "kerk",
+        "berg"
+      ],
+      "notes": "The schwa insertion of NL_BE_X_ANTWERP_R_SCHWA_INSERTION_FINAL inside a word, where /r/ and a nasal close a syllable before another consonant. Sebregts (2014, p. 236) states the context as 'a coda cluster'. No Dutch syllable begins with a nasal and a consonant, so the nasal is always in the coda: armband [ˈɑɾəmbɑnt]."
+    },
+    {
+      "id": "NL_BE_X_ANTWERP_R_SCHWA_INSERTION_BEFORE_OBSTRUENT_CODA",
+      "phonemes": [
+        "r"
+      ],
+      "surface": "ɾə",
+      "syllable_position": "coda",
+      "followed_by_phoneme": [
+        "p",
+        "b",
+        "f",
+        "v",
+        "k",
+        "ɡ",
+        "ɣ",
+        "x"
+      ],
+      "followed_by_phoneme_2": [
+        "p",
+        "b",
+        "t",
+        "d",
+        "k",
+        "ɡ",
+        "f",
+        "v",
+        "s",
+        "z",
+        "x",
+        "ɣ",
+        "ɦ",
+        "h",
+        "m",
+        "ŋ",
+        "ʃ",
+        "ʒ",
+        "j"
+      ],
+      "followed_by_grapheme_not": [
+        "kerk",
+        "berg"
+      ],
+      "notes": "The schwa insertion of NL_BE_X_ANTWERP_R_SCHWA_INSERTION_FINAL inside a word, where /r/ and a non-coronal obstruent close a syllable before another consonant: kerkhof [ˈkɛɾəkɦɔf], werkt [ˈwɛɾəkt], dorpje [ˈdɔɾəpjə]. Sebregts (2014, p. 236) states the context as 'a coda cluster'. An obstruent followed by /l r n w/ can open a syllable (blad, vrij, knal, kwartier), so the obstruent may stand in the next onset and the rule does not fire: verblijf [vərˈblɛif], deurknop [ˈdøːr̥knɔp]. The engine does not know compound boundaries, so a real coda before /n w/ takes no schwa either: werknemer [ˈwɛr̥knəmər̥], erfwoord [ˈɛrfwoːr̥t]."
+    },
+    {
+      "id": "NL_BE_X_ANTWERP_R_DEVOICE_BEFORE_VOICELESS_STOP",
+      "phonemes": [
+        "r"
+      ],
+      "surface": "r̥",
+      "followed_by_phoneme": [
+        "p",
+        "t",
+        "k"
+      ],
+      "notes": "The nl-BE rule NL_BE_R_DEVOICE_BEFORE_VOICELESS_STOP, restated after the two NL_BE_X_ANTWERP_R_SCHWA_INSERTION_* rules with the same phonemes, surface and condition, so that the schwa rules fire first. The inherited rule is switched off in place. Verhoeven (2005, p. 245) gives the context; a /r/ before a /p t k/ that opens the next syllable keeps it: Antwerpen [ˈɑntwər̥pən], werken [ˈwɛr̥kən]."
+    },
+    {
+      "id": "NL_BE_X_ANTWERP_LONG_STRESSED_I",
+      "phonemes": [
+        "i"
+      ],
+      "surface": "iː",
+      "stress": "stressed",
+      "notes": "Verhoeven & Van Bael (2002, p. 16): 'Een eerste vaststelling is dat twee Antwerpse klinkers lang zijn, terwijl ze in LIM en OVL kort worden gerealiseerd. Dit betreft [i] en [u] met een gemiddelde duur van 261 en 246 msec. De gemiddelde waarden voor LIM en OVL zijn respectievelijk 123 en 97 msec voor [i] en 104 en 109 msec voor [u].' The abstract (p. 1): 'the high vowels are realised long in comparison to the other regional variants'. The figures are group means of 12 speakers ('12 Antwerpenaars (agglomeratie Antwerpen)', p. 7) in two stressed test contexts (Piet, Lies; spoed, Loes, p. 6), so the rule acts in a stressed syllable only: Piet [ˈpiːt], Loes [ˈluːs]."
+    },
+    {
+      "id": "NL_BE_X_ANTWERP_LONG_STRESSED_U",
+      "phonemes": [
+        "u"
+      ],
+      "surface": "uː",
+      "stress": "stressed",
+      "notes": "Verhoeven & Van Bael (2002, p. 16): 'Een eerste vaststelling is dat twee Antwerpse klinkers lang zijn, terwijl ze in LIM en OVL kort worden gerealiseerd. Dit betreft [i] en [u] met een gemiddelde duur van 261 en 246 msec. De gemiddelde waarden voor LIM en OVL zijn respectievelijk 123 en 97 msec voor [i] en 104 en 109 msec voor [u].' The abstract (p. 1): 'the high vowels are realised long in comparison to the other regional variants'. The figures are group means of 12 speakers ('12 Antwerpenaars (agglomeratie Antwerpen)', p. 7) in two stressed test contexts (Piet, Lies; spoed, Loes, p. 6), so the rule acts in a stressed syllable only: Piet [ˈpiːt], Loes [ˈluːs]."
+    }
+  ],
+  "quality": "skeleton",
+  "iso639_3": "nld",
+  "glottolog_code": null,
+  "location": {
+    "latitude": 51.221111,
+    "longitude": 4.399722,
+    "source": "wikidata",
+    "notes": "the city of Antwerp, Belgium. Sebregts (2014) and Verhoeven & Van Bael (2002) record speakers from the city. [Wikidata Q12892 P625]"
+  },
+  "sources": [
+    {
+      "id": "sebregts2014",
+      "author": "Sebregts, K.",
+      "year": 2014,
+      "title": "The Sociophonetics and Phonology of Dutch r",
+      "publisher": "LOT 379, Utrecht",
+      "url": "https://www.lotpublications.nl/Documents/379_fulltext.pdf",
+      "pages": "pp. 52-54, 72, 75, 83, 86-92, 127, 236, 242, 244, 259, 273, 278",
+      "notes": "The HEMA urban accent corpus, 41 Antwerp speakers of 'urban accents of colloquial Standard Dutch' (p. 52): onset tap, schwa insertion, coda variants."
+    },
+    {
+      "id": "verhoeven_vanbael2002",
+      "author": "Verhoeven, J. & Van Bael, C.",
+      "year": 2002,
+      "title": "Akoestische kenmerken van de Nederlandse klinkers in drie Vlaamse regio's",
+      "publisher": "Taal en Tongval 54, 1-23",
+      "url": "https://www.journal-archive.aup.nl/taal-en-tongval/jrg_2002_vol_54_-_akoestische_kenmerken_van_de_nederlandse_klinkers_in.pdf",
+      "pages": "pp. 1, 6-8, 16",
+      "notes": "Vowel formants and durations for 12 speakers each from Antwerp, Limburg and East Flanders; long [i] and [u] in Antwerp."
+    },
+    {
+      "id": "verhoeven2005",
+      "author": "Verhoeven, J.",
+      "year": 2005,
+      "title": "Belgian Standard Dutch",
+      "publisher": "Journal of the International Phonetic Association 35(2)",
+      "url": "https://doi.org/10.1017/S0025100305002173",
+      "pages": "pp. 245-246",
+      "notes": "The parent r devoicing; the close Antwerp formants of [i ɪ], [a ɑ], [y ʏ] (notes only)."
+    },
+    {
+      "id": "vanderharst_vandevelde2007",
+      "author": "van der Harst, S. & Van de Velde, H.",
+      "year": 2007,
+      "title": "17 g's in het Standaardnederlands?",
+      "publisher": "Taal en Tongval 59, 172-195",
+      "url": "https://www.journal-archive.aup.nl/taal-en-tongval/jrg_2007_vol_59_-_17_gs_in_het_standaardnederlands.pdf",
+      "pages": "pp. 184-185, 188",
+      "notes": "Region V-B (Antwerp and Flemish Brabant): velar /ɣ/ 62.5%, palato-velar 32.5%, voiceless 95.0%, no scraping. The parent values hold."
+    },
+    {
+      "id": "vanderharst2011",
+      "author": "van der Harst, S.",
+      "year": 2011,
+      "title": "The Vowel Space Paradox",
+      "publisher": "LOT 273, Utrecht",
+      "url": "https://www.lotpublications.nl/Documents/273_fulltext.pdf",
+      "pages": "pp. 53-55, 153, 317",
+      "notes": "The teacher corpus region F-B, 'the provinces of Antwerp and Flemish-Brabant' (p. 54); the longer /i/ of F-B (p. 153)."
+    },
+    {
+      "id": "voeten2021",
+      "author": "Voeten, C. C.",
+      "year": 2021,
+      "title": "Regional variation in ongoing sound change",
+      "publisher": "Journal of Linguistic Geography 9, 162-177",
+      "url": "https://doi.org/10.1017/jlg.2021.10",
+      "pages": "p. 166",
+      "notes": "The higher diphthong onsets of Flanders hold 'for all Flemish regions but Flemish-Brabant' (notes only)."
+    },
+    {
+      "id": "verhoeven_hageman2007",
+      "author": "Verhoeven, J. & Hageman, G.",
+      "year": 2007,
+      "title": "De verstemlozing van fricatieven in Vlaanderen",
+      "publisher": "Nederlandse Taalkunde 12(2), 139-152",
+      "url": null,
+      "pages": "pp. 143-145",
+      "notes": "Fricative devoicing in four Flemish regions, Antwerp among them: 'Er zijn geen significante verschillen tussen de regio's' (p. 145). The parent values hold."
+    },
+    {
+      "id": "dewulf2003",
+      "author": "De Wulf, C.",
+      "year": 2003,
+      "title": "Procope van de h-",
+      "publisher": "Taal en Tongval 55, 216-231",
+      "url": "https://www.journal-archive.aup.nl/taal-en-tongval/jrg_2003_vol_55_-_procope_van_de_h-.pdf",
+      "pages": "pp. 217-218",
+      "notes": "The h-less dialect area includes the western half of the province of Antwerp. Dialect data, notes only."
+    }
+  ],
+  "wikipedia": [
+    "https://nl.wikipedia.org/wiki/Antwerps",
+    "https://en.wikipedia.org/wiki/Dutch_phonology"
+  ],
+  "notes": "Regionally coloured Standard Dutch of the city of Antwerp: the standard language as spoken by educated speakers from the city, not the Antwerp dialect. Sebregts (2014, p. 52) records 41 speakers born and raised in Antwerp, in 'urban accents of colloquial Standard Dutch'. Verhoeven & Van Bael (2002) record '12 Antwerpenaars (agglomeratie Antwerpen)' (p. 7), each of whom could 'zich in de dagelijkse omgang vlot moesten kunnen uitdrukken in het Standaardnederlands' (p. 8). The spec is a delta over nl-BE: it inherits every grapheme, positional entry, word exception, allophone rule and the stress block, and it states only the features below. MODELLED (1) ONSET /r/ AS THE VOICED TAP [ɾ]. Sebregts (2014, p. 88): 'Taps are by far the most common onset realisation for alveolar r speakers'. Table 3-26 (p. 88), Antwerp, 41 speakers: voiced alveolar tap 418 of 636 word-onset tokens (65.7%) and 271 of 395 intervocalic tokens (68.6%); the voiced alveolar trill is 14.0% and 5.7%. The word-onset items include the clusters of brood, trein, strik, kruk, schrift and gras, and the intervocalic items are beroep, beraad, giraffe, bureau, beren and sturen (Table 3-2, p. 53). p. 86: 'By far the most common realisation of r in Antwerp is the voiced alveolar tap, which is found with over 90% of all Antwerp speakers in the data'. Table 4-2 (p. 127): 35 of the 41 Antwerp speakers (85.4%) have alveolar r. So /r/ before a vowel is the voiced tap [ɾ]: rood [ˈɾoːt], waren [ˈwaːɾən], brood [ˈbɾoːt]. (2) SCHWA BETWEEN /r/ AND A NON-CORONAL CODA CONSONANT. Schwa insertion. Sebregts (2014, p. 54) states the context as a class: 'r followed by a nasal or by a non-coronal obstruent (4). In the latter context, but not in the former, an optional process of schwa-insertion is said to take place'; p. 236: 'the appearance of an epenthetic vowel between /r/ and a following non-coronal or nasal consonant in a coda cluster', with 'kern /kɛrn/ [ˈkɛrən]'; p. 259: 'between a liquid and a following nasal (labial or coronal) or a following non-coronal obstruent'. Table 6-2 (p. 242): Antwerp, 322 tokens, 95.0% with schwa (harp 92.5, kerk 97.5, arm 92.4, berg 97.5). p. 244: 'none of the speakers from Antwerp and Hasselt are' categorically non-schwa-inserting, and '83% of the Antwerp speakers realise schwa categorically in the relevant items'. Table 3-27 (p. 89): in the schwa-insertion context the r is the voiced alveolar tap in 236 of 322 tokens (73.3%). So a coda /r/ before a coda /p b f v k ɡ x m n/ is the tap with an inserted schwa [ɾə]: harp [ˈɦɑɾəp], arm [ˈɑɾəm], kern [ˈkɛɾən]. The rule stands before the voiceless-stop devoicing, because the tap of this context is voiced. This rule covers the word-final cluster that Sebregts measures; the rules NL_BE_X_ANTWERP_R_SCHWA_INSERTION_BEFORE_NASAL_CODA and NL_BE_X_ANTWERP_R_SCHWA_INSERTION_BEFORE_OBSTRUENT_CODA cover the same cluster inside a word. The keys ⟨kerk⟩ and ⟨berg⟩ hold a vowel, so they are not a coda consonant. The nl-BE keys ⟨kerk⟩ and ⟨berg⟩ spell the words in one slot, so the spec restates them: ⟨kerk⟩ [kɛɾək] and ⟨berg⟩ [bɛɾəx] at the end of a word and [bɛɾəɣ] before a consonant, and the parent values [kɛr̥k] and [bɛrɣ] before a vowel, where the consonant opens the next syllable (kerken [ˈkɛr̥kən], bergen [ˈbɛrɣən]). (3) LONG STRESSED /i u/. Verhoeven & Van Bael (2002, p. 16): 'Een eerste vaststelling is dat twee Antwerpse klinkers lang zijn, terwijl ze in LIM en OVL kort worden gerealiseerd. Dit betreft [i] en [u] met een gemiddelde duur van 261 en 246 msec. De gemiddelde waarden voor LIM en OVL zijn respectievelijk 123 en 97 msec voor [i] en 104 en 109 msec voor [u].' The abstract (p. 1): 'the high vowels are realised long in comparison to the other regional variants'. The figures are group means of 12 speakers ('12 Antwerpenaars (agglomeratie Antwerpen)', p. 7) in two stressed test contexts (Piet, Lies; spoed, Loes, p. 6), so the rule acts in a stressed syllable only: Piet [ˈpiːt], Loes [ˈluːs]. NOT MODELLED: (a) Coda /r/ before /s/ and other coronals. Sebregts (2014, p. 92): 'Antwerp speakers have more voiceless and fricative realisations (63.5% in Antwerp vs. 47.4% in Bruges)', and the most frequent coda variant is the voiceless tap or trill with frication, 45.9% (Table 3-27, p. 89). The pooled figure does not separate word-final /r/ from /r/ before a coronal, so the coda keeps the nl-BE values: worst [ˈwɔrst], door [ˈdoːr̥]. (b) Schwa before a coronal (bord, paard, worst): 'only to a limited extent in the coda context (score of 1.7)' (p. 88). (c) Schwa between /l/ and a consonant (melk, film): Sebregts (p. 236) names the process for /l/ but measures /r/ only. (d) The palato-velar realisation of /ɣ/ (32.5% in V-B, van der Harst & Van de Velde 2007, p. 184): no conditioning context. (e) The close formants of [i ɪ], [a ɑ] and [y ʏ] (Verhoeven 2005, p. 246; Verhoeven & Van Bael 2002, p. 1) and the lower back vowels: gradient, with no merger stated. (f) The diphthongs take the nl-BE values; Voeten (2021, p. 166) finds the higher Flemish onsets 'for all Flemish regions but Flemish-Brabant'. (g) ⟨h⟩ dropping is dialect data (De Wulf 2003, pp. 217-218). (h) The voicing of onset /ɣ v z/ takes the nl-BE values: Verhoeven & Hageman (2007, p. 145) find 'geen significante verschillen tussen de regio's'. (i) Unstressed /i u/ keep the short nl-BE value; the source measures stressed vowels only. The length rules read the stress that the inherited stress block assigns, so a word that the block stresses on the wrong syllable gets its long vowel there too (minuut [ˈmiːnyt], where the block gives nl-BE [ˈminyt])."
+}

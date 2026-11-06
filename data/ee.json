@@ -588,7 +588,7 @@
     "wikipron": {
       "conclusion": "input_limited",
       "measured": "WikiPron scrapes the Wiktionary page TITLE, and Ewe titles are written without tone while the headword line displays it: 3 of the 250 rows in ewe_latn_broad.tsv carry a tone diacritic in the orthography, 232 mark tone in the gold IPA, and 229 mark a tone the input cannot express. Tone-bearing segments are 668 of 1266, so just over half the segments in the gold hang on a distinction the input threw away. Putting the display headword back (the wikipron_restored row, 217 of the 250 rows recoverable from the MediaWiki API) drops PER from 0.4748 to 0.0007 on those same 217 words and word error from 1.0000 to 0.0046, with 216 of 217 words transcribed exactly. The near-zero figure was checked for a gold-to-gold leak and is not one: the restoration code never reads the IPA column, no restored word equals its gold, scoring the same 217 words with their original untoned spellings through the identical code path still gives 0.4748, and pairing the restored words with shuffled golds gives 1.2317. The spec is doing real work on those inputs -- Abraham -> ablaham, nyɔnyɔ -> ɲɔɲɔ, dzodze -> d͡zod͡ze -- and 127 of the 217 outputs differ from their input string. The single remaining error is a disagreement between the page's own headword line and its own IPA line (àŋùtrɔ́ against gold a ŋ u t l ɔ̀, where the two sibling entries àŋùtrɔ́dàdà and àŋùtrɔ́dàlá both give ɔ́). The residual is the input, not the rules.",
-      "reference": "spec notes; valid_ceiling.wikipron; docs/benchmark_datasets.md"
+      "reference": "spec notes; valid_ceiling.wikipron; docs/evaluation/datasets.md"
     }
   }
 }

@@ -1,0 +1,136 @@
+{
+  "code": "es-VE-x-zulia",
+  "name": "Maracucho (Zuliano) Spanish",
+  "script": "Latin",
+  "graphemes_base": "es-ES",
+  "graphemes": {
+    "c": [
+      "k",
+      "s"
+    ],
+    "z": [
+      "s"
+    ],
+    "ll": [
+      "ʝ"
+    ]
+  },
+  "allophones_base": "es-ES",
+  "positional_graphemes_base": "es-ES",
+  "positional_graphemes": {
+    "c": {
+      "before_e": [
+        "s"
+      ],
+      "before_i": [
+        "s"
+      ]
+    },
+    "n": {
+      "before_consonant": [
+        "n",
+        "ŋ"
+      ],
+      "word_final": [
+        "ŋ"
+      ]
+    }
+  },
+  "parent": "es-VE",
+  "ancestors": [
+    {
+      "code": "es-VE",
+      "role": "parent",
+      "weight": 0.85,
+      "notes": "Immediate national variety (parent dialect)."
+    },
+    {
+      "code": "es-419",
+      "role": "ancestor",
+      "weight": 0.55,
+      "notes": "General Latin American Spanish (koine) — seseo/yeismo baseline shared by all LatAm varieties (Lipski 1994)."
+    }
+  ],
+  "notes": "STRUCTURAL STUB. Maracucho / Zuliano Spanish of the Maracaibo (Zulia) region — a strongly voseante north-western Venezuelan variety, distinct within the Caribbean zone (Lipski 1994). Only the pan-Latin-American baseline (seseo: c/z->/s/, yeismo: ll->/ʝ/; Lipski 1994) is modelled here; the dialect-specific phonology is deliberately not yet described (stub tier). Ancestry: es-ES-x-medieval -> es-ES -> es-419 -> es-VE -> es-VE-x-zulia. WORD-FINAL /n/ IS VELAR [ŋ]: pan [ˈpaŋ], un otro [uŋ ˈotɾo]. Lipski (2011, p. 7): «Velarization of phrase-final /n/ is the rule in Galicia and parts of Asturias, Extremadura, Andalusia, the Canary Islands, all Caribbean and Central American dialects, along the Pacific coast of Colombia, Peru, and Ecuador, and sporadically in the Andean highlands. Word-final prevocalic nasals are typically also velarized in these dialects, although with generally lower rates than for phrase-final /n/ (Lipski 1986): un otro [uŋ.ˈo.tɾo]».",
+  "quality": "stub",
+  "script_type": "alphabet",
+  "iso639_3": "spa",
+  "glottolog_code": null,
+  "timespan": {
+    "start_year": 1600,
+    "end_year": null
+  },
+  "sources": [
+    {
+      "id": "lipski_overview",
+      "author": "Lipski, John M.",
+      "year": 2011,
+      "title": "Geographical and Social Varieties of Spanish: An Overview",
+      "publisher": "In J.I. Hualde, A. Olarrea & E. O'Rourke (eds.), The Handbook of Hispanic Linguistics, Wiley-Blackwell",
+      "url": "https://johnlipski.github.io/geo.pdf",
+      "pages": "pp. 1-26",
+      "notes": "READ (geo.pdf). Reproduces the Lipski (1994) geographical dialect-zone classification of Latin American Spanish (list (2)): Mexican/SW-US; Caribbean; Guatemala-Yucatan-Costa Rica; El Salvador-Honduras-Nicaragua; interior Colombia + highland Venezuela; Pacific coast Colombia/Ecuador/Peru; Andean (Ecuador/Peru/Bolivia/NW-Argentina/NE-Chile); Chile; Paraguay/NE-Argentina/E-Bolivia; Argentina/Uruguay. Used here to enumerate the regional zones, and p. 7 for the velar word-final /n/."
+    },
+    {
+      "id": "lipski1994",
+      "author": "Lipski, John M.",
+      "year": 1994,
+      "title": "Latin American Spanish",
+      "publisher": "Longman Linguistics Library, Longman",
+      "url": null,
+      "pages": null,
+      "notes": "The comprehensive dialect survey underlying the zone classification (cited via the author's own overview, geo.pdf, which was read)."
+    },
+    {
+      "id": "lipski1986",
+      "author": "Lipski, John M.",
+      "year": 1986,
+      "title": "Reduction of Spanish Word-Final /s/ and /n/",
+      "publisher": "Canadian Journal of Linguistics / Revue canadienne de linguistique 31(2)",
+      "url": null,
+      "pages": "p. 140; pp. 146-147",
+      "notes": "READ (papers/iberian/lipski_reduction_word-final_s_n.pdf, scan page images). p. 140: rule (4) n → ŋ / __ # [−cons]. pp. 146-147: word-final preconsonantal /n/ takes the normal homorganic assimilation."
+    },
+    {
+      "id": "navarro1918",
+      "author": "Navarro Tomás, Tomás",
+      "year": 1918,
+      "title": "Manual de pronunciación española",
+      "publisher": "Centro de Estudios Históricos, Madrid",
+      "url": "https://archive.org/details/manualdepronunci00navauoft",
+      "pages": "§ 87 p. 66",
+      "notes": "First edition, read in the archive.org scan. § 87: word-final n before a word-initial p or b is [m] (un buen baile, en pie, sin par)."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Spanish_dialects_and_varieties",
+    "https://es.wikipedia.org/wiki/Espa%C3%B1ol_venezolano",
+    "https://en.wikipedia.org/wiki/Venezuelan_Spanish"
+  ],
+  "location": {
+    "latitude": 10.633333,
+    "longitude": -71.633333,
+    "source": "wikidata",
+    "notes": "Maracaibo — the centre of the Maracucho/Zuliano area. [Wikidata Q171632 P625]"
+  },
+  "sandhi_rules": [
+    {
+      "id": "ES_EXT_FINAL_N_LABIAL",
+      "name": "word-final velar n before a labial",
+      "left_context": "ŋ$",
+      "right_context": "^[ˈˌ]?[pbβm]",
+      "transform": "m",
+      "obligatory": true,
+      "notes": "Word-final /n/ is velar only before a pause or a vowel. Before a consonant of the next word it takes the place of that consonant, as inside a word. Lipski (1986, p. 140): «Velarization of /n/ normally occurs in word-final environments before pause (también [tambiéŋ] 'also') and usually before a following vowel (en agosto [eŋaɣósto] 'in August')», written as the rule n → ŋ / __ # [−cons]. Lipski (1986, pp. 146-147): «the velarization of word-final preconsonantal /n/ is relatively less common in most dialects (Zamora and Guitart 1982:116), and the velarization of word-internal preconsonantal /n/ is rarer still. This is due to the normal process of homorganic assimilation of nasal consonants to following obstruents», and «I know of no dialect nor even idiolect of Spanish in which the majority of instances of preconsonantal /n/ are velarized». Navarro Tomás (1918, § 87, p. 66) gives the labial case across words: «En contacto con estas mismas consonantes iniciales de palabra, la n final de una palabra anterior se pronuncia también m», un buen baile [um bwem baile], en pie [em pjé]. So the nasal is [m] before p b m (the set of the es-ES rule ES_NASAL_LABIAL inside a word), stays [ŋ] before a velar or a glide, and is [n] before any other consonant, the value es-ES gives a nasal before such a consonant inside a word (enfermo [enˈfeɾmo], ancho [ˈantʃo])."
+    },
+    {
+      "id": "ES_EXT_FINAL_N_CORONAL",
+      "name": "word-final velar n before a coronal or palatal consonant",
+      "left_context": "ŋ$",
+      "right_context": "^[ˈˌ]?[tdðθszlɾrnɲʎʝʃʒf]",
+      "transform": "n",
+      "obligatory": true,
+      "notes": "Word-final /n/ is velar only before a pause or a vowel. Before a consonant of the next word it takes the place of that consonant, as inside a word. Lipski (1986, p. 140): «Velarization of /n/ normally occurs in word-final environments before pause (también [tambiéŋ] 'also') and usually before a following vowel (en agosto [eŋaɣósto] 'in August')», written as the rule n → ŋ / __ # [−cons]. Lipski (1986, pp. 146-147): «the velarization of word-final preconsonantal /n/ is relatively less common in most dialects (Zamora and Guitart 1982:116), and the velarization of word-internal preconsonantal /n/ is rarer still. This is due to the normal process of homorganic assimilation of nasal consonants to following obstruents», and «I know of no dialect nor even idiolect of Spanish in which the majority of instances of preconsonantal /n/ are velarized». Navarro Tomás (1918, § 87, p. 66) gives the labial case across words: «En contacto con estas mismas consonantes iniciales de palabra, la n final de una palabra anterior se pronuncia también m», un buen baile [um bwem baile], en pie [em pjé]. So the nasal is [m] before p b m (the set of the es-ES rule ES_NASAL_LABIAL inside a word), stays [ŋ] before a velar or a glide, and is [n] before any other consonant, the value es-ES gives a nasal before such a consonant inside a word (enfermo [enˈfeɾmo], ancho [ˈantʃo])."
+    }
+  ]
+}

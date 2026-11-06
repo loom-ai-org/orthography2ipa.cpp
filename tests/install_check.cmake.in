@@ -10,14 +10,27 @@ execute_process(COMMAND "${prefix}/bin/orthography2ipa" --json info pt
 if(NOT run_result EQUAL 0 OR NOT output MATCHES "\\\"code\\\":\\\"pt-PT\\\"")
     message(FATAL_ERROR "installed CLI failed: ${run_result} ${output}")
 endif()
+# The consumer finds silabificador only when the installed package hands it
+# on; any other build must configure with the package out of reach.
+# A string compare: a -P script sets no policy version, so CMake 3 reads
+# if(ON) as a variable name.
+if("@O2I_EXPORTS_SILABIFICADOR@" STREQUAL "ON")
+    set(silabificador_arg "-Dsilabificador_DIR=@silabificador_DIR@")
+else()
+    set(silabificador_arg "-DCMAKE_DISABLE_FIND_PACKAGE_silabificador=ON")
+endif()
 execute_process(COMMAND "@CMAKE_COMMAND@" -S "@CMAKE_SOURCE_DIR@/tests/package_consumer"
                 -B "${prefix}/consumer-build"
                 -Dorthography2ipa_DIR=${prefix}/lib/cmake/orthography2ipa
+                ${silabificador_arg}
                 RESULT_VARIABLE configure_result)
 if(NOT configure_result EQUAL 0)
     message(FATAL_ERROR "downstream configure failed: ${configure_result}")
 endif()
-execute_process(COMMAND "@CMAKE_COMMAND@" --build "${prefix}/consumer-build"
+# The linker also searches LD_LIBRARY_PATH, which would hide a shared
+# dependency that the installed package fails to hand on.
+execute_process(COMMAND "@CMAKE_COMMAND@" -E env --unset=LD_LIBRARY_PATH
+                        "@CMAKE_COMMAND@" --build "${prefix}/consumer-build"
                 RESULT_VARIABLE build_result)
 if(NOT build_result EQUAL 0)
     message(FATAL_ERROR "downstream build failed: ${build_result}")

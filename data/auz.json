@@ -5,7 +5,7 @@
  "quality": "stub",
  "graphemes": {},
  "allophones": {},
- "notes": "REGISTRY STUB (not a modelled G2P target). Placed so the ancestry graph covers every living ISO 639-3 language. No orthography or phonology is claimed: script is Zyyy (undetermined) until a cited description is encoded. Classification and coordinates follow Glottolog.",
+ "notes": "REGISTRY STUB (not a modelled G2P target). Placed so the ancestry graph covers every living ISO 639-3 language. No orthography or phonology is claimed: script is Zyyy (undetermined) until a cited description is encoded. Classification and coordinates follow Glottolog.\n\nRESOLVES TO ITS PARENT'S TABLE, WHICH IS A PLACEHOLDER. This spec declared a parent and no `graphemes_base`, so it produced no phonology at all and the code resolved to an empty table — a caller asking for it got nothing, silently. It now inherits, so the code reaches a usable table. That table is the parent's and is NOT a claim about this variety: no reflex here has been checked against a source. `quality` stays `stub` for exactly that reason. Replace the inherited table with cited reflexes before treating any reading here as this variety's. Graphemes inherited from ar-x-mashriqi because as abh.",
  "iso639_3": "auz",
  "glottolog_code": "uzbe1248",
  "sources": [
@@ -27,5 +27,7 @@
   "source": "glottolog",
   "notes": "Glottolog's representative point."
  },
- "parent": "x-clade-afro1255"
+ "parent": "x-clade-afro1255",
+ "graphemes_base": "ar-x-mashriqi",
+ "allophones_base": "ar-x-mashriqi"
 }

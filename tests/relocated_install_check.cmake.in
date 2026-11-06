@@ -1,0 +1,31 @@
+# An install into a prefix that is not CMAKE_INSTALL_PREFIX reads its own
+# specs, not the source tree's: the installed pt-PT spec gets another name, and
+# the installed CLI must print it with ORTHOGRAPHY2IPA_DATA_DIR unset.
+set(prefix "@CMAKE_BINARY_DIR@/relocated-install")
+if(prefix STREQUAL "@CMAKE_INSTALL_PREFIX@")
+    message(FATAL_ERROR "the test prefix must differ from CMAKE_INSTALL_PREFIX: ${prefix}")
+endif()
+file(REMOVE_RECURSE "${prefix}")
+execute_process(COMMAND "@CMAKE_COMMAND@" --install "@CMAKE_BINARY_DIR@" --prefix "${prefix}"
+                RESULT_VARIABLE install_result)
+if(NOT install_result EQUAL 0)
+    message(FATAL_ERROR "install failed: ${install_result}")
+endif()
+set(spec "${prefix}/@CMAKE_INSTALL_DATADIR@/orthography2ipa/pt-PT.json")
+file(READ "${spec}" text)
+string(REPLACE "\"name\": \"European Portuguese\"" "\"name\": \"European Portuguese (installed)\"" text "${text}")
+file(WRITE "${spec}" "${text}")
+unset(ENV{ORTHOGRAPHY2IPA_DATA_DIR})
+# A shared build runs with the libraries of this prefix.
+set(ENV{LD_LIBRARY_PATH} "${prefix}/@CMAKE_INSTALL_LIBDIR@:$ENV{LD_LIBRARY_PATH}")
+# By absolute path, and by bare name through PATH from the prefix, which holds
+# no file of that name.
+foreach(cli "${prefix}/@CMAKE_INSTALL_BINDIR@/orthography2ipa" orthography2ipa)
+    execute_process(COMMAND "@CMAKE_COMMAND@" -E env "PATH=${prefix}/@CMAKE_INSTALL_BINDIR@:$ENV{PATH}"
+                            ${cli} --json info pt
+                    WORKING_DIRECTORY "${prefix}"
+                    OUTPUT_VARIABLE output RESULT_VARIABLE run_result)
+    if(NOT run_result EQUAL 0 OR NOT output MATCHES "\"name\":\"European Portuguese \\(installed\\)\"")
+        message(FATAL_ERROR "installed CLI (${cli}) did not read the installed specs: ${run_result} ${output}")
+    endif()
+endforeach()

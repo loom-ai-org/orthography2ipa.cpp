@@ -5,9 +5,10 @@ import pathlib
 import subprocess
 import sys
 
-reference = os.environ.get("O2I_PYTHON_ROOT")
-if not reference:
-    raise SystemExit(0)
+reference = os.environ.get("O2I_PYTHON_ROOT") or str(
+    pathlib.Path(__file__).resolve().parent.parent.parent / "orthography2ipa")
+if not (pathlib.Path(reference) / "orthography2ipa" / "g2p.py").is_file():
+    raise SystemExit(f"reference package not found at {reference!r} (set O2I_PYTHON_ROOT)")
 sys.path.insert(0, reference)
 from orthography2ipa import transcribe  # noqa: E402
 

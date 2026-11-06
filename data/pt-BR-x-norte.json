@@ -1,5 +1,6 @@
 {
   "code": "pt-BR-x-norte",
+  "allophone_passes": 2,
   "name": "Nortista/Amazônico Portuguese",
   "script": "Latin",
   "graphemes": {
@@ -321,7 +322,7 @@
     ]
   },
   "parent": "pt-BR",
-  "notes": "Nortista / Amazônico (Belém, Manaus). Northeastern-type open pretonic vowels /e/ -> [ɛ], /o/ -> [ɔ]. Coda /S/ palatalised to [ʃ,ʒ] (Belém chiado): Silva (2014:2, ALFAL XVII #4814) reports, citing Noll (2008), 'certo espraiamento dessas realizacoes para outras areas do Brasil, a exemplo de Belem e Macapa, no Norte, onde haveria um grau de palatalizacao similar ao do Rio de Janeiro'; the ALiB-based grouping in Mota, Jesus & Evangelista (2010), cited ibid., places Belem and Macapa (with Rio de Janeiro, Florianopolis, Recife, Manaus, Cuiaba, Salvador) among the capitals where the palatal variant predominates in BOTH medial and absolute-final coda position. Unlike the Northeast proper, the North has high /t,d/ palatalisation before /i/ (ALiB: the North is the region of most expressive palatalisation), so palatalisation is RETAINED here (base default). Nascentes (1953:25, O linguajar carioca) grounds the North/South macro-division of Brazilian Portuguese on pretonic-vowel openness, placing this amazonico area in the falares do Norte. Tupí/Nheengatu contact in prosody and lexicon.",
+  "notes": "Nortista (Belém, Pará). Coda /S/ is palatal [ʃ ʒ]: ALiB gives above 76 % palatal only in Rio de Janeiro, Belém and Florianópolis (Borges & Mendonça 2019: 58, quoting Cardoso et al. 2014: 111). /t d/ affricate before [i]: Belém 88 % (Oliveira 2013: 216) and categorical in ALiB (Battisti & Dornelles Filho 2015: 226). Pretonic /e o/ stay closed as in the base: 'a região Norte não pode ser caracterizada como uma área de vogais abertas' (Mota & Lopes 2018: 217). Coda /R/ is the glottal [h], dominant in the North in the ALiB maps (Silva & Aguilera, preprint, not peer reviewed). Manaus is outside this spec: its word-final /S/ is 67.1 % alveolar (Marins & Margotti 2012: 265).",
   "quality": "research",
   "script_type": "alphabet",
   "sources": [
@@ -394,6 +395,66 @@
       "url": null,
       "pages": "20, 23-25",
       "notes": "Downloaded and read directly. Grounds the North/South macro-division of Brazilian Portuguese dialects on pretonic-vowel openness (p.25); places the Amazônico area in the falares do Norte."
+    },
+    {
+      "id": "borges_mendonca2019",
+      "author": "Borges, C.K.V. & Mendonça, J.J.",
+      "year": 2019,
+      "title": "A realização do /S/ na fala de universitários sergipanos do interior: efeitos sociais e linguísticos",
+      "publisher": "Primeira Escrita 6: 57-73",
+      "url": "https://periodicos.ufms.br/index.php/revpres/article/download/8881/7048",
+      "pages": "58",
+      "notes": "Quotes the ALiB map (Cardoso et al. 2014: 111)."
+    },
+    {
+      "id": "oliveira2013",
+      "author": "Oliveira, M.B.",
+      "year": 2013,
+      "title": "Os dados do ALiB: recaracterizando os falares amazônico e nordestino",
+      "publisher": "Actes du XXVIIe Congrès international de linguistique et de philologie romanes, section 8: 209-219",
+      "url": "https://web-data.atilf.fr/ressources/cilpr2013/actes/section-8/CILPR-2013-8-Oliveira.pdf",
+      "pages": "213-217",
+      "notes": null
+    },
+    {
+      "id": "battisti_dornellesfilho2015",
+      "author": "Battisti, E. & Dornelles Filho, A.A.",
+      "year": 2015,
+      "title": "Análise em tempo real da palatalização de /t/ e /d/ no português falado em uma comunidade ítalo-brasileira",
+      "publisher": "Revista da ABRALIN 14(1): 221-246",
+      "url": "https://revista.abralin.org/index.php/abralin/article/download/1239/1162/549",
+      "pages": "225-227",
+      "notes": "Summarises the ALiB capital map (Cardoso et al. 2014: 123) on p. 226."
+    },
+    {
+      "id": "mota_lopes2018",
+      "author": "Mota, J.A. & Lopes, P.H.S.",
+      "year": 2018,
+      "title": "Os subfalares do Norte e o traçado das vogais médias pretônicas",
+      "publisher": "Estudos de Lingüística Galega, volume especial I: 209-218",
+      "url": "https://doi.org/10.15304/elg.ve1.3480",
+      "pages": "212-217",
+      "notes": null
+    },
+    {
+      "id": "silva_aguilera_preprint",
+      "author": "Silva, H.C. & Aguilera, V.A.",
+      "year": 2026,
+      "title": "Os róticos e a configuração dialetal do português brasileiro: de Nascentes ao ALiB",
+      "publisher": "SciELO Preprints (not peer reviewed)",
+      "url": "https://doi.org/10.1590/SciELOPreprints.14175",
+      "pages": null,
+      "notes": "Version 2."
+    },
+    {
+      "id": "marins_margotti2012",
+      "author": "Marins, F.S. & Margotti, F.W.",
+      "year": 2012,
+      "title": "Comportamento fonético-fonológico do /S/ pós-vocálico em Manaus",
+      "publisher": "Investigações 25(2): 249-274",
+      "url": "https://periodicos.ufpe.br/revistas/INV/article/download/348/293/804",
+      "pages": "254-265",
+      "notes": null
     }
   ],
   "wikipedia": [
@@ -408,75 +469,13 @@
     "end_year": null
   },
   "iso639_3": "por",
-  "stress": {
-    "onset_clusters": ["bl", "br", "bɫ", "bɾ", "bʀ", "bʁ", "bʎ", "bχ", "dr", "dɾ", "dʀ", "dʁ", "dʎ", "dχ", "fl", "fr", "fɫ", "fɾ", "fʀ", "fʁ", "fʎ", "fχ", "kl", "kr", "kɫ", "kɾ", "kʀ", "kʁ", "kʎ", "kχ", "pl", "pr", "pɫ", "pɾ", "pʀ", "pʁ", "pʎ", "pχ", "tr", "tɾ", "tʀ", "tʁ", "tʎ", "tχ", "vl", "vr", "vɫ", "vɾ", "vʀ", "vʁ", "vʎ", "vχ", "ðr", "ðɾ", "ðʀ", "ðʁ", "ðʎ", "ðχ", "ɡl", "ɡr", "ɡɫ", "ɡɾ", "ɡʀ", "ɡʁ", "ɡʎ", "ɡχ", "ɣl", "ɣr", "ɣɫ", "ɣɾ", "ɣʀ", "ɣʁ", "ɣʎ", "ɣχ", "βl", "βr", "βɫ", "βɾ", "βʀ", "βʁ", "βʎ", "βχ"],
-    "cliticless_words": ["o", "a", "os", "as", "de", "do", "da", "dos", "das", "em", "no", "na", "nos", "nas", "por", "pelo", "pela", "pelos", "pelas", "ao", "aos", "à", "às", "com", "sem", "e", "que", "se", "me", "te", "lhe", "lhes", "vos", "lo", "la", "los", "las", "lho", "lha", "lhos", "lhas"],
-    "default_position": -2,
-    "final_stress_endings": [
-      "r",
-      "l",
-      "z",
-      "x",
-      "i",
-      "u",
-      "im",
-      "om",
-      "um",
-      "is",
-      "us",
-      "ns",
-      "ão",
-      "ãe",
-      "õe",
-      "au",
-      "éu",
-      "éi",
-      "ói"
-    ],
-    "penult_stress_endings": [],
-    "marked_vowels": [
-      "á",
-      "é",
-      "í",
-      "ó",
-      "ú",
-      "â",
-      "ê",
-      "ô",
-      "ã",
-      "õ"
-    ],
-    "stress_mark": "ˈ",
-    "notes": "Acordo Ortográfico 1990 conventions: paroxytone default; written accents override; final -i/-u/-r/-l/-z/-x/-im/-om/-um/-ns and nasal diphthongs attract final stress. Unmarked -em/-am stay paroxytone (homem, falam). DIPHTHONGS: declared so the bundled syllabifier counts nuclei correctly — without them every vowel run merges into one nucleus and co-e-lho is read as coe-lho, one syllable short, putting the stress and its vowel reduction on the wrong vowel. ⟨oe⟩ is hiatus, not a diphthong (Cunha & Cintra, §Ditongos).",
-    "diphthongs": [
-      "ãe",
-      "ão",
-      "õe",
-      "ai",
-      "ái",
-      "au",
-      "áu",
-      "ei",
-      "éi",
-      "êi",
-      "eu",
-      "éu",
-      "êu",
-      "iu",
-      "oi",
-      "ói",
-      "ôi",
-      "ou",
-      "ui"
-    ]
-  },
   "graphemes_base": "pt-BR",
   "allophones_base": "pt-BR",
   "positional_graphemes_base": "pt-BR",
   "positional_graphemes": {
     "e": {
-      "pretonic": [
-        "ɛ"
+      "nucleus_unstressed": [
+        "e"
       ],
       "word_final": [
         "ɪ"
@@ -486,11 +485,11 @@
       ]
     },
     "o": {
-      "pretonic": [
-        "ɔ"
-      ],
       "word_final": [
         "ʊ"
+      ],
+      "nucleus_unstressed": [
+        "o"
       ],
       "posttonic": [
         "ʊ"
@@ -520,6 +519,21 @@
       "word_final": [
         "ʃ"
       ]
+    },
+    "r": {
+      "word_initial": [
+        "ʁ"
+      ],
+      "intervocalic": [
+        "ɾ"
+      ],
+      "before_consonant": [
+        "h"
+      ],
+      "word_final": [
+        "h",
+        ""
+      ]
     }
   },
   "location": {
@@ -530,16 +544,59 @@
   },
   "allophone_rules": [
     {
-      "id": "BR_AFFRIC_T_RAISED",
-      "phonemes": [],
-      "surface": "t͡ʃ",
-      "notes": "DISABLED for the nordeste/norte variety per its non-palatalising final-⟨e⟩ behaviour: no affrication of /t d/ before a raised final ⟨e⟩."
+      "id": "BR_RAISE_FINAL_ES",
+      "phonemes": [
+        "e",
+        "ɪ"
+      ],
+      "surface": "i",
+      "stress": "unstressed",
+      "followed_by_phoneme": [
+        "s",
+        "ʃ"
+      ],
+      "followed_by_2": "word_boundary",
+      "notes": "The palatal coda sibilant of this variety is [ʃ], so the base rule must also match [ʃ]; the plural endings raise as in the base (dentes, ovos)."
     },
     {
-      "id": "BR_AFFRIC_D_RAISED",
-      "phonemes": [],
-      "surface": "d͡ʒ",
-      "notes": "DISABLED for the nordeste/norte variety per its non-palatalising final-⟨e⟩ behaviour: no affrication of /t d/ before a raised final ⟨e⟩."
+      "id": "BR_RAISE_FINAL_OS",
+      "phonemes": [
+        "o",
+        "ʊ"
+      ],
+      "surface": "u",
+      "stress": "unstressed",
+      "followed_by_phoneme": [
+        "s",
+        "ʃ"
+      ],
+      "followed_by_2": "word_boundary",
+      "notes": "The palatal coda sibilant of this variety is [ʃ], so the base rule must also match [ʃ]; the plural endings raise as in the base (dentes, ovos)."
+    },
+    {
+      "id": "BR_CODA_SH_VOICED",
+      "phonemes": [
+        "ʃ"
+      ],
+      "surface": "ʒ",
+      "syllable_position": "coda",
+      "followed_by_phoneme": [
+        "b",
+        "d",
+        "ɡ",
+        "v",
+        "z",
+        "ʒ",
+        "d͡ʒ",
+        "m",
+        "n",
+        "ɲ",
+        "l",
+        "ʎ",
+        "ɾ",
+        "ʁ"
+      ],
+      "notes": "The palatal coda /S/ takes the voicing of a following voiced consonant: mesmo [ˈmeʒmu], desde [ˈdeʒd͡ʒi]. Marins & Margotti (2012: 255) report six coda /S/ realisations in the Pará atlas data, among them 'pós-alveolar (surda e sonora)', and for Belém that 'é a variante pós-alveolar que é utilizada com mais frequência'. The positional map writes the coda as [ʃ]; this rule voices it in the second pass."
     }
   ]
 }

@@ -2,9 +2,84 @@
   "code": "nl-BE",
   "name": "Belgian Dutch (Flemish)",
   "script": "Latin",
-  "graphemes_base": "nl",
-  "allophones_base": "nl",
+  "graphemes_base": "nl-NL",
+  "allophones_base": "nl-NL",
+  "collapse_geminates": true,
+  "graphemes": {
+    "ch": [
+      "x"
+    ],
+    "berg": [
+      "bɛrɣ",
+      "bɛrx"
+    ],
+    "brecht": [
+      "brɛxt"
+    ],
+    "w": [
+      "w"
+    ],
+    "qu": [
+      "kw"
+    ],
+    "kerk": [
+      "kɛr̥k"
+    ]
+  },
+  "positional_graphemes": {
+    "g": {
+      "word_final": [
+        "x"
+      ],
+      "default": [
+        "ɣ"
+      ]
+    },
+    "berg": {
+      "word_final": [
+        "bɛrx"
+      ],
+      "default": [
+        "bɛrɣ"
+      ]
+    },
+    "sch": {
+      "word_final": [
+        "s"
+      ],
+      "default": [
+        "sx"
+      ]
+    },
+    "ieuw": {
+      "before_vowel": [
+        "iw"
+      ],
+      "default": [
+        "iu"
+      ]
+    },
+    "eeuw": {
+      "before_vowel": [
+        "eːw"
+      ],
+      "default": [
+        "eːu"
+      ]
+    },
+    "uw": {
+      "before_vowel": [
+        "yw"
+      ],
+      "default": [
+        "yu"
+      ]
+    }
+  },
   "allophones": {
+    "x": [
+      "x"
+    ],
     "ɣ": [
       "ɣ",
       "ʝ"
@@ -12,10 +87,19 @@
     "r": [
       "r",
       "ɾ"
+    ],
+    "w": [
+      "w"
     ]
   },
-  "parent": "nl",
-  "notes": "Flemish / Belgian Dutch (Vlaams). Alveolar /r/ [r] in most varieties (vs. NL uvular [ʀ]). /ɣ/ (voiced velar fricative) more robust than in NL Dutch. Considered more conservative than Netherlands Dutch in some features. Strong dialect continuum from West-Flemish to Limburgish. Source: König & van der Auwera (1994).",
+  "word_exceptions": {
+    "bevel": "bəˈvɛl",
+    "gestel": "ɣəˈstɛl",
+    "gezel": "ɣəˈzɛl",
+    "gezwel": "ɣəˈzwɛl"
+  },
+  "parent": "nl-NL",
+  "notes": "Flemish / Belgian Dutch (Vlaams). Alveolar /r/ [r] in most varieties (vs. NL uvular [ʀ]). /ɣ/ (voiced velar fricative) more robust than in NL Dutch. Considered more conservative than Netherlands Dutch in some features. Strong dialect continuum from West-Flemish to Limburgish. Source: König & van der Auwera (1994). ⟨w⟩ (Verhoeven 2005, JIPA 35(2)): \"[w] has a labial-velar articulation rather than labiodental in many accents of Netherlandic Dutch\" (p. 245), with \"w waːʀ̥ waar 'true'\" in the word list (p. 244). So ⟨w⟩ is [w], against the [ʋ] of nl-NL, and the consonant that ⟨ieuw eeuw uw⟩ give before a vowel is [w] too: leeuwen [leːwən], nieuwe [niwə], duwen [dywən]. Paardekooper (1987, ABN-uitspraakgids, p. XVIII) notes the same bilabial w \"in veel zuidelijke dialecten\". ⟨g ch⟩ (Verhoeven 2005, p. 244): \"Belgian Dutch has a voiced and voiceless velar fricative: these are absent in the Netherlands\", with \"x xɛil chijl\" and \"ɣ ɣɛil geil\" in the word list. So nl-BE restates the velar values of ⟨g ch sch berg brecht⟩ against the uvular [χ] of nl-NL. ⟨ee eu oo⟩ and the open-syllable ⟨e o⟩ (Verhoeven 2005, pp. 245-246): \"In Belgian Dutch, however, they are always monophthongs\". So nl-BE disables the six NL_MID_TENSE_* rules by id and keeps [eː øː oː] against the closing diphthongs [ei øy ou] of nl-NL. ⟨r⟩ (Verhoeven 2005, p. 245): \"The alveolar trill is most frequent and geographically most widely distributed\", and the trill is voiceless \"word-finally as in [doːʀ̥] 'through' and when followed by a voiceless stop in consonant clusters as in [vaːʀ̥t] 'sails'\". So nl-BE disables the coda [ɹ] of nl-NL, keeps the trill [r] and devoices it word-finally and before /p t k/ (NL_BE_R_DEVOICE_*). The key ⟨kerk⟩ states [r̥] itself, because the rules do not reach inside a key of more than one segment. ONSET ⟨v z g⟩: nl-BE keeps the voiced [v z ɣ]. Verhoeven (2005, p. 244) states the category: \"Belgian Dutch has a voiced and voiceless velar fricative\". The measurements give a gradient share. The same page: \"70% of word-initial and 56% of intervocalic fricatives are realised without any trace of vocal fold vibration\". Verhoeven & Hageman (2007, Nederlandse Taalkunde 12(2)) measured 4,800 tokens of 40 speakers from four Flemish regions: 16% of the fricatives fully voiced, 17% partly devoiced and 65% fully devoiced, with a mean voicing of 16% for /ɣ/, 30% for /v/ and 32% for /z/ (p. 143); 20% voicing word-initially against 32% word-internally, and \"geen significante verschillen tussen de regio’s\" (p. 144); 84% of the fricatives \"(geheel of gedeeltelijk) zonder stembandtrilling\" (p. 145). They also report Van de Velde & Van Hout (2001), which is cited here only as they report it: 56% of the Flemish fricatives sound voiced (p. 139), and listeners judge only 61.24% of the fricatives as devoiced (p. 145). van der Harst & Van de Velde (2007, Taal en Tongval 59, p. 184, Table 4): the word-initial (γ) of guize is fully voiceless in 86.3% of the Flemish teacher tokens, and in 95.0% in Flemish Brabant. The category claim and the measured shares conflict, and no opened source states a categorical [f s x] for the onset, so the spec keeps the voiced values. DOUBLED CONSONANT LETTERS (collapse_geminates): a doubled consonant letter spells one consonant, and two identical consonants that meet inside the word are one. The flag is not inherited, so the spec states it, as nl-NL and its children do. Verhoeven (2005, JIPA 35(2), p. 247) transcribes the Belgian Standard Dutch reading with one consonant for each doubled letter: uittrekken [ʔœytrɛkə], induffelde [ɪndʏfəldə], onmiddellijk [ɔmɪdələk]. CODA DEVOICING INSIDE ⟨berg⟩ AND ⟨veld⟩: Paardekooper (1987, ABN-uitspraakgids) transcribes the Belgian norm (p. V: the ABN form matters \"vooral voor Vlaanderen\"). He writes the devoiced obstruent both at the end of a compound member and before a voiceless obstruent inside the word: bergketen bɛr ə xketə and bergplaats bɛr ə xplats (p. 21), gebergte gə'bɛr ə xtə (p. 69), veldpost vɛltpɔst and veldslag vɛltslɑx (p. 218). He gives no rule in words. ⟨berg⟩ and ⟨veld⟩ are one grapheme slot each, so NL_BE_CODA_DEVOICE_BERG and NL_CODA_DEVOICE_VELD match the whole slot before a voiceless obstruent: bergtop [ˈbɛrxtɔp], gebergte [ɣəˈbɛrxtə], veldslag [ˈvɛltslɑx]. LEAD, NOT MODELLED: Paardekooper writes a svarabhakti schwa in the coda clusters ⟨rg rk lk⟩ (berg bɛr ə x, berk bɛr ə k, balk bɑl ə k). Inside one morpheme he writes it in almost every headword. The two coda exceptions found are bewerkstelligen bə'werkstɛləgə (p. 24) and overwerk ovərwɛrk (p. 148), against achterwerk ɑxtərwɛr ə k (p. 5). Where the letters span a morpheme boundary (verklaren, overgroot, taalkring) he writes no schwa, because the cluster is no coda there. ⟨qu⟩ is [kw], against the [kʋ] of nl-NL. Paardekooper (1987, p. 164) writes kw (quota kwota), and the w of this spec is [w] (Verhoeven 2005, p. 245). The French loans with plain [k] come from NL_QU_FRENCH_K of nl-NL. The prefixed words bevel, gestel, gezel and gezwel are word exceptions with the stress after the prefix (Paardekooper 1987, pp. 23, 73, 74, 75): the schwa-rime test of nl-NL would put the stress on the prefix.",
   "quality": "skeleton",
   "script_type": "alphabet",
   "sources": [
@@ -28,6 +112,46 @@
       "url": null,
       "pages": null,
       "notes": "In: Handbook of the International Phonetic Association"
+    },
+    {
+      "id": "verhoeven2005",
+      "author": "Verhoeven, J.",
+      "year": 2005,
+      "title": "Belgian Standard Dutch",
+      "publisher": "Journal of the International Phonetic Association",
+      "url": "https://doi.org/10.1017/S0025100305002173",
+      "pages": "243-247",
+      "notes": "Illustrations of the IPA, JIPA 35(2)"
+    },
+    {
+      "id": "verhoeven_hageman2007",
+      "author": "Verhoeven, J. & Hageman, G.",
+      "year": 2007,
+      "title": "De verstemlozing van fricatieven in Vlaanderen",
+      "publisher": "Nederlandse Taalkunde",
+      "url": null,
+      "pages": "138-151",
+      "notes": "Nederlandse Taalkunde 12(2)"
+    },
+    {
+      "id": "vanderharst_vandevelde2007",
+      "author": "van der Harst, S. & Van de Velde, H.",
+      "year": 2007,
+      "title": "17 g's in het Standaardnederlands?",
+      "publisher": "Taal en Tongval",
+      "url": null,
+      "pages": "172-195",
+      "notes": "Taal en Tongval 59"
+    },
+    {
+      "id": "paardekooper1987",
+      "author": "Paardekooper, P.C.",
+      "year": 1987,
+      "title": "ABN-uitspraakgids",
+      "publisher": "Heideland-Orbis",
+      "url": "https://www.dbnl.org/tekst/paar001abnu01_01/",
+      "pages": "V, VIII, X, XV, XVIII, 5, 11, 12, 21, 24, 35-41, 45, 49, 57-60, 66, 69, 72, 87, 148, 154, 155, 158, 164, 169, 181, 192, 207, 218",
+      "notes": "Second, fully revised edition, Antwerpen; first edition 1978"
     }
   ],
   "wikipedia": [
@@ -46,5 +170,113 @@
     "longitude": 4.5,
     "source": "wikidata",
     "notes": "the Flemish Region — the Dutch-speaking part of Belgium, not Belgium as a whole. A region-level point. [Wikidata Q9337 P625]"
-  }
+  },
+  "allophone_rules": [
+    {
+      "id": "NL_MID_TENSE_CENTRING_BEFORE_R_E",
+      "phonemes": [],
+      "surface": "",
+      "notes": "Verhoeven (2005, JIPA 35(2), pp. 245-246): \"The main difference between Belgian Dutch and Netherlandic Dutch has to do with the pronunciation of the half-close long vowels [eː], [øː] and [oː]. In the Netherlands, these are frequently diphthongized. In Belgian Dutch, however, they are always monophthongs.\" So nl-BE disables the inherited nl-NL rule and keeps the monophthong."
+    },
+    {
+      "id": "NL_MID_TENSE_CENTRING_BEFORE_R_OE",
+      "phonemes": [],
+      "surface": "",
+      "notes": "Verhoeven (2005, JIPA 35(2), pp. 245-246): \"The main difference between Belgian Dutch and Netherlandic Dutch has to do with the pronunciation of the half-close long vowels [eː], [øː] and [oː]. In the Netherlands, these are frequently diphthongized. In Belgian Dutch, however, they are always monophthongs.\" So nl-BE disables the inherited nl-NL rule and keeps the monophthong."
+    },
+    {
+      "id": "NL_MID_TENSE_CENTRING_BEFORE_R_O",
+      "phonemes": [],
+      "surface": "",
+      "notes": "Verhoeven (2005, JIPA 35(2), pp. 245-246): \"The main difference between Belgian Dutch and Netherlandic Dutch has to do with the pronunciation of the half-close long vowels [eː], [øː] and [oː]. In the Netherlands, these are frequently diphthongized. In Belgian Dutch, however, they are always monophthongs.\" So nl-BE disables the inherited nl-NL rule and keeps the monophthong."
+    },
+    {
+      "id": "NL_MID_TENSE_CLOSING_DIPHTHONG_E",
+      "phonemes": [],
+      "surface": "",
+      "notes": "Verhoeven (2005, JIPA 35(2), pp. 245-246): \"The main difference between Belgian Dutch and Netherlandic Dutch has to do with the pronunciation of the half-close long vowels [eː], [øː] and [oː]. In the Netherlands, these are frequently diphthongized. In Belgian Dutch, however, they are always monophthongs.\" So nl-BE disables the inherited nl-NL rule and keeps the monophthong."
+    },
+    {
+      "id": "NL_MID_TENSE_CLOSING_DIPHTHONG_OE",
+      "phonemes": [],
+      "surface": "",
+      "notes": "Verhoeven (2005, JIPA 35(2), pp. 245-246): \"The main difference between Belgian Dutch and Netherlandic Dutch has to do with the pronunciation of the half-close long vowels [eː], [øː] and [oː]. In the Netherlands, these are frequently diphthongized. In Belgian Dutch, however, they are always monophthongs.\" So nl-BE disables the inherited nl-NL rule and keeps the monophthong."
+    },
+    {
+      "id": "NL_MID_TENSE_CLOSING_DIPHTHONG_O",
+      "phonemes": [],
+      "surface": "",
+      "notes": "Verhoeven (2005, JIPA 35(2), pp. 245-246): \"The main difference between Belgian Dutch and Netherlandic Dutch has to do with the pronunciation of the half-close long vowels [eː], [øː] and [oː]. In the Netherlands, these are frequently diphthongized. In Belgian Dutch, however, they are always monophthongs.\" So nl-BE disables the inherited nl-NL rule and keeps the monophthong."
+    },
+    {
+      "id": "NL_CODA_R_APPROXIMANT",
+      "phonemes": [],
+      "surface": "",
+      "notes": "Disabled: the coda approximant [ɹ] is Netherlandic (Gussenhoven 1992, p. 46). Verhoeven (2005, JIPA 35(2), p. 245): \"The alveolar trill is most frequent and geographically most widely distributed.\" and \"The alveolar/uvular trill is voiced in all positions, except word-finally as in [doːʀ̥] 'through' and when followed by a voiceless stop in consonant clusters as in [vaːʀ̥t] 'sails'.\""
+    },
+    {
+      "id": "NL_CODA_DEVOICE_VELD",
+      "phonemes": [
+        "d"
+      ],
+      "surface": "t",
+      "syllable_position": "coda",
+      "followed_by_phoneme": [
+        "t",
+        "k",
+        "s",
+        "f",
+        "p",
+        "x",
+        "χ"
+      ],
+      "grapheme": [
+        "veld"
+      ],
+      "notes": "⟨veld⟩ is one grapheme slot, and the inherited NL_CODA_DEVOICE_D names the grapheme ⟨d⟩, so it does not reach the [d] of the slot. This rule names the grapheme ⟨veld⟩ and devoices the last segment of the slot. Paardekooper (1987, ABN-uitspraakgids) transcribes the Belgian norm (p. V: the ABN form matters \"vooral voor Vlaanderen\"). He writes the devoiced obstruent both at the end of a compound member and before a voiceless obstruent inside the word: bergketen bɛr ə xketə and bergplaats bɛr ə xplats (p. 21), gebergte gə'bɛr ə xtə (p. 69), veldpost vɛltpɔst and veldslag vɛltslɑx (p. 218). He gives no rule in words. Before a vowel the [d] is an onset and stays: velden [ˈvɛldən]. Before /b d/ the rule leaves it voiced: veldbed vɛl(d)bɛt (p. 218)."
+    },
+    {
+      "id": "NL_BE_CODA_DEVOICE_BERG",
+      "phonemes": [
+        "ɣ"
+      ],
+      "surface": "x",
+      "syllable_position": "coda",
+      "followed_by_phoneme": [
+        "t",
+        "k",
+        "s",
+        "f",
+        "p",
+        "x",
+        "χ"
+      ],
+      "grapheme": [
+        "berg"
+      ],
+      "notes": "⟨berg⟩ is one grapheme slot, and the inherited NL_CODA_DEVOICE_G names the grapheme ⟨g⟩, so it does not reach the [ɣ] of the slot. This rule names the grapheme ⟨berg⟩ and devoices the last segment of the slot. The word-final [x] comes from positional_graphemes. Paardekooper (1987, ABN-uitspraakgids) transcribes the Belgian norm (p. V: the ABN form matters \"vooral voor Vlaanderen\"). He writes the devoiced obstruent both at the end of a compound member and before a voiceless obstruent inside the word: bergketen bɛr ə xketə and bergplaats bɛr ə xplats (p. 21), gebergte gə'bɛr ə xtə (p. 69), veldpost vɛltpɔst and veldslag vɛltslɑx (p. 218). He gives no rule in words. So bergtop is [ˈbɛrxtɔp] and gebergte [ɣəˈbɛrxtə]. Before a vowel the [ɣ] stays: bergen bɛr ə gə (p. 21). His svarabhakti schwa (bɛr ə x) is not modelled. nl-BE-x-antwerp gives the slot its own value [bɛɾəɣ], and this rule devoices its last segment too: bergtop [ˈbɛɾəxtɔp]."
+    },
+    {
+      "id": "NL_BE_R_DEVOICE_WORD_FINAL",
+      "phonemes": [
+        "r"
+      ],
+      "surface": "r̥",
+      "word_final": true,
+      "notes": "Verhoeven (2005, JIPA 35(2), p. 245): \"The alveolar trill is most frequent and geographically most widely distributed.\" and \"The alveolar/uvular trill is voiced in all positions, except word-finally as in [doːʀ̥] 'through' and when followed by a voiceless stop in consonant clusters as in [vaːʀ̥t] 'sails'.\" So a word-final /r/ is the voiceless trill: door [doːr̥]."
+    },
+    {
+      "id": "NL_BE_R_DEVOICE_BEFORE_VOICELESS_STOP",
+      "phonemes": [
+        "r"
+      ],
+      "surface": "r̥",
+      "followed_by_phoneme": [
+        "p",
+        "t",
+        "k"
+      ],
+      "notes": "Verhoeven (2005, JIPA 35(2), p. 245): \"The alveolar trill is most frequent and geographically most widely distributed.\" and \"The alveolar/uvular trill is voiced in all positions, except word-finally as in [doːʀ̥] 'through' and when followed by a voiceless stop in consonant clusters as in [vaːʀ̥t] 'sails'.\" So /r/ before /p t k/ is the voiceless trill: vaart [vaːr̥t], dorp [dɔr̥p]."
+    }
+  ]
 }

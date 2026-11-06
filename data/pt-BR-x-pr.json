@@ -1,5 +1,6 @@
 {
   "code": "pt-BR-x-pr",
+  "allophone_passes": 2,
   "name": "Curitibano/Paranaense Portuguese",
   "script": "Latin",
   "graphemes": {
@@ -315,7 +316,7 @@
     ]
   },
   "parent": "pt-BR",
-  "notes": "Curitibano / Paranaense (Curitiba, Paraná). Transitional Sulista–Paulistano. Encoded conservative default: non-palatalising /t,d/ and final /e/ often retained as [e] (the well-documented Curitiba 'e/o fechados'), with palatalisation present in younger and Paulista-influenced speech (noted). Coda /S/ alveolar; coda /R/ tap. Heterogeneous: Curitiba diverges from the more caipira-like Paraná interior. Slavic/Italian settler substrata. This spec models the Curitiba/Sulista-type coda /r/ as an alveolar tap [ɾ]; the retroflex 'r caipira' (Amaral 1920 §6b) is instead characteristic of the northern/interior Paraná hinterland, which patterns with pt-BR-x-caipira.",
+  "notes": "Curitibano (Curitiba, Paraná). Final unstressed /e/ is mostly kept as [e]: Limeira (2013, VARSUL), reported by Franceschini & Loregian-Penkal (2023: 2), finds '62% para /o/ e 70% para /e/' of post-tonic mid vowels not raised; the spec keeps final [e] and raises final /o/ as the base does (Curitiba raises /o/ in 81 %, ibid.). /t d/ before [i] stay stops as the first candidate: ALiB rates Curitiba palatalisation 'moderada' (Battisti & Dornelles Filho 2015: 226), not categorical. Coda /R/ is the tap; Silva (2023: 67) places Paraná in the retroflex zone, so the coda rhotic of the capital is not settled by the opened sources.",
   "quality": "research",
   "script_type": "alphabet",
   "sources": [
@@ -378,6 +379,36 @@
       "url": null,
       "pages": null,
       "notes": null
+    },
+    {
+      "id": "franceschini_loregian2023",
+      "author": "Franceschini, L.T. & Loregian-Penkal, L.",
+      "year": 2023,
+      "title": "Análise da elevação da vogal átona final /o/ em Prudentópolis e Mallet, Paraná",
+      "publisher": "Interfaces 13(4)",
+      "url": "https://doi.org/10.5935/2179-0027.20220070",
+      "pages": "2",
+      "notes": "Reports Vieira (2002, 2009) and Limeira (2013) for the southern capitals on p. 2."
+    },
+    {
+      "id": "battisti_dornellesfilho2015",
+      "author": "Battisti, E. & Dornelles Filho, A.A.",
+      "year": 2015,
+      "title": "Análise em tempo real da palatalização de /t/ e /d/ no português falado em uma comunidade ítalo-brasileira",
+      "publisher": "Revista da ABRALIN 14(1): 221-246",
+      "url": "https://revista.abralin.org/index.php/abralin/article/download/1239/1162/549",
+      "pages": "225-227",
+      "notes": "Summarises the ALiB capital map (Cardoso et al. 2014: 123) on p. 226."
+    },
+    {
+      "id": "silva2023",
+      "author": "Silva, H.C.",
+      "year": 2023,
+      "title": "Mapeamento da variação do /R/, em coda silábica interna, na Região Sudeste: contribuições do QGIS",
+      "publisher": "Signum: Estudos da Linguagem 26(3): 62-77",
+      "url": "https://doi.org/10.5433/2237-4876.2023v26n3p62-77",
+      "pages": "67-70",
+      "notes": null
     }
   ],
   "wikipedia": [
@@ -389,68 +420,6 @@
     "end_year": null
   },
   "iso639_3": "por",
-  "stress": {
-    "onset_clusters": ["bl", "br", "bɫ", "bɾ", "bʀ", "bʁ", "bʎ", "bχ", "dr", "dɾ", "dʀ", "dʁ", "dʎ", "dχ", "fl", "fr", "fɫ", "fɾ", "fʀ", "fʁ", "fʎ", "fχ", "kl", "kr", "kɫ", "kɾ", "kʀ", "kʁ", "kʎ", "kχ", "pl", "pr", "pɫ", "pɾ", "pʀ", "pʁ", "pʎ", "pχ", "tr", "tɾ", "tʀ", "tʁ", "tʎ", "tχ", "vl", "vr", "vɫ", "vɾ", "vʀ", "vʁ", "vʎ", "vχ", "ðr", "ðɾ", "ðʀ", "ðʁ", "ðʎ", "ðχ", "ɡl", "ɡr", "ɡɫ", "ɡɾ", "ɡʀ", "ɡʁ", "ɡʎ", "ɡχ", "ɣl", "ɣr", "ɣɫ", "ɣɾ", "ɣʀ", "ɣʁ", "ɣʎ", "ɣχ", "βl", "βr", "βɫ", "βɾ", "βʀ", "βʁ", "βʎ", "βχ"],
-    "cliticless_words": ["o", "a", "os", "as", "de", "do", "da", "dos", "das", "em", "no", "na", "nos", "nas", "por", "pelo", "pela", "pelos", "pelas", "ao", "aos", "à", "às", "com", "sem", "e", "que", "se", "me", "te", "lhe", "lhes", "vos", "lo", "la", "los", "las", "lho", "lha", "lhos", "lhas"],
-    "default_position": -2,
-    "final_stress_endings": [
-      "r",
-      "l",
-      "z",
-      "x",
-      "i",
-      "u",
-      "im",
-      "om",
-      "um",
-      "is",
-      "us",
-      "ns",
-      "ão",
-      "ãe",
-      "õe",
-      "au",
-      "éu",
-      "éi",
-      "ói"
-    ],
-    "penult_stress_endings": [],
-    "marked_vowels": [
-      "á",
-      "é",
-      "í",
-      "ó",
-      "ú",
-      "â",
-      "ê",
-      "ô",
-      "ã",
-      "õ"
-    ],
-    "stress_mark": "ˈ",
-    "notes": "Acordo Ortográfico 1990 conventions: paroxytone default; written accents override; final -i/-u/-r/-l/-z/-x/-im/-om/-um/-ns and nasal diphthongs attract final stress. Unmarked -em/-am stay paroxytone (homem, falam). DIPHTHONGS: declared so the bundled syllabifier counts nuclei correctly — without them every vowel run merges into one nucleus and co-e-lho is read as coe-lho, one syllable short, putting the stress and its vowel reduction on the wrong vowel. ⟨oe⟩ is hiatus, not a diphthong (Cunha & Cintra, §Ditongos).",
-    "diphthongs": [
-      "ãe",
-      "ão",
-      "õe",
-      "ai",
-      "ái",
-      "au",
-      "áu",
-      "ei",
-      "éi",
-      "êi",
-      "eu",
-      "éu",
-      "êu",
-      "iu",
-      "oi",
-      "ói",
-      "ôi",
-      "ou",
-      "ui"
-    ]
-  },
   "graphemes_base": "pt-BR",
   "allophones_base": "pt-BR",
   "positional_graphemes_base": "pt-BR",
@@ -504,13 +473,19 @@
       "id": "BR_AFFRIC_T_RAISED",
       "phonemes": [],
       "surface": "t͡ʃ",
-      "notes": "DISABLED for the Curitibano (Paraná) variety: conservative dental /t d/, no palatalisation; the positional before_i suppression keeps ⟨di/ti⟩ dental and this base rule must not re-impose affrication (including before a raised final ⟨e⟩)."
+      "notes": "Switched off with the positional before_i stops: Curitiba palatalisation is 'moderada' in ALiB (Battisti & Dornelles Filho 2015: 226), and the stop is kept as the first candidate."
     },
     {
       "id": "BR_AFFRIC_D_RAISED",
       "phonemes": [],
       "surface": "d͡ʒ",
-      "notes": "DISABLED for the Curitibano (Paraná) variety: conservative dental /t d/, no palatalisation; the positional before_i suppression keeps ⟨di/ti⟩ dental and this base rule must not re-impose affrication (including before a raised final ⟨e⟩)."
+      "notes": "Switched off with the positional before_i stops: Curitiba palatalisation is 'moderada' in ALiB (Battisti & Dornelles Filho 2015: 226), and the stop is kept as the first candidate."
+    },
+    {
+      "id": "BR_EPENTHESIS_POSTTONIC",
+      "phonemes": [],
+      "surface": "",
+      "notes": "Switched off. Collischonn (2004: 67, Tabela 1) counts epenthesis after the stressed syllable in 49 of 206 tokens (24 %) in the speech of Porto Alegre, Florianópolis and Curitiba, and reads the grammar without it as the preferred one (p. 76). The pretonic rule BR_EPENTHESIS stays on (225 of 325, 69 %)."
     }
   ]
 }

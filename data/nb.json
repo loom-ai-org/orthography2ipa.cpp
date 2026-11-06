@@ -397,7 +397,38 @@
     "stress_mark": "ˈ",
     "notes": "Germanic initial stress."
   },
+  "audit": {
+    "ipa_childes": {
+      "conclusion": "at_ceiling_documented",
+      "measured": "Board PER 0.3587 (n=3176) before the two rules this row measured, 0.3550 after them: NB_VELAR_K_SOFTENING_INITIAL_ONLY and NB_VELAR_G_SOFTENING_INITIAL_ONLY keep the palatal reading of ⟨k g⟩ before a front vowel to the word-initial letter. Of 75 words with a medial ⟨k⟩ before a front vowel letter the gold writes k in 72 (kake, leke, frøken), and this spec wrote ç in all 75 before; of 43 with a medial ⟨g⟩ the gold writes ɡ in 40 (dagen, eget, hage), and this spec wrote j in all 43 before. The 11 and 20 word-initial cases keep ç and j on both sides. The rest of the row is the gold's notation. It is espeak-derived, and scripts/fold_nb_notation.py folds seven of its conventions out of BOTH sides cumulatively with the harness's own normalize() (broad) and levenshtein(): an aspiration mark on every voiceless stop (1504 of 3176 gold words) 0.3000, vowel length 0.2459, the tap ɾ 0.2229, ɒ for short ⟨å o⟩ 0.2038, a for short ⟨a⟩ 0.1790, tense letters for the lax ɛ ɪ ʏ ʊ 0.1412, and the unstressed word-final ⟨-e⟩ written a 0.1033, after which 2008 of 3176 words (63.2%) match exactly. The last fold is a gold error, folded only to size it: 599 of the 612 words ending in ⟨-e⟩ end in a in the gold, and that letter is the schwa (Kristoffersen 2000), as this spec writes it in 583 of them. None of the seven is a contrast the spelling fails to write, so no valid_ceiling is recorded (T-2583). What remains after the folds is the gold's Eastern Norwegian dialect readings (⟨sl⟩ as ʃl, ⟨nd⟩ as nn) and the letters whose reading the spelling underdetermines, which the spec's existing wikipron and ipadict ceilings already describe.",
+      "reference": "kristoffersen2000 (palatalisation of the velars, schwa in unstressed syllables); see scripts/fold_nb_notation.py"
+    }
+  },
   "allophone_rules": [
+    {
+      "id": "NB_VELAR_K_SOFTENING_INITIAL_ONLY",
+      "phonemes": [
+        "ç"
+      ],
+      "surface": "k",
+      "grapheme": [
+        "k"
+      ],
+      "word_initial": false,
+      "notes": "The palatal reading of ⟨k⟩ before a front vowel (kino [çiːnu], kylling [çʏlːɪŋ]) is the reading of a word-initial ⟨k⟩; inside a word the letter stays [k] before the same vowels: kake [kɑːkə], leke [leːkə], peker [peːkər], frøken [frøːkən], bakeri [bɑːkəriː] (Kristoffersen 2000, the palatalisation of the velars, which he describes for the onset of a stressed syllable; the medial cases where it does hold, begynne, are stressed loan onsets and are left as residue). The positional table reads ⟨k⟩ as ç before every front vowel; this rule restores [k] wherever the ⟨k⟩ is not word-initial. Measured on the ipa_childes gold: 75 words carry a medial ⟨k⟩ before a front vowel letter, the gold writes k in 72 and ç in 3, and this spec wrote ç in all 75 before the rule."
+    },
+    {
+      "id": "NB_VELAR_G_SOFTENING_INITIAL_ONLY",
+      "phonemes": [
+        "j"
+      ],
+      "surface": "ɡ",
+      "grapheme": [
+        "g"
+      ],
+      "word_initial": false,
+      "notes": "The same restriction for ⟨g⟩: gi [jiː], gynge [jʏŋə] and gjerne [jæːɳə] word-initially, but dagen [dɑːɡən], eget [eːɡət], hage [hɑːɡə], lege [leːɡə] inside a word (Kristoffersen 2000, the same section). Measured on the ipa_childes gold: 43 words carry a medial ⟨g⟩ before a front vowel letter, the gold writes ɡ in 40 and j in 3, and this spec wrote j in all 43 before the rule."
+    },
     {
       "id": "NB_SHORTEN_A",
       "phonemes": [

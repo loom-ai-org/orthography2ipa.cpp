@@ -1028,6 +1028,11 @@
       "conclusion": "logographic",
       "measured": "Raw PER 0.3276 at n=115500 covered words. Splitting the covered words by script composition: 61365 (53.1%) contain at least one CJK Unified Ideograph (U+4E00-U+9FFF, i.e. kanji) and score PER 0.5723; the remaining 54135 (46.9%) are pure kana and score PER 0.0503. Kanji readings (on'yomi/kun'yomi) are lexical facts assigned per word or per compound, not derivable from the character's shape by any grapheme rule, so no rule change can close the kanji-containing share of the gap; the low kana-only PER shows the kana rules themselves already track the gold closely. Mirrors the zh/zh-Hani precedent: a phonemic script spec cannot be made to read a co-mingled logographic script by rule.",
       "reference": "spec notes; see also zh-Hani.json notes for the same precedent"
+    },
+    "vox_communis": {
+      "conclusion": "logographic",
+      "measured": "Board PER 0.4273 (n=42550). Re-measured over the 48607 unique words of the snapshot in this session, split by script composition as audit.ipadict does: 32033 words (65.9%) contain at least one CJK Unified Ideograph and score PER 0.65 over the 25976 the engine covers, because a kanji transcribes to nothing and only the kana around it survive (他の gives no for the gold hokano, 基地を gives o for kʲi̥tɕio); the 16574 pure-kana words score PER 0.0784. Kanji readings are lexical facts per word or compound, not derivable from the character by any grapheme rule, so no rule change closes the kanji share, the same finding as ipadict at 53.1% kanji. On the kana-only share, two things: the gold writes allophonic palatalisation ʲ before i and devoiced-vowel ̥ marks that this broad spec does not, and folding those two marks out of both sides takes the kana-only PER from 0.0784 to 0.0385; and the topic particle は reads wa in the gold (1205 of the 1452 kana words ending in は, and the bare は) where this spec reads ha, a lexical exception a kana rule cannot see. The kana rules themselves track the gold closely; the row measures how much of this gold is kanji.",
+      "reference": "spec notes; audit.ipadict for the same split, and zh-Hani.json for the precedent"
     }
   },
   "quality": "research",
