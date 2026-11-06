@@ -9,9 +9,8 @@ a discovered syllabifier set, so a pipeline that fails to replace them shows up.
 It also runs load_lexicon, packaged_lexicon, the inventory functions with a
 mapping, detect_stress with a syllabifier, and the deprecation text.
 
-A symbol that a forced pronunciation may not use raises MarkupError in the
-reference and std::invalid_argument in the port, so that line compares the type
-and not the message.
+A forced pronunciation runs in each language, so the grid holds the type and the
+text of each MarkupError. A newline in that text is `|` on the driver's line.
 
 Usage: pipeline_parity.py <path-to-check-pipeline-binary>
 """
@@ -39,6 +38,7 @@ from orthography2ipa import lexicon as lexmod  # noqa: E402
 from orthography2ipa import registry  # noqa: E402
 from orthography2ipa.inventory import phoneme_atoms, tokenize  # noqa: E402
 from orthography2ipa.markup import MarkupError  # noqa: E402
+from reference_regression import engine_path, pre_rescore_slots  # noqa: E402
 
 CLICK = "ʘ"
 MODES = ["halves", "whole", "chars", "empty", "bad", "raise"]
@@ -55,9 +55,13 @@ WORDS = {
     "de-DE": ["Wasser", "Vater", "gehen"],
     "cnr": ["с́екира", "љубав", "ljubav"],
     "fi": ["kalevala", "talo"],
+    "ht": ["kay", "lapli"],
 }
-TEXTS = {"pt-PT": ["os gatos", "gato, rato", 'o <phoneme ph="ʘa">x</phoneme>'],
+TEXTS = {"pt-PT": ["os gatos", "gato, rato"],
          "pt-BR": ["os gatos", "muito bem"], "en-GB": ["the yacht", "colonel Mustard"]}
+# A click no table emits, the click of each lexicon, a word that only segmentation
+# declares, a lone stress mark before a vowel, and a vowel of few specs.
+FORCED = [f"<phoneme ph=\"{ipa}\">x</phoneme>" for ipa in ("ʘa", "ʘɐ", "ɡato", "ˈa", "ə")]
 
 
 class Mode(SyllabifierPlugin):
@@ -149,6 +153,12 @@ def run(field):
         return number(engine.word_confidence(field[1]))
     if command == "lattice":
         return "|".join(f"{slot.top.ipa}:{len(slot.candidates)}" for slot in engine.ipa_lattice(field[1]))
+    if command == "path":
+        path = engine_path(engine, field[1])
+        return f"{path.ipa}:{number(path.score)}"
+    if command == "pre":
+        return "".join(slot["grapheme"] + "=" + "".join(f"{c['ipa']}:{number(c['cost'])}," for c in slot["candidates"]) + "|"
+                       for slot in pre_rescore_slots(engine, field[1]))
     if command in ("load", "packaged"):
         entries = load_lexicon(field[1]) if command == "load" else packaged_lexicon(field[1])
         return "".join(f"{word}={ipa}," for word, ipa in sorted(entries.items()))
@@ -172,8 +182,8 @@ def expected(field):
         return f"ok\t{run(field)}"
     except (FileNotFoundError, LookupError) as error:
         return f"{type(error).__name__}\t{error.args[0]}"
-    except MarkupError:
-        return "MarkupError\t"
+    except MarkupError as error:
+        return "MarkupError\t" + str(error).replace("\n", "|")
 
 
 def write_tsv(path, rows):
@@ -201,8 +211,8 @@ def commands(root):
                     out.append(["engine", lang, lexicon, mode])
                     for word in words:
                         out += [[surface, word] for surface in
-                                ("word", "text", "detailed", "candidates", "confidence", "lattice")]
-                    out += [["text", text] for text in TEXTS.get(lang, [])]
+                                ("word", "text", "detailed", "candidates", "confidence", "lattice", "path", "pre")]
+                    out += [["text", text] for text in TEXTS.get(lang, []) + FORCED]
         for lexicon in ("-", "{}", own[lang]):
             out.append(["reset"])
             out += [[kind, lang, lexicon] for kind in ("emission", "phonemes", "atoms")]

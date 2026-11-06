@@ -2743,19 +2743,24 @@ WordTranscription G2P::transcribe_one(const std::string& word, std::size_t width
     std::optional<std::string> override;
     if (forced) {
         if (forced_ipa.empty()) throw std::invalid_argument("empty forced pronunciation");
-        if (const auto& own = pipeline_->lexicon; own.has_value()) {
-            // g2p.py _check_forced: the inventory counts the engine's lexicon.
-            const auto declared = phoneme_inventory(*spec_, &*own);
-            for (const auto& token : tokenize(forced_ipa, *spec_, &*own))
-                if (!declared.count(token))
-                    throw std::invalid_argument("forced pronunciation contains undeclared IPA: " + token);
-        } else {
-            const auto atoms = declared_phonemes(*spec_);
-            const std::vector<std::string> atom_list(atoms.begin(), atoms.end());
-            for (const auto& segment : segment_ipa(forced_ipa, atom_list))
-                if (!atoms.count(segment) && segment != "ˈ" && segment != "ˌ")
-                    throw std::invalid_argument("forced pronunciation contains undeclared IPA: " + segment);
-        }
+        // g2p.py _check_forced: the inventory counts the engine's lexicon, and an
+        // engine with none reads the process-wide one.
+        const auto& own = pipeline_->lexicon;
+        const std::map<std::string, std::string>* lexicon = own.has_value() ? &*own : nullptr;
+        const auto declared = phoneme_inventory(*spec_, lexicon);
+        std::vector<std::string> outside;
+        for (const auto& token : tokenize(forced_ipa, *spec_, lexicon))
+            if (!declared.count(token)) outside.push_back(token);
+        if (!outside.empty())
+            throw markup::MarkupError(
+                "<phoneme ph=" + detail::py_repr(forced_ipa) + "> uses " + py_list(outside) + ", which the " +
+                spec_->code + " spec does not declare.\n\n"
+                "The inventory is every segment the spec's tables can emit, allophones included. A symbol "
+                "outside it has no embedding at synthesis time, so the word carrying it is mispronounced "
+                "permanently and silently. This is the usual shape of a loanword forced in its donor's "
+                "phonology.\n\n"
+                "Give the nativised reading, or — if the phonology really does have this sound — declare it "
+                "in the spec, where it can be read, cited and diffed.");
         override = forced_ipa;
     } else {
         override = override_for(word);

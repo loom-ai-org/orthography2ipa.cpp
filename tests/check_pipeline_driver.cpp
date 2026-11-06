@@ -7,7 +7,7 @@
 //                                the engine the commands below use. lexicon is -
 //                                (none), {} (empty), or a file for load_lexicon;
 //                                mode is - (none) or a syllabifier mode
-//   word, text, detailed, candidates, confidence, lattice<TAB>input
+//   word, text, detailed, candidates, confidence, lattice, path, pre<TAB>input
 //   load<TAB>source              load_lexicon
 //   packaged<TAB>code            packaged_lexicon
 //   emission, phonemes, atoms<TAB>code<TAB>lexicon
@@ -16,11 +16,13 @@
 //
 // A syllabifier mode: halves, whole, chars, empty, bad, raise.
 #include "orthography2ipa/inventory.hpp"
+#include "orthography2ipa/markup.hpp"
 #include "orthography2ipa/orthography2ipa.hpp"
 #include "orthography2ipa/stress.hpp"
 #include "plugin_registry.hpp"
 #include "unicode_util.hpp"
 
+#include <algorithm>
 #include <cstdio>
 #include <iostream>
 #include <map>
@@ -131,6 +133,19 @@ std::string run(const std::vector<std::string>& field) {
             out.push_back(slot.top().ipa + ":" + std::to_string(slot.candidates.size()));
         return joined(out);
     }
+    if (command == "path") {
+        const IPAPath path = current->engine_path(field[1], 1);
+        return path.ipa + ":" + number(path.score);
+    }
+    if (command == "pre") {
+        std::string out;
+        for (const auto& slot : current->lattice_pre_rescore(field[1], 8)) {
+            out += slot.grapheme + "=";
+            for (const auto& candidate : slot.candidates) out += candidate.ipa + ":" + number(candidate.score) + ",";
+            out += "|";
+        }
+        return out;
+    }
     if (command == "load" || command == "packaged") {
         const Lexicon entries = command == "load" ? load_lexicon(field[1]) : packaged_lexicon(field[1]);
         std::string out;
@@ -170,9 +185,10 @@ int main() {
             std::cout << "FileNotFoundError\t" << error.what() << '\n';
         } catch (const LookupError& error) {
             std::cout << "LookupError\t" << error.what() << '\n';
-        } catch (const std::invalid_argument& error) {
-            // The port raises this for a forced symbol, the reference MarkupError.
-            std::cout << "MarkupError\t\n";
+        } catch (const markup::MarkupError& error) {
+            std::string message = error.what();
+            std::replace(message.begin(), message.end(), '\n', '|');
+            std::cout << "MarkupError\t" << message << '\n';
         }
     }
 }

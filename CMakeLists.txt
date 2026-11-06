@@ -133,7 +133,13 @@ if(BUILD_TESTING)
     add_test(NAME orthography2ipa-pipeline COMMAND orthography2ipa-pipeline)
     add_executable(orthography2ipa-inserted-vowel tests/test_inserted_vowel.cpp)
     target_link_libraries(orthography2ipa-inserted-vowel PRIVATE orthography2ipa)
+    target_include_directories(orthography2ipa-inserted-vowel PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/src)
     add_test(NAME orthography2ipa-inserted-vowel COMMAND orthography2ipa-inserted-vowel)
+    # `--lexicon` hands the file to the engine, whose reading replaces the rules.
+    file(WRITE ${CMAKE_CURRENT_BINARY_DIR}/cli-lexicon.tsv "gato\tˈɡaʃtɐ\n")
+    add_test(NAME orthography2ipa-cli-lexicon
+             COMMAND orthography2ipa-cli transcribe pt-PT gato --lexicon ${CMAKE_CURRENT_BINARY_DIR}/cli-lexicon.tsv)
+    set_tests_properties(orthography2ipa-cli-lexicon PROPERTIES PASS_REGULAR_EXPRESSION "^ˈɡaʃtɐ")
     # `--json distance` writes Python repr floats, as the reference's json.dumps
     # does. The pt-PT/es-ES allophone overlap is 7/13.
     add_test(NAME orthography2ipa-cli-distance-json COMMAND orthography2ipa-cli --json distance pt-PT es-ES)

@@ -8,6 +8,7 @@
 // that directory with the rules in pt-BR.json.
 #include "orthography2ipa/orthography2ipa.hpp"
 #include "orthography2ipa/schema.hpp"
+#include "unicode_util.hpp"
 
 #include <algorithm>
 #include <cstdlib>
@@ -15,7 +16,10 @@
 #include <fstream>
 #include <iostream>
 #include <iterator>
+#include <memory>
+#include <optional>
 #include <string>
+#include <vector>
 
 #include <unistd.h>
 
@@ -40,6 +44,18 @@ std::string rule(const std::string& id, const std::string& phoneme, const std::s
     return "{\"id\": \"" + id + "\", \"phonemes\": [\"" + phoneme + "\"], \"surface\": \"" + surface +
            "\", \"stress\": \"" + stress + "\", \"preceded_by_phoneme\": [" + after + "]},";
 }
+
+// Divides a word in two halves, whatever its letters.
+class Halves : public SyllabifierPlugin {
+public:
+    std::vector<std::string> language_codes() const override { return {""}; }
+    std::vector<std::string> syllabify(const std::string& word, const std::string&) const override {
+        const std::u32string units = uni::to_utf32(word);
+        const std::size_t half = units.size() / 2;
+        if (half == 0) return {word};
+        return {uni::to_utf8(units.substr(0, half)), uni::to_utf8(units.substr(half))};
+    }
+};
 
 // The data directory *dir* with *rules* before the pt-BR rules. Every other
 // spec links to the shipped file.
@@ -88,6 +104,11 @@ int main() {
                     rule("PROBE_PRETONIC", "i", "ɨ", "pretonic", after) +
                     rule("PROBE_POSTTONIC", "i", "ə", "posttonic", after));
     {
+        // The division ada|ptar puts ⟨p⟩ in the syllable after the vowel before
+        // it. The inserted vowel stands after the syllable of that vowel.
+        const G2P halves("pt-BR", {}, "", false, true, true, true, nullptr, nullptr,
+                         Pipeline{std::nullopt, std::make_shared<const Halves>()});
+        CHECK_IPA(halves.transcribe("adaptar"), "adapɨˈta");
         const G2P probed("pt-BR");
         CHECK_IPA(probed.transcribe("pneu"), "pɨˈnew");
         CHECK_IPA(probed.transcribe("advogado"), "ad͡ʒɨvoˈɡadu");

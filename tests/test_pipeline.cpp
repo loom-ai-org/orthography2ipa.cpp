@@ -11,6 +11,7 @@
 // The engine asks a syllabifier once for each use of a word, where the reference
 // caches the division per engine, so the call checks compare the set of calls.
 #include "orthography2ipa/inventory.hpp"
+#include "orthography2ipa/markup.hpp"
 #include "orthography2ipa/orthography2ipa.hpp"
 #include "orthography2ipa/stress.hpp"
 #include "plugin_registry.hpp"
@@ -248,7 +249,14 @@ void engine_inventory_counts_its_own_lexicon() {
     const std::string forced = "<phoneme ph=\"" + CLICK + "a\">x</phoneme>";
     const G2P own = with_lexicon("pt-PT", {{"x", CLICK + "a"}, {"y", CLICK}});
     CHECK(own.transcribe(forced) == CLICK + "a");
-    CHECK_THROWS(G2P("pt-PT").transcribe(forced), std::invalid_argument, CLICK);
+    CHECK_THROWS(G2P("pt-PT").transcribe(forced), markup::MarkupError,
+                 "<phoneme ph='" + CLICK + "a'> uses ['" + CLICK + "'], which the pt-PT spec does not declare.\n\n");
+}
+
+void forced_check_tokenizes_as_the_inventory_does() {
+    CHECK(G2P("de-DE").transcribe("<phoneme ph=\"ɡato\">gato</phoneme>") == "ɡato");
+    CHECK(G2P("pt-PT").transcribe("<phoneme ph=\"ə\">x</phoneme>") == "ə");
+    CHECK_THROWS(G2P("ht").transcribe("<phoneme ph=\"ˈa\">x</phoneme>"), markup::MarkupError, "ˈ");
 }
 
 void inventory_functions_read_the_mapping_they_are_given() {
@@ -357,7 +365,15 @@ void pipeline_without_a_lexicon_reads_the_process_lexicon() {
 void engine_inventory_ignores_the_process_lexicon() {
     register_lexicon("pt-PT", tsv({{"gato", CLICK}}));
     const std::string forced = "<phoneme ph=\"" + CLICK + "\">x</phoneme>";
-    CHECK_THROWS(with_lexicon("pt-PT", {}).transcribe(forced), std::invalid_argument, CLICK);
+    CHECK_THROWS(with_lexicon("pt-PT", {}).transcribe(forced), markup::MarkupError, CLICK);
+    clear_lexicons();
+}
+
+void forced_check_of_a_plain_engine_reads_the_process_lexicon() {
+    register_lexicon("pt-PT", tsv({{"gato", "ǃa"}}));
+    const std::string forced = "<phoneme ph=\"ǃa\">x</phoneme>";
+    CHECK(G2P("pt-PT").transcribe(forced) == "ǃa");
+    CHECK_THROWS(with_lexicon("pt-PT", {}).transcribe(forced), markup::MarkupError, "ǃ");
     clear_lexicons();
 }
 
@@ -465,6 +481,8 @@ int main() {
     packaged_lexicon_raises_when_the_provider_fails();
     engine_inventory_counts_its_own_lexicon();
     engine_inventory_ignores_the_process_lexicon();
+    forced_check_of_a_plain_engine_reads_the_process_lexicon();
+    forced_check_tokenizes_as_the_inventory_does();
     inventory_functions_read_the_mapping_they_are_given();
     inventory_with_a_mapping_ignores_the_process_lexicon();
     pipeline_syllabifier_wins_over_discovery();

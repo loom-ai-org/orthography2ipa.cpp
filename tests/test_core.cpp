@@ -1084,5 +1084,35 @@ int main() {
         rescorer::apply_rescorers(slots, *sequence.graphemes, {&recording}, &sylls, 0);
         assert(seen == (Seen{{0, {5, 6}}, {1, {5, 6}}, {0, {7, 8}}, {1, {7, 8}}}));
     }
+    {
+        // A syllable list shorter than the slots gives a run it does not cover
+        // no syllables, and a slot past its end no index. The reference raises
+        // IndexError for this input, and the port reads nothing past the list.
+        struct Seen {
+            bool has_run;
+            std::optional<std::size_t> index;
+            bool operator==(const Seen& other) const { return has_run == other.has_run && index == other.index; }
+        };
+        static std::vector<Seen> seen;
+        struct Recording : rescorer::LatticeRescorer {
+            std::vector<Candidate> rescore(const rescorer::SegmentSlot& slot,
+                                           const rescorer::RescoreContext& context) const override {
+                seen.push_back({context.syll_indices != nullptr, context.syll_idx});
+                return slot.candidates;
+            }
+        };
+        const auto sequence = Tokenizer(get("pt-PT")).tokenize_with_context("pa ta");
+        std::vector<rescorer::SegmentSlot> slots;
+        for (const auto& context : *sequence.graphemes) {
+            rescorer::SegmentSlot slot;
+            slot.grapheme = context.grapheme();
+            slot.candidates = {Candidate{"a", 0.0}};
+            slots.push_back(std::move(slot));
+        }
+        const Recording recording;
+        const std::vector<std::size_t> sylls{5, 6, 7};
+        rescorer::apply_rescorers(slots, *sequence.graphemes, {&recording}, &sylls, 0);
+        assert(seen == (std::vector<Seen>{{true, 5}, {true, 6}, {false, 7}, {false, std::nullopt}}));
+    }
     return 0;
 }
