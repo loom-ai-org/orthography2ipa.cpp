@@ -858,6 +858,31 @@ int main() {
         const V gebroek{"ge", "broek"}, geve{"ge", "ve"};
         assert(stress::detect_stress("gebroek", li, &gebroek, "li") == 1);
         assert(stress::detect_stress("geve", li, &geve, "li") == 0);
+        // stress.schwa_rimes: the rest of the word is one final schwa syllable,
+        // so the word has no prefix. Expected values are the reference's.
+        LanguageSpec rimes = li;
+        rimes.default_stress_position = 1;
+        rimes.unstressed_prefixes = {"ge"};
+        rimes.schwa_rimes = {"en"};
+        const V geven{"ge", "ven"}, gebed{"ge", "bed"}, geleden{"ge", "le", "den"};
+        const V upper_geven{"GE", "VEN"}, gebrr{"ge", "brr"}, geween{"ge", "ween"};
+        assert(stress::detect_stress("geven", rimes, &geven) == 0);
+        assert(stress::detect_stress("GEVEN", rimes, &upper_geven) == 0);
+        assert(stress::detect_stress("gebed", rimes, &gebed) == 1);
+        assert(stress::detect_stress("geleden", rimes, &geleden) == 1);
+        assert(stress::detect_stress("gebrr", rimes, &gebrr) == 1);
+        assert(stress::detect_stress("geween", rimes, &geween) == 1);
+        rimes.schwa_rimes.clear();
+        assert(stress::detect_stress("geven", rimes, &geven) == 1);
+        assert(G2P("nl-NL").transcribe("geven") == "\u02c8\u03c7eiv\u0259n");
+        assert(G2P("nl-NL").transcribe("GEVEN") == "\u02c8\u03c7eiv\u0259n");
+        assert(G2P("nl-NL").transcribe("verder") == "\u02c8v\u025b\u0279d\u0259\u0279");
+        assert(G2P("nl-NL").transcribe("gebed") == "\u03c7\u0259\u02c8b\u025bt");
+        assert(G2P("nl-BE").transcribe("geven") == "\u02c8\u0263e\u02d0v\u0259n");
+        // The field comes with the inherited stress block.
+        assert(G2P("nl-NL-x-polder").transcribe("geven") == "\u02c8\u03c7eiv\u0259n");
+        assert(G2P("nl-BE-x-antwerp").transcribe("geven") == "\u02c8\u0263e\u02d0v\u0259n");
+        assert(get("nl-BE-x-antwerp").schwa_rimes == (V{"en", "er", "el", "em"}));
         // The tokenizer reads stress.final_diphthongs without closed_hiatus too.
         LanguageSpec final_only = pt;
         final_only.closed_hiatus.reset();
@@ -1006,6 +1031,17 @@ int main() {
         assert(errors_for("{\"unstressed_prefixes\": [\"\"]}") == (std::vector<std::string>{
             "stress.StressRulesModel.unstressed_prefixes | value_error | Value error, stress rule entries must be non-empty strings",
             "stress.literal[False] | literal_error | Input should be False"}));
+        assert(errors_for("{\"schwa_rimes\": [\"\"]}") == (std::vector<std::string>{
+            "stress.StressRulesModel.schwa_rimes | value_error | Value error, stress rule entries must be non-empty strings",
+            "stress.literal[False] | literal_error | Input should be False"}));
+        assert(errors_for("{\"schwa_rimes\": [3]}") == (std::vector<std::string>{
+            "stress.StressRulesModel.schwa_rimes.0 | string_type | Input should be a valid string",
+            "stress.literal[False] | literal_error | Input should be False"}));
+        // The dump keeps the model's field order; the value is the reference's
+        // model_dump_json of nl-NL.
+        assert(schema::dump_json(schema::validate_spec_file(dir + "/nl-NL.json")).find(
+                   "\"schwa_rimes\":[\"en\",\"er\",\"el\",\"em\"],\"marked_vowels\":") !=
+               std::string::npos);
         // schema.py validate_all(): every shipped spec validates.
         const auto results = schema::validate_all();
         assert(results.failures.empty());

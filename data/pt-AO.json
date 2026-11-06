@@ -294,6 +294,12 @@
       "phonemes": [],
       "surface": "e",
       "notes": "DISABLED for Angolan Portuguese. No source for a learned word-final ⟨-en⟩ in this variety was read, so its output stays what it was; the pt-PT rule rests on Infopédia and Priberam entries for standard European Portuguese."
+    },
+    {
+      "id": "PT_LEX_CLITIC_O",
+      "phonemes": [],
+      "surface": "u",
+      "notes": "DISABLED for Angolan Portuguese. PT_LEX_CLITIC_O gives the article ⟨o os⟩ the [u] that an unstressed ⟨o⟩ reduces to in pt-PT. This spec keeps an unstressed ⟨o⟩ as [o]: its positional map gives pretonic and unstressed-nucleus ⟨o⟩ [o]. So the reduced vowel does not apply, and o and os keep the reading of this spec. The vowel of the article in this variety has no variety-specific source."
     }
   ],
   "wikidata_qid": "Q2994901",

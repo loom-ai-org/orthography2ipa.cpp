@@ -388,7 +388,8 @@ void inherit_stress(LanguageSpec& s, const LanguageSpec& b) {
     s.marked_vowels = b.marked_vowels; s.final_stress_endings = b.final_stress_endings;
     s.penult_stress_endings = b.penult_stress_endings; s.antepenult_stress_endings = b.antepenult_stress_endings;
     s.diphthongs = b.diphthongs; s.ipa_diphthongs = b.ipa_diphthongs; s.closed_hiatus = b.closed_hiatus;
-    s.unstressed_prefixes = b.unstressed_prefixes; s.final_diphthongs = b.final_diphthongs;
+    s.unstressed_prefixes = b.unstressed_prefixes; s.schwa_rimes = b.schwa_rimes;
+    s.final_diphthongs = b.final_diphthongs;
     s.tonic_after_diphthong = b.tonic_after_diphthong;
     s.vowel_letters = b.vowel_letters;
     s.onset_clusters = b.onset_clusters; s.quantity_sensitive = b.quantity_sensitive;
@@ -479,6 +480,7 @@ LanguageSpec load_raw(const std::string& code, std::set<std::string>& loading) {
         s.penult_stress_endings = optional_strings(*stress, "penult_stress_endings");
         s.antepenult_stress_endings = optional_strings(*stress, "antepenult_stress_endings");
         s.unstressed_prefixes = optional_strings(*stress, "unstressed_prefixes");
+        s.schwa_rimes = optional_strings(*stress, "schwa_rimes");
         s.diphthongs = optional_strings(*stress, "diphthongs");
         if (auto ipa = stress->get_child_optional("ipa_diphthongs")) s.ipa_diphthongs = strings(*ipa);
         if (auto hiatus = stress->get_child_optional("closed_hiatus"); hiatus && !hiatus->empty())

@@ -236,6 +236,12 @@
       "phonemes": [],
       "surface": "̃j̃",
       "notes": "DISABLED for Algarvio: no palatal offglide in the closed ⟨-ens⟩ syllable (see PT_FINAL_ENS_NUCLEUS in this spec)."
+    },
+    {
+      "id": "PT_LEX_CLITIC_O",
+      "phonemes": [],
+      "surface": "u",
+      "notes": "DISABLED for Algarvio. PT_LEX_CLITIC_O gives the article ⟨o os⟩ the [u] that an unstressed ⟨o⟩ reduces to in pt-PT. This spec keeps an unstressed ⟨o⟩ as [o]: its positional map gives pretonic and unstressed-nucleus ⟨o⟩ [o]. So the reduced vowel does not apply, and o and os keep the reading of this spec. The vowel of the article in this variety has no variety-specific source. The word_exceptions of this spec give o [u] and os [uʒ], and they apply before any rule."
     }
   ],
   "word_exceptions": {

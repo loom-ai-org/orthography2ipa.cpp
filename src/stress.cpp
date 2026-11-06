@@ -1388,6 +1388,17 @@ std::string apply_iambic_length(const std::string& ipa, const LanguageSpec& spec
 
 // ── stress detection ──
 
+namespace {
+
+// stress.py _rime: the letters of *syllable* from its first vowel letter on.
+std::string rime(const std::u32string& syllable) {
+    for (std::size_t i = 0; i < syllable.size(); ++i)
+        if (vowels::is_orthographic_vowel(syllable[i])) return to_utf8(syllable.substr(i));
+    return "";
+}
+
+} // namespace
+
 std::optional<int> plugin_stress(const std::string& word,
                                  const std::vector<std::string>& syllables,
                                  const std::string& lang) {
@@ -1467,7 +1478,8 @@ int detect_stress(const std::string& word, const LanguageSpec& spec,
     const int index = pos >= 1 ? std::min(pos - 1, count - 1) : std::max(0, count + pos);
 
     // 6. a default that lands inside an unstressed prefix moves to the first
-    // syllable after it, but never onto a final open syllable.
+    // syllable after it, but never onto a final open syllable or a final
+    // syllable whose rime is one of schwa_rimes.
     std::vector<std::u32string> prefixes;
     for (const auto& p : spec.unstressed_prefixes) prefixes.push_back(to_utf32(p));
     std::stable_sort(prefixes.begin(), prefixes.end(),
@@ -1489,7 +1501,11 @@ int detect_stress(const std::string& word, const LanguageSpec& spec,
             if (uni::is_alpha(cp)) final_letters.push_back(cp);
         const bool final_open =
             !final_letters.empty() && vowels::is_orthographic_vowel(final_letters.back());
-        if (index < inside && inside < count && !(inside == count - 1 && final_open))
+        const std::string final_rime = rime(uni::lower(to_utf32(sylls.back())));
+        const bool final_schwa = std::find(spec.schwa_rimes.begin(), spec.schwa_rimes.end(),
+                                           final_rime) != spec.schwa_rimes.end();
+        if (index < inside && inside < count &&
+                !(inside == count - 1 && (final_open || final_schwa)))
             return inside;
         break;
     }
