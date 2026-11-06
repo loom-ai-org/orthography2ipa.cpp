@@ -96,10 +96,12 @@ std::string syllable_weight(const std::string& syllable,
 // Monosyllables are inherently stressed. *syllables* takes precedence over
 // plugin lookup; *lang* selects a registered syllabifier plugin (and a
 // stress plugin when the spec declares stress source "plugin" — missing
-// then is fatal, as in the reference).
+// then is fatal, as in the reference). *syllabifier* is the caller's
+// syllabifier, which wins over the plugin *lang* looks up.
 int detect_stress(const std::string& word, const LanguageSpec& spec,
                   const std::vector<std::string>* syllables = nullptr,
-                  const std::string& lang = "");
+                  const std::string& lang = "",
+                  const SyllabifierPlugin* syllabifier = nullptr);
 
 // stress.py detect_stress_by_weight: locate the stressed syllable of *ipa*
 // by weight (quantity-sensitive systems). Returns an end-anchored index
@@ -149,14 +151,17 @@ std::set<int> iambic_length_positions(
 std::string apply_iambic_length(const std::string& ipa, const LanguageSpec& spec,
                                 const std::vector<std::string>& atoms = {});
 
-// stress.py _syllables_for: syllabify *word* — registered syllabifier
-// plugin for *lang* first (its result must round-trip to the word), the
-// spec-driven bundled splitter second. *diphthongs* reaches the bundled
-// splitter only. Without *spec* the spec is looked up for *lang*.
+// stress.py _syllables_for: syllabify *word* — the caller's *syllabifier*,
+// else the plugin registered for *lang* (the result must round-trip to the
+// word), else the spec-driven bundled splitter. *syllabifier* replaces
+// discovery, so a word it cannot split goes to the bundled splitter and not to
+// a registered plugin. *diphthongs* reaches the bundled splitter only. Without
+// *spec* the spec is looked up for *lang*.
 std::vector<std::string> syllables_for(
     const std::string& word, const std::string& lang,
     const std::vector<std::string>& diphthongs = {},
-    const LanguageSpec* spec = nullptr);
+    const LanguageSpec* spec = nullptr,
+    const SyllabifierPlugin* syllabifier = nullptr);
 
 // stress.py _plugin_stress: ask the registered stress plugin, or fail
 // loudly if the spec expects one (stress source "plugin" with no

@@ -435,6 +435,42 @@
       "notes": "Velarised (dark) coda /l/ -> [ɫ]. In European Portuguese /l/ is velarised in the syllable coda (word-finally and pre-consonantally: sol, alto, mel) while onset /l/ stays clear. Mateus & d'Andrade (2000: ch.2); Cruz-Ferreira (1995: 91). This is the post-lexical coda realisation that the pre-lexical positional 'l' map does not reach word-finally."
     },
     {
+      "id": "PT_CODA_S_BEFORE_ZH_INTERNAL",
+      "phonemes": [
+        "s",
+        "ʃ"
+      ],
+      "surface": "",
+      "syllable_position": "coda",
+      "word_initial": false,
+      "followed_by_phoneme": [
+        "ʒ"
+      ],
+      "notes": "Inside a word, a coda /s/ is deleted before /ʒ/: Cruz-Ferreira (1999, Handbook of the IPA, p. 128), \"except before /ʒ/ itself, where it is deleted\". Infopédia deletes it in 20 of the 28 pt-PT rows with one word-internal coda ⟨s⟩ before ⟨j ge gi⟩ (desgelo dəˈʒelu, desjejum dəʒəˈʒũ, disjunto diˈʒũtu); the other rows keep [ʃʒ] (cisgénero siʃˈʒɛnəru, desjudicializar, tresjurar) or write [z] (desgentilizar). A child whose PT_CODA_S_HUSH does not give [ʃ] disables this rule. The cross-word case is PT_CODA_S_BEFORE_ZH."
+    },
+    {
+      "id": "PT_CODA_S_VOICING_INTERNAL",
+      "phonemes": [
+        "s",
+        "ʃ"
+      ],
+      "surface": "ʒ",
+      "syllable_position": "coda",
+      "word_initial": false,
+      "followed_by_phoneme": [
+        "b",
+        "d",
+        "ɡ",
+        "v",
+        "l",
+        "m",
+        "n",
+        "ɾ",
+        "ʁ"
+      ],
+      "notes": "Inside a word, a coda /s/ is voiced to [ʒ] before a voiced consonant. Cruz-Ferreira (1999, Handbook of the IPA, p. 128): \"Syllable-final /ʃ/ occurs as [ʒ] before a voiced consonant (except before /ʒ/ itself, where it is deleted)\". Infopédia agrees: in its pt-PT rows with one word-internal coda ⟨s⟩, the sibilant is [ʒ] before ⟨b⟩ in 358 of 359 rows, ⟨d⟩ 64 of 67, ⟨g⟩ 276 of 281, ⟨v⟩ 142 of 151, ⟨m⟩ 1781 of 1883, ⟨n⟩ 149 of 151, ⟨l⟩ 188 of 196 and ⟨r⟩ 44 of 51 (asno ˈaʒnu, cisne ˈsiʒn(ə), mesmo ˈmeʒmu, desdém dəʒˈdɐ̃j̃, esbelto (i)ʒˈbɛɫtu), and [ʃ] before ⟨p t c f⟩. A word-initial ⟨s⟩ before a consonant is outside the rule: Infopédia writes [s] there (snobe ˈsnɔb(ə), slogan ˈsloɡan, smiley ˈsmajli). The rule is ordered before PT_CODA_S_HUSH, which gives every other coda /s/ [ʃ]; it also takes a coda [ʃ] that a dialect map gives directly. A child whose PT_CODA_S_HUSH does not give [ʃ] disables this rule. The cross-word case is PT_CODA_S_VOICING."
+    },
+    {
       "id": "PT_CODA_S_HUSH",
       "phonemes": [
         "s"
@@ -573,6 +609,42 @@
         "porque"
       ],
       "notes": "⟨porque⟩, the conjunction and adverb, is [ˈpuɾkɨ]: the stressed ⟨o⟩ is the reduced [u], not the default stressed [ɔ]. The WikiPron pt-PT gold has porque p u ɾ k ɨ; it is the output of the en.wiktionary {{pt-IPA}} module from the human respelling pt=purque. The CLUP dialect transcriptions, which are speech data, write ˈpuɾkɨ in all 13 tokens, and pt.wiktionary gives Portugal /ˈpuɾ.kɨ/. The Portal da Língua Portuguesa Dicionário fonético (index.php?action=pronunciation) agrees, with por·que advérbio 'puɾkɨ and por·que conjunção 'puɾkɨ, but it is a resource with no documented provenance. The Portal's other resource, the Dicionário Fonético 'Pronúncia indicativa' (index.php?action=fonetica, entry 24295), gives Lisboa padrão pˈoɾ.kɨ. That page is marked 'Recurso em teste' and its readings come from the rule-based generator of Ashby et al. (2012, 'A Rule Based Pronunciation Generator and Regional Accent Databank for Portuguese', Interspeech 2012), so it is not lexicographic evidence. The [u] is the vowel that an unstressed ⟨o⟩ reduces to in this spec (positional map: pretonic and unstressed-nucleus ⟨o⟩ [u]). A child that keeps an unstressed ⟨o⟩ as [o] disables this rule. The rule changes only the vowel, so each child keeps its own consonants. porquê is a different word with its own stress, /puɾ.ˈke/ in pt.wiktionary and p u ɾ k e in WikiPron pt-PT, and the rule does not reach it."
+    },
+    {
+      "id": "PT_LEX_NASAL_UI",
+      "phonemes": [
+        "u"
+      ],
+      "surface": "ũ",
+      "followed_by_phoneme": [
+        "j"
+      ],
+      "word": [
+        "muito",
+        "muita",
+        "muitos",
+        "muitas",
+        "muitíssimo"
+      ],
+      "notes": "The words muito, muita, muitos, muitas and muitíssimo have the nasal diphthong [ũj̃], although no nasal letter is written. No general rule gives this nasality, so the rule names the words. It changes only the vowel and the glide, so each child keeps its own consonants and final vowel. Cruz-Ferreira (1999, Handbook of the IPA, p. 128) lists the nasal diphthong [ũi] with the example muita [ˈmũitɐ]. Infopédia gives muito [ˈmũj̃tu] and muitíssimo [mũj̃ˈtisimu]. Infopédia gives mui with an oral [ˈmuj], so mui is not on the list. en.wiktionary gives an Azores pronunciation of muito, [ˈmỹt], without naming an island; no Azores spec encodes it."
+    },
+    {
+      "id": "PT_LEX_NASAL_UI_GLIDE",
+      "phonemes": [
+        "j"
+      ],
+      "surface": "j̃",
+      "preceded_by_phoneme": [
+        "u"
+      ],
+      "word": [
+        "muito",
+        "muita",
+        "muitos",
+        "muitas",
+        "muitíssimo"
+      ],
+      "notes": "The nasal glide of [ũj̃] in muito, muita, muitos, muitas, muitíssimo. See PT_LEX_NASAL_UI."
     },
     {
       "id": "PT_LEX_OPEN_O",
@@ -842,6 +914,28 @@
         "os"
       ],
       "notes": "The article and clitic pronoun ⟨o os⟩ have the reduced vowel [u]: Cruz-Ferreira (1999, Handbook of the IPA, p. 130) transcribes O vento norte e o sol as [u ˈvẽtu ˈnɔɾt i u sɔl], and obrigar o viajante, o mais forte as [ɔbɾiˈɡaɾ u viɐˈʒẽtɯ], [u maiʃ ˈfɔɾt]. On p. 129 she gives [ˈɛɾɔ] as the contraction of /ˈɛɾɐ u/ (era o), and on p. 128 qual dos dois era o as [kṷal duʒ doiz ˈɛɾɔ]. The rules give the word-initial ⟨o⟩ [o], so pt-PT read o as [o] and os as [oʃ]. The rule names the two words and changes only the vowel, so each child keeps its own sibilant. The [u] is the vowel that an unstressed ⟨o⟩ reduces to in this spec (positional map: pretonic and unstressed-nucleus ⟨o⟩ [u]). A child that keeps an unstressed ⟨o⟩ as [o] disables this rule. pt.wiktionary gives the article o as /u/ (SAMPA /O/ for the noun, /u/ for the other senses); its entry for os has only a Brazilian (Carioca) pronunciation line. The Portal da Língua Portuguesa Dicionário fonético has no entry for os."
+    },
+    {
+      "id": "PT_LEX_AO_A",
+      "phonemes": [
+        "ɐ"
+      ],
+      "surface": "a",
+      "word": [
+        "ao"
+      ],
+      "notes": "The contraction ao (a + o) is the falling diphthong [aw], with a full [a]: Cruz-Ferreira (1999, Handbook of the IPA, p. 130) transcribes Ao vê-lo as [au ˈvelu], and on p. 128 she states that diphthong end-points are transcribed [i] and [u] (mau [mau]). Infopédia gives ao [aw]. The rules reduced the unstressed ⟨a⟩ to [ɐ] and read ⟨o⟩ as a separate [u], so pt-PT read ao as [ɐu]. The rule names the word and changes only its two segments. aos has no Infopédia or Cruz-Ferreira reading, so it is not on the list."
+    },
+    {
+      "id": "PT_LEX_AO_GLIDE",
+      "phonemes": [
+        "u"
+      ],
+      "surface": "w",
+      "word": [
+        "ao"
+      ],
+      "notes": "The offglide [w] of the diphthong [aw] in ao. See PT_LEX_AO_A."
     }
   ],
   "sandhi_rules": [
@@ -1007,7 +1101,7 @@
       "õ"
     ],
     "stress_mark": "ˈ",
-    "notes": "Acordo Ortográfico 1990 conventions: paroxytone default; written accents override; final -i/-u/-r/-l/-z/-x/-im/-om/-um/-ins/-ons/-uns and nasal diphthongs attract final stress. Unmarked -em/-ens/-am stay paroxytone (homem, homens, falam): an oxytone of more than one syllable in -em or -ens is written with an acute (Acordo Ortográfico 1990, Base VIII, 1.º c: deténs, haréns, provéns, também). DIPHTHONGS: declared so the bundled syllabifier counts nuclei correctly. Without them every vowel run merges into one nucleus, so co-e-lho is read as coe-lho — one syllable short — and the stress, and therefore the unstressed-vowel reduction it conditions, land on the wrong vowel. ⟨oe⟩ is hiatus, not a diphthong, and is absent from this list for that reason (Cunha & Cintra, Nova Gramática do Português Contemporâneo, §Ditongos). COMPOUNDS: a hyphenated compound is one prosodic word. Each element keeps its own stress and the last is the strongest (Bechara, Moderna Gramática Portuguesa, p. 340, quoted in Ciberdúvidas, resposta 28042), so compound_stress is \"last\": guarda-chuva gwˌaɾdɐˈʃuvɐ (Portal da Língua Portuguesa). IPA_DIPHTHONGS is empty: the grapheme table writes every diphthong with a glide ([aj], [uj], [ɐ̃w̃]), so two full vowels side by side in the transcription are always a hiatus, and the stress mark is placed with each IPA vowel as a nucleus of its own. Read with the orthographic list, the IPA [ui] of ⟨proíbe⟩ /pɾuibɨ/ and [iu] of ⟨viúva⟩ merge into one syllable and the mark lands a syllable early. The acute on a tonic ⟨i u⟩ after a vowel marks exactly this hiatus (Acordo Ortográfico 1990, Base X, 1.º: juízes, ruína, ciúme, miúdo, saída, baú). CLOSED HIATUS: a tonic ⟨i u⟩ after a vowel takes no acute when it forms a syllable with the next consonant, and it is still a nucleus in hiatus: \"As vogais tónicas/tônicas grafadas i e u das palavras oxítonas e paroxítonas não levam acento agudo quando, antecedidas de vogal com que não formam ditongo, constituem sílaba com a consoante seguinte, como é o caso de nh, l, m, n, r e z: bainha, moinho, rainha; adail, paul, Raul; Aboim, Coimbra, ruim; ainda, constituinte, oriundo, ruins, triunfo; atrair, demiurgo, influir, influirmos; juiz, raiz, etc.\" (Acordo Ortográfico 1990, Base X, 2.º, Portal da Língua Portuguesa, acordo.php?action=acordo&version=1990). closed_hiatus states it: the ⟨i u⟩ of ⟨ai au ei eu iu oi ui⟩ is split off before ⟨nh⟩, or before l m n r z when no vowel follows and the letter does not start ⟨lh rr⟩. ⟨ou⟩ is left out: Base X, 2.º gives no ⟨ou⟩ example, and the ⟨ou⟩ words of this shape are loans and foreign names (Lourdes, gourmet, tour). A following ⟨s⟩ is excluded (Base X, 1.º: \"excetuando o caso de s\"), so animais keeps its diphthong. The split holds only where the ⟨i u⟩ is stressed: Base XIV, 1.º says the spelling does not tell an atonic ⟨i u⟩ in hiatus from a diphthong (arruinar, faiscar), so an atonic one keeps the diphthong reading. FINAL DIPHTHONGS: a final ⟨iu ui⟩ after a vowel is one stressed diphthong, and the vowel before it is a nucleus of its own: \"Prescinde-se do acento agudo nos ditongos tónicos/tônicos grafados iu e ui, quando precedidos de vogal: distraiu, instruiu, pauis (pl. de paul).\" (Acordo Ortográfico 1990, Base X, 6.º, Portal da Língua Portuguesa, acordo.php?action=acordo&version=1990). So distraiu is dis-tra-iu and pauis is pa-uis, not dis-trai-u and pau-is. final_diphthongs states it for a word-final ⟨iu ui⟩, alone or before ⟨s⟩. A medial ⟨iu ui⟩ after a vowel is outside it: Base X, 4.º reads a tonic ⟨i u⟩ after a diphthong there (baiuca, cauila). A final one cannot have that reading unwritten, because Base X, 5.º writes the acute on a final tonic ⟨i u⟩ after a diphthong (Piauí, teiú, teiús). The split holds only where the diphthong is stressed. Cruz-Ferreira (1999: 128) lists [iu] (viu) and [ui] (anuis [ɐˈnuiʃ]) among the falling diphthongs, and transcribes desistiu /dɨziʃˈtiu/ with the stress on the diphthong (p. 129). The vowel before the diphthong is pretonic and reduces, as before the hiatus of the infinitive: sair [sɐˈiɾ], distrair [diʃtɾɐˈiɾ], instruir [ĩʃtɾuˈiɾ], paul [pɐˈuɫ] (Portal da Língua Portuguesa, Dicionário fonético, index.php?action=pronunciation). TONIC AFTER DIPHTHONG: a stressed ⟨i u⟩ after a diphthong is a syllable of its own, and the diphthong keeps its glide: \"Prescinde-se do acento agudo nas vogais tónicas/tônicas grafadas i e u das palavras paroxítonas, quando elas estão precedidas de ditongo: baiuca, boiuno, cauila (var. cauira), cheiinho (de cheio), saiinha (de saia).\" (Acordo Ortográfico 1990, Base X, 4.º) and \"Levam, porém, acento agudo as vogais tónicas/tônicas grafadas i e u quando, precedidas de ditongo, pertencem a palavras oxítonas e estão em posição final ou seguidas de s: Piauí, teiú, teiús, tuiuiú, tuiuiús. Obs.: Se, neste caso, a consoante final for diferente de s, tais vogais dispensam o acento agudo: cauim.\" (Base X, 5.º, Portal da Língua Portuguesa, acordo.php?action=acordo&version=1990). So baiuca is bai-u-ca and teiú is tei-ú. tonic_after_diphthong states it: where the stressed written syllable starts with ⟨i u í ú⟩ after a syllable that ends in a listed diphthong, the glide stays in the syllable before and the mark follows it. The rule reads only the place of the mark: the transcription already writes the glide and the vowel. An unstressed ⟨i u⟩ after a diphthong is outside it. The Portal da Língua Portuguesa Dicionário fonético (index.php?action=pronunciation) divides and transcribes these words so: bai·u·ca [baj'ukɐ], boi·u·no [boj'unu], tui·ui·ú [tujuj'u], mai·ús·cu·la [maj'uʃkulɐ], and, with the Lisbon [ɐj] of ⟨ei⟩, chei·i·nho [ʃɐj'iɲu], tei·ú [tɐj'u], fei·u·ra [fɐj'uɾɐ]. The unstressed ⟨i u⟩ keeps its place: a·bai·u·ca·do [ɐbaju'kadu], pi·au·i·en·se [piawi'ẽsɨ]. NASAL DIPHTHONG ⟨ãi⟩: \"Os ditongos representados por vogal com til e semivogal são quatro, considerando-se apenas a língua padrão contemporânea: ãe (usado em vocábulos oxítonos e derivados), ãi (usado em vocábulos anoxítonos e derivados), ão e õe. Exemplos: cães, Guimarães, mãe, mãezinha; cãibas, cãibeiro, cãibra, zãibo; [...]\" (Acordo Ortográfico 1990, Base VII, 3 a), Portal da Língua Portuguesa, acordo.php?action=acordo&version=1990). So ⟨ãi⟩ is one nucleus, the diphthong of ⟨ãe⟩, and the grapheme table gives it the reading of ⟨ãe⟩. It is not in final_stress_endings, because Base VII, 3 a) uses it in anoxytones: cãibra is cãi-bra, stressed on the diphthong. Cruz-Ferreira (1999: 128) lists the nasal diphthong [ɐ̃i] (cem [sɐ̃i]), and the Portal da Língua Portuguesa Dicionário fonético writes cãibra [ˈkɐ̃jbɾɐ] and zãibo [ˈzɐ̃jbu] with the nucleus of mãe [ˈmɐ̃j].",
+    "notes": "Acordo Ortográfico 1990 conventions: paroxytone default; written accents override; final -i/-u/-r/-l/-z/-x/-im/-om/-um/-ins/-ons/-uns and nasal diphthongs attract final stress. Unmarked -em/-ens/-am stay paroxytone (homem, homens, falam): an oxytone of more than one syllable in -em or -ens is written with an acute (Acordo Ortográfico 1990, Base VIII, 1.º c: deténs, haréns, provéns, também). DIPHTHONGS: declared so the bundled syllabifier counts nuclei correctly. Without them every vowel run merges into one nucleus, so co-e-lho is read as coe-lho — one syllable short — and the stress, and therefore the unstressed-vowel reduction it conditions, land on the wrong vowel. ⟨oe⟩ is hiatus, not a diphthong, and is absent from this list for that reason (Cunha & Cintra, Nova Gramática do Português Contemporâneo, §Ditongos). COMPOUNDS: a hyphenated compound is one prosodic word. Each element keeps its own stress and the last is the strongest (Bechara, Moderna Gramática Portuguesa, p. 340, quoted in Ciberdúvidas, resposta 28042), so compound_stress is \"last\": Infopédia gives guarda-chuva [ɡwardɐˈʃuvɐ], with the primary stress on chuva. IPA_DIPHTHONGS is empty: the grapheme table writes every diphthong with a glide ([aj], [uj], [ɐ̃w̃]), so two full vowels side by side in the transcription are always a hiatus, and the stress mark is placed with each IPA vowel as a nucleus of its own. Read with the orthographic list, the IPA [ui] of ⟨proíbe⟩ /pɾuibɨ/ and [iu] of ⟨viúva⟩ merge into one syllable and the mark lands a syllable early. The acute on a tonic ⟨i u⟩ after a vowel marks exactly this hiatus (Acordo Ortográfico 1990, Base X, 1.º: juízes, ruína, ciúme, miúdo, saída, baú). CLOSED HIATUS: a tonic ⟨i u⟩ after a vowel takes no acute when it forms a syllable with the next consonant, and it is still a nucleus in hiatus: \"As vogais tónicas/tônicas grafadas i e u das palavras oxítonas e paroxítonas não levam acento agudo quando, antecedidas de vogal com que não formam ditongo, constituem sílaba com a consoante seguinte, como é o caso de nh, l, m, n, r e z: bainha, moinho, rainha; adail, paul, Raul; Aboim, Coimbra, ruim; ainda, constituinte, oriundo, ruins, triunfo; atrair, demiurgo, influir, influirmos; juiz, raiz, etc.\" (Acordo Ortográfico 1990, Base X, 2.º, Portal da Língua Portuguesa, acordo.php?action=acordo&version=1990). closed_hiatus states it: the ⟨i u⟩ of ⟨ai au ei eu iu oi ui⟩ is split off before ⟨nh⟩, or before l m n r z when no vowel follows and the letter does not start ⟨lh rr⟩. ⟨ou⟩ is left out: Base X, 2.º gives no ⟨ou⟩ example, and the ⟨ou⟩ words of this shape are loans and foreign names (Lourdes, gourmet, tour). A following ⟨s⟩ is excluded (Base X, 1.º: \"excetuando o caso de s\"), so animais keeps its diphthong. The split holds only where the ⟨i u⟩ is stressed: Base XIV, 1.º says the spelling does not tell an atonic ⟨i u⟩ in hiatus from a diphthong (arruinar, faiscar), so an atonic one keeps the diphthong reading. FINAL DIPHTHONGS: a final ⟨iu ui⟩ after a vowel is one stressed diphthong, and the vowel before it is a nucleus of its own: \"Prescinde-se do acento agudo nos ditongos tónicos/tônicos grafados iu e ui, quando precedidos de vogal: distraiu, instruiu, pauis (pl. de paul).\" (Acordo Ortográfico 1990, Base X, 6.º, Portal da Língua Portuguesa, acordo.php?action=acordo&version=1990). So distraiu is dis-tra-iu and pauis is pa-uis, not dis-trai-u and pau-is. final_diphthongs states it for a word-final ⟨iu ui⟩, alone or before ⟨s⟩. A medial ⟨iu ui⟩ after a vowel is outside it: Base X, 4.º reads a tonic ⟨i u⟩ after a diphthong there (baiuca, cauila). A final one cannot have that reading unwritten, because Base X, 5.º writes the acute on a final tonic ⟨i u⟩ after a diphthong (Piauí, teiú, teiús). The split holds only where the diphthong is stressed. Cruz-Ferreira (1999: 128) lists [iu] (viu) and [ui] (anuis [ɐˈnuiʃ]) among the falling diphthongs, and transcribes desistiu /dɨziʃˈtiu/ with the stress on the diphthong (p. 129). The vowel before the diphthong is pretonic and reduces, as before the hiatus of the infinitive: sair [sɐˈir], distrair [diʃtrɐˈir], instruir [ĩʃtruˈir], paul [pɐˈuɫ] (Infopédia). TONIC AFTER DIPHTHONG: a stressed ⟨i u⟩ after a diphthong is a syllable of its own, and the diphthong keeps its glide: \"Prescinde-se do acento agudo nas vogais tónicas/tônicas grafadas i e u das palavras paroxítonas, quando elas estão precedidas de ditongo: baiuca, boiuno, cauila (var. cauira), cheiinho (de cheio), saiinha (de saia).\" (Acordo Ortográfico 1990, Base X, 4.º) and \"Levam, porém, acento agudo as vogais tónicas/tônicas grafadas i e u quando, precedidas de ditongo, pertencem a palavras oxítonas e estão em posição final ou seguidas de s: Piauí, teiú, teiús, tuiuiú, tuiuiús. Obs.: Se, neste caso, a consoante final for diferente de s, tais vogais dispensam o acento agudo: cauim.\" (Base X, 5.º, Portal da Língua Portuguesa, acordo.php?action=acordo&version=1990). So baiuca is bai-u-ca and teiú is tei-ú. tonic_after_diphthong states it: where the stressed written syllable starts with ⟨i u í ú⟩ after a syllable that ends in a listed diphthong, the glide stays in the syllable before and the mark follows it. The rule reads only the place of the mark: the transcription already writes the glide and the vowel. An unstressed ⟨i u⟩ after a diphthong is outside it. Infopédia divides these words so and writes the mark after the glide: bai.u.ca [bɐjˈukɐ], boi.u.no [bojˈunu], mai.ús.cu.la [majˈuʃkulɐ], tei.ú [tɐjˈu], fei.u.ra [fɐjˈurɐ]. It divides tui.ui.ú and cau.im the same way, but its readings [tujuˈju] and [kɐˈwĩ] have the mark before the glide. The unstressed ⟨i u⟩ keeps its place: a.bai.u.ca.do [ɐbajuˈkadu], a.bai.u.car [ɐbajuˈkar]. NASAL DIPHTHONG ⟨ãi⟩: \"Os ditongos representados por vogal com til e semivogal são quatro, considerando-se apenas a língua padrão contemporânea: ãe (usado em vocábulos oxítonos e derivados), ãi (usado em vocábulos anoxítonos e derivados), ão e õe. Exemplos: cães, Guimarães, mãe, mãezinha; cãibas, cãibeiro, cãibra, zãibo; [...]\" (Acordo Ortográfico 1990, Base VII, 3 a), Portal da Língua Portuguesa, acordo.php?action=acordo&version=1990). So ⟨ãi⟩ is one nucleus, the diphthong of ⟨ãe⟩, and the grapheme table gives it the reading of ⟨ãe⟩. It is not in final_stress_endings, because Base VII, 3 a) uses it in anoxytones: cãibra is cãi-bra, stressed on the diphthong. Cruz-Ferreira (1999: 128) lists the nasal diphthong [ɐ̃i] (cem [sɐ̃i]), and Infopédia gives cãibra [ˈkɐ̃j̃brɐ] and zãibo [ˈzɐ̃j̃bu] with the nucleus of mãe [ˈmɐ̃j̃].",
     "diphthongs": [
       "ãe",
       "ãi",

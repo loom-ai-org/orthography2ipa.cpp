@@ -80,22 +80,39 @@ Plugin classes are declared in the public header and can be selected by the JSON
 `who_answers()` introspection are also available. Remote URL/Hugging Face lexicon
 fetching and the most advanced Python allophone contexts remain future work.
 
+## Lexicons
+
+A `Pipeline` gives one engine its own lexicon and syllabifier. Another engine in the
+same process does not see them, so two engines can run different pipelines side by
+side. The order of precedence is `spec.word_exceptions`, then the pipeline lexicon,
+then the rules.
+
+```cpp
+using namespace orthography2ipa;
+const Pipeline pipeline{load_lexicon("/path/to/en-GB.tsv")};
+const G2P engine("en-GB", {}, "", false, true, true, true, nullptr, nullptr, pipeline);
+```
+
+`load_lexicon` reads a file into a mapping, and `packaged_lexicon` reads the mapping
+that an installed package supplies. Neither sets any state. An empty mapping is a
+lexicon with no entries. An engine with no pipeline lexicon reads the process-wide
+functions: `register_lexicon`, `set_lexicon_directory`, `use_packaged_lexicons`,
+`clear_lexicons` and `get_lexicon`. These functions are deprecated, and version
+8.0.0 removes them.
+
 ## Packaged lexicons
 
 A package such as [o2i-lexicons](https://pypi.org/project/o2i-lexicons/) supplies a
 residual lexicon per language: the words that the rules get wrong, in a
-`word<TAB>ipa` file. The install changes no output. The caller enables a packaged
-lexicon in code, as in Python:
+`word<TAB>ipa` file. The install changes no output. The caller gives a packaged
+lexicon to an engine in code, as in Python:
 
 ```cpp
-orthography2ipa::packaged_lexicon_sources();          // lists the providers, enables nothing
-orthography2ipa::use_packaged_lexicons();             // enables every provider
-orthography2ipa::use_packaged_lexicons({"pt-PT"});    // enables only these, or throws LookupError
-orthography2ipa::clear_lexicons();                    // disables them with every registration
+orthography2ipa::packaged_lexicon_sources();          // lists the providers
+orthography2ipa::packaged_lexicon("pt-PT");           // the mapping, or throws LookupError
 ```
 
-A packaged lexicon ranks below `register_lexicon` and the lexicon directory, and
-above the rules. Python finds the providers through the `orthography2ipa.lexicons`
+Python finds the providers through the `orthography2ipa.lexicons`
 entry points. C++ has no entry points, so the port reads a search path of provider
 roots. Each root has the layout of the package's data directory,
 `<root>/<code>/<source>.tsv`:

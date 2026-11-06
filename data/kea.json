@@ -384,6 +384,30 @@
   },
   "allophone_rules": [
     {
+      "id": "PT_LEX_NASAL_UI",
+      "phonemes": [],
+      "surface": "ũ",
+      "notes": "DISABLED for Kabuverdianu (Cape Verdean Creole). PT_LEX_NASAL_UI and PT_LEX_NASAL_UI_GLIDE give the pt-PT and pt-BR words muito, muita, muitos, muitas and mui the nasal diphthong [ũj̃]. No source for these words in this language was read, so its output stays what it was."
+    },
+    {
+      "id": "PT_LEX_NASAL_UI_GLIDE",
+      "phonemes": [],
+      "surface": "j̃",
+      "notes": "DISABLED for Kabuverdianu (Cape Verdean Creole). PT_LEX_NASAL_UI and PT_LEX_NASAL_UI_GLIDE give the pt-PT and pt-BR words muito, muita, muitos, muitas and mui the nasal diphthong [ũj̃]. No source for these words in this language was read, so its output stays what it was."
+    },
+    {
+      "id": "PT_LEX_AO_A",
+      "phonemes": [],
+      "surface": "a",
+      "notes": "DISABLED for Kabuverdianu (Cape Verdean Creole). PT_LEX_AO_A and PT_LEX_AO_GLIDE give the pt-PT contraction ao the diphthong [aw]. No source for ao in this language was read, so its output stays what it was."
+    },
+    {
+      "id": "PT_LEX_AO_GLIDE",
+      "phonemes": [],
+      "surface": "w",
+      "notes": "DISABLED for Kabuverdianu (Cape Verdean Creole). PT_LEX_AO_A and PT_LEX_AO_GLIDE give the pt-PT contraction ao the diphthong [aw]. No source for ao in this language was read, so its output stays what it was."
+    },
+    {
       "id": "PT_LEX_OPEN_E_SUFFIX",
       "phonemes": [],
       "surface": "e",
@@ -506,6 +530,18 @@
       "phonemes": [],
       "surface": "u",
       "notes": "DISABLED for Kabuverdianu (Cape Verdean Creole). PT_LEX_CLITIC_O gives the pt-PT article ⟨o os⟩ the [u] that an unstressed ⟨o⟩ reduces to in pt-PT. This spec keeps an unstressed ⟨o⟩ as [o] (bonito keeps its pretonic [o]), and ⟨o os⟩ need not be the pt-PT article in this language. So the rule does not apply, and o and os keep the reading of this spec."
+    },
+    {
+      "id": "PT_CODA_S_BEFORE_ZH_INTERNAL",
+      "phonemes": [],
+      "surface": "",
+      "notes": "DISABLED for Kabuverdianu (Cape Verdean Creole). PT_CODA_S_BEFORE_ZH_INTERNAL deletes the pt-PT coda [ʃ] before /ʒ/ inside a word. The deletion in this language has no variety-specific source, so the coda keeps the reading of this spec."
+    },
+    {
+      "id": "PT_CODA_S_VOICING_INTERNAL",
+      "phonemes": [],
+      "surface": "ʒ",
+      "notes": "DISABLED for Kabuverdianu (Cape Verdean Creole). PT_CODA_S_VOICING_INTERNAL voices the pt-PT coda [ʃ] to [ʒ] before a voiced consonant inside a word. The voicing of a word-internal coda sibilant in this language has no variety-specific source, so the coda keeps the reading of this spec."
     }
   ],
   "stress": {

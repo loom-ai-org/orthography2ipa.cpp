@@ -73,6 +73,10 @@ std::vector<SegmentSlot> apply_rescorers(
             // PREVIOUS rescorer (or the input), never its own output.
             const std::vector<SegmentSlot> local(current.begin() + static_cast<std::ptrdiff_t>(run_start),
                                                  current.begin() + static_cast<std::ptrdiff_t>(run_end));
+            std::vector<std::size_t> run_sylls;
+            if (syll_for_token != nullptr)
+                run_sylls.assign(syll_for_token->begin() + static_cast<std::ptrdiff_t>(run_start),
+                                 syll_for_token->begin() + static_cast<std::ptrdiff_t>(run_end));
             for (std::size_t local_idx = 0; local_idx < local.size(); ++local_idx) {
                 const std::size_t gi = run_start + local_idx;
                 RescoreContext ctx;
@@ -83,6 +87,7 @@ std::vector<SegmentSlot> apply_rescorers(
                 if (syll_for_token != nullptr && gi < syll_for_token->size())
                     ctx.syll_idx = (*syll_for_token)[gi];
                 ctx.stressed_syll_idx = stressed_syll_idx;
+                if (syll_for_token != nullptr) ctx.syll_indices = &run_sylls;
                 std::vector<Candidate> new_cands =
                     rescorer->rescore(local[local_idx], ctx);
                 // Returning the slot's existing candidates is a no-op; an

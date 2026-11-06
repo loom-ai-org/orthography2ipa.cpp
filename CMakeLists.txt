@@ -127,6 +127,13 @@ if(BUILD_TESTING)
     add_executable(orthography2ipa-packaged-lexicons tests/test_packaged_lexicons.cpp)
     target_link_libraries(orthography2ipa-packaged-lexicons PRIVATE orthography2ipa)
     add_test(NAME orthography2ipa-packaged-lexicons COMMAND orthography2ipa-packaged-lexicons)
+    add_executable(orthography2ipa-pipeline tests/test_pipeline.cpp)
+    target_link_libraries(orthography2ipa-pipeline PRIVATE orthography2ipa)
+    target_include_directories(orthography2ipa-pipeline PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/src)
+    add_test(NAME orthography2ipa-pipeline COMMAND orthography2ipa-pipeline)
+    add_executable(orthography2ipa-inserted-vowel tests/test_inserted_vowel.cpp)
+    target_link_libraries(orthography2ipa-inserted-vowel PRIVATE orthography2ipa)
+    add_test(NAME orthography2ipa-inserted-vowel COMMAND orthography2ipa-inserted-vowel)
     # `--json distance` writes Python repr floats, as the reference's json.dumps
     # does. The pt-PT/es-ES allophone overlap is 7/13.
     add_test(NAME orthography2ipa-cli-distance-json COMMAND orthography2ipa-cli --json distance pt-PT es-ES)
@@ -137,7 +144,7 @@ if(BUILD_TESTING)
     # The per-module harnesses drive a small check binary instead of the CLI
     # (a process per spec for 7662 specs is not workable through the CLI).
     foreach(driver langcodes linguatag inventory lm_feats lattice_per features_conformance tables sentence py_float weights
-                   packaged_lexicons)
+                   packaged_lexicons pipeline)
         add_executable(orthography2ipa-check-${driver} tests/check_${driver}_driver.cpp)
         target_link_libraries(orthography2ipa-check-${driver} PRIVATE orthography2ipa)
         # Several drivers reach the library's private beam/unicode headers.
@@ -146,6 +153,11 @@ if(BUILD_TESTING)
     # lexicon_parity.py drives it with HOME and the lexicon dir set per run.
     add_executable(orthography2ipa-check-lexicon tests/check_lexicon_driver.cpp)
     target_link_libraries(orthography2ipa-check-lexicon PRIVATE orthography2ipa)
+    # These programs test the deprecated process-wide lexicon API.
+    target_compile_options(orthography2ipa-tests PRIVATE -Wno-deprecated-declarations)
+    target_compile_options(orthography2ipa-packaged-lexicons PRIVATE -Wno-deprecated-declarations)
+    target_compile_options(orthography2ipa-check-lexicon PRIVATE -Wno-deprecated-declarations)
+    target_compile_options(orthography2ipa-check-packaged_lexicons PRIVATE -Wno-deprecated-declarations)
     configure_file(tests/install_check.cmake.in ${CMAKE_CURRENT_BINARY_DIR}/install_check.cmake @ONLY)
     add_test(NAME orthography2ipa-install COMMAND ${CMAKE_COMMAND} -P ${CMAKE_CURRENT_BINARY_DIR}/install_check.cmake)
     configure_file(tests/relocated_install_check.cmake.in ${CMAKE_CURRENT_BINARY_DIR}/relocated_install_check.cmake @ONLY)
@@ -297,6 +309,11 @@ if(BUILD_TESTING)
                  COMMAND ${Python3_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/tests/lexicon_parity.py
                          $<TARGET_FILE:orthography2ipa-check-lexicon>)
         set_tests_properties(orthography2ipa-lexicon-parity PROPERTIES ENVIRONMENT "O2I_PYTHON_ROOT=${O2I_REF_ROOT}")
+        add_test(NAME orthography2ipa-pipeline-parity
+                 COMMAND ${Python3_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/tests/pipeline_parity.py
+                         $<TARGET_FILE:orthography2ipa-check-pipeline>)
+        set_tests_properties(orthography2ipa-pipeline-parity PROPERTIES ENVIRONMENT "O2I_PYTHON_ROOT=${O2I_REF_ROOT}"
+                                                                         TIMEOUT 3600)
         # Needs the o2i-lexicons package installed for the reference's python.
         add_test(NAME orthography2ipa-packaged-lexicon-parity
                  COMMAND ${Python3_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/tests/packaged_lexicon_parity.py

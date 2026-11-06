@@ -36,6 +36,7 @@
 // because a header included there is nested a second time
 // (orthography2ipa::orthography2ipa::inventory) under either namespace form,
 // and the API then does not exist at global scope.
+#include <map>
 #include <set>
 #include <string>
 #include <vector>
@@ -45,6 +46,11 @@ struct LanguageSpec;
 } // namespace orthography2ipa
 
 namespace orthography2ipa::inventory {
+
+/// The `{word: ipa}` mapping an engine holds in Pipeline::lexicon. Each function
+/// below that takes one reads that mapping, and reads the process-wide lexicon
+/// when it is nullptr.
+using Lexicon = std::map<std::string, std::string>;
 
 /// inventory.py STRESS_MARKS: primary and secondary stress, inserted by
 /// `stress.apply_stress_mark`. UTF-8, in the reference's declared order.
@@ -56,33 +62,37 @@ extern const std::vector<std::string> STRESS_MARKS;
 /// the `allophone_rules` surfaces (a rule is a NEW source of IPA, so an
 /// inventory read off the graphemes alone would miss Najdi's `ts`); the
 /// cross-word `sandhi_rules` surfaces; the word-level overrides
-/// (`word_exceptions` and the caller-registered lexicon); the grammatical
+/// (`word_exceptions` and the sidecar *lexicon*); the grammatical
 /// endings, whose whole ambiguous candidate list is an emission source; and the
 /// stress marks when the spec declares stress rules. The empty string is
 /// excluded: a deleted slot emits nothing, which is the absence of a symbol
 /// rather than a symbol.
-std::set<std::string> emission_inventory(const LanguageSpec& spec);
+std::set<std::string> emission_inventory(const LanguageSpec& spec,
+                                         const Lexicon* lexicon = nullptr);
 
 /// inventory.py phoneme_inventory: the token set — `emission_inventory`, cut
 /// into segments. An emission is what one slot carries, and it is not always
 /// one phoneme (`ja` is a glide plus a vowel), so each emission is cut with
 /// `segment_ipa` against the spec's own atoms; multi-character segments stay
 /// whole when the data declares them.
-std::set<std::string> phoneme_inventory(const LanguageSpec& spec);
+std::set<std::string> phoneme_inventory(const LanguageSpec& spec,
+                                        const Lexicon* lexicon = nullptr);
 
 /// inventory.py phoneme_atoms: the multi-character segments *this spec
 /// declares*, longest first. Public because segmentation is not only a
 /// tokenizer concern: syllable weight has to know that a spec's `ts` is one
 /// consonant. Derived from the spec's own tables, so what counts as a segment
 /// is decided by the data.
-std::vector<std::string> phoneme_atoms(const LanguageSpec& spec);
+std::vector<std::string> phoneme_atoms(const LanguageSpec& spec,
+                                       const Lexicon* lexicon = nullptr);
 
 /// inventory.py tokenize: cut a transcription into the tokens a TTS model
 /// consumes. Every token returned is in `phoneme_inventory` — the closure
 /// invariant. Stress marks are their own tokens (they are prosodic, not
 /// segmental, so `ˈ` never rides on the segment before it), and whitespace is
 /// dropped: a word boundary is the caller's concern.
-std::vector<std::string> tokenize(const std::string& ipa, const LanguageSpec& spec);
+std::vector<std::string> tokenize(const std::string& ipa, const LanguageSpec& spec,
+                                  const Lexicon* lexicon = nullptr);
 
 /// inventory.py dead_allophone_rules: ids of the `allophone_rules` whose
 /// target phoneme this spec cannot produce, in rule declaration order. A rule

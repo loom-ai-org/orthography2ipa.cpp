@@ -13,6 +13,7 @@
 
 #include "beam.hpp"
 #include "codepoint_regex.hpp"
+#include "process_lexicon.hpp"
 #include "unicode_util.hpp"
 
 #include <algorithm>
@@ -139,7 +140,7 @@ std::vector<std::string> atoms_from(const std::set<std::string>& emissions,
 
 /// inventory.py _base_emissions: every IPA string the *within-word* tables can
 /// place on a slot.
-std::set<std::string> base_emissions(const LanguageSpec& spec) {
+std::set<std::string> base_emissions(const LanguageSpec& spec, const Lexicon* lexicon) {
     std::set<std::string> emissions;
 
     for (const auto& entry : spec.graphemes)
@@ -175,9 +176,11 @@ std::set<std::string> base_emissions(const LanguageSpec& spec) {
         emissions.insert(alternatives.begin(), alternatives.end());
     }
 
-    // The sidecar lexicon (caller-registered, never bundled) carries arbitrary
-    // IPA per word, exactly like word_exceptions.
-    for (const auto& entry : get_lexicon(spec.code)) emissions.insert(entry.second);
+    // The sidecar lexicon (never bundled) carries arbitrary IPA per word,
+    // exactly like word_exceptions.
+    const auto process = lexicon == nullptr ? detail::process_lexicon(spec.code) : nullptr;
+    for (const auto& entry : lexicon == nullptr ? *process : *lexicon)
+        emissions.insert(entry.second);
 
     if (spec.stress_defined)
         emissions.insert(STRESS_MARKS.begin(), STRESS_MARKS.end());
@@ -211,12 +214,6 @@ std::set<std::string> sandhi_emissions(const LanguageSpec& spec, const std::set<
     return out;
 }
 
-/// inventory.py _atoms: the atom list of the FULL emission inventory (the one
-/// tokenize() and phoneme_atoms() cut with).
-std::vector<std::string> atoms_of(const LanguageSpec& spec) {
-    return atoms_from(emission_inventory(spec), spec.phonemes);
-}
-
 /// inventory.py _split_on_stress: split *ipa* so each stress mark stands alone.
 std::vector<std::string> split_on_stress(const std::string& ipa) {
     std::vector<std::string> out;
@@ -236,27 +233,9 @@ std::vector<std::string> split_on_stress(const std::string& ipa) {
     return out;
 }
 
-} // namespace
-
-std::set<std::string> emission_inventory(const LanguageSpec& spec) {
-    std::set<std::string> base = base_emissions(spec);
-    for (const auto& segment : sandhi_emissions(spec, base)) base.insert(segment);
-    return base;
-}
-
-std::set<std::string> phoneme_inventory(const LanguageSpec& spec) {
-    std::set<std::string> tokens;
-    for (const auto& emission : emission_inventory(spec))
-        for (const auto& token : tokenize(emission, spec)) tokens.insert(token);
-    return tokens;
-}
-
-std::vector<std::string> phoneme_atoms(const LanguageSpec& spec) {
-    return atoms_of(spec);
-}
-
-std::vector<std::string> tokenize(const std::string& ipa, const LanguageSpec& spec) {
-    const std::vector<std::string> atoms = atoms_of(spec);
+/// inventory.py tokenize, with the atoms already built: a lexicon of many
+/// entries would otherwise rebuild them once for each of its emissions.
+std::vector<std::string> tokens_with(const std::string& ipa, const std::vector<std::string>& atoms) {
     std::vector<std::string> tokens;
     for (const auto& chunk : split_on_stress(ipa)) {
         if (is_stress_mark(chunk)) {
@@ -267,6 +246,32 @@ std::vector<std::string> tokenize(const std::string& ipa, const LanguageSpec& sp
             if (!segment.empty() && !is_space(segment)) tokens.push_back(segment);
     }
     return tokens;
+}
+
+} // namespace
+
+std::set<std::string> emission_inventory(const LanguageSpec& spec, const Lexicon* lexicon) {
+    std::set<std::string> base = base_emissions(spec, lexicon);
+    for (const auto& segment : sandhi_emissions(spec, base)) base.insert(segment);
+    return base;
+}
+
+std::set<std::string> phoneme_inventory(const LanguageSpec& spec, const Lexicon* lexicon) {
+    const std::set<std::string> emissions = emission_inventory(spec, lexicon);
+    const std::vector<std::string> atoms = atoms_from(emissions, spec.phonemes);
+    std::set<std::string> tokens;
+    for (const auto& emission : emissions)
+        for (const auto& token : tokens_with(emission, atoms)) tokens.insert(token);
+    return tokens;
+}
+
+std::vector<std::string> phoneme_atoms(const LanguageSpec& spec, const Lexicon* lexicon) {
+    return atoms_from(emission_inventory(spec, lexicon), spec.phonemes);
+}
+
+std::vector<std::string> tokenize(const std::string& ipa, const LanguageSpec& spec,
+                                  const Lexicon* lexicon) {
+    return tokens_with(ipa, phoneme_atoms(spec, lexicon));
 }
 
 std::vector<std::string> dead_allophone_rules(const LanguageSpec& spec) {

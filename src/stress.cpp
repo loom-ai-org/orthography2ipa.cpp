@@ -1414,12 +1414,13 @@ std::optional<int> plugin_stress(const std::string& word,
 
 int detect_stress(const std::string& word, const LanguageSpec& spec,
                   const std::vector<std::string>* syllables,
-                  const std::string& lang) {
+                  const std::string& lang,
+                  const SyllabifierPlugin* syllabifier) {
     std::vector<std::string> sylls;
     if (syllables != nullptr) {
         sylls = *syllables;
     } else {
-        sylls = syllables_for(word, lang, spec.diphthongs);
+        sylls = syllables_for(word, lang, spec.diphthongs, nullptr, syllabifier);
     }
     const std::size_t n = sylls.size();
     if (n <= 1) return 0;
@@ -1657,20 +1658,21 @@ std::set<std::size_t> hiatus_positions(const std::string& word, const LanguageSp
 
 std::vector<std::string> syllables_for(const std::string& word, const std::string& lang,
                                        const std::vector<std::string>& diphthongs,
-                                       const LanguageSpec* spec) {
-    // stress.py _syllables_for: registered plugin for *lang* first, naive
-    // fallback second.
-    if (!lang.empty()) {
-        if (const SyllabifierPlugin* plugin = get_syllabifier(lang)) {
-            try {
-                auto sylls = plugin->syllabify(word, lang);
-                std::string joined;
-                for (const auto& s : sylls) joined += s;
-                if (!sylls.empty() && joined == word) return sylls;
-            } catch (const std::exception&) {
-                // logging.getLogger(__name__).warning(
-                //     "syllabifier plugin %r failed on word %r", ...)
-            }
+                                       const LanguageSpec* spec,
+                                       const SyllabifierPlugin* syllabifier) {
+    // stress.py _syllables_for: the caller's plugin, else the one registered
+    // for *lang*, else the bundled splitter.
+    const SyllabifierPlugin* plugin = syllabifier;
+    if (plugin == nullptr && !lang.empty()) plugin = get_syllabifier(lang);
+    if (plugin != nullptr) {
+        try {
+            auto sylls = plugin->syllabify(word, lang);
+            std::string joined;
+            for (const auto& s : sylls) joined += s;
+            if (!sylls.empty() && joined == word) return sylls;
+        } catch (const std::exception&) {
+            // logging.getLogger(__name__).warning(
+            //     "syllabifier plugin %r failed on word %r", ...)
         }
     }
     const LanguageSpec* used_spec = spec;

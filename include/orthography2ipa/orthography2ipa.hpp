@@ -260,6 +260,8 @@ struct PluginAnswer {
     bool selected = false;
 };
 
+class SyllabifierPlugin;
+
 class Tokenizer {
 public:
     /// `expand_allophones` is g2p.py G2P.expand_allophones: the positional
@@ -276,9 +278,12 @@ public:
     /// `self._rescorers = base + declared_rescorers + self._allophone_chain`.
     /// An empty list — the default — leaves the chain byte-identical to the
     /// spec-only pipeline.
+    /// `syllabifier` is the engine's Pipeline::syllabifier, which wins over
+    /// discovery. The caller keeps it alive for the life of the Tokenizer.
     explicit Tokenizer(const LanguageSpec& spec, bool expand_allophones = false,
                        bool apply_allophony = true,
-                       const std::vector<const rescorer::LatticeRescorer*>& extra_rescorers = {});
+                       const std::vector<const rescorer::LatticeRescorer*>& extra_rescorers = {},
+                       const SyllabifierPlugin* syllabifier = nullptr);
     std::vector<Token> tokenize(const std::string& text) const;
     std::vector<Token> grapheme_tokens(const std::string& text) const;
     TokenSequence tokenize_with_context(const std::string& text) const;
@@ -316,6 +321,7 @@ private:
     bool uses_aperture_ = false;
     std::string silent_stress_marks_;
     bool expand_allophones_ = false;
+    const SyllabifierPlugin* syllabifier_ = nullptr;
     // g2p.py G2P._rescorers: the spec's compiled allophone rescorer
     // (allophony.py compile_allophone_rescorer), repeated allophone_passes
     // times so a rule that only fires on another rule's output can feed off
@@ -326,6 +332,25 @@ private:
 };
 
 class RescorerPlugin;
+
+/// pipeline.py Pipeline: what one G2P engine uses in place of the defaults. The
+/// caller builds it and passes it to one engine, so two engines in one process
+/// can run different pipelines side by side, and an engine that gets no
+/// pipeline does not see them. The members are const, as the reference's
+/// dataclass is frozen. Without a designated initializer, a syllabifier alone
+/// is `Pipeline{std::nullopt, plugin}`.
+struct Pipeline {
+    /// `{word: ipa}` entries for this engine, with lowercase NFC keys, as
+    /// load_lexicon and packaged_lexicon return them. The precedence is
+    /// `spec.word_exceptions`, then this mapping, then the rules. An empty
+    /// mapping is a lexicon with no entries. nullopt leaves the choice to the
+    /// process-wide lexicon API, which is deprecated.
+    const std::optional<std::map<std::string, std::string>> lexicon = std::nullopt;
+    /// The syllabifier for this engine. It replaces the plugin that discovery
+    /// finds for the language. A word it cannot split goes to the bundled
+    /// splitter, and never to a discovered plugin.
+    const std::shared_ptr<const SyllabifierPlugin> syllabifier = nullptr;
+};
 
 class G2P {
 public:
@@ -339,13 +364,19 @@ public:
     /// at the SENTENCE seam, before the spec's declarative sandhi pass, and
     /// when the list is empty the branch is skipped entirely — the default
     /// pipeline is byte-identical.
+    /// `pipeline` is g2p.py's keyword of the same name: the lexicon and the
+    /// syllabifier for this engine alone. Another engine in the same process
+    /// does not see them.
     explicit G2P(std::string language, std::map<std::string, std::vector<std::string>> plugin_overrides = {},
                  std::string dialect_profile = "", bool expand_allophones = false,
                  bool apply_sandhi = true, bool apply_stress = true,
                  bool apply_allophony = true,
                  const sentence::SentenceRescorerArg& sentence_rescorer = nullptr,
-                 const rescorer::RescorerArg& rescorer = nullptr);
+                 const rescorer::RescorerArg& rescorer = nullptr,
+                 const Pipeline& pipeline = {});
     const LanguageSpec& spec() const;
+    /// g2p.py G2P.pipeline: the pipeline this engine runs with.
+    const Pipeline& pipeline() const { return *pipeline_; }
     /// g2p.py G2P.lang: the RESOLVED canonical code this engine transcribes for
     /// (registry.py resolve() of what the caller asked for).
     const std::string& language() const;
@@ -411,6 +442,7 @@ private:
     std::string language_;
     const LanguageSpec* spec_;
     std::map<std::string, std::vector<std::string>> plugin_overrides_;
+    std::shared_ptr<const Pipeline> pipeline_;
     std::string dialect_profile_;
     // g2p.py G2P.__init__: `self._sandhi = SandhiEngine(spec.sandhi_rules) if
     // spec.sandhi_rules else None`. The rule contexts are compiled once per
@@ -462,6 +494,8 @@ private:
     /// g2p.py G2P._override_for: the whole-word reading for *word* —
     /// `word_exceptions` then the lexicon, each keyed on the language-aware
     /// lower-casing of the word with the spec's silent stress marks removed.
+    /// The lexicon is `pipeline.lexicon` when the caller set it, and the
+    /// process-wide lexicon otherwise.
     std::optional<std::string> override_for(const std::string& word) const;
     /// g2p.py G2P._normalize: the input after the spec's normalize plugins.
     std::string normalized(std::string text) const;
@@ -595,7 +629,9 @@ std::vector<const rescorer::LatticeRescorer*> get_rescorers(const std::string& c
 /// spec cache. This pattern is safe from more than one thread:
 ///   1. On one thread, register every plugin and lexicon, build every G2P,
 ///      and call transcribe once on each G2P. That call loads the lexicon of
-///      the engine's language into the cache.
+///      the engine's language into the cache. An engine with a Pipeline
+///      lexicon reads no cache, and its Pipeline syllabifier must allow
+///      concurrent calls.
 ///   2. Then several threads can call transcribe and transcribe_detailed on
 ///      those G2P objects at the same time. This does not hold for a G2P
 ///      built with a dialect profile: the profile's patterns compile into a
@@ -640,7 +676,27 @@ public:
     explicit LookupError(const std::string& message) : std::runtime_error(message) {}
 };
 
+// lexicon.py _warn_deprecated: the process-wide lexicon API acts on every engine
+// that has no Pipeline lexicon. The text is the reference's warning.
+#define O2I_DEPRECATED_LEXICON_API(name, replacement) \
+    [[deprecated(name " is deprecated and will be removed in 8.0.0; use " replacement ".")]]
+
+/// Deprecated: every engine with no lexicon of its own reads the registration.
+/// Use `G2P(code, ..., Pipeline{load_lexicon(source)})`.
+O2I_DEPRECATED_LEXICON_API("register_lexicon", "Pipeline(lexicon=load_lexicon(source))")
 void register_lexicon(const std::string& code, const std::string& source);
+/// lexicon.py load_lexicon: read the lexicon at *source* into a `{word: ipa}`
+/// mapping. *source* is a local path, an http(s):// URL, or a Hugging Face id
+/// (hf://<repo_id>/<path>, optionally @<revision>). The mapping is the caller's
+/// to give to Pipeline, and this call sets no state. Throws FileNotFoundError
+/// for a local source that does not exist.
+std::map<std::string, std::string> load_lexicon(const std::string& source);
+/// lexicon.py packaged_lexicon: the `{word: ipa}` mapping an installed package
+/// supplies for *code*. The mapping is the caller's to give to Pipeline, and
+/// this call sets no state. Throws LookupError when no installed package
+/// supplies a lexicon file for *code*: asking for a lexicon that is absent is
+/// an error, never a quiet fall back to the rules.
+std::map<std::string, std::string> packaged_lexicon(const std::string& code);
 /// lexicon.py is_ipa_string: True when *ipa* is NFC and every character is a
 /// phonetic letter, combining mark, or one of the tolerated prosodic
 /// modifiers. Empty is not a transcription.
@@ -674,12 +730,21 @@ std::pair<std::map<std::string, std::optional<std::vector<std::string>>>,
           std::map<std::string, std::vector<CandidateWeight>>>
 split_weighted_graphemes(const boost::property_tree::ptree& raw_graphemes);
 /// lexicon.py set_lexicon_dir: a leading ~ in *path* is expanded, as it is in
-/// $ORTHOGRAPHY2IPA_LEXICON_DIR.
+/// $ORTHOGRAPHY2IPA_LEXICON_DIR. Deprecated, with that variable: every engine
+/// with no lexicon of its own reads the directory. Use
+/// `Pipeline{load_lexicon(path)}` with the one file the engine needs.
+O2I_DEPRECATED_LEXICON_API("set_lexicon_dir", "Pipeline(lexicon=load_lexicon(path))")
 void set_lexicon_directory(const std::string& path);
 /// lexicon.py clear_lexicons: forgets every registered lexicon, the lexicon
 /// dir, the discovered packaged-lexicon providers and the enabled ones.
+/// Deprecated: an engine's Pipeline lexicon needs no clearing, because it ends
+/// with the engine.
+O2I_DEPRECATED_LEXICON_API("clear_lexicons", "Pipeline(lexicon=...), which needs no clearing")
 void clear_lexicons();
-/// lexicon.py use_packaged_lexicons: enables the packaged lexicon of every
+/// lexicon.py use_packaged_lexicons, deprecated: every engine with no lexicon
+/// of its own reads an enabled lexicon, so this changes the output of engines
+/// the caller did not name. Use `Pipeline{packaged_lexicon(code)}`.
+/// It enables the packaged lexicon of every
 /// discovered provider, or of the providers that serve *codes* (each resolved
 /// as get() resolves it), and returns every enabled resolved code, sorted. A
 /// packaged lexicon ranks below register_lexicon and the lexicon dir, and above
@@ -716,14 +781,20 @@ void clear_lexicons();
 /// <root>/<code>. It throws std::runtime_error ("Could not determine home
 /// directory.") for a ``~user`` entry whose user is unknown. Neither is a
 /// LookupError.
+O2I_DEPRECATED_LEXICON_API("use_packaged_lexicons", "Pipeline(lexicon=packaged_lexicon(code))")
 std::vector<std::string> use_packaged_lexicons();
+O2I_DEPRECATED_LEXICON_API("use_packaged_lexicons", "Pipeline(lexicon=packaged_lexicon(code))")
 std::vector<std::string> use_packaged_lexicons(const std::vector<std::string>& codes);
 /// lexicon.py packaged_lexicon_sources: the discovered providers as
 /// {resolved code: local file}. Enables nothing; a failing provider is left
 /// out.
 std::map<std::string, std::string> packaged_lexicon_sources();
 std::vector<std::string> available_lexicon_codes();
+/// lexicon.py get_lexicon, deprecated: the process-wide `{word: ipa}` overlay for
+/// *code*. An engine's lexicon is the mapping the caller built.
+O2I_DEPRECATED_LEXICON_API("get_lexicon", "Pipeline.lexicon")
 std::map<std::string, std::string> get_lexicon(const std::string& code);
+#undef O2I_DEPRECATED_LEXICON_API
 std::optional<std::string> lexicon_source(const std::string& code);
 std::optional<std::string> lexicon_path(const std::string& code);
 std::vector<std::pair<std::size_t, std::string>> validate_lexicon(const std::string& text);
