@@ -344,6 +344,22 @@ int main() {
         const G2P joined("pt-PT", {{"sandhi", {"test-ticking-sandhi"}}});
         assert(joined.transcribe("o gato") == "ua ˈɡatua" && sandhi->calls == 1);
         assert(joined.transcribe_detailed("o gato").ipa == "uo ˈɡatuo" && sandhi->calls == 2);
+        // g2p.py raises ValueError when a sandhi plugin returns another word count.
+        struct Merging : SandhiPlugin {
+            std::vector<std::string> language_codes() const override { return {"pt-PT"}; }
+            std::vector<std::string> apply(const std::vector<std::string>& words, const std::vector<std::string>&,
+                                           const std::vector<bool>&, const std::string&) const override {
+                return {words.front()};
+            }
+        };
+        register_sandhi_plugin("test-merging-sandhi", std::make_shared<Merging>());
+        bool refused = false;
+        try {
+            G2P("pt-PT", {{"sandhi", {"test-merging-sandhi"}}}).transcribe("o gato");
+        } catch (const std::runtime_error& error) {
+            refused = std::string(error.what()).find("changed word count") != std::string::npos;
+        }
+        assert(refused);
     }
     {
         // A silent stress mark is [""] in the tables, and a whole-word key is
