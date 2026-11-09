@@ -52,7 +52,8 @@ WORDS = {
     "es-ES": ["cantaba", "gato", "ahí", "país", "construcción", "hola"],
     "en-GB": ["colonel", "yacht", "nation", "the", "water"],
     "nl-NL": ["geven", "gebed", "verder", "veldslag", "quota"],
-    "ru": ["вода", "его", "молоко", "хорошо"],
+    "ru": ["вода", "его", "молоко", "хорошо", "его\u0301", "во\u0301", "большо\u0301го", "ЕГО\u0301"],
+    "ru-x-southern": ["его", "его\u0301"],
     "ar": ["كتاب", "مدرسة", "هذا"],
     "hi": ["कमल", "नमस्ते", "भारत"],
     "fr-FR": ["maison", "amis", "garçon"],
@@ -65,9 +66,13 @@ TEXTS = {"pt-PT": ["os gatos", "gato, rato"],
          "pt-BR": ["os gatos", "muito bem"], "en-GB": ["the yacht", "colonel Mustard"]}
 # A click no table emits, the click of each lexicon, a word that only segmentation
 # declares, a lone stress mark before a vowel, a vowel of few specs, a repeated token
-# that the message lists twice, and an apostrophe that changes the repr quotes.
+# that the message lists twice, and an apostrophe that changes the repr quotes. Then
+# a word that the check passes before a word that it refuses.
 FORCED = [f"<phoneme ph=\"{ipa}\">x</phoneme>"
           for ipa in ("ʘa", "ʘɐ", "ɡato", "ˈa", "ə", "ʘʘ", "a'ʘ")]
+FORCED.append(f"gato {FORCED[4]} {FORCED[0]}")
+# A compound element is split from the word, so the check runs there too.
+FORCED_WORDS = [f"guarda-{FORCED[0]}", f"guarda-{FORCED[4]}"]
 
 
 class Mode(SyllabifierPlugin):
@@ -153,6 +158,11 @@ def run(field):
     if command == "detailed":
         result = engine.transcribe_detailed(field[1])
         return result.ipa + "".join(f"|{w.word}={w.ipa}={number(w.confidence)}" for w in result.words)
+    if command == "features":
+        return "|".join(f"{w.word}={number(w.confidence)}={len(w.graphemes)}"
+                        for w in engine.features(field[1]))
+    if command == "sentence":
+        return "|".join(w.surface for w in engine.sentence_lattice(field[1]).words)
     if command == "candidates":
         return "|".join(engine.word_candidates(field[1], k=5))
     if command == "confidence":
@@ -218,7 +228,10 @@ def commands(root):
                     for word in words:
                         out += [[surface, word] for surface in
                                 ("word", "text", "detailed", "candidates", "confidence", "lattice", "path", "pre")]
-                    out += [["text", text] for text in TEXTS.get(lang, []) + FORCED]
+                    out += [["text", text] for text in TEXTS.get(lang, [])]
+                    out += [[surface, text] for text in FORCED
+                            for surface in ("text", "detailed", "features", "sentence")]
+                    out += [["word", word] for word in FORCED_WORDS]
         for lexicon in ("-", "{}", own[lang]):
             out.append(["reset"])
             out += [[kind, lang, lexicon] for kind in ("emission", "phonemes", "atoms")]

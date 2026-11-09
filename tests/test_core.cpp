@@ -315,6 +315,46 @@ int main() {
         assert(G2P("pt-PT", {{"sandhi", {"test-sandhi-foreign"}}}).transcribe_detailed("tenho casa").ipa == plain + "|");
     }
     {
+        // g2p.py runs a stage plugin once per chunk, so a plugin may hold state.
+        struct Ticking : NormalizePlugin {
+            mutable int calls = 0;
+            std::vector<std::string> language_codes() const override { return {"pt-PT"}; }
+            std::string normalize(const std::string& text, const std::string&) const override {
+                return text + (++calls % 2 ? "a" : "o");
+            }
+        };
+        struct TickingSandhi : SandhiPlugin {
+            mutable int calls = 0;
+            std::vector<std::string> language_codes() const override { return {"pt-PT"}; }
+            std::vector<std::string> apply(const std::vector<std::string>& words, const std::vector<std::string>&,
+                                           const std::vector<bool>&, const std::string&) const override {
+                auto out = words;
+                const std::string tail = ++calls % 2 ? "a" : "o";
+                for (auto& word : out) word += tail;
+                return out;
+            }
+        };
+        const auto normalize = std::make_shared<Ticking>();
+        const auto sandhi = std::make_shared<TickingSandhi>();
+        register_normalize_plugin("test-ticking", normalize);
+        register_sandhi_plugin("test-ticking-sandhi", sandhi);
+        const G2P once("pt-PT", {{"normalize", {"test-ticking"}}});
+        assert(once.transcribe("o gato") == "u ɡɐˈtɔɐ" && normalize->calls == 1);
+        assert(once.transcribe_detailed("o gato").ipa == "u ɡɐˈtɔu" && normalize->calls == 2);
+        const G2P joined("pt-PT", {{"sandhi", {"test-ticking-sandhi"}}});
+        assert(joined.transcribe("o gato") == "ua ˈɡatua" && sandhi->calls == 1);
+        assert(joined.transcribe_detailed("o gato").ipa == "uo ˈɡatuo" && sandhi->calls == 2);
+    }
+    {
+        // A silent stress mark is [""] in the tables, and a whole-word key is
+        // spelled without it: его́ is его, and во́ keeps the stress its mark sets.
+        assert(G2P("ru-RU").transcribe_word("его\xcc\x81") == "jɪˈvo");
+        assert(G2P("ru-RU").transcribe_word("ЕГО\xcc\x81") == "jɪˈvo");
+        assert(G2P("ru-RU").transcribe_word("во\xcc\x81") == "ˈvo");
+        assert(G2P("ru-RU").transcribe_word("большо\xcc\x81го") == "bɐlʲˈʂəvə");
+        assert(G2P("ru-x-southern").transcribe_word("его\xcc\x81") == "jaˈɣo");
+    }
+    {
         // g2p.py reads only the normalize, rescore and sandhi stages, so a
         // declared syllabify or stress plugin that nothing provides is no error.
         const std::string plain = G2P("pt-PT").transcribe("tenho casa");

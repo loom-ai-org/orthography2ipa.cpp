@@ -491,6 +491,9 @@ private:
     // ordering), shared by transcribe_detailed and transcribe_word.
     WordTranscription transcribe_one(const std::string& word, std::size_t width,
                                      bool forced, const std::string& forced_ipa) const;
+    /// g2p.py G2P._check_forced: raises MarkupError when forced IPA holds a
+    /// symbol outside the spec's declared inventory.
+    void check_forced(const std::string& ipa) const;
     /// g2p.py G2P._override_for: the whole-word reading for *word* —
     /// `word_exceptions` then the lexicon, each keyed on the language-aware
     /// lower-casing of the word with the spec's silent stress marks removed.
