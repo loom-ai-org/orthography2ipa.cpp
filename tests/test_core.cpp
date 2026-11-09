@@ -353,6 +353,17 @@ int main() {
         assert(G2P("ru-RU").transcribe_word("во\xcc\x81") == "ˈvo");
         assert(G2P("ru-RU").transcribe_word("большо\xcc\x81го") == "bɐlʲˈʂəvə");
         assert(G2P("ru-x-southern").transcribe_word("его\xcc\x81") == "jaˈɣo");
+        // g2p.py _is_cliticless: a word with a silent mark is never a clitic,
+        // even when the spec lists the marked form.
+        // A listed clitic loses its stress, and the beam shows it in the vowels.
+        LanguageSpec listed = get("ru");
+        listed.cliticless_words.push_back("молоко");
+        listed.cliticless_words.push_back("молоко\xcc\x81");
+        const auto beam_of = [](const LanguageSpec& spec, const std::string& word) {
+            return Tokenizer(spec).beam(word).front().ipa;
+        };
+        assert(beam_of(listed, "молоко") != beam_of(get("ru"), "молоко"));
+        assert(beam_of(listed, "молоко\xcc\x81") == beam_of(get("ru"), "молоко\xcc\x81"));
     }
     {
         // g2p.py reads only the normalize, rescore and sandhi stages, so a
