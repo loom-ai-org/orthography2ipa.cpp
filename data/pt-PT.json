@@ -196,10 +196,6 @@
       "nucleus_unstressed": [
         "ɐ"
       ],
-      "word_initial": [
-        "ɐ",
-        "a"
-      ],
       "word_final": [
         "ɐ"
       ],
@@ -373,7 +369,24 @@
       "followed_by_phoneme": [
         "̃"
       ],
-      "notes": "Coda-conditioned vowel nasalisation, general Portuguese (Mateus & d'Andrade 2000: ch.2, 'Nasality'): a vowel followed by a tautosyllabic (coda) nasal ⟨m/n⟩ nasalises while the nasal consonant is absorbed into the nasal vowel (campo, canto, ambos). The nasalisation itself is modelled pre-lexically by the positional 'm'/'n' before_consonant/word_final → [̃] (U+0303 combining tilde) map, which deletes the coda nasal and nasalises the preceding vowel by concatenation. This rule supplies only the accompanying VOWEL-QUALITY shift for ⟨a⟩: the nasal low vowel is the central [ɐ̃] (not [ã]), so the stressed oral [a] selected by the positional map raises to [ɐ] before the tilde — [ɐ]+[̃] = the nasal vowel [ɐ̃] (campo [ˈkɐ̃pu], cantar [kɐ̃ˈtaɾ]). The surface is the ORAL base [ɐ]; the nasal tilde comes only from the separate m/n slot, so no vowel is ever double-tilded. It fires ONLY when the next lattice slot is the nasalisation tilde, so an INTERVOCALIC (onset) ⟨m/n⟩ — which stays a consonant and leaves the vowel oral — is untouched (cama [ˈkamɐ], ano [ˈɐnu]). The word-initial ⟨a⟩ already selects [ɐ] (ambos [ˈɐ̃buʃ]), which this rule leaves unchanged. The letter ⟨ã⟩ writes the same nasal vowel, so graphemes maps ⟨ã⟩ to [ɐ̃] (maçã [mɐˈsɐ̃], lã [ˈlɐ̃]). Cruz-Ferreira (1999, Handbook of the IPA, p. 127) lists five nasalized vowels, [ĩ ẽ ɐ̃ õ ũ] (antro [ˈɐ̃tɾu]); there is no open nasal [ã]."
+      "notes": "Coda-conditioned vowel nasalisation, general Portuguese (Mateus & d'Andrade 2000: ch.2, 'Nasality'): a vowel followed by a tautosyllabic (coda) nasal ⟨m/n⟩ nasalises while the nasal consonant is absorbed into the nasal vowel (campo, canto, ambos). The nasalisation itself is modelled pre-lexically by the positional 'm'/'n' before_consonant/word_final → [̃] (U+0303 combining tilde) map, which deletes the coda nasal and nasalises the preceding vowel by concatenation. This rule supplies only the accompanying VOWEL-QUALITY shift for ⟨a⟩: the nasal low vowel is the central [ɐ̃] (not [ã]), so the stressed oral [a] selected by the positional map raises to [ɐ] before the tilde — [ɐ]+[̃] = the nasal vowel [ɐ̃] (campo [ˈkɐ̃pu], cantar [kɐ̃ˈtaɾ]). The surface is the ORAL base [ɐ]; the nasal tilde comes only from the separate m/n slot, so no vowel is ever double-tilded. It fires ONLY when the next lattice slot is the nasalisation tilde, so an INTERVOCALIC (onset) ⟨m/n⟩ — which stays a consonant and leaves the vowel oral — is untouched here, and PT_STRESSED_A_BEFORE_NASAL sets that vowel. A word-initial stressed ⟨a⟩ takes the same raise (ambos [ˈɐ̃buʃ]). The letter ⟨ã⟩ writes the same nasal vowel, so graphemes maps ⟨ã⟩ to [ɐ̃] (maçã [mɐˈsɐ̃], lã [ˈlɐ̃]). Cruz-Ferreira (1999, Handbook of the IPA, p. 127) lists five nasalized vowels, [ĩ ẽ ɐ̃ õ ũ] (antro [ˈɐ̃tɾu]); there is no open nasal [ã]."
+    },
+    {
+      "id": "PT_STRESSED_A_BEFORE_NASAL",
+      "phonemes": [
+        "a"
+      ],
+      "surface": "ɐ",
+      "stress": "stressed",
+      "grapheme": [
+        "a"
+      ],
+      "followed_by_phoneme": [
+        "m",
+        "n",
+        "ɲ"
+      ],
+      "notes": "Stressed plain ⟨a⟩ before an onset /m n ɲ/ is central [ɐ] (cama [ˈkɐmɐ], ano [ˈɐnu], banho [ˈbɐɲu]). Cunha & Cintra (Nova Gramática do Português Contemporâneo, 7th ed., p. 49): \"No português europeu normal, [ɑ], quando tônico, também aparece, na maioria dos casos, antes de consoante nasal, a exemplo de cama, cana e sanha\". Their [ɑ] is this spec's [ɐ]. Lao, Rodrigues & Brissos (2020, Revista da Associação Portuguesa de Linguística 7, p. 296): \"no padrão existe uma elevação de a para [ɐ]\". The same page of Cunha & Cintra gives the one opposition, the present against the preterite of first-conjugation verbs. pt-PT spells that preterite with ⟨á⟩, so the rule takes plain ⟨a⟩ only: falamos [fɐˈlɐmuʃ], falámos [fɐˈlamuʃ]. Infopédia writes [ɐ] in 1904 of 1933 rows with this shape. The other 29 are mostly loans and -iano derivatives (tsunami tsuˈnami, estoniano (i)ʃtuˈnjanu), while 685 of 696 -iano rows have [ɐ]."
     },
     {
       "id": "PT_NASAL_E_RAISE",
@@ -973,7 +986,7 @@
       "right_context": "^[aeiouɛɔ]",
       "transform": "",
       "obligatory": false,
-      "notes": "de amanhã → d‿ɐmɐɲã"
+      "notes": "norte e → ˈnɔɾt i; Cruz-Ferreira (1999, Handbook of the IPA, p. 130) writes ˈnɔɾt ↑i. The right context holds neither [ɐ] nor a stress mark, so de amanhã stays dɨ ɐmɐˈɲɐ̃ and de ouro stays dɨ ˈoɾu."
     }
   ],
   "quality": "research",
@@ -989,6 +1002,16 @@
       "url": null,
       "pages": null,
       "notes": "Not consulted for the sibilant entry: Google Books shows no pages, archive.org holds no copy and the publisher text is paywalled."
+    },
+    {
+      "id": "lao_rodrigues_brissos2020",
+      "author": "Lao, Shanyi; Rodrigues, Celeste; Brissos, Fernando",
+      "year": 2020,
+      "title": "Nasalização regressiva heterossilábica (NRH) da vogal /a/ acentuada em PE",
+      "publisher": "Revista da Associação Portuguesa de Linguística 7, 295-317",
+      "url": "https://doi.org/10.26334/2183-9077/rapln7ano2020a18",
+      "pages": "295-317",
+      "notes": "Read in full. Maps stressed /a/ before /m n ɲ/ across mainland Portugal from the Atlas Linguístico-Etnográfico de Portugal e da Galiza. Page 308 gives [a] and [ã] in the Northwest, [ɐ] in Trás-os-Montes, Beira Alta, Beira Litoral and Estremadura, and [ɐ̃] elsewhere."
     },
     {
       "id": "cruzferreira1995",
@@ -1018,7 +1041,7 @@
       "publisher": "Sá da Costa",
       "url": null,
       "pages": null,
-      "notes": null
+      "notes": "Page numbers in the notes of PT_STRESSED_A_BEFORE_NASAL follow the 7th edition (Lexikon, 2017), read as the page image."
     },
     {
       "id": "start_cross2002",

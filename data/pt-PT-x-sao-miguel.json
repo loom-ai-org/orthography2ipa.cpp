@@ -54,6 +54,12 @@
       "surface": "y",
       "stress": "stressed",
       "notes": "The single most stereotyped micaelense feature: fronting of every stressed /u/ to the front rounded [y], the trait that makes the accent 'sound French' (fruta -> [ˈfrytɐ], tu -> [ty]). SOURCE UPGRADE (Rogers 1948 -> Silva 2008): the earlier open-nucleus restriction (a KEEP guard blocking the fronting before a tautosyllabic coda) is DROPPED because Silva, David J. (2008), 'The Persistence of Stereotyped Dialect Features...', Journal of Portuguese Linguistics 7-1: 3-21, p. 4, gives the fronting explicitly BEFORE a coda: azul -> [ɐˈzyl] (before coda /l/) and cruz -> [kryʃ] (before coda /ʃ/), alongside the open-syllable uva -> [ˈyvɐ], fruta -> [ˈfrytɐ]. So micaelense [y] is a property of the stressed nucleus, not conditioned by the following coda — unlike the more conservative Rogers-based description kept in the general pt-PT-x-acores node (which retains ACO_U_KEEP_BEFORE_CODA). Gated to the STRESSED nucleus only: unstressed /u/ is untouched (número -> [nuˈmɛɾu], the first /u/ unstressed stays [u]), and the definite-article / contraction clitics are pinned in word_exceptions to their [u]-forms so a proclitic o/do/no/ao mis-marked stressed by the word-level detector is never fronted. NATIVE CORROBORATION: the São Miguel deep-dive (Portuguese With Leo, https://www.youtube.com/watch?v=6IqeBcjK_fk) — Catarina: 'o u faz com que pareça realmente um sotaque assim muito francês, é a nossa característica, é o û'."
+    },
+    {
+      "id": "PT_STRESSED_A_BEFORE_NASAL",
+      "phonemes": [],
+      "surface": "ɐ",
+      "notes": "DISABLED for Micaelense Portuguese. No source read covers a stressed /a/ before an onset nasal in this variety. The reading is the spec default and makes no claim about this context."
     }
   ],
   "sandhi_rules": [

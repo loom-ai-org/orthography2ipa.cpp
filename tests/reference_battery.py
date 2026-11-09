@@ -274,6 +274,50 @@ PINNED["cnr"] = ["с́екира", "с́евер", "с́еница", "с́еме
                  "из́ести", "из́елица", "коз́и", "З́агора", "љубав", "Њујорк", "џем", "ЏЕМ", "ЉЕТО",
                  "ЊЕДРА", "рђа", "прст", "крст", "смртан", "срп", "Подгорица", "Никшић", "Жабљак",
                  "расходовати", "читај", "фонем", "бизин", "śekira", "źenica", "ljubav", "voda"]
+# pt-BR breaks a post-tonic [t] before a nasal and [k] before [n]. The southern specs
+# keep the cluster, and the clusters that no source gives stay.
+PINNED["pt-BR"] += ["ritmo", "étnico", "técnico", "técnica", "acne", "dogma", "digno", "mogno",
+                    "dracma"]
+for code in ["pt-BR-x-sul", "pt-BR-x-floripa", "pt-BR-x-pr", "pt-UY", "pt-BR-x-rj"]:
+    PINNED.setdefault(code, []).extend(["ritmo", "técnico"])
+# ⟨uei⟩ after a consonant has the diphthong of ⟨ei⟩ in each spec that has the grapheme.
+for code in ["ext-PT-x-barranco", "pt-AO", "pt-BR", "pt-BR-x-bahia", "pt-BR-x-caipira",
+             "pt-BR-x-ce", "pt-BR-x-cuiaba", "pt-BR-x-floripa", "pt-BR-x-fluminen", "pt-BR-x-mg",
+             "pt-BR-x-norte", "pt-BR-x-pr", "pt-BR-x-recife", "pt-BR-x-rj", "pt-BR-x-sp",
+             "pt-BR-x-sul", "pt-CV", "pt-GW", "pt-MO", "pt-MZ", "pt-PT", "pt-PT-x-acores",
+             "pt-PT-x-alentejo", "pt-PT-x-alfena", "pt-PT-x-algarve", "pt-PT-x-aveiro",
+             "pt-PT-x-beira", "pt-PT-x-braga", "pt-PT-x-coimbra", "pt-PT-x-lisbon",
+             "pt-PT-x-madeira", "pt-PT-x-medieval", "pt-PT-x-minho", "pt-PT-x-porto",
+             "pt-PT-x-sao-miguel", "pt-PT-x-terceira", "pt-PT-x-tras-os-montes", "pt-PT-x-viana",
+             "pt-ST", "pt-TL", "pt-UY", "roa-x-galaico-pt"]:
+    PINNED.setdefault(code, []).extend(["bueiro", "cueiro", "continuei", "feira"])
+# A plural keeps the stress of its singular when the loss stands before the stress.
+# A loss after the stress keeps the count from the start.
+for code in ["pt-BR", "pt-PT"]:
+    PINNED[code] += ["distribuidoras", "distribuidores", "construidoras", "atribuidores",
+                     "bueiros", "osteointegradas", "jersey"]
+PINNED["pt-PT-x-alentejo"] += ["teatro", "diabo", "havaiano", "coiote"]
+PINNED.setdefault("ca", []).extend(["lingüístics", "aqüífers", "redueixin"])
+PINNED["nl-BE"] += ["vertrouwen", "betrouwen"]
+# A stressed pt-PT ⟨a⟩ is [a], and [ɐ] before an onset nasal. Each spec below takes the
+# rule, keeps an open vowel, gives the nasal vowel, or switches the rule off.
+PINNED["pt-PT"] += ["ar", "arte", "ato", "água", "cama", "ramo", "banho", "ano", "amo", "ama",
+                    "anho", "falamos", "falámos", "amámos", "amar", "abrir", "manhã", "a", "as",
+                    "campo", "ambos", "alto", "montanha"]
+for code in ["pt-PT-x-lisbon", "pt-PT-x-tras-os-montes", "pt-PT-x-beira", "pt-PT-x-coimbra",
+             "pt-PT-x-aveiro", "pt-PT-x-minho", "pt-PT-x-braga", "pt-PT-x-viana", "pt-PT-x-porto",
+             "pt-PT-x-alfena", "pt-PT-x-alentejo", "pt-PT-x-algarve", "pt-AO", "pt-CV", "pt-GW",
+             "pt-MZ", "pt-ST", "pt-TL", "ext-PT-x-barranco", "pt-MO", "pt-PT-x-acores",
+             "pt-PT-x-madeira", "pt-PT-x-sao-miguel", "pt-PT-x-terceira", "aoa", "cri", "idb",
+             "kea", "mcm", "mzs", "pap", "pov", "pre", "vkp"]:
+    PINNED.setdefault(code, []).extend(["cama", "ano", "ramo", "banho", "ar", "arte"])
+PINNED["pt-PT-x-terceira"] += ["gato"]
+PINNED["ext-PT-x-barranco"] += ["areia"]
+# pt-BR reads a coda ⟨x⟩ as the coda sibilant of the spec and ⟨xc⟩ as one /s/.
+PINNED["pt-BR"] += ["texto", "sexta", "explicar", "expor", "extra", "exceção", "exceto",
+                    "excesso", "excluir", "Vixnu", "exato", "festa"]
+for code in ["pt-BR-x-rj", "pt-BR-x-norte", "pt-BR-x-recife", "pt-BR-x-floripa", "pt-BR-x-cuiaba"]:
+    PINNED.setdefault(code, []).extend(["festa", "sexta", "mesmo", "Vixnu", "excesso"])
 
 # The code points of the viramas this catalog actually uses.
 VIRAMAS = {0x094D, 0x09CD, 0x0A4D, 0x0ACD, 0x0B4D, 0x0BCD, 0x0C4D, 0x0CCD,

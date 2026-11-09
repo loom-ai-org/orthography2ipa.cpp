@@ -135,6 +135,9 @@ if(BUILD_TESTING)
     target_link_libraries(orthography2ipa-inserted-vowel PRIVATE orthography2ipa)
     target_include_directories(orthography2ipa-inserted-vowel PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/src)
     add_test(NAME orthography2ipa-inserted-vowel COMMAND orthography2ipa-inserted-vowel)
+    add_executable(orthography2ipa-plural-stress tests/test_pt_plural_stress.cpp)
+    target_link_libraries(orthography2ipa-plural-stress PRIVATE orthography2ipa)
+    add_test(NAME orthography2ipa-plural-stress COMMAND orthography2ipa-plural-stress)
     # `--lexicon` hands the file to the engine, whose reading replaces the rules.
     file(WRITE ${CMAKE_CURRENT_BINARY_DIR}/cli-lexicon.tsv "gato\tˈɡaʃtɐ\n")
     add_test(NAME orthography2ipa-cli-lexicon

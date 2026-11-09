@@ -99,6 +99,27 @@
   ]
  },
  "positional_graphemes": {
+  "a": {
+   "nucleus_stressed": [
+    "a"
+   ],
+   "nucleus_unstressed": [
+    "ɐ"
+   ],
+   "word_initial": [
+    "ɐ",
+    "a"
+   ],
+   "word_final": [
+    "ɐ"
+   ],
+   "pretonic": [
+    "ɐ"
+   ],
+   "posttonic": [
+    "ɐ"
+   ]
+  },
   "r": {
    "word_initial": [
     "r"
@@ -363,6 +384,12 @@
       "phonemes": [],
       "surface": "e",
       "notes": "DISABLED for Barranquenho. No source for the stressed vowel of a word-final ⟨-er⟩ in this variety was read, so its output stays what it was; the pt-PT rule rests on Infopédia and Priberam entries for standard European Portuguese."
+    },
+    {
+      "id": "PT_STRESSED_A_BEFORE_NASAL",
+      "phonemes": [],
+      "surface": "ɐ",
+      "notes": "DISABLED for Barranquenho. No source read covers a stressed /a/ before an onset nasal in this variety. The reading is the spec default and makes no claim about this context. The `a` row keeps the `word_initial` values for the same reason."
     }
   ],
  "ancestors": [

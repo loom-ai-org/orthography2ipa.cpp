@@ -7,6 +7,9 @@
     "ei": [
       "e"
     ],
+    "uei": [
+      "we"
+    ],
     "ou": [
       "o"
     ]
@@ -242,6 +245,23 @@
       "phonemes": [],
       "surface": "u",
       "notes": "DISABLED for Algarvio. PT_LEX_CLITIC_O gives the article ⟨o os⟩ the [u] that an unstressed ⟨o⟩ reduces to in pt-PT. This spec keeps an unstressed ⟨o⟩ as [o]: its positional map gives pretonic and unstressed-nucleus ⟨o⟩ [o]. So the reduced vowel does not apply, and o and os keep the reading of this spec. The vowel of the article in this variety has no variety-specific source. The word_exceptions of this spec give o [u] and os [uʒ], and they apply before any rule."
+    },
+    {
+      "id": "PT_STRESSED_A_BEFORE_NASAL",
+      "phonemes": [
+        "a"
+      ],
+      "surface": "ɐ̃",
+      "stress": "stressed",
+      "grapheme": [
+        "a"
+      ],
+      "followed_by_phoneme": [
+        "m",
+        "n",
+        "ɲ"
+      ],
+      "notes": "In the Algarve a stressed /a/ before an onset nasal is raised and nasal. Lao, Rodrigues & Brissos (2020, Revista da Associação Portuguesa de Linguística 7, p. 308) names the regions that prefer [ɐ] and adds: \"e de resto, o que predomina é [ɐ̃]\". That rest holds the Alentejo and the Algarve, which page 301 marks among the areas of highest nasalisation."
     }
   ],
   "word_exceptions": {

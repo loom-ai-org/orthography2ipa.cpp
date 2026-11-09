@@ -53,6 +53,12 @@
       "stress": "stressed",
       "followed_by": "consonant",
       "notes": "São Miguel-class fronting of a stressed open-syllable /u/ to a front rounded [y] — the single most stereotyped Azorean feature. Fires when the stressed /u/ is followed by a consonant that opens the next syllable (número -> [ˈnymɨɾu]); it is blocked before a tautosyllabic coda by the preceding ACO_U_KEEP_BEFORE_CODA rule, and does not reach a word-final open /u/ (the standalone lexical shibboleth tu -> [ty] is pinned in word_exceptions instead, because the ep_dialects gold runs each sentence as one concatenated token and a word-boundary condition there would mis-fire on sentence-final unstressed /u/). The definite article and preposition-article contractions are pinned to [u]-forms in word_exceptions so this rule can never front a proclitic o/do/no/ao. Fronting is categorical in the São Miguel micro-variety and only partial/lexical in the other islands (Terceira, the gold reference), so this models the strongest realisation; the muda-type divergence (São Miguel [ˈmydɐ] vs the Terceira gold's [ˈmudɐ]) is the documented inter-island limit. Source: Rogers (1948), an island-specific field description."
+    },
+    {
+      "id": "PT_STRESSED_A_BEFORE_NASAL",
+      "phonemes": [],
+      "surface": "ɐ",
+      "notes": "DISABLED for Azorean Portuguese. No source read covers a stressed /a/ before an onset nasal in this variety. The reading is the spec default and makes no claim about this context."
     }
   ],
   "sandhi_rules": [

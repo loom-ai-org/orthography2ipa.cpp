@@ -357,6 +357,12 @@
       "phonemes": [],
       "surface": "u",
       "notes": "DISABLED for Kristang (Papia Kristang, Malacca Creole Portuguese). PT_LEX_CLITIC_O gives the pt-PT article ⟨o os⟩ the [u] that an unstressed ⟨o⟩ reduces to in pt-PT. This spec keeps an unstressed ⟨o⟩ as [o] (bonito keeps its pretonic [o]), and ⟨o os⟩ need not be the pt-PT article in this language. So the rule does not apply, and o and os keep the reading of this spec."
+    },
+    {
+      "id": "PT_STRESSED_A_BEFORE_NASAL",
+      "phonemes": [],
+      "surface": "ɐ",
+      "notes": "DISABLED for Kristang (Papia Kristang, Malacca Creole Portuguese). No source read covers a stressed /a/ before an onset nasal in this variety. The reading is the spec default and makes no claim about this context."
     }
   ],
   "ancestors": [

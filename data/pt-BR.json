@@ -575,6 +575,36 @@
       "notes": "Pretonic nasalisation before the palatal nasal: ganhar [ɡɐ̃ˈɲaɾ], senhor [sẽˈɲoɾ]. Barbosa & Albano (2004: 229): 'In pre-stressed position, there is a ten-vowel phonetic contrast, where the quality of the corresponding stressed vowel is roughly preserved: [i e a o u ĩ ẽ ɐ̃ õ ũ]. Nasalised vowels in this position surface either before /N/ (e.g. temporal tẽᵐpoˈɾaʊ̯ ‘temporal’) or before /ɲ/ (e.g. ganhar gɐ̃ˈɲaɾ ‘(to) win’).' A pretonic vowel before /m n/ is not in that list and stays oral."
     },
     {
+      "id": "BR_XC_ONE_S",
+      "phonemes": [
+        "ʃ"
+      ],
+      "surface": "",
+      "grapheme": [
+        "x"
+      ],
+      "followed_by_grapheme": [
+        "c"
+      ],
+      "followed_by_phoneme": [
+        "s"
+      ],
+      "notes": "⟨xc⟩ before a front vowel is one /s/: exceção [eseˈsɐ̃w̃], excesso [eˈsesu]. Vasilévski (2012: 55, Table 1) gives 'xc /s/ exceção'. Foigel & Roos list ⟨xc⟩ under [S]: 'em palavras com o dígrafo ”XC”: excelente, exceção, exceto'. LIMIT: Table 1 is the rule set of the Nhenhém decoder, which targets the phonological level. It is not a study of speech. ⟨c⟩ before a consonant or a back vowel is [k], so excluir has no digraph and BR_CODA_X reads its ⟨x⟩. pt-BR-x-rj, pt-BR-x-norte, pt-BR-x-recife, pt-BR-x-floripa and pt-BR-x-cuiaba switch this rule off: the table gives /s/ and no opened source gives the value of ⟨xc⟩ in a spec with a palatal coda."
+    },
+    {
+      "id": "BR_CODA_X",
+      "phonemes": [
+        "ʃ"
+      ],
+      "surface": "s",
+      "grapheme": [
+        "x"
+      ],
+      "syllable_position": "coda",
+      "followed_by": "consonant",
+      "notes": "⟨x⟩ before a consonant is the coda sibilant of the spec, so the base reads [s]: texto [ˈtestu], explicar [espliˈka]. Vasilévski (2012: 55, Table 1) gives 'x |S| expor' beside 's |S| mosca, lesma', and writes '/ˈteS.tu/' on p. 56, so coda ⟨x⟩ and coda ⟨s⟩ share one archiphoneme. Foigel & Roos list the class under '[S]: Fricativa, alveolar, surda', and add: 'Em palavras com “X” no final de sílaba seguido de consoante surda: experiência, externo, extintor, que dependendo da variante também tem o valor de /∫/'. LIMIT: Table 1 is the rule set of the Nhenhém decoder, which targets the phonological level. It is not a study of speech. It gives the archiphoneme and no surface value, so each spec keeps its own coda value. pt-BR-x-rj, pt-BR-x-norte, pt-BR-x-recife, pt-BR-x-floripa and pt-BR-x-cuiaba read a coda ⟨s⟩ as [ʃ], so they switch this rule off. ⟨x⟩ stays [ʃ], or [ʒ] before a voiced consonant (Vixnu [viʒˈnu]). A word-final ⟨x⟩ (tórax) has no consonant after it and is outside this rule."
+    },
+    {
       "id": "BR_CODA_S_VOICED",
       "phonemes": [
         "s"
@@ -2252,7 +2282,36 @@
         "t͡ʃ",
         "d͡ʒ"
       ],
-      "notes": "Vowel epenthesis after the stressed vowel: capto [ˈkapitu], pacto [ˈpakitu], rapto [ˈʁapitu]. It is BR_EPENTHESIS for a stop or a labiodental fricative after the stressed vowel, before an obstruent, with a nucleus after it. A word-final cluster (chips, blitz) has no nucleus after it and stays as spelled. A cluster at the start of the stressed syllable (pseudo, psique) has no vowel before it, so it is outside this rule and stays as spelled. Curioletti & Sandri (2019, Cadernos do IL 59, PDF p. 6): 'Daí decorre a epêntese, que só se aplica em sequências não-homorgânicas, como em capto [kapitu], e não em geminadas subjacentes (carro) ou de superfície (carta) (MONARETTO, 1997, p. 188)'. Monaretto (1997) was not opened. Collischonn (2004: 66) reports Câmara Jr.: 'Como observa Câmara Jr. (1969, p. 28), na posição postônica a vogal se reduz, da mesma forma que ocorre com a vogal da penúltima sílaba de proparoxítonas, sendo, portanto, idênticas as pautas prosódicas de rapto e rápido.' Câmara Jr. was not opened. Barbosa & Albano (2004: 227) state the epenthesis for 'most two-obstruent sequences' and do not restrict it by position. The rate after the stress is lower than before it. Collischonn (2004: 67, Tabela 1) counts 49 of 206 post-tonic tokens (24 %) against 225 of 325 pretonic tokens (69 %) in the speech of Porto Alegre, Florianópolis and Curitiba, and reads the post-tonic grammar without epenthesis as the preferred one (p. 76: 'na pauta postônica: ALINH-PÉ-DIR >> CODA-COND NÃO HÁ EPÊNTESE Ordenação preferida'). Silveira & Seara (2009, Revista do GEL 6(2): 22, Tabela 6) count 77 of 100 post-tonic tokens for the two women and 49 of 100 for the two men of a Florianópolis reading task. No source measures the rate in São Paulo, so the base follows the statement of Barbosa & Albano and the forms of Curioletti & Sandri and Câmara Jr. The scope is an obstruent after the stop, because that is the scope of the statement of Barbosa & Albano and of the form capto. Sources give a vowel for a post-tonic stop before a nasal. Collischonn (2004: 67) counts 24 % of the post-tonic words, 'em palavras como egípcios, étnico ou ritmo', and 'em 73% de casos em que a consoante perdida é uma oclusiva alveolar, como em ritmo, a epêntese ocorre' (p. 68), in the three southern capitals. Nascimento (2015: 57-60) reports three more, with no original opened. Câmara Jr. (1989 [1970]: 56-57) names compacto, apto, ritmo and afta, and Nascimento writes: 'o autor afirma que há a intercalação de uma vogal entre uma consoante e outra'. Cagliari (1981: 107) lists t + m in ritmo and k + n in técnica. Bisol (1999: 729-730) derives ritmo: 'O resultado é ri.ti.mo, com padrão silábico CV. CV. CV'. This rule does not reach that context, so técnico, digno, ritmo, étnico and dogma keep the cluster. That is a gap in the rule, not a stated limit of the variety. Collischonn (2004: 68, Tabela 2) counts the nasal context over both positions together and labels the row with the post-tonic mogno: 'Oclusiva Nasal (mogno) 116/151 77 0,74'. No table of hers crosses the following consonant with the position. Her analysis takes mogno as the post-tonic example: in its tableau (p. 75) the optimum is the candidate without the vowel, with the syllables g.no, and a candidate with the vowel gi is the sub-optimum. For the pretonic magnata the optimum is 'ma.gi.(ná.ta)'. That is the grammar of the three southern capitals. pt-BR-x-sul, pt-BR-x-floripa and pt-BR-x-pr switch the rule off by id on Collischonn's count. The stress count folds a syllable whose only vowel a rule inserted into the syllable before it, so the mark stays on the stressed syllable."
+      "notes": "Vowel epenthesis after the stressed vowel: capto [ˈkapitu], pacto [ˈpakitu], rapto [ˈʁapitu]. It is BR_EPENTHESIS for a stop or a labiodental fricative after the stressed vowel, before an obstruent, with a nucleus after it. A word-final cluster (chips, blitz) has no nucleus after it and stays as spelled. A cluster at the start of the stressed syllable (pseudo, psique) has no vowel before it, so it is outside this rule and stays as spelled. Curioletti & Sandri (2019, Cadernos do IL 59, PDF p. 6): 'Daí decorre a epêntese, que só se aplica em sequências não-homorgânicas, como em capto [kapitu], e não em geminadas subjacentes (carro) ou de superfície (carta) (MONARETTO, 1997, p. 188)'. Monaretto (1997) was not opened. Collischonn (2004: 66) reports Câmara Jr.: 'Como observa Câmara Jr. (1969, p. 28), na posição postônica a vogal se reduz, da mesma forma que ocorre com a vogal da penúltima sílaba de proparoxítonas, sendo, portanto, idênticas as pautas prosódicas de rapto e rápido.' Câmara Jr. was not opened. Barbosa & Albano (2004: 227) state the epenthesis for 'most two-obstruent sequences' and do not restrict it by position. The rate after the stress is lower than before it. Collischonn (2004: 67, Tabela 1) counts 49 of 206 post-tonic tokens (24 %) against 225 of 325 pretonic tokens (69 %) in the speech of Porto Alegre, Florianópolis and Curitiba, and reads the post-tonic grammar without epenthesis as the preferred one (p. 76: 'na pauta postônica: ALINH-PÉ-DIR >> CODA-COND NÃO HÁ EPÊNTESE Ordenação preferida'). Silveira & Seara (2009, Revista do GEL 6(2): 22, Tabela 6) count 77 of 100 post-tonic tokens for the two women and 49 of 100 for the two men of a Florianópolis reading task. No source measures the rate in São Paulo, so the base follows the statement of Barbosa & Albano and the forms of Curioletti & Sandri and Câmara Jr. The scope is an obstruent after the stop, because that is the scope of the statement of Barbosa & Albano and of the form capto. Sources give a vowel for a post-tonic stop before a nasal. Collischonn (2004: 67) counts 24 % of the post-tonic words, 'em palavras como egípcios, étnico ou ritmo', and 'em 73% de casos em que a consoante perdida é uma oclusiva alveolar, como em ritmo, a epêntese ocorre' (p. 68), in the three southern capitals. Nascimento (2015: 57-60) reports three more, with no original opened. Câmara Jr. (1989 [1970]: 56-57) names compacto, apto, ritmo and afta, and Nascimento writes: 'o autor afirma que há a intercalação de uma vogal entre uma consoante e outra'. Cagliari (1981: 107) lists t + m in ritmo and k + n in técnica. Bisol (1999: 729-730) derives ritmo: 'O resultado é ri.ti.mo, com padrão silábico CV. CV. CV'. This rule does not reach that context. BR_EPENTHESIS_POSTTONIC_T_NASAL and BR_EPENTHESIS_POSTTONIC_K_N write the vowel for the two classes those sources name, so ritmo and técnico break. No source gives a value for digno and dogma, so they keep the cluster. Collischonn (2004: 68, Tabela 2) counts the nasal context over both positions together and labels the row with the post-tonic mogno: 'Oclusiva Nasal (mogno) 116/151 77 0,74'. No table of hers crosses the following consonant with the position. Her analysis takes mogno as the post-tonic example: in its tableau (p. 75) the optimum is the candidate without the vowel, with the syllables g.no, and a candidate with the vowel gi is the sub-optimum. For the pretonic magnata the optimum is 'ma.gi.(ná.ta)'. That is the grammar of the three southern capitals. pt-BR-x-sul, pt-BR-x-floripa and pt-BR-x-pr switch the rule off by id on Collischonn's count. The stress count folds a syllable whose only vowel a rule inserted into the syllable before it, so the mark stays on the stressed syllable."
+    },
+    {
+      "id": "BR_EPENTHESIS_POSTTONIC_T_NASAL",
+      "phonemes": [
+        "t"
+      ],
+      "append": "i",
+      "stress": "stressed",
+      "preceded_by": "vowel",
+      "followed_by_nucleus": true,
+      "followed_by_phoneme": [
+        "m",
+        "n"
+      ],
+      "notes": "Vowel epenthesis between a post-tonic [t] and a nasal: ritmo [ˈʁit͡ʃimu], étnico [ˈɛt͡ʃiniku]. Bisol (1999: 729-730) derives ritmo: 'O resultado é ri.ti.mo, com padrão silábico CV. CV. CV'. Câmara Jr. (1989 [1970]: 56-57) names ritmo with apto and afta, and Nascimento reports: 'o autor afirma que há a intercalação de uma vogal entre uma consoante e outra'. Cagliari (1981: 107) lists t + m in ritmo. Collischonn (1996: 154) names a stop and a nasal, 'como em ritmo', as a context for the vowel. Bisol, Câmara Jr., Cagliari and Collischonn (1996) were read only through Nascimento (2015: 57-62). Collischonn (2004: 67) counts the post-tonic position 'em palavras como egípcios, étnico ou ritmo', and writes (p. 68): 'em 73% de casos em que a consoante perdida é uma oclusiva alveolar, como em ritmo, a epêntese ocorre'. That 73 % counts both positions together. The vowel is the [i] of BR_EPENTHESIS, and a /t/ before it takes the affricate of the spec. RATE: Collischonn's 24 % is a post-tonic rate of Porto Alegre, Florianópolis and Curitiba, not of this variety. No dataset gives a rate for this variety. Aeiouadô and the Michaelis rows write pacto with no vowel, and NILC writes the vowel for few words, so a cluster in them is no evidence against it. The rule writes the vowel for consistency with pacto [ˈpakitu] under BR_EPENTHESIS_POSTTONIC. It claims no measured rate. pt-BR-x-sul, pt-BR-x-floripa, pt-BR-x-pr and pt-UY switch it off by id with BR_EPENTHESIS_POSTTONIC."
+    },
+    {
+      "id": "BR_EPENTHESIS_POSTTONIC_K_N",
+      "phonemes": [
+        "k"
+      ],
+      "append": "i",
+      "stress": "stressed",
+      "preceded_by": "vowel",
+      "followed_by_nucleus": true,
+      "followed_by_phoneme": [
+        "n"
+      ],
+      "notes": "Vowel epenthesis between a post-tonic [k] and [n]: técnica [ˈtɛkinikɐ], acne [ˈakini]. Cagliari (1981: 107) lists k + n in técnica, and gives acne as [‘a-kə-ni] (p. 108). Cagliari was read only through Nascimento (2015: 57). VOWEL: the spec writes [i], the vowel of BR_EPENTHESIS and of Bisol's ri.ti.mo. Cagliari's [ə] after a velar is a difference this rule does not follow. SCOPE: ⟨cm⟩ (dracma) and ⟨gm gn⟩ (dogma, digno, mogno) stay out. No opened source gives a post-tonic vowel for those words, and Collischonn (2004: 68) counts the velars lowest, 'em 31% nas velares, como mogno', with the form without the vowel as the optimum for mogno in the south (p. 75). RATE: Collischonn's 24 % is a post-tonic rate of Porto Alegre, Florianópolis and Curitiba, not of this variety. No dataset gives a rate for this variety. Aeiouadô and the Michaelis rows write pacto with no vowel, and NILC writes the vowel for few words, so a cluster in them is no evidence against it. The rule writes the vowel for consistency with pacto [ˈpakitu] under BR_EPENTHESIS_POSTTONIC. It claims no measured rate. pt-BR-x-sul, pt-BR-x-floripa, pt-BR-x-pr and pt-UY switch it off by id with BR_EPENTHESIS_POSTTONIC."
     },
     {
       "id": "BR_EPENTHESIS_ONSET",
