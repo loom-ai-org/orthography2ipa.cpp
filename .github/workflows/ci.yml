@@ -84,12 +84,12 @@ jobs:
       - name: Install the packaged lexicons
         run: uv pip install --system --python python3 --no-deps --prerelease=allow o2i-lexicons==0.7.2a1
       # Pinned to the silabificador.cpp commit held at byte parity with Python
-      # silabificador 2.1.1a2.
+      # silabificador 2.1.11a1.
       - uses: actions/checkout@v4
         if: matrix.silabificador
         with:
           repository: loom-ai-org/silabificador.cpp
-          ref: fbe7a2c93fd7b9b2269e03170d9d6bfdc89f94e1
+          ref: ad0b7e00fa6a957c116708bafb82531907c8f79e
           path: silabificador
       - name: Build and install silabificador.cpp
         if: matrix.silabificador
@@ -98,18 +98,24 @@ jobs:
             -DBUILD_SHARED_LIBS=${{ matrix.shared && 'ON' || 'OFF' }}
           cmake --build "$RUNNER_TEMP/silabificador-build" --parallel
           cmake --install "$RUNNER_TEMP/silabificador-build" --prefix "$RUNNER_TEMP/silabificador"
-      # silabificador.cpp fbe7a2c is at byte parity with this release. The
+      # silabificador.cpp ad0b7e0 is at byte parity with this release. The
       # package has no dependencies, and the reference imports it only when a
       # caller builds SilabificadorSyllabifier.
       - name: Give the reference the silabificador package
         if: matrix.silabificador
-        run: uv pip install --system --python python3 --prerelease=allow silabificador==2.1.1a2
+        run: uv pip install --system --python python3 --prerelease=allow silabificador==2.1.11a1
       - name: Configure
         env:
           CMAKE_PREFIX_PATH: ${{ matrix.silabificador && format('{0}/silabificador', runner.temp) || '' }}
         run: cmake -S . -B build -DBUILD_TESTING=ON -DBUILD_SHARED_LIBS=${{ matrix.shared && 'ON' || 'OFF' }}
       - name: Build
         run: cmake --build build --parallel
+      # CMake registers the silabificador-parity test only when it finds
+      # silabificador.cpp, so a failed find would drop the test without a
+      # failure. --no-tests=error fails the cell when the test is absent.
+      - name: Require the silabificador parity test
+        if: ${{ matrix.silabificador && !matrix.shared }}
+        run: ctest --test-dir build --output-on-failure -R '^orthography2ipa-silabificador-parity$' --no-tests=error
       - name: Test
         if: ${{ !matrix.shared }}
         run: ctest --test-dir build --output-on-failure
