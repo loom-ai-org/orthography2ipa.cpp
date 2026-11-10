@@ -326,6 +326,13 @@ PINNED["pt-BR"] += ["texto", "sexta", "explicar", "expor", "extra", "exceção",
                     "excesso", "excluir", "Vixnu", "exato", "festa"]
 for code in ["pt-BR-x-rj", "pt-BR-x-norte", "pt-BR-x-recife", "pt-BR-x-floripa", "pt-BR-x-cuiaba"]:
     PINNED.setdefault(code, []).extend(["festa", "sexta", "mesmo", "Vixnu", "excesso"])
+# A list-valued grammatical ending adds its alternative to the candidates: fr-FR
+# ⟨-ent⟩, nds ⟨-en⟩ and ⟨-er⟩, mwl ⟨-on⟩. Each list has one alternative, which
+# is also its last.
+PINNED["fr-FR"] += ["parlent", "mangent", "souvent"]
+for code, words in {"nds": ["slapen", "Vader"], "mwl": ["cantaron", "caçon"],
+                    "mwl-x-ifanes": ["cantaron"]}.items():
+    PINNED.setdefault(code, []).extend(words)
 
 # The code points of the viramas this catalog actually uses.
 VIRAMAS = {0x094D, 0x09CD, 0x0A4D, 0x0ACD, 0x0B4D, 0x0BCD, 0x0C4D, 0x0CCD,
