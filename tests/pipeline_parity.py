@@ -11,10 +11,15 @@ and each old argument that conflicts with a field. It also runs load_lexicon,
 packaged_lexicon with and without the patches, the inventory functions with a
 mapping, detect_stress with a syllabifier, and the deprecation text.
 
+`--only silabificador` passes SilabificadorSyllabifier in the Pipeline on both
+sides, over the pt-PT and pt-BR words of o2i-lexicons and the hiatus words
+below. It needs a build linked with silabificador.cpp and a reference with the
+silabificador package, so it is not part of the default run.
+
 A forced pronunciation runs in each language, so the grid holds the type and the
 text of each MarkupError. A newline in that text is `|` on the driver's line.
 
-Usage: pipeline_parity.py <path-to-check-pipeline-binary> [--only grid|fields|packaged|deprecation]
+Usage: pipeline_parity.py <path-to-check-pipeline-binary> [--only grid|fields|packaged|deprecation|silabificador]
 """
 import logging
 import os
@@ -159,6 +164,9 @@ FIELD_MODES = [
     ("-", "-", "backs", "-", "0", "named-rescore"), ("-", "-", "-", "bar", "0", "named-sandhi"),
     ("digits", "-", "-", "-", "0", "named-normalize"), ("-", "acute", "-", "-", "0", "named-normalize"),
     ("-", "-", "-", "-", "0", "rescorer"), ("-", "-", "-", "-", "0", "named-sandhi"),
+    # An empty list is an argument, and None is not: each conflicts with its field.
+    ("-", "-", "backs", "-", "0", "rescorer-empty"), ("-", "-", "-", "bar", "0", "sentence_rescorer-empty"),
+    ("-", "-", "-", "-", "0", "rescorer-empty"), ("-", "-", "-", "-", "0", "sentence_rescorer-empty"),
 ]
 
 
@@ -167,6 +175,7 @@ def field_engine(lang, expand, mark, rescore, sandhi, allow, old):
                         rescore={"-": (), "backs": (BacksA(),), "two": (BacksA(), BacksA())}[rescore],
                         sandhi=Bar() if sandhi == "bar" else None)
     extra = {"rescorer": {"rescorer": BacksA()}, "sentence_rescorer": {"sentence_rescorer": Keeps()},
+             "rescorer-empty": {"rescorer": []}, "sentence_rescorer-empty": {"sentence_rescorer": []},
              "named-rescore": {"plugins": {"rescore": "nothing"}},
              "named-sandhi": {"plugins": {"sandhi": "nothing"}},
              "named-normalize": {"plugins": {"normalize": "nothing"}}}.get(old, {})
@@ -189,6 +198,9 @@ class _EntryPoint:
 
 
 def plugin(mode):
+    if mode == "silabificador":
+        from orthography2ipa.syllabifiers import SilabificadorSyllabifier
+        return SilabificadorSyllabifier()
     return None if mode == "-" else Mode(mode)
 
 
@@ -267,6 +279,8 @@ def run(field):
         if command == "tokens":
             return "|".join(tokenize(field[3], spec, mapping))
         return joined(phoneme_atoms(spec, mapping))
+    if command == "syllables":
+        return "|".join(plugin(field[3]).syllabify(field[1], field[2]))
     if command == "stress":
         return str(detect_stress(field[1], get(field[2]).stress, lang=field[2],
                                  syllabifier=plugin(field[3])))
@@ -342,6 +356,31 @@ def field_commands():
     return out
 
 
+# Hiatus, diphthong and glide words, where the bundled splitter and
+# silabificador can part.
+HIATUS = ["saúde", "rainha", "teatro", "país", "juiz", "ruído", "baú", "viúva", "distribuidoras",
+          "bueiros", "coelho", "poeta", "maior", "saia", "ideia", "Coimbra", "ruim", "moinho",
+          "oceano", "voo", "leem", "creem", "sueco", "quatro", "água", "linguiça", "pinguim",
+          "frequência", "aeroporto", "caos", "iate", "sair", "cair", "caída", "egoísta", "heroico",
+          "Luís", "construído", "miúdo", "ciúme", "saudade", "reunião", "piano", "criança"]
+
+
+def silabificador_commands():
+    import o2i_lexicons
+    words = set(HIATUS)
+    for code in ("pt-PT", "pt-BR"):
+        for path in (o2i_lexicons.tsv_path(code), o2i_lexicons.patch_tsv_path(code)):
+            words.update(line.split("\t", 1)[0] for line in path.read_text(encoding="utf-8").splitlines()
+                         if line.strip() and not line.startswith("#"))
+    out = []
+    for lang in ("pt-PT", "pt-BR"):
+        out.append(["engine", lang, "-", "silabificador"])
+        for word in sorted(words):
+            out += [["word", word], ["syllables", word, lang, "silabificador"],
+                    ["stress", word, lang, "silabificador"]]
+    return out
+
+
 def compare(binary, root, label, env, lines):
     environ = {k: v for k, v in os.environ.items() if k != "ORTHOGRAPHY2IPA_LEXICON_DIR"}
     environ.update(env)
@@ -357,7 +396,7 @@ def compare(binary, root, label, env, lines):
             bad += 1
             if bad <= 20:
                 print(f"DIFF {line}\n  reference {want!r}\n  port      {value!r}")
-    print(f"pipeline parity {label}: {len(lines)} commands, {bad} differ")
+    print(f"pipeline parity {label}: {len(lines)} commands in, {len(got)} lines out, {bad} differ")
     return bad
 
 
@@ -444,6 +483,8 @@ def main():
             bad += packaged_case(binary, root)
         if only in (None, "deprecation"):
             bad += deprecation_case()
+        if only == "silabificador":
+            bad += compare(binary, root, "silabificador", {}, silabificador_commands())
     sys.exit(1 if bad else 0)
 
 

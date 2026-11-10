@@ -20,14 +20,17 @@
 //   emission, phonemes, atoms<TAB>code<TAB>lexicon
 //   tokens<TAB>code<TAB>lexicon<TAB>ipa
 //   stress<TAB>word<TAB>lang<TAB>mode   detect_stress on the spec of lang
+//   syllables<TAB>word<TAB>lang<TAB>mode   the syllabifier's own split
 //
-// A syllabifier mode: halves, whole, chars, empty, bad, raise.
+// A syllabifier mode: halves, whole, chars, empty, bad, raise, or silabificador,
+// which builds SilabificadorSyllabifier and throws without silabificador.cpp.
 #include "orthography2ipa/inventory.hpp"
 #include "orthography2ipa/markup.hpp"
 #include "orthography2ipa/orthography2ipa.hpp"
 #include "orthography2ipa/rescorer.hpp"
 #include "orthography2ipa/sentence.hpp"
 #include "orthography2ipa/stress.hpp"
+#include "orthography2ipa/syllabifiers.hpp"
 #include "plugin_registry.hpp"
 #include "unicode_util.hpp"
 
@@ -143,8 +146,12 @@ std::unique_ptr<G2P> field_engine(const std::vector<std::string>& field) {
     if (old == "named-normalize") named["normalize"] = {"nothing"};
     return std::make_unique<G2P>(
         lang, named, "", false, true, true, true,
-        old == "sentence_rescorer" ? sentence::SentenceRescorerArg(&keeps) : sentence::SentenceRescorerArg(),
-        old == "rescorer" ? rescorer::RescorerArg(&backs_a) : rescorer::RescorerArg(),
+        old == "sentence_rescorer"         ? sentence::SentenceRescorerArg(&keeps)
+        : old == "sentence_rescorer-empty" ? sentence::SentenceRescorerArg(sentence::SentenceRescorers{})
+                                           : sentence::SentenceRescorerArg(),
+        old == "rescorer"         ? rescorer::RescorerArg(&backs_a)
+        : old == "rescorer-empty" ? rescorer::RescorerArg(std::vector<const rescorer::LatticeRescorer*>{})
+                                  : rescorer::RescorerArg(),
         Pipeline{std::nullopt, nullptr, expand_of(field[2]), mark_of(field[3]), fields_rescore,
                  field[5] == "bar" ? std::make_shared<const Bar>() : nullptr},
         field[6] == "1");
@@ -152,6 +159,7 @@ std::unique_ptr<G2P> field_engine(const std::vector<std::string>& field) {
 
 std::shared_ptr<const SyllabifierPlugin> plugin(const std::string& mode) {
     if (mode == "-") return nullptr;
+    if (mode == "silabificador") return std::make_shared<const syllabifiers::SilabificadorSyllabifier>();
     return std::make_shared<const Mode>(mode, "");
 }
 
@@ -207,7 +215,7 @@ std::string run(const std::vector<std::string>& field) {
     }
     if (command != "engine" && command != "load" && command != "packaged" && command != "patched" &&
         command != "emission" && command != "phonemes" && command != "atoms" && command != "tokens" &&
-        command != "stress" && command != "reset" && command != "register" && command != "discovered" &&
+        command != "stress" && command != "syllables" && command != "reset" && command != "register" && command != "discovered" &&
         current == nullptr)
         throw NoEngine();
     if (command == "engine") {
@@ -273,6 +281,7 @@ std::string run(const std::vector<std::string>& field) {
         auto atoms = inventory::phoneme_atoms(spec, mapping);
         return joined(std::set<std::string>(atoms.begin(), atoms.end()));
     }
+    if (command == "syllables") return joined(plugin(field[3])->syllabify(field[1], field[2]));
     if (command == "stress") {
         const auto syllabifier = plugin(field[3]);
         return std::to_string(stress::detect_stress(field[1], get(field[2]), nullptr, field[2],

@@ -41,6 +41,16 @@ the same answer with and without silabificador on either side.
 `get_syllabifier` returns `nullptr` and `register_syllabifier_plugin` reaches
 no engine. Both are deprecated, and version 8.0.0 removes them.
 
+A build that finds silabificador adds the test `silabificador-parity`. It
+passes the plugin in a `Pipeline` on both sides, over the pt-PT and pt-BR
+words of o2i-lexicons, and compares the split, the stress and the
+transcription of each word. The reference then needs the silabificador
+release that the C++ port matches:
+
+```sh
+uv pip install silabificador==2.1.1a2
+```
+
 The catalog is bundled from the Python project. To use another catalog:
 
 ```sh
