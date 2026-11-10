@@ -52,7 +52,7 @@ WORDS = {
     "es-ES": ["cantaba", "gato", "ahí", "país", "construcción", "hola"],
     "en-GB": ["colonel", "yacht", "nation", "the", "water"],
     "nl-NL": ["geven", "gebed", "verder", "veldslag", "quota"],
-    "ru": ["вода", "его", "молоко", "хорошо", "его\u0301", "во\u0301", "большо\u0301го", "ЕГО\u0301"],
+    "ru": ["вода", "его", "молоко", "хорошо", "его\u0301", "его\u0300", "во\u0301", "большо\u0301го", "ЕГО\u0301"],
     "ru-x-southern": ["его", "его\u0301"],
     "ar": ["كتاب", "مدرسة", "هذا"],
     "hi": ["कमल", "नमस्ते", "भारत"],
@@ -66,10 +66,11 @@ TEXTS = {"pt-PT": ["os gatos", "gato, rato"],
          "pt-BR": ["os gatos", "muito bem"], "en-GB": ["the yacht", "colonel Mustard"]}
 # A click no table emits, the click of each lexicon, a word that only segmentation
 # declares, a lone stress mark before a vowel, a vowel of few specs, a repeated token
-# that the message lists twice, and an apostrophe that changes the repr quotes. Then
+# that the message lists twice, an apostrophe that changes the repr quotes, and a
+# padded ph that the message quotes stripped. Then
 # a word that the check passes before a word that it refuses.
 FORCED = [f"<phoneme ph=\"{ipa}\">x</phoneme>"
-          for ipa in ("ʘa", "ʘɐ", "ɡato", "ˈa", "ə", "ʘʘ", "a'ʘ")]
+          for ipa in ("ʘa", "ʘɐ", "ɡato", "ˈa", "ə", "ʘʘ", "a'ʘ", " ʘa ")]
 FORCED.append(f"gato {FORCED[4]} {FORCED[0]}")
 # A compound element is split from the word, so the check runs there too.
 FORCED_WORDS = [f"guarda-{FORCED[0]}", f"guarda-{FORCED[4]}"]

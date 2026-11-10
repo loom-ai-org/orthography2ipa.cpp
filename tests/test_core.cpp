@@ -1,5 +1,6 @@
 #include "orthography2ipa/orthography2ipa.hpp"
 #include "orthography2ipa/linguatag.hpp"
+#include "orthography2ipa/markup.hpp"
 #include "orthography2ipa/registry.hpp"
 #include "orthography2ipa/stress.hpp"
 #include "orthography2ipa/schema.hpp"
@@ -341,10 +342,28 @@ int main() {
         const G2P once("pt-PT", {{"normalize", {"test-ticking"}}});
         assert(once.transcribe("o gato") == "u ɡɐˈtɔɐ" && normalize->calls == 1);
         assert(once.transcribe_detailed("o gato").ipa == "u ɡɐˈtɔu" && normalize->calls == 2);
+        assert(once.features("o gato").at(1).word == "gatoa" && normalize->calls == 3);
+        assert(once.sentence_lattice("o gato").words.at(1).surface == "gatoo" && normalize->calls == 4);
+        // g2p.py checks a forced pronunciation as it reaches the chunk, so a
+        // refused one stops the split before a later chunk is normalized.
+        const std::string refused_first = "<phoneme ph=\"ʘa\">x</phoneme> gato";
+        const auto stops_before_normalizing = [&](const auto& call) {
+            normalize->calls = 0;
+            try {
+                call();
+            } catch (const markup::MarkupError&) {
+                return normalize->calls == 0;
+            }
+            return false;
+        };
+        assert(stops_before_normalizing([&] { once.transcribe(refused_first); }));
+        assert(stops_before_normalizing([&] { once.features(refused_first); }));
+        assert(stops_before_normalizing([&] { once.sentence_lattice(refused_first); }));
         const G2P joined("pt-PT", {{"sandhi", {"test-ticking-sandhi"}}});
         assert(joined.transcribe("o gato") == "ua ˈɡatua" && sandhi->calls == 1);
         assert(joined.transcribe_detailed("o gato").ipa == "uo ˈɡatuo" && sandhi->calls == 2);
-        // g2p.py raises ValueError when a sandhi plugin returns another word count.
+        // A sandhi plugin may not change the word count. g2p.py raises
+        // ValueError, and the port throws runtime_error with its own message.
         struct Merging : SandhiPlugin {
             std::vector<std::string> language_codes() const override { return {"pt-PT"}; }
             std::vector<std::string> apply(const std::vector<std::string>& words, const std::vector<std::string>&,
@@ -367,8 +386,11 @@ int main() {
         assert(G2P("ru-RU").transcribe_word("его\xcc\x81") == "jɪˈvo");
         assert(G2P("ru-RU").transcribe_word("ЕГО\xcc\x81") == "jɪˈvo");
         assert(G2P("ru-RU").transcribe_word("во\xcc\x81") == "ˈvo");
+        // The literal follows the reference reading of the ending.
         assert(G2P("ru-RU").transcribe_word("большо\xcc\x81го") == "bɐlʲˈʂəvə");
-        assert(G2P("ru-x-southern").transcribe_word("его\xcc\x81") == "jaˈɣo");
+        assert(G2P("ru-x-southern").transcribe_word("моего\xcc\x81") == "məjaˈɣo");
+        // Only a silent mark is removed: a grave accent is a reading, not a key.
+        assert(G2P("ru-RU").transcribe_word("его\xcc\x80") == "ˈjeɡə");
         // g2p.py _is_cliticless: a word with a silent mark is never a clitic,
         // even when the spec lists the marked form.
         // A listed clitic loses its stress, and the beam shows it in the vowels.
