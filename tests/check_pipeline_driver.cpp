@@ -125,6 +125,17 @@ std::string run(const std::vector<std::string>& field) {
         for (const auto& word : result.words) out += "|" + word.word + "=" + word.ipa + "=" + number(word.confidence);
         return out;
     }
+    if (command == "features") {
+        std::vector<std::string> out;
+        for (const auto& word : current->features(field[1]))
+            out.push_back(word.word + "=" + number(word.confidence) + "=" + std::to_string(word.graphemes.size()));
+        return joined(out);
+    }
+    if (command == "sentence") {
+        std::vector<std::string> out;
+        for (const auto& word : current->sentence_lattice(field[1]).words) out.push_back(word.surface);
+        return joined(out);
+    }
     if (command == "candidates") return joined(current->word_candidates(field[1], 5));
     if (command == "confidence") return number(current->word_confidence(field[1]));
     if (command == "lattice") {

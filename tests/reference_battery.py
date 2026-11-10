@@ -67,6 +67,10 @@ PINNED = {
 
 # A quote mark and a backslash inside a word: every JSON surface escapes them.
 PINNED["it-IT"] = ['"casa"', "ca\\sa"]
+# Every spec with a silent stress mark: an exception key, a clitic and an ending.
+for _code in ("ru", "ru-x-arkhange", "ru-x-don", "ru-x-kursk-orel", "ru-x-moscow", "ru-x-northern",
+              "ru-x-pskov", "ru-x-siberian", "ru-x-southern", "ru-x-ural", "ru-x-vologda"):
+    PINNED.setdefault(_code, []).extend(["его\u0301", "во\u0301", "большо\u0301го"])
 
 ABUGIDAS = ["hi", "bn", "ta", "te", "kn", "ml", "mr", "ne", "or", "as", "sa", "sid"]
 TONE_LANGS = ["th", "lo", "vi", "yo", "km", "my", "bo", "ko", "kix", "zh", "pa"]

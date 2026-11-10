@@ -253,6 +253,19 @@ void engine_inventory_counts_its_own_lexicon() {
                  "<phoneme ph='" + CLICK + "a'> uses ['" + CLICK + "'], which the pt-PT spec does not declare.\n\n");
 }
 
+void every_split_checks_a_forced_pronunciation() {
+    const std::string forced = "<phoneme ph=\"" + CLICK + "a\">x</phoneme>";
+    const std::string message = "<phoneme ph='" + CLICK + "a'> uses ['" + CLICK + "'], which the pt-PT spec";
+    const G2P plain("pt-PT");
+    CHECK_THROWS(plain.features(forced), markup::MarkupError, message);
+    CHECK_THROWS(plain.features("gato " + forced), markup::MarkupError, message);
+    CHECK_THROWS(plain.sentence_lattice(forced), markup::MarkupError, message);
+    CHECK_THROWS(plain.transcribe_detailed(forced), markup::MarkupError, message);
+    CHECK_THROWS(plain.transcribe_word("guarda-" + forced), markup::MarkupError, message);
+    CHECK(plain.features("<phoneme ph=\"ə\">x</phoneme>").at(0).word == "x");
+    CHECK(with_lexicon("pt-PT", {{"x", CLICK + "a"}}).features(forced).at(0).word == "x");
+}
+
 void forced_check_tokenizes_as_the_inventory_does() {
     CHECK(G2P("de-DE").transcribe("<phoneme ph=\"ɡato\">gato</phoneme>") == "ɡato");
     CHECK(G2P("pt-PT").transcribe("<phoneme ph=\"ə\">x</phoneme>") == "ə");
@@ -482,6 +495,7 @@ int main() {
     engine_inventory_counts_its_own_lexicon();
     engine_inventory_ignores_the_process_lexicon();
     forced_check_of_a_plain_engine_reads_the_process_lexicon();
+    every_split_checks_a_forced_pronunciation();
     forced_check_tokenizes_as_the_inventory_does();
     inventory_functions_read_the_mapping_they_are_given();
     inventory_with_a_mapping_ignores_the_process_lexicon();

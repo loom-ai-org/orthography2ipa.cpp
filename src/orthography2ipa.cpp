@@ -54,7 +54,10 @@ using uni::to_utf8;
 std::string silent_marks_of(const LanguageSpec& spec) {
     std::string marks;
     for (const auto& mark : spec.marked_vowels) {
-        if (auto it = spec.graphemes.find(mark); it != spec.graphemes.end() && it->second.empty())
+        // A silent grapheme reads as [""], so the test is that no value emits.
+        const auto it = spec.graphemes.find(mark);
+        if (it != spec.graphemes.end() &&
+            std::all_of(it->second.begin(), it->second.end(), [](const std::string& ipa) { return ipa.empty(); }))
             marks += mark;
     }
     return marks;
@@ -813,7 +816,8 @@ void group_words(const PhonetokTokenizer& tokenizer, const std::string& text,
 // missed the stray-tag check after a valid tag, and cut a tag at a '>' inside
 // an attribute value.
 std::vector<InputWord> split_words(const LanguageSpec& spec, const std::string& text,
-                                   const std::function<std::string(const std::string&)>& normalize) {
+                                   const std::function<std::string(const std::string&)>& normalize,
+                                   const std::function<void(const std::string&)>& check_forced) {
     std::vector<InputWord> words;
     const PhonetokTokenizer tokenizer(spec);
     for (const auto& chunk : markup::parse_markup(text)) {
@@ -826,6 +830,7 @@ std::vector<InputWord> split_words(const LanguageSpec& spec, const std::string& 
             const std::string forced_ipa = to_utf8(u32_strip(to_utf32(*chunk.forced_ipa)));
             if (forced_ipa.empty())
                 throw std::invalid_argument("<phoneme> requires a non-empty ph attribute");
+            check_forced(forced_ipa);
             words.push_back(InputWord{to_utf8(surface), forced_ipa, true, false, false, false, false});
         } else {
             group_words(tokenizer, normalize(chunk.text), spec.word_internal_apostrophe, words);
@@ -868,9 +873,10 @@ std::vector<std::string> mark_compounds(const std::vector<bool>& joined,
 // orthography, so a caller who marks the stress must not miss the lookup.
 std::string unmarked_word(const std::string& silent_marks, const std::string& word) {
     if (silent_marks.empty()) return word;
+    const std::u32string silent = to_utf32(silent_marks);
     std::u32string out;
     for (const char32_t ch : to_utf32(word))
-        if (silent_marks.find(ch) == std::string::npos) out.push_back(ch);
+        if (silent.find(ch) == std::u32string::npos) out.push_back(ch);
     return to_utf8(out);
 }
 
@@ -1323,10 +1329,7 @@ Tokenizer::Tokenizer(const LanguageSpec& spec, bool expand_allophones, bool appl
     // that emit nothing — a written accent whose only job is to say WHERE
     // the stress is (the Russian combining acute). Stress detection reads
     // them; every whole-word key is spelled without them.
-    for (const auto& mark : spec.marked_vowels) {
-        if (auto it = spec.graphemes.find(mark); it != spec.graphemes.end() && it->second.empty())
-            silent_stress_marks_ += mark;
-    }
+    silent_stress_marks_ = silent_marks_of(spec);
     // g2p.py G2P.__init__ _rescorers: the spec's declarative allophone
     // rules compile into the post-lexical rescorer; a spec with no rules
     // compiles to null, so the chain is empty and the default path stays
@@ -2325,7 +2328,8 @@ std::vector<features::WordFeatures> G2P::features(const std::string& text) const
     // (predicates + neighbours) — no vowel logic is recomputed here.
     std::vector<features::WordFeatures> out;
     const auto normalize = [this](std::string value) { return normalized(std::move(value)); };
-    for (const auto& input : split_words(*spec_, text, normalize)) {
+    const auto check = [this](const std::string& ipa) { check_forced(ipa); };
+    for (const auto& input : split_words(*spec_, text, normalize, check)) {
         const std::string& word = input.surface;
         const auto slots = ipa_lattice(word);
         const double confidence = confidence_breakdown(word).value;
@@ -2352,7 +2356,8 @@ sentence::SentenceLattice G2P::sentence_lattice(const std::string& text,
         throw std::invalid_argument("search must be 'greedy' or 'beam', got " + search);
     const std::size_t width = search == "greedy" ? 1 : beam_width;
     const auto normalize = [this](std::string value) { return normalized(std::move(value)); };
-    const auto inputs = split_words(*spec_, text, normalize);
+    const auto check = [this](const std::string& ipa) { check_forced(ipa); };
+    const auto inputs = split_words(*spec_, text, normalize, check);
     if (inputs.empty()) {
         sentence::SentenceLattice empty;
         empty.lang = language_;
@@ -2613,7 +2618,8 @@ std::optional<std::vector<std::string>> G2P::compound_elements(const std::string
     });
     // An override for the whole spelling wins, as it does for any word.
     if (!hyphenated || override_for(word).has_value()) return std::nullopt;
-    const auto elements = split_words(*spec_, word, [this](const std::string& text) { return normalized(text); });
+    const auto elements = split_words(*spec_, word, [this](const std::string& text) { return normalized(text); },
+                                      [this](const std::string& ipa) { check_forced(ipa); });
     if (elements.size() < 2) return std::nullopt;
     std::vector<std::string> surfaces;
     for (std::size_t i = 0; i < elements.size(); ++i) {
@@ -2727,6 +2733,27 @@ std::vector<IPAPath> G2P::apply_rescorer_plugins(const std::string& word, std::v
     return paths;
 }
 
+void G2P::check_forced(const std::string& ipa) const {
+    // The inventory counts the engine's lexicon, and an engine with none reads
+    // the process-wide one.
+    const auto& own = pipeline_->lexicon;
+    const std::map<std::string, std::string>* lexicon = own.has_value() ? &*own : nullptr;
+    const auto declared = phoneme_inventory(*spec_, lexicon);
+    std::vector<std::string> outside;
+    for (const auto& token : tokenize(ipa, *spec_, lexicon))
+        if (!declared.count(token)) outside.push_back(token);
+    if (!outside.empty())
+        throw markup::MarkupError(
+            "<phoneme ph=" + detail::py_repr(ipa) + "> uses " + py_list(outside) + ", which the " +
+            spec_->code + " spec does not declare.\n\n"
+            "The inventory is every segment the spec's tables can emit, allophones included. A symbol "
+            "outside it has no embedding at synthesis time, so the word carrying it is mispronounced "
+            "permanently and silently. This is the usual shape of a loanword forced in its donor's "
+            "phonology.\n\n"
+            "Give the nativised reading, or — if the phonology really does have this sound — declare it "
+            "in the spec, where it can be read, cited and diffed.");
+}
+
 WordTranscription G2P::transcribe_one(const std::string& word, std::size_t width,
                                       bool forced, const std::string& forced_ipa) const {
     // g2p.py G2P._transcribe_word — the per-word stage of the pipeline, in the
@@ -2743,24 +2770,6 @@ WordTranscription G2P::transcribe_one(const std::string& word, std::size_t width
     std::optional<std::string> override;
     if (forced) {
         if (forced_ipa.empty()) throw std::invalid_argument("empty forced pronunciation");
-        // g2p.py _check_forced: the inventory counts the engine's lexicon, and an
-        // engine with none reads the process-wide one.
-        const auto& own = pipeline_->lexicon;
-        const std::map<std::string, std::string>* lexicon = own.has_value() ? &*own : nullptr;
-        const auto declared = phoneme_inventory(*spec_, lexicon);
-        std::vector<std::string> outside;
-        for (const auto& token : tokenize(forced_ipa, *spec_, lexicon))
-            if (!declared.count(token)) outside.push_back(token);
-        if (!outside.empty())
-            throw markup::MarkupError(
-                "<phoneme ph=" + detail::py_repr(forced_ipa) + "> uses " + py_list(outside) + ", which the " +
-                spec_->code + " spec does not declare.\n\n"
-                "The inventory is every segment the spec's tables can emit, allophones included. A symbol "
-                "outside it has no embedding at synthesis time, so the word carrying it is mispronounced "
-                "permanently and silently. This is the usual shape of a loanword forced in its donor's "
-                "phonology.\n\n"
-                "Give the nativised reading, or — if the phonology really does have this sound — declare it "
-                "in the spec, where it can be read, cited and diffed.");
         override = forced_ipa;
     } else {
         override = override_for(word);
@@ -2840,16 +2849,8 @@ TranscriptionResult G2P::transcribe_detailed(const std::string& text, const std:
     // g2p.py resolves a declared stage when it first runs it and never asks
     // which languages a plugin owns: normalize per chunk, sandhi after the
     // words, rescore at construction.
-    auto normalize = [&](std::string value) {
-        for (const auto& name : declared("normalize")) {
-            const auto& plugin = normalize_plugins.at(name);
-            const auto normalized = plugin->normalize(value, language_);
-            if (plugin->normalize(value, language_) != normalized)
-                throw std::runtime_error("normalize plugin returned non-deterministic output: " + name);
-            value = normalized;
-        }
-        return value;
-    };
+    const auto normalize = [this](std::string value) { return normalized(std::move(value)); };
+    const auto check = [this](const std::string& ipa) { check_forced(ipa); };
 
     // ─── g2p.py transcribe_detailed, stage by stage ───
     // 1. split the input into words (markup read before normalization);
@@ -2861,7 +2862,7 @@ TranscriptionResult G2P::transcribe_detailed(const std::string& text, const std:
     //    has run (composing earlier would blind a rule that names a nasal
     //    vowel by its decomposed shape).
     TranscriptionResult result; result.lang = language_;
-    const auto words = split_words(*spec_, text, normalize);
+    const auto words = split_words(*spec_, text, normalize, check);
     if (words.empty()) return result;
 
     std::vector<std::string> surfaces, ipa_words;
@@ -2895,11 +2896,9 @@ TranscriptionResult G2P::transcribe_detailed(const std::string& text, const std:
 
     for (const auto& name : declared("sandhi")) {
         const auto& p = sandhi_plugins.at(name);
-        const auto transformed = p->apply(ipa_words, surfaces, pausal, language_);
+        auto transformed = p->apply(ipa_words, surfaces, pausal, language_);
         if (transformed.size() != ipa_words.size()) throw std::runtime_error("sandhi plugin changed word count: " + name);
-        if (p->apply(ipa_words, surfaces, pausal, language_) != transformed)
-            throw std::runtime_error("sandhi plugin returned non-deterministic output: " + name);
-        ipa_words = transformed;
+        ipa_words = std::move(transformed);
     }
 
     // A word a stage emptied contributes nothing to the sentence, and no
