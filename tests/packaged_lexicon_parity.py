@@ -22,7 +22,6 @@ directory) replaced by its name. Exit 0 only when every line matches.
 Usage: packaged_lexicon_parity.py <path-to-check-packaged-lexicons-binary>
 """
 import importlib.metadata
-import inspect
 import logging
 import os
 import pathlib
@@ -172,21 +171,25 @@ def package_scenario(binary):
                    reference_masks, port_masks)
 
 
-PROVIDER_SOURCE = '''from pathlib import Path
+# A fixture provider runs the installed o2i_lexicons code, helpers included,
+# in its own module instance whose DATA_DIR is the fixture root.
+PROVIDER_SOURCE = '''import importlib.util
+from pathlib import Path
 
-DATA_DIR = Path({root!r})
-
-
-{tsv_path}'''
+_spec = importlib.util.spec_from_file_location(__name__ + "_o2i_lexicons", {source!r})
+_provider = importlib.util.module_from_spec(_spec)
+_spec.loader.exec_module(_provider)
+_provider.DATA_DIR = Path({root!r})
+tsv_path = _provider.tsv_path
+'''
 
 
 def write_distribution(site, name, root, codes):
     """An installed distribution *name* whose entry points serve *codes* from
-    *root* through a copy of o2i_lexicons.tsv_path."""
+    *root* through the installed o2i_lexicons.tsv_path."""
     module = name.replace("-", "_")
     (site / f"{module}.py").write_text(
-        PROVIDER_SOURCE.format(root=str(root), tsv_path=inspect.getsource(o2i_lexicons.tsv_path)),
-        encoding="utf-8")
+        PROVIDER_SOURCE.format(source=o2i_lexicons.__file__, root=str(root)), encoding="utf-8")
     info = site / f"{module}-0.0.0.dist-info"
     info.mkdir()
     (info / "METADATA").write_text(f"Metadata-Version: 2.1\nName: {name}\nVersion: 0.0.0\n", encoding="utf-8")
