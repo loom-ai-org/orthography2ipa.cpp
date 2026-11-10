@@ -5,14 +5,16 @@ Each command runs in the C++ driver and in the reference's pipeline.py path, and
 the two result lines must be equal. The grid crosses languages, words, a lexicon
 that is absent, empty or a file, and each syllabifier mode, over the word, text,
 detailed, candidates, confidence and lattice surfaces, with a process lexicon and
-a discovered syllabifier set, so a pipeline that fails to replace them shows up.
-It also runs load_lexicon, packaged_lexicon, the inventory functions with a
+a registered syllabifier set, so an engine that reads either shows up. A second
+grid crosses the expand, mark, rescore and sandhi fields, allow_undeclared_phonemes
+and each old argument that conflicts with a field. It also runs load_lexicon,
+packaged_lexicon with and without the patches, the inventory functions with a
 mapping, detect_stress with a syllabifier, and the deprecation text.
 
 A forced pronunciation runs in each language, so the grid holds the type and the
 text of each MarkupError. A newline in that text is `|` on the driver's line.
 
-Usage: pipeline_parity.py <path-to-check-pipeline-binary>
+Usage: pipeline_parity.py <path-to-check-pipeline-binary> [--only grid|fields|packaged|deprecation]
 """
 import logging
 import os
@@ -32,12 +34,15 @@ warnings.simplefilter("ignore")
 logging.disable(logging.CRITICAL)
 
 from orthography2ipa import (  # noqa: E402
-    G2P, Pipeline, SyllabifierPlugin, detect_stress, emission_inventory, get, load_lexicon,
-    packaged_lexicon, phoneme_inventory)
+    G2P, Pipeline, SandhiPlugin, SyllabifierPlugin, detect_stress, emission_inventory, get,
+    load_lexicon, packaged_lexicon, phoneme_inventory)
 from orthography2ipa import lexicon as lexmod  # noqa: E402
 from orthography2ipa import registry  # noqa: E402
 from orthography2ipa.inventory import phoneme_atoms, tokenize  # noqa: E402
 from orthography2ipa.markup import MarkupError  # noqa: E402
+from orthography2ipa.phonetok import Candidate  # noqa: E402
+from orthography2ipa.rescorer import LatticeRescorer  # noqa: E402
+from orthography2ipa.sentence import SentenceRescorer  # noqa: E402
 from reference_regression import engine_path, pre_rescore_slots  # noqa: E402
 
 CLICK = "ʘ"
@@ -52,7 +57,8 @@ WORDS = {
     "es-ES": ["cantaba", "gato", "ahí", "país", "construcción", "hola"],
     "en-GB": ["colonel", "yacht", "nation", "the", "water"],
     "nl-NL": ["geven", "gebed", "verder", "veldslag", "quota"],
-    "ru": ["вода", "его", "молоко", "хорошо", "его\u0301", "его\u0300", "во\u0301", "большо\u0301го", "ЕГО\u0301"],
+    "ru": ["вода", "его", "молоко", "хорошо", "его\u0301", "его\u0300", "во\u0301", "большо\u0301го", "самого\u0301",
+           "горячего", "ЕГО\u0301"],
     "ru-x-southern": ["его", "его\u0301"],
     "ar": ["كتاب", "مدرسة", "هذا"],
     "hi": ["कमल", "नमस्ते", "भारत"],
@@ -97,6 +103,74 @@ class Mode(SyllabifierPlugin):
     @property
     def language_codes(self):
         return [self.code]
+
+
+class BacksA(LatticeRescorer):
+    """/a/ to [ɐ], a symbol pt-PT declares."""
+
+    def rescore(self, slot, context):
+        if slot.candidates and slot.candidates[0].ipa == "a":
+            return (Candidate(ipa="ɐ", cost=0.0),)
+        return slot.candidates
+
+
+class Bar(SandhiPlugin):
+    """A bar after the last word, so a sentence shows where sandhi ran."""
+
+    def apply(self, words, surfaces, pausal, lang):
+        return [*words[:-1], words[-1] + "|"] if words else []
+
+    @property
+    def language_codes(self):
+        return []
+
+
+class Keeps(SentenceRescorer):
+    def rescore(self, word, context):
+        return word.ipa
+
+
+ACUTE = "\u0301"
+# Each expand and mark mode, with the same meaning in the driver.
+EXPAND = {"digits": lambda text: text.replace("101", "cento e um"), "words": lambda text: text.replace("gato", "o gato bom")}
+MARK = {"acute": lambda text: text.replace("a", "a" + ACUTE).replace("о", "о" + ACUTE),
+        "change": lambda text: text.replace("o", "0"),
+        "short": lambda text: text[:-1],
+        "strip": lambda text: text.replace("\u0301", "")}
+# Inputs for the fields grid: plain words, an acute already written, a forced
+# word with a declared and an undeclared phoneme, a forced word that expand
+# would rewrite, digits, and punctuation.
+FIELD_TEXTS = {
+    "pt-PT": ["gato casa", "o gato, a casa.", "casa 101 gatos", "pá e pato",
+              f"gato {FORCED[0]} casa", f"a {FORCED[4]} casa", "101", "3a", "a1b2",
+              '<phoneme ph="ɡatu">gato</phoneme> 101 casa'],
+    "es-ES": ["la casa", "cantaba 22", f"gata {FORCED[0]}", "Málaga"],
+    "en-GB": ["the yacht", "101 dalmatians", f"a {FORCED[0]}"],
+    "ru": ["вода молоко", "его хорошо", f"вода {FORCED[0]}"],
+}
+FIELD_MODES = [
+    ("-", "-", "-", "-", "0", "-"), ("digits", "-", "-", "-", "0", "-"), ("words", "-", "-", "-", "0", "-"),
+    ("-", "acute", "-", "-", "0", "-"), ("words", "acute", "-", "-", "0", "-"),
+    ("-", "change", "-", "-", "0", "-"), ("-", "short", "-", "-", "0", "-"), ("-", "strip", "-", "-", "0", "-"),
+    ("-", "-", "backs", "-", "0", "-"), ("-", "-", "two", "-", "0", "-"),
+    ("-", "-", "-", "bar", "0", "-"), ("-", "-", "-", "-", "1", "-"),
+    ("digits", "acute", "backs", "bar", "1", "-"),
+    ("-", "-", "backs", "-", "0", "rescorer"), ("-", "-", "-", "bar", "0", "sentence_rescorer"),
+    ("-", "-", "backs", "-", "0", "named-rescore"), ("-", "-", "-", "bar", "0", "named-sandhi"),
+    ("digits", "-", "-", "-", "0", "named-normalize"), ("-", "acute", "-", "-", "0", "named-normalize"),
+    ("-", "-", "-", "-", "0", "rescorer"), ("-", "-", "-", "-", "0", "named-sandhi"),
+]
+
+
+def field_engine(lang, expand, mark, rescore, sandhi, allow, old):
+    pipeline = Pipeline(expand=EXPAND.get(expand), mark=MARK.get(mark),
+                        rescore={"-": (), "backs": (BacksA(),), "two": (BacksA(), BacksA())}[rescore],
+                        sandhi=Bar() if sandhi == "bar" else None)
+    extra = {"rescorer": {"rescorer": BacksA()}, "sentence_rescorer": {"sentence_rescorer": Keeps()},
+             "named-rescore": {"plugins": {"rescore": "nothing"}},
+             "named-sandhi": {"plugins": {"sandhi": "nothing"}},
+             "named-normalize": {"plugins": {"normalize": "nothing"}}}.get(old, {})
+    return G2P(lang, pipeline=pipeline, allow_undeclared_phonemes=allow == "1", **extra)
 
 
 class _Dist:
@@ -152,6 +226,10 @@ def run(field):
         engine = G2P(field[1], pipeline=Pipeline(lexicon=lexicon_of(field[2]),
                                                  syllabifier=plugin(field[3])))
         return ""
+    if command == "fields":
+        engine = None
+        engine = field_engine(*field[1:])
+        return ""
     if command == "word":
         return engine.transcribe_word(field[1])
     if command == "text":
@@ -176,8 +254,9 @@ def run(field):
     if command == "pre":
         return "".join(slot["grapheme"] + "=" + "".join(f"{c['ipa']}:{number(c['cost'])}," for c in slot["candidates"]) + "|"
                        for slot in pre_rescore_slots(engine, field[1]))
-    if command in ("load", "packaged"):
-        entries = load_lexicon(field[1]) if command == "load" else packaged_lexicon(field[1])
+    if command in ("load", "packaged", "patched"):
+        entries = (load_lexicon(field[1]) if command == "load" else
+                   packaged_lexicon(field[1], patches=command == "patched"))
         return "".join(f"{word}={ipa}," for word, ipa in sorted(entries.items()))
     if command in ("emission", "phonemes", "atoms", "tokens"):
         spec, mapping = get(field[1]), lexicon_of(field[2])
@@ -201,6 +280,13 @@ def expected(field):
         return f"{type(error).__name__}\t{error.args[0]}"
     except MarkupError as error:
         return "MarkupError\t" + str(error).replace("\n", "|")
+    except ValueError as error:
+        return f"ValueError\t{error}"
+    except registry.MissingPlugin as error:
+        return "MissingPlugin\t" + str(error).replace("\n", "|")
+    except AttributeError as error:
+        # A command on the engine that a failed "fields" left unset.
+        return "NoEngine\t" if engine is None else f"AttributeError\t{error}"
 
 
 def write_tsv(path, rows):
@@ -246,6 +332,16 @@ def commands(root):
     return out
 
 
+def field_commands():
+    out = []
+    for lang, texts in FIELD_TEXTS.items():
+        for modes in FIELD_MODES:
+            out.append(["fields", lang, *modes])
+            out += [[surface, text] for text in texts for surface in ("text", "detailed", "features", "sentence")]
+            out += [["word", word] for word in ("gato", "casa", "101")]
+    return out
+
+
 def compare(binary, root, label, env, lines):
     environ = {k: v for k, v in os.environ.items() if k != "ORTHOGRAPHY2IPA_LEXICON_DIR"}
     environ.update(env)
@@ -266,18 +362,27 @@ def compare(binary, root, label, env, lines):
 
 
 def packaged_case(binary, root):
-    """A fixture provider: its entries, a failing one, and a code with none."""
+    """A fixture provider: its entries, its patches, a failing one, and a code
+    with none. An exception wins over a patch for the same word."""
     good = write_tsv(root / "packaged" / "pt-PT" / "fixture.tsv", [("gato", "ˈɡaʃtɐ")])
     write_tsv(root / "packaged" / "en-GB" / "one.tsv", [("the", "ðə")])
     write_tsv(root / "packaged" / "en-GB" / "two.tsv", [("the", "ðiː")])
+    write_tsv(root / "packaged" / "es-ES" / "fixture.tsv", [("gato", "ˈɡato")])
+    patch = write_tsv(root / "packaged" / "patches" / "pt-PT" / "fixture.tsv",
+                      [("gato", "ˈɡatu"), ("rato", "ˈʁatu")])
 
     def broken(code):
         raise RuntimeError("en-GB has 2 lexicon files")
 
-    points = [_EntryPoint("pt-PT", lambda code: good), _EntryPoint("en-GB", broken)]
-    lexmod.entry_points = lambda group=None: list(points) if group == lexmod.ENTRY_POINT_GROUP else []
+    points = [_EntryPoint("pt-PT", lambda code: good), _EntryPoint("en-GB", broken),
+              _EntryPoint("es-ES", lambda code: str(root / "packaged" / "es-ES" / "fixture.tsv"))]
+    patch_points = [_EntryPoint("pt-PT", lambda code: patch)]
+    lexmod.entry_points = lambda group=None: (list(points) if group == lexmod.ENTRY_POINT_GROUP else
+                                              list(patch_points) if group == lexmod.PATCH_ENTRY_POINT_GROUP
+                                              else [])
     lexmod.clear_lexicons()
-    lines = [["packaged", "pt-PT"], ["packaged", "pt"], ["packaged", "es-ES"]]
+    lines = [["packaged", "pt-PT"], ["packaged", "pt"], ["packaged", "es-ES"],
+             ["patched", "pt-PT"], ["patched", "pt"], ["patched", "es-ES"], ["patched", "fr-FR"]]
     bad = compare(binary, root, "packaged", {"ORTHOGRAPHY2IPA_PACKAGED_LEXICONS": str(root / "packaged")}, lines)
     # A failing provider serves nothing, so it raises on both sides. Its name
     # stays in the installed list of the reference and of the port.
@@ -311,19 +416,34 @@ def deprecation_case():
             print(f"DIFF deprecation {name}: {message}")
             bad += 1
     lexmod.clear_lexicons()
-    print(f"pipeline parity deprecation: {len(calls)} names, template {text!r}, {bad} differ")
+    # get_syllabifier is no lexicon name, so its attribute holds the whole text.
+    with warnings.catch_warnings(record=True) as caught:
+        warnings.simplefilter("always")
+        found = registry.get_syllabifier("pt-PT")
+    message = str(caught[0].message)
+    if found is not None or f'[[deprecated("{message}")]]' not in header:
+        print(f"DIFF deprecation get_syllabifier: {found!r} {message}")
+        bad += 1
+    print(f"pipeline parity deprecation: {len(calls) + 1} names, template {text!r}, {bad} differ")
     return bad
 
 
 def main():
-    if len(sys.argv) != 2:
+    if len(sys.argv) not in (2, 4) or (len(sys.argv) == 4 and sys.argv[2] != "--only"):
         sys.exit(__doc__)
     binary = sys.argv[1]
+    only = sys.argv[3] if len(sys.argv) == 4 else None
+    bad = 0
     with tempfile.TemporaryDirectory() as tmp:
         root = pathlib.Path(tmp)
-        bad = compare(binary, root, "grid", {}, commands(root))
-        bad += packaged_case(binary, root)
-        bad += deprecation_case()
+        if only in (None, "grid"):
+            bad += compare(binary, root, "grid", {}, commands(root))
+        if only in (None, "fields"):
+            bad += compare(binary, root, "fields", {}, field_commands())
+        if only in (None, "packaged"):
+            bad += packaged_case(binary, root)
+        if only in (None, "deprecation"):
+            bad += deprecation_case()
     sys.exit(1 if bad else 0)
 
 

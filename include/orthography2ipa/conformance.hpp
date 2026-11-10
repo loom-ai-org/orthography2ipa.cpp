@@ -7,9 +7,14 @@
 //   1. Round-trip. A syllabifier splits a word; it does not rewrite it:
 //      `"".join(syllabify(word)) == word`, always.
 //   2. Language claim. A plugin speaks only for the codes it claims.
-//   3. Downstream neutrality. Installing a plugin must not change any stage the
-//      plugin does not own: transcribe the probe words with it and without it,
-//      and the output must be identical.
+//   3. Downstream neutrality. A plugin must not change any stage it does not
+//      own: transcribe the probe words with it and without it, and the output
+//      must be identical.
+//
+// A caller names a syllabifier in Pipeline::syllabifier, so the engine never
+// applies one that nobody asked for. The kit answers a narrower question for
+// the author of a syllabifier: does it draw better boundaries and leave the
+// transcription alone?
 //
 // The rescorer contract inverts rule 3 — changing the transcription is the whole
 // job — and enforces what remains: determinism and the declared inventory
@@ -21,14 +26,16 @@
 // not a bad plugin, it is the library telling you its own built-in answer is
 // wrong for that language.
 //
-// The seams differ from the reference in one place, and it is the C++ engine's
-// own structure rather than a relaxed rule: the reference installs the plugin in
-// `registry._syllabifiers` / `registry._declared["rescore"]` for the duration of
-// the check and restores them afterwards. The C++ registry keys plugins by name
-// and has no unregister, so the kit registers under its own name
-// ("__conformance__", the reference's name too) and disables that entry on the
-// way out — claiming no codes at all, which is what makes `get_syllabifier` and
-// the declared-plugin lookup route nothing to it, i.e. the built-in answer runs.
+// The syllabifier check passes the plugin to one engine as
+// `G2P(lang, pipeline=Pipeline(syllabifier=plugin))`, as the reference does.
+// The rescorer check differs from the reference in one place, because a C++
+// RescorerPlugin has a whole-word `rescore` seam that only a named plugin
+// reaches. The reference passes `Pipeline(rescore=plugin.rescorers(lang))`.
+// The C++ kit registers the plugin under its own name ("__conformance__") and
+// names it for each engine it builds. The engine puts a named plugin's lattice
+// rescorers right after Pipeline::rescore and before the spec's allophone
+// rules, so a lattice rescorer gets the same answer either way. The C++
+// registry has no unregister, so the kit disables its entry on the way out.
 #pragma once
 
 #include <stdexcept>
@@ -77,9 +84,8 @@ void assert_syllabifier_conforms(const SyllabifierPlugin& plugin,
 ///
 /// It MAY change the transcription — that is what it is for. It may not invent
 /// a symbol, wander into another language, or answer differently twice. The
-/// plugin is installed under the kit's own name and DECLARED to the engine
-/// (`G2P(lang, plugins={"rescore": "__conformance__"})`), which is exactly how a
-/// downstream engine composes its own pipeline; the two passes then run
+/// plugin is registered under the kit's own name and named to each engine
+/// (`G2P(lang, plugins={"rescore": "__conformance__"})`); the two passes then run
 /// `transcribe_word` over the probe words, the second with a fresh engine per
 /// word, and every emitted symbol is read back against the spec's declared
 /// inventory.

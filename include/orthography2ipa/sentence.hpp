@@ -249,9 +249,11 @@ using SentenceRescorers = std::vector<const SentenceRescorer*>;
 struct SentenceRescorerArg {
     SentenceRescorerArg() = default;                                  // None
     SentenceRescorerArg(std::nullptr_t) {}                            // None
-    SentenceRescorerArg(const SentenceRescorer* one) : items{one} {}  // one
-    SentenceRescorerArg(const SentenceRescorers& many) : items(many) {}  // iterable
+    SentenceRescorerArg(const SentenceRescorer* one) : items{one}, none(false) {}  // one
+    SentenceRescorerArg(const SentenceRescorers& many) : items(many), none(false) {}  // iterable
     SentenceRescorers items;
+    /// `sentence_rescorer is None`: an empty list is an argument, and None is not.
+    bool none = true;
 };
 
 /// sentence.py normalize_sentence_rescorers: coerce the public

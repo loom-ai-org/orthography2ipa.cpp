@@ -2,7 +2,6 @@
 #include "orthography2ipa/conformance.hpp"
 
 #include "orthography2ipa/orthography2ipa.hpp"
-#include "plugin_registry.hpp"
 #include "unicode_util.hpp"
 
 #include <algorithm>
@@ -20,24 +19,16 @@ using uni::category;
 using uni::to_utf32;
 using uni::to_utf8;
 
-// conformance.py installs the kit's plugin in the registry for the duration of
-// the check and restores what was there in a `finally`. The kit's entry has
-// its own name (the reference's `"__conformance__"`); it delegates to the
-// caller's plugin while enabled and claims no language code at all while
-// disabled.
-//
-// For syllabifiers the reference REPLACES the registry: the two passes run
-// under `registry._syllabifiers = {code: plugin}` and `= {}`. The kit's entry
-// is therefore the only syllabifier registered during the check, enabled for
-// the first pass and disabled for the second, so the second pass is the
-// built-in answer even when another plugin claims the language.
-//
-// Rescorers run only when something names them, so the kit registers its
-// entry beside the others and names it alone, which is the reference's
-// `registry._declared["rescore"] = {"__conformance__": plugin}`.
+// conformance.py assert_rescorer_conforms names the plugin for each engine it
+// builds. The C++ kit registers the plugin under its own name, the
+// reference's `"__conformance__"`, and names it alone, so the engine runs the
+// plugin's lattice rescorers where Pipeline(rescore=...) puts them and also
+// its whole-word `rescore` seam, which only a named plugin reaches. The entry
+// delegates to the caller's plugin while enabled and claims no language code
+// once the check ends.
 const char* const CONFORMANCE_NAME = "__conformance__";
 
-/// The registry gate's common half, so one RAII object restores either kind.
+/// The registry gate, so one RAII object turns the kit's entry off.
 class Gate {
 public:
     Gate() = default;
@@ -47,7 +38,7 @@ public:
     virtual void set_enabled(bool enabled) = 0;
 };
 
-/// conformance.py's `finally: registry.<stage> = saved`.
+/// Turns the kit's entry off when the check ends, also on a throw.
 class RestoreOnExit {
 public:
     explicit RestoreOnExit(Gate& gate) : gate_(gate) {}
@@ -57,42 +48,6 @@ public:
 
 private:
     Gate& gate_;
-};
-
-/// conformance.py `saved = registry._syllabifiers` ... `finally:
-/// registry._syllabifiers = saved`.
-class ReplaceSyllabifiers {
-public:
-    explicit ReplaceSyllabifiers(SyllabifierRegistry plugins)
-        : saved_(exchange_syllabifiers(std::move(plugins))) {}
-    ReplaceSyllabifiers(const ReplaceSyllabifiers&) = delete;
-    ReplaceSyllabifiers& operator=(const ReplaceSyllabifiers&) = delete;
-    ~ReplaceSyllabifiers() { exchange_syllabifiers(std::move(saved_)); }
-
-private:
-    SyllabifierRegistry saved_;
-};
-
-class ScopedSyllabifier : public SyllabifierPlugin, public Gate {
-public:
-    ScopedSyllabifier(const SyllabifierPlugin& plugin, std::vector<std::string> codes)
-        : plugin_(plugin), codes_(std::move(codes)) {}
-
-    void set_enabled(bool enabled) override { enabled_ = enabled; }
-
-    std::vector<std::string> language_codes() const override {
-        return enabled_ ? codes_ : std::vector<std::string>{};
-    }
-    std::vector<std::string> syllabify(const std::string& word,
-                                       const std::string& lang) const override {
-        return plugin_.syllabify(word, lang);
-    }
-    int priority() const override { return plugin_.priority(); }
-
-private:
-    const SyllabifierPlugin& plugin_;
-    std::vector<std::string> codes_;
-    bool enabled_ = false;
 };
 
 class ScopedRescorer : public RescorerPlugin, public Gate {
@@ -292,10 +247,9 @@ Dict<std::string> transcribe_pass(const std::string& lang,
     return results;
 }
 
-/// conformance.py: `lang = lang or next(iter(plugin.language_codes), None)`, and
-/// the codes the kit installs the plugin under — the claimed ones AND the code
-/// under test, because "the check is about the plugin's effect, not about code
-/// resolution". The C++ engine resolves *lang* before it routes anything, so
+/// The codes the kit's rescorer entry claims: the plugin's own AND the code
+/// under test, because the check is about the plugin's effect, not about code
+/// resolution. The C++ engine resolves *lang* before it routes anything, so
 /// the resolved code is claimed as well.
 std::vector<std::string> install_codes(const std::vector<std::string>& claimed,
                                        const std::string& lang) {
@@ -376,25 +330,24 @@ void check_round_trip(const SyllabifierPlugin& plugin, const std::vector<std::st
 void check_language_claim(const SyllabifierPlugin& plugin) {
     if (!plugin.language_codes().empty()) return;
     throw ConformanceError(
-        "language claim: the plugin claims no language codes, so discovery can "
-        "never route anything to it. It would be installed and never called.");
+        "language claim: the plugin claims no language codes, so a caller "
+        "cannot tell which languages it serves.");
 }
 
-/// conformance.py _check_downstream_neutrality: the rule that matters —
-/// installing the plugin must not move the answer.
+/// conformance.py _check_downstream_neutrality: the rule that matters — the
+/// plugin must not move the answer.
 void check_downstream_neutrality(const SyllabifierPlugin& plugin,
                                  const std::vector<std::string>& words,
                                  const std::string& lang) {
-    const std::map<std::string, std::vector<std::string>> no_plugins;
-    auto wrapper = std::make_shared<ScopedSyllabifier>(plugin, install_codes(plugin.language_codes(), lang));
-    const ReplaceSyllabifiers only_the_kit({{CONFORMANCE_NAME, wrapper}});
-    const RestoreOnExit restore(*wrapper);
-
-    wrapper->set_enabled(true);
-    auto with_plugin = transcribe_pass(lang, words, no_plugins, /*fresh_engine=*/true);
-
-    wrapper->set_enabled(false);
-    auto without_plugin = transcribe_pass(lang, words, no_plugins, /*fresh_engine=*/true);
+    // `G2P(lang, pipeline=Pipeline(syllabifier=plugin))`. The engine shares the
+    // caller's plugin and does not own it.
+    const std::shared_ptr<const SyllabifierPlugin> borrowed(std::shared_ptr<void>(), &plugin);
+    const G2P with_engine(lang, {}, "", false, true, true, true, nullptr, nullptr,
+                          Pipeline{std::nullopt, borrowed});
+    const G2P without_engine(lang);
+    Dict<std::string> with_plugin, without_plugin;
+    for (const auto& word : words) with_plugin.insert(word, with_engine.transcribe_word(word));
+    for (const auto& word : words) without_plugin.insert(word, without_engine.transcribe_word(word));
 
     Dict<std::pair<std::string, std::string>> moved;
     for (const auto& word : words) {
@@ -417,7 +370,7 @@ void check_downstream_neutrality(const SyllabifierPlugin& plugin,
                   repr_str(sorted[i].second.second);
     }
     throw ConformanceError(
-        "downstream neutrality: installing this plugin CHANGES THE TRANSCRIPTION "
+        "downstream neutrality: this plugin CHANGES THE TRANSCRIPTION "
         "for " + lang + ":\n\n" + detail + "\n\n"
         "A plugin may answer a question better. It may not change what the question "
         "was. If a better syllabification moves the stress, then the syllable count "
@@ -473,9 +426,8 @@ void assert_rescorer_conforms(const RescorerPlugin& plugin,
     const LanguageSpec& spec = get(language);
     const auto declared = phoneme_inventory(spec);
 
-    // Declared, not discovered. A rescorer changes the transcription, so it only
-    // ever runs because something NAMED it — here, the caller, which is exactly
-    // how a downstream engine composes its own pipeline.
+    // Passed, not discovered. A rescorer changes the transcription, so it only
+    // ever runs because the caller named it for the engines this check builds.
     auto wrapper = std::make_shared<ScopedRescorer>(plugin, install_codes(plugin.language_codes(), language));
     register_rescorer_plugin(CONFORMANCE_NAME, wrapper);
     const RestoreOnExit restore(*wrapper);

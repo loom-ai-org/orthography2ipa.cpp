@@ -96,10 +96,12 @@ std::vector<SegmentSlot> apply_rescorers(
 struct RescorerArg {
     RescorerArg() = default;                                     // None
     RescorerArg(std::nullptr_t) {}                                // None
-    RescorerArg(const LatticeRescorer* one) : items{one} {}       // one
+    RescorerArg(const LatticeRescorer* one) : items{one}, none(false) {}       // one
     RescorerArg(const std::vector<const LatticeRescorer*>& many)  // iterable
-        : items(many) {}
+        : items(many), none(false) {}
     std::vector<const LatticeRescorer*> items;
+    /// `rescorer is None`: an empty list is an argument, and None is not.
+    bool none = true;
 };
 
 /// rescorer.py normalize_rescorers: coerce the public `rescorer=` argument to

@@ -4,11 +4,12 @@
 // SilabificadorSyllabifier is DIFFERENT from every other port in one respect:
 // the reference wraps a third-party Python package (`silabificador`, installed
 // via the optional `orthography2ipa[portuguese]` extra) and the reference's own
-// module fails to IMPORT when that package is absent — discovery then carries
-// on without it, which is why the built-in splitter must still be right on its
-// own (pt-PT's declared `diphthongs`). C++ has no entry-point machinery to
-// reach a Python package, so this port mirrors the MEANING rather than the
-// wrapping: the plugin exists, claims the Portuguese lects, sits at priority
+// module fails to IMPORT when that package is absent. Building the plugin
+// changes no transcription: the caller passes it to one engine, as
+// `Pipeline{std::nullopt, std::make_shared<SilabificadorSyllabifier>()}`.
+// C++ has no entry-point machinery to reach a Python package, so this port
+// mirrors the MEANING rather than the wrapping: the plugin claims the
+// Portuguese lects, sits at priority
 // 50 ("neutral — a downstream plugin that knows better wins by saying so"),
 // and its construction either delegates to a caller-supplied syllabify
 // function or fails loudly with the same "the 'silabificador' package is not

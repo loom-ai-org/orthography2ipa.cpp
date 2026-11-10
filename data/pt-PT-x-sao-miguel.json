@@ -60,6 +60,69 @@
       "phonemes": [],
       "surface": "ɐ",
       "notes": "DISABLED for Micaelense Portuguese. No source read covers a stressed /a/ before an onset nasal in this variety. The reading is the spec default and makes no claim about this context."
+    },
+    {
+      "id": "SM_EI_KEEP_BEFORE_CODA_NASAL",
+      "phonemes": [
+        "ej"
+      ],
+      "surface": "ej",
+      "grapheme": [
+        "ei",
+        "êi"
+      ],
+      "followed_by": "coda_nasal",
+      "notes": "Guard for SM_EI_MONOPHTHONG. Before a coda nasal ⟨ei⟩ is nasal (hein, reimplantar), not the oral falling diphthong that the source reduces, so it keeps the pt-PT reading."
+    },
+    {
+      "id": "SM_EI_MONOPHTHONG",
+      "phonemes": [
+        "ej"
+      ],
+      "surface": "e",
+      "grapheme": [
+        "ei",
+        "êi"
+      ],
+      "followed_by": "consonant",
+      "notes": "Micaelense reduces the falling diphthong [ej], spelled ⟨ei⟩ or ⟨êi⟩, to [e]: leite [ˈletɨ], peixe [ˈpeʃɨ], primeiro [pɾiˈmeɾu], amêijoa [ɐˈmeʒuɐ]. Cunha & Cintra, Nova Gramática do Português Contemporâneo, 7th ed., p. 31, on the Atlantic islands: 'o ditongo [ow] reduz-se normalmente a [o], mas a redução de [ej] a [e] é fenômeno esporádico; só ocorre como norma na ilha de São Miguel.' The rule applies before a consonant, and SM_EI_MONOPHTHONG_FINAL applies at the end of a word. Before a vowel the glide begins the next syllable (cheia, ideia), and no source covers that position, so no rule applies there and the pt-PT [ej] stays."
+    },
+    {
+      "id": "SM_EI_MONOPHTHONG_FINAL",
+      "phonemes": [
+        "ej"
+      ],
+      "surface": "e",
+      "grapheme": [
+        "ei",
+        "êi"
+      ],
+      "word_final": true,
+      "notes": "The word-final case of SM_EI_MONOPHTHONG: lei [ˈle], sei [ˈse]. Cunha & Cintra, Nova Gramática do Português Contemporâneo, 7th ed., p. 31, on the Atlantic islands: 'o ditongo [ow] reduz-se normalmente a [o], mas a redução de [ej] a [e] é fenômeno esporádico; só ocorre como norma na ilha de São Miguel.'"
+    },
+    {
+      "id": "SM_UEI_MONOPHTHONG",
+      "phonemes": [
+        "wej"
+      ],
+      "surface": "we",
+      "grapheme": [
+        "uei"
+      ],
+      "followed_by": "consonant",
+      "notes": "SM_EI_MONOPHTHONG after the glide of ⟨uei⟩: cajueiro [kɐˈʒweɾu]. Cunha & Cintra, Nova Gramática do Português Contemporâneo, 7th ed., p. 31, on the Atlantic islands: 'o ditongo [ow] reduz-se normalmente a [o], mas a redução de [ej] a [e] é fenômeno esporádico; só ocorre como norma na ilha de São Miguel.'"
+    },
+    {
+      "id": "SM_UEI_MONOPHTHONG_FINAL",
+      "phonemes": [
+        "wej"
+      ],
+      "surface": "we",
+      "grapheme": [
+        "uei"
+      ],
+      "word_final": true,
+      "notes": "The word-final case of SM_UEI_MONOPHTHONG: continuei [kõtiˈnwe]. Cunha & Cintra, Nova Gramática do Português Contemporâneo, 7th ed., p. 31, on the Atlantic islands: 'o ditongo [ow] reduz-se normalmente a [o], mas a redução de [ej] a [e] é fenômeno esporádico; só ocorre como norma na ilha de São Miguel.'"
     }
   ],
   "sandhi_rules": [
@@ -153,6 +216,16 @@
       "url": null,
       "pages": null,
       "notes": "Reference phonology for the inherited EP reduction, dark coda /l/ [ɫ] and coda sibilants. Standard EP gives word-final /s/ -> [z] before a vowel; the São-Miguel [ʒ] prevocalic sandhi is a dialect delta over this base."
+    },
+    {
+      "id": "cunha_cintra",
+      "author": "Cunha, Celso & Cintra, Luís F. Lindley",
+      "year": 2017,
+      "title": "Nova Gramática do Português Contemporâneo",
+      "publisher": "Lexikon Editora Digital, 7th ed.",
+      "url": null,
+      "pages": "31",
+      "notes": "Page 31 gives the reduction of [ej] to [e] as the norm on São Miguel only, the source for the SM_EI and SM_UEI rules."
     }
   ],
   "wikipedia": [

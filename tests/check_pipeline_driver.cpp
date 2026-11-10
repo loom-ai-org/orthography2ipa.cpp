@@ -7,9 +7,16 @@
 //                                the engine the commands below use. lexicon is -
 //                                (none), {} (empty), or a file for load_lexicon;
 //                                mode is - (none) or a syllabifier mode
+//   fields<TAB>lang<TAB>expand<TAB>mark<TAB>rescore<TAB>sandhi<TAB>allow<TAB>old
+//                                the engine the commands below use, built from
+//                                the Pipeline fields, allow_undeclared_phonemes
+//                                and one old argument; the modes are the ones
+//                                pipeline_parity.py names. When the build
+//                                throws, a later command answers "NoEngine".
 //   word, text, detailed, candidates, confidence, lattice, path, pre<TAB>input
 //   load<TAB>source              load_lexicon
 //   packaged<TAB>code            packaged_lexicon
+//   patched<TAB>code             packaged_lexicon with the patches
 //   emission, phonemes, atoms<TAB>code<TAB>lexicon
 //   tokens<TAB>code<TAB>lexicon<TAB>ipa
 //   stress<TAB>word<TAB>lang<TAB>mode   detect_stress on the spec of lang
@@ -18,12 +25,15 @@
 #include "orthography2ipa/inventory.hpp"
 #include "orthography2ipa/markup.hpp"
 #include "orthography2ipa/orthography2ipa.hpp"
+#include "orthography2ipa/rescorer.hpp"
+#include "orthography2ipa/sentence.hpp"
 #include "orthography2ipa/stress.hpp"
 #include "plugin_registry.hpp"
 #include "unicode_util.hpp"
 
 #include <algorithm>
 #include <cstdio>
+#include <functional>
 #include <iostream>
 #include <map>
 #include <memory>
@@ -64,6 +74,82 @@ private:
     std::string mode_, code_;
 };
 
+/// /a/ to [ɐ], a symbol pt-PT declares.
+class BacksA : public rescorer::LatticeRescorer {
+public:
+    std::vector<Candidate> rescore(const rescorer::SegmentSlot& slot,
+                                             const rescorer::RescoreContext&) const override {
+        if (!slot.candidates.empty() && slot.candidates[0].ipa == "a") return {Candidate{"ɐ", 0.0}};
+        return slot.candidates;
+    }
+};
+
+/// A bar after the last word, so a sentence shows where sandhi ran.
+class Bar : public SandhiPlugin {
+public:
+    std::vector<std::string> language_codes() const override { return {}; }
+    std::vector<std::string> apply(const std::vector<std::string>& words, const std::vector<std::string>&,
+                                   const std::vector<bool>&, const std::string&) const override {
+        std::vector<std::string> out = words;
+        if (!out.empty()) out.back() += "|";
+        return out;
+    }
+};
+
+class Keeps : public sentence::SentenceRescorer {
+public:
+    std::string rescore(const sentence::WordSlot& word, const sentence::SentenceRescoreContext&) const override {
+        return word.ipa;
+    }
+};
+
+const BacksA backs_a, backs_a_again;
+const Keeps keeps;
+
+std::string replaced(std::string text, const std::string& from, const std::string& to) {
+    for (std::size_t at = text.find(from); at != std::string::npos; at = text.find(from, at + to.size()))
+        text.replace(at, from.size(), to);
+    return text;
+}
+
+std::function<std::string(const std::string&)> expand_of(const std::string& mode) {
+    if (mode == "digits") return [](const std::string& text) { return replaced(text, "101", "cento e um"); };
+    if (mode == "words") return [](const std::string& text) { return replaced(text, "gato", "o gato bom"); };
+    return nullptr;
+}
+
+std::function<std::string(const std::string&)> mark_of(const std::string& mode) {
+    static const std::string acute = "\xcc\x81";
+    if (mode == "acute")
+        return [](const std::string& text) { return replaced(replaced(text, "a", "a" + acute), "о", "о" + acute); };
+    if (mode == "change") return [](const std::string& text) { return replaced(text, "o", "0"); };
+    if (mode == "short")
+        return [](const std::string& text) {
+            const std::u32string units = uni::to_utf32(text);
+            return units.empty() ? text : uni::to_utf8(units.substr(0, units.size() - 1));
+        };
+    if (mode == "strip") return [](const std::string& text) { return replaced(text, acute, ""); };
+    return nullptr;
+}
+
+std::unique_ptr<G2P> field_engine(const std::vector<std::string>& field) {
+    const std::string &lang = field[1], &rescore = field[4], &old = field[7];
+    rescorer::RescorerArg fields_rescore;
+    if (rescore == "backs") fields_rescore = rescorer::RescorerArg(&backs_a);
+    if (rescore == "two") fields_rescore = rescorer::RescorerArg(std::vector<const rescorer::LatticeRescorer*>{&backs_a, &backs_a_again});
+    std::map<std::string, std::vector<std::string>> named;
+    if (old == "named-rescore") named["rescore"] = {"nothing"};
+    if (old == "named-sandhi") named["sandhi"] = {"nothing"};
+    if (old == "named-normalize") named["normalize"] = {"nothing"};
+    return std::make_unique<G2P>(
+        lang, named, "", false, true, true, true,
+        old == "sentence_rescorer" ? sentence::SentenceRescorerArg(&keeps) : sentence::SentenceRescorerArg(),
+        old == "rescorer" ? rescorer::RescorerArg(&backs_a) : rescorer::RescorerArg(),
+        Pipeline{std::nullopt, nullptr, expand_of(field[2]), mark_of(field[3]), fields_rescore,
+                 field[5] == "bar" ? std::make_shared<const Bar>() : nullptr},
+        field[6] == "1");
+}
+
 std::shared_ptr<const SyllabifierPlugin> plugin(const std::string& mode) {
     if (mode == "-") return nullptr;
     return std::make_shared<const Mode>(mode, "");
@@ -93,6 +179,9 @@ std::string joined(const std::set<std::string>& values) {
 
 std::unique_ptr<G2P> current;
 
+/// A command on the engine that a failed "fields" left unset.
+struct NoEngine {};
+
 std::string run(const std::vector<std::string>& field) {
     const std::string& command = field[0];
 #pragma GCC diagnostic push
@@ -111,6 +200,16 @@ std::string run(const std::vector<std::string>& field) {
         exchange_syllabifiers({{"fixed", std::make_shared<Mode>(field[2], field[1])}});
         return "";
     }
+    if (command == "fields") {
+        current.reset();
+        current = field_engine(field);
+        return "";
+    }
+    if (command != "engine" && command != "load" && command != "packaged" && command != "patched" &&
+        command != "emission" && command != "phonemes" && command != "atoms" && command != "tokens" &&
+        command != "stress" && command != "reset" && command != "register" && command != "discovered" &&
+        current == nullptr)
+        throw NoEngine();
     if (command == "engine") {
         current = std::make_unique<G2P>(
             field[1], std::map<std::string, std::vector<std::string>>{}, "", false, true, true, true,
@@ -157,8 +256,9 @@ std::string run(const std::vector<std::string>& field) {
         }
         return out;
     }
-    if (command == "load" || command == "packaged") {
-        const Lexicon entries = command == "load" ? load_lexicon(field[1]) : packaged_lexicon(field[1]);
+    if (command == "load" || command == "packaged" || command == "patched") {
+        const Lexicon entries = command == "load" ? load_lexicon(field[1])
+                                                  : packaged_lexicon(field[1], command == "patched");
         std::string out;
         for (const auto& [word, ipa] : entries) out += word + "=" + ipa + ",";
         return out;
@@ -200,6 +300,14 @@ int main() {
             std::string message = error.what();
             std::replace(message.begin(), message.end(), '\n', '|');
             std::cout << "MarkupError\t" << message << '\n';
+        } catch (const MissingPlugin& error) {
+            std::string message = error.what();
+            std::replace(message.begin(), message.end(), '\n', '|');
+            std::cout << "MissingPlugin\t" << message << '\n';
+        } catch (const std::invalid_argument& error) {
+            std::cout << "ValueError\t" << error.what() << '\n';
+        } catch (const NoEngine&) {
+            std::cout << "NoEngine\t" << '\n';
         }
     }
 }

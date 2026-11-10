@@ -143,6 +143,50 @@ int main() {
         set_data_directory(schema::data_directory());
         std::filesystem::remove_all(dir);
     }
+    {
+        // g2p.py: `for stage in field_stages: self.plugins.pop(stage, None)`. A
+        // Pipeline field takes over its stage, so the plugin the spec names for
+        // that stage is never resolved. The reference, given pt-PT with the same
+        // plugins block, raises MissingPlugin for normalize, then for sandhi
+        // once expand is set, and gives 'ˈkazɐ|' with expand and sandhi set.
+        struct Bar : SandhiPlugin {
+            std::vector<std::string> language_codes() const override { return {}; }
+            std::vector<std::string> apply(const std::vector<std::string>& words, const std::vector<std::string>&,
+                                           const std::vector<bool>&, const std::string&) const override {
+                std::vector<std::string> out = words;
+                out.back() += "|";
+                return out;
+            }
+        };
+        std::string pattern = (std::filesystem::temp_directory_path() / "orthography2ipa-cpp-XXXXXX").string();
+        const char* made = mkdtemp(pattern.data());
+        assert(made != nullptr);
+        const std::string dir = made;
+        std::ofstream(dir + "/zz-plug.json") << R"({"code": "zz-plug", "name": "Plug", "script_type": "alphabet",
+            "graphemes": {"a": ["a"], "b": ["b"]},
+            "plugins": {"normalize": ["absent-normalize"], "sandhi": ["absent-sandhi"]}})";
+        set_data_directory(dir);
+        const auto identity = [](const std::string& text) { return text; };
+        const auto missing_stage = [](const G2P& engine) -> std::string {
+            try { engine.transcribe("ab"); } catch (const MissingPlugin& error) {
+                const std::string text = error.what();
+                return text.substr(0, text.find('\n'));
+            }
+            return "";
+        };
+        assert(missing_stage(G2P("zz-plug")) ==
+               "the 'zz-plug' spec names the normalize plugin 'absent-normalize', and it is not installed.");
+        const G2P expanded("zz-plug", {}, "", false, true, true, true, nullptr, nullptr,
+                           Pipeline{std::nullopt, nullptr, identity});
+        assert(missing_stage(expanded) ==
+               "the 'zz-plug' spec names the sandhi plugin 'absent-sandhi', and it is not installed.");
+        const G2P both("zz-plug", {}, "", false, true, true, true, nullptr, nullptr,
+                       Pipeline{std::nullopt, nullptr, identity, nullptr, {}, std::make_shared<const Bar>()});
+        const std::string ipa = both.transcribe("ab");
+        assert(!ipa.empty() && ipa.back() == '|');
+        set_data_directory(schema::data_directory());
+        std::filesystem::remove_all(dir);
+    }
 
     {
         // registry.py MissingPlugin: `{spec.code!r}`, the bare stage, `{name!r}`
@@ -386,8 +430,19 @@ int main() {
         assert(G2P("ru-RU").transcribe_word("его\xcc\x81") == "jɪˈvo");
         assert(G2P("ru-RU").transcribe_word("ЕГО\xcc\x81") == "jɪˈvo");
         assert(G2P("ru-RU").transcribe_word("во\xcc\x81") == "ˈvo");
-        // The literal follows the reference reading of the ending.
-        assert(G2P("ru-RU").transcribe_word("большо\xcc\x81го") == "bɐlʲˈʂəvə");
+        // g2p.py _ending_vowels_follow_stress: the declared ⟨-ого⟩ [əvə] takes
+        // the stressed [o] of the tables, and the first pretonic [ɐ] before a
+        // stress on the last vowel (Avanesov 1988, § 151, p. 678).
+        assert(G2P("ru-RU").transcribe_word("большо\xcc\x81го") == "bɐlʲˈʂovə");
+        assert(G2P("ru-RU").transcribe_word("самого\xcc\x81") == "səmɐˈvo");
+        assert(G2P("ru-x-southern").transcribe_word("большо\xcc\x81го") == "balʲˈʂoɣə");
+        // ru-x-pskov reads ⟨ч⟩ as [ts] and the ⟨е⟩ after it as the allophone
+        // [ɛ]. The declared ⟨-чего⟩ has [tɕ], so a stressed ⟨е⟩ goes back to
+        // the [e] of the tables, and a posttonic one keeps the declared [ɪ].
+        assert(G2P("ru-x-pskov").transcribe_word("горячего") == "ɡərʲaˈtɕevə");
+        assert(G2P("ru-x-pskov").transcribe_word("горя\xcc\x81чего") == "ɡɐˈrʲatɕɪvə");
+        // A vowel the ending owns stays: French ⟨-er⟩ [e] is no reduced ⟨e⟩.
+        assert(G2P("fr-FR").transcribe_word("parler") == "paʁle");
         assert(G2P("ru-x-southern").transcribe_word("моего\xcc\x81") == "məjaˈɣo");
         // Only a silent mark is removed: a grave accent is not a silent mark, so
         // the key keeps it and the exception does not match.
@@ -613,6 +668,18 @@ int main() {
     assert(breakdown.per_slot.size() == slots.size());
     assert(breakdown.coverage == 1.0 && breakdown.unmapped.empty());
     assert(std::abs(breakdown.value - breakdown.lattice * breakdown.coverage) < 1e-12);
+    {
+        // g2p.py _unmapped_chars: a digit that no grapheme covers is unmapped,
+        // one entry per character. By hand: "3" covers 0 of 1 characters,
+        // "a3b" 2 of 3, "101" 0 of 3. zh spells tones with digits, so "ma3"
+        // has none unmapped.
+        const auto words = G2P("en-GB").transcribe_detailed("3 a3b 101").words;
+        assert(words.size() == 3);
+        assert(words[0].unmapped == std::vector<std::string>{"3"} && words[0].coverage == 0.0);
+        assert(words[1].unmapped == std::vector<std::string>{"3"} && std::abs(words[1].coverage - 2.0 / 3.0) < 1e-12);
+        assert((words[2].unmapped == std::vector<std::string>{"1", "0", "1"}) && words[2].coverage == 0.0);
+        assert(G2P("zh").transcribe_detailed("ma3").words.at(0).unmapped.empty());
+    }
 
     bool missing_plugin = false;
     try { G2P missing("pt", {{"normalize", {"not-installed"}}}); missing.transcribe("casa"); }
@@ -642,6 +709,18 @@ int main() {
     assert(ancestry_similarity(get("abi"), get("mos")) == 0);
     assert(ancestry_similarity(get("nrb"), get("khh")) == 0);
     assert(close_to(ancestry_similarity(get("aae"), get("es-CO-x-valluno"), 10, true), 0.0006686902052946891));
+    // distance.py honours max_depth in both tracers. it-IT and fr-FR share Latin
+    // only beyond their direct ancestors, so depth 0 keeps the weak direct link.
+    // The default depth runs again after depth 0, so a result kept for the first
+    // depth of a code cannot answer the second.
+    assert(close_to(ancestry_similarity(get("it-IT"), get("fr-FR")), 0.40147199999999994));
+    assert(close_to(ancestry_similarity(get("it-IT"), get("fr-FR"), 0), 0.009));
+    assert(close_to(ancestry_similarity(get("it-IT"), get("fr-FR"), 0, true), 0.000997228425261005));
+    assert(close_to(ancestry_similarity(get("it-IT"), get("fr-FR"), 10, true), 0.18039299788206917));
+    assert(close_to(ancestry_similarity(get("it-IT"), get("fr-FR")), 0.40147199999999994));
+    assert(ancestry_similarity(get("aae"), get("es-CO-x-valluno"), 1) == 0);
+    assert(close_to(ancestry_similarity(get("aae"), get("es-CO-x-valluno"), 2), 0.00021675000000000004));
+    assert(close_to(ancestry_similarity(get("aae"), get("es-CO-x-valluno"), 2, true), 3.611631187078659e-05));
     assert(spelling_divergence(portuguese, spanish).total_phonemes > 0);
     assert(full_distance(portuguese, spanish) >= 0);
     assert(pairwise_distances({portuguese, spanish}).size() == 2);
@@ -1008,7 +1087,7 @@ int main() {
         assert(get("el-CY").stress_defined);
     }
 
-    // ── Syllabifier lookup resolves the code (registry.py get_syllabifier) ──
+    // ── A registered syllabifier reaches nothing (registry.py get_syllabifier) ──
     {
         struct WholeWord : SyllabifierPlugin {
             std::vector<std::string> language_codes() const override { return {"pt-PT"}; }
@@ -1020,10 +1099,11 @@ int main() {
         };
         const auto plugin = std::make_shared<WholeWord>();
         register_syllabifier_plugin("test-whole-word", plugin);
-        for (const char* code : {"pt-PT", "pt", "por", "pt-pt", "pt_PT"})
-            assert(get_syllabifier(code) == plugin.get());
-        assert(get_syllabifier("pt-PT-x-lisbon") != plugin.get());
-        assert(stress::syllables_for("ponte", "por") == std::vector<std::string>{"ponte"});
+        for (const char* code : {"pt-PT", "pt", "por", "pt-pt", "pt_PT", "pt-PT-x-lisbon"})
+            assert(get_syllabifier(code) == nullptr);
+        assert((stress::syllables_for("ponte", "por") == std::vector<std::string>{"po", "nte"}));
+        const auto answers = who_answers("pt");
+        assert(answers.at("syllabify").size() == 1 && answers.at("syllabify")[0].name == "built-in");
     }
     {
         // A lexicon entry written with U+0027 answers a word typed with U+2019

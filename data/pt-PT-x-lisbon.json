@@ -26,6 +26,24 @@
   },
   "allophone_rules": [
     {
+      "id": "PT_STRESSED_E_PREPALATAL_CLOSE",
+      "phonemes": [],
+      "surface": "e",
+      "notes": "DISABLED for Lisbon Portuguese. LX_STRESSED_E_PREPALATAL gives the Lisbon [ɐ] before a palatal consonant (Cunha & Cintra, 7th ed., p. 49). The PT_STRESSED_E_PREPALATAL rules of pt-PT would rewrite the slot first, and a slot takes only its first matching rule."
+    },
+    {
+      "id": "PT_STRESSED_E_PREPALATAL_CANDIDATE_LISBON",
+      "phonemes": [],
+      "surface": "ɐ",
+      "notes": "DISABLED for Lisbon Portuguese. LX_STRESSED_E_PREPALATAL gives the Lisbon [ɐ] before a palatal consonant (Cunha & Cintra, 7th ed., p. 49). The PT_STRESSED_E_PREPALATAL rules of pt-PT would rewrite the slot first, and a slot takes only its first matching rule."
+    },
+    {
+      "id": "PT_STRESSED_E_PREPALATAL_CANDIDATE_OPEN",
+      "phonemes": [],
+      "surface": "ɛ",
+      "notes": "DISABLED for Lisbon Portuguese. LX_STRESSED_E_PREPALATAL gives the Lisbon [ɐ] before a palatal consonant (Cunha & Cintra, 7th ed., p. 49). The PT_STRESSED_E_PREPALATAL rules of pt-PT would rewrite the slot first, and a slot takes only its first matching rule."
+    },
+    {
       "id": "LX_STRESSED_E_PREPALATAL",
       "phonemes": [
         "e",
@@ -37,34 +55,7 @@
     }
   ],
   "positional_graphemes_base": "pt-PT",
-  "positional_graphemes": {
-    "a": {
-      "nucleus_unstressed": [
-        "ɐ"
-      ],
-      "word_final": [
-        "ɐ"
-      ],
-      "pretonic": [
-        "ɐ"
-      ],
-      "posttonic": [
-        "ɐ"
-      ]
-    },
-    "o": {
-      "pretonic": [
-        "u"
-      ],
-      "nucleus_unstressed": [
-        "u"
-      ],
-      "word_final": [
-        "u"
-      ]
-    }
-  },
-  "notes": "Lisbon / Estremenho (Centro-Litoral) European Portuguese — a distinct urban variety modelled as a delta ON TOP of the pt-PT base (the broad descriptive EP standard) via inheritance. Lisbon is NOT treated here as identical to the prescriptive/neutral norm: it carries phonological innovations that deviate from the conservative norm traditionally anchored to educated central/Coimbra speech. The norm question is genuinely contested in the sources and is represented honestly rather than resolved: Cintra (1971; Boletim de Filologia 22:81-116) argues the prestige standard of EP coincides broadly with the Central-Southern (Estremenho/Lisbon) type, whereas the conservative pedagogical/reference norm is often anchored to central (Coimbra) speech, which lacks several Lisbon innovations. The processes shared with the base standard — strong unstressed vowel reduction (/e/->[ɨ]), dark coda /l/->[ɫ], coda-sibilant chiado /s z/->[ʃ ʒ], and the coda-s sandhi — are inherited from pt-PT and NOT restated here. The retained positional rows are the unstressed /a/->[ɐ] and /o/->[u] reductions, kept so Lisbon reduces the unstressed mid/low vowels without pulling in the base's open [ɔ]/[a] stressed-nucleus defaults (lexically unpredictable for spelling-unmarked stressed <o>/<a>). The genuine, well-sourced Lisbon-specific deltas over the base are: (1) SIGNATURE INNOVATION — stressed <e> (/e ɛ/) -> [ɐ] before a palatal consonant [ʎ ɲ ʃ ʒ] and the palatal-triggering digraphs <lh nh ch x j g(e/i)> (coelho -> [kuˈɐʎu]/[ˈkoɐʎu], espelho -> [ɨʃˈpɐʎu], fecho -> [ˈfɐʃu], venho -> [ˈvɐɲu], abelha -> [ɐˈβɐʎɐ]). The dissimilatory raising-centralisation of the front mid vowel before a following palatal is unanimously described for EP (Hristovsky 2008:239 surveys Gonçalves Viana 1883, Cintra 1971, Barbosa 1965, Andrade 1981, Barros 1994 for Lisbon speech; Mateus & d'Andrade 2000:19 list stressed [ɐ] as occurring precisely before a palatal consonant (telha [ˈtɐʎɐ]), the palatal glide (lei [ˈlɐj]) and a nasal). The conservative/central (Coimbra-type = pt-PT base) norm keeps [e]/[ɛ] here. Modelled by the LX_STRESSED_E_PREPALATAL allophone rule (followed_by=palatal), which runs post-lexically AFTER positional reduction, so it fires only where the vowel still surfaces as [e]/[ɛ] — the STRESSED (or word-initial) realisation. HONESTY NOTE: Hristovsky (2008:239) reports the change for /e/ in tonic and/or atonic position, but the atonic (pretonic/final) case is variable and sociolinguistically graded (Barros 1994); in a broad transcription unstressed pre-palatal /e/ overwhelmingly reduces to [ɨ] (melhor -> [mɨˈʎoɾ], fechar -> [fɨˈʃaɾ]), the value the base and the gold data use, so only the categorical stressed case is modelled and the reduced unstressed value is deliberately left untouched. (2) <ei> -> [ɐj] — the diagnostic Estremenho lowering-centralisation of the falling diphthong, where more conservative/Northern EP keeps [ej] (leite -> [ˈlɐjtɨ], primeiro -> [pɾiˈmɐjɾu], reino -> [ˈʁɐjnu], seis -> [ˈsɐjʃ]); Cintra (1971) and Segura (2013) treat [ɐj] as characteristic of the Centro-Litoral/Estremenho zone. (3) <ou> -> [o] — complete monophthongisation, general in the Central-Southern standard where Northern varieties keep the diphthong [ow] (ouro -> [ˈoɾu]). (4) rhotic realised as the uvular fricative [ʁ] (the Lisbon-urban norm) and unstressed reduced schwa surfacing as [ɨ]. Intervocalic voiced-stop spirantisation (/b d ɡ/->[β ð ɣ]) is a general EP process left to a narrow-transcription task (see the pt-PT base notes). The apico-alveolar vs predorsodental sibilant place distinction (Cintra's primary North/South isogloss) is invisible to a phoneme-level orthography-blind engine. NATIVE-SPEAKER VALIDATION (Portuguese With Leo accent deep-dives, native-speaker / popular-linguistics, NOT academic): the modelled Lisbon pre-palatal centralisation of stressed <e> -> [ɐ] (coelho -> [kuˈɐʎu]/'coâlho') is confirmed by CONTRAST in the neighbouring-accent deep-dives, where the Coimbra speaker (https://www.youtube.com/watch?v=R4yUi68VHFg) and the Trás-os-Montes speaker (https://www.youtube.com/watch?v=70a_vNEa_aw: 'vermelho eu digo vermelho, Lisboa vermalho') explicitly single out the Lisbon [ɐ] realisation of coelho/espelho/vermelho as what distinguishes their conservative [e] from Lisbon; the same sources confirm the Lisbon deletion of unstressed /i/ ('Filipa' -> 'Flipa') and the standard [z] prevocalic external /s/-sandhi ('os olhos' with the /z/ of casa), both inherited from pt-PT and not restated here. This is the #218 pre-palatal work, corroborated (not duplicated).",
+  "notes": "Lisbon / Estremenho (Centro-Litoral) European Portuguese — a distinct urban variety modelled as a delta ON TOP of the pt-PT base (the broad descriptive EP standard) via inheritance. Lisbon is NOT treated here as identical to the prescriptive/neutral norm: it carries phonological innovations that deviate from the conservative norm traditionally anchored to educated central/Coimbra speech. The norm question is genuinely contested in the sources and is represented honestly rather than resolved: Cintra (1971; Boletim de Filologia 22:81-116) argues the prestige standard of EP coincides broadly with the Central-Southern (Estremenho/Lisbon) type, whereas the conservative pedagogical/reference norm is often anchored to central (Coimbra) speech, which lacks several Lisbon innovations. The processes shared with the base standard — strong unstressed vowel reduction (/e/->[ɨ]), dark coda /l/->[ɫ], coda-sibilant chiado /s z/->[ʃ ʒ], and the coda-s sandhi — are inherited from pt-PT and NOT restated here. The spec holds no positional row, so the unstressed /a/->[ɐ] and /o/->[u] reductions and the open [ɔ] default of an unmarked stressed <o> (porta -> [ˈpɔɾtɐ], nova -> [ˈnɔvɐ]) come from the pt-PT map. No source gives Lisbon a close default for that vowel. The genuine, well-sourced Lisbon-specific deltas over the base are: (1) SIGNATURE INNOVATION — stressed <e> (/e ɛ/) -> [ɐ] before a palatal consonant [ʎ ɲ ʃ ʒ] and the palatal-triggering digraphs <lh nh ch x j g(e/i)> (coelho -> [kuˈɐʎu]/[ˈkoɐʎu], espelho -> [ɨʃˈpɐʎu], fecho -> [ˈfɐʃu], venho -> [ˈvɐɲu], abelha -> [ɐˈβɐʎɐ]). The dissimilatory raising-centralisation of the front mid vowel before a following palatal is unanimously described for EP (Hristovsky 2008:239 surveys Gonçalves Viana 1883, Cintra 1971, Barbosa 1965, Andrade 1981, Barros 1994 for Lisbon speech; Mateus & d'Andrade 2000:19 list stressed [ɐ] as occurring precisely before a palatal consonant (telha [ˈtɐʎɐ]), the palatal glide (lei [ˈlɐj]) and a nasal). The conservative/central (Coimbra-type = pt-PT base) norm keeps [e]/[ɛ] here. Modelled by the LX_STRESSED_E_PREPALATAL allophone rule (followed_by=palatal), which runs post-lexically AFTER positional reduction, so it fires only where the vowel still surfaces as [e]/[ɛ] — the STRESSED (or word-initial) realisation. HONESTY NOTE: Hristovsky (2008:239) reports the change for /e/ in tonic and/or atonic position, but the atonic (pretonic/final) case is variable and sociolinguistically graded (Barros 1994); in a broad transcription unstressed pre-palatal /e/ overwhelmingly reduces to [ɨ] (melhor -> [mɨˈʎoɾ], fechar -> [fɨˈʃaɾ]), the value the base and the gold data use, so only the categorical stressed case is modelled and the reduced unstressed value is deliberately left untouched. (2) <ei> -> [ɐj] — the diagnostic Estremenho lowering-centralisation of the falling diphthong, where more conservative/Northern EP keeps [ej] (leite -> [ˈlɐjtɨ], primeiro -> [pɾiˈmɐjɾu], reino -> [ˈʁɐjnu], seis -> [ˈsɐjʃ]); Cintra (1971) and Segura (2013) treat [ɐj] as characteristic of the Centro-Litoral/Estremenho zone. (3) <ou> -> [o] — complete monophthongisation, general in the Central-Southern standard where Northern varieties keep the diphthong [ow] (ouro -> [ˈoɾu]). (4) rhotic realised as the uvular fricative [ʁ] (the Lisbon-urban norm) and unstressed reduced schwa surfacing as [ɨ]. Intervocalic voiced-stop spirantisation (/b d ɡ/->[β ð ɣ]) is a general EP process left to a narrow-transcription task (see the pt-PT base notes). The apico-alveolar vs predorsodental sibilant place distinction (Cintra's primary North/South isogloss) is invisible to a phoneme-level orthography-blind engine. NATIVE-SPEAKER VALIDATION (Portuguese With Leo accent deep-dives, native-speaker / popular-linguistics, NOT academic): the modelled Lisbon pre-palatal centralisation of stressed <e> -> [ɐ] (coelho -> [kuˈɐʎu]/'coâlho') is confirmed by CONTRAST in the neighbouring-accent deep-dives, where the Coimbra speaker (https://www.youtube.com/watch?v=R4yUi68VHFg) and the Trás-os-Montes speaker (https://www.youtube.com/watch?v=70a_vNEa_aw: 'vermelho eu digo vermelho, Lisboa vermalho') explicitly single out the Lisbon [ɐ] realisation of coelho/espelho/vermelho as what distinguishes their conservative [e] from Lisbon; the same sources confirm the Lisbon deletion of unstressed /i/ ('Filipa' -> 'Flipa') and the standard [z] prevocalic external /s/-sandhi ('os olhos' with the /z/ of casa), both inherited from pt-PT and not restated here. This is the #218 pre-palatal work, corroborated (not duplicated).",
   "quality": "research",
   "ancestors": [
     {

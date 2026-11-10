@@ -629,7 +629,7 @@ def run_conformance(binary):
           f"{messages}/{compared}")
     print(f"  C++-only scenarios (the whole-word RescorerPlugin seam): "
           f"{len(cpp_only)}, wrong {len(wrong)}")
-    return agreed - len(wrong), len(want)
+    return agreed - len(wrong), len(want), messages
 
 
 # ─── rescorer-runtime ─────────────────────────────────────────────────────
@@ -753,9 +753,10 @@ def main():
     if only in (None, "features"):
         run_features(binary)
     if only in (None, "conformance"):
-        # Every reference scenario must reach the same verdict on the C++ side.
-        agreed, expected = run_conformance(binary)
-        if agreed != expected:
+        # Every reference scenario must reach the same verdict on the C++ side,
+        # with the reference's message byte for byte.
+        agreed, expected, identical = run_conformance(binary)
+        if agreed != expected or identical != expected:
             sys.exit(1)
     if only in (None, "rescorer-runtime") and not run_rescorer_runtime(binary):
         sys.exit(1)

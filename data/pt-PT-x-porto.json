@@ -104,12 +104,42 @@
       "notes": "DISABLED here. Porto has its own stressed mid-vowel process (diphthongisation of the tonic mid vowels), and a pt-PT rule that sets the vowel first would pre-empt it, as the PT_LEX_* lists are disabled here for the same reason. The pt-PT rule rests on Infopédia readings of standard European Portuguese."
     },
     {
+      "id": "PT_SUFFIX_DORA_CLOSE",
+      "phonemes": [],
+      "surface": "o",
+      "notes": "DISABLED here. Porto has its own stressed mid-vowel process (diphthongisation of the tonic mid vowels), and a pt-PT rule that sets the vowel first would pre-empt it, as the PT_LEX_* lists are disabled here for the same reason. The pt-PT rule rests on Infopédia readings of standard European Portuguese."
+    },
+    {
+      "id": "PT_SUFFIX_DORA_CANDIDATE_OPEN",
+      "phonemes": [],
+      "surface": "ɔ",
+      "notes": "DISABLED here. Porto has its own stressed mid-vowel process (diphthongisation of the tonic mid vowels), and a pt-PT rule that sets the vowel first would pre-empt it, as the PT_LEX_* lists are disabled here for the same reason. The pt-PT rule rests on Infopédia readings of standard European Portuguese."
+    },
+    {
       "id": "PT_PORTO_BETACISM",
       "phonemes": [
         "v"
       ],
       "surface": "b",
       "notes": "Northern betacism: the /v/ ~ /b/ phonological opposition is lost and both merge into a single phoneme /b/, realised [b] in all positions (vinho -> [ˈbiɲu], vaca -> [ˈbakɐ], estava -> [ʃˈtabɐ]). This is the primary trait separating Northern from Central-Southern European Portuguese. Cintra (1971; Boletim de Filologia 22:81-116): 'o desaparecimento da oposição fonológica entre os fonemas /v/ e /b/ e a sua fusão num fonema único /b/'; corroborated by Segura (2013). Modelled as a post-lexical phoneme-side rewrite (the phoneme /v/, produced by the inherited pt-PT grapheme map, is realised [b]) rather than a grapheme substitution, so the merger applies uniformly however /v/ arises."
+    },
+    {
+      "id": "PT_STRESSED_E_PREPALATAL_CLOSE",
+      "phonemes": [],
+      "surface": "e",
+      "notes": "DISABLED for Porto. Porto has its own stressed mid-vowel process (diphthongisation of the tonic mid vowels), and the PT_STRESSED_E_PREPALATAL rules of pt-PT would set the vowel first and pre-empt it, as the PT_SUFFIX rules are disabled here for the same reason. The pt-PT rules rest on Cunha & Cintra (7th ed., p. 431), who describe the standard."
+    },
+    {
+      "id": "PT_STRESSED_E_PREPALATAL_CANDIDATE_LISBON",
+      "phonemes": [],
+      "surface": "ɐ",
+      "notes": "DISABLED for Porto. Porto has its own stressed mid-vowel process (diphthongisation of the tonic mid vowels), and the PT_STRESSED_E_PREPALATAL rules of pt-PT would set the vowel first and pre-empt it, as the PT_SUFFIX rules are disabled here for the same reason. The pt-PT rules rest on Cunha & Cintra (7th ed., p. 431), who describe the standard."
+    },
+    {
+      "id": "PT_STRESSED_E_PREPALATAL_CANDIDATE_OPEN",
+      "phonemes": [],
+      "surface": "ɛ",
+      "notes": "DISABLED for Porto. Porto has its own stressed mid-vowel process (diphthongisation of the tonic mid vowels), and the PT_STRESSED_E_PREPALATAL rules of pt-PT would set the vowel first and pre-empt it, as the PT_SUFFIX rules are disabled here for the same reason. The pt-PT rules rest on Cunha & Cintra (7th ed., p. 431), who describe the standard."
     },
     {
       "id": "PT_PORTO_DIPHTHONGISE_E",
@@ -174,6 +204,42 @@
       "phonemes": [],
       "surface": "ɛ",
       "notes": "DISABLED here: this variety has its own productive stressed mid-vowel process (metaphony / diphthongisation) that owns the open/close realisation of the stressed vowel, so the inherited standard-language lexical open/close pins (PT_LEX_*) must not pre-empt it. The standard lexical list is a Lisbon/BP-standard fact; the open/close of stressed mid vowels under this dialect's own vowel system is documented residual."
+    },
+    {
+      "id": "PT_LEX_FUNCTION_CLOSE_E",
+      "phonemes": [],
+      "surface": "e",
+      "notes": "DISABLED here. This variety has its own stressed mid-vowel process (PT_PORTO_DIPHTHONGISE_*), and a pt-PT rule that sets the vowel first would pre-empt it, as the PT_LEX_* lists are disabled here for the same reason. The pt-PT rule rests on Infopédia and WikiPron pt-PT readings of standard European Portuguese."
+    },
+    {
+      "id": "PT_LEX_FUNCTION_OPEN_E",
+      "phonemes": [],
+      "surface": "ɛ",
+      "notes": "DISABLED here. This variety has its own stressed mid-vowel process (PT_PORTO_DIPHTHONGISE_*), and a pt-PT rule that sets the vowel first would pre-empt it, as the PT_LEX_* lists are disabled here for the same reason. The pt-PT rule rests on Infopédia and WikiPron pt-PT readings of standard European Portuguese."
+    },
+    {
+      "id": "PT_LEX_FUNCTION_CLOSE_O",
+      "phonemes": [],
+      "surface": "o",
+      "notes": "DISABLED here. This variety has its own stressed mid-vowel process (PT_PORTO_DIPHTHONGISE_*), and a pt-PT rule that sets the vowel first would pre-empt it, as the PT_LEX_* lists are disabled here for the same reason. The pt-PT rule rests on Infopédia and WikiPron pt-PT readings of standard European Portuguese."
+    },
+    {
+      "id": "PT_LEX_FUNCTION_OPEN_O",
+      "phonemes": [],
+      "surface": "ɔ",
+      "notes": "DISABLED here. This variety has its own stressed mid-vowel process (PT_PORTO_DIPHTHONGISE_*), and a pt-PT rule that sets the vowel first would pre-empt it, as the PT_LEX_* lists are disabled here for the same reason. The pt-PT rule rests on Infopédia and WikiPron pt-PT readings of standard European Portuguese."
+    },
+    {
+      "id": "PT_LEX_TODO_CLOSE",
+      "phonemes": [],
+      "surface": "o",
+      "notes": "DISABLED here. This variety has its own stressed mid-vowel process (PT_PORTO_DIPHTHONGISE_*), and a pt-PT rule that sets the vowel first would pre-empt it, as the PT_LEX_* lists are disabled here for the same reason. The pt-PT rule rests on Infopédia and WikiPron pt-PT readings of standard European Portuguese."
+    },
+    {
+      "id": "PT_LEX_TODO_CANDIDATE_OPEN",
+      "phonemes": [],
+      "surface": "ɔ",
+      "notes": "DISABLED here. This variety has its own stressed mid-vowel process (PT_PORTO_DIPHTHONGISE_*), and a pt-PT rule that sets the vowel first would pre-empt it, as the PT_LEX_* lists are disabled here for the same reason. The pt-PT rule rests on Infopédia and WikiPron pt-PT readings of standard European Portuguese."
     },
     {
       "id": "PT_FINAL_EM_NUCLEUS",
@@ -289,7 +355,8 @@
         "uxiquer",
         "salter",
         "xavier",
-        "freezer"
+        "freezer",
+        "sequer"
       ],
       "notes": "Overridden for this variety: the open-mid vowel of the ⟨-er⟩ nouns of PT_LEX_OPEN_ER in pt-PT takes the rising diphthong [jɛ] (mulher [muˈʎjɛɾ]), as every other stressed open [ɛ] does here (Brissos 2018, pp. 196-197, 200-201, as cited under the open diphthongisation rule of this spec). The rule matches here, rather than being disabled, for the same reason as PT_ER_CLOSE."
     },

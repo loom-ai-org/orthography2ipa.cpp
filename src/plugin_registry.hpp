@@ -1,5 +1,6 @@
-// Internal access to the plugin registry, for the conformance kit: the
-// reference's conformance.py reassigns `registry._syllabifiers` directly.
+// Internal access to the syllabifier registry that the deprecated
+// register_syllabifier_plugin writes. No engine reads it; the parity drivers
+// fill and empty it to show that.
 #pragma once
 
 #include "orthography2ipa/orthography2ipa.hpp"

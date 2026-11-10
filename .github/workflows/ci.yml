@@ -12,8 +12,9 @@ jobs:
       matrix:
         compiler: [gcc, clang]
         silabificador: [false]
-        # One cell builds against the silabificador C++ port. Its reference
-        # then needs the Python silabificador too, or the pt parity differs.
+        # One cell builds against the silabificador C++ port. The build gives
+        # a caller the plugin and changes no transcription, so the parity
+        # gates run against a reference without silabificador.
         include:
           - compiler: gcc
             silabificador: true
@@ -54,7 +55,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           repository: TigreGotico/orthography2ipa
-          ref: dd0b99c356425bc8987af98adc8c48487e5a7d74
+          ref: f049e7cf0de0fd93e613061d95f9defc172ba059
           path: reference
       - name: Place the reference at its sibling path
         run: mv "$GITHUB_WORKSPACE/reference" "$GITHUB_WORKSPACE/../orthography2ipa"
@@ -80,9 +81,9 @@ jobs:
       # entry points.
       - uses: astral-sh/setup-uv@v6
       - name: Install the packaged lexicons
-        run: uv pip install --system --python python3 --no-deps --prerelease=allow o2i-lexicons==0.5.0a2
+        run: uv pip install --system --python python3 --no-deps --prerelease=allow o2i-lexicons==0.7.2a1
       # Pinned to the silabificador.cpp commit held at byte parity with Python
-      # silabificador 2.1.1a2, the release the reference gets below.
+      # silabificador 2.1.1a2.
       - uses: actions/checkout@v4
         if: matrix.silabificador
         with:
@@ -96,14 +97,6 @@ jobs:
             -DBUILD_SHARED_LIBS=${{ matrix.shared && 'ON' || 'OFF' }}
           cmake --build "$RUNNER_TEMP/silabificador-build" --parallel
           cmake --install "$RUNNER_TEMP/silabificador-build" --prefix "$RUNNER_TEMP/silabificador"
-      # The reference finds its syllabifier through an entry point, so the
-      # reference itself is installed (editable, no dependencies) for the
-      # entry point to exist.
-      - name: Give the reference its Portuguese syllabifier
-        if: matrix.silabificador
-        run: |
-          python3 -m pip install silabificador==2.1.1a2 || python3 -m pip install --break-system-packages silabificador==2.1.1a2
-          python3 -m pip install --no-deps -e ../orthography2ipa || python3 -m pip install --break-system-packages --no-deps -e ../orthography2ipa
       - name: Configure
         env:
           CMAKE_PREFIX_PATH: ${{ matrix.silabificador && format('{0}/silabificador', runner.temp) || '' }}

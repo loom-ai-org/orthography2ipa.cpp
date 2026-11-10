@@ -70,30 +70,29 @@ std::optional<std::string> lexicon_directory;
 // One loaded lexicon per resolved code, shared with every caller that reads
 // it. A setter replaces or drops the entry; it never edits a loaded map.
 std::map<std::string, std::shared_ptr<const std::map<std::string, std::string>>> lexicon_cache;
-// lexicon.py _PACKAGED and _ENABLED: the packaged-lexicon providers by resolved
-// code, unset until the first discovery, and the resolved codes whose packaged
-// lexicon the caller enabled.
+// lexicon.py _PACKAGED and _ENABLED: per group, the packaged-lexicon providers
+// by resolved code, unset until the group's first discovery, and the resolved
+// codes whose packaged lexicon the caller enabled. The key is false for the
+// exceptions (the orthography2ipa.lexicons group) and true for the patches
+// (the orthography2ipa.lexicon_patches group).
 struct PackagedProvider {
     std::string name;        // the directory name, which is the entry point's name
     std::size_t root;        // the position of its root in the search path
     fs::path directory;
 };
-std::optional<std::map<std::string, PackagedProvider>> packaged_providers_found;
+std::map<bool, std::map<std::string, PackagedProvider>> packaged_providers_found;
 std::set<std::string> enabled_packaged;
 std::map<std::string, std::shared_ptr<NormalizePlugin>> normalize_plugins;
-// registry.py _discover_syllabifiers over the package's own entry point,
-// `silabificador = orthography2ipa.syllabifiers:SilabificadorSyllabifier`:
-// the plugin is there when the silabificador library is, and absent otherwise.
-std::map<std::string, std::shared_ptr<SyllabifierPlugin>> bundled_syllabifiers() {
-    std::map<std::string, std::shared_ptr<SyllabifierPlugin>> plugins;
 #ifdef O2I_HAVE_SILABIFICADOR
-    syllabifiers::SilabificadorSyllabifier::provide(
-        [](const std::string& word) { return silabificador::syllabify(word); });
-    plugins["silabificador"] = std::make_shared<syllabifiers::SilabificadorSyllabifier>();
+// syllabifiers.py SilabificadorSyllabifier imports silabificador when it is
+// built. A linked silabificador library lets a caller build the plugin and pass
+// it in a Pipeline; nothing registers it, because nothing discovers a
+// syllabifier.
+[[maybe_unused]] const bool silabificador_provided = syllabifiers::SilabificadorSyllabifier::provide(
+    [](const std::string& word) { return silabificador::syllabify(word); });
 #endif
-    return plugins;
-}
-std::map<std::string, std::shared_ptr<SyllabifierPlugin>> syllabifier_plugins = bundled_syllabifiers();
+// The deprecated register_syllabifier_plugin writes here. No engine reads it.
+std::map<std::string, std::shared_ptr<SyllabifierPlugin>> syllabifier_plugins;
 std::map<std::string, std::shared_ptr<StressPlugin>> stress_plugins;
 std::map<std::string, std::shared_ptr<RescorerPlugin>> rescorer_plugins;
 std::map<std::string, std::shared_ptr<SandhiPlugin>> sandhi_plugins;
@@ -803,6 +802,69 @@ void group_words(const PhonetokTokenizer& tokenizer, const std::string& text,
     flush();
 }
 
+
+// pipeline.py _letters: *text* in NFD, without its combining marks (Mn).
+std::u32string mark_letters(const std::u32string& text) {
+    std::u32string out;
+    for (const char32_t c : uni::nfd(text))
+        if (uni::category(c) != "Mn") out.push_back(c);
+    return out;
+}
+
+// Python `str.split()` with no argument: the runs between whitespace.
+std::vector<std::u32string> py_split(const std::u32string& text) {
+    std::vector<std::u32string> out;
+    std::size_t i = 0;
+    while (i < text.size()) {
+        while (i < text.size() && py_isspace(text[i])) ++i;
+        const std::size_t start = i;
+        while (i < text.size() && !py_isspace(text[i])) ++i;
+        if (i > start) out.push_back(text.substr(start, i - start));
+    }
+    return out;
+}
+
+// pipeline.py _check_mark: throw unless *after* holds the words of *before*.
+// The message names the first word pair whose letters differ.
+void check_mark(const std::u32string& before, const std::u32string& after) {
+    if (mark_letters(before) == mark_letters(after)) return;
+    const auto old_words = py_split(before), new_words = py_split(after);
+    std::u32string was = before, got = after;
+    for (std::size_t i = 0; i < std::max(old_words.size(), new_words.size()); ++i) {
+        const std::u32string old_word = i < old_words.size() ? old_words[i] : U"";
+        const std::u32string new_word = i < new_words.size() ? new_words[i] : U"";
+        if (mark_letters(old_word) != mark_letters(new_word)) {
+            was = old_word;
+            got = new_word;
+            break;
+        }
+    }
+    throw std::invalid_argument("the mark stage changed " + detail::py_repr(to_utf8(was)) + " to " +
+                                detail::py_repr(to_utf8(got)) +
+                                ". A mark stage keeps the words: removing its marks must give the input back");
+}
+
+// pipeline.py _cut_marked: put *marked*, the marked text of *chunks* joined,
+// back into *chunks*. A cut counts letters, and it takes the combining marks
+// that follow them. A forced chunk keeps its text, so a mark on a forced word
+// goes.
+std::vector<markup::Chunk> cut_marked(const std::u32string& marked, const std::vector<markup::Chunk>& chunks) {
+    std::vector<markup::Chunk> out;
+    std::size_t pos = 0;
+    for (const auto& chunk : chunks) {
+        const std::size_t start = pos;
+        long long remaining = static_cast<long long>(mark_letters(to_utf32(chunk.text)).size());
+        while (pos < marked.size()) {
+            const auto letters = static_cast<long long>(mark_letters(marked.substr(pos, 1)).size());
+            if (remaining <= 0 && letters != 0) break;
+            remaining -= letters;
+            ++pos;
+        }
+        out.push_back(chunk.is_forced() ? chunk : markup::Chunk(to_utf8(marked.substr(start, pos - start))));
+    }
+    return out;
+}
+
 // g2p.py G2P._split_words: parse the input into words, forced pronunciations
 // included. Markup is read BEFORE normalization, so a `normalize` plugin never
 // sees a tag: it is handed the plain runs and nothing else, which is the only
@@ -815,12 +877,12 @@ void group_words(const PhonetokTokenizer& tokenizer, const std::string& text,
 // read as IPA — the exact downstream-mispronunciation case markup.py names),
 // missed the stray-tag check after a valid tag, and cut a tag at a '>' inside
 // an attribute value.
-std::vector<InputWord> split_words(const LanguageSpec& spec, const std::string& text,
+std::vector<InputWord> split_words(const LanguageSpec& spec, const std::vector<markup::Chunk>& chunks,
                                    const std::function<std::string(const std::string&)>& normalize,
                                    const std::function<void(const std::string&)>& check_forced) {
     std::vector<InputWord> words;
     const PhonetokTokenizer tokenizer(spec);
-    for (const auto& chunk : markup::parse_markup(text)) {
+    for (const auto& chunk : chunks) {
         if (chunk.is_forced()) {
             // g2p.py: the surface is Python str.strip()ed, and the forced IPA
             // is used STRIPPED but never re-derived — a caller who wrote a
@@ -1012,20 +1074,27 @@ std::vector<fs::path> packaged_lexicon_roots() {
     return roots;
 }
 
-// lexicon.py _packaged_providers, over the search path instead of the
-// orthography2ipa.lexicons entry points. Each directory under a root that holds
-// a *.tsv file is one provider, named for the directory. A name must resolve
-// exactly; when two providers serve one spec, the one named for the exact
-// resolved code wins, then the earlier root, then the name.
-const std::map<std::string, PackagedProvider>& packaged_providers() {
-    if (packaged_providers_found) return *packaged_providers_found;
+// o2i_lexicons PATCH_DIR: the directory under a root that holds the patches.
+const char* const PATCH_DIR = "patches";
+
+// lexicon.py _packaged_providers, over the search path instead of the entry
+// points of a group. The exceptions are the directories under a root, and the
+// patches the directories under <root>/patches, as o2i_lexicons.tsv_path and
+// patch_tsv_path read them. Each such directory that holds a *.tsv file is one
+// provider, named for the directory. A name must resolve exactly; when two
+// providers serve one spec, the one named for the exact resolved code wins,
+// then the earlier root, then the name.
+const std::map<std::string, PackagedProvider>& packaged_providers(bool patches = false) {
+    if (const auto it = packaged_providers_found.find(patches); it != packaged_providers_found.end())
+        return it->second;
     std::vector<std::pair<std::string, PackagedProvider>> candidates;
     const auto roots = packaged_lexicon_roots();
     for (std::size_t root = 0; root < roots.size(); ++root) {
-        if (!path_is_dir(roots[root])) continue;
+        const fs::path base = patches ? roots[root] / PATCH_DIR : roots[root];
+        if (!path_is_dir(base)) continue;
         std::vector<fs::path> directories;
         std::error_code ec;
-        for (const auto& entry : fs::directory_iterator(roots[root], ec))
+        for (const auto& entry : fs::directory_iterator(base, ec))
             if (path_is_dir(entry.path()) && !tsv_files(entry.path()).empty()) directories.push_back(entry.path());
         std::sort(directories.begin(), directories.end());
         for (const auto& directory : directories) {
@@ -1050,25 +1119,25 @@ const std::map<std::string, PackagedProvider>& packaged_providers() {
             found.emplace(code, provider);
         }
     }
-    packaged_providers_found = std::move(found);
-    return *packaged_providers_found;
+    return packaged_providers_found[patches] = std::move(found);
 }
 
-// lexicon.py _packaged_path, with o2i_lexicons.tsv_path as the provider: the
-// one *.tsv file in the provider's directory. No file, or more than one, is a
-// failing provider; it is logged and serves nothing.
-std::optional<fs::path> packaged_path(const std::string& code) {
-    const auto& providers = packaged_providers();
+// lexicon.py _packaged_path, with o2i_lexicons.tsv_path (or patch_tsv_path) as
+// the provider: the one *.tsv file in the provider's directory. No file, or
+// more than one, is a failing provider; it is logged and serves nothing.
+std::optional<fs::path> packaged_path(const std::string& code, bool patches = false) {
+    const auto& providers = packaged_providers(patches);
     const auto it = providers.find(code);
     if (it == providers.end()) return std::nullopt;
     const PackagedProvider& provider = it->second;
     const auto files = tsv_files(provider.directory);
+    const std::string noun = patches ? "patch" : "lexicon";
     std::string failure;
     if (files.empty()) {
-        failure = "no packaged lexicon for " + detail::py_repr(provider.name);
+        failure = "no packaged " + noun + " for " + detail::py_repr(provider.name);
     } else if (files.size() > 1) {
         failure = detail::py_repr(provider.name) + " has " + std::to_string(files.size()) +
-                  " lexicon files, expected one: ";
+                  " " + noun + " files, expected one: ";
         for (std::size_t i = 0; i < files.size(); ++i) failure += (i ? ", " : "") + files[i].filename().string();
     }
     if (!failure.empty()) {
@@ -1203,6 +1272,119 @@ std::vector<std::string> segment_ipa_impl(const std::string& ipa, const std::vec
 }
 
 
+// g2p.py _vowel_runs: the [start, end) code-point spans of the vowel runs in
+// *ipa*. A run is a vowel and every vowel or combining mark that follows it.
+std::vector<std::pair<std::size_t, std::size_t>> vowel_runs(const std::u32string& ipa) {
+    std::vector<std::pair<std::size_t, std::size_t>> runs;
+    for (std::size_t i = 0; i < ipa.size(); ++i) {
+        const bool extends = !runs.empty() && runs.back().second == i;
+        if (vowels::is_ipa_vowel(ipa[i])) {
+            if (extends) runs.back().second = i + 1;
+            else runs.emplace_back(i, i + 1);
+        } else if (extends && uni::combining(ipa[i]) != 0) {
+            runs.back().second = i + 1;
+        }
+    }
+    return runs;
+}
+
+std::set<std::u32string> vowels_of(const std::string& value) {
+    const std::u32string text = to_utf32(value);
+    std::set<std::u32string> out;
+    for (const auto& [start, end] : vowel_runs(text)) out.insert(text.substr(start, end - start));
+    return out;
+}
+
+// g2p.py G2P._vowel_readings: the vowels the tables give *grapheme* in an
+// unstressed position, and the vowels they give it anywhere.
+std::pair<std::set<std::u32string>, std::set<std::u32string>>
+vowel_readings(const LanguageSpec& spec, const std::string& grapheme) {
+    // g2p.py _UNSTRESSED_POSITIONS: a value listed there is a reduction
+    // product of the letter.
+    static const std::set<std::string> unstressed{
+        "first_pretonic", "pretonic", "posttonic", "nucleus_unstressed",
+        "nucleus_unstressed_open", "nucleus_unstressed_closed"};
+    std::set<std::u32string> reduced, readings;
+    if (const auto found = spec.positional_graphemes.find(grapheme); found != spec.positional_graphemes.end())
+        for (const auto& [position, values] : found->second)
+            for (const auto& value : values) {
+                const auto vowels = vowels_of(value);
+                readings.insert(vowels.begin(), vowels.end());
+                if (unstressed.count(position)) reduced.insert(vowels.begin(), vowels.end());
+            }
+    if (const auto found = spec.graphemes.find(grapheme); found != spec.graphemes.end())
+        for (const auto& value : found->second) {
+            const auto vowels = vowels_of(value);
+            readings.insert(vowels.begin(), vowels.end());
+        }
+    return {reduced, readings};
+}
+
+// g2p.py G2P._underlying_vowel: the one vowel of *readings* that an allophone
+// rule rewrites to *surface*, or nullopt when no rule or more than one reading
+// fits.
+std::optional<std::u32string> underlying_vowel(const LanguageSpec& spec, const std::u32string& surface,
+                                               const std::set<std::u32string>& readings) {
+    std::set<std::u32string> sources;
+    for (const auto& rule : spec.allophone_rules) {
+        if (to_utf32(rule.surface) != surface) continue;
+        for (const auto& phoneme : rule.phonemes)
+            for (const auto& vowel : vowels_of(phoneme))
+                if (readings.count(vowel)) sources.insert(vowel);
+    }
+    if (sources.size() != 1) return std::nullopt;
+    return *sources.begin();
+}
+
+// g2p.py G2P._ending_vowels_follow_stress: *ipa*, the declared reading of the
+// last *tail* tokens of *path*, with each reduced vowel replaced by the vowel
+// the tables chose for this path. An ending is declared in its unstressed
+// reading, so Russian ⟨-ого⟩ [əvə] reads [ˈovə] in большо́го. A declared vowel
+// gives way only when the tables list it for that letter in an unstressed
+// position; one the ending owns stays. A path vowel that an allophone rule
+// produced goes back to the one table reading the rule rewrites. The declared
+// value and the tail must pair one vowel with one letter, or *ipa* stays.
+std::string ending_vowels_follow_stress(const LanguageSpec& spec, const IPAPath& path,
+                                        std::size_t tail, const std::string& ipa) {
+    if (path.graphemes.empty()) return ipa;
+    // zip(path.graphemes[-tail:], path.segments[-tail:]): each slice keeps its
+    // own last *tail* items, and the pairs start at the front of both.
+    const std::size_t g0 = path.graphemes.size() > tail ? path.graphemes.size() - tail : 0;
+    const std::size_t s0 = path.segments.size() > tail ? path.segments.size() - tail : 0;
+    const std::size_t pairs = std::min(path.graphemes.size() - g0, path.segments.size() - s0);
+    std::vector<std::pair<std::string, std::u32string>> letters;
+    for (std::size_t k = 0; k < pairs; ++k) {
+        const std::u32string segment = to_utf32(path.segments[s0 + k]);
+        const auto runs = vowel_runs(segment);
+        if (runs.size() > 1) return ipa;
+        if (!runs.empty())
+            letters.emplace_back(to_utf8(uni::lower(to_utf32(path.graphemes[g0 + k]))),
+                                 segment.substr(runs[0].first, runs[0].second - runs[0].first));
+    }
+    const std::u32string text = to_utf32(ipa);
+    const auto declared = vowel_runs(text);
+    if (declared.size() != letters.size()) return ipa;
+    std::u32string out;
+    std::size_t last = 0;
+    for (std::size_t k = 0; k < declared.size(); ++k) {
+        const auto [start, end] = declared[k];
+        const std::u32string written = text.substr(start, end - start);
+        std::optional<std::u32string> actual = letters[k].second;
+        if (written == *actual) continue;
+        const auto [reduced, readings] = vowel_readings(spec, letters[k].first);
+        if (!reduced.count(written)) continue;
+        if (!readings.count(*actual)) actual = underlying_vowel(spec, *actual, readings);
+        if (actual && *actual != written) {
+            out += text.substr(last, start - last);
+            out += *actual;
+            last = end;
+        }
+    }
+    out += text.substr(last);
+    return to_utf8(out);
+}
+
+
 std::vector<IPAPath> apply_grammatical_endings(const LanguageSpec& spec,
                                                const std::string& word,
                                                std::vector<IPAPath> paths) {
@@ -1252,7 +1434,7 @@ std::vector<IPAPath> apply_grammatical_endings(const LanguageSpec& spec,
         if (path.segments.size() <= match->tokens) return path;
         IPAPath out = path;
         out.segments.resize(path.segments.size() - match->tokens);
-        out.segments.push_back(ipa);
+        out.segments.push_back(ending_vowels_follow_stress(spec, path, match->tokens, ipa));
         out.ipa.clear();
         for (const auto& segment : out.segments) out.ipa += segment;
         out.graphemes.resize(path.graphemes.size() - match->tokens);
@@ -1885,21 +2067,28 @@ void register_lexicon(const std::string& code, const std::string& source) { regi
 std::map<std::string, std::string> load_lexicon(const std::string& source) {
     return read_lexicon_file(resolve_lexicon_source(source));
 }
-std::map<std::string, std::string> packaged_lexicon(const std::string& code) {
+std::map<std::string, std::string> packaged_lexicon(const std::string& code, bool patches) {
     const std::string resolved = resolve(code);
-    const auto path = packaged_path(resolved);
-    if (!path) {
+    const auto missing = [&resolved](bool group, const std::string& noun) {
         std::vector<std::string> installed;
-        for (const auto& [provider, _] : packaged_providers()) installed.push_back(provider);
-        throw LookupError("no installed package supplies a lexicon file for " + detail::py_repr(resolved) +
-                          "; installed: " + (installed.empty() ? "nothing" : py_list(installed)));
-    }
-    return load_lexicon(path->string());
+        for (const auto& [provider, _] : packaged_providers(group)) installed.push_back(provider);
+        return LookupError("no installed package supplies a " + noun + " file for " + detail::py_repr(resolved) +
+                           "; installed: " + (installed.empty() ? "nothing" : py_list(installed)));
+    };
+    const auto path = packaged_path(resolved);
+    if (!path) throw missing(false, "lexicon");
+    auto lexicon = load_lexicon(path->string());
+    if (!patches) return lexicon;
+    const auto patch_path = packaged_path(resolved, true);
+    if (!patch_path) throw missing(true, "patch");
+    // `{**load_lexicon(patch_path), **lexicon}`: an exception wins over a patch.
+    for (auto& [word, ipa] : load_lexicon(patch_path->string())) lexicon.emplace(word, std::move(ipa));
+    return lexicon;
 }
 void set_lexicon_directory(const std::string& path) { lexicon_directory = expand_user(path); lexicon_cache.clear(); }
 void clear_lexicons() {
     registered_lexicons.clear(); lexicon_directory.reset(); lexicon_cache.clear();
-    packaged_providers_found.reset(); enabled_packaged.clear();
+    packaged_providers_found.clear(); enabled_packaged.clear();
 }
 std::vector<std::string> use_packaged_lexicons() {
     for (const auto& [code, _] : packaged_providers()) enabled_packaged.insert(code);
@@ -1920,10 +2109,10 @@ std::vector<std::string> use_packaged_lexicons(const std::vector<std::string>& c
     lexicon_cache.clear();
     return {enabled_packaged.begin(), enabled_packaged.end()};
 }
-std::map<std::string, std::string> packaged_lexicon_sources() {
+std::map<std::string, std::string> packaged_lexicon_sources(bool patches) {
     std::map<std::string, std::string> found;
-    for (const auto& [code, _] : packaged_providers())
-        if (const auto path = packaged_path(code)) found.emplace(code, path->string());
+    for (const auto& [code, _] : packaged_providers(patches))
+        if (const auto path = packaged_path(code, patches)) found.emplace(code, path->string());
     return found;
 }
 std::vector<std::string> available_lexicon_codes() {
@@ -1978,15 +2167,10 @@ const StressPlugin* get_stress_plugin(const std::string& code) {
     return best;
 }
 
-const SyllabifierPlugin* get_syllabifier(const std::string& code) {
-    // registry.py get_syllabifier: `code = _resolve_code(code)` before the lookup.
-    const std::string language = resolve(code);
-    const SyllabifierPlugin* best = nullptr;
-    for (const auto& [_, plugin] : syllabifier_plugins)
-        if (owns_language(*plugin, language) &&
-            (best == nullptr || plugin->priority() > best->priority()))
-            best = plugin.get();
-    return best;
+const SyllabifierPlugin* get_syllabifier(const std::string&) {
+    // registry.py get_syllabifier: deprecated, and None, because no
+    // syllabifier is discovered.
+    return nullptr;
 }
 void register_rescorer_plugin(const std::string& name, std::shared_ptr<RescorerPlugin> plugin) { if (name.empty() || !plugin) throw std::invalid_argument("rescore plugin name and instance are required"); rescorer_plugins[name] = std::move(plugin); }
 void register_sandhi_plugin(const std::string& name, std::shared_ptr<SandhiPlugin> plugin) { if (name.empty() || !plugin) throw std::invalid_argument("sandhi plugin name and instance are required"); sandhi_plugins[name] = std::move(plugin); }
@@ -2079,7 +2263,9 @@ std::map<std::string, std::vector<PluginAnswer>> who_answers(const std::string& 
         else answers.front().selected = true;
     };
     add(normalize_plugins, "normalize", [](const auto&) { return 50; });
-    add(syllabifier_plugins, "syllabify", [](const auto& plugin) { return plugin.priority(); });
+    // registry.py who_answers: `"syllabify": "built-in"`. Discovery finds no
+    // syllabifier, and one that a caller passes lives in that engine's Pipeline.
+    result["syllabify"].push_back({"built-in", 0, true});
     add(stress_plugins, "stress", [](const auto& plugin) { return plugin.priority(); });
     add(rescorer_plugins, "rescore", [](const auto& plugin) { return plugin.priority(); });
     add(sandhi_plugins, "sandhi", [](const auto&) { return 50; });
@@ -2098,19 +2284,53 @@ std::vector<std::string> available_dialect_profiles() {
     return transform::available_profiles();
 }
 
+namespace {
+// g2p.py _field_stages: the plugin stages that *pipeline*'s members take over.
+// A member and the old argument of its stage, or a plugin named for that
+// stage, throw std::invalid_argument, because either order would drop one of
+// the two silently. The port has no `normalizer` argument, so only a named
+// `normalize` plugin conflicts with `expand` and `mark`.
+std::set<std::string> pipeline_field_stages(const Pipeline& pipeline,
+                                            const std::map<std::string, std::vector<std::string>>& named,
+                                            const sentence::SentenceRescorerArg& sentence_rescorer,
+                                            const rescorer::RescorerArg& rescorer) {
+    struct Pair { const char* stage; bool field_set; const char* old; bool old_set; const char* field; };
+    const Pair pairs[] = {
+        {"normalize", static_cast<bool>(pipeline.expand) || static_cast<bool>(pipeline.mark), "normalizer=",
+         false, "Pipeline(expand=...) or Pipeline(mark=...)"},
+        {"rescore", !pipeline.rescore.items.empty(), "rescorer=", !rescorer.none, "Pipeline(rescore=...)"},
+        {"sandhi", pipeline.sandhi != nullptr, "sentence_rescorer=", !sentence_rescorer.none,
+         "Pipeline(sandhi=...)"},
+    };
+    std::set<std::string> stages;
+    for (const auto& pair : pairs) {
+        if (!pair.field_set) continue;
+        const auto found = named.find(pair.stage);
+        if (pair.old_set || (found != named.end() && !found->second.empty()))
+            throw std::invalid_argument(std::string(pair.old) + " and plugins={'" + pair.stage +
+                                        "': ...} cannot run with " + pair.field + ": pass the field");
+        stages.insert(pair.stage);
+    }
+    return stages;
+}
+} // namespace
+
 G2P::G2P(std::string language, std::map<std::string, std::vector<std::string>> plugin_overrides,
          std::string dialect_profile, bool expand_allophones,
          bool apply_sandhi, bool apply_stress, bool apply_allophony,
          const sentence::SentenceRescorerArg& sentence_rescorer,
-         const rescorer::RescorerArg& rescorer, const Pipeline& pipeline)
-    : language_(resolve(language)), spec_(&get(language_)), plugin_overrides_(std::move(plugin_overrides)),
+         const rescorer::RescorerArg& rescorer, const Pipeline& pipeline,
+         bool allow_undeclared_phonemes)
+    : field_stages_(pipeline_field_stages(pipeline, plugin_overrides, sentence_rescorer, rescorer)),
+      language_(resolve(language)), spec_(&get(language_)), plugin_overrides_(std::move(plugin_overrides)),
       pipeline_(std::make_shared<const Pipeline>(pipeline)),
       dialect_profile_(std::move(dialect_profile)), expand_allophones_(expand_allophones),
       apply_sandhi_(apply_sandhi), apply_stress_(apply_stress), apply_allophony_(apply_allophony),
       // `self._sentence_rescorers = normalize_sentence_rescorers(sentence_rescorer)`
       sentence_rescorers_(sentence::normalize_sentence_rescorers(sentence_rescorer)),
-      // `user_rescorers = normalize_rescorers(rescorer)`
-      user_rescorers_(rescorer::normalize_rescorers(rescorer)) {
+      // `user_rescorers = normalize_rescorers(self.pipeline.rescore or rescorer)`
+      user_rescorers_(rescorer::normalize_rescorers(pipeline.rescore.items.empty() ? rescorer : pipeline.rescore)),
+      allow_undeclared_phonemes_(allow_undeclared_phonemes) {
     discover_plugins_once();
     if (!dialect_profile_.empty() && !dialect_profile_known(dialect_profile_))
         throw std::invalid_argument("unknown dialect profile: " + dialect_profile_);
@@ -2158,7 +2378,6 @@ std::vector<std::string> resolve_declared(const std::string& stage, const std::s
         for (const auto& [name, plugin] : map) (void)plugin, installed.insert(name);
     };
     if (stage == "normalize") collect(normalize_plugins);
-    else if (stage == "syllabify") collect(syllabifier_plugins);
     else if (stage == "stress") collect(stress_plugins);
     else if (stage == "rescore") collect(rescorer_plugins);
     else if (stage == "sandhi") collect(sandhi_plugins);
@@ -2168,7 +2387,6 @@ std::vector<std::string> resolve_declared(const std::string& stage, const std::s
     out.reserve(names.size());
     for (const auto& name : names) {
         const bool present = (stage == "normalize"   ? normalize_plugins.count(name) :
-                              stage == "syllabify"   ? syllabifier_plugins.count(name) :
                               stage == "stress"      ? stress_plugins.count(name) :
                               stage == "rescore"     ? rescorer_plugins.count(name) :
                                                        sandhi_plugins.count(name)) != 0;
@@ -2202,6 +2420,9 @@ std::vector<std::string> get_declared_plugins(const std::string& stage,
 }
 
 std::vector<std::string> G2P::declared(const std::string& stage) const {
+    // `for stage in field_stages: self.plugins.pop(stage, None)`: a Pipeline
+    // member replaces the plugins the spec or the caller names for its stage.
+    if (field_stages_.count(stage)) return {};
     // `merged = replace(self._spec, plugins=self._declared)`: the caller's
     // list for a stage replaces the spec's.
     const auto overridden = plugin_overrides_.find(stage);
@@ -2329,7 +2550,7 @@ std::vector<features::WordFeatures> G2P::features(const std::string& text) const
     std::vector<features::WordFeatures> out;
     const auto normalize = [this](std::string value) { return normalized(std::move(value)); };
     const auto check = [this](const std::string& ipa) { check_forced(ipa); };
-    for (const auto& input : split_words(*spec_, text, normalize, check)) {
+    for (const auto& input : split_words(*spec_, prepared(markup::parse_markup(text)), normalize, check)) {
         const std::string& word = input.surface;
         const auto slots = ipa_lattice(word);
         const double confidence = confidence_breakdown(word).value;
@@ -2357,7 +2578,7 @@ sentence::SentenceLattice G2P::sentence_lattice(const std::string& text,
     const std::size_t width = search == "greedy" ? 1 : beam_width;
     const auto normalize = [this](std::string value) { return normalized(std::move(value)); };
     const auto check = [this](const std::string& ipa) { check_forced(ipa); };
-    const auto inputs = split_words(*spec_, text, normalize, check);
+    const auto inputs = split_words(*spec_, prepared(markup::parse_markup(text)), normalize, check);
     if (inputs.empty()) {
         sentence::SentenceLattice empty;
         empty.lang = language_;
@@ -2604,6 +2825,19 @@ std::optional<std::string> G2P::override_for(const std::string& word) const {
     return std::nullopt;
 }
 
+std::vector<markup::Chunk> G2P::prepared(std::vector<markup::Chunk> chunks) const {
+    if (pipeline_->expand)
+        for (auto& chunk : chunks)
+            if (!chunk.is_forced()) chunk.text = pipeline_->expand(chunk.text);
+    if (!pipeline_->mark) return chunks;
+    std::string text;
+    for (const auto& chunk : chunks) text += chunk.text;
+    const std::string marked = pipeline_->mark(text);
+    const std::u32string marked32 = to_utf32(marked);
+    check_mark(to_utf32(text), marked32);
+    return cut_marked(marked32, chunks);
+}
+
 std::string G2P::normalized(std::string text) const {
     for (const auto& name : declared("normalize"))
         text = normalize_plugins.at(name)->normalize(text, language_);
@@ -2618,7 +2852,7 @@ std::optional<std::vector<std::string>> G2P::compound_elements(const std::string
     });
     // An override for the whole spelling wins, as it does for any word.
     if (!hyphenated || override_for(word).has_value()) return std::nullopt;
-    const auto elements = split_words(*spec_, word, [this](const std::string& text) { return normalized(text); },
+    const auto elements = split_words(*spec_, markup::parse_markup(word), [this](const std::string& text) { return normalized(text); },
                                       [this](const std::string& ipa) { check_forced(ipa); });
     if (elements.size() < 2) return std::nullopt;
     std::vector<std::string> surfaces;
@@ -2631,14 +2865,20 @@ std::optional<std::vector<std::string>> G2P::compound_elements(const std::string
 
 void G2P::unmapped_chars(const std::string& word, std::vector<std::string>* unmapped,
                          double* coverage) const {
-    // g2p.py G2P._unmapped_chars: the surface characters of any UNKNOWN token,
-    // and the fraction of GRAPHEME/UNKNOWN characters that mapped.
+    // g2p.py G2P._unmapped_chars: the surface characters of any UNKNOWN or
+    // DIGIT token, and the fraction of GRAPHEME/UNKNOWN/DIGIT characters that
+    // mapped. An UNKNOWN token counts once; a DIGIT token adds each of its
+    // characters, as `unmapped.extend(tok.grapheme)` does.
     std::vector<std::string> missing;
     std::size_t total_chars = 0;
     for (const auto& token : Tokenizer(*spec_).tokenize(word)) {
         if (token.kind == TokenKind::GRAPHEME) total_chars += token.length;
         else if (token.kind == TokenKind::UNKNOWN) {
             missing.push_back(token.grapheme);
+            total_chars += token.length;
+        } else if (token.kind == TokenKind::DIGIT) {
+            for (const char32_t cp : uni::to_utf32(token.grapheme))
+                missing.push_back(uni::to_utf8(std::u32string(1, cp)));
             total_chars += token.length;
         }
     }
@@ -2734,6 +2974,7 @@ std::vector<IPAPath> G2P::apply_rescorer_plugins(const std::string& word, std::v
 }
 
 void G2P::check_forced(const std::string& ipa) const {
+    if (allow_undeclared_phonemes_) return;
     // The inventory counts the engine's lexicon, and an engine with none reads
     // the process-wide one.
     const auto& own = pipeline_->lexicon;
@@ -2862,7 +3103,7 @@ TranscriptionResult G2P::transcribe_detailed(const std::string& text, const std:
     //    has run (composing earlier would blind a rule that names a nasal
     //    vowel by its decomposed shape).
     TranscriptionResult result; result.lang = language_;
-    const auto words = split_words(*spec_, text, normalize, check);
+    const auto words = split_words(*spec_, prepared(markup::parse_markup(text)), normalize, check);
     if (words.empty()) return result;
 
     std::vector<std::string> surfaces, ipa_words;
@@ -2894,9 +3135,14 @@ TranscriptionResult G2P::transcribe_detailed(const std::string& text, const std:
     if (apply_sandhi_ && sandhi_)
         ipa_words = sandhi_->apply(ipa_words, /*obligatory_only=*/false, pausal);
 
-    for (const auto& name : declared("sandhi")) {
-        const auto& p = sandhi_plugins.at(name);
-        auto transformed = p->apply(ipa_words, surfaces, pausal, language_);
+    // `for plugin in ([sandhi] if sandhi is not None else
+    // self._stage_plugins.get("sandhi"))`: the Pipeline member replaces the
+    // named plugins.
+    std::vector<std::pair<std::string, const SandhiPlugin*>> sandhi_stage;
+    if (pipeline_->sandhi) sandhi_stage.emplace_back("Pipeline(sandhi=...)", pipeline_->sandhi.get());
+    else for (const auto& name : declared("sandhi")) sandhi_stage.emplace_back(name, sandhi_plugins.at(name).get());
+    for (const auto& [name, plugin] : sandhi_stage) {
+        auto transformed = plugin->apply(ipa_words, surfaces, pausal, language_);
         if (transformed.size() != ipa_words.size()) throw std::runtime_error("sandhi plugin changed word count: " + name);
         ipa_words = std::move(transformed);
     }
@@ -3048,10 +3294,9 @@ std::vector<AncestorLink> data_ancestors(const LanguageSpec& spec) {
 // a breadth-first walk from the spec that keeps the strongest path weight to
 // each data-bearing ancestor. With temporal decay, each step is scaled by
 // exp(-gap / halflife), the gap running from the ancestor's end to the start
-// of the nearest descendant on the path. The reference always traces to its
-// default depth of 10.
-std::map<std::string, double> trace_ancestry_weights(const LanguageSpec& spec, bool temporal_decay, double decay_halflife) {
-    constexpr int max_depth = 10;
+// of the nearest descendant on the path. A step deeper than *max_depth* adds
+// nothing, so 0 keeps the direct ancestors only.
+std::map<std::string, double> trace_ancestry_weights(const LanguageSpec& spec, int max_depth, bool temporal_decay, double decay_halflife) {
     struct Step { std::string code; double weight; int depth; const LanguageSpec* descendant; };
     std::map<std::string, double> result;
     std::vector<Step> queue{{spec.code, 1.0, 0, &spec}};
@@ -3100,11 +3345,11 @@ double tone_distance(const LanguageSpec& a, const LanguageSpec& b) {
 }
 // distance.py ancestry_similarity. A direct ancestor returns its path weight
 // or the best shared-ancestor product, whichever is higher; otherwise the best
-// shared-ancestor product, capped at 1.0. The reference ignores max_depth.
-double ancestry_similarity(const LanguageSpec& a, const LanguageSpec& b, int, bool temporal_decay, double decay_halflife) {
+// shared-ancestor product, capped at 1.0. Both tracers stop at *max_depth*.
+double ancestry_similarity(const LanguageSpec& a, const LanguageSpec& b, int max_depth, bool temporal_decay, double decay_halflife) {
     if (a.code == b.code) return 1;
-    const auto x = trace_ancestry_weights(a, temporal_decay, decay_halflife);
-    const auto y = trace_ancestry_weights(b, temporal_decay, decay_halflife);
+    const auto x = trace_ancestry_weights(a, max_depth, temporal_decay, decay_halflife);
+    const auto y = trace_ancestry_weights(b, max_depth, temporal_decay, decay_halflife);
     double shared = 0;
     for (const auto& [code, weight] : x)
         if (const auto found = y.find(code); found != y.end()) shared = std::max(shared, weight * found->second);

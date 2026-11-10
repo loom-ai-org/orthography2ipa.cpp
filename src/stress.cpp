@@ -1680,10 +1680,8 @@ std::vector<std::string> syllables_for(const std::string& word, const std::strin
                                        const std::vector<std::string>& diphthongs,
                                        const LanguageSpec* spec,
                                        const SyllabifierPlugin* syllabifier) {
-    // stress.py _syllables_for: the caller's plugin, else the one registered
-    // for *lang*, else the bundled splitter.
+    // stress.py _syllables_for: the caller's plugin, else the bundled splitter.
     const SyllabifierPlugin* plugin = syllabifier;
-    if (plugin == nullptr && !lang.empty()) plugin = get_syllabifier(lang);
     if (plugin != nullptr) {
         try {
             auto sylls = plugin->syllabify(word, lang);
