@@ -1,0 +1,179 @@
+{
+  "code": "pt-PT-x-tras-os-montes",
+  "name": "Transmontano Portuguese",
+  "script": "Latin",
+  "graphemes_base": "pt-PT",
+  "graphemes": {
+    "ch": [
+      "tʃ"
+    ],
+    "ss": [
+      "s̺"
+    ]
+  },
+  "allophones_base": "pt-PT",
+  "allophones": {
+    "s̺": [
+      "s̺",
+      "ʂ"
+    ],
+    "z̺": [
+      "z̺",
+      "ʐ"
+    ],
+    "v": [
+      "b",
+      "β"
+    ]
+  },
+  "positional_graphemes_base": "pt-PT",
+  "positional_graphemes": {
+    "s": {
+      "word_initial": [
+        "s̺"
+      ],
+      "intervocalic": [
+        "z̺"
+      ],
+      "intervocalic_cross_word": [
+        "z̺"
+      ],
+      "word_final": [
+        "s̺"
+      ]
+    }
+  },
+  "parent": "pt-PT",
+  "allophone_rules": [
+    {
+      "id": "PT_NORTH_BETACISM",
+      "phonemes": [
+        "v"
+      ],
+      "surface": "b",
+      "notes": "Northern betacism (Cintra's trait 1, all-Northern): the /v/ ~ /b/ phonological opposition is lost and both merge into a single phoneme /b/ (vinho -> [ˈbiɲu], vaca -> [ˈbakɐ], estava -> [ʃˈtabɐ]). Cintra (1971:87): 'o desaparecimento da oposição fonológica entre os fonemas /v/ e /b/ e a sua fusão num fonema único /b/, realizado ora como oclusiva, ora como fricativa (ou espirante) b ou β' — the merged phoneme surfaces either as the stop [b] or the spirant [β], the [β] variant recorded in the `allophones` inventory. Modelled as a post-lexical phoneme-side rewrite so the merger applies uniformly however /v/ arises from the inherited grapheme map. Attested in the CLUP Trás-os-Montes gold (vir -> [biɾ], vou -> [bow], voltar -> [buɫˈtaɾ])."
+    },
+    {
+      "id": "PT_FINAL_EM_NUCLEUS",
+      "phonemes": [
+        "e",
+        "ɛ",
+        "ɨ"
+      ],
+      "grapheme": [
+        "e",
+        "é",
+        "ê"
+      ],
+      "followed_by_phoneme": [
+        "̃"
+      ],
+      "followed_by_grapheme": [
+        "m"
+      ],
+      "followed_by_2": "word_boundary",
+      "surface": "e",
+      "notes": "Overridden for this northern variety: the nucleus is the close-mid [e], not the central [ɐ]. Matching it here, not disabling it, also keeps the stressed nucleus away from any tonic-[e] diphthongisation rule of the spec. Northern EP keeps the close-mid nucleus of word-final ⟨-em -ens⟩: [ẽj̃], [ẽj̃ʃ] (bem [ˈbẽj̃], homem [ˈɔmẽj̃], homens [ˈɔmẽj̃ʃ]). The centralised [ɐ̃j̃] of the pt-PT base is the Lisbon merger: Wikipedia 'Portuguese phonology', 'In Greater Lisbon, [ẽj̃] has merged with [ɐ̃j̃]'; Ciberdúvidas (Viana & Rocha 2006, 'Vogais e ditongos nasais, outra vez', n. 1): 'em dialectos do português europeu … a grafia -em/-en(s) representa o ditongo [ẽj̃]'. Leite de Vasconcellos 1901 (Esquisse d'une dialectologie portugaise, §44n, p. 93; quoted from an OCR copy, diacritics normalised): '-em < l. -ENE correspond -ẽ dans certains endroits de la frontière de Tras-os-Montes et du Minho, et -ẽi ou -ɐi dans le reste du pays'. The border monophthong [ẽ] is local and not modelled. The oral parallel in the same section (§44i): the diphthong ⟨ei⟩ is [ɐj] only 'à Lisbonne' and [ej] in Entre-Douro-e-Minho, the Beira and Trás-os-Montes. The rule matches ⟨m⟩ only, so word-final ⟨-en⟩ (hífen) is not matched here and falls to PT_FINAL_EN_NUCLEUS of pt-PT."
+    },
+    {
+      "id": "PT_FINAL_ENS_NUCLEUS",
+      "phonemes": [
+        "e",
+        "ɛ",
+        "ɨ"
+      ],
+      "grapheme": [
+        "e",
+        "é",
+        "ê"
+      ],
+      "followed_by_phoneme": [
+        "̃"
+      ],
+      "followed_by_grapheme": [
+        "n"
+      ],
+      "followed_by_2": "consonant",
+      "followed_by_3": "word_boundary",
+      "surface": "e",
+      "notes": "Overridden for this northern variety with PT_FINAL_EM_NUCLEUS: the nucleus of the plural ⟨-ens⟩ is the close-mid [e], so it is [ẽj̃ʃ]. The sources are under PT_FINAL_EM_NUCLEUS in this spec."
+    }
+  ],
+  "notes": "Transmontano Portuguese of Trás-os-Montes e Alto Douro (northeastern Portugal: Bragança, Chaves, Valpaços). Cintra (1971:93) groups Trás-os-Montes TOGETHER WITH Alto-Minho (pt-PT-x-viana) as a single 'grupo transmontano-alto-minhoto', the conservative Northern varieties that alone retain the medieval FOUR-SIBILANT system; the two specs share the same sibilant deltas. A DELTA over standard (Lisbon-type) pt-PT: inherits the whole standard EP system (unstressed vowel reduction, dark coda /l/, sandhi) via graphemes_base / allophones_base and declares only the archaic-Northern deltas. MODELLED FEATURES: (1) FOUR-SIBILANT SYSTEM (Cintra trait 2, his single most diagnostic North/South isogloss) — the medieval apico-alveolar vs (pre)dorsodental contrast, lost everywhere else, is kept: the grapheme series ⟨s⟩/⟨ss⟩ realises the voiceless APICO-ALVEOLAR [s̺] (word-initial, word-final, and intervocalic ⟨ss⟩) with its voiced intervocalic-⟨s⟩ counterpart [z̺], contrasting with the LAMINAL (predorsodental) [s] of ⟨c⟩(before e/i)/⟨ç⟩ and [z] of ⟨z⟩ (inherited unchanged from pt-PT, left unmarked — the Mirandese/mwl notation convention). So the minimal pairs Cintra cites stay distinct: passo [ˈpas̺u] vs paço [ˈpasu], coser [kuˈz̺eɾ] vs cozer [kuˈzeɾ]. Cintra (1971:93): 'a existência de um sistema de quatro sibilantes — [s̺] e [z̺] ápicoalveolares (correspondentes aos grafemas s e ss), característicos de todos os falares setentrionais, opondo-se a e convivendo com o [s] e o [z] predorsodentais (correspondentes aos grafemas ce,i, ç e z)'; note 29 fixes the positions: '[s̺] ápico-alveolar (correspondente a s inicial e final e ss interior)'. Álvarez Pérez (2014:37, §4) confirms this conservative four-sibilant system is precisely the 'Transmontanos and Alto-Minhotos' group and quantifies it from the ALEPG. NOTATION: Cintra's own term is apico-alveolar / 'reverso'; his [s̺] [z̺] are commonly rendered [ʂ] [ʐ] in modern IPA (the 's beirão'/'reverso' is acoustically retroflex-like), recorded as the surface variant in `allophones`; the [s̺]/[z̺] symbols are Cintra's own and are used as the default. LIMIT: preconsonantal coda ⟨s⟩ (festa, gosto) keeps the inherited pan-EP chiado [ʃ] — Cintra's note 29 enumerates the [s̺] positions as 's inicial e final e ss interior' only, so the preconsonantal palatalisation, a separate process, is left inherited rather than overridden. (2) ARCHAIC ⟨ch⟩ AFFRICATE (Cintra trait 3) — the syllable-onset /tʃ/–/ʃ/ contrast is preserved: ⟨ch⟩ = [tʃ] (chave -> [ˈtʃabɨ]) vs ⟨x⟩ = [ʃ], not merged as in standard EP. Cintra (1971:87): 'a permanência da distinção fonológica em posição inicial de sílaba entre o fonema /tʃ/, representado pelo grafema ch e o fonema /ʃ/ representado pelo grafema x'; the affricate surfaces in the CLUP gold (chaves -> [ˈtʃaβɨʃ]). Modelled as an inherited-map grapheme delta. Porto's tonic-close-vowel diphthongisation ([e]->[je], [o]->[wo]) is a Baixo-Minho/Douro-Litoral (baixo-minhoto-duriense) feature and is deliberately NOT applied to the transmontano-alto-minhoto group (Cintra 1971:93). NATIVE-SPEAKER VALIDATION (Portuguese With Leo, 'Sotaque e expressões de Trás-os-Montes', with Rui de Chaves, https://www.youtube.com/watch?v=70a_vNEa_aw): directly confirms the two modelled deltas — the ⟨ch⟩ affricate [tʃ] ('Chaves -> Tchabes', 'chá -> tchá', 'metes o -tch') and Northern betacism v->b ('vento passa a bento', 'Chabes', 'não é um B forte mas é um ligeiro B') — and confirms Trás-os-Montes does NOT do the Porto/Madeira ⟨ão⟩->[õn]/[ɐ̃n] reduction ('cão ... acho que é normal, não há õn') and keeps the conservative non-centralised mid vowel before palatals ('vermelho eu digo vermelho, Lisboa vermalho'; 'Coelho', keeping [e]), all inherited unchanged here. FLAGGED DISCREPANCY (native-speaker vs modelled): the same speaker demonstrably uses the PREVOCALIC [ʒ] external /s/-sandhi ('tu a ligares palavras que acabam em -S com palavras que começam em vogal fazes a ligação com o J' — Rui: 'Exatamente, ao contrário do Sul que é com z') and reports it 'muito espalhado' (Algarve, São Miguel, 'e de outras partes do Norte'), which CONTRADICTS this spec's inherited base [z] (the base PT_FINAL_S_PREVOCALIC_VOICE note explicitly claims [z] 'across the North ... Lisbon and the neutral centre'). This [ʒ] is NOT modelled here: it is a single native-speaker (Chaves) attestation of a variable/sociolinguistic casual-speech feature, whereas the standard/academic literature (Mateus & d'Andrade 2000: ch.2; Wikipedia 'Portuguese phonology') gives [z] as the standard prevocalic value across the North; the well-sourced academic model is kept rather than overwritten on one casual attestation, but the counter-evidence is recorded here honestly for a future corroboration pass (the Coimbra speaker's 'meio misturado' and this Chaves [ʒ] together suggest the [ʒ]/[z] isogloss is more permeable into the centre-north than the base note asserts).",
+  "quality": "research",
+  "ancestors": [
+    {
+      "code": "pt-PT",
+      "role": "parent",
+      "weight": 0.85,
+      "notes": "Standard (Lisbon-type) European Portuguese; Transmontano diverges by Northern betacism (v->b), the conservative four-sibilant system (apico-alveolar ⟨s,ss⟩ vs laminal ⟨c,ç,z⟩), and the archaic ⟨ch⟩ affricate [tʃ]."
+    }
+  ],
+  "script_type": "alphabet",
+  "sources": [
+    {
+      "id": "cintra1971",
+      "author": "Cintra, Luís F. Lindley",
+      "year": 1971,
+      "title": "Nova proposta de classificação dos dialectos galego-portugueses",
+      "publisher": "Boletim de Filologia (Centro de Estudos Filológicos, Lisboa), vol. 22, pp. 81-116",
+      "url": "https://cvc.instituto-camoes.pt/hlp/biblioteca/novaproposta.pdf",
+      "pages": "81-116",
+      "notes": "Foundational classification of the Galician-Portuguese dialect space by maximally diagnostic phonetic traits. Trait 1 (betacism, p.87): 'o desaparecimento da oposição fonológica entre os fonemas /v/ e /b/ e a sua fusão num fonema único /b/, realizado ora como oclusiva, ora como fricativa (ou espirante) b ou β'. Trait 2 (apico-alveolar sibilant, p.87), his PRIMARY North/South isogloss: '/s/ ... e /z/, como fricativas ápico-alveolares'. Trait 3 (ch affricate, p.87): 'a permanência da distinção fonológica em posição inicial de sílaba entre o fonema /tʃ/, representado pelo grafema ch e o fonema /ʃ/ representado pelo grafema x'. p.93 groups Trás-os-Montes with Alto-Minho as the four-sibilant 'grupo transmontano-alto-minhoto': 'um sistema de quatro sibilantes — [s̺] e [z̺] ápicoalveolares (correspondentes aos grafemas s e ss) ... opondo-se ... ao [s] e o [z] predorsodentais (correspondentes aos grafemas ce,i, ç e z)'. Note 29 (footnote to the p.93 discussion): '[s̺] ápico-alveolar (correspondente a s inicial e final e ss interior) ... [z̺] ápicoalveolar (correspondente ao s intervocálico)'; names the series 'ápicoalveolares ou reversos'. Republished in Cintra, Estudos de Dialectologia Portuguesa, Sá da Costa, 1983, pp. 117-163."
+    },
+    {
+      "id": "alvarezperez2014",
+      "author": "Álvarez Pérez, Xosé Afonso",
+      "year": 2014,
+      "title": "European Portuguese dialectal features: a comparison with Cintra's proposal",
+      "publisher": "Journal of Portuguese Linguistics 13(1): 29-62",
+      "url": "https://doi.org/10.5334/jpl.62",
+      "pages": "29-62",
+      "notes": "§4 (Sibilants, pp.36-38): documents, from the Atlas Linguístico-Etnográfico de Portugal e da Galiza (ALEPG) data, that the conservative four-sibilant system 'is found in northern and northwestern Portugal, in the group of dialects that Cintra called Transmontanos and Alto-Minhotos'. Sets out the grapheme/etymology mapping used here: s- initial and -ss- -> apico-alveolar [s̺]; intervocalic -s- -> [z̺]; ⟨c⟩(before e/i)/⟨ç⟩ -> laminal [s]; ⟨z⟩ -> laminal [z]. Quantitative dialectometric corroboration of Cintra's isogloss."
+    },
+    {
+      "id": "mateus_dandrade2000",
+      "author": "Mateus, M.H.M. & d'Andrade, E.",
+      "year": 2000,
+      "title": "The Phonology of Portuguese",
+      "publisher": "Oxford University Press",
+      "url": null,
+      "pages": null,
+      "notes": "Reference EP phonology for the inherited base processes (unstressed vowel reduction, dark coda /l/) that Transmontano inherits unchanged from pt-PT."
+    },
+    {
+      "id": "pwl_trasosmontes",
+      "author": "Portuguese With Leo (with Rui, de Chaves)",
+      "year": 2022,
+      "title": "Sotaque e expressões de Trás-os-Montes",
+      "publisher": "YouTube (native-speaker / popular-linguistics)",
+      "url": "https://www.youtube.com/watch?v=70a_vNEa_aw",
+      "pages": null,
+      "notes": "Native-speaker Trás-os-Montes (Chaves) deep-dive (NOT academic). Validates the modelled ⟨ch⟩->[tʃ] affricate ('Chaves->Tchabes', 'chá->tchá') and Northern betacism ('vento->bento', 'Chabes'); confirms the group does NOT do the ⟨ão⟩->[õn] reduction ('não há õn') and keeps the non-centralised mid vowel ('vermelho', not Lisbon 'vermalho'). ALSO records a FLAGGED discrepancy: the speaker uses the prevocalic [ʒ] external /s/-sandhi ('fazes a ligação com o J ... ao contrário do Sul que é com z'), counter to the modelled/inherited base [z] — documented in the spec notes, not modelled (single casual attestation vs standard [z])."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Trás-os-Montes_e_Alto_Douro",
+    "https://pt.wikipedia.org/wiki/Dialeto_trasmontano"
+  ],
+  "timespan": {
+    "start_year": 1400,
+    "end_year": null
+  },
+  "iso639_3": "por",
+  "wikidata_qid": "Q10266011",
+  "location": {
+    "latitude": 41.295471,
+    "longitude": -7.746264,
+    "source": "wikidata",
+    "notes": "the centre of the Trás-os-Montes e Alto Douro dialect area (Bragança, Chaves, Valpaços) — a province-level point, not a town. [Wikidata Q369458 P625]"
+  },
+  "word_exceptions_base": "pt-PT",
+  "audit": {
+    "clup_dialect": {
+      "conclusion": "sample_too_small",
+      "measured": "The clup_dialect row holds 6 scored sentences (clup_dialect is sentence-level: each gold entry is one interview sentence, scored as a single unit against the engine's whole-sentence transcription, so the bootstrap resamples across only 6 sentence-level PER values, not across words), per=0.3317, per_ci_low=0.3126, per_ci_high=0.3578 (benchmarks/results.json). At n=6 sentences the bootstrap interval is already collapsing toward a point for the same reason (few distinct values to resample), so its narrow width reflects the small sample, not precision; see docs/evaluation/generated/scoreboard.md's `95% CI` note and the THIN_ROW_MARK cutoff (rows under 20 scored items). This row cannot gate a production promotion on its own strength.",
+      "reference": "spec notes"
+    }
+  }
+}

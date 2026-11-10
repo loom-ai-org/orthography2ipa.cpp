@@ -52,9 +52,75 @@
       ],
       "surface": "b",
       "notes": "Northern betacism (Cintra's trait 1, all-Northern): the /v/ ~ /b/ phonological opposition is lost and both merge into a single phoneme /b/ (vinho -> [ˈbiɲu], vaca -> [ˈbakɐ], estava -> [ʃˈtabɐ]). Cintra (1971:87): 'o desaparecimento da oposição fonológica entre os fonemas /v/ e /b/ e a sua fusão num fonema único /b/, realizado ora como oclusiva, ora como fricativa (ou espirante) b ou β' — the merged phoneme surfaces either as the stop [b] or the spirant [β], the [β] variant recorded in the `allophones` inventory. Modelled as a post-lexical phoneme-side rewrite so the merger applies uniformly however /v/ arises from the inherited grapheme map. Attested in the CLUP Alto-Minho gold (vou -> [bow], ver -> [beɾ])."
+    },
+    {
+      "id": "PT_FINAL_EM_NUCLEUS",
+      "phonemes": [
+        "e",
+        "ɛ",
+        "ɨ"
+      ],
+      "grapheme": [
+        "e",
+        "é",
+        "ê"
+      ],
+      "followed_by_phoneme": [
+        "̃"
+      ],
+      "followed_by_grapheme": [
+        "m"
+      ],
+      "followed_by_2": "word_boundary",
+      "surface": "e",
+      "notes": "Overridden for this northern variety: the nucleus is the close-mid [e], not the central [ɐ]. Matching it here, not disabling it, also keeps the stressed nucleus away from any tonic-[e] diphthongisation rule of the spec. Northern EP keeps the close-mid nucleus of word-final ⟨-em -ens⟩: [ẽj̃], [ẽj̃ʃ] (bem [ˈbẽj̃], homem [ˈɔmẽj̃], homens [ˈɔmẽj̃ʃ]). The centralised [ɐ̃j̃] of the pt-PT base is the Lisbon merger: Wikipedia 'Portuguese phonology', 'In Greater Lisbon, [ẽj̃] has merged with [ɐ̃j̃]'; Ciberdúvidas (Viana & Rocha 2006, 'Vogais e ditongos nasais, outra vez', n. 1): 'em dialectos do português europeu … a grafia -em/-en(s) representa o ditongo [ẽj̃]'. Leite de Vasconcellos 1901 (Esquisse d'une dialectologie portugaise, §44n, p. 93; quoted from an OCR copy, diacritics normalised): '-em < l. -ENE correspond -ẽ dans certains endroits de la frontière de Tras-os-Montes et du Minho, et -ẽi ou -ɐi dans le reste du pays'. The border monophthong [ẽ] is local and not modelled. The oral parallel in the same section (§44i): the diphthong ⟨ei⟩ is [ɐj] only 'à Lisbonne' and [ej] in Entre-Douro-e-Minho, the Beira and Trás-os-Montes. The rule matches ⟨m⟩ only, so word-final ⟨-en⟩ (hífen) is not matched here and falls to PT_FINAL_EN_NUCLEUS of pt-PT."
+    },
+    {
+      "id": "PT_FINAL_ENS_NUCLEUS",
+      "phonemes": [
+        "e",
+        "ɛ",
+        "ɨ"
+      ],
+      "grapheme": [
+        "e",
+        "é",
+        "ê"
+      ],
+      "followed_by_phoneme": [
+        "̃"
+      ],
+      "followed_by_grapheme": [
+        "n"
+      ],
+      "followed_by_2": "consonant",
+      "followed_by_3": "word_boundary",
+      "surface": "e",
+      "notes": "Overridden for this northern variety with PT_FINAL_EM_NUCLEUS: the nucleus of the plural ⟨-ens⟩ is the close-mid [e], so it is [ẽj̃ʃ]. The sources are under PT_FINAL_EM_NUCLEUS in this spec."
+    },
+    {
+      "id": "PT_NASAL_E_UNRED",
+      "phonemes": [
+        "ɨ"
+      ],
+      "surface": "e",
+      "grapheme": [
+        "e"
+      ],
+      "followed_by_phoneme": [
+        "̃"
+      ],
+      "stress": "posttonic",
+      "notes": "Restricted to POST-tonic syllables in the Minho. A pretonic ⟨en em⟩ before a consonant keeps the reduced vowel, nasalised: [ɨ̃] (pensar [pɨ̃ˈsaɾ], lembrar, pensamento, vender, tendência, entender [ẽtɨ̃ˈdeɾ]). Leite de Vasconcellos 1900 (Estudos de Philologia Mirandesa I, §76, p. 238): 'Este phenomeno é caracteristico da lingoagem do Alto- e Baixo-Minho; toda a gente culta d'estas regiões … diz usualmente lẹmbrar, tẹmporada, intẹndimento, pẹnsamento, vẹnder (ou mesmo bẹnder!), tẹndencia'; the ring below is 'e surdo (= ẹ) nasal' (p. 201, table b, 'Como na pronúncia do Minho, nas palavras pensar, tentar, lembrar'). He cites Dialectos interamnenses VI §3, IX §8-b and Gonçalves Vianna, Essai de phonétique, p. 46, n. A word-initial ⟨en em⟩ takes the base word_initial [e] and is not reduced. The post-tonic ⟨-em -ens⟩ still un-reduces, so homem stays [ˈɔmẽj̃]."
+    },
+    {
+      "id": "PT_STRESSED_A_BEFORE_NASAL",
+      "phonemes": [],
+      "surface": "ɐ",
+      "notes": "DISABLED for Alto-Minhoto Portuguese. The Northwest keeps an open /a/ before an onset nasal. Lao, Rodrigues & Brissos (2020, Revista da Associação Portuguesa de Linguística 7, p. 308): \"o Noroeste possui [a] e [ã]\". Page 301 of the same paper names the Northwest as \"Minho e Douro Litoral\"."
     }
   ],
-  "notes": "Alto-Minhoto Portuguese of the Alto Minho (Viana do Castelo, Ponte de Lima). Cintra (1971:93) groups Alto-Minho TOGETHER WITH Trás-os-Montes (pt-PT-x-trasosmontes) as a single 'grupo transmontano-alto-minhoto', the conservative Northern varieties that alone retain the medieval FOUR-SIBILANT system; the two specs share the same sibilant deltas. A DELTA over standard (Lisbon-type) pt-PT: inherits the whole standard EP system (unstressed vowel reduction, dark coda /l/, sandhi) via graphemes_base / allophones_base and declares only the archaic-Northern deltas. MODELLED FEATURES: (1) FOUR-SIBILANT SYSTEM (Cintra trait 2, his single most diagnostic North/South isogloss) — the medieval apico-alveolar vs (pre)dorsodental contrast, lost everywhere else, is kept: the grapheme series ⟨s⟩/⟨ss⟩ realises the voiceless APICO-ALVEOLAR [s̺] (word-initial, word-final, and intervocalic ⟨ss⟩) with its voiced intervocalic-⟨s⟩ counterpart [z̺], contrasting with the LAMINAL (predorsodental) [s] of ⟨c⟩(before e/i)/⟨ç⟩ and [z] of ⟨z⟩ (inherited unchanged from pt-PT, left unmarked — the Mirandese/mwl notation convention). So the minimal pairs Cintra cites stay distinct: passo [ˈpas̺u] vs paço [ˈpasu], coser [kuˈz̺eɾ] vs cozer [kuˈzeɾ]. Cintra (1971:93): 'a existência de um sistema de quatro sibilantes — [s̺] e [z̺] ápicoalveolares (correspondentes aos grafemas s e ss), característicos de todos os falares setentrionais, opondo-se a e convivendo com o [s] e o [z] predorsodentais (correspondentes aos grafemas ce,i, ç e z)'; note 29 fixes the positions: '[s̺] ápico-alveolar (correspondente a s inicial e final e ss interior)'. Álvarez Pérez (2014:37, §4) confirms this conservative four-sibilant system is precisely the 'Transmontanos and Alto-Minhotos' group and quantifies it from the ALEPG. NOTATION: Cintra's own term is apico-alveolar / 'reverso'; his [s̺] [z̺] are commonly rendered [ʂ] [ʐ] in modern IPA (the 's beirão'/'reverso' is acoustically retroflex-like), recorded as the surface variant in `allophones`; the [s̺]/[z̺] symbols are Cintra's own and are used as the default. LIMIT: preconsonantal coda ⟨s⟩ (festa, gosto) keeps the inherited pan-EP chiado [ʃ] — Cintra's note 29 enumerates the [s̺] positions as 's inicial e final e ss interior' only, so the preconsonantal palatalisation, a separate process, is left inherited rather than overridden. (2) ARCHAIC ⟨ch⟩ AFFRICATE (Cintra trait 3) — the syllable-onset /tʃ/–/ʃ/ contrast is preserved: ⟨ch⟩ = [tʃ] (chave -> [ˈtʃabɨ]) vs ⟨x⟩ = [ʃ], not merged as in standard EP. Cintra (1971:87): 'a permanência da distinção fonológica em posição inicial de sílaba entre o fonema /tʃ/, representado pelo grafema ch e o fonema /ʃ/ representado pelo grafema x'. Modelled as an inherited-map grapheme delta. Porto's tonic-close-vowel diphthongisation ([e]->[je], [o]->[wo]) is a Baixo-Minho/Douro-Litoral (baixo-minhoto-duriense) feature and is deliberately NOT applied to the transmontano-alto-minhoto group (Cintra 1971:93).",
+  "notes": "Alto-Minhoto Portuguese of the Alto Minho (Viana do Castelo, Ponte de Lima). Cintra (1971:93) groups Alto-Minho TOGETHER WITH Trás-os-Montes (pt-PT-x-tras-os-montes) as a single 'grupo transmontano-alto-minhoto', the conservative Northern varieties that alone retain the medieval FOUR-SIBILANT system; the two specs share the same sibilant deltas. A DELTA over standard (Lisbon-type) pt-PT: inherits the whole standard EP system (unstressed vowel reduction, dark coda /l/, sandhi) via graphemes_base / allophones_base and declares only the archaic-Northern deltas. MODELLED FEATURES: (1) FOUR-SIBILANT SYSTEM (Cintra trait 2, his single most diagnostic North/South isogloss) — the medieval apico-alveolar vs (pre)dorsodental contrast, lost everywhere else, is kept: the grapheme series ⟨s⟩/⟨ss⟩ realises the voiceless APICO-ALVEOLAR [s̺] (word-initial, word-final, and intervocalic ⟨ss⟩) with its voiced intervocalic-⟨s⟩ counterpart [z̺], contrasting with the LAMINAL (predorsodental) [s] of ⟨c⟩(before e/i)/⟨ç⟩ and [z] of ⟨z⟩ (inherited unchanged from pt-PT, left unmarked — the Mirandese/mwl notation convention). So the minimal pairs Cintra cites stay distinct: passo [ˈpas̺u] vs paço [ˈpasu], coser [kuˈz̺eɾ] vs cozer [kuˈzeɾ]. Cintra (1971:93): 'a existência de um sistema de quatro sibilantes — [s̺] e [z̺] ápicoalveolares (correspondentes aos grafemas s e ss), característicos de todos os falares setentrionais, opondo-se a e convivendo com o [s] e o [z] predorsodentais (correspondentes aos grafemas ce,i, ç e z)'; note 29 fixes the positions: '[s̺] ápico-alveolar (correspondente a s inicial e final e ss interior)'. Álvarez Pérez (2014:37, §4) confirms this conservative four-sibilant system is precisely the 'Transmontanos and Alto-Minhotos' group and quantifies it from the ALEPG. NOTATION: Cintra's own term is apico-alveolar / 'reverso'; his [s̺] [z̺] are commonly rendered [ʂ] [ʐ] in modern IPA (the 's beirão'/'reverso' is acoustically retroflex-like), recorded as the surface variant in `allophones`; the [s̺]/[z̺] symbols are Cintra's own and are used as the default. LIMIT: preconsonantal coda ⟨s⟩ (festa, gosto) keeps the inherited pan-EP chiado [ʃ] — Cintra's note 29 enumerates the [s̺] positions as 's inicial e final e ss interior' only, so the preconsonantal palatalisation, a separate process, is left inherited rather than overridden. (2) ARCHAIC ⟨ch⟩ AFFRICATE (Cintra trait 3) — the syllable-onset /tʃ/–/ʃ/ contrast is preserved: ⟨ch⟩ = [tʃ] (chave -> [ˈtʃabɨ]) vs ⟨x⟩ = [ʃ], not merged as in standard EP. Cintra (1971:87): 'a permanência da distinção fonológica em posição inicial de sílaba entre o fonema /tʃ/, representado pelo grafema ch e o fonema /ʃ/ representado pelo grafema x'. Modelled as an inherited-map grapheme delta. Porto's tonic-close-vowel diphthongisation ([e]->[je], [o]->[wo]) is a Baixo-Minho/Douro-Litoral (baixo-minhoto-duriense) feature and is deliberately NOT applied to the transmontano-alto-minhoto group (Cintra 1971:93).",
   "quality": "research",
   "ancestors": [
     {
@@ -108,68 +174,6 @@
     "end_year": null
   },
   "iso639_3": "por",
-  "stress": {
-    "onset_clusters": ["bl", "br", "bɫ", "bɾ", "bʀ", "bʁ", "bʎ", "bχ", "dr", "dɾ", "dʀ", "dʁ", "dʎ", "dχ", "fl", "fr", "fɫ", "fɾ", "fʀ", "fʁ", "fʎ", "fχ", "kl", "kr", "kɫ", "kɾ", "kʀ", "kʁ", "kʎ", "kχ", "pl", "pr", "pɫ", "pɾ", "pʀ", "pʁ", "pʎ", "pχ", "tr", "tɾ", "tʀ", "tʁ", "tʎ", "tχ", "vl", "vr", "vɫ", "vɾ", "vʀ", "vʁ", "vʎ", "vχ", "ðr", "ðɾ", "ðʀ", "ðʁ", "ðʎ", "ðχ", "ɡl", "ɡr", "ɡɫ", "ɡɾ", "ɡʀ", "ɡʁ", "ɡʎ", "ɡχ", "ɣl", "ɣr", "ɣɫ", "ɣɾ", "ɣʀ", "ɣʁ", "ɣʎ", "ɣχ", "βl", "βr", "βɫ", "βɾ", "βʀ", "βʁ", "βʎ", "βχ"],
-    "cliticless_words": ["o", "a", "os", "as", "de", "do", "da", "dos", "das", "em", "no", "na", "nos", "nas", "por", "pelo", "pela", "pelos", "pelas", "ao", "aos", "à", "às", "com", "sem", "e", "que", "se", "me", "te", "lhe", "lhes", "vos", "lo", "la", "los", "las", "lho", "lha", "lhos", "lhas"],
-    "default_position": -2,
-    "final_stress_endings": [
-      "r",
-      "l",
-      "z",
-      "x",
-      "i",
-      "u",
-      "im",
-      "om",
-      "um",
-      "is",
-      "us",
-      "ns",
-      "ão",
-      "ãe",
-      "õe",
-      "au",
-      "éu",
-      "éi",
-      "ói"
-    ],
-    "penult_stress_endings": [],
-    "marked_vowels": [
-      "á",
-      "é",
-      "í",
-      "ó",
-      "ú",
-      "â",
-      "ê",
-      "ô",
-      "ã",
-      "õ"
-    ],
-    "stress_mark": "ˈ",
-    "notes": "Acordo Ortográfico 1990 conventions: paroxytone default; written accents override; final -i/-u/-r/-l/-z/-x/-im/-om/-um/-ns and nasal diphthongs attract final stress. Unmarked -em/-am stay paroxytone (homem, falam). DIPHTHONGS: declared so the bundled syllabifier counts nuclei correctly — without them every vowel run merges into one nucleus and co-e-lho is read as coe-lho, one syllable short, putting the stress and its vowel reduction on the wrong vowel. ⟨oe⟩ is hiatus, not a diphthong (Cunha & Cintra, §Ditongos).",
-    "diphthongs": [
-      "ãe",
-      "ão",
-      "õe",
-      "ai",
-      "ái",
-      "au",
-      "áu",
-      "ei",
-      "éi",
-      "êi",
-      "eu",
-      "éu",
-      "êu",
-      "iu",
-      "oi",
-      "ói",
-      "ôi",
-      "ou",
-      "ui"
-    ]
-  },
   "location": {
     "latitude": 41.7,
     "longitude": -8.833333,
@@ -180,7 +184,7 @@
   "audit": {
     "clup_dialect": {
       "conclusion": "sample_too_small",
-      "measured": "The clup_dialect row holds 4 scored sentences (clup_dialect is sentence-level: each gold entry is one interview sentence, scored as a single unit against the engine's whole-sentence transcription, so the bootstrap resamples across only 4 sentence-level PER values, not across words), per=0.3655, per_ci_low=0.3279, per_ci_high=0.4107 (benchmarks/results.json). At n=4 sentences the bootstrap interval is already collapsing toward a point for the same reason (few distinct values to resample), so its narrow width reflects the small sample, not precision; see docs/scoreboard.md's `95% CI` note and the THIN_ROW_MARK cutoff (rows under 20 scored items). This row cannot gate a production promotion on its own strength.",
+      "measured": "The clup_dialect row holds 4 scored sentences (clup_dialect is sentence-level: each gold entry is one interview sentence, scored as a single unit against the engine's whole-sentence transcription, so the bootstrap resamples across only 4 sentence-level PER values, not across words), per=0.3655, per_ci_low=0.3279, per_ci_high=0.4107 (benchmarks/results.json). At n=4 sentences the bootstrap interval is already collapsing toward a point for the same reason (few distinct values to resample), so its narrow width reflects the small sample, not precision; see docs/evaluation/generated/scoreboard.md's `95% CI` note and the THIN_ROW_MARK cutoff (rows under 20 scored items). This row cannot gate a production promotion on its own strength.",
       "reference": "spec notes"
     }
   }

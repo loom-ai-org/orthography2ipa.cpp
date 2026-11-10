@@ -3,104 +3,12 @@
   "name": "Nahuatl",
   "parent": "x-clade-utoa1244",
   "script": "Latin",
-  "graphemes": {
-    "a": [
-      "a"
-    ],
-    "e": [
-      "e"
-    ],
-    "i": [
-      "i"
-    ],
-    "o": [
-      "o"
-    ],
-    "p": [
-      "p"
-    ],
-    "t": [
-      "t"
-    ],
-    "k": [
-      "k"
-    ],
-    "m": [
-      "m"
-    ],
-    "n": [
-      "n"
-    ],
-    "s": [
-      "s"
-    ],
-    "l": [
-      "l"
-    ],
-    "r": [
-      "ɾ"
-    ],
-    "w": [
-      "w"
-    ],
-    "y": [
-      "j"
-    ],
-    "h": [
-      "h"
-    ]
-  },
-  "allophones": {
-    "a": [
-      "a"
-    ],
-    "e": [
-      "e"
-    ],
-    "i": [
-      "i"
-    ],
-    "o": [
-      "o"
-    ],
-    "p": [
-      "p"
-    ],
-    "t": [
-      "t"
-    ],
-    "k": [
-      "k"
-    ],
-    "m": [
-      "m"
-    ],
-    "n": [
-      "n"
-    ],
-    "s": [
-      "s"
-    ],
-    "l": [
-      "l"
-    ],
-    "ɾ": [
-      "ɾ"
-    ],
-    "w": [
-      "w"
-    ],
-    "j": [
-      "j"
-    ],
-    "h": [
-      "h"
-    ]
-  },
-  "notes": "STRUCTURAL ADSTRATE STUB (not a modelled G2P target). Nahuatl (Aztecan, Uto-Aztecan). The principal indigenous adstrate of central/highland Mexican Spanish; Nawat/Pipil in El Salvador. It exists here only so that the ancestry / phylogenetic-distance metrics of the Latin American Spanish varieties that reference it as an indigenous adstrate have a node to resolve to; the minimal grapheme set is a placeholder and NO phonology is claimed or modelled (afa.json / ber-x-kabyle-atlas.json stub pattern).",
+  "graphemes": {},
+  "allophones": {},
+  "notes": "STRUCTURAL ADSTRATE STUB (not a modelled G2P target). Nahuatl (Aztecan, Uto-Aztecan) is the principal indigenous adstrate of central and highland Mexican Spanish, with Nawat/Pipil in El Salvador. It exists so that the ancestry and phylogenetic-distance metrics of the Latin American Spanish varieties that reference it as an adstrate have a node to resolve to. It carries no grapheme table. Nahuatl spelling differs between varieties and conventions, so a table belongs to the spec of one variety, with a cited description of the orthography it uses. ISO 639-3 has no code for Nahuatl as a whole: each Nahuatl variety has its own individual code. The ISO 639-5 collective code for the Nahuatl languages is `nah`.",
   "quality": "stub",
   "script_type": "alphabet",
-  "iso639_3": "nah",
+  "iso639_3": null,
   "glottolog_code": "azte1234",
   "wikipedia": [
     "https://en.wikipedia.org/wiki/Nahuatl_language",

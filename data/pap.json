@@ -272,7 +272,7 @@
       "notes": "Portuguese superstrate: earliest Iberian lexifier; the Portuguese origin hypothesis (Goodman, Maurer) holds that Papiamentu originated from a Portuguese-based creole spoken by Sephardic Jews and Portuguese traders from the early 17th century."
     },
     {
-      "code": "nl",
+      "code": "nl-NL",
       "role": "superstrate",
       "weight": 0.35,
       "notes": "Dutch superstrate: Netherlands ruled Curaçao from 1634; Dutch colonial administration contributed vocabulary, and Dutch is still a co-official language. Official Curaçao orthography (2009) reflects phonemic principles distinct from Dutch etymology."
@@ -377,5 +377,427 @@
     "longitude": -69.93988,
     "source": "glottolog",
     "notes": "Glottolog's representative point for Papiamento."
-  }
+  },
+  "allophone_rules": [
+    {
+      "id": "PT_LEX_NASAL_UI",
+      "phonemes": [],
+      "surface": "ũ",
+      "notes": "DISABLED for Papiamentu (Papiamento). PT_LEX_NASAL_UI and PT_LEX_NASAL_UI_GLIDE give the pt-PT and pt-BR words muito, muita, muitos, muitas and mui the nasal diphthong [ũj̃]. No source for these words in this language was read, so its output stays what it was."
+    },
+    {
+      "id": "PT_LEX_NASAL_UI_GLIDE",
+      "phonemes": [],
+      "surface": "j̃",
+      "notes": "DISABLED for Papiamentu (Papiamento). PT_LEX_NASAL_UI and PT_LEX_NASAL_UI_GLIDE give the pt-PT and pt-BR words muito, muita, muitos, muitas and mui the nasal diphthong [ũj̃]. No source for these words in this language was read, so its output stays what it was."
+    },
+    {
+      "id": "PT_LEX_AO_A",
+      "phonemes": [],
+      "surface": "a",
+      "notes": "DISABLED for Papiamentu (Papiamento). PT_LEX_AO_A and PT_LEX_AO_GLIDE give the pt-PT contraction ao the diphthong [aw]. No source for ao in this language was read, so its output stays what it was."
+    },
+    {
+      "id": "PT_LEX_AO_GLIDE",
+      "phonemes": [],
+      "surface": "w",
+      "notes": "DISABLED for Papiamentu (Papiamento). PT_LEX_AO_A and PT_LEX_AO_GLIDE give the pt-PT contraction ao the diphthong [aw]. No source for ao in this language was read, so its output stays what it was."
+    },
+    {
+      "id": "PT_LEX_OPEN_E_SUFFIX",
+      "phonemes": [],
+      "surface": "e",
+      "notes": "DISABLED for Papiamento, a creole that inherits the pt-PT rule layer. No source for the stressed vowel of this ending in Papiamento was read, so its output stays what it was; the pt-PT rule rests on Infopédia readings of standard European Portuguese."
+    },
+    {
+      "id": "PT_SUFFIX_EZ_CLOSE",
+      "phonemes": [],
+      "surface": "e",
+      "notes": "DISABLED for Papiamento, a creole that inherits the pt-PT rule layer. No source for the stressed vowel of this ending in Papiamento was read, so its output stays what it was; the pt-PT rule rests on Infopédia readings of standard European Portuguese."
+    },
+    {
+      "id": "PT_SUFFIX_EZA_ESA_CLOSE",
+      "phonemes": [],
+      "surface": "e",
+      "notes": "DISABLED for Papiamento, a creole that inherits the pt-PT rule layer. No source for the stressed vowel of this ending in Papiamento was read, so its output stays what it was; the pt-PT rule rests on Infopédia readings of standard European Portuguese."
+    },
+    {
+      "id": "PT_SUFFIX_EMA_CLOSE",
+      "phonemes": [],
+      "surface": "e",
+      "notes": "DISABLED for Papiamento, a creole that inherits the pt-PT rule layer. No source for the stressed vowel of this ending in Papiamento was read, so its output stays what it was; the pt-PT rule rests on Infopédia readings of standard European Portuguese."
+    },
+    {
+      "id": "PT_SUFFIX_ESCO_CLOSE",
+      "phonemes": [],
+      "surface": "e",
+      "notes": "DISABLED for Papiamento, a creole that inherits the pt-PT rule layer. No source for the stressed vowel of this ending in Papiamento was read, so its output stays what it was; the pt-PT rule rests on Infopédia readings of standard European Portuguese."
+    },
+    {
+      "id": "PT_LEX_OPEN_O_SUFFIX",
+      "phonemes": [],
+      "surface": "o",
+      "notes": "DISABLED for Papiamento, a creole that inherits the pt-PT rule layer. No source for the stressed vowel of this ending in Papiamento was read, so its output stays what it was; the pt-PT rule rests on Infopédia readings of standard European Portuguese."
+    },
+    {
+      "id": "PT_SUFFIX_OR_CLOSE",
+      "phonemes": [],
+      "surface": "o",
+      "notes": "DISABLED for Papiamento, a creole that inherits the pt-PT rule layer. No source for the stressed vowel of this ending in Papiamento was read, so its output stays what it was; the pt-PT rule rests on Infopédia readings of standard European Portuguese."
+    },
+    {
+      "id": "PT_SUFFIX_OSO_CLOSE",
+      "phonemes": [],
+      "surface": "o",
+      "notes": "DISABLED for Papiamento, a creole that inherits the pt-PT rule layer. No source for the stressed vowel of this ending in Papiamento was read, so its output stays what it was; the pt-PT rule rests on Infopédia readings of standard European Portuguese."
+    },
+    {
+      "id": "PT_SUFFIX_ONHO_CLOSE",
+      "phonemes": [],
+      "surface": "o",
+      "notes": "DISABLED for Papiamento, a creole that inherits the pt-PT rule layer. No source for the stressed vowel of this ending in Papiamento was read, so its output stays what it was; the pt-PT rule rests on Infopédia readings of standard European Portuguese."
+    },
+    {
+      "id": "PT_SUFFIX_DORA_CLOSE",
+      "phonemes": [],
+      "surface": "o",
+      "notes": "DISABLED for Papiamento, a creole that inherits the pt-PT rule layer. No source for the stressed vowel of this ending in Papiamento was read, so its output stays what it was; the pt-PT rule rests on Infopédia readings of standard European Portuguese."
+    },
+    {
+      "id": "PT_SUFFIX_DORA_CANDIDATE_OPEN",
+      "phonemes": [],
+      "surface": "ɔ",
+      "notes": "DISABLED for Papiamento, a creole that inherits the pt-PT rule layer. No source for the stressed vowel of this ending in Papiamento was read, so its output stays what it was; the pt-PT rule rests on Infopédia readings of standard European Portuguese."
+    },
+    {
+      "id": "PT_SUFFIX_OIDE_OPEN",
+      "phonemes": [],
+      "surface": "ɔ",
+      "notes": "DISABLED for Papiamento, a creole that inherits the pt-PT rule layer. No source for the stressed vowel of this ending in Papiamento was read, so its output stays what it was; the pt-PT rule rests on Infopédia readings of standard European Portuguese."
+    },
+    {
+      "id": "PT_LEX_CLITIC_O",
+      "phonemes": [],
+      "surface": "u",
+      "notes": "DISABLED for Papiamentu (Papiamento). PT_LEX_CLITIC_O gives the pt-PT article ⟨o os⟩ the [u] that an unstressed ⟨o⟩ reduces to in pt-PT. This spec keeps an unstressed ⟨o⟩ as [o] (bonito keeps its pretonic [o]), and ⟨o os⟩ need not be the pt-PT article in this language. So the rule does not apply, and o and os keep the reading of this spec."
+    },
+    {
+      "id": "PT_CODA_S_BEFORE_ZH_INTERNAL",
+      "phonemes": [],
+      "surface": "",
+      "notes": "DISABLED for Papiamentu (Papiamento). PT_CODA_S_BEFORE_ZH_INTERNAL deletes the pt-PT coda [ʃ] before /ʒ/ inside a word. The deletion in this language has no variety-specific source, so the coda keeps the reading of this spec."
+    },
+    {
+      "id": "PT_CODA_S_VOICING_INTERNAL",
+      "phonemes": [],
+      "surface": "ʒ",
+      "notes": "DISABLED for Papiamentu (Papiamento). PT_CODA_S_VOICING_INTERNAL voices the pt-PT coda [ʃ] to [ʒ] before a voiced consonant inside a word. The voicing of a word-internal coda sibilant in this language has no variety-specific source, so the coda keeps the reading of this spec."
+    },
+    {
+      "id": "PT_INITIAL_ES_RAISE",
+      "phonemes": [],
+      "surface": "i",
+      "notes": "DISABLED for Papiamentu (Papiamento). PT_INITIAL_ES_RAISE describes European Portuguese, and no source for this language was read."
+    },
+    {
+      "id": "PT_INITIAL_O_KEEP_BEFORE_CODA_NASAL",
+      "phonemes": [],
+      "surface": "o",
+      "notes": "DISABLED for Papiamentu (Papiamento). The PT_INITIAL_O rules describe European Portuguese, and no source for this language was read."
+    },
+    {
+      "id": "PT_INITIAL_O_OPEN",
+      "phonemes": [],
+      "surface": "ɔ",
+      "notes": "DISABLED for Papiamentu (Papiamento). The PT_INITIAL_O rules describe European Portuguese, and no source for this language was read."
+    },
+    {
+      "id": "PT_INITIAL_O_CANDIDATE_U",
+      "phonemes": [],
+      "surface": "u",
+      "notes": "DISABLED for Papiamentu (Papiamento). The PT_INITIAL_O rules describe European Portuguese, and no source for this language was read."
+    },
+    {
+      "id": "PT_INITIAL_O_CANDIDATE_O",
+      "phonemes": [],
+      "surface": "o",
+      "notes": "DISABLED for Papiamentu (Papiamento). The PT_INITIAL_O rules describe European Portuguese, and no source for this language was read."
+    },
+    {
+      "id": "PT_INITIAL_HO_KEEP_BEFORE_CODA_NASAL",
+      "phonemes": [],
+      "surface": "o",
+      "notes": "DISABLED for Papiamentu (Papiamento). The PT_INITIAL_HO rules extend the PT_INITIAL_O rules, which describe European Portuguese, and no source for this language was read."
+    },
+    {
+      "id": "PT_INITIAL_HO_OPEN",
+      "phonemes": [],
+      "surface": "ɔ",
+      "notes": "DISABLED for Papiamentu (Papiamento). The PT_INITIAL_HO rules extend the PT_INITIAL_O rules, which describe European Portuguese, and no source for this language was read."
+    },
+    {
+      "id": "PT_INITIAL_HO_CANDIDATE_U",
+      "phonemes": [],
+      "surface": "u",
+      "notes": "DISABLED for Papiamentu (Papiamento). The PT_INITIAL_HO rules extend the PT_INITIAL_O rules, which describe European Portuguese, and no source for this language was read."
+    },
+    {
+      "id": "PT_INITIAL_HO_CANDIDATE_O",
+      "phonemes": [],
+      "surface": "o",
+      "notes": "DISABLED for Papiamentu (Papiamento). The PT_INITIAL_HO rules extend the PT_INITIAL_O rules, which describe European Portuguese, and no source for this language was read."
+    },
+    {
+      "id": "PT_INITIAL_E_OPEN",
+      "phonemes": [],
+      "surface": "i",
+      "notes": "DISABLED for Papiamentu (Papiamento). The PT_INITIAL_E rules describe European Portuguese, and no source for this language was read."
+    },
+    {
+      "id": "PT_INITIAL_E_OPEN_CANDIDATE_E",
+      "phonemes": [],
+      "surface": "e",
+      "notes": "DISABLED for Papiamentu (Papiamento). The PT_INITIAL_E rules describe European Portuguese, and no source for this language was read."
+    },
+    {
+      "id": "PT_INITIAL_E_OPEN_CANDIDATE_OPEN",
+      "phonemes": [],
+      "surface": "ɛ",
+      "notes": "DISABLED for Papiamentu (Papiamento). The PT_INITIAL_E rules describe European Portuguese, and no source for this language was read."
+    },
+    {
+      "id": "PT_INITIAL_E_OPEN_CANDIDATE_REDUCED",
+      "phonemes": [],
+      "surface": "ɨ",
+      "notes": "DISABLED for Papiamentu (Papiamento). The PT_INITIAL_E rules describe European Portuguese, and no source for this language was read."
+    },
+    {
+      "id": "PT_INITIAL_E_LIQUID_CODA",
+      "phonemes": [],
+      "surface": "ɛ",
+      "notes": "DISABLED for Papiamentu (Papiamento). The PT_INITIAL_E rules describe European Portuguese, and no source for this language was read."
+    },
+    {
+      "id": "PT_INITIAL_E_LIQUID_CODA_CANDIDATE_E",
+      "phonemes": [],
+      "surface": "e",
+      "notes": "DISABLED for Papiamentu (Papiamento). The PT_INITIAL_E rules describe European Portuguese, and no source for this language was read."
+    },
+    {
+      "id": "PT_INITIAL_E_LIQUID_CODA_CANDIDATE_I",
+      "phonemes": [],
+      "surface": "i",
+      "notes": "DISABLED for Papiamentu (Papiamento). The PT_INITIAL_E rules describe European Portuguese, and no source for this language was read."
+    },
+    {
+      "id": "PT_INITIAL_E_LIQUID_CODA_CANDIDATE_REDUCED",
+      "phonemes": [],
+      "surface": "ɨ",
+      "notes": "DISABLED for Papiamentu (Papiamento). The PT_INITIAL_E rules describe European Portuguese, and no source for this language was read."
+    },
+    {
+      "id": "PT_INITIAL_E_CODA_CANDIDATE_OPEN",
+      "phonemes": [],
+      "surface": "ɛ",
+      "notes": "DISABLED for Papiamentu (Papiamento). The PT_INITIAL_E rules describe European Portuguese, and no source for this language was read."
+    },
+    {
+      "id": "PT_INITIAL_E_CODA_CANDIDATE_I",
+      "phonemes": [],
+      "surface": "i",
+      "notes": "DISABLED for Papiamentu (Papiamento). The PT_INITIAL_E rules describe European Portuguese, and no source for this language was read."
+    },
+    {
+      "id": "PT_INITIAL_E_CODA_CANDIDATE_REDUCED",
+      "phonemes": [],
+      "surface": "ɨ",
+      "notes": "DISABLED for Papiamentu (Papiamento). The PT_INITIAL_E rules describe European Portuguese, and no source for this language was read."
+    },
+    {
+      "id": "PT_CODA_L_A_OPEN",
+      "phonemes": [],
+      "surface": "a",
+      "notes": "DISABLED for Papiamentu (Papiamento). The PT_CODA_L rules describe European Portuguese, and no source for this language was read."
+    },
+    {
+      "id": "PT_CODA_L_A_CANDIDATE_REDUCED",
+      "phonemes": [],
+      "surface": "ɐ",
+      "notes": "DISABLED for Papiamentu (Papiamento). The PT_CODA_L rules describe European Portuguese, and no source for this language was read."
+    },
+    {
+      "id": "PT_CODA_L_E_OPEN",
+      "phonemes": [],
+      "surface": "ɛ",
+      "notes": "DISABLED for Papiamentu (Papiamento). The PT_CODA_L rules describe European Portuguese, and no source for this language was read."
+    },
+    {
+      "id": "PT_CODA_L_E_CANDIDATE_REDUCED",
+      "phonemes": [],
+      "surface": "ɨ",
+      "notes": "DISABLED for Papiamentu (Papiamento). The PT_CODA_L rules describe European Portuguese, and no source for this language was read."
+    },
+    {
+      "id": "PT_CODA_L_O_CLOSE",
+      "phonemes": [],
+      "surface": "o",
+      "notes": "DISABLED for Papiamentu (Papiamento). The PT_CODA_L rules describe European Portuguese, and no source for this language was read."
+    },
+    {
+      "id": "PT_CODA_L_O_CANDIDATE_OPEN",
+      "phonemes": [],
+      "surface": "ɔ",
+      "notes": "DISABLED for Papiamentu (Papiamento). The PT_CODA_L rules describe European Portuguese, and no source for this language was read."
+    },
+    {
+      "id": "PT_CODA_L_O_CANDIDATE_REDUCED",
+      "phonemes": [],
+      "surface": "u",
+      "notes": "DISABLED for Papiamentu (Papiamento). The PT_CODA_L rules describe European Portuguese, and no source for this language was read."
+    },
+    {
+      "id": "PT_STRESSED_E_PREPALATAL_CLOSE",
+      "phonemes": [],
+      "surface": "e",
+      "notes": "DISABLED for Papiamentu (Papiamento). The PT_STRESSED_E_PREPALATAL rules describe European Portuguese, and no source for this language was read."
+    },
+    {
+      "id": "PT_STRESSED_E_PREPALATAL_CANDIDATE_LISBON",
+      "phonemes": [],
+      "surface": "ɐ",
+      "notes": "DISABLED for Papiamentu (Papiamento). The PT_STRESSED_E_PREPALATAL rules describe European Portuguese, and no source for this language was read."
+    },
+    {
+      "id": "PT_STRESSED_E_PREPALATAL_CANDIDATE_OPEN",
+      "phonemes": [],
+      "surface": "ɛ",
+      "notes": "DISABLED for Papiamentu (Papiamento). The PT_STRESSED_E_PREPALATAL rules describe European Portuguese, and no source for this language was read."
+    },
+    {
+      "id": "PT_CODA_STOP_INITIAL_E_OPEN",
+      "phonemes": [],
+      "surface": "ɛ",
+      "notes": "DISABLED for Papiamentu (Papiamento). The PT_CODA_STOP rules describe European Portuguese, and no source for this language was read."
+    },
+    {
+      "id": "PT_CODA_STOP_INITIAL_E_CANDIDATE_E",
+      "phonemes": [],
+      "surface": "e",
+      "notes": "DISABLED for Papiamentu (Papiamento). The PT_CODA_STOP rules describe European Portuguese, and no source for this language was read."
+    },
+    {
+      "id": "PT_CODA_STOP_INITIAL_E_CANDIDATE_I",
+      "phonemes": [],
+      "surface": "i",
+      "notes": "DISABLED for Papiamentu (Papiamento). The PT_CODA_STOP rules describe European Portuguese, and no source for this language was read."
+    },
+    {
+      "id": "PT_CODA_STOP_INITIAL_E_CANDIDATE_REDUCED",
+      "phonemes": [],
+      "surface": "ɨ",
+      "notes": "DISABLED for Papiamentu (Papiamento). The PT_CODA_STOP rules describe European Portuguese, and no source for this language was read."
+    },
+    {
+      "id": "PT_CODA_STOP_E_OPEN",
+      "phonemes": [],
+      "surface": "ɛ",
+      "notes": "DISABLED for Papiamentu (Papiamento). The PT_CODA_STOP rules describe European Portuguese, and no source for this language was read."
+    },
+    {
+      "id": "PT_CODA_STOP_E_CANDIDATE_REDUCED",
+      "phonemes": [],
+      "surface": "ɨ",
+      "notes": "DISABLED for Papiamentu (Papiamento). The PT_CODA_STOP rules describe European Portuguese, and no source for this language was read."
+    },
+    {
+      "id": "PT_CODA_STOP_E_CANDIDATE_CLOSE",
+      "phonemes": [],
+      "surface": "e",
+      "notes": "DISABLED for Papiamentu (Papiamento). The PT_CODA_STOP rules describe European Portuguese, and no source for this language was read."
+    },
+    {
+      "id": "PT_CODA_STOP_O_OPEN",
+      "phonemes": [],
+      "surface": "ɔ",
+      "notes": "DISABLED for Papiamentu (Papiamento). The PT_CODA_STOP rules describe European Portuguese, and no source for this language was read."
+    },
+    {
+      "id": "PT_CODA_STOP_O_CANDIDATE_REDUCED",
+      "phonemes": [],
+      "surface": "u",
+      "notes": "DISABLED for Papiamentu (Papiamento). The PT_CODA_STOP rules describe European Portuguese, and no source for this language was read."
+    },
+    {
+      "id": "PT_CODA_STOP_O_CANDIDATE_CLOSE",
+      "phonemes": [],
+      "surface": "o",
+      "notes": "DISABLED for Papiamentu (Papiamento). The PT_CODA_STOP rules describe European Portuguese, and no source for this language was read."
+    },
+    {
+      "id": "PT_LEX_REDUCED_A",
+      "phonemes": [],
+      "surface": "ɐ",
+      "notes": "DISABLED for Papiamentu (Papiamento). The pt-PT function-word rules give the vowels of European Portuguese, from Infopédia and WikiPron pt-PT. No source read gives these vowels for this variety, so it keeps the reading the spec gives."
+    },
+    {
+      "id": "PT_LEX_PARA_CANDIDATE_VERB",
+      "phonemes": [],
+      "surface": "a",
+      "notes": "DISABLED for Papiamentu (Papiamento). The pt-PT function-word rules give the vowels of European Portuguese, from Infopédia and WikiPron pt-PT. No source read gives these vowels for this variety, so it keeps the reading the spec gives."
+    },
+    {
+      "id": "PT_LEX_FUNCTION_CLOSE_E",
+      "phonemes": [],
+      "surface": "e",
+      "notes": "DISABLED for Papiamentu (Papiamento). The pt-PT function-word rules give the vowels of European Portuguese, from Infopédia and WikiPron pt-PT. No source read gives these vowels for this variety, so it keeps the reading the spec gives."
+    },
+    {
+      "id": "PT_LEX_FUNCTION_OPEN_E",
+      "phonemes": [],
+      "surface": "ɛ",
+      "notes": "DISABLED for Papiamentu (Papiamento). The pt-PT function-word rules give the vowels of European Portuguese, from Infopédia and WikiPron pt-PT. No source read gives these vowels for this variety, so it keeps the reading the spec gives."
+    },
+    {
+      "id": "PT_LEX_FUNCTION_CLOSE_O",
+      "phonemes": [],
+      "surface": "o",
+      "notes": "DISABLED for Papiamentu (Papiamento). The pt-PT function-word rules give the vowels of European Portuguese, from Infopédia and WikiPron pt-PT. No source read gives these vowels for this variety, so it keeps the reading the spec gives."
+    },
+    {
+      "id": "PT_LEX_FUNCTION_OPEN_O",
+      "phonemes": [],
+      "surface": "ɔ",
+      "notes": "DISABLED for Papiamentu (Papiamento). The pt-PT function-word rules give the vowels of European Portuguese, from Infopédia and WikiPron pt-PT. No source read gives these vowels for this variety, so it keeps the reading the spec gives."
+    },
+    {
+      "id": "PT_LEX_TODO_CLOSE",
+      "phonemes": [],
+      "surface": "o",
+      "notes": "DISABLED for Papiamentu (Papiamento). The pt-PT function-word rules give the vowels of European Portuguese, from Infopédia and WikiPron pt-PT. No source read gives these vowels for this variety, so it keeps the reading the spec gives."
+    },
+    {
+      "id": "PT_LEX_TODO_CANDIDATE_OPEN",
+      "phonemes": [],
+      "surface": "ɔ",
+      "notes": "DISABLED for Papiamentu (Papiamento). The pt-PT function-word rules give the vowels of European Portuguese, from Infopédia and WikiPron pt-PT. No source read gives these vowels for this variety, so it keeps the reading the spec gives."
+    },
+    {
+      "id": "PT_LEX_VOCE_OPEN_O",
+      "phonemes": [],
+      "surface": "ɔ",
+      "notes": "DISABLED for Papiamentu (Papiamento). The pt-PT function-word rules give the vowels of European Portuguese, from Infopédia and WikiPron pt-PT. No source read gives these vowels for this variety, so it keeps the reading the spec gives."
+    },
+    {
+      "id": "PT_LEX_SOB_CLOSE_O",
+      "phonemes": [],
+      "surface": "o",
+      "notes": "DISABLED for Papiamentu (Papiamento). The pt-PT function-word rules give the vowels of European Portuguese, from Infopédia and WikiPron pt-PT. No source read gives these vowels for this variety, so it keeps the reading the spec gives."
+    },
+    {
+      "id": "PT_STRESSED_A_BEFORE_NASAL",
+      "phonemes": [],
+      "surface": "ɐ",
+      "notes": "DISABLED for Papiamentu (Papiamento). No source read covers a stressed /a/ before an onset nasal in this variety. The reading is the spec default and makes no claim about this context."
+    }
+  ]
 }

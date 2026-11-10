@@ -2,174 +2,20 @@
   "code": "it-IT-x-roma",
   "name": "Romanesco",
   "script": "Latin",
-  "graphemes": {
-    "a": [
-      "a"
-    ],
-    "e": [
-      "e",
-      "ɛ"
-    ],
-    "i": [
-      "i"
-    ],
-    "o": [
-      "o",
-      "ɔ"
-    ],
-    "u": [
-      "u"
-    ],
-    "b": [
-      "b"
-    ],
-    "c": [
-      "k",
-      "tʃ"
-    ],
-    "ch": [
-      "k"
-    ],
-    "ci": [
-      "tʃ"
-    ],
-    "d": [
-      "d"
-    ],
-    "f": [
-      "f"
-    ],
-    "g": [
-      "ɡ",
-      "dʒ"
-    ],
-    "gh": [
-      "ɡ"
-    ],
-    "gi": [
-      "dʒ"
-    ],
-    "gl": [
-      "ʎ",
-      "ɡl"
-    ],
-    "gli": [
-      "ʎ"
-    ],
-    "gn": [
-      "ɲ"
-    ],
-    "h": [
-      ""
-    ],
-    "j": [
-      "j"
-    ],
-    "k": [
-      "k"
-    ],
-    "l": [
-      "l"
-    ],
-    "m": [
-      "m"
-    ],
-    "n": [
-      "n"
-    ],
-    "p": [
-      "p"
-    ],
-    "qu": [
-      "kw"
-    ],
-    "r": [
-      "r"
-    ],
-    "s": [
-      "s",
-      "z"
-    ],
-    "sc": [
-      "ʃ",
-      "sk"
-    ],
-    "sci": [
-      "ʃ"
-    ],
-    "t": [
-      "t"
-    ],
-    "v": [
-      "v"
-    ],
-    "z": [
-      "ts",
-      "dz"
-    ],
-    "bb": [
-      "bː"
-    ],
-    "cc": [
-      "kː",
-      "tːʃ"
-    ],
-    "dd": [
-      "dː"
-    ],
-    "ff": [
-      "fː"
-    ],
-    "gg": [
-      "ɡː",
-      "dːʒ"
-    ],
-    "ll": [
-      "lː"
-    ],
-    "mm": [
-      "mː"
-    ],
-    "nn": [
-      "nː"
-    ],
-    "pp": [
-      "pː"
-    ],
-    "rr": [
-      "rː"
-    ],
-    "ss": [
-      "sː"
-    ],
-    "tt": [
-      "tː"
-    ],
-    "zz": [
-      "tːs",
-      "dːz"
-    ],
-    "à": [
-      "a"
-    ],
-    "è": [
-      "ɛ"
-    ],
-    "é": [
-      "e"
-    ],
-    "ì": [
-      "i"
-    ],
-    "ò": [
-      "ɔ"
-    ],
-    "ó": [
-      "o"
-    ],
-    "ù": [
-      "u"
-    ]
+  "graphemes_base": "it-IT",
+  "positional_graphemes": {
+    "s": {
+      "default": [
+        "s",
+        "z"
+      ]
+    },
+    "z": {
+      "default": [
+        "ts",
+        "dz"
+      ]
+    }
   },
   "allophones": {
     "p": [
@@ -329,7 +175,7 @@
       "notes": "Re-Tuscanised since 15th c.: modern Romanesco is heavily influenced by standard Italian."
     }
   ],
-  "notes": "Romanesco (Roman dialect). Central Italian of Rome and Lazio. Historically distinct from Tuscan, but re-Tuscanised from the 15th century onward due to the Papal court. Key features: (1) NO gorgia. (2) Rhotacism: /l/ → [r] before consonants (alto → [ˈarto]). (3) -ND- → [nː], -MB- → [mː]. (4) Affricate strengthening: /dʒ/ → [dːʒ] intervocalically. Literary tradition from Belli (19th c.) (D'Achille & Giovanardi 2001).",
+  "notes": "Romanesco (Roman dialect). Central Italian of Rome and Lazio. Historically distinct from Tuscan, but re-Tuscanised from the 15th century onward due to the Papal court. Key features: (1) NO gorgia. (2) Rhotacism: /l/ → [r] before consonants (alto → [ˈarto]). (3) -ND- → [nː], -MB- → [mː]. (4) Affricate strengthening: /dʒ/ → [dːʒ] intervocalically. Literary tradition from Belli (19th c.) (D'Achille & Giovanardi 2001). GRAPHEMES: the grapheme table and its positional readings come from it-IT through graphemes_base, because the variety writes standard Italian spelling. ⟨c g⟩ read [tʃ dʒ] before ⟨e i⟩ and [k ɡ] elsewhere: cielo [ˈtʃɛːlo], gelo [ˈdʒɛːlo] (Bertinetto & Loporcaro 2005, JIPA 35(2), p. 133). ⟨i u⟩ before a vowel are the glides [j w]: pieno [ˈpjɛːno], chiave [ˈkjaːve], guida [ˈɡwiːda] (p. 139, Table 2 on p. 138). The spec keeps its own ⟨s⟩ and ⟨z⟩ readings and does not take the it-IT positional ones. 'Intervocalic /s/ is voiceless in RI, so that SI minimal pairs, such as [ˈkjɛːse] ‘asked.3sg’ vs. [ˈkjɛːze] ‘churches’ (both spelled chiese), are neutralised as [ˈkjɛːse] in RI' (p. 133). The it-IT word-initial [dz] for ⟨z⟩ has no Roman source here, so ⟨z⟩ keeps [ts] first.",
   "quality": "research",
   "script_type": "alphabet",
   "sources": [
@@ -362,6 +208,16 @@
       "url": null,
       "pages": null,
       "notes": null
+    },
+    {
+      "id": "bertinetto_loporcaro2005",
+      "author": "Bertinetto, P.M. & Loporcaro, M.",
+      "year": 2005,
+      "title": "The sound pattern of Standard Italian, as compared with the varieties spoken in Florence, Milan and Rome",
+      "publisher": "Journal of the International Phonetic Association",
+      "url": null,
+      "pages": "131-151",
+      "notes": "JIPA 35(2). Illustration of Standard Italian; states the preconsonantal /s/ voicing agreement and documents the Tuscan/Northern split in intervocalic ⟨s⟩. Table 2 (p. 138) and p. 139 give the opening and closing diphthongs and the hiatus that the stress diphthongs list follows; p. 137 gives the two equal vowels in hiatus."
     }
   ],
   "wikipedia": [

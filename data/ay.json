@@ -3,95 +3,9 @@
   "name": "Aymara",
   "parent": "x-clade-ayma1253",
   "script": "Latin",
-  "graphemes": {
-    "a": [
-      "a"
-    ],
-    "i": [
-      "i"
-    ],
-    "u": [
-      "u"
-    ],
-    "p": [
-      "p"
-    ],
-    "t": [
-      "t"
-    ],
-    "k": [
-      "k"
-    ],
-    "m": [
-      "m"
-    ],
-    "n": [
-      "n"
-    ],
-    "s": [
-      "s"
-    ],
-    "l": [
-      "l"
-    ],
-    "r": [
-      "ɾ"
-    ],
-    "w": [
-      "w"
-    ],
-    "y": [
-      "j"
-    ],
-    "h": [
-      "h"
-    ]
-  },
-  "allophones": {
-    "a": [
-      "a"
-    ],
-    "i": [
-      "i"
-    ],
-    "u": [
-      "u"
-    ],
-    "p": [
-      "p"
-    ],
-    "t": [
-      "t"
-    ],
-    "k": [
-      "k"
-    ],
-    "m": [
-      "m"
-    ],
-    "n": [
-      "n"
-    ],
-    "s": [
-      "s"
-    ],
-    "l": [
-      "l"
-    ],
-    "ɾ": [
-      "ɾ"
-    ],
-    "w": [
-      "w"
-    ],
-    "j": [
-      "j"
-    ],
-    "h": [
-      "h"
-    ]
-  },
-  "notes": "STRUCTURAL ADSTRATE STUB (not a modelled G2P target). Aymara (Central-Southern Aymara). Indigenous adstrate of highland Bolivian, southern Peruvian and northern Chilean Spanish. It exists here only so that the ancestry / phylogenetic-distance metrics of the Latin American Spanish varieties that reference it as an indigenous adstrate have a node to resolve to; the minimal grapheme set is a placeholder and NO phonology is claimed or modelled (afa.json / ber-x-kabyle-atlas.json stub pattern).",
+  "graphemes": {},
+  "allophones": {},
+  "notes": "STRUCTURAL ADSTRATE STUB (not a modelled G2P target). Aymara (Central-Southern Aymara) is an indigenous adstrate of highland Bolivian, southern Peruvian and northern Chilean Spanish. It exists so that the ancestry and phylogenetic-distance metrics of the Latin American Spanish varieties that reference it as an adstrate have a node to resolve to. It carries no grapheme table. A table needs a cited description of the Aymara orthography and the sound value of each letter; the classification reference listed in sources does not give one.",
   "quality": "stub",
   "script_type": "alphabet",
   "iso639_3": "aym",

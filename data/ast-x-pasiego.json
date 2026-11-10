@@ -2,10 +2,10 @@
   "code": "ast-x-pasiego",
   "name": "Pasiegu (Pasiego, Montes de Pas)",
   "script": "Latin",
-  "parent": "ast-x-cantabrian",
-  "graphemes_base": "ast-x-cantabrian",
-  "allophones_base": "ast-x-cantabrian",
-  "positional_graphemes_base": "ast-x-cantabrian",
+  "parent": "ast-x-cantabri",
+  "graphemes_base": "ast-x-cantabri",
+  "allophones_base": "ast-x-cantabri",
+  "positional_graphemes_base": "ast-x-cantabri",
   "graphemes": {
     "ll": [
       "ʎ"
@@ -22,7 +22,7 @@
   },
   "ancestors": [
     {
-      "code": "ast-x-cantabrian",
+      "code": "ast-x-cantabri",
       "role": "parent",
       "weight": 0.55,
       "notes": "Cantabrian (Montañés) base: Pasiegu is the speech of the Montes de Pas (Vega de Pas, San Pedro del Romeral, San Roque de Riomiera, upper Pas/Pisueña/Miera valleys, southern Cantabria). It shares the conservative northern-Castilian/Cantabrian consonant frame (distinción /θ/, apico-alveolar /s̺/, coda-/s/ aspiration) supplied by the parent, and adds the Asturleonese-type features below."
@@ -46,7 +46,7 @@
       "notes": "Basque/Aquitanian substrate of the eastern Cantabrian mountains, inherited via the Cantabrian base."
     }
   ],
-  "notes": "Pasiegu (pasiego) — the strongly conservative Asturleonese-type mountain speech of the Montes de Pas in southern Cantabria (Spain). CLASSIFICATION: placed under the Asturian (ast) clade as ast-x-pasiego, following the most detailed modern source (the UPF MA thesis, which repeatedly classes Pasiegu as Asturleonese) and Penny's analysis, which locates its vowel system in the Cantabrian 'set 2a' metaphony type; the code keeps ast-x-cantabrian as parent to inherit the Cantabrian consonant frame while recording the Asturleonese affiliation in the ancestry. MODELLED DELTAS over ast-x-cantabrian: (1) ⟨ll⟩ = [ʎ] — palatalisation of Latin initial L- and -LL- retained (llumiacu 'slug', toponym Lloreda), the Asturleonese trait, so no yeísmo. (2) ASPIRATED LATIN F-, written ⟨ḥ⟩ (the ⟨h.⟩ of Pasiego texts) = [x]~[h]: conservative Pas speakers articulate it [x] and even keep an x/h contrast (ḥuegu [ˈxweɣu] 'fire' < F- vs juegu 'I play'); general Cantabria merges both to [h]. THE DEFINING FEATURE — DOCUMENTED, NOT PHONEME-MAPPED, because it is morphophonological (conditioned by morphology, not spelling), and o2i's grapheme→IPA tables cannot express it without a metaphony rule engine: VOWEL-HEIGHT METAPHONY + CENTRALISATION. A word-final high vowel /-u/ (masc./neuter sg.) or /-i/ raises and centralises the stressed vowel of the whole phonological word; final [ʊ] (from /-o/) does NOT trigger. Penny's Cantabrian set-2a inventory: non-centralised /i e a o u/ vs centralised /ɨ (e) ɐ (ø) ʉ/. Minimal pairs turn on this: ˈpɪlʊ vs ˈpelʊ 'hair', rᴀˈbjʊsʊ 'bitter (count)' vs rᴀˈbjosʊ '(mass)'. The NEUTER OF MATTER (a third, uncountable agreement whose final /u/ is high and hence metaphonic) means the SAME spelled word maps to different stressed-vowel qualities by count/mass agreement — the trait Penny called hardest to erase from Pasiego. Two further harmonies (centralisation harmony from final [ʊ]; pretonic unstressed-vowel raising before a stressed high vowel/glide) are likewise documented but out of grapheme→IPA scope. Provenance honesty: quality set to SKELETON — the modelled consonant deltas are page-pinned, but the phonology that actually defines Pasiegu (metaphony, centralisation, neuter of matter) is morphophonological and cannot be represented in the current table-based engine; the notes record it in full so a future metaphony rule pass can implement it. The classic primary field sources (Penny 1969 Orbis 18; Penny 1970 Archivum Linguisticum 1; García Lomas 1960) are print-only and were reached via the OA reanalyses.",
+  "notes": "Pasiegu (pasiego) — the strongly conservative Asturleonese-type mountain speech of the Montes de Pas in southern Cantabria (Spain). CLASSIFICATION: placed under the Asturian (ast) clade as ast-x-pasiego, following the most detailed modern source (the UPF MA thesis, which repeatedly classes Pasiegu as Asturleonese) and Penny's analysis, which locates its vowel system in the Cantabrian 'set 2a' metaphony type; the code keeps ast-x-cantabri as parent to inherit the Cantabrian consonant frame while recording the Asturleonese affiliation in the ancestry. MODELLED DELTAS over ast-x-cantabri: (1) ⟨ll⟩ = [ʎ] — palatalisation of Latin initial L- and -LL- retained (llumiacu 'slug', toponym Lloreda), the Asturleonese trait, so no yeísmo. (2) ASPIRATED LATIN F-, written ⟨ḥ⟩ (the ⟨h.⟩ of Pasiego texts) = [x]~[h]: conservative Pas speakers articulate it [x] and even keep an x/h contrast (ḥuegu [ˈxweɣu] 'fire' < F- vs juegu 'I play'); general Cantabria merges both to [h]. THE DEFINING FEATURE — DOCUMENTED, NOT PHONEME-MAPPED, because it is morphophonological (conditioned by morphology, not spelling), and o2i's grapheme→IPA tables cannot express it without a metaphony rule engine: VOWEL-HEIGHT METAPHONY + CENTRALISATION. A word-final high vowel /-u/ (masc./neuter sg.) or /-i/ raises and centralises the stressed vowel of the whole phonological word; final [ʊ] (from /-o/) does NOT trigger. Penny's Cantabrian set-2a inventory: non-centralised /i e a o u/ vs centralised /ɨ (e) ɐ (ø) ʉ/. Minimal pairs turn on this: ˈpɪlʊ vs ˈpelʊ 'hair', rᴀˈbjʊsʊ 'bitter (count)' vs rᴀˈbjosʊ '(mass)'. The NEUTER OF MATTER (a third, uncountable agreement whose final /u/ is high and hence metaphonic) means the SAME spelled word maps to different stressed-vowel qualities by count/mass agreement — the trait Penny called hardest to erase from Pasiego. Two further harmonies (centralisation harmony from final [ʊ]; pretonic unstressed-vowel raising before a stressed high vowel/glide) are likewise documented but out of grapheme→IPA scope. Provenance honesty: quality set to SKELETON — the modelled consonant deltas are page-pinned, but the phonology that actually defines Pasiegu (metaphony, centralisation, neuter of matter) is morphophonological and cannot be represented in the current table-based engine; the notes record it in full so a future metaphony rule pass can implement it. The classic primary field sources (Penny 1969 Orbis 18; Penny 1970 Archivum Linguisticum 1; García Lomas 1960) are print-only and were reached via the OA reanalyses.",
   "sources": [
     {
       "id": "penny2009_metaphony_iberia",

@@ -573,7 +573,7 @@
   "audit": {
     "wikipron": {
       "conclusion": "input_limited",
-      "measured": "Gungbe is tonal (H/M/L); neither the Benin nor the Nigerian Latin orthography writes tone as a matter of course, so tone is not recoverable from ordinary spelling and the benchmark row is dominated by that convention gap rather than by segmental error. A specific reading of the rare acute/grave tone-marked vowels as a tone value was measured and refused for lack of a citable Gun/Gungbe tone-orthography source.",
+      "measured": "3 of 681 rows in the WikiPron guw_latn_broad gold carry a tone mark (two grave, one acute); 679 of the same 681 gold transcriptions carry one. So the contrast is in the gold and not in the spelling, which is what input_limited names. Gungbe is tonal (H/M/L) and neither the Benin nor the Nigerian Latin orthography writes tone as a matter of course. A specific reading of the 3 marked vowels as a tone value was refused for lack of a citable Gun/Gungbe tone-orthography source.",
       "reference": "spec notes"
     }
   }

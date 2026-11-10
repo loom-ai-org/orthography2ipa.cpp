@@ -2,67 +2,9 @@
   "code": "ltc",
   "name": "Middle Chinese",
   "script": "Latin",
-  "graphemes": {
-    "a": [
-      "a"
-    ],
-    "i": [
-      "i"
-    ],
-    "u": [
-      "u"
-    ],
-    "e": [
-      "e"
-    ],
-    "o": [
-      "o"
-    ],
-    "p": [
-      "p"
-    ],
-    "t": [
-      "t"
-    ],
-    "k": [
-      "k"
-    ],
-    "b": [
-      "b"
-    ],
-    "d": [
-      "d"
-    ],
-    "g": [
-      "ɡ"
-    ],
-    "s": [
-      "s"
-    ],
-    "m": [
-      "m"
-    ],
-    "n": [
-      "n"
-    ],
-    "l": [
-      "l"
-    ],
-    "r": [
-      "r"
-    ],
-    "w": [
-      "w"
-    ],
-    "j": [
-      "j"
-    ],
-    "h": [
-      "h"
-    ]
-  },
+  "graphemes": {},
   "allophones": {},
-  "notes": "STRUCTURAL ANCESTRY NODE (not a modelled G2P target). Middle Chinese (c. 600 CE, Qieyun) is the ancestor of the modern Sinitic varieties and the SOURCE of the Sino-Xenic literary borrowings in Japanese (kango), Korean (hanja) and Vietnamese (Sino-Vietnamese). It exists here only so the ancestry / phylogenetic-distance metrics of the modern varieties that reference it have a node to resolve to; NO phonology is claimed or reconstructed and the minimal grapheme set is a placeholder (afa.json / trk.json stub pattern).",
+  "notes": "STRUCTURAL ANCESTRY NODE (not a modelled G2P target). Middle Chinese (c. 600 CE, Qieyun) is the ancestor of the modern Sinitic varieties and the SOURCE of the Sino-Xenic literary borrowings in Japanese (kango), Korean (hanja) and Vietnamese (Sino-Vietnamese). It exists so that the ancestry and phylogenetic-distance metrics of the modern varieties that reference it have a node to resolve to. It carries no grapheme table. Middle Chinese is written in Chinese characters, which a letter table cannot model; a table needs a cited reconstruction, the romanization it is written in and the sound value of each symbol.",
   "quality": "stub",
   "script_type": "alphabet",
   "iso639_3": "ltc",

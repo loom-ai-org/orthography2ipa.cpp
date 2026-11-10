@@ -3,67 +3,9 @@
   "name": "Khoisan (contact node)",
   "family": "Khoe-Kwadi",
   "script": "Latin",
-  "graphemes": {
-    "a": [
-      "a"
-    ],
-    "i": [
-      "i"
-    ],
-    "u": [
-      "u"
-    ],
-    "e": [
-      "e"
-    ],
-    "o": [
-      "o"
-    ],
-    "p": [
-      "p"
-    ],
-    "t": [
-      "t"
-    ],
-    "k": [
-      "k"
-    ],
-    "b": [
-      "b"
-    ],
-    "d": [
-      "d"
-    ],
-    "g": [
-      "ɡ"
-    ],
-    "s": [
-      "s"
-    ],
-    "m": [
-      "m"
-    ],
-    "n": [
-      "n"
-    ],
-    "l": [
-      "l"
-    ],
-    "r": [
-      "r"
-    ],
-    "w": [
-      "w"
-    ],
-    "j": [
-      "j"
-    ],
-    "h": [
-      "h"
-    ]
-  },
+  "graphemes": {},
   "allophones": {},
-  "notes": "STRUCTURAL CONTACT STUB (not a modelled G2P target). 'Khoisan' is a cover term for the click-using languages of southern Africa (Khoe, Tuu, Kxa). It is the classic substrate source of the click consonants borrowed into southern Bantu languages such as Zulu and Xhosa. It exists here only so those specs have a substrate node to resolve to; the grapheme set is a placeholder and no phonology is claimed (gn.json stub pattern).",
+  "notes": "STRUCTURAL CONTACT STUB (not a modelled G2P target). 'Khoisan' is a cover term for the click-using languages of southern Africa (Khoe, Tuu, Kxa). It is the classic substrate source of the click consonants borrowed into southern Bantu languages such as Zulu and Xhosa. It exists so that those specs have a substrate node to resolve to. It carries no grapheme table: a cover term has no orthography of its own, and a table belongs to the spec of one Khoe, Tuu or Kxa language with a cited orthography.",
   "quality": "stub",
   "script_type": "alphabet",
   "iso639_3": null,

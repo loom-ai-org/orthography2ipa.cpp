@@ -1,0 +1,76 @@
+{
+  "code": "nl-NL-x-polder",
+  "name": "Polder Dutch (Netherlands)",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "parent": "nl-NL",
+  "ancestors": [
+    {
+      "code": "nl-NL",
+      "role": "parent",
+      "weight": 0.9,
+      "notes": "Standard Dutch of the Netherlands; Polder Dutch differs from it in the lowered diphthongs."
+    }
+  ],
+  "graphemes_base": "nl-NL",
+  "allophones_base": "nl-NL",
+  "positional_graphemes_base": "nl-NL",
+  "word_exceptions_base": "nl-NL",
+  "collapse_geminates": true,
+  "graphemes": {
+    "ei": [
+      "aːi"
+    ],
+    "ij": [
+      "aːi"
+    ],
+    "ui": [
+      "ɑy"
+    ],
+    "ou": [
+      "aːu"
+    ],
+    "au": [
+      "aːu"
+    ],
+    "ouw": [
+      "aːu"
+    ],
+    "auw": [
+      "aːu"
+    ],
+    "aauw": [
+      "aːu"
+    ]
+  },
+  "quality": "skeleton",
+  "iso639_3": "nld",
+  "glottolog_code": null,
+  "notes": "Polder Dutch (Poldernederlands): a sociolect of Netherlandic Standard Dutch, not a regional accent. Stroop (1998) names it and describes its speakers by age, sex and occupation, not by place. p. 16: 'Ongeveer de helft van hen zijn - naar mijn schatting - jongere vrouwen en het zijn juist deze vrouwen die dat aparte soort Nederlands spreken. Ze zijn doorgaans zo tussen de 25 en 40 jaar oud.' p. 51: 'De anderen komen uit Utrecht, Groningen, Heerlen, Zwolle, Den Bosch, enzovoort. De meesten zijn pas na hun middelbare school naar de Randstad gekomen.' The spec therefore has no location. The data are Stroop's own observations of radio and television speech; p. 25: 'Mijn eigen waarnemingen heb ik overigens getoetst aan het oordeel van collega-taalkundigen', and p. 32 calls them 'voorlopig voornamelijk nog gebaseerd zijn op persoonlijke observaties'. Stroop gives no frequencies. The spec is a delta over nl-NL: it inherits every grapheme, positional entry, word exception, allophone rule and the stress block, and it states only the features below. Stroop p. 29 names the defining feature: 'Deze verlaging van de tweeklanken, hét kenmerk van het Poldernederlands'. MODELLED (1) ⟨ei ij⟩ AS [aːi]. p. 25: 'Het opvallendste kenmerk van het Poldernederlands is - zoals gezegd - de uitspraak van de tweeklank (diftong) die als ei of ij gespeld wordt, namelijk: aai [a:i].' Examples on p. 25 include taaid and aaigenlijk. The new value is the nl-NL value of ⟨ai aai⟩, so the spec merges the two diphthongs, as Stroop's spelling aai implies. (2) ⟨ui⟩ AS [ɑy]. p. 26: 'terwijl de ei daar als aai verschijnt, klinkt de ui er als au', and 'De uitspraak die in het Poldernederlands terrein wint, is die van een lage, geronde achterdiftong: in fonetisch schrift [ɑy] of gewoon gespeld: au.' Examples: Authof (Uithof), Mauden (Muiden), haus, bauten. p. 31 restates the change as 'verlaagd wordt of is tot [ɑu]'; the spec takes the explicit transcription of p. 26, because p. 27 keeps the two diphthongs apart. (3) ⟨ou au ouw auw aauw⟩ AS [aːu]. p. 27: 'De oorspronkelijke ou wordt opvallend wijder en lager en klinkt nu als aau [a:u].' It differs from the new ui 'doordat hij meer midden, lager en (dus) niet gerond is'. Examples: jaauw (jou), vraauw (vrouw), Paaul (Paul). The examples cover the spellings ⟨ou ouw au⟩; ⟨auw aauw⟩ spell the same nl-NL diphthong, so the spec gives them the same value. The child states all eight grapheme values itself, so it keeps them whatever value nl-NL gives these diphthongs. INHERITED, WITH NO POLDER VALUE OF ITS OWN: (a) Coda ⟨r⟩. The child states no ⟨r⟩ value, so it takes the nl-NL coda approximant [ɹ] from NL_CODA_R_APPROXIMANT, which Gussenhoven (1992, JIPA 22, p. 46) states for Netherlandic Dutch: '/r/ is [r] in the onset, and [ɹ] in the coda'. Stroop p. 34 on the Gooise r: 'Zeker komt die ook in het Poldernederlands voor, maar daar niet alleen, en ook weer niet bij alle spreeksters van het Poldernederlands. Die r is nu nog een typisch randstedelijk verschijnsel'. Sebregts (2014) measures city accents, not this sociolect: the retroflex/bunched approximant is 31.8% of the coda tokens in the whole corpus (Table 3-9, p. 75), 'well over 80%' of the coda /r/ in Leiden (p. 114) and 'just under 75%' in The Hague (p. 119). Neither source gives a share for the speakers of Polder Dutch, and Stroop p. 51 places most of them outside the Randstad, so the spec states no Polder value and keeps the inherited [ɹ]. (b) The long mid vowels. p. 30: 'Zoals teid taaid geworden is, wordt geven geiven, en beet beit', and speakers say 'zeej en zoow'. p. 33 gives the chains 'ee > ei > aai', 'eu > ui > au' and 'oo > ou > au'. Stroop describes a drift, with no endpoint for the sociolect, so ⟨ee eu oo⟩ take the nl-NL closing diphthongs [ei øy ou], which agree with geiven and beit. NOT MODELLED: (c) ⟨e⟩ before ⟨l⟩ raised to [ɪ] (opbillen, vertillen). p. 32 limits it to a subgroup: 'uitsluitend bij jongere vrouwen'. (d) The devoicing of fricatives. p. 34 limits it to the Randstad: 'Bij vrouwen die niet uit de Randstad komen, is het daarentegen meestal afwezig, ook al spreken ze Poldernederlands.' (e) The unrounding of long vowels and diphthongs (pp. 31-32) has no word-level description. (f) The third nl-NL candidate [ei̞] of ⟨y⟩ and the word exceptions with a diphthong (tjalhuizum, tjauwmin) are inherited unchanged.",
+  "sources": [
+    {
+      "id": "stroop1998",
+      "author": "Stroop, J.",
+      "year": 1998,
+      "title": "Poldernederlands. Waardoor het ABN verdwijnt",
+      "publisher": "Bert Bakker, Amsterdam (DBNL edition)",
+      "url": "https://www.dbnl.org/tekst/stro008pold01_01/",
+      "pages": "pp. 16, 25-27, 29-34, 51",
+      "notes": "Names the sociolect and describes its speakers. The lowering of ei/ij to [a:i], ui to [ɑy] and ou to [a:u] is the defining feature. The data are the author's observations, with no frequencies."
+    },
+    {
+      "id": "sebregts2014",
+      "author": "Sebregts, K.",
+      "year": 2014,
+      "title": "The Sociophonetics and Phonology of Dutch r",
+      "publisher": "LOT (LOT Dissertation Series 379)",
+      "url": "https://www.lotpublications.nl/Documents/379_fulltext.pdf",
+      "pages": "pp. 75, 114, 119",
+      "notes": "Coda r in ten urban accents; cited for the coda ⟨r⟩ feature that the spec does not model, because the corpus is sampled by city and not by sociolect."
+    }
+  ],
+  "wikipedia": [
+    "https://nl.wikipedia.org/wiki/Poldernederlands",
+    "https://en.wikipedia.org/wiki/Dutch_language#Polder_Dutch"
+  ]
+}

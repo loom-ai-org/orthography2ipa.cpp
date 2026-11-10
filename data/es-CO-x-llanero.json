@@ -103,6 +103,21 @@
       "surface": "h",
       "syllable_position": "coda",
       "notes": "Lowland coda /s/ lenition (aspiration tier of Lipski's 1994 cline): syllable-final /s/ (from ⟨s⟩ and seseante ⟨z⟩) weakens to the glottal aspirate [h] (esta=[ˈehta], los=[loh], diez=[djeh])."
+    },
+    {
+      "id": "ES_NASAL_VELAR",
+      "phonemes": [
+        "n"
+      ],
+      "surface": "ŋ",
+      "followed_by_phoneme": [
+        "k",
+        "ɡ",
+        "ɣ",
+        "w"
+      ],
+      "syllable_position": "coda",
+      "notes": "Overrides the es-ES rule without /x/. Here /x/ is the glottal [h] (GLOTTAL_JOTA), not a velar consonant. Navarro Tomás (1918, § 133, pp. 111-112) gives [ŋ] before a velar consonant, and no source in this spec gives [ŋ] before [h]. ES_EXT_FINAL_N_VELAR also leaves a nasal unchanged before [h]. So a coda nasal is [ŋ] only before k ɡ ɣ w."
     }
   ]
 }

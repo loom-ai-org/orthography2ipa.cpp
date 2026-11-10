@@ -1,0 +1,121 @@
+{
+  "code": "eu-biscayan",
+  "name": "Biscayan Basque (Bizkaiera)",
+  "script": "Latin",
+  "graphemes_base": "eu",
+  "graphemes": {
+    "s": [
+      "s̺",
+      "ʃ"
+    ],
+    "z": [
+      "s̺",
+      "ʃ"
+    ],
+    "ts": [
+      "ts̻"
+    ],
+    "tz": [
+      "ts̻"
+    ],
+    "tt": [
+      "tʃ"
+    ]
+  },
+  "allophones_base": "eu",
+  "positional_graphemes_base": "eu",
+  "allophones": {
+    "s̺": [
+      "s̺",
+      "ʃ"
+    ],
+    "h": [
+      ""
+    ],
+    "n": [
+      "n",
+      "ɲ",
+      "ŋ"
+    ],
+    "l": [
+      "l",
+      "ʎ"
+    ]
+  },
+  "parent": "eu",
+  "glottolog_code": "bisc1236",
+  "ancestors": [
+    {
+      "code": "eu",
+      "role": "parent",
+      "weight": 0.9,
+      "notes": "Biscayan shares the standard Basque grapheme inventory but diverges significantly in morphology and phonology; inherits grapheme-to-phoneme base from Batua."
+    }
+  ],
+  "notes": "Biscayan (Bizkaiera/Bizkaia). Western Basque, spoken in Biscay and Araba. VALIDATED and CORRECTED against Bedialauneta Txurruka & Hualde (2023), an Illustration of the IPA of Markina Basque (a representative Biscayan variety). Key phonological features actually documented there: (1) MERGER of the apico-alveolar /s̺/ and lamino-alveolar /s̻/ fricatives in favour of a single apico-alveolar /s̺/, and of the affricates /ts̺/ and /ts̻/ in favour of a single denti-alveolar /ts̻/ (Bedialauneta & Hualde 2023: 1098) — so orthographic s and z both give /s̺/, and ts and tz both give /ts̻/; the standard three-way sibilant contrast of Batua is NOT present here. (2) MERGER of the voiceless palatal stop /c/ (spelled tt) with the postalveolar affricate /tʃ/, in favour of /tʃ/ (2023: 1098). (3) PALATALISATION after /i/: /s/→[ʃ] (haizea > /aiʃie/), /t/→[tʃ], /n/→[ɲ], /l/→[ʎ] (2023: 1102-1104). (4) NO aspiration: western Basque lost /h/ and has no aspirated stops (Hualde 2018: 2). (5) Voiced stops /b d ɡ/ are approximants [β ð ɣ] intervocalically and nasals assimilate in place to a following consonant (2023: 1099, 1103). Morphologically the most divergent dialect from Batua. NOTE (engine limit): the well-known Biscayan raising of the singular article /-a/ to [-e] after a high vowel (baso+a > basue, kale+a > kalie; Bedialauneta & Hualde 2023: 1107-1108) is a morphophonological process on the article, not a context-free grapheme rule, and is therefore not modelled at the orthography-to-IPA level. STRESS: the spec states \"stress\": false and does not take the Batua [+2] block of eu. Hualde (2022: 83, Table 1) lists the \"Western-type accentual systems (with an accented vs unaccented contrast)\" of Gernika-Getxo, Lekeitio, Markina, Ondarroa and Arratia. In them the unmarked words are unaccented and take a phrase-level accent (\"Phrase-final accent\" in Gernika-Getxo and Lekeitio, \"Phrase-penultimate accent\" in Markina, Ondarroa and Arratia), and each locality has its own rule for the accented exceptions. Hualde (2022: 83) also says that the Central systems, where all words are accented, include \"varieties spoken in Bizkaia and Araba\". The area therefore mixes phrase-level and word-level systems, the accented words are lexical, and the spelling marks neither. No single word-level block can be written from these sources.",
+  "stress": false,
+  "quality": "research",
+  "urls": [
+    "https://en.wikipedia.org/wiki/Biscayan_dialect"
+  ],
+  "script_type": "alphabet",
+  "sources": [
+    {
+      "id": "bedialauneta_hualde2023",
+      "author": "Bedialauneta Txurruka, I. & Hualde, J.I.",
+      "year": 2023,
+      "title": "Markina Basque (Illustration of the IPA)",
+      "publisher": "Journal of the International Phonetic Association 53(3)",
+      "url": "https://doi.org/10.1017/S0025100322000032",
+      "pages": "1095-1122",
+      "notes": "Primary read source for Biscayan phonology: sibilant/affricate/palatal-stop mergers (p.1098), palatalisation after /i/ (pp.1102-1104), article vowel raising (pp.1107-1108)."
+    },
+    {
+      "id": "hualde2018_aspiration",
+      "author": "Hualde, J.I.",
+      "year": 2018,
+      "title": "Aspiration in Basque",
+      "publisher": "Papers in Historical Phonology 3",
+      "url": "https://doi.org/10.2218/pihph.3.2018.2602",
+      "pages": "1-27",
+      "notes": "Read for the loss of aspiration in western (Biscayan) Basque (p.84 fn.)."
+    },
+    {
+      "id": "hualde_ortiz_de_urbina2003",
+      "author": "Hualde, J.I. & Ortiz de Urbina, J. (eds.)",
+      "year": 2003,
+      "title": "A Grammar of Basque",
+      "publisher": "Mouton de Gruyter",
+      "url": null,
+      "pages": "15-65 (Hualde, 'Segmental phonology')",
+      "notes": null
+    },
+    {
+      "id": "hualde2022_ocb",
+      "author": "Hualde, J.I.",
+      "year": 2022,
+      "title": "The reconstruction of Old Common Basque accentuation: Closing open issues",
+      "publisher": "Anuario del Seminario de Filología Vasca Julio de Urquijo (ASJU) 56(2)",
+      "url": "https://doi.org/10.1387/asju.23983",
+      "pages": "77-106",
+      "notes": "Read for the dialect accent systems: Western-type systems (Table 1, p. 83), Central-type systems with General Central [+2] (Table 2, p. 84), penultimate [-2] east of the Bidasoa (p. 92) and in Zuberoan (p. 97)."
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Biscayan_dialect",
+    "https://eu.wikipedia.org/wiki/Mendebaleko_euskara",
+    "https://es.wikipedia.org/wiki/Dialecto_occidental_del_euskera"
+  ],
+  "timespan": {
+    "start_year": 1600,
+    "end_year": null
+  },
+  "iso639_3": "eus",
+  "wikidata_qid": "Q749166",
+  "location": {
+    "latitude": 43.261944,
+    "longitude": -2.932222,
+    "source": "wikidata",
+    "notes": "Bizkaia — the province the dialect is named for. [Wikidata Q93366 P625]"
+  }
+}

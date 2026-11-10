@@ -2,7 +2,7 @@
   "code": "lij",
   "name": "Ligurian",
   "script": "Latin",
-  "graphemes_base": "la-x-galloitalic",
+  "graphemes_base": "la-x-gallo-italic",
   "graphemes": {
     "a": [
       "a"
@@ -319,7 +319,7 @@
       ]
     }
   },
-  "allophones_base": "la-x-galloitalic",
+  "allophones_base": "la-x-gallo-italic",
   "allophones": {
     "p": [
       "p"
@@ -575,10 +575,10 @@
     "stress_mark": "ˈ",
     "notes": "Stress per the Académia Ligùstica do Brénno grafia ofiçiâ. The default position is paroxytone (penultimate), as in most Gallo-Italic. Any orthographically accented vowel (grave à è ì ò ù, acute é ó, circumflex â ê î ô û, diaeresis ä ë ï ö ü, and the ligature æ) marks the stressed syllable and always wins; the circumflex and diaeresis additionally encode vowel length. This is an orthographic-encoding simplification: the grafia writes the accent precisely so stress is recoverable from the spelling."
   },
-  "parent": "la-x-galloitalic",
+  "parent": "la-x-gallo-italic",
   "ancestors": [
     {
-      "code": "la-x-galloitalic",
+      "code": "la-x-gallo-italic",
       "role": "parent",
       "weight": 0.78,
       "notes": "Gallo-Italic parent."

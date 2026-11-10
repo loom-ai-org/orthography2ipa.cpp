@@ -1,0 +1,49 @@
+# A static build with a two-level CMAKE_INSTALL_LIBDIR, made in <root>/build.
+#   1. Installed into <root>/usr/local, beside the specs of another install in
+#      <root>/usr/share/orthography2ipa: the installed CLI reads its own specs.
+#   2. Installed into <root>, beside its build directory: the build-tree CLI
+#      still reads the source tree.
+set(root "@CMAKE_BINARY_DIR@/install-layouts")
+file(REMOVE_RECURSE "${root}")
+
+function(run)
+    execute_process(COMMAND ${ARGN} RESULT_VARIABLE result)
+    if(NOT result EQUAL 0)
+        list(JOIN ARGN " " command)
+        message(FATAL_ERROR "${command}: ${result}")
+    endif()
+endfunction()
+
+# Gives the pt-PT spec under <prefix> another name.
+function(rename prefix name)
+    set(spec "${prefix}/@CMAKE_INSTALL_DATADIR@/orthography2ipa/pt-PT.json")
+    file(READ "${spec}" text)
+    string(REPLACE "\"name\": \"European Portuguese\"" "\"name\": \"${name}\"" text "${text}")
+    file(WRITE "${spec}" "${text}")
+endfunction()
+
+function(expect_name cli name)
+    execute_process(COMMAND "${cli}" --json info pt OUTPUT_VARIABLE output RESULT_VARIABLE result)
+    if(NOT result EQUAL 0 OR NOT output MATCHES "\"name\":\"${name}\"")
+        message(FATAL_ERROR "${cli}: expected the name ${name}: ${result} ${output}")
+    endif()
+endfunction()
+
+run("@CMAKE_COMMAND@" -S "@CMAKE_SOURCE_DIR@" -B "${root}/build" -G "@CMAKE_GENERATOR@"
+    -DBUILD_TESTING=OFF -DBUILD_SHARED_LIBS=OFF -DCMAKE_DISABLE_FIND_PACKAGE_silabificador=ON
+    -DCMAKE_INSTALL_LIBDIR=lib/x86_64-linux-gnu "-DCMAKE_INSTALL_BINDIR=@CMAKE_INSTALL_BINDIR@"
+    "-DCMAKE_INSTALL_DATADIR=@CMAKE_INSTALL_DATADIR@" "-DCMAKE_CXX_COMPILER=@CMAKE_CXX_COMPILER@"
+    "-DCMAKE_CXX_FLAGS=@CMAKE_CXX_FLAGS@" "-DCMAKE_BUILD_TYPE=@CMAKE_BUILD_TYPE@"
+    "-DBoost_INCLUDE_DIR=@Boost_INCLUDE_DIR@")
+run("@CMAKE_COMMAND@" --build "${root}/build")
+unset(ENV{ORTHOGRAPHY2IPA_DATA_DIR})
+
+run("@CMAKE_COMMAND@" --install "${root}/build" --prefix "${root}/usr/local")
+file(COPY "${root}/usr/local/@CMAKE_INSTALL_DATADIR@/orthography2ipa" DESTINATION "${root}/usr/@CMAKE_INSTALL_DATADIR@")
+rename("${root}/usr/local" "Installed Portuguese")
+rename("${root}/usr" "Other Portuguese")
+expect_name("${root}/usr/local/@CMAKE_INSTALL_BINDIR@/orthography2ipa" "Installed Portuguese")
+
+run("@CMAKE_COMMAND@" --install "${root}/build" --prefix "${root}")
+rename("${root}" "Stale Portuguese")
+expect_name("${root}/build/orthography2ipa" "European Portuguese")
