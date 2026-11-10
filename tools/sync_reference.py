@@ -13,19 +13,22 @@ a pinned reference release, and this script is the only way they move. It
      the transcribed registry, type, script and transform tables match it;
   5. pins the reference checkout in .github/workflows/ci.yml to the commit
      that the reference repository tags as VERSION, so CI compares against
-     the same release.
+     the same release, and pins o2i-lexicons there to the newest release whose
+     orthography2ipa requirement admits VERSION.
 
-The tag is resolved before step 1. A PyPI release that the reference
-repository never tagged stops the script before anything is written, so an
-untagged release cannot leave data/ and ci.yml at two different releases. A
-step that fails after step 2, such as a generator, still can: data/ and
+The tag and the o2i-lexicons release are resolved before step 1. A PyPI
+release that the reference repository never tagged, or that no o2i-lexicons
+release admits, stops the script before anything is written, so neither case
+can leave data/ and ci.yml at two different releases. A step that fails after
+step 2, such as a generator, still can: data/ and
 tests/reference_version.txt are then at VERSION while ci.yml keeps the old
 commit. Run the script again, or restore the tree with git, before you commit.
 
 The generators import the reference package, so run this script with a Python
 that has the reference's dependencies installed (for example a virtual
-environment with `orthography2ipa[portuguese]==VERSION`). The package itself is
-always taken from the downloaded wheel, never from that environment.
+environment with `orthography2ipa[portuguese]==VERSION` and `packaging`). The
+package itself is always taken from the downloaded wheel, never from that
+environment.
 
 Usage:
     python3 tools/sync_reference.py 7.111.14a1
@@ -49,7 +52,11 @@ import urllib.error
 import urllib.request
 import zipfile
 
+from packaging.requirements import Requirement
+from packaging.version import Version
+
 PACKAGE = "orthography2ipa"
+LEXICONS = "o2i-lexicons"
 CPP_ROOT = pathlib.Path(__file__).resolve().parent.parent
 DATA = CPP_ROOT / "data"
 PIN = CPP_ROOT / "tests" / "reference_version.txt"
@@ -63,8 +70,8 @@ GENERATORS = (
 )
 
 
-def pypi_json(path: str) -> dict:
-    with urllib.request.urlopen(f"https://pypi.org/pypi/{PACKAGE}/{path}", timeout=60) as response:
+def pypi_json(path: str, package: str = PACKAGE) -> dict:
+    with urllib.request.urlopen(f"https://pypi.org/pypi/{package}/{path}", timeout=60) as response:
         return json.load(response)
 
 
@@ -137,15 +144,35 @@ def tag_commit(version: str) -> str:
                  f"HTTP {error.code}; nothing was written")
 
 
-def pin_ci(sha: str) -> None:
-    """Point the CI reference checkout at *sha*."""
+def lexicons_release(version: str) -> str:
+    """The newest o2i-lexicons release whose orthography2ipa requirement
+    admits *version*: the release a resolver installs for
+    orthography2ipa[lexicons]==*version*."""
+    releases = pypi_json("json", LEXICONS)["releases"]
+    for candidate in sorted(releases, key=Version, reverse=True):
+        files = releases[candidate]
+        if not files or all(f["yanked"] for f in files):
+            continue
+        requires = pypi_json(f"{candidate}/json", LEXICONS)["info"]["requires_dist"] or []
+        reference = [r for r in map(Requirement, requires) if r.name == PACKAGE and r.marker is None]
+        if all(r.specifier.contains(version, prereleases=True) for r in reference):
+            return candidate
+    sys.exit(f"no {LEXICONS} release admits {PACKAGE} {version}; nothing was written")
+
+
+def pin_ci(sha: str, lexicons: str) -> None:
+    """Point the CI reference checkout at *sha* and the CI o2i-lexicons
+    install at release *lexicons*."""
     text = CI.read_text(encoding="utf-8")
     pattern = rf"(repository: {re.escape(REFERENCE_REPO)}\n\s+ref: )[0-9a-f]{{40}}"
     pinned, count = re.subn(pattern, rf"\g<1>{sha}", text)
     if count != 1:
         sys.exit(f"{CI.relative_to(CPP_ROOT)}: expected one {REFERENCE_REPO} checkout, found {count}")
+    pinned, count = re.subn(rf"(\s{re.escape(LEXICONS)}==)\S+", rf"\g<1>{lexicons}", pinned)
+    if count != 1:
+        sys.exit(f"{CI.relative_to(CPP_ROOT)}: expected one {LEXICONS}== install, found {count}")
     CI.write_text(pinned, encoding="utf-8")
-    print(f"pinned {CI.relative_to(CPP_ROOT)}: {REFERENCE_REPO}@{sha}")
+    print(f"pinned {CI.relative_to(CPP_ROOT)}: {REFERENCE_REPO}@{sha}, {LEXICONS}=={lexicons}")
 
 
 def run_generators(reference: pathlib.Path, python: str, langcodes: bool) -> None:
@@ -172,6 +199,8 @@ def main() -> None:
     print(f"reference: {PACKAGE}=={version}")
     sha = tag_commit(version)
     print(f"tag: {REFERENCE_REPO}@{version} is {sha}")
+    lexicons = lexicons_release(version)
+    print(f"lexicons: {LEXICONS}=={lexicons}")
     with tempfile.TemporaryDirectory(prefix="o2i-reference-") as scratch:
         scratch = pathlib.Path(scratch)
         with zipfile.ZipFile(fetch_wheel(version, scratch)) as wheel:
@@ -183,7 +212,7 @@ def main() -> None:
         PIN.write_text(f"{PACKAGE}=={version}\n", encoding="utf-8")
         run_generators(reference, args.python, args.langcodes)
     print(f"pinned {PIN.relative_to(CPP_ROOT)}: {PACKAGE}=={version}")
-    pin_ci(sha)
+    pin_ci(sha, lexicons)
 
 
 if __name__ == "__main__":
