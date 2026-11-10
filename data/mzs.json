@@ -384,6 +384,24 @@
       "notes": "DISABLED for Macanese Creole (Patuá), a creole that inherits the pt-PT rule layer. No source for the stressed vowel of this ending in Macanese Creole (Patuá) was read, so its output stays what it was; the pt-PT rule rests on Infopédia readings of standard European Portuguese."
     },
     {
+      "id": "PT_SUFFIX_DORA_CLOSE",
+      "phonemes": [],
+      "surface": "o",
+      "notes": "DISABLED for Macanese Creole (Patuá), a creole that inherits the pt-PT rule layer. No source for the stressed vowel of this ending in Macanese Creole (Patuá) was read, so its output stays what it was; the pt-PT rule rests on Infopédia readings of standard European Portuguese."
+    },
+    {
+      "id": "PT_SUFFIX_DORA_CANDIDATE_OPEN",
+      "phonemes": [],
+      "surface": "ɔ",
+      "notes": "DISABLED for Macanese Creole (Patuá), a creole that inherits the pt-PT rule layer. No source for the stressed vowel of this ending in Macanese Creole (Patuá) was read, so its output stays what it was; the pt-PT rule rests on Infopédia readings of standard European Portuguese."
+    },
+    {
+      "id": "PT_SUFFIX_OIDE_OPEN",
+      "phonemes": [],
+      "surface": "ɔ",
+      "notes": "DISABLED for Macanese Creole (Patuá), a creole that inherits the pt-PT rule layer. No source for the stressed vowel of this ending in Macanese Creole (Patuá) was read, so its output stays what it was; the pt-PT rule rests on Infopédia readings of standard European Portuguese."
+    },
+    {
       "id": "PT_LEX_CLITIC_O",
       "phonemes": [],
       "surface": "u",
@@ -400,6 +418,306 @@
       "phonemes": [],
       "surface": "ʒ",
       "notes": "DISABLED for Macanese Creole (Patuá). PT_CODA_S_VOICING_INTERNAL voices the pt-PT coda [ʃ] to [ʒ] before a voiced consonant inside a word. The voicing of a word-internal coda sibilant in this language has no variety-specific source, so the coda keeps the reading of this spec."
+    },
+    {
+      "id": "PT_INITIAL_ES_RAISE",
+      "phonemes": [],
+      "surface": "i",
+      "notes": "DISABLED for Macanese Creole (Patuá). PT_INITIAL_ES_RAISE describes European Portuguese, and no source for this language was read."
+    },
+    {
+      "id": "PT_INITIAL_O_KEEP_BEFORE_CODA_NASAL",
+      "phonemes": [],
+      "surface": "o",
+      "notes": "DISABLED for Macanese Creole (Patuá). The PT_INITIAL_O rules describe European Portuguese, and no source for this language was read."
+    },
+    {
+      "id": "PT_INITIAL_O_OPEN",
+      "phonemes": [],
+      "surface": "ɔ",
+      "notes": "DISABLED for Macanese Creole (Patuá). The PT_INITIAL_O rules describe European Portuguese, and no source for this language was read."
+    },
+    {
+      "id": "PT_INITIAL_O_CANDIDATE_U",
+      "phonemes": [],
+      "surface": "u",
+      "notes": "DISABLED for Macanese Creole (Patuá). The PT_INITIAL_O rules describe European Portuguese, and no source for this language was read."
+    },
+    {
+      "id": "PT_INITIAL_O_CANDIDATE_O",
+      "phonemes": [],
+      "surface": "o",
+      "notes": "DISABLED for Macanese Creole (Patuá). The PT_INITIAL_O rules describe European Portuguese, and no source for this language was read."
+    },
+    {
+      "id": "PT_INITIAL_HO_KEEP_BEFORE_CODA_NASAL",
+      "phonemes": [],
+      "surface": "o",
+      "notes": "DISABLED for Macanese Creole (Patuá). The PT_INITIAL_HO rules extend the PT_INITIAL_O rules, which describe European Portuguese, and no source for this language was read."
+    },
+    {
+      "id": "PT_INITIAL_HO_OPEN",
+      "phonemes": [],
+      "surface": "ɔ",
+      "notes": "DISABLED for Macanese Creole (Patuá). The PT_INITIAL_HO rules extend the PT_INITIAL_O rules, which describe European Portuguese, and no source for this language was read."
+    },
+    {
+      "id": "PT_INITIAL_HO_CANDIDATE_U",
+      "phonemes": [],
+      "surface": "u",
+      "notes": "DISABLED for Macanese Creole (Patuá). The PT_INITIAL_HO rules extend the PT_INITIAL_O rules, which describe European Portuguese, and no source for this language was read."
+    },
+    {
+      "id": "PT_INITIAL_HO_CANDIDATE_O",
+      "phonemes": [],
+      "surface": "o",
+      "notes": "DISABLED for Macanese Creole (Patuá). The PT_INITIAL_HO rules extend the PT_INITIAL_O rules, which describe European Portuguese, and no source for this language was read."
+    },
+    {
+      "id": "PT_INITIAL_E_OPEN",
+      "phonemes": [],
+      "surface": "i",
+      "notes": "DISABLED for Macanese Creole (Patuá). The PT_INITIAL_E rules describe European Portuguese, and no source for this language was read."
+    },
+    {
+      "id": "PT_INITIAL_E_OPEN_CANDIDATE_E",
+      "phonemes": [],
+      "surface": "e",
+      "notes": "DISABLED for Macanese Creole (Patuá). The PT_INITIAL_E rules describe European Portuguese, and no source for this language was read."
+    },
+    {
+      "id": "PT_INITIAL_E_OPEN_CANDIDATE_OPEN",
+      "phonemes": [],
+      "surface": "ɛ",
+      "notes": "DISABLED for Macanese Creole (Patuá). The PT_INITIAL_E rules describe European Portuguese, and no source for this language was read."
+    },
+    {
+      "id": "PT_INITIAL_E_OPEN_CANDIDATE_REDUCED",
+      "phonemes": [],
+      "surface": "ɨ",
+      "notes": "DISABLED for Macanese Creole (Patuá). The PT_INITIAL_E rules describe European Portuguese, and no source for this language was read."
+    },
+    {
+      "id": "PT_INITIAL_E_LIQUID_CODA",
+      "phonemes": [],
+      "surface": "ɛ",
+      "notes": "DISABLED for Macanese Creole (Patuá). The PT_INITIAL_E rules describe European Portuguese, and no source for this language was read."
+    },
+    {
+      "id": "PT_INITIAL_E_LIQUID_CODA_CANDIDATE_E",
+      "phonemes": [],
+      "surface": "e",
+      "notes": "DISABLED for Macanese Creole (Patuá). The PT_INITIAL_E rules describe European Portuguese, and no source for this language was read."
+    },
+    {
+      "id": "PT_INITIAL_E_LIQUID_CODA_CANDIDATE_I",
+      "phonemes": [],
+      "surface": "i",
+      "notes": "DISABLED for Macanese Creole (Patuá). The PT_INITIAL_E rules describe European Portuguese, and no source for this language was read."
+    },
+    {
+      "id": "PT_INITIAL_E_LIQUID_CODA_CANDIDATE_REDUCED",
+      "phonemes": [],
+      "surface": "ɨ",
+      "notes": "DISABLED for Macanese Creole (Patuá). The PT_INITIAL_E rules describe European Portuguese, and no source for this language was read."
+    },
+    {
+      "id": "PT_INITIAL_E_CODA_CANDIDATE_OPEN",
+      "phonemes": [],
+      "surface": "ɛ",
+      "notes": "DISABLED for Macanese Creole (Patuá). The PT_INITIAL_E rules describe European Portuguese, and no source for this language was read."
+    },
+    {
+      "id": "PT_INITIAL_E_CODA_CANDIDATE_I",
+      "phonemes": [],
+      "surface": "i",
+      "notes": "DISABLED for Macanese Creole (Patuá). The PT_INITIAL_E rules describe European Portuguese, and no source for this language was read."
+    },
+    {
+      "id": "PT_INITIAL_E_CODA_CANDIDATE_REDUCED",
+      "phonemes": [],
+      "surface": "ɨ",
+      "notes": "DISABLED for Macanese Creole (Patuá). The PT_INITIAL_E rules describe European Portuguese, and no source for this language was read."
+    },
+    {
+      "id": "PT_CODA_L_A_OPEN",
+      "phonemes": [],
+      "surface": "a",
+      "notes": "DISABLED for Macanese Creole (Patuá). The PT_CODA_L rules describe European Portuguese, and no source for this language was read."
+    },
+    {
+      "id": "PT_CODA_L_A_CANDIDATE_REDUCED",
+      "phonemes": [],
+      "surface": "ɐ",
+      "notes": "DISABLED for Macanese Creole (Patuá). The PT_CODA_L rules describe European Portuguese, and no source for this language was read."
+    },
+    {
+      "id": "PT_CODA_L_E_OPEN",
+      "phonemes": [],
+      "surface": "ɛ",
+      "notes": "DISABLED for Macanese Creole (Patuá). The PT_CODA_L rules describe European Portuguese, and no source for this language was read."
+    },
+    {
+      "id": "PT_CODA_L_E_CANDIDATE_REDUCED",
+      "phonemes": [],
+      "surface": "ɨ",
+      "notes": "DISABLED for Macanese Creole (Patuá). The PT_CODA_L rules describe European Portuguese, and no source for this language was read."
+    },
+    {
+      "id": "PT_CODA_L_O_CLOSE",
+      "phonemes": [],
+      "surface": "o",
+      "notes": "DISABLED for Macanese Creole (Patuá). The PT_CODA_L rules describe European Portuguese, and no source for this language was read."
+    },
+    {
+      "id": "PT_CODA_L_O_CANDIDATE_OPEN",
+      "phonemes": [],
+      "surface": "ɔ",
+      "notes": "DISABLED for Macanese Creole (Patuá). The PT_CODA_L rules describe European Portuguese, and no source for this language was read."
+    },
+    {
+      "id": "PT_CODA_L_O_CANDIDATE_REDUCED",
+      "phonemes": [],
+      "surface": "u",
+      "notes": "DISABLED for Macanese Creole (Patuá). The PT_CODA_L rules describe European Portuguese, and no source for this language was read."
+    },
+    {
+      "id": "PT_STRESSED_E_PREPALATAL_CLOSE",
+      "phonemes": [],
+      "surface": "e",
+      "notes": "DISABLED for Macanese Creole (Patuá). The PT_STRESSED_E_PREPALATAL rules describe European Portuguese, and no source for this language was read."
+    },
+    {
+      "id": "PT_STRESSED_E_PREPALATAL_CANDIDATE_LISBON",
+      "phonemes": [],
+      "surface": "ɐ",
+      "notes": "DISABLED for Macanese Creole (Patuá). The PT_STRESSED_E_PREPALATAL rules describe European Portuguese, and no source for this language was read."
+    },
+    {
+      "id": "PT_STRESSED_E_PREPALATAL_CANDIDATE_OPEN",
+      "phonemes": [],
+      "surface": "ɛ",
+      "notes": "DISABLED for Macanese Creole (Patuá). The PT_STRESSED_E_PREPALATAL rules describe European Portuguese, and no source for this language was read."
+    },
+    {
+      "id": "PT_CODA_STOP_INITIAL_E_OPEN",
+      "phonemes": [],
+      "surface": "ɛ",
+      "notes": "DISABLED for Macanese Creole (Patuá). The PT_CODA_STOP rules describe European Portuguese, and no source for this language was read."
+    },
+    {
+      "id": "PT_CODA_STOP_INITIAL_E_CANDIDATE_E",
+      "phonemes": [],
+      "surface": "e",
+      "notes": "DISABLED for Macanese Creole (Patuá). The PT_CODA_STOP rules describe European Portuguese, and no source for this language was read."
+    },
+    {
+      "id": "PT_CODA_STOP_INITIAL_E_CANDIDATE_I",
+      "phonemes": [],
+      "surface": "i",
+      "notes": "DISABLED for Macanese Creole (Patuá). The PT_CODA_STOP rules describe European Portuguese, and no source for this language was read."
+    },
+    {
+      "id": "PT_CODA_STOP_INITIAL_E_CANDIDATE_REDUCED",
+      "phonemes": [],
+      "surface": "ɨ",
+      "notes": "DISABLED for Macanese Creole (Patuá). The PT_CODA_STOP rules describe European Portuguese, and no source for this language was read."
+    },
+    {
+      "id": "PT_CODA_STOP_E_OPEN",
+      "phonemes": [],
+      "surface": "ɛ",
+      "notes": "DISABLED for Macanese Creole (Patuá). The PT_CODA_STOP rules describe European Portuguese, and no source for this language was read."
+    },
+    {
+      "id": "PT_CODA_STOP_E_CANDIDATE_REDUCED",
+      "phonemes": [],
+      "surface": "ɨ",
+      "notes": "DISABLED for Macanese Creole (Patuá). The PT_CODA_STOP rules describe European Portuguese, and no source for this language was read."
+    },
+    {
+      "id": "PT_CODA_STOP_E_CANDIDATE_CLOSE",
+      "phonemes": [],
+      "surface": "e",
+      "notes": "DISABLED for Macanese Creole (Patuá). The PT_CODA_STOP rules describe European Portuguese, and no source for this language was read."
+    },
+    {
+      "id": "PT_CODA_STOP_O_OPEN",
+      "phonemes": [],
+      "surface": "ɔ",
+      "notes": "DISABLED for Macanese Creole (Patuá). The PT_CODA_STOP rules describe European Portuguese, and no source for this language was read."
+    },
+    {
+      "id": "PT_CODA_STOP_O_CANDIDATE_REDUCED",
+      "phonemes": [],
+      "surface": "u",
+      "notes": "DISABLED for Macanese Creole (Patuá). The PT_CODA_STOP rules describe European Portuguese, and no source for this language was read."
+    },
+    {
+      "id": "PT_CODA_STOP_O_CANDIDATE_CLOSE",
+      "phonemes": [],
+      "surface": "o",
+      "notes": "DISABLED for Macanese Creole (Patuá). The PT_CODA_STOP rules describe European Portuguese, and no source for this language was read."
+    },
+    {
+      "id": "PT_LEX_REDUCED_A",
+      "phonemes": [],
+      "surface": "ɐ",
+      "notes": "DISABLED for Macanese Creole (Patuá). The pt-PT function-word rules give the vowels of European Portuguese, from Infopédia and WikiPron pt-PT. No source read gives these vowels for this variety, so it keeps the reading the spec gives."
+    },
+    {
+      "id": "PT_LEX_PARA_CANDIDATE_VERB",
+      "phonemes": [],
+      "surface": "a",
+      "notes": "DISABLED for Macanese Creole (Patuá). The pt-PT function-word rules give the vowels of European Portuguese, from Infopédia and WikiPron pt-PT. No source read gives these vowels for this variety, so it keeps the reading the spec gives."
+    },
+    {
+      "id": "PT_LEX_FUNCTION_CLOSE_E",
+      "phonemes": [],
+      "surface": "e",
+      "notes": "DISABLED for Macanese Creole (Patuá). The pt-PT function-word rules give the vowels of European Portuguese, from Infopédia and WikiPron pt-PT. No source read gives these vowels for this variety, so it keeps the reading the spec gives."
+    },
+    {
+      "id": "PT_LEX_FUNCTION_OPEN_E",
+      "phonemes": [],
+      "surface": "ɛ",
+      "notes": "DISABLED for Macanese Creole (Patuá). The pt-PT function-word rules give the vowels of European Portuguese, from Infopédia and WikiPron pt-PT. No source read gives these vowels for this variety, so it keeps the reading the spec gives."
+    },
+    {
+      "id": "PT_LEX_FUNCTION_CLOSE_O",
+      "phonemes": [],
+      "surface": "o",
+      "notes": "DISABLED for Macanese Creole (Patuá). The pt-PT function-word rules give the vowels of European Portuguese, from Infopédia and WikiPron pt-PT. No source read gives these vowels for this variety, so it keeps the reading the spec gives."
+    },
+    {
+      "id": "PT_LEX_FUNCTION_OPEN_O",
+      "phonemes": [],
+      "surface": "ɔ",
+      "notes": "DISABLED for Macanese Creole (Patuá). The pt-PT function-word rules give the vowels of European Portuguese, from Infopédia and WikiPron pt-PT. No source read gives these vowels for this variety, so it keeps the reading the spec gives."
+    },
+    {
+      "id": "PT_LEX_TODO_CLOSE",
+      "phonemes": [],
+      "surface": "o",
+      "notes": "DISABLED for Macanese Creole (Patuá). The pt-PT function-word rules give the vowels of European Portuguese, from Infopédia and WikiPron pt-PT. No source read gives these vowels for this variety, so it keeps the reading the spec gives."
+    },
+    {
+      "id": "PT_LEX_TODO_CANDIDATE_OPEN",
+      "phonemes": [],
+      "surface": "ɔ",
+      "notes": "DISABLED for Macanese Creole (Patuá). The pt-PT function-word rules give the vowels of European Portuguese, from Infopédia and WikiPron pt-PT. No source read gives these vowels for this variety, so it keeps the reading the spec gives."
+    },
+    {
+      "id": "PT_LEX_VOCE_OPEN_O",
+      "phonemes": [],
+      "surface": "ɔ",
+      "notes": "DISABLED for Macanese Creole (Patuá). The pt-PT function-word rules give the vowels of European Portuguese, from Infopédia and WikiPron pt-PT. No source read gives these vowels for this variety, so it keeps the reading the spec gives."
+    },
+    {
+      "id": "PT_LEX_SOB_CLOSE_O",
+      "phonemes": [],
+      "surface": "o",
+      "notes": "DISABLED for Macanese Creole (Patuá). The pt-PT function-word rules give the vowels of European Portuguese, from Infopédia and WikiPron pt-PT. No source read gives these vowels for this variety, so it keeps the reading the spec gives."
     },
     {
       "id": "PT_STRESSED_A_BEFORE_NASAL",

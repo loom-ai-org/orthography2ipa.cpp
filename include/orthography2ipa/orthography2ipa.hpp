@@ -9,9 +9,11 @@
 #include "orthography2ipa/features.hpp"
 #include "orthography2ipa/inventory.hpp"
 #include "orthography2ipa/sentence.hpp"
+#include "orthography2ipa/markup.hpp"
 
 #include <cstddef>
 #include <map>
+#include <set>
 #include <optional>
 #include <stdexcept>
 #include <string>
@@ -278,8 +280,8 @@ public:
     /// `self._rescorers = base + declared_rescorers + self._allophone_chain`.
     /// An empty list — the default — leaves the chain byte-identical to the
     /// spec-only pipeline.
-    /// `syllabifier` is the engine's Pipeline::syllabifier, which wins over
-    /// discovery. The caller keeps it alive for the life of the Tokenizer.
+    /// `syllabifier` is the engine's Pipeline::syllabifier; nullptr uses the
+    /// bundled splitter. The caller keeps it alive for the life of the Tokenizer.
     explicit Tokenizer(const LanguageSpec& spec, bool expand_allophones = false,
                        bool apply_allophony = true,
                        const std::vector<const rescorer::LatticeRescorer*>& extra_rescorers = {},
@@ -332,6 +334,7 @@ private:
 };
 
 class RescorerPlugin;
+class SandhiPlugin;
 
 /// pipeline.py Pipeline: what one G2P engine uses in place of the defaults. The
 /// caller builds it and passes it to one engine, so two engines in one process
@@ -346,10 +349,35 @@ struct Pipeline {
     /// mapping is a lexicon with no entries. nullopt leaves the choice to the
     /// process-wide lexicon API, which is deprecated.
     const std::optional<std::map<std::string, std::string>> lexicon = std::nullopt;
-    /// The syllabifier for this engine. It replaces the plugin that discovery
-    /// finds for the language. A word it cannot split goes to the bundled
-    /// splitter, and never to a discovered plugin.
+    /// The syllabifier for this engine. nullptr uses the bundled splitter. A
+    /// word this syllabifier cannot split goes to the bundled splitter too.
+    /// Nothing discovers a syllabifier, so this member is the only way one
+    /// reaches an engine.
     const std::shared_ptr<const SyllabifierPlugin> syllabifier = nullptr;
+    /// Writes out one plain run of the input, and the words may change. It
+    /// runs once per plain run, so it never sees a `<phoneme>` tag or a forced
+    /// word. The caller binds the language and composes several jobs into one
+    /// callable.
+    const std::function<std::string(const std::string&)> expand = nullptr;
+    /// Adds marks to the whole sentence after `expand`, once per call, and
+    /// sees a forced word as spelled. Removing the combining marks from its
+    /// output must give its input back, or the engine throws
+    /// std::invalid_argument. A marked forced word keeps its written surface.
+    /// The engine runs `expand` and `mark` in transcribe, transcribe_detailed,
+    /// sentence_lattice and features. A word method takes a prepared word and
+    /// runs neither.
+    const std::function<std::string(const std::string&)> mark = nullptr;
+    /// The rescorers of this engine, in order. They run in every word path,
+    /// before the spec's allophone rules, in place of the deprecated
+    /// `rescorer` argument of G2P and of a `rescore` plugin the spec or the
+    /// caller names.
+    const rescorer::RescorerArg rescore = {};
+    /// What happens between the words of a sentence. `apply` runs in transcribe
+    /// and transcribe_detailed, after the spec's sandhi_rules, and returns one
+    /// IPA string per word. It replaces a `sandhi` plugin the spec or the
+    /// caller names. `apply_sandhi = false` turns off the spec's rules, not
+    /// this member.
+    const std::shared_ptr<const SandhiPlugin> sandhi = nullptr;
 };
 
 class G2P {
@@ -364,16 +392,25 @@ public:
     /// at the SENTENCE seam, before the spec's declarative sandhi pass, and
     /// when the list is empty the branch is skipped entirely — the default
     /// pipeline is byte-identical.
-    /// `pipeline` is g2p.py's keyword of the same name: the lexicon and the
-    /// syllabifier for this engine alone. Another engine in the same process
-    /// does not see them.
+    /// `pipeline` is g2p.py's keyword of the same name: the lexicon, the
+    /// syllabifier and the stages of this engine alone. Another engine in the
+    /// same process does not see them.
+    /// `plugin_overrides`, `sentence_rescorer` and `rescorer` are deprecated,
+    /// as g2p.py's `plugins=`, `sentence_rescorer=` and `rescorer=` are: use
+    /// the Pipeline member of each stage. A Pipeline member and the old
+    /// argument of its stage, or a plugin named for that stage, throw
+    /// std::invalid_argument with the reference's ValueError text, because
+    /// either order would drop one of the two silently.
+    /// `allow_undeclared_phonemes` is g2p.py's keyword of the same name: forced
+    /// IPA skips the check against the spec's declared inventory.
     explicit G2P(std::string language, std::map<std::string, std::vector<std::string>> plugin_overrides = {},
                  std::string dialect_profile = "", bool expand_allophones = false,
                  bool apply_sandhi = true, bool apply_stress = true,
                  bool apply_allophony = true,
                  const sentence::SentenceRescorerArg& sentence_rescorer = nullptr,
                  const rescorer::RescorerArg& rescorer = nullptr,
-                 const Pipeline& pipeline = {});
+                 const Pipeline& pipeline = {},
+                 bool allow_undeclared_phonemes = false);
     const LanguageSpec& spec() const;
     /// g2p.py G2P.pipeline: the pipeline this engine runs with.
     const Pipeline& pipeline() const { return *pipeline_; }
@@ -439,6 +476,10 @@ public:
     ConfidenceBreakdown confidence_breakdown(const std::string& word,
                                              std::size_t beam_width = 8) const;
 private:
+    // g2p.py _field_stages: the plugin stages whose Pipeline member is set.
+    // Computed first, so a conflict throws before the language resolves, as
+    // the reference raises before `resolve(lang)`.
+    std::set<std::string> field_stages_;
     std::string language_;
     const LanguageSpec* spec_;
     std::map<std::string, std::vector<std::string>> plugin_overrides_;
@@ -492,8 +533,12 @@ private:
     WordTranscription transcribe_one(const std::string& word, std::size_t width,
                                      bool forced, const std::string& forced_ipa) const;
     /// g2p.py G2P._check_forced: raises MarkupError when forced IPA holds a
-    /// symbol outside the spec's declared inventory.
+    /// symbol outside the spec's declared inventory, unless the engine allows
+    /// undeclared phonemes.
     void check_forced(const std::string& ipa) const;
+    bool allow_undeclared_phonemes_ = false;
+    /// g2p.py G2P._prepared: *chunks* after the pipeline's `expand` and `mark`.
+    std::vector<markup::Chunk> prepared(std::vector<markup::Chunk> chunks) const;
     /// g2p.py G2P._override_for: the whole-word reading for *word* —
     /// `word_exceptions` then the lexicon, each keyed on the language-aware
     /// lower-casing of the word with the spec's silent stress marks removed.
@@ -573,9 +618,9 @@ public:
                                             const std::string& lang) const = 0;
 };
 
-// registry.py get_stress_plugin / get_syllabifier: the plugin registered
-// for *code*, if any (registry lookups, distinct from the declared-stage
-// name lookups the engine uses).
+// registry.py get_stress_plugin: the plugin registered for *code*, if any (a
+// registry lookup, distinct from the declared-stage name lookups the engine
+// uses).
 // orthography2ipa/__init__.py re-exports these at package level
 // (`from orthography2ipa.inventory import ...`). phoneme_atoms is NOT
 // re-exported there, so it stays module-scoped as inventory::phoneme_atoms.
@@ -586,6 +631,9 @@ using inventory::tokenize;
 using inventory::dead_allophone_rules;
 
 const StressPlugin* get_stress_plugin(const std::string& code);
+/// registry.py get_syllabifier: deprecated. It returns nullptr for every code,
+/// because nothing discovers a syllabifier. Pass one in Pipeline::syllabifier.
+[[deprecated("get_syllabifier is deprecated and will be removed in 8.0.0; use Pipeline(syllabifier=...).")]]
 const SyllabifierPlugin* get_syllabifier(const std::string& code);
 
 /// registry.py MissingPlugin: a spec named a plugin and it is not installed.
@@ -646,6 +694,9 @@ std::vector<const rescorer::LatticeRescorer*> get_rescorers(const std::string& c
 /// clear_lexicons) drops the whole lexicon cache, so call them all before
 /// the first transcribe call of step 1.
 void register_normalize_plugin(const std::string& name, std::shared_ptr<NormalizePlugin> plugin);
+/// Deprecated: no engine reads a registered syllabifier, so registering one
+/// changes no transcription. Pass it in Pipeline::syllabifier.
+[[deprecated("register_syllabifier_plugin is deprecated and will be removed in 8.0.0; use Pipeline(syllabifier=...).")]]
 void register_syllabifier_plugin(const std::string& name, std::shared_ptr<SyllabifierPlugin> plugin);
 void register_stress_plugin(const std::string& name, std::shared_ptr<StressPlugin> plugin);
 void register_rescorer_plugin(const std::string& name, std::shared_ptr<RescorerPlugin> plugin);
@@ -695,11 +746,17 @@ void register_lexicon(const std::string& code, const std::string& source);
 /// for a local source that does not exist.
 std::map<std::string, std::string> load_lexicon(const std::string& source);
 /// lexicon.py packaged_lexicon: the `{word: ipa}` mapping an installed package
-/// supplies for *code*. The mapping is the caller's to give to Pipeline, and
-/// this call sets no state. Throws LookupError when no installed package
-/// supplies a lexicon file for *code*: asking for a lexicon that is absent is
-/// an error, never a quiet fall back to the rules.
-std::map<std::string, std::string> packaged_lexicon(const std::string& code);
+/// supplies for *code*. The mapping holds the exceptions: the words whose
+/// reading the spelling cannot determine. With *patches* true it also holds the
+/// patches, the words that the rules get wrong although a rule could reach
+/// them; an exception wins over a patch for the same word. The mapping is the
+/// caller's to give to Pipeline, and this call sets no state. Throws
+/// LookupError when no installed package supplies a lexicon file for *code*,
+/// or when *patches* is true and none supplies a patch file for it: asking for
+/// a lexicon that is absent is an error, never a quiet fall back to the rules.
+/// The search path is the one use_packaged_lexicons documents; the patches of
+/// a root are in ``<root>/patches/<code>/<source>.tsv``.
+std::map<std::string, std::string> packaged_lexicon(const std::string& code, bool patches = false);
 /// lexicon.py is_ipa_string: True when *ipa* is NFC and every character is a
 /// phonetic letter, combining mark, or one of the tolerated prosodic
 /// modifiers. Empty is not a transcription.
@@ -739,7 +796,8 @@ split_weighted_graphemes(const boost::property_tree::ptree& raw_graphemes);
 O2I_DEPRECATED_LEXICON_API("set_lexicon_dir", "Pipeline(lexicon=load_lexicon(path))")
 void set_lexicon_directory(const std::string& path);
 /// lexicon.py clear_lexicons: forgets every registered lexicon, the lexicon
-/// dir, the discovered packaged-lexicon providers and the enabled ones.
+/// dir, the discovered packaged-lexicon and patch providers and the enabled
+/// ones.
 /// Deprecated: an engine's Pipeline lexicon needs no clearing, because it ends
 /// with the engine.
 O2I_DEPRECATED_LEXICON_API("clear_lexicons", "Pipeline(lexicon=...), which needs no clearing")
@@ -789,9 +847,10 @@ std::vector<std::string> use_packaged_lexicons();
 O2I_DEPRECATED_LEXICON_API("use_packaged_lexicons", "Pipeline(lexicon=packaged_lexicon(code))")
 std::vector<std::string> use_packaged_lexicons(const std::vector<std::string>& codes);
 /// lexicon.py packaged_lexicon_sources: the discovered providers as
-/// {resolved code: local file}. Enables nothing; a failing provider is left
-/// out.
-std::map<std::string, std::string> packaged_lexicon_sources();
+/// {resolved code: local file}, or the patch files when *patches* is true.
+/// Enables nothing; a failing provider is left out. use_packaged_lexicons
+/// never enables the patches.
+std::map<std::string, std::string> packaged_lexicon_sources(bool patches = false);
 std::vector<std::string> available_lexicon_codes();
 /// lexicon.py get_lexicon, deprecated: the process-wide `{word: ipa}` overlay for
 /// *code*. An engine's lexicon is the mapping the caller built.

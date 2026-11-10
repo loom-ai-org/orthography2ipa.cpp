@@ -5,6 +5,12 @@
 //   use[<TAB>code...]       use_packaged_lexicons(), or with the listed codes
 //                           ("use<TAB>" alone passes an empty list)
 //   sources                 packaged_lexicon_sources()
+//   patch-sources           packaged_lexicon_sources(patches=true)
+//   packaged<TAB>code       packaged_lexicon(code)
+//   patched<TAB>code        packaged_lexicon(code, patches=true)
+//   patched-word<TAB>code<TAB>word
+//                           transcribe_word with an engine whose Pipeline
+//                           lexicon is packaged_lexicon(code, patches=true)
 //   available               available_lexicon_codes()
 //   get<TAB>code            get_lexicon(code)
 //   path<TAB>code           lexicon_path(code)
@@ -39,10 +45,24 @@ std::string run(const std::vector<std::string>& field, std::map<std::string, std
             if (!field[i].empty()) codes.push_back(field[i]);
         return joined(use_packaged_lexicons(codes));
     }
-    if (command == "sources") {
+    if (command == "sources" || command == "patch-sources") {
         std::string out;
-        for (const auto& [code, path] : packaged_lexicon_sources()) out += code + "=" + path + ";";
+        for (const auto& [code, path] : packaged_lexicon_sources(command == "patch-sources"))
+            out += code + "=" + path + ";";
         return out;
+    }
+    if (command == "packaged" || command == "patched") {
+        std::string out;
+        for (const auto& [word, ipa] : packaged_lexicon(field[1], command == "patched")) out += word + "=" + ipa + ",";
+        return out;
+    }
+    if (command == "patched-word") {
+        auto& engine = engines["patched\t" + field[1]];
+        if (!engine)
+            engine = std::make_unique<G2P>(field[1], std::map<std::string, std::vector<std::string>>{}, "", false,
+                                           true, true, true, nullptr, nullptr,
+                                           Pipeline{packaged_lexicon(field[1], true)});
+        return engine->transcribe_word(field[2]);
     }
     if (command == "available") return joined(available_lexicon_codes());
     if (command == "get") {

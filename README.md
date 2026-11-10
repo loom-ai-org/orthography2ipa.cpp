@@ -15,20 +15,20 @@ cmake -S . -B build
 cmake --build build -j
 ```
 
-Portuguese syllables come from the C++ port of
-[silabificador](https://github.com/loom-ai-org/silabificador.cpp) when CMake
-finds its `silabificador` package. The Python package loads the same plugin
-through the `orthography2ipa[portuguese]` extra.
-
-The plugin claims the `pt` codes at priority 50. Point CMake at the install
-prefix:
+When CMake finds the `silabificador` package of the C++ port of
+[silabificador](https://github.com/loom-ai-org/silabificador.cpp), the library
+can build `syllabifiers::SilabificadorSyllabifier`. The Python package offers
+the same plugin through the `orthography2ipa[portuguese]` extra. The build
+changes no transcription: a caller passes the plugin to one engine in its
+`Pipeline`, and every other engine uses the bundled splitter. Point CMake at the
+install prefix:
 
 ```sh
 cmake -S . -B build -DCMAKE_PREFIX_PATH=/path/to/silabificador/prefix
 ```
 
-When CMake does not find the package, the bundled vowel-group splitter
-syllabifies Portuguese, as the Python package does without the extra. The
+When CMake does not find the package, constructing the plugin throws
+`std::runtime_error`, as the Python import fails without the extra. The
 configure step prints a status line only when it finds silabificador.
 
 The installed `orthography2ipaConfig.cmake` calls
@@ -36,13 +36,20 @@ The installed `orthography2ipaConfig.cmake` calls
 a shared orthography2ipa built against a static silabificador: the shared
 library then contains silabificador, so its consumers do not need the package.
 
-The parity tests compare against the Python reference, so the reference must
-match the build. When the build uses silabificador, install the reference
-with `orthography2ipa[portuguese]`.
+Nothing discovers a syllabifier, in Python or in C++. The parity tests give
+the same answer with and without silabificador on either side.
+`get_syllabifier` returns `nullptr` and `register_syllabifier_plugin` reaches
+no engine. Both are deprecated, and version 8.0.0 removes them.
 
-The reference finds silabificador through an entry point, so a source
-checkout of the reference must also be installed. When the build does not use
-silabificador, the reference must not have it.
+A build that finds silabificador adds the test `silabificador-parity`. It
+passes the plugin in a `Pipeline` on both sides, over the pt-PT and pt-BR
+words of o2i-lexicons, and compares the split, the stress and the
+transcription of each word. The reference then needs the silabificador
+release that the C++ port matches:
+
+```sh
+uv pip install silabificador==2.1.1a2
+```
 
 The catalog is bundled from the Python project. To use another catalog:
 
@@ -102,28 +109,36 @@ functions: `register_lexicon`, `set_lexicon_directory`, `use_packaged_lexicons`,
 
 ## Packaged lexicons
 
-A package such as [o2i-lexicons](https://pypi.org/project/o2i-lexicons/) supplies a
-residual lexicon per language: the words that the rules get wrong, in a
-`word<TAB>ipa` file. The install changes no output. The caller gives a packaged
-lexicon to an engine in code, as in Python:
+A package such as [o2i-lexicons](https://pypi.org/project/o2i-lexicons/) supplies
+two lexicons per language, each a `word<TAB>ipa` file. The exceptions are the
+words whose reading the spelling cannot determine. The patches are words that the
+rules get wrong although a rule could reach them. The install changes no output.
+The caller gives a packaged lexicon to an engine in code, as in Python:
 
 ```cpp
 orthography2ipa::packaged_lexicon_sources();          // lists the providers
-orthography2ipa::packaged_lexicon("pt-PT");           // the mapping, or throws LookupError
+orthography2ipa::packaged_lexicon("pt-PT");           // the exceptions, or throws LookupError
+orthography2ipa::packaged_lexicon("pt-PT", true);     // the exceptions and the patches
+orthography2ipa::packaged_lexicon_sources(true);      // lists the patch providers
 ```
 
-Python finds the providers through the `orthography2ipa.lexicons`
-entry points. C++ has no entry points, so the port reads a search path of provider
-roots. Each root has the layout of the package's data directory,
-`<root>/<code>/<source>.tsv`:
+An exception wins over a patch for the same word. `use_packaged_lexicons` never
+enables the patches.
+
+Python finds the exception providers through the `orthography2ipa.lexicons`
+entry points and the patch providers through the
+`orthography2ipa.lexicon_patches` entry points. C++ has no entry points, so the
+port reads a search path of provider roots. Each root has the layout of the
+package's data directory: the exceptions in `<root>/<code>/<source>.tsv` and the
+patches in `<root>/patches/<code>/<source>.tsv`:
 
 - `$ORTHOGRAPHY2IPA_PACKAGED_LEXICONS` lists the roots, separated by `:`, in order.
   An empty value names no root.
 - When the variable is unset, the root is `<prefix>/share/o2i-lexicons`, the
   directory beside the installed spec data.
 
-Each directory under a root that holds a `*.tsv` file is one provider for the code
-that the directory names. The provider fails when it holds more than one `*.tsv`
+Each directory under a root, or under its `patches` directory, that holds a `*.tsv`
+file is one provider for the code that the directory names. The provider fails when it holds more than one `*.tsv`
 file. A name that does not resolve exactly to a spec is skipped. When two
 providers serve one spec, the one named for the exact code wins, then the one in
 the earlier root. To use the lexicons of the installed Python package:
@@ -141,7 +156,7 @@ together: a spec field without the code that reads it is ignored. For this reaso
 build never fetches specs. They change only through the sync script:
 
 ```
-python3 tools/sync_reference.py 7.119.10a1  # or: latest
+python3 tools/sync_reference.py 7.122.20a2  # or: latest
 ```
 
 The script downloads the wheel from PyPI and checks its sha256. It then replaces

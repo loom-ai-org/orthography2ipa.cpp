@@ -66,7 +66,7 @@ target_compile_definitions(orthography2ipa PRIVATE
     O2I_BUILD_DIR="${CMAKE_BINARY_DIR}")
 target_compile_options(orthography2ipa PRIVATE -Wall -Wextra -Wpedantic)
 if(silabificador_FOUND)
-    message(STATUS "silabificador ${silabificador_VERSION}: Portuguese syllables come from it")
+    message(STATUS "silabificador ${silabificador_VERSION}: SilabificadorSyllabifier is available")
     target_link_libraries(orthography2ipa PRIVATE silabificador::silabificador)
     target_compile_definitions(orthography2ipa PRIVATE O2I_HAVE_SILABIFICADOR)
 endif()
@@ -323,6 +323,15 @@ if(BUILD_TESTING)
                          $<TARGET_FILE:orthography2ipa-check-pipeline>)
         set_tests_properties(orthography2ipa-pipeline-parity PROPERTIES ENVIRONMENT "O2I_PYTHON_ROOT=${O2I_REF_ROOT}"
                                                                          TIMEOUT 3600)
+        # Needs the silabificador and o2i-lexicons packages installed for the
+        # reference's python.
+        if(silabificador_FOUND)
+            add_test(NAME orthography2ipa-silabificador-parity
+                     COMMAND ${Python3_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/tests/pipeline_parity.py
+                             $<TARGET_FILE:orthography2ipa-check-pipeline> --only silabificador)
+            set_tests_properties(orthography2ipa-silabificador-parity PROPERTIES
+                                 ENVIRONMENT "O2I_PYTHON_ROOT=${O2I_REF_ROOT}" TIMEOUT 3600)
+        endif()
         # Needs the o2i-lexicons package installed for the reference's python.
         add_test(NAME orthography2ipa-packaged-lexicon-parity
                  COMMAND ${Python3_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/tests/packaged_lexicon_parity.py

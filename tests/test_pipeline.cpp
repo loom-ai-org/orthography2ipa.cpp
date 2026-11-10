@@ -123,10 +123,10 @@ G2P with_syllabifier(const std::shared_ptr<const SyllabifierPlugin>& plugin) {
     return engine("es-ES", Pipeline{std::nullopt, plugin});
 }
 
-// A plugin discovery finds for es-ES, drawing the division of the rules, for
-// the life of the object.
+// A plugin in the process-wide syllabifier registry for es-ES, drawing one
+// syllable, for the life of the object. No engine reads that registry.
 struct Discovered {
-    std::shared_ptr<Fixed> plugin = std::make_shared<Fixed>(RULES_DIVISION);
+    std::shared_ptr<Fixed> plugin = std::make_shared<Fixed>(ONE_SYLLABLE);
     SyllabifierRegistry saved = exchange_syllabifiers({{"fixed", plugin}});
     ~Discovered() { exchange_syllabifiers(std::move(saved)); }
 };
@@ -286,7 +286,14 @@ void inventory_functions_read_the_mapping_they_are_given() {
 
 // ─── the syllabifier ────────────────────────────────────────────────────────
 
-void pipeline_syllabifier_wins_over_discovery() {
+void an_installed_syllabifier_changes_no_transcription() {
+    const Discovered discovered;
+    CHECK(G2P("es-ES").transcribe_word("cantaba") == CANTABA_RULES);
+    CHECK(stress::detect_stress("cantaba", get("es-ES"), nullptr, "es-ES") == 1);
+    CHECK(discovered.plugin->calls.empty());
+}
+
+void pipeline_syllabifier_answers_for_its_engine() {
     const Discovered discovered;
     const auto mine = std::make_shared<Fixed>(ONE_SYLLABLE);
     CHECK(with_syllabifier(mine).transcribe_word("cantaba") == CANTABA_ONE_SYLLABLE);
@@ -294,12 +301,13 @@ void pipeline_syllabifier_wins_over_discovery() {
     CHECK(discovered.plugin->calls.empty());
 }
 
-void engine_with_no_syllabifier_keeps_discovery() {
+void engine_with_no_syllabifier_uses_the_bundled_splitter() {
     const Discovered discovered;
-    with_syllabifier(std::make_shared<Fixed>(ONE_SYLLABLE)).transcribe_word("cantaba");
-    CHECK(discovered.plugin->calls.empty());
+    const auto mine = std::make_shared<Fixed>(ONE_SYLLABLE);
+    with_syllabifier(mine).transcribe_word("cantaba");
     CHECK(G2P("es-ES").transcribe_word("cantaba") == CANTABA_RULES);
-    CHECK(only_cantaba(*discovered.plugin));
+    CHECK(only_cantaba(*mine));
+    CHECK(discovered.plugin->calls.empty());
 }
 
 void engines_with_different_syllabifiers_run_side_by_side() {
@@ -499,8 +507,9 @@ int main() {
     forced_check_tokenizes_as_the_inventory_does();
     inventory_functions_read_the_mapping_they_are_given();
     inventory_with_a_mapping_ignores_the_process_lexicon();
-    pipeline_syllabifier_wins_over_discovery();
-    engine_with_no_syllabifier_keeps_discovery();
+    an_installed_syllabifier_changes_no_transcription();
+    pipeline_syllabifier_answers_for_its_engine();
+    engine_with_no_syllabifier_uses_the_bundled_splitter();
     engines_with_different_syllabifiers_run_side_by_side();
     a_word_the_syllabifier_cannot_split_goes_to_the_bundled_splitter();
     detect_stress_takes_the_syllabifier();

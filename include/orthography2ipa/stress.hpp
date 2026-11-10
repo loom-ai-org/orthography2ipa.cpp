@@ -159,12 +159,11 @@ std::set<int> iambic_length_positions(
 std::string apply_iambic_length(const std::string& ipa, const LanguageSpec& spec,
                                 const std::vector<std::string>& atoms = {});
 
-// stress.py _syllables_for: syllabify *word* — the caller's *syllabifier*,
-// else the plugin registered for *lang* (the result must round-trip to the
-// word), else the spec-driven bundled splitter. *syllabifier* replaces
-// discovery, so a word it cannot split goes to the bundled splitter and not to
-// a registered plugin. *diphthongs* reaches the bundled splitter only. Without
-// *spec* the spec is looked up for *lang*.
+// stress.py _syllables_for: syllabify *word* with the caller's *syllabifier*
+// (the result must round-trip to the word), else with the spec-driven bundled
+// splitter. Nothing discovers a syllabifier, so a word the caller's plugin
+// cannot split goes to the bundled splitter. *diphthongs* reaches the bundled
+// splitter only. Without *spec* the spec is looked up for *lang*.
 std::vector<std::string> syllables_for(
     const std::string& word, const std::string& lang,
     const std::vector<std::string>& diphthongs = {},

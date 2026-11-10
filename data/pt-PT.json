@@ -386,7 +386,7 @@
         "n",
         "ɲ"
       ],
-      "notes": "Stressed plain ⟨a⟩ before an onset /m n ɲ/ is central [ɐ] (cama [ˈkɐmɐ], ano [ˈɐnu], banho [ˈbɐɲu]). Cunha & Cintra (Nova Gramática do Português Contemporâneo, 7th ed., p. 49): \"No português europeu normal, [ɑ], quando tônico, também aparece, na maioria dos casos, antes de consoante nasal, a exemplo de cama, cana e sanha\". Their [ɑ] is this spec's [ɐ]. Lao, Rodrigues & Brissos (2020, Revista da Associação Portuguesa de Linguística 7, p. 296): \"no padrão existe uma elevação de a para [ɐ]\". The same page of Cunha & Cintra gives the one opposition, the present against the preterite of first-conjugation verbs. pt-PT spells that preterite with ⟨á⟩, so the rule takes plain ⟨a⟩ only: falamos [fɐˈlɐmuʃ], falámos [fɐˈlamuʃ]. Infopédia writes [ɐ] in 1904 of 1933 rows with this shape. The other 29 are mostly loans and -iano derivatives (tsunami tsuˈnami, estoniano (i)ʃtuˈnjanu), while 685 of 696 -iano rows have [ɐ]."
+      "notes": "Stressed plain ⟨a⟩ before an onset /m n ɲ/ is central [ɐ] (cama [ˈkɐmɐ], ano [ˈɐnu], banho [ˈbɐɲu]). Cunha & Cintra (Nova Gramática do Português Contemporâneo, 7th ed., p. 49): \"No português europeu normal, [ɑ], quando tônico, também aparece, na maioria dos casos, antes de consoante nasal, a exemplo de cama, cana e sanha\". Their [ɑ] is this spec's [ɐ]. Lao, Rodrigues & Brissos (2020, Revista da Associação Portuguesa de Linguística 7, p. 296): \"no padrão existe uma elevação de a para [ɐ]\". The same page of Cunha & Cintra gives the one opposition, the present against the preterite of first-conjugation verbs. pt-PT spells that preterite with ⟨á⟩, so the rule takes plain ⟨a⟩ only: falamos [fɐˈlɐmuʃ], falámos [fɐˈlamuʃ]. Infopédia writes [ɐ] in 2085 of 2121 readings whose stressed vowel is a plain ⟨a⟩ before ⟨m n nh⟩ and a vowel letter, as counted by scripts/count_pt_stressed_a_nasal.py over the portuguese_unified rows at Hugging Face commit a8e0934f. The other 36 are mostly loans and -iano derivatives (tsunami tsuˈnami, estoniano (i)ʃtuˈnjanu), while 713 of 725 -iano readings have [ɐ]."
     },
     {
       "id": "PT_NASAL_E_RAISE",
@@ -437,6 +437,26 @@
         "̃"
       ],
       "notes": "Unstressed ⟨e⟩ before a coda nasal does not reduce to [ɨ]: the nasal vowel is [ẽ] (entender [ẽtẽˈdeɾ], lembrar, pensar), the front companion of PT_NASAL_O_UNRED. Cruz-Ferreira 1999: 127 (Handbook of the IPA, Lisbon accent) lists 'European Portuguese has 14 monophthongs, 9 oral and 5 nasalized': /ĩ ẽ ɐ̃ õ ũ/; the unstressed /ɯ/ (written [ɨ] here) 'occurs only in unstressed syllables' and has no nasalized counterpart. Her transcribed passage writes the pretonic ⟨en⟩ of envolto as /ẽ'voltu/ (p. 129). Ordered after the word-final -em/-ens rules, so a final ⟨-em -ens⟩ takes the diphthong of its variety first. Dialects with a reduced nasal [ɨ̃] (pt-PT-x-minho) restrict this rule in their own spec."
+    },
+    {
+      "id": "PT_INITIAL_ES_RAISE",
+      "phonemes": [
+        "e"
+      ],
+      "surface": "i",
+      "word_initial": true,
+      "stress": "unstressed",
+      "followed_by_phoneme": [
+        "s",
+        "z",
+        "ʃ",
+        "ʒ"
+      ],
+      "followed_by_2": "consonant",
+      "followed_by_grapheme": [
+        "s"
+      ],
+      "notes": "A word-initial unstressed ⟨e⟩ before a coda sibilant is [i]: estar [iʃˈtaɾ], escola [iʃˈkɔlɐ], esmola [iʒˈmɔlɐ]. Vázquez Diéguez (2015, Anuario de Estudios Filológicos 38) gives 'estar [i] / —' for Europe on p. 242 and 'esc- [(i)ʃk]', 'est- [(i)ʃt]' on p. 250. His p. 265 adds 'Na sequência <es- + consoante> pode desaparecer'. Teyssier (1989: 28, quoted on his p. 244) writes 'o [i] quase não se ouve, p. ex. estar pron. [(i)ʃ'tar]'. Mateus & d'Andrade (1998, D.E.L.T.A. 14(1), p. 26) say 'they are deleted when the coda is an /S/ (see esperado)'. Cruz-Ferreira (1999: 130) writes todo o esplendor as ['todu ʃplẽ'dor], which is a narrow transcription of connected speech. This rule writes the vowel and does not model the optional drop. The statement is for Europe as a whole. Vázquez names Lisboa-Coimbra as the standard, and no source read covers another European variety on its own, so the pt-PT-x-* specs inherit the rule. Each spec keeps its own coda sibilant. Double ⟨ss⟩, a stressed ⟨e⟩ and initial ⟨ex⟩ stay outside this rule."
     },
     {
       "id": "PT_CODA_L_DARK",
@@ -553,9 +573,10 @@
         "uxiquer",
         "salter",
         "xavier",
-        "freezer"
+        "freezer",
+        "sequer"
       ],
-      "notes": "Words in ⟨-er⟩ whose stressed final vowel is open-mid [ɛ] in European Portuguese, listed before PT_ER_CLOSE so they keep the open value. The list holds 40 words. Checked live in Infopédia (web.archive.org snapshot of the entry, IPA beside the syllable division): 'mu.lher muˈʎɛr', 'ta.lher tɐˈʎɛr', 'co.lher kuˈʎɛr' (the noun; the verb colher is 'kuˈʎer', so the homograph stays open), 'qual.quer kwaɫˈkɛr' with the plural 'quaisquer', 'quer ˈkɛr', 'mister miʃˈtɛr', 'a.lu.guer ɐluˈɡɛr', 'chanceler ʃɐ̃səˈlɛr', 'chofer ʃoˈfɛr', 'malmequer maɫməˈkɛr', 'mester məʃˈtɛr', 'cateter kɐtəˈtɛr', 'ureter urəˈtɛr', 'rater ʀaˈtɛr', 'nuer ˈnwɛr'. Priberam marks talher '|lhér|', mister '|tér|' and the noun colher '|é|' (the verb colher '|ê|'). Scraped Infopédia entry (dataset infopedia_pt_ipa, the Infopédia dictionary text; entry not opened live), reading with the stress on the final syllable and open [ɛr]: alquiler 'aɫkiˈlɛr', rocker 'ʀɔˈkɛr', belveder 'bɛɫvəˈdɛr', alcacer 'aɫkɐˈsɛr', alquicer 'aɫkiˈsɛr', alvener 'aɫvəˈnɛr', camber 'kɐ̃ˈbɛr', esmoler '(i)ʒmuˈlɛr', alter 'aɫˈtɛr', clister 'kliʃˈtɛr', ecler 'eˈklɛr', escaler '(i)ʃkɐˈlɛr', sumilher 'sumiˈʎɛr', lucifer 'lusiˈfɛr', coworker 'kowɐrˈkɛr', khmer 'ˈkmɛr', eruer 'ɛˈrwɛr', paguer 'pɐˈɡɛr', mindjer 'mĩˈdʒɛr', uxiquer 'uʃiˈkɛr', salter 'saɫˈtɛr', xavier 'ʃɐvjˈɛr', freezer 'friˈzɛr'. 'requer' is the third person of 'querer' and takes the stem value of 'quer'; its own entry was not opened. The same lexicon holds 601 words with final stress and close [er] (the infinitives). Not listed: compounds whose last element is listed or whose own reading the engine already gives open (ex-mulher, bem-me-quer), 'fecho-ecler' and 'escamónea-de-mompilher' (compounds), and 'africâner' (the engine stresses another syllable). African, Asian and creole varieties disable this rule."
+      "notes": "Words in ⟨-er⟩ whose stressed final vowel is open-mid [ɛ] in European Portuguese, listed before PT_ER_CLOSE so they keep the open value. The list holds 41 words. Checked live in Infopédia (web.archive.org snapshot of the entry, IPA beside the syllable division): 'mu.lher muˈʎɛr', 'ta.lher tɐˈʎɛr', 'co.lher kuˈʎɛr' (the noun; the verb colher is 'kuˈʎer', so the homograph stays open), 'qual.quer kwaɫˈkɛr' with the plural 'quaisquer', 'quer ˈkɛr', 'mister miʃˈtɛr', 'a.lu.guer ɐluˈɡɛr', 'chanceler ʃɐ̃səˈlɛr', 'chofer ʃoˈfɛr', 'malmequer maɫməˈkɛr', 'mester məʃˈtɛr', 'cateter kɐtəˈtɛr', 'ureter urəˈtɛr', 'rater ʀaˈtɛr', 'nuer ˈnwɛr'. Priberam marks talher '|lhér|', mister '|tér|' and the noun colher '|é|' (the verb colher '|ê|'). Scraped Infopédia entry (dataset infopedia_pt_ipa, the Infopédia dictionary text; entry not opened live), reading with the stress on the final syllable and open [ɛr]: alquiler 'aɫkiˈlɛr', rocker 'ʀɔˈkɛr', belveder 'bɛɫvəˈdɛr', alcacer 'aɫkɐˈsɛr', alquicer 'aɫkiˈsɛr', alvener 'aɫvəˈnɛr', camber 'kɐ̃ˈbɛr', esmoler '(i)ʒmuˈlɛr', alter 'aɫˈtɛr', clister 'kliʃˈtɛr', ecler 'eˈklɛr', escaler '(i)ʃkɐˈlɛr', sumilher 'sumiˈʎɛr', lucifer 'lusiˈfɛr', coworker 'kowɐrˈkɛr', khmer 'ˈkmɛr', eruer 'ɛˈrwɛr', paguer 'pɐˈɡɛr', mindjer 'mĩˈdʒɛr', uxiquer 'uʃiˈkɛr', salter 'saɫˈtɛr', xavier 'ʃɐvjˈɛr', freezer 'friˈzɛr'. 'sequer' has no Infopédia row: WikiPron pt-PT gives sɨkɛɾ and pt.wiktionary gives [sɨˈkɛɾ], the open vowel of quer. 'requer' is the third person of 'querer' and takes the stem value of 'quer'; its own entry was not opened. The same lexicon holds 601 words with final stress and close [er] (the infinitives). Not listed: compounds whose last element is listed or whose own reading the engine already gives open (ex-mulher, bem-me-quer), 'fecho-ecler' and 'escamónea-de-mompilher' (compounds), and 'africâner' (the engine stresses another syllable). African, Asian and creole varieties disable this rule."
     },
     {
       "id": "PT_ER_CLOSE",
@@ -592,9 +613,127 @@
         "catorze",
         "saboroso",
         "gostoso",
-        "famoso"
+        "famoso",
+        "desporto",
+        "aerodesporto",
+        "aeroporto",
+        "heliporto",
+        "hidroporto",
+        "vertiporto",
+        "anteporto",
+        "angiporto",
+        "morto",
+        "natimorto",
+        "semimorto",
+        "remorto",
+        "torto",
+        "retorto",
+        "boquitorto",
+        "horto",
+        "aborto",
+        "antiaborto",
+        "autoaborto",
+        "absorto",
+        "conforto",
+        "desconforto",
+        "reconforto",
+        "lorto",
+        "abrolho",
+        "caroço",
+        "escolho",
+        "esforço",
+        "sobrolho",
+        "contorno",
+        "estorvo",
+        "socorro",
+        "corcovo",
+        "fogo",
+        "poço",
+        "tijolo",
+        "coro",
+        "forno",
+        "porco",
+        "corno",
+        "tojo",
+        "corpo",
+        "fosso",
+        "posto",
+        "tordo",
+        "corvo",
+        "imposto",
+        "povo",
+        "despojo",
+        "jogo",
+        "troco",
+        "destroço",
+        "miolo",
+        "almoço",
+        "bolso",
+        "sogro",
+        "disposto",
+        "grosso",
+        "chocho",
+        "chocha",
+        "fosco",
+        "fosca",
+        "fofo",
+        "fofa",
+        "acordo",
+        "acordos",
+        "encosto",
+        "encostos",
+        "moço",
+        "moços",
+        "potro",
+        "potros",
+        "adorno",
+        "adornos",
+        "engodo",
+        "engodos",
+        "reboco",
+        "rebocos",
+        "bojo",
+        "bojos",
+        "estojo",
+        "estojos",
+        "bolo",
+        "bolos",
+        "ferrolho",
+        "ferrolhos",
+        "mosto",
+        "mostos",
+        "cachorro",
+        "cachorros",
+        "globo",
+        "globos",
+        "namoro",
+        "namoros",
+        "rolo",
+        "rolos",
+        "coco",
+        "cocos",
+        "golfo",
+        "golfos",
+        "piloto",
+        "pilotos",
+        "piolho",
+        "piolhos",
+        "sopro",
+        "sopros",
+        "consolo",
+        "consolos",
+        "poldro",
+        "poldros",
+        "dorso",
+        "dorsos",
+        "logro",
+        "logros",
+        "polvo",
+        "polvos",
+        "topo",
+        "topos"
       ],
-      "notes": "Lexically CLOSE stressed ⟨o⟩ = [o] for this curated set of frequent lexemes, overriding the pre-lexical default (which is the open [ɔ] in the European standard and, by inheritance, ambiguous elsewhere). Portuguese stressed mid-vowel height is lexically/etymologically fixed and not predictable from spelling — ⟨sopa⟩ [ˈsopɐ] (close, < Gmc *suppa) vs ⟨sova⟩ [ˈsɔvɐ] (open) are spelled and stressed alike (Mateus & d'Andrade 2000: ch.3 'The vowels'; Vigário 2003). This rule pins ONLY the stressed-vowel height and lets reduction, rhotics, sandhi and affrication run normally, so it inherits cleanly to every pt-PT / pt-BR dialect child. Includes the ⟨-oso⟩ masculine adjectival suffix (saboroso, gostoso, famoso), which is regularly close [o] against its open [ɔ] feminine ⟨-osa⟩ (PT_LEX_OPEN_O). SEED LIST — the arbitration-confirmed frequent lexemes; the long tail of Portuguese mid-vowel lexemes is documented residual, to be extended from Mateus & d'Andrade / a pronouncing dictionary."
+      "notes": "Lexically CLOSE stressed ⟨o⟩ = [o] for this curated set of frequent lexemes, overriding the pre-lexical default (which is the open [ɔ] in the European standard and, by inheritance, ambiguous elsewhere). Portuguese stressed mid-vowel height is lexically/etymologically fixed and not predictable from spelling — ⟨sopa⟩ [ˈsopɐ] (close, < Gmc *suppa) vs ⟨sova⟩ [ˈsɔvɐ] (open) are spelled and stressed alike (Mateus & d'Andrade 2000: ch.3 'The vowels'; Vigário 2003). This rule pins ONLY the stressed-vowel height and lets reduction, rhotics, sandhi and affrication run normally, so it inherits cleanly to every pt-PT / pt-BR dialect child. Includes the ⟨-oso⟩ masculine adjectival suffix (saboroso, gostoso, famoso), which is regularly close [o] against its open [ɔ] feminine ⟨-osa⟩ (PT_LEX_OPEN_O). SEED LIST — the arbitration-confirmed frequent lexemes; the long tail of Portuguese mid-vowel lexemes is documented residual, to be extended from Mateus & d'Andrade / a pronouncing dictionary. ⟨-ORTO⟩ WORDS: Infopédia writes the close [o] in all 25 single words that end in ⟨-orto⟩, and the list holds all 25. Cunha & Cintra (7th ed., pp. 197-198) state the plural class: 'Alguns substantivos, cuja vogal tônica é o fechado, além de receberem a desinência -s, mudam, no plural, o o fechado [o] para aberto [ɔ].' The words of this shape that the source names are porto and corpo. Page 265 extends the noun plural rules to adjectives: 'Na formação do plural, os adjetivos simples seguem as mesmas regras a que obedecem os substantivos.' The adjective lists of pp. 265-267 do not name morto, torto or absorto, so Infopédia is the only word-level evidence for them and for every other added word. The list keeps aborto and the conforto family on the noun reading, because the frequent sense is the default; the first-person verb forms of abortar and confortar share the spelling. No suffix rule covers ⟨-orto⟩, because suporto, transporto, importo, exporto and comporto are verb forms with the same ending. Cunha & Cintra (pp. 429-431) give the stem-stressed forms of first-conjugation verbs in ⟨o⟩ the semi-open vowel: 'corresponde a semiaberta [ɔ] nas formas rizotônicas'. The list holds exact words, so mortos, morta, desportos and torta keep the default. THE CUNHA & CINTRA LISTS: the list also holds the words of the plural class on pp. 197-198, the words that page 198 says open in Portugal (almoço, bolso, sogro), and the adjectives of p. 267, where the library read [ɔ] and Infopédia writes [o]. Their plurals keep the default [ɔ]. foro stays out, because Infopédia writes [ɔ]. reforço, renovo and troço stay out, because Infopédia has no row. rogo, toco and tomo stay out, because the noun sense is not clearly the frequent one. jogo, posto, troco and the other noun and verb homographs take the noun reading, the frequent sense. The specs that inherit this list hold no variety-specific source for these words: the list gives the lexical vowel of a word, not a process. THE NOUNS THAT KEEP THE VOWEL: Cunha & Cintra (p. 198) list nouns that 'conservam no plural o o fechado do singular'. The list holds them, singular and plural, where the library read [ɔ] and Infopédia writes [o]. gosto, colmo and morro stay out, because the noun sense is not clearly the frequent one. molho and lobo stay out, because Infopédia writes [ɔ]. repolho, restolho, rosto and suborno stay out, because Infopédia has no row."
     },
     {
       "id": "PT_LEX_CLOSE_E",
@@ -674,9 +813,12 @@
         "forte",
         "nove",
         "famosa",
-        "gostosa"
+        "gostosa",
+        "olhos",
+        "ossos",
+        "ovos"
       ],
-      "notes": "Lexically OPEN stressed ⟨o⟩ = [ɔ] for this curated set, overriding the pre-lexical default (which is the close [o] first selected in Brazilian and non-reducing inheritors, giving the wrong height for these lexemes). Height is a lexical/morphological fact (Mateus & d'Andrade 2000: ch.3; Vigário 2003): the 3sg present of ⟨-ar/-er⟩ verbs opens the stressed root vowel (mora, corre, espera), and the ⟨-osa⟩ feminine adjectival suffix is open [ɔ] (famosa, gostosa) against its close [o] masculine ⟨-oso⟩ (PT_LEX_CLOSE_O). This rule pins ONLY the stressed-vowel height (reduction, rhotics, l-vocalisation, affrication run normally), so it inherits cleanly to every pt-PT / pt-BR dialect child. SEED LIST — arbitration-confirmed lexemes; the tail is documented residual."
+      "notes": "The plurals olhos, ossos and ovos are here because a word-initial ⟨o⟩ takes the close first value of the word_initial row, not the open default of a stressed nucleus. Cunha & Cintra (pp. 197-198) put olho, osso and ovo in the class that opens in the plural, and Infopédia writes [ɔ] in quatro-olhos, quebra-ossos and fios-de-ovos. Lexically OPEN stressed ⟨o⟩ = [ɔ] for this curated set, overriding the pre-lexical default (which is the close [o] first selected in Brazilian and non-reducing inheritors, giving the wrong height for these lexemes). Height is a lexical/morphological fact (Mateus & d'Andrade 2000: ch.3; Vigário 2003): the 3sg present of ⟨-ar/-er⟩ verbs opens the stressed root vowel (mora, corre, espera), and the ⟨-osa⟩ feminine adjectival suffix is open [ɔ] (famosa, gostosa) against its close [o] masculine ⟨-oso⟩ (PT_LEX_CLOSE_O). This rule pins ONLY the stressed-vowel height (reduction, rhotics, l-vocalisation, affrication run normally), so it inherits cleanly to every pt-PT / pt-BR dialect child. SEED LIST — arbitration-confirmed lexemes; the tail is documented residual."
     },
     {
       "id": "PT_LEX_OPEN_E",
@@ -695,6 +837,227 @@
         "serra"
       ],
       "notes": "Lexically OPEN stressed ⟨e⟩ = [ɛ] for this curated set, overriding the pre-lexical default where a close [e] is selected (Brazilian and non-reducing inheritors). Includes items whose open height is etymological (Latin short ĕ: terra, serra), morphological (3sg present espera; the copula era) or simply lexical (dez). Mateus & d'Andrade 2000: ch.3; Vigário 2003. Pins only the vowel height and inherits cleanly. SEED LIST — documented residual for the tail."
+    },
+    {
+      "id": "PT_LEX_REDUCED_A",
+      "phonemes": [
+        "a"
+      ],
+      "surface": "ɐ",
+      "stress": "stressed",
+      "grapheme": [
+        "a"
+      ],
+      "word": [
+        "cada",
+        "para",
+        "mas"
+      ],
+      "notes": "The stressed ⟨a⟩ of cada, para and mas is the reduced [ɐ]: cada [ˈkɐdɐ], para [ˈpɐɾɐ], mas [ˈmɐʃ]. Infopédia gives cada [ˈkɐdɐ], mas [ˈmɐʃ], and para [ˈpɐrɐ] first and [ˈparɐ] second. WikiPron pt-PT gives cada kɐdɐ, mas mɐʃ, and para paɾɐ, pɐ, pɐɾɐ, pɾɐ. Cruz-Ferreira (1999, Handbook of the IPA, p. 130) writes mas as [mɐʃ] in 'mas quanto mais soprava'. A native-speaker report gives cada [ˈkɐdɐ] for European Portuguese and calls [ˈkadɐ] the Brazilian reading. Cunha & Cintra (7th ed., p. 87) list para, form of parar, and para, preposition, as homographs with no differential accent. The preposition is the frequent sense and ranks first. PT_LEX_PARA_CANDIDATE_VERB keeps the [a] of the verb as the second candidate. Cunha & Cintra (p. 69) list mas among the atonic monosyllables. The rule keeps the stress mark that Infopédia writes, because every spec that inherits the pt-PT stress block shares stress.cliticless_words, the creoles among them, and a spec can disable a rule but not one entry of that list. The Portal da Língua Portuguesa Lisbon rows give [ˈkadɐ] and [ˈpaɾɐ]. A rule-based generator (LUPo) made those rows, so they are not evidence. Infopédia readings come from the cached rows of the Infopédia dictionary (dataset infopedia_pt_ipa). WikiPron pt-PT readings come from the Portugal pronunciations of en.wiktionary. Infopédia carries the Lisbon assumption. The 18 specs that keep their own vowels disable the rule."
+    },
+    {
+      "id": "PT_LEX_PARA_CANDIDATE_VERB",
+      "phonemes": [
+        "ɐ"
+      ],
+      "surface": "a",
+      "stress": "stressed",
+      "grapheme": [
+        "a"
+      ],
+      "word": [
+        "para"
+      ],
+      "notes": "The second lattice candidate of the stressed ⟨a⟩ of para is [a], the verb form of parar (ele para o carro). Infopédia gives it as the second reading, [ˈparɐ]. The rule does not change the transcription. See PT_LEX_REDUCED_A."
+    },
+    {
+      "id": "PT_LEX_FUNCTION_CLOSE_E",
+      "phonemes": [
+        "e",
+        "ɛ",
+        "ɨ"
+      ],
+      "surface": "e",
+      "stress": "stressed",
+      "grapheme": [
+        "e"
+      ],
+      "word": [
+        "aquele",
+        "aqueles",
+        "daquele",
+        "daqueles",
+        "naquele",
+        "naqueles",
+        "àquele",
+        "àqueles",
+        "deste",
+        "destes",
+        "neste",
+        "nestes",
+        "desse",
+        "desses",
+        "nesse",
+        "nesses",
+        "dele",
+        "deles",
+        "nele",
+        "neles",
+        "mesmo",
+        "mesma",
+        "mesmos",
+        "mesmas",
+        "desde",
+        "menos",
+        "apenas",
+        "cedo"
+      ],
+      "notes": "The stressed ⟨e⟩ of these function words and frequent adverbs is the close [e]. The list holds aquele [ɐˈkelɨ] and aqueles, the contractions of the masculine demonstratives and of the masculine third-person pronoun (deste [ˈdeʃtɨ], desse [ˈdesɨ], daquele [dɐˈkelɨ], dele [ˈdelɨ], and the plurals), mesmo with its inflections, desde, menos, apenas and cedo. Cruz-Ferreira (1999, Handbook of the IPA, p. 130) writes aquele as [ɐˈkel] in 'aquele que primeiro'. Infopédia gives aquele [ɐˈkel(ə)], daquele [dɐˈkel(ə)], naquele [nɐˈkel(ə)], àquele [ˈakel(ə)], deste [ˈdeʃt(ə)], neste [ˈneʃt(ə)], desse [ˈdes(ə)], dele [ˈdel(ə)], nele [ˈnel(ə)], mesmo [ˈmeʒmu], mesma [ˈmeʒmɐ], desde [ˈdeʒd(ə)], menos [ˈmenuʃ], apenas [ɐˈpenɐʃ] and cedo [ˈsedu]. The other forms have no Infopédia row, and WikiPron pt-PT gives [e] first for each of them (aqueles ɐkelɨʃ, destes deʃtɨʃ, nesse nesɨ, deles delɨʃ, mesmos meʒmuʃ). The feminine forms are open: see PT_LEX_FUNCTION_OPEN_E. Cunha & Cintra (7th ed., pp. 291 and 343) list the pronoun and demonstrative forms with no pronunciation, and no source read states the alternation, so the list holds words, not a pattern. este, estes, esse, esses, ele and eles are not in the list. The word-initial ⟨e⟩ row ranks [e] first for them, and it keeps [ɛ] as a candidate, the reading of the noun este, east (Infopédia [ˈeʃt(ə), ˈɛʃt(ə)]). Infopédia readings come from the cached rows of the Infopédia dictionary (dataset infopedia_pt_ipa). WikiPron pt-PT readings come from the Portugal pronunciations of en.wiktionary. Infopédia carries the Lisbon assumption. The 18 specs that keep their own vowels, and pt-PT-x-porto, pt-PT-x-braga and pt-PT-x-terceira, disable the rule."
+    },
+    {
+      "id": "PT_LEX_FUNCTION_OPEN_E",
+      "phonemes": [
+        "e",
+        "ɛ",
+        "ɨ"
+      ],
+      "surface": "ɛ",
+      "stress": "stressed",
+      "grapheme": [
+        "e"
+      ],
+      "word": [
+        "esta",
+        "estas",
+        "desta",
+        "destas",
+        "nesta",
+        "nestas",
+        "essa",
+        "essas",
+        "dessa",
+        "dessas",
+        "nessa",
+        "nessas",
+        "aquela",
+        "aquelas",
+        "daquela",
+        "daquelas",
+        "naquela",
+        "naquelas",
+        "àquela",
+        "àquelas",
+        "ela",
+        "elas",
+        "dela",
+        "delas",
+        "nela",
+        "nelas"
+      ],
+      "notes": "The stressed ⟨e⟩ of the feminine demonstratives and the feminine third-person pronoun, with their contractions, is the open [ɛ]: esta [ˈɛʃtɐ], essa [ˈɛsɐ], aquela [ɐˈkɛlɐ], ela [ˈɛlɐ], desta, nessa, daquela, dela and the plurals. Infopédia gives esta [ˈɛʃtɐ], essa [ˈɛsɐ], aquela [ɐˈkɛlɐ] and ela [ˈɛlɐ]. WikiPron pt-PT gives [ɛ] for every form in the list that it has (estas ɛʃtɐʃ, elas ɛlɐʃ, dessa dɛsɐ, naquela nɐkɛlɐ, nelas nɛlɐʃ). Infopédia's àquela [ˈakelɐ] goes against its own aquela and against WikiPron akɛlɐ, and the list follows aquela. pt.wiktionary gives dela [ˈdelɐ] against WikiPron dɛlɐ, and the list follows ela. The word-initial ⟨e⟩ row ranks [e] first, so without this rule esta, essa and ela read [e]. See PT_LEX_FUNCTION_CLOSE_E. Infopédia readings come from the cached rows of the Infopédia dictionary (dataset infopedia_pt_ipa). WikiPron pt-PT readings come from the Portugal pronunciations of en.wiktionary. Infopédia carries the Lisbon assumption. The 18 specs that keep their own vowels, and pt-PT-x-porto, pt-PT-x-braga and pt-PT-x-terceira, disable the rule."
+    },
+    {
+      "id": "PT_LEX_FUNCTION_CLOSE_O",
+      "phonemes": [
+        "o",
+        "ɔ"
+      ],
+      "surface": "o",
+      "stress": "stressed",
+      "grapheme": [
+        "o"
+      ],
+      "word": [
+        "connosco",
+        "convosco",
+        "hoje"
+      ],
+      "notes": "The stressed ⟨o⟩ of connosco, convosco and hoje is the close [o]. Infopédia gives connosco [kõˈnoʃku], convosco [kõˈvoʃku] and hoje [ˈoʒ(ə)]. WikiPron pt-PT gives kõnoʃku, kõvoʃku and oʒɨ, and pt.wiktionary gives hoje [ˈoʒɨ]. Infopédia readings come from the cached rows of the Infopédia dictionary (dataset infopedia_pt_ipa). WikiPron pt-PT readings come from the Portugal pronunciations of en.wiktionary. Infopédia carries the Lisbon assumption. The 18 specs that keep their own vowels, and pt-PT-x-porto, pt-PT-x-braga and pt-PT-x-terceira, disable the rule."
+    },
+    {
+      "id": "PT_LEX_FUNCTION_OPEN_O",
+      "phonemes": [
+        "o",
+        "ɔ",
+        "u"
+      ],
+      "surface": "ɔ",
+      "stress": "stressed",
+      "grapheme": [
+        "o"
+      ],
+      "word": [
+        "ora"
+      ],
+      "notes": "The stressed ⟨o⟩ of the conjunction and adverb ora is the open [ɔ]: Infopédia gives [ˈɔrɐ] and WikiPron pt-PT gives ɔɾɐ. The word-initial ⟨o⟩ row ranks [o] first, so without this rule ora reads [ˈoɾɐ]. Infopédia readings come from the cached rows of the Infopédia dictionary (dataset infopedia_pt_ipa). WikiPron pt-PT readings come from the Portugal pronunciations of en.wiktionary. Infopédia carries the Lisbon assumption. The 18 specs that keep their own vowels, and pt-PT-x-porto, pt-PT-x-braga and pt-PT-x-terceira, disable the rule."
+    },
+    {
+      "id": "PT_LEX_TODO_CLOSE",
+      "phonemes": [
+        "ɔ"
+      ],
+      "surface": "o",
+      "stress": "stressed",
+      "grapheme": [
+        "o"
+      ],
+      "word": [
+        "todo",
+        "toda",
+        "todos",
+        "todas"
+      ],
+      "notes": "The stressed ⟨o⟩ of the quantifier todo, toda, todos, todas is the close [o]. Cruz-Ferreira (1999, Handbook of the IPA, p. 130) writes todo as [ˈtodu] in 'com todo o esplendor'. Infopédia gives todo [ˈtodu] first and [ˈtɔdu], the noun o todo, second. WikiPron pt-PT gives todo todu, todos toduʃ, toda todɐ then tɔdɐ, and todas todɐʃ then tɔdɐʃ. Infopédia's toda row, [ˈtɔdɐ], has no part of speech. The quantifier is the frequent sense and ranks first. PT_LEX_TODO_CANDIDATE_OPEN keeps [ɔ] as the second candidate. Infopédia readings come from the cached rows of the Infopédia dictionary (dataset infopedia_pt_ipa). WikiPron pt-PT readings come from the Portugal pronunciations of en.wiktionary. Infopédia carries the Lisbon assumption. The 18 specs that keep their own vowels, and pt-PT-x-porto, pt-PT-x-braga and pt-PT-x-terceira, disable the rule."
+    },
+    {
+      "id": "PT_LEX_TODO_CANDIDATE_OPEN",
+      "phonemes": [
+        "o"
+      ],
+      "surface": "ɔ",
+      "stress": "stressed",
+      "grapheme": [
+        "o"
+      ],
+      "word": [
+        "todo",
+        "toda",
+        "todos",
+        "todas"
+      ],
+      "notes": "The second lattice candidate of the stressed ⟨o⟩ of todo, toda, todos, todas is [ɔ], the noun reading. The rule does not change the transcription. See PT_LEX_TODO_CLOSE."
+    },
+    {
+      "id": "PT_LEX_VOCE_OPEN_O",
+      "phonemes": [
+        "u",
+        "o"
+      ],
+      "surface": "ɔ",
+      "stress": "unstressed",
+      "grapheme": [
+        "o"
+      ],
+      "word": [
+        "você",
+        "vocês"
+      ],
+      "notes": "The pretonic ⟨o⟩ of você and vocês is the open [ɔ], not the reduced [u]: Infopédia gives você [vɔˈse], and WikiPron pt-PT gives vɔse and vɔseʃ, with bɔse and bɔseʃ. Infopédia readings come from the cached rows of the Infopédia dictionary (dataset infopedia_pt_ipa). WikiPron pt-PT readings come from the Portugal pronunciations of en.wiktionary. Infopédia carries the Lisbon assumption. The 18 specs that keep their own vowels disable the rule."
+    },
+    {
+      "id": "PT_LEX_SOB_CLOSE_O",
+      "phonemes": [
+        "u",
+        "ɔ"
+      ],
+      "surface": "o",
+      "grapheme": [
+        "o"
+      ],
+      "word": [
+        "sob"
+      ],
+      "notes": "The preposition sob is atonic, and its vowel is [o]. Cunha & Cintra (7th ed., p. 69) list it among the atonic monosyllables: 'd) as preposições a, com, de, em, por, sem, sob'. stress.cliticless_words holds it. Infopédia gives sob [sob] with no stress mark, and WikiPron pt-PT gives sob. pt.wiktionary gives [ˈsob], with a mark. The vowel of an atonic word reduces to [u] in this spec, and the rule gives the [o] of the sources. Infopédia readings come from the cached rows of the Infopédia dictionary (dataset infopedia_pt_ipa). WikiPron pt-PT readings come from the Portugal pronunciations of en.wiktionary. Infopédia carries the Lisbon assumption. The 18 specs that keep their own vowels disable the rule."
     },
     {
       "id": "PT_LEX_OPEN_E_SUFFIX",
@@ -740,9 +1103,23 @@
         "chador",
         "salpor",
         "granulomatoso",
-        "mixedematoso"
+        "mixedematoso",
+        "adora",
+        "adoras",
+        "adoram",
+        "atora",
+        "bandora",
+        "desoras",
+        "fedora",
+        "fedoras",
+        "mandora",
+        "nessora",
+        "pandora",
+        "pitora",
+        "pletora",
+        "pletoras"
       ],
-      "notes": "Words whose stressed ⟨o⟩ is open [ɔ] although their ending takes a close-vowel suffix rule (PT_SUFFIX_OR_CLOSE, PT_SUFFIX_OSO_CLOSE). Listed before those rules so they keep the open vowel. The comparatives maior, melhor, menor and pior are the 'comparativos em -or' that Cunha & Cintra, Nova Gramática do Português Contemporâneo, 7.ª ed., Lexikon (archive.org OCR of item novagramaticadoportuguescontemporaneo, accents restored), p. 266, names apart from the adjectives in -or. Infopédia entries checked live (web.archive.org snapshot): 'me.lhor məˈʎɔr'. The other readings are the Infopédia entries of the portuguese-unified lexicon (region pt-PT): maior 'mɐjˈɔr', menor 'məˈnɔr', pior 'ˈpjɔr', pormenor 'purməˈnɔr', suor 'suˈɔr', redor 'ʀəˈdɔr', arredor 'ɐʀəˈdɔr', alfajor 'aɫfɐˈʒɔr', belchior 'bɛɫˈʃjɔr', chador 'ʃaˈdɔr', salpor 'saɫˈpɔr', granulomatoso 'ɡrɐnulumɐˈtɔzu' and mixedematoso 'miksədəmɐˈtɔz'. Porto, Braga and Terceira, the African and Asian varieties and Barrancos disable this rule with the suffix rules."
+      "notes": "Words whose stressed ⟨o⟩ is open [ɔ] although their ending takes a close-vowel suffix rule (PT_SUFFIX_OR_CLOSE, PT_SUFFIX_OSO_CLOSE, PT_SUFFIX_DORA_CLOSE). Listed before those rules so they keep the open vowel. The comparatives maior, melhor, menor and pior are the 'comparativos em -or' that Cunha & Cintra, Nova Gramática do Português Contemporâneo, 7.ª ed., Lexikon (archive.org OCR of item novagramaticadoportuguescontemporaneo, accents restored), p. 266, names apart from the adjectives in -or. Infopédia entries checked live (web.archive.org snapshot): 'me.lhor məˈʎɔr'. The other readings are the Infopédia entries of the portuguese-unified lexicon (region pt-PT): maior 'mɐjˈɔr', menor 'məˈnɔr', pior 'ˈpjɔr', pormenor 'purməˈnɔr', suor 'suˈɔr', redor 'ʀəˈdɔr', arredor 'ɐʀəˈdɔr', alfajor 'aɫfɐˈʒɔr', belchior 'bɛɫˈʃjɔr', chador 'ʃaˈdɔr', salpor 'saɫˈpɔr', granulomatoso 'ɡrɐnulumɐˈtɔzu' and mixedematoso 'miksədəmɐˈtɔz'. In ⟨-dora -tora -sora⟩: fedora 'fəˈdɔrɐ', pandora 'pɐ̃ˈdɔrɐ', bandora 'bɐ̃ˈdɔrɐ', mandora 'mɐ̃ˈdɔrɐ', pletora 'plɛˈtɔrɐ', pitora 'piˈtɔrɐ', atora 'ɐˈtɔrɐ' and nessora 'nɛˈsɔrɐ' (Infopédia), with the plurals fedoras and pletoras; desoras 'dəˈzɔrɐʃ' (Infopédia) is des- and horas, and keeps the [ɔ] of hora; adora, adoras and adoram are the rhizotonic forms of adorar, which follows the lograr model with [ɔ] (Cunha & Cintra, 7.ª ed., pp. 430-431; WikiPron adoras 'ɐ d ɔ ɾ ɐ ʃ'). Porto, Braga and Terceira, the African and Asian varieties and Barrancos disable this rule with the suffix rules."
     },
     {
       "id": "PT_SUFFIX_EZ_CLOSE",
@@ -890,6 +1267,104 @@
       "notes": "The stressed ⟨o⟩ of the adjective suffix ⟨-onho⟩ and its feminine ⟨-onha⟩ is close [o] (Infopédia: risonho 'ʀiˈzoɲu', medonho 'məˈdoɲu'). Cunha & Cintra, Nova Gramática do Português Contemporâneo, 7.ª ed., Lexikon (archive.org OCR of item novagramaticadoportuguescontemporaneo, accents restored), p. 113, lists '-onho propriedade, hábito constante: enfadonho, risonho'. Measured on the Infopédia (Porto Editora) readings of the portuguese-unified lexicon, region pt-PT: 40 types end in this spelling with this vowel stressed; 40 have the close vowel, 0 do not (none). Precision 1.000, coverage 0.005 of the 7304 unaccented stressed ⟨o⟩ types. Cross-checked on the Wiktionary pt-PT readings of WikiPron (por_latn_po_broad), which include verb forms: 41 unaccented forms end in this spelling; 41 have the close vowel, 0 the open one, and 0 list both readings or another vowel. Precision 1.000, or 1.000 when a form that lists the close vowel among its readings counts as right. The rule reads the spelling of the ending, so it also matches words that are not the suffix; the count above is over every word with the ending. Open or close quality is otherwise lexical (Ciberdúvidas 7872: 'em sílaba tónica, o \"e\" ou é aberto ou fechado, dependendo da etimologia'), and the pre-lexical default stays open. No exception was found. Porto, Braga and Terceira, the African and Asian varieties and Barrancos disable this rule."
     },
     {
+      "id": "PT_SUFFIX_DORA_CLOSE",
+      "phonemes": [
+        "ɔ"
+      ],
+      "surface": "o",
+      "stress": "stressed",
+      "grapheme": [
+        "o"
+      ],
+      "preceded_by_grapheme": [
+        "d",
+        "t",
+        "s",
+        "ss"
+      ],
+      "preceded_by_2": "any",
+      "followed_by_grapheme": [
+        "r"
+      ],
+      "followed_by_phoneme_2": [
+        "a",
+        "ɐ"
+      ],
+      "notes": "The stressed ⟨o⟩ of the feminine ⟨-dora -tora -sora⟩ of the agent and instrument suffix is close [o], as in the masculine ⟨-dor -tor -sor⟩ (PT_SUFFIX_OR_CLOSE): calculadora [kaɫkulɐˈdoɾɐ], vendedora [vẽdɨˈdoɾɐ], professora [pɾufɨˈsoɾɐ]. Cunha & Cintra, Nova Gramática do Português Contemporâneo, 7.ª ed., p. 112: 'Em -dor, -tor e -sor [...] os sufixos são propriamente -or'. p. 266, 2.º: adjectives in '-or formam geralmente o feminino acrescentando -a ao masculino: [...] encantador encantadora morador moradora'. The same page, 6.º, lists apart the adjectives whose close [o] opens in the feminine (brioso briosa, formoso formosa, disposto disposta, grosso grossa), and names no ⟨-or⟩ word there. The rule needs a letter before ⟨d t s ss⟩, so the monosyllabic stems dora, tora and sora keep the default, and it takes the plural ⟨-doras⟩. Infopédia (Porto Editora) gives [o] in 66 of the 70 single headwords in ⟨-dora⟩, in 8 of 12 in ⟨-tora⟩ and in 4 of 6 in ⟨-sora⟩; the open ones (fedora, pandora, bandora, mandora, pletora, pitora, atora, nessora) are not agent nouns, and desoras is des- and horas. The Wiktionary pt-PT readings of WikiPron (por_latn_po_broad) give [o] in 225 of 225 ⟨-dora⟩ forms, 55 of 57 ⟨-tora⟩ and 19 of 19 ⟨-sora⟩. The verb forms of adorar keep the [ɔ] of the lograr model (Cunha & Cintra p. 430-431), and they and the open words above are in PT_LEX_OPEN_O_SUFFIX. The rhizotonic forms of other verbs in -dorar, -torar and -sorar keep [ɔ] as the lattice candidate through PT_SUFFIX_DORA_CANDIDATE_OPEN. The rule ranks the slot [o], [ɔ], [u]. Porto, Braga and Terceira, the African and Asian varieties, Barrancos and the creoles disable this rule."
+    },
+    {
+      "id": "PT_SUFFIX_DORA_CANDIDATE_OPEN",
+      "phonemes": [
+        "o"
+      ],
+      "surface": "ɔ",
+      "stress": "stressed",
+      "grapheme": [
+        "o"
+      ],
+      "preceded_by_grapheme": [
+        "d",
+        "t",
+        "s",
+        "ss"
+      ],
+      "preceded_by_2": "any",
+      "followed_by_grapheme": [
+        "r"
+      ],
+      "followed_by_phoneme_2": [
+        "a",
+        "ɐ"
+      ],
+      "notes": "The second lattice candidate of the stressed ⟨o⟩ of ⟨-dora -tora -sora⟩ is [ɔ], the value of the rhizotonic verb forms of the lograr model. The rule does not change the transcription. See PT_SUFFIX_DORA_CLOSE."
+    },
+    {
+      "id": "PT_LEX_OIDAR_CLOSE",
+      "phonemes": [
+        "o"
+      ],
+      "surface": "o",
+      "stress": "stressed",
+      "grapheme": [
+        "oi"
+      ],
+      "followed_by_phoneme": [
+        "j"
+      ],
+      "followed_by_grapheme": [
+        "d"
+      ],
+      "followed_by_2": "front_vowel",
+      "word": [
+        "adoide",
+        "adoides",
+        "adoidem",
+        "endoide",
+        "endoides",
+        "endoidem"
+      ],
+      "notes": "Present-subjunctive forms of the verbs adoidar and endoidar, spelt like the ending ⟨-oide⟩, keep the close diphthong [oj] of doido. Cunha & Cintra, Nova Gramática do Português Contemporâneo, 7.ª ed., p. 431, obs. 3.ª a): first-conjugation verbs with ⟨o⟩ in the stem do not follow lograr when the vowel 'faz parte do ditongo oi (seguido de consoante) [...]: pernoito, pernoitas, pernoita, etc. (sempre com [o])'. The rule comes before PT_SUFFIX_OIDE_OPEN and leaves the slot as it is."
+    },
+    {
+      "id": "PT_SUFFIX_OIDE_OPEN",
+      "phonemes": [
+        "o"
+      ],
+      "surface": "ɔ",
+      "stress": "stressed",
+      "grapheme": [
+        "oi"
+      ],
+      "followed_by_phoneme": [
+        "j"
+      ],
+      "followed_by_grapheme": [
+        "d"
+      ],
+      "followed_by_2": "front_vowel",
+      "notes": "The stressed ⟨oi⟩ of the ending ⟨-oide⟩ and its plural ⟨-oides⟩ is the open diphthong [ɔj]: asteroide [ɐʃtɨˈɾɔjdɨ], alcaloide [aɫkɐˈlɔjdɨ], androide [ɐ̃ˈdɾɔjdɨ]. Cunha & Cintra, Nova Gramática do Português Contemporâneo, 7.ª ed., pp. XXX-XXXI, summarise the 1990 orthography for the Brazilian spelling: 'Os ditongos abertos tônicos éi e ói perdem o acento agudo quando caem na penúltima sílaba (portanto, de palavras paroxítonas)', with 'debilóide(s) passa a ser debiloide(s)'. The European spelling before 1990 also wrote the ending with the acute (asteróide, alcalóide), the mark of the open vowel; the Conclusões complementares of the 1945 Acordo, item 23, write the adverb of such an adjective 'heròicamente'. The 1990 Acordo, Base IX, 3.º, drops the accent 'dado que existe oscilação em muitos casos entre o fechamento e a abertura na sua articulação', and names alcaloide. No source read names the European vowel of the ending directly. Infopédia (Porto Editora) gives [ɔj] first in all 198 single headwords in ⟨-oide⟩ and ⟨-oides⟩, and the Wiktionary pt-PT readings of WikiPron (por_latn_po_broad) give [ɔj] in 99 of 102. The ⟨d⟩ and the front vowel after the diphthong keep the rule to the ending: boia, heroico, dezoito do not take it. The rule targets the [o] of the [oj] slot and names the [j] after it, so it works on that one segment and leaves the slot's other rules alone. The verb forms of adoidar and endoidar keep [oj] through PT_LEX_OIDAR_CLOSE. The ⟨oi⟩ slot has the one value [oj] in the grapheme table, so the rule leaves no [oj] lattice candidate. Terceira, the African and Asian varieties, Barrancos and the creoles disable this rule."
+    },
+    {
       "id": "PT_LEX_X_S",
       "phonemes": [
         "ʃ"
@@ -949,6 +1424,920 @@
         "ao"
       ],
       "notes": "The offglide [w] of the diphthong [aw] in ao. See PT_LEX_AO_A."
+    },
+    {
+      "id": "PT_INITIAL_O_KEEP_BEFORE_CODA_NASAL",
+      "phonemes": [
+        "o"
+      ],
+      "surface": "o",
+      "grapheme": [
+        "o"
+      ],
+      "word_initial": true,
+      "stress": "unstressed",
+      "followed_by": "coda_nasal",
+      "notes": "Guard for PT_INITIAL_O_OPEN. Before a coda nasal a word-initial ⟨o⟩ is the nasal [õ]: ondular [õduˈlaɾ], ombreira [õˈbɾejɾɐ]. The nasal rules give that vowel, so the open default does not apply."
+    },
+    {
+      "id": "PT_INITIAL_O_OPEN",
+      "phonemes": [
+        "o"
+      ],
+      "surface": "ɔ",
+      "grapheme": [
+        "o"
+      ],
+      "word_initial": true,
+      "stress": "unstressed",
+      "notes": "An unstressed word-initial ⟨o⟩ is [ɔ] by default: obter [ɔbˈteɾ], ovelha [ɔˈvɛʎɐ], opinião [ɔpiniˈɐ̃w̃]. The grammar reduces an unstressed back vowel to [u] and names this position as an exception with [o]. Cunha & Cintra (7th ed., p. 51): 'toda a série das vogais posteriores ou velares está hoje reduzida a [u], grafado o ou u'. Cunha & Cintra (7th ed., p. 53): 'e bem assim o [o] inicial absoluto de ovelha, obter, opinião'. That [o] is the careful-speech value of the grammar. Cruz-Ferreira (1999, Handbook of the IPA, p. 130) writes obrigar as [ɔbɾiˈgaɾ] in her Lisbon transcription. Infopédia writes [ɔ] in 1,126 of the 1,195 single words that this rule changes, [o] in 63 and [u] in 3. Infopédia carries the Lisbon assumption. This rule, PT_INITIAL_O_CANDIDATE_U and PT_INITIAL_O_CANDIDATE_O rank the lattice of the slot [ɔ], [u], [o]. The word_initial row of ⟨o⟩ and the grapheme table give the candidates [o], [ɔ], [u], and each rule rewrites one of them in place. A stressed word-initial ⟨o⟩ keeps the row and the word lists. Infopédia writes [o] in the stems orelh-, ostr-, olm-, odr- and odi-, which are word-level facts for a lexicon."
+    },
+    {
+      "id": "PT_INITIAL_O_CANDIDATE_U",
+      "phonemes": [
+        "ɔ"
+      ],
+      "surface": "u",
+      "grapheme": [
+        "o"
+      ],
+      "word_initial": true,
+      "stress": "unstressed",
+      "notes": "The second lattice candidate of an unstressed word-initial ⟨o⟩ is the [u] of the general reduction. Cunha & Cintra (7th ed., p. 51): 'toda a série das vogais posteriores ou velares está hoje reduzida a [u], grafado o ou u'. The rule rewrites the second candidate of the slot and does not change the transcription. See PT_INITIAL_O_OPEN."
+    },
+    {
+      "id": "PT_INITIAL_O_CANDIDATE_O",
+      "phonemes": [
+        "u"
+      ],
+      "surface": "o",
+      "grapheme": [
+        "o"
+      ],
+      "word_initial": true,
+      "stress": "unstressed",
+      "notes": "The third lattice candidate of an unstressed word-initial ⟨o⟩ is the careful-speech [o]. Cunha & Cintra (7th ed., p. 53): 'e bem assim o [o] inicial absoluto de ovelha, obter, opinião'. The rule rewrites the third candidate of the slot and does not change the transcription. See PT_INITIAL_O_OPEN."
+    },
+    {
+      "id": "PT_INITIAL_HO_KEEP_BEFORE_CODA_NASAL",
+      "phonemes": [
+        "o"
+      ],
+      "surface": "o",
+      "grapheme": [
+        "o"
+      ],
+      "stress": "unstressed",
+      "preceded_by_grapheme": [
+        "h"
+      ],
+      "preceded_by_2": "word_boundary",
+      "followed_by": "coda_nasal",
+      "notes": "Guard for PT_INITIAL_HO_OPEN. Before a coda nasal the ⟨o⟩ of a word-initial ⟨ho⟩ is the nasal [õ]: honrar [õˈɾaɾ]. The nasal rules give that vowel, so the open default does not apply."
+    },
+    {
+      "id": "PT_INITIAL_HO_OPEN",
+      "phonemes": [
+        "u"
+      ],
+      "surface": "ɔ",
+      "grapheme": [
+        "o"
+      ],
+      "stress": "unstressed",
+      "preceded_by_grapheme": [
+        "h"
+      ],
+      "preceded_by_2": "word_boundary",
+      "notes": "The PT_INITIAL_O_OPEN default for an ⟨o⟩ after a word-initial ⟨h⟩. The ⟨h⟩ has no sound, so the ⟨o⟩ begins the spoken word: hospital [ɔʃpiˈtaɫ], hotel [ɔˈtɛɫ]. Infopédia gives [ɔ] as the first reading in 221 of the 274 single words that this rule changes, [u] in 43 and [o] in 10. In 28 of the other words it gives [ɔ] as the second reading. The positional rows give this slot the candidates [u], [o], [ɔ], because the ⟨h⟩ slot comes first. This rule and PT_INITIAL_HO_CANDIDATE_U and PT_INITIAL_HO_CANDIDATE_O rewrite them in place, so the slot ranks [ɔ], [u], [o] as after PT_INITIAL_O_OPEN. A stressed ⟨ho⟩ keeps its reading: homem [ˈɔmɐ̃j̃], and hoje [ˈoʒɨ] through PT_LEX_FUNCTION_CLOSE_O. See PT_INITIAL_O_OPEN for the sources."
+    },
+    {
+      "id": "PT_INITIAL_HO_CANDIDATE_U",
+      "phonemes": [
+        "o"
+      ],
+      "surface": "u",
+      "grapheme": [
+        "o"
+      ],
+      "stress": "unstressed",
+      "preceded_by_grapheme": [
+        "h"
+      ],
+      "preceded_by_2": "word_boundary",
+      "notes": "The second lattice candidate after a word-initial ⟨h⟩, the [u] of PT_INITIAL_O_CANDIDATE_U. The rule does not change the transcription. See PT_INITIAL_O_OPEN for the sources."
+    },
+    {
+      "id": "PT_INITIAL_HO_CANDIDATE_O",
+      "phonemes": [
+        "ɔ"
+      ],
+      "surface": "o",
+      "grapheme": [
+        "o"
+      ],
+      "stress": "unstressed",
+      "preceded_by_grapheme": [
+        "h"
+      ],
+      "preceded_by_2": "word_boundary",
+      "notes": "The third lattice candidate after a word-initial ⟨h⟩, the [o] of PT_INITIAL_O_CANDIDATE_O. The rule does not change the transcription. See PT_INITIAL_O_OPEN for the sources."
+    },
+    {
+      "id": "PT_INITIAL_E_OPEN",
+      "phonemes": [
+        "e"
+      ],
+      "surface": "i",
+      "grapheme": [
+        "e"
+      ],
+      "word_initial": true,
+      "stress": "unstressed",
+      "followed_by": "consonant",
+      "followed_by_2": "vowel",
+      "followed_by_grapheme_not": [
+        "x"
+      ],
+      "notes": "An unstressed word-initial ⟨e⟩ in an open first syllable is [i] by default: enorme [iˈnɔɾmɨ], educar [iduˈkaɾ], emitir [imiˈtiɾ]. Cunha & Cintra (7th ed., p. 53): 'o [e] inicial absoluto de enorme, erguer, que se pronuncia geralmente [i]'. Mateus & d'Andrade (1998, D.E.L.T.A. 14(1), p. 26): 'Underlying /e/ and /ɛ/ occur as: a) ɛ] when the coda is /L/ (see Elvira); b) as [i] when the rhyme has no coda (see elefante); c) there is some variation between [i], [e] and [E] when the coda is an /R/ (see ermida)'. Infopédia writes [i] first in 747 of the 1,553 single words that this rule changes, [e] in 496 and [ɛ] in 303. Infopédia carries the Lisbon assumption. This rule and the three PT_INITIAL_E_OPEN_CANDIDATE rules rank the lattice of the slot [i], [e], [ɛ], [ɨ]. The word_initial row of ⟨e⟩ and the grapheme table give the candidates [e], [i], [ɨ], [ɛ], and each rule rewrites one of them in place. The [ɛ] candidate rests on Infopédia only. Initial ⟨ex⟩, ⟨e⟩ before a vowel, ⟨e⟩ before a coda nasal and the PT_INITIAL_ES_RAISE context stay outside the PT_INITIAL_E rules."
+    },
+    {
+      "id": "PT_INITIAL_E_OPEN_CANDIDATE_E",
+      "phonemes": [
+        "i"
+      ],
+      "surface": "e",
+      "grapheme": [
+        "e"
+      ],
+      "word_initial": true,
+      "stress": "unstressed",
+      "followed_by": "consonant",
+      "followed_by_2": "vowel",
+      "followed_by_grapheme_not": [
+        "x"
+      ],
+      "notes": "The second lattice candidate of an unstressed word-initial ⟨e⟩ in an open first syllable is [e]. The rule does not change the transcription. See PT_INITIAL_E_OPEN."
+    },
+    {
+      "id": "PT_INITIAL_E_OPEN_CANDIDATE_OPEN",
+      "phonemes": [
+        "ɨ"
+      ],
+      "surface": "ɛ",
+      "grapheme": [
+        "e"
+      ],
+      "word_initial": true,
+      "stress": "unstressed",
+      "followed_by": "consonant",
+      "followed_by_2": "vowel",
+      "followed_by_grapheme_not": [
+        "x"
+      ],
+      "notes": "The third lattice candidate of an unstressed word-initial ⟨e⟩ in an open first syllable is [ɛ]. This candidate rests on Infopédia only. The rule does not change the transcription. See PT_INITIAL_E_OPEN."
+    },
+    {
+      "id": "PT_INITIAL_E_OPEN_CANDIDATE_REDUCED",
+      "phonemes": [
+        "ɛ"
+      ],
+      "surface": "ɨ",
+      "grapheme": [
+        "e"
+      ],
+      "word_initial": true,
+      "stress": "unstressed",
+      "followed_by": "consonant",
+      "followed_by_2": "vowel",
+      "followed_by_grapheme_not": [
+        "x"
+      ],
+      "notes": "The fourth lattice candidate of an unstressed word-initial ⟨e⟩ in an open first syllable is the [ɨ] of the general reduction. The rule does not change the transcription. See PT_INITIAL_E_OPEN."
+    },
+    {
+      "id": "PT_INITIAL_E_LIQUID_CODA",
+      "phonemes": [
+        "e"
+      ],
+      "surface": "ɛ",
+      "grapheme": [
+        "e"
+      ],
+      "word_initial": true,
+      "stress": "unstressed",
+      "followed_by": "coda",
+      "followed_by_grapheme": [
+        "l",
+        "r"
+      ],
+      "notes": "An unstressed word-initial ⟨e⟩ before a coda ⟨l⟩ or ⟨r⟩ is [ɛ] by default: elvense [ɛɫˈvẽsɨ], ermida [ɛɾˈmidɐ], erguer [ɛɾˈɡeɾ]. Mateus & d'Andrade (1998, D.E.L.T.A. 14(1), p. 26): 'Underlying /e/ and /ɛ/ occur as: a) ɛ] when the coda is /L/ (see Elvira); b) as [i] when the rhyme has no coda (see elefante); c) there is some variation between [i], [e] and [E] when the coda is an /R/ (see ermida)'. Before a coda /L/ the source gives [ɛ], and Infopédia writes [ɛ] first in 6 of the 6 single words in this context. Before a coda /R/ the source gives variation between [i], [e] and [ɛ], so it does not rank them. Infopédia decides the order: it writes [ɛ] first in 50 of the 73 single words in this context, [e] in 15 and [i] in 7. Infopédia carries the Lisbon assumption. Cunha & Cintra (7th ed., p. 53) give erguer with [i], and Infopédia writes [e] first there: erguer [eɾˈɡeɾ, iɾˈɡeɾ]. This rule and the three PT_INITIAL_E_LIQUID_CODA_CANDIDATE rules rank the slot [ɛ], [e], [i], [ɨ]. See PT_INITIAL_E_OPEN for the row candidates."
+    },
+    {
+      "id": "PT_INITIAL_E_LIQUID_CODA_CANDIDATE_E",
+      "phonemes": [
+        "i"
+      ],
+      "surface": "e",
+      "grapheme": [
+        "e"
+      ],
+      "word_initial": true,
+      "stress": "unstressed",
+      "followed_by": "coda",
+      "followed_by_grapheme": [
+        "l",
+        "r"
+      ],
+      "notes": "The second lattice candidate of an unstressed word-initial ⟨e⟩ before a coda ⟨l⟩ or ⟨r⟩ is [e]. The rule does not change the transcription. See PT_INITIAL_E_LIQUID_CODA."
+    },
+    {
+      "id": "PT_INITIAL_E_LIQUID_CODA_CANDIDATE_I",
+      "phonemes": [
+        "ɨ"
+      ],
+      "surface": "i",
+      "grapheme": [
+        "e"
+      ],
+      "word_initial": true,
+      "stress": "unstressed",
+      "followed_by": "coda",
+      "followed_by_grapheme": [
+        "l",
+        "r"
+      ],
+      "notes": "The third lattice candidate of an unstressed word-initial ⟨e⟩ before a coda ⟨l⟩ or ⟨r⟩ is [i]. The rule does not change the transcription. See PT_INITIAL_E_LIQUID_CODA."
+    },
+    {
+      "id": "PT_INITIAL_E_LIQUID_CODA_CANDIDATE_REDUCED",
+      "phonemes": [
+        "ɛ"
+      ],
+      "surface": "ɨ",
+      "grapheme": [
+        "e"
+      ],
+      "word_initial": true,
+      "stress": "unstressed",
+      "followed_by": "coda",
+      "followed_by_grapheme": [
+        "l",
+        "r"
+      ],
+      "notes": "The fourth lattice candidate of an unstressed word-initial ⟨e⟩ before a coda ⟨l⟩ or ⟨r⟩ is the [ɨ] of the general reduction. The rule does not change the transcription. See PT_INITIAL_E_LIQUID_CODA."
+    },
+    {
+      "id": "PT_CODA_STOP_INITIAL_E_OPEN",
+      "phonemes": [
+        "e"
+      ],
+      "surface": "ɛ",
+      "grapheme": [
+        "e"
+      ],
+      "word_initial": true,
+      "stress": "unstressed",
+      "followed_by": "coda",
+      "followed_by_grapheme": [
+        "p",
+        "b",
+        "t",
+        "d",
+        "c",
+        "k",
+        "g"
+      ],
+      "followed_by_phoneme_2": [
+        "p",
+        "b",
+        "t",
+        "d",
+        "k",
+        "ɡ",
+        "f",
+        "v",
+        "s",
+        "z",
+        "s̺",
+        "z̺",
+        "ʃ",
+        "ʒ",
+        "m",
+        "n",
+        "ɲ"
+      ],
+      "notes": "An unstressed word-initial ⟨e⟩ before a stop letter and another consonant is [ɛ]: etnia [ɛtˈniɐ], ecdémico [ɛkˈdɛmiku], eczema [ɛkˈzemɐ]. Cunha & Cintra (7th ed., p. 53): 'Também não se reduziram as vogais átonas de cultismos, como o [a] de actor; o [ɛ] de director; o [ɔ] de adopção'. On p. 88 they write that Portugal kept the etymological consonant in the spelling 'sempre que se seguem às vogais átonas a (aberta), e ou o (semiabertas), como forma de indicar a abertura dessas vogais', and that this spelling is the way to distinguish 'no português europeu, as pretônicas abertas ou semiabertas das reduzidas'. The same page names autóctone, compacto, apto and inepto as words where the consonant is spoken. Neither page names a spoken consonant as the cause of the full vowel. The rule takes an inference from the two pages: a stop letter before another consonant is the written mark of a learned word, and the unstressed ⟨e⟩ and ⟨o⟩ of a learned word do not reduce. AO90 removes the consonants that are not spoken, so in AO90 spelling the stop letter is spoken. The rule takes ⟨p b t d c k g⟩ before a consonant other than ⟨l⟩ or ⟨r⟩. A stop before ⟨l⟩ or ⟨r⟩ starts the next syllable (aplicar), and a word-final stop stays out. Infopédia writes [ɛ] first in 89 of the 91 single words that reach these rules and [e] in 2 (ecmófobo, ecmofóbico). Infopédia carries the Lisbon assumption. This rule and the three PT_CODA_STOP_INITIAL_E_CANDIDATE rules rank the slot [ɛ], [e], [i], [ɨ]. They come before the PT_INITIAL_E_CODA rules, which keep the other codas. See PT_INITIAL_E_OPEN for the row candidates."
+    },
+    {
+      "id": "PT_CODA_STOP_INITIAL_E_CANDIDATE_E",
+      "phonemes": [
+        "i"
+      ],
+      "surface": "e",
+      "grapheme": [
+        "e"
+      ],
+      "word_initial": true,
+      "stress": "unstressed",
+      "followed_by": "coda",
+      "followed_by_grapheme": [
+        "p",
+        "b",
+        "t",
+        "d",
+        "c",
+        "k",
+        "g"
+      ],
+      "followed_by_phoneme_2": [
+        "p",
+        "b",
+        "t",
+        "d",
+        "k",
+        "ɡ",
+        "f",
+        "v",
+        "s",
+        "z",
+        "s̺",
+        "z̺",
+        "ʃ",
+        "ʒ",
+        "m",
+        "n",
+        "ɲ"
+      ],
+      "notes": "The second lattice candidate of an unstressed word-initial ⟨e⟩ before a stop letter and another consonant is [e]. The rule does not change the transcription. See PT_CODA_STOP_INITIAL_E_OPEN."
+    },
+    {
+      "id": "PT_CODA_STOP_INITIAL_E_CANDIDATE_I",
+      "phonemes": [
+        "ɨ"
+      ],
+      "surface": "i",
+      "grapheme": [
+        "e"
+      ],
+      "word_initial": true,
+      "stress": "unstressed",
+      "followed_by": "coda",
+      "followed_by_grapheme": [
+        "p",
+        "b",
+        "t",
+        "d",
+        "c",
+        "k",
+        "g"
+      ],
+      "followed_by_phoneme_2": [
+        "p",
+        "b",
+        "t",
+        "d",
+        "k",
+        "ɡ",
+        "f",
+        "v",
+        "s",
+        "z",
+        "s̺",
+        "z̺",
+        "ʃ",
+        "ʒ",
+        "m",
+        "n",
+        "ɲ"
+      ],
+      "notes": "The third lattice candidate of an unstressed word-initial ⟨e⟩ before a stop letter and another consonant is [i]. The rule does not change the transcription. See PT_CODA_STOP_INITIAL_E_OPEN."
+    },
+    {
+      "id": "PT_CODA_STOP_INITIAL_E_CANDIDATE_REDUCED",
+      "phonemes": [
+        "ɛ"
+      ],
+      "surface": "ɨ",
+      "grapheme": [
+        "e"
+      ],
+      "word_initial": true,
+      "stress": "unstressed",
+      "followed_by": "coda",
+      "followed_by_grapheme": [
+        "p",
+        "b",
+        "t",
+        "d",
+        "c",
+        "k",
+        "g"
+      ],
+      "followed_by_phoneme_2": [
+        "p",
+        "b",
+        "t",
+        "d",
+        "k",
+        "ɡ",
+        "f",
+        "v",
+        "s",
+        "z",
+        "s̺",
+        "z̺",
+        "ʃ",
+        "ʒ",
+        "m",
+        "n",
+        "ɲ"
+      ],
+      "notes": "The fourth lattice candidate of an unstressed word-initial ⟨e⟩ before a stop letter and another consonant is the [ɨ] of the general reduction. The rule does not change the transcription. See PT_CODA_STOP_INITIAL_E_OPEN."
+    },
+    {
+      "id": "PT_CODA_STOP_E_OPEN",
+      "phonemes": [
+        "ɨ"
+      ],
+      "surface": "ɛ",
+      "grapheme": [
+        "e"
+      ],
+      "word_initial": false,
+      "stress": "unstressed",
+      "followed_by": "coda",
+      "followed_by_grapheme": [
+        "p",
+        "b",
+        "t",
+        "d",
+        "c",
+        "k",
+        "g"
+      ],
+      "followed_by_phoneme_2": [
+        "p",
+        "b",
+        "t",
+        "d",
+        "k",
+        "ɡ",
+        "f",
+        "v",
+        "s",
+        "z",
+        "s̺",
+        "z̺",
+        "ʃ",
+        "ʒ",
+        "m",
+        "n",
+        "ɲ"
+      ],
+      "notes": "An unstressed ⟨e⟩ before a stop letter and another consonant is [ɛ], not the reduced [ɨ]: aspectável [ɐʃpɛkˈtavɛɫ], septicemia [sɛptisɨˈmiɐ], hectare [ɛkˈtaɾɨ], bíceps [ˈbisɛpʃ]. Cunha & Cintra (7th ed., p. 53): 'Também não se reduziram as vogais átonas de cultismos, como o [a] de actor; o [ɛ] de director; o [ɔ] de adopção'. On p. 88 they write that Portugal kept the etymological consonant in the spelling 'sempre que se seguem às vogais átonas a (aberta), e ou o (semiabertas), como forma de indicar a abertura dessas vogais', and that this spelling is the way to distinguish 'no português europeu, as pretônicas abertas ou semiabertas das reduzidas'. The same page names autóctone, compacto, apto and inepto as words where the consonant is spoken. Neither page names a spoken consonant as the cause of the full vowel. The rule takes an inference from the two pages: a stop letter before another consonant is the written mark of a learned word, and the unstressed ⟨e⟩ and ⟨o⟩ of a learned word do not reduce. AO90 removes the consonants that are not spoken, so in AO90 spelling the stop letter is spoken. The rule takes ⟨p b t d c k g⟩ before a consonant other than ⟨l⟩ or ⟨r⟩. A stop before ⟨l⟩ or ⟨r⟩ starts the next syllable (aplicar), and a word-final stop stays out. The rule takes ⟨gn⟩ and ⟨gm⟩, because the source names no exception for them. Before ⟨gm⟩ Infopédia writes [ɛ] in 11 of 18 ⟨e⟩ slots (segmento [sɛˈɡmẽtu]) and [ɔ] in 12 of 12 ⟨o⟩ slots (dogmático [dɔˈɡmatiku]). Before ⟨gn⟩ it writes [ɔ] in 43 of 53 ⟨o⟩ slots. It writes [ə] before ⟨gn⟩ in the 8 pregn- words (impregnar [ĩprəˈɡnar]) and before ⟨gm⟩ in 7 apotegm- and apoflegm- words, and there its syllabification puts ⟨gn⟩ or ⟨gm⟩ in the onset. Those words are lexical. Infopédia writes [ɛ] in 405 of 425 slots, [ə] in 19 and [e] in 1. The counts are slots in the single Infopédia words that no word list holds, where Infopédia writes the stop. Infopédia carries the Lisbon assumption. This rule, PT_CODA_STOP_E_CANDIDATE_REDUCED and PT_CODA_STOP_E_CANDIDATE_CLOSE rank the slot [ɛ], [ɨ], [e]. A word-initial ⟨e⟩ takes the PT_CODA_STOP_INITIAL_E rules."
+    },
+    {
+      "id": "PT_CODA_STOP_E_CANDIDATE_REDUCED",
+      "phonemes": [
+        "e"
+      ],
+      "surface": "ɨ",
+      "grapheme": [
+        "e"
+      ],
+      "word_initial": false,
+      "stress": "unstressed",
+      "followed_by": "coda",
+      "followed_by_grapheme": [
+        "p",
+        "b",
+        "t",
+        "d",
+        "c",
+        "k",
+        "g"
+      ],
+      "followed_by_phoneme_2": [
+        "p",
+        "b",
+        "t",
+        "d",
+        "k",
+        "ɡ",
+        "f",
+        "v",
+        "s",
+        "z",
+        "s̺",
+        "z̺",
+        "ʃ",
+        "ʒ",
+        "m",
+        "n",
+        "ɲ"
+      ],
+      "notes": "The second lattice candidate of an unstressed ⟨e⟩ before a stop letter and another consonant is the reduced [ɨ]. The rule does not change the transcription. See PT_CODA_STOP_E_OPEN."
+    },
+    {
+      "id": "PT_CODA_STOP_E_CANDIDATE_CLOSE",
+      "phonemes": [
+        "ɛ"
+      ],
+      "surface": "e",
+      "grapheme": [
+        "e"
+      ],
+      "word_initial": false,
+      "stress": "unstressed",
+      "followed_by": "coda",
+      "followed_by_grapheme": [
+        "p",
+        "b",
+        "t",
+        "d",
+        "c",
+        "k",
+        "g"
+      ],
+      "followed_by_phoneme_2": [
+        "p",
+        "b",
+        "t",
+        "d",
+        "k",
+        "ɡ",
+        "f",
+        "v",
+        "s",
+        "z",
+        "s̺",
+        "z̺",
+        "ʃ",
+        "ʒ",
+        "m",
+        "n",
+        "ɲ"
+      ],
+      "notes": "The third lattice candidate of an unstressed ⟨e⟩ before a stop letter and another consonant is [e]. The rule does not change the transcription. See PT_CODA_STOP_E_OPEN."
+    },
+    {
+      "id": "PT_CODA_STOP_O_OPEN",
+      "phonemes": [
+        "u"
+      ],
+      "surface": "ɔ",
+      "grapheme": [
+        "o"
+      ],
+      "word_initial": false,
+      "stress": "unstressed",
+      "followed_by": "coda",
+      "followed_by_grapheme": [
+        "p",
+        "b",
+        "t",
+        "d",
+        "c",
+        "k",
+        "g"
+      ],
+      "followed_by_phoneme_2": [
+        "p",
+        "b",
+        "t",
+        "d",
+        "k",
+        "ɡ",
+        "f",
+        "v",
+        "s",
+        "z",
+        "s̺",
+        "z̺",
+        "ʃ",
+        "ʒ",
+        "m",
+        "n",
+        "ɲ"
+      ],
+      "notes": "An unstressed ⟨o⟩ before a stop letter and another consonant is [ɔ], not the reduced [u]: noctâmbulo [nɔkˈtɐ̃bulu], cocção [kɔkˈsɐ̃w̃], dogmático [dɔɡˈmatiku]. Cunha & Cintra (7th ed., p. 53): 'Também não se reduziram as vogais átonas de cultismos, como o [a] de actor; o [ɛ] de director; o [ɔ] de adopção'. On p. 88 they write that Portugal kept the etymological consonant in the spelling 'sempre que se seguem às vogais átonas a (aberta), e ou o (semiabertas), como forma de indicar a abertura dessas vogais', and that this spelling is the way to distinguish 'no português europeu, as pretônicas abertas ou semiabertas das reduzidas'. The same page names autóctone, compacto, apto and inepto as words where the consonant is spoken. Neither page names a spoken consonant as the cause of the full vowel. The rule takes an inference from the two pages: a stop letter before another consonant is the written mark of a learned word, and the unstressed ⟨e⟩ and ⟨o⟩ of a learned word do not reduce. AO90 removes the consonants that are not spoken, so in AO90 spelling the stop letter is spoken. The rule takes ⟨p b t d c k g⟩ before a consonant other than ⟨l⟩ or ⟨r⟩. A stop before ⟨l⟩ or ⟨r⟩ starts the next syllable (aplicar), and a word-final stop stays out. The rule takes ⟨gn⟩ and ⟨gm⟩, because the source names no exception for them. Before ⟨gm⟩ Infopédia writes [ɛ] in 11 of 18 ⟨e⟩ slots (segmento [sɛˈɡmẽtu]) and [ɔ] in 12 of 12 ⟨o⟩ slots (dogmático [dɔˈɡmatiku]). Before ⟨gn⟩ it writes [ɔ] in 43 of 53 ⟨o⟩ slots. It writes [ə] before ⟨gn⟩ in the 8 pregn- words (impregnar [ĩprəˈɡnar]) and before ⟨gm⟩ in 7 apotegm- and apoflegm- words, and there its syllabification puts ⟨gn⟩ or ⟨gm⟩ in the onset. Those words are lexical. Infopédia writes [ɔ] in 166 of 178 slots, [u] in 9 and [o] in 3. The counts are slots in the single Infopédia words that no word list holds, where Infopédia writes the stop. Infopédia carries the Lisbon assumption. This rule, PT_CODA_STOP_O_CANDIDATE_REDUCED and PT_CODA_STOP_O_CANDIDATE_CLOSE rank the slot [ɔ], [u], [o]. A word-initial ⟨o⟩ or ⟨ho⟩ keeps the PT_INITIAL_O or PT_INITIAL_HO ranking."
+    },
+    {
+      "id": "PT_CODA_STOP_O_CANDIDATE_REDUCED",
+      "phonemes": [
+        "o"
+      ],
+      "surface": "u",
+      "grapheme": [
+        "o"
+      ],
+      "word_initial": false,
+      "stress": "unstressed",
+      "followed_by": "coda",
+      "followed_by_grapheme": [
+        "p",
+        "b",
+        "t",
+        "d",
+        "c",
+        "k",
+        "g"
+      ],
+      "followed_by_phoneme_2": [
+        "p",
+        "b",
+        "t",
+        "d",
+        "k",
+        "ɡ",
+        "f",
+        "v",
+        "s",
+        "z",
+        "s̺",
+        "z̺",
+        "ʃ",
+        "ʒ",
+        "m",
+        "n",
+        "ɲ"
+      ],
+      "notes": "The second lattice candidate of an unstressed ⟨o⟩ before a stop letter and another consonant is the reduced [u]. The rule does not change the transcription. See PT_CODA_STOP_O_OPEN."
+    },
+    {
+      "id": "PT_CODA_STOP_O_CANDIDATE_CLOSE",
+      "phonemes": [
+        "ɔ"
+      ],
+      "surface": "o",
+      "grapheme": [
+        "o"
+      ],
+      "word_initial": false,
+      "stress": "unstressed",
+      "followed_by": "coda",
+      "followed_by_grapheme": [
+        "p",
+        "b",
+        "t",
+        "d",
+        "c",
+        "k",
+        "g"
+      ],
+      "followed_by_phoneme_2": [
+        "p",
+        "b",
+        "t",
+        "d",
+        "k",
+        "ɡ",
+        "f",
+        "v",
+        "s",
+        "z",
+        "s̺",
+        "z̺",
+        "ʃ",
+        "ʒ",
+        "m",
+        "n",
+        "ɲ"
+      ],
+      "notes": "The third lattice candidate of an unstressed ⟨o⟩ before a stop letter and another consonant is [o]. The rule does not change the transcription. See PT_CODA_STOP_O_OPEN."
+    },
+    {
+      "id": "PT_INITIAL_E_CODA_CANDIDATE_OPEN",
+      "phonemes": [
+        "i"
+      ],
+      "surface": "ɛ",
+      "grapheme": [
+        "e"
+      ],
+      "word_initial": true,
+      "stress": "unstressed",
+      "followed_by": "coda",
+      "followed_by_grapheme_not": [
+        "l",
+        "r",
+        "s",
+        "x",
+        "m",
+        "n"
+      ],
+      "notes": "An unstressed word-initial ⟨e⟩ before another coda consonant keeps [e], and its second lattice candidate is [ɛ]: eclipse [eˈklipsɨ], ecler [eˈklɛɾ]. The context is mostly an obstruent before a liquid. A stop letter before another consonant takes the PT_CODA_STOP_INITIAL_E rules, which come first. No source read names this context: Mateus & d'Andrade (1998, p. 26) name the codas /L/, /R/ and /S/ only. The [ɛ] candidate rests on Infopédia only. Infopédia writes [e] first in 45 of the 63 single words in this context, [ɛ] in 14 and [i] in 4. Before an obstruent and a liquid it writes [e] first in 45 of 61. This rule and PT_INITIAL_E_CODA_CANDIDATE_I and PT_INITIAL_E_CODA_CANDIDATE_REDUCED rank the slot [e], [ɛ], [i], [ɨ]. The rule does not change the transcription. See PT_INITIAL_E_OPEN for the row candidates."
+    },
+    {
+      "id": "PT_INITIAL_E_CODA_CANDIDATE_I",
+      "phonemes": [
+        "ɨ"
+      ],
+      "surface": "i",
+      "grapheme": [
+        "e"
+      ],
+      "word_initial": true,
+      "stress": "unstressed",
+      "followed_by": "coda",
+      "followed_by_grapheme_not": [
+        "l",
+        "r",
+        "s",
+        "x",
+        "m",
+        "n"
+      ],
+      "notes": "The third lattice candidate of an unstressed word-initial ⟨e⟩ before another coda consonant is [i]. The rule does not change the transcription. See PT_INITIAL_E_CODA_CANDIDATE_OPEN."
+    },
+    {
+      "id": "PT_INITIAL_E_CODA_CANDIDATE_REDUCED",
+      "phonemes": [
+        "ɛ"
+      ],
+      "surface": "ɨ",
+      "grapheme": [
+        "e"
+      ],
+      "word_initial": true,
+      "stress": "unstressed",
+      "followed_by": "coda",
+      "followed_by_grapheme_not": [
+        "l",
+        "r",
+        "s",
+        "x",
+        "m",
+        "n"
+      ],
+      "notes": "The fourth lattice candidate of an unstressed word-initial ⟨e⟩ before another coda consonant is the [ɨ] of the general reduction. The rule does not change the transcription. See PT_INITIAL_E_CODA_CANDIDATE_OPEN."
+    },
+    {
+      "id": "PT_CODA_L_A_OPEN",
+      "phonemes": [
+        "ɐ"
+      ],
+      "surface": "a",
+      "grapheme": [
+        "a"
+      ],
+      "stress": "unstressed",
+      "followed_by": "coda",
+      "followed_by_grapheme": [
+        "l"
+      ],
+      "notes": "An unstressed ⟨a⟩ before a coda ⟨l⟩ is [a], not the reduced [ɐ]: altar [aɫˈtaɾ], calçado [kaɫˈsadu], falcão [faɫˈkɐ̃w̃]. Cunha & Cintra (7th ed., p. 53) list among the unstressed vowels that do not reduce 'as vogais [a], [ɛ], [o] protegidas por l implosivo de altar, delgado, soldado, colchão, Setúbal e amável'. The rule takes an ⟨l⟩ before a consonant and a word-final ⟨l⟩. A word-final ⟨l⟩ is in a coda, so it is implosive, and the clause names the ⟨l⟩, not a position in the word. Two examples of the source, Setúbal and amável, have a word-final ⟨l⟩. A digraph ⟨lh⟩ is not a coda ⟨l⟩. Infopédia writes [a] first in 2,720 of the 2,726 single words that this rule changes and [ɐ] in 5. Infopédia carries the Lisbon assumption. This rule and PT_CODA_L_A_CANDIDATE_REDUCED rank the slot [a], [ɐ]. The PT_CODA_L rules come after the word lists and the word-initial rules, which keep their values."
+    },
+    {
+      "id": "PT_CODA_L_A_CANDIDATE_REDUCED",
+      "phonemes": [
+        "a"
+      ],
+      "surface": "ɐ",
+      "grapheme": [
+        "a"
+      ],
+      "stress": "unstressed",
+      "followed_by": "coda",
+      "followed_by_grapheme": [
+        "l"
+      ],
+      "notes": "The second lattice candidate of an unstressed ⟨a⟩ before a coda ⟨l⟩ is the reduced [ɐ]. The rule does not change the transcription. See PT_CODA_L_A_OPEN."
+    },
+    {
+      "id": "PT_CODA_L_E_OPEN",
+      "phonemes": [
+        "ɨ"
+      ],
+      "surface": "ɛ",
+      "grapheme": [
+        "e"
+      ],
+      "stress": "unstressed",
+      "followed_by": "coda",
+      "followed_by_grapheme": [
+        "l"
+      ],
+      "notes": "An unstressed ⟨e⟩ before a coda ⟨l⟩ is [ɛ], not the reduced [ɨ]: delgado [dɛɫˈɡadu], amável [ɐˈmavɛɫ], móvel [ˈmɔvɛɫ]. Cunha & Cintra (7th ed., p. 53) list among the unstressed vowels that do not reduce 'as vogais [a], [ɛ], [o] protegidas por l implosivo de altar, delgado, soldado, colchão, Setúbal e amável'. The rule takes an ⟨l⟩ before a consonant and a word-final ⟨l⟩. A word-final ⟨l⟩ is in a coda, so it is implosive, and the clause names the ⟨l⟩, not a position in the word. Two examples of the source, Setúbal and amável, have a word-final ⟨l⟩. A digraph ⟨lh⟩ is not a coda ⟨l⟩. Infopédia writes [ɛ] first in 213 of the 217 single words with a medial ⟨el⟩ + consonant that this rule changes, and in 1,852 of the 1,858 with a word-final ⟨el⟩. Infopédia carries the Lisbon assumption. This rule and PT_CODA_L_E_CANDIDATE_REDUCED rank the slot [ɛ], [e], [ɨ]."
+    },
+    {
+      "id": "PT_CODA_L_E_CANDIDATE_REDUCED",
+      "phonemes": [
+        "ɛ"
+      ],
+      "surface": "ɨ",
+      "grapheme": [
+        "e"
+      ],
+      "stress": "unstressed",
+      "followed_by": "coda",
+      "followed_by_grapheme": [
+        "l"
+      ],
+      "notes": "The third lattice candidate of an unstressed ⟨e⟩ before a coda ⟨l⟩ is the reduced [ɨ]. The rule does not change the transcription. See PT_CODA_L_E_OPEN."
+    },
+    {
+      "id": "PT_CODA_L_O_CLOSE",
+      "phonemes": [
+        "u"
+      ],
+      "surface": "o",
+      "grapheme": [
+        "o"
+      ],
+      "stress": "unstressed",
+      "followed_by": "coda",
+      "followed_by_grapheme": [
+        "l"
+      ],
+      "notes": "An unstressed ⟨o⟩ before a coda ⟨l⟩ is [o], not the reduced [u]: soldado [soɫˈdadu], colchão [koɫˈʃɐ̃w̃], soltar [soɫˈtaɾ]. Cunha & Cintra (7th ed., p. 53) list among the unstressed vowels that do not reduce 'as vogais [a], [ɛ], [o] protegidas por l implosivo de altar, delgado, soldado, colchão, Setúbal e amável'. The rule takes an ⟨l⟩ before a consonant and a word-final ⟨l⟩. A word-final ⟨l⟩ is in a coda, so it is implosive, and the clause names the ⟨l⟩, not a position in the word. Two examples of the source, Setúbal and amável, have a word-final ⟨l⟩. A digraph ⟨lh⟩ is not a coda ⟨l⟩. Infopédia writes [o] first in 279 of the 360 single words with a medial ⟨ol⟩ + consonant that this rule changes, [ɔ] in 56 and [u] in 25. In the 4 words with a word-final ⟨ol⟩, such as álcool and brístol, it writes [ɔ]. Infopédia carries the Lisbon assumption. This rule, PT_CODA_L_O_CANDIDATE_OPEN and PT_CODA_L_O_CANDIDATE_REDUCED rank the slot [o], [ɔ], [u]. A word-initial ⟨o⟩ keeps the PT_INITIAL_O ranking."
+    },
+    {
+      "id": "PT_CODA_L_O_CANDIDATE_OPEN",
+      "phonemes": [
+        "o"
+      ],
+      "surface": "ɔ",
+      "grapheme": [
+        "o"
+      ],
+      "stress": "unstressed",
+      "followed_by": "coda",
+      "followed_by_grapheme": [
+        "l"
+      ],
+      "notes": "The second lattice candidate of an unstressed ⟨o⟩ before a coda ⟨l⟩ is [ɔ]. The rule does not change the transcription. See PT_CODA_L_O_CLOSE."
+    },
+    {
+      "id": "PT_CODA_L_O_CANDIDATE_REDUCED",
+      "phonemes": [
+        "ɔ"
+      ],
+      "surface": "u",
+      "grapheme": [
+        "o"
+      ],
+      "stress": "unstressed",
+      "followed_by": "coda",
+      "followed_by_grapheme": [
+        "l"
+      ],
+      "notes": "The third lattice candidate of an unstressed ⟨o⟩ before a coda ⟨l⟩ is the reduced [u]. The rule does not change the transcription. See PT_CODA_L_O_CLOSE."
+    },
+    {
+      "id": "PT_STRESSED_E_PREPALATAL_CLOSE",
+      "phonemes": [
+        "ɛ"
+      ],
+      "surface": "e",
+      "grapheme": [
+        "e"
+      ],
+      "stress": "stressed",
+      "followed_by_grapheme": [
+        "lh",
+        "nh",
+        "j",
+        "ch"
+      ],
+      "notes": "A stressed ⟨e⟩ before ⟨lh nh j ch⟩ is the close [e]: fecho [ˈfeʃu], espelho [iʃˈpeʎu], telha [ˈteʎɐ], tenho [ˈteɲu]. Cunha & Cintra (7th ed., p. 431, obs. 1.ª b and c) give a stressed stem ⟨e⟩ before [ɲ] and before a palatal consonant ('fecho, fechas, fecha, etc.; desejo [...]; aparelho [...]') 'no português de Portugal, com [e] ou [ɐ] nas formas rizotônicas'. The same page gives [ɛ] only for 'invejar, embrechar, frechar e vexar'. On p. 49 they place the [ɐ] in Lisbon speech: 'no falar de Lisboa e de outras zonas de Portugal encontra-se [ɐ] em sílaba tônica antes de semivogal ou de consoante palatal: rei, tenho, telha'. p. 431 names verbs, and p. 49 gives nouns (telha), so the rule takes nouns too. The rule takes ⟨lh nh j ch⟩. It leaves out ⟨x⟩, which is often [ks] (complexo), and ⟨g⟩ before ⟨e i⟩. In the 378 single Infopédia words in this context that no word list holds, Infopédia gives an [e] reading in 325, mostly second after the Lisbon [ɐ] (fecho [ˈfɐ(j)ʃu, ˈfeʃu]). It gives [ɛ] first in 27 (velho, flecha, brejo), which are lexical. Infopédia carries the Lisbon assumption. This rule, PT_STRESSED_E_PREPALATAL_CANDIDATE_LISBON and PT_STRESSED_E_PREPALATAL_CANDIDATE_OPEN rank the slot [e], [ɐ], [ɛ]. The word lists come first and keep their values. pt-PT-x-lisbon gives [ɐ] through LX_STRESSED_E_PREPALATAL."
+    },
+    {
+      "id": "PT_STRESSED_E_PREPALATAL_CANDIDATE_LISBON",
+      "phonemes": [
+        "e"
+      ],
+      "surface": "ɐ",
+      "grapheme": [
+        "e"
+      ],
+      "stress": "stressed",
+      "followed_by_grapheme": [
+        "lh",
+        "nh",
+        "j",
+        "ch"
+      ],
+      "notes": "The second lattice candidate of a stressed ⟨e⟩ before ⟨lh nh j ch⟩ is the Lisbon [ɐ] (Cunha & Cintra, p. 49). The rule does not change the transcription. See PT_STRESSED_E_PREPALATAL_CLOSE."
+    },
+    {
+      "id": "PT_STRESSED_E_PREPALATAL_CANDIDATE_OPEN",
+      "phonemes": [
+        "ɨ"
+      ],
+      "surface": "ɛ",
+      "grapheme": [
+        "e"
+      ],
+      "stress": "stressed",
+      "followed_by_grapheme": [
+        "lh",
+        "nh",
+        "j",
+        "ch"
+      ],
+      "notes": "The third lattice candidate of a stressed ⟨e⟩ before ⟨lh nh j ch⟩ is [ɛ], the value of the exceptions on p. 431 of Cunha & Cintra. The rule does not change the transcription. See PT_STRESSED_E_PREPALATAL_CLOSE."
     }
   ],
   "sandhi_rules": [
@@ -1030,8 +2419,8 @@
       "title": "Portuguese (European)",
       "publisher": "Handbook of the International Phonetic Association, Cambridge University Press, 126-130 (reprint of the 1995 JIPA Illustration)",
       "url": "https://archive.org/details/rosettaproject_por_phon-1",
-      "pages": "126-129",
-      "notes": "Read directly (page images checked). The illustration is based on the Lisbon dialect. The consonant chart puts plain s and z in the Alveolar column, with caço [ˈkasu] and caso [ˈkazu] as the exemplars. The stress notes cite the diphthong list (pp. 127-128) and the transcription of desistiu (p. 129)."
+      "pages": "126-130",
+      "notes": "Read directly (page images checked). The illustration is based on the Lisbon dialect. The consonant chart puts plain s and z in the Alveolar column, with caço [ˈkasu] and caso [ˈkazu] as the exemplars. The stress notes cite the diphthong list (pp. 127-128) and the transcription of desistiu (p. 129). The notes on connected speech cite the transcription of the passage (p. 130)."
     },
     {
       "id": "cunha_cintra1984",
@@ -1041,7 +2430,7 @@
       "publisher": "Sá da Costa",
       "url": null,
       "pages": null,
-      "notes": "Page numbers in the notes of PT_STRESSED_A_BEFORE_NASAL follow the 7th edition (Lexikon, 2017), read as the page image."
+      "notes": "Page numbers in the notes of PT_STRESSED_A_BEFORE_NASAL, PT_LEX_CLOSE_O and the PT_INITIAL_O rules follow the 7th edition (Lexikon, 2017), read as the page image."
     },
     {
       "id": "start_cross2002",
@@ -1062,6 +2451,36 @@
       "url": null,
       "pages": null,
       "notes": "Prosodic-word structure and stress in European Portuguese; background for the stress-conditioned mid-vowel height and reduction facts."
+    },
+    {
+      "id": "vazquez_dieguez2015",
+      "author": "Vázquez Diéguez, Ignacio",
+      "year": 2015,
+      "title": "As palavras portuguesas que começam pela letra <e>. A sua pronunciação",
+      "publisher": "Anuario de Estudios Filológicos 38, 241-267",
+      "url": "https://dialnet.unirioja.es/descarga/articulo/5295759.pdf",
+      "pages": "242-250, 265",
+      "notes": "Read in full. Table on p. 242, series by initial spelling on p. 250, closing statement on p. 265."
+    },
+    {
+      "id": "mateus_dandrade1998",
+      "author": "Mateus, M.H. & d'Andrade, E.",
+      "year": 1998,
+      "title": "The syllable structure in European Portuguese",
+      "publisher": "D.E.L.T.A. 14(1), 13-32",
+      "url": "https://doi.org/10.1590/S0102-44501998000100002",
+      "pages": "13-32",
+      "notes": "Read in the journal's HTML text, which carries no page breaks and drops some phonetic symbols, and in the scan of the printed issue, which shows section 1.6 on p. 26."
+    },
+    {
+      "id": "teyssier1989",
+      "author": "Teyssier, Paul",
+      "year": 1989,
+      "title": "Manual de Língua Portuguesa (Portugal-Brasil)",
+      "publisher": null,
+      "url": null,
+      "pages": "28",
+      "notes": "Read only as quoted by Vázquez Diéguez (2015: 244)."
     }
   ],
   "wikipedia": [
@@ -1084,7 +2503,7 @@
   "word_exceptions": {"e": "i"},
   "stress": {
     "onset_clusters": ["bl", "br", "bɫ", "bɾ", "bʀ", "bʁ", "bʎ", "bχ", "dr", "dɾ", "dʀ", "dʁ", "dʎ", "dχ", "fl", "fr", "fɫ", "fɾ", "fʀ", "fʁ", "fʎ", "fχ", "kl", "kr", "kɫ", "kɾ", "kʀ", "kʁ", "kʎ", "kχ", "pl", "pr", "pɫ", "pɾ", "pʀ", "pʁ", "pʎ", "pχ", "tr", "tɾ", "tʀ", "tʁ", "tʎ", "tχ", "vl", "vr", "vɫ", "vɾ", "vʀ", "vʁ", "vʎ", "vχ", "ðr", "ðɾ", "ðʀ", "ðʁ", "ðʎ", "ðχ", "ɡl", "ɡr", "ɡɫ", "ɡɾ", "ɡʀ", "ɡʁ", "ɡʎ", "ɡχ", "ɣl", "ɣr", "ɣɫ", "ɣɾ", "ɣʀ", "ɣʁ", "ɣʎ", "ɣχ", "βl", "βr", "βɫ", "βɾ", "βʀ", "βʁ", "βʎ", "βχ"],
-    "cliticless_words": ["o", "a", "os", "as", "de", "do", "da", "dos", "das", "em", "no", "na", "nos", "nas", "por", "pelo", "pela", "pelos", "pelas", "ao", "aos", "à", "às", "com", "sem", "e", "que", "se", "me", "te", "lhe", "lhes", "vos", "lo", "la", "los", "las", "lho", "lha", "lhos", "lhas"],
+    "cliticless_words": ["o", "a", "os", "as", "de", "do", "da", "dos", "das", "em", "no", "na", "nos", "nas", "por", "pelo", "pela", "pelos", "pelas", "ao", "aos", "à", "às", "com", "sem", "e", "que", "se", "me", "te", "lhe", "lhes", "vos", "lo", "la", "los", "las", "lho", "lha", "lhos", "lhas", "sob"],
     "compound_stress": "last",
     "default_position": -2,
     "final_stress_endings": [
