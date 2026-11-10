@@ -389,7 +389,8 @@ int main() {
         // The literal follows the reference reading of the ending.
         assert(G2P("ru-RU").transcribe_word("большо\xcc\x81го") == "bɐlʲˈʂəvə");
         assert(G2P("ru-x-southern").transcribe_word("моего\xcc\x81") == "məjaˈɣo");
-        // Only a silent mark is removed: a grave accent is a reading, not a key.
+        // Only a silent mark is removed: a grave accent is not a silent mark, so
+        // the key keeps it and the exception does not match.
         assert(G2P("ru-RU").transcribe_word("его\xcc\x80") == "ˈjeɡə");
         // g2p.py _is_cliticless: a word with a silent mark is never a clitic,
         // even when the spec lists the marked form.
