@@ -7,6 +7,9 @@
     "ei": [
       "e"
     ],
+    "uei": [
+      "we"
+    ],
     "ou": [
       "o"
     ]
@@ -35,43 +38,10 @@
       "word_final": [
         "ʒ"
       ]
-    },
-    "e": {
-      "nucleus_stressed": [
-        "ɛ",
-        "e"
-      ],
-      "nucleus_unstressed": [
-        "e"
-      ],
-      "pretonic": [
-        "e"
-      ],
-      "word_final": [
-        "ɨ"
-      ],
-      "word_initial": [
-        "e"
-      ]
-    },
-    "o": {
-      "nucleus_stressed": [
-        "ɔ",
-        "o"
-      ],
-      "nucleus_unstressed": [
-        "o"
-      ],
-      "pretonic": [
-        "o"
-      ],
-      "word_final": [
-        "u"
-      ]
     }
   },
   "parent": "pt-PT",
-  "notes": "Algarvio Portuguese, southernmost continental dialect (Faro, Portimão, Lagos, Sagres). Modelled features: (1) DEFINING Barlavento feature — fronting of the stressed labio-velar /u/ → [y] (tudo→[ˈtydu], lume→[ˈlymɨ], mudo→[ˈmydu]); encoded as the allophone rule ALG_U_FRONTING, stressed nucleus only (Cintra 1971; Brissos 2014; Segura da Cruz 1989). (2) /ej/ → [e] and /ow/ → [o] monophthongs (leite→[ˈletɨ], outro→[ˈotɾu]). (3) Southern sibilant voicing — word-final /s/ → [ʒ] (mas→[maʒ], muitos amigos→[ˈmũj̃tuʒ ɐˈmiɡuʒ]); encoded in positional_graphemes s/coda→[ʒ], word_final→[ʒ]. This is the STRONGEST realisation of the /ʒ/-for-/z/ external sandhi (word-final s before a vowel-initial word → [ʒ]; the 'Tajaver' pronunciation of estás a ver → [eˈʃtaʒ ˈɐ ˈvɛɾ]; Portuguese With Leo, 'The 8 accents', native-speaker source), shared more weakly by São Miguel (see pt-PT-x-acores, which applies it prevocalically only) and variable in Coimbra, while Lisbon and the North keep [z]. Because the Algarve realisation is categorical across all word-final positions, it is modelled by the positional word_final [ʒ] map (not a separate prevocalic sandhi rule) and therefore already surfaces [ʒ] before a following vowel. (4) Open stressed vowel qualities [ɛ, ɔ]. (5) Dark coda /l/→[ł] and coda /s,z/→[ʃ,ʒ] inherited from the pt-PT base allophone_rules. NOT MODELLED: the older/rural apico-alveolar sibilant [s̥] (articulatory, not phoneme-level simulable — Cintra 1971 flags this class of feature as non-modellable); the broader stressed [a]→[ɛ] / [ɔ]→[o̝] chain shift (context-conditioned; see ALG_U_FRONTING notes). No betacism: /v/ ≠ /b/. PROCLITIC GUARD: the common function words o/os/no/nos/do/dos/ao/aos/pelo/pelos/um/uns are given word_exceptions with their correct [u]-vowel forms (o→[u], no→[nu]); the word-level stress detector mis-marks these monosyllabic clitics as stressed, so without the override ALG_U_FRONTING would wrongly front the article/contraction vowel to [y]. Genuine stressed lexical /u/ still fronts (tudo→[ˈtydu], sul→[ˈsyɫ]). ACOUSTIC REFINEMENT (Brissos 2014b, 'A vogal u', AVOC): the Barlavento /u/-fronting is context-conditioned — stressed /u/ is NOT fronted after a bilabial onset (/p,b,m/), where it identifies with [u] (Praia da Salema: 25% of the F2 space after bilabial, 'muito mais perto de [u] do que de [y]'). Encoded as the guard rule ALG_U_NO_FRONT_AFTER_BILABIAL, ordered before ALG_U_FRONTING (so e.g. mudo -> [ˈmudu], not [ˈmydu]; genuine non-bilabial /u/ still fronts: tudo, sul). Brissos & Saramago (2014, pp.55-59, 65) corroborate the Barlavento-Algarvio (SW-zone) stressed /u/-fronting isogloss, aligning the perceptual-dialectology record with the acoustic data.",
+  "notes": "Algarvio Portuguese, southernmost continental dialect (Faro, Portimão, Lagos, Sagres). Modelled features: (1) DEFINING Barlavento feature — fronting of the stressed labio-velar /u/ → [y] (tudo→[ˈtydu], lume→[ˈlymɨ], mudo→[ˈmydu]); encoded as the allophone rule ALG_U_FRONTING, stressed nucleus only (Cintra 1971; Brissos 2014; Segura da Cruz 1989). (2) /ej/ → [e] and /ow/ → [o] monophthongs (leite→[ˈletɨ], outro→[ˈotɾu]). (3) Southern sibilant voicing — word-final /s/ → [ʒ] (mas→[maʒ], muitos amigos→[ˈmũj̃tuʒ ɐˈmiɡuʒ]); encoded in positional_graphemes s/coda→[ʒ], word_final→[ʒ]. This is the STRONGEST realisation of the /ʒ/-for-/z/ external sandhi (word-final s before a vowel-initial word → [ʒ]; the 'Tajaver' pronunciation of estás a ver → [eˈʃtaʒ ˈɐ ˈvɛɾ]; Portuguese With Leo, 'The 8 accents', native-speaker source), shared more weakly by São Miguel (see pt-PT-x-acores, which applies it prevocalically only) and variable in Coimbra, while Lisbon and the North keep [z]. Because the Algarve realisation is categorical across all word-final positions, it is modelled by the positional word_final [ʒ] map (not a separate prevocalic sandhi rule) and therefore already surfaces [ʒ] before a following vowel. (4) Open stressed vowel qualities [ɛ, ɔ]. (5) Dark coda /l/→[ł] and coda /s,z/→[ʃ,ʒ] inherited from the pt-PT base allophone_rules. NOT MODELLED: the older/rural apico-alveolar sibilant [s̥] (articulatory, not phoneme-level simulable — Cintra 1971 flags this class of feature as non-modellable); the broader stressed [a]→[ɛ] / [ɔ]→[o̝] chain shift (context-conditioned; see ALG_U_FRONTING notes). No betacism: /v/ ≠ /b/. PROCLITIC GUARD: the common function words o/os/no/nos/do/dos/ao/aos/pelo/pelos/um/uns are given word_exceptions with their correct [u]-vowel forms (o→[u], no→[nu]); the word-level stress detector mis-marks these monosyllabic clitics as stressed, so without the override ALG_U_FRONTING would wrongly front the article/contraction vowel to [y]. Genuine stressed lexical /u/ still fronts (tudo→[ˈtydu], sul→[ˈsyɫ]). ACOUSTIC REFINEMENT (Brissos 2014b, 'A vogal u', AVOC): the Barlavento /u/-fronting is context-conditioned — stressed /u/ is NOT fronted after a bilabial onset (/p,b,m/), where it identifies with [u] (Praia da Salema: 25% of the F2 space after bilabial, 'muito mais perto de [u] do que de [y]'). Encoded as the guard rule ALG_U_NO_FRONT_AFTER_BILABIAL, ordered before ALG_U_FRONTING (so e.g. mudo -> [ˈmudu], not [ˈmydu]; genuine non-bilabial /u/ still fronts: tudo, sul). Brissos & Saramago (2014, pp.55-59, 65) corroborate the Barlavento-Algarvio (SW-zone) stressed /u/-fronting isogloss, aligning the perceptual-dialectology record with the acoustic data. UNSTRESSED ⟨e o⟩: the spec holds no positional row for ⟨e⟩ or ⟨o⟩, so it takes the pt-PT values, pretonic [ɨ] and [u]. A value with no source yields to the parent, and the one source that transcribes the Algarve writes [ɨ]: Brissos (2014, p. 79) gives Praia da Salema \"[dɨb'uʎõ]/[dɨb'ʉʎõ] 'debulham'\" and \"[kɨɾ'yʒɐ] 'coruja'\". That evidence has limits. It is two Algarve words, and they are side forms in a paper on stressed vowels. coruja does not show [u], so the [u] of ⟨o⟩ is the parent default and no measured value. Cunha & Cintra (7th ed., p. 29) say only that the unstressed vowel spelled ⟨o⟩ 'cai ou se reduz', and their examples are word-final.",
   "quality": "research",
   "ancestors": [
     {
@@ -187,68 +157,6 @@
     "end_year": null
   },
   "iso639_3": "por",
-  "stress": {
-    "onset_clusters": ["bl", "br", "bɫ", "bɾ", "bʀ", "bʁ", "bʎ", "bχ", "dr", "dɾ", "dʀ", "dʁ", "dʎ", "dχ", "fl", "fr", "fɫ", "fɾ", "fʀ", "fʁ", "fʎ", "fχ", "kl", "kr", "kɫ", "kɾ", "kʀ", "kʁ", "kʎ", "kχ", "pl", "pr", "pɫ", "pɾ", "pʀ", "pʁ", "pʎ", "pχ", "tr", "tɾ", "tʀ", "tʁ", "tʎ", "tχ", "vl", "vr", "vɫ", "vɾ", "vʀ", "vʁ", "vʎ", "vχ", "ðr", "ðɾ", "ðʀ", "ðʁ", "ðʎ", "ðχ", "ɡl", "ɡr", "ɡɫ", "ɡɾ", "ɡʀ", "ɡʁ", "ɡʎ", "ɡχ", "ɣl", "ɣr", "ɣɫ", "ɣɾ", "ɣʀ", "ɣʁ", "ɣʎ", "ɣχ", "βl", "βr", "βɫ", "βɾ", "βʀ", "βʁ", "βʎ", "βχ"],
-    "cliticless_words": ["o", "a", "os", "as", "de", "do", "da", "dos", "das", "em", "no", "na", "nos", "nas", "por", "pelo", "pela", "pelos", "pelas", "ao", "aos", "à", "às", "com", "sem", "e", "que", "se", "me", "te", "lhe", "lhes", "vos", "lo", "la", "los", "las", "lho", "lha", "lhos", "lhas"],
-    "default_position": -2,
-    "final_stress_endings": [
-      "r",
-      "l",
-      "z",
-      "x",
-      "i",
-      "u",
-      "im",
-      "om",
-      "um",
-      "is",
-      "us",
-      "ns",
-      "ão",
-      "ãe",
-      "õe",
-      "au",
-      "éu",
-      "éi",
-      "ói"
-    ],
-    "penult_stress_endings": [],
-    "marked_vowels": [
-      "á",
-      "é",
-      "í",
-      "ó",
-      "ú",
-      "â",
-      "ê",
-      "ô",
-      "ã",
-      "õ"
-    ],
-    "stress_mark": "ˈ",
-    "notes": "Acordo Ortográfico 1990 conventions: paroxytone default; written accents override; final -i/-u/-r/-l/-z/-x/-im/-om/-um/-ns and nasal diphthongs attract final stress. Unmarked -em/-am stay paroxytone (homem, falam). DIPHTHONGS: declared so the bundled syllabifier counts nuclei correctly — without them every vowel run merges into one nucleus and co-e-lho is read as coe-lho, one syllable short, putting the stress and its vowel reduction on the wrong vowel. ⟨oe⟩ is hiatus, not a diphthong (Cunha & Cintra, §Ditongos).",
-    "diphthongs": [
-      "ãe",
-      "ão",
-      "õe",
-      "ai",
-      "ái",
-      "au",
-      "áu",
-      "ei",
-      "éi",
-      "êi",
-      "eu",
-      "éu",
-      "êu",
-      "iu",
-      "oi",
-      "ói",
-      "ôi",
-      "ou",
-      "ui"
-    ]
-  },
   "allophone_rules": [
     {
       "id": "ALG_U_NO_FRONT_AFTER_BILABIAL",
@@ -274,6 +182,41 @@
       "stress": "stressed",
       "syllable_position": "nucleus",
       "notes": "Barlavento Algarvio fronting of the stressed labio-velar /u/ to the front rounded [y] — the defining and most salient feature of the western Algarve. Cintra (1971) delimits the sub-dialect by exactly this isogloss (‘a palatalização, em maior ou menor grau, da vogal tónica u’); Brissos (2014) gives [tˈyd] ‘tudo’ and [lˈymɨ] ‘lume’; Segura da Cruz (1989) is a study dedicated to it. Restricted to the STRESSED nucleus (stress=‘stressed’): it does not apply to unstressed /u/ (Lüdtke 1957; Maia 1975–78, via Cintra 1971 and Brissos 2014), so the condition also blocks it from feeding on the inherited pt-PT unstressed /o/→[u] reduction. NOTES-ONLY (not modelled): the wider central-southern chain shift — stressed [a]→[ɛ] in high-vowel/palatal contexts and [ɔ]→[o̝] raising (Brissos 2014) — is context-conditioned and left to notes to avoid a cascade collapse of the vowel space; only the categorical /u/→[y] is realised here."
+    },
+    {
+      "id": "PT_FINAL_EM_NUCLEUS",
+      "phonemes": [],
+      "surface": "ɐ",
+      "notes": "DISABLED for Algarvio. Word-final ⟨-em⟩ in an open syllable is [ẽj̃]: Leite de Vasconcellos 1901 (Esquisse d'une dialectologie portugaise, §44n, p. 93; OCR copy, diacritics normalised): 'Dans le Baixo-Alemtejo et dans l'Algarve, on dit -ẽi en syllabe découverte, et -ẽ en syllabe couverte'. He also heard [ẽ] in open final syllables at Lagos ('bẽ et tẽ avec le même ẽ de tempo'); that local variant is not modelled."
+    },
+    {
+      "id": "PT_FINAL_ENS_NUCLEUS",
+      "phonemes": [],
+      "surface": "ɐ",
+      "notes": "DISABLED for Algarvio: the ⟨-ens⟩ syllable is closed by the plural ⟨s⟩, so its nucleus is the monophthong [ẽ] (homens [ˈɔmẽʒ]), per the 'syllabe couverte' clause quoted under PT_FINAL_EM_NUCLEUS in this spec."
+    },
+    {
+      "id": "PT_FINAL_ENS_GLIDE",
+      "phonemes": [],
+      "surface": "̃j̃",
+      "notes": "DISABLED for Algarvio: no palatal offglide in the closed ⟨-ens⟩ syllable (see PT_FINAL_ENS_NUCLEUS in this spec)."
+    },
+    {
+      "id": "PT_STRESSED_A_BEFORE_NASAL",
+      "phonemes": [
+        "a"
+      ],
+      "surface": "ɐ̃",
+      "stress": "stressed",
+      "grapheme": [
+        "a"
+      ],
+      "followed_by_phoneme": [
+        "m",
+        "n",
+        "ɲ"
+      ],
+      "notes": "In the Algarve a stressed /a/ before an onset nasal is raised and nasal. Lao, Rodrigues & Brissos (2020, Revista da Associação Portuguesa de Linguística 7, p. 308) names the regions that prefer [ɐ] and adds: \"e de resto, o que predomina é [ɐ̃]\". That rest holds the Alentejo and the Algarve, which page 301 marks among the areas of highest nasalisation."
     }
   ],
   "word_exceptions": {
@@ -301,7 +244,7 @@
   "audit": {
     "clup_dialect": {
       "conclusion": "sample_too_small",
-      "measured": "The clup_dialect row holds 3 scored sentences (clup_dialect is sentence-level: each gold entry is one interview sentence, scored as a single unit against the engine's whole-sentence transcription, so the bootstrap resamples across only 3 sentence-level PER values, not across words), per=0.3712, per_ci_low=0.2988, per_ci_high=0.4378 (benchmarks/results.json). At n=3 sentences the bootstrap interval is already collapsing toward a point for the same reason (few distinct values to resample), so its narrow width reflects the small sample, not precision; see docs/scoreboard.md's `95% CI` note and the THIN_ROW_MARK cutoff (rows under 20 scored items). This row cannot gate a production promotion on its own strength.",
+      "measured": "The clup_dialect row holds 3 scored sentences (clup_dialect is sentence-level: each gold entry is one interview sentence, scored as a single unit against the engine's whole-sentence transcription, so the bootstrap resamples across only 3 sentence-level PER values, not across words), per=0.3712, per_ci_low=0.2988, per_ci_high=0.4378 (benchmarks/results.json). At n=3 sentences the bootstrap interval is already collapsing toward a point for the same reason (few distinct values to resample), so its narrow width reflects the small sample, not precision; see docs/evaluation/generated/scoreboard.md's `95% CI` note and the THIN_ROW_MARK cutoff (rows under 20 scored items). This row cannot gate a production promotion on its own strength.",
       "reference": "spec notes"
     }
   }

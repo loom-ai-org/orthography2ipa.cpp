@@ -2,171 +2,20 @@
   "code": "it-IT-x-marche",
   "name": "Marchigiano",
   "script": "Latin",
-  "graphemes": {
-    "a": [
-      "a"
-    ],
-    "e": [
-      "e",
-      "ɛ"
-    ],
-    "i": [
-      "i"
-    ],
-    "o": [
-      "o",
-      "ɔ"
-    ],
-    "u": [
-      "u"
-    ],
-    "b": [
-      "b"
-    ],
-    "c": [
-      "k",
-      "tʃ"
-    ],
-    "ch": [
-      "k"
-    ],
-    "ci": [
-      "tʃ"
-    ],
-    "d": [
-      "d"
-    ],
-    "f": [
-      "f"
-    ],
-    "g": [
-      "ɡ",
-      "dʒ"
-    ],
-    "gh": [
-      "ɡ"
-    ],
-    "gi": [
-      "dʒ"
-    ],
-    "gl": [
-      "ʎ",
-      "ɡl"
-    ],
-    "gli": [
-      "ʎ"
-    ],
-    "gn": [
-      "ɲ"
-    ],
-    "h": [
-      ""
-    ],
-    "j": [
-      "j"
-    ],
-    "l": [
-      "l"
-    ],
-    "m": [
-      "m"
-    ],
-    "n": [
-      "n"
-    ],
-    "p": [
-      "p"
-    ],
-    "qu": [
-      "kw"
-    ],
-    "r": [
-      "r"
-    ],
-    "s": [
-      "s",
-      "z"
-    ],
-    "sc": [
-      "ʃ",
-      "sk"
-    ],
-    "sci": [
-      "ʃ"
-    ],
-    "t": [
-      "t"
-    ],
-    "v": [
-      "v"
-    ],
-    "z": [
-      "ts",
-      "dz"
-    ],
-    "bb": [
-      "bː"
-    ],
-    "cc": [
-      "kː",
-      "tːʃ"
-    ],
-    "dd": [
-      "dː"
-    ],
-    "ff": [
-      "fː"
-    ],
-    "gg": [
-      "ɡː",
-      "dːʒ"
-    ],
-    "ll": [
-      "lː"
-    ],
-    "mm": [
-      "mː"
-    ],
-    "nn": [
-      "nː"
-    ],
-    "pp": [
-      "pː"
-    ],
-    "rr": [
-      "rː"
-    ],
-    "ss": [
-      "sː"
-    ],
-    "tt": [
-      "tː"
-    ],
-    "zz": [
-      "tːs",
-      "dːz"
-    ],
-    "à": [
-      "a"
-    ],
-    "è": [
-      "ɛ"
-    ],
-    "é": [
-      "e"
-    ],
-    "ì": [
-      "i"
-    ],
-    "ò": [
-      "ɔ"
-    ],
-    "ó": [
-      "o"
-    ],
-    "ù": [
-      "u"
-    ]
+  "graphemes_base": "it-IT",
+  "positional_graphemes": {
+    "s": {
+      "default": [
+        "s",
+        "z"
+      ]
+    },
+    "z": {
+      "default": [
+        "ts",
+        "dz"
+      ]
+    }
   },
   "allophones": {
     "p": [
@@ -323,7 +172,7 @@
       "notes": "Central Italian parent, with Southern influences in the south of the region."
     }
   ],
-  "notes": "Marchigiano. Central Italian of the Marche region. Transitional zone: northern Marche is closer to Romagnol (Gallo-Italic), central Marche is Central Italian, southern Marche is closer to the Neapolitan continuum. Reference: central Marche (Macerata). Key features: (1) 7-vowel system. (2) Metaphony in southern varieties. (3) Assimilatory processes (Loporcaro 2009, Avolio 1995).",
+  "notes": "Marchigiano. Central Italian of the Marche region. Transitional zone: northern Marche is closer to Romagnol (Gallo-Italic), central Marche is Central Italian, southern Marche is closer to the Neapolitan continuum. Reference: central Marche (Macerata). Key features: (1) 7-vowel system. (2) Metaphony in southern varieties. (3) Assimilatory processes (Loporcaro 2009, Avolio 1995). GRAPHEMES: the grapheme table and its positional readings come from it-IT through graphemes_base, because the variety writes standard Italian spelling. ⟨c g⟩ read [tʃ dʒ] before ⟨e i⟩ and [k ɡ] elsewhere: cielo [ˈtʃɛːlo], gelo [ˈdʒɛːlo] (Bertinetto & Loporcaro 2005, JIPA 35(2), p. 133). ⟨i u⟩ before a vowel are the glides [j w]: pieno [ˈpjɛːno], chiave [ˈkjaːve], guida [ˈɡwiːda] (p. 139, Table 2 on p. 138). The spec keeps its own ⟨s⟩ and ⟨z⟩ readings and does not take the it-IT positional ones: the it-IT intervocalic [z] and word-initial [dz] are the Standard Northern values, and no source for this variety was opened.",
   "quality": "research",
   "script_type": "alphabet",
   "sources": [
@@ -356,6 +205,16 @@
       "url": null,
       "pages": null,
       "notes": null
+    },
+    {
+      "id": "bertinetto_loporcaro2005",
+      "author": "Bertinetto, P.M. & Loporcaro, M.",
+      "year": 2005,
+      "title": "The sound pattern of Standard Italian, as compared with the varieties spoken in Florence, Milan and Rome",
+      "publisher": "Journal of the International Phonetic Association",
+      "url": null,
+      "pages": "131-151",
+      "notes": "JIPA 35(2). Illustration of Standard Italian; states the preconsonantal /s/ voicing agreement and documents the Tuscan/Northern split in intervocalic ⟨s⟩. Table 2 (p. 138) and p. 139 give the opening and closing diphthongs and the hiatus that the stress diphthongs list follows; p. 137 gives the two equal vowels in hiatus."
     }
   ],
   "wikipedia": [

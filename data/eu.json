@@ -210,29 +210,29 @@
     {
       "id": "EU_EZ_D_DEVOICE",
       "name": "ez+d→ezt (regressive devoicing)",
-      "left_context": "^es̻$",
-      "right_context": "^d",
+      "left_context": "^[ˈˌ]?es̻$",
+      "right_context": "^([ˈˌ]?)d",
       "transform": null,
-      "right_transform": "t",
+      "right_transform": "\\1t",
       "obligatory": true,
       "notes": "ez + d- → ezt-: the voiced /d/ of the following word devoices to [t] after the laminal sibilant of ez while the sibilant is retained — ez dut → eztut [es̻ tut], ez da → ezta [es̻ ta], ez dakit → eztakit [es̻ takit]. Categorical connected-speech sandhi of the negative particle ez /es̻/ before a following auxiliary/verb-initial consonant, obligatory for all speakers of Standard Basque and pan-Basque across the dialects (the DEGREE/spelling of the assimilation varies dialectally, but the contractions themselves are general): Hualde & Ortiz de Urbina 2003, Hualde 'Segmental phonology' §2 (consonant assimilation / sandhi of the negative particle), pp.15-65; Hualde 1991, Basque Phonology, §on the negative particle ez. Modelled on eu (Batua) and inherited by the historical-dialect specs via the id-keyed sandhi overlay; a dialect that does not realise ez as /es̻/ simply does not fire the rule (null beats a wrong contraction)."
     },
     {
       "id": "EU_EZ_Z_AFFRICATE",
       "name": "ez+z→etz (sibilant→affricate coalescence)",
-      "left_context": "^es̻$",
-      "right_context": "^s̻",
-      "transform": "e",
-      "right_transform": "ts̻",
+      "left_context": "^([ˈˌ]?)es̻$",
+      "right_context": "^([ˈˌ]?)s̻",
+      "transform": "\\1e",
+      "right_transform": "\\1ts̻",
       "obligatory": true,
       "notes": "ez + z- → etz-: the sibilant of ez coalesces with the following laminal sibilant into the laminal affricate [ts̻], leaving the vowel of ez bare — ez zen → etzen [e ts̻en], ez zara → etzara [e ts̻aɾa]. Categorical connected-speech sandhi of the negative particle ez /es̻/ before a following auxiliary/verb-initial consonant, obligatory for all speakers of Standard Basque and pan-Basque across the dialects (the DEGREE/spelling of the assimilation varies dialectally, but the contractions themselves are general): Hualde & Ortiz de Urbina 2003, Hualde 'Segmental phonology' §2 (consonant assimilation / sandhi of the negative particle), pp.15-65; Hualde 1991, Basque Phonology, §on the negative particle ez. Modelled on eu (Batua) and inherited by the historical-dialect specs via the id-keyed sandhi overlay; a dialect that does not realise ez as /es̻/ simply does not fire the rule (null beats a wrong contraction)."
     },
     {
       "id": "EU_EZ_N_ASSIM",
       "name": "ez+n→en (sibilant deletion before nasal)",
-      "left_context": "^es̻$",
-      "right_context": "^n",
-      "transform": "e",
+      "left_context": "^([ˈˌ]?)es̻$",
+      "right_context": "^[ˈˌ]?n",
+      "transform": "\\1e",
       "right_transform": null,
       "obligatory": true,
       "notes": "ez + n- → en-: the sibilant of ez is deleted before a following nasal — ez naiz → enaiz [e nais̻], ez nator → enator [e natoɾ]. Categorical connected-speech sandhi of the negative particle ez /es̻/ before a following auxiliary/verb-initial consonant, obligatory for all speakers of Standard Basque and pan-Basque across the dialects (the DEGREE/spelling of the assimilation varies dialectally, but the contractions themselves are general): Hualde & Ortiz de Urbina 2003, Hualde 'Segmental phonology' §2 (consonant assimilation / sandhi of the negative particle), pp.15-65; Hualde 1991, Basque Phonology, §on the negative particle ez. Modelled on eu (Batua) and inherited by the historical-dialect specs via the id-keyed sandhi overlay; a dialect that does not realise ez as /es̻/ simply does not fire the rule (null beats a wrong contraction)."
@@ -240,9 +240,9 @@
     {
       "id": "EU_EZ_L_ASSIM",
       "name": "ez+l→el (sibilant deletion before lateral)",
-      "left_context": "^es̻$",
-      "right_context": "^l",
-      "transform": "e",
+      "left_context": "^([ˈˌ]?)es̻$",
+      "right_context": "^[ˈˌ]?l",
+      "transform": "\\1e",
       "right_transform": null,
       "obligatory": true,
       "notes": "ez + l- → el-: the sibilant of ez is deleted before a following lateral — ez luke → eluke [e luke], ez litzateke → elitzateke [e lits̻ateke]. Categorical connected-speech sandhi of the negative particle ez /es̻/ before a following auxiliary/verb-initial consonant, obligatory for all speakers of Standard Basque and pan-Basque across the dialects (the DEGREE/spelling of the assimilation varies dialectally, but the contractions themselves are general): Hualde & Ortiz de Urbina 2003, Hualde 'Segmental phonology' §2 (consonant assimilation / sandhi of the negative particle), pp.15-65; Hualde 1991, Basque Phonology, §on the negative particle ez. Modelled on eu (Batua) and inherited by the historical-dialect specs via the id-keyed sandhi overlay; a dialect that does not realise ez as /es̻/ simply does not fire the rule (null beats a wrong contraction)."
@@ -250,31 +250,73 @@
     {
       "id": "EU_EZ_B_DEVOICE",
       "name": "ez+b→ezp (regressive devoicing)",
-      "left_context": "^es̻$",
-      "right_context": "^b",
+      "left_context": "^[ˈˌ]?es̻$",
+      "right_context": "^([ˈˌ]?)b",
       "transform": null,
-      "right_transform": "p",
+      "right_transform": "\\1p",
       "obligatory": true,
       "notes": "ez + b- → ezp-: the voiced /b/ of the following word devoices to [p] after the sibilant of ez, which is retained — ez balitz → ezpalitz [es̻ palits̻], ez bada → ezpada [es̻ paða]. Categorical connected-speech sandhi of the negative particle ez /es̻/ before a following auxiliary/verb-initial consonant, obligatory for all speakers of Standard Basque and pan-Basque across the dialects (the DEGREE/spelling of the assimilation varies dialectally, but the contractions themselves are general): Hualde & Ortiz de Urbina 2003, Hualde 'Segmental phonology' §2 (consonant assimilation / sandhi of the negative particle), pp.15-65; Hualde 1991, Basque Phonology, §on the negative particle ez. Modelled on eu (Batua) and inherited by the historical-dialect specs via the id-keyed sandhi overlay; a dialect that does not realise ez as /es̻/ simply does not fire the rule (null beats a wrong contraction)."
     },
     {
       "id": "EU_EZ_G_DEVOICE",
       "name": "ez+g→ezk (regressive devoicing)",
-      "left_context": "^es̻$",
-      "right_context": "^ɡ",
+      "left_context": "^[ˈˌ]?es̻$",
+      "right_context": "^([ˈˌ]?)ɡ",
       "transform": null,
-      "right_transform": "k",
+      "right_transform": "\\1k",
       "obligatory": true,
       "notes": "ez + g- → ezk-: the voiced /ɡ/ of the following word devoices to [k] after the sibilant of ez, which is retained — ez gara → ezkara [es̻ kaɾa], ez gaitu → ezkaitu [es̻ kaitu]. Categorical connected-speech sandhi of the negative particle ez /es̻/ before a following auxiliary/verb-initial consonant, obligatory for all speakers of Standard Basque and pan-Basque across the dialects (the DEGREE/spelling of the assimilation varies dialectally, but the contractions themselves are general): Hualde & Ortiz de Urbina 2003, Hualde 'Segmental phonology' §2 (consonant assimilation / sandhi of the negative particle), pp.15-65; Hualde 1991, Basque Phonology, §on the negative particle ez. Modelled on eu (Batua) and inherited by the historical-dialect specs via the id-keyed sandhi overlay; a dialect that does not realise ez as /es̻/ simply does not fire the rule (null beats a wrong contraction)."
     }
   ],
   "parent": "xaq",
   "glottolog_code": "basq1248",
-  "notes": "Standard Basque (Euskara Batua), codified by the Royal Academy of the Basque Language (Euskaltzaindia) from 1968. Conservative Basque varieties have a three-way sibilant place contrast: lamino-alveolar /s̻/ (spelled z), apico-alveolar /s̺/ (spelled s) and postalveolar /ʃ/ (spelled x), with the matching affricates /ts̻/ (tz), /ts̺/ (ts) and /tʃ/ (tx); this three-way contrast is fully stable in eastern and Navarrese varieties such as Goizueta but is neutralised further west (Hualde, Lujanbio & Zubiri 2010: 119). Palatal stops /c/ (tt) and /ɟ/ (dd), palatal nasal /ɲ/ (ñ) and palatal lateral /ʎ/ (ll) arise historically by palatalisation of /t d n l/ after /i/. Voiced stops /b d ɡ/ are realised as approximants [β ð ɣ] intervocalically (Hualde et al. 2010: 116), and nasals assimilate in place to a following consonant (2010: 120). Five vowels /i e a o u/. Aspiration (/h/, aspirated stops) is preserved only in the eastern (continental) dialects and was lost in the west (Hualde 2018: 2). Dialectal variation across the historical dialects is extensive; Batua draws primarily from Gipuzkoan and Lapurdian sources. Basque is a language isolate with no demonstrated genetic relationship to any other language family. Single ⟨r⟩ is a tap [ɾ] in the onset — intervocalically and in obstruent+r clusters (⟨tr pr kr gr br dr fr⟩) — but the tap/trill contrast is neutralised in the syllable coda, where it surfaces as the trill [r]: word-finally (⟨eder⟩ [eder], ⟨gaur⟩ [ɡau̯r]) and before a consonant (⟨bernart⟩ [bernart], ⟨korpus⟩ [korpus̺]); ⟨rr⟩ is always the trill (Hualde & Ortiz de Urbina 2003). The falling diphthongs ⟨ai ei oi au eu⟩ are tautosyllabic with a non-syllabic offglide [i̯ u̯]. Coda /n/ before a labial /b p m/ assimilates in place to [m] (⟨anbulantzia⟩ [ambulants̻ia]; Hualde, Lujanbio & Zubiri 2010: 120). STRESS EXEMPTION (research/production tier rule): Basque accent is dialect-variable (pitch-accent in some western varieties, weak demarcative stress elsewhere; Hualde 1999) and never marked in Batua orthography, so the spec carries no stress block per docs/quality_tiers.md. Palatalization of n/l after i (mina [miɲa], mutila [mutiʎa]) is LEXICALLY CONDITIONED in Batua, not automatic phonology — Latinate loans (familia, filosofia, kilometro, kilo) keep plain n/l for educated speakers (Hualde & Ortiz de Urbina 2003, §2.3 notes the variability) — so it is deliberately NOT an allophone rule; downstream lexicons own it.",
+  "notes": "Standard Basque (Euskara Batua), codified by the Royal Academy of the Basque Language (Euskaltzaindia) from 1968. Conservative Basque varieties have a three-way sibilant place contrast: lamino-alveolar /s̻/ (spelled z), apico-alveolar /s̺/ (spelled s) and postalveolar /ʃ/ (spelled x), with the matching affricates /ts̻/ (tz), /ts̺/ (ts) and /tʃ/ (tx); this three-way contrast is fully stable in eastern and Navarrese varieties such as Goizueta but is neutralised further west (Hualde, Lujanbio & Zubiri 2010: 119). Palatal stops /c/ (tt) and /ɟ/ (dd), palatal nasal /ɲ/ (ñ) and palatal lateral /ʎ/ (ll) arise historically by palatalisation of /t d n l/ after /i/. Voiced stops /b d ɡ/ are realised as approximants [β ð ɣ] intervocalically (Hualde et al. 2010: 116), and nasals assimilate in place to a following consonant (2010: 120). Five vowels /i e a o u/. Aspiration (/h/, aspirated stops) is preserved only in the eastern (continental) dialects and was lost in the west (Hualde 2018: 2). Dialectal variation across the historical dialects is extensive; Batua draws primarily from Gipuzkoan and Lapurdian sources. Basque is a language isolate with no demonstrated genetic relationship to any other language family. Single ⟨r⟩ is a tap [ɾ] in the onset — intervocalically and in obstruent+r clusters (⟨tr pr kr gr br dr fr⟩) — but the tap/trill contrast is neutralised in the syllable coda, where it surfaces as the trill [r]: word-finally (⟨eder⟩ [eder], ⟨gaur⟩ [ɡau̯r]) and before a consonant (⟨bernart⟩ [bernart], ⟨korpus⟩ [korpus̺]); ⟨rr⟩ is always the trill (Hualde & Ortiz de Urbina 2003). The falling diphthongs ⟨ai ei oi au eu⟩ are tautosyllabic with a non-syllabic offglide [i̯ u̯]. Coda /n/ before a labial /b p m/ assimilates in place to [m] (⟨anbulantzia⟩ [ambulants̻ia]; Hualde, Lujanbio & Zubiri 2010: 120). STRESS: Basque accent varies by dialect and the Batua spelling never marks it; the stress block states the General Central [+2] pattern (accent on the second syllable) that Batua speech uses (Hualde 1994: 1559; Elordieta, Gaminde & Hualde 1998: 402), and its notes name the dialects that differ. Palatalization of n/l after i (mina [miɲa], mutila [mutiʎa]) is LEXICALLY CONDITIONED in Batua, not automatic phonology — Latinate loans (familia, filosofia, kilometro, kilo) keep plain n/l for educated speakers (Hualde & Ortiz de Urbina 2003, §2.3 notes the variability) — so it is deliberately NOT an allophone rule; downstream lexicons own it.",
+  "stress": {
+    "default_position": 2,
+    "diphthongs": [
+      "ai",
+      "ei",
+      "oi",
+      "ui",
+      "au",
+      "eu"
+    ],
+    "ipa_diphthongs": [
+      "ai̯",
+      "ei̯",
+      "oi̯",
+      "ui̯",
+      "au̯",
+      "eu̯"
+    ],
+    "max_onset": 2,
+    "onset_clusters": [
+      "pɾ",
+      "bɾ",
+      "βɾ",
+      "tɾ",
+      "dɾ",
+      "ðɾ",
+      "kɾ",
+      "ɡɾ",
+      "ɣɾ",
+      "fɾ",
+      "pl",
+      "bl",
+      "βl",
+      "kl",
+      "ɡl",
+      "ɣl",
+      "fl"
+    ],
+    "stress_mark": "ˈ",
+    "notes": "Batua has no official accent norm. The spelling marks no accent, and the pattern that standard speech uses is the General Central [+2]: the accent falls on the second syllable of the word, counted from the left. Hualde (1994: 1559) proposes it for Batua (mendía, txakúrra, emákumea, bertsólariarekin). Elordieta, Gaminde & Hualde (1998: 399-400) report it as the pattern that spreads through Batua, and their summary of young Donostia Batua speakers (1998: 402) puts every word of three or more syllables on [+2] (gizóna, autóbusa, txistúlaria, basérritarrarentzat). The Euskaltzaindia handbook (Euskara Batuaren Eskuliburua, 'azentua') describes the same [+2] prominence. A disyllable takes the accent on its second syllable (gizón, atál, enbór; Elordieta et al. 1998: 402); in the same speakers a disyllable that ends in a vowel takes it on the first (áte, méndi), but listeners reject that pattern (1998: 403), and the spec keeps [+2]. Not modelled, because the spelling does not show them: a monosyllabic root takes the accent on its first syllable (lúrra, lúrrari, béltzari; Hualde 1994: 1559; Elordieta et al. 1998: 402), and so does a closed set of marked words (lékuan, bésteari, áurrera, átzetik; Hualde 1994: 1559). The weak secondary accent on the last syllable of a phrase (Hualde 1994: 1559, rule III) is a phrase-level fact and is not written. The vowel sequences ⟨ia ea oa ua⟩ are hiatus (Hualde 1994: 1549, [a.te.a], [ba.so.a]); only the falling diphthongs ⟨ai ei oi ui au eu⟩ are one nucleus. onset_clusters is the obstruent + liquid set that Batua spelling opens words with (tren, prest, klase, plaza, flota); an /s/ + stop sequence is not an onset (eus.ka.ra). The dialects differ (Hualde 2022: 83-84, 92, 97): the Western (Bizkaian coastal) systems leave most words unaccented and place the accent at phrase level; Antzuola-Bergara has [-2], Azpeitia-Azkoitia [+3], Hondarribia a quantity-sensitive [-1]/[-2] of the stem, and Goizueta-Oiartzun a high/low tonal contrast on [+1] or [+2]; east of the Bidasoa, including Zuberoan, Roncalese, Lapurdian and Lower Navarrese, the accent is penultimate [-2]. The Eastern dialect specs declare their own penultimate block. Known engine limit: the mark is written inside the affricates ts̻ ts̺ (beltˈs̻aɾi instead of belˈts̻aɾi), because the IPA segmenter does not read an affricate with a diacritic below as one segment."
+  },
   "quality": "production",
   "urls": [
     "https://en.wikipedia.org/wiki/Basque_language",
-    "https://glottolog.org/resource/languoid/id/basq1248"
+    "https://glottolog.org/resource/languoid/id/basq1248",
+    "https://www.euskaltzaindia.eus/index.php?option=com_ebe&view=bilaketa&Itemid=1161&task=bilaketa&lang=eu&id=213"
   ],
   "script_type": "alphabet",
   "sources": [
@@ -337,6 +379,46 @@
       "url": null,
       "pages": "ch. 'The negative particle ez' / consonant assimilation sandhi",
       "notes": "Read for the categorical connected-speech contractions of the negative particle ez (ez+d→ezt, ez+z→etz, ez+n→en, ez+l→el, ez+b→ezp, ez+g→ezk), the reference statement of pan-Basque ez-sandhi with dialectal variation in degree."
+    },
+    {
+      "id": "hualde1994_batua",
+      "author": "Hualde, J.I.",
+      "year": 1994,
+      "title": "Euskal azentuak eta euskara batua",
+      "publisher": "Euskera 39 (2. aldia), Euskaltzaindia",
+      "url": "https://www.euskaltzaindia.eus/dok/euskera/50051.pdf",
+      "pages": "1549-1568",
+      "notes": "Read for the accent proposal for Batua, (12) p. 1559: [+2] in the general case (mendía, txakúrra, emákumea, bertsólariarekin), [+1] after a monosyllabic root (lúrra, lúrrera) and in marked words (lékuan, bésteari, áurrera, átzetik), a secondary accent on the last syllable of the phrase; and for hiatus in Batua vowel sequences, p. 1549 ([a.te.a], [ba.so.a])."
+    },
+    {
+      "id": "elordieta_gaminde_hualde1998",
+      "author": "Elordieta, G., Gaminde, I. & Hualde, J.I.",
+      "year": 1998,
+      "title": "Euskal azentua gaur eta bihar",
+      "publisher": "Euskera 43 (2. aldia), Euskaltzaindia",
+      "url": "https://www.euskaltzaindia.eus/dok/euskera/49465.pdf",
+      "pages": "399-423",
+      "notes": "Read for [+2] as the accent pattern that spreads through Batua (pp. 399-400), the accent table of young Donostia Batua speakers with the [+1] and [+2] patterns (p. 402, after Hualde 1997), and the listener judgements on disyllables (p. 403)."
+    },
+    {
+      "id": "hualde2022_ocb",
+      "author": "Hualde, J.I.",
+      "year": 2022,
+      "title": "The reconstruction of Old Common Basque accentuation: Closing open issues",
+      "publisher": "Anuario del Seminario de Filología Vasca Julio de Urquijo (ASJU) 56(2)",
+      "url": "https://doi.org/10.1387/asju.23983",
+      "pages": "77-106",
+      "notes": "Read for the dialect accent systems: Western-type systems (Table 1, p. 83), Central-type systems with General Central [+2] (Table 2, p. 84), penultimate [-2] east of the Bidasoa (p. 92) and in Zuberoan (p. 97)."
+    },
+    {
+      "id": "hualde1986_tone_stress",
+      "author": "Hualde, J.I.",
+      "year": 1986,
+      "title": "Tone and Stress in Basque: a Preliminary Study",
+      "publisher": "Anuario del Seminario de Filología Vasca Julio de Urquijo (ASJU) 20(3)",
+      "url": "https://ojs.ehu.eus/index.php/ASJU/article/download/7813/7007",
+      "pages": "867-896",
+      "notes": "Read for Michelena's four accent types (pp. 867-868): penultimate stress in Souletin-Roncalese (type II) and in parts of Navarre (type III)."
     }
   ],
   "wikipedia": [

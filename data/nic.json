@@ -3,67 +3,9 @@
   "name": "Niger-Congo (family node)",
   "parent": "x-clade-atla1278",
   "script": "Latin",
-  "graphemes": {
-    "a": [
-      "a"
-    ],
-    "i": [
-      "i"
-    ],
-    "u": [
-      "u"
-    ],
-    "e": [
-      "e"
-    ],
-    "o": [
-      "o"
-    ],
-    "p": [
-      "p"
-    ],
-    "t": [
-      "t"
-    ],
-    "k": [
-      "k"
-    ],
-    "b": [
-      "b"
-    ],
-    "d": [
-      "d"
-    ],
-    "g": [
-      "ɡ"
-    ],
-    "s": [
-      "s"
-    ],
-    "m": [
-      "m"
-    ],
-    "n": [
-      "n"
-    ],
-    "l": [
-      "l"
-    ],
-    "r": [
-      "r"
-    ],
-    "w": [
-      "w"
-    ],
-    "j": [
-      "j"
-    ],
-    "h": [
-      "h"
-    ]
-  },
+  "graphemes": {},
   "allophones": {},
-  "notes": "STRUCTURAL ANCESTRY NODE (not a modelled G2P target). Niger-Congo (Atlantic-Congo) is the large African phylum whose Volta-Niger branch includes Yoruba and Igbo and whose Bantu branch is rooted separately at Proto-Bantu (bnt). It exists here only so the ancestry / phylogenetic-distance metrics of the modern varieties that reference it have a node to resolve to; NO phonology is claimed or reconstructed and the minimal grapheme set is a placeholder (afa.json / trk.json stub pattern).",
+  "notes": "STRUCTURAL ANCESTRY NODE (not a modelled G2P target). Niger-Congo (Atlantic-Congo) is the large African phylum whose Volta-Niger branch includes Yoruba and Igbo and whose Bantu branch is rooted separately at Proto-Bantu (bnt). It exists so that the ancestry and phylogenetic-distance metrics of the modern varieties that reference it have a node to resolve to. It carries no grapheme table: a family node has no orthography of its own, and the ancestry metrics use only its classification and its ancestor links. A grapheme table belongs to a member language spec with a cited orthography.",
   "quality": "stub",
   "script_type": "alphabet",
   "iso639_3": null,

@@ -7,6 +7,9 @@
     "ei": [
       "e"
     ],
+    "uei": [
+      "we"
+    ],
     "ou": [
       "o"
     ],
@@ -133,68 +136,6 @@
     "end_year": null
   },
   "iso639_3": "por",
-  "stress": {
-    "onset_clusters": ["bl", "br", "bɫ", "bɾ", "bʀ", "bʁ", "bʎ", "bχ", "dr", "dɾ", "dʀ", "dʁ", "dʎ", "dχ", "fl", "fr", "fɫ", "fɾ", "fʀ", "fʁ", "fʎ", "fχ", "kl", "kr", "kɫ", "kɾ", "kʀ", "kʁ", "kʎ", "kχ", "pl", "pr", "pɫ", "pɾ", "pʀ", "pʁ", "pʎ", "pχ", "tr", "tɾ", "tʀ", "tʁ", "tʎ", "tχ", "vl", "vr", "vɫ", "vɾ", "vʀ", "vʁ", "vʎ", "vχ", "ðr", "ðɾ", "ðʀ", "ðʁ", "ðʎ", "ðχ", "ɡl", "ɡr", "ɡɫ", "ɡɾ", "ɡʀ", "ɡʁ", "ɡʎ", "ɡχ", "ɣl", "ɣr", "ɣɫ", "ɣɾ", "ɣʀ", "ɣʁ", "ɣʎ", "ɣχ", "βl", "βr", "βɫ", "βɾ", "βʀ", "βʁ", "βʎ", "βχ"],
-    "cliticless_words": ["o", "a", "os", "as", "de", "do", "da", "dos", "das", "em", "no", "na", "nos", "nas", "por", "pelo", "pela", "pelos", "pelas", "ao", "aos", "à", "às", "com", "sem", "e", "que", "se", "me", "te", "lhe", "lhes", "vos", "lo", "la", "los", "las", "lho", "lha", "lhos", "lhas"],
-    "default_position": -2,
-    "final_stress_endings": [
-      "r",
-      "l",
-      "z",
-      "x",
-      "i",
-      "u",
-      "im",
-      "om",
-      "um",
-      "is",
-      "us",
-      "ns",
-      "ão",
-      "ãe",
-      "õe",
-      "au",
-      "éu",
-      "éi",
-      "ói"
-    ],
-    "penult_stress_endings": [],
-    "marked_vowels": [
-      "á",
-      "é",
-      "í",
-      "ó",
-      "ú",
-      "â",
-      "ê",
-      "ô",
-      "ã",
-      "õ"
-    ],
-    "stress_mark": "ˈ",
-    "notes": "Acordo Ortográfico 1990 conventions: paroxytone default; written accents override; final -i/-u/-r/-l/-z/-x/-im/-om/-um/-ns and nasal diphthongs attract final stress. Unmarked -em/-am stay paroxytone (homem, falam). DIPHTHONGS: declared so the bundled syllabifier counts nuclei correctly — without them every vowel run merges into one nucleus and co-e-lho is read as coe-lho, one syllable short, putting the stress and its vowel reduction on the wrong vowel. ⟨oe⟩ is hiatus, not a diphthong (Cunha & Cintra, §Ditongos).",
-    "diphthongs": [
-      "ãe",
-      "ão",
-      "õe",
-      "ai",
-      "ái",
-      "au",
-      "áu",
-      "ei",
-      "éi",
-      "êi",
-      "eu",
-      "éu",
-      "êu",
-      "iu",
-      "oi",
-      "ói",
-      "ôi",
-      "ou",
-      "ui"
-    ]
-  },
   "allophone_rules": [
     {
       "id": "ALE_U_NO_FRONT_AFTER_BILABIAL",
@@ -232,6 +173,23 @@
       "word_final": true,
       "stress": "unstressed",
       "notes": "Deletion of final unstressed high vowels -u/-i/-e. Primary source: Brissos (2014), acoustic study of central-southern EP (‘final unstressed [u] disappears or is reduced to [ɨ]’, e.g. [sˈœʃt] ‘cesto’). Cintra (1971) mentions it only in note 58 (p. 27), summarising Lüdtke (1956/57) — ‘a queda das vogais finais -u, -i (ou -e), outro dos fenómenos mais típicos desta região, mas cujos limites não coincidem perfeitamente com os dos primeiros’ — so it is NOT Cintra’s own main-text diagnostic and is not cited as such. In pt-PT the final unstressed vowels surface as [u] (from graphic o/u) and [ɨ] (from e); this rule drops them word-finally (gosto→[ˈɡɔʃt], noite→[ˈnojt]). Conditioned word_final + unstressed so it never touches stressed or word-medial vowels; final /ɐ/ (from -a) is deliberately excluded, matching the sources, which list only final -u, -i, -e. This is a categorical realisation of a variable process; see notes on the divergence from the small-n ep_dialects gold."
+    },
+    {
+      "id": "PT_STRESSED_A_BEFORE_NASAL",
+      "phonemes": [
+        "a"
+      ],
+      "surface": "ɐ̃",
+      "stress": "stressed",
+      "grapheme": [
+        "a"
+      ],
+      "followed_by_phoneme": [
+        "m",
+        "n",
+        "ɲ"
+      ],
+      "notes": "In the Alentejo a stressed /a/ before an onset nasal is raised and nasal. Lao, Rodrigues & Brissos (2020, Revista da Associação Portuguesa de Linguística 7, p. 308) names the regions that prefer [ɐ] and adds: \"e de resto, o que predomina é [ɐ̃]\". That rest holds the Alentejo and the Algarve, which page 301 marks among the areas of highest nasalisation."
     }
   ],
   "word_exceptions": {

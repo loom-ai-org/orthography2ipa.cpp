@@ -33,7 +33,60 @@
   },
   "positional_graphemes_base": "pt-PT",
   "parent": "pt-PT",
-  "notes": "Alfena Portuguese (Greater Porto, Valongo — Douro-Litoral / Duriense zone), a northern EP dialect in Cintra's Baixo-Minhoto-Duriense-Beirão group. MODELLED FEATURES: (1) APICO-ALVEOLAR-ONLY SIBILANT SYSTEM — ⟨s/ss⟩ AND ⟨c/ç/z⟩ all merge to apico-alveolar [s̺]/[z̺]; the four-sibilant opposition is reduced to the single apical branch (Cintra 1971 p.93; Álvarez Pérez 2014 pp.37-38, Durienses 'kept only the apico-alveolar branch'). Coda ⟨s/z⟩ keep chiado [ʃ]/[ʒ]. (2) BETACISM — /v/–/b/ merged to /b/ ~ [β] (Cintra 1971 p.88; Pérez 2014 pp.35-37). Alfena is additionally known for a local vowel-breaking (Brechung) of stressed mid vowels ([ɛ]>[ɛ͜ɐ] etc.); those are enumerated as secondary allophonic variants from regional-dialect literature, not from Cintra/Pérez, and are not asserted as default output. Porto je/wo diphthongisation is not applied. Inherits pt-PT base.",
+  "allophone_rules": [
+    {
+      "id": "PT_FINAL_EM_NUCLEUS",
+      "phonemes": [
+        "e",
+        "ɛ",
+        "ɨ"
+      ],
+      "grapheme": [
+        "e",
+        "é",
+        "ê"
+      ],
+      "followed_by_phoneme": [
+        "̃"
+      ],
+      "followed_by_grapheme": [
+        "m"
+      ],
+      "followed_by_2": "word_boundary",
+      "surface": "e",
+      "notes": "Overridden for this northern variety: the nucleus is the close-mid [e], not the central [ɐ]. Matching it here, not disabling it, also keeps the stressed nucleus away from any tonic-[e] diphthongisation rule of the spec. Northern EP keeps the close-mid nucleus of word-final ⟨-em -ens⟩: [ẽj̃], [ẽj̃ʃ] (bem [ˈbẽj̃], homem [ˈɔmẽj̃], homens [ˈɔmẽj̃ʃ]). The centralised [ɐ̃j̃] of the pt-PT base is the Lisbon merger: Wikipedia 'Portuguese phonology', 'In Greater Lisbon, [ẽj̃] has merged with [ɐ̃j̃]'; Ciberdúvidas (Viana & Rocha 2006, 'Vogais e ditongos nasais, outra vez', n. 1): 'em dialectos do português europeu … a grafia -em/-en(s) representa o ditongo [ẽj̃]'. Leite de Vasconcellos 1901 (Esquisse d'une dialectologie portugaise, §44n, p. 93; quoted from an OCR copy, diacritics normalised): '-em < l. -ENE correspond -ẽ dans certains endroits de la frontière de Tras-os-Montes et du Minho, et -ẽi ou -ɐi dans le reste du pays'. The border monophthong [ẽ] is local and not modelled. The oral parallel in the same section (§44i): the diphthong ⟨ei⟩ is [ɐj] only 'à Lisbonne' and [ej] in Entre-Douro-e-Minho, the Beira and Trás-os-Montes. The rule matches ⟨m⟩ only, so word-final ⟨-en⟩ (hífen) is not matched here and falls to PT_FINAL_EN_NUCLEUS of pt-PT."
+    },
+    {
+      "id": "PT_FINAL_ENS_NUCLEUS",
+      "phonemes": [
+        "e",
+        "ɛ",
+        "ɨ"
+      ],
+      "grapheme": [
+        "e",
+        "é",
+        "ê"
+      ],
+      "followed_by_phoneme": [
+        "̃"
+      ],
+      "followed_by_grapheme": [
+        "n"
+      ],
+      "followed_by_2": "consonant",
+      "followed_by_3": "word_boundary",
+      "surface": "e",
+      "notes": "Overridden for this northern variety with PT_FINAL_EM_NUCLEUS: the nucleus of the plural ⟨-ens⟩ is the close-mid [e], so it is [ẽj̃ʃ]. The sources are under PT_FINAL_EM_NUCLEUS in this spec."
+    },
+    {
+      "id": "PT_STRESSED_A_BEFORE_NASAL",
+      "phonemes": [],
+      "surface": "ɐ",
+      "notes": "DISABLED for Alfena Portuguese (vowel-breaking). The Northwest keeps an open /a/ before an onset nasal. Lao, Rodrigues & Brissos (2020, Revista da Associação Portuguesa de Linguística 7, p. 308): \"o Noroeste possui [a] e [ã]\". Page 301 of the same paper names the Northwest as \"Minho e Douro Litoral\"."
+    }
+  ],
+  "notes": "Alfena Portuguese (Greater Porto, Valongo — Douro-Litoral / Duriense zone), a northern EP dialect in Cintra's Baixo-Minhoto-Duriense-Beirão group. MODELLED FEATURES: (1) APICO-ALVEOLAR-ONLY SIBILANT SYSTEM — ⟨s/ss⟩ AND ⟨c/ç/z⟩ all merge to apico-alveolar [s̺]/[z̺]; the four-sibilant opposition is reduced to the single apical branch (Cintra 1971 p.93; Álvarez Pérez 2014 pp.37-38, Durienses 'kept only the apico-alveolar branch'). Coda ⟨s/z⟩ keep chiado [ʃ]/[ʒ]. (2) BETACISM — /v/–/b/ merged to /b/ ~ [β] (Cintra 1971 p.88; Pérez 2014 pp.35-37). Alfena is additionally known for a local vowel-breaking (Brechung) of stressed mid vowels ([ɛ]>[ɛ͜ɐ] etc.); those are enumerated as secondary allophonic variants from regional-dialect literature, not from Cintra/Pérez, and are not asserted as default output. Porto je/wo diphthongisation is not applied. Inherits pt-PT base. ⟨ss⟩ is declared apico-alveolar [s̺] here because the pt-PT base maps it to plain [s]; the value follows feature (1) above, which puts ⟨s/ss⟩ in the apical branch. Cintra 1971 (read in the Instituto Camões CVC reprint, pp. 11-13) draws the main North/South isogloss on the sibilant of the graphemes s and ss: apico-alveolar in the North, predorsodental in the South. His southern limit of the apical runs from the Ria de Aveiro to the Mondego, which it crosses upstream of Coimbra, and on towards Castelo Branco.",
   "quality": "research",
   "script_type": "alphabet",
   "sources": [
@@ -98,69 +151,10 @@
     "end_year": null
   },
   "iso639_3": "por",
-  "stress": {
-    "onset_clusters": ["bl", "br", "bɫ", "bɾ", "bʀ", "bʁ", "bʎ", "bχ", "dr", "dɾ", "dʀ", "dʁ", "dʎ", "dχ", "fl", "fr", "fɫ", "fɾ", "fʀ", "fʁ", "fʎ", "fχ", "kl", "kr", "kɫ", "kɾ", "kʀ", "kʁ", "kʎ", "kχ", "pl", "pr", "pɫ", "pɾ", "pʀ", "pʁ", "pʎ", "pχ", "tr", "tɾ", "tʀ", "tʁ", "tʎ", "tχ", "vl", "vr", "vɫ", "vɾ", "vʀ", "vʁ", "vʎ", "vχ", "ðr", "ðɾ", "ðʀ", "ðʁ", "ðʎ", "ðχ", "ɡl", "ɡr", "ɡɫ", "ɡɾ", "ɡʀ", "ɡʁ", "ɡʎ", "ɡχ", "ɣl", "ɣr", "ɣɫ", "ɣɾ", "ɣʀ", "ɣʁ", "ɣʎ", "ɣχ", "βl", "βr", "βɫ", "βɾ", "βʀ", "βʁ", "βʎ", "βχ"],
-    "cliticless_words": ["o", "a", "os", "as", "de", "do", "da", "dos", "das", "em", "no", "na", "nos", "nas", "por", "pelo", "pela", "pelos", "pelas", "ao", "aos", "à", "às", "com", "sem", "e", "que", "se", "me", "te", "lhe", "lhes", "vos", "lo", "la", "los", "las", "lho", "lha", "lhos", "lhas"],
-    "default_position": -2,
-    "final_stress_endings": [
-      "r",
-      "l",
-      "z",
-      "x",
-      "i",
-      "u",
-      "im",
-      "om",
-      "um",
-      "is",
-      "us",
-      "ns",
-      "ão",
-      "ãe",
-      "õe",
-      "au",
-      "éu",
-      "éi",
-      "ói"
-    ],
-    "penult_stress_endings": [],
-    "marked_vowels": [
-      "á",
-      "é",
-      "í",
-      "ó",
-      "ú",
-      "â",
-      "ê",
-      "ô",
-      "ã",
-      "õ"
-    ],
-    "stress_mark": "ˈ",
-    "notes": "Acordo Ortográfico 1990 conventions: paroxytone default; written accents override; final -i/-u/-r/-l/-z/-x/-im/-om/-um/-ns and nasal diphthongs attract final stress. Unmarked -em/-am stay paroxytone (homem, falam). DIPHTHONGS: declared so the bundled syllabifier counts nuclei correctly — without them every vowel run merges into one nucleus and co-e-lho is read as coe-lho, one syllable short, putting the stress and its vowel reduction on the wrong vowel. ⟨oe⟩ is hiatus, not a diphthong (Cunha & Cintra, §Ditongos).",
-    "diphthongs": [
-      "ãe",
-      "ão",
-      "õe",
-      "ai",
-      "ái",
-      "au",
-      "áu",
-      "ei",
-      "éi",
-      "êi",
-      "eu",
-      "éu",
-      "êu",
-      "iu",
-      "oi",
-      "ói",
-      "ôi",
-      "ou",
-      "ui"
-    ]
-  },
   "graphemes": {
+    "ss": [
+      "s̺"
+    ],
     "ç": [
       "s̺"
     ],

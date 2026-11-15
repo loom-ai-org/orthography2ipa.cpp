@@ -506,7 +506,7 @@
   "audit": {
     "wikipron": {
       "conclusion": "input_limited",
-      "measured": "Short vowels are not written in the Saraiki Shahmukhi abjad and gemination is not marked, so both are unrecoverable from unvowelised input; the spec notes state this accounts for the bulk of the residual distance against the WikiPron skr_arab_broad gold.",
+      "measured": "0 of 349 rows in the WikiPron skr_arab_broad gold carry a harakat (U+064B-U+0652), shadda included. The same 349 gold transcriptions carry a vowel with no length mark on 246 rows and a long consonant on 14 (s 6, k 2, n 2, and one each of ʃ, l, ʈʰ, t̪). Short vowels are not written in the Saraiki Shahmukhi abjad and gemination is not marked, so neither contrast is recoverable from unvowelised input, which is what input_limited names.",
       "reference": "spec notes"
     }
   }

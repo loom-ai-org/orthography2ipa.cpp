@@ -33,6 +33,47 @@
     }
   ],
   "notes": "Lower Navarrese (Behe-Nafar). Spoken in Basse-Navarre (Pyrénées-Atlantiques, France). In Zuazo's classification it forms, together with Lapurdian, the single Navarro-Lapurdian dialect; phonologically it is an eastern (continental) aspirating variety. VALIDATED against Hualde (2018), 'Aspiration in Basque'. Aspiration is preserved: the laryngeal fricative /h/ is a productive phoneme (Hualde 2018: 1-3), and voiceless stops have aspirated allophones/variants [pʰ tʰ kʰ] whose distribution is constrained to the onset of a stressed syllable within a two-syllable window near the start of the word, reflecting an older stress-conditioned aspiration (Michelena FHV, as reported in Hualde 2018: 5-6). These aspirated stops are less systematically phonemic than in Souletin, where they form a full three-way contrast (Hualde 2018: 2). The three-way sibilant contrast /s̻ s̺ ʃ/ of the base is retained. NOTE (engine limit): the exact stress-window restriction on aspirated stops is not expressed at the grapheme level; [pʰ tʰ kʰ] are listed as conditioned variants only.",
+  "stress": {
+    "default_position": -2,
+    "diphthongs": [
+      "ai",
+      "ei",
+      "oi",
+      "ui",
+      "au",
+      "eu"
+    ],
+    "ipa_diphthongs": [
+      "ai̯",
+      "ei̯",
+      "oi̯",
+      "ui̯",
+      "au̯",
+      "eu̯"
+    ],
+    "max_onset": 2,
+    "onset_clusters": [
+      "pɾ",
+      "bɾ",
+      "βɾ",
+      "tɾ",
+      "dɾ",
+      "ðɾ",
+      "kɾ",
+      "ɡɾ",
+      "ɣɾ",
+      "fɾ",
+      "pl",
+      "bl",
+      "βl",
+      "kl",
+      "ɡl",
+      "ɣl",
+      "fl"
+    ],
+    "stress_mark": "ˈ",
+    "notes": "Penultimate accent [-2]: east of the Bidasoa 'the most common pattern is penultimate accentuation, [–2]' (Hualde 2022: 92), and the Low Navarrese/Lapurdian region later lost all older lexical accent contrasts (Hualde 2022: 80, fn. 5). The block replaces the General Central [+2] block of eu, which the dialect does not use. The diphthong, hiatus and onset settings are those of the eu block (Hualde 1994: 1549)."
+  },
   "quality": "research",
   "urls": [
     "https://en.wikipedia.org/wiki/Lower_Navarrese_dialect",
@@ -79,6 +120,26 @@
       "url": null,
       "pages": null,
       "notes": null
+    },
+    {
+      "id": "hualde2022_ocb",
+      "author": "Hualde, J.I.",
+      "year": 2022,
+      "title": "The reconstruction of Old Common Basque accentuation: Closing open issues",
+      "publisher": "Anuario del Seminario de Filología Vasca Julio de Urquijo (ASJU) 56(2)",
+      "url": "https://doi.org/10.1387/asju.23983",
+      "pages": "77-106",
+      "notes": "Read for the dialect accent systems: Western-type systems (Table 1, p. 83), Central-type systems with General Central [+2] (Table 2, p. 84), penultimate [-2] east of the Bidasoa (p. 92) and in Zuberoan (p. 97)."
+    },
+    {
+      "id": "hualde1994_batua",
+      "author": "Hualde, J.I.",
+      "year": 1994,
+      "title": "Euskal azentuak eta euskara batua",
+      "publisher": "Euskera 39 (2. aldia), Euskaltzaindia",
+      "url": "https://www.euskaltzaindia.eus/dok/euskera/50051.pdf",
+      "pages": "1549-1568",
+      "notes": "Read for the accent proposal for Batua, (12) p. 1559: [+2] in the general case (mendía, txakúrra, emákumea, bertsólariarekin), [+1] after a monosyllabic root (lúrra, lúrrera) and in marked words (lékuan, bésteari, áurrera, átzetik), a secondary accent on the last syllable of the phrase; and for hiatus in Batua vowel sequences, p. 1549 ([a.te.a], [ba.so.a])."
     }
   ],
   "wikipedia": [

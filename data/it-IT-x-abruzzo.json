@@ -309,6 +309,41 @@
       "dːz"
     ]
   },
+  "positional_graphemes": {
+    "c": {
+      "before_e": [
+        "tʃ"
+      ],
+      "before_i": [
+        "tʃ"
+      ],
+      "default": [
+        "k"
+      ]
+    },
+    "g": {
+      "before_e": [
+        "dʒ"
+      ],
+      "before_i": [
+        "dʒ"
+      ],
+      "default": [
+        "ɡ"
+      ]
+    },
+    "gg": {
+      "before_e": [
+        "dːʒ"
+      ],
+      "before_i": [
+        "dːʒ"
+      ],
+      "default": [
+        "ɡː"
+      ]
+    }
+  },
   "parent": "x-clade-italorom",
   "ancestors": [
     {
@@ -324,7 +359,7 @@
       "notes": "Ostrogothic/Lombardic superstrate."
     }
   ],
-  "notes": "Abruzzese. Southern Italo-Romance of Abruzzo and Molise. Part of the upper Southern Italian (Neapolitan) dialect continuum. ~1.5 million speakers. Key features: (1) Very strong vowel reduction (unstressed finals → [ə]). (2) Productive metaphony (vowel harmony). (3) Gemination preserved. (4) /ʃ/ in consonant clusters (Avolio 1995, Ledgeway 2009).",
+  "notes": "Abruzzese. Southern Italo-Romance of Abruzzo and Molise. Part of the upper Southern Italian (Neapolitan) dialect continuum. ~1.5 million speakers. Key features: (1) Very strong vowel reduction (unstressed finals → [ə]). (2) Productive metaphony (vowel harmony). (3) Gemination preserved. (4) /ʃ/ in consonant clusters (Avolio 1995, Ledgeway 2009). C/G: ⟨c⟩ is velar before ⟨a o u⟩ and a consonant, and palatal before ⟨e i⟩. Finamore (1893) §29, p. 12: 'Iniziale, ha suono rotondo, senz'ombra della gorgia fiorentina. Così anche mediano […] Anche palatino: 'Cèlle, augello; Cèveze, gelso; Ducènde, dugento; Damecèlle'. §36, p. 13: an elided ⟨ce⟩ before ⟨a o u⟩ is written with ⟨-i-⟩ 'per mostrare che il c è palatino, e non gutturale'. §39, p. 13: ⟨g⟩ 'Iniziale o mediano, innanzi ad e, i, ha sempre pronunzia intensa: Ggènde, Ggesù, Ggire, Leggìteme, Relleggióne, Luvigge'. The spelling writes that length as ⟨gg⟩. ⟨cc⟩ and ⟨chi⟩ are not changed: §30 gives ⟨chi⟩ before a vowel as palatal (Chiave, Kiave), which no grapheme here models.",
   "quality": "research",
   "script_type": "alphabet",
   "sources": [
@@ -357,6 +392,16 @@
       "url": null,
       "pages": null,
       "notes": null
+    },
+    {
+      "id": "finamore1893",
+      "author": "Finamore, G.",
+      "year": 1893,
+      "title": "Vocabolario dell'uso abruzzese",
+      "publisher": "S. Lapi, Città di Castello",
+      "url": "https://archive.org/details/vocabolariodell01finagoog",
+      "pages": "12-13",
+      "notes": "Second edition. Phonetic introduction, §§29-39 (consonants c, q, g)."
     }
   ],
   "wikipedia": [

@@ -525,7 +525,7 @@
       "surface": "b",
       "word_initial": false,
       "word_final": true,
-      "notes": "Word-final schwa deletion. Hindi does not pronounce the inherent vowel of a word-final consonant letter: राम is [ɾaːm], not *[ɾaːmə] (Ohala 1983, ch. 5; Ohala 1999: 101; Wikipedia, 'Schwa deletion in Indo-Aryan languages'). Applies after a cluster too (शब्द [ʃəbd̪]), so it is ordered BEFORE the HI_SCHWA_KEEP_* guard. word_initial=false protects a monosyllabic one-letter word (न [nə]), whose schwa is the only vowel and is never deleted. Sanskrit (sa, sa-x-vedic) preserves the inherent vowel and declares no such rule — which is why this lives in the Hindi DATA, not in the engine."
+      "notes": "Word-final schwa deletion. Hindi does not pronounce the inherent vowel of a word-final consonant letter: राम is [ɾaːm], not *[ɾaːmə] (Ohala 1983, ch. 5; Ohala 1999: 101; Wikipedia, 'Schwa deletion in Indo-Aryan languages'). Applies after a cluster too (शब्द [ʃəbd̪]), so it is ordered BEFORE the HI_SCHWA_KEEP_* guard. word_initial=false protects a monosyllabic one-letter word (न [nə]), whose schwa is the only vowel and is never deleted. Sanskrit (sa, vsn) preserves the inherent vowel and declares no such rule — which is why this lives in the Hindi DATA, not in the engine."
     },
     {
       "id": "HI_SCHWA_FINAL_bʱ",

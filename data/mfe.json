@@ -129,7 +129,7 @@
       "notes": "Bhojpuri adstrate: 19th-century indentured Indian labourers (mostly from the Bhojpuri-speaking Gangetic plain) form a large share of the modern Mauritian population and contribute an ongoing contact layer (Baker & Kriegel, APiCS ch. 'Morisyen')."
     }
   ],
-  "notes": "French-lexifier creole of Mauritius written in a Latin, largely phonemic orthography. Grapheme map follows the modern conventions: ou [u], ch [ʃ], j [ʒ], z [z], gn [ɲ], ng [ŋ]. NASAL VOWELS: a vowel spelled with a following <n> nasalises only when that <n> closes the syllable (word-final or before a consonant); before a vowel the <n> stays a plain onset consonant and the vowel stays oral (allophone_rules, not enumerated digraphs -- see docs/allophony.md). RHOTIC: <r> is an onset approximant [ɰ] but a coda <r> is silent, lengthening the preceding vowel instead (allophone_rules). Standardisation of the spelling is recent and older French-etymology spellings still circulate; the phonetic value of some contextual variation (loanwords, frozen French compounds such as 'bien') is not fully recoverable and any prosody is left unencoded, so a PER floor is expected.",
+  "notes": "French-lexifier creole of Mauritius written in a Latin, largely phonemic orthography. Grapheme map follows the modern conventions: ou [u], ch [ʃ], j [ʒ], z [z], gn [ɲ], ng [ŋ]. NASAL VOWELS: a vowel spelled with a following <n> nasalises only when that <n> closes the syllable (word-final or before a consonant); before a vowel the <n> stays a plain onset consonant and the vowel stays oral (allophone_rules, not enumerated digraphs -- see docs/engine/allophony.md). RHOTIC: <r> is an onset approximant [ɰ] but a coda <r> is silent, lengthening the preceding vowel instead (allophone_rules). Standardisation of the spelling is recent and older French-etymology spellings still circulate; the phonetic value of some contextual variation (loanwords, frozen French compounds such as 'bien') is not fully recoverable and any prosody is left unencoded, so a PER floor is expected.",
   "iso639_3": "mfe",
   "glottolog_code": null,
   "sources": [
@@ -305,7 +305,7 @@
       "surface": "",
       "syllable_position": "coda",
       "preceded_by": "vowel",
-      "notes": "The coda nasal consonant that conditions MFE_NASAL_* is itself silent, exactly like the French nasal-vowel pilot (see docs/allophony.md): kontan [kɔ̃tɑ̃], not [kɔ̃ntãn]."
+      "notes": "The coda nasal consonant that conditions MFE_NASAL_* is itself silent, exactly like the French nasal-vowel pilot (see docs/engine/allophony.md): kontan [kɔ̃tɑ̃], not [kɔ̃ntãn]."
     }
   ]
 }

@@ -267,7 +267,70 @@
       "notes": "Hungarian adstrate: centuries of contact in Transylvania. Lexical exchange."
     }
   ],
-  "notes": "Standard Romanian. Eastern Romance, the ONLY Romance language east of the Adriatic. Key features: (1) Central vowels /ə/ (⟨ă⟩) and /ɨ/ (⟨â/î⟩) — unique in Romance. (2) NO intervocalic lenition (lup, foc — not *lub, *fogo). (3) Postposed definite article (lupul 'the wolf'). (4) Rich diphthong/triphthong system. (5) Rhotacism: intervocalic /l/ → /r/ in some words (soare < SOLEM). (6) Massive Slavic vocabulary layer (~40%). (7) Balkan sprachbund member (Chițoran 2001, Sala 2005). (8) Word-initial ⟨e⟩ is [je] in a closed, cited set: the personal pronouns ⟨eu el ea ei ele⟩ and the present/imperfect forms of ⟨a fi⟩ (⟨e este ești era erai eram erați erau⟩) — everywhere else word-initial ⟨e⟩ is [e] (⟨elev⟩, ⟨examen⟩); this is lexical, so it lives in word_exceptions (DOOM3; Chitoran 2002 ch. 2). (9) ⟨ă⟩ is declared in vowel_graphemes because the engine's closed Latin letter inventory does not carry it; without that declaration every vowel-conditioned rule fails next to it (⟨băieți⟩, ⟨păi⟩). STRESS EXEMPTION (research/production tier rule): Romanian lexical stress is phonemic but NOT predictable from standard orthography (cópii 'copies' vs copíi 'children' are spelled identically); the standard norm writes no stress marks, so the spec carries no stress block per docs/quality_tiers.md. CEILING: after ⟨c g⟩ a following ⟨i⟩ before a vowel is silent in inherited vocabulary (⟨cioban⟩ [tʃoˈban]) but syllabic in the neologistic layer (⟨Dacia⟩ [ˈdatʃi.a], ⟨sociologie⟩); the split is lexical, not orthographic, so the spec emits the majority syllabic reading and leaves the rest to a caller-supplied lexicon.",
+  "notes": "Standard Romanian. Eastern Romance, the ONLY Romance language east of the Adriatic. Key features: (1) Central vowels /ə/ (⟨ă⟩) and /ɨ/ (⟨â/î⟩) — unique in Romance. (2) NO intervocalic lenition (lup, foc — not *lub, *fogo). (3) Postposed definite article (lupul 'the wolf'). (4) Rich diphthong/triphthong system. (5) Rhotacism: intervocalic /l/ → /r/ in some words (soare < SOLEM). (6) Massive Slavic vocabulary layer (~40%). (7) Balkan sprachbund member (Chițoran 2001, Sala 2005). (8) Word-initial ⟨e⟩ is [je] in a closed, cited set: the personal pronouns ⟨eu el ea ei ele⟩ and the present/imperfect forms of ⟨a fi⟩ (⟨e este ești era erai eram erați erau⟩) — everywhere else word-initial ⟨e⟩ is [e] (⟨elev⟩, ⟨examen⟩); this is lexical, so it lives in word_exceptions (DOOM3; Chitoran 2002 ch. 2). (9) ⟨ă⟩ is declared in vowel_graphemes because the engine's closed Latin letter inventory does not carry it; without that declaration every vowel-conditioned rule fails next to it (⟨băieți⟩, ⟨păi⟩). STRESS: Romanian stress is lexical, and the standard spelling does not mark it, but it has a strong default: final stress on a consonant-final word or on a word-final ⟨ea⟩, penultimate stress on any other word (Chițoran 2002: 75-77; Alexei & Ulfsbjorninn 2022: 18). The stress block states that default and its notes list the lexical classes it misses (cópii 'copies' vs copíi 'children' stay unresolved). CEILING: after ⟨c g⟩ a following ⟨i⟩ before a vowel is silent in inherited vocabulary (⟨cioban⟩ [tʃoˈban]) but syllabic in the neologistic layer (⟨Dacia⟩ [ˈdatʃi.a], ⟨sociologie⟩); the split is lexical, not orthographic, so the spec emits the majority syllabic reading and leaves the rest to a caller-supplied lexicon.",
+  "stress": {
+    "default_position": -2,
+    "final_stress_endings": [
+      "b",
+      "c",
+      "d",
+      "f",
+      "g",
+      "h",
+      "j",
+      "k",
+      "l",
+      "m",
+      "n",
+      "p",
+      "q",
+      "r",
+      "s",
+      "ș",
+      "t",
+      "ț",
+      "v",
+      "x",
+      "z",
+      "ai",
+      "oi",
+      "âi",
+      "au",
+      "ău",
+      "âu",
+      "eu",
+      "ou",
+      "ea"
+    ],
+    "diphthongs": [
+      "eau",
+      "eai",
+      "oai",
+      "ea",
+      "oa",
+      "ai",
+      "ei",
+      "oi",
+      "ui",
+      "ăi",
+      "âi",
+      "îi",
+      "au",
+      "eu",
+      "ou",
+      "ău",
+      "âu",
+      "îu"
+    ],
+    "ipa_diphthongs": [
+      "e̯a",
+      "o̯a",
+      "əu",
+      "ɨu"
+    ],
+    "stress_mark": "ˈ",
+    "notes": "Default placement as Chițoran (2002: 75-77) states it, in the tables of Alexei & Ulfsbjorninn (2022: 2-5): a word that ends in a consonant takes final stress (bărbat, animal, magazin), and any other word takes penultimate stress (mare, femeie, mașină). A word that ends in a falling diphthong takes final stress (gunoi, birou, liceu, pârâu; Alexei & Ulfsbjorninn 2022: 18, 21). A word that ends in the diphthong ⟨ea⟩ [e̯a] takes final stress too: \"the diphthongs [e̯a] and [o̯a] are only found in stressed position\" (Alexei & Ulfsbjorninn 2022: 18), as in stea and curea (2022: 5, Table 2) and acea, stressed ac'ea (Franzén & Horne 1997: 81, (8b)). So cafea, perdea, lalea and the infinitives avea, vedea, putea take the mark on ⟨ea⟩. Word-final ⟨oa⟩ is not an ending here, because no opened source gives a word that ends in it. The default is a tendency, not a law. Chițoran counts the regular class as about one third larger than the lexically marked class (2002: 76, quoted in Alexei & Ulfsbjorninn 2022: 4). A marked word takes penultimate stress when it ends in a consonant (zahăr, călugăr, articol) and antepenultimate stress when it ends in a vowel (pepene, cameră, dragoste). A small set ends in a stressed plain vowel (pane, macara). These words are lexical, and the spec does not list them, so the mark falls one syllable late or early on them. Inflectional endings are outside the stress domain (Franzén & Horne 1997: 75; Alexei & Ulfsbjorninn 2022: 5-6): definite -ul, plural -uri and genitive -lor keep the stress of the stem. The engine reads the ending of the whole word, so lupul, trenuri and caselor take the mark one syllable late. The endings -ei, -ui, -ii and -iu are not final-stress endings: the genitive -ei and -ului and the neologisms in -iu (studiu) are unstressed there. The definite article -a on a noun in -e also writes ⟨ea⟩ (cartea, mintea). It is an inflection outside the stress domain, so the mark falls one syllable late on these forms. Homographs that differ only in stress (módele 'the fashions', modéle 'models'; Franzén & Horne 1997: 75) are not resolved. The ⟨âu⟩ and ⟨ău⟩ entries in ipa_diphthongs keep the falling diphthong in one syllable where the transcription writes it with a syllabic [u]."
+  },
   "quality": "production",
   "script_type": "alphabet",
   "sources": [
@@ -309,7 +372,7 @@
       "publisher": "Mouton de Gruyter",
       "url": null,
       "pages": null,
-      "notes": "Glide formation and the [j]/[i] distribution (ch. 3); asyllabic word-final /i/ and muta cum liquida (ch. 5)."
+      "notes": "Glide formation and the [j]/[i] distribution (ch. 3); asyllabic word-final /i/ and muta cum liquida (ch. 5). Stress: the default rule and its marked classes (pp. 75-77), consulted through the quotations and tables in Alexei & Ulfsbjorninn (2022: 2-5), not first-hand."
     },
     {
       "id": "renwick2014",
@@ -340,12 +403,33 @@
       "url": null,
       "pages": null,
       "notes": "Orthoepic norm: spelling-to-pronunciation conventions, the ⟨ci/ce/gi/ge⟩ palatal marker, and the asyllabic final ⟨i⟩."
+    },
+    {
+      "id": "alexei_ulfsbjorninn2022",
+      "author": "Alexei, S. & Ulfsbjorninn, S.",
+      "year": 2022,
+      "title": "Metrical exceptionality and stress shift in Romanian nouns and adjectives",
+      "publisher": "Isogloss. Open Journal of Romance Linguistics 8(1)/4",
+      "url": "https://doi.org/10.5565/rev/isogloss.240",
+      "pages": "1-29",
+      "notes": "Read for the default stress rule and its lexically marked classes as tabulated from Chițoran (2002a: 75-77) (pp. 2-5, Tables 1-2), the stressed derivational suffixes and the stress-invisible inflection (pp. 5-6, examples (1)-(2)), and the stressed word-final [Vj Vw] (p. 18 Table 3, pp. 21-22)."
+    },
+    {
+      "id": "franzen_horne1997",
+      "author": "Franzén, V. & Horne, M.",
+      "year": 1997,
+      "title": "Word stress in Romanian",
+      "publisher": "Lund University, Dept. of Linguistics, Working Papers 46",
+      "url": "https://lucris.lub.lu.se/ws/files/5380394/624462.pdf",
+      "pages": "75-91",
+      "notes": "Read for the rule 'penultimate if the final syllable is open, else final' (rules (1)-(2), pp. 75-76), the stress-invisible inflection (p. 75) and the stress examples (pp. 75-77)."
     }
   ],
   "wikipedia": [
     "https://en.wikipedia.org/wiki/Romanian_language",
     "https://ro.wikipedia.org/wiki/Limba_română",
-    "https://ro.wikipedia.org/wiki/Limba_rom%C3%A2n%C4%83"
+    "https://ro.wikipedia.org/wiki/Limba_rom%C3%A2n%C4%83",
+    "https://en.wikipedia.org/wiki/Romanian_phonology"
   ],
   "timespan": {
     "start_year": 1600,

@@ -8,8 +8,14 @@
     "ch": [
       "tʃ"
     ],
+    "sh": [
+      "ʃ"
+    ],
+    "jh": [
+      "ç"
+    ],
     "ö": [
-      "ɤ"
+      "ə"
     ],
     "ü": [
       "ɨ"
@@ -54,7 +60,7 @@
       "n"
     ],
     "d": [
-      "ɗ"
+      "ɾ̠"
     ],
     "w": [
       "w"
@@ -64,8 +70,59 @@
     ],
     "'": [
       "ʔ"
+    ],
+    "aa": [
+      "aː"
+    ],
+    "ee": [
+      "eː"
+    ],
+    "ii": [
+      "iː"
+    ],
+    "oo": [
+      "oː"
+    ],
+    "uu": [
+      "uː"
+    ],
+    "üü": [
+      "ɨː"
+    ],
+    "öö": [
+      "əː"
     ]
   },
+  "allophone_rules": [
+    {
+      "id": "MCH_RHOTIC_INITIAL_D",
+      "phonemes": ["ɾ̠"],
+      "surface": "d",
+      "word_initial": true,
+      "notes": "mch_orthography: \"At the beginning of a word, and after a glottal stop, /ɾ̠/ becomes [d]\"."
+    },
+    {
+      "id": "MCH_RHOTIC_POST_GLOTTAL_D",
+      "phonemes": ["ɾ̠"],
+      "surface": "d",
+      "preceded_by_phoneme": ["ʔ"],
+      "notes": "mch_orthography: \"At the beginning of a word, and after a glottal stop, /ɾ̠/ becomes [d]\"."
+    },
+    {
+      "id": "MCH_GEMINATE_RHOTIC_D_FIRST",
+      "phonemes": ["ɾ̠"],
+      "surface": "d",
+      "followed_by_phoneme": ["ɾ̠"],
+      "notes": "mch_orthography: \"/ɾ̠ɾ̠/ [dd] in Yeꞌkwana\"."
+    },
+    {
+      "id": "MCH_GEMINATE_RHOTIC_D_SECOND",
+      "phonemes": ["ɾ̠"],
+      "surface": "d",
+      "preceded_by_phoneme": ["ɾ̠"],
+      "notes": "mch_orthography: \"/ɾ̠ɾ̠/ [dd] in Yeꞌkwana\"."
+    }
+  ],
   "parent": "x-clade-cari1283",
   "ancestors": [
     {
@@ -75,7 +132,7 @@
       "notes": "Descent per Glottolog classification of Ye'kwana (maqu1238)."
     }
   ],
-  "notes": "Skeleton. Cariban language of the Venezuela-Brazil border region, self-named Ye'kwana (also Maquiritari), in its Spanish-influenced practical orthography. ch=[tʃ], j=[h], ñ=[ɲ], and the back/central unrounded vowels ö=[ɤ] and ü=[ɨ] are mapped; d denotes an implosive/flap [ɗ]. Contrastive vowel nasalization and predictable stress/length are not recovered from spelling and are left unencoded, raising the PER floor.",
+  "notes": "Skeleton. Cariban language of the Venezuela-Brazil border region, self-named Ye'kwana (also Maquiritari), in the standard orthography used in Venezuela. ch=[tʃ], j=[h], ñ=[ɲ]. ⟨d⟩ is the rhotic /ɾ̠/: the consonant table of mch_orthography, adapted from Cáceres (2011), lists ɾ̠ with the spelling d, and its orthography list reads \"[ɾ̠]~[d] - d\". The rhotic is [d] at the start of a word, after a glottal stop and as a geminate (mch_orthography: \"At the beginning of a word, and after a glottal stop, /ɾ̠/ becomes [d]\" and \"Sequences of /wɾ̠/ [wɾ̠] ~ [wɾ̠ʷ] ~ [ɾ̠ʷ] in De'kwana also correspond to /ɾ̠ɾ̠/ [dd] in Yeꞌkwana\"). The source also says that after /i/ and /j/ \"/w/ and /ɾ̠/ ordinarily become [j], and /ɾ̠/ becomes [tʃ] in certain special cases\"; this spec encodes no palatalization. ⟨sh⟩ is [ʃ] (mch_orthography: \"[ʃ] - sh, s\"), and ⟨s⟩ keeps [s]. ⟨jh⟩ is [ç] (mch_orthography: \"[ç] - j (Venezuelan standard), jh (Brazil and Amazonas)\"). It is a spelling of the Brazil and Amazonas orthography. The spec reads it because the Venezuelan standard writes no ⟨h⟩, so ⟨jh⟩ has no other reading. The central vowels take their Venezuelan values, ü=[ɨ] and ö=[ə] (mch_orthography: \"In the standard orthography used in Venezuela, /ɨ/ is written ü, and /ə/ is written ö.\"). The orthography used in Brazil and Amazonas writes ö for /ɨ/ and ä for /ə/. This spec does not read those vowels, or that orthography's other consonant spellings dh, f, nh and ng. A doubled vowel letter spells one long vowel (mch_orthography: \"Long vowels are indicated by doubling the letter.\"), and the vowel table of the same source, adapted from Cáceres (2011), gives the doubled spelling of all seven vowels: aa, ee, ii, oo, uu, üü and öö. The source says the orthographies write every phonemic long vowel and differ on the long vowels its lengthening rule predicts (\"some long vowels are unpredictable and phonemic, while others can be fully predicted by the vowel lengthening rule\"); this spec does not derive those. Nasalization is allophonic in the source (\"Any nasal can cause nasalization of a preceding short vowel.\"), and pitch is predictable (\"in words without attached clitics, a high pitch tends to fall on the penultimate syllable\"); the spec encodes neither.",
   "iso639_3": "mch",
   "glottolog_code": null,
   "sources": [
@@ -108,7 +165,7 @@
   "audit": {
     "wikipron": {
       "conclusion": "input_limited",
-      "measured": "Ye'kwana contrastive vowel nasalization and predictable stress/length are not recoverable from the practical Spanish-influenced orthography this spec describes and are left unencoded, which the spec notes state raises the PER floor.",
+      "measured": "Wiktionary writes mch pronunciations with its Module:mch-IPA, which rewrites the spelling by rule (ö=ə, ü=ɨ, each doubled vowel letter as the long vowel, d=ɾ̠ with d at the start of a word, after ʔ and in dd, sh=ʃ, jh=ç, dh=ð, and a rule of its own for predicted lengthening). The 1746-row WikiPron mch_latn_narrow gold agrees with that mapping on every row counted here, so a score on it measures agreement with the module, not an independent transcription: ə occurs in exactly the 567 rows whose input has ö and ɤ in none, and all 286 rows that write a doubled vowel carry a length mark. 830 rows carry a long vowel (926 marks). The 544 of them with no doubled vowel letter carry only predicted lengthening, which the spelling does not write and this spec does not derive. No row carries ɗ, a nasalization mark or a stress mark.",
       "reference": "spec notes"
     }
   }

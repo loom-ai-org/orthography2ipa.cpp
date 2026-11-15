@@ -1,0 +1,57 @@
+{
+  "code": "cbk-PH-x-cavite",
+  "name": "Chavacano (Caviteño / Chabacano de Cavite)",
+  "family": "Spanish Creole",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "stub",
+  "parent": "cbk-PH",
+  "ancestors": [
+    {
+      "code": "es-ES",
+      "role": "lexifier",
+      "weight": 0.8,
+      "notes": "Spanish is the lexifier; written with the Spanish alphabet."
+    },
+    {
+      "code": "tl",
+      "role": "substrate",
+      "weight": 0.15,
+      "notes": "Tagalog substrate (Manila Bay area): phonology and grammar."
+    }
+  ],
+  "graphemes_base": "cbk-PH",
+  "graphemes": {},
+  "allophones_base": "cbk-PH",
+  "allophones": {},
+  "notes": "Caviteño Chabacano (Chabacano de Cavite), a Manila-Bay Spanish-lexifier creole of Cavite City, Luzon, Philippines, distinct from Zamboangueño (cbk-PH). Sippola (2013, §4 Phonology) states that the usual orthography is based on Spanish and uses ⟨c, qu⟩ for /k/, ⟨j⟩ for /h/, ⟨y⟩ for /j/ and ⟨ch⟩ for /tʃ/, and transcribes casa as [kása] 'house'. These are the readings of the Spanish-based cbk-PH table, so the spec takes its table over `graphemes_base: cbk-PH` and states no letter of its own. The other letter values (⟨c⟩ and ⟨g⟩ before a front vowel, ⟨ll⟩, ⟨ñ⟩, ⟨r⟩ against ⟨rr⟩, ⟨v⟩ = [b], ⟨z⟩ = [s]) and the non-lenited allophone map are inherited from cbk-PH with no Cavite source that states them. Table 2 has /h/ and no /x/, so the inherited [x] reading of ⟨g⟩ before a front vowel has no phoneme in the inventory; the chapter does not state the value of that ⟨g⟩. The chapter writes hombre 'male' with an etymological ⟨h⟩ and gives no reading for it; ⟨h⟩ keeps the cbk-PH reading [h]. Sippola states that /f/, /v/, /ʃ/ and /dʒ/ occur in loanwords from English; the spelling of those loanwords is not described, so ⟨v⟩ keeps the cbk-PH reading [b]. The close realisation of unstressed and word-final mid vowels that Sippola reports is a variant and is not encoded. Stress is not marked: cbk-PH carries no stress block, and casa against casá is contrastive (Sippola 2013, §4). The described lect is almost entirely written Cavite Chabacano produced by language activists, and there is no standardized orthography (Sippola 2013, §3). The variety is moribund. Documented differences from Zamboangueño (the TMA particles ta, ya and di, and a Tagalog rather than Visayan substrate) are not encoded.",
+  "iso639_3": "cbk",
+  "glottolog_code": "cavi1254",
+  "wikidata_qid": "Q33281",
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Chavacano"
+  ],
+  "sources": [
+    {
+      "id": "sippola2013cavite",
+      "author": "Sippola, Eeva",
+      "year": 2013,
+      "title": "Cavite Chabacano (APiCS survey chapter 45)",
+      "publisher": "Atlas of Pidgin and Creole Language Structures Online (APiCS), eds. Michaelis, Maurer, Haspelmath & Huber",
+      "url": "https://apics-online.info/surveys/45",
+      "wikipedia_url": null,
+      "pages": "Online survey chapter, §3 Sociolinguistic situation (no standardized orthography; the described lect is written Chabacano by language activists) and §4 Phonology, Table 1 (vowels /i e o u a/) and Table 2 (consonants), with the sentence 'The usual orthography is based on Spanish and uses <c, qu> for /k/, <j> for /h/, <y> for /j/, <ch> for /tʃ/, and so on', and casa [kása] 'house', casá [kasá] 'to marry'. Print chapter: The survey of pidgin and creole languages, vol. 2, Oxford University Press; print page numbers not checked.",
+      "notes": "Primary descriptive source for the variety, and the source of every letter value the spec states or confirms."
+    }
+  ],
+  "timespan": {
+    "start_year": 1700,
+    "end_year": null
+  },
+  "location": {
+    "latitude": 14.4791,
+    "longitude": 120.8969,
+    "source": "manual",
+    "notes": "Cavite City, Cavite, Philippines."
+  }
+}

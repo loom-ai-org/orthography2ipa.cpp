@@ -2828,6 +2828,13 @@
       "notes": null
     }
   ],
+  "audit": {
+    "vox_communis": {
+      "conclusion": "at_ceiling_documented",
+      "measured": "The vox_communis vi gold is a pan-dialectal literary transcription that writes tone letters against the nucleus, marks vowel length and unreleased stops, and uses different height/palatal symbols. Quoc ngu writes all six tones and the vowel letters these conventions transcribe, so the gap is gold notation, not a contrast the spelling cannot signal, and no valid_ceiling is recorded (T-2583). scripts/fold_vi_notation.py folds eight such conventions cumulatively out of BOTH sides with the harness's own normalize()/levenshtein() over the 2475 scored words: 0.5596 as scored, tone letters 0.3277, vowel length 0.1994, unreleased stop 0.1715, tie bar 0.1715, u-merge 0.1449, short vowels 0.0398, palatal finals 0.0246, height neutral 0.0246. Two folds move nothing because normalize() already strips the tie bar and the height letters differ on only 71 words. Not folded: tone-letter placement inside the rime and the ngang/huyen tone merge the gold itself makes, which are gold defects, not notation.",
+      "reference": "spec notes; see docs/languages/vi.md and scripts/fold_vi_notation.py"
+    }
+  },
   "wikipedia": [
     "https://en.wikipedia.org/wiki/Vietnamese_language",
     "https://en.wikipedia.org/wiki/Vietnamese_phonology",

@@ -2,67 +2,9 @@
   "code": "gez",
   "name": "Geʽez (Classical Ethiopic)",
   "script": "Ethiopic",
-  "graphemes": {
-    "a": [
-      "a"
-    ],
-    "i": [
-      "i"
-    ],
-    "u": [
-      "u"
-    ],
-    "e": [
-      "e"
-    ],
-    "o": [
-      "o"
-    ],
-    "p": [
-      "p"
-    ],
-    "t": [
-      "t"
-    ],
-    "k": [
-      "k"
-    ],
-    "b": [
-      "b"
-    ],
-    "d": [
-      "d"
-    ],
-    "g": [
-      "ɡ"
-    ],
-    "s": [
-      "s"
-    ],
-    "m": [
-      "m"
-    ],
-    "n": [
-      "n"
-    ],
-    "l": [
-      "l"
-    ],
-    "r": [
-      "r"
-    ],
-    "w": [
-      "w"
-    ],
-    "j": [
-      "j"
-    ],
-    "h": [
-      "h"
-    ]
-  },
+  "graphemes": {},
   "allophones": {},
-  "notes": "STRUCTURAL ANCESTRY NODE (not a modelled G2P target). Geʽez is Classical Ethiopic, the liturgical South-Semitic language of Ethiopia and the literary ancestor / prestige source of the modern Ethiopian Semitic languages Amharic and Tigrinya. It exists here only so those specs have a node to resolve to; the grapheme set is a placeholder and no phonology is claimed (trk.json stub pattern).",
+  "notes": "STRUCTURAL ANCESTRY NODE (not a modelled G2P target). Geʽez is Classical Ethiopic, the liturgical South-Semitic language of Ethiopia and the literary ancestor and prestige source of the modern Ethiopian Semitic languages Amharic and Tigrinya. It exists so that those specs have a node to resolve to. It carries no grapheme table. A table needs a cited description of the Ethiopic (fidel) syllabary as used for Geʽez and the sound value of each syllable sign.",
   "quality": "stub",
   "script_type": "abugida",
   "iso639_3": "gez",

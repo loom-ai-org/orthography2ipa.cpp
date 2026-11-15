@@ -389,5 +389,12 @@
         "ew"
       ]
     }
+  },
+  "audit": {
+    "vox_communis": {
+      "conclusion": "at_ceiling_documented",
+      "measured": "Raw PER 0.4047 (n=70528), the worst ba row on the board, and almost all of it is one symbol set against another. The gold is epitran-derived and writes the Bashkir vowels in a different IPA symbol for each letter: ɑ for this spec's a (⟨а⟩), a for æ (⟨ә⟩), ɤ for ɯ (⟨ы⟩), ɘ for e (⟨е э⟩), ɵ for ø (⟨ө⟩); ɣ for the voiced uvular ʁ (⟨ғ⟩); and the vowel u where this spec writes the glide w for ⟨у ү⟩ after a vowel. Both sides agree which letter is which phoneme. scripts/fold_ba_notation.py applies the vowel swap as one simultaneous mapping on our side (two of the pairs chain: our a is their ɑ while their a is our æ), then the rest cumulatively, with the harness's own normalize() (broad) and levenshtein(): the vowel symbols take 0.4047 to 0.0701, the uvular to 0.0514, the glide to 0.0435. The one reading that is not a pure symbol swap is ⟨и⟩: this spec reads i, from the Wikipedia alphabet table and Poppe (1964), and the gold reads the diphthong ɘj in 10419 words. That is epitran's analysis of the same letter, not a contrast the Cyrillic orthography fails to write, so it is folded as notation too: 0.0099, with 66570 of 70528 words (94.4%) an exact match. Nothing here is an input limitation, so no valid_ceiling is recorded: the spec reads Bashkir at roughly 99% phone accuracy against this gold once the symbol sets are aligned, and the published 0.4047 measures the symbols.",
+      "reference": "spec notes (bashkir_wiki, poppe_1964); see scripts/fold_ba_notation.py"
+    }
   }
 }

@@ -47,6 +47,47 @@
     }
   ],
   "notes": "Souletin (Zuberera/Xiberotarra). Easternmost Basque dialect, spoken in Soule/Zuberoa (Pyrénées-Atlantiques, France); the most phonologically divergent variety, in close contact with Gascon Occitan. VALIDATED and EXTENDED against Hualde (2018) 'Aspiration in Basque' and Egurtzegi (2013) 'Phonetics and Phonology'. Distinctive features: (1) FRONT ROUNDED VOWEL /y/ (written ü), the only Basque dialect to have developed a sixth vowel; it arose from an older /u/ by near-context-free fronting and is realised between French /y/ and /ø/ (Egurtzegi 2013: 127-128, citing Michelena FHV:52 and Hualde 1993). (2) THREE-WAY PLOSIVE CONTRAST: unlike all western varieties, Souletin contrasts voiced /b d ɡ/, voiceless unaspirated /p t k/ and voiceless ASPIRATED /pʰ tʰ kʰ/ as full phonemes (Hualde 2018: 2, citing Lafon 1958/1999). Modelled here as conditioned variants of /p t k/ because standard orthography does not mark the aspiration distinction (engine limit). (3) TWO ASPIRATE PHONEMES: an oral laryngeal /h/ and a nasalised laryngeal /h̃/ (Hualde 2018: 2, citing Hualde 1993). (4) CONTRASTIVE NASALISED VOWELS: Souletin is the only living dialect that has kept the old Basque nasalised-vowel series, appearing around a nasal consonant (khatiña [khatĩã], gazna [gaznã], ama [ãmã]) and in stressed word-final position after apocope of an old /-n/ (ardu [arðũ] < *ardano 'wine'), where they contrast with plain final vowels (Egurtzegi 2013: 127); Souletin lacks nasal /õ/, which became /ũ/ after /y/ arose (Egurtzegi 2013: 127). NOTE (engine limit): vowel nasality and the aspirated/unaspirated stop split are NOT recoverable from standard Basque orthography, so they are documented here but not emitted at the grapheme→IPA level; only the ü→/y/ mapping and the aspirated-stop variants are modelled. Endangered, with a few thousand active speakers.",
+  "stress": {
+    "default_position": -2,
+    "diphthongs": [
+      "ai",
+      "ei",
+      "oi",
+      "ui",
+      "au",
+      "eu"
+    ],
+    "ipa_diphthongs": [
+      "ai̯",
+      "ei̯",
+      "oi̯",
+      "ui̯",
+      "au̯",
+      "eu̯"
+    ],
+    "max_onset": 2,
+    "onset_clusters": [
+      "pɾ",
+      "bɾ",
+      "βɾ",
+      "tɾ",
+      "dɾ",
+      "ðɾ",
+      "kɾ",
+      "ɡɾ",
+      "ɣɾ",
+      "fɾ",
+      "pl",
+      "bl",
+      "βl",
+      "kl",
+      "ɡl",
+      "ɣl",
+      "fl"
+    ],
+    "stress_mark": "ˈ",
+    "notes": "Penultimate accent [-2]: 'in Zuberoan most words have penultimate accent [–2]' (Hualde 2022: 97), Michelena's type II, Souletin-Roncalese (Hualde 1986: 867). A word contracted at its end takes final accent [-1], such as the definite alhabá 'the daughter' (< alhaba + a) and the ergative plural mithilék (Hualde 2022: 97); the spelling does not show the contraction, so these words take the penultimate mark. The block replaces the General Central [+2] block of eu, which the dialect does not use. The diphthong, hiatus and onset settings are those of the eu block (Hualde 1994: 1549)."
+  },
   "quality": "research",
   "urls": [
     "https://en.wikipedia.org/wiki/Souletin_dialect"
@@ -102,6 +143,36 @@
       "url": null,
       "pages": null,
       "notes": null
+    },
+    {
+      "id": "hualde2022_ocb",
+      "author": "Hualde, J.I.",
+      "year": 2022,
+      "title": "The reconstruction of Old Common Basque accentuation: Closing open issues",
+      "publisher": "Anuario del Seminario de Filología Vasca Julio de Urquijo (ASJU) 56(2)",
+      "url": "https://doi.org/10.1387/asju.23983",
+      "pages": "77-106",
+      "notes": "Read for the dialect accent systems: Western-type systems (Table 1, p. 83), Central-type systems with General Central [+2] (Table 2, p. 84), penultimate [-2] east of the Bidasoa (p. 92) and in Zuberoan (p. 97)."
+    },
+    {
+      "id": "hualde1986_tone_stress",
+      "author": "Hualde, J.I.",
+      "year": 1986,
+      "title": "Tone and Stress in Basque: a Preliminary Study",
+      "publisher": "Anuario del Seminario de Filología Vasca Julio de Urquijo (ASJU) 20(3)",
+      "url": "https://ojs.ehu.eus/index.php/ASJU/article/download/7813/7007",
+      "pages": "867-896",
+      "notes": "Read for Michelena's four accent types (pp. 867-868): penultimate stress in Souletin-Roncalese (type II) and in parts of Navarre (type III)."
+    },
+    {
+      "id": "hualde1994_batua",
+      "author": "Hualde, J.I.",
+      "year": 1994,
+      "title": "Euskal azentuak eta euskara batua",
+      "publisher": "Euskera 39 (2. aldia), Euskaltzaindia",
+      "url": "https://www.euskaltzaindia.eus/dok/euskera/50051.pdf",
+      "pages": "1549-1568",
+      "notes": "Read for the accent proposal for Batua, (12) p. 1559: [+2] in the general case (mendía, txakúrra, emákumea, bertsólariarekin), [+1] after a monosyllabic root (lúrra, lúrrera) and in marked words (lékuan, bésteari, áurrera, átzetik), a secondary accent on the last syllable of the phrase; and for hiatus in Batua vowel sequences, p. 1549 ([a.te.a], [ba.so.a])."
     }
   ],
   "wikipedia": [

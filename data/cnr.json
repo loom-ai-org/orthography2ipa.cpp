@@ -17,6 +17,103 @@
     ],
     "ź": [
       "ʑ"
+    ],
+    "а": [
+      "a"
+    ],
+    "б": [
+      "b"
+    ],
+    "в": [
+      "v"
+    ],
+    "г": [
+      "ɡ"
+    ],
+    "д": [
+      "d"
+    ],
+    "ђ": [
+      "dʑ"
+    ],
+    "е": [
+      "ɛ"
+    ],
+    "ж": [
+      "ʒ"
+    ],
+    "з": [
+      "z"
+    ],
+    "и": [
+      "i"
+    ],
+    "ј": [
+      "j"
+    ],
+    "к": [
+      "k"
+    ],
+    "л": [
+      "l"
+    ],
+    "љ": [
+      "ʎ"
+    ],
+    "м": [
+      "m"
+    ],
+    "н": [
+      "n"
+    ],
+    "њ": [
+      "ɲ"
+    ],
+    "о": [
+      "ɔ"
+    ],
+    "п": [
+      "p"
+    ],
+    "р": [
+      "r",
+      "r̩"
+    ],
+    "с": [
+      "s"
+    ],
+    "т": [
+      "t"
+    ],
+    "ћ": [
+      "tɕ"
+    ],
+    "у": [
+      "u"
+    ],
+    "ф": [
+      "f"
+    ],
+    "х": [
+      "x"
+    ],
+    "ц": [
+      "ts"
+    ],
+    "ч": [
+      "tʃ"
+    ],
+    "џ": [
+      "dʒ"
+    ],
+    "ш": [
+      "ʃ"
+    ],
+    "с́": [
+      "ɕ"
+    ],
+    "з́": [
+      "ʑ"
     ]
   },
   "allophones": {},
@@ -54,8 +151,47 @@
     }
   ],
   "parent": "x-clade-sout3147",
-  "notes": "Montenegrin, codified as a standard separate from Serbian/Croatian/Bosnian in 2007 (official since the 2007 constitution). Same Shtokavian Ijekavian base as standard Croatian, so the Latin grapheme table is inherited from hr (graphemes_base=hr). Adds two letters not in the shared Serbo-Croatian alphabet: ⟨ś⟩ /ɕ/ and ⟨ź⟩ /ʑ/ (Cyrillic С́/З́), replacing the digraphs ⟨sj⟩/⟨zj⟩ used elsewhere in the diasystem; Wikipedia notes some linguists analyze these as allophones rather than distinct phonemes, but they are official graphemes of the Montenegrin alphabet and so are mapped as their own units per AGENTS.md §2 test 1 (their pronunciation is not literally sj/zj concatenated).",
+  "notes": "Montenegrin, codified as a standard separate from Serbian/Croatian/Bosnian in 2007 (official since the 2007 constitution). Same Shtokavian Ijekavian base as standard Croatian, so the Latin grapheme table is inherited from hr (graphemes_base=hr). Adds two letters not in the shared Serbo-Croatian alphabet: ⟨ś⟩ /ɕ/ and ⟨ź⟩ /ʑ/ (Cyrillic С́/З́), replacing the digraphs ⟨sj⟩/⟨zj⟩ used elsewhere in the diasystem; Wikipedia notes some linguists analyze these as allophones rather than distinct phonemes, but they are official graphemes of the Montenegrin alphabet and so are mapped as their own units per AGENTS.md §2 test 1 (their pronunciation is not literally sj/zj concatenated). Montenegrin has two equal scripts of 32 letters each: \"U savremenoj upotrebi u Crnoj Gori ravnopravna su dva pisma: latinica i ćirilica\" and \"Sastoje se od 32 slova (grafema)\" (Pravopis 2010: 7). Each Cyrillic key carries the phonemes of its Latin letter. The Pravopis pairs the two new letters by name: \"Konsonant ś (ćirilično ć)\" (2010: 9). Its Cyrillic table prints С́ with the shape ⟨Ć ć⟩ at place 23. At place 10 the 2010 file prints ⟨≤ ≥⟩, a font fault, and the 2009 edition prints ⟨З´ з´⟩ (Pravopis 2009: 8). These are print shapes, not encodings. The encoded letter is a base letter and U+0301: \"They are encoded as combining sequences\" (ICANN 2024). Unicode has no precomposed form of either letter, so the keys are ⟨с́⟩ and ⟨з́⟩ as two code points each. The dz letter of item 3a (Latin З з, Cyrillic S s) has no key: \"nema razloga da se uvrštava u standardnu crnogorsku azbuku i abecedu\" (Pravopis 2010: 9), and the count of 32 leaves it out.",
   "sources": [
+    {
+      "id": "pravopis2010",
+      "author": "Ministarstvo prosvjete i nauke Crne Gore",
+      "year": 2010,
+      "title": "Pravopis crnogorskoga jezika. Drugo, izmijenjeno izdanje",
+      "publisher": "Podgorica",
+      "url": "https://web.archive.org/web/20200228000451/http://www.gov.me/files/1248442673.pdf",
+      "pages": "7-9",
+      "notes": "The edition in force: Rješenje 01-2884 of 30 June 2010 on page 1 repeals the 2009 decision. Read through the Wayback Machine copy of the gov.me file."
+    },
+    {
+      "id": "pravopis2009",
+      "author": "Ministarstvo prosvjete i nauke Crne Gore",
+      "year": 2009,
+      "title": "Pravopis crnogorskoga jezika i Rječnik crnogorskoga jezika (pravopisni rječnik)",
+      "publisher": "Podgorica",
+      "url": "https://gimnazijadg.wordpress.com/wp-content/uploads/2012/03/pravopis-crnogorskoga-jezika.pdf",
+      "pages": "8",
+      "notes": "First edition, repealed in 2010. Cited for the print shape of З́, which the 2010 file does not render."
+    },
+    {
+      "id": "icann2024",
+      "author": "ICANN",
+      "year": 2024,
+      "title": "Reference LGR for language: Montenegrin (cnr-Cyrl)",
+      "publisher": "ICANN",
+      "url": "https://www.icann.org/sites/default/files/packages/lgr/lgr-second-level-montenegrin-cyrillic-language-24jan24-en.html",
+      "notes": "States the encoding of the two letters and cites the Pravopis, page 8, for them."
+    },
+    {
+      "id": "unicode_l2_15_169",
+      "author": "Government of Montenegro, Ministry for Information Society and Telecommunications",
+      "year": 2015,
+      "title": "Addition of two letters from Montenegrin language, CYRILLIC script",
+      "publisher": "Unicode Technical Committee document L2/15-169",
+      "url": "https://www.unicode.org/L2/L2015/15169-montenegro-cyrillic.pdf",
+      "pages": "9",
+      "notes": "PDF page 9 is a school book scan, printed page 43: \"Оба писма имају по 32 слова\", with the pairs ljubav (љубав), Njujork (Њујорк) and džem (џем)."
+    },
     {
       "id": "wiki-cnr",
       "author": "Wikipedia contributors",

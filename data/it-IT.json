@@ -466,7 +466,7 @@
       "publisher": "Journal of the International Phonetic Association",
       "url": null,
       "pages": "131-151",
-      "notes": "JIPA 35(2). Illustration of Standard Italian; states the preconsonantal /s/ voicing agreement and documents the Tuscan/Northern split in intervocalic ⟨s⟩."
+      "notes": "JIPA 35(2). Illustration of Standard Italian; states the preconsonantal /s/ voicing agreement and documents the Tuscan/Northern split in intervocalic ⟨s⟩. Table 2 (p. 138) and p. 139 give the opening and closing diphthongs and the hiatus that the stress diphthongs list follows; p. 137 gives the two equal vowels in hiatus."
     },
     {
       "id": "canepari2009",
@@ -645,8 +645,10 @@
       "ó",
       "ù"
     ],
+    "diphthongs": ["ia", "ie", "io", "iu", "ua", "ue", "uo", "ui", "ià", "iè", "ié", "iò", "ió", "iù", "uà", "uè", "ué", "uì", "uò", "uó", "ai", "ei", "oi", "au", "eu", "ài", "èi", "éi", "òi", "ói", "ùi", "àu", "èu", "éu"],
+    "ipa_diphthongs": ["ie", "iɛ", "ia", "iɔ", "io", "iu", "ui", "ue", "uɛ", "ua", "uɔ", "uo", "ei", "ɛi", "ai", "ɔi", "oi", "eu", "ɛu", "au"],
     "stress_mark": "ˈ",
-    "notes": "Italian stress: written accents (à è é ì ò ó ù) always mark the stressed syllable and override position rules. Without an accent mark the default is paroxytone (penultimate). Proparoxytones (tavola, àlbero, pàgina) are lexical and undetectable from orthography alone — a written accent is not compulsory on them in standard Italian; they cannot be reliably predicted by rule. This block therefore uses default -2 (paroxytone) and relies on marked_vowels to handle the accented subset. Unaccented antepenultimate stress is not predicted."
+    "notes": "Italian stress: written accents (à è é ì ò ó ù) always mark the stressed syllable and override position rules. Without an accent mark the default is paroxytone (penultimate). Proparoxytones (tavola, àlbero, pàgina) are lexical and undetectable from orthography alone — a written accent is not compulsory on them in standard Italian; they cannot be reliably predicted by rule. This block therefore uses default -2 (paroxytone) and relies on marked_vowels to handle the accented subset. Unaccented antepenultimate stress is not predicted. DIPHTHONGS: the list holds the diphthongs of Bertinetto & Loporcaro (2005, JIPA 35(2), Table 2, p. 138): the opening diphthongs with [j] (je jɛ ja jɔ jo ju) and with [w] (wi we wɛ wa wɔ wo), the closing diphthongs with [i̯] (ei ɛi ai ɔi oi ui) and with [u̯] (eu ɛu au). In spelling these are ⟨ia ie io iu ua ue uo ui⟩ and ⟨ai ei oi ui au eu⟩, with the accented forms where the accent falls on the syllabic vowel (più, può, seguì, ài). Every other vowel sequence is a hiatus: two non-high vowels (poeta, teatro, paese, idea) and two equal vowels, which p. 137 describes as 'a quickly rearticulated vowel' (cooperare, linee, zoologia). Stress decides between a diphthong and a hiatus of a high vowel: 'stress is a reliable criterion to distinguish between hiatus and diphthong (cf. Laura [ˈlau̯ra] (person name) vs. paura [paˈuːra] ‘fear’, faida [ˈfai̯da] ‘feud’ vs. faina [faˈiːna] ‘stone-marten’)' (p. 139). An accented high vowel next to a non-high vowel (farmacìa, paùra) is therefore not listed, and an unaccented one is read as a glide, so paura, Luigi, mio and via keep a lexical stress that the spelling does not show. The ⟨i⟩ of ⟨ci gi sci gli⟩ before a vowel writes no vowel: cacio [ˈkaːtʃo], aglio [ˈaʎːo], ascia [ˈaʃːa], paglia [ˈpaʎːa] (pp. 133-134). It joins the next vowel in a listed diphthong, so ciao is cia-o and figlio is fi-glio. ⟨qu gu⟩ write [kw ɡw] (guida [ˈɡwiːda], quando [ˈkwando], p. 139), so their ⟨u⟩ is part of the onset. ipa_diphthongs holds the same Table 2 diphthongs in the transcription, with each glide written as its vowel: a transcription that keeps the vowel letters of a diphthong (può [puɔ], or a child spec without the glide graphemes) splits only a hiatus."
   },
   "wikidata_qid": "Q652",
   "phoible_id": "ital1282",

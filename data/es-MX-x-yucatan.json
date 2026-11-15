@@ -156,5 +156,54 @@
     "longitude": -89.62,
     "source": "wikidata",
     "notes": "Mérida (Yucatán) — the centre of the Yucatán peninsula. [Wikidata Q165204 P625]"
-  }
+  },
+  "allophone_rules": [
+    {
+      "id": "ES_SPIRANT_B",
+      "phonemes": [],
+      "notes": "Yucatán keeps the occlusive /b d g/ that es-ES spirantizes after a non-nasal: Michnowicz 2012, p. 107, «in YS /b d g/ are produced as stops in contexts where standard varieties of Spanish would employ fricative or approximant variants, such as intervocalically», with the cross-word stop of como deben (Figure 4). Disabled by empty 'phonemes'.",
+      "surface": "β"
+    },
+    {
+      "id": "ES_SPIRANT_D",
+      "phonemes": [],
+      "notes": "Yucatán keeps the occlusive /b d g/ that es-ES spirantizes after a non-nasal: Michnowicz 2012, p. 107, «in YS /b d g/ are produced as stops in contexts where standard varieties of Spanish would employ fricative or approximant variants, such as intervocalically», with the cross-word stop of como deben (Figure 4). Disabled by empty 'phonemes'.",
+      "surface": "ð"
+    },
+    {
+      "id": "ES_SPIRANT_G",
+      "phonemes": [],
+      "notes": "Yucatán keeps the occlusive /b d g/ that es-ES spirantizes after a non-nasal: Michnowicz 2012, p. 107, «in YS /b d g/ are produced as stops in contexts where standard varieties of Spanish would employ fricative or approximant variants, such as intervocalically», with the cross-word stop of como deben (Figure 4). Disabled by empty 'phonemes'.",
+      "surface": "ɣ"
+    }
+  ],
+  "sandhi_rules": [
+    {
+      "id": "ES_EXT_SPIRANT_B",
+      "name": "initial b stays a stop",
+      "left_context": "[^mnŋɲ̃]$",
+      "right_context": "^([ˈˌ]?)b",
+      "right_transform": "\\1b",
+      "obligatory": true,
+      "notes": "Yucatán keeps the occlusive /b d g/ that es-ES spirantizes after a non-nasal: Michnowicz 2012, p. 107, «in YS /b d g/ are produced as stops in contexts where standard varieties of Spanish would employ fricative or approximant variants, such as intervocalically», with the cross-word stop of como deben (Figure 4). The inherited rule is replaced by id with one that writes the stop back."
+    },
+    {
+      "id": "ES_EXT_SPIRANT_D",
+      "name": "initial d stays a stop",
+      "left_context": "[^mnŋɲ̃lʎ]$",
+      "right_context": "^([ˈˌ]?)d",
+      "right_transform": "\\1d",
+      "obligatory": true,
+      "notes": "Yucatán keeps the occlusive /b d g/ that es-ES spirantizes after a non-nasal: Michnowicz 2012, p. 107, «in YS /b d g/ are produced as stops in contexts where standard varieties of Spanish would employ fricative or approximant variants, such as intervocalically», with the cross-word stop of como deben (Figure 4). The inherited rule is replaced by id with one that writes the stop back."
+    },
+    {
+      "id": "ES_EXT_SPIRANT_G",
+      "name": "initial g stays a stop",
+      "left_context": "[^mnŋɲ̃]$",
+      "right_context": "^([ˈˌ]?)ɡ",
+      "right_transform": "\\1ɡ",
+      "obligatory": true,
+      "notes": "Yucatán keeps the occlusive /b d g/ that es-ES spirantizes after a non-nasal: Michnowicz 2012, p. 107, «in YS /b d g/ are produced as stops in contexts where standard varieties of Spanish would employ fricative or approximant variants, such as intervocalically», with the cross-word stop of como deben (Figure 4). The inherited rule is replaced by id with one that writes the stop back."
+    }
+  ]
 }

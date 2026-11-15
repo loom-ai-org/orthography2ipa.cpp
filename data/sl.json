@@ -22,6 +22,187 @@
   "code": "sl",
   "name": "Slovenian",
   "script": "Latin",
+  "allophone_rules": [
+    {
+      "id": "SL_SYLLABIC_R_BETWEEN_CONSONANTS",
+      "phonemes": [
+        "r"
+      ],
+      "surface": "ər",
+      "grapheme": [
+        "r"
+      ],
+      "preceded_by": "consonant",
+      "followed_by": "consonant",
+      "notes": "A ⟨r⟩ with no vowel letter on either side is the syllabic r, and it is pronounced with a schwa before it: vrh [ʋə́rx], srce [sə̀rtsɛ], prst [pə́rst], trg [tə́rk], rdeč [ərdéːtʃ] (Šuštaršič, Komar & Petek 1995 (JIPA 25(2), the Slovene Illustration): the syllabic r is realised as [ər]). The spelling writes no vowel there, and the spec's wikipron ceiling folded the er/r alternation instead of writing it. This rule writes it, for the ⟨r⟩ between two consonant letters. Measured on the vox_communis gold: 246 words carry such an ⟨r⟩ and the gold writes ər in 228 of them; this spec wrote a bare r in all 246 before the rule."
+    },
+    {
+      "id": "SL_SYLLABIC_R_INITIAL",
+      "phonemes": [
+        "r"
+      ],
+      "surface": "ər",
+      "grapheme": [
+        "r"
+      ],
+      "preceded_by": "word_boundary",
+      "followed_by": "consonant",
+      "notes": "A ⟨r⟩ with no vowel letter on either side is the syllabic r, and it is pronounced with a schwa before it: vrh [ʋə́rx], srce [sə̀rtsɛ], prst [pə́rst], trg [tə́rk], rdeč [ərdéːtʃ] (Šuštaršič, Komar & Petek 1995 (JIPA 25(2), the Slovene Illustration): the syllabic r is realised as [ər]). The spelling writes no vowel there, and the spec's wikipron ceiling folded the er/r alternation instead of writing it. This rule writes it, for the ⟨r⟩ at the start of the word before a consonant letter. Measured on the vox_communis gold: 246 words carry such an ⟨r⟩ and the gold writes ər in 228 of them; this spec wrote a bare r in all 246 before the rule."
+    },
+    {
+      "id": "SL_SYLLABIC_R_FINAL",
+      "phonemes": [
+        "r"
+      ],
+      "surface": "ər",
+      "grapheme": [
+        "r"
+      ],
+      "preceded_by": "consonant",
+      "followed_by": "word_boundary",
+      "notes": "A ⟨r⟩ with no vowel letter on either side is the syllabic r, and it is pronounced with a schwa before it: vrh [ʋə́rx], srce [sə̀rtsɛ], prst [pə́rst], trg [tə́rk], rdeč [ərdéːtʃ] (Šuštaršič, Komar & Petek 1995 (JIPA 25(2), the Slovene Illustration): the syllabic r is realised as [ər]). The spelling writes no vowel there, and the spec's wikipron ceiling folded the er/r alternation instead of writing it. This rule writes it, for the ⟨r⟩ at the end of the word after a consonant letter. Measured on the vox_communis gold: 246 words carry such an ⟨r⟩ and the gold writes ər in 228 of them; this spec wrote a bare r in all 246 before the rule."
+    },
+    {
+      "id": "SL_FINAL_DEVOICE_S",
+      "phonemes": [
+        "z"
+      ],
+      "surface": "s",
+      "word_final": true,
+      "notes": "Word-final obstruents are voiceless: brez [bréːs], grad [ɡráːt], zob [zóːp], mož [móːʃ], bog [bóːk] (Šuštaršič, Komar & Petek 1995 (JIPA 25(2), the Slovene Illustration): voiced obstruents are devoiced word-finally). Measured on the vox_communis gold: 126 words end in a voiced obstruent letter and the gold writes the voiceless one in 123."
+    },
+    {
+      "id": "SL_FINAL_DEVOICE_T",
+      "phonemes": [
+        "d"
+      ],
+      "surface": "t",
+      "word_final": true,
+      "notes": "See SL_FINAL_DEVOICE_S: d is t word-finally (Šuštaršič, Komar & Petek 1995 (JIPA 25(2), the Slovene Illustration))."
+    },
+    {
+      "id": "SL_FINAL_DEVOICE_P",
+      "phonemes": [
+        "b"
+      ],
+      "surface": "p",
+      "word_final": true,
+      "notes": "See SL_FINAL_DEVOICE_S: b is p word-finally (Šuštaršič, Komar & Petek 1995 (JIPA 25(2), the Slovene Illustration))."
+    },
+    {
+      "id": "SL_FINAL_DEVOICE_Ʃ",
+      "phonemes": [
+        "ʒ"
+      ],
+      "surface": "ʃ",
+      "word_final": true,
+      "notes": "See SL_FINAL_DEVOICE_S: ʒ is ʃ word-finally (Šuštaršič, Komar & Petek 1995 (JIPA 25(2), the Slovene Illustration))."
+    },
+    {
+      "id": "SL_FINAL_DEVOICE_K",
+      "phonemes": [
+        "ɡ"
+      ],
+      "surface": "k",
+      "word_final": true,
+      "notes": "See SL_FINAL_DEVOICE_S: ɡ is k word-finally (Šuštaršič, Komar & Petek 1995 (JIPA 25(2), the Slovene Illustration))."
+    },
+    {
+      "id": "SL_DEVOICE_BEFORE_VOICELESS_S",
+      "phonemes": [
+        "z"
+      ],
+      "surface": "s",
+      "followed_by_phoneme": [
+        "p",
+        "t",
+        "k",
+        "s",
+        "ʃ",
+        "x",
+        "f",
+        "ts",
+        "tʃ"
+      ],
+      "notes": "An obstruent takes the voicing of the obstruent after it: odšla [ɔtʃlàː], sladko [sláːtkɔ], izpustiti [ispustìːti], občina [ɔptʃìːna] (Šuštaršič, Komar & Petek 1995 (JIPA 25(2), the Slovene Illustration): regressive voicing assimilation in obstruent clusters). Only the devoicing direction is written here, keyed on the chosen phoneme of the next slot. Measured on the vox_communis gold: 181 words carry a voiced obstruent letter before a voiceless one and the gold writes it voiceless in 176. The voicing direction (kdo [ɡdóː]) is not written: the gold keeps the letter voiceless in its 20 words, so it cannot measure that change."
+    },
+    {
+      "id": "SL_DEVOICE_BEFORE_VOICELESS_T",
+      "phonemes": [
+        "d"
+      ],
+      "surface": "t",
+      "followed_by_phoneme": [
+        "p",
+        "t",
+        "k",
+        "s",
+        "ʃ",
+        "x",
+        "f",
+        "ts",
+        "tʃ"
+      ],
+      "notes": "See SL_DEVOICE_BEFORE_VOICELESS_S: d is t before a voiceless obstruent (Šuštaršič, Komar & Petek 1995 (JIPA 25(2), the Slovene Illustration))."
+    },
+    {
+      "id": "SL_DEVOICE_BEFORE_VOICELESS_P",
+      "phonemes": [
+        "b"
+      ],
+      "surface": "p",
+      "followed_by_phoneme": [
+        "p",
+        "t",
+        "k",
+        "s",
+        "ʃ",
+        "x",
+        "f",
+        "ts",
+        "tʃ"
+      ],
+      "notes": "See SL_DEVOICE_BEFORE_VOICELESS_S: b is p before a voiceless obstruent (Šuštaršič, Komar & Petek 1995 (JIPA 25(2), the Slovene Illustration))."
+    },
+    {
+      "id": "SL_DEVOICE_BEFORE_VOICELESS_Ʃ",
+      "phonemes": [
+        "ʒ"
+      ],
+      "surface": "ʃ",
+      "followed_by_phoneme": [
+        "p",
+        "t",
+        "k",
+        "s",
+        "ʃ",
+        "x",
+        "f",
+        "ts",
+        "tʃ"
+      ],
+      "notes": "See SL_DEVOICE_BEFORE_VOICELESS_S: ʒ is ʃ before a voiceless obstruent (Šuštaršič, Komar & Petek 1995 (JIPA 25(2), the Slovene Illustration))."
+    },
+    {
+      "id": "SL_DEVOICE_BEFORE_VOICELESS_K",
+      "phonemes": [
+        "ɡ"
+      ],
+      "surface": "k",
+      "followed_by_phoneme": [
+        "p",
+        "t",
+        "k",
+        "s",
+        "ʃ",
+        "x",
+        "f",
+        "ts",
+        "tʃ"
+      ],
+      "notes": "See SL_DEVOICE_BEFORE_VOICELESS_S: ɡ is k before a voiceless obstruent (Šuštaršič, Komar & Petek 1995 (JIPA 25(2), the Slovene Illustration))."
+    }
+  ],
   "graphemes": {
     "a": [
       "a"
@@ -307,6 +488,11 @@
     "notes": "Glottolog's representative point for Slovenian."
   },
   "valid_ceiling": {
+    "vox_communis": {
+      "per": 0.0712,
+      "folded": "pitch-accent and stress marks + vowel length + e/o mid-vowel quality + schwa for ⟨e⟩",
+      "citation": "As-scored PER (n=6603, broad convention) is 0.3451 after the three rules this row measured (SL_SYLLABIC_R_*, SL_FINAL_DEVOICE_*, SL_DEVOICE_BEFORE_VOICELESS_*; 0.3555 before them). 6593 of the 6603 gold words carry a pitch-accent mark on the stressed vowel and a length mark, which standard spelling never writes: Šuštaršič, Komar & Petek 1995 (JIPA 25(2):86-90, doi:10.1017/S0025100300005211) report that stress placement is 'not predictable' from the spelling. scripts/fold_sl_notation.py folds the unwritten contrasts out of BOTH sides cumulatively with the harness's own normalize() (broad) and levenshtein(): the accent marks take 0.3451 to 0.2576, length to 0.1432, the e/o mid-vowel quality (the same source: 'e' is [e, ɛ, ə] and 'o' is [o, ɔ] with no mark) to 0.0819, and the schwa reading of ⟨e⟩ to 0.0712, which is this ceiling. Two notation choices of the gold sit on top and are not part of the ceiling, since the spelling writes both contrasts: ʋ for this spec's v (0.0357) and lj nj for ʎ ɲ (0.0158), after which 6066 of 6603 words (91.9%) match exactly. The remainder is the gold misreading the spelling: a word-initial ⟨r⟩ written ʐ or z in 233 of 267 words (ravno ʐáːʋnɔ), a word-initial ⟨d⟩ written z in 65 of 230 (dan záːn), and a final ⟨-l⟩ written ʋ in 80 of 301, the l-vocalisation this spec keeps as a candidate allophone. Measured this session against the vox_communis/sl gold; not itself sourced as a target number."
+    },
     "wikipron": {
       "per": 0.1901,
       "folded": "tonal-accent diacritics (acute/grave/circumflex) + stress placement + vowel length + e/o mid-vowel quality + syllabic-r epenthetic schwa",

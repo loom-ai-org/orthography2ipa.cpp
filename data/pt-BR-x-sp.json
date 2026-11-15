@@ -148,7 +148,7 @@
       "ɲ"
     ],
     "rr": [
-      "ʁ"
+      "ɣ"
     ],
     "ss": [
       "s"
@@ -316,7 +316,7 @@
     ]
   },
   "parent": "pt-BR",
-  "notes": "Paulistano (São Paulo city / São Paulo State urban variety). Reference variety of Barbosa & Albano (2004, JIPA). Inherits the pt-BR base unchanged: full /t,d/ -> [t͡ʃ,d͡ʒ] before [i,ɪ]; strong onset /r/ -> [ʁ~x~h]; coda /R/ tap [ɾ] preferred (NOT retroflex), drops word-finally in infinitives; coda /S/ stays alveolar [s,z] by voicing assimilation (NO chiado); coda /l/ -> [w]; post-stressed and word-final reduction [ɪ ʊ ɐ]; /ɲ/ frequently -> [j̃]; word-initial pretonic /eN/ -> [ĩ] (então -> [ĩˈtɐ̃w̃]). Prestige standard of southeastern media alongside Carioca. The retroflex 'r caipira' described by Amaral (1920) §6b belongs to the surrounding caipira interior (pt-BR-x-caipira), NOT to the São Paulo capital variety modelled here — coda /r/ is a plain tap [ɾ].",
+  "notes": "Paulistano (São Paulo city). This is the variety of Barbosa & Albano (2004), so the spec keeps the pt-BR base and adds the two features that source gives for this variety alone. Strong /r/ is the velar fricative, 'usually voiced between voiced sounds and voiceless elsewhere' (p. 228): word-initial [x] (rato [ˈxatu]), ⟨rr⟩ [ɣ] (carro [ˈkaɣu]). A stressed vowel other than [i] takes a yod before word-final /S/ (p. 229: arroz [aɣojs], mas [majs]). Coda /R/ is the tap: 'Entre os paulistanos, o tepe é a realização predominante' (Castro 2013: 566); the retroflex belongs to the interior (pt-BR-x-caipira; Silva 2023: 70).",
   "quality": "research",
   "script_type": "alphabet",
   "sources": [
@@ -328,7 +328,7 @@
       "publisher": "Casa Editora \"O Livro\", São Paulo",
       "url": "https://www.epedagogia.com.br/materialbibliotecaonine/1280-dialeto-caipira.pdf",
       "pages": "§6b",
-      "notes": "Cited for contrast: §6b locates the retroflex 'r caipira' in the interior, not the São Paulo capital."
+      "notes": "Cited for contrast: §6b describes the caipira r. Castro (2013: 566) and Silva (2023: 70) state that the capital and Santos use the tap while the rest of the state uses the retroflex."
     },
     {
       "id": "barbosa_albano2004",
@@ -369,6 +369,26 @@
       "url": null,
       "pages": null,
       "notes": null
+    },
+    {
+      "id": "castro2013",
+      "author": "Castro, V.S.",
+      "year": 2013,
+      "title": "O 'r caipira' em Mato Grosso do Sul: estudo baseado em dados do ALMS, Atlas linguístico do Mato Grosso do Sul",
+      "publisher": "Estudos Linguísticos (GEL) 42(1): 566-575",
+      "url": "https://revistadogel.emnuvens.com.br/estudos-linguisticos/article/download/1129/694/3129",
+      "pages": "566",
+      "notes": null
+    },
+    {
+      "id": "silva2023",
+      "author": "Silva, H.C.",
+      "year": 2023,
+      "title": "Mapeamento da variação do /R/, em coda silábica interna, na Região Sudeste: contribuições do QGIS",
+      "publisher": "Signum: Estudos da Linguagem 26(3): 62-77",
+      "url": "https://doi.org/10.5433/2237-4876.2023v26n3p62-77",
+      "pages": "67-70",
+      "notes": null
     }
   ],
   "wikipedia": [
@@ -381,76 +401,65 @@
     "end_year": null
   },
   "iso639_3": "por",
-  "stress": {
-    "onset_clusters": ["bl", "br", "bɫ", "bɾ", "bʀ", "bʁ", "bʎ", "bχ", "dr", "dɾ", "dʀ", "dʁ", "dʎ", "dχ", "fl", "fr", "fɫ", "fɾ", "fʀ", "fʁ", "fʎ", "fχ", "kl", "kr", "kɫ", "kɾ", "kʀ", "kʁ", "kʎ", "kχ", "pl", "pr", "pɫ", "pɾ", "pʀ", "pʁ", "pʎ", "pχ", "tr", "tɾ", "tʀ", "tʁ", "tʎ", "tχ", "vl", "vr", "vɫ", "vɾ", "vʀ", "vʁ", "vʎ", "vχ", "ðr", "ðɾ", "ðʀ", "ðʁ", "ðʎ", "ðχ", "ɡl", "ɡr", "ɡɫ", "ɡɾ", "ɡʀ", "ɡʁ", "ɡʎ", "ɡχ", "ɣl", "ɣr", "ɣɫ", "ɣɾ", "ɣʀ", "ɣʁ", "ɣʎ", "ɣχ", "βl", "βr", "βɫ", "βɾ", "βʀ", "βʁ", "βʎ", "βχ"],
-    "cliticless_words": ["o", "a", "os", "as", "de", "do", "da", "dos", "das", "em", "no", "na", "nos", "nas", "por", "pelo", "pela", "pelos", "pelas", "ao", "aos", "à", "às", "com", "sem", "e", "que", "se", "me", "te", "lhe", "lhes", "vos", "lo", "la", "los", "las", "lho", "lha", "lhos", "lhas"],
-    "default_position": -2,
-    "final_stress_endings": [
-      "r",
-      "l",
-      "z",
-      "x",
-      "i",
-      "u",
-      "im",
-      "om",
-      "um",
-      "is",
-      "us",
-      "ns",
-      "ão",
-      "ãe",
-      "õe",
-      "au",
-      "éu",
-      "éi",
-      "ói"
-    ],
-    "penult_stress_endings": [],
-    "marked_vowels": [
-      "á",
-      "é",
-      "í",
-      "ó",
-      "ú",
-      "â",
-      "ê",
-      "ô",
-      "ã",
-      "õ"
-    ],
-    "stress_mark": "ˈ",
-    "notes": "Acordo Ortográfico 1990 conventions: paroxytone default; written accents override; final -i/-u/-r/-l/-z/-x/-im/-om/-um/-ns and nasal diphthongs attract final stress. Unmarked -em/-am stay paroxytone (homem, falam). DIPHTHONGS: declared so the bundled syllabifier counts nuclei correctly — without them every vowel run merges into one nucleus and co-e-lho is read as coe-lho, one syllable short, putting the stress and its vowel reduction on the wrong vowel. ⟨oe⟩ is hiatus, not a diphthong (Cunha & Cintra, §Ditongos).",
-    "diphthongs": [
-      "ãe",
-      "ão",
-      "õe",
-      "ai",
-      "ái",
-      "au",
-      "áu",
-      "ei",
-      "éi",
-      "êi",
-      "eu",
-      "éu",
-      "êu",
-      "iu",
-      "oi",
-      "ói",
-      "ôi",
-      "ou",
-      "ui"
-    ]
-  },
   "graphemes_base": "pt-BR",
   "allophones_base": "pt-BR",
   "positional_graphemes_base": "pt-BR",
-  "positional_graphemes": {},
+  "positional_graphemes": {
+    "r": {
+      "word_initial": [
+        "x"
+      ],
+      "intervocalic": [
+        "ɾ"
+      ],
+      "before_consonant": [
+        "ɾ"
+      ],
+      "word_final": [
+        "ɾ",
+        ""
+      ]
+    }
+  },
   "location": {
     "latitude": -23.550394,
     "longitude": -46.633947,
     "source": "wikidata",
     "notes": "São Paulo city — the Paulistano reference variety. [Wikidata Q174 P625]"
-  }
+  },
+  "allophone_rules": [
+    {
+      "id": "SP_YOD_BEFORE_FINAL_S",
+      "phonemes": [
+        "a",
+        "e",
+        "ɛ",
+        "o",
+        "ɔ",
+        "u"
+      ],
+      "append": "j",
+      "stress": "stressed",
+      "followed_by_phoneme": [
+        "s"
+      ],
+      "followed_by_2": "word_boundary",
+      "notes": "Barbosa & Albano (2004: 229): 'Diphthongs also emerge in this variety from yodisation of vowels (with the exception of [i]) followed by /S/, as in arroz [aɣoɪ̯s] ‘rice’ and mas [maɪ̯s] ‘but’'. Applied to a stressed vowel before a word-final /S/, the context of both examples; the spec writes the glide [j]."
+    },
+    {
+      "id": "BR_STRONG_R_AFTER_CODA",
+      "phonemes": [
+        "ɾ"
+      ],
+      "surface": "ɣ",
+      "preceded_by_phoneme": [
+        "̃",
+        "s",
+        "z",
+        "ʃ",
+        "ʒ"
+      ],
+      "notes": "An ⟨r⟩ after a coda consonant is the strong rhotic: honra [ˈõɣɐ], genro [ˈʒẽɣu]. Cristófaro Silva (2025: 240) puts the R-forte in one class across three contexts: 'início de sílaba que coincide com início de palavra (rapaz, rio, rosa etc.); início de sílaba em meio de palavra (carro, terra) ou início de sílaba após consoante (Israel, desrespeito etc.)'. Barbosa & Albano (2004: 228) give the Paulistano strong /r/ as 'a velar fricative, usually voiced between voiced sounds and voiceless elsewhere'; a nasal vowel or a voiced [z] precedes it here, so it is [ɣ] as in carro [ˈkaɣu]."
+    }
+  ]
 }

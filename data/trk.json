@@ -3,76 +3,9 @@
   "name": "Proto-Turkic (family node)",
   "parent": "x-clade-turk1311",
   "script": "IPA-reconstruction",
-  "graphemes": {
-    "a": [
-      "a"
-    ],
-    "e": [
-      "e"
-    ],
-    "ɯ": [
-      "ɯ"
-    ],
-    "i": [
-      "i"
-    ],
-    "o": [
-      "o"
-    ],
-    "ø": [
-      "ø"
-    ],
-    "u": [
-      "u"
-    ],
-    "y": [
-      "y"
-    ],
-    "p": [
-      "p"
-    ],
-    "b": [
-      "b"
-    ],
-    "t": [
-      "t"
-    ],
-    "d": [
-      "d"
-    ],
-    "k": [
-      "k"
-    ],
-    "g": [
-      "ɡ"
-    ],
-    "q": [
-      "q"
-    ],
-    "s": [
-      "s"
-    ],
-    "z": [
-      "z"
-    ],
-    "m": [
-      "m"
-    ],
-    "n": [
-      "n"
-    ],
-    "l": [
-      "l"
-    ],
-    "r": [
-      "r"
-    ],
-    "j": [
-      "j"
-    ]
-  },
+  "graphemes": {},
   "allophones": {},
-  "notes": "STRUCTURAL ANCESTRY NODE (not a modelled G2P target). Proto-Turkic is the reconstructed common ancestor of the Turkic family (Oghuz, Kipchak, Karluk, Siberian and the divergent Oghur branch, e.g. Chuvash). It exists here only so that the ancestry / phylogenetic-distance metrics of the modern Turkic varieties have a top-level node to resolve their PARENT chain to; NO phonology is claimed or reconstructed and the minimal grapheme set is a placeholder (afa.json / gn.json stub pattern). Glottolog top node turk1311.",
+  "notes": "STRUCTURAL ANCESTRY NODE (not a modelled G2P target). Proto-Turkic is the reconstructed common ancestor of the Turkic family (Oghuz, Kipchak, Karluk, Siberian and the divergent Oghur branch, e.g. Chuvash). It exists so that the ancestry and phylogenetic-distance metrics of the modern Turkic varieties have a top-level node to resolve their parent chain to. Glottolog top node turk1311. It carries no grapheme table: the ancestry metrics use only its classification and its ancestor links. A grapheme table needs a cited reconstruction that states its notation and the sound value of each symbol.",
   "quality": "stub",
   "script_type": "reconstruction",
   "iso639_3": null,

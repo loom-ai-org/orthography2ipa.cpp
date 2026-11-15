@@ -1,0 +1,37 @@
+{
+ "code": "ar-TR-x-kinderib",
+ "name": "Kinderib Arabic (Anatolian qəltu)",
+ "script": "Arabic",
+ "script_type": "abjad",
+ "parent": "ar-IQ-x-qeltu",
+ "graphemes_base": "ar-IQ-x-qeltu",
+ "graphemes": {},
+ "allophones_base": "ar-IQ-x-qeltu",
+ "allophones": {},
+ "quality": "stub",
+ "ancestors": [
+  {
+   "code": "ar-IQ-x-qeltu",
+   "role": "parent",
+   "weight": 0.9,
+   "notes": "Inherited placeholder table; see notes on ar-TR-x-kinderib."
+  }
+ ],
+ "notes": "Kinderib, Anatolia. A qəltu dialect, which is why the parent is the qeltu spec rather than a Levantine or gilit one; Anatolian qəltu is markedly divergent and the inherited table should not be trusted for it. ATTESTED, NOT YET DESCRIBED HERE. A published description exists and is named in `sources`; its phonology has not been read into this spec. The grapheme table is inherited from the parent and is a placeholder, NOT a claim about this variety — no reflex below has been checked against the source. The entry exists so the lect has a code and resolves to something usable rather than to nothing; `quality` is `stub` for exactly that reason. Replace the inherited table with cited reflexes before treating any reading here as this variety's.",
+ "sources": [
+  {
+   "id": "jastrow2003",
+   "author": "Jastrow, O.",
+   "year": 2003,
+   "title": "Arabische Texte aus Kinderib",
+   "publisher": "Wiesbaden: Harrassowitz"
+  },
+  {
+   "id": "watsonasiri2007",
+   "author": "Watson, J.C.E. & Asiri, B.",
+   "year": 2007,
+   "title": "Pre-pausal devoicing and glottalisation in varieties of the south-western Arabian Peninsula",
+   "publisher": "Proceedings of ICPhS XVI, Saarbrücken, paper 1738"
+  }
+ ]
+}

@@ -943,5 +943,12 @@
     "komparativ": "ˈkɔmparatiːf",
     "superlativ": "ˈzuːpɐlatiːf"
   },
-  "constrain_onsets": true
+  "constrain_onsets": true,
+  "audit": {
+    "ipa_childes": {
+      "conclusion": "at_ceiling_documented",
+      "measured": "Raw PER 0.3948 (n=24857). The gold is epitran-derived and writes German in epitran's conventions. scripts/fold_de_notation.py folds them cumulatively with the harness's own normalize() (broad) and levenshtein(): the gold aspirates every voiceless stop (13449 of 24857 gold words carry ʰ) where this broad spec writes none, which takes 0.3948 to 0.3407; its ʀ for this spec's ʁ, and a full ʀ where this spec writes the vocalised ɐ, to 0.2877; its long vowels in open syllables (jaː duː maːn against this spec's Duden-following ja du man) to 0.1922; its tense u y o i for this spec's lax ʊ ʏ ɔ ɪ to 0.1507. Those four are notation, and none is a contrast the orthography does not write, so no valid_ceiling is recorded. The fifth difference is not notation but an error in the gold: it reads an unstressed ⟨e⟩, above all word-final ⟨-e⟩, as the long open-mid ɛː (heute hɔɪtʰɛː, rote ʀoːtʰɛː). Of the 3750 gold words ending in ⟨-e⟩, 3568 end in ɛː and 2 in ə. German has no such reading: that letter is the schwa [ə] (mangold2005; wiese1996; kohler1990), which this spec writes. Folding it too, only to size the offset, gives 0.0771; the spec is not changed to match it. So the row's 0.3948 is four conventions plus one systematic gold mistake on the commonest vowel in the language, and the rules behind it score at roughly 0.08 once both are set aside.",
+      "reference": "spec notes (mangold2005, wiese1996, kohler1990); see scripts/fold_de_notation.py"
+    }
+  }
 }

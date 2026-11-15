@@ -1,0 +1,428 @@
+{
+  "code": "arz-EG",
+  "name": "Egyptian Arabic (Cairene)",
+  "script": "Arabic",
+  "graphemes_base": "ar-x-mashriqi",
+  "graphemes": {
+    "َوِيي": [
+      "awijj"
+    ],
+    "َيِيي": [
+      "ajijj"
+    ],
+    "ج": [
+      "ɡ"
+    ],
+    "ق": [
+      "ʔ",
+      "ɡ",
+      "q"
+    ],
+    "ث": [
+      "t",
+      "s"
+    ],
+    "ذ": [
+      "d",
+      "z"
+    ],
+    "ظ": [
+      "dˤ",
+      "zˤ"
+    ],
+    "ض": [
+      "dˤ"
+    ],
+    "چ": [
+      "ʒ"
+    ],
+    "الثث": [
+      "att",
+      "ass"
+    ],
+    "اَلثث": [
+      "att",
+      "ass"
+    ],
+    "لِلثث": [
+      "litt",
+      "liss"
+    ],
+    "وَالثث": [
+      "watt",
+      "wass"
+    ],
+    "فَالثث": [
+      "fatt",
+      "fass"
+    ],
+    "بِالثث": [
+      "bitt",
+      "biss"
+    ],
+    "كَالثث": [
+      "katt",
+      "kass"
+    ],
+    "الذذ": [
+      "add",
+      "azz"
+    ],
+    "اَلذذ": [
+      "add",
+      "azz"
+    ],
+    "لِلذذ": [
+      "lidd",
+      "lizz"
+    ],
+    "وَالذذ": [
+      "wadd",
+      "wazz"
+    ],
+    "فَالذذ": [
+      "fadd",
+      "fazz"
+    ],
+    "بِالذذ": [
+      "bidd",
+      "bizz"
+    ],
+    "كَالذذ": [
+      "kadd",
+      "kazz"
+    ],
+    "اِلثث": [
+      "itt",
+      "iss"
+    ],
+    "اِلذذ": [
+      "idd",
+      "izz"
+    ],
+    "وِالثث": [
+      "witt",
+      "wiss"
+    ],
+    "وِالذذ": [
+      "widd",
+      "wizz"
+    ],
+    "يو": [
+      "juː",
+      "joː",
+      "iːw"
+    ],
+    "وي": [
+      "wiː",
+      "weː",
+      "uːj"
+    ],
+    "ية": [
+      "ja",
+      "jat"
+    ],
+    "وة": [
+      "wa",
+      "wat"
+    ],
+    "وية": [
+      "uːja",
+      "wja"
+    ],
+    "يوة": [
+      "iːwa",
+      "eːwa",
+      "jwa"
+    ]
+  },
+  "allophones_base": "ar-x-mashriqi",
+  "allophones": {
+    "dʒ": [
+      "ɡ"
+    ],
+    "q": [
+      "ʔ",
+      "ɡ",
+      "q"
+    ],
+    "θ": [
+      "t",
+      "s"
+    ],
+    "ð": [
+      "d",
+      "z"
+    ],
+    "ðˤ": [
+      "dˤ",
+      "zˤ"
+    ],
+    "ɮˤ": [
+      "dˤ"
+    ],
+    "ɡ": [
+      "ɡ"
+    ]
+  },
+  "parent": "ar-x-mashriqi",
+  "ancestors": [
+    {
+      "code": "ar-x-mashriqi",
+      "role": "parent",
+      "weight": 0.9,
+      "notes": "Eastern (Mashriqi) Arabic base"
+    },
+    {
+      "code": "cop",
+      "role": "substrate",
+      "weight": 0.05,
+      "notes": "Coptic substrate (lexical; debated prosodic effects on the Cairene stress system)"
+    }
+  ],
+  "notes": "Egyptian Arabic — Cairene (مصري, the prestige urban koine and most widely understood Arabic dialect via film/TV). DEFINING FEATURE: ج jim → /ɡ/ (voiced velar stop, NOT /dʒ/ or /ʒ/) — the single most recognisable Cairene marker; جميل → [ɡaˈmiːl]. ق qaf → /ʔ/ glottal stop in inherited vocabulary (قلب → [ʔalb]), retained as /q/ in learned/Classical borrowings and as /ɡ/ in some Bedouin/loan strata. Interdentals merged: ث θ → /t/ (~/s/ in learned loans), ذ ð → /d/ (~/z/), ظ/ض → /dˤ/ (~/zˤ/ in loans) — four-emphatic inventory /tˤ dˤ sˤ zˤ/. چ (loan grapheme) → /ʒ/ for French/English /ʒ,dʒ/ loans (since native ج is /ɡ/). STRESS: Cairene stress is famously regular and weight-sensitive (final superheavy CVːC/CVCC → final; else rightmost non-final heavy syllable, capped at the antepenult) — this is a syllable-weight algorithm NOT expressible in the ending-based StressRules schema and is left as engine-level future work; it is intentionally NOT encoded here. Source: Watson (2002) The Phonology and Morphology of Arabic; Mitchell (1956) An Introduction to Egyptian Colloquial Arabic; Egyptian Arabic phonology (Wikipedia). EMPHATIC SPREADING now modeled via allophone_rules (AR_EG_EMPH_*): /a aː/ back to [ɑ ɑː] adjacent to an emphatic /tˤ dˤ sˤ zˤ/ — Cairene has famously long-domain emphasis spreading (Watson 2002). MEASURED UNDECIDABLE-INPUT CEILING. Not one of the 800 WikiPron arz_arab_broad input words carries a single ḥaraka — no fatḥa, ḍamma, kasra, tanwīn, shadda or sukūn occurs anywhere on the orthographic side of this gold — while the gold transcriptions are fully vocalised: 30.4% of their phoneme segments are short vowels. Deleting every short vowel from the gold and rescoring with the harness's own scorer gives PER 0.2304 over 590 scored words (scripts/omission_score.py, which computes it through the scorer's own normalisation and edit distance), which is what a spec that emitted perfect consonants and long vowels and simply omitted the short vowels would score, and is therefore the omission score for this row. An omission score is not a lower bound. Deleting a segment and guessing it wrong cost the same single edit, so a spec that guesses the likeliest value beats omission whenever the guess lands, and rows do come in below it. The board row stands at 0.3237, so about 9.3 PER points separate the score from the omission score. That gap is rule error and is tractable; the omission score covers undecidable input that no grapheme table can recover. A gap above the omission score is a defect hypothesis, not an excuse: Hebrew sat above its own omission score for what looked like the same structural reason and the excess turned out to be a real defect, an unmapped geresh. That vocalisation and not the grapheme tables dominates the Arabic error is measured on the MSA row rather than inferred: ar scores PER 0.3139 on raw WikiPron and 0.1721 on the SAME gold with the input auto-diacritized (the wikipron_ar_diacritized row, wired in scripts/benchmark.py) — within a hundredth of the 0.1656 the spec scores on the material the orthography does supply, its folded PER, which scripts/folded_per.py computes and its valid_ceiling records. Vocalisation is worth about 14 PER points there, more than any grapheme-table change could be worth. No dialect row has such a companion: the diacritized loader is registered for ar alone, and wiring one for this row is the single highest-value follow-up available to it. It has to be labelled restored-MSA input rather than native vocalisation — the restorer targets MSA and Classical Arabic, so what it writes onto dialect orthography is an MSA reading, and a row scored against it measures the spec plus that assumption. MATRES LECTIONIS AFTER A CONSONANT. ⟨و⟩ and ⟨ي⟩ after a consonant letter are read first as the long vowels [uː] and [iː], then [oː] and [eː], then the glides [w] and [j]; word-initially and after a vowel they stay glides. Wikipedia 'Egyptian Arabic phonology' (source egyptian_arabic_phonology_wiki), section Letter names, writes the names in Arabic script beside IPA: جيم ɡiːm, سين siːn, شين ʃiːn, زين zeːn, and ته مفتوحه teh mæfˈtuːħæ. These are examples, not a stated spelling rule; the table gives no reference for them. ADJACENT LETTERS AND THE FINAL TA MARBUTA. Grapheme keys يو [juː, joː, iːw], وي [wiː, weː, uːj], ية [ja, jat], وة [wa, wat], وية [uːja, wja] and يوة [iːwa, eːwa, jwa] read the first of two adjacent letters, and a letter before a final ة, as the glide; without them the after_consonant rule makes both letters long (بيوت biːuːt). The same Letter names table shows no such sequence, and 'Egyptian Arabic' gives كفاية [keˈfæːjæ], where ي before the final ة is the glide after a vowel letter, not after a consonant; the keys after a consonant rest on the gold count. Gold count (WikiPron arz-EG): 800 lines. Rows with the letter after a consonant letter: و 139, ي 172; segments in those rows: و oː 33; و uː 35; و w 43; ي eː 26; ي iː 60; ي j 77. Adjacent pair after a consonant letter (rows by reading): وي long+glide 2; وي other 5; يو glide+long 4; يو other 7. Word-final after a consonant letter: وة glide 1; ية glide 14; ية other 2.",
+  "quality": "research",
+  "script_type": "abjad",
+  "sources": [
+    {
+      "id": "watson2002",
+      "author": "Watson, J.C.E.",
+      "year": 2002,
+      "title": "The Phonology and Morphology of Arabic",
+      "publisher": "Oxford University Press",
+      "url": null,
+      "pages": null,
+      "notes": "Cairene as a primary descriptive case; jim→ɡ, qaf→ʔ, regular weight-sensitive stress.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Egyptian_Arabic_phonology"
+    },
+    {
+      "id": "mitchell1956",
+      "author": "Mitchell, T.F.",
+      "year": 1956,
+      "title": "An Introduction to Egyptian Colloquial Arabic",
+      "publisher": "Oxford University Press",
+      "url": null,
+      "pages": null,
+      "notes": "Classic descriptive reference for Cairene phonology and the stress system."
+    },
+    {
+      "id": "badawi-hinds1986",
+      "author": "Badawi, E.S. & Hinds, M.",
+      "year": 1986,
+      "title": "A Dictionary of Egyptian Arabic",
+      "publisher": "Librairie du Liban",
+      "url": null,
+      "pages": null,
+      "notes": "Lexicon with transcriptions confirming jim→ɡ and qaf→ʔ reflexes."
+    },
+    {
+      "id": "holes2004",
+      "author": "Holes, C.",
+      "year": 2004,
+      "title": "Modern Arabic: Structures, Functions, and Varieties",
+      "publisher": "Georgetown University Press",
+      "url": null,
+      "pages": null,
+      "notes": null
+    },
+    {
+      "id": "egyptian_arabic_phonology_wiki",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "Egyptian Arabic phonology",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Egyptian_Arabic_phonology",
+      "pages": null,
+      "notes": "Section Letter names, table, read 2026-09-13 in the raw wikitext. The table gives the Egyptian letter names in Arabic script beside their IPA; it cites no reference for those rows.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Egyptian_Arabic_phonology"
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Egyptian_Arabic",
+    "https://en.wikipedia.org/wiki/Egyptian_Arabic_phonology",
+    "https://ar.wikipedia.org/wiki/لهجة_مصرية",
+    "https://ar.wikipedia.org/wiki/%D9%84%D9%87%D8%AC%D8%A9_%D9%85%D8%B5%D8%B1%D9%8A%D8%A9",
+    "https://arz.wikipedia.org/wiki/%D8%A7%D9%84%D9%84%D8%BA%D9%87_%D8%A7%D9%84%D9%85%D8%B5%D8%B1%D9%8A%D9%87_%D8%A7%D9%84%D8%AD%D8%AF%D9%8A%D8%AB%D9%87"
+  ],
+  "timespan": {
+    "start_year": 1400,
+    "end_year": null
+  },
+  "glottolog_code": "egyp1253",
+  "iso639_3": "arz",
+  "allophone_rules": [
+    {
+      "id": "AR_EG_EMPH_BACK_A_AFTER",
+      "phonemes": [
+        "a"
+      ],
+      "surface": "ɑ",
+      "preceded_by_phoneme": [
+        "tˤ",
+        "dˤ",
+        "sˤ",
+        "ðˤ",
+        "zˤ"
+      ],
+      "notes": "Emphasis (pharyngealization) spreading: short /a/ backs to [ɑ] when it follows an emphatic consonant /tˤ dˤ sˤ ðˤ (zˤ)/. Watson 2002 (Cairene as primary case) ch. Emphasis; Egyptian emphatics /tˤ dˤ sˤ zˤ/ with strong bidirectional spreading."
+    },
+    {
+      "id": "AR_EG_EMPH_BACK_A_BEFORE",
+      "phonemes": [
+        "a"
+      ],
+      "surface": "ɑ",
+      "followed_by_phoneme": [
+        "tˤ",
+        "dˤ",
+        "sˤ",
+        "ðˤ",
+        "zˤ"
+      ],
+      "notes": "Emphasis spreading (leftward): short /a/ backs to [ɑ] before an adjacent emphatic consonant. Watson 2002 (Cairene as primary case) ch. Emphasis; Egyptian emphatics /tˤ dˤ sˤ zˤ/ with strong bidirectional spreading."
+    },
+    {
+      "id": "AR_EG_EMPH_BACK_AA_AFTER",
+      "phonemes": [
+        "aː"
+      ],
+      "surface": "ɑː",
+      "preceded_by_phoneme": [
+        "tˤ",
+        "dˤ",
+        "sˤ",
+        "ðˤ",
+        "zˤ"
+      ],
+      "notes": "Emphasis spreading: long /aː/ backs to [ɑː] after an adjacent emphatic. Watson 2002 (Cairene as primary case) ch. Emphasis; Egyptian emphatics /tˤ dˤ sˤ zˤ/ with strong bidirectional spreading."
+    },
+    {
+      "id": "AR_EG_EMPH_BACK_AA_BEFORE",
+      "phonemes": [
+        "aː"
+      ],
+      "surface": "ɑː",
+      "followed_by_phoneme": [
+        "tˤ",
+        "dˤ",
+        "sˤ",
+        "ðˤ",
+        "zˤ"
+      ],
+      "notes": "Emphasis spreading (leftward): long /aː/ backs to [ɑː] before an adjacent emphatic. Watson 2002 (Cairene as primary case) ch. Emphasis; Egyptian emphatics /tˤ dˤ sˤ zˤ/ with strong bidirectional spreading."
+    },
+    {
+      "id": "EG_MONO_AY",
+      "phonemes": [
+        "aj"
+      ],
+      "surface": "eː",
+      "notes": "Cairene monophthongization (Watson 2002 ch.2: Classical /aj/ → [eː], bajt→beːt; Mitchell 1956; Badawi & Hinds 1986 passim, e.g. feːn 'where'). Geminate [jj] (izzajjak) is a CjjV sequence, not the /aj/ diphthong atom, and is untouched — same tokenization behaviour as HEJ_MONO_AY/QAS_MONO_AY."
+    },
+    {
+      "id": "EG_MONO_AW",
+      "phonemes": [
+        "aw"
+      ],
+      "surface": "oː",
+      "notes": "Cairene monophthongization (Watson 2002 ch.2: Classical /aw/ → [oː], lawn→loːn; Mitchell 1956). Geminate [ww] (ɡaww) is not the diphthong atom and is untouched."
+    }
+  ],
+  "wikidata_qid": "Q29919",
+  "phoible_id": "egyp1253",
+  "wals_code": "aeg",
+  "location": {
+    "latitude": 31.0,
+    "longitude": 31.0,
+    "source": "glottolog",
+    "notes": "Glottolog's representative point for Egyptian Arabic."
+  },
+  "optional_marks": [
+    "ً",
+    "ٌ",
+    "ٍ",
+    "َ",
+    "ُ",
+    "ِ",
+    "ّ",
+    "ْ",
+    "ٰ",
+    "ٓ"
+  ],
+  "stress": {
+    "default_position": -3,
+    "quantity_sensitive": true,
+    "superheavy_final_attracts": true,
+    "max_onset": 1,
+    "stress_mark": "ˈ",
+    "notes": "Arabic stress is QUANTITY-SENSITIVE: it falls on a syllable because that syllable is heavy, not because of any orthographic ending, so no ending table can express it. The cascade (Ryding, A Reference Grammar of MSA, CUP 2005, §2.3; Watson, The Phonology and Morphology of Arabic, OUP 2002, ch.3): a superheavy final syllable (CVːC/CVCC) takes the stress (kiˈtaːb); otherwise a heavy penult (CVː/CVC) does (muˈdarris); otherwise the antepenult (ˈmadrasa). max_onset=1 because Arabic onsets are obligatory and hold exactly one consonant — a medial cluster splits, closing the preceding syllable, and that boundary is what makes the penult of mudarris heavy. INPUT CONTRACT: weight is only recoverable from a complete transcription, so this requires diacritized input; an undiacritized skeleton has no vowels to weigh. The registered wikipron gold carries no stress marks, but the benchmark strips stress from both sides by default, so this costs no PER. Prosodic clitics: monosyllabic function words (negator maː, prepositions fiː/min/ʕan/ʕa/li/bi, vocative jaː, copula-negator muː/miʃ, conditional law/loː, wa-proclitic combinations) attach to a host and fall inside the host's stress domain, so they carry no word stress (Watson 2002, The Phonology and Morphology of Arabic, OUP, ch.3). Pan-Arabic class; the per-lect form list reflects the function words attested in this lect. Orthographic test — a clitic homograph (e.g. verb yā 'came') is destressed in every occurrence.",
+    "cliticless_words": [
+      "فِي",
+      "لَو",
+      "مِن",
+      "يَا"
+    ]
+  },
+  "word_exceptions": {
+    "ثَانْيَة": "sanja"
+  },
+  "audit": {
+    "wikipron": {
+      "conclusion": "input_limited",
+      "measured": "0 of 800 wikipron input words (arz_arab_broad.tsv) carry a haraka (short-vowel diacritic); Wiktionary files Arabic entries at the unvocalized page title (Wiktionary:About_Arabic / Wiktionary:Arabic_entry_guidelines, 'Entry name'), so the scraped input is a consonant-plus-long-vowel skeleton, exactly the pattern independently measured on the bare 'ar' wikipron row (0/17,563 words carry a haraka there; see ar.json audit.wikipron). No fold was run for this dialect row -- doing so needs the dialect's own vowel inventory, not MSA's -- so no valid_ceiling is recorded here; the wikipron_ar_diacritized loader (scripts/benchmark.py) that would supply it is wired for the 'ar' row only.",
+      "reference": "spec notes; see ar.json audit.wikipron for the measured MSA precedent"
+    }
+  },
+  "positional_graphemes": {
+    "و": {
+      "word_initial": [
+        "w"
+      ],
+      "after_vowel": [
+        "w"
+      ],
+      "after_consonant": [
+        "uː",
+        "oː",
+        "w"
+      ],
+      "default": [
+        "w",
+        "uː"
+      ]
+    },
+    "ي": {
+      "word_initial": [
+        "j"
+      ],
+      "after_vowel": [
+        "j"
+      ],
+      "after_consonant": [
+        "iː",
+        "eː",
+        "j"
+      ],
+      "default": [
+        "j",
+        "iː"
+      ]
+    },
+    "َوِي": {
+      "word_final": [
+        "awiː"
+      ],
+      "default": [
+        "awiː"
+      ]
+    },
+    "َيِي": {
+      "word_final": [
+        "ajiː"
+      ],
+      "default": [
+        "ajiː"
+      ]
+    }
+  }
+}

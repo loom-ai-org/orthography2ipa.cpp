@@ -7,19 +7,117 @@ on:
 jobs:
   build:
     strategy:
+      # Each cell reports its own result: a red cell does not cancel the rest.
+      fail-fast: false
       matrix:
         compiler: [gcc, clang]
+        silabificador: [false]
+        # One cell builds against the silabificador C++ port. The build gives
+        # a caller the plugin and changes no default transcription. The
+        # silabificador-parity test passes the plugin in a Pipeline on both
+        # sides, so this cell gives the reference the silabificador package.
+        include:
+          - compiler: gcc
+            silabificador: true
+          # One cell builds both libraries shared and runs the install check:
+          # its consumer links only if the installed package hands the shared
+          # silabificador on.
+          - compiler: gcc
+            silabificador: true
+            shared: true
     runs-on: ubuntu-latest
     env:
       CC: ${{ matrix.compiler == 'clang' && 'clang' || 'gcc' }}
       CXX: ${{ matrix.compiler == 'clang' && 'clang++' || 'g++' }}
     steps:
       - uses: actions/checkout@v4
+      # lm-parity needs a Python 3.12 or later reference: the port sums floats
+      # as 3.12 sum() does, with compensation. Pinned here, not left to the
+      # runner image's python3.
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      # The parity suite compares against the reference package, which is a
+      # sibling repository: CI clones it to the same relative position a
+      # developer's checkout has (../orthography2ipa), and installs ITS OWN
+      # requirements — numpy, langcodes, linguatag — so the reference is
+      # importable from the system python the harnesses run it through.
+      # Pinned (actions/checkout fetches an exact SHA, which a --depth-1
+      # clone cannot) to the reference commit the generated tables and the
+      # parity gates were validated against: the TigreGotico/orthography2ipa
+      # release that tests/reference_version.txt names, which
+      # tools/sync_reference.py pins here together with data/. Bump it
+      # deliberately, alongside regenerating the
+      # generated tables (tests/gen_*.py) and re-running the sweeps — never
+      # let CI red-spam on upstream drift. The reference then moves one level
+      # up, because every harness resolves it as the SIBLING directory
+      # ../orthography2ipa of this repository, exactly like a developer's
+      # checkout.
+      - uses: actions/checkout@v4
+        with:
+          repository: TigreGotico/orthography2ipa
+          ref: f049e7cf0de0fd93e613061d95f9defc172ba059
+          path: reference
+      - name: Place the reference at its sibling path
+        run: mv "$GITHUB_WORKSPACE/reference" "$GITHUB_WORKSPACE/../orthography2ipa"
       - name: Install dependencies
         run: sudo apt-get update && sudo apt-get install -y cmake libicu-dev libboost-dev
+      # langcodes and linguatag decide registry resolution and language
+      # distance at run time, so they are pinned to the versions the
+      # reference release was validated with. Every linguatag release is an
+      # alpha, which pip installs when no final release exists: left
+      # unpinned, a new alpha changes the reference under the parity gates.
+      # Bump these with the reference commit above.
+      - name: Install the reference's Python requirements
+        run: |
+          deps="numpy langcodes==3.5.1 linguatag==0.1.5a1"
+          python3 -m pip install $deps || python3 -m pip install --break-system-packages $deps
+      # packaged-lexicon-parity enables the lexicons of o2i-lexicons in both
+      # engines. Pinned to the newest release whose orthography2ipa
+      # requirement admits the reference release, which is the release a
+      # resolver gives for orthography2ipa[lexicons] at that version.
+      # tools/sync_reference.py moves this pin with the reference commit.
+      # --no-deps: its orthography2ipa requirement is met by the sibling
+      # reference; a PyPI copy would add a second distribution with its own
+      # entry points.
+      - uses: astral-sh/setup-uv@v6
+      - name: Install the packaged lexicons
+        run: uv pip install --system --python python3 --no-deps --prerelease=allow o2i-lexicons==0.7.2a1
+      # Pinned to the silabificador.cpp commit held at byte parity with Python
+      # silabificador 2.1.1a2.
+      - uses: actions/checkout@v4
+        if: matrix.silabificador
+        with:
+          repository: loom-ai-org/silabificador.cpp
+          ref: fbe7a2c93fd7b9b2269e03170d9d6bfdc89f94e1
+          path: silabificador
+      - name: Build and install silabificador.cpp
+        if: matrix.silabificador
+        run: |
+          cmake -S silabificador -B "$RUNNER_TEMP/silabificador-build" -DSILABIFICADOR_BUILD_TESTS=OFF \
+            -DBUILD_SHARED_LIBS=${{ matrix.shared && 'ON' || 'OFF' }}
+          cmake --build "$RUNNER_TEMP/silabificador-build" --parallel
+          cmake --install "$RUNNER_TEMP/silabificador-build" --prefix "$RUNNER_TEMP/silabificador"
+      # silabificador.cpp fbe7a2c is at byte parity with this release. The
+      # package has no dependencies, and the reference imports it only when a
+      # caller builds SilabificadorSyllabifier.
+      - name: Give the reference the silabificador package
+        if: matrix.silabificador
+        run: uv pip install --system --python python3 --prerelease=allow silabificador==2.1.1a2
       - name: Configure
-        run: cmake -S . -B build -DBUILD_TESTING=ON
+        env:
+          CMAKE_PREFIX_PATH: ${{ matrix.silabificador && format('{0}/silabificador', runner.temp) || '' }}
+        run: cmake -S . -B build -DBUILD_TESTING=ON -DBUILD_SHARED_LIBS=${{ matrix.shared && 'ON' || 'OFF' }}
       - name: Build
         run: cmake --build build --parallel
       - name: Test
+        if: ${{ !matrix.shared }}
         run: ctest --test-dir build --output-on-failure
+      # The installed CLI has no RPATH, so it finds both shared libraries
+      # through LD_LIBRARY_PATH. The check links its consumer with that
+      # variable unset.
+      - name: Test the shared install
+        if: matrix.shared
+        env:
+          LD_LIBRARY_PATH: ${{ format('{0}/build/test-install/lib:{1}/silabificador/lib', github.workspace, runner.temp) }}
+        run: ctest --test-dir build --output-on-failure -R 'orthography2ipa-(core|install|relocated-install)$'
