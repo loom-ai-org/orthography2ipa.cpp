@@ -11,7 +11,8 @@ compares it with linguatag: `standardize_lang`, `default_region`,
 `lang_distance` with no lect mode and with each lect mode, and `closest_lang`.
 
 The tag battery is every code in the reference catalog, every CLDR
-likely-region key, every node of the lect tree, every linguatag `OVERRIDES`
+likely-region and likely-script key, every IANA Preferred-Value key and value
+linguatag reads, every node of the lect tree, every linguatag `OVERRIDES`
 key, every registry `_ALIASES` key and value, the primary subtag of each
 catalog code, a list of unusual tags (empty subtags, voice ids, grandfathered
 tags, non-ASCII case and digits), and seeded case, separator and private-use
@@ -46,7 +47,7 @@ sys.path.insert(0, reference)
 logging.disable(logging.CRITICAL)
 try:
     import linguatag
-    from linguatag import lects, matching, regions
+    from linguatag import lects, matching, regions, standardize
     from linguatag.version import VERSION_STR as LINGUATAG_VERSION
 except ImportError as exc:
     print(f"this harness needs the linguatag package ({exc}); "
@@ -71,7 +72,11 @@ ODD = ["", "-", "x-foo", "en--US", "ar-", "-ar", "ar_", "zh-HK-HiuMaanNeural", "
        "x-clade-romance", "art-lojban", "zh-guoyu", "sgn-BR", "en-GB-oed", "ast-PT-x-rionor",
        "pt-PT-x-trasosmontes", "tmg", "aja", "ajg", "ajg-BJ", "pt-BR-x-brasilia", "pt-BR-x-cuiaba",
        "acy", "acy-CY", "acy-Latn", "acy-Arab", "acy-Arab-CY", "pga", "pga-SS", "pga-Arab", "ACY",
-       "apc", "apc-TR", "ar-TR", "AR-TR", "arb-TR", "ara-TR", "apc-Latn-TR"]
+       "apc", "apc-TR", "ar-TR", "AR-TR", "arb-TR", "ara-TR", "apc-Latn-TR",
+       "zh-hak", "zh-hak-TW", "ZH_HAK", "ar-arz-EG", "ar-apc", "ajp", "ajp-JO", "AJP_jo", "my-BU", "my-MM",
+       "de-DD", "fr-FX", "mey", "mey-DZ", "mey-SN", "mey-Latn", "hyw", "hyw-AM", "lzh", "lzh-TW", "lzh-Hans",
+       "hak", "nan", "wuu", "cdo-Hans", "gan", "yue-CN", "fat", "fat-GH", "mnk", "ak", "ak-GH", "man", "tw",
+       "knn", "kok", "fra", "zh-cmn", "zh-cmn-Hans", "sgn-ase"]
 
 # closest_lang cases where two candidates share the smallest distance.
 TIES = [("pt-PT", ["pt", "pt-PT"]), ("pt-PT", ["pt-PT", "pt"]), ("pt", ["pt-PT", "pt"]),
@@ -80,7 +85,11 @@ TIES = [("pt-PT", ["pt", "pt-PT"]), ("pt-PT", ["pt-PT", "pt"]), ("pt", ["pt-PT",
         ("pt-UY", ["pt-PT", "pt-BR"]), ("pt-UY-x-foo", ["pt-BR", "pt-UY", "pt-PT"]),
         ("ar", ["arb", "ar-001", "ar"]), ("ar-001", ["ar", "arb", "ar-001"]),
         ("yue-HK", ["yue", "zh-HK", "zh-Hant"]), ("an-x-cheso", ["an", "an-x-ansotano"]),
-        ("tl", ["fil", "tl"]), ("tgl", ["fil", "tl", "tgl"])]
+        ("tl", ["fil", "tl"]), ("tgl", ["fil", "tl", "tgl"]),
+        ("apc", ["ajp", "apc"]), ("apc", ["apc", "ajp"]), ("ajp", ["apc", "ajp"]),
+        ("hak", ["zh-hak", "hak"]), ("zh-hak", ["hak", "zh-hak"]), ("ar-apc", ["ajp", "apc"]),
+        ("my-MM", ["my-BU", "my-MM"]), ("my", ["my-BU", "my-MM"]), ("fr", ["fra", "fr"]),
+        ("hak", ["zh-CN", "cmn", "zh-Hant"]), ("fat", ["ak", "tw"]), ("mey-DZ", ["ar", "arb"])]
 
 
 def none_or(value):
@@ -94,7 +103,11 @@ def lects_arg(mode):
 def tag_battery(rng):
     catalog = sorted(available_json_codes())
     parents = lects._parents()
-    tags = set(catalog) | set(regions._likely_regions()) | set(parents) | set(parents.values())
+    likely = regions._likely_subtags()
+    tags = set(catalog) | set(likely["regions"]) | set(likely["scripts"]) | set(parents) | set(parents.values())
+    for name in ("extlangs.json", "deprecated_languages.json"):
+        preferred = standardize._preferred_values(name)
+        tags |= set(preferred) | set(preferred.values())
     tags |= set(linguatag.OVERRIDES)
     tags |= set(registry._ALIASES) | set(registry._ALIASES.values())
     tags |= {code.split("-")[0] for code in catalog}

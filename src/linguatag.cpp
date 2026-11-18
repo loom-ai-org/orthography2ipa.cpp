@@ -14,6 +14,7 @@
 
 #include <algorithm>
 #include <mutex>
+#include <tuple>
 #include <unordered_map>
 #include <utility>
 
@@ -34,6 +35,26 @@ Map to_map(const std::pair<const char*, const char*> (&table)[N]) {
 const Map& likely_regions() {
     static const Map regions = to_map(LIKELY_REGIONS);
     return regions;
+}
+
+const Map& likely_scripts() {
+    static const Map scripts = to_map(LIKELY_SCRIPTS);
+    return scripts;
+}
+
+const Map& preferred_extlangs() {
+    static const Map preferred = to_map(PREFERRED_EXTLANGS);
+    return preferred;
+}
+
+const Map& preferred_languages() {
+    static const Map preferred = to_map(PREFERRED_LANGUAGES);
+    return preferred;
+}
+
+const Map& preferred_regions() {
+    static const Map preferred = to_map(PREFERRED_REGIONS);
+    return preferred;
 }
 
 const Map& lect_parents() {
@@ -147,9 +168,34 @@ std::string fold(const std::string& tag) {
     return join(out, 0, out.size());
 }
 
-std::string standardize_uncached(const std::string& tag) {
-    const std::string lowered = py_lower(tag);
+// _without_extlang: a language and its extlang replaced by the extlang's IANA
+// Preferred-Value (RFC 5646 section 4.5): zh-hak-TW is hak-TW.
+std::string without_extlang(const std::string& tag) {
+    std::string hyphenated = tag;
+    std::replace(hyphenated.begin(), hyphenated.end(), '_', '-');
+    const auto parts = split(hyphenated);
+    const auto preferred = preferred_extlangs().find(py_lower(join(parts, 0, std::min<std::size_t>(2, parts.size()))));
+    if (preferred == preferred_extlangs().end()) return tag;
+    std::vector<std::string> out{preferred->second};
+    out.insert(out.end(), parts.begin() + std::min<std::ptrdiff_t>(2, static_cast<std::ptrdiff_t>(parts.size())), parts.end());
+    return join(out, 0, out.size());
+}
+
+// _without_deprecated_language: a deprecated language subtag replaced by its
+// IANA Preferred-Value (RFC 5646 section 4.5): ajp-JO is apc-JO.
+std::string without_deprecated_language(const std::string& tag) {
+    std::string hyphenated = tag;
+    std::replace(hyphenated.begin(), hyphenated.end(), '_', '-');
+    const auto at = hyphenated.find('-');
+    const auto preferred = preferred_languages().find(py_lower(hyphenated.substr(0, at)));
+    if (preferred == preferred_languages().end()) return tag;
+    return at == std::string::npos ? preferred->second : preferred->second + hyphenated.substr(at);
+}
+
+std::string standardize_uncached(const std::string& tag_in) {
+    const std::string lowered = py_lower(tag_in);
     if (lowered == "tl" || lowered == "tgl") return "tl";
+    const std::string tag = without_deprecated_language(without_extlang(tag_in));
     if (auto standardized = langcodes::try_standardize_tag(tag, false)) return *standardized;
     return fold(tag);
 }
@@ -179,6 +225,20 @@ Split split_tag(const std::string& tag) {
     if (index < parts.size() && is_script(parts[index])) out.script = parts[index++];
     if (index < parts.size() && is_region(parts[index])) out.region = parts[index];
     return out;
+}
+
+// _with_likely_script: the tag with the script CLDR expects for it, where the
+// CLDR snapshot in langcodes expects another.
+std::string with_likely_script(const std::string& tag) {
+    const Split parts = split_tag(tag);
+    if (parts.script || parts.extended) return tag;
+    const Map& scripts = likely_scripts();
+    auto likely = scripts.find(parts.language + "-" + parts.region.value_or("None"));
+    if (likely == scripts.end()) likely = scripts.find(parts.language);
+    if (likely == scripts.end()) return tag;
+    auto subtags = split(tag);
+    subtags.insert(subtags.begin() + 1, likely->second);
+    return join(subtags, 0, subtags.size());
 }
 
 // ── lects.py ────────────────────────────────────────────────────────────────
@@ -237,14 +297,23 @@ std::string primary_lower(const std::string& tag) {
     return py_lower(tag.substr(0, tag.find('-')));
 }
 
-bool cantonese_against_mandarin(const std::string& a, const std::string& b) {
+bool sinitic_against_mandarin(const std::string& a, const std::string& b) {
     // A dict keyed by primary subtag: when both share one, b's entry wins.
     Map languages{{primary_lower(a), a}};
     languages[primary_lower(b)] = b;
-    if (languages.count(CANTONESE) == 0) return false;
+    if (std::none_of(languages.begin(), languages.end(),
+                     [](const auto& entry) { return listed(NOT_MANDARIN, entry.first); }))
+        return false;
     if (languages.count(MANDARIN) != 0) return true;
     const auto chinese = languages.find(CHINESE);
     return chinese != languages.end() && is_simplified(chinese->second);
+}
+
+bool former_macrolanguage_alias(const std::string& a, const std::string& b) {
+    const std::string first = primary_lower(a);
+    const std::string second = primary_lower(b);
+    return first != second
+        && (listed(FORMER_MACROLANGUAGE_ALIASES, first) || listed(FORMER_MACROLANGUAGE_ALIASES, second));
 }
 
 int coarse_distance(const std::string& desired_tag, const std::string& supported_tag) {
@@ -279,13 +348,13 @@ int language_distance(const std::string& desired, const std::string& supported) 
     b = as_world_arabic(parseable_prefix(b));
     if (py_lower(a) == py_lower(b)) return 0;
     const bool to_msa = listed(MSA, py_lower(without_private_use(b)));
-    a = with_default_region(a);
-    b = with_default_region(b);
+    a = with_likely_script(with_default_region(a));
+    b = with_likely_script(with_default_region(b));
     if (py_lower(a) == py_lower(b)) return 0;
     int distance;
     if (auto measured = langcodes::tag_distance(a, b)) distance = *measured;
     else distance = coarse_distance(a, b);
-    if (cantonese_against_mandarin(a, b))
+    if (sinitic_against_mandarin(a, b) || former_macrolanguage_alias(a, b))
         distance = std::max(distance, DIFFERENT_LANGUAGE_DISTANCE);
     const std::string language = primary_lower(a);
     std::vector<std::string> scripts;
@@ -321,6 +390,35 @@ int with_lects(int distance, const std::string& desired, const std::string& supp
     const int ceiling = std::max(distance, DEFAULT_MAX_LANGUAGE_DISTANCE);
     return std::min(distance + lect_score(desired, supported, lects), ceiling);
 }
+
+std::string language_subtag(const std::string& tag) {
+    std::string hyphenated = tag;
+    std::replace(hyphenated.begin(), hyphenated.end(), '_', '-');
+    return py_casefold(hyphenated.substr(0, hyphenated.find('-')));
+}
+
+bool has_preferred_value(const std::string& tag) {
+    return without_deprecated_language(without_extlang(tag)) != tag;
+}
+
+// matching._region_subtag: the region subtag (two letters or three digits),
+// lower case, or "".
+std::string region_subtag(const std::string& tag) {
+    std::string hyphenated = tag;
+    std::replace(hyphenated.begin(), hyphenated.end(), '_', '-');
+    const auto parts = split(hyphenated);
+    for (std::size_t i = 1; i < parts.size(); ++i) {
+        if (py_len(parts[i]) == 1) break;
+        if (is_region(parts[i])) return py_lower(parts[i]);
+    }
+    return "";
+}
+
+bool has_noncanonical_subtag(const std::string& tag) {
+    return has_preferred_value(tag) || preferred_regions().count(region_subtag(tag)) != 0;
+}
+
+bool is_other_code_of_language(const std::string& target, const std::string& candidate);
 
 } // namespace
 
@@ -416,13 +514,15 @@ std::optional<std::string> closest_lang(const std::string& target,
                                         int max_distance, Lects lects) {
     const std::string wanted = py_casefold(standardize_lang(target));
     std::optional<std::string> best;
-    std::pair<int, bool> best_rank{};
+    std::tuple<int, bool, bool, bool> best_rank{};
     for (const auto& candidate : available) {
         const int distance = cached_language_distance(target, candidate);
         if (distance > max_distance) continue;
-        const std::pair<int, bool> rank{
+        const std::tuple<int, bool, bool, bool> rank{
             with_lects(distance, target, candidate, lects),
-            py_casefold(standardize_lang(candidate)) != wanted};
+            py_casefold(standardize_lang(candidate)) != wanted,
+            is_other_code_of_language(target, candidate),
+            has_noncanonical_subtag(candidate)};
         if (!best || rank < best_rank) {
             best = candidate;
             best_rank = rank;
@@ -430,5 +530,17 @@ std::optional<std::string> closest_lang(const std::string& target,
     }
     return best;
 }
+
+namespace {
+
+// matching._is_other_code_of_language: one of the two tags has an IANA
+// Preferred-Value that gives the other (RFC 5646 section 4.5, step 3).
+bool is_other_code_of_language(const std::string& target, const std::string& candidate) {
+    return language_subtag(candidate) != language_subtag(target)
+        && (has_preferred_value(target) || has_preferred_value(candidate))
+        && language_subtag(standardize_lang(candidate)) == language_subtag(standardize_lang(target));
+}
+
+} // namespace
 
 } // namespace orthography2ipa::linguatag

@@ -70,7 +70,7 @@ jobs:
       # Bump these with the reference commit above.
       - name: Install the reference's Python requirements
         run: |
-          deps="numpy langcodes==3.5.1 linguatag==0.1.5a1"
+          deps="numpy langcodes==3.5.1 linguatag==0.3.0a1"
           python3 -m pip install $deps || python3 -m pip install --break-system-packages $deps
       # packaged-lexicon-parity enables the lexicons of o2i-lexicons in both
       # engines. Pinned to the newest release whose orthography2ipa

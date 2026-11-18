@@ -47,9 +47,9 @@ int main() {
         const struct { const char* desired; const char* supported; int distance; } rows[] = {
             {"acx-419", "ar", 5}, {"aec-XX", "ar", 5}, {"apd-oxendict", "ar", 5},
             {"acx-419", "arb", 5}, {"apd-Arab", "ar", 5}, {"aec", "arb", 5},
-            {"acx-419", "ar-EG", 64}, {"apd-Latn", "ar", 64}, {"acx-x-test", "ar", 5},
+            {"acx-419", "ar-EG", 14}, {"apd-Latn", "ar", 64}, {"acx-x-test", "ar", 5},
             {"acx-Arab-x-oman", "ar", 5}, {"ar-Latn", "ar", 24}, {"arz-Latn", "ar", 64},
-            {"yue", "zh", 100}, {"mt", "ar", 134}, {"he", "ar", 134}, {"ar", "acx", 134},
+            {"yue", "zh", 100}, {"mt", "ar", 134}, {"he", "ar", 134}, {"ar", "acx", 84},
             {"ar-SA", "ar", 4}};
         for (const auto& row : rows)
             assert(linguatag::lang_distance(row.desired, row.supported) == row.distance);

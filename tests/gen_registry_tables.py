@@ -30,7 +30,7 @@ if not (pathlib.Path(reference) / "orthography2ipa" / "phonetok.py").is_file():
     sys.exit(f"reference package not found at {reference!r}")
 sys.path.insert(0, reference)
 
-from linguatag import lects, matching, regions  # noqa: E402
+from linguatag import lects, matching, regions, standardize  # noqa: E402
 from linguatag.version import VERSION_STR as LINGUATAG_VERSION  # noqa: E402
 import orthography2ipa.registry as registry  # noqa: E402
 
@@ -105,7 +105,7 @@ def registry_tables() -> str:
 
 
 def linguatag_tables() -> str:
-    likely = regions._likely_regions()
+    likely = regions._likely_subtags()["regions"]
     parents = lects._parents()
     overrides = ["// linguatag.regions OVERRIDES: language -> (script, region) of its",
                  "// default, where the region is not the CLDR likely region.",
@@ -122,13 +122,26 @@ def linguatag_tables() -> str:
         table("LIKELY_REGIONS", likely,
               "// linguatag data/likely_regions.json `regions`: the CLDR likely region",
               "// of a language, or of a language-script pair."),
+        table("LIKELY_SCRIPTS", regions._likely_subtags()["scripts"],
+              "// linguatag data/likely_regions.json `scripts`: the CLDR likely script",
+              "// of a language, or of a language-region pair, where the CLDR snapshot",
+              "// in langcodes gives another."),
+        table("PREFERRED_EXTLANGS", standardize._preferred_values("extlangs.json"),
+              "// linguatag data/extlangs.json `preferred`: a language-extlang pair,",
+              "// lower case, mapped to the extlang's IANA Preferred-Value."),
+        table("PREFERRED_LANGUAGES", standardize._preferred_values("deprecated_languages.json"),
+              "// linguatag data/deprecated_languages.json `preferred`: a deprecated",
+              "// language subtag mapped to its IANA Preferred-Value."),
+        table("PREFERRED_REGIONS", standardize._preferred_values("deprecated_regions.json"),
+              "// linguatag data/deprecated_regions.json `preferred`: a deprecated",
+              "// region subtag, lower case, mapped to its IANA Preferred-Value."),
         table("LECT_PARENTS", parents,
               "// linguatag data/lineage.json `parents`: the lect tree, each tag",
               "// mapped to its parent."),
         string_list("ARABIC_VARIETIES", sorted(matching._ARABIC_VARIETIES),
                     "// linguatag.matching _ARABIC_VARIETIES: the individual languages of",
-                    "// the ISO 639-3 `ara` macrolanguage, and `ar`. The source holds a",
-                    "// frozenset; it is sorted."),
+                    "// the ISO 639-3 `ara` macrolanguage, `ar` and Hassaniyya (`mey`). The",
+                    "// source holds a frozenset; it is sorted."),
         string_list("LATIN_SCRIPT_ARABIC", sorted(matching._LATIN_SCRIPT_ARABIC),
                     "// linguatag.matching _LATIN_SCRIPT_ARABIC: the Arabic varieties CLDR",
                     "// writes in Latin script. A request for one with no script subtag is",
@@ -142,7 +155,14 @@ def linguatag_tables() -> str:
         constant("DEFAULT_MAX_LANGUAGE_DISTANCE", matching.DEFAULT_MAX_LANGUAGE_DISTANCE,
                  "// linguatag.matching DEFAULT_MAX_LANGUAGE_DISTANCE: the inclusive",
                  "// upper bound of a usable match."),
-        constant("CANTONESE", matching._CANTONESE, "// linguatag.matching _CANTONESE."),
+        string_list("NOT_MANDARIN", sorted(matching._NOT_MANDARIN),
+                    "// linguatag.matching _NOT_MANDARIN: the spoken members of the `zh`",
+                    "// macrolanguage other than Mandarin. The source holds a frozenset;",
+                    "// it is sorted."),
+        string_list("FORMER_MACROLANGUAGE_ALIASES", sorted(matching._FORMER_MACROLANGUAGE_ALIASES),
+                    "// linguatag.matching _FORMER_MACROLANGUAGE_ALIASES: Fanti and Mandinka,",
+                    "// which langcodes reads as Akan and Mandingo. The source holds a",
+                    "// frozenset; it is sorted."),
         constant("MANDARIN", matching._MANDARIN, "// linguatag.matching _MANDARIN."),
         constant("CHINESE", matching._CHINESE, "// linguatag.matching _CHINESE."),
         constant("LECT_FAR", lects._FAR, "// linguatag.lects _FAR."),
@@ -164,7 +184,7 @@ def main() -> None:
           "arabic_varieties=%d msa=%d max_distance=%d" % (
               len(registry._ALIASES), len(registry._RENAMED),
               len(registry._REGION_DEFAULTS), len(regions.OVERRIDES),
-              len(regions._likely_regions()), len(lects._parents()),
+              len(regions._likely_subtags()["regions"]), len(lects._parents()),
               len(matching._ARABIC_VARIETIES), len(matching._MSA),
               matching.DEFAULT_MAX_LANGUAGE_DISTANCE))
 
