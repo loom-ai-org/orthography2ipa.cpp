@@ -522,6 +522,20 @@
       "notes": "Voiced counterpart of PT_CODA_S_HUSH: a coda /z/ -> [ʒ] in Lisbon/standard European Portuguese. Mateus & d'Andrade (2000: ch.2)."
     },
     {
+      "id": "PT_STRONG_R_AFTER_CODA",
+      "phonemes": [
+        "ɾ"
+      ],
+      "surface": "ʁ",
+      "preceded_by_grapheme": [
+        "n",
+        "m",
+        "s",
+        "l"
+      ],
+      "notes": "An ⟨r⟩ at the start of a syllable after a coda consonant or a nasal vowel is the strong rhotic, not the tap: honra [ˈõʁɐ], genro [ˈʒẽʁu], Israel [iʒʁɐˈɛɫ], melro [ˈmɛɫʁu], desrespeito. Pereira (2020: 11): 'Os contextos fonotáticos de ocorrência da vibrante múltipla [ʀ] (R-forte) são os seguintes [...] Ataque simples precedida de consoante em coda: melro [ˈmɛɫʀu], Israel [iʒʀɐˈɛɫ]; Ataque simples em início de sílaba precedida de autossegmento nasal (assumindo a sua existência, ou vogal nasal a um nível fonético): genro [ˈʒẽʀu].' Pereira attributes the list to Mateus e Andrade (2000: 15) and Mateus, Falé & Freitas (2016: 135-136); those two works are cited through Pereira and were not read. The same page gives the tap in a branching onset after an obstruent (prato [ˈpɾatu]). Infopédia agrees: its pt-PT readings write the strong [ʀ] after ⟨n⟩ in 180 of 182, after ⟨l⟩ in 126 of 126 and after ⟨s⟩ in 77 of 77 (honra ˈõʀɐ, guelra ˈɡɛɫʀɐ, bilro ˈbiɫʀu, desrespeito dəʒʀəʃˈpɐjtu, enredo ẽˈʀedu, palrar paɫˈʀar); the two exceptions are enresinar and nrima. The rule writes the spec's strong rhotic [ʁ], the value of ⟨rr⟩ in carro. It reads the previous letter: the ⟨n⟩ or ⟨m⟩ of a nasal vowel, a coda ⟨s⟩ or a coda ⟨l⟩. The condition is a letter and not a phoneme, because ⟨ch⟩ also spells [ʃ] and never closes a syllable: Christo and Cochran keep the tap. PT_CODA_S_VOICING_INTERNAL reads the tap and the strong rhotic alike, so the coda sibilant stays [ʒ] before it, as Infopédia writes it. The tap of an onset cluster (prato, abraço) and the tap after a diphthong (feira, Europa) are untouched. A child with another strong rhotic overrides this rule by id."
+    },
+    {
       "id": "PT_LEX_OPEN_ER",
       "phonemes": [
         "e",
@@ -1363,6 +1377,117 @@
       ],
       "followed_by_2": "front_vowel",
       "notes": "The stressed ⟨oi⟩ of the ending ⟨-oide⟩ and its plural ⟨-oides⟩ is the open diphthong [ɔj]: asteroide [ɐʃtɨˈɾɔjdɨ], alcaloide [aɫkɐˈlɔjdɨ], androide [ɐ̃ˈdɾɔjdɨ]. Cunha & Cintra, Nova Gramática do Português Contemporâneo, 7.ª ed., pp. XXX-XXXI, summarise the 1990 orthography for the Brazilian spelling: 'Os ditongos abertos tônicos éi e ói perdem o acento agudo quando caem na penúltima sílaba (portanto, de palavras paroxítonas)', with 'debilóide(s) passa a ser debiloide(s)'. The European spelling before 1990 also wrote the ending with the acute (asteróide, alcalóide), the mark of the open vowel; the Conclusões complementares of the 1945 Acordo, item 23, write the adverb of such an adjective 'heròicamente'. The 1990 Acordo, Base IX, 3.º, drops the accent 'dado que existe oscilação em muitos casos entre o fechamento e a abertura na sua articulação', and names alcaloide. No source read names the European vowel of the ending directly. Infopédia (Porto Editora) gives [ɔj] first in all 198 single headwords in ⟨-oide⟩ and ⟨-oides⟩, and the Wiktionary pt-PT readings of WikiPron (por_latn_po_broad) give [ɔj] in 99 of 102. The ⟨d⟩ and the front vowel after the diphthong keep the rule to the ending: boia, heroico, dezoito do not take it. The rule targets the [o] of the [oj] slot and names the [j] after it, so it works on that one segment and leaves the slot's other rules alone. The verb forms of adoidar and endoidar keep [oj] through PT_LEX_OIDAR_CLOSE. The ⟨oi⟩ slot has the one value [oj] in the grapheme table, so the rule leaves no [oj] lattice candidate. Terceira, the African and Asian varieties, Barrancos and the creoles disable this rule."
+    },
+    {
+      "id": "PT_LEX_OIA_CLOSE",
+      "phonemes": [
+        "o"
+      ],
+      "surface": "o",
+      "stress": "stressed",
+      "grapheme": [
+        "oi"
+      ],
+      "followed_by_phoneme": [
+        "j"
+      ],
+      "followed_by_grapheme": [
+        "a"
+      ],
+      "word": [
+        "apoia",
+        "apoiam",
+        "apoias",
+        "arroia",
+        "arroiam",
+        "arroias",
+        "desapoia",
+        "desapoiam",
+        "desapoias",
+        "poia",
+        "poiam",
+        "poias",
+        "saloia",
+        "saloias"
+      ],
+      "notes": "Words in ⟨-oia⟩ whose European spelling before 1990 had no acute keep the close diphthong [oj]: saloia (feminine of saloio [sɐˈloju]), poia, arroia, and the forms apoia, apoias, apoiam, desapoia, desapoias, desapoiam and poiam of apoiar, desapoiar and poiar. Under the 1945 Acordo, Base XIII, an unaccented paroxytone ⟨oi⟩ is the close diphthong, and Base XVI names comboio and dezoito as the paroxytones whose ⟨oi⟩ drops the acute. The Vocabulário de Mudança of the Portal da Língua Portuguesa (ILTEC) lists the verb forms whose spelling changes with AO90 (http://www.portaldalinguaportuguesa.org/index.php?action=novoacordo&page=formas). Its only verbs in ⟨-oiar⟩ with an acute before 1990 are aboiar, boiar, comboiar and enjoiar (abóio, bóias, combóiam, enjóie). apoiar, desapoiar, arroiar and poiar are not on that list. Its word search (http://www.portaldalinguaportuguesa.org/index.php?action=novoacordo&act=list&version=pe&search=saloia) gives 'A grafia da palavra saloia não muda com o AO'. Infopédia gives poia [ˈpojɐ]. For apoiar the sources conflict. Cunha & Cintra, Nova Gramática do Português Contemporâneo, 7.ª ed., p. 431, obs. 3.ª a), put a first-conjugation verb with ⟨o⟩ in the stem in the open class of lograr, except where the ⟨o⟩ is part of the diphthong oi 'seguido de consoante'. The ⟨oi⟩ of apoiar comes before a vowel, so their model predicts the open [ɔ] in apoia. This rule follows the 1945 spelling. The rule comes before PT_SUFFIX_OIA_OPEN and leaves the slot as it is. The varieties that disable PT_SUFFIX_OIA_OPEN disable this rule too."
+    },
+    {
+      "id": "PT_SUFFIX_OIA_OPEN",
+      "phonemes": [
+        "o"
+      ],
+      "surface": "ɔ",
+      "stress": "stressed",
+      "grapheme": [
+        "oi"
+      ],
+      "followed_by_phoneme": [
+        "j"
+      ],
+      "followed_by_grapheme": [
+        "a"
+      ],
+      "notes": "The stressed ⟨oi⟩ of the ending ⟨-oia⟩ and its plural ⟨-oias⟩ is the open diphthong [ɔj]: boia [ˈbɔjɐ], joia [ˈʒɔjɐ], jiboia [ʒiˈbɔjɐ], paranoia [pɐɾɐˈnɔjɐ]. The Acordo Ortográfico de 1945, Bases Analíticas, Base XIII, lists 'oi' and 'ói (apenas tónico)' as two diphthongs. Base XVI drops the acute 'no ditongo oi de algumas palavras paroxítonas' only, and names 'comboio (todavia combóio, como flexão de comboiar), dezoito'. Base XXIII writes the grave accent in 'os advérbios em mente que provêm de formas marcadas com acento agudo' (heròicamente) and in derivatives with ⟨z⟩ 'cujas formas básicas são também marcadas com acento agudo' (bòiazinha). So the European spelling before 1990 wrote bóia, jóia, jibóia, paranóia and combóia with the acute of the open vowel. The Acordo Ortográfico de 1990, Base IX, 3.º, drops the accent of paroxytone ⟨oi⟩ 'dado que existe oscilação em muitos casos entre o fechamento e a abertura na sua articulação', and names boia and jiboia. No source read names the European vowel of the ending directly. Infopédia (Porto Editora) gives [ɔj] first in 28 of 29 single headwords in ⟨-oia⟩; poia is the other. The Wiktionary pt-PT readings of WikiPron (por_latn_po_broad) give [ɔj] in 16 of 16. The rule needs the ⟨a⟩ after the stressed ⟨oi⟩, so apoio, comboio, boina and dezoito do not take it. Words whose pre-1990 spelling had no acute keep [oj] through PT_LEX_OIA_CLOSE. The rule targets the [o] of the [oj] slot and names the [j] after it, so it leaves the slot's other rules alone. Terceira, the African and Asian varieties, Barrancos and the creoles disable this rule."
+    },
+    {
+      "id": "PT_SUFFIX_OICO_OPEN",
+      "phonemes": [
+        "o"
+      ],
+      "surface": "ɔ",
+      "stress": "stressed",
+      "grapheme": [
+        "oi"
+      ],
+      "followed_by_phoneme": [
+        "j"
+      ],
+      "followed_by_grapheme": [
+        "c"
+      ],
+      "followed_by_2": "back_vowel",
+      "notes": "The stressed ⟨oi⟩ of the ending ⟨-oico⟩ and its inflections ⟨-oica -oicos -oicas⟩ is the open diphthong [ɔj]: heroico, paranoico [pɐɾɐˈnɔjku], estoico, benzoico, mesozoico. The Acordo Ortográfico de 1945, Bases Analíticas, Base XIII, lists 'oi' and 'ói (apenas tónico)' as two diphthongs. Base XVI drops the acute 'no ditongo oi de algumas palavras paroxítonas' only, and names 'comboio (todavia combóio, como flexão de comboiar), dezoito'. Base XXIII writes the grave accent in 'os advérbios em mente que provêm de formas marcadas com acento agudo' (heròicamente) and in derivatives with ⟨z⟩ 'cujas formas básicas são também marcadas com acento agudo' (bòiazinha). So the European spelling before 1990 wrote heróico, paranóico and estóico with the acute of the open vowel. The Acordo Ortográfico de 1990, Base IX, 3.º, drops the accent of paroxytone ⟨oi⟩ 'dado que existe oscilação em muitos casos entre o fechamento e a abertura na sua articulação', and names heroico and paranoico. No source read names the European vowel of the ending directly. Infopédia (Porto Editora) gives [ɔj] first in 37 of 37 single headwords in ⟨-oico⟩ and ⟨-oica⟩. The Wiktionary pt-PT readings of WikiPron (por_latn_po_broad) give [ɔj] in 17 of 21; alantoico, benzoica, benzoicas and benzoicos have [oj] there. The rule needs ⟨c⟩ and a back vowel after the stressed ⟨oi⟩, so foice, coice and oiço do not take it. The rule targets the [o] of the [oj] slot and names the [j] after it. Terceira, the African and Asian varieties, Barrancos and the creoles disable this rule."
+    },
+    {
+      "id": "PT_DERIV_OICAMENTE_OPEN",
+      "phonemes": [
+        "o"
+      ],
+      "surface": "ɔ",
+      "grapheme": [
+        "oi"
+      ],
+      "followed_by_phoneme": [
+        "j"
+      ],
+      "followed_by_grapheme": [
+        "c"
+      ],
+      "word_contains_grapheme": [
+        "oicamente"
+      ],
+      "notes": "The ⟨oi⟩ of an adverb in ⟨-oicamente⟩ keeps the open diphthong [ɔj] of its adjective in ⟨-oico -oica⟩: heroicamente [iɾɔjkɐˈmẽtɨ], estoicamente [iʃtɔjkɐˈmẽtɨ]. The Acordo Ortográfico de 1945, Bases Analíticas, Base XXIII: 'Escrevem-se com acento grave, na parte anterior ao sufixo, os advérbios em mente que provêm de formas marcadas com acento agudo: [...] heròicamente'. The grave accent wrote the open vowel of the base in the unstressed syllable before the suffix. The European spelling before 1990 wrote the adjective in ⟨-oico -oica⟩ with the acute (heróico, estóico; PT_SUFFIX_OICO_OPEN), so every adverb in ⟨-oicamente⟩ comes from a form marked with the acute. The Acordo Ortográfico de 1990 drops the grave accent of these adverbs. Cunha & Cintra (Nova Gramática do Português Contemporâneo, p. 53) state the same fact for the derivatives in ⟨-mente⟩ and ⟨-inho⟩: 'não sofreram, em geral, redução as vogais tônicas de palavras simples nos vocábulos delas derivados, particularmente com os sufixos -mente ou -inho (-zinho)'. Infopédia (Porto Editora) gives [ɔj] in heroicamente and estoicamente, its two single headwords in ⟨-oicamente⟩, and the Lisbon 'pronúncia indicativa' of the Portal da Língua Portuguesa gives [ɔj] in both. Base XXIII names only the adverbs in mente and the derivatives with an infix ⟨z⟩, so the rule needs ⟨-oicamente⟩ in the word. Other derivatives keep their [oj]: Infopédia gives estoicismo, boicote and moicano with [oj]. Infopédia also gives [ɔj] in heroicidade, estoicidade and monozoicidade, which Base XXIII does not name; PT_DERIV_OICIDADE_OPEN covers them. The rule targets the [o] of the [oj] slot and names the [j] after it. Terceira, the African and Asian varieties, Barrancos and the creoles disable this rule."
+    },
+    {
+      "id": "PT_DERIV_OICIDADE_OPEN",
+      "phonemes": [
+        "o"
+      ],
+      "surface": "ɔ",
+      "grapheme": [
+        "oi"
+      ],
+      "followed_by_phoneme": [
+        "j"
+      ],
+      "followed_by_grapheme": [
+        "c"
+      ],
+      "word_contains_grapheme": [
+        "oicidade"
+      ],
+      "notes": "The ⟨oi⟩ of a noun in ⟨-oicidade⟩ keeps the open diphthong [ɔj] of its adjective in ⟨-oico -oica⟩: heroicidade [iɾɔjsiˈdadɨ], estoicidade [iʃtɔjsiˈdadɨ], monozoicidade. Cunha & Cintra (Nova Gramática do Português Contemporâneo, p. 53) state a general clause, with the hedge 'em geral': 'não sofreram, em geral, redução as vogais tônicas de palavras simples nos vocábulos delas derivados, particularmente com os sufixos -mente ou -inho (-zinho)'. Their examples are derivatives in -mente and -inho (avaramente, brevemente, pezinho, avezinha); they give no example in -idade, and they name casinha, mesinha and folhinha as derivatives that reduce. The adjectives in ⟨-oico -oica⟩ have the stressed open [ɔj] (PT_SUFFIX_OICO_OPEN). Infopédia (Porto Editora) gives [ɔj] in all 3 of its headwords in ⟨-oicidade⟩: heroicidade, estoicidade and monozoicidade. The Lisbon 'pronúncia indicativa' of the Portal da Língua Portuguesa gives heroicidade with [ɔj]. The rule needs ⟨-oicidade⟩ in the word, because Infopédia and the Portal give estoicismo, a derivative of the same adjective, with [oj], and boicote and moicano, with no adjective in ⟨-oico⟩, with [oj]. The rule targets the [o] of the [oj] slot and names the [j] after it. Terceira, the African and Asian varieties, Barrancos and the creoles disable this rule."
     },
     {
       "id": "PT_LEX_X_S",
@@ -2380,7 +2505,7 @@
   ],
   "quality": "research",
   "script_type": "alphabet",
-  "notes": "Modern European Portuguese (PT-PT). Base mapping uses a neutral orthographic standard. Digraphs per Acordo Ortográfico. Portuguese preserves the /v/~/b/ distinction (unique in Ibero-Romance — Castilian merged them). Nasal vowels and extreme vowel reduction are diagnostic features. Post-lexical allophony: the diagnostic EP unstressed vowel reduction (unstressed /a/->[ɐ], /e/->[ɨ] (word-final often deletable), /o/->[u]) is realised in the PRE-lexical positional_graphemes map (the nucleus_stressed/nucleus_unstressed/pretonic/posttonic/word_final rows), so no redundant allophone rule restates it. The allophone_rules layer adds the post-lexical CONSONANT realisations that the grapheme map cannot reach cleanly at word edges: dark coda /l/->[ɫ], and the Lisbon-standard coda sibilants /s/->[ʃ], /z/->[ʒ] (the 'chiado'). Intervocalic voiced-stop spirantisation (/b d ɡ/->[β ð ɣ]; Mateus & d'Andrade 2000) is a genuine EP process but is DELIBERATELY NOT encoded here: every available pt gold (infopedia_pt, ep_dialects, wikipron) is broad/phonemic and transcribes the stops, so a spirantisation rule is correct yet regresses all measurable golds with none rewarding it; it is left for a future narrow-transcription task. Dialect-specific sibilant/vocalism deltas (northern apico-alveolar coda [s̺], insular vocalism) are handled by the pt-PT-x-* dialect specs, not the base. Benchmark honesty: the coda sibilant rules improve every pt gold; the dark-l rule improves the narrow human golds (infopedia_pt, ep_dialects) but regresses the broader WikiPron pt row (which transcribes coda /l/ as plain [l]) — it is kept per the honesty gate because the higher-quality golds reward it, with the divergence documented. Coda vowel nasalisation: a vowel before a tautosyllabic (coda) ⟨m/n⟩ nasalises (campo [ˈkɐ̃pu], sim [ˈsĩ], bom [ˈbõ]); this is modelled by the positional m/n before_consonant/word_final → U+0303 tilde plus the PT_NASAL_*_RAISE / PT_NASAL_O_UNRED vowel-quality rules (Mateus & d'Andrade 2000: ch.2, 'Nasality'). Word-final ⟨-am⟩, ⟨-em/-ém⟩ and ⟨-ens/-éns⟩ are the nasal DIPHTHONGS [ɐ̃w̃], [ɐ̃j̃] and [ɐ̃j̃ʃ] (cantam [ˈkɐ̃tɐ̃w̃], homem [ˈɔmɐ̃j̃], homens [ˈɔmɐ̃j̃ʃ]), built by the PT_FINAL_* allophone rules. Northern lects and the Algarve override the -em/-ens nucleus in their own specs. A nasal vowel does not reduce: the unstressed nasal ⟨e⟩ is [ẽ], never [ɨ̃] (PT_NASAL_E_UNRED; the Minho lects keep a pretonic [ɨ̃]). Related pre-existing gap (NOT introduced by nasalisation): the ⟨gu⟩ digraph maps to [ɡ] dropping a NUCLEAR ⟨u⟩ before a consonant (algum, segundo, água), which is wrong for gu+a/o/u; the coda-nasalisation engine guard only ensures no invalid tilde is emitted onto the stranded [ɡ], it does not fix the ⟨gu⟩ vowel-drop itself. SIBILANTS: the standard has plain alveolar /s z/. Cruz-Ferreira's IPA illustration of the Lisbon standard (Handbook of the IPA 1999, pp. 126-127) puts plain s and z in the Alveolar column of the consonant chart, with caço [ˈkasu] against caso [ˈkazu]. ⟨ss⟩ is therefore declared here as [s]. Without the key, the ⟨ss⟩ of roa-x-galaico-pt and pt-PT-x-medieval fell through as the apico-alveolar [s̺], and isso came out [ˈis̺u]. Positional ⟨c⟩ before ⟨e i⟩, ⟨ç⟩ and ⟨s⟩ were already plain. Mateus & d'Andrade 2000 was sought for this entry and not read. The northern apico-alveolar is a dialect delta: a pt-PT-x-* spec that has it declares its own ⟨ss⟩.",
+  "notes": "Modern European Portuguese (PT-PT). Base mapping uses a neutral orthographic standard. Digraphs per Acordo Ortográfico. Portuguese preserves the /v/~/b/ distinction (unique in Ibero-Romance — Castilian merged them). Nasal vowels and extreme vowel reduction are diagnostic features. Post-lexical allophony: the diagnostic EP unstressed vowel reduction (unstressed /a/->[ɐ], /e/->[ɨ] (word-final often deletable), /o/->[u]) is realised in the PRE-lexical positional_graphemes map (the nucleus_stressed/nucleus_unstressed/pretonic/posttonic/word_final rows), so no redundant allophone rule restates it. The allophone_rules layer adds the post-lexical CONSONANT realisations that the grapheme map cannot reach cleanly at word edges: dark coda /l/->[ɫ], and the Lisbon-standard coda sibilants /s/->[ʃ], /z/->[ʒ] (the 'chiado'). Intervocalic voiced-stop spirantisation (/b d ɡ/->[β ð ɣ]; Mateus & d'Andrade 2000) is a genuine EP process but is DELIBERATELY NOT encoded here: every available pt gold (infopedia_pt, ep_dialects, wikipron) is broad/phonemic and transcribes the stops, so a spirantisation rule is correct yet regresses all measurable golds with none rewarding it; it is left for a future narrow-transcription task. Dialect-specific sibilant/vocalism deltas (northern apico-alveolar coda [s̺], insular vocalism) are handled by the pt-PT-x-* dialect specs, not the base. Benchmark honesty: the coda sibilant rules improve every pt gold; the dark-l rule improves the narrow human golds (infopedia_pt, ep_dialects) but regresses the broader WikiPron pt row (which transcribes coda /l/ as plain [l]) — it is kept per the honesty gate because the higher-quality golds reward it, with the divergence documented. Coda vowel nasalisation: a vowel before a tautosyllabic (coda) ⟨m/n⟩ nasalises (campo [ˈkɐ̃pu], sim [ˈsĩ], bom [ˈbõ]); this is modelled by the positional m/n before_consonant/word_final → U+0303 tilde plus the PT_NASAL_*_RAISE / PT_NASAL_O_UNRED vowel-quality rules (Mateus & d'Andrade 2000: ch.2, 'Nasality'). Word-final ⟨-am⟩, ⟨-em/-ém⟩ and ⟨-ens/-éns⟩ are the nasal DIPHTHONGS [ɐ̃w̃], [ɐ̃j̃] and [ɐ̃j̃ʃ] (cantam [ˈkɐ̃tɐ̃w̃], homem [ˈɔmɐ̃j̃], homens [ˈɔmɐ̃j̃ʃ]), built by the PT_FINAL_* allophone rules. Northern lects and the Algarve override the -em/-ens nucleus in their own specs. A nasal vowel does not reduce: the unstressed nasal ⟨e⟩ is [ẽ], never [ɨ̃] (PT_NASAL_E_UNRED; the Minho lects keep a pretonic [ɨ̃]). Related pre-existing gap (NOT introduced by nasalisation): the ⟨gu⟩ digraph maps to [ɡ] dropping a NUCLEAR ⟨u⟩ before a consonant (algum, segundo, água), which is wrong for gu+a/o/u; the coda-nasalisation engine guard only ensures no invalid tilde is emitted onto the stranded [ɡ], it does not fix the ⟨gu⟩ vowel-drop itself. SIBILANTS: the standard has plain alveolar /s z/. Cruz-Ferreira's IPA illustration of the Lisbon standard (Handbook of the IPA 1999, pp. 126-127) puts plain s and z in the Alveolar column of the consonant chart, with caço [ˈkasu] against caso [ˈkazu]. ⟨ss⟩ is therefore declared here as [s]. Without the key, the ⟨ss⟩ of roa-x-galaico-pt and pt-PT-x-medieval fell through as the apico-alveolar [s̺], and isso came out [ˈis̺u]. Positional ⟨c⟩ before ⟨e i⟩, ⟨ç⟩ and ⟨s⟩ were already plain. Mateus & d'Andrade 2000 was sought for this entry and not read. The northern apico-alveolar is a dialect delta: a pt-PT-x-* spec that has it declares its own ⟨ss⟩. APOSTROPHE: the 1990 orthographic agreement (Base XVIII 1º a), p. 18, and 1º b)-c), p. 19, of the APEL text) writes the contractions d'Ele, n'Ela, pel'A, lh'O and the elisions Sant'Ana and Nun'Álvares with an apostrophe, and states that the graphic split 'nunca impede na leitura a combinação fonética'. The two parts are read as one word, so word_internal_apostrophe is true. apostrophe_elision is true, so the word takes the host's clitic status and whole-word entry, and d'Os reads as the contraction dos. The agreement does not list ⟨d'água⟩, and it is not claimed here.",
   "sources": [
     {
       "id": "mateus_dandrade2000",
@@ -2481,6 +2606,26 @@
       "url": null,
       "pages": "28",
       "notes": "Read only as quoted by Vázquez Diéguez (2015: 244)."
+    },
+    {
+      "id": "ao1990_base18",
+      "author": "Academia das Ciências de Lisboa, Academia Brasileira de Letras et al.",
+      "year": 1990,
+      "title": "Acordo Ortográfico da Língua Portuguesa, Base XVIII (Do apóstrofo)",
+      "publisher": "Lisbon, 12 October 1990 (text as published by APEL)",
+      "url": "https://www.apel.pt/wp-content/uploads/2023/02/AcordoOrtogrLinguaPortug.pdf",
+      "pages": "18-19",
+      "notes": "READ (open PDF). Base XVIII 1º a) on p. 18, 1º b)-c) on p. 19: the apostrophe splits a contraction in writing (d'Os Lusíadas, n'Os Sertões, pel'Os Lusíadas) and 'a dissolução gráfica nunca impede na leitura a combinação fonética'; it marks a pronoun contraction given a capital (d'Ele, n'Ela, pel'A, lh'O) and the elision of a final vowel in Sant'Ana, Nun'Álvares, Pedr'Eanes."
+    },
+    {
+      "id": "pereira2020",
+      "author": "Pereira, R.M.S.",
+      "year": 2020,
+      "title": "O R-forte em Português Europeu: análise fonológica de dados dialetais",
+      "publisher": "MA dissertation, Faculdade de Letras, Universidade de Lisboa",
+      "url": "https://repositorio.ulisboa.pt/server/api/core/bitstreams/2510503a-f7a8-469e-9d1a-40e9d974576f/content",
+      "pages": "11",
+      "notes": "Strong /r/ after a coda consonant or a nasal vowel (PT_STRONG_R_AFTER_CODA). Page 11 lists the contexts of the strong rhotic in standard European Portuguese and attributes them to Mateus e Andrade (2000: 15) and Mateus, Falé & Freitas (2016: 135-136), which are cited through this page."
     }
   ],
   "wikipedia": [
@@ -2586,5 +2731,7 @@
     "longitude": -8.1,
     "source": "glottolog",
     "notes": "Glottolog's representative point for Portuguese."
-  }
+  },
+  "word_internal_apostrophe": true,
+  "apostrophe_elision": true
 }

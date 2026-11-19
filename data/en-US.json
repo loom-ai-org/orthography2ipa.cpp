@@ -49,7 +49,7 @@
       "notes": "Middle English descent via colonial English"
     }
   ],
-  "notes": "General American (GA) — reference accent for US media/education. RHOTIC: /r/ preserved in all positions. No TRAP-BATH split (bath words = /æ/). LOT-PALM merger: /ɑ/ for both (written without the length mark — see BROAD BY DECLARATION and the no-length-marks paragraph below). T-FLAPPING: /t/ → [ɾ] between vowels (butter, water, city) — an ALLOPHONIC process, declared in `allophones` and deliberately not in the default broad output; see BROAD BY DECLARATION below. Source: Wells (1982) vol. 3, Ladefoged & Johnson (2011). FLAPPING: /t/ and /d/ → [ɾ] intervocalically in unstressed syllables (butter, ladder, city). RHOTIC: fully rhotic — /r/ preserved in all positions. GA GOAT is /oʊ/, not the RP /əʊ/ this spec's parent declares (Wells 1982 vol.3 §6.1.4). The RP coda-/r/ deletion this spec inherits is re-declared with no target phonemes (Wells 1982 vol.3 §6.1; Ladefoged & Johnson 2011) — the id-keyed way a dialect states it lacks a parent's process. SUFFIX PALATALIZATION, RHOTIC COLUMN: the three yod-coalescing suffixes this spec inherits end in a coda /r/ that GA keeps, so each is re-declared with the r-coloured schwa [ɚ] in place of the RP [ə]. ENDING \"ture\" is [tʃɚ] (nature, picture, feature) — the coalesced coronal plus GA r-coloured schwa (Wells 2008 LPD; Wells 1982 vol 3 §6.1). ENDING \"sure\" is [ʒɚ] (measure, closure, leisure) — the same, with the voiced coronal (Wells 2008 LPD; Wells 1982 vol 3 §6.1). ENDING \"ssure\" is [ʃɚ] (pressure, fissure) — the same after the voiceless ⟨ss⟩, which longest-match-wins picks over ⟨-sure⟩ (Wells 2008 LPD; Wells 1982 vol 3 §6.1). BROAD BY DECLARATION: the default transcription is PHONEMIC. T/D-FLAPPING and word-initial aspiration are sub-phonemic realisations of /t/ and /d/ (Wells 1982 vol.3 §6.1.5 on the GA tapped /t/; Kretzschmar 2004 §2, which describes flapping as an allophonic rule of the reference accent; Ladefoged & Johnson 2011 ch. 3 on English aspiration as an allophone of the voiceless stop series), so they are declared in `allophones` — the field that states a phoneme's surface variants — and NOT forced into the default output by `positional_graphemes`. The narrow-vs-broad choice is the data's to make (see orthography2ipa.inventory.phoneme_inventory), and GA reference sources transcribe /t/ and /d/ phonemically (Kenyon & Knott 1953; Labov, Ash & Boberg 2006). General American is conventionally transcribed WITHOUT length marks: the RP length contrast this spec's parent declares is not part of the GA system, where the tense/lax opposition carries the contrast and duration is its allophonic correlate (Wells 1982 vol.3 §6.1.1; Kenyon & Knott 1953, the reference American pronouncing dictionary, which uses no length mark at all; Labov, Ash & Boberg 2006 §2.1, whose North-American vowel system is stated the same way; Kretzschmar 2004 §2). General American has TRUE r-coloured vowels, written with the rhotacised symbols ɝ (stressed NURSE) and ɚ (unstressed lettER) rather than as a vowel plus a separate rhotic consonant (Wells 1982 vol.3 §6.1.2; Kenyon & Knott 1953; Ladefoged & Johnson 2011 ch. 4; Kretzschmar 2004 §2). NO-LENGTH COVERAGE: the length marks are dropped by per-phoneme rules, so every length-bearing emission needs one. Besides the plain vowels that means the yod-plus-GOOSE compound ⟨u⟩/⟨eau⟩ reads as (juː → ju), and the five strong-form function words the parent freezes whole in `word_exceptions` (be, he, me, we, she) — a frozen exception bypasses the rule layer by design, so those are restated here in American notation rather than rewritten (Kenyon & Knott 1953; Wells 2008 LPD). The variant sets in `allophones` still list ʉː and ɝː, which is correct: those are declared VARIANTS of the parent's vowels and never the default reading. GRAPHEME ⟨aa⟩: the digraph occurs in English only in loans and proper names (aardvark, bazaar, salaam, Aachen), where GA reads it as the single low back vowel ɑ, never as a vowel sequence (Wells 2008 LPD). Without the entry the two ⟨a⟩s are read separately and the word gains a spurious syllable.",
+  "notes": "General American (GA) — reference accent for US media/education. RHOTIC: /r/ preserved in all positions. No TRAP-BATH split (bath words = /æ/). LOT-PALM merger: /ɑ/ for both (written without the length mark — see BROAD BY DECLARATION and the no-length-marks paragraph below). T-FLAPPING: /t/ → [ɾ] between vowels (butter, water, city) — an ALLOPHONIC process, declared in `allophones` and deliberately not in the default broad output; see BROAD BY DECLARATION below. Source: Wells (1982) vol. 3, Ladefoged & Johnson (2011). FLAPPING: /t/ and /d/ → [ɾ] intervocalically in unstressed syllables (butter, ladder, city). RHOTIC: fully rhotic — /r/ preserved in all positions. GA GOAT is /oʊ/, not the RP /əʊ/ this spec's parent declares (Wells 1982 vol.3 §6.1.4). The RP coda-/r/ deletion this spec inherits is re-declared with no target phonemes (Wells 1982 vol.3 §6.1; Ladefoged & Johnson 2011) — the id-keyed way a dialect states it lacks a parent's process. SUFFIX PALATALIZATION, RHOTIC COLUMN: the three yod-coalescing suffixes this spec inherits end in a coda /r/ that GA keeps, so each is re-declared with the r-coloured schwa [ɚ] in place of the RP [ə]. ENDING \"ture\" is [tʃɚ] (nature, picture, feature) — the coalesced coronal plus GA r-coloured schwa (Wells 2008 LPD; Wells 1982 vol 3 §6.1). ENDING \"sure\" is [ʒɚ] (measure, closure, leisure) — the same, with the voiced coronal (Wells 2008 LPD; Wells 1982 vol 3 §6.1). ENDING \"ssure\" is [ʃɚ] (pressure, fissure) — the same after the voiceless ⟨ss⟩, which longest-match-wins picks over ⟨-sure⟩ (Wells 2008 LPD; Wells 1982 vol 3 §6.1). BROAD BY DECLARATION: the default transcription is PHONEMIC. T/D-FLAPPING and word-initial aspiration are sub-phonemic realisations of /t/ and /d/ (Wells 1982 vol.3 §6.1.5 on the GA tapped /t/; Kretzschmar 2004 §2, which describes flapping as an allophonic rule of the reference accent; Ladefoged & Johnson 2011 ch. 3 on English aspiration as an allophone of the voiceless stop series), so they are declared in `allophones` — the field that states a phoneme's surface variants — and NOT forced into the default output by `positional_graphemes`. The narrow-vs-broad choice is the data's to make (see orthography2ipa.inventory.phoneme_inventory), and GA reference sources transcribe /t/ and /d/ phonemically (Kenyon & Knott 1953; Labov, Ash & Boberg 2006). General American is conventionally transcribed WITHOUT length marks: the RP length contrast this spec's parent declares is not part of the GA system, where the tense/lax opposition carries the contrast and duration is its allophonic correlate (Wells 1982 vol.3 §6.1.1; Kenyon & Knott 1953, the reference American pronouncing dictionary, which uses no length mark at all; Labov, Ash & Boberg 2006 §2.1, whose North-American vowel system is stated the same way; Kretzschmar 2004 §2). General American has TRUE r-coloured vowels, written with the rhotacised symbols ɝ (stressed NURSE) and ɚ (unstressed lettER) rather than as a vowel plus a separate rhotic consonant (Wells 1982 vol.3 §6.1.2; Kenyon & Knott 1953; Ladefoged & Johnson 2011 ch. 4; Kretzschmar 2004 §2). NO-LENGTH COVERAGE: the length marks are dropped by per-phoneme rules, so every length-bearing emission needs one. Besides the plain vowels that means the yod-plus-GOOSE compound ⟨u⟩/⟨eau⟩ reads as (juː → ju), the parent rule whose surface carries a length mark (EN_GB_FINAL_E_SOLE_VOWEL, re-declared here without it), and the parent's whole-word exceptions with a long vowel — a frozen exception bypasses the rule layer by design, so those are restated here in American notation rather than rewritten (Kenyon & Knott 1953; Wells 2008 LPD). The restated exceptions take the GA strong forms from Wiktionary: you /ju/ (revision 92960107), your /jɔɹ/ (revision 94591594, enPR 'yôr', GA), are /ɑɹ/ (revision 95563998, GA strong form), ye /ji/ (revision 93735623, enPR 'yē', UK and US), the letter name u /ju/ (revision 95573816), menu /ˈmɛnju/ (revision 95547329, GA and CA /ˈmɛn.ju/). was /wʌz/ is the GA strong form (revision 95477958, US /wʌz/, /wɑz/), where the parent has the RP /wɒz/. The variant sets in `allophones` still list ʉː and ɝː, which is correct: those are declared VARIANTS of the parent's vowels and never the default reading. GRAPHEME ⟨aa⟩: the digraph occurs in English only in loans and proper names (aardvark, bazaar, salaam, Aachen), where GA reads it as the single low back vowel ɑ, never as a vowel sequence (Wells 2008 LPD). Without the entry the two ⟨a⟩s are read separately and the word gains a spurious syllable.",
   "quality": "research",
   "script_type": "alphabet",
   "sources": [
@@ -164,7 +164,7 @@
   "audit": {
     "ipa_babylm": {
       "conclusion": "at_ceiling_documented",
-      "measured": "Board PER 0.3666 (n=20103) before the rules this row measured, 0.3602 after them: EN_US_FINAL_S_VOICING_AFTER_TENSE_VOWEL (word-final ⟨s⟩ after a tense vowel, a diphthong or an r-coloured vowel is z: of 410 gold words ending in a vowel digraph plus ⟨s⟩ the gold writes z in 320 and this spec now in 287, was 1; of 364 ending in vowel, ⟨r⟩, ⟨s⟩ the gold writes z in 338 and this spec now in 364, was 69), EN_US_FINAL_Y_MONOSYLLABLE (word-final ⟨y⟩ with no other vowel letter is aɪ: 55 words, gold aɪ in 50, this spec now 55, was 0), and whole-word exceptions for I, I'm, I'll, I'd, I've, is, as, was, has, his (66 words, all as the gold reads them). The rest of the row is two things. First, the gold is espeak-derived and scripts/fold_en_us_notation.py folds six of espeak-ng's conventions out of BOTH sides cumulatively with the harness's own normalize() (broad) and levenshtein(): tense-vowel length 0.3482, the retraction mark on d̠ʒ t̠ʃ 0.3402, ɝ ɚ ~ ɜ ~ əɹ 0.3048, doubled ɹɹ 0.3018, ʌ ~ ə 0.2955, final i ~ ɪ 0.2926; 8072 of 20103 words (40.2%) then match exactly. None of these is a contrast the spelling fails to write, so no valid_ceiling is recorded (T-2583). Second, and larger, what the folds leave is English spelling: 61.9% of the remaining edit operations are one vowel for another (only ɑnli, pæpɝ against oʊnli, peɪpəɹ), the reading a vowel letter does not signal and no rule layer can supply without a lexicon, which is the same floor the cmudict and ipadict rows show for this spec. That residue is counted, not folded, and it is the row's floor for the rule layer as it stands. One engine gap this gold exposes, left as residue: word_exceptions do not see past trailing punctuation, so I, and is. in the gold's raw tokens miss the exception (26 of the 66 exception words carry punctuation).",
+      "measured": "Board PER 0.3666 (n=20103) before the rules this row measured, 0.3602 after them: EN_US_FINAL_S_VOICING_AFTER_TENSE_VOWEL (word-final ⟨s⟩ after a tense vowel, a diphthong or an r-coloured vowel is z: of 410 gold words ending in a vowel digraph plus ⟨s⟩ the gold writes z in 320 and this spec now in 287, was 1; of 364 ending in vowel, ⟨r⟩, ⟨s⟩ the gold writes z in 338 and this spec now in 364, was 69), EN_US_FINAL_Y_MONOSYLLABLE (word-final ⟨y⟩ with no other vowel letter is aɪ: 55 words, gold aɪ in 50, this spec now 55, was 0; the counts are of this en-US rule, which the inherited en-GB rule EN_GB_FINAL_Y_MONOSYLLABLE later replaced), and whole-word exceptions for I, I'm, I'll, I'd, I've, is, as, was, has, his (66 words, all as the gold reads them). The rest of the row is two things. First, the gold is espeak-derived and scripts/fold_en_us_notation.py folds six of espeak-ng's conventions out of BOTH sides cumulatively with the harness's own normalize() (broad) and levenshtein(): tense-vowel length 0.3482, the retraction mark on d̠ʒ t̠ʃ 0.3402, ɝ ɚ ~ ɜ ~ əɹ 0.3048, doubled ɹɹ 0.3018, ʌ ~ ə 0.2955, final i ~ ɪ 0.2926; 8072 of 20103 words (40.2%) then match exactly. None of these is a contrast the spelling fails to write, so no valid_ceiling is recorded (T-2583). Second, and larger, what the folds leave is English spelling: 61.9% of the remaining edit operations are one vowel for another (only ɑnli, pæpɝ against oʊnli, peɪpəɹ), the reading a vowel letter does not signal and no rule layer can supply without a lexicon, which is the same floor the cmudict and ipadict rows show for this spec. That residue is counted, not folded, and it is the row's floor for the rule layer as it stands. One engine gap this gold exposes, left as residue: word_exceptions do not see past trailing punctuation, so I, and is. in the gold's raw tokens miss the exception (26 of the 66 exception words carry punctuation).",
       "reference": "wells1982_vol3, kenyon1953 (the -s morpheme and final ⟨y⟩); see scripts/fold_en_us_notation.py"
     }
   },
@@ -207,25 +207,6 @@
         "ɜːɹ"
       ],
       "notes": "A word-final ⟨s⟩ after a tense vowel, a diphthong or an r-coloured vowel is [z]: days [deɪz], goes [ɡoʊz], sees [siz], shoes [ʃuz], cars [kɑɹz], years [jɪɹz], doors [dɔɹz] (Wells 1982 vol. 1 §3.1.4 on the -s morpheme; Kenyon 1953 §on final s). EN_GB_FINAL_S_VOICING covers a voiced consonant before the ⟨s⟩ but not a vowel, and in this spec the vowel-plus-r graphemes (⟨ar or ear⟩) are one slot whose phoneme is ɑɹ ɔɹ ɪəɹ, which that rule's ɹ never matches. The lax short vowels ɪ ɛ æ ʌ ʊ are left out on purpose: this, yes, gas, bus, us end in [s]. Measured on the ipa_babylm gold: of 395 words ending in a vowel digraph plus ⟨s⟩ the gold writes z in 310, and of 352 ending in a vowel, ⟨r⟩ and ⟨s⟩ it writes z in 328, against 1 and 69 here before the rule."
-    },
-    {
-      "id": "EN_US_FINAL_Y_MONOSYLLABLE",
-      "phonemes": [
-        "i"
-      ],
-      "surface": "aɪ",
-      "grapheme": [
-        "y"
-      ],
-      "word_final": true,
-      "word_contains_grapheme_not": [
-        "a",
-        "e",
-        "i",
-        "o",
-        "u"
-      ],
-      "notes": "Word-final ⟨y⟩ is [aɪ] when it is the word's only vowel letter: my, by, why, try, cry, fly, sky, dry, shy, sly, spy, thy (Wells 1982 vol. 1 §3.1; Kenyon 1953). The word-final positional reading of ⟨y⟩ is [i], the ending of happy and city, which is right only after another syllable, so the rule keys on the absence of any other vowel letter in the word. Measured on the ipa_babylm gold: 38 monosyllables end in a consonant letter plus ⟨y⟩, the gold writes aɪ in 37, and this spec wrote it in 0 before the rule."
     },
     {
       "id": "EN_US_LOT_PALM_MERGER",
@@ -461,6 +442,19 @@
       ],
       "followed_by_2": "word_boundary",
       "notes": "Same ⟨-oing⟩ hiatus as the parent, on this spec's own GOAT vowel: the parent states the RP [əʊ], and General American has [oʊ] — the value this spec's ⟨o⟩ grapheme already declares. Re-declared rather than inherited because the surface of an allophone rule is a literal, so a diphthong written into a parent rule cannot follow a child's inventory on its own."
+    },
+    {
+      "id": "EN_GB_FINAL_E_SOLE_VOWEL",
+      "phonemes": [
+        ""
+      ],
+      "surface": "i",
+      "grapheme": [
+        "e"
+      ],
+      "word_final": true,
+      "requires_other_nucleus": false,
+      "notes": "The parent's rule for a word-final ⟨e⟩ that is the word's only vowel, re-declared with this spec's FLEECE vowel [i], as in be → [bi] (see NO-LENGTH COVERAGE in notes). The surface of a rule is a literal, and one pass applies one rule to a slot, so EN_US_FLEECE_NO_LENGTH cannot shorten the parent's [iː] (Kenyon & Knott 1953)."
     }
   ],
   "vowel_graphemes": [
@@ -508,25 +502,13 @@
   },
   "word_exceptions_base": "en-GB",
   "word_exceptions": {
-    "i": "aɪ",
-    "i'm": "aɪm",
-    "i'll": "aɪl",
-    "i'd": "aɪd",
-    "i've": "aɪv",
-    "i’m": "aɪm",
-    "i’ll": "aɪl",
-    "i’d": "aɪd",
-    "i’ve": "aɪv",
-    "is": "ɪz",
-    "as": "æz",
     "was": "wʌz",
-    "has": "hæz",
-    "his": "hɪz",
-    "be": "bi",
-    "he": "hi",
-    "me": "mi",
-    "we": "wi",
-    "she": "ʃi",
+    "you": "ju",
+    "your": "jɔɹ",
+    "are": "ɑɹ",
+    "ye": "ji",
+    "u": "ju",
+    "menu": "ˈmɛnju",
     "do": "du",
     "does": "dʌz",
     "doing": "ˈduɪŋ"

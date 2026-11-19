@@ -161,6 +161,8 @@ struct LanguageSpec {
     bool collapse_geminates = false, doubled_letters_geminate = true, constrain_onsets = false;
     // An apostrophe between two letters belongs to the written word (doesn't).
     bool word_internal_apostrophe = false;
+    // An apostrophe inside a word ends an elided clitic (l'hiver, dell'uomo).
+    bool apostrophe_elision = false;
     std::vector<std::string> fold_diacritics, vowel_graphemes, dependent_vowels, preposed_vowels, trailing_vowel_axis_digraphs;
     // Vowel + glide multigraphs that give the glide to a following vowel; own-only.
     std::vector<std::string> prevocalic_glide_backoff;
@@ -550,6 +552,23 @@ private:
     /// The lexicon is `pipeline.lexicon` when the caller set it, and the
     /// process-wide lexicon otherwise.
     std::optional<std::string> override_for(const std::string& word) const;
+    // g2p.py G2P._whole_word_override: the word_exceptions or lexicon entry
+    // keyed on all of *word*.
+    std::optional<std::string> whole_word_override(const std::string& word) const;
+    // g2p.py G2P._clitic_ipa: the reading of the clitic that ends at the
+    // apostrophe at code point *apostrophe* of *word*.
+    std::string clitic_ipa(const std::string& word, std::size_t apostrophe) const;
+    // g2p.py G2P._join_clitic: *clitic* in front of *host_ipa*, inside a
+    // stress mark that opens it.
+    std::string join_clitic(const std::string& clitic, const std::string& host_ipa) const;
+    // g2p.py G2P._opens_listed_word: a word-initial apostrophe whose word the
+    // spec or the lexicon lists whole with the mark ('re of they 're).
+    bool opens_listed_word(const std::u32string& text, std::size_t start, std::size_t length,
+                           const std::string& grapheme) const;
+    // g2p.py G2P._declared_inventory: the phoneme inventory of the spec and
+    // the pipeline lexicon, read once per engine. Copies of an engine share it.
+    struct DeclaredInventory;
+    std::shared_ptr<DeclaredInventory> declared_inventory_;
     /// g2p.py G2P._normalize: the input after the spec's normalize plugins.
     std::string normalized(std::string text) const;
     /// g2p.py G2P._compound_elements: the element surfaces of a hyphen-joined
@@ -568,8 +587,12 @@ private:
                                                  std::vector<IPAPath> paths) const;
 };
 
+/// Deprecated: a subclass warns when it is built. Pass the step in
+/// Pipeline::expand or Pipeline::mark.
 class NormalizePlugin {
 public:
+    [[deprecated("NormalizePlugin is deprecated and will be removed in 8.0.0; use Pipeline(expand=...) or Pipeline(mark=...).")]]
+    NormalizePlugin() = default;
     virtual ~NormalizePlugin() = default;
     virtual std::vector<std::string> language_codes() const = 0;
     virtual std::string normalize(const std::string& text, const std::string& lang) const = 0;
@@ -577,12 +600,17 @@ public:
 class SyllabifierPlugin {
 public:
     virtual ~SyllabifierPlugin() = default;
-    virtual std::vector<std::string> language_codes() const = 0;
+    /// The codes this syllabifier handles. The engine does not read them.
+    virtual std::vector<std::string> language_codes() const { return {}; }
     virtual std::vector<std::string> syllabify(const std::string& word, const std::string& lang) const = 0;
     virtual int priority() const { return 50; }
 };
+/// Deprecated: a subclass warns when it is built. The stress rules of the spec
+/// place the stress.
 class StressPlugin {
 public:
+    [[deprecated("StressPlugin is deprecated and will be removed in 8.0.0; use the stress rules of the spec.")]]
+    StressPlugin() = default;
     virtual ~StressPlugin() = default;
     virtual std::vector<std::string> language_codes() const = 0;
     virtual std::optional<std::size_t> stressed_index(const std::string& word,
@@ -595,8 +623,13 @@ public:
 /// declares this plugin: the two then keep each other alive, and neither is
 /// ever destroyed. A plugin that needs such an engine keeps a std::weak_ptr
 /// to it.
+///
+/// Deprecated: a subclass warns when it is built. Pass the rescorers in
+/// Pipeline::rescore.
 class RescorerPlugin {
 public:
+    [[deprecated("RescorerPlugin is deprecated and will be removed in 8.0.0; use Pipeline(rescore=...).")]]
+    RescorerPlugin() = default;
     virtual ~RescorerPlugin() = default;
     virtual std::vector<std::string> language_codes() const = 0;
     virtual std::vector<IPAPath> rescore(const std::string& word, const std::string& lang,
@@ -616,7 +649,8 @@ public:
 class SandhiPlugin {
 public:
     virtual ~SandhiPlugin() = default;
-    virtual std::vector<std::string> language_codes() const = 0;
+    /// The codes this plugin speaks for. The engine does not read them.
+    virtual std::vector<std::string> language_codes() const { return {}; }
     virtual std::vector<std::string> apply(const std::vector<std::string>& words,
                                             const std::vector<std::string>& surfaces,
                                             const std::vector<bool>& pausal,
@@ -635,6 +669,8 @@ using inventory::phoneme_inventory;
 using inventory::tokenize;
 using inventory::dead_allophone_rules;
 
+/// Deprecated.
+[[deprecated("get_stress_plugin is deprecated and will be removed in 8.0.0; use the stress rules of the spec.")]]
 const StressPlugin* get_stress_plugin(const std::string& code);
 /// registry.py get_syllabifier: deprecated. It returns nullptr for every code,
 /// because nothing discovers a syllabifier. Pass one in Pipeline::syllabifier.
@@ -671,6 +707,8 @@ std::vector<std::string> ancestry_chain(const std::string& code);
 /// The five stage interfaces share no common base in C++, so this returns the
 /// resolved PLUGINS AS NAMES plus one typed accessor per stage; use
 /// declared_normalize_plugin() & co. to reach the object.
+/// Deprecated.
+[[deprecated("get_declared_plugins is deprecated and will be removed in 8.0.0; use the Pipeline field of each stage.")]]
 std::vector<std::string> get_declared_plugins(const std::string& stage,
                                               const LanguageSpec& spec);
 
@@ -678,6 +716,8 @@ std::vector<std::string> get_declared_plugins(const std::string& stage,
 /// for *code*, in plugin-priority order (lowest priority first, so the
 /// highest-priority plugin gets the last word). Empty when nothing is
 /// registered for the resolved code.
+/// Deprecated: G2P does not run them. Pass rescorers in Pipeline::rescore.
+[[deprecated("get_rescorers is deprecated and will be removed in 8.0.0; use Pipeline(rescore=...).")]]
 std::vector<const rescorer::LatticeRescorer*> get_rescorers(const std::string& code);
 
 /// Threads: the library keeps process-wide state with no lock. That state is
@@ -719,6 +759,7 @@ bool resolves_exactly(const std::string& code);
 const LanguageSpec& get(const std::string& code);
 std::vector<std::string> available_codes(bool include_clades = false);
 std::map<std::string, std::vector<std::string>> available_families();
+[[deprecated("who_answers is deprecated and will be removed in 8.0.0; use G2P.pipeline.")]]
 std::map<std::string, std::vector<PluginAnswer>> who_answers(const std::string& code);
 std::vector<std::string> validate(const std::string& code);
 void set_data_directory(const std::string& path);

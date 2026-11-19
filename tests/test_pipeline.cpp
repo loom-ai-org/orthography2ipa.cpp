@@ -272,16 +272,57 @@ void forced_check_tokenizes_as_the_inventory_does() {
     CHECK_THROWS(G2P("ht").transcribe("<phoneme ph=\"ˈa\">x</phoneme>"), markup::MarkupError, "ˈ");
 }
 
+// A lexicon reading is an emission, never a segment: it is cut like any
+// other transcription, so the lexicon argument of tokenize() and
+// phoneme_atoms() has no effect.
 void inventory_functions_read_the_mapping_they_are_given() {
     const LanguageSpec& spec = get("pt-PT");
     const Lexicon lexicon = {{"x", CLICK + "a"}};
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
     const auto atoms = phoneme_atoms(spec, &lexicon);
+    CHECK(tokenize(CLICK + "a", spec, &lexicon) == (Division{CLICK, "a"}));
+#pragma GCC diagnostic pop
     CHECK(emission_inventory(spec, &lexicon).count(CLICK + "a") == 1);
     CHECK(emission_inventory(spec).count(CLICK + "a") == 0);
+    CHECK(phoneme_inventory(spec, &lexicon).count(CLICK) == 1);
+    CHECK(phoneme_inventory(spec, &lexicon).count(CLICK + "a") == 0);
     CHECK(phoneme_inventory(spec).count(CLICK) == 0);
-    CHECK(std::find(atoms.begin(), atoms.end(), CLICK + "a") != atoms.end());
-    CHECK(tokenize(CLICK + "a", spec, &lexicon) == (Division{CLICK + "a"}));
+    CHECK(std::find(atoms.begin(), atoms.end(), CLICK + "a") == atoms.end());
+    CHECK(atoms == phoneme_atoms(spec));
     CHECK(tokenize(CLICK + "a", spec) == (Division{CLICK, "a"}));
+}
+
+// The Aragonese of Tena lists `ros` [ɾos] as a word exception. A word is not a
+// phoneme: the inventory holds [ɾ], [o] and [s], never [ɾos].
+void a_whole_word_reading_is_cut_into_segments() {
+    const LanguageSpec& spec = get("an-x-tensino");
+    CHECK(spec.word_exceptions.at("ros") == "ɾos");
+    const auto inventory = phoneme_inventory(spec);
+    for (const char* segment : {"ɾ", "o", "s"}) CHECK(inventory.count(segment) == 1);
+    for (const char* word : {"ɾo", "ɾos", "ɾa", "ɾas"}) CHECK(inventory.count(word) == 0);
+    CHECK(tokenize("ɾos", spec) == (Division{"ɾ", "o", "s"}));
+}
+
+// Qeltu Arabic emits [ʁ] only inside its word exceptions (أَعْرِف [ʔaʕʁif]).
+// The segment is in the inventory, so a forced reading that uses it is
+// accepted.
+void a_segment_only_a_word_exception_emits_is_declared() {
+    const LanguageSpec& spec = get("ar-IQ-x-qeltu");
+    CHECK(spec.word_exceptions.at("أَعْرِف") == "ʔaʕʁif");
+    CHECK(phoneme_inventory(spec).count("ʁ") == 1);
+    CHECK(G2P("ar-IQ-x-qeltu").transcribe("<phoneme ph=\"ʁa\">x</phoneme>") == "ʁa");
+}
+
+// The reference counts the inventory reads of one engine. The C++ engine reads
+// its own lexicon's inventory once and keeps it, so a second forced sentence
+// gives the same answer, and a segment of that lexicon is accepted.
+void an_engine_reads_its_inventory_once() {
+    const G2P engine = with_lexicon("pt-PT", {{"gato", "ˈɡatu"}});
+    const std::string forced =
+        "<phoneme ph=\"ˈkazɐ\">casa</phoneme> <phoneme ph=\"ˈɡatu\">gato</phoneme>";
+    CHECK(engine.transcribe(forced) == engine.transcribe(forced));
+    CHECK(engine.transcribe(forced) == "ˈkazɐ ˈɡatu");
 }
 
 // ─── the syllabifier ────────────────────────────────────────────────────────
@@ -506,6 +547,9 @@ int main() {
     every_split_checks_a_forced_pronunciation();
     forced_check_tokenizes_as_the_inventory_does();
     inventory_functions_read_the_mapping_they_are_given();
+    a_whole_word_reading_is_cut_into_segments();
+    a_segment_only_a_word_exception_emits_is_declared();
+    an_engine_reads_its_inventory_once();
     inventory_with_a_mapping_ignores_the_process_lexicon();
     an_installed_syllabifier_changes_no_transcription();
     pipeline_syllabifier_answers_for_its_engine();

@@ -11,6 +11,10 @@
 #include "orthography2ipa/linguatag.hpp"
 #include "unicode_util.hpp"
 
+#include <unicode/locid.h>
+#include <unicode/uchar.h>
+#include <unicode/unistr.h>
+
 #include <algorithm>
 #include <optional>
 #include <string>
@@ -84,6 +88,36 @@ bool in_catalog(const std::vector<std::string>& available, const std::string& co
     return std::find(available.begin(), available.end(), code) != available.end();
 }
 
+// registry.py _region_subtag: the region subtag of *code* in upper case, or
+// nothing (RFC 5646 §2.2.4). A singleton starts the extensions, so nothing
+// after it is a region.
+std::optional<std::string> region_subtag(const std::string& code) {
+    std::vector<std::string> parts;
+    for (std::size_t start = 0;;) {
+        const auto at = code.find('-', start);
+        parts.push_back(code.substr(start, at - start));
+        if (at == std::string::npos) break;
+        start = at + 1;
+    }
+    for (std::size_t i = 1; i < parts.size(); ++i) {
+        const std::u32string subtag = uni::to_utf32(parts[i]);
+        if (subtag.size() == 1) return std::nullopt;
+        const bool letters = subtag.size() == 2 && std::all_of(subtag.begin(), subtag.end(), uni::is_alpha);
+        const bool digits = subtag.size() == 3 && std::all_of(subtag.begin(), subtag.end(), [](char32_t c) {
+            const auto type = u_getIntPropertyValue(static_cast<UChar32>(c), UCHAR_NUMERIC_TYPE);
+            return type == U_NT_DECIMAL || type == U_NT_DIGIT;
+        });
+        if (letters || digits) {
+            icu::UnicodeString value = icu::UnicodeString::fromUTF8(parts[i]);
+            value.toUpper(icu::Locale::getRoot());
+            std::string out;
+            value.toUTF8String(out);
+            return out;
+        }
+    }
+    return std::nullopt;
+}
+
 } // namespace
 
 // registry.py _resolve_code, in the documented order.
@@ -113,6 +147,19 @@ std::string resolve_code(const std::string& code_in, const std::vector<std::stri
         if (in_catalog(available, fallback)) return fallback;
     }
     if (const auto* hit = find_in(_REGION_DEFAULTS, code)) return hit->second;
+    // A region of a _MOTHERLAND_FALLBACK language with no spec of its own has
+    // no sourced difference either, so it reads the motherland variety: a tag
+    // whose region has a spec reads that spec (fr-CA-u-mu-celsius -> fr-CA),
+    // any other the default region (fr-SN -> fr-FR).
+    const std::string language = primary_language(code);
+    if (std::find(std::begin(_MOTHERLAND_FALLBACK), std::end(_MOTHERLAND_FALLBACK), language)
+            != std::end(_MOTHERLAND_FALLBACK)
+        && !has_private_use(code)) {
+        if (const auto region = region_subtag(code); region && in_catalog(available, language + "-" + *region))
+            return language + "-" + *region;
+        if (const std::string fallback = linguatag::with_default_region(language); in_catalog(available, fallback))
+            return fallback;
+    }
     if (!allow_nearest) return code;
     // An unknown variant falls back to the standard variety: the candidates
     // are the catalog and the old keys of renamed specs, sorted as one set.
@@ -125,19 +172,24 @@ std::string resolve_code(const std::string& code_in, const std::vector<std::stri
     // Serbian, not cnr, whose likely subtags are sr-Latn-ME. The requested
     // subtag comes first, because standardization folds als-AL into sq; the
     // standardized one serves a tag whose own language has no spec, such as
-    // sh (sr-Latn). A one-letter subtag (x-, i-) is a singleton. With no
-    // own-language spec near enough, every candidate is searched.
-    std::vector<std::string> own;
-    for (const std::string& language : {primary_language(code_in), primary_language(code)}) {
-        if (language.size() > 1)
-            for (const auto& candidate : candidates)
-                if (primary_language(candidate) == language) own.push_back(candidate);
-        if (!own.empty()) break;
-    }
+    // sh (sr-Latn). A one-letter subtag (x-, i-) is a singleton. The
+    // own-language specs are measured from the tag that names their language:
+    // langcodes folds fat-GH into ak-GH, and CLDR 49 makes Fanti a language
+    // apart from Akan. With no own-language spec near enough, every candidate
+    // is searched.
     std::optional<std::string> match;
-    if (!own.empty())
-        match = linguatag::closest_lang(code, own, linguatag::default_max_language_distance,
-                                        linguatag::Lects::standard);
+    for (const std::string& tag : {code_in, code}) {
+        const std::string own_language = primary_language(tag);
+        std::vector<std::string> own;
+        if (own_language.size() > 1)
+            for (const auto& candidate : candidates)
+                if (primary_language(candidate) == own_language) own.push_back(candidate);
+        if (!own.empty()) {
+            match = linguatag::closest_lang(tag, own, linguatag::default_max_language_distance,
+                                            linguatag::Lects::standard);
+            break;
+        }
+    }
     if (!match)
         match = linguatag::closest_lang(code, candidates, linguatag::default_max_language_distance,
                                         linguatag::Lects::standard);

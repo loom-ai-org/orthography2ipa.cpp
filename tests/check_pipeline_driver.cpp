@@ -297,8 +297,15 @@ std::string run(const std::vector<std::string>& field) {
         const Lexicon* mapping = lexicon.has_value() ? &*lexicon : nullptr;
         if (command == "emission") return joined(inventory::emission_inventory(spec, mapping));
         if (command == "phonemes") return joined(inventory::phoneme_inventory(spec, mapping));
-        if (command == "tokens") return joined(inventory::tokenize(field[3], spec, mapping));
-        auto atoms = inventory::phoneme_atoms(spec, mapping);
+        // The lexicon argument of tokenize() and phoneme_atoms() is
+        // deprecated, and the reference warns only when it is given.
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
+        if (command == "tokens")
+            return joined(mapping ? inventory::tokenize(field[3], spec, mapping)
+                                  : inventory::tokenize(field[3], spec));
+        auto atoms = mapping ? inventory::phoneme_atoms(spec, mapping) : inventory::phoneme_atoms(spec);
+#pragma GCC diagnostic pop
         return joined(std::set<std::string>(atoms.begin(), atoms.end()));
     }
     if (command == "syllables") return joined(plugin(field[3])->syllabify(field[1], field[2]));

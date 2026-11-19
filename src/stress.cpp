@@ -625,6 +625,8 @@ std::vector<std::string> rebalance_onsets(const std::vector<std::string>& syllab
 
 // ── public API (stress.py one-to-one) ──
 
+const std::vector<std::string>& affricates() { return affricate_atoms(); }
+
 std::set<std::string> cliticless_keys(const LanguageSpec& spec) {
     const auto& forms = spec.cliticless_words;
     std::set<std::string> keys;
@@ -1422,7 +1424,12 @@ std::string rime(const std::u32string& syllable) {
 std::optional<int> plugin_stress(const std::string& word,
                                  const std::vector<std::string>& syllables,
                                  const std::string& lang) {
+    // registry.py _get_stress_plugin: the lookup behind the deprecated
+    // get_stress_plugin, which the stress step itself still reads.
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
     const StressPlugin* plugin = lang.empty() ? nullptr : get_stress_plugin(lang);
+#pragma GCC diagnostic pop
     if (plugin == nullptr)
         throw std::runtime_error(
             "the " + lang + " spec sets stress.source = 'plugin', but no stress "

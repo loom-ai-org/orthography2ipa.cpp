@@ -302,3 +302,11 @@ static const std::pair<const char*, const char*> _RENAMED[] {
 static const std::pair<const char*, const char*> _REGION_DEFAULTS[] {
     {"ar-SA", "ars-SA"},
 };
+
+// registry.py _MOTHERLAND_FALLBACK: the languages whose regional specs
+// each state a sourced difference from the motherland variety. A
+// region with no spec of its own reads the motherland variety. The
+// source holds a frozenset; it is sorted.
+static const char* const _MOTHERLAND_FALLBACK[] {
+    "fr",
+};

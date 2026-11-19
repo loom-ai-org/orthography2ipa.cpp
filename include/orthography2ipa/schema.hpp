@@ -324,6 +324,7 @@ struct LanguageSpecModel {
     std::optional<bool> doubled_letters_geminate;
     std::optional<bool> constrain_onsets;
     std::optional<bool> word_internal_apostrophe;
+    std::optional<bool> apostrophe_elision;
     std::optional<std::string> iso639_3;
     std::optional<std::string> glottolog_code;
     std::optional<std::string> wikidata_qid;
