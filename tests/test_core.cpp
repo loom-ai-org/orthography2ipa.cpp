@@ -144,6 +144,25 @@ int main() {
         std::filesystem::remove_all(dir);
     }
     {
+        // A list-valued grammatical ending reaches the beam in its declared
+        // order: rank 1 is free and the alternative at list index i costs i,
+        // so the candidates read rank 1, then each alternative in turn. The
+        // synthetic spec has four readings, so a loop that walks the list in
+        // reverse, or stops one short, gives another list. The reference
+        // gives ['tɐ', 'te', 'ti', 'to'] for word_candidates('tab', k=8).
+        std::string pattern = (std::filesystem::temp_directory_path() / "orthography2ipa-cpp-XXXXXX").string();
+        const char* made = mkdtemp(pattern.data());
+        assert(made != nullptr);
+        const std::string dir = made;
+        std::ofstream(dir + "/zz-endings.json") << R"({"code": "zz-endings", "name": "Endings", "script": "Latn",
+            "graphemes": {"t": ["t"], "a": ["a"], "b": ["b"]},
+            "grammatical_endings": {"ab": ["ɐ", "e", "i", "o"]}})";
+        set_data_directory(dir);
+        assert((G2P("zz-endings").word_candidates("tab", 8) == std::vector<std::string>{"tɐ", "te", "ti", "to"}));
+        set_data_directory(schema::data_directory());
+        std::filesystem::remove_all(dir);
+    }
+    {
         // g2p.py: `for stage in field_stages: self.plugins.pop(stage, None)`. A
         // Pipeline field takes over its stage, so the plugin the spec names for
         // that stage is never resolved. The reference, given pt-PT with the same
