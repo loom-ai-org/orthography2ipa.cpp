@@ -277,6 +277,36 @@
    "notes": "DISABLED for Barranquenho. No source for the stressed vowel of this ending in Barranquenho was read, so its output stays what it was; the pt-PT rule rests on Infopédia readings of standard European Portuguese."
   },
   {
+   "id": "PT_LEX_OIA_CLOSE",
+   "phonemes": [],
+   "surface": "o",
+   "notes": "DISABLED for Barranquenho. No source for the stressed vowel of this ending in Barranquenho was read, so its output stays what it was; the pt-PT rule rests on Infopédia readings of standard European Portuguese."
+  },
+  {
+   "id": "PT_SUFFIX_OIA_OPEN",
+   "phonemes": [],
+   "surface": "ɔ",
+   "notes": "DISABLED for Barranquenho. No source for the stressed vowel of this ending in Barranquenho was read, so its output stays what it was; the pt-PT rule rests on Infopédia readings of standard European Portuguese."
+  },
+  {
+   "id": "PT_SUFFIX_OICO_OPEN",
+   "phonemes": [],
+   "surface": "ɔ",
+   "notes": "DISABLED for Barranquenho. No source for the stressed vowel of this ending in Barranquenho was read, so its output stays what it was; the pt-PT rule rests on Infopédia readings of standard European Portuguese."
+  },
+  {
+    "id": "PT_DERIV_OICAMENTE_OPEN",
+    "phonemes": [],
+    "surface": "ɔ",
+    "notes": "DISABLED for Barranquenho. No source for the vowel of this derivative in Barranquenho was read, so its output stays what it was; the pt-PT rule rests on Infopédia readings of standard European Portuguese."
+  },
+  {
+    "id": "PT_DERIV_OICIDADE_OPEN",
+    "phonemes": [],
+    "surface": "ɔ",
+    "notes": "DISABLED for Barranquenho. No source for the vowel of this derivative in Barranquenho was read, so its output stays what it was; the pt-PT rule rests on Infopédia readings of standard European Portuguese."
+  },
+  {
     "id": "PT_CODA_S_BEFORE_ZH_INTERNAL",
     "phonemes": [],
     "surface": "",
@@ -708,6 +738,12 @@
       "phonemes": [],
       "surface": "ɐ",
       "notes": "DISABLED for Barranquenho. No source read covers a stressed /a/ before an onset nasal in this variety. The reading is the spec default and makes no claim about this context. The `a` row keeps the `word_initial` values for the same reason."
+    },
+    {
+      "id": "PT_STRONG_R_AFTER_CODA",
+      "phonemes": [],
+      "surface": "ʁ",
+      "notes": "DISABLED for Barranquenho. PT_STRONG_R_AFTER_CODA gives an ⟨r⟩ after a coda consonant or a nasal vowel the pt-PT strong rhotic [ʁ]. This spec writes its strong rhotic as [r] (carro [ˈkaru]), not [ʁ]. No source for this context in this language was read, so its output stays what it was."
     }
   ],
  "ancestors": [

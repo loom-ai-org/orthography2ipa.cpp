@@ -49,7 +49,7 @@
       "notes": "Irish Gaelic substrate: dental stops for θ/ð; clear l; intonation patterns; some syntax"
     }
   ],
-  "notes": "Hiberno-English / Irish English. Rhotic. /θ/ → [t̪] and /ð/ → [d̪] (dental stops — Gaelic substrate). Clear [l] everywhere (no dark l). GOAT/FACE often monophthongs [oː/eː]. Irish Gaelic substrate: significant lexical influence. Source: Wells (1982) vol. 2.",
+  "notes": "Hiberno-English / Irish English. Rhotic. /θ/ → [t̪] and /ð/ → [d̪] (dental stops — Gaelic substrate). Clear [l] everywhere (no dark l). GOAT/FACE often monophthongs [oː/eː]. Irish Gaelic substrate: significant lexical influence. Source: Wells (1982) vol. 2. WHOLE-WORD EXCEPTIONS: the parent's RP entries for are and your are restated in this spec's rhotic notation. Wiktionary 'are' (revision 95563998) gives the Ireland strong form /aɹ/ or /ɑɹ/, written ɑːɹ as in car. Wiktionary 'your' (revision 94591594) has no Irish line; its rhotic forms are /jo(ː)ɹ/ and the RP /jɔː(ɹ)/ with the r, and this spec writes that vowel ɔː, as in for and yore, so your is jɔːɹ.",
   "quality": "skeleton",
   "script_type": "alphabet",
   "sources": [
@@ -218,5 +218,9 @@
   "vowel_graphemes": [
     "y"
   ],
-  "word_exceptions_base": "en-GB"
+  "word_exceptions_base": "en-GB",
+  "word_exceptions": {
+    "are": "ɑːɹ",
+    "your": "jɔːɹ"
+  }
 }

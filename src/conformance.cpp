@@ -50,6 +50,9 @@ private:
     Gate& gate_;
 };
 
+// The deprecated kit wraps the deprecated plugin type.
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
 class ScopedRescorer : public RescorerPlugin, public Gate {
 public:
     ScopedRescorer(const RescorerPlugin& plugin, std::vector<std::string> codes)
@@ -74,6 +77,7 @@ private:
     std::vector<std::string> codes_;
     bool enabled_ = false;
 };
+#pragma GCC diagnostic pop
 
 // ─── Python's repr, so a failure reads exactly like the reference's ────────
 //

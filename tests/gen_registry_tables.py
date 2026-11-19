@@ -101,6 +101,11 @@ def registry_tables() -> str:
         table("_ALIASES", registry._ALIASES, *ALIASES_DOC),
         table("_RENAMED", registry._RENAMED, *RENAMED_DOC),
         table("_REGION_DEFAULTS", registry._REGION_DEFAULTS, *REGION_DOC),
+        string_list("_MOTHERLAND_FALLBACK", sorted(registry._MOTHERLAND_FALLBACK),
+                    "// registry.py _MOTHERLAND_FALLBACK: the languages whose regional specs",
+                    "// each state a sourced difference from the motherland variety. A",
+                    "// region with no spec of its own reads the motherland variety. The",
+                    "// source holds a frozenset; it is sorted."),
     ])
 
 

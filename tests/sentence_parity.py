@@ -19,6 +19,7 @@ directory of this repository (../orthography2ipa). The harness fails loudly
 import os
 import pathlib
 import subprocess
+import tempfile
 import sys
 
 HERE = pathlib.Path(__file__).resolve().parent
@@ -31,6 +32,8 @@ if not (pathlib.Path(reference) / "orthography2ipa" / "sandhi.py").is_file():
 sys.path.insert(0, reference)
 
 from orthography2ipa.g2p import G2P  # noqa: E402
+from orthography2ipa.lexicon import load_lexicon  # noqa: E402
+from orthography2ipa.pipeline import Pipeline  # noqa: E402
 from orthography2ipa.registry import available_codes, get  # noqa: E402
 
 # (lang, text) — each line names the stage it exists to pin down.
@@ -80,6 +83,58 @@ CASES = [
     # Dialect transform applied to the assembled sentence (and NOT pushed back
     # into the per-word readings, which keep their pre-transform IPA).
     ("pt-PT", "o velho verde foi ver a vaca"),
+    # apostrophe_elision: an elided clitic takes its host's entry with its own
+    # reading in front, a clitic host makes the word a clitic, and the vowel
+    # gate steps over the apostrophe (qu'il is qu before i).
+    ("fr-FR", "l'hiver qu'il aime"),
+    ("fr-FR", "jusqu'aujourd'hui et qu'hier"),
+    ("fr-FR", "c'était l'homme d'Henri"),
+    ("fr-CA", "l'eau qu'on boit"),
+    ("pt-PT", "d'Os Lusíadas"),
+    ("pt-BR", "a estrela-d'alva d'Os"),
+    ("it-IT", "l'uomo dell'uomo all'amico"),
+    ("it-IT", "sant'Anna e quest'anno"),
+    # A word-initial apostrophe opens a word only when the spec or the
+    # lexicon lists the word with it; a word in single quotes is the bare word.
+    ("en-GB", "they 're here and we 've gone"),
+    ("en-GB", "'we' said 'no'"),
+    ("en-US", "you 'll see"),
+]
+
+
+def elision_cases():
+    """For every spec with apostrophe_elision, its vowel-initial word
+    exceptions behind an elided clitic; for every spec with
+    word_internal_apostrophe, its apostrophe-initial word exceptions as a
+    detached clitic and inside single quotes."""
+    import logging
+    from orthography2ipa.vowels import is_orthographic_vowel
+    logging.disable(logging.CRITICAL)
+    cases = []
+    for code in available_codes():
+        try:
+            spec = get(code)
+        except Exception:
+            continue
+        exceptions = spec.word_exceptions or {}
+        if spec.apostrophe_elision:
+            hosts = [word for word in exceptions
+                     if word and (is_orthographic_vowel(word[0]) or word[0] in "hH")
+                     and "'" not in word and " " not in word][:6]
+            cases += [(code, clitic + host) for host in hosts for clitic in ("l'", "d'", "qu'", "dell'", "c'")]
+        if spec.word_internal_apostrophe:
+            for word in exceptions:
+                if word.startswith("'") and len(word) > 1 and " " not in word:
+                    cases += [(code, f"they {word}"), (code, f"'{word[1:]}'")]
+    return cases
+# An engine lexicon whose host readings open with a stress mark: an elided
+# clitic moves the mark in front of its own last segment (dell'uomo
+# [deˈlːwɔmo]), and a clitic with no vowel goes inside the mark (l'uomo).
+LEXICON_CASES = [
+    ("it-IT", "l'uomo dell'uomo all'amico quest'anno", {"uomo": "ˈwɔmo", "amico": "aˈmiko", "anno": "ˈanːo"}),
+    ("pt-PT", "d'Os d'Arcos d'Ouro", {"arcos": "ˈaɾkuʃ", "ouro": "ˈoɾu"}),
+    ("fr-FR", "l'hôtel qu'Henri", {"hôtel": "ˌotɛl", "henri": "ˈɑ̃ʁi"}),
+    ("en-GB", "they 're here 'we'", {"'re": "ə"}),
 ]
 DIALECT_CASES = [
     ("pt-PT", "o velho verde foi ver a vaca", "rionorese"),
@@ -121,7 +176,7 @@ def main():
     binary = pathlib.Path(os.path.abspath(sys.argv[1]))  # absolute: a relative path can hit a stale installed binary
     import logging
     logging.disable(logging.CRITICAL)
-    cases = list(CASES)
+    cases = list(CASES) + elision_cases()
     dialect = list(DIALECT_CASES)
     if "--sweep" in sys.argv:
         cases += catalog_sweep()
@@ -162,6 +217,20 @@ def main():
             print(f"FAIL {lang} {text!r}")
             print(f"  python: {expect!r}")
             print(f"  cpp:    {actual!r}")
+    with tempfile.TemporaryDirectory() as tmp:
+        for lang, text, entries in LEXICON_CASES:
+            path = pathlib.Path(tmp) / f"{lang}.tsv"
+            path.write_text("".join(f"{w}\t{ipa}\n" for w, ipa in entries.items()), encoding="utf-8")
+            expect = G2P(lang, pipeline=Pipeline(lexicon=load_lexicon(str(path)))).transcribe(text)
+            done = subprocess.run([str(binary), "transcribe", lang, text, "--lexicon", str(path)],
+                                  capture_output=True)
+            actual = done.stdout.decode("utf-8").replace("\n", "").strip()
+            checked += 1
+            if done.returncode != 0 or actual != expect:
+                failures += 1
+                print(f"FAIL {lang} {text!r} with a lexicon")
+                print(f"  python: {expect!r}")
+                print(f"  cpp:    {actual!r}")
     for lang, text, profile in dialect:
         try:
             expect = G2P(lang, dialect_profile=profile).transcribe(text)

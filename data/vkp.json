@@ -410,6 +410,36 @@
       "notes": "DISABLED for Korlai Creole Portuguese, a creole that inherits the pt-PT rule layer. No source for the stressed vowel of this ending in Korlai Creole Portuguese was read, so its output stays what it was; the pt-PT rule rests on Infopédia readings of standard European Portuguese."
     },
     {
+      "id": "PT_LEX_OIA_CLOSE",
+      "phonemes": [],
+      "surface": "o",
+      "notes": "DISABLED for Korlai Creole Portuguese, a creole that inherits the pt-PT rule layer. No source for the stressed vowel of this ending in Korlai Creole Portuguese was read, so its output stays what it was; the pt-PT rule rests on Infopédia readings of standard European Portuguese."
+    },
+    {
+      "id": "PT_SUFFIX_OIA_OPEN",
+      "phonemes": [],
+      "surface": "ɔ",
+      "notes": "DISABLED for Korlai Creole Portuguese, a creole that inherits the pt-PT rule layer. No source for the stressed vowel of this ending in Korlai Creole Portuguese was read, so its output stays what it was; the pt-PT rule rests on Infopédia readings of standard European Portuguese."
+    },
+    {
+      "id": "PT_SUFFIX_OICO_OPEN",
+      "phonemes": [],
+      "surface": "ɔ",
+      "notes": "DISABLED for Korlai Creole Portuguese, a creole that inherits the pt-PT rule layer. No source for the stressed vowel of this ending in Korlai Creole Portuguese was read, so its output stays what it was; the pt-PT rule rests on Infopédia readings of standard European Portuguese."
+    },
+    {
+      "id": "PT_DERIV_OICAMENTE_OPEN",
+      "phonemes": [],
+      "surface": "ɔ",
+      "notes": "DISABLED for Korlai Creole Portuguese, a creole that inherits the pt-PT rule layer. No source for the vowel of this derivative in Korlai Creole Portuguese was read, so its output stays what it was; the pt-PT rule rests on Infopédia readings of standard European Portuguese."
+    },
+    {
+      "id": "PT_DERIV_OICIDADE_OPEN",
+      "phonemes": [],
+      "surface": "ɔ",
+      "notes": "DISABLED for Korlai Creole Portuguese, a creole that inherits the pt-PT rule layer. No source for the vowel of this derivative in Korlai Creole Portuguese was read, so its output stays what it was; the pt-PT rule rests on Infopédia readings of standard European Portuguese."
+    },
+    {
       "id": "PT_LEX_CLITIC_O",
       "phonemes": [],
       "surface": "u",
@@ -720,6 +750,12 @@
       "phonemes": [],
       "surface": "ɐ",
       "notes": "DISABLED for Korlai Indo-Portuguese (Korlai Creole Portuguese). No source read covers a stressed /a/ before an onset nasal in this variety. The reading is the spec default and makes no claim about this context."
+    },
+    {
+      "id": "PT_STRONG_R_AFTER_CODA",
+      "phonemes": [],
+      "surface": "ʁ",
+      "notes": "DISABLED for Korlai Indo-Portuguese (Korlai Creole Portuguese). PT_STRONG_R_AFTER_CODA gives an ⟨r⟩ after a coda consonant or a nasal vowel the pt-PT strong rhotic [ʁ]. No source for this context in this language was read, so its output stays what it was."
     }
   ],
   "ancestors": [

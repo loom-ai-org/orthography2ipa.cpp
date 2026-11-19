@@ -106,9 +106,9 @@ std::string transform_literals(const std::string& transform) {
     return to_utf8(out);
 }
 
-/// inventory.py _atoms (and the atom list _sandhi_emissions builds by hand):
-/// the segments that must never be split, longest first — the declared
-/// `phonemes` plus every multi-character emission that is not a stress mark.
+/// inventory.py _atoms_of: the segments that must never be split, longest
+/// first — the declared `phonemes` plus every multi-character emission in
+/// *emissions* that is not a stress mark.
 /// Length is measured in code points, as Python's `len` is. Ties are ordered
 /// lexicographically here where Python's `sorted` leaves them in the set's
 /// iteration order: two atoms of equal length cannot both match at one
@@ -138,9 +138,10 @@ std::vector<std::string> atoms_from(const std::set<std::string>& emissions,
     return atoms;
 }
 
-/// inventory.py _base_emissions: every IPA string the *within-word* tables can
-/// place on a slot.
-std::set<std::string> base_emissions(const LanguageSpec& spec, const Lexicon* lexicon) {
+/// inventory.py _slot_emissions: every IPA string the grapheme, positional and
+/// allophone tables can place on one slot. These are the only emissions that
+/// can be a segment.
+std::set<std::string> slot_emissions(const LanguageSpec& spec) {
     std::set<std::string> emissions;
 
     for (const auto& entry : spec.graphemes)
@@ -160,8 +161,21 @@ std::set<std::string> base_emissions(const LanguageSpec& spec, const Lexicon* le
         }
     }
 
+    if (spec.stress_defined)
+        emissions.insert(STRESS_MARKS.begin(), STRESS_MARKS.end());
+
+    emissions.erase("");
+    return emissions;
+}
+
+/// inventory.py _word_emissions: every whole transcription, or whole word
+/// tail, that bypasses the tables. These are emissions, but never segments: a
+/// word is cut into the segments the slot tables declare, as tokenize() cuts
+/// any transcription.
+std::set<std::string> word_emissions(const LanguageSpec& spec, const Lexicon* lexicon) {
     // Word-level overrides hand the engine whole transcriptions, so their IPA
     // never passes through the grapheme table at all.
+    std::set<std::string> emissions;
     for (const auto& entry : spec.word_exceptions) emissions.insert(entry.second);
 
     // Suffix morphology replaces the word's tail wholesale, so its IPA also
@@ -181,10 +195,6 @@ std::set<std::string> base_emissions(const LanguageSpec& spec, const Lexicon* le
     const auto process = lexicon == nullptr ? detail::process_lexicon(spec.code) : nullptr;
     for (const auto& entry : lexicon == nullptr ? *process : *lexicon)
         emissions.insert(entry.second);
-
-    if (spec.stress_defined)
-        emissions.insert(STRESS_MARKS.begin(), STRESS_MARKS.end());
-
     emissions.erase("");
     return emissions;
 }
@@ -195,11 +205,10 @@ std::set<std::string> base_emissions(const LanguageSpec& spec, const Lexicon* le
 /// base tables never saw. The literal inserted text is cut with `segment_ipa`
 /// against the BASE atoms (so a re-emitted affricate stays whole and the tie
 /// stands as its own segment), exactly as tokenize() will cut a real
-/// transcription.
-std::set<std::string> sandhi_emissions(const LanguageSpec& spec, const std::set<std::string>& base) {
+/// transcription. The atoms are those of the slot tables.
+std::set<std::string> sandhi_emissions(const LanguageSpec& spec, const std::vector<std::string>& atoms) {
     std::set<std::string> out;
     if (spec.sandhi_rules.empty()) return out;
-    const std::vector<std::string> atoms = atoms_from(base, spec.phonemes);
     for (const auto& rule : spec.sandhi_rules) {
         for (const std::optional<std::string>* transform : {&rule.transform, &rule.right_transform}) {
             // _transform_literals returns "" for a rule with no transform, and
@@ -248,30 +257,44 @@ std::vector<std::string> tokens_with(const std::string& ipa, const std::vector<s
     return tokens;
 }
 
+/// inventory.py _atoms: the segments that must never be split, longest first.
+/// They come from the slot tables and the sandhi rules alone; a whole-word
+/// reading is never a segment.
+std::vector<std::string> atoms(const LanguageSpec& spec) {
+    std::set<std::string> slots = slot_emissions(spec);
+    for (const auto& segment : sandhi_emissions(spec, atoms_from(slots, spec.phonemes)))
+        slots.insert(segment);
+    return atoms_from(slots, spec.phonemes);
+}
+
 } // namespace
 
 std::set<std::string> emission_inventory(const LanguageSpec& spec, const Lexicon* lexicon) {
-    std::set<std::string> base = base_emissions(spec, lexicon);
-    for (const auto& segment : sandhi_emissions(spec, base)) base.insert(segment);
-    return base;
+    std::set<std::string> emissions = slot_emissions(spec);
+    for (const auto& segment : sandhi_emissions(spec, atoms_from(emissions, spec.phonemes)))
+        emissions.insert(segment);
+    for (const auto& emission : word_emissions(spec, lexicon)) emissions.insert(emission);
+    return emissions;
 }
 
 std::set<std::string> phoneme_inventory(const LanguageSpec& spec, const Lexicon* lexicon) {
-    const std::set<std::string> emissions = emission_inventory(spec, lexicon);
-    const std::vector<std::string> atoms = atoms_from(emissions, spec.phonemes);
+    const std::vector<std::string> spec_atoms = atoms(spec);
     std::set<std::string> tokens;
-    for (const auto& emission : emissions)
-        for (const auto& token : tokens_with(emission, atoms)) tokens.insert(token);
+    for (const auto& emission : emission_inventory(spec, lexicon))
+        for (const auto& token : tokens_with(emission, spec_atoms)) tokens.insert(token);
     return tokens;
 }
 
-std::vector<std::string> phoneme_atoms(const LanguageSpec& spec, const Lexicon* lexicon) {
-    return atoms_from(emission_inventory(spec, lexicon), spec.phonemes);
+std::vector<std::string> phoneme_atoms(const LanguageSpec& spec) { return atoms(spec); }
+
+std::vector<std::string> phoneme_atoms(const LanguageSpec& spec, const Lexicon*) { return atoms(spec); }
+
+std::vector<std::string> tokenize(const std::string& ipa, const LanguageSpec& spec) {
+    return tokens_with(ipa, atoms(spec));
 }
 
-std::vector<std::string> tokenize(const std::string& ipa, const LanguageSpec& spec,
-                                  const Lexicon* lexicon) {
-    return tokens_with(ipa, phoneme_atoms(spec, lexicon));
+std::vector<std::string> tokenize(const std::string& ipa, const LanguageSpec& spec, const Lexicon*) {
+    return tokens_with(ipa, atoms(spec));
 }
 
 std::vector<std::string> dead_allophone_rules(const LanguageSpec& spec) {
@@ -282,6 +305,16 @@ std::vector<std::string> dead_allophone_rules(const LanguageSpec& spec) {
     // rule on `dʒa` is live only if some slot emits exactly that.
     std::set<std::string> producible = emission_inventory(spec);
     for (const auto& token : phoneme_inventory(spec)) producible.insert(token);
+    // A silent reading is no symbol, so both inventories leave it out, but a
+    // rule can target it: a slot the tables leave empty gets a vowel back
+    // (English word-final ⟨e⟩ when it is the word's only vowel).
+    const bool silent_slot =
+        std::any_of(spec.graphemes.begin(), spec.graphemes.end(), [](const auto& entry) {
+            return std::find(entry.second.begin(), entry.second.end(), "") != entry.second.end();
+        });
+    const auto positional = positional_readings(spec);
+    if (silent_slot || std::find(positional.begin(), positional.end(), "") != positional.end())
+        producible.insert("");
 
     // An abugida adds one more source the tables do not show: a consonant
     // letter carries its inherent vowel unless a matra or a virama cancels it,

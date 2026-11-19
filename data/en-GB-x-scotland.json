@@ -48,7 +48,7 @@
       "notes": "Scottish Gaelic substrate"
     }
   ],
-  "notes": "Scottish English. Rhotic (unlike RP). Scottish Vowel Length Rule (SVLR): vowels long only before /r, v, ð, z/ and morpheme-final position. /x/ phonemic (loch [lɔx]). No TRAP-BATH split. FOOT-STRUT often merged. Scots (a related language) has additional distinct features. Source: Wells (1982) vol. 2.",
+  "notes": "Scottish English. Rhotic (unlike RP). Scottish Vowel Length Rule (SVLR): vowels long only before /r, v, ð, z/ and morpheme-final position. /x/ phonemic (loch [lɔx]). No TRAP-BATH split. FOOT-STRUT often merged. Scots (a related language) has additional distinct features. Source: Wells (1982) vol. 2. WHOLE-WORD EXCEPTIONS: the parent's RP entries for are and your are restated in this spec's rhotic notation. Wiktionary 'are' (revision 95563998) gives the Scotland strong form /aɾ/; this spec writes that vowel ɑː (its allophones list [a]) and the rhotic ɹ (its allophones list [r]), as in car, so are is ɑːɹ. Wiktionary 'your' (revision 94591594) has no Scottish line; its rhotic forms are /jo(ː)ɹ/ and the RP /jɔː(ɹ)/ with the r, and this spec writes that vowel ɔː, as in for and yore, so your is jɔːɹ.",
   "quality": "skeleton",
   "script_type": "alphabet",
   "sources": [
@@ -227,5 +227,9 @@
   "vowel_graphemes": [
     "y"
   ],
-  "word_exceptions_base": "en-GB"
+  "word_exceptions_base": "en-GB",
+  "word_exceptions": {
+    "are": "ɑːɹ",
+    "your": "jɔːɹ"
+  }
 }

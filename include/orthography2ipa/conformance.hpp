@@ -75,6 +75,10 @@ const std::vector<std::string>& default_probe_words();
 /// Throws ConformanceError for a plugin with no claim and no *lang*, for a
 /// syllabification that does not round-trip, and for a plugin that moves the
 /// transcription.
+/// Deprecated: a caller passes a syllabifier to one engine, so the caller
+/// decides whether a moved transcription is wanted.
+[[deprecated("assert_syllabifier_conforms is deprecated and will be removed in 8.0.0; use a test of your own that compares G2P(lang) "
+             "with G2P(lang, pipeline=Pipeline(syllabifier=...)).")]]
 void assert_syllabifier_conforms(const SyllabifierPlugin& plugin,
                                  const std::vector<std::string>& words = {},
                                  const std::string& lang = "");
@@ -94,6 +98,9 @@ void assert_syllabifier_conforms(const SyllabifierPlugin& plugin,
 /// what it returns, so this kit is the only check. It compares two runs of the
 /// probe words. A rescorer that gives different answers but lands on the same
 /// answers in both runs conforms, here and in the reference.
+/// Deprecated, together with RescorerPlugin.
+[[deprecated("assert_rescorer_conforms is deprecated and will be removed in 8.0.0; use a test of your own over "
+             "G2P(lang, pipeline=Pipeline(rescore=...)) and phoneme_inventory(spec).")]]
 void assert_rescorer_conforms(const RescorerPlugin& plugin,
                               const std::vector<std::string>& words = {},
                               const std::string& lang = "");
@@ -109,6 +116,8 @@ void assert_rescorer_conforms(const RescorerPlugin& plugin,
 /// probe words run through `transcribe_word` in the same two passes as the
 /// whole-word form; determinism and the declared inventory are the two rules the
 /// reference checks, with the same messages.
+[[deprecated("assert_rescorer_conforms is deprecated and will be removed in 8.0.0; use a test of your own over "
+             "G2P(lang, pipeline=Pipeline(rescore=...)) and phoneme_inventory(spec).")]]
 void assert_rescorer_conforms(const rescorer::LatticeRescorer& plugin,
                               const std::string& lang,
                               const std::vector<std::string>& words = {});

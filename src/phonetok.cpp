@@ -589,6 +589,15 @@ PhonetokTokenizer::PhonetokTokenizer(const LanguageSpec& spec, bool add_bos, boo
               (spec.closed_hiatus.has_value() || spec.final_diphthongs.has_value());
     for (const auto& g : spec.prevocalic_glide_backoff)
         prevocalic_glide_backoff_.insert(uni::lower(u32(g)));
+    // The apostrophes the vowel gate steps over: only in a spec whose
+    // apostrophe ends an elided clitic, and never one that the spec spells a
+    // sound with (a glottal stop, an ejective).
+    if (spec.apostrophe_elision && spec.word_internal_apostrophe)
+        for (const char32_t mark : {U'\'', U'\u2019'})
+            if (std::none_of(grapheme_ipa_.begin(), grapheme_ipa_.end(), [mark](const auto& entry) {
+                    return entry.first.find(mark) != std::u32string::npos;
+                }))
+                elision_apostrophes_.insert(mark);
 }
 
 std::u32string PhonetokTokenizer::normalise(const std::u32string& input) const {
@@ -1062,9 +1071,22 @@ std::vector<PhonetokTokenizer::UToken> PhonetokTokenizer::tokenize_u32(
                 !vowels::is_orthographic_vowel((*gkey)[0]) &&
                 grapheme_ipa_.count(gkey->substr(0, gkey->size() - 1)) != 0 &&
                 grapheme_ipa_.count(gkey->substr(gkey->size() - 1)) != 0) {
-                const std::size_t after = pos + gkey->size();
+                std::size_t after = pos + gkey->size();
                 const bool has_next = after < n;
-                const char32_t next_ch = has_next ? text[after] : 0;
+                char32_t next_ch = has_next ? text[after] : 0;
+                // An apostrophe between two letters is no segment: the letter
+                // after it is the one that follows the digraph (⟨qu'il⟩ is ⟨qu⟩
+                // before ⟨i⟩). A letter the spec reads as nothing after the
+                // apostrophe is no segment either (⟨qu'hier⟩ is ⟨qu⟩ before ⟨i⟩).
+                if (has_next && elision_apostrophes_.count(next_ch) != 0 && after + 1 < n &&
+                    uni::is_alpha(text[after + 1])) {
+                    ++after;
+                    const auto reading = grapheme_ipa_.find(lower_char(text[after], spec_.code));
+                    const bool silent = reading != grapheme_ipa_.end() &&
+                                        reading->second == std::vector<std::u32string>{U""};
+                    if (silent && after + 1 < n && uni::is_alpha(text[after + 1])) ++after;
+                    next_ch = text[after];
+                }
                 const std::u32string nlow =
                     has_next ? lower_char(next_ch, spec_.code) : std::u32string{};
                 if (!has_next || !vowels::is_orthographic_vowel(next_ch)) {

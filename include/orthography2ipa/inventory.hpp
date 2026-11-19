@@ -81,18 +81,30 @@ std::set<std::string> phoneme_inventory(const LanguageSpec& spec,
 /// inventory.py phoneme_atoms: the multi-character segments *this spec
 /// declares*, longest first. Public because segmentation is not only a
 /// tokenizer concern: syllable weight has to know that a spec's `ts` is one
-/// consonant. Derived from the spec's own tables, so what counts as a segment
-/// is decided by the data.
-std::vector<std::string> phoneme_atoms(const LanguageSpec& spec,
-                                       const Lexicon* lexicon = nullptr);
+/// consonant. Derived from the spec's own slot tables and sandhi rules, so what
+/// counts as a segment is decided by the data. A whole-word reading (a word
+/// exception, an ending, a lexicon entry) is never a segment.
+std::vector<std::string> phoneme_atoms(const LanguageSpec& spec);
+
+/// inventory.py phoneme_atoms(spec, lexicon), deprecated: a lexicon holds words,
+/// not segments, so *lexicon* has no effect.
+[[deprecated("the lexicon argument of phoneme_atoms() is deprecated and will be removed in 8.0.0; "
+             "use phoneme_atoms(spec).")]]
+std::vector<std::string> phoneme_atoms(const LanguageSpec& spec, const Lexicon* lexicon);
 
 /// inventory.py tokenize: cut a transcription into the tokens a TTS model
 /// consumes. Every token returned is in `phoneme_inventory` — the closure
 /// invariant. Stress marks are their own tokens (they are prosodic, not
 /// segmental, so `ˈ` never rides on the segment before it), and whitespace is
 /// dropped: a word boundary is the caller's concern.
+std::vector<std::string> tokenize(const std::string& ipa, const LanguageSpec& spec);
+
+/// inventory.py tokenize(ipa, spec, lexicon), deprecated: the segments come
+/// from the spec alone, so *lexicon* has no effect.
+[[deprecated("the lexicon argument of tokenize() is deprecated and will be removed in 8.0.0; "
+             "use tokenize(ipa, spec).")]]
 std::vector<std::string> tokenize(const std::string& ipa, const LanguageSpec& spec,
-                                  const Lexicon* lexicon = nullptr);
+                                  const Lexicon* lexicon);
 
 /// inventory.py dead_allophone_rules: ids of the `allophone_rules` whose
 /// target phoneme this spec cannot produce, in rule declaration order. A rule

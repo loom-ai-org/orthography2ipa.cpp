@@ -35,6 +35,10 @@ constexpr const char* LIGHT = "light";
 constexpr const char* HEAVY = "heavy";
 constexpr const char* SUPERHEAVY = "superheavy";
 
+// stress.py _AFFRICATES: the affricates, tie-bar spellings first, then the
+// bare two-symbol forms.
+const std::vector<std::string>& affricates();
+
 // stress.py cliticless_keys: the spec's stress.cliticless_words as a
 // normalized lookup set (language-aware lowercased + NFC).
 std::set<std::string> cliticless_keys(const LanguageSpec& spec);

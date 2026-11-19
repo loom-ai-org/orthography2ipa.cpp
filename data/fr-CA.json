@@ -1,0 +1,198 @@
+{
+  "code": "fr-CA",
+  "name": "Canadian French (Laurentian)",
+  "script": "Latin",
+  "graphemes_base": "fr-FR",
+  "allophones_base": "fr-FR",
+  "positional_graphemes_base": "fr-FR",
+  "word_exceptions_base": "fr-FR",
+  "grammatical_endings_base": "fr-FR",
+  "allophones": {
+    "t": [
+      "t",
+      "t͡s"
+    ],
+    "d": [
+      "d",
+      "d͡z"
+    ],
+    "i": [
+      "i",
+      "ɪ"
+    ],
+    "y": [
+      "y",
+      "ʏ"
+    ],
+    "u": [
+      "u",
+      "ʊ"
+    ]
+  },
+  "allophone_rules": [
+    {
+      "id": "FR_CA_AFFRICATE_T",
+      "phonemes": [
+        "t"
+      ],
+      "surface": "t͡s",
+      "followed_by_phoneme": [
+        "i",
+        "y",
+        "j",
+        "ɥ",
+        "jɛ̃"
+      ],
+      "notes": "Affrication of /t/ before a high front vocoid (Dow 2019: 1-2; Hall 2016: 2, ex. (2)): petit [pət͡si], têtu [tɛt͡sy]."
+    },
+    {
+      "id": "FR_CA_AFFRICATE_D",
+      "phonemes": [
+        "d"
+      ],
+      "surface": "d͡z",
+      "followed_by_phoneme": [
+        "i",
+        "y",
+        "j",
+        "ɥ",
+        "jɛ̃"
+      ],
+      "notes": "Affrication of /d/ before a high front vocoid (Dow 2019: 1-2; Hall 2016: 2, ex. (2)): dit [d͡zi], du [d͡zy]."
+    },
+    {
+      "id": "FR_CA_LAX_i",
+      "phonemes": [
+        "i"
+      ],
+      "surface": "ɪ",
+      "followed_by_nucleus": false,
+      "followed_by_phoneme": [
+        "p",
+        "b",
+        "t",
+        "d",
+        "k",
+        "ɡ",
+        "f",
+        "s",
+        "ʃ",
+        "m",
+        "n",
+        "ɲ",
+        "ŋ",
+        "l"
+      ],
+      "notes": "Closed-syllable laxing of /i/ in the final syllable: the coda holds a consonant other than the voiced fricatives /v z ʒ ʁ/ (Hall 2016: 7, ex. (12); Burness et al. 2022: 1-2)."
+    },
+    {
+      "id": "FR_CA_LAX_y",
+      "phonemes": [
+        "y"
+      ],
+      "surface": "ʏ",
+      "followed_by_nucleus": false,
+      "followed_by_phoneme": [
+        "p",
+        "b",
+        "t",
+        "d",
+        "k",
+        "ɡ",
+        "f",
+        "s",
+        "ʃ",
+        "m",
+        "n",
+        "ɲ",
+        "ŋ",
+        "l"
+      ],
+      "notes": "Closed-syllable laxing of /y/ in the final syllable: the coda holds a consonant other than the voiced fricatives /v z ʒ ʁ/ (Hall 2016: 7, ex. (12); Burness et al. 2022: 1-2)."
+    },
+    {
+      "id": "FR_CA_LAX_u",
+      "phonemes": [
+        "u"
+      ],
+      "surface": "ʊ",
+      "followed_by_nucleus": false,
+      "followed_by_phoneme": [
+        "p",
+        "b",
+        "t",
+        "d",
+        "k",
+        "ɡ",
+        "f",
+        "s",
+        "ʃ",
+        "m",
+        "n",
+        "ɲ",
+        "ŋ",
+        "l"
+      ],
+      "notes": "Closed-syllable laxing of /u/ in the final syllable: the coda holds a consonant other than the voiced fricatives /v z ʒ ʁ/ (Hall 2016: 7, ex. (12); Burness et al. 2022: 1-2)."
+    }
+  ],
+  "parent": "fr-FR",
+  "notes": "Laurentian French (Quebec and Ontario), as a thin variant of Metropolitan French (fr-FR). It inherits every table, rule and word exception of fr-FR and states only what a cited source states. AFFRICATION: /t d/ before the high front vocoids /i y j ɥ/ are the affricates [t͡s d͡z] (Dow 2019: 1-2, obligatory within words; Hall 2016: 2, ex. (2), after Burstynsky 1968: 13: petit [pət͡si], têtu [tɛt͡sy], dit [d͡zi]). The trigger list holds the glide-initial units the grapheme table has: ⟨ien⟩ [jɛ̃] and the glides [j ɥ]. LAXING: in the final syllable, /i y u/ are lax [ɪ ʏ ʊ] before a closing consonant other than the voiced fricatives /v z ʒ ʁ/ (Hall 2016: 7, ex. (11)-(12), after Walker 1984: 56 and Poliquin 2006; Burness et al. 2022: 1-2: élite [elɪt], annule [anʏl], égoutte [egʊt]); the final syllable is the last nucleus (followed_by_nucleus false) and the closing consonant is the next surface phoneme, so a silent final letter (petit, petits) does not close it. /a/ ~ /ɑ/: Laurentian French keeps the contrast (Burness et al. 2022: 1: patte [pat], pâte [pɑt]); fr-FR already maps ⟨â⟩ to /ɑ/, so nothing changes. NOT MODELLED (no cited source states the contexts the engine can see, or the engine cannot see them): laxing before a consonant cluster that starts with /v z ʒ ʁ/ and laxing before a final consonant cluster in general (a silent final letter, as in sourd, looks like a consonant to the rule layer), lengthening of the tense high vowels before final /v z ʒ ʁ/ (Hall 2016: 7, ex. (13)) because a silent final ⟨e⟩ hides the word edge (église), laxing harmony and optional laxing in non-final syllables (Hall 2016: 7-8), laxing of /i y u/ spelled with a digraph, the nasal vowel values, vowel length and lengthening before /v z ʒ ʁ/ for the other vowels, final-consonant clusters, the colloquial [mwɛ] [twɛ] for moi and toi, and affrication in a whole-word exception inherited from fr-FR, which bypasses the rules: cactus, jadis, gratis and métis keep [t d] before [i y], where the rule within words gives [t͡s d͡z] (Dow 2019: 1-2). Acadian French is a different variety and affrication is largely absent from it (Dow 2019: 2).",
+  "quality": "skeleton",
+  "script_type": "alphabet",
+  "sources": [
+    {
+      "id": "hall2016",
+      "author": "Hall, D.C.",
+      "year": 2016,
+      "title": "Contrast and phonological activity in the vowel system of Laurentian French",
+      "publisher": "Toronto Working Papers in Linguistics 37",
+      "url": "https://twpl.library.utoronto.ca/index.php/twpl/article/view/26976",
+      "pages": "2, 7",
+      "notes": "READ (open access PDF). Ex. (2), p. 2, after Burstynsky (1968: 13): assibilation of /t/ and /d/ before /i/ and /y/ (petit [p(ə)tsi], têtu [tɛtsy], j'ai dit [ʒedzi], du pain [dzypɛ̃]). §3.1, p. 7, after Walker (1984: 56) and Poliquin (2006: 6, 102): in the final syllable the high vowels /i y u/ are lax [ɪ ʏ ʊ] when the coda has a consonant other than the voiced fricatives /v z ʒ ʁ/ (élite [elɪt], annule [anʏl], égoutte [egʊt]) and tense in an open final syllable (béni [beni], début [deby], dégoût [degu])."
+    },
+    {
+      "id": "dow2019",
+      "author": "Dow, M.",
+      "year": 2019,
+      "title": "Subsegmental interactions between affrication and devoicing in Québec French",
+      "publisher": "Actes du congrès annuel de l'Association canadienne de linguistique 2019",
+      "url": "https://cla-acl.ca/pdfs/actes-2019/Dow-CLA-2019.pdf",
+      "pages": "1-3",
+      "notes": "READ (open access PDF). p. 1: affrication is the fricative-like release of the coronal stops /t, d/ before the high front vocoids /i, j, y, ɥ/ (after Dumas 1987), written [ts, dz]. p. 2: it is obligatory within words, varies little with social class, and occurs in almost all areas of Québec (Charlevoix is more variable)."
+    },
+    {
+      "id": "burness2022",
+      "author": "Burness, P., Tahtadjian, T., MacLeod, B. & Ahn, S.",
+      "year": 2022,
+      "title": "Vowel laxing in Laurentian French: lowering, centralization, and individual variation",
+      "publisher": "Actes du congrès annuel de l'Association canadienne de linguistique 2022",
+      "url": "https://cla-acl.ca/pdfs/actes-2022/Burness-Tahtadjian-MacLeod-Ahn-CLA-2022.pdf",
+      "pages": "1-2",
+      "notes": "READ (open access PDF). p. 1: Laurentian French (Ontario and Québec) has a phonemic /a/ ~ /ɑ/ contrast (patte [pat], pâte [pɑt]), affrication of /t, d/ before /i, y/, and laxing of /i y u/ before certain coda consonants in closed syllables (Poliquin 2006); the process is obligatory in final syllables."
+    }
+  ],
+  "ancestors": [
+    {
+      "code": "fr-FR",
+      "role": "parent",
+      "weight": 0.9,
+      "notes": "Standard Metropolitan French, the base of every other variety here."
+    }
+  ],
+  "vowel_graphemes": [
+    "y",
+    "ÿ",
+    "œ",
+    "œu",
+    "œil",
+    "œill"
+  ],
+  "timespan": {
+    "start_year": 1700,
+    "end_year": null
+  },
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Quebec_French_phonology"
+  ]
+}

@@ -47,7 +47,7 @@
     ]
   },
   "parent": "en-GB",
-  "notes": "Canadian English. Rhotic; close to GA with: CANADIAN RAISING: /aɪ/ → [ʌɪ] before voiceless C (knife, ice); /aʊ/ → [ʌʊ] before voiceless C (out, about). CAUGHT-COT merger universal. Source: Wells (1982) vol. 3.",
+  "notes": "Canadian English. Rhotic; close to GA with: CANADIAN RAISING: /aɪ/ → [ʌɪ] before voiceless C (knife, ice); /aʊ/ → [ʌʊ] before voiceless C (out, about). CAUGHT-COT merger universal. Source: Wells (1982) vol. 3. WHOLE-WORD EXCEPTIONS: the parent's RP entries for are, your and was are restated in this spec's rhotic notation, after the Canadian lines of Wiktionary: are /ɑɹ/ ('GA, Standard Canadian' strong form, revision 95563998), written ɑːɹ as in car; your /jʊəɹ/ ('CA', revision 94591594), written as in cure; was /wʌz/ ('Canada' strong form, revision 95477958).",
   "quality": "skeleton",
   "script_type": "alphabet",
   "sources": [
@@ -216,5 +216,10 @@
   "vowel_graphemes": [
     "y"
   ],
-  "word_exceptions_base": "en-GB"
+  "word_exceptions_base": "en-GB",
+  "word_exceptions": {
+    "are": "ɑːɹ",
+    "your": "jʊəɹ",
+    "was": "wʌz"
+  }
 }

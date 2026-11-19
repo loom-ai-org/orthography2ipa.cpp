@@ -298,6 +298,7 @@ private:
     std::set<std::u32string> fold_diacritics_;
     bool hiatus_ = false;
     std::set<std::u32string> prevocalic_glide_backoff_;
+    std::set<char32_t> elision_apostrophes_;
     // Threads that share one const tokenizer share this cache, so the mutex
     // guards every read and write of it.
     mutable std::mutex hiatus_mutex_;

@@ -33,6 +33,9 @@
 #include <string>
 #include <vector>
 
+// The driver exercises the deprecated conformance kit and plugin types.
+#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
+
 namespace {
 
 using orthography2ipa::Candidate;

@@ -1,0 +1,59 @@
+{
+  "code": "fr-BE",
+  "name": "Belgian French",
+  "script": "Latin",
+  "graphemes_base": "fr-FR",
+  "allophones_base": "fr-FR",
+  "positional_graphemes_base": "fr-FR",
+  "word_exceptions_base": "fr-FR",
+  "grammatical_endings_base": "fr-FR",
+  "graphemes": {
+    "â": [
+      "aː"
+    ]
+  },
+  "allophones": {
+    "aː": [
+      "aː"
+    ]
+  },
+  "parent": "fr-FR",
+  "notes": "Belgian French as a thin variant of Metropolitan French (fr-FR). One feature is stated, from the PFC survey of Tournai (PFC page, d) 1) La distinction /a/-/ɑ/). Tournai is listed under 'rat = ras', so the front and back ⟨a⟩ have one timbre, and under 'patte ≠ pâte (opposition de longueur)'. The page introduces that list with 'Parfois, la distinction entre les deux voyelles est substituée par une différence de longueur'. The difference of timbre is replaced by a difference of length, so ⟨â⟩ is [aː] here and [ɑ] in fr-FR. The /ɛ̃/ ~ /œ̃/ contrast (brin ≠ brun, a very slight timbre difference at Tournai, PFC page d) 2)) is kept as in fr-FR, which writes ⟨un⟩ [œ̃] and ⟨in⟩ [ɛ̃] apart and keeps [ɛ̃] as an allophone of /œ̃/. NOT MODELLED: the vowel length opposition for other vowels, the PFC remark that the ⟨ê⟩ ~ ⟨e⟩ length contrast is documented for Neuchâtel and not stated for Belgium, regional vowel quality, the weakening of /e/ ~ /ɛ/ and /o/ ~ /ɔ/ among young speakers, and the numerals septante and nonante (numbers are out of scope). The page is a survey summary at one point (Tournai) and not a description of every Belgian variety.",
+  "quality": "skeleton",
+  "script_type": "alphabet",
+  "sources": [
+    {
+      "id": "pfc_voyelles",
+      "author": "Projet PFC (Phonologie du français contemporain), FLORAL-PFC",
+      "year": 2010,
+      "title": "Le français expliqué: Prononciation, I. Le système vocalique, d) Variation",
+      "publisher": "FLORAL-PFC, projet-pfc.net",
+      "url": "https://projet-pfc.net/le-projet-pfc-ef/le-francais-explique/prononciation/2",
+      "pages": null,
+      "notes": "READ (open web page; the page metadata gives 2010 as its publication year and 2017 as its last change). The page reports, from PFC survey points: patte ≠ pâte by LENGTH at Neuchâtel (Switzerland) and Tournai (Belgium) and by timbre at Nyon; patte = pâte at Brunoy and Abidjan; brin ≠ brun kept at Tournai and Nyon (very slight timbre difference), at Toulouse and Abidjan (marked), and fading among young speakers at Neuchâtel; the length opposition faites [fɛt] ~ fête [fɛːt], belle ~ bêle, nu ~ nue, vit ~ vie at Neuchâtel. The page cites Gadet (1996) and Léon (2007)."
+    }
+  ],
+  "ancestors": [
+    {
+      "code": "fr-FR",
+      "role": "parent",
+      "weight": 0.9,
+      "notes": "Standard Metropolitan French, the base of every other variety here."
+    }
+  ],
+  "vowel_graphemes": [
+    "y",
+    "ÿ",
+    "œ",
+    "œu",
+    "œil",
+    "œill"
+  ],
+  "timespan": {
+    "start_year": 1700,
+    "end_year": null
+  },
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Belgian_French"
+  ]
+}

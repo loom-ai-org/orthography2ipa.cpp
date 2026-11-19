@@ -444,6 +444,8 @@ LanguageSpec load_raw(const std::string& code, std::set<std::string>& loading) {
     s.constrain_onsets = raw.get<bool>("constrain_onsets", false);
     const auto own_word_internal_apostrophe = raw.get_optional<bool>("word_internal_apostrophe");
     s.word_internal_apostrophe = own_word_internal_apostrophe.value_or(false);
+    const auto own_apostrophe_elision = raw.get_optional<bool>("apostrophe_elision");
+    s.apostrophe_elision = own_apostrophe_elision.value_or(false);
     s.fold_diacritics = optional_list(raw, "fold_diacritics"); s.vowel_graphemes = optional_list(raw, "vowel_graphemes");
     s.dependent_vowels = optional_list(raw, "dependent_vowels"); s.preposed_vowels = optional_list(raw, "preposed_vowels");
     s.trailing_vowel_axis_digraphs = optional_list(raw, "trailing_vowel_axis_digraphs");
@@ -598,6 +600,7 @@ LanguageSpec load_raw(const std::string& code, std::set<std::string>& loading) {
         // BASE_SCALAR: a spec that does not state the field takes its
         // graphemes base's resolved value.
         if (!own_word_internal_apostrophe) s.word_internal_apostrophe = b.word_internal_apostrophe;
+        if (!own_apostrophe_elision) s.apostrophe_elision = b.apostrophe_elision;
     }
     const std::string positional_base = raw.get<std::string>("positional_graphemes_base", "");
     if (!positional_base.empty() && positional_base != code)
@@ -739,6 +742,12 @@ bool is_word_internal_apostrophe(const std::u32string& text, const Token& token)
         && uni::is_alpha(text[start - 1]) && uni::is_alpha(text[end]);
 }
 
+// g2p.py G2P._opens_listed_word, bound to one engine: whether the
+// punctuation token at (start, length) of the run opens a word that the spec
+// or the lexicon lists whole with the mark.
+using ListedWordOpener = std::function<bool(const std::u32string& text, std::size_t start,
+                                            std::size_t length, const std::string& grapheme)>;
+
 // g2p.py _HYPHENS: the hyphens that join the words of a compound.
 bool is_hyphen(const std::string& grapheme) {
     return grapheme == "-" || grapheme == "\u2010" || grapheme == "\u2011";
@@ -758,7 +767,8 @@ bool is_hyphen(const std::string& grapheme) {
 // to the run it is written in: punctuation opening a plain run falls AFTER
 // whatever preceded it, and what preceded it may be a forced word.
 void group_words(const PhonetokTokenizer& tokenizer, const std::string& text,
-                 bool word_internal_apostrophe, std::vector<InputWord>& words) {
+                 bool word_internal_apostrophe, const ListedWordOpener& opens_listed_word,
+                 std::vector<InputWord>& words) {
     std::u32string run;                     // the surface being built, code points
     const std::u32string units = to_utf32(text);
     // hyphen_joined of the word in `run`, and of the next one
@@ -773,6 +783,14 @@ void group_words(const PhonetokTokenizer& tokenizer, const std::string& text,
         if (token.kind == TokenKind::WHITESPACE) { flush(); after_hyphen = false; continue; }
         if (token.kind == TokenKind::PUNCTUATION && word_internal_apostrophe
             && is_word_internal_apostrophe(units, token)) {
+            run += to_utf32(token.grapheme);
+            continue;
+        }
+        if (token.kind == TokenKind::PUNCTUATION && opens_listed_word
+            && opens_listed_word(units, token.position, token.length, token.grapheme)) {
+            flush();
+            joined = after_hyphen;
+            after_hyphen = false;
             run += to_utf32(token.grapheme);
             continue;
         }
@@ -881,7 +899,8 @@ std::vector<markup::Chunk> cut_marked(const std::u32string& marked, const std::v
 // an attribute value.
 std::vector<InputWord> split_words(const LanguageSpec& spec, const std::vector<markup::Chunk>& chunks,
                                    const std::function<std::string(const std::string&)>& normalize,
-                                   const std::function<void(const std::string&)>& check_forced) {
+                                   const std::function<void(const std::string&)>& check_forced,
+                                   const ListedWordOpener& opens_listed_word) {
     std::vector<InputWord> words;
     const PhonetokTokenizer tokenizer(spec);
     for (const auto& chunk : chunks) {
@@ -897,7 +916,8 @@ std::vector<InputWord> split_words(const LanguageSpec& spec, const std::vector<m
             check_forced(forced_ipa);
             words.push_back(InputWord{to_utf8(surface), forced_ipa, true, false, false, false, false});
         } else {
-            group_words(tokenizer, normalize(chunk.text), spec.word_internal_apostrophe, words);
+            group_words(tokenizer, normalize(chunk.text), spec.word_internal_apostrophe,
+                        opens_listed_word, words);
         }
     }
     if (words.empty()) return words;
@@ -1541,10 +1561,41 @@ namespace {
 using uni::to_utf32;
 using uni::to_utf8;
 
+bool is_elision_apostrophe(char32_t c) { return c == U'\'' || c == U'\u2019'; }
+
+// g2p.py G2P._elided_hosts: each split of *word* into an elided clitic and its
+// host, as (the apostrophe's code point index, the host), longest host first.
+// A split is an apostrophe inside the word, with a consonant grapheme before
+// it and a vowel letter or ⟨h⟩ after it (l'hiver, qu'il, Sant'Ana; not
+// doesn't or o'clock). Only a spec with apostrophe_elision and
+// word_internal_apostrophe has a split.
+std::vector<std::pair<std::size_t, std::string>> elided_hosts(const LanguageSpec& spec,
+                                                              const std::string& word) {
+    const std::u32string units = to_utf32(word);
+    if (!(spec.apostrophe_elision && spec.word_internal_apostrophe)
+        || std::none_of(units.begin(), units.end(), is_elision_apostrophe))
+        return {};
+    const auto tokens = PhonetokTokenizer(spec).grapheme_tokens(word);
+    std::vector<std::pair<std::size_t, std::string>> splits;
+    for (std::size_t i = 0; i < units.size(); ++i) {
+        if (!is_elision_apostrophe(units[i]) || !(0 < i && i + 1 < units.size())) continue;
+        const std::u32string host = units.substr(i + 1);
+        const Token* before = nullptr;
+        for (const auto& token : tokens)
+            if (token.position < i) before = &token;
+        if (uni::is_alpha(units[i - 1]) && before != nullptr
+            && !vowels::is_orthographic_vowel(to_utf32(before->grapheme).front())
+            && (vowels::is_orthographic_vowel(host.front()) || host.front() == U'h' || host.front() == U'H'))
+            splits.emplace_back(i, to_utf8(host));
+    }
+    return splits;
+}
+
 // g2p.py _is_cliticless: whether *word* is a declared prosodic clitic
-// that takes no stress. A written stress mark outranks the class.
+// that takes no stress. A written stress mark outranks the class. With
+// *elided* false, only the whole word is looked up, never its elided host.
 bool engine_is_cliticless(const LanguageSpec& spec, const std::string& silent_marks,
-                          const std::string& word) {
+                          const std::string& word, bool elided = true) {
     if (spec.cliticless_words.empty()) return false;
     for (std::size_t i = 0; i < silent_marks.size();)
         if (word.find(silent_marks.substr(i, utf8_char_size(silent_marks, i))) != std::string::npos)
@@ -1555,7 +1606,14 @@ bool engine_is_cliticless(const LanguageSpec& spec, const std::string& silent_ma
     // a clitic with a comma after it. The exact key is tried first, as there.
     const std::string key = to_utf8(uni::nfc(to_utf32(lower_str(word, spec.code))));
     const std::string stripped = strip_edge_punctuation(key);
-    return !stripped.empty() && stripped != key && stress::is_cliticless(stripped, spec);
+    if (!stripped.empty() && stripped != key && stress::is_cliticless(stripped, spec)) return true;
+    // An elided clitic adds no stress of its own, so the word is a clitic when
+    // its host is one: d'Os reads as the contraction dos.
+    if (!elided) return false;
+    const auto hosts = elided_hosts(spec, word);
+    return std::any_of(hosts.begin(), hosts.end(), [&](const auto& split) {
+        return engine_is_cliticless(spec, silent_marks, split.second, false);
+    });
 }
 
 // g2p.py _map_tokens_to_syllables: map each grapheme token index to its
@@ -2334,7 +2392,8 @@ G2P::G2P(std::string language, std::map<std::string, std::vector<std::string>> p
       // `user_rescorers = normalize_rescorers(self.pipeline.rescore or rescorer)`
       user_rescorers_(rescorer::normalize_rescorers(pipeline.rescore.items.empty() ? rescorer : pipeline.rescore)),
       allow_undeclared_phonemes_(allow_undeclared_phonemes),
-      expose_ambiguous_endings_(expose_ambiguous_endings) {
+      expose_ambiguous_endings_(expose_ambiguous_endings),
+      declared_inventory_(std::make_shared<DeclaredInventory>()) {
     discover_plugins_once();
     if (!dialect_profile_.empty() && !dialect_profile_known(dialect_profile_))
         throw std::invalid_argument("unknown dialect profile: " + dialect_profile_);
@@ -2574,7 +2633,10 @@ std::vector<features::WordFeatures> G2P::features(const std::string& text) const
     std::vector<features::WordFeatures> out;
     const auto normalize = [this](std::string value) { return normalized(std::move(value)); };
     const auto check = [this](const std::string& ipa) { check_forced(ipa); };
-    for (const auto& input : split_words(*spec_, prepared(markup::parse_markup(text)), normalize, check)) {
+    for (const auto& input : split_words(*spec_, prepared(markup::parse_markup(text)), normalize, check,
+                                 [this](const std::u32string& run, std::size_t start, std::size_t length, const std::string& grapheme) {
+                                     return opens_listed_word(run, start, length, grapheme);
+                                 })) {
         const std::string& word = input.surface;
         const auto slots = ipa_lattice(word);
         const double confidence = confidence_breakdown(word).value;
@@ -2602,7 +2664,10 @@ sentence::SentenceLattice G2P::sentence_lattice(const std::string& text,
     const std::size_t width = search == "greedy" ? 1 : beam_width;
     const auto normalize = [this](std::string value) { return normalized(std::move(value)); };
     const auto check = [this](const std::string& ipa) { check_forced(ipa); };
-    const auto inputs = split_words(*spec_, prepared(markup::parse_markup(text)), normalize, check);
+    const auto inputs = split_words(*spec_, prepared(markup::parse_markup(text)), normalize, check,
+                                 [this](const std::u32string& run, std::size_t start, std::size_t length, const std::string& grapheme) {
+                                     return opens_listed_word(run, start, length, grapheme);
+                                 });
     if (inputs.empty()) {
         sentence::SentenceLattice empty;
         empty.lang = language_;
@@ -2815,9 +2880,83 @@ std::vector<rescorer::SegmentSlot> G2P::lattice_pre_rescore(const std::string& w
 }
 
 std::optional<std::string> G2P::override_for(const std::string& word) const {
-    // g2p.py G2P._override_for: inline word_exceptions > sidecar lexicon >
-    // None, both keyed on the language-aware lower-casing of the word with the
-    // spec's silent stress marks removed.
+    // g2p.py G2P._override_for: the whole-word entry, or else, for a word that
+    // spells an elided clitic before its host (l'hiver, d'Os) and has no entry
+    // of its own, the host's entry with the clitic's reading in front.
+    if (auto own = whole_word_override(word)) return own;
+    for (const auto& [apostrophe, host] : elided_hosts(*spec_, word))
+        if (auto host_ipa = whole_word_override(host))
+            return join_clitic(clitic_ipa(word, apostrophe), *host_ipa);
+    return std::nullopt;
+}
+
+std::string G2P::join_clitic(const std::string& clitic, const std::string& host_ipa) const {
+    // The clitic's last segment is the onset of the host's first syllable
+    // (l'uomo [ˈlwɔmo], dell'uomo [deˈlːwɔmo]), so a mark that opens the
+    // host's reading moves in front of that segment. A clitic with no vowel
+    // is all onset.
+    const std::u32string host = to_utf32(host_ipa);
+    const std::u32string primary = to_utf32(spec_->stress_defined ? spec_->stress_mark : std::string("ˈ"));
+    const std::u32string first = host.substr(0, 1);
+    if (first.empty() || (first != to_utf32(stress::SECONDARY_MARK) && first != primary))
+        return clitic + host_ipa;
+    const std::u32string clitic32 = to_utf32(clitic);
+    if (std::none_of(clitic32.begin(), clitic32.end(), [](char32_t c) { return vowels::is_ipa_vowel(c); }))
+        return to_utf8(first) + clitic + to_utf8(host.substr(1));
+    const auto segments = segment_ipa(clitic, stress::affricates());
+    if (vowels::is_ipa_vowel(to_utf32(segments.back()).front())) return clitic + host_ipa;
+    std::string out;
+    for (std::size_t i = 0; i + 1 < segments.size(); ++i) out += segments[i];
+    return out + to_utf8(first) + segments.back() + to_utf8(host.substr(1));
+}
+
+std::string G2P::clitic_ipa(const std::string& word, std::size_t apostrophe) const {
+    // The rules read the whole word, so the clitic's letters see the host
+    // after them: ⟨qu⟩ before ⟨i⟩ is [k] and ⟨c⟩ before ⟨é⟩ is [s]. The
+    // segments that the letters before the apostrophe produce are the
+    // clitic's reading.
+    Tokenizer tokenizer(*spec_, expand_allophones_, apply_allophony_, chain_rescorers(),
+                        pipeline_->syllabifier.get());
+    const auto paths = needs_context_beam_ ? tokenizer.beam(word, 1) : tokenizer.plain_beam(word, 1);
+    if (paths.empty()) return "";
+    std::size_t count = 0;
+    for (const auto& token : tokenizer.grapheme_tokens(word))
+        if (token.position < apostrophe) ++count;
+    std::string out;
+    for (std::size_t i = 0; i < count && i < paths.front().segments.size(); ++i)
+        out += paths.front().segments[i];
+    return out;
+}
+
+bool G2P::opens_listed_word(const std::u32string& text, std::size_t start, std::size_t length,
+                            const std::string& grapheme) const {
+    // Any other word-initial apostrophe stays punctuation, so a word in single
+    // quotes ('we') is read as the bare word.
+    const std::size_t end = start + length;
+    if (!(spec_->word_internal_apostrophe && (grapheme == "'" || grapheme == "\u2019")
+          && (start == 0 || py_isspace(text[start - 1]))))
+        return false;
+    // g2p.py _LETTERS_RE `[^\W\d_]+`: a character of \w (str.isalnum) that is
+    // no decimal digit.
+    std::size_t stop = end;
+    while (stop < text.size()) {
+        const auto cp = static_cast<UChar32>(text[stop]);
+        const bool numeric = u_getIntPropertyValue(cp, UCHAR_NUMERIC_TYPE) != U_NT_NONE;
+        if (!(uni::is_alpha(text[stop]) || (numeric && u_charType(cp) != U_DECIMAL_DIGIT_NUMBER))) break;
+        ++stop;
+    }
+    if (stop == end) return false;
+    const std::string key = lower_str("'" + to_utf8(text.substr(end, stop - end)), spec_->code);
+    const auto& own = pipeline_->lexicon;
+    const auto process = own.has_value() ? nullptr : detail::process_lexicon(language_);
+    const auto& lex = own.has_value() ? *own : *process;
+    return spec_->word_exceptions.count(key) != 0 || lex.count(unicode_nfc(key, false)) != 0;
+}
+
+std::optional<std::string> G2P::whole_word_override(const std::string& word) const {
+    // g2p.py G2P._whole_word_override: inline word_exceptions > sidecar
+    // lexicon > None, both keyed on the language-aware lower-casing of the
+    // word with the spec's silent stress marks removed.
     const std::string key = lower_str(unmarked_word(silent_marks_, word), spec_->code);
     // The word as given, then the word with the punctuation that clings to it
     // in raw text stripped from both ends (`I,` `"I`). The exact key stays first
@@ -2877,7 +3016,10 @@ std::optional<std::vector<std::string>> G2P::compound_elements(const std::string
     // An override for the whole spelling wins, as it does for any word.
     if (!hyphenated || override_for(word).has_value()) return std::nullopt;
     const auto elements = split_words(*spec_, markup::parse_markup(word), [this](const std::string& text) { return normalized(text); },
-                                      [this](const std::string& ipa) { check_forced(ipa); });
+                                      [this](const std::string& ipa) { check_forced(ipa); },
+                                      [this](const std::u32string& run, std::size_t start, std::size_t length, const std::string& grapheme) {
+                                     return opens_listed_word(run, start, length, grapheme);
+                                 });
     if (elements.size() < 2) return std::nullopt;
     std::vector<std::string> surfaces;
     for (std::size_t i = 0; i < elements.size(); ++i) {
@@ -2997,15 +3139,26 @@ std::vector<IPAPath> G2P::apply_rescorer_plugins(const std::string& word, std::v
     return paths;
 }
 
+struct G2P::DeclaredInventory {
+    std::once_flag once;
+    std::set<std::string> tokens;
+};
+
 void G2P::check_forced(const std::string& ipa) const {
     if (allow_undeclared_phonemes_) return;
     // The inventory counts the engine's lexicon, and an engine with none reads
     // the process-wide one.
+    // The process-wide lexicon can change between calls; an engine's own
+    // lexicon and its spec cannot, so their inventory is read once.
     const auto& own = pipeline_->lexicon;
-    const std::map<std::string, std::string>* lexicon = own.has_value() ? &*own : nullptr;
-    const auto declared = phoneme_inventory(*spec_, lexicon);
+    std::set<std::string> process_declared;
+    if (!own.has_value()) process_declared = phoneme_inventory(*spec_);
+    else std::call_once(declared_inventory_->once, [&] {
+        declared_inventory_->tokens = phoneme_inventory(*spec_, &*own);
+    });
+    const auto& declared = own.has_value() ? declared_inventory_->tokens : process_declared;
     std::vector<std::string> outside;
-    for (const auto& token : tokenize(ipa, *spec_, lexicon))
+    for (const auto& token : tokenize(ipa, *spec_))
         if (!declared.count(token)) outside.push_back(token);
     if (!outside.empty())
         throw markup::MarkupError(
@@ -3127,7 +3280,10 @@ TranscriptionResult G2P::transcribe_detailed(const std::string& text, const std:
     //    has run (composing earlier would blind a rule that names a nasal
     //    vowel by its decomposed shape).
     TranscriptionResult result; result.lang = language_;
-    const auto words = split_words(*spec_, prepared(markup::parse_markup(text)), normalize, check);
+    const auto words = split_words(*spec_, prepared(markup::parse_markup(text)), normalize, check,
+                                 [this](const std::u32string& run, std::size_t start, std::size_t length, const std::string& grapheme) {
+                                     return opens_listed_word(run, start, length, grapheme);
+                                 });
     if (words.empty()) return result;
 
     std::vector<std::string> surfaces, ipa_words;
