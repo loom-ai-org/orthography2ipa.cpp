@@ -48,7 +48,7 @@ transcription of each word. The reference then needs the silabificador
 release that the C++ port matches:
 
 ```sh
-uv pip install silabificador==2.1.1a2
+uv pip install silabificador==2.1.11a1
 ```
 
 The catalog is bundled from the Python project. To use another catalog:

@@ -7,7 +7,9 @@ that is absent, empty or a file, and each syllabifier mode, over the word, text,
 detailed, candidates, confidence and lattice surfaces, with a process lexicon and
 a registered syllabifier set, so an engine that reads either shows up. A second
 grid crosses the expand, mark, rescore and sandhi fields, allow_undeclared_phonemes
-and each old argument that conflicts with a field. It also runs load_lexicon,
+and each old argument that conflicts with a field. An endings grid builds the
+engine with expose_ambiguous_endings on and off, over words that end in a
+list-valued grammatical ending. It also runs load_lexicon,
 packaged_lexicon with and without the patches, the inventory functions with a
 mapping, detect_stress with a syllabifier, and the deprecation text.
 
@@ -19,7 +21,7 @@ silabificador package, so it is not part of the default run.
 A forced pronunciation runs in each language, so the grid holds the type and the
 text of each MarkupError. A newline in that text is `|` on the driver's line.
 
-Usage: pipeline_parity.py <path-to-check-pipeline-binary> [--only grid|fields|packaged|deprecation|silabificador]
+Usage: pipeline_parity.py <path-to-check-pipeline-binary> [--only grid|fields|endings|packaged|deprecation|silabificador]
 """
 import logging
 import os
@@ -130,6 +132,17 @@ class Bar(SandhiPlugin):
         return []
 
 
+class Merge(SandhiPlugin):
+    """Keeps the first word only, so it rewrites the sentence and not its sandhi."""
+
+    def apply(self, words, surfaces, pausal, lang):
+        return words[:1]
+
+    @property
+    def language_codes(self):
+        return []
+
+
 class Keeps(SentenceRescorer):
     def rescore(self, word, context):
         return word.ipa
@@ -167,13 +180,15 @@ FIELD_MODES = [
     # An empty list is an argument, and None is not: each conflicts with its field.
     ("-", "-", "backs", "-", "0", "rescorer-empty"), ("-", "-", "-", "bar", "0", "sentence_rescorer-empty"),
     ("-", "-", "-", "-", "0", "rescorer-empty"), ("-", "-", "-", "-", "0", "sentence_rescorer-empty"),
+    # A sandhi plugin that changes the word count is a ValueError.
+    ("-", "-", "-", "merge", "0", "-"), ("words", "-", "-", "merge", "0", "-"),
 ]
 
 
 def field_engine(lang, expand, mark, rescore, sandhi, allow, old):
     pipeline = Pipeline(expand=EXPAND.get(expand), mark=MARK.get(mark),
                         rescore={"-": (), "backs": (BacksA(),), "two": (BacksA(), BacksA())}[rescore],
-                        sandhi=Bar() if sandhi == "bar" else None)
+                        sandhi={"bar": Bar(), "merge": Merge()}.get(sandhi))
     extra = {"rescorer": {"rescorer": BacksA()}, "sentence_rescorer": {"sentence_rescorer": Keeps()},
              "rescorer-empty": {"rescorer": []}, "sentence_rescorer-empty": {"sentence_rescorer": []},
              "named-rescore": {"plugins": {"rescore": "nothing"}},
@@ -241,6 +256,9 @@ def run(field):
     if command == "fields":
         engine = None
         engine = field_engine(*field[1:])
+        return ""
+    if command == "endings":
+        engine = G2P(field[1], expose_ambiguous_endings=field[2] == "1")
         return ""
     if command == "word":
         return engine.transcribe_word(field[1])
@@ -353,6 +371,29 @@ def field_commands():
             out.append(["fields", lang, *modes])
             out += [[surface, text] for text in texts for surface in ("text", "detailed", "features", "sentence")]
             out += [["word", word] for word in ("gato", "casa", "101")]
+    return out
+
+
+# Words that end in a list-valued grammatical ending: fr-FR ⟨-ent⟩, nds ⟨-en⟩
+# and ⟨-er⟩, mwl ⟨-on⟩. Each ending lists one alternative, which is also its
+# last. fr-FR parle and nds Kind end in none of them.
+ENDING_WORDS = {
+    "fr-FR": ["parlent", "mangent", "souvent", "chantent", "vent", "parle"],
+    "nds": ["slapen", "Vader", "Moder", "eten", "Water", "Kind"],
+    "mwl": ["cantaron", "caçon", "falaron", "bon"],
+    "mwl-x-ifanes": ["cantaron", "caçon", "bon"],
+}
+ENDING_TEXTS = {"fr-FR": ["ils parlent souvent"], "nds": ["Vader slapen"]}
+
+
+def ending_commands():
+    out = []
+    for lang, words in ENDING_WORDS.items():
+        for expose in ("1", "0"):
+            out.append(["endings", lang, expose])
+            out += [[surface, word] for word in words
+                    for surface in ("word", "candidates", "confidence", "lattice", "path", "detailed")]
+            out += [[surface, text] for text in ENDING_TEXTS.get(lang, []) for surface in ("text", "detailed")]
     return out
 
 
@@ -479,6 +520,8 @@ def main():
             bad += compare(binary, root, "grid", {}, commands(root))
         if only in (None, "fields"):
             bad += compare(binary, root, "fields", {}, field_commands())
+        if only in (None, "endings"):
+            bad += compare(binary, root, "endings", {}, ending_commands())
         if only in (None, "packaged"):
             bad += packaged_case(binary, root)
         if only in (None, "deprecation"):

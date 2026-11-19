@@ -21,6 +21,7 @@
 #include <boost/property_tree/ptree.hpp>
 #include <algorithm>
 #include <cctype>
+#include <cxxabi.h>
 #include <cerrno>
 #include <cmath>
 #include <filesystem>
@@ -33,6 +34,7 @@
 #include <tuple>
 #include <regex>
 #include <mutex>
+#include <typeinfo>
 #include <pwd.h>
 #include <sys/types.h>
 #include <sys/wait.h>
@@ -1387,7 +1389,8 @@ std::string ending_vowels_follow_stress(const LanguageSpec& spec, const IPAPath&
 
 std::vector<IPAPath> apply_grammatical_endings(const LanguageSpec& spec,
                                                const std::string& word,
-                                               std::vector<IPAPath> paths) {
+                                               std::vector<IPAPath> paths,
+                                               bool expose_ambiguous_endings) {
     // g2p.py _apply_grammatical_ending: rewrite each path's tail when
     // *word* ends in a declared grammatical_endings entry. The word is
     // tokenized and searched exactly as before: this stage only replaces
@@ -1451,7 +1454,7 @@ std::vector<IPAPath> apply_grammatical_endings(const LanguageSpec& spec,
         const IPAPath next = match->ipa.has_value() ? rewrite(path, *match->ipa, 0.0) : path;
         if (seen.insert(next.ipa).second) rewritten.push_back(next);
     }
-    if (!match->alternatives.empty() && !rewritten.empty()) {
+    if (!match->alternatives.empty() && !rewritten.empty() && expose_ambiguous_endings) {
         // Rank costs over the declared list, exactly as an ordered grapheme
         // candidate list is costed: element 0 is free, element i pays i.
         std::vector<std::string> candidates;
@@ -1462,8 +1465,8 @@ std::vector<IPAPath> apply_grammatical_endings(const LanguageSpec& spec,
         // tail rank 1 replaced, so splicing it onto the already rewritten
         // path would eat the tail twice.
         const IPAPath& base = paths[0];
-        for (std::size_t i = 1; i < match->alternatives.size(); ++i) {
-            const IPAPath next = rewrite(base, match->alternatives[i - 1], costs[i]);
+        for (std::size_t i = 0; i < match->alternatives.size(); ++i) {
+            const IPAPath next = rewrite(base, match->alternatives[i], costs[i + 1]);
             if (seen.insert(next.ipa).second) rewritten.push_back(next);
         }
         // Stable sort: the alternatives take their cost-ordered place among
@@ -2320,7 +2323,7 @@ G2P::G2P(std::string language, std::map<std::string, std::vector<std::string>> p
          bool apply_sandhi, bool apply_stress, bool apply_allophony,
          const sentence::SentenceRescorerArg& sentence_rescorer,
          const rescorer::RescorerArg& rescorer, const Pipeline& pipeline,
-         bool allow_undeclared_phonemes)
+         bool allow_undeclared_phonemes, bool expose_ambiguous_endings)
     : field_stages_(pipeline_field_stages(pipeline, plugin_overrides, sentence_rescorer, rescorer)),
       language_(resolve(language)), spec_(&get(language_)), plugin_overrides_(std::move(plugin_overrides)),
       pipeline_(std::make_shared<const Pipeline>(pipeline)),
@@ -2330,7 +2333,8 @@ G2P::G2P(std::string language, std::map<std::string, std::vector<std::string>> p
       sentence_rescorers_(sentence::normalize_sentence_rescorers(sentence_rescorer)),
       // `user_rescorers = normalize_rescorers(self.pipeline.rescore or rescorer)`
       user_rescorers_(rescorer::normalize_rescorers(pipeline.rescore.items.empty() ? rescorer : pipeline.rescore)),
-      allow_undeclared_phonemes_(allow_undeclared_phonemes) {
+      allow_undeclared_phonemes_(allow_undeclared_phonemes),
+      expose_ambiguous_endings_(expose_ambiguous_endings) {
     discover_plugins_once();
     if (!dialect_profile_.empty() && !dialect_profile_known(dialect_profile_))
         throw std::invalid_argument("unknown dialect profile: " + dialect_profile_);
@@ -2381,7 +2385,8 @@ std::vector<std::string> resolve_declared(const std::string& stage, const std::s
     else if (stage == "stress") collect(stress_plugins);
     else if (stage == "rescore") collect(rescorer_plugins);
     else if (stage == "sandhi") collect(sandhi_plugins);
-    else throw std::invalid_argument("unknown plugin stage: " + stage);
+    // `ENTRY_POINT_GROUPS[stage]`: a stage without a group is a KeyError.
+    else throw std::out_of_range(detail::py_repr(stage));
 
     std::vector<std::string> out;
     out.reserve(names.size());
@@ -2409,6 +2414,25 @@ std::vector<std::string> resolve_declared(const std::string& stage, const std::s
         out.push_back(name);
     }
     return out;
+}
+
+// `type(plugin).__name__`: the unqualified name of the plugin's dynamic type,
+// without its template arguments.
+std::string type_name(const SandhiPlugin& plugin) {
+    std::string name = typeid(plugin).name();
+    int status = 0;
+    const std::unique_ptr<char, void (*)(void*)> demangled(
+        abi::__cxa_demangle(name.c_str(), nullptr, nullptr, &status), std::free);
+    if (status == 0) name = demangled.get();
+    if (!name.empty() && name.back() == '>') {
+        int depth = 0;
+        for (std::size_t i = name.size(); i-- > 0;) {
+            if (name[i] == '>') ++depth;
+            else if (name[i] == '<' && --depth == 0) { name.erase(i); break; }
+        }
+    }
+    const std::size_t scope = name.rfind("::");
+    return scope == std::string::npos ? name : name.substr(scope + 2);
 }
 } // namespace
 
@@ -2763,7 +2787,7 @@ IPAPath G2P::engine_path(const std::string& word, std::size_t width) const {
     auto paths = needs_context_beam_ ? tokenizer.beam(word, width)
                                      : tokenizer.rescored_beam(word, width);
     paths = apply_rescorer_plugins(word, std::move(paths));
-    paths = apply_grammatical_endings(*spec_, word, std::move(paths));
+    paths = apply_grammatical_endings(*spec_, word, std::move(paths), expose_ambiguous_endings_);
     if (!paths.empty()) return paths.front();
     IPAPath fallback; fallback.ipa = word; fallback.segments = {word};
     return fallback;
@@ -2942,7 +2966,7 @@ std::vector<std::string> G2P::word_candidates(const std::string& word, std::size
     auto paths = needs_context_beam_ ? tokenizer.beam(word, width)
                                      : tokenizer.rescored_beam(word, width);
     paths = apply_rescorer_plugins(word, std::move(paths));
-    paths = apply_grammatical_endings(*spec_, word, std::move(paths));
+    paths = apply_grammatical_endings(*spec_, word, std::move(paths), expose_ambiguous_endings_);
     std::vector<IPAPath> raw;
     for (std::size_t i = 0; i < paths.size() && i < k; ++i) raw.push_back(paths[i]);
     if (raw.empty()) raw.push_back(IPAPath{word, 0.0, {}, {}});
@@ -3032,7 +3056,7 @@ WordTranscription G2P::transcribe_one(const std::string& word, std::size_t width
         // a whole-word pass over the resolved paths, so its seam is here —
         // after the beam, before the grammatical-ending rewrite.
         paths = apply_rescorer_plugins(word, std::move(paths));
-        paths = apply_grammatical_endings(*spec_, word, std::move(paths));
+        paths = apply_grammatical_endings(*spec_, word, std::move(paths), expose_ambiguous_endings_);
         ipa = paths.empty() ? word : paths.front().ipa;
         ipa = finalize_word_ipa(*spec_, word, ipa,
                                 forced ? std::optional<std::string>(forced_ipa) : std::nullopt,
@@ -3138,12 +3162,16 @@ TranscriptionResult G2P::transcribe_detailed(const std::string& text, const std:
     // `for plugin in ([sandhi] if sandhi is not None else
     // self._stage_plugins.get("sandhi"))`: the Pipeline member replaces the
     // named plugins.
-    std::vector<std::pair<std::string, const SandhiPlugin*>> sandhi_stage;
-    if (pipeline_->sandhi) sandhi_stage.emplace_back("Pipeline(sandhi=...)", pipeline_->sandhi.get());
-    else for (const auto& name : declared("sandhi")) sandhi_stage.emplace_back(name, sandhi_plugins.at(name).get());
-    for (const auto& [name, plugin] : sandhi_stage) {
+    std::vector<const SandhiPlugin*> sandhi_stage;
+    if (pipeline_->sandhi) sandhi_stage.push_back(pipeline_->sandhi.get());
+    else for (const auto& name : declared("sandhi")) sandhi_stage.push_back(sandhi_plugins.at(name).get());
+    for (const auto* plugin : sandhi_stage) {
         auto transformed = plugin->apply(ipa_words, surfaces, pausal, language_);
-        if (transformed.size() != ipa_words.size()) throw std::runtime_error("sandhi plugin changed word count: " + name);
+        if (transformed.size() != ipa_words.size())
+            throw std::invalid_argument("the sandhi plugin " + type_name(*plugin) + " returned " +
+                                        std::to_string(transformed.size()) + " words for " +
+                                        std::to_string(ipa_words.size()) +
+                                        " — it rewrote the sentence, not its sandhi");
         ipa_words = std::move(transformed);
     }
 

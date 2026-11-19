@@ -403,6 +403,9 @@ public:
     /// either order would drop one of the two silently.
     /// `allow_undeclared_phonemes` is g2p.py's keyword of the same name: forced
     /// IPA skips the check against the spec's declared inventory.
+    /// `expose_ambiguous_endings` is g2p.py's keyword of the same name: when
+    /// false, a list-valued `grammatical_endings` entry gives only its first
+    /// reading, and the lower-ranked readings stay out of the beam.
     explicit G2P(std::string language, std::map<std::string, std::vector<std::string>> plugin_overrides = {},
                  std::string dialect_profile = "", bool expand_allophones = false,
                  bool apply_sandhi = true, bool apply_stress = true,
@@ -410,7 +413,8 @@ public:
                  const sentence::SentenceRescorerArg& sentence_rescorer = nullptr,
                  const rescorer::RescorerArg& rescorer = nullptr,
                  const Pipeline& pipeline = {},
-                 bool allow_undeclared_phonemes = false);
+                 bool allow_undeclared_phonemes = false,
+                 bool expose_ambiguous_endings = true);
     const LanguageSpec& spec() const;
     /// g2p.py G2P.pipeline: the pipeline this engine runs with.
     const Pipeline& pipeline() const { return *pipeline_; }
@@ -537,6 +541,7 @@ private:
     /// undeclared phonemes.
     void check_forced(const std::string& ipa) const;
     bool allow_undeclared_phonemes_ = false;
+    bool expose_ambiguous_endings_ = true;
     /// g2p.py G2P._prepared: *chunks* after the pipeline's `expand` and `mark`.
     std::vector<markup::Chunk> prepared(std::vector<markup::Chunk> chunks) const;
     /// g2p.py G2P._override_for: the whole-word reading for *word* —
@@ -660,6 +665,9 @@ std::vector<std::string> ancestry_chain(const std::string& code);
 /// the order it names them, resolved against the registered plugins of that
 /// stage. Raises MissingPlugin for a name nothing provides — the reference's
 /// message names the wanted plugin and lists what IS installed.
+/// A *stage* other than normalize, stress, rescore and sandhi throws
+/// std::out_of_range, the reference's KeyError, when the spec names a plugin
+/// for it.
 /// The five stage interfaces share no common base in C++, so this returns the
 /// resolved PLUGINS AS NAMES plus one typed accessor per stage; use
 /// declared_normalize_plugin() & co. to reach the object.

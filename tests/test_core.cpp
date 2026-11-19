@@ -315,6 +315,24 @@ int main() {
         assert(foreign.sentence_lattice("tenho 23").words.at(1).surface == "vinte");
     }
     {
+        // registry.py get_declared_plugins: a stage with no entry-point group
+        // is a KeyError, std::out_of_range here, and str() of it is the repr
+        // of the stage. A stage the spec names no plugin for returns nothing.
+        LanguageSpec spec = get("pt-PT");
+        spec.plugins["syllabify"] = {"x"};
+        std::string missing;
+        try {
+            get_declared_plugins("syllabify", spec);
+        } catch (const std::out_of_range& error) {
+            missing = error.what();
+        } catch (const std::exception& error) {
+            missing = std::string("not KeyError: ") + error.what();
+        }
+        assert(missing == "'syllabify'");
+        spec.plugins["syllabify"] = {};
+        assert(get_declared_plugins("syllabify", spec).empty());
+    }
+    {
         // registry.py get_declared_plugins resolves a declared plugin by name
         // for every stage and never asks which languages it owns: plugins that
         // own only qaa-x-foreign, a code no spec resolves to, run on a pt-PT
@@ -407,7 +425,7 @@ int main() {
         assert(joined.transcribe("o gato") == "ua ˈɡatua" && sandhi->calls == 1);
         assert(joined.transcribe_detailed("o gato").ipa == "uo ˈɡatuo" && sandhi->calls == 2);
         // A sandhi plugin may not change the word count. g2p.py raises
-        // ValueError, and the port throws runtime_error with its own message.
+        // ValueError, which is std::invalid_argument here, with the same text.
         struct Merging : SandhiPlugin {
             std::vector<std::string> language_codes() const override { return {"pt-PT"}; }
             std::vector<std::string> apply(const std::vector<std::string>& words, const std::vector<std::string>&,
@@ -416,13 +434,15 @@ int main() {
             }
         };
         register_sandhi_plugin("test-merging-sandhi", std::make_shared<Merging>());
-        bool refused = false;
+        std::string refused;
         try {
             G2P("pt-PT", {{"sandhi", {"test-merging-sandhi"}}}).transcribe("o gato");
-        } catch (const std::runtime_error& error) {
-            refused = std::string(error.what()).find("changed word count") != std::string::npos;
+        } catch (const std::invalid_argument& error) {
+            refused = error.what();
+        } catch (const std::exception& error) {
+            refused = std::string("not ValueError: ") + error.what();
         }
-        assert(refused);
+        assert(refused == "the sandhi plugin Merging returned 1 words for 2 — it rewrote the sentence, not its sandhi");
     }
     {
         // A silent stress mark is [""] in the tables, and a whole-word key is

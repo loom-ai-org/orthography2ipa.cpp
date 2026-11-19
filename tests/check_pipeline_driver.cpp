@@ -13,6 +13,8 @@
 //                                and one old argument; the modes are the ones
 //                                pipeline_parity.py names. When the build
 //                                throws, a later command answers "NoEngine".
+//   endings<TAB>lang<TAB>expose  the engine the commands below use, with
+//                                expose_ambiguous_endings on (1) or off (0)
 //   word, text, detailed, candidates, confidence, lattice, path, pre<TAB>input
 //   load<TAB>source              load_lexicon
 //   packaged<TAB>code            packaged_lexicon
@@ -99,6 +101,16 @@ public:
     }
 };
 
+/// Keeps the first word only, so it rewrites the sentence and not its sandhi.
+class Merge : public SandhiPlugin {
+public:
+    std::vector<std::string> language_codes() const override { return {}; }
+    std::vector<std::string> apply(const std::vector<std::string>& words, const std::vector<std::string>&,
+                                   const std::vector<bool>&, const std::string&) const override {
+        return words.empty() ? words : std::vector<std::string>{words.front()};
+    }
+};
+
 class Keeps : public sentence::SentenceRescorer {
 public:
     std::string rescore(const sentence::WordSlot& word, const sentence::SentenceRescoreContext&) const override {
@@ -153,7 +165,9 @@ std::unique_ptr<G2P> field_engine(const std::vector<std::string>& field) {
         : old == "rescorer-empty" ? rescorer::RescorerArg(std::vector<const rescorer::LatticeRescorer*>{})
                                   : rescorer::RescorerArg(),
         Pipeline{std::nullopt, nullptr, expand_of(field[2]), mark_of(field[3]), fields_rescore,
-                 field[5] == "bar" ? std::make_shared<const Bar>() : nullptr},
+                 field[5] == "bar"     ? std::shared_ptr<const SandhiPlugin>(std::make_shared<const Bar>())
+                 : field[5] == "merge" ? std::make_shared<const Merge>()
+                                       : nullptr},
         field[6] == "1");
 }
 
@@ -211,6 +225,12 @@ std::string run(const std::vector<std::string>& field) {
     if (command == "fields") {
         current.reset();
         current = field_engine(field);
+        return "";
+    }
+    if (command == "endings") {
+        current.reset();
+        current = std::make_unique<G2P>(field[1], std::map<std::string, std::vector<std::string>>{}, "", false,
+                                        true, true, true, nullptr, nullptr, Pipeline{}, false, field[2] == "1");
         return "";
     }
     if (command != "engine" && command != "load" && command != "packaged" && command != "patched" &&
@@ -317,6 +337,10 @@ int main() {
             std::cout << "ValueError\t" << error.what() << '\n';
         } catch (const NoEngine&) {
             std::cout << "NoEngine\t" << '\n';
+        } catch (const std::exception& error) {
+            // No reference row has this type, so the line differs and the
+            // run goes on.
+            std::cout << "UnexpectedError\t" << error.what() << '\n';
         }
     }
 }
