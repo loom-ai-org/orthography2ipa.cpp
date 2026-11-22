@@ -156,6 +156,18 @@
   },
   "allophone_rules": [
     {
+      "id": "PT_EX_CONSONANT_GLIDE",
+      "phonemes": [],
+      "surface": "ɐj",
+      "notes": "DISABLED for São Tomé Portuguese. No source for the vowel of ⟨ex⟩ before a consonant in this variety was read, so its output stays what it was. The pt-PT rule gives ⟨ex⟩ the diphthong of the pt-PT ⟨ei⟩, [ej]."
+    },
+    {
+      "id": "PT_INITIAL_EX_VOICED",
+      "phonemes": [],
+      "surface": "z",
+      "notes": "DISABLED for São Tomé Portuguese. No source for the reading of word-initial ⟨ex⟩ before a vowel in this variety was read, so its output stays what it was. The pt-PT rule gives the ⟨x⟩ the value [z]."
+    },
+    {
       "id": "PT_LEX_REDUCED_O",
       "phonemes": [],
       "surface": "u",
@@ -655,5 +667,6 @@
     "source": "wikidata",
     "notes": "the city of São Tomé. Note the spec's wikidata_qid (Q36536) is Forro CREOLE, a different language from this Portuguese variety, so it was NOT used as the source of this point. [Wikidata Q3932 P625]"
   },
-  "word_exceptions_base": "pt-PT"
+  "word_exceptions_base": "pt-PT",
+  "collapse_geminates": true
 }

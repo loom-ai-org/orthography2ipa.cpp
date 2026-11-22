@@ -211,6 +211,40 @@ std::u32string expand_arabic_gemination(const std::u32string& text) {
     return text3;
 }
 
+// phonetok.py _expand_gurmukhi_gemination: the addak ੱ (U+0A71) doubles
+// the consonant letter AFTER it. Each run of addaks and the letter
+// (U+0A15..U+0A39, with its optional nukta U+0A3C) after it become
+// letter, virama, letter — the regex "ੱ+([ਕ-ਹ]਼?)" as a leftmost
+// non-overlapping substitution.
+constexpr char32_t GURMUKHI_ADDAK = U'\u0A71';
+constexpr char32_t GURMUKHI_VIRAMA = U'\u0A4D';
+constexpr char32_t GURMUKHI_NUKTA = U'\u0A3C';
+
+std::u32string expand_gurmukhi_gemination(const std::u32string& text) {
+    if (text.find(GURMUKHI_ADDAK) == std::u32string::npos) return text;
+    std::u32string out;
+    std::size_t i = 0;
+    while (i < text.size()) {
+        if (text[i] == GURMUKHI_ADDAK) {
+            std::size_t j = i;
+            while (j < text.size() && text[j] == GURMUKHI_ADDAK) ++j;
+            if (j < text.size() && text[j] >= 0x0A15 && text[j] <= 0x0A39) {
+                std::u32string letter(1, text[j]);
+                ++j;
+                if (j < text.size() && text[j] == GURMUKHI_NUKTA) letter.push_back(text[j++]);
+                out += letter;
+                out.push_back(GURMUKHI_VIRAMA);
+                out += letter;
+                i = j;
+                continue;
+            }
+        }
+        out.push_back(text[i]);
+        ++i;
+    }
+    return out;
+}
+
 // ═══════════════════════════════════════════════════════════════════════
 // Punctuation / digit / whitespace character classes (phonetok.py regexes)
 // ═══════════════════════════════════════════════════════════════════════
@@ -892,20 +926,32 @@ std::optional<std::vector<std::u32string>> PhonetokTokenizer::positional_u32(
     return u32vec(pit->second);
 }
 
+// phonetok.py PhonetokTokenizer.prepare — the string the scan runs over.
+std::u32string PhonetokTokenizer::prepare_u32(const std::u32string& input) const {
+    std::u32string text = normalise(input);
+
+    // Arabic-script pre-tokenization normalization. A spec that declares the
+    // shadda writes Arabic letters whatever its `script` label says.
+    const bool declares_shadda = grapheme_ipa_.count(std::u32string(1, AR_SHADDA)) != 0;
+    if (spec_.script == "Arabic" || declares_shadda) {
+        text = decompose_arabic_presentation_forms(text);
+        // Arabic-script specs that do not declare shadda (Persian) stay
+        // byte-identical.
+        if (declares_shadda) text = expand_arabic_gemination(text);
+    } else if (spec_.script == "Gurmukhi") {
+        text = expand_gurmukhi_gemination(text);
+    }
+    return text;
+}
+
+std::string PhonetokTokenizer::prepare(const std::string& text) const {
+    return utf8(prepare_u32(uni::to_utf32(text)));
+}
+
 // phonetok.py PhonetokTokenizer.tokenize — the core tokenization scan.
 std::vector<PhonetokTokenizer::UToken> PhonetokTokenizer::tokenize_u32(
     const std::u32string& input) const {
-    std::u32string text = normalise(input);
-
-    // Arabic-script pre-tokenization normalization (script-scoped).
-    if (spec_.script == "Arabic") {
-        text = decompose_arabic_presentation_forms(text);
-        // Gemination is only expanded for specs that actually model
-        // shadda; this leaves Arabic-script specs that do not (e.g.
-        // Persian) byte-identical.
-        if (grapheme_ipa_.count(std::u32string(1, AR_SHADDA)))
-            text = expand_arabic_gemination(text);
-    }
+    const std::u32string text = prepare_u32(input);
 
     std::vector<UToken> tokens;
     const std::size_t n = text.size();

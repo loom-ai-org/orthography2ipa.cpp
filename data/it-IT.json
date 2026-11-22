@@ -691,6 +691,16 @@
       "notes": "Intervocalic /ʎ/ is inherently long in Italian (Krämer (2009) The Phonology of Italian (OUP) §7.2; Canepari DiPI): bagno [baɲɲo], aglio [aʎʎo], pesce [peʃʃe], vizio [vittsjo]."
     },
     {
+      "id": "IT_INHERENT_GEMINATE_GLI_FINAL",
+      "phonemes": [
+        "ʎ"
+      ],
+      "surface": "ʎʎ",
+      "preceded_by_phoneme": ["a", "e", "ɛ", "i", "o", "ɔ", "u"],
+      "followed_by_phoneme": ["i"],
+      "notes": "The ⟨gli⟩ at the end of a word is one slot that writes [ʎi], so IT_INHERENT_GEMINATE_GLI, which needs a vowel slot after the [ʎ], never sees it. This rule reads the [i] inside the slot. Bertinetto & Loporcaro (2005, JIPA 35(2), p. 134): /ɲ ʎ ʃ t͡s d͡z/ 'tend to have geminate-like duration, most saliently in intervocalic position: cf. ragno [ˈraɲːo] ‘spider’, aglio [ˈaʎːo] ‘garlic’'. The only exception they name is the article gli, 'with optional degemination in FI, even when it occurs in intervocalic position'. The article stands at the start of its word, where no vowel precedes the [ʎ], so it stays short: figli [ˈfiʎʎi], tagli [ˈtaʎʎi], gli [ʎi]."
+    },
+    {
       "id": "IT_INHERENT_GEMINATE_SC",
       "phonemes": [
         "ʃ"

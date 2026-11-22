@@ -50,7 +50,7 @@
     ]
   },
   "parent": "no",
-  "notes": "Norwegian Bokmål — majority written standard (~85%), Urban East Norwegian phonology (Kristoffersen 2000). QUANTITY: as in Swedish, a stressed vowel is long before a single consonant and short before a geminate or a cluster; doubled letters are grapheme keys mapping to /Cː/, clusters map to the concatenated phonemes, and allophone rules shorten the stressed nucleus before them. VOWELS: ⟨a⟩ is a single phoneme /ɑ/, back at both quantities (Kristoffersen 2015: p.3 katt [kɑt] vs kart [kɑʈ]; p.6 /hɑt/ hatt, /lɑːt/ lat; p.24 bestemt form /mɑɲ/ mann → [mɑːɲ]; p.29 ha [hɑː] vs hatt [hɑt]); there is no front allophone conditioned by quantity or stress. Unstressed ⟨e⟩ is [ə] (the ubiquitous ending vowel). RETROFLEXION: ⟨rt rd rn rs rl⟩ → [ʈ ɖ ɳ ʂ ɭ]. SOFTENING: ⟨k g sk⟩ → [ç j ʃ] before a front vowel. SILENT D: word-final ⟨nd⟩→[n], ⟨ld⟩→[l]; ⟨hv⟩→[v]. R: the phoneme is the apical /r/ (Kristoffersen); the tap [ɾ] is one realisation. TONEMES (accent 1/2) are suprasegmental and are NOT encoded; the gold marks them (¹/²), a convention difference rather than an error. MEASURED (harness normalize+broad, oracle top-3/top-5 columns not used for gating): raw PER is 0.3048 on ipadict (n=10169), 0.3587 on ipa_childes (n=3176, non-qualifying espeak-derived provenance) and 0.3654 on wikipron (n=2725), against 0.3397/0.3871/0.3471 before this fix. Folding length notation (vowel ː plus doubled-letter consonant gemination, one contrast written two ways) out of both hyp and gold re-measures ipadict at 0.2096 and wikipron at 0.3039; ipadict clears the 0.25 production threshold (recorded as `valid_ceiling.ipadict`), wikipron does not. Toneme digits remain a no-op fold for ipadict (0 toneme-digit tokens in this gold) but move wikipron a further 0.3039→0.2995, still short of the threshold (see `valid_ceiling.wikipron` for the full breakdown; this supersedes the pre-fix 0.3397/0.2477 figures measured in #1361, which were against the vowel rule before #1366 and are no longer current). ipadict and ipa_childes both improve, consistent with Kristoffersen 2015 treating /ɑ/ as one phoneme at both quantities. wikipron gets worse, and the reason is a genuine split in the gold, not a loanword artifact: counting rows in the raw nob_latn_broad.tsv whose spelling contains ⟨a⟩, front [a] outnumbers back [ɑ] roughly 5:1 (1444 vs 257 by a token-level count; an independent count by dataset/dialect gave front outnumbering back roughly 2.7:1), and the split runs through ordinary native vocabulary on both sides: takk, fatt, kart and abbor are transcribed with front [a], while mann, alle, vann, land, hand and sjakk are transcribed with back [ɑ]. Some words are transcribed both ways in the same file (katt as both \"k a tː\" and \"k ɑ tː\"; natt likewise). This spec does not have an account for why wikipron's contributor pool skews toward front notation for this vowel; it is recorded here as an open, unresolved disagreement between a crowd-scraped gold and a phonetics reference grammar, not glossed over. Kristoffersen 2015 (open-access, checked directly, see sources) is preferred over the unverified page-level claim in Kristoffersen 2000 (the OUP monograph, still unreached) and over wikipron's crowd transcription.",
+  "notes": "Norwegian Bokmål — majority written standard (~85%), Urban East Norwegian phonology (Kristoffersen 2000). QUANTITY: as in Swedish, a stressed vowel is long before a single consonant and short before a geminate or a cluster; doubled letters are grapheme keys mapping to /Cː/, clusters map to the concatenated phonemes, and allophone rules shorten the stressed nucleus before them. ⟨ng⟩ /ŋ/ is the exception: the vowel before it is short, as Kristoffersen (2015) writes it in every form he transcribes ([1sɑŋ] sang, p. 27; [1lɑŋ] lang, p. 28; /rɑːr tiŋ/ rar ting, p. 31). The rules NB_SHORTEN_*_BEFORE_NG shorten the nucleus before the grapheme ⟨ng⟩. VOWELS: ⟨a⟩ is a single phoneme /ɑ/, back at both quantities (Kristoffersen 2015: p.3 katt [kɑt] vs kart [kɑʈ]; p.6 /hɑt/ hatt, /lɑːt/ lat; p.24 bestemt form /mɑɲ/ mann → [mɑːɲ]; p.29 ha [hɑː] vs hatt [hɑt]); there is no front allophone conditioned by quantity or stress. Unstressed ⟨e⟩ is [ə] (the ubiquitous ending vowel). RETROFLEXION: ⟨rt rd rn rs rl⟩ → [ʈ ɖ ɳ ʂ ɭ]. SOFTENING: ⟨k g sk⟩ → [ç j ʃ] before a front vowel. SILENT D: word-final ⟨nd⟩→[n], ⟨ld⟩→[l]; ⟨hv⟩→[v]. R: the phoneme is the apical /r/ (Kristoffersen); the tap [ɾ] is one realisation. TONEMES (accent 1/2) are suprasegmental and are NOT encoded; the gold marks them (¹/²), a convention difference rather than an error. MEASURED (harness normalize+broad, oracle top-3/top-5 columns not used for gating): raw PER is 0.3048 on ipadict (n=10169), 0.3587 on ipa_childes (n=3176, non-qualifying espeak-derived provenance) and 0.3654 on wikipron (n=2725), against 0.3397/0.3871/0.3471 before this fix. Folding length notation (vowel ː plus doubled-letter consonant gemination, one contrast written two ways) out of both hyp and gold re-measures ipadict at 0.2096 and wikipron at 0.3039; ipadict clears the 0.25 production threshold (recorded as `valid_ceiling.ipadict`), wikipron does not. Toneme digits remain a no-op fold for ipadict (0 toneme-digit tokens in this gold) but move wikipron a further 0.3039→0.2995, still short of the threshold (see `valid_ceiling.wikipron` for the full breakdown; this supersedes the pre-fix 0.3397/0.2477 figures measured in #1361, which were against the vowel rule before #1366 and are no longer current). ipadict and ipa_childes both improve, consistent with Kristoffersen 2015 treating /ɑ/ as one phoneme at both quantities. wikipron gets worse, and the reason is a genuine split in the gold, not a loanword artifact: counting rows in the raw nob_latn_broad.tsv whose spelling contains ⟨a⟩, front [a] outnumbers back [ɑ] roughly 5:1 (1444 vs 257 by a token-level count; an independent count by dataset/dialect gave front outnumbering back roughly 2.7:1), and the split runs through ordinary native vocabulary on both sides: takk, fatt, kart and abbor are transcribed with front [a], while mann, alle, vann, land, hand and sjakk are transcribed with back [ɑ]. Some words are transcribed both ways in the same file (katt as both \"k a tː\" and \"k ɑ tː\"; natt likewise). This spec does not have an account for why wikipron's contributor pool skews toward front notation for this vowel; it is recorded here as an open, unresolved disagreement between a crowd-scraped gold and a phonetics reference grammar, not glossed over. Kristoffersen 2015 (open-access, checked directly, see sources) is preferred over the unverified page-level claim in Kristoffersen 2000 (the OUP monograph, still unreached) and over wikipron's crowd transcription.",
   "quality": "research",
   "script_type": "alphabet",
   "sources": [
@@ -91,8 +91,8 @@
       "title": "Innføring i norsk fonologi",
       "publisher": "University of Bergen (Bergen Open Research Archive), 4th ed.",
       "url": "https://bora.uib.no/handle/1956/15694",
-      "pages": "3, 6, 24, 29",
-      "notes": "Norwegian-language phonology text (distinct from Kristoffersen 2000). Analyses the Norwegian low back vowel as a single phoneme /ɑ/, not /a/, and gives it at both quantities without a front allophone: p.3 katt [kɑt] vs kart [kɑʈ]; p.6 \"/hɑt/, hatt (subst.), /lɑːt/ lat (adj.)\"; p.24 bestemt form /mɑɲ/ mann realised [mɑːɲ]; p.29 the footnote on minimal Norwegian word shape gives ha as [hɑː] and hatt as [hɑt]. PDF fetched via the Wayback Machine snapshot of the BORA bitstream (the live BORA page now serves a client-rendered app that does not return the file directly)."
+      "pages": "3, 6, 24, 27, 28, 29, 31",
+      "notes": "Norwegian-language phonology text (distinct from Kristoffersen 2000). Analyses the Norwegian low back vowel as a single phoneme /ɑ/, not /a/, and gives it at both quantities without a front allophone: p.3 katt [kɑt] vs kart [kɑʈ]; p.6 \"/hɑt/, hatt (subst.), /lɑːt/ lat (adj.)\"; p.24 bestemt form /mɑɲ/ mann realised [mɑːɲ]; p.29 the footnote on minimal Norwegian word shape gives ha as [hɑː] and hatt as [hɑt]. PDF fetched via the Wayback Machine snapshot of the BORA bitstream (the live BORA page now serves a client-rendered app that does not return the file directly). pp. 27, 28 and 31 transcribe ⟨ng⟩ words with a short vowel: [1sɑŋ] sang, [1klɑŋ] klang, [1sprɑŋ] sprang, [1lɑŋ] lang, [1lɛŋt] lengt, /rɑːr tiŋ/ rar ting."
     }
   ],
   "wikipedia": [
@@ -509,6 +509,105 @@
       "surface": "ɔ",
       "notes": "short vowel before a consonant cluster or geminate (complementary quantity)",
       "followed_by": "consonant_cluster"
+    },
+    {
+      "id": "NB_SHORTEN_A_BEFORE_NG",
+      "phonemes": [
+        "ɑː"
+      ],
+      "surface": "ɑ",
+      "followed_by_grapheme": [
+        "ng"
+      ],
+      "notes": "A stressed vowel is short before ⟨ng⟩ /ŋ/, though /ŋ/ is one consonant: Kristoffersen (2015) writes a short vowel before /ŋ/ in every form he transcribes, [1sɑŋ] sang, [1klɑŋ] klang, [1sprɑŋ] sprang (p. 27), [1lɑŋ] lang, [1lɛŋt] lengt (p. 28) and /rɑːr tiŋ/ rar ting (p. 31), where the long vowel of rar is marked."
+    },
+    {
+      "id": "NB_SHORTEN_E_BEFORE_NG",
+      "phonemes": [
+        "eː"
+      ],
+      "surface": "ɛ",
+      "followed_by_grapheme": [
+        "ng"
+      ],
+      "notes": "A stressed vowel is short before ⟨ng⟩ /ŋ/, though /ŋ/ is one consonant: Kristoffersen (2015) writes a short vowel before /ŋ/ in every form he transcribes, [1sɑŋ] sang, [1klɑŋ] klang, [1sprɑŋ] sprang (p. 27), [1lɑŋ] lang, [1lɛŋt] lengt (p. 28) and /rɑːr tiŋ/ rar ting (p. 31), where the long vowel of rar is marked."
+    },
+    {
+      "id": "NB_SHORTEN_I_BEFORE_NG",
+      "phonemes": [
+        "iː"
+      ],
+      "surface": "ɪ",
+      "followed_by_grapheme": [
+        "ng"
+      ],
+      "notes": "A stressed vowel is short before ⟨ng⟩ /ŋ/, though /ŋ/ is one consonant: Kristoffersen (2015) writes a short vowel before /ŋ/ in every form he transcribes, [1sɑŋ] sang, [1klɑŋ] klang, [1sprɑŋ] sprang (p. 27), [1lɑŋ] lang, [1lɛŋt] lengt (p. 28) and /rɑːr tiŋ/ rar ting (p. 31), where the long vowel of rar is marked."
+    },
+    {
+      "id": "NB_SHORTEN_O_BEFORE_NG",
+      "phonemes": [
+        "uː"
+      ],
+      "surface": "ɔ",
+      "followed_by_grapheme": [
+        "ng"
+      ],
+      "notes": "A stressed vowel is short before ⟨ng⟩ /ŋ/, though /ŋ/ is one consonant: Kristoffersen (2015) writes a short vowel before /ŋ/ in every form he transcribes, [1sɑŋ] sang, [1klɑŋ] klang, [1sprɑŋ] sprang (p. 27), [1lɑŋ] lang, [1lɛŋt] lengt (p. 28) and /rɑːr tiŋ/ rar ting (p. 31), where the long vowel of rar is marked."
+    },
+    {
+      "id": "NB_SHORTEN_U_BEFORE_NG",
+      "phonemes": [
+        "ʉː"
+      ],
+      "surface": "ʉ",
+      "followed_by_grapheme": [
+        "ng"
+      ],
+      "notes": "A stressed vowel is short before ⟨ng⟩ /ŋ/, though /ŋ/ is one consonant: Kristoffersen (2015) writes a short vowel before /ŋ/ in every form he transcribes, [1sɑŋ] sang, [1klɑŋ] klang, [1sprɑŋ] sprang (p. 27), [1lɑŋ] lang, [1lɛŋt] lengt (p. 28) and /rɑːr tiŋ/ rar ting (p. 31), where the long vowel of rar is marked."
+    },
+    {
+      "id": "NB_SHORTEN_Y_BEFORE_NG",
+      "phonemes": [
+        "yː"
+      ],
+      "surface": "ʏ",
+      "followed_by_grapheme": [
+        "ng"
+      ],
+      "notes": "A stressed vowel is short before ⟨ng⟩ /ŋ/, though /ŋ/ is one consonant: Kristoffersen (2015) writes a short vowel before /ŋ/ in every form he transcribes, [1sɑŋ] sang, [1klɑŋ] klang, [1sprɑŋ] sprang (p. 27), [1lɑŋ] lang, [1lɛŋt] lengt (p. 28) and /rɑːr tiŋ/ rar ting (p. 31), where the long vowel of rar is marked."
+    },
+    {
+      "id": "NB_SHORTEN_Æ_BEFORE_NG",
+      "phonemes": [
+        "æː"
+      ],
+      "surface": "æ",
+      "followed_by_grapheme": [
+        "ng"
+      ],
+      "notes": "A stressed vowel is short before ⟨ng⟩ /ŋ/, though /ŋ/ is one consonant: Kristoffersen (2015) writes a short vowel before /ŋ/ in every form he transcribes, [1sɑŋ] sang, [1klɑŋ] klang, [1sprɑŋ] sprang (p. 27), [1lɑŋ] lang, [1lɛŋt] lengt (p. 28) and /rɑːr tiŋ/ rar ting (p. 31), where the long vowel of rar is marked."
+    },
+    {
+      "id": "NB_SHORTEN_Ø_BEFORE_NG",
+      "phonemes": [
+        "øː"
+      ],
+      "surface": "œ",
+      "followed_by_grapheme": [
+        "ng"
+      ],
+      "notes": "A stressed vowel is short before ⟨ng⟩ /ŋ/, though /ŋ/ is one consonant: Kristoffersen (2015) writes a short vowel before /ŋ/ in every form he transcribes, [1sɑŋ] sang, [1klɑŋ] klang, [1sprɑŋ] sprang (p. 27), [1lɑŋ] lang, [1lɛŋt] lengt (p. 28) and /rɑːr tiŋ/ rar ting (p. 31), where the long vowel of rar is marked."
+    },
+    {
+      "id": "NB_SHORTEN_Å_BEFORE_NG",
+      "phonemes": [
+        "oː"
+      ],
+      "surface": "ɔ",
+      "followed_by_grapheme": [
+        "ng"
+      ],
+      "notes": "A stressed vowel is short before ⟨ng⟩ /ŋ/, though /ŋ/ is one consonant: Kristoffersen (2015) writes a short vowel before /ŋ/ in every form he transcribes, [1sɑŋ] sang, [1klɑŋ] klang, [1sprɑŋ] sprang (p. 27), [1lɑŋ] lang, [1lɛŋt] lengt (p. 28) and /rɑːr tiŋ/ rar ting (p. 31), where the long vowel of rar is marked."
     },
     {
       "id": "NB_SILENT_D",

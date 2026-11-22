@@ -78,6 +78,12 @@
       ],
       "syllable_position": "coda",
       "notes": "Overrides the es-ES rule without /x/. Here /x/ is the glottal [h] (EXTREMADURA_X_TO_H), not a velar consonant. Navarro Tomás (1918, § 133, pp. 111-112) gives [ŋ] before a velar consonant, and no source in this spec gives [ŋ] before [h]. ES_EXT_FINAL_N_VELAR also leaves a nasal unchanged before [h]. So a coda nasal is [ŋ] only before k ɡ ɣ w."
+    },
+    {
+      "id": "ES_S_VOICING",
+      "phonemes": [],
+      "surface": "",
+      "notes": "DISABLED: ES_S_VOICING voices a coda /s/ before a voiced consonant. This spec aspirates or deletes its coda /s/, and the voicing rule of es-ES would take the segment first, so it is switched off here and the coda keeps the reading of this spec."
     }
   ],
   "parent": "es-ES",

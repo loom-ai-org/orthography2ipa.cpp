@@ -4,19 +4,17 @@
   "script": "Latin",
   "graphemes_base": "pt-PT",
   "allophones_base": "pt-PT",
-  "allophones": {
-    "l": [
-      "l",
-      "ɭ"
-    ],
-    "ł": [
-      "ł",
-      "ɭ"
-    ]
-  },
+  "allophone_rules": [
+    {
+      "id": "PT_EX_CONSONANT_GLIDE",
+      "phonemes": [],
+      "surface": "ɐj",
+      "notes": "DISABLED for Beira Litoral Portuguese. No source for the vowel of ⟨ex⟩ before a consonant in this variety was read, so its output stays what it was. The pt-PT rule gives ⟨ex⟩ the diphthong of the pt-PT ⟨ei⟩, [ej]."
+    }
+  ],
   "positional_graphemes_base": "pt-PT",
   "parent": "pt-PT",
-  "notes": "Beira-Litoral Portuguese (Aveiro, Vagos), a northern-coastal EP dialect in Cintra's Baixo-Minhoto-Duriense-Beirão group (Beira Litoral). MODELLED FEATURES: (1) APICO-ALVEOLAR-ONLY SIBILANT SYSTEM — ⟨s/ss⟩ AND ⟨c/ç/z⟩ all merge to apico-alveolar [s̺]/[z̺] (Cintra 1971 p.93; Álvarez Pérez 2014 pp.37-38, this group 'kept only the apico-alveolar branch'). Coda ⟨s/z⟩ keep chiado [ʃ]/[ʒ]. (2) BETACISM — /v/–/b/ merged to /b/ ~ [β]; Pérez 2014 pp.35-37 shows the bilabial-merger area extends along the coast north of Coimbra (i.e. the Aveiro littoral). A local retroflex lateral [ɱ... ]/[ɭ] realisation of /l/ is reported in regional-dialect literature (not in Cintra/Pérez) and is enumerated as a secondary allophonic variant only. Porto je/wo diphthongisation is not applied. Inherits pt-PT base. ⟨ss⟩ is declared apico-alveolar [s̺] here because the pt-PT base maps it to plain [s]; the value follows feature (1) above, which puts ⟨s/ss⟩ in the apical branch. Cintra 1971 (read in the Instituto Camões CVC reprint, pp. 11-13) draws the main North/South isogloss on the sibilant of the graphemes s and ss: apico-alveolar in the North, predorsodental in the South. His southern limit of the apical runs from the Ria de Aveiro to the Mondego, which it crosses upstream of Coimbra, and on towards Castelo Branco.",
+  "notes": "Beira-Litoral Portuguese (Aveiro, Vagos), a northern-coastal EP dialect in Cintra's Baixo-Minhoto-Duriense-Beirão group (Beira Litoral). MODELLED FEATURES: (1) APICO-ALVEOLAR-ONLY SIBILANT SYSTEM — ⟨s/ss⟩ AND ⟨c/ç/z⟩ all merge to apico-alveolar [s̺]/[z̺] (Cintra 1971 p.93; Álvarez Pérez 2014 pp.37-38, this group 'kept only the apico-alveolar branch'). Coda ⟨s/z⟩ keep chiado [ʃ]/[ʒ]. (2) BETACISM — /v/–/b/ merged to /b/ ~ [β]; Pérez 2014 pp.35-37 shows the bilabial-merger area extends along the coast north of Coimbra (i.e. the Aveiro littoral). No source for a local lateral was read, so /l/ follows the pt-PT base. Porto je/wo diphthongisation is not applied. Inherits pt-PT base. ⟨ss⟩ is declared apico-alveolar [s̺] here because the pt-PT base maps it to plain [s]; the value follows feature (1) above, which puts ⟨s/ss⟩ in the apical branch. Cintra 1971 (read in the Instituto Camões CVC reprint, pp. 11-13) draws the main North/South isogloss on the sibilant of the graphemes s and ss: apico-alveolar in the North, predorsodental in the South. His southern limit of the apical runs from the Ria de Aveiro to the Mondego, which it crosses upstream of Coimbra, and on towards Castelo Branco.",
   "quality": "research",
   "script_type": "alphabet",
   "sources": [
@@ -152,5 +150,6 @@
       "measured": "The clup_dialect row holds 6 scored sentences (clup_dialect is sentence-level: each gold entry is one interview sentence, scored as a single unit against the engine's whole-sentence transcription, so the bootstrap resamples across only 6 sentence-level PER values, not across words), per=0.3056, per_ci_low=0.2807, per_ci_high=0.3339 (benchmarks/results.json). At n=6 sentences the bootstrap interval is already collapsing toward a point for the same reason (few distinct values to resample), so its narrow width reflects the small sample, not precision; see docs/evaluation/generated/scoreboard.md's `95% CI` note and the THIN_ROW_MARK cutoff (rows under 20 scored items). This row cannot gate a production promotion on its own strength.",
       "reference": "spec notes"
     }
-  }
+  },
+  "collapse_geminates": true
 }

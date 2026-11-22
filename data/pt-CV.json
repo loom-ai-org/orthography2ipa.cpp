@@ -49,7 +49,7 @@
       "notes": "Cape Verdean Creole (Kriolu/Kabuverdianu) adstrate: the dominant vernacular of Cape Verde, spoken by virtually all Cape Verdeans as L1. Heavy bidirectional influence with Portuguese. Cape Verdean Creole is itself descended from Portuguese."
     }
   ],
-  "notes": "Cape Verdean Portuguese (Português de Cabo Verde): the formal/L2 variety of Portuguese, the co-official language of Cape Verde. THIS IS DISTINCT FROM Cape Verdean Creole (Kabuverdianu/Kriolu, ISO kea): the Creole is the L1 vernacular of virtually the whole population, itself a Portuguese-lexified creole formed from 16th-17th-century Portuguese and West African languages that 'se diferenciava sobretudo com relação às vogais átonas' (Freitas 2017:154). This spec models the Portuguese, not the creole. GROUNDED / FLAGGED FEATURES: like other Lusophone-African emerging norms, the Portuguese of Cape Verde is reported to show (1) reduced-to-absent EP unstressed-vowel reduction (spelling-closer vocalism), (2) coda /s/ kept alveolar [s] rather than palatalised [ʃ], (3) an alveolar rather than uvular rhotic, (4) intervocalic /b d g/ kept as plosives rather than the EP spirants [β ð ɣ], and (5) a dental, non-velarised /l/. HONESTY LIMIT (hard rule 9): no accessible instrumental phonology of Cape Verdean PORTUGUESE (as opposed to the Creole) could be obtained and read for this pass — the CV-Portuguese feature list above rests on the general Lusophone-African pattern (cf. Undolo 2014 for Angola, read) plus the secondary Wikipedia description (flagged), while the read primary (Freitas 2017) covers the Creole. Features 1-5 are therefore provisional; this variety is deliberately kept at SKELETON tier (no read Cape-Verdean-Portuguese phonology source exists — the only variety-specific primary read, Freitas 2017, is about the Creole) and must not be promoted without a read CV-Portuguese source. Contrast pt-AO and pt-MZ, which are research tier because each has a read primary for its own variety (Undolo 2014, Nhatuve 2019). Two Creole macro-varieties (Sotavento/Santiago, Barlavento/São Vicente) underlie sub-regional variation.",
+  "notes": "Cape Verdean Portuguese (Português de Cabo Verde): the formal/L2 variety of Portuguese, the co-official language of Cape Verde. THIS IS DISTINCT FROM Cape Verdean Creole (Kabuverdianu/Kriolu, ISO kea): the Creole is the L1 vernacular of virtually the whole population, itself a Portuguese-lexified creole formed from 16th-17th-century Portuguese and West African languages that 'se diferenciava sobretudo com relação às vogais átonas' (Freitas 2017:154). This spec models the Portuguese, not the creole. GROUNDED / FLAGGED FEATURES: like other Lusophone-African emerging norms, the Portuguese of Cape Verde is reported to show (1) reduced-to-absent EP unstressed-vowel reduction (spelling-closer vocalism), (2) coda /s/ kept alveolar [s] rather than palatalised [ʃ], (3) an alveolar rather than uvular rhotic, (4) intervocalic /b d g/ kept as plosives rather than the EP spirants [β ð ɣ], and (5) a dental, non-velarised /l/. HONESTY LIMIT (hard rule 9): no accessible instrumental phonology of Cape Verdean PORTUGUESE (as opposed to the Creole) could be obtained and read for this pass — feature 1 rests on the Angolan pattern (Undolo 2014, read, for vowel reduction only) and features 2-5 on the secondary Wikipedia description (flagged). Undolo's Angolan data does not support feature 2: the Angolan coda is palato-alveolar [ʃ] (pt-AO), while the read primary (Freitas 2017) covers the Creole. Features 1-5 are therefore provisional; this variety is deliberately kept at SKELETON tier (no read Cape-Verdean-Portuguese phonology source exists — the only variety-specific primary read, Freitas 2017, is about the Creole) and must not be promoted without a read CV-Portuguese source. Contrast pt-AO and pt-MZ, which are research tier because each has a read primary for its own variety (Undolo 2014, Nhatuve 2019). Two Creole macro-varieties (Sotavento/Santiago, Barlavento/São Vicente) underlie sub-regional variation.",
   "sources": [
     {
       "id": "lang2009",
@@ -152,6 +152,18 @@
     }
   },
   "allophone_rules": [
+    {
+      "id": "PT_EX_CONSONANT_GLIDE",
+      "phonemes": [],
+      "surface": "ɐj",
+      "notes": "DISABLED for Cape Verdean Portuguese. No source for the vowel of ⟨ex⟩ before a consonant in this variety was read, so its output stays what it was. The pt-PT rule gives ⟨ex⟩ the diphthong of the pt-PT ⟨ei⟩, [ej]."
+    },
+    {
+      "id": "PT_INITIAL_EX_VOICED",
+      "phonemes": [],
+      "surface": "z",
+      "notes": "DISABLED for Cape Verdean Portuguese. No source for the reading of word-initial ⟨ex⟩ before a vowel in this variety was read, so its output stays what it was. The pt-PT rule gives the ⟨x⟩ the value [z]."
+    },
     {
       "id": "PT_LEX_OPEN_E_SUFFIX",
       "phonemes": [],
@@ -640,5 +652,6 @@
     "source": "wikidata",
     "notes": "Praia. The formal L2 Portuguese of Cape Verde — the capital stands in for the archipelago. [Wikidata Q3751 P625]"
   },
-  "word_exceptions_base": "pt-PT"
+  "word_exceptions_base": "pt-PT",
+  "collapse_geminates": true
 }

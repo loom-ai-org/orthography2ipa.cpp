@@ -31,6 +31,12 @@
   "parent": "pt-PT",
   "allophone_rules": [
     {
+      "id": "PT_EX_CONSONANT_GLIDE",
+      "phonemes": [],
+      "surface": "ɐj",
+      "notes": "DISABLED for Braga Portuguese. The stressed ⟨e⟩ keeps its Baixo-Minho rising diphthong from the diphthongisation rule of this spec (texto [ˈtjɛʃtu]), which the pt-PT rule would replace. No source for the unstressed initial ⟨ex⟩ of this variety (explicar [eʃpliˈkaɾ]) was read, so that reading stays what it was."
+    },
+    {
       "id": "PT_LEX_OPEN_E_SUFFIX",
       "phonemes": [],
       "surface": "e",
@@ -466,5 +472,6 @@
     "source": "wikidata",
     "notes": "Braga — the city the Bracarense variety is named for. [Wikidata Q83247 P625]"
   },
-  "word_exceptions_base": "pt-PT"
+  "word_exceptions_base": "pt-PT",
+  "collapse_geminates": true
 }

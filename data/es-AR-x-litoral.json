@@ -89,5 +89,13 @@
     "longitude": -58.816667,
     "source": "wikidata",
     "notes": "Corrientes — a representative city of the Guaraní-contact Litoral (Corrientes and Misiones). [Wikidata Q44211 P625]"
-  }
+  },
+  "allophone_rules": [
+    {
+      "id": "ES_S_VOICING",
+      "phonemes": [],
+      "surface": "",
+      "notes": "DISABLED: ES_S_VOICING voices a coda /s/ before a voiced consonant. Its source describes the Castilian standard of Spain, and no source for this variety was opened, so the rule is switched off here."
+    }
+  ]
 }

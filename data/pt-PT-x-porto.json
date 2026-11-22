@@ -50,6 +50,12 @@
   "parent": "pt-PT",
   "allophone_rules": [
     {
+      "id": "PT_EX_CONSONANT_GLIDE",
+      "phonemes": [],
+      "surface": "ɐj",
+      "notes": "DISABLED for Porto Portuguese. The stressed ⟨e⟩ keeps its Baixo-Minho rising diphthong from the diphthongisation rule of this spec (texto [ˈtjɛʃtu]), which the pt-PT rule would replace. No source for the unstressed initial ⟨ex⟩ of this variety (explicar [eʃpliˈkaɾ]) was read, so that reading stays what it was."
+    },
+    {
       "id": "PT_LEX_OPEN_E_SUFFIX",
       "phonemes": [],
       "surface": "e",
@@ -464,5 +470,6 @@
       "measured": "The clup_dialect row holds 17 scored sentences (clup_dialect is sentence-level: each gold entry is one interview sentence, scored as a single unit against the engine's whole-sentence transcription, so the bootstrap resamples across only 17 sentence-level PER values, not across words), per=0.4223, per_ci_low=0.3919, per_ci_high=0.4499 (benchmarks/results.json). At n=17 sentences the bootstrap interval is already collapsing toward a point for the same reason (few distinct values to resample), so its narrow width reflects the small sample, not precision; see docs/evaluation/generated/scoreboard.md's `95% CI` note and the THIN_ROW_MARK cutoff (rows under 20 scored items). This row cannot gate a production promotion on its own strength.",
       "reference": "spec notes"
     }
-  }
+  },
+  "collapse_geminates": true
 }

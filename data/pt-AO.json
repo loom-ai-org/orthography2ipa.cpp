@@ -21,7 +21,7 @@
   },
   "positional_graphemes_base": "pt-PT",
   "parent": "pt-PT",
-  "notes": "Angolan Portuguese (Português de Angola, PA): the emerging L2/second-norm variety of educated Angolan speakers, NOT a creole. Portuguese has been the sole official language since 1975 and is the mother tongue of a growing urban minority and the second language of most Angolans, in contact with dozens of Bantu languages (Umbundu, Kimbundu, Kikongo, etc.). KEY MODELLED FEATURES, grounded in the vowel study of Undolo (2014) and the phonetics of Angolan Portuguese in Chavagne (2005): (1) NO EP-STYLE UNSTRESSED VOWEL REDUCTION. Unlike European Portuguese, final unstressed /a/ is NOT centralised to [ɐ] but stays open [a] (Undolo 2014:183, ['kaza]); pretonic /e/ does NOT centralise to [ɨ] but stays [e] (Undolo 2014:183, [atrope'ɫar], [prezi'dẽtɨ]); pretonic /o/ is NOT raised to [u] but stays [o] (Undolo 2014:184, [mo'rar], [namo'rar]). Undolo (2014:184) summarises: the PA vowel system 'não sofre elevação e centralização em posição átona'. Chavagne (2005:64) independently: 'les voyelles atones gardent le timbre des voyelles toniques'. (2) [ɨ] survives ONLY in final unstressed position ([ˈdisɨ]), not pretonically (Undolo 2014:183). (3) A general tendency to OPEN stressed mid vowels ([ɛ], [ɔ] favoured over [e], [o]) is documented (Undolo 2014:183-184) but is variable/lexical and modelled only as candidate ordering, not categorically. (4) Coda /s/ stays alveolar [s] (no Lisbon chiado). This spelling-closer vocalism is attributed to the simple, open-nucleus syllable structure of the Bantu substrate (Undolo 2014:186). LIMITS: the extra nasal [ã] vs EP [ɐ̃] (Undolo 2014:184) and the [ɐ]-loss are modelled via positional vowels; fine allophonic rhotic variation is left to downstream engines.",
+  "notes": "Angolan Portuguese (Português de Angola, PA): the emerging L2/second-norm variety of educated Angolan speakers, NOT a creole. Portuguese has been the sole official language since 1975 and is the mother tongue of a growing urban minority and the second language of most Angolans, in contact with dozens of Bantu languages (Umbundu, Kimbundu, Kikongo, etc.). KEY MODELLED FEATURES, grounded in the vowel study of Undolo (2014) and the phonetics of Angolan Portuguese in Chavagne (2005): (1) NO EP-STYLE UNSTRESSED VOWEL REDUCTION. Unlike European Portuguese, final unstressed /a/ is NOT centralised to [ɐ] but stays open [a] (Undolo 2014:183, ['kaza]); pretonic /e/ does NOT centralise to [ɨ] but stays [e] (Undolo 2014:183, [atrope'ɫar], [prezi'dẽtɨ]); pretonic /o/ is NOT raised to [u] but stays [o] (Undolo 2014:184, [mo'rar], [namo'rar]). Undolo (2014:184) summarises: the PA vowel system 'não sofre elevação e centralização em posição átona'. Chavagne (2005:64) independently: 'les voyelles atones gardent le timbre des voyelles toniques'. (2) [ɨ] survives ONLY in final unstressed position ([ˈdisɨ]), not pretonically (Undolo 2014:183). (3) A general tendency to OPEN stressed mid vowels ([ɛ], [ɔ] favoured over [e], [o]) is documented (Undolo 2014:183-184) but is variable/lexical and modelled only as candidate ordering, not categorically. (4) Coda sibilants. The thesis (undolo2014_tese, §4.1.2.2, printed pp.216-217) describes the palatal [ʃ] ('consoante oral fricativa palatal surda') in syllable-final position and fig. 42 (p.219) lists [ʃ ʒ] among the PA palatals; the article (undolo2014, p.184) prints desgosto PA [deʒ'gɔʃtu] against PE [dɨʒ'goʃtu]. So a coda /s/ is [ʃ] before a voiceless consonant and word-finally, and [ʒ] before a voiced one, as in pt-PT, whose rules the spec inherits. Before a following [s] the thesis (pp.216-217) prints two PA variants and says the two coexist ('coabita'): the glide 'geralmente', in 'certos vocábulos', and the [ʃ] variant 'quando não'. The [ʃ] gives way to a [j] glide, PA [krej'sɛr], [dekrej'sɛr] (PE [krɨʃ'ser], [dɨkrɨʃ'ser]), or it stays and the [s] drops, PA [kreʃ'ɛr], [dekreʃ'ɛr]. The spec writes the glide (PT_CODA_S_HUSH) in every word-internal coda before [s] that follows a vowel or ⟨n⟩ or ⟨m⟩. The deletion of the coda before /ʒ/ and the [z] before a vowel across words come from pt-PT, with no Angolan check. This spelling-closer vocalism is attributed to the simple, open-nucleus syllable structure of the Bantu substrate (Undolo 2014:186). LIMITS: the extra nasal [ã] vs EP [ɐ̃] (Undolo 2014:184) and the [ɐ]-loss are modelled via positional vowels; fine allophonic rhotic variation is left to downstream engines.",
   "quality": "research",
   "script_type": "alphabet",
   "sources": [
@@ -54,6 +54,16 @@
       "url": "https://revistas.ucm.es/index.php/RFRM/article/view/51071",
       "pages": "181-187",
       "notes": "Read in full. Contrastive description of the educated Angolan Portuguese (PA) vowel system vs European Portuguese (PE). p.183: final unstressed /a/ keeps the open vowel [a], not EP [ɐ] ('não observamos a realização da vogal oral central média em posição átona final, mantendo-se a vogal aberta: [ˈkaza]'); pretonic [ɨ] does not occur, staying palatal [e] ([atropeˈɫar] PA vs [ɐtrupɨˈɫar] PE); [ɨ] survives only word-finally ([ˈdisɨ]). p.184: pretonic /o/ stays [o] not raised to [u] ([moˈrar], [namoˈrar]); summary (d) 'não sofre elevação e centralização em posição átona', (e) '[ɨ] restringe-se à posição átona final'. p.186: attributes the fuller vocalism to the open-nucleus syllable structure of Angolan Bantu languages."
+    },
+    {
+      "id": "undolo2014_tese",
+      "author": "Undolo, Márcio Edu da Silva",
+      "year": 2014,
+      "title": "Caracterização da Norma do Português em Angola",
+      "publisher": "PhD thesis, Universidade de Évora",
+      "url": "https://dspace.uevora.pt/rdpc/bitstream/10174/20820/1/Doutoramento%20-%20Marcio%20Undolo.pdf",
+      "pages": "216-219",
+      "notes": "Read in the sections used here. §4.1.2.2 (printed pp.216-217): in PA a syllable-final [ʃ] before a [s] either gives way to a [j] glide, PA [krej'sɛr], [dekrej'sɛr] (PE [krɨʃ'ser], [dɨkrɨʃ'ser]), or stays and the [s] drops, PA [kreʃ'ɛr], [dekreʃ'ɛr]. Fig. 42 (p.219) lists [ʃ ʒ] among the PA palatal consonants."
     },
     {
       "id": "chavagne2005",
@@ -165,12 +175,13 @@
       ],
 
       "word_final": [
-        "s"
+        "ʃ"
       ]
     },
     "z": {
 
       "word_final": [
+        "ʃ",
         "z"
       ]
     },
@@ -181,6 +192,22 @@
     }
   },
   "allophone_rules": [
+    {
+      "id": "PT_EX_CONSONANT_GLIDE",
+      "phonemes": [],
+      "surface": "ɐj",
+      "notes": "DISABLED for Angolan Portuguese. No source for the vowel of ⟨ex⟩ before a consonant in this variety was read, so its output stays what it was. The pt-PT rule gives ⟨ex⟩ the diphthong of the pt-PT ⟨ei⟩, [ej]."
+    },
+    {
+      "id": "PT_INITIAL_EX_VOICED",
+      "phonemes": ["ʃ"],
+      "surface": "z",
+      "grapheme": ["x"],
+      "preceded_by_grapheme": ["e", "ê"],
+      "preceded_by_2": "word_boundary",
+      "followed_by": "vowel",
+      "notes": "Word-initial ⟨ex-⟩ before a vowel writes the ⟨x⟩ as [z]: exame [eˈzamɨ]. The Portal da Língua Portuguesa Dicionário fonético (ILTEC), Luanda variety (region lda), writes this consonant as [z] in exame [e.zˈa.mɨ], existir [e.ziʃ.tˈiɾ], exato [e.zˈa.tʊ], êxito [ˈe.zi.tʊ], exótico [e.zˈɔ.ti.kʊ] and exemplo [e.zˈẽjm.plʊ]. The rule matches the ⟨x⟩ slot after a word-initial ⟨e⟩ or ⟨ê⟩ when a vowel follows, as in pt-PT. ⟨ex⟩ before a consonant, ⟨exh⟩ and ⟨hex⟩ are not matched."
+    },
     {
       "id": "PT_LEX_REDUCED_O",
       "phonemes": [],
@@ -288,36 +315,6 @@
       "phonemes": [],
       "surface": "ɔ",
       "notes": "DISABLED for Angolan Portuguese. No source for the vowel of this derivative in this variety was read, so its output stays what it was; the pt-PT rule rests on Infopédia readings of standard European Portuguese."
-    },
-    {
-      "id": "PT_CODA_S_BEFORE_ZH_INTERNAL",
-      "phonemes": [],
-      "surface": "",
-      "notes": "DISABLED for Angolan Portuguese. PT_CODA_S_BEFORE_ZH_INTERNAL deletes the pt-PT coda [ʃ] before /ʒ/ inside a word. In this spec PT_CODA_S_HUSH gives a coda /s/ [s], not [ʃ], so the deletion does not apply, and the coda keeps the reading of this spec. The word-internal coda sibilant before /ʒ/ in this variety has no variety-specific source."
-    },
-    {
-      "id": "PT_CODA_S_VOICING_INTERNAL",
-      "phonemes": [],
-      "surface": "ʒ",
-      "notes": "DISABLED for Angolan Portuguese. PT_CODA_S_VOICING_INTERNAL voices the pt-PT coda [ʃ] to [ʒ] before a voiced consonant inside a word. In this spec PT_CODA_S_HUSH gives a coda /s/ [s], not [ʃ], so the voiced [ʒ] does not apply, and the coda keeps the reading of this spec. The voicing of a word-internal coda sibilant in this variety has no variety-specific source."
-    },
-    {
-      "id": "PT_CODA_S_HUSH",
-      "phonemes": [
-        "s"
-      ],
-      "surface": "s",
-      "syllable_position": "coda",
-      "notes": "Angolan Portuguese keeps an alveolar coda /s/ (no Lisbon 'chiado'); this overrides the inherited pt-PT PT_CODA_S_HUSH rule by id, matching the alveolar coda already declared in this spec's positional_graphemes."
-    },
-    {
-      "id": "PT_CODA_Z_HUSH",
-      "phonemes": [
-        "z"
-      ],
-      "surface": "z",
-      "syllable_position": "coda",
-      "notes": "Angolan Portuguese keeps an alveolar coda /z/; overrides the inherited pt-PT PT_CODA_Z_HUSH rule by id."
     },
     {
       "id": "PT_FINAL_EM_NUCLEUS",
@@ -542,6 +539,44 @@
       "notes": "DISABLED for Angolan Portuguese. The PT_STRESSED_E_PREPALATAL rules follow the pt-PT default for European Portuguese. No source read writes this vowel for this variety, so it stays as the spec gives it."
     },
     {
+      "id": "PT_CODA_S_HUSH",
+      "phonemes": [
+        "s",
+        "ʃ"
+      ],
+      "surface": "j",
+      "syllable_position": "coda",
+      "word_initial": false,
+      "preceded_by_grapheme": [
+        "a", "e", "i", "o", "u", "á", "é", "í", "ó", "ú", "â", "ê", "ô", "à", "ã", "õ", "n", "m"
+      ],
+      "followed_by_phoneme": [
+        "s"
+      ],
+      "notes": "Inside a word, a coda sibilant before a following [s] is the glide [j], whether the sibilant is spelled ⟨s⟩ or ⟨x⟩: crescer [kʁejˈsɛɾ], decrescer [dekʁejˈsɛɾ], nascer, piscina, consciência, excelente [ejseˈlẽtɨ]. Undolo states the rule over sounds, 'quando a fricativa palatal é precedida da fricativa linguodental' (printed p.216). Undolo (2014 thesis, undolo2014_tese, printed pp.216-217) prints two PA variants for this context and says the two coexist ('coabita'): the glide 'geralmente', in 'certos vocábulos', and the [ʃ] variant 'quando não'. This rule is the glide, PA [krej'sɛr] and [dekrej'sɛr], and the one that keeps [ʃ] and drops the [s], PA [kreʃ'ɛr]. The spec applies the glide in every such word. The glide needs a vowel (or ⟨n⟩, ⟨m⟩) before it, because Undolo says the preceding vowel forms a falling diphthong with it. The pt-PT reading is [krɨʃ'ser]. The rule stands in the slot of the pt-PT PT_CODA_S_HUSH, because the first rule that matches a segment applies and so this rule has to come before the plain coda rule PT_CODA_S_PALATAL."
+    },
+    {
+      "id": "PT_CODA_S_BEFORE_S_AFTER_CONSONANT",
+      "phonemes": [
+        "s"
+      ],
+      "surface": "",
+      "syllable_position": "coda",
+      "followed_by_phoneme": [
+        "s"
+      ],
+      "notes": "A coda [s] after a consonant and before another [s] (obsceno, obscenidade, abscesso) is dropped: obsceno [obˈsɛnʊ]. No source read covers this context, because Undolo's glide needs a vowel before it. The rule keeps the dev reading, which the Portal Luanda entry for obscenidade (ɔbsenidˈadɨ) shares."
+    },
+    {
+      "id": "PT_CODA_S_PALATAL",
+      "phonemes": [
+        "s"
+      ],
+      "surface": "ʃ",
+      "syllable_position": "coda",
+      "notes": "Coda /s/ is [ʃ], as in pt-PT (PT_CODA_S_HUSH there; Mateus & d'Andrade 2000, ch.2; Cruz-Ferreira 1995:91). Undolo (undolo2014_tese, printed pp.216-217, fig. 42 on p.219) gives the Angolan coda as the palatal [ʃ]; the article (undolo2014, p.184) prints desgosto PA [deʒ'gɔʃtu]. The voicing to [ʒ] before a voiced consonant and the deletion before /ʒ/ come from pt-PT with no Angolan check."
+    },
+    {
       "id": "PT_CODA_STOP_INITIAL_E_OPEN",
       "phonemes": [],
       "surface": "ɛ",
@@ -675,5 +710,6 @@
     "source": "wikidata",
     "notes": "Luanda. A national L2/second-norm variety: the capital stands in for the country. Weak. [Wikidata Q3897 P625]"
   },
-  "word_exceptions_base": "pt-PT"
+  "word_exceptions_base": "pt-PT",
+  "collapse_geminates": true
 }

@@ -470,6 +470,25 @@ std::string with_default_region(const std::string& tag_in) {
     return join(subtags, 0, subtags.size());
 }
 
+std::optional<std::string> likely_script(const std::string& tag_in) {
+    const std::string tag = with_default_region(tag_in);
+    const Split parts = split_tag(tag);
+    if (parts.script || parts.extended) return parts.script;
+    if (const auto script = split_tag(with_likely_script(tag)).script) return script;
+    const auto parsed = langcodes::parse(tag);
+    if (!parsed.ok) return std::nullopt;
+    // langcodes falls back to an `und` entry, the Latin script of the root
+    // locale, for a language that its likely-subtags data does not hold, alone
+    // or through its macrolanguage.
+    std::string entry = "und";
+    for (const auto& broader : langcodes::broader_tags(parsed.lang))
+        if (langcodes::has_likely_subtags(broader)) { entry = broader; break; }
+    if (entry.substr(0, entry.find('-')) == "und") return std::nullopt;
+    const std::string script = langcodes::maximize(parsed.lang).script;
+    if (script.empty()) return std::nullopt;
+    return script;
+}
+
 std::vector<std::string> private_use(const std::string& tag) {
     const auto parts = split(py_lower(standardize_lang(tag)));
     const auto x = std::find(parts.begin(), parts.end(), "x");

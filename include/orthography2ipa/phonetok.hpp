@@ -221,6 +221,12 @@ public:
                       bool collapse_whitespace = true);
     ~PhonetokTokenizer();
 
+    /// The string tokenize() scans, and that token positions index into:
+    /// *text* in NFC with the spec's segment-less diacritics folded away
+    /// and the script's pre-tokenization rewrites applied. Preparing a
+    /// prepared string changes nothing.
+    std::string prepare(const std::string& text) const;
+
     /// Tokenize *text* into a list of Tokens: NFC normalization,
     /// declared diacritic folding, Arabic-script pre-tokenization
     /// normalization, then a left-to-right scan trying whitespace,
@@ -354,6 +360,7 @@ private:
     std::u32string unfuse_consonant_nucleus(const std::u32string& gkey, const std::u32string& text,
                                             std::size_t pos, const std::vector<UToken>& tokens) const;
 
+    std::u32string prepare_u32(const std::u32string& text) const;
     std::vector<UToken> tokenize_u32(const std::u32string& text) const;
 };
 

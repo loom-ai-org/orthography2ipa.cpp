@@ -384,6 +384,18 @@
   },
   "allophone_rules": [
     {
+      "id": "PT_EX_CONSONANT_GLIDE",
+      "phonemes": [],
+      "surface": "ɐj",
+      "notes": "DISABLED for Cape Verdean Creole. No source for the vowel of ⟨ex⟩ before a consonant in this variety was read, so its output stays what it was. The pt-PT rule gives ⟨ex⟩ the diphthong of the pt-PT ⟨ei⟩, [ej]."
+    },
+    {
+      "id": "PT_INITIAL_EX_VOICED",
+      "phonemes": [],
+      "surface": "z",
+      "notes": "DISABLED for Cape Verdean Creole. No source for the reading of word-initial ⟨ex⟩ before a vowel in this variety was read, so its output stays what it was. The pt-PT rule gives the ⟨x⟩ the value [z]."
+    },
+    {
       "id": "PT_LEX_NASAL_UI",
       "phonemes": [],
       "surface": "ũ",

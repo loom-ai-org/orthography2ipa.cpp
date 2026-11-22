@@ -353,6 +353,30 @@
       "phonemes": [],
       "surface": "z",
       "notes": "Disabled for Krio. The parent's rule voices the ⟨s⟩ of the English ⟨-es⟩ ending, and whether Krio's ⟨-es⟩ spellings agree in voicing the way English's do is not something this spec has a source for. NEEDS NATIVE CHECK: until one exists, the inherited rule is switched off so Krio keeps its own [s], rather than acquiring an English alternation by inheritance. Declared with no phonemes because id-keyed overlay replaces a parent rule but cannot delete it."
+    },
+    {
+      "id": "EN_GB_UNSTRESSED_FINAL_OW",
+      "phonemes": [],
+      "surface": "əʊ",
+      "notes": "Disabled for Krio. The parent's rule gives an unstressed English final ⟨ow⟩ the GOAT diphthong, but Krio has no /aʊ/ for the rule to rewrite and its GOAT vowel is the monophthong /o/. Declared with no phonemes because id-keyed overlay replaces a parent rule but cannot delete it."
+    },
+    {
+      "id": "EN_GB_UNSTRESSED_OW_BEFORE_S",
+      "phonemes": [],
+      "surface": "əʊ",
+      "notes": "Disabled for Krio. The parent's rule gives an unstressed English final ⟨ow⟩ the GOAT diphthong, but Krio has no /aʊ/ for the rule to rewrite and its GOAT vowel is the monophthong /o/. Declared with no phonemes because id-keyed overlay replaces a parent rule but cannot delete it."
+    },
+    {
+      "id": "EN_GB_UNSTRESSED_OW_BEFORE_ED",
+      "phonemes": [],
+      "surface": "əʊ",
+      "notes": "Disabled for Krio. The parent's rule gives an unstressed English final ⟨ow⟩ the GOAT diphthong, but Krio has no /aʊ/ for the rule to rewrite and its GOAT vowel is the monophthong /o/. Declared with no phonemes because id-keyed overlay replaces a parent rule but cannot delete it."
+    },
+    {
+      "id": "EN_GB_UNSTRESSED_OW_BEFORE_ING",
+      "phonemes": [],
+      "surface": "əʊ",
+      "notes": "Disabled for Krio. The parent's rule gives an unstressed English final ⟨ow⟩ the GOAT diphthong, but Krio has no /aʊ/ for the rule to rewrite and its GOAT vowel is the monophthong /o/. Declared with no phonemes because id-keyed overlay replaces a parent rule but cannot delete it."
     }
   ],
   "location": {

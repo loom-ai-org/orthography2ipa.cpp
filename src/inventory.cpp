@@ -10,6 +10,7 @@
 #include "orthography2ipa/inventory.hpp"
 
 #include "orthography2ipa/orthography2ipa.hpp"
+#include "orthography2ipa/vowels.hpp"
 
 #include "beam.hpp"
 #include "codepoint_regex.hpp"
@@ -106,8 +107,72 @@ std::string transform_literals(const std::string& transform) {
     return to_utf8(out);
 }
 
+/// inventory.py _is_modifier (allophony.py): whether *cp* attaches to the
+/// preceding IPA base character.
+bool is_modifier(char32_t cp) {
+    if (uni::combining(cp) != 0) return true;
+    const std::string category = uni::category(cp);
+    return category == "Lm" || category == "Sk";
+}
+
+constexpr char32_t TIE_ABOVE = U'\u0361';
+constexpr char32_t TIE_BELOW = U'\u035c';
+
+/// inventory.py _split_leading_marks: the combining marks a slot emits before
+/// any base letter, and the rest.
+std::pair<std::u32string, std::u32string> split_leading_marks(const std::u32string& emission) {
+    std::size_t i = 0;
+    while (i < emission.size() && uni::combining(emission[i]) != 0) ++i;
+    return {emission.substr(0, i), emission.substr(i)};
+}
+
+/// inventory.py _one_segment_pair: whether *first* and *second* write one
+/// affricate or one labial-velar stop.
+bool one_segment_pair(const std::string& first, const std::string& second) {
+    const auto bare = [](const std::string& segment) {
+        std::u32string out;
+        for (const char32_t cp : to_utf32(segment))
+            if (!is_modifier(cp)) out.push_back(cp);
+        return out;
+    };
+    const std::u32string a = bare(first), b = bare(second);
+    if (a.size() != 1 || b.size() != 1) return false;
+    const std::string a8 = to_utf8(a), b8 = to_utf8(b);
+    if (vowels::is_affricate(a8 + b8)) return true;
+    const int sonority = vowels::sonority_class(a8);
+    return sonority == vowels::sonority_class(b8) &&
+           (sonority == vowels::SONORITY_STOP || sonority == vowels::SONORITY_NASAL) &&
+           vowels::place_class(a8) == "dorsal" && vowels::place_class(b8) == "labial";
+}
+
+/// inventory.py _segments: one slot emission cut into its segments.
+std::vector<std::string> emission_segments(const std::string& emission) {
+    std::vector<std::string> segments;
+    bool pairable = false;
+    for (const auto& seg : segment_ipa(emission)) {
+        bool all_modifiers = false;
+        if (!segments.empty()) {
+            all_modifiers = true;
+            for (const char32_t cp : to_utf32(segments.back()))
+                if (!is_modifier(cp)) { all_modifiers = false; break; }
+        }
+        if (!segments.empty() &&
+            (to_utf32(segments.back()).back() == TIE_ABOVE ||
+             to_utf32(segments.back()).back() == TIE_BELOW || all_modifiers)) {
+            segments.back() += seg;
+        } else if (!segments.empty() && pairable && one_segment_pair(segments.back(), seg)) {
+            segments.back() += seg;
+            pairable = false;
+        } else {
+            segments.push_back(seg);
+            pairable = true;
+        }
+    }
+    return segments;
+}
+
 /// inventory.py _atoms_of: the segments that must never be split, longest
-/// first — the declared `phonemes` plus every multi-character emission in
+/// first — the declared `phonemes` plus every multi-character segment of
 /// *emissions* that is not a stress mark.
 /// Length is measured in code points, as Python's `len` is. Ties are ordered
 /// lexicographically here where Python's `sorted` leaves them in the set's
@@ -118,8 +183,12 @@ std::vector<std::string> atoms_from(const std::set<std::string>& emissions,
     std::set<std::string> pool;
     for (const auto& phoneme : phonemes)
         if (!phoneme.empty()) pool.insert(phoneme);
-    for (const auto& emission : emissions)
-        if (to_utf32(emission).size() > 1 && !is_stress_mark(emission)) pool.insert(emission);
+    for (const auto& emission : emissions) {
+        if (is_stress_mark(emission)) continue;
+        const std::u32string rest = split_leading_marks(to_utf32(emission)).second;
+        for (const auto& segment : emission_segments(to_utf8(rest)))
+            if (to_utf32(segment).size() > 1) pool.insert(segment);
+    }
     // Python's `sorted(pool, key=len, reverse=True)` evaluates the key ONCE per
     // element, so the sort here decorates each atom with its code-point length
     // first; a comparator that decoded both strings on every comparison would
@@ -277,11 +346,74 @@ std::set<std::string> emission_inventory(const LanguageSpec& spec, const Lexicon
     return emissions;
 }
 
+namespace {
+
+const std::u32string PALATALIZATION = U"\u02b2";
+const std::u32string LENGTH = U"\u02d0";
+
+/// inventory.py _expands_shadda: whether the engine doubles the letter before a
+/// shadda, so that no `ː` from the shadda reading ever follows a letter.
+bool expands_shadda(const LanguageSpec& spec) {
+    return spec.graphemes.count(to_utf8(std::u32string(1, U'\u0651'))) != 0;
+}
+
+/// inventory.py _palatalize: *token* with the palatalization mark before its
+/// trailing length mark.
+std::string palatalize(const std::string& token) {
+    const std::u32string wide = to_utf32(token);
+    std::size_t end = wide.size();
+    while (end > 0 && (wide[end - 1] == U'\u02d0' || wide[end - 1] == U'\u02d1')) --end;
+    if (wide.substr(0, end).find(PALATALIZATION) != std::u32string::npos) return token;
+    return to_utf8(wide.substr(0, end) + PALATALIZATION + wide.substr(end));
+}
+
+/// inventory.py _carry: *token* with *mark* after its base letter, in NFC.
+std::string carry(const std::string& token, const std::u32string& mark) {
+    const std::u32string wide = to_utf32(token);
+    if (wide.find(mark) != std::u32string::npos) return token;
+    const std::size_t j = beam::nasal_carrier_split_index(wide);
+    return to_utf8(uni::nfc(wide.substr(0, j) + mark + wide.substr(j)));
+}
+
+bool carries_nasal_tilde(const std::string& token) {
+    const std::u32string tail = beam::nasal_carrier_tail(to_utf32(token));
+    return !tail.empty() && beam::is_nasal_carrier(tail[0]);
+}
+
+} // namespace
+
 std::set<std::string> phoneme_inventory(const LanguageSpec& spec, const Lexicon* lexicon) {
     const std::vector<std::string> spec_atoms = atoms(spec);
     std::set<std::string> tokens;
-    for (const auto& emission : emission_inventory(spec, lexicon))
-        for (const auto& token : tokens_with(emission, spec_atoms)) tokens.insert(token);
+    std::set<std::u32string> marks, bare;
+    for (const auto& emission : emission_inventory(spec, lexicon)) {
+        const auto [mark, rest] = split_leading_marks(to_utf32(emission));
+        if (!mark.empty()) marks.insert(mark);
+        if (rest == PALATALIZATION || rest == LENGTH)
+            bare.insert(rest);
+        else
+            for (const auto& token : tokens_with(to_utf8(rest), spec_atoms)) tokens.insert(token);
+    }
+    if (bare.count(PALATALIZATION)) {
+        const std::vector<std::string> snapshot(tokens.begin(), tokens.end());
+        for (const auto& token : snapshot) {
+            const int sonority = vowels::sonority_class(token);
+            if (vowels::SONORITY_STOP <= sonority && sonority <= vowels::SONORITY_LIQUID)
+                for (const auto& added : tokens_with(palatalize(token), spec_atoms)) tokens.insert(added);
+        }
+    }
+    if (bare.count(LENGTH) && !expands_shadda(spec)) {
+        const std::vector<std::string> snapshot(tokens.begin(), tokens.end());
+        for (const auto& token : snapshot)
+            if (to_utf32(token).find(LENGTH) == std::u32string::npos &&
+                vowels::sonority_class(token) != vowels::SONORITY_UNKNOWN)
+                for (const auto& added : tokens_with(token + to_utf8(LENGTH), spec_atoms)) tokens.insert(added);
+    }
+    for (const auto& mark : marks) {
+        const std::vector<std::string> snapshot(tokens.begin(), tokens.end());
+        for (const auto& token : snapshot)
+            if (carries_nasal_tilde(token)) tokens.insert(carry(token, mark));
+    }
     return tokens;
 }
 

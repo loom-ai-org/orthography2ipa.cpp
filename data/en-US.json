@@ -49,7 +49,7 @@
       "notes": "Middle English descent via colonial English"
     }
   ],
-  "notes": "General American (GA) — reference accent for US media/education. RHOTIC: /r/ preserved in all positions. No TRAP-BATH split (bath words = /æ/). LOT-PALM merger: /ɑ/ for both (written without the length mark — see BROAD BY DECLARATION and the no-length-marks paragraph below). T-FLAPPING: /t/ → [ɾ] between vowels (butter, water, city) — an ALLOPHONIC process, declared in `allophones` and deliberately not in the default broad output; see BROAD BY DECLARATION below. Source: Wells (1982) vol. 3, Ladefoged & Johnson (2011). FLAPPING: /t/ and /d/ → [ɾ] intervocalically in unstressed syllables (butter, ladder, city). RHOTIC: fully rhotic — /r/ preserved in all positions. GA GOAT is /oʊ/, not the RP /əʊ/ this spec's parent declares (Wells 1982 vol.3 §6.1.4). The RP coda-/r/ deletion this spec inherits is re-declared with no target phonemes (Wells 1982 vol.3 §6.1; Ladefoged & Johnson 2011) — the id-keyed way a dialect states it lacks a parent's process. SUFFIX PALATALIZATION, RHOTIC COLUMN: the three yod-coalescing suffixes this spec inherits end in a coda /r/ that GA keeps, so each is re-declared with the r-coloured schwa [ɚ] in place of the RP [ə]. ENDING \"ture\" is [tʃɚ] (nature, picture, feature) — the coalesced coronal plus GA r-coloured schwa (Wells 2008 LPD; Wells 1982 vol 3 §6.1). ENDING \"sure\" is [ʒɚ] (measure, closure, leisure) — the same, with the voiced coronal (Wells 2008 LPD; Wells 1982 vol 3 §6.1). ENDING \"ssure\" is [ʃɚ] (pressure, fissure) — the same after the voiceless ⟨ss⟩, which longest-match-wins picks over ⟨-sure⟩ (Wells 2008 LPD; Wells 1982 vol 3 §6.1). BROAD BY DECLARATION: the default transcription is PHONEMIC. T/D-FLAPPING and word-initial aspiration are sub-phonemic realisations of /t/ and /d/ (Wells 1982 vol.3 §6.1.5 on the GA tapped /t/; Kretzschmar 2004 §2, which describes flapping as an allophonic rule of the reference accent; Ladefoged & Johnson 2011 ch. 3 on English aspiration as an allophone of the voiceless stop series), so they are declared in `allophones` — the field that states a phoneme's surface variants — and NOT forced into the default output by `positional_graphemes`. The narrow-vs-broad choice is the data's to make (see orthography2ipa.inventory.phoneme_inventory), and GA reference sources transcribe /t/ and /d/ phonemically (Kenyon & Knott 1953; Labov, Ash & Boberg 2006). General American is conventionally transcribed WITHOUT length marks: the RP length contrast this spec's parent declares is not part of the GA system, where the tense/lax opposition carries the contrast and duration is its allophonic correlate (Wells 1982 vol.3 §6.1.1; Kenyon & Knott 1953, the reference American pronouncing dictionary, which uses no length mark at all; Labov, Ash & Boberg 2006 §2.1, whose North-American vowel system is stated the same way; Kretzschmar 2004 §2). General American has TRUE r-coloured vowels, written with the rhotacised symbols ɝ (stressed NURSE) and ɚ (unstressed lettER) rather than as a vowel plus a separate rhotic consonant (Wells 1982 vol.3 §6.1.2; Kenyon & Knott 1953; Ladefoged & Johnson 2011 ch. 4; Kretzschmar 2004 §2). NO-LENGTH COVERAGE: the length marks are dropped by per-phoneme rules, so every length-bearing emission needs one. Besides the plain vowels that means the yod-plus-GOOSE compound ⟨u⟩/⟨eau⟩ reads as (juː → ju), the parent rule whose surface carries a length mark (EN_GB_FINAL_E_SOLE_VOWEL, re-declared here without it), and the parent's whole-word exceptions with a long vowel — a frozen exception bypasses the rule layer by design, so those are restated here in American notation rather than rewritten (Kenyon & Knott 1953; Wells 2008 LPD). The restated exceptions take the GA strong forms from Wiktionary: you /ju/ (revision 92960107), your /jɔɹ/ (revision 94591594, enPR 'yôr', GA), are /ɑɹ/ (revision 95563998, GA strong form), ye /ji/ (revision 93735623, enPR 'yē', UK and US), the letter name u /ju/ (revision 95573816), menu /ˈmɛnju/ (revision 95547329, GA and CA /ˈmɛn.ju/). was /wʌz/ is the GA strong form (revision 95477958, US /wʌz/, /wɑz/), where the parent has the RP /wɒz/. The variant sets in `allophones` still list ʉː and ɝː, which is correct: those are declared VARIANTS of the parent's vowels and never the default reading. GRAPHEME ⟨aa⟩: the digraph occurs in English only in loans and proper names (aardvark, bazaar, salaam, Aachen), where GA reads it as the single low back vowel ɑ, never as a vowel sequence (Wells 2008 LPD). Without the entry the two ⟨a⟩s are read separately and the word gains a spurious syllable.",
+  "notes": "General American (GA) — reference accent for US media/education. RHOTIC: /r/ preserved in all positions. No TRAP-BATH split (bath words = /æ/). LOT-PALM merger: /ɑ/ for both (written without the length mark — see BROAD BY DECLARATION and the no-length-marks paragraph below). T-FLAPPING: /t/ → [ɾ] between vowels (butter, water, city) — an ALLOPHONIC process, declared in `allophones` and deliberately not in the default broad output; see BROAD BY DECLARATION below. Source: Wells (1982) vol. 3, Ladefoged & Johnson (2011). FLAPPING: /t/ and /d/ → [ɾ] intervocalically in unstressed syllables (butter, ladder, city). RHOTIC: fully rhotic — /r/ preserved in all positions. GA GOAT is /oʊ/, not the RP /əʊ/ this spec's parent declares (Wells 1982 vol.3 §6.1.4). The RP coda-/r/ deletion this spec inherits is re-declared with no target phonemes (Wells 1982 vol.3 §6.1; Ladefoged & Johnson 2011) — the id-keyed way a dialect states it lacks a parent's process. SUFFIX PALATALIZATION, RHOTIC COLUMN: the three yod-coalescing suffixes this spec inherits end in a coda /r/ that GA keeps, so each is re-declared with the r-coloured schwa [ɚ] in place of the RP [ə]. ENDING \"ture\" is [tʃɚ] (nature, picture, feature) — the coalesced coronal plus GA r-coloured schwa (Wells 2008 LPD; Wells 1982 vol 3 §6.1). ENDING \"sure\" is [ʒɚ] (measure, closure, leisure) — the same, with the voiced coronal (Wells 2008 LPD; Wells 1982 vol 3 §6.1). ENDING \"ssure\" is [ʃɚ] (pressure, fissure) — the same after the voiceless ⟨ss⟩, which longest-match-wins picks over ⟨-sure⟩ (Wells 2008 LPD; Wells 1982 vol 3 §6.1). BROAD BY DECLARATION: the default transcription is PHONEMIC. T/D-FLAPPING and word-initial aspiration are sub-phonemic realisations of /t/ and /d/ (Wells 1982 vol.3 §6.1.5 on the GA tapped /t/; Kretzschmar 2004 §2, which describes flapping as an allophonic rule of the reference accent; Ladefoged & Johnson 2011 ch. 3 on English aspiration as an allophone of the voiceless stop series), so they are declared in `allophones` — the field that states a phoneme's surface variants — and NOT forced into the default output by `positional_graphemes`. The narrow-vs-broad choice is the data's to make (see orthography2ipa.inventory.phoneme_inventory), and GA reference sources transcribe /t/ and /d/ phonemically (Kenyon & Knott 1953; Labov, Ash & Boberg 2006). General American is conventionally transcribed WITHOUT length marks: the RP length contrast this spec's parent declares is not part of the GA system, where the tense/lax opposition carries the contrast and duration is its allophonic correlate (Wells 1982 vol.3 §6.1.1; Kenyon & Knott 1953, the reference American pronouncing dictionary, which uses no length mark at all; Labov, Ash & Boberg 2006 §2.1, whose North-American vowel system is stated the same way; Kretzschmar 2004 §2). General American has TRUE r-coloured vowels, written with the rhotacised symbols ɝ (stressed NURSE) and ɚ (unstressed lettER) rather than as a vowel plus a separate rhotic consonant (Wells 1982 vol.3 §6.1.2; Kenyon & Knott 1953; Ladefoged & Johnson 2011 ch. 4; Kretzschmar 2004 §2). NO-LENGTH COVERAGE: the length marks are dropped by per-phoneme rules, so every length-bearing emission needs one. Besides the plain vowels that means the yod-plus-GOOSE compound ⟨u⟩/⟨eau⟩ reads as (juː → ju), the parent rule whose surface carries a length mark (EN_GB_FINAL_E_SOLE_VOWEL, re-declared here without it), and the parent's whole-word exceptions with a long vowel — a frozen exception bypasses the rule layer by design, so those are restated here in American notation rather than rewritten (Kenyon & Knott 1953; Wells 2008 LPD). The restated exceptions take the GA strong forms from Wiktionary: you /ju/ (revision 92960107), your /jɔɹ/ (revision 94591594, enPR 'yôr', GA), are /ɑɹ/ (revision 95563998, GA strong form), ye /ji/ (revision 93735623, enPR 'yē', UK and US), the letter name u /ju/ (revision 95573816), menu /ˈmɛnju/ (revision 95547329, GA and CA /ˈmɛn.ju/). was /wʌz/ is the GA strong form (revision 95477958, US /wʌz/, /wɑz/), where the parent has the RP /wɒz/. The variant sets in `allophones` still list ʉː and ɝː, which is correct: those are declared VARIANTS of the parent's vowels and never the default reading. GRAPHEME ⟨aa⟩: the digraph occurs in English only in loans and proper names (aardvark, bazaar, salaam, Aachen), where GA reads it as the single low back vowel ɑ, never as a vowel sequence (Wells 2008 LPD). Without the entry the two ⟨a⟩s are read separately and the word gains a spurious syllable. UNSTRESSED FINAL ⟨ow⟩: the parent's EN_GB_UNSTRESSED_* rules are re-declared with the GA GOAT vowel [oʊ], so ⟨yellow⟩ gives ˈjɛloʊ (wp_english_orthography, revision 1383244083, row ⟨ow⟩: unstressed /oʊ/, yellow).",
   "quality": "research",
   "script_type": "alphabet",
   "sources": [
@@ -122,6 +122,16 @@
       "url": null,
       "pages": null,
       "notes": "In: Kortmann & Schneider (eds), A Handbook of Varieties of English, vol. 1. Describes flapping and aspiration as allophonic rules of the reference accent."
+    },
+    {
+      "id": "wp_english_orthography",
+      "author": "Wikipedia contributors",
+      "year": 2026,
+      "title": "English orthography",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?title=English_orthography&oldid=1383244083",
+      "pages": "Spelling-to-sound correspondences",
+      "notes": "Revision 1383244083. Row ⟨ow⟩ gives 'unstressed' /oʊ/ (yellow, teabowl, landowner)."
     }
   ],
   "wikipedia": [
@@ -455,6 +465,73 @@
       "word_final": true,
       "requires_other_nucleus": false,
       "notes": "The parent's rule for a word-final ⟨e⟩ that is the word's only vowel, re-declared with this spec's FLEECE vowel [i], as in be → [bi] (see NO-LENGTH COVERAGE in notes). The surface of a rule is a literal, and one pass applies one rule to a slot, so EN_US_FLEECE_NO_LENGTH cannot shorten the parent's [iː] (Kenyon & Knott 1953)."
+    },
+    {
+      "id": "EN_GB_UNSTRESSED_FINAL_OW",
+      "phonemes": [
+        "aʊ"
+      ],
+      "surface": "oʊ",
+      "grapheme": [
+        "ow"
+      ],
+      "stress": "unstressed",
+      "word_final": true,
+      "notes": "The parent's rule, with the GA GOAT vowel [oʊ] (Wells 1982 vol.3 §6.1.4)."
+    },
+    {
+      "id": "EN_GB_UNSTRESSED_OW_BEFORE_S",
+      "phonemes": [
+        "aʊ"
+      ],
+      "surface": "oʊ",
+      "grapheme": [
+        "ow"
+      ],
+      "stress": "unstressed",
+      "followed_by_grapheme": [
+        "s"
+      ],
+      "followed_by_2": "word_boundary",
+      "notes": "The parent's rule, with the GA GOAT vowel [oʊ] (Wells 1982 vol.3 §6.1.4)."
+    },
+    {
+      "id": "EN_GB_UNSTRESSED_OW_BEFORE_ED",
+      "phonemes": [
+        "aʊ"
+      ],
+      "surface": "oʊ",
+      "grapheme": [
+        "ow"
+      ],
+      "stress": "unstressed",
+      "followed_by_grapheme": [
+        "e"
+      ],
+      "followed_by_phoneme_2": [
+        "d"
+      ],
+      "followed_by_3": "word_boundary",
+      "notes": "The parent's rule, with the GA GOAT vowel [oʊ] (Wells 1982 vol.3 §6.1.4)."
+    },
+    {
+      "id": "EN_GB_UNSTRESSED_OW_BEFORE_ING",
+      "phonemes": [
+        "aʊ"
+      ],
+      "surface": "oʊ",
+      "grapheme": [
+        "ow"
+      ],
+      "stress": "unstressed",
+      "followed_by_grapheme": [
+        "i"
+      ],
+      "followed_by_phoneme_2": [
+        "ŋ"
+      ],
+      "followed_by_3": "word_boundary",
+      "notes": "The parent's rule, with the GA GOAT vowel [oʊ] (Wells 1982 vol.3 §6.1.4)."
     }
   ],
   "vowel_graphemes": [

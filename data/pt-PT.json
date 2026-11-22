@@ -226,6 +226,61 @@
   "parent": "pt-PT-x-medieval",
   "allophone_rules": [
     {
+      "id": "PT_EX_CONSONANT_GLIDE",
+      "phonemes": [
+        "e",
+        "ɛ",
+        "ɨ"
+      ],
+      "surface": "ej",
+      "grapheme": [
+        "e"
+      ],
+      "followed_by_grapheme": [
+        "x"
+      ],
+      "followed_by_phoneme_2": [
+        "p",
+        "b",
+        "t",
+        "d",
+        "k",
+        "ɡ",
+        "f",
+        "v",
+        "s",
+        "z",
+        "ʃ",
+        "ʒ",
+        "m",
+        "n",
+        "ɲ",
+        "l",
+        "ʎ",
+        "ɾ",
+        "ʁ",
+        "w"
+      ],
+      "notes": "A spec's ⟨e⟩ before ⟨x⟩ and a consonant takes the same diphthong as that spec's ⟨ei⟩. In pt-PT ⟨ei⟩ is [ej] (deixar [dejˈʃaɾ], peixe [ˈpejʃɨ]). So ⟨ex⟩ before a consonant is [ejʃ]: texto [ˈtejʃtu], sexta [ˈsejʃtɐ], explicar [ejʃpliˈkaɾ], extra [ˈejʃtɾɐ]. The ⟨ei⟩ value follows the standing ruling. [ɐj] is the Lisbon value and [ej] is the standard pt-PT value. A dictionary reading such as Infopédia's does not settle the pt-PT norm, because it carries the Lisbon assumption. Infopédia (Porto Editora) writes [ɐj] for ⟨ei⟩ and for ⟨ex⟩ before a consonant alike: texto [ˈtɐjʃtu], explicar [ɐjʃpliˈkar]. It carries the glide in 542 of its 549 headwords with ⟨ex⟩ before a consonant, so it supports the glide and not its vowel. pt-PT-x-lisbon restates the rule with [ɐj], as it does for ⟨ei⟩. The rule needs a pronounced consonant after ⟨x⟩. ⟨x⟩ before a vowel (exame, exato), word-final ⟨x⟩ (duplex), ⟨exh⟩ and ⟨exy⟩ (exhalar, sexy) keep their reading. ⟨êx⟩ (têxtil) and the hyphenated prefix ex- (ex-marido) are not matched. The rule rewrites the [e ɛ ɨ] candidates of the ⟨e⟩ slot and leaves the reduced [i] candidate. It cannot see which candidate the ⟨x⟩ slot takes, so the [ks] alternatives of ⟨x⟩ carry the glide too. These specs disable the rule. Porto and Braga keep a diphthongised stressed ⟨e⟩, and no source on their unstressed initial ⟨ex⟩ was read. Algarve, Alentejo and São Miguel have a monophthong ⟨ei⟩. Barrancos has its own vowel system. The African and Asian varieties, the creoles and the Açores, Aveiro, Beira, Madeira and Terceira dialects have no source read. Alfena, Minho, Trás-os-Montes, Viana and Coimbra inherit the rule because their notes keep ⟨ei⟩ at [ej]."
+    },
+    {
+      "id": "PT_INITIAL_EX_VOICED",
+      "phonemes": [
+        "ʃ"
+      ],
+      "surface": "z",
+      "grapheme": [
+        "x"
+      ],
+      "preceded_by_grapheme": [
+        "e",
+        "ê"
+      ],
+      "preceded_by_2": "word_boundary",
+      "followed_by": "vowel",
+      "notes": "Word-initial ⟨ex-⟩ before a vowel writes the ⟨x⟩ as [z]: exame [eˈzɐmɨ], existir [eziʃˈtiɾ], êxito [ˈezitu], exótico [eˈzɔtiku], exausto [eˈzawʃtu]. The Portal da Língua Portuguesa Dicionário fonético (ILTEC, Lisbon variety, European Portuguese) writes this consonant as [z] in exame [i.zˈɐ.mɨ], exato [i.zˈa.tu], existir [i.ziʃ.tˈiɾ], exausto [i.zˈawʃ.tu], exótico [i.zˈɔ.ti.ku], êxito [ˈe.zi.tu] and exemplo [i.zˈẽ.plu]. The Portal writes the initial vowel [i], and the spec writes [e] (Lisbon [ɐ]); no opened source gives a rule for that vowel, so it is not changed here. The rule matches the ⟨x⟩ slot after a word-initial ⟨e⟩ or ⟨ê⟩ when a vowel follows. ⟨ex⟩ before a consonant (texto, extra, explicar) is not matched; PT_EX_CONSONANT_GLIDE reads it [ejʃ]. ⟨exh⟩ and ⟨hex⟩ are not matched. The ⟨ex⟩ prefix inside a word (inexato, coexistir, ex-presidente) and the [ks] of sexo need a morphological rule that this rule does not cover; the Portal gives inexato [i.ni.zˈa.tu], coexistir [kwi.ziʃ.tˈiɾ] and sexo [sˈɛk.su]. The same value is written for pt-BR by PT_INITIAL_EX_VOICED in pt-BR.json, with its own sources. pt-AO, pt-MZ and pt-TL enable the rule with their own sources. The creoles and the other varieties outside Europe disable it, because no source for them was read."
+    },
+    {
       "id": "PT_FINAL_EM_NUCLEUS",
       "phonemes": [
         "e",
@@ -2496,16 +2551,16 @@
     {
       "id": "PT_ELISION",
       "name": "schwa-elision",
-      "left_context": "[ɨ]$",
+      "left_context": "([ˈˌ].*)[ɨ]$",
       "right_context": "^[aeiouɛɔ]",
-      "transform": "",
+      "transform": "\\1",
       "obligatory": false,
-      "notes": "norte e → ˈnɔɾt i; Cruz-Ferreira (1999, Handbook of the IPA, p. 130) writes ˈnɔɾt ↑i. The right context holds neither [ɐ] nor a stress mark, so de amanhã stays dɨ ɐmɐˈɲɐ̃ and de ouro stays dɨ ˈoɾu."
+      "notes": "norte e → ˈnɔɾt i; Cruz-Ferreira (1999, Handbook of the IPA, p. 130) writes ˈnɔɾt ↑i. The host must carry a primary or secondary stress mark. Final-vowel fall applies only at the edge of a prosodic word inside a prosodic word group (Vigário 2010, reported by Paulino 2016: 9). A compound holds more than one prosodic word (same page), so the first element of verde-escuro, which carries only a secondary mark, loses its [ɨ]: ˌvɛɾd iʃˈkuɾu. A clitic is an item with no lexical stress (Vigário 2003, same page), and the engine writes it with no mark, so the [ɨ] of the proclitics de, que, se, me, te and lhe stays: que o is kɨ u. Known gap: the same page says an enclitic is incorporated into the prosodic word of its host (come-o), but the engine writes a hyphenated enclitic as its own unmarked word, so sinto-me estranho keeps the [ɨ] of me. Cruz-Ferreira (1999: 130) deletes no clitic vowel; she raises it to [i] (de acordo [diɐ↓ˈkoɾdu], que o [↑kiu]). The right context holds neither [ɐ] nor a stress mark, so de amanhã stays dɨ ɐmɐˈɲɐ̃ and de ouro stays dɨ ˈoɾu."
     }
   ],
   "quality": "research",
   "script_type": "alphabet",
-  "notes": "Modern European Portuguese (PT-PT). Base mapping uses a neutral orthographic standard. Digraphs per Acordo Ortográfico. Portuguese preserves the /v/~/b/ distinction (unique in Ibero-Romance — Castilian merged them). Nasal vowels and extreme vowel reduction are diagnostic features. Post-lexical allophony: the diagnostic EP unstressed vowel reduction (unstressed /a/->[ɐ], /e/->[ɨ] (word-final often deletable), /o/->[u]) is realised in the PRE-lexical positional_graphemes map (the nucleus_stressed/nucleus_unstressed/pretonic/posttonic/word_final rows), so no redundant allophone rule restates it. The allophone_rules layer adds the post-lexical CONSONANT realisations that the grapheme map cannot reach cleanly at word edges: dark coda /l/->[ɫ], and the Lisbon-standard coda sibilants /s/->[ʃ], /z/->[ʒ] (the 'chiado'). Intervocalic voiced-stop spirantisation (/b d ɡ/->[β ð ɣ]; Mateus & d'Andrade 2000) is a genuine EP process but is DELIBERATELY NOT encoded here: every available pt gold (infopedia_pt, ep_dialects, wikipron) is broad/phonemic and transcribes the stops, so a spirantisation rule is correct yet regresses all measurable golds with none rewarding it; it is left for a future narrow-transcription task. Dialect-specific sibilant/vocalism deltas (northern apico-alveolar coda [s̺], insular vocalism) are handled by the pt-PT-x-* dialect specs, not the base. Benchmark honesty: the coda sibilant rules improve every pt gold; the dark-l rule improves the narrow human golds (infopedia_pt, ep_dialects) but regresses the broader WikiPron pt row (which transcribes coda /l/ as plain [l]) — it is kept per the honesty gate because the higher-quality golds reward it, with the divergence documented. Coda vowel nasalisation: a vowel before a tautosyllabic (coda) ⟨m/n⟩ nasalises (campo [ˈkɐ̃pu], sim [ˈsĩ], bom [ˈbõ]); this is modelled by the positional m/n before_consonant/word_final → U+0303 tilde plus the PT_NASAL_*_RAISE / PT_NASAL_O_UNRED vowel-quality rules (Mateus & d'Andrade 2000: ch.2, 'Nasality'). Word-final ⟨-am⟩, ⟨-em/-ém⟩ and ⟨-ens/-éns⟩ are the nasal DIPHTHONGS [ɐ̃w̃], [ɐ̃j̃] and [ɐ̃j̃ʃ] (cantam [ˈkɐ̃tɐ̃w̃], homem [ˈɔmɐ̃j̃], homens [ˈɔmɐ̃j̃ʃ]), built by the PT_FINAL_* allophone rules. Northern lects and the Algarve override the -em/-ens nucleus in their own specs. A nasal vowel does not reduce: the unstressed nasal ⟨e⟩ is [ẽ], never [ɨ̃] (PT_NASAL_E_UNRED; the Minho lects keep a pretonic [ɨ̃]). Related pre-existing gap (NOT introduced by nasalisation): the ⟨gu⟩ digraph maps to [ɡ] dropping a NUCLEAR ⟨u⟩ before a consonant (algum, segundo, água), which is wrong for gu+a/o/u; the coda-nasalisation engine guard only ensures no invalid tilde is emitted onto the stranded [ɡ], it does not fix the ⟨gu⟩ vowel-drop itself. SIBILANTS: the standard has plain alveolar /s z/. Cruz-Ferreira's IPA illustration of the Lisbon standard (Handbook of the IPA 1999, pp. 126-127) puts plain s and z in the Alveolar column of the consonant chart, with caço [ˈkasu] against caso [ˈkazu]. ⟨ss⟩ is therefore declared here as [s]. Without the key, the ⟨ss⟩ of roa-x-galaico-pt and pt-PT-x-medieval fell through as the apico-alveolar [s̺], and isso came out [ˈis̺u]. Positional ⟨c⟩ before ⟨e i⟩, ⟨ç⟩ and ⟨s⟩ were already plain. Mateus & d'Andrade 2000 was sought for this entry and not read. The northern apico-alveolar is a dialect delta: a pt-PT-x-* spec that has it declares its own ⟨ss⟩. APOSTROPHE: the 1990 orthographic agreement (Base XVIII 1º a), p. 18, and 1º b)-c), p. 19, of the APEL text) writes the contractions d'Ele, n'Ela, pel'A, lh'O and the elisions Sant'Ana and Nun'Álvares with an apostrophe, and states that the graphic split 'nunca impede na leitura a combinação fonética'. The two parts are read as one word, so word_internal_apostrophe is true. apostrophe_elision is true, so the word takes the host's clitic status and whole-word entry, and d'Os reads as the contraction dos. The agreement does not list ⟨d'água⟩, and it is not claimed here.",
+  "notes": "Modern European Portuguese (PT-PT). Base mapping uses a neutral orthographic standard. Digraphs per Acordo Ortográfico. Portuguese preserves the /v/~/b/ distinction (unique in Ibero-Romance — Castilian merged them). Nasal vowels and extreme vowel reduction are diagnostic features. Post-lexical allophony: the diagnostic EP unstressed vowel reduction (unstressed /a/->[ɐ], /e/->[ɨ] (word-final often deletable), /o/->[u]) is realised in the PRE-lexical positional_graphemes map (the nucleus_stressed/nucleus_unstressed/pretonic/posttonic/word_final rows), so no redundant allophone rule restates it. The allophone_rules layer adds the post-lexical CONSONANT realisations that the grapheme map cannot reach cleanly at word edges: dark coda /l/->[ɫ], and the Lisbon-standard coda sibilants /s/->[ʃ], /z/->[ʒ] (the 'chiado'). Intervocalic voiced-stop spirantisation (/b d ɡ/->[β ð ɣ]; Mateus & d'Andrade 2000) is a genuine EP process but is DELIBERATELY NOT encoded here: every available pt gold (infopedia_pt, ep_dialects, wikipron) is broad/phonemic and transcribes the stops, so a spirantisation rule is correct yet regresses all measurable golds with none rewarding it; it is left for a future narrow-transcription task. Dialect-specific sibilant/vocalism deltas (northern apico-alveolar coda [s̺], insular vocalism) are handled by the pt-PT-x-* dialect specs, not the base. Benchmark honesty: the coda sibilant rules improve every pt gold; the dark-l rule improves the narrow human golds (infopedia_pt, ep_dialects) but regresses the broader WikiPron pt row (which transcribes coda /l/ as plain [l]) — it is kept per the honesty gate because the higher-quality golds reward it, with the divergence documented. Coda vowel nasalisation: a vowel before a tautosyllabic (coda) ⟨m/n⟩ nasalises (campo [ˈkɐ̃pu], sim [ˈsĩ], bom [ˈbõ]); this is modelled by the positional m/n before_consonant/word_final → U+0303 tilde plus the PT_NASAL_*_RAISE / PT_NASAL_O_UNRED vowel-quality rules (Mateus & d'Andrade 2000: ch.2, 'Nasality'). Word-final ⟨-am⟩, ⟨-em/-ém⟩ and ⟨-ens/-éns⟩ are the nasal DIPHTHONGS [ɐ̃w̃], [ɐ̃j̃] and [ɐ̃j̃ʃ] (cantam [ˈkɐ̃tɐ̃w̃], homem [ˈɔmɐ̃j̃], homens [ˈɔmɐ̃j̃ʃ]), built by the PT_FINAL_* allophone rules. Northern lects and the Algarve override the -em/-ens nucleus in their own specs. A nasal vowel does not reduce: the unstressed nasal ⟨e⟩ is [ẽ], never [ɨ̃] (PT_NASAL_E_UNRED; the Minho lects keep a pretonic [ɨ̃]). Related pre-existing gap (NOT introduced by nasalisation): the ⟨gu⟩ digraph maps to [ɡ] dropping a NUCLEAR ⟨u⟩ before a consonant (algum, segundo, água), which is wrong for gu+a/o/u; the coda-nasalisation engine guard only ensures no invalid tilde is emitted onto the stranded [ɡ], it does not fix the ⟨gu⟩ vowel-drop itself. SIBILANTS: the standard has plain alveolar /s z/. Cruz-Ferreira's IPA illustration of the Lisbon standard (Handbook of the IPA 1999, pp. 126-127) puts plain s and z in the Alveolar column of the consonant chart, with caço [ˈkasu] against caso [ˈkazu]. ⟨ss⟩ is therefore declared here as [s]. Without the key, the ⟨ss⟩ of roa-x-galaico-pt and pt-PT-x-medieval fell through as the apico-alveolar [s̺], and isso came out [ˈis̺u]. Positional ⟨c⟩ before ⟨e i⟩, ⟨ç⟩ and ⟨s⟩ were already plain. Mateus & d'Andrade 2000 was sought for this entry and not read. The northern apico-alveolar is a dialect delta: a pt-PT-x-* spec that has it declares its own ⟨ss⟩. APOSTROPHE: the 1990 orthographic agreement (Base XVIII 1º a), p. 18, and 1º b)-c), p. 19, of the APEL text) writes the contractions d'Ele, n'Ela, pel'A, lh'O and the elisions Sant'Ana and Nun'Álvares with an apostrophe, and states that the graphic split 'nunca impede na leitura a combinação fonética'. The two parts are read as one word, so word_internal_apostrophe is true. apostrophe_elision is true, so the word takes the host's clitic status and whole-word entry, and d'Os reads as the contraction dos. The agreement does not list ⟨d'água⟩, and it is not claimed here. DOUBLED LETTERS: collapse_geminates is true, so a doubled consonant letter in a loan reads as one consonant. Priberam gives lobby |lóbi| and hobby |óbi|. The flag is not inherited, so every pt-PT child spec sets it. The ⟨zz⟩ of an Italian loan (pizza, Priberam |pitsa|) is [ts], which no spelling rule gives; it reads one [z].",
   "sources": [
     {
       "id": "mateus_dandrade2000",
@@ -2566,6 +2621,16 @@
       "url": null,
       "pages": null,
       "notes": null
+    },
+    {
+      "id": "paulino2016",
+      "author": "Paulino, Nuno Miguel Ribeiro",
+      "year": 2016,
+      "title": "Fenómenos de Sândi Vocálico em Variedades do Português Europeu",
+      "publisher": "MA thesis, Faculdade de Letras, Universidade de Lisboa",
+      "url": "http://hdl.handle.net/10451/26025",
+      "pages": "9",
+      "notes": "Read from the page image. p. 9 reports Vigário (2010): the fall of a final [-high] [-back] vowel 'apenas se aplica no limite de PW dentro de PWG', and Vigário (2003): clitics are 'itens sem acento lexical'. The basis of the host condition of PT_ELISION."
     },
     {
       "id": "vigario2003",
@@ -2733,5 +2798,6 @@
     "notes": "Glottolog's representative point for Portuguese."
   },
   "word_internal_apostrophe": true,
-  "apostrophe_elision": true
+  "apostrophe_elision": true,
+  "collapse_geminates": true
 }

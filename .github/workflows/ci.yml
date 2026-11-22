@@ -56,7 +56,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           repository: TigreGotico/orthography2ipa
-          ref: 8920ac0a0e36bb94be099e5461dd91a74d66d504
+          ref: f8249613cb6b45534988d764ff51d01149f2f33e
           path: reference
       - name: Place the reference at its sibling path
         run: mv "$GITHUB_WORKSPACE/reference" "$GITHUB_WORKSPACE/../orthography2ipa"
@@ -68,10 +68,12 @@ jobs:
       # alpha, which pip installs when no final release exists: left
       # unpinned, a new alpha changes the reference under the parity gates.
       # Bump these with the reference commit above.
+      # linguatag stays 0.3.0a1 until linguatag.cpp ports 0.4.0a1; the reference asks for >=0.4.0a1.
       - name: Install the reference's Python requirements
         run: |
           deps="numpy langcodes==3.5.1 linguatag==0.3.0a1"
           python3 -m pip install $deps || python3 -m pip install --break-system-packages $deps
+          python3 -c "import importlib.metadata as m; print('linguatag', m.version('linguatag'))"
       # packaged-lexicon-parity enables the lexicons of o2i-lexicons in both
       # engines. Pinned to the newest release whose orthography2ipa
       # requirement admits the reference release, which is the release a
@@ -82,7 +84,7 @@ jobs:
       # entry points.
       - uses: astral-sh/setup-uv@v6
       - name: Install the packaged lexicons
-        run: uv pip install --system --python python3 --no-deps --prerelease=allow o2i-lexicons==0.7.18a4
+        run: uv pip install --system --python python3 --no-deps --prerelease=allow o2i-lexicons==0.7.22a2
       # Pinned to the silabificador.cpp commit held at byte parity with Python
       # silabificador 2.1.11a1.
       - uses: actions/checkout@v4

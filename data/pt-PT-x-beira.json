@@ -11,10 +11,6 @@
       "ʁ",
       "r"
     ],
-    "l": [
-      "l",
-      "ł"
-    ],
     "ə": [
       "ɨ",
       "ə"
@@ -185,6 +181,12 @@
   },
   "allophone_rules": [
     {
+      "id": "PT_EX_CONSONANT_GLIDE",
+      "phonemes": [],
+      "surface": "ɐj",
+      "notes": "DISABLED for Beira Portuguese. No source for the vowel of ⟨ex⟩ before a consonant in this variety was read, so its output stays what it was. The pt-PT rule gives ⟨ex⟩ the diphthong of the pt-PT ⟨ei⟩, [ej]."
+    },
+    {
       "id": "BEI_U_NO_FRONT_AFTER_BILABIAL",
       "phonemes": [
         "u"
@@ -242,5 +244,6 @@
       "measured": "The primary_sources row holds 8 gold pairs, per=0.4327, per_ci_low=0.2494, per_ci_high=0.6202 (benchmarks/results.json). The 95% interval spans from below to well above the 0.25 gating threshold and includes it, so the row cannot be said to fail; it is not a measurement precise enough to certify or fail the variety. The other two dialect rows (clup_dialect, n=8, per=0.3248; portuguese_tts, n=20, per=0.0) are also small, so beira Portuguese has no row with enough pairs to speak for the spec's accuracy.",
       "reference": "spec notes"
     }
-  }
+  },
+  "collapse_geminates": true
 }

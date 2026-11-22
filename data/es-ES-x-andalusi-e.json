@@ -179,6 +179,12 @@
       "surface": "",
       "word_final": true,
       "notes": "After the preceding vowel has opened, a WORD-FINAL aspirated -s is dropped, so the open vowel alone marks the plural: las tres [læ ˈtɾɛ], los libros [lɔ ˈliβɾɔ]. A word-INTERNAL coda [h] (before a consonant) is kept: estos [ˈɛhtɔ] retains the first [h]. Ordered after the opening rules so the [h] has already conditioned the vowel before it is removed. RESIDUAL / honest scoping: true leftward VOWEL HARMONY across an intervening consonant (the euros e-opening, [ˈɛwɾɔ], where the stressed vowel is not itself adjacent to an -s) is NOT modelled — the allophone layer's neighbour conditions are segment-adjacent (immediate, or one grapheme away by class), so an autosegmental vowel-tier that skips consonants is not expressible here. Only LOCAL opening (a mid/low vowel immediately before the [h] of -s) is applied; this matches the arbitrated gold everywhere except the single euros-type token, which stays half-open."
+    },
+    {
+      "id": "ES_S_VOICING",
+      "phonemes": [],
+      "surface": "",
+      "notes": "DISABLED: ES_S_VOICING voices a coda /s/ before a voiced consonant. This spec aspirates or deletes its coda /s/, and the voicing rule of es-ES would take the segment first, so it is switched off here and the coda keeps the reading of this spec."
     }
   ]
 }

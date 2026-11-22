@@ -106,5 +106,13 @@
     "longitude": -68.133333,
     "source": "wikidata",
     "notes": "La Paz — the centre of the Bolivian Andean highlands. [Wikidata Q1491 P625]"
-  }
+  },
+  "allophone_rules": [
+    {
+      "id": "ES_S_VOICING",
+      "phonemes": [],
+      "surface": "",
+      "notes": "DISABLED: ES_S_VOICING voices a coda /s/ before a voiced consonant. Its source describes the Castilian standard of Spain, and no source for this variety was opened, so the rule is switched off here."
+    }
+  ]
 }

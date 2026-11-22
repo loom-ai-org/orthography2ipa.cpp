@@ -97,5 +97,13 @@
     "longitude": -3.77,
     "source": "manual",
     "notes": "Montes de Pas (Vega de Pas), upper Pas/Pisueña/Miera valleys, southern Cantabria."
-  }
+  },
+  "allophone_rules": [
+    {
+      "id": "ES_S_VOICING",
+      "phonemes": [],
+      "surface": "",
+      "notes": "DISABLED: ES_S_VOICING voices a coda /s/ before a voiced consonant. Its source describes the Castilian standard of Spain, and no source for this language was opened, so the rule is switched off here."
+    }
+  ]
 }

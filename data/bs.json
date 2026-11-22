@@ -94,6 +94,96 @@
     ],
     "ž": [
       "ʒ"
+    ],
+    "а": [
+      "a"
+    ],
+    "б": [
+      "b"
+    ],
+    "в": [
+      "ʋ"
+    ],
+    "г": [
+      "ɡ"
+    ],
+    "д": [
+      "d"
+    ],
+    "ђ": [
+      "dʑ"
+    ],
+    "е": [
+      "e"
+    ],
+    "ж": [
+      "ʒ"
+    ],
+    "з": [
+      "z"
+    ],
+    "и": [
+      "i"
+    ],
+    "ј": [
+      "j"
+    ],
+    "к": [
+      "k"
+    ],
+    "л": [
+      "l"
+    ],
+    "љ": [
+      "ʎ"
+    ],
+    "м": [
+      "m"
+    ],
+    "н": [
+      "n"
+    ],
+    "њ": [
+      "ɲ"
+    ],
+    "о": [
+      "o"
+    ],
+    "п": [
+      "p"
+    ],
+    "р": [
+      "r"
+    ],
+    "с": [
+      "s"
+    ],
+    "т": [
+      "t"
+    ],
+    "ћ": [
+      "tɕ"
+    ],
+    "у": [
+      "u"
+    ],
+    "ф": [
+      "f"
+    ],
+    "х": [
+      "x"
+    ],
+    "ц": [
+      "ts"
+    ],
+    "ч": [
+      "tʃ"
+    ],
+    "џ": [
+      "dʒ"
+    ],
+    "ш": [
+      "ʃ"
     ]
   },
   "allophones": {
@@ -228,9 +318,29 @@
       "wikipedia_url": "https://en.wikipedia.org/wiki/Bosnian_language",
       "pages": null,
       "notes": null
+    },
+    {
+      "id": "icann_lgr_bs_cyrl2026",
+      "author": "ICANN",
+      "year": 2026,
+      "title": "Reference LGR for language: Bosnian (bs-Cyrl), Version 3",
+      "publisher": "ICANN",
+      "url": "https://www.icann.org/sites/default/files/packages/lgr/lgr-second-level-bosnian-cyrillic-language-13aug26-en.html",
+      "pages": null,
+      "notes": "The Repertoire section states the 30 code points of the Bosnian Cyrillic alphabet and that they are the Serbian Cyrillic set."
+    },
+    {
+      "id": "cldr_bs_cyrl",
+      "author": "Unicode Consortium",
+      "year": 2026,
+      "title": "Common Locale Data Repository, locale bs_Cyrl, exemplarCharacters",
+      "publisher": "Unicode CLDR",
+      "url": "https://github.com/unicode-org/cldr/blob/main/common/main/bs_Cyrl.xml",
+      "pages": null,
+      "notes": "The main exemplar set lists а б в г д ђ е ж з и ј к л љ м н њ о п р с т ћ у ф х ц ч џ ш."
     }
   ],
-  "notes": "Bosnian (bosanski) — Shtokavian standard of the Serbo-Croatian pluricentric language, written in Gaj's Latin alphabet (30 letters, including the digraphs dž, lj, nj which are single letters). Highly phonemic: one letter = one phoneme. ⟨r⟩ may be syllabic between consonants. Bosnian retains /h/ in more positions than the Croatian and Serbian standards. Pitch accent and vowel length are phonemic but not written.",
+  "notes": "Bosnian (bosanski) — Shtokavian standard of the Serbo-Croatian pluricentric language, written in Gaj's Latin alphabet (30 letters, including the digraphs dž, lj, nj which are single letters). Highly phonemic: one letter = one phoneme. ⟨r⟩ may be syllabic between consonants. Bosnian retains /h/ in more positions than the Croatian and Serbian standards. Pitch accent and vowel length are phonemic but not written. Bosnian is also written in Cyrillic, and the two alphabets match letter for letter. For the Cyrillic repertoire, \"All references converge on 30 Cyrillic code points\", \"identical to the Serbian Cyrillic set\" (ICANN 2026), and CLDR lists the same 30 letters as the exemplar characters of bs_Cyrl (CLDR bs_Cyrl). Each Cyrillic key carries the phonemes of its Latin letter, paired as in the Cyrillic and Latin columns of the alphabet table of the bosnian_wiki source (revision 1380714557): Љ љ is Lj lj, Њ њ is Nj nj, Џ џ is Dž dž, Ђ ђ is Đ đ, Ћ ћ is Ć ć, Ј ј is J j and Х х is H h.",
   "timespan": {
     "start_year": 1850,
     "end_year": null
