@@ -193,7 +193,8 @@ const std::vector<std::string>& affricate_atoms() {
 
 // stress.py _MARK_ATOMS: affricates as they reach the stress marker,
 // where a boundary drawn inside one would cut a phoneme in half —
-// lengthened on the stop and carrying ejective/aspirated/palatalized/
+// lengthened on the stop, carrying a place diacritic below the fricative
+// (apical and laminal Basque ts̺ ts̻) and ejective/aspirated/palatalized/
 // labialized releases; sorted longest first.
 const std::vector<std::string>& mark_atoms() {
     static const std::vector<std::string> atoms = [] {
@@ -206,9 +207,10 @@ const std::vector<std::string>& mark_atoms() {
         for (const auto& base : bases)
             for (const auto& length : lengths)
                 for (const char* tie : {"", "\u0361"})
-                    for (const auto& release : releases)
-                        set.insert(base.substr(0, char_size(base, 0)) + length + tie +
-                                   base.substr(char_size(base, 0)) + release);
+                    for (const char* place : {"", "\u033a", "\u033b"})
+                        for (const auto& release : releases)
+                            set.insert(base.substr(0, char_size(base, 0)) + length + tie +
+                                       base.substr(char_size(base, 0)) + place + release);
         std::vector<std::string> out(set.begin(), set.end());
         std::stable_sort(out.begin(), out.end(),
                          [](const std::string& a, const std::string& b) {

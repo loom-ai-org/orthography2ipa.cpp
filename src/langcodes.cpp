@@ -663,6 +663,10 @@ std::optional<Language> try_maximize(const Language& lang) {
     return std::nullopt;
 }
 
+bool has_likely_subtags(const std::string& tag) {
+    return lookup(tables().likely_subtags, tag) != nullptr;
+}
+
 Language maximize(const Language& lang) {
     if (std::optional<Language> filled = try_maximize(lang)) return *filled;
     throw std::runtime_error(

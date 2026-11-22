@@ -10,6 +10,12 @@
   "parent": "pt-PT",
   "allophone_rules": [
     {
+      "id": "PT_EX_CONSONANT_GLIDE",
+      "phonemes": [],
+      "surface": "ɐj",
+      "notes": "DISABLED for Terceira Portuguese. No source for the vowel of ⟨ex⟩ before a consonant in this variety was read, so its output stays what it was. The pt-PT rule gives ⟨ex⟩ the diphthong of the pt-PT ⟨ei⟩, [ej]."
+    },
+    {
       "id": "TER_A_METAPHONY",
       "phonemes": [
         "a"
@@ -315,5 +321,6 @@
     "source": "wikidata",
     "notes": "Ilha Terceira (Angra do Heroísmo) — the central-group island the variety is named for. [Wikidata Q207502 P625]"
   },
-  "word_exceptions_base": "pt-PT"
+  "word_exceptions_base": "pt-PT",
+  "collapse_geminates": true
 }

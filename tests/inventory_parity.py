@@ -36,6 +36,7 @@ import os
 import pathlib
 import subprocess
 import sys
+import unicodedata
 
 HERE = pathlib.Path(__file__).resolve().parent
 CPP_ROOT = HERE.parent
@@ -192,7 +193,12 @@ def main():
         for side, tokens, tokmap in (("reference", expect["tokens"], expect["tokmap"]),
                                      ("C++", actual["tokens"], actual["tokmap"])):
             for emission, drawn in tokmap.items():
-                outside = set(drawn) - tokens
+                # A bare ː or ʲ, and a token that opens with a combining mark, are
+                # never a token of their own: the inventory joins each to the
+                # segments it can follow.
+                outside = {t for t in set(drawn) - tokens
+                           if t not in ref_inventory._BARE_MODIFIERS
+                           and not unicodedata.combining(t[0])}
                 if outside:
                     counts["closure_violation"] += 1
                     print(f"CLOSURE {side} {code}: {emission!r} -> {sorted(outside)}")

@@ -806,6 +806,15 @@
       "notes": "A syllable-final nasal inside a word is velar before a velar consonant. Navarro Tomás (1918, § 133, pp. 111-112): «La n final de sílaba, en contacto con una consonante velar siguiente, se asimila en la conversación ordinaria, por lo que a la posición de la lengua se refiere, a la articulación de dicha consonante velar». His examples inside a word are cinco [θíŋko], banco [báŋko], manco [máŋko], pongo and lengua with [ŋ], and monja, enjambre and fingir with [ŋ] before [x]. § 111 (p. 86) gives the velar nasal in cinco, and § 149 (p. 134) in nunca and lonja. On p. 112 the contact of the tongue with the velum «es completo cuando esta consonante va seguida de alguna de las oclusivas g, k; pero no suele serlo ante la fricativa x y mucho menos ante la semiconsonante w, llegando la ŋ con frecuencia en este último caso a reducirse a una simple nasalización de la vocal anterior». So the nasal is [ŋ] before k ɡ x w, the class that ES_EXT_FINAL_N_VELAR uses across words, and before ɣ where a child spirantizes /ɡ/. The nasal vowel that often replaces [ŋ] before w is not encoded. The rule takes only a coda nasal. In anual [aˈnwal] and continuo [konˈtinwo] the nasal begins the syllable of the glide, so it is not syllable-final and stays [n]."
     },
     {
+      "id": "ES_S_VOICING",
+      "phonemes": [
+        "s"
+      ],
+      "surface": "z",
+      "followed_by_phoneme": ["b", "β", "d", "ð", "ɡ", "ɣ", "m", "n", "ɲ", "ŋ", "l", "ʎ", "r", "ɾ", "ʝ"],
+      "notes": "/s/ takes the voicing of a following voiced consonant. Martínez-Celdrán, Fernández-Planas & Carrera-Sabaté (2003, JIPA 33(2), p. 258), on the Castilian standard: '[θ] has an interdental place of articulation. This fricative, like [s], becomes voiced before a voiced consonant. For instance, rasgo ‘feature’ [ˈrazɣo]'. So mismo [ˈmizmo], desde [ˈdezðe], isla [ˈizla]. The rule acts inside a word. The spirant rules read [z] as well as [s], so desde keeps its [ð]. A spec that aspirates or deletes its coda /s/ disables the rule by id, so its [h] stays."
+    },
+    {
       "id": "ES_SPIRANT_B",
       "phonemes": [
         "b"

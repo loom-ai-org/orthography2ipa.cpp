@@ -96,6 +96,9 @@ Language prefer_macrolanguage(const Language& lang);
 /// forms, in the order UTR 35 §4.3 says to try them.
 std::vector<std::string> broader_tags(const Language& lang);
 
+/// data_dicts.py: whether *tag* is a key of LIKELY_SUBTAGS.
+bool has_likely_subtags(const std::string& tag);
+
 /// __init__.py Language.maximize: fill in the CLDR likely subtags.
 /// `max_form` is the same thing as a tag, and is what the round-trip check
 /// compares. A tag that no likely-subtag entry can fill — which the shipped

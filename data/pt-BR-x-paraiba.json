@@ -1,0 +1,243 @@
+{
+  "code": "pt-BR-x-paraiba",
+  "name": "Paraibano Portuguese",
+  "script": "Latin",
+  "script_type": "alphabet",
+  "quality": "research",
+  "iso639_3": "por",
+  "parent": "pt-BR",
+  "graphemes_base": "pt-BR",
+  "allophones_base": "pt-BR",
+  "positional_graphemes_base": "pt-BR",
+  "allophone_passes": 2,
+  "notes": "Paraibano, as described for João Pessoa by the VALPB studies and for the whole state by the Atlas Linguístico da Paraíba. /t d/ stay stops before [i] except after a coda [ʃ ʒ]: about 7 % palatalisation in the VALPB corpus (Hora, Henrique & Amorim 2018: 280, 288), 56.4 % after a palatal fricative (ibid., p. 292), and the ALiB rates João Pessoa 'baixa' (Battisti & Dornelles Filho 2015: 226). Pretonic /e o/ open before an open, nasal or low stressed vowel (Mota & Lopes 2018: 212, 215); the state atlas finds open pretonics predominant everywhere (Aragão 2020: 172). Coda /S/ is alveolar, and palatal only before /t d/ (Hora, Henrique & Amorim 2018: 282-284). Coda /R/ is the aspirate [h] and is deleted word-finally (Callou, Serra & Cunha 2015: 197, 207-208). The /t d/ and coda /S/ sources cover João Pessoa only; the interior is unstudied for both.",
+  "sources": [
+    {
+      "id": "cardoso_etal2014",
+      "author": "Cardoso, S.A.M. et al.",
+      "year": 2014,
+      "title": "Atlas Linguístico do Brasil (ALiB), vols. 1-2",
+      "publisher": "EDUEL",
+      "url": null,
+      "pages": null,
+      "notes": "Geolinguistic atlas; pretonic-vowel and palatalization isoglosses."
+    },
+    {
+      "id": "battisti_dornellesfilho2015",
+      "author": "Battisti, E. & Dornelles Filho, A.A.",
+      "year": 2015,
+      "title": "Análise em tempo real da palatalização de /t/ e /d/ no português falado em uma comunidade ítalo-brasileira",
+      "publisher": "Revista da ABRALIN 14(1): 221-246",
+      "url": "https://revista.abralin.org/index.php/abralin/article/download/1239/1162/549",
+      "pages": "226",
+      "notes": "Summarises the ALiB capital map (Cardoso et al. 2014: 123) on p. 226."
+    },
+    {
+      "id": "mota_lopes2018",
+      "author": "Mota, J.A. & Lopes, P.H.S.",
+      "year": 2018,
+      "title": "Os subfalares do Norte e o traçado das vogais médias pretônicas",
+      "publisher": "Estudos de Lingüística Galega, volume especial I: 209-218",
+      "url": "https://doi.org/10.15304/elg.ve1.3480",
+      "pages": "212, 215",
+      "notes": null
+    },
+    {
+      "id": "callou_serra_cunha2015",
+      "author": "Callou, D., Serra, C. & Cunha, C.",
+      "year": 2015,
+      "title": "Mudança em curso no português brasileiro: o apagamento do R no dialeto nordestino",
+      "publisher": "Revista da ABRALIN 14(1): 195-219",
+      "url": "https://revista.abralin.org/index.php/abralin/article/download/1238/1161",
+      "pages": "197, 207-208, 214",
+      "notes": null
+    },
+    {
+      "id": "hora_henrique_amorim2018",
+      "author": "Hora, D. da, Henrique, P.F.L. & Amorim, A.W.D.",
+      "year": 2018,
+      "title": "Produção e percepção: o processo de palatalização em jogo",
+      "publisher": "Diadorim 20(2): 280-296",
+      "url": "https://doi.org/10.35520/diadorim.2018.v20n2a18269",
+      "pages": "280, 282-284, 288",
+      "notes": null
+    },
+    {
+      "id": "aragao2020",
+      "author": "Aragão, M.S.S.",
+      "year": 2020,
+      "title": "Atlas Linguístico da Paraíba",
+      "publisher": "Acta Semiótica et Lingvistica 25(1)",
+      "url": "https://periodicos.ufpb.br/index.php/actas/article/view/53679",
+      "pages": "172",
+      "notes": "Summarises the findings of the Atlas Linguístico da Paraíba (Aragão & Menezes 1984), 25 points over the whole state."
+    },
+    {
+      "id": "henrique_amorim_hora2022",
+      "author": "Henrique, P.F.L., Amorim, A.W.D. & Hora, D. da",
+      "year": 2022,
+      "title": "O papel do estilo no uso do /S/ pós-vocálico em uma amostra de recontato",
+      "publisher": "Cadernos de Linguística 3(1): e621",
+      "url": "https://doi.org/10.25189/2675-4916.2022.v3.n1.id621",
+      "pages": "4-5",
+      "notes": "Pages of the Redalyc PDF: https://www.redalyc.org/journal/6891/689174650008/689174650008.pdf"
+    },
+    {
+      "id": "silva_araujo_viana2018",
+      "author": "Silva, P.J.R., Araújo, A.A. & Viana, R.B.M.",
+      "year": 2018,
+      "title": "O alçamento e o abaixamento da pretônica /O/ nos Atlas Linguísticos do Ceará, Paraíba e Bahia",
+      "publisher": "Entretextos 18(1): 261-284",
+      "url": "https://ojs.uel.br/revistas/uel/index.php/entretextos/article/view/33138",
+      "pages": "276-277",
+      "notes": null
+    }
+  ],
+  "wikipedia": [
+    "https://en.wikipedia.org/wiki/Para%C3%ADba",
+    "https://pt.wikipedia.org/wiki/Dialeto_nordestino"
+  ],
+  "positional_graphemes": {
+    "t": {
+      "before_i": [
+        "t"
+      ]
+    },
+    "d": {
+      "before_i": [
+        "d"
+      ]
+    },
+    "r": {
+      "word_initial": [
+        "ʁ"
+      ],
+      "intervocalic": [
+        "ɾ"
+      ],
+      "before_consonant": [
+        "h"
+      ],
+      "word_final": [
+        "h"
+      ]
+    }
+  },
+  "allophone_rules": [
+    {
+      "id": "NE_PRETONIC_OPEN_E",
+      "phonemes": [
+        "e"
+      ],
+      "surface": "ɛ",
+      "stress": "pretonic",
+      "followed_by_phoneme_2": [
+        "a",
+        "ɐ",
+        "ɛ",
+        "ɔ",
+        "ɐ̃",
+        "ẽ",
+        "õ"
+      ],
+      "notes": "Mota & Lopes (2018: 215, ALiB, North and Northeast capitals): pretonic mid vowels 'têm uma maior probabilidade de se tornarem médias abertas no contexto de tônica também de timbre aberto (médias-baixas), médias nasais e diante da vogal baixa [a]'. João Pessoa keeps closed [e] in 48 % of tokens, 183/379 (ibid., p. 212, Table 1). The Atlas Linguístico da Paraíba finds 'uma predominância das vogais médias abertas' over its 25 points, and adds that 'as nasais na sílaba subsequente favorecem a elevação' (Aragão 2020: 172). The rule still opens before a nasal stressed vowel, which Mota & Lopes (2018: 215) list as an opening context. Posttonic vowels are outside every source, so the rule is pretonic only."
+    },
+    {
+      "id": "NE_PRETONIC_OPEN_O",
+      "phonemes": [
+        "o"
+      ],
+      "surface": "ɔ",
+      "stress": "pretonic",
+      "followed_by_phoneme_2": [
+        "a",
+        "ɐ",
+        "ɛ",
+        "ɔ",
+        "ɐ̃",
+        "ẽ",
+        "õ"
+      ],
+      "notes": "As NE_PRETONIC_OPEN_E. João Pessoa keeps closed [o] in 44 % of tokens, 108/244 (Mota & Lopes 2018: 212, Table 1). In the Atlas Linguístico da Paraíba, pretonic /O/ lowers in 81 of the 98 tokens that keep or lower it (82.7 %); the raised tokens are outside that count (Silva, Araújo & Viana 2018: 277, Table 1)."
+    },
+    {
+      "id": "NE_FINAL_R_DELETION",
+      "phonemes": [
+        "h",
+        "ɾ"
+      ],
+      "surface": "",
+      "word_final": true,
+      "notes": "Callou, Serra & Cunha (2015: 207, ALiB): João Pessoa deletes word-final /R/ in 97 % of verbs and 95 % of other words; there 'a mudança é quase categórica e não apresenta restrições' (p. 208). Word-internal deletion is 22 % (p. 214), so the internal coda stays [h], the '[- vibrante] e [- anterior]' norm of these capitals (p. 197)."
+    },
+    {
+      "id": "PB_CODA_S_BEFORE_T",
+      "phonemes": [
+        "s"
+      ],
+      "surface": "ʃ",
+      "syllable_position": "coda",
+      "followed_by_phoneme": [
+        "t",
+        "t͡ʃ"
+      ],
+      "notes": "Coda /S/ is alveolar except before the dental stops. Hora, Henrique & Amorim (2018: 283), summarising Hora (2003) on the VALPB corpus: 'é quase categórico o uso [ʃ, ʒ] antes das consoantes oclusivas dentais [t] e [d], enquanto antes das outras consoantes, a pronúncia alveolar é a predominante'. The palatal reaches 97 % before a coronal, n = 6.265 (Henrique, Amorim & Hora 2022, Redalyc PDF p. 5): posto [ˈpoʃtu], casca [ˈkaskɐ]."
+    },
+    {
+      "id": "PB_CODA_Z_BEFORE_D",
+      "phonemes": [
+        "z",
+        "s"
+      ],
+      "surface": "ʒ",
+      "syllable_position": "coda",
+      "followed_by_phoneme": [
+        "d",
+        "d͡ʒ"
+      ],
+      "notes": "Voiced counterpart of PB_CODA_S_BEFORE_T: de[z]de becomes de[ʒ]de (Hora, Henrique & Amorim 2018: 280). BR_CODA_S_VOICED writes the coda as [z] before [d] in the first pass; this rule makes it [ʒ]: desde [ˈdeʒd͡ʒi], mesmo [ˈmezmu]."
+    },
+    {
+      "id": "BR_AFFRIC_T_RAISED",
+      "phonemes": [
+        "t"
+      ],
+      "surface": "t͡ʃ",
+      "followed_by_phoneme": [
+        "i",
+        "ɪ",
+        "ĩ"
+      ],
+      "preceded_by_phoneme": [
+        "ʃ",
+        "ʒ"
+      ],
+      "notes": "/t/ is the affricate before [i] only after a coda palatal fricative; elsewhere it stays a stop. Hora, Henrique & Amorim (2018: 280): palatalisation occurs 'em torno de 7% nas oclusivas antes de [i]' in the VALPB corpus of João Pessoa; 7 % in Hora (1997) and 5,45 % in Henrique & Hora (2012) (ibid., p. 288). Hora, Henrique & Amorim (2018: 292): 'dentre os contextos precedentes, a fricativa palatal foi a que mais condicionou a taxa de produção das oclusivas dentais (56.4%). Portanto, no nível de produção, a fricativa palatal como contexto precedente tende a aumentar a taxa de produção da palatalização das oclusivas dentais'. Gráfico 6 (p. 293, from Henrique & Hora 2012: 6) puts the affricate at 56.4 % after a palatal fricative, against 3.7 % after a glide, 1.8 % after a pause and 3.1 % after a vowel, a liquid or a nasal (the split was read from the chart by a model, not by a person). So the affricate is the more frequent form after [ʃ ʒ] only: desde [ˈdeʒd͡ʒi], festival [feʃt͡ʃiˈvaw], and tarde [ˈtahdi], noite [ˈnojti], mestre [ˈmeʃtɾi] keep the stop. The coda [ʃ ʒ] come from PB_CODA_S_BEFORE_T and PB_CODA_Z_BEFORE_D."
+    },
+    {
+      "id": "BR_AFFRIC_D_RAISED",
+      "phonemes": [
+        "d"
+      ],
+      "surface": "d͡ʒ",
+      "followed_by_phoneme": [
+        "i",
+        "ɪ",
+        "ĩ"
+      ],
+      "preceded_by_phoneme": [
+        "ʃ",
+        "ʒ",
+        "z"
+      ],
+      "notes": "Voiced counterpart of BR_AFFRIC_T_RAISED: /d/ is [d͡ʒ] before [i] after a coda palatal fricative, and a stop elsewhere (Hora, Henrique & Amorim 2018: 292, the same statement). The first pass writes the coda before /d/ as [z] (BR_CODA_S_VOICED) and the second pass makes it [ʒ] (PB_CODA_Z_BEFORE_D), so the context of this rule lists [z] too: it sees the segments of the previous pass."
+    }
+  ],
+  "location": {
+    "latitude": -7.12,
+    "longitude": -34.88,
+    "source": "wikidata",
+    "notes": "João Pessoa — the city of the VALPB studies. [Wikidata Q167436 P625]"
+  },
+  "collapse_geminates": true
+}

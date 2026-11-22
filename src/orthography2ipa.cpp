@@ -766,9 +766,11 @@ bool is_hyphen(const std::string& grapheme) {
 // It appends to *words* rather than returning, because a pause is not confined
 // to the run it is written in: punctuation opening a plain run falls AFTER
 // whatever preceded it, and what preceded it may be a forced word.
-void group_words(const PhonetokTokenizer& tokenizer, const std::string& text,
+void group_words(const PhonetokTokenizer& tokenizer, const std::string& unprepared,
                  bool word_internal_apostrophe, const ListedWordOpener& opens_listed_word,
                  std::vector<InputWord>& words) {
+    // Token positions index the prepared string, so word grouping reads it too.
+    const std::string text = tokenizer.prepare(unprepared);
     std::u32string run;                     // the surface being built, code points
     const std::u32string units = to_utf32(text);
     // hyphen_joined of the word in `run`, and of the next one
@@ -2708,7 +2710,9 @@ std::vector<std::size_t> vowel_offsets(const std::string& ipa) {
 std::optional<std::vector<std::string>> fold_inserted_nuclei(
         const LanguageSpec& spec, const Tokenizer& tokenizer, const std::string& word,
         const std::string& ipa, const IPAPath* path) {
-    if (path == nullptr || path->graphemes.empty() || path->ipa != ipa) return std::nullopt;
+    if (path == nullptr || path->graphemes.empty() || path->ipa != ipa ||
+            spec.script_type == "abugida")
+        return std::nullopt;
     const auto tokens = tokenizer.grapheme_tokens(word);
     std::set<std::size_t> inserted;
     std::size_t offset = 0, t = 0;
@@ -2746,6 +2750,148 @@ std::optional<std::vector<std::string>> fold_inserted_nuclei(
     }
     if (folded.size() < syllables.size()) return folded;
     return std::nullopt;
+}
+
+// g2p.py _cut_written_syllables: *division* with a syllable cut where the
+// transcription lost a written syllable, or *division* unchanged. The stress
+// index counts written syllables; a letter that adds no segment leaves the
+// vowels on either side of it in one vowel run, and a vowel letter the spec
+// has no grapheme for adds no segment either. The path records the grapheme
+// of each segment, so the run is cut where the written syllable of its vowels
+// changes.
+std::optional<std::vector<std::string>> cut_written_syllables(
+        const LanguageSpec& spec, const Tokenizer& tokenizer, const std::string& word,
+        const std::string& ipa, const IPAPath* path, const std::vector<std::string>& syllables,
+        const std::optional<std::vector<std::string>>& division) {
+    if (path == nullptr || path->graphemes.empty() || path->ipa != ipa) return division;
+    const std::vector<std::string> sylls = (division && !division->empty())
+        ? *division : stress::syllabify_for_mark(ipa, spec);
+    std::u32string joined;
+    for (const auto& syllable : syllables) joined += to_utf32(syllable);
+    if (sylls.size() >= syllables.size() || joined != to_utf32(word)) return division;
+    const auto tokens = tokenizer.grapheme_tokens(word);
+    const auto token_syllable = map_tokens_to_syllables(tokens, syllables);
+    std::vector<std::size_t> owner, source;
+    std::size_t t = 0;
+    const std::size_t pairs = std::min(path->graphemes.size(), path->segments.size());
+    for (std::size_t i = 0; i < pairs; ++i) {
+        while (t < tokens.size() && tokens[t].grapheme != path->graphemes[i]) ++t;
+        if (t == tokens.size()) return division;
+        const std::size_t width = to_utf32(path->segments[i]).size();
+        owner.insert(owner.end(), width, token_syllable[t]);
+        source.insert(source.end(), width, tokens[t].position);
+        ++t;
+    }
+    const std::u32string text = to_utf32(ipa);
+    if (owner.size() != text.size()) return division;
+    std::vector<std::size_t> starts;
+    std::size_t total = 0;
+    for (const auto& syllable : syllables) {
+        starts.push_back(total);
+        total += to_utf32(syllable).size();
+    }
+    std::set<std::u32string> diphthongs;
+    for (const auto& d : spec.diphthongs) diphthongs.insert(uni::lower(to_utf32(d)));
+    std::set<std::size_t> cuts;
+    long last = -1;
+    for (std::size_t o = 0; o < text.size(); ++o) {
+        const char32_t ch = text[o];
+        if (!vowels::is_ipa_vowel(ch)) {
+            if (!(uni::combining(ch) != 0 || ch == U'\u02d0' || ch == U'\u02d1')) last = -1;
+            continue;
+        }
+        const bool non_syllabic_follows =
+            o + 1 < text.size() && (text[o + 1] == U'\u032f' || text[o + 1] == U'\u0311');
+        if (last >= 0 && owner[o] == owner[last] + 1 && !non_syllabic_follows) {
+            const std::u32string before = to_utf32(syllables[owner[last]]);
+            const std::u32string after = to_utf32(syllables[owner[o]]);
+            std::u32string first;
+            for (const char32_t c : after)
+                if (vowels::is_orthographic_vowel(c)) { first = std::u32string(1, c); break; }
+            // Python slice after[:stop]: a negative stop counts from the end.
+            long stop = static_cast<long>(source[o]) - static_cast<long>(starts[owner[o]]);
+            if (stop < 0) stop = std::max(0L, stop + static_cast<long>(after.size()));
+            stop = std::min(stop, static_cast<long>(after.size()));
+            const std::u32string lead = after.substr(0, static_cast<std::size_t>(stop));
+            const bool letter = std::any_of(lead.begin(), lead.end(),
+                                            [](char32_t c) { return uni::is_alpha(c); });
+            const std::u32string pair = (before.empty() ? std::u32string() : before.substr(before.size() - 1)) + first;
+            if (letter && diphthongs.count(uni::lower(pair)) == 0) cuts.insert(o);
+        }
+        last = static_cast<long>(o);
+    }
+    std::set<std::size_t> read;
+    for (const auto& token : tokens)
+        for (std::size_t i = token.position; i < token.position + token.length; ++i) read.insert(i);
+    // Where a stand-in vowel goes: after the segments of the letters before
+    // the dropped vowel letter of each such syllable.
+    std::vector<std::size_t> drops;
+    for (std::size_t k = 0; k < syllables.size(); ++k) {
+        std::vector<std::size_t> segments;
+        for (std::size_t o = 0; o < owner.size(); ++o)
+            if (owner[o] == k) segments.push_back(o);
+        std::vector<std::size_t> dropped;
+        const std::u32string syllable = to_utf32(syllables[k]);
+        for (std::size_t i = 0; i < syllable.size(); ++i)
+            if (vowels::is_orthographic_vowel(syllable[i]) && read.count(starts[k] + i) == 0)
+                dropped.push_back(starts[k] + i);
+        if (segments.empty() || dropped.empty()) continue;
+        const bool any_vowel = std::any_of(segments.begin(), segments.end(),
+            [&](std::size_t o) { return vowels::is_ipa_vowel(text[o]); });
+        if (any_vowel) continue;
+        std::size_t at = segments.back() + 1;
+        for (const std::size_t o : segments)
+            if (source[o] > dropped.front()) { at = o; break; }
+        drops.push_back(at);
+    }
+    if (!drops.empty()) {
+        // Divide with the stand-ins in place, so that each such syllable opens
+        // with an onset the spec licenses.
+        std::u32string probe;
+        std::size_t from = 0;
+        for (std::size_t i = 0; i <= drops.size(); ++i) {
+            const std::size_t to = i < drops.size() ? drops[i] : text.size();
+            probe += text.substr(from, to - from);
+            if (i < drops.size()) probe += U'\u0259';
+            from = to;
+        }
+        std::vector<std::size_t> stand_ins;
+        for (std::size_t i = 0; i < drops.size(); ++i) stand_ins.push_back(drops[i] + i);
+        std::vector<std::size_t> ends{0};
+        for (const auto& syllable : stress::syllabify_for_mark(to_utf8(probe), spec))
+            ends.push_back(ends.back() + to_utf32(syllable).size());
+        for (const std::size_t p : stand_ins) {
+            std::size_t start = 0, end = 0;
+            bool found_end = false;
+            for (const std::size_t e : ends) {
+                if (e <= p) start = std::max(start, e);
+                else if (!found_end || e < end) { end = e; found_end = true; }
+            }
+            const auto before = [&](std::size_t bound) {
+                return static_cast<std::size_t>(std::count_if(stand_ins.begin(), stand_ins.end(),
+                    [&](std::size_t q) { return q < bound; }));
+            };
+            start -= before(start);
+            end -= before(end);
+            cuts.insert(start);
+            cuts.insert(end);
+        }
+    }
+    std::set<std::size_t> bounds = cuts;
+    std::size_t running = 0;
+    for (std::size_t i = 0; i + 1 < sylls.size(); ++i) {
+        running += to_utf32(sylls[i]).size();
+        bounds.insert(running);
+    }
+    std::vector<std::size_t> edges{0};
+    for (const std::size_t b : bounds)
+        if (b > 0 && b < text.size()) edges.push_back(b);
+    edges.push_back(text.size());
+    std::vector<std::string> cut;
+    for (std::size_t i = 0; i + 1 < edges.size(); ++i)
+        cut.push_back(to_utf8(text.substr(edges[i], edges[i + 1] - edges[i])));
+    if (cut.size() > sylls.size()) return cut;
+    return division;
 }
 
 // g2p.py _finalize_word_ipa: apply the per-path word-final stages to one
@@ -2815,7 +2961,12 @@ std::string finalize_word_ipa(const LanguageSpec& spec, const std::string& word,
             ipa = stress::apply_stress_mark(ipa, spec, idx, /*syllables=*/nullptr,
                                             &ipa_sylls);
         } else {
-            const auto sylls = stress::syllables_for(word, spec.code, spec.diphthongs, &spec, syllabifier);
+            // An abugida writes no letter for the inherent vowel, so its
+            // written division has fewer syllables than the word: the stress
+            // rules count the syllables of the transcription instead.
+            const auto sylls = spec.script_type == "abugida"
+                ? stress::syllabify_for_mark(ipa, spec)
+                : stress::syllables_for(word, spec.code, spec.diphthongs, &spec, syllabifier);
             const int idx = stress::detect_stress(word, spec, &sylls);
             std::string mark;
             if (!spec.accent2_mark.empty() && sylls.size() >= 2) {
@@ -2831,9 +2982,11 @@ std::string finalize_word_ipa(const LanguageSpec& spec, const std::string& word,
             const auto secondary = stress::secondary_stress_positions(
                 static_cast<int>(sylls.size()), idx, spec);
             const std::vector<int> secondary_indices(secondary.begin(), secondary.end());
-            const auto folded = tokenizer != nullptr
+            auto folded = tokenizer != nullptr
                 ? fold_inserted_nuclei(spec, *tokenizer, word, ipa, path)
                 : std::nullopt;
+            if (tokenizer != nullptr)
+                folded = cut_written_syllables(spec, *tokenizer, word, ipa, path, sylls, folded);
             ipa = stress::apply_stress_mark(ipa, spec, idx, &sylls,
                                             folded ? &*folded : nullptr, mark,
                                             secondary_indices, &spec);

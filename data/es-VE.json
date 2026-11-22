@@ -168,5 +168,13 @@
     "longitude": -66.914444,
     "source": "wikidata",
     "notes": "Caracas. A national variety: the capital stands in for the country. [Wikidata Q1533 P625]"
-  }
+  },
+  "allophone_rules": [
+    {
+      "id": "ES_S_VOICING",
+      "phonemes": [],
+      "surface": "",
+      "notes": "DISABLED: ES_S_VOICING voices a coda /s/ before a voiced consonant. This spec aspirates or deletes its coda /s/, and the voicing rule of es-ES would take the segment first, so it is switched off here and the coda keeps the reading of this spec."
+    }
+  ]
 }

@@ -574,12 +574,6 @@
       "notes": "The palatal coda sibilant of this variety is [ʃ], so the base rule must also match [ʃ]; the plural endings raise as in the base (dentes, ovos)."
     },
     {
-      "id": "BR_XC_ONE_S",
-      "phonemes": [],
-      "surface": "",
-      "notes": "Switched off. Vasilévski (2012: 55, Table 1) gives 'xc /s/ exceção' and no opened source gives the value in a spec with a palatal coda, so ⟨xc⟩ keeps [ʃs]."
-    },
-    {
       "id": "BR_CODA_X",
       "phonemes": [],
       "surface": "",
@@ -610,5 +604,17 @@
       ],
       "notes": "The palatal coda /S/ takes the voicing of a following voiced consonant: mesmo [ˈmeʒmu], desde [ˈdeʒd͡ʒi]. Marins & Margotti (2012: 255) report six coda /S/ realisations in the Pará atlas data, among them 'pós-alveolar (surda e sonora)', and for Belém that 'é a variante pós-alveolar que é utilizada com mais frequência'. The positional map writes the coda as [ʃ]; this rule voices it in the second pass."
     }
-  ]
+  ],
+  "sandhi_rules": [
+    {
+    "id": "BR_FINAL_SH_VOICING",
+    "name": "final-sh-voicing-before-voiced-consonant",
+    "left_context": "ʃ$",
+    "right_context": "^[ˈˌ]?[bdɡvzʒmnɲlʎɾʁ]",
+    "transform": "ʒ",
+    "obligatory": true,
+    "notes": "A word-final chiado [ʃ] takes the voicing of a voiced consonant at the start of the next word: os dois [uʒ ˈdojʃ], as mesas [aʒ ˈmezɐʃ]. Barbosa & Albano (2004: 229): 'The archiphoneme /S/ surfaces either as a voiced or as a voiceless alveolar fricative. As in most varieties, it tends to assimilate the voicing of the following sound.' The place stays palatal because the spec writes the coda as [ʃ]. The rule is BR_FINAL_S_VOICING for that coda and uses the same right context. Before a vowel (dez anos) this rule does not apply, and the output keeps [ʃ]. No source supports that [ʃ]: Brescancini (2015: 76) gives a voiced sibilant there, 'em fronteira de palavra diante de vogais é prevista a ocorrência apenas de [z] (mai[z] atrasada)', and the voiced palato-alveolar for Florianópolis. Issue #2052 holds that case."
+  }
+  ],
+  "collapse_geminates": true
 }

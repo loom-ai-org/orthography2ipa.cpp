@@ -35,6 +35,12 @@ std::optional<std::string> default_region(const std::string& tag);
 /// region inserted after the language and script (`en` -> `en-GB`).
 std::string with_default_region(const std::string& tag);
 
+/// regions.py likely_script: the ISO 15924 script *tag* is written in: its
+/// script subtag, or else the script CLDR likely subtags give for the
+/// language in its default region. Nothing for a tag langcodes cannot parse
+/// or a language it does not know.
+std::optional<std::string> likely_script(const std::string& tag);
+
 /// lects.py private_use: the private-use subtags of *tag*, lowercase.
 std::vector<std::string> private_use(const std::string& tag);
 

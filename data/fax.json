@@ -8,15 +8,13 @@
       "ɐ"
     ],
     "e": [
-      "e",
-      "ɛ"
+      "e"
     ],
     "i": [
       "i"
     ],
     "o": [
-      "o",
-      "ɔ"
+      "o"
     ],
     "u": [
       "u"
@@ -25,7 +23,7 @@
       "a"
     ],
     "é": [
-      "ɛ"
+      "e"
     ],
     "ê": [
       "e"
@@ -34,7 +32,7 @@
       "i"
     ],
     "ó": [
-      "ɔ"
+      "o"
     ],
     "ô": [
       "o"
@@ -265,17 +263,11 @@
     "e": [
       "e"
     ],
-    "ɛ": [
-      "ɛ"
-    ],
     "i": [
       "i"
     ],
     "o": [
       "o"
-    ],
-    "ɔ": [
-      "ɔ"
     ],
     "u": [
       "u"
@@ -373,8 +365,22 @@
       ]
     }
   },
+  "allophone_rules": [
+    {
+      "id": "GL_OPEN_O",
+      "phonemes": [],
+      "surface": "",
+      "notes": "Switches off the inherited gl-ES rule of the same id. A Fala has no /ɔ/ phoneme (Costas González 1992: 86)."
+    },
+    {
+      "id": "GL_RAISE_O_BEFORE_NASAL",
+      "phonemes": [],
+      "surface": "",
+      "notes": "Switches off the inherited gl-ES rule of the same id. A Fala has no /ɔ/ phoneme to raise (Costas González 1992: 86)."
+    }
+  ],
   "parent": "gl-ES",
-  "notes": "A Fala (Xalimego/Fala de Xálima). Galician-Portuguese linguistic island in Cáceres, Extremadura. Three local varieties: Valverdeiru (Valverde del Fresno), Lagarteiro (Eljas), Mañegu (San Martín de Trevejo). ~5,000–10,000 speakers. Preserves medieval Galician-Portuguese features with Leonese/Extremaduran influence (F- → [h] aspiration in some words). Betacism. Nasal vowels. Palatal [ʎ]. ISO 639-3: fax. SIGNAL FEATURE — FOUR-WAY MEDIEVAL SIBILANT SYSTEM (Grupo Xálima tesoro p.38, table p.53): A Fala preserves the full voiced/voiceless sibilant contrast otherwise kept only by Portuguese — intervocalic ⟨s⟩ = voiced [z] (casa) vs ⟨ss⟩ = [s] (nossa); ⟨x⟩ = voiceless [ʃ] (queixu) vs ⟨j⟩ / ⟨g⟩ before e,i = voiced [ʒ] (queiju, ovelha) — hence ⟨j⟩ and ⟨g⟩(e,i) are mapped to [ʒ], NOT the voiceless [ʃ] of Castilian jota; plus interdental /θ/ from ⟨c⟩(e,i)/⟨ç⟩ (cincu, caça, poçu). So NO seseo and NO ceceo, and voicing is phonemic. SUB-VARIETY SPLIT (documented, not phoneme-split): medieval z (⟨z⟩ here defaulted to [θ]) is realised as a voiced interdental [ð̞] in lagarteiru/mañegu but merges to plain [θ] in valverdeiru (tesoro pp.54-55) — this spec keeps the valverdeiru [θ] default. Other per-variety/overlay traits out of grapheme->IPA scope: final-vowel metaphony -e>-i/-o>-u, implosive -r/-l -> [l], intervocalic -d- loss, final -z drop, preterite cantaram (valverdeiru) vs cantórim (lagarteiru/mañegu).",
+  "notes": "A Fala (Xalimego/Fala de Xálima). Galician-Portuguese linguistic island in Cáceres, Extremadura. Three local varieties: Valverdeiru (Valverde del Fresno), Lagarteiro (Eljas), Mañegu (San Martín de Trevejo). ~5,000–10,000 speakers. Preserves medieval Galician-Portuguese features with Leonese/Extremaduran influence (F- → [h] aspiration in some words). Betacism. Nasal vowels. Palatal [ʎ]. ISO 639-3: fax. VOWELS: A Fala has no /ɛ ɔ/ phonemes and a five-vowel tonic system /i e a o u/ (Costas González 1992: 86-87). The written accent of ⟨é ó⟩ marks a stressed mid vowel [e] [o] (Carrasco González 2024: 104), so ⟨e é o ó⟩ read [e] [o], and the inherited gl-ES rules GL_OPEN_O and GL_RAISE_O_BEFORE_NASAL, which write or rewrite [ɔ], are switched off. SIGNAL FEATURE — FOUR-WAY MEDIEVAL SIBILANT SYSTEM (Grupo Xálima tesoro p.38, table p.53): A Fala preserves the full voiced/voiceless sibilant contrast otherwise kept only by Portuguese — intervocalic ⟨s⟩ = voiced [z] (casa) vs ⟨ss⟩ = [s] (nossa); ⟨x⟩ = voiceless [ʃ] (queixu) vs ⟨j⟩ / ⟨g⟩ before e,i = voiced [ʒ] (queiju, ovelha) — hence ⟨j⟩ and ⟨g⟩(e,i) are mapped to [ʒ], NOT the voiceless [ʃ] of Castilian jota; plus interdental /θ/ from ⟨c⟩(e,i)/⟨ç⟩ (cincu, caça, poçu). So NO seseo and NO ceceo, and voicing is phonemic. SUB-VARIETY SPLIT (documented, not phoneme-split): medieval z (⟨z⟩ here defaulted to [θ]) is realised as a voiced interdental [ð̞] in lagarteiru/mañegu but merges to plain [θ] in valverdeiru (tesoro pp.54-55) — this spec keeps the valverdeiru [θ] default. Other per-variety/overlay traits out of grapheme->IPA scope: final-vowel metaphony -e>-i/-o>-u, implosive -r/-l -> [l], intervocalic -d- loss, final -z drop, preterite cantaram (valverdeiru) vs cantórim (lagarteiru/mañegu).",
   "quality": "research",
   "script_type": "alphabet",
   "iso639_3": "fax",
@@ -428,6 +434,26 @@
       "url": null,
       "pages": null,
       "notes": null
+    },
+    {
+      "id": "costas_gonzalez1992",
+      "author": "Costas González, X. H.",
+      "year": 1992,
+      "title": "Breve caracterización das falas (fundamentalmente galegas) do val do río das Ellas",
+      "publisher": "Cadernos de Lingua 6, Real Academia Galega",
+      "url": "https://doi.org/10.32766/cdl.6.585",
+      "pages": "86-87",
+      "notes": "Read from the page images. p. 86, § 2 'Inexistencia de oposición ɛ/e, ɔ/o': 'nestas non existen os fonemas /ɛ/, /ɔ/, por moito que poidamos rexistrar realizacións abertas moi esporadicamente'. p. 87 gives the tonic vowel system /i e a o u/."
+    },
+    {
+      "id": "carrasco_gonzalez2024",
+      "author": "Carrasco González, J. M.",
+      "year": 2024,
+      "title": "Propuesta ortográfica de la Universidad de Extremadura para la fala",
+      "publisher": "Limite 18, 99-105",
+      "url": "https://doi.org/10.17398/1888-4067.18.99",
+      "pages": "100, 104",
+      "notes": "p. 104, Acentuación 1.1: the written accent marks the tonic e and o 'con el fin de distinguir su pronunciación sistemática como vocales medias [e] y [o]' (pórta, véllu, léiti on p. 100)."
     }
   ],
   "wikipedia": [

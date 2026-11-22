@@ -175,5 +175,6 @@
       "measured": "The clup_dialect row holds 6 scored sentences (clup_dialect is sentence-level: each gold entry is one interview sentence, scored as a single unit against the engine's whole-sentence transcription, so the bootstrap resamples across only 6 sentence-level PER values, not across words), per=0.3317, per_ci_low=0.3126, per_ci_high=0.3578 (benchmarks/results.json). At n=6 sentences the bootstrap interval is already collapsing toward a point for the same reason (few distinct values to resample), so its narrow width reflects the small sample, not precision; see docs/evaluation/generated/scoreboard.md's `95% CI` note and the THIN_ROW_MARK cutoff (rows under 20 scored items). This row cannot gate a production promotion on its own strength.",
       "reference": "spec notes"
     }
-  }
+  },
+  "collapse_geminates": true
 }

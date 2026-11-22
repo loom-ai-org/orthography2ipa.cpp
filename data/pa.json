@@ -66,9 +66,6 @@
     "ਂ": [
       "̃"
     ],
-    "ੱ": [
-      "ː"
-    ],
     "ਕ": [
       "k"
     ],
@@ -375,7 +372,7 @@
       "notes": "Arabic adstrate: religious vocabulary"
     }
   ],
-  "notes": "Eastern Punjabi (Gurmukhi script, India). Typologically remarkable: lexical tone developed from the loss of the Old Indo-Aryan voiced-aspirate (murmured) series. ⟨ਘ ਝ ਢ ਧ ਭ⟩ carry that tonal reflex; word-initially they merged with the voiceless unaspirated series (*DH > T) and elsewhere with the plain voiced one (*DH > D), which the PA_DH_INITIAL_* rules encode (Kanwal & Ritchart 2015; Evans, Yeh & Kulkarni 2018). The pitch target is contested in the literature — low in Bhatia and Shackle, falling in the recent acoustic studies — and the spec keeps the low-tone reading. ⟨ਹ⟩ triggers low tone on an adjacent vowel when not initial; that context is not yet encoded. The non-initial *DH reflex has its own unencoded gap: the gold data (e.g. ਅਠਵੰਝਾ, ਅੱਧ) puts a high/rising tone on the vowel PRECEDING a non-initial ⟨ਘ ਝ ਢ ਧ ਭ⟩, not on the consonant itself, matching Kanwal & Ritchart's restriction of the word-initial reflex to word-initial position; the PA_DH_INITIAL_* rules only cover the word-initial case and non-initial ⟨ਘ ਝ ਢ ਧ ਭ⟩ currently surface voiced with no tone mark at all. Being an abugida, an unmarked consonant letter carries the inherent ⟨ə⟩, but the schwa following the last consonant of a word is elided (PA_SCHWA_FINAL_*, Singh & Lehal). Medial schwa deletion is context-sensitive well beyond what the rule layer expresses and is deliberately not attempted. The addak ⟨ੱ⟩ geminates the FOLLOWING consonant; the engine has no gemination-mark mechanism, so the length mark currently lands on the preceding vowel. Western Punjabi (Shahmukhi, Pakistan) is written in Perso-Arabic script.",
+  "notes": "Eastern Punjabi (Gurmukhi script, India). Typologically remarkable: lexical tone developed from the loss of the Old Indo-Aryan voiced-aspirate (murmured) series. ⟨ਘ ਝ ਢ ਧ ਭ⟩ carry that tonal reflex; word-initially they merged with the voiceless unaspirated series (*DH > T) and elsewhere with the plain voiced one (*DH > D), which the PA_DH_INITIAL_* rules encode (Kanwal & Ritchart 2015; Evans, Yeh & Kulkarni 2018). The pitch target is contested in the literature — low in Bhatia and Shackle, falling in the recent acoustic studies — and the spec keeps the low-tone reading. ⟨ਹ⟩ triggers low tone on an adjacent vowel when not initial; that context is not yet encoded. The non-initial *DH reflex has its own unencoded gap: the gold data (e.g. ਅਠਵੰਝਾ, ਅੱਧ) puts a high/rising tone on the vowel PRECEDING a non-initial ⟨ਘ ਝ ਢ ਧ ਭ⟩, not on the consonant itself, matching Kanwal & Ritchart's restriction of the word-initial reflex to word-initial position; the PA_DH_INITIAL_* rules only cover the word-initial case and non-initial ⟨ਘ ਝ ਢ ਧ ਭ⟩ currently surface voiced with no tone mark at all. Being an abugida, an unmarked consonant letter carries the inherent ⟨ə⟩, but the schwa following the last consonant of a word is elided (PA_SCHWA_FINAL_*, Singh & Lehal). Medial schwa deletion is context-sensitive well beyond what the rule layer expresses and is deliberately not attempted. The addak ⟨ੱ⟩ is written after the vowel of the syllable before a geminate and doubles the FOLLOWING consonant letter (The Unicode Standard, Gurmukhi: \"U+0A71 GURMUKHI ADDAK is a special sign to indicate that the following consonant is geminate\"), so it has no grapheme of its own: the tokenizer rewrites addak plus consonant letter to two copies of the letter before the lookup, as a virama cluster is written in the other Indic scripts. A geminate affricate comes out as the affricate twice (ਬੱਚਾ bətʃtʃaː), the way the hi spec writes its virama clusters. A geminate aspirate comes out as two aspirates (ਮੱਖੀ məkʰkʰiː), and a geminate voiced aspirate carries the tone letter twice (ਅੱਧ əd̪˩d̪˩). No source opened for this spec gives the reading, and the wikipron gold does not support this one: of its 31 rows with an addak before ⟨ਖ ਛ ਠ ਥ ਫ⟩, 17 write a plain stop and then the aspirate (4 of them with an unreleased stop) and 14 write a long aspirate; no row writes two aspirates. Its 21 rows with an addak before ⟨ਘ ਝ ਢ ਧ ਭ⟩ write one tone at most. The hi spec reads the matching Devanagari cluster as unaspirated plus aspirate (मक्खी məkkʰiː). Western Punjabi (Shahmukhi, Pakistan) is written in Perso-Arabic script.",
   "quality": "research",
   "script_type": "abugida",
   "inherent_vowel": "ə",
@@ -450,6 +447,16 @@
       "url": "https://www.learnpunjabi.org/pdf/_paper_id_60__a_rule_based_schwa_deletion_algorithm_for_punjabi_tts_system__final_.pdf",
       "pages": null,
       "notes": "Read at §1.1: 'In Punjabi the inherent schwa following the last consonant of the word is elided', with ਸੜਕ [səɽk]. §2.2 gives eleven context-sensitive insertion rules for the medial cases. No venue or date is printed in the copy consulted; the year is the PDF's own creation timestamp, so treat it as approximate."
+    },
+    {
+      "id": "unicode_gurmukhi",
+      "author": "The Unicode Consortium",
+      "year": 2026,
+      "title": "The Unicode Standard, Version 18.0, Chapter 12, South and Central Asia-I, Gurmukhi",
+      "publisher": "The Unicode Consortium",
+      "url": "https://www.unicode.org/versions/latest/core-spec/chapter-12/",
+      "pages": null,
+      "notes": "Read: \"U+0A71 GURMUKHI ADDAK is a special sign to indicate that the following consonant is geminate. ISCII-1991 does not have a specific code point for addak and encodes it as a cluster. For example, the word ਪੱਗ pagg, 'turban,' can be represented with the sequence <0A2A ਪ, 0A71 ੱ, 0A17 ਗ> in Unicode, while in ISCII-1991 it would be <pa, ga, virama, ga>.\" The names list entry for U+0A71 reads 'doubles following consonant'."
     }
   ],
   "wikipedia": [
@@ -1013,7 +1020,7 @@
   "audit": {
     "vox_communis": {
       "conclusion": "at_ceiling_documented",
-      "measured": "Board PER 0.4454 (n=4003); scripts/fold_pa_notation.py measures 0.4432 in its own session, the vox_communis snapshot drifting by a few words between fetches. The gold is epitran-derived and writes Punjabi in epitran's conventions. Folding them out of BOTH sides cumulatively with the harness's own normalize() (broad) and levenshtein(): this gold marks no vowel length (we write a length mark in 3511 words, the gold in 1), which takes 0.4432 to 0.2176 and is the largest single mover; its ɑ for this spec's long ⟨ਾ⟩ takes it to 0.1282; and its absence of the low tone letter ˩ takes it to 0.1131. None of these three is a contrast the Gurmukhi script fails to write, so no valid_ceiling is recorded. What remains after the folds is not notation, and it is counted rather than folded: in 836 of 4003 words we write more schwas than the gold, which is medial schwa deletion (ਮਸਜਦ məsdʒəd, ਜਗਜੀਤ dʒəɡdʒit), the rule this spec's notes already cite from Singh & Lehal and deliberately leave unmodelled because it is context-sensitive beyond the rule layer; and in 35 words a word-final voiced aspirate letter surfaces voiceless in the gold (ਸਿੰਘ sɪ̃k) where this spec writes the voiced stop plus tone, the Kanwal & Ritchart devoicing the notes describe for the initial position only. Both are real phonological facts, so the 0.1131 residue is a measured floor for the rule layer as it stands, not a gold defect.",
+      "measured": "Board PER 0.4321 (n=4003); scripts/fold_pa_notation.py measures 0.4321 on the same snapshot. The gold is epitran-derived and writes Punjabi in epitran's conventions. Folding them out of BOTH sides cumulatively with the harness's own normalize() (broad) and levenshtein(): this gold marks no vowel length (we write a length mark in 3352 words, the gold in 1), which takes 0.4321 to 0.2078 and is the largest single mover; its ɑ for this spec's long ⟨ਾ⟩ takes it to 0.1185; and its absence of the low tone letter ˩ takes it to 0.1005. None of these three is a contrast the Gurmukhi script fails to write, so no valid_ceiling is recorded. What remains after the folds is not notation, and it is counted rather than folded: in 836 of 4003 words we write more schwas than the gold, which is medial schwa deletion (ਮਸਜਦ məsdʒəd, ਜਗਜੀਤ dʒəɡdʒit), the rule this spec's notes already cite from Singh & Lehal and deliberately leave unmodelled because it is context-sensitive beyond the rule layer; and in 35 words a word-final voiced aspirate letter surfaces voiceless in the gold (ਸਿੰਘ sɪ̃k) where this spec writes the voiced stop plus tone, the Kanwal & Ritchart devoicing the notes describe for the initial position only. Both are real phonological facts, so the 0.1005 residue is a measured floor for the rule layer as it stands, not a gold defect.",
       "reference": "spec notes (PA_SCHWA_FINAL_*, singh_lehal_schwa, kanwal_ritchart2015); see scripts/fold_pa_notation.py"
     }
   }

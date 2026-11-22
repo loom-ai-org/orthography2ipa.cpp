@@ -162,6 +162,12 @@ private:
     bool merged_ = false;
 };
 
+// phonetok.py _carrier_split_index, _carrier_tail and membership in
+// _NASAL_CARRIERS, for the inventory's tilde carriers.
+std::size_t nasal_carrier_split_index(const std::u32string& seg);
+std::u32string nasal_carrier_tail(const std::u32string& seg);
+bool is_nasal_carrier(char32_t cp);
+
 // phonetok.py constrain_nasal_carriers: a slot whose ONLY reading is the
 // bare combining tilde needs a preceding oral vowel/glide carrier; the
 // constraint is pushed back onto the preceding slots (walking past

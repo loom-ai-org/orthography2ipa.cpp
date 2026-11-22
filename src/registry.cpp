@@ -136,6 +136,31 @@ std::string resolve_code(const std::string& code_in, const std::vector<std::stri
         if (const auto* hit = find_in(_ALIASES, code)) return hit->second;
     }
     if (in_catalog(available, code)) return code;
+    // A script subtag that linguatag gives as the likely script of the rest of
+    // the tag adds nothing to it, so apc-Arab-SY names apc-SY. The language
+    // must be the one the tag gives: kas-Arab standardizes to ks-Arab, and the
+    // own-language search below keeps it on kas.
+    std::vector<std::string> parts;
+    for (std::size_t start = 0;;) {
+        const auto at = code.find('-', start);
+        parts.push_back(code.substr(start, at - start));
+        if (at == std::string::npos) break;
+        start = at + 1;
+    }
+    const std::string primary = py_lower(parts[0]);
+    const std::string rest_script = parts.size() > 1 ? parts[1] : std::string();
+    const auto is_script = [](const std::string& subtag) {
+        const std::u32string wide = uni::to_utf32(subtag);
+        return wide.size() == 4 && std::all_of(wide.begin(), wide.end(), uni::is_alpha);
+    };
+    if (parts.size() > 1 && is_script(rest_script) && primary == primary_language(code_in)) {
+        std::string unscripted = primary;
+        for (std::size_t i = 2; i < parts.size(); ++i) unscripted += "-" + parts[i];
+        if (in_catalog(available, unscripted)) {
+            const auto likely = linguatag::likely_script(unscripted);
+            if (likely && *likely == rest_script) return unscripted;
+        }
+    }
     if (has_private_use(code)) {
         const std::string folded = suppressed_script_form(code);
         if (!folded.empty())
@@ -167,6 +192,26 @@ std::string resolve_code(const std::string& code_in, const std::vector<std::stri
     for (const auto& entry : _RENAMED) candidates.emplace_back(entry.first);
     std::sort(candidates.begin(), candidates.end());
     candidates.erase(std::unique(candidates.begin(), candidates.end()), candidates.end());
+    // The bs spec reads Cyrillic too, so a Bosnian Cyrillic tag of any region
+    // or private use is Bosnian.
+    if (primary == "bs" && parts.size() > 1 && py_lower(parts[1]) == "cyrl") return "bs";
+    // Likely subtags make bare ar Egyptian, so the distance puts a region no
+    // Arabic spec names beside whichever dialect spec sorts first. No source
+    // states a difference from Modern Standard Arabic for such a region.
+    const bool scriptless_or_arab = !(parts.size() > 1 && is_script(rest_script)) ||
+                                    py_lower(rest_script) == "arab";
+    if (primary == "ar" && scriptless_or_arab) {
+        if (const auto region = region_subtag(code)) {
+            bool named = false;
+            for (const auto& candidate : candidates)
+                if (candidate.substr(0, candidate.find('-')) == "ar" &&
+                    region_subtag(candidate) == region) {
+                    named = true;
+                    break;
+                }
+            if (!named) return "ar";
+        }
+    }
     // The primary language subtag names the language (RFC 5646 §2.2.1). When
     // that language has a spec, the match stays inside it: sr-Latn-RS is
     // Serbian, not cnr, whose likely subtags are sr-Latn-ME. The requested
@@ -185,7 +230,17 @@ std::string resolve_code(const std::string& code_in, const std::vector<std::stri
             for (const auto& candidate : candidates)
                 if (primary_language(candidate) == own_language) own.push_back(candidate);
         if (!own.empty()) {
-            match = linguatag::closest_lang(tag, own, linguatag::default_max_language_distance,
+            // CLDR lists no likely script for a language it does not name, so
+            // Latn has nothing to be measured against and would put every
+            // own-language spec out of reach. Another script stays.
+            std::string measured = tag;
+            if (!linguatag::likely_script(own_language)) {
+                const std::size_t dash = measured.find('-');
+                if (dash != std::string::npos && dash > 0 && py_lower(measured.substr(dash, 5)) == "-latn" &&
+                    (measured.size() == dash + 5 || measured[dash + 5] == '-'))
+                    measured.erase(dash, 5);
+            }
+            match = linguatag::closest_lang(measured, own, linguatag::default_max_language_distance,
                                             linguatag::Lects::standard);
             break;
         }

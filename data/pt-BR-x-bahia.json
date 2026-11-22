@@ -481,7 +481,7 @@
         "e"
       ],
       "surface": "ɛ",
-      "stress": "unstressed",
+      "stress": "pretonic",
       "followed_by_phoneme_2": [
         "a",
         "ɐ",
@@ -491,7 +491,7 @@
         "ẽ",
         "õ"
       ],
-      "notes": "Mota & Lopes (2018: 215, ALiB, North and Northeast capitals): pretonic mid vowels 'têm uma maior probabilidade de se tornarem médias abertas no contexto de tônica também de timbre aberto (médias-baixas), médias nasais e diante da vogal baixa [a]'; before a close-mid stressed vowel they stay closed in 86 % (/e/) and 91 % (/o/) of tokens. The trigger is the vowel two graphemes to the right, so a pretonic syllable closed by a consonant (espera) keeps the closed vowel."
+      "notes": "Mota & Lopes (2018: 215, ALiB, North and Northeast capitals): pretonic mid vowels 'têm uma maior probabilidade de se tornarem médias abertas no contexto de tônica também de timbre aberto (médias-baixas), médias nasais e diante da vogal baixa [a]'; before a close-mid stressed vowel they stay closed in 86 % (/e/) and 91 % (/o/) of tokens. The trigger is the vowel two graphemes to the right, so a pretonic syllable closed by a consonant (espera) keeps the closed vowel. The study covers pretonic vowels only, so the rule leaves a posttonic mid vowel at its pt-BR value: pérola, cócegas."
     },
     {
       "id": "NE_PRETONIC_OPEN_O",
@@ -499,7 +499,7 @@
         "o"
       ],
       "surface": "ɔ",
-      "stress": "unstressed",
+      "stress": "pretonic",
       "followed_by_phoneme_2": [
         "a",
         "ɐ",
@@ -509,7 +509,7 @@
         "ẽ",
         "õ"
       ],
-      "notes": "Mota & Lopes (2018: 215, ALiB, North and Northeast capitals): pretonic mid vowels 'têm uma maior probabilidade de se tornarem médias abertas no contexto de tônica também de timbre aberto (médias-baixas), médias nasais e diante da vogal baixa [a]'; before a close-mid stressed vowel they stay closed in 86 % (/e/) and 91 % (/o/) of tokens. The trigger is the vowel two graphemes to the right, so a pretonic syllable closed by a consonant (espera) keeps the closed vowel."
+      "notes": "Mota & Lopes (2018: 215, ALiB, North and Northeast capitals): pretonic mid vowels 'têm uma maior probabilidade de se tornarem médias abertas no contexto de tônica também de timbre aberto (médias-baixas), médias nasais e diante da vogal baixa [a]'; before a close-mid stressed vowel they stay closed in 86 % (/e/) and 91 % (/o/) of tokens. The trigger is the vowel two graphemes to the right, so a pretonic syllable closed by a consonant (espera) keeps the closed vowel. The study covers pretonic vowels only, so the rule leaves a posttonic mid vowel at its pt-BR value: pérola, cócegas."
     },
     {
       "id": "NE_FINAL_R_DELETION",
@@ -521,5 +521,6 @@
       "word_final": true,
       "notes": "Callou, Serra & Cunha (2015: 207, ALiB, Northeast capitals): word-final /R/ deletion reaches 94-98 % in verbs and 62-95 % in other words in every capital. Coda /R/ elsewhere is the aspirate [h]: the norm in these capitals is '[- vibrante] e [- anterior]' (p. 197)."
     }
-  ]
+  ],
+  "collapse_geminates": true
 }

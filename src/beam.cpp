@@ -197,6 +197,12 @@ bool carries_nucleus(const GraphemeContext& ctx) {
 
 } // namespace
 
+std::size_t nasal_carrier_split_index(const std::u32string& seg) { return carrier_split_index(seg); }
+
+std::u32string nasal_carrier_tail(const std::u32string& seg) { return carrier_tail(seg); }
+
+bool is_nasal_carrier(char32_t cp) { return nasal_carriers().find(cp) != std::u32string::npos; }
+
 // ── weights.py ───────────────────────────────────────────────────────────
 
 std::vector<double> candidate_base_costs(

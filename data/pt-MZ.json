@@ -219,6 +219,22 @@
   },
   "allophone_rules": [
     {
+      "id": "PT_EX_CONSONANT_GLIDE",
+      "phonemes": [],
+      "surface": "ɐj",
+      "notes": "DISABLED for Mozambican Portuguese. No source for the vowel of ⟨ex⟩ before a consonant in this variety was read, so its output stays what it was. The pt-PT rule gives ⟨ex⟩ the diphthong of the pt-PT ⟨ei⟩, [ej]."
+    },
+    {
+      "id": "PT_INITIAL_EX_VOICED",
+      "phonemes": ["ʃ"],
+      "surface": "z",
+      "grapheme": ["x"],
+      "preceded_by_grapheme": ["e", "ê"],
+      "preceded_by_2": "word_boundary",
+      "followed_by": "vowel",
+      "notes": "Word-initial ⟨ex-⟩ before a vowel writes the ⟨x⟩ as [z]: exame [eˈzame]. The Portal da Língua Portuguesa Dicionário fonético (ILTEC), Maputo standard variety (region mpx), writes this consonant as [z] in exame [e.zˈɐ.mɨ], existir [e.ziʃ.tˈiɾ], exato [e.zˈa.tu], êxito [ˈe.zi.tu], exótico [e.zˈɔ.ti.ku] and exemplo [e.zˈẽ.plu]. The Maputo non-standard variety (region map) writes [z] in the same six words: exame [ɛ.zˈã.mɨ], existir [ɛ.ziʃ.θˈiɾ], exato [ɛ.zˈaːk.θʊ], êxito [ˈɛ.zi.tʰʊ], exótico [ɛ.zˈɔ.ti.kʰʊ], exemplo [ɛ.zˈẽjm.plʊ]. The rule matches the ⟨x⟩ slot after a word-initial ⟨e⟩ or ⟨ê⟩ when a vowel follows, as in pt-PT. ⟨ex⟩ before a consonant, ⟨exh⟩ and ⟨hex⟩ are not matched."
+    },
+    {
       "id": "PT_LEX_REDUCED_O",
       "phonemes": [],
       "surface": "u",
@@ -730,5 +746,6 @@
     "source": "wikidata",
     "notes": "Maputo. A national L2 variety: the capital stands in for the country. Weak. [Wikidata Q3889 P625]"
   },
-  "word_exceptions_base": "pt-PT"
+  "word_exceptions_base": "pt-PT",
+  "collapse_geminates": true
 }

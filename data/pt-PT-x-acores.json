@@ -29,6 +29,12 @@
   },
   "allophone_rules": [
     {
+      "id": "PT_EX_CONSONANT_GLIDE",
+      "phonemes": [],
+      "surface": "ɐj",
+      "notes": "DISABLED for Azorean Portuguese. No source for the vowel of ⟨ex⟩ before a consonant in this variety was read, so its output stays what it was. The pt-PT rule gives ⟨ex⟩ the diphthong of the pt-PT ⟨ei⟩, [ej]."
+    },
+    {
       "id": "ACO_U_KEEP_BEFORE_CODA",
       "phonemes": [
         "u"
@@ -140,5 +146,6 @@
       "measured": "The clup_dialect row holds 2 scored sentences (clup_dialect is sentence-level: each gold entry is one interview sentence, scored as a single unit against the engine's whole-sentence transcription, so the bootstrap resamples across only 2 sentence-level PER values, not across words), per=0.3214, per_ci_low=0.3151, per_ci_high=0.3277 (benchmarks/results.json). At n=2 sentences the bootstrap interval is already collapsing toward a point for the same reason (few distinct values to resample), so its narrow width reflects the small sample, not precision; see docs/evaluation/generated/scoreboard.md's `95% CI` note and the THIN_ROW_MARK cutoff (rows under 20 scored items). This row cannot gate a production promotion on its own strength.",
       "reference": "spec notes"
     }
-  }
+  },
+  "collapse_geminates": true
 }

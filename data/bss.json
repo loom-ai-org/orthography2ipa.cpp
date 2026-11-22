@@ -89,11 +89,11 @@
     "ʔ": ["ʔ"]
   },
   "tone_inventory": {
-    "◌́": "high",
-    "unmarked": "low",
-    "◌̄": "downstepped high",
-    "◌̌": "rising (low-high)",
-    "◌̂": "falling (high-low)"
+    "˦": "high",
+    "˨": "low",
+    "ꜜ˦": "downstepped high",
+    "˩˥": "rising (low-high)",
+    "˥˩": "falling (high-low)"
   },
   "notes": "Akoose (Akɔɔse, Bakossi), Northwest Narrow Bantu (Guthrie A.15) of the Kupe-Mwanenguba Division (South West Region) and Mungo Division (Littoral Region), Cameroon, c. 100,000+ speakers (Hedinger & Hedinger 1977; Hedinger 2016, A Grammar of Akoose, SIL/UT Arlington). Orthography follows the 1979 General Alphabet of Cameroon Languages. Eight vowels /i e ɛ ə a ɔ o u/, each with a phonemic length contrast written by doubling the letter. ⟨b⟩ is realised as the implosive [ɓ] after the glottal stop and after a syllabic nasal before a non-high vowel, elsewhere plain [b]; recorded as an allophone since the orthography does not distinguish the two with separate letters. ⟨mb nd nz ng⟩ are prenasalised single segments (the class 9/10 nasal-prefix series), distinct from ⟨ng⟩'s plain-nasal counterpart ⟨ŋ⟩. ⟨ny⟩ = /ɲ/, ⟨ch⟩ = /tʃ/. Word-final glottal stop is written with an apostrophe. A rich system of productive consonant+glide (Cy/Cw, e.g. py, by, mbw, ngw) and nasal-prefix (mp, nt, nk, nch...) combinations exists in the orthography guide, but these are regular two-grapheme sequences of an existing consonant plus the independently-attested glides ⟨y⟩/⟨w⟩ or nasal ⟨n/m/ŋ⟩, not additional atomic graphemes, so per AGENTS.md they are left to compose rather than being enumerated as a cartesian product of keys. Six contrastive tones are described (high, low, downstepped high, low-high rising, high-low falling, and a rare high-downstepped-high sequence); the last is a two-tone sequence on a single long vowel and is not modelled as a separate mark here, matching the source's own note that it is rare.",
   "iso639_3": "bss",

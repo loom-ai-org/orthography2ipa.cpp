@@ -176,12 +176,6 @@
       "notes": "Voiced counterpart of CUIABA_CODA_S. Almeida (2004: 154): 'O recuo do ponto de articulação também ocorre com a sonora [z] > [Z]'."
     },
     {
-      "id": "BR_XC_ONE_S",
-      "phonemes": [],
-      "surface": "",
-      "notes": "Switched off. Vasilévski (2012: 55, Table 1) gives 'xc /s/ exceção' and no opened source gives the value in a spec with a palatal coda, so ⟨xc⟩ keeps [ʃs]."
-    },
-    {
       "id": "BR_CODA_X",
       "phonemes": [],
       "surface": "",
@@ -246,5 +240,17 @@
     "longitude": -56.096944,
     "source": "wikidata",
     "notes": "Cuiabá — the centre of the Baixada Cuiabana, the river valley this spec models. [Wikidata Q170762 P625]"
+  },
+  "sandhi_rules": [
+    {
+    "id": "BR_FINAL_SH_VOICING",
+    "name": "final-sh-voicing-before-voiced-consonant",
+    "left_context": "ʃ$",
+    "right_context": "^[ˈˌ]?[bdɡvzʒmnɲlʎɾʁr]",
+    "transform": "ʒ",
+    "obligatory": true,
+    "notes": "A word-final chiado [ʃ] takes the voicing of a voiced consonant at the start of the next word: os dois [uʒ ˈdojʃ], as mesas [aʒ ˈmezɐʃ]. Barbosa & Albano (2004: 229): 'The archiphoneme /S/ surfaces either as a voiced or as a voiceless alveolar fricative. As in most varieties, it tends to assimilate the voicing of the following sound.' The place stays palatal because the spec writes the coda as [ʃ]. The class holds the trill [r], the voiced strong /R/ of this spec: os rios [uʒ ˈriuʃ]. BR_FINAL_S_VOICING of pt-BR uses the same right context without the [r]. Before a vowel (dez anos) this rule does not apply, and the output keeps [ʃ]. No source supports that [ʃ]: Brescancini (2015: 76) gives a voiced sibilant there, 'em fronteira de palavra diante de vogais é prevista a ocorrência apenas de [z] (mai[z] atrasada)', and the voiced palato-alveolar for Florianópolis. Issue #2052 holds that case."
   }
+  ],
+  "collapse_geminates": true
 }

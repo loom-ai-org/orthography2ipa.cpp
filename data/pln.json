@@ -333,6 +333,12 @@
       "phonemes": [],
       "surface": "ɣ",
       "notes": "NOT ASSERTED for this creole, for the same reason as ES_TRILL_AFTER_CORONAL above: spirantization of /b d ɡ/ after a non-nasal is cited for Castilian (Navarro Tomás 1918, §§ 82, 101, 129), not for this creole's phonology. Disabled by empty 'phonemes'; re-enable with a citation."
+    },
+    {
+      "id": "ES_S_VOICING",
+      "phonemes": [],
+      "surface": "",
+      "notes": "DISABLED: ES_S_VOICING voices a coda /s/ before a voiced consonant. Its source describes the Castilian standard of Spain, and no source for this language was opened, so the rule is switched off here."
     }
   ],
   "sandhi_rules": [

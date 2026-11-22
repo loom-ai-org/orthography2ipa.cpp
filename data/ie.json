@@ -40,7 +40,7 @@
       "i"
     ],
     "j": [
-      "ʒ"
+      "dʒ"
     ],
     "k": [
       "k"
@@ -114,8 +114,17 @@
     ],
     "ú": [
       "u"
+    ],
+    "ai": [
+      "aj"
+    ],
+    "au": [
+      "aw"
     ]
   },
+  "vowel_graphemes": [
+    "y"
+  ],
   "allophones": {
     "a": [
       "a"
@@ -247,6 +256,11 @@
       "before_vowel": [
         "w"
       ]
+    },
+    "ch": {
+      "before_consonant": [
+        "x"
+      ]
     }
   },
   "allophone_rules": [
@@ -311,12 +325,112 @@
       ],
       "followed_by_3": "word_boundary",
       "notes": "Janotta 1929, Cosmoglotta 65, p. 166, art. 4: \"Paroles ne havent vocales ante li ultim consonant es accentuat sur li unesim vocale: die, deo, noi, tui ... brui, boa, pia, via; plurale: dies, deos\". The stressed ⟨i u⟩ of these words is a vowel, not the glide of Cosmoglotta 64, p. 152. The plural -s does not change it (dies)."
+    },
+    {
+      "id": "IE_T_TIA_TIE",
+      "phonemes": [
+        "t"
+      ],
+      "surface": "ts",
+      "grapheme": [
+        "t"
+      ],
+      "followed_by_grapheme": [
+        "i"
+      ],
+      "followed_by_phoneme_2": [
+        "a",
+        "e"
+      ],
+      "followed_by_3": "word_boundary",
+      "notes": "Janotta 1929, Cosmoglotta 64, p. 153: \"t deveni un sibilant in li finales -tia, -tie, -tion; transcrition [ts]: scientie [sstsyéntsye]; nation [natsyón]\". This rule takes the endings -tia and -tie, read where the ⟨a e⟩ ends the word, so the plurals scienties and scientias keep [t]."
+    },
+    {
+      "id": "IE_T_TION",
+      "phonemes": [
+        "t"
+      ],
+      "surface": "ts",
+      "grapheme": [
+        "t"
+      ],
+      "followed_by_grapheme": [
+        "i"
+      ],
+      "followed_by_phoneme_2": [
+        "o"
+      ],
+      "followed_by_3": "coda",
+      "notes": "Janotta 1929, Cosmoglotta 64, p. 153: \"t deveni un sibilant in li finales -tia, -tie, -tion; transcrition [ts]: scientie [sstsyéntsye]; nation [natsyón]\"; the same page writes position [positsyón] and acquisition [akkwisitsyón]. The rule cannot see the end of the word four letters on, so it reads the ending -tion as ⟨tio⟩ followed by an ⟨n⟩ that closes its syllable: nation gives [ts], and nationes, whose ⟨n⟩ opens the next syllable, keeps [t]. The source states the rule for the ending only."
+    },
+    {
+      "id": "IE_CH_AFTER_S",
+      "phonemes": [
+        "ʃ"
+      ],
+      "surface": "x",
+      "grapheme": [
+        "ch"
+      ],
+      "preceded_by_grapheme": [
+        "s"
+      ],
+      "notes": "Janotta 1929, Cosmoglotta 64, p. 154: \"Ante consonantes o juntet con y, o in li syllabe arch e pos s, ch es pronunciat quam ch in D machen o quam j in S Méjico (Mexico); transcrition [kh], p. ex. yacht [yakht], chromometre [khronometre], psycholog [psükhológ], architect [arkhitékt], monarchist [monarkhíst], schisma [skhíssma]\". This rule takes ⟨ch⟩ after ⟨s⟩; the positional before_consonant entry of ⟨ch⟩ takes it before a consonant."
+    },
+    {
+      "id": "IE_CH_AFTER_Y",
+      "phonemes": [
+        "ʃ"
+      ],
+      "surface": "x",
+      "grapheme": [
+        "ch"
+      ],
+      "preceded_by_grapheme": [
+        "y"
+      ],
+      "notes": "Janotta 1929, Cosmoglotta 64, p. 154: ⟨ch⟩ \"juntet con y\" is [kh]: psycholog [psükhológ]. See IE_CH_AFTER_S for the full quote."
+    },
+    {
+      "id": "IE_CH_BEFORE_Y",
+      "phonemes": [
+        "ʃ"
+      ],
+      "surface": "x",
+      "grapheme": [
+        "ch"
+      ],
+      "followed_by_grapheme": [
+        "y"
+      ],
+      "notes": "Janotta 1929, Cosmoglotta 64, p. 154: ⟨ch⟩ \"juntet con y\" is [kh]. The source gives the case with ⟨y⟩ before ⟨ch⟩ (psycholog); \"juntet con\" names no side, so ⟨y⟩ after ⟨ch⟩ is taken too. See IE_CH_AFTER_S for the full quote."
+    },
+    {
+      "id": "IE_CH_ARCH",
+      "phonemes": [
+        "ʃ"
+      ],
+      "surface": "x",
+      "grapheme": [
+        "ch"
+      ],
+      "preceded_by_grapheme": [
+        "r"
+      ],
+      "word_contains_grapheme": [
+        "arch"
+      ],
+      "notes": "Janotta 1929, Cosmoglotta 64, p. 154: ⟨ch⟩ \"in li syllabe arch\" is [kh]: architect [arkhitékt], monarchist [monarkhíst]. Both examples are the Greek element arch-, and in both the ⟨ch⟩ stands before a vowel, so neither the consonant nor the ⟨y⟩ condition reaches them. The rule reads any ⟨arch⟩ in the word; the spelling cannot tell the Greek element from another word that holds the same letters. See IE_CH_AFTER_S for the full quote."
     }
   ],
+  "word_exceptions": {
+    "cyan": "tsyˈan",
+    "cyans": "tsyˈans"
+  },
   "iso639_3": "ile",
   "glottolog_code": "inte1260",
   "wikidata_qid": "Q35850",
-  "notes": "Interlingue (originally Occidental), constructed international auxiliary language published by Edgar de Wahl in 1922; renamed Interlingue in 1949. Published, fully regular phonemic orthography over the 26-letter Latin alphabet. The pronunciation follows Janotta 1929, Cosmoglotta 64, pp. 152-154, read from the page images; its transcription writes [y] for IPA [j], [ü] for IPA [y] and [ö] for IPA [ø]. Softening rules: ⟨c⟩ = [ts] before e/i/y and [k] elsewhere; ⟨g⟩ = [ʒ] before e/i/y and [ɡ] elsewhere; intervocalic ⟨s⟩ = [z]. ⟨ch⟩ = [ʃ], ⟨j⟩ = [ʒ], ⟨z⟩ = [dz]. Vocalic ⟨y⟩ is [y]: \"y vocalic es pronunciat quam german ü o frances u; transcrition [ü], por exemple: cylindre [tsülíndre], hymne [hü'mne], styr [stür], physica [fü'sika], analyse [analü'se], cyan [tsüán], yttrium [ü'ttryum]. Pos un vocal e in comensa de un parol anc ante un vocal, y es consonant\" (p. 152); p. 153 gives the consonant as [y]: yes [yess], rayon [rayón], antey [antéy]. So ⟨y⟩ is [j] after a vowel and at the start of a word before a vowel, and [y] elsewhere. \"eu es egal al frances eu e al german ö; transcrition [ö], por exemple: Europa [örópa], meuble [mö'ble], neutral [nötrál]\" (p. 152). \"i e u ante vocales in plursyllabic paroles, u pos q anc in monosyllabic paroles es pronunciat tre curt, presc consonantic e ne posse formar propri syllabes; transcrition [y] e [w]. p. ex.: ciel [tsyél], lingue [língwe], aqua [ákwa], piano [pyáno]; quam [kwam], que [kwe]\" (p. 152), and famílie [famílye] (p. 154), statue [sstátwe] (p. 153): ⟨i u⟩ before a vowel are [j w]. The stressed ⟨i u⟩ of Cosmoglotta 65, p. 166, art. 4 (die, via, tui, brui, dies) are vowels, which the IE_ART4 allophone rules restore; the accented ⟨í ú⟩ are vowels as their own graphemes (país). \"ph = f in paroles de grec orígine, p. ex. fotograf = photograph [fotográf]\", \"rh = r in paroles de grec orígine, p. ex. reumatic = rheumatic [römátik]\", \"th = t in paroles de grec orígine: teosof = theosoph [teossóf]\" (p. 154). Irregular stress is written with an acute accent (café), so the accented vowels map to the same qualities as their unaccented counterparts. The stress block's notes state the stress rule and its source.",
+  "notes": "Interlingue (originally Occidental), constructed international auxiliary language published by Edgar de Wahl in 1922; renamed Interlingue in 1949. Published, fully regular phonemic orthography over the 26-letter Latin alphabet. The pronunciation follows Janotta 1929, Cosmoglotta 64, pp. 152-154, read from the page images; its transcription writes [y] for IPA [j], [ü] for IPA [y] and [ö] for IPA [ø]. Softening rules: ⟨c⟩ = [ts] before e/i/y and [k] elsewhere; ⟨g⟩ = [ʒ] before e/i/y and [ɡ] elsewhere; intervocalic ⟨s⟩ = [z], and a vocalic ⟨y⟩ counts as a vowel for it (physica [fü'sika], analyse [analü'se], p. 152; the single s of this transcription is voiced, p. 153), so ⟨y⟩ is declared in vowel_graphemes. ⟨j⟩ = [dʒ]: \"j es egal a j in A jazz, a dg in D Budget e F budget, transcrition [dž]: januar [džanwár], conjugation [kondžugatsyón]\" (p. 153). ⟨t⟩ = [ts] in the endings -tia, -tie, -tion: \"t deveni un sibilant in li finales -tia, -tie, -tion; transcrition [ts]: scientie [sstsyéntsye]; nation [natsyón]\" (p. 153); the allophone rules IE_T_TIA_TIE and IE_T_TION carry it. \"ai e au es diphtongs e es pronunciat [ay], respectivmen [aw]: email [emáyl], rauc [rawk], applause [appláwse]; caul [kawl]\" (p. 152), so ⟨ai au⟩ are [aj aw]. ⟨ch⟩ has three readings on p. 154: [tsh] \"quam in angles e hispan\" (chambre [tchámbre], chines [tshinés], brochura [brotshúra]), [sh] \"anc quam ch in frances\" (machine [mashíne]), and [kh] = [x] \"Ante consonantes o juntet con y, o in li syllabe arch e pos s\" (yacht [yakht], chromometre [khronometre], psycholog [psükhológ], architect [arkhitékt], monarchist [monarkhíst], schisma [skhíssma]; p. 153 writes it [ss-khíssma]). The [x] contexts are spelled, and the positional before_consonant entry of ⟨ch⟩ and the IE_CH_* rules carry them. The page gives no spelling that separates the [tʃ] words from the [ʃ] words, so ⟨ch⟩ elsewhere keeps the one reading [ʃ], and chambre, chines and brochura are read with [ʃ], not the [tʃ] of the source. ⟨z⟩ = [dz]. Vocalic ⟨y⟩ is [y]: \"y vocalic es pronunciat quam german ü o frances u; transcrition [ü], por exemple: cylindre [tsülíndre], hymne [hü'mne], styr [stür], physica [fü'sika], analyse [analü'se], cyan [tsüán], yttrium [ü'ttryum]. Pos un vocal e in comensa de un parol anc ante un vocal, y es consonant\" (p. 152); p. 153 gives the consonant as [y]: yes [yess], rayon [rayón], antey [antéy]. So ⟨y⟩ is [j] after a vowel and at the start of a word before a vowel, and [y] elsewhere. \"eu es egal al frances eu e al german ö; transcrition [ö], por exemple: Europa [örópa], meuble [mö'ble], neutral [nötrál]\" (p. 152). \"i e u ante vocales in plursyllabic paroles, u pos q anc in monosyllabic paroles es pronunciat tre curt, presc consonantic e ne posse formar propri syllabes; transcrition [y] e [w]. p. ex.: ciel [tsyél], lingue [língwe], aqua [ákwa], piano [pyáno]; quam [kwam], que [kwe]\" (p. 152), and famílie [famílye] (p. 154), statue [sstátwe] (p. 153): ⟨i u⟩ before a vowel are [j w]. The stressed ⟨i u⟩ of Cosmoglotta 65, p. 166, art. 4 (die, via, tui, brui, dies) are vowels, which the IE_ART4 allophone rules restore; the accented ⟨í ú⟩ are vowels as their own graphemes (país). \"ph = f in paroles de grec orígine, p. ex. fotograf = photograph [fotográf]\", \"rh = r in paroles de grec orígine, p. ex. reumatic = rheumatic [römátik]\", \"th = t in paroles de grec orígine: teosof = theosoph [teossóf]\" (p. 154). Irregular stress is written with an acute accent (café), so the accented vowels map to the same qualities as their unaccented counterparts. The stress block's notes state the stress rule and its source.",
   "sources": [
     {
       "id": "dewahl1922",
@@ -771,7 +885,7 @@
       "ú"
     ],
     "stress_mark": "ˈ",
-    "notes": "Janotta 1929, Cosmoglotta 65, p. 165, C. Accentuation, art. 1: \"Li accentu tonic es situat ordinarmen sur li vocal ante li ultim consonant\" (the stress is ordinarily on the vowel before the last consonant): cratér, doctór, generál; colére, honóre, seméstre; línea, famílie, státue. Two vowels in contact are two syllables: \"du vocales intersecuent in general es pronunciat separat: aer [aér], país [país], leer [le-ér], leibil [leíbil]\" (Cosmoglotta 64, p. 152). The same page makes one nucleus of ⟨ai au⟩ (\"ai e au es diphtongs\": email [emáyl], rauc [rawk]), of ⟨eu⟩ (one vowel [ö]) and of ⟨i u⟩ before a vowel (\"ne posse formar propri syllabes\": ciel [tsyél], piano [pyáno]), so those are the diphthongs. ⟨y⟩ next to a vowel is not its own nucleus in the spelling, so ⟨ya ye yi yo yu⟩ are listed too and the transcription [y] does not split from the vowel either; cyan [tsüán] therefore has one syllable here, not the two of p. 152. The vowel of art. 1 is then the last nucleus of a consonant-final word. In a vowel-final word it is the nucleus before the final vowel run: the default -2 where that run is one nucleus, and -3 where it is a hiatus, so every two-nucleus vowel run (-ea, -oi, -ae, and the same with the plural -s) is an antepenult ending (línea, líneas, art. 4: díe, nói, tráe). Every consonant-final shape that art. 2 and art. 3 do not name is a final ending, and ⟨y⟩ after a vowel is a consonant (p. 152), so -ay, -ey, -oy, -uy are final endings (antey [antéy], p. 153). Art. 2: \"Li finales -bil, -ic, (si it es pronunciat [ik]), -im, -ul es ínaccentuat e attrae li accentu al precendent syllabe, mem si li precedent syllabe es un de ti quar syllabes\" (these finales are unstressed and put the stress on the syllable before, even when that syllable is one of the four): possíbil, heróic, léxico, mathemática, próxim, régul, cálcula, artícul. So a word in -bil, -ic, -im or -ul takes the default -2, and -ica, -ico, -ula, -ule take -3. ⟨c⟩ is [ts] before ⟨e i⟩, so -ice and -ici are not atonic (matríce, felíci). Where a vowel stands before -ic, that vowel is the syllable before (archáic, heróic, prosáic). After ⟨e o⟩ it is its own syllable, so -eic and -oic take the default and -eica, -oico take -3 with -ica, -ico. ⟨ai ui⟩ are one nucleus, so -aic and -uic are final endings and -aica, -aico are penult endings. Art. 3: \"Li finale -s del plurale e li finales -men e -um es ínaccentuat e ne have influentie al accentu del céteri parol-parte\" (plural -s, -men and -um do not change the stress of the rest of the word): doctóres, líneas, vocábules, rapídmen, respectábilmen, sóbrimen, álbum, máximum, herbárium. So ⟨s⟩ alone is not a final ending: a word in a vowel + s takes the stress of its singular. After a consonant the plural is -es, but -s alone after ⟨c g⟩ (\"On ne intercala -e pos c e g\": amics, plugs; Cosmoglotta 65, p. 176) and after -um (albums, herbariums; p. 165). So -cs, -gs and -ums follow the stem, the plurals -biles, -imes, -ules keep the stress before the atonic finale (-3), and -ss and any other consonant + s are singular and final. -men after a vowel-final stem and after an atonic finale takes -3 (sóbrimen, respectábilmen, hyperbólicmen), and -um after an atonic finale takes -3 (máximum). Art. 6, p. 166: a stress that the rules do not give is written with an accent (café, cité, númere), so the acute vowels are marked_vowels. Art. 7 also admits the grave and the circumflex. This spec maps only the acute vowels, so the other accents are not read. Not modelled: art. 5, the primary and secondary stress of compounds (férrovía, rétrovenír). A singular word in a vowel + s takes the plural reading.",
+    "notes": "Janotta 1929, Cosmoglotta 65, p. 165, C. Accentuation, art. 1: \"Li accentu tonic es situat ordinarmen sur li vocal ante li ultim consonant\" (the stress is ordinarily on the vowel before the last consonant): cratér, doctór, generál; colére, honóre, seméstre; línea, famílie, státue. Two vowels in contact are two syllables: \"du vocales intersecuent in general es pronunciat separat: aer [aér], país [país], leer [le-ér], leibil [leíbil]\" (Cosmoglotta 64, p. 152). The same page makes one nucleus of ⟨ai au⟩ (\"ai e au es diphtongs\": email [emáyl], rauc [rawk]), of ⟨eu⟩ (one vowel [ö]) and of ⟨i u⟩ before a vowel (\"ne posse formar propri syllabes\": ciel [tsyél], piano [pyáno]), so those are the diphthongs. A vocalic ⟨y⟩ before a vowel is its own nucleus as well: cyan [tsüán] has two syllables, the stress on the second (p. 152; art. 1). The spelling splitter reads ⟨y⟩ beside a vowel as a glide and counts ⟨ya ye yi yo yu⟩ as one syllable, and the diphthong list gives the transcription the same count, so that consonant + ⟨y⟩ + vowel words (canya, Libya, embryo) keep the stress of their spelling. The one word of Cosmoglotta 64 that the count misplaces, cyan, is a word exception. ⟨y⟩ after a vowel, or at the start of a word before a vowel, is the consonant [j] (p. 152), and the positional readings of ⟨y⟩ give it. The vowel of art. 1 is then the last nucleus of a consonant-final word. In a vowel-final word it is the nucleus before the final vowel run: the default -2 where that run is one nucleus, and -3 where it is a hiatus, so every two-nucleus vowel run (-ea, -oi, -ae, and the same with the plural -s) is an antepenult ending (línea, líneas, art. 4: díe, nói, tráe). Every consonant-final shape that art. 2 and art. 3 do not name is a final ending, and ⟨y⟩ after a vowel is a consonant (p. 152), so -ay, -ey, -oy, -uy are final endings (antey [antéy], p. 153). Art. 2: \"Li finales -bil, -ic, (si it es pronunciat [ik]), -im, -ul es ínaccentuat e attrae li accentu al precendent syllabe, mem si li precedent syllabe es un de ti quar syllabes\" (these finales are unstressed and put the stress on the syllable before, even when that syllable is one of the four): possíbil, heróic, léxico, mathemática, próxim, régul, cálcula, artícul. So a word in -bil, -ic, -im or -ul takes the default -2, and -ica, -ico, -ula, -ule take -3. ⟨c⟩ is [ts] before ⟨e i⟩, so -ice and -ici are not atonic (matríce, felíci). Where a vowel stands before -ic, that vowel is the syllable before (archáic, heróic, prosáic). After ⟨e o⟩ it is its own syllable, so -eic and -oic take the default and -eica, -oico take -3 with -ica, -ico. ⟨ai ui⟩ are one nucleus, so -aic and -uic are final endings and -aica, -aico are penult endings. Art. 3: \"Li finale -s del plurale e li finales -men e -um es ínaccentuat e ne have influentie al accentu del céteri parol-parte\" (plural -s, -men and -um do not change the stress of the rest of the word): doctóres, líneas, vocábules, rapídmen, respectábilmen, sóbrimen, álbum, máximum, herbárium. So ⟨s⟩ alone is not a final ending: a word in a vowel + s takes the stress of its singular. After a consonant the plural is -es, but -s alone after ⟨c g⟩ (\"On ne intercala -e pos c e g\": amics, plugs; Cosmoglotta 65, p. 176) and after -um (albums, herbariums; p. 165). So -cs, -gs and -ums follow the stem, the plurals -biles, -imes, -ules keep the stress before the atonic finale (-3), and -ss and any other consonant + s are singular and final. -men after a vowel-final stem and after an atonic finale takes -3 (sóbrimen, respectábilmen, hyperbólicmen), and -um after an atonic finale takes -3 (máximum). Art. 6, p. 166: a stress that the rules do not give is written with an accent (café, cité, númere), so the acute vowels are marked_vowels. Art. 7 also admits the grave and the circumflex. This spec maps only the acute vowels, so the other accents are not read. Not modelled: art. 5, the primary and secondary stress of compounds (férrovía, rétrovenír). A singular word in a vowel + s takes the plural reading.",
     "diphthongs": [
       "ai",
       "au",
